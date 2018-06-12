@@ -27,11 +27,12 @@ author: rothja
 ms.author: jroth
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 23119e2fafd68797b15a9baf525d52906f311178
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: c6cd03ce43fd2b0a2fd454681e64edbd49e5f87a
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34467975"
 ---
 # <a name="sql-server-transaction-log-architecture-and-management-guide"></a>Guide d’architecture et gestion du journal des transactions SQL Server
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -138,7 +139,7 @@ Pour plus d’informations sur les arguments `FILEGROWTH` et `SIZE` de `ALTER DA
   
  Pour comprendre le fonctionnement du journal à écriture anticipée, il est important que vous sachiez comment les données modifiées sont écrites sur le disque. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] gère un cache des tampons dans lequel il lit les pages de données lorsque celles-ci doivent être extraites. Lorsqu’une page est modifiée dans le cache des tampons, elle n’est pas réécrite immédiatement sur le disque, mais elle est marquée comme *erronée*. Une page peut avoir plusieurs écritures logiques avant son écriture physique sur le disque. Pour chaque écriture logique, un enregistrement du journal des transactions est inséré dans le cache du journal qui enregistre la modification. L'enregistrement doit être écrit sur le disque avant que la page de modifications associée n'ait été supprimée du cache et écrite sur le disque. Le processus de point de contrôle analyse régulièrement le cache à la recherche de tampons contenant des pages issues d'une base de données spécifiée et écrit toutes les pages de modifications sur le disque. Les points de contrôle permettent une récupération ultérieure du système en créant un point où toutes les pages de modifications sont effectivement écrites sur le disque.  
   
- Le processus d'écriture d'une page de données modifiée, du cache des tampons vers le disque, porte le nom de vidage. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] possède une logique qui empêche la suppression d’une page de modifications avant que l’enregistrement du journal associé n’ait été écrit. Les enregistrements de journal sont écrits sur le disque lorsque les transactions sont validées.  
+ Le processus d'écriture d'une page de données modifiée, du cache des tampons vers le disque, porte le nom de vidage. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] possède une logique qui empêche la suppression d’une page de modifications avant que l’enregistrement du journal associé n’ait été écrit. Les enregistrements de journal sont écrits sur le disque quand les tampons de journaux sont vidés.  Cela se produit chaque fois qu’une transaction est validée ou que les tampons de journaux sont saturés.  
   
 ##  <a name="Backups"></a> Sauvegardes du journal de transactions  
  Cette section présente les concepts sur la sauvegarde et la restauration (application) des journaux de transactions. En mode de récupération complète et en mode de récupération utilisant les journaux de transactions, la sauvegarde régulière des journaux de transactions (*sauvegardes des journaux*) est indispensable pour pouvoir récupérer les données. Sauvegardez le journal pendant l'exécution d'une sauvegarde complète. Pour plus d’informations sur les modes de récupération, consultez [Sauvegarde et restauration des bases de données SQL Server](../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md).  

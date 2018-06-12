@@ -25,11 +25,12 @@ caps.latest.revision: 35
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 5e0e5538d69caf96e7eb8864de177d14e99ce642
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 46cf351f2a85523737988b93a57fce51924c4ae7
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34563697"
 ---
 # <a name="comparison-operators-transact-sql"></a>Opérateurs de comparaison (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -53,7 +54,7 @@ ms.lasthandoff: 05/03/2018
   
  À la différence des autres types de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], le type de données **booléen** ne peut pas être spécifié pour une colonne de table ou une variable et il ne peut pas être retourné dans un jeu de résultats.  
   
- Lorsque SET ANSI_NULLS est activé (ON), un opérateur ayant une ou deux expressions de valeur NULL retourne UNKNOWN. Si SET ANSI_NULLS est désactivé (OFF), les mêmes règles s'appliquent, mais il reste à noter qu'un opérateur d'égalité (=) retourne la valeur TRUE si les deux expressions ont pour valeur NULL. Par exemple, NULL = NULL retourne TRUE si SET ANSI_NULLS est désactivé (OFF).  
+ Lorsque SET ANSI_NULLS est activé (ON), un opérateur ayant une ou deux expressions de valeur NULL retourne UNKNOWN. Quand SET ANSI_NULLS est OFF, les mêmes règles s’appliquent, à l’exception des opérateurs d’égalité (=) et de différence (<>). Quand SET ANSI_NULLS est OFF, ces opérateurs traitent la valeur NULL comme une valeur connue, équivalente à toute autre valeur NULL, et retournent uniquement TRUE ou FALSE (jamais UNKNOWN).  
   
  Les expressions de type **booléen** s’utilisent dans la clause WHERE pour filtrer les lignes qui répondent aux critères de recherche et dans les instructions de langage de contrôle de flux, comme IF et WHILE. Par exemple :  
   

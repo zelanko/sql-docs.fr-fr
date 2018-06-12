@@ -1,7 +1,7 @@
 ---
 title: Propriétés du serveur (page Avancé) - Reporting Services | Microsoft Docs
 ms.custom: ''
-ms.date: 08/09/2017
+ms.date: 05/24/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.component: tools
@@ -17,11 +17,12 @@ caps.latest.revision: 18
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: dfbfe74439ecbf3db24f1a2a32bd5ab5d528fb72
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 336a201dde0a1afba761e135d561079ce5c95d75
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34550400"
 ---
 # <a name="server-properties-advanced-page---reporting-services"></a>Propriétés du serveur (page Avancé) - Reporting Services
 
@@ -46,16 +47,16 @@ Détermine si le contrôle ActiveX RSClientPrint peut être téléchargé à par
 Indique si la journalisation de l'exécution des rapports est activée. La valeur par défaut est **true**. Pour plus d’informations sur le journal des exécutions du serveur de rapports, consultez [Journal des exécutions du serveur de rapports et vue ExecutionLog3](../../reporting-services/report-server/report-server-executionlog-and-the-executionlog3-view.md).  
 
 **ExecutionLogDaysKept**  
-Nombre de jours pendant lesquels conserver les informations sur l'exécution du rapport dans le journal des exécutions. Les valeurs valides pour cette propriété sont comprises entre **-1** et **2** **147** **483** **647**. Si la valeur est égale à **-1** , les entrées ne sont pas supprimées de la table du journal des exécutions. La valeur par défaut est **60**.  
+Nombre de jours pendant lesquels conserver les informations sur l'exécution du rapport dans le journal des exécutions. Les valeurs valides pour cette propriété sont comprises entre **-1** et **2** **147** **483** **647**. Si la valeur est **-1**, les entrées ne sont pas supprimées de la table du journal des exécutions. La valeur par défaut est **60**.  
 
 > [!NOTE] 
-> La définition d’une valeur égale à **0** *supprime* toutes les entrées du journal d’exécution. La valeur  **-1** conserve les entrées du journal d’exécution et ne les supprime pas.
+> La définition d’une valeur égale à **0** *supprime* toutes les entrées du journal d’exécution. Une valeur **-1** conserve les entrées du journal d’exécution et ne les supprime pas.
 
 **SessionTimeout**  
 Durée (en secondes) pendant laquelle une session demeure active. La valeur par défaut est **600**.  
 
 **SharePointIntegratedMode**  
-Propriété en lecture seule qui indique le mode serveur. Si cette valeur est False, le serveur de rapports s'exécute en mode natif.  
+Cette propriété en lecture seule indique le mode du serveur. Si cette valeur est False, le serveur de rapports s'exécute en mode natif.  
 
 **SiteName**  
 Nom du site du serveur de rapports affiché dans le titre de la page du portail web. La valeur par défaut est [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Cette propriété peut être une chaîne vide. La longueur maximale autorisée s’élève à 8 000 caractères.  
@@ -77,7 +78,7 @@ Définit le mode de compression des instantanés. La valeur par défaut est **SQ
 
 |Valeurs|Description|
 |---------|---------|
-|**SQL**|Les instantanés sont compressés quand ils sont stockés dans la base de données du serveur de rapports. Il s'agit du comportement actuel.|
+|**SQL**|Les instantanés sont compressés quand ils sont stockés dans la base de données du serveur de rapports. Cette compression est le comportement actuel.|
 |**Aucun**|Les instantanés ne sont pas compressés.|
 |**Tous**|Les instantanés sont compressés pour toutes les options de stockage, qui incluent la base de données du serveur de rapports ou le système de fichiers.|
 
@@ -98,7 +99,7 @@ Détermine si la sécurité intégrée de Windows est prise en charge pour les c
 **EnableLoadReportDefinition**  
 Sélectionnez cette option pour spécifier si les utilisateurs peuvent effectuer une exécution de rapport ad hoc à partir d'un rapport du Générateur de rapports. La définition de cette option spécifie la propriété **EnableLoadReportDefinition** sur le serveur de rapports.  
 
-Si vous désactivez cette option, la valeur False sera affectée à la propriété et le serveur de rapports ne générera pas de rapports générés interactifs pour les rapports qui utilisent un modèle de rapport comme source de données. Tout appel à la méthode LoadReportDefinition sera bloqué.  
+Si vous désactivez cette option, la propriété a la valeur False. Le serveur de rapports ne crée pas de rapports générés interactifs pour les rapports utilisant un modèle de rapport comme source de données. Tout appel à la méthode LoadReportDefinition est bloqué.  
 
 La désactivation de cette option atténue la menace qu'un utilisateur malveillant lance une attaque par déni de service en surchargeant le serveur de rapports avec les demandes LoadReportDefinition.  
 
@@ -106,13 +107,13 @@ La désactivation de cette option atténue la menace qu'un utilisateur malveilla
 Inclut les informations externes sur l'erreur (par exemple, les informations d'erreur relatives aux sources de données de rapport) avec les messages d'erreur retournés pour les utilisateurs qui demandent des rapports à partir d'ordinateurs distants. Les valeurs valides sont **true** et **false**. La valeur par défaut est **false**. Pour plus d’informations, consultez [Activer les erreurs distantes &#40;Reporting Services&#41;](../../reporting-services/report-server/enable-remote-errors-reporting-services.md).  
 
 **EnableReportDesignClientDownload**  
-Spécifie si le package d'installation du Générateur de rapports peut être téléchargé à partir du serveur de rapports. Si vous effacez ce paramètre, l'URL du Générateur de rapports ne fonctionnera pas. Pour plus d’informations, consultez [Configurer l’accès au Générateur de rapports](../../reporting-services/report-server/configure-report-builder-access.md).  
+Spécifie si le package d'installation du Générateur de rapports peut être téléchargé à partir du serveur de rapports. Si vous effacez ce paramètre, l’URL du Générateur de rapports ne fonctionne pas. 
 
 **EditSessionCacheLimit**  
 Spécifie le nombre des entrées de cache de données qui peuvent être actives dans une session d'édition de rapport. La valeur par défaut est 5.  
 
 **EditSessionTimeout**  
-Spécifie le nombre de secondes jusqu'à l'expiration d'une session d'édition de rapport. La valeur par défaut est 7 200 secondes (2 heures).  
+Spécifie le nombre de secondes jusqu'à l'expiration d'une session d'édition de rapport. La valeur par défaut est 7 200 secondes (deux heures).  
 
 **EnableCustomVisuals** ***(Power BI Report Server uniquement)***  
 Indique si PowerBI Report Server doit activer l’affichage des visuels personnalisés Power BI. Les valeurs sont True, False.  La valeur par défaut est True.  
@@ -124,7 +125,7 @@ Indique si PowerBI Report Server doit activer l’exportation de données à par
 Délai d’actualisation des données, en minutes, pour l’actualisation planifiée des rapports Power BI avec des modèles AS incorporés. La valeur par défaut est 120 minutes.
 
 **EnableTestConnectionDetailedErrors**  
-Indique si les messages d'erreur détaillés sont envoyés à l'ordinateur client lorsque des utilisateurs testent des connexions de la source des données à l'aide du serveur de rapports. La valeur par défaut est **true**. Si l’option est définie sur **false**, seuls les messages d’erreur génériques sont envoyés.
+Indique si les messages d’erreur détaillés sont envoyés à l’ordinateur client quand des utilisateurs testent des connexions de la source des données à l’aide du serveur de rapports. La valeur par défaut est **true**. Si l’option est définie sur **false**, seuls les messages d’erreur génériques sont envoyés.
 
 **AccessControlAllowCredentials**  
 Indique si la réponse à la requête du client peut être exposée quand l’indicateur 'credentials' a la valeur true. La valeur par défaut est **false**.
@@ -133,7 +134,7 @@ Indique si la réponse à la requête du client peut être exposée quand l’in
 
 **AccessControlAllowMethods** Liste séparée par des virgules des méthodes HTTP autorisées par le serveur quand un client soumet une requête. Les valeurs par défaut sont GET, PUT, POST, PATCH, DELETE. Spécifiez * pour autoriser toutes les méthodes.
 
-**AccessControlAllowOrigin** Liste séparée par des virgules des origines autorisées par le serveur quand un client soumet une requête. La valeur par défaut est vide, ce qui empêche toutes les requêtes. Spécifiez * pour autoriser toutes les origines quand les informations d’identification ne sont pas définies. Si les informations d’identification sont spécifiées, une liste explicite d’origines doit être indiquée.
+**AccessControlAllowMethods** Liste séparée par des virgules des méthodes HTTP autorisées par le serveur quand un client soumet une requête. La valeur par défaut est vide, ce qui empêche toutes les requêtes. Spécifiez * pour autoriser toutes les origines quand les informations d’identification ne sont pas définies. Si les informations d’identification sont spécifiées, une liste explicite d’origines doit être indiquée.
 
 **AccessControlExposeHeaders** Liste séparée par des virgules des en-têtes que le serveur expose aux clients. La valeur par défaut est vide.
 

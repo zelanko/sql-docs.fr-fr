@@ -20,16 +20,17 @@ caps.latest.revision: 8
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.openlocfilehash: 2d2b965d3177be06b46bb51b8f5238f5a4b21dee
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 2b6412856e373c3b1ad5ac838f9b15486d451a2b
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34779195"
 ---
 # <a name="decompress-transact-sql"></a>DECOMPRESS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-  Décompresse l’expression d’entrée à l’aide de l’algorithme GZIP. Le résultat de la compression est un tableau d’octets (type VARBINARY(MAX)).  
+Cette fonction décompresse une valeur d’expression d’entrée à l’aide de l’algorithme GZIP. `DECOMPRESS` retourne un tableau d’octets (type VARBINARY(MAX)).  
   
  ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -41,17 +42,17 @@ DECOMPRESS ( expression )
   
 ## <a name="arguments"></a>Arguments  
  *expression*  
- **varbinary(***n***)**, **varbinary(max)** ou **binary(***n***)**. Pour plus d’informations, consultez [Expressions &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md).  
+Valeur **varbinary(***n***)**, **varbinary(max)** ou **binary(***n***)**. Pour plus d’informations, consultez [Expressions &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md).  
   
 ## <a name="return-types"></a>Types de retour  
- Retourne le type de données du type **varbinary(max)**. L’argument d’entrée est décompressé à l’aide de l’algorithme ZIP. L’utilisateur doit explicitement convertir le résultat en un type cible si nécessaire.  
+Valeur ayant le type de données **varbinary(max)**. `DECOMPRESS` utilise l’algorithme ZIP pour décompresser l’argument d’entrée. Si nécessaire, l’utilisateur doit explicitement caster le résultat en type de cible.  
   
 ## <a name="remarks"></a>Notes   
   
 ## <a name="examples"></a>Exemples  
   
 ### <a name="a-decompress-data-at-query-time"></a>A. Décompresser les données au moment de la requête  
- L’exemple suivant montre comment compresser les données à partir d’une table :  
+Cet exemple montre comment retourner des données de table compressées :  
   
 ```  
 SELECT _id, name, surname, datemodified,  
@@ -60,10 +61,10 @@ FROM player;
 ```  
   
 ### <a name="b-display-compressed-data-using-computed-column"></a>B. Afficher les données compressées à l’aide d’une colonne calculée  
- L’exemple suivant montre comment créer une table pour stocker les données décompressées :  
+Cet exemple montre comment créer une table de stockage des données décompressées :  
   
 ```  
-CREATE TABLE (  
+CREATE TABLE example_table (  
     _id int primary key identity,  
     name nvarchar(max),  
     surname nvarchar(max),  

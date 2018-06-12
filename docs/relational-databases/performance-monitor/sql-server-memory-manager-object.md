@@ -19,11 +19,12 @@ caps.latest.revision: 29
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 89b69f14e131453519bbaae77f16d629444eb169
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: bcd7a5a51aa9f7a3e4e2dfc84dd76e05a950e897
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34473903"
 ---
 # <a name="sql-server-memory-manager-object"></a>Objet SQLServer:Memory Manager
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -40,7 +41,7 @@ ms.lasthandoff: 05/03/2018
 |----------------------------------------|-----------------|  
 |**Mémoire de connexion (Ko)**|Spécifie la quantité totale de mémoire dynamique utilisée par le serveur pour maintenir les connexions.|  
 |**Mémoire du cache de base de données (Ko)**|Spécifie la quantité de mémoire actuellement utilisée par le serveur pour le cache de la base de données.|  
-|**Avantage externe de mémoire**|Quantité externe de mémoire, en millisecondes par page par milliseconde, multipliée par 10 milliards et tronquée en entier.| 
+|**Avantage externe de mémoire**| Estimation interne des gains de performances résultant de l’ajout de mémoire à un cache spécifique. Ce compteur, utilisé par le moteur pour équilibrer l’utilisation de mémoire entre le cache, peut s’avérer utile pour résoudre les problèmes liés à la croissance inattendue du cache. La valeur est présentée sous forme d’un entier basé sur un calcul interne. | 
 |**Mémoire disponible (Ko)**|Spécifie la quantité de mémoire allouée actuellement non utilisée par le serveur.|  
 |**Mémoire réservée de l'espace de travail (Ko)**|Spécifie la quantité totale de mémoire actuellement réservée à l'exécution de processus tels que les opérations de hachage, de tri, de copie en bloc et de créations d'index.|  
 |**Blocs de verrous**|Spécifie le nombre actuel de blocs de verrous utilisés sur le serveur (mis à jour régulièrement). Un bloc de verrous représente une ressource individuelle verrouillée, comme une table, une page ou une ligne.|  

@@ -1,7 +1,7 @@
 ---
 title: Action d’exploration (Générateur de rapports et SSRS) | Microsoft Docs
 ms.custom: ''
-ms.date: 03/07/2017
+ms.date: 05/24/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.component: report-design
@@ -45,14 +45,15 @@ caps.latest.revision: 9
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: db793e5608aca874a98f6125136429244eb5ffff
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 1250e47366e8beab3cdee5f07e6d17e76827a597
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34550710"
 ---
 # <a name="drilldown-action-report-builder-and-ssrs"></a>Action d'exploration (Générateur de rapports et SSRS)
-  En fournissant des icônes plus et moins (+/-) dans une zone de texte, vous pouvez permettre aux utilisateurs de masquer et d'afficher des éléments de manière interactive. Cela s'appelle une action d' *exploration* . Pour une table ou une matrice, vous pouvez afficher ou masquer des colonnes et des lignes statiques ou des colonnes et des lignes qui sont associées à des groupes.  
+En fournissant des icônes plus et moins (+/-) dans une zone de texte, vous pouvez permettre aux utilisateurs de masquer et d’afficher des éléments de manière interactive. Cela s'appelle une action d' *exploration* . Pour une table ou une matrice, vous pouvez afficher ou masquer des colonnes et des lignes statiques ou des colonnes et des lignes qui sont associées à des groupes.  
   
  ![rs_drilldown](../../reporting-services/report-design/media/rs-drilldown.gif "rs_drilldown")  
   
@@ -78,7 +79,7 @@ ms.lasthandoff: 05/03/2018
  Dans un rapport d'extraction, un utilisateur clique sur un bouton plus ou moins afin de développer ou réduire une section d'un rapport et d'afficher les données de détail présentes. Dans un rapport d'extraction, l'utilisateur clique sur le lien d'une valeur de synthèse, ce qui entraîne l'ouverture d'un rapport associé distinct permettant d'afficher des données de détail. Les données de détail sont uniquement récupérées au moment de l'exécution du rapport détaillé. En règle générale, les rapports d'extraction requièrent moins de ressources que les rapports d'exploration. Pour plus d’informations, consultez [Extraction, exploration, sous-rapports et régions de données imbriquées &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/drillthrough-drilldown-subreports-and-nested-data-regions.md).  
   
 ## <a name="rendering-extension-support-for-hidden-report-items"></a>Prise en charge des extensions de rendu pour les éléments de rapport masqués  
- La bascule d'affichage/de masquage d'éléments de rapport n'est prise en charge que par les extensions de rendu gérant l'interactivité utilisateur, par exemple l'extension de rendu HTML utilisée lorsque vous exécutez un rapport dans le Générateur de rapports et le Gestionnaire de rapports. D'autres extensions de rendu affichent des éléments masqués. La visibilité conditionnelle des éléments de rapport prise en charge est listée ci-dessous :  
+ La bascule d’affichage/de masquage d’éléments de rapport n’est prise en charge que par les extensions de rendu gérant l’interactivité utilisateur, par exemple l’extension de rendu HTML utilisée quand vous exécutez un rapport dans le Générateur de rapports et le portail web. D'autres extensions de rendu affichent des éléments masqués. La visibilité conditionnelle des éléments de rapport prise en charge est listée ci-dessous :  
   
 -   En HTML, si des éléments sont masqués, ils ne sont pas visibles dans la source HTML.  
   

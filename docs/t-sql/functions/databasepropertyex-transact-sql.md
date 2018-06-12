@@ -25,11 +25,12 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 3cb0ea7d3443e338190e9bc63c7132aa554aa843
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: aed0b8b2aa36b215f894ee4c032ff38e8a23f43f
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34550810"
 ---
 # <a name="databasepropertyex-transact-sql"></a>DATABASEPROPERTYEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -89,7 +90,7 @@ Expression spécifiant le nom de la propriété de base de données à retourner
 |IsTornPageDetectionEnabled|Le [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] détecte les opérations d'E/S interrompues à la suite d'une coupure de courant ou de toute autre panne du système.|1 : TRUE<br /><br /> 0 : FALSE<br /><br /> NULL : entrée non valide<br /><br /> Type de données de base : **int**| 
 |IsVerifiedClone|La base de données est une copie de schéma et de statistiques uniquement d’une base de données utilisateur créée avec l’option WITH VERIFY_CLONEDB de DBCC CLONEDATABASE. Pour plus d’informations, consultez cet [article du Support Microsoft](http://support.microsoft.com/help/3177838).|**S’applique à**  : à partir de [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2.<br /><br /> <br /><br /> 1 : TRUE<br /><br /> 0 : FALSE<br /><br /> NULL : entrée non valide<br /><br /> Type de données de base : **int**| 
 |IsXTPSupported|Indique si la base de données prend en charge l’option OLTP en mémoire, à savoir la création et l’utilisation de tables à mémoire optimisée et de modules compilés en mode natif.<br /><br /> Spécifique à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] :<br /><br /> La propriété IsXTPSupported est indépendante de l’existence de tout groupe de fichiers MEMORY_OPTIMIZED_DATA, qui est nécessaire pour la création d’objets OLTP en mémoire.|**S’applique à** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (de [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]) et [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].<br /><br /> 1 : TRUE<br /><br /> 0 : FALSE<br /><br /> NULL : entrée non valide, erreur ou non applicable<br /><br /> Type de données de base : **int**|  
-|LastGoodCheckDbTime|Date et heure de la dernière exécution réussie de DBCC CHECKDB sur la base de données spécifiée.|**S’applique à**  : à partir de [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2.<br /><br /> Valeur DateHeure<br /><br /> NULL : entrée non valide<br /><br /> Type de données de base : **datetime**| 
+|LastGoodCheckDbTime|Date et heure de la dernière exécution réussie de DBCC CHECKDB sur la base de données spécifiée. <sup>1</sup> Si DBCC CHECKDB n’a pas été exécuté sur une base de données, 1900-01-01 00:00:00.000 est retourné.|**S’applique à**  : à partir de [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2.<br /><br /> Valeur DateHeure<br /><br /> NULL : entrée non valide<br /><br /> Type de données de base : **datetime**| 
 |LCID|Identificateur de paramètres régionaux (LCID) Windows de classement.|Valeur LCID (au format décimal).<br /><br /> Type de données de base : **int**|  
 |MaxSizeInBytes|Taille maximale de la base de données, en octets.|**S’applique à** : [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], [!INCLUDE[ssSDW](../../includes/sssdw-md.md)].<br /><br /> <br /><br /> 1073741824<br /><br /> 5368709120<br /><br /> 10737418240<br /><br /> 21474836480<br /><br /> 32212254720<br /><br /> 42949672960<br /><br /> 53687091200<br /><br /> NULL : la base de données n’est pas démarrée<br /><br /> Type de données de base : **bigint**|  
 |Récupération|Mode de récupération de base de données|FULL : mode de récupération complète<br /><br /> BULK_LOGGED : mode de récupération utilisant les journaux de transactions<br /><br /> SIMPLE : mode de récupération simple<br /><br /> Type de données de base : **nvarchar(128)**|  
@@ -99,8 +100,12 @@ Expression spécifiant le nom de la propriété de base de données à retourner
 |État|État de la base de données.|ONLINE : la base de données est disponible pour la requête.<br /><br /> **Remarque :** l’état ONLINE peut être retourné pendant que la base de données s’ouvre et qu’elle n’a pas encore été récupérée. Pour déterminer lorsqu’une base de données peut accepter les connexions, interrogez la propriété Collation de **DATABASEPROPERTYEX**. La base de données peut accepter les connexions lorsque le classement de base de données retourne une valeur non NULL. Pour les bases de données AlwaysOn, interrogez les colonnes database_state ou database_state_desc de `sys.dm_hadr_database_replica_states`.<br /><br /> OFFLINE : la base de données a été explicitement mise hors connexion.<br /><br /> RESTORING : la restauration de la base de données a démarré.<br /><br /> RECOVERING : la récupération de la base de données a démarré et celle-ci n’est pas encore prête pour les requêtes.<br /><br /> SUSPECT : la base de données n’a pas été récupérée.<br /><br /> EMERGENCY : la base de données se trouve dans un état d’urgence en lecture seule. L'accès est limité aux membres sysadmin.<br /><br /> Type de données de base : **nvarchar(128)**|  
 |Updateability|Indique si les données peuvent être modifiées.|READ_ONLY : la base de données prend en charge les lectures de données, mais pas les modifications de données.<br /><br /> READ_WRITE : la base de données prend en charge les lectures et les modifications de données.<br /><br /> Type de données de base : **nvarchar(128)**|  
 |UserAccess|Définit les utilisateurs autorisés à accéder à la base de données.|SINGLE_USER : un seul utilisateur db_owner, dbcreator ou sysadmin à la fois<br /><br /> RESTRICTED_USER : uniquement les membres des rôles db_owner, dbcreator ou sysadmin<br /><br /> MULTI_USER : tous les utilisateurs<br /><br /> Type de données de base : **nvarchar(128)**|  
-|Options de version|Numéro de version interne du code [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] avec lequel la base de données a été créée. [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|Numéro de version : la base de données est ouverte.<br /><br /> NULL : la base de données n’a pas démarré.<br /><br /> Type de données de base : **int**|  
-  
+|Options de version|Numéro de version interne du code [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] avec lequel la base de données a été créée. [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|Numéro de version : la base de données est ouverte.<br /><br /> NULL : la base de données n’a pas démarré.<br /><br /> Type de données de base : **int**| 
+<br/>   
+
+> [!NOTE]  
+> <sup>1</sup> Pour les bases de données qui font partie d’un groupe de disponibilité, `LastGoodCheckDbTime` retourne la date et l’heure de la dernière exécution réussie de DBCC CHECKDB sur le réplica principal, quel que soit le réplica à partir duquel vous avez exécuté la commande. 
+
 ## <a name="return-types"></a>Types de retour
 **sql_variant**
   

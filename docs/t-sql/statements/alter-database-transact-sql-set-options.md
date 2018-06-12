@@ -2,7 +2,7 @@
 title: Options SET d’ALTER DATABASE (Transact-SQL) | Microsoft Docs
 description: Découvrez comment définir des options de base de données telles que l’optimisation automatique, le chiffrement et le magasin des requêtes dans SQL Server et Azure SQL Database.
 ms.custom: ''
-ms.date: 12/20/2017
+ms.date: 6/01/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.component: t-sql|statements
@@ -33,16 +33,17 @@ caps.latest.revision: 159
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.openlocfilehash: ea637d3853d3e63cbab6806022000c04d95e3e92
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 52ad590fd7efeddc9a7e086f1337b4e61a850fc1
+ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34744138"
 ---
 # <a name="alter-database-set-options-transact-sql"></a>Options SET d'ALTER DATABASE (Transact-SQL) 
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-xxx-md.md)]
 
-  Cette rubrique contient la syntaxe ALTER DATABASE en rapport avec la définition d'options de base de données dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Pour obtenir des informations sur une autre syntaxe ALTER DATABASE, consultez les rubriques suivantes.  
+  Cet article contient la syntaxe ALTER DATABASE en rapport avec la définition d’options de base de données dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Pour obtenir des informations sur une autre syntaxe ALTER DATABASE, consultez les rubriques suivantes.  
   
 -   [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)  
 
@@ -274,7 +275,7 @@ SET
   
  `CURRENT` effectue l’action dans la base de données active. `CURRENT` n’est pas pris en charge pour toutes les options dans tous les contextes. Si `CURRENT` échoue, fournissez le nom de la base de données.  
   
- **\<auto_option> ::=**  
+ **\<auto_option> ::=**
   
  Contrôle les options automatiques.  
  <a name="auto_close"></a> AUTO_CLOSE { ON | OFF }  
@@ -438,7 +439,7 @@ SET
  OFF  
  Les curseurs restent ouverts lorsqu'une transaction est validée. La restauration d'une transaction ferme tous les curseurs à l'exception de ceux définis avec la valeur INSENSITIVE ou STATIC.  
   
- Les paramètres de niveau connexion définis à l'aide de l'instruction SET se substituent au paramètre de base de données par défaut de CURSOR_CLOSE_ON_COMMIT. Par défaut, les clients ODBC et OLE DB génèrent une instruction SET de niveau connexion qui désactive l'option CURSOR_CLOSE_ON_COMMIT pour la session (valeur OFF), lors de la connexion à une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Pour plus d’informations, consultez [SET CURSOR_CLOSE_ON_COMMIT &#40;Transact-SQL&#41;](../../t-sql/statements/set-cursor-close-on-commit-transact-sql.md).  
+ Les paramètres de niveau connexion définis à l'aide de l'instruction SET se substituent au paramètre de base de données par défaut de CURSOR_CLOSE_ON_COMMIT. Par défaut, les clients ODBC et OLE DB génèrent une instruction SET de niveau connexion qui désactive l’option CURSOR_CLOSE_ON_COMMIT pour la session (valeur OFF), lors de la connexion à une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Pour plus d’informations, consultez [SET CURSOR_CLOSE_ON_COMMIT &#40;Transact-SQL&#41;](../../t-sql/statements/set-cursor-close-on-commit-transact-sql.md).  
   
  Vous pouvez déterminer l'état de cette option en consultant la colonne is_cursor_close_on_commit_on de l'affichage catalogue sys.databases ou la propriété IsCloseCursorsOnCommitEnabled de la fonction DATABASEPROPERTYEX.  
   
@@ -538,7 +539,7 @@ SET
  SINGLE_USER  
  **S'applique à**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Non disponible dans [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
   
- Indique que l'accès à la base de données n'est autorisé qu'à un seul utilisateur à la fois. Si SINGLE_USER est spécifié et que d'autres utilisateurs sont connectés à la base de données, l'instruction ALTER DATABASE est bloquée jusqu'à ce que tous les autres utilisateurs se déconnectent de cette base de données. Pour remplacer ce comportement, examinez la clause WITH \<termination>.  
+ Indique que l'accès à la base de données n'est autorisé qu'à un seul utilisateur à la fois. Si SINGLE_USER est spécifié et que d’autres utilisateurs sont connectés à la base de données, l’instruction ALTER DATABASE est bloquée jusqu’à ce que tous les autres utilisateurs se déconnectent de cette base de données. Pour remplacer ce comportement, examinez la clause WITH \<termination>.  
   
  La base de données demeure en mode SINGLE_USER même si l'utilisateur qui a défini l'option se déconnecte. À ce stade, un autre utilisateur (et un seul) peut se connecter à la base de données.  
   

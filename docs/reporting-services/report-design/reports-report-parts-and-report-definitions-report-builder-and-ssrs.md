@@ -1,7 +1,7 @@
 ---
 title: Rapports, parties de rapports et définitions de rapports (Générateur de rapports et SSRS) | Microsoft Docs
 ms.custom: ''
-ms.date: 03/01/2017
+ms.date: 05/24/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.component: report-design
@@ -18,11 +18,12 @@ caps.latest.revision: 26
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: cd2c743dbff40d700bf50533028994bf78fb40fa
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 918cf42c76038411777628c200f0ed71fe3e8788
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34550470"
 ---
 # <a name="reports-report-parts-and-report-definitions-report-builder-and-ssrs"></a>Rapports, parties de rapports et définitions de rapports (Générateur de rapports et SSRS)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] utilise un certain nombre de termes pour décrire un rapport paginé dans différents états, notamment la définition initiale, le rapport publié et le rapport affiché tel qu’il apparaît à l’utilisateur.  
@@ -53,7 +54,7 @@ ms.lasthandoff: 05/03/2018
  La sécurité d'un rapport publié est assurée au moyen des attributions de rôles utilisant le modèle de sécurité basée sur les rôles de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Les rapports publiés sont accessibles par le biais d’URL, de composants WebPart SharePoint ou du portail web [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Vous pouvez également naviguer jusqu’aux rapports et les ouvrir dans le Générateur de rapports.  
   
 ### <a name="report-snapshots"></a>Instantanés de rapport  
- Un rapport peut également être publié sous la forme d'un instantané qui contient à la fois les informations de mise en page et les données qui étaient en vigueur au moment où le rapport a été exécuté pour la première fois. Les instantanés de rapport ne sont pas enregistrés dans un format de rendu particulier. Ils sont générés dans un format d'affichage final (par exemple, au format HTML) uniquement à la demande d'un utilisateur ou d'une application. Pour plus d’informations, consultez [Recherche et affichage de rapports dans le Gestionnaire de rapports &#40;Générateur de rapports et SSRS&#41;](../report-builder/finding-and-viewing-reports-with-a-browser-report-builder-and-ssrs.md).  
+ Un rapport peut également être publié sous la forme d'un instantané qui contient à la fois les informations de mise en page et les données qui étaient en vigueur au moment où le rapport a été exécuté pour la première fois. Les instantanés de rapport ne sont pas enregistrés dans un format de rendu particulier. Ils sont générés dans un format d'affichage final (par exemple, au format HTML) uniquement à la demande d'un utilisateur ou d'une application. Pour plus d’informations, consultez [Recherche et affichage de rapports dans le portail web](../report-builder/finding-and-viewing-reports-with-a-browser-report-builder-and-ssrs.md).  
   
 ## <a name="rendered-reports"></a>Rapports rendus  
  Un rapport rendu est un rapport dont le traitement est complet et qui contient à la fois des informations de mise en page et des données dans un format d'affichage approprié (par exemple au format HTML). Il est impossible de lire un rapport tant que son rendu n'est pas effectué dans un format de sortie. Vous pouvez effectuer le rendu d'un rapport en procédant de l'une des façons suivantes :  

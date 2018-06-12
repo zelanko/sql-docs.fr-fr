@@ -1,7 +1,7 @@
 ---
 title: Catalogue SSIS | Microsoft Docs
 ms.custom: ''
-ms.date: 04/30/2018
+ms.date: 06/04/2018
 ms.prod: sql
 ms.prod_service: integration-services
 ms.component: service
@@ -20,15 +20,21 @@ caps.latest.revision: 28
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 0285d3dbaf5bd1ed5def180029a75c32fe4fcb83
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 711bc7d70060cc3e5b1ac9f6fa38187bc82a48de
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34772665"
 ---
 # <a name="ssis-catalog"></a>Catalogue SSIS
   Le catalogue **SSISDB** est l’élément central pour l’utilisation des projets [!INCLUDE[ssISnoversion_md](../../includes/ssisnoversion-md.md)] (SSIS) que vous avez déployés sur le serveur [!INCLUDE[ssISnoversion_md](../../includes/ssisnoversion-md.md)]. Ainsi, c'est dans ce catalogue que vous définissez les paramètres de projet et de package, configurez les environnements pour spécifier des valeurs d'exécution pour les packages, exécutez et résolvez les problèmes relatifs aux packages, et gérez les opérations du serveur [!INCLUDE[ssISnoversion_md](../../includes/ssisnoversion-md.md)] .  
-  
+ 
+> [!NOTE]
+> Cet article décrit le catalogue SSIS de manière générale et le catalogue SSIS en cours d’exécution au niveau local. Vous pouvez également créer le catalogue SSIS dans Azure SQL Database, et déployer et exécuter des packages SSIS dans Azure. Pour plus d’informations, consultez [Effectuer un « lift-and-shift » des charges de travail SQL Server Integration Services vers le cloud](../lift-shift/ssis-azure-lift-shift-ssis-packages-overview.md).
+>
+> Bien que vous puissiez également exécuter des packages SSIS sur Linux, le catalogue SSIS n’est pas pris en charge sur Linux. Pour plus d’informations, consultez [Extraire, transformer et charger des données sur Linux avec SSIS](../../linux/sql-server-linux-migrate-ssis.md).
+ 
  Les objets stockés dans le catalogue **SSISDB** sont les projets, les packages, les paramètres, les environnements et l'historique opérationnel.  
   
  Vous inspectez les objets, les paramètres et les données opérationnelles stockés dans le catalogue **SSISDB** en interrogeant les vues de la base de données **SSISDB** . Vous gérez des objets en appelant des procédures stockées situées dans la base de données **SSISDB** ou à l'aide de l'interface utilisateur du catalogue **SSISDB** . Dans de nombreux cas, la même tâche peut être effectuée dans l'interface utilisateur ou en appelant une procédure stockée.  

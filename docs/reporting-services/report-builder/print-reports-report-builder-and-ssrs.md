@@ -1,7 +1,7 @@
 ---
-title: Imprimer des rapports (Générateur de rapports et SSRS) | Microsoft Docs
+title: Imprimer des rapports (SSRS) | Microsoft Docs
 ms.custom: ''
-ms.date: 03/01/2017
+ms.date: 05/24/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.component: report-builder
@@ -15,14 +15,15 @@ caps.latest.revision: 8
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: f5e5e9cd47e550db2e4c68739832c6815d4ec660
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: e5973ae6180a138a56c6c130755c699a7b23c918
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34709047"
 ---
-# <a name="print-reports-report-builder-and-ssrs"></a>Imprimer des rapports (Générateur de rapports et SSRS)
-  Après avoir enregistré un rapport sur un serveur de rapports, vous pouvez l'afficher et l'imprimer à partir d'un navigateur, du Gestionnaire de rapports ou de toute application permettant d'afficher un rapport exporté. Avant d'enregistrer un rapport, vous pouvez l'imprimer après avoir affiché son aperçu.  
+# <a name="print-reports---reporting-services-ssrs"></a>Imprimer des rapports - Reporting Services (SSRS)
+  Après avoir enregistré un rapport sur un serveur de rapports, vous pouvez l’afficher et l’imprimer à partir du portail web ou de toute application permettant d’afficher un rapport exporté. Avant d'enregistrer un rapport, vous pouvez l'imprimer après avoir affiché son aperçu.  
   
  Toutes les tâches relatives à l'impression sont effectuées à la demande et sur l'ordinateur client. Aucune fonctionnalité d'impression côté serveur ne vous permet d'acheminer un travail d'impression directement depuis un serveur de rapports jusqu'à une imprimante connectée au serveur Web. Les imprimantes et les options d’impression sont sélectionnées par chaque utilisateur de rapport via une boîte de dialogue **Imprimer** standard.  
   
@@ -44,7 +45,7 @@ ms.lasthandoff: 05/03/2018
   
 ## <a name="in-this-section"></a>Dans cette section  
  [Imprimer des rapports à partir d’un navigateur à l’aide du contrôle d’impression &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-builder/print-reports-from-a-browser-with-the-print-control-report-builder-and-ssrs.md)  
- Décrit l'utilisation de l'impression des rapports côté client à partir du navigateur Web ou du Gestionnaire de rapports.  
+ Décrit l’utilisation de l’impression côté client pour imprimer des rapports à partir du portail web.  
   
  [Imprimer des rapports à partir d’autres applications &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-builder/print-reports-from-other-applications-report-builder-and-ssrs.md)  
  Explique comment imprimer des rapports exportés vers une autre application.  

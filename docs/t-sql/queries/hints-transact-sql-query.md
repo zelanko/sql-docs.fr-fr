@@ -59,11 +59,12 @@ caps.latest.revision: 136
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 1a5246b1d7d6a00e4500c95bae20fb2975bbebc9
-ms.sourcegitcommit: bac61a04d11fdf61deeb03060e66621c0606c074
+ms.openlocfilehash: 484d0e3c9fccd0e65041665eef523dbf92311399
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/14/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34470290"
 ---
 # <a name="hints-transact-sql---query"></a>Indicateurs (Transact-SQL) - Requête
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -276,12 +277,15 @@ ms.lasthandoff: 05/14/2018
 *  'ENABLE_HIST_AMENDMENT_FOR_ASC_KEYS'  
  Active automatiquement la génération de statistiques rapides (modification de l’histogramme) pour les colonnes d’index de début où l’estimation de la cardinalité est nécessaire. L’histogramme utilisé pour estimer la cardinalité est ajusté au moment de la compilation des requêtes pour prendre en compte la valeur minimale ou maximale réelle de chaque colonne. Cela équivaut à utiliser [l’indicateur de trace](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 4139. 
 *  'ASSUME_JOIN_PREDICATE_DEPENDS_ON_FILTERS'  
- Indique à SQL Server de générer un plan de requête qui utilise l’hypothèse de relation contenant-contenu simple, au lieu de l’hypothèse par défaut de relation contenant-contenu de base pour les jointures, avec le modèle [d’estimation de la cardinalité](../../relational-databases/performance/cardinality-estimation-sql-server.md) de l’optimiseur de requête fourni dans [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] ou les versions ultérieures. Cela équivaut à utiliser [l’indicateur de trace](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 9476. 
-*  'FORCE_DEFAULT_CARDINALITY_ESTIMATION'  
+ Indique à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de générer un plan de requête qui utilise l’hypothèse de relation contenant-contenu simple, au lieu de l’hypothèse par défaut de relation contenant-contenu de base pour les jointures, avec le modèle [d’estimation de la cardinalité](../../relational-databases/performance/cardinality-estimation-sql-server.md) de l’optimiseur de requête fourni dans [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] ou ultérieur. Cela équivaut à utiliser [l’indicateur de trace](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 9476. 
+*  'FORCE_DEFAULT_CARDINALITY_ESTIMATION'    
  Force l’optimiseur de requête à utiliser le modèle [d’estimation de la cardinalité](../../relational-databases/performance/cardinality-estimation-sql-server.md) qui correspond au niveau de compatibilité de la base de données. Cet indicateur substitue [l’indicateur de trace](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md) 9481 ou le paramètre de [configuration au niveau base de données](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) LEGACY_CARDINALITY_ESTIMATION=ON.
-* « DISABLE_INTERLEAVED_EXECUTION_TVF » désactive l’exécution entrelacée pour les fonctions table à instructions multiples.
-* « DISABLE_BATCH_MODE_MEMORY_GRANT_FEEDBACK » désactive le retour d’allocation de mémoire en mode batch.
-* « DISABLE_BATCH_MODE_ADAPTIVE_JOINS » désactive les jointures adaptatives en mode batch.
+*  'DISABLE_INTERLEAVED_EXECUTION_TVF'   
+ Désactive l’exécution entrelacée pour les fonctions table à instructions multiples. Pour plus d’informations, consultez [Exécution entrelacée pour les fonctions table à instructions multiples](../../relational-databases/performance/adaptive-query-processing.md#interleaved-execution-for-multi-statement-table-valued-functions).
+*  'DISABLE_BATCH_MODE_MEMORY_GRANT_FEEDBACK'     
+ Désactive les retours d’allocation de mémoire en mode batch. Pour plus d’informations, consultez [Retour d’allocation de mémoire en mode batch](../../relational-databases/performance/adaptive-query-processing.md#batch-mode-memory-grant-feedback).
+*  'DISABLE_BATCH_MODE_ADAPTIVE_JOINS'     
+ Désactive les jointures adaptatives en mode batch. Pour plus d’informations, consultez [Jointures adaptatives en mode batch](../../relational-databases/performance/adaptive-query-processing.md#batch-mode-adaptive-joins).
  
 > [!TIP]
 > Les noms d’indicateur respectent la casse.
@@ -328,7 +332,7 @@ TABLE HINT **(***exposed_object_name* [ **,** \<table_hint> [ [**,** ]...*n* ] ]
 -   Vues de gestion dynamique  
 -   Sous-requêtes nommées  
   
- Les indicateurs de table INDEX, FORCESCAN et FORCESEEK peuvent être spécifiés en tant qu'indicateurs de requête pour une requête sans indicateurs de table existants, ou être utilisés pour remplacer respectivement un ou plusieurs indicateurs INDEX, FORCESCAN ou FORCESEEK existants dans la requête. Les indicateurs de table autres que INDEX, FORCESCAN et FORCESEEK sont interdits comme indicateurs de requête, à moins que la requête n'ait déjà une clause WITH qui spécifie l'indicateur de table. Dans ce cas, un indicateur correspondant doit également être spécifié comme indicateur de requête en utilisant TABLE HINT dans la clause OPTION pour conserver la sémantique de la requête. Par exemple, si la requête contient l’indicateur de table NOLOCK, la clause OPTION dans le paramètre **@hints** du repère de plan doit également contenir l’indicateur NOLOCK. Reportez-vous à l’exemple K. Quand un indicateur de table autre qu’INDEX, FORCESCAN ou FORCESEEK est spécifié en utilisant TABLE HINT dans la clause OPTION sans indicateur de requête correspondant, ou vice versa, l’erreur 8702 se produit (indiquant que la clause OPTION peut entraîner la modification de la sémantique de la requête) et la requête échoue.  
+Les indicateurs de table INDEX, FORCESCAN et FORCESEEK peuvent être spécifiés en tant qu'indicateurs de requête pour une requête sans indicateurs de table existants, ou être utilisés pour remplacer respectivement un ou plusieurs indicateurs INDEX, FORCESCAN ou FORCESEEK existants dans la requête. Les indicateurs de table autres que INDEX, FORCESCAN et FORCESEEK sont interdits comme indicateurs de requête, à moins que la requête n'ait déjà une clause WITH qui spécifie l'indicateur de table. Dans ce cas, un indicateur correspondant doit également être spécifié comme indicateur de requête en utilisant TABLE HINT dans la clause OPTION pour conserver la sémantique de la requête. Par exemple, si la requête contient l’indicateur de table NOLOCK, la clause OPTION dans le paramètre **@hints** du repère de plan doit également contenir l’indicateur NOLOCK. Reportez-vous à l’exemple K. Quand un indicateur de table autre qu’INDEX, FORCESCAN ou FORCESEEK est spécifié en utilisant TABLE HINT dans la clause OPTION sans indicateur de requête correspondant, ou vice versa, l’erreur 8702 se produit (indiquant que la clause OPTION peut entraîner la modification de la sémantique de la requête) et la requête échoue.  
   
 ## <a name="examples"></a>Exemples  
   

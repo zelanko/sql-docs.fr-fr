@@ -27,11 +27,12 @@ caps.latest.revision: 152
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 0791b05bdb2526da5d744c067b2f221f6cf4e1be
-ms.sourcegitcommit: 38f8824abb6760a9dc6953f10a6c91f97fa48432
+ms.openlocfilehash: 981391e55cc73844ee8c6f7c4975b38305e350fc
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34585921"
 ---
 # <a name="alter-availability-group-transact-sql"></a>ALTER AVAILABILITY GROUP (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -58,7 +59,8 @@ ALTER AVAILABILITY GROUP group_name
    | GRANT CREATE ANY DATABASE  
    | DENY CREATE ANY DATABASE  
    | FAILOVER  
-   | FORCE_FAILOVER_ALLOW_DATA_LOSS   | ADD LISTENER ‘dns_name’ ( <add_listener_option> )  
+   | FORCE_FAILOVER_ALLOW_DATA_LOSS  
+   | ADD LISTENER ‘dns_name’ ( <add_listener_option> )  
    | MODIFY LISTENER ‘dns_name’ ( <modify_listener_option> )  
    | RESTART LISTENER ‘dns_name’  
    | REMOVE LISTENER ‘dns_name’  
@@ -129,7 +131,7 @@ ALTER AVAILABILITY GROUP group_name
 <modify_availability_group_spec>::=  
  <ag_name> WITH  
     (  
-       LISTENER = 'TCP://system-address:port'  
+       LISTENER_URL = 'TCP://system-address:port'  
        | AVAILABILITY_MODE = { SYNCHRONOUS_COMMIT | ASYNCHRONOUS_COMMIT }  
        | SEEDING_MODE = { AUTOMATIC | MANUAL }  
     )  
@@ -473,15 +475,15 @@ Initialise un basculement manuel du groupe de disponibilité sur le réplica sec
 >  NetBIOS identifie les 15 premiers caractères du nom_dns. Si vous avez deux clusters WSFC qui sont contrôlés par le même annuaire Active Directory et que vous tentez de créer des écouteurs de groupe de disponibilité dans les deux clusters à l'aide de noms contenant plus de 15 caractères et un préfixe identique de 15 caractères, vous obtenez une erreur signalant que la ressource de nom de réseau virtuel ne peut pas être mise en ligne. Pour plus d'informations sur les règles de préfixe des noms DNS, consultez [Attribution de noms de domaine](http://technet.microsoft.com/library/cc731265\(WS.10\).aspx).  
   
  JOIN AVAILABILITY GROUP ON  
- Joint à un *groupe de disponibilité distribué*. Quand vous créez un groupe de disponibilité distribué, le groupe de disponibilité du cluster sur lequel il est créé devient le groupe de disponibilité principal. Le groupe de disponibilité qui rejoint le groupe de disponibilité distribué devient le groupe de disponibilité secondaire.  
+ Joint à un *groupe de disponibilité distribué*. Quand vous créez un groupe de disponibilité distribué, le groupe de disponibilité du cluster sur lequel il est créé devient le groupe de disponibilité principal. Quand vous exécutez JOIN, le groupe de disponibilité de l’instance du serveur local est le groupe de disponibilité secondaire.  
   
  \<ag_name>  
  Spécifie le nom du groupe de disponibilité qui constitue la moitié du groupe de disponibilité distribué.  
   
- LISTENER **='** TCP **://***system-address***:***port***'**  
+ LISTENER_URL **='** TCP **://***system-address***:***port***'**  
  Spécifie le chemin de l’URL de l’écouteur associé au groupe de disponibilité.  
   
- La clause LISTENER est obligatoire.  
+ La clause LISTENER_URL est obligatoire.  
   
  **'** TCP **://***system-address***:***port***'**  
  Spécifie une URL pour l’écouteur associé au groupe de disponibilité. Les paramètres d'URL sont les suivants :  
@@ -490,7 +492,7 @@ Initialise un basculement manuel du groupe de disponibilité sur le réplica sec
  Chaîne, comme un nom de système, un nom de domaine complet ou une adresse IP, qui identifie sans ambiguïté l’écouteur.  
   
  *port*  
- Est un numéro de port associé au point de terminaison de mise en miroir du groupe de disponibilité. Notez que ce n’est pas le port de l’écouteur.  
+ Est un numéro de port associé au point de terminaison de mise en miroir du groupe de disponibilité. Notez qu’il ne s’agit pas du port pour la connectivité du client qui est configuré sur l’écouteur.  
   
  AVAILABILITY_MODE **=** { SYNCHRONOUS_COMMIT | ASYNCHRONOUS_COMMIT }  
  Spécifie si le réplica principal doit attendre le groupe de disponibilité secondaire pour accepter la sécurisation renforcée (écriture) des enregistrements de journal sur le disque avant que le réplica principal puisse valider la transaction sur une base de données principale donnée.  

@@ -1,7 +1,7 @@
 ---
 title: Créer, modifier, puis supprimer des sources de données partagées (SSRS) | Microsoft Docs
 ms.custom: ''
-ms.date: 03/17/2017
+ms.date: 05/24/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.component: report-data
@@ -23,19 +23,15 @@ caps.latest.revision: 53
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: f68f43c6b004219977aed509286c8d56fdca1afe
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: fa0546bd09cd108c4e9cccbd5909cad94558d92d
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34550760"
 ---
 # <a name="create-modify-and-delete-shared-data-sources-ssrs"></a>Créer, modifier, puis supprimer des sources de données partagées (SSRS)
   Une source de données partagée est un ensemble de propriétés de connexion à la source de données pouvant être référencées par plusieurs rapports, modèles et abonnements pilotés par les données qui s’exécutent sur un serveur de rapports [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  Les sources de données partagées permettent de gérer facilement des propriétés de source de données qui changent souvent dans le temps. Si le compte ou le mot de passe d'un utilisateur change ou bien si vous déplacez la base de données sur un serveur différent, vous pouvez mettre à jour les informations de connexion à un seul endroit.  
-  
- L'icône suivante indique une source de données partagée dans l'arborescence des dossiers du Gestionnaire de rapports :  
-  
- ![Icône Source de données partagée](../../reporting-services/report-data/media/hlp-16datasource.png "Icône Source de données partagée")  
-icône de source de données partagée  
   
  Les sources de données partagées sont obligatoires pour les modèles de rapports et facultatives pour les rapports et les abonnements pilotés par les données. Si vous envisagez d'utiliser des modèles de rapports pour la génération d'états ad hoc, vous devez créer et gérer un élément de source de données partagée pour fournir des informations de connexion au modèle.  
   
@@ -44,7 +40,7 @@ icône de source de données partagée
 |Élément|Description|  
 |----------|-----------------|  
 |Nom   |Nom qui identifie l'élément au sein de la hiérarchie des dossiers du serveur de rapports.|  
-|Description|Description qui apparaît avec l'élément dans le Gestionnaire de rapports lorsque vous consultez le contenu du dossier.|  
+|Description|Description qui apparaît avec l’élément dans le portail web quand vous consultez le contenu du dossier.|  
 |Type de connexion|Extension pour le traitement des données utilisée avec la source de données. Vous ne pouvez utiliser que les extensions pour le traitement des données qui sont déployées sur le serveur de rapports. Pour plus d’informations sur les extensions pour le traitement des données incluses dans [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], consultez [Sources de données prises en charge par Reporting Services &#40;SSRS&#41;](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md).|  
 |Chaîne de connexion|Chaîne de connexion pour la base de données. Pour plus d’informations et pour consulter des exemples de chaînes de connexion aux sources de données fréquemment utilisées, consultez [Connexions de données, sources de données et chaînes de connexion &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md).|  
 |Type d'informations d'identification|Spécifie la façon dont les informations d'identification sont obtenues pour la connexion et si elles doivent être utilisées une fois la connexion établie. Pour plus d’informations, consultez [Spécifier des informations d’identification et de connexion pour les sources de données de rapport](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md).|  
@@ -52,7 +48,7 @@ icône de source de données partagée
  Une source de données partagée ne contient pas d'informations de requête utilisées pour récupérer des données. La requête est toujours conservée dans une définition de rapport.  
   
 ## <a name="creating-and-modifying-shared-data-sources"></a>Création et modification de sources de données partagées  
- Pour créer une source de données partagée ou modifier ses propriétés, vous devez disposer d'autorisations **Gérer les sources de données** sur le serveur de rapports. Si le serveur de rapports s'exécute en mode natif, vous pouvez utiliser le Gestionnaire de rapports pour créer et configurer la source de données partagée. Si le serveur de rapports s'exécute en mode intégré SharePoint, vous pouvez utiliser les pages d'application sur un site SharePoint. Pour n'importe quel serveur de rapports et quel que soit son mode, vous pouvez créer une source de données partagée dans le Concepteur de rapports, puis la publier sur un serveur cible.  
+ Pour créer une source de données partagée ou modifier ses propriétés, vous devez disposer d'autorisations **Gérer les sources de données** sur le serveur de rapports. Si le serveur de rapports s’exécute en mode natif, vous pouvez créer et configurer la source de données partagée dans le portail web. Si le serveur de rapports s'exécute en mode intégré SharePoint, vous pouvez utiliser les pages d'application sur un site SharePoint. Pour n'importe quel serveur de rapports et quel que soit son mode, vous pouvez créer une source de données partagée dans le Concepteur de rapports, puis la publier sur un serveur cible.  
   
  Après avoir créé une source de données partagée sur le serveur de rapports, vous pouvez créer des attributions de rôle pour y contrôler l'accès, la déplacer à un autre endroit, la renommer ou la mettre hors ligne pour empêcher le traitement des rapports pendant que des opérations de maintenance sont effectuées sur la source de données externe. Si vous renommez ou déplacez un élément de source de données partagée à un autre endroit de la hiérarchie des dossiers du serveur de rapports, les informations de chemin de tous les rapports ou abonnements qui font référence à cette source de données partagée sont corrigées en conséquence. Si vous mettez la source de données partagée hors ligne, aucun rapport, modèle ou abonnement ne s'exécutera tant que vous n'aurez pas réactivé la source de données.  
   
@@ -75,30 +71,26 @@ icône de source de données partagée
   
          La nouvelle source de données partagée apparaît dans le dossier Sources de données partagées, dans l'Explorateur de solutions.  
   
-4.  Cliquez sur Informations d’identification.  
+4.  Cliquez sur **Informations d'identification**.  
   
      Spécifiez les informations d'identification à utiliser pour cette source de données. Le propriétaire de la source de données choisit le type d'informations d'identification pris en charge.  
   
- **Pour créer une source de données partagée dans le Gestionnaire de rapports**  
+ **Pour créer une source de données partagée dans le portail web**  
   
-1.  Démarrez le [Gestionnaire de rapports &#40;SSRS en mode natif&#41;](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896).  
-  
-2.  Dans le Gestionnaire de rapports, parcourez l'arborescence jusqu'à la page **Contenu** .  
-  
-3.  Cliquez sur **Nouvelle source de données**. La page **Nouvelle source de données** s’ouvre.  
+1.  Dans le portail web, sélectionnez **Nouveau** > **Source de données**. 
   
 4.  Tapez le nom de l'élément. Le nom doit contenir au moins un caractère et il doit commencer par une lettre. Il peut également comprendre des symboles, à l'exception des espaces ou des caractères ; ? : @ & = + , $ / * < > | " /.  
   
-5.  Si vous le souhaitez, entrez une description renseignant les utilisateurs sur la connexion. Ce descriptif s'affiche dans la page **Contenu** du Gestionnaire de rapports.  
+5.  Tapez éventuellement une description renseignant les utilisateurs sur la connexion.  
   
 6.  Dans la liste **Type de source de données** , spécifiez l'extension pour le traitement des données qui est utilisée en vue d'exploiter les informations à partir de la source de données.  
   
-7.  Dans la zone **Chaîne de connexion**, spécifiez la chaîne de connexion utilisée par le serveur de rapports pour se connecter à la source de données. Il est recommandé de n'indiquer aucune information d'identification ici.  
+7.  Dans la zone **Chaîne de connexion**, spécifiez la chaîne de connexion utilisée par le serveur de rapports pour se connecter à la source de données. Nous vous recommandons de n’indiquer aucune information d’identification dans la chaîne de connexion.  
   
-     L'exemple suivant illustre l'utilisation d'une chaîne de connexion pour se connecter à la base de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] locale :  
+     L’exemple suivant illustre l’utilisation d’une chaîne de connexion pour se connecter à la base de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] AdventureWorks2016 locale :  
   
     ```  
-    data source=<localservername>; initial catalog=AdventureWorks2012  
+    data source=<localservername>; initial catalog=AdventureWorks2016 
     ```  
   
 8.  Pour **Se connecter en utilisant**, précisez comment les informations d'identification sont obtenues lorsque le rapport s'exécute :  
@@ -120,11 +112,13 @@ icône de source de données partagée
   
 10. Cliquez sur **OK**  
   
- **Pour modifier une source de données partagée dans le Gestionnaire de rapports**  
+ **Pour modifier une source de données partagée dans le portail web**  
   
-1.  Dans le Gestionnaire de rapports, parcourez l'arborescence jusqu'à la page Contenu.  
+1.  Dans le portail web, accédez à la source de données partagée.  
   
-2.  Accédez à l’élément de source de données partagée, pointez sur l’élément, cliquez sur la liste déroulante, puis dans le menu contextuel, cliquez sur **Gérer**. La page de **propriétés** s'ouvre.  
+2.  Sélectionnez les points de suspension (...) dans le coin supérieur droit de la source de données partagée > **Gérer**.   
+
+    La page de **propriétés** s'ouvre.
   
 3.  Modifiez la source de données, puis cliquez sur **Appliquer**.  
   
@@ -133,21 +127,14 @@ icône de source de données partagée
   
  **Pour supprimer une source de données partagée**  
   
-1.  Dans le Gestionnaire de rapports, parcourez l'arborescence jusqu'à la page **Contenu** et effectuez l'une des opérations suivantes :  
+1. Dans le portail web, accédez à la source de données partagée.  
   
-    -   Naviguez jusqu'à l'élément de source de données partagée.  
+2.  Sélectionnez les points de suspension (...) dans le coin supérieur droit de la source de données partagée > **Gérer**.    
+    La page de **propriétés** s'ouvre.
   
-         Cliquez sur l'élément pour l'ouvrir. La page des propriétés générales s'ouvre.  
+3. Cliquez sur **Supprimer**, puis sur **OK**.  
   
-         Cliquez sur **Supprimer**, puis sur **OK**.  
-  
-    -   Dans la page **Contenu** , parcourez l'arborescence jusqu'au dossier contenant la source de données à supprimer.  
-  
-         Pointez sur l’élément, cliquez sur la liste déroulante, puis dans le menu contextuel, cliquez sur **Supprimer**.  
-  
-         [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
-  
- La suppression d'une source de données partagée désactive tout rapport, modèle ou abonnement piloté par les données qui l'utilise. Sans informations de connexion à la source de données, les éléments ne s'exécuteront plus. Pour activer ces éléments, vous devez ouvrir chacun d'eux et effectuer les opérations suivantes :  
+La suppression d’une source de données partagée désactive tout rapport, modèle ou abonnement piloté par les données qui l’utilise. Sans informations de connexion à la source de données, les éléments ne s'exécuteront plus. Pour activer ces éléments, vous devez ouvrir chacun d'eux et effectuer les opérations suivantes :  
   
 -   Pour les rapports et abonnements pilotés par les données qui référencent la source de données partagée, vous pouvez spécifier les informations de connexion à la source de données dans les propriétés du rapport ou l'abonnement au rapport. Vous pouvez aussi sélectionner une nouvelle source de données partagée possédant les valeurs que vous souhaitez utiliser.  
   
@@ -156,7 +143,8 @@ icône de source de données partagée
  Il n'existe pas d'opération d'annulation pour la suppression d'une source de données partagée. Toutefois, si vous supprimez par erreur une source de données partagée, vous pouvez en créer une autre en utilisant les mêmes valeurs de propriété que celles de la source que vous avez supprimée. Vous devrez ouvrir chaque rapport, modèle et abonnement piloté par les données pour relier la source de données partagée à l'élément qui l'utilise, mais tant que les propriétés de source de données sont les mêmes qu'avant, les rapports, modèles et abonnements continueront de fonctionner comme avant.  
   
 ## <a name="importing-shared-data-sources"></a>Importation de sources de données partagées  
- **Pour importer une source de données existante dans le Concepteur de rapports**  
+
+**Pour importer une source de données existante dans le Concepteur de rapports**  
   
 1.  Dans l’Explorateur de solutions, cliquez avec le bouton droit sur le dossier **Sources de données partagées** dans le projet Report Server, puis cliquez sur **Ajouter un élément existant**. La boîte de dialogue **Ajouter un élément existant** s'ouvre.  
   
@@ -220,7 +208,7 @@ icône de source de données partagée
  Soyez vigilant lorsque vous supprimez un modèle de rapport. Si vous supprimez un modèle, vous ne pouvez plus ouvrir et modifier les rapports qui en dépendent dans le Générateur de rapports. Si vous supprimez par inadvertance un modèle utilisé par des rapports existants, vous devez générer de nouveau le modèle, recréer et enregistrer tous les rapports qui utilisent ce modèle, puis spécifier de nouveau la sécurité des éléments de modèle à utiliser. Vous ne pouvez pas simplement générer de nouveau le modèle, puis l'associer à un rapport existant.  
   
 ## <a name="dependent-items"></a>Éléments dépendants  
- Pour afficher la liste des rapports et modèles qui utilisent la source de données, ouvrez la page Éléments dépendants de la source de données partagée. Vous pouvez accéder à cette page lorsque vous ouvrez la source de données dans le Gestionnaire de rapports ou dans une page d'application SharePoint. Notez que la page Éléments dépendants n'indique pas les abonnements pilotés par les données. Si une source de données partagée est utilisée par un abonnement, celui-ci ne figurera pas dans la liste Éléments dépendants.  
+ Pour afficher la liste des rapports et modèles qui utilisent la source de données, ouvrez la page Éléments dépendants de la source de données partagée. Vous pouvez accéder à cette page quand vous ouvrez la source de données dans le portail web ou dans une page d’application SharePoint. Notez que la page Éléments dépendants n'indique pas les abonnements pilotés par les données. Si une source de données partagée est utilisée par un abonnement, celui-ci ne figurera pas dans la liste Éléments dépendants.  
   
  **Pour afficher les éléments dépendants dans SharePoint**  
   
@@ -233,13 +221,8 @@ icône de source de données partagée
      Pour les modèles de rapports, la liste des éléments dépendants affiche les rapports créés dans le Générateur de rapports. Pour les sources de données partagées, la liste des éléments dépendants peut inclure à la fois les rapports et les modèles de rapports.  
   
 ## <a name="see-also"></a> Voir aussi  
- [Créer et gérer des sources de données partagées &#40;Reporting Services en mode intégré SharePoint&#41;](http://msdn.microsoft.com/library/2d3428e4-a810-4e66-a287-ff18e57fad76)   
  [Connexions de données, sources de données et chaînes de connexion &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)   
  [Gérer des sources de données de rapports](../../reporting-services/report-data/manage-report-data-sources.md)   
- [Gestionnaire de rapports &#40;SSRS en mode natif&#41;](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)   
- [Connexions de données ou sources de données incorporées et partagées &#40;Générateur de rapports et SSRS&#41;](http://msdn.microsoft.com/library/f417782c-b85a-4c4d-8a40-839176daba56)   
- [Page des propriétés des sources de données &#40;Gestionnaire de rapports&#41;](http://msdn.microsoft.com/library/f37edda0-19e6-489e-b544-8751fa6b6cfb)   
- [Créer, supprimer ou modifier une source de données partagée &#40;Gestionnaire de rapports&#41;](http://msdn.microsoft.com/library/cd7bace3-f8ec-4ee3-8a9f-2f217cdca9f2)   
- [Configurer les propriétés de la source de données d’un rapport &#40;Gestionnaire de rapports&#41;](../../reporting-services/report-data/configure-data-source-properties-for-a-report-report-manager.md)  
+ [Configurer des propriétés de la source de données d’un rapport paginé](../../reporting-services/report-data/configure-data-source-properties-for-a-report-report-manager.md)  
   
   

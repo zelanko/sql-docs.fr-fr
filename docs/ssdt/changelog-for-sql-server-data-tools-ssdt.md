@@ -1,7 +1,7 @@
 ---
 title: Journal des modifications de SQL Server Data Tools (SSDT) | Microsoft Docs
 ms.custom: ''
-ms.date: 04/10/2018
+ms.date: 06/04/2018
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.component: ssdt
@@ -16,11 +16,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 7e2348aa63bce657c85ce0b9d6644be471e1f487
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 32f97f60a4315f7a4adc0630b386ffb250a54a37
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34773575"
 ---
 # <a name="changelog-for-sql-server-data-tools-ssdt"></a>Journal des modifications de SQL Server Data Tools (SSDT)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -28,6 +29,28 @@ Ce journal des modification est pour [SQL Server Data Tools (SSDT)](download-sql
   
 Pour des publications détaillées sur les nouveautés et les modifications, consultez [le blog de l’équipe SSDT](https://blogs.msdn.microsoft.com/ssdt/)
 
+## <a name="ssdt-for-visual-studio-2017-1570"></a>SSDT pour Visual Studio 2017 (15.7.0)
+Numéro de build : 14.0.16165.0  
+Date de publication : 4 juin 2018  
+  
+### <a name="whats-new"></a>Nouveautés
+
+**SSIS :**
+
+- Résolution du problème d’affichage de la page *Concepteurs Integration Services* dans la boîte de dialogue Options.  
+- Résolution du problème lié au ratio de luminosité du texte dans *l’Éditeur de transformation de tri*.  
+- Résolution du problème entraînant la disparition de la boîte de dialogue *Résoudre les références* quand vous tentiez de modifier une zone de liste modifiable.  
+- Résolution du problème lié au non-fonctionnement du lien d’aide (F1) du *Gestionnaire de connexions Hadoop*.  
+- Résolution du problème entraînant la perte du code d’une tâche de script dans un conteneur en cas de ciblage de SQL Server 2016.  
+
+
+**Programme d’installation :**
+
+- Résolution du problème empêchant l’installation de SSAS avant l’installation de SSRS et de SSIS dans Visual Studio 15.7.2.
+
+### <a name="known-issues"></a>Problèmes connus :
+
+- La tâche d’exécution de package SSIS ne prend pas en charge le débogage quand *ExecuteOutOfProcess* a la valeur *True*. Ce problème s’applique uniquement au débogage. L’enregistrement, le déploiement et l’exécution via DTExec.exe ou le catalogue SSIS ne sont pas impactés.
 
 
 ## <a name="ssdt-for-visual-studio-2017-1560"></a>SSDT pour Visual Studio 2017 (15.6.0)
@@ -38,24 +61,24 @@ Date de sortie : 10 avril 2018
 
 **SSIS :**
 
-1.  Résolution du problème où la tâche de traitement AS ne journalisait aucune étape de traitement quand SQLServer2016 et SQLServer2017 étaient ciblés
-2.  Résolution du problème où une violation d’accès se produisait à l’ouverture de dtsx avec des noms de tâche très longs non anglais dans SSDT
-3.  Résolution du problème où parfois la liste des variables de ScriptTask disparaissait de l’interface utilisateur de la tâche
-4.  Résolution du problème où l’ajout d’une copie du package existant échouait quand l’emplacement du package était SQL Server
-5.  Résolution du problème où le focus restait coincé lors de l’accès à la zone de liste déroulante dans une boîte de dialogue d’éditeur.
-6.  Résolution du problème où l’arrière-plan ne changeait pas alors que le thème de Visual Studio changeait.
-7.  Résolution du problème où l’étiquette d’annotation et de chargement était invisible dans le thème foncé.
-8.  Résolution du problème où la propriété d’état n’était pas correctement définie pour les éléments désactivés de la boîte à outils SSIS.
-9.  Résolution du problème où l’exécution de WebServiceTask échouait tout le temps.
-10. Résolution du problème où le déploiement du package échouait si la chaîne de connexion était définie sur une variable avec une expression dépendante des paramètres du projet.
+- Résolution du problème où la tâche de traitement AS ne journalisait aucune étape de traitement quand SQLServer2016 et SQLServer2017 étaient ciblés
+- Résolution du problème où une violation d’accès se produisait à l’ouverture de dtsx avec des noms de tâche très longs non anglais dans SSDT
+- Résolution du problème où parfois la liste des variables de ScriptTask disparaissait de l’interface utilisateur de la tâche
+- Résolution du problème où l’ajout d’une copie du package existant échouait quand l’emplacement du package était SQL Server
+- Résolution du problème où le focus restait coincé lors de l’accès à la zone de liste déroulante dans une boîte de dialogue d’éditeur.
+- Résolution du problème où l’arrière-plan ne changeait pas alors que le thème de Visual Studio changeait.
+- Résolution du problème où l’étiquette d’annotation et de chargement était invisible dans le thème foncé.
+- Résolution du problème où la propriété d’état n’était pas correctement définie pour les éléments désactivés de la boîte à outils SSIS.
+- Résolution du problème où l’exécution de WebServiceTask échouait tout le temps.
+- Résolution du problème où le déploiement du package échouait si la chaîne de connexion était définie sur une variable avec une expression dépendante des paramètres du projet.
 
 **Programme d’installation :**
 
-1.  Ajoutez le lien du « Programme d’amélioration du produit pour SQL Server Data Tools » dans la clause d’exclusion de confidentialité.
-2.  Résolution du problème où la fenêtre du programme d’installation de Visual Studio apparaissait quand « Installer la nouvelle instance SQL Server Data Tools pour Visual Studio 2017 » était sélectionné
+- Ajoutez le lien du « Programme d’amélioration du produit pour SQL Server Data Tools » dans la clause d’exclusion de confidentialité.
+- Résolution du problème où la fenêtre du programme d’installation de Visual Studio apparaissait quand « Installer la nouvelle instance SQL Server Data Tools pour Visual Studio 2017 » était sélectionné
 
 ### <a name="known-issues"></a>Problèmes connus :
-1.  La tâche d’exécution de package SSIS ne prend pas en charge le débogage quand ExecuteOutOfProcess a la valeur True. Ce problème s’applique uniquement au débogage. L’enregistrement, le déploiement et l’exécution via DTExec.exe ou le catalogue SSIS ne sont pas impactés.
+- La tâche d’exécution de package SSIS ne prend pas en charge le débogage quand ExecuteOutOfProcess a la valeur True. Ce problème s’applique uniquement au débogage. L’enregistrement, le déploiement et l’exécution via DTExec.exe ou le catalogue SSIS ne sont pas impactés.
 
 
 
@@ -65,14 +88,14 @@ Numéro de build : 14.0.16156.0
 ### <a name="whats-new"></a>Nouveautés
 
 **SSIS**
-1.  Correction d’un problème qui entraînait l’échec de la migration des projets SSIS 2008 quand SSAS et SSIS étaient tous deux installés sur la même instance de Visual Studio 2017.
-2.  Correction d’un problème qui faisait que les projets Rdlc ne pouvaient pas être générés quand le Concepteur de rapports Rdlc et SSIS étaient installés sur la même instance de Visual Studio 2017.
-3.  Correction d’un problème empêchant la mise à jour de la couleur d’annotation.
-4.  Correction d’un problème qui faisait que certaines chaînes dans l’éditeur du gestionnaire de connexions Hadoop étaient tronquées dans d’autres langues.
-5.  Correction d’un problème qui faisait que certaines chaînes étaient tronquées dans l’éditeur du gestionnaire de connexions OData.
-6.  Correction d’un problème qui faisait que certaines chaînes étaient tronquées dans la fenêtre de l’Assistant Importation de projet d’Integration Services.
-7.  Correction d’un problème de titre dans la fenêtre d’informations de la boîte à outils SSIS.
-8.  Correction d’un problème qui faisait que certaines chaînes étaient tronquées dans la fenêtre de l’Assistant Déploiement d’Integration Services. 
+- Correction d’un problème qui entraînait l’échec de la migration des projets SSIS 2008 quand SSAS et SSIS étaient tous deux installés sur la même instance de Visual Studio 2017.
+- Correction d’un problème qui faisait que les projets Rdlc ne pouvaient pas être générés quand le Concepteur de rapports Rdlc et SSIS étaient installés sur la même instance de Visual Studio 2017.
+- Correction d’un problème empêchant la mise à jour de la couleur d’annotation.
+- Correction d’un problème qui faisait que certaines chaînes dans l’éditeur du gestionnaire de connexions Hadoop étaient tronquées dans d’autres langues.
+- Correction d’un problème qui faisait que certaines chaînes étaient tronquées dans l’éditeur du gestionnaire de connexions OData.
+- Correction d’un problème qui faisait que certaines chaînes étaient tronquées dans la fenêtre de l’Assistant Importation de projet d’Integration Services.
+- Correction d’un problème de titre dans la fenêtre d’informations de la boîte à outils SSIS.
+- Correction d’un problème qui faisait que certaines chaînes étaient tronquées dans la fenêtre de l’Assistant Déploiement d’Integration Services. 
 
 **Programme d’installation**
 - Correction d’un problème où parfois, le téléchargement de charge utile échouait avec l’erreur « Le système ne trouve pas le fichier spécifié (0x80070002) ».  

@@ -16,16 +16,17 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 3d199b9822d591c10f1f4d9af232b9f74d7e8a81
-ms.sourcegitcommit: d2573a8dec2d4102ce8882ee232cdba080d39628
+ms.openlocfilehash: b17fcc15be4c8faf496c469bb1e46fe2c6d42012
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34550490"
 ---
 # <a name="alter-database-parallel-data-warehouse"></a>ALTER DATABASE (Parallel Data Warehouse)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md)]
 
-  Modifie les options de taille de base de données maximale pour les tables répliquées, les tables distribuées et le journal des transactions dans [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]. Cette instruction permet de gérer les allocations de l’espace disque à mesure que la taille d’une base de données augmente ou diminue.  
+  Modifie les options de taille de base de données maximale pour les tables répliquées, les tables distribuées et le journal des transactions dans [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]. Cette instruction permet de gérer les allocations de l’espace disque à mesure que la taille d’une base de données augmente ou diminue. La rubrique décrit également la syntaxe relative à la définition des options de base de données dans Parallel Data Warehouse. 
   
  ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône Lien de rubrique") [Conventions de la syntaxe Transact-SQL &#40;Transact-SQL&#41;](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -42,7 +43,10 @@ ALTER DATABASE database_name
     AUTOGROW = { ON | OFF }  
     | REPLICATED_SIZE = size [GB]  
     | DISTRIBUTED_SIZE = size [GB]  
-    | LOG_SIZE = size [GB]  
+    | LOG_SIZE = size [GB]
+    | SET AUTO_CREATE_STATISTICS { ON | OFF }
+    | SET AUTO_UPDATE_STATISTICS { ON | OFF } 
+    | SET AUTO_UPDATE_STATISTICS_ASYNC { ON | OFF }
 }  
   
 <db_encryption_option> ::=  
@@ -67,10 +71,33 @@ ALTER DATABASE database_name
   
  ENCRYPTION { ON | OFF }  
  Spécifie si la base de données doit être chiffrée (ON) ou non chiffrée (OFF). Le chiffrement peut être configuré uniquement pour [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] quand [sp_pdw_database_encryption](http://msdn.microsoft.com/5011bb7b-1793-4b2b-bd9c-d4a8c8626b6e) a été défini sur **1**. Une clé de chiffrement de base de données doit être créée avant de pouvoir configurer le chiffrement transparent des données. Pour plus d’informations sur le chiffrement des bases de données, consultez [Chiffrement transparent des données &#40;TDE&#41;](../../relational-databases/security/encryption/transparent-data-encryption.md).  
+
+ SET AUTO_CREATE_STATISTICS { ON | OFF } Quand l’option de création automatique de statistiques AUTO_CREATE_STATISTICS est ON, l’optimiseur de requête crée les statistiques nécessaires sur les colonnes individuelles du prédicat de requête pour améliorer les estimations de cardinalité pour le plan de requête. Ces statistiques de colonne unique sont créées sur les colonnes où ne figure pas déjà un histogramme au niveau d'un objet de statistiques existant.
+
+ La valeur par défaut est ON pour les nouvelles bases de données créées après la mise à niveau vers AU7. La valeur par défaut est OFF pour les bases de données créées avant la mise à niveau. 
+
+ Pour plus d’informations sur les statistiques, consultez [Statistiques](/sql/relational-databases/statistics/statistics).
+
+ SET AUTO_UPDATE_STATISTICS { ON | OFF } Quand l’option de mise à jour automatique des statistiques AUTO_UPDATE_STATISTICS est ON, l’optimiseur de requête détermine si les statistiques sont obsolètes, puis les met à jour le cas échéant quand elles sont utilisées par une requête. Les statistiques deviennent obsolètes si des opérations d’insertion, de mise à jour, de suppression ou de fusion changent la distribution des données dans la table ou la vue indexée. L'optimiseur de requête détermine si les statistiques sont obsolètes en comptant le nombre de modifications de données depuis la dernière mise à jour des statistiques et en comparant le nombre de modifications à un seuil. Ce seuil est basé sur le nombre de lignes contenues dans la table ou la vue indexée.
+
+ La valeur par défaut est ON pour les nouvelles bases de données créées après la mise à niveau vers AU7. La valeur par défaut est OFF pour les bases de données créées avant la mise à niveau. 
+
+ Pour plus d’informations sur les statistiques, consultez [Statistiques](/sql/relational-databases/statistics/statistics).
+
+
+ SET AUTO_UPDATE_STATISTICS_ASYNC { ON | OFF } L’option de mise à jour asynchrone des statistiques, AUTO_UPDATE_STATISTICS_ASYNC, détermine si l’optimiseur de requête utilise des mises à jour de statistiques synchrones ou asynchrones. L’option AUTO_UPDATE_STATISTICS_ASYNC s’applique aux objets de statistiques créés pour les index, aux colonnes uniques contenues dans les prédicats de requête et aux statistiques créées à l’aide de l’instruction CREATE STATISTICS.
+
+ La valeur par défaut est ON pour les nouvelles bases de données créées après la mise à niveau vers AU7. La valeur par défaut est OFF pour les bases de données créées avant la mise à niveau. 
+
+ Pour plus d’informations sur les statistiques, consultez [Statistiques](/sql/relational-databases/statistics/statistics).
+
   
 ## <a name="permissions"></a>Autorisations  
  Nécessite l’autorisation ALTER sur la base de données.  
   
+## <a name="error-messages"></a>Messages d'erreur
+Si les statistiques automatiques sont désactivées et que vous essayez de modifier les paramètres des statistiques, PDW affiche l’erreur « Cette option n’est pas prise en charge dans PDW. » L’administrateur système peut activer les statistiques automatiques en activant le commutateur de fonctionnalité [AutoStatsEnabled](../../analytics-platform-system/appliance-feature-switch.md).
+
 ## <a name="general-remarks"></a>Remarques d'ordre général  
  Les valeurs de REPLICATED_SIZE, DISTRIBUTED_SIZE et LOG_SIZE peuvent être supérieures, égales ou inférieures aux valeurs actuelles de la base de données.  
   
@@ -78,6 +105,8 @@ ALTER DATABASE database_name
  Les opérations d’augmentation et de réduction sont approximatives. Les tailles réelles obtenues peuvent varier en fonction des paramètres de taille.  
   
  [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] n’exécute pas l’instruction ALTER DATABASE comme une opération atomique. Si l’instruction est interrompue pendant l’exécution, les modifications qui ont déjà eu lieu sont conservées.  
+
+Les paramètres de statistiques fonctionnent uniquement si l’administrateur a activé les statistiques automatiques.  Si vous êtes un administrateur, utilisez le commutateur de fonctionnalité [AutoStatsEnabled](../../analytics-platform-system/appliance-feature-switch.md) pour activer ou désactiver les statistiques automatiques. 
   
 ## <a name="locking-behavior"></a>Comportement de verrouillage  
  Prend un verrou partagé sur l’objet DATABASE. Vous ne pouvez pas modifier une base de données qui est en cours d’utilisation par un autre utilisateur pour une opération de lecture ou d’écriture. Cela inclut les sessions qui ont émis une instruction [USE](http://msdn.microsoft.com/158ec56b-b822-410f-a7c4-1a196d4f0e15) sur la base de données.  
@@ -165,6 +194,29 @@ ALTER DATABASE CustomerSales
 ALTER DATABASE CustomerSales  
     SET ( LOG_SIZE = 10 GB );  
 ```  
+
+### <a name="e-check-for-current-statistics-values"></a>E. Rechercher les valeurs des statistiques actuelles
+
+La requête suivante retourne les valeurs des statistiques actuelles pour toutes les bases de données. La valeur 1 signifie que la fonctionnalité est activée, et 0 qu’elle est désactivée.
+
+```sql
+SELECT NAME,
+    is_auto_create_stats_on,
+    is_auto_update_stats_on,
+    is_auto_update_stats_async_on
+FROM sys.databases;
+```
+### <a name="f-enable-auto-create-and-auto-update-stats-for-a-database"></a>F. Activer les statistiques de création automatique et de mise à jour automatique pour une base de données
+Utilisez l’instruction suivante pour activer les statistiques de création et de mise à jour, de façon automatique et asynchrone, pour la base de données CustomerSales.  Cette opération crée et met à jour, selon les besoins, des statistiques dans une seule colonne pour créer des plans de requête de haute qualité.
+
+```sql
+ALTER DATABASE CustomerSales
+    SET AUTO_CREATE_STATISTICS ON;
+ALTER DATABASE CustomerSales
+    SET AUTO_UPDATE_STATISTICS ON; 
+ALTER DATABASE CustomerSales
+    SET AUTO_UPDATE_STATISTICS_ASYNC ON;
+```
   
 ## <a name="see-also"></a> Voir aussi  
  [CREATE DATABASE &#40;Parallel Data Warehouse&#41;](../../t-sql/statements/create-database-parallel-data-warehouse.md)   

@@ -1,7 +1,7 @@
 ---
-title: Mettre à niveau des rapports | Microsoft Docs
+title: Mettre à niveau des rapports (SSRS) | Microsoft Docs
 ms.custom: ''
-ms.date: 05/30/2017
+ms.date: 06/04/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.component: install-windows
@@ -24,27 +24,26 @@ caps.latest.revision: 70
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 3ae563ddf9c21fc0add692493504dd7ccbdd09fb
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 569a67511ecf28a4e9800182f823719d47e61120
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34771825"
 ---
-# <a name="upgrade-reports"></a>Mettre à niveau des rapports
+# <a name="upgrade-reports-ssrs"></a>Mettre à niveau des rapports (SSRS)
 
 [!INCLUDE[ssrs-appliesto-sql2016-preview](../../includes/ssrs-appliesto-sql2016-preview.md)]
 
-  Les fichiers de définition de rapport (.rdl) existants sont automatiquement mis à niveau de différentes façons :  
+Les fichiers de définition de rapport (.rdl) existants sont automatiquement mis à niveau de différentes façons :  
   
--   Lorsque vous ouvrez un rapport dans le Concepteur de rapports de [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], la définition du rapport est mise à niveau vers le schéma RDL actuellement pris en charge. Lorsque vous spécifiez un serveur de rapports [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]ou [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] dans les propriétés du projet, la définition du rapport est enregistrée dans un schéma compatible avec le serveur cible.  
+-   Quand vous ouvrez un rapport paginé dans le Concepteur de rapports de [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], la définition du rapport est mise à niveau avec le schéma RDL pris en charge. Lorsque vous spécifiez un serveur de rapports [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]ou [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] dans les propriétés du projet, la définition du rapport est enregistrée dans un schéma compatible avec le serveur cible.  
   
 -   Lorsque vous mettez à niveau une installation [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] vers une installation [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] , les rapports et les instantanés existants qui ont été publiés sur un serveur de rapports sont compilés et automatiquement mis à niveau avec le nouveau schéma la première fois qu'ils sont traités. Si un rapport ne peut pas être mis à niveau automatiquement, le rapport est traité à l'aide du mode de compatibilité ascendante. La définition de rapport reste dans le schéma d'origine.  
   
- Les rapports ne sont pas mis à niveau lorsque vous téléchargez un fichier de définition de rapport directement vers le serveur de rapports ou le site SharePoint. La mise à niveau d'une définition de rapport dans [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] est le seul moyen de mettre à niveau le fichier. rdl.  
-  
  Après la mise à niveau d'un rapport en local ou sur le serveur de rapports, vous pouvez noter la présence d'erreurs, d'avertissements et de messages. Cette présence est liée aux améliorations apportées au modèle objet de rapport interne et aux composants de traitement. En effet, des messages apparaissent lors de la détection de problèmes sous-jacents dans le rapport. Pour plus d’informations, consultez [Compatibilité descendante de Reporting Services](../../reporting-services/reporting-services-backward-compatibility.md).  
   
- Pour plus d’informations sur les nouvelles fonctionnalités de [!INCLUDE[ssRSCurrent](../what-s-new-in-sql-server-reporting-services-ssrs.md).  
+ Pour plus d’informations sur les nouvelles fonctionnalités de [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)], consultez [Nouveautés de SQL Server Reporting Services (SSRS)](../what-s-new-in-sql-server-reporting-services-ssrs.md).  
 
 ##  <a name="bkmk_versionsupported"></a> Versions prises en charge par la mise à niveau  
  Les rapports créés dans une version précédente de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] peuvent être mis à niveau. Les versions concernées sont les suivantes :  
@@ -109,7 +108,7 @@ ms.lasthandoff: 05/03/2018
  Pour plus d’informations sur l’identification de l’espace de noms RDL en cours d’un serveur de rapports, de [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] ou d’un rapport, consultez [Rechercher la version du schéma de définition de rapport &#40;SSRS&#41;](../../reporting-services/reports/find-the-report-definition-schema-version-ssrs.md).  
   
 ### <a name="upgrading-reports-on-a-report-server"></a>Mise à niveau des rapports sur un serveur de rapports  
- La première fois qu’un rapport [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]ou [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] s’exécute sur un serveur de rapports mis à niveau vers un serveur de rapports [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] , le rapport est automatiquement mis à niveau vers l’espace de noms de définition de rapport actuel pris en charge par le serveur de rapports. Le rapport aurait pu exister sur le serveur de rapports avant la mise à niveau, être chargé par le biais du Gestionnaire de rapports ou publié sur le serveur de rapports à partir du Concepteur de rapports de [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]ou [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)].  
+ La première fois qu’un rapport [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]ou [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] s’exécute sur un serveur de rapports mis à niveau vers un serveur de rapports [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] , le rapport est automatiquement mis à niveau vers l’espace de noms de définition de rapport actuel pris en charge par le serveur de rapports. Le rapport aurait pu exister sur le serveur de rapports avant la mise à niveau, être chargé par le biais du portail web ou publié sur le serveur de rapports à partir du Concepteur de rapports de [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]ou [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)].  
   
  Le tableau suivant répertorie l'action de mise à niveau effectuée par le serveur de rapports pour les types spécifiques d'éléments de rapport personnalisés d'un rapport.  
   

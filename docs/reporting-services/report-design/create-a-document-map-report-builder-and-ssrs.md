@@ -1,7 +1,7 @@
 ---
 title: Créer une carte de documents (Générateur de rapports et SSRS) | Microsoft Docs
 ms.custom: ''
-ms.date: 05/30/2017
+ms.date: 05/24/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.component: report-design
@@ -15,11 +15,12 @@ caps.latest.revision: 13
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 237c1aedf1400dfa7aaa5a380030d81ed93b2f85
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 6d417f39deeb44e38eba83ca6a3f34c4dd6e822c
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34550410"
 ---
 # <a name="create-a-document-map-report-builder-and-ssrs"></a>Créer un explorateur de documents (Générateur de rapports et SSRS)
 
@@ -83,7 +84,7 @@ Un explorateur de documents fournit un ensemble de liens de navigation permettan
 ##  <a name="HideMapWhenViewRpt"></a>   
 #### <a name="to-hide-the-document-map-when-you-view-a-report"></a>Pour masquer l'explorateur de documents lors de l'affichage d'un rapport  
   
-1.  Dans le Gestionnaire de rapports, accédez au rapport contenant l'explorateur de documents.  
+1.  Dans le portail web, accédez au rapport contenant l’explorateur de documents.  
   
      Par exemple, pour les exemples de rapport [!INCLUDE[ssSampleDBUserInputNonLocal](../../includes/sssampledbuserinputnonlocal-md.md)] , l'URL suivante spécifie le rapport nommé Product Catalog.  
   
@@ -111,7 +112,7 @@ Un explorateur de documents fournit un ensemble de liens de navigation permettan
   
      Pour utiliser cette URL, copiez-la et supprimez tous les sauts de ligne.  
   
-4.  Collez l'URL dans le Gestionnaire de rapports et appuyez sur ENTRÉE. Le rapport est exécuté et l'explorateur de documents est masqué.  
+4.  Collez l’URL dans le portail web, puis appuyez sur Entrée. Le rapport est exécuté et l'explorateur de documents est masqué.  
   
 > [!NOTE]  
 >  Pour plus d'informations sur le téléchargement de ces exemples de rapports, consultez [Exemples de rapports du Générateur de rapports et du Concepteur de rapports](http://go.microsoft.com/fwlink/?LinkId=198283).  

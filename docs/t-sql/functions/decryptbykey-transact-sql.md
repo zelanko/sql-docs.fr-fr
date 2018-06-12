@@ -25,16 +25,17 @@ caps.latest.revision: 39
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.openlocfilehash: 57a2175b3c4096ab9af7203d7f7d3733947f8e78
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 7f9e1e678fba7a2b2d24a85f4d57f1112b3d4cb8
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34779475"
 ---
 # <a name="decryptbykey-transact-sql"></a>DECRYPTBYKEY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Déchiffre des données à l'aide d'une clé symétrique.  
+Cette fonction utilise une clé symétrique pour déchiffrer les données.  
   
  ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -47,38 +48,36 @@ DecryptByKey ( { 'ciphertext' | @ciphertext }
 ```  
   
 ## <a name="arguments"></a>Arguments  
- *ciphertext*  
- Données chiffrées avec la clé. *ciphertext* est de type **varbinary**.  
+*ciphertext*  
+Variable de type **varbinary** contenant des données chiffrées avec la clé.  
   
- **@ciphertext**  
- Variable de type **varbinary** contenant des données qui ont été chiffrées avec la clé.  
+**@ciphertext**  
+Variable de type **varbinary** contenant des données chiffrées avec la clé.  
   
  *add_authenticator*  
- Indique si un authentificateur a été chiffré en même temps que le texte en clair. Doit avoir la même valeur que celle passée à EncryptByKey lors du chiffrement des données. *add_authenticator* est de type **int**.  
+Indique si le processus de chiffrement d’origine comprend et chiffre un authentificateur avec le texte en clair. Doit correspondre à la valeur passée à [ENCRYPTBYKEY (Transact-SQL)](./encryptbykey-transact-sql.md) durant le processus de chiffrement des données. *add_authenticator* a le type de données **int**.  
   
  *authenticator*  
- Données à partir desquelles produire un authentificateur. Doit correspondre à la valeur qui a été fournie à EncryptByKey. *authenticator* est de type **sysname**.  
-  
- **@authenticator**  
- Variable contenant les données à partir desquelles l'authentificateur sera généré. Doit correspondre à la valeur qui a été fournie à EncryptByKey.  
-  
+Données utilisées comme base pour la génération de l’authentificateur. Doit correspondre à la valeur fournie à [ENCRYPTBYKEY (Transact-SQL)](./encryptbykey-transact-sql.md). *authenticator* a le type de données **sysname**.  
+
+**@authenticator**  
+Variable contenant des données à partir desquelles un authentificateur est généré. Doit correspondre à la valeur fournie à [ENCRYPTBYKEY (Transact-SQL)](./encryptbykey-transact-sql.md). *@authenticator* a le type de données **sysname**.  
+
 ## <a name="return-types"></a>Types de retour  
- **varbinary** d’une taille maximale de 8 000 octets.
- 
-Retourne la valeur NULL si la clé symétrique utilisée pour chiffrer les données n’est pas ouverte ou le *texte chiffré* a la valeur NULL.
+**varbinary** d’une taille maximale de 8 000 octets. `DECRYPTBYKEY` retourne NULL si la clé symétrique utilisée pour chiffrer les données n’est pas ouverte ou si *ciphertext* est NULL.  
   
 ## <a name="remarks"></a>Notes   
- DecryptByKey utilise une clé symétrique. Cette clé symétrique doit déjà être ouverte dans la base de données. Plusieurs clés peuvent être ouvertes en même temps. Vous n'avez pas besoin d'ouvrir la clé tout de suite avant de déchiffrer le texte chiffré.  
+`DECRYPTBYKEY` utilise une clé symétrique. Cette clé symétrique doit déjà être ouverte dans la base de données. `DECRYPTBYKEY` autorise l’ouverture de plusieurs clés en même temps. Vous n’avez pas besoin d’ouvrir la clé tout de suite avant de déchiffrer le texte chiffré.  
   
- Le chiffrement et le déchiffrement symétriques sont relativement rapides et adaptés à la manipulation de grandes quantités de données.  
+Le chiffrement et le déchiffrement symétriques fonctionnent assez rapidement, et donnent de bons résultats pour les opérations impliquant de gros volumes de données.  
   
 ## <a name="permissions"></a>Autorisations  
- Requiert l'ouverture de la clé symétrique dans la session en cours. Pour plus d’informations, consultez [OPEN SYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/open-symmetric-key-transact-sql.md).  
+La clé symétrique doit déjà être ouverte dans la session active. Pour plus d’informations, consultez [OPEN SYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/open-symmetric-key-transact-sql.md).  
   
 ## <a name="examples"></a>Exemples  
   
 ### <a name="a-decrypting-by-using-a-symmetric-key"></a>A. Déchiffrement à l'aide d'une clé symétrique  
- L'exemple suivant déchiffre du texte chiffré à l'aide d'une clé symétrique.  
+Cet exemple déchiffre le texte chiffré avec une clé symétrique.  
   
 ```  
 -- First, open the symmetric key with which to decrypt the data.  
@@ -98,7 +97,7 @@ GO
 ```  
   
 ### <a name="b-decrypting-by-using-a-symmetric-key-and-an-authenticating-hash"></a>B. Déchiffrement à l'aide d'une clé symétrique et d'un hachage d'authentification  
- L'exemple suivant déchiffre des données qui ont été chiffrées à l'aide d'un authentificateur.  
+Cet exemple déchiffre les données chiffrées à l’origine avec un authentificateur.  
   
 ```  
 -- First, open the symmetric key with which to decrypt the data  
