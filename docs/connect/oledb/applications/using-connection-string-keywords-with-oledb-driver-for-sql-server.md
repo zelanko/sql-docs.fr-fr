@@ -2,7 +2,7 @@
 title: À l’aide de mots clés de chaîne de connexion avec le pilote OLE DB pour SQL Server | Documents Microsoft
 description: À l’aide de mots clés de chaîne de connexion avec le pilote OLE DB pour SQL Server
 ms.custom: ''
-ms.date: 03/26/2018
+ms.date: 06/12/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.component: oledb|applications
@@ -21,14 +21,15 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: a88e1ba37c1c5ddab0af1bbba411a08429fd2a05
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 40aeb07deacbc5e1341f3d38abf5595986cedd48
+ms.sourcegitcommit: 354ed9c8fac7014adb0d752518a91d8c86cdce81
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/14/2018
+ms.locfileid: "35612244"
 ---
 # <a name="using-connection-string-keywords-with-ole-db-driver-for-sql-server"></a>À l’aide de mots clés de chaîne de connexion avec le pilote OLE DB pour SQL Server
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
@@ -77,7 +78,7 @@ ms.lasthandoff: 05/03/2018
   
  Le tableau suivant décrit les mots clés qui peuvent être utilisés avec DBPROP_INIT_PROVIDERSTRING.  
   
-|Mot clé|Propriété d'initialisation| Description|  
+|Mot clé|Propriété d'initialisation|Description|  
 |-------------|-----------------------------|-----------------|  
 |**Addr**|SSPROP_INIT_NETWORKADDRESS|Synonyme de « Address ».|  
 |**Adresse**|SSPROP_INIT_NETWORKADDRESS|Adresse réseau du serveur exécutant une instance de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. **Adresse** est généralement le nom réseau du serveur, mais peuvent être des autres noms tels qu’un canal, une adresse IP ou une adresse de port et de socket TCP/IP.<br /><br /> Si vous spécifiez une adresse IP, assurez-vous que les protocoles TCP/IP ou de canaux nommés sont activés dans le Gestionnaire de configuration [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].<br /><br /> La valeur de **adresse** est prioritaire sur la valeur passée à **Server** dans les chaînes de connexion lors de l’utilisation du pilote OLE DB pour SQL Server. Notez également que `Address=;` se connecte au serveur spécifié dans le **Server** (mot clé), tandis que `Address= ;, Address=.;`, `Address=localhost;`, et `Address=(local);` all est spécifié, une connexion au serveur local.<br /><br /> La syntaxe complète de la **adresse** mot clé est la suivante :<br /><br /> [*protocole ***:**]* adresse *[**, *** port &#124;\pipe\pipename*]<br /><br /> Le*protocole* peut avoir la valeur **tcp** (TCP/IP), **lpc** (mémoire partagée) ou **np** (canaux nommés). Pour plus d’informations sur les protocoles, consultez [configurer des protocoles clients](../../../database-engine/configure-windows/configure-client-protocols.md).<br /><br /> Si ni *protocole* ni le **réseau** mot clé est spécifié, le pilote OLE DB pour SQL Server utilise l’ordre des protocoles spécifié dans [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Configuration Manager.<br /><br /> *port* est le port auquel se connecter, sur le serveur spécifié. Par défaut, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] utilise le port 1433.|   
@@ -86,14 +87,14 @@ ms.lasthandoff: 05/03/2018
 |**AttachDBFileName**|SSPROP_INIT_FILENAME|Nom du fichier primaire (incluez le nom de chemin d'accès complet) d'une base de données pouvant être attachée. Pour utiliser **AttachDBFileName**, vous devez également spécifier le nom de la base de données avec le mot clé de base de données de chaîne fournisseur. Si la base de données a été attachée précédemment, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ne la rattache pas (il utilise la base de données attachée comme valeur par défaut pour la connexion).|  
 |**Traduire automatiquement**|SSPROP_INIT_AUTOTRANSLATE|Synonyme de « AutoTranslate ».|  
 |**AutoTranslate**|SSPROP_INIT_AUTOTRANSLATE|Configure la traduction de caractères OEM/ANSI. Les valeurs reconnues sont « yes » et « no ».|  
-|**Base de données**|DBPROP_INIT_CATALOG|Nom de la base de données.|  
+|**Sauvegarde de la base de données**|DBPROP_INIT_CATALOG|Nom de la base de données.|  
 |**DataTypeCompatibility**|SSPROP_INIT_DATATYPECOMPATIBILITY|Spécifie le mode de gestion de type de données à utiliser. Les valeurs reconnues sont « 0 » pour les types de données de fournisseur et « 80 » pour les types de données SQL Server 2000.|  
 |**Chiffrer**|SSPROP_INIT_ENCRYPT|Spécifie si les données doivent être chiffrées avant d'être envoyées sur le réseau. Les valeurs possibles sont « yes » et « no ». La valeur par défaut est « no ».|  
 |**FailoverPartner**|SSPROP_INIT_FAILOVERPARTNER|Nom du serveur de basculement utilisé pour la mise en miroir de bases de données.|  
 |**FailoverPartnerSPN**|SSPROP_INIT_FAILOVERPARTNERSPN|Nom principal de service du partenaire de basculement. La valeur par défaut est une chaîne vide. Une chaîne vide provoque un pilote OLE DB pour SQL Server à utiliser la valeur par défaut, généré par le fournisseur SPN.|  
 |**Langage**|SSPROPT_INIT_CURRENTLANGUAGE|Langue de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].|  
 |**MarsConn**|SSPROP_INIT_MARSCONNECTION|Active ou désactive MARS (Multiple Active Result Set) sur la connexion si le serveur est [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] ou version ultérieure. Les valeurs possibles sont « yes » et « no ». La valeur par défaut est « no ».|  
-|**MultiSubnetFailover**|SSPROP_INIT_MULTISUBNETFAILOVER|Toujours spécifier **MultiSubnetFailover = Yes** lors de la connexion à l’écouteur de groupe de disponibilité d’un [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] groupe de disponibilité ou un [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Instance de Cluster de basculement. **MultiSubnetFailover = Yes** configure le pilote OLE DB pour SQL Server fournir une détection plus rapide et la connexion au serveur (actuellement) actif. Les valeurs possibles sont **Yes** et **No**. La valeur par défaut est **non**. Par exemple :<br /><br /> `MultiSubnetFailover=Yes`<br /><br /> Pour plus d’informations sur le pilote OLE DB pour la prise en charge de SQL Server pour [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)], consultez [pilote OLE DB pour SQL Server prend en charge pour la haute disponibilité, la récupération d’urgence](../../oledb/features/oledb-driver-for-sql-server-support-for-high-availability-disaster-recovery.md).|  
+|**MultiSubnetFailover**|SSPROP_INIT_MULTISUBNETFAILOVER|Toujours spécifier **MultiSubnetFailover = Yes** lors de la connexion à l’écouteur de groupe de disponibilité d’un [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] groupe de disponibilité ou un [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Instance de Cluster de basculement. **MultiSubnetFailover = Yes** configure le pilote OLE DB pour SQL Server fournir une détection plus rapide et la connexion au serveur (actuellement) actif. Les valeurs possibles sont **Yes** et **No**. La valeur par défaut est **non**. Exemple :<br /><br /> `MultiSubnetFailover=Yes`<br /><br /> Pour plus d’informations sur le pilote OLE DB pour la prise en charge de SQL Server pour [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)], consultez [pilote OLE DB pour SQL Server prend en charge pour la haute disponibilité, la récupération d’urgence](../../oledb/features/oledb-driver-for-sql-server-support-for-high-availability-disaster-recovery.md).|  
 |**NET**|SSPROP_INIT_NETWORKLIBRARY|Synonyme de « Network ».|  
 |**Réseau**|SSPROP_INIT_NETWORKLIBRARY|Bibliothèque réseau utilisée pour établir une connexion à une instance de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] dans l'organisation.|  
 |**Bibliothèque réseau**|SSPROP_INIT_NETWORKLIBRARY|Synonyme de « Network ».|  
@@ -133,7 +134,7 @@ ms.lasthandoff: 05/03/2018
   
  Le tableau suivant décrit les mots clés qui peuvent être utilisés avec **IDataInitialize::GetDataSource**:  
   
-|Mot clé|Propriété d'initialisation| Description|  
+|Mot clé|Propriété d'initialisation|Description|  
 |-------------|-----------------------------|-----------------|  
 |**Application Name**|SSPROP_INIT_APPNAME|Chaîne identifiant l'application.|  
 |**Intention de l’application**|SSPROP_INIT_APPLICATIONINTENT|Déclare le type de la charge de travail de l'application lors de la connexion à un serveur. Les valeurs possibles sont **ReadOnly** et **ReadWrite**.<br /><br /> La valeur par défaut est **ReadWrite**. Pour plus d’informations sur le pilote OLE DB pour la prise en charge de SQL Server pour [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)], consultez [pilote OLE DB pour SQL Server prend en charge pour la haute disponibilité, la récupération d’urgence](../../oledb/features/oledb-driver-for-sql-server-support-for-high-availability-disaster-recovery.md).|  
@@ -149,7 +150,7 @@ ms.lasthandoff: 05/03/2018
 |**Nom de fichier initial**|SSPROP_INIT_FILENAME|Nom du fichier primaire (incluez le nom de chemin d'accès complet) d'une base de données pouvant être attachée. Pour utiliser **AttachDBFileName**, vous devez également spécifier le nom de la base de données avec le mot clé de base de données de chaîne fournisseur. Si la base de données a été attachée précédemment, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ne la rattache pas (il utilise la base de données attachée comme valeur par défaut pour la connexion).|  
 |**Sécurité intégrée**|DBPROP_AUTH_INTEGRATED|Accepte la valeur « SSPI » pour l'authentification Windows.|  
 |**Connexion MARS**|SSPROP_INIT_MARSCONNECTION|Active ou désactive MARS (Multiple Active Result Set) sur la connexion. Les valeurs reconnues sont « true » et « false ». La valeur par défaut est « false ».|  
-|**MultiSubnetFailover**|SSPROP_INIT_MULTISUBNETFAILOVER|Toujours spécifier **MultiSubnetFailover = True** lors de la connexion à l’écouteur de groupe de disponibilité d’un [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] groupe de disponibilité ou un [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Instance de Cluster de basculement. **MultiSubnetFailover = True** configure le pilote OLE DB pour SQL Server fournir une détection plus rapide et la connexion au serveur (actuellement) actif. Les valeurs possibles sont **True** et **False**. La valeur par défaut est **False**. Par exemple :<br /><br /> `MultiSubnetFailover=True`<br /><br /> Pour plus d’informations sur le pilote OLE DB pour la prise en charge de SQL Server pour [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)], consultez [pilote OLE DB pour SQL Server prend en charge pour la haute disponibilité, la récupération d’urgence](../../oledb/features/oledb-driver-for-sql-server-support-for-high-availability-disaster-recovery.md).|  
+|**MultiSubnetFailover**|SSPROP_INIT_MULTISUBNETFAILOVER|Toujours spécifier **MultiSubnetFailover = True** lors de la connexion à l’écouteur de groupe de disponibilité d’un [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] groupe de disponibilité ou un [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Instance de Cluster de basculement. **MultiSubnetFailover = True** configure le pilote OLE DB pour SQL Server fournir une détection plus rapide et la connexion au serveur (actuellement) actif. Les valeurs possibles sont **True** et **False**. La valeur par défaut est **False**. Exemple :<br /><br /> `MultiSubnetFailover=True`<br /><br /> Pour plus d’informations sur le pilote OLE DB pour la prise en charge de SQL Server pour [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)], consultez [pilote OLE DB pour SQL Server prend en charge pour la haute disponibilité, la récupération d’urgence](../../oledb/features/oledb-driver-for-sql-server-support-for-high-availability-disaster-recovery.md).|  
 |**Adresse réseau**|SSPROP_INIT_NETWORKADDRESS|Adresse réseau d'une instance de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] dans l'organisation.<br /><br /> Pour plus d’informations sur la syntaxe d’adresse valide, consultez la description de la **adresse** (mot clé), dans cette rubrique.|  
 |**Bibliothèque réseau**|SSPROP_INIT_NETWORKLIBRARY|Bibliothèque réseau utilisée pour établir une connexion à une instance de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] dans l'organisation.|  
 |**Packet Size**|SSPROP_INIT_PACKETSIZE|Taille de paquet réseau. La valeur par défaut est 4096.|  
@@ -185,7 +186,7 @@ ms.lasthandoff: 05/03/2018
   
  Le tableau suivant décrit les mots clés qui peuvent être utilisés avec une chaîne de connexion ADO :  
   
-|Mot clé|Propriété d'initialisation| Description|  
+|Mot clé|Propriété d'initialisation|Description|  
 |-------------|-----------------------------|-----------------|  
 |**Intention de l’application**|SSPROP_INIT_APPLICATIONINTENT|Déclare le type de la charge de travail de l'application lors de la connexion à un serveur. Les valeurs possibles sont **ReadOnly** et **ReadWrite**.<br /><br /> La valeur par défaut est **ReadWrite**. Pour plus d’informations sur le pilote OLE DB pour la prise en charge de SQL Server pour [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)], consultez [pilote OLE DB pour SQL Server prend en charge pour la haute disponibilité, la récupération d’urgence](../../oledb/features/oledb-driver-for-sql-server-support-for-high-availability-disaster-recovery.md).|  
 |**Application Name**|SSPROP_INIT_APPNAME|Chaîne identifiant l'application.|  
@@ -201,7 +202,7 @@ ms.lasthandoff: 05/03/2018
 |**Nom de fichier initial**|SSPROP_INIT_FILENAME|Nom du fichier primaire (incluez le nom de chemin d'accès complet) d'une base de données pouvant être attachée. Pour utiliser **AttachDBFileName**, vous devez également spécifier le nom de la base de données avec le mot clé de base de données de chaîne fournisseur. Si la base de données a été attachée précédemment, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ne la rattache pas (il utilise la base de données attachée comme valeur par défaut pour la connexion).|  
 |**Sécurité intégrée**|DBPROP_AUTH_INTEGRATED|Accepte la valeur « SSPI » pour l'authentification Windows.|  
 |**Connexion MARS**|SSPROP_INIT_MARSCONNECTION|Active ou désactive MARS (Multiple Active Result Set) sur la connexion si le serveur est [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] ou version ultérieure. Les valeurs reconnues sont « true » et « false ». La valeur par défaut est « false ».|  
-|**MultiSubnetFailover**|SSPROP_INIT_MULTISUBNETFAILOVER|Toujours spécifier **MultiSubnetFailover = True** lors de la connexion à l’écouteur de groupe de disponibilité d’un [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] groupe de disponibilité ou un [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Instance de Cluster de basculement. **MultiSubnetFailover = True** configure le pilote OLE DB pour SQL Server fournir une détection plus rapide et la connexion au serveur (actuellement) actif. Les valeurs possibles sont **True** et **False**. La valeur par défaut est **False**. Par exemple :<br /><br /> `MultiSubnetFailover=True`<br /><br /> Pour plus d’informations sur le pilote OLE DB pour la prise en charge de SQL Server pour [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)], consultez [pilote OLE DB pour SQL Server prend en charge pour la haute disponibilité, la récupération d’urgence](../../oledb/features/oledb-driver-for-sql-server-support-for-high-availability-disaster-recovery.md).|  
+|**MultiSubnetFailover**|SSPROP_INIT_MULTISUBNETFAILOVER|Toujours spécifier **MultiSubnetFailover = True** lors de la connexion à l’écouteur de groupe de disponibilité d’un [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] groupe de disponibilité ou un [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Instance de Cluster de basculement. **MultiSubnetFailover = True** configure le pilote OLE DB pour SQL Server fournir une détection plus rapide et la connexion au serveur (actuellement) actif. Les valeurs possibles sont **True** et **False**. La valeur par défaut est **False**. Exemple :<br /><br /> `MultiSubnetFailover=True`<br /><br /> Pour plus d’informations sur le pilote OLE DB pour la prise en charge de SQL Server pour [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)], consultez [pilote OLE DB pour SQL Server prend en charge pour la haute disponibilité, la récupération d’urgence](../../oledb/features/oledb-driver-for-sql-server-support-for-high-availability-disaster-recovery.md).|  
 |**Adresse réseau**|SSPROP_INIT_NETWORKADDRESS|Adresse réseau d'une instance de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] dans l'organisation.<br /><br /> Pour plus d’informations sur la syntaxe d’adresse valide, consultez la description de la **adresse** (mot clé), dans cette rubrique.|  
 |**Bibliothèque réseau**|SSPROP_INIT_NETWORKLIBRARY|Bibliothèque réseau utilisée pour établir une connexion à une instance de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] dans l'organisation.|  
 |**Packet Size**|SSPROP_INIT_PACKETSIZE|Taille de paquet réseau. La valeur par défaut est 4096.|  

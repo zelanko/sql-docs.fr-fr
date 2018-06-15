@@ -2,7 +2,6 @@
 title: Actualiser les vues, méthode-exemple (VB) | Documents Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -19,11 +18,12 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 0d62f9b83e8fc9cdf16f4333c5463765604e7a3c
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: e85e27ad969b46e08ec980227b5fa939ee894907
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35287328"
 ---
 # <a name="views-refresh-method-example-vb"></a>Actualiser les vues, méthode-exemple (VB)
 Le code suivant montre comment actualiser le [vues](../../../ado/reference/adox-api/views-collection-adox.md) collection d’un [catalogue](../../../ado/reference/adox-api/catalog-object-adox.md). Cela est nécessaire avant [vue](../../../ado/reference/adox-api/view-object-adox.md) des objets de la **catalogue** sont accessibles.  

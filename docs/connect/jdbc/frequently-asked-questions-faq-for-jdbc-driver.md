@@ -1,7 +1,7 @@
 ---
 title: Forum aux Questions (FAQ) pour le pilote JDBC | Documents Microsoft
 ms.custom: ''
-ms.date: 01/19/2018
+ms.date: 06/12/2018
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -14,16 +14,17 @@ caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 282f71f49eba5ccece8bc9d50ef690fd0af3cb8c
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 2ebe12966a73d5944c2cfb6eb1a2328e27a5385e
+ms.sourcegitcommit: 73ca0313b185e730579f09f9bc32a852c9dd2ef4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/13/2018
+ms.locfileid: "35452159"
 ---
 # <a name="frequently-asked-questions-faq-for-jdbc-driver"></a>Forum aux Questions (FAQ) pour le pilote JDBC
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-  Cet article fournit des réponses aux questions fréquemment posées sur le pilote Microsoft JDBC Driver pour SQL Server.  
+  Cette page fournit des réponses aux questions fréquemment posées sur le pilote JDBC de Microsoft pour SQL Server.  
   
 ## <a name="frequently-asked-questions"></a>Forum Aux Questions (FAQ)  
 **Comment puis-je les aider à améliorer le pilote JDBC ?**  
@@ -32,6 +33,9 @@ Le pilote JDBC est open source et le code source se trouve sur [GitHub](https://
 **Les versions de SQL Server et effectuez le Java la prise en charge du pilote ?**  
  Consultez le [Microsoft JDBC Driver pour SQL Server Support Matrix](../../connect/jdbc/microsoft-jdbc-driver-for-sql-server-support-matrix.md) page pour plus d’informations.  
   
+**Quelle est la différence entre les packages de pilotes JDBC disponibles sur du Microsoft Download Center et le pilote JDBC disponible sur GitHub ?**  
+ JDBC fichiers de pilote disponibles sur le référentiel GitHub pour le pilote Microsoft JDBC sont au cœur du pilote JDBC et sous la licence open source répertoriée dans le référentiel. Les packages de pilotes sur du Microsoft Download Center incluent des bibliothèques supplémentaires pour l’authentification Windows intégrée et l’activation des transactions XA avec le pilote JDBC. Ces bibliothèques supplémentaires sont sous licence incluse avec le package téléchargeable.
+
  **Que dois-je savoir lors de la mise à niveau mon pilote ?**  
  Le prend en charge le pilote Microsoft JDBC 6.4 le JDBC 4.1, 4.2 et 4.3 spécifications (partiellement) et inclut trois bibliothèques de classes JAR dans le package d’installation comme suit :  
   
@@ -69,12 +73,12 @@ Le pilote JDBC est open source et le code source se trouve sur [GitHub](https://
   
  **Puis-je redistribuer le pilote ?** Les pilotes JDBC 4.1, 4.2, 6.0, 6.2 et 6.4 sont redistribuables. Passez en revue la clause « Code distribuable » dans les contrats de licence. 
    
- **Puis-je utiliser le pilote pour accéder à Microsoft SQL Server à partir d’un ordinateur Linux ?** Oui. Le pilote vous permet d’accéder à SQL Server à partir de Linux, d’Unix et d’autres plateformes non-Windows. Consultez [Microsoft JDBC Driver pour SQL Server Support Matrix](../../connect/jdbc/microsoft-jdbc-driver-for-sql-server-support-matrix.md) pour plus d’informations.  
+ **Puis-je utiliser le pilote pour accéder à Microsoft SQL Server à partir d’un ordinateur Linux ?** Oui. Le pilote vous permet d’accéder à SQL Server à partir de Linux, d’Unix et d’autres plateformes non-Windows. Pour plus d’informations, consultez [Microsoft JDBC Driver pour SQL Server Support Matrix](../../connect/jdbc/microsoft-jdbc-driver-for-sql-server-support-matrix.md).
   
  **Le pilote prend en charge le chiffrement Secure Sockets Layer (SSL) ?** Le pilote prend en charge le chiffrement SSL à compter de la version 1.2. Pour plus d’informations, consultez [le chiffrement SSL à l’aide de](../../connect/jdbc/using-ssl-encryption.md).  
   
  **Les types d’authentification sont pris en charge par le pilote JDBC de Microsoft pour SQL Server ?**  
- Le tableau ci-dessous répertorie les options d’authentification disponibles. Notez que l’authentification Kerberos en Java pur est disponible à compter de la version 4.0 du pilote.  
+ Le tableau ci-dessous répertorie les options d’authentification disponibles. Une authentification Kerberos en Java pure est disponible à partir de la version 4.0 du pilote.  
   
 |||  
 |-|-|  
@@ -89,10 +93,10 @@ Le pilote JDBC est open source et le code source se trouve sur [GitHub](https://
 |Windows|Authentification Azure Active Directory|  
   
 **Le pilote prend-il en charge Internet Protocol version 6 (IPv6) des adresses ?**  
- Oui. Le pilote JDBC prend en charge l’utilisation d’adresses IPv6 avec la collection de propriétés de connexion et la propriété de chaîne de connexion serverName. Pour plus d’informations, consultez [générer l’URL de connexion](../../connect/jdbc/building-the-connection-url.md).  
+ Oui. Le pilote prend en charge l’utilisation d’adresses IPv6. Utilisez la collection de propriétés de connexion et la propriété de chaîne de connexion serverName. Pour plus d’informations, consultez [générer l’URL de connexion](../../connect/jdbc/building-the-connection-url.md).  
   
 **Quelle est la mise en mémoire tampon adaptative ?**  
- Introduite dans la version 1.2 du pilote JDBC Driver pour Microsoft SQL Server 2005, la mise en mémoire tampon adaptative permet de récupérer n’importe quel volume de données de grande valeur sans occasionner la surcharge des curseurs côté serveur. La fonctionnalité de mise en mémoire tampon adaptative du pilote JDBC Driver pour Microsoft SQL Server fournit une propriété de chaîne de connexion, responseBuffering, qui peut avoir la valeur « adaptive » ou « full ». À compter de la version 2.0 du pilote JDBC Driver, le comportement par défaut du pilote est « adaptive ». En d'autres termes, pour pouvoir obtenir le comportement de mise en mémoire tampon adaptative, votre application n'a pas besoin de requérir explicitement le mode de mise en mémoire tampon adaptative. Toutefois, dans la version 1.2, le mode de mise en mémoire tampon était « full » par défaut, et l’application devait demander explicitement le mode de mise en mémoire tampon adaptative. Pour plus d’informations, consultez [à l’aide de mise en mémoire tampon adaptative](../../connect/jdbc/using-adaptive-buffering.md) rubrique et le blog. [Ce qui est adaptiveresponse mise en mémoire tampon et pourquoi dois-je l’utiliser ?](http://go.microsoft.com/fwlink/?LinkId=111575)  
+ Mise en mémoire tampon adaptative a été introduite avec Microsoft SQL Server 2005 JDBC Driver version 1.2. Il est conçu pour récupérer tout type de données de grande valeur sans la surcharge des curseurs côté serveur. La fonctionnalité de mise en mémoire tampon adaptative du pilote JDBC Driver pour Microsoft SQL Server fournit une propriété de chaîne de connexion, responseBuffering, qui peut avoir la valeur « adaptive » ou « full ». Dans la version 1.2, le mode de mise en mémoire tampon est « complète » par défaut et l’application doit définir le mode de mise en mémoire tampon adaptative explicitement. À compter de la version 2.0 du pilote JDBC Driver, le comportement par défaut du pilote est « adaptive ». Par conséquent, votre application n’a pas demander le comportement adaptative explicitement pour obtenir le comportement de mise en mémoire tampon adaptative. Pour plus d’informations, consultez [à l’aide de mise en mémoire tampon adaptative](../../connect/jdbc/using-adaptive-buffering.md) et le blog de [qu’adaptiveresponse en mémoire tampon et pourquoi dois-je l’utiliser ?](http://go.microsoft.com/fwlink/?LinkId=111575).
   
 **Est le pilote prise en charge le regroupement de connexions ?**  
  Le pilote prend en charge le regroupement de connexions Java EE 5 (Java Platform, Enterprise Edition 5). Le pilote implémente les interfaces JDBC 3.0 nécessaires pour qu’il puisse participer aux implémentations de regroupements de connexions fournies par des fournisseurs de serveurs d’applications intergicielles (middleware). Le pilote participe à des connexions regroupées dans ces environnements. Pour plus d’informations, consultez [le regroupement de connexions à l’aide de](../../connect/jdbc/using-connection-pooling.md). Le pilote ne fournit pas sa propre implémentation de regroupement, mais il s’appuie sur des serveurs d’applications Java tiers.  

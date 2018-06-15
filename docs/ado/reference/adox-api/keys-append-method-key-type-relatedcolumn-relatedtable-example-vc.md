@@ -2,7 +2,6 @@
 title: Créer un nouvel exemple de clé étrangère (VC ++) | Documents Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -24,11 +23,12 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: c473c5f282bfb71a86391c78e45c9658b506f1d2
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 30b5590d1abecfb36869179aa1212dafa4d59527
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35286502"
 ---
 # <a name="keys-append-method-key-type-relatedcolumn-relatedtable-and-updaterule-properties-example-vc"></a>Keys Append, méthode, Type de clé, RelatedColumn, RelatedTable et UpdateRule exemple (VC ++)
 Le code suivant montre comment créer une clé étrangère. Il suppose l’existent de deux tables (Customers et Orders).  

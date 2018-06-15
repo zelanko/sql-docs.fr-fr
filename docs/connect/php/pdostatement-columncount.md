@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: php
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: connectivity
@@ -15,11 +14,12 @@ caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: eea5f353980681ae94ad4a4decb29aebf8e8703f
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 621d9c0bdca47ccfd16a2ce5e502d0b53134d046
+ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35308428"
 ---
 # <a name="pdostatementcolumncount"></a>PDOStatement::columnCount
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -33,7 +33,7 @@ Retourne le nombre de colonnes dans un jeu de résultats.
 int PDOStatement::columnCount ();  
 ```  
   
-## <a name="return-value"></a>Valeur retournée  
+## <a name="return-value"></a>Valeur de retour  
 Retourne le nombre de colonnes dans un jeu de résultats. Retourne zéro si le jeu de résultats est vide.  
   
 ## <a name="remarks"></a>Notes  

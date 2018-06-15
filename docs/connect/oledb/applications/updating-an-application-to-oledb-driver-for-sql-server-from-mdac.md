@@ -2,7 +2,7 @@
 title: Mise à jour d’une Application, le pilote OLE DB pour SQL Server à partir de MDAC | Documents Microsoft
 description: Mise à jour d’une application de pilote OLE DB pour SQL Server à partir de MDAC
 ms.custom: ''
-ms.date: 03/26/2018
+ms.date: 06/12/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.component: oledb|applications
@@ -20,24 +20,25 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 907e1c08f422809a04d3e3c8846d91f7982bb7ea
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 11597ed3b7cd80cae8604291bd8b662bf6a9ed80
+ms.sourcegitcommit: 354ed9c8fac7014adb0d752518a91d8c86cdce81
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/14/2018
+ms.locfileid: "35612104"
 ---
 # <a name="updating-an-application-to-ole-db-driver-for-sql-server-from-mdac"></a>Mise à jour d’une Application, le pilote OLE DB pour SQL Server à partir de MDAC
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  Il existe plusieurs différences entre le pilote OLE DB pour SQL Server et Microsoft Data Access Components (MDAC) ; à compter de Windows Vista, les composants d’accès aux données sont maintenant appelés Windows Data Access Components (ou Windows DAC). Bien que les deux fournissent l’accès aux données native [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] des bases de données, pilote OLE DB pour SQL Server a été spécifiquement conçu pour exposer les nouvelles fonctionnalités de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], tout en conservant une compatibilité descendante avec les versions antérieures.   
+  Il existe plusieurs différences entre le pilote OLE DB pour SQL Server et Microsoft Data Access Components (MDAC) ; à compter de Windows Vista, les composants d’accès aux données sont maintenant appelés Windows Data Access Components (ou Windows DAC). Bien que les deux fournissent l’accès aux données native [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] des bases de données, pilote OLE DB pour SQL Server a été conçu pour exposer les nouvelles fonctionnalités de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], tout en conservant une compatibilité descendante avec les versions antérieures.   
 
  En outre, bien que MDAC contienne des composants à l’utilisation d’OLE DB, ODBC et ActiveX Data Objects (ADO), pilote OLE DB pour SQL Server implémente uniquement OLE DB (bien que ADO peut accéder aux fonctionnalités du pilote OLE DB pour SQL Server).  
 
  Pilote OLE DB pour SQL Server et MDAC diffèrent dans les domaines suivants :  
 
--   Les utilisateurs qui utilisent ADO pour accéder à un pilote OLE DB pour SQL Server peuvent trouver moins de fonctionnalités de filtrage qu’en un fournisseur SQL OLE DB.  
+-   Les utilisateurs qui utilisent ADO pour accéder au pilote OLE DB pour SQL Server peuvent trouver moins de fonctionnalités de filtrage qu’en le fournisseur SQL OLE DB.  
 
 -   Si une application ADO utilise le pilote OLE DB pour SQL Server et tente de mettre à jour une colonne calculée, une erreur sera signalée. Avec MDAC, la mise à jour était acceptée mais ignorée.  
 
@@ -45,7 +46,7 @@ ms.lasthandoff: 05/03/2018
 
 -   Seules les interfaces OLE DB sont prises en charge.  
 
--   Le pilote OLE DB pour les noms de SQL Server sont différents de ceux utilisés avec MDAC.  
+-   Le pilote OLE DB pour les noms de SQL Server sont différents des noms utilisés avec MDAC.  
 
 -   Des fonctionnalités accessibles par l’utilisateur fournie par les composants MDAC sont disponibles lors de l’utilisation du pilote OLE DB pour SQL Server. Cela comprend, entre autres, le regroupement de connexions, la prise en charge des objets ADO et la prise en charge du curseur client. Lorsque aucune de ces fonctionnalités sont utilisées, pilote OLE DB pour SQL Server fournit la connectivité de base de données uniquement. MDAC fournit des fonctionnalités telles que le suivi, des contrôles de gestion et des compteurs de performance.  
 
@@ -63,7 +64,7 @@ ms.lasthandoff: 05/03/2018
 
 -   Pilote OLE DB pour SQL Server a la vérification que MDAC, ce qui signifie que certaines applications non conformes strictement aux spécifications OLE DB peuvent se comporter différemment des erreurs plus stricte. Par exemple, le fournisseur SQLOLEDB n’applique pas la règle de noms de paramètre doivent commencer par ' @' pour résultat paramètres, mais le pilote OLE DB pour SQL Server effectue.  
 
--   Pilote OLE DB pour SQL Server se comporte différemment de MDAC en ce qui concerne les connexions ayant échouées. Par exemple, MDAC retourne des valeurs de propriété mises en cache pour une connexion qui a échoué, alors que le pilote OLE DB pour SQL Server signale une erreur à l’application appelante.  
+-   Pilote OLE DB pour SQL Server se comporte différemment de MDAC en ce qui concerne les connexions qui ont échoué. Par exemple, MDAC retourne des valeurs de propriété mises en cache pour une connexion qui a échoué, alors que le pilote OLE DB pour SQL Server signale une erreur à l’application appelante.  
 
 -   Pilote OLE DB pour SQL Server ne génère pas d’événements Visual Studio Analyzer, mais génère à la place des événements de suivi Windows.  
 
@@ -75,7 +76,7 @@ ms.lasthandoff: 05/03/2018
 
 -   Le pilote OLE DB pour SQL Server retourne des synonymes dans les TABLES et TABLE_INFO les ensembles de lignes de schéma, avec attribuée à TABLE_TYPE.  
 
--   Retourner des valeurs de type de données **varchar (max)**, **nvarchar (max)**, **varbinary (max)**, **xml**, **udt**, ou d’autres types d’objet volumineux ne peuvent pas être retournés pour les versions client antérieures à [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]. Si vous souhaitez utiliser ces types en tant que valeurs de retour, vous devez utiliser le pilote OLE DB pour SQL Server.  
+-   Retourner des valeurs de type de données **varchar (max)**, **nvarchar (max)**, **varbinary (max)**, **xml**, **udt**, ou d’autres types d’objet volumineux ne peut pas être retournés pour les versions client antérieures à [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]. Si vous souhaitez utiliser ces types en tant que valeurs de retour, vous devez utiliser le pilote OLE DB pour SQL Server.  
 
 -   MDAC autorise les instructions suivantes à exécuter au début de transactions manuelles et implicites, mais n’est pas le cas du pilote OLE DB pour SQL Server. Elles doivent être exécutées en mode de validation automatique.  
 
@@ -107,7 +108,7 @@ ms.lasthandoff: 05/03/2018
 
 -   Si vous utilisez un appel OLE DB pour démarrer des transactions, il est d’une différence de comportement entre le pilote OLE DB pour SQL Server et MDAC : les transactions commencent immédiatement avec le pilote OLE DB pour SQL Server, mais les transactions commencent après la première base de données d’accès à l’aide de MDAC. Cela peut affecter le comportement des procédures stockées et lots car [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] requiert@TRANCOUNT soient identiques après un lot ou une procédure stockée termine son exécution telle qu’elle était au démarrage de la procédure stockée ou le lot.  
 
--   Avec le pilote OLE DB pour SQL Server, ITransactionLocal::BeginTransaction entraîne une transaction doit être démarré immédiatement. Avec MDAC le démarrage de transaction est différé jusqu'à ce que l'application exécute une instruction qui requiert une transaction en mode de transaction implicite. Pour plus d’informations, consultez [SET IMPLICIT_TRANSACTIONS &#40;Transact-SQL&#41;](../../../t-sql/statements/set-implicit-transactions-transact-sql.md).  
+-   Avec le pilote OLE DB pour SQL Server, ITransactionLocal::BeginTransaction entraîne une transaction doit être démarré immédiatement. Avec MDAC le démarrage de la transaction a été retardé jusqu'à ce que l’application exécute une instruction qui requiert une transaction en mode de transaction implicite. Pour plus d’informations, consultez [SET IMPLICIT_TRANSACTIONS &#40;Transact-SQL&#41;](../../../t-sql/statements/set-implicit-transactions-transact-sql.md).  
 
 
  Les deux pilote OLE DB pour SQL Server et MDAC lecture d’isolation de transaction validée à l’aide de la version de la ligne, mais uniquement pilote OLE DB pour SQL Server prend en charge la capture instantanée d’isolation des transactions. (En termes de programmation, l'isolation de la transaction de lecture validée à l'aide du contrôle de version de ligne est la même chose que la transaction de lecture validée.)  

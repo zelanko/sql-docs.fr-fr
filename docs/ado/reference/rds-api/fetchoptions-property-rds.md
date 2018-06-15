@@ -2,7 +2,6 @@
 title: FetchOptions, propriété (RDS) | Documents Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -18,11 +17,12 @@ caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: dcbb951a5d17c7b7f0d8be540bef5c74e96b101d
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: b73931acd678871f05e5aa4022153ded86a830e4
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35288126"
 ---
 # <a name="fetchoptions-property-rds"></a>FetchOptions, propriété (RDS)
 Indique le type de l’extraction asynchrone.  
@@ -33,7 +33,7 @@ Indique le type de l’extraction asynchrone.
 ## <a name="setting-and-return-values"></a>Définition et valeurs de retour  
  Définit ou retourne l’une des valeurs suivantes.  
   
-|Constante| Description|  
+|Constante|Description|  
 |--------------|-----------------|  
 |**adcFetchUpFront**|Tous les enregistrements de la [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) sont extraites avant que le contrôle est retourné à l’application. Le texte complet **Recordset** est extrait avant que l’application est autorisée à faire quoi que ce soit avec lui.|  
 |**adcFetchBackground**|Contrôle peut retourner à l’application dès que le premier lot d’enregistrements a été extrait. Suivante de la lecture de la **Recordset** que non extrait dans le premier lot est retardée jusqu'à ce que l’enregistrement recherché est extrait, moment auquel le contrôle retourne à l’application.|  

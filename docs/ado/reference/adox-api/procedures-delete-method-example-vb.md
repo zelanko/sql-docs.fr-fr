@@ -2,7 +2,6 @@
 title: Exemple de méthode (VB) de suppression de procédures | Documents Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -19,11 +18,12 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: fc58b4a6db0b1429561abd26803807128aa97fe5
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: e3ff286753b12fa5e648d5d43bf8bb4c360a441a
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35286688"
 ---
 # <a name="procedures-delete-method-example-vb"></a>Exemple de méthode (VB) de suppression de procédures
 Le code suivant montre comment supprimer une procédure à l’aide de la [supprimer](../../../ado/reference/adox-api/delete-method-adox-collections.md) méthode de la [procédures](../../../ado/reference/adox-api/procedures-collection-adox.md) collection.  

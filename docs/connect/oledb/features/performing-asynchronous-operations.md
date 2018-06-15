@@ -2,7 +2,7 @@
 title: Exécution d’opérations asynchrones | Documents Microsoft
 description: Exécution d’opérations asynchrones avec le pilote OLE DB pour SQL Server
 ms.custom: ''
-ms.date: 03/26/2018
+ms.date: 06/12/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.component: oledb|features
@@ -23,21 +23,24 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 9fb93482f6eca98b8ee2921ea158cf7f71165c43
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 3ba220d754eb3ebc31a719cb840e93378438e09c
+ms.sourcegitcommit: 354ed9c8fac7014adb0d752518a91d8c86cdce81
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/14/2018
+ms.locfileid: "35612134"
 ---
 # <a name="performing-asynchronous-operations"></a>Exécution d'opérations asynchrones
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+
+[!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] permet aux applications d'effectuer des opérations de base de données asynchrones. Le traitement asynchrone permet aux méthodes d'être retournées immédiatement sans blocage du thread appelant. Cela rend le multithreading plus puissant et plus souple, sans obliger le développeur à créer explicitement des threads ou à gérer la synchronisation. Les applications requièrent un traitement asynchrone lors de l'initialisation d'une connexion de base de données, ou lors de l'initialisation du résultat de l'exécution d'une commande.  
   
 ## <a name="opening-and-closing-a-database-connection"></a>Ouverture et fermeture d'une connexion de base de données  
  Lorsque vous utilisez le pilote OLE DB pour SQL Server, les applications conçues pour initialiser un objet de source de données de façon asynchrone peuvent définir DBPROPVAL_ASYNCH_INITIALIZE dans la propriété DBPROP_INIT_ASYNCH avant d’appeler **IDBInitialize::Initialize** . Lorsque cette propriété est définie, le fournisseur retourne immédiatement à partir de l’appel à **initialiser** avec S_OK, si l’opération s’est effectuée immédiatement, ou DB_S_ASYNCHRONOUS, si l’initialisation se poursuit de façon asynchrone. Les applications peuvent interroger pour les **IDBAsynchStatus** ou [ISSAsynchStatus](../../oledb/ole-db-interfaces/issasynchstatus-ole-db.md) interface sur l’objet de source de données, puis appelez **IDBAsynchStatus::GetStatus** ou [ ISSAsynchStatus::WaitForAsynchCompletion](../../oledb/ole-db-interfaces/issasynchstatus-waitforasynchcompletion-ole-db.md) pour obtenir l’état de l’initialisation.  
   
- De plus, la propriété SSPROP_ISSAsynchStatus a été ajoutée au jeu de propriétés DBPROPSET_SQLSERVERROWSET. Les fournisseurs qui prennent en charge l'interface **ISSAsynchStatus** doivent implémenter cette propriété avec la valeur VARIANT_TRUE.  
+ De plus, la propriété SSPROP_ISSAsynchStatus a été ajoutée au jeu de propriétés DBPROPSET_SQLSERVERROWSET. Les fournisseurs qui prennent en charge la **ISSAsynchStatus** interface doit implémenter cette propriété avec la valeur VARIANT_TRUE.  
   
  **IDBAsynchStatus::Abort** ou [ISSAsynchStatus::Abort](../../oledb/ole-db-interfaces/issasynchstatus-abort-ole-db.md) peut être appelée pour annuler asynchrone **initialiser** appeler. Le consommateur doit demander explicitement l'initialisation de la source de données asynchrone. Dans le cas contraire, **IDBInitialize::Initialize** ne retourne pas jusqu'à ce que l’objet de source de données est entièrement initialisé.  
   
@@ -192,6 +195,6 @@ if (hr == DB_S_ASYNCHRONOUS)
 ## <a name="see-also"></a>Voir aussi  
  [Pilote de base de données OLE pour les fonctionnalités SQL Server](../../oledb/features/oledb-driver-for-sql-server-features.md)   
  [Propriétés et comportements de l’ensemble de lignes](../../oledb/ole-db-rowsets/rowset-properties-and-behaviors.md)   
- [ISSAsynchStatus & #40 ; OLE DB & #41 ;](../../oledb/ole-db-interfaces/issasynchstatus-ole-db.md)  
+ [ISSAsynchStatus &#40;OLE DB&#41;](../../oledb/ole-db-interfaces/issasynchstatus-ole-db.md)  
   
   

@@ -2,7 +2,6 @@
 title: Tables et colonnes ajouter des méthodes, nom de propriété-Exemple (VC ++) | Documents Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,11 +19,12 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 6496c812083d154205c0b96efa47badf35e56c82
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: c783914dd96e3545927f308c861eb80e72ef7717
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35285308"
 ---
 # <a name="columns-and-tables-append-methods-name-property-example-vc"></a>Colonnes et Tables ajouter des méthodes, exemple de propriété Name (VC ++)
 Le code suivant montre comment créer une nouvelle table.  

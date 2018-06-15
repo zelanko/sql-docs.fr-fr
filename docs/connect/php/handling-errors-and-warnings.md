@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/26/2018
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: php
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: connectivity
@@ -15,11 +14,12 @@ caps.latest.revision: 16
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 5e57c6a84a12bd148dc45c868a514da37cd87543
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 3cba0246f57157488b4e62ab2cdcbc80b2aea71e
+ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35307538"
 ---
 # <a name="handling-errors-and-warnings"></a>Gestion des erreurs et des avertissements
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -30,7 +30,7 @@ Les rubriques de cette section fournissent des informations sur la gestion des e
   
 ## <a name="in-this-section"></a>Dans cette section  
   
-|Rubrique| Description|  
+|Rubrique|Description|  
 |---------|---------------|  
 |[Guide pratique pour configurer la gestion des erreurs et des avertissements à l’aide du pilote SQLSRV](../../connect/php/how-to-configure-error-and-warning-handling-using-the-sqlsrv-driver.md)|Montre comment modifier les paramètres de configuration pour la gestion des erreurs et des avertissements.|  
 |[Procédure : gérer les erreurs et avertissements à l’aide du pilote SQLSRV](../../connect/php/how-to-handle-errors-and-warnings-using-the-sqlsrv-driver.md)|Montre comment gérer séparément les erreurs et les avertissements.|  

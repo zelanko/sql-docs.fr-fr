@@ -2,10 +2,10 @@
 title: Types CLR volumineux définis par l’utilisateur (OLE DB) | Documents Microsoft
 description: Types CLR volumineux définis par l'utilisateur (OLE DB)
 ms.custom: ''
-ms.date: 03/26/2018
+ms.date: 06/12/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: ole-db
+ms.component: oledb|ole-db
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: connectivity
@@ -16,14 +16,17 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: a2b62d0206fc36b69394975f93b7369465edebe1
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: ac07bf034e65d654a2b8577bdad8d5f3fb8ff48d
+ms.sourcegitcommit: 354ed9c8fac7014adb0d752518a91d8c86cdce81
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/14/2018
+ms.locfileid: "35611984"
 ---
 # <a name="large-clr-user-defined-types-ole-db"></a>Types CLR volumineux définis par l'utilisateur (OLE DB)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+
+[!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
   Cette rubrique décrit les modifications apportées à OLE DB dans le pilote OLE DB pour SQL Server prendre en charge les grands types common language runtime (CLR) définis par l’utilisateur (UDT).  
   
@@ -82,7 +85,7 @@ ms.lasthandoff: 05/03/2018
   
  Les colonnes suivantes sont également définies pour les types UDT :  
   
-|Identificateur de colonne|Type| Description|  
+|Identificateur de colonne|Type|Description|  
 |-----------------------|----------|-----------------|  
 |DBCOLUMN_UDT_CATALOGNAME|DBTYPE_WSTR|Pour les colonnes UDT, il s'agit du nom du catalogue où le type UDT est défini.|  
 |DBCOLUMN_UDT_SCHEMANAME|DBTYPE_WSTR|Pour les colonnes UDT, il s'agit du nom du schéma où le type UDT est défini.|  
@@ -107,7 +110,7 @@ ms.lasthandoff: 05/03/2018
   
  Les colonnes supplémentaires suivantes sont définies pour les types UDT :  
   
-|Identificateur de la colonne|Type| Description|  
+|Identificateur de la colonne|Type|Description|  
 |-----------------------|----------|-----------------|  
 |SS_UDT_CATALOGNAME|DBTYPE_WSTR|Pour les colonnes UDT, il s'agit du nom du catalogue où le type UDT est défini.|  
 |SS_UDT_SCHEMANAME|DBTYPE_WSTR|Pour les colonnes UDT, il s'agit du nom du schéma où le type UDT est défini.|  
@@ -128,14 +131,14 @@ ms.lasthandoff: 05/03/2018
 |DBTYPE_BSTR|Pris en charge (2), (5)|Néant|Prise en charge (3), (5)|Néant|  
 |DBTYPE_STR|Pris en charge (2), (5)|Néant|Prise en charge (3), (5)|Néant|  
 |DBTYPE_IUNKNOWN|Prise en charge (6)|Néant|Prise en charge (6)|Néant|  
-|DBTYPE_VARIANT (VT_UI1 &#124; VT_ARRAY)|Pris en charge (5)|Néant|Prise en charge (3), (5)|Néant|  
+|DBTYPE_VARIANT (VT_UI1 &AMP;#124; VT_ARRAY)|Pris en charge (5)|Néant|Prise en charge (3), (5)|Néant|  
 |DBTYPE_VARIANT (VT_BSTR)|Pris en charge (2), (5)|Néant|Néant|Néant|  
   
 ### <a name="key-to-symbols"></a>Liste des symboles  
   
 |Symbole|Signification|  
 |------------|-------------|  
-|1|Si un type de serveur autre que DBTYPE_UDT est spécifié avec **ICommandWithParameters::SetParameterInfo** et le type d’accesseur est DBTYPE_UDT, une erreur se produit lorsque l’instruction est exécutée.  L'erreur sera DB_E_ERRORSOCCURRED et l'état du paramètre sera DBSTATUS_E_BADACCESSOR.<br /><br /> Le fait de spécifier un paramètre de type UDT pour un paramètre serveur qui n'est pas un type UDT constitue une erreur.|  
+| 1|Si un type de serveur autre que DBTYPE_UDT est spécifié avec **ICommandWithParameters::SetParameterInfo** et le type d’accesseur est DBTYPE_UDT, une erreur se produit lorsque l’instruction est exécutée.  L'erreur sera DB_E_ERRORSOCCURRED et l'état du paramètre sera DBSTATUS_E_BADACCESSOR.<br /><br /> Le fait de spécifier un paramètre de type UDT pour un paramètre serveur qui n'est pas un type UDT constitue une erreur.|  
 |2|Les données sont converties d'une chaîne hexadécimale en données binaires.|  
 |3|Les données sont converties données binaires en chaîne hexadécimale.|  
 |4|La validation peut se produire lorsque vous utilisez **CreateAccessor** ou **GetNextRows**. L'erreur est DB_E_ERRORSOCCURRED. L'état de liaison a la valeur DBBINDSTATUS_UNSUPPORTEDCONVERSION.|  
@@ -169,7 +172,7 @@ ms.lasthandoff: 05/03/2018
   
 |Version du client|DBTYPE_UDT<br /><br /> (longueur inférieure ou égale à 8 000 octets)|DBTYPE_UDT<br /><br /> (longueur supérieure à 8 000 octets)|  
 |--------------------|------------------------------------------------------------------|---------------------------------------------------------|  
-|SQL Server 2005|UDT|varbinary(max)|  
+|SQL Server 2005|UDT|varbinary(max)|  
 |SQL Server 2008 et versions ultérieur|UDT|UDT|  
   
  Lorsque **DataTypeCompatibility** (SSPROP_INIT_DATATYPECOMPATIBILITY) a la valeur « 80 », les types UDT volumineux apparaissent aux clients de la même façon qu’ils s’affichent pour les clients de bas niveau.  
