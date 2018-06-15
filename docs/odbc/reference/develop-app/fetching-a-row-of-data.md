@@ -24,6 +24,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32913314"
 ---
 # <a name="fetching-a-row-of-data"></a>Extraction d’une ligne de données
 Pour extraire une ligne de données, une application appelle **SQLFetch**. **SQLFetch** peut être appelé avec n’importe quel type de curseur, mais il ne déplace le curseur de l’ensemble de lignes dans une direction avant uniquement. **SQLFetch** avance le curseur à la ligne suivante et retourne les données pour toutes les colonnes qui ont été liés avec des appels à **SQLBindCol**. Lorsque le curseur atteint la fin du résultat défini, **SQLFetch** retourne SQL_NO_DATA. Pour obtenir des exemples de l’appel de **SQLFetch**, consultez [à l’aide de SQLBindCol](../../../odbc/reference/develop-app/using-sqlbindcol.md).  

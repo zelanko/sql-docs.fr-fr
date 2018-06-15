@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32898924"
 ---
 # <a name="additional-supported-odbc-sql-grammar"></a>Grammaire supplémentaires SQL ODBC pris en charge
 Les pilotes ODBC prend complètement en charge la grammaire minimale ODBC 2.5 et les clauses suivantes dans la grammaire de base et étendus ODBC 2.5. Informations supplémentaires peuvent être affichées en accédant à la [l’instruction ALTER TABLE](../../odbc/microsoft/alter-table-statement.md), [des noms de corrélation](../../odbc/microsoft/correlation-names.md), et [appel de procédure](../../odbc/microsoft/procedure-invocation.md) rubriques.  

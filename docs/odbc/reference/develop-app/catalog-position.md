@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32910004"
 ---
 # <a name="catalog-position"></a>Position du catalogue
 La position d’un nom de catalogue dans un identificateur et la façon dont il est distincte du reste de l’identificateur varie à partir de la source de données à la source de données. Par exemple, dans une source de données Xbase, le nom du catalogue est un répertoire et, dans Microsoft® Windows®, est séparé du nom de table (qui est un nom de fichier) par une barre oblique inverse (\\). L’illustration suivante montre cette condition.  

@@ -27,6 +27,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32912274"
 ---
 # <a name="driver-specific-connection-information"></a>Informations de connexion spécifiques au pilote
 **SQLConnect** part du principe qu’un nom de source de données, un ID utilisateur et un mot de passe sont suffisantes pour se connecter à une source de données et que toutes les autres informations de connexion peuvent être stockées sur le système. Cela n’est souvent pas le cas. Par exemple, un pilote peut-être un ID d’utilisateur et mot de passe pour vous connecter à un serveur et un autre ID d’utilisateur et le mot de passe pour vous connecter à un SGBD. Étant donné que **SQLConnect** accepte un ID utilisateur et un mot de passe, cela signifie que les autres ID d’utilisateur et mot de passe doivent être stockés avec les informations de source de données sur le système si **SQLConnect** doit être utilisé. Cela constitue une violation potentielle de sécurité et doit être évitée, sauf si le mot de passe est chiffré.  

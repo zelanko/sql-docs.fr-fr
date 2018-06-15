@@ -25,6 +25,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32913844"
 ---
 # <a name="multiple-results"></a>Plusieurs résultats
 A *résultat* est un élément retourné par la source de données après une instruction est exécutée. ODBC comporte deux types de résultats : les jeux de résultats et des nombres de lignes. *Nombre de lignes* sont le nombre de lignes affectées par une instruction update, delete ou insert d’instruction. Les traitements, décrit dans [Batches of SQL Statements](../../../odbc/reference/develop-app/batches-of-sql-statements.md), peut générer plusieurs résultats.  

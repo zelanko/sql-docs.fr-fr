@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32916294"
 ---
 # <a name="transactions-odbc"></a>Transactions ODBC
 A *transaction* est une unité de travail qui s’agit d’une opération atomique unique ; autrement dit, l’opération réussit ou échoue dans sa globalité. Par exemple, considérez le transfert d’argent d’un compte bancaire vers un autre. Cela implique deux étapes : retrait de l’argent à partir du premier compte et il dépôt dans la seconde. Il est important que les deux étapes réussissent ; Il n’est pas acceptable pour une seule étape réussisse, l’autre échec. Une base de données qui prend en charge des transactions est en mesure de garantir cela.  

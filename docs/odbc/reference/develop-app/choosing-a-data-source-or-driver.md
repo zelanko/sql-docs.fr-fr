@@ -24,6 +24,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32913154"
 ---
 # <a name="choosing-a-data-source-or-driver"></a>En choisissant des données Source ou pilote
 La source de données ou le pilote utilisé par une application est parfois codé en dur dans l’application. Par exemple, une application personnalisée écrite par un service MIS à transférer des données à partir d’une source de données à l’autre contient les noms de ces sources de données, l’application ne fonctionnerait pas avec d’autres sources de données. Un autre exemple est une application verticale, tel que celui utilisé pour l’entrée de commande. Une telle application toujours utilise la même source de données, qui dispose d’un schéma prédéfini connu par l’application.  

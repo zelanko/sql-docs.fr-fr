@@ -31,7 +31,8 @@
 ## Interopérabilité avec d’autres fonctionnalités
 ### [Suivi des modifications et capture de données modifiées](replicate-track-change-data-capture-always-on-availability.md)  
 ### [Configurer la réplication](configure-replication-for-always-on-availability-groups-sql-server.md)  
-### [Bases de données à relation contenant-contenu](contained-databases-with-always-on-availability-groups-sql-server.md)  
+### 
+  [Bases de données autonomes](contained-databases-with-always-on-availability-groups-sql-server.md)  
 ### [Instantanés de base de données](database-snapshots-with-always-on-availability-groups-sql-server.md)  
 ### [Transactions distribuées](transactions-always-on-availability-and-database-mirroring.md)  
 #### [DTC du cluster](cluster-dtc-for-sql-server-2016-availability-groups.md)  

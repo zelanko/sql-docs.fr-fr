@@ -24,6 +24,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32906854"
 ---
 # <a name="application-and-driver-compatibility"></a>Compatibilité des applications et pilotes
 Pilote et les applications ODBC appartiennent à un nombre de catégories en plus de leur version. Certaines de ces applications sont incompatibles avec certains pilotes ; dans d’autres cas, le type de l’application ou le pilote peut avoir une incidence sur les problèmes de compatibilité descendante entre eux.  

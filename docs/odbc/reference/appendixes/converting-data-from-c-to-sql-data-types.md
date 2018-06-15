@@ -29,6 +29,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32912504"
 ---
 # <a name="converting-data-from-c-to-sql-data-types"></a>Conversion de données à partir de C en Types de données SQL
 Lorsqu’une application appelle **SQLExecute** ou **SQLExecDirect**, le pilote récupère les données pour tous les paramètres liés avec **SQLBindParameter** à partir d’emplacements de stockage dans l’application. Lorsqu’une application appelle **SQLSetPos**, le pilote récupère les données pour une mise à jour ou l’opération d’ajout de colonnes liées avec **SQLBindCol**. Pour les paramètres de données d’exécution, l’application envoie les données de paramètre avec **SQLPutData**. Si nécessaire, le pilote convertit les données du type de données spécifié par le *ValueType* argument dans **SQLBindParameter** au type de données spécifié par le *ParameterType* argument dans **SQLBindParameter**, puis envoie les données à la source de données.  

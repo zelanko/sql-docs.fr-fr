@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32898904"
 ---
 # <a name="jet-outer-joins"></a>Jet : Les jointures externes
 Une instruction SELECT peut contenir une liste de clauses de jointure externe. JOINTURES externes imbriquées sont prises en charge. Pour plus d’informations sur les jointures externes, consultez la *Guide du programmeur moteur Microsoft Jet de base de données*.

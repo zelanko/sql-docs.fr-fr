@@ -26,6 +26,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32903624"
 ---
 # <a name="supported-cursor-model-visual-foxpro-odbc-driver"></a>Modèle de curseur prises en charge (le pilote ODBC Visual FoxPro)
 Le pilote ODBC Visual FoxPro prend en charge les deux *bloc* (*ensemble de lignes*) et *statique* les curseurs. Les curseurs statiques sont prises en charge pour un pilote qui est conforme à la conformité de niveau 1 ODBC. Le pilote ne prend pas en charge dynamique, commandé par keyset ou mixte (keyset et dynamic) les curseurs.  

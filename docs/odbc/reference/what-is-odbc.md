@@ -21,6 +21,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32917407"
 ---
 # <a name="what-is-odbc"></a>Nouveautés d’ODBC ?
 Nombreuses idées sur ODBC existent dans le monde informatique. À l’utilisateur final, il est une icône dans le panneau de configuration Microsoft® Windows®. Pour les programmeurs d’applications, il est une bibliothèque contenant des routines d’accès aux données. Beaucoup d’autres, il est la réponse à tous les problèmes d’accès de base de données pensiez.  

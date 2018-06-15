@@ -21,6 +21,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32900536"
 ---
 # <a name="sqlstate"></a>SQLSTATE
 Pour les erreurs qui se produisent dans la source de données, le pilote ODBC mappe l’erreur natif retourné avec le SQLSTATE approprié. Pour les erreurs qui sont détectées par le pilote ou le Gestionnaire de pilotes, le pilote ODBC ou du Gestionnaire de pilotes génère le SQLSTATE approprié.

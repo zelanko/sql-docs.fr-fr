@@ -21,6 +21,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32902434"
 ---
 # <a name="sqlgetstmtoption-desktop-database-drivers"></a>SQLGetStmtOption (pilotes bureau de base de données)
 Les signets retournés par une *fOption* de SQL_GETBOOKMARK sont uniquement valides lorsque la requête est ouverte et sont invalidés lorsque la requête est relancée. Signets persistants ne sont pas pris en charge.

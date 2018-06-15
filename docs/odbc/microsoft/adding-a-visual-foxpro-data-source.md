@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32899046"
 ---
 # <a name="adding-a-visual-foxpro-data-source"></a>Ajout d’une Source de données Visual FoxPro
 Pour accéder aux données Visual FoxPro à partir de votre application, vous devez disposer d’une source de données. Vous pouvez créer une source de données comme suit :  
