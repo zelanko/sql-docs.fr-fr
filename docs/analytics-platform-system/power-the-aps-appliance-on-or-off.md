@@ -14,6 +14,7 @@ ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 04/19/2018
+ms.locfileid: "31538759"
 ---
 # <a name="power-the-appliance-on-or-off-for-analytics-platform-system"></a>L’application ou désactiver l’alimentation pour un système de plateforme d’Analytique
 Cette rubrique décrit comment mettre sous tension ou hors tension votre Systemappliance de plateforme Analytique qui est en cours d’exécution Parallel Data Warehouse et éventuellement une région HDInsight en cours d’exécution. Utilisez cette rubrique lorsqu’un dispositif de système de plateforme Analytique est déplacé, ou pour mettre sur un appareil après une panne catastrophique.  

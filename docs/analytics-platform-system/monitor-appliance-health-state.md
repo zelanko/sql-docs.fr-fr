@@ -14,6 +14,7 @@ ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 04/19/2018
+ms.locfileid: "31539049"
 ---
 # <a name="monitor-appliance-health-state"></a>État de contrôle d’intégrité de l’analyse
 Cet article explique comment surveiller l’état d’un appareil de système de plateforme Analytique à l’aide de la Console d’administration, ou en interrogeant directement les vues de gestion dynamique Parallel Data Warehouse. 

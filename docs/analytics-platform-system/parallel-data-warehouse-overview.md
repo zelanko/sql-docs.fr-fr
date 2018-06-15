@@ -14,6 +14,7 @@ ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 04/19/2018
+ms.locfileid: "31544921"
 ---
 # <a name="parallel-data-warehouse-components---analytics-platform-system"></a>Composants de l’entrepôt de données - système de plateforme d’Analytique en parallèle
 Cet article explique le logiciel et les composants non logicielle du système de plateforme Analytique.  

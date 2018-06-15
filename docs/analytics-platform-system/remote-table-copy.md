@@ -14,6 +14,7 @@ ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 04/19/2018
+ms.locfileid: "31538719"
 ---
 # <a name="remote-table-copy"></a>Copie de la Table distante
 Décrit comment utiliser la fonctionnalité de copie de table distante pour copier des tables de bases de données SQL Server PDW vers des bases de données (autre que l’appliance) SMP SQL Server distantes. Utilisez la copie de la table distante permet des scénarios hub et spoke pour SQL Server PDW.  

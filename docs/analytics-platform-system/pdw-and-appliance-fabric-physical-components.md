@@ -14,6 +14,7 @@ ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 04/19/2018
+ms.locfileid: "31538879"
 ---
 # <a name="appliance-physical-components---analytics-platform-system"></a>Composants physiques du matériel - système de plateforme d’Analytique
 Les noms et descriptions pour les composants physiques de l’ensemble fibre optique PDW et l’équipement. 

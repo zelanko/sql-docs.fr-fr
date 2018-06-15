@@ -14,6 +14,7 @@ ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 04/19/2018
+ms.locfileid: "31539309"
 ---
 # <a name="appliance-network-configuration-for-analytics-platform-system"></a>Configuration réseau pour le système de plateforme Analytique
 Le matériel de système de plateforme Analytique (APS) créé et configuré avec un ensemble de correction des adresses IP dans l’ensemble de tous les serveurs et appareils applicables à partir de l’usine du fabricant de matériel. Lors de la livraison de l’application, l’adresse IP externe (Ethernet) traité doit être reconfiguré pour répondre aux besoins de centre de données du client spécifique.  

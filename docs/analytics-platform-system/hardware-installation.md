@@ -14,6 +14,7 @@ ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 04/19/2018
+ms.locfileid: "31539089"
 ---
 # <a name="hardware-installation-for-analytics-platform-system-appliance"></a>Installation matérielle pour le matériel de système de plateforme Analytique
 Cet article décrit comment déplacer, décompressez et installez le matériel de votre solution SQL Server PDW. Cet article est d’information uniquement et n’est destiné à vous aider à comprendre le processus. Votre application doit être décompressée, installée et vérifiée avant qu’il soit retourné à vous. La participation de client est requise pour les éléments tels que les données du centre accès, alimentation électrique et les connexions Ethernet.  

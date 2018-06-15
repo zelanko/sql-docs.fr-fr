@@ -14,6 +14,7 @@ ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 04/19/2018
+ms.locfileid: "31539059"
 ---
 # <a name="monitor-the-appliance-with-system-views---analytics-platform-system"></a>Surveiller le matériel avec les vues système - système de plateforme Analytique
 Cet article répertorie les vues système que vous pouvez utiliser pour l’analyse de SQL Server PDW.  

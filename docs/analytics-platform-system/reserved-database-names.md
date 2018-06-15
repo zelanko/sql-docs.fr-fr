@@ -14,6 +14,7 @@ ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 04/19/2018
+ms.locfileid: "31539449"
 ---
 # <a name="reserved-database-names-in-parallel-data-warehouse"></a>Noms de base de données réservé dans Parallel Data Warehouse
 Un nom de base de données réservé est un nom qui ne peut pas être assigné à une base de données utilisateur SQL Server PDW.  

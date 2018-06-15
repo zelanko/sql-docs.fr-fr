@@ -14,6 +14,7 @@ ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 04/19/2018
+ms.locfileid: "31544981"
 ---
 # <a name="monitor-the-appliance-with-the-admin-console---analytics-platform-system"></a>Surveillance de l’appliance avec la Console d’administration - système de plateforme Analytique
 La Console d’administration est une application web SQL Server PDW qui expose les informations d’état, l’intégrité et les performances de matériel. Les utilisateurs se connecter à la Console d’administration via Internet Explorer.  

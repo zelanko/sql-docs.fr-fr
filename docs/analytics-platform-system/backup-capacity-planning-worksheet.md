@@ -14,6 +14,7 @@ ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 04/19/2018
+ms.locfileid: "31539139"
 ---
 # <a name="backup-server-capacity-planning-worksheet---parallel-data-warehouse"></a>Feuille de planification capacité sauvegarde du serveur - Parallel Data Warehouse
 Cette feuille de calcul de la planification de capacité vous aide à déterminer la configuration requise pour un serveur de sauvegarde pour effectuer la sauvegarde de base de données SQL Server PDW et opérations de restauration. Utilisez-le pour créer votre plan d’achat nouvelle ou mise en service sauvegarde serveurs existants.  

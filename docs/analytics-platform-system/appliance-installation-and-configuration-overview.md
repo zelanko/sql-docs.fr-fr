@@ -14,6 +14,7 @@ ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 04/19/2018
+ms.locfileid: "31538619"
 ---
 # <a name="appliance-installation-and-configuration-for-analytics-platform-system"></a>Installation du matériel et configuration pour le système de plateforme d’Analytique
 Guide des administrateurs de matériel de système de plateforme Analytique (APS) à travers les étapes initiales pour configurer et commencer à utiliser votre nouveau matériel.  

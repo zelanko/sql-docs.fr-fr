@@ -14,6 +14,7 @@ ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 04/19/2018
+ms.locfileid: "31539579"
 ---
 # <a name="acquire-and-configure-a-backup-server-for-parallel-data-warehouse"></a>Obtenir et configurer un serveur de sauvegarde pour Parallel Data Warehouse
 Cet article décrit comment configurer un système de Windows sur le matériel non comme un serveur de sauvegarde pour une utilisation avec les fonctionnalités de sauvegarde et de restauration de système de plateforme Analytique (APS) et Parallel Data Warehouse (PDW).  

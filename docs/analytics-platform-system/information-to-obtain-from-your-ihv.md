@@ -14,6 +14,7 @@ ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 04/19/2018
+ms.locfileid: "31538899"
 ---
 # <a name="information-to-obtain-from-your-ihv"></a>Pour plus d’informations à obtenir à partir de votre fabricant de matériel
 Lorsque votre fabricant de matériel (matériel) remet votre nouveau matériel SQL Server PDW pour vous, ils seront également fournir des informations sur le matériel et la configuration qu’ils ont effectuées sur votre appliance. Vous devez ces informations pour administrer votre appliance.  
