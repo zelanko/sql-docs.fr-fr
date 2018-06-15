@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33018726"
 ---
 # <a name="set-default-options-for-report-builder"></a>Définir les options par défaut du Générateur de rapports
   Dans le Générateur de rapports, vous pouvez définir un certain nombre de paramètres par défaut utiles pour faciliter et accélérer la création des rapports.  Par exemple, si vous pouvez définir ou modifier le serveur de rapports par défaut, le Générateur de rapports enregistre vos rapports sur le même serveur de rapports automatiquement, sauf indication contraire.  
