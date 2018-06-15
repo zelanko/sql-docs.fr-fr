@@ -2,7 +2,6 @@
 title: Programmation ADO Visual C++ | Documents Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 02/15/2017
@@ -20,11 +19,12 @@ caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: ce5a300ec2dd17109f888c9023b934c686289504
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 77edd4c89e8e70bf888b6244d9cb6475d4fe9550
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35271558"
 ---
 # <a name="visual-c-ado-programming"></a>Programmation ADO Visual C++
 La référence de l’API ADO décrit les fonctionnalités de l’ADO application programming interface (API) à l’aide d’une syntaxe semblable à Microsoft Visual Basic. Bien que le public visé est tous les utilisateurs, les programmeurs ADO utilisent divers langages comme Visual Basic, Visual C++ (avec et sans le **#import** directive) et Visual J ++ (avec le package de classes ADO/WFC).  

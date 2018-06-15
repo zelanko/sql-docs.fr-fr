@@ -2,7 +2,6 @@
 title: Fournisseur Microsoft OLE DB pour Microsoft Jet | Documents Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -19,11 +18,12 @@ caps.latest.revision: 16
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: c0046abe221607ff85b237c1b15ad331ba09c4e3
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: bd81c1c5efcb2ca8ebedac756d569ca947aac051
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35271618"
 ---
 # <a name="microsoft-ole-db-provider-for-microsoft-jet-overview"></a>Fournisseur Microsoft OLE DB pour Microsoft Jet présentation
 Le fournisseur OLE DB pour Microsoft Jet permet à ADO accéder aux bases de données Microsoft Jet.
@@ -46,7 +46,7 @@ Microsoft.Jet.OLEDB.4.0
 
  La chaîne se compose des mots clés suivants :
 
-|Mot clé| Description|
+|Mot clé|Description|
 |-------------|-----------------|
 |**Fournisseur**|Spécifie le fournisseur OLE DB pour Microsoft Jet.|
 |**Source de données**|Spécifie le chemin d’accès et le nom de base de données (par exemple, `c:\Northwind.mdb`).|
@@ -61,7 +61,7 @@ Microsoft.Jet.OLEDB.4.0
 
  Le tableau suivant répertorie ces propriétés avec le nom de propriété OLE DB correspondant entre parenthèses.
 
-|Paramètre| Description|
+|Paramètre|Description|
 |---------------|-----------------|
 |Jet OLEDB:Compact espace récupéré quantité (DBPROP_JETOLEDB_COMPACTFREESPACESIZE)|Indique une estimation de la quantité d’espace, en octets, qui peut être récupéré lors du compactage de la base de données. Cette valeur est uniquement valide après avoir établi une connexion de base de données.|
 |Contrôle de OLEDB:Connection Jet (DBPROP_JETOLEDB_CONNECTIONCONTROL)|Indique si les utilisateurs peuvent se connecter à la base de données.|
@@ -95,7 +95,7 @@ Microsoft.Jet.OLEDB.4.0
 ## <a name="provider-specific-recordset-and-command-properties"></a>Jeu d’enregistrements spécifiques au fournisseur et les propriétés de commande
  Le fournisseur Jet prend également en charge plusieurs spécifique au fournisseur **Recordset** et **commande** propriétés. Ces propriétés sont accessibles et définies par le **propriétés** collection de la **Recordset** ou **commande** objet. Le tableau répertorie le nom de la propriété ADO et de son nom de propriété OLE DB correspondant entre parenthèses.
 
-|Nom de la propriété| Description|
+|Nom de la propriété|Description|
 |-------------------|-----------------|
 |Jet OLEDB:Bulk Transactions (DBPROP_JETOLEDB_BULKNOTRANSACTIONS)|Indique si les opérations en bloc SQL sont traitées. Grandes opérations en bloc peuvent échouer lorsque traitée en raison des retards de ressource.|
 |Jet Enable Fat Cursors (DBPROP_JETOLEDB_ENABLEFATCURSOR)|Indique si Jet doit mettre en cache plusieurs lignes lors du remplissage d’un jeu d’enregistrements pour les sources de la ligne à distance.|

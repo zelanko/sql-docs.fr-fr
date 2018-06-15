@@ -2,7 +2,6 @@
 title: Utilisation des Extensions Visual C++ | Documents Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,11 +19,12 @@ caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a1c832cff45ad5998918c6f5f67927e49bc9d4e9
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 06e2d13c589d4dc88f3a148122322f483c49d2fb
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35271588"
 ---
 # <a name="visual-c-extensions"></a>Extensions Visual C++
 ## <a name="the-iadorecordbinding-interface"></a>L’Interface IADORecordBinding
@@ -114,11 +114,11 @@ Update(CADORecordBinding *binding)
 ### <a name="end-binding-entries"></a>Fin d’entrées de liaison
  **END_ADO_BINDING**()
 
-|Paramètre| Description|
+|Paramètre|Description|
 |---------------|-----------------|
 |*Classe*|Classe dans laquelle les entrées de liaison et les variables C/C++ sont définis.|
 |*Ordinal*|Nombre ordinal, à partir d’un, de la **Recordset** champ correspondant à la variable C/C++.|
-|*DataType*|Type de données ADO équivalent de la variable C/C++ (voir [DataTypeEnum](../../../ado/reference/ado-api/datatypeenum.md) pour obtenir la liste des types de données valide). La valeur de la **Recordset** champ sera converti en ce type de données si nécessaire.|
+|*Type de données*|Type de données ADO équivalent de la variable C/C++ (voir [DataTypeEnum](../../../ado/reference/ado-api/datatypeenum.md) pour obtenir la liste des types de données valide). La valeur de la **Recordset** champ sera converti en ce type de données si nécessaire.|
 |*Mémoire tampon*|Nom de la variable C/C++ dans laquelle le **Recordset** champ sera stocké.|
 |*Taille*|Taille maximale en octets de *tampon*. Si *tampon* contient une chaîne de longueur variable, prévoyez de l’espace pour un zéro de fin.|
 |*État*|Nom d’une variable qui indique si le contenu de *tampon* sont valides et si la conversion du champ à *type de données* a réussi.<br /><br /> Les deux valeurs plus importantes de cette variable sont **adFldOK**, ce qui signifie que la conversion a réussi ; et **adFldNull**, ce qui signifie que la valeur du champ est une variante de type VT_NULL et pas simplement vide.<br /><br /> Les valeurs possibles pour *état* sont répertoriées dans le tableau suivant, « Valeurs d’état ».|
@@ -132,10 +132,10 @@ Update(CADORecordBinding *binding)
 
  Lors de la définition de données, *état* peut être définie sur **adFldNull** pour indiquer le **Recordset** champ doit être défini avec la valeur null.
 
-|Constante|Valeur| Description|
+|Constante|Valeur|Description|
 |--------------|-----------|-----------------|
 |**adFldOK**|0|Une valeur de champ non null a été retournée.|
-|**adFldBadAccessor**|1|Liaison n’était pas valide.|
+|**adFldBadAccessor**| 1|Liaison n’était pas valide.|
 |**adFldCantConvertValue**|2|Valeur n’a pas pu être convertie pour des raisons d’autre que la non-correspondance des signes ou données débordement.|
 |**adFldNull**|3|Lors de l’obtention d’un champ, indique une valeur null a été retournée.<br /><br /> Lorsque vous définissez un champ, indique le champ doit être défini sur **NULL** lorsque le champ ne peut pas encoder **NULL** elle-même (par exemple, un tableau de caractères ou un nombre entier).|
 |**adFldTruncated**|4|Chiffres ou des données de longueur variable ont été tronquées.|

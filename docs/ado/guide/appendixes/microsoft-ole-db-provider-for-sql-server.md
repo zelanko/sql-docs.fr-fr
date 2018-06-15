@@ -2,7 +2,6 @@
 title: Fournisseur Microsoft OLE DB pour SQL Server | Documents Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -19,11 +18,12 @@ caps.latest.revision: 19
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: bbe50621dc248a3f11368717bbe9423b5a8b59e3
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: ca737ed49349cc87e378fbd891ec224155147acc
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35271638"
 ---
 # <a name="microsoft-ole-db-provider-for-sql-server-overview"></a>Fournisseur Microsoft OLE DB pour la présentation de SQL Server
 Le fournisseur Microsoft OLE DB pour SQL Server, SQLOLEDB, permet à ADO pour accéder à Microsoft SQL Server.
@@ -50,7 +50,7 @@ User ID=MyUserID;Password=MyPassword;"
 
  La chaîne se compose des mots clés suivants :
 
-|Mot clé| Description|
+|Mot clé|Description|
 |-------------|-----------------|
 |**Fournisseur**|Spécifie le fournisseur OLE DB pour SQL Server.|
 |**Source de données** ou **Server**|Spécifie le nom d’un serveur.|
@@ -64,7 +64,7 @@ User ID=MyUserID;Password=MyPassword;"
 ## <a name="provider-specific-connection-parameters"></a>Paramètres de connexion spécifique au fournisseur
  Le fournisseur prend en charge plusieurs paramètres de connexion spécifique au fournisseur en plus de ceux définis par ADO. Comme avec les propriétés de connexion ADO, ces propriétés spécifiques au fournisseur peuvent être définies la [propriétés](../../../ado/reference/ado-api/properties-collection-ado.md) collection d’un [connexion](../../../ado/reference/ado-api/connection-object-ado.md) ou peut être définie dans le cadre de la **ConnectionString**.
 
-|Paramètre| Description|
+|Paramètre|Description|
 |---------------|-----------------|
 |Trusted_Connection|Indique le mode d’authentification utilisateur. Cela peut être défini sur **Oui** ou **non**. La valeur par défaut est **non**. Si cette propriété est définie sur **Oui**, SQLOLEDB utilise le Mode d’authentification Microsoft Windows NT pour autoriser l’accès utilisateur à la base de données SQL Server spécifiée par le **emplacement** et [source de données ](../../../ado/reference/ado-api/datasource-property-ado.md) valeurs de propriété. Si cette propriété est définie sur **non**, SQLOLEDB utilise le Mode mixte pour autoriser l’accès utilisateur à la base de données SQL Server. Le compte de connexion SQL Server et le mot de passe sont spécifiés dans le **Id utilisateur** et **mot de passe** propriétés.|
 |Langue actuelle|Indique un nom de langage SQL Server. Identifie la langue utilisée pour le choix et la mise en forme des messages système. La langue doit être installée sur le serveur SQL Server, la connexion échoue lors de l’ouverture dans le cas contraire.|
