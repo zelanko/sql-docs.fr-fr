@@ -18,6 +18,7 @@ ms.sourcegitcommit: a9da0abd3e17fbcd6339980d7331d0418cdada53
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/24/2018
+ms.locfileid: "34473823"
 ---
 # <a name="sql-operations-studio-preview-release-notes"></a>Notes de publication SQL opérations Studio (version préliminaire)
 

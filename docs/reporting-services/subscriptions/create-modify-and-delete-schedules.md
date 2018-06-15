@@ -32,6 +32,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33035216"
 ---
 # <a name="create-modify-and-delete-schedules"></a>Create, Modify, and Delete Schedules
   Cette rubrique est consacrée à la création, la modification et la suppression des planifications partagées [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] .  Pour gérer des planifications partagées en mode natif, utilisez la page Planifications dans le portail web ou le dossier Planifications partagées dans [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]. Pour le mode SharePoint, utilisez les pages de gestion pour l'application de service [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  

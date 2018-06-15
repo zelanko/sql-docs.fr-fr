@@ -20,6 +20,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33031426"
 ---
 # <a name="troubleshoot-processing-of-reporting-services-reports"></a>Résoudre les problèmes de traitement des rapports Reporting Services
 Une fois les données de rapport récupérées, le processeur de rapports combine les données et les informations de mise en page. Chaque propriété d'élément de rapport qui possède une expression est évaluée dans le contexte des données et de la mise en page combinées. Utilisez cette rubrique pour vous aider à résoudre ces problèmes.   

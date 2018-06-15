@@ -290,7 +290,7 @@ SET
  L'option AUTO_CLOSE est utile pour les bases de données bureautiques, puisqu'elle permet aux fichiers de base de données d'être gérés comme des fichiers normaux. Ceux-ci peuvent être déplacés, copiés en vue d'une sauvegarde ou même transmis par messagerie électronique à d'autres utilisateurs. Le processus AUTO_CLOSE est asynchrone ; l'ouverture et la fermeture répétées de la base de données n'ont aucune incidence sur les performances.  
   
 > [!NOTE]  
->  L’option AUTO_CLOSE n’est pas disponible dans une base de données à relation contenant-contenu, ni sur [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
+>  L’option AUTO_CLOSE n’est pas disponible dans une base de données autonome, ni sur [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
   
  Vous pouvez déterminer l'état de cette option en consultant la colonne is_auto_close_on de l'affichage catalogue sys.databases ou la propriété IsAutoClose de la fonction DATABASEPROPERTYEX.  
   
@@ -336,7 +336,7 @@ SET
  Vous pouvez déterminer l'état de cette option en consultant la colonne is_auto_shrink_on de l'affichage catalogue sys.databases ou la propriété IsAutoShrink de la fonction DATABASEPROPERTYEX.  
   
 > [!NOTE]  
-> L'option AUTO_SHRINK n'est pas disponible dans une base de données à relation contenant-contenu.  
+> L'option AUTO_SHRINK n'est pas disponible dans une base de données autonome.  
   
  <a name="auto_update_statistics"></a> AUTO_UPDATE_STATISTICS { ON | OFF }  
  ON  
@@ -420,13 +420,13 @@ SET
   
  CONTAINMENT = { NONE | PARTIAL}  
  Aucune  
- La base de données n'est pas une base de données à relation contenant-contenu.  
+ La base de données n'est pas une base de données autonome.  
   
  PARTIAL  
- La base de données est une base de données à relation contenant-contenu. La définition de la relation contenant-contenu de base de données sur la valeur partielle échouera si l'option de réplication, de capture des données modifiées ou de suivi des modifications est activée. La vérification des erreurs prend fin après un échec. Pour plus d'informations sur les bases de données à relation contenant-contenu, consultez [Bases de données à relation contenant-contenu](../../relational-databases/databases/contained-databases.md).  
+ La base de données est une base de données autonome. La définition de la relation contenant-contenu de base de données sur la valeur partielle échouera si l'option de réplication, de capture des données modifiées ou de suivi des modifications est activée. La vérification des erreurs prend fin après un échec. Pour plus d'informations sur les bases de données autonomes, consultez [Bases de données autonomes](../../relational-databases/databases/contained-databases.md).  
   
 > [!NOTE]  
-> La relation contenant-contenu ne peut pas être configurée dans [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]. La relation contenant-contenu n’est pas désignée explicitement, mais [!INCLUDE[ssSDS](../../includes/sssds-md.md)] peut utiliser des fonctionnalités contenues telles que les utilisateurs de base de données à relation contenant-contenu.  
+> La relation contenant-contenu ne peut pas être configurée dans [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]. L’autonomie n’est pas désignée explicitement, mais [!INCLUDE[ssSDS](../../includes/sssds-md.md)] peut utiliser des fonctionnalités contenues telles que les utilisateurs de base de données autonome.  
   
  **\<cursor_option> ::=**  
   

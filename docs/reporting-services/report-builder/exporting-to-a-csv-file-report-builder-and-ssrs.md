@@ -20,6 +20,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33020926"
 ---
 # <a name="exporting-to-a-csv-file-report-builder-and-ssrs"></a>Exportation vers un fichier CSV (Générateur de rapports et SSRS)
   L’extension de rendu CSV (valeurs séparées par des virgules) permet de rendre les rapports paginés sous la forme d’une représentation aplatie des données d’un rapport dans un format standardisé, texte brut qui peut être facilement lu et échangé avec de nombreuses applications.  
