@@ -2,7 +2,6 @@
 title: EditModeEnum | Documents Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,19 +19,20 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: ba6822bfbb45ee547b87c56388b55d95195a7b63
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: a98b8dd5b82665aa7416bba67c8a04e46a75babb
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35277978"
 ---
 # <a name="editmodeenum"></a>EditModeEnum
 Spécifie l’état de modification d’un enregistrement.  
   
-|Constante|Valeur| Description|  
+|Constante|Valeur|Description|  
 |--------------|-----------|-----------------|  
 |**adEditNone**|0|Indique qu’aucune opération de modification n’est en cours.|  
-|**adEditInProgress**|1|Indique que les données dans l’enregistrement actif ont été modifiées mais ne pas enregistrées.|  
+|**adEditInProgress**| 1|Indique que les données dans l’enregistrement actif ont été modifiées mais ne pas enregistrées.|  
 |**adEditAdd**|2|Indique que le [AddNew](../../../ado/reference/ado-api/addnew-method-ado.md) méthode a été appelée, et l’enregistrement actif dans le tampon de copie est un nouvel enregistrement qui n’a pas été enregistré dans la base de données.|  
 |**adEditDelete**|4|Indique que l’enregistrement en cours a été supprimé.|  
   

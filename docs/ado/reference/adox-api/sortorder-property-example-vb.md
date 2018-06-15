@@ -2,7 +2,6 @@
 title: Exemple de propriété SortOrder (VB) | Documents Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -19,11 +18,12 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 22c3955934e7e3030251bbb80165edaa6fee159f
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 22dc816e9f4343d2873f169837d028babbfa111c
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35286859"
 ---
 # <a name="sortorder-property-example-vb"></a>Exemple de propriété SortOrder (VB)
 Cet exemple montre la [SortOrder](../../../ado/reference/adox-api/sortorder-property-adox.md) propriété d’un [colonne](../../../ado/reference/adox-api/column-object-adox.md) qui a été ajouté à la [colonnes](../../../ado/reference/adox-api/columns-collection-adox.md) collection d’un [Index](../../../ado/reference/adox-api/index-object-adox.md). Le code ajoute un index croissant à la colonne « pays » dans le **employés** tableau, puis affiche les enregistrements. Ensuite, le code ajoute un index décroissant à la colonne « pays » dans le **employés** de table et affiche les enregistrements à nouveau. La différence entre croissant et décroissant d’index s’affiche.  

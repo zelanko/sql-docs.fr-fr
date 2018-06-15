@@ -2,7 +2,6 @@
 title: Les objets ADOX | Documents Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -18,16 +17,17 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 2278420958e856b290f013f33869ff0f46270609
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 5665c90c4dd1935f529c275d2feccb68e67cafea
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35284868"
 ---
 # <a name="adox-objects"></a>Objets ADOX
 ## <a name="adox-object-summary"></a>Liste des objets ADOX  
   
-|Objet| Description|  
+|Object|Description|  
 |------------|-----------------|  
 |[Catalogue](../../../ado/reference/adox-api/catalog-object-adox.md)|Contient des collections qui décrivent le catalogue de schémas d’une source de données.|  
 |[Colonne](../../../ado/reference/adox-api/column-object-adox.md)|Représente une colonne d’une table, un index ou une clé.|  
@@ -37,7 +37,7 @@ ms.lasthandoff: 05/03/2018
 |[Procédure](../../../ado/reference/adox-api/procedure-object-adox.md)|Représente une procédure stockée.|  
 |[Table](../../../ado/reference/adox-api/table-object-adox.md)|Représente une table de base de données, y compris les colonnes, les index et les clés.|  
 |[Utilisateur](../../../ado/reference/adox-api/user-object-adox.md)|Représente un compte d’utilisateur qui dispose des autorisations d’accès au sein d’une base de données sécurisée.|  
-|[Affichage](../../../ado/reference/adox-api/view-object-adox.md)|Représente un ensemble filtré d’enregistrements ou une table virtuelle.|  
+|[Afficher](../../../ado/reference/adox-api/view-object-adox.md)|Représente un ensemble filtré d’enregistrements ou une table virtuelle.|  
   
  Les relations entre ces objets sont illustrées dans le [modèle objet ADOX](../../../ado/reference/adox-api/adox-object-model.md).  
   

@@ -2,7 +2,6 @@
 title: Méthode OpenSchema | Documents Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -21,11 +20,12 @@ caps.latest.revision: 21
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 52eaf3a58ae7f6eeaddecb943b5a129dec5e44e0
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 780e708d5e852601333fb319291e1e9db9450c39
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35280528"
 ---
 # <a name="openschema-method"></a>OpenSchema, méthode
 Obtient les informations de schéma de base de données à partir du fournisseur.  
@@ -37,7 +37,7 @@ Obtient les informations de schéma de base de données à partir du fournisseur
 Set recordset = connection.OpenSchema(QueryType, Criteria, SchemaID)  
 ```  
   
-## <a name="return-value"></a>Valeur retournée  
+## <a name="return-value"></a>Valeur de retour  
  Retourne un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) objet qui contient les informations de schéma. Le **Recordset** s’ouvre comme un curseur statique en lecture seule. Le *QueryType* détermine les colonnes qui apparaissent dans le **Recordset**.  
   
 #### <a name="parameters"></a>Paramètres  
@@ -45,7 +45,7 @@ Set recordset = connection.OpenSchema(QueryType, Criteria, SchemaID)
  N’importe quel [SchemaEnum](../../../ado/reference/ado-api/schemaenum.md) valeur qui représente le type de requête de schéma à exécuter.  
   
  *Critères*  
- Ce paramètre est facultatif. Un tableau de contraintes de requête pour chaque *QueryType* option, comme indiqué dans [SchemaEnum](../../../ado/reference/ado-api/schemaenum.md).  
+ Facultatif. Un tableau de contraintes de requête pour chaque *QueryType* option, comme indiqué dans [SchemaEnum](../../../ado/reference/ado-api/schemaenum.md).  
   
  *SchemaID*  
  Le GUID pour une requête de schéma de fournisseur non défini par la spécification OLE DB. Ce paramètre est obligatoire si *QueryType* a la valeur **adSchemaProviderSpecific**; sinon, il n’est pas utilisé.  

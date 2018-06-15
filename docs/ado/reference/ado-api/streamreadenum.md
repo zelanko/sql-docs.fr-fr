@@ -2,7 +2,6 @@
 title: StreamReadEnum | Documents Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,16 +19,17 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 99a38cd3fb2fd58c021113fa99f5b3b52fbb865a
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 6dca9f57838f938e225790e164870b1bec834bd3
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35282528"
 ---
 # <a name="streamreadenum"></a>StreamReadEnum
 Spécifie si l’ensemble du flux ou la ligne suivante doit être lue à partir d’un [flux](../../../ado/reference/ado-api/stream-object-ado.md) objet.  
   
-|Constante|Valeur| Description|  
+|Constante|Valeur|Description|  
 |--------------|-----------|-----------------|  
 |**adReadAll**|-1|Valeur par défaut. Lit tous les octets dans le flux, à partir de la position actuelle et les versions ultérieures du [fin du support](../../../ado/reference/ado-api/eos-property.md) marqueur. Cela est uniquement valide **StreamReadEnum** valeur avec des flux binaires ([Type](../../../ado/reference/ado-api/type-property-ado-stream.md) est **adTypeBinary**).|  
 |**adReadLine**|-2|Lit la ligne suivante dans le flux (désignée par le [LineSeparator](../../../ado/reference/ado-api/lineseparator-property-ado.md) propriété).|  

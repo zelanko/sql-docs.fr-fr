@@ -2,7 +2,6 @@
 title: SchemaEnum | Documents Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,11 +19,12 @@ caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 5cdc032d770f587e8c78c4df0f195d9535688888
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 5f10586341f780615c3955c32a9b02f9913ff2e8
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35281558"
 ---
 # <a name="schemaenum"></a>SchemaEnum
 Spécifie le type de schéma **Recordset** qui le [OpenSchema](../../../ado/reference/ado-api/openschema-method.md) récupère de la méthode.  
@@ -38,10 +38,10 @@ Spécifie le type de schéma **Recordset** qui le [OpenSchema](../../../ado/refe
   
  ADO génère des résultats de type schéma pour les constantes, **adSchemaDBInfoKeywords** et **adSchemaDBInfoLiterals**. ADO crée un **Recordset**, puis remplit chaque ligne avec les valeurs retournées respectivement par le **IDBInfo::GetKeywords** et **IDBInfo::GetLiteralInfo** méthodes. Vous trouverez plus d’informations sur ces méthodes dans les [IDBInfo](http://msdn.microsoft.com/en-us/3f5ad97f-3fc6-4f21-b691-f6911e4007f3) section de référence du programmeur OLE DB.  
   
-|Constante|Valeur| Description|Colonnes de contrainte|  
+|Constante|Valeur|Description|Colonnes de contrainte|  
 |--------------|-----------|-----------------|------------------------|  
 |**adSchemaAsserts**|0|Retourne les assertions définies dans le catalogue qui sont détenues par un utilisateur donné.<br /><br /> (Ensemble de lignes ASSERTIONS)|CONSTRAINT_CATALOG CONSTRAINT_SCHEMA CONSTRAINT_NAME|  
-|**adSchemaCatalogs**|1|Retourne les attributs physiques associés aux catalogues accessibles à partir du SGBD.<br /><br /> (Ensemble de lignes de catalogues)|CATALOG_NAME|  
+|**adSchemaCatalogs**| 1|Retourne les attributs physiques associés aux catalogues accessibles à partir du SGBD.<br /><br /> (Ensemble de lignes de catalogues)|CATALOG_NAME|  
 |**adSchemaCharacterSets**|2|Retourne les jeux de caractères définies dans le catalogue qui sont accessibles à un utilisateur donné.<br /><br /> (Ensemble de lignes CHARACTER_SETS)|CHARACTER_SET_CATALOG CHARACTER_SET_SCHEMA CHARACTER_SET_NAME|  
 |**adSchemaCheckConstraints**|5|Retourne les contraintes check définies dans le catalogue qui sont détenues par un utilisateur donné.<br /><br /> (CHECK_CONSTRAINTS) Ensemble de lignes)|CONSTRAINT_CATALOG CONSTRAINT_SCHEMA CONSTRAINT_NAME|  
 |**adSchemaCollations**|3|Retourne les classements de caractères définis dans le catalogue qui sont accessibles à un utilisateur donné.<br /><br /> (Ensemble de lignes de classements)|COLLATION_CATALOG COLLATION_SCHEMA COLLATION_NAME|  

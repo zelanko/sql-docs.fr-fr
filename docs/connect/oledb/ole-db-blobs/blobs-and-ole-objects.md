@@ -5,7 +5,6 @@ ms.custom: ''
 ms.date: 03/26/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: ole-db-blobs
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: connectivity
@@ -20,18 +19,19 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: e78fe8db35684bb35e4111a38d3d0ba938891785
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: da34017c1d9bdaccfb6979f7bc699628d43fccc5
+ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35306058"
 ---
 # <a name="blobs-and-ole-objects"></a>Objets BLOB et OLE
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
   Le pilote OLE DB pour SQL Server expose la **ISequentialStream** interface pour prendre en charge d’accès client aux [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] **ntext**, **texte**, **image** , **varchar (max)**, **nvarchar (max)**, **varbinary (max)**, et les types de données xml sous forme binaire des objets volumineux (BLOB). Le **en lecture** méthode sur **ISequentialStream** permet au consommateur de récupérer le volume de données en segments maniables.  
   
- Pour obtenir un exemple illustrant cette fonctionnalité, consultez [de définition de données volumineux & #40 ; OLE DB & #41 ;](../../oledb/ole-db-how-to/set-large-data-ole-db.md).  
+ Pour obtenir un exemple illustrant cette fonctionnalité, consultez [de définition de données volumineux &#40;OLE DB&#41;](../../oledb/ole-db-how-to/set-large-data-ole-db.md).  
   
  Le pilote OLE DB pour SQL Server peut utiliser implémentée par un consommateur **IStorage** interface lorsque le consommateur fournit le pointeur d’interface dans un accesseur lié pour la modification des données.  
   
@@ -65,10 +65,10 @@ ms.lasthandoff: 05/03/2018
   
 -   [Définition de données volumineuses](../../oledb/ole-db-blobs/setting-large-data.md)  
   
--   [Prise en charge de diffusion en continu pour les paramètres de sortie BLOB](../../oledb/ole-db-blobs/streaming-support-for-blob-output-parameters.md)  
+-   [Prise en charge de la diffusion en continu pour les paramètres de sortie BLOB](../../oledb/ole-db-blobs/streaming-support-for-blob-output-parameters.md)  
   
 ## <a name="see-also"></a>Voir aussi  
  [Programmation de SQL Server OLE DB pilote](../../oledb/ole-db/oledb-driver-for-sql-server-programming.md)        
- [À l’aide des Types de valeur élevée](../../oledb/features/using-large-value-types.md)  
+ [Utilisation de types de valeur élevée](../../oledb/features/using-large-value-types.md)  
   
   

@@ -2,7 +2,6 @@
 title: Optimiser la propriété Exemple (VB) | Documents Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -19,11 +18,12 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 881d332c6f7e1ac0f74a54dcacc7e9e7e3382006
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 0b750a30030d3f37e0b53af36001fa10929756a4
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35279998"
 ---
 # <a name="optimize-property-example-vb"></a>Optimiser la propriété Exemple (VB)
 Cet exemple illustre la [champ](../../../ado/reference/ado-api/field-object.md) dynamique de l’objet **optimiser** propriété. Le ***zip*** champ le ***auteurs*** de table dans le ***Pubs*** base de données n’est pas indexée. Définissant le [optimiser](../../../ado/reference/ado-api/optimize-property-dynamic-ado.md) propriété **True** sur la ***zip*** champ autorise ADO pour créer un index qui améliore les performances de la [trouver](../../../ado/reference/ado-api/find-method-ado.md)(méthode).  

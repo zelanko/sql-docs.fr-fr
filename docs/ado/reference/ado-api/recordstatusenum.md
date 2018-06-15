@@ -2,7 +2,6 @@
 title: RecordStatusEnum | Documents Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,16 +19,17 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 0b46c441bf8b54103c8a3b277e1ef21f18cdfca6
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 0f61d0d948730cfb39cd2c0429eb53dcab311fe5
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35281228"
 ---
 # <a name="recordstatusenum"></a>RecordStatusEnum
 Spécifie le [état](../../../ado/reference/ado-api/status-property-ado-recordset.md) d’un enregistrement en ce qui concerne les mises à jour par lots et d’autres opérations en bloc.  
   
-|Constante|Valeur| Description|  
+|Constante|Valeur|Description|  
 |--------------|-----------|-----------------|  
 |**adRecCanceled**|0x100|Indique que l’enregistrement n'a pas été enregistré, car l’opération a été annulée.|  
 |**adRecCantRelease**|0x400|Indique que le nouvel enregistrement n’a été pas enregistré, car l’enregistrement existant a été verrouillé.|  

@@ -5,7 +5,6 @@ ms.custom: ''
 ms.date: 03/26/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: oledb-driver-for-sql-server
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: connectivity
@@ -18,11 +17,12 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: d9990a169beca3f676a19d3f12aadd5d7cf6a671
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: a0232f6354b0084c665641b630672bba4adb04bf
+ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35304498"
 ---
 # <a name="creating-an-ole-db-driver-for-sql-server-application"></a>Création d’un pilote de base de données OLE pour l’Application de SQL Server
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -40,13 +40,13 @@ ms.lasthandoff: 05/03/2018
   
 ## <a name="in-this-section"></a>Dans cette section  
   
--   [L’établissement d’une connexion à une Source de données](../../oledb/ole-db-driver/establishing-a-connection-to-a-data-source.md)  
+-   [Établissement d’une connexion à une source de données](../../oledb/ole-db-driver/establishing-a-connection-to-a-data-source.md)  
   
 -   [Exécution d’une commande](../../oledb/ole-db-driver/executing-a-command.md)  
   
--   [Le traitement des résultats](../../oledb/ole-db-driver/processing-results.md)  
+-   [Traitement des résultats](../../oledb/ole-db-driver/processing-results.md)  
   
--   [À propos d’OLE DB, propriétés](../../oledb/ole-db-driver/about-ole-db-properties.md)  
+-   [Présentation des propriétés OLE DB](../../oledb/ole-db-driver/about-ole-db-properties.md)  
   
 -   [Utilisation de la clause OUTPUT avec OLE DB dans OLE DB Driver pour SQL Server](../../oledb/ole-db-driver/using-the-output-clause-with-ole-db-in-oledb-driver-for-sql-server.md)  
   

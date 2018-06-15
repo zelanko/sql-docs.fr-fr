@@ -2,7 +2,6 @@
 title: Dimensions, Collection-Propriétés, méthodes et événements | Documents Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -17,11 +16,12 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 3c9d1a310888535bc2282e01ab4bfcf2be545e4d
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: ab8dd38fb8edd5cc76239f62eb8eb987b4afb34d
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35283858"
 ---
 # <a name="dimensions-collection-properties-methods-and-events"></a>Propriétés de Collection de dimensions, méthodes et événements
 ## <a name="properties"></a>Propriétés  

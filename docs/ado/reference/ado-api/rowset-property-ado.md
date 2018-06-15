@@ -2,7 +2,6 @@
 title: Ensemble de lignes, propriété (ADO) | Documents Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -24,11 +23,12 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: c9e5310f52345537b5062e8bb497589ceb61da9e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 1c28d9b4398c0ef17067117ee392ff52aeef5e8f
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35281288"
 ---
 # <a name="rowset-property-ado"></a>Ensemble de lignes, propriété (ADO)
 Obtient ou définit un OLE DB **ensemble de lignes** objet à partir de/sur un **ADORecordsetConstruction** objet. Lorsque vous utilisez put_Rowset, l’ensemble de lignes est activé dans ADO **Recordset** objet.  

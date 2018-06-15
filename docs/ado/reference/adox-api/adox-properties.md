@@ -2,7 +2,6 @@
 title: Propriétés ADOX | Documents Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -18,20 +17,21 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 2e9ea6ff9f515a0dee79d464dda4bf44b8b6ab6e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: ae4cdd06fa7881685aa3eefc499274c0e76b044a
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35284590"
 ---
 # <a name="adox-properties"></a>Propriétés ADOX
 |||  
 |-|-|  
 |[ActiveConnection](../../../ado/reference/adox-api/activeconnection-property-adox.md)|Indique l’ADO **connexion** de l’objet auquel appartient le catalogue.|  
 |[Attributs](../../../ado/reference/adox-api/attributes-property-adox.md)|Décrit les caractéristiques de la colonne.|  
-|[Cluster](../../../ado/reference/adox-api/clustered-property-adox.md)|Indique si l’index est groupé.|  
-|[Command](../../../ado/reference/adox-api/command-property-adox.md)|Spécifie un ADO **commande** objet qui peut être utilisé pour créer ou exécuter la procédure.|  
-|[Compter](../../../ado/reference/ado-api/count-property-ado.md)|Indique le nombre d’objets dans une collection.|  
+|[En cluster](../../../ado/reference/adox-api/clustered-property-adox.md)|Indique si l’index est groupé.|  
+|[Commandee](../../../ado/reference/adox-api/command-property-adox.md)|Spécifie un ADO **commande** objet qui peut être utilisé pour créer ou exécuter la procédure.|  
+|[Nombre](../../../ado/reference/ado-api/count-property-ado.md)|Indique le nombre d’objets dans une collection.|  
 |[DateCreated](../../../ado/reference/adox-api/datecreated-property-adox.md)|Indique la date de que création de l’objet.|  
 |[DateModified](../../../ado/reference/adox-api/datemodified-property-adox.md)|Indique la date de que dernière modification de l’objet.|  
 |[DefinedSize](../../../ado/reference/adox-api/definedsize-property-adox.md)|Indique la taille maximale définie de la colonne.|  

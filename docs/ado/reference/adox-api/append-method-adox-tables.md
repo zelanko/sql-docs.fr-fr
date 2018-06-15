@@ -2,7 +2,6 @@
 title: Append (méthode) (Tables ADOX) | Documents Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -21,11 +20,12 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 81715fa9955f9fbd9bef2f74880f53f7764974fc
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 58c1636b77e8ddc618c18ba7e3c667a43533dbe9
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35285218"
 ---
 # <a name="append-method-adox-tables"></a>Append (méthode) (Tables ADOX)
 Ajoute un nouveau [Table](../../../ado/reference/adox-api/table-object-adox.md) de l’objet à la [Tables](../../../ado/reference/adox-api/tables-collection-adox.md) collection.  

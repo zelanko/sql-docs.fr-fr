@@ -5,7 +5,6 @@ ms.custom: ''
 ms.date: 03/26/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: ole-db-errors
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: connectivity
@@ -21,11 +20,12 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: f271da81733649c94f01b06281f7463c8ac719b5
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: e4e65d50b52fd461a7d4ae607c3240e295199fa8
+ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35306098"
 ---
 # <a name="sql-server-error-detail"></a>Détail des erreurs SQL Server
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -49,7 +49,7 @@ if(FAILED(hr=pIErrorRecords->GetCustomErrorObject(
   
  Les membres de la structure SSERRORINFO sont interprétés par le consommateur comme suit.  
   
-|Membre| Description|  
+|Membre|Description|  
 |------------|-----------------|  
 |*pwszMessage*|Message d'erreur [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Identique à la chaîne retournée dans **IErrorInfo::GetDescription**.|  
 |*pwszServer*|Nom de l'instance de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] pour la session.|  
@@ -60,7 +60,7 @@ if(FAILED(hr=pIErrorRecords->GetCustomErrorObject(
 |*wLineNumber*|S'il y a lieu, numéro de ligne d'une procédure stockée sur laquelle s'est produite l'erreur.|  
   
 ## <a name="see-also"></a>Voir aussi  
- [Erreurs](../../oledb/ole-db-errors/errors.md)   
- [RAISERROR & #40 ; Transact-SQL & #41 ;](../../../t-sql/language-elements/raiserror-transact-sql.md)  
+ [erreurs](../../oledb/ole-db-errors/errors.md)   
+ [RAISERROR &#40;Transact-SQL&#41;](../../../t-sql/language-elements/raiserror-transact-sql.md)  
   
   

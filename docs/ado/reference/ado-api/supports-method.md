@@ -2,7 +2,6 @@
 title: Prend en charge la méthode | Documents Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -21,11 +20,12 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: f1a24ac211293847ffbb068055826abca3514abb
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 5788431361aa73999b819a09f76a0c4bef268c83
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35282578"
 ---
 # <a name="supports-method"></a>Prend en charge (méthode)
 Détermine si un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) objet prend en charge un type particulier de fonctionnalité.  
@@ -37,7 +37,7 @@ Détermine si un [Recordset](../../../ado/reference/ado-api/recordset-object-ado
 boolean = recordset.Supports(CursorOptions )  
 ```  
   
-## <a name="return-value"></a>Valeur retournée  
+## <a name="return-value"></a>Valeur de retour  
  Retourne un **booléenne** valeur qui indique si toutes les fonctionnalités identifié par le *CursorOptions* argument sont pris en charge par le fournisseur.  
   
 #### <a name="parameters"></a>Paramètres  

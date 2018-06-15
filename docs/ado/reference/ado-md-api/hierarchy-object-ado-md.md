@@ -2,7 +2,6 @@
 title: Objet de hiérarchie (ADO MD) | Documents Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,11 +19,12 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: ee43d975b4f173d7cfb8fa819d6cd7e3635aab97
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: f6853d2a3fcc0540f23a914e3e39c8720ce3a317
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35284058"
 ---
 # <a name="hierarchy-object-ado-md"></a>Objet de hiérarchie (ADO MD)
 Représente un mode dans lequel les membres d’un [dimension](../../../ado/reference/ado-md-api/dimension-object-ado-md.md) peuvent être agrégées ou « remontées ». Une dimension peut être agrégée avec une ou plusieurs hiérarchies.  
@@ -42,13 +42,13 @@ Représente un mode dans lequel les membres d’un [dimension](../../../ado/refe
   
  Le **propriétés** collection contient des propriétés fournies par le fournisseur. Le tableau suivant répertorie les propriétés qui peuvent être disponibles. La liste réelle des propriétés peut varier en fonction de l’implémentation du fournisseur. Consultez la documentation de votre fournisseur pour obtenir une liste plus complète des propriétés disponibles.  
   
-|Nom| Description|  
+|Nom   |Description|  
 |----------|-----------------|  
 |AllMember|Le membre au niveau plus élevé de la hiérarchie.|  
 |CatalogName|Le nom du catalogue auquel appartient ce cube.|  
 |CubeName|Nom du cube.|  
 |DefaultMember|Le nom unique du membre par défaut pour cette hiérarchie.|  
-| Description|Description explicite de la hiérarchie.|  
+|Description|Description explicite de la hiérarchie.|  
 |DimensionType|Le type de dimension à laquelle appartient cette hiérarchie.|  
 |DimensionUniqueName|Le nom non ambigu de la dimension.|  
 |HierarchyCaption|Étiquette ou légende associée à la hiérarchie.|  

@@ -7,7 +7,6 @@ ms.suite: sql
 ms.tgt_pltfrm: ''
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.topic: conceptual
 helpviewer_keywords:
@@ -17,11 +16,12 @@ caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: bdb021c9d036a3daab6b0e5c3f4912c0da4059eb
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 1d38ec14d124bcf45c4eb22188f86849d95f0275
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35283408"
 ---
 # <a name="ado-glossary"></a>Glossaire ADO
 Cette rubrique définit les termes pertinents pour ADO.  
@@ -292,7 +292,7 @@ Cette rubrique définit les termes pertinents pour ADO.
  Une opération démarrée par du code qui se termine avant que l’opération suivante puisse démarrer. Voir aussi une opération asynchrone.  
   
 ## <a name="t-z"></a>T-Z  
- Arborescence  
+ trEE  
  Structure représentant une relation hiérarchique entre des éléments (nœuds). Il existe un nœud au niveau supérieur d’une arborescence (racine). Sous la racine, il peut y avoir plusieurs enfants. Chaque enfant peut être à son tour le parent d’autres enfants, donc créer une branche comme un arbre. Un dossier contenant des documents et autres dossiers est un exemple classique d’une structure arborescente. Voir aussi hiérarchie, nœud, racine, enfant, parent.  
   
  Serveur Web  
