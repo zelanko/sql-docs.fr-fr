@@ -24,6 +24,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32912734"
 ---
 # <a name="c-data-types"></a>Types de données C
 Types de données ODBC C indiquent le type de données de mémoires tampons de C utilisé pour stocker les données dans l’application.  

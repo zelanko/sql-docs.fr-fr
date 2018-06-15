@@ -25,6 +25,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32904944"
 ---
 # <a name="sqlgetinfo-returned-values-for-dbase"></a>SQLGetInfo les valeurs retournées pour dBASE
 Le tableau suivant répertorie le langage C# defines pour le *fInfoType* argument et les valeurs correspondantes est retournées par **SQLGetInfo**. Ces informations peuvent être extraites en passant la liste en langage C# defines **SQLGetInfo** dans les *fInfoType* argument. Pour plus d’informations sur les valeurs retournées par **SQLGetInfo**, consultez la *de référence du programmeur ODBC*.  

@@ -34,6 +34,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32909564"
 ---
 # <a name="interval-data-types"></a>Types de données Interval
 Un intervalle est défini comme la différence entre deux dates et heures. Intervalles sont exprimés dans un des deux façons différentes. Un est un *année-mois* intervalle qui exprime les intervalles en termes d’années et un nombre entier d’un mois. L’autre est un *-de la journée* intervalle qui exprime les intervalles en termes de jours, les minutes et secondes. Ces deux types d’intervalles sont distincts et ne peut pas être combinés, étant donné que les mois peuvent avoir différents nombres de jours.  

@@ -24,6 +24,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32906374"
 ---
 # <a name="translation-dlls-and-desktop-database-drivers"></a>DLL de traduction et les pilotes de base de données de bureau
 Non pris en charge.

@@ -26,6 +26,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32912184"
 ---
 # <a name="declaring-the-application39s-odbc-version"></a>Déclaration de l’Application&#39;s Version ODBC
 Une application alloue une connexion, il doit au préalable l’attribut d’environnement SQL_ATTR_ODBC_VERSION. Cet attribut indique que l’application suit ODBC 2. *x* ou ODBC 3. *x* spécification lorsque vous utilisez les éléments suivants :  

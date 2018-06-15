@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32906177"
 ---
 # <a name="interval-data-type-length"></a>Longueur de Type de données intervalle
 Les règles suivantes sont utilisées pour déterminer la longueur d’un type de données d’intervalle en caractères. La longueur est exprimée en nombre de caractères. Le nombre d’octets varie selon le jeu de caractères. La longueur inclut les valeurs suivantes, ajoutées :  

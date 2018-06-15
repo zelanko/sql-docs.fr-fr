@@ -19,6 +19,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32908564"
 ---
 # <a name="connecting-to-a-data-source-or-driver"></a>Connexion aux données Source ou pilote
 Une application peut être connectée à n’importe quel nombre de pilotes et les sources de données. Il peut s’agir d’une variété de pilotes et les sources de données, le même pilote et de diverses sources de données ou même plusieurs connexions à la même pilote et de la source de données.  

@@ -24,6 +24,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32909291"
 ---
 # <a name="bookmark-types"></a>Types de signet
 Tous les signets dans ODBC 3 *.x* sont des signets de longueur variable. Cela permet une clé primaire ou un index unique associé à une table à utiliser comme un signet. Le signet peut également être une valeur 32 bits, que celui utilisé dans ODBC 2. *x*. Pour spécifier qu’un signet est utilisé avec un curseur, une ODBC 3 *.x* application définit l’attribut d’instruction SQL_ATTR_USE_BOOKMARK à SQL_UB_VARIABLE. Un signet de longueur variable est automatiquement utilisé.  

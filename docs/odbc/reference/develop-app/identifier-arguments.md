@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32911514"
 ---
 # <a name="identifier-arguments"></a>Arguments de l’identificateur
 Si une chaîne dans un argument de l’identificateur est placé entre guillemets, le pilote supprime de début et les espaces à droite et traite littéralement la chaîne entre guillemets. Si la chaîne n’est pas placé entre guillemets, le pilote supprime les espaces et des plis la chaîne en majuscules. La définition d’un argument d’identificateur à un pointeur null retourne SQL_ERROR et SQLSTATE HY009 (utilisation non valide d’un pointeur null), sauf si l’argument est un nom de catalogue et de catalogues ne sont pas pris en charge.  

@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32917374"
 ---
 # <a name="when-to-use-procedures"></a>Quand utiliser des procédures
 Il existe de nombreux avantages à l’aide des procédures, tous les repose sur le fait qu’à l’aide de procédures déplace les instructions SQL à partir de l’application à la source de données. Ce qui est conservé dans l’application est un appel de procédure interopérable. Ces avantages :  

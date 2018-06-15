@@ -25,6 +25,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32914094"
 ---
 # <a name="what-the-driver-does"></a>Ce que fait le pilote
 Le tableau suivant résume les fonctions attributs et d’instruction un ODBC 3 *.x* pilote doit implémenter pour le blocage et les curseurs de défilement.  

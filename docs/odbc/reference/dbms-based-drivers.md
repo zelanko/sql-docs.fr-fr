@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32908524"
 ---
 # <a name="dbms-based-drivers"></a>Pilotes basés sur SGBD
 Pilotes basés sur SGBD sont utilisées avec des sources de données telles que Oracle ou SQL Server qui fournissent un moteur de base de données autonome pour le pilote à utiliser. Ces pilotes accéder aux données physiques par le moteur autonome ; Autrement dit, ils soumettre des instructions SQL à et récupèrent les résultats à partir du moteur.  

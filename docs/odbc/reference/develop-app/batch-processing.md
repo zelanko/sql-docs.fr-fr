@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32910404"
 ---
 # <a name="batch-processing"></a>Traitement par lots
 Prise en charge des lots d’instructions SQL n’est pas importante, applications interopérables utilisez-les de manière conditionnelle ou pas du tout. Pour plus d’informations, consultez [l’exécution de lots](../../../odbc/reference/develop-app/executing-batches.md).

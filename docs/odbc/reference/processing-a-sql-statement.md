@@ -26,6 +26,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32916534"
 ---
 # <a name="processing-a-sql-statement"></a>Traitement d’une instruction SQL
 Avant d’aborder les techniques d’utilisation de SQL par programme, il est nécessaire décrire le mode de traitement d’une instruction SQL. Les étapes sont communes à toutes les techniques de trois, bien que chaque technique leur exécution à des moments différents. L’illustration suivante montre les étapes impliquées dans le traitement d’une instruction SQL, qui sont décrites dans le reste de cette section.  

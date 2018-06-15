@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32915044"
 ---
 # <a name="file-based-drivers"></a>Pilotes basés sur des fichiers
 Pilotes basés sur des fichiers sont utilisés avec des sources de données telles que dBASE qui ne fournissent pas d’un moteur de base de données autonome pour le pilote à utiliser. Ces pilotes accéder directement aux données physiques et vous doivent implémenter un moteur de base de données pour traiter les instructions SQL. En tant qu’une pratique standard, les moteurs de base de données dans les pilotes basés sur le fichier implémentent le sous-ensemble de ODBC SQL définie par le niveau de conformité minimal SQL ; Pour obtenir la liste des instructions SQL dans ce niveau de conformité, consultez [annexe c : SQL grammaire](../../odbc/reference/appendixes/appendix-c-sql-grammar.md).  

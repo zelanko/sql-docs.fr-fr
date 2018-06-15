@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32905264"
 ---
 # <a name="using-the-extendedansisql-connection-string-attribute-access-driver"></a>À l’aide de l’attribut de chaîne de connexion ExtendedAnsiSQL (pilote Access)
 Jet 4.0 a plusieurs nouvelles fonctionnalités qui ne sont pas activées par défaut dans les pilotes de base de données de bureau ODBC version 4.0. Pour tirer parti de ces nouvelles fonctionnalités, une application devra définir un nouvel attribut de connexion, ajoutez un nouvel attribut à la chaîne de connexion ou définir l’attribut dans une source de données. L’attribut est appelé ExtendedAnsiSQL et se rapporte uniquement à des pilotes de base de données Microsoft ODBC Desktop 4.0 et versions ultérieures.  

@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32907584"
 ---
 # <a name="sqlbindparam-mapping"></a>Mappage de SQLBindParam
 **SQLBindParam** ne peut pas réellement être appelée déconseillée car elle n’a jamais été il dans ODBC ; Toutefois, il représente toujours une fonctionnalité en double, le Gestionnaire de pilotes doit exporter car ISO et ouvrez groupe compatibles avec les applications l’utiliserez. Étant donné que **SQLBindParameter** contient toutes les fonctionnalités de **SQLBindParam**, **SQLBindParam** sera mappé sur **SQLBindParameter** (lorsque le pilote sous-jacent est un ODBC 3 *.x* pilote). Un ODBC 3 *.x* pilote n’a pas besoin d’implémenter **SQLBindParam**.  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32911904"
 ---
 # <a name="considering-database-features-to-use"></a>Prise en compte les fonctionnalités de base de données à utiliser
 Une fois le niveau de base d’interopérabilité est connu, les fonctionnalités de base de données utilisées par l’application doivent être examinées. Par exemple, les instructions SQL que l’application exécute ? L’application va utiliser des curseurs de défilement ? Transactions ? Procédures ? Données de type long ? Pour les idées sur les fonctionnalités ne peuvent pas être pris en charge par tous les SGBD, consultez le [SQLGetInfo](../../../odbc/reference/syntax/sqlgetinfo-function.md), [SQLSetConnectAttr](../../../odbc/reference/syntax/sqlsetconnectattr-function.md), et [SQLSetStmtAttr](../../../odbc/reference/syntax/sqlsetstmtattr-function.md) une description, de fonction et [annexe c : SQL grammaire](../../../odbc/reference/appendixes/appendix-c-sql-grammar.md). Les fonctionnalités requises par une application peuvent éliminer certains SGBD à partir de la liste des cibles SGBD. Ils peuvent également afficher que l’application peut cibler facilement de nombreux SGBD.  

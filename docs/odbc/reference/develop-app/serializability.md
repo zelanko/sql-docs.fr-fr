@@ -24,6 +24,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32913624"
 ---
 # <a name="serializability"></a>Sérialisation
 Dans l’idéal, les transactions doivent être *sérialisable*. Les transactions sont dites sérialisables si les résultats de l’exécution de transactions simultanément sont les mêmes que les résultats de leur exécution en série : autrement dit, une après l’autre. Il n’est pas important de la transaction s’exécute en premier, uniquement que le résultat ne reflète pas les mélanger des transactions.  

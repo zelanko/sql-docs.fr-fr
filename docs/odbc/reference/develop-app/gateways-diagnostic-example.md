@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32911964"
 ---
 # <a name="gateways-diagnostic-example"></a>Exemple de Diagnostic de passerelles
 Dans une architecture de passerelle, un pilote envoie des demandes à une passerelle qui prend en charge ODBC. La passerelle envoie les demandes à un SGBD. Comme il est le composant qui s’interface avec le Gestionnaire de pilotes, le pilote met en forme et retourne les arguments de **SQLGetDiagRec**.  

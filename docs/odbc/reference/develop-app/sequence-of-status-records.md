@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32911094"
 ---
 # <a name="sequence-of-status-records"></a>Séquence d’enregistrements d’état
 Si deux ou plusieurs enregistrements d’état sont retournés, le Gestionnaire de pilotes et le pilote les classement selon les règles suivantes. L’enregistrement avec le rang le plus élevé est le premier enregistrement. La source d’un enregistrement (Gestionnaire de pilotes, pilotes, passerelle et ainsi de suite) n’est pas constitue lorsque les enregistrements de classement.  

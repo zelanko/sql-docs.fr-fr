@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32914884"
 ---
 # <a name="unicode-drivers"></a>Pilotes d’Unicode
 Si un pilote doit être un pilote Unicode ou un pilote de ANSI dépend entièrement de la nature de la source de données. Si la source de données prend en charge les données Unicode, le pilote doit être un pilote Unicode. Si la source de données prend uniquement en charge les données ANSI, le pilote doit rester un pilote ANSI.  

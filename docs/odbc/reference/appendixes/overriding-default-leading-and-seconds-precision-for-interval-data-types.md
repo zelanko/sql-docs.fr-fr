@@ -26,6 +26,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32907844"
 ---
 # <a name="overriding-default-leading-and-seconds-precision-for-interval-data-types"></a>Substitution de début de la valeur par défaut et la précision en secondes pour les Types d’intervalle
 Lorsque le champ SQL_DESC_TYPE d’un ARD a la valeur datetime ou interval C type, en appelant **SQLBindCol** ou **SQLSetDescField**, le champ SQL_DESC_PRECISION (qui contient la précision de secondes d’intervalle) a la valeur par défaut suivants :  

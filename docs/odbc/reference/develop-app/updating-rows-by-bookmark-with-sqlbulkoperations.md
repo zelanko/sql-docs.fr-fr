@@ -26,6 +26,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32915478"
 ---
 # <a name="updating-rows-by-bookmark-with-sqlbulkoperations"></a>Mise à jour des lignes par le signet avec SQLBulkOperations
 Lors de la mise à jour d’une ligne par un signet, **SQLBulkOperations** rend la source de données à mettre à jour une ou plusieurs lignes de la table. Les lignes sont identifiées par le signet dans une colonne liée de signet. La ligne est mise à jour à l’aide des données dans les mémoires tampons d’application pour chaque colonne dépendante (sauf si la valeur dans la mémoire tampon de longueur / d’indicateur pour une colonne est SQL_COLUMN_IGNORE). Colonnes indépendantes ne seront pas mis à jour.  

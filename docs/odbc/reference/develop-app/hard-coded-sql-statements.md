@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32911504"
 ---
 # <a name="hard-coded-sql-statements"></a>Instructions SQL de codé en dur
 Les applications qui effectuent une tâche fixe généralement contient codé en dur des instructions SQL. Par exemple, un système de saisie de commandes peut utiliser l’appel suivant à des commandes client en cours liste :  

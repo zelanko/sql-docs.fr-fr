@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32909824"
 ---
 # <a name="executing-catalog-functions"></a>L’exécution des fonctions de catalogue
 Une fonction de catalogue crée un jeu de résultats, il est équivalent à l’exécution de n’importe quelle instruction SQL de création de jeu de résultats. En fait, les fonctions de catalogue sont souvent implémentées en exécutant les instructions SQL prédéfinies ou en appelant les procédures prédéfinies qui sont livrés avec le pilote ou le SGBD. Presque tout ce qui s’applique aux instructions SQL qui créent des jeux de résultats s’applique également aux fonctions de catalogue. Par exemple, l’attribut d’instruction SQL_ATTR_MAX_ROWS limite le nombre de lignes retournées par la fonction de catalogue, exactement comme elle limite le nombre de lignes retournées par une **sélectionnez** instruction.  

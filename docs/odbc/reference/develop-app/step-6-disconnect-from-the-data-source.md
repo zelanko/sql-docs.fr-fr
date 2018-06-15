@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32915004"
 ---
 # <a name="step-6-disconnect-from-the-data-source"></a>Étape 6 : Vous déconnecter de la Source de données
 L’étape finale est pour vous déconnecter de la source de données, comme indiqué dans l’illustration suivante. Tout d’abord, l’application libère les handles d’instructions en appelant **SQLFreeHandle**. Pour plus d’informations, consultez [la libération d’un Handle d’instruction](../../../odbc/reference/develop-app/freeing-a-statement-handle-odbc.md).  

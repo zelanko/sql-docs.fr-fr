@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32912194"
 ---
 # <a name="retrieving-results-advanced"></a>La récupération des résultats (avancés)
 Une application peut spécifier qu’un décalage est ajouté lié des adresses de mémoire tampon de données et l’indicateur de longueur/correspondante des adresses de mémoire tampon quand **SQLBulkOperations**, **SQLFetch**, **SQLFetchScroll**, ou **SQLSetPos** est appelée. Les résultats de ces ajouts déterminent les adresses utilisées dans ces opérations.  

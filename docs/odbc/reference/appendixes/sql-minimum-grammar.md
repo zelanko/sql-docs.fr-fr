@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32909964"
 ---
 # <a name="sql-minimum-grammar"></a>Grammaire minimale SQL
 Cette section décrit la syntaxe SQL minimale un pilote ODBC doit prendre en charge. La syntaxe décrite dans cette section est un sous-ensemble de la syntaxe au niveau d’entrée de SQL-92.  

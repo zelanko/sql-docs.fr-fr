@@ -19,6 +19,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32911284"
 ---
 # <a name="executing-statements-odbc"></a>L’exécution d’instructions ODBC
 Les applications ODBC effectuent presque tous les accès de base de données en exécutant des instructions SQL. La séquence générale des événements est pour allouer un descripteur d’instruction, définir des attributs d’instruction, exécutez l’instruction, récupérer les résultats et libérer le handle d’instruction.  

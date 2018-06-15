@@ -25,6 +25,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32909314"
 ---
 # <a name="diagnostic-records"></a>Enregistrements de diagnostic
 Associé à chaque environnement, connexion, l’instruction et handle de descripteur sont *les enregistrements de diagnostic*. Ces enregistrements contiennent des informations de diagnostic sur la dernière fonction appelée qui a utilisé un handle donné. Les enregistrements sont remplacés uniquement quand une autre fonction est appelée à l’aide de ce descripteur. Il n’existe aucune limite au nombre d’enregistrements de diagnostic qui peuvent être stockés à tout moment.  

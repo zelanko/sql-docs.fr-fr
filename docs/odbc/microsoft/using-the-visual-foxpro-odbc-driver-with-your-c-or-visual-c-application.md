@@ -25,6 +25,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32905244"
 ---
 # <a name="use-the-visual-foxpro-odbc-driver-with-your-c-or-visual-c-application"></a>Utilisez le pilote ODBC Visual FoxPro ou de votre C Visual C++ Application
 Votre application C ou C++ communique avec des données Visual FoxPro en envoyant un [SQLExecute](../../odbc/microsoft/sqlexecute-visual-foxpro-odbc-driver.md) ou [SQLExecDirect](../../odbc/microsoft/sqlexecdirect-visual-foxpro-odbc-driver.md) instruction Visual FoxPro. Cette instruction peut contenir les éléments suivants :  

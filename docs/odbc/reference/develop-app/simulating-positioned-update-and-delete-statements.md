@@ -25,6 +25,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32913884"
 ---
 # <a name="simulating-positioned-update-and-delete-statements"></a>Simulation d’instructions Delete et mise à jour positionnée
 Si la source de données ne prend en charge la mise à jour positionnée et supprimer des instructions, le pilote peut simuler ces. Par exemple, la bibliothèque de curseurs ODBC simule la mise à jour positionnée et supprimer les instructions. La stratégie générale pour simuler des instructions de suppression et de mise à jour positionnée consiste à convertir des instructions positionnées à ceux recherchés. Cela est effectué en remplaçant le **WHERE CURRENT OF** clause avec une recherche **où** clause qui identifie la ligne actuelle.  

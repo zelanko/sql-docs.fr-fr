@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32913324"
 ---
 # <a name="binding-parameter-markers"></a>Marqueurs de paramètres de liaison
 L’application lie les paramètres en appelant **SQLBindParameter**. **SQLBindParameter** lie un paramètre à la fois. Avec elle, l’application spécifie les éléments suivants :  

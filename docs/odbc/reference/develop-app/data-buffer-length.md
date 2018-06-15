@@ -24,6 +24,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32910204"
 ---
 # <a name="data-buffer-length"></a>Longueur de mémoire tampon de données
 L’application transmet la longueur d’octet de la mémoire tampon de données pour le pilote dans un argument nommé *BufferLength* ou un nom similaire. Par exemple, dans l’exemple suivant appel à **SQLBindCol**, l’application spécifie la longueur de la *ValuePtr* tampon (**sizeof (***ValuePtr***)**):  

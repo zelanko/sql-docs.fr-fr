@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32914774"
 ---
 # <a name="transaction-isolation"></a>Isolement des transactions
 *Isolation des transactions* fait référence au degré d’interaction entre plusieurs transactions simultanées. Pour voir à quoi cela est important, vous devez d’abord examiner l’idée de la sérialisation.  

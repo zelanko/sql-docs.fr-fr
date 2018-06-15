@@ -30,6 +30,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32907764"
 ---
 # <a name="column-size-decimal-digits-transfer-octet-length-and-display-size---odbc"></a>Taille de colonne, des chiffres décimaux, transférer la longueur en octets et afficher la taille - ODBC
 Types de données sont caractérisent par leur taille de colonne (ou paramètre), de chiffres décimaux, de longueur et affichent la taille. Les fonctions ODBC suivantes retournent ces attributs pour un paramètre dans une instruction SQL ou pour un type de données SQL sur une source de données. Chaque fonction ODBC retourne un ensemble différent de ces attributs, comme suit :  

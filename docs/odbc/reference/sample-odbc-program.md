@@ -19,6 +19,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32914914"
 ---
 # <a name="sample-odbc-program"></a>Exemple de programme ODBC
 Le [exemple de code ODBC](http://go.microsoft.com/fwlink/?LinkId=244831) vous demande un nom de source de données ODBC.  Vous êtes ensuite invité à entrer une requête et l’exemple affiche les résultats de la requête.

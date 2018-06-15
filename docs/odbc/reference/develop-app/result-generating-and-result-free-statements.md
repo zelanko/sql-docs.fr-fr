@@ -25,6 +25,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32913724"
 ---
 # <a name="result-generating-and-result-free-statements"></a>Instructions de génération de résultat et sans résultat
 Instructions SQL peuvent être faiblement divisées en cinq catégories :  

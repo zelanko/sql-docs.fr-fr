@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32912154"
 ---
 # <a name="block-cursors"></a>Curseurs de bloc
 De nombreuses applications passent beaucoup de temps mettre des données sur le réseau. Partie de ce temps est consacré à mettre jour les données sur le réseau et partie est passée sur le réseau de surcharge, telles que l’appel effectué par le pilote pour demander une ligne de données. L’heure de ce dernier peut être réduit si l’application effectue une utilisation efficace de *bloc,* ou *fat,* *curseurs,* qui peut retourner plusieurs lignes à la fois.  

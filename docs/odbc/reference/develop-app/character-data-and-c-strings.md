@@ -29,6 +29,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32912384"
 ---
 # <a name="character-data-and-c-strings"></a>Données de caractères et chaînes C
 Les paramètres d’entrée qui font référence à des données de caractères de longueur variable (par exemple, les noms de colonnes, les paramètres dynamiques et valeurs d’attribut de chaîne) ont un paramètre de longueur. Si l’application termine par le caractère null, comme cela est courant en C, les chaînes, il fournit en tant qu’argument, la longueur en octets de la chaîne (ne pas y compris la marque de fin null) ou SQL_NTS (String Null-Terminated). Un argument de longueur non négative indique la longueur réelle de la chaîne associée. L’argument de longueur peut être 0 pour spécifier une chaîne de longueur nulle, ce qui est différent de celui à partir d’une valeur NULL. La valeur négative SQL_NTS dirige le pilote pour déterminer la longueur de la chaîne en recherchant le caractère de fin de la valeur null.  

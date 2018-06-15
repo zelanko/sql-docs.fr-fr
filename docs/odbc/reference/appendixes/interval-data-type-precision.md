@@ -27,6 +27,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32906584"
 ---
 # <a name="interval-data-type-precision"></a>Précision du Type de données intervalle
 Précision pour un type de données d’intervalle inclut l’en-tête de précision, la précision de l’intervalle et précision en secondes de l’intervalle.  

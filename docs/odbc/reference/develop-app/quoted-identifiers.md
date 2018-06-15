@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32911524"
 ---
 # <a name="quoted-identifiers"></a>Identificateurs entre guillemets
 Dans une instruction SQL, les identificateurs qui contiennent des caractères spéciaux ou des mots clés de correspondance doivent être placées entre *guillemets identificateur*; les identificateurs placés entre ces caractères sont appelés *identificateurs entre guillemets* (également appelé *des identificateurs délimités* dans SQL-92). Par exemple, l’identificateur de comptes fournisseurs est placé entre guillemets dans le code suivant **sélectionnez** instruction :  

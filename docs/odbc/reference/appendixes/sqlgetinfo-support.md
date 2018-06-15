@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32912484"
 ---
 # <a name="sqlgetinfo-support"></a>Prise en charge SQLGetInfo
 Lorsqu’une application ODBC 2. *x* application appelle **SQLGetInfo** à un ODBC 3 *.x* pilote, le *InfoType* arguments dans le tableau suivant doivent être pris en charge.  

@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32905759"
 ---
 # <a name="table-references-limitations"></a>Table fait référence à des Limitations
 Un maximum de 16 références de table peut être inclus dans n’importe quelle instruction de requête.

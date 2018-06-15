@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32914864"
 ---
 # <a name="using-data-buffers"></a>À l’aide de mémoires tampons de données
 Mémoires tampons de données sont décrits par trois informations : la longueur de type, l’adresse et octets. Chaque fois qu’une fonction a besoin d’un de ces éléments d’information et ne le connaissez pas déjà, il a un argument avec lequel l’application transmet.  

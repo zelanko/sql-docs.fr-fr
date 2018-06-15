@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32911114"
 ---
 # <a name="inserting-rows-with-sqlbulkoperations"></a>Insertion de lignes avec SQLBulkOperations
 Insertion de données avec **SQLBulkOperations** est similaire à la mise à jour des données avec **SQLBulkOperations** , car elle utilise les données du tampon de l’application liée.  

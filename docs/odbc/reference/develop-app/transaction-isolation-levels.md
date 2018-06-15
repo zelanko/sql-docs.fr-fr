@@ -30,6 +30,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32919044"
 ---
 # <a name="transaction-isolation-levels"></a>Niveaux d'isolement des transactions
 *Niveaux d’isolation des transactions* sont une mesure de l’étendue pour la transaction isolation aboutit. En particulier, les niveaux d’isolation des transactions sont définis par la présence ou l’absence de phénomènes suivants :  

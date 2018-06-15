@@ -24,6 +24,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32912894"
 ---
 # <a name="handles"></a>Poignées
 Poignées sont opaques, 32 bits des valeurs qui identifient un élément particulier ; dans ODBC, cet élément peut être un environnement, une connexion, une instruction ou une descripteur. Lorsque l’application appelle **SQLAllocHandle**, le Gestionnaire de pilote ou le pilote crée un nouvel élément du type spécifié et retourne son handle à l’application. L’application plus tard utilise le handle pour identifier cet élément lors de l’appel de fonctions ODBC. Le Gestionnaire de pilotes et le pilote utilisent le handle pour rechercher des informations sur l’élément.  

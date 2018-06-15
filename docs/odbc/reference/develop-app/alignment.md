@@ -21,6 +21,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32909407"
 ---
 # <a name="alignment"></a>Alignment
 Les problèmes d’alignement dans une application ODBC sont généralement pas différents qu’ils se trouvent dans une autre application. Autrement dit, la plupart des applications ODBC ont peu ou pas des problèmes avec l’alignement. Les pénalités pour non-alignement adresses varient selon le matériel et le système d’exploitation et peuvent être aussi mineure qu’une légère baisse des performances ou comme principale comme une erreur d’exécution irrécupérable. Par conséquent, les applications ODBC et les applications ODBC portables en particulier, prudence aligner correctement les données.  

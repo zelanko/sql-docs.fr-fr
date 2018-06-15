@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32913084"
 ---
 # <a name="level-1-interface-conformance"></a>Conformité d’Interface de niveau 1
 Niveau de conformité de l’interface de niveau 1 inclut les fonctionnalités au niveau de la mise en conformité Core interface ainsi que des fonctionnalités supplémentaires, telles que les transactions, qui sont généralement disponibles dans un SGBD OLTP. Un pilote d’interface conforme de niveau 1 permet à l’application effectuer les opérations suivantes, en plus des fonctionnalités dans le niveau de conformité de l’interface Core :  

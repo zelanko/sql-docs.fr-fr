@@ -21,6 +21,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32943934"
 ---
 # <a name="call-sqlcolumns-on-a-table-with-sparse-columns"></a>Appeler SQLColumns sur une table avec des colonnes éparses
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32910774"
 ---
 # <a name="executing-procedures"></a>L’exécution de procédures
 ODBC définit une séquence d’échappement standard pour l’exécution de procédures. Pour connaître la syntaxe de cette séquence et un exemple de code qui l’utilise, consultez [les appels de procédure](../../../odbc/reference/develop-app/procedure-calls.md).  

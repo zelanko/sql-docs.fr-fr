@@ -25,6 +25,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32911187"
 ---
 # <a name="implementing-sqlgetdiagrec-and-sqlgetdiagfield"></a>Implémentation de SQLGetDiagRec et SQLGetDiagField
 **SQLGetDiagRec** et **SQLGetDiagField** sont implémentées par le Gestionnaire de pilotes et chaque pilote. Le Gestionnaire de pilotes et chaque pilote de mettre à jour les enregistrements de diagnostic pour chaque environnement, connexion, l’instruction et handle de descripteur et libèrent ces enregistrements uniquement quand une autre fonction est appelée avec que handle ou le handle est libéré.  

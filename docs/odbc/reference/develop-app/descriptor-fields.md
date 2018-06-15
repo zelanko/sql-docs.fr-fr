@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32912574"
 ---
 # <a name="descriptor-fields"></a>Champs de descripteur
 Les descripteurs contiennent *en-tête* et *enregistrement* champs qui décrivent complètement les colonnes ou des paramètres.  

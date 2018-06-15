@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32912984"
 ---
 # <a name="pattern-value-arguments"></a>Arguments de valeur de modèle
 Certains arguments dans le catalogue des fonctions, telles que la *TableName* argument dans **SQLTables**, accepte les modèles de recherche. Ces arguments accepte les modèles de recherche si l’attribut d’instruction SQL_ATTR_METADATA_ID a la valeur SQL_FALSE ; ils représentent les arguments d’identificateur qui n’acceptent pas d’un modèle de recherche si cet attribut a la valeur SQL_TRUE.  

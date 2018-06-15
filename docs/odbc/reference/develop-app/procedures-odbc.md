@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32910124"
 ---
 # <a name="procedures-odbc"></a>Procédures ODBC
 A *procédure* est un objet exécutable stocké dans la source de données. Généralement, il s'agit d'une ou plusieurs instructions SQL qui ont été précompilées.  

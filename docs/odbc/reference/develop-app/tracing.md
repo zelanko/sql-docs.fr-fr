@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32914654"
 ---
 # <a name="tracing"></a>Suivi
 Le Gestionnaire de pilotes ODBC comporte une fonctionnalité de trace qui permet la séquence d’appels de fonction effectués par une application ODBC être enregistrés et transcrite dans un fichier journal. Le traçage est effectué par une DLL de traçage qui capture les appels entre l’application et le Gestionnaire de pilotes et entre le Gestionnaire de pilotes et le pilote. Cette méthode de suivi remplace le suivi effectué par l’API ODBC 2 *.x* du Gestionnaire de pilotes et le suivi effectuent dans ODBC 2 *.x* par ODBC Spy.  

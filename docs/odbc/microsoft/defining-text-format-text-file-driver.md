@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32904874"
 ---
 # <a name="defining-text-format-text-file-driver"></a>Définir le Format de texte (pilote du fichier texte)
 Lorsque le pilote de texte est utilisé, vous pouvez utiliser la **définition du Format texte** boîte de dialogue pour définir le format des colonnes dans un fichier sélectionné. Cette boîte de dialogue vous permet de spécifier le schéma pour chaque table de données. Cette information est écrite dans un fichier Schema.ini dans le répertoire de source de données. Un fichier Schema.ini distinct est créé pour chaque répertoire de source de données de texte.  

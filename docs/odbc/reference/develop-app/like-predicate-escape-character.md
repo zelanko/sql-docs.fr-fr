@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32911864"
 ---
 # <a name="like-predicate-escape-character"></a>COMME caractère d’échappement de prédicat
 Dans un **comme** prédicat, le symbole de pourcentage (%) correspond zéro ou plusieurs caractères et le trait de soulignement (_) correspond à n’importe quel caractère. Pour rechercher un signe de pourcentage réel ou de traits de soulignement dans un **comme** prédicat, un caractère d’échappement doit être placée avant le signe de pourcentage ou un trait de soulignement. La séquence d’échappement qui définit les **comme** caractère d’échappement de prédicat est :  

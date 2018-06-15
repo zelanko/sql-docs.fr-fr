@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32909894"
 ---
 # <a name="executing-batches"></a>L’exécution de lots
 Avant qu’une application exécute un lot d’instructions, il doit tout d’abord vérifier si elles sont prises en charge. Pour ce faire, l’application appelle **SQLGetInfo** avec les options SQL_BATCH_SUPPORT, SQL_PARAM_ARRAY_ROW_COUNTS et SQL_PARAM_ARRAY_SELECTS. La première option retourne si la création de nombre de lignes et le résultat d’instructions de création de jeu sont prises en charge dans les lots explicites et procédures, pendant les deux dernières options de renvoyer des informations sur la disponibilité du nombre de lignes et résultat définit dans paramétrable d’exécution.  

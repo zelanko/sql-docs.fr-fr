@@ -24,6 +24,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32905644"
 ---
 # <a name="thread-support-visual-foxpro-odbc-driver"></a>Prise en charge des threads (Visual FoxPro le pilote ODBC)
 Le pilote ODBC Visual FoxPro est thread-safe. Accès aux handles d’environnement (*rsque*), les handles de connexion (*pas*) et les descripteurs d’instruction (*hstmt*) sont encapsulées dans des sémaphores appropriées pour empêcher les autres processus d’accéder à et potentiellement modifier les structures de données internes du pilote.  

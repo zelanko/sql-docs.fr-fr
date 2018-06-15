@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32909174"
 ---
 # <a name="ddl-statements"></a>Instructions DDL
 Instructions de langage de définition (DDL) de données varient considérablement SGBD. SQL ODBC définit des instructions pour les opérations de définition de données courantes : créer et supprimer des tables, des index et vues ; modification des tables ; l’octroi et révocation des privilèges. Toutes les autres instructions DDL sont spécifiques à la source de données. Par conséquent, les applications interopérables ne peut pas effectuer certaines opérations de définition de données. En règle générale, cela n’est pas un problème, car ces opérations ont tendance à être très propres au SGBD et sont meilleures gauche pour le logiciel d’administration propriétaire de la base de données fourni avec la plupart des SGBD ou le programme d’installation fourni avec le pilote.  

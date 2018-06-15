@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32904974"
 ---
 # <a name="desktop-database-drivers-architecture"></a>Architecture des pilotes de bureau de base de données
 Ces pilotes sont conçues pour utiliser Microsoft Windows 95 ou version ultérieure, ou Windows NT 4.0 et Windows 2000. Seules les applications 32 bits sont pris en charge sur Windows 95 ou version ultérieure ; les applications 16 bits et 32 bits sont pris en charge sur Windows NT 4.0 et Windows 2000.  

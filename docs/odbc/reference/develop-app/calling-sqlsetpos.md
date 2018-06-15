@@ -25,6 +25,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32911814"
 ---
 # <a name="calling-sqlsetpos"></a>L’appel de SQLSetPos
 Dans ODBC 2. *x*, le pointeur vers le tableau d’état de ligne a été l’argument de **SQLExtendedFetch**. Le tableau d’état de ligne a été suite mis à jour par un appel à **SQLSetPos**. Certains pilotes reposait sur le fait que ce tableau ne changeant pas entre **SQLExtendedFetch** et **SQLSetPos**. Dans ODBC 3. *x*, le pointeur vers le tableau d’état est un champ de descripteur et par conséquent, l’application peut facilement le modifier pour pointer vers un tableau différent. Cela peut poser un problème lorsqu’un ODBC 3. *x* application fonctionne avec une API ODBC 2. *x* pilote mais appelle **SQLSetStmtAttr** pour définir le pointeur d’état du tableau et appelle **SQLFetchScroll** pour extraire des données. Le Gestionnaire de pilotes est mappé comme une séquence d’appels à **SQLExtendedFetch**. Dans le code suivant, une erreur normalement est déclenchée lorsque le Gestionnaire de pilotes mappe le deuxième **SQLSetStmtAttr** appel lorsque vous travaillez avec une API ODBC 2 *.x* pilote :  

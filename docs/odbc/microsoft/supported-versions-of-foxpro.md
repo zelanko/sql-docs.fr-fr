@@ -25,6 +25,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32905474"
 ---
 # <a name="supported-versions-of-foxpro"></a>Versions prises en charge de FoxPro
 Vous pouvez utiliser le pilote ODBC Microsoft® Visual FoxPro®, pour accéder aux données stockées dans des tables FoxPro. Les versions suivantes de données FoxPro sont prises en charge :  

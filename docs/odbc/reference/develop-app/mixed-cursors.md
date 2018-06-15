@@ -26,6 +26,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32911044"
 ---
 # <a name="mixed-cursors"></a>Curseurs mixtes
 Un curseur mixte est une combinaison d’un curseur keyset et curseur dynamique. Il est utilisé lorsque le jeu de résultats est trop volumineux pour être raisonnablement enregistré clés pour le jeu de résultats entier. Mixte de curseurs est implémenté en créant un jeu de clés qui est plus petit que le jeu de résultats complet mais supérieure à l’ensemble de lignes.  

@@ -24,6 +24,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32907824"
 ---
 # <a name="fixed-length-bookmarks"></a>Signets de longueur fixe
 Si un ODBC 3 *.x* pilote doit fonctionner avec une API ODBC 2. *x* application qu’utilise signets de longueur fixe, le pilote doivent prendre en charge les éléments suivants :  

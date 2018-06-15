@@ -29,6 +29,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32914064"
 ---
 # <a name="converting-data-from-sql-to-c-data-types"></a>Conversion de données à partir de SQL pour Types de données C
 Lorsqu’une application appelle **SQLFetch**, **SQLFetchScroll**, ou **SQLGetData**, le pilote récupère les données à partir de la source de données. Si nécessaire, il convertit les données du type de données dans lequel, extraites par le pilote pour le type de données spécifié par le *TargetType* argument dans **SQLBindCol** ou **SQLGetData.** Enfin, il stocke les données dans l’emplacement vers lequel pointé le *TargetValuePtr* argument dans **SQLBindCol** ou **SQLGetData** (et le champ SQL_DESC_DATA_PTR de la ARD).  

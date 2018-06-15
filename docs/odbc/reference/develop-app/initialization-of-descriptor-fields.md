@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32910834"
 ---
 # <a name="initialization-of-descriptor-fields"></a>Initialisation de champs de descripteur
 Lors de l’allocation de descripteur de ligne d’une application, ses champs reçoivent des valeurs initiales comme indiqué dans [SQLSetDescField](../../../odbc/reference/syntax/sqlsetdescfield-function.md). La valeur initiale du champ SQL_DESC_TYPE est SQL_DEFAULT. Ceci permet un traitement standard de la base de données pour la présentation à l’application. L’application peut spécifier un traitement différent des données en définissant les champs de l’enregistrement de descripteur.  

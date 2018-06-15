@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32914734"
 ---
 # <a name="step-5-commit-the-transaction"></a>Étape 5 : Valider la Transaction
 L’étape suivante consiste à valider la transaction, comme indiqué dans l’illustration suivante.  

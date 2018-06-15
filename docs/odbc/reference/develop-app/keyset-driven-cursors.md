@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32912444"
 ---
 # <a name="keyset-driven-cursors"></a>Curseurs pilotés par jeu de clés
 Un curseur keyset réside entre statique et d’un curseur dynamique dans sa capacité à détecter les modifications. À un curseur statique, il ne détecte pas toujours les modifications apportées à l’appartenance et l’ordre du jeu de résultats. Comme un curseur dynamique, il détecte les modifications apportées aux valeurs des lignes du jeu de résultats (selon le niveau d’isolation de la transaction, tel que défini par l’attribut de connexion SQL_ATTR_TXN_ISOLATION).  

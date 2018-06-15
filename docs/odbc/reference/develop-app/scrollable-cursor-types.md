@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32912414"
 ---
 # <a name="scrollable-cursor-types"></a>Types de curseur de défilement
 Les quatre types de curseurs de défilement sont statiques, dynamiques, pilotés par jeu de clés et mixte. Les curseurs statiques détectent peu ou pas de modifications, mais sont relativement peu coûteux à implémenter. Les curseurs dynamiques détectent toutes les modifications mais sont coûteux à implémenter. Les curseurs pilotés par jeu de clés et mixtes se situent entre la plupart des modifications mais utilisent moins de ressources que les curseurs dynamiques.  

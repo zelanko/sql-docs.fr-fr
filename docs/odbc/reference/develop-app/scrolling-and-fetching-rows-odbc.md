@@ -24,6 +24,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32913274"
 ---
 # <a name="scrolling-and-fetching-rows-odbc"></a>Défilement et extraction de lignes (ODBC)
 Lorsque vous utilisez un curseur de défilement, les applications appellent **SQLFetchScroll** pour positionner les curseur et extraire les lignes. **SQLFetchScroll** prend en charge le défilement relatif (suivant, précédent et relatif *n* lignes), défilement absolu (first, last et de ligne *n*) et la position du signet. Le *FetchOrientation* et *FetchOffset* arguments dans **SQLFetchScroll** spécifier quel ensemble de lignes à extraire, comme indiqué dans les diagrammes suivants.  

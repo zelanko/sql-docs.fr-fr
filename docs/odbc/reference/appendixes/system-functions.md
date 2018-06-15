@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32913494"
 ---
 # <a name="system-functions"></a>Fonctions système
 Le tableau suivant répertorie les fonctions système qui sont incluses dans l’ensemble de la fonction scalaire ODBC. En appelant **SQLGetInfo** avec un *type d’information* de SQL_SYSTEM_FUNCTIONS, une application peut déterminer les fonctions système sont prises en charge par un pilote.  

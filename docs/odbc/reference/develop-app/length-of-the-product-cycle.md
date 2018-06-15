@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32910064"
 ---
 # <a name="length-of-the-product-cycle"></a>Longueur du Cycle de produit
 La question finale sur l’interopérabilité est le temps. Développement d’une application interopérable généralement prend plu de développement d’un noninteroperable. La raison est que l’application doit vérifier les fonctionnalités SGBD, effectuer les mêmes tâches différemment pour les SGBD différents, contourner les fonctionnalités prises en charge par certains SGBD, mais pas les autres et ainsi de suite.  
