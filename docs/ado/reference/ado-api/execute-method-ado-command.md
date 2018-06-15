@@ -2,7 +2,6 @@
 title: Execute (méthode) (commande ADO) | Documents Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -21,11 +20,12 @@ caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 8936219aa3d8e75a43efcc51936ac23916c51d96
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 09ce33d4fa2f6ac63fc19ce711fe88fcf717d049
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35278118"
 ---
 # <a name="execute-method-ado-command"></a>Execute (méthode) (commande ADO)
 Exécute la requête, une instruction SQL ou une procédure stockée spécifiée dans le [CommandText](../../../ado/reference/ado-api/commandtext-property-ado.md) ou [CommandStream](../../../ado/reference/ado-api/commandstream-property-ado.md) propriété de la [objet de commande](../../../ado/reference/ado-api/command-object-ado.md).  
@@ -37,18 +37,18 @@ Exécute la requête, une instruction SQL ou une procédure stockée spécifiée
 Set recordset = command.Execute( RecordsAffected, Parameters, Options )  
 ```  
   
-## <a name="return-value"></a>Valeur retournée  
+## <a name="return-value"></a>Valeur de retour  
  Retourne un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) référence d’objet, d’un flux, ou **rien**.  
   
 #### <a name="parameters"></a>Paramètres  
  *RecordsAffected*  
- Ce paramètre est facultatif. A **Long** variable sur laquelle le fournisseur retourne le nombre d’enregistrements affectée par l’opération. Le *RecordsAffected* paramètre s’applique uniquement pour les requêtes d’action ou des procédures stockées. *RecordsAffected* ne retourne pas le nombre d’enregistrements retournés par une procédure stockée ou une requête qui retourne des résultats. Pour obtenir ces informations, utilisez le [RecordCount](../../../ado/reference/ado-api/recordcount-property-ado.md) propriété. Le **Execute** méthode ne retourne pas les informations correctes en cas d’utilisation avec **adAsyncExecute**, simplement parce que lorsqu’une commande est exécutée de façon asynchrone, le nombre d’enregistrements concernés peut encore être inconnue au moment où la méthode retourne.  
+ Facultatif. A **Long** variable sur laquelle le fournisseur retourne le nombre d’enregistrements affectée par l’opération. Le *RecordsAffected* paramètre s’applique uniquement pour les requêtes d’action ou des procédures stockées. *RecordsAffected* ne retourne pas le nombre d’enregistrements retournés par une procédure stockée ou une requête qui retourne des résultats. Pour obtenir ces informations, utilisez le [RecordCount](../../../ado/reference/ado-api/recordcount-property-ado.md) propriété. Le **Execute** méthode ne retourne pas les informations correctes en cas d’utilisation avec **adAsyncExecute**, simplement parce que lorsqu’une commande est exécutée de façon asynchrone, le nombre d’enregistrements concernés peut encore être inconnue au moment où la méthode retourne.  
   
  *Paramètres*  
- Ce paramètre est facultatif. A **Variant** tableau de valeurs de paramètre utilisée conjointement avec la chaîne d’entrée ou le flux spécifié dans **CommandText** ou **CommandStream**. (Les paramètres de sortie ne retournent pas de valeurs correctes lorsqu’il est passé dans cet argument.)  
+ Facultatif. A **Variant** tableau de valeurs de paramètre utilisée conjointement avec la chaîne d’entrée ou le flux spécifié dans **CommandText** ou **CommandStream**. (Les paramètres de sortie ne retournent pas de valeurs correctes lorsqu’il est passé dans cet argument.)  
   
  *Options*  
- Ce paramètre est facultatif. A **Long** valeur qui indique la manière dont le fournisseur doit évaluer le [CommandText](../../../ado/reference/ado-api/commandtext-property-ado.md) ou [CommandStream](../../../ado/reference/ado-api/commandstream-property-ado.md) propriété de la [commande](../../../ado/reference/ado-api/command-object-ado.md) objet. Peut être une valeur de masque de bits à l’aide de [CommandTypeEnum](../../../ado/reference/ado-api/commandtypeenum.md) et/ou [ExecuteOptionEnum](../../../ado/reference/ado-api/executeoptionenum.md) valeurs. Par exemple, vous pouvez utiliser **adCmdText** et **adExecuteStream** en combinaison, si vous voulez qu’ADO évalue la valeur de la **CommandText** propriété sous forme de texte, et indiquer que la commande doit ignorer et ne retourne pas les enregistrements qui peuvent être générés lorsque le texte de commande s’exécute.  
+ Facultatif. A **Long** valeur qui indique la manière dont le fournisseur doit évaluer le [CommandText](../../../ado/reference/ado-api/commandtext-property-ado.md) ou [CommandStream](../../../ado/reference/ado-api/commandstream-property-ado.md) propriété de la [commande](../../../ado/reference/ado-api/command-object-ado.md) objet. Peut être une valeur de masque de bits à l’aide de [CommandTypeEnum](../../../ado/reference/ado-api/commandtypeenum.md) et/ou [ExecuteOptionEnum](../../../ado/reference/ado-api/executeoptionenum.md) valeurs. Par exemple, vous pouvez utiliser **adCmdText** et **adExecuteStream** en combinaison, si vous voulez qu’ADO évalue la valeur de la **CommandText** propriété sous forme de texte, et indiquer que la commande doit ignorer et ne retourne pas les enregistrements qui peuvent être générés lorsque le texte de commande s’exécute.  
   
 > [!NOTE]
 >  Utilisez le **ExecuteOptionEnum** valeur **adExecuteStream** pour améliorer les performances en réduisant le traitement interne. Si **adExecuteStream** a été spécifié, les options **adAsyncFetch** et **adAsynchFetchNonBlocking** sont ignorés. N’utilisez pas le **CommandTypeEnum** les valeurs de **adCmdFile** ou **adCmdTableDirect** avec **Execute**. Ces valeurs peuvent uniquement être utilisées en tant qu’options avec les [ouvrir](../../../ado/reference/ado-api/open-method-ado-recordset.md) et [Requery](../../../ado/reference/ado-api/requery-method.md) méthodes d’un **Recordset**.  

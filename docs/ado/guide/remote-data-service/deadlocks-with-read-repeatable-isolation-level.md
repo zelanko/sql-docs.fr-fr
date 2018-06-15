@@ -2,7 +2,6 @@
 title: Blocages avec le niveau d’Isolation Repeatable lecture | Documents Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -18,11 +17,12 @@ caps.latest.revision: 17
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 6fc1621022758189925587e32059a3e26a1de4a4
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: c871d2786202c74945aeec84c3de06a361d54801
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35273978"
 ---
 # <a name="deadlocks-with-read-repeatable-isolation-level"></a>Blocages avec le niveau d’Isolation Repeatable lecture
 Si un objet métier personnalisé utilise un niveau d’isolation de lecture renouvelable pour accéder à un serveur SQL et l’objet métier est appelé simultanément par deux clients qui envoient une requête et mettre à jour dans la même transaction, un blocage est possible. Service de données distant est conçu pour permettre à l’un des processus à un délai d’attente pour libérer le blocage, mais la mise à jour ne fonctionnera pas pour ce client.  

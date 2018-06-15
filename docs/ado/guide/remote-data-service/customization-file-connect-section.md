@@ -2,7 +2,6 @@
 title: Section Connect du fichier de personnalisation | Documents Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -18,11 +17,12 @@ caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 12d1560220a9c281425a1d75c43f0ef95845d611
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: f6774d32587a2c6d5c969be4d56640d137972ddc
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35273848"
 ---
 # <a name="customization-file-connect-section"></a>Section Connect du fichier de personnalisation
 Le comportement par défaut du gestionnaire est à refuser toutes les connexions. Le **connecter** section indique les exceptions à ce comportement. Par exemple, si tous les **connecter** sections sont absents ou vides, puis par défaut aucune connexion n’a pu être établie.  
@@ -57,7 +57,7 @@ connectionString
   
 ## <a name="remarks"></a>Notes  
   
-|Élément| Description|  
+|Élément|Description|  
 |----------|-----------------|  
 |**Se connecter**|Une chaîne littérale qui indique qu’il est une entrée de chaîne de connexion.|  
 |***connectionString***|Chaîne qui remplace la chaîne de connexion client global.|  

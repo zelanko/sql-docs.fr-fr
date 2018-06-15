@@ -2,7 +2,6 @@
 title: Section de personnalisation de fichier SQL | Documents Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -18,11 +17,12 @@ caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 792168588c13af5007ff35b7af9004f3cc78d385
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 2f6cc8d75883f06acf449aba74341f86a8ae017b
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35274168"
 ---
 # <a name="customization-file-sql-section"></a>Section de personnalisation de fichier SQL
 Le **sql** section peut contenir une nouvelle chaîne SQL qui remplace la chaîne de commande client. S’il n’existe aucune chaîne SQL dans la section, la section sera ignorée.  
@@ -49,7 +49,7 @@ SQL = " "
  **SQL=**   
  ***sqlString***  
   
-|Élément| Description|  
+|Élément|Description|  
 |----------|-----------------|  
 |**SQL**|Une chaîne littérale qui indique qu’il est une entrée de section SQL.|  
 |***sqlString***|Une chaîne SQL qui remplace la chaîne du client.|  

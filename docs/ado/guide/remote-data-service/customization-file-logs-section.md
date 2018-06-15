@@ -2,7 +2,6 @@
 title: Section Logs du fichier de personnalisation | Documents Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -18,11 +17,12 @@ caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 37bcfdea2c98295d2869cd4bc5766e89758e2773
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 8b80034b1d2668960aa918b1c66df878eb75ca86
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35274008"
 ---
 # <a name="customization-file-logs-section"></a>Section de personnalisation de fichiers journaux
 Le **journaux** section contient une entrée de fichier journal, qui spécifie le nom d’un fichier qui enregistre les erreurs pendant l’opération de le **DataFactory**.  
@@ -42,7 +42,7 @@ FileName
   
 ## <a name="remarks"></a>Notes  
   
-|Élément| Description|  
+|Élément|Description|  
 |----------|-----------------|  
 |**Err**|Une chaîne littérale qui indique qu’il est une entrée de fichier journal.|  
 |*FileName*|Un nom de fichier et le chemin complet. Le nom de fichier par défaut est **c:\msdfmap.log**.|  

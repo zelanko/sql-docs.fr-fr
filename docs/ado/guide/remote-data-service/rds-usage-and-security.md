@@ -2,7 +2,6 @@
 title: Utilisation des services Bureau à distance et sécurité | Documents Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -18,11 +17,12 @@ caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: e149ec41722f22ce5b9c57592df39dd0d22b1fe9
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: dc65be00af43f9ad891d01ad00e506fcd178872d
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35274238"
 ---
 # <a name="rds-usage-and-security"></a>Sécurité et l’utilisation des services Bureau à distance
 Utilisez les informations de cette section pour configurer votre serveur et d’utiliser rapidement des services Bureau à distance. Cette section inclut des étapes de configuration spécifiques que vous devrez peut-être effectuer lors de la mise en œuvre des services Bureau à distance, décrit certaines des relations entre les services Bureau à distance et d’autres technologies clées, et vous aide à identifier les solutions aux problèmes que vous pouvez rencontrer lorsque vous configurez un Solution de services Bureau à distance.  

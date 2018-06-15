@@ -2,7 +2,6 @@
 title: Modèle de programmation des services Bureau à distance en détail | Documents Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -17,11 +16,12 @@ caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 7e11dbaf046124e837b6ef33b8eb98219371ae18
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: dcfed19cda8ce9675b656add6f1a15e0912efe31
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35274428"
 ---
 # <a name="rds-programming-model-in-detail"></a>Modèle de programmation des services Bureau à distance en détail
 Les éléments clés du modèle de programmation des services Bureau à distance sont les suivantes :  

@@ -2,7 +2,6 @@
 title: L’inscription des objets métier sur le Client pour une utilisation avec DCOM | Documents Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -17,11 +16,12 @@ caps.latest.revision: 16
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 3c92544630110443b3db9092738978a3608e57db
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 2be8421c2d1b09887d50a49c0fdb71d2a5d92886
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35274218"
 ---
 # <a name="registering-business-objects-on-the-client-for-use-with-dcom"></a>L’enregistrement des objets métier sur le Client pour une utilisation avec DCOM
 Les objets métier personnalisés doivent faire en sorte que le côté client peut mapper son nom de programme (ProgId) à un identificateur (CLSID) qui peut être utilisé via DCOM. Pour cette raison, le ProgID de l’objet DCOM doit être dans le Registre côté client et mapper à l’ID de classe de l’objet métier côté serveur. Pour les autres protocoles pris en charge (HTTP, HTTPS et en cours), cela n’est pas nécessaire.  

@@ -2,7 +2,6 @@
 title: Visual Basic pour Applications functions | Documents Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,11 +19,12 @@ caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 20d9f7f726ac705ebdf93484c5e7ecef5f3ad54d
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: f2849bd9164ca145b38aa05aa0357cbc42f2719f
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35273228"
 ---
 # <a name="visual-basic-for-applications-functions"></a>Visual Basic pour Applications functions
 Visual Basic suivant pour les fonctions d’Applications peuvent servir dans les expressions de calcul de la mise en forme des données :  
@@ -36,17 +36,17 @@ Visual Basic suivant pour les fonctions d’Applications peuvent servir dans les
 |Chr$|CEnt|CLong|Cos|CSmpl|CChaîne|  
 |CVar|CVDate|CVErr|Date|Date$|AjDate|  
 |DiffDate|PartDate|SérieDate|ValDate|Jour|DDB|  
-|Erreur|Error$|Exp|Fix|Format|Format$|  
+|Error|Error$|Exp|Fix|Format|Format$|  
 |VC|Hex|Hex$|Heure|IIF|InStr|  
 |Int|IPmt|IRR|IsDate|IsEmpty|IsError|  
 |IsNull|IsNumeric|IsObject|Minuscule|Minuscule$|Gauche|  
 |LeftB|Gauche$|LeftB$|NbCar|Journal|SupprGauche|  
-|SupprGauche$|ExtracChaîne|ExtracChaîne$|Minute|MIRR|Mois|  
+|SupprGauche$|ExtracChaîne|ExtracChaîne$|Minute|MIRR|Month|  
 |maintenant|NPer|NPV|Oct|Oct$|Vpm|  
 |PPmt|PV|RVBC|Taux|RGB|Droit|  
 |RightB|Droite$|RightB$|Aléat|SupprDroite|RTrim$|  
 |Seconde|Sgn|Sin|AmorLin|Espace|Espace$|  
-|Racine|NumChaîne|Str$|CompChaîne|ConvChaîne|Chaîne|  
+|Racine|NumChaîne|Str$|CompChaîne|ConvChaîne|String|  
 |Chaîne$|SYD|Tan|Time|Temps$|Minuterie|  
 |SérieHeure|VHeure|SupprEspace|Trim$|TypeName|UCase|  
 |UCase$|Val|VarType|JourSem|Année||  
