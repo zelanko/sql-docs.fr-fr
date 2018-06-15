@@ -24,6 +24,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32845374"
 ---
 # <a name="settime-method-int-javasqltime"></a>Méthode setTime (int, java.sql.Time)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

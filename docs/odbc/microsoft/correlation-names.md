@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32897674"
 ---
 # <a name="correlation-names"></a>Noms de corrélation
 Noms de corrélation sont entièrement pris en charge, y compris dans la liste de tables. Par exemple, dans la chaîne suivante, E1 est le nom de corrélation pour la table nommé Emp :  
