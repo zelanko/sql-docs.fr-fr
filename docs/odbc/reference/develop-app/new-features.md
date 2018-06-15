@@ -25,6 +25,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32913344"
 ---
 # <a name="new-features"></a>Nouvelles fonctionnalités
 Les nouvelles fonctionnalités suivantes a été introduite dans ODBC 3. *x*. Une application ODBC 3. *x* application utilisant une API ODBC 2 *.x* pilote ne sera pas en mesure d’utiliser cette fonctionnalité. ODBC 3. *x* du Gestionnaire de pilotes ne mappe pas ces fonctionnalités lorsque vous travaillez avec une API ODBC 2 *.x* pilote.  

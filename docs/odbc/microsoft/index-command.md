@@ -21,6 +21,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32904414"
 ---
 # <a name="index-command"></a>Commande INDEX
 Crée un fichier d’index pour afficher et accéder aux enregistrements de la table dans un ordre logique.  

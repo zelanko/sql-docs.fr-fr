@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32907624"
 ---
 # <a name="interval-escape-sequences"></a>Séquences d’échappement d’intervalle
 ODBC utilise les séquences d’échappement pour les littéraux de l’intervalle. La syntaxe de cette séquence d’échappement est comme suit :  

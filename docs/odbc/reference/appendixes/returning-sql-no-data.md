@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32906364"
 ---
 # <a name="returning-sqlnodata"></a>Retournant SQL_NO_DATA
 Lorsqu’une application ODBC 2. *x* application workingwith un ODBC 3 *.x* pilote appelle **SQLExecDirect**, **SQLExecute**, ou **SQLParamData**, et une recherche de mise à jour ou d’une instruction delete a été exécutée mais n’a affecté aucune ligne à la source de données, les ODBC 3 *.x* pilote doit retourner SQL_SUCCESS. Lorsqu’un ODBC 3 *.x* application utilisant une ODBC 3 *.x* pilote appelle **SQLExecDirect**, **SQLExecute**, ou **SQLParamData** avec le même résultat, la version 3 ODBC *.x* pilote doit retourner SQL_NO_DATA.  

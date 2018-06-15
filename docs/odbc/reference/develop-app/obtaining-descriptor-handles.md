@@ -21,6 +21,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32911954"
 ---
 # <a name="obtaining-descriptor-handles"></a>Obtention de descripteur gère
 Une application obtient le handle du descripteur de n’importe quel explicitement alloué comme un argument de sortie de l’appel à **SQLAllocHandle**. Le handle d’un descripteur implicitement alloué est obtenu en appelant **SQLGetStmtAttr**.

@@ -27,6 +27,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32908584"
 ---
 # <a name="allocating-a-connection-handle-odbc"></a>Allocation d’un descripteur de connexion ODBC
 Avant de l’application peut se connecter à une source de données ou d’un pilote, elle doit allouer un handle de connexion, comme suit :  
