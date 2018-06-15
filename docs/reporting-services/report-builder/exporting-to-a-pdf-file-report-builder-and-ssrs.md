@@ -20,6 +20,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33022956"
 ---
 # <a name="exporting-to-a-pdf-file-report-builder-and-ssrs"></a>Exportation vers un fichier PDF (Générateur de rapports et SSRS)
   L’extension de rendu PDF présente les rapports paginés [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] sous forme de fichiers qui peuvent être ouverts dans des visionneuses telles qu’Adobe Acrobat si elles prennent en charge le format PDF 1.3. Bien que PDF 1.3 soit compatible avec Adobe Acrobat 4.0 et versions ultérieures, [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] prend en charge Adobe Acrobat 11.0 ou version ultérieure. Cette extension de rendu ne nécessite pas les logiciels Adobe pour effectuer le rendu du rapport. Toutefois, les visionneuses PDF comme Adobe Acrobat sont indispensables pour afficher ou imprimer un rapport au format PDF.  

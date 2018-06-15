@@ -20,6 +20,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33020806"
 ---
 # <a name="saving-reports-report-builder"></a>Enregistrement des rapports (Générateur de rapports)
   Dans le Générateur de rapports, vous avez la possibilité d’enregistrer un rapport paginé sur un serveur de rapports [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] , une bibliothèque SharePoint, un partage de fichiers sur lequel vous disposez d’une autorisation d’accès en écriture, ou sur votre ordinateur. 

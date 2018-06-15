@@ -20,6 +20,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33023436"
 ---
 # <a name="images-text-boxes-rectangles-and-lines-report-builder-and-ssrs"></a>Images, zones de texte, rectangles et lignes (Générateur de rapports et SSRS)
   Outre les régions de données telles que les tableaux, les matrices et les graphiques, les rapports paginés [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] utilisent d’autres éléments de rapport, comme des images, des zones de texte ou des rectangles, pour ajouter un attrait visuel, mettre en évidence des informations clés ou fournir des informations connexes. Vous pouvez modifier la mise en forme d'un élément de rapport. Par exemple, vous pouvez ajouter une bordure ou une marge intérieure, modifier la visibilité initiale ou la direction, ou encore spécifier la taille et l'emplacement exacts de l'élément.  
