@@ -27,6 +27,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33031686"
 ---
 # <a name="configurationsetting-property---connectionpoolsize"></a>Propriété ConfigurationSetting - ConnectionPoolSize
   Taille du pool de connexions qu’utilise le serveur de rapports pour communiquer avec l’instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] qui héberge la base de données du serveur de rapports. En lecture seule.  

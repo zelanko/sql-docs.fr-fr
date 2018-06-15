@@ -20,6 +20,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33025356"
 ---
 # <a name="enable-a-report-server-for-power-bi-mobile-access"></a>Activer un serveur de rapports pour un accès Power BI Mobile
 Vous pouvez utiliser l’application Power BI Mobile pour exploiter des rapports mobiles. Vous devez configurer quelques éléments pour permettre à l’application Power BI Mobile de se connecter à Reporting Services.  

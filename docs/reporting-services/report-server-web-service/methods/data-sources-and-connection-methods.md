@@ -26,6 +26,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33025736"
 ---
 # <a name="data-sources-and-connection-methods"></a>Sources de données et méthodes de connexion
   Vous pouvez utiliser les méthodes suivantes pour définir et gérer les connexions et les informations d'identification des sources de données.  

@@ -14,6 +14,7 @@ ms.sourcegitcommit: fc3cd23685c6b9b6972d6a7bab2cc2fc5ebab5f2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/25/2018
+ms.locfileid: "34550894"
 ---
 #<a name="appliance-feature-switch"></a>Commutateur de fonctionnalité d’équipement
 Le **fonctionnalité commutateur** page affiche des informations sur les commutateurs de deux fonctionnalités qui ont été introduites dans AU7 de système de plateforme Analytique. Utilisez cette page pour activer/désactiver les fonctionnalités et les paramètres de système de plateforme d’Analytique ou de mettre à jour. Modification des valeurs de commutateur de fonctionnalité nécessite un redémarrage du service.

@@ -25,6 +25,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33029146"
 ---
 # <a name="secure-folders"></a>Dossiers sécurisés
   La sécurité des dossiers constitue la base de la sécurisation de tout autre contenu du serveur de rapports. Étant donné que la sécurité est héritée au sein de la structure de dossiers, vous pouvez désigner de grandes ou de petites sections de la hiérarchie de dossiers afin d'autoriser certains types d'accès.  
