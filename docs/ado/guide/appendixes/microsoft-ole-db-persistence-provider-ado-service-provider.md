@@ -2,7 +2,6 @@
 title: Fournisseur de persistance Microsoft OLE DB (fournisseur de services ADO) | Documents Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -19,11 +18,12 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 9c47487547153426b2826792c5af0ad3bbeb7371
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 37144f19abfb60d13a24818d8b47a3531affcc08
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35270388"
 ---
 # <a name="microsoft-ole-db-persistence-provider-overview"></a>Vue d’ensemble du fournisseur de persistance Microsoft OLE DB
 Le fournisseur de persistance Microsoft OLE DB vous permet d’enregistrer un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) de l’objet dans un fichier et les restaurer ultérieurement qui **Recordset** objet à partir du fichier. Informations de schéma, les données et les modifications en attente sont conservées.
@@ -40,7 +40,7 @@ Le fournisseur de persistance Microsoft OLE DB vous permet d’enregistrer un [R
 ## <a name="errors"></a>Erreurs
  Les erreurs suivantes émises par ce fournisseur peuvent être détectées dans votre application.
 
-|Constante| Description|
+|Constante|Description|
 |--------------|-----------------|
 |E_BADSTREAM|Le fichier ouvert n’a pas un format valide (autrement dit, le format n’est pas ADTG ou XML).|
 |E_CANTPERSISTROWSET|Le **Recordset** objet enregistré présente des caractéristiques qui l’empêchent d’être stocké.|

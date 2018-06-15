@@ -2,7 +2,6 @@
 title: Fournisseur Microsoft OLE DB pour le Service d’indexation Microsoft | Documents Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -19,11 +18,12 @@ caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 8dc341794d419559b3683c06d51766d2e7b6287a
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: b789802f6a8d565119450183889d238d2e3f498e
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35271308"
 ---
 # <a name="microsoft-ole-db-provider-for-microsoft-indexing-service-overview"></a>Fournisseur Microsoft OLE DB pour l’indexation de vue d’ensemble du Service Microsoft
 Le fournisseur Microsoft OLE DB pour le Service d’indexation Microsoft fournit un accès en lecture seule par programmation pour le système de fichiers et données Web indexées par le Service d’indexation Microsoft. Les applications ADO peuvent émettre des requêtes SQL pour récupérer des informations de propriété de contenu et de fichiers.
@@ -48,7 +48,7 @@ MSIDXS
 
  La chaîne se compose des mots clés suivants :
 
-|Mot clé| Description|
+|Mot clé|Description|
 |-------------|-----------------|
 |**Fournisseur**|Spécifie le fournisseur OLE DB pour le Service d’indexation Microsoft. En général, ceci est le seul mot clé spécifié dans la chaîne de connexion.|
 |**Source de données**|Spécifie le nom de catalogue du Service d’indexation. Si ce mot clé n’est pas spécifié, le catalogue système par défaut est utilisé.|
@@ -105,7 +105,7 @@ MSIDXS
 |[CancelUpdate](../../../ado/reference/ado-api/cancelupdate-method-ado.md)|non|
 |[Clone](../../../ado/reference/ado-api/clone-method-ado.md)|Oui|
 |[Fermer](../../../ado/reference/ado-api/close-method-ado.md)|Oui|
-|[Delete](../../../ado/reference/ado-api/delete-method-ado-recordset.md)|non|
+|[Supprimer](../../../ado/reference/ado-api/delete-method-ado-recordset.md)|non|
 |[GetRows](../../../ado/reference/ado-api/getrows-method-ado.md)|Oui|
 |[Déplacer](../../../ado/reference/ado-api/move-method-ado.md)|Oui|
 |[MoveFirst](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)|Oui|
@@ -113,7 +113,7 @@ MSIDXS
 |[Ouvrir](../../../ado/reference/ado-api/open-method-ado-recordset.md)|Oui|
 |[Requery)](../../../ado/reference/ado-api/requery-method.md)|Oui|
 |[Resynchronisation](../../../ado/reference/ado-api/resync-method.md)|Oui|
-|[Prise en charge](../../../ado/reference/ado-api/supports-method.md)|Oui|
+|[Prend en charge](../../../ado/reference/ado-api/supports-method.md)|Oui|
 |[Update](../../../ado/reference/ado-api/update-method.md)|non|
 |[UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md)|non|
 
