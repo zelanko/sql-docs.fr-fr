@@ -2,7 +2,6 @@
 title: DELETE, méthode (Collection de champs ADO) | Documents Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -21,11 +20,12 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 07256948e8b83c6ddac5000bfb12cf590325fd5f
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 296364d3fafc4a67767699d55631209658657de1
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35277548"
 ---
 # <a name="delete-method-ado-fields-collection"></a>DELETE, méthode (Collection de champs ADO)
 Supprime un objet à partir de la [champs](../../../ado/reference/ado-api/fields-collection-ado.md) collection.  
@@ -38,7 +38,7 @@ Fields.Delete Field
 ```  
   
 #### <a name="parameters"></a>Paramètres  
- *Champ*  
+ *Field*  
  A **Variant** qui désigne le [champ](../../../ado/reference/ado-api/field-object.md) objet à supprimer. Ce paramètre peut être le nom de la **champ** objet ou la position ordinale de la **champ** objet lui-même.  
   
 ## <a name="remarks"></a>Notes  

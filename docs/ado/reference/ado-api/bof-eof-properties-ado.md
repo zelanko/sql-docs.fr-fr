@@ -2,7 +2,6 @@
 title: Début de fichier EOF, propriétés (ADO) | Documents Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -22,18 +21,19 @@ caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 369d6a3b4d069ed67ccc4c4d217aa257c20c79b1
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 36399bf938371a464426b3092dcc95b0ceaa9e09
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35276148"
 ---
 # <a name="bof-eof-properties-ado"></a>Début de fichier EOF, propriétés (ADO)
 -   **BOF** indique que la position actuelle se trouve avant le premier enregistrement dans un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) objet.  
   
 -   **EOF** indique que la position actuelle se trouve après le dernier enregistrement dans un **Recordset** objet.  
   
-## <a name="return-value"></a>Valeur retournée  
+## <a name="return-value"></a>Valeur de retour  
  Le **BOF** et **EOF** propriétés retour **booléenne** valeurs.  
   
 ## <a name="remarks"></a>Notes  
@@ -53,9 +53,9 @@ ms.lasthandoff: 05/03/2018
   
 ||MoveFirst,<br /><br /> MoveLast|MovePrevious,<br /><br /> Déplacer < 0|Déplacer 0|MoveNext,<br /><br /> Déplacer > 0|  
 |------|-----------------------------|---------------------------------|------------|-----------------------------|  
-|**BOF**=**True**, **EOF**=**False**|Autorisé|Erreur|Erreur|Autorisé|  
-|**BOF**=**False**, **EOF**=**True**|Autorisé|Autorisé|Erreur|Erreur|  
-|Les deux **True**|Erreur|Erreur|Erreur|Erreur|  
+|**BOF**=**True**, **EOF**=**False**|Autorisé|Error|Error|Autorisé|  
+|**BOF**=**False**, **EOF**=**True**|Autorisé|Autorisé|Error|Error|  
+|Les deux **True**|Error|Error|Error|Error|  
 |Les deux **False**|Autorisé|Autorisé|Autorisé|Autorisé|  
   
  Ce qui permet une **déplacer** méthode ne garantit pas que la méthode parviendra à localiser un enregistrement ; cela signifie uniquement que l’appel spécifié **déplacer** méthode ne génère pas d’une erreur.  

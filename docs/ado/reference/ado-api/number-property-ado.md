@@ -2,7 +2,6 @@
 title: Number, propriété (ADO) | Documents Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -22,16 +21,17 @@ caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 592390f1ae5fd6e1e8087d7c33062e2b271af3eb
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 3fca9c0eb3adf908b65c16e54ffb21e9d0ae49e0
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35279940"
 ---
 # <a name="number-property-ado"></a>Number, propriété (ADO)
 Indique le numéro qui identifie de façon unique un [erreur](../../../ado/reference/ado-api/error-object.md) objet.  
   
-## <a name="return-value"></a>Valeur retournée  
+## <a name="return-value"></a>Valeur de retour  
  Retourne un **Long** valeur pouvant correspondre à un de le [ErrorValueEnum](../../../ado/reference/ado-api/errorvalueenum.md) constantes.  
   
 ## <a name="remarks"></a>Notes  

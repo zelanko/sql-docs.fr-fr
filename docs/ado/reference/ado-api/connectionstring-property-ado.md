@@ -2,7 +2,6 @@
 title: ConnectionString, propriété (ADO) | Documents Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,11 +19,12 @@ caps.latest.revision: 18
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 7b34a524380439dba07d12aa74ef24a870ab8ccc
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 9a7804257f705e05b1ac5cfdcdb034de4fd20cec
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35277038"
 ---
 # <a name="connectionstring-property-ado"></a>ConnectionString, propriété (ADO)
 Indique les informations utilisées pour établir une connexion à une source de données.  
@@ -37,7 +37,7 @@ Indique les informations utilisées pour établir une connexion à une source de
   
  ADO prend en charge cinq arguments pour la **ConnectionString** propriété ; toutes les autres passe arguments directement au fournisseur sans aucun traitement par ADO. Le prend en charge de ADO arguments est les suivantes.  
   
-|Argument| Description|  
+|Argument|Description|  
 |--------------|-----------------|  
 |*Fournisseur =*|Spécifie le nom d’un fournisseur à utiliser pour la connexion.|  
 |*Nom du fichier =*|Spécifie le nom d’un fichier spécifique au fournisseur (par exemple, un objet de source de données persistantes) contenant des informations de connexion prédéfinies.|  

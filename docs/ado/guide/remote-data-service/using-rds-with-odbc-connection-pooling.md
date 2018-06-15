@@ -2,7 +2,6 @@
 title: À l’aide des services Bureau à distance avec une connexion ODBC mise en pool | Documents Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -17,11 +16,12 @@ caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: d38a0d41ae5cdf0c1f40db21420fd39edca72237
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 416cbadf4d77ab9c7325c5f874f9818c4e05d8e5
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35274648"
 ---
 # <a name="using-rds-with-odbc-connection-pooling"></a>À l’aide des services Bureau à distance avec une connexion ODBC mise en pool
 Si vous utilisez une source de données ODBC, vous pouvez utiliser l’option dans Internet Information Services (IIS) de regroupement de connexions pour bénéficier d’une gestion de la charge client hautes performances. Le regroupement de connexions est un gestionnaire de ressources pour les connexions, en conservant l’état ouvert sur les connexions fréquemment utilisées.  

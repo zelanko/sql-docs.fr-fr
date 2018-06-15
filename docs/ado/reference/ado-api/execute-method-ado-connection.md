@@ -2,7 +2,6 @@
 title: Execute (méthode) (connexion ADO) | Documents Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -21,11 +20,12 @@ caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 27f99015571bd7abdad402dc0f779c04fd546a79
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 27d3f5318d093d18312dd531421f5c32755aeaf1
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35278138"
 ---
 # <a name="execute-method-ado-connection"></a>Execute (méthode) (connexion ADO)
 Exécute la requête spécifiée, l’instruction SQL, une procédure stockée ou du texte spécifique au fournisseur.  
@@ -38,7 +38,7 @@ Set recordset = connection.Execute (CommandText, RecordsAffected, Options)
 Set recordset = connection.Execute (CommandText, RecordsAffected, Options)  
 ```  
   
-## <a name="return-value"></a>Valeur retournée  
+## <a name="return-value"></a>Valeur de retour  
  Retourne un [objet Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md) référence d’objet.  
   
 #### <a name="parameters"></a>Paramètres  
@@ -46,10 +46,10 @@ Set recordset = connection.Execute (CommandText, RecordsAffected, Options)
  A **chaîne** valeur qui contient l’instruction SQL, procédure stockée, une URL ou spécifiques au fournisseur du texte à exécuter. **Si vous le souhaitez**, noms de table peuvent être utilisés uniquement si le fournisseur est compatible SQL. Exemple si un nom de la table « Customers » est utilisé, ADO ajoute automatiquement la syntaxe SQL Select standard pour créer et de passer « SELECT * FROM Customers » en tant qu’un [!INCLUDE[tsql](../../../includes/tsql_md.md)] instruction au fournisseur.  
   
  *RecordsAffected*  
- Ce paramètre est facultatif. A **Long** variable sur laquelle le fournisseur retourne le nombre d’enregistrements affectée par l’opération.  
+ Facultatif. A **Long** variable sur laquelle le fournisseur retourne le nombre d’enregistrements affectée par l’opération.  
   
  *Options*  
- Ce paramètre est facultatif. A **Long** valeur qui indique la manière dont le fournisseur doit évaluer l’argument CommandText. Peut être un masque de bits d’une ou plusieurs [CommandTypeEnum](../../../ado/reference/ado-api/commandtypeenum.md) ou [ExecuteOptionEnum](../../../ado/reference/ado-api/executeoptionenum.md) valeurs.  
+ Facultatif. A **Long** valeur qui indique la manière dont le fournisseur doit évaluer l’argument CommandText. Peut être un masque de bits d’une ou plusieurs [CommandTypeEnum](../../../ado/reference/ado-api/commandtypeenum.md) ou [ExecuteOptionEnum](../../../ado/reference/ado-api/executeoptionenum.md) valeurs.  
   
  **Remarque** utilisez la **ExecuteOptionEnum** valeur **adExecuteStream** pour améliorer les performances en réduisant le traitement interne et pour les applications que vous portez à partir de Visual Basic 6.0.  
   

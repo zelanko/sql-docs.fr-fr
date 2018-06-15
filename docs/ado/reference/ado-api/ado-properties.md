@@ -2,7 +2,6 @@
 title: Propriétés ADO | Documents Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -18,11 +17,12 @@ caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: faf6f2c0bee80ae3f8b59a9b8241226facc89edb
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 1d8df3fdea1c8e5666593dfa63666ed2c051c3b4
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35275578"
 ---
 # <a name="ado-properties"></a>Propriétés ADO
 |||  
@@ -44,7 +44,7 @@ ms.lasthandoff: 05/03/2018
 |[CommandType](../../../ado/reference/ado-api/commandtype-property-ado.md)|Indique le type d’un **commande** objet.|  
 |[Propriété ConnectionString](../../../ado/reference/ado-api/connectionstring-property-ado.md)|Indique les informations utilisées pour établir une connexion à une source de données.|  
 |[ConnectionTimeout](../../../ado/reference/ado-api/connectiontimeout-property-ado.md)|Indique le délai d’attente lors de l’établissement d’une connexion avant d’abandonner la tentative et de générer une erreur.|  
-|[Compter](../../../ado/reference/ado-api/count-property-ado.md)|Indique le nombre d’objets dans une collection.|  
+|[Nombre](../../../ado/reference/ado-api/count-property-ado.md)|Indique le nombre d’objets dans une collection.|  
 |[CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md)|Indique l’emplacement du service de curseur.|  
 |[CursorType](../../../ado/reference/ado-api/cursortype-property-ado.md)|Indique le type de curseur utilisé dans un **Recordset** objet.|  
 |[DataMember](../../../ado/reference/ado-api/datamember-property.md)|Indique le nom du membre de données qui est récupérée à partir de l’objet référencé par le **DataSource** propriété.|  
@@ -53,7 +53,7 @@ ms.lasthandoff: 05/03/2018
 |[DefinedSize](../../../ado/reference/ado-api/definedsize-property.md)|Indique la capacité de données d’une **champ** objet.|  
 |[Description](../../../ado/reference/ado-api/description-property.md)|Décrit un **erreur** objet.|  
 |[Dialecte](../../../ado/reference/ado-api/dialect-property.md)|Indique la syntaxe et les règles générales que le fournisseur utilise pour analyser les **CommandText** ou **CommandStream** propriétés.|  
-|[Direction](../../../ado/reference/ado-api/direction-property.md)|Indique si le **paramètre** représente un paramètre d’entrée, un paramètre de sortie ou les deux, ou si le paramètre est la valeur de retour d’une procédure stockée.|  
+|[Sens](../../../ado/reference/ado-api/direction-property.md)|Indique si le **paramètre** représente un paramètre d’entrée, un paramètre de sortie ou les deux, ou si le paramètre est la valeur de retour d’une procédure stockée.|  
 |[EditMode](../../../ado/reference/ado-api/editmode-property.md)|Indique l’état de modification de l’enregistrement actif.|  
 |[EOS](../../../ado/reference/ado-api/eos-property.md)|Indique si la position actuelle est à la fin du flux de données.|  
 |[Filtre](../../../ado/reference/ado-api/filter-property.md)|Indique un filtre pour les données dans un **Recordset**.|  

@@ -2,7 +2,6 @@
 title: Méthodes ADO | Documents Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -18,17 +17,18 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 7a774f4be083e87b81f2200305faaa1802c84c52
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: c07679210b359517815a245069db95eb6e15b84e
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35275558"
 ---
 # <a name="ado-methods"></a>Méthodes ADO
 |||  
 |-|-|  
 |[AddNew](../../../ado/reference/ado-api/addnew-method-ado.md)|Crée un nouvel enregistrement pour être une mise à jour **Recordset** objet.|  
-|[Append](../../../ado/reference/ado-api/append-method-ado.md)|Ajoute un objet à une collection. Si la collection est **champs**, un nouveau **champ** objet peut être créé avant d’être ajouté à la collection.|  
+|[Ajouter](../../../ado/reference/ado-api/append-method-ado.md)|Ajoute un objet à une collection. Si la collection est **champs**, un nouveau **champ** objet peut être créé avant d’être ajouté à la collection.|  
 |[AppendChunk](../../../ado/reference/ado-api/appendchunk-method-ado.md)|Ajoute des données à un texte de grande taille ou les données binaires **champ**, ou à un **paramètre** objet.|  
 |[BeginTrans, CommitTrans et RollbackTrans](../../../ado/reference/ado-api/begintrans-committrans-and-rollbacktrans-methods-ado.md)|Gère le traitement des transactions dans un **connexion** de l’objet comme suit :<br /><br /> **BeginTrans** : démarre une nouvelle transaction.<br /><br /> **CommitTrans** : enregistre les modifications et termine la transaction actuelle. Il peut également démarrer une nouvelle transaction.<br /><br /> **RollbackTrans** : annule les modifications et termine la transaction actuelle. Il peut également démarrer une nouvelle transaction.|  
 |[Annuler](../../../ado/reference/ado-api/cancel-method-ado.md)|Annule l’exécution d’un statut en attente, appel de méthode asynchrone.|  
@@ -66,7 +66,7 @@ ms.lasthandoff: 05/03/2018
 |[Open (flux ADO)](../../../ado/reference/ado-api/open-method-ado-stream.md)|Ouvre un **flux** objet à manipuler des flux de données binaire ou texte.|  
 |[OpenSchema](../../../ado/reference/ado-api/openschema-method.md)|Obtient les informations de schéma de base de données à partir du fournisseur.|  
 |[put_OLEDBCommand, méthode](../../../ado/reference/ado-api/put-oledbcommand-method.md)|Cette méthode n’effectue aucune opération - toujours retourne S_OK.|  
-|[Lecture](../../../ado/reference/ado-api/read-method.md)|Lit un nombre spécifié d’octets d’un **flux** objet.|  
+|[En lecture](../../../ado/reference/ado-api/read-method.md)|Lit un nombre spécifié d’octets d’un **flux** objet.|  
 |[ReadText](../../../ado/reference/ado-api/readtext-method.md)|Lit un nombre spécifié de caractères à partir d’un fichier texte **flux** objet.|  
 |[Actualiser](../../../ado/reference/ado-api/refresh-method-ado.md)|Met à jour les objets dans une collection afin de refléter les objets disponibles à partir d’et spécifiques au fournisseur.|  
 |[Requery)](../../../ado/reference/ado-api/requery-method.md)|Met à jour les données dans un **Recordset** objet en réexécutant la requête sur laquelle l’objet est basé.|  
@@ -77,7 +77,7 @@ ms.lasthandoff: 05/03/2018
 |[SetEOS](../../../ado/reference/ado-api/seteos-method.md)|Définit la position qui représente la fin du flux de données.|  
 |[SkipLine](../../../ado/reference/ado-api/skipline-method.md)|Ignore une ligne complète lors de la lecture d’un flux de texte.|  
 |[Stat](../../../ado/reference/ado-api/stat-method.md)|Obtient des informations statistiques sur un flux ouvert.|  
-|[Prise en charge](../../../ado/reference/ado-api/supports-method.md)|Détermine si un **Recordset** objet prend en charge un type particulier de fonctionnalité.|  
+|[Prend en charge](../../../ado/reference/ado-api/supports-method.md)|Détermine si un **Recordset** objet prend en charge un type particulier de fonctionnalité.|  
 |[Update](../../../ado/reference/ado-api/update-method.md)|Enregistre les modifications apportées à la ligne actuelle d’un **Recordset** objet, ou le **champs** collection d’un **enregistrement** objet.|  
 |[UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md)|Écrit toutes les mises à jour par lot en attente sur le disque.|  
 |[Écriture](../../../ado/reference/ado-api/write-method.md)|Écrit des données binaires à une **flux** objet.|  

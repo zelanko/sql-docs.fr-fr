@@ -2,7 +2,6 @@
 title: GetChildren, méthode (ADO) | Documents Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -21,11 +20,12 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 9f385753f2e9dee3d99e4a6b41891ef69f4b70c0
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: a920d0e7b45394f5714cd8f9df83751a322b9401
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35278848"
 ---
 # <a name="getchildren-method-ado"></a>GetChildren, méthode (ADO)
 Retourne un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) dont les lignes représentent les enfants d’une collection [enregistrement](../../../ado/reference/ado-api/record-object-ado.md).  
@@ -37,7 +37,7 @@ Retourne un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) 
 Set recordset = record.GetChildren  
 ```  
   
-## <a name="return-value"></a>Valeur retournée  
+## <a name="return-value"></a>Valeur de retour  
  A **Recordset** objet pour lequel chaque ligne représente un enfant d’actuel **enregistrement** objet. Par exemple, les enfants d’un **enregistrement** que représente un répertoire, sont les fichiers et sous-répertoires contenus dans le répertoire parent.  
   
 ## <a name="remarks"></a>Notes  

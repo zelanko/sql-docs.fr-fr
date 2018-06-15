@@ -2,7 +2,6 @@
 title: SeekEnum | Documents Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,18 +19,19 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 0fcf7dabb3c12f7919c317c7ecabeaf51995fe85
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 2f61e71b03a05a8e13c1b069e4880f362ff0985a
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35281588"
 ---
 # <a name="seekenum"></a>SeekEnum
 Spécifie le type de [recherche](../../../ado/reference/ado-api/seek-method.md) à exécuter.  
   
-|Constante|Valeur| Description|  
+|Constante|Valeur|Description|  
 |--------------|-----------|-----------------|  
-|**adSeekFirstEQ**|1|Recherche la première clé égale à *KeyValues*.|  
+|**adSeekFirstEQ**| 1|Recherche la première clé égale à *KeyValues*.|  
 |**adSeekLastEQ**|2|Recherche la dernière clé égale à *KeyValues*.|  
 |**adSeekAfterEQ**|4|Recherche soit une clé égale à *KeyValues* ou juste après l’où cette correspondance.|  
 |**adSeekAfter**|8|Recherche une clé juste après l’emplacement où une correspondance avec *KeyValues* auraient eu lieu.|  

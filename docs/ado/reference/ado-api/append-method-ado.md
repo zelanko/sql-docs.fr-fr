@@ -2,7 +2,6 @@
 title: Append (méthode) (ADO) | Documents Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,11 +19,12 @@ caps.latest.revision: 18
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 22e33175e9a52891f8e9fbd3eb2e6b637a0788bb
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: b887ece3551b2ef88bc9b61037c0f2ddebd75f5e
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35275898"
 ---
 # <a name="append-method-ado"></a>Append (méthode) (ADO)
 Ajoute un objet à une collection. Si la collection est [champs](../../../ado/reference/ado-api/fields-collection-ado.md), un nouveau [champ](../../../ado/reference/ado-api/field-object.md) objet peut être créé avant d’être ajouté à la collection.  
@@ -44,7 +44,7 @@ fields.Append Name, Type, DefinedSize, Attrib, FieldValue
  *Champs*  
  A **champs** collection.  
   
- *objet*  
+ *object*  
  Une variable objet qui représente l’objet à ajouter.  
   
  *Nom*  
@@ -54,13 +54,13 @@ fields.Append Name, Type, DefinedSize, Attrib, FieldValue
  A [DataTypeEnum](../../../ado/reference/ado-api/datatypeenum.md) valeur dont la valeur par défaut est **adEmpty**, qui spécifie le type de données du nouveau champ. Types de données suivants ne sont pas pris en charge par ADO et de ne doit pas être utilisée lorsque l’ajout de nouveaux champs à un [objet Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md): **adIDispatch**, **adIUnknown**, **adVariant**.  
   
  *DefinedSize*  
- Ce paramètre est facultatif. A **Long** valeur qui représente la taille définie, en caractères ou en octets, du nouveau champ. La valeur par défaut pour ce paramètre est dérivée de *Type*. Champs qui ont un *DefinedSize* supérieure à 255 octets sont traités comme des colonnes de longueur variable. La valeur par défaut pour *DefinedSize* n’est pas spécifié.  
+ Facultatif. A **Long** valeur qui représente la taille définie, en caractères ou en octets, du nouveau champ. La valeur par défaut pour ce paramètre est dérivée de *Type*. Champs qui ont un *DefinedSize* supérieure à 255 octets sont traités comme des colonnes de longueur variable. La valeur par défaut pour *DefinedSize* n’est pas spécifié.  
   
  *Attrib*  
- Ce paramètre est facultatif. A [FieldAttributeEnum](../../../ado/reference/ado-api/fieldattributeenum.md) valeur dont la valeur par défaut est **adFldDefault**, qui spécifie les attributs pour le nouveau champ. Si cette valeur n’est pas spécifiée, le champ contient les attributs dérivés de *Type*.  
+ Facultatif. A [FieldAttributeEnum](../../../ado/reference/ado-api/fieldattributeenum.md) valeur dont la valeur par défaut est **adFldDefault**, qui spécifie les attributs pour le nouveau champ. Si cette valeur n’est pas spécifiée, le champ contient les attributs dérivés de *Type*.  
   
  *FieldValue*  
- Ce paramètre est facultatif. A **Variant** qui représente la valeur du nouveau champ. Si non spécifié, le champ est ajouté avec une valeur null.  
+ Facultatif. A **Variant** qui représente la valeur du nouveau champ. Si non spécifié, le champ est ajouté avec une valeur null.  
   
 ## <a name="remarks"></a>Notes  
   

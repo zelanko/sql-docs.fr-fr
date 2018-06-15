@@ -2,7 +2,6 @@
 title: NextRecordset, méthode (ADO) | Documents Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 03/20/2018
@@ -22,11 +21,12 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 1773c2bd8709a429a2e388b8a38a192107f2e7f3
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: a1df02b14168a15f9bccc476b62583334b2f0c3f
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35279638"
 ---
 # <a name="nextrecordset-method-ado"></a>NextRecordset, méthode (ADO)
 Efface l’actuel [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) de l’objet et renvoie la prochaine **Recordset** en exécutant une série de commandes.  
@@ -38,12 +38,12 @@ Efface l’actuel [Recordset](../../../ado/reference/ado-api/recordset-object-ad
 Set recordset2 = recordset1.NextRecordset(RecordsAffected )  
 ```  
   
-## <a name="return-value"></a>Valeur retournée  
+## <a name="return-value"></a>Valeur de retour  
  Retourne un **Recordset** objet. Dans le modèle de syntaxe, *recordset1* et *recordset2* peuvent être les mêmes **Recordset** objet, ou vous pouvez utiliser des objets distincts. Lors de l’utilisation de distinct **Recordset** objets, la réinitialisation de la **ActiveConnection** propriété sur l’original **Recordset** (*recordset1*) une fois **NextRecordset** a été appelé va générer une erreur.  
   
 #### <a name="parameters"></a>Paramètres  
  *RecordsAffected*  
- Ce paramètre est facultatif. A **Long** variable sur laquelle le fournisseur retourne le nombre d’enregistrements affectée par l’opération en cours.  
+ Facultatif. A **Long** variable sur laquelle le fournisseur retourne le nombre d’enregistrements affectée par l’opération en cours.  
   
 > [!NOTE]
 >  Ce paramètre retourne uniquement le nombre d’enregistrements affectés par une opération ; Il ne retourne pas le nombre d’enregistrements à partir d’une instruction select utilisée pour générer le **Recordset**.  

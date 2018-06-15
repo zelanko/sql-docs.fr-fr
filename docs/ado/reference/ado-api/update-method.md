@@ -2,7 +2,6 @@
 title: La méthode Update | Documents Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,11 +19,12 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 2c0a5cd4e12848ecdec7c3c5168b6106dd95215c
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 3ae65fa263d672c80fb886c5e1f212a8a189bf38
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35282758"
 ---
 # <a name="update-method"></a>Update (méthode)
 Enregistre les modifications apportées à la ligne actuelle d’un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) objet, ou le [champs](../../../ado/reference/ado-api/fields-collection-ado.md) collection d’un [enregistrement](../../../ado/reference/ado-api/record-object-ado.md) objet.  
@@ -39,10 +39,10 @@ record.Fields.Update
   
 #### <a name="parameters"></a>Paramètres  
  *Fields*  
- Ce paramètre est facultatif. A **Variant** qui représente un nom unique, ou un **Variant** tableau qui représente les noms ou les positions ordinales des champs que vous souhaitez modifier.  
+ Facultatif. A **Variant** qui représente un nom unique, ou un **Variant** tableau qui représente les noms ou les positions ordinales des champs que vous souhaitez modifier.  
   
  *Valeurs*  
- Ce paramètre est facultatif. A **Variant** qui représente une valeur unique, ou un **Variant** tableau qui représente les valeurs pour les champs dans le nouvel enregistrement.  
+ Facultatif. A **Variant** qui représente une valeur unique, ou un **Variant** tableau qui représente les valeurs pour les champs dans le nouvel enregistrement.  
   
 ## <a name="remarks"></a>Notes  
   

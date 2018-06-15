@@ -2,7 +2,6 @@
 title: PageSize, propriété (ADO) | Documents Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,11 +19,12 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: cbd3b9e335d32cd1d93d8c079bca39b535096049
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: aea2e9510f80f8cd0d15bfbc2f7f544055b65884
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35280058"
 ---
 # <a name="pagesize-property-ado"></a>PageSize, propriété (ADO)
 Indique le nombre d’enregistrements constitue une page dans le [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md).  
