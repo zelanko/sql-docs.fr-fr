@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/26/2018
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: php
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: connectivity
@@ -22,11 +21,12 @@ caps.latest.revision: 52
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 3a6df21ff42d0394b153aa97a0b5639fe47beec9
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: aab41821d2f4eb1eb3f92ce998fe440593567d0a
+ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35308968"
 ---
 # <a name="sqlsrvfetcharray"></a>sqlsrv_fetch_array
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -45,11 +45,11 @@ sqlsrv_fetch_array( resource $stmt[, int $fetchType [, row[, ]offset]])
   
 *$fetchType* [facultatif] : constante prédéfinie. Ce paramètre peut prendre l’une des valeurs répertoriées dans le tableau suivant :  
   
-|Valeur| Description|  
+|Valeur|Description|  
 |---------|---------------|  
 |SQLSRV_FETCH_NUMERIC|La ligne de données suivante est retournée sous forme de tableau numérique.|  
 |SQLSRV_FETCH_ASSOC|La ligne de données suivante est retournée sous forme de tableau associatif. Les clés de tableau sont les noms des colonnes dans le jeu de résultats.|  
-|SQLSRV_FETCH_BOTH|La ligne de données suivante est retournée à la fois comme tableau numérique et comme tableau associatif. Ceci est la valeur par défaut.|  
+|SQLSRV_FETCH_BOTH|La ligne de données suivante est retournée à la fois comme tableau numérique et comme tableau associatif. Il s'agit de la valeur par défaut.|  
   
 *ligne* [facultatif] : ajouté dans la version 1.1. L’une des valeurs suivantes, spécifiant la ligne à laquelle accéder dans un jeu de résultats qui utilise un curseur permettant le défilement. (Lorsque *ligne* est spécifié, *fetchtype* doit être explicitement spécifié, même si vous spécifiez la valeur par défaut.)  
   
@@ -64,7 +64,7 @@ Pour plus d’informations sur ces valeurs, consultez [Spécification d’un typ
   
 *décalage* [facultatif] : utilisé avec SQLSRV_SCROLL_ABSOLUTE et SQLSRV_SCROLL_RELATIVE pour spécifier la ligne à récupérer. Le premier enregistrement dans le jeu de résultats est 0.  
   
-## <a name="return-value"></a>Valeur retournée  
+## <a name="return-value"></a>Valeur de retour  
 Si une ligne de données est récupérée, un **tableau** est retourné. S’il n’y a plus aucune ligne à récupérer, la valeur **null** est retournée. Si une erreur se produit, la valeur **false** est retournée.  
   
 En fonction de la valeur du paramètre *$fetchType* , le **tableau** retourné peut être un **tableau**indexé numériquement, un **tableau**associatif, ou les deux. Par défaut, un **tableau** avec des clés numériques et associatives est retourné. Le type de données d’une valeur dans le tableau retourné sera le type de données PHP par défaut. Pour plus d’informations sur les types de données PHP par défaut, consultez [Default PHP Data Types](../../connect/php/default-php-data-types.md).  

@@ -17,11 +17,12 @@ caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: b2fc52c7bd989884b80c489801e76b51981270c7
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 41e5c18119e8ec3482e6cddbdaee26bf10d6b1d0
+ms.sourcegitcommit: fd9c33b93c886dcb00a48967b6c245631fd559bf
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/14/2018
+ms.locfileid: "35619516"
 ---
 # <a name="binding-parameters-by-name-named-parameters"></a>Liaison de paramètres par nom (paramètres nommés)
 Certains SGBD permettre à une application spécifier les paramètres à une procédure stockée par nom et non par la position dans l’appel de procédure. Ces paramètres sont appelés *des paramètres nommés*. ODBC prend en charge l’utilisation de paramètres nommés. Dans ODBC, les paramètres nommés sont utilisés uniquement dans les appels aux procédures stockées et ne peut pas être utilisés dans d’autres instructions SQL.  
@@ -41,7 +42,7 @@ Certains SGBD permettre à une application spécifier les paramètres à une pro
 CREATE PROCEDURE test @title_id int = 1, @quote char(30) AS <blah>  
 ```  
   
- Dans cette procédure, le premier paramètre, @title_id, a la valeur par défaut de 1. Une application peut utiliser le code suivant pour appeler cette procédure telle qu’elle ne spécifie qu’un seul paramètre dynamique. Ce paramètre est un paramètre nommé avec le nom «@quote».  
+ Dans cette procédure, le premier paramètre, @title_id, a la valeur par défaut de 1. Une application peut utiliser le code suivant pour appeler cette procédure telle qu’elle ne spécifie qu’un seul paramètre dynamique. Ce paramètre est un paramètre nommé avec le nom «\@devis ».  
   
 ```  
 // Prepare the procedure invocation statement.  

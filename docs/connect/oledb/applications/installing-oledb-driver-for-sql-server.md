@@ -2,7 +2,7 @@
 title: L’installation du pilote OLE DB pour SQL Server | Documents Microsoft
 description: Installation et désinstallation du pilote OLE DB pour SQL Server
 ms.custom: ''
-ms.date: 03/26/2018
+ms.date: 06/12/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.component: oledb|applications
@@ -25,14 +25,15 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 0cbe9e82dac58e3ba4d15f4a608d914c73987af1
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: e8d238c288e42b2b5f53f2ce5b9f289c05ab1c11
+ms.sourcegitcommit: 354ed9c8fac7014adb0d752518a91d8c86cdce81
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/14/2018
+ms.locfileid: "35611664"
 ---
 # <a name="installing-ole-db-driver-for-sql-server"></a>Installation du pilote OLE DB pour SQL Server
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
@@ -50,7 +51,7 @@ Vous pouvez distribuer le pilote OLE DB pour SQL Server via msoledbsql.msi. Vous
   
 Le x64 msoledbsql.msi installe également la version 32 bits du pilote OLE DB pour SQL Server. Si votre application cible une plateforme autre que celui qu’il a été développée, vous pouvez télécharger des versions de msoledbsql.msi pour x64 et x86.
 
-Lorsque vous appelez msoledbsql.msi, seuls les composants clients sont installés par défaut. Le client sont des composants sont des fichiers qui prennent en charge l’exécution d’une application qui a été développée à l’aide du pilote OLE DB pour SQL Server. Pour installer également les composants SDK, spécifiez `ADDLOCAL=All` dans la ligne de commande. Par exemple :  
+Lorsque vous appelez msoledbsql.msi, seuls les composants clients sont installés par défaut. Le client sont des composants sont des fichiers qui prennent en charge l’exécution d’une application qui a été développée à l’aide du pilote OLE DB pour SQL Server. Pour installer également les composants SDK, spécifiez `ADDLOCAL=All` dans la ligne de commande. Exemple :  
 
 `msiexec /i msoledbsql.msi ADDLOCAL=ALL`  
 

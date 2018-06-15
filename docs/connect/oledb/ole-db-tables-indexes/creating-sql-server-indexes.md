@@ -5,7 +5,6 @@ ms.custom: ''
 ms.date: 03/26/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: ole-db-tables-indexes
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: connectivity
@@ -20,11 +19,12 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 4f1169ac498362d8716f532b08f8928cac507287
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 9648462e65ed85b5a9652e193dc63d30059c0753
+ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35306868"
 ---
 # <a name="creating-sql-server-indexes"></a>Création d'index SQL Server
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -45,7 +45,7 @@ ms.lasthandoff: 05/03/2018
   
  **CreateIndex** interprète les propriétés de l’index comme suit.  
   
-|ID de propriété| Description|  
+|ID de propriété|Description|  
 |-----------------|-----------------|  
 |DBPROP_INDEX_AUTOUPDATE|R/W : lecture/écriture<br /><br /> Valeur par défaut : aucune<br /><br /> Description : Le pilote OLE DB pour SQL Server ne prend pas en charge cette propriété. Tente de définir la propriété **CreateIndex** entraînent une valeur de retour DB_S_ERRORSOCCURRED. Le *dwStatus* membre de la structure de propriété indique DBPROPSTATUS_BADVALUE.|  
 |DBPROP_INDEX_CLUSTERED|R/W : lecture/écriture<br /><br /> Valeur par défaut : VARIANT_FALSE<br /><br /> Description : contrôle le clustering d'index.<br /><br /> VARIANT_TRUE : Le pilote OLE DB pour SQL Server tente de créer un index cluster sur la [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] table. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] prend en charge au plus un index cluster sur une table.<br /><br /> VARIANT_FALSE : Le pilote OLE DB pour SQL Server tente de créer un index non cluster sur la [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] table.|  
@@ -61,7 +61,7 @@ ms.lasthandoff: 05/03/2018
   
  Dans l’ensemble de la propriété spécifique au fournisseur DBPROPSET_SQLSERVERINDEX, le pilote OLE DB pour SQL Server définit la propriété suivante d’informations de source de données.  
   
-|ID de propriété| Description|  
+|ID de propriété|Description|  
 |-----------------|-----------------|  
 |SSPROP_INDEX_XML|Type : VT_BOOL (R/W)<br /><br /> Valeur par défaut : VARIANT_FALSE<br /><br /> Description : lorsque cette propriété est spécifiée avec la valeur VARIANT_TRUE avec IIndexDefinition::CreateIndex, il s'ensuit la création d'un index xml primaire, correspondant à la colonne indexée. Si cette propriété est VARIANT_TRUE, cIndexColumnDescs doit être 1, sinon, il s'agit d'une erreur.|  
   
@@ -157,6 +157,6 @@ HRESULT CreatePrimaryKey
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Tables et des index](../../oledb/ole-db-tables-indexes/tables-and-indexes.md)  
+ [Tables et index](../../oledb/ole-db-tables-indexes/tables-and-indexes.md)  
   
   

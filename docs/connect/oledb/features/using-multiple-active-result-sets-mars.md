@@ -2,7 +2,7 @@
 title: À l’aide de jeux de résultats actifs multiples (MARS) | Documents Microsoft
 description: Utilisation de MARS (Multiple Active Result Sets)
 ms.custom: ''
-ms.date: 03/26/2018
+ms.date: 06/12/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.component: oledb|features
@@ -21,14 +21,17 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: c086df79bff70013540b8b3c0c31a1a6216972df
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: bd0254bfd632c9ae0d3145e745c932757fd6d808
+ms.sourcegitcommit: 354ed9c8fac7014adb0d752518a91d8c86cdce81
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/14/2018
+ms.locfileid: "35612084"
 ---
 # <a name="using-multiple-active-result-sets-mars"></a>Utilisation de MARS (Multiple Active Result Sets)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+
+[!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
   [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] introduction du support pour les ensembles de résultats actifs multiples (MARS) dans les applications qui accèdent à la [!INCLUDE[ssDE](../../../includes/ssde-md.md)]. Dans les versions antérieures de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], les applications de base de données ne pouvaient pas gérer plusieurs instructions actives sur une connexion. Lors de l'utilisation de jeux de résultats [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] par défaut, l'application devait traiter ou annuler tous les jeux de résultats d'un lot avant de pouvoir exécuter tout autre lot sur cette connexion. Un nouvel attribut de connexion a été introduit dans [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] de manière à ce que les applications puissent gérer plus d'une demande en attente par connexion et, plus spécifiquement, pour qu'elles puissent avoir plus d'un jeu de résultats par défaut actif par connexion.  
   
@@ -55,11 +58,11 @@ ms.lasthandoff: 05/03/2018
   
  Pilote OLE DB pour SQL Server ne limite pas le nombre d’instructions actives sur une connexion.  
   
- Les applications conventionnelles n'ayant pas besoin que plus d'un traitement à instructions multiples ou plus d'une procédure stockée s'exécute simultanément peuvent tirer parti de MARS sans avoir à comprendre comment ce dernier est implémenté. Toutefois, les applications ayant des exigences plus complexes doivent prendre ceci compte.  
+ Applications classiques que vous n’avez pas besoin d’avoir plus qu’un seul lot à instructions multiples ou une procédure stockée s’exécute en même temps bénéficieront de MARS sans avoir à comprendre la façon dont ce dernier est implémenté. Toutefois, les applications ayant des exigences plus complexes doivent prendre ceci compte.  
   
  MARS permet l'exécution entrelacée de plusieurs demandes au sein d'une connexion unique. Autrement dit, il permet à un traitement de s'exécuter, et au sein de cette exécution, il permet à d'autres demandes de s'exécuter. Notez toutefois que MARS est défini en terme d'entrelacement et non en terme d'exécution parallèle.  
   
- L'infrastructure de MARS permet l'exécution entrelacée de plusieurs traitements, mais l'exécution ne peut être basculée qu'à des points bien définis. Par ailleurs, la plupart des instructions doivent s'exécuter atomiquement au sein d'un lot. Les instructions qui retournent des lignes au client, qui sont parfois appelés *points d’interruption*, sont autorisées à entrelacer l’exécution avant la fin, tandis que les lignes sont envoyées au client, par exemple :  
+ L’infrastructure de MARS permet plusieurs lots à exécuter de façon entrelacée, bien que l’exécution peut être uniquement à des points bien définis. Par ailleurs, la plupart des instructions doivent s'exécuter atomiquement au sein d'un lot. Les instructions qui retournent des lignes au client, qui sont parfois appelés *points d’interruption*, sont autorisées à entrelacer l’exécution avant la fin, tandis que les lignes sont envoyées au client, par exemple :  
   
 -   SELECT  
   
@@ -79,7 +82,7 @@ ms.lasthandoff: 05/03/2018
  Pour obtenir un exemple d’utilisation de MARS à partir d’ADO, consultez [à l’aide d’ADO avec le pilote OLE DB pour SQL Server](../../oledb/applications/using-ado-with-oledb-driver-for-sql-server.md).  
   
 ## <a name="in-memory-oltp"></a>OLTP en mémoire  
- OLTP en mémoire prend en charge de MARS, à l’aide de requêtes et les procédures stockées compilées en mode natif. MARS permet de demander des données à partir de plusieurs requêtes sans devoir complètement récupérer chaque jeu de résultats avant envoi d’une demande pour extraire les lignes à partir d’un jeu de résultats. Pour pouvoir lire à partir de plusieurs résultats ouverts jeux, vous devez utiliser un MARS activé la connexion.  
+ OLTP en mémoire prend en charge de MARS, à l’aide de requêtes et les procédures stockées compilées en mode natif. MARS permet de demander des données à partir de plusieurs requêtes sans devoir complètement récupérer chaque jeu de résultats avant envoi d’une demande pour extraire les lignes à partir d’un jeu de résultats. Pour pouvoir lire à partir de plusieurs jeux de résultats ouverts, vous devez utiliser une connexion MARS est activé.  
   
  MARS est désactivée par défaut, ainsi, vous devez l’activer explicitement en ajoutant `MultipleActiveResultSets=True` à une chaîne de connexion. L’exemple suivant montre comment se connecter à une instance de SQL Server et spécifier que MARS est activé :  
   
@@ -107,7 +110,7 @@ Data Source=MSSQL; Initial Catalog=AdventureWorks; Integrated Security=SSPI; Mul
   
  Modifications apportées par les instructions et les blocs atomic sont entrelacées sont isolées les uns des autres. Par exemple, si une instruction ou un bloc atomic apporte des modifications, puis génère une autre instruction de l’exécution, la nouvelle instruction ne verrez pas les modifications apportées par la première instruction. En outre, lors de la première instruction reprend l’exécution, elle ne voit pas les modifications apportées par d’autres instructions. Les instructions ne voient que les modifications qui sont terminées et validées avant le démarrage de l’instruction.  
   
- Une nouvelle transaction utilisateur peut être démarrée dans la transaction utilisateur actuel à l’aide de l’instruction BEGIN TRANSACTION : cela est pris en charge uniquement en mode interop afin de l’instruction BEGIN TRANSACTION ne peut être appelée à partir d’une instruction T-SQL et non à partir de dans compilées en mode natif procédure stockée. Vous pouvez créer un enregistrement point dans une transaction à l’aide de SAVE TRANSACTION ou un appel API à la transaction. Save(save_point_name) restauration au point de sauvegarde. Cette fonctionnalité est activée uniquement à partir d’instructions T-SQL et non à partir de procédures stockées compilées.  
+ Une nouvelle transaction utilisateur peut être démarrée dans la transaction utilisateur actuel à l’aide de l’instruction BEGIN TRANSACTION : cela est pris en charge uniquement en mode interop BEGIN TRANSACTION ne peut être appelée à partir d’une instruction T-SQL et pas de dans compilées en mode natif stockée procédure. Vous pouvez créer un enregistrement point dans une transaction à l’aide de SAVE TRANSACTION ou un appel API à la transaction. Save(save_point_name) restauration au point de sauvegarde. Cette fonctionnalité est activée uniquement à partir d’instructions T-SQL et non à partir de procédures stockées compilées.  
   
  **Index columnstore et MARS**  
   

@@ -2,9 +2,10 @@
 title: Traitement des rubriques de procédures de résultats (OLE DB) | Documents Microsoft
 description: Rubriques de procédures le traitement des résultats (OLE DB)
 ms.custom: ''
-ms.date: 03/26/2018
+ms.date: 06/14/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.component: oledb|ole-db-how-to
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: connectivity
@@ -15,15 +16,17 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 52b06c5de00b370dc96db0cdcc43bef69f816376
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
-ms.translationtype: HT
+ms.openlocfilehash: 1792785286c07535925c81194972e65d2f55fb9a
+ms.sourcegitcommit: e1bc8c486680e6d6929c0f5885d97d013a537149
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35305078"
+ms.lasthandoff: 06/15/2018
+ms.locfileid: "35666069"
 ---
 # <a name="processing-results-how-to-topics-ole-db"></a>Rubriques des procédures relatives au traitement des résultats (OLE DB)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+
+[!INCLUDE[Driver_OLEDB_Download](../../../../includes/driver_oledb_download.md)]
 
   Le traitement des résultats dans une application OLE DB implique tout d'abord la détermination des caractéristiques du jeu de résultats, puis l'extraction des données dans des variables de programme. Si la commande exécute une procédure stockée, vous devez également savoir comment traiter les codes de retour et les paramètres de sortie des procédures stockées.  
   

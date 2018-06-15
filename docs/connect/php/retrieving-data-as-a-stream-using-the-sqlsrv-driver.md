@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: php
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: connectivity
@@ -15,11 +14,12 @@ caps.latest.revision: 18
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 32164c9beb05293249eafef76de29dcf3c356182
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: be1e84c923dad3ed92c4c2b983a1e5592741eead
+ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35309248"
 ---
 # <a name="retrieving-data-as-a-stream-using-the-sqlsrv-driver"></a>Récupération des données sous la forme d’un flux à l’aide du pilote SQLSRV
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -36,7 +36,7 @@ Les étapes suivantes récapitulent la manière de récupérer des données sous
   
 3.  Utilisez [sqlsrv_get_field](../../connect/php/sqlsrv-get-field.md) pour récupérer un champ de la ligne. Spécifiez que les données à récupérer en tant que flux à l’aide de **SQLSRV_PHPTYPE_STREAM (<encoding>)** en tant que troisième paramètre dans l’appel de fonction. Ce tableau répertorie les constantes utilisées pour spécifier les encodages et leurs descriptions :  
   
-    |Constante SQLSRV| Description|  
+    |Constante SQLSRV|Description|  
     |-------------------|---------------|  
     |SQLSRV_ENC_BINARY|Les données sont retournées à partir du serveur sous la forme d’un flux d’octets bruts sans encodage ni traduction.|  
     |SQLSRV_ENC_CHAR|Les données sont retournées sous forme de caractères 8 bits comme spécifié dans la page de codes des paramètres régionaux Windows définis sur le système. Les caractères multioctets ou les caractères non mappés dans cette page de codes sont remplacés par un point d’interrogation (?) à un octet.|  
@@ -46,7 +46,7 @@ Les étapes suivantes récapitulent la manière de récupérer des données sous
   
 ## <a name="in-this-section"></a>Dans cette section  
   
-|Rubrique| Description|  
+|Rubrique|Description|  
 |---------|---------------|  
 |[Types de données avec prise en charge des flux à l’aide du pilote SQLSRV](../../connect/php/data-types-with-stream-support-using-the-sqlsrv-driver.md)|Répertorie les types de données SQL Server qui peuvent être récupérés sous forme de flux.|  
 |[Procédure : récupérer des données caractères sous la forme d’un flux à l’aide du pilote SQLSRV](../../connect/php/how-to-retrieve-character-data-as-a-stream-using-the-sqlsrv-driver.md)|Montre comment récupérer des données caractères sous la forme d’un flux.|  

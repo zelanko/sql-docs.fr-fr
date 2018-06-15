@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: php
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: connectivity
@@ -18,11 +17,12 @@ caps.latest.revision: 40
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: f8ae48b672aa4817f8451eeee788985b4b90694f
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 432b09a03f9f0d7704ed50de92db64417b624ba8
+ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35307698"
 ---
 # <a name="default-php-data-types"></a>Types de données PHP par défaut
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -37,40 +37,40 @@ Le tableau suivant répertorie le type de données SQL Server (type des données
   
 |Type SQL Server|Type PHP par défaut|Encodage par défaut|  
 |-------------------|--------------------|--------------------|  
-|bigint|Chaîne|caractère 8 bits<sup>1</sup>|  
+|BIGINT|String|caractère 8 bits<sup>1</sup>|  
 |binary|Flux<sup>2</sup>|Binaire<sup>3</sup>|  
 |bit|Entier|caractère 8 bits<sup>1</sup>|  
-|char|Chaîne|caractère 8 bits<sup>1</sup>|  
-|date<sup>4</sup>|DateTime|Non applicable|  
-|datetime<sup>4</sup>|DateTime|Non applicable|  
-|datetime2<sup>4</sup>|DateTime|Non applicable|  
-|datetimeoffset<sup>4</sup>|DateTime|Non applicable|  
-|Décimal|Chaîne|caractère 8 bits<sup>1</sup>|  
-|float|Float|caractère 8 bits<sup>1</sup>|  
+|char|String|caractère 8 bits<sup>1</sup>|  
+|date<sup>4</sup>|DATETIME|Non applicable|  
+|datetime<sup>4</sup>|DATETIME|Non applicable|  
+|datetime2<sup>4</sup>|DATETIME|Non applicable|  
+|datetimeoffset<sup>4</sup>|DATETIME|Non applicable|  
+|Décimal|String|caractère 8 bits<sup>1</sup>|  
+|FLOAT|float|caractère 8 bits<sup>1</sup>|  
 |geography|Flux|Binaire<sup>3</sup>|  
 |geometry|Flux|Binaire<sup>3</sup>|  
 |image<sup>5</sup>|Flux<sup>2</sup>|Binaire<sup>3</sup>|  
-|int|Entier|caractère 8 bits<sup>1</sup>|  
-|money|Chaîne|caractère 8 bits<sup>1</sup>|  
-|NCHAR|Chaîne|caractère 8 bits<sup>1</sup>|  
-|numérique|Chaîne|caractère 8 bits<sup>1</sup>|  
-|nvarchar|Chaîne|caractère 8 bits<sup>1</sup>|  
+|INT|Entier|caractère 8 bits<sup>1</sup>|  
+|money|String|caractère 8 bits<sup>1</sup>|  
+|NCHAR|String|caractère 8 bits<sup>1</sup>|  
+|NUMERIC|String|caractère 8 bits<sup>1</sup>|  
+|NVARCHAR|String|caractère 8 bits<sup>1</sup>|  
 |nvarchar(MAX)|Flux<sup>2</sup>|caractère 8 bits<sup>1</sup>|  
 |ntext<sup>6</sup>|Flux<sup>2</sup>|caractère 8 bits<sup>1</sup>|  
-|real|Float|caractère 8 bits<sup>1</sup>|  
-|smalldatetime|DateTime|caractère 8 bits<sup>1</sup>|  
-|smallint|Entier|caractère 8 bits<sup>1</sup>|  
-|smallmoney|Chaîne|caractère 8 bits<sup>1</sup>|  
-|sql_variant<sup>7</sup>|Chaîne|caractère 8 bits<sup>1</sup>|  
+|REAL|float|caractère 8 bits<sup>1</sup>|  
+|smalldatetime|DATETIME|caractère 8 bits<sup>1</sup>|  
+|SMALLINT|Entier|caractère 8 bits<sup>1</sup>|  
+|SMALLMONEY|String|caractère 8 bits<sup>1</sup>|  
+|sql_variant<sup>7</sup>|String|caractère 8 bits<sup>1</sup>|  
 |text<sup>8</sup>|Flux<sup>2</sup>|caractère 8 bits<sup>1</sup>|  
-|time<sup>4</sup>|DateTime|Non applicable|  
-|TIMESTAMP|Chaîne|caractère 8 bits<sup>1</sup>|  
-|tinyint|Entier|caractère 8 bits<sup>1</sup>|  
+|time<sup>4</sup>|DATETIME|Non applicable|  
+|TIMESTAMP|String|caractère 8 bits<sup>1</sup>|  
+|TINYINT|Entier|caractère 8 bits<sup>1</sup>|  
 |UDT|Flux<sup>2</sup>|Binaire<sup>3</sup>|  
-|uniqueidentifier|Chaîne<sup>9</sup>|caractère 8 bits<sup>1</sup>|  
+|UNIQUEIDENTIFIER|Chaîne<sup>9</sup>|caractère 8 bits<sup>1</sup>|  
 |varbinary|Flux<sup>2</sup>|Binaire<sup>3</sup>|  
 |varbinary(MAX)|Flux<sup>2</sup>|Binaire<sup>3</sup>|  
-|varchar|Chaîne|caractère 8 bits<sup>1</sup>|  
+|varchar|String|caractère 8 bits<sup>1</sup>|  
 |varchar(MAX)|Flux<sup>2</sup>|caractère 8 bits<sup>1</sup>|
 |xml|Flux<sup>2</sup>|caractère 8 bits<sup>1</sup>|  
   

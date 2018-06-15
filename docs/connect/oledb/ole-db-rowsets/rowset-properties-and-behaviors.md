@@ -5,7 +5,6 @@ ms.custom: ''
 ms.date: 03/26/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: ole-db-rowsets
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: connectivity
@@ -19,18 +18,19 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 35a330703d6664422bf4de80a6ac13e309a83549
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 2526d6279d9ef4c38249b5fd841a0336e418b6df
+ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35306398"
 ---
 # <a name="rowset-properties-and-behaviors"></a>Propriétés et comportements de l'ensemble de lignes
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
   Voici le pilote OLE DB pour les propriétés d’ensemble de lignes de SQL Server.  
   
-|ID de propriété| Description|  
+|ID de propriété|Description|  
 |-----------------|-----------------|  
 |DBPROP_ABORTPRESERVE|R/W : lecture/écriture<br /><br /> Valeur par défaut : VARIANT_FALSE<br /><br /> Description : le comportement d'un ensemble de lignes après une opération d'abandon est déterminé par cette propriété.<br /><br /> VARIANT_FALSE : Le pilote OLE DB pour SQL Server invalide les ensembles de lignes après une opération d’abandon. Les fonctionnalités de l'objet d'ensemble de lignes sont quasiment perdues. Il prend uniquement en charge **IUnknown** opérations et la version de handles de ligne et d’accesseur en attente.<br /><br /> VARIANT_TRUE : Le pilote OLE DB pour SQL Server gère un ensemble de lignes valide.|  
 |DBPROP_ACCESSORDER|R/W : lecture/écriture<br /><br /> Valeur par défaut : DBPROPVAL_AO_RANDOM<br /><br /> Description : ordre d'accès. Ordre dans lequel les colonnes doivent être accessibles dans l'ensemble de lignes.<br /><br /> DBPROPVAL_AO_RANDOM : les colonnes sont accessibles dans n'importe quel ordre.<br /><br /> DBPROPVAL_AO_SEQUENTIALSTORAGEOBJECTS : les colonnes liées en tant qu'objets de stockage sont accessibles uniquement dans l'ordre séquentiel déterminé par l'ordinal de colonne.<br /><br /> DBPROPVAL_AO_SEQUENTIAL : toutes les colonnes doivent être accessibles dans l'ordre séquentiel déterminé par l'ordinal de colonne.|  
@@ -92,7 +92,7 @@ ms.lasthandoff: 05/03/2018
   
  Le pilote OLE DB pour SQL Server définit le jeu de propriété spécifique au fournisseur DBPROPSET_SQLSERVERROWSET comme indiqué dans cette table.  
   
-|ID de propriété| Description|  
+|ID de propriété|Description|  
 |-----------------|-----------------|  
 |SSPROP_COLUMN_ID|Colonne : ColumnID<br /><br /> R/w : lecture seule<br /><br /> Type : VT_U12 &#124; VT_ARRAY<br /><br /> Valeur par défaut : VT_EMPTY<br /><br /> Description : tableau de valeurs entières représentant la position ordinale (de base 1) d'une colonne de résultats d'une clause COMPUTE dans l'instruction [!INCLUDE[tsql](../../../includes/tsql-md.md)] SELECT actuelle. Il s’agit du pilote OLE DB pour l’équivalent de SQL Server de l’attribut ODBC SQL_CA_SS_COLUMN_ID.|  
 |SSPROP_DEFERPREPARE|Colonne : non<br /><br /> R/W : lecture/écriture<br /><br /> Type : VT_BOOL<br /><br /> Valeur par défaut : VARIANT_TRUE<br /><br /> Description : VARIANT_TRUE : dans l’exécution préparée, la préparation de la commande est différée jusqu'à ce que **ICommand::Execute** est appelée ou une opération de métapropriété est effectuée. Si la propriété a la valeur<br /><br /> VARIANT_FALSE : L’instruction est préparée lorsque **ICommandPrepare::Prepare** est exécutée.|  
@@ -101,7 +101,7 @@ ms.lasthandoff: 05/03/2018
 |SSPROP_MAXBLOBLENGTH|Colonne : non<br /><br /> R/W : lecture/écriture<br /><br /> Type : VT_I4<br /><br /> Valeur par défaut : le fournisseur ne restreint pas la taille du texte retourné par le serveur et la valeur de propriété est définie à sa valeur maximale. Par exemple 2 147 483 647.<br /><br /> Description : Le pilote OLE DB pour SQL Server exécute une instruction SET TEXTSIZE pour restreindre la longueur des données d’objet binaire volumineux (BLOB) retournées dans une instruction SELECT.|  
 |SSPROP_NOCOUNT_STATUS|Colonne : NoCount<br /><br /> R/w : lecture seule<br /><br /> Type : VT_BOOL<br /><br /> Valeur par défaut : VARIANT_FALSE<br /><br /> Description : valeur booléenne représentant l'état de SET NOCOUNT ON/OFF dans [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] :<br /><br /> VARIANT_TRUE : avec SET NOCOUNT ON<br /><br /> VARIANT_FALSE : avec SET NOCOUNT OFF|  
 |SSPROP_QP_NOTIFICATION_MSGTEXT|Colonne : non<br /><br /> R/W : lecture/écriture<br /><br /> Type : VT_BSTR (entre 1 et 2 000 caractères sont autorisés)<br /><br /> Valeur par défaut : chaîne vide<br /><br /> Description : texte du message de notification de requête. Il est défini par l'utilisateur et n'a aucun format spécifique.|  
-|SSPROP_QP_NOTIFICATION_OPTIONS|Colonne : non<br /><br /> R/W : lecture/écriture<br /><br /> Type : VT_BSTR<br /><br /> Valeur par défaut : chaîne vide<br /><br /> Description : options de notifications de requêtes. Elles sont spécifiées dans une chaîne avec `name=value`. L'utilisateur est chargé de créer le service et de lire les notifications de la file d'attente. La syntaxe de la chaîne des options de notifications de requêtes est :<br /><br /> `service=<service-name>[;(local database=<database>&#124;broker instance=<broker instance>)]`<br /><br /> Par exemple :<br /><br /> `service=mySSBService;local database=mydb`|  
+|SSPROP_QP_NOTIFICATION_OPTIONS|Colonne : non<br /><br /> R/W : lecture/écriture<br /><br /> Type : VT_BSTR<br /><br /> Valeur par défaut : chaîne vide<br /><br /> Description : options de notifications de requêtes. Elles sont spécifiées dans une chaîne avec `name=value`. L'utilisateur est chargé de créer le service et de lire les notifications de la file d'attente. La syntaxe de la chaîne des options de notifications de requêtes est :<br /><br /> `service=<service-name>[;(local database=<database>&#124;broker instance=<broker instance>)]`<br /><br /> Exemple :<br /><br /> `service=mySSBService;local database=mydb`|  
 |SSPROP_QP_NOTIFICATION_TIMEOUT|Colonne : non<br /><br /> R/W : lecture/écriture<br /><br /> Type : VT_UI4<br /><br /> Valeur par défaut : 432 000 secondes (5 jours)<br /><br /> Valeur minimale : 1 seconde<br /><br /> Valeur maximale : 2^31-1 secondes<br /><br /> Description : nombre de secondes pendant lesquelles la notification de requête doit rester active.|  
   
 ## <a name="see-also"></a>Voir aussi  

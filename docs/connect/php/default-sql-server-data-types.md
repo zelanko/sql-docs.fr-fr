@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: php
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: connectivity
@@ -18,11 +17,12 @@ caps.latest.revision: 20
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: c3aea23b8a3fcf3632b164846a3addaba7a501e6
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: e1d49ff27e0698f0c475f8150654b01bbaf1d283
+ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35307224"
 ---
 # <a name="default-sql-server-data-types"></a>Types de données SQL Server par défaut
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -33,16 +33,16 @@ Lors de l’envoi de données au serveur, le [!INCLUDE[ssDriverPHP](../../includ
 |-----------------|------------------------------------------------|-----------------------------------------------------|  
 |NULL|varchar(1)|Non pris en charge|  
 |Booléen|bit|bit|  
-|Entier|int|int|  
-|Float|float(24)|Non pris en charge|  
+|Entier|INT|INT|  
+|float|float(24)|Non pris en charge|  
 |String (longueur inférieure à 8000 octets)|varchar (<string length>)|varchar (<string length>)|  
 |String (longueur supérieure à 8000 octets)|varchar(max)|varchar(max)|  
 |Ressource|Non pris en charge.|Non pris en charge.|  
 |Flux (encodage : non binaire)|varchar(max)|varchar(max)|  
 |Flux (encodage : binaire)|varbinary|varbinary|  
 |Tableau|Non pris en charge.|Non pris en charge.|  
-|Objet|Non pris en charge.|Non pris en charge.|  
-|DateTime (1)|datetime|Non pris en charge.|  
+|Object|Non pris en charge.|Non pris en charge.|  
+|DateTime (1)|DATETIME|Non pris en charge.|  
   
 ## <a name="see-also"></a>Voir aussi  
 [Constantes &#40;Microsoft Drivers for PHP for SQL Server&#41;](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md)

@@ -13,11 +13,12 @@ ms.custom: sql-linux
 ms.technology: linux
 helpviewer_keywords:
 - Linux, AAD authentication
-ms.openlocfilehash: df3cea6d47d50464fe0b8a7f2573c230585b9cb1
-ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
+ms.openlocfilehash: 31c8d15941956e4476156718404159deabac9776
+ms.sourcegitcommit: 354ed9c8fac7014adb0d752518a91d8c86cdce81
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/19/2018
+ms.lasthandoff: 06/14/2018
+ms.locfileid: "35611434"
 ---
 # <a name="tutorial-use-active-directory-authentication-with-sql-server-on-linux"></a>Didacticiel : L’authentification utilisation d’Active Directory avec SQL Server sur Linux
 
@@ -34,7 +35,7 @@ Ce didacticiel comprend les tâches suivantes :
 > * Créer des comptes de connexion basée sur Active Directory dans Transact-SQL
 > * Se connecter à [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] à l’aide de l’authentification Active Directory
 
-## <a name="prerequisites"></a>Configuration requise
+## <a name="prerequisites"></a>Prérequis
 
 Avant de configurer l’authentification Active Directory, vous devez :
 
@@ -75,7 +76,7 @@ Utilisez les étapes suivantes pour joindre un hôte [!INCLUDE[ssNoVersion](../i
       ```/etc/network/interfaces
       <...>
       # The primary network interface
-      auth eth0
+      auto eth0
       iface eth0 inet dhcp
       dns-nameservers **<AD domain controller IP address>**
       dns-search **<AD domain name>**
@@ -282,7 +283,7 @@ Le paramètre de chaîne de connexion spécifique pour les clients à utiliser l
   
 ## <a name="next-steps"></a>Étapes suivantes
 
-Dans ce didacticiel, nous avons passé en revue la définition de l’authentification Active Directory avec SQL Server sur Linux. Vous avez appris à : 
+Dans ce didacticiel, nous avons passé en revue la définition de l’authentification Active Directory avec SQL Server sur Linux. Vous avez appris à :
 > [!div class="checklist"]
 > * Joindre un hôte [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] à un domaine Active Directory.
 > * Créer un utilisateur Active Directory pour [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] et définir le nom principal de service
