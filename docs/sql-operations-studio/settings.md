@@ -18,6 +18,7 @@ ms.sourcegitcommit: 6fd8a193728abc0a00075f3e4766a7e2e2859139
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/17/2018
+ms.locfileid: "34235136"
 ---
 # <a name="user-and-workspace-settings"></a>Utilisateur et les paramètres de l’espace de travail
 

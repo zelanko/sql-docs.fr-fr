@@ -20,6 +20,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33018451"
 ---
 # <a name="create-a-tabbed-mobile-report-by-using-drillthrough"></a>Créer un rapport mobile tabulé à l’aide de l’extraction
 Découvrez comment créer un rapport mobile [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] qui apparaît et fonctionne comme un rapport tabulé à l’aide de l’extraction et des paramètres.

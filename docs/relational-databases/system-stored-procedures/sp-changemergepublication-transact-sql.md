@@ -28,6 +28,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32992926"
 ---
 # <a name="spchangemergepublication-transact-sql"></a>sp_changemergepublication (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -124,7 +125,7 @@ sp_changemergepublication [ @publication= ] 'publication'
 ||**Inactif**|La publication est dans un état inactif.|  
 |**sync_mode**|**native** ou<br /><br /> **bcp natif**|La sortie programme de la copie en bloc en mode natif de toutes les tables est utilisée pour l'instantané initial.|  
 ||**character**<br /><br /> ou **bcp caractère**|La sortie programme de la copie en bloc en mode caractère de toutes les tables est utilisée pour l'instantané initial, ce qui est requis pour tous les Abonnés non [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
-|**use_partition_groups**<br /><br /> Remarque : après avoir utilisé partition_groups, si vous revenez à l’utilisation **« setupbelongs »**et la valeur **use_partition_groups = false** dans **changemergearticle**, cela ne peut-être pas reflété correctement après la capture instantanée. Les déclencheurs générés par l'instantané sont conformes avec les groupes de partition.<br /><br /> La solution à ce scénario consiste à définir l’état inactif, modifiez le **use_partition_groups**, puis définissez le statut actif.|**true**|La publication utilise des partitions précalculées.|  
+|**use_partition_groups**<br /><br /> Remarque : après avoir utilisé partition_groups, si vous revenez à l’utilisation **« setupbelongs »** et la valeur **use_partition_groups = false** dans **changemergearticle**, cela ne peut-être pas reflété correctement après la capture instantanée. Les déclencheurs générés par l'instantané sont conformes avec les groupes de partition.<br /><br /> La solution à ce scénario consiste à définir l’état inactif, modifiez le **use_partition_groups**, puis définissez le statut actif.|**true**|La publication utilise des partitions précalculées.|  
 ||**false**|La publication n'utilise pas de partitions précalculées.|  
 |**validate_subscriber_info**||Répertorie les fonctions utilisées pour extraire des informations d'Abonné. Puis, valide les critères de filtrage dynamiques utilisés pour l'Abonné pour vérifier que les informations sont partitionnées régulièrement.|  
 |**web_synchronization_url**||Valeur par défaut de l'URL Internet utilisée pour la synchronisation Web.|  

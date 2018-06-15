@@ -26,6 +26,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32914264"
 ---
 # <a name="time-date-and-interval-functions"></a>Fonctions d'heure, de date et d'intervalle
 Le tableau suivant répertorie les fonctions de date et heure sont incluses dans l’ensemble de la fonction scalaire ODBC. Une application peut déterminer les fonctions de date et heure sont pris en charge par un pilote en appelant **SQLGetInfo** avec un *type d’information* de SQL_TIMEDATE_FUNCTIONS.  

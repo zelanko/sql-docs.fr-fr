@@ -19,6 +19,7 @@ ms.sourcegitcommit: b3bb41424249de198f22d9c6d40df4996f083aa6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/17/2018
+ms.locfileid: "34300587"
 ---
 # <a name="odbc-64-bit-information"></a>Obtenir des informations ODBC 64 bits
 À compter de Windows Server 2003, systèmes d’exploitation Microsoft est prise en charge les bibliothèques ODBC 64 bits. Les en-têtes ODBC et les bibliothèques livrés avec le Kit de développement MDAC 2.7 contiennent des modifications pour permettre aux programmeurs d’écrire facilement du code pour les plateformes 64 bits de nouveau. En veillant à ce que votre code utilise les types ODBC définis ci-dessous, vous pouvez compiler le même code source à la fois pour les plateformes 32 bits et 64 bits basées sur le **_WIN64** ou **WIN32** macros.  

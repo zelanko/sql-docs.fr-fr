@@ -25,6 +25,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32914174"
 ---
 # <a name="state-transitions"></a>Transitions d’état
 ODBC définit discrètes *états* pour chaque environnement, chaque connexion et chaque instruction. Par exemple, l’environnement a trois états possibles : non alloué (dans lequel aucun environnement n’est affectée), alloué (dans lequel un environnement est alloué, mais aucune connexion n’est allouées) et la connexion (dans lequel un environnement et une ou plusieurs connexions sont allouées). Les connexions ont sept États possibles ; les instructions avoir 13 états possibles.  

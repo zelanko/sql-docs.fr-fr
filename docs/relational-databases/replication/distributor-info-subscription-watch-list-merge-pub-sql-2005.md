@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32954834"
 ---
 # <a name="distributor-info-subscription-watch-list-merge-pub-sql-2005"></a>Informations sur le serveur de distribution, Liste de suivi des abonnements (Publication de fusion, SQL Server 2005 et versions ultérieures)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

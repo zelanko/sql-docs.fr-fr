@@ -19,6 +19,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32916374"
 ---
 # <a name="odbc-service-provider-interface-spi-reference"></a>Référence de l’Interface (SPI) du fournisseur de Service ODBC
 En règle générale, ODBC définie par une interface de programmation d’applications (API). Les fonctions de l’API peuvent être appelées par les applications et elles doivent être implémentées à l’intérieur du Gestionnaire de pilotes et le pilote.  
