@@ -28,6 +28,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32921034"
 ---
 # <a name="sqlnumresultcols-function"></a>Fonction SQLNumResultCols
 **Mise en conformité**  

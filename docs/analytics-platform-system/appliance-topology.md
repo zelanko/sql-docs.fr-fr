@@ -14,6 +14,7 @@ ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 04/19/2018
+ms.locfileid: "31538599"
 ---
 # <a name="appliance-topology---analytics-platform-system"></a>Topologie d’appliances - système de plateforme Analytique
 Affiche des informations résumées sur l’ensemble du système plateforme Analytique.  

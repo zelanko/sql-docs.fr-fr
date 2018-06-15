@@ -27,6 +27,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32919144"
 ---
 # <a name="writing-odbc-3x-applications"></a>Écriture d’Applications ODBC 3.x
 Lorsqu’une application ODBC 2. *x* application est mise à niveau vers ODBC 3. *x*, il doit être écrit tel qu’il fonctionne avec ODBC 2. *x* et 3. *x* pilotes. L’application doit incorporer le code conditionnel pour tirer pleinement parti de ODBC 3. *x* fonctionnalités.  

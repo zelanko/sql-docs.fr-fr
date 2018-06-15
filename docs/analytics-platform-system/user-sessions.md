@@ -14,6 +14,7 @@ ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 04/19/2018
+ms.locfileid: "31544711"
 ---
 # <a name="user-sessions-in-analytics-platform-system"></a>Sessions utilisateur dans le système de plateforme Analytique
 Une connexion avec les autorisations appropriées permettre gérer les sessions de toutes les connexions sur un dispositif de SQL Server PDW, y compris l’exécution de ces actions :  

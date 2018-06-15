@@ -24,6 +24,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32918524"
 ---
 # <a name="the-driver-manager"></a>Le Gestionnaire de pilotes
 Le *du Gestionnaire de pilotes* est une bibliothèque qui gère la communication entre les applications et des pilotes. Par exemple, sur les plateformes Microsoft® Windows®, le Gestionnaire de pilotes est une bibliothèque de liens dynamiques (DLL) qui est écrit par Microsoft et peut être redistribuée par les utilisateurs du composant redistribuable MDAC 2.8 SP1 SDK.  
