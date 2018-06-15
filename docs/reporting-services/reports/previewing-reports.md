@@ -25,6 +25,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33028726"
 ---
 # <a name="previewing-reports"></a>Aperçu des rapports
   Quand vous concevez un rapport     [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , vous pouvez le visualiser avant de le publier sur l’environnement de production. Pour ce faire, vous disposez de plusieurs méthodes : en passant en mode aperçu dans le Concepteur de rapports, en utilisant la fenêtre d'aperçu du Concepteur de rapports et en publiant le rapport sur un serveur de rapports dans un environnement de test.  

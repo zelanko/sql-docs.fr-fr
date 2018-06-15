@@ -30,6 +30,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33027456"
 ---
 # <a name="vary-polygon-line-and-point-display-by-rules-and-analytical-data"></a>Vary Polygon, Line, and Point Display by Rules and Analytical Data
   Les options d'affichage pour les polygones, les lignes et les points d'une couche sont contrôlées en définissant des options pour la couche, en établissant des règles pour les éléments cartographiques de la couche ou en remplaçant des options pour des éléments cartographiques incorporés spécifiques sur une couche.  

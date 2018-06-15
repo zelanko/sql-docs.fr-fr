@@ -20,6 +20,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33023426"
 ---
 # <a name="interactive-sort-document-maps-and-links-report-builder-and-ssrs"></a>Tri interactif, Explorateurs de documents et liens (Générateur de rapports et SSRS)
   Dans les environnements Web, vous pouvez ajouter un certain nombre de fonctionnalités qui permettent à vos utilisateurs d'intervenir sur les rapports. Vos utilisateurs peuvent modifier l'ordre de tri des valeurs dans votre rapport, afficher ou masquer des éléments du rapport ou cliquer sur les liens pointant vers d'autres rapports ou des pages Web. Vous pouvez également ajouter une table des matières ou un Explorateur de documents. Vos utilisateurs de rapport peuvent cliquer sur des éléments de la table des matières ou de l'Explorateur de documents pour accéder instantanément aux sections voulues du rapport.  

@@ -20,6 +20,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33018366"
 ---
 # <a name="create-a-reporting-services-mobile-report"></a>Créer un rapport mobile Reporting Services
 L’Éditeur de rapports mobiles SQL Server vous permet de créer rapidement des rapports mobiles SQL Server 2016 Reporting Services bien adaptés à la taille de votre écran, sur une aire de conception dotée de lignes et de colonnes de grille réglables, ainsi que d’éléments de rapport mobile flexibles.  

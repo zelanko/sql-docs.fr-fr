@@ -20,6 +20,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33020786"
 ---
 # <a name="expression-reference-report-builder-and-ssrs"></a>Référence d'expression (Générateur de rapports et SSRS)
   Les expressions de rapport prennent en charge diverses références aux fonctions et collections intégrées. La syntaxe des expressions doit être conforme à [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] avant qu'un rapport ne puisse être publié ou traité.  

@@ -20,6 +20,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33021746"
 ---
 # <a name="update-credentials-in-report-data-sources-from-a-sharepoint-site"></a>Mettre à jour les informations d'identification dans les sources de données de rapport à partir d'un site SharePoint
   Cette rubrique explique comment mettre à jour les sources de données incorporées dans les rapports et les sources de données partagées enregistrées dans une bibliothèque de documents SharePoint.  

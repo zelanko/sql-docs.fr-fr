@@ -20,6 +20,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33019416"
 ---
 # <a name="add-gauges-to-mobile-reports--reporting-services"></a>Ajouter des jauges aux rapports mobiles | Reporting Services
 Les jauges sont les éléments visuels les plus simples et les plus utilisés dans les rapports mobiles. Elles affichent une seule valeur dans un dataset (la valeur seule ou la valeur comparée à un objectif).

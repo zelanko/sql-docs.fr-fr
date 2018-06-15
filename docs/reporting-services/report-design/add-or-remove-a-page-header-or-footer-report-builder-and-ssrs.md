@@ -20,6 +20,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33019106"
 ---
 # <a name="add-or-remove-a-page-header-or-footer-report-builder-and-ssrs"></a>Ajouter ou supprimer un en-tête ou un pied de page (Générateur de rapports et SSRS)
   Vous pouvez ajouter du texte statique, des images, des lignes, des rectangles et des bordures aux en-têtes ou aux pieds de page. Vous pouvez placer des expressions et des images liées aux données dans une zone de texte si vous souhaitez qu'un en-tête ou pied de page contienne des données variables ou calculées.  

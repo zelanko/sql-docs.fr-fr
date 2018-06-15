@@ -20,6 +20,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33019879"
 ---
 # <a name="add-drillthrough-from-a-mobile-report-to-other-mobile-reports-or-urls"></a>Ajouter l’extraction à partir d’un rapport mobile à d’autres rapports mobiles ou des URL
 Vous pouvez ajouter l’extraction à partir de n’importe quelle grille de données, graphique ou jauge dans un rapport mobile [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] vers un autre rapport mobile ou une URL personnalisée. 

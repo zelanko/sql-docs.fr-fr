@@ -20,6 +20,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33023026"
 ---
 # <a name="add-a-hyperlink-to-a-url-report-builder-and-ssrs"></a>Ajouter un lien hypertexte à une URL (Générateur de rapports et SSRS)
 Découvrez comment ajouter des actions de lien hypertexte à des zones de texte, des images, des graphiques et des jauges aux rapports paginés [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)]  . Les liens peuvent mener à d’autres rapports, aux signets d’un rapport ou à des URL dynamiques ou statiques. 

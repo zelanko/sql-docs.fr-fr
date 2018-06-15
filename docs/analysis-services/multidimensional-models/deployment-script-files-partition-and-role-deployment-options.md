@@ -14,6 +14,7 @@ ms.sourcegitcommit: b3bb41424249de198f22d9c6d40df4996f083aa6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/17/2018
+ms.locfileid: "34300417"
 ---
 # <a name="deployment-script-files---partition-and-role-deployment-options"></a>Fichiers de Script de déploiement - Partition et les Options de déploiement de rôle
 [!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
