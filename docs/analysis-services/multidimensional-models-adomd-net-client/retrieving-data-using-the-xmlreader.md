@@ -14,6 +14,7 @@ ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/10/2018
+ms.locfileid: "34022206"
 ---
 # <a name="retrieving-data-using-the-xmlreader"></a>Récupération de données à l'aide de XmlReader
   Le **XmlReader** classe, partie de la **System.Xml** espace de noms pour la bibliothèque de classes Microsoft .NET Framework, est similaire à la <xref:Microsoft.AnalysisServices.AdomdClient.AdomdDataReader> classe qui le **XmlReader** classe fournit également rapide, non mis en cache et en avant uniquement accès aux données. S’il n’est pas nécessaire pour une vue analytique en mémoire des données avec le <xref:Microsoft.AnalysisServices.AdomdClient.CellSet> objet, le **XmlReader** objet est parfait pour récupérer des données XML, en particulier pour les grandes quantités de données. Étant donné que **XmlReader** flux de données, **XmlReader** n’a pas à récupérer et mettre en cache toutes les données avant de les exposer les données à l’appelant, comme ce serait le cas si un <xref:Microsoft.AnalysisServices.AdomdClient.CellSet> objet ont été utilisés pour convertir la réponse XML for Analysis dans une représentation du modèle objet analytique.  
