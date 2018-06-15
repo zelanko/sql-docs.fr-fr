@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33018796"
 ---
 # <a name="define-query-parameters-dialog-box"></a>Boîte de dialogue Définir les paramètres de la requête
   Utilisez la boîte de dialogue **Définir les paramètres de la requête** pour spécifier des valeurs de paramètre lorsque vous exécutez une requête dans un concepteur de requêtes au moment du design afin de visualiser des exemples de données. Les paramètres de requête filtrent les données de la source et permettent de limiter la quantité de données traitées par un rapport. Ces valeurs ne sont pas enregistrées dans la définition de rapport.  

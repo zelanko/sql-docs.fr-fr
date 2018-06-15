@@ -441,7 +441,7 @@ ON (p.ProductID = v.ProductID);
     2.  *aggregate_function* est évalué par rapport à *value_column* sur ce sous-groupe et son résultat est retourné en tant que valeur *output_column* correspondante. Si le sous-groupe est vide, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] génère une valeur NULL pour *output_column*. Si la fonction d'agrégation est COUNT et si le sous-groupe est vide, la valeur zéro (0) est retournée.  
 
 > [!NOTE]
-> Les identificateurs de colonne dans la clause `UNPIVOT` suivent le classement de catalogue. Pour [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], le classement est toujours `SQL_Latin1_General_CP1_CI_AS`. Pour les bases de données à relation contenant-contenu partielles [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], le classement est toujours `Latin1_General_100_CI_AS_KS_WS_SC`. Si la colonne est combinée avec d’autres colonnes, une clause Collate (`COLLATE DATABASE_DEFAULT`) doit être ajoutée pour éviter les conflits.   
+> Les identificateurs de colonne dans la clause `UNPIVOT` suivent le classement de catalogue. Pour [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], le classement est toujours `SQL_Latin1_General_CP1_CI_AS`. Pour les bases de données partiellement autonomes [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], le classement est toujours `Latin1_General_100_CI_AS_KS_WS_SC`. Si la colonne est combinée avec d’autres colonnes, une clause Collate (`COLLATE DATABASE_DEFAULT`) doit être ajoutée pour éviter les conflits.   
   
  Pour plus d’informations sur les opérateurs PIVOT et UNPIVOT, et obtenir des exemples, consultez [Utilisation des opérateurs PIVOT et UNPIVOT](../../t-sql/queries/from-using-pivot-and-unpivot.md).  
   

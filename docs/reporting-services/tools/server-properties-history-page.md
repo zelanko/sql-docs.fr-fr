@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33030076"
 ---
 # <a name="server-properties-history-page"></a>Propriétés du serveur (page Historique)
   Utilisez cette page [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] dans [!INCLUDE[ssManStudioFull_md](../../includes/ssmanstudiofull-md.md)] pour définir le nombre de copies par défaut que l’historique de rapport doit conserver. La valeur par défaut fournit un paramètre initial qui établit les limites de l'historique de tous les rapports. Ces paramètres sont modifiables pour chaque rapport.  

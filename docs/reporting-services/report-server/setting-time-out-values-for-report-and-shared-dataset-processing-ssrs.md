@@ -25,6 +25,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33027116"
 ---
 # <a name="setting-time-out-values-for-report-and-shared-dataset-processing-ssrs"></a>Définition des valeurs de délai d'attente pour le traitement d'un rapport et d'un dataset partagé (SSRS)
   Vous pouvez spécifier, à l’aide de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] des valeurs de délai d’attente pour fixer des limites à l’utilisation des ressources système. Le serveur de rapports accepte deux valeurs de délai d'attente :  
