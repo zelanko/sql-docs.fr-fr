@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33023606"
 ---
 # <a name="report-authoring-concepts-report-builder-and-ssrs"></a>Concepts de création de rapport (Générateur de rapports et SSRS)
   Cette section définit brièvement certains concepts clés utilisés pour décrire les rapports paginés dans la documentation du Générateur de rapports et du Concepteur de rapports. Pour obtenir des définitions de mots ou de termes spécifiques, consultez le [Glossaire &#40;Générateur de rapports&#41;](../../reporting-services/report-builder/glossary-report-builder.md).  

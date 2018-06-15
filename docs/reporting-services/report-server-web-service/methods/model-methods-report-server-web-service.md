@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33025396"
 ---
 # <a name="model-methods---report-server-web-service"></a>Méthodes de modèles - Service web des serveurs de rapports
   Vous pouvez utiliser ces méthodes pour gérer des modèles.  

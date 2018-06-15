@@ -20,6 +20,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33019608"
 ---
 # <a name="add-sparklines-and-data-bars-report-builder-and-ssrs"></a>Ajouter des graphiques sparkline et des barres de données (Générateur de rapports et SSRS)
   Les graphiques sparkline et les barres de données sont des graphiques de petite taille qui communiquent beaucoup d'informations avec peu de détails superflus. Pour plus d’informations sur ces graphiques, consultez [Graphiques sparkline et barres de données &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/sparklines-and-data-bars-report-builder-and-ssrs.md).  

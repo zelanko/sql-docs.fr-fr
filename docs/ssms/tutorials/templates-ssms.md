@@ -25,6 +25,7 @@ ms.sourcegitcommit: b5ab9f3a55800b0ccd7e16997f4cd6184b4995f9
 ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/23/2018
+ms.locfileid: "34455223"
 ---
 # <a name="tutorial-using-templates-in-sql-server-management-studio"></a>Tutoriel : Utilisation de modèles dans SQL Server Management Studio
 Ce tutoriel vous présente les modèles Transact-SQL (T-SQL) prédéfinis qui sont disponibles dans SQL Server Management Studio (SSMS). Dans cet article, vous apprenez à :

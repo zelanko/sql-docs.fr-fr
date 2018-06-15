@@ -17,6 +17,7 @@ ms.sourcegitcommit: b5ab9f3a55800b0ccd7e16997f4cd6184b4995f9
 ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/23/2018
+ms.locfileid: "34455285"
 ---
 # <a name="tutorial-sql-server-management-studio-components-and-configuration"></a>Tutoriel : Composants et configuration de SQL Server Management Studio
 Ce tutoriel décrit les différents composants de fenêtre dans SQL Server Management Studio (SSMS) et certaines options de configuration de base pour votre espace de travail. Dans cet article, vous apprenez à : 

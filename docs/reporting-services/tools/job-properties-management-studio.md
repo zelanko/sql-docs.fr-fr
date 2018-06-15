@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33031196"
 ---
 # <a name="job-properties-management-studio"></a>Propriétés du travail (Management Studio)
   Utilisez la page **Propriétés du travail** pour afficher des informations sur un rapport ou abonnement en cours avant de l’annuler.  

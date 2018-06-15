@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33020626"
 ---
 # <a name="keyboard-shortcuts-report-builder"></a>Raccourcis clavier (Générateur de rapports)
   Quand vous créez et modifiez des rapports paginés [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] dans le Générateur de rapports, vous avez accès à toutes les touches de raccourci de navigation fournies par l’environnement Windows. Vous pouvez sélectionner l'un des différents schémas de configuration du clavier standard.  
