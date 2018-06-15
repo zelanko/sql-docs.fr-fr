@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32909164"
 ---
 # <a name="sqlctchar"></a>SQL_C_TCHAR
 L’identificateur de type SQL_C_TCHAR n’identifie pas réellement d’un type de données ; Il s’agit d’une macro qui existe dans le fichier d’en-tête pour la conversion d’Unicode. Il est remplacé par SQL_C_CHAR ou SQL_C_WCHAR selon le paramètre de l’UNICODE **#define**. Il est utile pour une application de transfert de données de caractères qui sont compilées en tant que ANSI et une application Unicode.
