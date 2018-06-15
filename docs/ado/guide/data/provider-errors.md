@@ -2,7 +2,6 @@
 title: Erreurs du fournisseur | Documents Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -21,11 +20,12 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 551c3a7e7f90f69601ff84449d60fc79c1375ece
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 8a4f551876f97f04f99bd8f2e722cd9e8a89f264
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35272338"
 ---
 # <a name="provider-errors"></a>Erreurs du fournisseur
 En cas d’erreur du fournisseur, une erreur d’exécution de -2147467259 est retournée. Lorsque vous recevez cette erreur, vérifiez le **erreurs** collection actif **connexion** objet, qui contient une ou plusieurs erreurs décrivant ce qui s’est produite.  
@@ -68,7 +68,7 @@ End Function
 ## <a name="the-error-object"></a>L’objet d’erreur  
  En examinant un **erreur** vous pouvez déterminer quel message d’erreur s’est produite, et plus important, application ou l’objet a provoqué l’erreur de l’objet. Le **erreur** objet a les propriétés suivantes :  
   
-|Nom de la propriété| Description|  
+|Nom de la propriété|Description|  
 |-------------------|-----------------|  
 |**Description**|Description textuelle de l’erreur qui s’est produite.|  
 |**HelpContext, HelpFile**|Désigne le fichier d’aide et de la rubrique d’aide qui contient une description de l’erreur qui s’est produite.|  

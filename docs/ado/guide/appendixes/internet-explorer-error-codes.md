@@ -2,7 +2,6 @@
 title: Codes d’erreur Internet Explorer | Documents Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -18,16 +17,17 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 085303cd68087d882ff8c843b2dd5d12ebe37b96
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: f2182c2c57e279e8f364e4d111270518d2b97387
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35270306"
 ---
 # <a name="internet-explorer-error-codes-for-remote-data-service"></a>Codes d’erreur Internet Explorer pour le Service de données à distance
 Le tableau suivant répertorie les codes d’erreur liés à l’utilisation du Service de données distant de Microsoft® Internet Explorer. La traduction décimale positive des deux octets basses, la traduction décimale négative du code d’erreur complet et les valeurs hexadécimales sont affichés.
 
-|Erreurs d’Internet Explorer (Wininet)|Number| Description|
+|Erreurs d’Internet Explorer (Wininet)|Number|Description|
 |------------------------------------------|------------|-----------------|
 |**IDS_WinInet_CantConnect**|8195-2146820093 0x800A2003|Erreur du Client Internet : Impossible de se connecter au serveur.|
 |**IDS_WinInet_ ConnectionReset**|12031-2146816257 0x800A2EFF|Erreur du Client Internet : Réinitialisation de la connexion.|

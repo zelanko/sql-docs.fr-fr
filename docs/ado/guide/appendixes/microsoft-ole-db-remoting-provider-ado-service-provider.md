@@ -2,7 +2,6 @@
 title: Fournisseur d’accès à distance Microsoft OLE DB (fournisseur de services ADO) | Documents Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -19,11 +18,12 @@ caps.latest.revision: 16
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: b69c6f64de019aadf71476958c26f99a46dabac2
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: c68d168716351a8c3adda7b5ff10e6ef825e19cf
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35271288"
 ---
 # <a name="microsoft-ole-db-remoting-provider-overview"></a>Vue d’ensemble du fournisseur Microsoft OLE DB la communication à distance
 Le fournisseur Microsoft OLE DB d’accès à distance permet à un utilisateur local sur un ordinateur client appeler des fournisseurs de données sur un ordinateur distant. Spécifiez les paramètres du fournisseur de données pour l’ordinateur distant comme vous le feriez si vous étiez un utilisateur local sur l’ordinateur distant. Ensuite, spécifiez les paramètres utilisés par le fournisseur de la communication à distance pour accéder à l’ordinateur distant. Vous pouvez ensuite accéder l’ordinateur distant comme si vous étiez un utilisateur local.
@@ -41,14 +41,14 @@ Le fournisseur Microsoft OLE DB d’accès à distance permet à un utilisateur 
 ## <a name="additional-keywords"></a>Mots clés supplémentaires
  Lorsque ce fournisseur de services est appelé, les mots clés supplémentaires suivants sont pertinents.
 
-|Mot clé| Description|
+|Mot clé|Description|
 |-------------|-----------------|
 |**Source de données**|Spécifie le nom de la source de données distante. Il est passé pour le fournisseur OLE DB la communication à distance pour le traitement.<br /><br /> Ce mot clé est équivalent à la [RDS. DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) l’objet [Connect](../../../ado/reference/rds-api/connect-property-rds.md) propriété.|
 
 ## <a name="dynamic-properties"></a>Propriétés dynamiques
  Lorsque ce fournisseur de services est appelé, les propriétés dynamiques suivantes sont ajoutées à la [connexion](../../../ado/reference/ado-api/connection-object-ado.md)l’objet [propriétés](../../../ado/reference/ado-api/properties-collection-ado.md) collection.
 
-|Nom de la propriété dynamique| Description|
+|Nom de la propriété dynamique|Description|
 |---------------------------|-----------------|
 |**DFMode**|Indique le Mode DataFactory. Chaîne qui spécifie la version souhaitée de la [DataFactory](../../../ado/reference/rds-api/datafactory-object-rdsserver.md) objet sur le serveur. Définissez cette propriété avant d’ouvrir une connexion pour demander une version particulière de la **DataFactory**. Si la version demandée n’est pas disponible, une tentative est effectuée pour utiliser la version précédente. S’il n’existe aucune version précédente, une erreur se produit. Si **DFMode** est inférieure à la version disponible, une erreur se produit. Cette propriété est en lecture seule après qu’une connexion est établie.<br /><br /> Peut être une des valeurs de chaîne valides suivantes :<br /><br /> -« 25 », version 2.5 (valeur par défaut)<br />-« 21 », version 2.1<br />-« 20 », version 2.0<br />-« 15 », version 1.5|
 |**Propriétés de la commande**|Indique les valeurs qui seront ajoutés à la chaîne de propriétés de commande (ensemble de lignes) envoyées au serveur par le fournisseur MS Remote. La valeur par défaut pour cette chaîne est vt_empty.|

@@ -2,7 +2,6 @@
 title: Résumé du Gestionnaire d’événements ADO | Documents Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -18,11 +17,12 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: e3e52fe70e497ab8c5b715861e16f3f67266f9f8
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: fcb37f418a053abbd67cae435b674e187956a7a7
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35271258"
 ---
 # <a name="ado-connection-and-recordset-events"></a>Connexion ADO et les événements de jeu d’enregistrements
 Deux objets ADO peuvent déclencher des événements : le [connexion](../../../ado/reference/ado-api/connection-object-ado.md) objet et la [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) objet. Le **ConnectionEvent** famille relative aux opérations sur le **connexion** objet et le **RecordsetEvent** famille relative aux opérations sur le  **Jeu d’enregistrements** objet.
@@ -33,14 +33,14 @@ Deux objets ADO peuvent déclencher des événements : le [connexion](../../../
 
  Les tableaux suivants répertorient les événements et leurs descriptions.
 
-|ConnectionEvent| Description|
+|ConnectionEvent|Description|
 |---------------------|-----------------|
 |[BeginTransComplete, CommitTransComplete, RollbackTransComplete](../../../ado/reference/ado-api/begintranscomplete-committranscomplete-and-rollbacktranscomplete-events-ado.md)|**Gestion des transactions** : indique que la transaction actuelle sur la connexion a démarré, validée ou restaurée.|
 |[WillConnect](../../../ado/reference/ado-api/willconnect-event-ado.md), [ConnectComplete, Disconnect](../../../ado/reference/ado-api/connectcomplete-and-disconnect-events-ado.md)|**Gestion des connexions** : Notification qui démarre la connexion actuelle, a démarré ou est terminée.|
 |[WillExecute](../../../ado/reference/ado-api/willexecute-event-ado.md), [ExecuteComplete](../../../ado/reference/ado-api/executecomplete-event-ado.md)|**Gestion de l’exécution de la commande** : notification signalant que l’exécution de la commande en cours sur la connexion démarre ou s’est terminée.|
 |[InfoMessage](../../../ado/reference/ado-api/infomessage-event-ado.md)|**Information** : Notification qu’il existe des informations supplémentaires sur l’opération en cours.|
 
-|RecordsetEvent| Description|
+|RecordsetEvent|Description|
 |--------------------|-----------------|
 |[FetchProgress](../../../ado/reference/ado-api/fetchprogress-event-ado.md), [FetchComplete](../../../ado/reference/ado-api/fetchcomplete-event-ado.md)|**État d’extraction** : Notification de la progression d’une opération de récupération de données, ou que l’opération de récupération est terminée. Ces événements sont disponibles uniquement si la **Recordset** a été ouvert à l’aide d’un curseur côté client.|
 |[WillChangeField, FieldChangeComplete](../../../ado/reference/ado-api/willchangefield-and-fieldchangecomplete-events-ado.md)|**Gestion des modifications de champ** : indique que la valeur du champ actuel va changer ou a changé.|
