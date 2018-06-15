@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32900104"
 ---
 # <a name="dbase-indexes"></a>Index dBASE
 Le pilote dBASE s’ouvre automatiquement et met à jour les fichiers d’index dBASE IV. Vous devez utiliser le **sélectionner les index** boîte de dialogue affichée par l’administrateur de Source de données ODBC pour associer les fichiers dBASE III .ndx dBASE (fichiers).  

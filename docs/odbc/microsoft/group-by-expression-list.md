@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32898494"
 ---
 # <a name="group-by-expression-list"></a>Regrouper par liste d’expressions
 GROUP BY la prend en charge une liste d’expressions ainsi que d’un nom de colonne. La liste de sélection d’une instruction SELECT qui contient une clause GROUP BY peut uniquement inclure des expressions de la clause GROUP BY ou fonctions de jeu.

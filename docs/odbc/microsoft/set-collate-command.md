@@ -21,6 +21,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32904044"
 ---
 # <a name="set-collate-command"></a>Commande SET COLLATE
 Spécifie une séquence de classement pour les champs de type caractère dans l’indexation suivantes et les opérations de tri.  

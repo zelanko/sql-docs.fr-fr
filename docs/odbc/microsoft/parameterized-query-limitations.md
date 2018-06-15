@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32900826"
 ---
 # <a name="parameterized-query-limitations"></a>Limitations de la requête paramétrable
 Lorsque le pilote Microsoft Access est utilisé, une requête paramétrable peut être appelée à l’aide de la syntaxe suivante : appelez *-nom de la requête* [(*paramètre*[,*paramètre*]...)].

@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32897294"
 ---
 # <a name="aggregate-function-limitations"></a>Limitations de la fonction d’agrégation
 Une fonction d’agrégation et une référence de colonne de non agrégation ne peut pas être utilisés en tant qu’arguments à une seule instruction SQL.

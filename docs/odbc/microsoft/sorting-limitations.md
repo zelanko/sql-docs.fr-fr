@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32901274"
 ---
 # <a name="sorting-limitations"></a>Limitations de tri
 La longueur maximale d’une clé de tri dans une clause GROUP BY, une clause ORDER BY, une instruction SELECT DISTINCT ou une jointure externe est de 255 octets ; la longueur maximale de toutes les clés de tri dans une ligne de tri est 65 500 octets.

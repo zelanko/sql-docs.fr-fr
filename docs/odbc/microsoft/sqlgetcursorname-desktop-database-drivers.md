@@ -21,6 +21,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32902014"
 ---
 # <a name="sqlgetcursorname-desktop-database-drivers"></a>SQLGetCursorName (pilotes bureau de base de données)
 **SQLGetCursorName** est pris en charge, mais peut uniquement être utilisé lorsque la bibliothèque de curseurs est utilisée, car opérations positionnées ne sont pas pris en charge dans le pilote.

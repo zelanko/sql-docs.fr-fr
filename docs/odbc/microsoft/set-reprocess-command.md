@@ -21,6 +21,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32903584"
 ---
 # <a name="set-reprocess-command"></a>Commande de RETRAITER SET
 Spécifie le long combien de fois ou sur la façon de verrouiller un fichier ou un enregistrement après une tentative infructueuse de verrouillage.  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32900947"
 ---
 # <a name="set-unique-command"></a>Commande UNIQUE SET
 Spécifie si les enregistrements avec les valeurs de clés d’index en double sont conservées dans un fichier d’index.  

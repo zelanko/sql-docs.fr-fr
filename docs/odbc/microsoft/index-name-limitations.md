@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32901298"
 ---
 # <a name="index-name-limitations"></a>Limitations de nom d’index
 Lorsque le pilote Paradox est utilisé, un index principal doit avoir le même nom que la table sur laquelle il est défini. Tout autre index unique ou non unique doit avoir le même nom que la table sur laquelle ils sont définis.

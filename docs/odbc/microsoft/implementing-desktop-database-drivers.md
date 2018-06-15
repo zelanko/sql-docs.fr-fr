@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32901165"
 ---
 # <a name="implementing-desktop-database-drivers"></a>Implémentation des pilotes de base de données de bureau
 Vous trouverez des instructions et notes techniques sur la façon d’implémenter et configurer les pilotes de base de données Microsoft ODBC Desktop dans l’aide en ligne d’administrateur de sources de données ODBC. Ce fichier est accessible au cours des routines d’installation de pilotes à partir de la [administrateur de Source de données ODBC Microsoft](../../odbc/admin/odbc-data-source-administrator.md).  

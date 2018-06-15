@@ -21,6 +21,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32900194"
 ---
 # <a name="drop-table-command"></a>Commande DROP TABLE
 Supprime une table de la base de données spécifiée avec la source de données et le supprime de disque.  
