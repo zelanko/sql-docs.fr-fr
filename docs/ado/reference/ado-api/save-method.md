@@ -2,7 +2,6 @@
 title: Save (méthode) | Documents Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -21,11 +20,12 @@ caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a24e0be39417235e86a86e239b8f6918fadda5dc
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: a92e053443dbb32aae83756a98facdc53fa74725
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35281438"
 ---
 # <a name="save-method"></a>Save (méthode)
 Enregistre le [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) dans un fichier ou [flux](../../../ado/reference/ado-api/stream-object-ado.md) objet.  
@@ -39,10 +39,10 @@ recordset.Save Destination, PersistFormat
   
 #### <a name="parameters"></a>Paramètres  
  *Destination*  
- Ce paramètre est facultatif. A **Variant** qui représente le nom de chemin d’accès complet du fichier où le **Recordset** doit être enregistré, ou une référence à un **flux** objet.  
+ Facultatif. A **Variant** qui représente le nom de chemin d’accès complet du fichier où le **Recordset** doit être enregistré, ou une référence à un **flux** objet.  
   
  *PersistFormat*  
- Ce paramètre est facultatif. A [PersistFormatEnum](../../../ado/reference/ado-api/persistformatenum.md) valeur qui spécifie le format dans lequel le **Recordset** doit être enregistré (XML ou ADTG). La valeur par défaut est **adPersistADTG**.  
+ Facultatif. A [PersistFormatEnum](../../../ado/reference/ado-api/persistformatenum.md) valeur qui spécifie le format dans lequel le **Recordset** doit être enregistré (XML ou ADTG). La valeur par défaut est **adPersistADTG**.  
   
 ## <a name="remarks"></a>Notes  
  Le [méthode Save](../../../ado/reference/ado-api/save-method.md) méthode peut uniquement être appelée sur open **Recordset**. Utilisez le [Open (méthode) (jeu d’enregistrements ADO)](../../../ado/reference/ado-api/open-method-ado-recordset.md) méthode à la restauration ultérieure le **Recordset** de *Destination*.  
