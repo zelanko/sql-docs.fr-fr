@@ -21,12 +21,12 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2017 || = sqlallproducts-allversions
-ms.openlocfilehash: 7c270729aa66c05f835cba507884e8d5cda102d0
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: dca31c161bbfa87eb87bb99222389c6a7d92109a
+ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33063559"
+ms.lasthandoff: 06/18/2018
+ms.locfileid: "35701000"
 ---
 # <a name="stringagg-transact-sql"></a>STRING_AGG (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
@@ -45,16 +45,15 @@ STRING_AGG ( expression, separator ) [ <order_clause> ]
 ```
 
 ## <a name="arguments"></a>Arguments 
+*expression*  
+[Expression](../../t-sql/language-elements/expressions-transact-sql.md) de tout type. Les expressions sont converties en types `NVARCHAR` ou `VARCHAR` durant la concaténation. Les types autres que chaîne sont convertis en type `NVARCHAR`.
 
 *separator*  
 [Expression](../../t-sql/language-elements/expressions-transact-sql.md) de type `NVARCHAR` ou `VARCHAR` qui est utilisée comme séparateur pour les chaînes concaténées. Ce peut être un littéral ou une variable. 
 
-*expression*  
-[Expression](../../t-sql/language-elements/expressions-transact-sql.md) de tout type. Les expressions sont converties en types `NVARCHAR` ou `VARCHAR` durant la concaténation. Les types autres que chaîne sont convertis en type `NVARCHAR`.
-
-
 <order_clause>   
 Spécifiez éventuellement l’ordre des résultats concaténés à l’aide de la clause `WITHIN GROUP` :
+
 ```
 WITHIN GROUP ( ORDER BY <order_by_expression_list> [ ASC | DESC ] )
 ```   
@@ -77,7 +76,6 @@ Le type de retour dépend du premier argument (expression). Si l’argument d’
 
 
 ## <a name="remarks"></a>Notes   
- 
 `STRING_AGG` est une fonction d’agrégation qui accepte toutes les expressions à partir des lignes et les concatène en une seule chaîne. Les valeurs d’expression sont implicitement converties en types chaîne, puis concaténées. La conversion implicite en chaînes respecte les règles existantes de conversion de type de données. Pour plus d’informations sur les conversions de type de données, consultez [CAST et CONVERT (Transact-SQL)](../../t-sql/functions/cast-and-convert-transact-sql.md). 
 
 Si l’expression d’entrée est de type `VARCHAR`, le séparateur ne peut pas être de type `NVARCHAR`. 
@@ -85,7 +83,6 @@ Si l’expression d’entrée est de type `VARCHAR`, le séparateur ne peut pas 
 Les valeurs NULL sont ignorées et le séparateur correspondant n’est pas ajouté. Pour renvoyer un espace réservé pour les valeurs NULL, utilisez la fonction `ISNULL` comme illustré dans l’exemple B.
 
 `STRING_AGG` est disponible dans n’importe quel niveau de compatibilité.
-
 
 ## <a name="examples"></a>Exemples 
 
@@ -105,7 +102,6 @@ Les valeurs `NULL` trouvées dans les cellules `name` ne sont pas renvoyées dan
 > [!NOTE]  
 >  Si vous utilisez l’éditeur de requête de Management Studio, l’option **Results to Grid** ne peut pas implémenter le retour chariot. Basculez vers **Results to Text** pour afficher correctement le jeu de résultats.   
 
-
 ### <a name="b-generate-list-of-names-separated-with-comma-without-null-values"></a>B. Générer une liste de noms séparés par des virgules sans valeurs NULL   
 L’exemple suivant remplace les valeurs NULL par « N/A » et renvoie les noms séparés par des virgules dans une cellule de résultat unique.  
 ```sql
@@ -114,15 +110,12 @@ FROM Person.Person;
 ```
 
 [!INCLUDE[ssResult_md](../../includes/ssresult-md.md)]
- 
 
 |Csv | 
 |--- |
 |John,N/A,Mike,Peter,N/A,N/A,Alice,Bob |  
 
-
 ### <a name="c-generate-comma-separated-values"></a>C. Générer des valeurs séparées par des virgules 
-
 ```sql   
 SELECT 
 STRING_AGG(CONCAT(FirstName, ' ', LastName, ' (', ModifiedDate, ')'), CHAR(13)) 
@@ -137,10 +130,8 @@ FROM Person.Person;
 
 > [!NOTE]  
 >  Si vous utilisez l’éditeur de requête de Management Studio, l’option **Results to Grid** ne peut pas implémenter le retour chariot. Basculez vers **Results to Text** pour afficher correctement le jeu de résultats.   
- 
 
 ### <a name="d-return-news-articles-with-related-tags"></a>D. Retourner des articles d’actualité avec les balises associées 
-
 Les articles et leurs balises sont séparés dans différentes tables. Le développeur souhaite renvoyer une ligne pour chaque article avec toutes les balises associées. À l’aide de la requête suivante : 
 ```sql
 SELECT a.articleId, title, STRING_AGG (tag, ',') as tags 
@@ -159,7 +150,6 @@ GROUP BY a.articleId, title;
 |177 |Les chiens restent plus populaires que les chats |sondages,animaux| 
 
 ### <a name="e-generate-list-of-emails-per-towns"></a>E. Générer une liste d’adresses e-mail par ville
-
 La requête suivante recherche les adresses e-mail des employés et les regroupe par ville : 
 ```sql
 SELECT town, STRING_AGG (email, ';') AS emails 
@@ -177,7 +167,6 @@ GROUP BY town;
 Les adresses e-mail renvoyées dans la colonne emails peuvent être utilisées directement pour envoyer des e-mails à un groupe de personnes travaillant dans certaines villes particulières. 
 
 ### <a name="f-generate-a-sorted-list-of-emails-per-towns"></a>F. Générer une liste ordonnée d’adresses e-mail par ville   
-   
 Similaire à l’exemple précédent, la requête suivante recherche les adresses e-mail des employés, les regroupe par ville, puis trie les adresses e-mail par ordre alphabétique :   
 ```sql
 SELECT town, 
@@ -192,7 +181,6 @@ GROUP BY town;
 |--- |--- |
 |Seattle |catherine0@adventure-works.com;kim2@adventure-works.com;syed0@adventure-works.com |
 |LA |hazem0@adventure-works.com;sam1@adventure-works.com |
-
 
 ## <a name="see-also"></a> Voir aussi  
  [CONCAT &#40;Transact-SQL&#41;](../../t-sql/functions/concat-transact-sql.md)  

@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: data-flow
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: b66e93fe-ce62-401b-a31f-619c7b8b1f3e
@@ -16,11 +14,12 @@ caps.latest.revision: 6
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: d89d9d168c9da90634b337615e09f7bf9a4eefa0
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 7c2b31380d18a929f3fb5a6277f4f5a9df8bf713
+ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35406451"
 ---
 # <a name="sql-server-compact-edition-destination-custom-properties"></a>Propriétés personnalisées de la destination SQL Server Compact Edition
   La destination [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Compact a des propriétés personnalisées ainsi que les propriétés communes à l’ensemble des composants de flux de données.  

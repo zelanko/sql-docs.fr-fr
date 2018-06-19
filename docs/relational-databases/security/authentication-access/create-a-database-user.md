@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 04/24/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: security
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: security
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -30,12 +28,12 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 042659861435f0deacf885dc5ec4c382f47a328f
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: dfd8e94aff5a82c88774854969496be8f2d345f5
+ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32972484"
+ms.lasthandoff: 06/18/2018
+ms.locfileid: "35701180"
 ---
 # <a name="create-a-database-user"></a>Créer un utilisateur de base de données
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -54,16 +52,16 @@ ms.locfileid: "32972484"
   
  Si vous ne connaissez pas encore [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], il peut être difficile de déterminer quel type d'utilisateur vous souhaitez créer. Tout d'abord, posez-vous la question suivante : la personne ou le groupe qui doit accéder à la base de données dispose-t-elle d’une connexion ? Dans la base de données MASTER, les connexions sont courantes pour les personnes qui gèrent le [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] et celles qui doivent accéder à plusieurs ou l'ensemble des bases de données sur l'instance de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Dans ce cas, vous allez créer un **utilisateur SQL avec connexion**. L'utilisateur de base de données est l'identité du compte de connexion lorsqu'il est connecté à la base de données. Il peut utiliser le même nom que celui du compte de connexion, mais cela n'est pas obligatoire. Cette rubrique part du principe qu'il existe déjà un compte de connexion dans [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Pour plus d’informations sur la création d’un compte de connexion, consultez [Créer un compte de connexion](../../../relational-databases/security/authentication-access/create-a-login.md).  
   
- Si la personne ou le groupe qui doit accéder à la base de données ne dispose pas d'une connexion et n’a besoin d’accéder qu’à une ou un petit nombre de bases de données, créez un **utilisateur Windows** ou un **utilisateur SQL avec mot de passe**. Également appelé utilisateur de base de données à relation contenant-contenu, il n'est pas associé à une connexion dans la base de données MASTER. Cela constitue un excellent choix lorsque vous souhaitez pouvoir déplacer facilement votre base de données entre des instances de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Pour utiliser cette option sur [!INCLUDE[ssSQL15](../../../includes/sssql15-md.md)], un administrateur doit d’abord activer les bases de données à relation contenant-contenu pour le [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]et activer la relation contenant-contenu pour la base de données. Pour plus d’informations, consultez [Utilisateurs de base de données à relation contenant-contenu - Rendre votre base de données portable](../../../relational-databases/security/contained-database-users-making-your-database-portable.md).  
+ Si la personne ou le groupe qui doit accéder à la base de données ne dispose pas d'une connexion et n’a besoin d’accéder qu’à une ou un petit nombre de bases de données, créez un **utilisateur Windows** ou un **utilisateur SQL avec mot de passe**. Également appelé utilisateur de base de données autonome, il n'est pas associé à une connexion dans la base de données MASTER. Cela constitue un excellent choix lorsque vous souhaitez pouvoir déplacer facilement votre base de données entre des instances de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Pour utiliser cette option sur [!INCLUDE[ssSQL15](../../../includes/sssql15-md.md)], un administrateur doit d’abord activer les bases de données autonomes pour le [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]et activer l’autonomie pour la base de données. Pour plus d’informations, consultez [Utilisateurs de base de données autonome - Rendre votre base de données portable](../../../relational-databases/security/contained-database-users-making-your-database-portable.md).  
   
-> **IMPORTANT !** Lorsque vous vous connectez en tant qu'utilisateur de base de données à relation contenant-contenu, vous devez fournir le nom de la base de données dans la chaîne de connexion. Pour spécifier la base de données dans [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)], dans la boîte de dialogue **Se connecter à** , cliquez sur **Options**, puis sur l'onglet **Propriétés de connexion** .  
+> **IMPORTANT !** Lorsque vous vous connectez en tant qu'utilisateur de base de données autonome, vous devez fournir le nom de la base de données dans la chaîne de connexion. Pour spécifier la base de données dans [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)], dans la boîte de dialogue **Se connecter à** , cliquez sur **Options**, puis sur l'onglet **Propriétés de connexion** .  
   
  Sélectionnez **utilisateur SQL avec mot de passe** ou **utilisateur SQL avec connexion** avec **connexion d'authentification SQL Server**, lorsque la personne qui se connecte ne peut pas s'authentifier avec Windows. Ceci est courant lorsque des personnes extérieures à votre organisation (par exemple des clients) se connectent à votre [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
 > **ASTUCE !** Pour les personnes internes à votre organisation, l'authentification Windows est un meilleur choix, parce qu’elles n'auront pas à mémoriser un mot de passe supplémentaire et que l'authentification Windows offre des fonctionnalités de sécurité supplémentaires, notamment Kerberos.  
   
 ##  <a name="Restrictions"></a> Arrière-plan  
- Un utilisateur est un principal de sécurité au niveau de la base de données. Les comptes de connexion doivent être mappés à un utilisateur de base de données pour permettre la connexion à une base de données. Un compte de connexion peut être mappé à différentes bases de données en tant qu'utilisateurs différents, mais il ne peut être mappé que comme utilisateur unique dans chaque base de données. Dans une base de données partiellement à relation contenant-contenu, il est possible de créer un utilisateur qui ne dispose pas de compte de connexion. Pour plus d’informations sur les utilisateurs de base de données à relation contenant-contenu, consultez [CREATE USER &#40;Transact-SQL&#41;](../../../t-sql/statements/create-user-transact-sql.md). Lorsque l'utilisateur invité d'une base de données est activé, un compte de connexion non mappé à un utilisateur de base de données peut accéder à la base de données en tant qu'utilisateur invité.  
+ Un utilisateur est un principal de sécurité au niveau de la base de données. Les comptes de connexion doivent être mappés à un utilisateur de base de données pour permettre la connexion à une base de données. Un compte de connexion peut être mappé à différentes bases de données en tant qu'utilisateurs différents, mais il ne peut être mappé que comme utilisateur unique dans chaque base de données. Dans une base de données partiellement autonome, il est possible de créer un utilisateur qui ne dispose pas de compte de connexion. Pour plus d’informations sur les utilisateurs de base de données autonome, consultez [CREATE USER &amp;#40;Transact-SQL&amp;#41;](../../../t-sql/statements/create-user-transact-sql.md). Lorsque l'utilisateur invité d'une base de données est activé, un compte de connexion non mappé à un utilisateur de base de données peut accéder à la base de données en tant qu'utilisateur invité.  
   
 > **IMPORTANT !** L'utilisateur invité est habituellement désactivé. Ne l'activez que lorsque cela est nécessaire.  
   
