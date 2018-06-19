@@ -33,11 +33,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 96ade458ea294f3f2cfe051449578acd97ff2fe5
-ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
-ms.translationtype: MTE
+ms.openlocfilehash: 4f9ee992655b127b1ad3b25a7cf89aa9da80b4fd
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/19/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34582131"
 ---
 # <a name="sqlcmd-utility"></a>sqlcmd Utility
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -185,7 +186,7 @@ Définissez le paramètre de chiffrement de colonne sur `Enabled`. Pour plus d�
  Déclare le type de la charge de travail de l'application lors de la connexion à un serveur. La seule valeur actuellement prise en charge est **ReadOnly**. Si **-K** n’est pas spécifié, l’utilitaire sqlcmd ne prend pas en charge la connectivité sur un réplica secondaire dans un groupe de disponibilité AlwaysOn. Pour plus d’informations, consultez [Secondaires actifs : réplicas secondaires lisibles (groupes de disponibilité Always On)](../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md).  
   
  **-M** *multisubnet_failover*  
- Spécifiez toujours **-M** en cas de connexion à l’écouteur de groupe de disponibilité d’un groupe de disponibilité SQL Server ou d’une instance de cluster de basculement SQL Server. **-M** accélère la détection et la connexion au serveur (actuellement) actif. Si vous ne spécifiez pas l’option **–M** , **-M** est désactivé. Pour plus d’informations sur [ ! INCLURE[ssHADR](../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md), [la création et Configuration des groupes de disponibilité &#40;SQL Server&#41;](../database-engine/availability-groups/windows/creation-and-configuration-of-availability-groups-sql-server.md), [Clustering de basculement et groupes de disponibilité AlwaysOn (SQL Server)] (https://msdn.microsoft.comlibrary/ff929171.aspxet [ Secondaires actifs : réplicas secondaires lisibles (groupes de disponibilité) Always On] (https://msdn.microsoft.com/library/ff878253.aspx.  
+ Spécifiez toujours **-M** en cas de connexion à l’écouteur de groupe de disponibilité d’un groupe de disponibilité SQL Server ou d’une instance de cluster de basculement SQL Server. **-M** accélère la détection et la connexion au serveur (actuellement) actif. Si vous ne spécifiez pas l’option **–M** , **-M** est désactivé. Pour plus d’informations sur [ ! INCLURE[ssHADR](../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md), [la création et Configuration des groupes de disponibilité &#40;SQL Server&#41;](../database-engine/availability-groups/windows/creation-and-configuration-of-availability-groups-sql-server.md), [clustering avec basculement et groupes de disponibilité AlwaysOn (SQL Server)](https://msdn.microsoft.com/library/ff929171.aspx), et [secondaires actifs : réplicas secondaires lisibles (groupes de disponibilité) Always On](https://msdn.microsoft.com/library/ff878253.aspx).  
   
  **-N**  
  Ce commutateur est utilisé par le client pour demander une connexion chiffrée.  
@@ -230,7 +231,7 @@ Définissez le paramètre de chiffrement de colonne sur `Enabled`. Pour plus d�
 >  La variable d'environnement OSQLSERVER a été conservée pour assurer une compatibilité descendante. La variable d’environnement SQLCMDSERVER est prioritaire par rapport à la variable d’environnement OSQLSERVER ; **sqlcmd** et **osql** peuvent donc être utilisés l’un à côté de l’autre sans interférence et les anciens scripts continuent à fonctionner.  
   
  **-U** *ID_connexion*  
- Est le nom de connexion ou le nom d’utilisateur contenu dans la base de données. Pour les utilisateurs contenus dans la base de données, vous devez fournir l’option de nom de base de données (-d).  
+ Est le nom de connexion ou le nom d’utilisateur de base de données autonome. Pour les utilisateurs de base de données autonome, vous devez fournir l’option de nom de base de données (-d).  
   
 > [!NOTE]  
 >  La variable d'environnement OSQLUSER est disponible à des fins de compatibilité descendante. La variable d'environnement SQLCMDUSER est prioritaire par rapport à la variable d'environnement OSQLUSER. Il est donc possible d’utiliser **sqlcmd** et **osql** côte à côte sans interférence. Cela signifie également que les scripts **osql** existants continueront de fonctionner.  

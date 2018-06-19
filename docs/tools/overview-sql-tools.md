@@ -18,11 +18,11 @@ ms.author: sstein
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: be35a6b708e2f8a5430a796b466705f222d9748d
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: HT
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33075286"
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34709027"
 ---
 # <a name="sql-tools-and-utilities-for-sql-server-azure-sql-database-and-azure-sql-data-warehouse"></a>Outils SQL et des utilitaires pour SQL Server, base de données SQL Azure et l’entrepôt de données SQL Azure
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
