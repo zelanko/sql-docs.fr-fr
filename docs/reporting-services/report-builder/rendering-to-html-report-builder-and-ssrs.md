@@ -15,18 +15,16 @@ caps.latest.revision: 10
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 63f7f18921d856753162a22e8fbf079834105164
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: ce0a1a62d294f510a9521ef38d178157244f1de2
+ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33021356"
+ms.lasthandoff: 06/18/2018
+ms.locfileid: "35703300"
 ---
 # <a name="rendering-to-html-report-builder-and-ssrs"></a>Rendu au format HTML (Générateur de rapports et SSRS)
   L’extension de rendu HTML effectue le rendu d’un rapport paginé au format HTML. Elle peut également produire des pages HTML entièrement formées ou des fragment HTML à incorporer dans d'autres pages HTML. La sortie HTML est générée avec l'encodage UTF-8.  
-  
- L’extension de rendu HTML est l’extension de rendu par défaut pour les rapports qui sont affichés dans un navigateur, notamment lors d’une exécution dans le portail web [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] .  
-  
+
  L’extension de rendu HTML est l’extension de rendu par défaut pour les rapports qui sont affichés dans un navigateur, notamment lors d’une exécution dans le portail web [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] . L'extension de rendu HTML peut rendre un document HTML complet ou un fragment. Dans le cas d’un fragment HTML, les balises **HEAD**, **HTML**et **BODY** du document HTML sont supprimées. Seul le contenu de la balise **BODY** est affiché. Ceci est utile pour incorporer le code HTML à celui généré par une autre application.  
   
  Dans certains scénarios, les paramètres de rapport peuvent être utilisés pour lancer des attaques par injection de script lors du rendu de rapports en HTML. Pour plus d’informations sur la sécurisation des rapports, consultez [Sécurisation des rapports et des ressources](../../reporting-services/security/secure-reports-and-resources.md).  

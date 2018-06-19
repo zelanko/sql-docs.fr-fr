@@ -1,22 +1,21 @@
 ---
 title: Déployer un projet SSIS avec PowerShell | Microsoft Docs
 ms.date: 05/21/2018
-ms.topic: conceptual
+ms.topic: quickstart
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: quick-start
 ms.suite: sql
 ms.custom: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: f245553e318ccdba4f8f5d212e5c4c92ec5564ca
-ms.sourcegitcommit: b5ab9f3a55800b0ccd7e16997f4cd6184b4995f9
+ms.openlocfilehash: eaa4be65ce76caaf8a772ff15805a1b8976068fc
+ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/23/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35329193"
 ---
 # <a name="deploy-an-ssis-project-with-powershell"></a>Déployer un projet SSIS avec PowerShell
 Ce guide de démarrage rapide montre comment utiliser un script PowerShell pour se connecter à un serveur de base de données et déployer un projet SSIS dans le catalogue SSIS.

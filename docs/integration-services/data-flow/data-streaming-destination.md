@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: data-flow
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -18,11 +16,12 @@ caps.latest.revision: 10
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 1ecccceb9edd410f06fedeb53136d1fab200096e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: cc33ebe8c38299e8b3375cc6f19aec47d859c76f
+ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35332803"
 ---
 # <a name="data-streaming-destination"></a>Data Streaming Destination
   **Data Streaming Destination** est un composant de destination [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] (SSIS) qui permet au **fournisseur OLE DB pour SSIS** de consommer la sortie d’un package SSIS sous la forme d’un jeu de résultats tabulaire. Vous pouvez créer un serveur lié qui utilise le fournisseur OLE DB pour SSIS, puis exécuter une requête SQL sur le serveur lié pour afficher les données retournées par le package SSIS.  

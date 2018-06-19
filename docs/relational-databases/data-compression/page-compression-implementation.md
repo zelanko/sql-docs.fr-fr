@@ -17,12 +17,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: a66084e2020225bc54a2b5b4419d6221db9c5814
-ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
+ms.openlocfilehash: 2e66e391c5d30097f714962d1f114fa2b324a5c0
+ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/19/2018
-ms.locfileid: "34323134"
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "35999895"
 ---
 # <a name="page-compression-implementation"></a>Implémentation de la compression de page
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -52,18 +52,18 @@ ms.locfileid: "34323134"
   
  L'illustration suivante montre un exemple de page d'une table avant la compression de préfixe.  
   
- ![Page avant compression de préfixe](../../relational-databases/data-compression/media/skt-tblcompression1c.gif "Page avant compression de préfixe")  
+ ![Page avant compression de préfixe](media/skt-tblcompression1c.gif "Page avant compression de préfixe")  
   
  L'illustration suivante montre la même page après compression de préfixe. Le préfixe est déplacé vers l'en-tête et les valeurs des colonnes sont remplacées par des références au préfixe.  
   
- ![Page après compression de préfixe](../../relational-databases/data-compression/media/tblcompression2.gif "Page après compression de préfixe")  
+ ![Page après compression de préfixe](media/tblcompression2.gif "Page après compression de préfixe")  
   
  Dans la première colonne de la première ligne, la valeur 4b indique que les quatre premiers caractères du préfixe (aaab) sont présents pour cette ligne, de même que le caractère b. Cela donne donc la valeur aaabb, qui est la valeur d'origine.  
   
 ## <a name="dictionary-compression"></a>Compression de dictionnaire  
  Une fois la compression de préfixe terminée, la compression de dictionnaire est appliquée. La compression de dictionnaire recherche les valeurs répétées n'importe où dans la page et les stocke dans la zone des informations de compression. Contrairement à la compression de préfixe, la compression de dictionnaire n'est pas limitée à une seule colonne. La compression de dictionnaire peut remplacer des valeurs répétées qui apparaissent n'importe où sur une page. L'illustration suivante montre la même page après compression de dictionnaire.  
   
- ![Page après compression de dictionnaire](../../relational-databases/data-compression/media/tblcompression3.gif "Page après compression de dictionnaire")  
+ ![Page après compression de dictionnaire](media/tblcompression3.gif "Page après compression de dictionnaire")  
   
  Notez que la valeur 4b a été référencée à partir de colonnes différentes de la page.  
   
