@@ -2,7 +2,7 @@
 title: Configuration système requise pour le pilote OLE DB pour SQL Server | Documents Microsoft
 description: Configuration requise pour le pilote OLE DB pour SQL Server
 ms.custom: ''
-ms.date: 03/26/2018
+ms.date: 06/14/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.component: oledb
@@ -19,15 +19,15 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: e109f228d8b902e5c34b4ed5731b80e315fffe3c
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 485693e8f350370a293696a09f11ba036397b15e
+ms.sourcegitcommit: 03ba89937daeab08aa410eb03a52f1e0d212b44f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32859334"
+ms.lasthandoff: 06/16/2018
+ms.locfileid: "35689462"
 ---
 # <a name="system-requirements-for-ole-db-driver-for-sql-server"></a>Configuration système requise pour le pilote OLE DB pour SQL Server
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../includes/driver_oledb_download.md)]
 
@@ -69,15 +69,15 @@ ms.locfileid: "32859334"
 
  IDBInfo::GetKeywords retourne toujours une liste de mots-clés qui correspond à la version du serveur sur la connexion et n’est pas affectée par **DataTypeCompatibility**.  
 
-|Type de données|SQL Server Native Client<br /><br />SQL Server 2005|SQL Server Native Client 11.0<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|Pilote d’OLE DB pour SQL Server|Windows Data Access Components, MDAC et<br /><br /> Pilote OLE DB pour les applications OLE DB pour SQL Server avec DataTypeCompatibility = 80|  
+|Type de données|SQL Server Native Client<br /><br />SQL Server 2005|SQL Server Native Client 11.0<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|Pilote d’OLE DB pour SQL Server|Windows Data Access Components, MDAC et<br /><br /> Pilote OLE DB pour les applications OLE DB pour SQL Server avec DataTypeCompatibility = 80|  
 |---------------|--------------------------------------------------|-------------------------------------------------------------|-------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------|  
 |CLR UDT (\<= 8 Ko)|udt|udt|udt|Varbinary|  
 |varbinary(max)|varbinary|varbinary|varbinary|image|  
 |varchar(max)|varchar|varchar|varchar|Texte|  
-|nvarchar(max)|nvarchar|nvarchar|nvarchar|Ntext|  
+|nvarchar(max)|NVARCHAR|NVARCHAR|NVARCHAR|Ntext|  
 |xml|xml|xml|xml|Ntext|  
 |CLR UDT (>= 8 Ko)|varbinary|udt|udt|image|  
-|date|varchar|date|date|Varchar|  
+|Date|varchar|Date|Date|Varchar|  
 |datetime2|varchar|datetime2|datetime2|Varchar|  
 |datetimeoffset|varchar|datetimeoffset|datetimeoffset|Varchar|  
 |time|varchar|time|time|Varchar|  
