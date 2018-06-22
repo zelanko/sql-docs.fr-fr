@@ -4,10 +4,9 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: native-client-ole-db-tables-indexes
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
+ms.technology: connectivity
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -17,16 +16,16 @@ helpviewer_keywords:
 - adding tables
 - CreateTable function
 ms.assetid: a7b8d142-d76a-44d9-a583-86ac5109fbe8
-caps.latest.revision: 32
 author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: aaa1f66f1f860752056c44617046ae00eff6167a
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 955444b94d4d30ef247c40a21fe8cb017f84f400
+ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/18/2018
+ms.locfileid: "35695980"
 ---
 # <a name="creating-sql-server-tables"></a>Création de tables SQL Server
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -36,9 +35,9 @@ ms.lasthandoff: 05/03/2018
   
  Lorsque le consommateur appelle **ITableDefinition::CreateTable**, si la valeur de la propriété DBPROP_TBL_TEMPTABLE est VARIANT_TRUE, le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Client fournisseur OLE DB natif génère un nom de table temporaire pour le consommateur. Le consommateur attribue la *pTableID* paramètre de la **CreateTable** méthode avec la valeur NULL. Les tables temporaires avec les noms générés par le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Client fournisseur OLE DB natif n’apparaissent pas dans le **TABLES** ensemble de lignes, mais sont accessibles via la **IOpenRowset** interface.  
   
- Lorsque les consommateurs spécifient le nom de table dans le *pwszName* membre de la *uName* union dans la *pTableID* paramètre, le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Client fournisseur OLE DB natif crée un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] table portant ce nom. Des contraintes en matière d'affectation de noms aux tables [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] s'appliquent et le nom de la table peut indiquer une table permanente ou une table temporaire locale ou globale. Pour plus d’informations, consultez [CREATE TABLE](../../t-sql/statements/create-table-transact-sql.md). Le *ppTableID* paramètre peut être NULL.  
+ Lorsque les consommateurs spécifient le nom de table dans le *pwszName* membre de la *uName* union dans la *pTableID* paramètre, le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Client fournisseur OLE DB natif Crée un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] table portant ce nom. Des contraintes en matière d'affectation de noms aux tables [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] s'appliquent et le nom de la table peut indiquer une table permanente ou une table temporaire locale ou globale. Pour plus d’informations, consultez [CREATE TABLE](../../t-sql/statements/create-table-transact-sql.md). Le *ppTableID* paramètre peut être NULL.  
   
- Le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Client fournisseur OLE DB natif peut générer les noms des tables permanentes ou temporaires. Lorsque le consommateur définit la *pTableID* paramètre NULL et les jeux de *ppTableID* pour pointer vers un DBID valid\*, le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Client fournisseur OLE DB natif retourne le nom généré de la table dans le *pwszName* membre de la *uName* union de DBID désigné par la valeur de *ppTableID*. Pour créer un dossier temporaire, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] table de nommées par le fournisseur OLE DB Native Client, le consommateur inclut la propriété de table OLE DB DBPROP_TBL_TEMPTABLE dans une propriété table référencée dans le *rgPropertySets* paramètre. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client OLE DB fournisseur-tables temporaires nommées sont locaux.  
+ Le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Client fournisseur OLE DB natif peut générer les noms des tables permanentes ou temporaires. Lorsque le consommateur définit la *pTableID* paramètre NULL et les jeux de *ppTableID* pour pointer vers un DBID valid\*, le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Client fournisseur OLE DB natif retourne le nom généré de la table dans le *pwszName* membre de la *uName* union de DBID désigné par la valeur de *ppTableID*. Pour créer un dossier temporaire, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] table de nommées par le fournisseur OLE DB Native Client, le consommateur inclut la propriété de table OLE DB DBPROP_TBL_TEMPTABLE dans une propriété table référencée dans le *rgPropertySets* paramètre. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB fournisseur-tables temporaires nommées sont locaux.  
   
  **CreateTable** retourne DB_E_BADTABLEID si le *eKind* membre de la *pTableID* paramètre n’indique pas DBKIND_NAME.  
   
@@ -58,9 +57,9 @@ ms.lasthandoff: 05/03/2018
   
  Les propriétés des colonnes dans une structure DBCOLUMNDESC se définissent de la manière suivante.  
   
-|ID de propriété| Description|  
+|ID de propriété|Description|  
 |-----------------|-----------------|  
-|DBPROP_COL_AUTOINCREMENT|R/W : lecture/écriture<br /><br /> Valeur par défaut : VARIANT_FALSE Description : définit la propriété d'identité dans la colonne créée. Pour [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], la propriété d'identité est valide pour une colonne unique au sein d'une table. Définition de la propriété à VARIANT_TRUE pour plusieurs colonnes uniques génère une erreur lors de la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Client fournisseur OLE DB natif essaie de créer la table sur le serveur.<br /><br /> Le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] propriété d’identité est valide uniquement pour les **entier**, **numérique**, et **décimal** types lors de l’échelle est 0. Définition de la propriété à VARIANT_TRUE sur une colonne de tout autre type de données génère une erreur lors de la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Client fournisseur OLE DB natif essaie de créer la table sur le serveur.<br /><br /> Le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fournisseur de OLE DB Native Client retourne DB_S_ERRORSOCCURRED lorsque DBPROP_COL_AUTOINCREMENT et DBPROP_COL_NULLABLE sont les deux VARIANT_TRUE et *dwOption* de DBPROP_COL_NULLABLE n’est pas DBPROPOPTIONS_REQUIRED. DB_E_ERRORSOCCURRED est retourné lorsque DBPROP_COL_AUTOINCREMENT et DBPROP_COL_NULLABLE sont les deux VARIANT_TRUE et *dwOption* de DBPROP_COL_NULLABLE est égale à DBPROPOPTIONS_REQUIRED. La colonne est définie avec la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] propriété d’identité et la DBPROP_COL_NULLABLE *dwStatus* membre est défini sur DBPROPSTATUS_CONFLICTING.|  
+|DBPROP_COL_AUTOINCREMENT|R/W : lecture/écriture<br /><br /> Valeur par défaut : VARIANT_FALSE Description : définit la propriété d'identité dans la colonne créée. Pour [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], la propriété d'identité est valide pour une colonne unique au sein d'une table. Définition de la propriété à VARIANT_TRUE pour plusieurs colonnes uniques génère une erreur lors de la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Client fournisseur OLE DB natif essaie de créer la table sur le serveur.<br /><br /> Le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] propriété d’identité est valide uniquement pour les **entier**, **numérique**, et **décimal** types lors de l’échelle est 0. Définition de la propriété à VARIANT_TRUE sur une colonne de tout autre type de données génère une erreur lors de la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Client fournisseur OLE DB natif essaie de créer la table sur le serveur.<br /><br /> Le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fournisseur de OLE DB Native Client retourne DB_S_ERRORSOCCURRED lorsque DBPROP_COL_AUTOINCREMENT et DBPROP_COL_NULLABLE sont les deux VARIANT_TRUE et *dwOption* de DBPROP_COL_NULLABLE n’est pas DBPROPOPTIONS_ Obligatoire. DB_E_ERRORSOCCURRED est retourné lorsque DBPROP_COL_AUTOINCREMENT et DBPROP_COL_NULLABLE sont les deux VARIANT_TRUE et *dwOption* de DBPROP_COL_NULLABLE est égale à DBPROPOPTIONS_REQUIRED. La colonne est définie avec la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] propriété d’identité et la DBPROP_COL_NULLABLE *dwStatus* membre est défini sur DBPROPSTATUS_CONFLICTING.|  
 |DBPROP_COL_DEFAULT|R/W : lecture/écriture<br /><br /> Valeur par défaut : aucune<br /><br /> Description : crée une contrainte DEFAULT [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pour la colonne.<br /><br /> Le *vValue* membre DBPROP peut être un nombre quelconque de types. Le *vValue.vt* membre doit spécifier un type compatible avec le type de données de la colonne. Par exemple, le choix de BSTR N/A comme valeur par défaut d'une colonne définie en tant que DBTYPE_WSTR offre une valeur de correspondance compatible. Définition de la même valeur par défaut sur une colonne en tant que DBTYPE_R8 une erreur lors de la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Client fournisseur OLE DB natif essaie de créer la table sur le serveur.|  
 |DBPROP_COL_DESCRIPTION|R/W : lecture/écriture<br /><br /> Valeur par défaut : aucune<br /><br /> Description : La propriété de colonne DBPROP_COL_DESCRIPTION n’est pas implémentée par le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Client fournisseur OLE DB natif.<br /><br /> Le *dwStatus* membre de la structure DBPROP retourne DBPROPSTATUS_NOTSUPPORTED lorsque le consommateur tente d’écrire la valeur de propriété.<br /><br /> Définition de la propriété ne constitue pas une erreur irrécupérable pour le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Client fournisseur OLE DB natif. Si toutes les autres valeurs de paramètres sont valides, la table [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] est créée.|  
 |DBPROP_COL_FIXEDLENGTH|R/W : lecture/écriture<br /><br /> Valeur par défaut : VARIANT_FALSE<br /><br /> Description : Le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fournisseur de OLE DB Native Client utilise DBPROP_COL_FIXEDLENGTH pour déterminer le mappage de type de données lorsque le consommateur définit le type de données d’une colonne à l’aide de la *wType* membre de la structure DBCOLUMNDESC. Pour plus d’informations, consultez [mappage de Type de données dans ITableDefinition](../../relational-databases/native-client-ole-db-data-types/data-type-mapping-in-itabledefinition.md).|  
@@ -70,7 +69,7 @@ ms.lasthandoff: 05/03/2018
   
  Lorsque le consommateur appelle **ITableDefinition::CreateTable**, le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fournisseur de OLE DB Native Client interprète les propriétés de la table comme suit.  
   
-|ID de propriété| Description|  
+|ID de propriété|Description|  
 |-----------------|-----------------|  
 |DBPROP_TBL_TEMPTABLE|R/W : lecture/écriture<br /><br /> Valeur par défaut : VARIANT_FALSE Description : par défaut, le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Client fournisseur OLE DB natif crée des tables nommées par le consommateur. Lors de la valeur VARIANT_TRUE, le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Client fournisseur OLE DB natif génère un nom de table temporaire pour le consommateur. Le consommateur attribue la *pTableID* paramètre de **CreateTable** avec la valeur NULL. Le *ppTableID* paramètre doit contenir un pointeur valide.|  
   
@@ -224,6 +223,6 @@ SAFE_EXIT:
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Tables et des index](../../relational-databases/native-client-ole-db-tables-indexes/tables-and-indexes.md)  
+ [Tables et index](../../relational-databases/native-client-ole-db-tables-indexes/tables-and-indexes.md)  
   
   

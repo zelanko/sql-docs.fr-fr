@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: clr
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
-ms.tgt_pltfrm: ''
+ms.technology: reference
 ms.topic: reference
 dev_langs:
 - TSQL
@@ -21,12 +19,12 @@ caps.latest.revision: 56
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 9c4883867e93c1f8a9e782f1e0a70d8ca6f53160
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 83dbc743bc6c11e0ab6e197426f5012573b8badf
+ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32918794"
+ms.lasthandoff: 06/18/2018
+ms.locfileid: "35694190"
 ---
 # <a name="managing-clr-integration-assemblies"></a>Gestion des assemblys d'intégration du CLR
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -34,15 +32,15 @@ ms.locfileid: "32918794"
   
  Informations de l’assembly sont stockées dans le **sys.assembly_files** table dans la base de données où l’assembly a été installé. Le **sys.assembly_files** table contient les colonnes suivantes.  
   
-|Colonne| Description|  
+|colonne|Description|  
 |------------|-----------------|  
 |assembly_id|Identificateur défini pour l'assembly. Ce numéro est affecté à tous les objets se rapportant au même assembly.|  
-|name|Nom de l'objet.|  
+|NAME|Nom de l'objet.|  
 |file_id|Nombre identifiant chaque objet, avec le premier objet associé à une donnée **assembly_id** possède la valeur 1. Si plusieurs objets sont associés au même **assembly_id**, chaque **file_id** valeur est incrémentée de 1.|  
 |content|Représentation hexadécimale de l'assembly ou du fichier.|  
   
 ## <a name="in-this-section"></a>Dans cette section  
- [Création d’un Assembly](../../../relational-databases/clr-integration/assemblies/creating-an-assembly.md)  
+ [Création d’un assembly](../../../relational-databases/clr-integration/assemblies/creating-an-assembly.md)  
  Aborde la création des assemblys SAFE, EXTERNAL_ACCESS et UNSAFE CLR dans [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
  [Modification d’un assembly](../../../relational-databases/clr-integration/assemblies/altering-an-assembly.md)  

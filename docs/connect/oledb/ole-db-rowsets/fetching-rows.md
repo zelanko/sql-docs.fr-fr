@@ -2,9 +2,10 @@
 title: Extraction des lignes | Documents Microsoft
 description: Extraction de lignes à l’aide de l’interface IRowset
 ms.custom: ''
-ms.date: 03/26/2018
+ms.date: 06/14/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.component: oledb|ole-db-rowsets
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: connectivity
@@ -19,15 +20,17 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 0f57b4e44fd548a82c441f7882bf3ac22fa51410
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
+ms.openlocfilehash: 9f003e6c6b0257556ac6b561d25b5987e29eaf40
+ms.sourcegitcommit: 03ba89937daeab08aa410eb03a52f1e0d212b44f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35307318"
+ms.lasthandoff: 06/16/2018
+ms.locfileid: "35690282"
 ---
 # <a name="fetching-rows"></a>Extraction de lignes
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+
+[!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
   Le **IRowset** est l’interface de l’ensemble de lignes de base. Le **IRowset** interface fournit des méthodes pour extraire les lignes séquentiellement, obtenir les données de ces lignes et la gestion des lignes. Les consommateurs utilisent les méthodes de **IRowset** pour toutes les opérations de l’ensemble de lignes de base. Ces opérations incluent l'extraction et la libération des lignes, ainsi que l'obtention des valeurs des colonnes.  
   
