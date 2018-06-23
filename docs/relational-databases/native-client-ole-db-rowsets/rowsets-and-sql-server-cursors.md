@@ -4,10 +4,9 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: native-client-ole-db-rowsets
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
+ms.technology: connectivity
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -22,11 +21,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 75e51224ca4921b45a3606dbd6bbab49cb6824d1
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 64ac951a3df348910f368c5944196d45c11c95c4
+ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/18/2018
+ms.locfileid: "35703310"
 ---
 # <a name="rowsets-and-sql-server-cursors"></a>Ensembles de lignes et curseurs SQL Server
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -97,7 +97,7 @@ ms.lasthandoff: 05/03/2018
   
  Pour utiliser un certain type de modèle de curseur, recherchez la colonne correspondant au modèle de curseur et recherchez toutes les propriétés d'ensemble de lignes avec la valeur « T » dans la colonne. Affectez la valeur VARIANT_TRUE à ces propriétés d'ensemble de lignes pour utiliser le modèle de curseur spécifique. Les propriétés d'ensemble de lignes avec '-' comme valeur peuvent être définies à VARIANT_TRUE ou VARIANT_FALSE.  
   
-|Ensemble de lignes propriétés/modèles de curseur|Par défaut<br /><br /> result<br /><br /> jeu<br /><br /> (RO)|Rapide<br /><br /> rapide<br /><br /> uniquement<br /><br /> (RO)|Statique<br /><br /> (RO)|Keyset<br /><br /> clés<br /><br /> (RO)|  
+|Ensemble de lignes propriétés/modèles de curseur|Valeur par défaut<br /><br /> result<br /><br /> jeu<br /><br /> (RO)|Rapide<br /><br /> rapide<br /><br /> uniquement<br /><br /> (RO)|Statique<br /><br /> (RO)|Keyset<br /><br /> clés<br /><br /> (RO)|  
 |--------------------------------------|-------------------------------------------|--------------------------------------------|-----------------------|----------------------------------|  
 |DBPROP_SERVERCURSOR|F|T|T|T|  
 |DBPROP_DEFERRED|F|F|-|-|  
@@ -152,7 +152,7 @@ ms.lasthandoff: 05/03/2018
  À partir de la collection spécifiée de propriétés d'ensemble de lignes, obtenez un sous-ensemble de propriétés répertoriées dans les tableaux précédents. Divisez ces propriétés en deux sous-groupes selon la valeur de l'indicateur, requis (T, F) ou facultatif (-), de chaque propriété d'ensemble de lignes. Pour chaque modèle de curseur, commencez par la première table et déplacez-vous de gauche à droite. Comparez les valeurs des propriétés dans les deux sous-groupes avec les valeurs des propriétés correspondantes dans cette colonne. Le modèle de curseur qui n'a aucune incompatibilité avec les propriétés requises et le plus petit nombre d'incompatibilités avec les propriétés facultatives est sélectionné. S'il y a plusieurs modèles de curseur, celui situé le plus à gauche est choisi.  
   
 ## <a name="sql-server-cursor-block-size"></a>Taille de bloc des curseurs SQL Server  
- Lorsqu’un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] curseur prend en charge un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ensemble de lignes du fournisseur OLE DB Native Client, le nombre d’éléments dans la ligne de gérer les paramètre du tableau de la **IRowset::GetNextRows** ou **IRowsetLocate::GetRowsAt** méthodes définit la taille de bloc de curseur. Les lignes indiquées par les descripteurs dans le tableau sont les membres du bloc de curseur.  
+ Lorsqu’un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] curseur prend en charge un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ensemble de lignes du fournisseur OLE DB Native Client, le nombre d’éléments dans la ligne de gérer les paramètre du tableau de la **IRowset::GetNextRows** ou **IRowsetLocate::GetRowsAt**  méthodes définit la taille de bloc de curseur. Les lignes indiquées par les descripteurs dans le tableau sont les membres du bloc de curseur.  
   
  Pour les ensembles de lignes prenant en charge les signets, les descripteurs de ligne récupérées à l’aide de la **IRowsetLocate::GetRowsByBookmark** méthode définir les membres du bloc de curseur.  
   

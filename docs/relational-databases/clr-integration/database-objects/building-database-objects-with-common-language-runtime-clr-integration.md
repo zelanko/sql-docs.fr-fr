@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: clr
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
-ms.tgt_pltfrm: ''
+ms.technology: reference
 ms.topic: reference
 helpviewer_keywords:
 - routines [CLR integration]
@@ -22,12 +20,12 @@ caps.latest.revision: 48
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 597645c52f37034ba4f294784cbde2a7489516d3
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 2be82adf07487e66bed43a16af289e30d751a414
+ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32923934"
+ms.lasthandoff: 06/18/2018
+ms.locfileid: "35699620"
 ---
 # <a name="building-database-objects-with-common-language-runtime-clr-integration"></a>Création d'objets de base de données avec intégration du Common Language Runtime (CLR)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -59,7 +57,7 @@ ms.locfileid: "32923934"
  [Restrictions du modèle de programmation de l’intégration du CLR](../../../relational-databases/clr-integration/database-objects/clr-integration-programming-model-restrictions.md)  
  Fournit des informations sur les restrictions du modèle de programmation de l'intégration du CLR.  
   
- [Types de données SQL Server dans le .NET Framework](../../../relational-databases/clr-integration-database-objects-types-net-framework/sql-server-data-types-in-the-net-framework.md)  
+ [Types de données SQL Server dans .NET Framework](../../../relational-databases/clr-integration-database-objects-types-net-framework/sql-server-data-types-in-the-net-framework.md)  
  Vue d'ensemble de types de données [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] et de leurs équivalents .NET Framework.  
   
  [Vue d’ensemble des attributs personnalisés de l’intégration de CLR](http://msdn.microsoft.com/library/ecf5c097-0972-48e2-a9c0-b695b7dd2820)  
@@ -78,6 +76,6 @@ ms.locfileid: "32923934"
  Explique comment implémenter et utiliser les déclencheurs CLR.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Common Language Runtime & #40 ; CLR & #41 ; Vue d’ensemble](../../../relational-databases/clr-integration/common-language-runtime-integration-overview.md)  
+ [Common Language Runtime &#40;CLR&#41; vue d’ensemble](../../../relational-databases/clr-integration/common-language-runtime-integration-overview.md)  
   
   

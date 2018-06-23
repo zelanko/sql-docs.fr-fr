@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: native-client|features
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: ''
@@ -27,12 +26,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: b7b40840f1258dfaaf1900aae4e4b891d1bf7322
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: dedf0f7ff3e8f89700e35544c94232a9c49656cf
+ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32954484"
+ms.lasthandoff: 06/18/2018
+ms.locfileid: "35698570"
 ---
 # <a name="working-with-query-notifications"></a>Utilisation de notifications de requêtes
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -46,7 +45,7 @@ ms.locfileid: "32954484"
   
  `service=<service-name>[;(local database=<database> | broker instance=<broker instance>)]`  
   
- Par exemple :  
+ Exemple :  
   
  `service=mySSBService;local database=mydb`  
   
@@ -82,7 +81,7 @@ CREATE SERVICE myService ON QUEUE myQueue
 ### <a name="the-dbpropsetsqlserverrowset-property-set"></a>Le jeu de propriétés DBPROPSET_SQLSERVERROWSET  
  Pour prendre en charge les notifications de requête via OLE DB, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ajoute les nouvelles propriétés suivantes pour le jeu de propriétés DBPROPSET_SQLSERVERROWSET.  
   
-|Nom|Type| Description|  
+|Nom   |Type|Description|  
 |----------|----------|-----------------|  
 |SSPROP_QP_NOTIFICATION_TIMEOUT|VT_UI4|Nombre de secondes pendant lesquelles la notification de requête doit rester active.<br /><br /> La valeur par défaut est 432 000 secondes (5 jours). La valeur minimale est 1 seconde, et la valeur maximale est 2^31-1 secondes.|  
 |SSPROP_QP_NOTIFICATION_MSGTEXT|VT_BSTR|Texte du message de la notification. Il est défini par l'utilisateur et n'a aucun format prédéfini.<br /><br /> Par défaut, la chaîne est vide. Vous pouvez spécifier un message à l'aide de 1-2000 caractères.|  
@@ -90,7 +89,7 @@ CREATE SERVICE myService ON QUEUE myQueue
   
  L'abonnement aux notifications est toujours validé, que l'instruction ait été exécutée dans une transaction utilisateur ou en mode de validation automatique, ou que la transaction dans laquelle l'instruction s'est exécutée ait été validée ou restaurée. La notification du serveur est déclenchée lorsque l'une des conditions de notification non valides suivantes se produit : modification des données sous-jacentes ou du schéma ou expiration du délai d'attente imparti (selon l'opération qui se produit en premier). Les inscriptions de notification sont supprimées dès qu'elles sont déclenchées. Par conséquent, lorsque l'application reçoit des notifications, l'application doit encore s'abonner au cas où elle souhaiterait obtenir d'autres mises à jour.  
   
- Une autre connexion ou un autre thread peut vérifier la file d'attente de destination pour les notifications. Par exemple :  
+ Une autre connexion ou un autre thread peut vérifier la file d'attente de destination pour les notifications. Exemple :  
   
 ```  
 WAITFOR (RECEIVE * FROM MyQueue);   // Where MyQueue is the queue name.   

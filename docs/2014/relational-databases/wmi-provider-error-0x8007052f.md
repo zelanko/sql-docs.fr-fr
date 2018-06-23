@@ -17,12 +17,12 @@ caps.latest.revision: 9
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 7f1df2b6b5b656cf9995643aa1dfad93cef9eebb
-ms.sourcegitcommit: d2573a8dec2d4102ce8882ee232cdba080d39628
+ms.openlocfilehash: d9fd50d33dbcc60cddf03a04d439f3b8630152a5
+ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "34424689"
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "35999955"
 ---
 # <a name="wmi-error-0x8007052f"></a>Erreur WMI 0x8007052f
     

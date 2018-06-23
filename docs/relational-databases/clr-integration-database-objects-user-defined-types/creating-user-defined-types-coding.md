@@ -3,11 +3,9 @@ title: Codage de Types définis par l’utilisateur | Documents Microsoft
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
-ms.prod_service: database-engine
-ms.component: clr
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
+ms.technology: reference
 ms.tgt_pltfrm: ''
 ms.topic: reference
 dev_langs:
@@ -36,12 +34,12 @@ caps.latest.revision: 37
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 69a07f7537b1b5e35e1ff576ba47993ada7a4ce7
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: b3a698c63fa5fc7e5a0802716b3112df31cf241f
+ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32923364"
+ms.lasthandoff: 06/18/2018
+ms.locfileid: "35697900"
 ---
 # <a name="creating-user-defined-types---coding"></a>Création de Types définis par l’utilisateur - codage
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -63,7 +61,7 @@ using System.Data.SqlTypes;
 using Microsoft.SqlServer.Server;  
 ```  
   
- Le **Microsoft.SqlServer.Server** espace de noms contient les objets requis pour divers attributs de votre UDT et le **System.Data.SqlTypes** espace de noms contient les classes qui représentent [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] des types de données natifs disponibles pour l’assembly. Il se peut bien sûr que le bon fonctionnement de votre assembly requiert des espaces de noms supplémentaires. Le **Point** UDT utilise également le **System.Text** espace de noms pour l’utilisation de chaînes.  
+ Le **Microsoft.SqlServer.Server** espace de noms contient les objets requis pour divers attributs de votre UDT et le **System.Data.SqlTypes** espace de noms contient les classes qui représentent des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]des types de données natifs disponibles pour l’assembly. Il se peut bien sûr que le bon fonctionnement de votre assembly requiert des espaces de noms supplémentaires. Le **Point** UDT utilise également le **System.Text** espace de noms pour l’utilisation de chaînes.  
   
 > [!NOTE]  
 >  Objets de base de données Visual C++ telles que les types UDT, compilés avec **/CLR : pure** ne sont pas pris en charge pour l’exécution.  
@@ -168,7 +166,7 @@ WHERE location.IsNull = 0;
 ## <a name="implementing-the-parse-method"></a>Implémentation de la méthode Parse  
  Le **analyser** et **ToString** méthodes autorisent les conversions vers et à partir de représentations sous forme de chaîne de l’UDT. Le **analyser** méthode autorise une chaîne à convertir en un type UDT. Il doit être déclaré en tant que **statique** (ou **Shared** en Visual Basic) et accepter un paramètre de type **System.Data.SqlTypes.SqlString**.  
   
- Le code suivant implémente la **analyser** méthode pour le **Point** UDT, qui sépare les coordonnées X et Y. Le **analyser** méthode possède un seul argument de type **System.Data.SqlTypes.SqlString**et suppose que les valeurs X et Y sont fournies sous forme de chaîne délimitée par des virgules. Définissant le **Microsoft.SqlServer.Server.SqlMethodAttribute.OnNullCall** attribut **false** empêche le **analyser** méthode d’être appelée à partir d’une instance null de Point.  
+ Le code suivant implémente la **analyser** méthode pour le **Point** UDT, qui sépare les coordonnées X et Y. Le **analyser** méthode possède un seul argument de type **System.Data.SqlTypes.SqlString**et suppose que les valeurs X et Y sont fournies sous forme de chaîne délimitée par des virgules. Définition de la **Microsoft.SqlServer.Server.SqlMethodAttribute.OnNullCall** attribut **false** empêche le **analyser** méthode d’être appelée à partir d’une instance null de Point.  
   
 ```vb  
 <SqlMethod(OnNullCall:=False)> _  
@@ -203,7 +201,7 @@ public static Point Parse(SqlString s)
 ```  
   
 ## <a name="implementing-the-tostring-method"></a>Implémentation de la méthode ToString  
- Le **ToString** méthode convertit le **Point** UDT en valeur de chaîne. Dans ce cas, la chaîne « NULL » est retournée pour une instance Null de la **Point** type. Le **ToString** inverse de la méthode la **analyser** méthode à l’aide un **System.Text.StringBuilder** pour renvoyer un CSV **System.String** comprenant les valeurs des coordonnées X et Y. Étant donné que **InvokeIfReceiverIsNull** valeur par défaut est false, la vérification pour une instance null de **Point** n’est pas nécessaire.  
+ Le **ToString** méthode convertit le **Point** UDT en valeur de chaîne. Dans ce cas, la chaîne « NULL » est retournée pour une instance Null de la **Point** type. Le **ToString** inverse de la méthode la **analyser** méthode à l’aide un **System.Text.StringBuilder** pour renvoyer un CSV **System.String**comprenant les valeurs des coordonnées X et Y. Étant donné que **InvokeIfReceiverIsNull** valeur par défaut est false, la vérification pour une instance null de **Point** n’est pas nécessaire.  
   
 ```vb  
 Private _x As Int32  
@@ -295,7 +293,7 @@ public Int32 Y
 ## <a name="validating-udt-values"></a>Validation de valeurs de type défini par l'utilisateur  
  Lors de l'utilisation de données de type défini par l'utilisateur, le [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] convertit automatiquement les valeurs binaires en valeurs de type défini par l'utilisateur. Ce processus de conversion nécessite de vérifier que les valeurs sont adaptées au format de sérialisation du type et de s'assurer que la valeur peut être désérialisée correctement. Cela garantit que la valeur peut être convertie au format binaire. Dans le cas des types définis par l'utilisateur ordonnés par octet, cela permet de s'assurer également que la valeur binaire résultante correspond à la valeur binaire d'origine. Cela empêche des valeurs non valides d'être rendues persistantes dans la base de données. Dans certains cas, ce niveau de contrôle peut être inadéquat. Une validation supplémentaire peut être requise lorsque les valeurs de type défini par l'utilisateur doivent se trouver dans un domaine ou une plage attendu(e). Par exemple, un type défini par l'utilisateur qui implémente une date peut exiger que la valeur de jour soit un nombre positif compris dans une certaine plage de valeurs valides.  
   
- Le **Microsoft.SqlServer.Server.SqlUserDefinedTypeAttribute.ValidationMethodName** propriété de la **Microsoft.SqlServer.Server.SqlUserDefinedTypeAttribute** vous permet de fournir le nom d’une méthode de validation exécutée par le serveur lorsque des données sont affectées à un type UDT ou converties en un type UDT. **ValidationMethodName** est également appelé pendant l’exécution de l’utilitaire bcp, BULK INSERT, DBCC CHECKDB, DBCC CHECKFILEGROUP, DBCC CHECKTABLE, requête distribuée et données tabulaires stream (TDS) procédure distante (RPC) fonctionnement d’appels. La valeur par défaut **ValidationMethodName** a la valeur null, indiquant qu’il n’existe aucune méthode de validation.  
+ Le **Microsoft.SqlServer.Server.SqlUserDefinedTypeAttribute.ValidationMethodName** propriété de la **Microsoft.SqlServer.Server.SqlUserDefinedTypeAttribute** vous permet de fournir le nom d’une méthode de validation que le serveur s’exécute lorsque les données sont affectées à un type UDT ou converties en un type UDT. **ValidationMethodName** est également appelé pendant l’exécution de l’utilitaire bcp, BULK INSERT, DBCC CHECKDB, DBCC CHECKFILEGROUP, DBCC CHECKTABLE, requête distribuée et données tabulaires stream (TDS) procédure distante (RPC) fonctionnement d’appels. La valeur par défaut **ValidationMethodName** a la valeur null, indiquant qu’il n’existe aucune méthode de validation.  
   
 ### <a name="example"></a>Exemple  
  Le fragment de code suivant illustre la déclaration de la **Point** (classe), qui spécifie un **ValidationMethodName** de **ValidatePoint**.  
@@ -376,7 +374,7 @@ private bool ValidatePoint()
  Vous devez appeler explicitement la méthode de validation à partir d’accesseurs Set de propriété et la **analyser** méthode si vous souhaitez que la méthode de validation à exécuter dans toutes les situations. Cela n'est pas obligatoire, et dans certains cas peut ne pas être souhaitable.  
   
 ### <a name="parse-validation-example"></a>Exemple de validation Parse  
- Pour vous assurer que le **ValidatePoint** méthode est appelée dans le **Point** (classe), vous devez l’appeler à partir de la **analyser** (méthode) et à partir de la propriété des valeurs de coordonnées procédures qui définissent des X et Y. Le fragment de code suivant montre comment appeler le **ValidatePoint** méthode de validation à partir de la **analyser** (fonction).  
+ Pour vous assurer que le **ValidatePoint** méthode est appelée dans le **Point** (classe), vous devez l’appeler à partir de la **analyser** (méthode) et les procédures de propriété définies X et Y valeurs de coordonnées. Le fragment de code suivant montre comment appeler le **ValidatePoint** méthode de validation à partir de la **analyser** (fonction).  
   
 ```vb  
 <SqlMethod(OnNullCall:=False)> _  
@@ -499,7 +497,7 @@ public Int32 Y
  Lors du codage de méthodes UDT, considérez si l'algorithme utilisé pourrait changer avec le temps. Si c'est le cas, vous pourriez envisager de créer une classe séparée pour les méthodes utilisées par votre type défini par l'utilisateur. Si l'algorithme change, vous pouvez recompiler la classe avec le nouveau code et charger l'assembly dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sans affecter le type défini par l'utilisateur. Dans de nombreux cas, les types définis par l'utilisateur peuvent être rechargés à l'aide de l'instruction  [!INCLUDE[tsql](../../includes/tsql-md.md)] ALTER ASSEMBLY, mais cela pourrait provoquer des problèmes avec les données existantes. Par exemple, le **devise** UDT inclus avec le **AdventureWorks** exemple de base de données utilise un **ConvertCurrency** de fonction pour convertir des valeurs monétaires, implémentée dans une classe distincte. Il est possible que les algorithmes de conversion puissent changer de manière imprévisible dans le futur, ou que de nouvelles fonctionnalités soient requises. Séparer le **ConvertCurrency** fonction à partir de la **devise** implémentation d’UDT offre davantage de flexibilité lors de la planification des modifications futures.  
   
 ### <a name="example"></a>Exemple  
- Le **Point** classe contient trois méthodes simples pour calculer la distance : **Distance**, **DistanceFrom** et **DistanceFromXY**. Chacune retourne un **double** calcule la distance de **Point** à zéro, la distance à partir d’un point spécifié à **Point**, et la distance spécifiée des coordonnées X et Y à **Point**. **Distance** et **DistanceFrom** chaque appel **DistanceFromXY**et montrent comment utiliser différents arguments pour chaque méthode.  
+ Le **Point** classe contient trois méthodes simples pour calculer la distance : **Distance**, **DistanceFrom** et **DistanceFromXY**. Chacune retourne un **double** calcule la distance de **Point** à zéro, la distance à partir d’un point spécifié à **Point**, et la distance spécifiée des coordonnées X et Y pour **Point**. **Distance** et **DistanceFrom** chaque appel **DistanceFromXY**et montrent comment utiliser différents arguments pour chaque méthode.  
   
 ```vb  
 ' Distance from 0 to Point.  
@@ -549,7 +547,7 @@ public Double DistanceFromXY(Int32 iX, Int32 iY)
  Le **Microsoft.SqlServer.Server.SqlMethodAttribute** classe fournit des attributs personnalisés qui peuvent être utilisés pour marquer des définitions de méthode afin de spécifier le déterminisme, sur le comportement d’appel null et pour spécifier si une méthode est un mutateur. Les valeurs par défaut de ces propriétés sont assumées et l'attribut personnalisé est utilisé uniquement lorsqu'une valeur non définie par défaut est exigée.  
   
 > [!NOTE]  
->  Le **SqlMethodAttribute** classe hérite de la **SqlFunctionAttribute** classe, **SqlMethodAttribute** hérite le **FillRowMethodName** et **TableDefinition** des champs **SqlFunctionAttribute**. Cela implique qu'il est possible d'écrire une méthode table, ce qui n'est pas le cas. La méthode compile et déploie l’assembly, mais une erreur sur le **IEnumerable** retourner le type est déclenché lors de l’exécution avec le message suivant : « méthode, propriété ou champ '\<nom >' dans la classe\<classe >' dans l’assembly '\<assembly >' a un type de retour non valide. »  
+>  Le **SqlMethodAttribute** classe hérite de la **SqlFunctionAttribute** classe, **SqlMethodAttribute** hérite le **FillRowMethodName** et **TableDefinition** des champs **SqlFunctionAttribute**. Cela implique qu'il est possible d'écrire une méthode table, ce qui n'est pas le cas. La méthode compile et déploie l’assembly, mais une erreur sur le **IEnumerable** retourner le type est déclenché lors de l’exécution avec le message suivant : « méthode, propriété ou champ «\<nom >' dans la classe\<classe >' dans l’assembly '\<assembly >' a un type de retour non valide. »  
   
  Le tableau suivant décrit quelques-unes de la **Microsoft.SqlServer.Server.SqlMethodAttribute** propriétés qui peuvent être utilisées dans les méthodes UDT et répertorie leurs valeurs par défaut.  
   
@@ -580,7 +578,7 @@ public Double DistanceFromXY(Int32 iX, Int32 iY)
 UPDATE Triangles SET t.RotateY(0.6) WHERE id=5  
 ```  
   
- Le **pivoter** est décorée avec le **SqlMethod** paramètre d’attribut **IsMutator** à **true** afin que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] puisse marquer la méthode comme méthode de mutateur. Le code définit également **OnNullCall** à **false**, ce qui indique au serveur que la méthode retourne une référence null (**rien** en Visual Basic) si un des paramètres d’entrée sont des références null.  
+ Le **pivoter** est décorée avec le **SqlMethod** paramètre d’attribut **IsMutator** à **true** afin que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] peut marquer la méthode comme une méthode mutateur. Le code définit également **OnNullCall** à **false**, ce qui indique au serveur que la méthode retourne une référence null (**rien** en Visual Basic) si une des entrées les paramètres sont des références null.  
   
 ```vb  
 <SqlMethod(IsMutator:=True, OnNullCall:=False)> _  
@@ -603,14 +601,14 @@ public void Rotate(double anglex, double angley, double anglez)
 ```  
   
 ## <a name="implementing-a-udt-with-a-user-defined-format"></a>Implémentation d'un type défini par l'utilisateur avec un format défini par l'utilisateur  
- Lors de l’implémentation d’un UDT avec un format défini par l’utilisateur, vous devez implémenter **en lecture** et **écrire** méthodes qui implémentent l’interface Microsoft.SqlServer.Server.IBinarySerialize pour gérer la sérialisation et la désérialisation de données UDT. Vous devez également spécifier le **MaxByteSize** propriété de la **Microsoft.SqlServer.Server.SqlUserDefinedTypeAttribute**.  
+ Lors de l’implémentation d’un UDT avec un format défini par l’utilisateur, vous devez implémenter **en lecture** et **écrire** méthodes qui implémentent l’interface Microsoft.SqlServer.Server.IBinarySerialize pour gérer la sérialisation et désérialisation des données UDT. Vous devez également spécifier le **MaxByteSize** propriété de la **Microsoft.SqlServer.Server.SqlUserDefinedTypeAttribute**.  
   
 ### <a name="the-currency-udt"></a>Le type défini par l'utilisateur Currency  
  Le **devise** UDT est inclus dans les exemples de CLR qui peuvent être installés avec [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], en commençant par [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)].  
   
- Le **devise** UDT prend en charge la gestion des sommes d’argent dans le système monétaire d’une culture particulière. Vous devez définir deux champs : un **chaîne** pour **CultureInfo**, ce qui indique qui a émis la devise (en-us, par exemple) et un **décimal** pour **CurrencyValue**, la somme d’argent.  
+ Le **devise** UDT prend en charge la gestion des sommes d’argent dans le système monétaire d’une culture particulière. Vous devez définir deux champs : un **chaîne** pour **CultureInfo**, ce qui indique qui a émis la devise (en-us, par exemple) et un **décimal** pour  **CurrencyValue**, la somme d’argent.  
   
- Bien qu’il n’est pas utilisé par le serveur pour effectuer des comparaisons, les **devise** UDT implémente la **System.IComparable** interface, qui expose une méthode unique, **System.IComparable.CompareTo**. Celle-ci est utilisée du côté client dans les situations où il est souhaitable de comparer ou d'ordonner précisément des valeurs monétaire dans des cultures.  
+ Bien qu’il n’est pas utilisé par le serveur pour effectuer des comparaisons, les **devise** UDT implémente la **System.IComparable** interface, qui expose une méthode unique,  **System.IComparable.CompareTo**. Celle-ci est utilisée du côté client dans les situations où il est souhaitable de comparer ou d'ordonner précisément des valeurs monétaire dans des cultures.  
   
  Le code qui s'exécute dans le CLR compare la culture séparément de la valeur monétaire. Pour le code [!INCLUDE[tsql](../../includes/tsql-md.md)], les actions suivantes déterminent la comparaison :  
   
@@ -651,7 +649,7 @@ Microsoft.SqlServer.Server.IBinarySerialize
 ```  
   
 ## <a name="creating-read-and-write-methods-with-ibinaryserialize"></a>Création de méthodes Read et Write avec IBinarySerialize  
- Lorsque vous choisissez **UserDefined** format de sérialisation, vous devez également implémenter la **IBinarySerialize** de l’interface et créer vos propres **en lecture** et **écrire** méthodes. Les procédures suivantes à partir de la **devise** utilisation d’UDT le **System.IO.BinaryReader** et **System.IO.BinaryWriter** pour lire et écrire dans l’UDT.  
+ Lorsque vous choisissez **UserDefined** format de sérialisation, vous devez également implémenter la **IBinarySerialize** de l’interface et créer vos propres **en lecture** et **écrire**  méthodes. Les procédures suivantes à partir de la **devise** utilisation d’UDT le **System.IO.BinaryReader** et **System.IO.BinaryWriter** pour lire et écrire dans l’UDT.  
   
 ```vb  
 ' IBinarySerialize methods  

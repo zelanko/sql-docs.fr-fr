@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: clr
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
-ms.tgt_pltfrm: ''
+ms.technology: reference
 ms.topic: reference
 helpviewer_keywords:
 - CLR [SQL Server] See common language runtime [SQL Server]
@@ -21,12 +19,12 @@ caps.latest.revision: 59
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 41c8382d933a02d26ca47bfc76acc4d2563fce62
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 13eac9448c0cd0d5f5dd208b75c9fc5bed089262
+ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32923444"
+ms.lasthandoff: 06/18/2018
+ms.locfileid: "35703320"
 ---
 # <a name="common-language-runtime-clr-integration-programming-concepts"></a>Concepts de programmation pour l'intégration du CLR
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -42,19 +40,19 @@ ms.locfileid: "32923444"
   
  Le tableau suivant décrit les rubriques de cette section.  
   
- [Common Language Runtime & #40 ; CLR & #41 ; Vue d’ensemble](../../relational-databases/clr-integration/common-language-runtime-integration-overview.md)  
+ [Common Language Runtime &#40;CLR&#41; vue d’ensemble](../../relational-databases/clr-integration/common-language-runtime-integration-overview.md)  
  Fournit une brève vue d'ensemble du CLR et explique comment et pourquoi cette technologie a été utilisée dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Décrit les avantages liés à l'utilisation du CLR pour créer des objets de base de données.  
   
  [Assemblys &#40;moteur de base de données&#41;](../../relational-databases/clr-integration/assemblies-database-engine.md)  
  Décrit l'utilisation d'assemblys dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] afin de déployer des fonctions, des procédures stockées, des déclencheurs, des agrégats définis par l'utilisateur et des types définis par l'utilisateur écrits dans l'un des langages de code managé hébergés par le CLR (Common Language Runtime) [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework, et non écrits en [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
- [Création d’objets de base de données avec le Common Language Runtime & #40 ; CLR & #41 ; Intégration](../../relational-databases/clr-integration/database-objects/building-database-objects-with-common-language-runtime-clr-integration.md)  
+ [Création d’objets de base de données avec le Common Language Runtime &#40;CLR&#41; Integration](../../relational-databases/clr-integration/database-objects/building-database-objects-with-common-language-runtime-clr-integration.md)  
  Décrit les types d'objets qui peuvent être créés à l'aide du CLR et examine les spécifications requises pour générer des objets de base de données CLR.  
   
  [Accès aux données à partir d'objets de base de données CLR](../../relational-databases/clr-integration/data-access/data-access-from-clr-database-objects.md)  
  Explique comment une routine CLR peut accéder aux données stockées dans une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
- [Sécurité d’intégration du CLR](../../relational-databases/clr-integration/security/clr-integration-security.md)  
+ [Sécurité de l’intégration du CLR](../../relational-databases/clr-integration/security/clr-integration-security.md)  
  Décrit le modèle de sécurité de l'intégration du CLR.  
   
  [Débogage d’objets de base de données CLR](../../relational-databases/clr-integration/debugging-clr-database-objects.md)  
@@ -63,17 +61,17 @@ ms.locfileid: "32923444"
  [Déploiement d’objets de base de données CLR](../../relational-databases/clr-integration/deploying-clr-database-objects.md)  
  Décrit le déploiement des assemblys sur les serveurs de production.  
   
- [La gestion des assemblys d’intégration du CLR](../../relational-databases/clr-integration/assemblies/managing-clr-integration-assemblies.md)  
+ [Gestion des assemblys d’intégration du CLR](../../relational-databases/clr-integration/assemblies/managing-clr-integration-assemblies.md)  
  Explique comment créer et supprimer des assemblys d'intégration du CLR.  
   
- [Surveillance et dépannage gérés les objets de base de données](../../relational-databases/clr-integration/monitoring-and-troubleshooting-managed-database-objects.md)  
+ [Surveillance et dépannage des objets de base de données managés](../../relational-databases/clr-integration/monitoring-and-troubleshooting-managed-database-objects.md)  
  Fournit des informations sur les outils à l'aide desquels vous pouvez surveiller et dépanner les objets de base de données et les assemblys managés s'exécutant dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
- [Scénarios d’utilisation et des exemples pour le Common Language Runtime & #40 ; CLR & #41 ; Intégration](http://msdn.microsoft.com/library/33aac25f-abb4-4f29-af88-4a0dacd80ae7)  
+ [Scénarios et exemples d’utilisation pour l’intégration du CLR &#40;Common Language Runtime&#41;](http://msdn.microsoft.com/library/33aac25f-abb4-4f29-af88-4a0dacd80ae7)  
  Décrit des scénarios d'usage et des exemples de code à l'aide d'objets CLR.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Assemblys & #40 ; moteur de base de données & #41 ;](../../relational-databases/clr-integration/assemblies-database-engine.md)   
+ [Assemblys &#40;du moteur de base de données&#41;](../../relational-databases/clr-integration/assemblies-database-engine.md)   
  [Installation du Kit de développement .NET Framework SDK](http://technet.microsoft.com/library/bb686823\(v=SQL.105\).aspx)  
   
   
