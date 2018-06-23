@@ -1,0 +1,80 @@
+---
+title: bcp_colptr | Documents Microsoft
+ms.custom: ''
+ms.date: 03/06/2017
+ms.prod: sql-server-2014
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- database-engine
+- docset-sql-devref
+ms.tgt_pltfrm: ''
+ms.topic: reference
+api_name:
+- bcp_colptr
+api_location:
+- sqlncli11.dll
+topic_type:
+- apiref
+helpviewer_keywords:
+- bcp_colptr function
+ms.assetid: 02ece13e-1da3-4f9d-b860-3177e43d2471
+caps.latest.revision: 30
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: c0fa867ec82520f1dcc0def040d7a8edf8a2a713
+ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36142712"
+---
+# <a name="bcpcolptr"></a>bcp_colptr
+  Définit l'adresse de données de variable de programme pour la copie actuelle dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+  
+## <a name="syntax"></a>Syntaxe  
+  
+```  
+  
+RETCODE bcp_colptr (  
+HDBC   
+hdbc  
+,  
+LPCBYTE   
+pData  
+,  
+INT   
+idxServerCol  
+);  
+  
+```  
+  
+## <a name="arguments"></a>Arguments  
+ *pas*  
+ Handle de connexion ODBC compatible avec la copie en bloc.  
+  
+ *pData*  
+ Pointeur vers les données à copier. Si le type de données liées est de type de valeur élevée (tel que SQLTEXT ou SQLIMAGE), *pData* peut être NULL. Une valeur NULL *pData* indique les valeurs de données de type long seront envoyés à SQL Server par segments à l’aide de [bcp_moretext](bcp-moretext.md).  
+  
+ Si *pData* a la valeur NULL et que la colonne correspondant au champ lié n’est pas un type de valeur élevée, **bcp_colptr** échoue.  
+  
+ Pour plus d’informations sur les types de valeur élevée, consultez [bcp_bind](bcp-bind.md)**.**  
+  
+ *idxServerCol*  
+ Position ordinale de la colonne dans la table de base de données vers laquelle les données sont copiées. La première colonne d'une table est la colonne 1. La position ordinale d'une colonne est indiquée par [SQLColumns](../native-client-odbc-api/sqlcolumns.md).  
+  
+## <a name="returns"></a>Valeur renvoyée  
+ SUCCEED ou FAIL.  
+  
+## <a name="remarks"></a>Notes  
+ Le **bcp_colptr** fonction vous permet de modifier l’adresse de source de données pour une colonne particulière lors de la copie des données vers SQL Server avec [bcp_sendrow](bcp-sendrow.md).  
+  
+ Initialement, le pointeur vers les données utilisateur est défini par un appel à **bcp_bind**. Si l’adresse de données de variable de programme change entre les appels à **bcp_sendrow**, vous pouvez appeler **bcp_colptr** pour réinitialiser le pointeur vers les données. L’appel suivant à **bcp_sendrow** envoie les données traitées par l’appel à **bcp_colptr**.  
+  
+ Il doit y avoir un distinct **bcp_colptr** appel pour chaque colonne dans la table dont les données d’adresse que vous souhaitez modifier.  
+  
+## <a name="see-also"></a>Voir aussi  
+ [Fonctions de copie en bloc](sql-server-driver-extensions-bulk-copy-functions.md)  
+  
+  

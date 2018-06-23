@@ -1,0 +1,83 @@
+---
+title: Fonction Last (Générateur de rapports et SSRS) | Microsoft Docs
+ms.custom: ''
+ms.date: 06/13/2017
+ms.prod: sql-server-2014
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- reporting-services-native
+ms.tgt_pltfrm: ''
+ms.topic: article
+ms.assetid: 123b78a0-d6c9-4f78-b0e7-73b21854a250
+caps.latest.revision: 7
+author: douglaslM
+ms.author: douglasl
+manager: mblythe
+ms.openlocfilehash: c9dc383d9a895218cf644bafc53be3b43cdc698a
+ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36140678"
+---
+# <a name="last-function-report-builder-and-ssrs"></a>Fonction Last (Générateur de rapports et SSRS)
+  Retourne la dernière valeur dans l'étendue donnée de l'expression spécifiée.  
+  
+> [!NOTE]  
+>  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
+  
+## <a name="syntax"></a>Syntaxe  
+  
+```  
+  
+Last(expression, scope)  
+```  
+  
+#### <a name="parameters"></a>Paramètres  
+ *expression*  
+ (`Variant` ou `Binary`) expression sur laquelle effectuer l’agrégation, par exemple, `=Fields!Fieldname.Value`.  
+  
+ *portée*  
+ (`String`) (Facultatif) Nom d'un dataset, d'un groupe ou d'une région de données qui contient les éléments de rapport auxquels appliquer la fonction. Si le paramètre *scope* n'est pas spécifié, l'étendue actuelle est utilisée.  
+  
+## <a name="return-type"></a>Type de retour  
+ Déterminé par le type d'expression.  
+  
+## <a name="remarks"></a>Notes  
+ La fonction `Last` retourne la valeur finale d'un jeu de données après que l'étendue spécifiée a été correctement triée et filtrée.  
+  
+ Le `Last` fonction ne peut pas être utilisée dans les expressions de filtre de groupe de l’étendue actuelle (par défaut).  
+  
+ Vous pouvez également utiliser `Last` dans un en-tête de page pour retourner la dernière valeur de la `ReportItems` collection pour une page afin de produire des en-têtes de type dictionnaire qui affichent la première et dernière entrées sur une page.  
+  
+ La valeur du paramètre *scope* doit être une constante de chaîne et ne peut pas être une expression. Pour les agrégats externes ou les agrégats qui ne spécifient pas d'autres agrégats, le paramètre *scope* doit faire référence à l'étendue actuelle ou à une étendue contenante. Pour les agrégats d'agrégats, les agrégats imbriqués peuvent spécifier une étendue enfant.  
+  
+ *Expression* peut contenir des appels aux fonctions d'agrégation imbriquées avec les exceptions et conditions suivantes :  
+  
+-   Le paramètre*Scope* des agrégats imbriqués doit être identique à l'étendue de l'agrégat externe ou contenu par celle-ci. Pour toutes les étendues distinctes de l'expression, une étendue doit figurer dans une relation enfant avec toutes les autres étendues.  
+  
+-   Le paramètre*Scope* des agrégats imbriqués ne peut pas être le nom d'un dataset.  
+  
+-   *Expression* ne doit pas contenir `First`, `Last`, `Previous`, ou `RunningValue` fonctions.  
+  
+-   *Expression* ne doit pas contenir les agrégats imbriqués qui spécifient *recursive*.  
+  
+ Pour plus d’informations, consultez [Référence aux fonctions d’agrégation &#40;Générateur de rapports et SSRS&#41;](report-builder-functions-aggregate-functions-reference.md) et [Étendue des expressions pour les totaux, les agrégats et les collections intégrées &#40;Générateur de rapports et SSRS&#41;](expression-scope-for-totals-aggregates-and-built-in-collections.md).  
+  
+ Pour plus d’informations sur les agrégats récursifs, consultez [Création de groupes de hiérarchies récursives &#40;Générateur de rapports et SSRS&#41;](creating-recursive-hierarchy-groups-report-builder-and-ssrs.md).  
+  
+## <a name="example"></a>Exemple  
+ L'exemple de code ci-dessous retourne le dernier numéro de produit du groupe `Category` d'une région de données.  
+  
+```  
+=Last(Fields!ProductNumber.Value, "Category")  
+```  
+  
+## <a name="see-also"></a>Voir aussi  
+ [Expression utilise des rapports de &#40;rapport Générateur et SSRS&#41;](expression-uses-in-reports-report-builder-and-ssrs.md)   
+ [Exemples d’expressions &#40;Générateur de rapports et SSRS&#41;](expression-examples-report-builder-and-ssrs.md)   
+ [Types de données dans les expressions &#40;Générateur de rapports et SSRS&#41;](expressions-report-builder-and-ssrs.md)   
+ [Étendue des expressions pour les totaux, les agrégats et les Collections intégrées &#40;rapport Générateur et SSRS&#41;](expression-scope-for-totals-aggregates-and-built-in-collections.md)  
+  
+  
