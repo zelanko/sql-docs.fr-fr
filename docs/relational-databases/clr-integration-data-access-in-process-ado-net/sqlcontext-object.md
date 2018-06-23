@@ -4,10 +4,9 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: clr
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
+ms.technology: reference
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -19,12 +18,12 @@ caps.latest.revision: 54
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 5c2dafdda18684151ce2846300bc4abf8f50b7bd
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 1aa4e7dce28a9bf0b15c40843db13d7d75d5327a
+ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32920104"
+ms.lasthandoff: 06/18/2018
+ms.locfileid: "35697770"
 ---
 # <a name="sqlcontext-object"></a>Objet SqlContext
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -43,10 +42,10 @@ ms.locfileid: "32920104"
 -   **WindowsIdentity**: le **WindowsIdentity** propriété est utilisée pour extraire l’identité Windows de l’appelant.  
   
 ## <a name="determining-context-availability"></a>Détermination de la disponibilité du contexte  
- Requête le **SqlContext** classe pour voir si le code en cours d’exécution est en cours d’exécution dans le processus. Pour ce faire, vérifiez la **IsAvailable** propriété de la **SqlContext** objet. Le **IsAvailable** propriété est en lecture seule et retourne **True** si le code appelant s’exécute à l’intérieur de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et si d’autres **SqlContext** membres sont accessibles. Si le **IsAvailable** propriété renvoie **False**, toutes les autres **SqlContext** membres lèvent une **InvalidOperationException**, le cas échéant. Si **IsAvailable** retourne **False**, toute tentative d’ouvrir un objet de connexion qui a « connexion contextuelle = true » dans la chaîne de connexion échoue.  
+ Requête le **SqlContext** classe pour voir si le code en cours d’exécution est en cours d’exécution dans le processus. Pour ce faire, vérifiez la **IsAvailable** propriété de la **SqlContext** objet. Le **IsAvailable** propriété est en lecture seule et retourne **True** si le code appelant s’exécute à l’intérieur de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et si d’autres **SqlContext** membres sont accessibles. Si le **IsAvailable** propriété renvoie **False**, toutes les autres **SqlContext** membres lèvent une **InvalidOperationException**, le cas échéant . Si **IsAvailable** retourne **False**, toute tentative d’ouvrir un objet de connexion qui a « connexion contextuelle = true » dans la chaîne de connexion échoue.  
   
 ## <a name="retrieving-windows-identity"></a>Extraction de l'identité Windows  
- Le code CLR qui s'exécute à l'intérieur de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] est toujours appelé dans le contexte du compte de processus. Si le code doit exécuter certaines actions à l’aide de l’identité de l’utilisateur appelant, à la place de la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] traiter l’identité, puis un jeton d’emprunt d’identité doit être obtenu via la **WindowsIdentity** propriété de la **SqlContext** objet. Le **WindowsIdentity** propriété retourne un **WindowsIdentity** instance représentant le [!INCLUDE[msCoName](../../includes/msconame-md.md)] identité Windows de l’appelant, ou null si le client a été authentifié à l’aide de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] l’authentification. Seuls les assemblys marqués avec **EXTERNAL_ACCESS** ou **UNSAFE** autorisations peuvent accéder à cette propriété.  
+ Le code CLR qui s'exécute à l'intérieur de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] est toujours appelé dans le contexte du compte de processus. Si le code doit exécuter certaines actions à l’aide de l’identité de l’utilisateur appelant, à la place de la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] traiter l’identité, puis un jeton d’emprunt d’identité doit être obtenu via la **WindowsIdentity** propriété de la  **SqlContext** objet. Le **WindowsIdentity** propriété retourne un **WindowsIdentity** instance représentant le [!INCLUDE[msCoName](../../includes/msconame-md.md)] identité Windows de l’appelant, ou null si le client a été authentifié à l’aide de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentification. Seuls les assemblys marqués avec **EXTERNAL_ACCESS** ou **UNSAFE** autorisations peuvent accéder à cette propriété.  
   
  Après avoir obtenu le **WindowsIdentity** objet, les appelants peuvent emprunter l’identité du compte client et effectuer des actions sur eux.  
   

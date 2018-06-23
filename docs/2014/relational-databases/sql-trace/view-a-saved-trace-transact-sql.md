@@ -1,0 +1,62 @@
+---
+title: Afficher une trace enregistrée (Transact-SQL) | Microsoft Docs
+ms.custom: ''
+ms.date: 06/13/2017
+ms.prod: sql-server-2014
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: ''
+ms.topic: article
+helpviewer_keywords:
+- traces [SQL Server], viewing
+- displaying traces
+- viewing traces
+ms.assetid: 3a95a816-aa89-4d5f-858c-968a9cb3ee87
+caps.latest.revision: 21
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: 7f417eb54eff29631f4a24ebbf48de40937a50c5
+ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36041058"
+---
+# <a name="view-a-saved-trace-transact-sql"></a>Afficher une trace enregistrée (Transact-SQL)
+  Cette rubrique décrit l'utilisation des fonctions intégrées pour afficher une trace enregistrée.  
+  
+### <a name="to-view-a-specific-trace"></a>Pour afficher une trace  
+  
+1.  Exécutez **fn_trace_getinfo** en spécifiant l’identificateur de la trace sur laquelle vous souhaitez des informations. Cette fonction retourne un tableau qui présente la trace, ses propriétés et des informations sur celle-ci.  
+  
+     Appelez la fonction comme suit :  
+  
+    ```  
+    SELECT *  
+    FROM ::fn_trace_getinfo(trace_id)  
+    ```  
+  
+### <a name="to-view-all-existing-traces"></a>Pour afficher toutes les traces existantes  
+  
+1.  Exécutez **fn_trace_getinfo** en spécifiant `0` ou `default`. Cette fonction retourne un tableau qui présente toutes les traces, leurs propriétés et des informations sur celles-ci.  
+  
+     Appelez la fonction comme suit :  
+  
+    ```  
+    SELECT *  
+    FROM ::fn_trace_getinfo(default)  
+    ```  
+  
+## <a name="net-framework-security"></a>Sécurité du .NET Framework  
+ Pour exécuter la fonction intégrée **fn_trace_getinfo**, l’utilisateur a besoin de l’autorisation suivante :  
+  
+ ALTER TRACE sur le serveur.  
+  
+## <a name="see-also"></a>Voir aussi  
+ [sys.fn_trace_getinfo &#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/sys-fn-trace-getinfo-transact-sql)   
+ [Afficher et analyser des traces avec SQL Server Profiler](../../tools/sql-server-profiler/view-and-analyze-traces-with-sql-server-profiler.md)  
+  
+  

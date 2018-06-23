@@ -1,0 +1,143 @@
+---
+title: Modes de quorum WSFC et configuration de vote (SQL Server) | Microsoft Docs
+ms.custom: ''
+ms.date: 06/13/2017
+ms.prod: sql-server-2014
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: ''
+ms.topic: article
+helpviewer_keywords:
+- Availability Groups [SQL Server], WSFC clusters
+- quorum [SQL Server], AlwaysOn and WSFC quorum
+- failover clustering [SQL Server], AlwaysOn Availability Groups
+ms.assetid: ca0d59ef-25f0-4047-9130-e2282d058283
+caps.latest.revision: 12
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: 821f418856162e1533e4ec42a2a1b5a7276a796c
+ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36038516"
+---
+# <a name="wsfc-quorum-modes-and-voting-configuration-sql-server"></a>Modes de quorum WSFC et configuration de vote (SQL Server)
+  Les deux [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] et Instances de Cluster de basculement (FCI) AlwaysOn tirer parti de Windows Server Clustering de basculement (WSFC) en tant que technologie de plateforme.  WSFC utilise une approche basée sur le quorum pour la surveillance de l'intégrité globale du cluster et l'optimisation de la tolérance aux pannes au niveau du nœud. Il est très important de disposer d'une connaissance fondamentale de la configuration du vote des nœuds et des modes de quorum WSFC pour concevoir, administrer et dépanner votre solution de récupération d'urgence haute disponibilité AlwaysOn.  
+  
+ **Dans cette rubrique :**  
+  
+-   [Détection de l'intégrité du cluster par quorum](#ClusterHealthDetectionbyQuorum)  
+  
+-   [Modes de quorum](#QuorumModes)  
+  
+-   [Nœuds votants et non-votants](#VotingandNonVotingNodes)  
+  
+-   [Réglages recommandés pour le vote du quorum](#RecommendedAdjustmentstoQuorumVoting)  
+  
+-   [Tâches associées](#RelatedTasks)  
+  
+-   [Contenu connexe](#RelatedContent)  
+  
+##  <a name="ClusterHealthDetectionbyQuorum"></a> Détection de l'intégrité du cluster par quorum  
+ Chaque nœud d'un cluster WSFC participe à la communication périodique de pulsation pour partager l'état d'intégrité du nœud avec les autres nœuds. Les nœuds qui ne répondent pas sont considérés comme étant en état d'échec.  
+  
+ Un ensemble de nœuds de *quorum* est une majorité des nœuds votants et des témoins dans le cluster WSFC. L'intégrité globale et le statut d'un cluster WSFC sont déterminés par un *vote de quorum*périodique.  La présence d'un quorum signifie que le cluster est intègre et en mesure d'assurer la tolérance aux pannes au niveau du nœud.  
+  
+ L'absence de quorum indique que le cluster n'est pas intègre.  L'intégrité globale du cluster WSFC doit être assurée pour garantir la disponibilité de nœuds secondaires intègres vers lesquels les nœuds principaux peuvent basculer.  Si le vote du quorum échoue, le cluster WSFC passe hors connexion par mesure de sécurité.  Cela entraîne également l'arrêt de toutes les instances de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] inscrites avec le cluster.  
+  
+> [!IMPORTANT]  
+>  Si un cluster WSFC passe hors connexion suite à l'échec du quorum, une intervention manuelle est nécessaire pour le remettre en ligne.  
+>   
+>  Pour plus d’informations, consultez [Récupération d’urgence WSFC par le quorum forcé &#40;SQL Server&#41;](wsfc-disaster-recovery-through-forced-quorum-sql-server.md)périodique.  
+  
+##  <a name="QuorumModes"></a> Modes de quorum  
+ Un *mode de quorum* est configuré au niveau du cluster WSFC afin de dicter la méthodologie utilisée pour le vote du quorum.  L'utilitaire Gestionnaire du cluster de basculement recommande un mode de quorum en fonction du nombre de nœuds du cluster.  
+  
+ Les modes de quorum suivants peuvent être utilisés pour déterminer la constitution d'un quorum de votes :  
+  
+-   **Nœud majoritaire** Plus de la moitié des nœuds votants du cluster doit voter de manière affirmative pour que le cluster soit considéré comme intègre.  
+  
+-   **Nœud et partage de fichiers majoritaires.** Semblable au mode de quorum Nœud majoritaire, à ceci près qu'un partage de fichiers distant est également configuré en tant que témoin du vote, et que la connectivité de n'importe quel nœud à ce partage est également comptabilisée comme vote affirmatif.  Plus de la moitié des votes possibles doivent être affirmatifs pour que cluster soit considéré comme intègre.  
+  
+     À titre de recommandation, le partage de fichiers témoin ne doit pas résider sur un nœud du cluster, et il doit être visible pour tous les nœuds du cluster.  
+  
+-   **Nœud et disque majoritaires.** Semblable au mode de quorum Nœud majoritaire, à ceci près qu'une ressource de cluster de disque partagé est également désignée comme témoin du vote, et que la connectivité de n'importe quel nœud à ce disque partagé est également comptabilisée comme un vote affirmatif.  Plus de la moitié des votes possibles doivent être affirmatifs pour que cluster soit considéré comme intègre.  
+  
+-   **Disque uniquement.** Une ressource de cluster de disque partagé est désignée comme témoin, et la connectivité de n'importe quel nœud à ce disque partagé est comptabilisée comme un vote affirmatif.  
+  
+> [!TIP]  
+>  Lorsque vous utilisez une configuration de stockage asymétrique pour [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)], il est généralement conseillé d'utiliser le mode de quorum Nœud majoritaire lorsque vous avez un nombre impair de nœuds votants, ou le mode de quorum Nœud et partage de fichiers majoritaires lorsque vous avez un nombre pair de nœuds votants.  
+  
+##  <a name="VotingandNonVotingNodes"></a> Nœuds votants et non-votants  
+ Par défaut, chaque nœud du cluster WSFC est inclus en tant que membre du quorum du cluster ; chaque nœud dispose d'un seul vote pour déterminer l'intégrité globale de cluster, et chaque nœud tente en permanence d'établir un quorum.  À ce point précis, la discussion du quorum a soigneusement qualifié l'ensemble des nœuds de cluster WSFC qui votent pour déterminer l'intégrité du cluster en tant que *nœuds votants*.  
+  
+ Aucun nœud d'un cluster WSFC ne peut définitivement déterminer seul que le cluster est globalement intègre ou pas.  À tout moment, du point de vue de chaque nœud, certains autres nœuds peuvent sembler être hors connexion, ou en cours de basculement, ou ne pas répondre en raison d'une défaillance de communication réseau.  Une fonction principale du vote de quorum consiste à déterminer si l'état apparent de chaque nœud du cluster WSFC correspond à l'état réel du nœud.  
+  
+ Pour tous les modèles de quorum à l'exception de « Disque uniquement », l'efficacité d'un vote de quorum dépend de la fiabilité des communications entre tous les nœuds votants du cluster. Les communications réseau entre les nœuds sur le même sous-réseau physique doivent être considérées comme fiables ; le vote du quorum doit être approuvé.  
+  
+ Toutefois, si un nœud d'un autre sous-réseau est considéré comme non-réactif dans un vote de quorum alors qu'il en ligne et intègre, ceci est probablement dû à une défaillance de communication réseau entre les sous-réseaux.  En fonction de la topologie de cluster, du mode de quorum et de la configuration de la stratégie de basculement, l'échec de communication réseau peut effectivement créer plusieurs ensembles (ou sous-ensembles) de nœuds votants.  
+  
+ Quand plusieurs sous-ensembles de nœuds votants sont en mesure d’établir un quorum par eux-mêmes, on parle de *scénario de fractionnement*.  Dans ce scénario, les nœuds appartenant à des quorums distincts peuvent se comporter différemment, et être en conflit les uns avec les autres.  
+  
+> [!NOTE]  
+>  Le scénario de fractionnement est uniquement possible lorsqu'un administrateur système procède manuellement à une opération de quorum forcée, ou dans quelques cas très rares, à un basculement forcé, ce qui a pour effet de subdiviser l'ensemble de nœuds du quorum.  
+  
+ Pour simplifier la configuration de votre quorum et accroître la disponibilité, vous pouvez configurer le paramètre *NodeWeight* de chaque nœud de sorte que le vote du nœud ne soit pas comptabilisé dans le quorum.  
+  
+> [!IMPORTANT]  
+>  Pour utiliser les paramètres NodeWeight, le correctif logiciel suivant doit être appliqué à tous les serveurs dans le cluster WSFC :  
+>   
+>  [KB2494036](http://support.microsoft.com/kb/2494036): un correctif est disponible pour vous permettre de configurer un nœud de cluster qui n'a pas de votes de quorum dans [!INCLUDE[firstref_longhorn](../../../includes/firstref-longhorn-md.md)] et dans [!INCLUDE[winserver2008r2](../../../includes/winserver2008r2-md.md)]  
+  
+##  <a name="RecommendedAdjustmentstoQuorumVoting"></a> Réglages recommandés pour le vote du quorum  
+ Lorsque vous activez ou désactivez le vote d'un nœud WSFC donné, respectez les instructions suivantes :  
+  
+-   **Aucun vote par défaut.** Imaginons que chaque nœud ne doit pas voter sans justification explicite.  
+  
+-   **Inclure tous les réplicas principaux.** Chaque nœud WSFC hébergeant un réplica principal de groupe de disponibilité ou qui est le propriétaire par défaut d'une instance de cluster de basculement doit disposer d'un vote.  
+  
+-   **Inclure les propriétaires possibles de basculement automatique.** Chaque nœud susceptible d'héberger un réplica de disponibilité suite à un basculement automatique du groupe de disponibilité ou d'une instance de cluster de basculement doit disposer d'un vote. S'il n'existe qu'un seul groupe de disponibilité dans le cluster WSFC et des réplicas de disponibilité sont hébergés uniquement par des instances autonomes, cette règle inclut uniquement le réplica secondaire qui est la cible du basculement automatique.  
+  
+-   **Exclure les nœuds de site secondaire.** En général, n'attribuez pas de vote aux nœuds WSFC résidant sur un site de récupération d'urgence secondaire.  Il n'est pas souhaitable que les nœuds du site secondaire puissent contribuer à une décision visant à mettre le cluster hors connexion lorsque le site principal fonctionne correctement.  
+  
+-   **Nombre impair de voix.** Si nécessaire, ajoutez un partage de fichiers témoin, un nœud témoin ou un disque témoin au cluster et modifiez le mode de quorum de manière à empêcher d'éventuels liens dans le vote du quorum.  
+  
+-   **Réévaluez les assignations de vote après le basculement** Il n'est pas souhaitable de basculer dans une configuration de cluster qui ne prend pas en charge un quorum intègre.  
+  
+> [!IMPORTANT]  
+>  Lors de la validation de la configuration de vote du quorum WSFC, l'Assistant Groupe de disponibilité AlwaysOn affiche un avertissement si l'une des conditions suivantes est remplie :  
+>   
+>  -   Le nœud de cluster qui héberge le réplica principal n'a pas de vote.  
+> -   Un réplica secondaire est configuré pour le basculement automatique et le nœud de cluster n'a pas de vote.  
+> -   [KB2494036](http://support.microsoft.com/kb/2494036) n'est pas installé sur tous les nœuds de cluster qui hébergent des réplicas de disponibilité. Ce correctif logiciel est requis pour ajouter ou supprimer des votes pour les nœuds de cluster dans les déploiements multisites. Toutefois, dans les déploiements sur un seul site, il n'est généralement pas nécessaire et vous pouvez ignorer l'avertissement en toute sécurité.  
+  
+> [!TIP]  
+>  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] expose plusieurs vues de gestion dynamique (DMV) du système qui peuvent vous aider à gérer la configuration des paramètres du cluster WSFC et le vote du quorum de nœud.  
+>   
+>  Pour plus d’informations, consultez :  [sys.dm_hadr_cluster](/sql/relational-databases/system-dynamic-management-views/sys-dm-hadr-cluster-transact-sql), [sys.dm_hadr_cluster_members](/sql/relational-databases/system-dynamic-management-views/sys-dm-hadr-cluster-members-transact-sql), [sys.dm_os_cluster_nodes](/sql/relational-databases/system-dynamic-management-views/sys-dm-os-nodes-transact-sql), [sys.dm_hadr_cluster_networks](/sql/relational-databases/system-dynamic-management-views/sys-dm-hadr-cluster-networks-transact-sql)  
+  
+##  <a name="RelatedTasks"></a> Tâches associées  
+  
+-   [Afficher les paramètres NodeWeight pour le quorum de cluster](view-cluster-quorum-nodeweight-settings.md)  
+  
+-   [Configurer les paramètres NodeWeight pour un quorum de cluster](configure-cluster-quorum-nodeweight-settings.md)  
+  
+##  <a name="RelatedContent"></a> Contenu associé  
+  
+-   [Guide de Solutions Microsoft SQL Server AlwaysOn pour une haute disponibilité et récupération d’urgence](http://go.microsoft.com/fwlink/?LinkId=227600)  
+  
+-   [Vérification de configuration de vote de quorum dans l’Assistant groupe de disponibilité AlwaysOn](http://blogs.msdn.com/b/sqlalwayson/archive/2012/03/13/quorum-vote-configuration-check-in-alwayson-availability-group-wizards-andy-jing.aspx)  
+  
+-   [Technologies de Windows Server : clusters de basculement](http://technet.microsoft.com/library/cc732488\(v=WS.10\).aspx)  
+  
+-   [Guide pas à pas de configuration d'un cluster de basculement : configuration du quorum dans un cluster de basculement](http://technet.microsoft.com/library/cc770620\(WS.10\).aspx)  
+  
+## <a name="see-also"></a>Voir aussi  
+ [Récupération d’urgence WSFC par le quorum forcé &#40;SQL Server&#41;](wsfc-disaster-recovery-through-forced-quorum-sql-server.md)   
+ [Clustering de basculement Windows Server &#40;WSFC&#41; avec SQL Server](windows-server-failover-clustering-wsfc-with-sql-server.md)  
+  
+  
