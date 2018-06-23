@@ -1,0 +1,69 @@
+---
+title: Programmabilité du composant WebPart Visionneuse de rapports dans l’intégration SharePoint | Microsoft Docs
+ms.custom: ''
+ms.date: 03/06/2017
+ms.prod: sql-server-2014
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- docset-sql-devref
+- reporting-services-native
+ms.tgt_pltfrm: ''
+ms.topic: reference
+ms.assetid: 714017b7-1bd6-4950-a3c6-d0df8450a877
+caps.latest.revision: 7
+author: douglaslM
+ms.author: douglasl
+manager: jhubbard
+ms.openlocfilehash: 43c0988abc3ea5043873421054fc370a58ed9347
+ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36139540"
+---
+# <a name="report-viewer-web-part-programmability-in-sharepoint-integration"></a>Programmabilité du composant WebPart Visionneuse de rapports dans l'intégration SharePoint
+  Le composant WebPart de la visionneuse de rapports est un contrôle serveur `T:Microsoft.ReportingServices.SharePoint.UI.WebParts.ReportViewerWebPart` qui contient un ensemble d'interfaces de programmation d'applications publiques (API) permettant aux développeurs de créer des applications SharePoint personnalisées. Vous pouvez créer des composants WebPart personnalisés qui fournissent les paramètres et le chemin du rapport au composant WebPart Visionneuse de rapports à l’aide de connexions de composants WebPart. Vous pouvez également incorporer le composant WebPart dans une page WebPart SharePoint personnalisée et le personnaliser en utilisant l'API publique.  
+  
+## <a name="connecting-to-report-viewer-web-part-with-custom-web-parts"></a>Connexion au composant WebPart Visionneuse de rapports avec des composants WebPart personnalisés  
+ Le composant WebPart Visionneuse de rapports est un consommateur de connexions aux composants WebPart SharePoint qui implémentent <xref:System.Web.UI.WebControls.WebParts.IWebPartRow> ou `T:Microsoft.SharePoint.WebPartPages.IFilterValues`. Un composant WebPart <xref:System.Web.UI.WebControls.WebParts.IWebPartRow>, tel que le composant WebPart **Documents**, peut fournir le chemin d’un rapport à un composant WebPart Visionneuse de rapports s’il est placé dans la même page de composant WebPart que le composant WebPart Visionneuse de rapports. De même, un `T:Microsoft.SharePoint.WebPartPages.IFilterValues` WebPart, telles que la **filtre de texte** ou **filtre choix**, peut fournir un paramètre de rapport à une partie Web de visionneuse de rapport lorsqu’elle est placée sur la même page de composant WebPart que le Web de visionneuse de rapports Partie.  
+  
+### <a name="implementing-a-report-path-provider-with-iwebpartrow"></a>Implémentation d'un fournisseur de chemins d'accès au rapport avec IWebPartRow  
+ Pour fournir un chemin d'accès au rapport au composant WebPart Visionneuse de rapports via des connexions WebPart, procédez comme suit :  
+  
+1.  Créez un composant WebPart qui implémente l'interface <xref:System.Web.UI.WebControls.WebParts.IWebPartRow>.  
+  
+2.  Ajoutez le composant WebPart à la même page WebPart que celle du composant WebPart Visionneuse de rapports.  
+  
+3.  Connectez votre composant WebPart au composant WebPart Visionneuse de rapports dans l'interface utilisateur du concepteur WebPart.  
+  
+    > [!NOTE]  
+    >  Vous ne pouvez connecter qu'un seul composant WebPart <xref:System.Web.UI.WebControls.WebParts.IWebPartRow> à la fois au composant WebPart Visionneuse de rapports et vous ne pouvez pas connecter simultanément un composant WebPart <xref:System.Web.UI.WebControls.WebParts.IWebPartRow> et un composant WebPart `T:Microsoft.SharePoint.WebPartPages.IFilterValues` au composant WebPart Visionneuse de rapports.  
+  
+ Pour que le composant WebPart <xref:System.Web.UI.WebControls.WebParts.IWebPartRow> fonctionne correctement avec le composant `T:Microsoft.ReportingServices.SharePoint.UI.WebParts.ReportViewerWebPart`, procédez comme suit dans la méthode <xref:System.Web.UI.WebControls.WebParts.IWebPartRow.GetRowData%2A>  :  
+  
+-   Appelez la méthode de rappel avec un objet <xref:System.Data.DataRowView> en tant que paramètre d'entrée.  
+  
+-   Assurez-vous que l'objet <xref:System.Data.DataRowView> contient une colonne appelée « DocUrl » qui inclut le chemin d'accès au rapport.  
+  
+    > [!NOTE]  
+    >  Le composant WebPart Visionneuse de rapports dans le complément pour [!INCLUDE[offSPServ](../includes/offspserv-md.md)] 2010 prend également en charge la réception des données de chemin d'accès au rapport par le biais de la colonne « FileRef ».  
+  
+### <a name="implementing-a-report-parameter-provider-with-ifiltervalues"></a>Implémentation d'un fournisseur de paramètres de rapport avec IFilterValues  
+ Un composant WebPart qui implémente `T:Microsoft.SharePoint.WebPartPages.IFilterValues` peut fournir une valeur de paramètre au composant WebPart Visionneuse de rapports. La valeur de paramètre envoyée au composant WebPart Visionneuse de rapports est soumise aux mêmes restrictions appliquées au paramètre de rapport comme indiqué dans la définition de rapport (type de données, valeurs valides, etc.).  
+  
+ Pour fournir un paramètre de rapport au composant WebPart Visionneuse de rapports, procédez comme suit :  
+  
+1.  Créez un composant WebPart qui implémente l'interface `T:Microsoft.SharePoint.WebPartPages.IFilterValues`.  
+  
+2.  Ajoutez le composant WebPart à la même page que le `T:Microsoft.ReportingServices.SharePoint.UI.WebParts.ReportViewerWebPart`.  
+  
+3.  Connectez votre composant WebPart `T:Microsoft.SharePoint.WebPartPages.IFilterValues` au composant WebPart Visionneuse de rapports dans l'interface utilisateur du concepteur WebPart.  
+  
+    > [!NOTE]  
+    >  Vous pouvez connecter plusieurs composants WebPart `T:Microsoft.SharePoint.WebPartPages.IFilterValues` à la fois au composant WebPart Visionneuse de rapports. Toutefois, vous ne pouvez pas connecter simultanément un composant WebPart <xref:System.Web.UI.WebControls.WebParts.IWebPartRow> et un composant WebPart `T:Microsoft.SharePoint.WebPartPages.IFilterValues` au composant WebPart Visionneuse de rapports.  
+  
+## <a name="see-also"></a>Voir aussi  
+ [Interface de IFilterValues](https://msdn.microsoft.com/en-us/library/office/microsoft.sharepoint.webpartpages.ifiltervalues\(v=office.15\).aspx)  
+  
+  
