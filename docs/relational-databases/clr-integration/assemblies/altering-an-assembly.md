@@ -4,10 +4,9 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: clr
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
+ms.technology: reference
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -20,11 +19,12 @@ caps.latest.revision: 14
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 42a8ca545116bda764ed96a3093683d6e7d52bf9
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 7edffcdf1009199a2c2024adf7621a53e7109796
+ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/18/2018
+ms.locfileid: "35698290"
 ---
 # <a name="altering-an-assembly"></a>Modification d'un assembly
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -45,7 +45,7 @@ ALTER ASSEMBLY SQLCLRTest
 WITH PERMISSION_SET = EXTERNAL_ACCESS   
 ```  
   
- Si le jeu d’autorisations d’un assembly est modifié de **SAFE** à **EXTERNAL_ACCESS** ou **UNSAFE**, une clé asymétrique et la connexion correspondante avec **EXTERNAL ACCESS ASSEMBLY** autorisation ou **UNSAFE ASSEMBLY** l’autorisation de l’assembly doit d’abord être créée. Pour plus d’informations, consultez [Creating an Assembly](../../../relational-databases/clr-integration/assemblies/creating-an-assembly.md).  
+ Si le jeu d’autorisations d’un assembly est modifié de **SAFE** à **EXTERNAL_ACCESS** ou **UNSAFE**, une clé asymétrique et la connexion correspondante avec  **EXTERNAL ACCESS ASSEMBLY** autorisation ou **UNSAFE ASSEMBLY** l’autorisation de l’assembly doit d’abord être créée. Pour plus d’informations, consultez [Creating an Assembly](../../../relational-databases/clr-integration/assemblies/creating-an-assembly.md).  
   
 ## <a name="adding-the-source-code-of-an-assembly"></a>Ajout du code source d'un assembly  
  La clause ADD FILE de la syntaxe ALTER ASSEMBLY n'est pas présente dans CREATE ASSEMBLY. Vous pouvez l'utiliser pour ajouter le code source ou tout autre fichier associé à un assembly. Les fichiers sont copiés depuis leur emplacement d'origine et stockés dans les tables système de la base de données. Le code source et autres fichiers est toujours à portée de main dans l'éventualité où vous deviez recréer ou documenter la version actuelle de l'UDT.  

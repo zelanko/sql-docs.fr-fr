@@ -1,0 +1,72 @@
+---
+title: Élément assembly (ASSL) | Documents Microsoft
+ms.custom: ''
+ms.date: 06/13/2017
+ms.prod: sql-server-2014
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- analysis-services
+- docset-sql-devref
+ms.tgt_pltfrm: ''
+ms.topic: reference
+api_name:
+- Assembly Element
+api_location:
+- http://schemas.microsoft.com/analysisservices/2003/engine
+topic_type:
+- apiref
+f1_keywords:
+- ASSEMBLY
+helpviewer_keywords:
+- Assembly element [ASSL]
+ms.assetid: 1910ccb0-7da0-4ee1-9548-ad6e0068d23d
+caps.latest.revision: 34
+author: Minewiskan
+ms.author: owend
+manager: mblythe
+ms.openlocfilehash: 02bc362fd633a7c3cf9fcd4936d2a0580753c01b
+ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36040747"
+---
+# <a name="assembly-element-assl"></a>Élément Assembly (ASSL)
+  Représente un [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] assembly ou une bibliothèque de liens dynamiques (DLL) COM associée une [Server](server-element-assl.md) élément ou un [base de données](database-element-assl.md) élément.  
+  
+## <a name="syntax"></a>Syntaxe  
+  
+```xml  
+  
+<Assemblies>  
+   <Assembly xsi:type="ClrAssembly">...</Assembly>  
+   <!-- or -->  
+   <Assembly xsi:type="ComAssembly">...</Assembly>  
+</Assemblies>  
+```  
+  
+## <a name="element-characteristics"></a>Caractéristiques de l'élément  
+  
+|Caractéristique|Description|  
+|--------------------|-----------------|  
+|Type de données et longueur|[ClrAssembly](../data-type/assembly-data-type-assl.md), [ComAssembly](../data-type/comassembly-data-type-assl.md)|  
+|Valeur par défaut|None|  
+|Cardinalité|0-n : élément facultatif pouvant apparaître plusieurs fois.|  
+  
+## <a name="element-relationships"></a>Relations entre les éléments  
+  
+|Relation|Élément|  
+|------------------|-------------|  
+|Éléments parents|[Assemblys](../collections/assemblies-element-assl.md)|  
+|Éléments enfants|None|  
+  
+## <a name="remarks"></a>Notes  
+ L’élément correspondant dans le modèle d’objet objets AMO (Analysis Management) est <xref:Microsoft.AnalysisServices.Assembly>.  
+  
+## <a name="see-also"></a>Voir aussi  
+ [Élément serveur &#40;ASSL&#41;](server-element-assl.md)   
+ [Élément de base de données &#40;ASSL&#41;](database-element-assl.md)   
+ [Objets &#40;ASSL&#41;](objects-assl.md)  
+  
+  

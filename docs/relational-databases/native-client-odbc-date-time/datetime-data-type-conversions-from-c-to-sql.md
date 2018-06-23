@@ -4,10 +4,9 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: native-client-odbc-date-time
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
+ms.technology: connectivity
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -18,11 +17,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: d1e307f12de6f298381e1e314a343eaece6353ad
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: a44722f571f8cd0a9ac0cecdd0dd9a0a1254bd5b
+ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/18/2018
+ms.locfileid: "35702860"
 ---
 # <a name="datetime-data-type-conversions-from-c-to-sql"></a>DateTime, Conversions de types de données à partir de C en SQL
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -30,13 +30,13 @@ ms.lasthandoff: 05/03/2018
 
   Cette rubrique répertorie les problèmes à prendre en compte les lors de la conversion de types en types C [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] types date/heure.  
   
- Les conversions décrites dans le tableau suivant s'appliquent aux conversions effectuées sur le client. Dans les cas où le client spécifie la précision à la seconde fractions de seconde pour un paramètre qui diffère de celui défini sur le serveur, la conversion cliente peut réussir mais le serveur retourne une erreur lors de la **SQLExecute** ou **SQLExecuteDirect** est appelée. En particulier, ODBC traite toute troncation des fractions de seconde comme une erreur, alors que le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] comportement consiste à arrondir ; arrondi, par exemple, se produit lorsque vous passez de **datetime2(6)** à **datetime2(2)**. Les colonnes datetime sont arrondies au 1/300ème de seconde et les secondes des colonnes smalldatetime sont définies avec la valeur zéro (0) par le serveur.  
+ Les conversions décrites dans le tableau suivant s'appliquent aux conversions effectuées sur le client. Dans les cas où le client spécifie la précision à la seconde fractions de seconde pour un paramètre qui diffère de celui défini sur le serveur, la conversion cliente peut réussir mais le serveur retourne une erreur lors de la **SQLExecute** ou  **SQLExecuteDirect** est appelée. En particulier, ODBC traite toute troncation des fractions de seconde comme une erreur, alors que le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] comportement consiste à arrondir ; arrondi, par exemple, se produit lorsque vous passez de **datetime2(6)** à **datetime2(2)**. Les colonnes datetime sont arrondies au 1/300ème de seconde et les secondes des colonnes smalldatetime sont définies avec la valeur zéro (0) par le serveur.  
   
 |||||||||  
 |-|-|-|-|-|-|-|-|  
 ||SQL_TYPE_DATE|SQL_TYPE_TIME|SQL_SS_TIME2|SQL_TYPE_TIMESTAMP|SQL_SS_TIMSTAMPOFFSET|SQL_CHAR|SQL_WCHAR|  
-|SQL_C_DATE|1|-|-|1,6|1,5,6|1,13|1,13|  
-|SQL_C_TIME|-|1|1|1,7|1,5,7|1,13|1,13|  
+|SQL_C_DATE| 1|-|-|1,6|1,5,6|1,13|1,13|  
+|SQL_C_TIME|-| 1| 1|1,7|1,5,7|1,13|1,13|  
 |SQL_C_SS_TIME2|-|1,3|1,10|1,7|1,5,7|1,13|1,13|  
 |SQL_C_BINARY(SQL_SS_TIME2_STRUCT)|Néant|Néant|1,10,11|Néant|Néant|Néant|Néant|  
 |SQL_C_TYPE_TIMESTAMP|1,2|1,3,4|1,4,10|1,10|1,5,10|1,13|1,13|  
@@ -98,6 +98,6 @@ ms.lasthandoff: 05/03/2018
 -   **N/a**: existant [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] et le comportement antérieur est conservé.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Date et heure améliorations & #40 ; ODBC & #41 ;](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md)  
+ [Date et heure améliorations &#40;ODBC&#41;](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md)  
   
   

@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: native-client-odbc-extensions-bulk-copy-functions
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: connectivity
 ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
@@ -24,11 +22,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 3a7f4e8a8b6813eecf74fbc4e932296d3eff4631
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 0faf40639991005ad7161af9f144af49fb384ba3
+ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/18/2018
+ms.locfileid: "35703490"
 ---
 # <a name="bcpgettypename"></a>bcp_gettypename
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -46,7 +45,7 @@ RETCODE bcp_gettypename (
 ```  
   
 ## <a name="arguments"></a>Arguments  
- *Jeton*  
+ *jeton*  
  Valeur indiquant un jeton de type BCP.  
   
  *field*  
@@ -66,7 +65,7 @@ RETCODE bcp_gettypename (
 |**SQLNUMERIC**|Avant ou après|**numeric**|  
 |**SQLINT1**|Avant ou après|**tinyint**|  
 |**SQLINT2**|Avant ou après|**smallint**|  
-|**SQLINT4**|Avant ou après|**int**|  
+|**SQLINT4**|Avant ou après|**Int**|  
 |**SQLMONEY**|Avant ou après|**money**|  
 |**SQLFLT8**|Avant ou après|**float**|  
 |**SQLDATETIME**|Avant ou après|**datetime**|  
@@ -79,8 +78,8 @@ RETCODE bcp_gettypename (
 |**SQLTEXT**|Avant ou après|**texte**|  
 |**SQLBIGBINARY**|non|**binaire**|  
 |**SQLBINARY**|non|**Binaire**|  
-|**SQLBIGVARBINARY**|non|**varbinary**|  
-|**SQLVARBINARY**|non|**varbinary**|  
+|**SQLBIGVARBINARY**|non|**Varbinary**|  
+|**SQLVARBINARY**|non|**Varbinary**|  
 |**SQLIMAGE**|Avant ou après|**Image**|  
 |**SQLINTN**|Avant ou après|**int null**|  
 |**SQLDATETIMN**|Avant ou après|**datetime-null**|  
@@ -88,7 +87,7 @@ RETCODE bcp_gettypename (
 |**SQLFLTN**|Avant ou après|**float-null**|  
 |**SQLAOPSUM**|Avant ou après|**Sum**|  
 |**SQLAOPAVG**|Avant ou après|**Avg**|  
-|**SQLAOPCNT**|Avant ou après|**Compter**|  
+|**SQLAOPCNT**|Avant ou après|**Count**|  
 |**SQLAOPMIN**|Avant ou après|**Min**|  
 |**SQLAOPMAX**|Avant ou après|**Max**|  
 |**SQLDATETIM4**|Avant ou après|**smalldatetime**|  
@@ -97,7 +96,7 @@ RETCODE bcp_gettypename (
 |**SQLUNIQUEID**|Avant ou après|**uniqueidentifier**|  
 |**SQLNCHAR**|non|**NCHAR**|  
 |**SQLNVARCHAR**|non|**Nvarchar**|  
-|**SQLNTEXT**|Avant ou après|**ntext**|  
+|**SQLNTEXT**|Avant ou après|**Ntext**|  
 |**SQLVARIANT**|Avant ou après|**sql_variant**|  
 |**SQLINT8**|Avant ou après|**Bigint**|  
 |**SQLCHARACTER**|Oui|**varchar(max)**|  
@@ -116,7 +115,7 @@ RETCODE bcp_gettypename (
 ## <a name="bcpgettypename-support-for-enhanced-date-and-time-features"></a>Prise en charge des fonctionnalités de date et heure améliorées par bcp_gettypename  
  Les valeurs de paramètre de jeton pour les types date/heure sont décrites dans la colonne « Type dans sqlncli.h » de la table dans [modifications de copie en bloc pour les Types améliorées de Date et heure &#40;OLE DB et ODBC&#41;](../../relational-databases/native-client-odbc-date-time/bulk-copy-changes-for-enhanced-date-and-time-types-ole-db-and-odbc.md). La valeur retournée est dans la ligne correspondante de la colonne « Type de stockage de fichier ».  
   
- Pour plus d’informations, consultez [Date et heure améliorations & #40 ; ODBC & #41 ;](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md).  
+ Pour plus d’informations, consultez [Date et heure améliorations &#40;ODBC&#41;](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md).  
   
 ## <a name="see-also"></a>Voir aussi  
  [Fonctions de copie en bloc](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/sql-server-driver-extensions-bulk-copy-functions.md)  

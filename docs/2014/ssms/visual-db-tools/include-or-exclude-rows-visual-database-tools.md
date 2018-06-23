@@ -1,0 +1,115 @@
+---
+title: Inclure ou exclure des lignes (Visual Database Tools) | Microsoft Docs
+ms.custom: ''
+ms.date: 06/13/2017
+ms.prod: sql-server-2014
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dbe-cross-instance
+ms.tgt_pltfrm: ''
+ms.topic: article
+helpviewer_keywords:
+- search criteria [SQL Server], excluding rows
+- search criteria [SQL Server], WHERE clause
+- included rows
+- search conditions [SQL Server], HAVING clause
+- search criteria [SQL Server], including rows
+- row excluded in search [SQL Server]
+- search criteria [SQL Server], HAVING clause
+- search conditions [SQL Server], WHERE clause
+- row included in search [SQL Server]
+- excluding rows
+ms.assetid: ba4e1202-31a2-444d-8365-c68a530ef223
+caps.latest.revision: 11
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: fa82306f17c84c9751169339c8500272e2789997
+ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36044393"
+---
+# <a name="include-or-exclude-rows-visual-database-tools"></a>Inclure ou exclure des lignes (Visual Database Tools)
+  Pour limiter le nombre de lignes qu'une requête SELECT doit renvoyer, créez des conditions de recherche ou des critères de filtre. Dans SQL, les conditions de recherche apparaissent dans la clause WHERE de l'instruction ou, si vous créez une requête d'agrégation, dans la clause HAVING.  
+  
+> [!NOTE]  
+>  Les conditions de recherche permettent également d'indiquer quelles lignes sont affectées par une requête appartenant à un des types suivants : Update, Insert Results, Insert Values, Delete ou Make Table.  
+  
+ Lors de l'exécution de la requête, [!INCLUDE[ssDE](../../includes/ssde-md.md)] examine et applique la condition de recherche à chacune des tables dans lesquelles vous demandez une recherche. Si la ligne remplit la condition, elle est incluse dans la requête. Voici un exemple d'une condition de recherche de tous les employés d'une région particulière :  
+  
+```  
+region = 'UK'  
+```  
+  
+ Pour établir les critères d'inclusion d'une ligne dans un résultat, vous pouvez utiliser plusieurs conditions de recherche. Par exemple, le critère de recherche suivant se compose de deux conditions de recherche. La requête n'inclut une ligne dans l'ensemble des résultats que si elle remplit les deux conditions.  
+  
+```  
+region = 'UK' AND product_line = 'Housewares'  
+```  
+  
+ Vous pouvez combiner ces conditions par AND ou OR. L'exemple ci-dessus utilise AND. Le critère suivant utilise OR. Le jeu de résultats inclut toutes les lignes remplissant l'une des conditions de recherche, ou les deux :  
+  
+```  
+region = 'UK' OR product_line = 'Housewares'  
+```  
+  
+ Vous pouvez même combiner plusieurs conditions de recherche dans une seule et même colonne. Par exemple, le critère suivant combine deux conditions dans la colonne region :  
+  
+```  
+region = 'UK' OR region = 'US'  
+```  
+  
+ Pour plus de détails sur la combinaison de conditions de recherche, consultez les rubriques suivantes :  
+  
+-   [Conventions pour la combinaison de conditions de recherche dans le volet Critères &#40;Visual Database Tools&#41;](conventions-combine-search-conditions-in-criteria-pane-visual-db-tools.md)  
+  
+-   [Spécifier plusieurs conditions de recherche pour une colonne &#40;Visual Database Tools&#41;](visual-database-tools.md)  
+  
+-   [Spécifier plusieurs conditions de recherche pour plusieurs colonnes &#40;Visual Database Tools&#41;](specify-multiple-search-conditions-for-multiple-columns-visual-database-tools.md)  
+  
+-   [Associer des conditions avec priorité à l'opérateur AND &#40;Visual Database Tools&#41;](combine-conditions-when-and-has-precedence-visual-database-tools.md)  
+  
+-   [Associer des conditions avec priorité à l'opérateur OR &#40;Visual Database Tools&#41;](combine-conditions-when-or-has-precedence-visual-database-tools.md)  
+  
+## <a name="examples"></a>Exemples  
+ Voici quelques exemples des requêtes utilisant plusieurs opérateurs et critères de lignes :  
+  
+-   **Littéral** Valeur logique, date, numérique ou de type texte. Dans l'exemple suivant, un littéral recherche toutes les lignes contenant des employés de la société travaillant au Royaume-Uni :  
+  
+    ```  
+    WHERE region = 'UK'  
+    ```  
+  
+-   **Référence de colonne** Compare les valeurs contenues dans une colonne avec celles contenues dans une autre. L'exemple suivant recherche dans une table `products` toutes les lignes dont le coût de production est inférieur au coût d'expédition :  
+  
+    ```  
+    WHERE prod_cost < ship_cost  
+    ```  
+  
+-   **Fonction** Référence à une fonction que la base de données principale peut résoudre pour calculer une valeur à rechercher. La fonction peut être définie par le serveur de base de données ou par l'utilisateur et renvoyer une valeur scalaire. L'exemple suivant recherche les commandes passées aujourd'hui (la fonction GETDATE( ) retourne la date du jour) :  
+  
+    ```  
+    WHERE order_date = GETDATE()  
+    ```  
+  
+-   **NULL** L'exemple suivant recherche dans une table `authors` tous les auteurs dont le prénom a été renseigné :  
+  
+    ```  
+    WHERE au_fname IS NOT NULL  
+    ```  
+  
+-   **Calcul** Résultat d'un calcul impliquant des littéraux, des références de colonnes ou d'autres expressions. L'exemple suivant recherche dans une table `products` toutes les lignes dont le prix de vente au détail dépasse le double du coût de production :  
+  
+    ```  
+    WHERE sales_price > (prod_cost * 2)  
+    ```  
+  
+## <a name="see-also"></a>Voir aussi  
+ [Rubriques de procédures de requêtes et les vues de conception &#40;Visual Database Tools&#41;](design-queries-and-views-how-to-topics-visual-database-tools.md)   
+ [Spécifiez les critères de recherche &#40;Visual Database Tools&#41;](specify-search-criteria-visual-database-tools.md)   
+ [Requête avec des paramètres &#40;Visual Database Tools&#41;](query-with-parameters-visual-database-tools.md)  
+  
+  
