@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: native-client-ole-db-interfaces
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: connectivity
 ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
@@ -22,12 +20,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 808ab79ea75bb191b496411d5088e7a23b692daf
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 8304b0797a4c9abcf01ce81f778920aba33ba445
+ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32948164"
+ms.lasthandoff: 06/18/2018
+ms.locfileid: "35701930"
 ---
 # <a name="ibcpsessionbcpcontrol-ole-db"></a>IBCPSession::BCPControl (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -51,11 +49,11 @@ HRESULT BCPControl(
   
  Les valeurs possibles pour *eOption* sont :  
   
-|Option| Description|  
+|Option|Description|  
 |------------|-----------------|  
 |BCP_OPTION_ABORT|Arrête une opération de copie en bloc déjà en cours. Vous pouvez appeler la méthode **BCPControl** avec un argument *eOption* de valeur BCP_OPTION_ABORT à partir d'un autre thread pour arrêter une opération de copie en bloc en cours d'exécution. L'argument *iValue* est ignoré.|  
 |BCP_OPTION_BATCH|Nombre de lignes traitées par lot. La valeur par défaut est 0, ce qui indique toutes les lignes d'une table lorsque les données sont extraites, ou toutes les lignes dans le fichier de données utilisateur lorsque les données sont copiées vers [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Une valeur inférieure à 1 rétablit la valeur par défaut de BCP_OPTION_BATCH.|  
-|BCP_OPTION_DELAYREADFMT|Un Boolean, si la valeur true, entraîne [IBCPSession::BCPReadFmt](../../relational-databases/native-client-ole-db-interfaces/ibcpsession-bcpreadfmt-ole-db.md) pour lire à l’exécution. Si la valeur est false (valeur par défaut), IBCPSession::BCPReadFmt sera immédiatement lire le fichier de format. Une erreur de séquence se produira si **BCP_OPTION_DELAYREADFMT** est true et que vous appelez IBCPSession::BCPColumns ou IBCPSession::BCPColFmt.<br /><br /> Une erreur de séquence se produira également si vous appelez `IBCPSession::BCPControl(BCPDELAYREADFMT, (void *)FALSE))` après avoir appelé `IBCPSession::BCPControl(BCPDELAYREADFMT, (void *)TRUE)` et IBCPSession::BCPWriteFmt.<br /><br /> Pour plus d'informations, consultez [Metadata Discovery](../../relational-databases/native-client/features/metadata-discovery.md).|  
+|BCP_OPTION_DELAYREADFMT|Un Boolean, si la valeur true, entraîne [IBCPSession::BCPReadFmt](../../relational-databases/native-client-ole-db-interfaces/ibcpsession-bcpreadfmt-ole-db.md) pour lire à l’exécution. Si la valeur est false (valeur par défaut), IBCPSession::BCPReadFmt sera immédiatement lire le fichier de format. Une erreur de séquence se produira si **BCP_OPTION_DELAYREADFMT** est true et que vous appelez IBCPSession::BCPColumns ou IBCPSession::BCPColFmt.<br /><br /> Une erreur de séquence se produira également si vous appelez `IBCPSession::BCPControl(BCPDELAYREADFMT, (void *)FALSE))` après avoir appelé `IBCPSession::BCPControl(BCPDELAYREADFMT, (void *)TRUE)` et IBCPSession::BCPWriteFmt.<br /><br /> Pour plus d’informations, consultez [de découverte des métadonnées](../../relational-databases/native-client/features/metadata-discovery.md).|  
 |BCP_OPTION_FILECP|L'argument *iValue* contient le numéro de la page de codes pour le fichier de données. Vous pouvez spécifier le numéro de la page de codes, tel que 1252 ou 850, ou l'une des valeurs suivantes :<br /><br /> BCP_FILECP_ACP : les données dans le fichier figurent dans la page de codes Microsoft Windows® du client.<br /><br /> BCP_FILECP_OEMCP : les données dans le fichier figurent dans la page de codes OEM du client (valeur par défaut).<br /><br /> BCP_FILECP_RAW : les données dans le fichier figurent dans la page de codes de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |BCP_OPTION_FILEFMT|Numéro de version du format de fichier de données. Il peut s'agir de 80 ([!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]), 90 ([!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]), 100 ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ou [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]), de 110 ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]) ou 120 ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]). 120 est la valeur par défaut. Cela s'avère utile pour exporter et importer des données dans des formats pris en charge par une version antérieure du serveur.  Par exemple, pour importer des données obtenues à partir d’une colonne de texte dans un [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] serveur dans un **varchar (max)** colonne dans un [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] ou ultérieure de SQL server, vous devez spécifier 80. De même, si vous spécifiez 80 lors de l’exportation des données à partir d’un **varchar (max)** colonne, il sera enregistré comme colonnes de texte sont enregistrés dans le [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] mettre en forme et peut être importé dans une colonne de texte d’un [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] server.|  
 |BCP_OPTION_FIRST|Première ligne de données du fichier ou de la table à copier. La valeur par défaut est 1 ; une valeur inférieure à 1 rétablit la valeur par défaut de cette option.|  

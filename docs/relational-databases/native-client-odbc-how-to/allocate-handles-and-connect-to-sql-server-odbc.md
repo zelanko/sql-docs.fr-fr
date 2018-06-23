@@ -4,10 +4,9 @@ ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: native-client-odbc-how-to
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
+ms.technology: connectivity
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -15,16 +14,16 @@ helpviewer_keywords:
 - handles [ODBC], connection
 - handles [ODBC], about handles
 ms.assetid: 6172cd52-9c9a-467d-992f-def07f3f3bb1
-caps.latest.revision: 29
 author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 58eac1839471709926630e5fe256ba21704887c5
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: c143f942a030bb8cc51529d026ea93d73a30d8a2
+ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/18/2018
+ms.locfileid: "35701550"
 ---
 # <a name="allocate-handles-and-connect-to-sql-server-odbc"></a>Allouer des handles et se connecter à SQL Server (ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -39,7 +38,7 @@ ms.lasthandoff: 05/03/2018
   
 3.  Appelez [SQLAllocHandle](http://go.microsoft.com/fwlink/?LinkId=58396) avec un **HandleType** de SQL_HANDLE_ENV pour initialiser ODBC et allouer un handle d’environnement.  
   
-4.  Appelez [SQLSetEnvAttr](../../relational-databases/native-client-odbc-api/sqlsetenvattr.md) avec **attribut** défini à SQL_ATTR_ODBC_VERSION et **ValuePtr** défini à SQL_OV_ODBC3 pour indiquer l’application utilisera les appels de fonction au format 3.x ODBC.  
+4.  Appelez [SQLSetEnvAttr](../../relational-databases/native-client-odbc-api/sqlsetenvattr.md) avec **attribut** défini à SQL_ATTR_ODBC_VERSION et **ValuePtr** défini à SQL_OV_ODBC3 pour indiquer l’application utilise la fonction d’au format 3.x ODBC appels.  
   
 5.  Le cas échéant, appelez [SQLSetEnvAttr](../../relational-databases/native-client-odbc-api/sqlsetenvattr.md) pour définir l’autre environnement options ou appelez [cas](http://go.microsoft.com/fwlink/?LinkId=58403) pour obtenir des options d’environnement.  
   

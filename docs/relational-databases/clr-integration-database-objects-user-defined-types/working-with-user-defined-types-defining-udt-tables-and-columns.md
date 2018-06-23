@@ -3,11 +3,9 @@ title: Définition des Tables et colonnes UDT | Documents Microsoft
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
-ms.prod_service: database-engine
-ms.component: clr
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
+ms.technology: reference
 ms.tgt_pltfrm: ''
 ms.topic: reference
 dev_langs:
@@ -27,12 +25,12 @@ caps.latest.revision: 11
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 7fb463a9cf7cde943357ae7b1f3da8ed1dbfb253
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 6f6952ca421734b02b410a006b13304d144f0d6e
+ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32919224"
+ms.lasthandoff: 06/18/2018
+ms.locfileid: "35700000"
 ---
 # <a name="working-with-user-defined-types---defining-udt-tables-and-columns"></a>Utilisation des Types définis par l’utilisateur - définition de colonnes et Tables des UDT
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -53,9 +51,9 @@ CREATE TABLE dbo.Points
   
 -   Indexez des expressions UDT. Vous pouvez créer des index dans des colonnes calculées persistantes sur des expressions UDT. L'expression UDT peut être un champ, une méthode ou une propriété d'un UDT. L'expression doit être déterministe et ne doit pas accéder aux données.  
   
- Pour plus d’informations, consultez [les Types](../../relational-databases/clr-integration-database-objects-user-defined-types/clr-user-defined-types.md) et [CREATE INDEX & #40 ; Transact-SQL & #41 ; ](../../t-sql/statements/create-index-transact-sql.md).  
+ Pour plus d’informations, consultez [les Types](../../relational-databases/clr-integration-database-objects-user-defined-types/clr-user-defined-types.md) et [CREATE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md).  
   
 ## <a name="see-also"></a>Voir aussi  
- [Utilisation des Types définis par l’utilisateur dans SQL Server](../../relational-databases/clr-integration-database-objects-user-defined-types/working-with-user-defined-types-in-sql-server.md)  
+ [Utilisation de types définis par l’utilisateur dans SQL Server](../../relational-databases/clr-integration-database-objects-user-defined-types/working-with-user-defined-types-in-sql-server.md)  
   
   

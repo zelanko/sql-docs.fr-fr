@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: native-client-odbc-extensions-bulk-copy-functions
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: connectivity
 ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
@@ -24,12 +22,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 31efad83f947d774b6602fe4da85046ad6b9e198
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: e374c65ce0ef97251ffeb5e3511b85868ebcdb74
+ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32948004"
+ms.lasthandoff: 06/18/2018
+ms.locfileid: "35703450"
 ---
 # <a name="bcpcontrol"></a>bcp_control
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -65,7 +63,7 @@ RETCODE bcp_control (
   
  Une erreur de séquence se produira également si vous appelez `bcp_control(hdbc,` BCPDELAYREADFMT`, (void *)FALSE)` après avoir appelé `bcp_control(hdbc,` BCPDELAYREADFMT`, (void *)TRUE)` et bcp_writefmt.  
   
- Pour plus d'informations, consultez [Metadata Discovery](../../relational-databases/native-client/features/metadata-discovery.md).  
+ Pour plus d’informations, consultez [de découverte des métadonnées](../../relational-databases/native-client/features/metadata-discovery.md).  
   
  BCPFILECP  
  *iValue* contient le numéro de la page de codes du fichier de données. Vous pouvez spécifier le numéro de la page de codes, par exemple 1252 ou 850, ou l'une de ces valeurs :  

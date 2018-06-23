@@ -4,10 +4,9 @@ ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: native-client-ole-db-errors
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
+ms.technology: connectivity
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -18,17 +17,16 @@ helpviewer_keywords:
 - OLE DB error handling, error details
 - ISQLServerErrorInfo interface
 ms.assetid: 51500ee3-3d78-47ec-b90f-ebfc55642e06
-caps.latest.revision: 28
 author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 7dbaa5d805b8b1102e07b0e63bf269129077e539
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: b4b70a652ace8f7ccaf89ed23434ebed15410102
+ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32945144"
+ms.lasthandoff: 06/18/2018
+ms.locfileid: "35701990"
 ---
 # <a name="sql-server-error-detail"></a>Détail des erreurs SQL Server
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -38,7 +36,7 @@ ms.locfileid: "32945144"
   
  Il existe deux façons d’obtenir l’accès à **ISQLServerErrorInfo** interface.  
   
- Le consommateur peut appeler **IErrorRecords::GetCustomerErrorObject** pour obtenir un **ISQLServerErrorInfo** pointeur, comme indiqué dans l’exemple de code suivant. (Il est inutile d’obtenir **ISQLErrorInfo.**) Les deux **ISQLErrorInfo** et **ISQLServerErrorInfo** sont des objets d’erreur OLE DB personnalisés, **ISQLServerErrorInfo** en cours de l’interface à utiliser pour obtenir des informations d’erreurs de serveur, notamment des détails sur les numéros de ligne et de nom de procédure.  
+ Le consommateur peut appeler **IErrorRecords::GetCustomerErrorObject** pour obtenir un **ISQLServerErrorInfo** pointeur, comme indiqué dans l’exemple de code suivant. (Il est inutile d’obtenir **ISQLErrorInfo.**) Les deux **ISQLErrorInfo** et **ISQLServerErrorInfo** sont des objets d’erreur OLE DB personnalisés, **ISQLServerErrorInfo** en cours de l’interface à utiliser pour obtenir des informations de erreurs de serveur, notamment des détails sur les numéros de ligne et de nom de procédure.  
   
 ```  
 // Get the SQL Server custom error object.  
@@ -47,13 +45,13 @@ if(FAILED(hr=pIErrorRecords->GetCustomErrorObject(
    (IUnknown**)&pISQLServerErrorErrorInfo)))  
 ```  
   
- Une autre méthode pour obtenir un **ISQLServerErrorInfo** pointeur consiste à appeler la **QueryInterface** méthode sur une déjà obtenu **ISQLErrorInfo** pointeur. Notez que puisque **ISQLServerErrorInfo** contient un surensemble des informations disponibles à partir de **ISQLErrorInfo**, il est judicieux d’accéder directement à **ISQLServerErrorInfo** via **GetCustomerErrorObject**.  
+ Une autre méthode pour obtenir un **ISQLServerErrorInfo** pointeur consiste à appeler la **QueryInterface** méthode sur une déjà obtenu **ISQLErrorInfo** pointeur. Notez que puisque **ISQLServerErrorInfo** contient un surensemble des informations disponibles à partir de **ISQLErrorInfo**, il est judicieux d’accéder directement à **ISQLServerErrorInfo**via **GetCustomerErrorObject**.  
   
  Le **ISQLServerErrorInfo** interface expose une fonction membre, [ISQLServerErrorInfo::GetErrorInfo](../../relational-databases/native-client-ole-db-interfaces/isqlservererrorinfo-geterrorinfo-ole-db.md). La fonction retourne un pointeur à une structure SSERRORINFO et un pointeur à une mémoire tampon de chaîne. Les deux pointeurs font référence mémoire, le consommateur doit libérer à l’aide de la **IMalloc::Free** (méthode).  
   
  Les membres de la structure SSERRORINFO sont interprétés par le consommateur comme suit.  
   
-|Membre| Description|  
+|Membre|Description|  
 |------------|-----------------|  
 |*pwszMessage*|Message d'erreur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Identique à la chaîne retournée dans **IErrorInfo::GetDescription**.|  
 |*pwszServer*|Nom de l'instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pour la session.|  
@@ -65,6 +63,6 @@ if(FAILED(hr=pIErrorRecords->GetCustomErrorObject(
   
 ## <a name="see-also"></a>Voir aussi  
  [Erreurs](../../relational-databases/native-client-ole-db-errors/errors.md)   
- [RAISERROR & #40 ; Transact-SQL & #41 ;](../../t-sql/language-elements/raiserror-transact-sql.md)  
+ [RAISERROR &#40;Transact-SQL&#41;](../../t-sql/language-elements/raiserror-transact-sql.md)  
   
   

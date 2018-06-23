@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 04/04/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: native-client|features
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: ''
@@ -16,12 +15,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 193226bd9ef0b21771479e245c69cd4ea2402a08
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: d4ca109f20ec60baba09920639a80970abb248c7
+ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32957374"
+ms.lasthandoff: 06/18/2018
+ms.locfileid: "35700110"
 ---
 # <a name="sql-server-native-client-support-for-high-availability-disaster-recovery"></a>Prise en charge des fonctionnalités de récupération d'urgence, haute disponibilité par SQL Server Native Client
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -99,7 +98,7 @@ ms.locfileid: "32957374"
   
  Une application ODBC [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client peut utiliser l'une de ces trois fonctions pour établir la connexion :  
   
-|Fonction| Description|  
+|Fonction|Description|  
 |--------------|-----------------|  
 |[SQLBrowseConnect](../../../relational-databases/native-client-odbc-api/sqlbrowseconnect.md)|La liste de serveurs retournée par **SQLBrowseConnect** n’inclut pas de VNN. Vous verrez seulement une liste de serveurs sans indication si ces derniers sont des serveurs autonomes, ou un serveur principal ou secondaire dans un cluster de Clustering de basculement Windows Server (WSFC) qui contient deux instances ou plus de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] activées pour [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]. Si la connexion à un serveur se solde par un échec, c’est peut-être parce que le paramètre **ApplicationIntent** n’est pas compatible avec la configuration de ce serveur.<br /><br /> Étant donné que **SQLBrowseConnect** ne reconnaît pas de serveurs dans un cluster Clustering de basculement Windows Server (WSFC) qui contient deux d’instances ou plus de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] activées pour [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)], **SQLBrowseConnect** ignore le mot clé de chaîne de connexion **MultiSubnetFailover**.|  
 |[SQLConnect](../../../relational-databases/native-client-odbc-api/sqlconnect.md)|**SQLConnect** prend en charge **ApplicationIntent** et **MultiSubnetFailover** par le biais d’un nom de source de données ou de propriétés de connexion.|  
@@ -141,7 +140,7 @@ ms.locfileid: "32957374"
  Lorsque des connexions implicites sont établies, la connexion implicite utilise le paramètre d'intention de l'application de la connexion parente. De la même façon, plusieurs sessions créées à partir de la même source de données héritent du paramètre d'intention de l'application de la source de données.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Fonctionnalités SQL Server Native Client](../../../relational-databases/native-client/features/sql-server-native-client-features.md)   
- [À l’aide de mots clés de chaîne de connexion avec SQL Server Native Client](../../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md)  
+ [Fonctionnalités de SQL Server Native Client](../../../relational-databases/native-client/features/sql-server-native-client-features.md)   
+ [Utilisation de mots clés de chaîne de connexion avec SQL Server Native Client](../../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md)  
   
   

@@ -1,0 +1,68 @@
+---
+title: Sécurité d’intégration du CLR | Documents Microsoft
+ms.custom: ''
+ms.date: 03/06/2017
+ms.prod: sql-server-2014
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- database-engine
+- docset-sql-devref
+ms.tgt_pltfrm: ''
+ms.topic: reference
+helpviewer_keywords:
+- security [CLR integration]
+- authorization [CLR integration]
+- common language runtime [SQL Server], security
+- database objects [CLR integration], security
+ms.assetid: 05d7a471-c5d5-4730-b903-e4edc8157bb4
+caps.latest.revision: 54
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: 689d425c2f13a442b1d8bbd5515939135f44fa0c
+ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36042040"
+---
+# <a name="clr-integration-security"></a>Sécurité de l'intégration du CLR
+  Le modèle de sécurité de le [!INCLUDE[ssNoVersion](../../../includes/dnprdnshort-md.md)] common language runtime (CLR) gère et sécurise l’accès entre différents types d’objets CLR et non CLR s’exécutant dans [!INCLUDE[ssNoVersion](../../../includes/tsql-md.md)] instruction ou un autre objet CLR en cours d’exécution sur le serveur. Les appels entre objets portent le nom de liens. Les types de vérifications de sécurité effectués sur ces objets dépendent des types de liens impliqués.  
+  
+ Le modèle de sécurité d'intégration du CLR a les objectifs suivants :  
+  
+-   Par défaut, en cours d’exécution code utilisateur managé sur [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. L'exécution d'opérations susceptibles de compromettre la robustesse de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] doit être protégée par des autorisations de haut niveau appropriées.  
+  
+-   Le code utilisateur managé ne doit pas accéder de façon non autorisée aux données utilisateur ou autre code utilisateur dans la base de données. Le code défini par l'utilisateur doit s'exécuter sous le contexte de sécurité de la session utilisateur qui l'a appelé et avec les privilèges corrects pour ce contexte de sécurité.  
+  
+-   Il doit y avoir des contrôles pour restreindre le code utilisateur à accéder à toute ressource située à l'extérieur du serveur, de sorte qu'il soit utilisé strictement pour l'accès aux données et le calcul locaux.  
+  
+-   Le code défini par l'utilisateur ne doit pas être en mesure d'accéder de façon non autorisée aux ressources système du fait de son exécution dans le processus [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
+  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] avec le modèle de sécurité basée sur l’accès de code du CLR. Quelques-uns des avantages offerts par cette approche combinée de la sécurité sont discutés dans cette section.  
+  
+ Le tableau suivant décrit les rubriques de cette section.  
+  
+ [Sécurité d’accès du code d’intégration du CLR](clr-integration-code-access-security.md)  
+ Discute du modèle de sécurité d'accès du code pour le code managé.  
+  
+ [Attributs de protection de l’hôte et programmation de l’intégration du CLR](../../clr-integration-security-host-protection-attributes/host-protection-attributes-and-clr-integration-programming.md)  
+ Fournit des informations à propos des valeurs d'attributs de protection de l'hôte (HPA) interdites dans les assemblys SAFE et EXTERNAL_ACCESS.  
+  
+ [Liens de sécurité d’intégration du CLR](../../../database-engine/dev-guide/links-in-clr-integration-security.md)  
+ Décrit comment les segments de code utilisateur peuvent s'appeler dans [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
+  
+ [L’emprunt d’identité et de sécurité d’intégration du CLR](../../../database-engine/dev-guide/impersonation-and-clr-integration-security.md)  
+ Discute la manière dont le code managé accède aux ressources externes à l'aide de l'emprunt d'identité.  
+  
+ [Autoriser partiellement approuvé appelants](../../../database-engine/dev-guide/allowing-partially-trusted-callers.md)  
+ Discute des problèmes qui surviennent lorsqu'une méthode managée appelle une méthode dans une classe contenue dans un autre assembly.  
+  
+ [Domaines d’application et de sécurité d’intégration du CLR](../../../database-engine/dev-guide/application-domains-and-clr-integration-security.md)  
+ Décrit la façon dont les assemblys sont chargés dans les domaines d'application.  
+  
+## <a name="see-also"></a>Voir aussi  
+ [Gestion des assemblys d’intégration du CLR](../assemblies/managing-clr-integration-assemblies.md)  
+  
+  

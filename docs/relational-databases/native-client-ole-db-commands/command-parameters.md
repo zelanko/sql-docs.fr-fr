@@ -4,10 +4,9 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: native-client-ole-db-commands
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
+ms.technology: connectivity
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -17,16 +16,16 @@ helpviewer_keywords:
 - parameters [SQL Server Native Client], OLE DB
 - commands [OLE DB]
 ms.assetid: 072ead49-ebaf-41eb-9a0f-613e9d990f26
-caps.latest.revision: 40
 author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: cafa0f1eacd1b574454fbeaee6edead796c86398
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 1525f0f2bad9769e7d917a24bc82d1785d954268
+ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/18/2018
+ms.locfileid: "35701450"
 ---
 # <a name="command-parameters"></a>Paramètres de commande
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -38,7 +37,7 @@ ms.lasthandoff: 05/03/2018
 {call SalesByCategory('Produce', ?)}  
 ```  
   
- Pour améliorer les performances en réduisant le trafic réseau, le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Client fournisseur OLE DB natif ne dérive pas automatiquement les informations de paramètre, sauf si **ICommandWithParameters::GetParameterInfo** ou **ICommandPrepare::Prepare** est appelé avant d’exécuter une commande. Cela signifie que le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Client fournisseur OLE DB natif n’effectue pas automatiquement :  
+ Pour améliorer les performances en réduisant le trafic réseau, le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Client fournisseur OLE DB natif ne dérive pas automatiquement les informations de paramètre, sauf si **ICommandWithParameters::GetParameterInfo** ou  **ICommandPrepare::Prepare** est appelé avant d’exécuter une commande. Cela signifie que le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Client fournisseur OLE DB natif n’effectue pas automatiquement :  
   
 -   Vérifiez l’exactitude du type de données spécifié avec **ICommandWithParameters::SetParameterInfo**.  
   
@@ -55,11 +54,11 @@ ms.lasthandoff: 05/03/2018
 -   Code de l’application d’appeler **ICommandWithParameters::GetParameterInfo** afin que le fournisseur puisse obtenir le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] des types de données des paramètres dynamiquement. Notez que cela provoque une boucle réseau supplémentaire au serveur.  
   
 > [!NOTE]  
->  Le fournisseur ne prend pas en charge l’appel **ICommandWithParameters::GetParameterInfo** pour toute [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mettre à jour ou supprimer une instruction contenant une clause FROM ; pour toute instruction SQL en fonction d’une sous-requête contenant des paramètres ; pour SQL instructions contenant des marqueurs de paramètre dans les deux expressions d’une comparaison, like, ou quantifié ; ou un prédicat des requêtes où l’un des paramètres est un paramètre à une fonction. Lors du traitement d’un lot d’instructions SQL, le fournisseur également ne prend pas en charge l’appel **ICommandWithParameters::GetParameterInfo** des marqueurs de paramètre dans les instructions après la première instruction du lot. Commentaires (/ * \*/) ne sont pas autorisés dans les [!INCLUDE[tsql](../../includes/tsql-md.md)] commande.  
+>  Le fournisseur ne prend pas en charge l’appel **ICommandWithParameters::GetParameterInfo** pour toute [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instruction UPDATE ou DELETE contenant une clause FROM ; pour toute instruction SQL en fonction d’une sous-requête contenant des paramètres ; pour les instructions SQL contenant des marqueurs de paramètre dans les deux expressions d’une comparaison, like ou quantifié prédicat ; ou les requêtes où l’un des paramètres est un paramètre à une fonction. Lors du traitement d’un lot d’instructions SQL, le fournisseur également ne prend pas en charge l’appel **ICommandWithParameters::GetParameterInfo** des marqueurs de paramètre dans les instructions après la première instruction du lot. Commentaires (/ * \*/) ne sont pas autorisés dans les [!INCLUDE[tsql](../../includes/tsql-md.md)] commande.  
   
  Le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fournisseur de OLE DB Native Client prend en charge les paramètres d’entrée dans les commandes d’instruction SQL. Sur les commandes de l’appel de procédure, le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Client fournisseur OLE DB natif prend en charge l’entrée, sortie et les paramètres d’entrée/sortie. Les valeurs de paramètre de sortie sont retournées à l'application lors de l'exécution (uniquement si aucun ensemble de lignes n'est retourné) ou lorsque tous les ensembles de lignes retournés sont épuisés par l'application. Pour vous assurer que les valeurs renvoyées sont valides, utilisez **IMultipleResults** pour forcer la consommation de l’ensemble de lignes.  
   
- Les noms des paramètres de procédure stockée n'ont pas besoin d'être spécifiés dans une structure DBPARAMBINDINFO. Utilisez NULL pour la valeur de la *pwszName* membre pour indiquer que le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fournisseur de OLE DB Native Client doit ignorer le nom du paramètre et utiliser uniquement l’ordinal spécifié dans le *rgParamOrdinals* membre **ICommandWithParameters::SetParameterInfo**. Si le texte de la commande contient à la fois des paramètres nommés et sans nom, tous les paramètres sans nom doivent être spécifiés avant les paramètres nommés.  
+ Les noms des paramètres de procédure stockée n'ont pas besoin d'être spécifiés dans une structure DBPARAMBINDINFO. Utilisez NULL pour la valeur de la *pwszName* membre pour indiquer que le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fournisseur de OLE DB Native Client doit ignorer le nom du paramètre et utiliser uniquement l’ordinal spécifié dans le *rgParamOrdinals*membre **ICommandWithParameters::SetParameterInfo**. Si le texte de la commande contient à la fois des paramètres nommés et sans nom, tous les paramètres sans nom doivent être spécifiés avant les paramètres nommés.  
   
  Si le nom d’un paramètre de procédure stockée est spécifié, le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Client fournisseur OLE DB natif vérifie le nom pour vous assurer qu’il est valide. Le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Client fournisseur OLE DB natif retourne une erreur lorsqu’il reçoit un nom de paramètre erroné du consommateur.  
   

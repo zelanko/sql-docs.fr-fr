@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: clr
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
-ms.tgt_pltfrm: ''
+ms.technology: reference
 ms.topic: reference
 helpviewer_keywords:
 - deployment script [CLR integration]
@@ -20,12 +18,12 @@ caps.latest.revision: 35
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 353aef3aac9f39217bb98bd551843eb1b69ae885
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: af823eb9457cbe74785de4c110334805f9ac1ad5
+ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32929694"
+ms.lasthandoff: 06/18/2018
+ms.locfileid: "35701530"
 ---
 # <a name="deploying-clr-database-objects"></a>Déploiement d'objets de base de données CLR
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -73,7 +71,7 @@ ms.locfileid: "32929694"
   
  `CREATE ASSEMBLY HelloWorld from 'c:\helloworld.dll' WITH PERMISSION_SET = SAFE;`  
   
-1.  La procédure, fonction, agrégat, type défini par l'utilisateur ou déclencheur doit ensuite être créé(e) dans l'instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Si le **HelloWorld** assembly contient une méthode nommée **HelloWorld** dans les **procédures** classe, ce qui suit [!INCLUDE[tsql](../../includes/tsql-md.md)] peuvent être ajoutés à la requête pour créer une procédure appelée **hello** dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+1.  La procédure, fonction, agrégat, type défini par l'utilisateur ou déclencheur doit ensuite être créé(e) dans l'instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Si le **HelloWorld** assembly contient une méthode nommée **HelloWorld** dans les **procédures** classe, ce qui suit [!INCLUDE[tsql](../../includes/tsql-md.md)] peuvent être ajoutés à la requête pour créer un procédure appelée **hello** dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  `CREATE PROCEDURE hello`  
   
@@ -81,7 +79,7 @@ ms.locfileid: "32929694"
   
  `EXTERNAL NAME HelloWorld.Procedures.HelloWorld`  
   
- Pour plus d’informations sur la création des différents types d’objets de base de données managés dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], consultez [les fonctions](../../relational-databases/clr-integration-database-objects-user-defined-functions/clr-user-defined-functions.md), [les agrégats](../../relational-databases/clr-integration-database-objects-user-defined-functions/clr-user-defined-aggregates.md), [les Types](../../relational-databases/clr-integration-database-objects-user-defined-types/clr-user-defined-types.md), [procédures stockées CLR](http://msdn.microsoft.com/library/bbdd51b2-a9b4-4916-ba6f-7957ac6c3f33), et [déclencheurs CLR](http://msdn.microsoft.com/library/302a4e4a-3172-42b6-9cc0-4a971ab49c1c).  
+ Pour plus d’informations sur la création des différents types d’objets de base de données managés dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], consultez [les fonctions](../../relational-databases/clr-integration-database-objects-user-defined-functions/clr-user-defined-functions.md), [les agrégats](../../relational-databases/clr-integration-database-objects-user-defined-functions/clr-user-defined-aggregates.md), [CLR Types définis par l’utilisateur](../../relational-databases/clr-integration-database-objects-user-defined-types/clr-user-defined-types.md), [procédures stockées CLR](http://msdn.microsoft.com/library/bbdd51b2-a9b4-4916-ba6f-7957ac6c3f33), et [déclencheurs CLR](http://msdn.microsoft.com/library/302a4e4a-3172-42b6-9cc0-4a971ab49c1c).  
   
 ## <a name="deploying-the-assembly-to-production-servers"></a>Déploiement de l'assembly sur des serveurs de production  
  Une fois que les objets de base de données CLR ont été testés et vérifiés sur le serveur de test, ils peuvent être distribués sur les serveurs de production. Pour plus d’informations sur le débogage des objets de base de données managés, consultez [débogage des objets de base de données CLR](../../relational-databases/clr-integration/debugging-clr-database-objects.md).  

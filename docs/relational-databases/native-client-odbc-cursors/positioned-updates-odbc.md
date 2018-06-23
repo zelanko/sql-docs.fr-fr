@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: native-client-odbc-cursors
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: ''
@@ -24,11 +23,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 6393902a8b9a24ecac4df3ffbfff95fdac2ea686
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 7d09736a888a124442f69f672ebdf0c5dfd44ad2
+ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/18/2018
+ms.locfileid: "35695510"
 ---
 # <a name="positioned-updates-odbc"></a>Mises à jour positionnées (ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -87,6 +87,6 @@ ms.lasthandoff: 05/03/2018
  **SQLSetPos** est préférable à WHERE CURRENT OF lorsque vous utilisez des curseurs côté serveur. Si vous utilisez un curseur statique pouvant être mis à jour avec la bibliothèque de curseurs ODBC, la bibliothèque de curseurs implémente les mises à jour WHERE CURRENT OF en ajoutant une clause WHERE avec les valeurs de clé pour la table sous-jacente. Cela peut entraîner des mises à jour inattendues si les clés de la table ne sont pas uniques.  
   
 ## <a name="see-also"></a>Voir aussi  
- [À l’aide de curseurs & #40 ; ODBC & #41 ;](../../relational-databases/native-client-odbc-cursors/using-cursors-odbc.md)  
+ [L’utilisation de curseurs &#40;ODBC&#41;](../../relational-databases/native-client-odbc-cursors/using-cursors-odbc.md)  
   
   

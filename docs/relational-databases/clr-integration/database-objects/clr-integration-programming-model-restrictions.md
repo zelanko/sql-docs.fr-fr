@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: clr
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
-ms.tgt_pltfrm: ''
+ms.technology: reference
 ms.topic: reference
 helpviewer_keywords:
 - common language runtime [SQL Server], programming model restrictions
@@ -20,11 +18,12 @@ caps.latest.revision: 22
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 6f8e62bc460062b96a43f09bf1296cf6acd8636f
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: d30bc35a80efb553217a21a1b47d49ee90ec8035
+ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/18/2018
+ms.locfileid: "35701400"
 ---
 # <a name="clr-integration-programming-model-restrictions"></a>Restrictions du modèle de programmation de l'intégration du CLR
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -125,6 +124,6 @@ ms.lasthandoff: 05/03/2018
  [Bibliothèques prises en charge de .NET Framework](../../../relational-databases/clr-integration/database-objects/supported-net-framework-libraries.md)   
  [Sécurité d’accès du Code CLR Integration](../../../relational-databases/clr-integration/security/clr-integration-code-access-security.md)   
  [Attributs de Protection d’hôte et de la programmation de l’intégration CLR](../../../relational-databases/clr-integration-security-host-protection-attributes/host-protection-attributes-and-clr-integration-programming.md)   
- [Création d’un Assembly](../../../relational-databases/clr-integration/assemblies/creating-an-assembly.md)  
+ [Création d’un assembly](../../../relational-databases/clr-integration/assemblies/creating-an-assembly.md)  
   
   

@@ -1,0 +1,66 @@
+---
+title: 'Leçon 1 : Créer des objets de stockage Azure Windows | Documents Microsoft'
+ms.custom: ''
+ms.date: 03/06/2017
+ms.prod: sql-server-2014
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: ''
+ms.topic: article
+ms.assetid: 74edd1fd-ab00-46f7-9e29-7ba3f1a446c5
+caps.latest.revision: 7
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: 916139aa9f5e30581abc29421cafb2bb5eb06ee7
+ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36041937"
+---
+# <a name="lesson-1-create-windows-azure-storage-objects"></a>Leçon 1 : Créer des objets de Stockage Microsoft Azure
+  Avant de créer des sauvegardes [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] dans le Cloud de stockage, vous devez tout d'abord créer un compte de stockage, puis un conteneur d'objets blob. La leçon 1 présente les étapes de connexion au portail de gestion Windows Azure, puis de création d'un compte de stockage et d'un conteneur d'objets blob.  
+  
+## <a name="create-a-storage-account"></a>Créer un compte de stockage  
+ Pour créer un compte de stockage à partir du portail de gestion Windows Azure, procédez comme suit :  
+  
+1.  Connectez-vous au portail de gestion Windows Azure à l'aide de votre compte. Si vous n’avez pas un compte Windows Azure, [Profitez d’évaluation gratuite de 3 mois de Windows Azure](http://go.microsoft.com/fwlink/?LinkId=271927).  
+  
+     ![Écran de connexion Azure Windows](../../2014/tutorials/media/windowazurelogin-backuptocloud.gif "écran de connexion Azure de Windows")  
+  
+2.  Utilisez les instructions étape par étape détaillées [ici](http://go.microsoft.com/fwlink/?LinkId=271926), pour créer un compte de stockage.  
+  
+3.  Accédez au compte de stockage créé à l'étape précédente. Dans la partie centrale inférieure de la page web, cliquez sur **gérer les clés**. Les informations de compte sont affichées. Copiez le nom du compte de stockage et les clés d'accès. Ces informations sont nécessaires pour créer des informations d'identification stockées dans SQL. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] utilise ces informations pour accéder au compte de stockage et créer des sauvegardes.  
+  
+     ![Capture d’écran de clés de compte de stockage Windows Azure](../../2014/tutorials/media/manageaccesskeys-backuptocloud.gif "capture d’écran de clés de compte de stockage Windows Azure")  
+  
+    > [!NOTE]  
+    >  Vous pouvez également créer un compte de stockage par programme à l'aide des API REST. Pour plus d’informations, consultez [créer un compte de stockage](http://go.microsoft.com/fwlink/?LinkId=271928).  
+  
+### <a name="create-a-blob-container"></a>Créer un conteneur d'objets blob  
+ Un conteneur regroupe un ensemble d’objets BLOB. Tous les objets blob doivent figurer dans un conteneur. Un compte peut contenir un nombre illimité de conteneurs, mais doit comporter au moins un conteneur. Un conteneur peut stocker un nombre illimité d'objets blob.  
+  
+ Pour créer un conteneur, procédez comme suit :  
+  
+1.  Sélectionnez le compte de stockage, cliquez sur le **conteneurs** onglet et cliquez sur **ajouter un conteneur** en bas de l’écran qui s’ouvre une boîte de dialogue.  
+  
+     ![Création d’un conteneur dans le portail de gestion](../../2014/tutorials/media/backuptocloud.gif "création d’un conteneur dans le portail de gestion")  
+  
+2.  Entrez le nom du conteneur. Notez le nom de conteneur spécifié. Ces informations sont utilisées dans l'URL (chemin d'accès au fichier de sauvegarde) dans les instructions T-SQL des leçons 3 et 4.  
+  
+3.  Sélectionnez privé pour **Type d’accès**. Nous vous recommandons de créer des conteneurs privés pour sécuriser vos fichiers de sauvegarde.  
+  
+     ![Création d’un conteneur d’objets blob](../../2014/tutorials/media/backuptocloud-newblobcontainer.gif "création d’un conteneur d’objets blob")  
+  
+    > [!NOTE]  
+    >  L'authentification auprès du compte de stockage est requise pour la sauvegarde et la restauration [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] même si vous choisissez de créer un conteneur public.  
+    >   
+    >  Vous pouvez également créer un conteneur par programme à l'aide des API REST. Pour plus d’informations, consultez [créer un conteneur](http://go.microsoft.com/fwlink/?LinkId=271946).  
+  
+### <a name="next-lesson"></a>Leçon suivante  
+ [Leçon 2 : Créer des informations d’identification SQL Server](../../2014/tutorials/lesson-2-create-a-sql-server-credential.md).  
+  
+  
