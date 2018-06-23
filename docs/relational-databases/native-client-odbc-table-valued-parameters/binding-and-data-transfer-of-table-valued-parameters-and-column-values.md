@@ -4,25 +4,24 @@ ms.custom: ''
 ms.date: 04/04/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: native-client-odbc-table-valued-parameters
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
+ms.technology: connectivity
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - table-valued parameters (ODBC), binding and data transfer
 ms.assetid: 0a2ea462-d613-42b6-870f-c7fa086a6b42
-caps.latest.revision: 28
 author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 7a5d0aac8e3d45f67ca83950ee139e3cb7377a96
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 815c5cc7b94979a96c984292d58aa1e9ce83407e
+ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/18/2018
+ms.locfileid: "35699740"
 ---
 # <a name="binding-and-data-transfer-of-table-valued-parameters-and-column-values"></a>Liaison et transfert de données de paramètres table et de valeurs de colonnes
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -36,7 +35,7 @@ ms.lasthandoff: 05/03/2018
   
  Après avoir lié le paramètre table, l'application doit lier chaque colonne de paramètre table. Pour ce faire, l’application appelle d’abord SQLSetStmtAttr pour définir SQL_SOPT_SS_PARAM_FOCUS à l’ordinal d’un paramètre table. Puis l’application lie les colonnes du paramètre table-valued par des appels aux routines suivantes : SQLBindParameter, SQLSetDescRec et SQLSetDescField. Définition de SQL_SOPT_SS_PARAM_FOCUS sur 0 restaure l’effet habituel de SQLBindParameter, SQLSetDescRec et SQLSetDescField d’exploitation sur les paramètres de niveau supérieur normaux.
  
- Remarque : pour les pilotes Linux et Mac ODBC avec unixODBC 2.3.1 à 2.3.4, lorsque vous définissez le nom de paramètre table via SQLSetDescField avec le champ de descripteur SQL_CA_SS_TYPE_NAME, unixODBC ne convertit pas automatiquement entre des chaînes ANSI et Unicode en fonction de la fonction exact appelée (SQLSetDescFieldA / SQLSetDescFieldW). Il est nécessaire de toujours utiliser SQLBindParameter ou SQLSetDescFieldW avec une chaîne Unicode (UTF-16) pour définir le nom de paramètre table.
+ Remarque : pour les pilotes Linux et Mac ODBC avec unixODBC 2.3.1 à 2.3.4, lorsque vous définissez le nom de paramètre table via SQLSetDescField avec le champ de descripteur SQL_CA_SS_TYPE_NAME, unixODBC ne convertit pas automatiquement entre ANSI et Unicode exactement des chaînes fonction appelée (SQLSetDescFieldA / SQLSetDescFieldW). Il est nécessaire de toujours utiliser SQLBindParameter ou SQLSetDescFieldW avec une chaîne Unicode (UTF-16) pour définir le nom de paramètre table.
   
  Aucune donnée n'est réellement envoyée ou reçue pour le paramètre table lui-même, mais des données sont envoyées et reçues pour chacune de ses colonnes constituantes. Étant donné que le paramètre table est une pseudo-colonne, les paramètres de SQLBindParameter sont utilisés pour faire référence à des attributs différents d’autres types de données, comme suit :  
   
@@ -68,7 +67,7 @@ ms.lasthandoff: 05/03/2018
   
 3.  Appelle SQLSetStmtAttr pour définir SQL_SOPT_SS_PARAM_FOCUS à 0. Cela doit être fait avant SQLExecute ou SQLExecDirect est appelée. Autrement, SQL_ERROR est retourné et un enregistrement de diagnostic est généré avec SQLSTATE=HY024 et le message « Valeur d'attribut non valide, SQL_SOPT_SS_PARAM_FOCUS (doit être égale à zéro au moment de l'exécution) ».  
   
-4.  Jeux de *StrLen_or_IndPtr* ou SQL_DESC_OCTET_LENGTH_PTR à SQL_DEFAULT_PARAM pour un paramètre table sans ligne, ou le nombre de lignes à transférer lors du prochain appel de SQLExecute ou SQLExecDirect si le paramètre table a des lignes. *StrLen_or_IndPtr* ou SQL_DESC_OCTET_LENGTH_PTR ne peut pas être défini à SQL_NULL_DATA pour un paramètre table car les paramètres table ne sont pas nullables (bien que les colonnes constituantes des paramètres table puissent être nullables). Si cette option est définie sur une valeur non valide, SQLExecute ou SQLExecDirect retourne SQL_ERROR et un enregistrement de diagnostic est généré avec SQLSTATE = HY090 et le message « longueur de chaîne ou une mémoire tampon non valide pour le paramètre \<p > », où p est le nombre de paramètres.  
+4.  Jeux de *StrLen_or_IndPtr* ou SQL_DESC_OCTET_LENGTH_PTR à SQL_DEFAULT_PARAM pour un paramètre table sans ligne, ou le nombre de lignes devant être transféré sur le prochain appel de SQLExecute ou SQLExecDirect si la table incluse le paramètre comporte des lignes. *StrLen_or_IndPtr* ou SQL_DESC_OCTET_LENGTH_PTR ne peut pas être défini à SQL_NULL_DATA pour un paramètre table car les paramètres table ne sont pas nullables (bien que les colonnes constituantes des paramètres table puissent être nullables). Si cette option est définie sur une valeur non valide, SQLExecute ou SQLExecDirect retourne SQL_ERROR et un enregistrement de diagnostic est généré avec SQLSTATE = HY090 et le message « longueur de chaîne ou une mémoire tampon non valide pour le paramètre \<p > », où p est le nombre de paramètres.  
   
 5.  Appels SQLExecute ou SQLExecDirect.  
   

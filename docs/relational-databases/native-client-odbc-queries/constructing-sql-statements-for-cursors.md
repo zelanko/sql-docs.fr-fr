@@ -4,10 +4,9 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: native-client-odbc-queries
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
+ms.technology: connectivity
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -18,17 +17,16 @@ helpviewer_keywords:
 - ODBC applications, statements
 - statements [ODBC], cursors
 ms.assetid: 134003fd-9c93-4f5c-a988-045990933b80
-caps.latest.revision: 36
 author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 6207d51509b4eed3ebb3ec0db5c40174b7b7ac9b
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 7a8e1465528a72ee8a6cbacccc6d5186ff3d7af9
+ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32945134"
+ms.lasthandoff: 06/18/2018
+ms.locfileid: "35696330"
 ---
 # <a name="constructing-sql-statements-for-cursors"></a>Construction d'instructions SQL pour les curseurs
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -36,13 +34,13 @@ ms.locfileid: "32945134"
 
   Le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pilote ODBC Native Client utilise des curseurs de serveur pour implémenter les fonctionnalités de curseur définie dans la spécification ODBC. Une application ODBC contrôle le comportement du curseur à l’aide de [SQLSetStmtAttr](../../relational-databases/native-client-odbc-api/sqlsetstmtattr.md) pour définir les attributs d’instruction différent. Voici les attributs et leurs valeurs par défaut.  
   
-|Attribut|Par défaut|  
+|Attribute|Valeur par défaut|  
 |---------------|-------------|  
 |SQL_ATTR_CONCURRENCY|SQL_CONCUR_READ_ONLY|  
 |SQL_ATTR_CURSOR_TYPE|SQL_CURSOR_FORWARD_ONLY|  
 |SQL_ATTR_CURSOR_SCROLLABLE|SQL_NONSCROLLABLE|  
 |SQL_ATTR_CURSOR_SENSITIVITY|SQL_UNSPECIFIED|  
-|SQL_ATTR_ROW_ARRAY_SIZE|1|  
+|SQL_ATTR_ROW_ARRAY_SIZE| 1|  
   
  Lorsque ces options sont définies à leurs valeurs par défaut à la fois une instruction SQL est exécutée, la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pilote ODBC Native Client n’utilise pas un curseur côté serveur pour implémenter le jeu de résultats ; au lieu de cela, il utilise un jeu de résultats par défaut. Si une de ces options sont modifiée à partir de leurs valeurs par défaut à la fois une instruction SQL est exécutée, la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pilote ODBC Native Client tente d’utiliser un curseur côté serveur pour implémenter le jeu de résultats.  
   

@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 08/08/2016
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: native-client|features
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: ''
@@ -21,12 +20,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 988032e24c587de7b7e00f64d8fe6244ce0bd58d
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 7348fc6746f3b2763aea780e7bed087ff583808e
+ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32956534"
+ms.lasthandoff: 06/18/2018
+ms.locfileid: "35697310"
 ---
 # <a name="service-principal-name-spn-support-in-client-connections"></a>Prise en charge des noms de principaux du service (SPN) dans les connexions clientes
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -53,7 +52,7 @@ ms.locfileid: "32956534"
 ## <a name="usage"></a>Utilisation  
  Le tableau suivant décrit les scénarios les plus courants dans lesquels les applications clientes peuvent activer l'authentification sécurisée.  
   
-|Scénario| Description|  
+|Scénario|Description|  
 |--------------|-----------------|  
 |Une application héritée ne spécifie pas de nom principal de service.|Ce scénario de compatibilité garantit l'absence de tout changement de comportement dans les applications développées pour les versions antérieures de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Si aucun nom principal de service n'est spécifié, l'application s'appuie sur les noms principaux de service générés et n'a aucune connaissance de la méthode d'authentification utilisée.|  
 |Une application cliente à l’aide de la version actuelle de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client spécifie un nom principal de service dans la chaîne de connexion comme un compte d’utilisateur ou d’ordinateur de domaine, un nom principal de service spécifique à l’instance ou sous forme de chaîne définie par l’utilisateur.|Le mot clé **ServerSPN** peut être utilisé dans une chaîne de fournisseur, une chaîne d'initialisation ou une chaîne de connexion afin d'effectuer les opérations suivantes :<br /><br /> -Spécifiez le compte utilisé par le [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] instance pour une connexion. Cela simplifie l'accès à l'authentification Kerberos. Si un centre de distribution de clés Kerberos (KDC) est présent et si le compte approprié est spécifié, l'utilisation de l'authentification Kerberos est plus probable que celle de l'authentification NTLM. Le centre de distribution de clés se trouve habituellement sur le même ordinateur que le contrôleur de domaine.<br /><br /> -Spécifier un SPN pour le compte de service pour rechercher le [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] instance. Pour chaque [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] deux par défaut noms principaux de service sont générés et peut être utilisé à cet effet, l’instance. Toutefois, il n'est pas certain que ces clés soient présentes dans Active Directory ; par conséquent, dans cette situation, l'authentification Kerberos n'est pas garantie.<br /><br /> -Spécifier un SPN qui permet de rechercher le compte de service pour le [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] instance. Il peut s'agir de n'importe quelle chaîne définie par l'utilisateur et mappée au compte de service. Dans ce cas, la clé doit être inscrite manuellement dans le centre de distribution de clés et doit répondre aux exigences relatives à un nom principal de service défini par l'utilisateur.<br /><br /> Le mot clé **FailoverPartnerSPN** peut être utilisé pour spécifier le nom principal de service du serveur partenaire de basculement. La plage des valeurs de comptes et de clés Active Directory est identique à celle des valeurs que vous pouvez spécifier pour le serveur principal.|  
@@ -98,7 +97,7 @@ ms.locfileid: "32956534"
   
  La syntaxe que les noms principaux de service utilisent dans la chaîne de connexion ou les attributs de connexion est la suivante :  
   
-|Syntaxe| Description|  
+|Syntaxe|Description|  
 |------------|-----------------|  
 |MSSQLSvc/*fqdn*|Nom principal de service par défaut, généré par le fournisseur, pour une instance par défaut lorsqu'un autre protocole que TCP est utilisé.<br /><br /> *fqdn* est un nom de domaine complet.|  
 |MSSQLSvc/*fqdn*:*port*|Nom principal de service par défaut, généré par le fournisseur, lorsque le protocole TCP est utilisé.<br /><br /> *port* est un numéro de port TCP.|  

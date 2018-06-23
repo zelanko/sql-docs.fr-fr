@@ -3,11 +3,9 @@ title: Spécifications de Type défini par l’utilisateur | Documents Microsoft
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
-ms.prod_service: database-engine
-ms.component: clr
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
+ms.technology: reference
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -25,11 +23,12 @@ caps.latest.revision: 31
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 6d4bccc8ae83d25f848011421d057ad8cb0a7016
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 9029a944bc45acf2b0fb121b4a295f74d5534210
+ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/18/2018
+ms.locfileid: "35695380"
 ---
 # <a name="creating-user-defined-types---requirements"></a>Création de Types définis par l’utilisateur - configuration requise
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -42,11 +41,11 @@ ms.lasthandoff: 05/03/2018
   
 -   L’UDT doit implémenter la **System.Data.SqlTypes.INullable** interface dans la classe ou structure en créant un public **statique** (**Shared** dans [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Basic) **Null** (méthode). [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] est par défaut compatible avec la valeur NULL. Ceci est nécessaire pour que le code exécuté dans l'UDT puisse être en mesure de reconnaître une valeur NULL.  
   
--   L’UDT doit contenir un public **statique** (ou **Shared**) **analyser** méthode qui prend en charge de l’analyse à partir d’et publique **ToString** procédé de conversion en une représentation sous forme de chaîne de l’objet.  
+-   L’UDT doit contenir un public **statique** (ou **Shared**) **analyser** méthode qui prend en charge de l’analyse à partir d’et publique **ToString** pour (méthode) conversion en une représentation sous forme de chaîne de l’objet.  
   
 -   Un UDT avec un format de sérialisation définie par l’utilisateur doit implémenter la **System.Data.IBinarySerialize** interface et fournir un **en lecture** et un **écrire** (méthode).  
   
--   L’UDT doit implémenter **System.Xml.Serialization.IXmlSerializable**, ou tous les champs publics et les propriétés doivent être des types XML serializable ou muni de la **XmlIgnore** attribut si la substitution de la sérialisation standard est requise.  
+-   L’UDT doit implémenter **System.Xml.Serialization.IXmlSerializable**, ou tous les champs publics et les propriétés doivent être des types XML serializable ou muni de la **XmlIgnore** attribut si substitution de la sérialisation standard est requis.  
   
 -   Chaque objet UDT doit être soumis à une seule sérialisation. La validation échoue si les routines de sérialisation ou désérialisation reconnaissent plusieurs représentations d'un objet en particulier.  
   
@@ -76,7 +75,7 @@ ms.lasthandoff: 05/03/2018
   
  **bool**, **byte**, **sbyte**, **short**, **ushort**, **int**, **uint**, **long**, **ulong**, **float**, **double**, **SqlByte**, **SqlInt16**, **SqlInt32**, **SqlInt64**, **SqlDateTime**, **SqlSingle**, **SqlDouble**, **SqlMoney**, **SqlBoolean**  
   
- Les types qui sont composés de champs des types ci-dessus sont de bons candidats à la valeur **natif** mettre en forme, telles que **structs** en Visual c# (ou **Structures** qu’elles sont connues en Visual Basic). Par exemple, un UDT spécifié avec le **natif** format de sérialisation peut contenir un champ d’un autre UDT également spécifié avec le **natif** format. Si la définition de l’UDT est plus complexe et contient des types de données pas dans la liste ci-dessus, vous devez spécifier le **UserDefined** à la place du format de sérialisation.  
+ Les types qui sont composés de champs des types ci-dessus sont de bons candidats à la valeur **natif** mettre en forme, telles que **structs** en Visual c# (ou **Structures** comme ils sont connus dans Visual Basic). Par exemple, un UDT spécifié avec le **natif** format de sérialisation peut contenir un champ d’un autre UDT également spécifié avec le **natif** format. Si la définition de l’UDT est plus complexe et contient des types de données pas dans la liste ci-dessus, vous devez spécifier le **UserDefined** à la place du format de sérialisation.  
   
  Le **natif** format exige les éléments suivants :  
   
@@ -123,7 +122,7 @@ ms.lasthandoff: 05/03/2018
  Nom de la méthode utilisée pour valider des instances du type défini par l'utilisateur.  
   
 ### <a name="setting-isbyteordered"></a>Définition de la propriété IsByteOrdered  
- Lorsque le **Microsoft.SqlServer.Server.SqlUserDefinedTypeAttribute.IsByteOrdered** est définie sur **true**, vous êtes certain que les données binaires sérialisées peuvent être utilisées pour le classement sémantique des informations. Par conséquent, chaque instance d'un objet UDT ordonné par octet peut avoir une seule représentation sérialisée. Lorsque vous soumettez les octets sérialisés à une comparaison dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], les résultats doivent être les mêmes que si vous réalisiez cette opération de comparaison dans le code managé. Les fonctionnalités suivantes sont également prises en charge quand **IsByteOrdered** a la valeur **true**:  
+ Lorsque le **Microsoft.SqlServer.Server.SqlUserDefinedTypeAttribute.IsByteOrdered** est définie sur **true**, vous êtes certain que les données binaires sérialisées peuvent être utilisées pour sémantique classement des informations. Par conséquent, chaque instance d'un objet UDT ordonné par octet peut avoir une seule représentation sérialisée. Lorsque vous soumettez les octets sérialisés à une comparaison dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], les résultats doivent être les mêmes que si vous réalisiez cette opération de comparaison dans le code managé. Les fonctionnalités suivantes sont également prises en charge quand **IsByteOrdered** a la valeur **true**:  
   
 -   Possibilité de créer des index dans les colonnes de ce type.  
   
@@ -135,7 +134,7 @@ ms.lasthandoff: 05/03/2018
   
 -   Possibilité de rendre persistantes des colonnes calculées de ce type.  
   
- Notez qu’à la fois le **natif** et **UserDefined** formats de sérialisation prend en charge les opérateurs de comparaison suivants lorsque **IsByteOrdered** a la valeur **true**:  
+ Notez qu’à la fois le **natif** et **UserDefined** formats de sérialisation prend en charge les opérateurs de comparaison suivants lorsque **IsByteOrdered** a la valeur **true** :  
   
 -   Égal à (=)  
   

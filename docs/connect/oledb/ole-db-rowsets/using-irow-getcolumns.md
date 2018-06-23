@@ -2,9 +2,10 @@
 title: À l’aide d’IRow::GetColumns | Documents Microsoft
 description: À l’aide d’IRow::GetColumns pour accéder à toutes les colonnes dans une ligne
 ms.custom: ''
-ms.date: 03/26/2018
+ms.date: 06/14/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.component: oledb|ole-db-rowsets
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: connectivity
@@ -20,15 +21,17 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 6bae3626cace1490110a2402d0f33e6c3924bdd5
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
+ms.openlocfilehash: be29bec8c92036b6d53a56f4aab8ccdfc8e8c369
+ms.sourcegitcommit: 03ba89937daeab08aa410eb03a52f1e0d212b44f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35306348"
+ms.lasthandoff: 06/16/2018
+ms.locfileid: "35690052"
 ---
 # <a name="using-irowgetcolumns"></a>Utilisation d'IRow::GetColumns
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+
+[!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
   Le **IRow** implémentation autorise un accès séquentiel avant uniquement aux colonnes. Vous pouvez soit accéder à toutes les colonnes de la ligne avec un seul appel à **IRow::GetColumns** ou appelez **IRow::GetColumns** chaque fois que vous y accéder à plusieurs colonnes dans la ligne.  
   
