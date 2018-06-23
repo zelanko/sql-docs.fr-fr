@@ -4,27 +4,25 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: native-client-odbc-table-valued-parameters
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
+ms.technology: connectivity
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - table-valued parameters (ODBC), scenarios
 - ODBC, table-valued parameters
 ms.assetid: f1b73932-4570-4a8a-baa0-0f229d9c32ee
-caps.latest.revision: 33
 author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 9b8042eaad34f437c860da0ae045050086e54f4e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 7327cdbeec05c92e82c41953fb895dfb806d0fa3
+ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32948174"
+ms.lasthandoff: 06/18/2018
+ms.locfileid: "35696170"
 ---
 # <a name="uses-of-odbc-table-valued-parameters"></a>Scénarios d'utilisation des paramètres table ODBC
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -62,14 +60,14 @@ ms.locfileid: "32948174"
   
  Le paramètre table et ses colonnes sont liés comme discuté dans la section précédente, Paramètre table avec mémoires tampons multilignes entièrement liées, mais l'indicateur de longueur du paramètre table lui-même est défini sur SQL_DATA_AT_EXEC. Le pilote répond à SQLExecute ou SQLExecuteDirect de manière habituelle pour les paramètres de data-at-execution : autrement dit, en retournant SQL_NEED_DATA. Lorsque le pilote est prêt à accepter des données pour un paramètre table, SQLParamData retourne la valeur de *ParameterValuePtr* dans SQLBindParameter.  
   
- Une application utilise SQLPutData pour un paramètre table pour indiquer la disponibilité des données pour les colonnes qui constituent le paramètre table. Lorsque SQLPutData est appelée pour un paramètre table, *DataPtr* doit toujours être null et *StrLen_or_Ind* doit être 0 ou un nombre inférieur ou égal à la taille du tableau spécifiée pour les mémoires tampons de paramètre table (le *ColumnSize* paramètre de SQLBindParameter). 0 signifie qu'il n'y a plus de lignes pour le paramètre table et que le pilote passera au traitement du paramètre de procédure réel suivant. Lorsque *StrLen_or_Ind* est pas égal à 0, le pilote traite les colonnes qui constituent de paramètre table de la même façon que le paramètre non – table de paramètres liés : chaque colonne de paramètre table peut spécifier sa longueur réelle des données, SQL_NULL_DATA, ou il peut spécifier les données en cours d’exécution via sa mémoire tampon de longueur / d’indicateur. Colonne de paramètre table valeurs peuvent être passées par les appels répétés à SQLPutData comme d’habitude lorsqu’un caractère ou une valeur binaire doit être passées en fragments.  
+ Une application utilise SQLPutData pour un paramètre table pour indiquer la disponibilité des données pour les colonnes qui constituent le paramètre table. Lorsque SQLPutData est appelée pour un paramètre table, *DataPtr* doit toujours être null et *StrLen_or_Ind* doit être 0 ou un nombre inférieur ou égal à la taille du tableau spécifiée pour table incluse mémoires tampons de paramètres (le *ColumnSize* paramètre de SQLBindParameter). 0 signifie qu'il n'y a plus de lignes pour le paramètre table et que le pilote passera au traitement du paramètre de procédure réel suivant. Lorsque *StrLen_or_Ind* est pas égal à 0, le pilote traite les colonnes qui constituent de paramètre table de la même façon que le paramètre non – table de paramètres liés : chaque colonne de paramètre table peut spécifier ses données réelles longueur, SQL_NULL_DATA ou spécifier des données en cours d’exécution via sa mémoire tampon de longueur / d’indicateur. Colonne de paramètre table valeurs peuvent être passées par les appels répétés à SQLPutData comme d’habitude lorsqu’un caractère ou une valeur binaire doit être passées en fragments.  
   
- Une fois toutes les colonnes de paramètre table traitées, le pilote revient au paramètre table pour traiter d'autres lignes de données de paramètre table. Par conséquent, pour les paramètres table de données en cours d'exécution, le pilote ne suit pas l'analyse séquentielle habituelle des paramètres liés. Un paramètre table lié est interrogé jusqu'à ce que SQLPutData est appelée avec *StrLen_Or_IndPtr* égal à 0, le moment où le pilote ignore les colonnes de paramètre table et se déplace vers le paramètre de procédure stockée réel suivant.  Lorsque SQLPutData transmet une valeur d’indicateur supérieure ou égale à 1, le pilote traite les lignes et colonnes de paramètre table séquentiellement jusqu'à ce qu’il possède des valeurs pour toutes les lignes et colonnes liées. Le pilote revient ensuite au paramètre table. Entre reçoit le jeton pour le paramètre table à partir de SQLParamData et SQLPutData (hstmt, NULL, n) l’appel pour un paramètre table, l’application doit définir paramètre table contenu de mémoire tampon des données et l’indicateur constitutifs de colonne pour l’ou les lignes à passer au serveur suivant.  
+ Une fois toutes les colonnes de paramètre table traitées, le pilote revient au paramètre table pour traiter d'autres lignes de données de paramètre table. Par conséquent, pour les paramètres table de données en cours d'exécution, le pilote ne suit pas l'analyse séquentielle habituelle des paramètres liés. Un paramètre table lié est interrogé jusqu'à ce que SQLPutData est appelée avec *StrLen_Or_IndPtr* égal à 0, le moment où le pilote ignore les colonnes de paramètre table et se déplace vers le paramètre de procédure stockée réel suivant.  Lorsque SQLPutData transmet une valeur d’indicateur supérieure ou égale à 1, le pilote traite les lignes et colonnes de paramètre table séquentiellement jusqu'à ce qu’il possède des valeurs pour toutes les lignes et colonnes liées. Le pilote revient ensuite au paramètre table. Entre reçoit le jeton pour le paramètre table à partir de SQLParamData et SQLPutData (hstmt, NULL, n) l’appel pour un paramètre table, l’application doit définir les données de colonne constitutifs de paramètre table et l’indicateur de contenu de la mémoire tampon pour le ou les lignes suivantes à passer au serveur.  
   
  Exemple de code pour ce scénario se trouve dans la routine `demo_variable_TVP_binding` dans [utiliser des paramètres &#40;ODBC&#41;](../../relational-databases/native-client-odbc-how-to/use-table-valued-parameters-odbc.md).  
   
 ## <a name="retrieving-table-valued-parameter-metadata-from-the-system-catalog"></a>Récupération des métadonnées de paramètre table du catalogue système  
- Lorsqu’une application appelle SQLProcedureColumns pour une procédure qui possède des paramètres de paramètre table, DATA_TYPE est retourné comme SQL_SS_TABLE et TYPE_NAME est le nom du type de table pour le paramètre table. Deux colonnes supplémentaires sont ajoutées au jeu de résultats retourné par SQLProcedureColumns : SS_TYPE_CATALOG_NAME retourne le nom du catalogue dans lequel le type de table du paramètre de valeur de la table est défini et SS_TYPE_SCHEMA_NAME retourne le nom du schéma dans lequel l’emplacement où le type de table du paramètre de valeur de la table est défini. Conformément à la spécification ODBC, SS_TYPE_CATALOG_NAME et SS_TYPE_SCHEMA_NAME apparaissent avant toutes les colonnes spécifiques au pilote qui ont été ajoutées dans les versions antérieures de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et après toutes les colonnes mandatées par ODBC lui-même.  
+ Lorsqu’une application appelle SQLProcedureColumns pour une procédure qui possède des paramètres de paramètre table, DATA_TYPE est retourné comme SQL_SS_TABLE et TYPE_NAME est le nom du type de table pour le paramètre table. Deux colonnes supplémentaires sont ajoutées au jeu de résultats retourné par SQLProcedureColumns : SS_TYPE_CATALOG_NAME retourne le nom du catalogue dans lequel le type de table du paramètre de valeur de la table est défini et SS_TYPE_SCHEMA_NAME retourne le nom du schéma où le où le type de table du paramètre de valeur de la table est défini. Conformément à la spécification ODBC, SS_TYPE_CATALOG_NAME et SS_TYPE_SCHEMA_NAME apparaissent avant toutes les colonnes spécifiques au pilote qui ont été ajoutées dans les versions antérieures de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et après toutes les colonnes mandatées par ODBC lui-même.  
   
  Les nouvelles colonnes seront remplies à la fois pour les paramètres table, mais aussi pour les paramètres du type CLR défini par l'utilisateur. Les colonnes de schéma et de catalogue existantes des paramètres définis par l'utilisateur continuent d'être remplies, mais le fait de disposer de colonnes de schéma et de catalogue communes pour les types de données qui en ont besoin simplifie le développement d'applications dans le futur. (Notez que les collections de schémas XML sont quelque peu différentes et ne sont pas incluses dans cette modification.)  
   

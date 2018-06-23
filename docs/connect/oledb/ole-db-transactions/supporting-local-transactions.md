@@ -2,9 +2,10 @@
 title: Prise en charge les Transactions locales | Documents Microsoft
 description: Transactions locales dans le pilote OLE DB pour SQL Server
 ms.custom: ''
-ms.date: 03/26/2018
+ms.date: 06/14/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.component: oledb|ole-db-transactions
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: connectivity
@@ -20,15 +21,17 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 2c3d85ce4a26c5840b393336e878bda4fa20b142
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
+ms.openlocfilehash: 25d6c98c17c139a1658d0711bcff0c1c8f3f1d18
+ms.sourcegitcommit: 03ba89937daeab08aa410eb03a52f1e0d212b44f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35307998"
+ms.lasthandoff: 06/16/2018
+ms.locfileid: "35689362"
 ---
 # <a name="supporting-local-transactions"></a>Prise en charge des transactions locales
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+
+[!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
   Une session délimite l’étendue de transaction pour un pilote OLE DB pour la transaction locale de SQL Server. Lorsque, à l’initiative d’un consommateur, le pilote OLE DB pour SQL Server soumet une demande à une instance connectée de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], la demande constitue une unité de travail pour le pilote OLE DB pour SQL Server. Transactions locales encapsulent toujours une ou plusieurs unités de travail sur un pilote OLE DB unique pour la session SQL Server.  
   

@@ -1,0 +1,177 @@
+---
+title: Protection étendue de l’authentification avec Reporting Services | Microsoft Docs
+ms.custom: ''
+ms.date: 06/13/2017
+ms.prod: sql-server-2014
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- reporting-services-native
+ms.tgt_pltfrm: ''
+ms.topic: article
+ms.assetid: eb5c6f4a-3ed5-430b-a712-d5ed4b6b9b2b
+caps.latest.revision: 15
+author: markingmyname
+ms.author: maghan
+manager: mblythe
+ms.openlocfilehash: b19170e93dbf4efb973df44fc9788c9659897424
+ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36039237"
+---
+# <a name="extended-protection-for-authentication-with-reporting-services"></a>Protection étendue de l'authentification avec Reporting Services
+  La protection étendue est un ensemble d'améliorations apportées aux dernières versions du système d'exploitation [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows. La protection étendue améliore la manière dont les applications protègent les informations d'identification et l'authentification. La fonction elle-même ne fournit pas directement de protection contre des attaques spécifiques telles que le transfert des informations d’identification, mais il fournit une infrastructure pour les applications telles que [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] pour appliquer la Protection étendue pour l’authentification.  
+  
+ La liaison de service et la liaison de canal figurent parmi les améliorations d'authentification les plus importantes de la protection étendue. La liaison de canal utilise un jeton de liaison de canal (FAO) afin de vérifier que le canal établi entre deux points d'arrêt n'a pas été compromis. La liaison de service utilise les noms de principaux du service (SPN) pour valider la destination prévue de jetons d'authentification. Pour plus d’informations générales sur la protection étendue, consultez [Integrated Windows Authentication with Extended Protection](http://go.microsoft.com/fwlink/?LinkId=179922)(Authentification Windows intégrée avec protection étendue).  
+  
+ [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] prend en charge et applique la Protection étendue qui a été activée dans le système d’exploitation et configuré dans [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]. Par défaut, [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] accepte les demandes qui spécifient l'authentification Negotiate ou NTLM et peut donc tirer parti de la prise en charge de la protection étendue dans le système d'exploitation et des fonctionnalités de la protection étendue de [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] .  
+  
+> [!IMPORTANT]  
+>  Par défaut, Windows n'active pas la protection étendue. Pour plus d'informations sur l'activation de la protection étendue dans Windows, consultez [Protection étendue de l'authentification](http://go.microsoft.com/fwlink/?LinkID=178431). Le système d'exploitation et la pile d'authentification du client doivent tous les deux prendre en charge la protection étendue pour que l'authentification aboutisse. Vous devrez peut-être installer plusieurs mises à jour sur les systèmes d'exploitation plus anciens pour bénéficier d'une protection étendue à jour et prête à l'emploi sur l'ordinateur. Pour plus d’informations sur les développements les plus récents de la protection étendue, consultez les [informations mises à jour relatives à la protection étendue](http://go.microsoft.com/fwlink/?LinkId=183362).  
+  
+## <a name="reporting-services-extended-protection-overview"></a>Vue d'ensemble de la protection étendue Reporting Services  
+ [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] prend en charge et applique la protection étendue qui a été activée dans le système d’exploitation. Si le système d'exploitation ne prend pas en charge la protection étendue ou si la fonctionnalité n'a pas été activée dans le système d'exploitation, la fonctionnalité de protection étendue de [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] ne parviendra pas à effectuer l'authentification. [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] Protection étendue requiert également un certificat SSL. Pour plus d’informations, consultez [Configurer des connexions SSL sur un serveur de rapports en mode natif](configure-ssl-connections-on-a-native-mode-report-server.md).  
+  
+> [!IMPORTANT]  
+>  Par défaut, [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] ne pas activer la Protection étendue. La fonctionnalité peut être activée en modifiant le fichier de configuration `rsreportserver.config` ou en utilisant les API WMI pour mettre le fichier de configuration à jour. [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)][!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] ne fournit pas une interface utilisateur pour modifier ou afficher étendue des paramètres de protection. Pour plus d'informations, consultez la section des [paramètres de configuration](#ConfigurationSettings) dans cette rubrique.  
+  
+ Les problèmes courants qui se produisent à cause des modifications des paramètres de protection étendue ou de paramètres mal configurés ne décrivent pas les messages d'erreur ou les boîtes de dialogue habituelles. Les problèmes sur la configuration et la compatibilité de la protection étendue aboutissent à des échecs et des erreurs d'authentification dans les journaux de trace [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)].  
+  
+> [!IMPORTANT]  
+>  Certaines technologies d'accès aux données peuvent ne pas prendre en charge la protection étendue. Une technologie d'accès aux données est utilisée pour se connecter aux sources de données SQL Server et à la base de données du catalogue [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]. L'échec d'une technologie d'accès aux données dans la prise en charge de la protection étendue a les conséquences suivantes sur [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] :  
+>   
+>  -   La protection étendue ne peut être activée sur le serveur SQL Server qui exécute la base de données du catalogue [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] et le serveur de rapports ne parvient pas à se connecter à la base de données de catalogue et renvoie des erreurs d'authentification.  
+> -   SQL Server qui sont utilisées en tant que [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] rapport des sources de données ne peut pas avoir activé la protection étendue ou tentatives par le serveur de rapports pour se connecter à la source de données de rapport échouent et retournent des erreurs d’authentification.  
+>   
+>  La documentation pour une technologie d'accès aux données doit disposer d'informations sur la prise en charge de la protection étendue.  
+  
+### <a name="upgrade"></a>UPGRADE  
+  
+-   La mise à niveau un [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] serveur [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] ajoute des paramètres de configuration avec les valeurs par défaut pour le `rsreportserver.config` fichier. Si les paramètres ont été déjà présents, le [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] installation conservera dans le `rsreportserver.config` fichier.  
+  
+-   Lorsque les paramètres de configuration sont ajoutés à la `rsreportserver.config` fichier de configuration, le comportement par défaut est le [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] fonctionnalité de protection étendue est désactivé et vous devez activer la fonctionnalité comme décrit dans cette rubrique. Pour plus d'informations, consultez la section des [paramètres de configuration](#ConfigurationSettings) dans cette rubrique.  
+  
+-   La valeur par défaut du paramètre `RSWindowsExtendedProtectionLevel` est `Off`.  
+  
+-   La valeur par défaut du paramètre `RSWindowsExtendedProtectionScenario` est `Proxy`.  
+  
+-   [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] Conseiller de mise à niveau ne vérifie pas que le système d’exploitation ou l’installation actuelle de [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] activé prend en charge la Protection étendue.  
+  
+### <a name="what-reporting-services-extended-protection-does-not-cover"></a>Champs non couverts par la protection étendue de Reporting Services  
+ Les fonctionnalités et scénarios suivants ne sont pas pris en charge par le [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] fonctionnalité de protection étendue :  
+  
+-   Les auteurs de [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] extensions de sécurité personnalisées doivent ajouter la prise en charge pour la protection étendue à leur extension de sécurité personnalisé.  
+  
+-   Les composants tiers ajouté à ou utilisé par un [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] installation doit être mis à jour par le fournisseur tiers, pour prendre en charge la protection étendue. Pour plus d'informations, contactez le fournisseur tiers.  
+  
+## <a name="deployment-scenarios-and-recommendations"></a>Recommandations et scénarios de déploiement  
+ Les scénarios suivants illustrent plusieurs déploiements et topologies ainsi que la configuration recommandée afin de les sécuriser par la protection étendue [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)].  
+  
+### <a name="direct"></a>Direct  
+ Ce scénario décrit la connexion directe à un serveur de rapports, par exemple, un environnement d'intranet.  
+  
+|Scénario|Schéma du scénario|Procédure de sécurisation|  
+|--------------|----------------------|-------------------|  
+|Communication SSL directe.<br /><br /> Le serveur de rapports applique la liaison du canal entre le client et le serveur de rapports.|![RS_ExtendedProtection_DirectSSL](../media/rs-extendedprotection-directssl.gif "RS_ExtendedProtection_DirectSSL")<br /><br /> 1) Application cliente<br /><br /> 2) Serveur de rapports|La liaison de service n'est pas nécessaire, car le canal SSL est utilisé pour la liaison de canal.<br /><br /> Définissez `RSWindowsExtendedProtectionLevel` à `Allow` ou `Require`.<br /><br /> Définissez `RSWindowsExtendedProtectionScenario` à `Direct`.|  
+|Communication HTTP directe. Le serveur de rapports applique la liaison de service entre le client et le serveur de rapports.|![RS_ExtendedProtection_Direct](../media/rs-extendedprotection-direct.gif "RS_ExtendedProtection_Direct")<br /><br /> 1) Application cliente<br /><br /> 2) Serveur de rapports|Il n'existe aucun canal SSL et, par conséquent, toute application de la liaison de canal est impossible.<br /><br /> La liaison de service peut être validée, mais ne constitue pas une ligne de défense parfaite sans la liaison de canal ; la liaison de service à elle seule se contente de bloquer les menaces de base.<br /><br /> Définissez `RSWindowsExtendedProtectionLevel` à `Allow` ou `Require`.<br /><br /> Définissez `RSWindowsExtendedProtectionScenario` à `Any`.|  
+  
+### <a name="proxy-and-network-load-balancing"></a>Équilibrage de la charge réseau et proxy  
+ Les applications clientes se connectent à un périphérique ou un logiciel qui effectue une connexion SSL et transmet les informations d'identification au serveur en vue de l'authentification, par exemple, Internet, un réseau extranet ou intranet sécurisé. Le client se connecte à un serveur proxy ou à tous les clients utilisant un proxy.  
+  
+ La situation est la même lorsque vous utilisez un périphérique d'équilibrage de la charge réseau.  
+  
+|Scénario|Schéma du scénario|Procédure de sécurisation|  
+|--------------|----------------------|-------------------|  
+|Communications HTTP. Le serveur de rapports applique la liaison de service entre le client et le serveur de rapports.|![RS_ExtendedProtection_Indirect](../media/rs-extendedprotection-indirect.gif "RS_ExtendedProtection_Indirect")<br /><br /> 1) Application cliente<br /><br /> 2) Serveur de rapports<br /><br /> 3) Proxy|Il n'existe aucun canal SSL et, par conséquent, toute application de la liaison de canal est impossible.<br /><br /> Définissez `RSWindowsExtendedProtectionLevel` à `Allow` ou `Require`.<br /><br /> Définissez `RSWindowsExtendedProtectionScenario` à `Any`.<br /><br /> Notez que le serveur de rapports doit être configuré pour connaître le nom du serveur proxy pour vous assurer que les liaisons de service sont correctement appliquée.|  
+|Communications HTTP.<br /><br /> Le serveur de rapports applique la liaison de canal entre le client et le proxy et la liaison de service entre le client et le serveur de rapports.|![RS_ExtendedProtection_Indirect_SSL](../media/rs-extendedprotection-indirect-ssl.gif "RS_ExtendedProtection_Indirect_SSL")<br /><br /> 1) Application cliente<br /><br /> 2) Serveur de rapports<br /><br /> 3) Proxy|Le canal SSL vers le proxy est disponible ; par conséquent, la liaison de canal au proxy peut être appliquée.<br /><br /> La liaison de service peut également être appliquée.<br /><br /> Le nom de proxy doit être connu du serveur de rapports et l'administrateur du serveur de rapports doit lui créer une réservation d'URL, avec un en-tête d'hôte ou encore configurer le nom de proxy dans l'entrée `BackConnectionHostNames` du Registre Windows.<br /><br /> `RSWindowsExtendedProtectionLevel` sur `Allow` ou `Require`.<br /><br /> Définissez `RSWindowsExtendedProtectionScenario` à `Proxy`.|  
+|Communications HTTPS indirectes avec un proxy sécurisé. Le serveur de rapports applique la liaison de canal entre le client et le proxy et la liaison de service entre le client et le serveur de rapports.|![RS_ExtendedProtection_IndirectSSLandHTTPS](../media/rs-extendedprotection-indirectsslandhttps.gif "RS_ExtendedProtection_IndirectSSLandHTTPS")<br /><br /> 1) Application cliente<br /><br /> 2) Serveur de rapports<br /><br /> 3) Proxy|Le canal SSL vers le proxy est disponible ; par conséquent, la liaison de canal au proxy peut être appliquée.<br /><br /> La liaison de service peut également être appliquée.<br /><br /> Le nom de proxy doit être connu du serveur de rapports et l'administrateur du serveur de rapports doit lui créer une réservation d'URL, avec un en-tête d'hôte ou encore configurer le nom de proxy dans l'entrée `BackConnectionHostNames` du Registre Windows.<br /><br /> `RSWindowsExtendedProtectionLevel` sur `Allow` ou `Require`.<br /><br /> Définissez `RSWindowsExtendedProtectionScenario` à `Proxy`.|  
+  
+### <a name="gateway"></a>Passerelle  
+ Ce scénario décrit des applications clientes qui se connectent à un dispositif ou à un logiciel qui effectue la connexion SSL et authentifie l'utilisateur. Le périphérique ou le logiciel emprunte l'identité du contexte de l'utilisateur ou d'un utilisateur différent avant que ce dernier n'émette une demande au serveur de rapports.  
+  
+|Scénario|Schéma du scénario|Procédure de sécurisation|  
+|--------------|----------------------|-------------------|  
+|Communications HTTP indirectes.<br /><br /> La passerelle applique la liaison de canal entre le client et la passerelle. Il existe une passerelle menant à la liaison de service du serveur de rapports.|![RS_ExtendedProtection_Indirect_SSL](../media/rs-extendedprotection-indirect-ssl.gif "RS_ExtendedProtection_Indirect_SSL")<br /><br /> 1) Application cliente<br /><br /> 2) Serveur de rapports<br /><br /> 3) Périphérique de passerelle|La liaison de canal entre le client et le serveur de rapports est impossible, car la passerelle emprunte l'identité d'un contexte, créant ainsi un autre NTLM.<br /><br /> Il n'y a aucune connexion SSL ente la passerelle et le serveur de rapports ; la liaison de canal ne peut pas être appliquée.<br /><br /> La liaison de service peut prendre effet.<br /><br /> Définissez `RSWindowsExtendedProtectionLevel` à `Allow` ou `Require`.<br /><br /> Définissez `RSWindowsExtendedProtectionScenario` à `Any`.<br /><br /> Le périphérique de passerelle doit être configuré par votre administrateur pour l'application de la liaison de canal.|  
+|Communications HTTPS indirectes avec une passerelle sécurisée. La passerelle applique la liaison de canal entre le client et la passerelle et le serveur de rapports applique la liaison de canal entre la passerelle et le serveur de rapports.|![RS_ExtendedProtection_IndirectSSLandHTTPS](../media/rs-extendedprotection-indirectsslandhttps.gif "RS_ExtendedProtection_IndirectSSLandHTTPS")<br /><br /> 1) Application cliente<br /><br /> 2) Serveur de rapports<br /><br /> 3) Périphérique de passerelle|La liaison de canal entre le client et le serveur de rapports est impossible, car la passerelle emprunte l'identité d'un contexte, créant ainsi un autre NTLM.<br /><br /> La connexion SSL entre la passerelle et le serveur de rapports signifie qu'une liaison de canal est possible.<br /><br /> La liaison de service n'est pas obligatoire.<br /><br /> Définissez `RSWindowsExtendedProtectionLevel` à `Allow` ou `Require`.<br /><br /> Définissez `RSWindowsExtendedProtectionScenario` à `Direct`.<br /><br /> Le périphérique de passerelle doit être configuré par votre administrateur pour l'application de la liaison de canal.|  
+  
+### <a name="combination"></a>Combinaison  
+ Ce scénario décrit des environnements Internet ou Extranet dans lesquels le client se connecte à un proxy. Il fait intervenir un intranet dans lequel un client se connecte au serveur de rapports.  
+  
+|Scénario|Schéma du scénario|Procédure de sécurisation|  
+|--------------|----------------------|-------------------|  
+|Les accès indirects et directs du client au serveur de rapports fonctionnent sans SSL pour les connexions entre le client et le proxy ou le client et le serveur de rapports.|1) Application cliente<br /><br /> 2) Serveur de rapports<br /><br /> 3) Proxy<br /><br /> 4) Application cliente|La liaison de service entre le client et le serveur de rapports est applicable.<br /><br /> Le nom de proxy doit être connu du serveur de rapports et l'administrateur du serveur de rapports doit lui créer une réservation d'URL, avec un en-tête d'hôte ou encore configurer le nom de proxy dans l'entrée `BackConnectionHostNames` du Registre Windows.<br /><br /> Définissez `RSWindowsExtendedProtectionLevel` à `Allow` ou `Require`.<br /><br /> Définissez `RSWindowsExtendedProtectionScenario` à `Any`.|  
+|Accès indirects et directs du client au serveur de rapports sur lequel le client établit une connexion SSL vers le proxy ou le serveur de rapports.|![RS_ExtendedProtection_CombinationSSL](../media/rs-extendedprotection-combinationssl.gif "RS_ExtendedProtection_CombinationSSL")<br /><br /> 1) Application cliente<br /><br /> 2) Serveur de rapports<br /><br /> 3) Proxy<br /><br /> 4) Application cliente|La liaison de canal peut être utilisée.<br /><br /> Le nom de proxy doit être connu du serveur de rapports et l'administrateur du serveur de rapports doit lui créer une réservation d'URL, avec un en-tête d'hôte ou encore configurer le nom de proxy dans une entrée `BackConnectionHostNames` du Registre Windows.<br /><br /> Définissez `RSWindowsExtendedProtectionLevel` à `Allow` ou `Require`.<br /><br /> Définissez `RSWindowsExtendedProtectionScenario` à `Proxy`.|  
+  
+## <a name="configuring-reporting-rervices-extended-protection"></a>Configuration de la protection étendue de Reporting Services  
+ Le `rsreportserver.config` fichier contient les valeurs de configuration qui contrôlent le comportement de [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] protection étendue.  
+  
+ Pour plus d’informations sur l’utilisation et la modification de la `rsreportserver.config` de fichiers, consultez [fichier de Configuration RSReportServer](../report-server/rsreportserver-config-configuration-file.md). Les paramètres de protection étendue peuvent également être modifiés et examinés à l'aide d'API WMI. Pour plus d’informations, consultez [méthode SetExtendedProtectionSettings &#40;WMI MSReportServer_ConfigurationSetting&#41;](../wmi-provider-library-reference/configurationsetting-method-setextendedprotectionsettings.md).  
+  
+ Si la validation des paramètres de configuration échoue, les types d'authentification `RSWindowsNTLM`, `RSWindowsKerberos` et `RSWindowsNegotiate` sont désactivés sur le serveur de rapports.  
+  
+###  <a name="ConfigurationSettings"></a> Paramètres de configuration pour la protection étendue de Reporting Services  
+ Le tableau suivant fournit des informations sur les paramètres de configuration qui s’affichent dans le `rsreportserver.config` pour la protection étendue.  
+  
+|Paramètre|Description|  
+|-------------|-----------------|  
+|`RSWindowsExtendedProtectionLevel`|Indique le niveau d'application de la protection étendue. Les valeurs correctes sont `Off`, `Allow` et `Require`.<br /><br /> La valeur par défaut est `Off`.<br /><br /> La valeur `Off` indique l'absence de vérification de la liaison de canal ou de service.<br /><br /> La valeur `Allow` prend en charge la protection étendue, mais ne l'impose pas. La valeur Autoriser indique les éléments suivants :<br /><br /> La protection étendue est appliquée aux applications clientes qui s'exécutent sur les systèmes d'exploitation prenant en charge la protection étendue. La manière dont la protection s'applique dépend de la définition du `RsWindowsExtendedProtectionScenario`.<br /><br /> L'authentification est autorisée pour les applications fonctionnant sur des systèmes d'exploitation qui ne prennent pas en charge la protection étendue.<br /><br /> La valeur `Require` indique les éléments suivants :<br /><br /> La protection étendue est appliquée aux applications clientes qui s'exécutent sur les systèmes d'exploitation prenant en charge la protection étendue.<br /><br /> L'authentification n'est **pas** autorisée pour les applications fonctionnant sur des systèmes d'exploitation qui ne prennent pas en charge la protection étendue.|  
+|`RsWindowsExtendedProtectionScenario`|Indique les formes de protection étendue validées : liaison de canal, liaison de service ou les deux à la fois. Les valeurs correctes sont `Any`, `Proxy` et `Direct`.<br /><br /> La valeur par défaut est `Proxy`.<br /><br /> La valeur `Any` indique les éléments suivants :<br /><br /> -L’authentification Windows NTLM, Kerberos et Negotiate, ainsi qu’une liaison de canal, ne sont pas obligatoires.<br /><br /> -La liaison de service est appliquée.<br /><br /> La valeur `Proxy` indique les éléments suivants :<br /><br /> -L’authentification Windows NTLM, Kerberos et Negotiate a lieu lorsqu’un jeton de liaison de canal est présent.<br /><br /> -La liaison de service est appliquée.<br /><br /> La valeur `Direct` indique les éléments suivants :<br /><br /> -L’authentification Windows NTLM, Kerberos et Negotiate a lieu lorsqu’il existe un jeton de liaison de canal et une connexion SSL au service actuel, et lorsque le jeton de liaison de canal pour la connexion SSL correspond à celui du jeton NTLM, Kerberos ou Negotiate.<br /><br /> -La liaison de service n’est pas appliquée.<br /><br /> <br /><br /> Remarque : Ce paramètre est ignoré si `RsWindowsExtendedProtectionLevel` a la valeur `OFF`.|  
+  
+ Exemples d’entrées dans le `rsreportserver.config` fichier de configuration :  
+  
+```  
+<Authentication>  
+         <RSWindowsExtendedProtectionLevel>Allow</RSWindowsExtendedProtectionLevel>  
+         <RSWindowsExtendedProtectionScenario>Proxy</RSWindowsExtendedProtectionLevel>  
+</Authentication>  
+```  
+  
+## <a name="service-binding-and-included-spns"></a>Liaison de service et SPN inclus  
+ La liaison de service utilise les noms principaux du service (SPN) pour valider la destination prévue des jetons d'authentification. [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] utilise les informations de réservation d’URL existantes pour générer une liste des SPN considérés comme valides. L'utilisation des informations de réservation d'URL pour la validation des réservations SPN et URL permet aux administrateurs système de gérer les deux à la fois à partir d'un seul emplacement.  
+  
+ La liste des SPN valides est mise à jour au démarrage du serveur de rapports démarre, à la modification des paramètres de configuration de la protection étendue ou au recyclage du domaine d'application.  
+  
+ La liste valide des SPN est spécifique à chaque application. Par exemple, le Gestionnaire de rapports et le serveur de rapports auront chacun leur propre liste de SPN.  
+  
+ La liste de SPN valides générée pour une application est déterminée par les facteurs suivants :  
+  
+-   Réservations d'URL.  
+  
+-   Ensemble des SPN extraits du contrôleur de domaine pour le compte de service Reporting Services.  
+  
+-   Si une réservation d'URL inclut des caractères génériques (« * » ou « + »), le serveur de rapports ajoutera chaque entrée de la collection d'hôtes.  
+  
+### <a name="hosts-collection-sources"></a>Sources de collection d'hôtes.  
+ Le tableau suivant répertorie les sources potentielles de la collection d'hôtes.  
+  
+|Type de la source|Description|  
+|--------------------|-----------------|  
+|ComputerNameDnsDomain|Nom du domaine DNS affecté à l'ordinateur local. Si l'ordinateur local est un nœud dans un cluster, le nom de domaine DNS du serveur virtuel de cluster est utilisé.|  
+|ComputerNameDnsFullyQualified|Nom DNS complet qui identifie de manière unique l'ordinateur local. Ce nom est une combinaison du nom d'hôte DNS et du nom de domaine DNS présentée sous la forme *Nom d'hôte*.*Nom de domaine*. Si l'ordinateur local est un nœud dans un cluster, le nom DNS complet du serveur virtuel de cluster est utilisé.|  
+|ComputerNameDnsHostname|Nom d'hôte DNS de l'ordinateur local. Si l'ordinateur local est un nœud dans un cluster, le nom d'hôte DNS du serveur virtuel de cluster est utilisé.|  
+|ComputerNameNetBIOS|Nom NetBIOS de l'ordinateur local. Si l'ordinateur local est un nœud dans un cluster, le nom NetBIOS du serveur virtuel de cluster est utilisé.|  
+|ComputerNamePhysicalDnsDomain|Nom du domaine DNS affecté à l'ordinateur local. Si l'ordinateur local est un nœud dans un cluster, le nom de domaine DNS de l'ordinateur local est utilisé, mais pas le nom du serveur virtuel de cluster.|  
+|ComputerNamePhysicalDnsFullyQualified|Nom DNS complet qui identifie de manière unique l'ordinateur. Si l'ordinateur local est un nœud dans un cluster, le nom DNS complet de l'ordinateur local est utilisé, mais pas le nom du serveur virtuel de cluster.<br /><br /> Le nom DNS complet est une combinaison du nom d'hôte DNS et du nom de domaine DNS présentée sous la forme *Nom d'hôte*.*Nom de domaine*.|  
+|ComputerNamePhysicalDnsHostname|Nom d'hôte DNS de l'ordinateur local. Si l'ordinateur local est un nœud dans un cluster, le nom d'hôte DNS de l'ordinateur local est utilisé, mais pas le nom du serveur virtuel de cluster.|  
+|ComputerNamePhysicalNetBIOS|Nom NetBIOS de l'ordinateur local. Si l'ordinateur local est un nœud dans un cluster, le nom NetBIOS de l'ordinateur local est utilisé, mais pas le nom du serveur virtuel de cluster.|  
+  
+ Lorsque les SPN sont ajoutés, une entrée est ajoutée au journal de suivi semblable au suivant :  
+  
+ `rshost!rshost!10a8!01/07/2010-19:29:38:: i INFO: SPN Whitelist Added <ComputerNamePhysicalNetBIOS> - <theservername>.`  
+  
+ `rshost!rshost!10a8!01/07/2010-19:29:38:: i INFO: SPN Whitelist Added <ComputerNamePhysicalDnsHostname> - <theservername>.`  
+  
+ Pour plus d’informations, consultez [Inscrire un nom de principal du service &#40;SPN&#41; pour un serveur de rapports](../report-server/register-a-service-principal-name-spn-for-a-report-server.md) et [À propos des réservations et de l’inscription d’URL &#40;Gestionnaire de configuration de SSRS&#41;](../install-windows/about-url-reservations-and-registration-ssrs-configuration-manager.md).  
+  
+## <a name="see-also"></a>Voir aussi  
+ [Se connecter au moteur de base de données à l'aide de la protection étendue](../../database-engine/configure-windows/connect-to-the-database-engine-using-extended-protection.md)   
+ [Extended Protection for Authentication Overview (en anglais)](http://go.microsoft.com/fwlink/?LinkID=177943)   
+ [Integrated Windows Authentication with Extended Protection](http://go.microsoft.com/fwlink/?LinkId=179922)   
+ [Microsoft Security Advisory: Extended protection for authentication (en anglais)](http://go.microsoft.com/fwlink/?LinkId=179923)   
+ [Journal de Trace de Service de serveur de rapports](../report-server/report-server-service-trace-log.md)   
+ [Fichier de Configuration RSReportServer](../report-server/rsreportserver-config-configuration-file.md)   
+ [Méthode SetExtendedProtectionSettings &#40;WMI MSReportServer_ConfigurationSetting&#41;](../wmi-provider-library-reference/configurationsetting-method-setextendedprotectionsettings.md)  
+  
+  

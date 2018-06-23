@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: native-client-odbc-api
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: ''
@@ -19,22 +18,23 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 6a846851ac4558c3b39bd821f32f32c20a0993f2
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 1228481d34256568947f9bc85ea2251f31f07db8
+ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/18/2018
+ms.locfileid: "35696790"
 ---
 # <a name="sqlcolattribute"></a>SQLColAttribute
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
-  Vous pouvez utiliser **SQLColAttribute** pour extraire un attribut d’une colonne de jeu de résultats pour les instructions ODBC préparées ou exécutées. Appel de **SQLColAttribute** sur des instructions préparées génère un aller-retour vers [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pilote ODBC Native Client reçoit des données de colonne de jeu de résultats dans le cadre de l’exécution des instructions, par conséquent, l’appel **SQLColAttribute** après l’exécution de **SQLExecute** ou **SQLExecDirect** n’implique pas un aller-retour sur le serveur.  
+  Vous pouvez utiliser **SQLColAttribute** pour extraire un attribut d’une colonne de jeu de résultats pour les instructions ODBC préparées ou exécutées. Appel de **SQLColAttribute** sur des instructions préparées génère un aller-retour vers [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pilote ODBC Native Client reçoit des données de colonne de jeu de résultats dans le cadre de l’exécution des instructions, par conséquent, l’appel **SQLColAttribute** après l’exécution de **SQLExecute** ou  **SQLExecDirect** n’implique pas un aller-retour sur le serveur.  
   
 > [!NOTE]  
 >  Les attributs de l'identificateur de colonne ODBC ne sont pas disponibles dans tous les jeux de résultats [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-|Identificateur de champ| Description|  
+|Identificateur de champ|Description|  
 |----------------------|-----------------|  
 |SQL_COLUMN_TABLE_NAME|Disponible dans des jeux de résultats extraits d'instructions générant des curseurs côté serveur ou sur des instructions SELECT exécutées qui contiennent une clause FOR BROWSE.|  
 |SQL_DESC_BASE_COLUMN_NAME|Disponible dans des jeux de résultats extraits d'instructions générant des curseurs côté serveur ou sur des instructions SELECT exécutées qui contiennent une clause FOR BROWSE.|  
@@ -83,7 +83,7 @@ ms.lasthandoff: 05/03/2018
   
  [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] inclut les champs de descripteur spécifiques au pilote pour fournir des informations supplémentaires pour indiquer le nom de collection de schémas XML, le nom de schéma et le nom du catalogue, de respectivement. Ces propriétés ne nécessitent pas l'usage de guillemets ou d'un caractère d'échappement si elles contiennent des caractères non alphanumériques. Le tableau suivant répertorie ces nouveaux champs de descripteur :  
   
-|Nom de colonne|Type| Description|  
+|Nom de colonne|Type|Description|  
 |-----------------|----------|-----------------|  
 |SQL_CA_SS_XML_SCHEMACOLLECTION_CATALOG_NAME|CharacterAttributePtr|Nom du catalogue dans lequel un nom de collection de schémas XML est défini. Si le nom du catalogue est introuvable, cette variable contient une chaîne vide.<br /><br /> Ces informations sont retournées à partir du champ d'enregistrement SQL_DESC_SS_XML_SCHEMACOLLECTION_CATALOG_NAME de l'IRD qui est un champ en lecture-écriture.|  
 |SQL_CA_SS_XML_SCHEMACOLLECTION_SCHEMA_NAM E|CharacterAttributePtr|Nom du schéma dans lequel un nom de collection de schémas XML est défini. Si le nom du schéma est introuvable, cette variable contient une chaîne vide.<br /><br /> Ces informations sont retournées à partir du champ d'enregistrement SQL_DESC_SS_XML_SCHEMACOLLECTION_SCHEMA_NAME du champ de descripteur de ligne d'implémentation (IRD) en lecture-écriture.|  
@@ -91,7 +91,7 @@ ms.lasthandoff: 05/03/2018
   
  De même, [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] inclut des champs de descripteur inhérents au pilote qui fournissent des informations supplémentaires pour une colonne de type défini par l'utilisateur (UDT) d'un jeu de résultats ou un paramètre UDT d'une procédure stockée ou d'une requête paramétrable. Ces propriétés ne nécessitent pas l'usage de guillemets ou d'un caractère d'échappement si elles contiennent des caractères non alphanumériques. Le tableau suivant répertorie ces nouveaux champs de descripteur :  
   
-|Nom de la colonne|Type| Description|  
+|Nom de la colonne|Type|Description|  
 |-----------------|----------|-----------------|  
 |SQL_CA_SS_UDT_CATALOG_NAME|CharacterAttributePtr|Nom du catalogue contenant le type défini par l'utilisateur (UDT).|  
 |SQL_CA_SS_UDT_SCHEMA_NAME|CharacterAttributePtr|Le nom du schéma contenant l’UDT.|  
@@ -103,10 +103,10 @@ ms.lasthandoff: 05/03/2018
 ## <a name="sqlcolattribute-support-for-enhanced-date-and-time-features"></a>Prise en charge de la fonction SQLColAttribute pour les fonctionnalités de date et heure améliorées  
  Pour les valeurs retournées pour les types de date/heure, consultez la section « Informations retournées dans les champs IRD » dans [paramètre et les métadonnées de résultat](../../relational-databases/native-client-odbc-date-time/metadata-parameter-and-result.md).  
   
- Pour plus d’informations, consultez [Date et heure améliorations & #40 ; ODBC & #41 ;](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md).  
+ Pour plus d’informations, consultez [Date et heure améliorations &#40;ODBC&#41;](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md).  
   
 ## <a name="sqlcolattribute-support-for-large-clr-udts"></a>Prise en charge SQLColAttribute pour les types CLR volumineux définis par l'utilisateur  
- **SQLColAttribute** prend en charge les types CLR volumineux définis par l’utilisateur (UDT). Pour plus d’informations, consultez [Large CLR User-Defined Types & #40 ; ODBC & #41 ;](../../relational-databases/native-client/odbc/large-clr-user-defined-types-odbc.md).  
+ **SQLColAttribute** prend en charge les types CLR volumineux définis par l’utilisateur (UDT). Pour plus d’informations, consultez [Large CLR User-Defined Types &#40;ODBC&#41;](../../relational-databases/native-client/odbc/large-clr-user-defined-types-odbc.md).  
   
 ## <a name="sqlcolattribute-support-for-sparse-columns"></a>Prise en charge SQLColAttribute pour les colonnes éparses  
  SQLColAttribute interroge le champ de descripteur (IRD) de ligne implémentation nouveau, SQL_CA_SS_IS_COLUMN_SET, afin de déterminer si une colonne est un **column_set** colonne.  

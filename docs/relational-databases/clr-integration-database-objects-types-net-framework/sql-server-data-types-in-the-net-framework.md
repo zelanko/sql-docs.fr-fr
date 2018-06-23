@@ -3,11 +3,9 @@ title: Types de données SQL Server dans le .NET Framework | Documents Microsoft
 ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
-ms.prod_service: database-engine
-ms.component: clr
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
+ms.technology: reference
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -24,12 +22,12 @@ caps.latest.revision: 38
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 58efbce895ad0e06521c59941dc49826629343b9
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: fe3a5c99e2c1e9bf569ecdbb1ab31d683d340206
+ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32917847"
+ms.lasthandoff: 06/18/2018
+ms.locfileid: "35702050"
 ---
 # <a name="sql-server-data-types-in-the-net-framework"></a>Types de données SQL Server dans le .NET Framework
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -37,16 +35,16 @@ ms.locfileid: "32917847"
   
  Le tableau ci-dessous répertorie les rubriques de cette section.  
   
- [Possibilité de valeur null et comparaisons logiques de trois valeurs](../../relational-databases/clr-integration-database-objects-types-net-framework/nullability-and-three-value-logic-comparisons.md)  
+ [Possibilité de valeur Null et comparaisons logiques de trois valeurs](../../relational-databases/clr-integration-database-objects-types-net-framework/nullability-and-three-value-logic-comparisons.md)  
  Explique comment les valeurs NULL sont traitées avec les types de données d'intégration CLR (Common Language Runtime).  
   
- [Classement et les Types de données d’intégration du CLR](../../relational-databases/clr-integration-database-objects-types-net-framework/collation-and-clr-integration-data-types.md)  
+ [Classement et types de données de l’intégration du CLR](../../relational-databases/clr-integration-database-objects-types-net-framework/collation-and-clr-integration-data-types.md)  
  Décrit comment les classements sont traités avec l'intégration du CLR.  
   
- [La gestion des objets volumineux & #40 ; LOB & #41 ; Paramètres dans le CLR](../../relational-databases/clr-integration-database-objects-types-net-framework/handling-large-object-lob-parameters-in-the-clr.md)  
+ [La gestion des objets volumineux &#40;LOB&#41; paramètres dans le CLR](../../relational-databases/clr-integration-database-objects-types-net-framework/handling-large-object-lob-parameters-in-the-clr.md)  
  Décrit comment transmettre des types LOB entre [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et le CLR.  
   
- [Mappage de données de paramètre CLR](../../relational-databases/clr-integration-database-objects-types-net-framework/mapping-clr-parameter-data.md)  
+ [Mappage des données de paramètres CLR](../../relational-databases/clr-integration-database-objects-types-net-framework/mapping-clr-parameter-data.md)  
  Affiche les mappages des types de données entre [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], l'intégration du CLR et le .NET Framework.  
   
   

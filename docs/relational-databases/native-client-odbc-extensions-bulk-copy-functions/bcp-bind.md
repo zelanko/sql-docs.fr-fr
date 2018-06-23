@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: native-client-odbc-extensions-bulk-copy-functions
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: connectivity
 ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
@@ -24,11 +22,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 31f50aa8c094ba983a8382379fd0d833edb0f9dc
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: da9b57c9e3363f03769238e88f165270619a2f73
+ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/18/2018
+ms.locfileid: "35703480"
 ---
 # <a name="bcpbind"></a>bcp_bind
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -148,11 +147,11 @@ bcp_bind(hdbc, szName, 0,
 |SQLBITN|char|  
 |SQLINT1|char|  
 |SQLINT2|short int|  
-|SQLINT4|int|  
+|SQLINT4|INT|  
 |SQLINT8|_int64|  
 |SQLINTN|*cbIndicator*<br /> 1: SQLINT1<br /> 2: SQLINT2<br /> 4: SQLINT4<br /> 8: SQLINT8|  
-|SQLFLT4|float|  
-|SQLFLT8|float|  
+|SQLFLT4|FLOAT|  
+|SQLFLT8|FLOAT|  
 |SQLFLTN|*cbIndicator*<br /> 4: SQLFLT4<br /> 8: SQLFLT8|  
 |SQLDECIMALN|SQL_NUMERIC_STRUCT|  
 |SQLNUMERICN|SQL_NUMERIC_STRUCT|  
@@ -191,9 +190,9 @@ bcp_bind(hdbc, szName, 0,
   
  Contrôler les paramètres, spécifiés avec [bcp_control](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-control.md), n’ont aucun effet **bcp_bind** transferts de ligne.  
   
- Si *pData* pour une colonne a la valeur NULL, car sa valeur sera fournie par les appels à [bcp_moretext](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-moretext.md), toutes les colonnes suivantes avec *eDataType* valeur SQLTEXT, SQLNTEXT, SQLXML, SQLUDT, SQLCHARACTER, SQLVARCHAR, SQLVARBINARY, SQLBINARY, SQLNCHAR ou SQLIMAGE doit également être liée avec *pData* la valeur NULL, et leurs valeurs doivent également être fournis par les appels à **bcp_moretext**.  
+ Si *pData* pour une colonne a la valeur NULL, car sa valeur sera fournie par les appels à [bcp_moretext](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-moretext.md), toutes les colonnes suivantes avec *eDataType* SQLTEXT, SQLNTEXT, la valeur SQLXML, SQLUDT, SQLCHARACTER, SQLVARCHAR, SQLVARBINARY, SQLBINARY, SQLNCHAR ou SQLIMAGE doit également être liée avec *pData* la valeur NULL, et leurs valeurs doivent également être fournis par les appels à **bcp_moretext**.  
   
- Pour les nouveaux types de valeur élevée, telles que **varchar (max)**, **varbinary (max)**, ou **nvarchar (max)**, vous pouvez utiliser SQLCHARACTER, SQLVARCHAR, SQLVARBINARY, SQLBINARY et SQLNCHAR comme indicateurs de type dans le *eDataType* paramètre.  
+ Pour les nouveaux types de valeur élevée, telles que **varchar (max)**, **varbinary (max)**, ou **nvarchar (max)**, vous pouvez utiliser SQLCHARACTER, SQLVARCHAR, SQLVARBINARY, SQLBINARY, et SQLNCHAR comme indicateurs de type dans le *eDataType* paramètre.  
   
  Si *cbTerm* est pas égal à 0, toute valeur (1, 2, 4 ou 8) est valide pour le préfixe (*cbIndicator*). Dans ce cas, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client sera recherche le terminateur, calculer la longueur des données par rapport au terminateur (*i*) et définissez la *cbData* à la plus petite valeur de i et la valeur de préfixe.  
   
@@ -218,7 +217,7 @@ bcp_bind(hdbc, szName, 0,
 ## <a name="bcpbind-support-for-enhanced-date-and-time-features"></a>Prise en charge de bcp_bind pour les fonctionnalités Date et Heure améliorées  
  Pour plus d’informations sur les types utilisés avec les *eDataType* paramètre pour les types date/heure, consultez [modifications de copie en bloc pour les Types améliorées de Date et heure &#40;OLE DB et ODBC&#41;](../../relational-databases/native-client-odbc-date-time/bulk-copy-changes-for-enhanced-date-and-time-types-ole-db-and-odbc.md).  
   
- Pour plus d’informations, consultez [Date et heure améliorations & #40 ; ODBC & #41 ;](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md).  
+ Pour plus d’informations, consultez [Date et heure améliorations &#40;ODBC&#41;](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md).  
   
 ## <a name="example"></a>Exemple  
   
