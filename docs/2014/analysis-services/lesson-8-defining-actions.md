@@ -1,0 +1,63 @@
+---
+title: 'Leçon 8 : Définition des Actions | Documents Microsoft'
+ms.custom: ''
+ms.date: 06/13/2017
+ms.prod: sql-server-2014
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- analysis-services
+ms.tgt_pltfrm: ''
+ms.topic: article
+ms.assetid: 15459396-83c9-48a0-b10a-99ae38768c79
+caps.latest.revision: 15
+author: Minewiskan
+ms.author: owend
+manager: jhubbard
+ms.openlocfilehash: a57c6cc8d08d64c8f2498125f7df952c70adfd6d
+ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36140102"
+---
+# <a name="lesson-8-defining-actions"></a>Leçon 8 : Définition des actions
+  Dans cette leçon, vous allez apprendre à définir des actions dans votre projet [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] . Une action est simplement une instruction MDX (Multidimensional Expressions) qui est stockée dans [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] et peut être incorporée dans des applications clientes et démarrée par un utilisateur.  
+  
+> [!NOTE]  
+>  Les projets achevés de toutes les leçons de ce didacticiel sont disponibles en ligne. Vous pouvez sauter des leçons en utilisant le projet achevé de la leçon précédente comme point de départ. [Cliquez ici](http://go.microsoft.com/fwlink/?LinkID=221866) pour télécharger les exemples de projet de ce didacticiel.  
+  
+ [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] prend en charge les types d’actions décrits dans le tableau suivant.  
+  
+|||  
+|-|-|  
+|CommandLine|Exécute une commande à partir de l'invite de commandes.|  
+|Dataset|Renvoie un groupe de données à une application cliente.|  
+|Extraction|Retourne une instruction d'extraction comme expression que le client exécute pour retourner un ensemble de lignes.|  
+|Html|Exécute un script HTML dans un navigateur Internet.|  
+|Propriétaire|Effectue une opération en utilisant une interface différente de celles répertoriées dans ce tableau.|  
+|Rapport|Soumet une demande paramétrable basée sur une URL à un serveur de rapports et renvoie un rapport à une application cliente.|  
+|Ensemble de lignes|Renvoie un ensemble de lignes à une application cliente.|  
+|.|Exécute une commande OLE DB.|  
+|URL|Affiche une page web dynamique dans un navigateur Internet.|  
+  
+ Les actions permettent aux utilisateurs de démarrer une application ou d'effectuer d'autres étapes dans le contexte d'un élément sélectionné. Pour plus d’informations, consultez [Actions &#40;Analysis Services - Données multidimensionnelles&#41;](multidimensional-models/actions-analysis-services-multidimensional-data.md), [Actions dans les modèles multidimensionnels](multidimensional-models/actions-in-multidimensional-models.md)  
+  
+> [!NOTE]  
+>  Pour obtenir des exemples d'actions, consultez les exemples d'action de l'onglet Modèles du volet Outils de calcul ou dans les exemples de l'entrepôt de données [!INCLUDE[ssSampleDBCoShort](../includes/sssampledbcoshort-md.md)] DW. Pour plus d’informations sur l’installation de cette base de données, consultez [Installer les exemples de données et de projets pour le didacticiel sur la modélisation multidimensionnelle Analysis Services](install-sample-data-and-projects.md).  
+  
+ Cette leçon inclut la tâche suivante :  
+  
+ [Définition et utilisation d’une Action d’extraction](lesson-8-1-defining-and-using-a-drillthrough-action.md)  
+ Dans cette tâche, vous définissez, utilisez puis modifiez une action d'extraction à travers la relation de dimension de fait que vous avez définie antérieurement dans ce didacticiel.  
+  
+## <a name="next-lesson"></a>Leçon suivante  
+ [Leçon 9 : Définition de Perspectives et traductions](lesson-9-defining-perspectives-and-translations.md)  
+  
+## <a name="see-also"></a>Voir aussi  
+ [Scénario du didacticiel Analysis Services](analysis-services-tutorial-scenario.md)   
+ [Modélisation multidimensionnelle &#40;Adventure Works didacticiel&#41;](multidimensional-modeling-adventure-works-tutorial.md)   
+ [Actions &#40;Analysis Services - données multidimensionnelles&#41;](multidimensional-models/actions-analysis-services-multidimensional-data.md)   
+ [Actions dans les modèles multidimensionnels](multidimensional-models/actions-in-multidimensional-models.md)  
+  
+  

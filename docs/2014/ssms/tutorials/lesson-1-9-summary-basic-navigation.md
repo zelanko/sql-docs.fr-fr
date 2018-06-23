@@ -1,0 +1,40 @@
+---
+title: 'Récapitulatif : Navigation de base | Microsoft Docs'
+ms.custom: ''
+ms.date: 06/13/2017
+ms.prod: sql-server-2014
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- tools-ssms
+ms.tgt_pltfrm: ''
+ms.topic: article
+ms.assetid: de4e9430-7290-4ce5-be9e-f247539460e1
+caps.latest.revision: 24
+author: craigg-msft
+ms.author: craigg
+manager: jhubbard
+ms.openlocfilehash: 4509eabd0213216cee1566fa033d4479c874c931
+ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36154501"
+---
+# <a name="summary-basic-navigation"></a>Résumé : Navigation de base
+  La zone de conception [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] peut être personnalisée en fonction de vos préférences personnelles et des besoins propres à votre activité.  
+  
+ La section qui suit présente les meilleures pratiques pour utiliser efficacement l'espace de travail [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] :  
+  
+-   Fermez les fenêtres que vous pensez ne pas utiliser immédiatement.  
+  
+-   Si l'outil que vous souhaitez utiliser n'est pas visible, sélectionnez-le dans le menu **Affichage** .  
+  
+-   Utilisez la fonction **Masquer automatiquement** pour agrandir l'espace disponible dans la disposition d'environnement.  
+  
+-   Définissez l'option **Au démarrage** pour personnaliser la disposition par défaut.  
+  
+## <a name="next-lesson"></a>Leçon suivante  
+ [Leçon 2 : écriture d'instructions Transact-SQL](lesson-2-writing-transact-sql.md)  
+  
+  
