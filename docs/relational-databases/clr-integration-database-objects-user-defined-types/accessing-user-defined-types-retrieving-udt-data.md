@@ -3,11 +3,9 @@ title: Extraction de données UDT | Documents Microsoft
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
-ms.prod_service: database-engine
-ms.component: clr
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
+ms.technology: reference
 ms.tgt_pltfrm: ''
 ms.topic: reference
 dev_langs:
@@ -27,12 +25,12 @@ caps.latest.revision: 17
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 61e40a31c7a4ef0b7e00e5af235d033e6fe9d7a8
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 15f0fb18dfccccbb8321366bb155e03a352fcad9
+ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32921454"
+ms.lasthandoff: 06/18/2018
+ms.locfileid: "35700580"
 ---
 # <a name="accessing-user-defined-types---retrieving-udt-data"></a>L’accès à des Types définis par l’utilisateur - extraction de données UDT
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -380,13 +378,13 @@ class GetRawBytes
  Les paramètres UDT peuvent être utilisés comme paramètres d'entrée et de sortie dans votre code ADO.NET.  
   
 ## <a name="using-udts-in-query-parameters"></a>Utilisation des UDT dans les paramètres de requête  
- UDT peuvent être utilisés comme valeurs de paramètre lorsque vous configurez un **SqlParameter** pour un **System.Data.SqlClient.SqlCommand** objet. Le **SqlDbType.Udt** énumération d’une **SqlParameter** objet est utilisé pour indiquer que le paramètre est un UDT lors de l’appel le **ajouter** méthode à la **paramètres** collection. Le **UdtTypeName** propriété d’un **SqlCommand** objet est utilisé pour spécifier le nom qualifié complet de l’UDT dans la base de données à l’aide de la *base_de_données.nom_schéma.nom_objet* syntaxe. Sans être obligatoire, l'utilisation du nom complet supprime l'ambiguïté de votre code.  
+ UDT peuvent être utilisés comme valeurs de paramètre lorsque vous configurez un **SqlParameter** pour un **System.Data.SqlClient.SqlCommand** objet. Le **SqlDbType.Udt** énumération d’une **SqlParameter** objet est utilisé pour indiquer que le paramètre est un UDT lors de l’appel le **ajouter** méthode à la  **Paramètres** collection. Le **UdtTypeName** propriété d’un **SqlCommand** objet est utilisé pour spécifier le nom qualifié complet de l’UDT dans la base de données à l’aide de la *base_de_données.nom_schéma.nom_objet* syntaxe. Sans être obligatoire, l'utilisation du nom complet supprime l'ambiguïté de votre code.  
   
 > [!NOTE]  
 >  Une copie locale de l'assembly UDT doit être accessible par le projet client.  
   
 ### <a name="example"></a>Exemple  
- Le code dans cet exemple crée **SqlCommand** et **SqlParameter** objets à insérer des données dans une colonne UDT dans une table. Le code utilise le **SqlDbType.Udt** énumération pour spécifier le type de données et le **UdtTypeName** propriété de la **SqlParameter** pour spécifier le nom qualifié complet de l’UDT dans la base de données.  
+ Le code dans cet exemple crée **SqlCommand** et **SqlParameter** objets à insérer des données dans une colonne UDT dans une table. Le code utilise le **SqlDbType.Udt** énumération pour spécifier le type de données et le **UdtTypeName** propriété de la **SqlParameter** objet pour spécifier le nom qualifié complet de l’UDT dans la base de données.  
   
 ```vb  
 Option Explicit On  
@@ -459,6 +457,6 @@ static void Main()
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [L’accès à des Types définis par l’utilisateur dans ADO.NET](../../relational-databases/clr-integration-database-objects-user-defined-types/accessing-user-defined-types-in-ado-net.md)  
+ [Accès aux types définis par l’utilisateur dans ADO.NET](../../relational-databases/clr-integration-database-objects-user-defined-types/accessing-user-defined-types-in-ado-net.md)  
   
   

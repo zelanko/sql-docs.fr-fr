@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: native-client-odbc-communication
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: ''
@@ -29,11 +28,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 4daa642cbd60846cc4211de5e33cdad8e7a6d8db
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 6934876b3772ba8124ca4adfc87a4bad89346e64
+ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/18/2018
+ms.locfileid: "35698700"
 ---
 # <a name="connecting-to-a-data-source-odbc"></a>Connexion à une source de données (ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -63,7 +63,7 @@ ms.lasthandoff: 05/03/2018
   
 -   Pour se connecter sans le recours à une source de données ODBC.  
   
- Le **SQLDriverConnect** chaîne de connexion contient une série de paires mot clé-valeur qui spécifient toutes les informations de connexion pris en charge par un pilote ODBC. Chaque pilote prend en charge les mots clés ODBC standard (DSN, FILEDSN, DRIVER, UID, PWD et SAVEFILE) en plus des mots clés spécifiques au pilote pour toutes les informations de connexion prises en charge par le pilote. **SQLDriverConnect** peut être utilisé pour se connecter sans une source de données. Par exemple, une application qui est conçue pour établir une connexion « Sans DSN » à une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] peut appeler **SQLDriverConnect** avec une chaîne de connexion qui définit l’ID de connexion, mot de passe, la bibliothèque réseau, nom du serveur pour vous connecter à, valeur par défaut de la base de données à utiliser.  
+ Le **SQLDriverConnect** chaîne de connexion contient une série de paires mot clé-valeur qui spécifient toutes les informations de connexion pris en charge par un pilote ODBC. Chaque pilote prend en charge les mots clés ODBC standard (DSN, FILEDSN, DRIVER, UID, PWD et SAVEFILE) en plus des mots clés spécifiques au pilote pour toutes les informations de connexion prises en charge par le pilote. **SQLDriverConnect** peut être utilisé pour se connecter sans une source de données. Par exemple, une application qui est conçue pour établir une connexion « Sans DSN » à une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] peut appeler **SQLDriverConnect** avec une chaîne de connexion qui définit l’ID de connexion, le mot de passe, le bibliothèque réseau, le nom du serveur pour se connecter à et par défaut de la base de données à utiliser.  
   
  Lorsque vous utilisez **SQLDriverConnect**, il existe deux options pour la confirmation de l’utilisateur pour les informations de connexion nécessaires :  
   
@@ -73,7 +73,7 @@ ms.lasthandoff: 05/03/2018
   
 -   Boîte de dialogue du pilote  
   
-     Vous pouvez coder l’application pour passer un handle de fenêtre valide à **SQLDriverConnect** et définir le *DriverCompletion* paramètre SQL_DRIVER_COMPLETE, SQL_DRIVER_PROMPT ou SQL_DRIVER_COMPLETE_REQUIRED. Le pilote génère ensuite une boîte de dialogue pour inviter l'utilisateur à fournir les informations de connexion. Cette méthode simplifie le code de l'application.  
+     Vous pouvez coder l’application pour passer un handle de fenêtre valide à **SQLDriverConnect** et définir le *DriverCompletion* paramètre SQL_DRIVER_COMPLETE, SQL_DRIVER_PROMPT ou SQL_DRIVER_COMPLETE_ Obligatoire. Le pilote génère ensuite une boîte de dialogue pour inviter l'utilisateur à fournir les informations de connexion. Cette méthode simplifie le code de l'application.  
   
 ## <a name="sqlbrowseconnect"></a>SQLBrowseConnect  
  **SQLBrowseConnect**, comme **SQLDriverConnect**, utilise une chaîne de connexion. Toutefois, à l’aide de **SQLBrowseConnect**, une application peut construire une chaîne de connexion complète itérative avec la source de données en cours d’exécution. L'application peut alors réaliser deux tâches :  

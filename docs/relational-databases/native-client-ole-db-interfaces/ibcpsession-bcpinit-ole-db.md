@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: native-client-ole-db-interfaces
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: connectivity
 ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
@@ -22,12 +20,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: a978396855d4566a393d055fc9394177f6e33057
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 0cd92502aef7d388bbf3fbce10fb9a811caa5164
+ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32946684"
+ms.lasthandoff: 06/18/2018
+ms.locfileid: "35695590"
 ---
 # <a name="ibcpsessionbcpinit-ole-db"></a>IBCPSession::BCPInit (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -53,13 +51,13 @@ HRESULT BCPInit(
   
 -   Le type de données spécifié est le type de données de la colonne dans la table de base de données, la vue ou le jeu de résultats SELECT. Le type de données est énuméré par [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] les types de données natif spécifiés dans le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] le fichier d’en-tête Native Client (sqlncli.h). Leurs valeurs suivent le modèle BCP_TYPE_XXX. Les données sont représentées dans leur forme informatique. Autrement dit, les données d'une colonne de type de données integer sont représentées par une séquence de quatre octets de poids fort ou de poids faible selon l'ordinateur qui a créé le fichier de données.  
   
--   Si un type de données de base de données est de longueur fixe, les données du fichier de données sont également de longueur fixe. Les méthodes de copie en bloc qui traitent les données (par exemple, [IBCPSession::BCPExec](../../relational-databases/native-client-ole-db-interfaces/ibcpsession-bcpexec-ole-db.md)) analysent les lignes de données que la longueur des données dans le fichier de données sera identique à la longueur des données spécifiées dans la table de base de données, une vue ou une liste de colonnes SELECT. Par exemple, les données d'une colonne de base de données définie comme `char(13)` doivent être représentées par 13 caractères pour chaque ligne de données du fichier. Les données de longueur fixe peuvent être préfixées avec un indicateur null si la colonne de base de données autorise les valeurs NULL.  
+-   Si un type de données de base de données est de longueur fixe, les données du fichier de données sont également de longueur fixe. Les méthodes de copie en bloc qui traitent les données (par exemple, [IBCPSession::BCPExec](../../relational-databases/native-client-ole-db-interfaces/ibcpsession-bcpexec-ole-db.md)) analysent les lignes de données que la longueur des données dans le fichier de données sera identique à la longueur des données spécifiées dans la table de base de données, la vue ou la sélection des colonnes liste. Par exemple, les données d'une colonne de base de données définie comme `char(13)` doivent être représentées par 13 caractères pour chaque ligne de données du fichier. Les données de longueur fixe peuvent être préfixées avec un indicateur null si la colonne de base de données autorise les valeurs NULL.  
   
 -   Lors de la copie de données vers [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], le fichier de données doit avoir les données de chaque colonne de la table de base de données. Lors de la copie de données depuis [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], les données de toutes les colonnes de la table de base de données, de la vue ou du jeu de résultats SELECT, sont copiées vers le fichier de données.  
   
 -   Lors de la copie de données vers [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], la position ordinale d'une colonne du fichier de données doit être identique à la position ordinale de la colonne de la table de base de données. Lors de la copie des données à partir de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], le **BCPExec** méthode place les données en fonction de la position ordinale de la colonne dans la table de base de données.  
   
--   Si un type de données de base de données est variable en longueur (par exemple, `varbinary(22)`) ou si une colonne de base de données peut contenir des valeurs NULL, les données du fichier de données sont préfixées par un indicateur de longueur/null. La largeur de l'indicateur varie selon le type de données et la version de la copie en bloc. Le [IBCPSession::BCPControl](../../relational-databases/native-client-ole-db-interfaces/ibcpsession-bcpcontrol-ole-db.md) option de méthode BCP_OPTION_FILEFMT assure la compatibilité entre les fichiers de données de copie en bloc antérieurs et les serveurs exécutant des versions ultérieures de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en indiquant à quel moment la largeur des indicateurs dans les données plus étroite que prévu.  
+-   Si un type de données de base de données est variable en longueur (par exemple, `varbinary(22)`) ou si une colonne de base de données peut contenir des valeurs NULL, les données du fichier de données sont préfixées par un indicateur de longueur/null. La largeur de l'indicateur varie selon le type de données et la version de la copie en bloc. Le [IBCPSession::BCPControl](../../relational-databases/native-client-ole-db-interfaces/ibcpsession-bcpcontrol-ole-db.md) option de méthode BCP_OPTION_FILEFMT assure la compatibilité entre les fichiers de données de copie en bloc antérieurs et les serveurs exécutant des versions ultérieures de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en indiquant à quel moment la largeur des indicateurs dans le les données sont plus étroites que prévu.  
   
 > [!NOTE]  
 >  Pour modifier les valeurs de format de données spécifiés pour un fichier de données, utilisez la [IBCPSession::BCPColumns](../../relational-databases/native-client-ole-db-interfaces/ibcpsession-bcpcolumns-ole-db.md) et [IBCPSession::BCPColFmt](../../relational-databases/native-client-ole-db-interfaces/ibcpsession-bcpcolfmt-ole-db.md) méthodes.  
@@ -72,7 +70,7 @@ HRESULT BCPInit(
   
  Si l'argument eDirection a la valeur BCP_DIRECTION_OUT, l'argument pwszTable peut être le nom d'une vue de base de données.  
   
- Si l’argument eDirection a la valeur BCP_DIRECTION_OUT et une instruction SELECT est spécifiée à l’aide de la **BCPControl** méthode avant le **BCPExec** méthode est appelée, le *pwszTable* argument doit être défini avec la valeur NULL.  
+ Si l’argument eDirection a la valeur BCP_DIRECTION_OUT et une instruction SELECT est spécifiée à l’aide de la **BCPControl** méthode avant le **BCPExec** méthode est appelée, le *pwszTable*argument doit être défini avec la valeur NULL.  
   
  *pwszDataFile*[in]  
  Le nom du fichier à copier dans ou hors d’utilisateur.  
