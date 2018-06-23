@@ -1,0 +1,39 @@
+---
+title: Fonctionnalités dépréciées dans la réplication SQL Server | Microsoft Docs
+ms.custom: ''
+ms.date: 06/13/2017
+ms.prod: sql-server-2014
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- replication
+ms.tgt_pltfrm: ''
+ms.topic: article
+helpviewer_keywords:
+- deprecated features [SQL Server replication]
+ms.assetid: 46bd3edd-d6de-40a6-a015-21cce8321feb
+caps.latest.revision: 64
+author: craigg-msft
+ms.author: craigg
+manager: jhubbard
+ms.openlocfilehash: 1c0a7579c8d895c398b1a7d75df56f3ffa2d1d04
+ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36053485"
+---
+# <a name="deprecated-features-in-sql-server-replication"></a>Fonctionnalités déconseillées dans la réplication SQL Server
+  Cette rubrique décrit les fonctionnalités de réplication déconseillées qui sont toujours disponibles dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Il est prévu que ces fonctionnalités soient supprimées dans une prochaine version de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Les fonctions déconseillées ne doivent pas être utilisées dans de nouvelles applications.  
+  
+## <a name="items-deprecated-in-sql-server-2014"></a>Éléments déconseillés dans SQL Server 2014  
+  
+|Fonctionnalité|Description|  
+|-------------|-----------------|  
+|[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]|La réplication est prise en charge si chaque point de terminaison [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se trouve dans deux versions principales de la version actuelle de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Par conséquent, [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] ne prend pas en charge la réplication vers ou depuis [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)].|  
+|[!INCLUDE[ssEW](../../includes/ssew-md.md)]|La réplication est prise en charge si chaque point de terminaison [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se trouve dans deux versions principales de la version actuelle de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Par conséquent, [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] ne prend pas en charge la réplication vers ou depuis [!INCLUDE[ssEW](../../includes/ssew-md.md)].|  
+  
+## <a name="see-also"></a>Voir aussi  
+ [Compatibilité descendante de la réplication](replication-backward-compatibility.md)  
+  
+  
