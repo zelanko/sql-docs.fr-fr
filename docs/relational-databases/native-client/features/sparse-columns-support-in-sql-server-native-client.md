@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: native-client|features
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: ''
@@ -20,12 +19,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 5f9cf56b4ee1a7e3108607912ecba9a05d0815e4
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 25b56f30a43fb643d3c7ed789ee2ef10b36e3609
+ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32953004"
+ms.lasthandoff: 06/18/2018
+ms.locfileid: "35698320"
 ---
 # <a name="sparse-columns-support-in-sql-server-native-client"></a>Prise en charge des colonnes éparses dans SQL Server Native Client
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -51,7 +50,7 @@ ms.locfileid: "32953004"
 |Déterminer si une colonne est éparse.|Consultez la colonne SS_IS_SPARSE du jeu de résultats SQLColumns (ODBC).<br /><br /> Consultez la colonne SS_IS_SPARSE de l'ensemble de lignes de schéma DBSCHEMA_COLUMNS (OLE DB).<br /><br /> Ce scénario n'est pas possible depuis une application qui utilise [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client à partir d'une version antérieure à [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)]. Toutefois, une telle application offre la possibilité d'interroger les vues système.|  
 |Déterminer si une colonne est un **column_set**.|Consultez la colonne SS_IS_COLUMN_SET du jeu de résultats SQLColumns. Ou bien consultez l'attribut de colonne SQL_CA_SS_IS_COLUMN_SET (ODBC) spécifique de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].<br /><br /> Consultez la colonne SS_IS_COLUMN_SET de l'ensemble de lignes de schéma DBSCHEMA_COLUMNS Ou consultez *dwFlags* retournée par IColumnsinfo::GetColumnInfo ou bien DBCOLUMNFLAGS dans l’ensemble de lignes retourné par IColumnsRowset::GetColumnsRowset. Pour **column_set** colonnes, DBCOLUMNFLAGS_SS_ISCOLUMNSET est défini (OLE DB).<br /><br /> Ce scénario n'est pas possible depuis une application qui utilise [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client à partir d'une version antérieure à [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)]. Toutefois, une telle application offre la possibilité d'interroger les vues système.|  
 |Importer et exporter des colonnes éparses par l’utilitaire BCP pour une table sans aucune **column_set**.|Aucun changement de comportement depuis les précédentes versions de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client.|  
-|Importer et exporter des colonnes éparses par l’utilitaire BCP pour une table avec un **column_set**.|Le **column_set** est importé et exporté de la même manière au format XML ; autrement dit, en tant que **varbinary (max)** si lié sous la forme d’un type binaire ou **nvarchar (max)** si liées en tant qu’un **char** ou **wchar** type.<br /><br /> Colonnes qui sont membres d’éparse **column_set** ne sont pas exportés en tant que colonnes distinctes ; elles sont uniquement exportées dans la valeur de la **column_set**.|  
+|Importer et exporter des colonnes éparses par l’utilitaire BCP pour une table avec un **column_set**.|Le **column_set** est importé et exporté de la même manière au format XML ; autrement dit, en tant que **varbinary (max)** si lié sous la forme d’un type binaire ou **nvarchar (max)** si associée sous la forme d’un **char** ou **wchar** type.<br /><br /> Colonnes qui sont membres d’éparse **column_set** ne sont pas exportés en tant que colonnes distinctes ; elles sont uniquement exportées dans la valeur de la **column_set**.|  
 |**queryout** comportement pour BCP.|Aucune modification observée dans la gestion des colonnes explicitement nommées depuis les précédentes versions de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client.<br /><br /> Les scénarios impliquant des opérations d'importation et d'exportation entre les tables avec des schémas différents peuvent nécessiter une gestion spéciale.<br /><br /> Pour plus d'informations sur BCP, consultez la section « Prise en charge de la copie en bloc (BCP) pour les colonnes éparses » plus loin dans cette rubrique.|  
   
 ## <a name="down-level-client-behavior"></a>Comportement de client de bas niveau  
@@ -62,7 +61,7 @@ ms.locfileid: "32953004"
 ## <a name="bulk-copy-bcp-support-for-sparse-columns"></a>Prise en charge de la copie en bloc (BCP) pour les colonnes éparses  
  Aucune modification à l’API BCP dans ODBC ou OLE DB pour les colonnes éparses ou **column_set** fonctionnalités.  
   
- Si une table possède un **column_set**, les colonnes éparses ne sont pas gérées en tant que colonnes distinctes. Les valeurs de toutes les colonnes éparses sont incluses dans la valeur de la **column_set**, qui est exporté dans la même façon que d’une colonne XML ; autrement dit, en tant que **varbinary (max)** si lié sous la forme d’un type binaire ou **nvarchar (max)** si liées en tant qu’un **char** ou **wchar** type). Lors de l’importation, le **column_set** valeur doit être conforme au schéma de la **column_set**.  
+ Si une table possède un **column_set**, les colonnes éparses ne sont pas gérées en tant que colonnes distinctes. Les valeurs de toutes les colonnes éparses sont incluses dans la valeur de la **column_set**, qui est exporté dans la même façon que d’une colonne XML ; autrement dit, en tant que **varbinary (max)** si lié sous la forme d’un type binaire ou  **nvarchar (max)** si liées en tant qu’un **char** ou **wchar** type). Lors de l’importation, le **column_set** valeur doit être conforme au schéma de la **column_set**.  
   
  Pour **queryout** opérations, il n’existe aucune modification à la façon dont les colonnes explicitement référencées sont gérées. **column_set** colonnes ont le même comportement que les colonnes XML et le caractère éparse n’a aucun effet sur la gestion des colonnes éparses nommées.  
   

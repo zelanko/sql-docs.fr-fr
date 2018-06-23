@@ -4,10 +4,9 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: native-client-odbc-how-to
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
+ms.technology: connectivity
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -19,11 +18,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: d5651efa7e0c816d6d1ed8ec99f3ddbe2538a012
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 6199386c9e922e07a07acbd81399af3e55b83be0
+ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/18/2018
+ms.locfileid: "35696400"
 ---
 # <a name="bulk-copy-data-from-program-variables-odbc"></a>Copier en bloc des données à partir de variables de programme (ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -309,7 +309,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Copie en bloc avec les SQL Server ODBC Driver rubriques & #40 ; ODBC & #41 ;](../../../relational-databases/native-client-odbc-how-to/bulk-copy/bulk-copying-with-the-sql-server-odbc-driver-how-to-topics-odbc.md)   
- [Variables de programme à partir de la copie en bloc](../../../relational-databases/native-client-odbc-bulk-copy-operations/bulk-copying-from-program-variables.md)  
+ [Copie en bloc avec les SQL Server ODBC Driver rubriques &#40;ODBC&#41;](../../../relational-databases/native-client-odbc-how-to/bulk-copy/bulk-copying-with-the-sql-server-odbc-driver-how-to-topics-odbc.md)   
+ [Copie en bloc à partir de variables de programme](../../../relational-databases/native-client-odbc-bulk-copy-operations/bulk-copying-from-program-variables.md)  
   
   

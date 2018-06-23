@@ -4,10 +4,9 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: native-client-ole-db-how-to
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
+ms.technology: connectivity
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -19,17 +18,18 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 3017b23b08b1051625b5753c9ccb4070304b6fc8
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: db62f7d8cf651adeba655a4f126129a83fbea1fb
+ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/18/2018
+ms.locfileid: "35694670"
 ---
 # <a name="execute-stored-procedure-with-odbc-call-and-process-output"></a>Exécutez la procédure stockée avec ODBC appeler et traiter la sortie
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[SNAC_Deprecated](../../../includes/snac-deprecated.md)]
 
-  Les procédures stockées [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] peuvent avoir des codes de retour et des paramètres de sortie de type entier. Les codes de retour et paramètres de sortie sont envoyés dans le dernier paquet du serveur et ne sont par conséquent pas accessibles à l'application tant que l'ensemble de lignes n'a pas été complètement libéré. Si la commande retourne plusieurs résultats, le données de paramètre de sortie sont disponibles lorsque **IMultipleResults::GetResult** retourne DB_S_NORESULT ou **IMultipleResults** interface est complètement libérée, selon ce qui se produit en premier.  
+  Les procédures stockées [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] peuvent avoir des codes de retour et des paramètres de sortie de type entier. Les codes de retour et paramètres de sortie sont envoyés dans le dernier paquet du serveur et ne sont par conséquent pas accessibles à l'application tant que l'ensemble de lignes n'a pas été complètement libéré. Si la commande retourne plusieurs résultats, le données de paramètre de sortie sont disponibles lorsque **IMultipleResults::GetResult** retourne DB_S_NORESULT ou **IMultipleResults** interface est complètement libérée selon ce qui se produit en premier.  
   
 > [!IMPORTANT]  
 >  Lorsque c'est possible, utilisez l'authentification Windows. Si l'authentification Windows n'est pas disponible, invitez les utilisateurs à entrer leurs informations d'identification au moment de l'exécution. Évitez de stocker ces informations dans un fichier. Si vous devez conserver les informations d’identification, chiffrez-les avec le [API de chiffrement Win32](http://go.microsoft.com/fwlink/?LinkId=64532).  
@@ -57,7 +57,7 @@ ms.lasthandoff: 05/03/2018
   
  Exécutez la première liste de code ([!INCLUDE[tsql](../../../includes/tsql-md.md)]) pour créer la procédure stockée utilisée par l'application.  
   
- Compilez avec ole32.lib oleaut32.lib et exécutez la deuxième liste de code (C++). Cette application vous permet de vous connecter à l'instance de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] par défaut de votre ordinateur. Sur certains systèmes d'exploitation Windows, vous devrez remplacer (localhost) ou (local) par le nom de votre instance [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Pour vous connecter à une instance nommée, modifiez la chaîne de connexion à partir de L"(local) » à L"(local)\\\name », où le nom est l’instance nommée. Par défaut, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Express est installé dans une instance nommée. Assurez-vous que votre variable d'environnement INCLUDE inclut le répertoire qui contient sqlncli.h.  
+ Compilez avec ole32.lib oleaut32.lib et exécutez la deuxième liste de code (C++). Cette application vous permet de vous connecter à l'instance de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] par défaut de votre ordinateur. Sur certains systèmes d'exploitation Windows, vous devrez remplacer (localhost) ou (local) par le nom de votre instance [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Pour vous connecter à une instance nommée, modifiez la chaîne de connexion à partir de L"(local) » à L"(local)\\\name », où le nom est l’instance nommée. Par défaut, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Express est installé dans une instance nommée. Assurez-vous que votre variable d'environnement INCLUDE inclut le répertoire qui contient sqlncli.h.  
   
  Exécutez la troisième liste de code ([!INCLUDE[tsql](../../../includes/tsql-md.md)]) pour supprimer la procédure stockée utilisée par l'application.  
   
@@ -362,6 +362,6 @@ GO
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Rubriques de procédures de traitement des résultats & #40 ; OLE DB & #41 ;](../../../relational-databases/native-client-ole-db-how-to/results/processing-results-how-to-topics-ole-db.md)  
+ [Rubriques de procédures relatives aux résultats de traitement &#40;OLE DB&#41;](../../../relational-databases/native-client-ole-db-how-to/results/processing-results-how-to-topics-ole-db.md)  
   
   

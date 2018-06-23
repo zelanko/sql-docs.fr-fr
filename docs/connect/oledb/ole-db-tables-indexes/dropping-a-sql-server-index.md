@@ -2,9 +2,10 @@
 title: Suppression d’un Index SQL Server | Documents Microsoft
 description: Suppression d’un index sql server à l’aide du pilote OLE DB pour SQL Server
 ms.custom: ''
-ms.date: 03/26/2018
+ms.date: 06/14/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.component: oledb|ole-db-tables-indexes
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: connectivity
@@ -20,14 +21,17 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 0c85b9f8d51b7fb5daafff66f52d9164508caf16
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
+ms.openlocfilehash: a790633c129fe1cfb3da9a21a9e4fd9fae3513cd
+ms.sourcegitcommit: 03ba89937daeab08aa410eb03a52f1e0d212b44f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35306798"
+ms.lasthandoff: 06/16/2018
+ms.locfileid: "35690152"
 ---
 # <a name="dropping-a-sql-server-index"></a>Suppression d'un index SQL Server
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+
+[!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
   Le pilote OLE DB pour SQL Server expose la **IIndexDefinition::DropIndex** (fonction). Cela permet aux consommateurs de supprimer un index à partir d’un [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] table.  
   

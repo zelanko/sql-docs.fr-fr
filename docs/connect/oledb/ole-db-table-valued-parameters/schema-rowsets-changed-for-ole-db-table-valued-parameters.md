@@ -2,9 +2,10 @@
 title: Ensembles de lignes de schéma modifiés pour les paramètres table OLE DB | Documents Microsoft
 description: Ensembles de lignes de schéma modifiés pour les paramètres de OLE DB Table-Valued
 ms.custom: ''
-ms.date: 03/26/2018
+ms.date: 06/14/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.component: oledb|ole-db-table-valued-parameters
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: connectivity
@@ -16,15 +17,17 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: e58475477bea2a62980bdf9dd0561a2d012a9e62
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
+ms.openlocfilehash: 6eb387969549f0ed72e3635a80fcd6db34852c10
+ms.sourcegitcommit: 03ba89937daeab08aa410eb03a52f1e0d212b44f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35306638"
+ms.lasthandoff: 06/16/2018
+ms.locfileid: "35689832"
 ---
 # <a name="schema-rowsets-changed-for-ole-db-table-valued-parameters"></a>Ensembles de lignes de schéma modifiés pour les paramètres table OLE DB
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+
+[!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
   Le tableau suivant répertorie les ensembles de lignes de schéma qui ont été modifiés ou ajoutés pour prendre en charge des paramètres table.  
   

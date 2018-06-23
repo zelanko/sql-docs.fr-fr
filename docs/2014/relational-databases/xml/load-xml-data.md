@@ -1,0 +1,91 @@
+---
+title: Charger des données XML | Microsoft Docs
+ms.custom: ''
+ms.date: 06/13/2017
+ms.prod: sql-server-2014
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dbe-xml
+ms.tgt_pltfrm: ''
+ms.topic: article
+helpviewer_keywords:
+- XML data [SQL Server], loading
+- loading XML data
+ms.assetid: d1741e8d-f44e-49ec-9f14-10208b5468a7
+caps.latest.revision: 19
+author: craigg-msft
+ms.author: craigg
+manager: jhubbard
+ms.openlocfilehash: e3b250b955028e3f0843699688713cb731f00fee
+ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36142205"
+---
+# <a name="load-xml-data"></a>Charger des données XML
+  Vous pouvez transférer des données XML dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] de plusieurs manières. Exemple :  
+  
+-   Si vos données figurent dans une colonne de type [n]text ou image, dans une base de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , vous pouvez importer la table par le biais de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. Modifiez ensuite le type de colonne en XML à l'aide de l'instruction ALTER TABLE.  
+  
+-   Vous pouvez copier vos données en bloc à partir d’une autre base de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] à l’aide de bcp out, puis les insérer en bloc dans la base de données de version ultérieure à l’aide de bcp in.  
+  
+-   Si vous avez des données dans des colonnes relationnelles d'une base de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , créez une table avec une colonne [n]text et, éventuellement, une colonne de clé primaire pour un identificateur de ligne. Utilisez la programmation pour récupérer les données XML généré sur le serveur avec FOR XML côté client et de les écrire dans le `[n]text` colonne. Ensuite, utilisez les techniques citées précédemment pour transférer les données vers une base de données de version ultérieure. Vous pouvez choisir d’écrire directement le code XML dans une colonne XML de la base de données de version ultérieure.  
+  
+## <a name="bulk-loading-xml-data"></a>Chargement en masse de données XML  
+ Vous pouvez charger en masse des données XML sur le serveur en utilisant les fonctions de chargement en masse de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], comme bcp. OPENROWSET vous permet de charger des données dans une colonne XML à partir de fichiers. L'exemple suivant illustre ce comportement :  
+  
+##### <a name="example-loading-xml-from-files"></a>Exemple : chargement de données XML à partir de fichiers  
+ Cet exemple montre comment insérer une ligne dans la table T. La valeur de la colonne XML est chargée à partir du fichier C:\MyFile\xmlfile.xml en tant que CLOB, et la colonne integer prend la valeur 10.  
+  
+```  
+INSERT INTO T  
+SELECT 10, xCol  
+FROM    (SELECT *      
+    FROM OPENROWSET (BULK 'C:\MyFile\xmlfile.xml', SINGLE_CLOB)   
+ AS xCol) AS R(xCol)  
+```  
+  
+## <a name="text-encoding"></a>Encodage de texte  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] stocke les données XML au format Unicode (UTF-16). Les données XML extraites du serveur se présentent au format UTF-16. Si vous souhaitez un encodage différent, vous devez convertir les données extraites au format voulu. Il arrive que les données XML soient encodées différemment. Si tel est le cas, vous devez prêter une attention particulière au chargement des données. Exemple :  
+  
+-   Si votre texte XML est en Unicode (UCS-2, UTF-16), vous pouvez l'affecter à une colonne, une variable ou un paramètre XML sans aucun problème.  
+  
+-   Si l'encodage ne se fait pas en Unicode et qu'il est implicite, du fait d'une page de codes source, la page de codes de la chaîne dans la base de données doit être identique (ou du moins compatible) aux points de code que vous souhaitez charger. Si nécessaire, utilisez COLLATE. Si aucune page de codes serveur de la sorte n'existe, vous devez ajouter une déclaration XML explicite mentionnant l'encodage correct.  
+  
+-   Pour utiliser un encodage explicite, utilisez la `varbinary()` de type, qui n’a aucune interaction avec les pages de codes, ou utilisez un type de chaîne de la page de codes appropriée. Ensuite, assignez les données à une colonne, une variable ou un paramètre XML.  
+  
+### <a name="example-explicitly-specifying-an-encoding"></a>Exemple : mention explicite d'un encodage  
+ Supposez que vous avez un document XML, vcdoc, stocké au format `varchar(max)`, qui ne comporte aucune déclaration XML explicite. L’instruction suivante ajoute une déclaration XML mentionnant l’encodage « iso8859-1 », concatène le document XML, convertit le résultat à `varbinary(max)` afin que la représentation en octets est conservée, puis enfin de le convertir au format XML. Ainsi, le processeur XML peut analyser les données conformément à l'encodage spécifié « iso8859-1 » et générer la représentation UTF-16 correspondante pour les valeurs de chaîne.  
+  
+```  
+SELECT CAST(   
+CAST (('<?xml version="1.0" encoding="iso8859-1"?>'+ vcdoc) AS VARBINARY (MAX))   
+ AS XML)  
+```  
+  
+### <a name="string-encoding-incompatibilities"></a>Incompatibilités d'encodage de chaîne  
+ Si vous copiez et collez du code XML sous forme de littéral chaîne dans la fenêtre d'éditeur de requête de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], vous risquez de rencontrer des incompatibilités d'encodage de la chaîne [N]VARCHAR. Tout dépendra de l'encodage de votre instance XML. Dans bien des cas, vous serez amené à supprimer la déclaration XML. Exemple :  
+  
+```  
+<?xml version="1.0" encoding="UTF-8"?>  
+  <xsd:schema …  
+```  
+  
+ Vous devez ensuite inclure un N pour transformer l'instance XML en une instance Unicode. Exemple :  
+  
+```  
+-- Assign XML instance to a variable.  
+DECLARE @X XML  
+SET @X = N'…'  
+-- Insert XML instance into an xml type column.  
+INSERT INTO T VALUES (N'…')  
+-- Create an XML schema collection  
+CREATE XML SCHEMA COLLECTION XMLCOLL1 AS N'<xsd:schema … '  
+```  
+  
+## <a name="see-also"></a>Voir aussi  
+ [Données XML &#40;SQL Server&#41;](xml-data-sql-server.md)  
+  
+  

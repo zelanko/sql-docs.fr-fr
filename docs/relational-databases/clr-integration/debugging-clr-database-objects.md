@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: clr
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
-ms.tgt_pltfrm: ''
+ms.technology: reference
 ms.topic: reference
 helpviewer_keywords:
 - database objects [CLR integration], debugging
@@ -21,12 +19,12 @@ caps.latest.revision: 46
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 8bf6b05d891d18fec8cfc063321f294c914cfa13
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 67fd37b04592bd4daeeb6a03c95d3c1976109ed4
+ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32928574"
+ms.lasthandoff: 06/18/2018
+ms.locfileid: "35701010"
 ---
 # <a name="debugging-clr-database-objects"></a>Débogage d'objets de base de données CLR
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -48,7 +46,7 @@ ms.locfileid: "32928574"
 ## <a name="overview-of-debugging-managed-database-objects"></a>Vue d'ensemble du débogage des objets de base de données managés  
  Le débogage dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] suit un modèle « par connexion ». Un débogueur peut détecter et déboguer des activités uniquement sur la connexion cliente à laquelle il est attaché. Comme les fonctionnalités du débogueur ne sont pas limitées par le type de connexion, il est possible de déboguer à la fois des TDS (Tabular Data Stream) et des connexions HTTP. Toutefois, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] n'autorise pas le débogage des connexions existantes. Le débogage prend en charge toutes les fonctionnalités de débogage communes dans les routines qui s'exécutent sur le serveur. L'interaction entre un débogueur et [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] s'effectue par le biais d'un modèle COM (Component Object Model) distribué.  
   
- Pour plus d’informations et des scénarios de débogage des procédures stockées managées, des fonctions, des déclencheurs, des types définis par l’utilisateur et des agrégats, consultez le «[débogage pour la base de données SQL Server CLR Integration](http://go.microsoft.com/fwlink/?LinkId=120378)« rubrique dans la documentation de Visual Studio.  
+ Pour plus d’informations et des scénarios de débogage des procédures stockées managées, des fonctions, des déclencheurs, des types définis par l’utilisateur et des agrégats, consultez le «[débogage pour la base de données SQL Server CLR Integration](http://go.microsoft.com/fwlink/?LinkId=120378)« rubrique dans Visual Studio documentation.  
   
  Le protocole réseau TCP/IP doit être activé sur l'instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] afin d'utiliser Visual Studio pour le développement et le débogage distants. Pour plus d’informations sur l’activation du protocole TCP/IP sur le serveur, consultez [configurer des protocoles clients](../../database-engine/configure-windows/configure-client-protocols.md).  
   
@@ -56,7 +54,7 @@ ms.locfileid: "32928574"
   
 1.  Ouvrez Microsoft Visual Studio, créez un projet [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et établissez une connexion à une base de données sur une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-2.  Créez un type. Dans **l’Explorateur de solutions**, cliquez sur le projet, sélectionnez **ajouter** et **un nouvel élément...** À partir de la **ajouter un nouvel élément** fenêtre, sélectionnez **la procédure stockée**, **(fonction) définis par l’utilisateur**, **User-Defined Type**, **déclencheur**, **d’agrégation**, ou **classe**. Spécifiez un nom pour le fichier source du nouveau type, cliquez sur **ajouter**.  
+2.  Créez un type. Dans **l’Explorateur de solutions**, cliquez sur le projet, sélectionnez **ajouter** et **un nouvel élément...** À partir de la **ajouter un nouvel élément** fenêtre, sélectionnez **la procédure stockée**, **(fonction) définis par l’utilisateur**, **User-Defined Type**,  **Déclencheur**, **d’agrégation**, ou **classe**. Spécifiez un nom pour le fichier source du nouveau type, cliquez sur **ajouter**.  
   
 3.  Ajoutez le code du nouveau type à l'éditeur de texte. Pour obtenir le code d'un exemple de procédure stockée, consultez la section correspondante plus loin dans cette rubrique.  
   

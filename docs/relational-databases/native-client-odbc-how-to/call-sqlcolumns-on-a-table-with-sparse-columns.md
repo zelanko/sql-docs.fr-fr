@@ -4,24 +4,22 @@ ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: native-client-odbc-how-to
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
-ms.tgt_pltfrm: ''
+ms.technology: connectivit
+yms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: afd35e13-2370-43c2-9cbc-f8da6248c39c
-caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: ef97b45f003a8ca04e65423cc97866f0f166fce2
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 5bf36d7e67e3e116800038f03c3a1d98cd46460e
+ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32943934"
+ms.lasthandoff: 06/18/2018
+ms.locfileid: "35694770"
 ---
 # <a name="call-sqlcolumns-on-a-table-with-sparse-columns"></a>Appeler SQLColumns sur une table avec des colonnes éparses
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -34,7 +32,7 @@ ms.locfileid: "32943934"
  Pour plus d'informations sur les colonnes éparses, consultez [Sparse Columns Support in SQL Server Native Client](../../relational-databases/native-client/features/sparse-columns-support-in-sql-server-native-client.md).  
   
 ## <a name="example"></a>Exemple  
- La première liste correspond au code source C++. Remplacez « MyServer » par un nom du serveur valide. Assurez-vous que votre variable d'environnement INCLUDE inclut le répertoire qui contient sqlncli.h. Si vous générez et exécutez cet exemple comme une application 32 bits sur un système d'exploitation 64 bits, vous devez créer la source de données ODBC avec l'administrateur ODBC dans %windir%\SysWOW64\odbcad32.exe.  
+ La première liste correspond au code source C++. Remplacez « MyServer » par un nom du serveur valide. Assurez-vous que votre variable d'environnement INCLUDE inclut le répertoire qui contient sqlncli.h. Si vous générez et exécutez cet exemple comme une application 32 bits sur un système d'exploitation 64 bits, vous devez créer la source de données ODBC avec l'administrateur ODBC dans %windir%\SysWOW64\odbcad32.exe.  
   
  Cet exemple vous permet de vous connecter à l'instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] par défaut de votre ordinateur. Pour vous connecter à une instance nommée, modifiez la définition de la source de données ODBC pour spécifier l'instance en utilisant le format suivant : serveur\namedinstance. Par défaut, [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] est installé dans une instance nommée.  
   

@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: native-client-odbc-extensions-bulk-copy-functions
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: connectivity
 ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
@@ -24,12 +22,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: cbffca9e7a853be778c998562deeb6a51c72b94a
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 52d03c248e3fd7c3d41efb5abd5dd1b773aa6baa
+ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32946994"
+ms.lasthandoff: 06/18/2018
+ms.locfileid: "35697450"
 ---
 # <a name="bcpgetcolfmt"></a>bcp_getcolfmt
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -57,7 +55,7 @@ RETCODE bcp_getcolfmt (
  *field*  
  Numéro de colonne pour lequel la propriété est extraite.  
   
- *propriété*  
+ *property*  
  L'une des constantes de propriété.  
   
  *pValue*  
@@ -75,12 +73,12 @@ RETCODE bcp_getcolfmt (
 ## <a name="remarks"></a>Notes  
  Les valeurs de propriété de format de colonne sont répertoriées dans le [bcp_setcolfmt](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-setcolfmt.md) rubrique. Ces valeurs sont définies en appelant la fonction **bcp_setcolfmt** . La fonction **bcp_getcolfmt** est utilisée pour rechercher la valeur de la propriété de format de colonne.  
   
- Changements de comportement peuvent être observés lors de la connexion à un [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] (ou version ultérieure) ordinateur du serveur, par rapport aux versions [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] versions. Pour plus d'informations, consultez [Metadata Discovery](../../relational-databases/native-client/features/metadata-discovery.md).  
+ Changements de comportement peuvent être observés lors de la connexion à un [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] (ou version ultérieure) ordinateur du serveur, par rapport aux versions [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] versions. Pour plus d’informations, consultez [de découverte des métadonnées](../../relational-databases/native-client/features/metadata-discovery.md).  
   
 ## <a name="bcpgetcolfmt-support-for-enhanced-date-and-time-features"></a>Prise en charge  par bcp_getcolfmt des fonctionnalités de date et heure améliorées  
  Les types utilisés avec les **BCP_FMT_TYPE** sont de propriété pour les types date/heure comme spécifié dans [modifications de copie en bloc pour les Types améliorées de Date et heure &#40;OLE DB et ODBC&#41;](../../relational-databases/native-client-odbc-date-time/bulk-copy-changes-for-enhanced-date-and-time-types-ole-db-and-odbc.md).  
   
- Pour plus d’informations, consultez [Date et heure améliorations & #40 ; ODBC & #41 ;](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md).  
+ Pour plus d’informations, consultez [Date et heure améliorations &#40;ODBC&#41;](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md).  
   
 ## <a name="see-also"></a>Voir aussi  
  [Fonctions de copie en bloc](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/sql-server-driver-extensions-bulk-copy-functions.md)  

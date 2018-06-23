@@ -4,27 +4,25 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: native-client-odbc-date-time
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
+ms.technology: connectivity
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - date/time [ODBC]
 - ODBC, date/time improvements
 ms.assetid: e31d5ca5-2103-498f-954c-1ee93e217186
-caps.latest.revision: 27
 author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 75eb2438dabb3d304158e524e7413df35ae9a8fc
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.openlocfilehash: 2b0588d063e5f1de8ca496feeacde92c7a8e440d
+ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34707247"
+ms.lasthandoff: 06/18/2018
+ms.locfileid: "35702522"
 ---
 # <a name="date-and-time-improvements-odbc"></a>Date et heure améliorations (ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -51,7 +49,7 @@ ms.locfileid: "34707247"
  Décrit les améliorations des types date/time pour prendre en charge les opérations de copie en bloc.  
   
  [Comportement avec les Versions précédentes de SQL Server de Type améliorées de Date et d’heure &#40;ODBC&#41;](../../relational-databases/native-client-odbc-date-time/enhanced-date-and-time-type-behavior-with-previous-sql-server-versions-odbc.md)  
- Décrit le comportement attendu lorsqu’une application cliente à l’aide des fonctionnalités améliorées de date et heure communique avec une version antérieure de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]et lorsqu’un client compilé avec une version antérieure de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client envoie des commandes à un serveur qui prend en charge améliorées des fonctions de date et d’heure.  
+ Décrit le comportement attendu lorsqu’une application cliente à l’aide des fonctionnalités améliorées de date et heure communique avec une version antérieure de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]et lorsqu’un client compilé avec une version antérieure de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client envoie des commandes à un serveur qui prend en charge améliorée des fonctionnalités de date et d’heure.  
   
  [Prise en charge des fonctionnalités de date et heure améliorées par l’API ODBC](../../relational-databases/native-client-odbc-date-time/odbc-api-support-for-enhanced-date-and-time-features.md)  
  Répertorie les fonctions ODBC qui prennent en charge les fonctionnalités de date et heure améliorées.  

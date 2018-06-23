@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: native-client-odbc-api
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: ''
@@ -19,11 +18,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 6419788b83a20dbfd1037be01723be23f1d277a0
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 117c8afa4b8dc406067105013b1c45282f905e23
+ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/18/2018
+ms.locfileid: "35696600"
 ---
 # <a name="sqldriverconnect"></a>SQLDriverConnect
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -45,9 +45,9 @@ ms.lasthandoff: 05/03/2018
   
  Lorsque SQL_DRIVER_NOPROMPT est spécifié, les mots clés d'authentification utilisateur doivent être fournis avec des valeurs. Le pilote garantit que la chaîne « Trusted_Connection=yes » ou les mots clés UID et PWD à la fois sont disponibles.  
   
- Si le *DriverCompletion* la valeur du paramètre est SQL_DRIVER_NOPROMPT ou SQL_DRIVER_COMPLETE_REQUIRED et la langue ou la base de données provient de la chaîne de connexion et n’est pas valide, **SQLDriverConnect** retourne SQL_ERROR.  
+ Si le *DriverCompletion* la valeur du paramètre est SQL_DRIVER_NOPROMPT ou SQL_DRIVER_COMPLETE_REQUIRED et la langue ou la base de données provient de la chaîne de connexion et n’est pas valide, **SQLDriverConnect**retourne SQL_ERROR.  
   
- Si le *DriverCompletion* la valeur du paramètre est SQL_DRIVER_NOPROMPT ou SQL_DRIVER_COMPLETE_REQUIRED et la langue ou la base de données est fourni à partir des définitions de source de données ODBC et n’est pas valide, **SQLDriverConnect** utilise la langue par défaut ou la base de données pour l’ID d’utilisateur spécifié et retourne SQL_SUCCESS_WITH_INFO.  
+ Si le *DriverCompletion* la valeur du paramètre est SQL_DRIVER_NOPROMPT ou SQL_DRIVER_COMPLETE_REQUIRED et la langue ou la base de données est fourni à partir des définitions de source de données ODBC et n’est pas valide, **SQLDriverConnect**  utilise la langue par défaut ou la base de données pour l’ID d’utilisateur spécifié et retourne SQL_SUCCESS_WITH_INFO.  
   
  Si le *DriverCompletion* la valeur du paramètre est SQL_DRIVER_COMPLETE ou SQL_DRIVER_PROMPT et si la langue ou la base de données est non valide, **SQLDriverConnect** réaffiche la boîte de dialogue.  
   
@@ -57,13 +57,13 @@ ms.lasthandoff: 05/03/2018
 ## <a name="sqldriverconnect-support-for-service-principal-names-spns"></a>Prise en charge de SQLDriverConnect pour les noms de principaux du service (SPN)  
  SQLDDriverConnect utilise la connexion ODBC dès de boîte de dialogue invite est activée. Celle-ci vous permet d'entrer des SPN à la fois pour le serveur principal et pour le partenaire de basculement.  
   
- SQLDriverConnect acceptera les nouveaux mots clés de chaîne de connexion **ServerSPN** et **FailoverPartnerSPN**et reconnaît les nouveaux attributs de connexion SQL_COPT_SS_SERVER_SPN et SQL_COPT_SS_FAILOVER_PARTNER_SPN.  
+ SQLDriverConnect acceptera les nouveaux mots clés de chaîne de connexion **ServerSPN** et **FailoverPartnerSPN**et reconnaît les nouveaux attributs de connexion SQL_COPT_SS_SERVER_SPN et SQL_COPT_SS_ FAILOVER_PARTNER_SPN.  
   
  Lorsqu'une valeur d'attribut de connexion est définie plus d'une fois, toute valeur définie par programme à priorité sur la valeur d'un DSN et sur toute valeur dans une chaîne de connexion. Une valeur dans un DSN est prioritaire par rapport à une valeur dans une chaîne de connexion.  
   
  Lors de l'ouverture d'une connexion, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client définit SQL_COPT_SS_MUTUALLY_AUTHENTICATED et SQL_COPT_SS_INTEGRATED_AUTHENTICATION_METHOD sur la méthode d'authentification employée pour ouvrir la connexion.  
   
- Pour plus d’informations sur les SPN, consultez [noms principaux de Service & #40 ; Noms principaux de service & #41 ; dans les connexions clientes & #40 ; ODBC & #41 ; ](../../relational-databases/native-client/odbc/service-principal-names-spns-in-client-connections-odbc.md).  
+ Pour plus d’informations sur les SPN, consultez [noms principaux de Service &#40;SPN&#41; dans les connexions clientes &#40;ODBC&#41;](../../relational-databases/native-client/odbc/service-principal-names-spns-in-client-connections-odbc.md).  
   
 ## <a name="examples"></a>Exemples  
  L’appel suivant illustre le moins de données requises pour **SQLDriverConnect**:  

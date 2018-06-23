@@ -4,10 +4,9 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: native-client-odbc-queries
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
+ms.technology: connectivity
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -21,17 +20,16 @@ helpviewer_keywords:
 - ODBC applications, parameters
 - bound parameter markers [SQL Server Native Client]
 ms.assetid: d6c69739-8f89-475f-a60a-b2f6c06576e2
-caps.latest.revision: 31
 author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 6d51c8cb13a4a8bd2e9cc14e8208c6d9e0e0084f
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 1cba782e4bea322fdba6c06fc81ae2aa87e94a1a
+ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32946004"
+ms.lasthandoff: 06/18/2018
+ms.locfileid: "35699600"
 ---
 # <a name="using-statement-parameters---binding-parameters"></a>À l’aide des paramètres d’instruction - paramètres de liaison
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -53,7 +51,7 @@ ms.locfileid: "32946004"
   
 -   Une liaison selon les lignes est effectuée lorsque tous les paramètres dans l'instruction SQL sont liés en tant qu'unité à un tableau de structures qui contiennent les variables individuelles pour les paramètres.  
   
-     La liaison est spécifiée en appelant **SQLSetStmtAttr** avec *attribut* ayant pour valeur SQL_ATTR_PARAM_BIND_TYPE et *ValuePtr* défini avec la taille de la structure contenant les variables de programme.  
+     La liaison est spécifiée en appelant **SQLSetStmtAttr** avec *attribut* ayant pour valeur SQL_ATTR_PARAM_BIND_TYPE et *ValuePtr* défini avec la taille de l’exploitation de la structure du variables de programme.  
   
  Lorsque le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pilote ODBC Native Client envoie des caractères ou des paramètres de chaîne binaire au serveur, il remplit les valeurs à la longueur spécifiée dans **SQLBindParameter** *ColumnSize* paramètre. Si une application ODBC 2.x spécifie 0 pour *ColumnSize*, le pilote remplit la valeur du paramètre à la précision du type de données. La précision est 8000 lors d'une connexion à des serveurs [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], 255 lors d'une connexion à des versions antérieures de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. *ColumnSize* est exprimée en octets pour les colonnes de type variant.  
   
@@ -65,7 +63,7 @@ ms.locfileid: "32946004"
   
  Les paramètres nommés sont uniquement prises en charge avec la [!INCLUDE[tsql](../../includes/tsql-md.md)] **EXECUTE** instruction ou la séquence d’échappement ODBC CALL pour exécuter une procédure stockée.  
   
- Si **SQL_DESC_NAME** est définie pour un paramètre de procédure stockée, tous les paramètres de procédure stockée dans la requête doivent également définir **SQL_DESC_NAME**.  Si des littéraux sont utilisés dans les appels de procédure stockée, où les paramètres ont **SQL_DESC_NAME** ensemble, les littéraux doivent utiliser le format *' nom*=*valeur*», où *nom* est le nom de paramètre de procédure stockée (par exemple, @p1). Pour plus d’informations, consultez [Binding Parameters by Name (Named Parameters)](http://go.microsoft.com/fwlink/?LinkId=167215).  
+ Si **SQL_DESC_NAME** est définie pour un paramètre de procédure stockée, tous les paramètres de procédure stockée dans la requête doivent également définir **SQL_DESC_NAME**.  Si des littéraux sont utilisés dans les appels de procédure stockée, où les paramètres ont **SQL_DESC_NAME** ensemble, les littéraux doivent utiliser le format *' nom*=*valeur*', où *nom* est le nom de paramètre de procédure stockée (par exemple, @p1). Pour plus d’informations, consultez [Binding Parameters by Name (Named Parameters)](http://go.microsoft.com/fwlink/?LinkId=167215).  
   
 ## <a name="see-also"></a>Voir aussi  
  [Utilisation de paramètres d’instruction](../../relational-databases/native-client-odbc-queries/using-statement-parameters.md)  

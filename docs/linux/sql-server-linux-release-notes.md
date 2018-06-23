@@ -4,7 +4,7 @@ description: Cette rubrique contient les notes de publication et les fonctionnal
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 05/24/2018
+ms.date: 06/20/2018
 ms.topic: article
 ms.prod: sql
 ms.component: ''
@@ -12,12 +12,12 @@ ms.suite: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: 1314744f-fcaf-46db-800e-2918fa7e1b6c
-ms.openlocfilehash: f853cb623bee0fcd27d5cc7e6203610ed1603335
-ms.sourcegitcommit: 354ed9c8fac7014adb0d752518a91d8c86cdce81
+ms.openlocfilehash: 4762570a478ca6ba6dcaab5e0f7b3e2984f849cf
+ms.sourcegitcommit: 8c040e5b4e8c7d37ca295679410770a1af4d2e1f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/14/2018
-ms.locfileid: "35611974"
+ms.lasthandoff: 06/21/2018
+ms.locfileid: "36312207"
 ---
 # <a name="release-notes-for-sql-server-2017-on-linux"></a>Notes de publication pour 2017 de SQL Server sur Linux
 
@@ -47,6 +47,7 @@ Le tableau suivant répertorie l’historique de publication pour SQL Server 201
 
 | Version | Version | Date de publication |
 |-----|-----|-----|
+| [CU8](#CU8) | 14.0.3029.16 | 6-2018 |
 | [CU7](#CU7) | 14.0.3026.27 | 5-2018 |
 | [CU6](#CU6) | 14.0.3025.34 | 4-2018 |
 | [CU5](#CU5) | 14.0.3023.8 | 3-2018 |
@@ -67,6 +68,20 @@ Si vous mettez à jour des packages SQL Server existants, exécutez la commande 
 - [Installer SQL Server Integration Services](sql-server-linux-setup-ssis.md)
 - [Activer l’Agent SQL Server](sql-server-linux-setup-sql-agent.md)
 
+## <a id="CU8"></a> CU8 (mai 2018)
+
+Il s’agit de la version de mise à jour Cumulative, 8 (CU8) de SQL Server 2017. La version du moteur SQL Server pour cette version est 14.0.3029.16. Pour plus d’informations sur les correctifs et les améliorations apportées dans cette version, consultez [ https://support.microsoft.com/en-us/help/4229789 ](https://support.microsoft.com/en-us/help/4229789).
+
+### <a name="package-details"></a>Détails du package
+
+Pour les installations de package manuelle ou hors connexion, vous pouvez télécharger les packages RPM et Debian avec les informations contenues dans le tableau suivant :
+
+| Package | Version du package | Téléchargements |
+|-----|-----|-----|
+| Rpm de Red Hat | 14.0.3029.16-1 | [Moteur le package RPM](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-14.0.3029.16-1.x86_64.rpm)</br>[Rpm de disponibilité élevée](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-ha-14.0.3029.16-1.x86_64.rpm)</br>[Rpm de recherche en texte intégral](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-fts-14.0.3029.16-1.x86_64.rpm)</br>[Package SSIS](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-is-14.0.1000.169-1.x86_64.rpm) | 
+| Package RPM de SLES | 14.0.3029.16-1 | [package RPM du moteur de serveur MSSQL](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-14.0.3029.16-1.x86_64.rpm)</br>[Rpm de disponibilité élevée](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-ha-14.0.3029.16-1.x86_64.rpm)</br>[Rpm de recherche en texte intégral](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-fts-14.0.3029.16-1.x86_64.rpm) | 
+| Package de Debian Ubuntu 16.04 | 14.0.3029.16-1 | [Package Debian moteur](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server/mssql-server_14.0.3029.16-1_amd64.deb)</br>[Package de Debian haute disponibilité](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-ha/mssql-server-ha_14.0.3029.16-1_amd64.deb)</br>[Package Debian de recherche en texte intégral](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-fts/mssql-server-fts_14.0.3029.16-1_amd64.deb)<br/>[Package SSIS](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-is/mssql-server-is_14.0.1000.169-1_amd64.deb) |
+
 ## <a id="CU7"></a> CU7 (mai 2018)
 
 Il s’agit de la version 7 de mise à jour Cumulative (CU7) de SQL Server 2017. La version du moteur SQL Server pour cette version est 14.0.3026.27. Pour plus d’informations sur les correctifs et les améliorations apportées dans cette version, consultez [ https://support.microsoft.com/en-us/help/4229789 ](https://support.microsoft.com/en-us/help/4229789).
@@ -75,7 +90,7 @@ Il s’agit de la version 7 de mise à jour Cumulative (CU7) de SQL Server 2017.
 
 Pour les installations de package manuelle ou hors connexion, vous pouvez télécharger les packages RPM et Debian avec les informations contenues dans le tableau suivant :
 
-| Package | version du package | Téléchargements |
+| Package | Version du package | Téléchargements |
 |-----|-----|-----|
 | Rpm de Red Hat | 14.0.3026.27-2 | [Moteur le package RPM](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-14.0.3026.27-2.x86_64.rpm)</br>[Rpm de disponibilité élevée](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-ha-14.0.3026.27-2.x86_64.rpm)</br>[Rpm de recherche en texte intégral](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-fts-14.0.3026.27-2.x86_64.rpm)</br>[Package SSIS](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-is-14.0.1000.169-1.x86_64.rpm) | 
 | Package RPM de SLES | 14.0.3026.27-2 | [package RPM du moteur de serveur MSSQL](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-14.0.3026.27-2.x86_64.rpm)</br>[Rpm de disponibilité élevée](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-ha-14.0.3026.27-2.x86_64.rpm)</br>[Rpm de recherche en texte intégral](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-fts-14.0.3026.27-2.x86_64.rpm) | 
@@ -89,7 +104,7 @@ Il s’agit de la version 6 de mise à jour Cumulative (CU6) de SQL Server 2017.
 
 Pour les installations de package manuelle ou hors connexion, vous pouvez télécharger les packages RPM et Debian avec les informations contenues dans le tableau suivant :
 
-| Package | version du package | Téléchargements |
+| Package | Version du package | Téléchargements |
 |-----|-----|-----|
 | Rpm de Red Hat | 14.0.3025.34-3 | [Moteur le package RPM](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-14.0.3025.34-3.x86_64.rpm)</br>[Rpm de disponibilité élevée](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-ha-14.0.3025.34-3.x86_64.rpm)</br>[Rpm de recherche en texte intégral](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-fts-14.0.3025.34-3.x86_64.rpm)</br>[Package SSIS](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-is-14.0.1000.169-1.x86_64.rpm) | 
 | Package RPM de SLES | 14.0.3025.34-3 | [package RPM du moteur de serveur MSSQL](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-14.0.3025.34-3.x86_64.rpm)</br>[Rpm de disponibilité élevée](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-ha-14.0.3025.34-3.x86_64.rpm)</br>[Rpm de recherche en texte intégral](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-fts-14.0.3025.34-3.x86_64.rpm) | 
@@ -121,7 +136,7 @@ sudo systemctl start mssql-server
 
 Pour les installations de package manuelle ou hors connexion, vous pouvez télécharger les packages RPM et Debian avec les informations contenues dans le tableau suivant :
 
-| Package | version du package | Téléchargements |
+| Package | Version du package | Téléchargements |
 |-----|-----|-----|
 | Rpm de Red Hat | 14.0.3023.8-5 | [Moteur le package RPM](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-14.0.3023.8-5.x86_64.rpm)</br>[Rpm de disponibilité élevée](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-ha-14.0.3023.8-5.x86_64.rpm)</br>[Rpm de recherche en texte intégral](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-fts-14.0.3023.8-5.x86_64.rpm)</br>[Package SSIS](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-is-14.0.1000.169-1.x86_64.rpm) | 
 | Package RPM de SLES | 14.0.3023.8-5 | [package RPM du moteur de serveur MSSQL](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-14.0.3023.8-5.x86_64.rpm)</br>[Rpm de disponibilité élevée](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-ha-14.0.3023.8-5.x86_64.rpm)</br>[Rpm de recherche en texte intégral](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-fts-14.0.3023.8-5.x86_64.rpm) | 
@@ -138,7 +153,7 @@ Pour les installations de package manuelle ou hors connexion, vous pouvez télé
 > [!NOTE]
 > À compter de CU4, l’Agent SQL Server n’est plus installé comme un lot distinct. Il est installé avec le package de moteur et doit être activé pour utiliser.
 
-| Package | version du package | Téléchargements |
+| Package | Version du package | Téléchargements |
 |-----|-----|-----|
 | Rpm de Red Hat | 14.0.3022.28-2 | [Moteur le package RPM](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-14.0.3022.28-2.x86_64.rpm)</br>[Rpm de disponibilité élevée](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-ha-14.0.3022.28-2.x86_64.rpm)</br>[Rpm de recherche en texte intégral](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-fts-14.0.3022.28-2.x86_64.rpm)</br>[Package SSIS](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-is-14.0.1000.169-1.x86_64.rpm) | 
 | Package RPM de SLES | 14.0.3022.28-2 | [package RPM du moteur de serveur MSSQL](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-14.0.3022.28-2.x86_64.rpm)</br>[Rpm de disponibilité élevée](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-ha-14.0.3022.28-2.x86_64.rpm)</br>[Rpm de recherche en texte intégral](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-fts-14.0.3022.28-2.x86_64.rpm) | 
@@ -152,7 +167,7 @@ Il s’agit de la version à jour Cumulative 3 (CU3) de SQL Server 2017. La vers
 
 Pour les installations de package manuelle ou hors connexion, vous pouvez télécharger les packages RPM et Debian avec les informations contenues dans le tableau suivant :
 
-| Package | version du package | Téléchargements |
+| Package | Version du package | Téléchargements |
 |-----|-----|-----|
 | Rpm de Red Hat | 14.0.3015.40-1 | [Moteur le package RPM](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-14.0.3015.40-1.x86_64.rpm)</br>[Rpm de disponibilité élevée](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-ha-14.0.3015.40-1.x86_64.rpm)</br>[Rpm de recherche en texte intégral](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-fts-14.0.3015.40-1.x86_64.rpm)</br>[Package de SQL Server Agent RPM](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-agent-14.0.3015.40-1.x86_64.rpm)</br>[Package SSIS](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-is-14.0.1000.169-1.x86_64.rpm) | 
 | Package RPM de SLES | 14.0.3015.40-1 | [package RPM du moteur de serveur MSSQL](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-14.0.3015.40-1.x86_64.rpm)</br>[Rpm de disponibilité élevée](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-ha-14.0.3015.40-1.x86_64.rpm)</br>[Rpm de recherche en texte intégral](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-fts-14.0.3015.40-1.x86_64.rpm)</br>[Package de SQL Server Agent RPM](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-agent-14.0.3015.40-1.x86_64.rpm) | 
@@ -166,7 +181,7 @@ Il s’agit de la version de Cumulative Update 2 (CU2) de SQL Server 2017. La ve
 
 Pour les installations de package manuelle ou hors connexion, vous pouvez télécharger les packages RPM et Debian avec les informations contenues dans le tableau suivant :
 
-| Package | version du package | Téléchargements |
+| Package | Version du package | Téléchargements |
 |-----|-----|-----|
 | Rpm de Red Hat | 14.0.3008.27-1 | [Moteur le package RPM](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-14.0.3008.27-1.x86_64.rpm)</br>[Rpm de disponibilité élevée](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-ha-14.0.3008.27-1.x86_64.rpm)</br>[Rpm de recherche en texte intégral](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-fts-14.0.3008.27-1.x86_64.rpm)</br>[Package de SQL Server Agent RPM](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-agent-14.0.3008.27-1.x86_64.rpm)</br>[Package SSIS](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-is-14.0.1000.169-1.x86_64.rpm) | 
 | Package RPM de SLES | 14.0.3008.27-1 | [package RPM du moteur de serveur MSSQL](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-14.0.3008.27-1.x86_64.rpm)</br>[Rpm de disponibilité élevée](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-ha-14.0.3008.27-1.x86_64.rpm)</br>[Rpm de recherche en texte intégral](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-fts-14.0.3008.27-1.x86_64.rpm)</br>[Package de SQL Server Agent RPM](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-agent-14.0.3008.27-1.x86_64.rpm) | 
@@ -180,7 +195,7 @@ Il s’agit de la version à jour Cumulative 1 (CU1) de SQL Server 2017. La vers
 
 Pour les installations de package manuelle ou hors connexion, vous pouvez télécharger les packages RPM et Debian avec les informations contenues dans le tableau suivant :
 
-| Package | version du package | Téléchargements |
+| Package | Version du package | Téléchargements |
 |-----|-----|-----|
 | Rpm de Red Hat | 14.0.3006.16-3 | [Moteur le package RPM](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-14.0.3006.16-3.x86_64.rpm)</br>[Rpm de disponibilité élevée](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-ha-14.0.3006.16-3.x86_64.rpm)</br>[Rpm de recherche en texte intégral](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-fts-14.0.3006.16-3.x86_64.rpm)</br>[Package de SQL Server Agent RPM](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-agent-14.0.3006.16-3.x86_64.rpm)</br>[Package SSIS](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-is-14.0.1000.169-1.x86_64.rpm) | 
 | Package RPM de SLES | 14.0.3006.16-3 | [package RPM du moteur de serveur MSSQL](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-14.0.3006.16-3.x86_64.rpm)</br>[Rpm de disponibilité élevée](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-ha-14.0.3006.16-3.x86_64.rpm)</br>[Rpm de recherche en texte intégral](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-fts-14.0.3006.16-3.x86_64.rpm)</br>[Package de SQL Server Agent RPM](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-agent-14.0.3006.16-3.x86_64.rpm) | 
@@ -199,7 +214,7 @@ Détails du package et les emplacements de téléchargement pour les packages RP
 - [Installer le package de l’Agent SQL Server](sql-server-linux-setup-sql-agent.md)
 - [Installer SQL Server Integration Services](sql-server-linux-setup-ssis.md)
 
-| Package | version du package | Téléchargements |
+| Package | Version du package | Téléchargements |
 |-----|-----|-----|
 | Rpm de Red Hat | 14.0.1000.169-2 | [Moteur le package RPM](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-14.0.1000.169-2.x86_64.rpm)</br>[Rpm de disponibilité élevée](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-ha-14.0.1000.169-2.x86_64.rpm)</br>[Rpm de recherche en texte intégral](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-fts-14.0.1000.169-2.x86_64.rpm)</br>[Package de SQL Server Agent RPM](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-agent-14.0.1000.169-2.x86_64.rpm)</br>[Package SSIS](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-is-14.0.1000.169-1.x86_64.rpm) | 
 | Package RPM de SLES | 14.0.1000.169-2 | [package RPM du moteur de serveur MSSQL](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-14.0.1000.169-2.x86_64.rpm)</br>[Rpm de disponibilité élevée](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-ha-14.0.1000.169-2.x86_64.rpm)</br>[Rpm de recherche en texte intégral](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-fts-14.0.1000.169-2.x86_64.rpm)</br>[Package de SQL Server Agent RPM](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-agent-14.0.1000.169-2.x86_64.rpm) | 
@@ -211,7 +226,7 @@ Les fonctionnalités et les services suivants ne sont pas disponibles sur Linux 
 
 | Domaine | Fonctionnalité non prise en charge ou un service |
 |-----|-----|
-| **Moteur de base de données** | Réplication transactionnelle |
+| **moteur de base de données** | Réplication transactionnelle |
 | &nbsp; | Réplication de fusion |
 | &nbsp; | Étendre la base de données |
 | &nbsp; | PolyBase |

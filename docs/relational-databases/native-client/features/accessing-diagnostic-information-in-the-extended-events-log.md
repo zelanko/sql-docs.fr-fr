@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: native-client|features
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: ''
@@ -16,18 +15,18 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: a2bb7d23b9bda6b3346c1b08befb39c9ceebc338
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: f24908688882e78f49a4b1b205a296988a6a610b
+ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32951174"
+ms.lasthandoff: 06/18/2018
+ms.locfileid: "35697532"
 ---
 # <a name="accessing-diagnostic-information-in-the-extended-events-log"></a>Accès aux informations de diagnostic dans le journal des événements étendus
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[SNAC_Deprecated](../../../includes/snac-deprecated.md)]
 
-  À compter de [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)], [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client et les données de suivi d’accès ([suivi d’accès aux données](http://go.microsoft.com/fwlink/?LinkId=125805)) ont été mis à jour pour le rendre plus facile d’obtenir des informations de diagnostic sur les échecs de connexion à partir de l’anneau mémoire tampon et l’application performances informations de connectivité à partir du journal des événements étendus.  
+  À compter de [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)], [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client et les données de suivi d’accès ([suivi d’accès aux données](http://go.microsoft.com/fwlink/?LinkId=125805)) ont été mis à jour pour le rendre plus facile d’obtenir des informations de diagnostic sur les échecs de connexion à partir de l’anneau de connectivité informations de performances mémoire tampon et d’applications à partir du journal des événements étendus.  
   
  Pour plus d’informations sur la lecture du journal des événements étendus, consultez [afficher les données de Session événements](http://msdn.microsoft.com/library/ac742a01-2a95-42c7-b65e-ad565020dc49).  
   

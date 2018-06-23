@@ -4,10 +4,9 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: native-client-odbc-queries
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
+ms.technology: connectivity
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -18,16 +17,16 @@ helpviewer_keywords:
 - SQLExecute function
 - statements [ODBC], prepared execution
 ms.assetid: f3a9d32b-6cd7-4f0c-b38d-c8ccc4ee40c3
-caps.latest.revision: 35
 author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: ea7feff8896d3fc8e29ff385e69b2ef021f6f2c1
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 8ae1bfdadd360b41f451d7b0e7840af9e3f6ff94
+ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/18/2018
+ms.locfileid: "35696900"
 ---
 # <a name="prepared-execution"></a>Exécution préparée
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -37,11 +36,11 @@ ms.lasthandoff: 05/03/2018
   
  Avec la plupart des bases de données, l'exécution préparée est plus rapide que l'exécution directe pour les instructions qui sont exécutées plus de trois ou quatre fois principalement du fait que l'instruction est compilée une seule fois, alors que les instructions exécutées directement sont compilées chaque fois qu'elles sont exécutées. L'exécution préparée peut également permettre de réduire le trafic réseau car le pilote peut envoyer un identificateur de plan d'exécution et les valeurs de paramètre, plutôt qu'une instruction SQL entière, à la source de données chaque fois que l'instruction est exécutée.  
   
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]réduit la différence de performances entre les exécutions directe et préparée par le biais des algorithmes améliorés pour détecter et de réutiliser des plans d’exécution de **SQLExecDirect**. Les avantages de l'exécution préparée en termes de performances s'étendent ainsi dans une certaine mesure aux instructions exécutées directement. Pour plus d’informations, consultez [l’exécution directe](../../../relational-databases/native-client-odbc-queries/executing-statements/direct-execution.md).  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] réduit la différence de performances entre les exécutions directe et préparée par le biais des algorithmes améliorés pour détecter et de réutiliser des plans d’exécution de **SQLExecDirect**. Les avantages de l'exécution préparée en termes de performances s'étendent ainsi dans une certaine mesure aux instructions exécutées directement. Pour plus d’informations, consultez [l’exécution directe](../../../relational-databases/native-client-odbc-queries/executing-statements/direct-execution.md).  
   
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] proposent également la prise en charge native de l'exécution préparée. Un plan d’exécution repose sur **SQLPrepare** puis exécuté lorsque **SQLExecute** est appelée. Étant donné que [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] n’est pas requis pour générer des procédures stockées temporaires sur **SQLPrepare**, il n’existe aucune charge supplémentaire sur les tables système dans **tempdb**.  
   
- Pour des raisons de performances, la préparation de l’instruction est différée jusqu'à ce que **SQLExecute** est appelée ou une opération de métapropriété (tel que [SQLDescribeCol](../../../relational-databases/native-client-odbc-api/sqldescribecol.md) ou [SQLDescribeParam](../../../relational-databases/native-client-odbc-api/sqldescribeparam.md) dans ODBC) est effectuée. Il s'agit du comportement par défaut. Toute erreur dans l'instruction en cours de préparée reste inconnue tant que l'instruction n'a pas été exécutée ou qu'une opération de métapropriété n'a pas été effectuée. La définition de l'attribut SQL_SOPT_SS_DEFER_PREPARE de l'instruction spécifique au pilote ODBC  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]  Native Client sur  SQL_DP_OFF peut désactiver ce comportement par défaut.  
+ Pour des raisons de performances, la préparation de l’instruction est différée jusqu'à ce que **SQLExecute** est appelée ou une opération de métapropriété (tel que [SQLDescribeCol](../../../relational-databases/native-client-odbc-api/sqldescribecol.md) ou [SQLDescribeParam](../../../relational-databases/native-client-odbc-api/sqldescribeparam.md)dans ODBC) est effectuée. Il s'agit du comportement par défaut. Toute erreur dans l'instruction en cours de préparée reste inconnue tant que l'instruction n'a pas été exécutée ou qu'une opération de métapropriété n'a pas été effectuée. La définition de l'attribut SQL_SOPT_SS_DEFER_PREPARE de l'instruction spécifique au pilote ODBC  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]  Native Client sur  SQL_DP_OFF peut désactiver ce comportement par défaut.  
   
  Dans le cas de différée préparer, appelant **SQLDescribeCol** ou **SQLDescribeParam** avant d’appeler **SQLExecute** génère un aller-retour supplémentaire vers le serveur. Sur **SQLDescribeCol**, le pilote supprime la clause WHERE de la requête et l’envoie au serveur avec SET FMTONLY ON pour obtenir la description des colonnes dans le premier jeu de résultats retourné par la requête. Sur **SQLDescribeParam**, le pilote appelle le serveur pour obtenir une description des expressions ou des colonnes référencées par les marqueurs de paramètre dans la requête. Cette méthode présente également certaines restrictions, comme le fait qu'elle ne permette pas de résoudre les paramètres dans les sous-requêtes.  
   
@@ -52,6 +51,6 @@ ms.lasthandoff: 05/03/2018
  Certaines anciennes applications ODBC utilisées **SQLPrepare** tout moment [SQLBindParameter](../../../relational-databases/native-client-odbc-api/sqlbindparameter.md) a été utilisée. **SQLBindParameter** ne nécessite pas l’utilisation de **SQLPrepare**, il peut être utilisé avec **SQLExecDirect**. Par exemple, utilisez **SQLExecDirect** avec **SQLBindParameter** pour récupérer le code de retour ou paramètres à partir d’une procédure stockée est exécutée qu’une seule fois de sortie. N’utilisez pas **SQLPrepare** avec **SQLBindParameter** , sauf si l’instruction même doit être exécutée plusieurs fois.  
   
 ## <a name="see-also"></a>Voir aussi  
- [L’exécution d’instructions & #40 ; ODBC & #41 ;](../../../relational-databases/native-client-odbc-queries/executing-statements/executing-statements-odbc.md)  
+ [L’exécution d’instructions &#40;ODBC&#41;](../../../relational-databases/native-client-odbc-queries/executing-statements/executing-statements-odbc.md)  
   
   

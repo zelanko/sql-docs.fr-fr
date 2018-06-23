@@ -4,26 +4,24 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: native-client-odbc-table-valued-parameters
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
+ms.technology: connectivity
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - table-valued parameters (ODBC), cross-version compatibility
 ms.assetid: 5f14850b-b85c-41e2-8116-6f5b3f5e0856
-caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 8da04e9ed25808b83c5c63bcb6906770dd1e53cc
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: e124885ed8acb240a004d255c6d5b1f49ee30bf3
+ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32948574"
+ms.lasthandoff: 06/18/2018
+ms.locfileid: "35697500"
 ---
 # <a name="cross-version-compatibility"></a>Compatibilité des versions
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -35,7 +33,7 @@ ms.locfileid: "32948574"
   
  Si une application cliente compilée avec une version antérieure de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client exécute des instructions qui attendent des paramètres table, le serveur détecte cette situation via une erreur de conversion de données, et ODBC retourne celle-ci comme SQLSTATE 07006, avec le message « Violation de l'attribut de type de données restreint ».  
   
- Si une application cliente qui a été compilée avec [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 10.0 ou version ultérieure tente d’utiliser des paramètres table lorsqu’il est connecté à une instance de serveur antérieure à [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client détecte et SQLBindCol, SQLBindParameter, SQLSetDescFields et SQLSetDescRec appels échouent avec SQLSTATE 07006 et le message « Restricted violation d’attribut de type de données (la version de SQL Server pour cette connexion ne prend pas en charge les paramètres table) ».  
+ Si une application cliente qui a été compilée avec [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 10.0 ou version ultérieure tente d’utiliser des paramètres table lorsqu’il est connecté à une instance de serveur antérieure à [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client détecte et SQLBindCol, Appels SQLBindParameter, SQLSetDescFields et SQLSetDescRec échoue avec SQLSTATE 07006 et le message « Restricted violation d’attribut de type de données (la version de SQL Server pour cette connexion ne prend pas en charge les paramètres table) ».  
   
 ## <a name="see-also"></a>Voir aussi  
  [Paramètres table &#40;ODBC&#41;](../../relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md)  

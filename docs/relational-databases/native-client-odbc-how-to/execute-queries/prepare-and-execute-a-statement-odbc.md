@@ -4,26 +4,25 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: native-client-odbc-how-to
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
+ms.technology: connectivity
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - statement execution
 - statement preparation
 ms.assetid: 0adecc63-4da5-486c-bc48-09a004a2fae6
-caps.latest.revision: 21
 author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: cfd8780e6d4fe804a6a124870c06e43bec752463
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: a6d78ab8bbd48035795f8860cb02a20e83780289
+ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/18/2018
+ms.locfileid: "35701420"
 ---
 # <a name="prepare-and-execute-a-statement-odbc"></a>Préparer et exécuter une instruction (ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -38,9 +37,9 @@ ms.lasthandoff: 05/03/2018
   
 3.  Éventuellement, pour chaque paramètre dans l'instruction préparée :  
   
-    -   Appelez [SQLDescribeParam](../../../relational-databases/native-client-odbc-api/sqldescribeparam.md) pour obtenir des informations sur les paramètres.  
+    -   Appelez [SQLDescribeParam](../../../relational-databases/native-client-odbc-api/sqldescribeparam.md) pour obtenir des informations de paramètre.  
   
-    -   Liez chaque paramètre à une variable de programme à l'aide de [SQLBindParameter](../../../relational-databases/native-client-odbc-api/sqlbindparameter.md). Configurez tous les paramètres de données en cours d'exécution.  
+    -   Liez chaque paramètre à une variable de programme à l’aide de [SQLBindParameter](../../../relational-databases/native-client-odbc-api/sqlbindparameter.md). Configurez tous les paramètres de données en cours d'exécution.  
   
 4.  Pour chaque exécution d'une instruction préparée :  
   
@@ -119,6 +118,6 @@ ms.lasthandoff: 05/03/2018
     -   Si les paramètres d’entrée à l’exécution sont utilisés, SQLExecDirect renvoie SQL_NEED_DATA. Envoyer les données dans des segments à l’aide de SQLParamData et SQLPutData.  
   
 ## <a name="see-also"></a>Voir aussi  
- [L’exécution de rubriques de procédures de requêtes & #40 ; ODBC & #41 ;](../../../relational-databases/native-client-odbc-how-to/execute-queries/executing-queries-how-to-topics-odbc.md)  
+ [Rubriques de procédures relatives à l’exécution de requêtes &#40;ODBC&#41;](../../../relational-databases/native-client-odbc-how-to/execute-queries/executing-queries-how-to-topics-odbc.md)  
   
   
