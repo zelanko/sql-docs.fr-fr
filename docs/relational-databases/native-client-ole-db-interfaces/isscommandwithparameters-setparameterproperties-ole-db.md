@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: native-client-ole-db-interfaces
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: connectivity
 ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
@@ -22,12 +20,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: dbd38ed336375cef79119f2fafb565bceeeb85bd
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 10b24720130c720a3b53fb879068a37abf2570f6
+ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32949164"
+ms.lasthandoff: 06/18/2018
+ms.locfileid: "35699560"
 ---
 # <a name="isscommandwithparameterssetparameterproperties-ole-db"></a>ISSCommandWithParameters::SetParameterProperties (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -59,13 +57,13 @@ HRESULT SetParameterProperties(
   
  Le **SetParameterInfo** méthode doit être appelée avant d’appeler le **ISSCommandWithParameters::SetParameterProperties** (méthode). Le fait d'appeler `SetParameterProperties(0, NULL)` efface toutes les propriétés de paramètre spécifiées, tandis que l'appel de `SetParameterInfo(0,NULL,NULL)` efface toutes les informations sur les paramètres y compris toutes les propriétés qui peuvent être associées à un paramètre.  
   
- Appel de **ISSCommandWithParameters::SetParameterProperties** pour spécifier les propriétés d’un paramètre qui n’est pas de type DBTYPE_XML ou DBTYPE_UDT retourne DB_E_ERRORSOCCURRED ou DB_S_ERRORSOCCURRED et marque le *dwStatus* champ de tous les Dbprop contenus dans SSPARAMPROPS pour ce paramètre avec DBPROPSTATUS_NOTSET. Le tableau DBPROP de chaque DBPROPSET contenu dans SSPARAMPROPS doit être parcouru pour détecter le paramètre auquel DB_E_ERRORSOCCURRED ou DB_S_ERRORSOCCURRED fait référence.  
+ Appel de **ISSCommandWithParameters::SetParameterProperties** pour spécifier les propriétés d’un paramètre qui n’est pas de type DBTYPE_XML ou DBTYPE_UDT retourne DB_E_ERRORSOCCURRED ou DB_S_ERRORSOCCURRED et marque le  *dwStatus* champ de tous les Dbprop contenus dans SSPARAMPROPS pour ce paramètre avec DBPROPSTATUS_NOTSET. Le tableau DBPROP de chaque DBPROPSET contenu dans SSPARAMPROPS doit être parcouru pour détecter le paramètre auquel DB_E_ERRORSOCCURRED ou DB_S_ERRORSOCCURRED fait référence.  
   
- Si **ISSCommandWithParameters::SetParameterProperties** est appelée pour spécifier les propriétés de paramètres dont les informations de paramètre n'ont pas encore été définies avec **SetParameterInfo**, le fournisseur retourne E_UNEXPECTED avec le message d’erreur suivant :  
+ Si **ISSCommandWithParameters::SetParameterProperties** est appelée pour spécifier les propriétés de paramètres dont les informations de paramètre n'ont pas encore été définies avec **SetParameterInfo**, le fournisseur retourne E_ INATTENDU avec le message d’erreur suivant :  
   
  La méthode SetParameterProperties ne peut pas être appelée pour les paramètres spécifiés sans appeler auparavant la méthode SetParameterInfo. Vous devez définir les informations de paramètre avant de définir les propriétés de paramètre.  
   
- Si l’appel à **ISSCommandWithParameters::SetParameterProperties** contient des paramètres où les informations de paramètre a été définie, et certains paramètres où les informations de paramètre n’a pas été définie, les propriétés dwStatus dans le DBPROPSET du jeu de propriétés SSPARAMPROPS seront retournées avec DBSTATUS_NOTSET.  
+ Si l’appel à **ISSCommandWithParameters::SetParameterProperties** contient certains paramètres où les informations de paramètre a été définies et certains paramètres où les informations de paramètre n'a pas été définie, les propriétés dwStatus dans le DBPROPSET du jeu de propriétés SSPARAMPROPS est retournées avec DBSTATUS_NOTSET.  
   
  La structure SSPARAMPROPS est défini comme suit :  
   
@@ -79,15 +77,15 @@ HRESULT SetParameterProperties(
   
  `};`  
   
- Améliorations dans le moteur de base de données en commençant par [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] autoriser ISSCommandWithParameters::SetParameterProperties obtenir des descriptions plus exactes des résultats attendus. Ces résultats plus précis peuvent différer des valeurs retournées par ISSCommandWithParameters::SetParameterProperties dans les versions précédentes de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Pour plus d'informations, consultez [Metadata Discovery](../../relational-databases/native-client/features/metadata-discovery.md).  
+ Améliorations dans le moteur de base de données en commençant par [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] autoriser ISSCommandWithParameters::SetParameterProperties obtenir des descriptions plus exactes des résultats attendus. Ces résultats plus précis peuvent différer des valeurs retournées par ISSCommandWithParameters::SetParameterProperties dans les versions précédentes de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Pour plus d’informations, consultez [de découverte des métadonnées](../../relational-databases/native-client/features/metadata-discovery.md).  
   
-|Membre| Description|  
+|Membre|Description|  
 |------------|-----------------|  
 |*iOrdinal*|Position ordinale du paramètre transmis.|  
 |*cPropertySets*|Le nombre de structures DBPROPSET dans *rgPropertySets*.|  
 |*rgPropertySets*|Pointeur vers la mémoire dans lequel retourner un tableau de structures DBPROPSET.|  
   
 ## <a name="see-also"></a>Voir aussi  
- [ISSCommandWithParameters & #40 ; OLE DB & #41 ;](../../relational-databases/native-client-ole-db-interfaces/isscommandwithparameters-ole-db.md)  
+ [ISSCommandWithParameters &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-interfaces/isscommandwithparameters-ole-db.md)  
   
   

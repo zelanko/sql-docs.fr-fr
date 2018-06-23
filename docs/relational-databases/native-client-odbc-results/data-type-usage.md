@@ -4,10 +4,9 @@ ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: native-client-odbc-results
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
+ms.technology: connectivity
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -19,17 +18,16 @@ helpviewer_keywords:
 - SQL Server Native Client ODBC driver, data types
 - data types [ODBC], about data types
 ms.assetid: 4f19b0d6-94ac-4a98-a121-57d38787864c
-caps.latest.revision: 34
 author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: e8a08f91688a4a6c26fd138de51ee50b7b2a3974
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 411cb07567b08f4ec28fab7098b6b0016c779b13
+ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32947054"
+ms.lasthandoff: 06/18/2018
+ms.locfileid: "35697910"
 ---
 # <a name="data-type-usage"></a>Utilisation des types de données
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -49,9 +47,9 @@ ms.locfileid: "32947054"
 |Littéraux d'heure|Littéraux d’heure lorsque stockées dans une colonne SQL_TIMESTAMP ([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] des types de données de **datetime** ou **smalldatetime**), ont une valeur de date du 1er janvier 1900.|  
 |**timestamp**|Seule la valeur NULL peut être insérée manuellement dans un **timestamp** colonne. Toutefois, étant donné que **timestamp**les colonnes sont automatiquement mis à jour par [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], une valeur NULL est remplacée.|  
 |**tinyint**|Le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **tinyint** type de données n’est pas signé. A **tinyint** colonne est liée à une variable de type de données SQL_C_UTINYINT par défaut.|  
-|Types de données alias|Lorsqu’il est connecté à une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 4.2*x*, le pilote ODBC ajoute la valeur NULL à une définition de colonne qui ne déclare pas explicitement la possibilité de valeur NULL d’une colonne. Par conséquent, la possibilité de valeur NULL stockée dans la définition d'un type de données alias est ignorée.<br /><br /> Lorsqu’il est connecté à une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 4.2*x*, type de colonnes avec un type de données alias qui a une base de données de **char** ou **binaire** et pour lequel aucune possibilité de valeur NULL n’est déclarée sont créés en tant que type de données **varchar** ou **varbinary**. [SQLColAttribute](../../relational-databases/native-client-odbc-api/sqlcolattribute.md), [SQLColumns](../../relational-databases/native-client-odbc-api/sqlcolumns.md), et [SQLDescribeCol](../../relational-databases/native-client-odbc-api/sqldescribecol.md) retournent SQL_VARCHAR ou SQL_VARBINARY comme données de type pour ces colonnes. Les données qui sont récupérées de ces colonnes ne sont pas complétées.<br /><br /> Remarque : Le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pilote ODBC Native Client ne prend pas en charge la connexion à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 6.5 et versions antérieures.|  
+|Types de données alias|Lorsqu’il est connecté à une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 4.2*x*, le pilote ODBC ajoute la valeur NULL à une définition de colonne qui ne déclare pas explicitement la possibilité de valeur NULL d’une colonne. Par conséquent, la possibilité de valeur NULL stockée dans la définition d'un type de données alias est ignorée.<br /><br /> Lorsqu’il est connecté à une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 4.2*x*, type de colonnes avec un type de données alias qui a une base de données de **char** ou **binaire** et pour lesquelles aucune possibilité de valeur null déclarée sont créées en tant que type de données **varchar** ou **varbinary**. [SQLColAttribute](../../relational-databases/native-client-odbc-api/sqlcolattribute.md), [SQLColumns](../../relational-databases/native-client-odbc-api/sqlcolumns.md), et [SQLDescribeCol](../../relational-databases/native-client-odbc-api/sqldescribecol.md) retournent SQL_VARCHAR ou SQL_VARBINARY comme données de type pour ces colonnes. Les données qui sont récupérées de ces colonnes ne sont pas complétées.<br /><br /> Remarque : Le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pilote ODBC Native Client ne prend pas en charge la connexion à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 6.5 et versions antérieures.|  
 |Types de données LONG|*Data-at-execution* paramètres sont limités pour les types de données SQL_LONGVARCHAR et SQL_LONGVARBINARY.|  
-|Types de valeur élevée|Le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pilote ODBC Native Client expose **varchar (max)**, **varbinary (max)**, et **nvarchar (max)** types en tant que SQL_VARCHAR, SQL_VARBINARY et SQL_WVARCHAR (respectivement) dans les API qui acceptent ou retournent des types de données ODBC SQL.|  
+|Types de valeur élevée|Le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pilote ODBC Native Client expose **varchar (max)**, **varbinary (max)**, et **nvarchar (max)** types en tant que SQL_VARCHAR, SQL_VARBINARY et SQL_ WVARCHAR (respectivement) dans API qui acceptent ou retournent des types de données ODBC SQL.|  
 |Type défini par l'utilisateur (UDT)|Les colonnes UDT sont mappées en tant que SQL_SS_UDT. Si une colonne UDT est mappée explicitement à un autre type dans l'instruction SQL à l'aide des méthodes ToString() ou ToXMLString() du type UDT, ou via les fonctions CAST/CONVERT, le type de la colonne dans le jeu de résultats reflète le type réel vers lequel la colonne a été convertie.<br /><br /> Le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pilote ODBC Native Client ne peut se lier à une colonne UDT sous forme binaire. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] prend uniquement en charge la conversion entre les types de données SQL_SS_UDT et SQL_C_BINARY.|  
 |XML|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] convertit automatiquement le code XML en texte Unicode. Le type XML est mappé en tant que SQL_SS_XML.|  
   
