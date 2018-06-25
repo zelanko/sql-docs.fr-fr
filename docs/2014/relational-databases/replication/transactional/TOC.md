@@ -1,0 +1,12 @@
+# [Réplication transactionnelle](transactional-replication.md)
+## [Types de publication pour la réplication transactionnelle](publication-types-for-transactional-replication.md)
+## [Updatable Subscriptions for Transactional Replication](updatable-subscriptions-for-transactional-replication.md)
+## [Queued Updating Conflict Detection and Resolution](updatable-subscriptions-queued-updating-conflict-resolution.md)
+## [Peer-to-Peer Transactional Replication](peer-to-peer-transactional-replication.md)
+## [Détection de conflit dans la réplication d’égal à égal](peer-to-peer-conflict-detection-in-peer-to-peer-replication.md)
+## [Réplication transactionnelle bidirectionnelle](bidirectional-transactional-replication.md)
+## [Article Options for Transactional Replication](article-options-for-transactional-replication.md)
+## [Spécifier le mode de propagation des modifications des articles transactionnels](transactional-articles-specify-how-changes-are-propagated.md)
+## [Régénérer des procédures transactionnelles personnalisées pour refléter des modifications de schéma](transactional-articles-regenerate-to-reflect-schema-changes.md)
+## [Publication de l’exécution de procédures stockées dans la réplication transactionnelle](publishing-stored-procedure-execution-in-transactional-replication.md)
+
