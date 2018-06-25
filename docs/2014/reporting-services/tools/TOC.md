@@ -53,6 +53,7 @@
 ### [Propriétés du serveur (page Historique)](server-properties-history-page.md)
 ### [Propriétés du serveur (page Connexion)](server-properties-logging-page.md)
 ### [Propriétés du serveur (page Sécurité)](server-properties-security-page-reporting-services.md)
+### [Propriétés du serveur (page Avancé)](server-properties-advanced-page-reporting-services.md)
 ### [Propriétés du rôle système](system-role-properties-management-studio.md)
 ### [Propriétés du rôle utilisateur](user-role-properties-management-studio.md)
 # [Générateur de rapports](report-builder-authoring-environment-ssrs.md)
