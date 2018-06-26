@@ -37,6 +37,7 @@
 ### [Options (Résultats de la requête/SQL Server/Page Résultats dans des grilles)](../../database-engine/options-query-results-sql-server-results-to-grid-page.md)
 ### [Options (Résultats de la requête/SQL Server/Page Résultats dans du texte)](../../database-engine/options-query-results-sql-server-results-to-text-page.md)
 ### [Options (Résultats de la requête/SQL Server/Multiserveur)](../../database-engine/options-query-results-sql-server-multi-server.md)
+### [Options (page Exécution de la requête/Serveur d'analyse/Général)](../../database-engine/options-query-execution-analysis-server-general-page.md)
 ### [Options (Résultats de la requête/Analysis Server/Page Général)](../../database-engine/options-query-results-analysis-server-general-page.md)
 ### [Options (Résultats de la requête et Page Services de dépendance)](../../database-engine/options-query-results-and-dependency-services-page.md)
 ## [Ouvrir un éditeur (SQL Server Management Studio)](open-an-editor-sql-server-management-studio.md)
