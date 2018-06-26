@@ -14,7 +14,9 @@
 # [PowerShell pour SQL Server +](../powershell/sql-server-powershell.md)
 # [Fonctionnalités des bases de données relationnelles +](../relational-databases/database-features.md)
 # [Reporting Services +](../reporting-services/create-deploy-and-manage-mobile-and-paginated-reports.md)
-# [Tutoriels for SQL Server 2014 +](../tutorials/tutorials-for-sql-server-2014.md)
+# [Tutoriels pour SQL Server 2014 +](../tutorials/tutorials-for-sql-server-2014.md)
+
+# [Nouveautés de SQL Server 2014 +](../sql-server/what-s-new-in-sql-server-2016.md)
 
 # [Référence du développeur pour SQL Server 2014](developer-reference-for-sql-server-2014.md)
 ## [Guide du développeur (Analysis Services) +](../analysis-services/dev-guide/analysis-services-dev-guide.md)
@@ -25,6 +27,7 @@
 ## [Guide du développeur (Reporting Services) +](../reporting-services/reporting-services-developer-documentation.md)
 
 # [Installation de SQL Server 2014 +](../database-engine/install-windows/installation-for-sql-server.md)
-# [Configuration et installation de maintenance](../sql-server/install/setup-and-servicing-installation.md)
-# [Conseiller de mise à niveau](../sql-server/install/sql-server-2014-upgrade-advisor.md)
+## [Conseiller de mise à niveau +](../sql-server/install/sql-server-2014-upgrade-advisor.md)
+## [Configuration et maintenance d’une installation](../sql-server/install/setup-and-servicing-installation.md)
 # [Aide sur le Gestionnaire de configuration +](../tools/configuration-manager/sql-server-configuration-manager-help.md)
+

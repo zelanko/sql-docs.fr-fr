@@ -6,6 +6,7 @@
 ## [Créer, modifier et supprimer des abonnements pilotés par les données](create-modify-and-delete-data-driven-subscriptions.md)
 ## [Utiliser une source de données externe pour les données des abonnés](use-an-external-data-source-for-subscriber-data-data-driven-subscription.md)
 # [Créer et gérer des abonnements pour les serveurs de rapports en mode Natif](create-and-manage-subscriptions-for-native-mode-report-servers.md)
+## [Créer, modifier et supprimer des abonnements standard](../create-manage-subscriptions-native-mode-report-servers.md)
 ## [Utiliser Mes abonnements](use-my-subscriptions-native-mode-report-server.md)
 ## [Suspendre le traitement des rapports et des abonnements](disable-or-pause-report-and-subscription-processing.md)
 ## [Contrôler la distribution des rapports](../control-report-distribution.md)
