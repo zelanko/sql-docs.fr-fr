@@ -14,8 +14,7 @@
 ## [Mode d’audit C2 (option de configuration de serveur)](c2-audit-mode-server-configuration-option.md)
 ## [clr enabled (option de configuration de serveur)](clr-enabled-server-configuration-option.md)
 ## [common criteria compliance enabled (option de configuration de serveur)](common-criteria-compliance-enabled-server-configuration-option.md)
-## 
-  [Authentification de la base de données autonome (option de configuration de serveur)](contained-database-authentication-server-configuration-option.md)
+## [Authentification de la base de données autonome (option de configuration de serveur)](contained-database-authentication-server-configuration-option.md)
 ## [Configurer le seuil de coût pour le parallélisme (option de configuration de serveur)](configure-the-cost-threshold-for-parallelism-server-configuration-option.md)
 ## [Configurer le seuil du curseur (option de configuration de serveur)](configure-the-cursor-threshold-server-configuration-option.md)
 ## [Chaînage des propriétés des bases de données croisées (option de configuration de serveur)](cross-db-ownership-chaining-server-configuration-option.md)

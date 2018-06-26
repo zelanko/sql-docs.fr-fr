@@ -15,8 +15,7 @@
 # [Informations d’identification](authentication-access/credentials-database-engine.md)
 ## [Créer des informations d'identification](authentication-access/create-a-credential.md)
 # [Éléments sécurisables](securables.md)
-# 
-  [Utilisateurs de base de données autonome - Rendre votre base de données portable](contained-database-users-making-your-database-portable.md)
+# [Utilisateurs de base de données autonome - Rendre votre base de données portable](contained-database-users-making-your-database-portable.md)
 # [Choisir un mode d’authentification](choose-an-authentication-mode.md)
 # [Configuration de la visibilité des métadonnées](metadata-visibility-configuration.md)
 # [Configuration de la surface d'exposition](surface-area-configuration.md)
