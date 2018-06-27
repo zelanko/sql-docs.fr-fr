@@ -5,25 +5,24 @@ ms.date: 05/09/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: lift-shift
 ms.suite: sql
 ms.custom: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 72b20d4d42517555449f639cee398db4363d5735
-ms.sourcegitcommit: 0cc2cb281e467a13a76174e0d9afbdcf4ccddc29
+ms.openlocfilehash: 89874258c7c8dd12e08ea9a37c6375257ef52c61
+ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/15/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35335823"
 ---
-# <a name="schedule-the-execution-of-an-ssis-package-in-azure-with-sql-server-management-studio-ssms"></a>Planifier l’exécution d’un package SSIS dans Azure à l’aide de SQL Server Management Studio (SSMS)
+# <a name="schedule-the-execution-of-ssis-packages-deployed-in-azure-with-sql-server-management-studio-ssms"></a>Planifier l’exécution de packages SSIS déployés dans Azure avec SQL Server Management Studio (SSMS)
 
-SQL Server Management Studio (SSMS) propose une fonctionnalité de planification pour les packages SSIS déployés dans Azure SQL Database. SQL Server local et SQL Database Managed Instance (préversion) proposent respectivement SQL Server Agent et Managed Instance Agent comme planificateur de travaux SSIS de première classe. De son côté, SQL Database n’intègre pas de planificateur de travaux SSIS de première classe. La fonctionnalité SSMS décrite dans cet article présente une interface utilisateur bien connue qui s’apparente à celle de SQL Server Agent pour la planification des packages déployés dans SQL Database.
+Vous pouvez utiliser SQL Server Management Studio (SSMS) pour planifier le déploiement de packages SSIS dans Azure SQL Database. SQL Server local et SQL Database Managed Instance (préversion) ont respectivement SQL Server Agent et Managed Instance Agent comme planificateur performant des travaux SSIS. De son côté, SQL Database n’intègre pas de planificateur de travaux SSIS de première classe. La fonctionnalité SSMS décrite dans cet article présente une interface utilisateur bien connue qui s’apparente à celle de SQL Server Agent pour la planification des packages déployés dans SQL Database.
 
-Si vous utilisez SQL Database pour héberger la base de données de catalogues SSIS, `SSISDB`, vous pouvez utiliser cette fonctionnalité SSMS pour générer les pipelines, les activités et les déclencheurs Data Factory nécessaires à la planification de packages SSIS. Vous pouvez ensuite modifier et étendre ces objets dans Data Factory.
+Si vous utilisez SQL Database pour héberger le catalogue SSIS, `SSISDB`, vous pouvez utiliser cette fonctionnalité de SSMS pour générer les pipelines, les activités et les déclencheurs Data Factory nécessaires à la planification de packages SSIS. Vous pouvez ensuite si vous le souhaitez modifier et étendre ces objets dans Data Factory.
 
 Quand vous vous servez de SSMS pour planifier un package, SSIS crée automatiquement trois objets Data Factory et les nomme selon le nom du package sélectionné et de l’horodatage. Par exemple, si le nom du package SSIS est **MonPackage**, SSMS crée des objets Data Factory semblables aux suivants :
 
@@ -34,7 +33,7 @@ Quand vous vous servez de SSMS pour planifier un package, SSIS crée automatique
 | Déclencheur | **Déclencheur_MonPackage_2018-05-08T09_00_00Z** |
 |||
 
-## <a name="prerequisites"></a>Prérequis
+## <a name="prerequisites"></a>Conditions préalables requises
 
 La fonctionnalité décrite dans cet article nécessite SQL Server Management Studio version 17.7 ou supérieure. Pour obtenir la dernière version de SSMS, consultez [Télécharger SQL Server Management Studio (SSMS)](../../ssms/download-sql-server-management-studio-ssms.md).
 

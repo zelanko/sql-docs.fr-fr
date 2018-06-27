@@ -27,16 +27,17 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 1c2a2e92fdef5cae1b2404d18c2c5fb18b3de1ba
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 5701576503c09275408389ae1f5259bcf7d06ce6
+ms.sourcegitcommit: 6e55a0a7b7eb6d455006916bc63f93ed2218eae1
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35239299"
 ---
 # <a name="dbname-transact-sql"></a>DB_NAME (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-Retourne le nom de la base de données.
+Cette fonction retourne le nom de la base de données spécifiée.
   
 ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -48,21 +49,23 @@ DB_NAME ( [ database_id ] )
   
 ## <a name="arguments"></a>Arguments  
 *database_id*  
-Numéro d'identification de la base de données à retourner. *database_id* est de type **int**, sans valeur par défaut. Si l'ID n'est pas spécifié, la fonction renvoie le nom de la base de données active.
+
+Numéro d’identification (ID) de la base de données dont le nom `DB_NAME` est retourné. Si l’appel à `DB_NAME` omet *database_id*, `DB_NAME` retourne le nom de la base de données active.
   
 ## <a name="return-types"></a>Types de retour
 **nvarchar(128)**
   
 ## <a name="permissions"></a>Autorisations  
-Si l’appelant de **DB_NAME** n’est pas le propriétaire de la base de données et que la base de données n’est pas de type **master** ni **tempdb**, les autorisations minimales requises pour consulter la ligne correspondante sont les autorisations ALTER ANY DATABASE ou VIEW ANY DATABASE au niveau du serveur, ou encore l’autorisation CREATE DATABASE dans la base de données **master**. La base de données à laquelle l'appelant est connecté peut toujours être vue dans **sys.databases**.
+
+Si l’appelant de `DB_NAME` ne possède pas une base de données non **MASTER** ou non **tempdb** spécifique, au minimum les autorisations au niveau serveur `ALTER ANY DATABASE` ou `VIEW ANY DATABASE` sont nécessaires pour consulter la ligne `DB_ID` correspondante. Pour la base de données **MASTER**, `DB_ID` a besoin au minimum de l’autorisation `CREATE DATABASE`. La base de données à laquelle l’appelant se connecte apparaît toujours dans **sys.databases**.
   
 > [!IMPORTANT]  
->  Par défaut, le rôle public a l’autorisation VIEW ANY DATABASE, qui permet à toutes les connexions de consulter les informations de base de données. Pour empêcher une connexion de détecter une base de données, révoquez l’autorisation publique VIEW ANY DATABASE ou refusez l’autorisation VIEW ANY DATABASE pour les connexions individuelles.  
+>  Par défaut, le rôle public a l’autorisation `VIEW ANY DATABASE`, qui permet à toutes les connexions de consulter les informations de la base de données. Pour empêcher une connexion de détecter une base de données, révoquez (`REVOKE`) l’autorisation publique `VIEW ANY DATABASE`, ou refusez (`DENY`) l’autorisation `VIEW ANY DATABASE` pour les connexions individuelles.
   
 ## <a name="examples"></a>Exemples  
   
 ### <a name="a-returning-the-current-database-name"></a>A. Renvoi du nom de la base de données active  
-L'exemple suivant renvoie le nom de la base de données active.
+L’exemple suivant retourne le nom de la base de données active.
   
 ```sql
 SELECT DB_NAME() AS [Current Database];  
@@ -70,7 +73,7 @@ GO
 ```  
   
 ### <a name="b-returning-the-database-name-of-a-specified-database-id"></a>B. Renvoi du nom de la base de données correspondant à un ID de base de données spécifié.  
-L'exemple suivant renvoie le nom de la base de données ayant l'ID `3`.
+L’exemple suivant retourne le nom de la base de données ayant l’ID `3`.
   
 ```sql
 USE master;  
@@ -88,7 +91,7 @@ SELECT DB_NAME() AS [Current Database];
 ```  
   
 ### <a name="d-return-the-name-of-a-database-by-using-the-database-id"></a>D. Renvoi du nom d’une base de données à l’aide de l’ID de base de données  
-L’exemple suivant retourne le nom de la base de données et database_id pour chaque base de données.
+L’exemple suivant retourne le nom et la valeur database_id de chaque base de données.
   
 ```sql
 SELECT DB_NAME(database_id) AS [Database], database_id  

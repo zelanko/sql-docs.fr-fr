@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: non-specific
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -20,11 +18,12 @@ caps.latest.revision: 44
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 55b664bda08e6842333fed67dafeab6e58a605e5
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: b6444d370a8eecec4df7d1a702354851892d007d
+ms.sourcegitcommit: fd9c33b93c886dcb00a48967b6c245631fd559bf
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/14/2018
+ms.locfileid: "35619556"
 ---
 # <a name="integration-services-error-and-message-reference"></a>Guide de référence des erreurs et des messages propres à Integration Services
   Les tableaux suivants répertorient les erreurs, les avertissements et les messages d'information prédéfinis de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] , par ordre croissant en fonction de leur numéro pour chaque catégorie, avec leurs codes numériques et noms symboliques. Chacune de ces erreurs est définie comme un champ de la classe <xref:Microsoft.SqlServer.Dts.Runtime.Hresults> dans l’espace de noms <xref:Microsoft.SqlServer.Dts.Runtime> .  
@@ -1047,7 +1046,7 @@ ms.lasthandoff: 05/03/2018
 |0xC00470A1|-1073450847|DTS_E_BUFFERORPHANED|Ce tampon est orphelin. Le gestionnaire de tampons s'est arrêté, laissant un tampon en cours d'utilisation. Le tampon ne sera pas nettoyé. Il est possible qu'il y ait des fuites de mémoire et d'autres problèmes.|  
 |0xC00470A2|-1073450846|DTS_E_EXPREVALINPUTCOLUMNNAMENOTFOUND|Échec de la recherche de la colonne d'entrée « %1 ». Code d'erreur : 0x%2!8.8X!. La colonne d'entrée spécifiée est introuvable dans la collection de colonnes d'entrée.|  
 |0xC00470A3|-1073450845|DTS_E_EXPREVALINPUTCOLUMNIDNOTFOUND|Échec de la recherche de la colonne d'entrée avec l'ID de lignage %1!d!. Code d’erreur : 0x%2!8.8X!. La colonne d'entrée est introuvable dans la collection de colonnes d'entrée.|  
-|0xC00470A4|-1073450844|DTS_E_EXPREVALNOINPUTCOLUMNCOLLECTIONFORCOLUMNNAME|L'expression contient le jeton non reconnu « %1 ». Si « %1 » est une variable, elle doit être exprimée sous la forme « @%1 ». Le jeton spécifié n'est pas valide. S'il représente un nom de variable, il doit comporter le symbole @ en préfixe.|  
+|0xC00470A4|-1073450844|DTS_E_EXPREVALNOINPUTCOLUMNCOLLECTIONFORCOLUMNNAME|L'expression contient le jeton non reconnu « %1 ». Si « %1 » est une variable, elle doit être exprimée sous la forme « \@%1 ». Le jeton spécifié n'est pas valide. S'il représente un nom de variable, il doit comporter le symbole @ en préfixe.|  
 |0xC00470A5|-1073450843|DTS_E_EXPREVALNOINPUTCOLUMNCOLLECTIONFORCOLUMNID|L'expression contient le jeton non reconnu « #%1!d! ».|  
 |0xC00470A6|-1073450842|DTS_E_EXPREVALVARIABLENOTFOUND|La variable « %1 » est introuvable dans la collection Variables. Cette variable n'existe peut-être pas dans l'étendue correcte.|  
 |0xC00470A7|-1073450841|DTS_E_EXPREVALINVALIDTOKENSTATE|Échec de l'analyse de l'expression « %1 ». L'expression contient peut-être un jeton non valide, un jeton incomplet ou un élément non valide. Peut-être qu'elle n'est pas formée de manière appropriée ou qu'il manque un élément obligatoire tel qu'une parenthèse.|  
@@ -2081,8 +2080,8 @@ ms.lasthandoff: 05/03/2018
 |0x80029164|-2147315356|DTS_W_FSTASK_OPERATIONFAILURE|La tâche n'a pas réussi à exécuter l'opération « %1 ».|  
 |0x80029185|-2147315323|DTS_W_EXECPROCTASK_FILENOTINPATH|Le fichier/processus « %1 » n'est pas dans le chemin d'accès.|  
 |0x800291C6|-2147315258|DTS_W_SENDMAILTASK_SUBJECT_MISSING|Le sujet est vide.|  
-|0x800291C7|-2147315257|DTS_W_SENDMAILTASK_ERROR_IN_TO_LINE|L'adresse dans la ligne « À » est mal formée. Le symbole « @ » est absent ou elle n'est pas valide.|  
-|0x800291C8|-2147315256|DTS_W_SENDMAILTASK_AT_MISSING_IN_FROM|L'adresse dans la ligne « De » est mal formée. Le symbole « @ » est absent ou elle n'est pas valide.|  
+|0x800291C7|-2147315257|DTS_W_SENDMAILTASK_ERROR_IN_TO_LINE|L'adresse dans la ligne « À » est mal formée. Le symbole « \@ » est manquant ou elle n’est pas valide.|  
+|0x800291C8|-2147315256|DTS_W_SENDMAILTASK_AT_MISSING_IN_FROM|L'adresse dans la ligne « De » est mal formée. Le symbole « \@ » est manquant ou elle n’est pas valide.|  
 |0x8002927A|-2147315078|DTS_W_XMLTASK_DIFFFAILURE|Les deux documents XML sont différents.|  
 |0x8002928C|-2147315060|DTS_W_XMLTASK_DTDVALIDATIONWARNING|La validation DTD utilisera le fichier DTD défini dans la ligne DOCTYPE du document XML. Elle n'utilisera pas ce qui est attribué à la propriété « %1 ».|  
 |0x8002928D|-2147315059|DTS_W_XMLTASK_VALIDATIONFAILURE|La tâche n'a pas réussi à valider « %1 ».|  

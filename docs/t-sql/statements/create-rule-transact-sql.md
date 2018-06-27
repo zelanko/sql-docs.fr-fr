@@ -34,11 +34,12 @@ caps.latest.revision: 43
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.openlocfilehash: c495cabda9c94fb5b0e32b7df0474501d2307353
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: e22d324c4b5bc0c0f315ccf553e0b4bcd2991eea
+ms.sourcegitcommit: fd9c33b93c886dcb00a48967b6c245631fd559bf
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/14/2018
+ms.locfileid: "35619486"
 ---
 # <a name="create-rule-transact-sql"></a>CREATE RULE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -79,7 +80,7 @@ AS condition_expression
 ## <a name="remarks"></a>Notes   
  L'instruction CREATE RULE ne peut pas s'utiliser conjointement avec d'autres instructions [!INCLUDE[tsql](../../includes/tsql-md.md)] dans un même traitement. Les règles ne s'appliquent pas aux données qui existent déjà dans la base de données au moment de leur création et elles ne peuvent pas être liées aux types de données système.  
   
- Une règle ne peut être créée que dans la base de données actuelle. Après la création de la règle, exécutez **sp_bindrule** pour la lier à une colonne ou à un type de données alias. Une règle doit être compatible avec le type de données de la colonne. Par exemple, « @value LIKE A% » ne peut pas servir de règle pour une colonne numérique. Une règle ne peut pas être liée à un type **text**, **ntext**, **image**, **varchar(max)**, **nvarchar(max)**, **varbinary(max)**, **xml**, à un type CLR défini par l’utilisateur, ou à une colonne **timestamp**. Enfin, une règle ne peut pas être liée à une colonne calculée.  
+ Une règle ne peut être créée que dans la base de données actuelle. Après la création de la règle, exécutez **sp_bindrule** pour la lier à une colonne ou à un type de données alias. Une règle doit être compatible avec le type de données de la colonne. Par exemple, « \@value LIKE A% » ne peut pas servir de règle pour une colonne numérique. Une règle ne peut pas être liée à un type **text**, **ntext**, **image**, **varchar(max)**, **nvarchar(max)**, **varbinary(max)**, **xml**, à un type CLR défini par l’utilisateur, ou à une colonne **timestamp**. Enfin, une règle ne peut pas être liée à une colonne calculée.  
   
  Délimitez les constantes de type caractère et date par des apostrophes droites (') et faites précéder les constantes binaires de 0x. Si la règle n’est pas compatible avec la colonne à laquelle elle est liée, le [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] retourne un message d’erreur lors de l’insertion d’une valeur, mais pas au moment de la liaison de la règle.  
   

@@ -37,16 +37,17 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 8c1af3730ecd3484728266ed7aecdfd975286461
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 119b41488f7a357d3c59e78ce7c197c0825f3238
+ms.sourcegitcommit: 6e55a0a7b7eb6d455006916bc63f93ed2218eae1
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35239329"
 ---
 # <a name="x40x40datefirst-transact-sql"></a>&#x40;&#x40;DATEFIRST (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-Renvoie la valeur actuelle, pour une session, de [SET DATEFIRST](../../t-sql/statements/set-datefirst-transact-sql.md).
+Cette fonction retourne la valeur actuelle de [SET DATEFIRST](../../t-sql/statements/set-datefirst-transact-sql.md) pour une session spécifique.
   
 Pour obtenir une vue d’ensemble de tous les types de données et fonctions de date et d’heure [!INCLUDE[tsql](../../includes/tsql-md.md)], consultez [Types de données et fonctions de date et d’heure &#40;Transact-SQL&#41;](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md).
   
@@ -62,9 +63,20 @@ Pour obtenir une vue d’ensemble de tous les types de données et fonctions de 
 **tinyint**
   
 ## <a name="remarks"></a>Notes   
-SET DATEFIRST spécifie le premier jour de la semaine. La valeur par défaut de l'anglais des États-Unis est 7, dimanche.
+SET DATEFIRST *n* spécifie le premier jour (DIMANCHE, LUNDI, MARDI, etc.) de la semaine. La valeur de *n* est comprise entre 1 et 7.
+
+```sql
+SET DATEFIRST 3;
+GO  
+SELECT @@DATEFIRST; -- 3 (Wednesday)
+GO
+```  
+
+Pour un environnement anglais (États-Unis) @@DATEFIRST a la valeur par défaut 7 (dimanche).
   
-Ce paramètre de langue affecte l'interprétation de chaînes de caractères lorsqu'elles sont converties en valeurs de date pour le stockage dans la base de données, et l'affichage des valeurs de date qui sont stockées dans la base de données. Ce paramètre n'affecte pas le format de stockage des données de date. Dans l'exemple suivant, la langue a d'abord pour valeur `Italian`. L'instruction `SELECT @@DATEFIRST;` retourne `1`. La langue prend ensuite pour valeur `us_english`. L'instruction `SELECT @@DATEFIRST;` retourne `7`.
+Ce paramètre de langue affecte l’interprétation des chaînes de caractères, car SQL Server convertit ces chaînes en valeurs de date pour le stockage de base de données. Il affecte également l’affichage des valeurs de date stockées dans la base de données. Il n’a pas d’impact sur le format de stockage des données de date.
+
+L’exemple suivant définit d’abord la langue sur `Italian`. L'instruction `SELECT @@DATEFIRST;` retourne `1`. L’instruction suivante définit ensuite la langue sur `us_english`. L’instruction finale, `SELECT @@DATEFIRST;`, retourne `7`.
   
 ```sql
 SET LANGUAGE Italian;  
@@ -77,7 +89,7 @@ SELECT @@DATEFIRST;
 ```  
   
 ## <a name="examples"></a>Exemples  
-L'exemple suivant définit le premier jour de la semaine à `5` (vendredi) et considère que le jour actuel, `Today`, est samedi. L'instruction `SELECT` retourne la valeur `DATEFIRST` et le numéro du jour actuel de la semaine.
+L’exemple suivant définit le premier jour de la semaine sur `5` (vendredi) et suppose que le jour actuel, `Today`, tombe un samedi. L'instruction `SELECT` retourne la valeur `DATEFIRST` et le numéro du jour actuel de la semaine.
   
 ```sql
 SET DATEFIRST 5;  

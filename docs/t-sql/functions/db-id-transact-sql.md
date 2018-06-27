@@ -28,16 +28,17 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: cb7e49f0ebd4746ccad1a9647ac2f35d61efcdc9
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 24b4ecf201ad5b805cd55693cfe8e4aa2d9dd619
+ms.sourcegitcommit: 6e55a0a7b7eb6d455006916bc63f93ed2218eae1
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35239309"
 ---
 # <a name="dbid-transact-sql"></a>DB_ID (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-Retourne le numéro d'identification (ID) de la base de données.
+Cette fonction retourne le numéro d’identification (ID) de la base de données spécifiée.
   
 ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -49,21 +50,21 @@ DB_ID ( [ 'database_name' ] )
   
 ## <a name="arguments"></a>Arguments  
 '*database_name*'  
-Nom de base de données utilisé pour retourner le numéro d'identification (ID) de la base de données correspondante. *database_name* est de type **sysname**. Si *database_name* est omis, la fonction retourne l’ID de la base de données active.
+Nom de la base de données dont le numéro d’ID `DB_ID` est retourné. Si l’appel à `DB_ID` omet *database_name*, `DB_ID` retourne l’ID de la base de données active.
   
 ## <a name="return-types"></a>Types de retour
 **Int**
   
 ## <a name="permissions"></a>Autorisations  
-Si l’appelant de **DB_ID** n’est pas le propriétaire de la base de données et que la base de données n’est pas de type **master** ni **tempdb**, les autorisations minimales requises pour consulter la ligne correspondante sont les autorisations ALTER ANY DATABASE ou VIEW ANY DATABASE au niveau du serveur, ou encore l’autorisation CREATE DATABASE dans la base de données **master**. La base de données à laquelle l'appelant est connecté peut toujours être vue dans **sys.databases**.
+Si l’appelant de `DB_ID` ne possède pas une base de données non **MASTER** ou non **tempdb** spécifique, au minimum les autorisations au niveau serveur `ALTER ANY DATABASE` ou `VIEW ANY DATABASE` sont nécessaires pour consulter la ligne `DB_ID` correspondante. Pour la base de données **MASTER**, `DB_ID` a besoin au minimum de l’autorisation `CREATE DATABASE`. La base de données à laquelle l’appelant se connecte apparaît toujours dans **sys.databases**.
   
 > [!IMPORTANT]  
->  Par défaut, le rôle public a l’autorisation VIEW ANY DATABASE, qui permet à toutes les connexions de consulter les informations de base de données. Pour empêcher une connexion de détecter une base de données, révoquez l’autorisation publique VIEW ANY DATABASE ou refusez l’autorisation VIEW ANY DATABASE pour les connexions individuelles.  
+>  Par défaut, le rôle public a l’autorisation `VIEW ANY DATABASE`, qui permet à toutes les connexions de consulter les informations de la base de données. Pour empêcher une connexion de détecter une base de données, révoquez (`REVOKE`) l’autorisation publique `VIEW ANY DATABASE`, ou refusez (`DENY`) l’autorisation `VIEW ANY DATABASE` pour les connexions individuelles.  
   
 ## <a name="examples"></a>Exemples  
   
 ### <a name="a-returning-the-database-id-of-the-current-database"></a>A. Retour de l'ID de la base de données active  
-L'exemple suivant retourne l'ID de la base de données active.
+L’exemple suivant retourne l’ID de la base de données active.
   
 ```sql
 SELECT DB_ID() AS [Database ID];  
@@ -71,7 +72,7 @@ GO
 ```  
   
 ### <a name="b-returning-the-database-id-of-a-specified-database"></a>B. Retour de l'ID d'une base de données spécifique  
-L’exemple suivant renvoie l’ID de base de données de la base de données [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)].
+L’exemple suivant retourne l’ID de la base de données [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)].
   
 ```sql
 SELECT DB_ID(N'AdventureWorks2008R2') AS [Database ID];  
@@ -79,7 +80,7 @@ GO
 ```  
   
 ### <a name="c-using-dbid-to-specify-the-value-of-a-system-function-parameter"></a>C. Utilisation de DB_ID pour spécifier la valeur d'un paramètre de fonction système  
-L’exemple suivant utilise `DB_ID` pour renvoyer l’ID de base de données de la base de données [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] dans la fonction système `sys.dm_db_index_operational_stats`. Le premier paramètre de la fonction est un ID de base de données.
+L’exemple suivant utilise `DB_ID` pour retourner l’ID de la base de données [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] dans la fonction système `sys.dm_db_index_operational_stats`. Le premier paramètre de la fonction est un ID de base de données.
   
 ```sql
 DECLARE @db_id int;  
@@ -104,14 +105,14 @@ GO
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Exemples : [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] et [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="d-return-the-id-of-the-current-database"></a>D. Renvoi de l’ID de la base de données active  
-L'exemple suivant retourne l'ID de la base de données active.
+L’exemple suivant retourne l’ID de la base de données active.
   
 ```sql
 SELECT DB_ID();  
 ```  
   
 ### <a name="e-return-the-id-of-a-named-database"></a>E. Renvoi de l’ID d’une base de données nommée  
-L’exemple suivant renvoie l’ID de base de données de la base de données AdventureWorksDW2012.
+L’exemple suivant retourne l’ID de la base de données AdventureWorksDW2012.
   
 ```sql
 SELECT DB_ID('AdventureWorksPDW2012');  

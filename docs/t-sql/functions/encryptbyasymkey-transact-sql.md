@@ -24,46 +24,76 @@ caps.latest.revision: 35
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.openlocfilehash: 212ce15f0d28b16b81a9c07d785c129b039cdc6d
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 61fef12748ce57eee1008fee29c864246774831b
+ms.sourcegitcommit: 6e55a0a7b7eb6d455006916bc63f93ed2218eae1
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35239143"
 ---
 # <a name="encryptbyasymkey-transact-sql"></a>ENCRYPTBYASYMKEY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Chiffre les données avec une clé asymétrique.  
+Cette fonction chiffre les données avec une clé asymétrique.  
   
  ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
 ```  
-  
 EncryptByAsymKey ( Asym_Key_ID , { 'plaintext' | @plaintext } )  
 ```  
   
 ## <a name="arguments"></a>Arguments  
- *Asym_Key_ID*  
- ID d'une clé asymétrique dans la base de données. **int**.  
+*asym_key_ID*  
+ID d’une clé asymétrique dans la base de données. *asym_key_ID* a le type de données **int**.  
   
- *cleartext*  
- Chaîne de données qui seront chiffrées avec la clé asymétrique.  
+*cleartext*  
+Chaîne de données que `ENCRYPTBYASYMKEY` chiffre avec la clé asymétrique. *cleartext* peut avoir le type de données
+ 
++ **binary**
++ **char**
++ **nchar**
++ **nvarchar**
++ **varbinary**
   
- **@plaintext**  
- Variable de type **nvarchar**, **char**, **varchar**, **binary**, **varbinary** ou **nchar** qui contient des données à chiffrer avec la clé asymétrique.  
+ou
+  
++ **varchar**
+ 
+.  
+  
+**@plaintext**  
+Variable contenant une valeur que `ENCRYPTBYASYMKEY` chiffre avec la clé asymétrique. **@plaintext** peut avoir le type de données
+  
++ **binary**
++ **char**
++ **nchar**
++ **nvarchar**
++ **varbinary**
+  
+ou
+  
++ **varchar**
+ 
+.  
   
 ## <a name="return-types"></a>Types de retour  
- **varbinary** d’une taille maximale de 8 000 octets.  
+**varbinary** d’une taille maximale de 8 000 octets.  
   
 ## <a name="remarks"></a>Notes   
- Le chiffrement et le déchiffrement avec une clé asymétrique sont coûteux par rapport au chiffrement et au déchiffrement avec une clé symétrique. Il est déconseillé d'utiliser une clé asymétrique pour chiffrer des ensembles de données volumineux ; par exemple, des données utilisateur issues de tables. Utilisez plutôt une clé symétrique forte pour chiffrer les données, et chiffrez la clé symétrique à l'aide d'une clé asymétrique.  
+Les opérations de chiffrement et de déchiffrement qui utilisent des clés asymétriques consomment une grande quantité de ressources. Elles deviennent donc très coûteuses, par rapport au chiffrement et au déchiffrement à clé symétrique. Nous recommandons aux développeurs d’éviter les opérations de chiffrement et de déchiffrement à clé asymétrique sur les jeux de données volumineux (par exemple, les jeux de données utilisateur stockés dans des tables de base de données). Au lieu de cela, nous recommandons donc aux développeurs de commencer par chiffrer ces données avec une clé symétrique forte, puis de chiffrer cette clé symétrique avec une clé asymétrique.  
   
- **EncryptByAsymKey** renvoie **NULL** si l'entrée dépasse un certain nombre d'octets, selon l'algorithme. Les limites sont : une clé RSA de 512 bits peut chiffrer jusqu'à 53 octets, une clé de 1 024 bits peut chiffrer jusqu'à 117 octets, et une clé de 2 048 bits peut chiffrer jusqu'à 245 octets. (Notez que dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], les certificats et les clés asymétriques sont des wrappers de clés RSA.)  
+En fonction de l’algorithme, `ENCRYPTBYASYMKEY` retourne **NULL** si l’entrée dépasse un certain nombre d’octets. Les limites spécifiques sont les suivantes :
+
++ une clé RSA de 512 bits peut chiffrer jusqu’à 53 octets
++ une clé RSA de 1 024 bits peut chiffrer jusqu’à 117 octets
++ une clé RSA de 2 048 bits peut chiffrer jusqu’à 245 octets
+
+Notez que dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], les certificats et les clés asymétriques servent de wrappers sur les clés RSA.  
   
 ## <a name="examples"></a>Exemples  
- L'exemple suivant chiffre le texte stocké dans `@cleartext` à l'aide de la clé asymétrique `JanainaAsymKey02`. Les données chiffrées sont insérées dans la table `ProtectedData04`.  
+L’exemple suivant chiffre le texte stocké dans `@cleartext` avec la clé asymétrique `JanainaAsymKey02`. L’instruction insère les données chiffrées dans la table `ProtectedData04`.  
   
 ```  
 INSERT INTO AdventureWorks2012.Sales.ProtectedData04   

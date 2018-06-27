@@ -23,16 +23,17 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: d8afd19d73538ca459d14c9964a4067619c52b84
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 70b225db949dec01343c56a24299d882d553e44e
+ms.sourcegitcommit: 6e55a0a7b7eb6d455006916bc63f93ed2218eae1
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35239049"
 ---
 # <a name="datetimefromparts-transact-sql"></a>DATETIMEFROMPARTS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
 
-Renvoie une valeur **datetime** pour la date et l’heure spécifiées.
+Cette fonction retourne une valeur **datetime** pour les arguments de date et d’heure spécifiés.
   
 ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -44,33 +45,33 @@ DATETIMEFROMPARTS ( year, month, day, hour, minute, seconds, milliseconds )
   
 ## <a name="arguments"></a>Arguments  
 *year*  
-Expression entière spécifiant une année.
+Expression entière qui spécifie une année.
   
 *month*  
-Expression entière spécifiant un mois.
+Expression entière qui spécifie un mois.
   
 *day*  
-Expression entière spécifiant un jour.
+Expression entière qui spécifie un jour.
   
 *hour*  
-Expression entière spécifiant des heures.
+Expression entière qui spécifie des heures.
   
 *minute*  
-Expression entière spécifiant des minutes.
+Expression entière qui spécifie des minutes.
   
 *secondes*  
-Expression entière spécifiant des secondes.
+Expression entière qui spécifie des secondes.
   
 *milliseconds*  
-Expression entière spécifiant des millisecondes.
+Expression entière qui spécifie des millisecondes.
   
 ## <a name="return-types"></a>Types de retour
 **datetime**
   
 ## <a name="remarks"></a>Notes   
-**DATETIMEFROMPARTS** renvoie une valeur **datetime** complètement initialisée. Si les arguments ne sont pas valides, une erreur est générée. Si les arguments requis sont NULL, la valeur NULL est renvoyée.
+`DATETIMEFROMPARTS` retourne une valeur **datetime** entièrement initialisée. `DATETIMEFROMPARTS` génère une erreur si au moins un argument obligatoire a une valeur non valide. `DATETIMEFROMPARTS` retourne une valeur Null si au moins un argument obligatoire a une valeur Null.
   
-Cette fonction peut être exécutée à distance sur des serveurs [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] et versions ultérieures. Elle ne peut pas être exécutée à distance sur des serveurs dont la version est antérieure à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].
+Cette fonction prend en charge la communication à distance vers des serveurs [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] et versions ultérieures. Elle ne prend pas en charge la communication à distance vers des serveurs dont la version est antérieure à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].
   
 ## <a name="examples"></a>Exemples  
   

@@ -27,17 +27,18 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: d17356f6730db14e85b9ab3c8186f4b474525608
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 87e80452c46d74c819affb9e9dd2695ec2789115
+ms.sourcegitcommit: b52b5d972b1a180e575dccfc4abce49af1a6b230
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35249522"
 ---
 # <a name="errorseverity-transact-sql"></a>ERROR_SEVERITY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  Renvoie le degré de gravité de l'erreur qui a engendré l'exécution du bloc CATCH d'une structure TRY…CATCH.  
-  
+Cette fonction retourne la valeur de gravité de l’erreur où une erreur se produit, si cette erreur a entraîné l’exécution du bloc CATCH d’une construction TRY…CATCH.  
+
  ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
@@ -50,22 +51,21 @@ ERROR_SEVERITY ( )
  **Int**  
   
 ## <a name="return-value"></a>Valeur retournée  
- Lorsqu'elle est appelée dans un bloc CATCH, elle renvoie le degré de gravité du message d'erreur à l'origine de l'exécution du bloc CATCH.  
-  
- Retourne NULL si l'appel a lieu en dehors de l'étendue d'un bloc CATCH.  
+Quand elle est appelée dans un bloc CATCH où une erreur se produit, `ERROR_SEVERITY` retourne la valeur de gravité de l’erreur à l’origine de l’exécution du bloc `CATCH`.  
+
+`ERROR_SEVERITY` retourne NULL si l’appel a lieu en dehors de l’étendue d’un bloc CATCH.  
   
 ## <a name="remarks"></a>Notes   
- ERROR_SEVERITY peut être appelée depuis n'importe quel emplacement dans le champ d'un bloc CATCH.  
+`ERROR_SEVERITY` prend en charge les appels à partir de n’importe quel emplacement dans l’étendue d’un bloc CATCH.  
   
- ERROR_SEVERITY renvoie le degré de gravité de l'erreur, indépendamment du nombre d'exécutions ou de l'endroit où elle est exécutée dans le champ du bloc CATCH. En revanche, des fonctions telles que @@ERROR renvoient uniquement le numéro d’erreur dans l’instruction qui suit celle à l’origine d’une erreur ou dans la première instruction d’un bloc CATCH.  
+`ERROR_SEVERITY` retourne la valeur de gravité d’une erreur, quel que soit le nombre de fois où elle s’exécute, ou l’emplacement de son exécution dans l’étendue du bloc `CATCH`. Ce comportement contraste avec celui d’une fonction comme @@ERROR, qui retourne uniquement un numéro d’erreur dans l’instruction immédiatement après celle qui a provoqué une erreur.  
   
- Dans les blocs CATCH imbriqués, ERROR_SEVERITY renvoie la gravité d'erreur propre au champ du bloc CATCH dans lequel elle est référencée. Par exemple, le bloc CATCH d'une construction TRY...CATCH externe peut comporter une construction TRY...CATCH imbriquée. Dans un bloc CATCH imbriqué, ERROR_SEVERITY renvoie le degré de gravité depuis l'erreur qui a appelé ce bloc. Si ERROR_SEVERITY est exécutée dans le bloc CATCH externe, elle renvoie le degré de gravité à partir de l'erreur qui a appelé ce bloc CATCH.  
+`ERROR_SEVERITY` fonctionne généralement dans un bloc `CATCH` imbriqué. `ERROR_SEVERITY` retourne la valeur de gravité d’erreur spécifique à l’étendue du bloc `CATCH` qui a référencé ce bloc `CATCH`. Par exemple, le bloc `CATCH` d’une construction TRY...CATCH externe peut comporter une construction `TRY...CATCH` interne. À l’intérieur de ce bloc `CATCH` interne, `ERROR_SEVERITY` retourne la valeur de gravité de l’erreur qui a appelé le bloc `CATCH` interne. Si `ERROR_SEVERITY` s’exécute dans le bloc `CATCH` externe, elle retourne la valeur de gravité de l’erreur qui a appelé ce bloc `CATCH` externe.  
   
-## <a name="examples"></a>Exemples  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Exemples : [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] et [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="a-using-errorseverity-in-a-catch-block"></a>A. Utilisation de ERROR_SEVERITY dans un bloc CATCH  
- L’exemple suivant montre une instruction `SELECT` qui génère une erreur de division par zéro. La gravité de l'erreur est renvoyée.  
-  
+L’exemple suivant illustre une procédure stockée qui génère une erreur de division par zéro. `ERROR_SEVERITY` retourne la valeur de gravité de cette erreur.  
 ```  
   
 BEGIN TRY  
@@ -76,11 +76,22 @@ BEGIN CATCH
     SELECT ERROR_SEVERITY() AS ErrorSeverity;  
 END CATCH;  
 GO  
+
+-----------
+
+(0 row(s) affected)
+
+ErrorSeverity
+-------------
+16
+
+(1 row(s) affected)
+
 ```  
   
 ### <a name="b-using-errorseverity-in-a-catch-block-with-other-error-handling-tools"></a>B. Utilisation de ERROR_SEVERITY dans un bloc CATCH avec d'autres outils de gestion des erreurs  
- L'exemple suivant montre une instruction `SELECT` qui génère une erreur de division par zéro. Outre le degré de gravité, la procédure renvoie également les informations relatives à l'erreur.  
-  
+L’exemple suivant montre une instruction `SELECT` qui génère une erreur de division par zéro. La procédure stockée retourne des informations sur cette erreur.  
+
 ```  
   
 BEGIN TRY  
@@ -97,28 +108,17 @@ BEGIN CATCH
         ERROR_MESSAGE() AS ErrorMessage;  
 END CATCH;  
 GO  
-```  
-  
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Exemples : [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] et [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
-  
-### <a name="c-using-errorseverity-in-a-catch-block-with-other-error-handling-tools"></a>C. Utilisation de ERROR_SEVERITY dans un bloc CATCH avec d'autres outils de gestion des erreurs  
- L'exemple suivant montre une instruction `SELECT` qui génère une erreur de division par zéro. Outre le degré de gravité, la procédure renvoie également les informations relatives à l'erreur.  
-  
-```  
-  
-BEGIN TRY  
-    -- Generate a divide-by-zero error.  
-    SELECT 1/0;  
-END TRY  
-BEGIN CATCH  
-    SELECT  
-        ERROR_NUMBER() AS ErrorNumber,  
-        ERROR_SEVERITY() AS ErrorSeverity,  
-        ERROR_STATE() AS ErrorState,  
-        ERROR_PROCEDURE() AS ErrorProcedure,  
-        ERROR_MESSAGE() AS ErrorMessage;  
-END CATCH;  
-GO  
+
+-----------
+
+(0 row(s) affected)
+
+ErrorNumber ErrorSeverity ErrorState  ErrorProcedure  ErrorLine   ErrorMessage
+----------- ------------- ----------- --------------- ----------- ----------------------------------
+8134        16            1           NULL            4           Divide by zero error encountered.
+
+(1 row(s) affected)
+
 ```  
   
 ## <a name="see-also"></a> Voir aussi  

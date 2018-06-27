@@ -1,7 +1,7 @@
 
 ## <a name="add-a-database-to-the-availability-group"></a>Ajouter une base de données au groupe de disponibilité
 
-Vérifiez que la base de données que vous ajoutez au groupe de disponibilité est en mode de récupération complète et a une sauvegarde de fichier journal valide. S’il s’agit d’une base de données de test ou d’une base de données nouvellement créée, faites-en une sauvegarde. Sur le serveur SQL Server principal, exécutez le script Transact-SQL suivant pour créer et sauvegarder une base de données nommée `db1` :
+Vérifiez que la base de données que vous ajoutez au groupe de disponibilité est en mode de récupération complète et a une sauvegarde de fichier journal valide. S’il s’agit d’une base de données de test ou d’une base de données nouvellement créée, faites-en une sauvegarde. Pour créer et sauvegarder une base de données nommée `db1`, exécutez le script Transact-SQL suivant sur le serveur SQL Server principal :
 
 ```sql
 CREATE DATABASE [db1];
@@ -10,7 +10,7 @@ BACKUP DATABASE [db1]
    TO DISK = N'/var/opt/mssql/data/db1.bak';
 ```
 
-Sur le réplica SQL Server principal, exécutez le script Transact-SQL suivant pour ajouter une base de données nommée `db1` à un groupe de disponibilité nommé `ag1` :
+Pour ajouter une base de données nommée `db1` à un groupe de disponibilité nommé `ag1`, exécutez le script Transact-SQL suivant sur le réplica SQL Server principal :
 
 ```sql
 ALTER AVAILABILITY GROUP [ag1] ADD DATABASE [db1];
@@ -18,7 +18,7 @@ ALTER AVAILABILITY GROUP [ag1] ADD DATABASE [db1];
 
 ### <a name="verify-that-the-database-is-created-on-the-secondary-servers"></a>Vérifier que la base de données est créée sur les serveurs secondaires
 
-Sur chaque réplica SQL Server secondaire, exécutez la requête suivante pour déterminer si la base de données `db1` a été créée et si elle est synchronisée :
+Pour déterminer si la base de données `db1` a été créée et si elle est synchronisée, exécutez la requête suivante sur chaque réplica SQL Server secondaire :
 
 ```sql
 SELECT * FROM sys.databases WHERE name = 'db1';

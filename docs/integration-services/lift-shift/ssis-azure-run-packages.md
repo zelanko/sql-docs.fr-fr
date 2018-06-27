@@ -1,28 +1,26 @@
 ---
 title: Exécuter des packages SSIS dans Azure | Microsoft Docs
-ms.description: Provides an overview of the available methods for running packages deployed to Azure SQL Database.
+description: Fournit une vue d’ensemble des méthodes disponibles pour l’exécution de packages SSIS déployés sur Azure SQL Database.
 ms.date: 05/29/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: lift-shift
 ms.suite: sql
 ms.custom: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: e4d733b49f8353fc430f90161ef25c352c8cac8f
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.openlocfilehash: 2d3c70085117e7d10aac5a7e29bde2448d383efe
+ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34586084"
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35330153"
 ---
-# <a name="run-an-ssis-package-in-azure"></a>Exécuter un package SSIS dans Azure
+# <a name="run-sql-server-integration-services-ssis-packages-deployed-in-azure"></a>Exécuter des packages SSIS (SQL Server Integration Services) déployés sur Azure
 
-Choisissez l’une des options décrites dans cet article pour exécuter des packages SSIS déployés sur la base de données de catalogue SSISDB sur un serveur Azure SQL Database. Vous pouvez exécuter un package directement ou dans le cadre d’un pipeline Azure Data Factory. Pour obtenir une vue d’ensemble de SSIS sur Azure, consultez [Effectuer un « lift-and-shift » des charges de travail SQL Server Integration Services vers le cloud](ssis-azure-lift-shift-ssis-packages-overview.md).
+Choisissez une des méthodes décrites dans cet article pour exécuter des packages SSIS déployés sur le catalogue SSISDB sur un serveur Azure SQL Database. Vous pouvez exécuter un package directement ou dans le cadre d’un pipeline Azure Data Factory. Pour une vue d’ensemble de SSIS sur Azure, consultez [Déployer et exécuter des packages SSIS dans Azure](ssis-azure-lift-shift-ssis-packages-overview.md).
 
 - Exécuter un package directement
 
@@ -81,4 +79,4 @@ Pour plus d’informations, consultez [Exécuter un package SSIS à l’aide de 
 
 ## <a name="next-steps"></a>Étapes suivantes
 
-Découvrez les options disponibles pour planifier des packages SSIS déployés sur Azure. Pour plus d’informations, consultez [Planifier l’exécution d’un package SSIS dans Azure](ssis-azure-schedule-packages.md).
+Découvrez les options disponibles pour planifier des packages SSIS déployés sur Azure. Pour plus d’informations, consultez [Planifier des packages SSIS dans Azure](ssis-azure-schedule-packages.md).

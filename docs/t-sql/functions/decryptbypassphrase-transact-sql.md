@@ -24,16 +24,17 @@ caps.latest.revision: 28
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.openlocfilehash: 01e01348ab88ef33ab38a9fd9040d5ff0174cb26
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: b9aecb41372915f28eaf0e3b41a0fa405faccfc0
+ms.sourcegitcommit: 6e55a0a7b7eb6d455006916bc63f93ed2218eae1
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35239059"
 ---
 # <a name="decryptbypassphrase-transact-sql"></a>DECRYPTBYPASSPHRASE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Déchiffre des données chiffrées par une expression relative au mot de passe.  
+Cette fonction déchiffre les données chiffrées à l’origine avec une phrase secrète.  
   
  ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -49,43 +50,51 @@ DecryptByPassPhrase ( { 'passphrase' | @passphrase }
   
 ## <a name="arguments"></a>Arguments  
  *passphrase*  
- Expression relative au mot de passe utilisée pour générer la clé de déchiffrement.  
+Phrase secrète utilisée pour générer la clé de déchiffrement.  
   
  @passphrase  
- Variable de type **nvarchar**, **char**, **varchar** ou **nchar** qui contient la phrase secrète qui sera utilisée pour générer la clé de déchiffrement.  
+Variable de type
+
++ **char**
++ **nchar**
++ **nvarchar**
+
+ou
+
++ **varchar**
+
+contenant la phrase secrète utilisée pour générer la clé de déchiffrement.  
   
- '*ciphertext*'  
- Texte à déchiffrer.  
+'*ciphertext*'  
+Chaîne de données chiffrées avec la clé. *ciphertext* a le type de données **varbinary**.  
+ 
+@ciphertext  
+Variable de type **varbinary** contenant des données chiffrées avec la clé. La variable*@ciphertext* a une taille maximale de 8 000 octets.  
   
- @ciphertext  
- Variable de type **varbinary** qui contient le texte chiffré. La taille maximale est de 8 000 octets.  
+*add_authenticator*  
+Indique si le processus de chiffrement d’origine comprend et chiffre un authentificateur avec le texte en clair. *add_authenticator* a la valeur 1 si le processus de chiffrement utilise un authentificateur. *add_authenticator* a le type de données **int**.  
   
- *add_authenticator*  
- Indique si un authentificateur a été chiffré en même temps que le texte en clair. La valeur est 1 si un authentificateur a été utilisé. **int**.  
+@add_authenticator  
+Variable indiquant si le processus de chiffrement d’origine comprend et chiffre un authentificateur avec le texte en clair. *@add_authenticator* a la valeur 1 si le processus de chiffrement utilise un authentificateur. *@add_authenticator* a le type de données **int**.  
+
+*authenticator*  
+Données utilisées comme base pour la génération de l’authentificateur. *authenticator* a le type de données **sysname**.  
   
- @add_authenticator  
- Indique si un authentificateur a été chiffré en même temps que le texte en clair. La valeur est 1 si un authentificateur a été utilisé. **int**.  
-  
- *authenticator*  
- Données de l'authentificateur. **sysname**.  
-  
- @authenticator  
- Variable contenant les données à partir desquelles l'authentificateur sera dérivé.  
+@authenticator  
+Variable contenant les données utilisées comme base pour la génération des authentificateurs. *@authenticator* a le type de données **sysname**.  
   
 ## <a name="return-types"></a>Types de retour  
- **varbinary** d’une taille maximale de 8 000 octets.  
+**varbinary** d’une taille maximale de 8 000 octets.  
   
 ## <a name="remarks"></a>Notes   
- Aucune autorisation n'est requise pour cette fonction.  
+`DECRYPTBYPASSPHRASE` ne nécessite pas d’autorisations pour son exécution. `DECRYPTBYPASSPHRASE` retourne NULL si elle reçoit la phrase secrète ou les informations de l’authentificateur incorrectes.  
   
- Renvoie NULL si les informations de l'authentificateur ou de l'expression relative au mot de passe sont incorrectes.  
+`DECRYPTBYPASSPHRASE` utilise la phrase secrète pour générer une clé de déchiffrement. Cette clé de déchiffrement n’est pas conservée.  
   
- L'expression relative au mot de passe est utilisée pour générer une clé de déchiffrement qui n'est pas persistante.  
-  
- Si un authentificateur est inclus lorsque le texte est chiffré, il doit être fourni au moment du déchiffrement. Si la valeur de l'authentificateur fournie au moment du déchiffrement ne correspond pas à la valeur de l'authentificateur chiffrée avec les données, le déchiffrement échoue.  
+Si un authentificateur a été inclus au moment du chiffrement du texte chiffré, `DECRYPTBYPASSPHRASE` doit recevoir ce même authentificateur pour le processus de déchiffrement. Si la valeur de l’authentificateur fournie pour le processus de déchiffrement ne correspond pas à celle initialement utilisée pour chiffrer les données, l’opération `DECRYPTBYPASSPHRASE` échoue.  
   
 ## <a name="examples"></a>Exemples  
- L’exemple suivant déchiffre l’enregistrement mis à jour dans [EncryptByPassPhrase](../../t-sql/functions/encryptbypassphrase-transact-sql.md).  
+L’exemple suivant déchiffre l’enregistrement mis à jour dans [EncryptByPassPhrase](../../t-sql/functions/encryptbypassphrase-transact-sql.md).  
   
 ```  
 USE AdventureWorks2012;  
