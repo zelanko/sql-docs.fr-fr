@@ -36,7 +36,7 @@ ms.lasthandoff: 05/23/2018
   Renvoie des statistiques d'E/S sur les fichiers de données et les journaux. Cette vue de gestion dynamique remplace la [fn_virtualfilestats](../../relational-databases/system-functions/sys-fn-virtualfilestats-transact-sql.md) (fonction).  
   
 > [!NOTE]  
->  Pour appeler cette de [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], utilisez le nom **sys.dm_pdw_nodes_io_virtual_file_stats**. 
+>  Pour appeler cette vue depuis [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], utilisez le nom **sys.dm_pdw_nodes_io_virtual_file_stats**. 
 
 ## <a name="syntax"></a>Syntaxe  
   
@@ -64,7 +64,7 @@ sys.dm_pdw_nodes_io_virtual_file_stats
 
  ID de la base de données. *database_id* est de type int, sans valeur par défaut. Les entrées autorisées sont l'ID d'une base de données ou la valeur NULL. Lorsque vous spécifiez la valeur NULL, toutes les bases de données de l'instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sont renvoyées.  
   
- La fonction intégrée [DB_ID](../../t-sql/functions/db-id-transact-sql.md) peut être spécifié.  
+ La fonction intégrée [DB_ID](../../t-sql/functions/db-id-transact-sql.md) peut être spécifiée.  
   
 *FILE_ID* | VALEUR NULL
 
@@ -72,13 +72,13 @@ sys.dm_pdw_nodes_io_virtual_file_stats
  
 ID du fichier. *FILE_ID* est de type int, sans valeur par défaut. Les entrées autorisées sont l'ID d'un fichier ou la valeur NULL. Lorsque vous spécifiez la valeur NULL, tous les fichiers de la base de données sont renvoyés.  
   
- La fonction intégrée [FILE_IDEX](../../t-sql/functions/file-idex-transact-sql.md) peut être spécifié et fait référence à un fichier de base de données active.  
+ La fonction intégrée [FILE_IDEX](../../t-sql/functions/file-idex-transact-sql.md) peut être spécifiée et fait référence à un fichier de la base de données active.  
   
 ## <a name="table-returned"></a>Table retournée  
   
 |Nom de colonne|Type de données| Description|  
 |-----------------|---------------|-----------------|  
-|**database_name**|**sysname**|Nom de la base de données.</br></br>Pour SQL Data Warehouse, il s’agit de celui de la base de données stocké sur le nœud identifié par pdw_node_id. Chaque nœud dispose d’une base de données tempdb qui comporte des 13 fichiers. Chaque nœud a également une base de données par la distribution, et chaque base de données de distribution a 5 fichiers. Par exemple, si chaque nœud contient 4 distributions, les résultats indiquent 20 fichiers de base de données de distribution par pdw_node_id. 
+|**database_name**|**sysname**|Nom de la base de données.</br></br>Pour SQL Data Warehouse, il s’agit de celui de la base de données stockée sur le nœud identifié par pdw_node_id. Chaque nœud dispose d’une base de données tempdb qui comporte des 13 fichiers. Chaque nœud a également une base de données par la distribution, et chaque base de données de distribution a 5 fichiers. Par exemple, si chaque nœud contient 4 distributions, les résultats indiquent 20 fichiers de base de données de distribution par pdw_node_id. 
 |**database_id**|**smallint**|ID de base de données.|  
 |**file_id**|**smallint**|ID du fichier.|  
 |**sample_ms**|**bigint**|Nombre de millisecondes écoulées depuis le démarrage de l'ordinateur. Cette colonne peut être utilisée pour comparer différents résultats de cette fonction.</br></br>Le type de données est **int** pour [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] via [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|  
