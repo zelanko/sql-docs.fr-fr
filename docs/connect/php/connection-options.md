@@ -66,7 +66,7 @@ Cette rubrique répertorie les options qui sont autorisées dans le tableau asso
 
 4. Instance de *UID* et *PWD* doivent tous deux être définis lors de la connexion avec l’authentification [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] .  
 
-Une grande partie des clés prises en charge sont des attributs de chaîne de connexion ODBC. Pour plus d’informations sur les chaînes de connexion ODBC, consultez [Using Connection String Keywords with SQL Native Client](../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md).  
+Une grande partie des clés prises en charge sont des attributs de chaîne de connexion ODBC. Pour plus d’informations sur les chaînes de connexion ODBC, consultez [Utilisation de mots clés de chaîne de connexion avec SQL Server Native Client](../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md).  
 
 ## <a name="see-also"></a>Voir aussi  
 [Connexion au serveur](../../connect/php/connecting-to-the-server.md)  
