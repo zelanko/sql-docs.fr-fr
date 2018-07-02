@@ -78,7 +78,7 @@ ID du fichier. *FILE_ID* est de type int, sans valeur par défaut. Les entrées 
   
 |Nom de colonne|Type de données| Description|  
 |-----------------|---------------|-----------------|  
-|**database_name**|**sysname**|Nom de la base de données.</br></br>Pour SQL Data Warehouse, il s’agit de celui de la base de données stockée sur le nœud identifié par pdw_node_id. Chaque nœud dispose d’une base de données tempdb qui comporte des 13 fichiers. Chaque nœud a également une base de données par la distribution, et chaque base de données de distribution a 5 fichiers. Par exemple, si chaque nœud contient 4 distributions, les résultats indiquent 20 fichiers de base de données de distribution par pdw_node_id. 
+|**database_name**|**sysname**|Nom de la base de données.</br></br>Pour SQL Data Warehouse, il s’agit de celui de la base de données stockée sur le nœud identifié par pdw_node_id. Chaque nœud a une base de données tempdb qui comporte 13 fichiers. Chaque nœud a également une base de données par distribution, et chaque base de données de la distribution a 5 fichiers. Par exemple, si chaque nœud contient 4 distributions, les résultats indiquent 20 fichiers de base de données de distribution par pdw_node_id. 
 |**database_id**|**smallint**|ID de base de données.|  
 |**file_id**|**smallint**|ID du fichier.|  
 |**sample_ms**|**bigint**|Nombre de millisecondes écoulées depuis le démarrage de l'ordinateur. Cette colonne peut être utilisée pour comparer différents résultats de cette fonction.</br></br>Le type de données est **int** pour [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] via [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|  
