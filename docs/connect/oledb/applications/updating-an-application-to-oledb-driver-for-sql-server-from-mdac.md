@@ -22,7 +22,7 @@ ms.author: Pedro.Lopes
 manager: craigg
 ms.openlocfilehash: 11597ed3b7cd80cae8604291bd8b662bf6a9ed80
 ms.sourcegitcommit: 354ed9c8fac7014adb0d752518a91d8c86cdce81
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 06/14/2018
 ms.locfileid: "35612104"
@@ -62,7 +62,7 @@ ms.locfileid: "35612104"
 
 -   Des changements mineurs affectent les avertissements et les erreurs. Avertissements et erreurs retournées par le serveur maintenant conservent la même gravité lorsqu’ils sont passées au pilote OLE DB pour SQL Server. Vous devez vous assurer d'avoir rigoureusement testé votre application si vous comptez sur l'interception d'avertissements et d'erreurs particuliers.  
 
--   Pilote OLE DB pour SQL Server a la vérification que MDAC, ce qui signifie que certaines applications non conformes strictement aux spécifications OLE DB peuvent se comporter différemment des erreurs plus stricte. Par exemple, le fournisseur SQLOLEDB n’applique pas la règle de noms de paramètre doivent commencer par ' @' pour résultat paramètres, mais le pilote OLE DB pour SQL Server effectue.  
+-   Pilote OLE DB pour SQL Server a la vérification que MDAC, ce qui signifie que certaines applications non conformes strictement aux spécifications OLE DB peuvent se comporter différemment des erreurs plus stricte. Par exemple, le fournisseur SQLOLEDB n’applique pas la règle de noms de paramètre doivent commencer par ' \@' pour résultat paramètres, mais le pilote OLE DB pour SQL Server effectue.  
 
 -   Pilote OLE DB pour SQL Server se comporte différemment de MDAC en ce qui concerne les connexions qui ont échoué. Par exemple, MDAC retourne des valeurs de propriété mises en cache pour une connexion qui a échoué, alors que le pilote OLE DB pour SQL Server signale une erreur à l’application appelante.  
 
