@@ -1,5 +1,5 @@
 ---
-title: Déploiement (serveur de rapports en Mode natif) montée en puissance | Documents Microsoft
+title: Montée en puissance déploiement (serveur de rapports en Mode natif) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,23 +8,23 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - SQL12.rsconfigtool.scaleoutdeployment.F1
 ms.assetid: 4df38294-6f9d-4b40-9f03-1f01c1f0700c
 caps.latest.revision: 8
 author: markingmyname
 ms.author: maghan
-manager: jhubbard
-ms.openlocfilehash: d995052fe279fcc354a3293d881714bb3ec4bcb4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 8038c9cbbce2eeb68b6e23b91fba1d7b0a2e708e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36037935"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37151800"
 ---
 # <a name="scale-out-deployment-native-mode-report-server"></a>Déploiement avec montée en puissance parallèle (serveur de rapports en mode natif)
-  Utilisez le **déploiement avec montée en puissance parallèle** page [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Configuration Manager pour afficher l’état de l’initialisation d’un déploiement avec montée en puissance parallèle ou pour joindre un serveur de rapports à un déploiement avec montée en charge. Un *déploiement avec montée en puissance* fait référence à deux ou plusieurs instances de serveurs de rapports qui partagent une même base de données de serveur de rapports.  
+  Utilisez le **déploiement évolutif** page [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Configuration Manager pour afficher l’état d’initialisation pour un déploiement évolutif ou pour joindre un serveur de rapports à un déploiement avec montée en puissance. Un *déploiement avec montée en puissance* fait référence à deux ou plusieurs instances de serveurs de rapports qui partagent une même base de données de serveur de rapports.  
   
  [!INCLUDE[applies](../../includes/applies-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] en mode natif.  
   
@@ -38,11 +38,11 @@ ms.locfileid: "36037935"
   
  Pour configurer un déploiement avec montée en puissance parallèle, commencez par deux instances de serveurs de rapports ou plus qui sont toutes connectées à la même base de données de serveur de rapports. Après que toutes les instances ont été installées, vous vous connectez au premier serveur de rapports, puis utilisez la page Déploiement avec montée en puissance parallèle pour attacher chaque instance supplémentaire. Seul un serveur de rapports déjà initialisé pour utiliser une base de données peut initialiser des nœuds supplémentaires.  
   
- Pour ouvrir cette page, démarrez le [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Configuration Manager et sélectionnez **déploiement avec montée en puissance parallèle** dans le volet de navigation. Pour plus d’informations, consultez [Gestionnaire de configuration de Reporting Services &#40;mode natif&#41;](../../../2014/sql-server/install/reporting-services-configuration-manager-native-mode.md).  
+ Pour ouvrir cette page, démarrez le [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Configuration Manager et sélectionnez **déploiement évolutif** dans le volet de navigation. Pour plus d’informations, consultez [Gestionnaire de configuration de Reporting Services &#40;mode natif&#41;](../../../2014/sql-server/install/reporting-services-configuration-manager-native-mode.md).  
   
 ## <a name="options"></a>Options  
  **Nom du serveur SQL**  
- Spécifiez le nom de la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] instance qui héberge la base de données du serveur de rapports.  
+ Spécifiez le nom de la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] instance qui héberge la base de données de serveur de rapports.  
   
  **Database Name**  
  Spécifie le nom de la base de données à laquelle l'instance de serveur de rapports est connectée.  

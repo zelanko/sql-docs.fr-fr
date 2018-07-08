@@ -1,5 +1,5 @@
 ---
-title: Instructions et Limitations de XML en bloc charge (SQLXML 4.0) | Documents Microsoft
+title: Instructions et Limitations de XML en bloc charge (SQLXML 4.0) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -15,15 +15,15 @@ helpviewer_keywords:
 - bulk load [SQLXML], about bulk load
 ms.assetid: c5885d14-c7c1-47b3-a389-455e99a7ece1
 caps.latest.revision: 25
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 7499332a73117dc75137915f9023f08eb79a9d8d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 22ef1e64e2c8cf3dc1af65fde51c7b12107f1916
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36038741"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37149360"
 ---
 # <a name="guidelines-and-limitations-of-xml-bulk-load-sqlxml-40"></a>Règles et limitations du chargement en masse XML (SQLXML 4.0)
   Lorsque vous utilisez le chargement en masse XML, vous devez connaître les indications et les limitations suivantes :  
@@ -82,7 +82,7 @@ ms.locfileid: "36038741"
   
 -   Si le schéma ne spécifie pas de colonnes de dépassement à l'aide de l'annotation `sql:overflow-field`, le chargement en masse XML ignore toutes les données qui sont présentes dans le document XML, mais qui ne sont pas décrites dans le schéma de mappage.  
   
-     Le chargement en masse XML applique le schéma de mappage que vous avez spécifié toutes les fois qu'il rencontre des balises connues dans le flux de données XML. Il ignore les données qui sont présentes dans le document XML mais qui ne sont pas décrites dans le schéma. Par exemple, supposons que vous disposez d’un schéma de mappage qui décrit un  **\<client >** élément. Le fichier de données XML a une  **\<AllCustomers >** racine de balise (qui n’est pas décrite dans le schéma) qui englobe tous les  **\<client >** éléments :  
+     Le chargement en masse XML applique le schéma de mappage que vous avez spécifié toutes les fois qu'il rencontre des balises connues dans le flux de données XML. Il ignore les données qui sont présentes dans le document XML mais qui ne sont pas décrites dans le schéma. Par exemple, supposons que vous avez un schéma de mappage qui décrit un  **\<client >** élément. Le fichier de données XML a une  **\<AllCustomers >** racine de balise (qui n’est pas décrite dans le schéma) qui englobe tous les  **\<client >** éléments :  
   
     ```  
     <AllCustomers>  
@@ -94,7 +94,7 @@ ms.locfileid: "36038741"
   
      Dans ce cas, le chargement en masse XML ignore les  **\<AllCustomers >** élément et commence le mappage à la  **\<client >** élément. Le chargement en masse XML ignore les éléments qui ne sont pas décrits dans le schéma mais qui sont présents dans le document XML.  
   
-     Envisagez d’un autre fichier de données source XML contienne  **\<ordre >** éléments. Ces éléments ne sont pas décrits dans le schéma de mappage :  
+     Envisagez un autre fichier de données source XML contienne  **\<ordre >** éléments. Ces éléments ne sont pas décrits dans le schéma de mappage :  
   
     ```  
     <AllCustomers>  
@@ -110,7 +110,7 @@ ms.locfileid: "36038741"
     </AllCustomers>  
     ```  
   
-     Chargement en masse XML ignore ces  **\<ordre >** éléments. Mais si vous utilisez la `sql:overflow-field`annotation dans le schéma pour identifier une colonne comme une colonne de dépassement de capacité, le chargement en masse XML stocke toutes les données non consommées dans cette colonne.  
+     Chargement en masse XML ignore ces  **\<ordre >** éléments. Mais si vous utilisez le `sql:overflow-field`annotation dans le schéma pour identifier une colonne comme une colonne de dépassement, le chargement en masse XML stocke toutes les données non consommées dans cette colonne.  
   
 -   Les sections CDATA et les références d'entité sont traduites en chaînes équivalentes avant d'être stockées dans la base de données.  
   
@@ -124,7 +124,7 @@ ms.locfileid: "36038741"
   
 -   Si le schéma de mappage spécifie la valeur par défaut pour un attribut et que les données de source XML ne contiennent pas cet attribut, le chargement en masse XML utilise la valeur par défaut.  
   
-     L’exemple de schéma XDR suivant affecte la valeur par défaut pour le **HireDate** attribut :  
+     L’exemple de schéma XDR suivant assigne une valeur par défaut pour le **HireDate** attribut :  
   
     ```  
     <?xml version="1.0" ?>  
@@ -162,13 +162,13 @@ ms.locfileid: "36038741"
   
      Les tables qui sont identifiées dans le schéma de mappage sont créées (la base de données doit exister). Si un ou plusieurs des tables existe déjà dans la base de données, la sgdroptables, propriété détermine si ces tables préexistantes doivent être supprimées et recréées.  
   
--   Si vous spécifiez la propriété SchemaGen (par exemple, SchemaGen = true), les tables sont identifiées dans le schéma de mappage sont créées. Mais SchemaGen ne crée pas toutes les contraintes (telles que les contraintes PRIMARY KEY/FOREIGN KEY) sur ces tables à une exception près : si les nœuds XML qui constituent la clé primaire dans une relation sont définies comme ayant un type XML de l’ID (autrement dit, `type="xsd:ID"` pour XSD) sguseid, de la propriété est définie sur True pour SchemaGen, puis non seulement les clés primaires sont créées à partir de l’ID tapé des nœuds, mais les relations clé primaire/étrangère clées sont créées à partir de relations de schéma de mappage.  
+-   Si vous spécifiez la propriété SchemaGen (par exemple, SchemaGen = true), les tables sont identifiées dans le schéma de mappage sont créées. Mais SchemaGen ne crée pas de toutes les contraintes (telles que les contraintes PRIMARY KEY/FOREIGN KEY) sur ces tables à une exception près : si les nœuds XML qui constituent la clé primaire dans une relation sont définies comme ayant un type XML de l’ID (autrement dit, `type="xsd:ID"` pour XSD) et sguseid, de la propriété est définie sur True pour SchemaGen, non seulement les clés primaires sont créés à partir de l’ID tapé des nœuds, mais les relations clé primaire/étrangère clées sont créées à partir de relations de schéma de mappage.  
   
--   SchemaGen n’utilise pas de facettes de schéma XSD et les extensions pour générer les données relationnelles [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] schéma.  
+-   SchemaGen n’utilise pas les facettes du schéma XSD et les extensions pour générer les données relationnelles [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] schéma.  
   
 -   Si vous spécifiez la propriété SchemaGen (par exemple, SchemaGen = true) sur le chargement en masse, uniquement les tables (et pas les vues de nom partagé) spécifiées sont mises à jour.  
   
--   SchemaGen fournit uniquement les fonctionnalités de base pour générer le schéma relationnel à partir de XSD annotés. L'utilisateur doit modifier manuellement les tables générées, si nécessaire.  
+-   SchemaGen fournit uniquement les fonctionnalités de base pour générer le schéma relationnel à partir de XSD annoté. L'utilisateur doit modifier manuellement les tables générées, si nécessaire.  
   
 -   Où plus qu’une relation existe entre les tables, SchemaGen tente de créer une relation unique qui inclut toutes les clés impliquées entre les deux tables. Cette limitation peut être à l'origine d'une erreur [!INCLUDE[tsql](../../../includes/tsql-md.md)].  
   

@@ -1,5 +1,5 @@
 ---
-title: Configurer les informations d’identification stockées pour l’actualisation des données PowerPivot (PowerPivot pour SharePoint) | Documents Microsoft
+title: Configurer les informations d’identification stockées pour l’actualisation des données PowerPivot (PowerPivot pour SharePoint) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 987eff0f-bcfe-4bbd-81e0-9aca993a2a75
 caps.latest.revision: 7
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 2e9fe20bf0ca2c41060efffdfc85eedc5b4c01b9
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: e2e6287e4631a2179fdfcac6dfc28506b21ef9cc
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36038267"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37161550"
 ---
 # <a name="configure-stored-credentials-for-powerpivot-data-refresh-powerpivot-for-sharepoint"></a>Configurer les informations d'identification stockées pour l'actualisation des données PowerPivot (PowerPivot pour SharePoint)
   Les travaux d'actualisation des données PowerPivot peuvent s'exécuter sous n'importe quel compte d'utilisateur Windows, du moment que vous créez une application cible dans le service Banque d'informations sécurisé pour stocker les informations d'identification que vous souhaitez utiliser. De la même façon, si vous souhaitez fournir une connexion à une base de données qui varie de celle utilisée à l'origine pour importer les données dans PowerPivot pour Excel, vous pouvez mapper ces informations d'identification à une application cible de service Banque d'informations sécurisé, puis spécifier cette application cible dans une planification d'actualisation des données.  
@@ -38,7 +38,7 @@ ms.locfileid: "36038267"
   
  [Configurer un compte prédéfini pour l’accès aux sources de données externes ou tierces](#config3rd)  
   
- Si vous avez des problèmes de configuration ou à l’aide de l’actualisation des données, reportez-vous à la [résolution des problèmes d’actualisation des données PowerPivot](http://go.microsoft.com/fwlink/?LinkID=223279) page sur le wiki TechNet pour les solutions possibles.  
+ Si vous rencontrez des problèmes de configuration ou à l’aide de l’actualisation des données, reportez-vous à la [résolution des problèmes d’actualisation des données PowerPivot](http://go.microsoft.com/fwlink/?LinkID=223279) page sur le wiki TechNet pour les solutions possibles.  
   
 ##  <a name="configAny"></a> Configurer un compte Windows pour l’actualisation des données  
  Lorsqu'un utilisateur SharePoint définit une planification d'actualisation des données, il doit spécifier l'identité de l'utilisateur sous laquelle l'actualisation des données est effectuée. Les options incluent la sélection du compte d'actualisation des données PowerPivot sans assistance, l'entrée de son compte d'utilisateur de domaine Windows ou la saisie d'un autre compte d'utilisateur Windows valide pour l'actualisation des données. Les étapes de cette section concernent la dernière option : la spécification d'un autre compte Windows.  
@@ -62,9 +62,9 @@ ms.locfileid: "36038267"
   
 1.  Dans l'Administration centrale, sous Gestion des applications, cliquez sur **Gérer les applications de service**.  
   
-2.  Cliquez sur **Service de magasin sécurisé**.  
+2.  Cliquez sur **Secure Store Service**.  
   
-3.  Dans gérer les Applications cibles, cliquez sur **nouveau**.  
+3.  Dans gérer les Applications cibles, cliquez sur **New**.  
   
 4.  Dans ID d'application cible, tapez une chaîne de texte. La chaîne doit être unique, mais également facile à mémoriser. Les utilisateurs tapent cette chaîne dans les pages de planification de l'actualisation des données à chaque fois qu'ils veulent utiliser les informations d'identification stockées dans cette application.  
   
@@ -81,7 +81,7 @@ ms.locfileid: "36038267"
   
 9. Cliquez sur **Suivant**.  
   
-10. Dans le **spécifier les champs d’informations d’identification pour votre application cible de banque d’informations sécurisée** page, acceptez les valeurs par défaut. Types et les noms de champ doivent être un nom d’utilisateur Windows et le mot de passe Windows.  
+10. Dans le **spécifiez les champs d’informations d’identification pour votre application cible Store sécurisée** page, acceptez les valeurs par défaut. Types et les noms de champ doivent être un nom d’utilisateur Windows et le mot de passe Windows.  
   
 11. Cliquez sur Suivant.  
   
@@ -91,7 +91,7 @@ ms.locfileid: "36038267"
   
     1.  En tant que créateur de l'application, ajoutez votre compte d'utilisateur Windows à la liste Membres.  
   
-    2.  Ajoutez l'identité du pool d'applications de l'application de service PowerPivot afin qu'elle puisse récupérer les informations d'identification lors de la planification de l'exécution de l'actualisation des données. Pour afficher l’identité du pool d’applications, accédez à **gérer les applications de service**, sélectionnez l’application de service PowerPivot en cliquant sur l’espace vide en regard du nom (pour sélectionner la ligne), puis cliquez sur **depropriétés**. Le compte de sécurité qui apparaît dans cette page est le compte à ajouter comme membre de l'application cible.  
+    2.  Ajoutez l'identité du pool d'applications de l'application de service PowerPivot afin qu'elle puisse récupérer les informations d'identification lors de la planification de l'exécution de l'actualisation des données. Pour afficher l’identité de pool d’applications, accédez à **gérer les applications de service**, sélectionnez l’application de service PowerPivot en cliquant sur l’espace vide en regard du nom (pour sélectionner la ligne), puis cliquez sur **propriétés**. Le compte de sécurité qui apparaît dans cette page est le compte à ajouter comme membre de l'application cible.  
   
     3.  Ajoutez les comptes d'utilisateur et de groupe Windows qui seront inclus dans cette application cible dans les planifications d'actualisation des données.  
   
@@ -118,9 +118,9 @@ ms.locfileid: "36038267"
   
 4.  Dans accorder des autorisations, sélectionnez **accorder directement les autorisations des utilisateurs**.  
   
-5.  Sélectionnez **collaboration**, puis cliquez sur **OK**.  
+5.  Sélectionnez **Contribute**, puis cliquez sur **OK**.  
   
-###  <a name="bkmk_dbread"></a> Étape 3 : Accorder des autorisations pour accéder aux sources de données externes utilisées dans l’actualisation des données de lecture  
+###  <a name="bkmk_dbread"></a> Étape 3 : Des permissions de lecture pour accéder aux sources de données externes utilisées dans l’actualisation des données  
  Lors de l'importation de données dans un classeur PowerPivot, les connexions aux données externes sont souvent basées sur des connexions approuvées ou des connexions avec emprunt d'identité qui utilisent l'identité de l'utilisateur actuel pour se connecter à la source de données. Ces types de connexions fonctionnent uniquement lorsque l'utilisateur actuel a l'autorisation de lire les données importées.  
   
  Dans un scénario d'actualisation de données, la chaîne de connexion utilisée pour importer des données est réutilisée pour actualiser les données. Si la chaîne de connexion suppose qu'il s'agit de l'utilisateur actuel (par exemple, une chaîne qui inclut Integrated_Security=SSPI), le service système PowerPivot passera alors l'identité de l'utilisateur spécifié dans l'application cible en tant qu'utilisateur actuel. Cette connexion réussira uniquement si le compte a des autorisations en lecture sur la source de données externe.  
@@ -131,15 +131,15 @@ ms.locfileid: "36038267"
   
 ###  <a name="bkmk_verify"></a> Étape 4 : Vérifier la disponibilité du compte dans les données des pages de configuration de l’actualisation  
   
-1.  Ouvrez une page de configuration de l'actualisation des données pour un classeur publié qui contient des données PowerPivot. Pour obtenir des instructions sur la façon d’ouvrir la page, consultez [planifier une actualisation des données &#40;PowerPivot pour SharePoint&#41;](schedule-a-data-refresh-powerpivot-for-sharepoint.md).  
+1.  Ouvrez une page de configuration de l'actualisation des données pour un classeur publié qui contient des données PowerPivot. Pour obtenir des instructions ouvrir la page, consultez [planifier une actualisation des données &#40;PowerPivot pour SharePoint&#41;](schedule-a-data-refresh-powerpivot-for-sharepoint.md).  
   
-2.  Vérifiez que le **se connecter en utilisant les informations d’identification enregistrées dans Service de magasin sécurisé (SSS) pour vous connecter à la source de données** option est activée dans la page de configuration de l’actualisation de données, puis entrez le nom de l’application cible.  
+2.  Vérifiez que le **se connecter en utilisant les informations d’identification enregistrées dans Secure Store Service (SSS) pour vous connecter à la source de données** option est activée dans la page de configuration de l’actualisation de données, puis entrez le nom de l’application cible.  
   
 3.  Sélectionnez le **aussi actualiser dès que possible** case à cocher, puis cliquez sur **OK**.  
   
-4.  Dans la bibliothèque qui contient le classeur, sélectionnez le classeur et cliquez sur la flèche bas qui apparaît à droite, puis sélectionnez **gérer l’actualisation des données PowerPivot**. Vous devrez peut-être attendre plusieurs minutes si le travail d'actualisation des données retourne une grande quantité de données.  
+4.  Dans la bibliothèque qui contient le classeur, sélectionnez le classeur, cliquez sur la flèche bas qui apparaît à droite, puis **gérer l’actualisation des données PowerPivot**. Vous devrez peut-être attendre plusieurs minutes si le travail d'actualisation des données retourne une grande quantité de données.  
   
- Si une erreur se produit, vous pouvez cliquer sur **configurer la planification** dans l’actualisation des données page d’historique pour essayer différentes informations d’identification. Vous devrez également peut-être inspecter les informations de connexion à la source de données dans le classeur d'origine pour afficher la chaîne de connexion utilisée pendant l'actualisation des données. La chaîne de connexion fournira des informations sur l'emplacement du serveur et la base de données que vous pouvez utiliser pour résoudre le problème.  
+ Si une erreur se produit, vous pouvez cliquer sur **configurer la planification** dans l’actualisation des données page Historique pour essayer différentes informations d’identification. Vous devrez également peut-être inspecter les informations de connexion à la source de données dans le classeur d'origine pour afficher la chaîne de connexion utilisée pendant l'actualisation des données. La chaîne de connexion fournira des informations sur l'emplacement du serveur et la base de données que vous pouvez utiliser pour résoudre le problème.  
   
  Pour plus d’informations sur la résolution des problèmes, consultez [résolution des problèmes d’actualisation des données PowerPivot](http://go.microsoft.com/fwlink/p/?LinkID=223279) sur le TechNet Wiki.  
   
@@ -148,13 +148,13 @@ ms.locfileid: "36038267"
   
  Cette étape est nécessaire uniquement si vous souhaitez proposer aux utilisateurs une option de remplacement des informations d'identification de base de données qui sont déjà incorporées dans le classeur PowerPivot.  
   
- Cette étape fonctionne seulement si la chaîne de connexion inclut déjà un nom d'utilisateur et un mot de passe. Notez que le fait d'avoir des informations d'identification dans la chaîne de connexion est relativement rare ; votre capacité à utiliser cette option est donc quelque peu limitée. Dans la plupart des cas, vous aurez seulement un ID d'utilisateur et un mot de passe dans la chaîne de connexion si vous utilisez l'authentification de base de données pour vous connecter à la source de données. Pour plus d’informations sur la façon de vérifier la chaîne de connexion pour voir si elle inclut un ID utilisateur et un mot de passe, consultez la section « Octroyer les autorisations pour créer des planifications et accéder aux données externes » dans [d’actualisation des données PowerPivot avec SharePoint 2010](powerpivot-data-refresh-with-sharepoint-2010.md).  
+ Cette étape fonctionne seulement si la chaîne de connexion inclut déjà un nom d'utilisateur et un mot de passe. Notez que le fait d'avoir des informations d'identification dans la chaîne de connexion est relativement rare ; votre capacité à utiliser cette option est donc quelque peu limitée. Dans la plupart des cas, vous aurez seulement un ID d'utilisateur et un mot de passe dans la chaîne de connexion si vous utilisez l'authentification de base de données pour vous connecter à la source de données. Pour plus d’informations sur la vérification de la chaîne de connexion pour voir si elle inclut un ID utilisateur et le mot de passe, consultez la section « Accorder des autorisations pour créer des planifications et accéder aux données externes » dans [d’actualisation des données PowerPivot avec SharePoint 2010](powerpivot-data-refresh-with-sharepoint-2010.md).  
   
 1.  Dans l'Administration centrale, sous Gestion des applications, cliquez sur **Gérer les applications de service**.  
   
-2.  Cliquez sur **Service de magasin sécurisé**.  
+2.  Cliquez sur **Secure Store Service**.  
   
-3.  Dans gérer les Applications cibles, cliquez sur **nouveau**.  
+3.  Dans gérer les Applications cibles, cliquez sur **New**.  
   
 4.  Dans ID d'application cible, tapez une chaîne de texte. La chaîne doit être unique, mais également facile à mémoriser. Les utilisateurs tapent cette chaîne dans les pages de planification de l'actualisation des données à chaque fois qu'ils veulent utiliser les informations d'identification stockées dans cette application.  
   
@@ -168,7 +168,7 @@ ms.locfileid: "36038267"
   
 9. Cliquez sur **Suivant**.  
   
-10. Dans le **spécifier les champs d’informations d’identification pour votre application cible de banque d’informations sécurisée** page, acceptez les valeurs par défaut uniquement si la source de données utilise l’authentification Windows. Sinon, choisissez les types de champ valides pour votre source de données, puis modifiez les noms de champ afin qu'ils correspondent au type.  
+10. Dans le **spécifiez les champs d’informations d’identification pour votre application cible Store sécurisée** page, acceptez les valeurs par défaut uniquement si la source de données utilise l’authentification Windows. Sinon, choisissez les types de champ valides pour votre source de données, puis modifiez les noms de champ afin qu'ils correspondent au type.  
   
      Par exemple, vous pouvez spécifier Nom d'utilisateur SQL Server et Mot de passe de l'utilisateur SQL Server pour les noms de champs, puis choisir Nom d'utilisateur et Mot de passe pour les types de champs.  
   

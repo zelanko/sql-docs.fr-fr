@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - affinity I/O mask option
 - processor affinity [SQL Server]
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - CPU affinity mask option
 ms.assetid: 9950a8c9-9fe0-4003-95df-6f0d1becb0e7
 caps.latest.revision: 29
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: e3581012106e10eeac623028f2785205838f5f96
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 905421043a2d595d08bc1780213f91811f5c0960
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36038401"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37159040"
 ---
 # <a name="affinity-input-output-mask-server-configuration-option"></a>affinity Input-Output mask (option de configuration de serveur)
   Pour exécuter des travaux multitâche, [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 2000 et Windows Server 2003 transfèrent parfois des threads de processus entre différents processeurs. Bien qu’efficace du point de vue du système d’exploitation, cette activité peut réduire les performances de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sous des charges de système intenses, car des données sont rechargées de façon répétée dans chaque cache de processeur. L'affectation de processeurs à des threads spécifiques peut améliorer les performances sous ces conditions en éliminant les rechargements de processeur ; une telle association entre un thread et un processeur est qualifiée d'affinité de processeur.  
@@ -62,7 +62,7 @@ ms.locfileid: "36038401"
   
 -   0 pour l’option **affinity I/O mask** et 1 pour l’option **affinity mask** .  
   
- L’option **affinity I/O mask** est une option avancée. Si vous utilisez la `sp_configure` pour modifier le paramètre de procédure stockée système, vous pouvez modifier **masque d’affinité d’e/s** uniquement lorsque **show advanced options** est définie sur 1. Dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], reconfigurer l’option **affinity I/O mask** requiert un redémarrage de l’instance [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
+ L’option **affinity I/O mask** est une option avancée. Si vous utilisez le `sp_configure` procédures stockées système pour modifier le paramètre, vous pouvez modifier **masque d’affinité d’e/s** uniquement lorsque **afficher les options avancées** est défini sur 1. Dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], reconfigurer l’option **affinity I/O mask** requiert un redémarrage de l’instance [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 > [!CAUTION]  
 >  Évitez de configurer l'affinité de processeur dans le système d'exploitation Windows et le masque d'affinité dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Ces paramètres tentent d'obtenir le même résultat et, si les configurations sont incohérentes, les résultats risquent d'être imprévisibles. L'affinité de processeur de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] est configurée de façon optimale à l'aide de l'option `sp_configure` dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  

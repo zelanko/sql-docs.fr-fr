@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Data Profiling Task Editor
 ms.assetid: 9ccb8fc5-f65e-41a2-9511-7fa55586eb8b
 caps.latest.revision: 24
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 690fcb3380d5ceb3a996ca3f77c926bf16dee9a6
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 96287b68f0d6610beab336bdb3ad3477e5d6ef66
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36038170"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37178326"
 ---
 # <a name="column-pattern-profile-request-options-data-profiling-task"></a>Options Demande de profil de modèle de colonne (tâche de profilage des données)
   Utilisez le volet **Propriétés de la demande** de la page **Demandes de profil** pour définir les options de la **Demande de profil de modèle de colonne** sélectionnée dans le volet Demandes. Un profil de modèle de colonne signale un ensemble d'expressions régulières qui reflètent le pourcentage spécifié des valeurs dans une colonne de chaîne. Ce profil peut vous aider à identifier des problèmes dans vos données, tels que les chaînes non valides, et peut suggérer des expressions régulières susceptibles d'être utilisées à l'avenir pour la validation de nouvelles valeurs. Par exemple, le profil de modèle d'une colonne États-Unis/Codes postaux peut générer les expressions régulières \d{5}-\d{4}, \d{5} et \d{9}. Si vous rencontrez d'autres expressions régulières, il est probable que vos données contiennent des valeurs qui ne sont pas valides ou utilisent un format incorrect.  
@@ -36,7 +36,7 @@ ms.locfileid: "36038170"
   
 -   **Séparateurs** Par défaut, la liste des séparateurs contient les caractères suivants : espace, tabulation horizontale (\t), nouvelle ligne (\n) et retour chariot (\r). Vous pouvez définir d'autres séparateurs mais vous ne pouvez pas supprimer les séparateurs par défaut.  
   
--   **Symboles** par défaut, la liste des **symboles** contient les caractères suivants : `,.;:-"'`~ = & / @ ! ? (), <> []{}| #* ^ %`. For example, if the symbols are "`()-' », la valeur « (425) 123-4567 » est divisée en [« («, « 425 », «) », « 123 », «-«, « 4567 », ») »].  
+-   **Symboles** par défaut, la liste des **symboles** contient les caractères suivants : `,.;:-"'`~ = & / @ ! ? (), <> []{}| #* ^ %`. For example, if the symbols are "`()-' », la valeur « (425) 123-4567 » est tokenisée en tant que ["(", "425", «) », « 123 », «-«, « 4567 », ») »].  
   
  Un caractère ne peut pas être à la fois un séparateur et un symbole.  
   

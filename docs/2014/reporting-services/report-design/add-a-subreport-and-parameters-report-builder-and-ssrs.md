@@ -8,28 +8,28 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - "10093"
 - sql12.rtp.rptdesigner.subreportproperties.general.f1
 ms.assetid: 94f960f8-a629-4f1e-8277-c3b8f0680d98
 caps.latest.revision: 8
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: f99f7baef82824a4af4c9520825043523bb8255d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 05784b220a590166b00605ff921508979e633f64
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36037929"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37179536"
 ---
 # <a name="add-a-subreport-and-parameters-report-builder-and-ssrs"></a>Ajouter un sous-rapport et des paramètres (Générateur de rapports et SSRS)
   Ajoutez des sous-rapports à un rapport pour créer un rapport principal servant de conteneur à plusieurs rapports connexes. Un sous-rapport est une référence à un autre rapport. Pour connecter les rapports par des valeurs de données (par exemple, pour que plusieurs rapports indiquent des données pour le même client), vous devez désigner un rapport paramétrable (par exemple, un rapport qui affiche les renseignements concernant un client spécifique) en tant que sous-rapport. Lorsque vous ajoutez un sous-rapport au rapport principal, vous pouvez spécifier des paramètres à passer au sous-rapport.  
   
  Vous pouvez aussi ajouter des sous-rapports aux lignes ou colonnes dynamiques d'une table ou d'une matrice. Lorsque le rapport principal est traité, le sous-rapport est traité pour chaque ligne. Dans ce cas, demandez-vous si vous pouvez obtenir le résultat escompté en utilisant des régions de données classiques ou imbriquées.  
   
- Pour ajouter un sous-rapport à un rapport, vous devez d'abord créer le rapport qui sert de sous-rapport. Pour plus d’informations sur la création du sous-rapport, consultez [sous-rapports &#40;le Générateur de rapports et SSRS&#41;](subreports-report-builder-and-ssrs.md).  
+ Pour ajouter un sous-rapport à un rapport, vous devez d'abord créer le rapport qui sert de sous-rapport. Pour plus d’informations sur la création du sous-rapport, consultez [sous-rapports &#40;Générateur de rapports et SSRS&#41;](subreports-report-builder-and-ssrs.md).  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
@@ -76,7 +76,7 @@ ms.locfileid: "36037929"
      La modification de l'ordre d'un paramètre n'a aucun effet sur le traitement du sous-rapport.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Sous-rapports &#40;rapport Générateur et SSRS&#41;](subreports-report-builder-and-ssrs.md)   
+ [Sous-rapports &#40;Générateur de rapports et SSRS&#41;](subreports-report-builder-and-ssrs.md)   
  [Comportements de rendu &#40;Générateur de rapports et SSRS&#41;](rendering-behaviors-report-builder-and-ssrs.md)  
   
   

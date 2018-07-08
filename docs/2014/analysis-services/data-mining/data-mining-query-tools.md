@@ -1,5 +1,5 @@
 ---
-title: Interfaces de requête d’exploration de données | Documents Microsoft
+title: Interfaces de requête d’exploration de données | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - predictions [Analysis Services], DMX prediction queries
 - predictions [DMX]
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - mining models [Analysis Services], DMX
 ms.assetid: a8952427-fd8c-4300-8f62-25f57ac1be0c
 caps.latest.revision: 49
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 3ee9db3934e1f9f89a4bbbb292a4dcea4bc7b7bb
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 07641be25c1e7828238ea4a6dd897240651735ce
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36038710"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37159650"
 ---
 # <a name="data-mining-query-interfaces"></a>Interface de requête d'exploration de données
   Les requêtes d'exploration de données sont basées sur le langage DMX (Data Mining Extensions). Vous utilisez DMX pour toutes les tâches de prédiction et de modélisation, notamment la classification, l'évaluation des risques, la génération de recommandations et la régression linéaire. Vous pouvez également récupérer les modèles et les statistiques générés lorsque vous avez traité le modèle.  
@@ -62,10 +62,10 @@ ms.locfileid: "36038710"
 ###  <a name="bkmk_Builder"></a> Générateur de requêtes de prédiction  
  Le Générateur de requêtes de prédiction est inclus sous l’onglet **Prévision de modèle d’exploration de données** du Concepteur d’exploration de données, disponible dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]et [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  
   
- Lorsque vous utilisez le générateur de requêtes, vous pouvez utiliser des outils graphiques pour sélectionner un modèle d'exploration de données, ajouter de nouvelles données de cas, ainsi que des fonctions de prédiction. Le Générateur de requêtes de prédiction inclut un éditeur de texte qui vous permet de modifier manuellement la requête et une simple **résultats** volet pour afficher les résultats de la requête.  
+ Lorsque vous utilisez le générateur de requêtes, vous pouvez utiliser des outils graphiques pour sélectionner un modèle d'exploration de données, ajouter de nouvelles données de cas, ainsi que des fonctions de prédiction. Le Générateur de requêtes de prédiction inclut un éditeur de texte que vous pouvez utiliser pour modifier la requête manuellement et une simple **résultats** volet pour afficher les résultats de la requête.  
   
 ###  <a name="bkmk_QueryEditor"></a> Éditeur de requête  
- Dans l’éditeur de requête [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] fournit des outils que vous pouvez utiliser pour générer et exécuter des requêtes DMX. Vous pouvez vous connecter à une instance de SQL Server Analysis Services, puis sélectionner une base de données, des colonnes de structure d'exploration de données, ainsi qu'un modèle d'exploration de données. **L’explorateur de métadonnées** contient une liste des fonctions de prédiction que vous pouvez parcourir.  
+ L’éditeur de requête dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] fournit des outils que vous pouvez utiliser pour générer et exécuter des requêtes DMX. Vous pouvez vous connecter à une instance de SQL Server Analysis Services, puis sélectionner une base de données, des colonnes de structure d'exploration de données, ainsi qu'un modèle d'exploration de données. **L’explorateur de métadonnées** contient une liste des fonctions de prédiction que vous pouvez parcourir.  
   
 ###  <a name="bkmk_Templates"></a> Modèles DMX  
  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] fournit des modèles de requête DMX interactifs que vous pouvez utiliser pour générer des requêtes DMX. Si vous ne voyez pas la liste de modèles, cliquez sur **Vue** dans la barre d’outils, puis sélectionnez **Explorateur de modèles**. Pour voir tous les modèles Analysis Services, y compris les modèles pour DMX, MDX et XMLA, cliquez sur l'icône de cube.  

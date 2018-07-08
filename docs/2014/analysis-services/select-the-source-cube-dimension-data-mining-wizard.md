@@ -1,5 +1,5 @@
 ---
-title: Sélectionnez la Dimension de Cube Source (Assistant exploration de données) | Documents Microsoft
+title: Sélectionner la Dimension de Cube Source (Assistant exploration de données) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dm.dmwizard.selectsourcecube.f1
 ms.assetid: 556e216b-5e21-4160-967d-4c57591fbab4
 caps.latest.revision: 26
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: ddd4affa954cf080cec3ad1ca37df82d494221e6
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 613847dca4d6113a8acfc8079ebc1e7a97ef3311
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36038195"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37192479"
 ---
 # <a name="select-the-source-cube-dimension-data-mining-wizard"></a>Sélectionner la dimension de cube source (Assistant Exploration de données)
   Utilisez la page **Sélectionner la dimension de cube source** pour sélectionner la dimension du cube qui contient les cas à analyser. Par exemple, si vous créez un modèle qui analyse le comportement d'achat de clients en fonction de données démographiques, vous devez sélectionner la dimension Customer, qui contient généralement un enregistrement unique pour chaque client et différents attributs représentant des données démographiques, telles que le sexe, l'adresse ou le revenu. Ultérieurement dans l'Assistant, vous aurez la possibilité d'ajouter une table liée à cette table de cas : par exemple, vous pourrez ajouter une table imbriquée qui montre les produits que le client a achetés.  
@@ -43,7 +43,7 @@ ms.locfileid: "36038195"
  Si la dimension que vous choisissez ne contient pas tous les attributs associés dont vous avez besoin pour générer le modèle d'exploration de données, vous devrez peut-être modifier la dimension. Pour plus d’informations, consultez [Définir un article](multidimensional-models/define-database-dimensions.md).  
   
 ## <a name="see-also"></a>Voir aussi  
- [Aide (F1) de l’Assistant d’exploration de données &#40;Analysis Services - Exploration de données&#41;](data-mining-wizard-f1-help-analysis-services-data-mining.md)   
+ [Données d’aide F1 de l’Assistant exploration de données &#40;Analysis Services - Exploration de données&#41;](data-mining-wizard-f1-help-analysis-services-data-mining.md)   
  [Créer la Structure d’exploration de données &#40;Assistant exploration de données&#41;](create-the-data-mining-structure-data-mining-wizard.md)   
  [Sélectionnez la clé de cas &#40;Assistant exploration de données&#41;](select-the-case-key-data-mining-wizard.md)  
   

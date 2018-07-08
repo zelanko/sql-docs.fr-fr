@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.editorxml.f1
 - sql12.swb.xmleditor.f1
@@ -18,15 +18,15 @@ helpviewer_keywords:
 - XML Designer [SQL Server Management Studio]
 ms.assetid: 0824a5ce-e67b-4b53-98d9-d371faf2d23c
 caps.latest.revision: 26
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: e204ee307da1b727485b969853ef879f81c32ed0
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: a4d6fedddf4b99d2f8ef068cc1212972b6a25fe2
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36038115"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37160340"
 ---
 # <a name="xml-editor-sql-server-management-studio"></a>Éditeur XML (SQL Server Management Studio)
   Fournit un ensemble d'outils visuels pour utiliser des schémas XML, des groupes de données ADO.NET et des documents XML. Le Concepteur XML prend en charge le langage de définition de schéma XML (XSD, XML Schema Definition) défini par le World Wide Web Consortium (WC3), mais pas les définitions de type de document (DTD) ni les autres langages de schéma XML, tel XDR (XML-Data Reduced).  
@@ -99,7 +99,7 @@ ms.locfileid: "36038115"
 -   générer un schéma XML à partir d'un document XML.  
   
 ## <a name="xml-view"></a>Mode XML  
- Le mode XML fournit un éditeur pour modifier le XML brut, IntelliSense et un codage en couleurs. La saisie semi-automatique des instructions est disponible lorsque vous travaillez sur des fichiers .xsd et .xml auxquels est associé un schéma. Type \< pour commencer une balise s’affiche avec une liste d’éléments qui sont valides à cet emplacement. Après avoir tapé le nom de l'élément et appuyé sur la barre d'espace, la liste des attributs pris en charge par l'élément s'affiche.  
+ Le mode XML fournit un éditeur pour modifier le XML brut, IntelliSense et un codage en couleurs. La saisie semi-automatique des instructions est disponible lorsque vous travaillez sur des fichiers .xsd et .xml auxquels est associé un schéma. Type \< de procéder à une balise et vous obtenez une liste d’éléments qui sont valides à cet emplacement. Après avoir tapé le nom de l'élément et appuyé sur la barre d'espace, la liste des attributs pris en charge par l'élément s'affiche.  
   
 > [!NOTE]  
 >  [!INCLUDE[msCoName](../../includes/msconame-md.md)] IntelliSense ne sont pas disponibles sur la barre d'outils. Pour accéder à ces options lorsque vous êtes dans l'Éditeur XML, dans le menu **Edition** , cliquez sur **IntelliSense**.  

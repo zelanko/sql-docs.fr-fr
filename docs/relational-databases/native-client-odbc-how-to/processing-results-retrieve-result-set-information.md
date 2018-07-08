@@ -1,12 +1,12 @@
 ---
-title: Récupérer les informations du jeu de résultats (ODBC) | Documents Microsoft
+title: Récupérer des informations sur le jeu de résultats (ODBC) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: connectivity
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -17,14 +17,14 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: a87f490742bc3dad279d0aeed99bf61e7b14dcef
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
+ms.openlocfilehash: 2211e77ed927c9c2bb5fd9cc3e5df89bc20a5245
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35700530"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37430248"
 ---
-# <a name="processing-results---retrieve-result-set-information"></a>Le traitement des résultats - récupérer les informations du jeu de résultats
+# <a name="processing-results---retrieve-result-set-information"></a>Traitement des résultats - récupérer les informations du jeu de résultats
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
@@ -35,7 +35,7 @@ ms.locfileid: "35700530"
   
 2.  Pour chaque colonne de l'ensemble de résultats :  
   
-    -   Appelez [SQLDescribeCol](../../relational-databases/native-client-odbc-api/sqldescribecol.md) pour obtenir plus d’informations sur la colonne de résultats.  
+    -   Appelez [SQLDescribeCol](../../relational-databases/native-client-odbc-api/sqldescribecol.md) pour obtenir des informations sur la colonne de résultats.  
   
      ou  
   
