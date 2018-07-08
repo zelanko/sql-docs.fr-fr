@@ -1,5 +1,5 @@
 ---
-title: Accorder des autorisations sur les structures d’exploration de données et des modèles (Analysis Services) | Documents Microsoft
+title: Accorder des autorisations sur les structures d’exploration de données et des modèles (Analysis Services) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.roledesignerdialog.miningmodels.f1
 helpviewer_keywords:
@@ -21,15 +21,15 @@ helpviewer_keywords:
 - user access rights [Analysis Services], mining models
 ms.assetid: a0008004-e2b7-47db-acad-5fe7e12b130f
 caps.latest.revision: 37
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 5558e0ca08d13a5f746eb4694fdafc271e49df9a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 2763f0af1b911c8fca27dad035ed25be8b29f7c2
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36038470"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37200309"
 ---
 # <a name="grant-permissions-on-data-mining-structures-and-models-analysis-services"></a>Octroyer des autorisations sur des modèles et des structures d'exploration de données (Analysis Services)
   Par défaut, seul un administrateur de serveur Analysis Services est autorisé à afficher des structures ou des modèles d'exploration de données dans la base de données. Suivez les instructions ci-dessous pour accorder des autorisations à des utilisateurs non-administrateurs.  
@@ -71,7 +71,7 @@ ms.locfileid: "36038470"
 >  Par défaut, la soumission de requêtes DMX à l’aide d’OPENROWSET est désactivée.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Accorder des autorisations d’administrateur de serveur &#40;Analysis Services&#41;](../instances/grant-server-admin-rights-to-an-analysis-services-instance.md)   
+ [Accorder des autorisations administrateur du serveur &#40;Analysis Services&#41;](../instances/grant-server-admin-rights-to-an-analysis-services-instance.md)   
  [Accorder des autorisations de cube ou modèle &#40;Analysis Services&#41;](grant-cube-or-model-permissions-analysis-services.md)   
  [Octroyer un accès personnalisé aux données de dimension &#40;Analysis Services&#41;](grant-custom-access-to-dimension-data-analysis-services.md)   
  [Octroyer un accès personnalisé aux données des cellules &#40;Analysis Services&#41;](grant-custom-access-to-cell-data-analysis-services.md)  

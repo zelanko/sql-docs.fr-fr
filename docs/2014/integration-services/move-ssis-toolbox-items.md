@@ -1,5 +1,5 @@
 ---
-title: Déplacer des éléments de boîte à outils SSIS | Documents Microsoft
+title: Déplacer des éléments de boîte à outils SSIS | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 3e3ef600-9331-453b-80ad-b2d18e6082be
 caps.latest.revision: 6
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: dd0cad20d1c25fc987462875b5cf8e6334c1d7a1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: d20ba1d0ce155e22f6bd927dfde64aaccc633a4d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36038605"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37164720"
 ---
 # <a name="move-ssis-toolbox-items"></a>Déplacer des éléments de la boîte à outils SSIS
   La nouvelle boîte à outils SSIS inclut de nouvelles catégories et vous permet d'organiser les éléments selon vos préférences. Une fenêtre d'information en bas de la boîte à outils fournit une description d'un élément sélectionné de la boîte à outils et un lien vers une rubrique de la documentation en ligne.  

@@ -1,5 +1,6 @@
 ---
-title: Meilleures pratiques pour l’Assistant de Migration de données (SQL Server) | Documents Microsoft
+title: Meilleures pratiques pour Data Migration Assistant (SQL Server) | Microsoft Docs
+description: Découvrez les meilleures pratiques pour la migration des bases de données de SQL Server avec Data Migration Assistant
 ms.custom: ''
 ms.date: 06/02/2018
 ms.prod: sql
@@ -17,29 +18,30 @@ caps.latest.revision: ''
 author: HJToland3
 ms.author: jtoland
 manager: craigg
-ms.openlocfilehash: 8a1b184a6a280b328df35ea04a1ab6caf996c7c8
-ms.sourcegitcommit: 6fe7b5e8818bd0d94fce693c560d63cc6883d76f
+ms.openlocfilehash: 3026aeb51a5e2cad5f582667c63f72d8893ba322
+ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34758109"
+ms.lasthandoff: 07/04/2018
+ms.locfileid: "37789950"
 ---
-# <a name="best-practices-for-running-data-migration-assistant"></a>Meilleures pratiques pour l’exécution de l’Assistant Migration de données
-Cet article fournit les meilleures informations pratiques suivantes pour l’installation, d’évaluation et de migration.
+# <a name="best-practices-for-running-data-migration-assistant"></a>Meilleures pratiques pour l’exécution de Data Migration Assistant
+Cet article fournit certaines des recommandations pour l’installation, évaluation et la migration.
 
 ## <a name="installation"></a>Installation
-Ne pas installer et exécuter l’Assistant de Migration de données directement sur l’ordinateur hôte de SQL Server.
+Évitez d’installer et d’exécuter l’Assistant Migration des données directement sur l’ordinateur hôte de SQL Server.
 
 ## <a name="assessment"></a>Évaluation
 - Exécuter les évaluations sur les bases de données de production pendant les heures creuses.
-- Effectuer la **des problèmes de compatibilité** et **nouvelles recommandations fonctionnalité** évaluations séparément pour réduire la durée de l’évaluation.
+- Effectuer la **les problèmes de compatibilité** et **recommandation de nouvelle fonctionnalité** évaluations séparément pour réduire la durée de l’évaluation.
 
 ## <a name="migration"></a>Migration
 - Migrer un serveur pendant les heures creuses.
-- Lorsque vous migrez une base de données, fournir un emplacement de partage unique accessible par le serveur source et le serveur cible et évitez si possible d’une opération de copie. Une opération de copie peut se traduire en fonction de la taille du fichier de sauvegarde. L’opération de copie augmente également le risque qu’une migration échoue en raison d’une étape supplémentaire. Lorsqu’un seul emplacement est fourni, l’Assistant Migration de données ignore l’opération de copie.
+
+- Lorsque vous migrez une base de données, indiquez un emplacement de partage unique accessible par le serveur source et le serveur cible et si possible, évitez une opération de copie. Une opération de copie peut se traduire en fonction de la taille du fichier de sauvegarde. L’opération de copie augmente également le risque qu’une migration échoue en raison d’une étape supplémentaire. Lorsqu’un seul emplacement est fourni, Data Migration Assistant ignore l’opération de copie.
  
-    En outre, assurez-vous que pour fournir les autorisations correctes pour le dossier partagé pour éviter les échecs de migration. Les autorisations appropriées sont spécifiées dans l’outil. Si une instance de SQL Server s’exécute sous les informations d’identification de Service réseau, donnez les autorisations appropriées sur le dossier partagé pour le compte d’ordinateur pour l’instance de SQL Server.
+    En outre, veillez à ce que pour fournir les autorisations appropriées au dossier partagé pour éviter les échecs de migration. Les autorisations appropriées sont spécifiées dans l’outil. Si une instance de SQL Server s’exécute sous les informations d’identification de Service réseau, vous pouvez accorder les autorisations appropriées sur le dossier partagé pour le compte d’ordinateur pour l’instance de SQL Server.
 
-- Activer chiffrer la connexion lors de la connexion aux serveurs source et cible. L’utilisation de SSL chiffrement augmente la sécurité des données transmises sur les réseaux entre l’Assistant Migration de données et de l’instance de SQL Server, ce qui est utile surtout lorsque vous migrez des connexions SQL. Si le chiffrement SSL n’est pas utilisé et que le réseau est compromis par un intrus, les connexions SQL en cours de migration peuvent intercepter et/ou modifié à la volée par la personne malveillante.
+- Activer chiffrer la connexion lors de la connexion aux serveurs source et cible. À l’aide de SSL chiffrement augmente la sécurité des données transmises sur les réseaux entre Data Migration Assistant et l’instance de SQL Server, ce qui est utile surtout lors de la migration des comptes de connexion SQL. Si le chiffrement SSL n’est pas utilisé et le réseau est compromis par un attaquant, les connexions SQL en cours de migration pourraient intercepter et/ou modifiés à la volée par l’attaquant.
 
-    Toutefois, si tous les accès impliquent une configuration intranet sécurisée, le chiffrement peut s'avérer superflu. L’activation du chiffrement ralentit les performances, car la charge supplémentaire qui est nécessaire pour chiffrer et déchiffrer des paquets. Pour plus d’informations, reportez-vous à [le chiffrement des connexions à SQL Server](https://go.microsoft.com/fwlink/?linkid=832513).
+    Toutefois, si tous les accès impliquent une configuration intranet sécurisée, le chiffrement peut s'avérer superflu. L’activation du chiffrement ralentit les performances, car la surcharge supplémentaire qui est nécessaire pour chiffrer et déchiffrer des paquets. Pour plus d’informations, reportez-vous à [chiffrement des connexions à SQL Server](https://go.microsoft.com/fwlink/?linkid=832513).

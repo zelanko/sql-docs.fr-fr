@@ -1,12 +1,12 @@
 ---
-title: Énumérer des Sources de données OLE DB (OLE DB) | Documents Microsoft
+title: Énumérer des Sources de données OLE DB (OLE DB) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: connectivity
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -17,12 +17,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: e5cf807d3c1ec1be75f9b6c947544d0cfdde76c4
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
+ms.openlocfilehash: 9d4bf448d4537e282d6121a4247dc0ca71b3de7e
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35695550"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37432658"
 ---
 # <a name="enumerate-ole-db-data-sources-ole-db"></a>Énumérer des sources de données OLE DB (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -56,7 +56,7 @@ ms.locfileid: "35695550"
 6.  Appelez **IRowset::GetData**pour récupérer les données de la copie de l'ensemble de lignes de la ligne et traiter ces données.  
   
 ## <a name="example"></a>Exemple  
- Compilez avec ole32.lib et exécutez le code C++ suivant. Cette application vous permet de vous connecter à l'instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] par défaut de votre ordinateur. Sur certains systèmes d'exploitation Windows, vous devrez remplacer (localhost) ou (local) par le nom de votre instance [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Pour vous connecter à une instance nommée, modifiez la chaîne de connexion à partir de L"(local) » à L"(local)\\\name », où le nom est l’instance nommée. Par défaut, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express est installé dans une instance nommée. Assurez-vous que votre variable d'environnement INCLUDE inclut le répertoire qui contient sqlncli.h.  
+ Compilez avec ole32.lib et exécutez le code C++ suivant. Cette application vous permet de vous connecter à l'instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] par défaut de votre ordinateur. Sur certains systèmes d'exploitation Windows, vous devrez remplacer (localhost) ou (local) par le nom de votre instance [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Pour vous connecter à une instance nommée, modifiez la chaîne de connexion à partir de L"(local) » à L"(local)\\\name », où nom est l’instance nommée. Par défaut, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express est installé dans une instance nommée. Assurez-vous que votre variable d'environnement INCLUDE inclut le répertoire qui contient sqlncli.h.  
   
 ```  
 // compile with: ole32.lib  

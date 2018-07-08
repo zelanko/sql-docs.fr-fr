@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - URL reservations
 - URL registration
@@ -17,13 +17,13 @@ ms.assetid: c2c460c3-e749-4efd-aa02-0f8a98ddbc76
 caps.latest.revision: 12
 author: markingmyname
 ms.author: maghan
-manager: jhubbard
-ms.openlocfilehash: 9bffc090c98e1adc507ba55fc856fb166ebd2187
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: b042690b6cf4a9d2335a2c91f8f6a618f9261caf
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36038109"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37183976"
 ---
 # <a name="about-url-reservations-and-registration--ssrs-configuration-manager"></a>À propos des réservations et de l’inscription d’URL (Gestionnaire de configuration de SSRS)
   Les URL pour les applications Reporting Services sont définies en tant que réservations d'URL dans HTTP.SYS. Une réservation d'URL définit la syntaxe d'un point de terminaison URL à une application Web. Les réservations d'URL sont définies pour le service Web Report Server et pour le Gestionnaire de rapports lorsque vous configurez les applications sur le serveur de rapports. Les réservations d'URL sont créées automatiquement pour vous lors de la configuration d'URL par le biais du programme d'installation ou de l'outil de configuration [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] :  
@@ -66,8 +66,8 @@ ms.locfileid: "36038109"
   
 |Réservation d'URL dans HTTP.SYS|URL|Explication|  
 |---------------------------------|---------|-----------------|  
-|http://+:80/reportserver|http://\<nom_ordinateur > / reportserver<br /><br /> http://\<Adresse_ip > / reportserver<br /><br /> http://localhost/reportserver|La réservation d'URL spécifie un caractère générique (+) sur le port 80. Cela met dans la file d'attente de serveur de rapports toute requête entrante qui spécifie un hôte résolu sur le serveur de rapports sur le port 80. Remarquez qu'avec cette réservation d'URL, une quantité quelconque d'URL peut être utilisée pour accéder au serveur de rapports.<br /><br /> Il s'agit de la réservation d'URL par défaut pour un serveur de rapports [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] pour la plupart des systèmes d'exploitation.|  
-|http://123.45.67.0:80/reportserver|http://123.45.67.0/reportserver|Cette réservation d'URL spécifie une adresse IP ; elle est beaucoup plus restrictive que la réservation d'URL générique. Seules les URL qui incluent l'adresse IP peuvent être utilisées pour se connecter au serveur de rapports. Étant donné cette réservation d’URL, une demande à un serveur de rapports à http://\<nom_ordinateur > / reportserver ou http://localhost/reportserver échouerait.|  
+|http://+:80/reportserver|http://\<nom_ordinateur > / reportserver<br /><br /> http://\<IPAddress > / reportserver<br /><br /> http://localhost/reportserver|La réservation d'URL spécifie un caractère générique (+) sur le port 80. Cela met dans la file d'attente de serveur de rapports toute requête entrante qui spécifie un hôte résolu sur le serveur de rapports sur le port 80. Remarquez qu'avec cette réservation d'URL, une quantité quelconque d'URL peut être utilisée pour accéder au serveur de rapports.<br /><br /> Il s'agit de la réservation d'URL par défaut pour un serveur de rapports [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] pour la plupart des systèmes d'exploitation.|  
+|http://123.45.67.0:80/reportserver|http://123.45.67.0/reportserver|Cette réservation d'URL spécifie une adresse IP ; elle est beaucoup plus restrictive que la réservation d'URL générique. Seules les URL qui incluent l'adresse IP peuvent être utilisées pour se connecter au serveur de rapports. Avec cette réservation d’URL, une demande à un serveur de rapports à l’adresse http://\<nom_ordinateur > / reportserver ou http://localhost/reportserver échouerait.|  
   
 ##  <a name="DefaultURLs"></a> URL par défaut  
  Si vous installez [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] dans la configuration par défaut, le programme d'installation réserve des URL pour le service Web Report Server et pour le Gestionnaire de rapports. Vous pouvez également accepter ces valeurs par défaut lorsque vous définissez des réservations d'URL dans l'outil de configuration [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Les URL par défaut incluront un nom d'instance si vous installez [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] ou si vous installez [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] en tant qu'instance nommée.  
@@ -89,12 +89,12 @@ ms.locfileid: "36038109"
   
 |Type d'instance|Application|URL par défaut|Réservation d'URL réelle dans HTTP.SYS|  
 |-------------------|-----------------|-----------------|----------------------------------------|  
-|Instance par défaut|service Web Report Server|http://\<nom_serveur > / reportserver|http://\<nom_serveur > : 80/reportserver.|  
-|Instance par défaut|Gestionnaire de rapports|http://\<nom_serveur > / reportserver|http://\<nom_serveur > : 80/reportserver.|  
-|Instance nommée|service Web Report Server|http://\<nom_serveur > / reportserver_\<nom_instance >|http://\<nom_serveur > : 80/reportserver_\<nom_instance >|  
-|Instance nommée|Gestionnaire de rapports|http://\<nom_serveur > / reports_\<nom_instance >|http://\<nom_serveur > : 80/reports_\<nom_instance >|  
-|SQL Server Express|service Web Report Server|http://\<nom_serveur > / reportserver_SQLExpress|http://\<nom_serveur > : 80/reportserver_SQLExpress|  
-|SQL Server Express|Gestionnaire de rapports|http://\<nom_serveur > / reports_SQLExpress|http://\<nom_serveur > : 80/reports_SQLExpress|  
+|Instance par défaut|service Web Report Server|http://\<servername > / reportserver|http://\<nom_serveur > : 80/reportserver|  
+|Instance par défaut|Gestionnaire de rapports|http://\<servername > / reportserver|http://\<nom_serveur > : 80/reportserver|  
+|Instance nommée|service Web Report Server|http://\<servername > / reportserver_\<nom_instance >|http://\<nom_serveur > : 80/reportserver_\<nom_instance >|  
+|Instance nommée|Gestionnaire de rapports|http://\<servername > / reports_\<nom_instance >|http://\<nom_serveur > : 80/reports_\<nom_instance >|  
+|SQL Server Express|service Web Report Server|http://\<servername > / reportserver_SQLExpress|http://\<nom_serveur > : 80/reportserver_SQLExpress|  
+|SQL Server Express|Gestionnaire de rapports|http://\<servername > / reports_SQLExpress|http://\<nom_serveur > : 80/reports_SQLExpress|  
   
 ##  <a name="URLPermissionsAccounts"></a> Authentification et identité de service pour les URL Reporting Services  
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] spécifient le compte de service du service Report Server. Le compte sous lequel le service s'exécute est utilisé pour toutes les URL créées pour les applications [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] qui s'exécutent dans la même instance. L'identité de service de l'instance de serveur de rapports est stockée dans le fichier RSReportServer.config.  
@@ -119,7 +119,7 @@ ms.locfileid: "36038109"
   
 -   Bien que les produits et technologies SharePoint aient des réservations d'URL définies, vous pouvez ignorer la réservation lors de la publication sur le serveur. Pour les applications Web SharePoint, la réservation d'URL est une opération interne.  
   
--   Pour les déploiements de serveur unique dans lequel un serveur de rapports intégrée et une instance de technologie SharePoint sont installés sur le même ordinateur, vous ne pouvez pas utiliser http://localhost/reportserver. Si http://localhost est utilisé pour accéder à l’application SharePoint Web, vous devez utiliser un site Web de celle par défaut ou une affectation de port unique pour accéder à un serveur de rapports. En outre, si le serveur de rapports est intégré à une batterie de serveurs SharePoint, l'accès localhost à un serveur de rapports n'est pas résolu pour les nœuds du déploiement installés sur des ordinateurs distants.  
+-   Pour les déploiements de serveur unique où un serveur de rapports intégrée et l’instance de technologie SharePoint sont installés sur le même ordinateur, vous ne pouvez pas utiliser http://localhost/reportserver. Si http://localhost est utilisé pour accéder à l’application SharePoint Web, vous devez utiliser un site Web de celle par défaut ou une affectation de port unique pour accéder à un serveur de rapports. En outre, si le serveur de rapports est intégré à une batterie de serveurs SharePoint, l'accès localhost à un serveur de rapports n'est pas résolu pour les nœuds du déploiement installés sur des ordinateurs distants.  
   
 -   La réservation d'URL et le point de terminaison pour le Gestionnaire de rapports ne peuvent pas être configurés pour un serveur de rapports qui s'exécute en mode intégré SharePoint. Si vous les configurez, le gestionnaire ne fonctionnera plus après le déploiement d'un serveur de rapports en mode intégré SharePoint. Le Gestionnaire de rapports n'est pas pris en charge dans ce mode.  
   

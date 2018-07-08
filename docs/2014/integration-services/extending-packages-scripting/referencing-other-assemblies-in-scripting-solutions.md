@@ -28,13 +28,13 @@ ms.assetid: 9b655bcd-19f6-43d8-9f89-1b4d299c6380
 caps.latest.revision: 67
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 616cf63a80e78449b730f7d9036a3d07afd47115
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: d7bfcdd2bf1fd1efe17a0fba93fca3f10b04381e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36039350"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37162980"
 ---
 # <a name="referencing-other-assemblies-in-scripting-solutions"></a>Référencement d'autres assemblys dans les solutions de script
   La bibliothèque de classes [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] fournit au développeur de scripts un ensemble d’outils performants permettant d’implémenter des fonctionnalités personnalisées dans des packages [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. La tâche de script et le composant Script peuvent également utiliser des assemblys managés personnalisés.  
@@ -69,13 +69,13 @@ ms.locfileid: "36039350"
   
 -   `System.Data` Contient l’architecture ADO.NET.  
   
--   `System.IO` Fournit une interface pour le système de fichiers et les flux de données.  
+-   `System.IO` Fournit une interface pour les flux et le système de fichiers.  
   
 -   `System.Windows.Forms` Fournit la création de formulaires.  
   
 -   `System.Text.RegularExpressions` Fournit des classes pour travailler avec des expressions régulières.  
   
--   `System.Environment` Retourne des informations sur l’ordinateur local, l’utilisateur actuel et l’ordinateur et les paramètres utilisateur.  
+-   `System.Environment` Retourne des informations sur l’ordinateur local, l’utilisateur actuel et les paramètres d’ordinateur et utilisateur.  
   
 -   `System.Net` Fournit une communication réseau.  
   
@@ -87,7 +87,7 @@ ms.locfileid: "36039350"
   
  Pour plus d'informations sur le [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)], consultez MSDN Library.  
   
-![Icône Integration Services (petite)](../media/dts-16.gif "icône Integration Services (petite)")**restent jusqu'à la Date avec Integration Services** <br /> Pour obtenir les derniers téléchargements, articles, exemples et vidéos de Microsoft, ainsi que des solutions sélectionnées par la communauté, visitez la page [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] sur MSDN :<br /><br /> [Visitez la page Integration Services sur MSDN](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Pour recevoir une notification automatique de ces mises à jour, abonnez-vous aux flux RSS disponibles sur la page.  
+![Icône Integration Services (petite)](../media/dts-16.gif "icône Integration Services (petite)")**rester jusqu'à la Date avec Integration Services** <br /> Pour obtenir les derniers téléchargements, articles, exemples et vidéos de Microsoft, ainsi que des solutions sélectionnées par la communauté, visitez la page [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] sur MSDN :<br /><br /> [Visitez la page Integration Services sur MSDN](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Pour recevoir une notification automatique de ces mises à jour, abonnez-vous aux flux RSS disponibles sur la page.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Extension de packages avec des scripts](extending-packages-with-scripting.md)  

@@ -1,5 +1,5 @@
 ---
-title: Mappage SQL-DMO vers SMO | Documents Microsoft
+title: Mappage SQL-DMO vers SMO | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -12,15 +12,15 @@ ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: 590f5396-98d5-485e-9b41-728c6ed7cb9d
 caps.latest.revision: 36
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: d99a665366fc9b5df9ff975d47cfa60dccaf4b4e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 54c66973a1cc0ca7f024a696902f694b45778a9a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36038880"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37182816"
 ---
 # <a name="sql-dmo-mapping-to-smo"></a>Mappage SQL-DMO vers SMO
   SQL-DMO (SQL Distributed Management Objects) n'est plus inclus dans [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] ; les applications SQL-DMO doivent être converties afin d'utiliser SMO ([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Management Objects). Le modèle d'objet SMO est similaire à SQL-DMO, aussi la plupart des objets SQL-DMO sont mappés à un objet de même nom dans SMO. Toutefois, certains objets SQL-DMO ont été modifiés ou supprimés lors de la transition vers SMO. Ce tableau indique les actions recommandées pour les objets SQL-DMO non convertis directement en SMO.  
@@ -31,7 +31,7 @@ ms.locfileid: "36038880"
 |Objet AlertSystem|Déplacé vers l'espace de noms <xref:Microsoft.SqlServer.Management.Smo.Agent>.|  
 |Objet Application|Supprimé.|  
 |Objets Backup et Backup2|Objets <xref:Microsoft.SqlServer.Management.Smo.Backup> et <xref:Microsoft.SqlServer.Management.Smo.BackupRestoreBase>.|  
-|Objet BackupDevice|<xref:Microsoft.SqlServer.Management.Smo.BackupDevice> Objets|  
+|Objet BackupDevice|<xref:Microsoft.SqlServer.Management.Smo.BackupDevice> objets|  
 |Objets BulkCopy et BulkCopy2|Supprimés et remplacés par l'objet <xref:Microsoft.SqlServer.Management.Smo.Transfer>.|  
 |Objet Category|Déplacé vers l'espace de noms <xref:Microsoft.SqlServer.Management.Smo.Agent>. Remplacé par les objets <xref:Microsoft.SqlServer.Management.Smo.Agent.AlertCategory>, <xref:Microsoft.SqlServer.Management.Smo.Agent.OperatorCategory>, <xref:Microsoft.SqlServer.Management.Smo.Agent.JobCategory>.|  
 |Objet Check|<xref:Microsoft.SqlServer.Management.Smo.Check> objet|  

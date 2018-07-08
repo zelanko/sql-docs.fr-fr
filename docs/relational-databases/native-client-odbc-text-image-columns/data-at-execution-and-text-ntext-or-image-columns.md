@@ -1,12 +1,12 @@
 ---
-title: Data-at-Execution et colonnes Text, ntext ou Image | Documents Microsoft
+title: Data-at-Execution et colonnes Text, ntext ou Image | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: connectivity
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -26,18 +26,18 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 56cf9e564eb21d0036b61be0fde1404ed1dee486
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
+ms.openlocfilehash: 1fc35060f1584f03d75ababe76e17a030ddd8ee1
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35694630"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37428588"
 ---
 # <a name="data-at-execution-and-text-ntext-or-image-columns"></a>Données en cours d'exécution et colonnes text, ntext ou image
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
-  Les données en cours d'exécution sont une fonctionnalité ODBC qui permet aux applications d'utiliser des quantités de données extrêmement importantes sur les colonnes dépendantes ou les paramètres. Lors de la récupération de très grande **texte**, **ntext**, ou **image** colonnes, une application peut-être pas en mesure de simplement allouer une immense mémoire tampon, lier la colonne dans la mémoire tampon et fetch la ligne. Lors de la mise à jour très volumineux **texte**, **ntext**, ou **image** colonnes, l’application peut ne pas pouvoir simplement allouer une immense mémoire tampon, lier à un marqueur de paramètre dans SQL instruction, puis exécutez l’instruction. Dans ce cas, l’application doit utiliser [SQLGetData](../../relational-databases/native-client-odbc-api/sqlgetdata.md) ou [SQLPutData](../../relational-databases/native-client-odbc-api/sqlputdata.md) avec ses options de data-at-execution.  
+  Les données en cours d'exécution sont une fonctionnalité ODBC qui permet aux applications d'utiliser des quantités de données extrêmement importantes sur les colonnes dépendantes ou les paramètres. Lors de la récupération de très grandes **texte**, **ntext**, ou **image** colonnes, une application ne peut pas pouvoir pour simplement allouer une immense mémoire tampon, lier la colonne dans la mémoire tampon et l’extraction la ligne. Lors de la mise à jour très volumineux **texte**, **ntext**, ou **image** colonnes, l’application ne peut pas être en mesure de simplement allouer une immense mémoire tampon, lier à un marqueur de paramètre dans SQL instruction, puis exécutez l’instruction. Dans ce cas, l’application doit utiliser [SQLGetData](../../relational-databases/native-client-odbc-api/sqlgetdata.md) ou [SQLPutData](../../relational-databases/native-client-odbc-api/sqlputdata.md) avec ses options data-at-execution.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Gestion des colonnes texte et image](../../relational-databases/native-client-odbc-text-image-columns/managing-text-and-image-columns.md)  

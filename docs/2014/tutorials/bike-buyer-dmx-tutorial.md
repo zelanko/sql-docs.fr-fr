@@ -1,5 +1,5 @@
 ---
-title: Bike Buyer DMX didacticiel | Documents Microsoft
+title: Bike Buyer DMX Tutorial | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - DMX [Analysis Services], tutorials
 - data mining [Analysis Services], tutorials
@@ -19,13 +19,13 @@ ms.assetid: 4b634cc1-86dc-42ec-9804-a19292fe8448
 caps.latest.revision: 33
 author: minewiskan
 ms.author: owend
-manager: kfile
-ms.openlocfilehash: fc1676f55d2d920c90d56f552973cf7e2a1d3942
-ms.sourcegitcommit: 8c040e5b4e8c7d37ca295679410770a1af4d2e1f
+manager: craigg
+ms.openlocfilehash: 788cdb0ccd3f8093972c45db1463412c5f41a765
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/21/2018
-ms.locfileid: "36312957"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37187666"
 ---
 # <a name="bike-buyer-dmx-tutorial"></a>Didacticiel DMX Bike Buyer
   Dans ce didacticiel, vous allez apprendre à créer, assimiler et explorer des modèles d'exploration de données à l'aide du langage de requête DMX (Data Mining Extensions). Vous utiliserez ensuite ces modèles pour créer des tâches de prédiction déterminant si un client envisage ou non d'acheter un vélo.  
@@ -43,17 +43,17 @@ ms.locfileid: "36312957"
   
  Qui plus est, le service marketing demande s'il est possible de regrouper des clients existants par catégories selon diverses caractéristiques, notamment le lieu de résidence, le nombre d'enfants à charge et la distance parcourue pour se rendre au travail et en revenir. Les responsables de ce service souhaitent savoir s'il est possible d'utiliser ces clusters pour cibler des catégories précises de clients. Cette recherche exige un autre modèle d'exploration de données.  
   
- [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] fournit plusieurs outils qui peuvent être utilisés pour accomplir ces tâches :  
+ [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] fournit plusieurs outils qui peuvent être utilisées pour accomplir ces tâches :  
   
 -   Langage de requête DMX  
   
--   Le [algorithme d’arbres de décision Microsoft](../../2014/analysis-services/data-mining/microsoft-decision-trees-algorithm.md) et [algorithme de gestion de clusters Microsoft](../../2014/analysis-services/data-mining/microsoft-clustering-algorithm.md)  
+-   Le [Microsoft Decision Trees algorithme](../../2014/analysis-services/data-mining/microsoft-decision-trees-algorithm.md) et le [algorithme de gestion de clusters Microsoft](../../2014/analysis-services/data-mining/microsoft-clustering-algorithm.md)  
   
 -   Éditeur de requête dans [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]  
   
  Le langage de requête DMX (Data Mining Extensions) fourni par [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] permet de créer et d'utiliser des modèles d'exploration de données. L'algorithme MDT ([!INCLUDE[msCoName](../includes/msconame-md.md)] Decision Trees) permet de créer des modèles que vous pouvez utiliser pour prévoir les intentions d'achat de vélo d'une personne. Le modèle obtenu permet d'exploiter un seul client ou un ensemble de clients en guise de données. L'algorithme [!INCLUDE[msCoName](../includes/msconame-md.md)] Clustering permet de créer des groupes de clients sur la base de caractéristiques communes. L'objectif de ce didacticiel est de fournir des scripts DMX à utiliser dans l'application personnalisée.  
   
- **Pour plus d’informations :** [des Solutions d’exploration de données](../../2014/analysis-services/data-mining/data-mining-solutions.md)  
+ **Pour plus d’informations :** [Solutions d’exploration de données](../../2014/analysis-services/data-mining/data-mining-solutions.md)  
   
 ## <a name="mining-structure-and-mining-models"></a>Structure et modèles d'exploration de données  
  Avant de créer des instructions DMX, il est primordial de comprendre les objets principaux auxquels [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] fait appel pour créer des modèles d'exploration de données. La structure d'exploration de données est une structure de données qui définit le domaine de données à partir duquel les modèles d'exploration de données sont créés. Une structure d'exploration de données unique peut contenir plusieurs de ces modèles partageant le même domaine. Un modèle d'exploration applique un algorithme de modèle d'exploration aux données qui sont représentées par une structure d'exploration de données.  
@@ -78,24 +78,24 @@ ms.locfileid: "36312957"
   
  **Pour plus d’informations**  
   
- [Data Mining Extensions &#40;DMX&#41; référence](/sql/dmx/data-mining-extensions-dmx-reference), [présentation de l’instruction DMX Select (instruction)](/sql/dmx/understanding-the-dmx-select-statement), [Structure et l’utilisation de requêtes de prédiction DMX](/sql/dmx/structure-and-usage-of-dmx-prediction-queries)  
+ [Data Mining Extensions &#40;DMX&#41; référence](/sql/dmx/data-mining-extensions-dmx-reference), [présentation de l’instruction DMX instruction Select](/sql/dmx/understanding-the-dmx-select-statement), [Structure et utilisation des requêtes de prédiction DMX](/sql/dmx/structure-and-usage-of-dmx-prediction-queries)  
   
 ## <a name="what-you-will-learn"></a>Contenu du didacticiel  
  Ce didacticiel contient les leçons suivantes :  
   
- [Leçon 1 : Création de la Structure d’exploration de données Bike Buyer](../../2014/tutorials/lesson-1-creating-the-bike-buyer-mining-structure.md)  
+ [Leçon 1 : Création de la structure d’exploration de données Bike Buyer](../../2014/tutorials/lesson-1-creating-the-bike-buyer-mining-structure.md)  
  Dans cette leçon, vous allez apprendre à utiliser l'instruction `CREATE` pour créer des structures d'exploration de données.  
   
- [Leçon 2 : Ajout des modèles d’exploration de données à la Structure d’exploration de données Bike Buyer](../../2014/tutorials/lesson-2-adding-mining-models-to-the-bike-buyer-mining-structure.md)  
+ [Leçon 2 : Ajout de modèles d’exploration de données à la structure d’exploration de données Bike Buyer](../../2014/tutorials/lesson-2-adding-mining-models-to-the-bike-buyer-mining-structure.md)  
  Dans cette leçon, vous allez apprendre à utiliser l'instruction `ALTER` pour ajouter des modèles d'exploration de données à une structure d'exploration de données.  
   
- [Leçon 3 : Traitement de la Structure d’exploration de données Bike Buyer](../../2014/tutorials/lesson-3-processing-the-bike-buyer-mining-structure.md)  
+ [Leçon 3 : Traitement de la structure d’exploration de données Bike Buyer](../../2014/tutorials/lesson-3-processing-the-bike-buyer-mining-structure.md)  
  Dans cette leçon, vous allez apprendre à utiliser l'instruction `INSERT INTO` pour traiter des structures d'exploration de données et les modèles qui y sont associés.  
   
- [Leçon 4 : Exploration des modèles d’exploration de données Bike Buyer](../../2014/tutorials/lesson-4-browsing-the-bike-buyer-mining-models.md)  
+ [Leçon 4 : Exploration des modèles d’exploration de données Bike Buyer](../../2014/tutorials/lesson-4-browsing-the-bike-buyer-mining-models.md)  
  Dans cette leçon, vous allez apprendre à utiliser l'instruction `SELECT` pour explorer le contenu des modèles d'exploration de données.  
   
- [Leçon 5 : Exécution des requêtes de prédiction](../../2014/tutorials/lesson-5-executing-prediction-queries.md)  
+ [Leçon 5 : Exécution des requêtes de prédiction](../../2014/tutorials/lesson-5-executing-prediction-queries.md)  
  Dans cette leçon, vous allez apprendre à utiliser l'instruction `PREDICTION JOIN` pour établir des prédictions par rapport à des modèles d'exploration de données.  
   
 ## <a name="requirements"></a>Spécifications  
@@ -112,6 +112,6 @@ ms.locfileid: "36312957"
   
 ## <a name="see-also"></a>Voir aussi  
  [Didacticiel DMX Market Basket](../../2014/tutorials/market-basket-dmx-tutorial.md)   
- [Didacticiel d’exploration de données de base de données](../../2014/tutorials/basic-data-mining-tutorial.md)  
+ [Tutoriel sur l’exploration de données de base](../../2014/tutorials/basic-data-mining-tutorial.md)  
   
   

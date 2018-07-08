@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-data-tier-apps
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.deploydacwizard.updateconfiguration.f1
 - sql12.swb.deploydacwizard.selectdac.f1
@@ -23,15 +23,15 @@ helpviewer_keywords:
 - wizard [DAC], deploy
 ms.assetid: c117af35-aa53-44a5-8034-fa8715dc735f
 caps.latest.revision: 31
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 4ede9c252977dbd5044fe4c8a7c154d425341490
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 7041a4e15314f7efa8ea626e41ed705b69faa18c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36039333"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37154530"
 ---
 # <a name="deploy-a-data-tier-application"></a>Déployer une application de la couche Données
   Vous pouvez déployer une application de la couche Données (DAC) sur une instance existante du [!INCLUDE[ssDE](../../includes/ssde-md.md)] ou de [!INCLUDE[ssSDS](../../includes/sssds-md.md)] à l'aide d'un Assistant ou d'un script PowerShell. Le processus de déploiement inscrit une instance DAC en stockant la définition de la DAC dans la base de données système **msdb** (**master** dans [!INCLUDE[ssSDS](../../includes/sssds-md.md)]), crée une base de données, puis remplit la base de données avec tous les objets de base de données définis dans la DAC.  
@@ -67,7 +67,7 @@ ms.locfileid: "36039333"
 ####  <a name="Permissions"></a> Permissions  
  Une DAC ne peut être déployée que par les membres des rôles serveur fixes **sysadmin** ou **serveradmin** , ou par les connexions ayant le rôle serveur fixe **dbcreator** et disposant d'autorisations ALTER ANY LOGIN. Le compte d’administrateur système [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] intégré nommé **sa** peut aussi déployer une DAC. Le déploiement d'une DAC avec des connexions à [!INCLUDE[ssSDS](../../includes/sssds-md.md)] requiert l'appartenance aux rôles loginmanager ou serveradmin. Le déploiement d'une DAC sans connexions à [!INCLUDE[ssSDS](../../includes/sssds-md.md)] requiert l'appartenance aux rôles dbmanager ou serveradmin.  
   
-##  <a name="UsingDeployDACWizard"></a> À l’aide de l’Assistant Création d’applications de couche données de déploiement  
+##  <a name="UsingDeployDACWizard"></a> À l’aide de l’Assistant déployer une couche de données Application  
  **Pour déployer une DAC à l’aide d’un Assistant**  
   
 1.  Dans l' **Explorateur d'objets**, développez le nœud pour l'instance vers laquelle vous voulez déployer la DAC.  
@@ -78,7 +78,7 @@ ms.locfileid: "36039333"
   
     -   [Page Introduction](#Introduction)  
   
-    -   [Sélectionnez la Page Package DAC](#Select_dac_package)  
+    -   [Sélectionnez la Page du Package DAC](#Select_dac_package)  
   
     -   [Page Vérifier la stratégie](#Review_policy)  
   
@@ -97,7 +97,7 @@ ms.locfileid: "36039333"
   
  **Annuler** : met fin à l’Assistant sans déployer de DAC.  
   
-##  <a name="Select_dac_package"></a> Sélectionnez la Page Package DAC  
+##  <a name="Select_dac_package"></a> Sélectionnez la Page du Package DAC  
  Utilisez cette page pour spécifier le package DAC qui contient l'application de la couche Données à déployer. La page passe par trois états.  
   
 ### <a name="select-the-dac-package"></a>Sélectionner le package DAC  
@@ -122,7 +122,7 @@ ms.locfileid: "36039333"
   
  **Validation du contenu de la DAC** : barre de progression qui indique l’état actuel de la validation.  
   
- **\< Précédent** -retourne à l’état initial de la **sélectionner un Package** page.  
+ **\< Précédent** -retourne à son état initial de la **sélectionner un Package** page.  
   
  **Suivant >** : passe à la dernière version de la page **Sélectionner un package**.  
   
@@ -193,7 +193,7 @@ ms.locfileid: "36039333"
   
 1.  Créez un objet serveur SMO et affectez-lui l'instance à laquelle vous voulez déployer la DAC.  
   
-2.  Ouvrir un `ServerConnection` et connectez-vous à la même instance.  
+2.  Ouvrir un `ServerConnection` de l’objet et de se connecter à la même instance.  
   
 3.  Utilisez `System.IO.File` pour charger le fichier de package DAC.  
   

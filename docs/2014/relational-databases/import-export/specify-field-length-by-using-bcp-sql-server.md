@@ -5,10 +5,9 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-bulk-import-export
+ms.technology: data-movement
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - native data format [SQL Server]
 - default field lengths
@@ -17,18 +16,18 @@ helpviewer_keywords:
 - bcp utility [SQL Server], field length
 ms.assetid: 240f33ca-ef4a-413a-a4de-831885cb505b
 caps.latest.revision: 26
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 7e566678b849bc8a837ad2eb411b85b989bd1417
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: a3d4be0ba5a6b24174134fbef6f5dc2e87fa3af9
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36039958"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37158570"
 ---
 # <a name="specify-field-length-by-using-bcp-sql-server"></a>Spécifier la longueur des champs au moyen de bcp (SQL Server)
-  La longueur de champ indique le nombre maximal de caractères nécessaires pour représenter les données au format caractères. La longueur de champ est déjà connue si les données sont enregistrées au format natif. Par exemple, les données de type `int` occupent 4 octets. Si vous indiquez 0 pour la longueur de préfixe, la **bcp** commande vous invite à la longueur de champ, les longueurs de champ par défaut et l’impact de la longueur de champ sur le stockage de données dans les fichiers de données qui contiennent des `char` données.  
+  La longueur de champ indique le nombre maximal de caractères nécessaires pour représenter les données au format caractères. La longueur de champ est déjà connue si les données sont enregistrées au format natif. Par exemple, les données de type `int` occupent 4 octets. Si vous indiquez 0 pour la longueur de préfixe, le **bcp** des invites de commandes vous longueur des champs, les longueurs de champ par défaut et l’impact de la longueur de champ sur le stockage de données dans les fichiers de données qui contiennent des `char` données.  
   
 ## <a name="the-bcp-prompt-for-field-length"></a>Invite bcp pour la longueur des champs  
  Si une commande **bcp** interactive contient l’option **in** ou **out** sans commutateur de fichier de format (**-f**) ou sans commutateur de format de données (**-n**, **-c**, **-w** ou **-N**), la commande demande la longueur de champ de chaque champ de données, comme suit :  
@@ -54,7 +53,7 @@ ms.locfileid: "36039958"
  Des problèmes peuvent se produire si vous spécifiez une longueur de champ incorrecte. Par exemple, si cous copiez des données numériques et si vous spécifiez une longueur de champ trop faible pour ces données, l'utilitaire **bcp** affiche un message de dépassement de capacité et ne copie pas les données. En outre, si vous exportez `datetime` données et spécifiez une longueur de champ inférieure à 26 octets pour la chaîne de caractères, le **bcp** utilitaire tronque les données sans message d’erreur.  
   
 > [!IMPORTANT]  
->  Lorsque vous utilisez l'option de taille par défaut, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] s'attend à lire une chaîne complète. Dans certains cas, l'utilisation de la longueur de champ par défaut peut entraîner l'erreur « Fin de fichier inattendue ». En règle générale, cette erreur se produit avec le `money` et `datetime` les types de données lors de la seule partie du champ attendu se produit dans le fichier de données ; par exemple, lorsque un `datetime` valeur *mm*/*dd*  / *yy* est spécifié sans le composant heure et est donc plus courte que la longueur de 24 attendue d’un `datetime` valeur `char` format. Pour éviter ce type d'erreur, utilisez des marques de fin de champ ou des champs de données de longueur fixe, ou modifiez la longueur par défaut du champ en spécifiant une autre valeur.  
+>  Lorsque vous utilisez l'option de taille par défaut, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] s'attend à lire une chaîne complète. Dans certains cas, l'utilisation de la longueur de champ par défaut peut entraîner l'erreur « Fin de fichier inattendue ». En règle générale, cette erreur se produit avec le `money` et `datetime` les types de données lors de la seule partie du champ attendu se produit dans le fichier de données ; par exemple, quand un `datetime` valeur *mm*/*jj*  / *yy* est spécifié sans le composant heure et est donc plus courte que la longueur de 24 caractère attendu d’un `datetime` valeur dans `char` format. Pour éviter ce type d'erreur, utilisez des marques de fin de champ ou des champs de données de longueur fixe, ou modifiez la longueur par défaut du champ en spécifiant une autre valeur.  
   
 ### <a name="default-field-lengths-for-character-file-storage"></a>Longueur par défaut des champs pour le stockage de fichiers au format caractère  
  Le tableau ci-dessous répertorie les longueurs par défaut des champs à enregistrer dans des fichiers de type caractère. Les données pouvant être de type NULL sont de même longueur que les données de type non NULL.  

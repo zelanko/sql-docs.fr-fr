@@ -1,12 +1,12 @@
 ---
-title: Détermination des caractéristiques d’un résultat défini (ODBC) | Documents Microsoft
+title: Détermination des caractéristiques d’un résultat de jeu (ODBC) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: connectivity
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -22,12 +22,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 64296aa767a8f9c9d74ee925dd26e2ce67ecaeb2
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
+ms.openlocfilehash: 749b699f4d3230f65fc07d92203758ccc1fe39f4
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35701890"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37431298"
 ---
 # <a name="determining-the-characteristics-of-a-result-set-odbc"></a>Détermination des caractéristiques d'un jeu de résultats (ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "35701890"
 
   Les métadonnées sont des données qui décrivent d'autres données. Par exemple, les métadonnées d'un jeu de résultats décrivent les caractéristiques de ce dernier, notamment le nombre de colonnes du jeu de résultats, les types de données de ces colonnes, leurs noms, leur précision, et si elles autorisent les valeurs Null.  
   
- ODBC fournit des métadonnées aux applications via ses fonctions API de catalogue. Le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pilote ODBC Native Client implémente un grand nombre de fonctions de catalogue API ODBC en tant qu’appels correspondant [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] procédure catalogue.  
+ ODBC fournit des métadonnées aux applications via ses fonctions API de catalogue. Le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pilote ODBC Native Client implémente la plupart des fonctions de catalogue API ODBC en tant qu’appels correspondant [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] procédure catalogue.  
   
  Les applications requièrent des métadonnées pour la plupart des opérations de jeu de résultats. Par exemple, l'application utilise le type de données d'une colonne pour déterminer le type de variable à lier à cette colonne. Elle utilise la longueur d'octet d'une colonne de type caractère pour déterminer l'espace nécessaire à l'affichage des données à partir de cette colonne. La façon dont une application détermine les métadonnées d'une colonne dépend du type de l'application.  
   
@@ -47,15 +47,15 @@ ms.locfileid: "35701890"
   
 -   [SQLNumResultCols](../../relational-databases/native-client-odbc-api/sqlnumresultcols.md) pour déterminer le nombre de colonnes une requête est retourné.  
   
--   [SQLColAttribute](../../relational-databases/native-client-odbc-api/sqlcolattribute.md) ou [SQLDescribeCol](../../relational-databases/native-client-odbc-api/sqldescribecol.md) pour décrire une colonne dans le jeu de résultats.  
+-   [SQLColAttribute](../../relational-databases/native-client-odbc-api/sqlcolattribute.md) ou [SQLDescribeCol](../../relational-databases/native-client-odbc-api/sqldescribecol.md) pour décrire une colonne du jeu de résultats.  
   
- Une application bien conçue est écrite à partir de l'hypothèse selon laquelle le jeu de résultats est inconnu ; en outre, elle utilise les informations retournées par ces fonctions pour lier les colonnes dans le jeu de résultats. Une application peut appeler ces fonctions à tout moment, une fois qu'une instruction a été préparée ou exécutée. Toutefois, pour des performances optimales, une application doit appeler **SQLColAttribute**, **SQLDescribeCol**, et **SQLNumResultCols** après l’exécution d’une instruction.  
+ Une application bien conçue est écrite à partir de l'hypothèse selon laquelle le jeu de résultats est inconnu ; en outre, elle utilise les informations retournées par ces fonctions pour lier les colonnes dans le jeu de résultats. Une application peut appeler ces fonctions à tout moment, une fois qu'une instruction a été préparée ou exécutée. Toutefois, pour des performances optimales, une application doit appeler **SQLColAttribute**, **SQLDescribeCol**, et **SQLNumResultCols** après une instruction est exécutée.  
   
  Vous pouvez avoir plusieurs appels simultanés pour des métadonnées. Les procédures du catalogue système sous-jacentes aux implémentations des API de catalogue ODBC peuvent être appelées par le pilote ODBC pendant qu'il utilise des curseurs côté serveur statiques. Cela permet aux applications de traiter de manière simultanée plusieurs appels aux fonctions de catalogue ODBC.  
   
  Si une application utilise un jeu de métadonnées particulier à plusieurs reprises, elle peut tirer parti de la mise en cache des informations dans des variables privées lors de leur obtention initiale. Cela évite d'appeler ultérieurement les fonctions de catalogue ODBC pour obtenir les mêmes informations en obligeant le pilote à effectuer des allers-retours au serveur.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Le traitement des résultats &#40;ODBC&#41;](../../relational-databases/native-client-odbc-results/processing-results-odbc.md)  
+ [Traitement des résultats &#40;ODBC&#41;](../../relational-databases/native-client-odbc-results/processing-results-odbc.md)  
   
   

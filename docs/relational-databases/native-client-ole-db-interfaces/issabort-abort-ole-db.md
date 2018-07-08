@@ -1,12 +1,12 @@
 ---
-title: ISSAbort::Abort (OLE DB) | Documents Microsoft
+title: ISSAbort::Abort (OLE DB) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: connectivity
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
@@ -20,12 +20,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 41ddbfad313021431b409aa5054dc9afd18348b6
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
+ms.openlocfilehash: 90fdb17506d624e5210288716736ae29721c0feb
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35699940"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37431258"
 ---
 # <a name="issabortabort-ole-db"></a>ISSAbort::Abort (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -33,9 +33,9 @@ ms.locfileid: "35699940"
 
   Annule l'ensemble de lignes actuel plus toutes les commandes par lot associées à la commande actuelle.  
   
-Le **ISSAbort** interface, exposée dans le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fournisseur OLE DB Native Client fournit le **ISSAbort::Abort** méthode qui est utilisée pour annuler l’ensemble de lignes actuel plus toutes les commandes traitées par lot avec la commande ayant généré initialement l’ensemble de lignes, et qui n’ont pas terminé l’exécution.  
+Le **ISSAbort** interface, ce qui est exposé dans le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fournisseur OLE DB Native Client, fournit le **ISSAbort::Abort** méthode qui est utilisée pour annuler l’ensemble de lignes actuel plus toutes les commandes par lot avec la commande ayant généré initialement l’ensemble de lignes, et qui n’ont pas encore terminée l’exécution.  
   
- **ISSAbort** est un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client interface spécifique au fournisseur disponible à l’aide de **QueryInterface** sur la **IMultipleResults** objet retourné par  **ICommand::Execute** ou **IOpenRowset::OpenRowset**.  
+ **ISSAbort** est un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] interface propre au fournisseur de Native Client disponible à l’aide de **QueryInterface** sur le **IMultipleResults** objet retourné par  **ICommand::Execute** ou **IOpenRowset::OpenRowset**.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -50,7 +50,7 @@ HRESULT Abort(void);
  Dès que **ISSAbort::Abort** retourne S_OK, l'interface **IMultipleResults** associée adopte un état inutilisable et retourne DB_E_CANCELED à tous les appels de méthode (sauf pour les méthodes définies par l'interface **IUnknown** ) jusqu'à ce qu'elle soit diffusée. Si une interface **IRowset** a été obtenue à partir de l'interface **IMultipleResults** avant un appel à **à Abort**, elle adopte également un état inutilisable et retourne DB_E_CANCELED à tous les appels de méthode (sauf pour les méthodes définies par l'interface **IUnknown** et **IRowset::ReleaseRows**) jusqu'à ce qu'elle soit diffusée après l'appel en bonne et due forme de la méthode **ISSAbort::Abort**.  
   
 > [!NOTE]  
->  À partir de [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], si l’état XACT_ABORT du serveur est activé, l’exécution de **ISSAbort::Abort** prendra fin et restaurer les transactions implicites ou explicites en cours lorsqu’il est connecté à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Les versions antérieures de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] n'abandonneront pas la transaction actuelle.  
+>  À partir de [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], si l’état XACT_ABORT du serveur est activé, l’exécution de **ISSAbort::Abort** prendra fin et restaurer les transactions implicites ou explicites en cours lorsque connecté à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Les versions antérieures de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] n'abandonneront pas la transaction actuelle.  
   
 ## <a name="arguments"></a>Arguments  
  Aucun.  

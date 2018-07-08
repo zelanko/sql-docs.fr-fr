@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 0dd65945-3b74-46a6-a794-b33585d565d2
 caps.latest.revision: 7
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 8b269484be4445888a662b2da2745ecb7a4e1002
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 43a6d53dd099589db67765ecd7ae6027d0b532bf
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36038519"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37159980"
 ---
 # <a name="formatting-scales-on-a-gauge-report-builder-and-ssrs"></a>Mise en forme des échelles sur une jauge (Générateur de rapports et SSRS)
   Une échelle de jauge correspond à la plage de nombres, limités par une valeur minimale et une valeur maximale, indiqués sur une jauge. En général, une échelle de jauge contient des étiquettes et des graduations qui permettent de lire avec précision la valeur indiquée par le pointeur de la jauge. Une échelle de jauge est la plupart du temps associée à un ou plusieurs pointeurs de jauge. Plusieurs échelles sont possibles sur une même jauge.  
@@ -89,7 +89,7 @@ ms.locfileid: "36038519"
 -   1 % de la plus petite valeur de la hauteur ou de la largeur de la jauge sur une jauge linéaire.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Mise en forme de plages sur une jauge &#40;rapport Générateur et SSRS&#41;](formatting-ranges-on-a-gauge-report-builder-and-ssrs.md)   
+ [Mise en forme de plages sur une jauge &#40;Générateur de rapports et SSRS&#41;](formatting-ranges-on-a-gauge-report-builder-and-ssrs.md)   
  [Mise en forme des pointeurs sur une jauge &#40;Générateur de rapports et SSRS&#41;](formatting-pointers-on-a-gauge-report-builder-and-ssrs.md)   
  [Mettre en forme les étiquettes des axes en tant que dates ou devises &#40;Générateur de rapports et SSRS&#41;](format-axis-labels-as-dates-or-currencies-report-builder-and-ssrs.md)   
  [Mise en forme des étiquettes des axes sur un graphique &#40;Générateur de rapports et SSRS&#41;](formatting-axis-labels-on-a-chart-report-builder-and-ssrs.md)   

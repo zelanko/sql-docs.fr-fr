@@ -1,5 +1,5 @@
 ---
-title: Filtrer la boîte de dialogue de membres (Analysis Services - données multidimensionnelles) | Documents Microsoft
+title: Filtrer la boîte de dialogue de membres (Analysis Services - données multidimensionnelles) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.dimensiondesigner.filtermembers.f1
 helpviewer_keywords:
 - Filter Members dialog box
 ms.assetid: 52c6da1d-9fb5-4dbc-bffa-248d11cd337c
 caps.latest.revision: 12
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: fd9ab683243b938ed50c6e71cb7e438974ac7097
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 567092a19f3bd8d45064059f805752c3f3d8823d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36038478"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37230059"
 ---
 # <a name="filter-members-dialog-box-analysis-services---multidimensional-data"></a>Boîte de dialogue Filtrer les membres (Analysis Services - Données multidimensionnelles)
   Utilisez la boîte de dialogue **Filtrer les membres** dans [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] pour filtrer les membres d'une dimension en fonction du sous-titre des membres, du nom des membres, du nom unique des membres, de la valeur de colonne de clé ou de la valeur de colonne de valeurs du niveau actuel lors de la consultation d'une dimension dans l'onglet **Navigateur** du **Concepteur de dimensions**.  

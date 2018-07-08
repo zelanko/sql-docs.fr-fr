@@ -1,12 +1,12 @@
 ---
-title: IBCPSession::BCPColFmt (OLE DB) | Documents Microsoft
+title: IBCPSession::BCPColFmt (OLE DB) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: connectivity
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
@@ -20,12 +20,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 78d7776291a3043c18d30b694839a09f96915e33
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
+ms.openlocfilehash: e11dc5983421ce89cf29131212c2d193fda20326
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35703660"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37432538"
 ---
 # <a name="ibcpsessionbcpcolfmt-ole-db"></a>IBCPSession::BCPColFmt (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -82,7 +82,7 @@ HRESULT BCPColFmt(
  Index de champ dans le fichier de données de l'utilisateur.  
   
  *eUserDataType*[in]  
- Type de données de champ dans le fichier de données de l'utilisateur. Les types de données disponibles sont répertoriées dans le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] format de fichier d’en-tête Native Client (sqlncli.h) avec BCP_TYPE_XXX, par exemple, BCP_TYPE_SQLINT4. Si la valeur BCP_TYPE_DEFAULT est spécifiée, le fournisseur essaie d'utiliser le même type que la table ou la colonne de vue. Pour les opérations de copie en bloc de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et dans un fichier lorsque la **eUserDataType** argument est BCP_TYPE_SQLDECIMAL ou BCP_TYPE_SQLNUMERIC :  
+ Type de données de champ dans le fichier de données de l'utilisateur. Les types de données disponibles sont répertoriés dans le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] le fichier d’en-tête Native Client (sqlncli.h) avec bcp_type_xxx ; mettre en forme, par exemple, BCP_TYPE_SQLINT4. Si la valeur BCP_TYPE_DEFAULT est spécifiée, le fournisseur essaie d'utiliser le même type que la table ou la colonne de vue. Pour les opérations de copie en bloc de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et dans un fichier lorsque le **eUserDataType** argument est BCP_TYPE_SQLDECIMAL ou BCP_TYPE_SQLNUMERIC :  
   
 -   Si la colonne source n'est pas décimale ou numérique, la précision et l'échelle par défaut sont utilisées.  
   
@@ -96,7 +96,7 @@ HRESULT BCPColFmt(
   
  Le fait d'attribuer BCP_LENGTH_NULL à **cbUserData** indique que toutes les valeurs dans les champs de fichier de données sont ou doivent être NULL. Le fait d'attribuer BCP_LENGTH_VARIABLE à **cbUserData** indique que le système doit déterminer la longueur des données pour chaque champ. Pour certains champs, cela peut signifier qu'un indicateur de longueur/null est généré pour précéder les données sur une copie à partir de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], ou que l'indicateur est attendu dans les données copiées vers [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
- Pour [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] caractères et les types de données binaires, **cbUserData** peut être BCP_LENGTH_VARIABLE, BCP_LENGTH_NULL, 0 ou une valeur positive. Si **cbUserData** est BCP_LENGTH_VARIABLE, le système utilise l'indicateur de longueur, s'il est présent, ou une séquence de marque de fin pour déterminer la longueur des données. Si un indicateur de longueur et une séquence de terminaison sont fournis, la copie en bloc utilise celui qui implique le volume de données à copier le plus faible. Si **cbUserData** est BCP_LENGTH_VARIABLE, les données de type est un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] type caractère ou binaire, et si un indicateur de longueur, ni une séquence de terminaison est spécifiée, le système retourne un message d’erreur.  
+ Pour [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] caractère et les types de données binaires, **cbUserData** peut être BCP_LENGTH_VARIABLE, BCP_LENGTH_NULL, 0 ou une valeur positive. Si **cbUserData** est BCP_LENGTH_VARIABLE, le système utilise l'indicateur de longueur, s'il est présent, ou une séquence de marque de fin pour déterminer la longueur des données. Si un indicateur de longueur et une séquence de terminaison sont fournis, la copie en bloc utilise celui qui implique le volume de données à copier le plus faible. Si **cbUserData** est BCP_LENGTH_VARIABLE, les données de type est un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] type caractère ou binaire, et si un indicateur de longueur, ni une séquence de terminaison est spécifiée, le système retourne un message d’erreur.  
   
  Si **cbUserData** a la valeur 0 ou une valeur positive, le système utilise **cbUserData** comme longueur de données maximale. Toutefois, si un indicateur de longueur ou une séquence de terminaison est fournie en plus d'une valeur **cbUserData**positive, le système détermine la longueur de données en utilisant la méthode qui entraîne la plus petite quantité de données à copier.  
   
@@ -125,7 +125,7 @@ HRESULT BCPColFmt(
  Une erreur spécifique au fournisseur s’est produite, pour des informations détaillées, utilisez le [ISQLServerErrorInfo](http://msdn.microsoft.com/library/a8323b5c-686a-4235-a8d2-bda43617b3a1) interface.  
   
  E_UNEXPECTED  
- L'appel à la méthode était inattendu. Par exemple, le [IBCPSession::BCPInit](../../relational-databases/native-client-ole-db-interfaces/ibcpsession-bcpinit-ole-db.md) méthode n’a pas été appelée avant d’appeler cette méthode.  
+ L'appel à la méthode était inattendu. Par exemple, le [IBCPSession::BCPInit](../../relational-databases/native-client-ole-db-interfaces/ibcpsession-bcpinit-ole-db.md) (méthode) n’a pas été appelée avant d’appeler cette méthode.  
   
  E_INVALIDARG  
  L'argument n'était pas valide.  

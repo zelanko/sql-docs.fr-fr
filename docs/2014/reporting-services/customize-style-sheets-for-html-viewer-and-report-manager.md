@@ -1,5 +1,5 @@
 ---
-title: Personnaliser des feuilles de Style pour la visionneuse HTML et le Gestionnaire de rapports | Documents Microsoft
+title: Personnaliser des feuilles de Style pour la visionneuse HTML et le Gestionnaire de rapports | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - style sheets [Reporting Services]
 ms.assetid: df805cff-b1de-4062-b2ac-423f37390fbd
 caps.latest.revision: 18
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: b24525eff885b183b34f5810d79e44e4509e3f06
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 6baf2dbbb100711b9665d5d705bce6399e3c754b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36039246"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37192929"
 ---
 # <a name="customize-style-sheets-for-html-viewer-and-report-manager"></a>Personnaliser des feuilles de style pour la visionneuse HTML et pour le Gestionnaire de rapports
   [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] fournit de style en cascade par défaut des fichiers de feuilles (.css) qui définissent des styles pour le **rapport** barre d’outils dans la visionneuse HTML et pour le Gestionnaire de rapports. Si vous êtes un développeur Web expérimenté dans la création de feuilles de style en cascade, vous pouvez modifier les styles par défaut à vos propres risques pour changer les couleurs, les polices et la disposition de la barre d'outils ou du Gestionnaire de rapports. Ni les feuilles de style par défaut, ni les instructions pour modifier ces feuilles de style ne sont documentées dans cette version.  
@@ -78,6 +78,6 @@ http://localhost/reportserver?/AdventureWorksSampleReports/Product+Line+Sales&rs
 ## <a name="see-also"></a>Voir aussi  
  [Le Gestionnaire de rapports &#40;SSRS en Mode natif&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
  [Visionneuse HTML et la barre d’outils rapport](html-viewer-and-the-report-toolbar.md)   
- [Fichier de Configuration RSReportServer](report-server/rsreportserver-config-configuration-file.md)  
+ [Fichier de configuration RSReportServer](report-server/rsreportserver-config-configuration-file.md)  
   
   

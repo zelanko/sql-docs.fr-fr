@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - permissions [Reporting Services], SharePoint integrated mode
 - SharePoint integration [Reporting Services], permissions
@@ -18,13 +18,13 @@ ms.assetid: 0eb2f34a-3643-4b03-81c2-5741ba7ebefd
 caps.latest.revision: 12
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 5142c52b2a6a698e379957113d9540537282d80f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 2c106d3d086366146c0ed32dca78533238e81ed2
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36038992"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37183846"
 ---
 # <a name="granting-permissions-on-report-server-items-on-a-sharepoint-site"></a>Accord d'autorisations sur des éléments de serveur de rapports sur un site SharePoint
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[SPF2010](../../includes/spf2010-md.md)] fournit des fonctionnalités de sécurité intégrées qui vous permettent d’accéder aux éléments de serveur de rapports à partir des sites et des bibliothèques SharePoint. Si vous avez déjà affecté des autorisations aux utilisateurs, ces derniers auront accès aux éléments et opérations de serveur de rapport dès que vous aurez configuré les paramètres d'intégration entre [!INCLUDE[SPF2010](../../includes/spf2010-md.md)] et un serveur de rapports. Les autorisations existantes vous permettent de télécharger des définitions de rapport et d'autres documents, d'afficher des rapports, de créer des abonnements et de gérer des éléments.  
@@ -33,7 +33,7 @@ ms.locfileid: "36038992"
   
 1.  Dans la documentation du produit [!INCLUDE[SPF2010](../../includes/spf2010-md.md)], consultez les informations relatives aux paramètres de sécurité par défaut pour les groupes SharePoint standard pour savoir comment gérer les autorisations et l'accès des utilisateurs.  
   
-2.  Passez en revue la liste des autorisations qui concernent spécifiquement l'accès aux éléments et aux opérations du serveur de rapports. Pour plus d’informations, consultez [utilise la sécurité intégrée de Windows SharePoint Services pour les éléments de serveur de rapports](use-built-in-security-in-windows-sharepoint-services-for-report-server-items.md).  
+2.  Passez en revue la liste des autorisations qui concernent spécifiquement l'accès aux éléments et aux opérations du serveur de rapports. Pour plus d’informations, consultez [utiliser la sécurité intégrée dans Windows SharePoint Services pour les éléments de serveur de rapports](use-built-in-security-in-windows-sharepoint-services-for-report-server-items.md).  
   
 3.  Attribuez des comptes d'utilisateur et de groupe à des groupes SharePoint prédéfinis.  
   
@@ -74,7 +74,7 @@ ms.locfileid: "36038992"
   
  Les groupes SharePoint possèdent des niveaux d'autorisation qui fournissent un accès immédiat à un grand nombre d'opérations de serveur de rapports. Si vous estimez que les paramètres de sécurité intégrée n'apportent pas le niveau d'accès dont vous avez besoin, vous pouvez créer des groupes ou des niveaux d'autorisation personnalisés.  
   
- Pour plus d’informations sur les rapports des opérations de serveur sont pris en charge via les fonctionnalités de sécurité par défaut, consultez [utilise la sécurité intégrée de Windows SharePoint Services pour les éléments de serveur de rapports](use-built-in-security-in-windows-sharepoint-services-for-report-server-items.md).  
+ Pour plus d’informations sur les rapports des opérations de serveur sont pris en charge via les fonctionnalités de sécurité par défaut, consultez [utiliser la sécurité intégrée dans Windows SharePoint Services pour les éléments de serveur de rapports](use-built-in-security-in-windows-sharepoint-services-for-report-server-items.md).  
   
  Pour faire appel aux fonctionnalités de sécurité intégrée, vous devez affecter des comptes d'utilisateur ou de groupes Windows aux groupes SharePoint. Hormis l'administrateur du serveur et le propriétaire du site portail qui ont un accès automatique à [!INCLUDE[SPF2010](../../includes/spf2010-md.md)] lors de l'installation du logiciel, tous les autres utilisateurs doivent recevoir les autorisations pour accéder au serveur.  
   

@@ -1,12 +1,12 @@
 ---
-title: SQLBrowseConnect | Documents Microsoft
+title: SQLBrowseConnect | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 apitype: DLLExport
@@ -18,18 +18,18 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 0a61a74fc85bd13e442694dde91f279704d9a12d
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
+ms.openlocfilehash: 78c2b7b8c6da683da00e725dd31f1b80cb05c57d
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35701290"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37429339"
 ---
 # <a name="sqlbrowseconnect"></a>SQLBrowseConnect
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
-  **SQLBrowseConnect** utilise les mots clés qui peuvent être classés en trois niveaux d’informations de connexion. Pour chaque mot clé, le tableau suivant indique si une liste de valeurs valides est retournée et si le mot clé est facultatif.  
+  **SQLBrowseConnect** utilise des mots clés qui peuvent être classés en trois niveaux d’informations de connexion. Pour chaque mot clé, le tableau suivant indique si une liste de valeurs valides est retournée et si le mot clé est facultatif.  
   
 ## <a name="level-1"></a>Niveau 1  
   
@@ -62,11 +62,11 @@ ms.locfileid: "35701290"
 |Attribute|Description|  
 |---------------|-----------------|  
 |SQL_COPT_SS_BROWSE_CONNECT|Si elle a la valeur SQL_MORE_INFO_YES, **SQLBrowseConnect** retourne une chaîne étendue de propriétés du serveur.<br /><br /> Voici un exemple de chaîne étendue retournée par **SQLBrowseConnect**:<br /><br /> <br /><br /> `ServerName\InstanceName;Clustered:No;Version:8.00.131`<br /><br /> <br /><br /> Dans cette chaîne, des points-virgules séparent les différentes parties des informations sur le serveur. Utilisez des virgules pour séparer les différentes instances de serveur.|  
-|SQL_COPT_SS_BROWSE_SERVER|Si un nom de serveur est spécifié, **SQLBrowseConnect** renvoie les informations sur le serveur spécifié. Si SQL_COPT_SS_BROWSE_SERVER a la valeur NULL, **SQLBrowseConnect** renvoie des informations pour tous les serveurs dans le domaine.<br /><br /> <br /><br /> Notez que, en raison de problèmes de réseau, **SQLBrowseConnect** ne peut pas recevoir une réponse en temps voulu de tous les serveurs. Par conséquent, la liste des serveurs retournée peut varier pour chaque requête.|  
+|SQL_COPT_SS_BROWSE_SERVER|Si un nom de serveur est spécifié, **SQLBrowseConnect** retournera les informations pour le serveur spécifié. Si SQL_COPT_SS_BROWSE_SERVER a la valeur NULL, **SQLBrowseConnect** retourne des informations pour tous les serveurs dans le domaine.<br /><br /> <br /><br /> Notez que, en raison de problèmes réseau, **SQLBrowseConnect** ne peut pas recevoir une réponse en temps voulu de tous les serveurs. Par conséquent, la liste des serveurs retournée peut varier pour chaque requête.|  
 |SQL_COPT_SS_BROWSE_CACHE_DATA|Lorsque l'attribut SQL_COPT_SS_BROWSE_CACHE_DATA a la valeur SQL_CACHE_DATA_YES, vous pouvez extraire les données en plusieurs segments lorsque la longueur de la mémoire tampon est insuffisante pour contenir le résultat. Cette longueur est spécifiée dans l’argument BufferLength SQLBrowseConnect.<br /><br /> La valeur SQL_NEED_DATA est retournée lorsque davantage de données sont disponibles. La valeur SQL_SUCCESS est retournée lorsqu'il n'existe plus de données à récupérer.<br /><br /> La valeur par défaut est SQL_CACHE_DATA_NO.|  
   
 ## <a name="sqlbrowseconnect-support-for-high-availability-disaster-recovery"></a>Prise en charge par SQLBrowseConnect des fonctionnalités de récupération d'urgence, haute disponibilité  
- Pour plus d’informations sur l’utilisation de **SQLBrowseConnect** pour se connecter à un [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] de cluster, consultez [SQL Server Native Client Support for High Availability, Disaster Recovery](../../relational-databases/native-client/features/sql-server-native-client-support-for-high-availability-disaster-recovery.md).  
+ Pour plus d’informations sur l’utilisation de **SQLBrowseConnect** pour se connecter à un [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] un cluster, consultez [SQL Server Native Client prise en charge pour la haute disponibilité, récupération d’urgence](../../relational-databases/native-client/features/sql-server-native-client-support-for-high-availability-disaster-recovery.md).  
   
 ## <a name="sqlbrowseconnect-support-for-service-principal-names-spns"></a>Prise en charge par SQLBrowseConnect des noms de principaux du service (SPN)  
  Lors de l'ouverture d'une connexion, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client définit SQL_COPT_SS_MUTUALLY_AUTHENTICATED et SQL_COPT_SS_INTEGRATED_AUTHENTICATION_METHOD sur la méthode d'authentification employée pour ouvrir la connexion.  

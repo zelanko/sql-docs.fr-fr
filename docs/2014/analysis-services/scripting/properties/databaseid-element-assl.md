@@ -1,5 +1,5 @@
 ---
-title: L’élément DatabaseID (ASSL) | Documents Microsoft
+title: DatabaseID, élément (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -20,18 +20,18 @@ helpviewer_keywords:
 - DatabaseID element
 ms.assetid: 6bcf2bd5-b037-4964-bc72-42e0c89f9716
 caps.latest.revision: 8
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: c74e39a1a5696576b77ff9a2eb74e062cb2f3475
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: ec07be8832ef048ac6ddc2b6cc92a945ba9e2c2e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36038673"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37161130"
 ---
 # <a name="databaseid-element-assl"></a>Élément DatabaseID (ASSL)
-  Identifie la [base de données](../objects/database-element-assl.md) élément associé à une sortie de ligne [liaison](../data-type/binding-data-type-assl.md) élément.  
+  Identifie le [base de données](../objects/database-element-assl.md) élément associé à une hors ligne [liaison](../data-type/binding-data-type-assl.md) élément.  
   
 ## <a name="syntax"></a>Syntaxe  
   

@@ -1,5 +1,5 @@
 ---
-title: Méthode SetNumericalValue (classe ServerNetworkProtocolProperty) | Documents Microsoft
+title: Setnumericalvalue, méthode (classe ServerNetworkProtocolProperty) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - SetNumericalValue method
 ms.assetid: b3b4bce8-9d9e-4ccb-a223-0454281353b0
 caps.latest.revision: 31
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: a0967a05d728dd93c331eb8133a2bf8239b2716a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
+ms.openlocfilehash: f3ec7edfffdaf18610942e73fead3138b4a61366
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36038314"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37198909"
 ---
 # <a name="setnumericalvalue-method-servernetworkprotocolproperty-class"></a>Méthode SetNumericalValue (classe ServerNetworkProtocolProperty)
   Définit la valeur numérique de la propriété référencée.  
@@ -46,13 +46,13 @@ NumValue
   
 ## <a name="parts"></a>Éléments  
  *object*  
- Un [classe ServerNetworkProtocolProperty] servernetworkprotocolproperty-class.md) objet qui représente un attribut du protocole réseau sur l’instance de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
+ Un servernetworkprotocolproperty [classe ServerNetworkProtocolProperty]-class.md) objet qui représente un attribut du protocole réseau sur l’instance de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
 #### <a name="parameters"></a>Paramètres  
   
 |Paramètre|Description|  
 |---------------|-----------------|  
-|*NumValue*|Valeur `uint32` qui spécifie la nouvelle valeur de la propriété actuelle.|  
+|*%Numvalue%*|Valeur `uint32` qui spécifie la nouvelle valeur de la propriété actuelle.|  
   
 ## <a name="property-valuereturn-value"></a>Valeur de propriété/valeur de retour  
  Valeur `uint32`, égale à 0 si le service a été correctement modifié, égale à 1 si la demande n'est pas prise en charge ou égale à tout autre nombre pour indiquer une erreur.  

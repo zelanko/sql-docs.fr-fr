@@ -1,12 +1,12 @@
 ---
-title: Détails d’implémentation ODBC API | Documents Microsoft
+title: Détails d’implémentation API ODBC | Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -20,12 +20,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 19fa15ac8d92d701bb6558e48d5052f671c2eae0
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
+ms.openlocfilehash: 0f544a1a3f94c567d374418b077136f92f57a32d
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35696490"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37429598"
 ---
 # <a name="odbc-api-implementation-details"></a>ODBC API Implementation Details
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "35696490"
   
  La référence de pilote ODBC [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ne documente pas tous les appels de fonction ODBC. Seules les fonctions qui ont des paramètres ou des comportements spécifiques au pilote en cas d'utilisation avec le pilote ODBC [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client sont discutées.  
   
- Le pilote ODBC [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client est conforme avec la spécification ODBC 3.51. Pour obtenir une référence complète de ODBC 3.51, téléchargez Microsoft Data Access Components SDK à partir de la [accès aux données et le centre de développement](http://go.microsoft.com/fwlink?linkid=4173), ou d’afficher le [de référence du programmeur ODBC](http://go.microsoft.com/fwlink/?LinkId=45250) en ligne.  
+ Le pilote ODBC [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client est conforme avec la spécification ODBC 3.51. Pour obtenir une référence complète d’ODBC 3.51, téléchargez Microsoft Data Access Components SDK à partir de la [Data Access and Storage Developer Center](http://go.microsoft.com/fwlink?linkid=4173), ou afficher le [de référence du programmeur ODBC](http://go.microsoft.com/fwlink/?LinkId=45250) en ligne.  
   
 ## <a name="in-this-section"></a>Dans cette section  
   

@@ -1,12 +1,12 @@
 ---
-title: Prise en charge de Type de données de Date ODBC et les améliorations apportées au | Documents Microsoft
+title: Type de données prise en charge pour les améliorations ODBC Date / heure | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: connectivity
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -17,14 +17,14 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 970e40843b11679df67de56995606d077b583d1e
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
+ms.openlocfilehash: 0c7ff2ba90e04165649bf30087cf1d4e8e9aae0f
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35702630"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37431288"
 ---
-# <a name="data-type-support-for-odbc-date-and-time-improvements"></a>Prise en charge du Type de données de Date ODBC et les améliorations apportées au
+# <a name="data-type-support-for-odbc-date-and-time-improvements"></a>Prise en charge du Type de données pour les améliorations ODBC Date / heure
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
@@ -75,7 +75,7 @@ ms.locfileid: "35702630"
   
  Dans les résultats, les fractions de seconde utilisent toujours un point (.), plutôt que les deux-points (:).  
   
- Les valeurs de chaîne retournés aux applications sont toujours la même longueur pour une colonne donnée. La longueur maximale des composants année, mois, jour, heure, minute et seconde, est complétée avec des zéros non significatifs, et le jour et l'heure des valeurs datetime sont séparés par un espace. Il y a également un espace entre l'heure et le décalage horaire dans une valeur datetimeoffset. Un décalage horaire est toujours précédé d'un signe ; quand le décalage est nul, le signe est un plus (+). Les fractions de seconde sont complétées si nécessaire avec des zéros à droite, jusqu'à la précision maximale définie pour la colonne. Pour les colonnes datetime, il y a trois chiffres de fractions de seconde. Pour les colonnes smalldatetime, il n'y a pas de chiffres de fractions de seconde et les secondes sont toujours égales à zéro.  
+ Les valeurs de chaîne retournés aux applications ont toujours la même longueur pour une colonne donnée. La longueur maximale des composants année, mois, jour, heure, minute et seconde, est complétée avec des zéros non significatifs, et le jour et l'heure des valeurs datetime sont séparés par un espace. Il y a également un espace entre l'heure et le décalage horaire dans une valeur datetimeoffset. Un décalage horaire est toujours précédé d'un signe ; quand le décalage est nul, le signe est un plus (+). Les fractions de seconde sont complétées si nécessaire avec des zéros à droite, jusqu'à la précision maximale définie pour la colonne. Pour les colonnes datetime, il y a trois chiffres de fractions de seconde. Pour les colonnes smalldatetime, il n'y a pas de chiffres de fractions de seconde et les secondes sont toujours égales à zéro.  
   
  Une chaîne vide n'est pas un littéral de date et d'heure valide et ne représente pas une valeur NULL. La tentative de convertir une chaîne vide en valeur date/time provoque l'erreur SQLState 22018 et le message « Valeur de caractère non valide pour la spécification de la casse ».  
   
@@ -140,9 +140,9 @@ typedef struct tagSS_TIMESTAMPOFFSET_STRUCT {
 } SQL_SS_TIMESTAMPOFFSET_STRUCT;  
 ```  
   
- Si le **timezone_hour** est négatif, le **timezone_minute** doit être négatif ou égal à zéro. Si le **timezone_hour** est un nombre positif, la **timezone_minute** doit être positif ou égal à zéro. Si le **timezone_hour** est égal à zéro, le s**timezone_minute** peut avoir n’importe quelle valeur comprise entre-59 et + 59.  
+ Si le **timezone_hour** est négatif, le **timezone_minute** doit être négatif ou égal à zéro. Si le **timezone_hour** est positif, le **timezone_minute** doit être positif ou zéro. Si le **timezone_hour** est égal à zéro, le s**timezone_minute** peut avoir n’importe quelle valeur comprise entre -59 et + 59.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Date et heure améliorations &#40;ODBC&#41;](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md)  
+ [Améliorations date / heure &#40;ODBC&#41;](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md)  
   
   

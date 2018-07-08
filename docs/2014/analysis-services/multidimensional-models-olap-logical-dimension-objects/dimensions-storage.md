@@ -1,5 +1,5 @@
 ---
-title: Stockage de dimension | Documents Microsoft
+title: Stockage de dimension | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -21,15 +21,15 @@ helpviewer_keywords:
 - ROLAP
 ms.assetid: 8d74b932-2174-4e1f-8414-636455880b6a
 caps.latest.revision: 30
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: ce315f747a9b125052ead591f5c42cca3b811ca0
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 6462ebf90b7783260f7027d82b26be117ea0b5ce
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36039846"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37153110"
 ---
 # <a name="dimension-storage"></a>Stockage de dimension
   Dimensions dans [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] prennent en charge deux modes de stockage :  
@@ -50,6 +50,6 @@ ms.locfileid: "36039846"
 >  Si une dimension qui utilise le mode ROLAP est incluse dans un cube qui utilise le mode MOLAP, toute modification apportée au schéma dans la table source doit être suivie par le traitement immédiat du cube. Si vous ne procédez pas ainsi, lorsque vous interrogerez le cube, les résultats ne seront pas cohérents. **Rubrique connexe :**[automatiser les tâches Analysis Services d’administration avec SSIS](../instances/automate-analysis-services-administrative-tasks-with-ssis.md).  
   
 ## <a name="see-also"></a>Voir aussi  
- [Traitement et Modes de stockage de partitions](../multidimensional-models-olap-logical-cube-objects/partitions-partition-storage-modes-and-processing.md)  
+ [Traitement et modes de stockage des partitions](../multidimensional-models-olap-logical-cube-objects/partitions-partition-storage-modes-and-processing.md)  
   
   

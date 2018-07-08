@@ -1,5 +1,5 @@
 ---
-title: Vérifiez la croissance automatique est activée pour tous les fichiers journaux et de données pendant le processus de mise à niveau | Documents Microsoft
+title: Vérifiez la croissance automatique est activée pour toutes les données et les fichiers journaux pendant le processus de mise à niveau | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - log files [SQL Server], size
 - data files [SQL Server], size
@@ -16,18 +16,18 @@ helpviewer_keywords:
 - autogrow [SQL Server]
 ms.assetid: a5860904-e2be-4224-8a51-df18a10d3fb9
 caps.latest.revision: 23
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: b903e8f22fce7404f418cfc0a81ac81e954ab06f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 33c94b0ac9145e5d36a9c744a3531155ae64b152
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36039000"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37181466"
 ---
 # <a name="verify-autogrow-is-turned-on-for-all-data-and-log-files-during-the-upgrade-process"></a>Vérifier que la croissance automatique est activée pour tous les fichiers de données et fichiers journaux pendant le processus de mise à niveau
-  Le Conseiller de mise à niveau a détecté des fichiers de données ou des fichiers journaux pour lesquels la croissance automatique n'est pas activée. Fonctionnalités nouvelles et améliorées requièrent un espace disque supplémentaire pour les bases de données utilisateur et le **tempdb** base de données système. Pour vous assurer de ressources peuvent s’adapter aux augmentations de taille au cours de la mise à niveau et les opérations de production suivantes, nous vous recommandons de l’option croissance automatique pour tous les fichiers de données et journaux utilisateur et le **tempdb** données et fichiers journaux avant la mise à niveau.  
+  Le Conseiller de mise à niveau a détecté des fichiers de données ou des fichiers journaux pour lesquels la croissance automatique n'est pas activée. Fonctionnalités nouvelles et améliorées nécessitent un espace disque supplémentaire pour les bases de données utilisateur et le **tempdb** base de données système. Pour vous assurer de ressources peuvent s’adapter aux augmentations de taille au cours de mise à niveau et les opérations de production suivantes, nous vous recommandons de l’option croissance automatique pour tous les fichiers de données et journaux utilisateur et le **tempdb** données et fichiers journaux avant la mise à niveau.  
   
  Une fois que vous avez effectué la mise à niveau et testé vos charges de travail, vous pouvez désactiver la croissance automatique ou modifier l'incrément FILEGROWTH selon vos besoins en termes de fichiers de données et fichiers journaux utilisateur. Nous vous recommandons de laisser la croissance automatique activée pour le **tempdb** base de données système. Pour plus d'informations, consultez « Planification des capacités de tempdb » dans la documentation en ligne de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
@@ -35,7 +35,7 @@ ms.locfileid: "36039000"
  [!INCLUDE[ssDE](../../includes/ssde-md.md)]  
   
 ## <a name="description"></a>Description  
- **fichiers de données**  
+ **Fichiers de données**  
   
  Le tableau suivant répertorie les modifications apportées aux fonctionnalités de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] qui entraînent une augmentation de l'espace disque nécessaire pour les fichiers de données définis par l'utilisateur.  
   
@@ -51,7 +51,7 @@ ms.locfileid: "36039000"
   
 |Fonctionnalité|Modifications introduites dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|  
 |-------------|-----------------------------------------------------|  
-|Restauration et récupération|Durant la phase de restauration d'une récupération après panne, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] permet aux utilisateurs d'accéder à la base de données. Cela est possible parce que les transactions qui n'étaient pas validées lorsque l'incident s'est produit retrouvent les verrous dont elles disposaient avant l'incident. Alors que les transactions sont restaurées, leurs verrous les protègent contre les interférences par les utilisateurs. Ces informations de verrouillage complémentaires doivent être conservées dans le journal des transactions.|  
+|Restauration et récupération|Durant la phase de restauration d'une récupération après panne, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] permet aux utilisateurs d'accéder à la base de données. Cela est possible parce que les transactions qui n'étaient pas validées lorsque l'incident s'est produit retrouvent les verrous dont elles disposaient avant l'incident. Tandis que les transactions sont en cours de restauration, leurs verrous les protègent contre les interférences par les utilisateurs. Ces informations de verrouillage complémentaires doivent être conservées dans le journal des transactions.|  
   
  **fichiers journaux et de données tempdb**  
   
@@ -63,15 +63,15 @@ ms.locfileid: "36039000"
   
 -   les résultats de tris temporaires lorsque vous créez ou régénérez des index, si SORT_IN_TEMPDB est spécifié.  
   
- Objets supplémentaires utilisent également le **tempdb** base de données. Le tableau suivant répertorie les modifications ou ajouts apportés aux [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fonctionnalités entraînent une augmentation espace disque nécessaire pour **tempdb** données et fichiers journaux.  
+ Objets supplémentaires utilisent également le **tempdb** base de données. Le tableau suivant répertorie les modifications ou ajouts apportés aux [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fonctionnalités entraînent une augmentation espace disque nécessaire pour **tempdb** données et les fichiers journaux.  
   
 |Fonctionnalité|Modifications introduites dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|  
 |-------------|-----------------------------------------------------|  
-|Contrôle de version de ligne|Le contrôle de version de ligne est un cadre général dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] qui permet d'effectuer les opérations suivantes :<br /><br /> Prend en charge les déclencheurs : créer les tables inserted et deleted dans les déclencheurs. Toutes les lignes modifiées par le déclencheur reçoivent une version, y compris celles modifiées par l'instruction qui a lancé le déclencheur, de même que toute modification de données effectuée par le déclencheur. Déclencheurs AFTER utilisent la banque des versions de **tempdb** pour stocker les images des lignes modifiées par le déclencheur. Si les déclencheurs sont activés lors d'un chargement de données en masse, une copie de chaque ligne est ajoutée à la banque des versions.<br /><br /> Prise en charge des ensembles de résultats actifs multiples (MARS, Multiple Active Result Sets). Si une session MARS publie une instruction de modification de données (par exemple, INSERT, UPDATE ou DELETE) à un moment où il y a un ensemble de résultats actif, les lignes concernées par l'instruction de modification sont avec version.<br /><br /> Prise en charge des opérations d'index qui spécifient l'option ONLINE. Les opérations d'index en ligne utilisent le contrôle de version de ligne pour isoler l'opération d'index des effets des modifications d'autres transactions. Ceci permet d'éviter de demander des verrous partagés sur des lignes qui ont été lues. En outre, les utilisateurs simultanés mettre à jour et suppressions lors de l’index en ligne opérations nécessitent d’espace pour les enregistrements de version dans **tempdb**.<br /><br /> Prend en charge les niveaux d’isolation de transaction basé sur le contrôle de version de ligne : une nouvelle implémentation de lecture validée au niveau d’isolation qui utilise le contrôle de version de ligne pour fournir une cohérence de lecture au niveau de l’instruction. Un nouveau niveau d'isolement, l'instantané, pour assurer la cohérence de la lecture au niveau de la transaction.<br /><br /> <br /><br /> Les versions de ligne sont conservées dans le **tempdb** la banque des versions suffisamment longtemps pour satisfaire les exigences de transactions qui s’exécutent sous des niveaux d’isolement basé sur le contrôle de version de ligne.<br /><br /> Pour plus d'informations sur le contrôle de version de ligne et la banque des versions, consultez la rubrique « Présentation des niveaux d'isolement basés sur le contrôle de version de ligne » dans la documentation en ligne de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
+|Contrôle de version de ligne|Le contrôle de version de ligne est un cadre général dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] qui permet d'effectuer les opérations suivantes :<br /><br /> Prend en charge les déclencheurs : créer les tables inserted et deleted dans les déclencheurs. Toutes les lignes modifiées par le déclencheur reçoivent une version, y compris celles modifiées par l'instruction qui a lancé le déclencheur, de même que toute modification de données effectuée par le déclencheur. Déclencheurs AFTER utilisent la banque des versions de **tempdb** pour stocker les images des lignes modifiées par le déclencheur. Si les déclencheurs sont activés lors d'un chargement de données en masse, une copie de chaque ligne est ajoutée à la banque des versions.<br /><br /> Prise en charge des ensembles de résultats actifs multiples (MARS, Multiple Active Result Sets). Si une session MARS publie une instruction de modification de données (par exemple, INSERT, UPDATE ou DELETE) à un moment où il y a un ensemble de résultats actif, les lignes concernées par l'instruction de modification sont avec version.<br /><br /> Prise en charge des opérations d'index qui spécifient l'option ONLINE. Les opérations d'index en ligne utilisent le contrôle de version de ligne pour isoler l'opération d'index des effets des modifications d'autres transactions. Ceci permet d'éviter de demander des verrous partagés sur des lignes qui ont été lues. En outre, les utilisateurs simultanés mettre à jour et les opérations de suppression lors de l’index en ligne opérations nécessitent un espace pour les enregistrements de version dans **tempdb**.<br /><br /> Prend en charge les niveaux d’isolement de transaction basé sur le contrôle de version de ligne : une nouvelle implémentation de lecture validée au niveau d’isolation qui utilise la version de ligne pour fournir la lecture cohérente au niveau de l’instruction. Un nouveau niveau d'isolement, l'instantané, pour assurer la cohérence de la lecture au niveau de la transaction.<br /><br /> <br /><br /> Les versions de ligne sont conservées dans le **tempdb** la banque des versions depuis suffisamment longtemps pour satisfaire les exigences de transactions qui s’exécutent sous des niveaux d’isolement basé sur le contrôle de version de ligne.<br /><br /> Pour plus d'informations sur le contrôle de version de ligne et la banque des versions, consultez la rubrique « Présentation des niveaux d'isolement basés sur le contrôle de version de ligne » dans la documentation en ligne de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |Mise en cache des métadonnées de table temporaire et de variable temporaire|Pour chaque métadonnée de table temporaire et variable temporaire placée dans le cache de métadonnées par [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], deux pages supplémentaires sont allouées pour **tempdb**.<br /><br /> Si une procédure stockée ou un déclencheur crée une table ou variable temporaire, l'objet temporaire n'est pas supprimé à la fin de l'exécution de la procédure ou du déclencheur. À la place, l'objet temporaire est tronqué en une page et réutilisé lors de la prochaine exécution de la procédure ou du déclencheur.|  
-|Index sur des tables partitionnées|Lorsque le [!INCLUDE[ssDE](../../includes/ssde-md.md)] effectue un tri pour créer des index partitionnés, suffisamment d’espace pour conserver les tris intermédiaires de chaque partition **tempdb** si l’option d’index SORT_IN_TEMPDB est spécifiée.|  
-|[!INCLUDE[ssSB](../../includes/sssb-md.md)]|[!INCLUDE[ssSB](../../includes/sssb-md.md)] utilise explicitement **tempdb** pour préserver le contexte de dialogue existant qui ne peut pas rester en mémoire (environ 1 Ko par dialogue).<br /><br /> [!INCLUDE[ssSB](../../includes/sssb-md.md)] utilise implicitement **tempdb** via la mise en cache d’objets dans le contexte d’exécution de requête. comme les tables de travail utilisées pour les événements de la minuterie et les conversations fournies en arrière-plan.<br /><br /> Les fonctionnalités DBMail, notifications d'événements et notifications de requêtes utilisent implicitement [!INCLUDE[ssSB](../../includes/sssb-md.md)].|  
-|Type de données LOB (Large Object)<br /><br /> Variables et paramètres LOB|Les types de données `varchar(max)`, `nvarchar(max)`, **varbinary (max) texte**, `ntext`, `image,` et `xml` sont des types d’objets volumineux.<br /><br /> Lorsqu’un niveau d’isolation de transaction basé sur le contrôle de version de ligne est activé sur la base de données et les modifications des objets volumineux sont effectuées, le fragment modifié du LOB est copié dans le magasin de versions **tempdb**.<br /><br /> Paramètres définis sous la forme d’un type de données d’objets volumineux sont stockés dans **tempdb**.|  
+|Index sur des tables partitionnées|Lorsque le [!INCLUDE[ssDE](../../includes/ssde-md.md)] effectue un tri pour générer des index partitionnés, suffisamment d’espace pour contenir les tris intermédiaires de chaque partition est requis dans **tempdb** si l’option d’index SORT_IN_TEMPDB est spécifiée.|  
+|[!INCLUDE[ssSB](../../includes/sssb-md.md)]|[!INCLUDE[ssSB](../../includes/sssb-md.md)] utilise explicitement **tempdb** pour préserver le contexte de dialogue existant qui ne peut pas rester en mémoire (approximativement 1 Ko par dialogue).<br /><br /> [!INCLUDE[ssSB](../../includes/sssb-md.md)] utilise implicitement **tempdb** via la mise en cache d’objets dans le contexte d’exécution de la requête. comme les tables de travail utilisées pour les événements de la minuterie et les conversations fournies en arrière-plan.<br /><br /> Les fonctionnalités DBMail, notifications d'événements et notifications de requêtes utilisent implicitement [!INCLUDE[ssSB](../../includes/sssb-md.md)].|  
+|Type de données LOB (Large Object)<br /><br /> Variables et paramètres LOB|Les types de données `varchar(max)`, `nvarchar(max)`, **varbinary (max) texte**, `ntext`, `image,` et `xml` sont des types d’objets volumineux.<br /><br /> Lorsqu’un niveau d’isolement de transaction basé sur le contrôle de version de ligne est activé sur la base de données et des modifications des objets volumineux sont effectuées, le fragment modifié du LOB est copié vers la banque des versions dans **tempdb**.<br /><br /> Paramètres définis sous la forme d’un type de données d’objets volumineux sont stockés dans **tempdb**.|  
 |Expressions de table communes (CTE)|Tables de travail temporaires pour les opérations de spoule sont créées dans **tempdb** lorsque les requêtes d’expressions de table communes sont exécutées.|  
   
 ## <a name="corrective-action"></a>Action corrective  
@@ -91,7 +91,7 @@ MODIFY FILE
   
  L'incrément de croissance par défaut pour les fichiers de données est égal à 1 Mo. La valeur par défaut attribuée au fichier journal est égale à 10 %. Nous recommandons d'appliquer les indications suivantes lors de la définition de l'incrément FILEGROWTH :  
   
-|Taille de fichier|Incrément FILEGROWTH|  
+|Taille du fichier|Incrément FILEGROWTH|  
 |---------------|--------------------------|  
 |De 0 à 50 Mo|10 Mo|  
 |De 100 à 200 Mo|20 MO|  

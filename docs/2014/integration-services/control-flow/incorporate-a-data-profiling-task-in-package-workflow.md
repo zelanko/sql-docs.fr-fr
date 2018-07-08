@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Data Profiling task [Integration Services], using output in workflow
 ms.assetid: 39a51586-6977-4c45-b80b-0157a54ad510
 caps.latest.revision: 23
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 31c3d3bdcfc2a986fc62ba32e2df443d74d7a8fd
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: c35cc475af0b083ce8f4a0f6afcb0c654b9bc266
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36039358"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37165000"
 ---
 # <a name="incorporate-a-data-profiling-task-in-package-workflow"></a>Incorporer une tâche de profilage des données dans le flux de travail du package
   Le profilage des données et le nettoyage des données ne sont pas des candidats pour un processus automatisé à leur stade initial. Dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], la sortie de la tâche de profilage des données doit habituellement faire l’objet d’une analyse visuelle et d’un jugement personnel pour qu’il soit déterminé si les violations signalées sont significatives ou excessives. Même après avoir reconnu des problèmes de qualité des données, un plan soigneusement pensé doit être appliqué pour déterminer la meilleure approche pour le nettoyage.  
@@ -332,7 +332,7 @@ ms.locfileid: "36039358"
 7.  Dans les contraintes de précédence qui connectent la tâche de script aux branches situées en aval dans le flux de travail, écrivez des expressions qui utilisent les valeurs des variables pour diriger le flux de travail.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Programme d’installation de la tâche de profilage des données](data-profiling-task.md)   
+ [Configuration des tâche de profilage des données](data-profiling-task.md)   
  [Visionneuse du profil des données](data-profile-viewer.md)  
   
   

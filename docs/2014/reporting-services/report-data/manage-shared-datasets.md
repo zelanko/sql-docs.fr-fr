@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 2cbb1fa3-959e-4df6-9887-ebc93cc1b686
 caps.latest.revision: 6
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 3bcc71c63896289bc924a540ad14b1b9cb591dc1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: af52516dccd163380cc6c36be9d0a862f3de94e7
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36038524"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37168300"
 ---
 # <a name="manage-shared-datasets"></a>Gérer des datasets partagés
   Dans [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], les datasets partagés récupèrent des données de sources de données partagées qui se connectent à des sources de données externes. Un dataset partagé offre un moyen de partager une requête pour fournir un jeu cohérent de données pour plusieurs rapports. La requête de dataset peut inclure des paramètres de dataset. Vous pouvez configurer un dataset partagé pour mettre en cache les résultats de la requête pour des combinaisons de paramètres spécifiques lors de la première utilisation ou en spécifiant une planification. Vous pouvez utiliser la mise en cache de datasets partagés en association avec la mise en cache de rapports et les sources de données de rapports pour mieux gérer l'accès à une source de données.  
@@ -95,7 +95,7 @@ http://localhost/reportserver/?/DataSet1&rs:command=GetShareddatasetDefinition
 |Ajouter un dataset partagé ou modifier les propriétés de la définition du dataset partagé.|Enregistrer dans le Générateur de rapports.<br /><br /> Déployer dans le Concepteur de rapports.<br /><br /> Télécharger un fichier .rsd dans le Gestionnaire de rapports|[Datasets incorporés dans le rapport et datasets partagés &#40;Générateur de rapports et SSRS&#41;](report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md) dans la [documentation du Générateur de rapports ](http://go.microsoft.com/fwlink/?LinkId=154494) sur msdn.microsoft.com.<br /><br /> [Page télécharger un fichier &#40;le Gestionnaire de rapports&#41;](../upload-file-page-report-manager.md)<br /><br /> Si vous téléchargez un dataset partagé avant que la source de données partagée dont il dépend soit publiée, vous devez lier manuellement le dataset partagé à la source de données partagée. Pour plus d’informations, consultez [Page propriétés générales, Datasets partagés &#40;le Gestionnaire de rapports&#41;](../general-properties-page-shared-datasets-report-manager.md).|  
 |Modifier les propriétés d'élément de dataset partagé.|Gestionnaire de rapports|[Page de propriétés générales, Datasets partagés &#40;le Gestionnaire de rapports&#41;](../general-properties-page-shared-datasets-report-manager.md)|  
 |Spécifier des propriétés de dataset partagé supplémentaires pour une instance de dataset partagé dans un rapport.|Générateur de rapports Concepteur de rapports|[Propriétés de jeux de données, boîte de dialogue, requête](../dataset-properties-dialog-box-query.md)|  
-|Créer une liaison avec une source de données partagée différente pour un dataset partagé.|Gestionnaire de rapports|[Page de sélection de la Source de données &#40;le Gestionnaire de rapports&#41;](../data-source-selection-page-report-manager.md)|  
+|Créer une liaison avec une source de données partagée différente pour un dataset partagé.|Gestionnaire de rapports|[Page Sélection de la Source de données &#40;le Gestionnaire de rapports&#41;](../data-source-selection-page-report-manager.md)|  
 |Vérifiez les valeurs par défaut pour les paramètres de dataset.|Ouvrez dans le Générateur de rapports ou utilisez la syntaxe de l'accès URL.|Exemple :<br /><br /> `http://localhost/reportserver/?/DataSet1&rs:command=GetShareddatasetDefinition`|  
 |Activer la mise en cache|Gestionnaire de rapports|[Cache des Datasets partagés &#40;SSRS&#41;](../report-server/cache-shared-datasets-ssrs.md)<br /><br /> [Page mise en cache, Datasets partagés &#40;le Gestionnaire de rapports&#41;](../caching-page-shared-datasets-report-manager.md)|  
 |Créer ou modifier un plan d'actualisation du cache|Gestionnaire de rapports|[Options d’actualisation du cache &#40;Gestionnaire de rapports&#41;](../cache-refresh-options-report-manager.md)|  

@@ -1,5 +1,5 @@
 ---
-title: Ajouter des Types de contenu de serveur de rapports à une bibliothèque (Reporting Services en Mode intégré SharePoint) | Documents Microsoft
+title: Ajouter des Types de contenu de serveur de rapports à une bibliothèque (Reporting Services en Mode intégré SharePoint) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: ac9136c8-9ef4-484c-8e9d-05008a186db5
 caps.latest.revision: 8
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 3a1b9a692b8aa26b2d3d5679866617dd4fcfe51f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: da7ee6e652442bdd2773a8c669b0d134f1fadc37
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36038106"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37177546"
 ---
 # <a name="add-report-server-content-types-to-a-library-reporting-services-in-sharepoint-integrated-mode"></a>Ajouter des types de contenu de serveur de rapports à une bibliothèque (Reporting Services en mode intégré SharePoint)
-  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] Fournit des types contenus prédéfinis SharePoint qui permettent de gérer les fichiers source (.rsds) de données partagées, modèles de rapport (.smdl) et les fichiers de définition (.rdl) de rapport Générateur de rapports. L'ajout à une bibliothèque des types de contenu **Rapport du Générateur de rapports**, **Modèle de rapport**et **Source de données du rapport** active la commande **Nouveau** , qui permet de créer de nouveaux documents de ce type.  
+  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] Fournit des types contenus prédéfinis SharePoint qui permettent de gérer les données partagées (.rsds) fichiers sources, les modèles de rapport (.smdl) et les fichiers de définition (.rdl) de rapport Générateur de rapports. L'ajout à une bibliothèque des types de contenu **Rapport du Générateur de rapports**, **Modèle de rapport**et **Source de données du rapport** active la commande **Nouveau** , qui permet de créer de nouveaux documents de ce type.  
   
  **[!INCLUDE[applies](../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] en mode SharePoint  
   
@@ -112,7 +112,7 @@ ms.locfileid: "36038106"
 9. > [!NOTE]  
     >  Si le [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] groupe du type de contenu **Types de contenu SQL Server Reporting Services** n’est pas visible sur le **ajouter des Types de contenu** page, une des conditions suivantes est remplie :  
   
-    -   Le complément [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] pour les produits SharePoint n'est pas installé. Pour plus d’informations, consultez [installer ou désinstaller le complément, Reporting Services pour SharePoint &#40;SharePoint 2010 et SharePoint 2013&#41;](install-windows/install-or-uninstall-the-reporting-services-add-in-for-sharepoint.md). Cette rubrique contient des informations sur l'installation du complément et les étapes de l'installation uniquement des fichiers du complément afin de contourner les problèmes.  
+    -   Le complément [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] pour les produits SharePoint n'est pas installé. Pour plus d’informations, consultez [installer ou désinstaller le logiciel complément Reporting Services pour SharePoint &#40;SharePoint 2010 et SharePoint 2013&#41;](install-windows/install-or-uninstall-the-reporting-services-add-in-for-sharepoint.md). Cette rubrique contient des informations sur l'installation du complément et les étapes de l'installation uniquement des fichiers du complément afin de contourner les problèmes.  
   
     -   Le complément est installé, mais la fonctionnalité de collection de sites **Fonctionnalité d’intégration du serveur de rapports** n’est pas active. Vérifiez la fonctionnalité de collection de sites dans **Paramètres du site**.  
   
@@ -168,6 +168,6 @@ ms.locfileid: "36038106"
   
 ## <a name="see-also"></a>Voir aussi  
  [Site SharePoint et List Permission Reference for Report Server Items](security/sharepoint-site-and-list-permission-reference-for-report-server-items.md)   
- [Démarrer le Générateur de rapports &#40;Générateur de rapports&#41;](report-builder/start-report-builder.md)  
+ [Démarrer le Générateur de &#40;Générateur de rapports&#41;](report-builder/start-report-builder.md)  
   
   

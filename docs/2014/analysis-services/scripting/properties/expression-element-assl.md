@@ -1,5 +1,5 @@
 ---
-title: Élément d’expression (ASSL) | Documents Microsoft
+title: Expression, élément (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - Expression element
 ms.assetid: a9491b21-5279-4531-b6a5-9e8022060dd8
 caps.latest.revision: 36
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: b56f4d09e59644b63d11c4becbb999f0536479d0
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 3d7ba9bbfeddef0d4d7466141cabb914f4289034
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36039616"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37155316"
 ---
 # <a name="expression-element-assl"></a>Élément Expression (ASSL)
   Contient une expression MDX (Multidimensional Expressions) qui définit le contenu de l'élément parent.  

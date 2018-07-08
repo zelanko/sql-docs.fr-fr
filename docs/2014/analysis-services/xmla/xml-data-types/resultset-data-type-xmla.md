@@ -1,5 +1,5 @@
 ---
-title: Type de données ResultSet (XMLA) | Documents Microsoft
+title: Type de données ResultSet (XMLA) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -24,18 +24,18 @@ helpviewer_keywords:
 - Resultset data type
 ms.assetid: 45e7d7d6-1f89-4dc8-b39d-9270ea2db541
 caps.latest.revision: 30
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: d8a571012c82c9e4d26d9f586cf67344f19258a6
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 4d4e95d3e2b85971271cff4b1365b44e5a30ba0c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36039390"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37155070"
 ---
 # <a name="resultset-data-type-xmla"></a>Type de données Resultset (XMLA)
-  Définit un type de données primitif abstrait qui représente les données retournées par une [Discover](../xml-elements-methods-discover.md) ou [Execute](../xml-elements-methods-execute.md) appel de méthode.  
+  Définit un type de données primitif abstrait qui représente les données retournées à partir d’un [Discover](../xml-elements-methods-discover.md) ou [Execute](../xml-elements-methods-execute.md) appel de méthode.  
   
  **Espace de noms** urn:schemas-microsoft-com:xml-analysis:resultset  
   

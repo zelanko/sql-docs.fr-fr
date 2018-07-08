@@ -1,5 +1,5 @@
 ---
-title: Les données Unicode et le serveur les Pages de codes | Documents Microsoft
+title: Les données Unicode et serveur des Pages de codes | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - extended stored procedures [SQL Server], metadata
 ms.assetid: 52310260-a892-4b27-ad2e-bf164b98ee80
 caps.latest.revision: 30
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: bd532c5b3d564051c8d32171e861791017e8ab3f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: rothja
+ms.author: jroth
+manager: craigg
+ms.openlocfilehash: fff43500155bdd6fc4fece74a018dc6dd4f7f0fc
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36038568"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37199249"
 ---
 # <a name="unicode-data-and-server-code-pages"></a>Données Unicode et pages de codes du serveur
     
@@ -33,7 +33,7 @@ ms.locfileid: "36038568"
   
  L'API de procédure stockée étendue est activée pour les données Unicode ; toutefois, elle n'est pas activée pour les métadonnées Unicode. La directive Unicode #define n'a pas d'effet sur l'API de procédure stockée étendue.  
   
- Toutes les métadonnées retournées par l'API de procédure stockée étendue ou fournies par celle-ci à par votre application de procédure stockée étendue sont censées figurer dans la page de codes multioctets du serveur. La page de codes par défaut d’une application de serveur API de procédure stockée étendue est la page de codes ANSI de l’ordinateur sur lequel l’application est en cours d’exécution, ce qui peut être obtenu en appelant **srv_pfield** avec le paramètre de champ défini pour SRV_ SPROC_CODEPAGE.  
+ Toutes les métadonnées retournées par l'API de procédure stockée étendue ou fournies par celle-ci à par votre application de procédure stockée étendue sont censées figurer dans la page de codes multioctets du serveur. La page de codes par défaut d’une application de serveur d’API de procédure stockée étendue est la page de codes ANSI de l’ordinateur sur lequel l’application est en cours d’exécution, ce qui peut être obtenu en appelant **srv_pfield** avec le paramètre de champ défini sur SRV_ SPROC_CODEPAGE.  
   
  Si votre application de l'API de procédure stockée étendue prend en charge Unicode, vous devez convertir les noms de colonne de métadonnées Unicode, les messages d'erreur, etc. en données multioctets avant de passer ces données à l'API de procédure stockée étendue.  
   
@@ -42,7 +42,7 @@ ms.locfileid: "36038568"
   
 -   Données de la colonne sont passées en tant que données Unicode à **srv_describe** , car la colonne est décrite comme étant SRVNVARCHAR.  
   
--   Métadonnées de nom de colonne sont transmise à **srv_describe** en tant que données multioctets.  
+-   Métadonnées de nom de colonne sont passée à **srv_describe** en tant que données multioctets.  
   
      Appels de procédures stockées étendu **srv_pfield** avec le paramètre de champ valeur srv_sproc_codepage attribuée pour obtenir la page de codes multioctets [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   

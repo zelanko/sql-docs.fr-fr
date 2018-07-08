@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - CHECK constraints, disabling
 - constraints [SQL Server], disabling
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - constraints [SQL Server], check
 ms.assetid: c7287ad1-50d2-4e80-bc0c-b5570f7e5f69
 caps.latest.revision: 16
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 16baf05c5beba900d853da3e655b7742d18a7ac4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: bc6ed9dc2386951e47e5732b79ee74bfee96abc7
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36039024"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37188116"
 ---
 # <a name="disable-check-constraints-with-insert-and-update-statements"></a>Désactiver des contraintes de validation avec des instructions INSERT et UPDATE
   Vous pouvez désactiver une contrainte de validation pour des transactions INSERT et UPDATE dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] à l'aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou de [!INCLUDE[tsql](../../includes/tsql-md.md)]. Une fois les contraintes de validation désactivées, les insertions ou les mises à jour ultérieures sur la colonne ne sont pas validées par rapport aux conditions de la contrainte. Utilisez cette option si vous savez que de nouvelles données violeront la contrainte existante ou si la contrainte s'applique uniquement aux données déjà dans la base de données.  

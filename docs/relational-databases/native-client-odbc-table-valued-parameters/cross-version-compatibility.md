@@ -1,12 +1,12 @@
 ---
-title: Compatibilité des versions | Documents Microsoft
+title: Compatibilité des versions | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: connectivity
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -16,12 +16,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: e124885ed8acb240a004d255c6d5b1f49ee30bf3
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
+ms.openlocfilehash: bafa21a0f85e18cd30572cf00b62d81a46323100
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35697500"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37429118"
 ---
 # <a name="cross-version-compatibility"></a>Compatibilité des versions
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -29,11 +29,11 @@ ms.locfileid: "35697500"
 
   Les conflits de version peuvent se produire lorsque les instances client ou serveur de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] antérieures à [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] sont censées traiter les paramètres table.  
   
- En général, les fonctionnalités des paramètres table ne sont accessibles qu'aux clients [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] (avec SQL Server Native Client 10.0) ou version ultérieure connectés aux serveurs [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] (ou version ultérieure). Nouvelles colonnes dans les jeux de résultats de fonction de catalogue ne sont présentes lorsqu’il est connecté à un [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] (ou version ultérieure) server.  
+ En général, les fonctionnalités des paramètres table ne sont accessibles qu'aux clients [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] (avec SQL Server Native Client 10.0) ou version ultérieure connectés aux serveurs [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] (ou version ultérieure). Nouvelles colonnes dans les jeux de résultats de fonction de catalogue ne sont présentes dans le cas de connexion à un [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] (ou version ultérieure) server.  
   
  Si une application cliente compilée avec une version antérieure de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client exécute des instructions qui attendent des paramètres table, le serveur détecte cette situation via une erreur de conversion de données, et ODBC retourne celle-ci comme SQLSTATE 07006, avec le message « Violation de l'attribut de type de données restreint ».  
   
- Si une application cliente qui a été compilée avec [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 10.0 ou version ultérieure tente d’utiliser des paramètres table lorsqu’il est connecté à une instance de serveur antérieure à [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client détecte et SQLBindCol, Appels SQLBindParameter, SQLSetDescFields et SQLSetDescRec échoue avec SQLSTATE 07006 et le message « Restricted violation d’attribut de type de données (la version de SQL Server pour cette connexion ne prend pas en charge les paramètres table) ».  
+ Si une application cliente qui a été compilée avec [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 10.0 ou version ultérieure essaye d’utiliser des paramètres table lorsque connecté à une instance de serveur antérieure à [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client détecte et SQLBindCol, Appels SQLBindParameter, SQLSetDescFields et SQLSetDescRec échouera avec SQLSTATE 07006 et le message « Restricted violation d’attribut de type de données (la version de SQL Server pour cette connexion ne prend pas en charge les paramètres table) ».  
   
 ## <a name="see-also"></a>Voir aussi  
  [Paramètres table &#40;ODBC&#41;](../../relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md)  

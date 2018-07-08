@@ -1,5 +1,5 @@
 ---
-title: Mesurer l’élément (ASSL) | Documents Microsoft
+title: Mesurer, élément (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - Measure element
 ms.assetid: 4c2c2ed1-7f78-4564-982a-132f13bea36f
 caps.latest.revision: 38
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: da78700e32c81dab11d6609ca4aa12efd2204bcb
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 80d59a5356bf1c0b5712e729f230fff9383603cc
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36038676"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37159330"
 ---
 # <a name="measure-element-assl"></a>Élément Measure (ASSL)
   Définit une mesure.  
@@ -90,7 +90,7 @@ ms.locfileid: "36038676"
   
 |Ancêtre ou parent|Éléments enfants|  
 |------------------------|--------------------|  
-|[MeasureGroup](../properties/aggregatefunction-element-assl.md), [Annotations](../collections/annotations-element-assl.md), [BackColor](../properties/backcolor-element-assl.md), [DataType](../properties/datatype-element-assl.md), [Description](../properties/description-element-assl.md), [DisplayFolder](../properties/displayfolder-element-assl.md), [FontFlags](../properties/fontflags-element-assl.md), [FontName](../properties/name-element-assl.md), [FontSize](../properties/fontsize-element-assl.md), [ForeColor](../properties/forecolor-element-assl.md), [FormatString](../properties/formatstring-element-assl.md), [ID](../properties/id-element-assl.md), [MeasureExpression](../properties/expression-element-assl.md), [Name](../properties/name-element-assl.md), [Source](../properties/source-element-measure-assl.md), [Translations](../collections/translations-element-assl.md), [Visible](../properties/visible-element-assl.md)|  
+|[MeasureGroup](../properties/aggregatefunction-element-assl.md), [Annotations](../collections/annotations-element-assl.md), [BackColor](../properties/backcolor-element-assl.md), [DataType](../properties/datatype-element-assl.md), [Description](../properties/description-element-assl.md), [DisplayFolder ](../properties/displayfolder-element-assl.md), [FontFlags](../properties/fontflags-element-assl.md), [FontName](../properties/name-element-assl.md), [FontSize](../properties/fontsize-element-assl.md), [ForeColor](../properties/forecolor-element-assl.md), [FormatString ](../properties/formatstring-element-assl.md), [ID](../properties/id-element-assl.md), [MeasureExpression](../properties/expression-element-assl.md), [nom](../properties/name-element-assl.md), [Source](../properties/source-element-measure-assl.md), [traductions](../collections/translations-element-assl.md), [Visible](../properties/visible-element-assl.md)|  
 |Autres|None|  
   
 ## <a name="remarks"></a>Notes  
@@ -102,7 +102,7 @@ ms.locfileid: "36038676"
   
 -   Contenir un seul nom de dossier, ce qui indique que la mesure doit être rendue comme appartenant à un dossier du même nom.  
   
--   Contenir plusieurs noms de dossier séparés par une barre oblique inverse (\\), ce qui indique une hiérarchie de dossiers incorporée.  
+-   Contenir plusieurs noms de dossier séparés par une barre oblique inverse (\\), qui dénote une hiérarchie de dossiers incorporée.  
   
  La propriété `DisplayFolder` s'applique également aux mesures calculées et aux hiérarchies.  
   

@@ -1,5 +1,5 @@
 ---
-title: Exemples de requêtes de modèle association | Documents Microsoft
+title: Exemples de requêtes de modèle association | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - itemsets [Analysis Services]
 - association algorithms [Analysis Services]
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - content queries [DMX]
 ms.assetid: 68b39f5c-c439-44ac-8046-6f2d36649059
 caps.latest.revision: 25
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: e1b0c7f81123188af9b929dcdcc33f6cf44ed4aa
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: ccd88cf081949cfad9c3d032598af9b96707fd0f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36038947"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37173610"
 ---
 # <a name="association-model-query-examples"></a>Exemples de requêtes de modèle d'association
   Lorsque vous créez une requête sur un modèle d'exploration de données, vous pouvez soit créer une requête de contenu qui fournit des détails sur les règles et les jeux d'éléments découverts au cours de l'analyse, soit créer une requête de prédiction qui utilise les associations découvertes dans les données pour faire des prédictions. En général, pour un modèle d'association, les prédictions sont basées sur des règles et peuvent être utilisées pour faire des recommandations, tandis que les interrogations sur du contenu explorent la relation entre les jeux d'éléments. Vous pouvez aussi récupérer des métadonnées sur le modèle.  

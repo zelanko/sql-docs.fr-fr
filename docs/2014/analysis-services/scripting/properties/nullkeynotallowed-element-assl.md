@@ -1,5 +1,5 @@
 ---
-title: Élément NullKeyNotAllowed (ASSL) | Documents Microsoft
+title: Élément NullKeyNotAllowed (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -22,18 +22,18 @@ helpviewer_keywords:
 - NullKeyNotAllowed element
 ms.assetid: 4ece99eb-954b-4da1-add4-dd9efd5fff0a
 caps.latest.revision: 35
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 235c76fb2b8cad1682fab97f36cb1867d7c82c38
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 6e514e1258fc8a73be70195641525f400021a002
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36039385"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37165270"
 ---
 # <a name="nullkeynotallowed-element-assl"></a>Élément NullKeyNotAllowed (ASSL)
-  Détermine comment la [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] moteur de traitement gère une erreur de clé null survenue pendant le traitement.  
+  Détermine comment la [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] moteur de traitement gère une erreur de clé null survenue au cours du traitement.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -62,7 +62,7 @@ ms.locfileid: "36039385"
 |Éléments enfants|None|  
   
 ## <a name="remarks"></a>Notes  
- Les erreurs de clé NULL se produisent lorsqu'une valeur NULL est rencontrée dans une colonne clé où les valeurs NULL ne sont pas autorisées, ce qui fait ignorer l'enregistrement pendant le traitement. Toutefois, cette erreur se produit uniquement si le [NullProcessing](nullprocessing-element-assl.md) , élément pour les `DataItem` ancêtre de la `ErrorConfiguration` élément parent a la valeur *erreur*.  
+ Les erreurs de clé NULL se produisent lorsqu'une valeur NULL est rencontrée dans une colonne clé où les valeurs NULL ne sont pas autorisées, ce qui fait ignorer l'enregistrement pendant le traitement. Toutefois, cette erreur se produit uniquement si le [NullProcessing](nullprocessing-element-assl.md) élément pour le `DataItem` ancêtre de la `ErrorConfiguration` élément parent a la valeur *erreur*.  
   
  La valeur de cet élément est limitée à l'une des chaînes du tableau suivant.  
   
@@ -72,7 +72,7 @@ ms.locfileid: "36039385"
 |*ReportAndContinue*|Le traitement signale l'erreur et continue.|  
 |*ReportAndStop*|Le traitement signale l'erreur et s'arrête.|  
   
- L’énumération qui correspond aux valeurs autorisées pour `NullKeyNotAllowed` dans l’objet d’objets AMO (Analysis Management) est modèle <xref:Microsoft.AnalysisServices.ErrorOption>.  
+ L’énumération qui correspond aux valeurs autorisées pour `NullKeyNotAllowed` dans l’objet d’objets AMO (Analysis Management) modèle est <xref:Microsoft.AnalysisServices.ErrorOption>.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Élément ErrorConfiguration &#40;ASSL&#41;](../objects/errorconfiguration-element-assl.md)  

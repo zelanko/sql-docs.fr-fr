@@ -1,5 +1,5 @@
 ---
-title: Boîte de dialogue Propriétés du DataSet, filtres (Générateur de rapports) | Documents Microsoft
+title: Boîte de dialogue Propriétés du DataSet, filtres (Générateur de rapports) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - "10025"
 ms.assetid: 933a6f44-4eb7-4e73-9c40-ac0fd17b23d3
 caps.latest.revision: 14
-author: douglaslM
+author: maggiesmsft
 ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: beb0703212eb639483bbaa015b6fa89bba3a3068
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: dbe6bee60f4cee2ce99f5aadd1dc3cea14e85b1b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36038105"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37258165"
 ---
 # <a name="dataset-properties-dialog-box-filters-report-builder"></a>Boîte de dialogue Propriétés du dataset, Filtres (Générateur de rapports)
   Sélectionnez **Filtres** dans la boîte de dialogue **Propriétés du dataset** pour créer des filtres pour le dataset.  
@@ -64,7 +64,7 @@ ms.locfileid: "36038105"
 ## <a name="see-also"></a>Voir aussi  
  [Datasets incorporés dans le rapport et datasets partagés &#40;Générateur de rapports et SSRS&#41;](report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)   
  [Paramètres de rapport &#40;Générateur de rapports et Concepteur de rapports&#41;](report-design/report-parameters-report-builder-and-report-designer.md)   
- [Ajouter un filtre à un jeu de données &#40;rapport Générateur et SSRS&#41;](report-data/add-a-filter-to-a-dataset-report-builder-and-ssrs.md)   
- [Expression utilise des rapports de &#40;rapport Générateur et SSRS&#41;](report-design/expression-uses-in-reports-report-builder-and-ssrs.md)  
+ [Ajouter un filtre à un jeu de données &#40;Générateur de rapports et SSRS&#41;](report-data/add-a-filter-to-a-dataset-report-builder-and-ssrs.md)   
+ [Utilisation d’expressions dans les rapports &#40;Générateur de rapports et SSRS&#41;](report-design/expression-uses-in-reports-report-builder-and-ssrs.md)  
   
   

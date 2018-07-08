@@ -5,21 +5,20 @@ ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
+ms.technology: ''
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: b856ee9a-49e7-4fab-a88d-48a633fce269
 caps.latest.revision: 17
 author: craigg-msft
 ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: fefc4c7df12855615cba104bfb63d8547608c7f0
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: bd1bc616c3a897f0c7b3b3ea4fda256b240f75ab
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36039232"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37155420"
 ---
 # Guide de conception d'index SQL Server
   L'engorgement des applications de base de données est souvent imputable à des index mal conçus ou en nombre insuffisant. La conception d'index efficaces est primordiale pour le bon fonctionnement des bases de données et des applications. Ce guide de conception d'index SQL Server contient les informations et les meilleures pratiques nécessaires à la création d'index efficaces pour répondre aux besoins de votre application.  
@@ -29,9 +28,9 @@ ms.locfileid: "36039232"
  Ce guide suppose que le lecteur connaît les types d'index disponibles dans [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Pour obtenir description générale des types d'index, consultez [Types d'index](http://msdn.microsoft.com/library/ms175049.aspx).  
   
 ##  <a name="Top"></a> Dans ce Guide  
- [Concepts de base index](#Basics)  
+ [Principes fondamentaux de conception de index](#Basics)  
   
- [Instructions générales de conception de Index](#General_Design)  
+ [Instructions de conception d’Index général](#General_Design)  
   
  [Indications pour la conception d’index cluster](#Clustered)  
   
@@ -55,7 +54,7 @@ ms.locfileid: "36039232"
 ### Tâches de conception d'index  
  La stratégie de conception d'index que nous recommandons est constituée des tâches suivantes :  
   
-1.  Comprendre les caractéristiques de la base de données elle-même. Par exemple, s'agit-il d'une base de données de traitement transactionnel en ligne (OLTP) dont les données sont souvent modifiées, ou d'une base de données d'aide à la décision (DSS) ou d'entreposage de données (OLAP) contenant essentiellement des données en lecture seule et devant traiter des jeux de données volumineux rapidement ? Dans [!INCLUDE[ssSQL11](../includes/sssql11-md.md)], les index *columnstore optimisés en mémoire xVelocity* sont particulièrement adaptés aux jeux de données d'entrepôts de données classiques. Les index columnstore peuvent transformer l'expérience utilisateur des entrepôts de données en améliorant considérablement les performances des requêtes communes liées aux entrepôts de données, par exemple en matière de filtrage, d'agrégation, de regroupement et de jointure en étoile. Pour plus d’informations, consultez [Columnstore Indexes Described](../relational-databases/indexes/columnstore-indexes-described.md).  
+1.  Comprendre les caractéristiques de la base de données elle-même. Par exemple, s'agit-il d'une base de données de traitement transactionnel en ligne (OLTP) dont les données sont souvent modifiées, ou d'une base de données d'aide à la décision (DSS) ou d'entreposage de données (OLAP) contenant essentiellement des données en lecture seule et devant traiter des jeux de données volumineux rapidement ? Dans [!INCLUDE[ssSQL11](../includes/sssql11-md.md)], les index *columnstore optimisés en mémoire xVelocity* sont particulièrement adaptés aux jeux de données d'entrepôts de données classiques. Les index columnstore peuvent transformer l'expérience utilisateur des entrepôts de données en améliorant considérablement les performances des requêtes communes liées aux entrepôts de données, par exemple en matière de filtrage, d'agrégation, de regroupement et de jointure en étoile. Pour plus d’informations, consultez [index Columnstore décrits](../relational-databases/indexes/columnstore-indexes-described.md).  
   
 2.  Comprendre les caractéristiques des requêtes les plus fréquemment utilisées. Par exemple, si vous savez qu'une requête fréquemment utilisée crée une jointure entre deux tables ou plus, vous serez plus à même de choisir le type d'index le mieux adapté.  
   
@@ -190,7 +189,7 @@ ON Purchasing.PurchaseOrderDetail
   
  L'ordre de tri ne peut être spécifié que pour les colonnes clés. L’affichage catalogue [sys.index_columns](/sql/relational-databases/system-catalog-views/sys-indexes-transact-sql) et la fonction INDEXKEY_PROPERTY indiquent si une colonne d’index est stockée dans l’ordre croissant ou décroissant.  
   
- ![Icône de flèche utilisée avec différée lien en haut](media/uparrow16x16.gif "icône de flèche utilisée avec différée lien en haut") [dans ce Guide](#Top)  
+ ![Icône de flèche utilisée avec le lien Retour au début](media/uparrow16x16.gif "icône de flèche utilisée avec le lien Retour au début") [dans ce Guide](#Top)  
   
 ##  <a name="Clustered"></a> Indications pour la conception d'index cluster  
  Les index cluster trient et stockent les lignes de données de la table en fonction de leurs valeurs de clé. Il n'y a qu'un index cluster par table car les lignes de données ne peuvent être triées que dans un seul ordre. À quelques exceptions près, toutes les tables doivent avoir un index cluster défini sur la ou les colonnes présentant les caractéristiques suivantes :  
@@ -261,7 +260,7 @@ ON Purchasing.PurchaseOrderDetail
   
      Les clés étendues sont composées de plusieurs colonnes ou plusieurs colonnes de grande taille. Les valeurs de clé de l'index cluster sont utilisées par tous les index non-cluster comme clés de recherche. Tous les index non-cluster définis sur la même table sont considérablement plus grands car leurs entrées contiennent la clé de cluster et aussi les colonnes clés définies pour cet index non-cluster.  
   
- ![Icône de flèche utilisée avec différée lien en haut](media/uparrow16x16.gif "icône de flèche utilisée avec différée lien en haut") [dans ce Guide](#Top)  
+ ![Icône de flèche utilisée avec le lien Retour au début](media/uparrow16x16.gif "icône de flèche utilisée avec le lien Retour au début") [dans ce Guide](#Top)  
   
 ##  <a name="Nonclustered"></a> Indications pour la conception d'index non-cluster  
  Un index non-cluster contient les valeurs de clé d'index et les localisateurs de ligne qui pointent vers l'emplacement de stockage des données de table. Vous pouvez créer plusieurs index non cluster sur une table ou une vue indexée. Les index non-cluster doivent, en principe, améliorer les performances des requêtes fréquemment utilisées qui ne sont pas couvertes par l'index cluster.  
@@ -393,7 +392,7 @@ INCLUDE (FileName);
   
     -   modifier la possibilité de valeur NULL de la colonne de NOT NULL à NULL ;  
   
-    -   Augmenter la longueur des `varchar`, `nvarchar`, ou `varbinary` colonnes.  
+    -   Augmentez la longueur de `varchar`, `nvarchar`, ou `varbinary` colonnes.  
   
         > [!NOTE]  
         >  Ces restrictions sur la modification des colonnes s'appliquent également aux colonnes de clés d'index.  
@@ -430,7 +429,7 @@ INCLUDE (AddressLine1, AddressLine2, City, StateProvinceID);
   
  Vous devez déterminer si les gains de performances des requêtes compensent la dégradation des performances lors de la modification des données et la quantité d'espace disque supplémentaire nécessaire.  
   
- ![Icône de flèche utilisée avec différée lien en haut](media/uparrow16x16.gif "icône de flèche utilisée avec différée lien en haut") [dans ce Guide](#Top)  
+ ![Icône de flèche utilisée avec le lien Retour au début](media/uparrow16x16.gif "icône de flèche utilisée avec le lien Retour au début") [dans ce Guide](#Top)  
   
 ##  <a name="Unique"></a> Instructions de conception d'index uniques  
  Un index unique garantit que la clé d'index ne contient aucune valeur dupliquée et que, par conséquent, chaque ligne de la table est unique d'une certaine manière. Spécifier un index unique n'a de sens que si l'unicité est une caractéristique des données elles-mêmes. Par exemple, si vous souhaitez que les valeurs de la colonne `NationalIDNumber` de la table `HumanResources.Employee` soient uniques, lorsque la clé primaire est `EmployeeID`, créez une contrainte UNIQUE sur la colonne `NationalIDNumber` . Si l'utilisateur essaie de saisir la même valeur dans cette colonne pour plusieurs employés, un message d'erreur apparaît et la valeur dupliquée n'est pas entrée.  
@@ -455,7 +454,7 @@ INCLUDE (AddressLine1, AddressLine2, City, StateProvinceID);
   
 -   Un index non cluster unique peut contenir des colonnes non-clés incluses. Pour plus d'informations, consultez [Index avec colonnes incluses](#Included_Columns).  
   
- ![Icône de flèche utilisée avec différée lien en haut](media/uparrow16x16.gif "icône de flèche utilisée avec différée lien en haut") [dans ce Guide](#Top)  
+ ![Icône de flèche utilisée avec le lien Retour au début](media/uparrow16x16.gif "icône de flèche utilisée avec le lien Retour au début") [dans ce Guide](#Top)  
   
 ##  <a name="Filtered"></a> Instructions de conception d'index filtrés  
  Un index filtré est un index non cluster optimisé, convenant tout particulièrement aux requêtes qui effectuent des sélections dans un sous-ensemble de données bien défini. Il utilise un prédicat de filtre pour indexer une partie des lignes de la table. Un index filtré bien conçu peut améliorer les performances des requêtes, réduire les coûts de maintenance des index et réduire les coûts de stockage des index par rapport aux index de table entière.  
@@ -596,7 +595,7 @@ WHERE b = CONVERT(Varbinary(4), 1);
   
  Le fait de déplacer la conversion de données de la gauche vers la droite d'un opérateur de comparaison peut modifier la signification de la conversion. Dans l'exemple ci-dessus, lorsque l'opérateur CONVERT a été ajouté à droite, la comparaison de type integer est devenue une comparaison de type `varbinary`.  
   
- ![Icône de flèche utilisée avec différée lien en haut](media/uparrow16x16.gif "icône de flèche utilisée avec différée lien en haut") [dans ce Guide](#Top)  
+ ![Icône de flèche utilisée avec le lien Retour au début](media/uparrow16x16.gif "icône de flèche utilisée avec le lien Retour au début") [dans ce Guide](#Top)  
   
 ##  <a name="Additional_Reading"></a> Lecture supplémentaire  
  [Amélioration des performances avec les vues indexées SQL Server 2008](http://msdn.microsoft.com/library/dd171921(v=sql.100).aspx)  

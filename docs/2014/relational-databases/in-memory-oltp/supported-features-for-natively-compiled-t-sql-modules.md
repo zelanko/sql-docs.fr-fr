@@ -1,5 +1,5 @@
 ---
-title: Prise en charge des constructions dans les procédures stockées compilées en mode natif | Documents Microsoft
+title: Prise en charge des constructions dans les procédures stockées compilées en mode natif | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - database-engine-imoltp
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 05515013-28b5-4ccf-9a54-ae861448945b
 caps.latest.revision: 34
-author: stevestein
-ms.author: sstein
-manager: jhubbard
-ms.openlocfilehash: ab0ce49a3f135d59dba89abc756bf9ee4d7fa198
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: 91434af003bdf783ee4f2bd2c946e4a871eac44d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36038138"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37240850"
 ---
 # <a name="supported-constructs-in-natively-compiled-stored-procedures"></a>Constructions prises en charge dans les procédures stockées compilées en mode natif
-  Cette rubrique contient une liste de fonctionnalités prises en charge pour les procédures stockées compilées en mode natif ([CREATE PROCEDURE &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-procedure-transact-sql)) :  
+  Cette rubrique contient une liste des fonctionnalités prises en charge pour les procédures stockées compilées en mode natif ([CREATE PROCEDURE &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-procedure-transact-sql)) :  
   
 -   [Programmabilité dans les procédures stockées compilées en mode natif](#pncsp)  
   
@@ -70,7 +70,7 @@ ms.locfileid: "36038138"
 ##  <a name="so"></a> Opérateurs pris en charge  
  Les opérateurs suivants sont pris en charge :  
   
--   [Opérateurs de comparaison &#40;Transact-SQL&#41; ](/sql/t-sql/language-elements/comparison-operators-transact-sql) (par exemple, >, \<, > =, et < =) sont pris en charge dans les conditions (IF, tandis que).  
+-   [Opérateurs de comparaison &#40;Transact-SQL&#41; ](/sql/t-sql/language-elements/comparison-operators-transact-sql) (par exemple, >, \<, > =, et < =) sont pris en charge dans des instructions conditionnelles (IF, tandis que).  
   
 -   Opérateurs unaires (+, -).  
   
@@ -138,7 +138,7 @@ ms.locfileid: "36038138"
   
  <sup>1</sup> ORDER BY et TOP sont pris en charge dans les procédures stockées compilées en mode natif, avec quelques restrictions :  
   
--   Il n’existe aucune prise en charge pour `DISTINCT` dans les `SELECT` ou `ORDER BY` clause.  
+-   Il n’existe aucune prise en charge pour `DISTINCT` dans le `SELECT` ou `ORDER BY` clause.  
   
 -   Il n'existe aucune prise en charge de `WITH TIES` ou `PERCENT` dans la clause `TOP`.  
   

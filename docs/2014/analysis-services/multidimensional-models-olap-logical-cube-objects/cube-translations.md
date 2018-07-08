@@ -1,5 +1,5 @@
 ---
-title: Traductions de cube | Documents Microsoft
+title: Traductions de cube | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - translations [Analysis Services], cubes
 ms.assetid: 4e4fd6a4-d324-4508-b75a-2a57de9ab8ff
 caps.latest.revision: 41
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 7bc7d1a6b35b093e9f5fabab41138dc90b9c10ef
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: f894d45dffbf1c6eb746e3674127c75c4e59a81e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36038917"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37163310"
 ---
 # <a name="cube-translations"></a>Traductions de cube
   Une traduction est un mécanisme simple permettant de modifier les étiquettes et les légendes affichées d'une langue à une autre. Chaque traduction est définie comme une paire de valeurs : une chaîne avec le texte traduit et un nombre avec l'ID de langue. Les traductions sont disponibles pour tous les objets dans [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Les valeurs d'attribut peuvent également être traduites pour les dimensions. L'application cliente est chargée de rechercher le paramètre de langue que l'utilisateur a défini et bascule pour afficher toutes les légendes et les étiquettes dans cette langue. Un objet peut avoir autant de traductions que vous le souhaitez.  
@@ -43,6 +43,6 @@ ms.locfileid: "36038917"
 ## <a name="see-also"></a>Voir aussi  
  [Traductions de dimension](../multidimensional-models-olap-logical-dimension-objects/dimension-translations.md)   
  [Traductions &#40;Analysis Services&#41;](../translations-analysis-services.md)   
- [Conseils et meilleures pratiques en matière de globalisation &#40;Analysis Services&#41;](../globalization-tips-and-best-practices-analysis-services.md)  
+ [Globalisation conseils et meilleures pratiques &#40;Analysis Services&#41;](../globalization-tips-and-best-practices-analysis-services.md)  
   
   

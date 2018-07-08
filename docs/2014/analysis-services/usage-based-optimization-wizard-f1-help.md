@@ -1,5 +1,5 @@
 ---
-title: Aide (F1) de l’Assistant Optimisation de l’utilisation | Documents Microsoft
+title: Aide F1 de l’Assistant Optimisation de l’utilisation | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.usagebasedoptimizationwizard.f1
 helpviewer_keywords:
 - Usage-Based Optimization Wizard
 ms.assetid: e5f5a938-ae7c-4f4e-9416-a7f94ac82763
 caps.latest.revision: 26
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: b703234bb779042bdd341140e603938b16ebb412
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 8e01a630552f70586b3444394e143dc6978153d6
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36038172"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37229699"
 ---
 # <a name="usage-based-optimization-wizard-f1-help"></a>Aide F1 sur l'Assistant Optimisation de l'utilisation
   Le résultat de l'Assistant Optimisation de l'utilisation est similaire à celui de l'Assistant Conception d'agrégation : il s'utilise pour concevoir les agrégations d'une partition. Cependant, l'Assistant Optimisation de l'utilisation conçoit les agrégations en fonction des habitudes d'utilisation des requêtes enregistrées dans le journal des requêtes d'une instance [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] . Les agrégations améliorent les performances en permettant à [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] d’extraire des totaux précalculés du stockage des cubes au lieu de recalculer les données à partir d’une source de données sous-jacente pour chaque requête.  
@@ -51,24 +51,24 @@ ms.locfileid: "36038172"
   
 ## <a name="in-this-section"></a>Dans cette section  
   
--   [Sélectionner les Partitions à modifier &#40;optimisation basée sur l’utilisation de l’Assistant&#41;](select-partitions-to-modify-usage-based-optimization-wizard.md)  
+-   [Sélectionner les Partitions à modifier &#40;Assistant Optimisation basée sur l’utilisation&#41;](select-partitions-to-modify-usage-based-optimization-wizard.md)  
   
--   [Spécifiez les critères de requête &#40;optimisation basée sur l’utilisation de l’Assistant&#41;](specify-query-criteria-usage-based-optimization-wizard.md)  
+-   [Spécifier des critères de requête &#40;Assistant Optimisation basée sur l’utilisation&#41;](specify-query-criteria-usage-based-optimization-wizard.md)  
   
 -   [Vérifier les requêtes qui seront optimisées &#40;Assistant Optimisation de l’utilisation&#41;](review-the-queries-that-will-be-optimized-usage-based-optimization-wizard.md)  
   
 -   [Passez en revue l’utilisation d’agrégation &#40;Assistant Optimisation basée sur l’utilisation de le&#41;](review-aggregation-usage-usage-based-optimiation-wizard.md)  
   
--   [Spécifiez le nombre d’objets &#40;optimisation basée sur l’utilisation de l’Assistant&#41;](specify-object-counts-usage-based-optimization-wizard.md)  
+-   [Spécifiez le nombre d’objets &#40;Assistant Optimisation basée sur l’utilisation&#41;](specify-object-counts-usage-based-optimization-wizard.md)  
   
--   [Définir les Options d’agrégation &#40;optimisation basée sur l’utilisation de l’Assistant&#41;](set-aggregation-options-usage-based-optimization-wizard.md)  
+-   [Définir les Options d’agrégation &#40;Assistant Optimisation basée sur l’utilisation&#41;](set-aggregation-options-usage-based-optimization-wizard.md)  
   
--   [Fin de l’Assistant &#40;optimisation basée sur l’utilisation de l’Assistant&#41;](completing-the-wizard-usage-based-optimization-wizard.md)  
+-   [Fin de l’Assistant &#40;Assistant Optimisation basée sur l’utilisation&#41;](completing-the-wizard-usage-based-optimization-wizard.md)  
   
 ## <a name="see-also"></a>Voir aussi  
  [Agrégations et conceptions d’agrégation](multidimensional-models-olap-logical-cube-objects/aggregations-and-aggregation-designs.md)   
  [Cubes dans les modèles multidimensionnels](multidimensional-models/cubes-in-multidimensional-models.md)   
- [Aide F1 l’Assistant conception d’agrégation](aggregation-design-wizard-f1-help.md)   
+ [Aide de F1 l’Assistant conception d’agrégation](aggregation-design-wizard-f1-help.md)   
  [Assistants Analysis Services &#40;données multidimensionnelles&#41;](analysis-services-wizards-multidimensional-data.md)  
   
   

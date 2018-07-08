@@ -19,13 +19,13 @@ ms.assetid: c2a298c6-01b3-4ad1-884d-6108165eb56e
 caps.latest.revision: 25
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 59d85df4e1e9501f4d75a0c5f3fa6813b564525c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 348508258476712a1197281260db402d4412ae81
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36039122"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37193869"
 ---
 # <a name="upgrading-the-version-of-a-data-flow-component"></a>Mise à niveau de la version d'un composant de flux de données
   Les packages créés avec une version antérieure de votre composant peuvent contenir des métadonnées qui ne sont plus valides, telles que des propriétés personnalisées dont l'utilisation a été modifiée dans les versions plus récentes du composant. Vous pouvez remplacer la méthode <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.PerformUpgrade%2A> de la classe de base <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent> pour mettre à jour les métadonnées précédemment enregistrées dans les packages plus anciens afin de refléter les propriétés actuelles de votre composant.  
@@ -184,6 +184,6 @@ public class PerformUpgradeCS :
 }  
 ```  
   
-![Icône Integration Services (petite)](../../media/dts-16.gif "icône Integration Services (petite)")**restent jusqu'à la Date avec Integration Services** <br /> Pour obtenir les derniers téléchargements, articles, exemples et vidéos de Microsoft, ainsi que des solutions sélectionnées par la communauté, visitez la page [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] sur MSDN :<br /><br /> [Visitez la page Integration Services sur MSDN](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Pour recevoir une notification automatique de ces mises à jour, abonnez-vous aux flux RSS disponibles sur la page.  
+![Icône Integration Services (petite)](../../media/dts-16.gif "icône Integration Services (petite)")**rester jusqu'à la Date avec Integration Services** <br /> Pour obtenir les derniers téléchargements, articles, exemples et vidéos de Microsoft, ainsi que des solutions sélectionnées par la communauté, visitez la page [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] sur MSDN :<br /><br /> [Visitez la page Integration Services sur MSDN](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Pour recevoir une notification automatique de ces mises à jour, abonnez-vous aux flux RSS disponibles sur la page.  
   
   

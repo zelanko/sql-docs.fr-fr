@@ -5,10 +5,9 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.availabilitygroup.suspenddatamove.f1
 helpviewer_keywords:
@@ -18,15 +17,15 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], databases
 ms.assetid: 86858982-6af1-4e80-9a93-87451f0d7ee9
 caps.latest.revision: 48
-author: rothja
-ms.author: jroth
-manager: jhubbard
-ms.openlocfilehash: 56cb86d8d749848b3e10a2bbfbca2765be77cd78
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 5f84be22ffdfe9375edd632c34e832d18488fea1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36038882"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37173370"
 ---
 # <a name="suspend-an-availability-database-sql-server"></a>Interrompre une base de données de disponibilité (SQL Server)
   Vous pouvez interrompre une base de données de disponibilité dans [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] à l'aide de [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], de [!INCLUDE[tsql](../../../includes/tsql-md.md)]ou de PowerShell dans [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. Notez qu'une commande d'interruption doit être émise sur l'instance du serveur qui héberge la base de données à interrompre ou à reprendre.  

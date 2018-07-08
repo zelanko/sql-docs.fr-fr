@@ -1,5 +1,5 @@
 ---
-title: Déploiement de solutions de modèle multidimensionnel | Documents Microsoft
+title: Déploiement de solutions de modèle multidimensionnel | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Analysis Services deployments, planning
 - deploying [Analysis Services]
 - deploying [Analysis Services], planning
 ms.assetid: 7259c201-ff54-43e8-bda5-a6d51474e0e6
 caps.latest.revision: 38
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: cc0a5ef8d41ebc37beee73b83fa27eaa5a7d6358
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 781bbeed98772266d4ea9c228c42426df424fe1c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36038457"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37222219"
 ---
 # <a name="multidimensional-model-solution-deployment"></a>Déploiement d'une solution de modèle multidimensionnel
   Une fois le développement d’un projet [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] terminé, vous pouvez déployer la base de données sur un serveur Analysis Services. Analysis Services fournit six méthodes de déploiement possibles qui peuvent être utilisées pour déplacer la base de données vers un serveur de production ou de test. Les méthodes sont énumérées ici dans l'ordre de leur avantage : automatisation AMO (Analysis Management Objects), XMLA, Assistant Déploiement, Utilitaire de déploiement, Assistant Synchronisation, Sauvegarde et Restauration.  
@@ -58,7 +58,7 @@ ms.locfileid: "36038457"
 |Souhaitez-vous autoriser des utilisateurs à accéder aux données [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] à travers Internet ?|[Configurer l’accès HTTP à Analysis Services sur Internet Information Services &#40;IIS&#41; 8.0](../instances/configure-http-access-to-analysis-services-on-iis-8-0.md)|  
 |Souhaitez-vous fournir un accès par requête continu aux données [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ?|[Configuration requise et considérations relatives au déploiement d’Analysis Services](requirements-and-considerations-for-analysis-services-deployment.md)|  
 |Souhaitez-vous déployer des objets dans un environnement distribué en utilisant des objets liés ou des partitions distantes ?|[Créer et gérer une partition locale &#40;Analysis Services&#41;](create-and-manage-a-local-partition-analysis-services.md), [Créer et gérer une partition distante &#40;Analysis Services&#41;](create-and-manage-a-remote-partition-analysis-services.md) et [Groupes de mesures liés](linked-measure-groups.md).|  
-|Comment allez-vous sécuriser les données [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ?|[Autoriser l’accès aux objets et des opérations &#40;Analysis Services&#41;](authorizing-access-to-objects-and-operations-analysis-services.md)|  
+|Comment allez-vous sécuriser les données [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ?|[Autoriser l’accès aux objets et aux opérations &#40;Analysis Services&#41;](authorizing-access-to-objects-and-operations-analysis-services.md)|  
   
 ##  <a name="bkmk_rel"></a> Tâches associées  
  [Configuration requise et considérations relatives au déploiement d’Analysis Services](requirements-and-considerations-for-analysis-services-deployment.md)  

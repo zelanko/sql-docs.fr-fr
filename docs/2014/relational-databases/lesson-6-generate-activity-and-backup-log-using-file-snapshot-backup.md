@@ -1,5 +1,5 @@
 ---
-title: 'Leçon 7 : Déplacer vos fichiers de données vers le stockage Windows Azure | Documents Microsoft'
+title: 'Leçon 7 : Déplacer vos fichiers de données vers le stockage Windows Azure | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 26aa534a-afe7-4a14-b99f-a9184fc699bd
 caps.latest.revision: 9
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 014fd10ecd738f46160358506b3b165640d3fe09
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 44bc025ce3eb536e10f4c77410ea487e59f006ee
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36039499"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37162710"
 ---
 # <a name="lesson-7-move-your-data-files-to-windows-azure-storage"></a>Leçon 7 : Déplacer vos fichiers de données vers le Stockage Microsoft Azure
   Dans cette leçon, vous allez apprendre comment déplacer les fichiers de données vers le Stockage Microsoft Azure (mais pas vers l'instance SQL Server). Pour suivre cette leçon, vous n'avez pas besoin de terminer les leçons 4, 5 et 6.  
@@ -78,9 +78,9 @@ ms.locfileid: "36039499"
   
     ```  
   
-5.  Maintenant, vous devez copier les fichiers de données pour le stockage Windows Azure en utilisant l’une des méthodes suivantes : [outil AzCopy](http://blogs.msdn.com/b/windowsazurestorage/archive/2012/12/03/azcopy-uploading-downloading-files-for-windows-azure-blobs.aspx), [Put Page](https://msdn.microsoft.com/library/azure/ee691975.aspx), [référence de bibliothèque cliente de stockage](https://msdn.microsoft.com/library/azure/dn261237.aspx), ou un outil Explorateur de stockage tiers.  
+5.  Maintenant, vous devez copier les fichiers de données dans le stockage Windows Azure en utilisant l’une des méthodes suivantes : [outil AzCopy](http://blogs.msdn.com/b/windowsazurestorage/archive/2012/12/03/azcopy-uploading-downloading-files-for-windows-azure-blobs.aspx), [Put Page](https://msdn.microsoft.com/library/azure/ee691975.aspx), [référence de bibliothèque cliente de stockage](https://msdn.microsoft.com/library/azure/dn261237.aspx), ou un outil Explorateur de stockage tiers.  
   
-     **Important :** lors de l’utilisation de cette nouvelle amélioration, vérifiez systématiquement que vous créez un objet blob de pages pas un objet blob de blocs.  
+     **Important :** lorsque vous utilisez cette nouvelle amélioration, vérifiez systématiquement que vous créez un objet blob de pages pas un objet blob de blocs.  
   
 6.  Ensuite, mettez la base de données en ligne.  
   
@@ -93,6 +93,6 @@ ms.locfileid: "36039499"
   
  **Leçon suivante :**  
   
- [Leçon 8 : Restaurer une base de données pour le stockage Windows Azure](lesson-7-restore-a-database-to-a-point-in-time.md)  
+ [Leçon 8 : Restaurer une base de données dans Stockage Microsoft Azure](lesson-7-restore-a-database-to-a-point-in-time.md)  
   
   

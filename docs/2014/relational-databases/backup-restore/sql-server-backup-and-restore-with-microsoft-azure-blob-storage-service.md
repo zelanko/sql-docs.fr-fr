@@ -1,28 +1,27 @@
 ---
-title: Service de stockage d’objets Blob SQL Server sauvegarde et restauration avec Windows Azure | Documents Microsoft
+title: Service de stockage d’objets Blob SQL Server Backup and Restore avec Windows Azure | Microsoft Docs
 ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-backup-restore
+ms.technology: backup-restore
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 6a0c9b6a-cf71-4311-82f2-12c445f63935
 caps.latest.revision: 28
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 98f774809a3b6bb1d37836c3e7c216f1058a9ec1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 38e20e433b7fed2e34750c300ee7e1489d6df665
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36038851"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37193549"
 ---
 # <a name="sql-server-backup-and-restore-with-windows-azure-blob-storage-service"></a>Sauvegarde et restauration SQL Server avec le service de Stockage Blob Windows Azure
-  Cette rubrique présente les [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pour les sauvegardes et la restauration à partir de la [service de stockage d’objets Blob Windows Azure](http://www.windowsazure.com/develop/net/how-to-guides/blob-storage/). Elle résume également les avantages liés à l'utilisation du service d'objets blob Windows Azure pour stocker des sauvegardes [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+  Cette rubrique présente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de sauvegardes et de restauration à partir de la [service de stockage d’objets Blob Windows Azure](http://www.windowsazure.com/develop/net/how-to-guides/blob-storage/). Elle résume également les avantages liés à l'utilisation du service d'objets blob Windows Azure pour stocker des sauvegardes [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  SQL Server prend en charge le stockage des sauvegardes dans le service de stockage d'objets blob Windows Azure comme suit :  
   
@@ -31,7 +30,7 @@ ms.locfileid: "36038851"
     > [!NOTE]  
     >  Pour les versions de SQL Server antérieures à SQL Server 2014, utilisez le complément SQL Server Backup to Windows Azure Tool afin de créer rapidement et facilement des sauvegardes dans le Stockage Microsoft Azure. Pour plus d'informations, consultez le [centre de téléchargement](http://go.microsoft.com/fwlink/?LinkID=324399).  
   
--   **Laisser SQL Server gérer les sauvegardes dans Windows Azure :** configurer SQL Server pour gérer les sauvegardes de la stratégie et la planification de sauvegarde pour une base de données unique ou plusieurs bases de données, ou définir des valeurs par défaut au niveau de l’instance. Cette fonctionnalité est appelée **[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]**. Pour plus d’informations, consultez [SQL Server Managed Backup dans Windows Azure](sql-server-managed-backup-to-microsoft-azure.md). Cette fonctionnalité est disponible dans SQL Server 2014 ou version ultérieure.  
+-   **Laisser SQL Server gérer les sauvegardes dans Windows Azure :** configurer SQL Server pour gérer les sauvegardes de la stratégie et la planification de sauvegarde pour une base de données unique ou plusieurs bases de données, ou définir des valeurs par défaut au niveau de l’instance. Cette fonctionnalité est appelée **[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]**. Pour plus d’informations, consultez [SQL Server Managed Backup pour Windows Azure](sql-server-managed-backup-to-microsoft-azure.md). Cette fonctionnalité est disponible dans SQL Server 2014 ou version ultérieure.  
   
 ## <a name="benefits-of-using-the-windows-azure-blob-service-for-includessnoversionincludesssnoversion-mdmd-backups"></a>Avantages de l'utilisation du service d'objets blob Windows Azure pour les sauvegardes [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
   
@@ -50,16 +49,16 @@ ms.locfileid: "36038851"
 ##  <a name="Billing"></a> Windows Azure considérations sur la facturation :  
  En comprenant les coûts de stockage Windows Azure, vous pouvez prévoir le coût de création et de stockage des sauvegardes dans Windows Azure.  
   
- Le [Calculatrice Windows Azure](http://go.microsoft.com/fwlink/?LinkId=277060) peut aider à estimer les coûts.  
+ Le [calculatrice de tarification Windows Azure](http://go.microsoft.com/fwlink/?LinkId=277060) peut aider à estimer les coûts.  
   
  **Stockage :** les tarifs sont basés sur l'espace utilisé et sont calculés sur une échelle graduée en fonction du niveau de redondance. Pour plus d’informations, consultez la section **Gestion des données** de l’article [Détails de la tarification](http://go.microsoft.com/fwlink/?LinkId=277059) .  
   
- **Transferts de données :** les transferts de données entrants vers Windows Azure sont gratuits. Les transferts sortants sont facturés en fonction de l'utilisation de la bande passante et calculés selon une échelle graduée spécifique à la région. Pour plus d'informations, consultez la section [Transferts de données](http://go.microsoft.com/fwlink/?LinkId=277061) de l'article Détails de la tarification.  
+ **Les transferts de données :** vers Windows Azure, les transferts de données entrantes sont gratuits. Les transferts sortants sont facturés en fonction de l'utilisation de la bande passante et calculés selon une échelle graduée spécifique à la région. Pour plus d'informations, consultez la section [Transferts de données](http://go.microsoft.com/fwlink/?LinkId=277061) de l'article Détails de la tarification.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Meilleures pratiques et dépannage de sauvegarde SQL Server vers une URL](sql-server-backup-to-url-best-practices-and-troubleshooting.md)   
  [Sauvegarder et restaurer des bases de données système &#40;SQL Server&#41;](back-up-and-restore-of-system-databases-sql-server.md)   
- [Didacticiel : Sauvegarde de SQL Server et de restauration Windows Azure Blob Storage Service](../tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md)   
+ [Didacticiel : Sauvegarde de SQL Server et de la restauration au Service de stockage Windows Azure Blob](../tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md)   
  [Sauvegarde SQL Server vers une URL](sql-server-backup-to-url.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Après installation de Configuration (Analysis Services) | Documents Microsoft
+title: Après installation de Configuration (Analysis Services) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 7f4417b2-0efb-4361-a79e-fa56e43ee054
 caps.latest.revision: 7
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: df6b8362ed63e5b3ec2b339478b9398fd8a65db8
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 1c4f7dea428950957d267c929e36627f40e0b7d9
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36039864"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37151650"
 ---
 # <a name="post-install-configuration-analysis-services"></a>Configuration consécutive à l'installation (Analysis Services)
   Après avoir installé Analysis Services, des tâches de configuration supplémentaires sont requises pour rendre le serveur complètement opérationnel et disponible en vue d'une utilisation générale. Cette section présente les autres tâches qui complètent l'installation. Selon les exigences en matière de connexion, vous devrez peut-être aussi configurer l’authentification (consultez [Se connecter à Analysis Services](connect-to-analysis-services.md)).  
@@ -34,7 +34,7 @@ ms.locfileid: "36039864"
 |Lien|Description de la tâche|  
 |----------|----------------------|  
 |[Configurer le Pare-feu Windows pour autoriser l’accès à Analysis Services](configure-the-windows-firewall-to-allow-analysis-services-access.md)|Créez une règle de trafic entrant dans le Pare-feu Windows afin que les demandes puissent être routées via le port TCP utilisé par l'instance d'Analysis Services. Cette tâche est obligatoire. Personne ne peut accéder à Analysis Services depuis un ordinateur distant tant qu'une règle entrante de pare-feu n'est pas définie.|  
-|[Accorder des autorisations d’administrateur de serveur &#40;Analysis Services&#41;](grant-server-admin-rights-to-an-analysis-services-instance.md)|Pendant l'installation, vous deviez ajouter au moins un compte d'utilisateur au rôle Administrateur de l'instance Analysis Services. Les autorisations administratives sont obligatoires pour de nombreuses opérations courantes de serveur, telles que le traitement des données à partir de bases de données relationnelles externes. Utilisez les informations de cette rubrique pour ajouter ou modifier l'appartenance du rôle Administrateur.|  
+|[Accorder des autorisations administrateur du serveur &#40;Analysis Services&#41;](grant-server-admin-rights-to-an-analysis-services-instance.md)|Pendant l'installation, vous deviez ajouter au moins un compte d'utilisateur au rôle Administrateur de l'instance Analysis Services. Les autorisations administratives sont obligatoires pour de nombreuses opérations courantes de serveur, telles que le traitement des données à partir de bases de données relationnelles externes. Utilisez les informations de cette rubrique pour ajouter ou modifier l'appartenance du rôle Administrateur.|  
 |[Configurer les comptes de Service &#40;Analysis Services&#41;](configure-service-accounts-analysis-services.md)|Pendant l'installation, le compte de service Analysis Services a été configuré avec les autorisations appropriées pour permettre l'accès contrôlé aux fichiers exécutables du programme et aux fichiers de la base de données. En tant que tâche consécutive à l'installation, vous devez déterminer s'il faut autoriser l'utilisation du compte de service lors de l'exécution de tâches supplémentaires. Les charges de travail de traitement et de requête peuvent être exécutées sous le compte de service. Ces opérations réussissent uniquement quand le compte de service dispose des autorisations appropriées.|  
 |[Inscrire une Instance Analysis Services dans un groupe de serveurs](register-an-analysis-services-instance-in-a-server-group.md)|SQL Server Management Studio (SSMS) permet de créer des groupes de serveurs pour organiser vos instances de SQL Server. Il est plus facile de gérer des déploiements évolutif constitués de plusieurs instances de serveurs au sein de groupes de serveurs. Utilisez les informations de cette rubrique pour organiser les instances d'Analysis Services en groupes dans SSMS.|  
 |[Déterminer le mode serveur d’une instance Analysis Services](determine-the-server-mode-of-an-analysis-services-instance.md)|Pendant l'installation, vous deviez sélectionner un mode serveur pour déterminer le type de modèle (multidimensionnel ou tabulaire) s'exécutant sur le serveur. Si vous avez des doutes quant au mode serveur, utilisez les informations de cette rubrique pour déterminer le mode qui a été installé.|  
@@ -47,6 +47,6 @@ ms.locfileid: "36039864"
  [Installation de SQL Server 2014](../../../2014/database-engine/install-windows/installation-for-sql-server.md)   
  [Installer Analysis Services en mode multidimensionnel et exploration de données](../../sql-server/install/install-analysis-services-in-multidimensional-and-data-mining-mode.md)   
  [Installer Analysis Services en Mode tabulaire](install-windows/install-analysis-services.md)   
- [Installation PowerPivot pour SharePoint 2013](install-windows/install-analysis-services-in-power-pivot-mode.md)  
+ [Installation de PowerPivot pour SharePoint 2013](install-windows/install-analysis-services-in-power-pivot-mode.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Formats de données numériques | Documents Microsoft
+title: Formats de données numériques | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - integer data types [Integration Services]
 - numeric data formats for fast parse
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - fast parse [Integration Services]
 ms.assetid: fa3975ce-9d21-408a-857d-f85e30af27b0
 caps.latest.revision: 33
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: e9fd075d66ae2f5b5486e6452965230f776787ca
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 1ed822a26c5722a249c3fda635288c282f3e2834
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36038149"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37180286"
 ---
 # <a name="numeric-data-formats"></a>Formats de données numériques
   L'analyse rapide fournit un ensemble de routines simple, rapide et insensible aux paramètres régionaux pour l'analyse des données. Elle prend en charge uniquement un ensemble limité de formats pour les types de données integer.  

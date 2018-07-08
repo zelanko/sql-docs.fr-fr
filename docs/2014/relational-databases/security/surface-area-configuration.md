@@ -5,10 +5,9 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-security
+ms.technology: security
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - reducing attackable surface area
 - upgrading SQL Server, security
@@ -18,15 +17,15 @@ helpviewer_keywords:
 - installing SQL Server, security
 ms.assetid: f741169c-1453-4ad2-830b-bf2be27d712f
 caps.latest.revision: 79
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: f7f27fd6aed9714d2e7bd18bf1adb25fea370819
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: edmacauley
+ms.author: edmaca
+manager: craigg
+ms.openlocfilehash: 7032966cb0fb1975b65847ac1e6e0a6c5dc43b1d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36038541"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37172190"
 ---
 # <a name="surface-area-configuration"></a>Configuration de la surface d'exposition
   Dans la configuration par défaut des nouvelles installations de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], de nombreuses fonctionnalités ne sont pas activées. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] installe et démarre de manière sélective uniquement les principaux services et fonctionnalités, de manière à réduire le nombre de fonctionnalités qui peuvent être soumises à une attaque d'un utilisateur malveillant. Un administrateur système peut modifier ces valeurs par défaut au moment de l'installation, et également activer ou désactiver sélectivement les fonctionnalités d'une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]en cours d'exécution. En outre, certains composants peuvent ne pas être disponibles lors de la connexion à partir d'autres ordinateurs jusqu'à ce que les protocoles soient configurés.  

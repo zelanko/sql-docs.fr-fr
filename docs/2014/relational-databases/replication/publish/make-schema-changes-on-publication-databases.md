@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - replication [SQL Server], schema changes
 - snapshot replication [SQL Server], replicating schema changes
@@ -18,15 +18,15 @@ helpviewer_keywords:
 - publishing [SQL Server replication], schema changes
 ms.assetid: 926c88d7-a844-402f-bcb9-db49e5013b69
 caps.latest.revision: 71
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: c5fdf15e3038f865bb123f3dd79321d036813281
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 4c84487775fb5eb3839910fd800489927edcc77f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36038125"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37172730"
 ---
 # <a name="make-schema-changes-on-publication-databases"></a>Modifier le schéma dans les bases de données de publication
   La réplication prend en charge une grande variété de modifications de schéma pour les objets publiés. Lorsque vous effectuez l'une des modifications de schémas qui suit sur l'objet publié approprié sur un serveur de publication [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , cette modification est propagée par défaut sur tous les Abonnés [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] :  
@@ -61,7 +61,7 @@ ms.locfileid: "36038125"
   
 -   Les modifications de schéma sont soumises aux restrictions imposées par [!INCLUDE[tsql](../../../includes/tsql-md.md)]. Par exemple, ALTER TABLE ne vous permet pas de modifier les colonnes clés primaire.  
   
--   Le mappage de type de données est effectué uniquement pour l'instantané initial. Les modifications de schéma ne sont pas mappées aux versions précédentes des types de données. Par exemple, si l’instruction `ALTER TABLE ADD datetime2 column` est utilisée dans [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)], le type de données n’est pas convertie en `nvarchar` pour [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] les abonnés. Dans certains cas, les modifications de schéma sont bloquées sur le serveur de publication.  
+-   Le mappage de type de données est effectué uniquement pour l'instantané initial. Les modifications de schéma ne sont pas mappées aux versions précédentes des types de données. Par exemple, si l’instruction `ALTER TABLE ADD datetime2 column` est utilisée dans [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)], le type de données n’est pas traduit par `nvarchar` pour [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] abonnés. Dans certains cas, les modifications de schéma sont bloquées sur le serveur de publication.  
   
 -   Si la configuration d'une publication autorise la propagation des modifications de schéma, celles-ci sont propagées quelle que soit la configuration de l'option de schéma associée pour un article de la publication. Si, par exemple, vous décidez de ne pas répliquer les contraintes de clé étrangère pour un article de table mais qu'ensuite vous émettez une commande ALTER TABLE qui ajoute une clé étrangère sur le serveur de publication, la clé étrangère est ajoutée à la table sur l'Abonné. Pour éviter cela, désactivez la propagation des modifications de schéma avant d'émettre la commande ALTER TABLE.  
   
@@ -152,7 +152,7 @@ ms.locfileid: "36038125"
         |`filestream`|Autoriser la modification|Bloquer la modification|Bloquer la modification|  
         |`date`, `time`, `datetime2` et `datetimeoffset`|Autoriser la modification|Autoriser la modification<sup>1</sup>|Bloquer la modification|  
   
-         <sup>1</sup> les abonnés SQL Server Compact convertissent ces types de données sur l’abonné.  
+         <sup>1</sup> abonnés SQL Server Compact convertissent ces types de données sur l’abonné.  
   
 -   Si une erreur se produit lors de l'application d'une modification de schéma (par exemple une erreur résultant de l'ajout d'une clé étrangère référençant une table non disponible sur l'Abonné), la synchronisation échoue et l'abonnement doit être réinitialisé.  
   

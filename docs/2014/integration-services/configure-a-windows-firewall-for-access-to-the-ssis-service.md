@@ -1,5 +1,5 @@
 ---
-title: Configurer un pare-feu Windows pour l’accès au Service SSIS | Documents Microsoft
+title: Configurer un pare-feu Windows pour l’accès au Service SSIS | Microsoft Docs
 ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - security [Integration Services], firewalls
 - Windows Firewall [Integration Services]
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - SSIS, firewalls
 ms.assetid: 39975cf2-c351-4205-8c39-27a0fadfb010
 caps.latest.revision: 42
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 302d3d9aac30d18ae8ae887cdd65cde7147a9f22
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 67a1206afe217ce2f0e358c56ee4df2b16691b8c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36039176"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37163000"
 ---
 # <a name="configure-a-windows-firewall-for-access-to-the-ssis-service"></a>Configurer un Pare-feu Windows pour l'accès au service SSIS
     
@@ -92,7 +92,7 @@ ms.locfileid: "36039176"
     >  Pour configurer le Pare-feu Windows, cette procédure utilise l’élément **Pare-feu Windows** dans le Panneau de configuration. L’élément **Pare-feu Windows** configure uniquement le pare-feu du profil d’emplacement réseau actuel. Toutefois, vous pouvez configurer également le Pare-feu Windows à l’aide de l’outil en ligne de commande **netsh** ou du composant logiciel enfichable MMC ( [!INCLUDE[msCoName](../includes/msconame-md.md)] Management Console) appelé Pare-feu Windows avec fonctions avancées de sécurité. Pour plus d’informations sur ces outils, consultez [Configurer le Pare-feu Windows pour autoriser l’accès à SQL Server](../../2014/sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md).  
   
 ## <a name="see-also"></a>Voir aussi  
- [Configuration de l’intégration de Service Services &#40;Service SSIS&#41;](service/integration-services-service-ssis-service.md)   
+ [Configuration de l’intégration des Services Service &#40;Service SSIS&#41;](service/integration-services-service-ssis-service.md)   
  [Service Integration Services &#40;Service SSIS&#41;](service/integration-services-service-ssis-service.md)  
   
   

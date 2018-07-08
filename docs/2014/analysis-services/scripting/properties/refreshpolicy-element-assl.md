@@ -1,5 +1,5 @@
 ---
-title: Élément RefreshPolicy (ASSL) | Documents Microsoft
+title: Élément RefreshPolicy (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - RefreshPolicy element
 ms.assetid: f4c36280-1a39-4f1c-a3ab-fbeb81742d6d
 caps.latest.revision: 34
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 6d2dc0549eb8151f93c817e9e59bc1a8990fac87
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: cf0aa9478a44e7479b20357ae56317b90801f77f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36038179"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37277615"
 ---
 # <a name="refreshpolicy-element-assl"></a>Élément RefreshPolicy (ASSL)
   Détermine la fréquence à laquelle la partie dynamique de la dimension ou groupe de mesures (comme spécifié par le [persistance](persistence-element-assl.md) élément) est activée pour les modifications.  
@@ -73,7 +73,7 @@ ms.locfileid: "36038179"
 |*ByQuery*|Chaque requête procède à une vérification pour savoir si les données sources ont été modifiées.|  
 |*ByInterval*|Source de données est activée uniquement pour les modifications à l’intervalle spécifié par [RefreshInterval](refreshinterval-element-assl.md).|  
   
- L’énumération qui correspond aux valeurs autorisées pour `RefreshPolicy` dans l’objet d’objets AMO (Analysis Management) est modèle <xref:Microsoft.AnalysisServices.RefreshPolicy>.  
+ L’énumération qui correspond aux valeurs autorisées pour `RefreshPolicy` dans l’objet d’objets AMO (Analysis Management) modèle est <xref:Microsoft.AnalysisServices.RefreshPolicy>.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Élément Persistence &#40;ASSL&#41;](persistence-element-assl.md)   

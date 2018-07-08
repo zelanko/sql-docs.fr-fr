@@ -1,5 +1,5 @@
 ---
-title: Créer un compte Finance de Dimension de type parent-enfant | Documents Microsoft
+title: Créer un compte Finance de la Dimension de type parent-enfant | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - dimensions [Analysis Services], account
 - account dimensions [Analysis Services]
@@ -16,22 +16,22 @@ helpviewer_keywords:
 - account intelligence [Analysis Services]
 ms.assetid: 2ba74e81-5b4b-407e-acdf-deb2f6accf0a
 caps.latest.revision: 15
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 209184ce52888c65dc24c044517ccaf95d1a1a24
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 39c5c676cd0a07c76a06fd559b7f40f8cee4cfcb
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36038197"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37259595"
 ---
 # <a name="create-a-finance-account-of-parent-child-type-dimension"></a>Créer un compte Finance de la dimension de type parent-enfant
   Dans [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], une dimension de type compte est une dimension dont les attributs représentent un graphique de comptes utilisé à des fins de génération de rapports financiers.  
   
  Une dimension de comptes permet de gérer dans le temps et de manière sélective le comportement de l'agrégation dans les comptes. Un compte de dimensions permet également d'utiliser un mécanisme standard pour résoudre la plupart des problèmes d'agrégation non standard associés généralement aux solutions décisionnelles qui gèrent des données financières. Si vous ne disposiez pas d'un tel mécanisme standard, la résolution des problèmes d'agrégation non standard nécessiterait des formules de cumul personnalisées, des membres calculés ou des scripts d'expression multidimensionnelle (MDX, Multidimensional Expressions).  
   
- Pour définir une dimension comme une dimension de compte, affectez le `Type` propriété de la dimension à `Accounts`.  
+ Pour définir une dimension comme une dimension de compte, affectez la `Type` propriété de la dimension à `Accounts`.  
   
 ## <a name="dimension-structure"></a>Structure de la dimension  
  Une dimension de comptes contient au moins deux attributs :  
@@ -40,7 +40,7 @@ ms.locfileid: "36038197"
   
 -   Un attribut de compte, un attribut parent qui décrit comment les comptes sont organisés hiérarchiquement dans la dimension de comptes.  
   
-     Pour définir un attribut comme attribut de compte, affectez le `Type` propriété de l’attribut à `Account` et `Usage` propriété `Parent`.  
+     Pour définir un attribut comme attribut de compte, affectez la `Type` propriété de l’attribut à `Account` et `Usage` propriété `Parent`.  
   
  Les dimensions de comptes peuvent éventuellement contenir les attributs suivants :  
   
@@ -50,7 +50,7 @@ ms.locfileid: "36038197"
   
 -   Un attribut de nom de compte qui est utilisé pour générer des rapports. Pour définir un attribut de nom de compte, affectez à la propriété `Type` de l'attribut la valeur `AccountName`.  
   
--   Un attribut de numéro de compte qui est utilisé pour générer des rapports. Définir un attribut de numéro de compte, affectez le `Type` propriété de l’attribut à `AccountNumber`.  
+-   Un attribut de numéro de compte qui est utilisé pour générer des rapports. Vous identifiez un attribut de numéro de compte en définissant le `Type` propriété de l’attribut à `AccountNumber`.  
   
  Pour plus d’informations sur les types d’attributs, consultez [Configurer des types d’attributs](attribute-properties-configure-attribute-types.md).  
   
@@ -59,7 +59,7 @@ ms.locfileid: "36038197"
   
 ## <a name="see-also"></a>Voir aussi  
  [Attributs et hiérarchies d’attributs](../multidimensional-models-olap-logical-dimension-objects/attributes-and-attribute-hierarchies.md)   
- [Aide F1 l’Assistant Business Intelligence](../business-intelligence-wizard-f1-help.md)   
+ [L’Assistant Business Intelligence F1](../business-intelligence-wizard-f1-help.md)   
  [Types de dimensions](../multidimensional-models-olap-logical-dimension-objects/database-dimension-properties-types.md)  
   
   

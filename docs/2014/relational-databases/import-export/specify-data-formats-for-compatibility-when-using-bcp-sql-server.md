@@ -5,10 +5,9 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-bulk-import-export
+ms.technology: data-movement
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - bulk exporting [SQL Server], compatibility
 - bulk importing [SQL Server], compatibility
@@ -17,29 +16,29 @@ helpviewer_keywords:
 - bcp utility [SQL Server], compatibility
 ms.assetid: cd5fc8c8-eab1-4165-9468-384f31e53f0a
 caps.latest.revision: 36
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: ede5c38153c30e5b7c528d6b9cd415fa739b94a0
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 42266e1f4ab136045c16d1e0f41d6ae802c3f1c7
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36038818"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37154540"
 ---
 # <a name="specify-data-formats-for-compatibility-when-using-bcp-sql-server"></a>Spécifier des formats de données pour la compatibilité lors de l'utilisation de bcp (SQL Server)
-  Cette rubrique décrit les attributs de format de données, les invites spécifiques aux champs et le stockage des données champ par champ dans un fichier de format non-xml de la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `bcp` commande. La compréhension de ces notions peut être utile lorsque vous exportez des données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en bloc à des fins d'importation en bloc dans un autre programme, tel qu'un autre programme de base de données. Les formats de données par défaut (natif, caractère ou Unicode) dans la table source peuvent être incompatibles avec la disposition des données attendue par l'autre programme. S'il existe une discordance lorsque vous exportez les données, vous devez décrire la disposition des données.  
+  Cette rubrique décrit les attributs de format de données, les invites spécifiques aux champs et stockage des données de champ par champ dans un fichier de format non-xml de la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `bcp` commande. La compréhension de ces notions peut être utile lorsque vous exportez des données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en bloc à des fins d'importation en bloc dans un autre programme, tel qu'un autre programme de base de données. Les formats de données par défaut (natif, caractère ou Unicode) dans la table source peuvent être incompatibles avec la disposition des données attendue par l'autre programme. S'il existe une discordance lorsque vous exportez les données, vous devez décrire la disposition des données.  
   
 > [!NOTE]  
 >  Si vous ne maîtrisez pas les formats de données pour l’importation ou l’exportation de données, consultez [Formats de données pour l’importation ou l’exportation en bloc &#40;SQL Server&#41;](data-formats-for-bulk-import-or-bulk-export-sql-server.md).  
   
  **Dans cette rubrique :**  
   
--   [Attributs de Format de données bcp](#bcpDataFormatAttr)  
+-   [les attributs de Format de données bcp](#bcpDataFormatAttr)  
   
 -   [Vue d’ensemble des invites spécifiques aux champs](#FieldSpecificPrompts)  
   
--   [Le stockage des données champ par champ dans un fichier de Format Non-XML](#FieldByFieldNonXmlFF)  
+-   [Stockage des données de champ par champ dans un fichier de Format Non XML](#FieldByFieldNonXmlFF)  
   
 -   [Tâches associées](#RelatedTasks)  
   
@@ -48,7 +47,7 @@ ms.locfileid: "36038818"
   
 -   type de stockage de fichier  
   
-     Le *type de stockage de fichier* décrit la façon dont les données sont stockées dans le fichier de données. Données peuvent être exportées vers un fichier de données comme type de table de base de données (format natif), dans sa représentation sous forme de caractères (format caractères) ou comme n’importe quel type de données où la conversion implicite est prise en charge ; par exemple, en copiant un `smallint` comme un `int`. Les types de données définis par l'utilisateur sont exportés en tant que leurs propres types de base. Pour plus d’informations, consultez [Spécifier le type de stockage de fichiers à l’aide de bcp &#40;SQL Server&#41;](specify-file-storage-type-by-using-bcp-sql-server.md).  
+     Le *type de stockage de fichier* décrit la façon dont les données sont stockées dans le fichier de données. Données peuvent être exportées vers un fichier de données en tant que son type de table de base de données (format natif), dans sa représentation sous forme de caractères (format caractères) ou en tant que n’importe quel type de données où la conversion implicite est prise en charge ; par exemple, en copiant un `smallint` comme un `int`. Les types de données définis par l'utilisateur sont exportés en tant que leurs propres types de base. Pour plus d’informations, consultez [Spécifier le type de stockage de fichiers à l’aide de bcp &#40;SQL Server&#41;](specify-file-storage-type-by-using-bcp-sql-server.md).  
   
 -   Longueur de préfixe  
   
@@ -63,12 +62,12 @@ ms.locfileid: "36038818"
      Pour les champs de données caractères, des caractères de fin facultatifs vous permettent de marquer la fin de chaque champ dans un fichier de données (à l’aide d’une *marque de fin de champ*), ainsi que la fin de chaque ligne (avec une *marque de fin de ligne*). Les caractères de fin constituent un moyen d'indiquer aux programmes lisant le fichier de données la fin d'un champ ou d'une ligne et le début du suivant. Pour plus d’informations, consultez [Specify Field and Row Terminators &#40;SQL Server&#41;](specify-field-and-row-terminators-sql-server.md).  
   
 ##  <a name="FieldSpecificPrompts"></a> Vue d'ensemble des invites spécifiques aux champs  
- Si un élément interactif `bcp` commande contient le **dans** ou **hors** option mais ne contient pas le commutateur de fichier de format (**-f**) ou un format de données bascule () **- n**, **- c**, **-w**, ou **-N**), chaque colonne de la table source ou cible, la commande vous invite à entrer pour chacun des précédents attributs, à son tour. À chaque invite, la `bcp` commande fournit une valeur par défaut basée sur le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] type de données de la colonne de table. L’acceptation de la valeur par défaut pour toutes les invites produit le même résultat que la spécification du format natif (**-n**) sur la ligne de commande. Chaque invite affiche une valeur par défaut entre crochets : [*valeur par défaut*]. En appuyant sur la touche Entrée, vous acceptez les valeurs par défaut affichées. Pour spécifier une valeur différente de celle par défaut, entrez cette nouvelle valeur à l'invite.  
+ Si un interactive `bcp` commande contient le **dans** ou **out** option mais ne contient pas le commutateur de fichier de format (**-f**) ou un format de données basculer () **- n**, **- c**, **-w**, ou **-N**), chaque colonne dans la table source ou cible, la commande vous invite à entrer pour chacune des précédentes attributs, à son tour. À chaque invite, le `bcp` commande fournit une valeur par défaut basée sur le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] type de données de la colonne de table. L’acceptation de la valeur par défaut pour toutes les invites produit le même résultat que la spécification du format natif (**-n**) sur la ligne de commande. Chaque invite affiche une valeur par défaut entre crochets : [*valeur par défaut*]. En appuyant sur la touche Entrée, vous acceptez les valeurs par défaut affichées. Pour spécifier une valeur différente de celle par défaut, entrez cette nouvelle valeur à l'invite.  
   
 ### <a name="example"></a>Exemple  
- L’exemple suivant utilise le `bcp` commande en bloc exporter des données à partir de la `HumanResources.myTeam` table de façon interactive vers la `myTeam.txt` fichier. Avant de pouvoir exécuter cet exemple, vous devez créer cette table. Pour plus d’informations sur la table et la manière de la créer, consultez [Exemple de table HumanResources.myTeam &#40;SQL Server&#41;](humanresources-myteam-sample-table-sql-server.md).  
+ L’exemple suivant utilise le `bcp` commande en bloc exporter des données à partir de la `HumanResources.myTeam` table de façon interactive vers le `myTeam.txt` fichier. Avant de pouvoir exécuter cet exemple, vous devez créer cette table. Pour plus d’informations sur la table et la manière de la créer, consultez [Exemple de table HumanResources.myTeam &#40;SQL Server&#41;](humanresources-myteam-sample-table-sql-server.md).  
   
- La commande ne spécifie ni un fichier de format, ni un type de données à l’origine `bcp` pour demander des informations de format de données. À l'invite de commandes [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows, entrez :  
+ La commande ne spécifie ni un fichier de format, ni un type de données, à l’origine `bcp` pour demander des informations de format de données. À l'invite de commandes [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows, entrez :  
   
 ```  
 bcp AdventureWorks.HumanResources.myTeam out myTeam.txt -T  

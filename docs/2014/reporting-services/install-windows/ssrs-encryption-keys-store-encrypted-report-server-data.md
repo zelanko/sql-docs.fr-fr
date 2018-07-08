@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - report servers [Reporting Services], encryption
 - credentials [Reporting Services]
@@ -20,13 +20,13 @@ ms.assetid: ac0f4d4d-fc4b-4c62-a693-b86e712e75f2
 caps.latest.revision: 7
 author: markingmyname
 ms.author: maghan
-manager: jhubbard
-ms.openlocfilehash: 8b3bcd87abe4efd22f8330c8b7dca7d111fb93f1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 58b9dbd53149ca710753e8a355d379b21e1c7b5d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36038776"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37186076"
 ---
 # <a name="store-encrypted-report-server-data-ssrs-configuration-manager"></a>Stocker des données chiffrées du serveur de rapports (Gestionnaire de configuration de SSRS)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] stocke des valeurs chiffrées dans la base de données du serveur de rapports et dans les fichiers de configuration. La plupart des valeurs chiffrées sont des informations d'identification utilisées pour accéder à des sources de données externes fournissant des données aux rapports. Cette rubrique indique quelles valeurs sont chiffrées et décrit la fonctionnalité de chiffrement utilisée dans [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], ainsi que les autres types de données confidentielles stockées qu'il convient de connaître.  

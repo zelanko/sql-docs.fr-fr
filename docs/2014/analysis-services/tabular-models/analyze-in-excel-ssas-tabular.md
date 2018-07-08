@@ -1,5 +1,5 @@
 ---
-title: Analyser dans Excel (SSAS tabulaire) | Documents Microsoft
+title: Analyser dans Excel (SSAS tabulaire) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 2f17b4df-eea2-48c7-a1f2-a3fb7748c15f
 caps.latest.revision: 18
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 145b3d1fef33361317635676a79302b58e2eca04
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 25e4c20034408acf9413eeb24c4b74dbe5447345
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36039383"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37163416"
 ---
 # <a name="analyze-in-excel-ssas-tabular"></a>Analyser dans Excel (SSAS Tabulaire)
   La fonctionnalité Analyser dans Excel de [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]offre aux créateurs de modèles tabulaires un moyen d'analyser rapidement les projets de modèle au cours du développement. La fonctionnalité Analyser dans Excel ouvre l'application Microsoft Excel, crée une connexion de source de données à la base de données model de l'espace de travail, puis ajoute automatiquement un tableau croisé dynamique à la feuille de calcul. Les objets de base de données de l'espace de travail (tables, colonnes et mesures) sont inclus en tant que champs dans la liste de champs du tableau croisé dynamique. Les objets et les données peuvent ensuite être affichés dans le contexte du rôle ou de l'utilisateur effectif et de la perspective.  

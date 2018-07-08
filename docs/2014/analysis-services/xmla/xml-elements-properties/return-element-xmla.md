@@ -1,5 +1,5 @@
 ---
-title: Élément Return (XMLA) | Documents Microsoft
+title: Élément Return (XMLA) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -24,15 +24,15 @@ helpviewer_keywords:
 - return element
 ms.assetid: 3cfe8b74-fec3-4987-a74a-5f731444e024
 caps.latest.revision: 14
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: 1a4468ce3d4b14ff9cd9db7c9373083aad75d3eb
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: 4808372fbf80b2b3a79bc11e3f2423511eb717be
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36038176"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37192401"
 ---
 # <a name="return-element-xmla"></a>Élément return (XMLA)
   Contient des informations retournées par une [DiscoverResponse](../xml-elements-objects-discoverresponse.md) élément en réponse à une [Discover](../xml-elements-methods-discover.md) appel de méthode ou un [ExecuteResponse](../xml-elements-objects-executeresponse.md) élément en réponse à une [Execute](../xml-elements-methods-execute.md) appel de méthode.  
