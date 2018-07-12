@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - subscriptions [Reporting Services], tutorials
 - walkthroughs [Reporting Services]
@@ -17,13 +17,13 @@ ms.assetid: 79ab0572-43e9-4dc4-9b5a-cd8b627b8274
 caps.latest.revision: 46
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 9096317e6ab364ae440ad921045d5bed38083af2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 616ca1e1984c36c2a20814367b3bd030825f3c0c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36039010"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37181526"
 ---
 # <a name="create-a-data-driven-subscription-ssrs-tutorial"></a>Créer un abonnement piloté par les données (didacticiel SSRS)
   [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] fournit des abonnements pilotés par les données qui permettent de personnaliser la distribution d'un rapport basé sur des données d'abonnés dynamiques. Les abonnements pilotés par les données s'utilisent dans les types de scénarios suivants :  
@@ -49,7 +49,7 @@ ms.locfileid: "36039010"
 ## <a name="requirements"></a>Spécifications  
  Les abonnements pilotés par les données sont généralement créés par un administrateur de serveur de rapports, qui en assure également la mise à jour. Pour créer des abonnements pilotés par les données, il est nécessaire de savoir créer des requêtes, de connaître les sources de données qui contiennent les données d'abonnés et de disposer d'autorisations élevées sur le serveur de rapports.  
   
- Ce didacticiel utilise le rapport créé dans le didacticiel [créer un rapport de base &#40;didacticiel SSRS&#41; ](create-a-basic-table-report-ssrs-tutorial.md) et les données à partir de [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)]  
+ Ce didacticiel utilise le rapport créé dans le didacticiel [créer un rapport de tableau de base &#40;SSRS didacticiel&#41; ](create-a-basic-table-report-ssrs-tutorial.md) et les données à partir de [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)]  
   
  Les éléments suivants doivent cependant être installés sur votre système :  
   
@@ -59,7 +59,7 @@ ms.locfileid: "36039010"
   
 -   Le service Agent SQL Server doit être en cours d'exécution.  
   
--   Rapport contenant des paramètres. Ce didacticiel suppose que l’exemple de rapport, `Sales Orders` vous créez à l’aide de ce didacticiel [créer un rapport de base &#40;didacticiel SSRS&#41;](create-a-basic-table-report-ssrs-tutorial.md).  
+-   Rapport contenant des paramètres. Ce didacticiel part du principe que l’exemple de rapport, `Sales Orders` vous créez à l’aide de ce didacticiel [créer un rapport de tableau de base &#40;SSRS didacticiel&#41;](create-a-basic-table-report-ssrs-tutorial.md).  
   
 -   Exemple de base de données [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] contenant des données sur le rapport fourni en exemple.  
   

@@ -1,5 +1,5 @@
 ---
-title: Attributs et hiérarchies d’attributs | Documents Microsoft
+title: Attributs et hiérarchies d’attributs | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -24,15 +24,15 @@ helpviewer_keywords:
 - relationships [Analysis Services], attributes
 ms.assetid: 59de1ea2-e7a9-4a53-9ee0-14be52e95643
 caps.latest.revision: 49
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 792174e9d5da395d2a385b3dde73de9a167f0643
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 5fb6653895a360f95bbca3bdc31fd320e2f1d2dc
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36040764"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37149370"
 ---
 # <a name="attributes-and-attribute-hierarchies"></a>Attributs et hiérarchies d'attributs
   Les dimensions sont des ensembles d'attributs, liés à une ou plusieurs colonnes dans une table ou une vue de la vue de source de données.  
@@ -46,7 +46,7 @@ ms.locfileid: "36040764"
 ## <a name="attribute-hierarchies"></a>Hiérarchies d'attributs  
  Par défaut, les membres d'attribut sont organisés en hiérarchies à deux niveaux, constituées d'un niveau feuille et d'un niveau Tous. Le niveau Tous contient la valeur agrégée des membres de l'attribut à travers les mesures de chaque groupe de mesures dont la dimension à laquelle l'attribut se rapporte est membre. Cependant, si la propriété `IsAggregatable` est définie à False, le niveau Tous n'est pas créé. Pour plus d’informations, consultez [Dimension Attribute Properties Reference](../multidimensional-models/dimension-attribute-properties-reference.md).  
   
- Les attributs peuvent être - et c'est généralement le cas - organisés en hiérarchies définies par l'utilisateur, qui fournissent des chemins d'accès d'exploration par lesquels les utilisateurs peuvent parcourir les données dans les groupes de mesures auquel l'attribut se rapporte. Dans les applications clientes, les attributs peuvent être utilisés pour fournir des informations de regroupement et de contrainte. Lorsque les attributs sont organisés en hiérarchies définies par l’utilisateur, vous définissez des relations entre les niveaux de hiérarchie lorsque les niveaux sont liées dans un plusieurs-à-un ou une relation un à un (appelée un *naturelle* relation). Par exemple, dans une hiérarchie de calendrier, le niveau Jour doit être associé au niveau Mois, le niveau Mois doit être associé au niveau Trimestre, etc. La création de relations entre les niveaux dans une hiérarchie définie par l'utilisateur permet à Analysis Services de définir plusieurs agrégations utiles pour améliorer les performances des requêtes et économiser la mémoire lors du traitement, ce qui peut être crucial avec des cubes complexes et volumineux. Pour plus d’informations, consultez [hiérarchies utilisateur](user-hierarchies.md), [pourquoi hiérarchies](../multidimensional-models/user-defined-hierarchies-create.md), et [définir des relations d’attributs](../multidimensional-models/attribute-relationships-define.md).  
+ Les attributs peuvent être - et c'est généralement le cas - organisés en hiérarchies définies par l'utilisateur, qui fournissent des chemins d'accès d'exploration par lesquels les utilisateurs peuvent parcourir les données dans les groupes de mesures auquel l'attribut se rapporte. Dans les applications clientes, les attributs peuvent être utilisés pour fournir des informations de regroupement et de contrainte. Lorsque les attributs sont organisés en hiérarchies définies par l’utilisateur, vous définissez des relations entre les niveaux de hiérarchie lorsque les niveaux se rapportent à un plusieurs-à-un ou une relation un à un (appelé un *naturelle* relation). Par exemple, dans une hiérarchie de calendrier, le niveau Jour doit être associé au niveau Mois, le niveau Mois doit être associé au niveau Trimestre, etc. La création de relations entre les niveaux dans une hiérarchie définie par l'utilisateur permet à Analysis Services de définir plusieurs agrégations utiles pour améliorer les performances des requêtes et économiser la mémoire lors du traitement, ce qui peut être crucial avec des cubes complexes et volumineux. Pour plus d’informations, consultez [hiérarchies utilisateur](user-hierarchies.md), [les hiérarchies définies par l’utilisateur](../multidimensional-models/user-defined-hierarchies-create.md), et [définir des relations d’attribut](../multidimensional-models/attribute-relationships-define.md).  
   
 ## <a name="attribute-relationships-star-schemas-and-snowflake-schemas"></a>Relations d'attributs, schémas en étoile et schémas en flocon  
  Par défaut, dans un schéma en étoile, tous les attributs sont directement liés à l'attribut clé, qui permet aux utilisateurs de parcourir les faits du cube sur la base de l'une des hiérarchies d'attributs de la dimension. Dans un schéma en flocon, tous les attributs sont soit directement liés à l'attribut clé si leur table sous-jacente est directement liée à la table de faits, soit indirectement liés au moyen de l'attribut qui est lié à la clé de la table sous-jacente qui lie la table en flocon à la table directement liée.  

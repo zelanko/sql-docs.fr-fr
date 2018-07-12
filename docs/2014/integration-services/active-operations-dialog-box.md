@@ -1,5 +1,5 @@
 ---
-title: Boîte de dialogue opérations actives | Documents Microsoft
+title: Boîte de dialogue opérations actives | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.ssis.ssms.isoperations.executions.f1
 - sql12.ssis.ssms.isoperations.general.f1
 ms.assetid: 5bb0fcd6-0ce9-488a-85b8-25dddaa03cda
 caps.latest.revision: 7
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: adf25cd2194e1a02877c38a15d81d8697427ad76
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: b3c9105d6649443d8ec2d3425f86d609dfe6a2b3
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36040005"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37151120"
 ---
 # <a name="active-operations-dialog-box"></a>Boîte de dialogue Opérations actives
   Utilisez la boîte de dialogue **Opérations actives** pour afficher l'état des opérations [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] en cours d'exécution sur le serveur [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] , par exemple les opérations de déploiement, de validation et d'exécution de package. Ces données sont stockées dans le catalogue SSISDB.  
@@ -47,7 +47,7 @@ ms.locfileid: "36040005"
   
 ### <a name="options"></a>Options  
  **Type**  
- Spécifie le type d'opération. Voici les valeurs possibles pour le **Type** champ et les valeurs correspondantes dans la colonne operations_type de l’instruction Transact-SQL `catalog.operations` vue.  
+ Spécifie le type d'opération. Les éléments suivants sont les valeurs possibles pour le **Type** champ et les valeurs correspondantes dans la colonne operations_type de l’instruction Transact-SQL `catalog.operations` vue.  
   
 |||  
 |-|-|  

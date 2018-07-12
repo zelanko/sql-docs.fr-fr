@@ -1,5 +1,5 @@
 ---
-title: Planifier la prise en charge des rapports de mappage | Documents Microsoft
+title: Planifier la prise en charge de rapport cartographique | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 5ddc97a7-7ee5-475d-bc49-3b814dce7e19
 caps.latest.revision: 10
-author: douglaslM
+author: maggiesmsft
 ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: cf56a62b3ef129d9d725aa54d05544f776d4f6ac
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 8bfe76929c3f9b50e59cc276385b815973a0d06c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36039914"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37163750"
 ---
 # <a name="plan-for-map-report-support"></a>Planifier la prise en charge de rapport cartographique
   [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)] prend en charge les rapports cartographiques qui utilisent des sources de données spatiales. Les données spatiales peuvent provenir de bases de données SQL Server, de fichiers de formes ESRI ou de la Bibliothèque de cartes installée avec Reporting Services ou le Générateur de rapports. Une carte peut également afficher un arrière-plan de mosaïques Bing. Un auteur de rapport peut créer un rapport qui spécifie des données spatiales ou des mosaïques Bing comme dynamique et récupéré au moment de l'exécution ou comme statique et incorporé dans la définition de rapport.  
@@ -27,7 +27,7 @@ ms.locfileid: "36039914"
 ## <a name="support-for-bing-maps"></a>Prise en charge de Bing Maps  
  Les cartes peuvent inclure une couche d'arrière-plan qui affiche des mosaïques Bing. Pour consulter un rapport publié qui a une couche de mosaïques, le serveur de rapports doit être configuré pour récupérer des mosaïques à partir des services Web Bing Maps. Pour plus d'informations, consultez [RSReportServer Configuration File](report-server/rsreportserver-config-configuration-file.md).  
   
- Dans chaque rapport, les auteurs peuvent spécifier s'il faut utiliser une connexion SSL (Secure Sockets Layer) pour récupérer des mosaïques auprès du serveur de mosaïques. Pour ce faire, dans le volet Propriétés de la couche de mosaïques, ils doivent définir la propriété booléenne UseSecureConnection à `true`.  
+ Dans chaque rapport, les auteurs peuvent spécifier s'il faut utiliser une connexion SSL (Secure Sockets Layer) pour récupérer des mosaïques auprès du serveur de mosaïques. Pour ce faire, dans le volet Propriétés de la couche de mosaïques, ils doivent définir la propriété booléenne usesecureconnection la valeur à `true`.  
   
 > [!NOTE]  
 >  Pour plus d'informations sur l'utilisation de mosaïques Bing dans votre rapport, consultez [Conditions supplémentaires d'utilisation](http://go.microsoft.com/fwlink/?LinkId=151371) et [Déclaration de confidentialité](http://go.microsoft.com/fwlink/?LinkId=151372)(éventuellement en anglais).  
@@ -51,9 +51,9 @@ ms.locfileid: "36039914"
   
 -   Lorsque les données cartographiques doivent être incorporées, ajustez le centre de la fenêtre d'affichage et le niveau de zoom de façon à inclure uniquement les données cartographiques nécessaires pour le rapport.  
   
- Pour plus d’informations, [cartes &#40;le Générateur de rapports et SSRS&#41;](report-design/maps-report-builder-and-ssrs.md).  
+ Pour plus d’informations, [Maps &#40;Générateur de rapports et SSRS&#41;](report-design/maps-report-builder-and-ssrs.md).  
   
 ## <a name="see-also"></a>Voir aussi  
- [Dépanner les rapports : Mapper des rapports &#40;rapport Générateur et SSRS&#41;](report-design/troubleshoot-reports-map-reports-report-builder-and-ssrs.md)  
+ [Dépanner les rapports : Mapper des rapports &#40;Générateur de rapports et SSRS&#41;](report-design/troubleshoot-reports-map-reports-report-builder-and-ssrs.md)  
   
   

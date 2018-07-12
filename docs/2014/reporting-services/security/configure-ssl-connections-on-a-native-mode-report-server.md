@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Secure Sockets Layer (SSL)
 ms.assetid: 212f2042-456a-4c0a-8d76-480b18f02431
 caps.latest.revision: 34
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 95056bd4c6902f8f727af2cd77958e461bdbcb75
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: bd49900daf397575c90be86d0370f47824cc4d8e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36040362"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37150520"
 ---
 # <a name="configure-ssl-connections-on-a-native-mode-report-server"></a>Configurer des connexions SSL sur un serveur de rapports en mode natif
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Le mode natif utilise le service HTTP SSL (Secure Sockets Layer) pour définir des connexions chiffrées à un serveur de rapports. Si le fichier de certificat (.cer) est installé dans un magasin de certificats local sur le serveur de rapports, vous pouvez lier le certificat à une réservation d’URL [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] pour prendre en charge des connexions de serveur de rapports sur un canal chiffré.  
@@ -81,7 +81,7 @@ ms.locfileid: "36040362"
 5.  Cliquez sur l'URL pour vérifier qu'elle fonctionne.  
   
 ## <a name="how-certificate-bindings-are-stored"></a>Comment les liaisons de certificat sont stockées  
- Les liaisons de certificat sont stockées dans HTTP.SYS. Une représentation des liaisons que vous avez définies est également stockée dans le `URLReservations` section du fichier RSReportServer.config. Les paramètres dans le fichier de configuration sont uniquement une représentation des valeurs réelles spécifiées ailleurs. Ne modifiez pas les valeurs directement dans le fichier de configuration. Les paramètres de configuration apparaissent dans le fichier uniquement si vous avez utilisé l'outil de configuration de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ou le fournisseur WMI (Windows Management Instrumentation) de Report Server pour lier un certificat.  
+ Les liaisons de certificat sont stockées dans HTTP.SYS. Une représentation des liaisons que vous avez défini est également stockée dans la `URLReservations` section du fichier RSReportServer.config. Les paramètres dans le fichier de configuration sont uniquement une représentation des valeurs réelles spécifiées ailleurs. Ne modifiez pas les valeurs directement dans le fichier de configuration. Les paramètres de configuration apparaissent dans le fichier uniquement si vous avez utilisé l'outil de configuration de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ou le fournisseur WMI (Windows Management Instrumentation) de Report Server pour lier un certificat.  
   
 > [!NOTE]  
 >  Si vous configurez une liaison avec un certificat SSL dans [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] et que vous souhaitez par la suite supprimer le certificat de l’ordinateur, n’oubliez pas de supprimer la liaison de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] avant de supprimer le certificat de l’ordinateur. Sinon, vous ne pourrez pas supprimer la liaison en utilisant l’outil de configuration de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ou WMI, et vous recevrez l’erreur « Paramètre non valide ». Si vous avez déjà supprimé le certificat de l'ordinateur, vous pouvez utiliser l'outil Httpcfg.exe pour supprimer la liaison de HTTP.SYS. Pour plus d'informations sur Httpcfg.exe, consultez la documentation produit de Windows.  

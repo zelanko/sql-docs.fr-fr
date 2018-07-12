@@ -1,5 +1,5 @@
 ---
-title: Ensemble de lignes DMSCHEMA_MINING_SERVICES | Documents Microsoft
+title: Ensemble de lignes DMSCHEMA_MINING_SERVICES | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -18,15 +18,15 @@ helpviewer_keywords:
 - DMSCHEMA_MINING_SERVICES rowset
 ms.assetid: 4a672f2f-d637-4def-a572-c18556f83d34
 caps.latest.revision: 34
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: b268abe234c8df71672ca434494ee89717a15947
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: e6ccfdba24d7bc23b97eb15e61321f82e5ab1d9b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36038450"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37278220"
 ---
 # <a name="dmschemaminingservices-rowset"></a>Ensemble de lignes DMSCHEMA_MINING_SERVICES
   Fournit la description de chaque algorithme d'exploration de données que le fournisseur prend en charge.  
@@ -47,13 +47,13 @@ ms.locfileid: "36038450"
 |`SUPPORTED_PREDICTION_CONTENT_TYPES`|`DBTYPE_WSTR`||Liste d'indicateurs, délimitée par des virgules, qui décrivent les types de contenu de prédiction pris en charge par l'algorithme. Cette colonne contient une ou plusieurs des valeurs suivantes :<br /><br /> -   "`KEY`"<br />-   "`DISCRETE`"<br />-   "`CONTINUOUS`"<br />-   "`DISCRETIZED`"<br />-   "`ORDERED`"<br />-« CLÉ `SEQUENCE` »<br />-   "`CYCLICAL`"<br />-   "`PROBABILITY`"<br />-   "`VARIANCE`"<br />-   "`STDEV`"<br />-   "`SUPPORT`"<br />-   "`PROBABILITY VARIANCE`"<br />-   "`PROBABILITY STDEV`"<br />-« KEY TIME »|  
 |`SUPPORTED_MODELING_FLAGS`|`DBTYPE_WSTR`||Liste, délimitée par des virgules, des indicateurs de modélisation pris en charge par l'algorithme. Cette colonne contient une ou plusieurs des valeurs suivantes :<br /><br /> -   "`MODEL_EXISTENCE_ONLY`"<br />-   "`REGRESSOR`"<br /><br /> Des indicateurs spécifiques au fournisseur peuvent également être définis.|  
 |`SUPPORTED_SOURCE_QUERY`|`DBTYPE_WSTR`||-Cette colonne est pris en charge pour la compatibilité descendante.|  
-|`TRAINING_COMPLEXITY`|`DBTYPE_I4`||Durée prévue de l'apprentissage :<br /><br /> -   `DM_TRAINING_COMPLEXITY_LOW` Indique que le temps d’exécution est relativement court, et il est proportionnel à l’entrée.<br />-   **DM_TRAINING_COMPLEXITY_MEDIUM** indique que le temps d’exécution peuvent être long, mais il est généralement proportionnel à l’entrée.<br />-   **DM_TRAINING_COMPLEXITY_HIGH** indique que le temps d’exécution est long, et il peut croître de manière exponentielle de la relation pour le nombre de cas d’apprentissage.|  
-|`PREDICTION_COMPLEXITY`|`DBTYPE_I4`||Durée prévue de la prédiction :<br /><br /> -   **DM_PREDICTION_COMPLEXITY_LOW** indique que le temps d’exécution est relativement court, et il est proportionnel à l’entrée.<br />-   **DM_PREDICTION_COMPLEXITY_MEDIUM** indique que le temps d’exécution peuvent être long, mais il est généralement proportionnel à l’entrée.<br />-   **DM_PREDICTION_COMPLEXITY_HIGH** indique que le temps d’exécution est long, et il peut croître de manière exponentielle de la relation pour le nombre de cas d’apprentissage.|  
+|`TRAINING_COMPLEXITY`|`DBTYPE_I4`||Durée prévue de l'apprentissage :<br /><br /> -   `DM_TRAINING_COMPLEXITY_LOW` Indique que le temps d’exécution est relativement court, et il est proportionnel à l’entrée.<br />-   **DM_TRAINING_COMPLEXITY_MEDIUM** indique que le temps d’exécution peut être long, mais il est généralement proportionnel à l’entrée.<br />-   **DM_TRAINING_COMPLEXITY_HIGH** indique que le temps d’exécution est long, et il peut augmenter de manière exponentielle au nombre de cas d’apprentissage.|  
+|`PREDICTION_COMPLEXITY`|`DBTYPE_I4`||Durée prévue de la prédiction :<br /><br /> -   **DM_PREDICTION_COMPLEXITY_LOW** indique que le temps d’exécution est relativement court, et il est proportionnel à l’entrée.<br />-   **DM_PREDICTION_COMPLEXITY_MEDIUM** indique que le temps d’exécution peut être long, mais il est généralement proportionnel à l’entrée.<br />-   **DM_PREDICTION_COMPLEXITY_HIGH** indique que le temps d’exécution est long, et il peut augmenter de manière exponentielle au nombre de cas d’apprentissage.|  
 |`EXPECTED_QUALITY`|`DBTYPE_I4`||Qualité attendue du modèle produit avec cet algorithme :<br /><br /> -   `DM_EXPECTED_QUALITY_LOW`<br />-   `DM_EXPECTED_QUALITY_MEDIUM`<br />-   **DM_EXPECTED_QUALITY_HIGH**|  
 |`SCALING`|`DBTYPE_I4`||Évolutivité de l'algorithme :<br /><br /> -   **DM_SCALING_LOW**<br />-   `DM_SCALING_MEDIUM`<br />-   **DM_SCALING_HIGH**|  
 |`ALLOW_INCREMENTAL_INSERT`|`DBTYPE_BOOL`||Valeur booléenne qui indique si l'algorithme prend en charge l'apprentissage incrémentiel, c'est-à-dire la mise à jour des modèles découverts selon de nouvelles données factuelles, au lieu de la redécouverte complète des modèles.|  
 |`ALLOW_PMML_INITIALIZATION`|`DBTYPE_BOOL`||Valeur booléenne qui indique s'il est possible de créer des modèles d'exploration de données en fonction d'une chaîne PMML 2.1.<br /><br /> Si la valeur est `TRUE`, l'algorithme d'exploration prend en charge l'initialisation à partir du contenu PMML 2.1.|  
-|`CONTROL`|`DBTYPE_I4`||Prise en charge fournie par le service si l'apprentissage est interrompu :<br /><br /> -   `DM_CONTROL_NONE` Indique que l’algorithme ne peut pas être annulé après avoir démarré l’apprentissage du modèle.<br />-   `DM_CONTROL_CANCEL` Indique que l’algorithme peut être annulé une fois qu’il démarre à l’apprentissage du modèle, mais doit être redémarré pour reprendre l’apprentissage.<br />-   `DM_CONTROL_SUSPENDRESUME` Indique que l’algorithme peut être annulé et reprendre à tout moment, mais résultats ne sont pas disponibles tant que la configuration est terminée.<br />-   `DM_CONTROL_SUSPENDWITHRESULT` Indique que l’algorithme peut être annulé et reprendre à tout moment, et que des résultats incrémentiels peuvent être obtenues.|  
+|`CONTROL`|`DBTYPE_I4`||Prise en charge fournie par le service si l'apprentissage est interrompu :<br /><br /> -   `DM_CONTROL_NONE` Indique que l’algorithme ne peut pas être annulé après son démarrage former le modèle.<br />-   `DM_CONTROL_CANCEL` Indique que l’algorithme peut être annulé une fois qu’il démarre former le modèle, mais doit être redémarré pour reprendre la formation.<br />-   `DM_CONTROL_SUSPENDRESUME` Indique que l’algorithme peut être annulé et reprendre à tout moment, mais des résultats ne sont pas disponibles avant la formation est terminée.<br />-   `DM_CONTROL_SUSPENDWITHRESULT` Indique que l’algorithme peut être annulé et reprendre à tout moment, et que des résultats incrémentiels peut être obtenu.|  
 |`ALLOW_DUPLICATE_KEY`|`DBTYPE_BOOL`||Valeur booléenne qui indique si les cas peuvent contenir des clés dupliquées.<br /><br /> Si la valeur est `VARIANT_TRUE`, les cas sont autorisés à contenir des clés dupliquées.|  
 |`VIEWER_TYPE`|`DBTYPE_WSTR`||Visionneuse recommandée pour ce modèle. |  
 |`HELP_FILE`|`DBTYPE_WSTR`||(Facultatif) Nom du fichier qui contient la documentation de ce service.|  

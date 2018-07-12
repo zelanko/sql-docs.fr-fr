@@ -1,5 +1,5 @@
 ---
-title: Élément Password (ASSL) | Documents Microsoft
+title: Mot de passe, élément (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - Password element
 ms.assetid: ee756b01-fb08-4a9a-8c2a-7c04af0f8658
 caps.latest.revision: 13
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: e702e7307e11c506652e91ca4cdc8f02ca06318d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 99d7eabdd66e6c7f036389b4825c5926873367b2
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36038895"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37197739"
 ---
 # <a name="password-element-assl"></a>Élément Password (ASSL)
   Contient le mot de passe du compte d’utilisateur pour le [ImpersonationInfo](../data-type/impersonationinfo-data-type-assl.md) élément.  
@@ -56,11 +56,11 @@ ms.locfileid: "36038895"
   
 |Relation|Élément|  
 |------------------|-------------|  
-|Élément parent|[Élément ImpersonationInfo](../data-type/impersonationinfo-data-type-assl.md)|  
+|Élément parent|[ImpersonationInfo](../data-type/impersonationinfo-data-type-assl.md)|  
 |Éléments enfants|None|  
   
 ## <a name="remarks"></a>Notes  
- La valeur de la `Password` élément, ainsi que la valeur de la [compte](account-element-impersonationinfo-assl.md) , sont utilisées à des fins d’emprunt d’identité si la valeur de la [ImpersonationMode](impersonationmode-element-assl.md) pour tout élément dérivé du `ImpersonationInfo` type de données est défini sur *ImpersonateAccount*.  
+ La valeur de la `Password` élément, ainsi que la valeur de la [compte](account-element-impersonationinfo-assl.md) élément, est utilisé à des fins d’emprunt d’identité si la valeur de la [ImpersonationMode](impersonationmode-element-assl.md) élément pour tout élément dérivé de la `ImpersonationInfo` type de données est défini sur *ImpersonateAccount*.  
   
  Seuls les membres du rôle des administrateurs de serveur de l'instance [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] peuvent fournir une valeur vide pour l'élément `Password`  
   

@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.common.matchingobjects.f1
 - sql12.swb.common.browseobjects.f1
 ms.assetid: 6e8b5900-1990-48e9-8666-d9a20ed786be
 caps.latest.revision: 19
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 8460e4a9c3ece83ff41177eb86b581c53edeb263
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: b9c7893dcf6f250668b000c07126e62449518698
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36039432"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37168320"
 ---
 # <a name="browse-for-objects-object-explorer"></a>Rechercher des objets (Explorateur d'objets)
   Permet d'afficher la liste des objets du type sélectionné. Sélectionnez un ou plusieurs objets de cette liste en activant les cases à cocher correspondantes. La zone **Rechercher des objets** n'affiche que les éléments appropriés pour l'action et les éléments que vous êtes autorisé à afficher.  

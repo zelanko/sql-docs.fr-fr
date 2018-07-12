@@ -1,5 +1,5 @@
 ---
-title: Appliquer des filtres pour modéliser les données de test | Documents Microsoft
+title: Appliquer des filtres pour modéliser les données de test | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,27 +8,27 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - input row filtering [SQL Server]
 - filtering input rows [Analysis Services]
 - Mining Accuracy Chart [Analysis Services], filtering input rows
 ms.assetid: 9ccc9a23-5597-4b35-a05f-2fc8eb885147
 caps.latest.revision: 43
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: aa35fdc19ffca67cf82f2f4b2dfa468131dd97d1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: f81b15b5fa36913a54e6529602d903ede426addf
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36040278"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37153280"
 ---
 # <a name="apply-filters-to-model-testing-data"></a>Appliquer des filtres aux données de test du modèle
   Quand vous spécifiez une source de données externe à utiliser pour tester un modèle, vous pouvez éventuellement appliquer un filtre pour restreindre les données d’entrée. Par exemple, vous pouvez tester le modèle spécifiquement pour les prédictions sur des clients dans une certaine plage de revenus.  
   
- Par exemple, dans le scénario de publipostage ciblé AdventureWorks, vous pouvez créer une expression de filtre sur ProspectiveBuyer, qui est la table qui contient les données de test, tel que le suivant et restreindre les cas de tests par plage de revenus :  
+ Par exemple, dans le scénario de publipostage ciblé AdventureWorks, vous pouvez créer une expression de filtre telle que la suivante sur ProspectiveBuyer, qui est la table qui contient les données de test, et restreindre les cas de tests par plage de revenus :  
   
  `[YearlyIncome] = '50000'`  
   
@@ -94,8 +94,8 @@ ms.locfileid: "36040278"
      La condition de filtre est appliquée à la source de données lorsque vous créez le graphique d'analyse de précision.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Choisir et mapper le modèle de données de test](choose-and-map-model-testing-data.md)   
- [Données de Table à l’aide d’imbriquées comme entrée pour un graphique de précision](using-nested-table-data-as-an-input-for-an-accuracy-chart.md)   
+ [Choisir et mapper les données de test du modèle](choose-and-map-model-testing-data.md)   
+ [À l’aide de Table des données imbriquée comme entrée pour un graphique de précision](using-nested-table-data-as-an-input-for-an-accuracy-chart.md)   
  [Choisir un type de graphique d’analyse de précision et définir des options de graphique](choose-an-accuracy-chart-type-and-set-chart-options.md)  
   
   

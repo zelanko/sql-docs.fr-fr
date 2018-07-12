@@ -1,12 +1,12 @@
 ---
-title: Conversions de C en SQL | Documents Microsoft
+title: Conversions de C en SQL | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: connectivity
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -17,20 +17,20 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: a44722f571f8cd0a9ac0cecdd0dd9a0a1254bd5b
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
+ms.openlocfilehash: c222ed8aedbb4e84014119c896d59786a1db866a
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35702860"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37431768"
 ---
-# <a name="datetime-data-type-conversions-from-c-to-sql"></a>DateTime, Conversions de types de données à partir de C en SQL
+# <a name="datetime-data-type-conversions-from-c-to-sql"></a>Données Type Conversions DateTime de C en SQL
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
-  Cette rubrique répertorie les problèmes à prendre en compte les lors de la conversion de types en types C [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] types date/heure.  
+  Cette rubrique répertorie les problèmes à prendre en compte lorsque vous effectuez une conversion à partir de types C en types [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] types date/heure.  
   
- Les conversions décrites dans le tableau suivant s'appliquent aux conversions effectuées sur le client. Dans les cas où le client spécifie la précision à la seconde fractions de seconde pour un paramètre qui diffère de celui défini sur le serveur, la conversion cliente peut réussir mais le serveur retourne une erreur lors de la **SQLExecute** ou  **SQLExecuteDirect** est appelée. En particulier, ODBC traite toute troncation des fractions de seconde comme une erreur, alors que le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] comportement consiste à arrondir ; arrondi, par exemple, se produit lorsque vous passez de **datetime2(6)** à **datetime2(2)**. Les colonnes datetime sont arrondies au 1/300ème de seconde et les secondes des colonnes smalldatetime sont définies avec la valeur zéro (0) par le serveur.  
+ Les conversions décrites dans le tableau suivant s'appliquent aux conversions effectuées sur le client. Dans les cas où le client spécifie la précision à la deuxième fraction pour un paramètre qui diffère de celui défini sur le serveur, la conversion cliente peut réussir mais le serveur retourne une erreur lors de la **SQLExecute** ou  **SQLExecuteDirect** est appelée. En particulier, ODBC traite toute troncation des fractions de seconde comme une erreur, alors que le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] comportement consiste à arrondir ; par exemple, arrondi n’est effectué lorsque vous passez de **datetime2(6)** à **datetime2(2)**. Les colonnes datetime sont arrondies au 1/300ème de seconde et les secondes des colonnes smalldatetime sont définies avec la valeur zéro (0) par le serveur.  
   
 |||||||||  
 |-|-|-|-|-|-|-|-|  
@@ -56,7 +56,7 @@ ms.locfileid: "35702860"
   
 -   **1**: si les données fournies ne sont pas valides, un enregistrement de diagnostic est généré avec SQLSTATE 22007 et le message « format datetime non valide ».  
   
--   **2**: champs d’heure doivent être zéro ou un enregistrement de diagnostic est généré avec SQLSTATE 22008 et le message « Troncation fractionnelle ».  
+-   **2**: champs d’heure doivent être égal à zéro ou un enregistrement de diagnostic est généré avec SQLSTATE 22008 et le message « Troncation fractionnelle ».  
   
 -   **3**: fractions de secondes doivent être égal à zéro ou un enregistrement de diagnostic est généré avec SQLSTATE 22008 et le message « Troncation fractionnelle ».  
   
@@ -68,19 +68,19 @@ ms.locfileid: "35702860"
   
 -   **7**: la date est définie à la date actuelle.  
   
--   **8**: l’heure est convertie du fuseau horaire du client au format UTC. Si une erreur se produit pendant cette conversion, un enregistrement de diagnostic est généré avec SQLSTATE 22008 et le message « Dépassement de la capacité du champ datetime ».  
+-   **8**: l’heure est convertie à partir de fuseau horaire du client au format UTC. Si une erreur se produit pendant cette conversion, un enregistrement de diagnostic est généré avec SQLSTATE 22008 et le message « Dépassement de la capacité du champ datetime ».  
   
 -   **9**: la chaîne est analysée et convertie en une date, datetime, datetimeoffset ou valeur d’heure, selon le premier caractère de ponctuation rencontré et la présence de composants restants. La chaîne est ensuite convertie en type cible,  selon les règles de la table précédente pour le type source découvert par ce processus. Si une erreur est détectée en analysant les données, un enregistrement de diagnostic est généré avec SQLSTATE 22018 et le message « Valeur de caractère non valide pour la spécification de la casse ». Pour les paramètres datetime et smalldatetime, si l'année est en dehors de la plage prise en charge par ces types, un enregistrement de diagnostic est généré avec SQLSTATE 22007 et le message « Format datetime non valide ».  
   
      Pour datetimeoffset, la valeur doit se situer dans la plage après la conversion au format UTC, même si aucune conversion au format UTC n'est demandée. Cela tient au fait que TDS et le serveur normalisent toujours l'heure des valeurs datetimeoffset pour UTC, si bien que le client doit vérifier que les composants heure se situent dans la plage prise en charge après la conversion au format UTC. Si la valeur n'est pas dans la plage UTC prise en charge, un enregistrement de diagnostic est généré avec SQLSTATE 22007 et le message « Format de datetime non valide ».  
   
--   **10**: si une troncation avec perte de données se produit, un enregistrement de diagnostic est généré avec SQLSTATE 22008 et le message « format d’heure non valide ». Cette erreur se produit également si la valeur est située en dehors de la plage qui peut être représentée par la plage UTC utilisée par le serveur.  
+-   **10**: en cas de troncation avec perte de données, un enregistrement de diagnostic est généré avec SQLSTATE 22008 et le message « format d’heure non valide ». Cette erreur se produit également si la valeur est située en dehors de la plage qui peut être représentée par la plage UTC utilisée par le serveur.  
   
--   **11**: si la longueur en octets des données n’est pas la taille de la structure requise par le type SQL, un enregistrement de diagnostic est généré avec SQLSTATE 22003 et le message « Valeur numérique hors limites ».  
+-   **11**: si la longueur d’octet des données n’est pas la taille de la structure requise par le type SQL, un enregistrement de diagnostic est généré avec SQLSTATE 22003 et le message « Valeur numérique hors limites ».  
   
--   **12**: si la longueur en octets des données est de 4 ou 8, les données sont envoyées au serveur au format datetime ou smalldatetime TDS raw. Si la longueur d'octet des données correspond exactement à la taille de SQL_TIMESTAMP_STRUCT, les données sont converties au format TDS pour datetime2.  
+-   **12**: si la longueur d’octet des données est de 4 ou 8, les données sont envoyées au serveur au format datetime ou smalldatetime TDS brut. Si la longueur d'octet des données correspond exactement à la taille de SQL_TIMESTAMP_STRUCT, les données sont converties au format TDS pour datetime2.  
   
--   **13**: si une troncation avec perte de données se produit, un enregistrement de diagnostic est généré avec SQLSTATE 22001 et le message « Données de chaîne tronquées à droite ».  
+-   **13**: en cas de troncation avec perte de données, un enregistrement de diagnostic est généré avec SQLSTATE 22001 et le message « Données de chaîne tronquée à droite ».  
   
      Le nombre de chiffres des fractions de seconde (l'échelle) est déterminé à partir de la taille de la colonne de destination, conformément au tableau suivant :  
   
@@ -95,9 +95,9 @@ ms.locfileid: "35702860"
   
      Une taille de colonne égale à zéro implique une taille illimitée pour les types de caractères de longueur variable en ODBC (9 chiffres, à moins que la règle des 3 chiffres pour SQL_C_TYPE_TIMESTAMP ne s'applique). La spécification d'une taille de colonne égale à zéro avec un type de caractère de longueur fixe constitue une erreur.  
   
--   **N/a**: existant [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] et le comportement antérieur est conservé.  
+-   **N/a**: existant [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] et comportement antérieur est conservé.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Date et heure améliorations &#40;ODBC&#41;](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md)  
+ [Améliorations date / heure &#40;ODBC&#41;](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md)  
   
   

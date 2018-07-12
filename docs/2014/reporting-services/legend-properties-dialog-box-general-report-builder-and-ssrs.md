@@ -1,5 +1,5 @@
 ---
-title: Boîte de dialogue Propriétés de légende, général (Générateur de rapports et SSRS) | Documents Microsoft
+title: Boîte de dialogue Propriétés de légende, général (Générateur de rapports et SSRS) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,24 +8,24 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.rtp.rptdesigner.legendproperties.general.f1
 - "10184"
 ms.assetid: db718f8f-f185-422f-871c-96f0749e5893
 caps.latest.revision: 8
-author: douglaslM
+author: maggiesmsft
 ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 8614201ccb9c4fa496602a1ea8f6ea5e984b4d39
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 172fc72cd09356281ddf10f2e048a2a81684c29a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36039233"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37230673"
 ---
 # <a name="legend-properties-dialog-box-general-report-builder-and-ssrs"></a>Boîte de dialogue Propriétés de la légende, Général (Générateur de rapports et SSRS)
-  Utilisez la boîte de dialogue **Légende** pour définir l'apparence et la disposition de la légende du graphique. Pour plus d’informations, consultez [mise en forme de la légende sur un graphique &#40;le Générateur de rapports et SSRS&#41;](report-design/chart-legend-formatting-report-builder.md).  
+  Utilisez la boîte de dialogue **Légende** pour définir l'apparence et la disposition de la légende du graphique. Pour plus d’informations, consultez [mise en forme de la légende sur un graphique &#40;Générateur de rapports et SSRS&#41;](report-design/chart-legend-formatting-report-builder.md).  
   
 ## <a name="options"></a>Options  
  **Nom**  
@@ -53,11 +53,11 @@ ms.locfileid: "36039233"
 ## <a name="see-also"></a>Voir aussi  
  [Graphiques &#40;Générateur de rapports et SSRS&#41;](report-design/charts-report-builder-and-ssrs.md)   
  [Mise en forme des couleurs des séries sur un graphique &#40;Générateur de rapports et SSRS&#41;](report-design/formatting-series-colors-on-a-chart-report-builder-and-ssrs.md)   
- [Mise en forme de la légende sur un graphique &#40;rapport Générateur et SSRS&#41;](report-design/chart-legend-formatting-report-builder.md)   
+ [Mise en forme de la légende sur un graphique &#40;Générateur de rapports et SSRS&#41;](report-design/chart-legend-formatting-report-builder.md)   
  [Mise en forme des étiquettes des axes sur un graphique &#40;Générateur de rapports et SSRS&#41;](report-design/formatting-axis-labels-on-a-chart-report-builder-and-ssrs.md)   
  [Définir les couleurs d’un graphique à l’aide d’une palette &#40;Générateur de rapports et SSRS&#41;](report-design/define-colors-on-a-chart-using-a-palette-report-builder-and-ssrs.md)   
- [Tracer des données sur un axe secondaire &#40;rapport Générateur et SSRS&#41;](report-design/plot-data-on-a-secondary-axis-report-builder-and-ssrs.md)   
- [Mise en forme de la légende sur un graphique &#40;rapport Générateur et SSRS&#41;](report-design/chart-legend-formatting-report-builder.md)   
- [Ajouter une moyenne mobile à un graphique &#40;rapport Générateur et SSRS&#41;](report-design/add-a-moving-average-to-a-chart-report-builder-and-ssrs.md)  
+ [Tracer des données sur un axe secondaire &#40;Générateur de rapports et SSRS&#41;](report-design/plot-data-on-a-secondary-axis-report-builder-and-ssrs.md)   
+ [Mise en forme de la légende sur un graphique &#40;Générateur de rapports et SSRS&#41;](report-design/chart-legend-formatting-report-builder.md)   
+ [Ajouter une moyenne mobile à un graphique &#40;Générateur de rapports et SSRS&#41;](report-design/add-a-moving-average-to-a-chart-report-builder-and-ssrs.md)  
   
   

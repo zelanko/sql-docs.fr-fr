@@ -1,5 +1,5 @@
 ---
-title: Assistant Déploiement d’Integration Services | Documents Microsoft
+title: Assistant Déploiement d’Integration Services | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.ssis.deploymentwizard.f1
 ms.assetid: f3d93e13-2d85-47ff-a913-cda4046491c4
 caps.latest.revision: 10
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 60bc9f05f7a00075efbda2972cf78d9d169c55d0
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 5b5a86bd0c7baa64403640698ab5b94cdb4f2977
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36039553"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37193789"
 ---
 # <a name="integration-services-deployment-wizard"></a>Assistant Déploiement d’Integration Services
   L'Assistant Déploiement d'[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] déploie des projets dans le catalogue SSISDB sur une instance de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] à l'aide du modèle de déploiement de projet.  
@@ -30,7 +30,7 @@ ms.locfileid: "36039553"
   
  L'Assistant effectue les quatre étapes ci-après. Cliquez sur **suivant** à passer à l’étape suivante, ou **précédent** pour revenir à l’étape précédente.  
   
-1.  **Sélectionnez la Source** – permet de sélectionner le [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] projet que vous souhaitez déployer.  
+1.  **Sélectionnez Source** – permet de sélectionner le [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] projet que vous souhaitez déployer.  
   
 2.  **Sélectionner la Destination** – sélectionnez la destination du projet.  
   
@@ -39,7 +39,7 @@ ms.locfileid: "36039553"
 4.  **Déployer/résultats** – déploie le projet et affiche les résultats.  
   
 ## <a name="select-source"></a>Sélectionner une source  
- Pour déployer un fichier de déploiement de projet que vous avez créé, sélectionnez **fichier de projet de déploiement** et entrez le chemin d’accès du fichier .ispac ou cliquez sur **Parcourir** se trouve dans le [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] dossier du projet. Pour déployer un projet qui réside dans le catalogue [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] , sélectionnez **Catalogue Integration Services**, puis entrez le nom du serveur et le chemin d'accès au projet au sein du catalogue.  
+ Pour déployer un fichier de déploiement de projet que vous avez créé, sélectionnez **fichier de déploiement de projet** et entrez le chemin d’accès du fichier .ispac ou cliquez sur **Parcourir** à trouver dans le [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] dossier du projet. Pour déployer un projet qui réside dans le catalogue [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] , sélectionnez **Catalogue Integration Services**, puis entrez le nom du serveur et le chemin d'accès au projet au sein du catalogue.  
   
  Si vous démarrez l'Assistant dans [!INCLUDE[vsprvs](../includes/vsprvs-md.md)], l'Assistant sélectionne ensuite par défaut le projet ouvert en tant que source et ignore cette étape. Pour revenir à cette étape et sélectionner une autre source, cliquez sur **précédent** ou cliquez sur **sélectionner une Source** dans le volet gauche.  
   
@@ -57,7 +57,7 @@ ms.locfileid: "36039553"
  Cliquez sur **Fermer** pour quitter l’Assistant.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Déployer des projets pour le serveur Integration Services](../../2014/integration-services/deploy-projects-to-integration-services-server.md)   
- [Déploiement de projets et Packages](packages/deploy-integration-services-ssis-projects-and-packages.md)  
+ [Déployer des projets sur le serveur Integration Services](../../2014/integration-services/deploy-projects-to-integration-services-server.md)   
+ [Déploiement de projets et de packages](packages/deploy-integration-services-ssis-projects-and-packages.md)  
   
   

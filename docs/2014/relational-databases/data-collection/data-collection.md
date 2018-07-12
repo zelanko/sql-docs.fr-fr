@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - data collection [SQL Server]
 ms.assetid: 0cc1f95c-5815-4d78-8868-a900be15e674
 caps.latest.revision: 44
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: a6669b33697e573ef0cff9de86adf39aa98301ad
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 2cb2709d0296ce83a842086329f64d5cf0812560
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36039980"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37171050"
 ---
 # <a name="data-collection"></a>Collecte de données
   Le collecteur de données est un composant de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] qui recueille différents jeux de données. La collecte de données peut s'exécuter de façon constante ou selon une planification définie par l'utilisateur. Le collecteur de données stocke les données recueillies dans une base de données relationnelle appelée entrepôt de données de gestion.  
@@ -115,7 +115,7 @@ ms.locfileid: "36039980"
   
 |Description de la tâche|Rubrique|  
 |----------------------|-----------|  
-|Décrit comment gérer différents aspects de la collecte de données, tels que l’activation ou la désactivation de collecte de données, la modification d’une collection jeu de configuration ou la consultation des données dans l’entrepôt de données de gestion.|[Gérer la collecte de données](manage-data-collection.md)|  
+|Décrit comment gérer différents aspects de la collecte de données, telles que l’activation ou désactivation de la collecte de données, modification d’une collection jeu configuration ou la consultation des données dans l’entrepôt de données de gestion.|[Gérer la collecte de données](manage-data-collection.md)|  
 |Explique comment utiliser ces rapports pour obtenir des informations afin de contrôler la capacité système et de résoudre les problèmes de performances système.|[Rapports de jeux d’éléments de collecte de données système](system-data-collection-set-reports.md)|  
 |Explique comment utiliser l'entrepôt de données de gestion pour collecter des données d'un serveur qui est une cible de collecte de données.|[Entrepôt de données de gestion](management-data-warehouse.md)|  
   

@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - report server configuration
 - report servers [Reporting Services], configuring
@@ -16,13 +16,13 @@ ms.assetid: ef84ce9d-9156-48e9-8073-7e0535476932
 caps.latest.revision: 16
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 0ec1501c32505b760fba2ec88e21140de1cf0211
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 7f7e1231111f795383748438730f2652ac8d9056
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36039465"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37200789"
 ---
 # <a name="configure-a-report-server-reporting-services-native-mode"></a>Configurer un serveur de rapports (mode natif de Reporting Services)
   Selon les options que vous avez sélectionnées pendant l'installation, le serveur de rapports peut requérir une configuration supplémentaire avant de pouvoir fonctionner. Dans sa configuration minimale, un serveur de rapports se compose des éléments suivants :  
@@ -37,7 +37,7 @@ ms.locfileid: "36039465"
   
  Le Gestionnaire de rapports est une fonctionnalité en option pour un serveur de rapports en mode natif, mais il vous est recommandé de configurer le Gestionnaire de rapports pour vous permettre d'accorder à l'utilisateur l'accès au serveur de rapports et gérer le contenu de ce serveur. Si vous déployez un serveur de rapports en mode intégré SharePoint, utilisez le frontal Web d'un serveur SharePoint pour accorder l'accès.  
   
- Des fonctionnalités supplémentaires, telles que la messagerie électronique de serveur de rapports et le compte d'exécution sans assistance, peuvent être configurées si nécessaire. Pour plus d’informations, consultez [gérer un Native Mode Report Server Reporting Services](manage-a-reporting-services-native-mode-report-server.md).  
+ Des fonctionnalités supplémentaires, telles que la messagerie électronique de serveur de rapports et le compte d'exécution sans assistance, peuvent être configurées si nécessaire. Pour plus d’informations, consultez [gérer un Reporting Services en Mode serveur de rapports natif](manage-a-reporting-services-native-mode-report-server.md).  
   
  Pour configurer un serveur de rapports, utilisez l'outil de configuration de Reporting Services.  
   

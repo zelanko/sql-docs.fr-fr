@@ -1,5 +1,5 @@
 ---
-title: Ensemble de lignes DBSCHEMA_CATALOGS | Documents Microsoft
+title: Ensemble de lignes DBSCHEMA_CATALOGS | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -18,15 +18,15 @@ helpviewer_keywords:
 - DBSCHEMA_CATALOGS rowset
 ms.assetid: f02dc75d-5442-4eea-b33a-567dc816be7a
 caps.latest.revision: 31
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: df3b146d3e1015fd4a78254be0d8a7a6083991d8
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: b2151d55ce06a8111ab1707e5673ee6d6982ef05
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36039396"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37187046"
 ---
 # <a name="dbschemacatalogs-rowset"></a>Ensemble de lignes DBSCHEMA_CATALOGS
   Identifie les attributs physiques associés aux catalogues accessibles à partir du système de gestion de base de données (SGBD).  

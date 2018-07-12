@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.cdw.transfermethod.f1
 - sql12.swb.cdw.welcome.f1
@@ -26,18 +26,18 @@ helpviewer_keywords:
 - starting Copy Database Wizard
 ms.assetid: 7a999fc7-0a26-4a0d-9eeb-db6fc794f3cb
 caps.latest.revision: 61
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: e22f3ae3949c47c21423e855e5d4d35cbbe914fb
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 27352ec11f14042266d17babefda47055a57a9ec
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36039541"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37199549"
 ---
 # <a name="use-the-copy-database-wizard"></a>Utiliser l'Assistant Copie de base de données
-  L'Assistant Copie de base de données vous permet de facilement déplacer ou copier des bases de données et leurs objets d'un serveur à un autre, sans nécessiter l'arrêt des serveurs. Vous pouvez aussi mettre les bases de données à partir d’une précédente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] version [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. À l'aide de cet Assistant, vous pouvez d'effectuer les opérations suivantes :  
+  L'Assistant Copie de base de données vous permet de facilement déplacer ou copier des bases de données et leurs objets d'un serveur à un autre, sans nécessiter l'arrêt des serveurs. Vous pouvez également passer des bases de données à partir d’une précédente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] version à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. À l'aide de cet Assistant, vous pouvez d'effectuer les opérations suivantes :  
   
 -   Choisir un serveur source et un serveur de destination.  
   
@@ -69,7 +69,7 @@ ms.locfileid: "36039541"
   
      [Copier, déplacer ou mettre à niveau des bases de données](#Copy_Move)  
   
--   **Suivi, après la mise à niveau :**  
+-   **Suivi, après mise à niveau :**  
   
      [Après la mise à niveau une base de données SQL Server](#FollowUp)  
   
@@ -111,7 +111,7 @@ ms.locfileid: "36039541"
   
 ##  <a name="Copy_Move"></a> Copier, déplacer ou mettre à niveau des bases de données  
   
-1.  Dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], dans l’Explorateur d’objets, développez **bases de données**, cliquez sur une base de données, pointez sur **tâches**, puis cliquez sur **copie la base de données**.  
+1.  Dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], dans l’Explorateur d’objets, développez **bases de données**, avec le bouton droit à une base de données, pointez sur **tâches**, puis cliquez sur **copie de base de données**.  
   
 2.  Sur la page **Sélectionnez un serveur source** , spécifiez le serveur sur lequel se trouve la base de données que vous souhaitez déplacer ou copier, puis entrez les informations de connexion. Une fois la méthode d'authentification sélectionnée et les informations de connexion entrées, cliquez sur **Suivant** afin d'établir la connexion au serveur source. Cette connexion reste active tout au long de la session.  
   
@@ -122,7 +122,7 @@ ms.locfileid: "36039541"
      Permettre à un utilisateur de se connecter via un compte d'utilisateur [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows.  
   
      **Utiliser l’authentification SQL Server**  
-     Autoriser un utilisateur à se connecter en fournissant un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nom d’utilisateur d’authentification et de mot de passe.  
+     Autoriser un utilisateur à se connecter en fournissant un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nom d’utilisateur de l’authentification et de mot de passe.  
   
      **Nom d'utilisateur**  
      Entrez le nom d'utilisateur avec lequel se connecter. Cette option est disponible uniquement si vous avez choisi de vous connecter à l’aide de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] l’authentification.  
@@ -145,7 +145,7 @@ ms.locfileid: "36039541"
      Permettre à un utilisateur de se connecter via un compte d'utilisateur [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows.  
   
      **Utiliser l’authentification SQL Server**  
-     Autoriser un utilisateur à se connecter en fournissant un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nom d’utilisateur d’authentification et de mot de passe.  
+     Autoriser un utilisateur à se connecter en fournissant un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nom d’utilisateur de l’authentification et de mot de passe.  
   
      **Nom d'utilisateur**  
      Entrez le nom d'utilisateur avec lequel se connecter. Cette option est uniquement disponible si vous avez sélectionné [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] l’authentification.  
@@ -267,7 +267,7 @@ ms.locfileid: "36039541"
      **Compte proxy Integration Services**  
      Sélectionnez un compte proxy disponible. Pour planifier le transfert, l'utilisateur doit avoir à sa disposition au moins un compte proxy disposant des autorisations nécessaires pour accéder au sous-système **Exécution du package SQL Server Integration Services** .  
   
-     Pour créer un compte proxy pour [!INCLUDE[ssIS](../../includes/ssis-md.md)] package d’exécution, dans l’Explorateur d’objets, développez **l’Agent SQL Server**, développez **proxys**, avec le bouton droit **l’exécution du Package SSIS**, puis cliquez sur **nouveau Proxy**.  
+     Pour créer un compte proxy pour [!INCLUDE[ssIS](../../includes/ssis-md.md)] l’exécution, dans l’Explorateur d’objets du package, développez **Agent SQL Server**, développez **proxys**, avec le bouton droit **l’exécution du Package SSIS**, puis cliquez sur **nouveau Proxy**.  
   
      Les membres du rôle serveur fixe **sysadmin** peuvent sélectionner le **Compte de service Agent SQL Server**, qui dispose des autorisations nécessaires.  
   

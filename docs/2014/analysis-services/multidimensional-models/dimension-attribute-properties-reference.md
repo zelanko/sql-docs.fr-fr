@@ -1,5 +1,5 @@
 ---
-title: Référence de propriétés d’attribut de dimension | Documents Microsoft
+title: Référence des propriétés d’attribut de dimension | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - properties [Analysis Services], attributes
 - attributes [Analysis Services], properties
 ms.assetid: 7f83d1cb-4732-424f-adc5-2449c1dd1008
 caps.latest.revision: 34
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: cc66df28276802d7d397e498ceb1a22abdedb80e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 31a684e9901901c7b5673ed21f5eed63c6ea7471
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36038901"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37210179"
 ---
 # <a name="dimension-attribute-properties-reference"></a>Référence des propriétés d’attribut de dimension
   Dans [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], il y a de nombreuses propriétés qui déterminent le fonctionnement des dimensions et des attributs de dimension. Le tableau suivant répertorie et décrit chacune de ces propriétés d'attribut.  
@@ -47,21 +47,21 @@ ms.locfileid: "36038901"
 |`IsAggregatable`|Spécifie si les valeurs des membres d'attribut peuvent être agrégées. La valeur par défaut est `True`, ce qui signifie que la hiérarchie d’attribut contient un niveau (tous). Si la valeur de cette propriété est `False`, la hiérarchie d'attribut ne contient pas un niveau (Tous).|  
 |`KeyColumns`|Contient la ou les colonnes qui représentent la clé pour l'attribut, qui est la colonne de la table relationnelle sous-jacente de la vue de source de données à laquelle l'attribut est lié. La valeur de cette colonne pour chaque membre est affichée pour les utilisateurs, sauf si une valeur est spécifiée pour la propriété `NameColumn`.|  
 |`MemberNamesUnique`|Détermine si les noms des membres de la hiérarchie d'attribut doivent être uniques.|  
-|`MembersWithData`|Utilisé par les attributs parents pour déterminer si les membres de données pour les membres non-feuilles de l'attribut parent sont affichés ou non. Valeur de cette propriété est utilisée uniquement lorsque la valeur de la `Usage` est définie sur Parent. Cela signifie qu'une hiérarchie parent-enfant a été définie. Les options disponibles sont les suivantes :<br /><br /> **NonLeafDataHidden** Les données non-feuilles sont masquées.<br /><br /> **NonLeafDataVisible** Les données non-feuilles sont visibles.|  
-|`MembersWithDataCaption`|Fournit une chaîne modèle qui est utilisée par des attributs parents pour créer des légendes pour les membres de données générés par le système dans l'attribut parent. Valeur de cette propriété est utilisée uniquement lorsque la valeur de la `Usage` est définie sur Parent. Cela signifie qu'une hiérarchie parent-enfant a été définie.|  
+|`MembersWithData`|Utilisé par les attributs parents pour déterminer si les membres de données pour les membres non-feuilles de l'attribut parent sont affichés ou non. Cette valeur de propriété est utilisée uniquement lorsque la valeur de la `Usage` propriété est définie sur Parent. Cela signifie qu'une hiérarchie parent-enfant a été définie. Les options disponibles sont les suivantes :<br /><br /> **NonLeafDataHidden** Les données non-feuilles sont masquées.<br /><br /> **NonLeafDataVisible** Les données non-feuilles sont visibles.|  
+|`MembersWithDataCaption`|Fournit une chaîne modèle qui est utilisée par des attributs parents pour créer des légendes pour les membres de données générés par le système dans l'attribut parent. Cette valeur de propriété est utilisée uniquement lorsque la valeur de la `Usage` propriété est définie sur Parent. Cela signifie qu'une hiérarchie parent-enfant a été définie.|  
 |`Name`|Contient le nom convivial de l’attribut.|  
 |`NameColumn`|Identifie la colonne qui fournit le nom de l'attribut qui est affiché aux utilisateurs, plutôt que la valeur de la colonne clé pour l'attribut. Cette colonne est utilisée lorsque la valeur de la colonne clé pour un membre d'attribut n'est pas très claire ou non utile à l'utilisateur, ou bien quand la colonne clé est basée sur une clé composite. La propriété `NameColumn` n'est pas utilisée dans les hiérarchies parent-enfant ; à la place, la propriété `NameColumn` pour les membres enfants est utilisée comme noms de membre d'une hiérarchie parent-enfant.|  
-|`NamingTemplate`|Définit comment les niveaux sont appelés dans une hiérarchie parent-enfant construite à partir de l'attribut parent. Valeur de cette propriété est utilisée uniquement lorsque la valeur de la `Usage` est définie sur Parent. Cela signifie qu'une hiérarchie parent-enfant a été définie.|  
+|`NamingTemplate`|Définit comment les niveaux sont appelés dans une hiérarchie parent-enfant construite à partir de l'attribut parent. Cette valeur de propriété est utilisée uniquement lorsque la valeur de la `Usage` propriété est définie sur Parent. Cela signifie qu'une hiérarchie parent-enfant a été définie.|  
 |`OrderBy`|Décrit comment classer les membres qui sont contenus dans la hiérarchie d'attribut. La valeur par défaut est nom, qui spécifie que le classement des membres d’attribut est basé sur la valeur de la `NameColumn` propriété, le cas échéant. Sinon, les membres sont classés par la valeur de la colonne clé. Les options disponibles sont les suivantes :<br /><br /> `NameColumn` ORDER BY, la valeur de la `NameColumn` propriété.<br /><br /> **Key** Classement par valeur de la colonne clé du membre d’attribut.<br /><br /> **AttributeKey** Classement par valeur de la clé de membre d’un attribut spécifié, qui doit avoir une relation d’attribut avec l’attribut.<br /><br /> **AttributeName** Classement par valeur du nom de membre d’un attribut spécifié, qui doit avoir une relation d’attribut avec l’attribut.|  
 |`OrderByAttribute`|Identifie l'attribut selon lequel les membres de la hiérarchie d'attribut doivent être classés.|  
-|`RootMemberIf`|Détermine le mode d'identification des membres racines ou du plus haut niveau d'une hiérarchie parent-enfant. Valeur de cette propriété est utilisée uniquement lorsque la valeur de la `Usage` est définie sur Parent. Cela signifie qu'une hiérarchie parent-enfant a été définie. La valeur par défaut est `ParentIsBlankSelfOrMissing`, ce qui signifie que seuls les membres qui satisfont à une ou plusieurs des conditions décrites pour `ParentIsBlank`, `ParentIsSelf` ou `ParentIsMissing` sont traités en tant que membres racines. Les valeurs suivantes sont aussi disponibles :<br /><br /> `ParentIsBlank` Seuls les membres avec une valeur null, un zéro ou une chaîne vide dans l’ou les colonnes clés sont traités en tant que membres racines.<br /><br /> `ParentIsSelf` Seuls les membres d’eux-mêmes comme parents sont traités en tant que membres racines.<br /><br /> `ParentIsMissing` Seuls les membres dont les parents ne se trouve pas sont traités en tant que membres racines.|  
+|`RootMemberIf`|Détermine le mode d'identification des membres racines ou du plus haut niveau d'une hiérarchie parent-enfant. Cette valeur de propriété est utilisée uniquement lorsque la valeur de la `Usage` propriété est définie sur Parent. Cela signifie qu'une hiérarchie parent-enfant a été définie. La valeur par défaut est `ParentIsBlankSelfOrMissing`, ce qui signifie que seuls les membres qui satisfont à une ou plusieurs des conditions décrites pour `ParentIsBlank`, `ParentIsSelf` ou `ParentIsMissing` sont traités en tant que membres racines. Les valeurs suivantes sont aussi disponibles :<br /><br /> `ParentIsBlank` Seuls les membres avec une valeur null, un zéro ou une chaîne vide dans l’ou les colonnes clés sont traités en tant que membres racines.<br /><br /> `ParentIsSelf` Seuls les membres d’eux-mêmes comme parents sont traités en tant que membres racines.<br /><br /> `ParentIsMissing` Seuls les membres dont les parents est introuvable sont traités en tant que membres racines.|  
 |`Type`|Contient le type de l'attribut. Pour plus d’informations, consultez [Configurer des types d’attributs](attribute-properties-configure-attribute-types.md).|  
 |`UnaryOperatorColumn`|Spécifie la colonne qui fournit des opérateurs unaires. Il s'agit d'une liaison de type DataItem qui définit les détails d'une colonne fournissant un opérateur unaire.|  
 |`Usage`|Décrit le mode d'utilisation d'un attribut.<br /><br /> Les options disponibles sont les suivantes :<br /><br /> `Regular` L’attribut est un attribut régulier. Il s'agit de la valeur par défaut.<br /><br /> **Key** L’attribut est un attribut de clé.<br /><br /> **Parent** L’attribut est un attribut parent.|  
 |`ValueColumn`|Identifie la colonne qui fournit la valeur de l'attribut. Si le `NameColumn` élément de l’attribut est spécifié, le même `DataItem` valeurs sont utilisées comme valeurs par défaut pour le `ValueColumn` élément. Si l'élément `NameColumn` de l'attribut n'est pas spécifié et que la collection `KeyColumns` de l'attribut contient un seul élément `KeyColumn` représentant une colonne clé avec un type de données chaîne, les mêmes valeurs de `DataItem` sont utilisées en tant que valeurs par défaut pour l'élément `ValueColumn`.|  
   
 > [!NOTE]  
->  Pour plus d’informations sur la façon de définir des valeurs pour le `KeyColumn` propriété lorsque vous travaillez avec des valeurs null et d’autres problèmes d’intégrité des données, voir [la gestion des problèmes d’intégrité des données dans Analysis Services 2005](http://go.microsoft.com/fwlink/?LinkId=81891).  
+>  Pour plus d’informations sur la façon de définir des valeurs pour le `KeyColumn` propriété lorsque vous travaillez avec des valeurs null et d’autres problèmes d’intégrité des données, consultez [gestion des problèmes d’intégrité des données dans Analysis Services 2005](http://go.microsoft.com/fwlink/?LinkId=81891).  
   
 > [!NOTE]  
 >  Le membre par défaut sur un attribut sert à évaluer les expressions lorsqu'un membre de la hiérarchie n'est pas explicitement inclus dans une requête. Le membre par défaut pour un attribut est spécifié par le `DefaultMember` propriété sur l’attribut. Lorsqu'une hiérarchie de dimension est incluse dans une requête, tous les membres par défaut des attributs correspondant aux niveaux de la hiérarchie sont ignorés. Si aucune hiérarchie de dimension n'est incluse dans une requête, les membres par défaut sont alors utilisés pour tous les attributs de la dimension. Pour plus d’informations sur les membres par défaut, consultez [Définir un membre par défaut](attribute-properties-define-a-default-member.md).  

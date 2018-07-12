@@ -1,5 +1,5 @@
 ---
-title: Définition d’une relation référencée | Documents Microsoft
+title: Définition d’une relation référencée | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 4a34ba52-e3b3-4e8a-8e55-73e0cd5a97bd
 caps.latest.revision: 17
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: jhubbard
-ms.openlocfilehash: 50be0ad05e579d21095e6446b8e84d39cbef1f20
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: f49d90e05c7d76129b5c2385ed1af05fc6e3731a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36038925"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37200379"
 ---
 # <a name="defining-a-referenced-relationship"></a>Définition d'une relation référencée
   Jusqu'à présent, vous avez défini dans ce didacticiel des dimensions de cube basées sur une table directement liée à la table de faits d'un groupe de mesures par une relation clé primaire/clé étrangère. Au cours des tâches de cette rubrique, vous allez lier la dimension **Geography** à la table de faits pour les ventes de revendeurs par le biais de la dimension **Reseller** , qui est appelée *dimension de référence*. Cela permet aux utilisateurs de dimensionner les ventes des revendeurs par zone géographique. Pour plus d’informations, consultez [Définir une relation référencée et des propriétés de relation référencée](multidimensional-models/define-a-referenced-relationship-and-referenced-relationship-properties.md).  
@@ -34,7 +34,7 @@ ms.locfileid: "36038925"
   
      Notez que la mesure **Reseller Sales-Sales Amount** n’est pas dimensionnée correctement par les membres d’attribut **Country-Region** de la hiérarchie **Regions** . La valeur de **Reseller Sales-Sales Amount** se répète pour chaque membre d’attribut de **Country-Region** .  
   
-     ![Dimensionné la mesure Reseller Sales-Sales Amount](../../2014/tutorials/media/l5-referencedrelationship-1.gif "mesure dimensionné Reseller Sales-Sales Amount")  
+     ![Dimensionner la mesure Reseller Sales-Sales Amount](../../2014/tutorials/media/l5-referencedrelationship-1.gif "mesure dimensionné Reseller Sales-Sales Amount")  
   
 4.  Ouvrez le Concepteur de vues de source de données pour la vue de source de données **Adventure Works DW 2012** .  
   
@@ -118,14 +118,14 @@ ms.locfileid: "36038925"
   
 2.  Une fois le déploiement terminé, cliquez sur l’onglet **Navigateur** dans le Concepteur de cube pour le cube du didacticiel [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] , puis cliquez sur **Reconnexion** .  
   
-3.  Dans le volet métadonnées, développez `Reseller Geography`, avec le bouton droit **géographiques**, puis cliquez sur **ajouter à la zone de lignes**.  
+3.  Dans le volet métadonnées, développez `Reseller Geography`, avec le bouton droit **zones géographiques**, puis cliquez sur **ajouter à la zone de ligne**.  
   
      Notez que la mesure **Reseller Sales-Sales Amount** est désormais dimensionnée correctement par l’attribut **Country-Region** de la hiérarchie **Geographies** définie par l’utilisateur, comme le montre l’illustration suivante.  
   
      ![Boîte de dialogue Définir relation](../../2014/tutorials/media/l5-referencedrelationship-5.gif "boîte de dialogue Définir une relation")  
   
 ## <a name="next-task-in-lesson"></a>Tâche suivante de la leçon  
- [Définition d'une relation de faits](../analysis-services/lesson-5-2-defining-a-fact-relationship.md)  
+ [Définition d’une relation de faits](../analysis-services/lesson-5-2-defining-a-fact-relationship.md)  
   
 ## <a name="see-also"></a>Voir aussi  
  [Relations d’attributs](multidimensional-models-olap-logical-dimension-objects/attribute-relationships.md)   

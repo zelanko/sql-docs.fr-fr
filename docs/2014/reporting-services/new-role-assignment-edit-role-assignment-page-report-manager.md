@@ -1,5 +1,5 @@
 ---
-title: 'Nouvelle attribution de rôle : Modifier la Page de l’attribution de rôle (Gestionnaire de rapports) | Documents Microsoft'
+title: 'Nouvelle attribution de rôle : Modifier la Page d’attribution de rôle (Gestionnaire de rapports) | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 3319ced0-4b86-42af-b18d-da41a625113c
 caps.latest.revision: 30
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 4c60917a0b4107b52d6573e87932eab9bab63799
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 0d1635c6b9c801b5a2ad9a2eff107c3bf35cf23a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36039912"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37179646"
 ---
 # <a name="new-role-assignment-edit-role-assignment-page-report-manager"></a>Page Nouvelle attribution de rôle : Modifier l’attribution de rôle (Gestionnaire de rapports)
   Utilisez la page Nouvelle attribution de rôle ou Modifier l'attribution de rôle pour accorder des autorisations à des opérations et éléments de serveur de rapports. Chaque utilisateur qui demande l'accès à un serveur de rapports doit posséder une attribution de rôle qui définit le niveau d'accès. Vous pouvez créer des attributions de rôles au nœud racine ou sur un rapport, modèle, dossier, ressource ou source de données partagée spécifique. La sécurité [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] est mise en place via les attributions de rôle que vous appliquez aux éléments. Une attribution de rôle fait correspondre un groupe ou un utilisateur à une définition de rôle. Chaque définition de rôle identifie les tâches que les groupes ou les utilisateurs peuvent effectuer sur un élément spécifique.  
@@ -65,8 +65,8 @@ ms.locfileid: "36039912"
  [Créer, supprimer ou modifier un rôle &#40;Management Studio&#41;](security/role-definitions-create-delete-or-modify.md)   
  [Octroi d'autorisations sur un serveur de rapports en mode natif](security/granting-permissions-on-a-native-mode-report-server.md)   
  [Le Gestionnaire de rapports &#40;SSRS en Mode natif&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
- [Aide (F1) de gestionnaire de rapports](../../2014/reporting-services/report-manager-f1-help.md)   
+ [F1 du Gestionnaire de rapports](../../2014/reporting-services/report-manager-f1-help.md)   
  [Attributions de rôles](security/role-assignments.md)   
- [Cet accès à un serveur de rapports &#40;le Gestionnaire de rapports&#41;](security/grant-user-access-to-a-report-server.md)  
+ [Accordez à l’utilisateur l’accès à un serveur de rapports &#40;le Gestionnaire de rapports&#41;](security/grant-user-access-to-a-report-server.md)  
   
   

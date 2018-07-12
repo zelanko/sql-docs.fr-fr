@@ -1,12 +1,12 @@
 ---
-title: Les curseurs avant uniquement rapides (ODBC) | Documents Microsoft
+title: Curseurs avant uniquement rapides (ODBC) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -20,18 +20,18 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 20b721adca163021f87c490cc7c8bc8b42e53da0
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
+ms.openlocfilehash: e0770356739a1f6c4587f7ce77dccfe3a7bc4d1a
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35703716"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37412089"
 ---
 # <a name="fast-forward-only-cursors-odbc"></a>Curseurs avant uniquement rapides (ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[SNAC_Deprecated](../../../includes/snac-deprecated.md)]
 
-  Lorsqu’il est connecté à une instance de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], le [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] pilote ODBC Native Client prend en charge les optimisations des performances pour les curseurs avant uniquement, en lecture seule. Les curseurs avant uniquement rapides sont implémentés en interne par le pilote et le serveur d'une manière très semblable aux jeux de résultats par défaut. Les curseurs avant uniquement rapides présentent d'autres caractéristiques, au-delà de leurs performances élevées :  
+  Lors de la connexion à une instance de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], le [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] pilote ODBC Native Client prend en charge les optimisations des performances pour les curseurs avant uniquement et en lecture seule. Les curseurs avant uniquement rapides sont implémentés en interne par le pilote et le serveur d'une manière très semblable aux jeux de résultats par défaut. Les curseurs avant uniquement rapides présentent d'autres caractéristiques, au-delà de leurs performances élevées :  
   
 -   [SQLGetData](../../../relational-databases/native-client-odbc-api/sqlgetdata.md) n’est pas pris en charge. Les colonnes de jeu de résultats doivent être liées à des variables de programme.  
   
@@ -45,13 +45,13 @@ ms.locfileid: "35703716"
   
 2.  Définissez SQL_ATTR_ROW_ARRAY_SIZE sur *n* + 1.  
   
-3.  Lier les colonnes de résultats aux tableaux de *n* + 1 éléments (sûrs si *n* + 1 lignes seraient extraites).  
+3.  Lier les colonnes de résultats aux tableaux de *n* + 1 éléments (pour plus de sécurité si *n* + 1 lignes seraient extraites).  
   
-4.  Ouvrir le curseur avec l’option **SQLExecDirect** ou **SQLExecute**.  
+4.  Ouvrez le curseur avec **SQLExecDirect** ou **SQLExecute**.  
   
 5.  Si l’état de retour est SQL_SUCCESS, puis appelez **SQLFreeStmt** ou **SQLCloseCursor** pour fermer le curseur. Toutes les données des lignes seront dans les variables de programme liées.  
   
- Avec ces étapes, le **SQLExecDirect** ou **SQLExecute** envoie une demande d’ouverture de curseur avec l’option d’auto-extraction activée. Lors de cette demande unique de la part du client, le serveur :  
+ Avec ces étapes, le **SQLExecDirect** ou **SQLExecute** envoie une demande d’ouverture de curseur avec l’option d’auto-extraction est activée. Lors de cette demande unique de la part du client, le serveur :  
   
 -   ouvre le curseur ;  
   

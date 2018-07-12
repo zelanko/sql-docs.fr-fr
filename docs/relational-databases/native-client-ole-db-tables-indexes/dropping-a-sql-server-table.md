@@ -1,12 +1,12 @@
 ---
-title: Suppression d’une Table SQL Server | Documents Microsoft
+title: Suppression d’une Table SQL Server | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: connectivity
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -20,12 +20,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 998712eeffc5ea45075df038d8579b51a8231543
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
+ms.openlocfilehash: 8662d6c8b1ef1017ac00a84d717224c1ce020a22
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35697390"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37430208"
 ---
 # <a name="dropping-a-sql-server-table"></a>Suppression d'une table SQL Server
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "35697390"
 
   Le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fournisseur de OLE DB Native Client expose la **ITableDefinition::DropTable** (fonction) pour supprimer un [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] table à partir d’une base de données.  
   
- Spécifiez le nom de la table en tant que chaîne de caractères Unicode dans le *pwszName* membre de la *uName* union dans la *pTableID* paramètre. Le *eKind* membre *pTableID* doit être DBKIND_NAME.  
+ Spécifiez le nom de table en tant que chaîne de caractères Unicode dans le *pwszName* membre de la *uName* union dans le *pTableID* paramètre. Le *eKind* membre *pTableID* doit être DBKIND_NAME.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Tables et index](../../relational-databases/native-client-ole-db-tables-indexes/tables-and-indexes.md)  

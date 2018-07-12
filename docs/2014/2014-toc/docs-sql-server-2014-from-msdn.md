@@ -1,29 +1,29 @@
 ---
-title: Documentation de SQL Server 2014 circulent | Documents Microsoft
-description: La documentation de Microsoft pour SQL Server 2014 déplacera avant 2018 juillet, à partir de MSDN ici des documents.
-author: MightyPen
+title: SQL Server 2014 docs adoptent | Microsoft Docs
+description: La documentation de Microsoft pour SQL Server 2014 déplacera avant juillet 2018, à partir de MSDN ici sur docs.
+author: mightypen
 manager: craigg
-ms.prod-service: sql-database
+ms.prod: sql-server-2014
 ms.custom: ''
 ms.topic: article
 ms.workload: On Demand
 ms.date: 04/26/2018
 ms.author: genemi
 ms.reviewer: sudeepk
-ms.openlocfilehash: c0d3cc7ef6236bb3f41b5e03123be0e0146d452d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+ms.openlocfilehash: 490ff7a8fb55e0ad9c0fd5b3606a9747e8f7b70f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36039645"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37159590"
 ---
-# Déplace de la documentation pour SQL Server 2014 à des documents
+# Déplace de la documentation de SQL Server 2014 à Docs
 
-Cet article décrit le déplacement à venir des articles de documentation de Microsoft SQL Server 2014. Cet article est écrit dans la liaison tardive avril 2018, et le déplacement se produiront avant juillet 2018.
+Cet article décrit le déplacement à venir des articles de la documentation de Microsoft SQL Server 2014. Cet article est en cours d’écriture fin avril 2018, et le déplacement se produit avant juillet 2018.
 
 ## Liens vers la documentation de SQL Server 2014 sur MSDN
 
-Les liens suivants sont à la documentation de SQL Server 2014, Microsoft a stocké sur son *MSDN* site Web. Avant juillet 2018, Microsoft déplacera les articles suivants de documentation pour sa nouvelle *documents* site Web :
+Les liens suivants sont à la documentation de SQL Server 2014, Microsoft a stocké sur son *MSDN* site Web. Avant juillet 2018, Microsoft déplacera ces articles de la documentation à sa nouvelle *Docs* site Web :
 
 - *SQL Server 2014*
     - [https://msdn.microsoft.com/library/dn197878(v=sql.10).aspx](https://msdn.microsoft.com/library/dn197878(v=sql.10).aspx)
@@ -36,15 +36,15 @@ MSDN est un initialism pour *Microsoft Developer Network*.
 
 ## Redirecteurs
 
-Les adresses de MSDN HTTP obsolètes continuent de fonctionner pendant au moins deux ans après le déplacement. Redirecteurs interceptent les demandes MSDN et les transférer avec leur nouvelle adresse correspondante des documents. Toutefois, après le déplacement, les éléments suivants seront être remplies :
+Les adresses HTTP de MSDN obsolètes continueront à fonctionner pendant au moins deux ans après le déplacement. Redirecteurs interceptent les demandes MSDN et les transférer avec leur nouvelle adresse correspondante sur Docs. Toutefois, après l’avoir déplacé les éléments suivants aura la valeur true :
 
-- Il sera judicieux de travailler avec les nouvelles adresses HTTP que vous accédez directement à des documents.
-- Démarre les robots Bing et Google radiation et ignorer l’ancien MSDN.
+- Il sera préférable de travailler avec les nouvelles adresses HTTP qui accédez directement à Docs.
+- Les robots d’indexation Bing et Google démarrera retirer et ignorer l’ancien MSDN.
 
 
 ## Après le déplacement
 
-Après le déplacement de *documents*, l’adresse de l’article de la documentation racine SQL Server 2014 sera :
+Après le passage au *Docs*, l’adresse de l’article de documentation racine SQL Server 2014 sera :
 
 - [https://docs.microsoft.com/sql/?view=sql-server-2014](https://docs.microsoft.com/sql/?view=sql-server-2014)
 

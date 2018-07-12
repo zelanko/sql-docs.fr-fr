@@ -1,12 +1,12 @@
 ---
-title: Utiliser l’ensemble de lignes (ODBC) de liaison | Documents Microsoft
+title: Utiliser l’ensemble de lignes (ODBC) de liaison | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: connectivity
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -16,12 +16,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 2ef6f3651cb1cb1c80247f5853b4d4bd05bc13fc
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
+ms.openlocfilehash: 9e67107770c63eb1bb7ab941c3443ca5cbaa697b
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35694440"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37415548"
 ---
 # <a name="use-rowset-binding-odbc"></a>Utiliser une liaison d'ensembles de lignes (ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -70,15 +70,15 @@ ms.locfileid: "35694440"
   
     -   Définissez SQL_ATTR_PARAMS_STATUS_PTR de sorte qu'il pointe vers un tableau [R] de variables SQLUSSMALLINT contenant les indicateurs d'état de ligne.  
   
-3.  Pour chaque colonne du jeu de résultats, appelez [SQLBindCol](../../../relational-databases/native-client-odbc-api/sqlbindcol.md) pour pointer la valeur de données et le pointeur de la longueur des données de la colonne vers leurs variables dans le premier élément du tableau de structures alloué à l’étape 1.  
+3.  Pour chaque colonne du jeu de résultats, appelez [SQLBindCol](../../../relational-databases/native-client-odbc-api/sqlbindcol.md) pour diriger la valeur de données et le pointeur de longueur de données de la colonne vers leurs variables dans le premier élément du tableau de structures alloué à l’étape 1.  
   
 4.  Exécution de l'instruction.  
   
 5.  Chaque appel à [SQLFetch](http://go.microsoft.com/fwlink/?LinkId=58401) ou [SQLFetchScroll](../../../relational-databases/native-client-odbc-api/sqlfetchscroll.md) extrait des lignes R et transfère les données dans les colonnes liées.  
   
 ## <a name="see-also"></a>Voir aussi  
- [À l’aide des rubriques de procédures relatives aux curseurs &#40;ODBC&#41;](../../../relational-databases/native-client-odbc-how-to/cursors/using-cursors-how-to-topics-odbc.md)   
- [Comment les curseurs sont implémentés.](../../../relational-databases/native-client-odbc-cursors/implementation/how-cursors-are-implemented.md)   
+ [À l’aide des rubriques de procédures de curseurs &#40;ODBC&#41;](../../../relational-databases/native-client-odbc-how-to/cursors/using-cursors-how-to-topics-odbc.md)   
+ [Comment les curseurs sont implémentés](../../../relational-databases/native-client-odbc-cursors/implementation/how-cursors-are-implemented.md)   
  [Utiliser des curseurs &#40;ODBC&#41;](../../../relational-databases/native-client-odbc-how-to/cursors/use-cursors-odbc.md)  
   
   

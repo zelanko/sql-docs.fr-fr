@@ -1,5 +1,5 @@
 ---
-title: Comptes d’élément (ASSL) | Documents Microsoft
+title: Élément (ASSL) des comptes | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - Accounts element
 ms.assetid: 3ec62f58-c19b-4b15-b040-8941521a389b
 caps.latest.revision: 44
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 30fcd1815ac785ab71c90a935b9392ab5e85e98b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 94e167c6eb804f3372fab6974403f0303f21a13a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36038447"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37277965"
 ---
 # <a name="accounts-element-assl"></a>Élément Accounts (ASSL)
   Contient la collection des types de compte sont définies dans un [base de données](../objects/database-element-assl.md) élément.  
@@ -64,9 +64,9 @@ ms.locfileid: "36038447"
 |Éléments enfants|[Compte](../objects/account-element-assl.md)|  
   
 ## <a name="remarks"></a>Notes  
- Dimensions, dont [Type](../properties/type-element-dimension-assl.md) a la valeur *comptes*, peuvent avoir un attribut qui spécifie le type de compte, par exemple recettes, dépenses, etc., représenté par les membres de la dimension. Le type de compte est ensuite utilisé par [mesure](../objects/measure-element-assl.md) éléments, dont [AggregationFunction](../properties/aggregatefunction-element-assl.md) a la valeur *ByAccount*, afin de déterminer la fonction d’agrégation à utiliser lorsque regrouper les membres de cette dimension. L'élément `Accounts` contient une collection d'éléments `Account`, qui représentent des types de compte et la fonction d'agrégation à utiliser pour chacun d'eux.  
+ Dimensions, dont [Type](../properties/type-element-dimension-assl.md) élément est défini sur *comptes*, peuvent avoir un attribut qui spécifie le type de compte, par exemple recettes, dépenses, etc., représenté par les membres dans la dimension. Le type de compte est ensuite utilisé par [mesure](../objects/measure-element-assl.md) éléments, dont [AggregationFunction](../properties/aggregatefunction-element-assl.md) élément est défini sur *ByAccount*, afin de déterminer la fonction d’agrégation à utiliser lors regrouper les membres de cette dimension. L'élément `Accounts` contient une collection d'éléments `Account`, qui représentent des types de compte et la fonction d'agrégation à utiliser pour chacun d'eux.  
   
- Un type de compte doit être répertorié si la fonction d’agrégation est différente de la valeur par défaut utilisée par [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] pour chaque type de compte.  
+ Un type de compte doit être répertorié si la fonction d’agrégation est différente de la valeur par défaut utilisé par [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] pour chaque type de compte.  
   
  L'ensemble des types de compte valides est fixe.  
   

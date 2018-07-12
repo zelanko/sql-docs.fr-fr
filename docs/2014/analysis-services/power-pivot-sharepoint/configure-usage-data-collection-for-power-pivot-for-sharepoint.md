@@ -1,5 +1,5 @@
 ---
-title: Configurer la Collection des données d’utilisation (PowerPivot pour SharePoint | Documents Microsoft
+title: Configurer la collecte de données d’utilisation pour (PowerPivot pour SharePoint | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 955ca6d6-9d5b-47a4-a87c-59bd23f1bf74
 caps.latest.revision: 6
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: de5ac4920baf8143a575e5697896542eae817c90
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 06dfd95c82aab8e3fed336863c75112728150247
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36040270"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37149751"
 ---
 # <a name="configure-usage-data-collection-for-powerpivot-for-sharepoint"></a>Configurer la collecte des données d'utilisation (PowerPivot pour SharePoint)
   La collecte des données d'utilisation est une fonctionnalité SharePoint au niveau de la batterie de serveurs. Le service PowerPivot pour SharePoint utilise et étend ce système pour fournir des rapports intégrés dans le tableau de bord de gestion PowerPivot qui indiquent la manière dont les données et services PowerPivot sont utilisés. Selon la façon dont vous avez installé votre serveur SharePoint, la collecte des données d'utilisation peut être désactivée pour la batterie de serveurs. Un administrateur de batterie doit activer la journalisation de l'utilisation pour créer les données d'utilisation qui s'affichent dans le tableau de bord de gestion PowerPivot.  
@@ -40,9 +40,9 @@ ms.locfileid: "36040270"
   
  [Spécifier la fréquence à laquelle les statistiques sur les requêtes sont consignées dans le système de collecte des données d'utilisation](#ttr)  
   
- [Ouvrez la page de l’Application de Service PowerPivot pour accéder aux paramètres de configuration](#openconfig)  
+ [Ouvrez la page d’Application de Service PowerPivot pour accéder aux paramètres de configuration](#openconfig)  
   
- [La configuration par défaut pour la collecte des données d’utilisation PowerPivot](#defaultconfig)  
+ [La configuration par défaut pour la collecte de données d’utilisation PowerPivot](#defaultconfig)  
   
 > [!IMPORTANT]  
 >  Les données d'utilisation fournissent des indications sur la manière dont les utilisateurs accèdent aux données et aux ressources, mais elles ne permettent pas de bénéficier de données permanentes et fiables sur les opérations serveur et l'accès de l'utilisateur. Par exemple, en cas de redémarrage d'un serveur, les données d'utilisation de l'événement sont perdues et ne peuvent pas être récupérées. De même, si la taille maximale des fichiers journaux temporaires a été atteinte, aucune nouvelle donnée n'est ajoutée tant que les fichiers n'ont pas été effacés. Si vous avez besoin de fonctionnalités d'audit, vous pouvez utiliser les fonctions de type de contenu et de flux de travail de SharePoint pour générer un sous-système d'audit pour votre batterie. Plus d'informations, essayez d'obtenir la documentation du produit et des informations de la communauté sur le Web.  
@@ -72,7 +72,7 @@ ms.locfileid: "36040270"
   
 6.  Cliquez sur **OK** pour enregistrer vos modifications.  
   
-7.  Vous pouvez éventuellement spécifier si tous les messages sont journalisés, ou uniquement les erreurs. Pour plus d’informations sur la façon de messages d’événement de limitation de bande passante, consultez [configurer et afficher les fichiers journaux SharePoint et la journalisation des diagnostics &#40;PowerPivot pour SharePoint&#41;](configure-and-view-sharepoint-and-diagnostic-logging.md).  
+7.  Vous pouvez éventuellement spécifier si tous les messages sont journalisés, ou uniquement les erreurs. Pour plus d’informations sur la limitation des messages d’événements, consultez [configurer et afficher les fichiers journaux SharePoint et la journalisation des diagnostics &#40;PowerPivot pour SharePoint&#41;](configure-and-view-sharepoint-and-diagnostic-logging.md).  
   
 ##  <a name="configdb"></a> Définir l'emplacement du fichier journal  
  Les données d'utilisation PowerPivot sont stockées initialement dans les fichiers journaux d'utilisation sur le serveur local, puis déplacées régulièrement vers les bases de données d'application de service PowerPivot. L'emplacement du fichier journal est défini dans l'Administration centrale. L'emplacement par défaut est :  
@@ -129,7 +129,7 @@ ms.locfileid: "36040270"
   
 3.  Cliquez sur **OK**.  
   
- Pour plus d’informations sur la façon dont les données d’utilisation collectées et stockées, consultez [collecte des données d’utilisation PowerPivot](power-pivot-usage-data-collection.md).  
+ Pour plus d’informations sur comment les données d’utilisation sont collectées et stockées, consultez [PowerPivot Usage Data Collection](power-pivot-usage-data-collection.md).  
   
 ##  <a name="qrh"></a> Définir des catégories de temps de réponse aux requêtes lents, moyens et rapides à des fins de création de rapports  
  Les performances de traitement des requêtes sont mesurées par rapport à des catégories prédéfinies qui définissent un cycle de requête-réponse en fonction de sa durée d'exécution. Les catégories prédéfinies sont les suivantes : Triviale, Rapide, Attendue, Longue et Hors limite. Chaque demande auprès d'un serveur PowerPivot appartient à l'une des catégories en fonction de sa durée d'exécution.  
@@ -167,7 +167,7 @@ ms.locfileid: "36040270"
   
 3.  Cliquez sur **OK**.  
   
-##  <a name="openconfig"></a> Ouvrez la page de l’Application de Service PowerPivot pour accéder aux paramètres de configuration  
+##  <a name="openconfig"></a> Ouvrez la page d’Application de Service PowerPivot pour accéder aux paramètres de configuration  
  Vous devez être administrateur de batterie de serveurs ou de services pour pouvoir modifier les paramètres d'applications de service. Si vous avez défini plusieurs applications de service PowerPivot dans la batterie de serveurs, vous devez les modifier une à une.  
   
 1.  Dans l'Administration centrale de SharePoint, dans **Gestion des applications**, cliquez sur **Gérer les applications de service**.  
@@ -178,7 +178,7 @@ ms.locfileid: "36040270"
   
 4.  Dans **Actions**, cliquez sur **Configurer les paramètres d'application de service**. La page Paramètres d'application de service PowerPivot s'ouvre.  
   
-##  <a name="defaultconfig"></a> La configuration par défaut pour la collecte des données d’utilisation PowerPivot  
+##  <a name="defaultconfig"></a> La configuration par défaut pour la collecte de données d’utilisation PowerPivot  
  La collecte des données d'utilisation pour les opérations de service PowerPivot peut être activée avec les paramètres par défaut afin qu'elle soit disponible immédiatement dans les applications qui prennent en charge la fonctionnalité d'intégration Analysis Services. Les paramètres par défaut sont les événements qui déclenchent la collecte des données d'utilisation, les limites de durée de stockage des données d'utilisation et les seuils pour le classement des temps de réponse aux requêtes.  
   
  Le tableau suivant affiche les valeurs par défaut pour la configuration de la collecte des données d'utilisation.  
@@ -195,6 +195,6 @@ ms.locfileid: "36040270"
   
 ## <a name="see-also"></a>Voir aussi  
  [Référence de paramètre de configuration &#40;PowerPivot pour SharePoint&#41;](configuration-setting-reference-power-pivot-for-sharepoint.md)   
- [Collecte des données d’utilisation PowerPivot](power-pivot-usage-data-collection.md)  
+ [Collecte des données d’utilisation de PowerPivot](power-pivot-usage-data-collection.md)  
   
   

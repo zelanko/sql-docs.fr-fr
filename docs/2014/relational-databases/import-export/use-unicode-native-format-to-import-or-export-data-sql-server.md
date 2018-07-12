@@ -5,31 +5,30 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-bulk-import-export
+ms.technology: data-movement
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Unicode [SQL Server], bulk importing and exporting
 - data formats [SQL Server], Unicode native
 ms.assetid: a6213308-f3d5-406e-9029-19d8bb3367f3
 caps.latest.revision: 30
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 310234920939cfea19d6d17370bc3c427ff3fbcc
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 631e857146b99ad9ae05b94b7a64adc0b27fff27
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36040404"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37150850"
 ---
 # <a name="use-unicode-native-format-to-import-or-export-data-sql-server"></a>Utiliser le format natif Unicode pour importer ou exporter des données (SQL Server)
   Le format natif Unicode est utile quand vous devez copier des informations d’une installation de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] vers une autre. L'utilisation du format natif pour les données qui ne sont pas de type caractère (char) permet de gagner du temps, puisque vous supprimez les conversions inutiles des types de données depuis et vers le format caractère. L'utilisation du format caractère Unicode pour toutes les données de type caractère évite la perte des caractères étendus lorsque vous transférez en bloc des données entre des serveurs utilisant des pages de codes différentes. Un fichier de données au format natif Unicode peut être lu par toutes les méthodes d'importation en bloc.  
   
  Le format natif Unicode est recommandé pour le transfert en bloc des données entre plusieurs instances de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] par le biais d'un fichier de données qui contient des caractères étendus ou des caractères codés sur deux octets (DBCS). Pour les données qui ne sont pas de type caractère, le format natif Unicode utilise des types de données (bases de données) natifs. Données de type caractère, tel que `char`, `nchar`, `varchar`, `nvarchar`, `text`, `varchar(max)`, `nvarchar(max)`, et `ntext`, le format natif Unicode utilise le format de données de caractères Unicode.  
   
- Les données `sql_variant` qui sont stockées en tant que SQLVARIANT dans un fichier de données au format natif Unicode fonctionnent de la même manière que le fichier de données au format natif, sauf que les valeurs `char` et `varchar` sont converties en `nchar` et `nvarchar`, ce qui double l'espace de stockage nécessaire pour les colonnes affectées. Les métadonnées d’origine sont conservées et les valeurs sont converties à leur original `char` et `varchar` lorsque importées en bloc dans une colonne de table de type de données.  
+ Les données `sql_variant` qui sont stockées en tant que SQLVARIANT dans un fichier de données au format natif Unicode fonctionnent de la même manière que le fichier de données au format natif, sauf que les valeurs `char` et `varchar` sont converties en `nchar` et `nvarchar`, ce qui double l'espace de stockage nécessaire pour les colonnes affectées. Les métadonnées d’origine sont conservées et les valeurs sont reconverties en leur original `char` et `varchar` lorsque importées en bloc dans une colonne de table de type de données.  
   
 ## <a name="command-options-for-unicode-native-format"></a>Options de commande pour le format natif Unicode  
  Vous pouvez importer des données au format natif Unicode dans une table à l’aide de **bcp**, BULK INSERT ou INSERT ... SELECT \* FROM OPENROWSET(BULK...). Si vous utilisez une commande **bcp** ou une instruction BULK INSERT, vous pouvez spécifier le format de données dans la ligne de commande. Pour une instruction INSERT ... SELECT * FROM OPENROWSET(BULK...), vous devez spécifier le format de données dans un fichier de format.  
@@ -38,7 +37,7 @@ ms.locfileid: "36040404"
   
 |Command|Option|Description|  
 |-------------|------------|-----------------|  
-|**bcp**|**-N**|Provoque la **bcp** types d’utilitaire pour utiliser le format natif Unicode, qui utilise des données natifs (base de données) pour toutes les données et le format de données caractères Unicode pour toutes les caractères (`char`, `nchar`, `varchar`, `nvarchar`, `text`, et `ntext`) données.|  
+|**bcp**|**-N**|Provoque le **bcp** utilitaire pour utiliser le format natif Unicode, qui utilise les données (base de données) natif des types pour toutes les données et le format de données de caractères Unicode pour toutes les caractères (`char`, `nchar`, `varchar`, `nvarchar`, `text`, et `ntext`) données.|  
 |BULK INSERT|DATAFILETYPE **='** widenative **'**|Utilisez le format natif Unicode lorsque vous importez en bloc des données.|  
   
  Pour plus d’informations, consultez [Utilitaire bcp](../../tools/bcp-utility.md), [BULK INSERT &#40;Transact-SQL&#41;](/sql/t-sql/statements/bulk-insert-transact-sql) ou [OPENROWSET &#40;Transact-SQL&#41;](/sql/t-sql/functions/openrowset-transact-sql).  
