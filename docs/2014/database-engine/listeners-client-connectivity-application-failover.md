@@ -1,14 +1,13 @@
 ---
-title: Écouteurs de groupe de disponibilité, connectivité Client et basculement d’Application (SQL Server) | Documents Microsoft
+title: Écouteurs de groupe de disponibilité, connectivité Client et basculement d’Application (SQL Server) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Availability Groups [SQL Server], listeners
 - read-only routing
@@ -20,13 +19,13 @@ ms.assetid: 76fb3eca-6b08-4610-8d79-64019dd56c44
 caps.latest.revision: 46
 author: rothja
 ms.author: jroth
-manager: jhubbard
-ms.openlocfilehash: 90dc94aeebdaa99fe2884dc0874f0c01ec8212cf
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: bd5187ffce3a34c038471681a5b730b5b92313ec
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36044003"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37197869"
 ---
 # <a name="availability-group-listeners-client-connectivity-and-application-failover-sql-server"></a>Écouteurs de groupe de disponibilité, connectivité client et basculement d’application (SQL Server)
   Cette rubrique contient des informations sur les éléments à prendre en compte en matière de connectivité client [!INCLUDE[ssHADR](../includes/sshadr-md.md)] et de fonctionnalité de basculement d'application.  
@@ -122,7 +121,7 @@ Server=tcp: AGListener,1433;Database=MyDB;IntegratedSecurity=SSPI
 Server=tcp:AGListener,1433;Database=AdventureWorks;IntegratedSecurity=SSPI;ApplicationIntent=ReadOnly  
 ```  
   
- Dans cet exemple de chaîne de connexion, le client tente de se connecter à un écouteur de groupe de disponibilité nommé `AGListener` sur le port 1433 (vous pouvez aussi omettre le port si l'écouteur du groupe de disponibilité écoute sur le port 1433).  La chaîne de connexion a la `ApplicationIntent` propriété `ReadOnly`, ce qui en fait un *chaîne de connexion d’intention de lecture*.  Sans ce paramètre, le serveur n'aurait pas essayé un routage en lecture seule de la connexion.  
+ Dans cet exemple de chaîne de connexion, le client tente de se connecter à un écouteur de groupe de disponibilité nommé `AGListener` sur le port 1433 (vous pouvez aussi omettre le port si l'écouteur du groupe de disponibilité écoute sur le port 1433).  La chaîne de connexion a la `ApplicationIntent` propriété définie sur `ReadOnly`, ce qui en fait un *chaîne de connexion d’intention de lecture*.  Sans ce paramètre, le serveur n'aurait pas essayé un routage en lecture seule de la connexion.  
   
  La base de données primaire du groupe de disponibilité traite la demande de routage en lecture seule entrante et tente de localiser un réplica en ligne et en lecture seule joint au réplica principal et configuré pour le routage en lecture seule.  Le client reçoit les informations de connexion depuis le serveur de réplica principal et se connecte au réplica en lecture seule identifié.  
   
@@ -169,7 +168,7 @@ Server=tcp:AGListener,1433;Database=AdventureWorks;IntegratedSecurity=SSPI;Appli
 Server=tcp:AGListener,1433;Database=AdventureWorks;IntegratedSecurity=SSPI; MultiSubnetFailover=True  
 ```  
   
- Le `MultiSubnetFailover` l’option de connexion doit être définie sur `True` même si le groupe de disponibilité s’étend sur un seul sous-réseau.  Cela vous permet de préconfigurer de nouveaux clients afin de prendre en charge la future couverture de sous-réseaux, sans recourir à de futures modifications de la chaîne de connexion du client. Par ailleurs, cela permet d'optimiser les performances de basculement pour les basculements au sein d'un seul sous-réseau.  Alors que la `MultiSubnetFailover` option de connexion n’est pas obligatoire, elle offre l’avantage d’un basculement de sous-réseau plus rapide.  Cela est dû au fait que le pilote client essaie d'ouvrir un socket TCP pour chaque adresse IP en parallèle associée au groupe de disponibilité.  Le pilote client attend une réponse correcte de la première adresse IP et, ceci fait, l'utilise pour la connexion.  
+ Le `MultiSubnetFailover` option de connexion doit être définie sur `True` même si le groupe de disponibilité s’étend sur un seul sous-réseau.  Cela vous permet de préconfigurer de nouveaux clients afin de prendre en charge la future couverture de sous-réseaux, sans recourir à de futures modifications de la chaîne de connexion du client. Par ailleurs, cela permet d'optimiser les performances de basculement pour les basculements au sein d'un seul sous-réseau.  Bien que le `MultiSubnetFailover` option de connexion n’est pas obligatoire, elle offre l’avantage d’un basculement de sous-réseau plus rapide.  Cela est dû au fait que le pilote client essaie d'ouvrir un socket TCP pour chaque adresse IP en parallèle associée au groupe de disponibilité.  Le pilote client attend une réponse correcte de la première adresse IP et, ceci fait, l'utilise pour la connexion.  
   
 ##  <a name="SSLcertificates"></a> Écouteurs de groupe de disponibilité et certificats SSL  
  Lors de la connexion à un écouteur de groupe de disponibilité, si les instances participantes de SQL Server utilisent des certificats SSL en même temps que le chiffrement de session, le pilote client de la connexion doit prendre en charge le nom SAN (Subject Alternate Name) dans le certificat SSL afin de forcer le chiffrement.  La prise en charge de pilotes SQL Server pour le nom SAN de certificat est planifiée pour ADO.NET (SqlClient), Microsoft JDBC et SQL Native Client (SNAC).  
@@ -214,7 +213,7 @@ setspn -A MSSQLSvc/AG1listener.Adventure-Works.com:1433 corp/svclogin2
   
 -   [Présentation de l'écouteur du groupe de disponibilité](http://blogs.msdn.com/b/sqlalwayson/archive/2012/01/16/introduction-to-the-availability-group-listener.aspx) (blog de l'équipe SQL Server AlwaysOn)  
   
--   [Blog de l’équipe AlwaysOn SQL Server : Le Blog officiel de SQL Server AlwaysOn équipe](http://blogs.msdn.com/b/sqlalwayson/)  
+-   [Blog de l’équipe AlwaysOn SQL Server : Le Blog officiel de SQL Server AlwaysOn Team](http://blogs.msdn.com/b/sqlalwayson/)  
   
 ## <a name="see-also"></a>Voir aussi  
  [Vue d’ensemble des groupes de disponibilité AlwaysOn &#40;SQL Server&#41;](availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   

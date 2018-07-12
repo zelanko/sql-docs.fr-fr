@@ -1,5 +1,5 @@
 ---
-title: 'SQL : mapped (SQLXML 4.0) | Documents Microsoft'
+title: 'SQL : mapped (SQLXML 4.0) | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -19,18 +19,18 @@ helpviewer_keywords:
 - column mapping [SQLXML]
 ms.assetid: 7042741e-ce4d-4912-9c4a-d77194a028fc
 caps.latest.revision: 21
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 820e30a4ac82cb54bd76d29dd689f5ddb86a58b0
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: dfac8ddb86223ea64bcc812323170e9a02339ee5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36044909"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37177856"
 ---
 # <a name="sqlmapped-sqlxml-40"></a>sql:mapped (SQLXML 4.0)
-  Processus de chargement en masse XML le `sql:mapped` annotation dans le schéma XSD comme prévu : autrement dit, si le schéma de mappage spécifie `sql:mapped="false"` pour tout attribut ou élément, le chargement en masse XML ne tente pas stocker les données associées dans la colonne correspondante.  
+  Processus de chargement en masse XML le `sql:mapped` annotation dans le schéma XSD comme prévu : autrement dit, si le schéma de mappage spécifie `sql:mapped="false"` pour n’importe quel élément ou l’attribut, le chargement en masse XML ne tente pas stocker les données associées dans la colonne correspondante.  
   
  Le chargement en masse XML ignore les éléments et les attributs qui ne sont pas mappés (soit parce qu'ils ne sont pas décrits dans le schéma, soit parce qu'ils sont annotés dans le schéma XSD avec `sql:mapped="false"`). Toutes les données non mappées vont dans la colonne de dépassement de capacité, si une telle colonne est spécifiée à l'aide de `sql:overflow-field`.  
   
@@ -58,7 +58,7 @@ ms.locfileid: "36044909"
 </xsd:schema>  
 ```  
   
- Étant donné que la **HomePhone** attribut spécifie `sql:mapped="false"`, chargement en masse XML ne mappe pas cet attribut à la colonne correspondante. Le schéma XSD identifie une colonne de dépassement de capacité (**OverflowColumn**) dans lequel le chargement en masse XML stocke les données non consommées.  
+ Étant donné que le **HomePhone** attribut spécifie `sql:mapped="false"`, chargement en masse XML ne mappe pas cet attribut à la colonne correspondante. Le schéma XSD identifie une colonne de dépassement de capacité (**OverflowColumn**) dans lequel le chargement en masse XML stocke les données non consommées.  
   
 ### <a name="to-test-a-working-sample"></a>Pour tester un exemple fonctionnel  
   

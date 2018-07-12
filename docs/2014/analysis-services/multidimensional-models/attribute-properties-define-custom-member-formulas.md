@@ -1,5 +1,5 @@
 ---
-title: Définir des formules de membre personnalisées | Documents Microsoft
+title: Définir des formules de membre personnalisées | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - members [Analysis Services], custom
 - custom rollup formulas [Analysis Services]
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - custom member formulas [Analysis Services]
 ms.assetid: 258304e2-d900-4013-97e3-871f51dfdce2
 caps.latest.revision: 32
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 2983c826b96f681971a6c1fc5be56084a8213453
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 09f50cbfab0b4d5554d33e0a8526d14a22909381
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36050926"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37183436"
 ---
 # <a name="define-custom-member-formulas"></a>Définir des formules de membre personnalisées
   Vous pouvez définir une expression MDX (Multidimensional Expressions) appelée formule de membre personnalisée pour fournir les valeurs des membres d'un attribut spécifié. Une colonne d'une table issue d'une vue de source de données fournit, pour chaque membre d'un attribut, l'expression utilisée pour fournir la valeur de ce membre.  
@@ -33,7 +33,7 @@ ms.locfileid: "36050926"
   
  La propriété `CustomRollupColumn` d'un attribut spécifie la colonne qui contient les formules de membre personnalisées pour les membres de l'attribut. Si une ligne de la colonne est vide, la valeur de la cellule pour le membre est retournée normalement. Si la formule figurant dans la colonne n'est pas valide, une erreur se produit au moment de l'exécution chaque fois qu'une valeur de cellule utilisant le membre est extraite.  
   
- Avant de spécifier des formules de membre personnalisées pour un attribut, assurez-vous que la table de dimension contenant l'attribut, ou une table qui lui est directement associée, contient une colonne de chaîne pour stocker les formules de membre personnalisées. Si c’est le cas, vous pouvez soit définir la `CustomRollupColumn` propriété sur un attribut manuellement ou utiliser l’amélioration de définir la formule de membre personnalisée de l’Assistant Business Intelligence pour activer une formule de membre personnalisée sur un attribut. Pour plus d’informations sur la façon d’utiliser cette amélioration, consultez [Définir des formules de membre personnalisées pour les attributs d’une dimension](bi-wizard-custom-member-formulas-for-attributes-in-a-dimension.md).  
+ Avant de spécifier des formules de membre personnalisées pour un attribut, assurez-vous que la table de dimension contenant l'attribut, ou une table qui lui est directement associée, contient une colonne de chaîne pour stocker les formules de membre personnalisées. Si c’est le cas, vous pouvez soit définir le `CustomRollupColumn` propriété sur un attribut manuellement ou utiliser l’amélioration de définir une formule de membre personnalisée de l’Assistant Business Intelligence pour activer une formule de membre personnalisée sur un attribut. Pour plus d’informations sur la façon d’utiliser cette amélioration, consultez [Définir des formules de membre personnalisées pour les attributs d’une dimension](bi-wizard-custom-member-formulas-for-attributes-in-a-dimension.md).  
   
 ## <a name="evaluating-custom-member-formulas"></a>Évaluation des formules de membre personnalisées  
  Les formules de membre personnalisées sont différentes des membres calculés. Les formules de membre personnalisées s'appliquent à des membres qui existent dans des tables de dimension et fournissent seulement la valeur du membre. Pour leur part, les membres calculés ne sont pas stockés dans des tables de dimension, et les expressions de membre calculé définissent les données et les métadonnées de membres supplémentaires inclus dans une dimension ou une hiérarchie.  
@@ -66,7 +66,7 @@ ms.locfileid: "36050926"
 Time.[Quarter 3] * 1.5  
 ```  
   
- Les formules de membre personnalisées sont stockées dans une colonne de la table de dimension. Vous activez les formules de cumul personnalisées en définissant le `CustomRollupColumn` propriété sur un attribut.  
+ Les formules de membre personnalisées sont stockées dans une colonne de la table de dimension. Vous activez les formules de cumul personnalisé en définissant le `CustomRollupColumn` propriété sur un attribut.  
   
  Pour appliquer une seule expression MDX à tous les membres d'un attribut, créez sur la table de dimension un calcul nommé qui retourne une expression MDX sous forme de chaîne littérale. Ensuite, spécifiez le calcul nommé avec la valeur de la propriété `CustomRollupColumn` de l'attribut que vous voulez configurer. Un calcul nommé est une colonne d'une table de vue de source de données qui retourne des valeurs de ligne définies par une expression SQL. Pour plus d’informations sur la construction de calculs nommés, consultez [Définir des calculs nommés dans une vue de source de données &#40;Analysis Services&#41;](define-named-calculations-in-a-data-source-view-analysis-services.md).  
   
@@ -77,6 +77,6 @@ Time.[Quarter 3] * 1.5
   
 ## <a name="see-also"></a>Voir aussi  
  [Attributs et hiérarchies d’attributs](../multidimensional-models-olap-logical-dimension-objects/attributes-and-attribute-hierarchies.md)   
- [Définir des formules de membre personnalisées pour les attributs dans une Dimension](bi-wizard-custom-member-formulas-for-attributes-in-a-dimension.md)  
+ [Définir des formules de membre personnalisées pour les attributs d’une dimension](bi-wizard-custom-member-formulas-for-attributes-in-a-dimension.md)  
   
   

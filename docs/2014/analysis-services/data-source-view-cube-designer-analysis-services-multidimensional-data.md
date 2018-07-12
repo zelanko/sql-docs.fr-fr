@@ -1,5 +1,5 @@
 ---
-title: Vue (onglet Structure de Cube, Concepteur de Cube) (Analysis Services - données multidimensionnelles) | Documents Microsoft
+title: (Onglet Structure de Cube, Concepteur de Cube) de vue de Source de données (Analysis Services - données multidimensionnelles) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.cubeeditor.cubebuilder.datasourcepane.f1
 ms.assetid: 1e39c910-5c10-4624-be27-ca02a461b46b
 caps.latest.revision: 20
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: eb5d1f33aab84cab344ba83478045d1b4bd4962c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 0025792747cf0cea5fffd7b0a1a35c5efc7ea759
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36050944"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37185306"
 ---
 # <a name="data-source-view-cube-structure-tab-cube-designer-analysis-services---multidimensional-data"></a>Vue de source de données (onglet Structure de cube, Concepteur de cube) (Analysis Services - Données multidimensionnelles)
   Le volet **Vue de source de données** permet d'afficher les tables et colonnes de la vue de source de données associée au cube sélectionné. Il sert à créer des groupes de mesures et des mesures en faisant glisser les colonnes du volet **Vue de source de données** vers le volet **Mesures** .  

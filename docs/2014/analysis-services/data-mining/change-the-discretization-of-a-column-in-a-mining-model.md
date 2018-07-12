@@ -1,5 +1,5 @@
 ---
-title: Modifier la discrétisation d’une colonne dans un modèle d’exploration de données | Documents Microsoft
+title: Modifier la discrétisation d’une colonne dans un modèle d’exploration de données | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - discretization [Analysis Services]
 - mining structures [Analysis Services], how-to topics
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - bucketing problems [Analysis Services]
 ms.assetid: 3c49862b-595d-4fa4-b890-e2e1bde1d74f
 caps.latest.revision: 14
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: cc0352074e37bf284bd4ea033bae759638e040a6
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: af80e187acceb9565e939dbb3699c98b827cf648
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36044860"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37202169"
 ---
 # <a name="change-the-discretization-of-a-column-in-a-mining-model"></a>Modifier la discrétisation d'une colonne dans un modèle d'exploration de données
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] discrétise automatiquement les valeurs, autrement dit, il place les données dans une colonne numérique, dans certains scénarios. Par exemple, si vos données contiennent des données numériques continues et que vous créez un modèle d'arbre de décision, chaque colonne de données continues est intégrée automatiquement, selon la distribution des données. Si vous souhaitez contrôler la discrétisation des données, vous devez modifier les propriétés de la colonne de structure d'exploration de données, qui contrôle l'utilisation des données dans le modèle.  
@@ -43,14 +43,14 @@ ms.locfileid: "36044860"
   
 ### <a name="to-change-the-discretization-method"></a>Pour modifier la méthode de discrétisation  
   
-1.  Dans le **propriétés d’exploration de données** fenêtre, cliquez sur la zone de texte en regard **contenu**, puis sélectionnez `Discretized` dans la liste déroulante.  
+1.  Dans le **propriétés d’exploration de données** , cliquez sur la zone de texte en regard **contenu**, puis sélectionnez `Discretized` dans la liste déroulante.  
   
      La fenêtre <xref:Microsoft.AnalysisServices.ScalarMiningStructureColumn.DiscretizationBucketCount%2A> et <xref:Microsoft.AnalysisServices.ScalarMiningStructureColumn.DiscretizationMethod%2A> sont maintenant activées.  
   
-2.  Dans le **propriétés** fenêtre, cliquez sur la zone de texte en regard <xref:Microsoft.AnalysisServices.ScalarMiningStructureColumn.DiscretizationMethod%2A> et sélectionnez une des valeurs suivantes : `Automatic`, `EqualAreas`, ou `Cluster`.  
+2.  Dans le **propriétés** , cliquez sur la zone de texte en regard <xref:Microsoft.AnalysisServices.ScalarMiningStructureColumn.DiscretizationMethod%2A> et sélectionnez une des valeurs suivantes : `Automatic`, `EqualAreas`, ou `Cluster`.  
   
     > [!NOTE]  
-    >  Si l’utilisation de la colonne est définie sur `Ignore`, le **propriétés** fenêtre pour la colonne est vide.  
+    >  Si l’utilisation des colonnes est définie sur `Ignore`, le **propriétés** fenêtre pour la colonne est vide.  
   
      La nouvelle valeur est appliquée lorsque vous sélectionnez un élément différent dans le concepteur.  
   

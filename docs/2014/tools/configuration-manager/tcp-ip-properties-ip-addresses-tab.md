@@ -1,5 +1,5 @@
 ---
-title: Propriétés de TCP/IP (onglet des adresses IP) | Documents Microsoft
+title: Propriétés TCP/IP (onglet des adresses IP) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,23 +8,23 @@ ms.suite: ''
 ms.technology:
 - configmgr-client
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - ports [SQL Server], listening on
 - listening [SQL Server], on ports
 ms.assetid: 4c17ed45-9da7-4bec-bce6-970109fe7365
 caps.latest.revision: 43
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 8325999f00f7b5b84bc01d1de188802c27dba7b9
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: cb09573cd77f74044647925bd43310223c4ce67e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36044873"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37187589"
 ---
-# <a name="tcp-ip-properties-ip-addresses-tab"></a>Propriétés de TCP/IP (onglet des adresses IP)
+# <a name="tcp-ip-properties-ip-addresses-tab"></a>Propriétés TCP/IP (onglet des adresses IP)
   La boîte de dialogue **Propriétés TCP/IP (onglet Adresses IP)** permet de configurer les options du protocole TCP/IP pour une adresse IP spécifique. Seules les options **Ports TCP dynamiques** et **Port TCP** peuvent être configurées pour toutes les adresses en une seule fois en sélectionnant **IPAll**.  
   
  Les modifications sont appliquées au redémarrage de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Pour obtenir des informations sur le démarrage et l'arrêt du service SQL Server Browser, consultez Procédure : démarrer et arrêter le service SQL Server Browser dans la documentation en ligne.  
@@ -53,7 +53,7 @@ ms.locfileid: "36044873"
  **Port TCP**  
  Afficher ou modifier le port sur lequel écoute [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . L'instance par défaut de [!INCLUDE[ssDE](../../includes/ssde-md.md)] écoute sur le port 1433 par défaut.  
   
- [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] peut écouter sur plusieurs ports sur la même adresse IP, la liste des ports, séparés par des virgules, au format 1433,1500,1501. Ce champ est limité à 2 047 caractères.  
+ [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] peut écouter sur plusieurs ports sur la même adresse IP, répertorie les ports, séparés par des virgules, au format 1433,1500,1501. Ce champ est limité à 2 047 caractères.  
   
  Pour configurer une seule adresse IP pour l'écoute sur plusieurs ports, le paramètre **Écouter tout** doit également être défini avec la valeur **Non**, dans l'onglet **Protocoles** de la boîte de dialogue **Propriétés de TCP/IP** . Pour plus d'informations, consultez « Procédure : configurer le moteur de base de données de manière à écouter sur plusieurs ports TCP » dans la documentation en ligne de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   

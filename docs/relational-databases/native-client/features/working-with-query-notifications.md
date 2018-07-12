@@ -1,12 +1,11 @@
 ---
-title: Utilisation des Notifications de requête | Documents Microsoft
+title: Utilisation de Notifications de requête | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
-ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -21,17 +20,16 @@ helpviewer_keywords:
 - SQL Server Native Client OLE DB provider, query notifications
 - consumer notification for rowset changes [SQL Server Native Client]
 ms.assetid: 2f906fff-5ed9-4527-9fd3-9c0d27c3dff7
-caps.latest.revision: 40
 author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: dedf0f7ff3e8f89700e35544c94232a9c49656cf
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
+ms.openlocfilehash: fe3a9ff4070761807066ac6f1e2c9ed752bb1db0
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35698570"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37425598"
 ---
 # <a name="working-with-query-notifications"></a>Utilisation de notifications de requêtes
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -53,7 +51,7 @@ ms.locfileid: "35698570"
   
  Les notifications sont envoyées une seule fois. Pour une notification continue des modifications de données, un nouvel abonnement doit être créé en exécutant à nouveau la requête une fois chaque notification traitée.  
   
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Les applications clientes natives généralement recevoir des notifications à l’aide de la [!INCLUDE[tsql](../../../includes/tsql-md.md)] [réception](../../../t-sql/statements/receive-transact-sql.md) commande pour lire les notifications de la file d’attente associé au service spécifié dans les options de notification.  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Les applications clientes natives généralement de recevoir des notifications à l’aide de la [!INCLUDE[tsql](../../../includes/tsql-md.md)] [réception](../../../t-sql/statements/receive-transact-sql.md) commande pour lire les notifications à partir de la file d’attente associé au service spécifié dans les options de notification.  
   
 > [!NOTE]  
 >  Les noms de tables doivent être qualifiés dans des requêtes pour lesquelles une notification est requise, par exemple `dbo.myTable`. Les noms de tables doivent être qualifiés avec des noms en deux parties. L'abonnement n'est pas valide si des noms en trois ou quatre parties sont utilisés.  
@@ -79,7 +77,7 @@ CREATE SERVICE myService ON QUEUE myQueue
 >  Passage d’une requête de notifications au serveur avec **ICommand::Execute** est la seule méthode valide pour vous abonner aux notifications de requête avec le [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Client fournisseur OLE DB natif.  
   
 ### <a name="the-dbpropsetsqlserverrowset-property-set"></a>Le jeu de propriétés DBPROPSET_SQLSERVERROWSET  
- Pour prendre en charge les notifications de requête via OLE DB, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ajoute les nouvelles propriétés suivantes pour le jeu de propriétés DBPROPSET_SQLSERVERROWSET.  
+ Pour prendre en charge les notifications de requêtes via OLE DB, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ajoute les nouvelles propriétés suivantes au jeu de propriétés DBPROPSET_SQLSERVERROWSET.  
   
 |Nom   |Type|Description|  
 |----------|----------|-----------------|  
@@ -95,7 +93,7 @@ CREATE SERVICE myService ON QUEUE myQueue
 WAITFOR (RECEIVE * FROM MyQueue);   // Where MyQueue is the queue name.   
 ```  
   
- Notez que sélectionner * ne pas supprimer l’entrée de la file d’attente, contrairement à RECEIVE \* de fait. Cela bloque un thread serveur si la file d'attente est vide. S'il existe des entrées de file d'attente au moment de l'appel, elles sont retournées immédiatement ; sinon, l'appel attend qu'une entrée de file d'attente soit soumise.  
+ Notez que sélectionner * ne pas supprimer l’entrée de la file d’attente, contrairement à RECEIVE \* à partir de l’est. Cela bloque un thread serveur si la file d'attente est vide. S'il existe des entrées de file d'attente au moment de l'appel, elles sont retournées immédiatement ; sinon, l'appel attend qu'une entrée de file d'attente soit soumise.  
   
 ```  
 RECEIVE * FROM MyQueue  
@@ -113,7 +111,7 @@ RECEIVE * FROM MyQueue
  Pour plus d’informations sur le jeu de propriétés DBPROPSET_SQLSERVERROWSET, consultez [propriétés et comportements](../../../relational-databases/native-client-ole-db-rowsets/rowset-properties-and-behaviors.md).  
   
 ## <a name="sql-server-native-client-odbc-driver"></a>Pilote ODBC SQL Server Native Client  
- Le [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] pilote ODBC Native Client prend en charge les notifications de requête via l’ajout de trois nouveaux attributs pour le [SQLGetStmtAttr](../../../relational-databases/native-client-odbc-api/sqlgetstmtattr.md) et [SQLSetStmtAttr](../../../relational-databases/native-client-odbc-api/sqlsetstmtattr.md) fonctions :  
+ Le [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] pilote ODBC Native Client prend en charge les notifications de requêtes via l’ajout de trois nouveaux attributs pour le [SQLGetStmtAttr](../../../relational-databases/native-client-odbc-api/sqlgetstmtattr.md) et [SQLSetStmtAttr](../../../relational-databases/native-client-odbc-api/sqlsetstmtattr.md) fonctions :  
   
 -   SQL_SOPT_SS_QUERYNOTIFICATION_MSGTEXT  
   
@@ -121,7 +119,7 @@ RECEIVE * FROM MyQueue
   
 -   SQL_SOPT_SS_QUERYNOTIFICATION_TIMEOUT  
   
- Si SQL_SOPT_SS_QUERYNOTIFICATION_MSGTEXT et SQL_SOPT_SS_QUERYNOTIFICATION_OPTIONS ne sont pas NULL, l'en-tête TDS de notifications de requêtes contenant les trois attributs définis plus haut sera envoyé au serveur chaque fois que la commande est exécutée. Si l'un d'eux est Null, l'en-tête n'est pas envoyé, et SQL_SUCCESS_WITH_INFO est retourné. La validation se produit sur [fonction SQLPrepare](http://go.microsoft.com/fwlink/?LinkId=59360), **SqlExecDirect**, et **SqlExecute**, tous les qui échouent si les attributs ne sont pas valides. De la même façon, lorsque ces attributs de notification de requête sont définis pour les versions de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] antérieures à [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], l'exécution échoue avec SQL_SUCCESS_WITH_INFO.  
+ Si SQL_SOPT_SS_QUERYNOTIFICATION_MSGTEXT et SQL_SOPT_SS_QUERYNOTIFICATION_OPTIONS ne sont pas NULL, l'en-tête TDS de notifications de requêtes contenant les trois attributs définis plus haut sera envoyé au serveur chaque fois que la commande est exécutée. Si l'un d'eux est Null, l'en-tête n'est pas envoyé, et SQL_SUCCESS_WITH_INFO est retourné. La validation se produit sur [SQLPrepare, fonction](http://go.microsoft.com/fwlink/?LinkId=59360), **SqlExecDirect**, et **SqlExecute**, tous les qui échouent si les attributs ne sont pas valides. De la même façon, lorsque ces attributs de notification de requête sont définis pour les versions de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] antérieures à [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], l'exécution échoue avec SQL_SUCCESS_WITH_INFO.  
   
 > [!NOTE]  
 >  La préparation d'instructions ne provoque jamais l'initialisation de l'abonnement ; l'abonnement peut être initialisé par l'exécution d'instructions.  

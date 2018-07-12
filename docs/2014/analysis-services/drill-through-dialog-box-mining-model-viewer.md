@@ -1,5 +1,5 @@
 ---
-title: Extraction de la boîte de dialogue (visionneuse de modèle d’exploration de données) | Documents Microsoft
+title: Extraction de la boîte de dialogue (visionneuse de modèle d’exploration de données) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dm.miningmodeleditor.drillthrough.f1
 ms.assetid: 42b78399-143d-4f44-90e0-b545ffb79e10
 caps.latest.revision: 14
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: de01b0d081ecd26dc3472ebb697b72a42b128bab
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 331ab6da3e2e244f3a0413d80006ceeb907704f4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36045264"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37151470"
 ---
 # <a name="drill-through-dialog-box-mining-model-viewer"></a>Boîte de dialogue Extraire (Visionneuse de modèle d'exploration de données)
   Quand vous affichez un modèle d’exploration de données sous l’onglet **Visionneuse de modèle d’exploration de données** du concepteur de modèle d’exploration de données, vous pouvez extraire les détails des données de cas, à condition que l’extraction ait été activée sur le modèle. De plus, si l'extraction a été activée sur la structure d'exploration de données sous-jacente, vous pouvez aussi afficher les colonnes dans la structure d'exploration de données, même si ces colonnes n'ont pas été incluses dans le modèle d'exploration de données. Dans la liste de colonnes, les colonnes de structure portent un préfixe par l’étiquette « Structure. ».  
@@ -45,11 +45,11 @@ ms.locfileid: "36045264"
 > [!NOTE]  
 >  Vous pouvez cliquer avec le bouton droit n’importe où dans la grille de colonnes et sélectionner **Copier tout** pour copier les données d’extraction, au format séparé par des tabulations, dans le Presse-papiers. Les données copiées comprennent uniquement les données de cas, et non la définition du nœud.  
   
- **Lire**  
+ **Play**  
  Cliquez sur le bouton fléché vert pour actualiser les données.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Requêtes d’extraction &#40;d’exploration de données&#41;](data-mining/drillthrough-queries-data-mining.md)   
+ [Requêtes d’extraction &#40;exploration de données&#41;](data-mining/drillthrough-queries-data-mining.md)   
  [Visionneuses de modèle d’exploration de données &#40;Concepteur de modèle d’exploration de données&#41;](mining-model-viewers-data-mining-model-designer.md)   
  [Tâches et procédures de la visionneuse de modèle d’exploration de données](data-mining/mining-model-viewer-tasks-and-how-tos.md)  
   

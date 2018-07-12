@@ -1,5 +1,5 @@
 ---
-title: Instructions et Limitations de SQLXML 4.0 | Documents Microsoft
+title: Instructions et Limitations de SQLXML 4.0 | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,15 +14,15 @@ helpviewer_keywords:
 - SQLXML, about SQLXML
 ms.assetid: fe433d30-90a1-421e-85c6-af13294dc18d
 caps.latest.revision: 26
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 10aa9e6c97afbd62e9608f394b38717a677edf0d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 7d77565df3e3d7493a2394ccdab47763b9c69324
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36045126"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37164200"
 ---
 # <a name="guidelines-and-limitations-of-sqlxml-40"></a>Recommandations et limitations de SQLXML 4.0
   Gardez en mémoire les points suivants lors de l'utilisation de SQLXML 4.0 :  
@@ -33,6 +33,6 @@ ms.locfileid: "36045126"
   
      Vous exécutez une application qui utilise SQLXML 4.0 et des PROGID indépendants de la version, et vous décidez d'installer un autre programme. Ce programme peut installer une version antérieure de SQLXML. Votre application risque d'échouer car les PROGID indépendants de la version de votre application pointent maintenant vers la version antérieure de SQLXML, qui peut ou non avoir la fonctionnalité SQLXML utilisée par votre application.  
   
--   Si pour une raison quelconque vous ne souhaitez utiliser le fournisseur SQLXMLOLEDB et plutôt que d’utiliser SQLOLEDB fournisseur pour les fonctionnalités SQLXML, définissez la **SQLXML Version** propriété valeur « SQLXML.4.0 ».  
+-   Si pour une raison quelconque vous ne souhaitez utiliser le fournisseur SQLXMLOLEDB et que vous souhaitez plutôt utiliser SQLOLEDB, fournisseur pour les fonctionnalités SQLXML, définissez le **SQLXML Version** propriété valeur « SQLXML.4.0 ».  
   
   

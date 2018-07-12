@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - derived hierarchies, changing name
 ms.assetid: 5765e710-d273-4675-aee2-5718273bfdc4
 caps.latest.revision: 4
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 24f9f05c17c218729a6d64d3c9dfe5e7e5d990f7
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: 2746ab437d1fa64e50da83a335d3fef9639b9f9d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36044976"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37193279"
 ---
 # <a name="change-a-derived-hierarchy-name-master-data-services"></a>Modifier le nom d'une hiérarchie dérivée (Master Data Services)
   Dans [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], vous pouvez modifier le nom d’une hiérarchie dérivée.  
@@ -43,7 +43,7 @@ ms.locfileid: "36044976"
   
 4.  Sélectionnez la ligne de la hiérarchie dérivée à renommer.  
   
-5.  Cliquez sur **modifier sélectionné la hiérarchie dérivée**.  
+5.  Cliquez sur **sélectionné de modifier la hiérarchie dérivée**.  
   
 6.  Sur le **modifier la hiérarchie dérivée** , cliquez sur **modifier le nom de la hiérarchie dérivée**.  
   

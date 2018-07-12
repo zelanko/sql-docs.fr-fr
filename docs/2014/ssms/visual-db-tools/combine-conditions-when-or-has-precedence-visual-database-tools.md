@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - search conditions [SQL Server], combining
 - precedence [SQL Server], Criteria pane
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - OR operator
 ms.assetid: b30f5ac9-25e7-4163-80ed-44e4bccb455d
 caps.latest.revision: 11
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 580b0331e59aef1b4c33d75084490e0a8be65147
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: c7d5b7e62e3bfc42870fb5c6a6c853dd43a04778
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36044878"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37183516"
 ---
 # <a name="combine-conditions-when-or-has-precedence-visual-database-tools"></a>Associer des conditions avec priorité à l'opérateur OR (Visual Database Tools)
   Pour relier des conditions à l'aide de l'opérateur OR et leur accorder la priorité sur les conditions reliées à l'aide de l'opérateur AND, vous devez répéter la condition AND pour chaque condition OR.  
@@ -75,7 +75,7 @@ WHERE (job_lvl = 100 OR status = 'R') AND
 >  Quand vous entrez des conditions de requête au format indiqué immédiatement au-dessus du [volet SQL](sql-pane-visual-database-tools.md), mais que vous apportez par la suite des modifications à la requête figurant dans le volet Schéma ou dans le volet Critères, le Concepteur de requêtes recrée l'instruction SQL pour qu'elle corresponde à ce format, avec la condition AND répartie de manière explicite vers les deux conditions OR.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Conventions pour combiner les Conditions de recherche dans le volet Critères &#40;Visual Database Tools&#41;](conventions-combine-search-conditions-in-criteria-pane-visual-db-tools.md)   
+ [Conventions pour la combinaison de Conditions de recherche dans le volet Critères &#40;Visual Database Tools&#41;](conventions-combine-search-conditions-in-criteria-pane-visual-db-tools.md)   
  [Spécifier des critères de recherche &#40;Visual Database Tools&#41;](specify-search-criteria-visual-database-tools.md)  
   
   

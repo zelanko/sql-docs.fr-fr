@@ -1,5 +1,5 @@
 ---
-title: Pour contourner la Limitation de la ligne Excel | Documents Microsoft
+title: Pour contourner la Limitation de la ligne Excel | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: a4c8700b-bef5-4440-a99c-bba5dcc46bfd
 caps.latest.revision: 6
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 424b69fdd39865ee5fbfb2c52e8bd9c62d634872
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 041872122516c411e7b02b7dde85c248600904cc
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36043537"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37260465"
 ---
 # <a name="work-around-the-excel-row-limitation"></a>Contournement de la limite d'Excel
   Cette rubrique explique comment contourner la limitation de ligne d'Excel 2003 lorsque vous exportez des rapports vers Excel. Elle s'applique à un rapport qui ne contient qu'une seule table.  

@@ -1,5 +1,5 @@
 ---
-title: Spécification de fonctions de Conversion explicite dans des requêtes XPath (SQLXML 4.0) | Documents Microsoft
+title: Spécification de fonctions de Conversion explicite dans les requêtes XPath (SQLXML 4.0) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -17,25 +17,25 @@ helpviewer_keywords:
 - XPath queries [SQLXML], explicit conversion functions
 ms.assetid: 1111cb5d-2bd9-4bdb-8de2-dc0e47452dd6
 caps.latest.revision: 24
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 59a2a54b1a3fe7a8136fa2ab0cb56f4cd215c245
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 841a28a156075c6342ea9c678eb938fc3414e643
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36045530"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37179636"
 ---
 # <a name="specifying-explicit-conversion-functions-in-xpath-queries-sqlxml-40"></a>Spécification de fonctions de conversion explicite dans les requêtes XPath (SQLXML 4.0)
-  Les exemples suivants montrent comment les fonctions de conversion explicite sont spécifiées dans les requêtes XPath. Les requêtes XPath de ces exemples sont spécifiées par rapport au schéma de mappage contenu dans SampleSchema1.xml. Pour plus d’informations sur cet exemple de schéma, consultez [exemple de schéma XSD annoté pour obtenir des exemples XPath &#40;SQLXML 4.0&#41;](sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md).  
+  Les exemples suivants montrent comment les fonctions de conversion explicite sont spécifiées dans les requêtes XPath. Les requêtes XPath de ces exemples sont spécifiées par rapport au schéma de mappage contenu dans SampleSchema1.xml. Pour plus d’informations sur cet exemple de schéma, consultez [exemple de schéma XSD annoté pour les exemples XPath &#40;SQLXML 4.0&#41;](sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md).  
   
 ## <a name="examples"></a>Exemples  
   
 ### <a name="a-use-the-number-explicit-conversion-function"></a>A. Utiliser la fonction de conversion explicite number()  
  La fonction `number()` convertit un argument en un nombre.  
   
- En supposant que la valeur de **ContactID** n’est pas numérique, la requête suivante convertit **ContactID** à un nombre et le compare à la valeur 4. La requête renvoie tous les  **\<employé >** éléments enfants du nœud de contexte dont le **ContactID** attribut qui a une valeur numérique de 4 :  
+ En supposant que la valeur de **ContactID** n’est pas numérique, la requête suivante convertit **ContactID** à un nombre et la compare à la valeur 4. La requête renvoie tous les  **\<employé >** éléments enfants du nœud de contexte avec le **ContactID** attribut qui a une valeur numérique de 4 :  
   
 ```  
 /child::Contact[number(attribute::ContactID)= 4]  
@@ -47,7 +47,7 @@ ms.locfileid: "36045530"
 /Contact[number(@ContactID) = 4]  
 ```  
   
- En termes relationnels, la requête retourne un employé avec un **ContactID** de 4.  
+ En termes relationnels, la requête retourne un employé ayant un **ContactID** de 4.  
   
 ##### <a name="to-test-the-xpath-query-against-the-mapping-schema"></a>Pour tester la requête XPath par rapport au schéma de mappage  
   
@@ -84,7 +84,7 @@ ms.locfileid: "36045530"
 ### <a name="b-use-the-string-explicit-conversion-function"></a>B. Utiliser la fonction de conversion explicite string()  
  La fonction `string()` convertit un argument en une chaîne.  
   
- La requête suivante convertit **ContactID** en une chaîne et les compare avec la chaîne de valeur « 4 ». La requête retourne tous les  **\<employé >** éléments enfants du nœud de contexte avec un **ContactID** avec une valeur de chaîne « 4 » :  
+ La requête suivante convertit **ContactID** en une chaîne et la compare avec la chaîne de valeur « 4 ». La requête retourne tous les  **\<employé >** éléments enfants du nœud de contexte avec un **ContactID** avec une valeur de chaîne « 4 » :  
   
 ```  
 /child::Contact[string(attribute::ContactID)="4"]  

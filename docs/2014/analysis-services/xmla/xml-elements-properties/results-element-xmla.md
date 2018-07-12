@@ -1,5 +1,5 @@
 ---
-title: résultats Element (XMLA) | Documents Microsoft
+title: Élément (XMLA) des résultats | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -24,15 +24,15 @@ helpviewer_keywords:
 - results element
 ms.assetid: 3249a17a-7bfa-4753-b605-8f611ba7ae2b
 caps.latest.revision: 11
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: 203ad5a79938c80e2bfccc798ff5f9551ac66d8d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: 1e42f6aa620b57630df690ee92bdbbd849ab100b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36045031"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37165230"
 ---
 # <a name="results-element-xmla"></a>Élément results (XMLA)
   Contient une collection d'éléments [root](root-element-xmla.md) retournée par la méthode [Execute](../xml-elements-methods-execute.md) employée avec la commande [Batch](../xml-elements-commands/batch-element-xmla.md) .  
@@ -62,7 +62,7 @@ ms.locfileid: "36045031"
   
 |Relation|Élément|  
 |------------------|-------------|  
-|Éléments parents|[De retour](return-element-xmla.md)|  
+|Éléments parents|[retour](return-element-xmla.md)|  
 |Éléments enfants|[racine](root-element-xmla.md)|  
   
 ## <a name="remarks"></a>Notes  

@@ -1,5 +1,5 @@
 ---
-title: Utilitaire de Configuration du serveur (les données des compléments d’exploration de données pour Excel) | Documents Microsoft
+title: Utilitaire de Configuration du serveur (Data Mining Add-ins pour Excel) | Microsoft Docs
 ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 28435f86-5cec-4a1e-9b7d-b2069c1ddddb
 caps.latest.revision: 6
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: c51ea6b4e492bc238fee5ea3fea763f0fd5cb439
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: ae026e24210385a24b53f9ddf0cf1533a0e27e40
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36045445"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37178926"
 ---
 # <a name="server-configuration-utility-data-mining-add-ins-for-excel"></a>Utilitaire de configuration du serveur (Compléments d'exploration de données pour Excel)
   Lorsque vous installez des compléments d'exploration de données pour Excel, un utilitaire de configuration de serveur est également installé, et s'exécutera la première fois que vous ouvrez les compléments. Cette rubrique explique comment utiliser l'utilitaire pour vous connecter à une instance de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] et installer une base de données pour travailler avec les modèles d'exploration de données.  
@@ -42,7 +42,7 @@ ms.locfileid: "36045445"
 ##  <a name="bkmk_step2"></a> Étape 2 : Autoriser les modèles temporaires  
  Avant de pouvoir utiliser les compléments, une propriété du serveur [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] doit être modifiée pour permettre la création de modèles d'exploration de données temporaires.  
   
- Les modèles d’exploration de données temporaires sont également appelées *les modèles de session*. C'est parce que les modèles sont stockés uniquement tant que votre session actuelle est ouverte. Lorsque vous fermez votre connexion au serveur, la session est terminée et tous les modèles utilisés pendant la session sont supprimés.  
+ Les modèles d’exploration de données temporaires sont également appelés *modèles de session*. C'est parce que les modèles sont stockés uniquement tant que votre session actuelle est ouverte. Lorsque vous fermez votre connexion au serveur, la session est terminée et tous les modèles utilisés pendant la session sont supprimés.  
   
  L'utilisation de modèles d'exploration de données de session n'affecte pas l'espace de stockage disponible sur le serveur, mais la surcharge induite par la création de modèles d'exploration de données peut affecter les performances du serveur.  
   

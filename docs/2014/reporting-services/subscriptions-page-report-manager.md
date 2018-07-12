@@ -1,5 +1,5 @@
 ---
-title: Page des abonnements (Gestionnaire de rapports) | Documents Microsoft
+title: Page abonnements (Gestionnaire de rapports) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,28 +8,28 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: cf3a6bd0-e0b2-4875-a532-63ef34cfa860
 caps.latest.revision: 27
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 6b6a3befb6794327af0fd5fa2ef92a48b67529a5
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 4dce7384470251bf9334e8cd1ed218142161b6b1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36045099"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37181576"
 ---
 # <a name="subscriptions-page-report-manager"></a>Page Abonnements (Gestionnaire de rapports)
   La page Abonnements vous permet de répertorier tous les abonnements de la source de données partagée ou du rapport actifs. Si vous disposez d'une autorisation suffisante (accordée par la tâche « Gérer tous les abonnements », par exemple), vous pouvez afficher les abonnements de tous les utilisateurs. Si ce n'est pas le cas, cette page affiche uniquement les abonnements dont vous être propriétaire.  
   
 > [!NOTE]  
->  D'autres pages contiennent également des informations sur les abonnements. Pour plus d’informations, consultez [Page Mes abonnements &#40;le Gestionnaire de rapports&#41; ](../../2014/reporting-services/my-subscriptions-page-report-manager.md) pour accéder à tous vos abonnements dans un seul emplacement ou le [nouvel abonnement ou modifier la Page d’abonnement &#40;le Gestionnaire de rapports&#41; ](../../2014/reporting-services/new-subscription-or-edit-subscription-page-report-manager.md) pour créer ou modifier un abonnement.  
+>  D'autres pages contiennent également des informations sur les abonnements. Pour plus d’informations, consultez [Page Mes abonnements &#40;le Gestionnaire de rapports&#41; ](../../2014/reporting-services/my-subscriptions-page-report-manager.md) pour accéder à tous vos abonnements au même endroit ou la [nouvel abonnement ou modifier la Page d’abonnement &#40;le Gestionnaire de rapports&#41; ](../../2014/reporting-services/new-subscription-or-edit-subscription-page-report-manager.md) pour créer ou modifier un abonnement.  
   
  Certaines options ne sont disponibles que s'il existe des abonnements. Si aucun abonnement n'est défini et si vous accédez à cette page à partir d'un rapport, les options **Nouvel abonnement** et **Nouvel abonnement piloté par les données** sont les seules disponibles dans la page.  
   
- Avant de créer un abonnement, vous devez vérifier que la source de données du rapport utilise des informations d'identification stockées. Utilisez la page des propriétés des sources de données pour stocker des informations d'identification. Pour plus d’informations, consultez [Page de propriétés des Sources de données &#40;le Gestionnaire de rapports&#41;](../../2014/reporting-services/data-sources-properties-page-report-manager.md).  
+ Avant de créer un abonnement, vous devez vérifier que la source de données du rapport utilise des informations d'identification stockées. Utilisez la page des propriétés des sources de données pour stocker des informations d'identification. Pour plus d’informations, consultez [Page de propriétés de Sources de données &#40;le Gestionnaire de rapports&#41;](../../2014/reporting-services/data-sources-properties-page-report-manager.md).  
   
 > [!NOTE]  
 >  Cette fonctionnalité n'est pas disponible dans toutes les éditions de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Pour obtenir une liste des fonctionnalités prises en charge par les éditions de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], consultez [Features Supported by the Editions of SQL Server 2014](../../2014/getting-started/features-supported-by-the-editions-of-sql-server-2014.md).  
@@ -86,6 +86,6 @@ ms.locfileid: "36045099"
  [Le Gestionnaire de rapports &#40;SSRS en Mode natif&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
  [Créer, modifier et supprimer des abonnements Standard &#40;Reporting Services en Mode natif&#41;](subscriptions/create-and-manage-subscriptions-for-native-mode-report-servers.md)   
  [Create, Modify, and Delete Schedules](subscriptions/create-modify-and-delete-schedules.md)   
- [Aide (F1) de gestionnaire de rapports](../../2014/reporting-services/report-manager-f1-help.md)  
+ [Aide (F1) du Gestionnaire de rapports](../../2014/reporting-services/report-manager-f1-help.md)  
   
   

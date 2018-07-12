@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Best Practices [Database Engine]
 ms.assetid: 75225b64-c102-4f1b-888a-fe72710dbfcd
 caps.latest.revision: 6
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 72fc85994e2ba0e28f944945a329a3b304973e4d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: b0b79b2d5c63d1f9e08ec7407c58593c5aee7c52
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36044220"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37217119"
 ---
 # <a name="detect-scsi-host-adapter-issues"></a>Détecter des problèmes de carte hôte SCSI
   Cette règle recherche l’ID d’événement 1066 dans le journal des événements système. Cette erreur est due à des problèmes de configuration de l'adaptateur hôte SCSI ou au mauvais fonctionnement d'un périphérique.  

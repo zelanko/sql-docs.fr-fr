@@ -1,5 +1,5 @@
 ---
-title: Élément AggregationType (ASSL) | Documents Microsoft
+title: Élément AggregationType (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - AggregationType element
 ms.assetid: c1393bc6-d715-4397-8bc5-82abdb275330
 caps.latest.revision: 13
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: b2241c85d9cc83e4cf48affacef10021eec7bc94
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: f7c95f9566f483ec7a047ceedd074237f9ff5f7e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36050917"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37183216"
 ---
 # <a name="aggregationtype-element-assl"></a>Élément AggregationType (ASSL)
   Définit le type d’agrégation stocké par le [Partition](../objects/partition-element-assl.md) élément.  
@@ -68,7 +68,7 @@ ms.locfileid: "36050917"
 |*Table*|L'agrégation est stockée dans une table.|  
 |*Défini par l’utilisateur*|L'agrégation est définie par l'utilisateur.|  
   
- L’énumération qui correspond aux valeurs autorisées pour `AggregationType` dans l’objet d’objets AMO (Analysis Management) est modèle <xref:Microsoft.AnalysisServices.AggregationInstance>.  
+ L’énumération qui correspond aux valeurs autorisées pour `AggregationType` dans l’objet d’objets AMO (Analysis Management) modèle est <xref:Microsoft.AnalysisServices.AggregationInstance>.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Propriétés &#40;ASSL&#41;](properties-assl.md)  

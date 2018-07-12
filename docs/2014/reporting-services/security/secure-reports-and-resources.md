@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - security [Reporting Services], reports
 - security [Reporting Services], resources
@@ -19,13 +19,13 @@ ms.assetid: 63cd55c7-fd2a-49e3-a3f8-59eb1a1c6e83
 caps.latest.revision: 46
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: dfb47953b60ef2a37b5a2bc3ffd9c8fc16300526
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 95d8ca8474c23d2ef8ffac6baa4ed822700fca81
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36044677"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37240369"
 ---
 # <a name="secure-reports-and-resources"></a>Sécuriser des rapports et des ressources
   Vous pouvez définir la sécurité pour des rapports et des ressources individuels afin de contrôler le degré d'accès dont disposent les utilisateurs à ces éléments. Par défaut, seuls les utilisateurs qui sont membres du groupe intégré **Administrateurs** peuvent exécuter les rapports, afficher les ressources, modifier les propriétés et supprimer les éléments. Tous les autres utilisateurs possèdent des attributions de rôles créées pour eux qui autorisent l'accès à un rapport ou une ressource.  
@@ -65,7 +65,7 @@ ms.locfileid: "36044677"
  Pour limiter le risque d'insertion de liens dans un rapport qui, par inadvertance, exécuterait des scripts malveillants, n'associez des liens hypertexte qu'avec des données de sources fiables. Vérifiez que les données issues des résultats de la requête et des expressions qui lient des données aux liens hypertexte ne créent pas de liens susceptibles d'être utilisés frauduleusement. Ainsi, ne fondez pas un lien hypertexte sur une expression qui concatène des données à partir de plusieurs champs de dataset. Si nécessaire, accédez au rapport et utilisez la commande « Afficher la source » pour rechercher la présence éventuelle d'URL et de scripts suspects.  
   
 ## <a name="mitigating-sql-injection-attacks-in-a-parameterized-report"></a>Limitation des attaques par injection SQL dans un rapport paramétré  
- Dans un rapport qui inclut un paramètre de type `String`, veillez à utiliser une liste de valeurs disponibles (également appelée liste de valeurs valides) et assurez-vous que l’utilisateur qui exécute le rapport dispose uniquement les autorisations requises pour afficher les données dans le rapport. Lorsque vous définissez un paramètre de type `String`, l’utilisateur est présenté avec une zone de texte qui peut prendre n’importe quelle valeur. Une liste de valeurs disponibles limite les valeurs susceptibles d'être entrées. Si le paramètre de rapport est lié à un paramètre de requête et vous n'utilisez pas une liste de valeurs disponibles, l'utilisateur d'un rapport peut taper la syntaxe SQL dans la zone de texte, ce qui peut exposer le rapport et votre serveur de rapports au risque d'une attaque par injection SQL. Si l'utilisateur dispose d'autorisations suffisantes pour exécuter la nouvelle instruction SQL, cela risque de générer des résultats indésirables sur le serveur.  
+ Dans un rapport qui inclut un paramètre de type `String`, veillez à utiliser une liste de valeurs disponibles (également appelée liste de valeurs valides) et vous assurer que l’utilisateur qui exécute le rapport dispose uniquement les autorisations requises pour afficher les données dans le rapport. Lorsque vous définissez un paramètre de type `String`, l’utilisateur voit s’afficher une zone de texte qui peut prendre n’importe quelle valeur. Une liste de valeurs disponibles limite les valeurs susceptibles d'être entrées. Si le paramètre de rapport est lié à un paramètre de requête et vous n'utilisez pas une liste de valeurs disponibles, l'utilisateur d'un rapport peut taper la syntaxe SQL dans la zone de texte, ce qui peut exposer le rapport et votre serveur de rapports au risque d'une attaque par injection SQL. Si l'utilisateur dispose d'autorisations suffisantes pour exécuter la nouvelle instruction SQL, cela risque de générer des résultats indésirables sur le serveur.  
   
  Si un paramètre de rapport n'est pas lié à un paramètre de requête et les valeurs de paramètre sont incluses dans le rapport, l'utilisateur d'un rapport peut taper la syntaxe de l'expression ou une URL dans la valeur de paramètre et rendre le rapport au format Excel ou HTML. Si un autre utilisateur affiche ensuite le rapport et clique sur le contenu du paramètre de rendu, celui-ci peut exécuter accidentellement le lien ou le script malveillant.  
   

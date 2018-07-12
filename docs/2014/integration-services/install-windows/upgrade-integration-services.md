@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Integration Services, upgrading
 - SSIS, upgrading
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - upgrading Integration Services
 ms.assetid: 04f9863c-ba0b-47c5-af91-f2d41b078a23
 caps.latest.revision: 49
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: b6d37dffdbacba7315b48192d08f3b18f631d7eb
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 9b4e28772b88dbcf13a510931846972684499f45
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36044260"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37201679"
 ---
 # <a name="upgrade-integration-services"></a>Mettre à niveau Integration Services
   Si [!INCLUDE[ssISversion2005](../../includes/ssisversion2005-md.md)] ou [!INCLUDE[ssISversion10](../../includes/ssisversion10-md.md)] est installé sur votre ordinateur, vous pouvez effectuer une mise à niveau vers [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)].  
@@ -49,12 +49,12 @@ ms.locfileid: "36044260"
 > -   Tâche d'exécution de package DTS 2000 ;  
 > -   analyse du Conseiller de mise à niveau des packages DTS.  
 >   
->  Pour plus d’informations sur d’autres fonctionnalités supprimées, consultez [fonctionnalités Integration Services abandonnées dans SQL Server 2014](../discontinued-integration-services-functionality-in-sql-server-2014.md).  
+>  Pour plus d’informations sur les autres fonctionnalités supprimées, consultez [fonctionnalités Integration Services abandonnées dans SQL Server 2014](../discontinued-integration-services-functionality-in-sql-server-2014.md).  
   
 ## <a name="upgrading-integration-services"></a>mise à niveau d'Integration Services  
  Vous pouvez effectuer la mise à niveau au moyen de l'une des méthodes suivantes :  
   
--   Exécutez [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] le programme d’installation et sélectionnez l’option de **mise à niveau SQL Server 2005, SQL Server 2008 ou SQL Server 2008 R2**, ou **[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]**.  
+-   Exécutez [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] le programme d’installation et sélectionnez l’option **mise à niveau à partir de SQL Server 2005, SQL Server 2008 ou SQL Server 2008 R2**, ou **[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]**.  
   
 -   Exécutez **setup.exe** à l’invite de commandes et spécifiez le `/ACTION=upgrade` option. Pour plus d’informations, consultez la section « Scripts d’Installation pour [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], « dans [installer SQL Server 2014 à partir de l’invite de commandes](../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md).  
   
@@ -66,7 +66,7 @@ ms.locfileid: "36044260"
   
 -   Passer d'une version localisée de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] à une autre version localisée.  
   
- Lors d’une mise à niveau, vous pouvez mettre à niveau à la fois [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] et [!INCLUDE[ssDE](../../includes/ssde-md.md)], mais vous pouvez également choisir de mettre à niveau uniquement [!INCLUDE[ssDE](../../includes/ssde-md.md)]ou uniquement [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. Si vous mettez à niveau uniquement le [!INCLUDE[ssDE](../../includes/ssde-md.md)], [!INCLUDE[ssISversion2005](../../includes/ssisversion2005-md.md)] ou [!INCLUDE[ssISversion10](../../includes/ssisversion10-md.md)] reste fonctionnel, mais vous n’avez pas la fonctionnalité de [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)]. Si vous mettez uniquement à niveau [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)] sera totalement fonctionnel, mais uniquement en mesure de stocker des packages dans le système de fichiers, à moins qu'une instance du [!INCLUDE[ssDECurrent](../../includes/ssdecurrent-md.md)] ne soit disponible sur un autre ordinateur.  
+ Lors d’une mise à niveau, vous pouvez mettre à niveau à la fois [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] et [!INCLUDE[ssDE](../../includes/ssde-md.md)], mais vous pouvez également choisir de mettre à niveau uniquement [!INCLUDE[ssDE](../../includes/ssde-md.md)]ou uniquement [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. Si vous mettez à niveau uniquement le [!INCLUDE[ssDE](../../includes/ssde-md.md)], [!INCLUDE[ssISversion2005](../../includes/ssisversion2005-md.md)] ou [!INCLUDE[ssISversion10](../../includes/ssisversion10-md.md)] reste fonctionnel, mais vous n’avez pas les fonctionnalités de [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)]. Si vous mettez uniquement à niveau [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)] sera totalement fonctionnel, mais uniquement en mesure de stocker des packages dans le système de fichiers, à moins qu'une instance du [!INCLUDE[ssDECurrent](../../includes/ssdecurrent-md.md)] ne soit disponible sur un autre ordinateur.  
   
 ## <a name="upgrading-both-integration-services-and-the-database-engine-to-includesscurrentincludessscurrent-mdmd"></a>Mise à niveau d'Integration Services et du moteur de base de données vers [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
  Cette section décrit les conséquences liées à l'exécution d'une mise à niveau qui obéit aux critères suivants :  
@@ -82,7 +82,7 @@ ms.locfileid: "36044260"
   
 -   Met à niveau l’instance de la [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] ou [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] à la [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] version.  
   
--   Déplace les données à partir de la [!INCLUDE[ssISversion2005](../../includes/ssisversion2005-md.md)] ou [!INCLUDE[ssISversion10](../../includes/ssisversion10-md.md)] tables système pour la [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)] tables système, comme suit :  
+-   Déplace les données depuis le [!INCLUDE[ssISversion2005](../../includes/ssisversion2005-md.md)] ou [!INCLUDE[ssISversion10](../../includes/ssisversion10-md.md)] tables système pour la [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)] tables système, comme suit :  
   
     -   Déplace les packages sans modification de la table système msdb.dbo.sysdtspackages90 vers la table système msdb.dbo.sysssispackages.  
   
@@ -97,14 +97,14 @@ ms.locfileid: "36044260"
   
 -   Pour contrôler l'accès aux packages, crée trois nouveaux rôles de base de données fixes : db_ssisadmin, db_ssisltduser et db_ssisoperator. Les rôles [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] de db_dtsadmin, db_dtsltduser et db_dtsoperator ne sont pas supprimés, mais deviennent membres des nouveaux rôles correspondants.  
   
--   Si le [!INCLUDE[ssIS](../../includes/ssis-md.md)] magasin de packages (autrement dit, l’emplacement de système de fichiers géré par le [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] service) est l’emplacement par défaut sous **\SQL Server\90**, **\SQL Server\100**, ou **\SQL Server\110** ces packages sont déplacés vers le nouvel emplacement par défaut sous **\SQL Server\120**.  
+-   Si le [!INCLUDE[ssIS](../../includes/ssis-md.md)] magasin de packages (autrement dit, l’emplacement de système de fichiers géré par le [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] service) est l’emplacement par défaut sous **\SQL Server\90**, **\SQL Server\100**, ou **\SQL Server\110** ces packages sont déplacés vers le nouvel emplacement par défaut sous **server\120**.  
   
 -   Met à jour le fichier de configuration du service [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] de sorte qu’il pointe vers l’instance mise à niveau de [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
 ### <a name="what-the-upgrade-process-does-not-do"></a>Ce que ne fait pas le processus de mise à niveau  
  Le processus de mise à niveau n'effectue pas les tâches suivantes :  
   
--   **N’est pas** supprimer le [!INCLUDE[ssISversion2005](../../includes/ssisversion2005-md.md)] ou [!INCLUDE[ssISversion10](../../includes/ssisversion10-md.md)] service.  
+-   **Pas** supprimer le [!INCLUDE[ssISversion2005](../../includes/ssisversion2005-md.md)] ou [!INCLUDE[ssISversion10](../../includes/ssisversion10-md.md)] service.  
   
 -   N'effectue pas la migration des packages [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] existants vers le nouveau format utilisé par [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] pour les packages. Pour plus d’informations sur la migration de packages, consultez [Mettre à niveau des packages Integration Services](upgrade-integration-services-packages.md).  
   
@@ -117,7 +117,7 @@ ms.locfileid: "36044260"
   
 -   Exécuter les travaux de l'Agent [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] qui exécutent les packages.  
   
--   Utilisez [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] pour gérer les [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] packages stockés dans une instance de [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ou [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Vous devez modifier le fichier de configuration du service pour ajouter l'instance de [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] à la liste des emplacements gérés par le service.  
+-   Utilisez [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] pour gérer les [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] packages qui sont stockés dans une instance de [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ou [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Vous devez modifier le fichier de configuration du service pour ajouter l'instance de [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] à la liste des emplacements gérés par le service.  
   
     > [!NOTE]  
     >  Les premières versions de [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] ne peuvent pas se connecter au service [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)] .  
@@ -131,7 +131,7 @@ ms.locfileid: "36044260"
 ## <a name="upgrading-only-the-database-engine-to-includesscurrentincludessscurrent-mdmd"></a>Mise à niveau du seul moteur de base de données vers [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
  Cette section décrit les conséquences liées à l'exécution d'une mise à niveau qui obéit aux critères suivants :  
   
--   Mise à niveau d’une instance de [!INCLUDE[ssDE](../../includes/ssde-md.md)]uniquement. Autrement dit, l’instance de la [!INCLUDE[ssDE](../../includes/ssde-md.md)] est maintenant une instance de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], mais l’instance de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] et les outils clients proviennent [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] ou [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)].  
+-   Mise à niveau d’une instance de [!INCLUDE[ssDE](../../includes/ssde-md.md)]uniquement. Autrement dit, l’instance de la [!INCLUDE[ssDE](../../includes/ssde-md.md)] est maintenant une instance de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], mais l’instance de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] et les outils clients proviennent de [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] ou [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)].  
   
 -   L’instance de [!INCLUDE[ssDE](../../includes/ssde-md.md)] se trouve sur un ordinateur, tandis que [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] et les outils clients se trouvent sur un autre ordinateur.  
   
@@ -141,11 +141,11 @@ ms.locfileid: "36044260"
 -   Vous ne pouvez pas utiliser le [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] ou [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] outils, [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] et [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)], sur d’autres ordinateurs pour charger ou gérer des packages à partir de l’instance mise à niveau de la [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
     > [!NOTE]  
-    >  Bien que les packages dans l’instance mise à niveau de la [!INCLUDE[ssDE](../../includes/ssde-md.md)] n’ont pas encore été migrés vers le nouveau format de package, ils ne sont pas détectables par le [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] ou [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] outils. Par conséquent, les packages ne peuvent pas être utilisés par les outils [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] ou [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)].  
+    >  Bien que les packages dans l’instance mise à niveau de la [!INCLUDE[ssDE](../../includes/ssde-md.md)] n’ont pas encore été migrés vers le nouveau format de package, ils ne sont pas détectables par la [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] ou [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] outils. Par conséquent, les packages ne peuvent pas être utilisés par les outils [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] ou [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)].  
   
--   Vous ne pouvez pas utiliser [!INCLUDE[ssISversion2005](../../includes/ssisversion2005-md.md)] ou [!INCLUDE[ssISversion10](../../includes/ssisversion10-md.md)] sur d’autres ordinateurs pour exécuter des packages stockés dans msdb sur l’instance mise à niveau de la [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+-   Vous ne pouvez pas utiliser [!INCLUDE[ssISversion2005](../../includes/ssisversion2005-md.md)] ou [!INCLUDE[ssISversion10](../../includes/ssisversion10-md.md)] sur d’autres ordinateurs pour exécuter des packages qui sont stockés dans msdb sur l’instance mise à niveau de la [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
--   Vous ne pouvez pas utiliser [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] des travaux de l’Agent sur [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] ou [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ordinateurs pour exécuter [!INCLUDE[ssISversion2005](../../includes/ssisversion2005-md.md)] ou [!INCLUDE[ssISversion10](../../includes/ssisversion10-md.md)] packages qui sont stockés dans l’instance mise à niveau de la [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+-   Vous ne pouvez pas utiliser [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] travaux de l’Agent sur [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] ou [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ordinateurs pour exécuter [!INCLUDE[ssISversion2005](../../includes/ssisversion2005-md.md)] ou [!INCLUDE[ssISversion10](../../includes/ssisversion10-md.md)] packages qui sont stockés dans l’instance mise à niveau de la [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
 ## <a name="external-resources"></a>Ressources externes  
  Entrée de blog [Making your Existing Custom SSIS Extensions and Applications Work in Denali](http://go.microsoft.com/fwlink/?LinkId=238157), sur blogs.msdn.com.  

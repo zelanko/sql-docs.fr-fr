@@ -1,5 +1,5 @@
 ---
-title: Options (Page Général de l’éditeur de texte - toutes les langues -) | Documents Microsoft
+title: Options (Page Général de l’éditeur de texte - toutes les langues -) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - VS.ToolsOptionsPages.Text_Editor.All_Languages.General
 ms.assetid: bf18907c-94e2-4c09-9b2b-0925ac04c627
 caps.latest.revision: 28
 author: craigg-msft
 ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 4f04e097b7dec9d502848c9dc095c40ba8daa1ac
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 39394ea71a428d634bcee27adc2b76a3fca4af02
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36045425"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37189076"
 ---
 # <a name="options-text-editor---all-languages---general-page"></a>Options (Éditeur de texte - Toutes les langues - Page Général)
   Cette boîte de dialogue vous permet de définir les options d'édition générales des cinq éditeurs de [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]. Pour afficher ces options, sélectionnez **Options** dans le menu **Outils** . Sélectionnez le dossier **Éditeur de texte**, développez le dossier **Tous les langages**, puis cliquez sur **Général**.  
@@ -48,7 +48,7 @@ ms.locfileid: "36045425"
  **Activer l’espace virtuel**  
  Place des commentaires dans un emplacement cohérent à côté de votre code. Lorsque cette case à cochée est activée, vous pouvez placer le curseur au-delà du dernier caractère de la ligne. Lorsque vous effectuez des saisies, les tabulations ou les espaces sont automatiquement ajoutés pour terminer la ligne au niveau du point d'insertion.  
   
- **Retour automatique à la**  
+ **Le retour automatique à**  
  Permet d'afficher à la ligne suivante toute partie d'une ligne qui s'étend horizontalement au-delà de la zone visible de l'éditeur. L'activation de cette case à cocher active l'option **Afficher des glyphes visuels pour le retour automatique à la ligne** .  
   
  **Afficher des glyphes visuels pour le retour automatique à**  
@@ -57,7 +57,7 @@ ms.locfileid: "36045425"
 > [!NOTE]  
 >  Ces flèches de rappel ne sont pas ajoutées à votre code et ne s'impriment pas. Ils servent de référence uniquement. Cette fonctionnalité n'est pas disponible dans tous les types d'éditeurs.  
   
- **Appliquer les commandes Couper ou copier aux lignes vides lorsqu’il n’existe aucune sélection**  
+ **Appliquer les commandes Couper ou copier aux lignes vides lors de l’absence de sélection**  
  Permet de définir le comportement de l'éditeur lorsque vous placez le point d'insertion sur une ligne vide, n'effectuez aucune sélection et cliquez sur **Copier** ou **Couper**.  
   
  Lorsque cette case à cocher est activée, la ligne vide est copiée ou coupée. Si vous cliquez ensuite sur **Coller**, une nouvelle ligne vide est insérée.  
@@ -73,7 +73,7 @@ ms.locfileid: "36045425"
 > [!NOTE]  
 >  Ces numéros de ligne ne sont pas ajoutés à votre code et ne s'impriment pas. Ils servent de référence uniquement.  
   
- **Activer la navigation dans les URL par simple clic**  
+ **Activer la navigation dans les URL simple clic**  
  Permet de remplacer le curseur par une main avec un doigt tendu lorsqu'il passe sur une URL dans l'éditeur. Vous pouvez alors cliquer sur l'URL pour afficher la page correspondante dans votre navigateur Web.  
   
  **Barre de navigation**  

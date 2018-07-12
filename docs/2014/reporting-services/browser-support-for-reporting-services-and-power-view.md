@@ -1,5 +1,5 @@
 ---
-title: Planification de Reporting Services et la prise en charge de navigateur Power View (Reporting Services 2014) | Documents Microsoft
+title: Planification pour Reporting Services et la prise en charge de navigateur Power View (Reporting Services 2014) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - displaying reports
 - scripts [Reporting Services], requirements
@@ -22,13 +22,13 @@ ms.assetid: 48a75bbb-0029-4c43-891d-dc8f4fc0ebe1
 caps.latest.revision: 99
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 1777dac1c625c9f6eb49bb06ec1bc51f688086fb
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: ba6f4bd415f5e418d80b691e2461d08c8b1a8d19
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36045218"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37164320"
 ---
 # <a name="planning-for-reporting-services-and-power-view-browser-support-reporting-services-2014"></a>Planification de la prise en charge des navigateurs pour Reporting Services et Power View (Reporting Services 2014)
   Dans [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)], vous utilisez un navigateur web pour afficher des rapports et exécuter le Gestionnaire de rapports. Certains navigateurs ne prennent pas en charge toutes les fonctionnalités de rapport. Cette rubrique décrit la prise en charge et la configuration requise pour les fonctionnalités de gestion du Gestionnaire de rapports, l'affichage de rapports, les contrôles de la visionneuse de rapports dans Visual Studio. Elle résume également la disponibilité des fonctionnalités pour les navigateurs pris en charge, les conditions requises pour l'authentification et les conditions requises pour les scripts.  
@@ -43,12 +43,12 @@ ms.locfileid: "36045218"
   
 -   [Configuration requise du navigateur pour afficher des rapports](#bkmk_reportviewer)  
   
--   [Conditions d’authentification](#bkmk_authentication)  
+-   [Exigences d’authentification](#bkmk_authentication)  
   
 -   [Prise en charge du navigateur pour les contrôles de serveur Web ReportViewer dans Visual Studio](#bkmk_controls)  
   
 ##  <a name="bkmk_powerview"></a> Scénarios de navigateur Power View  
- La liste des navigateurs pris en charge et les versions de navigateur qui [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)] prend en charge, dépend du type de document est ouvert. Les classeurs Excel 2013 et les fichiers «**.rdlx**» utilisent des composants différents.  
+ La liste des navigateurs pris en charge et les versions de navigateur qui [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)] prend en charge, varie selon le type de document est ouvert. Les classeurs Excel 2013 et les fichiers «**.rdlx**» utilisent des composants différents.  
   
 |Type de document|Environnement|Prise en charge des navigateurs|  
 |-------------------|-----------------|---------------------|  
@@ -94,7 +94,7 @@ ms.locfileid: "36045218"
 |**Apple Safari (dernière version commercialisée)**|Non pris en charge|Non pris en charge|Non pris en charge|Non pris en charge|Non pris en charge|32 bits, 64 bits|  
 |**Google Chrome (dernière version commercialisée)**|32 bits **(\*)** pour une durée limitée|32 bits **(\*)** pour une durée limitée|32 bits **(\*)** pour une durée limitée|32 bits **(\*)** pour une durée limitée|32 bits **(\*)** pour une durée limitée|Non pris en charge|  
   
- **(\*)** Chrome cessera de prendre en charge Netscape plug-in API (NPAPI), utilisée par Silverlight. Power View est dépendant de Silverlight.  Pour plus d'informations, consultez [The Final Countdown for NPAPI](http://blog.chromium.org/2014/11/the-final-countdown-for-npapi.html).  
+ **(\*)** Chrome cessera de prise en charge de Netscape plug-in API (NPAPI), utilisée par Silverlight. Power View est dépendant de Silverlight.  Pour plus d'informations, consultez [The Final Countdown for NPAPI](http://blog.chromium.org/2014/11/the-final-countdown-for-npapi.html).  
   
 ##  <a name="bkmk_reportmanager"></a> Configuration requise du navigateur Report Manager (mode natif)  
  Voici la liste actuelle des navigateurs pris en charge, vous pouvez utiliser pour exécuter le [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] Gestionnaire de rapports pour gérer les rapports et le serveur de rapports en mode natif.  
@@ -107,7 +107,7 @@ ms.locfileid: "36045218"
 |Google Chrome (dernière version commercialisée)|  
   
 ##  <a name="bkmk_reportviewer"></a> Configuration requise du navigateur pour afficher des rapports  
- Voici la liste actuelle des navigateurs et des fonctionnalités pris en charge avec la visionneuse de rapports. La visionneuse de rapports prend en charge l’affichage de rapports à partir de [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] rapports gestionnaire et les bibliothèques SharePoint.  
+ Voici la liste actuelle des navigateurs et des fonctionnalités pris en charge avec la visionneuse de rapports. La visionneuse de rapports prend en charge l’affichage des rapports à partir de [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] rapports manager et les bibliothèques SharePoint.  
   
 |**Navigateur**|**Windows 8 et 8.1**|**Windows 7**|**Windows Server 2012 et 2012 R2**|**Windows Server 2008 R2**|**Windows Server 2008**|**Mac OS X 10.6 – 10.9**|**iOS 6 -7 pour iPad**|  
 |-----------------|---------------------------|-------------------|-----------------------------------------|--------------------------------|-----------------------------|------------------------------|----------------------------|  
@@ -126,9 +126,9 @@ ms.locfileid: "36045218"
   
 -   Affichez interactivement des rapports dans Apple Safari sur des périphériques iOS. Les fonctionnalités prises en charge incluent la bascule Développer/Réduire, le volet des paramètres et le tri interactif.  
   
--   Pour plus d’informations, consultez [vue rapports Reporting Services sur des appareils Microsoft Surface et Apple iOS](../../2014/reporting-services/view-reporting-services-reports-surface-ios-devices.md).  
+-   Pour plus d’informations, consultez [vue rapports Reporting Services sur les appareils Microsoft Surface et Apple iOS](../../2014/reporting-services/view-reporting-services-reports-surface-ios-devices.md).  
   
- **Remarque** Si vous accédez à un serveur de rapports à partir d'un ordinateur Macintosh, nous vous recommandons d'utiliser Safari. Si vous utilisez un produit SharePoint intégré avec [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)], consultez [planifier la prise en charge des navigateurs (Windows SharePoint Services)](http://go.microsoft.com/fwlink/?LinkId=183583).  
+ **Remarque** Si vous accédez à un serveur de rapports à partir d'un ordinateur Macintosh, nous vous recommandons d'utiliser Safari. Si vous utilisez un produit SharePoint intégré avec [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)], consultez [planifier la prise en charge du navigateur (Windows SharePoint Services)](http://go.microsoft.com/fwlink/?LinkId=183583).  
   
 ### <a name="url-access-for-viewing-reports"></a>Accès URL pour afficher des rapports  
  Pour consulter des rapports directement, sans les afficher dans le Gestionnaire de rapports, vous pouvez utiliser l'accès URL pour associer le rapport et la visionneuse de rapports. L'accès URL prend en charge différents navigateurs.  
@@ -137,7 +137,7 @@ ms.locfileid: "36045218"
   
 -   [Référence de paramètres d'accès URL](url-access-parameter-reference.md)  
   
-###  <a name="bkmk_authentication"></a> Conditions d’authentification  
+###  <a name="bkmk_authentication"></a> Exigences d’authentification  
  Les navigateurs prennent en charge des schémas d'authentification spécifiques qui doivent être gérés par le serveur de rapports pour que la demande du client réussisse. Le tableau suivant identifie les types d'authentification par défaut pris en charge par chaque navigateur exécuté sur un système d'exploitation Windows.  
   
 |**Type de navigateur**|**Prise en charge**|**Valeur de navigateur par défaut**|**Valeur de serveur par défaut**|  
@@ -182,7 +182,7 @@ ms.locfileid: "36045218"
 |**Safari (dernière version commercialisée)**|Non pris en charge|Non pris en charge|Non pris en charge|Non pris en charge|Non pris en charge|Oui|L'impression et le zoom ne sont pas pris en charge.<br /><br /> Le contrôle de calendrier utilisé pour sélectionner des dates sur un rapport paramétré a été désactivé dans ce navigateur. Les utilisateurs doivent taper manuellement les dates dans la zone de message du paramètre.|  
 |**Chrome (dernière version commercialisée)**|Oui|Oui|Oui|Oui|Oui|Non pris en charge|L'impression et le zoom ne sont pas pris en charge.|  
   
- <sup>1</sup>en mode standard, Internet Explorer 7.0 et 8.0 n’affichent pas les lignes inclinées dans les rapports. Si vous utilisez des lignes inclinées dans vos rapports, configurez votre page ASP.NET pour qu'elle s'exécute en mode Quirks dans Internet Explorer. Pour ce faire, recherchez le \<! DOCTYPE > balise dans votre page ASP.NET. Ou, si vous utilisez une page maître, vous pouvez rechercher la balise dans le fichier .master. Cette balise ressemble à celle-ci :  
+ <sup>1</sup>en mode standard, Internet Explorer 7.0 et 8.0 n’affichent pas les lignes inclinées dans les rapports. Si vous utilisez des lignes inclinées dans vos rapports, configurez votre page ASP.NET pour qu'elle s'exécute en mode Quirks dans Internet Explorer. Pour ce faire, recherchez le \<! DOCTYPE > dans votre page ASP.NET. Ou, si vous utilisez une page maître, vous pouvez rechercher la balise dans le fichier .master. Cette balise ressemble à celle-ci :  
   
 ```  
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">  

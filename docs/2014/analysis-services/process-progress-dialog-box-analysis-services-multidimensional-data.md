@@ -1,5 +1,5 @@
 ---
-title: Traiter la boîte de dialogue de progression (Analysis Services - données multidimensionnelles) | Documents Microsoft
+title: Boîte de dialogue de progression (Analysis Services - données multidimensionnelles) processus | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.processprogress.f1
 ms.assetid: f3bd5278-3a83-4fd9-9903-e81bdd4b6892
 caps.latest.revision: 20
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 80bbb03d206bc3b87e27043de0ad29bb258a624d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
-ms.translationtype: HT
+manager: craigg
+ms.openlocfilehash: f7ac5f499c857fda608fd9f6e66e9aa20f145312
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36044554"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37189226"
 ---
 # <a name="process-progress-dialog-box-analysis-services---multidimensional-data"></a>Boîte de dialogue État d'avancement du traitement (Analysis Services - Données multidimensionnelles)
   Utilisez la boîte de dialogue **État d'avancement du traitement** dans [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] et [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] pour contrôler le traitement dans [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. Cette boîte de dialogue s'affiche **État d'avancement du traitement** lorsque le traitement d'un objet [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] commence.  

@@ -1,5 +1,5 @@
 ---
-title: Messages personnalisés pour la journalisation | Documents Microsoft
+title: Custom Messages for Logging | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - logs [Integration Services], custom
 - writing log entries
@@ -16,22 +16,22 @@ helpviewer_keywords:
 - custom messages for logging [Integration Services]
 ms.assetid: 3c74bba9-02b7-4bf5-bad5-19278b680730
 caps.latest.revision: 29
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 80086e7a946ad9d5457e95646bcd9c8bce3e3df3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: a3929d8c861723c2204214ba66e73ea9268c19cb
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36041418"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37221839"
 ---
 # <a name="custom-messages-for-logging"></a>Messages personnalisés pour la journalisation
   [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] fournit un ensemble complet d’événements personnalisés pour l’écriture des entrées de journal pour les packages et de nombreuses tâches. Vous pouvez utiliser ces entrées pour enregistrer des informations détaillées sur l'avancement, les résultats et les problèmes d'exécution en enregistrant des événements prédéfinis ou des messages définis par l'utilisateur en vue d'une analyse ultérieure. Vous pouvez ainsi enregistrer l'heure de début et de fin d'une insertion en bloc pour identifier des problèmes de performances lors de l'exécution du package.  
   
  Les entrées de journal personnalisées constituent un ensemble qui se distingue de l'ensemble des événements de journalisation standard, disponibles pour les packages et tous les conteneurs et tâches. Ces entrées sont conçues pour capturer des informations utiles sur une tâche spécifique d'un package. Par exemple, l'une des entrées de journal personnalisées pour la tâche d'exécution de requêtes SQL consigne l'instruction SQL que la tâche exécute dans le journal.  
   
- Toutes les entrées de journal contiennent des informations de date et d'heure, y compris les entrées qui sont écrites automatiquement au début et à la fin d'un package. La plupart des événements de journal écrivent plusieurs entrées dans le journal. C'est généralement le cas lorsque l'événement comprend plusieurs phases. Par exemple, le `ExecuteSQLExecutingQuery` journal des événements consigne trois entrées : une entrée une fois la tâche acquiert une connexion à la base de données, un autre une fois la tâche commence à préparer l’instruction SQL et un thread de plus, après l’exécution de l’instruction SQL est terminée.  
+ Toutes les entrées de journal contiennent des informations de date et d'heure, y compris les entrées qui sont écrites automatiquement au début et à la fin d'un package. La plupart des événements de journal écrivent plusieurs entrées dans le journal. C'est généralement le cas lorsque l'événement comprend plusieurs phases. Par exemple, le `ExecuteSQLExecutingQuery` journal des événements consigne trois entrées : une entrée une fois la tâche acquiert une connexion à la base de données, une fois que la tâche commence à préparer l’instruction SQL et après l’exécution de l’instruction SQL est terminée.  
   
  Les objets [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] suivants possèdent des entrées de journal personnalisées :  
   
@@ -86,7 +86,7 @@ ms.locfileid: "36041418"
 |---------------|-----------------|  
 |`PackageStart`|Indique que le package a commencé à s'exécuter.<br /><br /> Remarque : cette entrée de journal est automatiquement écrite dans le journal. Vous ne pouvez pas l'exclure.|  
 |`PackageEnd`|Indique que le package est terminé.<br /><br /> Remarque : cette entrée de journal est automatiquement écrite dans le journal. Vous ne pouvez pas l'exclure.|  
-|`Diagnostic`|Fournit des informations sur la configuration système qui affecte l'exécution du package, notamment le nombre d'exécutables pouvant s'exécuter simultanément.<br /><br /> Le `Diagnostic` entrée du journal inclut également des entrées pour les appels à des fournisseurs de données externes avant et après. Pour plus d’informations, voir [Outils de dépannage de la connectivité des packages](troubleshooting/troubleshooting-tools-for-package-connectivity.md).|  
+|`Diagnostic`|Fournit des informations sur la configuration système qui affecte l'exécution du package, notamment le nombre d'exécutables pouvant s'exécuter simultanément.<br /><br /> Le `Diagnostic` entrée de journal inclut également des entrées pour les appels aux fournisseurs de données externes avant et après. Pour plus d’informations, voir [Outils de dépannage de la connectivité des packages](troubleshooting/troubleshooting-tools-for-package-connectivity.md).|  
   
 ###  <a name="BulkInsert"></a> Tâche d'insertion en bloc  
  Le tableau suivant répertorie les entrées de journal personnalisées de la tâche d'insertion en bloc.  
@@ -104,8 +104,8 @@ ms.locfileid: "36041418"
 |---------------|-----------------|  
 |`BufferSizeTuning`|Indique que la tâche de flux de données a modifié la taille du tampon. L'entrée de journal décrit les raisons de cette modification de taille et indique la nouvelle taille temporaire du tampon.|  
 |`OnPipelinePostEndOfRowset`|Indique qu’un composant a reçu son signal de fin d’ensemble de lignes, qui est définie par le dernier appel de la `ProcessInput` (méthode). Une entrée est écrite pour chaque composant du flux de données qui traite l'entrée. L'entrée inclut le nom du composant.|  
-|`OnPipelinePostPrimeOutput`|Indique que le composant a terminé son dernier appel à la `PrimeOutput` (méthode). Selon le flux de données, plusieurs entrées de journal peuvent être écrites. Si le composant est une source, cela signifie que le composant a terminé le traitement des lignes.|  
-|`OnPipelinePreEndOfRowset`|Indique qu’un composant est sur le point de recevoir son signal de fin d’ensemble de lignes, qui est définie par le dernier appel de la `ProcessInput` (méthode). Une entrée est écrite pour chaque composant du flux de données qui traite l'entrée. L'entrée inclut le nom du composant.|  
+|`OnPipelinePostPrimeOutput`|Indique que le composant a terminé son dernier appel de la `PrimeOutput` (méthode). Selon le flux de données, plusieurs entrées de journal peuvent être écrites. Si le composant est une source, cela signifie que le composant a terminé le traitement des lignes.|  
+|`OnPipelinePreEndOfRowset`|Indique qu’un composant est sur le point de recevoir son signal de fin d’ensemble de lignes, ce qui est défini par le dernier appel de la `ProcessInput` (méthode). Une entrée est écrite pour chaque composant du flux de données qui traite l'entrée. L'entrée inclut le nom du composant.|  
 |`OnPipelinePrePrimeOutput`|Indique que le composant est sur le point de recevoir son appel de la méthode `PrimeOutput`. Selon le flux de données, plusieurs entrées de journal peuvent être écrites.|  
 |`OnPipelineRowsSent`|Indique le nombre de lignes fournies à une entrée de composant par un appel de la méthode `ProcessInput`. L'entrée du journal inclut le nom du composant.|  
 |`PipelineBufferLeak`|Donne des informations sur tout composant qui maintient l'activité des tampons après la fermeture du gestionnaire de tampons. Cela signifie que des ressources des tampons n'ont pas été libérées et qu'elles peuvent provoquer des fuites de mémoire. L'entrée du journal fournit le nom du composant et l'ID du tampon.|  

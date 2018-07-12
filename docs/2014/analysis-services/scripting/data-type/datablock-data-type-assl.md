@@ -1,5 +1,5 @@
 ---
-title: Type de données DataBlock (ASSL) | Documents Microsoft
+title: Type de données DataBlock (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - DataBlock data type
 ms.assetid: 4192b388-613a-472b-881c-f9c02215aa81
 caps.latest.revision: 32
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 12cbd6c1a2723cfc0d9e5b68ff4a484878c82a74
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 167af587de6f06d283ec29f8afbc0fedb2ebc99e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36045050"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37211959"
 ---
 # <a name="datablock-data-type-assl"></a>Type de données DataBlock (ASSL)
   Définit un type de données primitif qui représente une collection de blocs de données utilisé pour stocker le contenu binaire d’un [ClrAssemblyFile](clrassemblyfile-data-type-assl.md) élément.  
@@ -61,8 +61,8 @@ ms.locfileid: "36045050"
   
 ## <a name="see-also"></a>Voir aussi  
  [Élément assembly &#40;ASSL&#41;](../objects/assembly-element-assl.md)   
- [Élément de fichier &#40;ASSL&#41;](../objects/file-element-assl.md)   
+ [Fichier d’élément &#40;ASSL&#41;](../objects/file-element-assl.md)   
  [Bloquer l’élément &#40;ASSL&#41;](../objects/block-element-assl.md)   
- [Types de données de script langage XML Analysis Services &#40;ASSL&#41;](analysis-services-scripting-language-xml-data-types-assl.md)  
+ [Types Analysis Services Scripting Language XML données &#40;ASSL&#41;](analysis-services-scripting-language-xml-data-types-assl.md)  
   
   

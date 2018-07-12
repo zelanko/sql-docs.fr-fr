@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - databases [Reporting Services]
 - report servers [Reporting Services], databases
@@ -20,13 +20,13 @@ ms.assetid: 0fc5c033-3fe1-4cea-86c7-66ea5e424d65
 caps.latest.revision: 47
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: d7dd8dd25195465aaff15bcf58ca5c4898f58274
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 13781ef7b1854026acf1a237deb56f4fbaf6fa98
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36051423"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37157650"
 ---
 # <a name="report-server-database-ssrs-native-mode"></a>Base de données du serveur de rapports (SSRS en mode natif)
   Un serveur de rapports est un serveur sans état qui utilise le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] pour stocker les métadonnées et les définitions d'objets. Une installation [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] en mode natif utilise deux bases de données pour distinguer le stockage de données persistantes des obligations de stockage temporaire. Les bases de données sont créées ensemble et liées par le nom. Les noms par défaut de ces bases de données sont respectivement **reportserver** et **reportservertempdb**.  
@@ -35,7 +35,7 @@ ms.locfileid: "36051423"
   
  Les bases de données peuvent s'exécuter sur une instance locale ou distante du [!INCLUDE[ssDE](../../includes/ssde-md.md)] . Le choix d'une instance locale est utile si vous possédez suffisamment de ressources système ou si vous voulez économiser des licences logicielles, mais l'exécution des bases de données sur un ordinateur distant permet d'améliorer les performances.  
   
- Vous pouvez déplacer ou réutiliser une base de données de serveur de rapports existante provenant d'une installation précédente ou d'une instance différente avec une autre instance de serveur de rapports. Le schéma de la base de données du serveur de rapports doit être compatible avec l'instance du serveur de rapports. Si la base de données est dans un format plus ancien, vous serez invité à le mettre à niveau au format actuel. Les versions plus récentes ne peuvent pas être réajustées vers une version antérieure. Si vous possédez une base de données de serveur de rapports récente, vous ne pouvez pas l'utiliser avec une version antérieure d'une instance de serveur de rapports. Pour plus d’informations sur la façon dont les bases de données sont mis à niveau vers formats plus récents, consultez [mise à niveau d’une base de données du serveur de rapports](../install-windows/upgrade-a-report-server-database.md).  
+ Vous pouvez déplacer ou réutiliser une base de données de serveur de rapports existante provenant d'une installation précédente ou d'une instance différente avec une autre instance de serveur de rapports. Le schéma de la base de données du serveur de rapports doit être compatible avec l'instance du serveur de rapports. Si la base de données est dans un format plus ancien, vous serez invité à le mettre à niveau au format actuel. Les versions plus récentes ne peuvent pas être réajustées vers une version antérieure. Si vous possédez une base de données de serveur de rapports récente, vous ne pouvez pas l'utiliser avec une version antérieure d'une instance de serveur de rapports. Pour plus d’informations sur la façon dont les bases de données sont mis à niveau vers formats plus récents, consultez [mettre à niveau une base de données de serveur de rapports](../install-windows/upgrade-a-report-server-database.md).  
   
 > [!IMPORTANT]  
 >  La structure de table des bases de données est optimisée pour les opérations serveur et ne doit pas être modifiée ou ajustée. [!INCLUDE[msCoName](../../includes/msconame-md.md)] peut éventuellement modifier la structure de table d'une version à une autre. Si vous modifiez ou agrandissez la base de données, vous pouvez limiter voire supprimer la possibilité d'effectuer des mises à jour ou d'appliquer des Service Packs. Vous risquez également de créer des perturbations sur le serveur de rapports par les modifications que vous effectuez. Par exemple si vous activez READ_COMMITTED_SNAPSHOT sur la base de données ReportServer, vous arrêterez des fonctionnalités interactives de tri.  
@@ -47,7 +47,7 @@ ms.locfileid: "36051423"
 ## <a name="report-server-database"></a>base de données du serveur de rapports  
  La base de données d'un serveur de rapports est une base de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] qui stocke le contenu suivant :  
   
--   Éléments gérés par un serveur de rapports (... / de l’état des rapports et des rapports liés, sources de données partagées, modèles, dossiers, ressources) et toutes les propriétés et les paramètres de sécurité qui sont associés à ces éléments.  
+-   Éléments gérés par un serveur de rapports (.. / de l’état des rapports et des rapports liés, sources de données partagées, modèles, dossiers, ressources) et toutes les propriétés et les paramètres de sécurité qui sont associés à ces éléments.  
   
 -   définitions des abonnements et des planifications ;  
   
@@ -73,7 +73,7 @@ ms.locfileid: "36051423"
  [Stocker des données chiffrées du serveur de rapports &#40;Gestionnaire de configuration de SSRS&#41;](../install-windows/ssrs-encryption-keys-store-encrypted-report-server-data.md)   
  [Serveur de rapports Reporting Services](../reporting-services-report-server.md)   
  [Administrer une base de données du serveur de rapports &#40;SSRS en mode natif&#41;](report-server-database-ssrs-native-mode.md)   
- [Créer une base de données du serveur de rapports &#40;Gestionnaire de Configuration de SSRS&#41;](../../sql-server/install/create-a-report-server-database-ssrs-configuration-manager.md)   
+ [Créer une base de données de serveur de rapports &#40;Gestionnaire de Configuration de SSRS&#41;](../../sql-server/install/create-a-report-server-database-ssrs-configuration-manager.md)   
  [Opérations de sauvegarde et de restauration pour Reporting Services](../install-windows/backup-and-restore-operations-for-reporting-services.md)  
   
   

@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-xml
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - XSD schemas [SQL Server]
 - XMLSCHEMA option
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - XMLDATA option
 ms.assetid: 04b35145-1cca-45f4-9eb7-990abf2e647d
 caps.latest.revision: 34
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 8cc6009563ca46e47e40e61c054fbe732ccc401a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: e629d7c6e23f5e609f0d6734774d58bbc16f83f0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36051009"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37194777"
 ---
 # <a name="generate-an-inline-xsd-schema"></a>Générer un schéma XSD en ligne
   Dans une clause FOR XML, vous pouvez demander que votre requête retourne un schéma en ligne avec les résultats de la requête. Pour obtenir un schéma XDR, utilisez le mot clé XMLDATA dans la clause FOR XML. Pour obtenir un schéma XSD, utilisez le mot clé XMLSCHEMA.  
@@ -36,7 +36,7 @@ ms.locfileid: "36051009"
   
 -   Vous pouvez spécifier XMLSCHEMA seulement en mode RAW et AUTO, pas en mode EXPLICIT.  
   
--   Si une requête FOR XML imbriquée spécifie la directive TYPE, le résultat de requête est de `xml` et ce résultat est traité comme une instance de données XML non typées. Pour plus d’informations, consultez [Données XML &#40;SQL Server&#41;](xml-data-sql-server.md).  
+-   Si une requête FOR XML imbriquée spécifie la directive TYPE, le résultat de requête est de `xml` type et ce résultat est traité comme une instance de données XML non typées. Pour plus d’informations, consultez [Données XML &#40;SQL Server&#41;](xml-data-sql-server.md).  
   
  Lorsque vous spécifiez XMLSCHEMA dans une requête FOR XML, vous recevez à la fois un schéma et des données XML, le résultat de la requête. Chaque élément de niveau supérieur des données fait référence au schéma précédent en utilisant une déclaration d'espace de noms qui, à son tour, fait référence à l'espace de noms cible du schéma en ligne.  
   
@@ -69,7 +69,7 @@ ms.locfileid: "36051009"
   
 -   Un autre document de schéma qui décrit la forme du résultat de la requête FOR XML.  
   
- En outre, éventuel tapé `xml` des types de données sont inclus dans le résultat de requête, les schémas associés avec ces typé `xml` des types de données sont inclus.  
+ En outre, éventuelle tapé `xml` les types de données sont inclus dans le résultat de requête, les schémas associés avec ces tapé `xml` types de données sont inclus.  
   
  L'espace de noms cible du document de schéma qui décrit la forme du résultat FOR XML contient une partie fixe et une partie numérique incrémentée automatiquement. Le format de cet espace de noms est illustré dans ce qui suit, où *n* est un entier positif. Par exemple, dans la requête précédente, urn:schemas-microsoft-com:sql:SqlRowSet1 est l'espace de noms cible.  
   

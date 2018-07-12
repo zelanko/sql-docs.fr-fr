@@ -1,5 +1,5 @@
 ---
-title: Page nouveau dossier (Gestionnaire de rapports) | Documents Microsoft
+title: Page nouveau dossier (Gestionnaire de rapports) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 9212fc68-f0a6-4f79-83c1-84baf4d1957e
 caps.latest.revision: 23
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 5ec855928ab92734695594a79ed23e917b3bb8d5
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 3464ba51b74343fdb7349b7622f08a68b3f25611
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36045109"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37162290"
 ---
 # <a name="new-folder-page-report-manager"></a>Page Nouveau dossier (Gestionnaire de rapports)
   La page Nouveau dossier vous permet de créer un dossier dans l'arborescence des dossiers du serveur de rapports. Le dossier que vous créez est un dossier virtuel qui est stocké dans une base de données du serveur de rapports. Le dossier n'est pas créé dans le système de fichiers de votre ordinateur.  
@@ -39,7 +39,7 @@ ms.locfileid: "36045109"
   
 ## <a name="options"></a>Options  
  **Nom**  
- Spécifie le nom du dossier. Le nom doit contenir un caractère alphanumérique au minimum. Il peut également comporter des espaces et certains symboles. N'utilisez pas les caractères ; ? : @ & = +, $ / * \< > | « ou / lorsque vous spécifiez un nom.  
+ Spécifie le nom du dossier. Le nom doit contenir un caractère alphanumérique au minimum. Il peut également comporter des espaces et certains symboles. N'utilisez pas les caractères ; ? : @ & = +, $ / * \< > | "ou / lorsque vous spécifiez un nom.  
   
  **Description**  
  Entrez une description du contenu du dossier. Cette description apparaît dans la page Contenu. Elle est visible par les utilisateurs qui sont autorisés à accéder au dossier.  
@@ -48,8 +48,8 @@ ms.locfileid: "36045109"
  [Créer, supprimer ou modifier un dossier &#40;le Gestionnaire de rapports&#41;](report-server/create-delete-or-modify-a-folder-report-manager.md)   
  [Page propriétés générales, dossiers &#40;le Gestionnaire de rapports&#41;](../../2014/reporting-services/general-properties-page-folders-report-manager.md)   
  [Le Gestionnaire de rapports &#40;SSRS en Mode natif&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
- [Afficher la Page contenu &#40;le Gestionnaire de rapports&#41;](../../2014/reporting-services/contents-page-report-manager.md)   
- [Aide (F1) de gestionnaire de rapports](../../2014/reporting-services/report-manager-f1-help.md)   
+ [Contenu de la Page &#40;le Gestionnaire de rapports&#41;](../../2014/reporting-services/contents-page-report-manager.md)   
+ [F1 du Gestionnaire de rapports](../../2014/reporting-services/report-manager-f1-help.md)   
  [Page propriétés générales, dossiers &#40;le Gestionnaire de rapports&#41;](../../2014/reporting-services/general-properties-page-folders-report-manager.md)  
   
   

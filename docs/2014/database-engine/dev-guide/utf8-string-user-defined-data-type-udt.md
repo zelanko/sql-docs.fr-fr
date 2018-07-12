@@ -1,5 +1,5 @@
 ---
-title: UTF8 Type de données défini par l’utilisateur (UDT) de chaîne | Documents Microsoft
+title: UTF-8 Type de données défini par l’utilisateur (UDT) de chaîne | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -12,15 +12,15 @@ ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: 41b84606-1fa8-4e4b-8f4c-bdc66537c613
 caps.latest.revision: 10
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: fcb411e3947de3e939a3f7e328c80b0605bf47d3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: e9ffea3675f13320d68d5b829cde29272c83f28d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36043682"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37259175"
 ---
 # <a name="utf8-string-user-defined-data-type-udt"></a>Type de données défini par l'utilisateur (UDT) pour les chaînes UTF8
   L'exemple UTF8String pour SQL Server montre l'implémentation d'un type de données défini par l'utilisateur. Cet exemple montre comment mettre en œuvre un type de données UTF8 défini par l'utilisateur qui étend le système de types de la base de données pour assurer le stockage des valeurs encodées en UTF8. Ce type implémente également le code permettant de convertir les chaînes Unicode en UTF8 et vice versa.  
@@ -53,7 +53,7 @@ ms.locfileid: "36043682"
      `GO`  
   
     > [!NOTE]  
-    >  Pour activer le CLR, vous devez disposer `ALTER SETTINGS` autorisation de niveau serveur, qui est implicitement détenue par les membres de la `sysadmin` et `serveradmin` rôles serveur fixes.  
+    >  Pour activer le CLR, vous devez avoir `ALTER SETTINGS` autorisation de niveau serveur, qui est implicitement détenue par les membres de la `sysadmin` et `serveradmin` rôles serveur fixes.  
   
 -   La base de données AdventureWorks doit être installée sur l'instance [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que vous utilisez.  
   

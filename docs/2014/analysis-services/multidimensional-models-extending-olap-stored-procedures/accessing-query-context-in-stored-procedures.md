@@ -1,5 +1,5 @@
 ---
-title: Accès au contexte de requête dans des procédures stockées | Documents Microsoft
+title: Accès au contexte de requête dans des procédures stockées | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - query context [Analysis Services]
 ms.assetid: bdc7dad8-2f22-4265-aba4-a3a451527840
 caps.latest.revision: 22
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: ef60683eb410f0db5ba9e8d38ac227ca22dd9159
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 28aafacda2e9880a79201fd07ca41fb15959e87b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36043960"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37239839"
 ---
 # <a name="accessing-query-context-in-stored-procedures"></a>Accès au contexte de requête dans les procédures stockées
   Le contexte d'exécution d'une procédure stockée est disponible à l'intérieur du code de cette procédure sous la forme de l'objet `Context` du modèle d'objet serveur ADOMD.NET. Il s'agit d'un contexte en lecture seule qui ne peut pas être modifié par la procédure stockée. Les propriétés suivantes sont disponibles pour cet objet.  
@@ -35,7 +35,7 @@ ms.locfileid: "36043960"
 |**CurrentCube**|Cube|Cube du contexte de requête actuel.|  
 |**CurrentDatabaseName**|String|Identificateur de la base de données active.|  
 |**CurrentConnection**|Connexion|Référence à l'objet de connexion dans le contexte actuel.|  
-|**Passer**|Entier|Numéro de test du contexte actuel.|  
+|**Pass**|Entier|Numéro de test du contexte actuel.|  
   
  L'objet `Context` existe lorsque le modèle objet MDX (Multidimensional Expressions) est utilisé dans une procédure stockée. Il n'est pas disponible lorsque le modèle objet MDX est utilisé sur un client. L'objet `Context` n'est ni explicitement transmis à la procédure stockée, ni explicitement renvoyé par celle-ci. Il est disponible pendant l'exécution de la procédure stockée.  
   

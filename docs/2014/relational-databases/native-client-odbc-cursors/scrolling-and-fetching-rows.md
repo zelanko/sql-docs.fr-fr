@@ -1,13 +1,11 @@
 ---
-title: Défilement et extraction des lignes | Documents Microsoft
+title: Défilement et extraction des lignes | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -22,32 +20,32 @@ helpviewer_keywords:
 - ODBC cursors, scrolling rows
 ms.assetid: 9109f10d-326b-4a6d-8c97-831f60da8c4c
 caps.latest.revision: 33
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: c31b5a4d086fec3ac3db6e3eb1bfbd6bf54c8cb3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: b5cddcfc7faef48198d8b810f44a08221b066c39
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36038804"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37421468"
 ---
 # <a name="scrolling-and-fetching-rows"></a>Défilement et extraction de lignes
   Pour utiliser un curseur permettant le défilement, une application ODBC doit :  
   
--   Définir les fonctionnalités de curseur à l’aide de [SQLSetStmtAttr](../native-client-odbc-api/sqlsetstmtattr.md).  
+-   Définissez les fonctionnalités de curseur à l’aide de [SQLSetStmtAttr](../native-client-odbc-api/sqlsetstmtattr.md).  
   
--   Ouvrez le curseur à l’aide de **SQLExecute** ou **SQLExecDirect**.  
+-   Ouvrez le curseur à l’aide **SQLExecute** ou **SQLExecDirect**.  
   
--   Faire défiler et extraire des lignes à l’aide de **SQLFetch** ou [SQLFetchScroll](../native-client-odbc-api/sqlfetchscroll.md).  
+-   Faire défiler et extraire des lignes à l’aide **SQLFetch** ou [SQLFetchScroll](../native-client-odbc-api/sqlfetchscroll.md).  
   
  Les deux **SQLFetch** et **SQLFetchScroll** peut extraire des blocs de lignes à la fois. Le nombre de lignes retourné est spécifié à l’aide de **SQLSetStmtAttr** pour définir le paramètre SQL_ATTR_ROW_ARRAY_SIZE.  
   
  Les applications ODBC peuvent utiliser **SQLFetch** pour extraire un curseur avant uniquement.  
   
- **SQLFetchScroll** est utilisé pour faire défiler un curseur. **SQLFetchScroll** prend en charge l’extraction de la suivante, précédente, première et dernière ensembles de lignes en plus de l’extraction relative (extraire l’ensemble de lignes *n* lignes à partir du début de l’ensemble de lignes en cours) et l’extraction d’absolue (extraction de l’ensemble de lignes en commençant à la ligne *n*). Si *n* est négatif dans une extraction absolue, les lignes sont comptées à partir de la fin du jeu de résultats. Une extraction absolue de ligne -1 équivaut à l'extraction de l'ensemble de lignes qui démarre à la dernière ligne du jeu de résultats.  
+ **SQLFetchScroll** est utilisé pour faire défiler un curseur. **SQLFetchScroll** prend en charge l’extraction de la suivante, précédente, première et dernière ensembles de lignes en plus de l’extraction relative (extraire l’ensemble de lignes *n* lignes à partir du début de l’ensemble de lignes actuel) et absolu extraction (fetch l’ensemble de lignes en commençant à la ligne *n*). Si *n* est négatif dans une extraction absolue, les lignes sont comptées à partir de la fin du jeu de résultats. Une extraction absolue de ligne -1 équivaut à l'extraction de l'ensemble de lignes qui démarre à la dernière ligne du jeu de résultats.  
   
- Les applications qui utilisent **SQLFetchScroll** son bloc des fonctionnalités de curseur, tels que les rapports, sont susceptibles de transmettre le jeu de résultats d’une seule fois, à l’aide de l’option uniquement pour extraire l’ensemble de lignes suivant. Applications basées sur l’écran, en revanche, peuvent tirer parti de toutes les fonctions de **SQLFetchScroll**. Si l’application définit la taille de l’ensemble de lignes sur le nombre de lignes affichées sur l’écran et lie les mémoires tampon d’écran au jeu de résultats, il peut traduire directement à des appels à des opérations de barre de défilement **SQLFetchScroll**.  
+ Les applications qui utilisent **SQLFetchScroll** uniquement pour son bloc fonctionnalités du curseur, tels que des rapports, sont susceptibles de passer par le jeu de résultats une seule fois, à l’aide de l’option uniquement pour extraire l’ensemble de lignes suivant. Applications basées sur l’écran, quant à eux, peuvent tirer parti de toutes les fonctionnalités de **SQLFetchScroll**. Si l’application définit la taille de l’ensemble de lignes sur le nombre de lignes affichées sur l’écran et lie les mémoires tampons d’écran au jeu de résultats, il peut traduire directement aux appels à des opérations de barre de défilement **SQLFetchScroll**.  
   
 |Opération de barre de défilement|Option de défilement SQLFetchScroll|  
 |--------------------------|-------------------------------------|  
@@ -61,7 +59,7 @@ ms.locfileid: "36038804"
   
 ## <a name="in-this-section"></a>Dans cette section  
   
--   [Lignes de signets dans ODBC](scrolling-and-fetching-rows-bookmarking-rows-in-odbc.md)  
+-   [Création de signets pour des lignes dans ODBC](scrolling-and-fetching-rows-bookmarking-rows-in-odbc.md)  
   
 ## <a name="see-also"></a>Voir aussi  
  [L’utilisation de curseurs &#40;ODBC&#41;](using-cursors-odbc.md)  

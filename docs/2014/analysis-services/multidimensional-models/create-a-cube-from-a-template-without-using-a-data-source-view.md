@@ -1,5 +1,5 @@
 ---
-title: Créer un Cube à partir d’un modèle sans utiliser une vue de Source de données | Documents Microsoft
+title: Créer un Cube à partir d’un modèle sans utiliser une vue de Source de données | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 5c8c09b1-140c-48db-9b9f-d18a051d7dbd
 caps.latest.revision: 7
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: c834ce714cd4ad0de92f3638288146674d4bc1e6
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: a03699873933bb98cf1657cc5fa0ae057eabf52e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36045064"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37161380"
 ---
 # <a name="create-a-cube-from-a-template-without-using-a-data-source-view"></a>Créer un cube a partir d'un modèle sans utiliser de vue de source de données
   Sélectionnez **Construire le cube sans utiliser de source de données** dans la première page de l’Assistant Cube pour créer un cube sans utiliser de vue de source de données. Vous pouvez par la suite utiliser l’Assistant Génération de schéma pour générer le schéma relationnel pour la vue de source de données basée sur la structure du cube et éventuellement d’autres objets [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Pour plus d’informations sur la génération d’un schéma, consultez [Assistant Génération de schéma &#40;Analysis Services&#41;](schema-generation-wizard-analysis-services.md).  
@@ -45,10 +45,10 @@ ms.locfileid: "36045064"
   
 |colonne|Description|  
 |------------|-----------------|  
-|**Nom de la mesure**|Une valeur de cette colonne définit le nom d'une mesure dans le cube. Cliquez sur une valeur dans cette colonne pour taper un nom. Cliquez sur **Ajouter une nouvelle mesure** dans cette colonne pour créer une nouvelle mesure. Cette colonne définit le `Name` propriété sur l’objet de mesures.|  
-|**Groupe de mesures**|Nom du groupe de mesures qui contient la mesure. Cliquez sur cette valeur pour effectuer votre choix ou tapez un nom. Si vous supprimez toutes les mesures qui appartiennent à un groupe de mesures particulier, le groupe de mesures est également supprimé. Cette colonne définit le `Name` propriété pour l’objet de groupe de mesures.|  
-|**Type de données**|Type de données de la mesure. Cliquez sur cette valeur pour modifier le type de données. La valeur par défaut lorsque vous créez une mesure est `Single`. Cette colonne définit le `DataType` propriété sur l’objet de mesures.|  
-|**Agrégation**|Agrégation standard de la mesure. Cliquez sur cette cellule pour spécifier l’une des agrégations standard de la mesure (ou **Aucune**). La valeur par défaut lorsque vous créez une mesure est `Sum`. Cette colonne définit le `AggregationFunction` propriété sur l’objet de mesures.|  
+|**Nom de la mesure**|Une valeur de cette colonne définit le nom d'une mesure dans le cube. Cliquez sur une valeur dans cette colonne pour taper un nom. Cliquez sur **Ajouter une nouvelle mesure** dans cette colonne pour créer une nouvelle mesure. Cette colonne définit la `Name` propriété sur l’objet de mesure.|  
+|**Groupe de mesures**|Nom du groupe de mesures qui contient la mesure. Cliquez sur cette valeur pour effectuer votre choix ou tapez un nom. Si vous supprimez toutes les mesures qui appartiennent à un groupe de mesures particulier, le groupe de mesures est également supprimé. Cette colonne définit la `Name` propriété pour l’objet de groupe de mesures.|  
+|**Type de données**|Type de données de la mesure. Cliquez sur cette valeur pour modifier le type de données. La valeur par défaut lorsque vous créez une mesure est `Single`. Cette colonne définit la `DataType` propriété sur l’objet de mesure.|  
+|**Agrégation**|Agrégation standard de la mesure. Cliquez sur cette cellule pour spécifier l’une des agrégations standard de la mesure (ou **Aucune**). La valeur par défaut lorsque vous créez une mesure est `Sum`. Cette colonne définit la `AggregationFunction` propriété sur l’objet de mesure.|  
   
 ## <a name="defining-new-dimensions"></a>Définition de nouvelles dimensions  
  Utilisez la page **Définir de nouvelles dimensions** de l’Assistant pour spécifier les dimensions du nouveau cube.  
@@ -62,7 +62,7 @@ ms.locfileid: "36045064"
 |colonne|Description|  
 |------------|-----------------|  
 |**Type**|Affiche le type de dimension pour une dimension de modèle. Cliquez sur cette cellule pour modifier le type d'une dimension. Cette colonne définit la propriété **Type** de l’objet de dimension.|  
-|`Name`|Affiche le nom de la dimension. Cliquez sur cette cellule pour taper un nom différent. Cette valeur définit la `Name` propriété pour l’objet de dimension.|  
+|`Name`|Affiche le nom de la dimension. Cliquez sur cette cellule pour taper un nom différent. Cette valeur définit le `Name` propriété pour l’objet dimension.|  
 |**SCD**|Spécifie qu'il s'agit d'une dimension à variation lente (SCD). Cette case à cocher ajoute l'ID d'origine de date de début et de date de fin SCD, ainsi que les attributs d'état à la dimension. **SCD** est activé par défaut si vous utilisez un modèle pour créer le cube et que l’Assistant détecte ces quatre types d’attribut dans une dimension de modèle.|  
 |**Attributs**|Affiche les attributs qui doivent être créés pour la dimension. Chaque nom d'attribut dans la liste est précédé du nom de la dimension. Cette liste est en lecture seule. Vous pouvez modifier les attributs à l'aide du Concepteur de dimensions une fois l'exécution de l'Assistant terminée.|  
   

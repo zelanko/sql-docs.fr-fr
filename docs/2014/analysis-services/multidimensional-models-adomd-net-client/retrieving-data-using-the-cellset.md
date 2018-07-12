@@ -1,5 +1,5 @@
 ---
-title: La récupération des données à l’aide de l’ensemble de cellules | Documents Microsoft
+title: Récupération des données à l’aide de l’ensemble de cellules | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - data retrieval [ADOMD.NET], CellSet object
 ms.assetid: 77e4ee58-882d-4012-91a3-0565f18a4882
 caps.latest.revision: 41
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: cda35dc6151d17e1dad2d341337d67ef39d9f839
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 69e53cab56cf22d6627fd8039e6a46735d934ca7
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36050934"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37178896"
 ---
 # <a name="retrieving-data-using-the-cellset"></a>Récupération de données à l'aide d'un ensemble de cellules
   Lors de la récupération de données analytiques, l'objet <xref:Microsoft.AnalysisServices.AdomdClient.CellSet> procure une interactivité et une souplesse optimales. L'objet <xref:Microsoft.AnalysisServices.AdomdClient.CellSet> est un cache de données et métadonnées hiérarchiques en mémoire qui préserve la dimensionnalité des données. L'objet <xref:Microsoft.AnalysisServices.AdomdClient.CellSet> peut également être parcouru en état connecté ou déconnecté. Du fait de cette aptitude en état déconnecté, l'objet <xref:Microsoft.AnalysisServices.AdomdClient.CellSet> peut être utilisé pour consulter les données et les métadonnées dans n'importe quel ordre et constitue le modèle objet le plus complet pour la récupération de données. Autre conséquence de cette aptitude en état déconnecté : l'objet <xref:Microsoft.AnalysisServices.AdomdClient.CellSet> subit une charge maximale, et il s'agit du modèle objet de récupération de données ADOMD.NET le plus long à remplir.  
@@ -65,8 +65,8 @@ ms.locfileid: "36050934"
  [!code-csharp[Adomd.NetClient#DemonstrateDisconnectedCellset](../../snippets/csharp/SQL14/adomd.net/adomd.netclient/cs/adomdexample.cs#demonstratedisconnectedcellset)]  
   
 ## <a name="see-also"></a>Voir aussi  
- [La récupération des données à partir d’une Source de données analytiques](retrieving-data-from-an-analytical-data-source.md)   
- [La récupération des données à l’aide d’AdomdDataReader](retrieving-data-using-the-adomddatareader.md)   
+ [Récupération des données à partir d’une Source de données analytiques](retrieving-data-from-an-analytical-data-source.md)   
+ [Récupération des données à l’aide d’AdomdDataReader](retrieving-data-using-the-adomddatareader.md)   
  [Récupération de données à l’aide de XmlReader](retrieving-data-using-the-xmlreader.md)  
   
   

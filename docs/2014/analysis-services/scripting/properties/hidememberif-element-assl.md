@@ -1,5 +1,5 @@
 ---
-title: Élément HideMemberIf (ASSL) | Documents Microsoft
+title: Élément HideMemberIf (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - HideMemberIf element
 ms.assetid: ff0e6b19-6216-43ac-ba76-1628da8c333b
 caps.latest.revision: 34
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 2b1540a3b7f5d1e1a93ea3b4628bfbde186e5bb2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 0829804ae0225c848da3583c429e39d9bc176821
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36051344"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37187026"
 ---
 # <a name="hidememberif-element-assl"></a>Élément HideMemberIf (ASSL)
   Indique si et quand un membre d'un niveau doit être masqué par rapport aux applications clientes.  
@@ -73,7 +73,7 @@ ms.locfileid: "36051344"
 |*ParentName*|Un membre est masqué lorsque son nom est identique à celui de son parent.|  
   
 ## <a name="remarks"></a>Notes  
- L’énumération qui correspond aux valeurs autorisées pour `HideMemberIf` dans l’objet d’objets AMO (Analysis Management) est modèle <xref:Microsoft.AnalysisServices.HideIfValue>.  
+ L’énumération qui correspond aux valeurs autorisées pour `HideMemberIf` dans l’objet d’objets AMO (Analysis Management) modèle est <xref:Microsoft.AnalysisServices.HideIfValue>.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Propriétés &#40;ASSL&#41;](properties-assl.md)  

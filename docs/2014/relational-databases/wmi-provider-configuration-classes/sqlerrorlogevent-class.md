@@ -1,5 +1,5 @@
 ---
-title: Classe SqlErrorLogEvent | Documents Microsoft
+title: Sqlerrorlogevent, classe | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -15,15 +15,15 @@ helpviewer_keywords:
 - SqlErrorLogFile class
 ms.assetid: bde6c467-38d0-4766-a7af-d6c9d6302b07
 caps.latest.revision: 12
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 95588b82a36bb5d7d5d520a5f54ca968a9198112
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
+ms.openlocfilehash: 65c2eb3758524788d0c65645d3b5736c930d58ac
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36043781"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37204892"
 ---
 # <a name="sqlerrorlogevent-class"></a>Classe SqlErrorLogEvent
   Fournit des propriétés pour l'affichage d'événements dans un fichier journal [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] spécifié.  
@@ -83,7 +83,7 @@ Next
 ```  
   
 ## <a name="comments"></a>Commentaires  
- Lorsque *InstanceName* ou *nom de fichier* ne sont pas fournies dans l’instruction WQL, la requête retourne des informations sur l’instance par défaut et en cours [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fichier journal. Par exemple, l’instruction WQL suivante retournera tous les journaux d’événements à partir du fichier journal actuel (ERRORLOG) sur l’instance par défaut (MSSQLSERVER).  
+ Lorsque *InstanceName* ou *FileName* ne sont pas fournies dans l’instruction WQL, la requête retournera les informations pour l’instance par défaut et actuel [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fichier journal. Par exemple, l’instruction WQL suivante retournera tous les événements du journal à partir du fichier journal actuel (ERRORLOG) sur l’instance par défaut (MSSQLSERVER).  
   
 ```  
 "SELECT * FROM SqlErrorLogEvent"  
@@ -96,12 +96,12 @@ Next
   
 -   Autorisation en lecture sur le dossier qui contient les journaux des erreurs. Par défaut, l’erreur journaux sont situés dans le chemin d’accès suivant (où \< *lecteur >* représente le lecteur où vous avez installé [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et \< *InstanceName*> est le nom de l’instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]) :  
   
-     **\<Lecteur > : \Program Files\Microsoft SQL Server\MSSQL12** **.\< InstanceName > \MSSQL\Log**  
+     **\<Lecteur > : \Program Files\Microsoft SQL Server\MSSQL12** **.\< Nom_instance > \MSSQL\Log**  
   
- Si vous vous connectez via un pare-feu, vérifiez qu'une exception est définie dans le pare-feu pour WMI sur les ordinateurs cibles distants. Pour plus d’informations, consultez [se connecter à WMI à distance avec Windows Vista](http://go.microsoft.com/fwlink/?LinkId=178848).  
+ Si vous vous connectez via un pare-feu, vérifiez qu'une exception est définie dans le pare-feu pour WMI sur les ordinateurs cibles distants. Pour plus d’informations, consultez [connexion à WMI à distance avec Windows Vista](http://go.microsoft.com/fwlink/?LinkId=178848).  
   
 ## <a name="see-also"></a>Voir aussi  
- [Classe SqlErrorLogFile](sqlerrorlogfile-class.md)   
+ [Sqlerrorlogfile, classe](sqlerrorlogfile-class.md)   
  [Afficher les fichiers journaux hors connexion](../logs/view-offline-log-files.md)  
   
   

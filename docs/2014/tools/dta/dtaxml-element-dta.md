@@ -1,5 +1,5 @@
 ---
-title: DTAXML, élément (DTA) | Documents Microsoft
+title: DTAXML, élément (DTA) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - XML
 helpviewer_keywords:
 - DTAXML element
 ms.assetid: 3d9942ed-8a27-40db-a7c9-808984d914a2
 caps.latest.revision: 18
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: c521ec45d5b9227d53fcc9f39b59301ba18b7e69
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: d460721fd138c0629322687b1160b8c75cdd0cfa
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36050962"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37177136"
 ---
 # <a name="dtaxml-element-dta"></a>DTAXML, élément (Assistant Paramétrage de base de données)
   Élément racine d'un fichier d'entrée ou de sortie de l'Assistant Paramétrage du moteur de base de données, **DTAXML** contient tous les éléments qui décrivent les entrées et les sorties de paramétrage générées par l'Assistant Paramétrage du moteur de base de données.  
@@ -59,7 +59,7 @@ ms.locfileid: "36050962"
 |Relation|Éléments|  
 |------------------|--------------|  
 |**Élément parent**|None|  
-|**Éléments enfants**|[DTAInput, élément &#40;DTA&#41;](dtainput-element-dta.md)<br /><br /> `DTAOutput` Élément (consultez [base de données Engine Tuning Advisor XML schema](http://schemas.microsoft.com/sqlserver/) pour plus d’informations)|  
+|**Éléments enfants**|[DTAInput, élément &#40;DTA&#41;](dtainput-element-dta.md)<br /><br /> `DTAOutput` Élément (consultez [Database Engine Tuning Advisor XML schema](http://schemas.microsoft.com/sqlserver/) pour plus d’informations)|  
   
 ## <a name="remarks"></a>Notes  
  Pour plus d'informations sur les espaces de noms XML, consultez l'article [Namespaces in an XML Document](http://go.microsoft.com/fwlink/?LinkId=7341) dans la bibliothèque [!INCLUDE[msCoName](../../includes/msconame-md.md)] MSDN.  
@@ -68,7 +68,7 @@ ms.locfileid: "36050962"
  Pour obtenir des exemples d’éléments **DTAXML** caractéristiques, consultez [Exemples de fichiers d’entrée XML &#40;DTA&#41;](xml-input-file-samples-dta.md).  
   
 ## <a name="see-also"></a>Voir aussi  
- [Référence de fichier d’entrée XML &#40;Assistant Paramétrage du moteur de base de données&#41;](xml-input-file-reference-database-engine-tuning-advisor.md)   
+ [Référence du fichier d’entrée XML &#40;Assistant Paramétrage du moteur de base de données&#41;](xml-input-file-reference-database-engine-tuning-advisor.md)   
  [Démarrer et utiliser l’Assistant Paramétrage du moteur de base de données](../../relational-databases/performance/start-and-use-the-database-engine-tuning-advisor.md)  
   
   

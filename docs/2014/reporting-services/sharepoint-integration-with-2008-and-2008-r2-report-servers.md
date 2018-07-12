@@ -1,5 +1,5 @@
 ---
-title: Intégration de SharePoint avec 2008 et 2008 R2 les serveurs de rapports | Documents Microsoft
+title: Intégration de SharePoint avec 2008 et 2008 R2 les serveurs de rapports | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: d9f51c37-b071-45d0-baec-f82fa6db366f
 caps.latest.revision: 7
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 807978ec516f065f8bb2e219c33863e89c7fa2c7
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 05f67d9ab20df69a7d2232cbbad49f7a16b9db5c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36050985"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37168066"
 ---
 # <a name="sharepoint-integration-with-2008-and-2008-r2--report-servers"></a>Intégration de SharePoint aux serveurs de rapports 2008 et 2008 R2
-  La version [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] de [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] a introduit une architecture où le mode SharePoint est désormais basé sur un service partagé SharePoint. Gestion de la nouvelle fonctionnalité s’effectue dans l’administration centrale de SharePoint sur le **gérer les Services** et **les Applications de Service Manager** pages. Le [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] précédente architecture pour l’intégration SharePoint est toujours prise en charge avec la [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] complément pour les produits SharePoint 2010 afin de vous pouvez intégrer SharePoint 2010 avec les versions précédentes d’un serveur de rapports.  
+  La version [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] de [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] a introduit une architecture où le mode SharePoint est désormais basé sur un service partagé SharePoint. Gestion de la nouvelle fonctionnalité a été effectuée dans administration centrale de SharePoint sur le **gérer les Services** et **Applications de Service Manager** pages. Le [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] précédente architecture pour l’intégration SharePoint est toujours pris en charge avec le [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] complément pour les produits SharePoint 2010 vous pouvez donc intégrer SharePoint 2010 avec les versions précédentes d’un serveur de rapports.  
   
  Les pages de l'Administration centrale de SharePoint que utilisez pour administrer l'ancienne architecture se trouvent dans les éléments suivants :  
   

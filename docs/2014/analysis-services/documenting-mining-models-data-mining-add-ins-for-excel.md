@@ -1,5 +1,5 @@
 ---
-title: Documenter les modèles d’exploration de données (Data Mining Add-ins pour Excel) | Documents Microsoft
+title: Documentation des modèles d’exploration de données (Data Mining Add-ins pour Excel) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - documenting models
 - mining structures, managing
@@ -16,30 +16,30 @@ helpviewer_keywords:
 - model properties
 ms.assetid: 0a663e11-e40c-4708-ad18-fabb6c976fa4
 caps.latest.revision: 18
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: a093deb3764c154ae45596ad64d2805aa6d00d88
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 6f605fd2ef1e0aafad5b34a2b74c12fc95be6ef7
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36044864"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37167710"
 ---
 # <a name="documenting-mining-models-data-mining-add-ins-for-excel"></a>Modèles de documentation de l'exploration de données (Compléments d'exploration de données pour Excel)
   ![Bouton modèle de document, ruban Exploration de données](media/dmc-docmodel.gif "bouton modèle de Document, ruban Exploration de données")  
   
- Le **Document modèle** Assistant crée un rapport qui fournit des informations utiles sur les modèles d’exploration de données que vous avez créés. En documentant les modèles que vous créez, vous pouvez effectuer le suivi de la source des données utilisée pour générer un modèle, obtenir des informations supplémentaires quant au moment où le modèle a été traité et assurer le suivi des modifications des paramètres qui affectent les résultats du modèle.  
+ Le **Document modèle** Assistant crée un rapport qui fournit des informations utiles sur les modèles d’exploration de données que vous avez créé. En documentant les modèles que vous créez, vous pouvez effectuer le suivi de la source des données utilisée pour générer un modèle, obtenir des informations supplémentaires quant au moment où le modèle a été traité et assurer le suivi des modifications des paramètres qui affectent les résultats du modèle.  
   
 ## <a name="using-the-document-model-wizard"></a>Utilisation de l'Assistant Modèle de document  
   
 1.  Cliquez sur le **d’exploration de données** onglet.  
   
-2.  Dans le **l’utilisation du modèle** , cliquez sur **modèle de Document**.  
+2.  Dans le **l’utilisation du modèle** de groupe, cliquez sur **Document modèle**.  
   
 3.  Dans le **sélectionner un modèle** boîte de dialogue, sélectionnez le modèle sur lequel au rapport, puis cliquez sur **suivant**. Vous devez exécuter le **Document modèle** Assistant séparément pour chaque modèle que vous souhaitez documenter.  
   
-4.  Dans le **sélectionner les détails de la documentation** boîte de dialogue, choisissez une des deux options : **complétez** ou **des informations de synthèse**.  
+4.  Dans le **sélectionner les détails de la documentation** boîte de dialogue, sélectionnez une des deux options : **complétez** ou **des informations de synthèse**.  
   
 5.  Cliquez sur **Terminer**.  
   
@@ -79,7 +79,7 @@ ms.locfileid: "36044864"
 ||Colonnes discrètes|Nombre de succès<br /><br /> Nombre d'échecs<br /><br /> Score du journal<br /><br /> Finesse|  
   
 > [!NOTE]  
->  Vous pouvez documenter tout type modèle pris en charge par SQL Server Analysis Services. Par conséquent, le tableau répertorie certains types de modèles qui ne peuvent pas être créés à l'aide des outils d'analyse de table ou des Assistants du client d'exploration de données. Toutefois, vous pouvez créer tous les types de modèle à l’aide de la **éditeur de requêtes d’exploration de données avancé**. Pour plus d’informations, consultez [requête &#40;des compléments d’exploration de données SQL Server&#41;](query-sql-server-data-mining-add-ins.md).  
+>  Vous pouvez documenter tout type modèle pris en charge par SQL Server Analysis Services. Par conséquent, le tableau répertorie certains types de modèles qui ne peuvent pas être créés à l'aide des outils d'analyse de table ou des Assistants du client d'exploration de données. Toutefois, vous pouvez créer tous les types de modèle à l’aide de la **éditeur de requêtes d’exploration de données avancé**. Pour plus d’informations, consultez [requête &#40;SQL Server Data Mining Add-ins&#41;](query-sql-server-data-mining-add-ins.md).  
   
 ## <a name="see-also"></a>Voir aussi  
  [Déploiement et mise à l’échelle des modèles d’exploration de données &#40;les données des compléments d’exploration de données pour Excel&#41;](deploying-and-scaling-mining-models-data-mining-add-ins-for-excel.md)  

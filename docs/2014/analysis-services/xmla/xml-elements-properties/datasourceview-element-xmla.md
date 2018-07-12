@@ -1,5 +1,5 @@
 ---
-title: Élément DataSourceView (XMLA) | Documents Microsoft
+title: Élément DataSourceView (XMLA) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -24,18 +24,18 @@ helpviewer_keywords:
 - DataSourceView element
 ms.assetid: c4a4360f-7342-484b-bac1-0a247e8f279d
 caps.latest.revision: 12
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: 2492232f892dd9f02b84bb50f5ddb7a4415c60e6
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: 7f230cf653a6435c7f9bb541c6e3cb39615efe42
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36045232"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37211809"
 ---
 # <a name="datasourceview-element-xmla"></a>Élément DataSourceView (XMLA)
-  Contient une vue de source de données hors ligne pour le parent de liaison [lot](../xml-elements-commands/batch-element-xmla.md) ou [processus](../xml-elements-commands/process-element-xmla.md) élément.  
+  Contient une vue de source de données hors ligne pour le parent de liaison [Batch](../xml-elements-commands/batch-element-xmla.md) ou [processus](../xml-elements-commands/process-element-xmla.md) élément.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -67,7 +67,7 @@ ms.locfileid: "36045232"
 |Éléments enfants|[DatabaseID](id-element-xmla.md), [DataSourceViewID](../../scripting/properties/id-element-assl.md)|  
   
 ## <a name="remarks"></a>Notes  
- Le `DataSourceView` élément représente une liaison hors ligne pour une vue de source de données, utilisée par le `Batch` ou `Process` commande pour remplacer temporairement la vue de source de données pour la liaison [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] objets traité par la commande.  
+ Le `DataSourceView` élément représente une liaison hors ligne pour une vue de source de données, utilisée par le `Batch` ou `Process` command to tempouarily override la vue de source de données pour la liaison [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] objets traités par la commande.  
   
  Pour plus d’informations sur les liaisons hors ligne, consultez [des Sources de données et des liaisons &#40;multidimensionnels SSAS&#41;](../../multidimensional-models/data-sources-and-bindings-ssas-multidimensional.md).  
   

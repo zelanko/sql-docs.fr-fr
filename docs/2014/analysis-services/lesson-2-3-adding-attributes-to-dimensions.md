@@ -1,5 +1,5 @@
 ---
-title: Ajout d’attributs aux Dimensions | Documents Microsoft
+title: Ajout d’attributs aux Dimensions | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 80551dad-97ac-40d0-90af-b810780321ce
 caps.latest.revision: 15
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: jhubbard
-ms.openlocfilehash: 7718d6af1f7a33dc02960e2228903b36deb19582
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 19fdf91a124a02da60e91c28a6f6be42fd5f2e42
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36043964"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37198489"
 ---
 # <a name="adding-attributes-to-dimensions"></a>Ajout d'attributs aux dimensions
   Une fois les dimensions définies, vous pouvez les remplir avec les attributs qui représentent chaque élément de données dans la dimension. Les attributs reposent généralement sur les champs d'une vue de source de données. Lorsque vous ajoutez des attributs à une dimension, vous pouvez inclure des champs de n'importe quelle table dans la vue de source de données.  
@@ -127,7 +127,7 @@ ms.locfileid: "36043964"
 5.  Dans le menu Fichier, cliquez sur **Enregistrer tout**.  
   
 ## <a name="next-task-in-lesson"></a>Tâche suivante de la leçon  
- [Vérification des propriétés de la Dimension et de Cube](lesson-2-4-reviewing-cube-and-dimension-properties.md)  
+ [Vérification des propriétés de cube et de dimension](lesson-2-4-reviewing-cube-and-dimension-properties.md)  
   
 ## <a name="see-also"></a>Voir aussi  
  [Référence des propriétés d’attribut de dimension](multidimensional-models/dimension-attribute-properties-reference.md)  

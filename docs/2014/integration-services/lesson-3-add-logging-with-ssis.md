@@ -1,5 +1,5 @@
 ---
-title: 'Leçon 3 : Ajout de la journalisation | Documents Microsoft'
+title: 'Leçon 3 : Ajout de la journalisation | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 64cd24cc-ba8e-4bd7-b10b-6b80d8b04af6
 caps.latest.revision: 24
-author: douglaslM
+author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: be6cb6bb8edfa30ee33ed0431dbf33f11470cd0b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: c4ad03f67a8a386b3c42697d1060910c277580c3
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36051082"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37164876"
 ---
 # <a name="lesson-3-adding-logging"></a>Leçon 3 : Ajout du mode d'écriture dans un journal
   [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] inclut des fonctions d'écriture dans un journal pour dépanner et contrôler l'exécution du package, lesquelles fournissent une trace des tâches et des événements de conteneur. Les fonctions d'écriture dans un journal sont d'une utilisation souple et peuvent être activées au niveau du package ou de tâches et de conteneurs spécifiques au sein du package. Vous pouvez sélectionner les événements à enregistrer et créer plusieurs journaux pour un seul package.  
@@ -44,13 +44,13 @@ ms.locfileid: "36051082"
 ## <a name="lesson-tasks"></a>Tâches de la leçon  
  Cette leçon contient les tâches suivantes :  
   
--   [Étape 1 : Copie du Package de la leçon 2](lesson-3-1-copying-the-lesson-2-package.md)  
+-   [Étape 1 : Copie du package de la leçon 2](lesson-3-1-copying-the-lesson-2-package.md)  
   
--   [Étape 2 : Ajout et configuration de la journalisation](lesson-3-2-adding-and-configuring-logging.md)  
+-   [Étape 2 : Ajout et configuration de la journalisation](lesson-3-2-adding-and-configuring-logging.md)  
   
 -   [Étape 3 : Test de la leçon 3 du package du didacticiel](../integration-services/lesson-3-3-testing-the-lesson-3-tutorial-package.md)  
   
 ## <a name="start-the-lesson"></a>Démarrer la leçon  
- [Étape 1 : Copie du Package de la leçon 2](lesson-3-1-copying-the-lesson-2-package.md)  
+ [Étape 1 : Copie du package de la leçon 2](lesson-3-1-copying-the-lesson-2-package.md)  
   
   

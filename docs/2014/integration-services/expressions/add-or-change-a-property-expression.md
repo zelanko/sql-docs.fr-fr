@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - expressions [Integration Services], creating
 - expressions [Integration Services], property expressions
@@ -16,13 +16,13 @@ ms.assetid: cb5da499-065f-4fa6-9f6d-5bc5f385241e
 caps.latest.revision: 27
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 6cc84205d1c9190028ad89df64808d3bdea9396a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 147daa2f1e58d636b460921f5a50a987e92a156e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36044766"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37187057"
 ---
 # <a name="add-or-change-a-property-expression"></a>Ajouter ou modifier une expression de propriété
   Vous pouvez créer des expressions de propriété pour les packages, les tâches, les conteneurs de boucles For ou Foreach, les conteneurs de séquences, les gestionnaires d'événements, les gestionnaires de connexions aux niveaux des packages et du projet, ainsi que les modules fournisseurs d'informations.  
@@ -71,7 +71,7 @@ ms.locfileid: "36044766"
 ## <a name="see-also"></a>Voir aussi  
  [Expressions Integration Services &#40;SSIS&#41;](integration-services-ssis-expressions.md)   
  [Utiliser des Expressions de propriété dans des Packages](use-property-expressions-in-packages.md)   
- [Services d’intégration &#40;SSIS&#41; Packages](../integration-services-ssis-packages.md)   
+ [Integration Services &#40;SSIS&#41; Packages](../integration-services-ssis-packages.md)   
  [Conteneurs Integration Services](../control-flow/integration-services-containers.md)   
  [Tâches Integration Services](../control-flow/integration-services-tasks.md)   
  [Gestionnaires d’événements Integration Services &#40;SSIS&#41](../integration-services-ssis-event-handlers.md)   

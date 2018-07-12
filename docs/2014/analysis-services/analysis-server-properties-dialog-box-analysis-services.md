@@ -1,5 +1,5 @@
 ---
-title: Boîte de dialogue Propriétés de Analysis Server (Analysis Services) | Documents Microsoft
+title: Boîte de dialogue Propriétés de Analysis Server (Analysis Services) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - SQL12.ASVS.SSMSIMBI.SERVERPROPERTIES.F1
 - SQL12.ASVS.SQLSERVERSTUDIO.SERVERPROPERTIES.F1
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - Analysis Server Properties dialog box
 ms.assetid: b01ec658-c191-49c9-a6cb-549b21a368ab
 caps.latest.revision: 21
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 60183e1c37a7e94b4b3b88239b837530ef81826c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 8e3dfe081a2400c795b8c0bd08a5667eaa996268
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36043028"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37260013"
 ---
 # <a name="analysis-server-properties-dialog-box-analysis-services"></a>Boîte de dialogue Propriétés de Analysis Server (Analysis Services)
   Utilisez la boîte de dialogue **Propriétés de Analysis Server** dans [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] pour définir les paramètres généraux, de langue/classement et de sécurité d’une instance [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. Pour afficher la boîte de dialogue **Propriétés de Analysis Server**, cliquez avec le bouton droit de la souris sur une instance [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] dans **l’Explorateur d’objets**, puis sélectionnez **Propriétés** dans le menu contextuel. Cette boîte de dialogue **Propriétés de Analysis Server** contient les propriétés suivantes.  
@@ -32,7 +32,7 @@ ms.locfileid: "36043028"
 ## <a name="information-properties"></a>Propriétés d'informations  
  Utilisez cette page pour afficher le mode serveur, la version et le niveau de compatibilité. Chaque instance est installée en mode serveur multidimensionnel ou tabulaire, avec la possibilité de charger des modèles multidimensionnels ou tabulaires. Si vous devez prendre en charge les deux modes, vous devez installer deux instances.  
   
- **Prise en charge de niveau de compatibilité** est équivalente à la `DefaultCompatibilityLevel` dans AMO. En lecture seule, en fonction du mode de déploiement du serveur spécifié au cours de l'installation. Le serveur vérifie cette propriété lors de la réalisation d'opérations qui varient en fonction de la version ou du mode serveur, telles que la restauration d'une sauvegarde de base de données tabulaire sur une instance de serveur tabulaire. Ne confondez pas cette propriété avec le mode de compatibilité de base de données des modèles tabulaires ou multidimensionnels, qui présentent des noms et des valeurs similaires. Les valeurs valides pour cette propriété de serveur sont les suivantes :  
+ **Niveau de compatibilité pris en charge** est équivalente à la `DefaultCompatibilityLevel` propriété dans AMO. En lecture seule, en fonction du mode de déploiement du serveur spécifié au cours de l'installation. Le serveur vérifie cette propriété lors de la réalisation d'opérations qui varient en fonction de la version ou du mode serveur, telles que la restauration d'une sauvegarde de base de données tabulaire sur une instance de serveur tabulaire. Ne confondez pas cette propriété avec le mode de compatibilité de base de données des modèles tabulaires ou multidimensionnels, qui présentent des noms et des valeurs similaires. Les valeurs valides pour cette propriété de serveur sont les suivantes :  
   
 -   **1100** est le niveau de compatibilité par défaut pour un mode de déploiement de 0, pour le mode multidimensionnel ou d'exploration de données.  
   
@@ -81,7 +81,7 @@ ms.locfileid: "36043028"
   
 -   **Respecter la casse** permet de trier et de comparer les données d’après les règles du dictionnaire de la langue ou de l’alphabet associé, et de faire la distinction entre les majuscules et les minuscules.  
   
-     Si cette option n'est pas sélectionnée, [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] considère qu'il n'y a pas de différences entre les lettres majuscules et minuscules. [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] ne définit pas si les lettres minuscules doivent être triées avant ou après majuscules les lettres quand **respectant la casse** n’est pas sélectionnée.  
+     Si cette option n'est pas sélectionnée, [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] considère qu'il n'y a pas de différences entre les lettres majuscules et minuscules. [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] ne définit pas si les lettres minuscules doivent être triées avant ou après en majuscules les lettres quand **respect de la casse** n’est pas sélectionnée.  
   
 -   **Respecter les accents** permet de trier et de comparer les données d’après les règles du dictionnaire de la langue ou de l’alphabet associé, et de faire la distinction entre les lettres accentuées ou non. Par exemple, « a » n'est pas équivalent à « á ».  
   
@@ -96,7 +96,7 @@ ms.locfileid: "36043028"
      Si cette option n’est pas sélectionnée, [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] considère que les représentations d’un même caractère sur un octet et sur deux octets sont égales.  
   
 ## <a name="security-properties"></a>Propriétés de sécurité  
- Cette page permet d'indiquer les comptes d'utilisateur et de groupe Windows appartenant au rôle d'administrateur du serveur pour toute instance [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] . L'appartenance à ce rôle permet d'exécuter des tâches sur le serveur, comme créer ou traiter une base de données, modifier des propriétés du serveur, ajouter ou supprimer d'autres membres de ce rôle ou lancer une trace. Consultez [accorder des autorisations d’administrateur de serveur &#40;Analysis Services&#41; ](instances/grant-server-admin-rights-to-an-analysis-services-instance.md) pour plus d’informations.  
+ Cette page permet d'indiquer les comptes d'utilisateur et de groupe Windows appartenant au rôle d'administrateur du serveur pour toute instance [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] . L'appartenance à ce rôle permet d'exécuter des tâches sur le serveur, comme créer ou traiter une base de données, modifier des propriétés du serveur, ajouter ou supprimer d'autres membres de ce rôle ou lancer une trace. Consultez [accorder des autorisations administrateur du serveur &#40;Analysis Services&#41; ](instances/grant-server-admin-rights-to-an-analysis-services-instance.md) pour plus d’informations.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Déterminer le Mode de serveur d’une Instance Analysis Services](instances/determine-the-server-mode-of-an-analysis-services-instance.md)   

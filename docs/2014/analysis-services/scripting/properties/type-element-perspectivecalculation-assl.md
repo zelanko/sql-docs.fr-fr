@@ -1,5 +1,5 @@
 ---
-title: Type d’élément (PerspectiveCalculation) (ASSL) | Documents Microsoft
+title: Type d’élément (PerspectiveCalculation) (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - Type element
 ms.assetid: d7b87aea-3265-4f3c-a7ee-4f3e90f9a0b7
 caps.latest.revision: 33
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 242d4d779da87c155371047fd2bb21128da51abf
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 7d95f248e6991b8386ce9f6b4a2c012057c42ef4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36043450"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37229569"
 ---
 # <a name="type-element-perspectivecalculation-assl"></a>Élément Type (PerspectiveCalculation) (ASSL)
   Indique le type de la [PerspectiveCalculation](../data-type/perspectivecalculation-data-type-assl.md) élément.  
@@ -67,11 +67,11 @@ ms.locfileid: "36043450"
 |Valeur|Description|  
 |-----------|-----------------|  
 |*Membre*|membre calculé|  
-|*ensemble*|Jeu nommé|  
+|*Ensemble*|Jeu nommé|  
   
- L’énumération qui correspond aux valeurs autorisées pour `Type` dans l’objet d’objets AMO (Analysis Management) est modèle <xref:Microsoft.AnalysisServices.PerspectiveCalculationType>.  
+ L’énumération qui correspond aux valeurs autorisées pour `Type` dans l’objet d’objets AMO (Analysis Management) modèle est <xref:Microsoft.AnalysisServices.PerspectiveCalculationType>.  
   
- L’élément qui correspond au parent de `Type` dans l’objet d’objets AMO (Analysis Management) est modèle <xref:Microsoft.AnalysisServices.PerspectiveCalculation>.  
+ L’élément qui correspond au parent de `Type` dans l’objet d’objets AMO (Analysis Management) modèle est <xref:Microsoft.AnalysisServices.PerspectiveCalculation>.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Propriétés &#40;ASSL&#41;](properties-assl.md)  

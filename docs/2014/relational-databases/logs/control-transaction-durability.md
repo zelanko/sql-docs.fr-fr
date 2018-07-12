@@ -5,10 +5,9 @@ ms.date: 05/19/2016
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-transaction-log
+ms.technology: ''
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 applies_to:
 - SQL Server 2014
 helpviewer_keywords:
@@ -16,15 +15,15 @@ helpviewer_keywords:
 - Lazy Commit
 ms.assetid: 3ac93b28-cac7-483e-a8ab-ac44e1cc1c76
 caps.latest.revision: 21
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: b7f1393d97323a201022b4bd65066ed4cf3a49bb
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: f4cf9c51abaaadff50a0dcc9b856eea0f6e76a57
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36044238"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37201499"
 ---
 # <a name="control-transaction-durability"></a>Contrôler la durabilité d'une transaction
   Les validations de transactions[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] peuvent avoir une durabilité complète, la durabilité par défaut de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou une durabilité retardée (également appelée Validation différée).  
@@ -48,7 +47,7 @@ ms.locfileid: "36044238"
   
  **Garanties offertes par la durabilité complète des transactions**  
   
--   Une fois qu'une transaction a été validée, les modifications apportées par la transaction sont visibles par les autres transactions du système. Consultez la rubrique [niveaux d’Isolation des transactions](../../database-engine/transaction-isolation-levels.md) pour plus d’informations.  
+-   Une fois qu'une transaction a été validée, les modifications apportées par la transaction sont visibles par les autres transactions du système. Consultez la rubrique [Transaction Isolation Levels](../../database-engine/transaction-isolation-levels.md) pour plus d’informations.  
   
 -   La durabilité est garantie lors de la validation. Les enregistrements de journal correspondants sont conservés sur le disque jusqu'à ce que la transaction soit validée et que le contrôle soit restitué au client.  
   
@@ -69,13 +68,13 @@ ms.locfileid: "36044238"
  **Vous pouvez tolérer une perte de données.**  
  Si vous tolérez la perte de certaines données, par exemple des enregistrements qui ne sont pas indispensables tant que vous disposez de la majeure partie des données, il peut être intéressant d'utiliser la durabilité retardée. Si, en revanche, vous ne tolérez aucune perte de données, n'utilisez pas la durabilité retardée des transactions.  
   
- **Vous rencontrez un goulot d’étranglement sur les écritures du journal des transactions.**  
+ **Vous rencontrez un goulot d’étranglement sur les écritures de journal de transaction.**  
  Si les problèmes de performances sont attribuables à une latence dans les écritures du journal de transactions, votre application bénéficiera probablement de l'utilisation de la durabilité retardée des transactions.  
   
- **Vos charges de travail ont un taux de contention élevé.**  
+ **Vos charges de travail présentent une contention élevé.**  
  Si votre système a des charges de travail présentant un haut degré de contention, beaucoup de temps est perdu à attendre la libération de verrous. La durabilité retardée des transactions réduit la durée de validation. De ce fait, les verrous sont libérés plus rapidement, ce qui se traduit par un débit supérieur.  
   
- **Retardée des garanties de durabilité des transactions**  
+ **Retardée des garanties de durabilité de Transaction**  
   
 -   Une fois qu'une transaction a été validée, les modifications apportées par la transaction sont visibles par les autres transactions du système.  
   
@@ -182,13 +181,13 @@ COMMIT [ { TRAN | TRANSACTION } ] [ transaction_name | @tran_name_variable ] ] [
  **Récupération sur incident**  
  La cohérence est garantie, mais certaines modifications des transactions à durabilité retardée qui ont été validées peuvent être perdues.  
   
- **Les transactions distribuées et les bases de données croisées**  
+ **Bases de données croisées et DTC**  
  Les transactions distribuées ou de bases de données croisées ont une durabilité complète, quel que soit le paramètre de validation des bases de données ou des transactions.  
   
- **Toujours sur les groupes de disponibilité et de la mise en miroir**  
+ **Toujours sur les groupes de disponibilité et la mise en miroir**  
  Les transactions à durabilité retardée ne garantissent aucune durabilité sur le réplica principal ni sur les réplicas secondaires. En outre, elles ne garantissent aucune information sur la transaction au niveau du réplica secondaire. Après une validation (COMMIT), le contrôle est restitué au client avant qu'un accusé de réception (ACK) ne soit reçu d'un réplica synchrone secondaire.  
   
- **clustering de basculement**  
+ **Clustering de basculement**  
  Certaines écritures de transactions à durabilité retardée peuvent être perdues.  
   
  **Réplication des transactions**  
@@ -210,7 +209,7 @@ COMMIT [ { TRAN | TRANSACTION } ] [ transaction_name | @tran_name_variable ] ] [
  Pour une durabilité retardée, il n'y a pas de différence entre un arrêt inattendu et un arrêt/redémarrage attendu de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Comme pour les événements graves, vous devez prévoir une perte de données. Dans un arrêt/redémarrage planifié, certaines transactions qui n'ont pas été écrites sur disque peuvent tout d'abord l'être, mais vous ne pouvez pas planifier cela. La planification comme pour un arrêt/redémarrage, planifiée ou non, entraîne la perte de données comme pour un événement grave.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Niveaux d’Isolation des transactions](../../database-engine/transaction-isolation-levels.md)   
- [Recommandations pour les niveaux d’Isolation des transactions avec des Tables optimisées en mémoire](../in-memory-oltp/memory-optimized-tables.md)  
+ [Niveaux d’Isolation de transaction](../../database-engine/transaction-isolation-levels.md)   
+ [Instructions pour les niveaux d’isolement des transactions sur les tables à mémoire optimisée](../in-memory-oltp/memory-optimized-tables.md)  
   
   

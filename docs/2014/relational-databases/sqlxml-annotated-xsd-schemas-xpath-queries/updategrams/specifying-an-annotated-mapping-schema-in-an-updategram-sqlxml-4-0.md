@@ -1,5 +1,5 @@
 ---
-title: Spécification d’un schéma de mappage annoté dans une mise à jour (SQLXML 4.0) | Documents Microsoft
+title: Spécification d’un schéma de mappage annoté dans une mise à jour (SQLXML 4.0) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -22,33 +22,33 @@ helpviewer_keywords:
 - sql:inverse
 ms.assetid: 2e266ed9-4cfb-434a-af55-d0839f64bb9a
 caps.latest.revision: 25
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 5bba718cbb6fd94fc6e50fda3fa423736aeb7a03
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 8a0b51a249b42dccd2ba6b3838720ed9fd68badc
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36044913"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37240489"
 ---
 # <a name="specifying-an-annotated-mapping-schema-in-an-updategram-sqlxml-40"></a>Spécification d'un schéma de mappage annoté dans un code de mise à jour (updategram) (SQLXML 4.0)
-  Cette rubrique explique comment le schéma de mappage (XSD ou XDR) spécifié dans un code de mise à jour est utilisé pour traiter les mises à jour. Dans une mise à jour, vous pouvez fournir le nom d’un schéma de mappage annotés à utiliser lors du mappage des éléments et attributs dans la mise à jour aux tables et colonnes dans [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Lorsqu'un schéma de mappage est spécifié dans un code de mise à jour, les noms d'élément et d'attribut spécifiés dans le code de mise à jour doivent être mappés aux éléments et aux attributs dans le schéma de mappage.  
+  Cette rubrique explique comment le schéma de mappage (XSD ou XDR) spécifié dans un code de mise à jour est utilisé pour traiter les mises à jour. Dans une mise à jour, vous pouvez fournir le nom d’un schéma de mappage annoté à utiliser lors du mappage des éléments et attributs dans la mise à jour aux tables et colonnes dans [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Lorsqu'un schéma de mappage est spécifié dans un code de mise à jour, les noms d'élément et d'attribut spécifiés dans le code de mise à jour doivent être mappés aux éléments et aux attributs dans le schéma de mappage.  
   
- Pour spécifier un schéma de mappage, vous utilisez la `mapping-schema` attribut de la  **\<synchronisation >** élément. Les exemples suivants présentent deux codes de mise à jour : l'un utilise un schéma de mappage simple et l'autre utilise un schéma plus complexe.  
+ Pour spécifier un schéma de mappage, vous utilisez le `mapping-schema` attribut de la  **\<synchronisation >** élément. Les exemples suivants présentent deux codes de mise à jour : l'un utilise un schéma de mappage simple et l'autre utilise un schéma plus complexe.  
   
 > [!NOTE]  
->  Cette documentation suppose une connaissance suffisante des modèles et de la prise en charge des schémas de mappage dans [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Pour plus d’informations, consultez [Introduction aux schémas de XSD annoté &#40;SQLXML 4.0&#41;](../../sqlxml/annotated-xsd-schemas/introduction-to-annotated-xsd-schemas-sqlxml-4-0.md). Pour les applications héritées qui utilisent XDR, consultez [de schémas XDR annotés &#40;déconseillé dans SQLXML 4.0&#41;](../../sqlxml/annotated-xsd-schemas/annotated-xdr-schemas-deprecated-in-sqlxml-4-0.md).  
+>  Cette documentation suppose une connaissance suffisante des modèles et de la prise en charge des schémas de mappage dans [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Pour plus d’informations, consultez [Introduction aux schémas XSD annotés &#40;SQLXML 4.0&#41;](../../sqlxml/annotated-xsd-schemas/introduction-to-annotated-xsd-schemas-sqlxml-4-0.md). Pour les applications héritées qui utilisent XDR, consultez [de schémas XDR annotés &#40;déconseillé dans SQLXML 4.0&#41;](../../sqlxml/annotated-xsd-schemas/annotated-xdr-schemas-deprecated-in-sqlxml-4-0.md).  
   
 ## <a name="dealing-with-data-types"></a>Traitement des types de données  
- Si le schéma spécifie la `image`, `binary`, ou `varbinary` [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] type de données (à l’aide de `sql:datatype`) et ne spécifie pas un type de données XML, le code de mise part du principe que le type de données XML est `binary base 64`. Si vos données sont du type `bin.base`, vous devez spécifier explicitement le type (`dt:type=bin.base` ou `type="xsd:hexBinary"`).  
+ Si le schéma spécifie le `image`, `binary`, ou `varbinary` [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] type de données (à l’aide de `sql:datatype`) et ne spécifie pas un type de données XML, la mise à jour part du principe que le type de données XML est `binary base 64`. Si vos données sont du type `bin.base`, vous devez spécifier explicitement le type (`dt:type=bin.base` ou `type="xsd:hexBinary"`).  
   
  Si le schéma spécifie le type de données XSD `dateTime`, `date` ou `time`, vous devez également spécifier le type de données [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] correspondant en utilisant `sql:datatype="dateTime"`.  
   
  Lors de la gestion des paramètres de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] `money` type, vous devez spécifier explicitement `sql:datatype="money"` sur le nœud approprié dans le schéma de mappage.  
   
 ## <a name="examples"></a>Exemples  
- Pour créer des exemples fonctionnels à l’aide de la procédure ci-après, vous devez respecter la configuration requise spécifiée dans [configuration requise pour exécuter les exemples de SQLXML](../../sqlxml/requirements-for-running-sqlxml-examples.md).  
+ Pour créer des exemples de travail utilisant les exemples suivants, vous devez respecter les exigences spécifiées dans [configuration requise pour exécuter les exemples de SQLXML](../../sqlxml/requirements-for-running-sqlxml-examples.md).  
   
 ### <a name="a-creating-an-updategram-with-a-simple-mapping-schema"></a>A. Création d'un code de mise à jour avec un schéma de mappage simple  
  Le schéma XSD suivant (SampleSchema.xml) est un schéma de mappage qui mappe le  **\<client >** élément à la table Sales.Customer :  
@@ -69,7 +69,7 @@ ms.locfileid: "36044913"
 </xsd:schema>  
 ```  
   
- Le code de mise à jour suivant insère un enregistrement dans la table Sales.Customer et compte sur le schéma de mappage précédent pour mapper correctement ces données à la table. Notez que la mise à jour utilise le même nom d’élément,  **\<client >**, comme défini dans le schéma. C'est absolument essentiel dans la mesure où le code de mise à jour spécifie un schéma particulier.  
+ Le code de mise à jour suivant insère un enregistrement dans la table Sales.Customer et compte sur le schéma de mappage précédent pour mapper correctement ces données à la table. Notez que la mise à jour utilise le même nom d’élément,  **\<client >**, tel que défini dans le schéma. C'est absolument essentiel dans la mesure où le code de mise à jour spécifie un schéma particulier.  
   
 ##### <a name="to-test-the-updategram"></a>Pour tester le code de mise à jour  
   
@@ -237,7 +237,7 @@ ms.locfileid: "36044913"
 ### <a name="c-inserting-a-record-by-using-the-parent-child-relationship-and-inverse-annotation-specified-in-the-xsd-schema"></a>C. Insertion d'un enregistrement à l'aide de la relation parent-enfant et de l'annotation inverse spécifiées dans le schéma XSD  
  Cet exemple montre comment la logique du code de mise à jour utilise la relation parent-enfant spécifiée dans le schéma XSD pour traiter des mises à jour, et comment l'annotation `inverse` est utilisée. Pour plus d’informations sur la `inverse` annotation, consultez [spécifiant l’attribut SQL : inverse sur SQL : Relationship &#40;SQLXML 4.0&#41;](../../sqlxml-annotated-xsd-schemas-using/specifying-the-sql-inverse-attribute-on-sql-relationship-sqlxml-4-0.md).  
   
- Cet exemple suppose que les tableaux suivants se trouvent dans le **tempdb** base de données :  
+ Cet exemple suppose que les tableaux suivants sont dans le **tempdb** base de données :  
   
 -   `Cust (CustomerID, CompanyName)`, où `CustomerID` est la clé primaire  
   
@@ -278,7 +278,7 @@ ms.locfileid: "36044913"
 </xsd:schema>  
 ```  
   
- Le schéma XSD dans cet exemple a  **\<client >** et  **\<ordre >** éléments et spécifie une relation parent-enfant entre les deux éléments. Il identifie  **\<ordre >** en tant que l’élément parent et  **\<client >** comme élément enfant.  
+ Le schéma XSD dans cet exemple a  **\<client >** et  **\<ordre >** éléments et spécifie une relation parent-enfant entre les deux éléments. Il identifie  **\<ordre >** comme élément parent et  **\<client >** comme élément enfant.  
   
  La logique de traitement du code de mise à jour utilise les informations relatives à la relation parent-enfant pour déterminer l'ordre dans lequel les enregistrements sont insérés dans les tables. Dans cet exemple, la logique de mise à jour tente d’abord insérer un enregistrement dans la table Ord (étant donné que  **\<ordre >** est le parent), puis tente d’insérer un enregistrement dans la table Cust (étant donné que  **\<Client >** est l’enfant). Toutefois, en raison des informations de clé primaire/clé étrangère contenues dans le schéma de la table de base de données, cette opération d'insertion provoque une violation de clé étrangère dans la base de données et échoue.  
   
@@ -301,7 +301,7 @@ ms.locfileid: "36044913"
   
 ##### <a name="to-test-the-updategram"></a>Pour tester le code de mise à jour  
   
-1.  Création de ces tables dans le **tempdb** base de données :  
+1.  Créez ces tables dans le **tempdb** base de données :  
   
     ```  
     USE tempdb  

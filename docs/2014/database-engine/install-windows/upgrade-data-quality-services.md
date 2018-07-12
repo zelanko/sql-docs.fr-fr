@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: f396666b-7754-4efc-9507-0fd114cc32d5
 caps.latest.revision: 8
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 9f1feb8292020b61d00705e662bda80d2b3af4eb
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: ecbf266c87e5aebe47f0f7af9c7a244c0e8dfb20
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36044782"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37171430"
 ---
 # <a name="upgrade-data-quality-services"></a>Mettre à niveau Data Quality Services
   Cette rubrique fournit des informations sur la mise à niveau de votre installation existante de Data Quality Services (DQS) vers [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] CTP2. Dans le cadre de la mise à niveau de Data Quality Server dans DQS vers [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], vous devez également mettre à niveau le schéma de bases de données DQS.  
@@ -27,7 +27,7 @@ ms.locfileid: "36044782"
 > [!IMPORTANT]  
 >  -   Vous devez sauvegarder vos bases de données DQS avant de mettre à niveau DQS afin d'empêcher toute perte accidentelle de données lors de la mise à niveau du schéma. Pour plus d'informations sur la sauvegarde des bases de données DQS, consultez [Sauvegarde et restauration de bases de données DQS](../../data-quality-services/backing-up-and-restoring-dqs-databases.md).  
 > -   Connectez-vous à la version [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] de Data Quality Server en utilisant la version actuelle ou une version antérieure de Data Quality Client ou la [transformation de nettoyage DQS](../../integration-services/data-flow/transformations/dqs-cleansing-transformation.md) dans Integration Services pour effectuer les tâches de qualité des données.  
-> -   Vous pouvez continuer à utiliser la version [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 du complément Master Data Services pour Excel après la mise à niveau de Data Quality Services et de Master Data Services vers [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] CTP2. Toutefois, aucune version antérieure du complément Master Data Services pour Excel ne fonctionnera après la mise à niveau vers SQL Server 2014 CTP2. Vous pouvez télécharger le [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] version SP1 de données Services complément Master pour Excel à partir de [ici](http://go.microsoft.com/fwlink/?LinkId=328664).  
+> -   Vous pouvez continuer à utiliser la version [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 du complément Master Data Services pour Excel après la mise à niveau de Data Quality Services et de Master Data Services vers [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] CTP2. Toutefois, aucune version antérieure du complément Master Data Services pour Excel ne fonctionnera après la mise à niveau vers SQL Server 2014 CTP2. Vous pouvez télécharger le [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] version SP1 de Master Data Services complément pour Excel à partir de [ici](http://go.microsoft.com/fwlink/?LinkId=328664).  
   
 ##  <a name="Prerequisites"></a> Conditions préalables  
   
@@ -46,7 +46,7 @@ ms.locfileid: "36044782"
   
     2.  Dans le volet gauche, cliquez sur **Installation**.  
   
-    3.  Dans le volet droit, cliquez sur **mise à niveau de SQL Server 2005, SQL Server 2008, SQL Server 2008 R2 ou SQL Server 2012**.  
+    3.  Dans le volet droit, cliquez sur **mise à niveau à partir de SQL Server 2005, SQL Server 2008, SQL Server 2008 R2 ou SQL Server 2012**.  
   
     4.  Exécutez toutes les étapes de l'Assistant Installation.  
   

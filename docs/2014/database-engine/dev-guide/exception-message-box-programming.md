@@ -1,5 +1,5 @@
 ---
-title: Message d’exception zone programmation | Documents Microsoft
+title: Message d’exception programmation de boîte | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - messages [SQL Server], exception message box
 ms.assetid: 0b1ba514-6959-4e69-bfd2-3cf3c1ac4b9c
 caps.latest.revision: 16
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 0adef635d88a05925da924c4bab396f1da58e530
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 21882b1f6bb6233723a0ee7b60c7c7682abd5fa7
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36051108"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37148370"
 ---
 # <a name="exception-message-box-programming"></a>Programmation de boîte de message d'exception
   La boîte de message d’exception est une interface de programmation qui est installée avec et utilisée par [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] composants graphiques. Il s'agit d'un assembly managé pris en charge que vous pouvez utiliser dans vos applications pour contrôler les messages de manière beaucoup plus rigoureuse et pour donner à vos utilisateurs la possibilité d'enregistrer le contenu des messages d'erreur afin de pouvoir obtenir une assistance ultérieure. La boîte de message d'exception étant installée par toutes les éditions de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] à l'exception de [!INCLUDE[ssEW](../../includes/ssew-md.md)], vous pouvez l'utiliser sans configuration supplémentaire sur tout ordinateur sur lequel les composants clients [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ont été installés.  
@@ -38,7 +38,7 @@ ms.locfileid: "36051108"
   
 -   Permettre aux utilisateurs de copier facilement le titre du message, le texte du message, le texte du bouton et les liens d'aide (le cas échant) vers le Presse-papiers ou d'envoyer ces informations dans un message électronique.  
   
--   Afficher toutes les exceptions et erreurs sous-jacentes dans une arborescence de la relation hiérarchique lorsque les utilisateurs cliquent sur **des informations supplémentaires**.  
+-   Afficher toutes les exceptions et erreurs sous-jacentes dans une arborescence de relations hiérarchique lorsque les utilisateurs cliquent sur **des informations supplémentaires**.  
   
 -   Permettre aux utilisateurs de décider s'il faut afficher le message lorsque la même exception se produit de nouveau.  
   
