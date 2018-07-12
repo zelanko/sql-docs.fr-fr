@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - replication [SQL Server], publishing model
 - subscriptions [SQL Server replication], about subscriptions
@@ -23,15 +23,15 @@ helpviewer_keywords:
 - Distributors [SQL Server replication]
 ms.assetid: b9567832-e6a8-45b2-a3ed-ea12aa002f4b
 caps.latest.revision: 37
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 1cae3ced5cf378c8946778c38fec88ef72ef8354
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 72283a7096018fcb646e0f096abd4eb031ffaf84
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36042649"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37228779"
 ---
 # <a name="replication-publishing-model-overview"></a>Vue d’ensemble du modèle de publication de réplication
   La réplication utilise une métaphore de l'industrie de l'édition pour représenter les composants d'une topologie de réplication ; elle comprend un serveur de publication, un serveur de distribution, des abonnés, des publications, des articles et des abonnements. Il peut être utile de penser à la réplication [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] dans les mêmes termes qu'un magazine :  

@@ -1,12 +1,12 @@
 ---
-title: Copie de données avec IRowsetFastLoad (OLE DB) | Documents Microsoft
+title: Copie de données avec IRowsetFastLoad (OLE DB) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: connectivity
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -20,12 +20,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: a93b97df3b7c20898f1a923c26f3965dbf91ff0d
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
+ms.openlocfilehash: 684ef570f471e4e580ac1c720e30022da3e1293f
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35697840"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37408628"
 ---
 # <a name="bulk-copy-data-using-irowsetfastload-ole-db"></a>Copier des données en bloc avec IRowsetFastLoad (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -46,24 +46,24 @@ ms.locfileid: "35697840"
   
 1.  Établissez une connexion à la source de données.  
   
-2.  Affectez la valeur VARIANT_TRUE à la propriété de source de données SQLOLEDB spécifique au fournisseur SSPROP_ENABLEFASTLOAD. Avec cette propriété la valeur VARIANT_TRUE, la session nouvellement créée autorise l’accès client aux **IRowsetFastLoad**.  
+2.  Affectez la valeur VARIANT_TRUE à la propriété de source de données SQLOLEDB spécifique au fournisseur SSPROP_ENABLEFASTLOAD. Avec cette propriété la valeur VARIANT_TRUE, la session nouvellement créée autorise l’accès du consommateur à **IRowsetFastLoad**.  
   
 3.  Créer une session qui demande le **IOpenRowset** interface.  
   
-4.  Appelez **IOpenRowset::OpenRowset** pour ouvrir un ensemble de lignes qui inclut toutes les lignes de la table (dans lequel les données sont à copier à l’aide de la copie en bloc).  
+4.  Appelez **IOpenRowset::OpenRowset** pour ouvrir un ensemble de lignes qui inclut toutes les lignes de la table (dans lequel les données sont à copier à l’aide d’opération de copie en bloc).  
   
 5.  Effectuez les liaisons nécessaires et créez un accesseur à l’aide de **IAccessor::CreateAccessor**.  
   
 6.  Configurez la mémoire tampon à partir de laquelle les données seront copiées vers la table.  
   
-7.  Appelez **IRowsetFastLoad::InsertRow** pour le copier en bloc les données dans la table.  
+7.  Appelez **IRowsetFastLoad::InsertRow** pour copier en bloc les données dans la table.  
   
 ## <a name="example"></a>Exemple  
  Dans cet exemple, 10 enregistrements sont ajoutés à la table IRFLTable. Vous devez créer la table IRFLTable dans la base de données. Cet exemple n'est pas pris en charge sur la plateforme IA64.  
   
  Exécutez la première liste de code ([!INCLUDE[tsql](../../includes/tsql-md.md)])  pour créer la table utilisée par l'application.  
   
- Compilez avec ole32.lib oleaut32.lib et exécutez le code C++ suivant. Cette application vous permet de vous connecter à l'instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] par défaut de votre ordinateur. Sur certains systèmes d'exploitation Windows, vous devrez remplacer (localhost) ou (local) par le nom de votre instance [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Pour vous connecter à une instance nommée, modifiez la chaîne de connexion à partir de L"(local) » à L"(local)\\\name », où le nom est l’instance nommée. Par défaut, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express est installé dans une instance nommée. Assurez-vous que votre variable d'environnement INCLUDE inclut le répertoire qui contient sqlncli.h.  
+ Compilez avec ole32.lib oleaut32.lib et exécutez le code C++ suivant. Cette application vous permet de vous connecter à l'instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] par défaut de votre ordinateur. Sur certains systèmes d'exploitation Windows, vous devrez remplacer (localhost) ou (local) par le nom de votre instance [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Pour vous connecter à une instance nommée, modifiez la chaîne de connexion à partir de L"(local) » à L"(local)\\\name », où nom est l’instance nommée. Par défaut, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express est installé dans une instance nommée. Assurez-vous que votre variable d'environnement INCLUDE inclut le répertoire qui contient sqlncli.h.  
   
  Exécutez la troisième liste de code ([!INCLUDE[tsql](../../includes/tsql-md.md)]) pour supprimer la table utilisée par l'application.  
   

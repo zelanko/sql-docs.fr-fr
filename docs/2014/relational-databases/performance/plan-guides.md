@@ -5,10 +5,9 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-plan-guides
+ms.technology: performance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - TEMPLATE plan guide
 - SQL plan guides
@@ -21,15 +20,15 @@ helpviewer_keywords:
 - USE PLAN query hint
 ms.assetid: bfc97632-c14c-4768-9dc5-a9c512f6b2bd
 caps.latest.revision: 52
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: cced80dda0c62b4c339fb058a05ef927c602e5d1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 1741595891ebc04a70d70c006a3871c7f39ec07e
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36053045"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37430398"
 ---
 # <a name="plan-guides"></a>Repères de plan
   Les repères de plan vous permettent d'optimiser les performances des requêtes lorsque vous ne pouvez pas ou ne souhaitez pas modifier directement le texte de la requête réelle dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Les repères de plan influencent l'optimisation des requêtes en attachant des indicateurs de requête ou un plan fixe de requête à celles-ci. Les repères de plan s'avèrent utiles lorsqu'un petit sous-ensemble de requêtes d'une application de base de données fournie par un tiers ne fonctionne pas comme prévu. Dans le repère de plan, vous spécifiez l'instruction Transact-SQL que vous voulez optimiser et une clause OPTION contenant les indicateurs de requête ou un plan de requête spécifique à utiliser pour optimiser la requête. Lorsque la requête s'exécute, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fait correspondre l'instruction Transact-SQL au repère de plan et attache la clause OPTION à la requête au moment de l'exécution ou fait appel au plan de requête spécifié.  

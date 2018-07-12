@@ -1,5 +1,5 @@
 ---
-title: Messages d’élément (XMLA) | Documents Microsoft
+title: Messages, élément (XMLA) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -24,15 +24,15 @@ helpviewer_keywords:
 - Messages element
 ms.assetid: 719d15ff-f18b-4c56-80ba-a9114c0b7d8a
 caps.latest.revision: 11
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: 64895171a352fd981eb811c39be84b4268d5ed19
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: a0fbaba30716831ef34a40dd94c6c9b2ab507641
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36043215"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37176776"
 ---
 # <a name="messages-element-xmla"></a>Élément Messages (XMLA)
   Contient une collection de [Message](message-element-xmla.md) éléments retournés à partir d’une instance de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] par un [Discover](../xml-elements-methods-discover.md) ou [Execute](../xml-elements-methods-execute.md) (méthode) appel.  

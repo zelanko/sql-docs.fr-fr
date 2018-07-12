@@ -1,12 +1,12 @@
 ---
-title: Extraction de données BLOB à l’aide d’IRow::Open et ISequentialStream | Documents Microsoft
+title: Extraction de données BLOB avec IRow::Open et ISequentialStream | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: connectivity
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -20,12 +20,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: b865e3a5d5471e1dc638c321c64636b72469f548
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
+ms.openlocfilehash: dd55cc02558987350e0a620ef0c48150465a0c47
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35699480"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37410288"
 ---
 # <a name="fetching-blob-data-using-irowopen-and-isequentialstream"></a>Extraction de données BLOB à l'aide d'IRow::Open et ISequentialStream
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -84,9 +84,9 @@ HRESULT GetSequentialColumn(IRow* pUnkRow, ULONG iCol)
 }  
 ```  
   
- Données de grande taille peuvent être liées ou récupérées à l’aide de la **ISequentialStream** interface. Pour les colonnes dépendantes, l'indicateur d'état indique si les données sont tronquées en définissant DBSTATUS_S_TRUNCATED.  
+ Données volumineuses peuvent être liées ou récupérées à l’aide de la **ISequentialStream** interface. Pour les colonnes dépendantes, l'indicateur d'état indique si les données sont tronquées en définissant DBSTATUS_S_TRUNCATED.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Extraction de données BLOB à l’aide d’IRow](http://msdn.microsoft.com/library/badbd6ac-20aa-4891-a14f-48d38e7f30de)  
+ [Extraction de données Blob à l’aide d’IRow](http://msdn.microsoft.com/library/badbd6ac-20aa-4891-a14f-48d38e7f30de)  
   
   

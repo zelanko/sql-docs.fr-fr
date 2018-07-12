@@ -1,5 +1,5 @@
 ---
-title: Options (éditeur de texte - XML - divers Page) | Documents Microsoft
+title: Options (éditeur de texte - XML - divers Page) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - VS.ToolsOptionsPages.Text_Editor.XML.Miscellaneous
 ms.assetid: 1a9509f0-c663-4b31-b396-7f5dc4371651
 caps.latest.revision: 18
 author: craigg-msft
 ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: c11ecb4c3a46aa008600eee89ffb528fd66dcc68
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: aa8fa16d849c7d0bac76953b0d3da8787eb78b58
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36042279"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37259155"
 ---
 # <a name="options-text-editor---xml---miscellaneous-page"></a>Options (Éditeur de texte - XML - Page Divers)
   La boîte de dialogue **Options** vous permet de modifier les paramètres de saisie automatique et de schémas de l’Éditeur XML. Pour accéder à ces paramètres, dans le menu **Outils** , cliquez sur **Options**, développez le dossier **Éditeur de texte** , cliquez sur **XML** , puis sur **Divers** .  
@@ -44,7 +44,7 @@ ms.locfileid: "36042279"
  Les schémas et les définitions de type de document (DTD) sont automatiquement téléchargés à partir d'emplacements HTTP. Cette fonctionnalité utilise System.Net avec détection de serveur de proxy automatique. Cette case à cocher est activée par défaut.  
   
 ## <a name="outlining"></a>Mode Plan  
- **Passer en mode plan lors de l’ouverture des fichiers**  
+ **Passer en mode plan ouverture des fichiers**  
  Active la fonctionnalité mode Plan lorsqu'un fichier est ouvert. Cette case à cocher est activée par défaut.  
   
 ## <a name="caching"></a>Mise en cache  

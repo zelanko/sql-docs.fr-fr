@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - containers [Integration Services], transactions
 - transactions [Integration Services], about transactions in packages
@@ -18,13 +18,13 @@ ms.assetid: 3c78bb26-ddce-4831-a5f8-09d4f4fd53cc
 caps.latest.revision: 50
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 880fd7d655b572f264f5120849cb5a927cdaaa59
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 4002487af9dba5e4466b75e3fce19ce0c9b8d531
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36042254"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37165010"
 ---
 # <a name="integration-services-transactions"></a>Transactions Integration Services
   Les packages utilisent les transactions pour lier les actions de base de données que les tâches effectuent en unités atomiques, et maintiennent ce faisant l'intégrité des données. Tous les types de conteneurs [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] (packages, conteneurs de boucles For et Foreach et conteneurs de séquences, ainsi que les hôtes de tâches qui encapsulent chaque tâche) peuvent être configurés pour utiliser les transactions. [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] offre trois options de configuration des transactions : **NotSupported**, **Supported**et **Required**.  
@@ -38,11 +38,11 @@ ms.locfileid: "36042254"
  Vous pouvez configurer les transactions en définissant la propriété TransactionOption sur le conteneur. Vous pouvez définir cette propriété dans la fenêtre **Propriétés** de [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]ou par programmation.  
   
 > [!NOTE]  
->  La propriété `TransactionOption` a un impact sur la décision d'appliquer ou non la valeur de la propriété `IsolationLevel` demandée par un conteneur. Pour plus d’informations, consultez la description de la `IsolationLevel` propriété dans la rubrique [définition des propriétés de Package](set-package-properties.md).  
+>  La propriété `TransactionOption` a un impact sur la décision d'appliquer ou non la valeur de la propriété `IsolationLevel` demandée par un conteneur. Pour plus d’informations, consultez la description de la `IsolationLevel` propriété dans la rubrique, [définition des propriétés de Package](set-package-properties.md).  
   
 ### <a name="to-configure-a-package-to-use-transactions"></a>Pour configurer un package pour l'utilisation de transactions  
   
--   [Configurer un Package pour utiliser des Transactions](../relational-databases/native-client-ole-db-transactions/transactions.md)  
+-   [Configurer un package pour l’utilisation de transactions](../relational-databases/native-client-ole-db-transactions/transactions.md)  
   
 ## <a name="external-resources"></a>Ressources externes  
   

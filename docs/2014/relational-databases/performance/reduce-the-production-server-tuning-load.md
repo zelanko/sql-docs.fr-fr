@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - overhead [Database Engine Tuning Advisor]
 - tuning overhead [SQL Server]
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - offload tuning overhead [SQL Server]
 ms.assetid: bb95ecaf-444a-4771-a625-e0a91c8f0709
 caps.latest.revision: 38
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 02259f25802f9e2084e06460d1b05c672b4b796a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: e6dee0ca1def1283bb74597076873187f7fde23c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36042896"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37150740"
 ---
 # <a name="reduce-the-production-server-tuning-load"></a>Réduire la charge de paramétrage du serveur de production
   [!INCLUDE[ssDE](../../../includes/ssde-md.md)] L’Assistant Paramétrage compte sur l’optimiseur de requête pour analyser une charge de travail et faire des recommandations de paramétrage. Le fait d'effectuer cette analyse sur le serveur de production augmente la charge du serveur et peut dégrader les performances du serveur pendant la session de paramétrage. Vous pouvez réduire l'impact sur la charge du serveur pendant une session de paramétrage en utilisant un serveur de test en plus du serveur de production.  

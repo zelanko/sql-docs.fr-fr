@@ -1,5 +1,5 @@
 ---
-title: Page de propriétés de sécurité, éléments (Gestionnaire de rapports) | Documents Microsoft
+title: Page de propriétés de sécurité, éléments (Gestionnaire de rapports) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 351b8503-354f-4b1b-a7ac-f1245d978da0
 caps.latest.revision: 27
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: c072df6e055cbf0bc0fc0dc503b6dfd55a4c8a29
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 59b44a164b321c0d5d82fce7016427ad7d639f1f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36041302"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37230219"
 ---
 # <a name="security-properties-page-items-report-manager"></a>Page Propriétés de sécurité, Éléments (Gestionnaire de rapports)
   La page Propriétés de sécurité vous permet d'afficher ou de modifier les paramètres de sécurité qui déterminent l'accès aux dossiers, aux rapports, aux modèles, aux ressources et aux sources de données partagées. Cette page est disponible pour les éléments que vous êtes autorisé à sécuriser.  
@@ -54,9 +54,9 @@ ms.locfileid: "36041302"
  Activez la case à cocher en regard du nom d'utilisateur ou de groupe à supprimer et cliquez sur **Supprimer**. Vous ne pouvez pas supprimer une attribution de rôle s'il s'agit de la dernière ou s'il s'agit d'une attribution de rôle intégrée (par exemple « Built-in\Administrateurs ») qui définit la ligne de base de la sécurité du serveur de rapports. La suppression d'une attribution de rôle n'entraîne pas celle d'un compte d'utilisateur ou de groupe ou des définitions de rôles.  
   
  **Nouvelle attribution de rôle**  
- Cliquez pour ouvrir la page Nouvelle attribution de rôle qui permet de créer des attributions de rôles supplémentaires pour l'élément actif. Pour plus d’informations, consultez [nouvelle attribution de rôle : modifier la Page d’attribution de rôle &#40;le Gestionnaire de rapports&#41;](../../2014/reporting-services/new-role-assignment-edit-role-assignment-page-report-manager.md).  
+ Cliquez pour ouvrir la page Nouvelle attribution de rôle qui permet de créer des attributions de rôles supplémentaires pour l'élément actif. Pour plus d’informations, consultez [nouvelle attribution de rôle : modifier la Page attribution de rôle &#40;le Gestionnaire de rapports&#41;](../../2014/reporting-services/new-role-assignment-edit-role-assignment-page-report-manager.md).  
   
- **Rétablir la sécurité parente**  
+ **Rétablir la sécurité du Parent**  
  Cliquez pour rétablir les paramètres de sécurité en fonction de ceux du dossier immédiatement parent. Si l'héritage est arrêté dans toute l'arborescence des dossiers du serveur de rapports, les paramètres de sécurité du dossier de niveau supérieur (Dossier racine) sont utilisés.  
   
  **Groupe ou utilisateur**  
@@ -66,7 +66,7 @@ ms.locfileid: "36041302"
  Répertorie une ou plusieurs définitions de rôles qui font partie d'une attribution de rôle existante. Si plusieurs rôles sont attribués à un compte d'utilisateur ou de groupe, ce groupe ou cet utilisateur peut effectuer toutes les tâches qui appartiennent à ces rôles. Pour afficher les tâches associées à un rôle, utilisez SQL Server Management Studio pour consulter les tâches dans chaque définition de rôle.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Aide (F1) de gestionnaire de rapports](../../2014/reporting-services/report-manager-f1-help.md)   
+ [F1 du Gestionnaire de rapports](../../2014/reporting-services/report-manager-f1-help.md)   
  [Rôles prédéfinis](security/role-definitions-predefined-roles.md)   
  [Octroi d'autorisations sur un serveur de rapports en mode natif](security/granting-permissions-on-a-native-mode-report-server.md)   
  [Attributions de rôles](security/role-assignments.md)   

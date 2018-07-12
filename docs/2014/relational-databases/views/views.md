@@ -5,23 +5,22 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-views
+ms.technology: table-view-index
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - views [SQL Server], about views
 ms.assetid: ada83c28-e8b7-45d9-b53c-b3d67c8820c8
 caps.latest.revision: 21
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: a5e31addc3346cd34ad4b569d6b827f0ed58e142
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: c66fda03eb0cf15dcb249c35881c6f24085ca641
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36042840"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37183966"
 ---
 # <a name="views"></a>Vues
   Une vue est une table virtuelle dont le contenu est défini par une requête. À l'instar d'une table, une vue est un ensemble de colonnes et de lignes nommées de données. À moins d'être indexée, elle n'existe pas en tant qu'ensemble de valeurs de données stocké dans une base de données. Les lignes et les colonnes de données proviennent de tables référencées dans la requête qui définit la vue et sont produites dynamiquement lorsque la vue est référencée.  

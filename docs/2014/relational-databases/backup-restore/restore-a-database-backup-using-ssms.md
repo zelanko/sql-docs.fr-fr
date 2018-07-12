@@ -1,14 +1,13 @@
 ---
-title: Restaurer une sauvegarde de base de données (SQL Server Management Studio) | Documents Microsoft
+title: Restaurer une sauvegarde de base de données (SQL Server Management Studio) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-backup-restore
+ms.technology: backup-restore
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.locatebackupfileazure.f1
 - sql12.swb.specifybackup.f1
@@ -20,15 +19,15 @@ helpviewer_keywords:
 - restoring databases [SQL Server], full backups
 ms.assetid: 24b3311d-5ce0-4581-9a05-5c7c726c7b21
 caps.latest.revision: 73
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: fa6388416e41fac400d6b77ad603a305fad50e21
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: d765859981e2390c408a33b1a77965804519a587
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36043633"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37184746"
 ---
 # <a name="restore-a-database-backup-sql-server-management-studio"></a>Restaurer une sauvegarde de base de données (SQL Server Management Studio)
   Cette rubrique explique comment restaurer une sauvegarde complète de base de données.  
@@ -80,7 +79,7 @@ ms.locfileid: "36043633"
         |**Fichier**|**Localiser le fichier de sauvegarde**|Dans cette boîte de dialogue, vous pouvez sélectionner un fichier local depuis l'arborescence ou un fichier distant en utilisant son nom complet UNC (Universal Naming Convention). Pour plus d’informations, consultez [Unités de sauvegarde &#40;SQL Server&#41;](backup-devices-sql-server.md).|  
         |**Unité**|**Sélectionner l'unité de sauvegarde**|Dans cette boîte de dialogue, vous pouvez effectuer une sélection à partir d'une liste d'unités logiques de sauvegarde définies sur l'instance de serveur.|  
         |**Bande**|**Sélectionner la bande de sauvegarde**|Dans cette boîte de dialogue, vous pouvez effectuer une sélection à partir d'une liste de lecteurs de bande physiquement connectés à l'ordinateur exécutant l'instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
-        |**URL**|Deux boîtes de dialogue sont lancées dans l'ordre suivant :<br /><br /> 1) **se connecter à Windows Azure Storage**<br /><br /> 2) **localiser le fichier de sauvegarde dans Windows Azure**|Dans le **se connecter au stockage Windows Azure** boîte de dialogue, sélectionnez une identification SQL existantes qui stocke les Windows Azure storage compte accès et le nom informations de clé, ou créer de nouvelles informations d’identification SQL en spécifiant le nom de compte de stockage et le stockage des informations de clé de l’accès. Pour plus d’informations, consultez [se connecter au stockage Windows Azure &#40;restaurer&#41;](connect-to-microsoft-azure-storage-restore.md).<br /><br /> Dans le **localiser le fichier de sauvegarde** boîte de dialogue, vous pouvez sélectionner un fichier à partir de la liste de conteneurs affichée dans le cadre de gauche.|  
+        |**URL**|Deux boîtes de dialogue sont lancées dans l'ordre suivant :<br /><br /> 1) **se connecter à Windows Azure Storage**<br /><br /> 2) **localiser le fichier de sauvegarde dans Windows Azure**|Dans le **se connecter à Windows Azure Storage** boîte de dialogue, sélectionnez une information d’identification SQL existantes qui stocke les Windows Azure stockage compte accès et le nom informations de clé, ou créer de nouvelles informations d’identification SQL en spécifiant le nom de compte de stockage et les informations de clé de l’accès de stockage. Pour plus d’informations, consultez [se connecter à Windows Azure Storage &#40;restaurer&#41;](connect-to-microsoft-azure-storage-restore.md).<br /><br /> Dans le **localiser le fichier de sauvegarde** boîte de dialogue, vous pouvez sélectionner un fichier à partir de la liste de conteneurs affichée dans le cadre de gauche.|  
   
          Si la liste est complète, le **ajouter** bouton n’est pas disponible.  
   
@@ -100,7 +99,7 @@ ms.locfileid: "36043633"
   
 9. Pour afficher ou sélectionner les options avancées, dans la page **Options**, dans le volet **Options de restauration**, vous pouvez choisir les options suivantes si elles s’appliquent à votre situation :  
   
-    1.  `WITH` Options (non obligatoires) :  
+    1.  `WITH` Options (non requises) :  
   
         -   **Remplacer la base de données existante (WITH REPLACE)**  
   
@@ -116,7 +115,7 @@ ms.locfileid: "36043633"
   
         -   **RESTORE WITH STANDBY** qui laisse la base de données en lecture seule. Elle annule les transactions non validées, mais enregistre les actions d'annulation dans un fichier afin de rendre réversibles les effets de la récupération.  
   
-    3.  L’option**Effectuer la sauvegarde de la fin du journal avant la restauration** est sélectionnée si elle s’avère nécessaire pour le moment sélectionné. Vous n'avez pas besoin de modifier ce paramètre, mais vous pouvez choisir de sauvegarder la fin du journal même si ce n'est pas obligatoire. fichier ici ? Si le premier jeu de sauvegarde le **général** la page est dans Windows Azure, à la fin du journal sont également être sauvegardées dans le même conteneur de stockage.  
+    3.  L’option**Effectuer la sauvegarde de la fin du journal avant la restauration** est sélectionnée si elle s’avère nécessaire pour le moment sélectionné. Vous n'avez pas besoin de modifier ce paramètre, mais vous pouvez choisir de sauvegarder la fin du journal même si ce n'est pas obligatoire. fichier ici ? Si le premier jeu de sauvegarde le **général** page est dans Windows Azure, à la fin du journal sont également être sauvegardées dans le même conteneur de stockage.  
   
     4.  Les opérations de restauration peuvent échouer s'il existe des connexions actives à la base de données. Activez l'option **Fermer les connexions existantes** pour garantir que toutes les connexions actives entre [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] et la base de données sont fermées. Cette case à cocher définit la base de données en mode mono-utilisateur avant d'effectuer les opérations de restauration, et définit la base de données en mode multi-utilisateur une fois l'opération terminée.  
   

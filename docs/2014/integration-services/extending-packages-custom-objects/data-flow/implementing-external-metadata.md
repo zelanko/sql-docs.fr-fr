@@ -27,13 +27,13 @@ ms.assetid: 8f5bd3ed-3e79-43a4-b6c1-435e4c2cc8cc
 caps.latest.revision: 35
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 18a4e657b4b4e0b434656f6a03538ec4a8f89957
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: f8e43702349bae9dd5f3eb89bb6454fb62b05816
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36042740"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37169205"
 ---
 # <a name="implementing-external-metadata"></a>Implémentation des métadonnées externes
   Lorsqu'un composant est déconnecté de sa source de données, vous pouvez valider les colonnes comprises dans les collections de colonnes d'entrée et de sortie par rapport aux colonnes de sa source de données externe en utilisant l'interface <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSExternalMetadataColumnCollection100>. Cette interface vous permet de conserver un instantané des colonnes à la source de données externe et de les mapper aux colonnes de la collection de colonnes d'entrée et de sortie du composant.  
@@ -113,7 +113,7 @@ Public  Overrides Function Validate() As DTSValidationStatus
 End Function  
 ```  
   
-![Icône Integration Services (petite)](../../media/dts-16.gif "icône Integration Services (petite)")**restent jusqu'à la Date avec Integration Services** <br /> Pour obtenir les derniers téléchargements, articles, exemples et vidéos de Microsoft, ainsi que des solutions sélectionnées par la communauté, visitez la page [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] sur MSDN :<br /><br /> [Visitez la page Integration Services sur MSDN](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Pour recevoir une notification automatique de ces mises à jour, abonnez-vous aux flux RSS disponibles sur la page.  
+![Icône Integration Services (petite)](../../media/dts-16.gif "icône Integration Services (petite)")**rester jusqu'à la Date avec Integration Services** <br /> Pour obtenir les derniers téléchargements, articles, exemples et vidéos de Microsoft, ainsi que des solutions sélectionnées par la communauté, visitez la page [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] sur MSDN :<br /><br /> [Visitez la page Integration Services sur MSDN](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Pour recevoir une notification automatique de ces mises à jour, abonnez-vous aux flux RSS disponibles sur la page.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Flux de données](../../data-flow/data-flow.md)  

@@ -1,12 +1,12 @@
 ---
-title: Ensembles de lignes | Documents Microsoft
+title: Ensembles de lignes | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: connectivity
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -21,12 +21,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 163ea34c14a35f46e4ee65d21ce2db22a32984e5
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
+ms.openlocfilehash: d589c5c5be33af5cd3f6d3a2f7946bed984e653f
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35696450"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37416009"
 ---
 # <a name="rowsets"></a>Ensembles de lignes
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "35696450"
 
   Un ensemble de lignes est un jeu de lignes contenant des colonnes de données. Les ensembles de lignes sont des objets centraux qui permettent à tous les fournisseurs de données OLE DB d'exposer les données des jeux de résultats sous forme tabulaire.  
   
- Après un consommateur crée une session à l’aide de la **IDBCreateSession::CreateSession** (méthode), le consommateur peut utiliser soit le **IOpenRowset** ou **IDBCreateCommand** interface sur la session pour créer un ensemble de lignes. Le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Client fournisseur OLE DB natif prend en charge ces deux interfaces. Ces deux méthodes sont décrites ici.  
+ Une fois que le consommateur crée une session à l’aide de la **IDBCreateSession::CreateSession** (méthode), le consommateur peut utiliser soit le **IOpenRowset** ou **IDBCreateCommand** interface sur la session pour créer un ensemble de lignes. Le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Client fournisseur OLE DB natif prend en charge ces deux interfaces. Ces deux méthodes sont décrites ici.  
   
 -   Créer un ensemble de lignes en appelant le **IOpenRowset::OpenRowset** (méthode).  
   
@@ -44,13 +44,13 @@ ms.locfileid: "35696450"
   
      L'objet de commande exécute les commandes que le fournisseur prend en charge. Avec le fournisseur OLE DB [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client, le consommateur peut spécifier une instruction [!INCLUDE[tsql](../../includes/tsql-md.md)], telle qu'une instruction SELECT ou l'appel d'une procédure stockée. Les étapes de la création d'un ensemble de lignes en utilisant un objet de commande sont les suivantes :  
   
-    1.  Le consommateur appelle la **IDBCreateCommand::CreateCommand** méthode sur la session pour obtenir un objet de commande demande la **ICommandText** interface sur l’objet de commande. Cela **ICommandText** interface définit et extrait le texte de commande. Le consommateur remplit la commande de texte en appelant le **ICommandText::SetCommandText** (méthode).  
+    1.  Le consommateur appelle la **IDBCreateCommand::CreateCommand** méthode sur la session pour obtenir un objet de commande demande la **ICommandText** interface sur l’objet command. Cela **ICommandText** interface définit et récupère le texte réel de la commande. Le consommateur remplit la commande de texte en appelant le **ICommandText::SetCommandText** (méthode).  
   
     2.  L’utilisateur appelle le **ICommand::Execute** méthode sur la commande. L'objet de l'ensemble de lignes créé lors de l'exécution de la commande contient le jeu de résultats de la commande.  
   
  Le consommateur peut utiliser le **ICommandProperties** interface à obtenir ou définir les propriétés de l’ensemble de lignes retourné par la commande exécutée par le **ICommand::Execute** interfaces. Les propriétés les plus communément demandées sont les interfaces que l'ensemble de lignes doit prendre en charge. En plus des interfaces, le consommateur peut demander les propriétés qui modifient le comportement de l'ensemble de lignes ou de l'interface.  
   
- Les consommateurs libèrent les ensembles de lignes avec le **IRowset::Release** (méthode). La libération d'un ensemble de lignes entraîne celle des handles de ligne détenus par le consommateur sur cet ensemble de lignes. La libération d'un ensemble de lignes ne libère pas les accesseurs. Si vous avez un **IAccessor** interface, il toujours doit être libérée.  
+ Consommateurs libèrent les ensembles de lignes avec le **IRowset::Release** (méthode). La libération d'un ensemble de lignes entraîne celle des handles de ligne détenus par le consommateur sur cet ensemble de lignes. La libération d'un ensemble de lignes ne libère pas les accesseurs. Si vous avez un **IAccessor** interface, il toujours doit être libéré.  
   
 ## <a name="in-this-section"></a>Dans cette section  
   

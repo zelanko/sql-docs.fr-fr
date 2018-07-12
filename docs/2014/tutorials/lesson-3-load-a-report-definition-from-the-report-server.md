@@ -1,5 +1,5 @@
 ---
-title: 'Leçon 3 : Charger une définition de rapport du serveur de rapports | Documents Microsoft'
+title: 'Leçon 3 : Charger une définition de rapport du serveur de rapports | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,25 +8,25 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 5ad8b31c-43b0-4481-a31b-090cbed4a438
 caps.latest.revision: 16
-author: douglaslM
+author: craigg-msft
 ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 912a149542133a4c2bbdf4dfecde2ac0313defd5
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 2963895811f8567f5142ed9b49137123390ec8d6
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36043494"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37149430"
 ---
 # <a name="lesson-3-load-a-report-definition-from-the-report-server"></a>Leçon 3 : chargement d'une définition de rapport à partir du serveur de rapports
   Après avoir créé votre projet et généré les classes à partir du schéma RDL, vous êtes prêt à charger une définition du rapport depuis le serveur de rapports.  
   
 ### <a name="to-load-a-report-definition"></a>Pour charger une définition de rapport  
   
-1.  Ajoutez un champ privé en haut de la `ReportUpdater` classe (module si vous utilisez [!INCLUDE[vbprvb](../includes/vbprvb-md.md)]) pour la `Report` classe. Ce champ sera utilisé pour conserver une référence au rapport chargé depuis le serveur de rapports pendant la vie de l'application.  
+1.  Ajouter un champ privé en haut de la `ReportUpdater` classe (module si vous utilisez [!INCLUDE[vbprvb](../includes/vbprvb-md.md)]) pour la `Report` classe. Ce champ sera utilisé pour conserver une référence au rapport chargé depuis le serveur de rapports pendant la vie de l'application.  
   
     ```csharp  
     private Report _report;  
@@ -101,10 +101,10 @@ ms.locfileid: "36043494"
     ```  
   
 ## <a name="next-lesson"></a>Leçon suivante  
- Dans la leçon suivante, vous allez écrire le code permettant de mettre à jour la définition du rapport chargée depuis le serveur de rapports. Consultez [leçon 4 : mettre à jour de la définition de rapport par programme](../../2014/tutorials/lesson-4-update-the-report-definition-programmatically.md).  
+ Dans la leçon suivante, vous allez écrire le code permettant de mettre à jour la définition du rapport chargée depuis le serveur de rapports. Consultez [leçon 4 : mettre à jour la définition de rapport par programme](../../2014/tutorials/lesson-4-update-the-report-definition-programmatically.md).  
   
 ## <a name="see-also"></a>Voir aussi  
- [Mise à jour des rapports à l’aide des Classes générées à partir du schéma RDL &#40;didacticiel SSRS&#41;](../../2014/tutorials/updating-reports-using-classes-generated-from-the-rdl-schema-ssrs-tutorial.md)   
+ [La mise à jour des rapports à l’aide des Classes générées à partir du schéma RDL &#40;didacticiel SSRS&#41;](../../2014/tutorials/updating-reports-using-classes-generated-from-the-rdl-schema-ssrs-tutorial.md)   
  [RDL (Report Definition Language) &#40;SSRS&#41;](../reporting-services/reports/report-definition-language-ssrs.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Attribut d’élément (ASSL) | Documents Microsoft
+title: Attribut d’élément (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - Attribute element
 ms.assetid: 079ec9f8-a314-4e3c-821a-b42c65cc7363
 caps.latest.revision: 34
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 8a9dfd4e3db4b84df6a64e8c0fe6de80bca19ca3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 8e94fcb4fdffacfad0bbf735bfc2fe3c7b19b798
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36043228"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37171460"
 ---
 # <a name="attribute-element-assl"></a>Élément Attribute (ASSL)
   Contient la description d'un attribut.  
@@ -63,7 +63,7 @@ ms.locfileid: "36043228"
 ## <a name="element-characteristics"></a>Caractéristiques de l'élément  
  Valeur par défaut : Aucun  
   
- Cardinalité : 0-1 : élément facultatif qui peut se produire qu’une seule fois et une seule fois.  
+ Cardinalité : 0-1 : élément facultatif qui peut se produire une seule fois et une seule fois.  
   
 |Ancêtre ou parent|Type de données|  
 |------------------------|---------------|  

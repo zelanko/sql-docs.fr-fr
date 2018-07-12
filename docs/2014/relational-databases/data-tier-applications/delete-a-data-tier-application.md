@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-data-tier-apps
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.deletedacwizard.introduction.f1
 - sql12.swb.deletedacwizard.deletedac.f1
@@ -21,15 +21,15 @@ helpviewer_keywords:
 - delete DAC
 ms.assetid: 16fe1c18-4486-424d-81d6-d276ed97482f
 caps.latest.revision: 15
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 1c5afc38b9c3864790888a41496261adeed76661
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: e3613ce8ccee33accac25dc702d70fea9536587e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36042036"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37166920"
 ---
 # <a name="delete-a-data-tier-application"></a>Supprimer une application de la couche Données
   Vous pouvez supprimer une application de la couche Données à l'aide de l'Assistant Supprimer l'application de la couche Données ou d'un script Windows PowerShell. Vous pouvez spécifier si la base de données associée doit être conservée, détachée ou supprimée.  
@@ -136,7 +136,7 @@ ms.locfileid: "36042036"
   
 1.  Créez un objet serveur SMO et définissez-le sur l'instance qui contient la DAC à supprimer.  
   
-2.  Ouvrir un `ServerConnection` et connectez-vous à la même instance.  
+2.  Ouvrir un `ServerConnection` de l’objet et de se connecter à la même instance.  
   
 3.  Utilisez `add_DacActionStarted` et `add_DacActionFinished` pour vous abonner à la DAC mise à niveau des événements.  
   
@@ -148,7 +148,7 @@ ms.locfileid: "36042036"
   
     -   Pour supprimer l'inscription de la DAC et détacher la base de données, utilisez la méthode `Uninstall()` et spécifiez `DetachDatabase`.  
   
-    -   Pour supprimer l’inscription de la DAC et supprimer la base de données, utilisez la `Uninstall()` (méthode) et spécifiez `DropDatabase`.  
+    -   Pour supprimer l’inscription de la DAC et supprimer la base de données, utilisez le `Uninstall()` (méthode) et spécifiez `DropDatabase`.  
   
 ### <a name="example-deleting-the-dac-but-leaving-the-database-powershell"></a>Exemple de suppression de la DAC mais en laissant la base de données (PowerShell)  
  L’exemple suivant supprime une DAC nommée MyApplication à l’aide du `Unmanage()` méthode pour supprimer la DAC, mais laisser la base de données intacte.  

@@ -1,12 +1,12 @@
 ---
-title: Exécutez la procédure stockée avec ODBC appeler et traiter la sortie | Documents Microsoft
+title: Exécuter la procédure stockée avec ODBC CALL et traiter la sortie | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: connectivity
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -18,18 +18,18 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: db62f7d8cf651adeba655a4f126129a83fbea1fb
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
+ms.openlocfilehash: e3e04f2d636887b943b99cab234af3f00b7b4cbf
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35694670"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37427618"
 ---
-# <a name="execute-stored-procedure-with-odbc-call-and-process-output"></a>Exécutez la procédure stockée avec ODBC appeler et traiter la sortie
+# <a name="execute-stored-procedure-with-odbc-call-and-process-output"></a>Exécuter la procédure stockée avec ODBC CALL et traiter la sortie
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[SNAC_Deprecated](../../../includes/snac-deprecated.md)]
 
-  Les procédures stockées [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] peuvent avoir des codes de retour et des paramètres de sortie de type entier. Les codes de retour et paramètres de sortie sont envoyés dans le dernier paquet du serveur et ne sont par conséquent pas accessibles à l'application tant que l'ensemble de lignes n'a pas été complètement libéré. Si la commande retourne plusieurs résultats, le données de paramètre de sortie sont disponibles lorsque **IMultipleResults::GetResult** retourne DB_S_NORESULT ou **IMultipleResults** interface est complètement libérée selon ce qui se produit en premier.  
+  Les procédures stockées [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] peuvent avoir des codes de retour et des paramètres de sortie de type entier. Les codes de retour et paramètres de sortie sont envoyés dans le dernier paquet du serveur et ne sont par conséquent pas accessibles à l'application tant que l'ensemble de lignes n'a pas été complètement libéré. Si la commande retourne plusieurs résultats, le données de paramètre de sortie sont disponibles lorsque **IMultipleResults::GetResult** retourne DB_S_NORESULT ou **IMultipleResults** interface est complètement libérée selon la première éventualité.  
   
 > [!IMPORTANT]  
 >  Lorsque c'est possible, utilisez l'authentification Windows. Si l'authentification Windows n'est pas disponible, invitez les utilisateurs à entrer leurs informations d'identification au moment de l'exécution. Évitez de stocker ces informations dans un fichier. Si vous devez conserver les informations d’identification, chiffrez-les avec le [API de chiffrement Win32](http://go.microsoft.com/fwlink/?LinkId=64532).  
@@ -40,13 +40,13 @@ ms.locfileid: "35694670"
   
 2.  Créez un jeu de liaisons (un pour chaque marqueur de paramètre) en utilisant un tableau de structures DBBINDING.  
   
-3.  Création d’un accesseur pour les paramètres définis à l’aide de la **IAccessor::CreateAccessor** (méthode). **CreateAccessor** crée un accesseur à partir d’un jeu de liaisons.  
+3.  Créez un accesseur pour les paramètres définis à l’aide de la **IAccessor::CreateAccessor** (méthode). **CreateAccessor** crée un accesseur à partir d’un jeu de liaisons.  
   
 4.  Remplissez la structure DBPARAMS.  
   
-5.  Appelez le **Execute** (dans ce cas, un appel à une procédure stockée).  
+5.  Appelez le **Execute** commande (dans ce cas, un appel à une procédure stockée).  
   
-6.  Traiter l’ensemble de lignes et libérez-le à l’aide de la **IRowset::Release** (méthode).  
+6.  Traiter l’ensemble de lignes et libérez-le à l’aide du **IRowset::Release** (méthode).  
   
 7.  Traitez les valeurs de codes de retour et de paramètres de sortie reçues à partir de la procédure stockée.  
   
@@ -57,7 +57,7 @@ ms.locfileid: "35694670"
   
  Exécutez la première liste de code ([!INCLUDE[tsql](../../../includes/tsql-md.md)]) pour créer la procédure stockée utilisée par l'application.  
   
- Compilez avec ole32.lib oleaut32.lib et exécutez la deuxième liste de code (C++). Cette application vous permet de vous connecter à l'instance de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] par défaut de votre ordinateur. Sur certains systèmes d'exploitation Windows, vous devrez remplacer (localhost) ou (local) par le nom de votre instance [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Pour vous connecter à une instance nommée, modifiez la chaîne de connexion à partir de L"(local) » à L"(local)\\\name », où le nom est l’instance nommée. Par défaut, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Express est installé dans une instance nommée. Assurez-vous que votre variable d'environnement INCLUDE inclut le répertoire qui contient sqlncli.h.  
+ Compilez avec ole32.lib oleaut32.lib et exécutez la deuxième liste de code (C++). Cette application vous permet de vous connecter à l'instance de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] par défaut de votre ordinateur. Sur certains systèmes d'exploitation Windows, vous devrez remplacer (localhost) ou (local) par le nom de votre instance [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Pour vous connecter à une instance nommée, modifiez la chaîne de connexion à partir de L"(local) » à L"(local)\\\name », où nom est l’instance nommée. Par défaut, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Express est installé dans une instance nommée. Assurez-vous que votre variable d'environnement INCLUDE inclut le répertoire qui contient sqlncli.h.  
   
  Exécutez la troisième liste de code ([!INCLUDE[tsql](../../../includes/tsql-md.md)]) pour supprimer la procédure stockée utilisée par l'application.  
   
@@ -362,6 +362,6 @@ GO
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Rubriques de procédures relatives aux résultats de traitement &#40;OLE DB&#41;](../../../relational-databases/native-client-ole-db-how-to/results/processing-results-how-to-topics-ole-db.md)  
+ [Traitement des rubriques de procédures de résultats &#40;OLE DB&#41;](../../../relational-databases/native-client-ole-db-how-to/results/processing-results-how-to-topics-ole-db.md)  
   
   

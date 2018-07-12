@@ -1,5 +1,5 @@
 ---
-title: 'Leçon 2 : Ajouter des données | Documents Microsoft'
+title: 'Leçon 2 : Ajouter des données | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 13c3a8cc-b1db-4aba-ad9b-038b7971be8d
 caps.latest.revision: 24
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 697c483d784f4d15682c9690c0c392268ad5b356
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: e16182c535fe22a1efe631a42b68c038db365ad3
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36043483"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37165510"
 ---
 # <a name="lesson-2-add-data"></a>Leçon 2 : Ajouter des données
   Dans cette leçon, vous allez utiliser l'Assistant Importation de table dans [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] pour vous connecter à la base de données SQL AdventureWorksDW, sélectionner des données, afficher un aperçu et filtrer les données, puis les importer dans votre espace de travail de modèle.  

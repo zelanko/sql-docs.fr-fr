@@ -1,5 +1,5 @@
 ---
-title: 'Identification des colonnes de clés à l’aide de SQL : Key-champs (SQLXML 4.0) | Documents Microsoft'
+title: 'Identification des colonnes de clé à l’aide de SQL : key-fields (SQLXML 4.0) | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -23,15 +23,15 @@ helpviewer_keywords:
 - key-fields annotation
 ms.assetid: 1a5ad868-8602-45c4-913d-6fbb837eebb0
 caps.latest.revision: 26
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 8ac5d70b4ab396fe8e2ed8e164a754197f6f8ec0
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 7ea6dfe8fc312fe26803701838980e93d3bd7544
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36043563"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37184240"
 ---
 # <a name="identifying-key-columns-using-sqlkey-fields-sqlxml-40"></a>Identification de colonnes clés à l'aide de sql:key-fields (SQLXML 4.0)
   Lorsqu'une requête XPath est spécifiée contre un schéma XSD, les informations de clés sont requises dans la plupart des cas pour obtenir une imbrication correcte dans le résultat. La spécification de l'annotation `sql:key-fields` est une méthode permettant de garantir que la hiérarchie appropriée est générée.  

@@ -1,5 +1,5 @@
 ---
-title: Référence technique pour les Annotations BI CSDL | Documents Microsoft
+title: Référence technique pour les Annotations BI du langage CSDL | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -12,20 +12,20 @@ ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: 63b3e069-6ba5-474e-b769-47b7cc87b7dd
 caps.latest.revision: 15
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: 27ed1339d64dd3c4035288a96b31ae163a304733
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: 78300a412d7db986edd76172c7cf49e6c86aaec9
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36042761"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37192381"
 ---
 # <a name="technical-reference-for-bi-annotations-to-csdl"></a>Guide de référence technique pour les annotations BI du langage CSDL
   Cette section répertorie les éléments, l'attribut et les propriétés dans le CSDL qui sont utilisés pour représenter les modèles tabulaires [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]. Certains éléments sont nouveaux ; d'autres ont été annotés ou étendus pour la prise en charge de la modélisation Business Intelligence.  
   
- Pour une vue d’ensemble des modèles tabulaires et comment les entités, les relations et les formules sont représentées dans CSDL, consultez [Annotations CSDL pour Business Intelligence &#40;CSDLBI&#41;](../csdl-annotations-for-business-intelligence-csdlbi.md).  
+ Pour une vue d’ensemble des modèles tabulaires et comment les entités, les relations et les formules sont représentées dans le langage CSDL, consultez [Annotations CSDL pour Business Intelligence &#40;CSDLBI&#41;](../csdl-annotations-for-business-intelligence-csdlbi.md).  
   
 ## <a name="extended-csdl-elements-complex-types"></a>Éléments CSDL étendus : types complexes  
  Les éléments suivants de CSDL ont été ajoutés ou étendus pour la prise en charge des modèles de données Business Intelligence, tabulaires et multidimensionnels.  
@@ -52,9 +52,9 @@ ms.locfileid: "36042761"
   
 -   [Élément KpiStatus &#40;CSDLBI&#41;](kpistatus-element-csdlbi.md)  
   
--   [Élément niveau &#40;CSDLBI&#41;](level-element-csdlbi.md)  
+-   [Élément de niveau &#40;CSDLBI&#41;](level-element-csdlbi.md)  
   
--   [Élément de mesures &#40;CSDLBI&#41;](measure-element-csdlbi.md)  
+-   [Mesurer l’élément &#40;CSDLBI&#41;](measure-element-csdlbi.md)  
   
 -   [Élément Member &#40;CSDLBI&#41;](member-element-csdlbi.md)  
   

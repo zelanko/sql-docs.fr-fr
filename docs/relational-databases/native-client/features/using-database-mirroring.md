@@ -1,12 +1,11 @@
 ---
-title: À l’aide de la mise en miroir de base de données | Documents Microsoft
+title: À l’aide de la mise en miroir de base de données | Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
-ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -18,17 +17,16 @@ helpviewer_keywords:
 - SQL Server Native Client ODBC driver, database mirroring
 - SQL Server Native Client OLE DB provider, database mirroring
 ms.assetid: 71b15712-7972-4465-9274-e0ddc271eedc
-caps.latest.revision: 55
 author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 0148570aa44220b4229f83bad45b67ffc9812d2d
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
-ms.translationtype: MT
+ms.openlocfilehash: e799cb1d725cd756e271ba5706f97d655314c9a9
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35699500"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37414908"
 ---
 # <a name="using-database-mirroring"></a>Utilisation de la mise en miroir de bases de données
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -38,13 +36,13 @@ ms.locfileid: "35699500"
 > [!NOTE]  
 >  [!INCLUDE[ssNoteDepFutureAvoid](../../../includes/ssnotedepfutureavoid-md.md)] Utilisez plutôt [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)].  
   
- La mise en miroir de bases de données, introduite dans [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], est une solution permettant d'accroître la disponibilité de la base de données et la redondance des données. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client fournit la prise en charge implicite de mise en miroir de base de données, le développeur n’avez donc pas à écrire du code ou prendre aucune autre mesure une fois qu’il a été configuré pour la base de données.  
+ La mise en miroir de bases de données, introduite dans [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], est une solution permettant d'accroître la disponibilité de la base de données et la redondance des données. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client fournit la prise en charge implicite pour la mise en miroir de base de données, donc le développeur n’a pas besoin d’écrire du code ou de prendre toute autre action une fois qu’il a été configuré pour la base de données.  
   
- Base de données mise en miroir, qui est implémentée sur une base par base de données, conserve une copie d’un [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] base de données de production sur un serveur de secours. Ce serveur est un serveur de secours automatique ou semi-automatique, selon la configuration et l'état de la session de mise en miroir de bases de données. Un serveur de secours automatique prend en charge le basculement rapide sans perte de transactions validées et un serveur de secours semi-automatique prend en charge le service forcé (avec perte de données possible).  
+ Base de données mise en miroir, qui est implémentée par base de données, conserve une copie d’un [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] base de données de production sur un serveur de secours. Ce serveur est un serveur de secours automatique ou semi-automatique, selon la configuration et l'état de la session de mise en miroir de bases de données. Un serveur de secours automatique prend en charge le basculement rapide sans perte de transactions validées et un serveur de secours semi-automatique prend en charge le service forcé (avec perte de données possible).  
   
- La base de données de production est appelée la *base de données principale*, et la copie de secours est appelée le *base de données miroir*. La base de données principale et la base de données miroir doivent résider sur des instances distinctes de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] (instances de serveur), et ils doivent résider sur des ordinateurs distincts, si possible.  
+ La base de données de production est appelée le *base de données principale*, et la copie de secours est appelée le *base de données miroir*. La base de données principale et la base de données miroir doivent résider sur des instances distinctes de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] (instances de serveur), et ils doivent résider sur des ordinateurs distincts, si possible.  
   
- L’instance de serveur de production, appelée la *serveur principal*, communique avec l’instance de serveur de secours, appelée la *serveur miroir*. Les serveurs principal et miroir agissent en tant que partenaires dans une base de données mise en miroir *session*. Si le serveur principal échoue, le serveur miroir peut créer sa base de données dans la base de données principale via un processus appelé *basculement*. Par exemple, Partner_A et Partner_B sont deux serveurs partenaires, avec initialement la base de données principale sur Partner_A comme serveur principal et la base de données miroir sur Partner_B comme serveur miroir. Si Partner_A se retrouve hors connexion, la base de données sur Partner_B peut basculer pour devenir la base de données principale en cours. Lorsque Partner_A rejoint la session de mise en miroir, il devient le serveur miroir et sa base de données devient la base de données miroir.  
+ L’instance de serveur de production, appelée le *serveur principal*, communique avec l’instance de serveur de secours, appelée le *serveur miroir*. Les serveurs principal et miroir agissent en tant que partenaires au sein d’une base de données mise en miroir *session*. Si le serveur principal échoue, le serveur miroir peut créer sa base de données dans la base de données principal via un processus appelé *basculement*. Par exemple, Partner_A et Partner_B sont deux serveurs partenaires, avec initialement la base de données principale sur Partner_A comme serveur principal et la base de données miroir sur Partner_B comme serveur miroir. Si Partner_A se retrouve hors connexion, la base de données sur Partner_B peut basculer pour devenir la base de données principale en cours. Lorsque Partner_A rejoint la session de mise en miroir, il devient le serveur miroir et sa base de données devient la base de données miroir.  
   
  D'autres configurations de mise en miroir de bases de données offrent des niveaux différents de performances et de sécurité des données, et prennent en charge diverses formes de basculement. Pour plus d’informations, consultez [Mise en miroir de bases de données &#40;SQL Server&#41;](../../../database-engine/database-mirroring/database-mirroring-sql-server.md).  
   
@@ -66,14 +64,14 @@ ms.locfileid: "35699500"
 >  De plus, les noms de serveur ne respectent pas la casse, contrairement aux noms de base de données. Par conséquent, vous devez vous assurer que vous utilisez la même casse dans les DSN et les chaînes de connexion.  
   
 ## <a name="sql-server-native-client-ole-db-provider"></a>Fournisseur OLE DB SQL Server Native Client  
- Le [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Client fournisseur OLE DB natif prend en charge la mise en miroir de base de données via la connexion et les attributs de chaîne de connexion. La propriété SSPROP_INIT_FAILOVERPARTNER a été ajoutée au jeu de propriétés DBPROPSET_SQLSERVERDBINIT et le **FailoverPartner** (mot clé) est un nouvel attribut de chaîne de connexion de DBPROP_INIT_PROVIDERSTRING. Pour plus d’informations, consultez [Using Connection String Keywords with SQL Server Native Client](../../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md).  
+ Le [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Client fournisseur OLE DB natif prend en charge la mise en miroir de base de données via la connexion et les attributs de chaîne de connexion. La propriété SSPROP_INIT_FAILOVERPARTNER a été ajoutée au jeu de propriétés DBPROPSET_SQLSERVERDBINIT et le **FailoverPartner** mot clé est un nouvel attribut de chaîne de connexion de DBPROP_INIT_PROVIDERSTRING. Pour plus d’informations, consultez [Using Connection String Keywords with SQL Server Native Client](../../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md).  
   
  Le cache de basculement est conservé tant que le fournisseur est chargé, autrement dit jusqu'à ce que **CoUninitialize** est appelée ou tant que l’application a une référence à un objet géré par le [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] fournisseur OLE DB Native Client comme un objet de source de données.  
   
- Pour plus d’informations sur les [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] prise en charge du fournisseur OLE DB Native Client pour la mise en miroir de base de données, consultez [propriétés d’initialisation et d’autorisation](../../../relational-databases/native-client-ole-db-data-source-objects/initialization-and-authorization-properties.md).  
+ Pour plus d’informations sur [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] prise en charge du fournisseur OLE DB Native Client pour la mise en miroir de base de données, consultez [propriétés d’initialisation et d’autorisation](../../../relational-databases/native-client-ole-db-data-source-objects/initialization-and-authorization-properties.md).  
   
 ## <a name="sql-server-native-client-odbc-driver"></a>Pilote ODBC SQL Server Native Client  
- Le [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] pilote ODBC Native Client prend en charge la mise en miroir de base de données via la connexion et les attributs de chaîne de connexion. Plus précisément, l’attribut SQL_COPT_SS_FAILOVER_PARTNER a été ajouté pour une utilisation avec le [SQLSetConnectAttr](../../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md) et [SQLGetConnectAttr](../../../relational-databases/native-client-odbc-api/sqlgetconnectattr.md) fonctions ; et le **Failover_Partner** (mot clé) a été ajouté en tant qu’un nouvel attribut de chaîne de connexion.  
+ Le [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] pilote ODBC Native Client prend en charge la mise en miroir de base de données via la connexion et les attributs de chaîne de connexion. Plus précisément, l’attribut SQL_COPT_SS_FAILOVER_PARTNER a été ajoutée pour une utilisation avec le [SQLSetConnectAttr](../../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md) et [SQLGetConnectAttr](../../../relational-databases/native-client-odbc-api/sqlgetconnectattr.md) fonctions ; et le **Failover_Partner** mot clé a été ajouté en tant qu’un nouvel attribut de chaîne de connexion.  
   
  Le cache de basculement est conservé tant que l'application possède au moins un handle d'environnement alloué. En revanche, il est perdu lorsque le dernier handle d'environnement est libéré.  
   

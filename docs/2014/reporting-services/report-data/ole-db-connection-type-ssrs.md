@@ -8,25 +8,25 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: d00cb13b-e1c2-4300-a195-3da1430a2df1
 caps.latest.revision: 8
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 851c9acd9b383f8f315b71b215fe739284c2f2d6
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: bf944dfa9bd17946130b568d53be032c56fc0ef3
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36043538"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37198749"
 ---
 # <a name="ole-db-connection-type-ssrs"></a>Type de connexion OLE DB (SSRS)
   Pour inclure les données d'un fournisseur de données OLE DB, vous devez avoir un dataset basé sur une source de données de rapport de type OLE DB. Ce type de source de données intégré est basé sur l’extension pour le traitement des données OLE DB de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  
   
  OLE DB est une technologie d'accès aux données qui permet aux clients de se connecter à divers fournisseurs de données. Après avoir sélectionné le type de source de données OLE DB, vous devez sélectionner un fournisseur de données spécifique. La prise en charge des fonctionnalités telles que les paramètres et les informations d'identification dépend du fournisseur de données que vous sélectionnez.  
   
- Utilisez les informations de cette rubrique pour générer une source de données. Pour obtenir des instructions, consultez [ajouter et vérifier une connexion de données ou une Source de données &#40;le Générateur de rapports et SSRS&#41;](add-and-verify-a-data-connection-report-builder-and-ssrs.md).  
+ Utilisez les informations de cette rubrique pour générer une source de données. Pour obtenir des instructions détaillées, consultez [ajouter et vérifier une connexion de données ou d’une Source de données &#40;Générateur de rapports et SSRS&#41;](add-and-verify-a-data-connection-report-builder-and-ssrs.md).  
   
 ##  <a name="Connection"></a> Chaîne de connexion  
  La chaîne de connexion de l'extension pour le traitement des données OLE DB dépend du fournisseur de données souhaité. Une chaîne de connexion classique contient des paires nom/valeur prises en charge par le fournisseur de données. Par exemple, la chaîne de connexion suivante spécifie le fournisseur OLE DB pour [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client et la base de données AdventureWorks :  
@@ -66,7 +66,7 @@ Provider=SQLNCLI10.1;Data Source=server; Initial Catalog=AdventureWorks
   
  Pour récupérer correctement les données de votre choix, vous devez spécifier une syntaxe de requête prise en charge par le fournisseur de données. La prise en charge des paramètres varie selon le fournisseur de données. Pour plus d'informations, consultez les rubriques spécifiques au fournisseur de données sélectionné. Exemple :  
   
--   [Analysis Services OLE DB Provider &#40;Analysis Services - données multidimensionnelles&#41;](../../analysis-services/dev-guide/analysis-services-ole-db-provider-analysis-services-multidimensional-data.md)  
+-   [Fournisseur OLE DB de Analysis Services &#40;Analysis Services - données multidimensionnelles&#41;](../../analysis-services/dev-guide/analysis-services-ole-db-provider-analysis-services-multidimensional-data.md)  
   
 -   [Utilisation du fournisseur de données .NET Framework pour Oracle](http://go.microsoft.com/fwlink/?LinkId=112314)  
   
@@ -79,7 +79,7 @@ Provider=SQLNCLI10.1;Data Source=server; Initial Catalog=AdventureWorks
 ##  <a name="HowTo"></a> Rubriques de procédures  
  Cette section contient des instructions pas à pas sur l'utilisation des connexions de données, des sources de données et des datasets.  
   
- [Ajouter et vérifier une connexion de données ou une Source de données &#40;rapport Générateur et SSRS&#41;](add-and-verify-a-data-connection-report-builder-and-ssrs.md)  
+ [Ajouter et vérifier une connexion de données ou d’une Source de données &#40;Générateur de rapports et SSRS&#41;](add-and-verify-a-data-connection-report-builder-and-ssrs.md)  
   
  [Créer un dataset partagé ou incorporé &#40;Générateur de rapports et SSRS&#41;](create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md)  
   
@@ -90,7 +90,7 @@ Provider=SQLNCLI10.1;Data Source=server; Initial Catalog=AdventureWorks
 ##  <a name="Related"></a> Sections connexes  
  Ces sections de la documentation fournissent des informations de fond d'ordre conceptuel sur les données de rapport, ainsi que des informations sur les procédures de définition, de personnalisation et d'utilisation des parties d'un rapport qui sont liées aux données.  
   
- [Ajouter des données à un rapport &#40;rapport Générateur et SSRS&#41;](report-datasets-ssrs.md)  
+ [Ajouter des données à un rapport &#40;Générateur de rapports et SSRS&#41;](report-datasets-ssrs.md)  
  Fournit une vue d'ensemble de l'accès aux données pour votre rapport.  
   
  [Connexions de données, sources de données et chaînes de connexion dans le Générateur de rapports](../data-connections-data-sources-and-connection-strings-in-report-builder.md)  

@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.reportserver.serverproperties.security.f1
 ms.assetid: f49aedc6-f145-4df1-8f69-d5d910f492c6
 caps.latest.revision: 10
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 722a2b825b0ec56b7932de29a74faf74627834f0
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: cefcaaf281cf8b3981fec2383fd004ad8bd8f967
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36043766"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37153680"
 ---
 # <a name="server-properties-security-page---reporting-services"></a>Propriétés du serveur (page Sécurité) - Reporting Services
   Utilisez cette page pour désactiver des fonctionnalités qui peuvent nuire potentiellement à un serveur de rapports. La désactivation de ces fonctionnalités limitera certaines d'entre elles, mais peut améliorer la sécurité globale du serveur de rapports en atténuant des menaces spécifiques.  
@@ -37,13 +37,13 @@ ms.locfileid: "36043766"
  **Activer la génération d'états ad hoc**  
  Spécifiez si les utilisateurs peuvent effectuer des requêtes ad hoc à partir d'un rapport du Générateur de rapports, où les nouveaux rapports sont générés automatiquement lorsqu'un utilisateur clique sur des données d'intérêt.  
   
- La définition de cette option détermine si la propriété `EnableLoadReportDefinition` sur le serveur de rapports a la valeur `True` ou `False`. Si vous désactivez cette option, la propriété est fixée à `False` et le serveur ne générera pas les rapports générés interactifs créés pendant l’exploration de données de rapport. Tous les appels à la méthode `LoadReportDefinition` seront bloqués.  
+ La définition de cette option détermine si la propriété `EnableLoadReportDefinition` sur le serveur de rapports a la valeur `True` ou `False`. Si vous désactivez cette option, la propriété sera la valeur `False` et le serveur ne générera pas les rapports générés interactifs créés pendant l’exploration de données de rapport. Tous les appels à la méthode `LoadReportDefinition` seront bloqués.  
   
  La désactivation de cette option atténue la menace qu’un utilisateur malveillant lance une attaque par déni de service en surchargeant le serveur de rapports avec `LoadReportDefinition` demandes.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Définir les propriétés du serveur de rapports &#40;Management Studio&#41;](set-report-server-properties-management-studio.md)   
  [Se connecter à un serveur de rapports dans Management Studio](connect-to-a-report-server-in-management-studio.md)   
- [Spécifiez les informations d’identification et les informations de connexion pour les Sources de données de rapports] (.. /Report-Data/Specify-Credential-and-Connection-Information-for-Report-Data-sources.md [report Server dans l’aide de Management Studio (F1)](report-server-in-management-studio-f1-help.md)  
+ [Spécifiez les informations d’identification et les informations de connexion pour les Sources de données de rapports] (.. /Report-Data/Specify-Credential-and-Connection-Information-for-Report-Data-sources.md [serveur de rapports dans Management Studio F1 Aide](report-server-in-management-studio-f1-help.md)  
   
   

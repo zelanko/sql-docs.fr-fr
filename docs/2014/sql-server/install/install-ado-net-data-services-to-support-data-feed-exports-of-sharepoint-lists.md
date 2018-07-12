@@ -1,5 +1,5 @@
 ---
-title: Installer ADO.NET Data Services pour prendre en charge les données exportations de flux des listes SharePoint | Documents Microsoft
+title: Installer ADO.NET Data Services pour prendre en charge les données exportations de flux des listes SharePoint | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: f32527ae-f623-4e08-adfb-6d3262f5c2ac
 caps.latest.revision: 6
 author: markingmyname
 ms.author: maghan
-manager: jhubbard
-ms.openlocfilehash: d4241d56aa3257bd0ec2cddf4b439a4939f8ab9f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 888e3bcf01f3cbb33ae11a3961a6d492040afb1f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36042788"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37187726"
 ---
 # <a name="install-adonet-data-services-to-support-data-feed-exports-of-sharepoint-lists"></a>Installation d'ADO.NET Data Services pour prendre en charge les exportations de flux de données des listes SharePoint
   ADO.NET Data Services est requis pour une exportation de flux de données de listes SharePoint. SharePoint 2010 n'inclut pas ce composant dans le programme d'installation des composants requis pour SharePoint. Par conséquent, vous devez l'installer manuellement.  
@@ -30,13 +30,13 @@ ms.locfileid: "36042788"
   
 ### <a name="download-and-install-adonet-data-services"></a>Télécharger et installer ADO.NET Data Services  
   
-1.  Accédez à la documentation relative à la configuration requise matérielle et logicielle pour SharePoint 2010, [configurations matérielle et logicielle requise (SharePoint Server 2010)](http://go.microsoft.com/fwlink/?LinkId=169734)  
+1.  Accédez à la documentation relative à la configuration requise matérielle et logicielle pour SharePoint 2010, [matérielle et logicielle requise (SharePoint 2010)](http://go.microsoft.com/fwlink/?LinkId=169734)  
   
-2.  Dans **accès aux logiciels applicables**, recherchez le lien pour ADO.NET Data Services 3.5 correspondant au système d’exploitation que vous utilisez (Windows Server 2008 SP2 ou Windows Server 2008 R2).  
+2.  Dans **accès aux logiciels applicables**, recherchez le lien pour ADO.NET Data Services 3.5 correspondant au système d’exploitation que vous utilisez (soit Windows Server 2008 SP2 ou Windows Server 2008 R2).  
   
 3.  Cliquez sur le lien, puis exécutez le programme d'installation qui installe le service.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Installation PowerPivot pour SharePoint 2010](../../../2014/sql-server/install/powerpivot-for-sharepoint-2010-installation.md)  
+ [Installation de PowerPivot pour SharePoint 2010](../../../2014/sql-server/install/powerpivot-for-sharepoint-2010-installation.md)  
   
   

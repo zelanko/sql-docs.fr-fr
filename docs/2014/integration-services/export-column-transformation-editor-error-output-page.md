@@ -1,5 +1,5 @@
 ---
-title: Exporter l’éditeur de Transformation de colonne (Page sortie d’erreur) | Documents Microsoft
+title: Exporter l’éditeur de Transformation de colonne (Page sortie d’erreur) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.fileextractortransformation.errorhandling.f1
 helpviewer_keywords:
 - Export Column Transformation Editor
 ms.assetid: 260be463-01a9-460c-9c98-e5265cb2b1e9
 caps.latest.revision: 25
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 954fd8f8ce86108299ca2b42d075f4fda5f7c3b1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: b695ac95c7c76d38fec01a4a38832fae1ed73c8a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36042967"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37240989"
 ---
 # <a name="export-column-transformation-editor-error-output-page"></a>Éditeur de transformation d'exportation de colonne (page Sortie d'erreur)
   La page **Sortie d'erreur** de la boîte de dialogue **Éditeur de transformation d'exportation de colonne** permet de spécifier la manière dont les erreurs doivent être traitées.  
@@ -54,6 +54,6 @@ ms.locfileid: "36042967"
   
 ## <a name="see-also"></a>Voir aussi  
  [Integration Services Error and Message Reference](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Éditeur de Transformation de colonne d’exportation &#40;Page colonnes&#41;](../../2014/integration-services/export-column-transformation-editor-columns-page.md)  
+ [Exporter l’éditeur de Transformation de colonne &#40;Page colonnes&#41;](../../2014/integration-services/export-column-transformation-editor-columns-page.md)  
   
   

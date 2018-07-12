@@ -1,5 +1,5 @@
 ---
-title: Sélection du disque de cluster | Documents Microsoft
+title: Sélection du disque de cluster | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,25 +8,25 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - cluster disk selection
 ms.assetid: 0d6b863d-5972-4a20-9990-64ee8016fea6
 caps.latest.revision: 9
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: ce08658fe769a356e4cd24e29ed094692892e48f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 9635c793b32715e6da68f433e368c8ae1fc28b56
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36045094"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37157530"
 ---
 # <a name="cluster-disk-selection"></a>Sélection du disque du cluster
   Utilisez la page **Sélection du disque du cluster** de l’Assistant Installation de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pour sélectionner la ressource disque de cluster partagée pour votre cluster de basculement [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Le disque de cluster est l'emplacement où les données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] seront placées.  
   
- Un disque de cluster partagé n’est pas obligatoire pour [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] les installations de cluster. Un serveur de fichiers SMB est un stockage pris en charge pour [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] basculement les installations de cluster et peut être spécifié à l’aide de la **moteur de base de données – répertoires de données** page avant la fin de l’installation.  
+ Un disque de cluster partagé n’est pas une exigence pour [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] installations de cluster. Un serveur de fichiers SMB est un stockage pris en charge pour [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] basculement installations de cluster et peut être spécifié à l’aide de la **moteur de base de données – répertoires de données** page avant la fin de l’installation.  
   
 > [!WARNING]  
 >  Si vous avez sélectionné Analysis Services pour l'installer, vous devez spécifier un disque de cluster partagé.  

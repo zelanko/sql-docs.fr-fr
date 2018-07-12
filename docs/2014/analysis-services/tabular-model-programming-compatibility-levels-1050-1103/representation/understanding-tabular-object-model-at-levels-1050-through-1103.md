@@ -1,5 +1,5 @@
 ---
-title: Présentation du modèle d’objet tabulaire | Documents Microsoft
+title: Présentation du modèle d’objet tabulaire | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -12,18 +12,18 @@ ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: 6077b7e8-cb3e-4480-a5de-bb602cf9d69a
 caps.latest.revision: 9
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: e426dd1deca106c5dd8da239d67f025d1dd6e95b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 86fc068d0ff8278b3004c585b3d3d4bcf10facdb
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36043452"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37152980"
 ---
 # <a name="understanding-the-tabular-object-model"></a>Présentation du modèle d'objet tabulaire
-  Un modèle tabulaire est une représentation logique de tables, de relations, de hiérarchies, de perspectives, de mesures, et de performance clés. Cette section présente l'implémentation interne à l'aide d'objets AMO. Consultez [développement avec Analysis Management Objects &#40;AMO&#41; ](../../multidimensional-models/analysis-management-objects/developing-with-analysis-management-objects-amo.md) si vous n’avez pas encore utilisé AMO.  
+  Un modèle tabulaire est une représentation logique de tables, de relations, de hiérarchies, de perspectives, de mesures, et de performance clés. Cette section présente l'implémentation interne à l'aide d'objets AMO. Consultez [développement avec Analysis Management Objects &#40;AMO&#41; ](../../multidimensional-models/analysis-management-objects/developing-with-analysis-management-objects-amo.md) si vous n’avez jamais utilisé AMO avant.  
   
  L'approche ici est hiérarchisée, tous les objets appropriés dans le modèle tabulaire sont logiquement mappés aux objets AMO, et les interactions ou le flux de travail requis sont expliqués. Un exemple de code source pour créer un modèle tabulaire à l'aide d'objets AMO, Objets AMO vers objets tabulaires est disponible dans Codeplex. Remarque importante à propos du code dans l'exemple : le code est fourni uniquement comme un support aux concepts logiques expliqués ici et ne doit pas être utilisé dans un environnement de production, ni à des fins autres que pédagogiques. L'exemple est fourni sans prise en charge ni garantie.  
   
@@ -53,7 +53,7 @@ ms.locfileid: "36043452"
 > [!NOTE]  
 >  Les objets <xref:Microsoft.AnalysisServices.Measure> n'ont aucune relation avec les mesures calculées dans les modèles tabulaires et ne sont pas pris en charge dans ces modèles.  
   
- Consultez [représentation de la mesure calculée &#40;tabulaire&#41; ](tables-calculated-measure-representation.md) pour une explication détaillée sur la façon de créer et manipuler la représentation sous forme de mesure calculée.  
+ Consultez [représentation d’une mesure calculée &#40;tabulaire&#41; ](tables-calculated-measure-representation.md) pour une explication détaillée sur la façon de créer et manipuler la représentation sous forme de mesure calculée.  
   
 ### <a name="hierarchy-representation"></a>Représentation d'une hiérarchie  
  Les hiérarchies permettent à l'utilisateur final d'explorer plus facilement les objets. En termes d'objets AMO, une représentation de hiérarchie a une relation de mappage un-à-un avec <xref:Microsoft.AnalysisServices.Hierarchy> et aucun autre objet AMO principal n'est requis. Il est important de noter que cela ne signifie pas que tous les objets contenus dans l'objet de base de données AMO peuvent être utilisés lors de la modélisation tabulaire.  
@@ -80,12 +80,12 @@ ms.locfileid: "36043452"
   
  En termes d'objets AMO, toutes les relations inactives ont une représentation d'une relation de mappage un-à-un avec <xref:Microsoft.AnalysisServices.Relationship> et aucun autre objet AMO principal n'est requis. Pour la relation active, d'autres conditions existent et un mappage à <xref:Microsoft.AnalysisServices.ReferenceMeasureGroupDimension> est également requis. Il est important de noter que cela ne signifie pas que tous les objets contenus dans la relation AMO ou l'objet referenceMeasureGroupDimension peuvent être utilisés lors de la modélisation.  
   
- Consultez [la représentation sous forme de relation &#40;tabulaire&#41; ](relationship-representation-tabular.md) pour une explication détaillée sur la façon de créer et manipuler la représentation sous forme de relation.  
+ Consultez [représentation d’une relation &#40;tabulaire&#41; ](relationship-representation-tabular.md) pour une explication détaillée sur la façon de créer et manipuler la représentation sous forme de relation.  
   
 ## <a name="perspective-representation"></a>Représentation d'une perspective  
  Une perspective est un mécanisme pour simplifier ou mieux cibler le mode. En termes d'objets AMO, une représentation de relation a une relation de mappage un-à-un avec <xref:Microsoft.AnalysisServices.Perspective> et aucun autre objet AMO principal n'est requis. Il est important de noter que cela ne signifie pas que tous les objets contenus dans l'objet de perspective AMO peuvent être utilisés lors de la modélisation tabulaire.  
   
- Consultez [représentation d’une Perspective &#40;tabulaire&#41; ](perspective-representation-tabular.md) pour une explication détaillée sur la façon de créer et manipuler la représentation sous forme de perspective.  
+ Consultez [représentation d’une Perspective &#40;tabulaire&#41; ](perspective-representation-tabular.md) pour une explication détaillée sur la façon de créer et manipuler la représentation sous forme de point de vue.  
   
 > [!WARNING]  
 >  Les perspectives ne sont pas un mécanisme de sécurité ; les objets en dehors de la perspective sont toujours accessibles à l'utilisateur via d'autres interfaces.  

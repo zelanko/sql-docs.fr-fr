@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - resource bottlenecks [SQL Server]
 - database monitoring [SQL Server], bottlenecks
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - identifying bottlenecks [SQL Server]
 ms.assetid: db079e65-ee80-4105-aec9-f8230d0d6635
 caps.latest.revision: 17
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: d52b94ac8e1cab2a1681ba33d7cf86301d3f1865
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 68ff1cfa48bf6c9a39f83f13fa066a6928c676a3
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36043125"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37172760"
 ---
 # <a name="identify-bottlenecks"></a>Identifier les goulots d'étranglement
   L'accès simultané aux ressources partagées provoque des goulots d'étranglement. En général, les goulots d'étranglement sont inévitables et existent dans tous les systèmes logiciels. Toutefois, des demandes excessives sur les ressources partagées engendrent un temps de réponse médiocre, qui impose de les identifier et de les ajuster.  

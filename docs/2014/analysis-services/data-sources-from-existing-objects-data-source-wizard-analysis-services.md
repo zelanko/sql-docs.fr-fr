@@ -1,5 +1,5 @@
 ---
-title: Sources de données d’objets existants (Assistant de Source de données) (Analysis Services) | Documents Microsoft
+title: Sources de données d’objets existants (Assistant de Source de données) (Analysis Services) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.datasourcewizard.specifyobject.f1
 ms.assetid: e6ef6dea-9db8-45c4-8959-f9febd7caf7b
 caps.latest.revision: 20
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 60f07885aff1d323cb2627e933330af3f35b8d45
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 39ae96a5ebc4849e61fe2a2630702c2a8cf16111
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36042593"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37180989"
 ---
 # <a name="data-sources-from-existing-objects-data-source-wizard-analysis-services"></a>Sources de données d'objets existants (Assistant Source de données) (Analysis Services)
   Utilisez la page **Sources de données d'objets existants** pour spécifier une source de données ou un projet existant sur laquelle (ou lequel) baser la nouvelle source de données.  
@@ -40,8 +40,8 @@ ms.locfileid: "36042593"
  Sélectionnez le projet que vous voulez référencer dans la nouvelle source de données.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Aide (F1) de l’Assistant Source de données &#40;Analysis Services&#41;](data-source-wizard-f1-help-analysis-services.md)   
+ [Aide F1 de l’Assistant Source de données &#40;Analysis Services&#41;](data-source-wizard-f1-help-analysis-services.md)   
  [Sources de données dans les modèles multidimensionnels](multidimensional-models/data-sources-in-multidimensional-models.md)   
- [Les Sources de données prises en charge &#40;SSAS multidimensionnel&#41;](multidimensional-models/supported-data-sources-ssas-multidimensional.md)  
+ [Sources de données prises en charge &#40;SSAS multidimensionnel&#41;](multidimensional-models/supported-data-sources-ssas-multidimensional.md)  
   
   

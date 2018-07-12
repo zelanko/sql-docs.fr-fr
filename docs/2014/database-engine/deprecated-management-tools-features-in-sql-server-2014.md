@@ -1,25 +1,23 @@
 ---
-title: Fonctionnalités dans SQL Server 2014 des outils d’administration déconseillées | Documents Microsoft
+title: Fonctionnalités dans SQL Server 2014 des outils d’administration déconseillées | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- tools-ssms
+ms.technology: ssms
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: a08d1354-cc91-4ab7-a73f-3ad815af3d5a
-caps.latest.revision: 13
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 5a6b30dfb30b8515cd55083c634c1256e535bd8a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 0dc75044e2375bb21c0a2741f1efa499fafd7e68
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36042752"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37203859"
 ---
 # <a name="deprecated-management-tools-features-in-sql-server-2014"></a>Fonctionnalités des outils d'administration déconseillées dans SQL Server 2014
   Cette rubrique décrit les fonctionnalités des outils d'administration déconseillées qui sont toujours disponibles dans [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]. Il est prévu que ces fonctionnalités soient supprimées dans une prochaine version de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Les fonctions déconseillées ne doivent pas être utilisées dans de nouvelles applications.  

@@ -1,12 +1,12 @@
 ---
-title: Un jeu de résultats SELECT (ODBC) de copie en bloc | Documents Microsoft
+title: Un jeu de résultats SELECT (ODBC) de copie en bloc | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: connectivity
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -18,12 +18,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: a6cc6782023af6bb1916d153e172fe7c8c2dfc53
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
+ms.openlocfilehash: 7be06db485057a16961d76ff3965ce862c104cdd
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35702440"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37427288"
 ---
 # <a name="bulk-copy-a-select-result-set-odbc"></a>Copier en bloc un jeu de résultats SELECT (ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -52,7 +52,7 @@ ms.locfileid: "35702440"
   
     -   Direction de la copie : DB_OUT.  
   
-5.  Appelez [bcp_control](../../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-control.md), définissez eOption sur BCPHINTS et placez dans iValue un pointeur vers un tableau SQLTCHAR contenant l’instruction SELECT.  
+5.  Appelez [bcp_control](../../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-control.md), définissez eOption avec la valeur BCPHINTS et placez dans iValue un pointeur vers un tableau SQLTCHAR contenant l’instruction SELECT.  
   
 6.  Appelez [bcp_exec](../../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-exec.md) pour exécuter l’opération de copie en bloc.  
   
@@ -170,6 +170,6 @@ int main() {
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Copie en bloc avec les SQL Server ODBC Driver rubriques &#40;ODBC&#41;](../../../relational-databases/native-client-odbc-how-to/bulk-copy/bulk-copying-with-the-sql-server-odbc-driver-how-to-topics-odbc.md)  
+ [Copie en bloc avec les SQL Server ODBC Driver procédures &#40;ODBC&#41;](../../../relational-databases/native-client-odbc-how-to/bulk-copy/bulk-copying-with-the-sql-server-odbc-driver-how-to-topics-odbc.md)  
   
   

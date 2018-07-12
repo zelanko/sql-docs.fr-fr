@@ -1,5 +1,5 @@
 ---
-title: Type de données ReferenceMeasureGroupDimension (ASSL) | Documents Microsoft
+title: Type de données ReferenceMeasureGroupDimension (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - ReferenceMeasureGroupDimension data type
 ms.assetid: 81f7b83e-71a3-4eab-b291-0500d05903dc
 caps.latest.revision: 35
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 9ca3299aa36df705a107fac63bc5ae726b606e15
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: e8e2134f14ad34f14cbf1b7f6a2858fe14485bbe
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36042763"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37159306"
 ---
 # <a name="referencemeasuregroupdimension-data-type-assl"></a>Type de données ReferenceMeasureGroupDimension (ASSL)
   Définit un type de données dérivé représentant une dimension indirectement liée à la table de faits par le biais d'une dimension intermédiaire. (Par exemple, un groupe de mesures Ventes peut référencer une dimension Géographie liée par le biais de la dimension Client.)  
@@ -66,6 +66,6 @@ ms.locfileid: "36042763"
  L’élément correspondant dans le modèle d’objet objets AMO (Analysis Management) est <xref:Microsoft.AnalysisServices.ReferenceMeasureGroupDimension>.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Types de données de script langage XML Analysis Services &#40;ASSL&#41;](analysis-services-scripting-language-xml-data-types-assl.md)  
+ [Types Analysis Services Scripting Language XML données &#40;ASSL&#41;](analysis-services-scripting-language-xml-data-types-assl.md)  
   
   

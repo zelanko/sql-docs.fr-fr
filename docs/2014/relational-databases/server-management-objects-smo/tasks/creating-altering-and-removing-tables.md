@@ -1,5 +1,5 @@
 ---
-title: Création, modification et suppression de Tables | Documents Microsoft
+title: Création, modification et suppression de Tables | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - tables [SMO]
 ms.assetid: ff0bcfff-812f-4999-b0c7-736a97804c2b
 caps.latest.revision: 45
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: b1498ac39d8ebf69a406fc37d8aa41319386e8fb
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: bb1760bb19f6f32b93e8ee1b62546d7c615ae9f6
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36042420"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37177866"
 ---
 # <a name="creating-altering-and-removing-tables"></a>Création, modification et suppression de tables
   Dans SMO ([!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Management Objects), les tables sont représentées par l'objet <xref:Microsoft.SqlServer.Management.Smo.Table>. Dans la hiérarchie des objets SMO, l'objet <xref:Microsoft.SqlServer.Management.Smo.Table> se trouve sous l'objet <xref:Microsoft.SqlServer.Management.Smo.Database>.  

@@ -1,28 +1,26 @@
 ---
-title: L’exécution de commandes contenant des paramètres table | Documents Microsoft
+title: Exécution de commandes contenant des paramètres table | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - table-valued parameters, executing commands containing
 ms.assetid: 7ecba6f6-fe7a-462a-9aa3-d5115b6d4529
 caps.latest.revision: 26
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 89c31d3e0878a7e1eed0b5f0c5ce4d09a582a357
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: 20b7c44bb8e1bb27978170a8ccced45a9f871169
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36143021"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37431588"
 ---
 # <a name="executing-commands-containing-table-valued-parameters"></a>Exécution de commandes contenant des paramètres table
   L'exécution d'une commande qui contient des paramètres table requiert deux phases :  

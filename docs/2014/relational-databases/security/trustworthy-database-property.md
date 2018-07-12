@@ -5,23 +5,22 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-security
+ms.technology: security
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - TRUSTWORTHY database property
 ms.assetid: 64b2a53d-4416-4a19-acc0-664a61b45348
 caps.latest.revision: 21
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 126785af52f4a16b98b8274b66d9c26fc2ceee34
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: edmacauley
+ms.author: edmaca
+manager: craigg
+ms.openlocfilehash: 5889cd4a1cb8cfc95a07695a38db104ee57bb05d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36043554"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37154040"
 ---
 # <a name="trustworthy-database-property"></a>TRUSTWORTHY, propriété de base de données
   La propriété de base de données TRUSTWORTHY permet d'indiquer si l'instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] approuve la base de données et son contenu. Par défaut, cette propriété a la valeur OFF, mais peut être définie sur ON à l'aide de l'instruction ALTER DATABASE. Par exemple, `ALTER DATABASE AdventureWorks2012 SET TRUSTWORTHY ON;`.  

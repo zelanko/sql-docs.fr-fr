@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - "10033"
 - sql12.rtp.rptdesigner.group.f1
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - Grouping Pane dialog box
 ms.assetid: 8b4bd0b3-ec97-48f8-8bfb-82a53a2f35a1
 caps.latest.revision: 21
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 8e989f128bba1f122091da48a0c57f82db18f0bd
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 9a6895b0b0654f5309aaec9debb88b26c7a9a15a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36043756"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37189816"
 ---
 # <a name="grouping-pane"></a>Volet de regroupement
   Le volet regroupement affiche les groupes de lignes et les groupes de colonnes de la région de données de tableau matriciel actuellement sélectionnée. Le volet de regroupement n'est pas disponible pour les régions de données Graphique et Jauge. Le volet de regroupement se compose d’un volet Groupes de lignes et d’un volet Groupes de colonnes. Le volet de regroupement comporte deux modes : par défaut et avancé. Le mode par défaut affiche une vue hiérarchique des membres dynamiques pour les groupes de lignes et de colonnes. Le mode avancé affiche à la fois les membres statiques et dynamiques pour les groupes de lignes et de colonnes. Un groupe est un jeu de données nommé extrait d'un dataset de rapport qui est affiché sur une région de données. Les groupes sont organisés en hiérarchies qui incluent des membres statiques et dynamiques. Pour plus d’informations, consultez [Fonctionnement des groupes&#40;Générateur de rapports et SSRS&#41;](../report-design/understanding-groups-report-builder-and-ssrs.md).  
@@ -86,6 +86,6 @@ ms.locfileid: "36043756"
 ## <a name="see-also"></a>Voir aussi  
  [Tables, matrices et listes &#40;Générateur de rapports et SSRS&#41;](../report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)   
  [Expressions &#40;Générateur de rapports et SSRS&#41;](../report-design/expressions-report-builder-and-ssrs.md)   
- [Filtrer, regrouper et trier les données &#40;rapport Générateur et SSRS&#41;](../report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)  
+ [Filtrer, regrouper et trier les données &#40;Générateur de rapports et SSRS&#41;](../report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Analyser les facteurs d’influence clés (outils d’analyse de Table pour Excel) | Documents Microsoft
+title: Analyser les facteurs d’influence clés (outils d’analyse de Table pour Excel) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,27 +8,27 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Table Analysis tools
 - key influencers
 - factor analysis
 ms.assetid: 54d7b4ce-7b79-407a-985c-aa655ad19280
 caps.latest.revision: 26
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 41b30eb0f3f0dc68c5666581a2682470fac7f978
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 0e280644cbd3d5fd78ba6f1b29f8a989948094a7
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36042606"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37187636"
 ---
 # <a name="analyze-key-influencers-table-analysis-tools-for-excel"></a>Analyser les facteurs d'influence clés (Outils d'analyse de table pour Excel)
   ![Bouton de facteurs d’influence clés analyser dans le ruban](media/tat-aki.gif "bouton analyser les facteurs d’influence clés du ruban")  
   
- Avec la **analyser les facteurs d’influence clés** outil, vous choisissez une colonne qui contient un résultat cible, et l’algorithme détermine les facteurs qui ont eu la plus grande influence sur le résultat.  
+ Avec le **analyser les facteurs d’influence clés** outil, que vous choisissez une colonne qui contient un résultat cible, et l’algorithme détermine les facteurs qui ont eu la plus grande influence sur le résultat.  
   
  L'outil crée de nouvelles tables de données qui signalent les facteurs associés à chaque résultat et qui affichent de manière graphique la probabilité de la relation. Vous pouvez filtrer les tables en fonction de différents facteurs et résultats pour analyser les résultats de manière plus approfondie.  
   
@@ -38,11 +38,11 @@ ms.locfileid: "36042606"
   
 1.  Ouvrez une table de données Excel.  
   
-2.  Dans **outils de tableau**, dans le **analyser** du ruban, cliquez sur **analyser les facteurs d’influence clés.**  
+2.  Dans **outils de tableau**, dans le **analyser** ruban, cliquez sur **analyser les facteurs d’influence clés.**  
   
 3.  Sélectionnez la seule colonne qui est la cible de l'analyse.  
   
-4.  Si vous le souhaitez, cliquez sur **choisir les colonnes à utiliser pour l’analyse**. Dans le **sélection avancée de colonnes** boîte de dialogue, choisissez les colonnes qui sont plus susceptibles de contenir des données pertinentes. Pour améliorer les performances et la précision, désélectionnez les colonnes telles que ID ou Nom qui ne sont pas importantes pour l'analyse des séquences. Cliquez sur **OK** pour fermer la **sélection avancée de colonnes** boîte de dialogue.  
+4.  Si vous le souhaitez, cliquez sur **choisir les colonnes à utiliser pour l’analyse**. Dans le **sélection avancée de colonnes** boîte de dialogue, sélectionnez les colonnes qui sont plus susceptibles de contenir des données pertinentes. Pour améliorer les performances et la précision, désélectionnez les colonnes telles que ID ou Nom qui ne sont pas importantes pour l'analyse des séquences. Cliquez sur **OK** pour fermer la **sélection avancée de colonnes** boîte de dialogue.  
   
 5.  Cliquez sur **Exécuter**.  
   
@@ -50,11 +50,11 @@ ms.locfileid: "36042606"
   
 6.  Si aucune séquence n'est détectée, l'Assistant crée une nouvelle feuille de calcul qui contient une description du problème.  
   
-7.  Si des séquences sont détectées, l'Assistant crée un rapport sur une nouvelle feuille de calcul qui affiche les séquences. Le rapport est nommé **facteurs d’influence clés pour \<colonne >**. Vous pouvez personnaliser le rapport comme indiqué dans la procédure suivante.  
+7.  Si des séquences sont détectées, l'Assistant crée un rapport sur une nouvelle feuille de calcul qui affiche les séquences. Le rapport est intitulé **facteurs d’influence clés pour \<colonne >**. Vous pouvez personnaliser le rapport comme indiqué dans la procédure suivante.  
   
 #### <a name="create-a-custom-report"></a>Créer un rapport personnalisé  
   
-1.  Dans le **Discrimination en fonction de facteurs d’influence clés** boîte de dialogue, choisissez les deux valeurs que vous souhaitez comparer en les sélectionnant à partir de la **valeur 1** et **valeur 2** listes déroulantes . Vous pouvez, par exemple, comparer les acheteurs aux non-acheteurs.  
+1.  Dans le **Discrimination en fonction de facteurs d’influence clés** boîte de dialogue, sélectionnez les deux valeurs que vous souhaitez comparer en les sélectionnant à partir de la **Value 1** et **valeur 2** listes déroulantes . Vous pouvez, par exemple, comparer les acheteurs aux non-acheteurs.  
   
 2.  Cliquez sur **ajouter rapport**.  
   
@@ -63,7 +63,7 @@ ms.locfileid: "36042606"
 3.  Lorsque vous avez terminé de faire des comparaisons, cliquez sur **fermer**.  
   
 ## <a name="understanding-the-key-influencers-report"></a>Présentation du rapport des facteurs d'influence clés  
- Une fois le modèle de données a été créé, le **analyser les facteurs d’influence clés** outil crée des rapports qui vous aident à Explorer et comparer les facteurs d’influence clés.  
+ Une fois que le modèle de données a été créé, le **analyser les facteurs d’influence clés** outil crée des rapports qui vous aident à Explorer et comparer les facteurs d’influence clés.  
   
 -   Le rapport à gauche est celui qui est généré par défaut. Il affiche les prédicteurs les plus forts de la colonne de résultats (la variable dépendante).  
   
@@ -105,19 +105,19 @@ ms.locfileid: "36042606"
 -   Il crée un rapport décrivant les facteurs d'influence clés, classés par scores de confiance.  
   
 ### <a name="requirements"></a>Spécifications  
- Si la colonne cible contient des valeurs numériques continues, l'outil segmente automatiquement les valeurs numériques dans des groupes. Ces regroupements représentent des clusters de cas possédant des caractéristiques similaires. Cependant, les valeurs numériques ne peuvent pas être divisées en groupes conviviaux. Par exemple, le rapport peut contenir un regroupement tel que «\<12.85701", tandis que les utilisateurs de rapports en général, consultez les regroupements qui utilisent des nombres entiers, tels que 10 à 19, 20-29 et ainsi de suite.  
+ Si la colonne cible contient des valeurs numériques continues, l'outil segmente automatiquement les valeurs numériques dans des groupes. Ces regroupements représentent des clusters de cas possédant des caractéristiques similaires. Cependant, les valeurs numériques ne peuvent pas être divisées en groupes conviviaux. Par exemple, le rapport peut contenir un regroupement tel que «\<12.85701", tandis que les utilisateurs de rapports en général, consultez les regroupements qui utilisent des nombres entiers, tels que 10-19, 20-29 et ainsi de suite.  
   
- Si vous voulez regrouper vos données numériques d'une autre manière, vous devez segmenter les données comme vous le souhaitez avant de créer l'analyse. Par exemple, vous pouvez utiliser la [Réétiqueter](relabel-sql-server-data-mining-add-ins.md) outil dans le Client d’exploration de données pour Excel créer une nouvelle étiquette de regroupement dans une colonne distincte, puis utiliser cette nouvelle colonne dans l’analyse.  
+ Si vous voulez regrouper vos données numériques d'une autre manière, vous devez segmenter les données comme vous le souhaitez avant de créer l'analyse. Par exemple, vous pouvez utiliser la [Réétiqueter](relabel-sql-server-data-mining-add-ins.md) outil dans le Client d’exploration de données pour Excel créer une nouvelle étiquette de regroupement dans une colonne distincte et ensuite utiliser cette nouvelle colonne dans l’analyse.  
   
 ### <a name="related-tools"></a>Outils connexes  
- Le **d’exploration de données** ruban fournit des outils plus avancés, y compris la possibilité de personnaliser les modèles d’exploration de données  
+ Le **exploration de données** ruban fournit des outils plus avancés, y compris la possibilité de personnaliser les modèles d’exploration de données  
   
- Si vous enregistrez votre modèle à l’aide de la **analyser les facteurs d’influence clés** outil, vous pouvez utiliser le Client d’exploration de données pour parcourir le modèle et Explorer les relations plus en détail. Pour plus d’informations, consultez [exploration des modèles dans Excel &#40;des compléments d’exploration de données SQL Server&#41;](browsing-models-in-excel-sql-server-data-mining-add-ins.md). Vous pouvez également utiliser Microsoft Office Visio pour créer des graphiques et des diagrammes qui présentent les relations sous forme de réseaux de dépendances ou de clusters. Pour plus d’informations, consultez [dépannage des données d’exploration de données aux diagrammes Visio &#40;des compléments d’exploration de données SQL Server&#41;](troubleshooting-visio-data-mining-diagrams-sql-server-data-mining-add-ins.md).  
+ Si vous enregistrez votre modèle à l’aide de la **analyser les facteurs d’influence clés** outil, vous pouvez utiliser le Client d’exploration de données pour parcourir le modèle et Explorer des relations plus en détail. Pour plus d’informations, consultez [exploration des modèles dans Excel &#40;SQL Server Data Mining Add-ins&#41;](browsing-models-in-excel-sql-server-data-mining-add-ins.md). Vous pouvez également utiliser Microsoft Office Visio pour créer des graphiques et des diagrammes qui présentent les relations sous forme de réseaux de dépendances ou de clusters. Pour plus d’informations, consultez [dépannage des diagrammes d’exploration de données Visio données &#40;SQL Server Data Mining Add-ins&#41;](troubleshooting-visio-data-mining-diagrams-sql-server-data-mining-add-ins.md).  
   
 > [!NOTE]  
 >  Les modèles créés lorsque vous utilisez les outils d'analyse de table sont supprimés lorsque vous fermez votre feuille de calcul ou mettez fin à la connexion avec le serveur [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. Par conséquent, vous ne pouvez parcourir les modèles que tant que la connexion reste active. Vous ne pouvez pas restituer les modèles dans Visio si vous désactivez la connexion ou fermez la feuille de calcul.  
   
- Pour plus d’informations sur l’algorithme utilisé par le **analyser les facteurs d’influence clés** outil, consultez « Algorithme Microsoft Naïve Bayes » dans la documentation en ligne de SQL Server.  
+ Pour plus d’informations sur l’algorithme utilisé par le **analyser les facteurs d’influence clés** , consultez « Algorithme Microsoft Naïve Bayes » dans la documentation en ligne de SQL Server.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Outils d’analyse de table pour Excel](table-analysis-tools-for-excel.md)   

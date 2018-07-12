@@ -1,5 +1,5 @@
 ---
-title: Planifier l’actualisation des données et Sources de données qui ne prennent pas en charge l’authentification Windows (PowerPivot pour SharePoint) | Documents Microsoft
+title: Actualisation planifiée des données et Sources de données qui ne prennent pas en charge l’authentification Windows (PowerPivot pour SharePoint) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: d8d875bc-7823-46b7-a939-867cefd4de12
 caps.latest.revision: 8
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 28ab8ddcc8ef6a866992cdf7a2fabe75a5a30878
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 474308339c112899787a4b6344bbe53622f4fff7
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36041903"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37230097"
 ---
 # <a name="schedule-data-refresh-and-data-sources-that-do-not-support-windows-authentication-powerpivot-for-sharepoint"></a>Actualisation planifiée des données et sources de données qui ne prennent pas en charge l'authentification Windows (PowerPivot pour SharePoint)
   Cette rubrique décrit un flux de travail d’actualisation planifiée des données PowerPivot pour SharePoint qui peut utiliser des sources de données qui **NE PRENNENT PAS EN CHARGE** l’authentification Windows. Par exemple, des sources de données Oracle ou IDM DB2. Les illustrations et les étapes figurant dans cette rubrique font référence à des sources de données Oracle, mais le même flux de travail s'applique aux autres sources de données.  
@@ -88,7 +88,7 @@ ms.locfileid: "36041903"
   
 2.  Cliquez sur le nom de votre application de service Banque d'informations sécurisées.  
   
-3.  Sur le **gérer** , cliquez sur **nouveau**![as_powerpivot_refresh_sss_new_target_application](../media/as-powerpivot-refresh-sss-new-target-application.gif "as_powerpivot_refresh_sss_new_target_application ").  
+3.  Sur le **gérer** , cliquez sur **New**![as_powerpivot_refresh_sss_new_target_application](../media/as-powerpivot-refresh-sss-new-target-application.gif "as_powerpivot_refresh_sss_new_target_application ").  
   
 4.  Sur la page **Créer une nouvelle application cible du magasin sécurisé** , configurez les valeurs suivantes :  
   
@@ -118,7 +118,7 @@ ms.locfileid: "36041903"
   
 11. Tapez l'ID d'utilisateur Oracle, ainsi que le mot de passe Oracle, puis cliquez sur **OK**.  
   
- Pour plus d’informations, consultez la section « Pour créer une application cible pour l’authentification SQL Server » dans [avec l’authentification SQL Server (SharePoint Server 2013), utilisez le magasin sécurisé](http://technet.microsoft.com/library/gg298949.aspx) (http://technet.microsoft.com/library/gg298949.aspx).  
+ Pour plus d’informations, consultez la section « Pour créer une application cible pour l’authentification SQL Server » dans [utilisez Secure Store avec l’authentification SQL Server (SharePoint Server 2013)](http://technet.microsoft.com/library/gg298949.aspx) (http://technet.microsoft.com/library/gg298949.aspx).  
   
 ## <a name="to-configure-the-powerpivot-service-application"></a>Pour configurer l'application de service PowerPivot  
   
@@ -128,7 +128,7 @@ ms.locfileid: "36041903"
   
 3.  Cliquez sur **Configurer les paramètres d'application de service** dans la section Actions.  
   
-4.  Dans le **d’actualisation des données** section, définissez la **compte PowerPivot sans assistance données Actualiser**à`PowerPivotDataRefresh` puis cliquez sur **OK**.  
+4.  Dans le **d’actualisation des données** section, définissez le **compte PowerPivot sans assistance données Actualiser**à`PowerPivotDataRefresh` puis cliquez sur **OK**.  
   
      ![as_powerpivot_refresh_new_refresh_acount](../media/as-powerpivot-refresh-new-refresh-acount.gif "as_powerpivot_refresh_new_refresh_acount")  
   

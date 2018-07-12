@@ -1,5 +1,5 @@
 ---
-title: Base de données (SSRS en Mode natif) | Documents Microsoft
+title: Base de données (Mode natif SSRS) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - SQL12.rsconfigtool.databasesetup.F1
 ms.assetid: 8c9bb3b3-ea77-4a5b-ba35-7451ed11083d
 caps.latest.revision: 8
 author: markingmyname
 ms.author: maghan
-manager: jhubbard
-ms.openlocfilehash: 4c8ff22e9edee8af2af4b948289b56c3078e4232
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 7bce0a9aa3adcddb7363224138a7ec3f51a47622
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36043313"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37183936"
 ---
 # <a name="database-ssrs-native-mode"></a>Base de données (SSRS en mode natif)
   Utilisez la page Base de données pour créer et configurer les bases de données du serveur de rapports qui fournissent le stockage interne pour une ou plusieurs instances du serveur de rapports. Si vous configurez un serveur de rapports pour utiliser une base de données du serveur de rapports distant, vous devez utiliser le [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Configuration Manager pour créer la base de données.  
@@ -36,7 +36,7 @@ ms.locfileid: "36043313"
   
 ## <a name="options"></a>Options  
  **Nom du serveur SQL**  
- Dans la base de données en cours, **nom SQL Server** Spécifie le nom de la [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] qui exécute la base de données du serveur de rapports. Vous pouvez utiliser une instance par défaut ou nommée sur un ordinateur local ou distant.  
+ Dans la base de données serveur de rapports actuel, **nom du serveur SQL** Spécifie le nom de la [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] qui exécute la base de données de serveur de rapports. Vous pouvez utiliser une instance par défaut ou nommée sur un ordinateur local ou distant.  
   
  **Database Name**  
  Spécifie le nom de la base de données du serveur de rapports qui stocke les données du serveur.  
@@ -48,7 +48,7 @@ ms.locfileid: "36043313"
  Démarrez un Assistant qui vous guide à travers toutes les étapes requises pour créer ou sélectionner une base de données de serveur de rapports.  
   
  **Type d’informations d’identification**  
- Détermine les informations d'identification utilisées par le serveur de rapports pour la connexion à la base de données du serveur de rapports. Les types d’informations d’identification que vous pouvez spécifier incluent le compte de service, un utilisateur de domaine Windows, l’utilisateur Windows local, ou [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] connexion de base de données. Pour plus d’informations sur la sélection des informations d’identification, consultez [configurer une connexion de base de données de serveur de rapports &#40;Gestionnaire de Configuration de SSRS&#41;](../../../2014/sql-server/install/configure-a-report-server-database-connection-ssrs-configuration-manager.md).  
+ Détermine les informations d'identification utilisées par le serveur de rapports pour la connexion à la base de données du serveur de rapports. Les types d’informations d’identification que vous pouvez spécifier incluent le compte de service, un utilisateur de domaine Windows, l’utilisateur local de Windows, ou [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] connexion de base de données. Pour plus d’informations sur la sélection des informations d’identification, consultez [configurer une connexion de base de données de serveur de rapports &#40;Gestionnaire de Configuration de SSRS&#41;](../../../2014/sql-server/install/configure-a-report-server-database-connection-ssrs-configuration-manager.md).  
   
  **Nom d'utilisateur**  
  Spécifie un compte d’utilisateur de domaine si vous utilisez des informations d’identification Windows, ou un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] connexion si vous utilisez [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] informations d’identification. Si vous utilisez des informations d’identification Windows, indiquez-les dans ce format :  *\<domaine >\\< compte\>*.  

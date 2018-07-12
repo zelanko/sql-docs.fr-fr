@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.rtp.rptdesigner.previewview.f1
 helpviewer_keywords:
 - Preview view [Reporting Services]
 ms.assetid: 108255d1-5be8-47c1-80f3-1f2a055e4d02
 caps.latest.revision: 34
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: e64635a1600a6949287e4528802faf8cdc93f15d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: 3114b56007619d54d0a9aea95e136d65fe0f725b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36042603"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37212219"
 ---
 # <a name="preview-view"></a>Vue Aperçu
   Utilisez la vue **Aperçu** pour afficher le rapport rendu. Lors de l'aperçu d'un rapport, le Générateur de rapports exécute le rapport localement et l'affiche dans la vue Aperçu. Dans le mode Aperçu, le rapport est traité dans sa totalité. Si le rapport contient une requête complexe ou une grande quantité de données, l'aperçu peut prendre plusieurs minutes à apparaître la première fois que vous l'affichez. Pour les modifications ultérieures apportées exclusivement à la mise en forme du rapport, l'aperçu utilise les données mises en cache.  
@@ -67,7 +67,7 @@ ms.locfileid: "36042603"
  **Actualiser**  
  Choisissez cette option pour actualiser le cache des données et exécutez de nouveau le rapport.  
   
- **Imprimer**  
+ **Impression**  
  Choisissez cette option pour imprimer le rapport.  
   
  **Mise en page**  
@@ -82,7 +82,7 @@ ms.locfileid: "36042603"
  **Zoom**  
  Sélectionnez un facteur de zoom avant ou arrière pour l'affichage du rapport.  
   
- **Rechercher du texte**  
+ **Texte de recherche**  
  Tapez un fragment de texte à rechercher dans le rapport. Vous ne pouvez pas utiliser d'opérateurs de recherche. Cliquez sur **Rechercher** pour rechercher la première instance.  
   
  **Rechercher**  

@@ -1,5 +1,5 @@
 ---
-title: Éditeur de Transformation de script (Page gestionnaires de connexions) | Documents Microsoft
+title: Éditeur de Transformation de script (Page gestionnaires de connexions) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.scriptcomponent.connections.f1
 helpviewer_keywords:
 - Script Transformation Editor
 ms.assetid: 709f048e-0b8b-46c3-9dde-3e912361157f
 caps.latest.revision: 19
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 29eecbed7fe8d51886167de4b8a05e96ed2884a5
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 02729cf5e1b1fbc96e6cee87fdcc072380d7ea87
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36041636"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37221639"
 ---
 # <a name="script-transformation-editor-connection-managers-page"></a>Éditeur de transformation de script (Page Gestionnaire de connexions)
   La page **Gestionnaire de connexions** de **l’Éditeur de transformation de script** permet de spécifier les connexions que doit utiliser le script.  
@@ -53,7 +53,7 @@ ms.locfileid: "36041636"
  [Integration Services Error and Message Reference](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Sélectionner le Type de composant de Script](../../2014/integration-services/select-script-component-type.md)   
  [Éditeur de Transformation de script &#40;Page de colonnes d’entrée&#41;](../../2014/integration-services/script-transformation-editor-input-columns-page.md)   
- [Éditeur de Transformation de script &#40;les entrées et sorties de Page&#41;](../../2014/integration-services/script-transformation-editor-inputs-and-outputs-page.md)   
+ [Éditeur de Transformation de script &#40;entrées et de sorties de Page&#41;](../../2014/integration-services/script-transformation-editor-inputs-and-outputs-page.md)   
  [Éditeur de Transformation de script &#40;Page Script&#41;](../../2014/integration-services/script-transformation-editor-script-page.md)   
  [Exemples supplémentaires du composant Script](extending-packages-scripting-data-flow-script-component-examples/additional-script-component-examples.md)  
   

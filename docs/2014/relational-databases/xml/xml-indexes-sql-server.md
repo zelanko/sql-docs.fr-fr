@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-xml
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - removing indexes
 - deleting indexes
@@ -34,15 +34,15 @@ helpviewer_keywords:
 - XML indexes [SQL Server], creating
 ms.assetid: f5c9209d-b3f3-4543-b30b-01365a5e7333
 caps.latest.revision: 58
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: aeb1c0f282e0cb46bcb1e35af933a67b84eb4e0d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 6842ef037bd8543a569449282886b9f943b8114f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36043783"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37152080"
 ---
 # <a name="xml-indexes-sql-server"></a>Index XML (SQL Server)
   Index XML peuvent être créés sur `xml` colonnes de type de données. L'indexation porte sur les balises, les valeurs et les chemins d'accès rencontrés dans les instances XML de la colonne et contribue à l'optimisation des performances des requêtes. Votre application peut bénéficier d'un index XML dans les situations suivantes :  
@@ -76,12 +76,12 @@ WHERE CatalogDescription.exist ('/PD:ProductDescription/@ProductModelID[.="19"]'
   
  Pour pouvoir sélectionner les instances XML satisfaisant la condition stipulée dans la clause `WHERE` , le BLOB XML se trouvant dans chaque ligne de la table `Production.ProductModel` est fragmenté au moment de l'exécution. L'expression `(/PD:ProductDescription/@ProductModelID[.="19"]`) tirée de la méthode `exist()` est ensuite évaluée. Une telle fragmentation à l'exécution peut être coûteuse selon la taille et le nombre d'instances stockées dans la colonne.  
   
- Si l’interrogation des objets binaires volumineux (BLOB) XML est courante dans l’environnement de votre application, il permet d’indexer le `xml` colonnes de type. En contrepartie, le coût associé à la gestion de l'index lors de la modification des données est également à prendre en compte.  
+ Si l’interrogation des objets binaires volumineux (BLOB) XML est courant dans votre environnement d’application, il permet d’indexer le `xml` colonnes de type. En contrepartie, le coût associé à la gestion de l'index lors de la modification des données est également à prendre en compte.  
   
 ## <a name="primary-xml-index"></a>Index XML primaires  
  L'index XML primaire indexe toutes les balises, valeurs et chemins d'accès rencontrés dans les instances XML d'une colonne XML. Pour créer un index XML primaire, la table contenant la colonne XML doit posséder un index cluster portant sur la clé primaire de la table. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilise cette clé primaire pour corréler les lignes de l'index XML primaire avec des lignes dans la table qui contient la colonne XML.  
   
- L’index XML primaire est une représentation fragmentée et persistante des objets BLOB XML dans les `xml` colonne de type de données. Pour chacun de ces objets blob XML de la colonne, l'index crée plusieurs lignes de données. Le nombre de lignes dans l'index est presque égal au nombre de nœuds se trouvant dans l'objet blob XML. Lorsqu'une requête extrait l'intégralité de l'instance XML, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fournit l'instance à partir de la colonne XML. Les requêtes dans des instances XML utilisent l'index XML primaire et peuvent renvoyer des valeurs scalaires ou des sous-arborescences XML en se servant de l'index lui-même.  
+ L’index XML primaire est une représentation fragmentée et persistante des objets BLOB XML dans le `xml` colonne de type de données. Pour chacun de ces objets blob XML de la colonne, l'index crée plusieurs lignes de données. Le nombre de lignes dans l'index est presque égal au nombre de nœuds se trouvant dans l'objet blob XML. Lorsqu'une requête extrait l'intégralité de l'instance XML, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fournit l'instance à partir de la colonne XML. Les requêtes dans des instances XML utilisent l'index XML primaire et peuvent renvoyer des valeurs scalaires ou des sous-arborescences XML en se servant de l'index lui-même.  
   
  Chaque ligne stocke les informations suivantes relatives aux nœuds :  
   
@@ -172,7 +172,7 @@ WHERE CatalogDescription.exist ('/PD:ProductDescription/@ProductModelID[.="19"]'
   
 -   `/book[@* = "someValue"]`, où la requête recherche l'élément <`book`> dont un attribut possède la valeur `"someValue"`.  
   
- La requête suivante renvoie `ContactID` à partir de la table `Contact` . Le `WHERE` spécifie un filtre qui recherche des valeurs dans les `AdditionalContactInfo``xml` colonne de type. L'ID des contacts n'est renvoyé que si l'objet blob XML relatif aux informations complémentaires sur les contacts correspondants contient un numéro de téléphone spécifique. Puisque l'élément <`telephoneNumber`> peut apparaître n'importe où dans le document XML, l'expression du chemin d'accès indique l'axe descendant-or-self.  
+ La requête suivante renvoie `ContactID` à partir de la table `Contact` . Le `WHERE` clause spécifie un filtre qui recherche les valeurs dans le `AdditionalContactInfo``xml` colonne de type. L'ID des contacts n'est renvoyé que si l'objet blob XML relatif aux informations complémentaires sur les contacts correspondants contient un numéro de téléphone spécifique. Puisque l'élément <`telephoneNumber`> peut apparaître n'importe où dans le document XML, l'expression du chemin d'accès indique l'axe descendant-or-self.  
   
 ```  
 WITH XMLNAMESPACES (  
@@ -202,7 +202,7 @@ FROM Production.ProductModel
 WHERE ProductModelID = 19  
 ```  
   
- À part les différences décrites plus loin dans cette rubrique, la création d’un document XML index portant sur une`xml` colonne de type est similaire à la création d’un index sur un site non`xml` colonne de type. Les instructions DDL [!INCLUDE[tsql](../../includes/tsql-md.md)] suivantes permettent de créer et de gérer les index XML :  
+ À part les différences décrites plus loin dans cette rubrique, création un index XML portant sur une`xml` colonne de type est similaire à la création d’un index sur une non -`xml` colonne de type. Les instructions DDL [!INCLUDE[tsql](../../includes/tsql-md.md)] suivantes permettent de créer et de gérer les index XML :  
   
 -   [CREATE INDEX &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-index-transact-sql)  
   

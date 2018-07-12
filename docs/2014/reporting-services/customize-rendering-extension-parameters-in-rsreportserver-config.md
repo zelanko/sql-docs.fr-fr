@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - configuration options [Reporting Services]
 - DeviceInfo settings
@@ -20,13 +20,13 @@ ms.assetid: 3bf7ab2b-70bb-41c8-acda-227994d15aed
 caps.latest.revision: 31
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 201a3af8cfd9acad20539327f4dc9afbfcb2a435
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 1734710832b6c064aa2d2a76eec0a1dda7a9b6b4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36043093"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37150240"
 ---
 # <a name="customize-rendering-extension-parameters-in-rsreportserverconfig"></a>Personnaliser les paramètres d'extension de rendu dans RSReportServer.Config
   Vous pouvez spécifier des paramètres d'extension de rendu dans le fichier de configuration RSReportServer afin de remplacer le comportement de la génération de rapport par défaut pour les rapports exécutés sur un serveur de rapports [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] . Vous pouvez modifier les paramètres d'extension de rendu pour obtenir les résultats suivants :  

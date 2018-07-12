@@ -1,5 +1,5 @@
 ---
-title: Comparaison des Solutions multidimensionnelles et tabulaires (SSAS) | Documents Microsoft
+title: Comparaison des Solutions multidimensionnelles et tabulaires (SSAS) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 76ee5e96-6a04-49af-a88e-cb5fe29f2e9a
 caps.latest.revision: 45
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: b5cfb7c473e16dde04a87a05e3d727d161c62583
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: fbd022ac0771fd862909761b1d4f1abd6e0acf90
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36043743"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37181056"
 ---
 # <a name="comparing-tabular-and-multidimensional-solutions-ssas"></a>Comparaison des solutions tabulaires et multidimensionnelles (SSAS)
   [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] fournit deux méthodes distinctes pour la modélisation de données : tabulaire et multidimensionnelle. Bien qu'elles présentent de nombreux points communs, elles ont aussi d'importantes différences qui guideront votre choix. Dans cette rubrique, nous comparons les fonctionnalités et décrivons la façon dont chaque approche répond aux besoins communs des projets. Par exemple, si la prise en charge d'une source de données spécifique est prioritaire, la section sur les sources de données peut vous aider à choisir l'approche de modélisation qui convient.  
@@ -55,12 +55,12 @@ ms.locfileid: "36043743"
 ##  <a name="bkmk_overview"></a> Vue d’ensemble de la modélisation dans Analysis Services  
  Analysis Services permet de développer et déployer des modèles via l'hébergement de base de données sur une instance Analysis Services. Les types de modèle sont tabulaires ou multidimensionnels. Comme l'on peut s'y attendre, l'hébergement de base de données prend en charge les solutions multidimensionnelles et tabulaires que vous créez, mais l'hébergement de base de données inclut également PowerPivot pour SharePoint.  
   
- PowerPivot pour SharePoint représente *Analysis Services en mode SharePoint*, où Analysis Services fonctionne comme un service complémentaire de SharePoint, permettant d'héberger et de gérer les modèles de données Excel créés au préalable dans Excel, puis enregistrés dans SharePoint. Le rôle d'Analysis Services dans ce contexte consiste à charger le modèle de données en mémoire, d'actualiser les données à partir de sources de données externes et d'exécuter des requêtes sur le modèle. Dans cette configuration, Analysis Services s'exécute en arrière-plan. Toutes les demandes et les connexions à Analysis Services sont effectuées par SharePoint et uniquement quand un classeur Excel contient un modèle de données (les modèles de données sont facultatifs dans les classeurs Excel). Si vous devez créer un modèle de données dans Excel et l’héberger dans SharePoint, avec les exigences de votre projet, consultez [Power Pivot : puissante analyse des données et modélisation des données dans Excel](https://support.office.com/en-ie/article/Power-Pivot-Powerful-data-analysis-and-data-modeling-in-Excel-d7b119ed-1b3b-4f23-b634-445ab141b59b) et [PowerPivot pour SharePoint &#40;SSAS &#41; ](power-pivot-sharepoint/power-pivot-for-sharepoint-ssas.md) pour plus d’informations.  
+ PowerPivot pour SharePoint représente *Analysis Services en mode SharePoint*, où Analysis Services fonctionne comme un service complémentaire de SharePoint, permettant d'héberger et de gérer les modèles de données Excel créés au préalable dans Excel, puis enregistrés dans SharePoint. Le rôle d'Analysis Services dans ce contexte consiste à charger le modèle de données en mémoire, d'actualiser les données à partir de sources de données externes et d'exécuter des requêtes sur le modèle. Dans cette configuration, Analysis Services s'exécute en arrière-plan. Toutes les demandes et les connexions à Analysis Services sont effectuées par SharePoint et uniquement quand un classeur Excel contient un modèle de données (les modèles de données sont facultatifs dans les classeurs Excel). Si vous devez créer un modèle de données dans Excel et l’héberger dans SharePoint, avec les spécifications de votre projet, consultez [Power Pivot : puissante analyse des données et modélisation des données dans Excel](https://support.office.com/en-ie/article/Power-Pivot-Powerful-data-analysis-and-data-modeling-in-Excel-d7b119ed-1b3b-4f23-b634-445ab141b59b) et [PowerPivot pour SharePoint &#40;SSAS &#41; ](power-pivot-sharepoint/power-pivot-for-sharepoint-ssas.md) pour plus d’informations.  
   
 > [!NOTE]  
 >  Les modèles de données Excel et les modèles tabulaires ont une architecture similaire. Si vous devez prendre en charge de grandes quantités de données ou utiliser d'autres fonctionnalités de modèle non disponibles dans Excel, vous pouvez importer un modèle de données Excel dans un modèle tabulaire.  
   
- Les solutions tabulaires et multidimensionnelles sont générées à l’aide de [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] et sont destinés à des projets BI qui s’exécutent sur un serveur autonome d’entreprise [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] instance. Les deux solutions fournissent des bases de données d'analyse haute performance qui s'intègrent facilement aux rapports Excel Reporting Services, et à d'autres applications Business Intelligence fournies par Microsoft et par des tiers. Les deux solutions génèrent des bases de données autonomes qui peuvent être utilisées par toute application cliente prenant en charge Analysis Services.  
+ Les solutions tabulaires et multidimensionnelles sont créées à l’aide [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] et sont destinés aux projets de BI d’entreprise qui s’exécutent sur un serveur autonome [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] instance. Les deux solutions fournissent des bases de données d'analyse haute performance qui s'intègrent facilement aux rapports Excel Reporting Services, et à d'autres applications Business Intelligence fournies par Microsoft et par des tiers. Les deux solutions génèrent des bases de données autonomes qui peuvent être utilisées par toute application cliente prenant en charge Analysis Services.  
   
  D'un point de vue global, les différences entre les modèles tabulaires et multidimensionnels peuvent être caractérisées comme suit :  
   
@@ -75,7 +75,7 @@ ms.locfileid: "36043743"
   
 |**Lien**|**Résumé des options prises en charge**|  
 |--------------|--------------------------------------|  
-|[Les Sources de données prises en charge &#40;SSAS multidimensionnel&#41;](multidimensional-models/supported-data-sources-ssas-multidimensional.md)|Les modèles multidimensionnels utilisent des données provenant de sources de données relationnelles.|  
+|[Sources de données prises en charge &#40;SSAS multidimensionnel&#41;](multidimensional-models/supported-data-sources-ssas-multidimensional.md)|Les modèles multidimensionnels utilisent des données provenant de sources de données relationnelles.|  
 |[Sources de données prises en charge &#40;SSAS Tabulaire&#41;](tabular-models/data-sources-supported-ssas-tabular.md)|Les modèles tabulaires prennent en charge un grand nombre de sources de données, y compris les fichiers plats, les flux de données et les sources de données accessibles via des fournisseurs de données ODBC.|  
   
  Les deux approches de modélisation peuvent utiliser des données de plusieurs sources de données dans le même modèle.  
@@ -120,12 +120,12 @@ ms.locfileid: "36043743"
 |Hiérarchies définies par l'utilisateur|[Oui](multidimensional-models/user-defined-hierarchies-create.md)|Oui|  
 |Écriture différée|[Oui](multidimensional-models/set-partition-writeback.md)|non|  
   
- * Si votre solution doit prendre en charge un très grand nombre de comptages de valeurs (par exemple, plusieurs millions d’ID client), envisagez d’abord tabulaire. Elle est généralement plus performante dans ce cas. Consultez la section sur les calculs distincts dans le livre blanc, [Étude de cas Analysis Services : utilisation des modèles tabulaires dans des solutions commerciales à grande échelle](http://msdn.microsoft.com/library/dn751533.aspx).  
+ * Si votre solution doit prendre en charge un très grand nombre de comptages de valeurs (par exemple, plusieurs millions d’ID client), effectuez d’abord tabulaire. Elle est généralement plus performante dans ce cas. Consultez la section sur les calculs distincts dans le livre blanc, [Étude de cas Analysis Services : utilisation des modèles tabulaires dans des solutions commerciales à grande échelle](http://msdn.microsoft.com/library/dn751533.aspx).  
   
 ##  <a name="bkmk_modelsize"></a> Taille du modèle  
  La taille du modèle, en termes de nombre total d'objets, est identique par type de solution. Toutefois, les outils de conception utilisés pour générer chaque solution varient selon la façon dont ils s'adaptent au traitement d'un grand nombre d'objets. Il est plus facile de générer un modèle plus grand dans [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)], car il fournit davantage de capacités de création de schémas et de listes des objets par type dans l'Explorateur d'objets et dans l'Explorateur de solutions.  
   
- Les modèles très volumineux composés de plusieurs centaines de tables ou dimensions sont souvent générés par programme dans Visual Studio et non pas par les outils de conception. Pour plus d’informations sur le nombre maximal d’objets dans un modèle, consultez [spécifications de capacité maximale &#40;Analysis Services&#41;](multidimensional-models/olap-physical/maximum-capacity-specifications-analysis-services.md).  
+ Les modèles très volumineux composés de plusieurs centaines de tables ou dimensions sont souvent générés par programme dans Visual Studio et non pas par les outils de conception. Pour plus d’informations sur le nombre maximal d’objets dans un modèle, consultez [spécifications des capacités maximales &#40;Analysis Services&#41;](multidimensional-models/olap-physical/maximum-capacity-specifications-analysis-services.md).  
   
 ##  <a name="bkmk_ext"></a> Programmabilité et expérience des développeurs  
  Pour les modèles tabulaires et multidimensionnels, il existe un modèle objet partagé pour les deux modalités. AMO et ADOMD.NET prennent en charge les deux modes. Aucune bibliothèque cliente n'a été révisée pour les constructions tabulaires. Par conséquent, vous devez bien comprendre la façon dont les constructions multidimensionnelles et tabulaires et les conventions d'affection de noms sont liées les unes aux autres. La première étape consiste à examiner l'exemple de programmation des objets AMO vers des objets tabulaires pour en savoir plus sur la programmation AMO dans un modèle tabulaire. Pour plus d'informations, téléchargez l'exemple disponible sur le [site Web Codeplex](http://go.microsoft.com/fwlink/?LinkID=221036).  
@@ -160,7 +160,7 @@ ms.locfileid: "36043743"
 |**Outil de modélisation**|**Mode d’utilisation**|  
 |-----------------------|------------------|  
 |[!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]|À utiliser pour créer des solutions tabulaires, multidimensionnelles et d'exploration de données. Cet environnement de création utilise le shell Visual Studio pour fournir des espaces de travail, des volets de propriétés et la navigation entre les objets. Les utilisateurs techniques qui utilisent déjà Visual Studio préfèreront très probablement cet outil pour créer des applications décisionnelles. Consultez [outils et applications utilisés dans Analysis Services](tools-and-applications-used-in-analysis-services.md) pour plus d’informations.|  
-|Excel 2013 et versions ultérieures, avec le complément PowerPivot pour Excel|PowerPivot pour Excel est un outil utilisé pour modifier et améliorer les modèles de données Excel. Il possède un espace de travail d'application distinct qui s'ouvre dans Excel, mais utilise les mêmes métaphores visuelles (pages à onglets, disposition en grille et barre de formule) qu'Excel. Les utilisateurs qui maîtrisent parfaitement Excel généralement préfèreront cet outil à [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]. Voir [Power Pivot : analyse et modélisation de données puissantes dans Excel](https://support.office.com/en-ie/article/Power-Pivot-Powerful-data-analysis-and-data-modeling-in-Excel-d7b119ed-1b3b-4f23-b634-445ab141b59b).|  
+|Excel 2013 et versions ultérieures, avec le complément PowerPivot pour Excel|PowerPivot pour Excel est un outil utilisé pour modifier et améliorer les modèles de données Excel. Il possède un espace de travail d'application distinct qui s'ouvre dans Excel, mais utilise les mêmes métaphores visuelles (pages à onglets, disposition en grille et barre de formule) qu'Excel. Les utilisateurs qui sont généralement parfaitement Excel préfèreront cet outil à [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]. Voir [Power Pivot : analyse et modélisation de données puissantes dans Excel](https://support.office.com/en-ie/article/Power-Pivot-Powerful-data-analysis-and-data-modeling-in-Excel-d7b119ed-1b3b-4f23-b634-445ab141b59b).|  
   
 ##  <a name="bkmk_client"></a> Client et les Applications de création de rapports  
  Dans les versions précédentes, le choix du type de modèle avait un impact sur les applications clientes utilisables, mais cette caractéristique a diminué au fil du temps. Les approches tabulaire et multidimensionnelle prennent en charge de manière quasiment identique les applications clientes qui se connectent aux données Analysis Services. Le tableau suivant répertorie les applications clientes Microsoft pouvant être utilisées avec les modèles de données Analysis Services.  

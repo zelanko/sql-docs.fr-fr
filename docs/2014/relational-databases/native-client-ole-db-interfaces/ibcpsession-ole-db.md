@@ -1,13 +1,11 @@
 ---
-title: IBCPSession (OLE DB) | Documents Microsoft
+title: IBCPSession (OLE DB) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 topic_type:
@@ -16,18 +14,18 @@ helpviewer_keywords:
 - IBCPSession interface
 ms.assetid: 00d0311f-8b71-4ad6-824d-0e89119347a3
 caps.latest.revision: 27
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 7ccd40edb997ae3e45fd705a8a6543c8f3895b6f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: 7d1b8b0ed771996ccd6045c28199dbe0c02a37a3
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36143881"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37430058"
 ---
 # <a name="ibcpsession-ole-db"></a>IBCPSession (OLE DB)
-  Le **IBCPSession** interface expose la prise en charge de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] les opérations de copie en bloc basées sur le fichier. Le **IBCPSession** interface est exposée dans les [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fournisseur OLE DB Native Client sous le même niveau que Sessions. Dans le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Client fournisseur OLE DB natif, les objets de source de données sont des fabriques pour les objets de Session, et les opérations de copie en bloc sont spécifiées dans la propriété de connexion SSPROP_ENABLEBULKCOPY. De plus, la propriété SSPROP_ENABLEFASTLOAD doit avoir la valeur vrai.  
+  Le **IBCPSession** interface expose la prise en charge de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] les opérations de copie en bloc basées sur le fichier. Le **IBCPSession** interface est exposée dans le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fournisseur OLE DB Native Client sous le même niveau que Sessions. Dans le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fournisseur Native Client OLE DB, objets de source de données sont des fabriques pour les objets Session et les opérations de copie en bloc sont spécifiées dans la propriété de connexion SSPROP_ENABLEBULKCOPY. De plus, la propriété SSPROP_ENABLEFASTLOAD doit avoir la valeur vrai.  
   
  L'appel de la méthode **IDBCreateSession::CreateSession** provoquera alors la création d'un objet **BulkCopySession** . Toutes les méthodes de copie en bloc basées sur des fichiers exposées par le biais de l'objet **IBCPSession** peuvent ensuite être appelées avec des signatures presque semblables sur l'interface **IBCPSession** de cet objet **IBCPSession** .  
   
@@ -36,7 +34,7 @@ ms.locfileid: "36143881"
   
  Pour plus d’informations sur l’utilisation de la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fournisseur OLE DB Native Client pour les opérations de copie en bloc, consultez [effectuant des opérations de copie en bloc](../native-client/features/performing-bulk-copy-operations.md).  
   
- Pour obtenir un exemple montrant comment utiliser les **IBCPSession** l’interface, consultez [IBCPSession::BCPDone &#40;OLE DB&#41;](ibcpsession-bcpdone-ole-db.md).  
+ Pour obtenir un exemple montrant comment utiliser le **IBCPSession** l’interface, consultez [IBCPSession::BCPDone &#40;OLE DB&#41;](ibcpsession-bcpdone-ole-db.md).  
   
 ## <a name="in-this-section"></a>Dans cette section  
   

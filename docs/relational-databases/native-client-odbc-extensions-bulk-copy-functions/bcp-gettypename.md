@@ -1,12 +1,12 @@
 ---
-title: bcp_gettypename | Documents Microsoft
+title: bcp_gettypename | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: connectivity
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
@@ -22,12 +22,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 0faf40639991005ad7161af9f144af49fb384ba3
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
+ms.openlocfilehash: 281cbb68960ad96e1f9712e7ad38030c0a6a7934
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35703490"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37426221"
 ---
 # <a name="bcpgettypename"></a>bcp_gettypename
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -83,7 +83,7 @@ RETCODE bcp_gettypename (
 |**SQLIMAGE**|Avant ou après|**Image**|  
 |**SQLINTN**|Avant ou après|**int null**|  
 |**SQLDATETIMN**|Avant ou après|**datetime-null**|  
-|**SQLMONEYN**|Avant ou après|**Money null**|  
+|**SQLMONEYN**|Avant ou après|**valeur null de l’argent**|  
 |**SQLFLTN**|Avant ou après|**float-null**|  
 |**SQLAOPSUM**|Avant ou après|**Sum**|  
 |**SQLAOPAVG**|Avant ou après|**Avg**|  
@@ -91,8 +91,8 @@ RETCODE bcp_gettypename (
 |**SQLAOPMIN**|Avant ou après|**Min**|  
 |**SQLAOPMAX**|Avant ou après|**Max**|  
 |**SQLDATETIM4**|Avant ou après|**smalldatetime**|  
-|**SQLMONEY4**|Avant ou après|**smallmoney**|  
-|**SQLFLT4**|Avant ou après|**réel**|  
+|**SQLMONEY4**|Avant ou après|**Smallmoney**|  
+|**SQLFLT4**|Avant ou après|**Réel**|  
 |**SQLUNIQUEID**|Avant ou après|**uniqueidentifier**|  
 |**SQLNCHAR**|non|**NCHAR**|  
 |**SQLNVARCHAR**|non|**Nvarchar**|  
@@ -113,9 +113,9 @@ RETCODE bcp_gettypename (
 |**SQLUDT**|Avant ou après|**UDT**|  
   
 ## <a name="bcpgettypename-support-for-enhanced-date-and-time-features"></a>Prise en charge des fonctionnalités de date et heure améliorées par bcp_gettypename  
- Les valeurs de paramètre de jeton pour les types date/heure sont décrites dans la colonne « Type dans sqlncli.h » de la table dans [modifications de copie en bloc pour les Types améliorées de Date et heure &#40;OLE DB et ODBC&#41;](../../relational-databases/native-client-odbc-date-time/bulk-copy-changes-for-enhanced-date-and-time-types-ole-db-and-odbc.md). La valeur retournée est dans la ligne correspondante de la colonne « Type de stockage de fichier ».  
+ Les valeurs de paramètre de jeton pour les types date/heure sont décrites dans la colonne « Type dans sqlncli.h » de la table dans [modifications de copie en bloc pour les Types améliorées de Date / heure &#40;OLE DB et ODBC&#41;](../../relational-databases/native-client-odbc-date-time/bulk-copy-changes-for-enhanced-date-and-time-types-ole-db-and-odbc.md). La valeur retournée est dans la ligne correspondante de la colonne « Type de stockage de fichier ».  
   
- Pour plus d’informations, consultez [Date et heure améliorations &#40;ODBC&#41;](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md).  
+ Pour plus d’informations, consultez [améliorations Date / heure &#40;ODBC&#41;](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md).  
   
 ## <a name="see-also"></a>Voir aussi  
  [Fonctions de copie en bloc](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/sql-server-driver-extensions-bulk-copy-functions.md)  

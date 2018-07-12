@@ -1,5 +1,5 @@
 ---
-title: Reporting Services SharePoint et les Applications de Service | Documents Microsoft
+title: Reporting Services SharePoint et Applications de Service | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 501aa9ee-8c13-458c-bf6f-24e00c82681b
 caps.latest.revision: 9
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: c3d32e750728e1b427b7c33179d4dcf3de6eb395
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: f612ac92f6741f83a92f29987cea03f662815e9d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36044478"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37181496"
 ---
 # <a name="reporting-services-sharepoint-service-and-service-applications"></a>Services Reporting Services SharePoint et applications de service
-  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] Mode SharePoint repose sur l’architecture de service SharePoint et utilise un service SharePoint et l’autre pour de nombreuses applications de service. Lorsque vous créez une application de service, le service devient disponible et la base de données d'application de service est générée. Vous pouvez créer plusieurs applications de service Reporting Services mais une application de service est suffisante pour la plupart des scénarios de déploiement.  
+  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] SharePoint repose sur l’architecture de service SharePoint et utilise un service SharePoint et l’autre pour de nombreuses applications de service. Lorsque vous créez une application de service, le service devient disponible et la base de données d'application de service est générée. Vous pouvez créer plusieurs applications de service Reporting Services mais une application de service est suffisante pour la plupart des scénarios de déploiement.  
   
  Cette rubrique fournit les informations suivantes :  
   

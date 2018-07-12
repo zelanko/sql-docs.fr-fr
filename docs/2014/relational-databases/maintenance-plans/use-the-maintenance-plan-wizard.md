@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.ag.maintwiz.planprop.f1
 - sql12.ag.maintwiz.task.f1
@@ -35,15 +35,15 @@ helpviewer_keywords:
 - Database Maintenance Plan Wizard, starting
 ms.assetid: db65c726-9892-480c-873b-3af29afcee44
 caps.latest.revision: 36
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 11706f4fb3761e20fea4c70feb431144efed0fc5
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 6ee9a3c08fc00b5e7c6b340d3963e2003cfb0343
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36042936"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37154490"
 ---
 # <a name="use-the-maintenance-plan-wizard"></a>Utiliser l'Assistant Plan de maintenance
   Cette rubrique explique comment créer un plan de maintenance pour un ou plusieurs serveurs à l'aide de l'Assistant Plan de maintenance dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. L'Assistant Plan de maintenance crée un plan de maintenance que [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent peut exécuter régulièrement. Vous pouvez ainsi réaliser, en fonction d'intervalles spécifiés, diverses tâches d'administration de base de données, notamment des sauvegardes, l'exécution de contrôles d'intégrité de la base de données ou les mises à jour des statistiques de la base de données.  
@@ -71,7 +71,7 @@ ms.locfileid: "36042936"
 ####  <a name="Permissions"></a> Permissions  
  Pour créer ou gérer des plans de maintenance, vous devez être membre du rôle serveur fixe **sysadmin** . L'Explorateur d'objets affiche uniquement le nœud **Plans de maintenance** pour les utilisateurs membres du rôle serveur fixe **sysadmin** .  
   
-##  <a name="SSMSProcedure"></a> À l’aide d’Assistant Plan de Maintenance  
+##  <a name="SSMSProcedure"></a> Assistant Plan de Maintenance  
   
 #### <a name="to-start-the-maintenance-plan-wizard"></a>Pour démarrer l'Assistant Plan de maintenance  
   
@@ -371,7 +371,7 @@ ms.locfileid: "36042936"
      Sélectionnez les informations d'identification SQL utilisées pour l'authentification au stockage Windows Azure. Si vous n'avez pas d'informations d'identification SQL, cliquez sur le bouton **Créer** pour créer de nouvelles informations d'identification SQL.  
   
     > [!IMPORTANT]  
-    >  La boîte de dialogue qui s'ouvre lorsque vous cliquez sur **Créer** requiert un certificat de gestion ou le profil de publication de l'abonnement. Si vous n'avez pas accès au certificat de gestion ou au profil de publication, vous pouvez créer des informations d'identification SQL en spécifiant le nom du compte de stockage et les informations de clé d'accès à l'aide de Transact-SQL ou de SQL Server Management Studio. Consultez l’exemple de code dans le [pour créer les informations d’identification](../security/authentication-access/create-a-credential.md#Credential) rubrique pour créer des informations d’identification à l’aide de Transact-SQL. Vous pouvez également utiliser SQL Server Management Studio, depuis l'instance du moteur de base de données, et cliquer avec le bouton droit sur **Sécurité**, puis sélectionner **Nouveau**, puis **Informations d'identification**. Spécifiez le nom du compte de stockage pour **Identité** et la clé d'accès dans le champ **Mot de passe** .  
+    >  La boîte de dialogue qui s'ouvre lorsque vous cliquez sur **Créer** requiert un certificat de gestion ou le profil de publication de l'abonnement. Si vous n'avez pas accès au certificat de gestion ou au profil de publication, vous pouvez créer des informations d'identification SQL en spécifiant le nom du compte de stockage et les informations de clé d'accès à l'aide de Transact-SQL ou de SQL Server Management Studio. Consultez l’exemple de code dans le [pour créer des informations d’identification](../security/authentication-access/create-a-credential.md#Credential) rubrique pour créer des informations d’identification à l’aide de Transact-SQL. Vous pouvez également utiliser SQL Server Management Studio, depuis l'instance du moteur de base de données, et cliquer avec le bouton droit sur **Sécurité**, puis sélectionner **Nouveau**, puis **Informations d'identification**. Spécifiez le nom du compte de stockage pour **Identité** et la clé d'accès dans le champ **Mot de passe** .  
   
      **Conteneur de stockage Windows Azure**  
      Spécifiez le nom du conteneur de stockage Windows Azure.  

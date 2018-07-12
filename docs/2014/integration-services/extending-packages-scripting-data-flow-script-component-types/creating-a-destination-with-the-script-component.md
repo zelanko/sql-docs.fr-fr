@@ -20,18 +20,18 @@ ms.assetid: 214e22e8-7e7d-4876-b690-c138e5721b81
 caps.latest.revision: 56
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 61a029231238a0ac47e9a1863f3d4bebeec66eee
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: f32e91ff81e333a15bd13a3db13aabf0e1340d21
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36042948"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37221709"
 ---
 # <a name="creating-a-destination-with-the-script-component"></a>Création d'une destination à l'aide du composant Script
   Les composants de destination dans le flux de données d'un package [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] permettent d'enregistrer des données provenant de sources et de transformations en amont dans une source de données. En principe, le composant de destination se connecte à la source de données via un gestionnaire de connexions existant.  
   
- Pour une vue d’ensemble du composant Script, consultez [étendre le flux de données avec le composant Script] (.. / extending-packages-scripting/data-flow-script-component/extending-the-data-flow-with-the-script-component.md.  
+ Pour une vue d’ensemble du composant Script, consultez [extension du flux de données avec le composant Script] (.. / extending-packages-scripting/data-flow-script-component/extending-the-data-flow-with-the-script-component.md.  
   
  Le composant Script et le code d'infrastructure qu'il génère simplifient considérablement le processus qui consiste à développer un composant de flux de données personnalisé. Toutefois, pour comprendre le fonctionnement du composant Script, il peut être utile de lire les étapes permettant de développer des composants de flux de données personnalisés dans la section [Développement d’un composant de flux de données personnalisé](../extending-packages-custom-objects/data-flow/developing-a-custom-data-flow-component.md) et plus particulièrement [Développement d’un composant de destination personnalisé](../extending-packages-custom-objects-data-flow-types/developing-a-custom-destination-component.md).  
   
@@ -73,7 +73,7 @@ ms.locfileid: "36042948"
 ### <a name="adding-variables"></a>Ajout de variables  
  Si vous souhaitez utiliser des variables existantes dans votre script, vous pouvez les ajouter dans le `ReadOnlyVariables` et `ReadWriteVariables` des champs de propriété sur le **Script** page de la **éditeur de Transformation de Script**.  
   
- Lorsque vous ajoutez plusieurs variables dans les champs de propriété, séparez les noms de variables par des virgules. Vous pouvez également sélectionner plusieurs variables en cliquant sur le bouton de sélection (**...** ) situé en regard du `ReadOnlyVariables` et `ReadWriteVariables` champs de propriété, puis en sélectionnant les variables dans le **sélectionner des variables** boîte de dialogue.  
+ Lorsque vous ajoutez plusieurs variables dans les champs de propriété, séparez les noms de variables par des virgules. Vous pouvez également sélectionner plusieurs variables en cliquant sur les points de suspension (**...** ) situé en regard du `ReadOnlyVariables` et `ReadWriteVariables` champs de propriété, puis en sélectionnant les variables dans le **sélectionner des variables** boîte de dialogue.  
   
  Pour obtenir des informations générales sur l’utilisation de variables avec le composant Script, consultez [Utilisation de variables dans le composant Script](../extending-packages-scripting/data-flow-script-component/using-variables-in-the-script-component.md).  
   
@@ -87,7 +87,7 @@ ms.locfileid: "36042948"
 ### <a name="understanding-the-auto-generated-code"></a>Fonctionnement du code généré automatiquement  
  Lorsque vous ouvrez l'environnement de développement intégré VSTA après avoir créé et configuré un composant de destination, la classe `ScriptMain` modifiable apparaît dans l'éditeur de code avec un stub pour la méthode `ProcessInputRow`. La classe `ScriptMain` est l'emplacement où vous allez écrire votre code personnalisé, et `ProcessInputRow` est la méthode la plus importante d'un composant de destination.  
   
- Si vous ouvrez le **Explorateur de projets** fenêtre dans VSTA, vous pouvez voir que le composant Script a également généré en lecture seule `BufferWrapper` et `ComponentWrapper` éléments de projet. La classe `ScriptMain` hérite de la classe `UserComponent` dans l'élément de projet `ComponentWrapper`.  
+ Si vous ouvrez le **Explorateur de projets** fenêtre VSTA, vous pouvez voir que le composant Script a également généré en lecture seule `BufferWrapper` et `ComponentWrapper` éléments de projet. La classe `ScriptMain` hérite de la classe `UserComponent` dans l'élément de projet `ComponentWrapper`.  
   
  Au moment de l'exécution, le moteur de flux de données appelle la méthode `ProcessInput` dans la classe `UserComponent`, qui remplace la méthode <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent.ProcessInput%2A> de la classe parente <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent>. La méthode `ProcessInput` parcourt à son tour les lignes du tampon d'entrée et appelle la méthode `ProcessInputRow` une fois pour chaque ligne.  
   
@@ -106,7 +106,7 @@ ms.locfileid: "36042948"
  Les exemples suivants présentent le code requis dans la classe `ScriptMain` pour créer un composant de destination.  
   
 > [!NOTE]  
->  Ces exemples utilisent la **Person.Address** de table dans le `AdventureWorks` base de données exemple et transmettent ses première et quatrième colonnes, le **int * AddressID*** et **nvarchar (30) Ville**colonnes, dans le flux de données. Les mêmes données sont utilisées dans les exemples de source, transformation et destination de cette section. Des conditions préalables et des hypothèses supplémentaires sont documentées pour chaque exemple.  
+>  Ces exemples utilisent la **Person.Address** table dans le `AdventureWorks` exemple de base de données et transmettent ses première et quatrième colonnes, le **int * AddressID*** et **nvarchar (30) City**colonnes, via le flux de données. Les mêmes données sont utilisées dans les exemples de source, transformation et destination de cette section. Des conditions préalables et des hypothèses supplémentaires sont documentées pour chaque exemple.  
   
 ### <a name="adonet-destination-example"></a>Exemple de destination ADO.NET  
  Cet exemple montre un composant de destination qui utilise un gestionnaire de connexions [!INCLUDE[vstecado](../../includes/vstecado-md.md)] existant pour enregistrer des données du flux de données dans une table [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -124,7 +124,7 @@ ms.locfileid: "36042948"
   
 3.  Ajoutez un nouveau composant Script à l'aire du concepteur de flux de données et configurez-le en tant que destination.  
   
-4.  Connectez la sortie d'une source ou transformation en amont au composant de destination dans le concepteur [!INCLUDE[ssIS](../../includes/ssis-md.md)]. (Vous pouvez connecter directement une source à une destination sans transformation.) Cette sortie doit fournir des données à partir de la **Person.Address** table de la `AdventureWorks` base de données exemple contienne au moins les **AddressID** et **Ville** colonnes.  
+4.  Connectez la sortie d'une source ou transformation en amont au composant de destination dans le concepteur [!INCLUDE[ssIS](../../includes/ssis-md.md)]. (Vous pouvez connecter directement une source à une destination sans transformation.) Cette sortie doit fournir les données à partir de la **Person.Address** table de la `AdventureWorks` base de données exemple contienne au moins les **AddressID** et **Ville** colonnes.  
   
 5.  Ouvrez l' **Éditeur de transformation de script**. Dans la page **Colonnes d’entrée**, sélectionnez les colonnes d’entrée **AddressID** et **City**.  
   
@@ -241,7 +241,7 @@ public class ScriptMain:
   
 2.  Ajoutez un nouveau composant Script à l'aire du concepteur de flux de données et configurez-le en tant que destination.  
   
-3.  Connectez la sortie d'une source ou transformation en amont au composant de destination dans le concepteur [!INCLUDE[ssIS](../../includes/ssis-md.md)]. (Vous pouvez connecter directement une source à une destination sans transformation.) Cette sortie doit fournir des données à partir de la **Person.Address** table de la `AdventureWorks` exemple de base de données et doit contenir au moins les **AddressID** et **Ville** colonnes.  
+3.  Connectez la sortie d'une source ou transformation en amont au composant de destination dans le concepteur [!INCLUDE[ssIS](../../includes/ssis-md.md)]. (Vous pouvez connecter directement une source à une destination sans transformation.) Cette sortie doit fournir les données à partir de la **Person.Address** table de la `AdventureWorks` exemple de base de données et doit contenir au moins le **AddressID** et **Ville** colonnes.  
   
 4.  Ouvrez l' **Éditeur de transformation de script**. Dans la page **Colonnes d’entrée**, sélectionnez les colonnes **AddressID** et **City**.  
   
@@ -354,7 +354,7 @@ public class ScriptMain:
 }  
 ```  
   
-![Icône Integration Services (petite)](../media/dts-16.gif "icône Integration Services (petite)")**restent jusqu'à la Date avec Integration Services** <br /> Pour obtenir les derniers téléchargements, articles, exemples et vidéos de Microsoft, ainsi que des solutions sélectionnées par la communauté, visitez la page [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] sur MSDN :<br /><br /> [Visitez la page Integration Services sur MSDN](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Pour recevoir une notification automatique de ces mises à jour, abonnez-vous aux flux RSS disponibles sur la page.  
+![Icône Integration Services (petite)](../media/dts-16.gif "icône Integration Services (petite)")**rester jusqu'à la Date avec Integration Services** <br /> Pour obtenir les derniers téléchargements, articles, exemples et vidéos de Microsoft, ainsi que des solutions sélectionnées par la communauté, visitez la page [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] sur MSDN :<br /><br /> [Visitez la page Integration Services sur MSDN](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Pour recevoir une notification automatique de ces mises à jour, abonnez-vous aux flux RSS disponibles sur la page.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Création d’une source à l’aide du composant Script](../extending-packages-scripting-data-flow-script-component-types/creating-a-source-with-the-script-component.md)   

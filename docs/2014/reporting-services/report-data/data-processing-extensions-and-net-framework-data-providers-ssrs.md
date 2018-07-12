@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - reports [Reporting Services], data
 - data processing extensions [Reporting Services]
@@ -18,15 +18,15 @@ helpviewer_keywords:
 - report data [Report Builder], accessing
 ms.assetid: 42a5afb5-f4c8-4957-b1fd-77bf39afa5be
 caps.latest.revision: 18
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: bcc6f0b191826a162f18711a7685c6fbb023b22e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: 80d27aca81ccac9b176cbc4fbab21b8cfae544b4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36044197"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37150080"
 ---
 # <a name="data-processing-extensions-and-net-framework-data-providers-ssrs"></a>Extensions pour le traitement des données et fournisseurs de données .NET Framework (SSRS)
   Une extension pour le traitement des données [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] est un composant installé avec [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]et chargé de récupérer des données à partir d’un type spécifique de source de données, et de fournir des fonctionnalités supplémentaires de prise en charge de la conception et du traitement des rapports. Une extension pour le traitement des données [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] est un composant disponible dans [!INCLUDE[msCoName](../../includes/msconame-md.md)] ou des sources tierces qui prend en charge des interfaces <xref:System.Data> qui vous permettent de récupérer et de modifier des données à partir d’un type spécifique de source de données.  

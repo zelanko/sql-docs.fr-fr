@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - "10010"
 helpviewer_keywords:
 - query designers, text-based
 ms.assetid: 89fddca5-bd96-4128-9072-5348d1b6e02c
 caps.latest.revision: 14
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 2996f7cfb6f7c873e57619c60f49511a62f8d533
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: 1c596018bcef960d176cf41a49221972d5652f20
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36042623"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37162120"
 ---
 # <a name="text-based-query-designer-user-interface-report-builder"></a>Interface utilisateur du Concepteur de requêtes textuel (Générateur de rapports)
   Utilisez le Concepteur de requêtes textuel pour spécifier une requête à l'aide du langage de requête pris en charge par la source de données, exécuter la requête et afficher les résultats au moment de la conception. Vous pouvez spécifier plusieurs instructions [!INCLUDE[tsql](../../../includes/tsql-md.md)] , une syntaxe de requête ou de commande pour les extensions pour le traitement des données personnalisées et des requêtes spécifiées en tant qu'expressions. Comme le Concepteur de requêtes textuel n'effectue pas de prétraitement de la requête et peut accepter tout type de syntaxe de requête, il s'agit de l'outil du Concepteur de requêtes par défaut pour de nombreux types de sources de données.  
@@ -60,7 +60,7 @@ ms.locfileid: "36042623"
 |Résultats|Affiche les résultats de la requête. Pour exécuter la requête, cliquez avec le bouton droit dans un volet et cliquez sur **Exécuter**, ou cliquez sur le bouton **Exécuter** dans la barre d’outils.|  
   
 #### <a name="example"></a>Exemple  
- La requête suivante renvoie la liste des noms depuis la [!INCLUDE[ssSampleDBobject](../../../includes/sssampledbobject-md.md)] **2008** base de données `ContactType` de table pour le `Person` schéma.  
+ La requête suivante retourne la liste des noms depuis le [!INCLUDE[ssSampleDBobject](../../../includes/sssampledbobject-md.md)] **2008** base de données `ContactType` de table pour le `Person` schéma.  
   
 ```  
 SELECT Name FROM Person.ContactType  
@@ -83,7 +83,7 @@ SELECT Name FROM Person.ContactType
 |Résultats|Affiche les résultats de la requête. Pour exécuter la requête, cliquez avec le bouton droit dans un volet et cliquez sur **Exécuter**, ou cliquez sur le bouton **Exécuter** dans la barre d’outils.|  
   
 #### <a name="example"></a>Exemple  
- La requête suivante appelle la [!INCLUDE[ssSampleDBobject](../../../includes/sssampledbobject-md.md)] **2008** procédure stockée `uspGetWhereUsedProductID`. Vous devez entrer une valeur pour le paramètre du numéro d'identification de produit lorsque vous exécutez la requête.  
+ La requête suivante appelle le [!INCLUDE[ssSampleDBobject](../../../includes/sssampledbobject-md.md)] **2008** procédure stockée `uspGetWhereUsedProductID`. Vous devez entrer une valeur pour le paramètre du numéro d'identification de produit lorsque vous exécutez la requête.  
   
 ```  
 uspGetWhereUsedProductID  
@@ -102,7 +102,7 @@ uspGetWhereUsedProductID
  Quand vous sélectionnez le **Type de commande TableDirect**, le concepteur de requêtes textuel présente deux volets : Requête et Résultats. Lorsque vous entrez une table et cliquez sur le bouton **Exécuter** , toutes les colonnes pour cette table sont retournées.  
   
 #### <a name="example"></a>Exemple  
- Pour un type de source de données OLE DB, la requête de dataset suivante retourne un jeu de résultats de types de tous les contacts dans le [!INCLUDE[ssSampleDBobject](../../../includes/sssampledbobject-md.md)] **2008** base de données.  
+ Pour un type de source de données OLE DB, la requête de dataset suivante retourne un jeu de résultats pour des types de tous les contacts dans le [!INCLUDE[ssSampleDBobject](../../../includes/sssampledbobject-md.md)] **2008** base de données.  
   
  `Person.ContactType`  
   

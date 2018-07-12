@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 74f726fc-2167-47af-9093-1644e03ef01f
 caps.latest.revision: 24
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 6ae7c26bce8b52e58124b04c435af6be7d6dc84f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 9c72123024fff48604919df0804694e0cd6ec480
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36044486"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37152100"
 ---
 # <a name="exporting-to-microsoft-excel-report-builder-and-ssrs"></a>Exportation vers Microsoft Excel (Générateur de rapports et SSRS)
   L'extension de rendu Excel [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] effectue le rendu d'un rapport au format natif de [!INCLUDE[ofprexcel](../../../includes/ofprexcel-md.md)] 2007-2010. Avec l'extension de rendu Excel, la largeur des colonnes dans Excel correspond plus précisément à la largeur des colonnes dans les rapports.  
@@ -36,7 +36,7 @@ ms.locfileid: "36044486"
 >  Pour obtenir le dernier service pack pour [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)], consultez [comment obtenir le dernier service pack pour SQL Server 2012](http://go.microsoft.com/fwlink/p/?LinkId=402512)  
   
 > [!IMPORTANT]  
->  Lorsque vous définissez un paramètre de type `String`, l’utilisateur est présenté avec une zone de texte qui peut prendre n’importe quelle valeur. Si un paramètre de rapport n'est pas directement lié à un paramètre de requête et les valeurs de paramètre sont incluses dans le rapport, un utilisateur de rapport peut taper une syntaxe d'expression, un script ou une URL dans la valeur de paramètre et effectuer le rendu du rapport dans Excel. Si un autre utilisateur affiche ensuite le rapport et clique sur le contenu du paramètre de rendu, celui-ci peut exécuter accidentellement le lien ou le script malveillant.  
+>  Lorsque vous définissez un paramètre de type `String`, l’utilisateur voit s’afficher une zone de texte qui peut prendre n’importe quelle valeur. Si un paramètre de rapport n'est pas directement lié à un paramètre de requête et les valeurs de paramètre sont incluses dans le rapport, un utilisateur de rapport peut taper une syntaxe d'expression, un script ou une URL dans la valeur de paramètre et effectuer le rendu du rapport dans Excel. Si un autre utilisateur affiche ensuite le rapport et clique sur le contenu du paramètre de rendu, celui-ci peut exécuter accidentellement le lien ou le script malveillant.  
 >   
 >  Pour réduire le risque d'exécution accidentelle de scripts malveillants, ouvrez les rapports rendus uniquement à partir de sources approuvées. Pour plus d’informations sur la sécurisation des rapports, consultez [Sécurisation des rapports et des ressources](../security/secure-reports-and-resources.md).  
   
@@ -97,7 +97,7 @@ ms.locfileid: "36044486"
   
 -   Les en-têtes et les pieds de page Excel prennent en charge un maximum de 256 caractères, y compris la balise. L'extension de rendu tronque la chaîne à 256 caractères.  
   
--   [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] ne prend pas en charge les marges dans les en-têtes et pieds de page. En cas d'exportation vers Excel, ces valeurs de marge sont définies sur zéro et tout en-tête ou pied de page contenant plusieurs lignes de données peut ne pas imprimer plusieurs lignes, en fonction des paramètres de l'imprimante.  
+-   [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] ne prend pas en charge les marges dans les en-têtes de rapport et de pieds de page. En cas d'exportation vers Excel, ces valeurs de marge sont définies sur zéro et tout en-tête ou pied de page contenant plusieurs lignes de données peut ne pas imprimer plusieurs lignes, en fonction des paramètres de l'imprimante.  
   
 -   Les zones de texte dans un en-tête ou un pied de page conservent leur mise en forme mais pas leur alignement en cas d'exportation vers Excel. En effet, les espaces de début et de fin sont supprimés lorsque le rapport est restitué dans Excel.  
   
@@ -139,7 +139,7 @@ ms.locfileid: "36044486"
 ### <a name="excel-2003-renderer"></a>Convertisseur Excel 2003  
   
 > [!IMPORTANT]  
->  Le [!INCLUDE[ofprexcel](../../../includes/ofprexcel-md.md)] extension de rendu 2003 est déconseillée. Pour plus d’informations, consultez [fonctionnalités déconseillées dans SQL Server Reporting Services dans SQL Server 2014](../deprecated-features-in-sql-server-reporting-services-ssrs.md).  
+>  Le [!INCLUDE[ofprexcel](../../../includes/ofprexcel-md.md)] extension de rendu 2003 est déconseillée. Pour plus d’informations, consultez [déconseillées dans SQL Server Reporting Services dans SQL Server 2014](../deprecated-features-in-sql-server-reporting-services-ssrs.md).  
   
  La version antérieure du convertisseur Excel, compatible avec Excel 2003, s'appelle désormais Excel 2003 et est répertoriée dans les menus sous ce nom. Le type de contenu des fichiers générés par ce convertisseur est **application/vnd.ms-excel** et l’extension des noms de fichiers est .xls.  
   
@@ -151,7 +151,7 @@ ms.locfileid: "36044486"
   
      Cela se produit à la fois dans le [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] et les versions autonomes du Générateur de rapports.  
   
--   Composant WebPart de visionneuse de rapports en mode local et que la batterie de serveurs SharePoint n’est pas intégré à un [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] serveur de rapports. Pour plus d’informations, consultez [Rapports en mode local et rapports en mode connecté dans la Visionneuse de rapports &#40;Reporting Services en mode SharePoint&#41;](../local-vs-connected-mode-report-viewer-reporting-services-sharepoint-mode.md)  
+-   WebPart Visionneuse de rapports en mode local et de la batterie de serveurs SharePoint n’est pas intégré à un [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] serveur de rapports. Pour plus d’informations, consultez [Rapports en mode local et rapports en mode connecté dans la Visionneuse de rapports &#40;Reporting Services en mode SharePoint&#41;](../local-vs-connected-mode-report-viewer-reporting-services-sharepoint-mode.md)  
   
  Si le convertisseur relatif à l'option de menu **Excel 2003** est configuré pour être visible, les options Excel et Excel 2003 sont disponibles dans les scénarios suivants :  
   
@@ -159,7 +159,7 @@ ms.locfileid: "36044486"
   
 -   Utilisation du site SharePoint lorsque Reporting Services est installé en mode intégré SharePoint.  
   
--   [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] et afficher un aperçu des rapports.  
+-   [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] et vous affichez l’aperçu des rapports.  
   
 -   Connexion du Générateur de rapports à un serveur de rapports. Cela peut être un [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] ou une version autonome du Générateur de rapports.  
   
@@ -171,7 +171,7 @@ ms.locfileid: "36044486"
   
  `<Extension Name="EXCEL" Type="Microsoft.ReportingServices.Rendering.ExcelRenderer.ExcelRenderer,Microsoft.ReportingServices.ExcelRendering" Visible="false"/>`  
   
- L'extension EXCELOPENXML définit le convertisseur Excel pour Excel 2007-2010. L'extension EXCEL définit la version d'Excel 2003. `Visible = “false”` indique que le convertisseur Excel 2003 est masqué. Pour plus d’informations, consultez [fichier de Configuration RSReportServer](../report-server/rsreportserver-config-configuration-file.md) et [RSReportDesigner Configuration File](../report-server/rsreportdesigner-configuration-file.md).  
+ L'extension EXCELOPENXML définit le convertisseur Excel pour Excel 2007-2010. L'extension EXCEL définit la version d'Excel 2003. `Visible = “false”` indique que le convertisseur Excel 2003 est masqué. Pour plus d’informations, consultez [fichier de Configuration RSReportServer](../report-server/rsreportserver-config-configuration-file.md) et [fichier de Configuration RSReportDesigner](../report-server/rsreportdesigner-configuration-file.md).  
   
 ### <a name="differences-between-the-excel-2007-2010-and-excel-2003-renderers"></a>Différences entre les convertisseurs Excel 2007-2010 et Excel 2003  
  Les rapports rendus à l'aide des convertisseurs Excel ou Excel 2003 sont en général identiques ; il est très rare que vous remarquiez des différences entre les deux formats. Le tableau suivant compare les convertisseurs Excel et Excel 2003.  
@@ -229,7 +229,7 @@ ms.locfileid: "36044486"
  Les sections d'en-tête et de pied de page Excel prennent en charge un maximum de 256 caractères, y compris la balise. Si cette limite est dépassée, le convertisseur Excel supprime les caractères de balisage en commençant à la fin de la chaîne d'en-tête et/ou de pied de page pour réduire le nombre total de caractères. Si tous les caractères de balisage sont supprimés et que la longueur dépasse encore le maximum, la chaîne est tronquée à partir de la droite.  
   
 ### <a name="simplepageheader-settings"></a>Paramètres SimplePageHeader  
- Par défaut, le paramètre SimplePageHeaders d’informations a la valeur `False`; par conséquent, les en-têtes de page sont rendus sous forme de lignes dans le rapport sur la surface de la feuille de calcul Excel. Les lignes de la feuille de calcul qui contiennent les en-têtes sont verrouillées. Vous pouvez figer ou libérer le volet dans Excel.  
+ Par défaut, le paramètre SimplePageHeaders d’informations est défini `False`; par conséquent, les en-têtes de page sont rendus sous forme de lignes dans le rapport sur la surface de la feuille de calcul Excel. Les lignes de la feuille de calcul qui contiennent les en-têtes sont verrouillées. Vous pouvez figer ou libérer le volet dans Excel.  
   
 > [!NOTE]  
 >  Si l'option **Titres à imprimer** dans Excel est sélectionnée, ces en-têtes sont automatiquement définis pour être imprimés sur chaque page de la feuille de calcul.  
@@ -246,7 +246,7 @@ ms.locfileid: "36044486"
  Certains éléments interactifs sont pris en charge dans Excel. Vous trouverez ci-dessous une description de comportements spécifiques.  
   
 ### <a name="show-and-hide"></a>Afficher et masquer  
- [!INCLUDE[ofprexcel](../../../includes/ofprexcel-md.md)] a les limitations de la manière dont il gère les éléments de rapport affichés ou masqués lorsqu’ils sont exportés. Les groupes, lignes et colonnes qui contiennent des éléments de rapport qui peuvent être affichés/masqués sont rendus sous forme de plans Excel. Excel crée des plans qui affichent ou masquent des lignes et des colonnes entières, ce qui peut provoquer le masquage d'éléments de rapport qui ne doivent pas l'être. De plus, les symboles de plan Excel peuvent encombrer des plans qui se chevauchent. Pour résoudre ces problèmes, les règles suivantes relatives au plan sont appliquées lors de l'utilisation de l'extension de rendu Excel :  
+ [!INCLUDE[ofprexcel](../../../includes/ofprexcel-md.md)] a les limitations de la manière dont il gère les éléments de rapport affichées et masquées lorsqu’ils sont exportés. Les groupes, lignes et colonnes qui contiennent des éléments de rapport qui peuvent être affichés/masqués sont rendus sous forme de plans Excel. Excel crée des plans qui affichent ou masquent des lignes et des colonnes entières, ce qui peut provoquer le masquage d'éléments de rapport qui ne doivent pas l'être. De plus, les symboles de plan Excel peuvent encombrer des plans qui se chevauchent. Pour résoudre ces problèmes, les règles suivantes relatives au plan sont appliquées lors de l'utilisation de l'extension de rendu Excel :  
   
 -   L'élément de rapport dans l'angle supérieur gauche qui peut être affiché/masqué peut continuer à être affiché/masqué dans Excel. Les éléments de rapport qui peuvent être affichés/masqués et qui partagent un espace vertical ou horizontal avec l'élément de rapport qui peut être affiché/masqué dans l'angle supérieur gauche ne peuvent pas être affichés/masqués dans Excel.  
   
@@ -283,7 +283,7 @@ ms.locfileid: "36044486"
 ## <a name="see-also"></a>Voir aussi  
  [Pagination dans Reporting Services &#40;Générateur de rapports et SSRS&#41;](../report-design/pagination-in-reporting-services-report-builder-and-ssrs.md)   
  [Comportements de rendu &#40;Générateur de rapports et SSRS&#41;](../report-design/rendering-behaviors-report-builder-and-ssrs.md)   
- [Fonctionnalité interactive des différentes Extensions de rendu de rapport &#40;rapport Générateur et SSRS&#41;](interactive-functionality-different-report-rendering-extensions.md)   
+ [Fonctionnalité interactive des différentes Extensions de rendu de rapport &#40;Générateur de rapports et SSRS&#41;](interactive-functionality-different-report-rendering-extensions.md)   
  [Rendu des éléments de rapport &#40;Générateur de rapports et SSRS&#41;](../report-design/rendering-report-items-report-builder-and-ssrs.md)   
  [Tables, matrices et listes &#40;Générateur de rapports et SSRS&#41;](../report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)  
   

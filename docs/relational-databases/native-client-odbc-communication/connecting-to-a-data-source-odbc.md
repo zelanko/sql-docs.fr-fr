@@ -1,12 +1,12 @@
 ---
-title: Connexion à une Source de données (ODBC) | Documents Microsoft
+title: Connexion à une Source de données (ODBC) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -28,12 +28,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 6934876b3772ba8124ca4adfc87a4bad89346e64
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
+ms.openlocfilehash: ad0d5ad296bcf7640e9b183c8e4e4b06773f1544
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35698700"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37416088"
 ---
 # <a name="connecting-to-a-data-source-odbc"></a>Connexion à une source de données (ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -47,15 +47,15 @@ ms.locfileid: "35698700"
   
 -   **SQLBrowseConnect**  
   
- Pour plus d’informations sur l’établissement de connexions à une source de données, y compris les différentes options de chaîne de connexion disponibles, consultez [Using Connection String Keywords with SQL Server Native Client](../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md).  
+ Pour plus d’informations sur l’établissement de connexions à une source de données, y compris les diverses options de chaîne de connexion disponibles, consultez [Using Connection String Keywords with SQL Server Native Client](../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md).  
   
 ## <a name="sqlconnect"></a>SQLConnect  
  **SQLConnect** est la fonction de connexion la plus simple. Elle accepte trois paramètres : un nom de source de données, un ID d'utilisateur et un mot de passe. Utilisez **SQLConnect** lorsque ces trois paramètres contiennent toutes les informations nécessaires pour se connecter à la base de données. Pour ce faire, créez une liste de sources de données à l’aide de **SQLDataSources**; inviter l’utilisateur à une source de données, un ID d’utilisateur et un mot de passe ; puis appelez **SQLConnect**.  
   
- **SQLConnect** part du principe qu’un nom de source de données, un ID utilisateur et un mot de passe sont suffisantes pour se connecter à une source de données et que la source de données ODBC contient toutes les autres informations que le pilote ODBC a besoin pour établir la connexion. Contrairement aux [SQLDriverConnect](../../relational-databases/native-client-odbc-api/sqldriverconnect.md) et [SQLBrowseConnect](../../relational-databases/native-client-odbc-api/sqlbrowseconnect.md), **SQLConnect** n’utilise pas une chaîne de connexion.  
+ **SQLConnect** part du principe qu’un nom de source de données, un ID utilisateur et un mot de passe sont suffisants pour se connecter à une source de données et que la source de données ODBC contient toutes les autres informations que le pilote ODBC a besoin pour établir la connexion. Contrairement aux [SQLDriverConnect](../../relational-databases/native-client-odbc-api/sqldriverconnect.md) et [SQLBrowseConnect](../../relational-databases/native-client-odbc-api/sqlbrowseconnect.md), **SQLConnect** n’utilise pas une chaîne de connexion.  
   
 ## <a name="sqldriverconnect"></a>SQLDriverConnect  
- **SQLDriverConnect** est utilisé lorsque plus d’informations que le nom de source de données, un ID d’utilisateur et un mot de passe est requis. Un des paramètres **SQLDriverConnect** est une chaîne de connexion contenant des informations spécifiques au pilote. Vous pouvez utiliser **SQLDriverConnect** au lieu de **SQLConnect** pour les raisons suivantes :  
+ **SQLDriverConnect** est utilisé lorsque plus d’informations que le nom de source de données, un ID d’utilisateur et un mot de passe est requis. L’un des paramètres à **SQLDriverConnect** est une chaîne de connexion contenant des informations spécifiques au pilote. Vous pouvez utiliser **SQLDriverConnect** au lieu de **SQLConnect** pour les raisons suivantes :  
   
 -   Pour fournir des informations spécifiques au pilote lors de la connexion.  
   
@@ -63,20 +63,20 @@ ms.locfileid: "35698700"
   
 -   Pour se connecter sans le recours à une source de données ODBC.  
   
- Le **SQLDriverConnect** chaîne de connexion contient une série de paires mot clé-valeur qui spécifient toutes les informations de connexion pris en charge par un pilote ODBC. Chaque pilote prend en charge les mots clés ODBC standard (DSN, FILEDSN, DRIVER, UID, PWD et SAVEFILE) en plus des mots clés spécifiques au pilote pour toutes les informations de connexion prises en charge par le pilote. **SQLDriverConnect** peut être utilisé pour se connecter sans une source de données. Par exemple, une application qui est conçue pour établir une connexion « Sans DSN » à une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] peut appeler **SQLDriverConnect** avec une chaîne de connexion qui définit l’ID de connexion, le mot de passe, le bibliothèque réseau, le nom du serveur pour se connecter à et par défaut de la base de données à utiliser.  
+ Le **SQLDriverConnect** chaîne de connexion contient une série de paires mot clé-valeur qui spécifient toutes les informations de connexion pris en charge par un pilote ODBC. Chaque pilote prend en charge les mots clés ODBC standard (DSN, FILEDSN, DRIVER, UID, PWD et SAVEFILE) en plus des mots clés spécifiques au pilote pour toutes les informations de connexion prises en charge par le pilote. **SQLDriverConnect** peut être utilisé pour se connecter sans une source de données. Par exemple, une application qui est conçue pour établir une connexion sans « DSN » à une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] peut appeler **SQLDriverConnect** avec une chaîne de connexion qui définit l’ID de connexion, le mot de passe, le bibliothèque réseau, le nom du serveur pour Connectez-vous à et de base de données par défaut à utiliser.  
   
  Lorsque vous utilisez **SQLDriverConnect**, il existe deux options pour la confirmation de l’utilisateur pour les informations de connexion nécessaires :  
   
 -   Boîte de dialogue d'application  
   
-     Vous pouvez créer une boîte de dialogue d’application qui vous invite à entrer des informations de connexion, puis appelle **SQLDriverConnect** avec un handle de fenêtre NULL et *DriverCompletion* définie sur SQL_DRIVER_NOPROMPT. Ces paramètres empêchent le pilote ODBC d'ouvrir sa propre boîte de dialogue. Cette méthode est employée lorsqu'il est vital de contrôler l'interface utilisateur de l'application.  
+     Vous pouvez créer une boîte de dialogue d’application qui invite à entrer les informations de connexion, puis appelle **SQLDriverConnect** avec un handle de fenêtre NULL et *DriverCompletion* définie sur SQL_DRIVER_NOPROMPT. Ces paramètres empêchent le pilote ODBC d'ouvrir sa propre boîte de dialogue. Cette méthode est employée lorsqu'il est vital de contrôler l'interface utilisateur de l'application.  
   
 -   Boîte de dialogue du pilote  
   
-     Vous pouvez coder l’application pour passer un handle de fenêtre valide à **SQLDriverConnect** et définir le *DriverCompletion* paramètre SQL_DRIVER_COMPLETE, SQL_DRIVER_PROMPT ou SQL_DRIVER_COMPLETE_ Obligatoire. Le pilote génère ensuite une boîte de dialogue pour inviter l'utilisateur à fournir les informations de connexion. Cette méthode simplifie le code de l'application.  
+     Vous pouvez coder l’application à passer un handle de fenêtre valide à **SQLDriverConnect** et définir le *DriverCompletion* paramètre SQL_DRIVER_COMPLETE, SQL_DRIVER_PROMPT ou SQL_DRIVER_COMPLETE_ Obligatoire. Le pilote génère ensuite une boîte de dialogue pour inviter l'utilisateur à fournir les informations de connexion. Cette méthode simplifie le code de l'application.  
   
 ## <a name="sqlbrowseconnect"></a>SQLBrowseConnect  
- **SQLBrowseConnect**, comme **SQLDriverConnect**, utilise une chaîne de connexion. Toutefois, à l’aide de **SQLBrowseConnect**, une application peut construire une chaîne de connexion complète itérative avec la source de données en cours d’exécution. L'application peut alors réaliser deux tâches :  
+ **SQLBrowseConnect**, comme **SQLDriverConnect**, utilise une chaîne de connexion. Toutefois, à l’aide **SQLBrowseConnect**, une application peut construire une chaîne de connexion complète itérativement avec la source de données en cours d’exécution. L'application peut alors réaliser deux tâches :  
   
 -   Créer ses propres boîtes de dialogue pour demander ces informations et conserver ainsi le contrôle de son interface utilisateur.  
   
@@ -84,9 +84,9 @@ ms.locfileid: "35698700"
   
      Par exemple, l'utilisateur peut d'abord rechercher des serveurs sur le réseau, puis après avoir choisi un serveur, recherchez sur ce dernier des bases de données auxquelles le pilote peut accéder.  
   
- Lorsque **SQLBrowseConnect** se termine une connexion réussie, elle retourne une chaîne de connexion qui peut être utilisée sur les appels suivants à **SQLDriverConnect**.  
+ Lorsque **SQLBrowseConnect** établit une connexion réussie, elle retourne une chaîne de connexion qui peut être utilisée lors des appels ultérieurs à **SQLDriverConnect**.  
   
- Le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pilote ODBC Native Client retourne toujours SQL_SUCCESS_WITH_INFO sur réussite **SQLConnect**, **SQLDriverConnect**, ou **SQLBrowseConnect**. Lorsqu’une application ODBC appelle **SQLGetDiagRec** après avoir obtenu SQL_SUCCESS_WITH_INFO, il peut recevoir les messages suivants :  
+ Le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pilote ODBC Native Client retourne toujours SQL_SUCCESS_WITH_INFO aboutit **SQLConnect**, **SQLDriverConnect**, ou **SQLBrowseConnect**. Lorsqu’une application ODBC appelle **SQLGetDiagRec** après avoir obtenu SQL_SUCCESS_WITH_INFO, il peut recevoir les messages suivants :  
   
  5701  
  Indique que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a placé le contexte de l'utilisateur dans la base de données par défaut définie dans la source de données ou dans la base de données par défaut définie pour l'ID de connexion employé dans la connexion si la source de données ne disposait pas d'une base de données par défaut.  
@@ -117,7 +117,7 @@ szErrorMsg: "[Microsoft][SQL Server Native Client]The ODBC
             Please contact your system administrator."  
 ```  
   
- La fonction d’une demande de gestion d’erreur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] connexions doivent appeler **SQLGetDiagRec** jusqu'à ce qu’il retourne SQL_NO_DATA. Il doit ensuite intervenir sur tous les messages autres que ceux avec un *pfNative* code 5701 ou 5703.  
+ La fonction d’une application pour gestion d’erreur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] connexions doivent appeler **SQLGetDiagRec** jusqu'à ce qu’il retourne SQL_NO_DATA. Il doit ensuite intervenir sur tous les messages autres que celles avec un *pfNative* code de 5701 ou 5703.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Communication avec SQL Server &#40;ODBC&#41;](../../relational-databases/native-client-odbc-communication/communicating-with-sql-server-odbc.md)  

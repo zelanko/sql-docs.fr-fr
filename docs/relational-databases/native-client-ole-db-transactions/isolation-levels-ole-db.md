@@ -1,12 +1,12 @@
 ---
-title: Niveaux d’isolation (OLE DB) | Documents Microsoft
+title: Niveaux d’isolation (OLE DB) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: connectivity
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -19,18 +19,18 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: d1870c4f9f348c9d1b2ca52b94ee38a3e5d38190
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
+ms.openlocfilehash: 00d6b525c0a52fb5b792926f110d73d3d77bdd6a
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35698070"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37421088"
 ---
 # <a name="isolation-levels-ole-db"></a>Niveaux d'isolation (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
-  Les clients [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] peuvent contrôler les niveaux d'isolation des transactions pour une connexion. Pour contrôler le niveau d’isolation des transactions, la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] consommateur de fournisseur OLE DB Native Client utilise :  
+  Les clients [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] peuvent contrôler les niveaux d'isolation des transactions pour une connexion. Pour contrôler le niveau d’isolation des transactions, le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] consommateur de fournisseur OLE DB Native Client utilise :  
   
 -   Propriété DBPROPSET_SESSION DBPROP_SESS_AUTOCOMMITISOLEVELS pour le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mode de validation automatique de valeur par défaut de fournisseur OLE DB Native Client.  
   

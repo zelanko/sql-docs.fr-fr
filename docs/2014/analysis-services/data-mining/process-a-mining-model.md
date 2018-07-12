@@ -1,5 +1,5 @@
 ---
-title: Traiter un modèle d’exploration de données | Documents Microsoft
+title: Traiter un modèle d’exploration de données | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - mining models [Analysis Services], processing
 ms.assetid: c2204472-c500-47a5-9afa-7ce2ca78b233
 caps.latest.revision: 30
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 45a7d57376025425946998410e5966ffa382cef9
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 649aa722e67e8cfaf9986c003a965c5aaf564684
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36042134"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37163470"
 ---
 # <a name="process-a-mining-model"></a>Traiter un modèle d'exploration de données
   Dans l'onglet Modèles d'exploration de données du Concepteur d'exploration de données de [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], vous pouvez traiter un modèle d'exploration de données associé à une structure d'exploration de données, ou traiter tous les modèles associés à la structure.  
@@ -48,7 +48,7 @@ ms.locfileid: "36042134"
   
 4.  Une fois le modèle traité, cliquez sur **Fermer** dans la boîte de dialogue **État d'avancement du traitement** .  
   
-5.  Cliquez sur **fermer** dans les **traiter le modèle d’exploration de données - \<modèle >** boîte de dialogue.  
+5.  Cliquez sur **fermer** dans le **traiter le modèle d’exploration de données - \<modèle >** boîte de dialogue.  
   
  Seuls la structure d'exploration de données et le modèle d'exploration de données sélectionné ont été traités.  
   
@@ -64,7 +64,7 @@ ms.locfileid: "36042134"
   
 5.  Une fois les modèles traités, cliquez sur **Fermer** dans la boîte de dialogue **État d'avancement du traitement** .  
   
-6.  Cliquez sur **fermer** dans les **traitement \<modèle >** boîte de dialogue.  
+6.  Cliquez sur **fermer** dans le **traitement \<modèle >** boîte de dialogue.  
   
  La structure d'exploration de données et tous les modèles d'exploration de données associés ont été traités.  
   

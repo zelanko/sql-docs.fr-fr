@@ -1,5 +1,5 @@
 ---
-title: Ensembles de lignes de schéma OLE DB | Documents Microsoft
+title: Ensembles de lignes de schéma OLE DB | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -20,18 +20,18 @@ helpviewer_keywords:
 - rowsets [Analysis Services], OLE DB
 ms.assetid: ca2ee87a-ba04-4501-9125-33934c58ab31
 caps.latest.revision: 37
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 313efc520f63240d3e9fa19584fc7f3e620fdeee
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 3a1d03d6fd8d527d48a9a4051f201368ff870882
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36042578"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37161190"
 ---
 # <a name="ole-db-schema-rowsets"></a>Ensembles de lignes des schémas OLE DB
-  Les ensembles de lignes des schémas OLE DB suivants sont pris en charge par le fournisseur [!INCLUDE[msCoName](../../../includes/msconame-md.md)] XML for Analysis (XMLA). Utilisez le `DISCOVER_ENUMERATORS` ensemble de lignes avec le [Discover](../../xmla/xml-elements-methods-discover.md) méthode permettant de vérifier si un fournisseur de source de données particulière prend en charge un ensemble de lignes.  
+  Les ensembles de lignes des schémas OLE DB suivants sont pris en charge par le fournisseur [!INCLUDE[msCoName](../../../includes/msconame-md.md)] XML for Analysis (XMLA). Utilisez le `DISCOVER_ENUMERATORS` ensemble de lignes avec le [Discover](../../xmla/xml-elements-methods-discover.md) méthode permettant de vérifier si un fournisseur de source de données particulier prend en charge un ensemble de lignes.  
   
  Vous pouvez également obtenir des informations détaillées sur ces ensembles de lignes en recherchant la rubrique « Ensembles de lignes de schéma » dans la section Guide de référence du programmeur OLE DB de la Bibliothèque MSDN® sur le site Web [!INCLUDE[msCoName](../../../includes/msconame-md.md)].  
   
@@ -57,7 +57,7 @@ ms.locfileid: "36042578"
 |`DBSCHEMA_PROCEDURE_COLUMNS`|Renvoie des informations sur les colonnes des ensembles de lignes retournées par les procédures.|  
 |`DBSCHEMA_PROCEDURE_PARAMETERS`|Retourne des informations sur les paramètres et les codes de retour des procédures.|  
 |`DBSCHEMA_PROCEDURES`|Identifie les procédures qui sont définies dans le catalogue et détenues par un utilisateur donné. Il s'agit d'une extension OLE DB.|  
-|[Lignes de schéma DBSCHEMA_PROVIDER_TYPES](dbschema-provider-types-rowset.md) <sup>1</sup>|Identifie les types de données (de base) pris en charge par le fournisseur de données.|  
+|[Ensemble de lignes de schéma DBSCHEMA_PROVIDER_TYPES](dbschema-provider-types-rowset.md) <sup>1</sup>|Identifie les types de données (de base) pris en charge par le fournisseur de données.|  
 |`DBSCHEMA_REFERENTIAL_CONSTRAINTS`|Identifie les contraintes référentielles qui sont définies dans le catalogue et détenues par un utilisateur donné.|  
 |`DBSCHEMA_SCHEMATA`|Identifie les schémas détenus par un utilisateur donné.|  
 |`DBSCHEMA_SQL_LANGUAGES`|Identifie les dialectes, les options et les niveaux de conformité pris en charge par l'implémentation SQL traitant les données définies dans le catalogue.|  

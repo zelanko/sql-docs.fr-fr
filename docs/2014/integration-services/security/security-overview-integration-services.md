@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - SSIS packages, security
 - Integration Services, security
@@ -23,13 +23,13 @@ ms.assetid: 01aa0b88-d477-4581-9a3b-2efc3de2b133
 caps.latest.revision: 72
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: f48f1805052debe3d7120fb55cb2777cb3e5c735
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: ef095dd196b4deacf7fcd6ade6d2d50d3756d6f6
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36043638"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37167130"
 ---
 # <a name="security-overview-integration-services"></a>Vue d'ensemble de la sécurité (Integration Services)
   La sécurité dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] est constituée de plusieurs couches qui fournissent un environnement de sécurité complet et souple. Ces couches de sécurité incluent l’utilisation de signatures numériques, de propriétés de package, de rôles de base de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et d’autorisations de système d’exploitation. La plupart de ces fonctionnalités de sécurité se répartissent dans les catégories suivantes : identité et contrôle d'accès.  
@@ -100,13 +100,13 @@ ms.locfileid: "36043638"
   
 -   [Créer un rôle défini par l’utilisateur](../create-a-user-defined-role.md)  
   
--   [Affecter un lecteur et un rôle d’écriture à un Package](../assign-a-reader-and-writer-role-to-a-package.md)  
+-   [Affecter un rôle de lecture et d’écriture à un package](../assign-a-reader-and-writer-role-to-a-package.md)  
   
--   [Implémenter une stratégie de signature en définissant une valeur de Registre](../implement-a-signing-policy-by-setting-a-registry-value.md)  
+-   [Implémenter une stratégie de signature en définissant une valeur du Registre](../implement-a-signing-policy-by-setting-a-registry-value.md)  
   
--   [Signer un Package à l’aide d’un certificat numérique](../sign-a-package-by-using-a-digital-certificate.md)  
+-   [Signer un package à l’aide d’un certificat numérique](../sign-a-package-by-using-a-digital-certificate.md)  
   
--   [Définir ou modifier le niveau de Protection des Packages](../set-or-change-the-protection-level-of-packages.md)  
+-   [Définir ou changer le niveau de protection des packages](../set-or-change-the-protection-level-of-packages.md)  
   
 ## <a name="see-also"></a>Voir aussi  
  [SQL Server Integration Services](../sql-server-integration-services.md)  

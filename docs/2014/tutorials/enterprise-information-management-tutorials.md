@@ -1,5 +1,5 @@
 ---
-title: Didacticiels sur la gestion des informations entreprise | Documents Microsoft
+title: Didacticiels de gestion des informations Enterprise | Microsoft Docs
 ms.custom: ''
 ms.date: 12/29/2017
 ms.prod: sql-server-2014
@@ -10,18 +10,18 @@ ms.technology:
 - integration-services
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 8745dc80-193d-4de0-9f17-ba648ab1e81c
 caps.latest.revision: 6
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 8bf0662a624fac18b83c1bb0d41e4c532d15ad00
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 2dc3dae5fa4bd7bb0186c325f65cccc2030fe7c3
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36043030"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37202109"
 ---
 # <a name="enterprise-information-management-tutorials"></a>Didacticiels sur la Gestion des informations d'entreprise
   Cette section contient des didacticiels pour gérer les informations de l'entreprise à l'aide des technologies de gestion des informations d'entreprise (EIM) incluses dans [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]. La gestion des informations d'entreprise (EIM) fournit un éventail de solutions qui permettent aux organisations d'évaluer la crédibilité et la cohérence de leurs données afin de prendre des décisions commerciales critiques. [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] contient les technologies suivantes, qui vous aident à mettre en œuvre les solutions EIM dans votre entreprise.  
@@ -32,7 +32,7 @@ ms.locfileid: "36043030"
   
 -   SQL Server Master Data Services (MDS). MDS est un concentrateur de données central qui garantit l'intégrité des informations et la cohérence des données entre différentes applications.  
   
- [Gestion des informations à l’aide de SSIS, MDS et DQS &#91;didacticiel&#93;](../../2014/tutorials/enterprise-information-management-using-ssis-mds-and-dqs-together-[tutorial].md)  
+ [Enterprise Information Management à l’aide de SSIS, MDS et DQS conjointement &#91;didacticiel&#93;](../../2014/tutorials/enterprise-information-management-using-ssis-mds-and-dqs-together-[tutorial].md)  
  Dans ce didacticiel, vous allez apprendre à utiliser SSIS, MDS et DQS conjointement pour implémenter un exemple de solution de gestion des informations d'entreprise (EIM). Vous utiliserez d'abord DQS pour créer une base de connaissances contenant les connaissances relatives aux données des fournisseurs (métadonnées), puis vous allez nettoyer les données dans un fichier Excel en fonction de la base de connaissances, et enfin, vous allez faire correspondre les données pour identifier et supprimer les doublons. Ensuite, vous utiliserez le complément MDS pour Excel pour télécharger les données nettoyées et mises en correspondance dans MDS. Enfin, vous automatiserez l'ensemble du processus en utilisant une solution SSIS.  
   
 ## <a name="see-also"></a>Voir aussi  

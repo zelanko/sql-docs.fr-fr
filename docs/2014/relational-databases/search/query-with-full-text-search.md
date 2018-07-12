@@ -5,10 +5,9 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-search
+ms.technology: search
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - queries [full-text search], about full-text queries
 - queries [full-text search], predicates
@@ -18,20 +17,20 @@ helpviewer_keywords:
 - queries [full-text search], functions
 ms.assetid: 7624ba76-594b-4be5-ac10-c3ac4a3529bd
 caps.latest.revision: 79
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 2edf2a5fbafb99287503d4b7ebe5475bd5604985
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 78351b4f710d84d6d8cb7f29d1de89d05ee763b8
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36042647"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37229009"
 ---
 # <a name="query-with-full-text-search"></a>Exécuter une requête avec une recherche en texte intégral
   Pour définir des recherches en texte intégral, les requêtes de texte intégral de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilisent les prédicats de texte intégral (CONTAINS et FREETEXT) et les fonctions de texte intégral (CONTAINSTABLE et FREETEXTTABLE). Ces derniers prennent en charge la syntaxe [!INCLUDE[tsql](../../includes/tsql-md.md)] enrichie qui accepte divers formulaires de termes de requête. Pour écrire des requêtes de texte intégral, vous devez apprendre quand et comment utiliser ces prédicats et ces fonctions.  
   
-##  <a name="OV_ft_predicates"></a> Vue d’ensemble de la recherche de texte intégral prédicats (CONTAINS et FREETEXT)  
+##  <a name="OV_ft_predicates"></a> Vue d’ensemble de la recherche en texte intégral prédicats (CONTAINS et FREETEXT)  
  Les prédicats CONTAINS et FREETEXT retournent une valeur TRUE ou FALSE. Ils peuvent être utilisés uniquement pour spécifier des critères de sélection permettant de déterminer si une ligne donnée correspond à la requête de texte intégral. Les lignes correspondantes sont retournées dans le jeu de résultats. CONTAINS et FREETEXT sont spécifiés dans la clause WHERE ou HAVING d'une instruction SELECT. Ils peuvent être associés à l'un quelconque des autres prédicats [!INCLUDE[tsql](../../includes/tsql-md.md)] tels que LIKE et BETWEEN.  
   
 > [!NOTE]  
@@ -134,7 +133,7 @@ GO
 ```  
   
 #### <a name="b-using-freetexttable"></a>B. Utilisation de FREETEXTTABLE  
- L'exemple ci-après étend une requête FREETEXTTABLE afin de retourner en premier les lignes dont le niveau de classement est le plus élevé et d'ajouter le classement de chaque ligne à la liste de sélection. Pour spécifier une requête, vous devez savoir que **ProductDescriptionID** est la colonne clé unique pour le `ProductDescription` table.  
+ L'exemple ci-après étend une requête FREETEXTTABLE afin de retourner en premier les lignes dont le niveau de classement est le plus élevé et d'ajouter le classement de chaque ligne à la liste de sélection. Pour spécifier la requête, il faut savoir que **ProductDescriptionID** est la colonne clé unique pour le `ProductDescription` table.  
   
 ```  
 USE AdventureWorks2012  
@@ -193,7 +192,7 @@ GO
   
  
   
-##  <a name="Additional_Considerations"></a> Considérations supplémentaires pour les requêtes de texte intégral  
+##  <a name="Additional_Considerations"></a> Considérations supplémentaires pour les requêtes de recherche en texte intégral  
  Lors de l'écriture de requêtes de texte intégral, prenez également en considération les points suivants :  
   
 -   LANGUAGE (option)  
@@ -234,13 +233,13 @@ EXEC sp_fulltext_service @action='load_os_resources', @value=1
  
   
 ### <a name="xml-data"></a>Données xml  
- Un `xml` colonne de type de données stocke uniquement des documents XML et des fragments, et seul le filtre XML est utilisé pour les documents. Par conséquent, une colonne de type est inutile. Sur `xml` colonnes, l’index de recherche en texte intégral indexe le contenu des éléments XML, mais ignore le balisage XML. Les valeurs d'attributs sont indexées en texte intégral, à moins qu'il ne s'agisse de valeurs numériques. Des balises d'éléments sont utilisées comme limites de jeton. Les fragments et les documents XML ou HTML correctement formés contenant plusieurs langues sont pris en charge.  
+ Un `xml` colonne de type de données stocke uniquement des documents XML et des fragments, et seul le filtre XML est utilisé pour les documents. Par conséquent, une colonne de type est inutile. Sur `xml` colonnes, l’index de recherche en texte intégral indexe le contenu des éléments XML tout en ignorant le balisage XML. Les valeurs d'attributs sont indexées en texte intégral, à moins qu'il ne s'agisse de valeurs numériques. Des balises d'éléments sont utilisées comme limites de jeton. Les fragments et les documents XML ou HTML correctement formés contenant plusieurs langues sont pris en charge.  
   
- Pour plus d’informations sur l’interrogation sur une `xml` colonne, consultez [utiliser la recherche en texte intégral avec des colonnes XML](../xml/use-full-text-search-with-xml-columns.md).  
+ Pour plus d’informations sur l’interrogation sur un `xml` colonne, consultez [utiliser la recherche en texte intégral avec des colonnes XML](../xml/use-full-text-search-with-xml-columns.md).  
   
  
   
-##  <a name="supported"></a> Prise en charge des formulaires de termes de requête  
+##  <a name="supported"></a> Formulaires pris en charge de termes de requête  
  Cette section récapitule la prise en charge fournie pour chaque formulaire de requête par les prédicats de texte intégral et les fonctions d'ensemble de lignes.  
   
 > [!NOTE]  
@@ -258,7 +257,7 @@ EXEC sp_fulltext_service @action='load_os_resources', @value=1
 
   
 ###  <a name="Simple_Term"></a> Recherche d’un mot spécifique ou une expression (terme Simple)  
- Vous pouvez utiliser [CONTAINS](/sql/t-sql/queries/contains-transact-sql), [CONTAINSTABLE](/sql/relational-databases/system-functions/containstable-transact-sql), [FREETEXT](/sql/t-sql/queries/freetext-transact-sql)ou [FREETEXTTABLE](/sql/relational-databases/system-functions/freetexttable-transact-sql) pour rechercher une expression spécifique dans une table. Par exemple, si vous souhaitez rechercher la `ProductReview` de table dans le [!INCLUDE[ssSampleDBobject](../../../includes/sssampledbobject-md.md)] base de données pour trouver tous les commentaires de produits contenant l’expression « learning curve », vous pouvez utiliser le prédicat CONTAINS comme suit :  
+ Vous pouvez utiliser [CONTAINS](/sql/t-sql/queries/contains-transact-sql), [CONTAINSTABLE](/sql/relational-databases/system-functions/containstable-transact-sql), [FREETEXT](/sql/t-sql/queries/freetext-transact-sql)ou [FREETEXTTABLE](/sql/relational-databases/system-functions/freetexttable-transact-sql) pour rechercher une expression spécifique dans une table. Par exemple, si vous souhaitez rechercher la `ProductReview` table dans le [!INCLUDE[ssSampleDBobject](../../../includes/sssampledbobject-md.md)] base de données pour trouver tous les commentaires de produits contenant l’expression « learning curve », vous pouvez utiliser le prédicat CONTAINS comme suit :  
   
 ```  
 USE AdventureWorks2012  
@@ -337,7 +336,7 @@ GO
   
 
   
-##  <a name="tokens"></a> Affichage du résultat de la création de jetons d’un analyseur lexical, un dictionnaire des synonymes et une combinaison de la liste de mots vides  
+##  <a name="tokens"></a> Affichage du résultat de la création de jetons d’analyseur lexical, de dictionnaire des synonymes et de combinaison de liste de mots vides  
  Après avoir appliqué une combinaison d’analyseur lexical, de dictionnaire des synonymes et de liste de mots vides à une entrée de chaîne de requête, vous pouvez afficher le résultat de la segmentation du texte en unités lexicales à l’aide de la vue de gestion dynamique **sys.dm_fts_parser**. Pour plus d’informations, consultez [sys.dm_fts_parser &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-fts-parser-transact-sql).  
   
  

@@ -1,5 +1,5 @@
 ---
-title: Types (exploration de données) de contenu | Documents Microsoft
+title: Types (exploration de données) de contenu | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - columns [data mining], content types
 - KEY SEQUENCE column
@@ -27,15 +27,15 @@ helpviewer_keywords:
 - coding [Data Mining]
 ms.assetid: 2dacd968-70e8-4993-88b6-a6d36024a4e4
 caps.latest.revision: 42
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 2f283ff19a1947cfda208979b80482432ec6c597
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 817de3b9232a755d94fe2790a0ab2e08a835c9dc
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36042592"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37163510"
 ---
 # <a name="content-types-data-mining"></a>Types de contenu (Exploration de données)
   Dans [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], vous pouvez définir à la fois le type de données physique d’une colonne dans une structure d’exploration de données et un type de contenu logique pour la colonne quand elle est utilisée dans un modèle.  
@@ -53,14 +53,14 @@ ms.locfileid: "36042592"
   
  Les valeurs dans une colonne d'attributs discrète ne peuvent pas impliquer un classement, même si les valeurs sont numériques. De plus, même si les valeurs utilisées pour la colonne discrète sont numériques, le calcul de valeurs fractionnaires est impossible. Les indicatifs téléphoniques sont un bon exemple de données discrètes numériques.  
   
- Le `Discrete` le type de contenu est pris en charge par toutes les données des types de données d’exploration de données.  
+ Le `Discrete` type de contenu est pris en charge par les données de tous les types de données d’exploration de données.  
   
 ## <a name="continuous"></a>Continu  
  Le terme*continu* signifie que la colonne contient des valeurs qui représentent des données numériques sur une échelle qui autorise des valeurs temporaires. À la différence d'une colonne discrète, qui représente des données finies et dénombrables, une colonne continue représente des mesures évolutives et les données peuvent contenir un nombre infini de valeurs fractionnaires. Une colonne de températures est un exemple de colonne d'attributs continue.  
   
  Lorsqu'une colonne contient les données numériques continues, et que vous savez comment les données doivent être distribuées, vous pouvez potentiellement améliorer l'exactitude de l'analyse en spécifiant la distribution attendue des valeurs. Vous spécifiez la distribution des colonnes au niveau de la structure d'exploration de données. Ainsi, le paramètre s’applique à tous les modèles basés sur la structure. Pour plus d’informations, consultez [Distributions de colonnes &#40;exploration de données&#41;](column-distributions-data-mining.md).  
   
- Le `Continuous` le type de contenu est pris en charge par les types de données suivants : `Date`, `Double`, et `Long`.  
+ Le `Continuous` type de contenu est pris en charge par les types de données suivants : `Date`, `Double`, et `Long`.  
   
 ## <a name="discretized"></a>Discrétisé  
  La*discrétisation* est le processus consistant à mettre les valeurs d’un jeu continu de données dans des compartiments pour obtenir un nombre limité de valeurs possibles. Seules des données numériques peuvent être discrétisées.  
@@ -117,7 +117,7 @@ ms.locfileid: "36042592"
   
 ## <a name="see-also"></a>Voir aussi  
  [Types de contenu &#40;DMX&#41;](/sql/dmx/content-types-dmx)   
- [Types de données &#40;d’exploration de données&#41;](data-types-data-mining.md)   
+ [Types de données &#40;exploration de données&#41;](data-types-data-mining.md)   
  [Types de données &#40;DMX&#41;](/sql/dmx/data-types-dmx)   
  [Modifier les propriétés d’une Structure d’exploration de données](change-the-properties-of-a-mining-structure.md)   
  [Colonnes de structure d’exploration de données](mining-structure-columns.md)  

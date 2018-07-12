@@ -1,12 +1,12 @@
 ---
-title: Notice légale pour Documentation | Documents Microsoft
+title: Notice légale pour Documentation | Microsoft Docs
 ms.custom: ''
 ms.date: 05/24/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Copyright
 - documentation [SQL Server], legal notice
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - documentation policy [SQL Server]
 ms.assetid: 6854121d-429d-4d1b-9d64-342583e08378
 caps.latest.revision: 64
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: e230cebf441753ece79e3b2ff552d2bcd2b210c7
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mightypen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: 7c08db5a6681dec8ef5928369a27bc53f31a4d7c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36042556"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37167200"
 ---
 # <a name="legal-notice-for-documentation"></a>Notice légale pour documentation
   Ce document est fourni « en l'état ». Les informations et les opinions exprimées dans ce document, y compris les adresses URL et les autres références à des sites Internet, peuvent faire l'objet de modifications sans préavis. Vous assumez les risques liés à leur utilisation.  
@@ -42,6 +42,6 @@ ms.locfileid: "36042556"
   
  Dans certains cas, une fonctionnalité particulière de [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] n'a pas été suffisamment testée ou développée, et n'est pas destinée à votre utilisation. De telles fonctionnalités se retrouvent alors sous forme d'espaces réservés. Par conséquent, certaines fonctionnalités incluses dans le logiciel ne sont pas documentées. Les fonctionnalités qui ne sont pas documentées ou qui sont incluses comme notation pour une utilisation interne de Microsoft ne sont pas destinées à votre utilisation et ne sont pas prises en charge par le support technique de Microsoft. Sauf spécification contraire de la documentation de [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)], le contenu tiers, y compris les problèmes qui résultent de son utilisation avec [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)], n'est pas pris en charge par le support technique de Microsoft et peut également entraîner une perte des données. Le support technique de Microsoft n'assure pas la prise en charge des bases de données ou des applications qui exploitent ou utilisent les points d'entrée non documentés comme les API non documentées, notamment sans que la liste soit limitative, les éléments suivants : procédures stockées, procédures stockées étendues, fonctions, vues, tables, colonnes, propriétés ou métadonnées.  
   
- Les mises à niveau de serveur et de base de données vers les versions ultérieures de [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] pour les applications et les bases de données qui exploitent et utilisent des points d'entrée non documentés (qui peuvent ne pas fonctionner) ne sont pas prises en charge. Utilisation des fonctionnalités de SQL Server et de fonctionnalités incluses dans Microsoft SQL Server qui ne sont pas documentés dans la [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] documentation destinée à votre utilisation ne sont pas prises en charge et peut provoquer une perte de données.  
+ Les mises à niveau de serveur et de base de données vers les versions ultérieures de [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] pour les applications et les bases de données qui exploitent et utilisent des points d'entrée non documentés (qui peuvent ne pas fonctionner) ne sont pas prises en charge. Utilisation de SQL Server les fonctionnalités incluses dans Microsoft SQL Server qui ne sont pas documentés dans le [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] documentation destinée à votre utilisation ne sont pas prises en charge et peut provoquer une perte de données.  
   
   

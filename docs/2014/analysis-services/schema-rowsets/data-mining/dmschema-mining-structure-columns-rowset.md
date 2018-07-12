@@ -1,5 +1,5 @@
 ---
-title: Ensemble de lignes DMSCHEMA_MINING_STRUCTURE_COLUMNS | Documents Microsoft
+title: Ensemble de lignes DMSCHEMA_MINING_STRUCTURE_COLUMNS | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -18,15 +18,15 @@ helpviewer_keywords:
 - DMSCHEMA_MINING_STRUCTURE_COLUMNS rowset
 ms.assetid: 81f25502-ac90-42f1-8ddf-7b0f9752ebfd
 caps.latest.revision: 34
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 98c8ec286e12cfe6198c36900067a26eefd5e1ad
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 3c98da6f1e843b08fac4b91baabec79ab0d9c341
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36042773"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37171580"
 ---
 # <a name="dmschemaminingstructurecolumns-rowset"></a>Ensemble de lignes DMSCHEMA_MINING_STRUCTURE_COLUMNS
   Décrit les colonnes de toutes les structures d’exploration de données déployées sur un serveur qui est en cours d’exécution [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)].  
@@ -45,14 +45,14 @@ ms.locfileid: "36042773"
 |`ORDINAL_POSITION`|`DBTYPE_UI4`||Valeur ordinale de la colonne. Les colonnes sont numérotées à partir de 1. `NULL` s'il n'existe aucune valeur ordinale stable pour la colonne.|  
 |`COLUMN_HASDEFAULT`|`DBTYPE_BOOL`||Valeur booléenne qui indique si cette colonne possède une valeur par défaut.<br /><br /> `TRUE` lorsque la colonne possède une valeur par défaut.<br /><br /> `FALSE` lorsque la colonne ne possède pas de valeur par défaut ou lorsqu'il est impossible de savoir si elle possède une valeur par défaut.|  
 |`COLUMN_DEFAULT`|`DBTYPE_WSTR`||La valeur par défaut de la colonne. Un fournisseur peut exposer `DBCOLUMN_DEFAULTVALUE` mais pas `DBCOLUMN_HASDEFAULT` (pour les tables ISO) dans l'ensemble de lignes retourné par `IColumnsRowset::GetColumnsRowset`.<br /><br /> Si la valeur par défaut est `NULL`, `COLUMN_HASDEFAULT` correspond à `TRUE` et la colonne `COLUMN_DEFAULT` est une valeur `NULL`.|  
-|`COLUMN_FLAGS`|`DBTYPE_UI4`||-Un masque de bits qui décrit les caractéristiques de la colonne. Le type énuméré `DBCOLUMNFLAGS` spécifie les bits du masque de bits. Cette colonne ne peut pas contenir de valeur `NULL`. Les valeurs valides sont les suivantes :<br />-   **DBCOLUMNFLAGS_ISNULLABLE** (`0x20`)<br />-   **DBCOLUMNFLAGS_MAYBENULL** (`0x40`)<br />-   **DBCOLUMNFLAGS_ISLONG** (`0x80`)|  
+|`COLUMN_FLAGS`|`DBTYPE_UI4`||-Masque de bits qui décrit les caractéristiques de la colonne. Le type énuméré `DBCOLUMNFLAGS` spécifie les bits du masque de bits. Cette colonne ne peut pas contenir de valeur `NULL`. Les valeurs valides sont les suivantes :<br />-   **DBCOLUMNFLAGS_ISNULLABLE** (`0x20`)<br />-   **DBCOLUMNFLAGS_MAYBENULL** (`0x40`)<br />-   **DBCOLUMNFLAGS_ISLONG** (`0x80`)|  
 |`IS_NULLABLE`|`DBTYPE_BOOL`||Valeur booléenne qui indique si cette colonne possède une valeur par défaut.<br /><br /> `TRUE` si la colonne peut contenir `NULL` ; `FALSE` dans le cas contraire.|  
 |`DATA_TYPE`|`DBTYPE_UI2`||Indicateur du type de données de la colonne. Exemple :<br /><br /> -   "`TABLE`" = `DBTYPE_HCHAPTER`<br />-   "`TEXT`" = `DBTYPE_WCHAR`<br />-   "`LONG`" = `DBTYPE_I8`<br />-   "`DOUBLE`" = `DBTYPE_R8`<br />-   "`DATE`" = `DBTYPE_DATE`|  
 |`TYPE_GUID`|`DBTYPE_GUID`||GUID du type de données de la colonne. Les fournisseurs qui n'utilisent pas de GUID pour identifier les types de données doivent retourner `NULL` dans cette colonne.|  
-|`CHARACTER_MAXIMUM_LENGTH`|`DBTYPE_UI4`||Longueur maximale possible pour une valeur de la colonne. Pour les colonnes de type character, binary ou bit, il s'agit de l'une des valeurs suivantes :<br /><br /> -La longueur maximale de la colonne de caractères, octets ou bits, respectivement, si la longueur est définie. Par exemple, la longueur maximale d'une colonne `CHAR(5)` dans une table SQL est 5.<br />-La longueur maximale des données de type en caractères, octets ou bits, respectivement, si la colonne n’a pas une longueur définie.<br />-Zéro (0) si la colonne, ni le type de données a une longueur maximale définie.<br />-   `NULL` pour tous les autres types de colonnes.|  
+|`CHARACTER_MAXIMUM_LENGTH`|`DBTYPE_UI4`||Longueur maximale possible pour une valeur de la colonne. Pour les colonnes de type character, binary ou bit, il s'agit de l'une des valeurs suivantes :<br /><br /> -La longueur maximale de la colonne en caractères, octets ou bits, respectivement, si la longueur est définie. Par exemple, la longueur maximale d'une colonne `CHAR(5)` dans une table SQL est 5.<br />-La longueur maximale des données type en caractères, octets ou bits, respectivement, si la colonne n’a pas une longueur définie.<br />-Zéro (0) si le type de données ni de la colonne a une longueur maximale définie.<br />-   `NULL` pour tous les autres types de colonnes.|  
 |`CHARACTER_OCTET_LENGTH`|`DBTYPE_UI4`||Longueur maximale en octets de la colonne, si la colonne est de type character ou binary. La valeur zéro (0) signifie que la colonne ne possède pas de longueur maximale. `NULL` pour tous les autres types de colonnes.|  
 |`NUMERIC_PRECISION`|`DBTYPE_UI2`||Précision maximale de la colonne si son type de données est un type numérique autre que `VARNUMERIC` ; `NULL` si son type de données n'est pas numérique ou est `VARNUMERIC`.<br /><br /> La précision des colonnes dont le type de données est `DBTYPE_DECIMAL` ou `DBTYPE_NUM`ERIC dépend de la définition de la colonne.|  
-|`NUMERIC_SCALE`|`DBTYPE_I2`||Nombre de chiffres situés à droite de la virgule décimale si l'indicateur de type de la colonne est `DBTYPE_DECIMAL`, `DBTYPE_NUMERIC` ou `DBTYPE_VARNUMERIC`. Sinon, c’est `NULL`.|  
+|`NUMERIC_SCALE`|`DBTYPE_I2`||Nombre de chiffres situés à droite de la virgule décimale si l'indicateur de type de la colonne est `DBTYPE_DECIMAL`, `DBTYPE_NUMERIC` ou `DBTYPE_VARNUMERIC`. Sinon, il s’agit de `NULL`.|  
 |`DATETIME_PRECISION`|`DBTYPE_UI4`||Précision DateTime (nombre de chiffres dans la partie des fractions de secondes) de la colonne si cette dernière est de type datetime ou interval. Si le type de données de la colonne n'est pas datetime, la valeur est `NULL`.|  
 |`CHARACTER_SET_CATALOG`|`DBTYPE_WSTR`||Nom du catalogue dans lequel le jeu de caractères est défini. `NULL` si le fournisseur ne prend pas en charge les catalogues ou plusieurs jeux de caractères.|  
 |`CHARACTER_SET_SCHEMA`|`DBTYPE_WSTR`||Le nom de schéma non qualifié dans lequel le jeu de caractères est défini. `NULL` si le fournisseur ne prend pas en charge les schémas ou plusieurs jeux de caractères.|  

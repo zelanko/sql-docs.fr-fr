@@ -1,5 +1,5 @@
 ---
-title: ISSAbort (OLE DB) | Documents Microsoft
+title: ISSAbort (OLE DB) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -16,20 +16,20 @@ helpviewer_keywords:
 - ISSAbort interface
 ms.assetid: 7c4df482-4a83-4da0-802b-3637b507693a
 caps.latest.revision: 11
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 53c6e2c7c06331ce75883f86a8935d4d1c2419c4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 6ace6518c1a0f4ece66ec0b9b24cb9e109db7ffa
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36043413"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37180346"
 ---
 # <a name="issabort-ole-db"></a>ISSAbort (OLE DB)
-  Le **ISSAbort** interface, exposée dans le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fournisseur OLE DB Native Client fournit le [ISSAbort::Abort](../../relational-databases/native-client-ole-db-interfaces/issabort-abort-ole-db.md) méthode qui est utilisée pour annuler l’ensemble de lignes actuel plus toutes les commandes traitées par lot avec la commande ayant généré initialement l’ensemble de lignes, et qui n’ont pas terminé l’exécution.  
+  Le **ISSAbort** interface, ce qui est exposé dans le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fournisseur OLE DB Native Client, fournit le [ISSAbort::Abort](../../relational-databases/native-client-ole-db-interfaces/issabort-abort-ole-db.md) méthode qui est utilisée pour annuler l’ensemble de lignes actuel plus toutes les commandes par lot avec la commande ayant généré initialement l’ensemble de lignes, et qui n’ont pas encore terminée l’exécution.  
   
- **ISSAbort** est un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client interface spécifique au fournisseur disponible à l’aide de **QueryInterface** sur la **IMultipleResults** objet retourné par  **ICommand::Execute** ou **IOpenRowset::OpenRowset**.  
+ **ISSAbort** est un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] interface propre au fournisseur de Native Client disponible à l’aide de **QueryInterface** sur le **IMultipleResults** objet retourné par  **ICommand::Execute** ou **IOpenRowset::OpenRowset**.  
   
 ## <a name="in-this-section"></a>Dans cette section  
   

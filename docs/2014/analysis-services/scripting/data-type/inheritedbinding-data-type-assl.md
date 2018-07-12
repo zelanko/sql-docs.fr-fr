@@ -1,5 +1,5 @@
 ---
-title: Type de données InheritedBinding (ASSL) | Documents Microsoft
+title: Type de données InheritedBinding (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - InheritedBinding data type
 ms.assetid: a61f58c5-62d6-44e8-a02f-db2b17d1f256
 caps.latest.revision: 37
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 8e05749878a2ac542dd68c982709a8efe4f86368
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 7fb5895ab8435ed92717df8b2e016bc7458efa84
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36044380"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37151830"
 ---
 # <a name="inheritedbinding-data-type-assl"></a>Type de données InheritedBinding (ASSL)
   Définit un type de données dérivé indiquant qu’un [MeasureGroupAttribute](measuregroupattribute-data-type-assl.md) élément hérite ses liaisons de l’attribut.  
@@ -58,7 +58,7 @@ ms.locfileid: "36044380"
 |Éléments dérivés|Consultez [de liaison](binding-data-type-assl.md)|  
   
 ## <a name="remarks"></a>Notes  
- Pour plus d’informations sur la `Binding` type, y compris les tableaux des objets Analysis Services Scripting Language (ASSL) de la `Binding` type et la hiérarchie d’héritage de `Binding` types, consultez [Type de liaison de données &#40;ASSL&#41; ](binding-data-type-assl.md) élément.  
+ Pour plus d’informations sur la `Binding` type, y compris les tableaux des objets Analysis Services Scripting Language (ASSL) de la `Binding` type et la hiérarchie d’héritage de `Binding` types, consultez [Type de données de liaison &#40;ASSL&#41; ](binding-data-type-assl.md) élément.  
   
  Pour une vue d’ensemble des liaisons de données dans ASSL, consultez [des Sources de données et des liaisons &#40;multidimensionnels SSAS&#41;](../../multidimensional-models/data-sources-and-bindings-ssas-multidimensional.md).  
   
@@ -66,7 +66,7 @@ ms.locfileid: "36044380"
   
 ## <a name="see-also"></a>Voir aussi  
  [Type de données de liaison &#40;ASSL&#41;](binding-data-type-assl.md)   
- [Sources de données et des liaisons &#40;SSAS multidimensionnel&#41;](../../multidimensional-models/data-sources-and-bindings-ssas-multidimensional.md)   
- [Types de données de script langage XML Analysis Services &#40;ASSL&#41;](analysis-services-scripting-language-xml-data-types-assl.md)  
+ [Sources de données et liaisons &#40;SSAS multidimensionnel&#41;](../../multidimensional-models/data-sources-and-bindings-ssas-multidimensional.md)   
+ [Types Analysis Services Scripting Language XML données &#40;ASSL&#41;](analysis-services-scripting-language-xml-data-types-assl.md)  
   
   

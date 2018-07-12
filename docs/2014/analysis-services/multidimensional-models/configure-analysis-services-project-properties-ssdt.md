@@ -1,5 +1,5 @@
 ---
-title: Configurer les propriétés de projet Analysis Services (SSDT) | Documents Microsoft
+title: Configurer les propriétés de projet Analysis Services (SSDT) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - VS.TOOLSOPTIONSPAGES.BUSINESS_INTELLIGENCE_DESIGNERS.ANALYSIS_SERVICES_DESIGNERS.GENERAL
 helpviewer_keywords:
 - projects [Analysis Services], properties
 ms.assetid: d9786c66-7d8c-48e3-950d-3f25044b4ce2
 caps.latest.revision: 22
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 1b5c6062d07c10b171da7b3bc534836ddfe7752b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: d75eff8c794c18a296a9d26850af87618af028a7
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36043472"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37167720"
 ---
 # <a name="configure-analysis-services-project-properties-ssdt"></a>Configurer les propriétés d'un projet Analysis Services (SSDT)
   Dans [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], un projet [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] est défini avec certaines propriétés par défaut qui ont une incidence sur la génération et sur le déploiement du projet [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .  
@@ -39,7 +39,7 @@ ms.locfileid: "36043472"
 |Générer / Édition du serveur de déploiement|La version utilisée pour développer les projets|Indique la version du serveur sur lequel les projets seront déployés.|  
 |Générer / Sorties|/bin|Chemin relatif pour la sortie du processus de génération de projet|  
 |Générer / Supprimer les mots de passe|True|Indique si les mots de passe connus seront supprimés des chaînes de connexion écrites dans le répertoire de sortie pendant le processus de génération. Les mots de passe sont supprimés pour renforcer la sécurité Si les mots de passe sont supprimés, vous devez les fournir lors du déploiement du projet pour permettre à [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] d'accéder aux données sources.|  
-|Débogage / Démarrer l'objet|\<Objet actif >|Indique si l'objet sera démarré lors du débogage.|  
+|Débogage / Démarrer l'objet|\<Objet actif actuel >|Indique si l'objet sera démarré lors du débogage.|  
 |Déploiement / Mode de déploiement|Déployer uniquement ce qui a changé|Par défaut, seules les modifications des objets du projet sont déployées (à condition qu'aucune autre modification n'ait été apportée directement aux objets en dehors du projet). Vous pouvez également choisir de déployer tous les objets du projet à chaque déploiement. Pour optimiser les performances, utilisez l'option Déployer uniquement ce qui a changé.|  
 |Déploiement / Option de traitement|Valeur par défaut|Par défaut, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] détermine le type de traitement nécessaire lorsque les modifications des objets sont déployées. Cette approche résulte en un temps de déploiement réduit. Cependant, vous pouvez également choisir d'effectuer un traitement complet ou aucun traitement à chaque déploiement.|  
 |Déploiement / Déploiement transactionnel|False|Par défaut, le déploiement des objets modifiés ou de tous les objets n'est pas transactionnel avec le traitement des objets déployés. Le déploiement peut réussir et être conservé même si le traitement échoue. Vous pouvez modifier cette valeur par défaut pour incorporer le déploiement et le traitement dans une seule transaction.|  

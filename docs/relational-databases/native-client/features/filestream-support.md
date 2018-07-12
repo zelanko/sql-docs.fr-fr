@@ -1,28 +1,27 @@
 ---
-title: Prise en charge FILESTREAM | Documents Microsoft
+title: Prise en charge FILESTREAM | Microsoft Docs
 ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - FILESTREAM [SQL Server], SQL Server Native Client
 - SQL Server Native Client [FILESTREAM support]
 ms.assetid: 1ad3400d-7fcd-40c9-87ae-f5afc61e0374
-caps.latest.revision: 21
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 3eb1f9c51f6d21ea0684c33df33817003564d7d7
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
+ms.openlocfilehash: 1c0c4b28542b6389608eb9272e21bc45ae178d88
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35703120"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37408599"
 ---
 # <a name="filestream-support"></a>Prise en charge de FILESTREAM
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -45,9 +44,9 @@ ms.locfileid: "35703120"
 ## <a name="querying-for-filestream-columns"></a>Interrogation de colonnes FILESTREAM  
  Les ensembles de lignes de schéma dans OLE DB ne signalent pas si une colonne est une colonne FILESTREAM. ITableDefinition dans OLE DB ne peut pas être utilisée pour créer une colonne FILESTREAM.  
   
- Fonctions de catalogue comme SQLColumns dans ODBC ne signalent pas si une colonne est une colonne FILESTREAM.  
+ Fonctions de catalogue, telles que SQLColumns dans ODBC ne signalent pas de si une colonne est une colonne FILESTREAM.  
   
- Pour créer des colonnes FILESTREAM ou détecter les colonnes existantes sont des colonnes FILESTREAM, vous pouvez utiliser la **is_filestream** colonne de la [sys.columns](../../../relational-databases/system-catalog-views/sys-columns-transact-sql.md) affichage catalogue.  
+ Pour créer des colonnes FILESTREAM ou détecter les colonnes existantes sont des colonnes FILESTREAM, vous pouvez utiliser la **is_filestream** colonne de la [sys.columns](../../../relational-databases/system-catalog-views/sys-columns-transact-sql.md) vue de catalogue.  
   
  Par exemple :  
   
@@ -63,11 +62,11 @@ SELECT is_filestream FROM sys.columns WHERE name = 'varbinaryCol3' AND object_id
 ```  
   
 ## <a name="down-level-compatibility"></a>Compatibilité de bas niveau  
- Si votre client a été compilé à l’aide de la version de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client qui avait été inclus avec [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], et l’application se connecte à [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)], **varbinary (max)** comportement seront compatible avec [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]. Autrement dit, la taille maximale des données retournées est limitée à 2 Go. Pour les valeurs de résultat supérieures que 2 Go, une troncation se produit et un avertissement « troncation à droite chaîne données » est renvoyé.  
+ Si votre client a été compilé à l’aide de la version de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client fournie avec [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], et l’application se connecte à [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)], **varbinary (max)** comportement seront compatible avec [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]. Autrement dit, la taille maximale des données retournées est limitée à 2 Go. Pour les valeurs de résultat plus grands que 2 Go, une troncation se produit et un avertissement « chaîne données troncation à droite » sera renvoyé.  
   
  Lorsque la compatibilité de type de données est définie à 80, le comportement client est cohérent avec le comportement client de bas niveau.  
   
- Pour les clients qui utilisent SQLOLEDB ou autres fournisseurs qui ont été publiés avant la [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] version de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client, **varbinary (max)** sera mappé à l’image.  
+ Pour les clients qui utilisent SQLOLEDB ou autres fournisseurs qui ont été publiées avant la [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] version de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client, **varbinary (max)** sera mappé à l’image.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Fonctionnalités de SQL Server Native Client](../../../relational-databases/native-client/features/sql-server-native-client-features.md)  

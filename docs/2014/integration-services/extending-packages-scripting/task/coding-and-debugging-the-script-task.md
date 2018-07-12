@@ -25,13 +25,13 @@ ms.assetid: 687c262f-fcab-42e8-92ae-e956f3d92d69
 caps.latest.revision: 80
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 6552bc54d8da9475adaa35b86b697c1dbdf3f437
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: f651eee3c926db0f808a673d7555d02f3fe07d83
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36044261"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37184716"
 ---
 # <a name="coding-and-debugging-the-script-task"></a>Codage et débogage de la tâche de script
   Après avoir configuré la tâche de script dans l’**éditeur de tâche de script**, vous pouvez écrire votre code personnalisé dans l’environnement de développement de tâche de script.  
@@ -56,7 +56,7 @@ ms.locfileid: "36044261"
   
 -   Lorsque la tâche de Script est configurée pour le [!INCLUDE[vb_orcas_long](../../../includes/vb-orcas-long-md.md)] langage de programmation le `ScriptMain` classe possède une sous-routine publique, `Main`. La sous-routine `ScriptMain.Main` est la méthode appelée par le runtime lorsque vous exécutez votre tâche de script.  
   
-     Par défaut, le seul code figurant dans la sous-routine `Main` d'un nouveau script est la ligne `Dts.TaskResult = ScriptResults.Success`. Cette ligne informe le runtime que la tâche a été menée à bien. Le `Dts.TaskResult` propriété est décrite dans [retournant les résultats de la tâche de Script](../../extending-packages-scripting/task/returning-results-from-the-script-task.md).  
+     Par défaut, le seul code figurant dans la sous-routine `Main` d'un nouveau script est la ligne `Dts.TaskResult = ScriptResults.Success`. Cette ligne informe le runtime que la tâche a été menée à bien. Le `Dts.TaskResult` propriété est abordée dans [retour de résultats de la tâche de Script](../../extending-packages-scripting/task/returning-results-from-the-script-task.md).  
   
 -   Lorsque la tâche de script est configurée pour le langage de programmation Visual C#, la classe `ScriptMain` possède une méthode publique, `Main`. La méthode est appelée lors de l'exécution de la tâche de script.  
   
@@ -250,7 +250,7 @@ To open Help, press F1.
   
 -   Entrée de blog, [VSTA setup and configuration troubles for SSIS 2008 and R2 installations](http://go.microsoft.com/fwlink/?LinkId=215661), sur blogs.msdn.com.  
   
-![Icône Integration Services (petite)](../../media/dts-16.gif "icône Integration Services (petite)")**restent jusqu'à la Date avec Integration Services** <br /> Pour les derniers téléchargements, articles, exemples et des vidéos à partir de [!INCLUDE[msCoName](../../../includes/msconame-md.md)], ainsi que les solutions retenues par la Communauté, consultez la [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] page sur MSDN :<br /><br /> [Visitez la page Integration Services sur MSDN](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Pour recevoir une notification automatique de ces mises à jour, abonnez-vous aux flux RSS disponibles sur la page.  
+![Icône Integration Services (petite)](../../media/dts-16.gif "icône Integration Services (petite)")**rester jusqu'à la Date avec Integration Services** <br /> Pour les derniers téléchargements, articles, exemples et des vidéos à partir de [!INCLUDE[msCoName](../../../includes/msconame-md.md)], ainsi que les solutions sélectionnées à partir de la Communauté, visitez le [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] page sur MSDN :<br /><br /> [Visitez la page Integration Services sur MSDN](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Pour recevoir une notification automatique de ces mises à jour, abonnez-vous aux flux RSS disponibles sur la page.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Référencement d’autres assemblys dans les solutions de script](../referencing-other-assemblies-in-scripting-solutions.md)   

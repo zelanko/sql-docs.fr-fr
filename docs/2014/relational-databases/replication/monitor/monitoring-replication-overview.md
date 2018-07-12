@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - monitoring performance [SQL Server replication], Replication Monitor
 - Replication Monitor, about Replication Monitor
 ms.assetid: 81f596d2-27a5-489d-bf8d-0f4361decd02
 caps.latest.revision: 36
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 95827211835e7822544238a70fab4a36042f5602
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 07cff16dda549a320713fc6b06e6e5381412938d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36043579"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37181996"
 ---
 # <a name="monitoring-replication"></a>Surveillance de la réplication
   Le Moniteur de réplication[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] est un outil graphique vous permettant d'analyser la santé globale d'une topologie de réplication. Le Moniteur de réplication fournit des informations détaillées sur l'état et les performances des publications et abonnements, vous permettant de répondre aux questions les plus fréquentes :  

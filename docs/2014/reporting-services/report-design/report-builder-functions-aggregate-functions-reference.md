@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: db6542ee-02d0-4073-90e6-cba8f9510fbb
 caps.latest.revision: 8
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: de909a10f9a0a76b8cf9c505120fa75ca1ff0a07
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 35ddaed3e6735e11fe3fd0e3f39435516e8bb851
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36043546"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37177277"
 ---
 # <a name="aggregate-functions-reference-report-builder-and-ssrs"></a>Référence aux fonctions d'agrégation (Générateur de rapports et SSRS)
   Pour inclure des valeurs agrégées dans votre rapport, vous pouvez utiliser des fonctions d'agrégation intégrées dans des expressions. La fonction d'agrégation par défaut pour les champs de type numérique est SUM. Vous pouvez modifier l'expression et utiliser une fonction d'agrégation intégrée différente ou spécifier une étendue différente. L'étendue identifie le jeu de données à utiliser pour le calcul.  
@@ -63,7 +63,7 @@ ms.locfileid: "36043546"
 |[CountDistinct](report-builder-functions-countdistinct-function.md)|Retourne le nombre de toutes les valeurs non Null distinctes spécifiées par l'expression, évaluée dans le contexte de l'étendue donnée.|  
 |[Max](report-builder-functions-max-function.md)|Retourne la valeur maximale de toutes les valeurs numériques non Null spécifiées par l'expression, dans le contexte de l'étendue donnée. Vous pouvez utiliser cette fonction pour spécifier une valeur maximale d'axe de graphique afin de contrôler l'échelle.|  
 |[Min](report-builder-functions-min-function.md)|Retourne la valeur minimale de toutes les valeurs numériques non Null spécifiées par l'expression, dans le contexte de l'étendue donnée. Vous pouvez utiliser cette fonction pour spécifier une valeur minimale d'axe de graphique afin de contrôler l'échelle.|  
-|[Fonction StDev](report-builder-functions-stdev-function.md)|Retourne l'écart type de toutes les valeurs numériques non Null spécifiées par l'expression, évaluée dans l'étendue donnée.|  
+|[StDev](report-builder-functions-stdev-function.md)|Retourne l'écart type de toutes les valeurs numériques non Null spécifiées par l'expression, évaluée dans l'étendue donnée.|  
 |[StDevP](report-builder-functions-stdevp-function.md)|Retourne l'écart type de remplissage de toutes les valeurs numériques non Null spécifiées par l'expression, évaluée dans le contexte de l'étendue donnée.|  
 |[Sum](report-builder-functions-sum-function.md)|Retourne la somme de toutes les valeurs numériques non Null spécifiées par l'expression, évaluée dans l'étendue donnée.|  
 |[Union](report-builder-functions-union-function.md)|Retourne l'union de toutes les valeurs de données spatiales non Null du type `SqlGeometry` ou `SqlGeography` spécifiées par l'expression, évaluées dans l'étendue donnée.|  
@@ -141,8 +141,8 @@ ms.locfileid: "36043546"
 |**Fonction**|**Description**|  
 |------------------|---------------------|  
 |[Fonction Lookup](report-builder-functions-lookup-function.md)|Retourne une valeur à partir d'un dataset pour une expression spécifiée.|  
-|[Fonction LookupSet](report-builder-functions-lookupset-function.md)|Retourne un ensemble de valeurs à partir d'un dataset pour une expression spécifiée.|  
-|[Fonction multilookup](report-builder-functions-multilookup-function.md)|Retourne le jeu de valeurs de première correspondance pour un ensemble de noms à partir d'un dataset contenant des paires nom/valeur.|  
+|[LookupSet, fonction](report-builder-functions-lookupset-function.md)|Retourne un ensemble de valeurs à partir d'un dataset pour une expression spécifiée.|  
+|[Multilookup, fonction](report-builder-functions-multilookup-function.md)|Retourne le jeu de valeurs de première correspondance pour un ensemble de noms à partir d'un dataset contenant des paires nom/valeur.|  
   
 ##  <a name="RetrievingPostsortValues"></a> Récupération de valeurs dépendantes du tri  
  Les fonctions intégrées suivantes retournent la première valeur, la dernière valeur ou la valeur précédente dans une étendue donnée. Ces fonctions dépendent de l'ordre de tri des valeurs de données. Utilisez ces fonctions pour, par exemple, rechercher les première et dernière valeurs d'une page afin de créer un en-tête de page de type dictionnaire. Utilisez `Previous` pour comparer une valeur d’une ligne avec la valeur de la ligne précédente dans une étendue spécifique, par exemple, pour rechercher en pourcentage sur les valeurs de l’année dans une table.  
@@ -175,8 +175,8 @@ ms.locfileid: "36043546"
 |[Level](report-builder-functions-level-function.md)|Retourne le niveau de profondeur actuel d'une hiérarchie récursive.|  
   
 ## <a name="see-also"></a>Voir aussi  
- [Expression utilise des rapports de &#40;rapport Générateur et SSRS&#41;](expression-uses-in-reports-report-builder-and-ssrs.md)   
+ [Utilisation d’expressions dans les rapports &#40;Générateur de rapports et SSRS&#41;](expression-uses-in-reports-report-builder-and-ssrs.md)   
  [Exemples d’expressions &#40;Générateur de rapports et SSRS&#41;](expression-examples-report-builder-and-ssrs.md)   
- [Étendue des expressions pour les totaux, les agrégats et les Collections intégrées &#40;rapport Générateur et SSRS&#41;](expression-scope-for-totals-aggregates-and-built-in-collections.md)  
+ [Étendue des expressions pour les totaux, les agrégats et les Collections intégrées &#40;Générateur de rapports et SSRS&#41;](expression-scope-for-totals-aggregates-and-built-in-collections.md)  
   
   

@@ -1,12 +1,12 @@
 ---
-title: Mappage de Type de données dans les ensembles de lignes et les paramètres | Documents Microsoft
+title: Mappage de Type de données dans les ensembles de lignes et des paramètres | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: connectivity
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -25,18 +25,18 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: e42c0b3d235f87ee8f2374a9b0fe68d9740ece06
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
+ms.openlocfilehash: ea9322153c59e3d83e07504236df82b0aa7b3272
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35701510"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37413958"
 ---
 # <a name="data-type-mapping-in-rowsets-and-parameters"></a>Mappage de type de données dans les ensembles de lignes et les paramètres
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
-  Dans les ensembles de lignes et en tant que valeurs de paramètre, le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB fournisseur représente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] données à l’aide suivante OLE DB définie par les types de données, signalés dans les fonctions **IColumnsInfo::GetColumnInfo** et  **ICommandWithParameters::GetParameterInfo**.  
+  Dans les ensembles de lignes et en tant que valeurs de paramètre, le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Client fournisseur OLE DB natif représente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] données à l’aide suivante OLE DB définis les types de données, signalés dans les fonctions **IColumnsInfo::GetColumnInfo** et  **ICommandWithParameters::GetParameterInfo**.  
   
 |Type de données SQL Server|Type de données OLE DB|  
 |--------------------------|----------------------|  
@@ -70,22 +70,22 @@ ms.locfileid: "35701510"
 |**varchar**|DBTYPE_STR|  
 |**XML**|DBTYPE_XML|  
   
- Le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Client fournisseur OLE DB natif prend en charge les conversions de données demandées par le consommateur comme indiqué dans l’illustration.  
+ Le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Client fournisseur OLE DB natif prend en charge les conversions demandées par le consommateur de données comme indiqué dans l’illustration.  
   
- Le **sql_variant** objets peuvent contenir des données de n’importe quel [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de type de données à l’exception de text, ntext, image, varchar (max), nvarchar (max), varbinary (max), xml, timestamp et Microsoft .NET Framework common language runtime (CLR) types définis par l’utilisateur. sql_variant ne peut pas être le type de données de base sous-jacent d'une instance de données sql_variant. Par exemple, la colonne peut contenir **smallint** les valeurs de certaines lignes, **float** valeurs pour les autres lignes, et **char**/**nchar**valeurs dans le reste.  
+ Le **sql_variant** objets peuvent contenir des données de n’importe quel [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de type de données à l’exception de text, ntext, image, varchar (max), nvarchar (max), varbinary (max), xml, timestamp et Microsoft .NET Framework common language runtime (CLR) types définis par l’utilisateur. sql_variant ne peut pas être le type de données de base sous-jacent d'une instance de données sql_variant. Par exemple, la colonne peut contenir **smallint** valeurs pour certaines lignes, **float** valeurs pour d’autres lignes et **char**/**nchar**valeurs dans le reste.  
   
 > [!NOTE]  
->  Le **sql_variant** type de données est semblable au type de données Variant dans Microsoft Visual Basic® et à DBTYPE_VARIANT, DBTYPE_SQLVARIANT dans OLEDB.  
+>  Le **sql_variant** type de données est similaire au type de données Variant dans Microsoft Visual Basic® et à DBTYPE_VARIANT, DBTYPE_SQLVARIANT dans OLEDB.  
   
- Lorsque **sql_variant** données sont extraites en tant que DBTYPE_VARIANT, il est placé dans une structure VARIANT dans la mémoire tampon. Mais les sous-types dans la structure VARIANT peut ne pas correspondent aux sous-types définis dans le **sql_variant** type de données. Le **sql_variant** données doivent ensuite être extraites en tant que DBTYPE_SQLVARIANT, afin que tous les sous-types correspondent.  
+ Lorsque **sql_variant** les données sont extraites en tant que DBTYPE_VARIANT, elles sont placées dans une structure VARIANT dans la mémoire tampon. Mais les sous-types dans la structure VARIANT peut ne pas correspondent aux sous-types définis dans le **sql_variant** type de données. Le **sql_variant** données doivent ensuite être extraites en tant que DBTYPE_SQLVARIANT, afin que tous les sous-types correspondent.  
   
 ## <a name="dbtypesqlvariant-data-type"></a>Type de données DBTYPE_SQLVARIANT  
- Pour prendre en charge la **sql_variant** type de données, le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fournisseur de OLE DB Native Client expose un type de données spécifique au fournisseur appelé DBTYPE_SQLVARIANT. Lorsque **sql_variant** données sont extraites en tant que DBTYPE_SQLVARIANT, il est stocké dans une structure SSVARIANT spécifique au fournisseur. La structure SSVARIANT contient tous les sous-types qui correspondent aux sous-types de le **sql_variant** type de données.  
+ Pour prendre en charge la **sql_variant** type de données, le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fournisseur de OLE DB Native Client expose un type de données spécifique au fournisseur appelé DBTYPE_SQLVARIANT. Lorsque **sql_variant** les données sont extraites dans en tant que DBTYPE_SQLVARIANT, elles sont stockées dans une structure SSVARIANT spécifique au fournisseur. La structure SSVARIANT contient tous les sous-types qui correspondent aux sous-types de le **sql_variant** type de données.  
   
  La propriété de session SSPROP_ALLOWNATIVEVARIANT doit également avoir la valeur TRUE.  
   
 ## <a name="provider-specific-property-sspropallownativevariant"></a>Propriété SSPROP_ALLOWNATIVEVARIANT spécifique au fournisseur  
- Pour extraire des données, vous pouvez spécifier explicitement le type de données à retourner pour une colonne ou un paramètre. **IColumnsInfo** peut également être utilisé pour obtenir les informations de colonne et l’utiliser pour effectuer la liaison. Lorsque **IColumnsInfo** est utilisée pour obtenir des informations sur les colonnes à des fins de liaison, si la propriété a la valeur FALSE (valeur par défaut), de session SSPROP_ALLOWNATIVEVARIANT DBTYPE_VARIANT est retourné pour **sql_variant**colonnes. Si la propriété SSPROP_ALLOWNATIVEVARIANT a la valeur FALSE, DBTYPE_SQLVARIANT n'est pas pris en charge. Si la propriété SSPROP_ALLOWNATIVEVARIANT a la valeur TRUE, le type de colonne est retourné en tant que DBTYPE_SQLVARIANT, auquel cas la mémoire tampon contiendra la structure SSVARIANT. Dans une extraction **sql_variant** données en tant que DBTYPE_SQLVARIANT, la propriété de session SSPROP_ALLOWNATIVEVARIANT doit être définie sur TRUE.  
+ Pour extraire des données, vous pouvez spécifier explicitement le type de données à retourner pour une colonne ou un paramètre. **IColumnsInfo** peut également être utilisé pour obtenir les informations de colonne et l’utiliser pour effectuer la liaison. Lorsque **IColumnsInfo** est utilisé pour obtenir des informations sur les colonnes à des fins de liaison, si la propriété est FALSE (valeur par défaut), de session SSPROP_ALLOWNATIVEVARIANT DBTYPE_VARIANT est retourné pour **sql_variant**colonnes. Si la propriété SSPROP_ALLOWNATIVEVARIANT a la valeur FALSE, DBTYPE_SQLVARIANT n'est pas pris en charge. Si la propriété SSPROP_ALLOWNATIVEVARIANT a la valeur TRUE, le type de colonne est retourné en tant que DBTYPE_SQLVARIANT, auquel cas la mémoire tampon contiendra la structure SSVARIANT. Lors de l’extraction **sql_variant** données en tant que DBTYPE_SQLVARIANT, la propriété de session SSPROP_ALLOWNATIVEVARIANT doit être définie sur TRUE.  
   
  La propriété SSPROP_ALLOWNATIVEVARIANT est une propriété de session et fait partie du jeu de propriétés DBPROPSET_SQLSERVERSESSION spécifique au fournisseur.  
   

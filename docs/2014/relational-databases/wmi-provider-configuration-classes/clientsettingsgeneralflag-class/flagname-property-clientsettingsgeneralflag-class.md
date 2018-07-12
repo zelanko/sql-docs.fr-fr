@@ -1,5 +1,5 @@
 ---
-title: Propriété FlagName (classe ClientSettingsGeneralFlag) | Documents Microsoft
+title: FlagName, propriété (classe ClientSettingsGeneralFlag) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - FlagName property
 ms.assetid: 60c948cd-11c0-4ff7-a336-dd9ea7b2a3c6
 caps.latest.revision: 14
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 4ddcb31e2057ac5aa50625765c7ffd7f4a83018f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
+ms.openlocfilehash: 45051710d4ef7c1f0a182f83ff362448ebdca3f8
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36044480"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37170110"
 ---
 # <a name="flagname-property-clientsettingsgeneralflag-class"></a>Propriété FlagName (classe ClientSettingsGeneralFlag)
   Obtient le nom de l'indicateur.  

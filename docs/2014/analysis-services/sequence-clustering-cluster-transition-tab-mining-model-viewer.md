@@ -1,5 +1,5 @@
 ---
-title: Sequence Clustering onglet transition d’état de Cluster (visionneuse de modèle d’exploration de données) | Documents Microsoft
+title: Sequence Clustering onglet transition d’état de Cluster (visionneuse de modèle d’exploration de données) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dm.miningmodeleditor.sequenceclustering.transition.f1
 ms.assetid: 40aef457-d69f-4905-a2d3-924c37bd3d97
 caps.latest.revision: 23
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: d9895e00405c4ebe6bc684c3c2b3acc4e2704478
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 307f14f06354195147f32cbcf338d4b04e852b9c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36044293"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37156880"
 ---
 # <a name="sequence-clustering-cluster-transition-tab-mining-model-viewer"></a>Onglet Transition d'état du modèle Sequence Clustering (Visionneuse de modèle d'exploration de données)
   L’onglet **Transitions d’état** dans la **Visionneuse de l’algorithme MSC** (Microsoft Sequence Clustering) fournit une présentation détaillée des transitions entre des paires attribut-valeur, ou des états, dans le cluster sélectionné.  
@@ -31,7 +31,7 @@ ms.locfileid: "36044293"
  **Pour plus d’informations :** [Algorithme MSC (Microsoft Sequence Clustering)](data-mining/microsoft-sequence-clustering-algorithm.md), [Explorer un modèle à l’aide de la visionneuse de l’algorithme MSC (Microsoft Sequence Cluster)](data-mining/browse-a-model-using-the-microsoft-sequence-cluster-viewer.md)  
   
 ## <a name="options"></a>Options  
- **Actualiser le contenu de la visionneuse**  
+ **Actualiser le contenu de l’Observateur**  
  Recharge le modèle d'exploration de données dans la visionneuse.  
   
  **Modèle d'exploration de données**  

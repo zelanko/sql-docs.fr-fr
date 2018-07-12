@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.expressionbuilder.f1
 helpviewer_keywords:
@@ -17,13 +17,13 @@ ms.assetid: 4717ce33-bd4e-44bc-81e0-002de075b4d1
 caps.latest.revision: 17
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 9e42558c303f72a4834c37156a79bb1e3cfb1475
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: be402c290ef355f93147b7aa66d8055c054f52ce
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36044761"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37151130"
 ---
 # <a name="expression-builder"></a>Générateur d'expressions
   Utilisez la boîte de dialogue **Générateur d’expressions** pour créer et modifier l’expression d’une propriété ou écrire l’expression qui définit la valeur d’une variable à l’aide d’une interface graphique utilisateur qui affiche la liste des variables et fournit une référence intégrée aux fonctions, aux conversions de type et aux opérateurs que contient le langage d’expression [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .  
@@ -53,7 +53,7 @@ ms.locfileid: "36044761"
 ## <a name="see-also"></a>Voir aussi  
  [Page expressions](expressions-page.md)   
  [Éditeur d’expressions de la propriété](property-expressions-editor.md)   
- [Services d’intégration &#40;SSIS&#41; Variables](../integration-services-ssis-variables.md)   
+ [Integration Services &#40;SSIS&#41; Variables](../integration-services-ssis-variables.md)   
  [Variables système](../system-variables.md)  
   
   

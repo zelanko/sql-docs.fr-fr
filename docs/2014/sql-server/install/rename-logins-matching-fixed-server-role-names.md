@@ -1,5 +1,5 @@
 ---
-title: Renommer les connexions correspondant aux noms de rôle de serveur fixe | Documents Microsoft
+title: Renommer les connexions correspondant aux noms de rôle de serveur fixe | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - user-defined login names [SQL Server]
 - fixed server roles [SQL Server]
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - logins [SQL Server], names
 ms.assetid: 10a1d77c-3153-474f-a6a0-969556794467
 caps.latest.revision: 18
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 54223b28e681115df1b4ecf11f4fb96d13c68fd9
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 0064e08000454f485846b45fb0cc3d37c0afd031
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36044401"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37155610"
 ---
 # <a name="rename-logins-matching-fixed-server-role-names"></a>Renommer les accès correspondant aux noms de rôles serveur fixes
   Le Conseiller de mise à niveau a détecté un ou plusieurs noms de comptes de connexion définis par l'utilisateur correspondant aux noms des rôles serveur fixes. Les noms des rôles serveur fixes sont réservés. Renommez l'accès avant la mise à niveau.  

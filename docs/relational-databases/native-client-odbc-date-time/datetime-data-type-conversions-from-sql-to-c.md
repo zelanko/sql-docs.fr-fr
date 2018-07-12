@@ -1,12 +1,12 @@
 ---
-title: Conversions à partir de SQL à C | Documents Microsoft
+title: Conversions à partir de SQL en C | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: connectivity
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -17,14 +17,14 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: a97f77780d9c376a121373ea5890949eb48091c4
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
+ms.openlocfilehash: 0eb7cf6d146324ac5e472ea58fca5743683479e1
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35696830"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37425638"
 ---
-# <a name="datetime-data-type-conversions-from-sql-to-c"></a>DateTime, Conversions de types de données à partir de SQL à C
+# <a name="datetime-data-type-conversions-from-sql-to-c"></a>les Conversions du Type des données à partir de SQL vers C DateTime
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
@@ -70,9 +70,9 @@ ms.locfileid: "35696830"
 |21|Si la mémoire tampon est assez grande pour contenir un SQL_SS_TIMESTAMPOFFSET_STRUCT, la valeur est renvoyée en tant que SQL_SS_TIMESTAMPOFFSET_STRUCT. Sinon, un enregistrement de diagnostic est généré avec SQLSTATE 22003 et le message « Valeur numérique hors limites ».|  
 |22|La valeur est convertie au fuseau horaire du client avant que la date ne soit extraite. Cela procure une cohérence avec les autres conversions avec les types timestampoffset. Si une erreur se produit pendant cette conversion, un enregistrement de diagnostic est généré avec SQLSTATE 22008 et le message « Dépassement de la capacité du champ datetime ». En conséquence, la date peut différer de la valeur obtenue par simple troncation.|  
   
- Le tableau dans cette rubrique décrit les conversions entre le type retourné au client et le type dans la liaison. Pour les paramètres de sortie, si le type de serveur spécifié dans SQLBindParameter ne correspond pas au type réel sur le serveur, une conversion implicite sera effectuée par le serveur et le type retourné au client correspond au type spécifié par le biais SQLBindParameter. Cela peut provoquer des résultats de conversion inattendus lorsque les règles de conversion du serveur sont différentes de celles répertoriées dans le tableau précédent. Par exemple, lorsqu'une date par défaut doit être fournie, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilise 1900-1-1, plutôt que la date actuelle.  
+ Le tableau dans cette rubrique décrit les conversions entre le type retourné au client et le type dans la liaison. Pour les paramètres de sortie, si le type de serveur spécifié dans SQLBindParameter ne correspond pas au type réel sur le serveur, une conversion implicite se fera par le serveur et le type retourné au client correspond au type spécifié via SQLBindParameter. Cela peut provoquer des résultats de conversion inattendus lorsque les règles de conversion du serveur sont différentes de celles répertoriées dans le tableau précédent. Par exemple, lorsqu'une date par défaut doit être fournie, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilise 1900-1-1, plutôt que la date actuelle.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Date et heure améliorations &#40;ODBC&#41;](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md)  
+ [Améliorations date / heure &#40;ODBC&#41;](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md)  
   
   

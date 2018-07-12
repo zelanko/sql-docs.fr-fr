@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: e7b74cba-a0e5-4478-af12-3f81b9484e9e
 caps.latest.revision: 19
-author: douglaslM
+author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 4246a4ae586ad6fc526ef618e0a249706d0baa3d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 0ee2567823ff401df3d1b0b9c64af88d8d5435da
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36041842"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37240919"
 ---
 # <a name="step-3-adding-and-configuring-an-ole-db-connection-manager"></a>Étape 3 : ajout et configuration d'un gestionnaire de connexions OLE DB
   La tâche qui suit l'ajout du Gestionnaire de connexions de fichiers plats pour la connexion à la source de données, consiste à ajouter un Gestionnaire de connexions OLE DB pour la connexion à la destination. Un Gestionnaire de connexions OLE DB permet à un package d’extraire ou de charger des données dans une source de données compatible OLE DB. Au moyen du Gestionnaire de connexions OLE DB, vous pouvez spécifier le serveur, la méthode d'authentification et la base de données par défaut pour la connexion.  
@@ -51,7 +51,7 @@ ms.locfileid: "36041842"
 10. Cliquez sur **OK**.  
   
 ## <a name="next-task-in-lesson"></a>Tâche suivante de la leçon  
- [Étape 4 : Ajout d’une tâche de flux de données au Package](lesson-1-4-adding-a-data-flow-task-to-the-package.md)  
+ [Étape 4 : Ajout d’une tâche de flux de données au package](lesson-1-4-adding-a-data-flow-task-to-the-package.md)  
   
 ## <a name="see-also"></a>Voir aussi  
  [Gestionnaire de connexions OLE DB](connection-manager/ole-db-connection-manager.md)  

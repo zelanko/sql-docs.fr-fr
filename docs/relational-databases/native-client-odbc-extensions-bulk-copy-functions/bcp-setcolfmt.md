@@ -1,12 +1,12 @@
 ---
-title: bcp_setcolfmt | Documents Microsoft
+title: bcp_setcolfmt | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: connectivity
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
@@ -22,12 +22,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 69183e2c4b9343a822727dd2f56baf978a4d7de1
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
+ms.openlocfilehash: 9104a5926d43c4a9d49600066c21bfe693fc94a7
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35701480"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37411228"
 ---
 # <a name="bcpsetcolfmt"></a>bcp_setcolfmt
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -63,7 +63,7 @@ RETCODE bcp_setcolfmt (
   
 |Propriété|Valeur|Description|  
 |--------------|-----------|-----------------|  
-|BCP_FMT_TYPE|BYTE|Type de données de la colonne dans le fichier utilisateur. Si le type de données est différent de celui de la colonne correspondante dans la table de base de données, la copie en bloc convertit, si possible, les données.<br /><br /> Le paramètre BCP_FMT_TYPE est énuméré par les jetons de type de données SQL Server dans sqlncli.h, et non par les énumérateurs de type de données C ODBC. Par exemple, vous pouvez spécifier une chaîne de caractères (type de données ODBC SQL_C_CHAR) à l'aide du type SQLCHARACTER propre à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].<br /><br /> Pour spécifier la représentation des données par défaut pour le type de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], attribuez la valeur 0 à ce paramètre.<br /><br /> Pour une copie en bloc SQL Server dans un fichier, lorsque BCP_FMT_TYPE est SQLDECIMAL ou SQLNUMERIC, si la colonne source n’est pas **décimal** ou **numérique**, la précision par défaut et l’échelle sont utilisés. Sinon, si la colonne source est **décimal** ou **numérique**, la précision et l’échelle de la colonne source sont utilisées.|  
+|BCP_FMT_TYPE|BYTE|Type de données de la colonne dans le fichier utilisateur. Si le type de données est différent de celui de la colonne correspondante dans la table de base de données, la copie en bloc convertit, si possible, les données.<br /><br /> Le paramètre BCP_FMT_TYPE est énuméré par les jetons de type de données SQL Server dans sqlncli.h, et non par les énumérateurs de type de données C ODBC. Par exemple, vous pouvez spécifier une chaîne de caractères (type de données ODBC SQL_C_CHAR) à l'aide du type SQLCHARACTER propre à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].<br /><br /> Pour spécifier la représentation des données par défaut pour le type de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], attribuez la valeur 0 à ce paramètre.<br /><br /> Pour une copie en bloc en dehors de SQL Server dans un fichier, lorsque BCP_FMT_TYPE est SQLDECIMAL ou SQLNUMERIC, si la colonne source n’est pas **décimal** ou **numérique**, la précision par défaut et l’échelle sont utilisés. Sinon, si la colonne source est **décimal** ou **numérique**, la précision et la mise à l’échelle de la colonne source sont utilisées.|  
 |BCP_FMT_INDICATOR_LEN|INT|Longueur, en octets, de l'indicateur (préfixe).<br /><br /> Longueur, en octets, d'un indicateur de longueur/null au sein des données de la colonne. Les valeurs de longueur d'indicateur valides sont 0 (quand aucun indicateur n'est utilisé), 1, 2, 4 ou 8.<br /><br /> Pour spécifier l'utilisation d'un indicateur de copie en bloc par défaut, définissez ce paramètre sur SQL_VARLEN_DATA.<br /><br /> Les indicateurs apparaissent directement en mémoire avant les autres données et, dans le fichier de données, juste avant les données auxquelles ils s'appliquent.<br /><br /> Si plusieurs méthodes de spécification de la longueur de colonne d'un fichier de données sont utilisées (par exemple, un indicateur et une longueur de colonne maximale, ou un indicateur et une séquence de terminaison), la copie en bloc choisit celle qui implique la quantité de données à copier la moins élevée.<br /><br /> Les fichiers de données générés par la copie en bloc lorsqu'aucune intervention de l'utilisateur n'ajuste le format des données contiennent des indicateurs si la longueur des données de la colonne est variable ou si la colonne peut accepter la valeur NULL.|  
 |BCP_FMT_DATA_LEN|DBINT|Longueur, en octets, des données (longueur de colonne).<br /><br /> Longueur maximale, en octets, des données de cette colonne dans le fichier utilisateur, hormis la longueur d'un indicateur de longueur ou d'un terminateur.<br /><br /> La définition de BCP_FMT_DATA_LEN sur SQL_NULL_DATA indique que toutes les valeurs de la colonne du fichier de données ont ou doivent avoir la valeur NULL.<br /><br /> La définition de BCP_FMT_DATA_LEN sur SQL_VARLEN_DATA indique que le système doit déterminer la longueur des données dans chaque colonne. Pour certaines colonnes, cela peut signifier qu'un indicateur de longueur/null est généré pour précéder les données dans une copie à partir de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou que l'indicateur est attendu dans les données copiées vers [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].<br /><br /> Pour les types de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] character et binary, BCP_FMT_DATA_LEN peut avoir comme valeur SQL_VARLEN_DATA, SQL_NULL_DATA, 0 ou une valeur positive quelconque. Si BCP_FMT_DATA_LEN a la valeur SQL_VARLEN_DATA, le système utilise l'indicateur de longueur (si disponible) ou une séquence de terminaison afin de déterminer la longueur des données. Si un indicateur de longueur et une séquence de terminaison sont fournis, la copie en bloc utilise celui qui implique le volume de données à copier le plus faible. Si BCP_FMT_DATA_LEN a la valeur SQL_VARLEN_DATA, si le type de données est un type [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] character ou binary et si aucun indicateur de longueur ou séquence de terminaison n'est spécifié, le système retourne un message d'erreur.<br /><br /> Si BCP_FMT_DATA_LEN affiche une valeur égale à 0 ou une valeur positive, le système utilise BCP_FMT_DATA_LEN comme longueur de données maximale. Toutefois, si un indicateur de longueur ou une séquence de terminaison est fourni en plus d'une valeur BCP_FMT_DATA_LEN positive, le système détermine la longueur de données en utilisant la méthode qui implique le moins de données à copier.<br /><br /> La valeur BCP_FMT_DATA_LEN représente le nombre d'octets de données. Si des données de caractères sont représentées par des caractères Unicode larges, une valeur de paramètre BCP_FMT_DATA_LEN positive représente le nombre de caractères multiplié par la taille, en octets, de chacun des caractères.|  
 |BCP_FMT_TERMINATOR|LPCBYTE|Pointeur vers la séquence de terminaison (ANSI ou Unicode, selon les besoins) à utiliser pour cette colonne. Ce paramètre est utile surtout pour les types de données de caractères puisque tous les autres types sont de longueur fixe ou, dans le cas des données binaires, nécessitent un indicateur de longueur pour enregistrer avec précision le nombre d'octets présents.<br /><br /> Pour éviter de terminer des données extraites ou pour indiquer que les données dans un fichier utilisateur ne sont pas terminées, attribuez la valeur NULL à ce paramètre.<br /><br /> Si plusieurs méthodes sont employées pour définir la longueur des colonnes du fichier utilisateur (par exemple, un terminateur et un indicateur de longueur, ou un terminateur et une longueur de colonne maximale), la copie en bloc choisit celle qui implique le volume de données à copier le moins élevé.<br /><br /> L'interface de programmation d'applications (API) de la copie en bloc procède à la conversion des caractères Unicode vers MBCS en fonction des besoins. Prenez soin de définir comme il se doit la chaîne d'octets de terminaison et la longueur de cette même chaîne.|  
@@ -113,9 +113,9 @@ RETCODE bcp_setcolfmt (
  Le [bcp_writefmt](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-writefmt.md) fonction peut être utilisée pour conserver la spécification de format.  
   
 ## <a name="bcpsetcolfmt-support-for-enhanced-date-and-time-features"></a>Prise en charge de la fonction bcp_setcolfmt pour les fonctionnalités de date et heure améliorées  
- Les types utilisés avec la propriété BCP_FMT_TYPE pour les types date/heure sont comme spécifié dans [modifications de copie en bloc pour les Types améliorées de Date et heure &#40;OLE DB et ODBC&#41;](../../relational-databases/native-client-odbc-date-time/bulk-copy-changes-for-enhanced-date-and-time-types-ole-db-and-odbc.md).  
+ Les types utilisés avec la propriété BCP_FMT_TYPE pour les types date/heure sont comme spécifié dans [modifications de copie en bloc pour les Types améliorées de Date / heure &#40;OLE DB et ODBC&#41;](../../relational-databases/native-client-odbc-date-time/bulk-copy-changes-for-enhanced-date-and-time-types-ole-db-and-odbc.md).  
   
- Pour plus d’informations, consultez [Date et heure améliorations &#40;ODBC&#41;](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md).  
+ Pour plus d’informations, consultez [améliorations Date / heure &#40;ODBC&#41;](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md).  
   
 ## <a name="see-also"></a>Voir aussi  
  [Fonctions de copie en bloc](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/sql-server-driver-extensions-bulk-copy-functions.md)  

@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - deploying [Reporting Services], reports in SharePoint integrated mode
 - SharePoint integration [Reporting Services], publishing to a library
@@ -17,13 +17,13 @@ ms.assetid: 3f6dfc28-50d8-4231-bd25-871b5f77cce6
 caps.latest.revision: 14
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: d19618eaa7997444e661ca9213a72f75bf1b3910
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: bb7689da40d81d716b9564c11f230f22ea4638bf
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36044896"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37150010"
 ---
 # <a name="publish-a-report-to-a-sharepoint-library"></a>publier un rapport dans une bibliothèque SharePoint
   Pour publier un rapport sur un site SharePoint configuré pour l'intégration SharePoint, vous devez définir les propriétés du projet dans le Concepteur de rapports. Dans les propriétés du projet, toutes les références aux serveurs, aux rapports et aux sources de données partagées doivent être des URL complètes. Dans la définition de rapport, toutes les références aux sous-rapports, aux rapports d'extraction et aux ressources, telles que des images Web, doivent être des URL complètes.  

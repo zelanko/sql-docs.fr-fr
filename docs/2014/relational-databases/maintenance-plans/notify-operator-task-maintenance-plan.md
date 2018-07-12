@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.maint.notifyoperator.f1
 helpviewer_keywords:
 - Notify Operator Task dialog box
 ms.assetid: 39c0797c-ad2b-4591-85c9-a23a7f902895
 caps.latest.revision: 32
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 137f2126f042f2cbcd075aa0b6260cabfe7ef9e2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 323a22356efbdc63ea92e001f201e1553e82c93a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36042677"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37211159"
 ---
 # <a name="notify-operator-task-maintenance-plan"></a>Tâche Notifier l'opérateur (Plan de maintenance)
   Utilisez la boîte de dialogue **Tâche Notifier l’opérateur** pour ajouter une notification automatique à ce plan de maintenance. Pour utiliser cette tâche, la messagerie de base de données doit être activée et correctement configurée avec MSDB en tant que base de données hôte de messagerie, et vous devez disposer d’un opérateur [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent avec une adresse de messagerie valide.  

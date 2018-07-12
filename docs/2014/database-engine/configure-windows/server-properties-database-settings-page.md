@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.serverproperties.databasesettings.f1
 ms.assetid: 1cebdbd3-cbfd-4a02-bba6-a5addf4e3ada
 caps.latest.revision: 31
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 9d44381ef0af703efb104a38f5eeebf99fc21ff7
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 8f0e8806408c7a8b07512733acba74040e697222
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36042557"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37277625"
 ---
 # <a name="server-properties-database-settings-page"></a>Propriétés du serveur (page Paramètres de base de données)
   Utilisez cette page pour consulter ou modifier vos paramètres de base de données.  

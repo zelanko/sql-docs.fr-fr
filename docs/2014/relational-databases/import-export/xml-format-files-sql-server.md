@@ -5,25 +5,24 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-bulk-import-export
+ms.technology: data-movement
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - format files [SQL Server], XML format files
 - bulk importing [SQL Server], format files
 - XML format files [SQL Server]
 ms.assetid: 69024aad-eeea-4187-8fea-b49bc2359849
 caps.latest.revision: 44
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 0e0607febc04aec78a7310bd069b3af4c19cc8ae
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 06ba4a93e79d9b2a602101b25944d251ea9c5b54
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36043155"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37203549"
 ---
 # <a name="xml-format-files-sql-server"></a>Fichiers de format XML (SQL Server)
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] fournit un schéma XML qui définit la syntaxe des *fichiers de format XML* à utiliser pour l'importation en bloc de données dans une table [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Les fichiers de format XML doivent respecter ce schéma, qui est défini en langage XSDL (XML Schema Definition Language). Les fichiers de format XML ne sont pris en charge que si les outils [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sont installés conjointement avec [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client.  
@@ -177,13 +176,13 @@ ms.locfileid: "36043155"
   
 |Attribut FIELD|Description|Facultatif /<br /><br /> Requis|  
 |---------------------|-----------------|------------------------------|  
-|ID **= «*`fieldID`*»**|Spécifie le nom logique du champ dans le fichier de données. L'ID d'un champ est la clé utilisée pour y faire référence.<br /><br /> < ID de champ **= «*`fieldID`*»**/ > est mappé à < COLUMN SOURCE **= «*`fieldID`*»**/>|Requis|  
+|ID **= «*`fieldID`*»**|Spécifie le nom logique du champ dans le fichier de données. L'ID d'un champ est la clé utilisée pour y faire référence.<br /><br /> < FIELD ID **= «*`fieldID`*»**/ > est mappé à < COLUMN SOURCE **= «*`fieldID`*»**/>|Requis|  
 |xsi : type **= «*`fieldType`*»**|Il s'agit d'une construction XML (utilisée comme un attribut) qui identifie le type de l'instance de l'élément. La valeur de *fieldType* détermine de quels attributs facultatifs (ci-dessous) vous avez besoin dans une instance donnée.|Obligatoire (selon le type de données)|  
 |LENGTH **="*`n`*"**|Cet attribut définit la longueur pour une instance d'un type de données à longueur fixe.<br /><br /> Cette valeur de *n* doit être un entier positif.|Facultatif sauf s'il est requis par la valeur xsi:type|  
 |PREFIX_LENGTH **= «*`p`*»**|Cet attribut définit la longueur de préfixe pour une représentation de données binaires. La valeur PREFIX_LENGTH, *p*, doit correspondre à l’une des valeurs suivantes : 1, 2, 4 ou 8.|Facultatif sauf s'il est requis par la valeur xsi:type|  
 |MAX_LENGTH **= «*`m`*»**|Cet attribut est le nombre maximal d'octets pouvant être stockés dans un champ donné. Sans table cible, la longueur maximale de la colonne est inconnue. L'attribut MAX_LENGTH limite la longueur maximale d'une colonne de caractères en sortie, limitant ainsi le stockage alloué pour la valeur de la colonne. Ceci est particulièrement pratique lors de l'utilisation de l'option BULK de la fonction OPENROWSET dans une clause SELECT FROM.<br /><br /> Cette valeur de *m* doit être un entier positif. Par défaut, la longueur maximale est de 8 000 caractères pour une colonne **char** et de 4 000 caractères pour une colonne **nchar** .|Ce paramètre est facultatif|  
 |CLASSEMENT **= «*`collationName`*»**|COLLATION est uniquement autorisé pour les champs caractères. Pour obtenir la liste des noms du classement SQL, consultez [Nom du classement SQL Server &#40;Transact-SQL&#41;](/sql/t-sql/statements/sql-server-collation-name-transact-sql).|Ce paramètre est facultatif|  
-|MARQUE DE FIN DE **= «*`terminator`*»**|Cet attribut spécifie la marque de fin d'un champ de données. La marque de fin peut être n'importe quel caractère. La marque de fin doit être un caractère unique ne faisant pas partie des données.<br /><br /> Par défaut, la marque de fin de champ est le caractère tabulation (représenté par \t). Pour représenter une marque de paragraphe, utilisez \r\n.|Utilisé uniquement avec un xsi:type de données caractères, qui nécessite cet attribut|  
+|MARQUE DE FIN **= «*`terminator`*»**|Cet attribut spécifie la marque de fin d'un champ de données. La marque de fin peut être n'importe quel caractère. La marque de fin doit être un caractère unique ne faisant pas partie des données.<br /><br /> Par défaut, la marque de fin de champ est le caractère tabulation (représenté par \t). Pour représenter une marque de paragraphe, utilisez \r\n.|Utilisé uniquement avec un xsi:type de données caractères, qui nécessite cet attribut|  
   
 #####  <a name="XsiTypeValuesOfFIELD"></a> Valeurs Xsi:type de l’élément \<FIELD>  
  La valeur xsi:type est une construction XML (utilisée comme un attribut) qui identifie le type de données d'une instance d'un élément. Pour plus d'informations sur l'utilisation de cette valeur, consultez « Placement de la valeur xsi:type dans un ensemble de données », plus loin dans cette section.  
@@ -230,7 +229,7 @@ ms.locfileid: "36043155"
   
 |Attribut COLUMN|Description|Facultatif /<br /><br /> Requis|  
 |----------------------|-----------------|------------------------------|  
-|SOURCE **= «*`fieldID`*»**|Spécifie l'ID du champ mappé à la colonne.<br /><br /> < COLUMN SOURCE **= «*`fieldID`*»**/ > est mappé à < ID de champ **= «*`fieldID`*»**/>|Requis|  
+|SOURCE **= «*`fieldID`*»**|Spécifie l'ID du champ mappé à la colonne.<br /><br /> < COLUMN SOURCE **= «*`fieldID`*»**/ > est mappé à < FIELD ID **= «*`fieldID`*»**/>|Requis|  
 |NAME = "*columnName*"|Spécifie le nom de la colonne dans l'ensemble de lignes représenté par le fichier de format. Ce nom de colonne est utilisé pour identifier la colonne dans le jeu de résultats, et il ne doit pas nécessairement correspondre au nom de colonne utilisé dans la table cible.|Requis|  
 |xsi **:** type **= «*`ColumnType`*»**|Il s'agit d'une construction XML (utilisée comme un attribut) qui identifie le type de données de l'instance de l'élément. La valeur de *ColumnType* détermine de quels attributs facultatifs (ci-dessous) vous avez besoin dans une instance donnée.<br /><br /> Remarque : Les valeurs possibles de *ColumnType* et leurs attributs associés sont répertoriés dans le tableau suivant.|Ce paramètre est facultatif|  
 |LENGTH **="*`n`*"**|Définit la longueur d'une instance d'un type de données à longueur fixe. LENGTH est utilisé uniquement lorsque xsi:type est un type de données string.<br /><br /> Cette valeur de *n* doit être un entier positif.|Facultatif (disponible uniquement si xsi:type est un type de données string)|  

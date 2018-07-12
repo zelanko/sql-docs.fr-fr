@@ -1,5 +1,5 @@
 ---
-title: Développeur&#39;s Guide (Analysis Services) | Documents Microsoft
+title: Développeur&#39;s Guide (Analysis Services) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -15,15 +15,15 @@ helpviewer_keywords:
 - developer's guide [Analysis Services - multidimensional data]
 ms.assetid: 0a6eda76-1c5e-487e-9c8b-1feb09f1a34c
 caps.latest.revision: 12
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: f18e3283284688a89772f7b305fecf84ce824e27
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: 9fcba17c91cca47b6d73baab9d5e508a6a0f5c63
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36043256"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37180866"
 ---
 # <a name="developer39s-guide-analysis-services"></a>Développeur&#39;s Guide (Analysis Services)
     
@@ -31,7 +31,7 @@ ms.locfileid: "36043256"
  [Programmation de modèle tabulaire](tabular-model-programming-compatibility-levels-1050-1103/tabular-model-programming-for-compatibility-levels-1050-through-1103.md)  
  Décrit les extensions CSDL qui définissent un modèle tabulaire dans la syntaxe XML. Elle contient également des informations sur le modèle d'objet tabulaire.  
   
- [Programmation d’exploration de données](dev-guide/data-mining-programming.md)  
+ [Programmation de l’exploration de données](dev-guide/data-mining-programming.md)  
  Décrit les approches de création de solutions qui incluent des objets d'exploration de données.  
   
  [Programmation de modèle multidimensionnel](multidimensional-models/multidimensional-model-programming.md)  

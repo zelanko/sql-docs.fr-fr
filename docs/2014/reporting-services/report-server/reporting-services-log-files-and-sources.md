@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - troubleshooting [Reporting Services], log files
 - logs [Reporting Services]
@@ -20,13 +20,13 @@ ms.assetid: 80ef0acc-cbef-49d0-87e7-844e3ce19604
 caps.latest.revision: 48
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: da8c4e45c0472844b5351ad6ad02e39bba1d5e50
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 077b79d820a30902b2c705a1e2ec55bda31c8d6f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36042164"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37210719"
 ---
 # <a name="reporting-services-log-files-and-sources"></a>Fichiers journaux et sources de Reporting Services
   Un serveur de rapports [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] et son environnement prennent en charge un grand nombre de destinations de journaux pour consigner des informations sur les opérations et l'état du serveur. Il existe deux catégories de journalisation de base, la journalisation d'exécution et la journalisation de suivi. La journalisation d'exécution contient des informations sur les statistiques d'exécution des rapports, les audits, les diagnostics de performances et l'optimisation. La journalisation de suivi consigne les informations sur les messages d'erreur et les diagnostics généraux.  
@@ -37,7 +37,7 @@ ms.locfileid: "36042164"
   
 |Log|Description|  
 |---------|-----------------|  
-|[Journal de l’exécution du serveur de rapports et vue ExecutionLog3](report-server-executionlog-and-the-executionlog3-view.md)|Le journal d'exécution est un affichage SQL Server enregistré dans la base de données du serveur de rapports.<br /><br /> Le journal d'exécution du serveur de rapports contient des données sur des rapports spécifiques, notamment la date d'exécution du rapport, l'utilisateur qui a procédé à l'exécution, l'endroit où il a été livré et le format de rendu utilisé.|  
+|[Journal des exécutions du serveur de rapports et vue ExecutionLog3](report-server-executionlog-and-the-executionlog3-view.md)|Le journal d'exécution est un affichage SQL Server enregistré dans la base de données du serveur de rapports.<br /><br /> Le journal d'exécution du serveur de rapports contient des données sur des rapports spécifiques, notamment la date d'exécution du rapport, l'utilisateur qui a procédé à l'exécution, l'endroit où il a été livré et le format de rendu utilisé.|  
 |Journal des traces SharePoint|Pour les serveurs de rapports qui s'exécutent dans SharePoint, les journaux de suivi SharePoint contiennent les informations [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]. Vous pouvez également configurer [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] des informations spécifiques pour le service de journalisation unifiée SharePoint. Pour plus d’informations, consultez [Activer des événements Reporting Services pour le journal des traces SharePoint &#40;ULS&#41;](turn-on-reporting-services-events-for-the-sharepoint-trace-log-uls.md).|  
 |[Journal de suivi de service du serveur de rapports](report-server-service-trace-log.md)|Le journal des traces du service contient des informations très détaillées qui sont utiles si vous déboguez une application ou essayez de déterminer l'origine d'un problème ou d'un événement.<br /><br /> `C:\Program Files\Microsoft SQL Server\MSRS12.MSSQLSERVER\Reporting Services\LogFiles`|  
 |[Journal HTTP du serveur de rapports](report-server-http-log.md)|Le fichier journal HTTP contient un enregistrement de toutes les requêtes et réponses HTTP gérées par le service Web Report Server et le Gestionnaire de rapports.|  

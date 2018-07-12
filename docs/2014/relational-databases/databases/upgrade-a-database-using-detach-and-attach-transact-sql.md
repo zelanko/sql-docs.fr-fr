@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - database attaching [SQL Server]
 - upgrading databases
@@ -18,15 +18,15 @@ helpviewer_keywords:
 - attaching databases [SQL Server]
 ms.assetid: 99f66ed9-3a75-4e38-ad7d-6c27cc3529a9
 caps.latest.revision: 72
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: e301c4d01e99af7f40f3e065efde379f86de57c9
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 7f6a20ba4ff6eb3068a04fd593e9e0cf437237c4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36044242"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37190509"
 ---
 # <a name="upgrade-a-database-using-detach-and-attach-transact-sql"></a>Mettre à niveau une base de données avec Detach et Attach (Transact-SQL)
   Cette rubrique explique comment utiliser les opérations d'attachement et de détachement pour mettre à niveau une base de données dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Une fois attachée à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], la base de données est immédiatement disponible et est automatiquement mise à niveau.  
@@ -118,6 +118,6 @@ ms.locfileid: "36044242"
  Lorsque vous attachez une base de données à une autre instance de serveur et si vous souhaitez offrir une expérience cohérente aux utilisateurs et aux applications, il est possible que vous deviez recréer une partie ou l'ensemble des métadonnées de la base de données, telles que les connexions, les travaux, et les autorisations sur cette autre instance de serveur. Pour plus d’informations, consultez [Gérer les métadonnées durant la mise à disposition d’une base de données sur une autre instance de serveur &#40;SQL Server&#41;](manage-metadata-when-making-a-database-available-on-another-server.md).  
   
 ### <a name="service-master-key-and-database-master-key-encryption-changes-from-3des-to-aes"></a>Modifications du chiffrement de la clé principale du service et de la clé principale de la base de données de 3DES à AES  
- [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] et versions ultérieures utilise l’algorithme de chiffrement AES pour protéger la clé principale du service (SMK) et la clé principale de base de données (DMK). AES est un algorithme de chiffrement plus récent que 3DES, qui était utilisé dans les versions antérieures. Lorsqu'une base de données est attachée ou restaurée pour la première fois à une nouvelle instance de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], une copie de la clé principale de la base de données (chiffrée par la clé principale du service) n'est pas encore stockée sur le serveur. Vous devez utiliser le `OPEN MASTER KEY` instruction pour déchiffrer la clé principale de base de données (DMK). Une fois que la clé a été déchiffrée, vous avez la possibilité d’activer le déchiffrement automatique dans le futur à l’aide de la `ALTER MASTER KEY REGENERATE` instruction pour configurer le serveur avec une copie de la clé chiffrée avec la clé principale du service (SMK). Lorsqu'une base de données a été mise à niveau à partir d'une version antérieure, la clé DMK doit être régénérée de façon à utiliser le nouvel algorithme AES. Pour plus d’informations sur la régénération de la clé DMK, consultez [ALTER MASTER KEY &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-master-key-transact-sql). La durée nécessaire pour régénérer la clé DMK à mettre à niveau vers AES dépend du nombre d'objets protégés par la clé DMK. La régénération de la clé DMK à mettre à niveau vers AES est nécessaire une seule fois et n'a aucune incidence sur les régénérations ultérieures effectuées dans le cadre d'une stratégie de rotation de clés.  
+ [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] et versions ultérieures utilise l’algorithme de chiffrement AES pour protéger la clé principale du service (SMK) et la clé principale de base de données (DMK). AES est un algorithme de chiffrement plus récent que 3DES, qui était utilisé dans les versions antérieures. Lorsqu'une base de données est attachée ou restaurée pour la première fois à une nouvelle instance de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], une copie de la clé principale de la base de données (chiffrée par la clé principale du service) n'est pas encore stockée sur le serveur. Vous devez utiliser le `OPEN MASTER KEY` instruction pour déchiffrer la clé principale de base de données (DMK). Une fois la clé DMK déchiffrée, vous avez la possibilité d’activer le déchiffrement automatique dans le futur en utilisant la `ALTER MASTER KEY REGENERATE` instruction pour approvisionner le serveur avec une copie de la clé DMK chiffrée avec la clé principale du service (SMK). Lorsqu'une base de données a été mise à niveau à partir d'une version antérieure, la clé DMK doit être régénérée de façon à utiliser le nouvel algorithme AES. Pour plus d’informations sur la régénération de la clé DMK, consultez [ALTER MASTER KEY &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-master-key-transact-sql). La durée nécessaire pour régénérer la clé DMK à mettre à niveau vers AES dépend du nombre d'objets protégés par la clé DMK. La régénération de la clé DMK à mettre à niveau vers AES est nécessaire une seule fois et n'a aucune incidence sur les régénérations ultérieures effectuées dans le cadre d'une stratégie de rotation de clés.  
   
   

@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.maint.maintplanproperties.general.f1
 - sql12.swb.maint.subplanproperties.f1
 ms.assetid: 8bdd84ef-fd15-4162-93af-dc945ff2dbcc
 caps.latest.revision: 6
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 2d857f09260c40c79f9a9528575cf9cdee54db6f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 522562dcbac9f8171b0a0a5ec18c9e6360e1f8a2
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36042015"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37170390"
 ---
 # <a name="maintenance-plan-subplan-properties"></a>Plan de maintenance (Propriétés du sous-plan)
   Utilisez la boîte de dialogue **Plan de maintenance (Propriétés du sous-plan)** pour spécifier un nom, une description et une planification de sous-plan de maintenance de plan. Cliquez sur **Propriétés du sous-plan** sous l’onglet **Conception** du plan de maintenance ou double-cliquez sur un sous-plan dans la grille du concepteur pour afficher cette boîte de dialogue.  

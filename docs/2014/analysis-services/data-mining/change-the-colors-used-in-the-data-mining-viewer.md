@@ -1,5 +1,5 @@
 ---
-title: Modifier les couleurs utilisées dans la visionneuse d’exploration de données | Documents Microsoft
+title: Modifier les couleurs utilisées dans la visionneuse d’exploration de données | Microsoft Docs
 ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - VS.TOOLSOPTIONSPAGES.BUSINESS_INTELLIGENCE_DESIGNERS.ANALYSIS_SERVICES_DESIGNERS.DATA_MINING_VIEWERS
 ms.assetid: 9de2fc2a-fca5-456b-b2bd-13586e7951e6
 caps.latest.revision: 11
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 4909ee57e27caeda0835f366337695300c163ad5
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 000f5b89eb918654f740e2c34eb60be484d3073c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36043489"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37194429"
 ---
 # <a name="change-the-colors-used-in-the-data-mining-viewer"></a>Modifier les couleurs utilisées dans la visionneuse d'exploration de données
   Vous pouvez modifier les couleurs utilisées dans les visionneuses d'explorations de données pour afficher des séries de données, des nœuds ou des clusters. Pour ce faire, définissez des options dans [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] ou [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Après avoir modifié les paramètres, les sélections de couleur s'appliquent à tous les modèles que vous affichez à l'aide de [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]; toutefois, vous devez fermer [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] et rouvrir le modèle dans la visionneuse pour voir les nouvelles couleurs.  

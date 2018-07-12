@@ -1,5 +1,5 @@
 ---
-title: Éditeur de Destination ODBC (Page Gestionnaire de connexions) | Documents Microsoft
+title: Éditeur de Destination ODBC (Page Gestionnaire de connexions) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.ssis.designer.odbcdest.connection.f1
 ms.assetid: f6d9c6c2-e4c4-468b-9e0d-af7b9609614d
 caps.latest.revision: 7
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: ce1766615afb37976cc92c66c99de173ed3e9364
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 5994e35479f73fb4bee3c062eb76858778a72d6d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36044986"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37158980"
 ---
 # <a name="odbc-destination-editor-connection-manager-page"></a>Éditeur de destination ODBC (page Gestionnaire de connexions)
   Utilisez la page **Gestionnaire de connexions** de la boîte de dialogue **Éditeur de destination ODBC** pour sélectionner le gestionnaire de connexions ODBC de la destination. Cette page vous permet également de sélectionner une table ou une vue à partir de la base de données.  

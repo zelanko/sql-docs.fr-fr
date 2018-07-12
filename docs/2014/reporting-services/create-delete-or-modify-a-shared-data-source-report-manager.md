@@ -1,5 +1,5 @@
 ---
-title: Créer, supprimer ou modifier une Source de données partagée (Gestionnaire de rapports) | Documents Microsoft
+title: Créer, supprimer ou modifier une Source de données partagée (Gestionnaire de rapports) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - shared data sources [Reporting Services]
 - removing shared data sources
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - modifying shared data sources
 ms.assetid: cd7bace3-f8ec-4ee3-8a9f-2f217cdca9f2
 caps.latest.revision: 47
-author: douglaslM
+author: maggiesmsft
 ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 0f5f9b5397d1f50e460f4f8f483daa7a9b3ef23f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: e48edf78d8b0a73c01871b47ac24fa1f0bf8babb
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36043305"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37202689"
 ---
 # <a name="create-delete-or-modify-a-shared-data-source-report-manager"></a>Créer, supprimer ou modifier une source de données partagée (Gestionnaire de rapports)
   Une source de données partagée spécifie les propriétés de connexion d'une source de données. Si une source de données est utilisée par un grand nombre de rapports, de modèles ou d'abonnements pilotés par les données, songez à créer une source de données partagée pour éliminer le temps de traitement nécessaire à la gestion des mêmes informations de connexion à plusieurs emplacements.  
@@ -51,7 +51,7 @@ icône de source de données partagée
   
 7.  Dans la zone **Chaîne de connexion**, spécifiez la chaîne de connexion utilisée par le serveur de rapports pour se connecter à la source de données. Il est recommandé de n'indiquer aucune information d'identification ici.  
   
-     L’exemple suivant illustre une chaîne de connexion pour se connecter à l’ordinateur local [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] base de données :  
+     L’exemple suivant illustre une chaîne de connexion pour la connexion à l’ordinateur local [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] base de données :  
   
     ```  
     data source=<localservername>; initial catalog=AdventureWorks2012  
@@ -101,8 +101,8 @@ icône de source de données partagée
          [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
 ## <a name="see-also"></a>Voir aussi  
- [Connexions de données, les Sources de données et les chaînes de connexion dans Reporting Services](../../2014/reporting-services/data-connections-data-sources-and-connection-strings-in-reporting-services.md)   
- [Afficher la Page contenu &#40;le Gestionnaire de rapports&#41;](../../2014/reporting-services/contents-page-report-manager.md)   
+ [Connexions de données, Sources de données et chaînes de connexion dans Reporting Services](../../2014/reporting-services/data-connections-data-sources-and-connection-strings-in-reporting-services.md)   
+ [Contenu de la Page &#40;le Gestionnaire de rapports&#41;](../../2014/reporting-services/contents-page-report-manager.md)   
  [Créer, modifier et supprimer des Sources de données partagées &#40;SSRS&#41;](report-data/create-modify-and-delete-shared-data-sources-ssrs.md)   
  [Gérer les Sources de données de rapport](report-data/manage-report-data-sources.md)   
  [Configurer les propriétés de Source de données pour un rapport &#40;le Gestionnaire de rapports&#41;](report-data/configure-data-source-properties-for-a-report-report-manager.md)  

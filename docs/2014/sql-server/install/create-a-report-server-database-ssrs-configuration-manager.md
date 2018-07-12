@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - report servers [Reporting Services], databases
 - report server database
@@ -17,13 +17,13 @@ ms.assetid: 8a3a6ffe-4001-46be-8548-94532550f6a5
 caps.latest.revision: 11
 author: markingmyname
 ms.author: maghan
-manager: jhubbard
-ms.openlocfilehash: 5cd23aaa93b60a2af7212ca8c98025a51f92d4c6
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 913ec99d330f1eb62cbc1a27572296856c28f48b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36043069"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37172210"
 ---
 # <a name="create-a-report-server-database--ssrs-configuration-manager"></a>Créer une base de données du serveur de rapports (Gestionnaire de configuration de SSRS)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] **mode natif** utilise deux bases de données relationnelles [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pour le stockage des objets et des métadonnées du serveur de rapports. Une base de données est utilisée pour le stockage principal et l'autre pour le stockage des données temporaires. Les bases de données sont créées ensemble et liées par le nom. Avec une instance par défaut de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], les bases de données sont nommées `reportserver` et `reportservertempdb`. Les deux bases de données sont collectivement appelées « base de données de serveur de rapports » ou « catalogue du serveur de rapports ».  
@@ -39,7 +39,7 @@ ms.locfileid: "36043069"
 > [!IMPORTANT]  
 >  N'écrivez pas d'applications qui exécutent des requêtes sur la base de données du serveur de rapports. La base de données du serveur de rapports n'est pas un schéma public. La structure des tables peut changer d'une version à la suivante. Si vous écrivez une application qui nécessite un accès à la base de données du serveur de rapports, utilisez toujours les API [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] pour accéder à la base de données du serveur de rapports.  
 >   
->  Les vues du journal des exécutions constituent une exception à cette règle. Pour plus d’informations, consultez [journal de l’exécution du serveur de rapports et vue ExecutionLog3](../../reporting-services/report-server/report-server-executionlog-and-the-executionlog3-view.md)  
+>  Les vues du journal des exécutions constituent une exception à cette règle. Pour plus d’informations, consultez [journal de l’exécution de serveur de rapports et vue ExecutionLog3](../../reporting-services/report-server/report-server-executionlog-and-the-executionlog3-view.md)  
   
 ## <a name="ways-to-create-the-report-server-database"></a>Méthodes pour créer la base de données de serveur de rapports  
  **Mode natif :** vous pouvez créer la base de données du serveur de rapports en mode natif en procédant comme suit :  
@@ -50,9 +50,9 @@ ms.locfileid: "36043069"
   
  **Mode SharePoint :** la page d’options d’installation du serveur de rapports n’offre que l’option **Installer uniquement** pour le mode SharePoint. Cette option installe tous les fichiers [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ainsi que le service partagé [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . L'étape suivante consiste à créer au moins une application de service [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] de l'une des manières suivantes :  
   
--   Utilisez l'Administration centrale de SharePoint pour créer une application de service [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Pour plus d’informations, consultez la section « Application de Service » de [étape 3 : créer une Application de Service Reporting Services](../../../2014/sql-server/install/install-reporting-services-sharepoint-mode-for-sharepoint-2013.md#bkmk_create_serrviceapplication).  
+-   Utilisez l'Administration centrale de SharePoint pour créer une application de service [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Pour plus d’informations, consultez la section « Service Application » de [étape 3 : créer une Application de Service Reporting Services](../../../2014/sql-server/install/install-reporting-services-sharepoint-mode-for-sharepoint-2013.md#bkmk_create_serrviceapplication).  
   
--   Utilisez les applets de commande PowerShell [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] pour créer une application de service et les bases de données du serveur de rapports. Pour plus d’informations, consultez l’exemple pour la création d’applications de service dans la rubrique [applets de commande PowerShell pour Reporting Services SharePoint Mode](../../../2014/reporting-services/powershell-cmdlets-for-reporting-services-sharepoint-mode.md).  
+-   Utilisez les applets de commande PowerShell [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] pour créer une application de service et les bases de données du serveur de rapports. Pour plus d’informations, consultez l’exemple de création d’applications de service dans la rubrique [applets de commande PowerShell pour Reporting Services SharePoint Mode](../../../2014/reporting-services/powershell-cmdlets-for-reporting-services-sharepoint-mode.md).  
   
 ## <a name="database-server-version-requirements"></a>Conditions requises pour une version du serveur de bases de données  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] est utilisé pour héberger les bases de données du serveur de rapports. L'instance du [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] peut être soit locale, soit distante. Voici les versions prises en charge du [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] qui permettent d'héberger les bases de données du serveur de rapports :  

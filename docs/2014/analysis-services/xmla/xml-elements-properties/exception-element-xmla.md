@@ -1,5 +1,5 @@
 ---
-title: Élément exception (XMLA) | Documents Microsoft
+title: Exception, élément (XMLA) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -24,18 +24,18 @@ helpviewer_keywords:
 - Exception element
 ms.assetid: 0be4cc2f-c03e-490a-a6f7-8b1ede5d09ba
 caps.latest.revision: 11
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: 824743a3e8aeb7d735d6844dd1b025de06e09e9d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: 33af06aa3243b0860bca6d9ae8ff15595ae1ad4f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36044547"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37156810"
 ---
 # <a name="exception-element-xmla"></a>Élément Exception (XMLA)
-  Indique qu’une exception a été retournée par un [Discover](../xml-elements-methods-discover.md) ou [Execute](../xml-elements-methods-execute.md) appel de méthode.  
+  Indique qu’une exception a été retournée à partir d’un [Discover](../xml-elements-methods-discover.md) ou [Execute](../xml-elements-methods-execute.md) appel de méthode.  
   
  **Namespace** http://schemas.microsoft.com/analysisservices/2003/exception  
   
@@ -69,7 +69,7 @@ ms.locfileid: "36044547"
  S'il se produit pendant l'exécution d'un appel de méthode `Discover` ou d'une commande XMLA dans un appel de méthode `Execute` une erreur qui empêche la méthode ou la commande de se terminer, l'élément `root` pour cette méthode ou cette commande contient un élément `Exception` et un élément `Messages`. L'élément `Exception` indique qu'une erreur a fait échouer la méthode ou la commande et l'élément `Messages` contient la liste des messages d'erreur ou d'avertissement relatifs à l'erreur.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Élément de messages &#40;XMLA&#41;](messages-element-xmla.md)   
+ [Messages élément &#40;XMLA&#41;](messages-element-xmla.md)   
  [Propriétés &#40;XMLA&#41;](xml-elements-properties.md)  
   
   

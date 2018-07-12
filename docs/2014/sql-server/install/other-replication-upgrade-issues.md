@@ -1,5 +1,5 @@
 ---
-title: Autres problèmes de mise à niveau de la réplication | Documents Microsoft
+title: Autres problèmes de mise à niveau de réplication | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - system tables [SQL Server], replication
 - passwords [SQL Server replication]
@@ -18,15 +18,15 @@ helpviewer_keywords:
 - ActiveX controls [SQL Server replication]
 ms.assetid: 8a5e74be-4992-4f17-b20c-c3dce8f49329
 caps.latest.revision: 34
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 1710220edea8623b0e1cb9ca61cd179461b14423
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 1aa132e53e3d3328863c8f30fc86277fc6b394ea
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36043746"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37200679"
 ---
 # <a name="other-replication-upgrade-issues"></a>Autres problèmes de mise à niveau de la réplication
   Cette rubrique traite de plusieurs problèmes de mise à niveau qui ne sont pas signalés par le Conseiller de mise à niveau.  
@@ -34,7 +34,7 @@ ms.locfileid: "36043746"
 ## <a name="versions-supported"></a>Versions prises en charge  
  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] prend en charge la mise à niveau des bases de données répliquées à partir des versions antérieures de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Il n'est pas nécessaire d'arrêter l'activité sur les autres nœuds pendant qu'un nœud est mis à niveau. Prenez soin de respecter les règles relatives aux versions qui sont prises en charge dans une topologie.  
   
- Lorsque vous répliquez entre ou parmi les différentes versions de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vous n’êtes généralement limité aux fonctionnalités de la version la plus récente qui est utilisée.  
+ Lorsque vous répliquez entre ou parmi les différentes versions de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vous n’êtes généralement limité aux fonctionnalités de la version la plus ancienne qui est utilisée.  
   
 > [!NOTE]  
 >  Le format de stockage sur disque de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] étant le même dans les environnements 64 bits et 32 bits, une topologie de réplication peut combiner des instances de serveur qui s'exécutent dans un environnement 32 bits et des instances de serveur qui s'exécutent dans un environnement 64 bits.  
@@ -58,6 +58,6 @@ ms.locfileid: "36043746"
 -   Le contrôle ActiveX de distribution et le contrôle ActiveX de fusion ont été déconseillés. Une fonctionnalité semblable est fournie pour les applications de code managé à l'aide de Replication Management Objects. Pour plus d'informations, consultez « Synchronisation des abonnements (Programmation RMO) » dans la documentation en ligne de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ## <a name="see-also"></a>Voir aussi  
- [Problèmes de mise à niveau de réplication](../../../2014/sql-server/install/replication-upgrade-issues.md)  
+ [Problèmes de mise à niveau de la réplication](../../../2014/sql-server/install/replication-upgrade-issues.md)  
   
   

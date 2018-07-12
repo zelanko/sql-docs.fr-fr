@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - AND, bitwise AND
 - '& (bitwise AND)'
@@ -17,13 +17,13 @@ ms.assetid: 06d2958e-66a5-44d8-8bc4-56209ebe1ff2
 caps.latest.revision: 40
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: c17df738a3b8a97639a0c4097e01643c2e571119
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 4a0c0557b4a0bbb1c0735476413e91af7645102e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36045409"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37156526"
 ---
 # <a name="amp-bitwise-and-ssis-expression"></a>&amp; (AND au niveau du bit) (expression SSIS)
   Effectue une opération AND au niveau du bit avec deux valeurs entières. Cette fonction compare chaque bit de son premier opérande au bit correspondant de son second opérande. Si les deux bits ont pour valeur 1, le bit obtenu correspondant a pour valeur 1. Sinon, il a pour valeur 0.  
@@ -98,8 +98,8 @@ ReorderPoint & SafetyStockLevel
  00000001  
   
 ## <a name="see-also"></a>Voir aussi  
- [& & &#40;AND logique&#41; &#40;Expression SSIS&#41;](logical-and-ssis-expression.md)   
+ [& & &#40;AND logique&#41; &#40;SSIS Expression&#41;](logical-and-ssis-expression.md)   
  [Opérateurs et associativité](operator-precedence-and-associativity.md)   
- [Opérateurs &#40;Expression SSIS&#41;](operators-ssis-expression.md)  
+ [Opérateurs &#40;SSIS Expression&#41;](operators-ssis-expression.md)  
   
   

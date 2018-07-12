@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - viewing report history
 - report history [Reporting Services], viewing history
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - displaying report history
 ms.assetid: 8e255792-d9ef-496f-a26c-9e969c1209a0
 caps.latest.revision: 35
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 91bb20ac70caf7d7d3e863c975415205badbc063
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: e3e0f1978079b63499c39120fb47173cb603e657
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36043533"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37153750"
 ---
 # <a name="limit-report-history-report-manager"></a>Limiter l'historique de rapport (Gestionnaire de rapports)
   L'historique de rapport est un ensemble d'instantanés de rapport que vous créez au fil du temps. Vous pouvez soit créer l'historique de rapport à la demande, soit planifier la fréquence à laquelle un instantané est créée et ajoutée à l'historique de rapport.  

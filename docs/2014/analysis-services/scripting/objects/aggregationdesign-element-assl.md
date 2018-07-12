@@ -1,5 +1,5 @@
 ---
-title: Élément AggregationDesign (ASSL) | Documents Microsoft
+title: Élément AggregationDesign (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - AggregationDesign element
 ms.assetid: 80ad98d8-73a8-4353-b5ad-d2a9ac3bc531
 caps.latest.revision: 36
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: c8b02460500a79d1ff98dfac84a07782c388ef10
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: cfebce28ae08d0d76fa851b9d9df3ded8f6c28fc
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36042306"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37200089"
 ---
 # <a name="aggregationdesign-element-assl"></a>Élément AggregationDesign (ASSL)
   Définit un ensemble de définitions d'agrégation qu'il est possible de partager sur plusieurs partitions dans une base de données.  

@@ -1,12 +1,12 @@
 ---
-title: IRowsetFastLoad::InsertRow (OLE DB) | Documents Microsoft
+title: IRowsetFastLoad::InsertRow (OLE DB) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: connectivity
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
@@ -20,12 +20,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 442d817da98837faa0105d71ebb87c186aaebbe4
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
+ms.openlocfilehash: 43644b4e99efe1d6eedbe8d7fd552c0b8a543a38
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35698630"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37413068"
 ---
 # <a name="irowsetfastloadinsertrow-ole-db"></a>IRowsetFastLoad::InsertRow (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -63,7 +63,7 @@ HRESULT InsertRow(
  SQLNCLI11 ne pouvait pas allouer la mémoire suffisante pour compléter la demande.  
   
  E_UNEXPECTED  
- La méthode a été appelée sur un ensemble de lignes de copie en bloc précédemment invalidé par le [IRowsetFastLoad::Commit](../../relational-databases/native-client-ole-db-interfaces/irowsetfastload-commit-ole-db.md) (méthode).  
+ La méthode a été appelée sur un ensemble de lignes de copie en bloc précédemment invalidé par la [IRowsetFastLoad::Commit](../../relational-databases/native-client-ole-db-interfaces/irowsetfastload-commit-ole-db.md) (méthode).  
   
  DB_E_BADACCESSORHANDLE  
  L'argument *hAccessor* fourni par le consommateur n'était pas valide.  
@@ -72,9 +72,9 @@ HRESULT InsertRow(
  L'accesseur spécifié n'était pas un accesseur de ligne ou ne spécifiait pas une mémoire dont le consommateur était propriétaire.  
   
 ## <a name="remarks"></a>Notes  
- Une erreur de conversion de données du consommateur le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] type de données pour une colonne provoque un retour E_FAIL du [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Client fournisseur OLE DB natif. Données peuvent être transmises à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sur n’importe quel **InsertRow** méthode ou uniquement sur **valider** (méthode). L'application du consommateur peut appeler la méthode **InsertRow** plusieurs fois avec des données erronées avant de recevoir le message qu'une erreur de conversion de type de données s'est produite. Comme la méthode **Commit** garantit que toutes les données sont spécifiées correctement par le consommateur, celui-ci peut utiliser la méthode **Commit** de façon appropriée pour valider les données comme nécessaire.  
+ Une erreur de conversion de données du consommateur la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] type de données pour une colonne provoque un retour E_FAIL du [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Client fournisseur OLE DB natif. Données peuvent être transmises à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sur n’importe quel **InsertRow** méthode ou uniquement sur **valider** (méthode). L'application du consommateur peut appeler la méthode **InsertRow** plusieurs fois avec des données erronées avant de recevoir le message qu'une erreur de conversion de type de données s'est produite. Comme la méthode **Commit** garantit que toutes les données sont spécifiées correctement par le consommateur, celui-ci peut utiliser la méthode **Commit** de façon appropriée pour valider les données comme nécessaire.  
   
- Le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ensembles de lignes OLE DB Native Client fournisseur en bloc copie sont en écriture seule. Le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB fournisseur n’expose aucune méthode qui autorise l’interrogation de consommateur de l’ensemble de lignes. Pour terminer le traitement, le consommateur peut libérer sa référence sur le [IRowsetFastLoad](../../relational-databases/native-client-ole-db-interfaces/irowsetfastload-ole-db.md) interface sans appeler le **valider** (méthode). Il n'existe pas d'utilitaires permettant d'accéder à une ligne insérée par le consommateur dans l'ensemble de lignes et de modifier ses valeurs, ou de la supprimer individuellement de l'ensemble de lignes.  
+ Le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ensembles de lignes OLE DB Native Client fournisseur en bloc copie sont en écriture seule. Le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Client fournisseur OLE DB natif n’expose aucune méthode qui autorise l’interrogation de consommateur de l’ensemble de lignes. Pour terminer le traitement, le consommateur peut libérer sa référence sur le [IRowsetFastLoad](../../relational-databases/native-client-ole-db-interfaces/irowsetfastload-ole-db.md) interface sans appeler le **valider** (méthode). Il n'existe pas d'utilitaires permettant d'accéder à une ligne insérée par le consommateur dans l'ensemble de lignes et de modifier ses valeurs, ou de la supprimer individuellement de l'ensemble de lignes.  
   
  Les lignes copiées en bloc sont mises en forme sur le serveur pour [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Le format de ligne est affecté par les options qui ont pu être définies pour la connexion ou la session, telles que ANSI_PADDING. Cette option est définie sur par défaut pour toute connexion établie via la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Client fournisseur OLE DB natif.  
   

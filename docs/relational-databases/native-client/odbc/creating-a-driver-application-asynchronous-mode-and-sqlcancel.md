@@ -1,5 +1,5 @@
 ---
-title: Mode asynchrone et SQLCancel | Documents Microsoft
+title: Mode asynchrone et SQLCancel | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -7,7 +7,7 @@ ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.component: native-client|ODBC
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -24,11 +24,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 3f6f0e96ff0344a084b84098339687374ba18335
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: b81d9c0716a0bda54bdeab3c7d2b347a505e0ce2
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37409148"
 ---
 # <a name="creating-a-driver-application---asynchronous-mode-and-sqlcancel"></a>Création d’une Application de pilote - Mode asynchrone et SQLCancel
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -53,9 +54,9 @@ SQLSetStmtAttr(hstmt, SQL_ATTR_ASYNC_ENABLE,
   
  Lorsque l'application teste l'achèvement de la commande, il effectue le même appel de fonction avec les mêmes paramètres sur le pilote. Si le pilote n'a pas encore reçu de réponse du serveur, il retourne de nouveau SQL_STILL_EXECUTING. L'application doit tester régulièrement la commande jusqu'à ce que le code de retour soit différent de SQL_STILL_EXECUTING. Lorsque l'application obtient un autre code de retour, même SQL_ERROR, elle peut déterminer que la commande est terminée.  
   
- Une commande peut parfois rester longtemps en attente. Si l’application doit annuler la commande sans attendre une réponse, il peut le faire en appelant **SQLCancel** avec la même instruction gérer en tant que la commande en attente. C’est la seule fois **SQLCancel** doit être utilisé. Certains programmeurs utilisent **SQLCancel** lorsqu’ils ont traité des résultats d’une valeur et pour annuler le reste du jeu de résultats. [SQLMoreResults](../../../relational-databases/native-client-odbc-api/sqlmoreresults.md) ou [SQLCloseCursor](../../../relational-databases/native-client-odbc-api/sqlclosecursor.md) doit être utilisé pour annuler le reste d’un jeu de résultats en suspens, ne pas **SQLCancel**.  
+ Une commande peut parfois rester longtemps en attente. Si l’application doit annuler la commande sans attendre une réponse, il peut le faire en appelant **SQLCancel** avec la même instruction gérer en tant que la commande en attente. C’est la seule fois **SQLCancel** doit être utilisé. Certains programmeurs utilisent **SQLCancel** lorsqu’ils ont traité partie à travers un résultat défini et à annuler le reste du jeu de résultats. [SQLMoreResults](../../../relational-databases/native-client-odbc-api/sqlmoreresults.md) ou [SQLCloseCursor](../../../relational-databases/native-client-odbc-api/sqlclosecursor.md) doit être utilisé pour annuler le reste d’un jeu de résultats en suspens, ne pas **SQLCancel**.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Création d’une Application de pilote ODBC de SQL Server Native Client](../../../relational-databases/native-client/odbc/creating-a-driver-application.md)  
+ [Création d’une application de pilote ODBC SQL Server Native Client](../../../relational-databases/native-client/odbc/creating-a-driver-application.md)  
   
   

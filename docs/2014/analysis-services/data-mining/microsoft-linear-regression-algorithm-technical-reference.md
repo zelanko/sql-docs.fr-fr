@@ -1,5 +1,5 @@
 ---
-title: Référence technique de Microsoft Linear Regression algorithme | Documents Microsoft
+title: Référence technique de Microsoft Linear Regression algorithme | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - AUTO_DETECT_PERIODICITY parameter
 - linear regression algorithms [Analysis Services]
 - regression algorithms [Analysis Services]
 ms.assetid: 7807b5ff-8e0d-418d-a05b-b1a9644536d2
 caps.latest.revision: 24
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: f9655abda58057343b67ef16dd62fcb7a0faa048
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 201242a7347ea564444449071342aa9a3952d7f5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36042588"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37181066"
 ---
 # <a name="microsoft-linear-regression-algorithm-technical-reference"></a>Références techniques relatives à l'algorithme MLR (Microsoft Linear Regression)
   L’algorithme MLR ( [!INCLUDE[msCoName](../../includes/msconame-md.md)] Linear Regression) est une version spéciale de l’algorithme MDT (Microsoft Decision Trees) qui est optimisée pour la modélisation des paires d’attributs continus. Cette rubrique explique l'implémentation de l'algorithme, décrit la façon de personnaliser le comportement de l'algorithme et fournit des liens vers des informations supplémentaires sur l'interrogation des modèles.  
@@ -68,7 +68,7 @@ ms.locfileid: "36042588"
 ### <a name="regressors-in-linear-regression-models"></a>Régresseurs dans les modèles de régression linéaire  
  Les modèles de régression linéaire sont basés sur l’algorithme MDT ( [!INCLUDE[msCoName](../../includes/msconame-md.md)] Decision Trees). Cependant, même si vous n’utilisez pas l’algorithme MLR ( [!INCLUDE[msCoName](../../includes/msconame-md.md)] Linear Regression), tout modèle d’arbre de décision peut contenir un arbre ou des nœuds qui représentent une régression sur un attribut continu.  
   
- Il est inutile de spécifier qu'une colonne continue représente un régresseur. L’algorithme MDT ( [!INCLUDE[msCoName](../../includes/msconame-md.md)] Decision Trees) partitionne le dataset en régions avec des séquences explicites même si vous ne définissez pas l’indicateur REGRESSOR sur la colonne. La différence est que lorsque vous définissez l’indicateur de modélisation, l’algorithme essaie de rechercher des équations de régression du formulaire une * C1 + b\*C2 +... pour faire tenir les séquences dans les nœuds de l’arborescence. La somme des résiduels est calculée et, si l'écart est trop grand, l'arbre est fractionné.  
+ Il est inutile de spécifier qu'une colonne continue représente un régresseur. L’algorithme MDT ( [!INCLUDE[msCoName](../../includes/msconame-md.md)] Decision Trees) partitionne le dataset en régions avec des séquences explicites même si vous ne définissez pas l’indicateur REGRESSOR sur la colonne. La différence est que lorsque vous définissez l’indicateur de modélisation, l’algorithme tente de rechercher des équations de régression de la forme un * C1 + b\*C2 +... pour faire tenir les séquences dans les nœuds de l’arborescence. La somme des résiduels est calculée et, si l'écart est trop grand, l'arbre est fractionné.  
   
  Par exemple, si vous prédisez le comportement d’achat de vos clients en utilisant **Income** comme attribut et que vous définissez l’indicateur de modélisation REGRESSOR sur la colonne, l’algorithme essaie tout d’abord de faire tenir les valeurs **Income** en utilisant une formule de régression standard. Si l'écart est trop grand, la formule de régression est abandonnée et l'arbre est fractionné sur un autre attribut. L’algorithme MDT essaie ensuite de faire tenir un régresseur pour le revenu dans chacune des branches après le fractionnement.  
   
@@ -89,8 +89,8 @@ ms.locfileid: "36042588"
 >  `Cyclical` et `Ordered` types de contenu sont pris en charge, mais l’algorithme les traite comme des valeurs discrètes et n’effectue pas de traitement spécial.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Algorithme de régression linéaire Microsoft](microsoft-linear-regression-algorithm.md)   
- [Exemples de requêtes de modèle de régression linéaire](linear-regression-model-query-examples.md)   
+ [Algorithme Microsoft Linear Regression](microsoft-linear-regression-algorithm.md)   
+ [Exemples de requête de modèle de régression linéaire](linear-regression-model-query-examples.md)   
  [Contenu du modèle pour les modèles de régression linéaire d’exploration de données &#40;Analysis Services - Exploration de données&#41;](mining-model-content-for-linear-regression-models-analysis-services-data-mining.md)  
   
   

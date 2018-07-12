@@ -1,5 +1,5 @@
 ---
-title: Contenu pour les modèles d’arbre de décision du modèle d’exploration de données (Analysis Services - Exploration de données) | Documents Microsoft
+title: Contenu pour les modèles d’arbre de décision du modèle d’exploration de données (Analysis Services - Exploration de données) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - mining model content, decision tree models
 - decision tree algorithms [Analysis Services]
 - decision trees [Analysis Services]
 ms.assetid: ac358399-10f8-4238-be32-a914a2e49048
 caps.latest.revision: 25
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 7ced4dd7c81ab5c3851b180394d75d80d35c502f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: ae76bbfc4e85e0f01e384849bf6b67e52f4c574f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36043737"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37161660"
 ---
 # <a name="mining-model-content-for-decision-tree-models-analysis-services---data-mining"></a>Mining Model Content for Decision Tree Models (Analysis Services - Data Mining)
   Cette rubrique décrit le contenu du modèle d'exploration de données spécifique aux modèles utilisant l'algorithme MDT ( [!INCLUDE[msCoName](../../includes/msconame-md.md)] Decision Trees). Pour obtenir une explication générale du contenu du modèle d’exploration de données pour tous les types de modèles, consultez [Mining Model Content &#40;Analysis Services - Data Mining&#41;](mining-model-content-analysis-services-data-mining.md). Il est important de se rappeler que l'algorithme MDT (Microsoft Decision Trees) est un algorithme hybride qui peut créer des modèles avec des fonctions très différentes : un arbre de décision peut représenter des associations, des règles ou même une régression linéaire. La structure de l'arbre est essentiellement la même, mais le mode d’interprétation des informations dépendra de l'objectif visé par la création du modèle.  
@@ -36,7 +36,7 @@ ms.locfileid: "36043737"
 > [!NOTE]  
 >  Si votre modèle inclut plusieurs arborescences, vous ne pouvez en consulter qu’une seule à la fois dans la **Visionneuse d'arborescences Microsoft**. Toutefois, toutes les arborescences du même modèle sont affichées en même temps dans la **Visionneuse de l'arborescence de contenu générique** .  
   
- ![structure du contenu de modèle pour arbre de décision](../media/modelcontentstructure-dt.gif "structure du contenu de modèle pour arbre de décision")  
+ ![structure du contenu du modèle pour arbre de décision](../media/modelcontentstructure-dt.gif "structure du contenu du modèle pour arbre de décision")  
   
  L'arborescence de chaque attribut prédictible contient des informations qui décrivent la manière dont les colonnes d'entrée choisies affectent le résultat de l'attribut prédictible concerné. Chaque arborescence est menée par un nœud (NODE_TYPE = 9) qui contient l'attribut prédictible, suivi d'une série de nœuds (NODE_TYPE = 10) qui représentent les attributs d'entrée. Un attribut correspond à une colonne de niveau de cas ou aux valeurs des colonnes de table imbriquée, qui représentent généralement les valeurs de la colonne `Key` de la table imbriquée.  
   
@@ -193,7 +193,7 @@ ms.locfileid: "36043737"
   
 |||  
 |-|-|  
-|**NODE_CAPTION**|Affiche l'attribut qui distingue ce nœud par rapport au nœud parent. La légende du nœud définit un sous-segment de remplissage basé sur la condition de fractionnement. Pour exemple, si le fractionnement portait sur [Age] et qu’il a été un fractionnement tripartite, les légendes de nœud pour les trois nœuds enfants pourraient être [Age] < 40 », « 40 < = [Age] \< 50 », « [Age] > = 50 ».|  
+|**NODE_CAPTION**|Affiche l'attribut qui distingue ce nœud par rapport au nœud parent. La légende du nœud définit un sous-segment de remplissage basé sur la condition de fractionnement. Par exemple, si le fractionnement portait sur [Age] et il a été un fractionnement tripartite, les légendes de nœud pour les trois nœuds enfants pourraient être [Age] < 40 », « 40 < = [Age] \< 50 », « [Age] > = 50".|  
 |**NODE_DESCRIPTION**|Contient la liste complète des attributs qui distinguent ce nœud des autres, en commençant par le nœud parent du modèle. Par exemple, Nom de produit = Pomme et Couleur = Rouge.|  
   
 ###  <a name="NodeRule"></a> Règle du nœud et règle marginale  
@@ -229,7 +229,7 @@ ms.locfileid: "36043737"
 |Âge < 30|40|Âge < 30 et Genre = Homme|30|30/40 = .75|30/100 = .30|  
 |||Âge < 30 et Genre = Femme|10|10/40 = .25|10/100 = .10|  
   
- Un petit ajustement est effectué dans tous les modèles afin de compenser pour les valeurs manquantes éventuelles. Pour les attributs continus, chaque valeur ou plage de valeurs est représentée comme un état (par exemple, âge \<30, âge = 30 et l’âge > 30) et les probabilités sont calculées comme suit : état existe (valeur = 1), un autre état existe (valeur = 0), l’état est `Missing`. Pour plus d’informations sur l’ajustement des probabilités afin de représenter les valeurs manquantes, consultez [Valeurs manquantes &#40;Analysis Services - Exploration de données&#41;](missing-values-analysis-services-data-mining.md).  
+ Un petit ajustement est effectué dans tous les modèles afin de compenser pour les valeurs manquantes éventuelles. Pour les attributs continus, chaque valeur ou plage de valeurs est représentée sous forme d’état (par exemple, âge \<30, âge = 30 et âge > 30) et les probabilités sont calculées comme suit : état existe (valeur = 1), un autre état existe (valeur = 0), l’état est `Missing`. Pour plus d’informations sur l’ajustement des probabilités afin de représenter les valeurs manquantes, consultez [Valeurs manquantes &#40;Analysis Services - Exploration de données&#41;](missing-values-analysis-services-data-mining.md).  
   
  Les probabilités pour chaque nœud sont calculées presque directement à partir de la distribution, comme suit :  
   
@@ -289,6 +289,6 @@ ms.locfileid: "36043737"
  [Contenu du modèle d’exploration de données &#40;Analysis Services - Exploration de données&#41;](mining-model-content-analysis-services-data-mining.md)   
  [Visionneuses de modèle d’exploration de données](data-mining-model-viewers.md)   
  [Requêtes d’exploration de données](data-mining-queries.md)   
- [Algorithme d’arbres de décision Microsoft](microsoft-decision-trees-algorithm.md)  
+ [Algorithme MDT (Microsoft Decision Trees)](microsoft-decision-trees-algorithm.md)  
   
   

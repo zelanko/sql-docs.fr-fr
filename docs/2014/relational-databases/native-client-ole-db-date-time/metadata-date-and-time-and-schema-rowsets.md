@@ -1,30 +1,28 @@
 ---
-title: Date et heure et ensembles de lignes de schéma | Documents Microsoft
+title: Date / heure et ensembles de lignes de schéma | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - date/time [OLE DB], schema rowsets
 ms.assetid: 8c35e86f-0597-4ef4-b2b8-f643e53ed4c2
 caps.latest.revision: 18
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 9faf2104ffb2f49281fe677d8e7ff4f23887338d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: 8a87b2ecdcce3b50eaebcc73471b44f6db48f04b
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36152550"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37431678"
 ---
-# <a name="date-and-time-and-schema-rowsets"></a>Date et heure et ensembles de lignes de schéma
+# <a name="date-and-time-and-schema-rowsets"></a>Date / heure et ensembles de lignes de schéma
   Cette rubrique fournit des informations sur l'ensemble de lignes COLUMNS et l'ensemble de lignes PROCEDURE_PARAMETERS. Ces informations concernent les améliorations apportées aux date et heure OLE DB pour [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)].  
   
 ## <a name="columns-rowset"></a>Ensemble de lignes COLUMNS  
@@ -59,7 +57,7 @@ ms.locfileid: "36152550"
   
  Un nouvel indicateur, DBCOLUMNFLAGS_SS_ISVARIABLESCALE, est fourni dans COLUMN_FLAGS pour permettre à une application de déterminer le type de serveur de colonnes, où DATA_TYPE représente DBTYPE_DBTIMESTAMP. DATETIME_PRECISION doit aussi être utilisé pour identifier le type de serveur.  
   
- DBCOLUMNFLAGS_SS_ISVARIABLESCALE est uniquement valide lorsqu’il est connecté à un [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ou une version ultérieure. DBCOLUMNFLAGS_SS_ISFIXEDSCALE est non défini en cas de connexion à des serveurs de bas niveau.  
+ DBCOLUMNFLAGS_SS_ISVARIABLESCALE est uniquement valide lorsqu’elle est connectée à un [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ou version ultérieure. DBCOLUMNFLAGS_SS_ISFIXEDSCALE est non défini en cas de connexion à des serveurs de bas niveau.  
   
 ## <a name="procedureparameters-rowset"></a>Ensemble de lignes PROCEDURE_PARAMETERS  
  DATA_TYPE contient les mêmes valeurs que l'ensemble de lignes de schéma COLUMNS et TYPE_NAME contient le type de serveur.  

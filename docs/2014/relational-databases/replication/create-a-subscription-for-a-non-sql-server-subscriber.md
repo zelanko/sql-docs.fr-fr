@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - subscriptions [SQL Server replication], non-SQL Server Subscribers
 - Subscribers [SQL Server replication], non-SQL Server Subscribers
 - non-SQL Server Subscribers, subscriptions
 ms.assetid: 5020ee68-b988-4d57-8066-67d183e61237
 caps.latest.revision: 27
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 65bbe363e6b8148d9a9f3a7f4391eb6bbc5b97ca
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 40332e5894e444ad8818d04bd738a2a52670c557
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36043838"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37177836"
 ---
 # <a name="create-a-subscription-for-a-non-sql-server-subscriber"></a>Créer un abonnement pour un Abonné non-SQL Server
   Cette rubrique explique comment créer un abonnement pour un abonné non-SQL Server dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] à l'aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou de [!INCLUDE[tsql](../../includes/tsql-md.md)]. La réplication transactionnelle et la réplication d'instantané prennent en charge la publication de données vers des Abonnés non-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Pour plus d'informations sur les plateformes d'Abonné prises en charge, consultez [Non-SQL Server Subscribers](non-sql/non-sql-server-subscribers.md).  

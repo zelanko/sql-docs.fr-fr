@@ -1,5 +1,5 @@
 ---
-title: Page d’éléments dépendants (Gestionnaire de rapports) | Documents Microsoft
+title: Page éléments dépendants (Gestionnaire de rapports) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 4dcfb311-e9c3-4c5d-b2e0-018d79f37d2e
 caps.latest.revision: 29
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 0496334695c72a78afe3fedb87763cfaacd66e35
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: e483d24a2b7e9463c5fb43b9bc2f00fd41a3a070
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36043314"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37164110"
 ---
 # <a name="dependent-items-page-report-manager"></a>Page Éléments dépendants (Gestionnaire de rapports)
   La page Éléments dépendants vous permet d'afficher la liste des rapports et modèles qui font référence à une source de données partagée. L'icône de chaque type d'élément indique s'il s'agit d'un rapport ou d'un modèle. Cette page peut être affichée en mode Liste ou Détails. Utilisez le mode Détails pour afficher plus d'informations sur chaque élément. Des options de page supplémentaires sont disponibles en mode Détails. Pour vous aider à gérer la source de données partagée, cette page fournit des liens vers les rapports et modèles qui utilisent la source de données, des métriques sur la dernière exécution ou modification du rapport ou modèle, des boutons Supprimer et Déplacer afin que vous puissiez supprimer facilement les rapports et modèles qui ne sont plus utilisés, ou les déplacer vers un emplacement différent pendant que vous déterminez s'ils sont toujours nécessaires.  
@@ -62,13 +62,13 @@ ms.locfileid: "36043314"
  **Modifié par**  
  Affiche le nom de l'utilisateur qui a modifié les propriétés de l'élément pour la dernière fois.  
   
- **Lorsque vous exécutez**  
+ **Lorsqu’il est exécuté**  
  Pour les rapports qui s'exécutent comme des instantanés d'exécution de rapport, cette option affiche la date et l'heure de la dernière actualisation du rapport.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Aide (F1) de gestionnaire de rapports](../../2014/reporting-services/report-manager-f1-help.md)   
+ [F1 du Gestionnaire de rapports](../../2014/reporting-services/report-manager-f1-help.md)   
  [Le Gestionnaire de rapports &#40;SSRS en Mode natif&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
- [Afficher la Page contenu &#40;le Gestionnaire de rapports&#41;](../../2014/reporting-services/contents-page-report-manager.md)   
- [Aide (F1) de gestionnaire de rapports](../../2014/reporting-services/report-manager-f1-help.md)  
+ [Contenu de la Page &#40;le Gestionnaire de rapports&#41;](../../2014/reporting-services/contents-page-report-manager.md)   
+ [Aide (F1) du Gestionnaire de rapports](../../2014/reporting-services/report-manager-f1-help.md)  
   
   

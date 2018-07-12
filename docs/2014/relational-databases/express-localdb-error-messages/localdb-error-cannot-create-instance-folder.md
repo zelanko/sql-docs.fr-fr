@@ -1,26 +1,24 @@
 ---
-title: LOCALDB_ERROR_CANNOT_CREATE_INSTANCE_FOLDER | Documents Microsoft
+title: LOCALDB_ERROR_CANNOT_CREATE_INSTANCE_FOLDER | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: supportability
 ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: 626b73d3-a257-4b45-82fb-c6299faa0001
 caps.latest.revision: 8
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: a818c37a50e65860ca3507a231bb75a1913c5ac2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 03d16e57053f1793de0ef878120253cc3a8d0376
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36153031"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37429608"
 ---
 # <a name="localdberrorcannotcreateinstancefolder"></a>LOCALDB_ERROR_CANNOT_CREATE_INSTANCE_FOLDER
     
@@ -32,7 +30,7 @@ ms.locfileid: "36153031"
 |ID d'événement|256|  
 |Source de l'événement|Runtime de base de données locale SQL Server 12.0|  
 |Composant|API d'exécution de la base de données locale|  
-|Texte du message|Impossible de créer le dossier de l’instance de base de données locale à : %%LOCALAPPDATA%%\Microsoft\Microsoft DB\Instances locale de SQL Server\\< nom de l’instance\>.|  
+|Texte du message|Impossible de créer le dossier pour l’instance de base de données locale dans : %%LOCALAPPDATA%%\Microsoft\Microsoft SQL Server Local DB\Instances\\< nom de l’instance\>.|  
   
 ## <a name="explanation"></a>Explication  
  Impossible de créer un dossier sous %userprofile%.  

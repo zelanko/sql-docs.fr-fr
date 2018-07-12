@@ -1,5 +1,5 @@
 ---
-title: Propriété PropertyIdx (classe ClientNetworkProtocolProperty) | Documents Microsoft
+title: Propriété PropertyIdx (classe ClientNetworkProtocolProperty) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - PropertyIdx property
 ms.assetid: d7845962-ac68-4435-9c59-70ec450fec88
 caps.latest.revision: 29
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 42388eb8158e12f5a4458364e39bf9ce1576e70f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
+ms.openlocfilehash: 331827dfd16ed941d903b5e877cb9c31b7ccc621
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36043311"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37186186"
 ---
 # <a name="propertyidx-property-clientnetworkprotocolproperty-class"></a>Propriété PropertyIdx (classe ClientNetworkProtocolProperty)
   Obtient ou définit la valeur d'index de la propriété dans le tableau de propriétés référencé par la [propriété Properties (classe ClientNetworkProtocol)](../clientnetworkprotocol-class/clientnetworkprotocol-class.md) de l'objet de [classe ClientNetworkProtocol](../clientnetworkprotocol-class/clientnetworkprotocol-class.md) .  

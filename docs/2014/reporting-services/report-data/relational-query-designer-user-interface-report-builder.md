@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - "10012"
 helpviewer_keywords:
@@ -17,18 +17,18 @@ helpviewer_keywords:
 - relational query designer
 ms.assetid: cd5fa70c-5218-40d5-9ae6-02d798b5c485
 caps.latest.revision: 22
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: cee2e73f65f0b6a70829ac91ce3c86be9ed5b6ef
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: cbcbb6c64ef5a11db341d1a49c5d966991661a84
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36043789"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37181866"
 ---
 # <a name="relational-query-designer-user-interface-report-builder"></a>Interface utilisateur du Concepteur de requêtes relationnelles (Générateur de rapports)
-  Le Générateur de rapports fournit un concepteur de requêtes graphique et un concepteur de requêtes textuel qui permettent de créer une requête qui spécifie les données à récupérer à partir de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] et [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssSDS](../../includes/sssds-md.md)] bases de données relationnelles et [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssDWCurrentFull](../../../includes/ssdwcurrentfull-md.md)] pour un dataset de rapport. Utilisez le Concepteur de requêtes graphique pour explorer les métadonnées, créer une requête de manière interactive et afficher les résultats de votre requête. Utilisez le Concepteur de requêtes textuel pour afficher la requête créée par le Concepteur de requêtes graphique ou pour modifier une requête. Vous pouvez également importer une requête existante à partir d'un fichier ou d'un rapport.  
+  Générateur de rapports fournit un concepteur de requêtes graphique et un concepteur de requêtes textuel qui permettent de créer une requête qui spécifie les données à récupérer à partir de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] et [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssSDS](../../includes/sssds-md.md)] bases de données relationnelles et [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssDWCurrentFull](../../../includes/ssdwcurrentfull-md.md)] pour un dataset de rapport. Utilisez le Concepteur de requêtes graphique pour explorer les métadonnées, créer une requête de manière interactive et afficher les résultats de votre requête. Utilisez le Concepteur de requêtes textuel pour afficher la requête créée par le Concepteur de requêtes graphique ou pour modifier une requête. Vous pouvez également importer une requête existante à partir d'un fichier ou d'un rapport.  
   
 > [!NOTE]  
 >  Dans le Générateur de rapports, vous devez utiliser le Concepteur de requêtes textuel pour spécifier une requête pour les types de source de données Oracle, OLE DB, ODBC et Teradata. Pour plus d’informations, consultez [Interface utilisateur du Concepteur de requêtes textuel &#40;Générateur de rapports&#41;](text-based-query-designer-user-interface-report-builder.md).  
@@ -135,7 +135,7 @@ ms.locfileid: "36043789"
 -   **Détection automatique** : active/désactive la fonctionnalité de détection automatique qui crée automatiquement les relations entre les tables. Si la détection automatique est activée, le Concepteur de requêtes crée les relations à partir des clés étrangères des tables ; sinon, vous devez créer les relations manuellement. Lorsque vous sélectionnez des tables dans le volet **Vue de base de données** , la fonctionnalité de détection automatique tente de créer les relations. Si vous activez la détection automatique après avoir créé des jointures manuellement, ces jointures sont ignorées.  
   
     > [!IMPORTANT]  
-    >  Lorsque vous utilisez avec [!INCLUDE[ssDWCurrentFull](../../../includes/ssdwcurrentfull-md.md)] ne sont pas fournie par les métadonnées nécessaires à la création de jointures et de relations ne peuvent pas être détectées automatiquement. Si votre requête récupère les données à partir de [!INCLUDE[ssDWCurrentFull](../../../includes/ssdwcurrentfull-md.md)], toutes les jointures de table doivent être créées manuellement.  
+    >  Lorsque vous utilisez avec [!INCLUDE[ssDWCurrentFull](../../../includes/ssdwcurrentfull-md.md)] ne sont pas fournie par les métadonnées nécessaires pour créer des jointures et les relations ne peuvent pas être détectées automatiquement. Si votre requête récupère les données à partir de [!INCLUDE[ssDWCurrentFull](../../../includes/ssdwcurrentfull-md.md)], toutes les jointures de table doivent être créées manuellement.  
   
 -   **Ajouter une relation** Ajoute une relation à la liste **Relation** .  
   
@@ -159,7 +159,7 @@ ms.locfileid: "36043789"
   
 -   **Table de gauche** Affiche le nom de la première table qui fait partie d'une relation de jointure.  
   
--   **Type de jointure** Affiche le type d'instruction SQL JOIN utilisée dans la requête générée automatiquement. Par défaut, si une contrainte de clé étrangère est détectée, une jointure interne (INNER JOIN) est utilisée. D'autres types de jointures peuvent être des jointures gauches (LEFT JOIN) ou droites (RIGHT JOIN). Si aucun de ces types de jointures ne s'applique, la colonne **Type de jointure** affiche **Non lié**. Aucune jointure CROSS JOIN n'est créée pour les tables non associées ; à la place, vous devez créer manuellement les relations en joignant les colonnes des tables de gauche et de droite. Pour plus d’informations sur les types de jointures, consultez « Principes de base » dans [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [la documentation en ligne](http://go.microsoft.com/fwlink/?LinkId=141687) sur le site msdn.microsoft.com...  
+-   **Type de jointure** Affiche le type d'instruction SQL JOIN utilisée dans la requête générée automatiquement. Par défaut, si une contrainte de clé étrangère est détectée, une jointure interne (INNER JOIN) est utilisée. D'autres types de jointures peuvent être des jointures gauches (LEFT JOIN) ou droites (RIGHT JOIN). Si aucun de ces types de jointures ne s'applique, la colonne **Type de jointure** affiche **Non lié**. Aucune jointure CROSS JOIN n'est créée pour les tables non associées ; à la place, vous devez créer manuellement les relations en joignant les colonnes des tables de gauche et de droite. Pour plus d’informations sur les types de jointures, consultez « Joindre les principes de base » dans [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [la documentation en ligne](http://go.microsoft.com/fwlink/?LinkId=141687) sur msdn.microsoft.com...  
   
 -   **Table de droite** Affiche le nom de la deuxième table dans la relation de jointure.  
   

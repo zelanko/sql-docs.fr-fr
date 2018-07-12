@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - oraDb
 ms.assetid: 220cf555-0db2-443c-8f87-8e413f3ca731
 caps.latest.revision: 7
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 4aa337ffb0276c5dea37c49df71941ed130b501d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: aadbab5ab6164ca68488cb8bc6dc6ed8e55aed3c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36043196"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37164872"
 ---
 # <a name="connect-to-an-oracle-source-database"></a>Connexion à une base de données source Oracle
   La page Source Oracle permet de fournir les informations nécessaires pour la connexion à la base de données source Oracle. L'instance de capture de données modifiées lit les journaux de restauration par progression de la base de données Oracle à laquelle vous êtes connecté.  
@@ -70,7 +70,7 @@ ms.locfileid: "36043196"
  Une fois les informations entrées sur cette page, cliquez sur **Suivant** pour [Select Oracle Tables and Columns](select-oracle-tables-and-columns.md).  
   
 ## <a name="see-also"></a>Voir aussi  
- [La création de l’Instance de base de données modifiées SQL Server](how-to-create-the-sql-server-change-database-instance.md)   
+ [Comment créer l’Instance de base de données de modifications SQL Server](how-to-create-the-sql-server-change-database-instance.md)   
  [Modifier les propriétés d’une instance](edit-instance-properties.md)  
   
   

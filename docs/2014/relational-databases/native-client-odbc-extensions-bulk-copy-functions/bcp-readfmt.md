@@ -1,13 +1,11 @@
 ---
-title: bcp_readfmt | Documents Microsoft
+title: bcp_readfmt | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
@@ -20,15 +18,15 @@ helpviewer_keywords:
 - bcp_readfmt function
 ms.assetid: 654001c8-ae9f-425c-b820-f0191bf89367
 caps.latest.revision: 34
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 3d700f752a3194821065dc21ddd6ab96fa6a8f26
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: dbf545e694ac6d5368a4abf23aba6ca0a6d32119
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36144239"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37428728"
 ---
 # <a name="bcpreadfmt"></a>bcp_readfmt
   Lit la définition du format du fichier de données à partir du fichier de format spécifié.  
@@ -62,7 +60,7 @@ szFormatFile
   
  Pour conserver un fichier de format, appelez [bcp_writefmt](bcp-writefmt.md). Les appels à `bcp_readfmt` peuvent référencer des formats enregistrés. Pour plus d’informations, consultez [bcp_init](bcp-init.md).  
   
- Ou bien, l’utilitaire de copie en bloc (**bcp**) peut enregistrer des formats de données défini par l’utilisateur dans les fichiers qui peuvent être référencées par `bcp_readfmt`. Pour plus d’informations sur la **bcp** utilitaire et la structure de **bcp** fichiers de format de données, consultez [importation et exportation de données &#40;SQL Server&#41;](../import-export/bulk-import-and-export-of-data-sql-server.md).  
+ Vous pouvez également l’utilitaire de copie en bloc (**bcp**) peut enregistrer les formats de données défini par l’utilisateur dans les fichiers qui peuvent être référencées par `bcp_readfmt`. Pour plus d’informations sur la **bcp** utilitaire et la structure de **bcp** fichiers de format de données, consultez [importation et exportation de données &#40;SQL Server&#41;](../import-export/bulk-import-and-export-of-data-sql-server.md).  
   
  Le `BCPDELAYREADFMT` valeur de la *eOption* paramètre de [bcp_control](bcp-control.md) modifie le comportement de bcp_readfmt.  
   

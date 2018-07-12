@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - progress reporting [Integration Services]
 - breakpoints [Integration Services]
@@ -20,18 +20,18 @@ ms.assetid: 54a458cc-9f4f-4b48-8cf2-db2e0fa7756c
 caps.latest.revision: 54
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 8b8de78b135245c36d11f4dfb96a993fd0bbc4dd
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: fd6b99c23bd2a8ef82597025c402f0f881c13982
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36043632"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37170990"
 ---
 # <a name="debugging-control-flow"></a>Débogage du flux de contrôle
   [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] et [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] incluent des fonctionnalités et outils que vous pouvez utiliser pour dépanner le flux de contrôle dans un [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] package.  
   
--   [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] prend en charge les points d’arrêt sur les conteneurs et les tâches.  
+-   [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] prend en charge des points d’arrêt sur les conteneurs et tâches.  
   
 -   Le concepteur [!INCLUDE[ssIS](../../../includes/ssis-md.md)] génère des rapports de progression au moment de l'exécution.  
   
@@ -46,16 +46,16 @@ ms.locfileid: "36043632"
   
 |Condition d'arrêt|Description|  
 |---------------------|-----------------|  
-|Lorsque la tâche ou le conteneur reçoit le `OnPreExecute` événement.|Appelée lorsqu'une tâche est sur le point de s'exécuter. Cet événement est déclenché par une tâche ou un conteneur immédiatement avant son exécution.|  
-|Lorsque la tâche ou le conteneur reçoit le `OnPostExecute` événement.|Appelée immédiatement après la fin de la logique d'exécution de la tâche. Cet événement est déclenché par une tâche ou un conteneur immédiatement après son exécution.|  
-|Lorsque la tâche ou le conteneur reçoit le `OnError` événement.|Appelée par une tâche ou un conteneur lorsqu'une erreur se produit.|  
-|Lorsque la tâche ou le conteneur reçoit le `OnWarning` événement.|Appelée lorsque la tâche est dans un état qui ne justifie pas une erreur, mais garantit un avertissement.|  
-|Lorsque la tâche ou le conteneur reçoit le `OnInformation` événement.|Appelée lorsque la tâche doit fournir des informations.|  
-|Lorsque la tâche ou le conteneur reçoit le `OnTaskFailed` événement.|Appelée par l'hôte de la tâche lorsqu'il échoue.|  
-|Lorsque la tâche ou le conteneur reçoit le `OnProgress` événement.|Appelée pour mettre à jour la progression de l'exécution de la tâche.|  
-|Lorsque la tâche ou le conteneur reçoit le `OnQueryCancel` événement.|Appelée à tout moment du traitement de la tâche lorsque vous pouvez annuler l'exécution de la tâche.|  
-|Lorsque la tâche ou le conteneur reçoit le `OnVariableValueChanged` événement.|Appelée par le runtime [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] lorsque la valeur d'une variable change. Le RaiseChangeEvent de la variable doit être définie sur `true` pour déclencher cet événement.<br /><br /> **\*\* Avertissement ** \*\*** La variable associée à ce point d’arrêt doit être définie dans l’étendue du **conteneur** . Si la variable est définie dans l'étendue du package, le point d'arrêt n'obtient pas de correspondance.|  
-|Lorsque la tâche ou le conteneur reçoit le `OnCustomEvent` événement.|Appelée par les tâches pour déclencher des événements personnalisés définis par la tâche.|  
+|Quand la tâche ou le conteneur reçoit le `OnPreExecute` événement.|Appelée lorsqu'une tâche est sur le point de s'exécuter. Cet événement est déclenché par une tâche ou un conteneur immédiatement avant son exécution.|  
+|Quand la tâche ou le conteneur reçoit le `OnPostExecute` événement.|Appelée immédiatement après la fin de la logique d'exécution de la tâche. Cet événement est déclenché par une tâche ou un conteneur immédiatement après son exécution.|  
+|Quand la tâche ou le conteneur reçoit le `OnError` événement.|Appelée par une tâche ou un conteneur lorsqu'une erreur se produit.|  
+|Quand la tâche ou le conteneur reçoit le `OnWarning` événement.|Appelée lorsque la tâche est dans un état qui ne justifie pas une erreur, mais garantit un avertissement.|  
+|Quand la tâche ou le conteneur reçoit le `OnInformation` événement.|Appelée lorsque la tâche doit fournir des informations.|  
+|Quand la tâche ou le conteneur reçoit le `OnTaskFailed` événement.|Appelée par l'hôte de la tâche lorsqu'il échoue.|  
+|Quand la tâche ou le conteneur reçoit le `OnProgress` événement.|Appelée pour mettre à jour la progression de l'exécution de la tâche.|  
+|Quand la tâche ou le conteneur reçoit le `OnQueryCancel` événement.|Appelée à tout moment du traitement de la tâche lorsque vous pouvez annuler l'exécution de la tâche.|  
+|Quand la tâche ou le conteneur reçoit le `OnVariableValueChanged` événement.|Appelée par le runtime [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] lorsque la valeur d'une variable change. L’événement RaiseChangeEvent de la variable doit être définie sur `true` pour déclencher cet événement.<br /><br /> **\*\* Avertissement ** \*\*** La variable associée à ce point d’arrêt doit être définie dans l’étendue du **conteneur** . Si la variable est définie dans l'étendue du package, le point d'arrêt n'obtient pas de correspondance.|  
+|Quand la tâche ou le conteneur reçoit le `OnCustomEvent` événement.|Appelée par les tâches pour déclencher des événements personnalisés définis par la tâche.|  
   
  Outre les conditions d'arrêt disponibles pour toutes les tâches et tous les conteneurs, certaines tâches et certains conteneurs proposent des conditions d'arrêt spéciales permettant de définir des points d'arrêt. Vous pouvez ainsi activer une condition d'arrêt sur le conteneur de boucles For définissant un point d'arrêt qui suspend l'exécution au début de chaque itération de la boucle.  
   
@@ -78,10 +78,10 @@ ms.locfileid: "36043632"
   
 #### <a name="to-set-breakpoints"></a>Pour définir des points d'arrêt  
   
--   [Déboguer un Package en définissant des points d’arrêt sur une tâche ou un conteneur](../debug-a-package-by-setting-breakpoints-on-a-task-or-a-container.md)  
+-   [Déboguer un package en définissant des points d’arrêt sur une tâche ou un conteneur](../debug-a-package-by-setting-breakpoints-on-a-task-or-a-container.md)  
   
 ## <a name="progress-reporting"></a>Rapport de progression  
- [!INCLUDE[ssIS](../../../includes/ssis-md.md)] Concepteur comprend deux types de rapports de progression : codes de couleur sur l’aire de conception de la **flux de contrôle** onglet et les messages de progression sur le **progression** onglet.  
+ [!INCLUDE[ssIS](../../../includes/ssis-md.md)] Concepteur propose deux types de rapports de progression : codes de couleur sur l’aire de conception de la **flux de contrôle** onglet et les messages de progression sous le **progression** onglet.  
   
  Lorsque vous exécutez un package, le concepteur [!INCLUDE[ssIS](../../../includes/ssis-md.md)] indique la progression de l'exécution en affichant chaque tâche ou conteneur dans une couleur qui indique l'état de l'exécution. En fonction de la couleur, vous pouvez déterminer si l'élément est en attente d'exécution, s'il est en cours d'exécution, s'il s'est terminé avec succès ou s'il s'est terminé avec des erreurs. Les codes de couleur disparaissent dès que vous arrêtez l'exécution du package.  
   

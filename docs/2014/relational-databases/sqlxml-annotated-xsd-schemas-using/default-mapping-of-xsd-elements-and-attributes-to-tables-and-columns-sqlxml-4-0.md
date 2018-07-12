@@ -1,5 +1,5 @@
 ---
-title: Mappage par défaut des éléments XSD et des attributs aux Tables et colonnes (SQLXML 4.0) | Documents Microsoft
+title: Mappage par défaut des attributs aux Tables et colonnes (SQLXML 4.0) et les éléments XSD | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -28,15 +28,15 @@ helpviewer_keywords:
 - element/attribute mapping [SQLXML]
 ms.assetid: 9a18e92a-6cfb-4a14-993a-663a95aabb63
 caps.latest.revision: 31
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: cbed4eee82d0bd7d57b7e4073d1f78f9150f9e6c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 515cd325572904339bcb58d5fb5758cae70b0b75
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36042635"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37240609"
 ---
 # <a name="default-mapping-of-xsd-elements-and-attributes-to-tables-and-columns-sqlxml-40"></a>Mappage par défaut d'éléments et d'attributs XSD à des tables et des colonnes (SQLXML 4.0)
   Par défaut, un élément de type complexe dans un schéma annoté XSD est mappé à la table (vue) du même nom dans la base de données spécifiée ; par ailleurs, un élément ou attribut de type simple est mappé à la colonne du même nom dans la table.  
@@ -96,7 +96,7 @@ ms.locfileid: "36042635"
 ```  
   
 ### <a name="b-mapping-an-xml-element-to-a-database-column"></a>B. Mappage d'un élément XML à une colonne de base de données  
- Dans cet exemple, le mappage par défaut a lieu également, car aucune annotation n'est utilisée. Le  **\<Person.Contact >** élément est de type complexe et correspond à la table avec le même nom dans la base de données. Les éléments  **\<FirstName >** et  **\<LastName >** et **EmployeeID** attribut sont de type simple et, par conséquent, mappés à la colonnes avec les mêmes noms. La seule différence entre ceci et l'exemple précédent réside dans le fait que les éléments sont utilisés pour le mappage des champs FirstName et LastName.  
+ Dans cet exemple, le mappage par défaut a lieu également, car aucune annotation n'est utilisée. Le  **\<Person.Contact >** élément est de type complexe et est mappé à la table portant le même nom dans la base de données. Les éléments  **\<FirstName >** et  **\<LastName >** et **EmployeeID** attribut sont de type simple et, par conséquent, sont mappés à la colonnes portant le même nom. La seule différence entre ceci et l'exemple précédent réside dans le fait que les éléments sont utilisés pour le mappage des champs FirstName et LastName.  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"   
@@ -150,7 +150,7 @@ ms.locfileid: "36042635"
 ```  
   
 ### <a name="c-mapping-an-xml-element-to-an-xml-data-type-column"></a>C. Mappage d'un élément XML à une colonne de type de données XML  
- Dans cet exemple, le mappage par défaut a lieu également, car aucune annotation n'est utilisée. Le  **\<Production.ProductModel >** élément est de type complexe et correspond à la table avec le même nom dans la base de données. Le **ProductModelID** attribut est de type simple et, par conséquent, sont mappés aux colonnes portant le même nom. La seule différence entre ceci et les exemples précédents est que le  **\<Instructions >** élément est mappé à une colonne qui utilise le `xml` type de données à l’aide de la `xsd:anyType` type.  
+ Dans cet exemple, le mappage par défaut a lieu également, car aucune annotation n'est utilisée. Le  **\<Production.ProductModel >** élément est de type complexe et est mappé à la table portant le même nom dans la base de données. Le **ProductModelID** attribut est de type simple et, par conséquent, sont mappés aux colonnes portant le même nom. La seule différence entre ceci et les exemples précédents est que le  **\<Instructions >** élément est mappé à une colonne qui utilise le `xml` type de données à l’aide de la `xsd:anyType` type.  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"   

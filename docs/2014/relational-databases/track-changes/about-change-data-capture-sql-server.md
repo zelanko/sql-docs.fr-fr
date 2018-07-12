@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - change data capture [SQL Server], about
 - change data capture [SQL Server]
 - 22832 (Database Engine error)
 ms.assetid: 7d8c4684-9eb1-4791-8c3b-0f0bb15d9634
 caps.latest.revision: 21
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 656a66a9c0567c7d65a66983a2f459ee802ef523
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: rothja
+ms.author: jroth
+manager: craigg
+ms.openlocfilehash: 279e47c38c5339f74545cd0b13a175a4a9a604b4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36042845"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37170251"
 ---
 # <a name="about-change-data-capture-sql-server"></a>À propos de la capture de données modifiées (SQL Server)
   La capture de données modifiées enregistre les activités d'insertion, de mise à jour et de suppression appliquées à une table [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Elle rend disponibles les détails des modifications dans un format relationnel simple à utiliser. Les informations sur les colonnes et les métadonnées nécessaires à l'application des modifications à un environnement cible sont capturées pour les lignes modifiées et stockées dans des tables de modification qui reflètent la structure de colonne des tables sources suivies. Des fonctions table sont fournies afin de procurer aux consommateurs un accès systématique aux données modifiées.  
@@ -40,7 +40,7 @@ ms.locfileid: "36042845"
 ## <a name="understanding-change-data-capture-and-the-capture-instance"></a>Fonctionnement de la capture de données modifiées et de l'instance de capture  
  Pour que les modifications apportées à une table d'une base de données puissent être suivies, la capture de données modifiées doit être activée explicitement pour la base de données. Pour cela, utilisez la procédure stockée [sys.sp_cdc_enable_db](/sql/relational-databases/system-stored-procedures/sys-sp-cdc-enable-db-transact-sql). Lorsque la base de données est activée, les tables sources peuvent être identifiées en tant que tables faisant l’objet d’un suivi à l’aide de la procédure stockée [sys.sp_cdc_enable_table](/sql/relational-databases/system-stored-procedures/sys-sp-cdc-enable-table-transact-sql). Lorsqu'une table est activée pour la capture de données modifiées, une instance de capture associée est créée afin de prendre en charge la dissémination des données modifiées dans la table source. L'instance de capture se compose d'une table de modifications et de deux fonctions de requête maximum. Métadonnées qui décrivent les détails de configuration de l’instance de capture sont conservées dans les tables de métadonnées de capture de données modifiées `cdc.change_tables`, `cdc.index_columns`, et `cdc.captured_columns`. Ces informations peuvent être extraites en utilisant la procédure stockée [sys.sp_cdc_help_change_data_capture](/sql/relational-databases/system-stored-procedures/sys-sp-cdc-help-change-data-capture-transact-sql).  
   
- Tous les objets associés à une instance de capture sont créés dans le schéma de capture de données modifiées de la base de données activée. Le nom d'instance de capture doit être un nom d'objet valide et doit être unique parmi les instances de capture de base de données. Par défaut, le nom est \<*nom schéma*_*nom table*> de la table source. Sa table de modifications associée est nommée en ajoutant `_CT` au nom de l’instance de capture. La fonction qui est utilisée pour toutes les modifications sont nommée en ajoutant le préfixe `fn_cdc_get_all_changes_` au nom de l’instance de capture. Si l’instance de capture est configurée pour prendre en charge `net changes`, le `net_changes` requête fonction est également créée et nommée en ajoutant le préfixe **fn_cdc_get_net_changes\_**  au nom de l’instance de capture.  
+ Tous les objets associés à une instance de capture sont créés dans le schéma de capture de données modifiées de la base de données activée. Le nom d'instance de capture doit être un nom d'objet valide et doit être unique parmi les instances de capture de base de données. Par défaut, le nom est \<*nom schéma*_*nom table*> de la table source. Sa table de modifications associée est nommée en ajoutant `_CT` au nom de l’instance de capture. La fonction qui est utilisée pour rechercher toutes les modifications est nommée en ajoutant le préfixe `fn_cdc_get_all_changes_` au nom de l’instance de capture. Si l’instance de capture est configuré pour prendre en charge `net changes`, le `net_changes` requête fonction est également créée et nommée en ajoutant le préfixe **fn_cdc_get_net_changes\_**  au nom de l’instance de capture.  
   
 ## <a name="change-table"></a>Table de modifications  
  Les cinq premières colonnes de la table de modifications de capture de données modifiées sont des colonnes de métadonnées. Elles fournissent des informations supplémentaires pertinentes à la modification enregistrée. Les autres colonnes reflètent les colonnes capturées de la table source, identifiées par nom et généralement par type. Ces colonnes contiennent les données de colonne capturées recueillies à partir de la table source.  
@@ -54,7 +54,7 @@ ms.locfileid: "36042845"
   
  La taille des données déposées dans les tables de modifications augmentera de manière ingérable si vous n'effectuez pas un nettoyage périodique et systématique de ces données. Le processus de nettoyage de capture de données modifiées est responsable de l'application de la stratégie de nettoyage par rétention. En premier lieu, il déplace le point de terminaison inférieur de l'intervalle de validité afin de satisfaire la restriction temporelle. Ensuite, il supprime les entrées de table de modifications périmées. Par défaut, trois jours de données sont conservés.  
   
- Haut de gamme, en tant que la capture de processus valide chaque nouveau lot de données modifiées, les nouvelles entrées sont ajoutées à `cdc.lsn_time_mapping` pour chaque transaction qui a des entrées de table de modifications. Dans la table de mappages, un numéro séquentiel dans le journal de validation et une durée de validation de transaction (colonnes start_lsn et tran_end_time, respectivement) sont conservés. La valeur LSN maximale qui se trouve dans `cdc.lsn_time_mapping` représente la limite supérieure de la fenêtre de validité de base de données. Sa durée de validation correspondante est utilisée comme base à partir de laquelle le nettoyage par rétention calcule une nouvelle limite inférieure.  
+ Dans la partie supérieure, comme la capture de processus valide chaque nouveau lot de données modifiées, nouvelles entrées sont ajoutées à `cdc.lsn_time_mapping` pour chaque transaction qui a des entrées de table de modifications. Dans la table de mappages, un numéro séquentiel dans le journal de validation et une durée de validation de transaction (colonnes start_lsn et tran_end_time, respectivement) sont conservés. La valeur LSN maximale qui se trouve dans `cdc.lsn_time_mapping` représente la limite supérieure de la fenêtre de validité de base de données. Sa durée de validation correspondante est utilisée comme base à partir de laquelle le nettoyage par rétention calcule une nouvelle limite inférieure.  
   
  Dans la mesure où le processus de capture extrait les données modifiées du fichier journal de transactions, il existe une latence inhérente entre le moment où une modification est validée dans une table source et le moment où cette modification apparaît dans sa table de modifications associée. Bien que cette latence soit en général assez faible, il est néanmoins important de se souvenir que les données modifiées ne sont disponibles qu'une fois que le processus de capture a traité les entrées de journal connexes.  
   

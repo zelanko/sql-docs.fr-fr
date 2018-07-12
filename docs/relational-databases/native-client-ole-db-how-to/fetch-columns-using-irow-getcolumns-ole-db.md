@@ -1,12 +1,12 @@
 ---
-title: Extraire des colonnes avec IRow::GetColumns (OLE DB) | Documents Microsoft
+title: Extraire des colonnes avec IRow::GetColumns (OLE DB) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: connectivity
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -17,24 +17,24 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 8899776b203a1071ee3e4add8692f8bea782d14d
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
+ms.openlocfilehash: b8a13d1b87bc67e68f7a984f5ff213718413d222
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35703760"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37423918"
 ---
 # <a name="fetch-columns-using-irowgetcolumns-ole-db"></a>Extraire des colonnes avec IRow::GetColumns (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
-  Le **IRow** interface permet un accès direct aux colonnes d’une seule ligne dans le jeu de résultats. Par conséquent, **IRow** est un moyen efficace pour récupérer les colonnes à partir d’un jeu de résultats avec une ligne.  
+  Le **IRow** interface autorise un accès direct aux colonnes d’une ligne unique dans le jeu de résultats. Par conséquent, **IRow** est un moyen efficace pour extraire des colonnes à partir d’un jeu de résultats avec une ligne.  
   
- Vous trouverez un exemple de code démontrant comment extraire une ligne unique à l’aide de **IRow**. Dans cet exemple, une colonne est extraite à la fois de la ligne. L’exemple montre :  
+ Vous trouverez un exemple de code démontrant comment extraire une seule ligne avec **IRow**. Dans cet exemple, une colonne est extraite à la fois de la ligne. L’exemple montre :  
   
 -   comment extraire un groupe de colonnes (de manière consécutive) ;  
   
--   comment accéder deux fois à une colonne avec extraction de la largeur réelle de la colonne la première fois, puis accès aux données concernées par la suite. Dans la structure DBCOLUMNACCESS, si **pData** a la valeur NULL et **cbMaxLen** est 0, l’appel à **IRow**-**> GetColumns()** retourne uniquement la longueur de colonne réelle. Dans ce cas, **IRow -> GetColumns()** peut être appelée à nouveau sur la même colonne à récupérer les données réelles.  
+-   comment accéder deux fois à une colonne avec extraction de la largeur réelle de la colonne la première fois, puis accès aux données concernées par la suite. Dans la structure DBCOLUMNACCESS, si **pData** a la valeur NULL et **cbMaxLen** est 0, l’appel à **IRow**-**> GetColumns()** retourne uniquement la longueur de colonne réelle. Dans ce cas, **IRow -> GetColumns()** peut être appelée à nouveau sur la même colonne pour récupérer les données réelles.  
   
 > [!IMPORTANT]  
 >  Lorsque c'est possible, utilisez l'authentification Windows. Si l'authentification Windows n'est pas disponible, invitez les utilisateurs à entrer leurs informations d'identification au moment de l'exécution. Évitez de stocker ces informations dans un fichier. Si vous devez rendre les informations d'identification persistantes, chiffrez-les avec l' [API de chiffrement Win32](http://go.microsoft.com/fwlink/?LinkId=64532).  
@@ -62,7 +62,7 @@ ms.locfileid: "35703760"
   
  La première liste de code ([!INCLUDE[tsql](../../includes/tsql-md.md)]) crée une table utilisée par l'exemple.  
   
- Compilez avec ole32.lib oleaut32.lib et exécutez la deuxième liste de code (C++). Cette application vous permet de vous connecter à l'instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] par défaut de votre ordinateur. Sur certains systèmes d'exploitation Windows, vous devrez remplacer (localhost) ou (local) par le nom de votre instance [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Pour vous connecter à une instance nommée, modifiez la chaîne de connexion à partir de L"(local) » à L"(local)\\\name », où le nom est l’instance nommée. Par défaut, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express est installé dans une instance nommée. Assurez-vous que votre variable d'environnement INCLUDE inclut le répertoire qui contient sqlncli.h.  
+ Compilez avec ole32.lib oleaut32.lib et exécutez la deuxième liste de code (C++). Cette application vous permet de vous connecter à l'instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] par défaut de votre ordinateur. Sur certains systèmes d'exploitation Windows, vous devrez remplacer (localhost) ou (local) par le nom de votre instance [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Pour vous connecter à une instance nommée, modifiez la chaîne de connexion à partir de L"(local) » à L"(local)\\\name », où nom est l’instance nommée. Par défaut, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express est installé dans une instance nommée. Assurez-vous que votre variable d'environnement INCLUDE inclut le répertoire qui contient sqlncli.h.  
   
  La troisième liste de code ([!INCLUDE[tsql](../../includes/tsql-md.md)]) supprime la table utilisée par l'exemple.  
   

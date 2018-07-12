@@ -1,5 +1,5 @@
 ---
-title: Établissement de connexions sécurisées dans ADOMD.NET | Documents Microsoft
+title: Établissement de connexions sécurisées dans ADOMD.NET | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -15,15 +15,15 @@ helpviewer_keywords:
 - security [ADOMD.NET]
 ms.assetid: b084d447-1456-45a4-8e0e-746c07d7d6fd
 caps.latest.revision: 40
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: dd860308d9e4e7f7ed17072572594d6b8aaeeb70
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: d97079ca400d92502cf3ff217137eb6f32d1920d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36042598"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37180856"
 ---
 # <a name="establishing-secure-connections-in-adomdnet"></a>Établissement de connexions sécurisées dans ADOMD.NET
   Lorsque vous utilisez une connexion dans ADOMD.NET, la méthode de sécurité employée pour la connexion dépend de la valeur de la propriété `ProtectionLevel` de la chaîne de connexion utilisée lorsque vous appelez la méthode <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.Open%2A> de l'objet <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection>.  

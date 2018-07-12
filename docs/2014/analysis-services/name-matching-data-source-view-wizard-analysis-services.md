@@ -1,5 +1,5 @@
 ---
-title: Nom correspondant (Assistant sources de données) (Analysis Services) | Documents Microsoft
+title: Nom correspondant (Assistant sources de données) (Analysis Services) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.datasourceviewwizard.namematchingcriteria.f1
 ms.assetid: 7f811e02-0fe6-45c9-a7b7-29c61032d96b
 caps.latest.revision: 24
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: fcb6d01f55b450326efdea81d48135088d57fc3d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 258b23cc260ea4d31296aa00964138df399da516
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36044850"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37155380"
 ---
 # <a name="name-matching-data-source-view-wizard-analysis-services"></a>Correspondance de noms (Assistant Vue de source de données) (Analysis Services)
   Utilisez la page **Correspondance de noms** pour sélectionner le critère à utiliser pour détecter les relations possibles entre les tables que vous sélectionnez pour la vue de source de données et les autres tables du schéma. Si aucune relation de clé étrangère n'existe entre les tables, ce critère permet d'identifier et d'ajouter les tables associées à la vue de source de données. Les relations logiques identifiées par une correspondance de noms sont également ajoutées à la vue de source de données.  

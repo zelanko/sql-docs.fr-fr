@@ -1,12 +1,12 @@
 ---
-title: bcp_colfmt | Documents Microsoft
+title: bcp_colfmt | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: connectivity
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
@@ -22,18 +22,18 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 4fcd18d87599e214b27473d716b27f9c19df487c
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
+ms.openlocfilehash: 9d8f1adbd4dee8194d0e91d9efd3a99a52b79988
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35701850"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37419658"
 ---
 # <a name="bcpcolfmt"></a>bcp_colfmt
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
-  Spécifie le format source ou cible des données d'un fichier utilisateur. Lorsqu’il est utilisé comme format source, **bcp_colfmt** Spécifie le format d’un fichier de données existant utilisé comme source de données dans une copie en bloc à un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] table. En cas d'utilisation comme format cible, le fichier de données est créé à l'aide des formats de colonne spécifiés avec **bcp_colfmt**.  
+  Spécifie le format source ou cible des données d'un fichier utilisateur. Lorsqu’il est utilisé comme format source, **bcp_colfmt** Spécifie le format d’un fichier de données existant utilisé comme source de données dans une copie en bloc sur un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] table. En cas d'utilisation comme format cible, le fichier de données est créé à l'aide des formats de colonne spécifiés avec **bcp_colfmt**.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -62,11 +62,11 @@ RETCODE bcp_colfmt (
   
  [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] a introduit la prise en charge des jetons de type de données SQLXML et SQLUDT dans le *eUserDataType* paramètre.  
   
- Le *eUserDataType* paramètre est énuméré par le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] des jetons de type de données dans sqlncli.h, pas les énumérateurs de type de données ODBC C. Par exemple, vous pouvez spécifier une chaîne de caractères, ODBC type SQL_C_CHAR, à l'aide du SQLCHARACTER de type propre à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ Le *eUserDataType* paramètre est énuméré par les [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] des jetons de type de données dans sqlncli.h, pas les énumérateurs de type de données C ODBC. Par exemple, vous pouvez spécifier une chaîne de caractères, ODBC type SQL_C_CHAR, à l'aide du SQLCHARACTER de type propre à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  Pour spécifier la représentation des données par défaut pour le type de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], attribuez la valeur 0 à ce paramètre.  
   
- Pour une copie en bloc de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dans un fichier, lorsque *eUserDataType* est SQLDECIMAL ou SQLNUMERIC :  
+ Pour une copie en bloc hors [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dans un fichier, lorsque *eUserDataType* est de type SQLDECIMAL ou SQLNUMERIC :  
   
 -   Si la colonne source n'est pas **décimale** ou **numérique**, la précision et l'échelle par défaut sont utilisées.  
   
@@ -90,7 +90,7 @@ RETCODE bcp_colfmt (
   
  L'attribution de SQL_VARLEN_DATA à *cbUserData* indique que le système doit déterminer la longueur des données dans chaque colonne. Pour certaines colonnes, cela peut signifier qu'un indicateur de longueur/null est généré pour précéder les données dans une copie à partir de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou que l'indicateur est attendu dans les données copiées vers [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
- Pour [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] caractères et les types de données binaires, *cbUserData* peuvent être SQL_VARLEN_DATA, SQL_NULL_DATA, 0 ou une valeur positive. Si *cbUserData* a la valeur SQL_VARLEN_DATA, le système utilise l'indicateur de longueur, s'il est présent, ou une séquence de terminaison pour déterminer la longueur des données. Si un indicateur de longueur et une séquence de terminaison sont fournis, la copie en bloc utilise celui qui implique le volume de données à copier le plus faible. Si *cbUserData* a la valeur SQL_VARLEN_DATA, les données de type est un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] caractère ou type binaire et un indicateur de longueur ni une séquence de terminaison est spécifiée, le système retourne un message d’erreur.  
+ Pour [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] caractère et les types de données binaires, *cbUserData* peut être SQL_VARLEN_DATA, SQL_NULL_DATA, 0 ou une valeur positive. Si *cbUserData* a la valeur SQL_VARLEN_DATA, le système utilise l'indicateur de longueur, s'il est présent, ou une séquence de terminaison pour déterminer la longueur des données. Si un indicateur de longueur et une séquence de terminaison sont fournis, la copie en bloc utilise celui qui implique le volume de données à copier le plus faible. Si *cbUserData* a la valeur SQL_VARLEN_DATA, les données de type est un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] caractère ou type binaire et un indicateur de longueur ni une séquence de terminaison est spécifiée, le système retourne un message d’erreur.  
   
  Si *cbUserData* a la valeur 0 ou une valeur positive, le système utilise *cbUserData* comme longueur de données maximale. Toutefois, si un indicateur de longueur ou une séquence de terminaison est fournie en plus d'une valeur *cbUserData*positive, le système détermine la longueur de données en utilisant la méthode qui entraîne la plus petite quantité de données à copier.  
   
@@ -146,9 +146,9 @@ RETCODE bcp_colfmt (
  Le [bcp_writefmt](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-writefmt.md) fonction peut être utilisée pour conserver la spécification de format.  
   
 ## <a name="bcpcolfmt-support-for-enhanced-date-and-time-features"></a>Prise en charge de bcp_colfmt pour les fonctionnalités Date et Heure améliorées  
- Pour plus d’informations sur les types utilisés avec les *eUserDataType* paramètre pour les types date/heure, consultez [modifications de copie en bloc pour les Types améliorées de Date et heure &#40;OLE DB et ODBC&#41;](../../relational-databases/native-client-odbc-date-time/bulk-copy-changes-for-enhanced-date-and-time-types-ole-db-and-odbc.md).  
+ Pour plus d’informations sur les types utilisés avec la *eUserDataType* paramètre pour les types de date/heure, consultez [modifications de copie en bloc pour les Types améliorées de Date / heure &#40;OLE DB et ODBC&#41;](../../relational-databases/native-client-odbc-date-time/bulk-copy-changes-for-enhanced-date-and-time-types-ole-db-and-odbc.md).  
   
- Pour plus d’informations, consultez [Date et heure améliorations &#40;ODBC&#41;](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md).  
+ Pour plus d’informations, consultez [améliorations Date / heure &#40;ODBC&#41;](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md).  
   
 ## <a name="see-also"></a>Voir aussi  
  [Fonctions de copie en bloc](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/sql-server-driver-extensions-bulk-copy-functions.md)  

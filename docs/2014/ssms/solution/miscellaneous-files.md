@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - files [SQL Server Management Studio], miscellaneous
 - projects [SQL Server Management Studio], files
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - miscellaneous files folder [SQL Server]
 ms.assetid: 3c952b0b-8f5f-4d86-9e5d-616c10b9df0d
 caps.latest.revision: 21
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: e939419a42231a7885a2d957bca218725e19ae80
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: b225697095e7a59f237527d4598d8fb3dfa5d99d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36044885"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37157330"
 ---
 # <a name="miscellaneous-files"></a>Fichiers divers
   Les fichiers externes à un projet sont appelés *fichiers divers*. Lorsqu'une solution est ouverte, vous pouvez ouvrir et modifier les fichiers divers associés au projet. Un fichier est considéré comme un fichier divers si son extension n'est pas associée à l'éditeur de code du projet. Par exemple, dans les projets de script [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , les fichiers dotés de l’extension .txt ou .mdx sont traités comme des fichiers divers. Dans un projet MDX, les fichiers dotés de l'extension .txt ou .sql sont également traités comme des fichiers divers. Pour associer une extension de fichier avec un éditeur de code, consultez [associer des Extensions de fichier à un éditeur de Code](../../relational-databases/scripting/associate-file-extensions-to-a-code-editor.md).  
@@ -36,7 +36,7 @@ ms.locfileid: "36044885"
  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] Les menus et les barres d’outils changent selon le format du fichier que vous ouvrez. Lorsque vous ouvrez un fichier texte, par exemple, la barre d'outils Éditeur de texte s'affiche. Si vous ouvrez un schéma XML, la barre d'outils correspondante s'affiche. Lorsque vous modifiez le schéma XML, la barre d'outils Éditeur de texte n'est pas disponible. Lorsque vous passez d'un fichier de projet à un fichier divers, toutes les commandes et les barres d'outils associées au projet disparaissent et seules celles directement associées au fichier divers s'affichent.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Fichiers de gestion de Solutions et projets](files-that-manage-solutions-and-projects.md)   
+ [Fichiers gérant les Solutions et projets](files-that-manage-solutions-and-projects.md)   
  [Solutions &#40;SQL Server Management Studio&#41;](solutions-sql-server-management-studio.md)   
  [Projets &#40;SQL Server Management Studio&#41;](projects-sql-server-management-studio.md)  
   

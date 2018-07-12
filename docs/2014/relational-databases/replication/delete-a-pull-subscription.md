@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - removing subscriptions
 - deleting subscriptions
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - subscriptions [SQL Server replication], pull
 ms.assetid: 997c0b8e-d8d9-4eed-85b1-6baa1f8594ce
 caps.latest.revision: 35
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 59925598a5a1038cee0d99d80476a894826ce575
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 6fe35faf0b633e5fe7525371713dff189ac559b2
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36043582"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37150860"
 ---
 # <a name="delete-a-pull-subscription"></a>Supprimer un abonnement par extraction
   Cette rubrique explique comment supprimer un abonnement par extraction de données (pull) dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] à l'aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], de [!INCLUDE[tsql](../../includes/tsql-md.md)]ou d'objets RMO (Replication Management Objects).  

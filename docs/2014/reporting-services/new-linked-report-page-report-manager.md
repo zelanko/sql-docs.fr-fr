@@ -1,5 +1,5 @@
 ---
-title: Nouvelle Page de rapport lié (Gestionnaire de rapports) | Documents Microsoft
+title: Page nouveau rapport lié (Gestionnaire de rapports) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 applies_to:
 - SQL Server 2014
 ms.assetid: fefb46e8-6901-4d50-a3f8-7c49ad72e7b1
 caps.latest.revision: 22
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 635352076fac4e993ce7a46e3b66c2e1089f6b59
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: cb12f9012055b4de29712255b427a93dfafef2db
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36042828"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37201019"
 ---
 # <a name="new-linked-report-page-report-manager"></a>Page Nouveau rapport lié (Gestionnaire de rapports)
   La page Nouveau rapport lié vous permet de créer un rapport lié. Un rapport lié est un rapport qui possède ses propres paramètres et propriétés, mais qui est lié à la définition de rapport d'un autre rapport. Les rapports liés sont utiles lorsque vous possédez un rapport de base que vous souhaitez modifier pour des groupes ou des utilisateurs spécifiques (par exemple, un rapport régional qui retourne des données différentes selon le code de région que vous spécifiez en tant que paramètre). Un rapport lié est généralement créé à partir d'un rapport paramétrable lorsque vous souhaitez modifier puis enregistrer des valeurs de paramètres différentes avec chaque instance du rapport. Toutefois, vous pouvez créer un rapport lié à partir de n'importe quel rapport auquel vous avez accès.  
@@ -51,7 +51,7 @@ ms.locfileid: "36042828"
   
 ## <a name="options"></a>Options  
  **Nom**  
- Spécifie le nom du rapport lié. Le nom doit contenir un caractère alphanumérique au minimum. Il peut également comporter des espaces et certains symboles. Toutefois, vous ne devez pas utiliser les caractères ; ? : @ & = +, $ / * \< > | « ou / lorsque vous spécifiez un nom.  
+ Spécifie le nom du rapport lié. Le nom doit contenir un caractère alphanumérique au minimum. Il peut également comporter des espaces et certains symboles. Toutefois, vous ne devez pas utiliser les caractères ; ? : @ & = +, $ / * \< > | "ou / lorsque vous spécifiez un nom.  
   
  **Description**  
  Tapez une description du contenu du rapport. Cette description apparaît dans la page Contenu. Elle est visible par les utilisateurs qui sont autorisés à accéder au rapport.  
@@ -65,6 +65,6 @@ ms.locfileid: "36042828"
 ## <a name="see-also"></a>Voir aussi  
  [Créer un rapport lié](reports/create-a-linked-report.md)   
  [Page Propriétés générales, Rapports &#40;Gestionnaire de rapports&#41;](../../2014/reporting-services/general-properties-page-reports-report-manager.md)   
- [Aide (F1) de gestionnaire de rapports](../../2014/reporting-services/report-manager-f1-help.md)  
+ [Aide (F1) du Gestionnaire de rapports](../../2014/reporting-services/report-manager-f1-help.md)  
   
   

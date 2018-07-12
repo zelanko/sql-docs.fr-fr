@@ -1,5 +1,5 @@
 ---
-title: Éditeur de boucle foreach (Page Général) | Documents Microsoft
+title: Éditeur de boucle foreach (Page Général) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/22/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.foreachloopcontainer.general.f1
 ms.assetid: 0b2daa20-c189-4b5b-9b43-bc9c34b08450
 caps.latest.revision: 25
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 451c87f7612cdf8cb474f30018769d241e18a076
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 28040eac1a9bac3a05c890315502dd67c8e069d3
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36042939"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37277395"
 ---
 # <a name="foreach-loop-editor-general-page"></a>Éditeur de boucle Foreach (page Général)
   Utilisez la page **Général** de la boîte de dialogue **Éditeur de boucle Foreach** pour décrire et attribuer un nom à un conteneur de boucle Foreach qui utilise un énumérateur précis afin de répéter un flux de travail pour chaque membre d'une collection.  

@@ -1,5 +1,5 @@
 ---
-title: Ensemble de lignes DISCOVER_COMMANDS | Documents Microsoft
+title: Ensemble de lignes DISCOVER_COMMANDS | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -14,15 +14,15 @@ helpviewer_keywords:
 - DISCOVER_COMMANDS rowset
 ms.assetid: d228f265-05d9-4d2c-a622-44c73eab7a71
 caps.latest.revision: 14
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 14c4eb9ac8fe63422ee29f5880a8a5f1eb6329bf
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 860645ba09ee294b6421472f235a38d66f54abe8
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36045252"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37157320"
 ---
 # <a name="discovercommands-rowset"></a>Ensemble de lignes DISCOVER_COMMANDS
   Fournit des informations sur l'activité et l'utilisation des ressources des dernières commandes exécutées ou des commandes en cours d'exécution sur les connexions ouvertes sur le serveur.  

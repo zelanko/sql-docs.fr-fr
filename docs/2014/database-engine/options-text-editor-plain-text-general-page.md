@@ -1,5 +1,5 @@
 ---
-title: Options (Page Général de l’éditeur de texte - texte brut -) | Documents Microsoft
+title: Options (Page Général de l’éditeur de texte - texte brut -) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - VS.ToolsOptionsPages.Text_Editor.Plain_Text.General
 ms.assetid: 53bfa594-ba36-4c9c-8dd5-4c2dcce7d2dc
 caps.latest.revision: 22
 author: craigg-msft
 ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: e46857d3ea3078847e2c540999f37cef79d05091
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: b66c8286d3ae062307175e689f222f33ea3be6a0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36045014"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37150990"
 ---
 # <a name="options-text-editor---plain-text---general-page"></a>Options (Éditeur de texte - Texte brut - Page Général)
   Utilisez cette boîte de dialogue pour modifier le comportement d'édition général de l'Éditeur de texte, qui permet de modifier un document non associé à un langage de développement particulier. Pour afficher ces paramètres, cliquez sur **Options** dans le menu **Outils** , développez **Éditeur de texte**, développez **Texte brut** , puis cliquez sur **Général**.  
@@ -43,7 +43,7 @@ ms.locfileid: "36045014"
  **Activer l’espace virtuel**  
  Permet d'insérer des espaces à la fin de chaque ligne de texte. Activez cette case à cocher pour placer des commentaires à un point cohérent, en regard de votre texte.  
   
- **Retour automatique à la**  
+ **Le retour automatique à**  
  Permet d'afficher toute partie d'une ligne qui s'étend horizontalement au-delà de la zone visible de l'éditeur à la ligne suivante. L'activation de cette case à cocher active l'option **Afficher des glyphes visuels pour le retour automatique à la ligne** .  
   
  **Afficher des glyphes visuels pour le retour automatique à**  
@@ -52,7 +52,7 @@ ms.locfileid: "36045014"
 > [!NOTE]  
 >  Ces flèches de rappel ne sont pas ajoutées à votre code et ne s'impriment pas. Ils servent de référence uniquement.  
   
- **Appliquer les commandes Couper ou copier aux lignes vides lorsqu’il n’existe aucune sélection**  
+ **Appliquer les commandes Couper ou copier aux lignes vides lors de l’absence de sélection**  
  Permet de définir le comportement de l'éditeur lorsque vous placez le point d'insertion sur une ligne vide, n'effectuez aucune sélection et cliquez sur **Copier** ou **Couper**.  
   
  Lorsque cette case à cocher est activée, la ligne vide est copiée ou coupée. Si vous cliquez ensuite sur **Coller**, une nouvelle ligne vide est insérée.  
@@ -68,7 +68,7 @@ ms.locfileid: "36045014"
 > [!NOTE]  
 >  Ces numéros de lignes ne s'ajoutent pas à votre texte et ne sont pas imprimés. Ils servent de référence uniquement.  
   
- **Activer la navigation dans les URL par simple clic**  
+ **Activer la navigation dans les URL simple clic**  
  Permet de remplacer le curseur par une main avec un doigt tendu lorsqu'il passe sur une URL dans l'éditeur. Vous pouvez alors cliquer sur l'URL pour afficher la page correspondante dans votre navigateur Web.  
   
  **Barre de navigation**  

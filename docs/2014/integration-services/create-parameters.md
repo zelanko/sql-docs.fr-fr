@@ -1,5 +1,5 @@
 ---
-title: Créer des paramètres | Documents Microsoft
+title: Créer des paramètres | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.paramterwindow.f1
 ms.assetid: cd5d675b-dd5d-49cc-8b1f-dc717a973f99
 caps.latest.revision: 13
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: d27649ff859a9a7d4712358b5355987213a665f2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 94dcec2b269cf54c2d07216efe3c534099d2746a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36044271"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37150820"
 ---
 # <a name="create-parameters"></a>Create Parameters
   Vous pouvez utiliser [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] pour créer les paramètres de projet et de package. Les procédures suivantes fournissent des instructions pas-à-pas pour créer les paramètres de package/projet.  
@@ -90,6 +90,6 @@ ms.locfileid: "36044271"
     >  Vous pouvez effectuer sur place des modifications dans la liste ou utiliser la fenêtre **Propriétés** pour modifier les valeurs des propriétés de paramètre. Vous pouvez supprimer un paramètre à l'aide du bouton **Supprimer (X)** de la barre d'outils. En cliquant sur le dernier bouton de la barre d'outils pour ouvrir la boîte de dialogue **Gérer les valeurs de paramètre** , vous pouvez spécifier une valeur pour un paramètre utilisé uniquement lors de l'exécution du package dans [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)].  
   
 ## <a name="see-also"></a>Voir aussi  
- [Services d’intégration &#40;SSIS&#41; paramètres](integration-services-ssis-package-and-project-parameters.md)  
+ [Integration Services &#40;SSIS&#41; paramètres](integration-services-ssis-package-and-project-parameters.md)  
   
   

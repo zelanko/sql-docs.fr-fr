@@ -8,27 +8,27 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 topic_type:
 - apiref
 helpviewer_keywords:
 - Exchange Spill event class
 ms.assetid: fb876cec-f88d-4975-b3fd-0fb85dc0a7ff
 caps.latest.revision: 29
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 0a7ffd71c2d54d22156bb5af1d4bfbe14640349f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 839d6ca721129dc94c51b998ecbf2fec02ee6fcf
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36042234"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37277725"
 ---
 # <a name="exchange-spill-event-class"></a>Exchange Spill (classe d'événements)
   La classe d’événements **Exchange Spill** indique que les tampons d’un plan de requête parallèle ont été temporairement écrits dans la base de données **tempdb** . Cet événement intervient rarement, seulement lorsqu'un plan de requête inclut de multiples plages d'analyses.  
   
- Normalement, la requête [!INCLUDE[tsql](../../includes/tsql-md.md)] qui génère de telles plages d'analyses comprend de nombreux opérateurs BETWEEN, chacun d'entre eux permettant de sélectionner une plage de lignes à partir d'une table ou d'un index. Vous pouvez également obtenir plusieurs plages à l’aide des expressions telles que (T.a > 10 AND T.a \< 20) ou (T.a > 100 AND T.a \< 120). De plus, les plans de requête imposent que ces plages soient analysées de façon ordonnée, dans la mesure ou une clause ORDER BY est spécifiée sur T.a, ou parce qu'un itérateur du plan demande que les lignes qu'il consomme soient triées.  
+ Normalement, la requête [!INCLUDE[tsql](../../includes/tsql-md.md)] qui génère de telles plages d'analyses comprend de nombreux opérateurs BETWEEN, chacun d'entre eux permettant de sélectionner une plage de lignes à partir d'une table ou d'un index. Vous pouvez également obtenir plusieurs plages d’adresses à l’aide des expressions telles que (T.a > 10 AND T.a \< 20) ou (T.a > 100 AND T.a \< 120). De plus, les plans de requête imposent que ces plages soient analysées de façon ordonnée, dans la mesure ou une clause ORDER BY est spécifiée sur T.a, ou parce qu'un itérateur du plan demande que les lignes qu'il consomme soient triées.  
   
  Lorsque le plan de requête d’une telle requête contient plusieurs opérateurs **Parallelism** , les tampons de communication utilisés par ces opérateurs **Parallelism** sont saturés et il se peut que la progression de l’exécution de la requête soit stoppée. Dans cette situation, l’un des opérateurs **Parallelism** écrit sa mémoire tampon de sortie dans la base de données **tempdb** (une opération appelée *vidage d’échange*), de manière à pouvoir consommer des lignes en provenance de certains de ses tampons d’entrée. Éventuellement, les lignes vidées sont retournées à l'opérateur demandeur lorsqu'il est prêt à les utiliser.  
   

@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-xml
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - XSD schemas [SQL Server]
 - xml_schema_namespace function
@@ -22,18 +22,18 @@ helpviewer_keywords:
 - schema collections [SQL Server], about XML schema collections
 ms.assetid: 659d41aa-ccec-4554-804a-722a96ef25c2
 caps.latest.revision: 30
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 707cb288e9c0ba85454493024350e378ae66e1b3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 05b266a67aaff2a381e181ca85290c45af177225
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36042853"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37221089"
 ---
 # <a name="xml-schema-collections-sql-server"></a>Collections de schémas XML (SQL Server)
-  Comme décrit dans la rubrique [xml &#40;Transact-SQL&#41;](/sql/t-sql/xml/xml-transact-sql), SQL Server assure un stockage natif des données XML par le biais de la `xml` type de données. Vous pouvez éventuellement associer des schémas XSD à une variable ou une colonne de `xml` type via la collection de schémas XML. La collection de schémas XML stocke les schémas XML importés et peut ensuite servir à :  
+  Comme décrit dans la rubrique, [xml &#40;Transact-SQL&#41;](/sql/t-sql/xml/xml-transact-sql), SQL Server fournit un stockage natif des données XML via la `xml` type de données. Vous pouvez éventuellement associer des schémas XSD à une variable ou une colonne de `xml` type grâce à une collection de schémas XML. La collection de schémas XML stocke les schémas XML importés et peut ensuite servir à :  
   
 -   valider des instances XML ;  
   
@@ -60,7 +60,7 @@ ms.locfileid: "36042853"
   
 -   [DROP XML SCHEMA COLLECTION &#40;Transact-SQL&#41;](/sql/t-sql/statements/drop-xml-schema-collection-transact-sql) Supprime une collection de schémas XML complète et tous ses composants.  
   
- Pour utiliser une collection de schémas XML et les schémas qu'elle contient, vous devez d'abord créer la collection et les schémas à l'aide de l'instruction CREATE XML SCHEMA COLLECTION. Après la création de la collection de schémas, vous pouvez ensuite créer des variables et des colonnes de `xml` de type et y associer la collection de schémas. Notez qu'après la création d'une collection de schémas, différents composants de schémas sont stockés dans les métadonnées. Vous pouvez également utiliser l'instruction ALTER XML SCHEMA COLLECTION pour ajouter des composants aux schémas existants ou pour ajouter de nouveaux schémas à une collection existante.  
+ Pour utiliser une collection de schémas XML et les schémas qu'elle contient, vous devez d'abord créer la collection et les schémas à l'aide de l'instruction CREATE XML SCHEMA COLLECTION. Après la création de la collection de schémas, vous pouvez ensuite créer des variables et des colonnes de `xml` tapez et y associer la collection de schémas. Notez qu'après la création d'une collection de schémas, différents composants de schémas sont stockés dans les métadonnées. Vous pouvez également utiliser l'instruction ALTER XML SCHEMA COLLECTION pour ajouter des composants aux schémas existants ou pour ajouter de nouveaux schémas à une collection existante.  
   
  Pour supprimer la collection de schémas, utilisez l'instruction DROP XML SCHEMA COLLECTION. Cela supprime tous les schémas contenus dans la collection et supprime l'objet collection. Notez qu’avant de pouvoir supprimer une collection de schémas, les conditions décrites dans [DROP XML SCHEMA COLLECTION &#40;Transact-SQL&#41;](/sql/t-sql/statements/drop-xml-schema-collection-transact-sql) doivent être remplies.  
   
@@ -142,7 +142,7 @@ ms.locfileid: "36042853"
   
 -   supprimer la collection de schémas XML ;  
   
--   Utilisez la collection de schémas XML en type `xml` colonnes, variables et paramètres de type, ou utiliser dans des contraintes de table ou une colonne  
+-   Utilisez la collection de schémas XML pour taper `xml` colonnes, variables et paramètres de type, ou utiliser dans des contraintes de table ou une colonne  
   
  Le modèle de sécurité SQL Server accorde l'autorisation CONTROL sur chaque objet. Le bénéficiaire de cette autorisation obtient toutes les autres autorisations sur l'objet. Le propriétaire de l'objet a également toutes les autorisations sur l'objet.  
   
@@ -171,7 +171,7 @@ ms.locfileid: "36042853"
   
 -   écrire des requêtes Transact-SQL sur les affichages catalogue appropriés pour les collections de schémas XML ;  
   
--   utiliser la fonction intégrée **XML_SCHEMA_NAMESPACE()**. Vous pouvez appliquer `xml` méthodes du type de données sur la sortie de cette fonction. En revanche, vous ne pouvez pas modifier les schémas XML sous-jacents.  
+-   utiliser la fonction intégrée **XML_SCHEMA_NAMESPACE()**. Vous pouvez appliquer `xml` méthodes de type de données sur la sortie de cette fonction. En revanche, vous ne pouvez pas modifier les schémas XML sous-jacents.  
   
  Ces méthodes sont illustrées dans les exemples ci-après.  
   
@@ -192,7 +192,7 @@ WHERE    XSC.name = 'myCollection'
 SELECT XML_SCHEMA_NAMESPACE (N'dbo', N'myCollection')  
 ```  
   
- Schémas XML individuels de la collection peuvent être obtenus en tant que `xml` instances en spécifiant l’espace de noms cible comme troisième argument de type de données **XML_SCHEMA_NAMESPACE()**. Cela est illustré par l'exemple suivant.  
+ Schémas XML individuels de la collection peuvent être obtenus en tant que `xml` instances du type de données en spécifiant l’espace de noms cible comme troisième argument de **XML_SCHEMA_NAMESPACE()**. Cela est illustré par l'exemple suivant.  
   
 ### <a name="example-output-a-specified-schema-from-an-xml-schema-collection"></a>Exemple : extraction d'un schéma spécifique d'une collection de schémas XML  
  L’instruction suivante extrait le schéma XML dont l’espace de noms cible est « http://www.microsoft.com/books » de la collection de schémas XML « myCollection » dans le schéma relationnel, dbo.  
@@ -207,7 +207,7 @@ N'http://www.microsoft.com/books')
   
 -   Écrivez des requêtes Transact-SQL sur les affichages catalogue appropriés pour les espaces de noms de schémas XML.  
   
--   Créez une table qui contient une colonne de type `xml` pour stocker vos schémas XML et aussi les charger dans le système de type XML. Vous pouvez interroger la colonne XML à l’aide de la `xml` méthodes du type de données. Vous pouvez aussi placer un index XML sur cette colonne. Toutefois, dans ce cas, l'application doit assurer la cohérence entre les schémas XML stockés dans la colonne XML et le système de type XML. Par exemple, si vous supprimez l'espace de noms du schéma XML du système de type XML, vous devez aussi le supprimer de la table pour garantir la cohérence.  
+-   Créez une table qui contient une colonne de type `xml` pour stocker vos schémas XML et aussi les charger dans le système de type XML. Vous pouvez interroger la colonne XML en utilisant le `xml` méthodes de type de données. Vous pouvez aussi placer un index XML sur cette colonne. Toutefois, dans ce cas, l'application doit assurer la cohérence entre les schémas XML stockés dans la colonne XML et le système de type XML. Par exemple, si vous supprimez l'espace de noms du schéma XML du système de type XML, vous devez aussi le supprimer de la table pour garantir la cohérence.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Afficher une collection de schémas XML stockée](../xml/view-a-stored-xml-schema-collection.md)   

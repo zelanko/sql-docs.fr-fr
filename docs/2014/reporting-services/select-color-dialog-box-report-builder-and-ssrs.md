@@ -1,5 +1,5 @@
 ---
-title: Sélectionnez la boîte de dialogue couleur (Générateur de rapports et SSRS) | Documents Microsoft
+title: Sélectionnez la boîte de dialogue couleur (Générateur de rapports et SSRS) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.rtp.rptdesigner.selectcolor.f1
 - "10090"
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - Select Color dialog box
 ms.assetid: ac7089a3-5c7b-4f53-8348-180610e86da2
 caps.latest.revision: 10
-author: douglaslM
+author: maggiesmsft
 ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 1829f9d5b598f42b54be3d6d08cb7a78ea5e11f2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: d2b14615cb231f6df5385306ded4257a86998a56
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36044192"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37185772"
 ---
 # <a name="select-color-dialog-box-report-builder-and-ssrs"></a>Boîte de dialogue Sélectionner une couleur (Générateur de rapports et SSRS)
   Utilisez la boîte de dialogue **Sélectionner une couleur** pour spécifier les options de couleur d'un graphique ou de l'arrière-plan d'une cellule ou de plusieurs cellules dans une région de données ou une zone de texte.  
@@ -50,7 +50,7 @@ ms.locfileid: "36044192"
  Lorsque vous sélectionnez une couleur, le centre du carré détermine la couleur. Utilisez le curseur de couleur pour modifier la plage de la couleur choisie. Les coordonnées x et y représentent les deux autres couleurs. Par exemple, si vous sélectionnez le vert, le curseur affiche la plage des valeurs vertes, tandis que les coordonnées x et y représentent respectivement les valeurs rouges et bleues.  
   
  **Couleurs standard**  
- Utilisation de couleurs nommées de la [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] `KnownColor` énumération.  
+ Utilisation pour les couleurs nommées à partir de la [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] `KnownColor` énumération.  
   
  **Système de couleurs**  
  Spécifiez des couleurs RVB ou TSL. Ce choix modifie l'affichage pour afficher des valeurs RVB ou TSL, mises à jour de façon interactive lorsque vous utilisez un cercle de couleur ou un carré de couleur pour le **Sélecteur de couleurs**.  
@@ -83,6 +83,6 @@ ms.locfileid: "36044192"
   
 ## <a name="see-also"></a>Voir aussi  
  [Mise en forme des éléments de rapport &#40;Générateur de rapports et SSRS&#41;](report-design/formatting-report-items-report-builder-and-ssrs.md)   
- [Mise en forme du texte et des espaces réservés &#40;rapport Générateur et SSRS&#41;](report-design/formatting-text-and-placeholders-report-builder-and-ssrs.md)  
+ [Mise en forme de texte et des espaces réservés &#40;Générateur de rapports et SSRS&#41;](report-design/formatting-text-and-placeholders-report-builder-and-ssrs.md)  
   
   

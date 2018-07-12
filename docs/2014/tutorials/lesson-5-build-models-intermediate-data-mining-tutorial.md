@@ -1,5 +1,5 @@
 ---
-title: 'Leçon 5 : Génération de réseau neuronal et modèles de régression logistique (didacticiel sur l’exploration des données intermédiaires) | Documents Microsoft'
+title: 'Leçon 5 : Génération de réseau neuronal et modèles de régression logistique (didacticiel d’exploration de données intermédiaire) | Microsoft Docs'
 ms.custom: ''
 ms.date: 12/29/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - logistic regression [Analysis Services]
 - data mining [Analysis Services], tutorials
@@ -19,18 +19,18 @@ ms.assetid: 42c3701a-1fd2-44ff-b7de-377345bbbd6b
 caps.latest.revision: 22
 author: minewiskan
 ms.author: owend
-manager: kfile
-ms.openlocfilehash: 2d94de9698ea0e4d8fa0dce110a6e661b941d1be
-ms.sourcegitcommit: 8c040e5b4e8c7d37ca295679410770a1af4d2e1f
+manager: craigg
+ms.openlocfilehash: 93946e13e9836aef4cd10bc39ec964e7f8c0d531
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/21/2018
-ms.locfileid: "36311827"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37222339"
 ---
 # <a name="lesson-5-building-neural-network-and-logistic-regression-models-intermediate-data-mining-tutorial"></a>Leçon 5 : Génération de modèles de réseau neuronal et de régression logistique (Didacticiel sur l'exploration de données intermédiaire)
   
   
- Le service d’exploitation [!INCLUDE[ssSampleDBCoShort](../includes/sssampledbcoshort-md.md)] est engagé dans un projet pour améliorer la satisfaction des clients avec leur centre d’appels. Il a embauché un fournisseur pour gérer le centre d'appels et signaler des mesures de l'efficacité du centre d'appels, et vous a demandé d'analyser certaines données préliminaires fournies par ce fournisseur. Il veut savoir si des découvertes intéressantes ont été faites. En particulier, il veut savoir si les données suggèrent des problèmes de personnel ou des façons d'améliorer la satisfaction de la clientèle.  
+ Le département des opérations de [!INCLUDE[ssSampleDBCoShort](../includes/sssampledbcoshort-md.md)] est engagé dans un projet pour améliorer la satisfaction des clients avec leur centre d’appels. Il a embauché un fournisseur pour gérer le centre d'appels et signaler des mesures de l'efficacité du centre d'appels, et vous a demandé d'analyser certaines données préliminaires fournies par ce fournisseur. Il veut savoir si des découvertes intéressantes ont été faites. En particulier, il veut savoir si les données suggèrent des problèmes de personnel ou des façons d'améliorer la satisfaction de la clientèle.  
   
  Le jeu de données est peu volumineux et couvre uniquement une période de 30 jours du fonctionnement du centre d'appels. Les données suivent le nombre des opérateurs nouveaux et expérimentés dans chaque équipe, le nombre d'appels entrants, le nombre de commandes, ainsi que les problèmes qui doivent être résolus et la durée moyenne d'attente d'un client avant que quelqu'un ne réponde à un appel. Les données incluent également une niveau mesure de qualité de service basée sur *le taux d'abandon*qui est un indicateur de la frustration des clients.  
   
@@ -47,32 +47,32 @@ ms.locfileid: "36311827"
   
  Cette leçon contient les rubriques suivantes :  
   
--   [Ajout de données vue de Source pour les données de centre d’appels &#40;intermédiaire Didacticiel d’exploration de données&#41;](../../2014/tutorials/add-data-source-view-call-center-data-intermediate-data-mining.md)  
+-   [Ajout d’une données vue de Source pour les données de centre d’appels &#40;didacticiel d’exploration de données intermédiaire&#41;](../../2014/tutorials/add-data-source-view-call-center-data-intermediate-data-mining.md)  
   
--   [Création d’une Structure de réseau neuronal et le modèle &#40;intermédiaire Didacticiel d’exploration de données&#41;](../../2014/tutorials/creating-a-neural-network-structure-and-model-intermediate-data-mining-tutorial.md)  
+-   [Création d’une Structure de réseau neuronal et un modèle &#40;didacticiel d’exploration de données intermédiaire&#41;](../../2014/tutorials/creating-a-neural-network-structure-and-model-intermediate-data-mining-tutorial.md)  
   
--   [Présentation du modèle de centre d’appels &#40;intermédiaire Didacticiel d’exploration de données&#41;](../../2014/tutorials/exploring-the-call-center-model-intermediate-data-mining-tutorial.md)  
+-   [Exploration du modèle de centre d’appels &#40;didacticiel d’exploration de données intermédiaire&#41;](../../2014/tutorials/exploring-the-call-center-model-intermediate-data-mining-tutorial.md)  
   
--   [Ajout d’un modèle de régression logistique à la Structure de centre d’appels &#40;intermédiaire Didacticiel d’exploration de données&#41;](../../2014/tutorials/add-logistic-regression-model-to-call-center-intermediate-data-mining.md)  
+-   [Ajout d’un modèle de régression logistique à la Structure de centre d’appels &#40;didacticiel d’exploration de données intermédiaire&#41;](../../2014/tutorials/add-logistic-regression-model-to-call-center-intermediate-data-mining.md)  
   
--   [Création de prédictions pour les modèles de centre d’appels &#40;intermédiaire Didacticiel d’exploration de données&#41;](../../2014/tutorials/create-predictions-call-center-models-intermediate-data-mining-tutorial.md)  
+-   [Création de prédictions pour les modèles de centre d’appels &#40;didacticiel d’exploration de données intermédiaire&#41;](../../2014/tutorials/create-predictions-call-center-models-intermediate-data-mining-tutorial.md)  
   
 ## <a name="next-task-in-lesson"></a>Tâche suivante de la leçon  
- [Ajout de données vue de Source pour les données de centre d’appels &#40;intermédiaire Didacticiel d’exploration de données&#41;](../../2014/tutorials/add-data-source-view-call-center-data-intermediate-data-mining.md)  
+ [Ajout d’une données vue de Source pour les données de centre d’appels &#40;didacticiel d’exploration de données intermédiaire&#41;](../../2014/tutorials/add-data-source-view-call-center-data-intermediate-data-mining.md)  
   
 ## <a name="all-lessons"></a>Toutes les leçons  
- [Leçon 1 : Création de la Solution d’exploration de données intermédiaire &#40;intermédiaire Didacticiel d’exploration de données&#41;](../../2014/tutorials/lesson-1-create-solution-intermediate-data-mining-tutorial.md)  
+ [Leçon 1 : Création de la Solution d’exploration de données intermédiaire &#40;didacticiel d’exploration de données intermédiaire&#41;](../../2014/tutorials/lesson-1-create-solution-intermediate-data-mining-tutorial.md)  
   
- [Leçon 2 : Création d’un scénario de prévision &#40;intermédiaire Didacticiel d’exploration de données&#41;](../../2014/tutorials/lesson-2-building-a-forecasting-scenario-intermediate-data-mining-tutorial.md)  
+ [Leçon 2 : Création d’un scénario de prévision &#40;didacticiel d’exploration de données intermédiaire&#41;](../../2014/tutorials/lesson-2-building-a-forecasting-scenario-intermediate-data-mining-tutorial.md)  
   
- [Leçon 3 : Génération d’un scénario de panier d’achat &#40;intermédiaire Didacticiel d’exploration de données&#41;](../../2014/tutorials/lesson-3-building-a-market-basket-scenario-intermediate-data-mining-tutorial.md)  
+ [Leçon 3 : Génération d’un scénario de panier &#40;didacticiel d’exploration de données intermédiaire&#41;](../../2014/tutorials/lesson-3-building-a-market-basket-scenario-intermediate-data-mining-tutorial.md)  
   
- [Leçon 4 : Création d’un scénario Sequence Clustering &#40;intermédiaire Didacticiel d’exploration de données&#41;](../../2014/tutorials/lesson-4-build-sequence-clustering-scenario-intermediate-data-mining.md)  
+ [Leçon 4 : Création d’un scénario Sequence Clustering &#40;didacticiel d’exploration de données intermédiaire&#41;](../../2014/tutorials/lesson-4-build-sequence-clustering-scenario-intermediate-data-mining.md)  
   
  Leçon 5 : Scénario de réseau neuronal et de régression logistique (didacticiel sur l’exploration de données intermédiaire)  
   
 ## <a name="see-also"></a>Voir aussi  
- [Didacticiel d’exploration de données de base de données](../../2014/tutorials/basic-data-mining-tutorial.md)   
- [Les intermédiaires Data Mining Tutorial &#40;Analysis Services - Exploration de données&#41;](../../2014/tutorials/intermediate-data-mining-tutorial-analysis-services-data-mining.md)  
+ [Didacticiel d’exploration de données de base](../../2014/tutorials/basic-data-mining-tutorial.md)   
+ [Didacticiel d’exploration de données intermédiaire &#40;Analysis Services - Exploration de données&#41;](../../2014/tutorials/intermediate-data-mining-tutorial-analysis-services-data-mining.md)  
   
   

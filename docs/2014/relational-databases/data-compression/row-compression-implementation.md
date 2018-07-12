@@ -5,24 +5,23 @@ ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-data-compression
+ms.technology: ''
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - compression [SQL Server], row
 - row compression [Database Engine]
 ms.assetid: dcd97ac1-1c85-4142-9594-9182e62f6832
 caps.latest.revision: 17
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: f929bb28cfd3771926af176d4cd2e36f99ec8332
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: cddc9636612e5e96c067f4c1c0d87b46976372ba
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36042928"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37160470"
 ---
 # <a name="row-compression-implementation"></a>Implémentation de la compression de ligne
   Cette rubrique récapitule la manière dont le [!INCLUDE[ssDE](../../includes/ssde-md.md)] implémente la compression de ligne. Elle fournit des informations de base qui vous aideront à planifier l'espace de stockage dont vous avez besoin pour vos données.  
@@ -57,7 +56,7 @@ ms.locfileid: "36042928"
 |`smalldatetime`|non|Utilise la représentation des données de type entier sur deux entiers de 2 octets. La date occupe 2 octets. Il s'agit du nombre de jours depuis le 1/1/1901. À partir de 1902, deux octets sont nécessaires. Par conséquent, aucune économie n'est réalisée après cette date.<br /><br /> L'heure est le nombre de minutes depuis minuit. Les valeurs d'heure situées légèrement après 16h00 commencent à utiliser le deuxième octet.<br /><br /> Si un `smalldatetime` est utilisé uniquement pour représenter une date (ce qui est souvent le cas), l'heure est 0.0. La compression permet d'économiser 2 octets en stockant l'heure dans le format d'octet le plus significatif pour la compression de ligne.|  
 |`datetime`|Oui|Utilise la représentation des données de type entier sur deux entiers de 4 octets. La valeur entière représente le nombre de jours depuis la date de base du 1/1/1900. Les 2 premiers octets peuvent représenter jusqu'à l'année 2079. La compression permet toujours d'économiser 2 octets jusqu'à cette date. Chaque valeur entière représente 3,33 millisecondes. La compression épuise les 2 premiers octets dans les cinq premières minutes et a besoin du quatrième octet après 16h00. La compression permet donc d'économiser uniquement 1 octet après 16h00. Lorsque `datetime` est compressé comme tout autre entier, la compression enregistre 2 octets dans la date.|  
 |`date`|non|Utilise la représentation des données de type entier sur 3 octets. Représente la date à compter du 1/1/0001. Pour les dates contemporaines, la compression de ligne utilise les 3 octets. Aucune économie n'est réalisée.|  
-|`time`|non|Utilise la représentation des données de type entier sur 3 à 6 octets. Plusieurs précisions démarrent par un chiffre compris entre 0 et 9 et peuvent occuper entre 3 et 6 octets. Notez l’absence de modification dans le stockage pour la compression de ligne. Globalement, peu d’économies permettre être attendues de la compression de la `time` type de données. L'espace compressé est utilisé comme suit :<br /><br /> Précision = 0. Octets = 3. Chaque valeur entière représente une seconde. La compression peut représenter l'heure jusqu'à 6h00 sur 2 octets, ce qui permet d'économiser potentiellement 1 octet.<br /><br /> Précision = 1. Octets = 3. Chaque valeur entière représente 1/10 seconde. La compression utilise le troisième octet avant 2h00. De petites économies sont ainsi réalisées.<br /><br /> Précision = 2. Octets = 3. Semblable au cas précédent, la réalisation d'économies est peu probable.<br /><br /> Précision = 3. Octets = 4. Dans la mesure où les 3 premiers octets sont occupés dès 5h00, peu d'économies sont réalisées.<br /><br /> Précision = 4. Octets = 4. Les trois premiers octets sont occupés dans les 27 premières secondes. Aucune économie n'est attendue.<br /><br /> Précision = 5, octets = 5. Le cinquième octet sera utilisé après midi.<br /><br /> Précision = 6 et 7, Octets = 5. Ne réalise pas d'économies.<br /><br /> Précision = 8, Octets = 6. Le sixième octet sera utilisé après 3h00.|  
+|`time`|non|Utilise la représentation des données de type entier sur 3 à 6 octets. Plusieurs précisions démarrent par un chiffre compris entre 0 et 9 et peuvent occuper entre 3 et 6 octets. Notez l’absence de modification dans le stockage pour la compression de ligne. Globalement, peu d’économies peut être attendues de la compression de la `time` type de données. L'espace compressé est utilisé comme suit :<br /><br /> Précision = 0. Octets = 3. Chaque valeur entière représente une seconde. La compression peut représenter l'heure jusqu'à 6h00 sur 2 octets, ce qui permet d'économiser potentiellement 1 octet.<br /><br /> Précision = 1. Octets = 3. Chaque valeur entière représente 1/10 seconde. La compression utilise le troisième octet avant 2h00. De petites économies sont ainsi réalisées.<br /><br /> Précision = 2. Octets = 3. Semblable au cas précédent, la réalisation d'économies est peu probable.<br /><br /> Précision = 3. Octets = 4. Dans la mesure où les 3 premiers octets sont occupés dès 5h00, peu d'économies sont réalisées.<br /><br /> Précision = 4. Octets = 4. Les trois premiers octets sont occupés dans les 27 premières secondes. Aucune économie n'est attendue.<br /><br /> Précision = 5, octets = 5. Le cinquième octet sera utilisé après midi.<br /><br /> Précision = 6 et 7, Octets = 5. Ne réalise pas d'économies.<br /><br /> Précision = 8, Octets = 6. Le sixième octet sera utilisé après 3h00.|  
 |`datetime2`|Oui|Utilise la représentation des données de type entier sur 6 à 9 octets. Les 4 premiers octets représentent la date. Les octets occupés par la date dépendent de la précision de l'heure spécifiée.<br /><br /> La valeur entière représente le nombre de jours depuis le 1/1/0001, avec une date limite située au 31/31/9999. La représentation d'une date de l'année 2005 occupe 3 octets.<br /><br /> Aucune économie n'est réalisée sur les heures car 2 à 4 octets sont nécessaires pour différentes précisions d'heure. Par conséquent, pour une précision de l'heure à la seconde, la compression utilise 2 octets pour l'heure et occupe le deuxième octet après 255 secondes.|  
 |`datetimeoffset`|Oui|Ressemble à `datetime2`, sauf qu’il y a 2 octets de fuseau horaire au format (hh : mm).<br /><br /> Comme `datetime2`, la compression peut permettre d'économiser 2 octets.<br /><br /> Pour les valeurs de fuseau horaire, la valeur MM peut être 0 dans la plupart des cas. Par conséquent, la compression peut permettre d'économiser 1 octet.<br /><br /> Il n'y a aucune modification dans le stockage pour la compression de ligne.|  
 |`char`|Oui|Les caractères de remplissage à droite sont supprimés. Notez que le [!INCLUDE[ssDE](../../includes/ssde-md.md)] insère le même caractère de remplissage quel que soit le classement utilisé.|  

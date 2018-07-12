@@ -1,12 +1,12 @@
 ---
-title: Envoi de données comme un paramètre table à l’aide de Data-At-Execution (ODBC) | Documents Microsoft
+title: Envoi de données comme un paramètre table à l’aide de Data-At-Execution (ODBC) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: connectivity
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -16,24 +16,24 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 1252eaabf879ca1c0685ac6ec4334ce15a98fe27
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
+ms.openlocfilehash: c939772d5e8e9e8a5ef9aa7bcf2a817acefe5b96
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35698600"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37413054"
 ---
 # <a name="sending-data-as-a-table-valued-parameter-using-data-at-execution-odbc"></a>Envoi de données en tant que paramètre table à l'aide de données en cours d'exécution (ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
-  Ceci est similaire à la [dans la mémoire](../../relational-databases/native-client-odbc-table-valued-parameters/sending-data-as-a-table-valued-parameter-with-all-values-in-memory-odbc.md) procédure, mais utilise data-at-execution pour le paramètre table.  
+  Ceci est similaire à la [tous en mémoire](../../relational-databases/native-client-odbc-table-valued-parameters/sending-data-as-a-table-valued-parameter-with-all-values-in-memory-odbc.md) procédure, mais utilise data-at-execution pour le paramètre table.  
   
- Pour un autre exemple illustrant des paramètres table, consultez [utiliser des paramètres &#40;ODBC&#41;](../../relational-databases/native-client-odbc-how-to/use-table-valued-parameters-odbc.md).  
+ Pour un autre exemple illustrant des paramètres table, consultez [utiliser les paramètres &#40;ODBC&#41;](../../relational-databases/native-client-odbc-how-to/use-table-valued-parameters-odbc.md).  
   
- Dans cet exemple, lorsque SQLExecute ou SQLExecDirect est appelée, le pilote retourne SQL_NEED_DATA. L’application appelle ensuite SQLParamData à plusieurs reprises jusqu'à ce que le pilote retourne une valeur autre que SQL_NEED_DATA. Le pilote retourne *ParameterValuePtr* pour informer l’application paramètre auquel il demande des données. L’application appelle pour fournir des données de paramètre avant l’appel suivant à SQLParamData SQLPutData. Pour un paramètre table, l’appel à SQLPutData indique le nombre de lignes qu’il a préparé pour le pilote (dans cet exemple, toujours 1). Lorsque toutes les lignes de la valeur de la table ont été passées au pilote, SQLPutData est appelé pour indiquer que 0 ligne est disponibles.  
+ Dans cet exemple, lorsque SQLExecute ou SQLExecDirect est appelée, le pilote retourne SQL_NEED_DATA. L’application appelle ensuite SQLParamData à plusieurs reprises jusqu'à ce que le pilote retourne une valeur autre que SQL_NEED_DATA. Le pilote retourne *ParameterValuePtr* pour informer l’application le paramètre auquel il demande des données. L’application appelle SQLPutData pour fournir des données de paramètre avant l’appel suivant à SQLParamData. Pour un paramètre table, l’appel à SQLPutData indique le nombre de lignes qu’il a préparé pour le pilote (dans cet exemple, toujours 1). Lorsque toutes les lignes de la valeur de la table ont été passées au pilote, SQLPutData est appelée pour indiquer que 0 ligne est disponibles.  
   
- Il est possible d'utiliser les valeurs de données en cours d'exécution dans les lignes d'une valeur de table. La valeur retournée par SQLParamData informe l’application dont la valeur du pilote requiert. Comme avec les valeurs de paramètre normales, SQLPutData peut être appelé valeur de colonne d’une ou plusieurs fois pour une valeur de table binaire ou caractère. Cela permet à une application de passer de grandes valeurs en plusieurs parties.  
+ Il est possible d'utiliser les valeurs de données en cours d'exécution dans les lignes d'une valeur de table. La valeur retournée par SQLParamData informe l’application dont la valeur du pilote requiert. Comme avec les valeurs de paramètre normales, SQLPutData peut être appelée par valeur de colonne d’une ou plusieurs fois pour une valeur de table binaire ou caractère. Cela permet à une application de passer de grandes valeurs en plusieurs parties.  
   
  Lorsque SQLPutData est appelée pour une valeur de table, *DataPtr* est utilisé pour le nombre de lignes disponibles (dans cet exemple, toujours 1). *StrLen_or_IndPtr* doit toujours être 0. Lorsque toutes les lignes de la valeur de la table ont été passées, SQLPutData est appelée avec un *DataPtr* la valeur 0.  
   
@@ -129,14 +129,14 @@ from @Items
     strcpy_s((char *) CustCode ,sizeof(CustCode), "CUST1"); cbCustCode = SQL_NTS;  
     ```  
   
-5.  Appelez la procédure. SQLExecDirect retourne SQL_NEED_DATA parce que le paramètre table est un paramètre de data-at-execution.  
+5.  Appelez la procédure. SQLExecDirect retourne SQL_NEED_DATA parce que le paramètre table est un paramètre data-at-execution.  
   
     ```  
     // Call the procedure  
     r = SQLExecDirect(hstmt, (SQLCHAR *) "{call TVPOrderEntry(?, ?, ?, ?)}",SQL_NTS);  
     ```  
   
-6.  Fournissez des données de paramètre de données en cours d'exécution. Lors du retour SQLParamData le *ParameterValuePtr* pour un paramètre table, l’application doit préparer les colonnes pour l’ou les lignes de la valeur de la table suivante. L’application appelle ensuite SQLPutData avec *DataPtr* défini sur le nombre de lignes disponibles (dans cet exemple, 1) et *StrLen_or_IndPtr* la valeur 0.  
+6.  Fournissez des données de paramètre de données en cours d'exécution. Lorsque SQLParamData retourne le *ParameterValuePtr* pour un paramètre table, l’application doit préparer les colonnes pour l’ou les lignes de la valeur de la table suivante. L’application appelle ensuite SQLPutData avec *DataPtr* défini sur le nombre de lignes disponibles (dans cet exemple, 1) et *StrLen_or_IndPtr* définie sur 0.  
   
     ```  
     // Check if parameter data is required, and get the first parameter ID token  
@@ -191,7 +191,7 @@ from @Items
 ## <a name="example"></a>Exemple  
   
 ### <a name="description"></a>Description  
- Cet exemple montre que vous pouvez utiliser des lignes en continu, une ligne par un appel à SQLPutData, avec ODBC TVP, semblable à la façon dont vous pouvez utiliser BCP.exe pour charger des données dans une base de données.  
+ Cet exemple montre que vous pouvez utiliser des lignes en continu, une ligne par appel à SQLPutData, avec ODBC TVP, similaire à la façon dont vous pouvez utiliser BCP.exe pour charger des données dans une base de données.  
   
  Avant de générer l'exemple, remplacez le nom du serveur dans la chaîne de connexion.  
   
@@ -379,7 +379,7 @@ EXIT:
 ## <a name="example"></a>Exemple  
   
 ### <a name="description"></a>Description  
- Cet exemple montre que vous pouvez utiliser des lignes en continu, plusieurs lignes par appel à SQLPutData, avec ODBC TVP, semblable à la façon dont vous pouvez utiliser BCP.exe pour charger des données dans une base de données.  
+ Cet exemple montre que vous pouvez utiliser des lignes en continu, plusieurs lignes par appel à SQLPutData, avec ODBC TVP, similaire à la façon dont vous pouvez utiliser BCP.exe pour charger des données dans une base de données.  
   
  Avant de générer l'exemple, remplacez le nom du serveur dans la chaîne de connexion.  
   
@@ -585,6 +585,6 @@ EXIT:
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Exemples de programmation du paramètre table ODBC](http://msdn.microsoft.com/library/3f52b7a7-f2bd-4455-b79e-d015fb397726)  
+ [Exemples de programmation de paramètres table ODBC](http://msdn.microsoft.com/library/3f52b7a7-f2bd-4455-b79e-d015fb397726)  
   
   

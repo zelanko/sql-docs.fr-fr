@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - HTTP [Reporting Services]
 ms.assetid: 6cc433b7-165c-4b16-9034-79256dd6735f
 caps.latest.revision: 15
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 83d48cf33405988c9aedaceccc677ee238a7ea5e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 3d697c1cb894028de8ccea5e3b87fc7d0cf155d4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36042393"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37202599"
 ---
 # <a name="report-server-http-log"></a>Journal HTTP Report Server
   Les fichiers journaux HTTP Report Server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] gardent un enregistrement de chaque requête et réponse HTTP gérée par le serveur de rapports. Dans la mesure où les erreurs de dépassement de capacité et de délai d'attente des requêtes n'atteignent pas le serveur de rapports, elles ne sont pas enregistrées dans le fichier journal.  
@@ -36,7 +36,7 @@ ms.locfileid: "36042393"
 |**Nom de fichier**|Par défaut, les noms de fichiers journaux sont<br /><br /> `ReportServerService_HTTP_<timestamp>.log.`<br /><br /> Vous pouvez personnaliser le préfixe du nom de fichier en modifiant l'attribut HttpTraceFileName dans le fichier ReportingServicesService.exe.config. L'horodateur est basé sur l'heure UTC (Coordinated Universal Time).|  
 |**Emplacement du fichier**|Ces fichiers sont écrits à l'emplacement suivant :<br /><br /> `\Microsoft SQL Server\<SQL Server Instance>\Reporting Services\LogFiles`|  
 |**Format du fichier**|Le fichier est au format EN-US. Il s'agit d'un fichier texte ASCII.|  
-|**Création de fichiers et de rétention**|Le journal HTTP est créé une fois que vous l'avez activé dans le fichier de configuration, que vous avez redémarré le service, et que le serveur de rapports a géré une requête HTTP. Si vous configurez les paramètres mais que le fichier journal ne s'affiche pas, ouvrez un rapport ou démarrez une application du serveur de rapports (par exemple le Gestionnaire de rapports) afin de générer une requête HTTP pour créer le fichier.<br /><br /> Une nouvelle instance du fichier journal est créée chaque fois que le service redémarre et que la requête HTTP qui en résulte est envoyée au serveur de rapports.<br /><br /> Par défaut, les journaux des traces sont limités à 32 mégaoctets et sont supprimés après 14 jours.|  
+|**La création de fichiers et de rétention**|Le journal HTTP est créé une fois que vous l'avez activé dans le fichier de configuration, que vous avez redémarré le service, et que le serveur de rapports a géré une requête HTTP. Si vous configurez les paramètres mais que le fichier journal ne s'affiche pas, ouvrez un rapport ou démarrez une application du serveur de rapports (par exemple le Gestionnaire de rapports) afin de générer une requête HTTP pour créer le fichier.<br /><br /> Une nouvelle instance du fichier journal est créée chaque fois que le service redémarre et que la requête HTTP qui en résulte est envoyée au serveur de rapports.<br /><br /> Par défaut, les journaux des traces sont limités à 32 mégaoctets et sont supprimés après 14 jours.|  
   
 ## <a name="configuration-settings-for-report-server-http-log"></a>Paramètres de configuration du journal HTTP Report Server  
  Pour configurer le journal HTTP Report Server, utilisez le Bloc-notes afin de modifier le fichier **ReportingServicesService.exe.config** . Le fichier de configuration se trouve dans le dossier \Program Files\Microsoft SQL Server\MSSQL.n\Reporting Services\ReportServer\Bin.  
@@ -58,7 +58,7 @@ ms.locfileid: "36042393"
 ```  
   
 ## <a name="log-file-fields"></a>Champs du fichier journal  
- Le tableau suivant décrit les champs disponibles dans le journal. La liste de champs est configurable ; Vous pouvez spécifier les champs à inclure via le `HTTPTraceSwitches` paramètre de configuration. Le **par défaut** colonne indique si le champ doit être inclus dans le fichier journal automatiquement si vous ne spécifiez pas `HTTPTraceSwitches`.  
+ Le tableau suivant décrit les champs disponibles dans le journal. La liste de champs est configurable ; Vous pouvez spécifier les champs à inclure via le `HTTPTraceSwitches` paramètre de configuration. Le **par défaut** colonne Spécifie si le champ doit être inclus dans le fichier journal automatiquement si vous ne spécifiez pas `HTTPTraceSwitches`.  
   
 |Champ|Description|Valeur par défaut|  
 |-----------|-----------------|-------------|  

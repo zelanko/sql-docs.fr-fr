@@ -1,5 +1,5 @@
 ---
-title: Création multidimensionnelles de modèles à l’aide de SQL Server Data Tools (SSDT) | Documents Microsoft
+title: Création multidimensionnelles de modèles à l’aide de SQL Server Data Tools (SSDT) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - SSAS, environments
 - Analysis Services, development
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - solutions [Analysis Services]
 ms.assetid: 132ed779-3ec8-4734-9698-802116d1b017
 caps.latest.revision: 62
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 8dde8c6662ce3c9b02b499ee13f7800ee80e99c6
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 6ac2314535195be0f1932e0edaaecdedfd6a99c7
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36041916"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37198449"
 ---
 # <a name="creating-multidimensional-models-using-sql-server-data-tools-ssdt"></a>Création de modèles MDX à l'aide des Outils de données SQL Server (SSDT)
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fournit deux environnements différents pour générer, déployer et gérer des solutions [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] : [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] et [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Ces deux environnements implémentent un système de projet. Pour plus d’informations sur les projets Visual Studio, consultez [Projets en tant que conteneurs](http://go.microsoft.com/fwlink/?LinkId=63960) dans MSDN Library.  
@@ -85,7 +85,7 @@ ms.locfileid: "36041916"
   
 ## <a name="see-also"></a>Voir aussi  
  [Créer un projet Analysis Services &#40;SSDT&#41;](create-an-analysis-services-project-ssdt.md)   
- [Projet de Scripts Analysis Services dans SQL Server Management Studio](../instances/analysis-services-scripts-project-in-sql-server-management-studio.md)   
+ [Projet de script Analysis Services dans SQL Server Management Studio](../instances/analysis-services-scripts-project-in-sql-server-management-studio.md)   
  [Bases de données Model multidimensionnelles &#40;SSAS&#41;](multidimensional-model-databases-ssas.md)  
   
   
