@@ -1,5 +1,5 @@
 ---
-title: Base de données de la boîte de dialogue de propriétés (SSAS - multidimensionnel) | Documents Microsoft
+title: Boîte de dialogue de propriétés (SSAS - multidimensionnel) de base de données | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.sqlserverstudio.databaseproperties.f1
 ms.assetid: 70f000b7-917f-4699-b142-7a0d13ff767c
 caps.latest.revision: 22
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 99e14ae619776a0d14f2c78cff20a74dbc72c0a6
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 2c138f61c17f79ed264dda4c28be766a7b41c9b2
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36041500"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37157370"
 ---
 # <a name="database-properties-dialog-box-ssas---multidimensional"></a>Boîte de dialogue Propriétés de la base de données (SSAS - Multidimensionnelle)
   Utilisez la boîte de dialogue **Propriétés de la base de données** dans [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] pour définir les propriétés d'une base de données [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] . Vous pouvez afficher la boîte de dialogue **Propriétés de la base de données** en cliquant avec le bouton droit sur une base de données dans l’Explorateur d’objets et en sélectionnant **Propriétés**.  

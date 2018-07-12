@@ -1,5 +1,5 @@
 ---
-title: Créer et personnaliser une galerie PowerPivot | Documents Microsoft
+title: Créer et personnaliser une galerie PowerPivot | Microsoft Docs
 ms.custom: ''
 ms.date: 09/01/2015
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: b5cd35e0-3d8f-4784-9172-93d60c730321
 caps.latest.revision: 14
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 039c5b834287d17480c9031f17ab2fed25c641fb
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 4d2e5434ae7f306b3f4a8de1d1c7356beb989b82
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36041227"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37181000"
 ---
 # <a name="create-and-customize-powerpivot-gallery"></a>Créer et personnaliser une Galerie PowerPivot
   La Galerie PowerPivot est un type de bibliothèque de documents SharePoint à usage spécial qui fournit des options d'aperçu et de gestion des documents pour les classeurs Excel publiés et les rapports Reporting Services contenant des données PowerPivot.  
@@ -54,12 +54,12 @@ ms.locfileid: "36041227"
   
 -   [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] ne doit pas être située dans un site sensible. Le site parent qui contient la Galerie [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] doit être ajouté dans la zone sites de confiance ou Intranet local.  
   
--   La solution d’application web [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] doit être déployée pour votre application et la fonctionnalité [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] doit être activée pour la collection de sites. Pour plus d’informations, consultez [déployer des Solutions PowerPivot pour SharePoint](deploy-power-pivot-solutions-to-sharepoint.md) et[activer la fonctionnalité d’intégration PowerPivot pour les Collections de sites dans l’Administration centrale](activate-power-pivot-integration-for-site-collections-in-ca.md).  
+-   La solution d’application web [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] doit être déployée pour votre application et la fonctionnalité [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] doit être activée pour la collection de sites. Pour plus d’informations, consultez [déployer des Solutions PowerPivot pour SharePoint](deploy-power-pivot-solutions-to-sharepoint.md) et[activer fonctionnalité d’intégration PowerPivot pour les Collections de sites dans l’Administration centrale](activate-power-pivot-integration-for-site-collections-in-ca.md).  
   
 -   Pour être en mesure d'afficher ou de créer un rapport Reporting Services basé sur un classeur [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] , vous devez installer le classeur et le rapport dans la même bibliothèque Galerie [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] . Le rapport doit utiliser un classeur [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] qui contient des données incorporées ou le classeur doit contenir au plus une source de données externe qui est un classeur [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] .  
   
 ##  <a name="overview"></a> Vue d'ensemble  
- [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] est un modèle de bibliothèque disponible lorsque vous installez [!INCLUDE[ssGeminiLong](../../includes/ssgeminilong-md.md)] sur un serveur SharePoint. La Galerie [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] combine un aperçu exact du contenu du fichier avec les informations relatives à l'origine du document. Vous pouvez voir immédiatement qui a créé le document et quand il a été modifié pour la dernière fois. Pour créer des images d’aperçu, [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] galerie utilise un service d’instantanés capable de lire [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] classeurs et rapports Reporting Services qui contiennent des données PowerPivot. Si vous publiez un fichier que le service d'instantanés ne peut pas lire, aucune image d'aperçu n'est disponible pour ce fichier.  
+ [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] est un modèle de bibliothèque disponible lorsque vous installez [!INCLUDE[ssGeminiLong](../../includes/ssgeminilong-md.md)] sur un serveur SharePoint. La Galerie [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] combine un aperçu exact du contenu du fichier avec les informations relatives à l'origine du document. Vous pouvez voir immédiatement qui a créé le document et quand il a été modifié pour la dernière fois. Pour créer des images d’aperçu, [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] bibliothèque utilise un service de capture instantanée peut lire [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] classeurs et rapports Reporting Services qui contiennent des données PowerPivot. Si vous publiez un fichier que le service d'instantanés ne peut pas lire, aucune image d'aperçu n'est disponible pour ce fichier.  
   
  Les images d'aperçu reposent sur la façon dont le classeur est restitué par Excel Services. La représentation dans la Galerie [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] doit être identique à celle que vous voyez quand vous affichez un classeur [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] dans un navigateur. L'aperçu a cependant une surface d'exposition limitée. Les parties d'un classeur ou rapport peuvent être réduites de façon à s'ajuster à l'espace disponible. Vous devrez peut-être ouvrir un classeur ou un rapport pour visualiser le document dans son intégralité.  
   
@@ -74,7 +74,7 @@ ms.locfileid: "36041227"
   
     3.  Sous Bibliothèques, cliquez sur **Galerie PowerPivot**.  
   
-    1.  **SharePoint 2013**: cliquez sur l’icône paramètres ![paramètres SharePoint](../media/as-sharepoint2013-settings-gear.gif "paramètres SharePoint"). Cliquez sur **Contenu du site**.  
+    1.  **SharePoint 2013**: cliquez sur l’icône des paramètres ![paramètres SharePoint](../media/as-sharepoint2013-settings-gear.gif "paramètres SharePoint"). Cliquez sur **Contenu du site**.  
   
     2.  Cliquez sur **Ajouter une application**.  
   
@@ -84,7 +84,7 @@ ms.locfileid: "36041227"
   
 3.  Cliquez sur **Créer**.  
   
-4.  Demandez à un administrateur de service ou de batterie de serveurs d'ajouter la Galerie [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] comme emplacement approuvé pour Excel Services. Cette étape est nécessaire pour éviter des erreurs si un utilisateur configure un classeur pour l'actualisation des données [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] . Pour plus d’informations, consultez [créer un emplacement approuvé pour les sites PowerPivot dans l’Administration centrale](create-a-trusted-location-for-power-pivot-sites-in-central-administration.md).  
+4.  Demandez à un administrateur de service ou de batterie de serveurs d'ajouter la Galerie [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] comme emplacement approuvé pour Excel Services. Cette étape est nécessaire pour éviter des erreurs si un utilisateur configure un classeur pour l'actualisation des données [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] . Pour plus d’informations sur cette tâche, consultez [créer un emplacement approuvé pour les sites PowerPivot dans l’Administration centrale](create-a-trusted-location-for-power-pivot-sites-in-central-administration.md).  
   
  Un lien vers la bibliothèque [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] s'affiche dans le volet de navigation Lancement rapide du site actuel.  
   
@@ -154,6 +154,6 @@ ms.locfileid: "36041227"
  [Dépanner un PowerPivot pour SharePoint](../../sql-server/install/troubleshoot-a-powerpivot-for-sharepoint-installation.md)   
  [Utiliser la galerie PowerPivot](use-power-pivot-gallery.md)   
  [Créer un emplacement approuvé pour les sites PowerPivot dans l’Administration centrale](create-a-trusted-location-for-power-pivot-sites-in-central-administration.md)   
- [Supprimer une bibliothèque PowerPivot](delete-power-pivot-gallery.md)  
+ [Supprimer une Galerie PowerPivot](delete-power-pivot-gallery.md)  
   
   

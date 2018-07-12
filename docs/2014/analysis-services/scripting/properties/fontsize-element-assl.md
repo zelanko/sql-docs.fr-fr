@@ -1,5 +1,5 @@
 ---
-title: Élément FontSize (ASSL) | Documents Microsoft
+title: Élément FontSize (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,18 +22,18 @@ helpviewer_keywords:
 - FontSize element
 ms.assetid: 49f66a73-946a-4fbd-9749-a3ca1b717ff3
 caps.latest.revision: 37
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 1eaf29caf869de81e397b92f9953d9b673d17019
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 8f6b5ba39d52cb96061fe4d19208e6e343bab5f6
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36040724"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37167530"
 ---
 # <a name="fontsize-element-assl"></a>Élément FontSize (ASSL)
-  Décrit les caractéristiques des polices d’affichage de la [CalculationProperty](../objects/calculationproperty-element-assl.md) ou [mesure](../objects/measure-element-assl.md) élément parent.  
+  Décrit les caractéristiques d’affichage liées à la police de la [CalculationProperty](../objects/calculationproperty-element-assl.md) ou [mesure](../objects/measure-element-assl.md) élément parent.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -62,7 +62,7 @@ ms.locfileid: "36040724"
 |Éléments enfants|None|  
   
 ## <a name="remarks"></a>Notes  
- Le `FontSize` propriété contient une expression MDX (Multidimensional Expressions) et s’applique aux `CalculationProperty` les éléments qui ont un [CalculationType](calculationtype-element-assl.md) de *membre* ou *cellules* .  
+ Le `FontSize` propriété contient une expression MDX (Multidimensional Expressions) et s’applique aux `CalculationProperty` éléments qui ont un [CalculationType](calculationtype-element-assl.md) de *membre* ou *cellules* .  
   
  Les éléments qui correspondent aux parents de `FontSize` dans le modèle d’objet objets AMO (Analysis Management) sont <xref:Microsoft.AnalysisServices.CalculationProperty> et <xref:Microsoft.AnalysisServices.Measure>.  
   

@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: fff24978-e3bd-4fac-8cd7-d6aa81f3cc25
 caps.latest.revision: 5
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 4c2aadf05db9ddef965acbb7164068dd975d0869
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 58e47fd86d19881c96d5ff13a87d846ca4016ac8
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36040813"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37161920"
 ---
 # <a name="change-a-chart-type-report-builder-and-ssrs"></a>Modifier un type de graphique (Générateur de rapports version et SSRS)
-  Lorsque vous commencez par insérer un graphique dans un rapport, le **sélectionner le Type de graphique** boîte de dialogue s’affiche. Si vous annulez cette boîte de dialogue, un type d'histogramme est ajouté par défaut.  
+  Lorsque vous commencez par insérer un graphique dans un rapport, le **sélectionner le Type de graphique** boîte de dialogue apparaît. Si vous annulez cette boîte de dialogue, un type d'histogramme est ajouté par défaut.  
   
  À tout moment lors de la conception du rapport, vous pouvez remplacer le type de graphique par un type plus approprié au rapport. Il est important de sélectionner le type de graphique correct pour vos données afin qu'il puisse être interprété correctement. Vous devez comprendre les caractéristiques de chaque type de graphique pour déterminer celui qui est le mieux adapté à vos données. Pour plus d’informations, consultez [Types de graphiques &#40;Générateur de rapports et SSRS&#41;](chart-types-report-builder-and-ssrs.md).  
   
@@ -42,7 +42,7 @@ ms.locfileid: "36040813"
   
 ## <a name="see-also"></a>Voir aussi  
  [Graphiques &#40;Générateur de rapports et SSRS&#41;](charts-report-builder-and-ssrs.md)   
- [Jauges &#40;rapport Générateur et SSRS&#41;](gauges-report-builder-and-ssrs.md)   
- [Ajouter un graphique à un rapport &#40;rapport Générateur et SSRS&#41;](add-a-chart-to-a-report-report-builder-and-ssrs.md)  
+ [Jauges &#40;Générateur de rapports et SSRS&#41;](gauges-report-builder-and-ssrs.md)   
+ [Ajouter un graphique à un rapport &#40;Générateur de rapports et SSRS&#41;](add-a-chart-to-a-report-report-builder-and-ssrs.md)  
   
   

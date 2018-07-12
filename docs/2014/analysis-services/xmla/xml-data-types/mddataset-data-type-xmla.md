@@ -1,5 +1,5 @@
 ---
-title: Type de données MDDataSet (XMLA) | Documents Microsoft
+title: Type de données MDDataSet (XMLA) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -24,15 +24,15 @@ helpviewer_keywords:
 - MDDataSet data type
 ms.assetid: 1a7e0092-f9f0-4ae5-ba27-ad1d8ebe8cb9
 caps.latest.revision: 27
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 098a123c28e4a449ad6425d1a74ff8355d074e08
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 9c1580365cc6c7949c552333728b5083b96f7ef9
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36040237"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37165320"
 ---
 # <a name="mddataset-data-type-xmla"></a>Type de données MDDataSet (XMLA)
   Définit un type de données dérivé qui représente les données multidimensionnelles retournées par la [Execute](../xml-elements-methods-execute.md) (méthode).  
@@ -68,7 +68,7 @@ ms.locfileid: "36040237"
 |Éléments dérivés|None|  
   
 ## <a name="remarks"></a>Notes  
- Le type de données `MDDataSet` fournit l'ensemble de lignes (ou le dataset) orienté OLAP requis pour représenter des données OLAP en XML. Le contenu de cet ensemble de lignes peut varier en fonction des valeurs de la `Content` et `Format` propriétés fournies dans le [propriétés](../xml-elements-properties/properties-element-xmla.md) collection de la `Execute` (méthode). Pour plus d’informations sur la `Content` et `Format` propriétés, consultez [pris en charge les propriétés XMLA &#40;XMLA&#41;](../xml-elements-properties/propertylist-element-supported-xmla-properties.md).  
+ Le type de données `MDDataSet` fournit l'ensemble de lignes (ou le dataset) orienté OLAP requis pour représenter des données OLAP en XML. Le contenu de cet ensemble de lignes peut varier en fonction des valeurs de la `Content` et `Format` propriétés fournies dans le [propriétés](../xml-elements-properties/properties-element-xmla.md) collection de la `Execute` (méthode). Pour plus d’informations sur la `Content` et `Format` propriétés, consultez [propriétés XMLA prises en charge &#40;XMLA&#41;](../xml-elements-properties/propertylist-element-supported-xmla-properties.md).  
   
  Pour informations de base à propos des structures de dataset OLE DB pour OLAP, consultez la section « Type de données MDDataSet mappage sur OLE DB » de la spécification XML for Analysis 1.1. Pour un exemple complet du type de données `MDDataSet` dans le langage XSD (XML Schema definition language), consultez la section « Appendix D: MDDataSet Example » de la spécification XML for Analysis 1.1 (en anglais).  
   

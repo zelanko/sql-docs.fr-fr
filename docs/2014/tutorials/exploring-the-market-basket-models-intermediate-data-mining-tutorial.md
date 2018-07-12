@@ -1,5 +1,5 @@
 ---
-title: Exploration des modèles de panier d’achat (didacticiel sur l’exploration des données intermédiaires) | Documents Microsoft
+title: Exploration des modèles de panier d’achat (didacticiel d’exploration de données intermédiaire) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: da1c9cb7-6c32-4b9b-96ec-ecea772aeb77
 caps.latest.revision: 33
 author: minewiskan
 ms.author: owend
-manager: kfile
-ms.openlocfilehash: 7b3a2e70a8831bd31a8397ec57a71dbf1f5a3207
-ms.sourcegitcommit: 8c040e5b4e8c7d37ca295679410770a1af4d2e1f
+manager: craigg
+ms.openlocfilehash: c81bba0a055f812afddb56eac604111796f464d7
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/21/2018
-ms.locfileid: "36313067"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37179136"
 ---
 # <a name="exploring-the-market-basket-models-intermediate-data-mining-tutorial"></a>Exploration des modèles d'analyse de panier (Didacticiel intermédiaire sur l'exploration de données)
-  Maintenant que vous avez créé le `Association` modèle, vous pouvez le parcourir en utilisant le [!INCLUDE[msCoName](../includes/msconame-md.md)] visionneuse d’associations dans le **visionneuse de modèle d’exploration de données** onglet du Concepteur d’exploration de données. Ce didacticiel vous guide dans l'utilisation de la visionneuse pour explorer les relations entre des éléments. La visionneuse vous aide à consulter d'un coup d'œil les produits qui tendent à apparaître ensemble et avoir une idée générale des nouvelles tendances.  
+  Maintenant que vous avez créé le `Association` modèle, vous pouvez le parcourir à l’aide de la [!INCLUDE[msCoName](../includes/msconame-md.md)] visionneuse d’associations dans le **visionneuse de modèle d’exploration de données** onglet du Concepteur d’exploration de données. Ce didacticiel vous guide dans l'utilisation de la visionneuse pour explorer les relations entre des éléments. La visionneuse vous aide à consulter d'un coup d'œil les produits qui tendent à apparaître ensemble et avoir une idée générale des nouvelles tendances.  
   
  Le [!INCLUDE[msCoName](../includes/msconame-md.md)] visionneuse d’associations contient trois onglets : **règles**, **jeux d’éléments**, et **réseau de dépendances**. Comme chaque onglet révèle une vue légèrement différente des données, lorsque vous explorez un modèle, vous basculez en général entre les différents volets plusieurs fois pour obtenir des éclaircissements.  
   
@@ -32,12 +32,12 @@ ms.locfileid: "36313067"
   
 -   [Onglet règles](#bkmk_Rules)  
   
--   [Affichage de contenu générique](#bkmk_ContentViewer)  
+-   [Vue de contenu générique](#bkmk_ContentViewer)  
   
- Pour ce didacticiel, vous allez démarrer sur le **réseau de dépendances** onglet, puis utilisez le **règles** onglet et **jeux d’éléments** tab pour approfondir votre compréhension des relations qui s’affichent dans la visionneuse. Vous allez également utiliser le **visionneuse d’arborescences contenu générique Microsoft** pour extraire des statistiques détaillées pour les règles individuelles ou des jeux d’éléments.  
+ Pour ce didacticiel, vous allez démarrer sur le **réseau de dépendances** onglet, puis utilisez le **règles** onglet et **jeux d’éléments** onglet pour approfondir votre compréhension des relations révèle la visionneuse. Vous utiliserez également le **visionneuse d’arborescences contenu générique Microsoft** pour récupérer des statistiques détaillées pour les règles individuelles ou des jeux d’éléments.  
   
 ##  <a name="bkmk_DepNet"></a> Onglet réseau de dépendances  
- Avec la **réseau de dépendances** onglet, vous pouvez étudier l’interaction entre les différents éléments dans le modèle. Chaque nœud dans la visionneuse représente un élément et les lignes entre les éléments représentent des règles. En sélectionnant un nœud, vous pouvez voir les autres nœuds qui prédisent l'élément sélectionné, ou les éléments prédits par ce dernier. Parfois, il existe une association bidirectionnelle entre des éléments, ce qui signifie qu'ils apparaissent souvent dans la même transaction. Vous pouvez vous reporter à la légende de couleur en bas d'onglet pour déterminer la direction de l'association.  
+ Avec le **réseau de dépendances** onglet, vous pouvez étudier l’interaction entre les différents éléments dans le modèle. Chaque nœud dans la visionneuse représente un élément et les lignes entre les éléments représentent des règles. En sélectionnant un nœud, vous pouvez voir les autres nœuds qui prédisent l'élément sélectionné, ou les éléments prédits par ce dernier. Parfois, il existe une association bidirectionnelle entre des éléments, ce qui signifie qu'ils apparaissent souvent dans la même transaction. Vous pouvez vous reporter à la légende de couleur en bas d'onglet pour déterminer la direction de l'association.  
   
  Une ligne qui connecte deux éléments indique qu'il est probable que ces éléments apparaissent ensemble dans une transaction. En d'autres termes, il est probable que les clients achètent ces éléments ensemble. Le curseur est associé à la probabilité de la règle. Déplacez le curseur vers le haut ou le bas pour éliminer les associations faibles, c'est à dire les règles avec une faible probabilité.  
   
@@ -51,19 +51,19 @@ ms.locfileid: "36313067"
   
 2.  Dans le Concepteur d'exploration de données, cliquez sur l'onglet **Visionneuse de modèle d'exploration de données** .  
   
-3.  Sélectionnez l’Association à partir de la liste des modèles d’exploration de données dans le **modèle d’exploration de** liste déroulante.  
+3.  Sélectionnez Association dans la liste des modèles d’exploration de données dans le **modèle d’exploration de** liste déroulante.  
   
 #### <a name="to-navigate-the-dependency-graph-and-locate-specific-nodes"></a>Pour naviguer dans le graphique des dépendances et localiser des nœuds spécifiques  
   
 1.  Dans le **visionneuse de modèle d’exploration de données** , cliquez sur le **réseau de dépendances** onglet.  
   
-2.  Cliquez sur **zoom avant** plusieurs fois, jusqu'à ce que vous pouvez facilement afficher les étiquettes pour chaque nœud.  
+2.  Cliquez sur **effectuer un zoom avant dans** plusieurs fois, jusqu'à ce que vous pouvez facilement afficher les étiquettes pour chaque nœud.  
   
      Par défaut, le graphique s'affiche avec tous les nœuds visibles. Dans un modèle complexe, il peut y avoir de nombreux nœuds, ce qui réduit la taille de chaque nœud.  
   
-3.  Cliquez sur le **+** connecter dans le coin inférieur droit de la visionneuse et maintenez le bouton de la souris pour effectuer un panoramique autour du graphique.  
+3.  Cliquez sur le **+** connecter dans le coin inférieur droit de la visionneuse et maintenez le bouton de la souris pour faire le tour du graphique.  
   
-4.  Sur le côté gauche de la visionneuse, faites glisser le curseur vers le bas, déplacement de **tous les liens** (la valeur par défaut) vers le bas du contrôle slider.  
+4.  Sur le côté gauche de la visionneuse, faites glisser le curseur vers le bas, passer de **tous les liens** (la valeur par défaut) vers le bas du contrôle slider.  
   
 5.  La visionneuse met à jour le graphique pour n'afficher désormais que l'association la plus forte entre les éléments Touring Tire (Pneu pour vélo de tourisme) et Touring Tire Tube (chambre à air pour vélo de tourisme).  
   
@@ -75,14 +75,14 @@ ms.locfileid: "36313067"
   
      Notez les modifications dans la flèche qui connecte les deux éléments.  
   
-8.  Sélectionnez **afficher uniquement les nom d’attribut** dans la liste déroulante en haut du volet réseau de dépendances.  
+8.  Sélectionnez **afficher uniquement le nom attribut** dans la liste déroulante en haut du volet réseau de dépendances.  
   
      Les intitulés de texte dans le graphique sont mis à jour pour afficher uniquement le nom de modèle.  
   
  [Retour au début](#bkmk_DepNet)  
   
 ##  <a name="bkmk_Itemsets"></a> Onglet jeux d’éléments  
- Ensuite, vous approfondirez vos connaissances des règles et des jeux d'éléments générés par le modèle pour les produits Touring Tire et Touring Tire Tube. Le **jeux d’éléments** onglet affiche trois éléments importants d’information qui se rapportent à des jeux d’éléments qui le [!INCLUDE[msCoName](../includes/msconame-md.md)] détecte de l’algorithme d’Association :  
+ Ensuite, vous approfondirez vos connaissances des règles et des jeux d'éléments générés par le modèle pour les produits Touring Tire et Touring Tire Tube. Le **jeux d’éléments** onglet affiche trois informations importantes qui se rapportent à des jeux d’éléments qui le [!INCLUDE[msCoName](../includes/msconame-md.md)] détecte de l’algorithme d’Association :  
   
 -   **Prise en charge :** le nombre de transactions dans lequel le jeu d’éléments se produit.  
   
@@ -108,7 +108,7 @@ ms.locfileid: "36313067"
   
      La liste des jeux d'éléments est mise à jour pour afficher uniquement les jeux d'éléments qui contiennent la chaîne Touring Tire. Le nom long du jeu d'éléments inclut le nom de la table qui contient l'attribut et la valeur pour chaque élément.  
   
-5.  Désactivez le **afficher le nom long** case à cocher.  
+5.  Effacer la **afficher le nom long** case à cocher.  
   
      La liste des jeux d'éléments est mise à jour pour afficher uniquement le nom court.  
   
@@ -118,7 +118,7 @@ ms.locfileid: "36313067"
   
 #### <a name="to-view-details-for-an-itemset"></a>Pour consulter les détails d'un jeu d'éléments  
   
-1.  Dans la liste des jeux d’éléments, cliquez sur le **le jeu d’éléments** en-tête de colonne pour trier par nom.  
+1.  Dans la liste des jeux d’éléments, cliquez sur le **jeu d’éléments** en-tête de colonne pour trier par nom.  
   
 2.  Localisez l’élément, `Touring Tire` (avec sans deuxième élément).  
   
@@ -139,17 +139,17 @@ ms.locfileid: "36313067"
  [Retour au début](#bkmk_DepNet)  
   
 ##  <a name="bkmk_Rules"></a> Onglet règles  
- Le **règles** onglet affiche les informations suivantes relatives aux règles découvertes par l’algorithme.  
+ Le **règles** onglet affiche les informations suivantes relatives aux règles que l’algorithme de recherche.  
   
--   **Probabilité :** le *probabilité* d’une règle, définie comme la probabilité de l’élément de droite étant donné l’élément côté gauche.  
+-   **Probabilité :** le *probabilité* d’une règle, définie comme la probabilité de l’élément de droite compte tenu de l’élément côté gauche.  
   
 -   **Importance :** une mesure de l’utilité d’une règle. Une valeur supérieure signifie une meilleure règle.  
   
      L'importance est indiquée pour vous aider à mesurer l'utilité d'une règle, car se baser uniquement sur la probabilité peut porter à confusion. Par exemple, si chaque transaction contient une bouteille d'eau-- la bouteille d'eau est peut-être ajoutée automatiquement au chariot de chaque client dans le cadre d'une promotion--le modèle peut créer une règle qui prédit que la bouteille d'eau a une probabilité de 1. En tenant compte de la probabilité uniquement, cette règle est exacte, mais elle ne fournit pas d'informations utiles.  
   
--   **La règle :** la définition de la règle. Pour un modèle d'analyse de panier, une règle décrit une combinaison spécifique d'éléments.  
+-   **Règle :** la définition de la règle. Pour un modèle d'analyse de panier, une règle décrit une combinaison spécifique d'éléments.  
   
- Chaque règle peut être utilisée pour prévoir la présence d'un élément dans une transaction en se basant sur la présence d'autres éléments. Tout comme dans le **jeux d’éléments** onglet, vous pouvez filtrer les règles afin que seules les règles les plus intéressantes sont affichés. Si vous utilisez un modèle d'exploration de données qui n'a pas de règles, vous pouvez modifier les paramètres d'algorithme pour abaisser le seuil de probabilité des règles.  
+ Chaque règle peut être utilisée pour prévoir la présence d'un élément dans une transaction en se basant sur la présence d'autres éléments. Tout comme dans le **jeux d’éléments** onglet, vous pouvez filtrer les règles afin qu’uniquement les règles les plus intéressantes sont affichés. Si vous utilisez un modèle d'exploration de données qui n'a pas de règles, vous pouvez modifier les paramètres d'algorithme pour abaisser le seuil de probabilité des règles.  
   
 #### <a name="to-see-only-rules-that-include-the-mountain-200-bicycle"></a>Pour n'afficher que les règles qui incluent le vélo Mountain-200  
   
@@ -157,11 +157,11 @@ ms.locfileid: "36313067"
   
 2.  Dans le **règle de filtre** , entrez `Mountain-200`.  
   
-     Désactivez le **afficher le nom long** case à cocher.  
+     Effacer la **afficher le nom long** case à cocher.  
   
 3.  À partir de la **afficher** liste, sélectionnez **afficher uniquement les nom d’attribut**.  
   
-     La visionneuse affiche alors uniquement les règles qui contiennent les mots «`Mountain-200`». La probabilité de la règle vous indique quelle est la probabilité que lorsqu’une personne achète un `Mountain-200` bicyclette, cette personne achètera également l’autre produit répertorié.  
+     La visionneuse affiche alors uniquement les règles qui contiennent les mots «`Mountain-200`». La probabilité de la règle vous indique quelle est la probabilité que lorsqu’un utilisateur achète un `Mountain-200` vélo, cette personne achètera également l’autre produit répertorié.  
   
  Les règles sont classées par probabilité en ordre décroissant, mais vous pouvez cliquer sur les en-têtes de colonnes pour modifier l'ordre de tri. Pour en savoir plus sur une règle particulière, vous pouvez utiliser l'extraction pour consulter les cas de prise en charge.  
   
@@ -171,7 +171,7 @@ ms.locfileid: "36313067"
   
 2.  Sélectionnez **extraire**, puis sélectionnez **colonnes de modèle uniquement**, ou **modèle et les colonnes de Structure**.  
   
-     Le **extraire** boîte de dialogue fournit un résumé de la règle en haut du volet et une liste de tous les cas qui ont été utilisées comme données de prise en charge pour la règle.  
+     Le **extraire** boîte de dialogue fournit un résumé de la règle en haut du volet et une liste de tous les cas qui ont été utilisés en tant que la prise en charge des données pour la règle.  
   
  [Retour au début](#bkmk_DepNet)  
   
@@ -197,11 +197,11 @@ ms.locfileid: "36313067"
  [Retour au début](#bkmk_DepNet)  
   
 ## <a name="next-task-in-lesson"></a>Tâche suivante de la leçon  
- [Filtrage d’une Table imbriquée dans un modèle d’exploration de données &#40;intermédiaire Didacticiel d’exploration de données&#41;](../../2014/tutorials/filtering-a-nested-table-in-a-mining-model-intermediate-data-mining-tutorial.md)  
+ [Filtrage d’une Table imbriquée dans un modèle d’exploration de données &#40;didacticiel d’exploration de données intermédiaire&#41;](../../2014/tutorials/filtering-a-nested-table-in-a-mining-model-intermediate-data-mining-tutorial.md)  
   
 ## <a name="see-also"></a>Voir aussi  
- [Leçon 3 : Génération d’un scénario de panier d’achat &#40;intermédiaire Didacticiel d’exploration de données&#41;](../../2014/tutorials/lesson-3-building-a-market-basket-scenario-intermediate-data-mining-tutorial.md)   
- [Leçon 4 : Création d’un scénario Sequence Clustering &#40;intermédiaire Didacticiel d’exploration de données&#41;](../../2014/tutorials/lesson-4-build-sequence-clustering-scenario-intermediate-data-mining.md)   
+ [Leçon 3 : Génération d’un scénario de panier &#40;didacticiel d’exploration de données intermédiaire&#41;](../../2014/tutorials/lesson-3-building-a-market-basket-scenario-intermediate-data-mining-tutorial.md)   
+ [Leçon 4 : Création d’un scénario Sequence Clustering &#40;didacticiel d’exploration de données intermédiaire&#41;](../../2014/tutorials/lesson-4-build-sequence-clustering-scenario-intermediate-data-mining.md)   
  [Algorithme Microsoft Association](../../2014/analysis-services/data-mining/microsoft-association-algorithm.md)   
  [Informations techniques de référence sur l’algorithme Microsoft Association](../../2014/analysis-services/data-mining/microsoft-association-algorithm-technical-reference.md)  
   

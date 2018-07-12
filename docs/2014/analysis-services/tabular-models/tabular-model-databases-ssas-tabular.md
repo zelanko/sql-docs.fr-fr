@@ -1,5 +1,5 @@
 ---
-title: Bases de données de modèle tabulaire (SSAS tabulaire) | Documents Microsoft
+title: Bases de données tabulaires (SSAS tabulaire) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 539c6b5f-f4b6-42f9-af81-7c02f74d5efe
 caps.latest.revision: 9
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 0952d613290da279c5e044085ed79f415181bb9c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: d1d74fe1e59121466acf3671e3ce036a6b3e4e89
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36039593"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37259415"
 ---
 # <a name="tabular-model-databases-ssas-tabular"></a>Bases de données model tabulaires (SSAS Tabulaire)
   Une base de données model tabulaire est une base de données Analysis Services que vous créez dans [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] à l'aide d'un exemple de projet de modèle tabulaire Analysis Services, où les tables et les relations sont des structures primaires qui représentent des données.  
@@ -39,7 +39,7 @@ ms.locfileid: "36039593"
   
  [Partitions de modèles tabulaires &#40;SSAS tabulaire&#41;](tabular-model-partitions-ssas-tabular.md)  
   
- [Configurer l’accès de DirectQuery pour une base de données de modèle tabulaire ou de mémoire](enable-directquery-mode-in-ssms.md)  
+ [Configurer l’accès en mémoire ou DirectQuery pour une base de données de modèle tabulaire](enable-directquery-mode-in-ssms.md)  
   
  [Se connecter à une base de données de modèle tabulaire &#40;SSAS&#41;](connect-to-a-tabular-model-database-ssas.md)  
   

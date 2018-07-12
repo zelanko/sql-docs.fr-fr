@@ -8,23 +8,23 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 3925fd3d-2aa1-4768-96ad-cfc2c0ba9283
 caps.latest.revision: 10
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 7a8ce540cb3ecf555e5abc22a1927482409bc582
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: 6b1b12938e2043ee126c81313fc955454742bcde
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36041545"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37149410"
 ---
 # <a name="sql-server-parallel-data-warehouse-connection-type-ssrs"></a>Type de connexion à un entrepôt de données SQL Server Parallel Data Warehouse (SSRS)
-  [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssDWCurrentFull](../../../includes/ssdwcurrentfull-md.md)] est un appareil de l’entrepôt de données évolutif qui offre performances et évolutivité via le traitement parallèle massif. [!INCLUDE[ssDW](../../../includes/ssdw-md.md)] utilise [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] bases de données pour le stockage de données et de traitement distribué.  
+  [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssDWCurrentFull](../../../includes/ssdwcurrentfull-md.md)] est une appliance d’entrepôt de données évolutif qui offre des performances et évolutivité au moyen de traitement massivement parallèle. [!INCLUDE[ssDW](../../../includes/ssdw-md.md)] utilise [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] bases de données pour le stockage de données et de traitement distribué.  
   
- L'appareil partitionne de grandes tables de base de données entre plusieurs nœuds physiques, chaque nœud exécutant sa propre instance de [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. Lorsqu'un rapport se connecte à [!INCLUDE[ssDW](../../../includes/ssdw-md.md)] pour récupérer les données de rapport, il se connecte au nœud de contrôle, qui gère le traitement des requête dans l'appareil [!INCLUDE[ssDW](../../../includes/ssdw-md.md)] . Une fois la connexion établie, il n’existe aucune différence entre l’utilisation d’une instance de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] qui est ou n’est pas dans un [!INCLUDE[ssDW](../../../includes/ssdw-md.md)] environnement.  
+ L'appareil partitionne de grandes tables de base de données entre plusieurs nœuds physiques, chaque nœud exécutant sa propre instance de [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. Lorsqu'un rapport se connecte à [!INCLUDE[ssDW](../../../includes/ssdw-md.md)] pour récupérer les données de rapport, il se connecte au nœud de contrôle, qui gère le traitement des requête dans l'appareil [!INCLUDE[ssDW](../../../includes/ssdw-md.md)] . Une fois que la connexion est établie, il n’existe aucune différence entre utiliser une instance de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] qui est ou n’est pas dans un [!INCLUDE[ssDW](../../../includes/ssdw-md.md)] environnement.  
   
  Pour inclure des données à partir de [!INCLUDE[ssDW](../../../includes/ssdw-md.md)] dans votre rapport, vous devez avoir un dataset basé sur une source de données de rapport de type [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Parallel Data Warehouse. Ce type de source de données intégré est basé sur le [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] extension de données Parallel Data Warehouse. Utilisez ce type de source de données pour vous connecter à et récupérer des données de [!INCLUDE[ssDW](../../../includes/ssdw-md.md)].  
   
@@ -32,16 +32,16 @@ ms.locfileid: "36041545"
   
  Pour plus d'informations, consultez le site Web [SQL Server 2008 R2 Parallel Data Warehouse (en anglais)](http://go.microsoft.com/fwlink/?LinkId=150895).  
   
- Utilisez les informations de cette rubrique pour générer une source de données. Pour obtenir des instructions, consultez [ajouter et vérifier une connexion de données ou une Source de données &#40;le Générateur de rapports et SSRS&#41;](add-and-verify-a-data-connection-report-builder-and-ssrs.md).  
+ Utilisez les informations de cette rubrique pour générer une source de données. Pour obtenir des instructions détaillées, consultez [ajouter et vérifier une connexion de données ou d’une Source de données &#40;Générateur de rapports et SSRS&#41;](add-and-verify-a-data-connection-report-builder-and-ssrs.md).  
   
 ##  <a name="Connection"></a> Chaîne de connexion  
- Lorsque vous vous connectez à [!INCLUDE[ssDW](../../../includes/ssdw-md.md)], vous vous connectez à un objet de base de données dans une appliance [!INCLUDE[ssDW](../../../includes/ssdw-md.md)] . Vous spécifiez l'objet de base de données à utiliser dans le concepteur de requêtes. Si vous ne spécifiez pas de base de données dans la chaîne de connexion, vous vous connectez à la base de données par défaut que l'administrateur vous a affectée. Contactez l'administrateur de votre base de données pour connaître les informations de connexion et d'identification à utiliser pour se connecter à la source de données. L’exemple de chaîne de connexion suivant spécifie la base de données exemple **CustomerSales**, dans le [!INCLUDE[ssDW](../../../includes/ssdw-md.md)] équipement :  
+ Lorsque vous vous connectez à [!INCLUDE[ssDW](../../../includes/ssdw-md.md)], vous vous connectez à un objet de base de données dans une appliance [!INCLUDE[ssDW](../../../includes/ssdw-md.md)] . Vous spécifiez l'objet de base de données à utiliser dans le concepteur de requêtes. Si vous ne spécifiez pas de base de données dans la chaîne de connexion, vous vous connectez à la base de données par défaut que l'administrateur vous a affectée. Contactez l'administrateur de votre base de données pour connaître les informations de connexion et d'identification à utiliser pour se connecter à la source de données. L’exemple de chaîne de connexion suivant spécifie la base de données exemple **CustomerSales**, dans le [!INCLUDE[ssDW](../../../includes/ssdw-md.md)] appliance :  
   
 ```  
 HOST=<IP address>; database= CustomerSales; port=<port>  
 ```  
   
- De plus, vous utilisez la boîte de dialogue **Propriétés de la source de données** pour fournir des informations d'identification telles que le nom d'utilisateur et le mot de passe, les options `User Id` et `Password` sont ajoutées automatiquement à la chaîne de connexion, vous n'avez pas besoin de les taper dans la chaîne de connexion. L’interface utilisateur fournit également des options pour spécifier l’adresse IP du nœud de contrôle dans le [!INCLUDE[ssDW](../../../includes/ssdw-md.md)] matériel et le numéro de port. Par défaut, il s'agit du port 17000. Le port est configurable par un administrateur et votre chaîne de connexion peut utiliser un autre numéro de port.  
+ De plus, vous utilisez la boîte de dialogue **Propriétés de la source de données** pour fournir des informations d'identification telles que le nom d'utilisateur et le mot de passe, les options `User Id` et `Password` sont ajoutées automatiquement à la chaîne de connexion, vous n'avez pas besoin de les taper dans la chaîne de connexion. L’interface utilisateur fournit également des options pour spécifier l’adresse IP du nœud de contrôle dans le [!INCLUDE[ssDW](../../../includes/ssdw-md.md)] appliance et le numéro de port. Par défaut, il s'agit du port 17000. Le port est configurable par un administrateur et votre chaîne de connexion peut utiliser un autre numéro de port.  
   
  Pour plus d’informations sur les exemples de chaînes de connexion, consultez [Connexions de données, sources de données et chaînes de connexion dans le Générateur de rapports](../data-connections-data-sources-and-connection-strings-in-report-builder.md).  
   
@@ -67,7 +67,7 @@ HOST=<IP address>; database= CustomerSales; port=<port>
   
 -   Générer une requête de manière interactive. Utilisez le concepteur de requêtes relationnelles, qui affiche selon un mode hiérarchique les tables, vues et autres éléments de base de données, organisés par schéma de base de données. Sélectionnez des colonnes à partir des tables ou des vues. Limitez le nombre de lignes de données à récupérer en spécifiant des critères de filtre, des regroupements et des agrégats. Personnalisez le filtre lorsque le rapport s'exécute en définissant l'option de paramètre.  
   
--   Taper ou coller une requête. Utilisez le Concepteur de requêtes textuel pour entrer [!INCLUDE[DWsql](../../../includes/dwsql-md.md)] directement du texte, collez le texte de la requête à partir d’une autre source, entrer des requêtes complexes qui ne peuvent pas être générés à l’aide du Concepteur de requêtes relationnelles ou à entrer des expressions de requête.  
+-   Taper ou coller une requête. Utilisez le Concepteur de requêtes textuel pour entrer [!INCLUDE[DWsql](../../../includes/dwsql-md.md)] directement du texte, collez le texte de la requête à partir d’une autre source, entrer des requêtes complexes impossibles à créer à l’aide du Concepteur de requêtes relationnelles ou à entrer des expressions basées sur une requête.  
   
 -   Importe une requête existante à partir d'un fichier ou d'un rapport. Utilisez le bouton **Importer une requête** à partir de l'un des concepteurs de requêtes afin de naviguer jusqu'à un fichier .sql ou .rdl, et d'importer une requête.  
   
@@ -81,14 +81,14 @@ HOST=<IP address>; database= CustomerSales; port=<port>
   
  Une requête qui récupère des données de rapport à partir d'une base de données de grande taille, notamment un entrepôt de données tel que [!INCLUDE[ssDW](../../../includes/ssdw-md.md)], peut générer un jeu de résultats qui possède un très grand nombre de lignes, sauf si vous agrégez et synthétisez les données afin de réduire le nombre des lignes retournées par la requête. Vous pouvez écrire des requêtes qui incluent des agrégats et des regroupements à l'aide du concepteur de requêtes graphique ou textuel.  
   
- [!INCLUDE[DWsql](../../../includes/dwsql-md.md)] prend en charge de la clause, mot clé et des agrégats que le Concepteur de requêtes fournit pour synthétiser les données.  
+ [!INCLUDE[DWsql](../../../includes/dwsql-md.md)] prend en charge la clause, mot clé et agrégats que le Concepteur de requêtes fournit pour synthétiser les données.  
   
  Le concepteur de requêtes graphique utilisé par [!INCLUDE[ssDW](../../../includes/ssdw-md.md)] fournit une prise en charge intégrée du regroupement et des agrégats pour vous aider à écrire des requêtes qui récupèrent uniquement les données de synthèse. Le [!INCLUDE[DWsql](../../../includes/dwsql-md.md)] sont des fonctionnalités de langage : le groupe par clause, mot clé DISTINCT et agrégats tels que SUM et COUNT. Le Concepteur de requêtes textuel fournit une prise en charge complète pour le [!INCLUDE[DWsql](../../../includes/dwsql-md.md)] langage, notamment le regroupement et des agrégats.  
   
  Pour plus d’informations sur [!INCLUDE[tsql](../../../includes/tsql-md.md)], consultez [Informations de référence sur Transact-SQL &#40;moteur de base de données&#41;](/sql/t-sql/language-reference) dans la [documentation en ligne](http://go.microsoft.com/fwlink/?LinkId=141687) de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] sur msdn.microsoft.com.  
   
 ###  <a name="QueryText"></a> Utilisation du type de requête Texte  
- Dans le concepteur de requêtes textuel, vous tapez des commandes [!INCLUDE[DWsql](../../../includes/dwsql-md.md)] pour définir les données d’un dataset. Les requêtes que vous utilisez pour récupérer des données à partir de [!INCLUDE[ssDW](../../../includes/ssdw-md.md)] sont les mêmes que celles que vous utilisez pour récupérer des données à partir d’instances de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] qui n’exécutent pas dans un [!INCLUDE[ssDW](../../../includes/ssdw-md.md)] application. Par exemple, les éléments suivants [!INCLUDE[DWsql](../../../includes/dwsql-md.md)] requête sélectionne les noms de tous les employés qui sont fonction d’assistants marketing :  
+ Dans le concepteur de requêtes textuel, vous tapez des commandes [!INCLUDE[DWsql](../../../includes/dwsql-md.md)] pour définir les données d’un dataset. Les requêtes que vous utilisez pour récupérer des données à partir de [!INCLUDE[ssDW](../../../includes/ssdw-md.md)] sont les mêmes que celles que vous utilisez pour récupérer des données à partir d’instances de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] pas en cours d’exécution au sein d’un [!INCLUDE[ssDW](../../../includes/ssdw-md.md)] application. Par exemple, ce qui suit [!INCLUDE[DWsql](../../../includes/dwsql-md.md)] requête sélectionne les noms de tous les employés qui sont fonction d’assistants marketing :  
   
 ```  
 SELECT  
@@ -138,7 +138,7 @@ WHERE EmployeeID = (@EmpID)
 ##  <a name="HowTo"></a> Rubriques de procédures  
  Cette section contient des instructions pas à pas sur l'utilisation des connexions de données, des sources de données et des datasets.  
   
- [Ajouter et vérifier une connexion de données ou une Source de données &#40;rapport Générateur et SSRS&#41;](add-and-verify-a-data-connection-report-builder-and-ssrs.md)  
+ [Ajouter et vérifier une connexion de données ou d’une Source de données &#40;Générateur de rapports et SSRS&#41;](add-and-verify-a-data-connection-report-builder-and-ssrs.md)  
   
  [Créer un dataset partagé ou incorporé &#40;Générateur de rapports et SSRS&#41;](create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md)  
   
@@ -149,7 +149,7 @@ WHERE EmployeeID = (@EmpID)
 ##  <a name="Related"></a> Sections connexes  
  Ces sections de la documentation fournissent des informations de fond d'ordre conceptuel sur les données de rapport, ainsi que des informations sur les procédures de définition, de personnalisation et d'utilisation des parties d'un rapport qui sont liées aux données.  
   
- [Ajouter des données à un rapport &#40;rapport Générateur et SSRS&#41;](report-datasets-ssrs.md)  
+ [Ajouter des données à un rapport &#40;Générateur de rapports et SSRS&#41;](report-datasets-ssrs.md)  
  Fournit une vue d'ensemble de l'accès aux données pour votre rapport.  
   
  [Connexions de données, sources de données et chaînes de connexion dans le Générateur de rapports](../data-connections-data-sources-and-connection-strings-in-report-builder.md)  

@@ -1,5 +1,5 @@
 ---
-title: Filtre de jeu de données ou de la boîte de dialogue de filtre de modèle | Documents Microsoft
+title: Data Set filtre or Model filtre Dialog Box | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: a9602174-b7e2-4e16-8ded-dfd8eb9264d7
 caps.latest.revision: 13
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 85986f7f73a96ce0fc2286ad8f9377df1d53845c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 34cb8f45c8380cffdfd58c99078f05fd5c8bd2e4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36040767"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37187316"
 ---
 # <a name="data-set-filter-or-model-filter-dialog-box"></a>Boîte de dialogue Filtre de jeu de données ou Filtre de modèle
   Cette boîte de dialogue vous permet de générer les filtres que vous pouvez appliquer à un jeu de données.  Le jeu de données peut être un jeu de données externes utilisé pour le test ou il peut s'agir des données de cas d'un modèle d'exploration de données. Le nom de la boîte de dialogue change selon que le filtre concerne un jeu de données externes ou un modèle d'exploration de données.  
@@ -57,11 +57,11 @@ ms.locfileid: "36040767"
 > [!NOTE]  
 >  Une fois que vous avez apporté des modifications manuelles à l’expression de filtre, vous ne pouvez pas revenir au mode de modification de grille, même après avoir enregistré l’expression dans la zone **Expression de filtre** sous l’onglet **Sélection d’entrée** . Si vous souhaitez générer une expression en utilisant la grille, vous devez supprimer l'expression de filtre existante et reprendre depuis le début.  
   
- **Restaurer les modifications de requête**  
+ **Rétablir les modifications**  
  Rétablit l'état précédent de la grille et annule toutes les modifications apportées à l'expression de filtre.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Test et des tâches de Validation et des procédures &#40;d’exploration de données&#41;](data-mining/testing-and-validation-tasks-and-how-tos-data-mining.md)   
- [Concepteur graphique d’analyse de précision d’exploration de données &#40;d’exploration de données&#41;](mining-accuracy-chart-designer-data-mining.md)  
+ [Test et des tâches de Validation et des procédures &#40;exploration de données&#41;](data-mining/testing-and-validation-tasks-and-how-tos-data-mining.md)   
+ [Concepteur graphique d’analyse de précision d’exploration de données &#40;exploration de données&#41;](mining-accuracy-chart-designer-data-mining.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Avancé de boîte de dialogue des Options du mode des Source de données (Assistant vue de Source de données) (Analysis Services) | Documents Microsoft
+title: Advanced boîte de dialogue des Options du mode des Source de données (Assistant vue de Source de données) (Analysis Services) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.datasourceviewwizard.advancedoptions.f1
 ms.assetid: db736863-3fc2-4166-af05-4c7d0323d4d1
 caps.latest.revision: 11
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 355425b5df4008ddfee123b8f2f8ff4c35550eba
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 42e7677867ebf04a0b239f1785f318a58e0f7e76
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36040544"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37169840"
 ---
 # <a name="advanced-data-source-view-options-dialog-box-data-source-view-wizard-analysis-services"></a>Boîte de dialogue Options avancées des vues de source de données (Assistant Vue de source de données) (Analysis Services)
   La boîte de dialogue **Options avancées des vues de source de données** vous permet de mieux contrôler la façon dont la vue de source de données extrait les schémas et relations à partir de la source de données afin de générer la vue.  
@@ -37,6 +37,6 @@ ms.locfileid: "36040544"
   
 ## <a name="see-also"></a>Voir aussi  
  [Sources de données dans les modèles multidimensionnels](multidimensional-models/data-sources-in-multidimensional-models.md)   
- [Les Sources de données prises en charge &#40;SSAS multidimensionnel&#41;](multidimensional-models/supported-data-sources-ssas-multidimensional.md)  
+ [Sources de données prises en charge &#40;SSAS multidimensionnel&#41;](multidimensional-models/supported-data-sources-ssas-multidimensional.md)  
   
   

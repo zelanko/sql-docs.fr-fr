@@ -1,5 +1,5 @@
 ---
-title: Élément latency (ASSL) | Documents Microsoft
+title: Élément latency (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - Latency element
 ms.assetid: 93940637-b83e-4773-b80d-3394ca3a1ce5
 caps.latest.revision: 35
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: e2a0a135ae94b8e443a798c2434e7392c2d1ab15
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: e8455e448affd3a63eaa553b3bf34ed448d3913e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36040245"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37163340"
 ---
 # <a name="latency-element-assl"></a>Élément Latency (ASSL)
   Définit la période de grâce entre la première notification et le moment où les images OLAP multidimensionnelles (MOLAP) sont détruites.  
@@ -62,7 +62,7 @@ ms.locfileid: "36040245"
 |Éléments enfants|None|  
   
 ## <a name="remarks"></a>Notes  
- L’élément qui correspond au parent de `Latency` dans l’objet d’objets AMO (Analysis Management) est modèle <xref:Microsoft.AnalysisServices.ProactiveCaching>.  
+ L’élément qui correspond au parent de `Latency` dans l’objet d’objets AMO (Analysis Management) modèle est <xref:Microsoft.AnalysisServices.ProactiveCaching>.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Propriétés &#40;ASSL&#41;](properties-assl.md)  

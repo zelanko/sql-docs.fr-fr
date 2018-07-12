@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Report Designer [Reporting Services], report creation
 ms.assetid: 3a26dccc-6ad6-48f5-a882-f96c6c0dd405
 caps.latest.revision: 74
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 811f80385261b9e688c76c6d7b472db210b7cb13
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 109ba047a24211c5a41aebf96ccb373a546c26c3
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36039915"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37218949"
 ---
 # <a name="design-reports-with-report-designer-ssrs"></a>Concevoir des rapports à l'aide du Concepteur de rapports (SSRS)
   Utilisez le Concepteur de rapports pour créer des rapports et des solutions de création de rapports complets de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Le Concepteur de rapports fournit une interface graphique dans laquelle vous pouvez définir les sources de données, les datasets et les requêtes, les positions de mise en page des rapports pour les régions de données et les champs, ainsi que des fonctionnalités interactives telles que les paramètres et les jeux de rapports qui fonctionnent ensemble.  
@@ -54,7 +54,7 @@ ms.locfileid: "36039915"
   
  Dans le Concepteur de rapports, vous travaillez dans le volet des données de rapport et dans l'explorateur de solutions pour définir les datasets partagés utilisés dans un rapport. Pour plus d'informations, consultez [Report Data Pane](reporting-services-in-sql-server-data-tools-ssdt.md#bkmk_ReportDataPane). Vous ne pouvez pas utiliser [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] pour ouvrir des datasets publiés directement à partir d'un serveur de rapports ou d'un site SharePoint. Pour cette fonctionnalité, utilisez [le Générateur de rapports &#40;SSRS&#41; ](report-builder-authoring-environment-ssrs.md) en mode Dataset partagé.  
   
- [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] est un outil client. Vous pouvez utiliser les concepteurs de requêtes pour créer et tester vos résultats de requête localement dans l'aperçu. Après le déploiement, vous pouvez gérer les datasets partagés indépendamment des sources de données partagées et des rapports dont ils dépendent. Pour plus d’informations, consultez [incorporé Datasets du rapport et Datasets partagés &#40;le Générateur de rapports et SSRS&#41;](../report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md), [outils de conception de requête dans le rapport concepteur SQL Server Data Tools &#40;SSRS&#41; ](../report-data/query-design-tools-ssrs.md), et [gérer les Datasets partagés](../report-data/manage-shared-datasets.md).  
+ [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] est un outil client. Vous pouvez utiliser les concepteurs de requêtes pour créer et tester vos résultats de requête localement dans l'aperçu. Après le déploiement, vous pouvez gérer les datasets partagés indépendamment des sources de données partagées et des rapports dont ils dépendent. Pour plus d’informations, consultez [Datasets incorporés et des Datasets partagés &#40;Générateur de rapports et SSRS&#41;](../report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md), [outils de conception de requête dans le rapport concepteur SQL Server Data Tools &#40;SSRS&#41; ](../report-data/query-design-tools-ssrs.md), et [gérer des Datasets partagés](../report-data/manage-shared-datasets.md).  
   
   
 ##  <a name="bkmk_Reports"></a> Rapports  
@@ -124,7 +124,7 @@ ms.locfileid: "36039915"
      Si vous utilisez une configuration de projet qui crée le rapport mais ne le déploie pas, le rapport est spécifié dans le `StartItem` propriété de la configuration actuelle s’ouvre dans une fenêtre d’aperçu distincte.  
   
     > [!NOTE]  
-    >  Pour utiliser le mode débogage, vous devez définir un élément de départ. Dans l’Explorateur de solutions, cliquez sur le projet de rapport, cliquez sur **propriétés**et dans `StartItem`, sélectionnez le nom du rapport à afficher.  
+    >  Pour utiliser le mode débogage, vous devez définir un élément de départ. Dans l’Explorateur de solutions, cliquez sur le projet de rapport, cliquez sur **propriétés**, puis, dans `StartItem`, sélectionnez le nom du rapport à afficher.  
   
      Si vous souhaitez afficher l’aperçu d’un rapport particulier, sans qu’il soit l’élément de départ du projet, sélectionnez une configuration qui crée le rapport mais ne le déploie pas (par exemple, la configuration DebugLocal), cliquez avec le bouton droit sur le rapport, puis sélectionnez **Exécuter**. Vous devez choisir une configuration qui ne déploie pas le rapport, sinon il sera publié sur le serveur de rapports au lieu de s'afficher localement dans une fenêtre d'aperçu.  
   
@@ -166,7 +166,7 @@ ms.locfileid: "36039915"
  A partir de [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)], vous pouvez déployer des rapports ou d'autres éléments de projet vers plusieurs versions de serveurs de rapports de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Utilisez les configurations de projet pour contrôler la mise à niveau des définitions de rapport aux versions de schéma compatibles avec les serveurs de rapports cibles. Les propriétés contrôlées par les configurations de projet incluent le serveur de rapports cible, le dossier où le processus de génération stocke temporairement les définitions de rapport pour l'aperçu et le déploiement, et les niveaux d'erreur. Pour plus d’informations, consultez [Propriétés de configuration et de déploiement](deployment-and-version-support-in-sql-server-data-tools-ssrs.md#bkmk_ConfigurationandDeploymentProperties) et [Définir des propriétés de déploiement &#40;Reporting Services&#41;](set-deployment-properties-reporting-services.md).  
   
 ### <a name="export-a-report-to-a-different-file-format"></a>Exporter un rapport sous un type de fichier différent  
- Les rapports peuvent être exportés dans divers formats ; ceux-ci affectent le fonctionnement des fonctionnalités interactives et la mise en page des rapports. Pour plus d’informations sur les considérations de conception pour plusieurs formats de sortie, consultez [exportation des rapports &#40;le Générateur de rapports et SSRS&#41;](../report-builder/export-reports-report-builder-and-ssrs.md).  
+ Les rapports peuvent être exportés dans divers formats ; ceux-ci affectent le fonctionnement des fonctionnalités interactives et la mise en page des rapports. Pour plus d’informations sur les considérations de conception pour plusieurs formats de sortie, consultez [exportation des rapports &#40;Générateur de rapports et SSRS&#41;](../report-builder/export-reports-report-builder-and-ssrs.md).  
   
   
 ##  <a name="bkmk_ReportValidationandErrorLevels"></a> Validation de rapport et niveaux d’erreurs  
@@ -186,12 +186,12 @@ ms.locfileid: "36039915"
 |3|Problèmes de génération mineurs qui modifient si peu la mise en page de rapport qu'ils peuvent passer inaperçus.|  
 |4|Utilisé uniquement pour la publication d'avertissements.|  
   
- Lorsque vous essayez d’afficher un aperçu ou de déployer un rapport qui contient les éléments de rapport Nouveautés dans [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], telles que les cartes et barres de données, ces éléments de rapport peuvent être supprimés à partir du rapport. Par défaut, la propriété ErrorLevel de la configuration a la valeur 2, ce qui provoquerait l’échec de la génération du rapport si la carte était supprimée. Toutefois, si vous remplacez la valeur de la propriété ErrorLevel par 0 ou 1, la carte est supprimée, un avertissement émis, et le processus de génération continue.  
+ Lorsque vous tentez d’afficher un aperçu ou déployez un rapport qui contient les éléments de rapport nouveaux dans [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], telles que des cartes et barres de données, ces éléments de rapport peuvent être supprimés à partir du rapport. Par défaut, la propriété ErrorLevel de la configuration a la valeur 2, ce qui provoquerait l’échec de la génération du rapport si la carte était supprimée. Toutefois, si vous remplacez la valeur de la propriété ErrorLevel par 0 ou 1, la carte est supprimée, un avertissement émis, et le processus de génération continue.  
   
   
 ## <a name="see-also"></a>Voir aussi  
  [Reporting Services dans SQL Server Data Tools &#40;SSDT&#41;](reporting-services-in-sql-server-data-tools-ssdt.md)   
- [Interroger des outils de conception de rapports Concepteur SQL Server Data Tools &#40;SSRS&#41;](../report-data/query-design-tools-ssrs.md)   
+ [Interroger des outils de conception dans le rapport concepteur SQL Server Data Tools &#40;SSRS&#41;](../report-data/query-design-tools-ssrs.md)   
  [Déploiement et prise en charge des versions dans SQL Server Data Tools &#40;SSRS&#41;](deployment-and-version-support-in-sql-server-data-tools-ssrs.md)  
   
   

@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 8b7810b2-637e-46a3-9fe1-d055898ba639
 caps.latest.revision: 20
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 9e83b4a29d1fae74c5b20f3290be8431045f1f38
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 3aef5a22131fd26d72ccbe569a2adb73d045dfa3
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36040035"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37200029"
 ---
 # <a name="install-sql-server-with-smb-fileshare-as-a-storage-option"></a>Installer SQL Server avec le partage de fichiers SMB en tant qu'option de stockage
-  Démarrage [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], bases de données système (Master, Model, MSDB et TempDB), et [!INCLUDE[ssDE](../../includes/ssde-md.md)] bases de données utilisateur peuvent être installés avec le serveur de fichiers Server Message Block (SMB) comme option de stockage. Cela s'applique à la fois aux installations autonomes [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et aux installations de cluster de basculement (FCI) [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
+  Démarrage [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], bases de données système (Master, Model, MSDB et TempDB) et [!INCLUDE[ssDE](../../includes/ssde-md.md)] bases de données utilisateur peuvent être installés avec le serveur de fichiers Server Message Block (SMB) comme option de stockage. Cela s'applique à la fois aux installations autonomes [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et aux installations de cluster de basculement (FCI) [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 > [!NOTE]  
 >  Le flux de fichier n'est pas pris en charge actuellement sur un partage de fichiers SMB.  
@@ -83,7 +83,7 @@ ms.locfileid: "36040035"
     setup.exe /q /ACTION=InstallFailoverCluster /InstanceName=MSSQLSERVER /INDICATEPROGRESS /ASSYSADMINACCOUNTS="<DomainName\UserName>" /ASDATADIR=<Drive>:\OLAP\Data /ASLOGDIR=<Drive>:\OLAP\Log /ASBACKUPDIR=<Drive>:\OLAP\Backup /ASCONFIGDIR=<Drive>:\OLAP\Config /ASTEMPDIR=<Drive>:\OLAP\Temp /FAILOVERCLUSTERDISKS="<Cluster Disk Resource Name - for example, 'Disk S:'" /FAILOVERCLUSTERNETWORKNAME="<Insert Network Name>" /FAILOVERCLUSTERIPADDRESSES="IPv4;xx.xxx.xx.xx;Cluster Network;xxx.xxx.xxx.x" /FAILOVERCLUSTERGROUP="MSSQLSERVER" /Features=AS,SQL /ASSVCACCOUNT="<DomainName\UserName>" /ASSVCPASSWORD="xxxxxxxxxxx" /AGTSVCACCOUNT="<DomainName\UserName>" /AGTSVCPASSWORD="xxxxxxxxxxx" /INSTALLSQLDATADIR="\\FileServer\Share1\" /SQLCOLLATION="SQL_Latin1_General_CP1_CS_AS" /SQLSVCACCOUNT="<DomainName\UserName>" /SQLSVCPASSWORD="xxxxxxxxxxx" /SQLSYSADMINACCOUNTS="<DomainName\UserName> /IACCEPTSQLSERVERLICENSETERMS  
     ```  
   
-     Pour plus d’informations sur l’utilisation des différentes options de paramètre de ligne de commande dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], consultez [installer SQL Server 2014 à partir de l’invite de commandes](../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md).  
+     Pour plus d’informations sur l’utilisation de diverses options de paramètre de ligne de commande dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], consultez [installer SQL Server 2014 à partir de l’invite de commandes](../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md).  
   
 ## <a name="operating-system-considerations-smb-protocol-vs-includessnoversionincludesssnoversion-mdmd"></a>Considérations relatives au système d’exploitation (protocole SMB et [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)])  
  Les différents systèmes d'exploitation Windows disposent de différentes versions du protocole SMB, et la version du protocole SMB est transparente pour [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Vous pouvez connaître les avantages des différentes versions de protocole SMB pour [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
@@ -116,8 +116,8 @@ ms.locfileid: "36040035"
   
 -   Après avoir détaché une base de données [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] qui réside sur le stockage attaché au réseau, vous pouvez rencontrer un problème d'autorisations sur la base de données lorsque vous essaierez de lier à nouveau la base de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Le problème est décrit dans [cet article de la Base de connaissances](http://go.microsoft.com/fwlink/?LinkId=237321) (http://go.microsoft.com/fwlink/?LinkId=237321). Pour le contourner, consultez la section **Plus d'informations** dans l'article de la Base de connaissances.  
   
--   Certains tiers, tels que NetApp, ne gèrent pas tous les appels d'API SQL Server. Avec ces, vous pouvez obtenir :   
-    2015-06-04 13:14:19.97 spid9s erreur : 17053, sévérité : 16, état : 1.  
+-   Certains tiers, tels que NetApp, ne gèrent pas tous les appels d'API SQL Server. Avec ces vous risquez d’obtenir :   
+    2015-06-04 13:14:19.97 spid9s erreur : 17053, gravité : 16, état : 1.  
     2015-06-04 13:14:19.97 spid9s DoDevIoCtlOut() GetOverlappedResult() : erreur de système d’exploitation 1 (fonction incorrecte.) rencontrée.  
   
      Pour NTFS, l'erreur est sans conséquence.  Par contre, pour ReFS, elle peut entraîner une dégradation significative des performances.  

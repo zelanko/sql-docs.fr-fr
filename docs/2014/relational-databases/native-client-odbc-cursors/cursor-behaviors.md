@@ -1,13 +1,11 @@
 ---
-title: Comportements de curseur | Documents Microsoft
+title: Comportement des curseurs | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -22,17 +20,17 @@ helpviewer_keywords:
 - ODBC cursors, cursor behaviors
 ms.assetid: 742ddcd2-232b-4aa1-9212-027df120ad35
 caps.latest.revision: 30
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 15aee78cfc531a7b80e034021b26404e5735a0ec
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: e762ea640293cd973bec2a5cde02b01f0f2a1c8e
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36038136"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37430428"
 ---
-# <a name="cursor-behaviors"></a>Comportements de curseur
+# <a name="cursor-behaviors"></a>Comportement des curseurs
   ODBC prend en charge les options ISO pour spécifier le comportement des curseurs en termes de capacité de défilement et de sensibilité. Ces comportements sont spécifiés en définissant les options SQL_ATTR_CURSOR_SCROLLABLE et SQL_ATTR_CURSOR_SENSITIVITY lors d’un appel à [SQLSetStmtAttr](../native-client-odbc-api/sqlsetstmtattr.md). Le pilote ODBC [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client implémente ces options en demandant des curseurs côté serveur avec les caractéristiques suivantes.  
   
 |Paramètres de comportement du curseur|Caractéristiques du curseur côté serveur demandées|  
@@ -47,7 +45,7 @@ ms.locfileid: "36038136"
  Accès concurrentiel optimiste basé sur une version nécessite un **timestamp** colonne dans la table sous-jacente. Si le contrôle d’accès concurrentiel optimiste basé sur la version est demandé sur une table qui n’a pas un **timestamp** colonne, le serveur utilise en fonction des valeurs d’accès concurrentiel optimiste.  
   
 ## <a name="scrollability"></a>Capacité de défilement  
- Quand SQL_ATTR_CURSOR_SCROLLABLE a la valeur SQL_SCROLLABLE, le curseur prend en charge les différentes valeurs pour le *FetchOrientation* paramètre de [SQLFetchScroll](../native-client-odbc-api/sqlfetchscroll.md). Quand SQL_ATTR_CURSOR_SCROLLABLE a la valeur SQL_NONSCROLLABLE, le curseur prend uniquement en charge un *FetchOrientation* valeur de SQL_FETCH_NEXT.  
+ Quand SQL_ATTR_CURSOR_SCROLLABLE a la valeur SQL_SCROLLABLE, le curseur prend en charge toutes les valeurs différentes pour le *FetchOrientation* paramètre de [SQLFetchScroll](../native-client-odbc-api/sqlfetchscroll.md). Quand SQL_ATTR_CURSOR_SCROLLABLE a la valeur SQL_NONSCROLLABLE, le curseur prend uniquement en charge un *FetchOrientation* valeur de SQL_FETCH_NEXT.  
   
 ## <a name="sensitivity"></a>Sensibilité  
  Quand SQL_ATTR_CURSOR_SENSITIVITY est défini avec la valeur SQL_SENSITIVE, le curseur reflète les modifications des données effectuées par l'utilisateur en cours ou validées par d'autres utilisateurs. Quand SQL_ATTR_CURSOR_SENSITIVITY est défini avec la valeur SQL_INSENSITIVE, le curseur ne reflète pas les modifications des données.  

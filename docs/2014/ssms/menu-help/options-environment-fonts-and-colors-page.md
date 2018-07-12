@@ -1,5 +1,5 @@
 ---
-title: 'Options (environnement : Page polices et couleurs) | Documents Microsoft'
+title: 'Options (environnement : Page polices et couleurs) | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - VS.ToolsOptionsPages.Environment.Fonts_And_Colors
 ms.assetid: ea3aa222-538d-485f-99dc-01eb02cdcfea
 caps.latest.revision: 27
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: fb667cb31bdb718044b2c4298dcc8c174f3c0c19
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 9a88ae6c8205ea8267ca044f6dc978a725931f59
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36039655"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37200779"
 ---
 # <a name="options-environment-fonts-and-colors-page"></a>Options (environnement : Page polices et couleurs)
   La boîte de dialogue **Options** vous permet de définir un modèle personnalisé de polices et de couleurs pour différents éléments de l’interface utilisateur dans [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Dans le menu **Outils** , cliquez sur **Options** , développez le dossier **Environnement** et sélectionnez **Polices et couleurs**.  
@@ -35,7 +35,7 @@ ms.locfileid: "36039655"
 |Terme|Définition|  
 |----------|----------------|  
 |Éditeur de texte|Les modifications apportées aux paramètres d'affichage du style, de la taille et de la couleur des polices dans l'éditeur de texte influencent la présentation du texte dans l'éditeur de texte par défaut. Les documents ouverts dans un éditeur de texte en dehors de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ne sont pas affectés par ces paramètres.|  
-|Imprimante|Les modifications apportées aux paramètres d'affichage du style, de la taille et de la couleur des polices de l'imprimante influencent la présentation du texte sur les documents imprimés.<br /><br /> Conseil : Si nécessaire, vous pouvez sélectionner une police par défaut différente pour l’impression que celle utilisée pour l’affichage dans l’éditeur de texte. Cela peut être utile lors de l'impression de code contenant des caractères codés sur un octet et sur deux octets.|  
+|Imprimante|Les modifications apportées aux paramètres d'affichage du style, de la taille et de la couleur des polices de l'imprimante influencent la présentation du texte sur les documents imprimés.<br /><br /> Conseil : En fonction des besoins, vous pouvez sélectionner une police par défaut différente pour l’impression que celle utilisée pour l’affichage dans l’éditeur de texte. Cela peut être utile lors de l'impression de code contenant des caractères codés sur un octet et sur deux octets.|  
 |[Toutes les fenêtres Outil de texte **]**|Les modifications apportées aux paramètres d'affichage du style, de la taille et de la couleur des polices pour cet élément influencent la présentation du texte dans les fenêtres Outils disposant de volets de sortie dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], par exemple les fenêtres Sortie, Résultats de texte, et ainsi de suite.<br /><br /> Remarque : Les modifications apportées au texte des éléments [Toutes les fenêtres Outil de texte] ne sont pas prises en compte lors de la session au cours de laquelle vous avez effectué les changements. Vous pouvez évaluer le résultat obtenu du fait des modifications apportées en ouvrant une autre instance de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].|  
 |Fenêtre Résultats de la recherche|Les modifications apportées aux paramètres d’affichage du style, de la taille et de la couleur des polices pour cet élément influencent la présentation du texte dans la fenêtre Résultats de la recherche.|  
 |Fenêtre Sortie|Les modifications apportées aux paramètres d'affichage du style, de la taille et de la couleur des polices pour cet élément influencent la présentation du texte dans les fenêtres Sortie.|  

@@ -1,5 +1,5 @@
 ---
-title: Référence de l’API de l’Instance SQL Server Express LocalDB | Documents Microsoft
+title: Référence de l’API de l’Instance SQL Server Express LocalDB | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -12,15 +12,15 @@ ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: faec46da-0536-4de3-96f3-83e607c8a8b6
 caps.latest.revision: 11
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: ebafb4bf20d84d2a570af7225e26c09e9089825e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
+ms.openlocfilehash: 211e7a076cae09b3fef7ef40a23cca9c60910e47
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36040930"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37154303"
 ---
 # <a name="sql-server-express-localdb-instance-api-reference"></a>Guide de référence de l'API d'instance SQL Server Express LocalDB
   Dans le monde traditionnel SQL Server basé sur les services, différentes instances de SQL Server installées sur un même ordinateur sont physiquement séparées ; autrement dit, chaque instance doit être installée et supprimée séparément, possède un jeu distinct de binaires, et s'exécute sous un processus de service distinct. Le nom de l'instance SQL Server est utilisé pour spécifier l'instance SQL Server à laquelle l'utilisateur souhaite se connecter.  
@@ -29,7 +29,7 @@ ms.locfileid: "36040930"
   
  Une instance de LocalDB est toujours détenue par un seul utilisateur et est visible et accessible uniquement dans le contexte de cet utilisateur, sauf si le partage d'instance est activé.  
   
- Bien que techniquement les instances de LocalDB ne soient pas les mêmes que les instances SQL Server traditionnelles, leur utilisation est similaire. Ils sont appelés *instances* pour souligner cette similarité et à les rendre plus intuitives aux utilisateurs de SQL Server.  
+ Bien que techniquement les instances de LocalDB ne soient pas les mêmes que les instances SQL Server traditionnelles, leur utilisation est similaire. Elles sont appelées *instances* pour souligner cette similarité et à les rendre plus intuitives aux utilisateurs de SQL Server.  
   
  LocalDB prend en charge deux types d'instances : les instances automatiques (AI) et les instances nommées (NI). L'identificateur d'une instance de LocalDB est le nom de l'instance.  
   
@@ -69,14 +69,14 @@ ms.locfileid: "36040930"
 ### <a name="named-instance-naming-rules"></a>Règles de dénomination d'instance nommée  
  Un nom d'instance de LocalDB peut comporter au plus 128 caractères (la limite est imposée par le type de données `sysname`). Il s'agit d'une différence importante comparée aux noms d'instances SQL Server traditionnelles, qui sont limités aux noms NetBIOS de 16 caractères ASCII. Cette différence tient du fait que LocalDB traite les bases de données comme des fichiers, ce qui implique par conséquent une sémantique basée sur des fichiers. Cette sémantique est donc intuitive pour que les utilisateurs aient plus de liberté en choisissant les noms d'instances.  
   
- Un nom d'instance de LocalDB peut contenir tous les caractères Unicode qui sont valides dans le composant nom de fichier. Caractères non conformes dans un composant de nom de fichier incluent généralement les caractères suivants : caractères ASCII/Unicode 1 31 à, ainsi que les guillemets («), inférieur à (\<), supérieur à (>), barre verticale (|), retour arrière (\b), tabulation (\t), deux-points ( :), astérisque (*) point d’interrogation ( ?), barre oblique inverse (\\) et la barre oblique (/). Notez que le caractère Null (\0) est autorisé, car il est utilisé pour la fin de chaîne ; tout caractère qui se trouve après le premier caractère NULL est ignoré.  
+ Un nom d'instance de LocalDB peut contenir tous les caractères Unicode qui sont valides dans le composant nom de fichier. Caractères non conformes dans un composant de nom de fichier incluent généralement les caractères suivants : caractères ASCII/Unicode 1 31 via, ainsi que les guillemets («), inférieur à (\<), supérieur à (>), barre verticale (|), retour arrière (\b), tabulation (\t), deux-points ( :)), astérisque (*) point d’interrogation ( ?), barre oblique inverse (\\) et de la barre oblique (/). Notez que le caractère Null (\0) est autorisé, car il est utilisé pour la fin de chaîne ; tout caractère qui se trouve après le premier caractère NULL est ignoré.  
   
 > [!NOTE]  
 >  La liste de caractères non conformes peut dépendre du système d'exploitation et peut changer dans les versions ultérieures.  
   
  Les espaces de début et de fin dans les noms d'instances sont ignorés et seront supprimés.  
   
- Pour éviter les conflits de noms, nommés LocalDB instances ne peut pas avoir un nom qui suit le modèle d’affectation de noms pour les instances automatiques, comme décrit plus haut dans « Instance d’affectation de noms règles automatique. » Une tentative de création d’une instance nommée avec un nom qui suit le modèle d’affectation de noms d’instance automatique efficacement crée une instance par défaut.  
+ Pour éviter les conflits de noms, nommés LocalDB instances ne peut pas avoir un nom qui suit le modèle d’affectation de noms pour les instances automatiques, comme décrit précédemment dans « Instance d’affectation de noms règles automatique. » Une tentative de création d’une instance nommée avec un nom qui suit le modèle de dénomination d’instance automatique efficacement crée une instance par défaut.  
   
 ## <a name="sql-server-express-localdb-reference-topics"></a>Rubriques de référence SQL Server Express LocalDB  
  [En-tête et informations de version de la base de données locale SQL Server Express](sql-server-express-localdb-header-and-version-information.md)  

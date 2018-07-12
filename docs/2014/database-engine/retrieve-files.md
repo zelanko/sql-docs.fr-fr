@@ -1,5 +1,5 @@
 ---
-title: Récupérer des fichiers | Documents Microsoft
+title: Récupérer des fichiers | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - version control services [SQL Server], file retrieval
 - file retrieval [SQL Server]
 - retrieving files
 ms.assetid: 37b74426-e262-43b2-a81f-79b1fd1a36ec
 caps.latest.revision: 23
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: f1b53eb99abc77e809bd7aaac30f8f218cd4ee03
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 648b7833ddb8a1dd74f98ad15cdb1c5072d91165
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36041173"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37171380"
 ---
 # <a name="retrieve-files"></a>Récupérer des fichiers
   Une fois un projet sous contrôle de code source ouvert, vous pouvez utiliser [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] pour récupérer des copies locales des fichiers projet dans le magasin du contrôle de code source et les placer dans le dossier local dans lequel réside le projet.  
@@ -36,7 +36,7 @@ ms.locfileid: "36041173"
   
 -   **Obtenir** commande  
   
-     Affiche la **obtenir** la boîte de dialogue, vous pouvez utiliser pour récupérer la version la plus récente d’un fichier sélectionné ou pour récupérer un sous-ensemble des fichiers dans le projet ou la solution sélectionnée.  
+     Affiche le **obtenir** boîte de dialogue, vous pouvez utiliser pour récupérer la dernière version d’un fichier sélectionné, ou pour récupérer un sous-ensemble des fichiers dans le projet ou la solution sélectionnée.  
   
 ### <a name="to-retrieve-the-latest-version-of-all-the-files-in-a-project"></a>Pour récupérer la dernière version de tous les fichiers d'un projet  
   
@@ -58,6 +58,6 @@ ms.locfileid: "36041173"
  [Boîte de dialogue obtenir &#40;contrôle de code Source&#41;](../../2014/database-engine/get-dialog-box-source-control.md)   
  [Définir et récupérer des informations de Version](../../2014/database-engine/set-and-retrieve-version-information.md)   
  [Afficher l’historique de projet](../../2014/database-engine/view-project-history.md)   
- [Afficher l’état de fichier](../../2014/database-engine/view-file-status.md)  
+ [Afficher l’état d’un fichier](../../2014/database-engine/view-file-status.md)  
   
   

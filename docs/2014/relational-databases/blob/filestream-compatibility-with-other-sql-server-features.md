@@ -5,24 +5,23 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-blob
+ms.technology: filestream
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - FILESTREAM [SQL Server], other SQL Server features and
 - FILESTREAM [SQL Server], limitations
 ms.assetid: d2c145dc-d49a-4f5b-91e6-89a2b0adb4f3
 caps.latest.revision: 41
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: be0912f1da8e17d5fbd1723595e845393e94cf41
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 1fce4632ddcee1ed29ce8a06ee5efc631f8ce1f2
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36040934"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37175778"
 ---
 # <a name="filestream-compatibility-with-other-sql-server-features"></a>Compatibilité de FILESTREAM avec d'autres fonctionnalités SQL Server
   Les données FILESTREAM figurant dans le système de fichiers, cette rubrique fournit quelques considérations, indications et limitations relatives à l'utilisation de FILESTREAM avec les fonctionnalités suivantes de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:  
@@ -56,7 +55,7 @@ ms.locfileid: "36040934"
  Vous pouvez utiliser la transformation d'importation de colonne pour charger des fichiers du système de fichiers dans une colonne FILESTREAM. Vous pouvez également utiliser la transformation d'exportation de colonne pour extraire des fichiers d'une colonne FILESTREAM à un autre emplacement dans le système de fichiers.  
   
 ##  <a name="distqueries"></a> Requêtes distribuées et serveurs liés  
- Vous pouvez travailler avec les données FILESTREAM via des requêtes distribuées et serveurs liés en les traitant comme `varbinary(max)` données. Vous ne pouvez pas utiliser la fonction FILESTREAM **PathName()** dans les requêtes distribuées qui utilisent un nom en quatre parties, même quand le nom fait référence au serveur local. En revanche, vous pouvez utiliser **PathName()** dans la requête interne d’une requête directe qui utilise **OPENQUERY()**.  
+ Vous pouvez travailler avec les données FILESTREAM dans les requêtes distribuées et serveurs liés en les traitant comme `varbinary(max)` données. Vous ne pouvez pas utiliser la fonction FILESTREAM **PathName()** dans les requêtes distribuées qui utilisent un nom en quatre parties, même quand le nom fait référence au serveur local. En revanche, vous pouvez utiliser **PathName()** dans la requête interne d’une requête directe qui utilise **OPENQUERY()**.  
   
 ##  <a name="encryption"></a> Chiffrement  
  Les données FILESTREAM ne sont pas chiffrées, même lorsque le chiffrement transparent des données est activé.  
@@ -71,7 +70,7 @@ ms.locfileid: "36040934"
  `Could not continue scan with NOLOCK due to data movement.`  
   
 ##  <a name="Replication"></a> Replication  
- Une colonne `varbinary(max)` qui a l'attribut FILESTREAM activé sur le serveur de publication peut être répliquée sur un abonné avec ou sans l'attribut FILESTREAM. Spécifiez la façon dont la colonne est répliquée à l’aide de la boîte de dialogue **Propriétés de l’article - \<Article>**, ou du paramètre @schema_option de [sp_addarticle](/sql/relational-databases/system-stored-procedures/sp-addarticle-transact-sql) ou [sp_addmergearticle](/sql/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql). Les données répliquées sur une colonne `varbinary(max)` qui n'a pas l'attribut FILESTREAM ne doivent pas dépasser la limite de 2 Go pour ce type de données, autrement une erreur d'exécution est générée. Nous vous recommandons de répliquer l’attribut FILESTREAM, sauf si vous répliquez des données vers [!INCLUDE[ssVersion2005](../../includes/ssversion2000-md.md)] abonnés n'est pas pris en charge, quelle que soit l’option de schéma qui est spécifiée.  
+ Une colonne `varbinary(max)` qui a l'attribut FILESTREAM activé sur le serveur de publication peut être répliquée sur un abonné avec ou sans l'attribut FILESTREAM. Spécifiez la façon dont la colonne est répliquée à l’aide de la boîte de dialogue **Propriétés de l’article - \<Article>**, ou du paramètre @schema_option de [sp_addarticle](/sql/relational-databases/system-stored-procedures/sp-addarticle-transact-sql) ou [sp_addmergearticle](/sql/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql). Les données répliquées sur une colonne `varbinary(max)` qui n'a pas l'attribut FILESTREAM ne doivent pas dépasser la limite de 2 Go pour ce type de données, autrement une erreur d'exécution est générée. Nous vous recommandons de répliquer l’attribut FILESTREAM, sauf si vous répliquez des données vers [!INCLUDE[ssVersion2005](../../includes/ssversion2000-md.md)] abonnés n'est pas pris en charge, quel que soit l’option de schéma spécifié.  
   
 > [!NOTE]  
 >  La réplication de grandes valeurs de données à partir d'Abonnés [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] vers [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] est limitée à des valeurs de données de 256 Mo maximum. Pour plus d'informations, consultez [Spécifications de capacité maximale](http://go.microsoft.com/fwlink/?LinkId=103810).  
@@ -83,7 +82,7 @@ ms.locfileid: "36040934"
   
 -   L'option max text repl size spécifie la quantité maximale de données qui peuvent être insérées dans une colonne publiée pour la réplication. Cette option peut être utilisée pour contrôler la taille des données FILESTREAM répliquées.  
   
--   Si vous spécifiez l’option de schéma pour répliquer l’attribut FILESTREAM, mais que vous filtrez la `uniqueidentifier` colonne par FILESTREAM ou que vous spécifiez pour ne pas répliquer la contrainte UNIQUE pour la colonne, la réplication ne réplique pas FILESTREAM attribut. La colonne est répliquée uniquement en tant que colonne `varbinary(max)`.  
+-   Si vous spécifiez l’option de schéma pour répliquer l’attribut FILESTREAM, mais vous filtrez la `uniqueidentifier` colonne requise par FILESTREAM ou que vous spécifiez de ne pas répliquer la contrainte UNIQUE pour la colonne, la réplication ne réplique pas l’objet FILESTREAM attribut. La colonne est répliquée uniquement en tant que colonne `varbinary(max)`.  
   
 ### <a name="considerations-for-merge-replication"></a>Considérations relatives à la réplication de fusion  
  Si vous utilisez des colonnes FILESTREAM dans des tables publiées pour la réplication de fusion, notez les considérations suivantes :  
@@ -94,7 +93,7 @@ ms.locfileid: "36040934"
   
          Si vous ajoutez une contrainte UNIQUE manuellement comme décrit et que vous souhaitez supprimer la réplication de fusion, vous devez d'abord supprimer la contrainte UNIQUE, sinon la suppression de réplication échouera.  
   
-    -   Par défaut, la réplication de fusion utilise NEWSEQUENTIALID() car ses performances peuvent être supérieures à celles de NEWID(). Si vous ajoutez un `uniqueidentifier` sur une table qui sera publiée pour la réplication de fusion, spécifiez NEWSEQUENTIALID() comme la valeur par défaut.  
+    -   Par défaut, la réplication de fusion utilise NEWSEQUENTIALID() car ses performances peuvent être supérieures à celles de NEWID(). Si vous ajoutez un `uniqueidentifier` colonne à une table qui sera publiée pour la réplication de fusion, spécifiez NEWSEQUENTIALID() comme valeur par défaut.  
   
 -   La réplication de fusion inclut une optimisation pour répliquer de grands types d'objets. Cette optimisation est contrôlée par le paramètre @stream_blob_columns de [sp_addmergearticle](/sql/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql). Si vous définissez l'option de schéma de façon à répliquer l'attribut FILESTREAM, la valeur de paramètre @stream_blob_columns a la valeur `true`. Cette optimisation peut être substituée en utilisant [sp_changemergearticle](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql). Cette procédure stockée vous permet de définir @stream_blob_columns sur `false`. Si vous ajoutez une colonne FILESTREAM à une table qui est déjà publiée pour la réplication de fusion, nous vous recommandons d'affecter la valeur `true` à l'option en utilisant sp_changemergearticle.  
   
@@ -109,7 +108,7 @@ ms.locfileid: "36040934"
  La mise en miroir de bases de données ne prend pas en charge FILESTREAM. Un groupe de fichiers FILESTREAM ne peut pas être créé sur le serveur principal. La mise en miroir de bases de données ne peut pas être configurée pour une base de données qui contient des groupes de fichiers FILESTREAM.  
   
 ##  <a name="FullText"></a> Indexation de texte intégral  
- [L’indexation de texte intégral](../indexes/indexes.md) fonctionne avec une colonne FILESTREAM de la même manière qu’avec un `varbinary(max)` colonne. La table FILESTREAM doit avoir une colonne qui contient l'extension de nom de fichier pour chaque objet blob FILESTREAM. Pour plus d’informations, consultez [Exécuter une requête avec une recherche en texte intégral](../search/query-with-full-text-search.md), [Configurer et gérer des filtres pour la recherche](../search/configure-and-manage-filters-for-search.md) et [sys.fulltext_document_types &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-fulltext-document-types-transact-sql).  
+ [Indexation de texte intégral](../indexes/indexes.md) fonctionne avec une colonne FILESTREAM de la même façon qu’avec un `varbinary(max)` colonne. La table FILESTREAM doit avoir une colonne qui contient l'extension de nom de fichier pour chaque objet blob FILESTREAM. Pour plus d’informations, consultez [Exécuter une requête avec une recherche en texte intégral](../search/query-with-full-text-search.md), [Configurer et gérer des filtres pour la recherche](../search/configure-and-manage-filters-for-search.md) et [sys.fulltext_document_types &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-fulltext-document-types-transact-sql).  
   
  Le moteur de texte intégral indexe le contenu des objets blob FILESTREAM. L'indexation de fichiers tels que des images peut ne pas être utile. Lorsqu'un objet blob FILESTREAM est mis à jour, il est réindexé.  
   

@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - SQL10.REP.CONFIGWEBSYNCWIZARD.SUBTYPE.F1
 - SQL10.REP.CONFIGWEBSYNCWIZARD.CLIENTAUTH.F1
@@ -24,15 +24,15 @@ helpviewer_keywords:
 - Web synchronization, configuring
 ms.assetid: 21f8e4d4-cd07-4856-98f0-9c9890ebbc82
 caps.latest.revision: 73
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 3d2baa3c79d4d3915ad3cae1032c7c7df94a7ccd
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 0f1e6f26bd99827a79140cfb0a14ed9049b82ab7
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36040863"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37184156"
 ---
 # <a name="configure-web-synchronization"></a>Configurer la synchronisation Web
   L'option de synchronisation Web de la réplication de fusion [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] permet de répliquer les données à l'aide du protocole HTTPS sur Internet. Pour utiliser la synchronisation Web, vous devez d'abord effectuer les actions de configuration suivantes :  
@@ -128,7 +128,7 @@ La synchronisation web est prise en charge sur IIS à compter de la version 5.0
   
 -   Si vous répliquez d'importants volumes de données, vous pouvez être amené à ajuster la taille de lot de l'Agent de fusion.  
   
- La taille de lot pour la réplication de fusion est mesurée en *générations*, lesquelles sont des collections de modifications par article. Le nombre de générations dans un lot est spécifié à l’aide de la –`DownloadGenerationsPerBatch` et –`UploadGenerationsPerBatch` paramètres de l’Agent de fusion. Pour plus d’informations, voir [Replication Merge Agent](agents/replication-merge-agent.md).  
+ La taille de lot pour la réplication de fusion est mesurée en *générations*, lesquelles sont des collections de modifications par article. Le nombre de générations dans un lot est spécifié à l’aide de –`DownloadGenerationsPerBatch` et –`UploadGenerationsPerBatch` paramètres de l’Agent de fusion. Pour plus d’informations, voir [Replication Merge Agent](agents/replication-merge-agent.md).  
   
  Pour d'importants volumes de données, spécifiez un petit nombre pour chaque paramètre de traitement par lot. Nous vous recommandons de commencer avec une valeur de 10, puis d'ajuster cette valeur selon les besoins et les performances des applications. En général, ces paramètres sont spécifiés dans un profil d'agent. Pour plus d'informations sur ces profils, consultez [Replication Agent Profiles](agents/replication-agent-profiles.md).  
   

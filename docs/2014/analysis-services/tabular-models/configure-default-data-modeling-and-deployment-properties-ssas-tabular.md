@@ -1,5 +1,5 @@
 ---
-title: Configurer les propriétés de déploiement (SSAS tabulaire) et de la modélisation des données par défaut | Documents Microsoft
+title: Configurer les propriétés de déploiement (SSAS tabulaire) et de modélisation des données par défaut | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.bidtoolset.deployment.f1
 - VS.TOOLSOPTIONSPAGES.ANALYSIS_SERVICES.DATA_MODELING
@@ -16,15 +16,15 @@ f1_keywords:
 - VS.TOOLSOPTIONSPAGES.ANALYSIS_SERVICES.DEPLOYMENT
 ms.assetid: 140d0c4e-943c-4387-a8d2-6e066c7e4e75
 caps.latest.revision: 14
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 8a38556f1c6b9d93f844441327a5ea8fe5f9ae9f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 13c674a47f074adaad3e4dbeff41797018bb0dbd
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36040964"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37171470"
 ---
 # <a name="configure-default-data-modeling-and-deployment-properties-ssas-tabular"></a>Configurer les propriétés par défaut de modélisation des données et de déploiement (SSAS Tabulaire)
   Cette rubrique explique comment configurer les paramètres de propriétés de niveau de compatibilité, de déploiement et de base de données d’espace de travail par défaut, qui peuvent être prédéfinis pour chaque nouveau projet de modèle tabulaire que vous créez dans [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. Après qu'un projet a été créé, ces propriétés peuvent être encore être modifiées selon vos besoins.  
@@ -39,7 +39,7 @@ ms.locfileid: "36040964"
   
     |Propriété|Paramètre par défaut|Description|  
     |--------------|---------------------|-----------------|  
-    |**Niveau de compatibilité par défaut pour les nouveaux projets**|SQL Server 2012 (1100)|Ce paramètre spécifie le niveau de compatibilité par défaut à utiliser pour créer un projet de modèle tabulaire. Vous pouvez choisir SQL Server 2012 RTM (1100) si vous allez déployer une instance Analysis Services sans avoir appliqué le SP1, ou SQL Server 2012 SP1 si le SP1 est appliqué sur votre instance de déploiement, ou encore SQL Server 2014. Pour plus d’informations, consultez [le niveau de compatibilité &#40;SSAS tabulaire SP1&#41;](compatibility-level-for-tabular-models-in-analysis-services.md).|  
+    |**Niveau de compatibilité par défaut pour les nouveaux projets**|SQL Server 2012 (1100)|Ce paramètre spécifie le niveau de compatibilité par défaut à utiliser pour créer un projet de modèle tabulaire. Vous pouvez choisir SQL Server 2012 RTM (1100) si vous allez déployer une instance Analysis Services sans avoir appliqué le SP1, ou SQL Server 2012 SP1 si le SP1 est appliqué sur votre instance de déploiement, ou encore SQL Server 2014. Pour plus d’informations, consultez [niveau de compatibilité &#40;SSAS tabulaire SP1&#41;](compatibility-level-for-tabular-models-in-analysis-services.md).|  
     |**Options de niveau de compatibilité**|Toutes activées|Spécifie les options de niveau de compatibilité pour les nouveaux projets de modèles tabulaires et le déploiement vers une autre instance Analysis Services.|  
   
 #### <a name="to-configure-the-default-deployment-server-property-setting-for-new-model-projects"></a>Pour configurer le paramètre de propriété du serveur de déploiement par défaut pour les nouveaux projets de modèle  

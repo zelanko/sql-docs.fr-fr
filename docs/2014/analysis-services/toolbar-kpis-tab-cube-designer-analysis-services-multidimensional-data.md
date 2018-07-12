@@ -1,5 +1,5 @@
 ---
-title: Barre d’outils (onglet des indicateurs de performance clés, Concepteur de Cube) (Analysis Services - données multidimensionnelles) | Documents Microsoft
+title: Barre d’outils (onglet des indicateurs de performance clés, Concepteur de Cube) (Analysis Services - données multidimensionnelles) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: f21e1e4a-24c9-422f-a4be-84615a68095e
 caps.latest.revision: 21
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: dc85d3498bb4cf79216f2b2b425765a5800d00a4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: f4e1b110a957696e516d159fde6d49cc53dfd527
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36040951"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37173350"
 ---
 # <a name="toolbar-kpis-tab-cube-designer-analysis-services---multidimensional-data"></a>Barre d'outils (onglet Indicateurs de performance clés, Concepteur de cube) (Analysis Services - Données multidimensionnelles)
   Utilisez le volet **Barre d'outils** pour effectuer les opérations courantes dans l'onglet **Indicateurs de performance clés** du Concepteur de cube.  
@@ -61,7 +61,7 @@ ms.locfileid: "36040951"
  **Mode formulaire**  
  Sélectionnez cette option pour utiliser l’onglet **Indicateurs de performance clés** en mode Formulaire.  
   
- **Mode navigateur**  
+ **Vue du navigateur**  
  Sélectionnez cette option pour utiliser l’onglet **Indicateurs de performance clés** en mode Navigateur.  
   
  **Vérifiez la syntaxe**  

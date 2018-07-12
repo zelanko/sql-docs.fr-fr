@@ -1,5 +1,5 @@
 ---
-title: Modification de la Dimension de produit | Documents Microsoft
+title: Modification de la Dimension de produit | Microsoft Docs
 ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 8e3ffecd-7f40-41a8-8735-bc9858a310cb
 caps.latest.revision: 20
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: jhubbard
-ms.openlocfilehash: 6d0fca02684392aaba37565d4b06b7cc0f1e265f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 1163fdaf3e76734217fc8c2cca13a124e30f3b2b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36040286"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37171730"
 ---
 # <a name="modifying-the-product-dimension"></a>Modification de la dimension Product
   Au cours des tâches de cette rubrique, vous allez utiliser un calcul nommé pour fournir des noms plus descriptifs pour les lignes de produits, définir une hiérarchie dans la dimension Product et spécifier le nom de membre (All) pour la hiérarchie. Vous regroupez également les attributs dans des dossiers d'affichage.  
@@ -33,7 +33,7 @@ ms.locfileid: "36040286"
   
 2.  En bas du volet Schéma, cliquez avec le bouton droit sur l’en-tête de la table **Product** , puis cliquez sur **Nouveau calcul nommé**.  
   
-3.  Dans le **créer un calcul nommé** boîte de dialogue, tapez `ProductLineName` dans les **nom de la colonne** boîte.  
+3.  Dans le **créer un calcul nommé** boîte de dialogue, tapez `ProductLineName` dans le **nom de colonne** boîte.  
   
 4.  Dans la zone **Expression** , tapez ou copiez l’instruction **CASE** suivante :  
   
@@ -63,7 +63,7 @@ ms.locfileid: "36040286"
   
 3.  Dans la fenêtre Propriétés à droite de l’écran, cliquez sur le champ de propriété **NameColumn** en bas de la fenêtre, puis cliquez sur le bouton de navigation (**…**) pour ouvrir la boîte de dialogue **Colonne de nom** . (Il peut être nécessaire de cliquer sur l’onglet **Propriétés** à droite de l’écran pour ouvrir la fenêtre Propriétés.)  
   
-4.  Sélectionnez `ProductLineName` au bas de la **colonne Source** liste, puis cliquez sur **OK**.  
+4.  Sélectionnez `ProductLineName` en bas de la **colonne Source** liste, puis cliquez sur **OK**.  
   
      Le champ NameColumn contient maintenant le texte, **Product.ProductLineName (WChar)**. Les membres de la hiérarchie d’attributs **Product Line** affichent maintenant le nom complet de la ligne de produits et non plus le nom abrégé.  
   
@@ -75,7 +75,7 @@ ms.locfileid: "36040286"
   
      Le champ NameColumn contient maintenant le texte **Product.EnglishProductName (WChar)**.  
   
-8.  Dans la fenêtre Propriétés, faites défiler le haut, cliquez sur le **nom** champ de propriété, puis tapez `Product Name`.  
+8.  Dans la fenêtre Propriétés, faites défiler vers le haut, cliquez sur le **nom** champ de propriété, puis appuyez sur `Product Name`.  
   
 ## <a name="creating-a-hierarchy"></a>Création d'une hiérarchie  
   
@@ -83,13 +83,13 @@ ms.locfileid: "36040286"
   
 1.  Faites glisser l’attribut **Product Line** du volet **Attributs** vers le volet **Hiérarchies** .  
   
-2.  Faites glisser le **nom du modèle** d’attribut du **attributs** volet dans le  **\<nouveau niveau >** de cellule dans le **hiérarchies** volet, en dessous du **Product Line** niveau.  
+2.  Faites glisser le **Nom_modèle** de l’attribut le **attributs** volet dans le  **\<nouveau niveau >** de cellule dans le **hiérarchies** volet, sous la **Product Line** niveau.  
   
-3.  Faites glisser le `Product Name` d’attribut du **attributs** volet dans le  **\<nouveau niveau >** dans la cellule la **hiérarchies** volet, sous la  **Nom de modèle** niveau. (Vous avez renommé Product Key en Product Name dans la section précédente.)  
+3.  Faites glisser le `Product Name` d’attribut du **attributs** volet dans le  **\<nouveau niveau >** de cellule dans le **hiérarchies** volet, sous la  **Nom du modèle** niveau. (Vous avez renommé Product Key en Product Name dans la section précédente.)  
   
 4.  Dans le **hiérarchies** volet de la **Structure de Dimension** onglet, avec le bouton droit de la barre de titre de la **hiérarchie** hiérarchie, cliquez sur **renommer** , puis tapez `Product Model Lines`.  
   
-     Le nom de la hiérarchie est désormais `Product Model Lines`.  
+     Le nom de la hiérarchie est maintenant `Product Model Lines`.  
   
 5.  Dans le menu **Fichier** , cliquez sur **Enregistrer tout**.  
   
@@ -145,9 +145,9 @@ ms.locfileid: "36040286"
   
      Vous avez maintenant groupé ces attributs dans un troisième dossier d'affichage.  
   
-7.  Sélectionnez le `Product Model Lines` hiérarchie dans le **hiérarchies** volet et modifiez le **AllMemberName** propriété dans la fenêtre Propriétés pour `All Products`.  
+7.  Sélectionnez le `Product Model Lines` hiérarchie dans le **hiérarchies** volet et redéfinissez le **AllMemberName** propriété dans la fenêtre Propriétés pour `All Products`.  
   
-8.  Cliquez sur une zone ouverte du **hiérarchies** volet et modifiez le **AttributeAllMemberName** propriété en haut de la fenêtre Propriétés pour `All Products`.  
+8.  Cliquez sur une zone ouverte du **hiérarchies** volet et redéfinissez le **AttributeAllMemberName** propriété en haut de la fenêtre Propriétés pour `All Products`.  
   
      Ceci vous permet de modifier les propriétés de la dimension Product. Vous pouvez aussi cliquer sur **Product** en haut de la liste des attributs dans le volet **Attributs** .  
   
@@ -178,16 +178,16 @@ ms.locfileid: "36040286"
   
 2.  Après avoir reçu le message **Le déploiement est terminé** , cliquez sur l’onglet **Navigateur** du **Concepteur de dimensions** pour la dimension **Product** , puis cliquez sur le bouton Reconnecter de la barre d’outils du Concepteur.  
   
-3.  Vérifiez que `Product Model Lines` est sélectionné dans le **hiérarchie** liste, puis cliquez sur `All Products`.  
+3.  Vérifiez que `Product Model Lines` est sélectionné dans le **hiérarchie** liste, puis développez `All Products`.  
   
-     Notez que le nom de la **tous les** membre apparaît sous la forme `All Products`. C’est parce que vous avez modifié le **AllMemberName** propriété pour la hiérarchie à `All Products` plus haut dans cette leçon. De même, les membres du niveau **Product Line** ont maintenant des noms conviviaux, au lieu d’abréviations d’une seule lettre.  
+     Notez que le nom de la **tous les** membre apparaît sous la forme `All Products`. Il s’agit, car vous avez modifié le **AllMemberName** propriété pour la hiérarchie à `All Products` plus haut dans la leçon. De même, les membres du niveau **Product Line** ont maintenant des noms conviviaux, au lieu d’abréviations d’une seule lettre.  
   
 ## <a name="next-task-in-lesson"></a>Tâche suivante de la leçon  
- [Modification de la Dimension Date](lesson-3-4-modifying-the-date-dimension.md)  
+ [Modification de la dimension Date](lesson-3-4-modifying-the-date-dimension.md)  
   
 ## <a name="see-also"></a>Voir aussi  
  [Définir des calculs nommés dans une vue de Source de données &#40;Analysis Services&#41;](multidimensional-models/define-named-calculations-in-a-data-source-view-analysis-services.md)   
  [Créer des hiérarchies définies par l’utilisateur](multidimensional-models/user-defined-hierarchies-create.md)   
- [Configurer le &#40;tous les&#41; niveau pour les hiérarchies d’attributs](multidimensional-models/database-dimensions-configure-the-all-level-for-attribute-hierarchies.md)  
+ [Configurer le &#40;tous les&#41; niveau hiérarchies d’attributs](multidimensional-models/database-dimensions-configure-the-all-level-for-attribute-hierarchies.md)  
   
   

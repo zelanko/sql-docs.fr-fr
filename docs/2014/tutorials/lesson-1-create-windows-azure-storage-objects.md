@@ -1,5 +1,5 @@
 ---
-title: 'Leçon 1 : Créer des objets de stockage Azure Windows | Documents Microsoft'
+title: 'Leçon 1 : Créer des objets de stockage Azure Windows | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 74edd1fd-ab00-46f7-9e29-7ba3f1a446c5
 caps.latest.revision: 7
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 916139aa9f5e30581abc29421cafb2bb5eb06ee7
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: craigg-msft
+ms.author: craigg
+manager: craigg
+ms.openlocfilehash: dca19f18df157756625b2335b2e38439c34d4f5f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36041937"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37157390"
 ---
 # <a name="lesson-1-create-windows-azure-storage-objects"></a>Leçon 1 : Créer des objets de Stockage Microsoft Azure
   Avant de créer des sauvegardes [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] dans le Cloud de stockage, vous devez tout d'abord créer un compte de stockage, puis un conteneur d'objets blob. La leçon 1 présente les étapes de connexion au portail de gestion Windows Azure, puis de création d'un compte de stockage et d'un conteneur d'objets blob.  
@@ -29,11 +29,11 @@ ms.locfileid: "36041937"
   
 1.  Connectez-vous au portail de gestion Windows Azure à l'aide de votre compte. Si vous n’avez pas un compte Windows Azure, [Profitez d’évaluation gratuite de 3 mois de Windows Azure](http://go.microsoft.com/fwlink/?LinkId=271927).  
   
-     ![Écran de connexion Azure Windows](../../2014/tutorials/media/windowazurelogin-backuptocloud.gif "écran de connexion Azure de Windows")  
+     ![Écran de connexion Azure Windows](../../2014/tutorials/media/windowazurelogin-backuptocloud.gif "écran de connexion Azure Windows")  
   
 2.  Utilisez les instructions étape par étape détaillées [ici](http://go.microsoft.com/fwlink/?LinkId=271926), pour créer un compte de stockage.  
   
-3.  Accédez au compte de stockage créé à l'étape précédente. Dans la partie centrale inférieure de la page web, cliquez sur **gérer les clés**. Les informations de compte sont affichées. Copiez le nom du compte de stockage et les clés d'accès. Ces informations sont nécessaires pour créer des informations d'identification stockées dans SQL. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] utilise ces informations pour accéder au compte de stockage et créer des sauvegardes.  
+3.  Accédez au compte de stockage créé à l'étape précédente. En bas au centre de la page web, cliquez sur **gérer les clés**. Les informations de compte sont affichées. Copiez le nom du compte de stockage et les clés d'accès. Ces informations sont nécessaires pour créer des informations d'identification stockées dans SQL. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] utilise ces informations pour accéder au compte de stockage et créer des sauvegardes.  
   
      ![Capture d’écran de clés de compte de stockage Windows Azure](../../2014/tutorials/media/manageaccesskeys-backuptocloud.gif "capture d’écran de clés de compte de stockage Windows Azure")  
   

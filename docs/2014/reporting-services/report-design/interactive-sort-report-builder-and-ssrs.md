@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 00cafed5-1a3c-4ce0-a1fb-ff1e2613f495
 caps.latest.revision: 6
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: e9d85e66cd3ccbfb4c3695f6d7485dbb1a8a9de2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 42d4a6aa9601c7b49cc69a2406550c76134ed6dc
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36040579"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37162030"
 ---
 # <a name="interactive-sort-report-builder-and-ssrs"></a>Tri interactif (Générateur de rapports et SSRS)
   Vous pouvez ajouter des boutons de tri interactifs pour permettre à un utilisateur de basculer entre l'ordre croissant et l'ordre décroissant pour les lignes d'une table ou pour les lignes et les colonnes d'une matrice. L'utilisation la plus courante du tri interactif consiste à ajouter un bouton de tri à chaque en-tête de colonne. L'utilisateur peut alors choisir la colonne en fonction de laquelle trier le contenu.  
@@ -41,7 +41,7 @@ ms.locfileid: "36040579"
   
 -   **Faut-il synchroniser le tri pour plusieurs régions de données** : vous pouvez concevoir un rapport afin que lorsque l’utilisateur bascule l’ordre de tri, d’autres régions de données avec le même ancêtre soient également triées.  
   
- Pour obtenir des instructions, consultez [ajouter un tri interactif à une Table ou une matrice &#40;le Générateur de rapports et SSRS&#41;](add-interactive-sort-to-a-table-or-matrix-report-builder-and-ssrs.md).  
+ Pour obtenir des instructions détaillées, consultez [ajouter un tri interactif à une Table ou une matrice &#40;Générateur de rapports et SSRS&#41;](add-interactive-sort-to-a-table-or-matrix-report-builder-and-ssrs.md).  
   
  Le tableau suivant récapitule les effets que vous pouvez obtenir en utilisant des boutons de tri interactifs.  
   
@@ -58,11 +58,11 @@ ms.locfileid: "36040579"
 ## <a name="adding-interactive-sort-for-multiple-groups"></a>Ajout du tri interactif à plusieurs groupes  
  Dans une table comportant des groupes de lignes imbriqués basés chacun sur un champ de dataset unique, vous pouvez ajouter un bouton de tri interactif qui trie les valeurs du groupe parent, les valeurs du groupe enfant ou les lignes de détails. Toutefois, vous pouvez souhaiter permettre à l'utilisateur de trier la table à la fois par les valeurs des groupes parent et enfant sans devoir cliquer plusieurs fois.  
   
- Pour ce faire, vous devez modifier la conception de la table pour effectuer le groupement sur une expression qui combine plusieurs champs. Par exemple, pour un dataset comprenant des éléments d'inventaire, si la table d'origine est regroupée par taille puis par couleur, vous pouvez spécifier un groupe unique avec une expression de groupe qui est une combinaison de taille et couleur. Pour plus d’informations, consultez [ajouter un tri interactif à une Table ou une matrice &#40;le Générateur de rapports et SSRS&#41;](add-interactive-sort-to-a-table-or-matrix-report-builder-and-ssrs.md).  
+ Pour ce faire, vous devez modifier la conception de la table pour effectuer le groupement sur une expression qui combine plusieurs champs. Par exemple, pour un dataset comprenant des éléments d'inventaire, si la table d'origine est regroupée par taille puis par couleur, vous pouvez spécifier un groupe unique avec une expression de groupe qui est une combinaison de taille et couleur. Pour plus d’informations, consultez [ajouter un tri interactif à une Table ou une matrice &#40;Générateur de rapports et SSRS&#41;](add-interactive-sort-to-a-table-or-matrix-report-builder-and-ssrs.md).  
   
 ## <a name="see-also"></a>Voir aussi  
  [Trier des données dans une région de données &#40;Générateur de rapports et SSRS&#41;](sort-data-in-a-data-region-report-builder-and-ssrs.md)   
  [Filtrer, regrouper et trier des données &#40;Générateur de rapports et SSRS&#41;](filter-group-and-sort-data-report-builder-and-ssrs.md)   
- [Ajouter un tri interactif à une Table ou une matrice &#40;rapport Générateur et SSRS&#41;](add-interactive-sort-to-a-table-or-matrix-report-builder-and-ssrs.md)  
+ [Ajouter un tri interactif à une Table ou une matrice &#40;Générateur de rapports et SSRS&#41;](add-interactive-sort-to-a-table-or-matrix-report-builder-and-ssrs.md)  
   
   

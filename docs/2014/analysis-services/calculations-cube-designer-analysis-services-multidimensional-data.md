@@ -1,5 +1,5 @@
 ---
-title: Calculs (Concepteur de Cube) (Analysis Services - données multidimensionnelles) | Documents Microsoft
+title: Calculs (Concepteur de Cube) (Analysis Services - données multidimensionnelles) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.cubeeditor.calculationsview.f1
 ms.assetid: 46e2fbe2-bb41-4eaa-91f8-eb2bd3b8d00d
 caps.latest.revision: 24
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: f4f44529300b0152ef6f89ff2021d8827049e203
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: f26be233fc8a3e9b4bcc1aa5267619b839a02ae1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36039867"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37239939"
 ---
 # <a name="calculations-cube-designer-analysis-services---multidimensional-data"></a>Calculs (Concepteur de cube) (Analysis Services - Données multidimensionnelles)
   Utilisez l’onglet **Calculs** dans le Concepteur de cube pour afficher ou modifier les calculs, y compris les membres calculés, les jeux nommés et les commandes de script MDX (Multidimensional Expressions) du cube sélectionné.  
@@ -59,7 +59,7 @@ ms.locfileid: "36039867"
 ## <a name="see-also"></a>Voir aussi  
  [Objets de cube &#40;Analysis Services - données multidimensionnelles&#41;](multidimensional-models-olap-logical-cube-objects/cube-objects-analysis-services-multidimensional-data.md)   
  [Calculs](multidimensional-models-olap-logical-cube-objects/calculations.md)   
- [Notions de base des scripts MDX &#40;Analysis Services&#41;](multidimensional-models/mdx/mdx-scripting-fundamentals-analysis-services.md)   
+ [Principes de base des scripts MDX &#40;Analysis Services&#41;](multidimensional-models/mdx/mdx-scripting-fundamentals-analysis-services.md)   
  [Concepteur de cube &#40;Analysis Services - données multidimensionnelles&#41;](cube-designer-analysis-services-multidimensional-data.md)   
  [Créer des jeux nommés](multidimensional-models/create-named-sets.md)  
   

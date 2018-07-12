@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - data-quality-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: c5ab71a3-0dac-45b1-be8e-93bf7e0e03ce
 caps.latest.revision: 12
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 72b2400e8a953490d1650a8e435c6b353c660445
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: bb61470789fb7474216b1a4da1364305c4cd9f8c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36040723"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37153000"
 ---
 # <a name="managing-a-domain"></a>Gestion d'un domaine
   Cette rubrique décrit l'utilisation des domaines dans [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS). Un domaine contient une représentation sémantique des données dans un champ spécifique dans la source de données qui doit être analysée. Un domaine fait partie de la base de connaissances que vous créez pour une source de données, et la connaissance que vous accumulez en analysant un exemple de source de données, ou lors de l'importation de données, est ajoutée aux domaines définis dans la base de connaissances. La connaissance de ces domaines est utilisée ultérieurement pour effectuer le nettoyage et la correspondance dans un projet de qualité des données. Les domaines sont au cœur de toutes les activités dans Data Quality Services.  
@@ -50,7 +50,7 @@ ms.locfileid: "36040723"
 |-|-|  
 |Créer une représentation sémantique d'un champ de données avec un type de données spécifique, spécifier comment le domaine est rempli et mettre en forme la sortie du domaine|[Créer un domaine](../../2014/data-quality-services/create-a-domain.md)|  
 |Lier un domaine à un autre domaine, en lui permettant de partager les mêmes paramètres et valeurs|[Créer un domaine lié](../../2014/data-quality-services/create-a-linked-domain.md)|  
-|Attacher un service de données de référence à un domaine unique ou composite|[Joindre un domaine ou un domaine Composite aux données de référence](../../2014/data-quality-services/attach-a-domain-or-composite-domain-to-reference-data.md)|  
+|Attacher un service de données de référence à un domaine unique ou composite|[Attacher un domaine ou un domaine composite à des données de référence](../../2014/data-quality-services/attach-a-domain-or-composite-domain-to-reference-data.md)|  
 |Modifier ou augmenter les valeurs dans une base de connaissances|[Modifier les valeurs de domaine](../../2014/data-quality-services/change-domain-values.md)|  
 |Utiliser les règles de validation et de normalisation|[Créer une règle de domaine](../../2014/data-quality-services/create-a-domain-rule.md)|  
 |Utiliser des relations pour corriger un terme qui fait partie d'une valeur dans un domaine|[Créer des relations à base de termes](../../2014/data-quality-services/create-term-based-relations.md)|  

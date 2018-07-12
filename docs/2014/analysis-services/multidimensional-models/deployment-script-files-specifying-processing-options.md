@@ -1,5 +1,5 @@
 ---
-title: Spécification des Options de traitement | Documents Microsoft
+title: Spécification des Options de traitement | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Analysis Services deployments, processing options
 - input files [Analysis Services]
@@ -17,21 +17,21 @@ helpviewer_keywords:
 - Analysis Services Deployment Wizard, processing options
 ms.assetid: e9e50817-908e-4210-bc3d-8e2957568241
 caps.latest.revision: 31
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 7035045d1d55e9158431dd4245b9d5112b2df0a4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: c5f20e9061aae762eda6b773c7bdb345273fd1b5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36041715"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37149100"
 ---
 # <a name="specifying-processing-options"></a>Spécification d'options de traitement
-  Le [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Assistant Déploiement de lit les options de traitement de la \< *nom du projet*> .deploymentoptions fichier. [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] crée ce fichier lorsque vous générez le projet [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] utilise les options de traitement spécifiées sur la **déploiement** page de  *\<nom du projet >* **Pages de propriétés** boîte de dialogue pour créer le \< *nom du projet*> .deploymentoptions fichier.  
+  Le [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Assistant Déploiement de lit les options de traitement à partir de la \< *nom_projet*> .deploymentoptions fichier. [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] crée ce fichier lorsque vous générez le projet [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] utilise les options de traitement spécifiées sur la **déploiement** page de  *\<nom_projet >* **Pages de propriétés** boîte de dialogue pour créer le \< *nom_projet*> .deploymentoptions fichier.  
   
 ## <a name="reviewing-the-processing-options-for-deployment"></a>Examen des options de traitement pour le déploiement  
- Les paramètres de configuration stockés dans le \< *nom du projet*> .deploymentoptions sont les suivantes :  
+ Les paramètres de configuration stockés dans le \< *nom_projet*> .deploymentoptions fichier sont les suivantes :  
   
 -   **Méthode de traitement** Ce paramètre contrôle si les objets déployés sont traités après le déploiement et le type de traitement à effectuer. Trois options de traitement sont possibles :  
   
@@ -56,7 +56,7 @@ ms.locfileid: "36041715"
     -   Si cette option est `False`, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] déploie les modifications de métadonnées dans une transaction unique et déploie chaque commande de traitement dans sa propre transaction.  
   
 ## <a name="modifying-the-processing-options-for-deployment"></a>Modification des options de traitement pour le déploiement  
- Toutefois, vous devez déployer le [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] de projet à l’aide des options de traitement différentes de celles stockées dans le \< *nom du projet*> .deploymentoptions fichier. Par exemple, vous pouvez souhaiter que tous les objets soient traités entièrement ou traités en utilisant l'option de traitement par défaut, ou encore qu'aucun traitement n'ait lieu. Si les cubes ou les dimensions sont activés en écriture, vous pouvez spécifier si une nouvelle table d'écriture différée ou une table existante doit être utilisée.  
+ Toutefois, vous devrez peut-être déployer la [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] projet à l’aide des options de traitement différentes de celles stockées dans le \< *nom_projet*> .deploymentoptions fichier. Par exemple, vous pouvez souhaiter que tous les objets soient traités entièrement ou traités en utilisant l'option de traitement par défaut, ou encore qu'aucun traitement n'ait lieu. Si les cubes ou les dimensions sont activés en écriture, vous pouvez spécifier si une nouvelle table d'écriture différée ou une table existante doit être utilisée.  
   
  Pour modifier les options de traitement utilisées durant le déploiement, vous pouvez soit modifier et régénérer le projet, soit modifier les options de traitement dans le fichier d'entrée en utilisant l'une des méthodes décrites dans la procédure suivante.  
   
@@ -70,11 +70,11 @@ ms.locfileid: "36041715"
   
      —ou—  
   
--   Modifier la \< *nom du projet*> fichier .deploymentoptions à l’aide de n’importe quel éditeur de texte.  
+-   Modifier le \< *nom_projet*> fichier .deploymentoptions à l’aide de n’importe quel éditeur de texte.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Spécification de la cible d’Installation](deployment-script-files-specifying-the-installation-target.md)   
- [Spécification des partitions et des Options de déploiement de rôles](deployment-script-files-partition-and-role-deployment-options.md)   
- [Spécification des paramètres de Configuration pour le déploiement de solutions](deployment-script-files-solution-deployment-config-settings.md)  
+ [En spécifiant la cible d’Installation](deployment-script-files-specifying-the-installation-target.md)   
+ [Spécification des partitions et des Options de déploiement de rôle](deployment-script-files-partition-and-role-deployment-options.md)   
+ [Spécification de paramètres de configuration pour le déploiement de solutions](deployment-script-files-solution-deployment-config-settings.md)  
   
   

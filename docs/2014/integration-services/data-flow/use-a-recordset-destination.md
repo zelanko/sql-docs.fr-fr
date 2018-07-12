@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Recordset destination
 ms.assetid: a7b143dc-8008-404f-83b0-b45ffbca6029
 caps.latest.revision: 11
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: a513f196b0dc099f890225048e4e96adab51d285
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: db88be22f9bb3e92739957bfaf0f4b827e49f61d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36039998"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37277355"
 ---
 # <a name="use-a-recordset-destination"></a>Utiliser une destination de jeu d'enregistrements
   La destination d'ensemble d'enregistrements n'enregistre pas les données sur une source de données externe. Elle enregistre les données en mémoire dans un ensemble d'enregistrements stocké dans une variable de package [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] de type `Object`. Une fois que la destination d'ensemble d'enregistrements a sauvegardé les données, vous devez en général utiliser un conteneur de boucles Foreach avec l'énumérateur ADO Foreach pour traiter une par une les lignes de l'ensemble d'enregistrements. L'énumérateur ADO Foreach enregistre la valeur de chaque colonne de la ligne actuelle dans une variable de package distincte. Ensuite, les tâches que vous configurez à l'intérieur du conteneur de boucles Foreach lisent les valeurs contenues dans ces variables et effectuent certaines actions sur ces valeurs.  
@@ -41,7 +41,7 @@ ms.locfileid: "36039998"
   
 1.  Dans [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], créez ou ouvrez un package [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .  
   
-2.  Créez une variable qui contiendra l’ensemble d’enregistrements enregistré en mémoire par la destination du jeu d’enregistrements et définissez le type de variable `Object`.  
+2.  Créez une variable qui contiendra le jeu d’enregistrements enregistré en mémoire par la destination de Recordset et la valeur est le type de variable `Object`.  
   
 3.  Créez des variables supplémentaires avec les types appropriés pour contenir les valeurs de chaque colonne de l'ensemble d'enregistrements que vous souhaitez utiliser.  
   
@@ -74,11 +74,11 @@ ms.locfileid: "36039998"
   
     1.  Créez une variable nommée `BonusRecordset`et définissez son type sur `Object`.  
   
-         Le `BonusRecordset` variable contient le jeu d’enregistrements.  
+         Le `BonusRecordset` variable conserve le jeu d’enregistrements.  
   
     2.  Créez une variable nommée `EmailAddress`et définissez son type sur `String`.  
   
-         Le `EmailAddress` variable contient l’adresse de messagerie du vendeur.  
+         Le `EmailAddress` variable contient l’adresse e-mail du vendeur.  
   
     3.  Créez une variable nommée `FirstName`et définissez son type sur `String`.  
   
@@ -86,7 +86,7 @@ ms.locfileid: "36039998"
   
     4.  Créez une variable nommée `Bonus`et définissez son type sur `Double`.  
   
-         Le `Bonus` variable contienne le montant de la prime du vendeur.  
+         Le `Bonus` variable conserve le montant de la prime du vendeur.  
   
 #### <a name="to-configure-the-connection-managers"></a>Pour configurer les gestionnaires de connexions  
   
@@ -135,9 +135,9 @@ ms.locfileid: "36039998"
   
 2.  Ouvrez l' **Éditeur de boucle Foreach**et configurez le conteneur avec les paramètres suivants :  
   
-    1.  Sur le **Collection** page, pour **énumérateur**, sélectionnez **énumérateur Foreach ADO**et pour **variable source de l’objet ADO**, sélectionnez `User::BonusRecordset`.  
+    1.  Sur le **Collection** page, pour **énumérateur**, sélectionnez **énumérateur ADO Foreach**et pour **variable source de l’objet ADO**, sélectionnez `User::BonusRecordset`.  
   
-    2.  Sur le **mappages de variables** page, de la carte `User::EmailAddress` à l’index 0, `User::FirstName` à l’index 1 et `User::Bonus` à l’index 2.  
+    2.  Sur le **mappages de variables** page, mappez `User::EmailAddress` à l’index 0, `User::FirstName` à l’index 1 et `User::Bonus` à l’index 2.  
   
 3.  Sous l'onglet **Flux de contrôle** , à l'intérieur du conteneur de boucles Foreach, ajoutez une tâche Envoyer un message.  
   

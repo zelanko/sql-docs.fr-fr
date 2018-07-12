@@ -1,5 +1,5 @@
 ---
-title: Page Rechercher (Gestionnaire de rapports) | Documents Microsoft
+title: Rechercher la Page (Gestionnaire de rapports) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 51ffdc07-e1b9-4ed7-acb3-dd98d7cce273
 caps.latest.revision: 26
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 4bc093b32a6fe3b5311bba109a7f4e672dc1fc9f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: e8fbd4956e5e836def836acf1693fe9f548dc081
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36040117"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37192989"
 ---
 # <a name="search-page-report-manager"></a>Page Rechercher (Gestionnaire de rapports)
   La page Résultats de la recherche vous permet d'afficher les résultats d'une recherche spécifiée pour un rapport, un rapport lié, un modèle de rapport, une source de données partagée, un dossier ou une ressource. Les résultats de la recherche sont répertoriés par ordre alphabétique. Vous pouvez les trier par type, nom ou description.  
@@ -57,18 +57,18 @@ ms.locfileid: "36040117"
   
  Les opérateurs booléens tels que le caractère plus (+) ne sont pas pris en charge.  
   
- **Affichage des détails**  
+ **Mode Détails**  
  Cliquez pour afficher la page Résultats de la recherche dans une liste qui contient des informations supplémentaires sur les éléments, tels que le type d'élément, le nom, la description, le dossier dans lequel l'élément se trouve, et la date de sa dernière exécution. En **Mode Détails**, vous pouvez utiliser les boutons **Supprimer** et **Déplacer** pour supprimer et déplacer des éléments dans le dossier.  
   
  Pointez sur un élément et cliquez sur la flèche déroulante pour ouvrir le menu déroulant à partir duquel vous pouvez accéder aux propriétés de l'élément sélectionné et les configurer.  
   
- **Mode liste**  
+ **Affichage de liste**  
  Cliquez pour afficher la page Résultats de la recherche sans détails comme dans **Mode Détails**. Mode Liste est la vue par défaut lorsque la page Résultats de la recherche s'ouvre.  
   
  Pointez sur un élément et cliquez sur la flèche déroulante pour ouvrir le menu déroulant à partir duquel vous pouvez accéder aux propriétés de l'élément sélectionné et les configurer.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Le Gestionnaire de rapports &#40;SSRS en Mode natif&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
- [Aide (F1) de gestionnaire de rapports](../../2014/reporting-services/report-manager-f1-help.md)  
+ [Aide (F1) du Gestionnaire de rapports](../../2014/reporting-services/report-manager-f1-help.md)  
   
   

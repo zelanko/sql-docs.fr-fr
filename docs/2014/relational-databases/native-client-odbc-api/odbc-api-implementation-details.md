@@ -1,13 +1,11 @@
 ---
-title: Détails d’implémentation ODBC API | Documents Microsoft
+title: Détails d’implémentation API ODBC | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -17,20 +15,20 @@ helpviewer_keywords:
 - functions [ODBC]
 ms.assetid: dca92489-f179-4b1f-997c-adcc46aa17a3
 caps.latest.revision: 42
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 1daffe7b45f162b3fcfda99405d85dbb96493607
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: d5d4850fd9a3bb51cf306bea6e960ed6bc4d9bc8
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36039291"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37430458"
 ---
 # <a name="odbc-api-implementation-details"></a>ODBC API Implementation Details
   Cette section fournit des informations sur les fonctions ODBC qui présentent des comportements spécifiques à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] lorsqu'elles sont utilisées avec le pilote ODBC [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client. Toutes les fonctions ODBC ne sont pas documentées ici. Les rubriques individuelles présentent uniquement les problèmes spécifiques à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pour une fonction ODBC. Elles ne constituent pas une référence complète pour les fonctions ODBC.  
   
- Le pilote ODBC [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client se conforme à la spécification d'ODBC 3.51 et, si vous utilisez le kit de développement logiciel (SDK) Windows 7, avec la spécification ODBC 3.8. Pour obtenir une référence ODBC complète, consultez la [de référence du programmeur ODBC](http://go.microsoft.com/fwlink/?LinkId=45250) en ligne.  
+ Le pilote ODBC [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client se conforme à la spécification d'ODBC 3.51 et, si vous utilisez le kit de développement logiciel (SDK) Windows 7, avec la spécification ODBC 3.8. Pour obtenir une référence ODBC complète, affichez le [de référence du programmeur ODBC](http://go.microsoft.com/fwlink/?LinkId=45250) en ligne.  
   
 ## <a name="in-this-section"></a>Dans cette section  
   

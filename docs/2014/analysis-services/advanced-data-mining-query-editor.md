@@ -1,5 +1,5 @@
 ---
-title: Advanced éditeur de requête d’exploration de données | Documents Microsoft
+title: Advanced éditeur de requête d’exploration de données | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 27e7fc46-689d-43a4-9647-1c27d182bdd6
 caps.latest.revision: 9
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 430a9263b15b385dd6e5f8f7aa24be15a54edffd
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 75347810fafa87828dd09653059e9a403a1892ef
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36040302"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37167670"
 ---
-# <a name="advanced-data-mining-query-editor"></a>Éditeur de requête d’exploration de données données avancé
+# <a name="advanced-data-mining-query-editor"></a>Éditeur de requête d’exploration de données données avancées
   Le **données d’exploration de données éditeur de requêtes avancé** est un outil pour vous aider à créer des requêtes et des modèles personnalisés.  
   
  L'éditeur fournit un ensemble de modèles avec des liens interactifs. Cliquez simplement sur chaque lien, puis utilisez les boîtes de dialogue pour sélectionner des objets ou des valeurs et générer des instructions DMX (Data Mining Extensions) complexes. Basculez la vue vers le modèle d'édition de texte pour modifier l'instruction DMX manuellement.  
@@ -40,7 +40,7 @@ ms.locfileid: "36040302"
  Utilisez ce bouton pour basculer l’éditeur entre un éditeur de texte, où vous pouvez écrire des instructions DMX directement ; et le **Générateur de requêtes**, qui vous aide à vous générez une instruction DMX.  
   
 > [!NOTE]  
->  **Avertissement :** si vous changez de vue avant l’exécution de la requête, un message s’affiche indiquant que vous risquez de perdre certaines modifications. Si l’instruction DMX est valide, dans de nombreux cas le **Générateur de requêtes** risque de convertir correctement ces modifications. Toutefois, si vous avez généré une instruction DMX particulièrement complexe, vous devez enregistrer votre travail avant de changer de vue.  
+>  **Avertissement :** si vous changez de vue avant l’exécution de la requête, un message s’affiche indiquant que vous risquez de perdre certaines modifications. Si l’instruction DMX est valide, dans de nombreux cas le **Générateur de requêtes** convertit correctement ces modifications. Toutefois, si vous avez généré une instruction DMX particulièrement complexe, vous devez enregistrer votre travail avant de changer de vue.  
   
  **Modèles DMX**  
  Cliquez et sélectionnez à partir d'une liste de modèles qui contient des exemples DMX. Les modèles fournissent tous les types de modèle ou requête de prédiction nécessaires, notamment les requêtes qui utilisent des tables imbriquées, et les instructions DMX pour gérer des modèles. Même si vous connaissez certaines instructions DMX, les modèles permettent de gagner du temps en obtenant la syntaxe correcte.  
@@ -51,15 +51,15 @@ ms.locfileid: "36040302"
  Vous pouvez également afficher une liste des modèles disponibles en cliquant sur le nom du modèle dans l’instruction DMX dans le **requête DMX** volet. Le nom du modèle est généralement surligné en rouge.  
   
  **Sélectionnez l’entrée**  
- Cliquez pour sélectionner les données à utiliser comme entrée dans le modèle d'exploration de données. Si aucune source de données n’a été spécifiée, vous pouvez également cliquer sur le  **\<entrée >** lien, qui est mis en surbrillance en rouge dans le **requête DMX** volet.  
+ Cliquez pour sélectionner les données à utiliser comme entrée dans le modèle d'exploration de données. Si aucune source de données n’a été spécifiée, vous pouvez également cliquer sur le  **\<entrée >** link, ce qui est mis en surbrillance en rouge dans le **requête DMX** volet.  
   
  Sélectionnez **@InputRowset** dans la liste déroulante pour ouvrir le **remplacer InputRowset** boîte de dialogue zone et de modifier une entrée existante.  
   
- Sélectionnez **ajouter une entrée** pour ouvrir le **ajouter une entrée** boîte de dialogue zone, puis spécifiez une source de données.  
+ Sélectionnez **ajouter une entrée** pour ouvrir le **ajouter une entrée** boîte de dialogue zone, puis spécifiez une nouvelle source de données.  
   
- Vous pouvez également modifier une entrée existante en cliquant sur le **@InputRowset** lien, qui est mis en surbrillance en rouge dans le volet requête DMX.  
+ Vous pouvez également modifier une entrée existante en cliquant sur le **@InputRowset** link, ce qui est mis en surbrillance en rouge dans le volet requête DMX.  
   
- **Mapper les colonnes**  
+ **Mapper des colonnes**  
  Sélectionnez des colonnes dans le modèle d'exploration de données et mappez-les aux colonnes de la source de données externe.  
   
  Vous pouvez également cliquer sur la mise en surbrillance  **\<mappage >** lien dans le volet requête DMX.  
@@ -69,7 +69,7 @@ ms.locfileid: "36040302"
   
  Vous pouvez également cliquer sur la mise en surbrillance  **\<ajouter une sortie >** lien dans le volet requête DMX.  
   
- **Colonnes de modèle**  
+ **Colonnes du modèle**  
  Répertorie les colonnes du modèle d'exploration de données sélectionné. Une marque en forme de losange en regard du nom de la colonne indique que celle-ci est une colonne prévisible.  
   
  **Colonnes d'entrée**  

@@ -1,5 +1,5 @@
 ---
-title: "Une erreur s'est produite lors de la tentative de connexion à la source de données externe. Impossible d’actualiser les connexions suivantes : données PowerPivot | Documents Microsoft"
+title: "Une erreur s'est produite lors de la tentative de connexion à la source de données externe. Impossible d’actualiser les connexions suivantes : données PowerPivot | Microsoft Docs"
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 1b951da1-f62d-43d2-b40b-270a4a9ab92c
 caps.latest.revision: 5
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 36c9846ec1af5589f7fb29d3486ef11632eb01fd
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 8d31afd4bb907256fc548c8102cdfaa8a927f174
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36039831"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37206219"
 ---
 # <a name="an-error-occurred-during-an-attempt-to-establish-a-connection-to-the-external-data-source-the-following-connections-failed-to-refresh-powerpivot-data"></a>Une erreur s'est produite lors de la tentative de connexion à la source de données externe. Échec de l'actualisation des connexions suivantes : Données PowerPivot
   Cette erreur se produit si vous interrogez des données PowerPivot sur un serveur sur lequel PowerPivot pour SharePoint n'est pas installé. Se produit également si le service SQL Server Analysis Services (PowerPivot) est arrêté, ou si vous essayez d'afficher des données PowerPivot d'une version antérieure.  
@@ -46,6 +46,6 @@ ms.locfileid: "36039831"
  Pour les classeurs PowerPivot créés dans une version SQL Server 2008 R2 PowerPivot pour Excel, vous devez installer la version SQL Server 2008 R2 du fournisseur OLE DB Analysis Services. Cette erreur se produira si vous avez installé le fournisseur, mais n'avez pas enregistré le fichier Microsoft.AnalysisServices.ChannelTransport.dll. Pour plus d’informations sur l’enregistrement du fichier, consultez [Installer le fournisseur OLE DB Analysis Services sur les serveurs SharePoint](../../sql-server/install/install-the-analysis-services-ole-db-provider-on-sharepoint-servers.md).  
   
 ## <a name="see-also"></a>Voir aussi  
- [La connexion de données utilise l’authentification Windows, et les informations d’identification utilisateur n’ont pas pu être déléguées. Impossible d’actualiser les connexions suivantes : données PowerPivot](the-data-connection-user-could-not-be-delegated.md)  
+ [La connexion de données utilise l’authentification Windows, et les informations d’identification utilisateur n’ont pas pu être déléguées. Échec de l’actualisation des connexions suivantes : Données PowerPivot](the-data-connection-user-could-not-be-delegated.md)  
   
   

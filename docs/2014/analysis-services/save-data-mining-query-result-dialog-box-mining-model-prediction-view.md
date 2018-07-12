@@ -1,5 +1,5 @@
 ---
-title: Enregistrer les données d’exploration de données boîte de dialogue de résultats de requête (vue prévision de modèle d’exploration de données) | Documents Microsoft
+title: Enregistrer les données d’exploration de données boîte de dialogue résultat de requête (vue prévision de modèle d’exploration de données) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.dm.savedataminingqueryresult.f1
 helpviewer_keywords:
 - Save Data Mining Query Result dialog box
 ms.assetid: 112fb527-7466-4fd4-9cf1-75596135648f
 caps.latest.revision: 16
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 709c3364ac5b4d6bc159af4ec6db40663d21fcbf
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 4ab445225182566db8e4733904a3e66340549a70
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36041220"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37151620"
 ---
 # <a name="save-data-mining-query-result-dialog-box-mining-model-prediction-view"></a>Boîte de dialogue Enregistrer le résultat de la requête d'exploration de données (vue Prévision de modèle d'exploration de données)
   Utilisez la boîte de dialogue **Enregistrer le résultat de la requête d'exploration de données** pour enregistrer les résultats d'une requête d'exploration de données dans une nouvelle table.  
@@ -53,13 +53,13 @@ ms.locfileid: "36041220"
   
  Si plusieurs colonnes portent le même nom (par exemple, plusieurs colonnes dérivées peuvent porter le nom de colonne par défaut **Expression**), vous devez créer un alias pour chaque colonne ayant un nom dupliqué. Si les colonnes n'ont pas de noms uniques, une erreur est générée lorsque le concepteur tente d'enregistrer les résultats dans SQL Server, car les colonnes d'une table doivent porter des noms uniques.  
   
- **Ajouter à la vue de gestion dynamique**  
+ **Ajouter à la vue DSV**  
  (Facultatif) Sélectionnez une vue de source de données contenue dans le projet si vous souhaitez ajouter la table à une source de données existante.  
   
  Cette option est utile si vous voulez conserver toutes les tables associées pour un modèle, telles que les données d'apprentissage, les données sources de prédiction et les résultats de la requête, dans la même source de données.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Générateur de requête de prédiction &#40;d’exploration de données&#41;](prediction-query-builder-data-mining.md)   
+ [Générateur de requêtes de prédiction &#40;exploration de données&#41;](prediction-query-builder-data-mining.md)   
  [Interfaces de requête d’exploration de données](data-mining/data-mining-query-tools.md)   
  [Guide de référence des instructions DMX &#40;Data Mining Extensions&#41;](/sql/dmx/data-mining-extensions-dmx-statements)  
   

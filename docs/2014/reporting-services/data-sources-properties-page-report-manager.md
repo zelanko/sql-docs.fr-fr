@@ -1,5 +1,5 @@
 ---
-title: Page de propriétés (Gestionnaire de rapports) Sources de données | Documents Microsoft
+title: Sources de données Page de propriétés (Gestionnaire de rapports) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: f37edda0-19e6-489e-b544-8751fa6b6cfb
 caps.latest.revision: 35
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 68279fffed6d42fd60ce6a3665eeaf3b0590aae6
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: e826f27b2ce6bbb75d4aabc9d8537d0f867a0cce
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36040584"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37179556"
 ---
 # <a name="data-sources-properties-page-report-manager"></a>Page des propriétés des sources de données (Gestionnaire de rapports)
   La page de propriétés des sources de données permet de définir la connexion du rapport actif à une source de données externe. Vous pouvez remplacer les informations de connexion à la source de données publiées à l'origine avec le rapport. Si plusieurs sources de données sont utilisées avec un rapport, chacune d'elles possède sa propre section dans la page de propriétés. Les sources de données sont répertoriées dans l'ordre dans lequel elles sont définies dans le rapport.  
@@ -46,13 +46,13 @@ ms.locfileid: "36040584"
  **Parcourir**  
  Cliquez sur **Parcourir** pour ouvrir la page de sélection de la source de données qui permet de sélectionner une source de données partagée. Pour plus d’informations, consultez [Page de sélection de Source de données &#40;le Gestionnaire de rapports&#41;](../../2014/reporting-services/data-source-selection-page-report-manager.md).  
   
- **Une source de données personnalisé**  
+ **Source de données personnalisée**  
  Spécifie la façon dont le rapport se connecte à la source de données.  
   
  Les options suivantes permettent de spécifier une connexion à une source de données personnalisée.  
   
  **Type de source de données**  
- Spécifiez l'extension pour le traitement des données utilisée pour traiter les données de la source de données. Pour obtenir la liste des extensions de données intégrées, consultez [des Sources de données prises en charge par Reporting Services &#40;SSRS&#41;](create-deploy-and-manage-mobile-and-paginated-reports.md). Des extensions supplémentaires peuvent être disponibles auprès d'éditeurs tiers.  
+ Spécifiez l'extension pour le traitement des données utilisée pour traiter les données de la source de données. Pour la liste des extensions de données intégrées, consultez [Sources de données prises en charge par Reporting Services &#40;SSRS&#41;](create-deploy-and-manage-mobile-and-paginated-reports.md). Des extensions supplémentaires peuvent être disponibles auprès d'éditeurs tiers.  
   
  **Chaîne de connexion**  
  Spécifiez la chaîne de connexion utilisée par le serveur de rapports pour se connecter à la source de données. Le type de connexion détermine la syntaxe à utiliser. Par exemple, une chaîne de connexion pour une extension pour le traitement des données XML est une URL vers un document XML. Dans la plupart des cas, une chaîne de connexion type spécifie le serveur de bases de données et un fichier de données. L'exemple suivant illustre une chaîne de connexion à la base de données [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] appelée MyData :  
@@ -72,7 +72,7 @@ ms.locfileid: "36040584"
   
  Activez la case à cocher **Utiliser en tant qu’informations d’identification Windows lors de la connexion à la source de données** si les informations d’identification fournies par l’utilisateur sont des informations d’identification de l’authentification Windows. Ne sélectionnez pas cette case à cocher si vous utilisez l’authentification de base de données (par exemple, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] authentification).  
   
- **Informations d’identification stockées en sécurité dans le serveur de rapports**  
+ **Informations d’identification stockées en toute sécurité dans le serveur de rapports**  
  Stocke un nom d'utilisateur et un mot de passe chiffrés dans la base de données du serveur de rapports. Sélectionnez cette option pour exécuter un rapport sans assistance (par exemple, des rapports qui sont démarrés par des planifications ou des événements au lieu des actions utilisateur). Si vous utilisez la sécurité par défaut, le nom d'utilisateur doit être un compte de domaine Windows. Spécifiez le compte sous ce format : \<domaine >\\< nom d’utilisateur\>. Le compte que vous spécifiez doit disposer d'autorisations d'ouverture d'une session locale sur l'ordinateur qui héberge la source de données utilisée par le rapport.  
   
  Activez la case à cocher **Utiliser en tant qu'informations d'identification Windows lors de la connexion à la source de données** si les informations d'identification sont des informations d'identification de l'authentification Windows. Ne sélectionnez pas cette case à cocher si vous utilisez l’authentification de base de données (par exemple, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] authentification).  
@@ -100,6 +100,6 @@ ms.locfileid: "36040584"
 ## <a name="see-also"></a>Voir aussi  
  [Gérer les Sources de données de rapport](report-data/manage-report-data-sources.md)   
  [Spécifier des informations d'identification et de connexion pour les sources de données de rapport](report-data/specify-credential-and-connection-information-for-report-data-sources.md)   
- [Aide (F1) de gestionnaire de rapports](../../2014/reporting-services/report-manager-f1-help.md)  
+ [Aide (F1) du Gestionnaire de rapports](../../2014/reporting-services/report-manager-f1-help.md)  
   
   

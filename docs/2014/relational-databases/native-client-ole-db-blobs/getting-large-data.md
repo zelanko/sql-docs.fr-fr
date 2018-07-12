@@ -1,13 +1,11 @@
 ---
-title: Obtention de données volumineuses | Documents Microsoft
+title: Obtention de données volumineuses | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -17,18 +15,18 @@ helpviewer_keywords:
 - large data, OLE objects
 ms.assetid: a31c5632-96aa-483f-a307-004c5149fbc0
 caps.latest.revision: 31
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 9903e6449be2624501b0c17852013ed727650ed0
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: b211984732a3ed571e29e4c7117fe0aab21bd033
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36038564"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37428878"
 ---
 # <a name="getting-large-data"></a>Obtention de données volumineuses
-  En règle générale, les consommateurs doivent isoler le code qui crée un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] objet de stockage de fournisseur OLE DB Native Client depuis un autre code qui gère les données non référencées via un **ISequentialStream** pointeur d’interface.  
+  En règle générale, les consommateurs doivent isoler le code qui crée un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] objet de stockage de fournisseur OLE DB Native Client à partir de tout autre code qui gère les données non référencées via un **ISequentialStream** pointeur d’interface.  
   
  Cette rubrique aborde les fonctionnalités disponibles avec les fonctions suivantes :  
   
@@ -38,9 +36,9 @@ ms.locfileid: "36038564"
   
 -   ICommand::Execute  
   
- Si la propriété DBPROP_ACCESSORDER (dans le groupe de propriétés d’ensemble de lignes) est définie à une des valeurs DBPROPVAL_AO_SEQUENTIAL ou la valeur DBPROPVAL_AO_SEQUENTIALSTORAGEOBJECTS, le consommateur doit extraire une seule ligne de données dans un appel à la **GetNextRows**  (méthode), car les données BLOB ne sont pas mis en mémoire tampon. Si la valeur de DBPROP_ACCESSORDER a DBPROPVAL_AO_RANDOM, le consommateur peut extraire plusieurs lignes de données dans **GetNextRows**.  
+ Si la propriété DBPROP_ACCESSORDER (dans le groupe de propriétés d’ensemble de lignes) est définie à une des valeurs DBPROPVAL_AO_SEQUENTIAL ou la valeur DBPROPVAL_AO_SEQUENTIALSTORAGEOBJECTS, le consommateur doit extraire une seule ligne de données dans un appel à la **GetNextRows**  (méthode), car les données BLOB ne sont pas mis en mémoire tampon. Si la valeur de DBPROP_ACCESSORDER est définie sur DBPROPVAL_AO_RANDOM, le consommateur peut extraire plusieurs lignes de données dans **GetNextRows**.  
   
- Le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fournisseur de OLE DB Native Client ne récupère pas de données volumineuses de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] jusqu'à ce que la demande par le consommateur. Le consommateur doit lier toutes les données de type short dans un accesseur, puis utiliser un ou plusieurs accesseurs temporaires pour extraire des valeurs de données volumineuses en fonction des besoins.  
+ Le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Client fournisseur OLE DB natif ne récupère pas de données volumineuses depuis [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] jusqu'à ce que la demande par le consommateur. Le consommateur doit lier toutes les données de type short dans un accesseur, puis utiliser un ou plusieurs accesseurs temporaires pour extraire des valeurs de données volumineuses en fonction des besoins.  
   
 ## <a name="example"></a>Exemple  
  Cet exemple extrait une valeur de données volumineuses d'une colonne unique :  

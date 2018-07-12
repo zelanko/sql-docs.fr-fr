@@ -1,5 +1,5 @@
 ---
-title: Page des propriétés générales, ressources (Gestionnaire de rapports) | Documents Microsoft
+title: Page des propriétés générales, ressources (Gestionnaire de rapports) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 23eed41b-283a-49df-a3aa-062dde8d6354
 caps.latest.revision: 25
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: aff68336e0ca68a315d8b2cdab6bd783c87c5f7f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 269cd82820bb8e07ec1ac66ccc8d3e8b8ceeb43a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36040581"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37164175"
 ---
 # <a name="general-properties-page-resources-report-manager"></a>Page Propriétés générales, Ressources (Gestionnaire de rapports)
   La page Propriétés générales des ressources vous permet de renommer, supprimer, déplacer ou remplacer une ressource. Des informations sur la personne qui a ajouté la ressource ou modifié les propriétés apparaissent en haut de la page.  
@@ -39,7 +39,7 @@ ms.locfileid: "36040581"
   
 ## <a name="options"></a>Options  
  **Nom**  
- Spécifie le nom de la ressource. Le nom doit contenir un caractère alphanumérique au minimum. Il peut également comporter des espaces et quelques symboles. N'utilisez pas les caractères ; ? : @ & = +, $ / * \< > | « ou / lorsque vous spécifiez un nom.  
+ Spécifie le nom de la ressource. Le nom doit contenir un caractère alphanumérique au minimum. Il peut également comporter des espaces et quelques symboles. N'utilisez pas les caractères ; ? : @ & = +, $ / * \< > | "ou / lorsque vous spécifiez un nom.  
   
  **Description**  
  Tapez une description de la ressource. Cette description apparaît dans la page Contenu. Elle est visible par les utilisateurs qui sont autorisés à accéder à la ressource.  
@@ -65,7 +65,7 @@ ms.locfileid: "36040581"
 ## <a name="see-also"></a>Voir aussi  
  [Le Gestionnaire de rapports &#40;SSRS en Mode natif&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
  [Page vue, ressources &#40;le Gestionnaire de rapports&#41;](../../2014/reporting-services/view-page-resources-report-manager.md)   
- [Aide (F1) de gestionnaire de rapports](../../2014/reporting-services/report-manager-f1-help.md)   
+ [F1 du Gestionnaire de rapports](../../2014/reporting-services/report-manager-f1-help.md)   
  [Propriétés de sécurité, éléments de la page &#40;Gestionnaire de rapports&#41;](../../2014/reporting-services/security-properties-page-items-report-manager.md)  
   
   

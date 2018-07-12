@@ -1,12 +1,12 @@
 ---
-title: À l’aide de jeux de résultats par défaut SQL Server | Documents Microsoft
+title: À l’aide de jeux de résultats par défaut SQL Server | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -22,12 +22,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 7ffeb98b693c178ee654b0cc592f16ae4a8e39d6
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
+ms.openlocfilehash: 9f5c1a93a64d3a087de4e07db62e1240c5c179cb
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35694580"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37425978"
 ---
 # <a name="using-sql-server-default-result-sets"></a>Utilisation de jeux de résultats SQL Server par défaut
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -43,9 +43,9 @@ SQLSetStmtAttr(hstmt, SQL_ATTR_ROW_ARRAY_SIZE, 1, SQL_IS_INTEGER);
   
  Chaque fois que ces attributs sont définis sur leurs valeurs par défaut, le [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] pilote ODBC Native Client utilise un [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] par défaut du jeu de résultats. Les jeux de résultats par défaut peuvent être utilisés pour toute instruction SQL prise en charge par [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] et s'avèrent la méthode de transfert la plus efficace d'un jeu de résultats entier au client.  
   
- [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] a introduit la prise en charge pour les jeux de résultats actifs multiples (MARS) ; les applications peuvent désormais avoir plusieurs du jeu de résultats de la valeur par défaut actif par connexion. MARS n'est pas activé par défaut.  
+ [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] introduction du support pour les jeux de résultats actifs multiples (MARS) ; les applications peuvent désormais avoir plus d’un jeu de résultats de la valeur par défaut active par connexion. MARS n'est pas activé par défaut.  
   
- Avant [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], les jeux de résultats par défaut ne prenaient pas en charge plusieurs instructions actives sur la même connexion. Une fois qu'une instruction SQL était exécutée sur une connexion, le serveur n'acceptait pas de commandes (sauf une demande d'annulation du reste du jeu de résultats) du client sur cette connexion tant que toutes les lignes du jeu de résultats n'avaient pas été traitées. Pour annuler le reste d’un jeu de résultats partiellement traité, appelez [SQLCloseCursor](../../../relational-databases/native-client-odbc-api/sqlclosecursor.md) ou [SQLFreeStmt](../../../relational-databases/native-client-odbc-api/sqlfreestmt.md) avec la *fOption* paramètre défini sur SQL_CLOSE. Pour terminer un jeu de résultats partiellement traité et le test de la présence d’un autre jeu de résultats, appelez [SQLMoreResults](../../../relational-databases/native-client-odbc-api/sqlmoreresults.md). Si une application ODBC tente une commande sur un handle de connexion avant d’un jeu de résultats par défaut a été entièrement traité, l’appel génère SQL_ERROR et un appel à **SQLGetDiagRec** retourne :  
+ Avant [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], les jeux de résultats par défaut ne prenaient pas en charge plusieurs instructions actives sur la même connexion. Une fois qu'une instruction SQL était exécutée sur une connexion, le serveur n'acceptait pas de commandes (sauf une demande d'annulation du reste du jeu de résultats) du client sur cette connexion tant que toutes les lignes du jeu de résultats n'avaient pas été traitées. Pour annuler le reste d’un jeu de résultats partiellement traité, appelez [SQLCloseCursor](../../../relational-databases/native-client-odbc-api/sqlclosecursor.md) ou [SQLFreeStmt](../../../relational-databases/native-client-odbc-api/sqlfreestmt.md) avec la *fOption* paramètre défini sur SQL_CLOSE. Pour terminer un jeu de résultats partiellement traité et le test de la présence d’un autre jeu de résultats, appelez [SQLMoreResults](../../../relational-databases/native-client-odbc-api/sqlmoreresults.md). Si une application ODBC tente une commande sur un handle de connexion avant un jeu de résultats par défaut a été entièrement traité, l’appel génère SQL_ERROR et un appel à **SQLGetDiagRec** retourne :  
   
 ```  
 szSqlState: "HY000", pfNativeError: 0  

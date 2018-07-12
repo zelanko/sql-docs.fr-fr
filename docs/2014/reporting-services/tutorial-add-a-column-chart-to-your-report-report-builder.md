@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 63480059-b7b9-44b5-9d7f-91780db708b6
 caps.latest.revision: 10
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: ae6c6adad91625ba5d5e898b7da36dc9e818d893
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: cc295fcd58d3e7609989f35a382e780614e9d7a3
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36040129"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37161900"
 ---
 # <a name="tutorial-add-a-column-chart-to-your-report-report-builder"></a>Didacticiel : ajouter un histogramme à un rapport (Générateur de rapports)
   Un histogramme affiche une série sous la forme d'un ensemble de barres verticales regroupées par catégorie. Un histogramme s'avère utile pour :  
@@ -64,7 +64,7 @@ ms.locfileid: "36040129"
  Pour plus d’informations sur les spécifications, consultez [Éléments requis pour les didacticiels &#40;Générateur de rapports&#41;](../reporting-services/report-builder-tutorials.md).  
   
 ##  <a name="Chart"></a> 1. Créer un rapport de graphique à partir de l'Assistant Graphique  
- À partir de la **mise en route** boîte de dialogue, utilisez l’Assistant graphique pour créer un dataset incorporé, choisissez une source de données partagée, créez un histogramme.  
+ À partir de la **mise en route** boîte de dialogue, utilisez l’Assistant graphique pour créer un dataset incorporé, choisir une source de données partagée et créez un histogramme.  
   
 > [!NOTE]  
 >  Dans ce didacticiel, la requête contient les valeurs de données, afin qu'il ne soit pas nécessaire de disposer d'une source de données externe. Cela rend la requête assez longue. Dans un environnement métier, une requête ne contient pas les données. Ceci est nécessaire à des fins de formation uniquement.  
@@ -76,7 +76,7 @@ ms.locfileid: "36040129"
      La boîte de dialogue **Mise en route** s'affiche.  
   
     > [!NOTE]  
-    >  Si le **mise en route** boîte de dialogue n’apparaît pas, à partir de la **le Générateur de rapports** et sur **nouveau**.  
+    >  Si le **mise en route** boîte de dialogue n’apparaît pas, à partir de la **le Générateur de rapports** bouton, cliquez sur **New**.  
   
 2.  Dans le volet gauche, assurez-vous que **Nouveau rapport** est sélectionné.  
   
@@ -168,15 +168,15 @@ ms.locfileid: "36040129"
   
 1.  Basculez en mode création de rapport.  
   
-2.  Cliquez sur le titre de l’axe horizontal, puis cliquez sur **afficher le titre axe** pour supprimer le titre. Étant donné que l'axe horizontal indique les dates, le titre n'est pas nécessaire.  
+2.  Cliquez sur le titre de l’axe horizontal, puis cliquez sur **afficher le titre de l’axe** pour supprimer le titre. Étant donné que l'axe horizontal indique les dates, le titre n'est pas nécessaire.  
   
 3.  Cliquez sur l’axe horizontal, puis sur **propriétés de l’axe Horizontal**.  
   
-4.  Dans le **Options de l’axe** page sous **plage de l’axe et l’intervalle**, type **3** pour **intervalle**. Le graphique affiche les dates selon un intervalle de trois.  
+4.  Dans le **Options de l’axe** page sous **plage de l’axe et intervalle**, type **3** pour **intervalle**. Le graphique affiche les dates selon un intervalle de trois.  
   
 5.  Cliquez sur **Étiquettes**.  
   
-6.  Dans **modifier les options d’ajustement automatique axe étiquette**, sélectionnez **désactiver ajustement automatique**.  
+6.  Dans **modifier les options ajustement automatique des étiquettes d’axe**, sélectionnez **désactiver l’ajustement automatique**.  
   
 7.  Dans **Angle de rotation des étiquettes**, sélectionnez **-90**.  
   
@@ -213,7 +213,7 @@ ms.locfileid: "36040129"
   
 1.  Basculez en mode création de rapport.  
   
-2.  Sélectionnez les mots **titre du graphique** en haut du graphique, puis tapez le texte suivant : **commande total des ventes par magasin**.  
+2.  Sélectionnez les mots **titre du graphique** en haut du graphique, puis tapez le texte suivant : **Store Sales Order totaux**.  
   
 3.  Cliquez sur **Exécuter** pour afficher un aperçu du rapport.  
   
@@ -226,9 +226,9 @@ ms.locfileid: "36040129"
   
 2.  Double-cliquez sur les étiquettes sur l’axe vertical le long du côté du graphique pour les sélectionner.  
   
-3.  Dans le ruban, sur le **accueil** sous l’onglet le **nombre** , cliquez sur le **devise** bouton. Les étiquettes de l'axe changent pour afficher le format monétaire.  
+3.  Dans le ruban, sur le **accueil** sous l’onglet le **nombre** de groupe, cliquez sur le **devise** bouton. Les étiquettes de l'axe changent pour afficher le format monétaire.  
   
-4.  Dans le ruban, sur le **accueil** sous l’onglet le **nombre** , cliquez sur le **réduire les décimales** bouton deux fois, pour afficher le nombre arrondi au dollar plus proche.  
+4.  Dans le ruban, sur le **accueil** sous l’onglet le **nombre** de groupe, cliquez sur le **réduire les décimales** bouton deux fois, pour afficher le nombre arrondi au dollar plus proche.  
   
 5.  Cliquez sur l’axe vertical, sur **propriétés de l’axe Vertical**.  
   
@@ -240,7 +240,7 @@ ms.locfileid: "36040129"
   
 9. Cliquez sur le titre de l’axe vertical le long du côté du graphique, sur **propriétés du titre axe**.  
   
-10. Remplacez le texte de la **texte de titre** champ avec le texte suivant : **Total des ventes (en milliers)**. Vous pouvez également spécifier diverses options de mise en forme du titre.  
+10. Remplacez le texte dans le **texte du titre** champ avec le texte suivant : **Total des ventes (en milliers)**. Vous pouvez également spécifier diverses options de mise en forme du titre.  
   
 11. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
@@ -254,7 +254,7 @@ ms.locfileid: "36040129"
   
 2.  Double-cliquez sur le graphique pour afficher le volet **Données du graphique** .  
   
-3.  Avec le bouton droit le **[SUM (Sales)]** champ se trouvant dans le **valeurs** zone, puis cliquez sur **ajouter une série calculée**.  
+3.  Avec le bouton droit le **[SUM (Sales)]** champ qui se trouve dans le **valeurs** zone, puis cliquez sur **ajouter une série calculée**.  
   
 4.  Dans **Formule**, vérifiez que **Moyenne mobile** est sélectionné.  
   
@@ -262,7 +262,7 @@ ms.locfileid: "36040129"
   
 6.  Cliquez sur **bordure**.  
   
-7.  Dans **largeur de ligne**, sélectionnez **3 points**.  
+7.  Dans **largeur de ligne**, sélectionnez **3pt**.  
   
 8.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
@@ -278,17 +278,17 @@ ms.locfileid: "36040129"
   
 2.  Dans l'aire de conception, cliquez sur **Cliquez pour ajouter un titre**.  
   
-3.  Type **graphique ventes**, appuyez sur entrée, puis tapez **janvier à décembre 2009**, donc il ressemble à ceci :  
+3.  Type **graphique des ventes**, appuyez sur entrée, puis tapez **janvier à décembre 2009**, donc il ressemble à ceci :  
   
      **Graphique sur les ventes**  
   
      **Janvier à décembre 2009**  
   
-4.  Sélectionnez **graphique des ventes**, puis cliquez sur le **gras** situé dans le **police** section sur le **accueil** onglet du ruban.  
+4.  Sélectionnez **graphique des ventes**, puis cliquez sur le **gras** situé dans le **police** section sur la **accueil** onglet du ruban.  
   
-5.  Sélectionnez **janvier à décembre 2009**et dans le **police** section sur le **accueil** onglet, définissez la taille de police sur **10**.  
+5.  Sélectionnez **janvier à décembre 2009**, puis, dans le **police** section sur la **accueil** onglet, définissez la taille de police sur **10**.  
   
-6.  (Facultatif) Vous devrez peut-être apporter les **titre** zone de texte agrandir pour prendre en compte les deux lignes de texte en abaissant les doubles flèches lorsque vous cliquez au milieu du bord inférieur.  
+6.  (Facultatif) Vous devrez peut-être rendre les **titre** zone de texte agrandir pour prendre en charge les deux lignes de texte en abaissant les doubles flèches lorsque vous cliquez au milieu du bord inférieur.  
   
      Ce titre s'affiche alors dans la partie supérieure du rapport. En l’absence d’en-tête de page défini, les éléments situés au-dessus du corps du rapport font office d’en-tête de rapport.  
   

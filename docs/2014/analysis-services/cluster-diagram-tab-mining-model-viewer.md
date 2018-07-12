@@ -1,5 +1,5 @@
 ---
-title: L’onglet diagramme (visionneuse de modèle d’exploration de données) de cluster | Documents Microsoft
+title: Onglet diagramme (visionneuse de modèle d’exploration de données) de cluster | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dm.miningmodeleditor.clustering.diagram.f1
 ms.assetid: 180e6f48-5c4d-4160-b84d-608b98f7b840
 caps.latest.revision: 22
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 1080183439eac579bbbbd6ec8a716d0fbe12dca2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: abab1915e4a17ddd4e9c3ea3a6f524dcb5493150
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36040988"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37173590"
 ---
 # <a name="cluster-diagram-tab-mining-model-viewer"></a>Onglet Diagramme de cluster (Visionneuse de modèle d'exploration de données)
   L’onglet **Diagramme de cluster** affiche sous forme graphique tous les clusters contenus dans le modèle de clustering.  
@@ -29,7 +29,7 @@ ms.locfileid: "36040988"
  **Pour plus d’informations :** [Algorithme de gestion de clusters Microsoft](data-mining/microsoft-clustering-algorithm.md), [Explorer un modèle à l’aide de Microsoft Sequence Cluster](data-mining/browse-a-model-using-the-microsoft-cluster-viewer.md)  
   
 ## <a name="options"></a>Options  
- **Actualiser le contenu de la visionneuse**  
+ **Actualiser le contenu de l’Observateur**  
  Recharge le modèle d'exploration de données dans la visionneuse.  
   
  **Modèle d'exploration de données**  
@@ -50,10 +50,10 @@ ms.locfileid: "36040988"
  **Copier le graphique entier**  
  Copie la totalité du diagramme dans le Presse-papiers.  
   
- **Diagramme à la taille de la fenêtre**  
+ **Diagramme de mise à l’échelle à la fenêtre**  
  Réduit la taille du diagramme jusqu'à ce qu'il soit ajusté à l'écran.  
   
- **Trouver le nœud**  
+ **Nœud introuvable**  
  Ouvre la boîte de dialogue **Rechercher un nœud** . Cette fonctionnalité est utile dans les modèles volumineux, dans lesquels il peut être difficile de trouver l'attribut d'intérêt. Vous pouvez entrer des critères de recherche dans la boîte de dialogue et la vue des clusters sera filtrée afin d'afficher uniquement le cluster contenant la chaîne de recherche.  
   
  **Améliorer la disposition**  

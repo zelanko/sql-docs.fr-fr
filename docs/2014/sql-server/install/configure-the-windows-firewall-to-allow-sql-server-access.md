@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Windows Firewall ports
 - WMI firewall ports
@@ -24,15 +24,15 @@ helpviewer_keywords:
 - netsh to open firewall ports
 ms.assetid: f55c6a0e-b6bd-4803-b51a-f3a419803024
 caps.latest.revision: 47
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 67bf7427229a117ff541ae353c222839e27a8aab
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 142606e6d344fc1431bc287771fc429d6e05e056
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36039543"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37198826"
 ---
 # <a name="configure-the-windows-firewall-to-allow-sql-server-access"></a>Configurer le Pare-feu Windows pour autoriser l’accès à SQL Server
   Les systèmes de pare-feu empêchent les accès non autorisés aux ressources de l'ordinateur. Si un pare-feu est activé alors qu'il n'est pas configuré correctement, les tentatives de connexion à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] peuvent être bloquées.  
@@ -95,7 +95,7 @@ ms.locfileid: "36039543"
   
     -   Définition de restrictions d'étendue  
   
-     L'option **Pare-feu Windows** du Panneau de configuration est très appropriée pour les utilisateurs qui ne sont pas familiarisés avec la configuration du pare-feu, et qui configurent les options de base du pare-feu de base pour les ordinateurs qui ne sont pas mobiles. Vous pouvez également ouvrir le **pare-feu Windows** élément dans le panneau de configuration à partir de la `run` commande à l’aide de la procédure suivante :  
+     L'option **Pare-feu Windows** du Panneau de configuration est très appropriée pour les utilisateurs qui ne sont pas familiarisés avec la configuration du pare-feu, et qui configurent les options de base du pare-feu de base pour les ordinateurs qui ne sont pas mobiles. Vous pouvez également ouvrir le **Windows Firewall** élément dans le panneau de configuration à partir de la `run` commande à l’aide de la procédure suivante :  
   
     #### <a name="to-open-the-windows-firewall-item"></a>Pour ouvrir le Pare-feu Windows  
   
@@ -163,7 +163,7 @@ ms.locfileid: "36039543"
   
 1.  Sous l'onglet **Exceptions** de l'élément du **Pare-feu Windows** dans Panneau de configuration, cliquez sur **Ajouter un programme**.  
   
-2.  Accédez à l’emplacement de l’instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que vous souhaitez autoriser via le pare-feu, par exemple **C:\Program Files\Microsoft SQL Server\MSSQL12. < nom_instance > \MSSQL\Binn**, sélectionnez  **sqlservr.exe**, puis cliquez sur **ouvrir**.  
+2.  Accédez à l’emplacement de l’instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que vous souhaitez autoriser via le pare-feu, par exemple **C:\Program Files\Microsoft SQL Server\MSSQL12. < nom_instance > \MSSQL\Binn**, sélectionnez  **sqlservr.exe**, puis cliquez sur **Open**.  
   
 3.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
