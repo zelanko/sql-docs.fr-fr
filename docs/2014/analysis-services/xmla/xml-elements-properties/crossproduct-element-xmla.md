@@ -1,5 +1,5 @@
 ---
-title: Élément CrossProduct (XMLA) | Documents Microsoft
+title: Élément CrossProduct (XMLA) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -24,18 +24,18 @@ helpviewer_keywords:
 - CrossProduct element
 ms.assetid: a9a1584e-d2dd-45db-a918-d694c20d8189
 caps.latest.revision: 12
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: 1324a3c9449383301242ab6d0e76f94c636d9b5e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: a0d76cc463d39a3b33de41f1c342f5d9f8f800bb
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36040749"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37278221"
 ---
 # <a name="crossproduct-element-xmla"></a>Élément CrossProduct (XMLA)
-  Contient un produit croisé entre des ensembles ordonnés de membres de chaque hiérarchie pour un [axe](axis-element-xmla.md) élément qui utilise le [MDDataSet](../xml-data-types/mddataset-data-type-xmla.md) type de données retourné par la [Execute](../xml-elements-methods-execute.md) (méthode).  
+  Contient un produit croisé entre des ensembles ordonnés de membres de chaque hiérarchie pour un [axe](axis-element-xmla.md) élément qui utilise le [MDDataSet](../xml-data-types/mddataset-data-type-xmla.md) type de données, retourné par la [Execute](../xml-elements-methods-execute.md) (méthode).  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -72,7 +72,7 @@ ms.locfileid: "36040749"
 |Taille|Requis `Integer` attribut. Indique le nombre de tuples que contient le produit croisé représenté par l'élément `CrossProduct`.|  
   
 ## <a name="remarks"></a>Notes  
- Lorsqu’une application cliente définit le `AxisFormat` propriété *ClusterFormat*, les membres de chaque axe sont divisés en clusters dans lequel chaque cluster représente un produit croisé entre des ensembles ordonnés de membres de chaque hiérarchie. Chaque cluster est représenté par un élément `CrossProduct`. Chaque élément `CrossProduct` contient un élément `Members` pour chaque hiérarchie sur l'axe. Un élément `CrossProduct` peut renfermer des membres provenant d'une hiérarchie unique.  
+ Lorsqu’une application cliente définit le `AxisFormat` propriété *ClusterFormat*, les membres sur chaque axe sont divisés en clusters dans lequel chaque cluster représente un produit croisé entre des ensembles ordonnés de membres de chaque hiérarchie. Chaque cluster est représenté par un élément `CrossProduct`. Chaque élément `CrossProduct` contient un élément `Members` pour chaque hiérarchie sur l'axe. Un élément `CrossProduct` peut renfermer des membres provenant d'une hiérarchie unique.  
   
 ## <a name="example"></a>Exemple  
  L’exemple suivant illustre la structure de la `CrossProduct` élément lorsqu’un client spécifie *ClusterFormat* pour le `AxisFormat` propriété XMLA les membres suivants de l’axe :  

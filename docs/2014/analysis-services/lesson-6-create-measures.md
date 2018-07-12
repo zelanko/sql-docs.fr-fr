@@ -1,5 +1,5 @@
 ---
-title: 'Leçon 7 : Créer des mesures | Documents Microsoft'
+title: 'Leçon 7 : Créer des mesures | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 01bd2ad7-09b7-49ae-ad80-83f25da301aa
 caps.latest.revision: 22
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: jhubbard
-ms.openlocfilehash: e96525c0e50e560e255156f7dd1bb731398df679
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: f5c6b18e88a4fbff18c06c9a10a06fe5d2f1e803
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36040771"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37222849"
 ---
 # <a name="lesson-7-create-measures"></a>Leçon 7 : Créer des mesures
   Dans cette leçon, vous allez créer des mesures à inclure dans votre modèle. Similairement aux colonnes calculées que vous avez créées dans la leçon précédente, une mesure est essentiellement un calcul créé à l'aide d'une formule DAX. Toutefois, contrairement aux colonnes calculées, les mesures sont évaluées en fonction d'un *filtre*sélectionné par l'utilisateur ; par exemple, une colonne ou un segment particulier ajouté au champ des étiquettes de ligne dans un tableau croisé dynamique.   Une valeur pour chaque cellule dans le filtre est ensuite calculée par la mesure appliquée. Les mesures sont des calculs puissants et flexibles que vous pouvez inclure dans pratiquement tous les modèles tabulaires, pour effectuer des calculs dynamiques sur des données numériques. Pour plus d’informations, consultez [Mesures &#40;SSAS Tabulaire&#41;](tabular-models/measures-ssas-tabular.md).  
@@ -53,7 +53,7 @@ ms.locfileid: "36040771"
   
      Notez que la cellule en haut à gauche contient maintenant une mesure nommée **Measure 1**, suivie du résultat, **30**. Le nom de la mesure précède également la formule dans la barre de formule.  
   
-5.  Pour renommer la mesure, dans la barre de formule, sélectionnez le nom, **mesure 1**, puis tapez `Days Current Quarter to Date`, puis appuyez sur ENTRÉE.  
+5.  Pour renommer la mesure, dans la barre de formule, mettez en surbrillance le nom, **Measure 1**, puis tapez `Days Current Quarter to Date`, puis appuyez sur ENTRÉE.  
   
     > [!TIP]  
     >  Lorsque vous tapez une formule dans la barre de formule, vous pouvez également taper d'abord le nom de la mesure suivi de deux-points (:), suivi d'un espace, puis suivi de la formule. Avec cette méthode, vous n'aurez pas à renommer la mesure.  

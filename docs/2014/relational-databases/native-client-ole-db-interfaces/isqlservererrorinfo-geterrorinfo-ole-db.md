@@ -1,13 +1,11 @@
 ---
-title: ISQLServerErrorInfo::GetErrorInfo (OLE DB) | Documents Microsoft
+title: ISQLServerErrorInfo::GetErrorInfo (OLE DB) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
@@ -18,18 +16,18 @@ helpviewer_keywords:
 - GetErrorInfo method
 ms.assetid: 83265c9c-eaf9-41f0-9f73-b0ae0972f0d5
 caps.latest.revision: 29
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: eb6b9a2967ac5a0a8ecef4c0fca7cdaea831957f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: f33c66d8e521339573e56b78407f0bab67b4b43e
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36051941"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37430098"
 ---
 # <a name="isqlservererrorinfogeterrorinfo-ole-db"></a>ISQLServerErrorInfo::GetErrorInfo (OLE DB)
-  Retourne un pointeur vers un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] le fournisseur OLE DB Native Client SSERRORINFO structure contenant les [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] détails de l’erreur.  
+  Retourne un pointeur vers un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fournisseur OLE DB Native Client SSERRORINFO structure contenant le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] détails de l’erreur.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -45,7 +43,7 @@ OLECHAR**ppErrorStrings);
  Pointeur vers une structure SSERRORINFO. Si la méthode échoue ou si aucun [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] les informations relatives à l’erreur, le fournisseur n’alloue pas de mémoire et garantit que le *ppSSErrorInfo* argument est un pointeur null en sortie.  
   
  *ppErrorStrings*[out]  
- Pointeur vers un pointeur de chaîne de caractère Unicode. Si la méthode échoue ou si aucun [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] les informations associées à une erreur, le fournisseur n’alloue pas de mémoire et garantit que le *ppErrorStrings* argument est un pointeur null en sortie. La libération de la *ppErrorStrings* argument avec le **IMalloc::Free** méthode libère les trois membres de chaîne individuels de la structure SSERRORINFO retournée, comme la mémoire est allouée dans un bloc.  
+ Pointeur vers un pointeur de chaîne de caractère Unicode. Si la méthode échoue ou si aucun [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] informations associées à une erreur, le fournisseur n’alloue pas de mémoire et garantit que le *ppErrorStrings* argument est un pointeur null en sortie. Libération de la *ppErrorStrings* argument avec le **IMalloc::Free** méthode libère les trois membres de chaîne individuels de la structure SSERRORINFO retournée, comme la mémoire est allouée dans un bloc.  
   
 ## <a name="return-code-values"></a>Valeurs des codes de retour  
  Cette méthode signale les erreurs en attribuant à la propriété Nombre de l'objet Err global l'une des valeurs du tableau suivant.  
@@ -55,10 +53,10 @@ OLECHAR**ppErrorStrings);
  Soit le *ppSSErrorInfo* ou *ppErrorStrings* argument était NULL.  
   
  E_OUTOFMEMORY  
- Le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Client fournisseur OLE DB natif peut allouer suffisamment de mémoire pour terminer la demande.  
+ Le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Client fournisseur OLE DB Native peut allouer suffisamment de mémoire pour terminer la demande.  
   
 ## <a name="remarks"></a>Notes  
- Le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB fournisseur alloue de la mémoire pour les chaînes SSERRORINFO et OLECHAR retournées à travers les pointeurs passés par le consommateur. Le consommateur doit libérer cette mémoire en utilisant la **IMalloc::Free** méthode lorsqu’il ne nécessite plus l’accès aux données d’erreur.  
+ Le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Client fournisseur OLE DB natif alloue la mémoire pour les chaînes SSERRORINFO et OLECHAR retournées à travers les pointeurs passés par le consommateur. Le consommateur doit libérer cette mémoire en utilisant la **IMalloc::Free** méthode lorsqu’il ne nécessite plus l’accès aux données d’erreur.  
   
  La structure SSERRORINFO est définie comme suit :  
   
@@ -86,7 +84,7 @@ SSERRORINFO;
 |*bClass*|Gravité de l'erreur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |*wLineNumber*|Le cas échéant, la ligne d'une procédure stockée [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] qui a généré le message d'erreur. Si aucune procédure n'est impliquée, la valeur par défaut est 1.|  
   
- Pointeurs dans la structure de référencent les adresses figurant dans la chaîne retournée dans le *ppErrorStrings* argument.  
+ Pointeurs dans la structure font référence à des adresses dans la chaîne retournée dans le *ppErrorStrings* argument.  
   
 ## <a name="see-also"></a>Voir aussi  
  [ISQLServerErrorInfo &#40;OLE DB&#41;](../../database-engine/dev-guide/isqlservererrorinfo-ole-db.md)   

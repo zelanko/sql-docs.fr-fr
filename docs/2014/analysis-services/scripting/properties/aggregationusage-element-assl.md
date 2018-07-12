@@ -1,5 +1,5 @@
 ---
-title: Élément AggregationUsage (ASSL) | Documents Microsoft
+title: Élément AggregationUsage (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - AggregationUsage element
 ms.assetid: af0c2e7f-b659-4fbf-9b1a-66128db669a2
 caps.latest.revision: 41
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 0cc9d13ed663b92224584ab57f6f467e3a472d8e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 9a073ca27168bec785d9098d9e6b3ad4974b7018
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36040491"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37259465"
 ---
 # <a name="aggregationusage-element-assl"></a>Élément AggregationUsage (ASSL)
   Contrôles comment le Concepteur d’agrégation dans [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] crée des agrégations.  
@@ -71,7 +71,7 @@ ms.locfileid: "36040491"
 |*Non restreint*|Le concepteur d'agrégation ne fait l'objet d'aucune restriction.|  
 |*Par défaut*|Le concepteur d'agrégation applique une règle par défaut en fonction du type d'attribut (*Full* pour les clés, *Unrestricted* pour les autres attributs)|  
   
- L’énumération qui correspond aux valeurs autorisées pour `AggregationUsage` dans l’objet d’objets AMO (Analysis Management) est modèle <xref:Microsoft.AnalysisServices.AggregationUsage>.  
+ L’énumération qui correspond aux valeurs autorisées pour `AggregationUsage` dans l’objet d’objets AMO (Analysis Management) modèle est <xref:Microsoft.AnalysisServices.AggregationUsage>.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Élément de cube &#40;ASSL&#41;](../objects/cube-element-assl.md)   

@@ -1,5 +1,5 @@
 ---
-title: Accès à l’intégration des Services Service | Documents Microsoft
+title: Accès à l’intégration des Services Service | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - SSIS packages, security
 - viewing packages while running
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - SQL Server Integration Services packages, security
 ms.assetid: 1088aafc-14c5-4e7d-9930-606a24c3049b
 caps.latest.revision: 14
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 6fdae3756442b1af660095fe53cbc8e4e3db82da
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 2eac9b692732d11903e358ef5e53e59a4a81bf6a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36041421"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37180406"
 ---
 # <a name="access-to-the-integration-services-service"></a>Accéder au service Integration Services
   Les niveaux de protection des packages peuvent définir des restrictions quant aux utilisateurs autorisés à modifier et exécuter un package. Une protection supplémentaire est nécessaire pour limiter les utilisateurs autorisés à afficher la liste des packages actuellement en cours d’exécution sur un serveur et ceux qui peuvent arrêter les packages en cours d’exécution dans [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)].  

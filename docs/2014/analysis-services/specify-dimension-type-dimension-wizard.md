@@ -1,5 +1,5 @@
 ---
-title: Spécifiez le Type de Dimension (Assistant Dimension) | Documents Microsoft
+title: Spécifiez le Type de Dimension (Assistant Dimension) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.dimensionwizard.bidimensionproperties.f1
 ms.assetid: 3215282a-532d-4ff2-b721-286f088967fc
 caps.latest.revision: 23
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 7a5b5d77a8f54b24488b7152bba95ac705d5196d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: bdbc0375dd2f6c77d81ab4028bb5118de93a021f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36041898"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37185316"
 ---
 # <a name="specify-dimension-type-dimension-wizard"></a>Spécifier le type de la dimension (Assistant Dimension)
   La page **Spécifier le type de la dimension** permet de définir le type de dimension et d'ajouter à la dimension des types d'attributs spéciaux associés au type de dimension sélectionné.  
@@ -45,7 +45,7 @@ ms.locfileid: "36041898"
 |**Produits**|Les dimensions de produit sont des dimensions régulières dans lesquelles les données et métadonnées représentent des informations sur les produits.<br /><br /> Pour plus d’informations sur les dimensions régulières, consultez [Types de dimensions](multidimensional-models-olap-logical-dimension-objects/database-dimension-properties-types.md).|  
 |**Promotion**|Les dimensions de promotion sont des dimensions régulières dans lesquelles les données et métadonnées représentent des informations sur la promotion commerciale.<br /><br /> Pour plus d’informations sur les dimensions régulières, consultez [Types de dimensions](multidimensional-models-olap-logical-dimension-objects/database-dimension-properties-types.md).|  
 |**Quantitative**|Les dimensions quantitatives sont des dimensions régulières dans lesquelles les données et métadonnées représentent des informations quantitatives.<br /><br /> Pour plus d’informations sur les dimensions régulières, consultez [Types de dimensions](multidimensional-models-olap-logical-dimension-objects/database-dimension-properties-types.md).|  
-|**Taux de**|Les dimensions de taux contiennent des données et métadonnées qui représentent des informations sur le taux de change et la conversion monétaire.|  
+|**Tarifs**|Les dimensions de taux contiennent des données et métadonnées qui représentent des informations sur le taux de change et la conversion monétaire.|  
 |**Regular**|Les dimensions régulières sont le type le plus fréquent utilisé dans [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)].<br /><br /> Pour plus d’informations sur les dimensions régulières, consultez [Types de dimensions](multidimensional-models-olap-logical-dimension-objects/database-dimension-properties-types.md).|  
 |**Scénario**|Les dimensions de scénario sont des dimensions régulières dans lesquelles les données et métadonnées représentent des informations sur la planification ou l'analyse stratégique.<br /><br /> Pour plus d’informations sur les dimensions régulières, consultez [Types de dimensions](multidimensional-models-olap-logical-dimension-objects/database-dimension-properties-types.md).|  
 |**Time**|Les dimensions de temps contiennent des données et métadonnées relatives au temps.<br /><br /> Pour plus d’informations sur les dimensions de temps, consultez [Créer une dimension de type date](multidimensional-models/database-dimensions-create-a-date-type-dimension.md).|  
@@ -66,7 +66,7 @@ ms.locfileid: "36041898"
  Sélectionnez l’attribut de dimension auquel l’Assistant Dimension affectera le type d’attribut spécial indiqué dans le champ **Type d’attribut**.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Aide (F1) de l’Assistant Dimension](dimension-wizard-f1-help.md)   
+ [Aide F1 de l’Assistant Dimension](dimension-wizard-f1-help.md)   
  [Dimensions &#40;Analysis Services - données multidimensionnelles&#41;](multidimensional-models-olap-logical-dimension-objects/dimensions-analysis-services-multidimensional-data.md)   
  [Dimensions dans les modèles multidimensionnels](multidimensional-models/dimensions-in-multidimensional-models.md)  
   

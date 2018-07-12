@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - physical design structures [SQL Server]
 - command prompt utilities [SQL Server], dta
@@ -21,15 +21,15 @@ helpviewer_keywords:
 - optimizing databases [SQL Server]
 ms.assetid: a0b210ce-9b58-4709-80cb-9363b68a1f5a
 caps.latest.revision: 52
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: c659a1637b56015bf4642e87677529b0ea4e518b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 5dcf0994c14496f32de3734d5456d462ad74fe74
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36041945"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37200819"
 ---
 # <a name="dta-utility"></a>dta (utilitaire)
   L'utilitaire **dta** constitue la version d'invite de commandes de l'Assistant Paramétrage du moteur de base de données. L'utilitaire **dta** est conçu pour permettre l'utilisation de l'Assistant Paramétrage du moteur de base de données dans des applications et des scripts.  
@@ -138,7 +138,7 @@ dta -d AdventureWorks2012 ...
   
  Si plusieurs noms de bases de données sont spécifiés, **dta** retourne une erreur. L’argument **-d** est facultatif.  
   
- Si vous utilisez un fichier d’entrée XML, vous pouvez spécifier la première base de données à laquelle **dta** se connecte à l’aide de la `DatabaseToConnect` qui se trouve sous le `TuningOptions` élément. Pour plus d'informations, consultez [Database Engine Tuning Advisor](../../relational-databases/performance/database-engine-tuning-advisor.md).  
+ Si vous utilisez un fichier d’entrée XML, vous pouvez spécifier la première base de données à laquelle **dta** se connecte à l’aide de la `DatabaseToConnect` élément qui se trouve sous le `TuningOptions` élément. Pour plus d'informations, consultez [Database Engine Tuning Advisor](../../relational-databases/performance/database-engine-tuning-advisor.md).  
   
  Si vous ne réglez qu’une seule base de données, l’argument **-d** fournit une fonctionnalité similaire à l’argument **-d** de l’utilitaire **sqlcmd** , mais il n’exécute pas l’instruction USE *database_name* . Pour plus d'informations, consultez [sqlcmd Utility](../sqlcmd-utility.md).  
   
@@ -393,7 +393,7 @@ dta –D pubs –if pubs_wkld.sql –ox XMLTune.xml –A 120 –Tf table_list.tx
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Référence de l’invite de commandes utilitaire &#40;du moteur de base de données&#41;](../command-prompt-utility-reference-database-engine.md)   
+ [Référence de l’invite de commandes utilitaire &#40;moteur de base de données&#41;](../command-prompt-utility-reference-database-engine.md)   
  [Assistant Paramétrage du moteur de base de données](../../relational-databases/performance/database-engine-tuning-advisor.md)  
   
   

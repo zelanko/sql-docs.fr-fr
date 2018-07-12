@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 1a8e6bc7-433e-471d-b646-092dc80a2d1a
 caps.latest.revision: 17
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 569e88c7fbf844494276948690c583f69737ff14
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: bf93e552732ea0a5659211fbc11c2d3751a326a4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36041792"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37188486"
 ---
 # <a name="replication-to-memory-optimized-table-subscribers"></a>Abonnés de réplication sur des tables optimisées en mémoire
   Les tables agissant comme des abonnés de réplication transactionnelle, à l'exclusion de la réplication transactionnelle d'égal à égal, peuvent être configurées en tant que tables mémoire optimisées. Les autres configurations de réplication ne sont pas compatibles avec les tables mémoire optimisées.  
@@ -27,7 +27,7 @@ ms.locfileid: "36041792"
 ## <a name="configuring-a-memory-optimized-table-as-a-subscriber"></a>Configuration d'une table mémoire optimisée en tant qu'abonné  
  Pour configurer une table mémoire optimisée en tant qu'abonné, effectuez les étapes suivantes.  
   
- **Créer et activer une Publication**  
+ **Créer et activer la Publication**  
   
 1.  Créer une publication  
   
@@ -230,7 +230,7 @@ ms.locfileid: "36041792"
     go  
     ```  
   
-5.  Créer la base de données d’abonné à l’aide du **élever à l’isolement d’instantané** option et définir le classement par défaut à Latin1_General_CS_AS_KS_WS en cas d’utilisation des types de données de caractères non Unicode.  
+5.  Créer la base de données d’abonné à l’aide du **élever à l’isolement d’instantané** option et définissez le classement par défaut à Latin1_General_CS_AS_KS_WS en cas d’utilisation de types de données de caractères non Unicode.  
   
     ```  
     CREATE DATABASE [Sub]   
@@ -303,9 +303,9 @@ GO
   
 -   Les tables répliquées en tables mémoire optimisées sur un abonné sont limitées aux types de données autorisés dans les tables mémoire optimisées. Pour plus d’informations, consultez [pris en charge les Types de données](../in-memory-oltp/supported-data-types-for-in-memory-oltp.md).  
   
--   Il existe des restrictions pour la mise à jour de la clé primaire des tables répliquées en une table mémoire optimisée sur un abonné. Pour plus d’informations, consultez [réplication des modifications sur une clé primaire](#PrimaryKey).  
+-   Il existe des restrictions pour la mise à jour de la clé primaire des tables répliquées en une table mémoire optimisée sur un abonné. Pour plus d’informations, consultez [réplication des modifications à une clé primaire](#PrimaryKey).  
   
--   La clé étrangère, la contrainte unique, les déclencheurs, les modifications de schéma, ROWGUIDCOL, les colonnes calculées, la compression de données, les types de données d'alias, le contrôle de version et les verrous ne sont pas pris en charge dans les tables mémoire optimisées. Consultez [Transact-SQL construit pas pris en charge par l’OLTP en mémoire](../in-memory-oltp/transact-sql-constructs-not-supported-by-in-memory-oltp.md) pour plus d’informations.  
+-   La clé étrangère, la contrainte unique, les déclencheurs, les modifications de schéma, ROWGUIDCOL, les colonnes calculées, la compression de données, les types de données d'alias, le contrôle de version et les verrous ne sont pas pris en charge dans les tables mémoire optimisées. Consultez [Transact-SQL Constructs Not Supported by In-Memory OLTP](../in-memory-oltp/transact-sql-constructs-not-supported-by-in-memory-oltp.md) pour plus d’informations.  
   
 ##  <a name="Schema"></a> Modification d'un fichier de schéma  
   
@@ -317,7 +317,7 @@ GO
   
 -   ANSI_PADDING doit être activé.  
   
-##  <a name="PrimaryKey"></a> Réplication des modifications sur une clé primaire  
+##  <a name="PrimaryKey"></a> Réplication des modifications à une clé primaire  
  La clé primaire d'une table mémoire optimisée ne peut pas être mise à jour. Pour répliquer une mise à jour de clé primaire sur un abonné, modifiez la procédure stockée de mise à jour pour fournir la mise à jour en tant que paire d'opérations de suppression et insertion.  
   
 ## <a name="see-also"></a>Voir aussi  

@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - "10545"
 - "10547"
@@ -18,15 +18,15 @@ f1_keywords:
 - sql12.rtp.rptdesigner.indicatorproperties.validateandstates.f1
 ms.assetid: 2edbd279-be39-4d97-b1b6-ddbc5b17c422
 caps.latest.revision: 10
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 6f01f4c20446507bd63c8bd1c82d6c32355582b5
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 30938348fcb78d1afeeeacaead3bb02362a28574
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36041044"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37168310"
 ---
 # <a name="indicators-report-builder-and-ssrs"></a>Indicateurs (Générateur de rapports et SSRS)
   Les indicateurs sont des jauges minimales qui communiquent en un coup d'œil l'état d'une valeur de donnée unique. Les icônes qui représentent des indicateurs et leurs états sont simples et visuellement efficaces même lorsqu'elles sont utilisées dans les petites tailles.  
@@ -107,7 +107,7 @@ ms.locfileid: "36041044"
   
  Lorsque vous ajoutez pour la première fois un indicateur à un rapport, il est configuré pour utiliser les valeurs par défaut. Vous pouvez alors modifier les valeurs afin que l'indicateur représente les données comme vous le souhaitez. Vous pouvez modifier l'apparence des icônes d'indicateur, la façon dont l'indicateur choisit l'icône à utiliser et les icônes utilisées par un jeu d'indicateurs. Pour plus d’informations, consultez [Change Indicator Icons and Indicator Sets &#40;Report Builder and SSRS&#41;](change-indicator-icons-and-indicator-sets-report-builder-and-ssrs.md).  
   
- Par défaut, les indicateurs sont configurés pour utiliser des pourcentages comme unité de mesure et détecter automatiquement les valeurs maximales et minimales des données. Chaque icône du jeu d'indicateurs a une plage de pourcentages. Le nombre de plages de pourcentages dépend du nombre d'icônes dans le jeu d'icônes : toutefois, les plages sont de la même taille et sont séquentielles. Par exemple, si le jeu d'icônes a cinq icônes, il y a cinq plages de pourcentages qui représentent chacune 20 pour cent de la taille totale. La première plage démarre à 0 et se termine à 20, la deuxième plage démarre à 20 et se termine à 40, et ainsi se suite. L'indicateur du rapport utilise l'icône du jeu d'indicateurs qui a une plage de pourcentages dans laquelle figure la valeur des données de l'indicateur. Vous pouvez modifier la plage de pourcentages de chaque icône du jeu. Les valeurs minimales et maximales peuvent être définies explicitement à l'aide d'une valeur ou d'une expression. Vous pouvez modifier l'unité de mesure en la remplaçant par une valeur numérique. Dans ce cas, vous ne spécifiez pas de valeur minimale ou maximale pour les données. À la place, vous fournissez uniquement les valeurs de début et de fin pour chaque icône utilisé par l'indicateur. Pour plus d’informations, consultez [ensemble et configurer des unités de mesure &#40;le Générateur de rapports et SSRS&#41;](set-and-configure-measurement-units-report-builder-and-ssrs.md).  
+ Par défaut, les indicateurs sont configurés pour utiliser des pourcentages comme unité de mesure et détecter automatiquement les valeurs maximales et minimales des données. Chaque icône du jeu d'indicateurs a une plage de pourcentages. Le nombre de plages de pourcentages dépend du nombre d'icônes dans le jeu d'icônes : toutefois, les plages sont de la même taille et sont séquentielles. Par exemple, si le jeu d'icônes a cinq icônes, il y a cinq plages de pourcentages qui représentent chacune 20 pour cent de la taille totale. La première plage démarre à 0 et se termine à 20, la deuxième plage démarre à 20 et se termine à 40, et ainsi se suite. L'indicateur du rapport utilise l'icône du jeu d'indicateurs qui a une plage de pourcentages dans laquelle figure la valeur des données de l'indicateur. Vous pouvez modifier la plage de pourcentages de chaque icône du jeu. Les valeurs minimales et maximales peuvent être définies explicitement à l'aide d'une valeur ou d'une expression. Vous pouvez modifier l'unité de mesure en la remplaçant par une valeur numérique. Dans ce cas, vous ne spécifiez pas de valeur minimale ou maximale pour les données. À la place, vous fournissez uniquement les valeurs de début et de fin pour chaque icône utilisé par l'indicateur. Pour plus d’informations, consultez [ensemble et configurer des unités de mesure &#40;Générateur de rapports et SSRS&#41;](set-and-configure-measurement-units-report-builder-and-ssrs.md).  
   
  Les indicateurs transmettent les valeurs des données en synchronisant des valeurs des données d'indicateur dans une étendue spécifiée. Par défaut, l'étendue est le conteneur parent de l'indicateur, tel que la table ou matrice qui contient l'indicateur. Vous pouvez modifier la synchronisation de l'indicateur en choisissant une étendue différente, selon la disposition de votre rapport. L'indicateur peut omettre la synchronisation. Pour plus d’informations, consultez [Définir l’étendue de synchronisation &#40;Générateur de rapports et SSRS&#41;](set-synchronization-scope-report-builder-and-ssrs.md).  
   
@@ -119,7 +119,7 @@ ms.locfileid: "36041044"
 ##  <a name="SizingIndicatators"></a> Dimensionnement des indicateurs pour optimiser l'impact visuel  
  Outre la couleur, la direction et la forme, vous pouvez utiliser la taille pour optimiser l'impact visuel des indicateurs. Imaginez un rapport qui utilise des indicateurs pour illustrer la satisfaction des clients avec différents types de bicyclettes. L'icône que l'indicateur utilise peut être configurée selon des tailles différentes en fonction de la satisfaction des clients. Plus la satisfaction est grande, plus l'icône qui s'affiche dans le rapport est grande. L'image suivante affiche un rapport des ventes de bicyclettes et les tailles de l'icône reflètent le montant des ventes.  
   
- Vous utilisez des expressions pour définir de façon dynamique la taille des étoiles selon les valeurs de champ utilisées par l'indicateur. Pour plus d’informations, consultez [spécifier la taille d’un indicateur à l’aide d’une Expression &#40;le Générateur de rapports et SSRS&#41;](specify-the-size-of-an-indicator-using-an-expression-report-builder-and-ssrs.md).  
+ Vous utilisez des expressions pour définir de façon dynamique la taille des étoiles selon les valeurs de champ utilisées par l'indicateur. Pour plus d’informations, consultez [spécifier la taille d’un indicateur à l’aide d’une Expression &#40;Générateur de rapports et SSRS&#41;](specify-the-size-of-an-indicator-using-an-expression-report-builder-and-ssrs.md).  
   
  Pour en savoir plus sur la création et l’utilisation d’expressions, consultez [Expressions &#40;Générateur de rapports et SSRS&#41;](expressions-report-builder-and-ssrs.md).  
   
@@ -191,22 +191,22 @@ ms.locfileid: "36041044"
 ##  <a name="HowTo"></a> Rubriques de procédures  
  Cette section répertorie les procédures qui vous indiquent comment ajouter, modifier et supprimer des indicateurs, configurer et personnaliser des indicateurs et utiliser des indicateurs dans les jauges.  
   
--   [Ajouter ou supprimer un indicateur &#40;rapport Générateur et SSRS&#41;](add-or-delete-an-indicator-report-builder-and-ssrs.md)  
+-   [Ajouter ou supprimer un indicateur &#40;Générateur de rapports et SSRS&#41;](add-or-delete-an-indicator-report-builder-and-ssrs.md)  
   
--   [Modifier les icônes d’indicateur et jeux d’indicateurs &#40;rapport Générateur et SSRS&#41;](change-indicator-icons-and-indicator-sets-report-builder-and-ssrs.md)  
+-   [Modifier les icônes d’indicateur et jeux d’indicateurs &#40;Générateur de rapports et SSRS&#41;](change-indicator-icons-and-indicator-sets-report-builder-and-ssrs.md)  
   
--   [Définir et configurer des unités de mesure &#40;rapport Générateur et SSRS&#41;](set-and-configure-measurement-units-report-builder-and-ssrs.md)  
+-   [Définir et configurer des unités de mesure &#40;Générateur de rapports et SSRS&#41;](set-and-configure-measurement-units-report-builder-and-ssrs.md)  
   
--   [Définir l’étendue de synchronisation &#40;rapport Générateur et SSRS&#41;](set-synchronization-scope-report-builder-and-ssrs.md)  
+-   [Définir l’étendue de synchronisation &#40;Générateur de rapports et SSRS&#41;](set-synchronization-scope-report-builder-and-ssrs.md)  
   
--   [Spécifiez la taille d’un indicateur à l’aide d’une Expression &#40;rapport Générateur et SSRS&#41;](specify-the-size-of-an-indicator-using-an-expression-report-builder-and-ssrs.md)  
+-   [Spécifiez la taille d’un indicateur à l’aide d’une Expression &#40;Générateur de rapports et SSRS&#41;](specify-the-size-of-an-indicator-using-an-expression-report-builder-and-ssrs.md)  
   
--   [Inclure des indicateurs et des jauges dans un panneau de jauge &#40;rapport Générateur et SSRS&#41;](include-indicators-and-gauges-in-a-gauge-panel-report-builder-and-ssrs.md)  
+-   [Inclure des indicateurs et des jauges dans un panneau de jauge &#40;Générateur de rapports et SSRS&#41;](include-indicators-and-gauges-in-a-gauge-panel-report-builder-and-ssrs.md)  
   
   
 ## <a name="see-also"></a>Voir aussi  
- [Jauges &#40;rapport Générateur et SSRS&#41;](gauges-report-builder-and-ssrs.md)   
+ [Jauges &#40;Générateur de rapports et SSRS&#41;](gauges-report-builder-and-ssrs.md)   
  [Graphiques sparkline et barres de données &#40;Générateur de rapports et SSRS&#41;](sparklines-and-data-bars-report-builder-and-ssrs.md)   
- [Graphiques &#40;rapport Générateur et SSRS&#41;](charts-report-builder-and-ssrs.md)  
+ [Graphiques &#40;Générateur de rapports et SSRS&#41;](charts-report-builder-and-ssrs.md)  
   
   

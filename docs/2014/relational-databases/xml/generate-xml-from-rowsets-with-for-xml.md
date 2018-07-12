@@ -8,23 +8,23 @@ ms.suite: ''
 ms.technology:
 - dbe-xml
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - FOR XML clause, generating XML from rowsets
 ms.assetid: d061c0f1-3de9-4ad1-bbca-ce45d064b6c8
 caps.latest.revision: 10
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 163b33618f6d303d3ab08e078ee2b06096dc2ad8
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 75446ba8c61f03c46c4000793d7ca75f1dc8cb85
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36040587"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37201109"
 ---
 # <a name="generate-xml-from-rowsets-with-for-xml"></a>Générer du code XML à partir d'ensembles de lignes avec FOR XML
-  Vous pouvez générer un `xml` à partir d’un ensemble de lignes à l’aide de FOR XML avec la nouvelle instance de type **TYPE** la directive.  
+  Vous pouvez générer un `xml` instance de type de données à partir d’un ensemble de lignes à l’aide de FOR XML avec la nouvelle **TYPE** directive.  
   
  Le résultat peut être assigné à un `xml` colonne, variable ou paramètre de type de données. De plus, il est possible d'imbriquer des clauses FOR XML pour générer une structure hiérarchique. Les clauses FOR XML imbriquées sont plus faciles à écrire que la clause FOR XML EXPLICIT, mais elles ne s'avèrent pas aussi performantes pour les hiérarchies profondes. FOR XML introduit aussi un nouveau mode PATH qui spécifie le chemin de l'arborescence XML où apparaît la valeur d'une colonne.  
   
@@ -40,7 +40,7 @@ FROM   T
 FOR XML AUTO, TYPE  
 ```  
   
- La vue V contient une seule ligne avec une seule colonne columnxmlVal de type XML`.` puissent être interrogées comme une expression régulière `xml` instance de type de données. Par exemple, la requête suivante renvoie l'auteur dont le prénom est « David » :  
+ La vue V contient une seule ligne avec une seule colonne columnxmlVal de type XML`.` peuvent être interrogée comme une expression régulière `xml` instance de type de données. Par exemple, la requête suivante renvoie l'auteur dont le prénom est « David » :  
   
 ```  
 SELECT xmlVal.query('//author[first-name = "David"]')  

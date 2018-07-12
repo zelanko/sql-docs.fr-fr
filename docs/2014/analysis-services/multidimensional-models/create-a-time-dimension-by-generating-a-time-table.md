@@ -1,5 +1,5 @@
 ---
-title: Créer une Dimension de temps en générant une Table de temps | Documents Microsoft
+title: Créer une Dimension de temps en générant une Table temporelle | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - time dimensions [Analysis Services]
 - dimensions [Analysis Services], time
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - table-based time dimensions [Analysis Services]
 ms.assetid: 58303326-1361-4c0e-9f3d-642ce69c4f6a
 caps.latest.revision: 41
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 184d2d276abeb835b578d7c1f3ef26ea36ab60e1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 9cb6230863b9e898f50ab30c6fc4288998024e5c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36041226"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37180936"
 ---
 # <a name="create-a-time-dimension-by-generating-a-time-table"></a>Create a Time Dimension by Generating a Time Table
   Dans [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], vous pouvez utiliser l'Assistant Dimension dans [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] pour créer une dimension de temps lorsque aucune table de temps n'est disponible dans la base de données source. Pour ce faire, sélectionnez l'une des options suivantes dans la page **Sélectionner la méthode de création** :  
@@ -45,7 +45,7 @@ ms.locfileid: "36041226"
   
  À côté de **Langue pour les noms des membres de temps**, sélectionnez la langue à utiliser pour étiqueter les membres de la dimension.  
   
- Une fois que vous avez créé une dimension de temps qui repose sur une plage de dates, vous pouvez utiliser le Concepteur de dimensions pour ajouter ou supprimer les attributs de temps. L'attribut Date étant l'attribut clé de la dimension, vous ne pouvez pas le supprimer de la dimension. Pour masquer l’attribut Date aux utilisateurs, vous pouvez modifier le `AttributeHierarchyVisible` propriété sur l’attribut à `False`.  
+ Une fois que vous avez créé une dimension de temps qui repose sur une plage de dates, vous pouvez utiliser le Concepteur de dimensions pour ajouter ou supprimer les attributs de temps. L'attribut Date étant l'attribut clé de la dimension, vous ne pouvez pas le supprimer de la dimension. Pour masquer l’attribut Date aux utilisateurs, vous pouvez modifier le `AttributeHierarchyVisible` propriété sur l’attribut `False`.  
   
 ## <a name="select-calendars"></a>Sélection de calendriers  
  Le calendrier standard de 12 mois (grégorien), qui débute le 1er janvier et se termine le 31 décembre, est toujours inclus lorsque vous créez une dimension de temps. Dans la page **Sélectionner des calendriers** de l'Assistant, vous pouvez spécifier des calendriers supplémentaires sur lesquels reposeront les hiérarchies de la dimension. Pour obtenir une description des types de calendrier, consultez [Créer une dimension de type Date](database-dimensions-create-a-date-type-dimension.md).  

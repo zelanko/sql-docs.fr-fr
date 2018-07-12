@@ -1,5 +1,5 @@
 ---
-title: Ajouter une Action Standard | Documents Microsoft
+title: Ajouter une Action Standard | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: ccb2928a-f75d-4acb-8ff8-fa80bb0935b2
 caps.latest.revision: 6
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 5d0540fc8cee3dff44cd7e2baf9115cf817e3ad5
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 47b13520762bd1ffc23f9bc466b82090fa60d8ee
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36040992"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37165530"
 ---
 # <a name="add-a-standard-action"></a>Ajouter une action standard
   Vous ajoutez une action à une base de données à l'aide de la vue Actions du Concepteur de cube. Cette vue est accessible depuis [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. Après avoir créé une action, elle devient disponible aux utilisateurs une fois que vous avez retraité le cube approprié. Pour plus d'informations, consultez [Processing Analysis Services Objects](processing-analysis-services-objects.md).  
@@ -76,7 +76,7 @@ ms.locfileid: "36040992"
         > [!NOTE]  
         >  Les actions propriétaires ne sont pas retournées au serveur, sauf si l’application cliente restreint explicitement l’ensemble de lignes du schéma afin de retourner uniquement les actions qui correspondent au nom spécifié dans **Application**.  
   
-    -   Dans **Action contenu**, si vous utilisez le type d’URL, placez l’adresse Internet entre guillemets, par exemple, «http://www.adventure-works.com».  
+    -   Dans **contenu d’Action**, si vous utilisez le type d’URL, placez l’adresse Internet entre guillemets, par exemple, «http://www.adventure-works.com».  
   
     -   Dans **Description**, tapez la description de l'action.  
   

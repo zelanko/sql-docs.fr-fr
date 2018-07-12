@@ -5,24 +5,23 @@ ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Availability Groups [SQL Server], interoperability
 - replication [SQL Server], AlwaysOn Availability Groups
 ms.assetid: 4e001426-5ae0-4876-85ef-088d6e3fb61c
 caps.latest.revision: 14
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 80edfc2a5a5d480b6d7acbc88d030881fb0e2e82
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: a57ba4393c23920b98a407176de51034715a54c6
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36040942"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37229599"
 ---
 # <a name="configure-replication-for-always-on-availability-groups-sql-server"></a>Configurer la réplication pour les groupes de disponibilité Always On (SQL Server)
   La configuration de la réplication [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] et des groupes de disponibilité AlwaysOn implique sept étapes. Chaque étape est décrite plus en détail dans les sections qui suivent.  
@@ -74,7 +73,7 @@ ms.locfileid: "36040942"
   
  **Configurer le serveur de publication sur le serveur de publication d'origine**  
   
-1.  Configurez la distribution à distance. Si les procédures stockées sont utilisées pour configurer le serveur de publication, exécutez `sp_adddistributor`. Spécifiez la même valeur pour *@password* que celui utilisé quand `sp_adddistrbutor` a été exécuté sur le serveur de distribution à configurer la distribution.  
+1.  Configurez la distribution à distance. Si les procédures stockées sont utilisées pour configurer le serveur de publication, exécutez `sp_adddistributor`. Spécifiez la même valeur pour *@password* que celle utilisée quand `sp_adddistrbutor` a été exécuté sur le serveur de distribution à configurer la distribution.  
   
     ```  
     exec sys.sp_adddistributor  
@@ -137,7 +136,7 @@ EXEC sys.sp_adddistpublisher
     @password = '**Strong password for publisher**';  
 ```  
   
- Pour chaque hôte de réplica secondaire, configurez la distribution. Identifiez le serveur de distribution du serveur de publication d'origine comme serveur de distribution distant. Utiliser le même mot de passe que celui utilisé quand `sp_adddistributor` a été exécuté initialement sur le serveur de distribution. Si les procédures stockées sont utilisées pour configurer la distribution, le *@password* paramètre de `sp_adddistributor` est utilisé pour spécifier le mot de passe.  
+ Pour chaque hôte de réplica secondaire, configurez la distribution. Identifiez le serveur de distribution du serveur de publication d'origine comme serveur de distribution distant. Utiliser le même mot de passe que celui utilisé quand `sp_adddistributor` a été exécuté initialement sur le serveur de distribution. Si des procédures stockées sont utilisées pour configurer la distribution, le *@password* paramètre de `sp_adddistributor` est utilisé pour spécifier le mot de passe.  
   
 ```  
 EXEC sp_adddistributor   
@@ -145,7 +144,7 @@ EXEC sp_adddistributor
     @password = '**Strong password for distributor**';  
 ```  
   
- Pour chaque hôte de réplica secondaire, assurez-vous que les abonnés de transmission de type push des publications dans la base de données apparaissent en tant que serveurs liés. Si les procédures stockées sont utilisées pour configurer les serveurs de publication distants, utilisez `sp_addlinkedserver` pour ajouter les abonnés (si absents) en tant que serveurs liés aux serveurs de publication.  
+ Pour chaque hôte de réplica secondaire, assurez-vous que les abonnés de transmission de type push des publications dans la base de données apparaissent en tant que serveurs liés. Si des procédures stockées sont utilisées pour configurer les serveurs de publication distants, utilisez `sp_addlinkedserver` pour ajouter les abonnés (si absents) en tant que serveurs liés aux serveurs de publication.  
   
 ```  
 EXEC sys.sp_addlinkedserver   
@@ -180,11 +179,11 @@ EXEC sys.sp_validate_replica_hosts_as_publishers
  La procédure stockée `sp_validate_replica_hosts_as_publishers` doit être exécutée à partir d'une connexion disposant d'autorisations suffisantes sur chaque hôte de réplica de groupe de disponibilité pour demander les informations sur le groupe de disponibilité. Contrairement à `sp_validate_redirected_publisher`, il utilise les informations d’identification de l’appelant et n’utilise pas la connexion conservée dans msdb.dbo.MSdistpublishers pour se connecter aux réplicas de groupe de disponibilité.  
   
 > [!NOTE]  
->  `sp_validate_replica_hosts_as_publishers` échoue avec l’erreur suivante lors de la validation des hôtes de réplica secondaire qui ne pas autoriser l’accès en lecture, ou nécessitent l’intention de spécifier de lecture.  
+>  `sp_validate_replica_hosts_as_publishers` échoue avec l’erreur suivante lors de la validation des hôtes de réplica secondaire qui ne pas autoriser l’accès en lecture, ou nécessitent l’intention de la définir de lecture.  
 >   
 >  Msg 21899, Niveau 11, État 1, Procédure `sp_hadr_verify_subscribers_at_publisher`, Ligne 109  
 >   
->  La requête au serveur de publication redirigé 'MyReplicaHostName' pour déterminer s'il y a des entrées sysserver pour les abonnés du serveur de publication d'origine 'MyOriginalPublisher' a échoué avec l'erreur '976', message d'erreur 'Erreur 976, Niveau 14, État 1, Message : La base de données cible, 'MyPublishedDB', participe à un groupe de disponibilité et n'est actuellement pas accessible pour les requêtes. Le déplacement des données est alors suspendu ou le réplica de disponibilité n'est pas activé pour l'accès en lecture. Pour autoriser l'accès en lecture seule à cette base de données et à d'autres dans le groupe de disponibilité, activez l'accès en lecture sur un ou plusieurs réplicas de disponibilité secondaires dans le groupe.  Pour plus d’informations, consultez la `ALTER AVAILABILITY GROUP` instruction [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] la documentation en ligne. ».  
+>  La requête au serveur de publication redirigé 'MyReplicaHostName' pour déterminer s'il y a des entrées sysserver pour les abonnés du serveur de publication d'origine 'MyOriginalPublisher' a échoué avec l'erreur '976', message d'erreur 'Erreur 976, Niveau 14, État 1, Message : La base de données cible, 'MyPublishedDB', participe à un groupe de disponibilité et n'est actuellement pas accessible pour les requêtes. Le déplacement des données est alors suspendu ou le réplica de disponibilité n'est pas activé pour l'accès en lecture. Pour autoriser l'accès en lecture seule à cette base de données et à d'autres dans le groupe de disponibilité, activez l'accès en lecture sur un ou plusieurs réplicas de disponibilité secondaires dans le groupe.  Pour plus d’informations, consultez le `ALTER AVAILABILITY GROUP` instruction dans [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] la documentation en ligne. ».  
 >   
 >  Une ou plusieurs erreurs de validation de serveur de publication ont été rencontrées pour l'hôte de réplica 'MyReplicaHostName'.  
   
@@ -196,9 +195,9 @@ EXEC sys.sp_validate_replica_hosts_as_publishers
 ##  <a name="RelatedTasks"></a> Tâches associées  
  **Réplication**  
   
--   [Gestion d’une base de données de Publication AlwaysOn &#40;SQL Server&#41;](maintaining-an-always-on-publication-database-sql-server.md)  
+-   [Maintenance d’une base de données de Publication AlwaysOn &#40;SQL Server&#41;](maintaining-an-always-on-publication-database-sql-server.md)  
   
--   [La réplication, le suivi des modifications, Capture de données modifiées et groupes de disponibilité AlwaysOn &#40;SQL Server&#41;](replicate-track-change-data-capture-always-on-availability.md)  
+-   [Réplication, le suivi des modifications, Capture de données modifiées et groupes de disponibilité AlwaysOn &#40;SQL Server&#41;](replicate-track-change-data-capture-always-on-availability.md)  
   
 -   [Administration &#40;réplication&#41;](../../../relational-databases/replication/administration/administration-replication.md)  
   
@@ -214,7 +213,7 @@ EXEC sys.sp_validate_replica_hosts_as_publishers
   
 -   [Spécifier l’URL de point de terminaison lors de l’ajout ou lors de la modification d’un réplica de disponibilité &#40;SQL Server&#41;](specify-endpoint-url-adding-or-modifying-availability-replica.md)  
   
--   [Créer une base de données mise en miroir du point de terminaison pour les groupes de disponibilité AlwaysOn &#40;SQL Server PowerShell&#41;](database-mirroring-always-on-availability-groups-powershell.md)  
+-   [Créer une base de données mise en miroir de point de terminaison pour les groupes de disponibilité AlwaysOn &#40;SQL Server PowerShell&#41;](database-mirroring-always-on-availability-groups-powershell.md)  
   
 -   [Joindre un réplica secondaire à un groupe de disponibilité &#40;SQL Server&#41;](join-a-secondary-replica-to-an-availability-group-sql-server.md)  
   

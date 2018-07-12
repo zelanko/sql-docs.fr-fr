@@ -1,5 +1,5 @@
 ---
-title: Requêtes d’élément (XMLA) | Documents Microsoft
+title: Requêtes d’élément (XMLA) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -24,15 +24,15 @@ helpviewer_keywords:
 - Queries element
 ms.assetid: e199412a-23f1-4d11-9e72-11f184ad9602
 caps.latest.revision: 10
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: 9e0da352d9f76166a0fdf8b0ce5b88bf0a026703
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: 6288deae2bbc6590265c66068f761ae51e9d0647
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36040462"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37277435"
 ---
 # <a name="queries-element-xmla"></a>Élément Queries (XMLA)
   Contient une collection d'éléments [Query](query-element-xmla.md) utilisée par la commande [DesignAggregations](../xml-elements-commands/designaggregations-element-xmla.md) lors du processus d'optimisation de l'utilisation.  

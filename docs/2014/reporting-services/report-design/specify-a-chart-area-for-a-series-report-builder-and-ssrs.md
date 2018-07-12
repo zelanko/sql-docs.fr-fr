@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - "10157"
 - sql12.rtp.rptdesigner.chartareaproperties.alignment.f1
 ms.assetid: dc3c365b-c263-402a-bf6f-c2a7081db073
 caps.latest.revision: 5
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: b604e8a3378285553542e4b03f6ba7c419315941
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 53bf187b7a41ffdcb3dfc474daa4ce8dcf2bd4aa
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36042232"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37153710"
 ---
 # <a name="specify-a-chart-area-for-a-series-report-builder-and-ssrs"></a>Spécifier une zone de graphique pour une série (Générateur de rapports et SSRS)
   Le graphique est le conteneur de niveau supérieur qui inclut la bordure externe, le titre du graphique et la légende. Par défaut, le graphique contient une zone de graphique par défaut. La zone de graphique n'est pas visible à la surface du graphique, mais vous pouvez la considérer comme un conteneur qui comprend uniquement les étiquettes d'axe, le titre de l'axe et la zone de traçage d'une ou plusieurs série(s). L'illustration suivante montre le concept de zones de graphique dans un unique graphique.  
@@ -47,11 +47,11 @@ ms.locfileid: "36042232"
 4.  (Facultatif) Alignez les zones de graphique verticalement. Pour ce faire, cliquez avec le bouton droit sur le graphique et sélectionnez **Propriétés de la zone de graphique**. Dans **Alignement**, sélectionnez une autre autre zone de graphique avec laquelle vous souhaitez aligner la zone de graphique sélectionnée.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Plusieurs séries sur un graphique &#40;rapport Générateur et SSRS&#41;](multiple-series-on-a-chart-report-builder-and-ssrs.md)   
- [Mise en forme des Points de données sur un graphique &#40;rapport Générateur et SSRS&#41;](formatting-data-points-on-a-chart-report-builder-and-ssrs.md)   
+ [Plusieurs séries sur un graphique &#40;Générateur de rapports et SSRS&#41;](multiple-series-on-a-chart-report-builder-and-ssrs.md)   
+ [Mise en forme des Points de données sur un graphique &#40;Générateur de rapports et SSRS&#41;](formatting-data-points-on-a-chart-report-builder-and-ssrs.md)   
  [Définir les couleurs d’un graphique à l’aide d’une palette &#40;Générateur de rapports et SSRS&#41;](define-colors-on-a-chart-using-a-palette-report-builder-and-ssrs.md)   
  [Graphiques polaires &#40;Générateur de rapports et SSRS&#41;](charts-report-builder-and-ssrs.md)   
  [Graphiques à base de formes &#40;Générateur de rapports et SSRS&#41;](shape-charts-report-builder-and-ssrs.md)   
- [Les graphiques en secteurs &#40;rapport Générateur et SSRS&#41;](pie-charts-report-builder-and-ssrs.md)  
+ [Graphiques en secteurs &#40;Générateur de rapports et SSRS&#41;](pie-charts-report-builder-and-ssrs.md)  
   
   

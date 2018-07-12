@@ -1,5 +1,5 @@
 ---
-title: Modifier manuellement une requête de prédiction | Documents Microsoft
+title: Modifier manuellement une requête de prédiction | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - modifying prediction queries
 - Mining Model Prediction [Analysis Services], modifying prediction queries
 - manual prediction query modification [Analysis Services]
 ms.assetid: 9f6a9298-49d5-4675-ad49-977a47dff5a6
 caps.latest.revision: 16
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: fd7b2457b291aa7002c6de7ed00dda2be78b865b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 9813aba9914a58d6a64266be2708d7e3d72ad543
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36040774"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37210439"
 ---
 # <a name="manually-edit-a-prediction-query"></a>Modifier manuellement une requête de prédiction
   Après avoir créé une requête en utilisant le Générateur de requêtes de prédiction, vous pouvez modifier la requête en activant le mode Texte de la requête sous l’onglet **Prédiction de modèle d’exploration de données** du Concepteur d’exploration de données. Un éditeur de texte apparaît au bas de l'écran pour afficher la requête créée par le Générateur de requêtes.  
@@ -48,7 +48,7 @@ ms.locfileid: "36040774"
   
 ## <a name="see-also"></a>Voir aussi  
  [Requêtes d’exploration de données](data-mining-queries.md)   
- [Générateur de requête de prédiction &#40;d’exploration de données&#41;](../prediction-query-builder-data-mining.md)   
- [Leçon 6 : Création et utilisation de prédictions &#40;didacticiel d’exploration de données de base de données&#41;](../../tutorials/lesson-6-creating-and-working-with-predictions-basic-data-mining-tutorial.md)  
+ [Générateur de requêtes de prédiction &#40;exploration de données&#41;](../prediction-query-builder-data-mining.md)   
+ [Leçon 6 : Création et utilisation de prédictions &#40;didacticiel d’exploration de données de base&#41;](../../tutorials/lesson-6-creating-and-working-with-predictions-basic-data-mining-tutorial.md)  
   
   

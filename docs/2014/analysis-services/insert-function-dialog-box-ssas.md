@@ -1,5 +1,5 @@
 ---
-title: Insérer la fonction, boîte de dialogue (SSAS) | Documents Microsoft
+title: Insérer la fonction, boîte de dialogue (SSAS) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - SQL12.ASVS.BIDTOOLSET.INSERTFUNCTIONDB.F1
 ms.assetid: c4b36d8f-2328-45f7-8bd4-cc0111571e25
 caps.latest.revision: 10
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: bf09d97be59c09e4ca727762c9be04d54fcd3cc2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 77045c8ec5b542f8a01829adaa8074724a693092
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36042126"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37159670"
 ---
 # <a name="insert-function-dialog-box-ssas"></a>Insérer une fonction, boîte de dialogue (SSAS)
   La boîte de dialogue **Insérer une fonction** vous permet de sélectionner une fonction parmi une liste de fonctions utilisables lors de la génération de formules. Pour accéder à cette boîte de dialogue à partir du générateur de modèles, dans la barre de formule située au-dessus de chaque table, cliquez sur le bouton de fonction (**fx**). Pour plus d'informations sur le choix des fonctions à utiliser dans les formules, consultez Introduction à DAX et génération d'une formule.  

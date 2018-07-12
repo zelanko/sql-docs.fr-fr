@@ -1,12 +1,12 @@
 ---
-title: IRowsetFastLoad::Commit (OLE DB) | Documents Microsoft
+title: IRowsetFastLoad::Commit (OLE DB) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: connectivity
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
@@ -20,12 +20,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 9ae092f822e28d8e92318ac355073beb59f11588
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
+ms.openlocfilehash: c20cc56a1976d58d73d8eb022b9ccbaf01855240
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35697730"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37419298"
 ---
 # <a name="irowsetfastloadcommit-ole-db"></a>IRowsetFastLoad::Commit (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -53,16 +53,16 @@ HRESULT Commit(
  Une erreur spécifique au fournisseur s'est produite. Extrayez les informations sur l'erreur pour le texte d'erreur spécifique à partir du fournisseur.  
   
  E_UNEXPECTED  
- La méthode a été appelée sur un ensemble de lignes de copie en bloc précédemment invalidé par le **IRowsetFastLoad::Commit** (méthode).  
+ La méthode a été appelée sur un ensemble de lignes de copie en bloc précédemment invalidé par la **IRowsetFastLoad::Commit** (méthode).  
   
 ## <a name="remarks"></a>Notes  
- A [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ensemble de lignes OLE DB Native Client fournisseur bulk copy se comporte comme un ensemble de lignes en mode de mise à jour différée. Comme l’utilisateur insère des données de ligne via l’ensemble de lignes, les lignes insérées sont traitées de la même manière qu’insertions en attente sur un ensemble de lignes prenant en charge **IRowsetUpdate**.  
+ Un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ensemble de lignes OLE DB Native Client fournisseur bulk copy se comporte comme un ensemble de lignes en mode de mise à jour retardée. Comme l’utilisateur insère des données de ligne via l’ensemble de lignes, les lignes insérées sont traitées de la même manière qu’insertions en attente sur un ensemble de lignes prenant en charge **IRowsetUpdate**.  
   
- Le consommateur doit appeler le **valider** méthode sur l’ensemble de lignes de copie en bloc pour écrire des lignes insérées dans la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] table dans la même façon que les **IRowsetUpdate::Update** méthode est utilisée pour envoyer des lignes en attente à un instance de SQL Server.  
+ Le consommateur doit appeler le **valider** méthode sur l’ensemble de lignes de copie en bloc pour écrire des lignes insérées à la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] table dans la même façon que le **IRowsetUpdate::Update** méthode est utilisée pour envoyer des lignes en attente à un instance de SQL Server.  
   
- Si le consommateur libère sa référence à l’ensemble de lignes de copie en bloc sans appeler le **valider** méthode insérée de toutes les lignes non écrites précédemment sont perdues.  
+ Si le consommateur libère sa référence à l’ensemble de lignes de copie en bloc sans appeler le **valider** (méthode), inséré toutes les lignes non écrites précédemment sont perdues.  
   
- Le consommateur peut traiter par lot des lignes insérées en appelant le **valider** méthode avec la *fDone* argument a la valeur FALSE. Lorsque *fDone*est définie sur TRUE, l’ensemble de lignes devient non valide. Un ensemble de lignes de copie en bloc non valide prend uniquement en charge la **ISupportErrorInfo** interface et **IRowsetFastLoad::Release** (méthode).  
+ Le consommateur peut regrouper des lignes insérées en appelant le **valider** méthode avec le *fDone* argument a la valeur FALSE. Lorsque *fDone*est définie sur TRUE, l’ensemble de lignes n’est plus valide. Un ensemble de lignes de copie en bloc non valide prend uniquement en charge la **ISupportErrorInfo** interface et **IRowsetFastLoad::Release** (méthode).  
   
 ## <a name="see-also"></a>Voir aussi  
  [IRowsetFastLoad &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-interfaces/irowsetfastload-ole-db.md)  

@@ -1,32 +1,31 @@
 ---
-title: Propriétés de l’Index de recherche en texte intégral (Page Général) | Documents Microsoft
+title: Propriétés de l’Index de recherche en texte intégral (Page Général) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-search
+ms.technology: search
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.fulltextsearch.fulltextindexproperties.general.f1
 ms.assetid: f4dff61c-8c2f-4ff9-abe4-70a34421448f
 caps.latest.revision: 27
 author: craigg-msft
 ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 67fd5637e190d58cdcab186643d5233bb89b1b5e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 825b7e357d5904108b9dd4cbdec9533e89313c83
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36042566"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37149930"
 ---
 # <a name="full-text-index-properties-general-page"></a>Propriétés d'index de recherche en texte intégral (page Général)
   **Pour afficher ou modifier les propriétés modifiables d’un index de recherche en texte intégral**  
   
--   [Gérer les index de recherche en texte intégral](../relational-databases/indexes/indexes.md)  
+-   [Gérer les index en texte intégral](../relational-databases/indexes/indexes.md)  
   
 ## <a name="uielement-list"></a>Liste des éléments de l'interface utilisateur  
  **Catalogue de texte intégral**  
@@ -78,7 +77,7 @@ ms.locfileid: "36042566"
  **Liste de propriétés de recherche**  
  Liste de propriétés de recherche actuellement associée à l'index de recherche en texte intégral, le cas échéant. Une liste de propriétés de recherche spécifie un ensemble de propriétés du document incluses dans l'index de recherche en texte intégral associé, s'il est rempli. Pour plus d’informations, consultez [Rechercher les propriétés du document à l’aide des listes de propriétés de recherche](../relational-databases/search/search-document-properties-with-search-property-lists.md).  
   
- **\<Désactiver >** indique qu’il n’existe actuellement aucune liste de propriétés de recherche associée à l’index. Vous pouvez supprimer la liste de propriétés de recherche actuelle de l’index en sélectionnant  **\<Off >** dans la liste, ou vous pouvez sélectionner une liste de propriétés de recherche différente dans la liste. Seules les listes des propriétés de recherche de la base de données actuelle sont répertoriées ici.  
+ **\<OFF >** indique qu’il n’existe actuellement aucune liste de propriétés de recherche associée à l’index. Vous pouvez supprimer la liste de propriétés de recherche en cours de l’index en sélectionnant  **\<Off >** dans la liste, ou vous pouvez sélectionner une liste de propriétés de recherche différente dans la liste. Seules les listes des propriétés de recherche de la base de données actuelle sont répertoriées ici.  
   
 > [!NOTE]  
 >  Vous pouvez associer une liste de propriétés de recherche donnée à plusieurs index de recherche en texte intégral dans la même base de données.  
@@ -90,7 +89,7 @@ ms.locfileid: "36042566"
  **Nombre d’éléments de la recherche en texte intégral de table**  
  Indique le nombre de lignes qui ont été correctement indexées en texte intégral.  
   
- Cette propriété correspond à la `TableFulltextItemCount` propriété retournée par le OBJECTPROPERTYEX [!INCLUDE[tsql](../includes/tsql-md.md)] (fonction).  
+ Cette propriété correspond à la `TableFulltextItemCount` propriété retournée par la OBJECTPROPERTYEX [!INCLUDE[tsql](../includes/tsql-md.md)] (fonction).  
   
  **Documents traités de la recherche en texte intégral table**  
  Affiche le nombre de lignes qui ont été traitées depuis le démarrage de l'indexation de texte intégral. Dans une table en cours d'indexation pour une recherche en texte intégral, toutes les colonnes d'une ligne sont considérées comme faisant partie d'un même document à indexer. Les lignes supprimées ne sont pas comptées.  
@@ -112,7 +111,7 @@ ms.locfileid: "36042566"
   
  0 = Le remplissage est terminé.  
   
- \>0 = une des valeurs suivantes :  
+ \>0 = une des opérations suivantes :  
   
 -   Nombre de documents qui n'ont pas été indexés depuis le début d'un remplissage de suivi des modifications intégral, incrémentiel ou manuel.  
   
@@ -133,11 +132,11 @@ ms.locfileid: "36042566"
   
 |||  
 |-|-|  
-|**désactivé**|L'index de recherche en texte intégral n'est pas mis à jour avec les modifications des données sous-jacentes.|  
+|**Hors tension**|L'index de recherche en texte intégral n'est pas mis à jour avec les modifications des données sous-jacentes.|  
 |**Manual**|L'index de recherche en texte intégral n'est pas mis à jour automatiquement au fur et à mesure des modifications des données sous-jacentes. Toutefois, les modifications apportées aux données sous-jacentes sont conservées et vous pouvez les propager à l'index de recherche en texte intégral soit de manière planifiée à l'aide de l'Agent SQL Server, soit de façon manuelle.|  
 |**Automatic**|L'index de recherche en texte intégral est mis à jour automatiquement au fur et à mesure des modifications des données sous-jacentes dans la table de base.|  
   
- **Remplir des index**  
+ **Remplir à nouveau les index**  
  Cliquez pour démarrer le remplissage de l'index de recherche en texte intégral lors de la sortie de la boîte de dialogue. Sélectionnez l'un des types de remplissage suivants :  
   
 |||  

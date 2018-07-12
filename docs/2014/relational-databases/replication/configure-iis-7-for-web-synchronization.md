@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - IIS 7 server configuration [SQL Server replication]
 - Web synchronization, IIS 7 servers
 ms.assetid: c201fe2c-0a76-44e5-a233-05e14cd224a6
 caps.latest.revision: 10
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: ecd40b90af7ecff8e3b249957cce6b90589acefd
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: b4766702bb0e9dd82c5e74bc1018894ab90b63a2
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36042442"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37158280"
 ---
 # <a name="configure-iis-7-for-web-synchronization"></a>Configurer IIS 7 pour la synchronisation web
   Les procédures décrites dans cette rubrique vous guident dans le processus de configuration manuelle des services IIS ([!INCLUDE[msCoName](../../includes/msconame-md.md)] Internet Information Services) version 7 et ultérieures pour une utilisation avec la synchronisation web en vue de la réplication de fusion. 
@@ -58,7 +58,7 @@ La synchronisation web est prise en charge sur IIS à compter de la version 5.0
   
 4.  Inscrivez replisapi.dll :  
   
-    1.  Cliquez sur **Démarrer**, puis sur **Exécuter**. Dans le **ouvrir** , entrez `cmd`, puis cliquez sur **OK**.  
+    1.  Cliquez sur **Démarrer**, puis sur **Exécuter**. Dans le **Open** , entrez `cmd`, puis cliquez sur **OK**.  
   
     2.  Dans le répertoire créé à l'étape 1, exécutez la commande suivante :  
   

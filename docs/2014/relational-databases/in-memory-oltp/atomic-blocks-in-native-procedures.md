@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine-imoltp
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 40e0e749-260c-4cfc-a848-444d30c09d85
 caps.latest.revision: 12
-author: stevestein
-ms.author: sstein
-manager: jhubbard
-ms.openlocfilehash: 7832b3440ae08597a84f5f0e5f6c3a8d851c3ee3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
+ms.openlocfilehash: 2468e7debaa34b08d40ffedef0a7f078f44343a3
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36042453"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37182306"
 ---
 # <a name="atomic-blocks"></a>Blocs Atomic
   `BEGIN ATOMIC` fait partie de la norme SQL ANSI. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] prend en charge les blocs Atomic au niveau supérieur des procédures stockées compilées en mode natif.  
@@ -33,7 +33,7 @@ ms.locfileid: "36042453"
 ## <a name="transactions-and-error-handling"></a>Transactions et gestion des erreurs  
  Si une transaction existe déjà dans une session (parce qu'un lot a exécuté une instruction `BEGIN TRANSACTION` et la transaction reste active), le démarrage d'un bloc Atomic crée un point de sauvegarde dans la transaction. Si le bloc se termine sans exception, le point de sauvegarde créé pour le bloc est validé, mais la transaction ne sera pas validée avant la validation de la transaction au niveau de la session. Si le bloc lève une exception, les effets du bloc sont restaurés, mais la transaction au niveau de la session se poursuit, à moins que l'exception ne condamne la transaction. Par exemple, un conflit d'écriture condamne la transaction, mais pas une erreur de conversion de type.  
   
- S'il n'y a pas de transactions actives dans une session, `BEGIN ATOMIC` démarre une nouvelle transaction. Si aucune exception n'est levée en dehors de l'étendue du bloc, la transaction est validée à la fin du bloc. Si le bloc lève une exception (autrement dit, l'exception n'est pas interceptée et n'est pas gérée dans le bloc), la transaction est restaurée. Pour les transactions couvrant un bloc atomic (une seule les procédure stockée compilée en mode natif), vous ne souhaitez pas écrire explicite `BEGIN TRANSACTION` et `COMMIT` ou `ROLLBACK` instructions.  
+ S'il n'y a pas de transactions actives dans une session, `BEGIN ATOMIC` démarre une nouvelle transaction. Si aucune exception n'est levée en dehors de l'étendue du bloc, la transaction est validée à la fin du bloc. Si le bloc lève une exception (autrement dit, l'exception n'est pas interceptée et n'est pas gérée dans le bloc), la transaction est restaurée. Pour les transactions couvrant un bloc atomic (une seule les procédure stockée compilée en mode natif), il est inutile d’écrire explicite `BEGIN TRANSACTION` et `COMMIT` ou `ROLLBACK` instructions.  
   
  Compilées en mode natif de prise en charge des procédures stockées du `TRY`, `CATCH`, et `THROW` construit pour la gestion des erreurs. `RAISERROR` n’est pas pris en charge.  
   
@@ -143,7 +143,7 @@ GO
   
 |Paramètre facultatif|Description|  
 |----------------------|-----------------|  
-|`DATEFORMAT`|Tous les formats de date [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sont pris en charge. Si spécifié, `DATEFORMAT` remplace le format de date par défaut associé à `LANGUAGE`.|  
+|`DATEFORMAT`|Tous les formats de date [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sont pris en charge. Si spécifié, `DATEFORMAT` remplace le format de date par défaut associé `LANGUAGE`.|  
 |`DATEFIRST`|Lorsqu'il est spécifié, `DATEFIRST` remplace la valeur par défaut associée à `LANGUAGE`.|  
 |`DELAYED_DURABILITY`|Valeurs prises en charge sont `OFF` et `ON`.<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Les validations de transactions peuvent avoir une durabilité complète, la durabilité par défaut ou une durabilité retardée. Pour plus d’informations, consultez [Contrôler la durabilité d’une transaction](../logs/control-transaction-durability.md).|  
   

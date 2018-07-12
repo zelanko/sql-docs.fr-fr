@@ -1,5 +1,5 @@
 ---
-title: Interopérabilité et Coexistence (Integration Services) | Documents Microsoft
+title: Interopérabilité et Coexistence (Integration Services) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - interoperability and coexistence [Integration Services]
 - Integration Services, interoperability and coexistence
@@ -16,13 +16,13 @@ ms.assetid: edfbcd56-012f-462e-a542-95491394fda9
 caps.latest.revision: 34
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: d0db34c7b894dc7b92ad6061d4f3c53c1cd2dbe9
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 8f7face1f41fdf02f772c05427db9d45d1bd6050
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36040200"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37277585"
 ---
 # <a name="interoperability-and-coexistence-integration-services"></a>Interopérabilité et coexistence (Integration Services)
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Integration Services (SSIS) peut coexister côte à côte avec [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] Integration Services et [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] Integration Services.  
@@ -50,9 +50,9 @@ ms.locfileid: "36040200"
   
     -   Utilisez le [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] version de [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] pour développer et maintenir des packages qui sont basés sur [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)].  
   
--   **Charger et exécuter des packages**. Vous pouvez charger et exécuter des packages qui ont été développés dans [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] et [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], dans le [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] version de [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. Lorsque vous ajoutez le package à un projet existant, le package est mis à niveau définitivement au format utilisé par [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Integration Services. Lorsque vous ouvrez le fichier de package dans [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], le package est mis à niveau temporairement au format utilisé par [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Integration Services. Si vous enregistrez les modifications apportées au package, il est définitivement mis à niveau. Une fois enregistrés au format qui [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] utilise des Services d’intégration, les packages ne peuvent plus être ouverts dans correspondant [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ou [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] version de Business Intelligence Development Studio, ni exécutés par correspondant [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] Services d’intégration ou [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] outils Integration Services.  
+-   **Charger et exécuter des packages**. Vous pouvez charger et exécuter des packages qui ont été développés dans [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] et [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], dans le [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] version de [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. Lorsque vous ajoutez le package à un projet existant, le package est mis à niveau définitivement au format utilisé par [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Integration Services. Lorsque vous ouvrez le fichier de package dans [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], le package est mis à niveau temporairement au format utilisé par [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Integration Services. Si vous enregistrez les modifications apportées au package, il est définitivement mis à niveau. Une fois enregistrés au format qui [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] utilise Integration Services, les packages ne peuvent plus être ouverts dans le correspondantes [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ou [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] version de Business Intelligence Development Studio, ni exécutés par le correspondantes [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] Integration Services ou [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] outils Integration Services.  
   
--   **Gérer les packages dans SQL Server Management Studio**. Vous ne pouvez pas vous connecter à une instance de la [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] version de la [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] du service, le [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ou [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] version de [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]. Vous ne pouvez pas vous connecter à une instance de la [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ou le [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] version de la [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] service à partir de la [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] version de [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]. Vous pouvez utiliser la version [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] de [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] pour gérer des packages [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] stockés dans une instance de [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] ou [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Vous devez modifier le fichier de configuration du service pour ajouter l'instance de [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] à la liste des emplacements gérés par le service. Pour plus d’informations, consultez [Configuring the Integration Services Service &#40;SSIS Service&#41;](../service/integration-services-service-ssis-service.md).  
+-   **Gérer les packages dans SQL Server Management Studio**. Vous ne pouvez pas vous connecter à une instance de la [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] version de la [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] service, à partir de la [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ou le [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] version de [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]. Vous ne pouvez pas vous connecter à une instance de la [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ou le [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] version de la [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] service à partir de la [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] version de [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]. Vous pouvez utiliser la version [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] de [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] pour gérer des packages [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] stockés dans une instance de [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] ou [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Vous devez modifier le fichier de configuration du service pour ajouter l'instance de [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] à la liste des emplacements gérés par le service. Pour plus d’informations, consultez [Configuring the Integration Services Service &#40;SSIS Service&#41;](../service/integration-services-service-ssis-service.md).  
   
 -   **Stocker les packages dans SQL Server**. Vous pouvez stocker des packages dans les bases de données suivantes.  
   
@@ -66,6 +66,6 @@ ms.locfileid: "36040200"
   
      Sur une instance de [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ou une instance de [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], vous ne pouvez pas importer de packages provenant d'une instance de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], ni exporter de packages vers une telle instance.  
   
--   **Exécuter les packages**. Vous pouvez exécuter [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] Integration Services et [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] packages Integration Services à l’aide de la [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] version de la **dtexec** utilitaire ou de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] l’Agent. Chaque fois qu’un [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] outil Integration Services charge un package qui a été développé dans [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ou [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], l’outil convertit temporairement, en mémoire, le package au package en format [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)] utilise. Si le [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ou [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] package présente des problèmes qui empêchent une conversion réussie, le [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] outil Integration Services ne peut pas exécuter le package jusqu'à ce que ces problèmes sont résolus. Pour plus d’informations, voir [Upgrade Integration Services Packages](upgrade-integration-services-packages.md).  
+-   **Exécuter les packages**. Vous pouvez exécuter [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] Integration Services et [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] packages Integration Services à l’aide de la [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] version de la **dtexec** utilitaire ou de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent. Chaque fois qu’un [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] l’outil Integration Services charge un package qui a été développé dans [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ou [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], l’outil convertit temporairement, en mémoire, le package au package de mise en forme qui [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)] utilise. Si le [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ou [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] package présente des problèmes qui empêchent une conversion réussie, le [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] outil d’Integration Services ne peut pas exécuter le package jusqu'à ce que ces problèmes soient résolus. Pour plus d’informations, voir [Upgrade Integration Services Packages](upgrade-integration-services-packages.md).  
   
   

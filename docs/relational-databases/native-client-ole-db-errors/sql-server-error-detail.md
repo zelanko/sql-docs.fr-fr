@@ -1,12 +1,12 @@
 ---
-title: Détail de l’erreur SQL Server | Documents Microsoft
+title: Détail de l’erreur SQL Server | Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: connectivity
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -21,12 +21,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: b4b70a652ace8f7ccaf89ed23434ebed15410102
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
+ms.openlocfilehash: cf2444c9b813f3347537a32577cc2501c9405a6c
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35701990"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37418728"
 ---
 # <a name="sql-server-error-detail"></a>Détail des erreurs SQL Server
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "35701990"
   
  Il existe deux façons d’obtenir l’accès à **ISQLServerErrorInfo** interface.  
   
- Le consommateur peut appeler **IErrorRecords::GetCustomerErrorObject** pour obtenir un **ISQLServerErrorInfo** pointeur, comme indiqué dans l’exemple de code suivant. (Il est inutile d’obtenir **ISQLErrorInfo.**) Les deux **ISQLErrorInfo** et **ISQLServerErrorInfo** sont des objets d’erreur OLE DB personnalisés, **ISQLServerErrorInfo** en cours de l’interface à utiliser pour obtenir des informations de erreurs de serveur, notamment des détails sur les numéros de ligne et de nom de procédure.  
+ Le consommateur peut appeler **IErrorRecords::GetCustomerErrorObject** pour obtenir un **ISQLServerErrorInfo** pointeur, comme indiqué dans l’exemple de code suivant. (Il est inutile d’obtenir **ISQLErrorInfo.**) Les deux **ISQLErrorInfo** et **ISQLServerErrorInfo** sont des objets d’erreur OLE DB personnalisés, **ISQLServerErrorInfo** en cours de l’interface à utiliser pour obtenir des informations de erreurs de serveur, notamment des détails sur les numéros de nom et de ligne de procédure.  
   
 ```  
 // Get the SQL Server custom error object.  
@@ -45,9 +45,9 @@ if(FAILED(hr=pIErrorRecords->GetCustomErrorObject(
    (IUnknown**)&pISQLServerErrorErrorInfo)))  
 ```  
   
- Une autre méthode pour obtenir un **ISQLServerErrorInfo** pointeur consiste à appeler la **QueryInterface** méthode sur une déjà obtenu **ISQLErrorInfo** pointeur. Notez que puisque **ISQLServerErrorInfo** contient un surensemble des informations disponibles à partir de **ISQLErrorInfo**, il est judicieux d’accéder directement à **ISQLServerErrorInfo**via **GetCustomerErrorObject**.  
+ Une autre façon d’obtenir un **ISQLServerErrorInfo** pointeur consiste à appeler le **QueryInterface** méthode sur un déjà obtenu **ISQLErrorInfo** pointeur. Étant donné que **ISQLServerErrorInfo** contient un sur-ensemble des informations disponibles à partir de **ISQLErrorInfo**, il est judicieux d’accéder directement à **ISQLServerErrorInfo**via **GetCustomerErrorObject**.  
   
- Le **ISQLServerErrorInfo** interface expose une fonction membre, [ISQLServerErrorInfo::GetErrorInfo](../../relational-databases/native-client-ole-db-interfaces/isqlservererrorinfo-geterrorinfo-ole-db.md). La fonction retourne un pointeur à une structure SSERRORINFO et un pointeur à une mémoire tampon de chaîne. Les deux pointeurs font référence mémoire, le consommateur doit libérer à l’aide de la **IMalloc::Free** (méthode).  
+ Le **ISQLServerErrorInfo** interface expose une fonction membre, [ISQLServerErrorInfo::GetErrorInfo](../../relational-databases/native-client-ole-db-interfaces/isqlservererrorinfo-geterrorinfo-ole-db.md). La fonction retourne un pointeur à une structure SSERRORINFO et un pointeur à une mémoire tampon de chaîne. Les deux pointeurs référencent la mémoire que le consommateur doit libérer à l’aide de la **IMalloc::Free** (méthode).  
   
  Les membres de la structure SSERRORINFO sont interprétés par le consommateur comme suit.  
   

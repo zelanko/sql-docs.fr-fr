@@ -1,5 +1,5 @@
 ---
-title: Élément RelationshipEndTranslation (ASSL) | Documents Microsoft
+title: Élément RelationshipEndTranslation (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -12,15 +12,15 @@ ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: 04e09370-fdfe-4051-9998-4a6859ce8c54
 caps.latest.revision: 4
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: bb93b3cdaf3eda1b8be15679b0736e626a802cf3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 62c779e29ce721289b364599063e1a1de747eb1c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36041708"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37153020"
 ---
 # <a name="relationshipendtranslation-element-assl"></a>Élément RelationshipEndTranslation (ASSL)
   Définit un type de données primitif représentant une traduction localisée pour un élément [RelationshipEnd](relationshipend-data-type-assl.md) .  
@@ -57,6 +57,6 @@ ms.locfileid: "36041708"
  L’élément correspondant dans le modèle d’objet objets AMO (Analysis Management) est <xref:Microsoft.AnalysisServices.Translation>.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Types de données de script langage XML Analysis Services &#40;ASSL&#41;](analysis-services-scripting-language-xml-data-types-assl.md)  
+ [Types Analysis Services Scripting Language XML données &#40;ASSL&#41;](analysis-services-scripting-language-xml-data-types-assl.md)  
   
   

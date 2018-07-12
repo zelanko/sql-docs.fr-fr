@@ -1,5 +1,5 @@
 ---
-title: Définissez les bases de données défini par le classement de l’utilisateur correspondent à celles du principal et de bases de données model | Documents Microsoft
+title: Définissez les bases de données défini par le classement de l’utilisateur correspondent à ceux du serveur principal et de bases de données model | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,16 +8,16 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: cd89de1101d7efe67379ed7e9ea5a0acb674b37c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+ms.topic: conceptual
+author: mikeraymsft
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: dab49ec4d72afb28535cbcd0c61609ef71518e45
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36041584"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37188532"
 ---
 # <a name="set-the-collation-of-user-defined-databases-to-match-those-of-the-master-and-model-databases"></a>Définir le même classement pour les bases de données définies par l'utilisateur que pour les bases de données MASTER ou model
-Consultez [définir les bases de données défini par le classement de l’utilisateur correspondent à celles du principal et de bases de données model](../../database-engine/set-collation-user-defined-databases-match-master-model-databases.md).
+Consultez [définir les bases de données défini par le classement de l’utilisateur correspondent à ceux du serveur principal et de bases de données model](../../database-engine/set-collation-user-defined-databases-match-master-model-databases.md).

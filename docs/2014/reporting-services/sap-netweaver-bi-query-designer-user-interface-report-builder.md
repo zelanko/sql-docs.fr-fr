@@ -1,5 +1,5 @@
 ---
-title: Interface utilisateur du concepteur (Générateur de rapports) de SAP NetWeaver BI requête | Documents Microsoft
+title: Interface utilisateur du concepteur (Générateur de rapports) de SAP NetWeaver BI Query | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - "10014"
 helpviewer_keywords:
 - query designers, SAP
 ms.assetid: 8edda06d-1608-498b-bd50-10905e54f6ce
 caps.latest.revision: 13
-author: douglaslM
+author: maggiesmsft
 ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 50339b7d95a2b997319a58ea56b8710dd7cb4851
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: a003655287bbed676620a85264fe6276b1d9a7ff
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36040812"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37230209"
 ---
 # <a name="sap-netweaver-bi-query-designer-user-interface-report-builder"></a>Interface utilisateur du Concepteur de requêtes SAP NetWeaver BI (Générateur de rapports)
   [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] fournit un concepteur de requêtes graphique permettant de générer des requêtes MDX (Multidimensional Expression) pour une source de données SAP NetWeaver® Business Intelligence. Le concepteur de requêtes graphique MDX comporte deux modes : le mode Création et le mode Requête. Chaque mode fournit un volet Métadonnées à partir duquel vous pouvez faire glisser des membres à partir d'InfoCube, de MultiProvider ou d'une requête Web définie sur la source de données, afin de générer une requête MDX visant à récupérer des données lors du traitement du rapport.  

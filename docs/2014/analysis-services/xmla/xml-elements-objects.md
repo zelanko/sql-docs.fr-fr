@@ -1,5 +1,5 @@
 ---
-title: Objets (XMLA) | Documents Microsoft
+title: Objets (XMLA) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -19,18 +19,18 @@ helpviewer_keywords:
 - XMLA, objects
 ms.assetid: 768188ef-85d4-432a-9390-be05c835137f
 caps.latest.revision: 13
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: 98ff50749cc45b5ffe4343acc19668f4dd0db126
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: 3fdaa8cc81b642212c6aa404a8b6d39e3872c743
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36041883"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37205899"
 ---
 # <a name="objects-xmla"></a>Objects (XMLA)
-  Le protocole XML for Analysis (XMLA) utilise deux méthodes, `Discover` et `Execute`, pour offrir un moyen standard pour les applications d’accéder aux informations sur une instance de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Étant donné que ces méthodes sont appelées à l’aide du protocole SOAP Simple Object Access Protocol (), ils acceptent des entrées et affichent les sorties au format XML.  
+  Le protocole XML for Analysis (XMLA) utilise deux méthodes, `Discover` et `Execute`, pour offrir un moyen standard pour les applications d’accéder aux informations sur une instance de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Étant donné que ces méthodes sont appelées en utilisant le protocole SOAP Simple Object Access Protocol (), ils acceptent l’entrée et fournir la sortie au format XML.  
   
 ## <a name="in-this-section"></a>Dans cette section  
  Les rubriques suivantes décrivent les objets XMLA implémentés par [!INCLUDE[ssAS](../../includes/ssas-md.md)].  

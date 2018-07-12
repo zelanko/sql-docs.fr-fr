@@ -8,23 +8,23 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: f22497b7-f6c1-4c7b-b831-8c731e26ae37
 caps.latest.revision: 11
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: f769ede65a47bbe3500b67ec02247ac5e3dc6f96
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 4f5821043d7ea8c482c1aff13c52d5e12e023da9
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36042394"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37183836"
 ---
 # <a name="exporting-to-a-pdf-file-report-builder-and-ssrs"></a>Exportation vers un fichier PDF (Générateur de rapports et SSRS)
   L'extension de rendu PDF présente les rapports sous forme de fichiers s'affichant dans des visionneuses comme Adobe Acrobat si elles prennent en charge le format PDF 1.3. Bien que PDF 1.3 soit compatible avec Adobe Acrobat 4.0 et versions ultérieures, [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] prend en charge Adobe Acrobat 6 ou version ultérieure. Cette extension de rendu ne nécessite pas les logiciels Adobe pour effectuer le rendu du rapport. Toutefois, les visionneuses PDF comme Adobe Acrobat sont indispensables pour afficher ou imprimer un rapport au format PDF.  
   
- L'extension de rendu PDF prend en charge les caractères ANSI et peut convertir les caractères Unicode du japonais, coréen, chinois (traditionnel et simplifié), cyrillique, hébreu et arabe. Certaines limitations s'appliquent toutefois. Pour plus d’informations sur les limitations, consultez [exportation des rapports &#40;le Générateur de rapports et SSRS&#41;](export-reports-report-builder-and-ssrs.md).  
+ L'extension de rendu PDF prend en charge les caractères ANSI et peut convertir les caractères Unicode du japonais, coréen, chinois (traditionnel et simplifié), cyrillique, hébreu et arabe. Certaines limitations s'appliquent toutefois. Pour plus d’informations sur les limitations, consultez [exportation des rapports &#40;Générateur de rapports et SSRS&#41;](export-reports-report-builder-and-ssrs.md).  
   
  Le convertisseur PDF est convertisseur de page physique et, par conséquent, a un comportement de pagination qui diffère d'autres convertisseurs, tels que HTML et Excel. Cette rubrique fournit des informations spécifiques au rendu PDF et décrit les exceptions aux règles.  
   
@@ -71,7 +71,7 @@ ms.locfileid: "36042394"
 |`Subject`|Élément RDL `Description`|  
 |`Creator`|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .|  
 |`Producer`|Nom et version de l'extension de rendu|  
-|`CreationDate`|Durée d’exécution dans le fichier PDF de rapports `datetime` format.|  
+|`CreationDate`|Signaler des temps d’exécution en PDF `datetime` format.|  
   
   
   
@@ -115,7 +115,7 @@ ms.locfileid: "36042394"
 ## <a name="see-also"></a>Voir aussi  
  [Pagination dans Reporting Services &#40;Générateur de rapports et SSRS&#41;](../report-design/pagination-in-reporting-services-report-builder-and-ssrs.md)   
  [Comportements de rendu &#40;Générateur de rapports et SSRS&#41;](../report-design/rendering-behaviors-report-builder-and-ssrs.md)   
- [Fonctionnalité interactive des différentes Extensions de rendu de rapport &#40;rapport Générateur et SSRS&#41;](interactive-functionality-different-report-rendering-extensions.md)   
+ [Fonctionnalité interactive des différentes Extensions de rendu de rapport &#40;Générateur de rapports et SSRS&#41;](interactive-functionality-different-report-rendering-extensions.md)   
  [Rendu des éléments de rapport &#40;Générateur de rapports et SSRS&#41;](../report-design/rendering-report-items-report-builder-and-ssrs.md)   
  [Tables, matrices et listes &#40;Générateur de rapports et SSRS&#41;](../report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)  
   

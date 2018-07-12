@@ -1,12 +1,12 @@
 ---
-title: SQLGetData | Documents Microsoft
+title: SQLGetData | Microsoft Docs
 ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 apitype: DLLExport
@@ -18,32 +18,32 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: f36b0668fc0c6605ac0b590c991bc6b34abf18be
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
+ms.openlocfilehash: 9a53a6a0c2ee53a51ab3c1f5f0a7975aa3199c53
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35697616"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37413059"
 ---
 # <a name="sqlgetdata"></a>SQLGetData
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
-  **SQLGetData** est utilisée pour récupérer des données de jeu de résultats sans liaison de valeurs de colonne. **SQLGetData** peut être appelé plusieurs fois sur la même colonne à récupérer de grandes quantités de données d’une colonne avec un **texte**, **ntext**, ou **image** type de données.  
+  **SQLGetData** est utilisée pour récupérer des données de jeu de résultats sans lier les valeurs de colonne. **SQLGetData** peut être appelé successivement sur la même colonne à récupérer de grandes quantités de données d’une colonne avec un **texte**, **ntext**, ou **image** type de données.  
   
  Il n'y a aucune spécification exigeant qu'une application lie des variables pour extraire des données de jeu de résultats. Les données de n’importe quelle colonne peuvent être récupérées à partir de la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pilote ODBC Native Client à l’aide de **SQLGetData**.  
   
- Le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pilote ODBC Native Client ne prend pas en charge à l’aide de **SQLGetData** pour récupérer des données dans les colonnes par ordre aléatoire. Toutes les colonnes indépendantes traitées avec **SQLGetData** doit avoir des ordinaux de colonne plus élevées que les colonnes dépendantes dans le jeu de résultats. L'application doit traiter les données de la valeur d'ordinal de colonne indépendante la plus basse à la plus élevée. Toute tentative d'extraction de données d'une colonne d'ordinal inférieur provoque une erreur. Si l'application utilise des curseurs côté serveur pour signaler les lignes de jeu de résultats, l'application peut réextraire la ligne actuelle, puis extraire la valeur d'une colonne. Si une instruction est exécutée sur un curseur avant uniquement en lecture seule par défaut, vous devez réexécuter l’instruction pour sauvegarder **SQLGetData**.  
+ Le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pilote ODBC Native Client ne prend pas en charge à l’aide de **SQLGetData** pour récupérer des données dans les colonnes par ordre aléatoire. Toutes les colonnes indépendantes traitées avec **SQLGetData** doit avoir des ordinaux de colonne plus élevées que les colonnes dépendantes dans le jeu de résultats. L'application doit traiter les données de la valeur d'ordinal de colonne indépendante la plus basse à la plus élevée. Toute tentative d'extraction de données d'une colonne d'ordinal inférieur provoque une erreur. Si l'application utilise des curseurs côté serveur pour signaler les lignes de jeu de résultats, l'application peut réextraire la ligne actuelle, puis extraire la valeur d'une colonne. Si une instruction est exécutée sur le curseur par défaut en lecture seule, avant uniquement, vous devez réexécuter l’instruction pour sauvegarder **SQLGetData**.  
   
- Le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pilote ODBC Native Client signale correctement la longueur de **texte**, **ntext**, et **image** données récupérées à l’aide de **SQLGetData** . L’application peut exploiter au mieux du *StrLen_or_IndPtr* paramètre de retour pour récupérer rapidement des données de type long.  
+ Le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pilote ODBC Native Client signale correctement la longueur de **texte**, **ntext**, et **image** données récupérées à l’aide de **SQLGetData** . L’application peut faire bon usage de la *StrLen_or_IndPtr* paramètre de retour pour récupérer rapidement des données de type long.  
   
 > [!NOTE]  
 >  Pour les types de valeur élevée, *StrLen_or_IndPtr* retourne SQL_NO_TOTAL en cas de troncation de données.  
   
 ## <a name="sqlgetdata-support-for-enhanced-date-and-time-features"></a>Prise en charge de SQLGetData pour les fonctionnalités Date et Heure améliorées  
- Valeurs de colonne de résultat de types date/heure sont converties comme décrit dans [Conversions à partir de SQL pour C](../../relational-databases/native-client-odbc-date-time/datetime-data-type-conversions-from-sql-to-c.md).  
+ Résultat des valeurs de colonnes de types date/heure sont converties comme décrit dans [Conversions à partir de SQL vers C](../../relational-databases/native-client-odbc-date-time/datetime-data-type-conversions-from-sql-to-c.md).  
   
- Pour plus d’informations, consultez [Date et heure améliorations &#40;ODBC&#41;](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md).  
+ Pour plus d’informations, consultez [améliorations Date / heure &#40;ODBC&#41;](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md).  
   
 ## <a name="sqlgetdata-support-for-large-clr-udts"></a>Prise en charge SQLGetData pour les types CLR volumineux définis par l'utilisateur  
  **SQLGetData** prend en charge les types CLR volumineux définis par l’utilisateur (UDT). Pour plus d’informations, consultez [Large CLR User-Defined Types &#40;ODBC&#41;](../../relational-databases/native-client/odbc/large-clr-user-defined-types-odbc.md).  

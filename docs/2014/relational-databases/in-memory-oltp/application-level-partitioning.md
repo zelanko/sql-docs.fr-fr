@@ -8,25 +8,25 @@ ms.suite: ''
 ms.technology:
 - database-engine-imoltp
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 162d1392-39d2-4436-a4d9-ee5c47864c5a
 caps.latest.revision: 14
-author: stevestein
-ms.author: sstein
-manager: jhubbard
-ms.openlocfilehash: b3e1ff29abfaff5aa182019946c0a92d21395960
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
+ms.openlocfilehash: 78aea34abfc3621ea7ebbd50a3236c81308f128b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36042914"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37152560"
 ---
 # <a name="application-level-partitioning"></a>Partitionnement au niveau de l'application
   Cet exemple illustre le partitionnement au niveau de l'application, où les données sont stockées dans une table à mémoire optimisée ou une table sur disque, selon que la commande se situe avant ou après une date spécifique. Toutes les commandes postérieures ou égales à *hotDate* sont dans la table à mémoire optimisée et toutes celles antérieures à *hotDate* sont dans la table sur disque. Supposez une charge de travail OLTP extrême avec de nombreuses transactions simultanées. Cette règle métier (commandes récentes dans une table mémoire optimisée) doit être appliquée même si plusieurs transactions simultanées tentent de modifier *hotDate*.  
   
  Cet exemple n'utilise pas de [tables partitionnées](https://msdn.microsoft.com/library/ms190787.aspx) pour la table sur disque, mais suit un point de fractionnement explicite entre les deux tables, à l'aide d'une troisième table. Le point de fractionnement peut être utilisé pour vous assurer que les données récemment insérées sont toujours insérées dans la table appropriées en fonction de la date. Il peut également être utilisé pour déterminer l'emplacement de recherche des données. Les données qui arrivent en retard sont insérées dans la table appropriée.  
   
- Pour obtenir un exemple qui utilise les tables partitionnées, consultez [modèle d’Application pour partitionner des Tables](memory-optimized-tables.md).  
+ Pour obtenir un exemple qui utilise des tables partitionnées, consultez [modèle d’Application pour partitionner des Tables](memory-optimized-tables.md).  
   
 ## <a name="code-listing"></a>Intégralité du code  
   

@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - inline data validation [SQL Server replication]
 - administering replication, validating data
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - validating replicated data
 ms.assetid: f7500a2b-61cb-41b5-816d-27609a6c58e7
 caps.latest.revision: 45
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 678d5865b379ac1151f4cf85f63b77720ef4005a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 0fad815b99f6daf9ba14e765f394cfe1e416aaa6
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36041336"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37211219"
 ---
 # <a name="validate-replicated-data"></a>Valider des données répliquées
   La réplication transactionnelle et de fusion vous permet de vérifier que les données sur l'Abonné correspondent aux données sur le serveur de publication. La validation peut être réalisée pour des abonnements spécifiques ou pour tous les abonnements à une publication. Spécifiez un des types de validation suivants et l'Agent de distribution ou l'Agent de fusion validera les données lors de sa prochaine exécution :  

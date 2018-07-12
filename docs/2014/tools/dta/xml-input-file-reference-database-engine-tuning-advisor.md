@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - XML
 helpviewer_keywords:
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - XML input files [Database Engine Tuning Advisor]
 ms.assetid: 05e5e5f0-d6df-4336-b18e-e9bc2835a766
 caps.latest.revision: 25
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 7dd0170481a3894334dc01b2974a27ace6b736b4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 7ca9a22a2f6f4732a97387778484aae261fc0848
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36041508"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37183486"
 ---
 # <a name="xml-input-file-reference-database-engine-tuning-advisor"></a>Référence des fichiers d'entrée XML (Assistant Paramétrage du moteur de base de données)
   [!INCLUDE[ssDE](../../includes/ssde-md.md)] L’Assistant Paramétrage peut utiliser un fichier d’entrée XML pour paramétrer une base de données. Ce fichier XML désigne les bases de données, les tables, les fichiers ou tables de charge de travail et les options de paramétrage à utiliser pendant la session de paramétrage. Vous pouvez également utiliser ce fichier pour indiquer une configuration spécifiée par l'utilisateur afin d'effectuer une évaluation de simulation.  
@@ -48,25 +48,25 @@ ms.locfileid: "36041508"
   
 -   [DTAInput, élément &#40;DTA&#41;](dtainput-element-dta.md)  
   
--   [Élément serveur &#40;DTA&#41;](server-element-dta.md)  
+-   [Élément de serveur &#40;DTA&#41;](server-element-dta.md)  
   
--   [Élément de la charge de travail &#40;DTA&#41;](workload-element-dta.md)  
+-   [Workload, élément &#40;DTA&#41;](workload-element-dta.md)  
   
--   [Tuningoptions, élément &#40;DTA&#41;](tuningoptions-element-dta.md)  
+-   [TuningOptions, élément &#40;DTA&#41;](tuningoptions-element-dta.md)  
   
 -   [Élément de configuration &#40;DTA&#41;](configuration-element-dta.md)  
   
 ## <a name="server-elements"></a>Éléments de serveur  
   
--   [Nom d’élément pour le serveur &#40;DTA&#41;](name-element-for-server-dta.md)  
+-   [Élément nom serveur &#40;DTA&#41;](name-element-for-server-dta.md)  
   
 -   [Élément de base de données pour le serveur &#40;DTA&#41;](database-element-for-server-dta.md)  
   
 ## <a name="workload-elements"></a>Éléments de charge de travail  
   
--   [Élément de fichier &#40;DTA&#41;](file-element-dta.md)  
+-   [Élément de fichiers &#40;DTA&#41;](file-element-dta.md)  
   
--   [Élément de base de données pour les charges de travail &#40;DTA&#41;](database-element-for-workload-dta.md)  
+-   [Élément de base de données pour la charge de travail &#40;DTA&#41;](database-element-for-workload-dta.md)  
   
 -   [Élément EventString &#40;DTA&#41;](eventstring-element-dta.md)  
   
@@ -82,7 +82,7 @@ ms.locfileid: "36041508"
   
 -   [Partitioning, élément &#40;DTA&#41;](partitioning-element-dta.md)  
   
--   [DropOnlyMode (élément) &#40;DTA&#41;](droponlymode-element-dta.md)  
+-   [Droponlymode, élément &#40;DTA&#41;](droponlymode-element-dta.md)  
   
 -   [Keepexisting, élément &#40;DTA&#41;](keepexisting-element-dta.md)  
   
@@ -94,7 +94,7 @@ ms.locfileid: "36041508"
   
 -   [Élément de serveur de Configuration &#40;DTA&#41;](server-element-for-configuration-dta.md)  
   
--   [Élément de base de données de Configuration &#40;DTA&#41;](database-element-for-configuration-dta.md)  
+-   [Élément de base de données pour la Configuration &#40;DTA&#41;](database-element-for-configuration-dta.md)  
   
 -   [Recommendation, élément &#40;DTA&#41;](recommendation-element-dta.md)  
   
@@ -106,7 +106,7 @@ ms.locfileid: "36041508"
   
 -   [Élément de colonne pour les Index &#40;DTA&#41;](column-element-for-index-dta.md)  
   
--   [Nom d’élément de colonne &#40;DTA&#41;](name-element-for-column-dta.md)  
+-   [Nom d’élément pour la colonne &#40;DTA&#41;](name-element-for-column-dta.md)  
   
 -   [Élément de groupe de fichiers pour les Index &#40;DTA&#41;](filegroup-element-for-index-dta.md)  
   

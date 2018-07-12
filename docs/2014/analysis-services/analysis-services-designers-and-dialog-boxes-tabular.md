@@ -1,5 +1,5 @@
 ---
-title: Concepteurs et boîtes de dialogue (tabulaires) Analysis Services | Documents Microsoft
+title: Concepteurs et boîtes de dialogue (tabulaires) Analysis Services | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: cd2af1f3-cd8b-4651-9e4d-7c4c94353d7e
 caps.latest.revision: 10
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 285f042fb5a3bd4fb85be8e4931f41b6ebe0c023
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 14c6ca0494c49b1a445f6d144d3a0a527f13b469
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36042337"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37165720"
 ---
 # <a name="analysis-services-designers-and-dialog-boxes-tabular"></a>Concepteurs et boîtes de dialogue Analysis Services (tabulaire)
   L'environnement de création de projet tabulaire dans [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] et les outils d'administration de modèle tabulaires dans [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] incluent de nombreuses boîtes de dialogue, pages de propriétés et pages d'assistant. Vous pouvez cliquer sur le bouton d'aide ou sur la touche F1 pour en savoir plus.  
@@ -34,6 +34,6 @@ ms.locfileid: "36042337"
   
  [Boîte de dialogue Propriétés de base de données &#40;SSAS - tabulaire&#41;](database-properties-dialog-box-ssas-tabular.md)  
   
- [Boîte de dialogue Propriétés de la table &#40;SSAS - tabulaire&#41;](table-properties-dialog-box-ssas-tabular.md)  
+ [Boîte de dialogue Propriétés du tableau &#40;SSAS - tabulaire&#41;](table-properties-dialog-box-ssas-tabular.md)  
   
   

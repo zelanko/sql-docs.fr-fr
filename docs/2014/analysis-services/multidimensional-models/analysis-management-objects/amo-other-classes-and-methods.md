@@ -1,5 +1,5 @@
 ---
-title: AMO autres Classes et méthodes | Documents Microsoft
+title: AMO autres Classes et méthodes | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -21,15 +21,15 @@ helpviewer_keywords:
 - backups [AMO]
 ms.assetid: 60ed5cfa-3a03-4161-8271-0a71a3ae363b
 caps.latest.revision: 28
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 15c90d9b5c11f22af27332467d3501030a9ce7d0
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 6ff888c133491bfca9569daf08dc76e54e14d6d1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36041237"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37180876"
 ---
 # <a name="amo-other-classes-and-methods"></a>Autres classes et méthodes AMO
   Cette section contient des classes courantes qui ne sont pas spécifiques à OLAP ou d’exploration de données, et qui sont utiles lors de l’administration ou la gestion des objets dans [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]. Ces classes recouvrent des fonctionnalités telles que les procédures stockées, le traçage, les exceptions, ainsi que la sauvegarde et la restauration.  
@@ -38,7 +38,7 @@ ms.locfileid: "36041237"
   
 -   [Objets d’assembly](#Assembly)  
   
--   [Méthodes de sauvegarde et restauration](#Backup)  
+-   [Méthodes Backup et Restore](#Backup)  
   
 -   [Objets de trace](#Traces)  
   
@@ -53,7 +53,7 @@ ms.locfileid: "36041237"
 ##  <a name="Assembly"></a>Objets d’assembly  
  Pour créer un objet <xref:Microsoft.AnalysisServices.Assembly>, il convient de l'ajouter à la collection d'assemblys du serveur, puis de mettre à jour l'objet <xref:Microsoft.AnalysisServices.Assembly> sur le serveur à l'aide de la méthode Update.  
   
- Pour supprimer un <xref:Microsoft.AnalysisServices.Assembly> de l’objet, il doit être supprimé à l’aide de la méthode Drop de le <xref:Microsoft.AnalysisServices.Assembly> objet. La suppression d'un objet <xref:Microsoft.AnalysisServices.Assembly> de la collection d'assemblys de la base de données n'a pas pour effet de supprimer l'assembly en question : elle ne fait que le masquer dans votre application jusqu'à la prochaine exécution de cette dernière.  
+ Pour supprimer un <xref:Microsoft.AnalysisServices.Assembly> de l’objet, il doit être supprimée à l’aide de la méthode Drop de le <xref:Microsoft.AnalysisServices.Assembly> objet. La suppression d'un objet <xref:Microsoft.AnalysisServices.Assembly> de la collection d'assemblys de la base de données n'a pas pour effet de supprimer l'assembly en question : elle ne fait que le masquer dans votre application jusqu'à la prochaine exécution de cette dernière.  
   
  Pour plus d’informations sur les méthodes et propriétés disponibles, consultez <xref:Microsoft.AnalysisServices.Assembly> dans <xref:Microsoft.AnalysisServices> .  
   
@@ -157,7 +157,7 @@ ms.locfileid: "36041237"
   
  Pour commencer à capturer les données XML, la propriété d'objet serveur CaptureXML doit être définie à `true`. Dès lors, toutes les actions qui doivent être envoyées au serveur commencent à être capturées dans la classe CaptureLog, sans que les actions soient envoyées au serveur. CaptureLog est considérée comme une classe, car elle possède une méthode, Clear, qui sert à effacer le journal de capture.  
   
- Pour lire le journal, vous devez obtenir la collection de chaînes et commencer à parcourir les chaînes. Vous pouvez également concaténer tous les journaux dans une chaîne en utilisant la méthode d'objet serveur ConcatenateCaptureLog. ConcatenateCaptureLog comprend trois paramètres dont deux sont obligatoires. Les paramètres obligatoires sont *transactionnelle*, de type booléen, et *parallèles*, de type booléen. Si *transactionnelle* a la valeur `true`, il indique que le fichier de commandes XML sera créé comme une transaction unique au lieu de chaque commande qui est traitée comme une transaction distincte. Si *parallèles* a la valeur `true`, il indique que toutes les commandes dans le fichier de commandes seront enregistrées pour une exécution simultanée au lieu de manière séquentielle tels qu’ils ont été enregistrés.  
+ Pour lire le journal, vous devez obtenir la collection de chaînes et commencer à parcourir les chaînes. Vous pouvez également concaténer tous les journaux dans une chaîne en utilisant la méthode d'objet serveur ConcatenateCaptureLog. ConcatenateCaptureLog comprend trois paramètres dont deux sont obligatoires. Les paramètres requis sont *transactionnelle*, de type booléen, et *parallèles*, de type booléen. Si *transactionnelle* est défini sur `true`, il indique que le fichier de commandes XML sera créé comme une transaction unique au lieu de chaque commande est traitée comme une transaction distincte. Si *parallèles* est défini sur `true`, il indique que toutes les commandes dans le fichier de commandes seront enregistrées pour être exécutées simultanément et non séquentiellement comme ils ont été enregistrés.  
   
 ##  <a name="AMO"></a>Classe d’Exception AMOException  
  Vous pouvez utiliser la classe d'exception AMOException pour intercepter facilement les exceptions levées dans votre application par AMO.  

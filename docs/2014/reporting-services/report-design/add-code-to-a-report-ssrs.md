@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - code [Reporting Services]
 - custom code [Reporting Services]
@@ -17,22 +17,22 @@ helpviewer_keywords:
 - reports [Reporting Services], code
 ms.assetid: 00ef8fc6-99fe-49b2-8a22-7eb475881dc4
 caps.latest.revision: 41
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 3b4861234af092f5acd9dc500e52737a446d5dad
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 75f7f2490adbf85d9d4796a8492d00b9685de423
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36042380"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37183946"
 ---
 # <a name="add-code-to-a-report-ssrs"></a>Ajouter du code à un rapport (SSRS)
   Dans toute expression, vous pouvez appeler votre propre code personnalisé. Vous pouvez fournir du code des deux manières suivantes :  
   
 -   Incorporez du code écrit en [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] directement dans votre rapport. Si votre code fait référence à un élément [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] qui n’est pas <xref:System.Math> ni <xref:System.Convert>, vous devez ajouter la référence au rapport. Pour plus d’informations, consultez [Ajouter une référence d’assembly à un rapport &#40;SSRS&#41;](add-an-assembly-reference-to-a-report-ssrs.md). Pour plus d’informations sur les autres références au code possibles, consultez [Code personnalisé et références d’assembly dans les expressions du Concepteur de rapports &#40;SSRS&#41;](custom-code-and-assembly-references-in-expressions-in-report-designer-ssrs.md).  
   
--   Fournissez un assembly de code personnalisé en utilisant le [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]. Si vous fournissez un assembly personnalisé, vous devez l'installer à la fois sur l'ordinateur où vous créez le rapport et sur le serveur de rapports où vous affichez le rapport. Pour plus d’informations, consultez [à l’aide des assemblys personnalisés avec des rapports](../custom-assemblies/using-custom-assemblies-with-reports.md).  
+-   Fournissez un assembly de code personnalisé en utilisant le [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]. Si vous fournissez un assembly personnalisé, vous devez l'installer à la fois sur l'ordinateur où vous créez le rapport et sur le serveur de rapports où vous affichez le rapport. Pour plus d’informations, consultez [à l’aide d’assemblys personnalisés avec des rapports](../custom-assemblies/using-custom-assemblies-with-reports.md).  
   
 ### <a name="to-add-embedded-code-to-a-report"></a>Pour ajouter du code incorporé à un rapport  
   
@@ -64,6 +64,6 @@ ms.locfileid: "36042380"
 ## <a name="see-also"></a>Voir aussi  
  [Boîte de dialogue Propriétés du rapport, Code](../report-properties-dialog-box-code.md)   
  [Exemples d’expressions &#40;Générateur de rapports et SSRS&#41;](expression-examples-report-builder-and-ssrs.md)   
- [Références à la Collection Parameters &#40;rapport Générateur et SSRS&#41;](built-in-collections-parameters-collection-references-report-builder.md)  
+ [Références à la Collection Parameters &#40;Générateur de rapports et SSRS&#41;](built-in-collections-parameters-collection-references-report-builder.md)  
   
   

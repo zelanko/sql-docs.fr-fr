@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: fc829d25-b3e8-4801-8a94-4df19a7a5971
 caps.latest.revision: 6
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 6ea3d85443f4f3dab98f1430b53be4eb25cd0bca
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: 91d77160109b2eb37f99195147a5396ad7eec741
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36041395"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37205699"
 ---
 # <a name="validation-statuses-master-data-services"></a>États de validation (Master Data Services)
   Dans la zone fonctionnelle **Gestion des versions** , sur la page **Valider la version** , les états suivants sont possibles.  
@@ -33,7 +33,7 @@ ms.locfileid: "36041395"
 |En attente de revalidation du membre dépendant.|Membres consolidés mis à jour qui attendent d'être validés avec les membres enfants.|  
   
 ## <a name="see-also"></a>Voir aussi  
- [Valider une Version par rapport aux règles d’entreprise &#40;Master Data Services&#41;](validate-a-version-against-business-rules-master-data-services.md)   
+ [Valider une Version par rapport aux règles métier &#40;Master Data Services&#41;](validate-a-version-against-business-rules-master-data-services.md)   
  [Versions &#40;Master Data Services&#41;](../../2014/master-data-services/versions-master-data-services.md)  
   
   

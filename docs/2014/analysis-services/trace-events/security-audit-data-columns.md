@@ -1,5 +1,5 @@
 ---
-title: Colonnes de données d’Audit de sécurité | Documents Microsoft
+title: Colonnes de données d’Audit de sécurité | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Security Audit event category [SQL Server]
 ms.assetid: fac1a7f9-5961-4f4b-bb04-847616b505d7
 caps.latest.revision: 35
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: cf737330922500f8e9b33c7645fdd5e6b8b6b244
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: e0decf6588f44b6026608254fa1a196a310e37ad
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36042376"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37171560"
 ---
 # <a name="security-audit-data-columns"></a>Colonnes de données Audit de sécurité
   La catégorie d'événement Audit de sécurité contient les classes d'événements suivantes :  
@@ -118,7 +118,7 @@ ms.locfileid: "36042376"
   
 |**Nom de la colonne**|**ID de la colonne**|**Type de colonne**|**Description de la colonne**|  
 |---------------------|-------------------|---------------------|----------------------------|  
-|EventSubclass| 1| 1|La sous-classe d’événements fournit des informations supplémentaires sur chaque classe d’événements :<br /><br /> 1 : sauvegarde<br /><br /> 2 : restaurer<br /><br /> 3 : synchroniser<br /><br /> 4 : détacher<br /><br /> 5 : attacher<br /><br /> 6 : chargement de l’image<br /><br /> 7 : ImageSave|  
+|EventSubclass| 1| 1|La sous-classe d’événements fournit des informations supplémentaires sur chaque classe d’événements :<br /><br /> 1 : sauvegarde<br /><br /> 2 : restaurer<br /><br /> 3 : synchroniser<br /><br /> 4 : détacher<br /><br /> 5 : attacher<br /><br /> 6 : imageLoad<br /><br /> 7 : ImageSave|  
 |Severity|22| 1|Niveau de gravité d'une exception.|  
 |Réussi|23| 1|1 = réussite. 0 = échec (1 signifie la réussite de la vérification d'autorisations et 0 l'échec de cette vérification, par exemple).|  
 |Error|24| 1|Numéro d'erreur d'un événement donné.|  

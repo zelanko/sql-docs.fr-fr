@@ -1,5 +1,5 @@
 ---
-title: Général (boîte de dialogue Propriétés de Partition) (SSMS) | Documents Microsoft
+title: Général (boîte de dialogue Propriétés de Partition) (SSMS) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.sqlserverstudio.partitionproperties.general.f1
 ms.assetid: efb505be-354f-4d23-8f2d-3e76fa50d27b
 caps.latest.revision: 11
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 0008344f56afefca65c9c94b1b4446b5d84455dd
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 54ef8ce15795f8744b8ab7d368c05892a2dc850a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36042333"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37170150"
 ---
 # <a name="general-partition-properties-dialog-box-ssms"></a>Général (boîte de dialogue Propriétés de partition) (SSMS)
   Utilisez la page **Général** de la boîte de dialogue **Propriétés de partition** de SQL Server Management Studio pour définir les propriétés générales d'une partition d'un groupe de mesures d'un cube d'une base de données [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] .  

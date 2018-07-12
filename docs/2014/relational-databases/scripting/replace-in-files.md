@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vs.findreplace.replaceinfiles
 - vs.replaceinfiles
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - Replace in Files dialog box
 ms.assetid: 51191c0a-e022-41d6-8473-5cb3c6596862
 caps.latest.revision: 20
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: b0a9c5ccb6d6e83f6ae0b0270158269fe85bfda1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: df2f8ca6111aea1195d42539edbe859324594b42
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36042432"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37188006"
 ---
 # <a name="replace-in-files"></a>Remplacer dans les fichiers
   L’onglet **Remplacer dans les fichiers** de la fenêtre Rechercher et remplacer vous permet de rechercher une chaîne ou une expression dans le code d’un ensemble de fichiers spécifié, et de modifier l’ensemble ou une partie des correspondances trouvées. Les concordances trouvées et les actions exécutées sont répertoriées dans la fenêtre Résultats de la recherche, sélectionnée dans **Options de résultat**.  

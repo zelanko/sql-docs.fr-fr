@@ -1,5 +1,5 @@
 ---
-title: Glossaire | Documents Microsoft
+title: Glossaire | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -17,22 +17,22 @@ ms.technology:
 - reporting-services-native
 - reporting-services-sharepoint
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - definitions [SQL Server]
 - glossary [SQL Server]
 - terminology [SQL Server]
 ms.assetid: 0e8a7967-b407-4e01-b8c4-3eabe2820df5
 caps.latest.revision: 1952
-author: HeidiSteen
+author: heidisteen
 ms.author: heidist
-manager: jhubbard
-ms.openlocfilehash: 34fce852a5a3a06342bf5e8f16f4e1cd379e6d16
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 390fedf55957e0038d10579fe444bb843a057d47
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36041426"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37164330"
 ---
 # Glossaire
   
@@ -1338,7 +1338,7 @@ ms.locfileid: "36041426"
 |schéma Repository SQL|Jeu de tables standard utilisées par le moteur de base de données de référentiel pour gérer tous les objets de base de données de référentiel, les relations et les collections.|  
 |modèle d'architecture RTIM (Repository Type Information Model)|Modèle objet principal qui représente des définitions de type de référentiel pour Meta Data Services.|  
 |serveur de republication|Abonné qui publie des données reçues d'un serveur de publication.|  
-|caractère réservé|Caractère de clavier ayant une signification spéciale pour un programme et qui, par conséquent, ne peut généralement pas être utilisé pour affecter des noms à des fichiers, documents et autres outils générés par utilisateur, tels que des macros. Caractères réservés pour les utilisations particulières incluent l’astérisque (*), généralement transférer barre oblique (/), barre oblique inverse (\\), point d’interrogation ( ?) et barre verticale (&#124;).|  
+|caractère réservé|Caractère de clavier ayant une signification spéciale pour un programme et qui, par conséquent, ne peut généralement pas être utilisé pour affecter des noms à des fichiers, documents et autres outils générés par utilisateur, tels que des macros. Caractères couramment réservés pour des utilisations spéciales incluent l’astérisque (*), oblique (/), barre oblique inverse (\\), point d’interrogation ( ?) et barre verticale (&#124;).|  
 |stratégie de résolution|Ensemble de critères évalués de façon séquentielle par le moteur de référentiel pour la sélection d'un objet lorsque plusieurs versions existent et qu'aucune information de version n'est spécifiée dans le programme appelant.|  
 |ressource|Variable spéciale qui contient une référence à une connexion de base de données ou une instruction.|  
 |ressource|Tout élément dans une base de données du serveur de rapports qui n'est pas un rapport, un dossier ni un élément de source de données partagée.|  

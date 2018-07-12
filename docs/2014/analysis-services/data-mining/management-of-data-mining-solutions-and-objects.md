@@ -1,5 +1,5 @@
 ---
-title: Gestion des Solutions d’exploration de données et des objets | Documents Microsoft
+title: Gestion des Solutions d’exploration de données et des objets | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - data mining [Analysis Services], managing
 - managing mining models
 ms.assetid: 06fc61dd-925c-4347-8677-7046ee5d2f6f
 caps.latest.revision: 26
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 6ea150e4f35eaa1e9251f17894c7f0cf665439ed
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 9f20cc2fe28f5d798f3521a36aebcfe346aa643d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36041260"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37218299"
 ---
 # <a name="management-of-data-mining-solutions-and-objects"></a>Gestion des solutions et des objets d'exploration de données
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] fournit des outils clients que vous pouvez utiliser pour gérer les structures et modèles d'exploration de données existants. Cette section décrit les opérations de gestion que vous pouvez effectuer avec chaque environnement.  
@@ -32,7 +32,7 @@ ms.locfileid: "36041260"
 ## <a name="in-this-section"></a>Dans cette section  
  [Déplacement d’objets d’exploration de données](moving-data-mining-objects.md)  
   
- [Le traitement de la configuration requise et considérations &#40;d’exploration de données&#41;](processing-requirements-and-considerations-data-mining.md)  
+ [Traitement des exigences et considérations &#40;exploration de données&#41;](processing-requirements-and-considerations-data-mining.md)  
   
  [À l’aide de SQL Server Profiler pour contrôler l’exploration de données &#40;Analysis Services - Exploration de données&#41;](using-sql-server-profiler-to-monitor-data-mining-analysis-services-data-mining.md)  
   
@@ -55,7 +55,7 @@ ms.locfileid: "36041260"
   
 -   [Modifier les propriétés d’un modèle d’exploration de données](change-the-properties-of-a-mining-model.md)  
   
--   [Afficher ou modifier des indicateurs de modélisation &#40;d’exploration de données&#41;](modeling-flags-data-mining.md)  
+-   [Afficher ou modifier des indicateurs de modélisation &#40;exploration de données&#41;](modeling-flags-data-mining.md)  
   
 -   [Afficher ou modifier les paramètres d’un algorithme](view-or-change-algorithm-parameters.md)  
   
@@ -66,7 +66,7 @@ ms.locfileid: "36041260"
 > [!WARNING]  
 >  Toutes les modifications apportées à une structure ou un modèle d'exploration de données, y compris les modifications apportées aux métadonnées, telles qu'un nom ou une description, nécessitent un retraitement de la structure ou du modèle.  
   
- Si vous n’avez pas le fichier de solution qui a été utilisé pour créer le projet d’exploration de données ou les objets, vous pouvez importer le projet existant à partir du serveur à l’aide de l’Assistant Importation d’Analysis Services, apporter des modifications aux objets et puis redéployer à l’aide de la `Incremental` option. Pour plus d’informations, consultez [Importer un projet d’exploration de données à l’aide de l’Assistant Importation d’Analysis Services](import-a-data-mining-project-using-the-analysis-services-import-wizard.md).  
+ Si vous n’avez pas le fichier de solution qui a été utilisé pour créer le projet d’exploration de données ou les objets, vous pouvez importer le projet existant à partir du serveur à l’aide de l’Assistant Importation d’Analysis Services, apporter des modifications aux objets, puis redéployer à l’aide du `Incremental` option. Pour plus d’informations, consultez [Importer un projet d’exploration de données à l’aide de l’Assistant Importation d’Analysis Services](import-a-data-mining-project-using-the-analysis-services-import-wizard.md).  
   
 ## <a name="managing-data-mining-objects-in-sql-server-management-studio"></a>Gestion des objets d'exploration de données dans SQL Server Management Studio  
  Dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], vous pouvez écrire des scripts, traiter ou supprimer des structures et modèles d'exploration de données. Vous ne pouvez afficher qu'un ensemble restreint de propriétés en utilisant l'Explorateur d'objets. Vous pouvez toutefois afficher des métadonnées supplémentaires sur les modèles d'exploration de données en ouvrant une fenêtre **Requête DMX** et en sélectionnant une structure d'exploration de données.  
@@ -88,7 +88,7 @@ ms.locfileid: "36041260"
 ### <a name="data-mining-extensions-dmx"></a>DMX (Data Mining Extensions)  
  Data Mining Extensions (DMX) peut être utilisé avec d'autres interfaces de commandes telles que [!INCLUDE[vstecado](../../includes/vstecado-md.md)] ou ADOMD.NET pour créer, supprimer et interroger les structures et modèles d'exploration de données.  
   
--   [Data Mining Extensions &#40;DMX&#41; instructions de définition de données](/sql/dmx/dmx-statements-data-definition)  
+-   [Data Mining Extensions &#40;DMX&#41; les instructions de définition de données](/sql/dmx/dmx-statements-data-definition)  
   
  **Restrictions :** Certaines propriétés ne peuvent pas être modifiées avec DMX.  
   

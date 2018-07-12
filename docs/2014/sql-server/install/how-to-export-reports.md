@@ -1,5 +1,5 @@
 ---
-title: 'Comment : exporter des rapports | Documents Microsoft'
+title: 'Comment : exporter des rapports | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - flat-file report versions [Upgrade Advisor]
 - exporting reports, steps
@@ -18,15 +18,15 @@ helpviewer_keywords:
 - distributing reports
 ms.assetid: 3d8fd063-266d-49f1-bbf3-b3d53917c471
 caps.latest.revision: 18
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: ef0c376f329d0249a2ef61cd83078c859e27898f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 7884d6bac743cbbd46ee87cb97769e885ba8db7d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36041411"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37181486"
 ---
 # <a name="how-to-export-reports"></a>Procédure : exporter des rapports
   La visionneuse de rapports du Conseiller de mise à niveau vous permet d'exporter une version du rapport sous forme de fichier plat. Vous pouvez ainsi exploiter les informations dans une feuille de calcul ou un document de traitement de texte, ou les transmettre à d'autres personnes par courrier électronique.  
@@ -35,17 +35,17 @@ ms.locfileid: "36041411"
   
 1.  Dans la visionneuse de rapports, affichez le rapport à exporter. Pour obtenir des instructions, consultez [Comment : afficher un rapport du Conseiller de mise à niveau](../../../2014/sql-server/install/how-to-view-an-upgrade-advisor-report.md).  
   
-2.  Pour filtrer le rapport, sélectionnez une valeur dans la **filtrer par** boîte.  
+2.  Pour filtrer le rapport, sélectionnez une valeur dans le **filtrer par** boîte.  
   
 3.  Cliquez sur **exporter le rapport**.  
   
-4.  Dans le **fichier de rapport d’exportation** boîte de dialogue, tapez un nom de fichier, choisissez une destination, puis cliquez sur **OK**. Le fichier est enregistré au format CSV (Comma Separated Value). Vous pouvez utiliser Microsoft Excel ou une application similaire pour ouvrir le fichier. Si vous souhaitez changer le format des données, vous pouvez copier les informations à partir d'Excel vers Microsoft Word ou d'autres applications.  
+4.  Dans le **fichier de rapport d’exportation** boîte de dialogue, tapez un nom de fichier, choisir une destination, puis cliquez sur **OK**. Le fichier est enregistré au format CSV (Comma Separated Value). Vous pouvez utiliser Microsoft Excel ou une application similaire pour ouvrir le fichier. Si vous souhaitez changer le format des données, vous pouvez copier les informations à partir d'Excel vers Microsoft Word ou d'autres applications.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Comment : lancer le Conseiller de mise à niveau](../../../2014/sql-server/install/how-to-launch-upgrade-advisor.md)   
  [Comment : exécuter l’Assistant analyse du Conseiller de mise à niveau](../../../2014/sql-server/install/how-to-run-the-upgrade-advisor-analysis-wizard.md)   
  [Résolution des problèmes de mise à niveau](../../../2014/sql-server/install/resolving-upgrade-issues.md)   
  [Les rubriques de procédures de conseiller de mise à niveau](../../../2014/sql-server/install/upgrade-advisor-how-to-topics.md)   
- [Utilisation avec le Conseiller de mise à niveau](../../../2014/sql-server/install/working-with-upgrade-advisor.md)  
+ [Utilisation du Conseiller de mise à niveau](../../../2014/sql-server/install/working-with-upgrade-advisor.md)  
   
   

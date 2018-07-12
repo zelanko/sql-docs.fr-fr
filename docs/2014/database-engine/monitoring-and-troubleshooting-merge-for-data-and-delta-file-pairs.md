@@ -1,5 +1,5 @@
 ---
-title: Surveillance et résolution des problèmes de fusion pour les données et Delta des paires de fichiers | Documents Microsoft
+title: Surveillance et résolution des problèmes de fusion pour les données et Delta des paires de fichiers | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine-imoltp
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: a8b0bacc-4d2c-42e4-84bf-1a97e0bd385b
 caps.latest.revision: 12
 author: stevestein
 ms.author: sstein
-manager: jhubbard
-ms.openlocfilehash: 31c717aca9153ee851a35992ebdced9cea2d86c0
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 3b92439b6ce1edd974d184ac910a65716dec812b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36041672"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37180377"
 ---
 # <a name="monitoring-and-troubleshooting-merge-for-data-and-delta-file-pairs"></a>Surveiller et dépanner la fusion de paires de fichiers de données et de fichiers delta
   L'OLTP en mémoire utilise une stratégie de fusion pour fusionner des paires de fichiers de données et delta automatiquement. Vous ne pouvez pas désactiver l'activité de fusion.  
@@ -28,7 +28,7 @@ ms.locfileid: "36041672"
   
 -   Comparez la taille du stockage en mémoire à la taille globale du stockage. Si le stockage a une taille disproportionnée, il est possible que la fusion ne se déclenche pas. Pour plus d'informations  
   
--   Examinez l’espace utilisé dans les fichiers de données et delta à l’aide de [sys.dm_db_xtp_checkpoint_files &#40;Transact-SQL&#41; ](/sql/relational-databases/system-dynamic-management-views/sys-dm-db-xtp-checkpoint-files-transact-sql) pour voir si fusion n’est pas mise en route déclenchée quand il le devrait.  
+-   Examinez l’espace utilisé dans les fichiers de données et delta à l’aide [sys.dm_db_xtp_checkpoint_files &#40;Transact-SQL&#41; ](/sql/relational-databases/system-dynamic-management-views/sys-dm-db-xtp-checkpoint-files-transact-sql) pour voir si fusion ne se déclenche pas lorsqu’elle le devrait.  
   
 ## <a name="performing-a-manual-merge"></a>Exécution d'une fusion manuelle  
  Vous pouvez utiliser [sys.sp_xtp_merge_checkpoint_files &#40;Transact-SQL&#41; ](/sql/relational-databases/system-stored-procedures/sys-sp-xtp-merge-checkpoint-files-transact-sql) pour effectuer une fusion manuelle.  
@@ -43,7 +43,7 @@ where state = 1
 order by file_type_desc, upper_bound_tsn  
 ```  
   
- Supposons que vous avez trouvé trois fichiers de données qui n’ont pas été fusionnés. Utilisez la valeur `lower_bound_tsn` du premier fichier de données et la valeur `upper_bound_tsn` du dernier fichier de données pour émettre la commande suivante :  
+ Partons du principe que vous avez trouvé trois fichiers de données qui n’ont pas été fusionnés. Utilisez la valeur `lower_bound_tsn` du premier fichier de données et la valeur `upper_bound_tsn` du dernier fichier de données pour émettre la commande suivante :  
   
 ```tsql  
 exec sys.sp_xtp_merge_checkpoint_files 'H_DB',  12345, 67890  

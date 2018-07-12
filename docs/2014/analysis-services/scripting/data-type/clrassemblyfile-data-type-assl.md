@@ -1,5 +1,5 @@
 ---
-title: Type de données ClrAssemblyFile (ASSL) | Documents Microsoft
+title: Type de données ClrAssemblyFile (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - ClrAssemblyFile data type
 ms.assetid: 91074677-c149-483b-a56d-0e35d959d9eb
 caps.latest.revision: 41
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: b542c4193d80fa80cc9aed6663f41e102266000b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: ebfcf0080184294cbbda05e671776972be18f9a1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36041481"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37277865"
 ---
 # <a name="clrassemblyfile-data-type-assl"></a>Type de données ClrAssemblyFile (ASSL)
   Définit un type de données primitif qui représente un des fichiers qui composent un [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] `Assembly` ([ClrAssembly](assembly-data-type-assl.md) élément).  
@@ -65,7 +65,7 @@ ms.locfileid: "36041481"
  L’élément correspondant dans le modèle d’objet objets AMO (Analysis Management) est <xref:Microsoft.AnalysisServices.ClrAssemblyFile>.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Élément serveur &#40;ASSL&#41;](../objects/server-element-assl.md)   
+ [Élément de serveur &#40;ASSL&#41;](../objects/server-element-assl.md)   
  [Élément de base de données &#40;ASSL&#41;](../objects/database-element-assl.md)   
  [Élément Assemblies &#40;ASSL&#41;](../collections/assemblies-element-assl.md)   
  [Élément assembly &#40;ASSL&#41;](../objects/assembly-element-assl.md)   
@@ -73,6 +73,6 @@ ms.locfileid: "36041481"
  [Bloque l’élément &#40;ASSL&#41;](../collections/blocks-element-assl.md)   
  [Bloquer l’élément &#40;ASSL&#41;](../objects/block-element-assl.md)   
  [Type de données ComAssembly &#40;ASSL&#41;](comassembly-data-type-assl.md)   
- [Types de données de script langage XML Analysis Services &#40;ASSL&#41;](analysis-services-scripting-language-xml-data-types-assl.md)  
+ [Types Analysis Services Scripting Language XML données &#40;ASSL&#41;](analysis-services-scripting-language-xml-data-types-assl.md)  
   
   

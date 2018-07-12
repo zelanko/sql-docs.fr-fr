@@ -1,5 +1,5 @@
 ---
-title: Analysis Services s’exécutent l’éditeur de tâche DDL (Page Général) | Documents Microsoft
+title: Analysis Services exécuter l’éditeur de tâche DDL (Page Général) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.asexecuteddltask.general.f1
 helpviewer_keywords:
 - Analysis Services Execute DDL Task Editor
 ms.assetid: 28788cc5-7c84-4c6f-9650-62372c519728
 caps.latest.revision: 24
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: cfa2d938d4883925bff53142c2dcd7444b0c451d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: ec1d4d46cda4359ea01cdd87fbf3846ece5f359f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36042063"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37188886"
 ---
 # <a name="analysis-services-execute-ddl-task-editor-general-page"></a>Éditeur de tâche DDL d'exécution Analysis Services (page Général)
   La page **Général** de la boîte de dialogue **Éditeur de tâche DDL d’exécution Analysis Services** permet de nommer et de décrire la tâche DDL d’exécution [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)].  

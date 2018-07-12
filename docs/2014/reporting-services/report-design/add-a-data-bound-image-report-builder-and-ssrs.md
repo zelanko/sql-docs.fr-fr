@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: df4c38d4-bfcc-41c4-aa6d-952ca6fd7a2e
 caps.latest.revision: 7
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 5d8659792dd9d816ce4310b7caa377c2374fdedb
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: c66e586e94dd1b86dbd079e692b0f7a8b72b1c55
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36040733"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37230739"
 ---
 # <a name="add-a-data-bound-image-report-builder-and-ssrs"></a>Ajouter une image liée à des données (Générateur de rapports et SSRS)
   Un rapport peut inclure une référence à une image stockée dans une base de données. Cette image est appelée *image liée aux données*. Les images qui jouxtent les noms de produits dans une liste de produits sont des exemples d'images liées à des données.  
@@ -52,9 +52,9 @@ ms.locfileid: "36040733"
      Un espace réservé à l'image apparaît sur l'aire de conception du rapport.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Images &#40;rapport Générateur et SSRS&#41;](images-report-builder-and-ssrs.md)   
- [Incorporer une Image dans un rapport &#40;rapport Générateur et SSRS&#41;](embed-an-image-in-a-report-report-builder-and-ssrs.md)   
- [Ajouter une Image externe &#40;rapport Générateur et SSRS&#41;](add-an-external-image-report-builder-and-ssrs.md)   
+ [Images &#40;Générateur de rapports et SSRS&#41;](images-report-builder-and-ssrs.md)   
+ [Incorporer une Image dans un rapport &#40;Générateur de rapports et SSRS&#41;](embed-an-image-in-a-report-report-builder-and-ssrs.md)   
+ [Ajouter une Image externe &#40;Générateur de rapports et SSRS&#41;](add-an-external-image-report-builder-and-ssrs.md)   
  [Boîte de dialogue Propriétés de l’image, Général &#40;Générateur de rapports et SSRS&#41;](../image-properties-dialog-box-general-report-builder-and-ssrs.md)  
   
   

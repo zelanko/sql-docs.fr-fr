@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - collections [Master Data Services]
 - collections [Master Data Services], about collections
 ms.assetid: 5aa1d1e0-b4e5-4897-8e74-01dcf418df73
 caps.latest.revision: 9
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 89f5f5b51bbba9ae7629d5c6dd889ad8ac8bf81b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: 09f40b94ef25384fb36223964d77afacf98ea9ed
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36041631"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37184687"
 ---
 # <a name="collections-master-data-services"></a>Collections (services de données de référence)
   Une collection est un groupe de membres feuille et de membres consolidés d'une entité unique. Utilisez des collections lorsque vous n'avez pas besoin d'une hiérarchie complète et que vous souhaitez afficher des regroupements différents de vos membres pour la création de rapports ou l'analyse, ou lorsque vous devez créer une taxonomie.  
@@ -49,7 +49,7 @@ ms.locfileid: "36041631"
 |Description de la tâche|Rubrique|  
 |----------------------|-----------|  
 |Activer une entité pour les hiérarchies explicites et les collections.|[Activer une entité pour les hiérarchies et Collections explicites &#40;Master Data Services&#41;](enable-an-entity-for-explicit-hierarchies-and-collections-master-data-services.md)|  
-|Créer une collection.|[Créer un regroupement &#40;Master Data Services&#41;](../../2014/master-data-services/create-a-collection-master-data-services.md)|  
+|Créer une collection.|[Créer une Collection &#40;Master Data Services&#41;](../../2014/master-data-services/create-a-collection-master-data-services.md)|  
 |Ajouter des membres à une collection existante.|[Ajouter des membres à une Collection &#40;Master Data Services&#41;](../../2014/master-data-services/add-members-to-a-collection-master-data-services.md)|  
   
 ## <a name="related-content"></a>Contenu associé  

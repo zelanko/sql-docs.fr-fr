@@ -1,12 +1,12 @@
 ---
-title: L’exécution de requêtes (ODBC) | Documents Microsoft
+title: L’exécution de requêtes (ODBC) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: connectivity
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -20,18 +20,18 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: a2263557055cef5039364e7510f70006dc5c3efa
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
+ms.openlocfilehash: 3042b9db6526af479664001c9e7eaeeb8832f0fe
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35696192"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37407042"
 ---
 # <a name="executing-queries-odbc"></a>Exécution de requêtes (ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
-  Après qu'une application ODBC a initialisé un handle de connexion et s'est connectée avec une source de données, elle alloue un ou plusieurs descripteurs d'instruction sur le handle de connexion. L’application peut alors exécuter [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instructions sur le handle d’instruction. La séquence générale des événements lors de l'exécution d'une instruction SQL est :  
+  Après qu'une application ODBC a initialisé un handle de connexion et s'est connectée avec une source de données, elle alloue un ou plusieurs descripteurs d'instruction sur le handle de connexion. L’application peut alors exécuter [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instructions sur le descripteur d’instruction. La séquence générale des événements lors de l'exécution d'une instruction SQL est :  
   
 1.  Définition des attributs de l'instruction requis.  
   
@@ -49,7 +49,7 @@ ms.locfileid: "35696192"
 INSERT INTO MyTable VALUES (?, ?, ?)  
 ```  
   
- Chaque marqueur de paramètre peut alors être lié à une variable de programme en appelant [SQLBindParameter](../../relational-databases/native-client-odbc-api/sqlbindparameter.md).  
+ Chaque marqueur de paramètre peut ensuite être liée à une variable de programme en appelant [SQLBindParameter](../../relational-databases/native-client-odbc-api/sqlbindparameter.md).  
   
  Après l'exécution de toutes les instructions SQL et le traitement de leurs jeux de résultats, l'application libère le descripteur d'instruction.  
   

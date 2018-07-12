@@ -1,5 +1,5 @@
 ---
-title: Configurer un serveur de rapports pour la remise du courrier électronique (Gestionnaire de Configuration de SSRS) | Documents Microsoft
+title: Configurer un serveur de rapports pour la remise par messagerie (Gestionnaire de Configuration de SSRS) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - reports [Reporting Services], distributing
 - report servers [Reporting Services], e-mail delivery
@@ -25,13 +25,13 @@ ms.assetid: b838f970-d11a-4239-b164-8d11f4581d83
 caps.latest.revision: 13
 author: markingmyname
 ms.author: maghan
-manager: jhubbard
-ms.openlocfilehash: 5a8954f5ea5c2e38991868734a6347596883bd7e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: e189890845bad34153ebef4231465c260b538848
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36041533"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37179196"
 ---
 # <a name="configure-a-report-server-for-e-mail-delivery-ssrs-configuration-manager"></a>Configurer un serveur de rapports pour la remise par messagerie (Gestionnaire de configuration de SSRS)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] comprend une extension de la remise du courrier électronique que vous pouvez utiliser pour distribuer les rapports par courrier électronique. Selon la façon dont vous définissez l'abonnement de messagerie électronique, une remise peut consister en une notification, un lien, une pièce jointe ou un rapport incorporé. L'extension de remise de courrier électronique fonctionne avec votre technologie de serveur de messagerie existante. Le serveur de messagerie doit être un serveur SMTP ou redirecteur. Le serveur de rapports se connecte à un serveur SMTP par le biais de bibliothèques CDO (Collaboration Data Objects) (cdosys.dll) fournies par le système d'exploitation.  
@@ -69,15 +69,15 @@ ms.locfileid: "36041533"
   
 -   Utilisez le Gestionnaire de configuration de Reporting Services si vous spécifiez simplement un serveur SMTP et un compte d'utilisateur ayant l'autorisation d'envoyer des messages électroniques. Ce sont les paramètres minimum requis pour configurer l'extension de remise du courrier électronique par le serveur de rapports. Pour plus d’informations, consultez [paramètres de messagerie - Gestionnaire de Configuration &#40;SSRS en Mode natif&#41; ](../../reporting-services/install-windows/e-mail-settings-reporting-services-native-mode-configuration-manager.md) et [remise du courrier électronique dans Reporting Services](../../reporting-services/subscriptions/e-mail-delivery-in-reporting-services.md).  
   
--   (Facultatif) Utilisez un éditeur de texte pour spécifier les paramètres supplémentaires dans le fichier RSreportserver.config. Ce fichier contient tous les paramètres de configuration pour la remise du courrier électronique par le serveur de rapports. La spécification de paramètres supplémentaires dans ces fichiers est obligatoire si vous utilisez un serveur SMTP local ou si vous limitez la remise par messagerie à des hôtes spécifiques. Pour plus d’informations sur la recherche et la modification des fichiers de configuration, consultez [modifier un fichier de Configuration Reporting Services &#40;RSreportserver.config&#41; ](../../reporting-services/report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md) dans la documentation en ligne de SQL Server.  
+-   (Facultatif) Utilisez un éditeur de texte pour spécifier les paramètres supplémentaires dans le fichier RSreportserver.config. Ce fichier contient tous les paramètres de configuration pour la remise du courrier électronique par le serveur de rapports. La spécification de paramètres supplémentaires dans ces fichiers est obligatoire si vous utilisez un serveur SMTP local ou si vous limitez la remise par messagerie à des hôtes spécifiques. Pour plus d’informations sur la recherche et la modification des fichiers de configuration, consultez [modifier un fichier de Configuration de Reporting Services &#40;RSreportserver.config&#41; ](../../reporting-services/report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md) dans la documentation en ligne de SQL Server.  
   
 > [!NOTE]  
 >  Les paramètres du courrier électronique pour le serveur de rapports dépendent du CDO. Si vous souhaitez obtenir plus de détails sur des paramètres spécifiques, reportez-vous à la documentation de production CDO.  
   
 
   
-##  <a name="bkmk_example_config_file"></a> Configuration du courrier électronique Report Server  
- L'exemple suivant illustre les paramètres dans le fichier RSreportserver.config pour un serveur SMTP distant. Pour en savoir sur les descriptions des paramètres et les valeurs valides, consultez [fichier de Configuration RSReportServer](../../reporting-services/report-server/rsreportserver-config-configuration-file.md) dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] la documentation en ligne ou la documentation de produits CDO.  
+##  <a name="bkmk_example_config_file"></a> Configuration de courrier électronique du serveur de rapports exemple  
+ L'exemple suivant illustre les paramètres dans le fichier RSreportserver.config pour un serveur SMTP distant. Pour découvrir les descriptions et les valeurs valides, consultez [fichier de Configuration RSReportServer](../../reporting-services/report-server/rsreportserver-config-configuration-file.md) dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] la documentation en ligne ou la documentation du produit CDO.  
   
 ```  
 <RSEmailDPConfiguration>  
@@ -146,7 +146,7 @@ ms.locfileid: "36041533"
 
   
 ##  <a name="bkmk_options_local_SMTP"></a> Options de configuration pour le Service SMTP Local  
- La configuration d'un service SMTP local est pratique si vous testez ou dépannez la remise du courrier électronique par le serveur de rapports. Par défaut, le service SMTP local n'est pas activé. Pour savoir comment l’activer, consultez [configurer un serveur de rapports pour la remise du courrier électronique (Gestionnaire de Configuration de SSRS)](../../../2014/sql-server/install/configure-a-report-server-for-e-mail-delivery-ssrs-configuration-manager.md) et [paramètres de messagerie - Gestionnaire de Configuration &#40;SSRS en Mode natif&#41; ](../../reporting-services/install-windows/e-mail-settings-reporting-services-native-mode-configuration-manager.md) .  
+ La configuration d'un service SMTP local est pratique si vous testez ou dépannez la remise du courrier électronique par le serveur de rapports. Par défaut, le service SMTP local n'est pas activé. Pour savoir comment l’activer, consultez [configurer un serveur de rapports pour la remise par messagerie (Gestionnaire de Configuration de SSRS)](../../../2014/sql-server/install/configure-a-report-server-for-e-mail-delivery-ssrs-configuration-manager.md) et [paramètres de messagerie - Gestionnaire de Configuration &#40;SSRS en Mode natif&#41; ](../../reporting-services/install-windows/e-mail-settings-reporting-services-native-mode-configuration-manager.md) .  
   
  La connexion entre le serveur de rapports et le serveur ou le redirecteur SMTP local est déterminée par les paramètres de configuration suivants :  
   
@@ -155,7 +155,7 @@ ms.locfileid: "36041533"
 -   **SMTPServerPickupDirectory** est défini sur un dossier de lecteur local.  
   
     > [!NOTE]  
-    >  Assurez-vous que vous ne définissez pas `SMTPServer` si vous utilisez un serveur SMTP local.  
+    >  N’oubliez pas que vous ne définissez pas `SMTPServer` si vous utilisez un serveur SMTP local.  
   
 -   `From` définit la valeur qui apparaît dans le **à partir de :** ligne d’un message électronique. Cette valeur est requise.  
   
@@ -181,7 +181,7 @@ ms.locfileid: "36041533"
   
 2.  Ouvrez le fichier RSReportServer.config dans un éditeur de texte.  
   
-3.  Vérifiez que <`UrlRoot`> est définie sur l’adresse URL du serveur de rapports. Cette valeur est définie lorsque vous configurez le serveur de rapports et elle devrait normalement être déjà définie. Si elle n'est pas définie, tapez l'adresse URL du serveur de rapports.  
+3.  Vérifiez que <`UrlRoot`> est définie sur l’adresse URL de serveur de rapports. Cette valeur est définie lorsque vous configurez le serveur de rapports et elle devrait normalement être déjà définie. Si elle n'est pas définie, tapez l'adresse URL du serveur de rapports.  
   
 4.  Dans la section Remise, recherchez <`ReportServerEmail`>.  
   

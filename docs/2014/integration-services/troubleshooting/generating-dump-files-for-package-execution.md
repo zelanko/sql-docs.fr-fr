@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 61ef1731-cb3a-4afb-b4a4-059b04aeade0
 caps.latest.revision: 12
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 771ae5285f38b89336fa1f62b71ab033a54b3e8d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: b750ea3f8586b874a78251790bd0d46e18680a2d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36042052"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37158970"
 ---
 # <a name="generating-dump-files-for-package-execution"></a>Générer de fichiers de vidage pour l'exécution des packages
   Dans [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], vous pouvez créer des fichiers de vidage du débogage qui fournissent des informations sur l’exécution d’un package. Les informations contenues dans ces fichiers peuvent vous aider à résoudre des problèmes d'exécution du package.  
@@ -57,6 +57,6 @@ ms.locfileid: "36042052"
 |Messages récents|Messages récents émis par le système. Inclut l'heure, le type, la description et l'ID de thread de chaque message.|[M:1]   Ring buffer entry:              (*pRecord)<br /><br /> [D:2]      <<\<CRingBufferLogging::RingBufferLoggingRecord>>> ( @ 0282F1A8 )<br /><br /> [E:3]         Time Stamp: 2007-09-13 13:50:32.786      (szTimeStamp)<br /><br /> [E:3]         Thread ID: 2368           (ThreadID)<br /><br /> [E:3]         Event Name: OnError                        (EventName)<br /><br /> [E:3]         Source Name:                (SourceName)<br /><br /> [E:3]         Source ID:                        (SourceID)<br /><br /> [E:3]         Execution ID:                 (ExecutionGUID)<br /><br /> [E:3]         Data Code: -1073446879              (DataCode)<br /><br /> [E:3]         Description : Le composant est manquant, n’est pas enregistré, ne peut pas être mis à niveau ou des interfaces obligatoires sont manquantes. Informations de contact de ce composant : «  ».|  
   
 ## <a name="related-content"></a>Contenu associé  
- [Exécuter la boîte de dialogue Package](../execute-package-dialog-box.md)  
+ [Exécuter le package, boîte de dialogue](../execute-package-dialog-box.md)  
   
   

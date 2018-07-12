@@ -1,5 +1,5 @@
 ---
-title: Groupe de ressources de cluster | Documents Microsoft
+title: Groupe de ressources de cluster | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - Cluster Resource Group
 ms.assetid: 69a6582f-f1a8-40fe-a991-c3ca42d62540
 caps.latest.revision: 10
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: a8b2d1ababc9224569bc54ddb9ed1f85ae59fec1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: e62e122b2202b3e9aa6a59f37758a4b9c6fb5982
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36041022"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37202569"
 ---
 # <a name="cluster-resource-group"></a>Groupe de ressources de cluster
   Utilisez la page Groupe de ressources de cluster pour spécifier le disque où les ressources du serveur virtuel [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] seront hébergées.  
@@ -34,6 +34,6 @@ ms.locfileid: "36041022"
 -   Tapez le nom d'un groupe à créer. Notez que le nom « Stockage disponible » n'est pas un nom de groupe valide.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Comment : créer un Cluster de basculement SQL Server](http://go.microsoft.com/fwlink/?LinkId=190960)  
+ [Comment : créer un nouveau Cluster de basculement SQL Server](http://go.microsoft.com/fwlink/?LinkId=190960)  
   
   

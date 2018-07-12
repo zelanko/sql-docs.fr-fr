@@ -1,5 +1,5 @@
 ---
-title: L’emprunt d’identité (SSAS tabulaire) | Documents Microsoft
+title: L’emprunt d’identité (SSAS tabulaire) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: fcc79e96-182a-45e9-8ae2-aeb440e9bedd
 caps.latest.revision: 16
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 16323d7df2fa3620bbdd6fb541f028ebaf582cc7
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 3c60f64bc76967fb6d4191aee4f1de7c7bbbb537
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36041453"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37176486"
 ---
 # <a name="impersonation-ssas-tabular"></a>Emprunt d'identité (SSAS Tabulaire)
   Cette rubrique explique aux créateurs de modèles tabulaires comment les informations d'identification d'ouverture de session sont utilisées par Analysis Services lors de la connexion à une source de données pour importer et traiter (actualiser) des données.  
@@ -76,7 +76,7 @@ ms.locfileid: "36041453"
   
  <sup>1</sup>ImpersonationMode spécifie la valeur de la [DataSourceImpersonationInfo élément &#40;ASSL&#41; ](../scripting/properties/impersonationinfo-element-assl.md) propriété sur la source de données.  
   
- <sup>2</sup>lors de l’utilisation de cette option, si la base de données de l’espace de travail est supprimé de la mémoire, en raison d’un redémarrage ou **rétention de l’espace de travail** est définie sur **décharger de la mémoire** ou  **Supprimer à partir de l’espace de travail**, et le projet de modèle est fermée, dans la session suivante, si vous essayez de traiter les données de la table, vous devrez entrer les informations d’identification pour chaque source de données. De la même façon, si une base de données model déployée est supprimée de la mémoire, vous serez invité à entrer les informations d'identification pour chaque source de données.  
+ <sup>2</sup>lors de l’utilisation de cette option, si la base de données de l’espace de travail est supprimé de la mémoire, soit en raison d’un redémarrage ou le **rétention de l’espace de travail** propriété est définie sur **décharger de la mémoire** ou  **Supprimer à partir de l’espace de travail**, et le projet de modèle est fermé, dans la session suivante, si vous essayez de traiter les données de table, vous devrez entrer les informations d’identification pour chaque source de données. De la même façon, si une base de données model déployée est supprimée de la mémoire, vous serez invité à entrer les informations d'identification pour chaque source de données.  
   
 ##  <a name="bkmk_impers_sec"></a> Sécurité  
  Les informations d'identification utilisées avec l'emprunt d'identité sont rendues persistantes en mémoire par le moteur d'analyse en mémoire xVelocity (VertiPaq™) associé au serveur Analysis Services qui gère la base de données de l'espace de travail ou un modèle déployé.  À aucun moment les informations d'identification ne sont écrites sur le disque. Si la base de données d'espace de travail n'est pas en mémoire lorsque le modèle est déployé, l'utilisateur sera invité à entrer les informations d'identification utilisées pour se connecter à la source de données et pour extraire des données.  
@@ -87,7 +87,7 @@ ms.locfileid: "36041453"
 ##  <a name="bkmk_imp_newmodel"></a> Emprunt d'identité lors de l'importation d'un modèle  
  Contrairement aux modèles tabulaires, qui peuvent utiliser plusieurs modes d'emprunt d'identité différents pour prendre en charge la collecte de données hors traitement, PowerPivot utilise un seul mode : ImpersonateCurrentUser. Étant donné que PowerPivot exécute toujours des opérations in-process, il se connecte aux sources de données à l'aide des informations d'identification de l'utilisateur actuellement connecté. Avec les modèles tabulaires, les informations d'identification de l'utilisateur actuellement connecté sont utilisées uniquement avec la fonctionnalité **Afficher un aperçu et appliquer le filtre** dans l'Assistant Importation de table et lors de la consultation des **Propriétés de la table**. Les informations d'identification d'emprunt d'identité sont utilisées lors de l'importation ou du traitement de données dans la base de données de l'espace de travail ou lors de l'importation ou du traitement des données dans un modèle déployé.  
   
- Lors de la création d'un modèle par importation d'un classeur PowerPivot existant, par défaut, le générateur de modèles configurera l'emprunt d'identité pour utiliser le compte de service (ImpersonateServiceAccount). Nous vous recommandons de modifier les informations d'identification d'emprunt d'identité sur les modèles importés de PowerPivot vers un compte d'utilisateur Windows. Une fois le classeur PowerPivot a été importé et le nouveau modèle créé dans le Générateur de modèles, vous pouvez modifier les informations d’identification à l’aide de la **connexions existantes** boîte de dialogue.  
+ Lors de la création d'un modèle par importation d'un classeur PowerPivot existant, par défaut, le générateur de modèles configurera l'emprunt d'identité pour utiliser le compte de service (ImpersonateServiceAccount). Nous vous recommandons de modifier les informations d'identification d'emprunt d'identité sur les modèles importés de PowerPivot vers un compte d'utilisateur Windows. Une fois que le classeur PowerPivot a été importé et le nouveau modèle créé dans le Générateur de modèles, vous pouvez modifier les informations d’identification à l’aide de la **connexions existantes** boîte de dialogue.  
   
  Lors de la création d'un modèle importé à partir d'un modèle existant sur un serveur Analysis Services, les informations d'identification d'emprunt d'identité sont passées de la base de données model existante à la nouvelle base de données d'espace de travail modèle. Si nécessaire, vous pouvez modifier les informations d'identification sur le nouveau modèle à l'aide de la boîte de dialogue **Connexions existantes** .  
   

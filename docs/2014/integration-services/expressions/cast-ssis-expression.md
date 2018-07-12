@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - CAST function
 - cast operator
@@ -19,13 +19,13 @@ ms.assetid: d4e915cc-1c7b-4b2e-93b0-13a8b0cb9242
 caps.latest.revision: 61
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: f8d34f009bfd4f013029b63fdf567dfdc43af616
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 31c1adf6d76bfa399e199aa67f5bf4f97392505d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36042743"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37192129"
 ---
 # <a name="cast-ssis-expression"></a>Cast (expression SSIS)
   Convertit explicitement une expression d'un type de données vers un autre. L'opérateur de conversion peut également fonctionner comme opérateur de troncation.  
@@ -148,7 +148,7 @@ ms.locfileid: "36042743"
   
 ## <a name="see-also"></a>Voir aussi  
  [Opérateurs et associativité](operator-precedence-and-associativity.md)   
- [Opérateurs &#40;Expression SSIS&#41;](operators-ssis-expression.md)   
+ [Opérateurs &#40;SSIS Expression&#41;](operators-ssis-expression.md)   
  [Expressions Integration Services &#40;SSIS&#41;](integration-services-ssis-expressions.md)   
  [Types de données Integration Services dans les expressions](integration-services-data-types-in-expressions.md)  
   

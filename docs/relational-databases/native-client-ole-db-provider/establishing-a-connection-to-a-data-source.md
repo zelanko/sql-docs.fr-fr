@@ -1,12 +1,12 @@
 ---
-title: L’établissement d’une connexion à une Source de données | Documents Microsoft
+title: Établir une connexion à une Source de données | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: connectivity
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -20,20 +20,20 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 77451d4ef65c23466005bd46a46e1f556643cda3
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
+ms.openlocfilehash: 6c11867c12a05656c74fa01ebc05a7a805bdac71
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35702920"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37425968"
 ---
 # <a name="establishing-a-connection-to-a-data-source"></a>Établissement d'une connexion à une source de données
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
-  Pour accéder à la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Client fournisseur OLE DB natif, le consommateur doit tout d’abord créer une instance d’un objet de source de données en appelant le **CoCreateInstance** (méthode). Un identificateur de classe unique (CLSID) identifie chaque fournisseur OLE DB. Pour le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fournisseur OLE DB Native Client, l’identificateur de classe est CLSID_SQLNCLI10. Vous pouvez également utiliser le symbole SQLNCLI_CLSID qui correspondra à la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fournisseur OLE DB Native Client qui est utilisé dans le fichier sqlncli.h que vous référencez.  
+  Pour accéder à la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fournisseur OLE DB Native Client, le consommateur doit tout d’abord créer une instance d’un objet de source de données en appelant le **CoCreateInstance** (méthode). Un identificateur de classe unique (CLSID) identifie chaque fournisseur OLE DB. Pour le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fournisseur OLE DB Native Client, l’identificateur de classe est CLSID_SQLNCLI10. Vous pouvez également utiliser le symbole SQLNCLI_CLSID qui correspondra à la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fournisseur OLE DB Native Client qui est utilisé dans le fichier sqlncli.h que vous référencez.  
   
- La source de données objet expose le **IDBProperties** interface, le consommateur utilise pour fournir des informations d’authentification de base telles que le nom du serveur, nom de la base de données, ID d’utilisateur et mot de passe. Le **IDBProperties::SetProperties** méthode est appelée pour définir ces propriétés.  
+ La source de données objet expose les **IDBProperties** interface que le consommateur utilise pour fournir des informations d’authentification de base telles que le nom du serveur, nom de la base de données, ID d’utilisateur et mot de passe. Le **IDBProperties::SetProperties** méthode est appelée pour définir ces propriétés.  
   
  S'il existe plusieurs instances de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] qui s'exécutent sur l'ordinateur, le nom du serveur est spécifié sous la forme NomServeur\NomInstance.  
   

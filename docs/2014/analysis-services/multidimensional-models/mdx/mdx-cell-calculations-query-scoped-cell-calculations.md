@@ -1,5 +1,5 @@
 ---
-title: Création de calculs de cellules au niveau de requête (MDX) | Documents Microsoft
+title: Création de calculs de cellules au niveau requête (MDX) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,24 +8,24 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - WITH keyword
 - query-scoped cell calculations [MDX]
 ms.assetid: 45987daa-4400-41e9-add7-2428fd75709b
 caps.latest.revision: 30
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 34a26daaf3e1fc55eef72e9382cfe5586a00fb7a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 5431862cd1a446a045d910841adc4d78d62d42be
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36041905"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37159390"
 ---
 # <a name="creating-query-scoped-cell-calculations-mdx"></a>Création de calculs de cellules au niveau de la requête (MDX)
-  Pour décrire les cellules calculées au sein du contexte d'une requête, vous pouvez utiliser le mot clé `WITH` dans la syntaxe MDX (Multidimensional Expressions). Le `WITH` mot clé possède la syntaxe suivante :  
+  Pour décrire les cellules calculées au sein du contexte d'une requête, vous pouvez utiliser le mot clé `WITH` dans la syntaxe MDX (Multidimensional Expressions). Le `WITH` mot clé présente la syntaxe suivante :  
   
 ```  
 WITH CELL CALCULATION Cube_Name.CellCalc_Identifier  String_Expression  
@@ -37,8 +37,8 @@ WITH CELL CALCULATION Cube_Name.CellCalc_Identifier  String_Expression
 |--------------|-----------------|  
 |Jeu vide|Expression de jeu MDX qui prend la valeur d'un ensemble vide. Dans ce cas, la portée de la cellule calculée est l'intégralité du cube.|  
 |Jeu à un seul membre|Expression de jeu MDX qui prend la valeur d'un seul membre.|  
-|Jeu de membres de niveau|Expression de jeu MDX qui prend la valeur des membres d'un même niveau. Un exemple d’une telle expression est la *Level_Expression*.`Members` Fonction MDX. Pour inclure les membres calculés, utilisez le *Level_Expression*.`AllMembers` Fonction MDX. Pour plus d’informations, consultez [AllMembers &#40;MDX&#41;](/sql/mdx/allmembers-mdx).|  
-|Jeu de descendants|Expression de jeu MDX qui prend la valeur des descendants d'un membre spécifié. Un exemple d’une telle expression est la `Descendants`(*cet argument*, *Level_Expresion*, *Desc_Flag*) la fonction MDX. Pour plus d’informations, consultez [Descendants &#40;MDX&#41;](/sql/mdx/descendants-mdx).|  
+|Jeu de membres de niveau|Expression de jeu MDX qui prend la valeur des membres d'un même niveau. Un exemple d’une telle expression de jeu est le *Level_Expression*.`Members` Fonction MDX. Pour inclure des membres calculés, utilisez le *Level_Expression*.`AllMembers` Fonction MDX. Pour plus d’informations, consultez [AllMembers &#40;MDX&#41;](/sql/mdx/allmembers-mdx).|  
+|Jeu de descendants|Expression de jeu MDX qui prend la valeur des descendants d'un membre spécifié. Un exemple d’une telle expression de jeu est le `Descendants`(*Member_Expression*, *Level_Expresion*, *Desc_Flag*) fonction MDX. Pour plus d’informations, consultez [Descendants &#40;MDX&#41;](/sql/mdx/descendants-mdx).|  
   
  Si l’argument `String_Expression` ne décrit pas de dimension, la syntaxe MDX suppose que tous ses membres sont inclus pour la construction du sous-cube de calcul. Par conséquent, si l'argument `String_Expression` a pour valeur NULL, la définition de cellules calculées s'applique au cube tout entier.  
   

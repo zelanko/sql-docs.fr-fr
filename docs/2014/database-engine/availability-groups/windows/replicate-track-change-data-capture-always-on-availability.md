@@ -1,14 +1,13 @@
 ---
-title: La réplication, le suivi des modifications, Capture de données modifiées et groupes de disponibilité AlwaysOn (SQL Server) | Documents Microsoft
+title: Réplication, le suivi des modifications, Capture de données modifiées et groupes de disponibilité AlwaysOn (SQL Server) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - change tracking [SQL Server], AlwaysOn Availability Groups
 - change data capture [SQL Server], AlwaysOn Availability Groups
@@ -16,15 +15,15 @@ helpviewer_keywords:
 - replication [SQL Server], AlwaysOn Availability Groups
 ms.assetid: e17a9ca9-dd96-4f84-a85d-60f590da96ad
 caps.latest.revision: 31
-author: MikeRayMSFT
-ms.author: mikeray
-manager: jhubbard
-ms.openlocfilehash: 0afd1136c2426b749beaff5c713f6c5e77671940
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 1519ac814a1f8a55333af5050eab8f5fcbc1b022
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36041200"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37204029"
 ---
 # <a name="replication-change-tracking-change-data-capture-and-alwayson-availability-groups-sql-server"></a>Réplication, suivi des modifications, capture de données modifiées et groupes de disponibilité AlwaysOn (SQL Server)
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] La réplication, la capture de données modifiées (CDC) et le suivi des modifications (CT) sont pris en charge sur [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]. [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] aide à fournir des fonctionnalités haute disponibilité et de récupération de base de données supplémentaires.  
@@ -63,7 +62,7 @@ ms.locfileid: "36041200"
   
      L'indicateur de trace 1448 permet à l'agent de lecture du journal de réplication d'avancer même si les réplicas secondaires asynchrones n'ont pas accusé réception d'une modification. Même si cet indicateur de trace est activé, l'agent de lecture de journal attend toujours les réplicas secondaires synchrones. L'agent de lecture du journal n'ira pas au delà de l'accusé réception minimum des réplicas secondaires synchrones. Cet indicateur de trace s'applique à l'instance de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], et pas simplement à un groupe de disponibilité, à une base de données de disponibilité ou à une instance de l'agent de lecture de journal. Cet indicateur de trace prend effet immédiatement, sans redémarrage. Il peut être activé d'avance ou lorsque le réplica secondaire asynchrone échoue.  
   
-###  <a name="StoredProcs"></a> Procédures stockées prenant en charge AlwaysOn  
+###  <a name="StoredProcs"></a> Procédures stockées prenant en charge d’AlwaysOn  
   
 -   **sp_redirect_publisher**  
   
@@ -218,7 +217,7 @@ ms.locfileid: "36041200"
   
  <sup>2</sup> le basculement vers la base de données réplica est une procédure manuelle. Le basculement automatique n'est pas fourni.  
   
- <sup>3</sup> base de données du serveur de distribution n’est pas prise en charge pour une utilisation avec [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] ou la mise en miroir de base de données.  
+ <sup>3</sup> base de données du serveur de distribution n’est pas pris en charge pour une utilisation avec [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] ou la mise en miroir de base de données.  
   
 ### <a name="considerations"></a>Observations  
   
@@ -233,7 +232,7 @@ ms.locfileid: "36041200"
   
 -   [Configurer la réplication pour les groupes de disponibilité AlwaysOn (SQL Server)](always-on-availability-groups-sql-server.md)  
   
--   [Gestion d’une base de données de Publication AlwaysOn &#40;SQL Server&#41;](maintaining-an-always-on-publication-database-sql-server.md)  
+-   [Maintenance d’une base de données de Publication AlwaysOn &#40;SQL Server&#41;](maintaining-an-always-on-publication-database-sql-server.md)  
   
 -   [Administration &#40;réplication&#41;](../../../relational-databases/replication/administration/administration-replication.md)  
   

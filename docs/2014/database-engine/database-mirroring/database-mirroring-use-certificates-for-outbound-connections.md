@@ -1,29 +1,28 @@
 ---
-title: Autoriser une base de données mise en miroir du point de terminaison pour utiliser des certificats pour les connexions sortantes (Transact-SQL) | Documents Microsoft
+title: Autoriser une base de données mise en miroir de point de terminaison pour utiliser des certificats pour les connexions sortantes (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - certificates [SQL Server], database mirroring
 - outbound connections [SQL Server]
 - database mirroring [SQL Server], security
 ms.assetid: 464c9096-10d6-4c5e-8bb1-19acba27ad9e
 caps.latest.revision: 36
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: e24b2736e4643627aa16040f2eca5d7515067730
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: bee4bf4c6c5732a6d8cc68a07e4717029dd9d674
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36041174"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37169360"
 ---
 # <a name="allow-a-database-mirroring-endpoint-to-use-certificates-for-outbound-connections-transact-sql"></a>Autoriser un point de terminaison de mise en miroir de bases de données à utiliser des certificats pour les connexions sortantes (Transact-SQL)
   Cette rubrique explique comment configurer les instances de serveur de sorte qu'elles utilisent des certificats pour authentifier les connexions sortantes de la mise en miroir de bases de données. La configuration des connexions sortantes doit être effectuée avant celle des connexions entrantes.  

@@ -1,5 +1,5 @@
 ---
-title: Création de calculs de cellules dans la syntaxe MDX (MDX) | Documents Microsoft
+title: Création de calculs de cellules dans une expression MDX (MDX) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - calculated cells [MDX]
 - queries [MDX], cell calculations
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - Multidimensional Expressions [Analysis Services], cell calculations
 ms.assetid: 068aea63-d419-4791-a960-3d74e76f808e
 caps.latest.revision: 30
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 2d9d00541e51cb25c939f881a8b531892c1bf64d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 9b0a689858d4012f360e7f3893cfa844f3ecbdcf
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36041225"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37161350"
 ---
 # <a name="building-cell-calculations-in-mdx-mdx"></a>Création de calculs de cellules à l'aide de la syntaxe MDX (MDX)
   MDX (Multidimensional Expressions) propose un certain nombre d'outils qui vous permettent de générer des valeurs calculées comme des membres calculés, des cumuls personnalisés et des membres personnalisés. Cependant, il est difficile d'affecter un jeu de cellules spécifique (voire une cellule unique) à l'aide de ces outils.  
@@ -49,7 +49,7 @@ ms.locfileid: "36041225"
 ## <a name="see-also"></a>Voir aussi  
  [Instruction ALTER CUBE &#40;MDX&#41;](/sql/mdx/mdx-data-definition-alter-cube)   
  [Instruction CREATE CELL CALCULATION &#40;MDX&#41;](/sql/mdx/mdx-data-definition-create-cell-calculation)   
- [Création de calculs de cellules au niveau de requête &#40;MDX&#41;](../../multidimensional-models-olap-logical-cube-objects/calculations.md)   
+ [Création de calculs de cellules au niveau requête &#40;MDX&#41;](../../multidimensional-models-olap-logical-cube-objects/calculations.md)   
  [Principes de base de requête MDX &#40;Analysis Services&#41;](mdx-query-fundamentals-analysis-services.md)  
   
   

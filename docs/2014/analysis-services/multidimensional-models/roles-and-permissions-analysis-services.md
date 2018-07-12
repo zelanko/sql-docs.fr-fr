@@ -1,5 +1,5 @@
 ---
-title: Rôles et autorisations (Analysis Services) | Documents Microsoft
+title: Rôles et autorisations (Analysis Services) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - security [Analysis Services], about security
 - security [Analysis Services - multidimensional data], about security
 ms.assetid: bb885447-868b-4686-853c-8241f63d4370
 caps.latest.revision: 20
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 253cd429c1a5fc5ac231173c88e6ee91b852625a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 506babae85a4b1a04efa7f12b8b40c2527e2e094
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36041222"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37159400"
 ---
 # <a name="roles-and-permissions-analysis-services"></a>Rôles et autorisations (Analysis Services)
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] fournit un modèle d’autorisation basé sur les rôles qui accorde l’accès aux opérations, aux objets, ainsi qu’aux données. Tous les utilisateurs qui accèdent à une instance ou à une base de données [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] doivent effectuer cette opération dans le contexte d’un rôle.  
@@ -40,7 +40,7 @@ ms.locfileid: "36041222"
   
 ## <a name="in-this-section"></a>Contenu de cette section  
   
--   [Autoriser l’accès aux objets et des opérations &#40;Analysis Services&#41;](authorizing-access-to-objects-and-operations-analysis-services.md)  
+-   [Autoriser l’accès aux objets et aux opérations &#40;Analysis Services&#41;](authorizing-access-to-objects-and-operations-analysis-services.md)  
   
 -   [Accorder des autorisations de base de données &#40;Analysis Services&#41;](grant-database-permissions-analysis-services.md)  
   
@@ -48,7 +48,7 @@ ms.locfileid: "36041222"
   
 -   [Accorder des autorisations de processus &#40;Analysis Services&#41;](grant-process-permissions-analysis-services.md)  
   
--   [Grant autorisations Lire la définition des métadonnées de l’objet &#40;Analysis Services&#41;](grant-read-definition-permissions-on-object-metadata-analysis-services.md)  
+-   [Octroyer des autorisations de définition des métadonnées de l’objet lire &#40;Analysis Services&#41;](grant-read-definition-permissions-on-object-metadata-analysis-services.md)  
   
 -   [Accorder des autorisations sur un objet de source de données &#40;Analysis Services&#41;](grant-permissions-on-a-data-source-object-analysis-services.md)  
   

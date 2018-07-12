@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - replacing string expression
 - REPLACE function
@@ -16,13 +16,13 @@ ms.assetid: a6837043-ea70-4c6a-9c7a-6868b02b2adc
 caps.latest.revision: 41
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 7888b72ed7193a1c2910db06a70496ee30761903
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: c2750412c9024263f4e576a883a23b4ffb430924
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36042055"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37188416"
 ---
 # <a name="replace-ssis-expression"></a>REPLACE (expression SSIS)
   Renvoie une expression de caractères après le remplacement d'une chaîne de caractères située dans l'expression par une autre chaîne de caractères ou une chaîne vide.  
@@ -81,7 +81,7 @@ REPLACE((DT_WSTR,8)DaysToManufacture,"6","5")
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [SOUS-chaîne &#40;Expression SSIS&#41;](substring-ssis-expression.md)   
- [Fonctions &#40;Expression SSIS&#41;](functions-ssis-expression.md)  
+ [SOUS-chaîne &#40;SSIS Expression&#41;](substring-ssis-expression.md)   
+ [Fonctions &#40;SSIS Expression&#41;](functions-ssis-expression.md)  
   
   

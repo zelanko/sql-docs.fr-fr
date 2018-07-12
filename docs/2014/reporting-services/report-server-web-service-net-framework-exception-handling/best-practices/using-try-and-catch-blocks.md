@@ -15,15 +15,15 @@ helpviewer_keywords:
 - try/catch blocks [Reporting Services]
 ms.assetid: a7a9ef53-e3b6-4bf7-81f3-d85615954e6f
 caps.latest.revision: 27
-author: douglaslM
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: c4939038cb966b8b079153671fb7a3b50c76f56c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: 2a83b3097dd0bdb27e662c5ab28e741fea2bfee4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36041535"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37210759"
 ---
 # <a name="using-try-and-catch-blocks"></a>Utilisation des blocs Try et Catch
   Après avoir limité les demandes non valides au serveur de rapports en ajoutant des instructions conditionnelles à votre code, vous devez fournir une gestion adéquate des exceptions à l'aide des blocs try/catch. Cette technique fournit une autre couche de protection contre les demandes qui ne sont pas valides. Si une demande faite au serveur de rapports est incluse dans un bloc try et que cette demande entraîne la levée d'une exception par le serveur de rapports, l'exception est interceptée dans le bloc catch, empêchant ainsi votre application de se terminer de façon inattendue. Une fois l'exception interceptée, vous pouvez l'utiliser soit pour instruire l'utilisateur de modifier son action, soit pour l'informer, de façon amicale, qu'une erreur s'est produite. Vous pouvez utiliser ensuite un bloc finally pour nettoyer les ressources. D'une manière idéale, vous devez élaborer un plan général de gestion des exceptions afin d'éviter une duplication inutile des blocs try/catch.  

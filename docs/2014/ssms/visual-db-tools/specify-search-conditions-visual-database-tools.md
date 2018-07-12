@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - choosing search criteria
 - search conditions [SQL Server], specifying
 - search criteria [SQL Server], specifying conditions
 ms.assetid: 18e2c759-68ec-4efe-b208-2f73418cd9bd
 caps.latest.revision: 11
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: f912c7998bf2922ad2967376ba51b752d012bfb9
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 13936176974b38e9a69da0bf6a38c95b81700bc3
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36040300"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37202069"
 ---
 # <a name="specify-search-conditions-visual-database-tools"></a>Spécifier des conditions de recherche (Visual Database Tools)
   Vous pouvez spécifier les lignes de données figurant dans votre requête en spécifiant des conditions de recherche. Par exemple, si vous formulez une requête sur une table `employee` , vous pouvez spécifier que vous ne souhaitez rechercher que les employés travaillant dans une région donnée.  
@@ -51,7 +51,7 @@ ms.locfileid: "36040300"
  Le Concepteur de requêtes et de vues met à jour l’instruction SQL dans le [volet SQL](sql-pane-visual-database-tools.md) en ajoutant ou en modifiant la clause WHERE.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Dans les règles permettant d’entrer des valeurs &#40;Visual Database Tools&#41;](rules-for-entering-search-values-visual-database-tools.md)   
+ [Valeurs de recherche de règles pour l’entrée &#40;Visual Database Tools&#41;](rules-for-entering-search-values-visual-database-tools.md)   
  [Spécifier des critères de recherche &#40;Visual Database Tools&#41;](specify-search-criteria-visual-database-tools.md)  
   
   

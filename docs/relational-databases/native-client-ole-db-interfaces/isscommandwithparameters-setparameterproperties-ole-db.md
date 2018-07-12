@@ -1,12 +1,12 @@
 ---
-title: ISSCommandWithParameters::SetParameterProperties (OLE DB) | Documents Microsoft
+title: ISSCommandWithParameters::SetParameterProperties (OLE DB) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: connectivity
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
@@ -20,12 +20,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 10b24720130c720a3b53fb879068a37abf2570f6
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
+ms.openlocfilehash: b4ccbc15cd4493f4d0d9654e9da130ac192f9f8c
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35699560"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37416918"
 ---
 # <a name="isscommandwithparameterssetparameterproperties-ole-db"></a>ISSCommandWithParameters::SetParameterProperties (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -44,26 +44,26 @@ HRESULT SetParameterProperties(
   
 ## <a name="arguments"></a>Arguments  
  *cParams*[in]  
- Le nombre de structures SSPARAMPROPS dans le *rgParamProperties* tableau. Si ce nombre est égal à zéro, **ISSCommandWithParameters::SetParameterProperties** supprimera toutes les propriétés qui ont peuvent être spécifiées pour les paramètres de la commande.  
+ Le nombre de structures SSPARAMPROPS dans le *rgParamProperties* tableau. Si ce nombre est égal à zéro, **ISSCommandWithParameters::SetParameterProperties** supprimera toutes les propriétés qui ont peuvent être spécifiées pour tous les paramètres dans la commande.  
   
  *rgParamProperties*[in]  
  Tableau de structures SSPARAMPROPS à définir.  
   
 ## <a name="return-code-values"></a>Valeurs des codes de retour  
- Le **ISSCommandWithParameters::SetParameterProperties** méthode retourne les mêmes codes d’erreur que le noyau OLE DB **ICommandProperties::SetProperties** (méthode).  
+ Le **ISSCommandWithParameters::SetParameterProperties** méthode retourne les mêmes codes d’erreur que le cœur OLE DB **ICommandProperties::SetProperties** (méthode).  
   
 ## <a name="remarks"></a>Notes  
- Définition des propriétés de paramètre avec cette méthode est autorisée sur chaque paramètre par ordinal ou avec une seule **ISSCommandWithParameters::SetParameterProperties** appeler une fois SSPARAMPROPS a été généré à partir du tableau de la propriété.  
+ Définition des propriétés de paramètre avec cette méthode n’est autorisée sur chaque paramètre par ordinal ou avec un seul **ISSCommandWithParameters::SetParameterProperties** appeler une fois SSPARAMPROPS a été généré à partir du tableau de la propriété.  
   
  Le **SetParameterInfo** méthode doit être appelée avant d’appeler le **ISSCommandWithParameters::SetParameterProperties** (méthode). Le fait d'appeler `SetParameterProperties(0, NULL)` efface toutes les propriétés de paramètre spécifiées, tandis que l'appel de `SetParameterInfo(0,NULL,NULL)` efface toutes les informations sur les paramètres y compris toutes les propriétés qui peuvent être associées à un paramètre.  
   
- Appel de **ISSCommandWithParameters::SetParameterProperties** pour spécifier les propriétés d’un paramètre qui n’est pas de type DBTYPE_XML ou DBTYPE_UDT retourne DB_E_ERRORSOCCURRED ou DB_S_ERRORSOCCURRED et marque le  *dwStatus* champ de tous les Dbprop contenus dans SSPARAMPROPS pour ce paramètre avec DBPROPSTATUS_NOTSET. Le tableau DBPROP de chaque DBPROPSET contenu dans SSPARAMPROPS doit être parcouru pour détecter le paramètre auquel DB_E_ERRORSOCCURRED ou DB_S_ERRORSOCCURRED fait référence.  
+ Appel **ISSCommandWithParameters::SetParameterProperties** pour spécifier les propriétés d’un paramètre qui n’est pas de type DBTYPE_XML ou DBTYPE_UDT retourne DB_E_ERRORSOCCURRED ou DB_S_ERRORSOCCURRED et marque le  *dwStatus* champ de tous les Dbprop contenus dans SSPARAMPROPS pour ce paramètre avec DBPROPSTATUS_NOTSET. Le tableau DBPROP de chaque DBPROPSET contenu dans SSPARAMPROPS doit être parcouru pour détecter le paramètre auquel DB_E_ERRORSOCCURRED ou DB_S_ERRORSOCCURRED fait référence.  
   
- Si **ISSCommandWithParameters::SetParameterProperties** est appelée pour spécifier les propriétés de paramètres dont les informations de paramètre n'ont pas encore été définies avec **SetParameterInfo**, le fournisseur retourne E_ INATTENDU avec le message d’erreur suivant :  
+ Si **ISSCommandWithParameters::SetParameterProperties** est appelé pour spécifier les propriétés de paramètres dont les informations de paramètre n'ont pas encore été définies avec **SetParameterInfo**, le fournisseur retourne E_ INATTENDU avec le message d’erreur suivant :  
   
  La méthode SetParameterProperties ne peut pas être appelée pour les paramètres spécifiés sans appeler auparavant la méthode SetParameterInfo. Vous devez définir les informations de paramètre avant de définir les propriétés de paramètre.  
   
- Si l’appel à **ISSCommandWithParameters::SetParameterProperties** contient certains paramètres où les informations de paramètre a été définies et certains paramètres où les informations de paramètre n'a pas été définie, les propriétés dwStatus dans le DBPROPSET du jeu de propriétés SSPARAMPROPS est retournées avec DBSTATUS_NOTSET.  
+ Si l’appel à **ISSCommandWithParameters::SetParameterProperties** contient certains paramètres où les informations de paramètre a été ensemble et certains paramètres où les informations de paramètre n'a pas été définie, les propriétés dwStatus dans le DBPROPSET du jeu de propriétés SSPARAMPROPS est retournées avec DBSTATUS_NOTSET.  
   
  La structure SSPARAMPROPS est défini comme suit :  
   
@@ -77,7 +77,7 @@ HRESULT SetParameterProperties(
   
  `};`  
   
- Améliorations dans le moteur de base de données en commençant par [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] autoriser ISSCommandWithParameters::SetParameterProperties obtenir des descriptions plus exactes des résultats attendus. Ces résultats plus précis peuvent différer des valeurs retournées par ISSCommandWithParameters::SetParameterProperties dans les versions précédentes de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Pour plus d’informations, consultez [de découverte des métadonnées](../../relational-databases/native-client/features/metadata-discovery.md).  
+ Améliorations du moteur de base de données en commençant par [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] autoriser ISSCommandWithParameters::SetParameterProperties obtenir des descriptions plus exactes des résultats attendus. Ces résultats plus exacts peuvent différer des valeurs retournées par ISSCommandWithParameters::SetParameterProperties dans les versions précédentes de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Pour plus d’informations, consultez [découverte des métadonnées](../../relational-databases/native-client/features/metadata-discovery.md).  
   
 |Membre|Description|  
 |------------|-----------------|  

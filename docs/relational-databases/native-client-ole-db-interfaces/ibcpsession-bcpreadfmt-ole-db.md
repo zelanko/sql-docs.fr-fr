@@ -1,12 +1,12 @@
 ---
-title: IBCPSession::BCPReadFmt (OLE DB) | Documents Microsoft
+title: IBCPSession::BCPReadFmt (OLE DB) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: connectivity
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
@@ -20,12 +20,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: d6222d9a5626bfe42663f3f7d4c969998156d87a
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
+ms.openlocfilehash: 4cdd98f828a69965a3a610ad27aeb2196e747d0c
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35696140"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37424348"
 ---
 # <a name="ibcpsessionbcpreadfmt-ole-db"></a>IBCPSession::BCPReadFmt (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -42,7 +42,7 @@ HRESULT BCPReadFmt(
 ```  
   
 ## <a name="remarks"></a>Notes  
- La méthode **BCPReadFmt** est utilisée pour lire les données d'un fichier de format qui spécifie le format des données dans le fichier de données. Cette méthode est capable de détecter la version correcte du fichier de format. Elle peut détecter automatiquement si le fichier de format est au format xml ou dans un ancien format et qu'il se comporte en conséquence. Les versions de fichiers de format pris en charge par le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Client fournisseur OLE DB natif BCP sont version 6.0 ou ultérieure.  
+ La méthode **BCPReadFmt** est utilisée pour lire les données d'un fichier de format qui spécifie le format des données dans le fichier de données. Cette méthode est capable de détecter la version correcte du fichier de format. Elle peut détecter automatiquement si le fichier de format est au format xml ou dans un ancien format et qu'il se comporte en conséquence. Les versions de fichier de format pris en charge par le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fournisseur natif OLE DB du Client BCP sont 6.0 ou version ultérieure.  
   
  Après le **BCPReadFmt** méthode lit les valeurs de format, il effectue les appels appropriés pour le [IBCPSession::BCPColumns](../../relational-databases/native-client-ole-db-interfaces/ibcpsession-bcpcolumns-ole-db.md) et [IBCPSession::BCPColFmt](../../relational-databases/native-client-ole-db-interfaces/ibcpsession-bcpcolfmt-ole-db.md) méthodes. L'utilisateur n'a pas besoin d'analyser un fichier de format et d'effectuer ces appels.  
   
@@ -65,7 +65,7 @@ HRESULT BCPReadFmt(
  Erreur de mémoire insuffisante.  
   
  E_UNEXPECTED  
- L'appel à la méthode était inattendu. Par exemple, le [IBCPSession::BCPInit](../../relational-databases/native-client-ole-db-interfaces/ibcpsession-bcpinit-ole-db.md) méthode n’a pas été appelée avant d’appeler cette méthode.  
+ L'appel à la méthode était inattendu. Par exemple, le [IBCPSession::BCPInit](../../relational-databases/native-client-ole-db-interfaces/ibcpsession-bcpinit-ole-db.md) (méthode) n’a pas été appelée avant d’appeler cette méthode.  
   
 ## <a name="see-also"></a>Voir aussi  
  [IBCPSession &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-interfaces/ibcpsession-ole-db.md)   
