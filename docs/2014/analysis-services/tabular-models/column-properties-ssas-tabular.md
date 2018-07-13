@@ -1,5 +1,5 @@
 ---
-title: Propriétés de la colonne (SSAS tabulaire) | Documents Microsoft
+title: Propriétés des colonnes (SSAS tabulaire) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.bidtoolset.columnprop.f1
 ms.assetid: 4046c1a3-46c7-47db-b355-52e9c2f23671
 caps.latest.revision: 13
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: e091df45f6531dfd0922c795105fe8aadd69b4bc
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 437f225da3d771298a0fcf7af864a45953b194be
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36140821"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37169300"
 ---
 # <a name="column-properties-ssas-tabular"></a>Column Properties (SSAS Tabular)
   Cette rubrique décrit les propriétés de colonne de modèle tabulaire.  
@@ -65,7 +65,7 @@ ms.locfileid: "36140821"
 2.  Dans la fenêtre **Propriétés** , cliquez sur une propriété, puis tapez une valeur ou cliquez sur la flèche Bas pour sélectionner une option de paramètre.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Alimentation permet d’afficher les propriétés de Reporting &#40;SSAS tabulaire&#41;](properties-ssas-tabular.md)   
+ [Alimentation afficher les propriétés de Reporting &#40;SSAS tabulaire&#41;](properties-ssas-tabular.md)   
  [Masquer ou figer des colonnes &#40;SSAS tabulaire&#41;](hide-or-freeze-columns-ssas-tabular.md)   
  [Ajouter des colonnes à une Table &#40;SSAS tabulaire&#41;](add-columns-to-a-table-ssas-tabular.md)  
   

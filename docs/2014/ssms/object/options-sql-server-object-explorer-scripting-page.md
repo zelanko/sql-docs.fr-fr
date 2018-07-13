@@ -1,5 +1,5 @@
 ---
-title: Options (Page script de l’Explorateur d’objets SQL Server) | Documents Microsoft
+title: Options (Page script de l’Explorateur d’objet SQL Server) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql-server-2014
@@ -8,35 +8,35 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - VS.ToolsOptionsPages.ObjectExplorerScripting
 - VS.ToolsOptionsPages.Sql_Server_Object_Explorer.ObjectExplorerScripting
 ms.assetid: 6105aec9-1b72-4cb2-bd24-fc35f6d95240
 caps.latest.revision: 12
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 74dfa7eec9ed7f014e9baf09cf4ddcf30cd12901
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 094fd9d740501fafee8c75eff162a132c01e08ae
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36142404"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37170220"
 ---
-# <a name="options-sql-server-object-explorer-scripting-page"></a>Options (Page script de l’Explorateur d’objets SQL Server)
+# <a name="options-sql-server-object-explorer-scripting-page"></a>Options (Page script de l’Explorateur d’objet SQL Server)
   Utilisez cette page pour définir les options de script qui s’appliquent aux commandes suivantes dans les menus contextuels d’objet de **l’Explorateur d’objets**:  
   
 -   Commandes **Edition** pour les vues et tables utilisateur.  
   
--   **Script \<objet > comme** commandes pour les objets créés par l’utilisateur.  
+-   **Script \<objet > en tant que** commandes pour les objets créés par l’utilisateur.  
   
 -   Commandes **Modifier** pour les objets créés par l’utilisateur.  
   
 -   Cette page définit également les valeurs par défaut des options de script de **l’Assistant Génération de scripts SQL Server**.  
   
 ## <a name="remarks"></a>Notes  
- Le **modifier** et **modifier** commandes peuvent produire des résultats différents de la **Script \<objet > comme** commande pour le même paramètre d’option. Les commandes **Edition** et **Modifier** sont conçues pour modifier des objets de la base de données active durant une session de l’Éditeur de requête. Le **Script \<objet > comme** commande est conçue pour générer un script afin qu’il peut être utilisé ultérieurement pour créer des objets.  
+ Le **modifier** et **modifier** commandes peuvent produire des résultats différents de la **Script \<objet > en tant que** commande pour le même paramètre d’option. Les commandes **Edition** et **Modifier** sont conçues pour modifier des objets de la base de données active durant une session de l’Éditeur de requête. Le **Script \<objet > en tant que** commande est conçue pour générer un script afin qu’il peut être utilisé ultérieurement pour créer des objets.  
   
 ## <a name="options"></a>Options  
  Spécifiez les options de script en les sélectionnant parmi les paramètres disponibles dans la liste située à droite de chaque option.  

@@ -1,5 +1,5 @@
 ---
-title: Projets Integration Services (SSIS) | Documents Microsoft
+title: Projets Integration Services (SSIS) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - projects [Integration Services], creating
 - folders [Integration Services], projects
@@ -19,13 +19,13 @@ ms.assetid: 28ea8120-0a79-4029-93f0-07d521b32bee
 caps.latest.revision: 59
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: c012e6802465df8db1060bebc47920e834620d40
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 6777494c1d1c204fcef589eda42357fd0d50a9bc
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36140789"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37158960"
 ---
 # <a name="integration-services-ssis-projects"></a>Projets Integration Services (SSIS)
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] fournit [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] pour le développement de packages [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] .  
@@ -81,15 +81,15 @@ ms.locfileid: "36140789"
 >  Par défaut, lorsque vous créez un projet [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] dans [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], la solution n'est pas affichée dans le volet **Explorateur de projets** . Pour modifier ce comportement par défaut, dans le menu **Outils** , cliquez sur **Options**. Dans la boîte de dialogue **Options** , développez **Projets et solutions**, puis cliquez sur **Général**. Dans la page **Général** , sélectionnez **Toujours afficher la solution**.  
   
 ## <a name="related-tasks"></a>Related Tasks  
- [Ajouter ou supprimer un projet Integration Services dans une Solution](../../2014/integration-services/add-or-remove-an-integration-services-project-in-a-solution.md)  
+ [Ajouter ou supprimer un projet Integration Services dans une solution](../../2014/integration-services/add-or-remove-an-integration-services-project-in-a-solution.md)  
   
- [Créer un nouveau projet Integration Services](../../2014/integration-services/create-a-new-integration-services-project.md)  
+ [Créer un projet Integration Services](../../2014/integration-services/create-a-new-integration-services-project.md)  
   
- [Ajouter qu'un élément à l’intégration d’un projet de Services](../../2014/integration-services/add-an-item-to-an-integration-services-project.md)  
+ [Ajouter un élément à un projet Integration Services](../../2014/integration-services/add-an-item-to-an-integration-services-project.md)  
   
- [Copier les éléments de projet](../../2014/integration-services/copy-project-items.md)  
+ [Copier des éléments de projet](../../2014/integration-services/copy-project-items.md)  
   
 ## <a name="related-content"></a>Contenu associé  
- [Projet de développement d’une intégration de Services](../../2014/integration-services/development-of-an-integration-services-project.md)  
+ [Développement d’un projet Integration Services](../../2014/integration-services/development-of-an-integration-services-project.md)  
   
   

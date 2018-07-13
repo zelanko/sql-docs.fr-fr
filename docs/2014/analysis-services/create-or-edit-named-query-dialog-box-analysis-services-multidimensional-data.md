@@ -1,5 +1,5 @@
 ---
-title: Créez ou modifiez la boîte de dialogue requête nommée (Analysis Services - données multidimensionnelles) | Documents Microsoft
+title: Créer ou modifier la boîte de dialogue requête nommée (Analysis Services - données multidimensionnelles) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.dsvdesigner.createnamedquery.f1
 helpviewer_keywords:
 - Create Named Query dialog box
 ms.assetid: 8e192ad6-a0b1-4e21-bb3f-087c93e62941
 caps.latest.revision: 23
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: f97b06c3fb67080e7ebc3adc3c1e4d84d3fdea61
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: fe4ebd6e0ecaff7d6aed1aecef906bb1a8519e98
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36141228"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37149620"
 ---
 # <a name="create-or-edit-named-query-dialog-box-analysis-services---multidimensional-data"></a>Boîte de dialogue Créer/Modifier la requête nommée (Analysis Services - Données multidimensionnelles)
   Utilisez la boîte de dialogue **Créer/Modifier la requête nommée** dans [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] pour créer ou modifier une requête nommée dans le **Concepteur de vue de source de données**. Une requête nommée peut être traitée sous la forme d'une table sur laquelle vous pouvez baser d'autres objets [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] . Vous pouvez afficher la boîte de dialogue **Créer/Modifier la requête nommée** en :  

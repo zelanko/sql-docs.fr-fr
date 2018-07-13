@@ -1,5 +1,5 @@
 ---
-title: Propriétés de Structure d’exploration de données et les colonnes de Structure | Documents Microsoft
+title: Propriétés de Structure d’exploration de données et les colonnes de Structure | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - mining structures [Analysis Services], column properties
 - data mining [Analysis Services], properties
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - properties [data mining]
 ms.assetid: ce90f684-bb8c-4eca-b9e6-000794dbee16
 caps.latest.revision: 24
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 167e04eb8623e6d2f7f11c3bfd43e3d6427c5886
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 71ce92444042b820f877290478bae067b3474b41
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36142376"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37149510"
 ---
 # <a name="properties-for-mining-structure-and-structure-columns"></a>Propriétés des colonnes de structure et des structure d'exploration de données
   Vous pouvez définir ou modifier les propriétés pour une structure d’exploration de données ainsi que pour ses colonnes et colonnes imbriquées associées en utilisant l’onglet **Structure d’exploration de données** du Concepteur d’exploration de données. Les propriétés que vous définissez sous cet onglet sont propagées à chaque modèle d'exploration de données associé à la structure.  
@@ -43,13 +43,13 @@ ms.locfileid: "36142376"
   
 |Propriété|Description|  
 |--------------|-----------------|  
-|**CacheMode**|Spécifie si les cas utilisés dans le cadre de l'apprentissage doivent être mis en cache ou supprimés à la fin de la formation.<br /><br /> Remarque : Cette propriété doit être définie sur `KeepTrainingCases` pour activer l’extraction et l’exclusion.|  
+|**CacheMode**|Spécifie si les cas utilisés dans le cadre de l'apprentissage doivent être mis en cache ou supprimés à la fin de la formation.<br /><br /> Remarque : Cette propriété doit être définie sur `KeepTrainingCases` pour activer l’extraction et les données d’exclusion.|  
 |**Classement**|Spécifie le classement par défaut de la colonne. Si aucun n'est spécifié, le classement du serveur est utilisé.|  
 |**Description**|Décrit la structure d'exploration de données. Il est recommandé que la description indique la fonction et la composition des données dans la structure.|  
 |**ErrorConfiguration (par défaut)**|Spécifie les options relatives à la gestion spéciale des erreurs, le cas échéant.|  
-|**HoldoutMaxCases**|Spécifie le nombre maximal de cas de structure qui peuvent être réservés en tant que jeu de données de test.  Si des valeurs sont spécifiées pour **HoldoutMaxCases** et **HoldoutPercent**, les conditions sont combinées.<br /><br /> Remarque : Pour définir cette propriété, <xref:Microsoft.AnalysisServices.MiningStructure.CacheMode%2A> doit avoir la valeur `KeepTrainingCases`.|  
-|**HoldoutPercent**|Spécifie le pourcentage de cas de structure à réserver comme jeu de données de test. Si des valeurs sont spécifiées pour **HoldoutMaxCases** et **HoldoutPercent**, les conditions sont combinées.<br /><br /> Remarque : Pour définir cette propriété, <xref:Microsoft.AnalysisServices.MiningStructure.CacheMode%2A> doit avoir la valeur `KeepTrainingCases`.|  
-|**HoldoutSeed**|Spécifie une valeur de départ pour initialiser le partitionnement du jeu de test d'exclusion, afin de garantir que le jeu de données de test pourra être recréé.<br /><br /> Remarque : Pour définir cette propriété, <xref:Microsoft.AnalysisServices.MiningStructure.CacheMode%2A> doit avoir la valeur `KeepTrainingCases`.|  
+|**HoldoutMaxCases**|Spécifie le nombre maximal de cas de structure qui peuvent être réservés en tant que jeu de données de test.  Si des valeurs sont spécifiées pour **HoldoutMaxCases** et **HoldoutPercent**, les conditions sont combinées.<br /><br /> Remarque : Pour définir cette propriété, <xref:Microsoft.AnalysisServices.MiningStructure.CacheMode%2A> doit être définie sur `KeepTrainingCases`.|  
+|**HoldoutPercent**|Spécifie le pourcentage de cas de structure à réserver comme jeu de données de test. Si des valeurs sont spécifiées pour **HoldoutMaxCases** et **HoldoutPercent**, les conditions sont combinées.<br /><br /> Remarque : Pour définir cette propriété, <xref:Microsoft.AnalysisServices.MiningStructure.CacheMode%2A> doit être définie sur `KeepTrainingCases`.|  
+|**HoldoutSeed**|Spécifie une valeur de départ pour initialiser le partitionnement du jeu de test d'exclusion, afin de garantir que le jeu de données de test pourra être recréé.<br /><br /> Remarque : Pour définir cette propriété, <xref:Microsoft.AnalysisServices.MiningStructure.CacheMode%2A> doit être définie sur `KeepTrainingCases`.|  
 |**ID**|Affiche l'identificateur unique de la structure d'exploration de données.<br /><br /> Le nom que vous avez attribué à la structure d'exploration de données lorsque vous l'avez créée est utilisé comme ID. Si vous modifiez ultérieurement le nom en tapant une nouvelle valeur pour la propriété `Name`, le nouveau nom est uniquement utilisé comme alias ; l'ID ne change pas.|  
 |**Langage**|Spécifie la langue des légendes dans la structure d'exploration de données.|  
 |`Name`|Spécifie le nom ou l'alias de la structure d'exploration de données.<br /><br /> Si vous modifiez la valeur de la propriété Name, le nouveau nom est utilisé comme légende ou alias uniquement ; l'identificateur de la structure d'exploration de données ne change pas.|  

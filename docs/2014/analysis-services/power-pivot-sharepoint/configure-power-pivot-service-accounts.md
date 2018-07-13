@@ -1,5 +1,5 @@
 ---
-title: Configurer les comptes de Service PowerPivot | Documents Microsoft
+title: Configurer les comptes de Service PowerPivot | Microsoft Docs
 ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 76a85cd0-af93-40c9-9adf-9eb0f80b30c1
 caps.latest.revision: 13
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: c8e4bd2d01fb5745e3e9c67c94561789cfbc8759
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 719a001aa4c15a36f33dbb44ff51e442d179e51b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36141422"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37149950"
 ---
 # <a name="configure-powerpivot-service-accounts"></a>Configuration des comptes de service PowerPivot
   Une installation [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] inclut deux services qui prennent en charge des opérations serveur. Le service **SQL Server Analysis Services (PowerPivot)** est un service Windows qui assure le traitement des données PowerPivot et la prise en charge des requêtes sur un serveur d'applications. Le compte de connexion pour ce service est toujours spécifié pendant l'installation de SQL Server lorsque vous installez Analysis Services en mode intégré SharePoint.  
@@ -32,9 +32,9 @@ ms.locfileid: "36141422"
   
  Cette rubrique contient les sections suivantes :  
   
- [Mettre à jour un mot de passe pour l’instance de SQL Server Analysis Services (PowerPivot)](#bkmk_passwordssas)  
+ [Mettre à jour un mot de passe expiré pour l’instance de SQL Server Analysis Services (PowerPivot)](#bkmk_passwordssas)  
   
- [Mettre à jour un mot de passe pour l’Application de Service PowerPivot](configure-power-pivot-service-accounts.md#bkmk_passwordapp)  
+ [Mettre à jour un mot de passe expiré pour l’Application de Service PowerPivot](configure-power-pivot-service-accounts.md#bkmk_passwordapp)  
   
  [Modifier le compte sous lequel chaque service s'exécute](#bkmk_newacct)  
   
@@ -46,7 +46,7 @@ ms.locfileid: "36141422"
   
  [Dépannage : résoudre les erreurs HTTP 503 dues à des mots de passe expirés pour l'Administration centrale ou le service de l'application Web de SharePoint Foundation](#expired)  
   
-##  <a name="bkmk_passwordssas"></a> Mettre à jour un mot de passe pour l’instance de SQL Server Analysis Services (PowerPivot)  
+##  <a name="bkmk_passwordssas"></a> Mettre à jour un mot de passe expiré pour l’instance de SQL Server Analysis Services (PowerPivot)  
   
 1.  Pointez sur Démarrer, cliquez sur **Outils d'administration**, puis cliquez sur **Services**. Double-cliquez sur **SQL Server Analysis Services (PowerPivot)**. Cliquez sur **Ouvrir une session**, puis tapez le nouveau mot de passe pour le compte.  
   
@@ -58,7 +58,7 @@ ms.locfileid: "36141422"
   
 5.  Sélectionnez **Attribuer une nouvelle valeur au mot de passe du compte**. Tous les services qui s'exécutent sous le compte géré utilisent les informations d'identification mises à jour.  
   
-##  <a name="bkmk_passwordapp"></a> Mettre à jour un mot de passe pour l’Application de Service PowerPivot  
+##  <a name="bkmk_passwordapp"></a> Mettre à jour un mot de passe expiré pour l’Application de Service PowerPivot  
   
 1.  Dans Administration centrale, dans la section Sécurité, cliquez sur **Configurer les comptes gérés**.  
   
@@ -105,9 +105,9 @@ ms.locfileid: "36141422"
   
 |Condition requise|Description|  
 |-----------------|-----------------|  
-|Spécification relative à la configuration|Ce compte doit être spécifié pendant l’installation de SQL Server à l’aide de la **Analysis Services - page de Configuration** dans l’Assistant installation (ou la `ASSVCACCOUNT` paramètre d’installation dans une configuration de ligne de commande).<br /><br /> Vous pouvez modifier le nom d'utilisateur ou le mot de passe à l'aide de l'Administration centrale, de PowerShell ou de l'outil de configuration de PowerPivot. L'utilisation d'autres outils pour modifier les comptes et les mots de passe n'est pas prise en charge.|  
+|Spécification relative à la configuration|Ce compte doit être spécifié pendant l’installation de SQL Server à l’aide de la **Analysis Services - page de Configuration** dans l’Assistant installation (ou le `ASSVCACCOUNT` paramètre d’installation dans une installation en ligne de commande).<br /><br /> Vous pouvez modifier le nom d'utilisateur ou le mot de passe à l'aide de l'Administration centrale, de PowerShell ou de l'outil de configuration de PowerPivot. L'utilisation d'autres outils pour modifier les comptes et les mots de passe n'est pas prise en charge.|  
 |Spécification relative au compte d'utilisateur de domaine|Ce compte doit être un compte d'utilisateur de domaine Windows. Les comptes d'ordinateur intégrés (tels que Service réseau ou Service local) sont interdits. Le programme d'installation de SQL Server répond à la nécessité d'un compte d'utilisateur de domaine en bloquant l'installation chaque fois qu'un compte d'ordinateur est spécifié.|  
-|Spécifications relatives aux autorisations|Ce compte doit être membre du SQLServerMSASUser$\<serveur > $PowerPivot les groupe de sécurité et les groupes de sécurité WSS_WPG sur l’ordinateur local. Ces autorisations doivent être accordées automatiquement. Pour plus d’informations sur la vérification ou accorder des autorisations, consultez [accorder le PowerPivot Service compte manuellement des autorisations administratives](#updatemanually) dans cette rubrique et [Configuration initiale &#40;PowerPivot pour SharePoint &#41;](../../sql-server/install/initial-configuration-powerpivot-for-sharepoint.md).|  
+|Spécifications relatives aux autorisations|Ce compte doit être un membre du SQLServerMSASUser$\<serveur > $PowerPivot les groupe de sécurité et les groupes de sécurité WSS_WPG sur l’ordinateur local. Ces autorisations doivent être accordées automatiquement. Pour plus d’informations sur la vérification ou accorder des autorisations, consultez [accorder la PowerPivot Service compte manuellement des autorisations administratives](#updatemanually) dans cette rubrique et [Configuration initiale &#40;PowerPivot pour SharePoint &#41;](../../sql-server/install/initial-configuration-powerpivot-for-sharepoint.md).|  
 |Spécifications relatives à la montée en puissance parallèle|Si vous installez plusieurs instances de serveur PowerPivot pour SharePoint dans une batterie, toutes les instances de serveur Analysis Services doivent s'exécuter sous le même compte d'utilisateur de domaine. Par exemple, si vous configurez la première instance du [!INCLUDE[ssGeminiSrv](../../includes/ssgeminisrv-md.md)] de sorte qu’elle s’exécute sous le nom Contoso\ssas-srv01, toutes les instances du [!INCLUDE[ssGeminiSrv](../../includes/ssgeminisrv-md.md)] supplémentaires que vous déployez par la suite dans la même batterie doivent aussi s’exécuter sous le nom Contoso\ssas-srv01.<br /><br /> La configuration de toutes les instances de service de sorte qu'elles s'exécutent sous le même compte permet au service système PowerPivot d'allouer les travaux de traitement des requêtes ou d'actualisation des données à n'importe quelle instance du service Analysis Services de la batterie de serveurs. Cette configuration permet en outre d'utiliser la fonctionnalité Compte géré de l'Administration centrale pour les instances du serveur Analysis Services. En utilisant le même compte pour toutes les instances du [!INCLUDE[ssGeminiSrv](../../includes/ssgeminisrv-md.md)] , vous pouvez modifier le compte ou le mot de passe une seule fois, et toutes les instances de service qui utilisent ces informations d'identification seront automatiquement mises à jour.<br /><br /> Le programme d'installation de SQL Server répond à la nécessité d'un même compte. Dans un déploiement avec montée en puissance parallèle où une instance de PowerPivot pour SharePoint est déjà installée sur la batterie de serveurs SharePoint, le programme d'installation bloquera la nouvelle installation si vous spécifiez un compte de [!INCLUDE[ssGeminiSrv](../../includes/ssgeminisrv-md.md)] différent de celui qui est déjà utilisé dans la batterie.|  
   
 #### <a name="powerpivot-service-application-pool"></a>Pool d'applications de service PowerPivot  
@@ -128,7 +128,7 @@ ms.locfileid: "36141422"
   
 3.  Cliquez sur **Exécuter maintenant**.  
   
- En dernier recours, vous pouvez garantir des autorisations appropriées en accordant des autorisations d’Administration système Analysis Services à l’application de service PowerPivot et puis ajoutez spécifiquement l’identité d’application de service à SQLServerMSASUser$\< nom_serveur > groupe de sécurité $PowerPivot Windows. Vous devez répéter ces étapes pour chaque instance Analysis Services intégrée avec la batterie de serveurs SharePoint.  
+ En dernier recours, vous pouvez vérifier les autorisations appropriées en octroyant des autorisations d’Administration système Analysis Services à l’application de service PowerPivot et puis en ajoutant spécifiquement l’identité d’application de service à SQLServerMSASUser$\< nom_serveur > groupe de sécurité $PowerPivot Windows. Vous devez répéter ces étapes pour chaque instance Analysis Services intégrée avec la batterie de serveurs SharePoint.  
   
  Vous devez être administrateur local pour mettre à jour des groupes de sécurité Windows.  
   
@@ -184,7 +184,7 @@ ms.locfileid: "36141422"
  Si Reporting Services est installé, utilisez le Gestionnaire de configuration de Reporting Services pour mettre à jour les mots de passe pour le serveur de rapports et la connexion à la base de données du serveur de rapports. Pour plus d’informations, consultez [Configuration et administration d’un serveur de rapports &#40;mode SharePoint de Reporting Services&#41;](../../reporting-services/configure-administer-report-server-reporting-services-sharepoint-mode.md).  
   
 ## <a name="see-also"></a>Voir aussi  
- [Démarrer ou arrêter un service PowerPivot pour SharePoint Server](start-or-stop-a-power-pivot-for-sharepoint-server.md)   
+ [Démarrer ou arrêter un PowerPivot pour SharePoint Server](start-or-stop-a-power-pivot-for-sharepoint-server.md)   
  [Configurer PowerPivot compte d’actualisation des données sans assistance &#40;PowerPivot pour SharePoint&#41;](../configure-unattended-data-refresh-account-powerpivot-sharepoint.md)  
   
   

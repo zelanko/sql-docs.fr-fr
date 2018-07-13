@@ -1,5 +1,5 @@
 ---
-title: Élément (ASSL) de l’audit | Documents Microsoft
+title: Audit, élément (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - Audit element
 ms.assetid: 26488119-6490-426d-a4e4-274b5bdffbc2
 caps.latest.revision: 39
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: fc059cfde938bebe2503108faf835271786c3150
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 1d87e0c58dd944c140e57f89894cb98a32d9230d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36140385"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37163320"
 ---
 # <a name="audit-element-assl"></a>Élément Audit (ASSL)
   Spécifie qu’un [Trace](../objects/trace-element-assl.md) élément ne peut pas supprimer des événements, même si cela entraîne la diminution des performances sur le serveur.  
@@ -62,10 +62,10 @@ ms.locfileid: "36140385"
 |Éléments enfants|None|  
   
 ## <a name="remarks"></a>Notes  
- L’élément qui correspond au parent de `Audit` dans l’objet d’objets AMO (Analysis Management) est modèle <xref:Microsoft.AnalysisServices.Trace>.  
+ L’élément qui correspond au parent de `Audit` dans l’objet d’objets AMO (Analysis Management) modèle est <xref:Microsoft.AnalysisServices.Trace>.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Effectue le suivi élément &#40;ASSL&#41;](../collections/traces-element-assl.md)   
+ [Effectue le suivi des élément &#40;ASSL&#41;](../collections/traces-element-assl.md)   
  [Propriétés &#40;ASSL&#41;](properties-assl.md)  
   
   

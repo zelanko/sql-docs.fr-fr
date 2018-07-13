@@ -1,5 +1,5 @@
 ---
-title: Parcourir la vue de Source de données (Assistant exploration de données) | Documents Microsoft
+title: Parcourir la vue de Source de données (Assistant exploration de données) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dm.dmwizard.browsedatasourceview.f1
 ms.assetid: d868600a-423c-4892-bb3b-4e6d67798328
 caps.latest.revision: 21
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 14f4bcdb5fea062320138ea90036bbc824f875e8
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 24348462faa76777b279576c105c312b333b83f0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36142930"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37155650"
 ---
 # <a name="browse-data-source-view-data-mining-wizard"></a>Parcourir Vue des sources de données (Assistant Exploration de données)
   Utilisez la boîte de dialogue **Parcourir Vue des sources de données** pour afficher la vue de la source de données sélectionnée dans la page **Sélectionner une vue de source de données** de l’Assistant.  
@@ -36,7 +36,7 @@ ms.locfileid: "36142930"
  Utilisez cette option pour modifier le niveau de détail affiché dans le diagramme.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Aide (F1) de l’Assistant d’exploration de données &#40;Analysis Services - Exploration de données&#41;](data-mining-wizard-f1-help-analysis-services-data-mining.md)   
+ [Données d’aide F1 de l’Assistant exploration de données &#40;Analysis Services - Exploration de données&#41;](data-mining-wizard-f1-help-analysis-services-data-mining.md)   
  [Sélectionnez la vue de Source de données &#40;Assistant exploration de données&#41;](select-data-source-view-data-mining-wizard.md)  
   
   

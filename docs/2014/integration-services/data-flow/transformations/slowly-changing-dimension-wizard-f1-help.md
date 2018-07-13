@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Slowly Changing Dimension Wizard
 ms.assetid: e4d62b73-77c5-4b26-9b6d-d5f245768fc8
 caps.latest.revision: 18
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 9f00ebc72e1091ebeed72e55d1d771c1c9bfb610
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: e6c05f7bbdfa47ab1d7e60fee879a90754a19a39
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36141395"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37158785"
 ---
 # <a name="slowly-changing-dimension-wizard-f1-help"></a>Aide (F1) de l'Assistant Dimension à variation lente
   Utilisez l' **Assistant Dimension à variation lente** pour configurer le chargement des données dans divers types de dimensions à variation lente. Cette section fournit l'aide (accessible à l'aide de la touche F1) **relative aux pages de cet Assistant**. Le tableau suivant décrit les rubriques de cette section.  
@@ -40,7 +40,7 @@ ms.locfileid: "36141395"
  [Options des attributs fixes et variables &#40;Assistant Dimension à variation lente](fixed-and-changing-attribute-options-slowly-changing-dimension-wizard.md)  
  Paramétrez les options des attributs fixes et variables pour les colonnes de dimension.  
   
- [Options de l’attribut d’historique &#40;Assistant Dimension à variation lente&#41;](historical-attribute-options-slowly-changing-dimension-wizard.md)  
+ [Options des attributs d’historique &#40;Assistant Dimension à variation lente&#41;](historical-attribute-options-slowly-changing-dimension-wizard.md)  
  Paramétrez les options des colonnes de la dimension d'attributs historiques.  
   
  [Les membres de Dimension inférés &#40;Assistant Dimension à variation lente&#41;](inferred-dimension-members-slowly-changing-dimension-wizard.md)  

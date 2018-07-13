@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - precomputed partitions [SQL Server replication]
 - merge replication precomputed partitions [SQL Server replication]
 - merge replication precomputed partitions [SQL Server replication], about precomputed partitions
 ms.assetid: 85654bf4-e25f-4f04-8e34-bbbd738d60fa
 caps.latest.revision: 44
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: a6cd94215f90eb9a483258ba0c85f622d0938d54
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 70edd7a57807f342a3909d16ed0ef4526d68be49
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36140772"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37160290"
 ---
 # <a name="optimize-parameterized-filter-performance-with-precomputed-partitions"></a>Optimiser les performances des filtres paramétrés avec des partitions précalculées
   Les partitions précalculées représentent une optimisation des performances pouvant être utilisée avec les publications de fusion filtrées. Les partitions précalculées sont également une condition requise pour l'utilisation d'enregistrements logiques sur les publications filtrées. Pour plus d’informations sur les enregistrements logiques, consultez [Regrouper les modifications apportées à des lignes connexes à l’aide d’enregistrements logiques](group-changes-to-related-rows-with-logical-records.md).  

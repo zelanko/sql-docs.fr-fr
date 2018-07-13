@@ -1,5 +1,5 @@
 ---
-title: Indicateurs de modélisation (exploration de données) | Documents Microsoft
+title: Indicateurs de modélisation (exploration de données) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - attributes [data mining]
 - data types [data mining]
@@ -23,15 +23,15 @@ helpviewer_keywords:
 - coding [Data Mining]
 ms.assetid: 8826d5ce-9ba8-4490-981b-39690ace40a4
 caps.latest.revision: 48
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: b7d8ee5cc87c6d5a197240f59641095f8bc1c693
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 85abe1acb2fa12208ebf83541bd030646c67ddbc
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36143147"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37155410"
 ---
 # <a name="modeling-flags-data-mining"></a>Indicateurs de modélisation (Exploration de données)
   Vous pouvez utiliser des indicateurs de modélisation dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] pour fournir à un algorithme d’exploration de données des informations supplémentaires portant sur les données définies dans une table de cas. Ces informations permettent à l'algorithme de construire un modèle d'exploration de données plus précis.  
@@ -50,9 +50,9 @@ ms.locfileid: "36143147"
  **MODEL_EXISTENCE_ONLY**  
  Indique que la colonne sera considérée comme ayant deux états : `Missing` et `Existing`. Si la valeur est `NULL`, il est considéré comme manquant. L'indicateur MODEL_EXISTENCE_ONLY est appliqué à l'attribut prédictible et est pris en charge par la plupart des algorithmes.  
   
- En effet, en définissant l’indicateur MODEL_EXISTENCE_ONLY `True` modifie la représentation des valeurs de sorte qu’il existe seulement deux états : `Missing` et `Existing`. Tous les États non manquantes sont combinés en un seul `Existing` valeur.  
+ En effet, en définissant l’indicateur MODEL_EXISTENCE_ONLY `True` modifie la représentation des valeurs telles qu’il existe seulement deux états : `Missing` et `Existing`. Tous les États autres que missing sont combinés en un seul `Existing` valeur.  
   
- En règle générale, cet indicateur de modélisation est utilisé dans des attributs pour lesquels l'état `NULL` a une signification implicite. En d'autres termes, le fait que la colonne possède une valeur peut revêtir plus d'importance que la valeur explicite de l'état `NOT NULL`. Par exemple, une colonne [DateContractSigned] peut être `NULL` si un contrat a été signé jamais et `NOT NULL` si le contrat a été signé. Par conséquent, si l’objectif du modèle est de prédire si un contrat sera signé, vous pouvez utiliser l’indicateur MODEL_EXISTENCE_ONLY pour ignorer la valeur de date exacte dans le `NOT NULL` cas et de faire la distinction entre les cas où un contrat est uniquement `Missing` ou `Existing`.  
+ En règle générale, cet indicateur de modélisation est utilisé dans des attributs pour lesquels l'état `NULL` a une signification implicite. En d'autres termes, le fait que la colonne possède une valeur peut revêtir plus d'importance que la valeur explicite de l'état `NOT NULL`. Par exemple, une colonne [DateContractSigned] peut être `NULL` si un contrat n’a jamais été signé et `NOT NULL` si le contrat a été signé. Par conséquent, si l’objectif du modèle est de prédire si un contrat sera signé, vous pouvez utiliser l’indicateur MODEL_EXISTENCE_ONLY pour ignorer la valeur de date exacte dans le `NOT NULL` cas et de faire la distinction entre les cas où un contrat est `Missing` ou `Existing`.  
   
 > [!NOTE]  
 >  L'état Missing est un état spécial utilisé par l'algorithme qui diffère de la valeur de texte « Manquant » dans une colonne. Pour plus d’informations, consultez [Valeurs manquantes &#40;Analysis Services – Exploration de données&#41;](missing-values-analysis-services-data-mining.md).  
@@ -108,12 +108,12 @@ WHERE MODEL_NAME = '<model name>'
   
 |Tâche|Rubrique|  
 |----------|-----------|  
-|Modifier les indicateurs de modélisation à l'aide du Concepteur d'exploration de données|[Afficher ou modifier des indicateurs de modélisation &#40;d’exploration de données&#41;](modeling-flags-data-mining.md)|  
+|Modifier les indicateurs de modélisation à l'aide du Concepteur d'exploration de données|[Afficher ou modifier des indicateurs de modélisation &#40;exploration de données&#41;](modeling-flags-data-mining.md)|  
 |Fournir une indication à l'algorithme pour recommander des régresseurs potentiels|[Spécifier une colonne à utiliser comme régresseur dans un modèle](specify-a-column-to-use-as-regressor-in-a-model.md)|  
 |Voir les indicateurs de modélisation pris en charge par des algorithmes spécifiques (dans la section Indicateurs de modélisation de la rubrique de référence correspondant à chaque algorithme)|[Algorithmes d’exploration de données &#40;Analysis Services - Exploration de données&#41;](data-mining-algorithms-analysis-services-data-mining.md)|  
 |En savoir plus sur les colonnes de structure d'exploration de données et les propriétés que vous pouvez définir dessus|[Colonnes de structure d’exploration de données](mining-structure-columns.md)|  
 |En savoir plus sur les colonnes du modèle d'exploration de données et les indicateurs de modélisation qui peuvent être appliqués au niveau du modèle|[Colonnes d’un modèle d’exploration de données](mining-model-columns.md)|  
-|Voir la syntaxe à utiliser pour travailler avec des indicateurs de modélisation dans des instructions DMX|[Les indicateurs de modélisation &#40;DMX&#41;](/sql/dmx/modeling-flags-dmx)|  
+|Voir la syntaxe à utiliser pour travailler avec des indicateurs de modélisation dans des instructions DMX|[Indicateurs de modélisation &#40;DMX&#41;](/sql/dmx/modeling-flags-dmx)|  
 |Comprendre les valeurs manquantes et la façon de les utiliser|[Les valeurs manquantes &#40;Analysis Services - Exploration de données&#41;](missing-values-analysis-services-data-mining.md)|  
 |En savoir plus sur la gestion des modèles et des structures, et sur la définition de propriétés d'utilisation|[Déplacement d’objets d’exploration de données](moving-data-mining-objects.md)|  
   

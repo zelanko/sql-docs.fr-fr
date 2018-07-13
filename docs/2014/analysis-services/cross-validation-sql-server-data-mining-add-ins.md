@@ -1,5 +1,5 @@
 ---
-title: Validation croisée (SQL Server Data Mining Add-ins) | Documents Microsoft
+title: Validation croisée (SQL Server Data Mining Add-ins) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - cross-validation
 - partitioning data [data mining]
 - mining models, testing
 ms.assetid: bf9483b3-4099-41c4-bbc5-da7005e07bcd
 caps.latest.revision: 15
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 0176eab7e0671f4a87bb099f5493878fe0beebc8
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 01876b099a764676eb82dd2ac8cea12cdabbc4b4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36142835"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37172100"
 ---
 # <a name="cross-validation-sql-server-data-mining-add-ins"></a>Validation croisée (Compléments d'exploration de données SQL Server)
   ![Bouton Validation croisée, ruban Exploration de données](media/dmc-xvalid.gif "bouton Validation croisée, ruban Exploration de données")  
@@ -38,18 +38,18 @@ ms.locfileid: "36142835"
   
 -   Spécifiez le nombre de sections croisées, ou *plis*, dans lesquels partitionner les données de structure.  
   
- Le **la Validation croisée** Assistant puis crée un nouveau modèle sur chacun des plis, teste le modèle sur les autres plis, puis signale l’exactitude du modèle. À la fin, le **la Validation croisée** Assistant crée un rapport qui vous montre les mesures pour chaque pli et fournit un résumé du modèle d’agrégation. Ces informations peuvent être utilisées pour déterminer la qualité des données sous-jacentes pour un modèle, ou pour comparer des modèles différents reposant sur les mêmes données.  
+ Le **la Validation croisée** Assistant puis crée un nouveau modèle sur chacun des plis, teste le modèle sur les autres plis, puis signale l’exactitude du modèle. À l’achèvement, le **la Validation croisée** Assistant crée un rapport qui vous montre les mesures pour chaque pli et fournit un résumé du modèle d’agrégation. Ces informations peuvent être utilisées pour déterminer la qualité des données sous-jacentes pour un modèle, ou pour comparer des modèles différents reposant sur les mêmes données.  
   
 ## <a name="using-the-cross-validation-wizard"></a>Utilisation de l'Assistant Validation croisée  
  Vous pouvez utiliser la validation croisée à la fois sur les modèles temporaires et les modèles stockés sur une instance de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)].  
   
 #### <a name="to-create-a-cross-validation-report"></a>Pour créer un rapport de validation croisée  
   
-1.  Dans le **précision et Validation** de la **d’exploration de données** du ruban, cliquez sur **Validation croisée**.  
+1.  Dans le **précision et Validation** groupe de la **d’exploration de données** ruban, cliquez sur **Validation croisée**.  
   
-2.  Dans le **sélectionner une Structure ou modèle** boîte de dialogue, sélectionnez une structure d’exploration de données existante ou un modèle d’exploration de données. Si vous sélectionnez une structure, l'Assistant utilisera la validation croisée sur tous les modèles basés sur cette structure et ayant le même attribut prévisible spécifié. Si vous sélectionnez un modèle, l'Assistant utilisera la validation croisée uniquement sur ce modèle.  
+2.  Dans le **sélectionner une Structure ou modèle** boîte de dialogue, sélectionnez une structure d’exploration de données existante ou un modèle d’exploration. Si vous sélectionnez une structure, l'Assistant utilisera la validation croisée sur tous les modèles basés sur cette structure et ayant le même attribut prévisible spécifié. Si vous sélectionnez un modèle, l'Assistant utilisera la validation croisée uniquement sur ce modèle.  
   
-3.  Dans le **spécifier les paramètres de Validation croisée** boîte de dialogue le **nombre de REPLIS** , choisissez le nombre de REPLIS parmi lesquels diviser le jeu de données. Un repli est une section des données croisée sélectionnée aléatoirement.  
+3.  Dans le **spécifier les paramètres de Validation croisée** boîte de dialogue le **nombre de REPLIS** , sélectionnez le nombre de REPLIS parmi lesquels diviser le jeu de données. Un repli est une section des données croisée sélectionnée aléatoirement.  
   
 4.  Si vous le souhaitez, définir le nombre maximal de lignes à utiliser dans la validation croisée en tapant un nombre dans le **nombre maximal de lignes** zone de texte.  
   
@@ -58,11 +58,11 @@ ms.locfileid: "36142835"
   
 5.  Sélectionnez une colonne dans la **attribut cible** liste déroulante. La liste affiche uniquement les colonnes configurées en tant qu'attributs prévisibles lorsque vous avez créé le modèle à l'origine. Le modèle peut contenir plusieurs attributs prévisibles, mais vous ne pouvez en choisir qu'un seul.  
   
-6.  Sélectionnez une valeur dans la **état cible** liste déroulante.  
+6.  Sélectionnez une valeur dans le **état cible** liste déroulante.  
   
      Si la colonne prévisible contient des données numériques continues, cette option n'est pas disponible.  
   
-7.  Si vous le souhaitez, spécifier une valeur à utiliser en tant que le **seuil cible** compter des prédictions comme exactes. Cette valeur est exprimée en tant que probabilité, qui est un nombre compris entre 0 et 1, où 1 indique que la prédiction est garantie exacte, 0 signifie qu'il est peu probable que la prédiction soit correcte et .5 équivaut à une estimation aléatoire.  
+7.  Si vous le souhaitez, spécifiez une valeur à utiliser comme la **seuil cible** compter des prédictions comme exactes. Cette valeur est exprimée en tant que probabilité, qui est un nombre compris entre 0 et 1, où 1 indique que la prédiction est garantie exacte, 0 signifie qu'il est peu probable que la prédiction soit correcte et .5 équivaut à une estimation aléatoire.  
   
      Si la colonne prévisible contient des données numériques continues, cette option n'est pas disponible.  
   
@@ -79,9 +79,9 @@ ms.locfileid: "36142835"
  Si vous choisissez une structure qui prend en charge les modèles de clustering et d'autres types de modèles, les modèles de clustering ne seront pas testés.  
   
 ## <a name="understanding-cross-validation-results"></a>Présentation des résultats de la validation croisée  
- Les résultats de la validation croisée sont affichés dans une feuille de calcul, intitulée **rapport de Validation croisée pour \<nom de l’attribut >**. La nouvelle feuille de calcul contient plusieurs sections : la première section est un résumé qui fournit des métadonnées importantes concernant le modèle testé, afin que vous puissiez déterminer à quel modèle ou à quelle structure les résultats sont destinés ;  
+ Les résultats de la validation croisée sont affichés dans une feuille de calcul, intitulée **rapport de Validation croisée pour \<nom_attribut >**. La nouvelle feuille de calcul contient plusieurs sections : la première section est un résumé qui fournit des métadonnées importantes concernant le modèle testé, afin que vous puissiez déterminer à quel modèle ou à quelle structure les résultats sont destinés ;  
   
- la deuxième section dans le rapport fournit un résumé statistique qui indique la qualité du modèle d'origine. Dans ce résumé, les différences entre les modèles créés pour chaque repli sont analysées pour trois mesures principales : *erreur quadratique moyenne*, *erreur d’absolue moyenne*, et *descoredujournal*. Ce sont les mesures statistiques standard qui sont utilisées non seulement dans l'exploration de données mais également dans la plupart des types d'analyse statistique.  
+ la deuxième section dans le rapport fournit un résumé statistique qui indique la qualité du modèle d'origine. Dans ce résumé, les différences entre les modèles créés pour chaque repli sont analysées pour trois mesures principales : *erreur quadratique moyenne*, *erreur d’absolue moyenne*, et *score du journal*. Ce sont les mesures statistiques standard qui sont utilisées non seulement dans l'exploration de données mais également dans la plupart des types d'analyse statistique.  
   
  Pour chacune de ces mesures, l'Assistant Validation croisée calcule l'écart moyen et type du modèle dans son ensemble. Cela vous indique le degré de cohérence du modèle lors d'une prédiction sur des sous-ensembles de données différents. Par exemple, si l'écart type est très important, il indique que les modèles créés pour chaque repli ont des résultats très différents, et que par conséquent l'apprentissage du modèle a pu porter trop fortement sur un groupe de données particulier et n'est peut-être pas applicable à d'autres ensembles de données.  
   
@@ -115,17 +115,17 @@ ms.locfileid: "36142835"
 |Faux négatif|Nombre de cas qui remplissent ces conditions :<br /><br /> La valeur réelle n'est pas égale à la valeur cible.<br /><br /> Le modèle a prédit que le cas ne contient pas la valeur cible.|  
   
 #### <a name="lift"></a>Finesse  
- *De courbes d’élévation* est une mesure qui est associée avec une probabilité. Si un résultat est plus probable lorsque vous utilisez le modèle que lorsque vous faites une estimation aléatoire, le modèle est supposé alors fournir *finesse positive*. Toutefois, si le modèle élabore des prédictions qui sont moins probables que l’estimation aléatoire, le score de finesse est *négatif*. Par conséquent, cette mesure indique le niveau d'amélioration qui peut être accompli en utilisant le modèle, où un score supérieur est meilleur.  
+ *Courbes d’élévation* est une mesure qui est associée à probabilité. Si un résultat est plus probable lorsque vous utilisez le modèle que lorsque vous faites une estimation aléatoire, le modèle est supposé alors fournir *finesse positive*. Toutefois, si le modèle élabore des prédictions qui sont moins probables que l’estimation aléatoire, le score de finesse est *négatif*. Par conséquent, cette mesure indique le niveau d'amélioration qui peut être accompli en utilisant le modèle, où un score supérieur est meilleur.  
   
  La finesse est calculée en tant que rapport entre la probabilité de prédiction réelle et la probabilité marginale dans les scénarios de test.  
   
 #### <a name="log-score"></a>Score du journal  
- Le *connecter score*, également appelé le *score de vraisemblance de journal* pour la prédiction, représente le rapport entre deux probabilités, converti en une échelle logarithmique. Étant donné que les probabilités sont représentées comme une fraction décimale, le score du journal est toujours un nombre négatif. Un score plus proche de 0 représente un meilleur score.  
+ Le *score du journal*, également appelé le *score de vraisemblance du journal* pour la prédiction, représente le rapport entre deux probabilités, converti en une échelle logarithmique. Étant donné que les probabilités sont représentées comme une fraction décimale, le score du journal est toujours un nombre négatif. Un score plus proche de 0 représente un meilleur score.  
   
  Alors que les scores bruts peuvent avoir des distributions très irrégulières ou asymétriques, un score de journal est semblable à un pourcentage.  
   
 #### <a name="root-mean-square-error"></a>Erreur quadratique moyenne  
- *Erreur quadratique moyenne* (RMSE) est une méthode standard de statistiques pour la recherche au niveau de la comparaison de différents jeux de données et lisser les différences qui peuvent être introduites par l’échelle des entrées.  
+ *Erreur quadratique moyenne* (RMSE) est une méthode standard de statistiques pour examiner comment les différents jeux de données comparaison et lisser les différences qui peuvent être introduites par la mise à l’échelle des entrées.  
   
  L'erreur quadratique moyenne représente l'erreur moyenne de la valeur prédite par rapport à la valeur réelle. Elle est calculée en tant que racine carrée de l'erreur moyenne pour tous les cas de la partition, divisée par le nombre de cas dans la partition, en excluant les cas avec des valeurs manquantes pour les attributs cibles.  
   

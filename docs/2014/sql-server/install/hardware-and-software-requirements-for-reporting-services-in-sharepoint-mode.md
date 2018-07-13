@@ -1,5 +1,5 @@
 ---
-title: Configurations matérielle et logicielle requises pour Reporting Services en Mode SharePoint | Documents Microsoft
+title: Matérielle et logicielle requise pour Reporting Services en Mode SharePoint | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: ed91877d-4f74-4266-a932-b824b4810c99
 caps.latest.revision: 14
 author: markingmyname
 ms.author: maghan
-manager: jhubbard
-ms.openlocfilehash: 6b02fd6592ce8b57900bf3c8e5558a6b3cfacc86
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 27e25103ae362a664a4432ee62befd0efbc9681a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36140895"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37166140"
 ---
 # <a name="hardware-and-software-requirements-for-reporting-services-in-sharepoint-mode"></a>Configurations matérielle et logicielle pour Reporting Services en mode SharePoint
   Cette rubrique décrit la configuration requise, la configuration matérielle requise et des considérations relatives à l'installation pour [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] en mode SharePoint. Étant donné que le mode [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint nécessite un serveur SharePoint, la plupart des conditions sont basées sur l'environnement SharePoint. Pour les serveurs de rapports en mode natif, votre matériel doit correspondre aux configurations matérielle et logicielle minimales requises pour l'exécution de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Pour plus d'informations, consultez [Hardware and Software Requirements for Installing SQL Server 2014](hardware-and-software-requirements-for-installing-sql-server.md).  
@@ -40,7 +40,7 @@ ms.locfileid: "36140895"
   
 -   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] en mode SharePoint requiert SharePoint Server. Pour plus d'informations sur les configurations requises et les configurations SharePoint, consultez les rubriques suivantes :  
   
-    -   [Configuration matérielle et logicielle requise (SharePoint 2013)](http://go.microsoft.com/fwlink/p/?LinkId=256365) ()http://go.microsoft.com/fwlink/p/?LinkId=256365)  
+    -   [Configuration matérielle et logicielle requises (SharePoint 2013)](http://go.microsoft.com/fwlink/p/?LinkId=256365) ()http://go.microsoft.com/fwlink/p/?LinkId=256365)  
   
     -   [Gestion et dimensionnement de la capacité pour SharePoint Server 2013](http://technet.microsoft.com/library/cc261700.aspx)  
   
@@ -68,7 +68,7 @@ ms.locfileid: "36140895"
  Consultez la [documentation liée à Power View](http://office.microsoft.com/excel-help/power-view-explore-visualize-and-present-your-data-HA102835634.aspx) la plus récente sur le site Office.Microsoft.com. [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] est maintenant une fonctionnalité de Microsoft Excel 2013 ; elle est disponible avec le complément [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Reporting Services de Microsoft SharePoint Server 2010 et 2013 Enterprise Edition.  
   
 ##  <a name="bkmk_more_information"></a> Informations supplémentaires  
- Pour plus d’informations sur les modifications apportées à SharePoint, consultez [change de SharePoint 2010 vers SharePoint 2013](http://technet.microsoft.com/library/ff607742\(office.15\).aspx) (http://technet.microsoft.com/en-us/library/ff607742(office.15).aspx).  
+ Pour plus d’informations sur les modifications apportées à SharePoint, consultez [changements entre SharePoint 2010 vers SharePoint 2013](http://technet.microsoft.com/library/ff607742\(office.15\).aspx) (http://technet.microsoft.com/en-us/library/ff607742(office.15).aspx).  
   
  [Notes de mise à jour de SQL Server 2014](http://go.microsoft.com/fwlink/?LinkID=296445).  
   

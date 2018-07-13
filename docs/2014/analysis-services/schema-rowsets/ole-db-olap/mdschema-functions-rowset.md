@@ -1,5 +1,5 @@
 ---
-title: Ensemble de lignes MDSCHEMA_FUNCTIONS | Documents Microsoft
+title: Ensemble de lignes MDSCHEMA_FUNCTIONS | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -18,15 +18,15 @@ helpviewer_keywords:
 - MDSCHEMA_FUNCTIONS rowset
 ms.assetid: 5253fa8c-b1ce-4504-aff6-a246b5e675c7
 caps.latest.revision: 27
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 8e3086730ad66a0f21d9cc458d34d96a6d0eacc3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 587d361eef197378fcc8b0347b9289ae2b81e99a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36140620"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37159280"
 ---
 # <a name="mdschemafunctions-rowset"></a>Ensemble de lignes MDSCHEMA_FUNCTIONS
   Décrit les fonctions disponibles pour les applications clientes connectées à la base de données.  
@@ -42,21 +42,21 @@ ms.locfileid: "36140620"
 |**RETURN_TYPE**|**DBTYPE_I4**||Le **VARTYPE** du type de données de retour de la fonction.|  
 |**ORIGINE**|**DBTYPE_I4**||Origine de la fonction :<br /><br /> -1 pour les fonctions MDX.<br />-2 pour les fonctions définies par l’utilisateur.|  
 |**NOM_INTERFACE**|**DBTYPE_WSTR**||Nom de l'interface pour les fonctions définies par l'utilisateur.<br /><br /> Nom de groupe pour les fonctions MDX (Multidimensional Expressions).|  
-|**NOM_LIBRAIRIE**|**DBTYPE_WSTR**||Nom de la bibliothèque de types pour les fonctions définies par l'utilisateur. **NULL** pour les fonctions MDX.|  
+|**LIBRARY_NAME**|**DBTYPE_WSTR**||Nom de la bibliothèque de types pour les fonctions définies par l'utilisateur. **NULL** pour les fonctions MDX.|  
 |**NOM_DLL**|**DBTYPE_WSTR**||(Facultatif) Nom de la classe dans l'assembly qui implémente la fonction définie par l'utilisateur.<br /><br /> Retourne **VT_NULL** pour les fonctions MDX.|  
 |**HELP_FILE**|**DBTYPE_WSTR**||(Facultatif) Nom du fichier qui contient la documentation d'aide pour la fonction définie par l'utilisateur.<br /><br /> Retourne **VT_NULL** pour les fonctions MDX.|  
 |**HELP_CONTEXT**|**DBTYPE_I4**||(Facultatif) Retourne l'ID du contexte d'aide pour cette fonction.|  
-|**OBJECT**|**DBTYPE_WSTR**||(Facultatif) Nom générique de la classe de l'objet auquel s'applique une propriété. Par exemple, l’ensemble de lignes correspondant à l’élément < nom_niveau >. Membres de fonction retourne «**niveau**».<br /><br /> Retourne **VT_NULL** pour les fonctions définies par l’utilisateur, ou les fonctions MDX pas une propriété.|  
+|**OBJECT**|**DBTYPE_WSTR**||(Facultatif) Nom générique de la classe de l'objet auquel s'applique une propriété. Par exemple, l’ensemble de lignes correspondant à la < nom_niveau >. Membres de fonction retourne «**niveau**».<br /><br /> Retourne **VT_NULL** pour les fonctions définies par l’utilisateur, ou les fonctions MDX non-property.|  
 |**LÉGENDE**|**DBTYPE_WSTR**||Légende d'affichage pour la fonction.|  
   
- L’ensemble de lignes est trié sur **origine**, **nom_interface**, **nom_fonction**.  
+ L’ensemble de lignes est trié sur **origine**, **INTERFACE_NAME**, **nom_fonction**.  
   
 ## <a name="restriction-columns"></a>Colonnes de restriction  
  Le **MDSCHEMA_FUNCTIONS** ensemble de lignes peut être restreint sur les colonnes répertoriées dans le tableau suivant.  
   
 |Nom de colonne|Indicateur de type|État de la restriction|  
 |-----------------|--------------------|-----------------------|  
-|**NOM_LIBRAIRIE**|**DBTYPE_WSTR**|Facultatif.|  
+|**LIBRARY_NAME**|**DBTYPE_WSTR**|Facultatif.|  
 |**NOM_INTERFACE**|**DBTYPE_WSTR**|Facultatif.|  
 |**NOM DE LA FONCTION**|**DBTYPE_WSTR**|Facultatif.|  
 |**ORIGINE**|**DBTYPE_I4**|Facultatif.|  

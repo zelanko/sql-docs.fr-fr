@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - dbe-xml
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - XML data [SQL Server], loading
 - loading XML data
 ms.assetid: d1741e8d-f44e-49ec-9f14-10208b5468a7
 caps.latest.revision: 19
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: e3b250b955028e3f0843699688713cb731f00fee
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: a5048132c50460475ffe9c04f0f03a75cf6368b7
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36142205"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37166300"
 ---
 # <a name="load-xml-data"></a>Charger des données XML
   Vous pouvez transférer des données XML dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] de plusieurs manières. Exemple :  
@@ -31,7 +31,7 @@ ms.locfileid: "36142205"
   
 -   Vous pouvez copier vos données en bloc à partir d’une autre base de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] à l’aide de bcp out, puis les insérer en bloc dans la base de données de version ultérieure à l’aide de bcp in.  
   
--   Si vous avez des données dans des colonnes relationnelles d'une base de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , créez une table avec une colonne [n]text et, éventuellement, une colonne de clé primaire pour un identificateur de ligne. Utilisez la programmation pour récupérer les données XML généré sur le serveur avec FOR XML côté client et de les écrire dans le `[n]text` colonne. Ensuite, utilisez les techniques citées précédemment pour transférer les données vers une base de données de version ultérieure. Vous pouvez choisir d’écrire directement le code XML dans une colonne XML de la base de données de version ultérieure.  
+-   Si vous avez des données dans des colonnes relationnelles d'une base de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , créez une table avec une colonne [n]text et, éventuellement, une colonne de clé primaire pour un identificateur de ligne. Utilisez la programmation pour récupérer les données XML qui est généré au niveau du serveur avec FOR XML côté client et placez-les dans le `[n]text` colonne. Ensuite, utilisez les techniques citées précédemment pour transférer les données vers une base de données de version ultérieure. Vous pouvez choisir d’écrire directement le code XML dans une colonne XML de la base de données de version ultérieure.  
   
 ## <a name="bulk-loading-xml-data"></a>Chargement en masse de données XML  
  Vous pouvez charger en masse des données XML sur le serveur en utilisant les fonctions de chargement en masse de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], comme bcp. OPENROWSET vous permet de charger des données dans une colonne XML à partir de fichiers. L'exemple suivant illustre ce comportement :  
@@ -54,10 +54,10 @@ FROM    (SELECT *
   
 -   Si l'encodage ne se fait pas en Unicode et qu'il est implicite, du fait d'une page de codes source, la page de codes de la chaîne dans la base de données doit être identique (ou du moins compatible) aux points de code que vous souhaitez charger. Si nécessaire, utilisez COLLATE. Si aucune page de codes serveur de la sorte n'existe, vous devez ajouter une déclaration XML explicite mentionnant l'encodage correct.  
   
--   Pour utiliser un encodage explicite, utilisez la `varbinary()` de type, qui n’a aucune interaction avec les pages de codes, ou utilisez un type de chaîne de la page de codes appropriée. Ensuite, assignez les données à une colonne, une variable ou un paramètre XML.  
+-   Pour utiliser un encodage explicite, utilisez la `varbinary()` tapez, qui n’a aucune interaction avec les pages de codes, ou utilisez un type de chaîne de la page de codes appropriée. Ensuite, assignez les données à une colonne, une variable ou un paramètre XML.  
   
 ### <a name="example-explicitly-specifying-an-encoding"></a>Exemple : mention explicite d'un encodage  
- Supposez que vous avez un document XML, vcdoc, stocké au format `varchar(max)`, qui ne comporte aucune déclaration XML explicite. L’instruction suivante ajoute une déclaration XML mentionnant l’encodage « iso8859-1 », concatène le document XML, convertit le résultat à `varbinary(max)` afin que la représentation en octets est conservée, puis enfin de le convertir au format XML. Ainsi, le processeur XML peut analyser les données conformément à l'encodage spécifié « iso8859-1 » et générer la représentation UTF-16 correspondante pour les valeurs de chaîne.  
+ Supposez que vous avez un document XML, vcdoc, stocké au format `varchar(max)`, qui ne comporte aucune déclaration XML explicite. L’instruction suivante ajoute une déclaration XML mentionnant l’encodage « iso8859-1 », de concaténer le document XML, de convertir le résultat au `varbinary(max)` afin que la représentation en octets est conservée, puis enfin de le convertir au format XML. Ainsi, le processeur XML peut analyser les données conformément à l'encodage spécifié « iso8859-1 » et générer la représentation UTF-16 correspondante pour les valeurs de chaîne.  
   
 ```  
 SELECT CAST(   

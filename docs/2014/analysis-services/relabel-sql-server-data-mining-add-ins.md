@@ -1,5 +1,5 @@
 ---
-title: Réétiqueter (SQL Server Data Mining Add-ins) | Documents Microsoft
+title: Réétiqueter (SQL Server Data Mining Add-ins) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - data preparation
 - relabel
 - data cleaning
 ms.assetid: af041b39-fdd1-4cb5-a5ef-2f3ddab84614
 caps.latest.revision: 14
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 50dd1a2c4cd425243c55ef9181387a08c5d935ba
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 46a05e8f54a6c307dba5b82572ad8158b305f4bb
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36143358"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37157170"
 ---
 # <a name="relabel-sql-server-data-mining-add-ins"></a>Réétiqueter (Compléments d'exploration de données SQL Server)
   ![Icône Office 13 pour l’outil Réétiqueter](media/dm13-relabel.gif "icône Office 13 pour l’outil Réétiqueter")  
@@ -62,7 +62,7 @@ ms.locfileid: "36143358"
   
          Cliquez pour ajouter une nouvelle colonne au tableau qui contient les nouvelles valeurs.  
   
-    -   **Copier les données de la feuille avec les modifications à une feuille de calcul**  
+    -   **Copier des données de feuille avec les modifications apportées à une feuille de calcul**  
   
          Cliquez pour créer une nouvelle feuille de calcul qui contient les données mises à jour.  
   

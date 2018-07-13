@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Integration Services, installing
 - SSIS, installing
@@ -21,20 +21,20 @@ ms.assetid: bd20fd3a-414b-4581-959d-ebba4ddf5a55
 caps.latest.revision: 100
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 7e495ce5090ad33f6584250db739898ab3ca6dda
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: cd10fc638ed7a1d9c42b926190eebc0df5dd37b8
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36142132"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37156527"
 ---
 # <a name="install-integration-services"></a>Installer Integration Services
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fournit un programme d'installation unique pour installer tout ou une partie de ses composants, y compris [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. Le programme d'installation vous permet d'installer [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] avec ou sans d'autres composants [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sur un ordinateur unique.  
   
  Cette rubrique met l'accent sur quelques facteurs importants qu'il convient de prendre en compte avant d'installer [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. Les informations dans cette rubrique vous aideront à évaluer les options d'installation afin que vous puissiez effectuer des sélections garantissant la réussite de l'installation.  
   
- Cette rubrique ne contient pas d'instructions relatives au démarrage du programme d'installation, à l'utilisation de l'Assistant Installation ou à l'exécution du programme d'installation à partir de la ligne de commande. Pour obtenir des instructions sur la façon de démarrer le programme d’installation et sélectionnez les composants à installer, consultez [Installation de démarrage rapide de SQL Server 2014](../../getting-started/quick-start-installation-of-sql-server-2014.md). Pour plus d’informations sur les options de ligne de commande pour l’installation de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], consultez [installer SQL Server 2014 à partir de l’invite de commandes](../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md).  
+ Cette rubrique ne contient pas d'instructions relatives au démarrage du programme d'installation, à l'utilisation de l'Assistant Installation ou à l'exécution du programme d'installation à partir de la ligne de commande. Pour obtenir des instructions détaillées sur la façon de démarrer le programme d’installation et sélectionnez les composants à installer, consultez [Installation de démarrage rapide de SQL Server 2014](../../getting-started/quick-start-installation-of-sql-server-2014.md). Pour plus d’informations sur les options de ligne de commande pour l’installation [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], consultez [installer SQL Server 2014 à partir de l’invite de commandes](../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md).  
   
 ## <a name="preparing-to-install-integration-services"></a>Préparation à l'installation d'Integration Services  
  Avant d'installer [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], vérifiez les éléments requis suivants :  
@@ -60,13 +60,13 @@ ms.locfileid: "36142132"
  Après avoir pris connaissance de la configuration requise pour l'installation de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et vérifié que votre ordinateur répondait à ces critères, vous pouvez installer [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)].  
   
 > [!NOTE]  
->  Dans les versions précédentes de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], par défaut, lorsque vous installiez [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , tous les utilisateurs du groupe Utilisateurs avaient accès au service [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Lorsque vous installez [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], les utilisateurs n'ont pas accès au service [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Ce service est sécurisé par défaut. Après avoir [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] est installé, le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] administrateur doit exécuter l’outil de Configuration DCOM (Dcomcnfg.exe) pour accorder l’accès des utilisateurs spécifiques à **SQL Server Integration Services 12.0**.  
+>  Dans les versions précédentes de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], par défaut, lorsque vous installiez [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , tous les utilisateurs du groupe Utilisateurs avaient accès au service [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Lorsque vous installez [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], les utilisateurs n'ont pas accès au service [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Ce service est sécurisé par défaut. Après avoir [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] est installé, le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] administrateur doit exécuter l’outil de Configuration de DCOM (Dcomcnfg.exe) pour accorder l’accès des utilisateurs spécifiques à **SQL Server Integration Services 12.0**.  
 >   
 >  Pour obtenir des instructions sur la manière d'octroyer des autorisations, consultez [Grant Permissions to Integration Services Service](../grant-permissions-to-integration-services-service.md).  
   
- Si vous utilisez l'Assistant Installation pour installer [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], vous utiliserez une série de pages pour spécifier les composants et les options. Voici les pages de l’Assistant installation où les options que vous sélectionnez affectent votre installation de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] avec des recommandations de sélection :  
+ Si vous utilisez l'Assistant Installation pour installer [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], vous utiliserez une série de pages pour spécifier les composants et les options. Les éléments suivants sont des pages dans l’Assistant installation où les options que vous sélectionnez affectent votre installation de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] avec des recommandations de sélection :  
   
--   **Sélection des fonctionnalités**  
+-   **Sélection de fonctionnalités**  
   
      Sélectionnez **Integration Services** pour installer le service [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] et pour exécuter des packages en dehors de l'environnement de conception.  
   
@@ -91,7 +91,7 @@ ms.locfileid: "36142132"
   
      **Installation sur un serveur dédié pour ETL** Pour utiliser un serveur dédié pour les processus d’extraction, de transformation et de chargement (ETL), nous vous recommandons d’installer une instance locale du [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] lorsque vous installez [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] stocke habituellement les packages dans une instance du [!INCLUDE[ssDE](../../includes/ssde-md.md)] et compte sur l'Agent [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pour la planification de ces packages. Si le serveur ETL ne dispose pas d'une instance du [!INCLUDE[ssDE](../../includes/ssde-md.md)], vous devrez planifier ou exécuter les packages à partir d'un serveur qui possède une instance du [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Cela signifie que les packages ne s'exécuteront pas sur le serveur ETL, mais sur le serveur à partir duquel ils ont été démarrés. En conséquence, les ressources du serveur ETL dédié ne sont pas utilisées comme prévu. De plus, les ressources d'autres serveurs peuvent être éprouvées par les processus ETL en cours d'exécution  
   
--   **Configuration de l'instance**  
+-   **Configuration de l’instance**  
   
      Aucune sélection effectuée dans la page **Configuration de l'instance** n'affecte [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] ou le service [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .  
   

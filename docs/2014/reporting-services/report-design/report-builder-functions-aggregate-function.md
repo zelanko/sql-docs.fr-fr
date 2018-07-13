@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 16ce643f-bbb3-40a5-ba78-7aed73156f3e
 caps.latest.revision: 7
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 3d05f8d71c3ce12722f139429e48a2a48e8efd8e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 31ccc6a6ad07831ef4d26baf4fb3708ee5fa81b0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36140223"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37172340"
 ---
 # <a name="aggregate-function-report-builder-and-ssrs"></a>Fonction d'agrégation (Générateur de rapports et SSRS)
   Retourne un agrégat personnalisé de l'expression spécifiée, comme défini par le fournisseur de données.  
@@ -39,7 +39,7 @@ Aggregate(expression, scope)
  Expression sur laquelle effectuer l'agrégation. Elle doit être une référence de champ simple.  
   
  *portée*  
- (`String`) Le nom d’une région de données, groupe ou groupe de données qui contient le rapport d’éléments auxquels appliquer la fonction d’agrégation. *Scope* doit être une constante de type chaîne et ne peut pas être une expression. Si le paramètre *scope* n'est pas spécifié, l'étendue actuelle est utilisée.  
+ (`String`) Le nom d’un jeu de données, groupe ou région de données qui contient le rapport éléments auxquels appliquer la fonction d’agrégation. *Scope* doit être une constante de type chaîne et ne peut pas être une expression. Si le paramètre *scope* n'est pas spécifié, l'étendue actuelle est utilisée.  
   
 ## <a name="return-type"></a>Type de retour  
  Le type de retour est déterminé par le fournisseur de données. Retourne `Nothing` si le fournisseur de données ne prend pas en charge cette fonction ou de données ne seront pas disponibles.  
@@ -71,7 +71,7 @@ Aggregate(expression, scope)
  Pour plus d’informations sur les agrégats récursifs, consultez [Création de groupes de hiérarchies récursives &#40;Générateur de rapports et SSRS&#41;](creating-recursive-hierarchy-groups-report-builder-and-ssrs.md).  
   
 ## <a name="comparing-the-aggregate-and-sum-functions"></a>Comparaison des fonctions Aggregate et Sum  
- Le `Aggregate` diffère des fonctions d’agrégation numériques comme `Sum` dans la mesure où le `Aggregate` fonction retourne une valeur calculée par l’extension de données fournisseur ou le traitement des données. Les fonctions d’agrégation numériques comme `Sum` retournent une valeur calculée par le processeur de rapports sur un jeu de données à partir du jeu de données est déterminée par le *étendue* paramètre. Pour plus d’informations, consultez les expressions d’agrégation répertoriées dans [Référence aux fonctions d’agrégation &#40;Générateur de rapports et SSRS&#41;](report-builder-functions-aggregate-functions-reference.md).  
+ Le `Aggregate` fonction diffère des fonctions d’agrégation numériques comme `Sum` car le `Aggregate` fonction retourne une valeur calculée par l’extension de fournisseur ou de traitement des données des données. Fonctions d’agrégation numériques comme `Sum` retournent une valeur qui est calculée par le processeur de rapports sur un jeu de données du jeu de données est déterminée par le *étendue* paramètre. Pour plus d’informations, consultez les expressions d’agrégation répertoriées dans [Référence aux fonctions d’agrégation &#40;Générateur de rapports et SSRS&#41;](report-builder-functions-aggregate-functions-reference.md).  
   
 ## <a name="example"></a>Exemple  
  L'exemple de code suivant affiche une expression qui récupère un agrégat de serveur pour le champ `LineTotal`. L'expression est ajoutée à une cellule d'une ligne qui appartient au groupe `GroupbyOrder`.  
@@ -81,9 +81,9 @@ Aggregate(expression, scope)
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Expression utilise des rapports de &#40;rapport Générateur et SSRS&#41;](expression-uses-in-reports-report-builder-and-ssrs.md)   
+ [Utilisation d’expressions dans les rapports &#40;Générateur de rapports et SSRS&#41;](expression-uses-in-reports-report-builder-and-ssrs.md)   
  [Exemples d’expressions &#40;Générateur de rapports et SSRS&#41;](expression-examples-report-builder-and-ssrs.md)   
  [Types de données dans les expressions &#40;Générateur de rapports et SSRS&#41;](expressions-report-builder-and-ssrs.md)   
- [Étendue des expressions pour les totaux, les agrégats et les Collections intégrées &#40;rapport Générateur et SSRS&#41;](expression-scope-for-totals-aggregates-and-built-in-collections.md)  
+ [Étendue des expressions pour les totaux, les agrégats et les Collections intégrées &#40;Générateur de rapports et SSRS&#41;](expression-scope-for-totals-aggregates-and-built-in-collections.md)  
   
   

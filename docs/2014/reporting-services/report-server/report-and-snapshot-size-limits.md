@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - large reports
 - maximum report size
@@ -20,13 +20,13 @@ ms.assetid: 1e3be259-d453-4802-b2f5-6b81ef607edf
 caps.latest.revision: 50
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 525f1af5c7ca1aadd909c306a3397134d9275a93
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 15925e061103c12f869dae722b1b5881f4146919
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36141965"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37159880"
 ---
 # <a name="report-and-snapshot-size-limits"></a>Limites de taille des instantanés et des rapports
   Les administrateurs qui gèrent un déploiement de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] peuvent utiliser les informations figurant dans cette rubrique pour comprendre les limites de taille lorsque le rapport est publié sur un serveur de rapports, rendu lors de l'exécution et enregistré dans le système de fichiers. Cette rubrique fournit également des conseils pratiques expliquant comment mesurer la taille d'une base de données de serveur de rapports, et elle décrit l'incidence de la taille des instantanés sur les performances des serveurs.  
@@ -38,7 +38,7 @@ ms.locfileid: "36141965"
   
  [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] impose une limite maximale aux fichiers publiés pour minimiser les attaques par déni de service lancées à l’encontre du serveur. L'augmentation de la valeur de la limite supérieure amoindrit une partie de la protection que cette limite fournit. Augmentez cette valeur uniquement si vous êtes certain que l'avantage de cette opération compense tout risque de sécurité éventuel.  
   
- N'oubliez pas que la valeur que vous définissez pour l'élément `maxRequestLength` doit être supérieure à la taille maximale réelle que vous souhaitez appliquer. Vous devez augmenter cette valeur afin de tenir compte de l'augmentation inévitable de la taille des requêtes HTTP qui se produit après que tous les paramètres ont été encapsulés dans une enveloppe SOAP, et l'encodage Base64 a été appliqué à certains paramètres, tels que le paramètre Définition des méthodes <xref:ReportService2010.ReportingService2010.CreateReportEditSession%2A> et <xref:ReportService2010.ReportingService2010.CreateCatalogItem%2A>. L'encodage Base64 augmente la taille des données d'origine d'environ 33 %. Par conséquent, la valeur que vous spécifiez pour le `maxRequestLength` élément doit être environ 33 % supérieure à la taille réelle utilisée par l’élément. Par exemple, si vous spécifiez une valeur de 64 Mo pour `maxRequestLength`, la taille maximale des fichiers de rapport publiés sur le serveur de rapports sera d'environ 48 Mo.  
+ N'oubliez pas que la valeur que vous définissez pour l'élément `maxRequestLength` doit être supérieure à la taille maximale réelle que vous souhaitez appliquer. Vous devez augmenter cette valeur afin de tenir compte de l'augmentation inévitable de la taille des requêtes HTTP qui se produit après que tous les paramètres ont été encapsulés dans une enveloppe SOAP, et l'encodage Base64 a été appliqué à certains paramètres, tels que le paramètre Définition des méthodes <xref:ReportService2010.ReportingService2010.CreateReportEditSession%2A> et <xref:ReportService2010.ReportingService2010.CreateCatalogItem%2A>. L'encodage Base64 augmente la taille des données d'origine d'environ 33 %. Par conséquent, la valeur spécifiée pour le `maxRequestLength` élément doit être environ 33 % supérieure à la taille réelle utilisée par l’élément. Par exemple, si vous spécifiez une valeur de 64 Mo pour `maxRequestLength`, la taille maximale des fichiers de rapport publiés sur le serveur de rapports sera d'environ 48 Mo.  
   
 ## <a name="report-size-in-memory"></a>Taille de rapport en mémoire  
  Lorsque vous exécutez un rapport, la taille du rapport est égale à la quantité de données qui est retournée dans le rapport plus la taille du flux de sortie. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] n'impose pas de limite maximale sur la taille d'un rapport rendu. La mémoire système détermine la limite supérieure en matière de taille (par défaut, un serveur de rapports utilise toute la mémoire configurée disponible lors du rendu d'un rapport), mais vous pouvez spécifier des paramètres de configuration pour définir des seuils de mémoire et des stratégies de gestion de mémoire. Pour plus d’informations, consultez [Configurer la mémoire disponible pour les applications du serveur de rapports](../report-server/configure-available-memory-for-report-server-applications.md).  
@@ -49,11 +49,11 @@ ms.locfileid: "36141965"
   
 -   Les formats PDF, Excel, TIFF, XML et CSV traitent tout le rapport en mémoire avant de l'afficher aux yeux de l'utilisateur.  
   
- Pour mesurer la taille d'un rapport rendu, vous pouvez afficher le journal d'exécution du rapport. Pour plus d’informations, consultez [journal de l’exécution du serveur de rapports et vue ExecutionLog3](report-server-executionlog-and-the-executionlog3-view.md).  
+ Pour mesurer la taille d'un rapport rendu, vous pouvez afficher le journal d'exécution du rapport. Pour plus d’informations, consultez [journal de l’exécution de serveur de rapports et vue ExecutionLog3](report-server-executionlog-and-the-executionlog3-view.md).  
   
  Pour calculer la taille d'un rapport rendu sur disque, exportez-le vers le système de fichiers puis enregistrez-le (le fichier enregistré inclut des informations de mise en forme des données et du rapport).  
   
- La seule limite physique sur la taille du rapport s'applique lors du rendu au format Excel. Les feuilles de calcul ne peuvent pas contenir plus de 65 536 lignes ou 256 colonnes. D'autres formats de rendu ne sont pas soumis à ces limites, par conséquent, la taille est limitée uniquement par la quantité de ressources sur votre serveur. Pour plus d’informations sur les limites des fichiers Excel, consultez [exporter un rapport dans un autre Type de fichier &#40;le Générateur de rapports et SSRS&#41;](../export-a-report-as-another-file-type-report-builder-and-ssrs.md).  
+ La seule limite physique sur la taille du rapport s'applique lors du rendu au format Excel. Les feuilles de calcul ne peuvent pas contenir plus de 65 536 lignes ou 256 colonnes. D'autres formats de rendu ne sont pas soumis à ces limites, par conséquent, la taille est limitée uniquement par la quantité de ressources sur votre serveur. Pour plus d’informations sur les limites de fichier Excel, consultez [exporter un rapport dans un autre Type de fichier &#40;Générateur de rapports et SSRS&#41;](../export-a-report-as-another-file-type-report-builder-and-ssrs.md).  
   
 > [!NOTE]  
 >  Le traitement et le rendu d'un rapport sont opérés en mémoire. Si vous possédez des rapports volumineux ou un grand nombre d'utilisateurs, veillez à réaliser une planification de capacité pour vous assurer que vos utilisateurs sont satisfaits des performances de votre déploiement de serveur de rapports. Pour plus d'informations sur les outils et instructions disponibles, consultez les publications suivantes sur MSDN : [Planning for Scalability and Performance with Reporting Services](http://go.microsoft.com/fwlink/?LinkID=70650) et [Using Visual Studio 2005 to Perform Load Testing on a SQL Server 2005 Reporting Services Report Server](http://go.microsoft.com/fwlink/?LinkID=77519)(en anglais).  
@@ -84,8 +84,8 @@ EXEC sp_spaceused
  La quantité d'instantanés qui est stockée dans une base de données de serveur de rapports n'est pas, en soi, un facteur de performances. Vous pouvez stocker un grand nombre d'instantanés sans aucune incidence sur les performances. Vous pouvez conserver les instantanés indéfiniment. Sachez cependant que l'historique de rapport est configurable. Si un administrateur de serveur de rapports abaisse la limite de l'historique de rapport, vous risquez de perdre des rapports que vous comptiez garder. Si vous supprimez le rapport, tout l'historique est également supprimé.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Définir les propriétés de traitement des rapports](set-report-processing-properties.md)   
- [Base de données du serveur de rapports &#40;SSRS en Mode natif&#41;](report-server-database-ssrs-native-mode.md)   
+ [Définir les propriétés de traitement de rapport](set-report-processing-properties.md)   
+ [Serveur de base de données rapports &#40;SSRS en Mode natif&#41;](report-server-database-ssrs-native-mode.md)   
  [Traiter les rapports volumineux](process-large-reports.md)  
   
   

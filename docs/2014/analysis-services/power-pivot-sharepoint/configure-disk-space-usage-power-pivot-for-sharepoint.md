@@ -1,5 +1,5 @@
 ---
-title: Configurer l’utilisation de l’espace disque (PowerPivot pour SharePoint) | Documents Microsoft
+title: Configurer l’utilisation de l’espace disque (PowerPivot pour SharePoint) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 201a3fda-f162-45d7-bf39-74dcb92fd0e6
 caps.latest.revision: 16
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 76f4688acd348f8ee2bcbe87d8832f5f770ba4b5
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 538efc15ea53c9c7666589c71c039ce21fa21b2e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36141654"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37151490"
 ---
 # <a name="configure-disk-space-usage-powerpivot-for-sharepoint"></a>Configurer l'utilisation de l'espace disque (PowerPivot pour SharePoint)
   Un déploiement PowerPivot pour SharePoint utilise l'espace disque de l'ordinateur hôte pour mettre en cache des bases de données PowerPivot afin d'accélérer les rechargements. Chaque base de données PowerPivot chargée en mémoire est d'abord mise en cache sur disque afin qu'elle puisse être rechargée rapidement par la suite pour de nouvelles interrogations de données. Par défaut, PowerPivot pour SharePoint utilise tout l'espace disque disponible pour mettre en cache ses bases de données, mais peut modifier ce comportement en définissant des propriétés qui limitent la quantité d'espace disque utilisée.  
@@ -56,7 +56,7 @@ ms.locfileid: "36141654"
   
 -   [Quelles sont les nouveautés dans le Gestionnaire de ressources du serveur de fichiers](http://technet.microsoft.com/library/hh831746.aspx) (http://technet.microsoft.com/library/hh831746.aspx).  
   
--   [Guide pas à pas de gestionnaire de ressources de serveur de fichiers pour Windows Server 2008 R2](http://go.microsoft.com/fwlink/?LinkID=204875) (http://go.microsoft.com/fwlink/?LinkID=204875).  
+-   [Guide pas à pas de File Server Resource Manager pour Windows Server 2008 R2](http://go.microsoft.com/fwlink/?LinkID=204875) (http://go.microsoft.com/fwlink/?LinkID=204875).  
   
 -   [Définition des alertes d’espace disque faible sur Windows Server 2008](http://go.microsoft.com/fwlink/?LinkID=204870) ( http://go.microsoft.com/fwlink/?LinkID=204870).  
   
@@ -95,9 +95,9 @@ ms.locfileid: "36141654"
 5.  Cliquez sur **OK** pour enregistrer vos modifications.  
   
 ## <a name="next-steps"></a>Étapes suivantes  
- Une installation PowerPivot pour SharePoint fournit des règles d'intégrité afin que vous puissiez prendre des actions correctives lorsque des problèmes d'intégrité du serveur, de configuration ou de disponibilité sont détectés. Certaines de ces règles utilisent des paramètres de configuration pour déterminer les conditions sous lesquelles les règles d'intégrité sont déclenchées. Si vous administrez activement les performances du serveur, vous pouvez également consulter ces paramètres pour vous assurer que les valeurs par défaut utilisées sont adaptées à votre système. Pour plus d’informations, consultez [configurer des règles de contrôle d’intégrité PowerPivot -](configure-power-pivot-health-rules.md).  
+ Une installation PowerPivot pour SharePoint fournit des règles d'intégrité afin que vous puissiez prendre des actions correctives lorsque des problèmes d'intégrité du serveur, de configuration ou de disponibilité sont détectés. Certaines de ces règles utilisent des paramètres de configuration pour déterminer les conditions sous lesquelles les règles d'intégrité sont déclenchées. Si vous administrez activement les performances du serveur, vous pouvez également consulter ces paramètres pour vous assurer que les valeurs par défaut utilisées sont adaptées à votre système. Pour plus d’informations, consultez [configurer des règles d’intégrité de PowerPivot -](configure-power-pivot-health-rules.md).  
   
 ## <a name="see-also"></a>Voir aussi  
- [Administration de serveur PowerPivot et de Configuration dans l’Administration centrale](power-pivot-server-administration-and-configuration-in-central-administration.md)  
+ [Administration et configuration d’un serveur PowerPivot dans l’Administration centrale](power-pivot-server-administration-and-configuration-in-central-administration.md)  
   
   

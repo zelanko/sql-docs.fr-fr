@@ -1,5 +1,5 @@
 ---
-title: Élément QueryNotification (ASSL) | Documents Microsoft
+title: Querynotification, élément (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - QueryNotification element
 ms.assetid: 0ee06730-81ff-4913-96e6-f39b6f181650
 caps.latest.revision: 13
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 3c9bc13772d549d6ade640af4c3f57ac52efbbec
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: d7d31cef8ee52964bf9aeb0c7c489f2831f5cb80
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36143109"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37153300"
 ---
 # <a name="querynotification-element-assl"></a>Élément QueryNotification (ASSL)
   Contient des informations pour l’élément [ProactiveCaching](proactivecaching-element-assl.md) à propos de la requête à exécuter pour déterminer si une source de données a été modifiée.  

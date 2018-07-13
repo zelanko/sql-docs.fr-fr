@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.deploymentwizard.deploymentsettings.f1
 - sql12.swb.deploymentwizard.progress.f1
@@ -43,18 +43,18 @@ helpviewer_keywords:
 - Azure VM
 ms.assetid: 5e82e66a-262e-4d4f-aa89-39cb62696d06
 caps.latest.revision: 24
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 976bd24095536f6ae13cf40fab8129154b14864b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: dc5399a395a53f2e37103b5516b0e707eb8c0335
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36142736"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37158510"
 ---
 # <a name="deploy-a-sql-server-database-to-a-microsoft-azure-virtual-machine"></a>Déployer une base de données SQL Server sur une machine virtuelle Microsoft Azure
-  Utilisez le **déployer une base de données SQL Server à un ordinateur virtuel Windows Azure** Assistant pour déployer une base de données à partir d’une instance de la [!INCLUDE[ssDE](../../includes/ssde-md.md)] à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dans un ordinateur virtuel Windows Azure (VM). L'Assistant utilise une sauvegarde complète de la base de données ; par conséquent, il copie toujours le schéma complet de la base de données et les données d'une base de données utilisateur SQL Server. L'Assistant effectue également toutes les configurations de machine virtuelle Windows Azure pour vous ; par conséquent, aucune configuration préalable de machine virtuelle n'est requise.  
+  Utilisez le **déployer une base de données SQL Server sur une machine virtuelle Windows Azure** Assistant pour déployer une base de données à partir d’une instance de la [!INCLUDE[ssDE](../../includes/ssde-md.md)] à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dans une Machine virtuelle Windows Azure (VM). L'Assistant utilise une sauvegarde complète de la base de données ; par conséquent, il copie toujours le schéma complet de la base de données et les données d'une base de données utilisateur SQL Server. L'Assistant effectue également toutes les configurations de machine virtuelle Windows Azure pour vous ; par conséquent, aucune configuration préalable de machine virtuelle n'est requise.  
   
  Vous ne pouvez pas utiliser l'Assistant pour les sauvegardes différentielles, car il ne remplace pas une base de données existante portant le même nom de base de données. Pour remplacer une base de données existante sur la machine virtuelle, vous devez d'abord supprimer la base de données existante ou modifier le nom de la base de données. S'il existe un conflit de noms entre le nom de la base de données d'une opération de déploiement en cours et d'une base de données existante sur la machine virtuelle, l'Assistant suggère un nom de base de données avec suffixe pour la base de données en cours pour vous permettre d'effectuer cette opération.  
   
@@ -88,7 +88,7 @@ ms.locfileid: "36142736"
   
 -   Informations d'identifications avec privilèges d'opérateur Backup sur la base de données que vous prévoyez de déployer, à partir de l'instance source de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
- Pour plus d’informations sur l’exécution de SQL Server dans des machines virtuelles Windows Azure, consultez [se préparer à migrer vers SQL Server dans Windows Azure Virtual Machines](http://msdn.microsoft.com/library/dn133142.aspx).  
+ Pour plus d’informations sur l’exécution de SQL Server dans les machines virtuelles Windows Azure, consultez [se préparer à migrer vers SQL Server dans les Machines virtuelles Windows Azure](http://msdn.microsoft.com/library/dn133142.aspx).  
   
  Sur les ordinateurs qui exécutent des systèmes d'exploitation Windows Server, vous devez utiliser les paramètres de configuration suivants pour exécuter l'Assistant :  
   
@@ -210,16 +210,16 @@ ms.locfileid: "36142736"
   
 -   Dans le champ **Autres paramètres** , spécifiez un dossier partagé qui sera accessible au service d'ordinateur virtuel Windows Azure.  
   
-##  <a name="Azure_sign-in"></a> Windows Azure Sign-in  
+##  <a name="Azure_sign-in"></a> Windows authentification dans Azure  
  Utilisez cette page pour vous connecter à Windows Azure et fournir le certificat de gestion ou publier des informations de profil.  
   
  **Options**  
   
--   **Certificat de gestion** : utilisez cette option pour spécifier un certificat dans le magasin de certificats local qui correspond au certificat de gestion de Windows Azure.  
+-   **Certificat de gestion** – Utilisez cette option pour spécifier un certificat dans le magasin de certificats local qui correspond au certificat de gestion de Windows Azure.  
   
 -   **Profil de publication** – Utilisez cette option si vous disposez déjà d’un profil de publication téléchargé sur votre ordinateur.  
   
--   **Se connecter** – Utilisez cette option pour vous connecter à Windows Azure à l’aide d’un Microsoft compte – par exemple, un identifiant Live ID ou un compte Hotmail – pour générer et télécharger un nouveau certificat de gestion. Notez que le nombre de certificats par abonnement est limité.  
+-   **Se connecter** – Utilisez cette option pour vous connecter à Windows Azure à l’aide d’un Microsoft compte – par exemple, un Live ID ou un compte Hotmail – pour générer et télécharger un nouveau certificat de gestion. Notez que le nombre de certificats par abonnement est limité.  
   
 -   **Abonnement** – sélectionnez, tapez ou collez votre ID d’abonnement Windows Azure qui correspond au certificat de gestion dans le magasin de certificats local ou un profil de publication.  
   

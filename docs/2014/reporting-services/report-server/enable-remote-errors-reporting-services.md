@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - remote data source [Reporting Services]
 - EnableRemoteError server property
@@ -16,13 +16,13 @@ ms.assetid: 5f05022b-d557-43e0-b50a-f5e2a1846b83
 caps.latest.revision: 12
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 14586062cadbdf08646ff7a6080b2849d2900d7d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 78a1d77440242eb96ca3ced08518829b2913a3a1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36141711"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37159870"
 ---
 # <a name="enable-remote-errors-reporting-services"></a>Activer les erreurs distantes (Reporting Services)
   Vous pouvez définir des propriétés de serveur sur un serveur de rapports [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] de façon à retourner des informations supplémentaires concernant les conditions d'erreur qui se produisent sur des serveurs distants. Si un message d'erreur contient le texte « Pour obtenir plus d'informations sur cette erreur, accédez au serveur de rapports sur le serveur local ou activez les erreurs distantes », vous pouvez définir la propriété `EnableRemoteErrors` de façon à accéder à des informations supplémentaires qui peuvent vous aider à résoudre le problème. Pour plus d’informations, consultez [Report Server System Properties](../report-server-web-service/net-framework/reporting-services-properties-report-server-system-properties.md) dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] la documentation en ligne.  
@@ -115,6 +115,6 @@ ms.locfileid: "36141711"
 ##  <a name="bkmk_ConfigurationInfo"></a> Modification de la table ConfigurationInfo (mode natif)  
   
 1.  > [!NOTE]  
-    >  Vous pouvez modifier le **ConfigurationInfo** table dans la base de données du serveur de rapports pour définir `EnableRemoteErrors` à `True`, mais si le serveur de rapports est activement utilisé, vous devez utiliser SQL Server Management Studio ou un script pour modifier les paramètres. Si vous modifiez le paramètre dans la base de données, vous devez redémarrer le service [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] avant que les modifications entrent en vigueur.  
+    >  Vous pouvez modifier le **ConfigurationInfo** table dans la base de données du serveur de rapports pour définir `EnableRemoteErrors` à `True`, mais si le serveur de rapports est utilisé activement, vous devez utiliser SQL Server Management Studio ou un script pour modifier les paramètres. Si vous modifiez le paramètre dans la base de données, vous devez redémarrer le service [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] avant que les modifications entrent en vigueur.  
   
   

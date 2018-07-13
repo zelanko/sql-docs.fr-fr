@@ -1,5 +1,5 @@
 ---
-title: Élément SPID (XMLA) | Documents Microsoft
+title: Élément SPID (XMLA) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -24,15 +24,15 @@ helpviewer_keywords:
 - SPID element
 ms.assetid: c4a54dcb-a0cd-4255-9e0f-a34eb990854f
 caps.latest.revision: 15
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: d203225045314115604a8b99d82ab291c5960376
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: 27244dab841ac4793d66c6b177d5382ca7cdc7a7
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36139881"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37167020"
 ---
 # <a name="spid-element-xmla"></a>Élément SPID (XMLA)
   Identifie un identificateur de processus (SPID) de serveur actif sur lequel exécuter le parent [Annuler](../xml-elements-commands/cancel-element-xmla.md) élément.  

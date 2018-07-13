@@ -1,5 +1,5 @@
 ---
-title: Les Variables de Table optimisée en mémoire | Documents Microsoft
+title: Variables de Table optimisé en mémoire | Microsoft Docs
 ms.custom: ''
 ms.date: 07/14/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - database-engine-imoltp
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: bd102e95-53e2-4da6-9b8b-0e4f02d286d3
 caps.latest.revision: 24
 author: stevestein
 ms.author: sstein
-manager: jhubbard
-ms.openlocfilehash: f8b24a1ea77e579fcde558e4f58e3448efc4aed1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: b1ec91cf243fbaa131ca85e7585e448ddb93f36f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36143958"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37157070"
 ---
 # <a name="memory-optimized-table-variables"></a>Variables de table mémoire optimisée
-  En outre, pour les tables mémoire optimisées (pour un accès efficace aux données) et en mode natif des procédures stockées (pour le traitement des requêtes efficaces et l’exécution de la logique métier) compilées [!INCLUDE[hek_2](../includes/hek-2-md.md)] introduit un troisième type d’objet : le type de table mémoire optimisée. Une variable de table créée avec un type de table mémoire optimisée est une variable de table mémoire optimisée.  
+  En outre, pour les tables mémoire optimisées (pour un accès efficace aux données) et en mode natif des procédures stockées (pour le traitement des requêtes efficaces et l’exécution de logique métier) compilées [!INCLUDE[hek_2](../includes/hek-2-md.md)] introduit un troisième type d’objet : le type de table mémoire optimisée. Une variable de table créée avec un type de table mémoire optimisée est une variable de table mémoire optimisée.  
   
  Les variables de table mémoire optimisée offrent les avantages suivants par rapport aux variables de table sur disque :  
   

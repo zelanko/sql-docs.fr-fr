@@ -1,5 +1,5 @@
 ---
-title: Définir la Conversion monétaire (Assistant Business Intelligence) | Documents Microsoft
+title: Définir la Conversion monétaire (Assistant Business Intelligence) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.biwizard.currencyconversion.existingscriptpage.f1
 ms.assetid: 37dd65b7-9d8d-44ad-b316-96a92c622472
 caps.latest.revision: 21
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: ec54aa4e66cbcd9872dbce03bdb3e7c601c84980
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: ce1916bd988d23dfd33f689f189436a50408a207
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36141661"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37159510"
 ---
 # <a name="define-currency-conversion-business-intelligence-wizard"></a>Définir la conversion monétaire (Assistant Business Intelligence)
   La page **Définir la conversion monétaire** permet d’examiner le script MDX (Multidimensional Expressions) qui contient la fonctionnalité de conversion monétaire générée par l’Assistant Business Intelligence. Vous pouvez utiliser ce script MDX généré par l'Assistant pour remplacer ou pour ajouter la fonctionnalité de conversion monétaire précédemment définie dans le script MDX du cube.  
@@ -55,7 +55,7 @@ ms.locfileid: "36141661"
  Sélectionne la section du script MDX existant qui contient la fonctionnalité de conversion monétaire précédemment définie à remplacer ou ajouter.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Aide F1 l’Assistant Business Intelligence](business-intelligence-wizard-f1-help.md)   
+ [L’Assistant Business Intelligence F1](business-intelligence-wizard-f1-help.md)   
  [Concepteur de cube &#40;Analysis Services - données multidimensionnelles&#41;](cube-designer-analysis-services-multidimensional-data.md)   
  [Concepteur de dimensions &#40;Analysis Services - données multidimensionnelles&#41;](dimension-designer-analysis-services-multidimensional-data.md)  
   

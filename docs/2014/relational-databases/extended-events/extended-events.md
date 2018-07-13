@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - extended events [SQL Server]
 - xe
 ms.assetid: bf3b98a6-51ed-4f2d-9c26-92f07f1fa947
 caps.latest.revision: 43
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: c95d2988eb0e1415355fdd86f37f9a580a5c81ab
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: 9fe49812e889cf360bce9d853b9bc9160da0c4ef
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36143056"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37151110"
 ---
 # <a name="extended-events"></a>Événements étendus
   Les événements étendus [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] bénéficient d'une architecture extrêmement évolutive et configurable qui permet aux utilisateurs de recueillir le maximum ou le minimum d'informations nécessaires pour le dépannage ou l'identification d'un problème de performance.  
@@ -86,11 +86,11 @@ ms.locfileid: "36143056"
 |----------------------|-----------|  
 |Utilisez l' **Explorateur d'objets** pour gérer les sessions d'événements.|[Gérer les sessions d’événements dans l’Explorateur d’objets](../../ssms/object/object-explorer.md)|  
 |Explique comment créer une session d'événements étendus.|[Créer une session d’événements étendus](../../database-engine/create-an-extended-events-session.md)|  
-|Explique comment afficher et actualiser des données cibles.|[Afficher les données de Session événements](../../database-engine/view-event-session-data.md)|  
+|Explique comment afficher et actualiser des données cibles.|[Afficher des données de session d’événements](../../database-engine/view-event-session-data.md)|  
 |Explique comment utiliser des outils d'événements étendus pour créer et gérer vos sessions d'événements étendus [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|[Outils associés aux événements étendus](extended-events-tools.md)|  
 |Explique comment altérer une session d'événements étendus.|[Modifier une session d’événements étendus](alter-an-extended-events-session.md)|  
 |Explique comment copier ou exporter des données cibles.|[Copier ou exporter des données cibles](../../database-engine/copy-or-export-target-data.md)|  
-|Explique comment modifier votre vue des résultats de trace pour personnaliser la façon dont vous souhaitez analyser vos données.|[Modifier la vue des résultats de Trace](../../database-engine/modify-the-trace-results-view.md)|  
+|Explique comment modifier votre vue des résultats de trace pour personnaliser la façon dont vous souhaitez analyser vos données.|[Modifier la vue des résultats de trace](../../database-engine/modify-the-trace-results-view.md)|  
 |Explique comment obtenir des informations sur les champs associés aux événements.|[Obtenir les champs pour tous les événements](../../database-engine/get-the-fields-for-all-events.md)|  
 |Explique comment déterminer quels sont les événements disponibles dans les packages enregistrés.|[Consulter les événements pour les packages enregistrés](../../database-engine/view-the-events-for-registered-packages.md)|  
 |Explique comment déterminer quelles cibles d'événements étendus sont disponibles dans les packages enregistrés.|[Afficher les cibles d’événements étendus pour les packages enregistrés](../../database-engine/view-the-extended-events-targets-for-registered-packages.md)|  

@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Virtual Memory Manager
 - max server memory option
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - memory [SQL Server], servers
 ms.assetid: 29ce373e-18f8-46ff-aea6-15bbb10fb9c2
 caps.latest.revision: 76
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 5ddbf4ccd432a7ba7ff9f4d946572dfcc6500dbc
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 4ae726d4a8706b5fbb04c8d10c8a14c3aeeb0790
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36141032"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37160960"
 ---
 # <a name="server-memory-server-configuration-options"></a>server memory (options de configuration du serveur)
   Utilisez les deux options de mémoire du serveur, **min server memory** et **max server memory**, pour reconfigurer la quantité de mémoire (en mégaoctets) gérée par le Gestionnaire de mémoire de SQL Server pour un processus SQL Server utilisé par une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -87,14 +87,14 @@ ms.locfileid: "36141032"
 3.  Si l'option **Maximiser le débit des données pour les applications réseau** est sélectionnée, choisissez une autre option et cliquez sur **OK**. Fermez ensuite les boîtes de dialogue restantes.  
   
 ## <a name="lock-pages-in-memory"></a>Verrouiller les pages en mémoire  
- Cette stratégie Windows détermine quels comptes peuvent utiliser un processus destiné à conserver les données en mémoire physique pour éviter leur pagination en mémoire virtuelle sur le disque. Le verrouillage des pages en mémoire peut permettre de conserver sa réactivité au serveur lors de la pagination de la mémoire sur disque. Le serveur SQL Server **verrouiller les Pages en mémoire** option a la valeur ON dans des instances 32 bits et 64 bits de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] éditions Standard et supérieures lorsque le compte avec des privilèges pour exécuter sqlservr.exe a reçu les fenêtres « Locked Pages Droit d’utilisateur de « mémoire (LPIM). Dans les versions antérieures de SQL Server, la définition de l'option de verrouillage des pages pour une instance 32 bits de SQL Server exige que le compte avec les privilèges nécessaires pour exécuter sqlservr.exe ait le droit d'utilisateur LPIM et que l'option de configuration « awe_enabled » ait la valeur ON.  
+ Cette stratégie Windows détermine quels comptes peuvent utiliser un processus destiné à conserver les données en mémoire physique pour éviter leur pagination en mémoire virtuelle sur le disque. Le verrouillage des pages en mémoire peut permettre de conserver sa réactivité au serveur lors de la pagination de la mémoire sur disque. Le serveur SQL Server **verrouiller les Pages en mémoire** option est définie sur ON dans des instances 32 bits et 64 bits de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] éditions Standard et supérieures quand le compte avec des privilèges pour exécuter sqlservr.exe a reçu le Windows « Pages verrouillé dans Droit d’utilisateur de « mémoire (LPIM). Dans les versions antérieures de SQL Server, la définition de l'option de verrouillage des pages pour une instance 32 bits de SQL Server exige que le compte avec les privilèges nécessaires pour exécuter sqlservr.exe ait le droit d'utilisateur LPIM et que l'option de configuration « awe_enabled » ait la valeur ON.  
   
  Pour désactiver l'option **Verrouiller les pages en mémoire** pour [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], supprimez le droit d'utilisateur de verrouillage des pages en mémoire pour le compte de démarrage de SQL Server.  
   
 ### <a name="to-disable-lock-pages-in-memory"></a>Pour désactiver Verrouiller les pages en mémoire  
- **Pour désactiver le lock pages in memory (option) :**  
+ **Pour désactiver l’option lock pages in mémoire :**  
   
-1.  Dans le menu **Démarrer** , cliquez sur **Exécuter**. Dans le **ouvrir** , tapez `gpedit.msc`.  
+1.  Dans le menu **Démarrer** , cliquez sur **Exécuter**. Dans le **Open** , tapez `gpedit.msc`.  
   
      La boîte de dialogue **Stratégie de groupe** s'affiche.  
   
@@ -136,11 +136,11 @@ ms.locfileid: "36141032"
   
 ||32 bits|64 bits|  
 |-|-------------|-------------|  
-|Mémoire conventionnelle|Jusqu'à la limite d'espace d'adressage virtuel de processus dans toutes les éditions de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] :<br /><br /> 2 Go<br /><br /> 3 Go avec **/3 gb** paramètre * de démarrage<br /><br /> 4 Go sur WOW64\*\*|Jusqu'à la limite d'espace d'adressage virtuel de processus dans toutes les éditions de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] :<br /><br /> 8 To sur l'architecture x64|  
+|Mémoire conventionnelle|Jusqu'à la limite d'espace d'adressage virtuel de processus dans toutes les éditions de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] :<br /><br /> 2 Go<br /><br /> 3 Go avec **/3 gb** démarrage paramètre *<br /><br /> 4 Go sur WOW64\*\*|Jusqu'à la limite d'espace d'adressage virtuel de processus dans toutes les éditions de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] :<br /><br /> 8 To sur l'architecture x64|  
   
  ***/3gb** est un paramètre d’amorçage de système d’exploitation. Pour plus d'informations, consultez [MSDN Library](http://go.microsoft.com/fwlink/?LinkID=10257&clcid=0x409)(en anglais).  
   
- ** WOW64 (Windows on Windows 64) est un mode dans les 32 bits [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] s’exécute sur un système d’exploitation de 64 bits. Pour plus d'informations, consultez [MSDN Library](http://go.microsoft.com/fwlink/?LinkID=10257&clcid=0x409)(en anglais).  
+ ** WOW64 (Windows on Windows 64) est un mode dans les 32 bits [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] s’exécute sur un système d’exploitation 64 bits. Pour plus d'informations, consultez [MSDN Library](http://go.microsoft.com/fwlink/?LinkID=10257&clcid=0x409)(en anglais).  
   
 ## <a name="examples"></a>Exemples  
   

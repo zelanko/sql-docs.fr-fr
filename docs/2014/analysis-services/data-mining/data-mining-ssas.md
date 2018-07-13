@@ -1,5 +1,5 @@
 ---
-title: Exploration de données (SSAS) | Documents Microsoft
+title: Exploration de données (SSAS) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - data mining [Analysis Services], about data mining
 ms.assetid: b1c912da-72f6-4d96-89c8-55a2c4f19e88
 caps.latest.revision: 28
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: b118f03580aeb0053203cd2535bafecd1649ccb4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 6ff1d223cee1ce86851b3021bad15582db156639
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36142381"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37163430"
 ---
 # <a name="data-mining-ssas"></a>Data Mining (SSAS)
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] fournit une plateforme intégrée pour les solutions qui intègrent l'exploration de données. Vous pouvez utiliser des données de cube ou relationnelles pour créer des solutions décisionnelles avec des analyses prévisionnelles.  
@@ -53,15 +53,15 @@ ms.locfileid: "36142381"
 ## <a name="in-this-section"></a>Dans cette section  
  Les rubriques de cette section présentent les principales fonctionnalités de l'exploration de données et des tâches associées de SQL Server.  
   
--   [Concepts d’exploration de données](data-mining-concepts.md)  
+-   [Concepts de l’exploration de données](data-mining-concepts.md)  
   
 -   [Algorithmes d’exploration de données &#40;Analysis Services - Exploration de données&#41;](data-mining-algorithms-analysis-services-data-mining.md)  
   
 -   [Structures d’exploration de données &#40;Analysis Services - Exploration de données&#41;](mining-structures-analysis-services-data-mining.md)  
   
--   [Les modèles d’exploration de données &#40;Analysis Services - Exploration de données&#41;](mining-models-analysis-services-data-mining.md)  
+-   [Modèles d’exploration de données &#40;Analysis Services - Exploration de données&#41;](mining-models-analysis-services-data-mining.md)  
   
--   [Test et Validation &#40;d’exploration de données&#41;](testing-and-validation-data-mining.md)  
+-   [Test et Validation &#40;exploration de données&#41;](testing-and-validation-data-mining.md)  
   
 -   [Requêtes d’exploration de données](data-mining-queries.md)  
   
@@ -71,6 +71,6 @@ ms.locfileid: "36142381"
   
 -   [Architecture d’exploration de données](data-mining-architecture.md)  
   
--   [Vue d’ensemble de la sécurité &#40;d’exploration de données&#41;](security-overview-data-mining.md)  
+-   [Vue d’ensemble de la sécurité &#40;exploration de données&#41;](security-overview-data-mining.md)  
   
   

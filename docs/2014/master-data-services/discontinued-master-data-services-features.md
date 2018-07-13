@@ -1,5 +1,5 @@
 ---
-title: Fonctionnalités de Master Data Services dans SQL Server 2014 supprimées | Documents Microsoft
+title: Master Data Services fonctionnalités abandonnées dans SQL Server 2014 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 3236cce0-cfd9-43f8-8be3-e8c8dff8f162
 caps.latest.revision: 12
-author: douglaslM
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 46f5d4de97af6822ba110fe35e81df2d13a526ee
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: f2e9a15b4a0f1441d63ab39a4b65861fcfef099e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36140996"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37167050"
 ---
 # <a name="discontinued-master-data-services-features-in-sql-server-2014"></a>Fonctionnalités Master Data Services supprimées dans SQL Server 2014
   Cette rubrique décrit les fonctionnalités de [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] qui ne sont plus disponibles dans [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
@@ -32,11 +32,11 @@ ms.locfileid: "36140996"
 ### <a name="security"></a>Sécurité  
  Pour faciliter la sécurité d'attribution, vous ne pouvez plus affecter des autorisations d'objet de modèle aux objets de hiérarchie dérivée, de hiérarchie explicite et de groupe d'attributs.  
   
--   Les autorisations de hiérarchie dérivée sont désormais basées sur le modèle. Par exemple, si vous souhaitez un utilisateur est autorisé à une hiérarchie dérivée, vous devez attribuer **mise à jour** sur l’objet modèle. Vous pouvez affecter **Deny** accès à toutes les entités que vous ne souhaitez pas que l’utilisateur ait accès.  
+-   Les autorisations de hiérarchie dérivée sont désormais basées sur le modèle. Par exemple, si vous souhaitez un utilisateur soit autorisé à une hiérarchie dérivée, vous devez affecter **mise à jour** sur l’objet modèle. Vous pouvez alors assigner **Deny** accès à toutes les entités vous ne souhaitez pas que l’utilisateur ait accès.  
   
--   Les autorisations de hiérarchie explicite sont maintenant basées sur l'entité. Par exemple, si l’utilisateur a **mise à jour** des autorisations à une entité de compte, puis toutes les hiérarchies explicites pour l’entité seront mises à jour.  
+-   Les autorisations de hiérarchie explicite sont maintenant basées sur l'entité. Par exemple, si l’utilisateur a **mise à jour** autorisations à une entité de compte, puis toutes les hiérarchies explicites pour l’entité seront mises à jour.  
   
--   Autorisations de groupe d’attribut n’est plus peuvent être attribuées dans le **autorisations d’accès** zone fonctionnelle. Au lieu de cela, dans le **Administration système** zone fonctionnelle dans laquelle les groupes d’attributs sont créés, les utilisateurs et groupes peuvent être donnés **mise à jour** autorisation aux groupes d’attributs. **En lecture seule** autorisation aux groupes d’attributs n’est plus disponible.  
+-   Autorisations de groupe d’attribut n’est plus peuvent être assignées dans le **autorisations d’accès** zone fonctionnelle. Au lieu de cela, dans le **Administration système** zone fonctionnelle où les groupes d’attributs sont créés, les utilisateurs et groupes peuvent être données **mise à jour** autorisation aux groupes d’attributs. **En lecture seule** autorisation aux groupes d’attributs n’est plus disponible.  
   
 ### <a name="staging-process"></a>Processus de site  
  Vous ne pouvez pas utiliser le nouveau processus de site pour effectuer les opérations suivantes :  
@@ -62,9 +62,9 @@ ms.locfileid: "36140996"
  Si vous possédez un package de déploiement de modèle [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] qui contient une règle de ce type, lorsque vous mettez à niveau la base de données vers [!INCLUDE[ssSQL11](../includes/sssql11-md.md)], la règle d'entreprise est exclue.  
   
 ### <a name="bulk-updates-and-exporting"></a>Mises à jour et exporations en bloc  
- Dans l'application Web [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)], vous ne pouvez plus mettre à jour les valeurs d'attribut de plusieurs membres en bloc. Pour, les mises à jour en bloc, utilisez le processus de site ou le [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] [!INCLUDE[ssMDSXLS](../includes/ssmdsxls-md.md)].  
+ Dans l'application Web [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)], vous ne pouvez plus mettre à jour les valeurs d'attribut de plusieurs membres en bloc. Pour effectuer des mises à jour en bloc, utilisez le processus de site ou le [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] [!INCLUDE[ssMDSXLS](../includes/ssmdsxls-md.md)].  
   
- Dans l'application Web [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)], vous ne pouvez plus exporter des membres vers Excel. Pour travailler avec des membres dans Excel, utilisez la [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] [!INCLUDE[ssMDSXLS](../includes/ssmdsxls-md.md)].  
+ Dans l'application Web [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)], vous ne pouvez plus exporter des membres vers Excel. Pour travailler avec les membres dans Excel, utilisez le [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] [!INCLUDE[ssMDSXLS](../includes/ssmdsxls-md.md)].  
   
 ### <a name="transactions"></a>Transactions  
  Dans le **Explorer** zone fonctionnelle, les utilisateurs ne peuvent plus restaurer leurs propres transactions. Auparavant, les utilisateurs pouvaient annuler les modifications apportées aux données dans **Explorer**. Les administrateurs peuvent toujours restaurer les transactions pour tous les utilisateurs dans le **gestion des versions** zone fonctionnelle.  
@@ -78,6 +78,6 @@ ms.locfileid: "36140996"
  MDS n'inclut plus les applets de commande PowerShell.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Fonctionnalités Master Data Services déconseillées dans SQL Server 2014](deprecated-master-data-services-features.md)  
+ [Fonctionnalités dépréciées de Master Data Services dans SQL Server 2014](deprecated-master-data-services-features.md)  
   
   

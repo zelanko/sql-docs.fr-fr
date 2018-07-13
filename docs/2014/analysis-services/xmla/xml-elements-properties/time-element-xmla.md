@@ -1,5 +1,5 @@
 ---
-title: Heure de l’élément (XMLA) | Documents Microsoft
+title: Heure, élément (XMLA) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -24,15 +24,15 @@ helpviewer_keywords:
 - Time element
 ms.assetid: b74ba333-19e5-407d-92ab-3c429d4b3f45
 caps.latest.revision: 10
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: 9d8fc7f996f3c44fe0b890955d6a402038e08d2f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: 44b980d2fc8fcddce9fb7ca0965c97f5112c4e4e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36141625"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37151480"
 ---
 # <a name="time-element-xmla"></a>Élément Time (XMLA)
   Spécifie le délai adopté par la commande [DesignAggregations](../xml-elements-commands/designaggregations-element-xmla.md) pour concevoir des agrégations.  

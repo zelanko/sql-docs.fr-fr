@@ -1,5 +1,5 @@
 ---
-title: Faire varier l’affichage des polygones, ligne et Point par des règles et des données analytiques (Générateur de rapports et SSRS) | Documents Microsoft
+title: Varier l’affichage des polygones, ligne et Point par des règles et des données analytiques (Générateur de rapports et SSRS) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.rtp.rptdesigner.mapembeddedpolygonlayerproperties.general.f1
 - sql12.rtp.rptdesigner.maplinelayerproperties.widthrules.f1
@@ -21,15 +21,15 @@ f1_keywords:
 - "10536"
 ms.assetid: 7f1f5584-37b4-4fa2-ae44-8988c5f0c744
 caps.latest.revision: 13
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: ffe78fc097b8c51f490642d5dc857f0257c806b7
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 5ee62f82416bcac56211bd29548070926abff1bf
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36143839"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37149770"
 ---
 # <a name="vary-polygon-line-and-point-display-by-rules-and-analytical-data-report-builder-and-ssrs"></a>Modifier l'affichage des polygones, des lignes et des points à l'aide de règles et de données analytiques (Générateur de rapports et SSRS)
   Les options d'affichage pour les polygones, les lignes et les points d'une couche sont contrôlées en définissant des options pour la couche, en établissant des règles pour les éléments cartographiques de la couche ou en remplaçant des options pour des éléments cartographiques incorporés spécifiques sur une couche.  
@@ -133,7 +133,7 @@ ms.locfileid: "36143839"
 |`#FROMVALUE{N0} - #TOVALUE{N0}`|Affiche les valeurs numériques réelles du début et de la fin de la plage.|10 - 790|  
   
 ## <a name="see-also"></a>Voir aussi  
- [Modifier les légendes de carte, l’échelle de couleurs et les règles associées &#40;rapport Générateur et SSRS&#41;](change-map-legends-color-scale-and-associated-rules-report-builder-and-ssrs.md)   
+ [Modifier les légendes de carte, l’échelle de couleurs et les règles associées &#40;Générateur de rapports et SSRS&#41;](change-map-legends-color-scale-and-associated-rules-report-builder-and-ssrs.md)   
  [Cartes &#40;Générateur de rapports et SSRS&#41;](maps-report-builder-and-ssrs.md)   
  [Assistant Carte et Assistant Couche &#40;Générateur de rapports et SSRS&#41;](map-wizard-and-map-layer-wizard-report-builder-and-ssrs.md)  
   

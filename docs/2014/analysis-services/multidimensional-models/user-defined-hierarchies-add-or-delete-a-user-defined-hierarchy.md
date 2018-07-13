@@ -1,5 +1,5 @@
 ---
-title: Ajouter ou supprimer une hiérarchie définie par l’utilisateur | Documents Microsoft
+title: Ajouter ou supprimer une hiérarchie définie par l’utilisateur | Microsoft Docs
 ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - hierarchies [Analysis Services], adding
 - removing hierarchies
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - hierarchies [Analysis Services], removing
 ms.assetid: 953818b4-9543-4c01-bb20-1d45ec6dfb91
 caps.latest.revision: 50
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 57e1f74d612add88c6a2c47497f0d6a55c64c665
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: e3cb9b55bcff41dddd2a4c648854e92222d1e8e2
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36142921"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37157120"
 ---
 # <a name="add-or-delete-a-user-defined-hierarchy"></a>Ajouter ou supprimer une hiérarchie définie par l'utilisateur
   Vous pouvez ajouter ou supprimer une hiérarchie définie par l’utilisateur dans une dimension sous l’onglet **Structure de dimension** du Concepteur de dimensions dans [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  
@@ -66,7 +66,7 @@ ms.locfileid: "36142921"
 -   Faites glisser la hiérarchie définie par l'utilisateur hors de l'aire de conception.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Hiérarchies des utilisateurs](../multidimensional-models-olap-logical-dimension-objects/user-hierarchies.md)   
+ [Hiérarchies utilisateur](../multidimensional-models-olap-logical-dimension-objects/user-hierarchies.md)   
  [Créer des hiérarchies définies par l’utilisateur](user-defined-hierarchies-create.md)  
   
   

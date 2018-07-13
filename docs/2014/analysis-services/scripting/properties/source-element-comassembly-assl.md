@@ -1,5 +1,5 @@
 ---
-title: Source de l’élément (ComAssembly) (ASSL) | Documents Microsoft
+title: Élément (ComAssembly) (ASSL) source | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - Source element
 ms.assetid: 5c9209e8-ace6-4688-a64d-4987a7648ab9
 caps.latest.revision: 38
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: ae014f12e15dd27957ab77eb03720457f3c99b28
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 81076927595714ae4e0c98847d99f2d246660cf9
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36141412"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37152970"
 ---
 # <a name="source-element-comassembly-assl"></a>Élément Source (ComAssembly) (ASSL)
   Contient le nom de fichier ou l'identificateur programmatique (ProgID) d'un composant COM (Component Object Model).  
@@ -62,14 +62,14 @@ ms.locfileid: "36141412"
 |Éléments enfants|None|  
   
 ## <a name="remarks"></a>Notes  
- L’élément qui correspond au parent de `Source` dans l’objet d’objets AMO (Analysis Management) est modèle <xref:Microsoft.AnalysisServices.ComAssembly>.  
+ L’élément qui correspond au parent de `Source` dans l’objet d’objets AMO (Analysis Management) modèle est <xref:Microsoft.AnalysisServices.ComAssembly>.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Élément assembly &#40;ASSL&#41;](../objects/assembly-element-assl.md)   
  [Type de données ClrAssembly &#40;ASSL&#41;](../data-type/clrassembly-data-type-assl.md)   
  [Élément Assemblies &#40;ASSL&#41;](../collections/assemblies-element-assl.md)   
  [Élément de base de données &#40;ASSL&#41;](../objects/database-element-assl.md)   
- [Élément serveur &#40;ASSL&#41;](../objects/server-element-assl.md)   
+ [Élément de serveur &#40;ASSL&#41;](../objects/server-element-assl.md)   
  [Propriétés &#40;ASSL&#41;](properties-assl.md)  
   
   

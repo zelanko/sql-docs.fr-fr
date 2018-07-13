@@ -1,5 +1,5 @@
 ---
-title: Exporter un rapport en tant que Type d’un autre fichier (Générateur de rapports et SSRS) | Documents Microsoft
+title: Exporter un rapport en tant que Type d’un autre fichier (Générateur de rapports et SSRS) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: b577568b-ecbd-44c3-be88-31dab6fc38a2
 caps.latest.revision: 9
-author: douglaslM
+author: maggiesmsft
 ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 8f37c659b224c2428b99d1f74b3b64c46f5c5cd3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 88d0969efabebe3da05ebfce8d666eb78ff4ba2d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36141757"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37166196"
 ---
 # <a name="export-a-report-as-another-file-type-report-builder-and-ssrs"></a>Exporter un rapport dans un autre type de fichier (Générateur de rapports et SSRS)
   Vous pouvez effectuer le rendu d'un rapport dans un autre format de fichier, tel que CSV, Image, PDF, [!INCLUDE[ofprword](../includes/ofprword-md.md)] ou [!INCLUDE[ofprexcel](../includes/ofprexcel-md.md)], en affichant un aperçu de votre rapport dans le Générateur de rapports ou le Concepteur de rapports, ou vous pouvez effectuer le rendu du rapport en visualisant le rapport sur le serveur de rapports. Le rendu du rapport dans un format spécifique est utile lorsque vous souhaitez enregistrer immédiatement le rapport dans un autre type de fichier sans le publier sur le serveur de rapports ou lorsque vous souhaitez voir l'aspect de votre conception de rapport une fois remis aux lecteurs du rapport dans un format spécifique. Le rendu du rapport sur le serveur de rapports est utile lorsque vous définissez des abonnements ou remettez vos rapports via messagerie électronique, ou si vous souhaitez enregistrer un rapport qui est disponible sur le serveur de rapports. Pour plus d’informations, consultez [Abonnements et remise &#40;Reporting Services&#41;](subscriptions/subscriptions-and-delivery-reporting-services.md).  
@@ -89,8 +89,8 @@ ms.locfileid: "36141757"
      **Remarque** Si le programme ne peut pas ouvrir le rapport dans le format que vous avez choisi car vous ne disposez pas d'un programme associé à ce type de fichier, vous serez invité à enregistrer le rapport exporté ou à rechercher un programme en ligne pour ouvrir le rapport.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Exportation de rapports &#40;rapport Générateur et SSRS&#41;](report-builder/export-reports-report-builder-and-ssrs.md)   
+ [Exportation de rapports &#40;Générateur de rapports et SSRS&#41;](report-builder/export-reports-report-builder-and-ssrs.md)   
  [Pagination dans Reporting Services &#40;Générateur de rapports et SSRS&#41;](report-design/pagination-in-reporting-services-report-builder-and-ssrs.md)   
- [Fonctionnalité interactive des différentes Extensions de rendu de rapport &#40;rapport Générateur et SSRS&#41;](report-builder/interactive-functionality-different-report-rendering-extensions.md)  
+ [Fonctionnalité interactive des différentes Extensions de rendu de rapport &#40;Générateur de rapports et SSRS&#41;](report-builder/interactive-functionality-different-report-rendering-extensions.md)  
   
   

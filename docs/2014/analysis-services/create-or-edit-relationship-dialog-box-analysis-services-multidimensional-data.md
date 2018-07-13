@@ -1,5 +1,5 @@
 ---
-title: Créer ou modifier la relation, boîte de dialogue (Analysis Services - données multidimensionnelles) | Documents Microsoft
+title: Créer ou modifier la boîte de dialogue relation (Analysis Services - données multidimensionnelles) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.dsvdesigner.createrelationship.f1
 helpviewer_keywords:
 - Create Relationship dialog box
 ms.assetid: da3c7074-623e-4ddf-a707-d3276a47cf1c
 caps.latest.revision: 19
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: c205a2f7c78345d77dd3080b9ef33fe87f87ba35
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 152f9cb38adcad9a90a393150216fea0f10ecd55
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36141428"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37167640"
 ---
 # <a name="create-or-edit-relationship-dialog-box-analysis-services---multidimensional-data"></a>Boîte de dialogue Créer/Modifier une relation (Analysis Services - Données multidimensionnelles)
   Utilisez la boîte de dialogue **Créer/Modifier une relation** dans [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] pour définir ou modifier une relation dans une vue de source de données. Pour afficher la boîte de dialogue **Créer/Modifier une relation** , vous pouvez :  
@@ -44,7 +44,7 @@ ms.locfileid: "36141428"
  **Table de destination (clé primaire)**  
  Sélectionnez la table qui contient une ou plusieurs colonnes référencées par la table source. Pour les jointures réflexives, sélectionnez la même table que celle sélectionnée dans **Table source (clé étrangère)**.  
   
- **Colonnes de la source**  
+ **Colonnes sources**  
  Sélectionnez les colonnes qui font référence à des colonnes de la table de destination.  
   
  **Colonnes de destination**  

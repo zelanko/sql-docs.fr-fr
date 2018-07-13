@@ -1,5 +1,5 @@
 ---
-title: L’onglet Validation croisée (vue graphique d’analyse de précision d’exploration de données) | Documents Microsoft
+title: Onglet Validation croisée (vue graphique d’analyse de précision d’exploration de données) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dm.miningmodeleditor.accuracychart.crossvalidation.f1
 ms.assetid: bd215a68-1ad7-4046-9c44-ec8e2be13a64
 caps.latest.revision: 15
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: d5b39187ddfc3e4ce0fa8ef0fc7e0402ef54b129
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: a30cf9ce920f7e0416e46dd87044ef7e3d52318c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36142934"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37169820"
 ---
 # <a name="cross-validation-tab-mining-accuracy-chart-view"></a>Onglet Validation croisée (vue Graphique d'analyse de précision de l'exploration de données)
   La validation croisée vous permet de partitionner une structure d'exploration de données en sections croisées et d'effectuer l'apprentissage et le test des modèles de manière itérative sur chaque section croisée. Vous spécifiez un nombre de replis pour la division des données. Chaque repli est utilisé à son tour comme données de test, tandis que les autres données sont utilisées pour l'apprentissage d'un nouveau modèle. [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] génère ensuite un jeu standard de mesures de précision pour chaque modèle. En comparant les mesures des modèles générés pour chaque section croisée, vous pouvez vous faire une bonne idée de la fiabilité du modèle d'exploration de données pour le jeu de données complet.  
@@ -103,7 +103,7 @@ ms.locfileid: "36142934"
  Lorsque **cible** **seuil** a la valeur `null`, qui est la valeur par défaut, la prédiction la plus probable pour chaque cas est comptabilisée comme correcte. Dans l'exemple que nous venons de citer, 0,05, 0,15 et 0,8 sont les probabilités des prédictions de trois cas différents. Bien que les probabilités soient très différentes, chaque prédiction est comptabilisée comme correcte, car chaque cas génère une seule prédiction et il s'agit des meilleures prédictions pour ces cas.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Test et Validation &#40;d’exploration de données&#41;](data-mining/testing-and-validation-data-mining.md)   
+ [Test et Validation &#40;exploration de données&#41;](data-mining/testing-and-validation-data-mining.md)   
  [La Validation croisée &#40;Analysis Services - Exploration de données&#41;](data-mining/cross-validation-analysis-services-data-mining.md)   
  [Mesures dans le rapport de Validation croisée](data-mining/measures-in-the-cross-validation-report.md)   
  [Procédures stockées d’exploration de données &#40;Analysis Services - Exploration de données&#41;](/sql/analysis-services/data-mining/data-mining-stored-procedures-analysis-services-data-mining)  

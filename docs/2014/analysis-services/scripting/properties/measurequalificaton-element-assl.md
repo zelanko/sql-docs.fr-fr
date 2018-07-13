@@ -1,5 +1,5 @@
 ---
-title: Élément Measurequalification (ASSL) | Documents Microsoft
+title: Élément Measurequalification (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - MeasureQualification element
 ms.assetid: 754a037c-f20b-4717-a6e8-12f495e8e3b4
 caps.latest.revision: 12
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 795e2b7b10f9d7e9988747025c322b25ffa0af47
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: cb84c39d7d7a3b69ea3c13e43dfda0b331c548e4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36140829"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37149500"
 ---
 # <a name="measurequalificaton-element-assl"></a>Élément MeasureQualification (ASSL)
   Détermine si un préfixe est appliqué aux mesures dans le [MeasureGroup](../objects/group-element-assl.md).  
@@ -68,11 +68,11 @@ ms.locfileid: "36140829"
 |*PrefixMeasureGroup*|Le nom unique et la légende de chaque mesure dans ce groupe de mesures contient pour préfixe le nom du groupe de mesures suivi d'un espace unique.|  
   
 ## <a name="remarks"></a>Notes  
- L’élément qui correspond au parent de `MeasureQualification` dans l’objet d’objets AMO (Analysis Management) est modèle <xref:Microsoft.AnalysisServices.MeasureGroup>.  
+ L’élément qui correspond au parent de `MeasureQualification` dans l’objet d’objets AMO (Analysis Management) modèle est <xref:Microsoft.AnalysisServices.MeasureGroup>.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Élément de cube &#40;ASSL&#41;](../objects/cube-element-assl.md)   
- [Élément de dimension &#40;ASSL&#41;](../objects/dimension-element-assl.md)   
+ [Dimension élément &#40;ASSL&#41;](../objects/dimension-element-assl.md)   
  [Élément MeasureGroup &#40;ASSL&#41;](../objects/group-element-assl.md)   
  [Propriétés &#40;ASSL&#41;](properties-assl.md)  
   

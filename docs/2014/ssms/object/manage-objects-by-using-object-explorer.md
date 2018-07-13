@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - SQL12.SWB.SQLSERVEROBJECTEXPLORER.DHELP
 helpviewer_keywords:
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - OE Help
 ms.assetid: e60367a7-3fdd-40b8-82bb-9e819d78de5a
 caps.latest.revision: 5
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: b3384ccf29fcf49d8d2a06263e3dcbc7f02a7111
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 87c8cb0351fba08f588f37bc7ae882a0da28eb95
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36140647"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37165740"
 ---
 # <a name="manage-objects-by-using-object-explorer"></a>Gérer les objets à l'aide de l'Explorateur d'objets
   Vous pouvez utiliser l'Explorateur d'objets pour gérer des objets tels que les bases de données, les tables et les procédures stockées.  
@@ -59,9 +59,9 @@ ms.locfileid: "36140647"
   
 ## <a name="see-also"></a>Voir aussi  
  [Explorateur d’objets](object-explorer.md)   
- [Ouvrir et configurer l’Explorateur d’objets](open-and-configure-object-explorer.md)   
- [Connectez-vous à une Instance à partir de l’Explorateur d’objets](connect-to-an-instance-from-object-explorer.md)   
- [Volet détails l’Explorateur d’objets](object-explorer-details-pane.md)   
+ [Ouvrez et configurez l’Explorateur d’objets](open-and-configure-object-explorer.md)   
+ [Se connecter à une Instance à partir de l’Explorateur d’objets](connect-to-an-instance-from-object-explorer.md)   
+ [Volet détails de l’Explorateur d’objets](object-explorer-details-pane.md)   
  [Rapports personnalisés dans Management Studio](custom-reports-in-management-studio.md)  
   
   

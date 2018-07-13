@@ -1,5 +1,5 @@
 ---
-title: Aide F1 l’Assistant Business Intelligence | Documents Microsoft
+title: L’Assistant Business Intelligence F1 | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Business Intelligence Wizard
 ms.assetid: 155ac80c-63ae-47aa-9e86-9396e3d920eb
 caps.latest.revision: 23
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: d1fbdaa3573d77306993a024513895426e91d1ef
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 9fa73095aa52b5c5c5f1ec53dcce18884731b4b2
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36142592"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37163590"
 ---
 # <a name="business-intelligence-wizard-f1-help"></a>Aide (F1) de l'Assistant Business Intelligence
   L'Assistant Business Intelligence vous permet de définir des fonctionnalités Business Intelligence et des options avancées sur les cubes et les dimensions. Il définit des propriétés sur les objets existants, crée des objets et génère des scripts MDX pour offrir des fonctionnalités, telles que l'intelligence des dimensions et la conversion monétaire.  

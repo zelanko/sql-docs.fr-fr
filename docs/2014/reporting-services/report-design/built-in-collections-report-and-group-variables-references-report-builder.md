@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - "10404"
 - sql12.rtp.rptdesigner.categorygroupproperties.variables.f1
@@ -20,15 +20,15 @@ f1_keywords:
 - "10412"
 ms.assetid: 4be5b463-3ce2-483d-a3c6-dae752cb543e
 caps.latest.revision: 9
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: a4a03cad2b19cc853c48a1614daea34cb2fb43ce
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 5385940ba528d0bdd9acf7f784d78832f1fdaa6a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36140691"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37148490"
 ---
 # <a name="report-and-group-variables-collections-references-report-builder-and-ssrs"></a>Références à des collections de variables de rapport et de groupe (Générateur de rapports et SSRS)
   Lorsqu'un calcul complexe est utilisé plusieurs fois dans les expressions d'un rapport, vous pouvez créer une variable. Vous pouvez créer une variable de rapport ou une variable de groupe. Les noms de variable doivent être uniques dans un rapport.  
@@ -51,12 +51,12 @@ ms.locfileid: "36140691"
   
 -   **Utilisation en lecture/écriture** Définissez une valeur une fois et sérialisez-la dans une session de rapport. L'option en lecture-écriture pour les variables fournit une meilleure alternative que l'utilisation d'une variable statique dans le bloc de code dans la définition de rapport.  
   
-     Lorsque vous désactivez le **en lecture seule** est définie sur une variable, la propriété accessible en écriture pour la variable a la valeur `true`. Pour mettre à jour la valeur à partir d’une expression, utilisez la méthode SetValue, par exemple `=Variables!MyVariable.SetValue("123")`.  
+     Lorsque vous désactivez le **en lecture seule** option pour une variable, la propriété accessible en écriture pour la variable est définie sur `true`. Pour mettre à jour la valeur à partir d’une expression, utilisez la méthode SetValue, par exemple `=Variables!MyVariable.SetValue("123")`.  
   
     > [!NOTE]  
     >  Vous ne pouvez pas contrôler le moment où le processeur de rapports initialise une variable ou évalue une expression qui met à jour une variable. L'ordre d'exécution pour l'initialisation d'une variable est non défini.  
   
- Pour plus d’informations sur les sessions, consultez [l’aperçu des rapports dans le Générateur de rapports](../report-builder/previewing-reports-in-report-builder.md).  
+ Pour plus d’informations sur les sessions, consultez [aperçu des rapports dans le Générateur de rapports](../report-builder/previewing-reports-in-report-builder.md).  
   
 ## <a name="group-variables"></a>Variables de groupe  
  Utilisez une variable de groupe pour calculer une expression complexe dans l'étendue d'un groupe. Une variable de groupe est valide uniquement dans l'étendue du groupe et ses groupes enfants.  
@@ -77,7 +77,7 @@ ms.locfileid: "36140691"
   
 ## <a name="see-also"></a>Voir aussi  
  [Filtrer, regrouper et trier des données &#40;Générateur de rapports et SSRS&#41;](filter-group-and-sort-data-report-builder-and-ssrs.md)   
- [Collections intégrées dans les Expressions &#40;rapport Générateur et SSRS&#41;](built-in-collections-in-expressions-report-builder.md)   
+ [Collections intégrées dans les Expressions &#40;Générateur de rapports et SSRS&#41;](built-in-collections-in-expressions-report-builder.md)   
  [Exemples d’expressions &#40;Générateur de rapports et SSRS&#41;](expression-examples-report-builder-and-ssrs.md)  
   
   

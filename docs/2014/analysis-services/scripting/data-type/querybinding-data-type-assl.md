@@ -1,5 +1,5 @@
 ---
-title: Type de données QueryBinding (ASSL) | Documents Microsoft
+title: Type de données QueryBinding (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - QueryBinding data type
 ms.assetid: 7b58fc89-0060-4e56-ad99-6f74fe8cfc6d
 caps.latest.revision: 38
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 5e13dd3e07975250de1f64c050d36dd276c7c579
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: c4a268248d730711dc7fb64500445c04fd6146d7
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36140831"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37169670"
 ---
 # <a name="querybinding-data-type-assl"></a>Type de données QueryBinding (ASSL)
   Définit un type de données dérivé qui représente l’association d’un [DataSource](../objects/datasource-element-assl.md) élément avec un [QueryDefinition](../properties/querydefinition-element-assl.md) élément.  
@@ -69,6 +69,6 @@ ms.locfileid: "36140831"
  L’élément correspondant dans le modèle d’objet objets AMO (Analysis Management) est <xref:Microsoft.AnalysisServices.QueryBinding>.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Types de données de script langage XML Analysis Services &#40;ASSL&#41;](analysis-services-scripting-language-xml-data-types-assl.md)  
+ [Types Analysis Services Scripting Language XML données &#40;ASSL&#41;](analysis-services-scripting-language-xml-data-types-assl.md)  
   
   

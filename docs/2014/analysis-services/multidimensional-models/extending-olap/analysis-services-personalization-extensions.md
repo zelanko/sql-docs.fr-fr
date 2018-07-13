@@ -1,5 +1,5 @@
 ---
-title: Extensions de personnalisation de Analysis Services | Documents Microsoft
+title: Extensions de personnalisation Analysis Services | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -14,46 +14,46 @@ helpviewer_keywords:
 - personalization extensions [Multidimensional Databases]
 ms.assetid: 0f144059-24e0-40c0-bde4-d48c75e46598
 caps.latest.revision: 22
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 9354e441f3b94205b1be055f48dcf4b279fc708a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: ff8ef3d5455693d19ec82b0a5905939671c03037
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36141450"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37171660"
 ---
 # <a name="analysis-services-personalization-extensions"></a>Extensions de personnalisation Analysis Services
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] extensions de personnalisation sont le fondement de l’idée d’implémentation d’une architecture de plug-in. Dans une architecture de plug-in, vous pouvez développer dynamiquement des nouveaux objets de cube et de nouvelles fonctionnalités, et les partager facilement avec d'autres développeurs. Par conséquent, [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] extensions de personnalisation fournissent des fonctionnalités qui permettent d’atteindre les objectifs suivants :  
+  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] extensions de personnalisation sont le fondement de l’idée d’implémentation d’une architecture de plug-in. Dans une architecture de plug-in, vous pouvez développer dynamiquement des nouveaux objets de cube et de nouvelles fonctionnalités, et les partager facilement avec d'autres développeurs. Par conséquent, [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] extensions de personnalisation fournissent les fonctionnalités qui le rend possible d’atteindre les objectifs suivants :  
   
--   **Conception et déploiement dynamiques** immédiatement après avoir conçu et déployer [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] extensions de personnalisation, les utilisateurs ont accès aux objets et fonctionnalités au début de la session utilisateur suivante.  
+-   **Conception et déploiement dynamiques** immédiatement après avoir conçu et déployé [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] extensions de personnalisation, les utilisateurs ont accès aux objets et fonctionnalités au début de la session utilisateur suivante.  
   
--   **Indépendance d’interface** , quelle que soit l’interface qui vous permet de créer le [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] extensions de personnalisation, les utilisateurs peuvent utiliser n’importe quelle interface pour accéder aux objets et fonctionnalités.  
+-   **Indépendance d’interface** , quel que soit l’interface qui vous permet de créer le [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] extensions de personnalisation, les utilisateurs peuvent utiliser n’importe quelle interface pour accéder aux objets et fonctionnalités.  
   
 -   **Contexte de session** [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] extensions de personnalisation ne sont pas des objets permanents dans l’infrastructure existante et ne nécessitent pas de cube pour être retraité. Elles sont exposées et créées pour l'utilisateur au moment où il se connecte à la base de données, et restent disponibles pour toute la durée de cette session utilisateur.  
   
--   **Distribution rapide** partage [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] avec d’autres développeurs de logiciels sans avoir à passer dans les spécifications détaillées décrivant où ou comment trouver les extensions de personnalisation des fonctionnalités étendues.  
+-   **Distribution rapide** partage [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] extensions de personnalisation avec d’autres développeurs de logiciels sans avoir à passer dans les spécifications détaillées décrivant où ou comment trouver les fonctionnalités étendues.  
   
  Les extensions de personnalisation [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] ont de nombreuses utilisations. Par exemple, votre société effectue des ventes qui impliquent des devises différentes. Vous créez un membre calculé qui retourne les ventes consolidées dans la devise locale de la personne qui accède au cube. Vous créez ce membre en tant qu'extension de personnalisation. Vous partagez alors ce membre calculé avec un groupe d'utilisateurs. Une fois le membre calculé partagé, ces utilisateurs ont un accès immédiat à celui-ci dès qu'ils se connectent au serveur. Ils bénéficient de cet accès même s'ils n'utilisent pas la même interface que celle utilisée pour créer le membre calculé.  
   
- [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] extensions de personnalisation sont une modification simple et élégante de l’architecture d’assembly managée existante et sont exposées partout dans le [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] <xref:Microsoft.AnalysisServices.AdomdServer> de l’objet modèle, la syntaxe de MDX (Multidimensional Expressions) et ensembles de lignes de schéma.  
+ [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] extensions de personnalisation sont une modification simple et élégante de l’architecture d’assembly managée existante et sont exposées partout dans le [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] <xref:Microsoft.AnalysisServices.AdomdServer> de l’objet modèle, la syntaxe de MDX (Multidimensional Expressions) et les ensembles de lignes de schéma.  
   
 ## <a name="logical-architecture"></a>Architecture logique  
  L'architecture des extensions de personnalisation [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] est basée sur l'architecture d'assembly managée et les quatre éléments de base suivants :  
   
  L'attribut personnalisé [PlugInAttribute]  
- Lors du démarrage du service, [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] charge les assemblys requis et détermine les classes qui ont le <xref:Microsoft.AnalysisServices.AdomdServer.PlugInAttribute> attribut personnalisé.  
+ Au démarrage du service, [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] charge les assemblys requis et détermine les classes qui ont le <xref:Microsoft.AnalysisServices.AdomdServer.PlugInAttribute> attribut personnalisé.  
   
 > [!NOTE]  
 >  Le [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] définit des attributs personnalisés comme une façon de décrire votre code et affecter le comportement à l'exécution. Pour plus d’informations, consultez la rubrique «[vue d’ensemble des attributs](http://go.microsoft.com/fwlink/?LinkId=82929), » dans le [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] Guide du développeur sur MSDN.  
   
- Pour toutes les classes avec le <xref:Microsoft.AnalysisServices.AdomdServer.PlugInAttribute> attribut personnalisé, [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] appelle leurs constructeurs par défaut. Appel de tous les constructeurs au démarrage fournit un emplacement commun à partir de laquelle générer de nouveaux objets et qui est indépendant de toute activité de l’utilisateur.  
+ Pour toutes les classes avec le <xref:Microsoft.AnalysisServices.AdomdServer.PlugInAttribute> attribut personnalisé, [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] appelle leurs constructeurs par défaut. Appel de tous les constructeurs au démarrage fournit un emplacement commun à partir duquel générer de nouveaux objets et qui est indépendant de toute activité de l’utilisateur.  
   
  En plus de la génération d'un petit cache d'informations sur la création et la gestion d'extensions de personnalisation, le constructeur de classe s'abonne généralement aux événements <xref:Microsoft.AnalysisServices.AdomdServer.Server.SessionOpened> et <xref:Microsoft.AnalysisServices.AdomdServer.Server.SessionClosing>. S'il ne s'abonne pas à ces événements, la classe peut être marquée de manière appropriée en vue d'être nettoyée par le garbage collector du CLR (Common Language Runtime).  
   
  Contexte de session  
- Pour les objets qui sont basés sur les extensions de personnalisation, [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] crée un environnement d'exécution pendant la session cliente et génère dynamiquement la plupart de ces objets dans cet environnement. Comme tout autre assembly CLR, cet environnement d'exécution a également accès aux autres fonctions et procédures stockées. Lors de la fin de la session utilisateur [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] supprime les objets créés dynamiquement et ferme l’environnement d’exécution.  
+ Pour les objets qui sont basés sur les extensions de personnalisation, [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] crée un environnement d'exécution pendant la session cliente et génère dynamiquement la plupart de ces objets dans cet environnement. Comme tout autre assembly CLR, cet environnement d'exécution a également accès aux autres fonctions et procédures stockées. Lorsque la session utilisateur se termine, [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] supprime les objets créés dynamiquement et ferme l’environnement d’exécution.  
   
  Événements  
  La création d'objets est déclenchée par les événements de session `On-Cube-OpenedCubeOpened` et `On-Cube-ClosingCubeClosing`.  
@@ -128,7 +128,7 @@ ms.locfileid: "36141450"
   
 -   [Instruction CREATE SET &#40;MDX&#41;](/sql/mdx/mdx-data-definition-create-set)  
   
--   [Instruction SET de dépôt &#40;MDX&#41;](/sql/mdx/mdx-data-definition-drop-set)  
+-   [Instruction de jeu DROP &#40;MDX&#41;](/sql/mdx/mdx-data-definition-drop-set)  
   
 -   [Instruction CREATE KPI &#40;MDX&#41;](/sql/mdx/mdx-data-definition-create-kpi)  
   
@@ -139,7 +139,7 @@ ms.locfileid: "36141450"
   
  La commande UPDATE MEMBER est ajoutée pour éviter la récréation du membre lorsqu'une mise à jour est nécessaire avec la perte de priorité conséquente pour la résolution des calculs. Les mises à jour ne peuvent pas modifier la portée du membre calculé, déplacer le membre calculé vers un autre parent ou définir un `solveorder` différent.  
   
- La commande CREATE SET est améliorée au moyen la propriété `caption`, de la propriété `display_folder` et du nouveau mot clé `STATIC | DYNAMIC`. *Statique* signifie que le jeu est évalué uniquement au moment de la création. *Dynamique* signifie que le jeu est évalué chaque fois que le jeu est utilisé dans une requête. La valeur par défaut est `STATIC` si un mot clé est omis.  
+ La commande CREATE SET est améliorée au moyen la propriété `caption`, de la propriété `display_folder` et du nouveau mot clé `STATIC | DYNAMIC`. *Statique* signifie que le jeu est évalué uniquement lors de la création. *Dynamique* signifie que le jeu est évalué chaque fois que le jeu est utilisé dans une requête. La valeur par défaut est `STATIC` si un mot clé est omis.  
   
  Les commandes CREATE KPI et DROP KPI sont ajoutées à la syntaxe MDX. Les indicateurs de performance clés peuvent être créés dynamiquement à partir de tout script MDX.  
   

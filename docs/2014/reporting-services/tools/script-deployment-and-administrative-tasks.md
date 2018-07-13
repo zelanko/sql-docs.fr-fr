@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - scripts [Reporting Services]
 - moving reports
@@ -25,13 +25,13 @@ ms.assetid: d0416c9e-e3f9-456d-9870-2cfd2c49039b
 caps.latest.revision: 63
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 8cec5b29e78115e606951e0bd58516a029840580
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 8bd4072925cf5cd48785b0c476aa4ea637f096c3
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36140225"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37159860"
 ---
 # <a name="script-deployment-and-administrative-tasks"></a>Écrire des scripts pour les tâches d'administration et de déploiement
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] prend en charge l'utilisation de scripts pour automatiser les installations courantes, le déploiement et les tâches administratives. Le déploiement d'un serveur de rapports est un processus qui implique plusieurs étapes. Vous devez faire appel à plusieurs outils et processus pour configurer un déploiement ; il n'existe pas un seul programme ou une seule approche pour automatiser l'ensemble des tâches.  
@@ -97,7 +97,7 @@ ms.locfileid: "36140225"
 > [!NOTE]  
 >  Les scripts s’exécutent avec les informations d’identification [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows de l’utilisateur qui exécute le script, sauf si les informations d’identification sont définies explicitement.  
   
- Pour plus d’informations sur la façon de mettre en forme et exécuter un fichier de script, consultez [Script avec la rs.exe utilitaire et le Service Web](script-with-the-rs-exe-utility-and-the-web-service.md).  
+ Pour plus d’informations sur comment mettre en forme et exécuter un fichier de script, consultez [utilitaire et le Service Web de Script avec le rs.exe](script-with-the-rs-exe-utility-and-the-web-service.md).  
   
 ## <a name="using-scripts-to-set-server-properties"></a>Utilisation de scripts pour définir les propriétés du serveur  
  Vous pouvez écrire un script qui définit les propriétés système du serveur de rapports. Le script [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] .NET suivant présente une méthode de définition des propriétés. Cet exemple désactive le contrôle RSClientPrint ActiveX, mais vous pouvez remplacer `EnableClientPrinting` et `False` avec n’importe quel nom de propriété valide et la valeur. Pour afficher une liste complète des propriétés du serveur, consultez [Report Server System Properties](../report-server-web-service/net-framework/reporting-services-properties-report-server-system-properties.md).  
@@ -132,7 +132,7 @@ End Sub
  [Installer le serveur de rapports Reporting Services en Mode natif](../install-windows/install-reporting-services-native-mode-report-server.md)   
  [Serveur de rapports Reporting Services &#40;mode natif&#41;](../report-server/reporting-services-report-server-native-mode.md)   
  [Utilitaires d’invite de commandes de serveur de rapports &#40;SSRS&#41;](report-server-command-prompt-utilities-ssrs.md)   
- [Planification de Reporting Services et la prise en charge du navigateur Power View &#40;Reporting Services 2014&#41;](../browser-support-for-reporting-services-and-power-view.md)   
+ [Planification pour Reporting Services et la prise en charge du navigateur Power View &#40;Reporting Services 2014&#41;](../browser-support-for-reporting-services-and-power-view.md)   
  [Outils de Reporting Services](reporting-services-tools.md)  
   
   

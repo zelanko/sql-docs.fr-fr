@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.variables.f1
 helpviewer_keywords:
@@ -17,13 +17,13 @@ ms.assetid: f405e5ce-ef69-4c58-8c7d-a3d44dfe9ab0
 caps.latest.revision: 52
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 23a20f733fd9a6fb2ca3c6e00eb4d1e84b7cb654
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 59c097bcc9ee8e2e1b6872ab84cf807deec9d9ab
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36142514"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37162850"
 ---
 # <a name="variables-window"></a>Fenêtre Variables
   La fenêtre **Variables** permet de créer et de modifier les variables définies par l’utilisateur et d’afficher les variables système.  
@@ -33,7 +33,7 @@ ms.locfileid: "36142514"
  Vous pouvez éventuellement afficher la fenêtre **Variables** en mappant la commande View.Variables avec une combinaison de clés de votre choix dans la page **Clavier** de la boîte de dialogue **Options** .  
   
 > [!NOTE]  
->  Les valeurs de la `Name` et `Namespace` propriétés doivent commencer par une lettre de l’alphabet, tel que défini par la norme Unicode 2.0, ou un trait de soulignement (_). Les caractères suivants peuvent être des lettres ou des chiffres, conformément à la convention Unicode standard 2.0, ou un trait de soulignement (\_).  
+>  Les valeurs de la `Name` et `Namespace` propriétés doivent commencer par une lettre de l’alphabet, conformément à la convention Unicode Standard 2.0, ou un trait de soulignement (_). Les caractères suivants peuvent être des lettres ou des chiffres, conformément à la convention Unicode standard 2.0, ou un trait de soulignement (\_).  
   
 ## <a name="options"></a>Options  
  **Ajouter une variable**  
@@ -82,7 +82,7 @@ ms.locfileid: "36142514"
  Si vous affectez une expression à une variable, un marqueur spécial sous la forme d'une icône s'affiche en regard de la variable. Ce marqueur d'icône spécial s'affiche également en regard des gestionnaires de connexions et des tâches contenant des expressions.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Services d’intégration &#40;SSIS&#41; Variables](integration-services-ssis-variables.md)   
+ [Integration Services &#40;SSIS&#41; Variables](integration-services-ssis-variables.md)   
  [Utiliser des Variables dans des Packages](../../2014/integration-services/use-variables-in-packages.md)   
  [Expressions Integration Services &#40;SSIS&#41;](expressions/integration-services-ssis-expressions.md)   
  [Générer de fichiers de vidage pour l’exécution des packages](troubleshooting/generating-dump-files-for-package-execution.md)  

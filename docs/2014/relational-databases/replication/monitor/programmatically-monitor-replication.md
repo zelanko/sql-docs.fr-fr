@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - TSQL
 helpviewer_keywords:
@@ -29,15 +29,15 @@ helpviewer_keywords:
 - snapshot replication [SQL Server], monitoring
 ms.assetid: e8bf8850-8da5-4a4f-a399-64232b4e476d
 caps.latest.revision: 33
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 486c0e39c34c706128fc5191ecb15394eb584247
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 0ece1fccdfc4fab42bd2b5cd2913dfcd238e9b40
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36141796"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37167010"
 ---
 # <a name="programmatically-monitor-replication"></a>Surveiller la réplication par programmation
   Le moniteur de réplication est un outil graphique permettant d'analyser une topologie de réplication. Vous pouvez accéder par programmation aux mêmes données d'analyse en utilisant les procédures stockées de réplication [!INCLUDE[tsql](../../../includes/tsql-md.md)] ou les objets RMO (Replication Management Objects). Ces objets permettent de programmer les tâches suivantes :  
@@ -134,7 +134,7 @@ ms.locfileid: "36141796"
   
     -   <xref:Microsoft.SqlServer.Replication.MergeSubscriberMonitor.GetSessionDetails%2A> -Retourne un tableau de <xref:Microsoft.SqlServer.Replication.MergeSessionDetail> objets pour fourni *sessionID*.  
   
-    -   <xref:Microsoft.SqlServer.Replication.MergeSubscriberMonitor.GetSessionDetailsDataSet%2A> -Retourne un <xref:System.Data.DataSet> objet avec les informations de spécifié *sessionID*.  
+    -   <xref:Microsoft.SqlServer.Replication.MergeSubscriberMonitor.GetSessionDetailsDataSet%2A> -Retourne un <xref:System.Data.DataSet> objet contenant des informations pour le texte spécifié *sessionID*.  
   
 #### <a name="to-monitor-replication-properties-for-all-publications-at-a-distributor"></a>Pour surveiller les propriétés de réplication de toutes les publications sur un serveur de distribution  
   
@@ -176,7 +176,7 @@ ms.locfileid: "36141796"
   
 2.  Récupérez un objet <xref:Microsoft.SqlServer.Replication.PublisherMonitor> par l'un ou l'autre de ces moyens.  
   
-    -   Créez une instance de la classe <xref:Microsoft.SqlServer.Replication.PublisherMonitor> . Définissez la propriété <xref:Microsoft.SqlServer.Replication.PublisherMonitor.Name%2A> pour le serveur de publication et définissez la propriété <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> avec le <xref:Microsoft.SqlServer.Management.Common.ServerConnection> créé au cours de l'étape 1. Appelez la méthode <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> pour obtenir les propriétés de l'objet. Si cette méthode retourne `false`, soit le nom du serveur de publication a été défini de manière incorrecte ou que la publication n’existe pas.  
+    -   Créez une instance de la classe <xref:Microsoft.SqlServer.Replication.PublisherMonitor> . Définissez la propriété <xref:Microsoft.SqlServer.Replication.PublisherMonitor.Name%2A> pour le serveur de publication et définissez la propriété <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> avec le <xref:Microsoft.SqlServer.Management.Common.ServerConnection> créé au cours de l'étape 1. Appelez la méthode <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> pour obtenir les propriétés de l'objet. Si cette méthode retourne `false`, le nom du serveur de publication a été défini de manière incorrecte ou de la publication n’existe pas.  
   
     -   Depuis le <xref:Microsoft.SqlServer.Replication.PublisherMonitorCollection> accessible au moyen de la propriété <xref:Microsoft.SqlServer.Replication.ReplicationMonitor.PublisherMonitors%2A> d'un objet <xref:Microsoft.SqlServer.Replication.ReplicationMonitor> existant.  
   
@@ -272,13 +272,13 @@ ms.locfileid: "36141796"
   
         |Valeur|Description|  
         |-----------|-----------------|  
-        | 1|`expiration` -moniteurs d’expiration imminente des abonnements aux publications transactionnelles.|  
+        | 1|`expiration` -supervise l’expiration imminente des abonnements aux publications transactionnelles.|  
         |2|`latency` -contrôle les performances des abonnements aux publications transactionnelles.|  
-        |4|`mergeexpiration` -contrôle l’expiration imminente des abonnements aux publications de fusion.|  
+        |4|`mergeexpiration` -supervise l’expiration imminente des abonnements aux publications de fusion.|  
         |5|`mergeslowrunduration` -contrôle la durée des synchronisations de fusion sur les connexions lentes (accès à distance).|  
-        |6|`mergefastrunduration` -contrôle la durée des synchronisations de fusion sur une connexion haut débit (LAN).|  
+        |6|`mergefastrunduration` -contrôle la durée des synchronisations de fusion sur les connexions haut débit (LAN).|  
         |7|`mergefastrunspeed` - supervise le taux de synchronisation des synchronisations de fusion sur des connexions à bande passante élevée (LAN).|  
-        |8|`mergeslowrunspeed` -contrôle la vitesse de synchronisation des synchronisations de fusion sur les connexions lentes (accès à distance).|  
+        |8|`mergeslowrunspeed` -supervise le taux de synchronisation des synchronisations de fusion sur les connexions lentes (accès à distance).|  
   
     -   *enable* - <xref:System.Boolean> qui indique si le métrique est activé pour la publication.  
   

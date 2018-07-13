@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - TSQL
 helpviewer_keywords:
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - BusinessLogicModule class
 ms.assetid: ed477595-6d46-4fa2-b0d3-a5358903ec05
 caps.latest.revision: 44
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: b94705cc21951287df954e74ad322d2efc754052
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: a0404175f22e6edcb80e4179083555d23acf7db1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36142243"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37169054"
 ---
 # <a name="implement-a-business-logic-handler-for-a-merge-article"></a>Implémenter un gestionnaire de logique métier pour un article de fusion
   Cette rubrique décrit comment implémenter un gestionnaire de logique métier pour un article de fusion dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] à l'aide de la programmation de réplication ou d'objets RMO (Replication Management Objects).  
@@ -218,7 +218,7 @@ ms.locfileid: "36142243"
   
 4.  Définissez la connexion créée à l'étape 1 pour la propriété <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> .  
   
-5.  Appelez la méthode <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> pour obtenir les propriétés de l'objet. Si cette méthode retourne `false`, soit les propriétés d’article à l’étape 3 ont été définies de manière incorrecte ou l’article n’existe pas. Pour plus d'informations, voir [View and Modify Article Properties](publish/view-and-modify-article-properties.md).  
+5.  Appelez la méthode <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> pour obtenir les propriétés de l'objet. Si cette méthode retourne `false`, les propriétés de l’article à l’étape 3 ont été définies de manière incorrecte ou de l’article n’existe pas. Pour plus d'informations, voir [View and Modify Article Properties](publish/view-and-modify-article-properties.md).  
   
 6.  Définissez le nom convivial du gestionnaire de logique métier pour <xref:Microsoft.SqlServer.Replication.MergeArticle.ArticleResolver%2A>. Il s'agit de la valeur de la propriété <xref:Microsoft.SqlServer.Replication.BusinessLogicHandler.FriendlyName%2A> spécifiée lors de l'inscription du gestionnaire de logique métier.  
   

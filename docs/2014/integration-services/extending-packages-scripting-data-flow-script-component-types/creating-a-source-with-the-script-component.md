@@ -20,18 +20,18 @@ ms.assetid: 547c4179-ea82-4265-8c6f-04a2aa77a3c0
 caps.latest.revision: 57
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 47cfd1ceab750a105fb38ca4827b50f9ba727aca
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: c837c1cefbc05118bc3880122438e0be9f7b0cbb
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36143532"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37150840"
 ---
 # <a name="creating-a-source-with-the-script-component"></a>Création d'une source à l'aide du composant Script
   Les composants sources dans le flux d'un package [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] permettent de charger des données à partir d'une source de données et de les transférer à des transformations et des destinations en aval. En principe, vous vous connectez à la source de données via un gestionnaire de connexions existant.  
   
- Pour une vue d’ensemble du composant Script, consultez [étendre le flux de données avec le composant Script] (.. / extending-packages-scripting/data-flow-script-component/extending-the-data-flow-with-the-script-component.md.  
+ Pour une vue d’ensemble du composant Script, consultez [extension du flux de données avec le composant Script] (.. / extending-packages-scripting/data-flow-script-component/extending-the-data-flow-with-the-script-component.md.  
   
  Le composant Script et le code d'infrastructure qu'il génère simplifient considérablement le processus qui consiste à développer un composant de flux de données personnalisé. Toutefois, pour comprendre le fonctionnement du composant Script, il peut être utile de consulter les étapes de développement d'un composant de flux de données personnalisé. Consultez la section [Développement d’un composant de flux de données personnalisé](../extending-packages-custom-objects/data-flow/developing-a-custom-data-flow-component.md) et plus particulièrement la rubrique [Développement d’un composant source personnalisé](../extending-packages-custom-objects-data-flow-types/developing-a-custom-source-component.md).  
   
@@ -76,7 +76,7 @@ ms.locfileid: "36143532"
 ### <a name="adding-variables"></a>Ajout de variables  
  S’il existe des variables les valeurs dont vous souhaitez utiliser dans votre script, vous pouvez les ajouter dans le `ReadOnlyVariables` et `ReadWriteVariables` des champs de propriété sur le **Script** page de la **éditeur de Transformation de Script**.  
   
- Lorsque vous entrez plusieurs variables dans les champs de propriété, séparez les noms de variables par des virgules. Vous pouvez également entrer plusieurs variables en cliquant sur le bouton de sélection (**...** ) situé en regard du `ReadOnlyVariables` et `ReadWriteVariables` champs de propriété et en sélectionnant les variables dans le **sélectionner des variables** boîte de dialogue.  
+ Lorsque vous entrez plusieurs variables dans les champs de propriété, séparez les noms de variables par des virgules. Vous pouvez également entrer plusieurs variables en cliquant sur les points de suspension (**...** ) situé en regard du `ReadOnlyVariables` et `ReadWriteVariables` champs de propriété et en sélectionnant les variables dans le **sélectionner des variables** boîte de dialogue.  
   
  Pour obtenir des informations générales sur l’utilisation de variables avec le composant Script, consultez [Utilisation de variables dans le composant Script](../extending-packages-scripting/data-flow-script-component/using-variables-in-the-script-component.md).  
   
@@ -92,7 +92,7 @@ ms.locfileid: "36143532"
   
  La classe `ScriptMain` inclut un stub pour la méthode `CreateNewOutputRows`. `CreateNewOutputRows` est la méthode la plus importante d'un composant source.  
   
- Si vous ouvrez le **Explorateur de projets** fenêtre dans VSTA, vous pouvez voir que le composant Script a également généré en lecture seule `BufferWrapper` et `ComponentWrapper` éléments de projet. La classe `ScriptMain` hérite de la classe `UserComponent` dans l'élément de projet `ComponentWrapper`.  
+ Si vous ouvrez le **Explorateur de projets** fenêtre VSTA, vous pouvez voir que le composant Script a également généré en lecture seule `BufferWrapper` et `ComponentWrapper` éléments de projet. La classe `ScriptMain` hérite de la classe `UserComponent` dans l'élément de projet `ComponentWrapper`.  
   
  Au moment de l'exécution, le moteur de flux de données appelle la méthode `PrimeOutput` dans la classe `UserComponent`, qui remplace la méthode <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponentHost.PrimeOutput%2A> de la classe parente <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent>. La méthode `PrimeOutput` appelle à son tour les méthodes suivantes :  
   
@@ -119,7 +119,7 @@ ms.locfileid: "36143532"
  Les exemples suivants montrent le code personnalisé requis dans la classe `ScriptMain` pour créer un composant source.  
   
 > [!NOTE]  
->  Ces exemples utilisent la **Person.Address** de table dans le `AdventureWorks` base de données exemple et transmettent ses première et quatrième colonnes, le **intAddressID** et **nvarchar (30) Ville**colonnes, dans le flux de données. Les mêmes données sont utilisées dans les exemples de source, transformation et destination de cette section. Des conditions préalables et des hypothèses supplémentaires sont documentées pour chaque exemple.  
+>  Ces exemples utilisent la **Person.Address** table dans le `AdventureWorks` exemple de base de données et transmettent ses première et quatrième colonnes, le **intAddressID** et **nvarchar (30) City**colonnes, via le flux de données. Les mêmes données sont utilisées dans les exemples de source, transformation et destination de cette section. Des conditions préalables et des hypothèses supplémentaires sont documentées pour chaque exemple.  
   
 ### <a name="adonet-source-example"></a>Exemple de source ADO.NET  
  Cet exemple montre un composant source qui utilise un gestionnaire de connexions [!INCLUDE[vstecado](../../includes/vstecado-md.md)] existant pour charger les données d’une table [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dans le flux de données.  
@@ -260,7 +260,7 @@ ms.locfileid: "36143532"
   
  Si vous souhaitez exécuter cet exemple de code, vous devez configurer le package et le composant comme suit :  
   
-1.  Utilisez le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Assistant Importation et exportation pour exporter les **Person.Address** de table à partir de la `AdventureWorks` base de données exemple dans un fichier plat délimité par des virgules. Cet exemple utilise le nom de fichier ExportedAddresses.txt.  
+1.  Utilisez le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Assistant Importation et exportation pour exporter le **Person.Address** table à partir de la `AdventureWorks` base de données exemple dans un fichier plat délimité par des virgules. Cet exemple utilise le nom de fichier ExportedAddresses.txt.  
   
 2.  Créez un gestionnaire de connexions de fichiers plats qui se connecte au fichier de données exporté.  
   
@@ -391,7 +391,7 @@ ms.locfileid: "36143532"
     }  
     ```  
   
-![Icône Integration Services (petite)](../media/dts-16.gif "icône Integration Services (petite)")**restent jusqu'à la Date avec Integration Services** <br /> Pour obtenir les derniers téléchargements, articles, exemples et vidéos de Microsoft, ainsi que des solutions sélectionnées par la communauté, visitez la page [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] sur MSDN :<br /><br /> [Visitez la page Integration Services sur MSDN](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Pour recevoir une notification automatique de ces mises à jour, abonnez-vous aux flux RSS disponibles sur la page.  
+![Icône Integration Services (petite)](../media/dts-16.gif "icône Integration Services (petite)")**rester jusqu'à la Date avec Integration Services** <br /> Pour obtenir les derniers téléchargements, articles, exemples et vidéos de Microsoft, ainsi que des solutions sélectionnées par la communauté, visitez la page [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] sur MSDN :<br /><br /> [Visitez la page Integration Services sur MSDN](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Pour recevoir une notification automatique de ces mises à jour, abonnez-vous aux flux RSS disponibles sur la page.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Création d’une destination à l’aide du composant Script](../extending-packages-scripting-data-flow-script-component-types/creating-a-destination-with-the-script-component.md)   

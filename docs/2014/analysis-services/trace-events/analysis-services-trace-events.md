@@ -1,5 +1,5 @@
 ---
-title: Événements de Trace Analysis Services | Documents Microsoft
+title: Événements de Trace Analysis Services | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server Profiler, Analysis Services
 - monitoring Analysis Services [SQL Server]
@@ -19,20 +19,20 @@ helpviewer_keywords:
 - event classes [Analysis Services]
 ms.assetid: 6fb219cc-f37e-437a-a544-01cec0953571
 caps.latest.revision: 37
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: c400772f757dcd852ddfd2cf696a966261c60c30
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: a4c4631e20227cb1d3aeba34337d7b36c8a84c62
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36141631"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37163440"
 ---
 # <a name="analysis-services-trace-events"></a>Événements de trace Analysis Services
   Vous pouvez suivre l'activité d'une instance Microsoft SQL Server Analysis Services (SSAS) en capturant, puis en analysant les événements de trace générés par l'instance.  Les événements de trace sont regroupés afin que vous puissiez plus facilement rechercher des événements de trace connexes.  Chaque événement de trace contient un jeu de données concernant l'événement ; toutes les parties de données ne sont pas correctes pour tous les événements.  
   
- Événements de trace peuvent être démarrés et capturés à l’aide **[!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]**, consultez [utiliser SQL Server Profiler pour surveiller Analysis Services](../instances/use-sql-server-profiler-to-monitor-analysis-services.md), ou peut être démarré à partir d’une commande XMLA comme **SQL Server Événements étendus** et analysés ultérieurement, consultez [utilisez SQL Server Extended Events &#40;XEvents&#41; pour surveiller Analysis Services](../instances/monitor-analysis-services-with-sql-server-extended-events.md).  
+ Événements de trace peuvent être démarrés et capturés à l’aide **[!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]**, consultez [utilisez SQL Server Profiler pour surveiller Analysis Services](../instances/use-sql-server-profiler-to-monitor-analysis-services.md), ou peut être démarré à partir d’une commande XMLA comme **SQL Server Événements étendus** et analysés ultérieurement, consultez [utilisez SQL Server Extended Events &#40;XEvents&#41; pour surveiller Analysis Services](../instances/monitor-analysis-services-with-sql-server-extended-events.md).  
     
  Les tables suivantes décrivent chaque catégorie d'événement et les événements de cette catégorie.  
   
@@ -56,7 +56,7 @@ ms.locfileid: "36141631"
 |15|Command Begin|Début de la commande.|  
 |16|Command End|Fin de la commande.|  
   
- **[Catégorie d’événement événements de détection](discover-events-event-category.md)**  
+ **[Catégorie d’événement événements de découverte](discover-events-event-category.md)**  
   
  Collection d'événements pour les demandes de découverte.  
   
@@ -65,7 +65,7 @@ ms.locfileid: "36141631"
 |36|Discover Begin|Début de la demande de découverte.|  
 |38|Discover End|Fin de la demande de découverte.|  
   
- **[Découverte, catégorie d’événement état du serveur](discover-server-state-event-category.md)**  
+ **[Catégorie d’événement état du serveur découverte](discover-server-state-event-category.md)**  
   
  Collection d'événements pour les découvertes de l'état du serveur.  
   
@@ -168,7 +168,7 @@ ms.locfileid: "36141631"
 |98|Direct Query Begin|Début de requête directe.|  
 |99|Direct Query End|Fin de requête directe.|  
   
- **[Catégorie d’événement d’Audit de sécurité](security-audit-event-category.md)**  
+ **[Catégorie d’événement de sécurité d’Audit](security-audit-event-category.md)**  
   
  Collection de classes d'événements d'audit de base de données.  
   
