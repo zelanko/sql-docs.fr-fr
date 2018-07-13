@@ -1,5 +1,5 @@
 ---
-title: 'Tâche 7 : Création d’un domaine Composite | Documents Microsoft'
+title: 'Tâche 7 : Création d’un domaine Composite | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -10,35 +10,35 @@ ms.technology:
 - integration-services
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: ae778647-1df0-4952-9a69-0ef6177eea9c
 caps.latest.revision: 7
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: e88fa44fb4457a979dfa1236531ed8bfa61f88fb
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: e6f1ee787a51b8417ad3de37b74075df8782c722
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36144190"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37153290"
 ---
 # <a name="task-7-creating-a-composite-domain"></a>Tâche 7 : Création d'une règle de domaine composite
-  Dans cette tâche, vous créez un domaine composite, **Validation d’adresses**, qui comprend **adresse ligne**, **Ville**, **état**et  **Code postal** domaines. Un domaine composite permet de définir une règle interdomaines qui implique plusieurs domaines. Un domaine composite présente d'autres avantages, notamment, il permet d'analyser une valeur de champ dans plusieurs domaines.  Par exemple, une valeur d'un champ Nom complet peut être analysée dans des domaines Prénom, Deuxième prénom et Nom de famille distincts. Dans ce didacticiel, vous allez uniquement définir une règle interdomaines. Consultez [gestion d’un domaine Composite](http://msdn.microsoft.com/library/hh510399.aspx) pour plus d’informations.  
+  Dans cette tâche, vous créez un domaine composite, **Validation d’adresses**, qui comprend **ligne d’adresse**, **Ville**, **état**et  **Code postal** domaines. Un domaine composite permet de définir une règle interdomaines qui implique plusieurs domaines. Un domaine composite présente d'autres avantages, notamment, il permet d'analyser une valeur de champ dans plusieurs domaines.  Par exemple, une valeur d'un champ Nom complet peut être analysée dans des domaines Prénom, Deuxième prénom et Nom de famille distincts. Dans ce didacticiel, vous allez uniquement définir une règle interdomaines. Consultez [gestion d’un domaine Composite](http://msdn.microsoft.com/library/hh510399.aspx) pour plus d’informations.  
   
 1.  Dans le volet gauche, cliquez sur **créer un domaine composite** dans la barre d’outils.  
   
      ![Créer un bouton de barre d’outils du domaine Composite](../../2014/tutorials/media/et-creatingacompositedomain-01.jpg "créer un bouton de barre d’outils du domaine Composite")  
   
-2.  Entrez **adresse** pour le **nom de domaine Composite**.  
+2.  Entrez **Validation d’adresses** pour le **nom de domaine Composite**.  
   
-     ![Le domaine Composite de Validation d’adresses](../../2014/tutorials/media/et-creatingacompositedomain-02.jpg "domaine Composite Validation d’adresses")  
+     ![Domaine Composite Validation d’adresses](../../2014/tutorials/media/et-creatingacompositedomain-02.jpg "domaine Composite Validation d’adresses")  
   
-3.  Sélectionner, dans la liste des domaines **adresse ligne**, **Ville**, **état**, et **Zip** et cliquez sur **flèche droite** pour les ajouter à la **domaines du domaine Composite** liste.  
+3.  Dans la liste des domaines sélectionnez **ligne d’adresse**, **Ville**, **état**, et **Zip** et cliquez sur **flèche droite** pour les ajouter à la **domaines du domaine Composite** liste.  
   
 4.  Cliquez sur **OK** pour fermer la boîte de dialogue.  
   
 ## <a name="next-step"></a>Étape suivante  
- [Tâche 8 : Création d’une règle de domaine Composite](../../2014/tutorials/task-8-creating-a-composite-domain-rule.md)  
+ [Tâche 8 : Création d’une règle de domaine composite](../../2014/tutorials/task-8-creating-a-composite-domain-rule.md)  
   
   

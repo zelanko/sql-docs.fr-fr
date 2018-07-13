@@ -8,23 +8,23 @@ ms.suite: ''
 ms.technology:
 - dbe-xml
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - views [XML in SQL Server]
 ms.assetid: eb5f0439-1f69-49c2-8759-e59bda1633b7
 caps.latest.revision: 14
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: ec628981acc51d660a0e8a99dba991d957955e9b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 3f575b1a21efa30d2317cff644b65c73150c4ac1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36143666"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37170180"
 ---
 # <a name="create-views-over-xml-columns"></a>Créer des vues sur les colonnes XML
-  Vous pouvez utiliser un `xml` colonne de type pour créer des vues. L’exemple suivant crée une vue dans laquelle la valeur d’un `xml` colonne de type est récupéré à l’aide de la `value()` méthode de la `xml` type de données.  
+  Vous pouvez utiliser un `xml` colonne de type pour créer des vues. L’exemple suivant crée une vue dans laquelle la valeur à partir d’un `xml` colonne de type est récupéré à l’aide de la `value()` méthode de la `xml` type de données.  
   
 ```  
 -- Create the table.  

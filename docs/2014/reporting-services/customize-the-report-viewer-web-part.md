@@ -1,5 +1,5 @@
 ---
-title: Personnaliser le composant WebPart Visionneuse de rapports | Documents Microsoft
+title: Personnaliser le composant WebPart Visionneuse de rapports | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - SharePoint integration [Reporting Services], viewing reports
 - Web Parts [Reporting Services]
@@ -17,13 +17,13 @@ ms.assetid: 086d6546-7299-41bc-bca9-083a15a53679
 caps.latest.revision: 14
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: d59a29eef3b45596a99ffeb9dd2bb45d6761357e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: a56fdc024d15a24463fb0a7cf593ad23ca85aa34
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36154800"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37162250"
 ---
 # <a name="customize-the-report-viewer-web-part"></a>Personnaliser le composant WebPart Visionneuse de rapports
   Vous pouvez utiliser le composant WebPart Visionneuse de rapports pour afficher les rapports qui s'exécutent sur un serveur de rapports configuré pour l'intégration SharePoint. Les rapports consultables comprennent des fichiers de définition de rapport (.rdl) et des rapports Générateur de rapports. Les rapports s'ouvrent automatiquement dans le composant WebPart de visionneuse de rapports dans une nouvelle page, mais vous pouvez aussi ajouter un composant WebPart de visionneuse de rapports à une page ou un site Web existant ou si vous souhaitez qu'un rapport particulier soit toujours visible sur cette page.  
@@ -79,7 +79,7 @@ ms.locfileid: "36154800"
 |Afficher le contrôle de zoom|Affiche ou masque le contrôle de zoom sur la barre d'outils.|  
 |Afficher le bouton Flux Atom|Affiche ou masque le bouton Flux Atom sur la barre d'outils.<br /><br /> ![htmlviewer_datafeed](media/htmlviewer-datafeed.gif "htmlviewer_datafeed")|  
 |Emplacement de la barre d'outils|Détermine l'emplacement de la barre d'outils dans la visionneuse de rapports. Les valeurs valides sont `Top` et `Bottom`.|  
-|Zone de message|Les valeurs valides sont `Displayed`, `Collapsed`, et `Hidden`. `Displayed` Affiche la zone de paramètres pour les rapports qui comportent des valeurs paramétrables et nécessitant une entrée d’utilisateur avant de pouvoir exécute le rapport. Utilisez `Hidden` si tous les paramètres du rapport sont spécifiés et que vous ne souhaitez pas la zone des paramètres soit visible par les utilisateurs.|  
+|Zone de message|Les valeurs valides sont `Displayed`, `Collapsed`, et `Hidden`. `Displayed` Affiche la zone Paramètres pour les rapports qui comportent des valeurs paramétrables et qui nécessitent une entrée utilisateur avant de pouvoir exécute le rapport. Utilisez `Hidden` si tous les paramètres du rapport sont spécifiés et que vous ne souhaitez pas que la zone des paramètres soit visible par les utilisateurs.|  
 |Largeur de la zone des paramètres|Vous pouvez choisir l'unité de mesure et la valeur. La valeur par défaut est 200 pixels. Cette propriété doit respecter une seule exigence, elle doit être supérieure à zéro.|  
 |Explorateur de documents|Contrôle de navigation entre les rapports qui est défini dans le rapport et qui permet d'accéder en un seul clic à des sections spécifiques d'un rapport. Il est disponible dans les rapports HTML. L'Explorateur de documents s'affiche dans une zone réductible en regard de la zone d'affichage du rapport. Les valeurs valides sont `Displayed`, `Collapsed`, et `Hidden`. Si un Explorateur de documents est défini pour un rapport, la zone est développée par défaut, à moins qu'elle ne soit cachée ou réduite via les propriétés du composant WebPart. Si l'Explorateur de documents est réduit, vous pouvez cliquer sur la flèche pour le développer.|  
 |Largeur de la zone de l'explorateur de documents|Vous pouvez choisir l'unité de mesure et la valeur. La valeur par défaut est 200 pixels. Cette propriété doit respecter une seule exigence, elle doit être supérieure à zéro.|  

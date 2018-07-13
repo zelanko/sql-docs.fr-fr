@@ -1,5 +1,5 @@
 ---
-title: Mappage des Types de données XSD aux Types de données XPath (SQLXML 4.0) | Documents Microsoft
+title: Mappage des Types de données XSD aux Types de données XPath (SQLXML 4.0) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -21,15 +21,15 @@ helpviewer_keywords:
 - XSD schemas [SQLXML], mapping data types
 ms.assetid: ced1a95e-18d4-4a5a-8da8-dbb6d58bbd45
 caps.latest.revision: 24
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 3e816206ff21e0e68ded7eecc2d353b9e8972c41
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 4dd0adee47ebebfdebadc00c2afcc17f6aa7382b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36154552"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37170160"
 ---
 # <a name="mapping-xsd-data-types-to-xpath-data-types-sqlxml-40"></a>Mappage des types de données XSD en types de données XPath (SQLXML 4.0)
   Lorsqu'une requête XPath est exécutée sur un schéma XSD et que le type XSD est spécifié dans l'attribut `xsd:type`, XPath utilise le type de données spécifié lors du traitement de la requête.  

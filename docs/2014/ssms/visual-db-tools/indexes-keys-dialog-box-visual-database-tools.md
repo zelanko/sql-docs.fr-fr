@@ -1,5 +1,5 @@
 ---
-title: Crée des index et clés de la boîte de dialogue (Visual Database Tools) | Documents Microsoft
+title: Index et des clés de la boîte de dialogue (Visual Database Tools) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,23 +8,23 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vdtsql.chm:65539
 - vdt.ppg.indexeskeys
 ms.assetid: 9e4060ba-80c3-468f-bccb-e12e99f672c2
 caps.latest.revision: 16
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: e6743bf4c39d92df79f68b98b4d8c40a70a79e64
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 77d81f3bb0e0d923bdf9fd8bd6a8ae88c14afa60
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36143396"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37168270"
 ---
-# <a name="indexes-and-keys-dialog-box-visual-database-tools"></a>Index et la boîte de dialogue de clés (Visual Database Tools)
+# <a name="indexes-and-keys-dialog-box-visual-database-tools"></a>Index et clés, boîte de dialogue (Visual Database Tools)
   Utilisez cette boîte de dialogue pour créer ou modifier des index, des clés primaires et des clés uniques. Pour y accéder, ouvrez la définition de table pour la table possédant l’index ou la clé, cliquez avec le bouton droit sur la grille de définition de table et cliquez sur **Index/Clés**.  
   
 > [!NOTE]  
@@ -118,7 +118,7 @@ ms.locfileid: "36143396"
  Spécifier si le verrouillage au niveau des lignes est autorisé dans cet index. L'autorisation ou non du verrouillage au niveau de la ligne affecte les performances de la base de données. Il est recommandé de choisir le paramètre **Oui**.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Les contraintes uniques et Check](../../relational-databases/tables/unique-constraints-and-check-constraints.md)   
+ [Contraintes uniques et les contraintes Check](../../relational-databases/tables/unique-constraints-and-check-constraints.md)   
  [Contraintes de clé primaire et de clé étrangère](../../relational-databases/tables/primary-and-foreign-key-constraints.md)  
   
   

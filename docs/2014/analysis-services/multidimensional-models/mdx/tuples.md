@@ -1,5 +1,5 @@
 ---
-title: Tuples | Documents Microsoft
+title: Tuples | Microsoft Docs
 ms.custom: ''
 ms.date: 07/17/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 35b629ae-b1ef-44b1-b556-96956aeb56e7
 caps.latest.revision: 6
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: c6ca064e624937be9f811bda83539ba5bcf770d4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: fe6e50c914973673806e23495ad15ea4821b7640
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36155137"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37169700"
 ---
 # <a name="tuples"></a>Tuples
   Un tuple identifie de façon unique une coupe de données d'un cube. Le tuple est formé par une combinaison de membres de la dimension, à condition qu'il n'y ait pas deux membres ou plus appartenant à la même hiérarchie.  
@@ -69,7 +69,7 @@ FROM [Adventure Works]
 ## <a name="see-also"></a>Voir aussi  
  [Concepts clés pour MDX &#40;Analysis Services&#41;](../key-concepts-in-mdx-analysis-services.md)   
  [Espace du cube](cube-space.md)   
- [Fonctionnalité Autoexists](autoexists.md)   
- [Utilisation des membres, Tuples et jeux &#40;MDX&#41;](working-with-members-tuples-and-sets-mdx.md)  
+ [La fonctionnalité Autoexists](autoexists.md)   
+ [Utilisation de membres, Tuples et jeux &#40;MDX&#41;](working-with-members-tuples-and-sets-mdx.md)  
   
   

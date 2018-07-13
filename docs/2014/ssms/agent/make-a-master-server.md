@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.ag.msxwiz.complete.f1
 - sql12.ag.msxwiz.target.f1
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - Master Server Wizard
 ms.assetid: 05739a73-1fdf-4d9d-92a6-70f328380322
 caps.latest.revision: 33
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: e157f2554d8add51cba02b7428a08a7e47c94d1a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 7f609af3e4cef804d74772283fc1bb519d3dd89f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36143164"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37163790"
 ---
 # <a name="make-a-master-server"></a>Créer un serveur maître
   Cette rubrique décrit comment définir un serveur maître [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] à l'aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou [!INCLUDE[tsql](../../includes/tsql-md.md)].  
@@ -67,7 +67,7 @@ ms.locfileid: "36143164"
      Pour résoudre ce problème, vérifiez qu'un compte proxy portant le même nom que le compte proxy du serveur maître sous lequel l'étape s'exécute existe sur le serveur cible.  
   
 ####  <a name="Permissions"></a> Permissions  
- Les autorisations d’exécution de cette procédure reviennent par défaut aux membres de le `sysadmin` rôle serveur fixe.  
+ Autorisations pour exécuter cette procédure reviennent par défaut aux membres de la `sysadmin` rôle serveur fixe.  
   
 ##  <a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
   

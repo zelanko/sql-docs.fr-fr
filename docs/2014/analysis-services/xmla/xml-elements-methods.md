@@ -1,5 +1,5 @@
 ---
-title: Méthodes (XMLA) | Documents Microsoft
+title: Méthodes (XMLA) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -21,15 +21,15 @@ helpviewer_keywords:
 - XMLA, methods
 ms.assetid: c6768dd4-ca06-4a85-93b7-5fd5700886ad
 caps.latest.revision: 30
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: fe42e2330e3e108ad1ee0e09d1e1e1007eda9102
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: 1baf254e9965153394a3a7b1367ced21c009a7f4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36155104"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37171420"
 ---
 # <a name="methods-xmla"></a>Méthodes (XMLA)
   Le protocole XML for Analysis (XMLA) utilise deux méthodes, `Discover` et `Execute`, pour offrir un moyen standard pour les applications d’accéder aux informations sur une instance de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Ces méthodes étant appelées à l'aide du protocole SOAP (Simple Object Access Protocol), elles acceptent des entrées et affichent les sorties au format XML. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] implémente les deux méthodes conformément à la spécification XML for Analysis 1.1.  
