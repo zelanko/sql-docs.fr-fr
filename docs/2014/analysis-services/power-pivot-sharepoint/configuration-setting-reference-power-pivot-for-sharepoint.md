@@ -1,5 +1,5 @@
 ---
-title: Paramètre de référence (PowerPivot pour SharePoint) de configuration | Documents Microsoft
+title: Paramètre de référence (PowerPivot pour SharePoint) de configuration | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 3b57dd3f-7820-4ba8-b233-01dc68908273
 caps.latest.revision: 18
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 340800620360ed34ab8bcc2aaee7d71118e451df
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: c819c7bfee1d028d9eb2795620ec9aa4bdf02150
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36139908"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37173560"
 ---
 # <a name="configuration-setting-reference-powerpivot-for-sharepoint"></a>Référence de paramètre de configuration (PowerPivot pour SharePoint)
   Cette rubrique fournit une documentation de référence pour les paramètres de configuration utilisés par les applications de service PowerPivot dans une batterie de serveurs SharePoint. Si vous utilisez du script PowerShell pour configurer un serveur, ou si vous souhaitez rechercher des informations sur un paramètre spécifique, les informations de cette rubrique fournissent des descriptions détaillées.  
@@ -82,7 +82,7 @@ ms.locfileid: "36139908"
 |Heure de fin|08:00 PM|1 à 12 heures, où la valeur est un entier valide appartenant à cette plage.<br /><br /> Le type est Time.|Définit la limite supérieure d'une plage d'heures d'ouverture.|  
 |Compte d’actualisation des données sans assistance de PowerPivot|None|ID d'une application cible|Ce compte est utilisé pour exécuter des travaux d'actualisation des données de la part d'un propriétaire de planification.<br /><br /> Le compte d'actualisation des données sans assistance doit être défini au préalable, avant de pouvoir être référencé dans la page de configuration d'application de service. Pour plus d’informations, consultez [configurer le compte d’actualisation des données PowerPivot sans assistance &#40;PowerPivot pour SharePoint&#41;](../configure-unattended-data-refresh-account-powerpivot-sharepoint.md).|  
 |Autoriser les utilisateurs à entrer des informations d'identification Windows personnalisées|Activé|Booléen|Détermine si la page de configuration d'actualisation des données planifiée affiche une option qui permet à un propriétaire de planification de spécifier le compte d'utilisateur Windows et le mot de passe correspondant pour exécuter un travail d'actualisation des données.<br /><br /> Le service Banque d'informations sécurisé doit être activé pour que cette option fonctionne. Pour plus d’informations, consultez [configurer les informations d’identification stockées pour l’actualisation des données PowerPivot &#40;PowerPivot pour SharePoint&#41;](../configure-stored-credentials-data-refresh-powerpivot-sharepoint.md).|  
-|Longueur maximale de l'historique de traitement|365|1 à 5000 jours|Détermine la durée de conservation de l'historique d'actualisation des données dans la base de données d'application de service PowerPivot. Pour plus d’informations, consultez [collecte des données d’utilisation PowerPivot](power-pivot-usage-data-collection.md).|  
+|Longueur maximale de l'historique de traitement|365|1 à 5000 jours|Détermine la durée de conservation de l'historique d'actualisation des données dans la base de données d'application de service PowerPivot. Pour plus d’informations, consultez [PowerPivot Usage Data Collection](power-pivot-usage-data-collection.md).|  
   
 ##  <a name="UsageData"></a> Collecte des données d'utilisation  
  Les rapports d'utilisation qui s'affichent dans le Tableau de bord de gestion PowerPivot peuvent fournir des informations importantes à propos de l'utilisation des classeurs compatibles PowerPivot. Les paramètres de configuration suivants contrôlent les aspects de la collecte des données d'utilisation pour les événements de serveur PowerPivot présentés par la suite dans des rapports d'utilisation ou d'activité.  
@@ -101,6 +101,6 @@ ms.locfileid: "36139908"
  [Actualisation des données PowerPivot avec SharePoint 2010](../powerpivot-data-refresh-with-sharepoint-2010.md)   
  [Configurer la collecte de données d’utilisation pour &#40;PowerPivot pour SharePoint](configure-usage-data-collection-for-power-pivot-for-sharepoint.md)   
  [Configurer les comptes de Service PowerPivot](configure-power-pivot-service-accounts.md)   
- [Tableau de bord de gestion PowerPivot et les données d’utilisation](power-pivot-management-dashboard-and-usage-data.md)  
+ [Tableau de bord de gestion PowerPivot et données d’utilisation](power-pivot-management-dashboard-and-usage-data.md)  
   
   

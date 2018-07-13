@@ -1,5 +1,5 @@
 ---
-title: Gérer les modèles (SQL Server Data Mining Add-ins) | Documents Microsoft
+title: Gérer les modèles (SQL Server Data Mining Add-ins) | Microsoft Docs
 ms.custom: ''
 ms.date: 12/29/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - mining models, importing
 - mining models, deleting
@@ -18,15 +18,15 @@ helpviewer_keywords:
 - mining models, exporting
 ms.assetid: c11380f0-7c24-4668-9cdf-9c53e4aff665
 caps.latest.revision: 18
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 824c9fb75de1c0d2fcfc7da7cbd3ffcf17c8e38f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: f5b0ebb3690bd74e0e058a1ede2497c0b404d143
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36052064"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37161450"
 ---
 # <a name="manage-models-sql-server-data-mining-add-ins"></a>Gérer les modèles (Compléments d'exploration de données SQL Server)
   ![Bouton de gérer les modèles, ruban Exploration de données](media/dmc-manage.gif "bouton de gérer les modèles, ruban Exploration de données")  
@@ -34,7 +34,7 @@ ms.locfileid: "36052064"
  Le **gérer les modèles** boîte de dialogue vous permet d’interagir avec les modèles d’exploration de données existants et les structures d’exploration de données qui sont stockés dans le [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] serveur auquel vous êtes actuellement connecté. Vous pouvez également afficher et gérer les structures et modèles temporaires créés pendant la session active. Si vous avez utilisé à la fois les modèles de session et les modèles stockés sur un serveur, les deux sont visibles dans la boîte de dialogue.  
   
 ## <a name="using-the-manage-models-wizard"></a>Utilisation de l'Assistant Gérer les modèles  
- Lorsque vous cliquez sur **gérer les modèles**, le **gérer les Structures d’exploration de données et des modèles** boîte de dialogue s’ouvre, en fournissant l’accès aux fonctionnalités suivantes pour la gestion des modèles d’exploration de données et les structures existantes :  
+ Lorsque vous cliquez sur **gérer les modèles**, le **gérer les Structures d’exploration de données et des modèles** boîte de dialogue s’ouvre, fournissant l’accès aux fonctionnalités suivantes pour la gestion des modèles d’exploration de données et des structures existants :  
   
 -   Renommer un modèle ou une structure d'exploration de données  
   
@@ -47,10 +47,10 @@ ms.locfileid: "36052064"
 -   Exporter ou importer une structure ou un modèle d'exploration de données  
   
 > [!NOTE]  
->  Cette boîte de dialogue ne vous permet pas de créer des requêtes ou des modèles. Pour créer une nouvelle structure d’exploration de données, utilisez un des Assistants fournis dans le Client d’exploration de données pour Excel, ou utilisez le **éditeur avancé de requête d’exploration de données de données**.  
+>  Cette boîte de dialogue ne vous permet pas de créer des requêtes ou des modèles. Pour créer une nouvelle structure d’exploration de données, utilisez un des Assistants fournis dans le Client d’exploration de données pour Excel, ou utilisez le **éditeur avancé de requête d’exploration de données**.  
   
 ### <a name="requirements"></a>Spécifications  
- Pour gérer des modèles d'exploration de données, créez tout d'abord une connexion à une instance de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. La connexion est requise même si vous utilisez des modèles de session stockés dans un fichier temporaire. Pour plus d’informations sur la façon de créer ou modifier une connexion, consultez [se connecter à la Source de données &#40;Client d’exploration de données pour Excel&#41;](connect-to-source-data-data-mining-client-for-excel.md).  
+ Pour gérer des modèles d'exploration de données, créez tout d'abord une connexion à une instance de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. La connexion est requise même si vous utilisez des modèles de session stockés dans un fichier temporaire. Pour plus d’informations sur la création ou modification d’une connexion, consultez [se connecter à la Source de données &#40;Client d’exploration de données pour Excel&#41;](connect-to-source-data-data-mining-client-for-excel.md).  
   
  Si l'instance de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] à laquelle vous vous connectez ne contient aucune structure d'exploration de données ni aucun modèle d'exploration de données, vous pouvez les créer en utilisant les Assistants et les autres outils fournis par ce complément. Vous pouvez également créer de nouveaux modèles à l’aide de la **d’exploration de données modèle Éditeur avancé de données**.  
   

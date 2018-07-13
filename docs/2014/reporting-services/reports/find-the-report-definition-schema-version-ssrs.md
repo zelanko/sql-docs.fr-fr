@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - XML schemas [Reporting Services]
 - Report Definition Language, XML schema
 - schemas [Reporting Services]
 ms.assetid: 67954419-1b61-4481-a3b9-23b4ba7a5624
 caps.latest.revision: 14
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 8e6991a19701b1ac63634f57e02be3ca97c0ace2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: 42fd97141fad21c9995857a6e51c495cf6eac078
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36139734"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37151910"
 ---
 # <a name="find-the-report-definition-schema-version-ssrs"></a>Rechercher la version du schéma de définition de rapport (SSRS)
   Un fichier de définition de rapport spécifie l'espace de noms RDL de la version du schéma de définition de rapport qui est utilisée pour valider le fichier rdl. Lorsque vous ouvrez un fichier .rdl dans un environnement de création de rapports, tel que le Concepteur de rapports de [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] ou le Générateur de rapports, si le rapport a déjà été créé pour un espace de noms, un fichier de sauvegarde est automatiquement créé et le rapport est mis à niveau d'après l'espace de noms actuel. Si vous enregistrez la définition de rapport mise à niveau, vous enregistrez le fichier .rdl converti. Il s'agit de la seule façon de mettre à niveau une définition de rapport. La définition de rapport proprement dite n'est pas mise à niveau sur un serveur de rapports. Le rapport compilé est mis à niveau sur un serveur de rapports. Pour plus d'informations, consultez [Mettre à niveau des rapports](../install-windows/upgrade-reports.md).  

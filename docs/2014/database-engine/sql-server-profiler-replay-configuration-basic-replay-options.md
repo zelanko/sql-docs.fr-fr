@@ -1,5 +1,5 @@
 ---
-title: SQL Server Profiler - Configuration de la relecture (Options de relecture de base) | Documents Microsoft
+title: SQL Server Profiler - Configuration de la relecture (Options de relecture de base) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.pro.replay.generaloptions.f1
 helpviewer_keywords:
 - Replay Configuration dialog box
 ms.assetid: 85a1dec6-9bbc-477a-86c5-b463db9ebb31
 caps.latest.revision: 21
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: a2d67c2c481c44012a6e6fc63ae9bd560be90264
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: cef06029d3ac1af86955f7a2df89fbe570c15245
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36140322"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37178376"
 ---
 # <a name="sql-server-profiler---replay-configuration-basic-replay-options"></a>Générateur de profils SQL Server – Configuration de la relecture (Options de relecture de base)
   Dans la boîte de dialogue **Configuration de la relecture**, utilisez la page **Options de relecture de base** pour spécifier la manière de relire un fichier ou une table de trace.  
@@ -38,7 +38,7 @@ ms.locfileid: "36140322"
  Affiche la boîte de dialogue **Se connecter au serveur** pour se connecter à un autre serveur.  
   
  **Enregistrer dans le fichier**  
- Permet d'enregistrer les résultats de relecture dans un fichier. [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] Affiche la boîte de dialogue de fichier standard, où vous pouvez spécifier l’emplacement où enregistrer le fichier.  
+ Permet d'enregistrer les résultats de relecture dans un fichier. [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] Affiche la boîte de dialogue de fichier standard, où vous pouvez spécifier l’emplacement pour enregistrer le fichier.  
   
  **Enregistrer dans la table**  
  Permet d'enregistrer les résultats de relecture dans une table. [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] affiche la boîte de dialogue de sélection de table, qui vous permet de spécifier l'emplacement où enregistrer la table.  

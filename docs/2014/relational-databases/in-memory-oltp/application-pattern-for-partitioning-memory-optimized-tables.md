@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - database-engine-imoltp
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 3f867763-a8e6-413a-b015-20e9672cc4d1
 caps.latest.revision: 20
-author: stevestein
-ms.author: sstein
-manager: jhubbard
-ms.openlocfilehash: ef7be1ca170df9efb0a4b76ab4b7f451b6742dbf
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: ad61c1d762a412d9a314b5e41cc2908c0cca704f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36140039"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37188496"
 ---
 # <a name="application-pattern-for-partitioning-memory-optimized-tables"></a>Modèle d'application pour partitionner des tables mémoire optimisées
-  [!INCLUDE[hek_2](../../includes/hek-2-md.md)] prend en charge un modèle selon lequel une quantité limitée de données actives est conservée dans une table optimisée en mémoire, tandis que les données auxquelles on accède moins fréquemment sont traitées sur le disque. En règle générale, il s’agit un scénario où les données sont stockées selon un `datetime` clé.  
+  [!INCLUDE[hek_2](../../includes/hek-2-md.md)] prend en charge un modèle selon lequel une quantité limitée de données actives est conservée dans une table optimisée en mémoire, tandis que les données auxquelles on accède moins fréquemment sont traitées sur le disque. En règle générale, il s’agirait un scénario où sont stockées les données selon un `datetime` clé.  
   
  Pour émuler les tables partitionnées avec les tables mémoire optimisées, conservez une table partitionnée et une table mémoire optimisée avec un schéma commun. Les données actives sont insérées et mises à jour dans la table mémoire optimisée, alors que les données les moins fréquemment sollicitées sont conservées dans la table partitionnée traditionnelle.  
   

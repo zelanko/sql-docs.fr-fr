@@ -1,5 +1,5 @@
 ---
-title: Élément AllowDuplicateNames (ASSL) | Documents Microsoft
+title: Élément AllowDuplicateNames (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - AllowDuplicateNames element
 ms.assetid: d0a80040-115f-4490-926f-4d64d8977e67
 caps.latest.revision: 38
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: e6fe55bdf9dde0906a43fa46745e22179dba9e74
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 9358092125e5be7c7c0ec555cb29db4d7f714c99
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36139670"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37180892"
 ---
 # <a name="allowduplicatenames-element-assl"></a>Élément AllowDuplicateNames (ASSL)
   Détermine si les noms en double sont autorisés dans un [hiérarchie](../objects/hierarchy-element-assl.md) élément.  
@@ -62,7 +62,7 @@ ms.locfileid: "36139670"
 |Éléments enfants|None|  
   
 ## <a name="remarks"></a>Notes  
- L’élément qui correspond au parent de `AllowDuplicateNames` dans l’objet d’objets AMO (Analysis Management) est modèle <xref:Microsoft.AnalysisServices.Hierarchy>.  
+ L’élément qui correspond au parent de `AllowDuplicateNames` dans l’objet d’objets AMO (Analysis Management) modèle est <xref:Microsoft.AnalysisServices.Hierarchy>.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Propriétés &#40;ASSL&#41;](properties-assl.md)  

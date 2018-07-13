@@ -5,10 +5,9 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-views
+ms.technology: table-view-index
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - indexed views [SQL Server], creating
 - clustered indexes, views
@@ -18,15 +17,15 @@ helpviewer_keywords:
 - views [SQL Server], indexed views
 ms.assetid: f86dd29f-52dd-44a9-91ac-1eb305c1ca8d
 caps.latest.revision: 77
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 5498cda83c3b33d0f6b3c6898954e1442e6e21cc
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: d56783347d9c5aaf59a1b45b24e2003a35df96df
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36139553"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37150420"
 ---
 # <a name="create-indexed-views"></a>Créer des vues indexées
   Cette rubrique explique comment créer une vue indexée dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] à l'aide de [!INCLUDE[tsql](../../includes/tsql-md.md)]. Le premier index créé sur une vue doit être un index cluster unique. Après avoir créé l'index cluster unique, vous pouvez créer davantage d'index non cluster. La création d'un index cluster unique sur une vue améliore les performances des requêtes, car la vue est stockée dans la base de données au même titre qu'une table avec un index cluster. L'optimiseur de requête peut utiliser des vues indexées pour accélérer l'exécution des requêtes. Il n'est pas nécessaire de référencer la vue dans la requête pour que l'optimiseur envisage d'utiliser cette vue.  
@@ -128,14 +127,14 @@ ms.locfileid: "36139553"
     |Jeux de colonnes éparses|Fonctions Inline ou table à instructions multiples|OFFSET|  
     |CHECKSUM_AGG|||  
   
-     \*La vue indexée peut contenir `float` colonnes ; Toutefois, ces colonnes ne peuvent pas être incluses dans la clé d’index cluster.  
+     \*La vue indexée peut contenir `float` colonnes ; Toutefois, ces colonnes ne peuvent pas être incluses dans la clé d’index en cluster.  
   
 -   Si la clause GROUP BY est présente, la définition VIEW doit contenir COUNT_BIG(*), mais pas HAVING. Ces restrictions de GROUP BY sont applicables seulement à la définition de la vue indexée. Une requête peut utiliser une vue indexée dans son plan d'exécution, même si elle ne répond pas à ces restrictions de GROUP BY.  
   
 -   Si la définition de la vue contient une clause GROUP BY, la clé de l'index cluster unique peut référencer seulement les colonnes définies dans la clause GROUP BY.  
   
 ###  <a name="Recommendations"></a> Recommandations  
- Si vous faites référence aux littéraux de chaîne `datetime` et `smalldatetime` au sein de vues indexées, il est recommandé de convertir explicitement le littéral en type date souhaité à l'aide d'un style de format de date déterministe. Pour obtenir la liste des styles de formats de date qui sont déterministes, consultez [CAST et CONVERT &#40;Transact-SQL&#41;](/sql/t-sql/functions/cast-and-convert-transact-sql). Les expressions qui impliquent une conversion implicite de chaînes de caractères à `datetime` ou `smalldatetime` sont considérées comme non déterministes. Cela est dû au fait que les résultats dépendent des paramètres LANGUAGE et DATEFORMAT de la session serveur. Par exemple, les résultats de l'expression `CONVERT (datetime, '30 listopad 1996', 113)` dépendent du paramètre LANGUAGE, car la chaîne '`listopad`' désigne des mois différents selon la langue. De même, dans l'expression `DATEADD(mm,3,'2000-12-01')`, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] interprète la chaîne `'2000-12-01'` en fonction du paramètre DATEFORMAT.  
+ Si vous faites référence aux littéraux de chaîne `datetime` et `smalldatetime` au sein de vues indexées, il est recommandé de convertir explicitement le littéral en type date souhaité à l'aide d'un style de format de date déterministe. Pour obtenir la liste des styles de formats de date qui sont déterministes, consultez [CAST et CONVERT &#40;Transact-SQL&#41;](/sql/t-sql/functions/cast-and-convert-transact-sql). Expressions qui impliquent une conversion implicite de chaînes de caractères à `datetime` ou `smalldatetime` sont considérées comme non déterministes. Cela est dû au fait que les résultats dépendent des paramètres LANGUAGE et DATEFORMAT de la session serveur. Par exemple, les résultats de l'expression `CONVERT (datetime, '30 listopad 1996', 113)` dépendent du paramètre LANGUAGE, car la chaîne '`listopad`' désigne des mois différents selon la langue. De même, dans l'expression `DATEADD(mm,3,'2000-12-01')`, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] interprète la chaîne `'2000-12-01'` en fonction du paramètre DATEFORMAT.  
   
  La conversion implicite de données caractères non-Unicode entre les classements est également considérée comme non déterministe.  
   

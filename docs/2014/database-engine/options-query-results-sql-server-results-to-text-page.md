@@ -1,5 +1,5 @@
 ---
-title: Options (résultats de SQL Server-résultats de la requête à la Page de texte) | Documents Microsoft
+title: Options (résultats de SQL Server-résultats de la requête à la Page de texte) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - VS.ToolsOptionsPages.QueryResults.SqlServer.SQLResultsToText
 ms.assetid: 2ccbdf17-e14f-42f1-a836-ca999a3432c9
 caps.latest.revision: 19
 author: craigg-msft
 ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 190d508cc4e1e637d95516a8c9daf148692aa2df
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 72bcaf98c2a7089aa101379001559ee12b8f9b55
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36053138"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37165330"
 ---
 # <a name="options-query-results-sql-server-results-to-text-page"></a>Options (résultats de SQL Server-résultats de la requête à la Page de texte)
   Utilisez cette page pour définir les options d'affichage d'un jeu de résultats de requête au format texte. Les modifications apportées à ces options sont appliquées uniquement aux nouvelles requêtes [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . Pour que ces modifications s’appliquent aux requêtes en cours, cliquez sur **Options de requête** dans le menu **Requête** ou cliquez avec le bouton droit sur la fenêtre Requête [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] et sélectionnez **Options de requête**. Dans la boîte de dialogue **Options de requête**, sous **Résultats**, cliquez sur **Texte**.  
@@ -42,7 +42,7 @@ ms.locfileid: "36053138"
  **Défilement pendant réception des résultats**  
  Activez cette case à cocher pour suivre l'exécution de la requête et afficher les enregistrements les plus récents à la fin de l'ensemble de résultats. Désactivez-la pour cibler l'affichage sur les premières lignes retournées.  
   
- **Aligner les valeurs numériques à droite**  
+ **Aligner à droite des valeurs numériques**  
  Activez cette case à cocher pour aligner les valeurs numériques à droite de la colonne. Cela peut faciliter l'analyse de nombres comportant un nombre de décimales invariable.  
   
  **Ignorer les résultats après l’exécution de requête**  

@@ -1,5 +1,5 @@
 ---
-title: Sources de données pris en charge (SSAS tabulaire) | Documents Microsoft
+title: Sources de données pris en charge (SSAS tabulaire) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: d6c2b1b3-91fc-4175-af25-509946dc7f24
 caps.latest.revision: 17
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 360a0d7d556589947d312deab1f2ff485afb85d9
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 1b8aac369dd82f75f251df1195ac29c8ccf3b983
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36052934"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37185296"
 ---
 # <a name="data-sources-supported-ssas-tabular"></a>Sources de données prises en charge (SSAS Tabulaire)
   Cette rubrique décrit les types de sources de données qui peuvent être utilisées avec les modèles tabulaires.  
@@ -37,7 +37,7 @@ ms.locfileid: "36052934"
   
 |||||  
 |-|-|-|-|  
-|Source|Versions|Type de fichier|Fournisseurs de <sup>1</sup>|  
+|Source|Versions|Type de fichier|Fournisseurs <sup>1</sup>|  
 |Bases de données Access|Microsoft Access 2003, 2007, 2010.|.accdb ou .mdb|Fournisseur OLE DB ACE 14|  
 |Bases de données relationnelles SQL Server|Microsoft SQL Server 2005, 2008, 2008 R2 ; SQL Server 2012, Microsoft SQL Azure Database <sup>2</sup>|(non applicable)|Fournisseur OLE DB pour SQL Server<br /><br /> Fournisseur OLE DB SQL Server Native Client<br /><br /> Fournisseur OLE DB SQL Server Native Client 10.0<br /><br /> Fournisseur de données .NET Framework pour SQL Client|  
 |SQL Server Parallel Data Warehouse (PDW) <sup>3</sup>|2008 R2|(non applicable)|Fournisseur OLE DB pour SQL Server PDW|  
@@ -60,7 +60,7 @@ ms.locfileid: "36052934"
   
  <sup>3</sup> pour plus d’informations sur SQL Server PDW, consultez le site web [SQL Server 2008 R2 Parallel Data Warehouse](http://go.microsoft.com/fwlink/?LinkId=150895).  
   
- <sup>4</sup> dans certains cas, à l’aide du fournisseur OLE DB MSDAORA peut provoquer des erreurs de connexion, en particulier avec les versions plus récentes d’Oracle. Si vous rencontrez des erreurs, nous vous recommandons d'utiliser l'un des autres fournisseurs répertoriés pour Oracle.  
+ <sup>4</sup> dans certains cas, l’utilisation du fournisseur OLE DB MSDAORA peut entraîner des erreurs de connexion, en particulier avec les versions plus récentes d’Oracle. Si vous rencontrez des erreurs, nous vous recommandons d'utiliser l'un des autres fournisseurs répertoriés pour Oracle.  
   
 ##  <a name="bkmk_unsupported_ds"></a> Sources non pris en charge  
  La source de données suivante n'est pas prise en charge actuellement :  

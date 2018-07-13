@@ -1,28 +1,27 @@
 ---
-title: Conditions préalables pour la migration à partir de journaux de transaction vers les groupes de disponibilité AlwaysOn (SQL Server) | Documents Microsoft
+title: Prérequis pour la migration à partir des journaux de transaction vers les groupes de disponibilité AlwaysOn (SQL Server) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - log shipping [SQL Server], AlwaysOn Availability Groups
 - Availability Groups [SQL Server], interoperability
 ms.assetid: 2738ce65-205e-4682-92d8-dc7e37c58b2b
 caps.latest.revision: 21
-author: MikeRayMSFT
-ms.author: mikeray
-manager: jhubbard
-ms.openlocfilehash: e01e7b373318e64370cc48ff79002c130bd0838a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 511a8e6425cf49060be396b0737d72943136842d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36140091"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37178366"
 ---
 # <a name="prerequisites-for-migrating-from-log-shipping-to-alwayson-availability-groups-sql-server"></a>Conditions préalables requises pour la migration de la copie des journaux de transaction vers les groupes de disponibilité AlwaysOn (SQL Server)
   Cette rubrique décrit les conditions requises pour convertir une base de données principale pour la copie des journaux de transaction avec une ou plusieurs de ses bases de données secondaires en base de données principale AlwaysOn et ses bases de données secondaires.  
@@ -75,7 +74,7 @@ ms.locfileid: "36140091"
 ##  <a name="RelatedTasks"></a> Tâches associées  
  **Envoi des journaux de transaction**  
   
--   [Mise à niveau des journaux de transaction vers SQL Server 2014 &#40;Transact-SQL&#41;](../../log-shipping/upgrading-log-shipping-to-sql-server-2016-transact-sql.md)  
+-   [Mettre à niveau des journaux de transaction vers SQL Server 2014 &#40;Transact-SQL&#41;](../../log-shipping/upgrading-log-shipping-to-sql-server-2016-transact-sql.md)  
   
 -   [Supprimer la copie des journaux de transaction &#40;SQL Server&#41;](../../log-shipping/remove-log-shipping-sql-server.md)  
   
@@ -107,7 +106,7 @@ ms.locfileid: "36140091"
   
 -   **Livres blancs :**  
   
-     [Guide de migration : Migration vers les groupes de disponibilité AlwaysOn à partir des déploiements antérieurs combinant la mise en miroir de base de données et journaux de transaction](http://msdn.microsoft.com/library/jj635217)  
+     [Guide de migration : Migration vers les groupes de disponibilité AlwaysOn à partir des déploiements antérieurs combinant la mise en miroir de base de données et des journaux de transaction](http://msdn.microsoft.com/library/jj635217)  
   
      [Livres blancs de Microsoft pour SQL Server 2012](http://msdn.microsoft.com/library/hh403491.aspx)  
   

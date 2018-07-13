@@ -1,5 +1,5 @@
 ---
-title: Types de données XPath (SQLXML 4.0) | Documents Microsoft
+title: Types de données XPath (SQLXML 4.0) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -29,23 +29,23 @@ helpviewer_keywords:
 - operators [SQLXML]
 ms.assetid: a90374bf-406f-4384-ba81-59478017db68
 caps.latest.revision: 26
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: f38c8e12137ea2a906269b6cba7b86fefff5c508
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 0bd591ecb5c0e37acc4ffea7d7b22bf85636c585
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36052366"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37167140"
 ---
 # <a name="xpath-data-types-sqlxml-40"></a>Types de données XPath (SQLXML 4.0)
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], XPath et XML Schema (XSD) sont dotés de types de données très différents. Par exemple, XPath n'affiche aucun type de données integer ou date tandis que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et XSD en possèdent un grand nombre. XSD utilise une précision à la nanoseconde pour les valeurs temporelles ; [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] affiche au maximum une précision de 1/300ème de seconde. Par conséquent, le mappage d'un type de données à un autre n'est pas toujours possible. Pour plus d’informations sur le mappage [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] des types de données aux types de données XSD, consultez [forçages de Type de données et de l’Annotation SQL : DataType &#40;SQLXML 4.0&#41;](../sqlxml-annotated-xsd-schemas-using/data-type-coercions-and-the-sql-datatype-annotation-sqlxml-4-0.md).  
   
- XPath possède trois types de données : `string`, `number` et `boolean`. Le type de données `number` est toujours une valeur à virgule flottante double précision IEEE 754. Le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `float(53)` type de données est le plus proche XPath `number`. Toutefois, le type `float(53)` n'est pas exactement une valeur IEEE 754. Par exemple, ni la valeur NaN (Not-a-Number,), ni une valeur infinie n'est employée. Toute tentative de conversion d'une chaîne non numérique en type `number` et de division par zéro entraîne une erreur.  
+ XPath possède trois types de données : `string`, `number` et `boolean`. Le type de données `number` est toujours une valeur à virgule flottante double précision IEEE 754. Le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `float(53)` type de données est la plus proche XPath `number`. Toutefois, le type `float(53)` n'est pas exactement une valeur IEEE 754. Par exemple, ni la valeur NaN (Not-a-Number,), ni une valeur infinie n'est employée. Toute tentative de conversion d'une chaîne non numérique en type `number` et de division par zéro entraîne une erreur.  
   
 ## <a name="xpath-conversions"></a>Conversions XPath  
- Lorsque vous utilisez une requête XPath, telle que `OrderDetail[@UnitPrice > "10.0"]`, les conversions de type de données implicites et explicites peuvent modifier la signification de la requête de manière subtile. Par conséquent, il est primordial de comprendre la manière dont les types de données Xpath sont implémentés. La spécification du langage XPath, XML Path Language (XPath) version 1.0 W3C Proposed Recommendation du 8 octobre 1999, sont accessibles sur le site Web de W3C à http://www.w3.org/TR/1999/PR-xpath-19991008.html.  
+ Lorsque vous utilisez une requête XPath, telle que `OrderDetail[@UnitPrice > "10.0"]`, les conversions de type de données implicites et explicites peuvent modifier la signification de la requête de manière subtile. Par conséquent, il est primordial de comprendre la manière dont les types de données Xpath sont implémentés. La spécification du langage XPath, XML Path Language (XPath) version 1.0 W3C Proposed Recommendation du 8 octobre 1999, peut être trouvée sur le site Web de W3C à http://www.w3.org/TR/1999/PR-xpath-19991008.html.  
   
  Les opérateurs XPath sont divisés en quatre catégories :  
   
@@ -74,7 +74,7 @@ ms.locfileid: "36052366"
  Les conversions des éléments node-set ne sont pas toujours intuitives. Un élément node-set est converti en type `string` par extraction de la valeur de chaîne du premier nœud du jeu uniquement. Pour être converti en type `number`, un élément node-set est d'abord converti en type `string`, puis le type `string` est converti en type `number`. Pour convertir un élément node-set en type `boolean`, vous devez d'abord le tester pour vérifier s'il existe.  
   
 > [!NOTE]  
->  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ne procède à aucune sélection positionnelle sur les éléments node-set : par exemple, la requête XPath `Customer[3]` désigne le troisième client ; ce type de sélection positionnelle n'est pas pris en charge dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Par conséquent, les conversions d'élément node-set en `string` ou d'élément node-set en `number`, telles que décrites dans la recommandation XPath, ne sont pas implémentées. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilise une sémantique « quelconque » partout où la recommandation XPath spécifie la « première » sémantique. Par exemple, en fonction de la spécification XPath du W3C, la requête XPath `Order[OrderDetail/@UnitPrice > 10.0]` sélectionne les commandes dont le premier **OrderDetail** qui a un **UnitPrice** supérieure à 10.0. Dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], cette requête XPath sélectionne les commandes avec les **OrderDetail** qui a un **UnitPrice** supérieure à 10.0.  
+>  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ne procède à aucune sélection positionnelle sur les éléments node-set : par exemple, la requête XPath `Customer[3]` désigne le troisième client ; ce type de sélection positionnelle n'est pas pris en charge dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Par conséquent, les conversions d'élément node-set en `string` ou d'élément node-set en `number`, telles que décrites dans la recommandation XPath, ne sont pas implémentées. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilise une sémantique « quelconque » partout où la recommandation XPath spécifie la « première » sémantique. Par exemple, selon la spécification XPath du W3C, la requête XPath `Order[OrderDetail/@UnitPrice > 10.0]` sélectionne les commandes dont le premier **OrderDetail** qui a un **UnitPrice** supérieure à 10.0. Dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], cette requête XPath sélectionne les commandes avec n’importe quel **OrderDetail** qui a un **UnitPrice** supérieure à 10.0.  
   
  La conversion en valeur `boolean` implique un test de vérification d'existence ; la requête XPath `Products[@Discontinued=true()]` équivaut donc à l'expression SQL « Products.Discontinued is not null » et non à l'expression SQL « Products.Discontinued = 1 ». Pour que la requête équivaille à la dernière expression SQL, convertissez avant tout l'élément node-set en type non `boolean`, tel que `number`. Par exemple, `Products[number(@Discontinued) = true()]`.  
   
@@ -88,7 +88,7 @@ ms.locfileid: "36052366"
  Lorsque vous convertissez un élément node-set en type `string` ou `number`, son type XDR (le cas échéant) est examiné dans le schéma annoté et utilisé pour déterminer la conversion requise.  
   
 ## <a name="mapping-xdr-data-types-to-xpath-data-types"></a>Mappage des types de données XDR et XPath  
- Le type de données XPath d’un nœud est dérivé du type de données XDR dans le schéma, comme indiqué dans le tableau suivant (le nœud **EmployeeID** sert à des fins d’illustration).  
+ Le type de données XPath d’un nœud est dérivé du type de données XDR dans le schéma, comme indiqué dans le tableau suivant (le nœud **EmployeeID** sert fins d’illustration).  
   
 |Type de données XDR|Équivalent<br /><br /> Type de données XPath|Conversion SQL Server utilisée|  
 |-------------------|------------------------------------|--------------------------------|  
@@ -100,7 +100,7 @@ ms.locfileid: "36052366"
 |Date|chaîne|LEFT(CONVERT(nvarchar(4000), EmployeeID, 126), 10)|  
 |time<br /><br /> time.tz|chaîne|SUBSTRING(CONVERT(nvarchar(4000), EmployeeID, 126), 1 + CHARINDEX(N'T', CONVERT(nvarchar(4000), EmployeeID, 126)), 24)|  
   
- Les conversions de date et d’heure sont conçues pour fonctionner si la valeur est stockée dans la base de données à l’aide de la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `datetime` type de données ou un `string`. Notez que la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `datetime` type de données n’utilise pas `timezone` et a une précision moins importante que le code XML `time` type de données. Pour inclure le type de données `timezone` ou apporter une précision supplémentaire, stockez les données dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] avec un type `string`.  
+ Les conversions de date et d’heure sont conçues pour fonctionner si la valeur est stockée dans la base de données à l’aide de la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `datetime` type de données ou un `string`. Notez que le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `datetime` type de données n’utilise pas `timezone` et a une précision moins importante que le code XML `time` type de données. Pour inclure le type de données `timezone` ou apporter une précision supplémentaire, stockez les données dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] avec un type `string`.  
   
  Lorsque vous convertissez un nœud du type de données XDR en type de données XPath, une conversion supplémentaire est parfois nécessaire (d'un type de données XPath vers un autre type de données XPath). Par exemple, imaginez la requête XPath suivante :  
   
@@ -108,7 +108,7 @@ ms.locfileid: "36052366"
 (@m + 3) = 4  
 ```  
   
- Si @m est de le `fixed14.4` type de données XDR, la conversion de type de données XDR en type de données s’effectue à l’aide de XPath :  
+ Si @m est du `fixed14.4` type de données XDR, la conversion de type de données XDR en type de données s’effectue à l’aide de XPath :  
   
 ```  
 CONVERT(money, m)  
@@ -146,7 +146,7 @@ CONVERT(float(CONVERT(money, m)) + CONVERT(float(53), 3) = CONVERT(float(53), 3)
   
  `N'E-' + CONVERT(nvarchar(4000), Employees.EmployeeID, 126) = N'E-1'`  
   
- Étant donné que **EmployeeID** est un de le `id` (`idref`, `idrefs`, `nmtoken`, `nmtokens`, et ainsi de suite) les valeurs de type de données dans le schéma XSD, **EmployeeID** est converti en la `string` type de données XPath à l’aide des règles de conversion décrites précédemment.  
+ Étant donné que **EmployeeID** fait partie de la `id` (`idref`, `idrefs`, `nmtoken`, `nmtokens`, et ainsi de suite) les valeurs de type de données dans le schéma XSD, **EmployeeID** est converti en la `string` type de données XPath à l’aide de règles de conversion décrites précédemment.  
   
  `CONVERT(nvarchar(4000), Employees.EmployeeID, 126)`  
   
@@ -155,7 +155,7 @@ CONVERT(float(CONVERT(money, m)) + CONVERT(float(53), 3) = CONVERT(float(53), 3)
 ### <a name="b-perform-several-data-type-conversions-in-an-xpath-query"></a>B. Effectuer plusieurs conversions de types de données dans une requête XPath.  
  Examinez la requête XPath suivante définie par rapport à un schéma XSD annoté : `OrderDetail[@UnitPrice * @OrderQty > 98]`  
   
- Cette requête XPath retourne tous les  **\<OrderDetail >** éléments satisfaisant le prédicat `@UnitPrice * @OrderQty > 98`. Si le **UnitPrice** est annoté avec un `fixed14.4` de type de données dans le schéma annoté, ce prédicat est équivalent à l’expression SQL :  
+ Cette requête XPath retourne tous les  **\<OrderDetail >** éléments satisfaisant le prédicat `@UnitPrice * @OrderQty > 98`. Si le **UnitPrice** est annoté avec un `fixed14.4` de type de données dans le schéma annoté, ce prédicat équivaut à l’expression SQL :  
   
  `CONVERT(float(53), CONVERT(money, OrderDetail.UnitPrice)) * CONVERT(float(53), OrderDetail.OrderQty) > CONVERT(float(53), 98)`  
   

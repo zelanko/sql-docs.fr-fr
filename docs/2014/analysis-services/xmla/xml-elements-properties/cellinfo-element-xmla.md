@@ -1,5 +1,5 @@
 ---
-title: Élément CellInfo (XMLA) | Documents Microsoft
+title: Élément CellInfo (XMLA) | Microsoft Docs
 ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
@@ -24,15 +24,15 @@ helpviewer_keywords:
 - CellInfo element
 ms.assetid: 8b6420f1-e9a7-4975-b580-1439fa11f5ca
 caps.latest.revision: 13
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: 803640fe83ccc3137b4597b8c1b78850abeb55c1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: fda3576bb50314c28dd01474e576ff2b5b333cb8
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36053584"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37176386"
 ---
 # <a name="cellinfo-element-xmla"></a>Élément CellInfo (XMLA)
   Représente les métadonnées de cellule contenue par le parent [OlapInfo](olapinfo-element-xmla.md) élément.  
@@ -74,9 +74,9 @@ ms.locfileid: "36053584"
 <CellPropertyDefinition name="string" type"string" />  
 ```  
   
- Les propriétés disponibles et leurs valeurs peuvent être obtenues en utilisant le type de demande DISCOVER_PROPERTIES avec la `Discover` (méthode). Il n'existe aucun ordre requis pour les propriétés répertoriées dans l'élément `PropertyList`.  
+ Les propriétés disponibles et leurs valeurs peuvent être obtenus en utilisant le type de demande DISCOVER_PROPERTIES avec la `Discover` (méthode). Il n'existe aucun ordre requis pour les propriétés répertoriées dans l'élément `PropertyList`.  
   
- Un fournisseur peut éventuellement spécifier des valeurs par défaut pour des propriétés de cellule ou de membre individuelles dans la section `AxisInfo` ou `CellInfo`. Les valeurs par défaut peuvent fournir un résultat plus restreint si la propriété affiche toujours, ou presque, la même valeur. Pour indiquer une valeur par défaut pour une propriété, le`Default` élément peut éventuellement être spécifié comme un élément enfant de l’un des éléments de définition de propriété de cellule. Par conséquent, l'absence d'une propriété de membre ou de cellule dans le résultat signifie que la valeur indiquée par défaut correspond à la valeur de la propriété de cellule.  
+ Un fournisseur peut éventuellement spécifier des valeurs par défaut pour des propriétés de cellule ou de membre individuelles dans la section `AxisInfo` ou `CellInfo`. Les valeurs par défaut peuvent fournir un résultat plus restreint si la propriété affiche toujours, ou presque, la même valeur. Pour indiquer une valeur par défaut pour une propriété, le`Default` élément peut éventuellement être spécifié comme un élément enfant d’un des éléments de définition de propriété de cellule. Par conséquent, l'absence d'une propriété de membre ou de cellule dans le résultat signifie que la valeur indiquée par défaut correspond à la valeur de la propriété de cellule.  
   
 ## <a name="example"></a>Exemple  
  L'exemple suivant illustre comment les propriétés de cellule VALUE, FORMATTED_VALUE et FORMAT_STRING sont représentées dans l'élément `CellInfo`.  

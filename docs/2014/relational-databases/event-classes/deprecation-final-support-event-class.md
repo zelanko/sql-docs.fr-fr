@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 topic_type:
 - apiref
 helpviewer_keywords:
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - deprecation [SQL Server], events final support
 ms.assetid: 2b4d88d0-62be-45c0-bea8-c5900d553d31
 caps.latest.revision: 26
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: d17f65ff5265e4a68a327f90266b9f9855ebcd3e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 6be712b5b2ecf84e68abf7be1681962a83dc86d6
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36140279"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37154340"
 ---
 # <a name="deprecation-final-support-event-class"></a>Deprecation Final Support (classe d'événements)
   La classe d’événements **Deprecation Final Support** a lieu quand vous utilisez une fonctionnalité qui sera supprimée dans la prochaine version majeure de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Pour une plus grande longévité de vos applications, n’utilisez pas les fonctions qui font intervenir la classe d’événements **Deprecation Final Support** ou **Deprecation Announcement** . Modifiez le plus tôt possible les applications qui utilisent actuellement les fonctions abandonnées.  
@@ -35,7 +35,7 @@ ms.locfileid: "36140279"
 |----------------------|---------------|-----------------|---------------|----------------|  
 |ApplicationName|`nvarchar`|Nom de l'application cliente qui a créé la connexion à une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Cette colonne est remplie avec les valeurs passées par l'application plutôt que par le nom affiché du programme.|10|Oui|  
 |ClientProcessID|`int`|ID affecté par l'ordinateur hôte au processus dans lequel s'exécute l'application cliente. La colonne de données est remplie si le client fournit l'ID du processus client.|9|Oui|  
-|DatabaseID|`int`|ID de la base de données spécifiée par l'instruction USE *database* ou celui de la base de données par défaut si aucune instruction USE *database* n'a été spécifiée pour une instance donnée. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] Affiche le nom de la base de données si la `ServerName` colonne de données est capturée dans la trace et que le serveur est disponible. Déterminez la valeur pour une base de données à l'aide de la fonction DB_ID.|3|Oui|  
+|DatabaseID|`int`|ID de la base de données spécifiée par l'instruction USE *database* ou celui de la base de données par défaut si aucune instruction USE *database* n'a été spécifiée pour une instance donnée. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] Affiche le nom de la base de données si la `ServerName` colonne de données est capturée dans la trace et le serveur est disponible. Déterminez la valeur pour une base de données à l'aide de la fonction DB_ID.|3|Oui|  
 |DatabaseName|`nvarchar`|Nom de la base de données dans laquelle l'instruction de l'utilisateur est exécutée.|35|Oui|  
 |EventClass|`int`|Type d’événement = 126.|27|non|  
 |EventSequence|`int`|Séquence d'un événement donné au sein de la demande.|51|non|  
@@ -62,6 +62,6 @@ ms.locfileid: "36140279"
 ## <a name="see-also"></a>Voir aussi  
  [sp_trace_setevent &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql)   
  [Classe d'événements Deprecation Announcement](deprecation-announcement-event-class.md)   
- [Fonctionnalités du moteur de base de données déconseillées dans SQL Server 2014](../../database-engine/deprecated-database-engine-features-in-sql-server-2016.md)  
+ [Fonctionnalités dépréciées du moteur de base de données dans SQL Server 2014](../../database-engine/deprecated-database-engine-features-in-sql-server-2016.md)  
   
   

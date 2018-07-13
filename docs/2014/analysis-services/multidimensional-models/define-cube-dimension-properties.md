@@ -1,5 +1,5 @@
 ---
-title: Définir des propriétés de Dimension de Cube | Documents Microsoft
+title: Définir les propriétés de Dimension de Cube | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - dimensions [Analysis Services], characteristics
 - properties [Analysis Services], dimensions
 ms.assetid: 9314e749-0918-4862-abaf-a21692188122
 caps.latest.revision: 17
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: bc40ef64b7b5e9b92d0e170d89ed388a90ff01c4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 4bda79152cc17ef8f9e94afde2f8166ecd73ba4b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36140401"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37157060"
 ---
 # <a name="define-cube-dimension-properties"></a>Définir des propriétés d'une dimension de cube
   Une dimension de cube est une instance d'une dimension de base de données à l'intérieur d'un cube. Une dimension de base de données peut être utilisée dans plusieurs cubes et plusieurs dimensions de cube peuvent être basées sur une seule dimension de base de données. Le tableau suivant décrit les propriétés d'une dimension de cube.  

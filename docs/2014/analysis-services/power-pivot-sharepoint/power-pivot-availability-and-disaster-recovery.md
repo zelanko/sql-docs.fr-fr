@@ -1,5 +1,5 @@
 ---
-title: Disponibilité de PowerPivot et la récupération d’urgence (SQL Server 2014) | Documents Microsoft
+title: Disponibilité de PowerPivot et de récupération d’urgence (SQL Server 2014) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 4aaf008c-3bcb-4dbf-862c-65747d1a668c
 caps.latest.revision: 13
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 7c05bb8ca3e917d12fe1452dd598c30c698d3c4a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 15efd2e1265635fa2870013d580ea4ef929b4600
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36052521"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37159290"
 ---
 # <a name="powerpivot-availability-and-disaster-recovery-sql-server-2014"></a>Récupération d'urgence et disponibilité de PowerPivot (SQL Server 2014)
   La disponibilité et les plans de récupération d'urgence pour [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] dépendent principalement de la conception de votre batterie de serveurs SharePoint, de la durée de temps mort acceptable pour les différents composants, ainsi que des outils et des meilleures pratiques que vous implémentez pour la disponibilité SharePoint. Cette rubrique présente une synthèse des différentes technologies et inclut des exemples de schémas de topologie à prendre en compte lorsque vous planifiez la disponibilité et la récupération d'urgence pour un déploiement [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] .  
@@ -45,13 +45,13 @@ ms.locfileid: "36052521"
   
  ![disponibilité PowerPivot dans 2013](../media/ssas-powerpivot-services-2013.png "disponibilité powerpivot dans 2013")  
   
--   **(1)** Serveurs web frontaux. Utilisez le complément [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 2013 pour installer les fournisseurs de données sur chaque serveur. Pour plus d’informations, consultez [installer ou désinstaller PowerPivot pour SharePoint Add-in &#40;SharePoint 2013&#41;](../instances/install-windows/install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2013.md).  
+-   **(1)** Serveurs web frontaux. Utilisez le complément [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 2013 pour installer les fournisseurs de données sur chaque serveur. Pour plus d’informations, consultez [installer ou désinstaller le PowerPivot pour SharePoint Add-in &#40;SharePoint 2013&#41;](../instances/install-windows/install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2013.md).  
   
 -   **(2)** Le service partagé [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] s’exécute **sur chaque** serveur d’applications et permet à l’application de service de s’exécuter **sur** différents serveurs d’applications. Par conséquent, si un serveur d'applications est mis hors connexion, l'application [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] reste toujours disponible.  
   
 -   **(3)** Les services de calcul Excel s’exécutent sur chaque serveur d’applications et permettent à l’application de service de s’exécuter sur différents serveurs d’applications. Par conséquent, si un serveur d'applications est mis hors connexion, Excel Calculation Services reste toujours disponible.  
   
--   **(4)**  et **(6)** Instances de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ins mode SharePoint s’exécutent sur des serveurs à l’extérieur de la batterie de serveurs SharePoint, cela inclut le Service Windows **SQL Server Analysis Services (POWERPIVOT)**. Chacune de ces instances est inscrite avec Excel Services **(3)**. Excel Services gère l'équilibrage de charge des demandes effectuées aux serveurs [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] . L'architecture de [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 2013 vous permet d'avoir plusieurs serveurs pour [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] . Vous pouvez ainsi ajouter facilement des instances, si nécessaire. Pour plus d’informations, consultez [Gérer les paramètres de modèle de données Excel Services (SharePoint Server 2013)](http://technet.microsoft.com/library/jj219780\(v=office.15\).aspx).  
+-   **(4)**  et **(6)** Instances de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ins mode SharePoint s’exécutent sur des serveurs en dehors de la batterie de serveurs SharePoint, cela inclut le Service Windows **SQL Server Analysis Services (POWERPIVOT)**. Chacune de ces instances est inscrite avec Excel Services **(3)**. Excel Services gère l'équilibrage de charge des demandes effectuées aux serveurs [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] . L'architecture de [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 2013 vous permet d'avoir plusieurs serveurs pour [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] . Vous pouvez ainsi ajouter facilement des instances, si nécessaire. Pour plus d’informations, consultez [Gérer les paramètres de modèle de données Excel Services (SharePoint Server 2013)](http://technet.microsoft.com/library/jj219780\(v=office.15\).aspx).  
   
 -   **(5)** Bases de données SQL Server utilisées pour le contenu, la configuration et les bases de données d’application. Cela inclut la base de données d'application de service [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] . Le plan de récupération d'urgence doit inclure la couche de base de données. Dans cette conception, les bases de données s’exécutent sur le même serveur que **(4)** l’une des instances [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] . **(4)** et **(5)** peuvent également se trouver sur des serveurs différents.  
   
@@ -95,7 +95,7 @@ ms.locfileid: "36052521"
  Pour plus d'informations sur la façon de planifier un scénario de reprise progressive avec [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)], consultez [Récupération d'urgence pour PowerPivot](http://social.technet.microsoft.com/wiki/contents/articles/22137.sharepoint-powerpivot-disaster-recovery.aspx).  
   
 ## <a name="verification"></a>Vérification  
- Pour des instructions et des scripts permettant de vérifier un [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] déploiement avant et après un cycle de récupération d’urgence, consultez [liste de vérification : utiliser PowerShell pour vérifier un PowerPivot pour SharePoint](../instances/install-windows/checklist-use-powershell-to-verify-power-pivot-for-sharepoint.md).  
+ Pour des conseils et des scripts pour vous aider à vérifier un [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] déploiement avant et après un cycle de récupération d’urgence, consultez [liste de vérification : utiliser PowerShell pour vérifier le PowerPivot pour SharePoint](../instances/install-windows/checklist-use-powershell-to-verify-power-pivot-for-sharepoint.md).  
   
 ##  <a name="bkmk_more_resources"></a> Liens vers des informations supplémentaires  
   
@@ -111,6 +111,6 @@ ms.locfileid: "36052521"
   
 -   [Gestion des instances de service dans SharePoint 2013](http://www.petri.co.il/manage-service-instances-sharepoint-2013.htm)  
   
--   [Script de sauvegarde de la base de données SQL Server](http://megaupl0ad.net/free/backup%20database%20sql%20server%20script)  
+-   [Script de sauvegarde de base de données SQL Server](http://megaupl0ad.net/free/backup%20database%20sql%20server%20script)  
   
   

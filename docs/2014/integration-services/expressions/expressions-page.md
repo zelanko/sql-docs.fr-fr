@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.expressionspage.f1
 helpviewer_keywords:
@@ -17,13 +17,13 @@ ms.assetid: c9016ec6-11c1-4ebd-b2a7-0fa6631fd9e4
 caps.latest.revision: 15
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: a266929860877c960c656033c41715154b6e2736
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: dff4e712830b39304c6bab51eaf3afded1287180
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36140064"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37176096"
 ---
 # <a name="expressions-page"></a>Page Expressions
   Utilisez la page **Expressions** pour modifier les expressions de propriété et pour accéder aux boîtes de dialogue **Éditeur d’expressions de la propriété** et **Générateur d’expressions** .  
@@ -40,7 +40,7 @@ ms.locfileid: "36140064"
  Cliquez sur les points de suspension pour ouvrir la boîte de dialogue **Générateur d'expression** . Pour plus d'informations, consultez [Expression Builder](expression-builder.md).  
   
 ## <a name="see-also"></a>Voir aussi  
- [Services d’intégration &#40;SSIS&#41; Variables](../integration-services-ssis-variables.md)   
+ [Integration Services &#40;SSIS&#41; Variables](../integration-services-ssis-variables.md)   
  [Variables système](../system-variables.md)   
  [Expressions Integration Services &#40;SSIS&#41;](integration-services-ssis-expressions.md)  
   

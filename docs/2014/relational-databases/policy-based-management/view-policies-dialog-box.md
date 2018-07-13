@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.dmf.managepolicies.general.f1
 ms.assetid: 06b9b092-fceb-4be5-b712-5aff89b5ba92
 caps.latest.revision: 25
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 548b7dc663b4566f2823e55bbad596eff2268ff2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: b9ef07a93f263517d04f3a6c4c563b07b953632b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36139560"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37175262"
 ---
 # <a name="view-policies-dialog-box"></a>Boîte de dialogue Afficher les stratégies
   Utilisez cette boîte de dialogue pour afficher les stratégies en vigueur pour cette cible. Cette boîte de dialogue répertorie les stratégies pertinentes, leurs catégories de stratégie et des informations à propos des stratégies.  

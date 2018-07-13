@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - job steps [SQL Server replication]
 - job steps [SQL Server Agent]
@@ -25,15 +25,15 @@ helpviewer_keywords:
 - job steps [Analysis Services]
 ms.assetid: 51352afc-a0a4-428b-8985-f9e58bb57c31
 caps.latest.revision: 49
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 19d8635c9836277f915896c17dbd4719d5d1da71
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: adc6f111ce968259fc599649807b514771825490
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36052987"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37187656"
 ---
 # <a name="manage-job-steps"></a>Gérer les étapes de travail
   Une étape du travail est une action exécutée par le travail sur une base de données ou un serveur. Chaque travail doit posséder au moins une étape de travail. Les étapes de travail peuvent être :  
@@ -54,7 +54,7 @@ ms.locfileid: "36052987"
   
  Chaque étape de travail s'exécute dans un contexte de sécurité spécifique. Si l'étape de travail spécifie un proxy, elle s'exécute dans le contexte des informations d'identification du proxy. Dans le cas inverse, l'étape de travail s'exécute dans le contexte du compte du service [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent. Seuls les membres du rôle de serveur fixe sysadmin sont autorisés à créer des travaux qui ne spécifient pas explicitement de proxy.  
   
- Les étapes de travail étant exécutées dans le contexte d’un utilisateur [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows spécifique, cet utilisateur doit disposer des autorisations et de la configuration nécessaires à l’exécution de l’étape de travail. Par exemple, si vous créez un travail qui requiert une lettre de lecteur ou un chemin d'accès UNC (Universal Naming Convention), les étapes du travail peuvent être exécutées sous votre compte d'utilisateur Windows pendant que les tâches sont testées. Toutefois, l'utilisateur Windows associé à l'étape de travail doit par ailleurs disposer des autorisations nécessaires, des configurations de lettres de lecteurs appropriées ou des droits d'accès au lecteur requis. Sinon, l'étape de travail échoue. Pour éviter ce problème, vérifiez que le proxy associé à chaque étape de travail dispose des autorisations nécessaires pour la tâche correspondant à l'étape de travail. Pour plus d’informations, consultez [centre de sécurité pour le moteur de base de données SQL Server et la base de données SQL Azure](../../relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database.md).  
+ Les étapes de travail étant exécutées dans le contexte d’un utilisateur [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows spécifique, cet utilisateur doit disposer des autorisations et de la configuration nécessaires à l’exécution de l’étape de travail. Par exemple, si vous créez un travail qui requiert une lettre de lecteur ou un chemin d'accès UNC (Universal Naming Convention), les étapes du travail peuvent être exécutées sous votre compte d'utilisateur Windows pendant que les tâches sont testées. Toutefois, l'utilisateur Windows associé à l'étape de travail doit par ailleurs disposer des autorisations nécessaires, des configurations de lettres de lecteurs appropriées ou des droits d'accès au lecteur requis. Sinon, l'étape de travail échoue. Pour éviter ce problème, vérifiez que le proxy associé à chaque étape de travail dispose des autorisations nécessaires pour la tâche correspondant à l'étape de travail. Pour plus d’informations, consultez [centre de sécurité pour le moteur de base de données SQL Server et Azure SQL Database](../../relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database.md).  
   
 ## <a name="job-step-logs"></a>Journaux d'étapes de travail  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent peut écrire le résultat de certaines étapes de travail dans un fichier du système d’exploitation ou dans la table sysjobstepslogs de la base de données msdb. Les types d'étapes de travail suivants peuvent écrire les résultats sur les deux destinations :  

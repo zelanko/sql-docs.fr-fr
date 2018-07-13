@@ -1,5 +1,5 @@
 ---
-title: Propriétés communes | Documents Microsoft
+title: Propriétés communes | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - VB
 - CSharp
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - component properties [Integration Services]
 ms.assetid: 51973502-5cc6-4125-9fce-e60fa1b7b796
 caps.latest.revision: 45
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 3cf48911196d3bb96fa54a6d912fbf5a5646516f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 5bc0d0f75f911c27ec8b117653aef978a615f3e6
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36052701"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37169330"
 ---
 # <a name="common-properties"></a>Propriétés communes
   Les objets de flux de données dans le modèle objet [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] présentent des propriétés communes et personnalisées au niveau des composants, des entrées et sorties, et des colonnes d'entrée et de sortie. De nombreuses propriétés ont des valeurs en lecture seule qui sont assignées au moment de l'exécution par le moteur de flux de données.  
@@ -123,7 +123,7 @@ ms.locfileid: "36052701"
   
  Les destinations et certaines transformations ne prennent pas en charge les sorties d’erreur, et les propriétés ErrorRowDisposition et TruncationRowDisposition de ces composants sont en lecture seule.  
   
-###  <a name="inputcolumns"></a> Propriétés de la colonne d’entrée  
+###  <a name="inputcolumns"></a> Propriétés des colonnes d’entrée  
  Dans le modèle objet [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] , une entrée contient une collection de colonnes d'entrée. Une colonne d'entrée d'un composant dans le flux de données implémente l'interface <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSInputColumn100>.  
   
  Le tableau suivant décrit les propriétés des colonnes d'entrée de composants dans un flux de données. Certaines propriétés ont des valeurs en lecture seule qui sont assignées au moment de l'exécution par le moteur de flux de données.  
@@ -167,7 +167,7 @@ ms.locfileid: "36052701"
 |SynchronousInputID|Entier|ID d'une entrée synchrone avec la sortie.|  
 |TruncationRowDisposition|<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.DTSRowDisposition>|Valeur qui détermine la façon dont le composant gère les troncations qui se produisent lors du traitement des lignes. Les valeurs sont `Fail component`, `Ignore failure`, et `Redirect row`.|  
   
-###  <a name="outputcolumns"></a> Propriétés de colonne de sortie  
+###  <a name="outputcolumns"></a> Propriétés des colonnes de sortie  
  Dans le modèle objet [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] , une sortie contient une collection de colonnes de sortie. Une colonne de sortie d'un composant dans le flux de données implémente l'interface <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSOutputColumn100>.  
   
  Le tableau suivant décrit les propriétés des colonnes de sortie de composants dans un flux de données. Certaines propriétés ont des valeurs en lecture seule qui sont assignées au moment de l'exécution par le moteur de flux de données.  
@@ -218,7 +218,7 @@ ms.locfileid: "36052701"
   
 ## <a name="see-also"></a>Voir aussi  
  [Flux de données](data-flow/data-flow.md)   
- [Transformation de propriétés personnalisées](data-flow/transformations/transformation-custom-properties.md)   
+ [Propriétés personnalisées de transformation](data-flow/transformations/transformation-custom-properties.md)   
  [Propriétés du chemin](../../2014/integration-services/path-properties.md)   
  [Propriétés du flux de données pouvant être définies à l’aide d’expressions](../../2014/integration-services/data-flow-properties-that-can-be-set-by-using-expressions.md)  
   

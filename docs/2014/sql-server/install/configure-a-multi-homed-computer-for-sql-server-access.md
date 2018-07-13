@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - ports [SQL Server], multi-homed computer
 - multi-homed computer [SQL Server] configuring ports
 - firewall systems [Database Engine], multi-homed computer
 ms.assetid: ba369e5b-7d1f-4544-b7f1-9b098a1e75bc
 caps.latest.revision: 22
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 72ea93688420a150d0193c9f91feb26dad91cffe
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: aa768aea67d95a107380600fee663f2f0ffa5ee8
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36139727"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37183896"
 ---
 # <a name="configure-a-multi-homed-computer-for-sql-server-access"></a>Configurer un ordinateur multirésident pour l'accès à SQL Server
   Lorsqu'un serveur doit fournir une connexion à plusieurs réseaux ou sous-réseaux, le scénario classique consiste à utiliser un ordinateur multirésident. Bien souvent, cet ordinateur se trouve dans un réseau de périmètre (également appelé sous-réseau filtré). Cette rubrique explique comment configurer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et le Pare-feu Windows avec fonctions avancées de sécurité pour fournir des connexions réseau à une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dans un environnement multirésident.  
@@ -61,7 +61,7 @@ ms.locfileid: "36139727"
   
 1.  Sur l’ordinateur sur lequel [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] est installé, cliquez sur **Démarrer**, cliquez sur **exécuter**, type `cmd` , puis [!INCLUDE[clickOK](../../includes/clickok-md.md)].  
   
-2.  Dans la fenêtre d’invite de commandes, tapez `ipconfig,` et appuyez sur entrée à la liste des adresses IP disponibles sur cet ordinateur.  
+2.  Dans la fenêtre d’invite de commandes, tapez `ipconfig,` et appuyez sur ENTRÉE pour répertorier les adresses IP disponibles sur cet ordinateur.  
   
     > [!NOTE]  
     >  La commande **ipconfig** répertorie parfois de nombreuses connexions possibles, notamment les connexions déconnectées. La commande **ipconfig** peut énumérer à la fois les adresses IPv4 et IPv6.  

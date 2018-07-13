@@ -1,5 +1,5 @@
 ---
-title: Créer le catalogue SSIS | Documents Microsoft
+title: Créer le catalogue SSIS | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 6ed56d36-18d9-40c2-b51f-f2a4c71d1e73
 caps.latest.revision: 17
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 8565d4957688349253b0074174dd379ba284a231
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 82965dd45ba5152aea9d6ec5751de9dfbf7cf232
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36140315"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37178496"
 ---
 # <a name="create-the-ssis-catalog"></a>Créer le catalogue SSIS
-  Après avoir conçu et testé des packages dans [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)], vous pouvez déployer les projets qui contiennent les packages sur un serveur [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] . Avant de pouvoir déployer les projets à la [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] serveur, le serveur doit contenir le `SSISDB` catalogue. Le programme d'installation de [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] ne crée pas automatiquement le catalogue ; vous devez le créer manuellement à l'aide des instructions suivantes.  
+  Après avoir conçu et testé des packages dans [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)], vous pouvez déployer les projets qui contiennent les packages sur un serveur [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] . Avant de pouvoir déployer les projets à la [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] , le serveur doit contenir le `SSISDB` catalogue. Le programme d'installation de [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] ne crée pas automatiquement le catalogue ; vous devez le créer manuellement à l'aide des instructions suivantes.  
   
  Vous pouvez créer le catalogue SSISDB dans [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]. Vous pouvez également créer le catalogue par programmation en utilisant Windows PowerShell.  
   

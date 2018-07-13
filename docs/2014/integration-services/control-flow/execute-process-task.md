@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.executeprocesstask.f1
 helpviewer_keywords:
@@ -17,13 +17,13 @@ ms.assetid: aca5a0b5-34a9-45bc-a234-8e63ea51a1ee
 caps.latest.revision: 65
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 3b67903b59934fb8d43d8dafe2bfc8392ab56462
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 9e46bd0278b782c85189416b8d452b5148a3ed63
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36139639"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37187168"
 ---
 # <a name="execute-process-task"></a>Tâche d'exécution de processus
   La tâche d’exécution de processus exécute une application ou un fichier de commandes dans le cadre d’un flux de travail de package [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Bien qu’il soit possible d’utiliser la tâche d’exécution de processus pour ouvrir des applications standard telles que [!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)] ou [!INCLUDE[ofprword](../../includes/ofprword-md.md)], il est courant de l’utiliser pour exécuter des applications de gestion ou des fichiers de commandes fonctionnant sur une source de données. Par exemple, vous pouvez utiliser la tâche d'exécution de processus pour développer un fichier texte compressé. Ensuite, le package peut utiliser le fichier texte comme source de données pour le flux de données de ce package. Vous pouvez aussi utiliser la tâche d'exécution de processus pour démarrer une application [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] personnalisée qui génère quotidiennement un état des ventes. Ensuite, vous pouvez associer le rapport à une tâche Envoyer un message pour le transmettre à une liste de distribution.  
@@ -64,11 +64,11 @@ ms.locfileid: "36139639"
   
  Vous pouvez utiliser une expression pour définir différentes propriétés de tâche d'exécution de processus.  
   
- Lorsque vous utilisez la **StandardInputVariable** propriété pour configurer la tâche d’exécution de processus pour fournir l’entrée, appelez le `Console.ReadLine` méthode à partir de l’application de lire l’entrée. Pour plus d’informations, consultez la rubrique [Console.ReadLine, méthode](http://go.microsoft.com/fwlink/?LinkId=129201)de la bibliothèque de classes [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] .  
+ Lorsque vous utilisez le **StandardInputVariable** propriété pour configurer la tâche d’exécution de processus pour fournir l’entrée, appelez le `Console.ReadLine` méthode à partir de l’application pour lire l’entrée. Pour plus d’informations, consultez la rubrique [Console.ReadLine, méthode](http://go.microsoft.com/fwlink/?LinkId=129201)de la bibliothèque de classes [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] .  
   
  Quand vous configurez la tâche d’exécution de processus à l’aide de la propriété **Arguments** pour fournir l’entrée, effectuez l’une des étapes suivantes pour obtenir les arguments :  
   
--   Si vous utilisez Microsoft Visual Basic pour écrire l’application, définissez la `My.Application.CommandLineArgs` propriété. L'exemple suivant définit la propriété `My.Application.CommandLineArgs` pour extraire deux arguments :  
+-   Si vous utilisez Microsoft Visual Basic pour écrire l’application, définissez le `My.Application.CommandLineArgs` propriété. L'exemple suivant définit la propriété `My.Application.CommandLineArgs` pour extraire deux arguments :  
   
     ```  
     Dim variable1 As String = My.Application.CommandLineArgs.Item(0)  

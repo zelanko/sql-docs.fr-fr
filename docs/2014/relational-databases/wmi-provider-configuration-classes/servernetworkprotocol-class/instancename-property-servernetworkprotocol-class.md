@@ -1,5 +1,5 @@
 ---
-title: Propriété InstanceName (classe ServerNetworkProtocol) | Documents Microsoft
+title: InstanceName, propriété (classe ServerNetworkProtocol) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - InstanceName property
 ms.assetid: 456911c1-9881-4574-8576-0070eff78c27
 caps.latest.revision: 31
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 932eeb4d4545a6a89580d4f3f9ef24481c37bd04
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
+ms.openlocfilehash: 074030b46cefbdd550702fc76789eb5acf83c121
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36053011"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37183906"
 ---
 # <a name="instancename-property-servernetworkprotocol-class"></a>Propriété InstanceName (classe ServerNetworkProtocol)
   Obtient le nom de l’instance de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] qui est référencé par le protocole réseau serveur.  

@@ -1,5 +1,5 @@
 ---
-title: 'Exemple : Création d’une alerte de l’Agent SQL Server à l’aide du fournisseur WMI pour les événements serveur | Documents Microsoft'
+title: 'Exemple : Création d’une alerte de l’Agent SQL Server à l’aide du fournisseur WMI pour les événements serveur | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - sample applications [WMI]
 ms.assetid: d44811c7-cd46-4017-b284-c863ca088e8f
 caps.latest.revision: 14
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 9f109802dccbe7698f713f61ce7ba1f26efb1449
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
+ms.openlocfilehash: 6c6a8ded031806322961d5f56a1b0ba28fe6dad3
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36140024"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37186216"
 ---
 # <a name="sample-creating-a-sql-server-agent-alert-by-using-the-wmi-provider-for-server-events"></a>Exemple : création d'une alerte de l'Agent SQL Server en utilisant le fournisseur WMI pour les événements de serveur
   Une façon courante d'utiliser le fournisseur d'événements WMI consiste à créer des alertes de l'Agent SQL Server qui répondent à des événements spécifiques. L'exemple suivant présente une alerte simple qui enregistre les événements du graphique de blocage XML dans une table pour leur analyse ultérieure. L'Agent SQL Server soumet une demande WQL, reçoit des événements WMI et exécute un travail en réponse à l'événement. Remarquez que, bien que plusieurs objets Service Broker soient impliqués dans le traitement du message de notification, le fournisseur d'événements WMI gère les détails de la création et de la gestion de ces objets.  
@@ -34,12 +34,12 @@ ms.locfileid: "36140024"
   
  Ensuite, l'alerte est créée. Le script commence par créer le travail que l'alerte exécutera, ajoute une étape de travail au travail et cible le travail sur l'instance actuelle de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Le script crée alors l'alerte.  
   
- L’étape de travail récupère le **TextData** propriété de l’instance d’événement WMI et insère cette valeur dans la **DeadlockGraph** colonne de la **DeadlockEvents** table. Remarquez que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] convertit implicitement la chaîne au format XML. Comme l'étape de travail utilise le sous-système [!INCLUDE[tsql](../../includes/tsql-md.md)], l'étape de travail ne spécifie pas de proxy.  
+ L’étape de travail récupère le **TextData** propriété de l’instance d’événement WMI et insère cette valeur dans le **DeadlockGraph** colonne de la **DeadlockEvents** table. Remarquez que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] convertit implicitement la chaîne au format XML. Comme l'étape de travail utilise le sous-système [!INCLUDE[tsql](../../includes/tsql-md.md)], l'étape de travail ne spécifie pas de proxy.  
   
  L'alerte exécute le travail chaque fois qu'un événement de trace du graphique du blocage est consigné. Pour une alerte WMI, l'Agent SQL Server crée une requête de notification à l'aide de l'espace de noms et de l'instruction WQL spécifiés. Pour cette alerte, l'Agent SQL Server analyse l'instance par défaut sur l'ordinateur local. L'instruction WQL demande un événement `DEADLOCK_GRAPH` quelconque dans l'instance par défaut. Pour modifier l'instance que l'alerte surveille, substituez le nom de l'instance pour `MSSQLSERVER` dans le `@wmi_namespace` pour l'alerte.  
   
 > [!NOTE]  
->  Pour l’Agent SQL Server recevoir les événements WMI, [!INCLUDE[ssSB](../../includes/sssb-md.md)] doit être activé dans **msdb** et [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)].  
+>  Pour SQL Server Agent recevoir des événements WMI, [!INCLUDE[ssSB](../../includes/sssb-md.md)] doit être activé dans **msdb** et [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)].  
   
 ```  
 USE AdventureWorks ;  
@@ -94,7 +94,7 @@ GO
 ```  
   
 ## <a name="testing-the-sample"></a>Test de l'exemple  
- Pour voir le travail s'exécuter, provoquez un blocage. Dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], ouvrez deux **requête SQL** onglets et connecter les deux requêtes à la même instance. Exécutez le script ci-dessous sous l'un des onglets de requête. Ce script produit un jeu de résultats et se termine.  
+ Pour voir le travail s'exécuter, provoquez un blocage. Dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], ouvrez deux **requête SQL** onglets et connectez les deux requêtes à la même instance. Exécutez le script ci-dessous sous l'un des onglets de requête. Ce script produit un jeu de résultats et se termine.  
   
 ```  
 USE AdventureWorks ;  

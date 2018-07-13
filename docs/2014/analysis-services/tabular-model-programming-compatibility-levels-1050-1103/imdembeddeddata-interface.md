@@ -1,5 +1,5 @@
 ---
-title: Interface IMDEmbedded | Documents Microsoft
+title: Interface IMDEmbedded | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -12,15 +12,15 @@ ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: 9dba8c68-4bef-4c2b-815c-c286f1a1939b
 caps.latest.revision: 7
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 3973640b4a4efca789ec107c1c1f086801cac234
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: cc1f1032a644277cab9645a11f8b3bedbb65c13d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36139892"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37157140"
 ---
 # <a name="imdembedded-interface"></a>Interface IMDEmbedded
   L'interface IMDEmbedded est une interface publique utilisée pour gérer une base de données incorporée PowerPivot ou une base de données model tabulaire. L'interface hérite de l'interface `IPersistStream`. Elle permet les opérations suivantes :  
@@ -44,7 +44,7 @@ ms.locfileid: "36139892"
 -   Enregistrer la base de données locale ou in-process sur le flux de données incorporé dans le document conteneur. Hérité de `IPersistStream`.  
   
 ## <a name="reference"></a>Référence  
- La référence suivante documente la `IMDEmbedded` s’affiche dans l’interface **msmd.h** fichier d’en-tête.  
+ La référence suivante documente la `IMDEmbedded` telle que présentée dans l’interface **msmd.h** fichier d’en-tête.  
   
 ### <a name="source-file-pxoembeddeddataidl"></a>Fichier source : PXOEmbeddedData.idl  
   

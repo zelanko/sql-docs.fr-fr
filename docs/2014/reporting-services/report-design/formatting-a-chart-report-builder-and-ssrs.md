@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - "10214"
 - sql12.rtp.rptdesigner.calculatedseriesproperties.fill.f1
@@ -52,15 +52,15 @@ f1_keywords:
 - "10247"
 ms.assetid: d3984300-c766-42f8-b7c4-863123d67c99
 caps.latest.revision: 6
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 0022ba1d4fcd107464db1af3e5852c25719fb2fe
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 9187661ada5df23435dae83122ce8f14a4a5c609
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36053225"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37183817"
 ---
 # <a name="formatting-a-chart-report-builder-and-ssrs"></a>Mise en forme d'un graphique (Générateur de rapports et SSRS)
   Après avoir défini les données et l'aspect de votre graphique, vous pouvez ajouter une mise en forme pour améliorer l'apparence globale et mettre en évidence les principaux points de données. Les options de mise en forme les plus courantes peuvent être modifiées dans la boîte de dialogue Propriétés qui apparaît lorsque vous cliquez avec le bouton droit sur un élément de graphique pour afficher son menu contextuel. Chaque élément de graphique possède sa propre boîte de dialogue. Pour plus d’informations sur les éléments des graphiques, consultez [Graphiques &#40;Générateur de rapports et SSRS&#41;](charts-report-builder-and-ssrs.md).  

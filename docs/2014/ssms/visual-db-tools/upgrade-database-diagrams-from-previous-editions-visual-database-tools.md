@@ -1,5 +1,5 @@
 ---
-title: Mise à niveau des schémas de base de données d’éditions antérieures (Visual Database Tools) | Documents Microsoft
+title: Mettre à niveau des schémas de base de données d’éditions antérieures (Visual Database Tools) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - old diagrams [SQL Server]
 - previous database diagrams [SQL Server]
@@ -19,18 +19,18 @@ helpviewer_keywords:
 - diagrams [SQL Server], upgrading
 ms.assetid: c5434211-697a-423f-ad71-d78178b69a78
 caps.latest.revision: 12
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 44b6f2f1f884d4c43cf1b8cd62706c78d7f5d187
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 44438695929f3eaed3529fcbc3fb14f66d3d5fd1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36053436"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37153630"
 ---
 # <a name="upgrade-database-diagrams-from-previous-editions-visual-database-tools"></a>Mettre à niveau des schémas de base de données d'éditions antérieures (Visual Database Tools)
-  Les schémas de base de données créés sur les éditions antérieures de bases de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sont automatiquement mis à niveau lors de l'installation du schéma de base de données dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Pour plus d’étapes de configuration des schémas, consultez [définir de Concepteur de schémas de base de données &#40;Visual Database Tools&#41;](visual-database-tools.md).  
+  Les schémas de base de données créés sur les éditions antérieures de bases de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sont automatiquement mis à niveau lors de l'installation du schéma de base de données dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Pour connaître la procédure de configuration des schémas, consultez [Set Up Database Diagram Designer &#40;Visual Database Tools&#41;](visual-database-tools.md).  
   
 ### <a name="to-upgrade-legacy-database-diagrams"></a>Pour mettre à niveau des schémas de base de données hérités  
   

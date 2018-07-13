@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 924a2ec3-150c-4bb2-83c9-4c7b440e8c03
 caps.latest.revision: 10
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 22ec8f6785e33323931c5d1199b1c308285be088
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: bb750196b31823e604d86a99aabda508a0a06779
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36053460"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37161970"
 ---
 # <a name="add-data-from-external-data-sources-ssrs"></a>Ajouter des données à partir de sources de données externes (SSRS)
   Pour récupérer des données à partir d'une source de données externe, vous utilisez une connexion de données. Les informations de connexion de données sont fournies habituellement par le propriétaire de la source de données externe, qui est chargé d'accorder les autorisations nécessaires et de spécifier les types d'informations d'identification à utiliser. Les informations de connexion de données sont enregistrées en tant que source de données de rapport. Le type de source de données spécifie l'extension de données à utiliser pour récupérer les données.  
@@ -73,7 +73,7 @@ ms.locfileid: "36053460"
 ##  <a name="HowTo"></a> Rubriques de procédures  
  Cette section contient des instructions pas à pas sur l'utilisation des connexions de données, des sources de données et des datasets.  
   
- [Ajouter et vérifier une connexion de données ou une Source de données &#40;rapport Générateur et SSRS&#41;](add-and-verify-a-data-connection-report-builder-and-ssrs.md)  
+ [Ajouter et vérifier une connexion de données ou d’une Source de données &#40;Générateur de rapports et SSRS&#41;](add-and-verify-a-data-connection-report-builder-and-ssrs.md)  
   
  [Créer un dataset partagé ou incorporé &#40;Générateur de rapports et SSRS&#41;](create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md)  
   
@@ -106,7 +106,7 @@ ms.locfileid: "36053460"
   
 |Rubrique|Description|  
 |-----------|-----------------|  
-|[Ajouter des données à un rapport &#40;rapport Générateur et SSRS&#41;](report-datasets-ssrs.md)|Fournit une vue d'ensemble de l'accès aux données pour votre rapport.|  
+|[Ajouter des données à un rapport &#40;Générateur de rapports et SSRS&#41;](report-datasets-ssrs.md)|Fournit une vue d'ensemble de l'accès aux données pour votre rapport.|  
 |[Connexions de données, sources de données et chaînes de connexion dans le Générateur de rapports](../data-connections-data-sources-and-connection-strings-in-report-builder.md)|Fournit des informations sur les connexions de données et les sources de données.|  
 |[Datasets incorporés dans le rapport et datasets partagés &#40;Générateur de rapports et SSRS&#41;](report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)|Fournit des informations sur les datasets incorporés et partagés.|  
 |[Collection de champs de dataset &#40;Générateur de rapports et SSRS&#41;](dataset-fields-collection-report-builder-and-ssrs.md)|Fournit des informations sur la collection de champs de dataset générée par la requête.|  
@@ -116,7 +116,7 @@ ms.locfileid: "36053460"
 
   
 ## <a name="see-also"></a>Voir aussi  
- [Ajouter des données à un rapport &#40;rapport Générateur et SSRS&#41;](report-datasets-ssrs.md)   
+ [Ajouter des données à un rapport &#40;Générateur de rapports et SSRS&#41;](report-datasets-ssrs.md)   
  [Concepteurs de requêtes &#40;Générateur de rapports&#41;](../query-designers-report-builder.md)  
   
   

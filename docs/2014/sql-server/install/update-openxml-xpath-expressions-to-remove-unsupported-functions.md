@@ -1,5 +1,5 @@
 ---
-title: Mettre à jour les expressions OPENXML XPath pour supprimer les fonctions non prises en charge | Documents Microsoft
+title: Mettre à jour les expressions OPENXML XPath pour supprimer les fonctions non prises en charge | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - OPENXML queries
 ms.assetid: b459abaf-8787-4b65-9231-ae30e5469fd0
 caps.latest.revision: 17
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 768124887a7d75797229919d7d7399df9ce4b130
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 87a35ea41c36250c1173df22204e6222dae0d384
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36139942"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37172070"
 ---
 # <a name="update-openxml-xpath-expressions-to-remove-unsupported-functions"></a>Mettre à jour les expressions OPENXML XPath pour supprimer les fonctions non prises en charge
   Le Conseiller de mise à niveau a détecté l'utilisation de la fonctionnalité XPath. Vous risquez de subir les effets des modifications apportées à XPath au niveau des fonctionnalités OPENXML après la mise à niveau.  

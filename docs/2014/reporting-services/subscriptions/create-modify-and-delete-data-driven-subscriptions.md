@@ -1,5 +1,5 @@
 ---
-title: Créer, modifier et supprimer un abonnement piloté par les données | Documents Microsoft
+title: Créer, modifier et supprimer un abonnement piloté par les données | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - query-based subscriptions [Reporting Services]
 - queries [Reporting Services], data-driven subscriptions
@@ -18,13 +18,13 @@ ms.assetid: 0ba2093e-9393-4eb6-af06-9da10988cfaf
 caps.latest.revision: 50
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 811851675f317e6807f22035152a48b18a372eb5
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 87116018f43f90fa78a8f7a6d4788b9fb0e660f4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36140222"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37183916"
 ---
 # <a name="create-modify-and-delete-a-data-driven-subscription"></a>Créer, modifier et supprimer des abonnements pilotés par les données
   Un abonnement piloté par les données est un abonnement qui a recours à une requête pour obtenir les valeurs de données qui seront utilisées dans le traitement de l'abonnement au moment de l'exécution. Lorsque l'abonnement est déclenché, une requête est traitée pour récupérer des informations récentes sur les destinataires, les options de remise de rapport, les formats de rendu et les valeurs de paramètre. Les résultats de la requête sont combinées à la définition de l'abonnement pour créer un abonnement dynamique utilisant les données que vous avez conservées dans une base de données employés, une base de données clients ou dans toute autre base de données contenant des informations utilisables comme données d'abonnés.  
@@ -101,7 +101,7 @@ ms.locfileid: "36140222"
 ##  <a name="bkmk_run_subscription"></a> Exécuter un abonnement  
  Il est possible de configurer les conditions de traitement des abonnements. Vous pouvez spécifier une planification ou déclencher l'abonnement de sorte qu'il coïncide avec les mises à jour d'une capture instantanée d'exécution de rapport.  
   
- ![Remarque](../media/rs-fyinote.png "Remarque") il n’existe aucune fonctionnalité dans l’interface utilisateur qui vous permet d’exécuter immédiatement un abonnement, vous pouvez utiliser un script Windows PowerShell simple pour déclencher un abonnement à exécuter. Pour plus d’informations, consultez le « Script : exécuter (déclencher) un seul abonnement « section de [utiliser PowerShell pour modifier et liste Reporting Services Subscription Owners et exécuter un abonnement](manage-subscription-owners-and-run-subscription-powershell.md).  
+ ![Remarque](../media/rs-fyinote.png "Remarque") s’il n’existe aucune fonctionnalité dans l’interface utilisateur que vous pouvez utiliser pour exécuter immédiatement un abonnement, vous pouvez utiliser un script Windows PowerShell simple pour déclencher l’exécution d’un abonnement. Pour plus d’informations, consultez le « Script : exécuter (déclencher) un seul abonnement « section de [utiliser PowerShell pour la modification et liste Reporting Services Subscription Owners et exécuter un abonnement](manage-subscription-owners-and-run-subscription-powershell.md).  
   
  La planification et les conditions d'exécution des abonnements pilotés par les données sont identiques au traitement des abonnements standard.  
   

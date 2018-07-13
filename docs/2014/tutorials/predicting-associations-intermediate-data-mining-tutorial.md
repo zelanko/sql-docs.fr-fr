@@ -1,5 +1,5 @@
 ---
-title: Prédiction d’Associations (didacticiel sur l’exploration des données intermédiaires) | Documents Microsoft
+title: Prédiction d’Associations (didacticiel d’exploration de données intermédiaire) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 9140c5f2-b340-45a6-9c27-d870d15aafea
 caps.latest.revision: 21
 author: minewiskan
 ms.author: owend
-manager: kfile
-ms.openlocfilehash: e20e747900d63ae13892b919f45be2f11f5c094b
-ms.sourcegitcommit: 8c040e5b4e8c7d37ca295679410770a1af4d2e1f
+manager: craigg
+ms.openlocfilehash: 79555990296cc3ecd0b30bb2cd3de92b6adabb50
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/21/2018
-ms.locfileid: "36313027"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37187706"
 ---
 # <a name="predicting-associations-intermediate-data-mining-tutorial"></a>Prédiction d'associations (Didacticiel sur l'exploration de données intermédiaire)
-  Après avoir traité les modèles, vous pouvez utiliser les informations sur les associations stockées dans le modèle pour créer des prédictions. Dans la dernière tâche de cette leçon, vous apprenez comment générer des requêtes de prédiction sur les modèles d'association que vous avez créés. Cette leçon suppose que vous savez comment utiliser le Générateur de requêtes de prédiction et que vous souhaitez apprendre à générer des requêtes de prédiction sur des modèles d'association. Pour savoir comment utiliser le Générateur de requête de prédiction, consultez [les Interfaces de requête d’exploration de données](../../2014/analysis-services/data-mining/data-mining-query-tools.md).  
+  Après avoir traité les modèles, vous pouvez utiliser les informations sur les associations stockées dans le modèle pour créer des prédictions. Dans la dernière tâche de cette leçon, vous apprenez comment générer des requêtes de prédiction sur les modèles d'association que vous avez créés. Cette leçon suppose que vous savez comment utiliser le Générateur de requêtes de prédiction et que vous souhaitez apprendre à générer des requêtes de prédiction sur des modèles d'association. Pour plus d’informations comment utiliser le Générateur de requête de prédiction, consultez [Interfaces de requête d’exploration de données](../../2014/analysis-services/data-mining/data-mining-query-tools.md).  
   
 ## <a name="creating-a-singleton-prediction-query"></a>Création d'une requête singleton de prédiction  
  Les requêtes de prédiction sur un modèle d'association peuvent être très utiles :  
@@ -41,7 +41,7 @@ ms.locfileid: "36313027"
   
 1.  Cliquez sur le **prévision de modèle d’exploration de données** onglet du Concepteur d’exploration de données.  
   
-2.  Dans le **modèle d’exploration de données** volet, cliquez sur **sélectionner le modèle**. (Vous pouvez ignorer cette étape et l'étape suivante si le modèle correct est déjà sélectionné.)  
+2.  Dans le **Mining Model** volet, cliquez sur **sélectionner un modèle**. (Vous pouvez ignorer cette étape et l'étape suivante si le modèle correct est déjà sélectionné.)  
   
 3.  Dans le **sélectionner un modèle d’exploration de données** boîte de dialogue, développez le nœud qui représente la structure d’exploration de données **Association**, puis sélectionnez le modèle **Association**. Cliquez sur **OK**.  
   
@@ -49,15 +49,15 @@ ms.locfileid: "36313027"
   
 4.  Dans la grille, cliquez sur la cellule vide sous **Source** et sélectionnez **fonction de prédiction.** Dans la cellule sous **champ**, sélectionnez `PredictAssociation`.  
   
-     Vous pouvez également utiliser le **Predict** afin de prédire des associations. Si vous, veillez à choisir la version de la **Predict** fonction qui accepte une colonne de table en tant qu’argument.  
+     Vous pouvez également utiliser le **Predict** fonction permettant de prédire des associations. Si vous fassiez, veillez à choisir la version de la **Predict** fonction qui prend une colonne de table comme argument.  
   
-5.  Dans le **modèle d’exploration de données** volet, sélectionnez la table imbriquée `vAssocSeqLineItems`et faites-le glisser dans la grille, à la **critères/Argument** zone pour le `PredictAssociation` (fonction).  
+5.  Dans le **Mining Model** volet, sélectionnez la table imbriquée `vAssocSeqLineItems`et faites-le glisser dans la grille, à la **critères/Argument** zone pour le `PredictAssociation` (fonction).  
   
-     Le déplacement des noms de table et de colonne vous permet de générer des instructions complexes sans commettre d'erreur de syntaxe. Toutefois, il remplace le contenu actuel de la cellule, lequel inclut d’autres arguments facultatifs pour le `PredictAssociation` (fonction). Pour consulter les autres arguments, vous pouvez ajouter temporairement une deuxième instance de la fonction à la grille pour référence.  
+     Le déplacement des noms de table et de colonne vous permet de générer des instructions complexes sans commettre d'erreur de syntaxe. Toutefois, cette opération remplace le contenu actuel de la cellule, qui inclut d’autres arguments facultatifs pour le `PredictAssociation` (fonction). Pour consulter les autres arguments, vous pouvez ajouter temporairement une deuxième instance de la fonction à la grille pour référence.  
   
-6.  Cliquez sur le **critères/Argument** zone, puis tapez le texte suivant après le nom de table : `,3`  
+6.  Cliquez sur le **critères/Argument** puis tapez le texte suivant après le nom de table : `,3`  
   
-     Le texte complet dans le **critères/Argument** zone doit se présenter comme suit :  
+     Le texte complet dans le **critères/Argument** boîte doit se présenter comme suit :  
   
      `[Association].[v Assoc Seq Line Items],3`  
   
@@ -71,23 +71,23 @@ ms.locfileid: "36313027"
 |Water Bottle|  
 |Touring-3000|  
   
- Ensuite, vous allez utiliser le **entrée de requête Singleton** volet pour spécifier un produit en tant qu’entrée à la requête et afficher les produits qui sont probablement associé à cet élément.  
+ Ensuite, vous allez utiliser le **entrée de requête Singleton** volet pour spécifier un produit en tant qu’entrée à la requête et afficher les produits qui sont probables associé à cet élément.  
   
 #### <a name="to-create-a-singleton-prediction-query-with-nested-table-inputs"></a>Pour créer une requête singleton de prédiction avec des entrées de table imbriquée  
   
-1.  Cliquez sur le **conception** situé dans l’angle du Générateur de requêtes de prédiction pour revenir à la grille de création de requête.  
+1.  Cliquez sur le **conception** bouton dans l’angle du Générateur de requêtes de prédiction pour revenir à la grille de création de requête.  
   
-2.  Sur le **modèle d’exploration de données** menu, sélectionnez **requête Singleton**.  
+2.  Sur le **Mining Model** menu, sélectionnez **requête Singleton**.  
   
-3.  Dans le **modèle d’exploration de données** boîte de dialogue, sélectionnez le **Association** modèle.  
+3.  Dans le **Mining Model** boîte de dialogue, sélectionnez le **Association** modèle.  
   
 4.  Dans la grille, cliquez sur la cellule vide sous **Source** et sélectionnez **fonction de prédiction.** Dans la cellule sous **champ**, sélectionnez `PredictAssociation`.  
   
-5.  Dans le **modèle d’exploration de données** volet, sélectionnez la table imbriquée `vAssocSeqLineItems`et faites-le glisser dans la grille, à la **critères/Argument** zone pour le `PredictAssociation` (fonction). Type `,3` après le nom de table imbriquée comme dans la procédure précédente.  
+5.  Dans le **Mining Model** volet, sélectionnez la table imbriquée `vAssocSeqLineItems`et faites-le glisser dans la grille, à la **critères/Argument** zone pour le `PredictAssociation` (fonction). Type `,3` après le nom de table imbriquée comme dans la procédure précédente.  
   
 6.  Dans le **entrée de requête Singleton** boîte de dialogue, cliquez sur le **valeur** zone située en regard **Vassocseqlineitems**, puis cliquez sur le **(...)**  bouton.  
   
-7.  Dans le **entrée de la Table imbriquée** boîte de dialogue, sélectionnez `Touring Tire` dans les **colonne clé** volet, puis cliquez sur **ajouter**.  
+7.  Dans le **entrée de la Table imbriquée** boîte de dialogue, sélectionnez `Touring Tire` dans le **colonne clé** volet, puis cliquez sur **ajouter**.  
   
 8.  Cliquez sur le **résultats** bouton.  
   
@@ -103,7 +103,7 @@ ms.locfileid: "36313027"
   
 #### <a name="to-add-inputs-and-probabilities-to-the-singleton-prediction-query"></a>Pour ajouter des entrées et des probabilités à la requête singleton de prédiction  
   
-1.  Cliquez sur le **conception** situé dans l’angle du Générateur de requêtes de prédiction pour revenir à la grille de création de requête.  
+1.  Cliquez sur le **conception** bouton dans l’angle du Générateur de requêtes de prédiction pour revenir à la grille de création de requête.  
   
 2.  Dans le **entrée de requête Singleton** boîte de dialogue, cliquez sur le **valeur** zone située en regard **Vassocseqlineitems**, puis cliquez sur le **(...)**  bouton.  
   
@@ -111,32 +111,32 @@ ms.locfileid: "36313027"
   
 4.  Dans la grille, cliquez sur la cellule vide sous **Source** et sélectionnez **fonction de prédiction.** Dans la cellule sous **champ**, sélectionnez `PredictAssociation`.  
   
-5.  Dans le **modèle d’exploration de données** volet, sélectionnez la table imbriquée `vAssocSeqLineItems`et faites-le glisser dans la grille, à la **critères/Argument** zone pour le `PredictAssociation` (fonction). Type `,3` après le nom de table imbriquée comme dans la procédure précédente.  
+5.  Dans le **Mining Model** volet, sélectionnez la table imbriquée `vAssocSeqLineItems`et faites-le glisser dans la grille, à la **critères/Argument** zone pour le `PredictAssociation` (fonction). Type `,3` après le nom de table imbriquée comme dans la procédure précédente.  
   
-6.  Dans le **entrée de la Table imbriquée** boîte de dialogue, sélectionnez `Touring Tire Tube` dans les **colonne clé** volet, puis cliquez sur **ajouter**.  
+6.  Dans le **entrée de la Table imbriquée** boîte de dialogue, sélectionnez `Touring Tire Tube` dans le **colonne clé** volet, puis cliquez sur **ajouter**.  
   
 7.  Dans la grille, dans la ligne de la `PredictAssociation` de fonction, cliquez sur le **critères/Argument** , puis modifiez les arguments pour ajouter l’argument INCLUDE_STATISTICS.  
   
-     Le texte complet dans le **critères/Argument** zone doit se présenter comme suit :  
+     Le texte complet dans le **critères/Argument** boîte doit se présenter comme suit :  
   
      `[Association].[v Assoc Seq Line Items], INCLUDE_STATISTICS, 3`  
   
 8.  Cliquez sur le **résultats** bouton.  
   
- Les résultats indiqués dans la table imbriquée se modifient à présent afin de présenter les prédictions, avec la prise en charge et la probabilité. Pour plus d’informations sur l’interprétation de ces valeurs, consultez [Mining Model Content aux modèles d’Association &#40;Analysis Services - Exploration de données&#41;](../../2014/analysis-services/data-mining/mining-model-content-for-association-models-analysis-services-data-mining.md).  
+ Les résultats indiqués dans la table imbriquée se modifient à présent afin de présenter les prédictions, avec la prise en charge et la probabilité. Pour plus d’informations sur l’interprétation de ces valeurs, consultez [modèle d’exploration de données contenu pour les modèles d’Association &#40;Analysis Services - Exploration de données&#41;](../../2014/analysis-services/data-mining/mining-model-content-for-association-models-analysis-services-data-mining.md).  
   
 |Modèle|$SUPPORT|$PROBABILITY|$ADJUSTEDPROBABILITY|  
 |-----------|--------------|------------------|--------------------------|  
 |Sport-100|4334|0.291...|0.252...|  
 |Water Bottle|2866|0,192...|0,175...|  
-|Patch Kit|2113|0.142...|0.132|  
+|Patch Kit|2113|0,142...|0.132|  
   
 ## <a name="working-with-results"></a>Utilisation des résultats  
  En présence d'un grand nombre de tables imbriquées dans les résultats, vous pouvez aplatir les résultats pour faciliter leur affichage. Pour cela, vous pouvez modifier la requête manuellement et ajouter le mot clé `FLATTENED`.  
   
 #### <a name="to-flatten-nested-rowsets-in-a-prediction-query"></a>Pour aplatir des ensembles de lignes imbriqués dans une requête de prédiction  
   
-1.  Cliquez sur le **SQL** situé dans l’angle du Générateur de requêtes de prédiction.  
+1.  Cliquez sur le **SQL** bouton dans l’angle du Générateur de requêtes de prédiction.  
   
      La grille se transforme en un volet ouvert où vous pouvez afficher et modifier l'instruction DMX créée par le Générateur de requêtes de prédiction.  
   
@@ -163,7 +163,7 @@ ms.locfileid: "36313027"
   
 #### <a name="to-change-the-input-method-for-the-prediction-query"></a>Pour modifier la méthode d'entrée pour la requête de prédiction  
   
-1.  Dans le **modèle d’exploration de données** menu, sélectionnez **requête Singleton** à nouveau, désactivez la case à cocher.  
+1.  Dans le **Mining Model** menu, sélectionnez **requête Singleton** là encore, désactivez la case à cocher.  
   
 2.  Un message d'erreur apparaît et stipule que votre requête singleton sera perdue. Cliquez sur **Oui**.  
   
@@ -177,13 +177,13 @@ ms.locfileid: "36313027"
   
 2.  Dans le **sélectionner une ou plusieurs tables d’entrée** boîte de dialogue, cliquez sur **sélectionner la Table de cas**.  
   
-3.  Dans le **sélectionner une Table** boîte de dialogue, pour **Source de données**, sélectionnez AdventureWorksDW2008. Dans le **nom de la Table/vue** liste, sélectionnez vAssocSeqOrders, puis cliquez sur **OK**.  
+3.  Dans le **sélectionner une Table** boîte de dialogue pour **Source de données**, sélectionnez AdventureWorksDW2008. Dans le **nom de la Table/vue** liste, sélectionnez vAssocSeqOrders, puis cliquez sur **OK**.  
   
      La table vAssocSeqOrders s'ajoute au volet.  
   
 4.  Dans le **sélectionner une ou plusieurs tables d’entrée** boîte de dialogue, cliquez sur **sélectionner la Table imbriquée**.  
   
-5.  Dans le **sélectionner une Table** boîte de dialogue, pour **Source de données**, sélectionnez AdventureWorksDW2008. Dans le **nom de la Table/vue** liste, sélectionnez vAssocSeqLineItems, puis cliquez sur **OK**.  
+5.  Dans le **sélectionner une Table** boîte de dialogue pour **Source de données**, sélectionnez AdventureWorksDW2008. Dans le **nom de la Table/vue** liste, sélectionnez vAssocSeqLineItems, puis cliquez sur **OK**.  
   
      La table vAssocSeqLineItems s'ajoute au volet.  
   
@@ -195,7 +195,7 @@ ms.locfileid: "36313027"
   
 8.  Cliquez sur **OK** pour fermer la **spécifier la jointure imbriquée** boîte de dialogue.  
   
-     Les tables de cas et imbriquées sont mises à jour dans le volet de conception pour montrer les jointures qui relient les colonnes de données externes aux colonnes du modèle. Si les relations sont incorrectes, vous pouvez cliquez sur la ligne de jointure et sélectionner **modifier les connexions** pour modifier la colonne mappage, ou vous pouvez avec le bouton droit de la ligne de jointure et sélectionner **supprimer** pour supprimer le relation complètement.  
+     Les tables de cas et imbriquées sont mises à jour dans le volet de conception pour montrer les jointures qui relient les colonnes de données externes aux colonnes du modèle. Si les relations sont incorrectes, vous pouvez cliquez sur la ligne de jointure et sélectionner **modifier les connexions** pour modifier la colonne de mappage, ou vous pouvez avec le bouton droit de la ligne de jointure et sélectionner **supprimer** pour supprimer le relation complètement.  
   
 9. Ajoutez une nouvelle ligne à la grille. Pour **Source**, sélectionnez **table vAssocSeqOrders**. Pour **champ**, sélectionnez CustomerKey.  
   
@@ -203,7 +203,7 @@ ms.locfileid: "36313027"
   
 11. Ajoutez une nouvelle ligne à la grille. Pour **Source**, sélectionnez **fonction de prédiction**et pour **champ**, sélectionnez `PredictAssociation`.  
   
-12. Faites glisser vAssocSeqLineItems dans la **critères/Argument** boîte de le `PredictAssociation` ligne. Cliquez sur à la fin de la **critères/Argument** zone, puis tapez le texte suivant : `INCLUDE_STATISTICS,3`  
+12. Faites glisser vAssocSeqLineItems dans la **critères/Argument** boîte de le `PredictAssociation` ligne. Cliquez sur à la fin de la **critères/Argument** puis puis tapez le texte suivant : `INCLUDE_STATISTICS,3`  
   
      Le texte complet dans le **critères/Argument** case doit être : `[Association].[v Assoc Seq Line Items], INCLUDE_STATISTICS, 3`  
   

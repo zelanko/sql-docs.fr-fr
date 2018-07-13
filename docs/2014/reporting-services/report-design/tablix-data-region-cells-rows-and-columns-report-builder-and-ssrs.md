@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - "10058"
 - "10057"
@@ -16,18 +16,18 @@ f1_keywords:
 - sql12.rtp.rptdesigner.deletecolumns.f1
 ms.assetid: 70eef636-6d8c-495e-83fc-dc0fe9771658
 caps.latest.revision: 6
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: a15db177426dc39d10363abbfb2b160ef82d7ab5
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 8e064d68544b72844d364047b51ba90cda39c63b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36139528"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37163812"
 ---
 # <a name="tablix-data-region-cells-rows-and-columns-report-builder-and-ssrs"></a>Cellules, lignes et colonnes de région de données de tableau matriciel (Générateur de rapports et SSRS)
-  Pour contrôler l'affichage des données d'une région de données de tableau matriciel à l'aide des lignes et des colonnes dans un rapport, vous devez comprendre comment spécifier des lignes et des colonnes pour les données de détail, les données de groupe, les étiquettes et les totaux. Dans la plupart des cas, vous pouvez utiliser les structures par défaut pour afficher vos données dans une table, une matrice ou une liste. Pour plus d’informations, consultez [Tables &#40;le Générateur de rapports et SSRS&#41;](tables-report-builder-and-ssrs.md), [Matrices &#40;le Générateur de rapports et SSRS&#41;](create-a-matrix-report-builder-and-ssrs.md), ou [répertorie &#40;le Générateur de rapports et SSRS&#41;](create-invoices-and-forms-with-lists-report-builder-and-ssrs.md).  
+  Pour contrôler l'affichage des données d'une région de données de tableau matriciel à l'aide des lignes et des colonnes dans un rapport, vous devez comprendre comment spécifier des lignes et des colonnes pour les données de détail, les données de groupe, les étiquettes et les totaux. Dans la plupart des cas, vous pouvez utiliser les structures par défaut pour afficher vos données dans une table, une matrice ou une liste. Pour plus d’informations, consultez [Tables &#40;Générateur de rapports et SSRS&#41;](tables-report-builder-and-ssrs.md), [Matrices &#40;Générateur de rapports et SSRS&#41;](create-a-matrix-report-builder-and-ssrs.md), ou [répertorie &#40;Générateur de rapports et SSRS&#41;](create-invoices-and-forms-with-lists-report-builder-and-ssrs.md).  
   
  Une région de données de tableau matriciel affiche des données de détail dans des lignes et des colonnes de détail et des données groupées dans des lignes et des colonnes de groupe. Quand vous ajoutez des groupes de lignes et de colonnes à une région de données de tableau matriciel, les lignes et les colonnes dans lesquelles les données doivent s’afficher sont ajoutées automatiquement. Vous pouvez ajouter et supprimer manuellement des lignes et des colonnes pour personnaliser une région de données de tableau matriciel et contrôler la manière dont vos données s'affichent dans le rapport.  
   
@@ -124,6 +124,6 @@ ms.locfileid: "36139528"
  Vous pouvez fractionner une cellule précédemment fusionnée. Vous pouvez fractionner des cellules horizontalement par colonnes ou verticalement par lignes. Pour fractionner une cellule en un bloc de cellules, commencez par fractionner horizontalement la cellule, puis fractionnez-la verticalement autant de fois que nécessaire.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Région de données de tableau matriciel &#40;rapport Générateur et SSRS&#41;](../tablix-data-region-report-builder-and-ssrs.md)  
+ [Région de données de tableau matriciel &#40;Générateur de rapports et SSRS&#41;](../tablix-data-region-report-builder-and-ssrs.md)  
   
   

@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - processors [SQL Server], supported
 - number of processors supported
 - maximum number of processors supported
 ms.assetid: cd308bc9-9468-40cc-ad6e-1a8a69aca6c8
 caps.latest.revision: 56
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: a0d9d1e3076c19df548eb2a1714a2093046fd352
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 2893a0fdb04e834e2eeab0343b23888c244fd036
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36139961"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37157540"
 ---
 # <a name="compute-capacity-limits-by-edition-of-sql-server"></a>Limites de capacité de calcul par l'édition de SQL Server
   Cette rubrique traite des limites de capacité de calcul des différentes éditions de [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] et de la façon dont elles diffèrent dans les environnements physiques et virtualisés avec les processeurs hyperthreaded.  
@@ -86,7 +86,7 @@ ms.locfileid: "36139961"
   
 |[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Édition|Capacité maximale de calcul utilisée par une instance unique ([!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][!INCLUDE[ssDE](../includes/ssde-md.md)])|Capacité maximale de calcul utilisée par une instance unique (AS, RS)|  
 |---------------------------------------|--------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------|  
-|Enterprise Edition : La licence par cœur<sup>1</sup>|Maximum du système d'exploitation|Maximum du système d'exploitation|  
+|Enterprise Edition : Gestion des licences par noyau<sup>1</sup>|Maximum du système d'exploitation|Maximum du système d'exploitation|  
 |Développeur|Maximum du système d'exploitation|Maximum du système d'exploitation|  
 |Evaluation|Maximum du système d'exploitation|Maximum du système d'exploitation|  
 |Business Intelligence|Limité inférieure à 4 sockets ou 16 noyaux|Maximum du système d'exploitation|  
@@ -96,7 +96,7 @@ ms.locfileid: "36139961"
 |Express with Tools|Limité inférieure à 1 sockets ou 4 noyaux|Limité inférieure à 1 sockets ou 4 noyaux|  
 |Express with Advanced Services|Limité inférieure à 1 sockets ou 4 noyaux|Limité inférieure à 1 sockets ou 4 noyaux|  
   
- <sup>1</sup> Enterprise Edition avec serveur + Client accès licences (CAL) (non disponible pour les nouveaux contrats) est limitée à un maximum de 20 cœurs par [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] instance. Il n'existe aucune limite dans le mode de licence Serveur selon le nombre de cœurs.  
+ <sup>1</sup> Enterprise Edition avec serveur + Client Access License (CAL) basé (non disponible pour les nouveaux contrats) est limitée à un maximum de 20 cœurs par [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] instance. Il n'existe aucune limite dans le mode de licence Serveur selon le nombre de cœurs.  
   
  Dans un environnement virtualisé, la limite de capacité de calcul est basée sur le nombre de processeurs logiques et non de noyaux, car l'architecture du processeur n'est pas visible aux applications invitées.  Par exemple, un serveur avec quatre sockets comprenant des processeurs quadruple cœur et autorisant l'activation de deux hyperthreads par cœur, contient 32 processeurs logiques avec l'hyperthreading activé mais seulement 16 processeurs logiques avec l'hyperthreading désactivé. Ces processeurs logiques peuvent être mappés aux ordinateurs virtuels sur le serveur avec la charge du calcul des ordinateurs virtuels, sur ce processeur logique mappé sur un thread d'exécution sur le processeur physique dans le serveur hôte.  
   
@@ -106,6 +106,6 @@ ms.locfileid: "36139961"
  [Éditions et composants de SQL Server 2014](../sql-server/editions-and-components-of-sql-server-2016.md)   
  [Fonctionnalités prises en charge par les éditions de SQL Server 2014](../../2014/getting-started/features-supported-by-the-editions-of-sql-server-2014.md)   
  [Spécifications des capacités maximales pour SQL Server](../sql-server/maximum-capacity-specifications-for-sql-server.md)   
- [Installation de SQL Server 2014 de démarrage rapide](../../2014/getting-started/quick-start-installation-of-sql-server-2014.md)  
+ [Installation de démarrage rapide de SQL Server 2014](../../2014/getting-started/quick-start-installation-of-sql-server-2014.md)  
   
   

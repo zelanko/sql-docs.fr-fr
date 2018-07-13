@@ -1,5 +1,5 @@
 ---
-title: Élément OlapInfo (XMLA) | Documents Microsoft
+title: Élément OlapInfo (XMLA) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -25,18 +25,18 @@ helpviewer_keywords:
 - OlapInfo element
 ms.assetid: 8828fdd7-c0f7-48ce-a0d0-ab4bc1a995cf
 caps.latest.revision: 27
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: 9b183bfa01d2e4060c38fa2768f63b21fff693e7
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: 0d1665a174cdff0d4afcd8bea69b9bdca9212d9d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36139662"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37178386"
 ---
 # <a name="olapinfo-element-xmla"></a>Élément OlapInfo (XMLA)
-  Contient les métadonnées de l’axe et la cellule contenue par un [racine](root-element-xmla.md) élément qui utilise le [MDDataSet](../xml-data-types/mddataset-data-type-xmla.md) type de données.  
+  Contient les métadonnées de l’axe et de cellule contenue par une [racine](root-element-xmla.md) élément qui utilise le [MDDataSet](../xml-data-types/mddataset-data-type-xmla.md) type de données.  
   
 ## <a name="syntax"></a>Syntaxe  
   

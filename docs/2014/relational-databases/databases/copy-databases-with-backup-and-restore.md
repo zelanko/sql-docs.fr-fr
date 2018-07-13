@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - full-text search [SQL Server], back up and restore
 - restoring databases [SQL Server], previous SQL Server versions
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - database backups [SQL Server], copying databases
 ms.assetid: b93e9701-72a0-408e-958c-dc196872c040
 caps.latest.revision: 59
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 5901a8fcdd3a2d24b84fe43d5af1fb2b46d56b39
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 551677d78685c5e491d5f1c2dd347bc77f37a437
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36053313"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37164890"
 ---
 # <a name="copy-databases-with-backup-and-restore"></a>Copier des bases de données avec la sauvegarde et la restauration
   Dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], vous pouvez créer une base de données en restaurant une sauvegarde d'une base de données utilisateur créée à l'aide de [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] ou version ultérieure. Cependant, les sauvegardes des bases de données **master**, **model** et **msdb** créées avec une version antérieure de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ne peuvent pas être restaurées par [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Par ailleurs, les sauvegardes [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] ne peuvent pas être restaurées par les versions antérieures de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -42,7 +42,7 @@ ms.locfileid: "36053313"
   
 1.  Sauvegardez la base de données source, qui peut résider sur une instance de [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] ou version ultérieure. L’ordinateur qui exécute cette instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] constitue *l’ordinateur source*.  
   
-2.  Sur l’ordinateur auquel vous souhaitez copier la base de données (la *ordinateur de destination*), connectez-vous à l’instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sur lequel vous envisagez de restaurer la base de données. Si nécessaire, sur l'instance de serveur de destination, créez les mêmes unités de sauvegarde que celles utilisées pour sauvegarder les bases de données sources.  
+2.  Sur l’ordinateur auquel vous voulez copier la base de données (le *ordinateur de destination*), connectez-vous à l’instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sur lequel vous projetez de restaurer la base de données. Si nécessaire, sur l'instance de serveur de destination, créez les mêmes unités de sauvegarde que celles utilisées pour sauvegarder les bases de données sources.  
   
 3.  Restaurez la sauvegarde de la base de données source sur l'ordinateur de destination. La restauration automatique de la base de données crée tous les fichiers de la base de données.  
   
@@ -63,7 +63,7 @@ ms.locfileid: "36053313"
   
     -   Si le fichier existant ne peut pas être remplacé, une erreur de restauration se produit.  
   
- Pour éviter des erreurs et des conséquences inattendues, avant l’opération de restauration, vous pouvez utiliser la [backupfile](/sql/relational-databases/system-tables/backupfile-transact-sql) table d’historique pour déterminer les base de données et les fichiers journaux dans la sauvegarde que vous envisagez de restaurer.  
+ Pour éviter des erreurs et des conséquences inattendues, avant l’opération de restauration, vous pouvez utiliser la [backupfile](/sql/relational-databases/system-tables/backupfile-transact-sql) table d’historique pour déterminer les fichiers journaux et de base de données dans la sauvegarde que vous envisagez de restaurer.  
   
 ## <a name="moving-the-database-files"></a>Déplacement des fichiers de la base de données  
  Si les fichiers figurant dans la sauvegarde de la base de données ne peuvent pas être restaurés sur l'ordinateur de destination pour les raisons mentionnées précédemment, il est nécessaire de transférer les fichiers vers un nouvel emplacement lors de leur restauration. Exemple :  
@@ -102,13 +102,13 @@ ms.locfileid: "36053313"
   
 -   [RESTORE FILELISTONLY &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-filelistonly-transact-sql)  
   
- **Pour restaurer des fichiers et des groupes de fichiers vers un nouvel emplacement**  
+ **Pour restaurer des fichiers et groupes de fichiers vers un nouvel emplacement**  
   
 -   [Restaurer des fichiers à un nouvel emplacement &#40;SQL Server&#41;](../backup-restore/restore-files-to-a-new-location-sql-server.md)  
   
 -   [Restaurer une sauvegarde de base de données &#40;SQL Server Management Studio&#41;](../backup-restore/restore-a-database-backup-using-ssms.md)  
   
- **Pour restaurer des fichiers et des groupes de fichiers sur les fichiers existants**  
+ **Pour restaurer des fichiers et groupes de fichiers sur les fichiers existants**  
   
 -   [Restaurer des fichiers et groupes de fichiers en remplaçant des fichiers existants &#40;SQL Server&#41;](../backup-restore/restore-files-and-filegroups-over-existing-files-sql-server.md)  
   
@@ -124,7 +124,7 @@ ms.locfileid: "36053313"
   
 -   [sp_changedbowner &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-changedbowner-transact-sql)  
   
- **Copier une base de données à l’aide de gestion des objets SMO (SQL Server)**  
+ **Pour copier une base de données à l’aide de SQL Server Management Objects (SMO)**  
   
 -   <xref:Microsoft.SqlServer.Management.Smo.Restore.ReadFileList%2A>  
   

@@ -1,5 +1,5 @@
 ---
-title: Ensemble de lignes DISCOVER_PERFORMANCE_COUNTERS | Documents Microsoft
+title: Ensemble de lignes DISCOVER_PERFORMANCE_COUNTERS | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -12,15 +12,15 @@ ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: 62b1e967-af67-4915-a305-727bffd61fe4
 caps.latest.revision: 6
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 9e3731ae505a755bd68410ee3228a1bd13579bc8
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 8a17c8f404d99d4b701eafb536aaa595a4039bc9
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36053162"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37151210"
 ---
 # <a name="discoverperformancecounters-rowset"></a>DISCOVER_PERFORMANCE_COUNTERS, ensemble de lignes
   Retourne la valeur d'un ou de plusieurs compteurs de performance. Ne prend pas en charge les compteurs qui retournent des informations sur l'utilisation dans le temps (comme les lectures de disque par seconde et le pourcentage d'utilisation de l'UC).  

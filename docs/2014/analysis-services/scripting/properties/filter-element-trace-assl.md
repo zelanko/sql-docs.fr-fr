@@ -1,5 +1,5 @@
 ---
-title: Élément Filter (Trace) (ASSL) | Documents Microsoft
+title: Élément Filter (Trace) (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - Filter element
 ms.assetid: 411a598e-3bb1-487b-9f37-cce4b57a67b4
 caps.latest.revision: 32
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 8997c652883a70572fa83351be51b3381a6fdb7f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 17f062bf17436a1f177c29deef8654402ffd7d6d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36139673"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37159350"
 ---
 # <a name="filter-element-trace-assl"></a>Élément Filter (Trace) (ASSL)
   Contient un fragment de document XML qui décrit le [Trace](../objects/trace-element-assl.md) filtre.  
@@ -62,10 +62,10 @@ ms.locfileid: "36139673"
 |Éléments enfants|None|  
   
 ## <a name="remarks"></a>Notes  
- L’élément qui correspond au parent de `Filter` dans l’objet d’objets AMO (Analysis Management) est modèle <xref:Microsoft.AnalysisServices.Trace>.  
+ L’élément qui correspond au parent de `Filter` dans l’objet d’objets AMO (Analysis Management) modèle est <xref:Microsoft.AnalysisServices.Trace>.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Propriétés &#40;ASSL&#41;](properties-assl.md)   
- [Effectue le suivi élément &#40;ASSL&#41;](../collections/traces-element-assl.md)  
+ [Effectue le suivi des élément &#40;ASSL&#41;](../collections/traces-element-assl.md)  
   
   

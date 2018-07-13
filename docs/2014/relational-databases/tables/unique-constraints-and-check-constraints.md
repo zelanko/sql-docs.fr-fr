@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - constraints [SQL Server], Visual Database Tools
 - Visual Database Tools [SQL Server], constraints
 ms.assetid: 637098af-2567-48f8-90f4-b41df059833e
 caps.latest.revision: 20
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: f00d765861a86543109754ccd9500d17b2189bac
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 980915c6b35295674e24fd603dca5f0a720a87a0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36139554"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37179606"
 ---
 # <a name="unique-constraints-and-check-constraints"></a>Contraintes uniques et contraintes de validation
   Les contraintes UNIQUE et CHECK sont deux types de contraintes qui peuvent être utilisées pour appliquer l'intégrité des données à des tables [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Ce sont des objets de base de données importants.  

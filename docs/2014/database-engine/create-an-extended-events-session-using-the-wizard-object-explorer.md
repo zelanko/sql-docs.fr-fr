@@ -1,5 +1,5 @@
 ---
-title: Créer une Session d’événements étendus à l’aide de l’Assistant (Explorateur d’objets) | Documents Microsoft
+title: Créer une Session d’événements étendus à l’aide de l’Assistant (Explorateur d’objets) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - Sql12.ssms.XeWizard.Summary.f1
 - Sql12.ssms.XeWizard.SetSessionProperties.f1
@@ -32,15 +32,15 @@ helpviewer_keywords:
 - Sql11.ssms.XeWizard.SelectEvents.f1
 ms.assetid: 80c0456f-17c0-41d8-b2aa-502a2f3bb6de
 caps.latest.revision: 28
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 69a63b1b360a1ba1c0e9a106dbb78f215f9eca71
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: dc5a2f60cfeff0289bb0a16476fb2506c3beda6c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36140591"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37155230"
 ---
 # <a name="create-an-extended-events-session-using-the-wizard-object-explorer"></a>Créer une session d'événements étendus à l'aide de l'Assistant (Explorateur d'objets)
   Pour vous aider à sélectionner et capturer des événements sur votre serveur, les événements étendus incluent un Assistant Nouvelle session qui vous guide tout au long des étapes de création d'une session d'événements étendus. L'Assistant Nouvelle session expose la plupart des fonctionnalités Événements étendus. La [boîte de dialogue Nouvelle session](../../2014/database-engine/create-an-extended-events-session-using-the-new-session-dialog.md) vous permet également de définir une session Événements étendus qui capture, affiche et analyse vos données. La boîte de dialogue Nouvelle session expose toutes les fonctionnalités Événements étendus.  
@@ -174,6 +174,6 @@ ms.locfileid: "36140591"
 2.  Pour consulter les données actives de votre session d'événements, cliquez sur **Observer les données actives à l'écran lors de leur capture** . Les données actives commenceront à afficher la trace une fois la session créée.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Créer une Session d’événements étendus à l’aide de la boîte de dialogue Nouvelle Session](../../2014/database-engine/create-an-extended-events-session-using-the-new-session-dialog.md)  
+ [Créer une session Événements étendus à l’aide de la boîte de dialogue Nouvelle session](../../2014/database-engine/create-an-extended-events-session-using-the-new-session-dialog.md)  
   
   

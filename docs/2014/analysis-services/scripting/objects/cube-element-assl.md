@@ -1,5 +1,5 @@
 ---
-title: Élément (ASSL) du cube | Documents Microsoft
+title: Cube, élément (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - Cube element
 ms.assetid: 2d801066-6cca-4a99-bbd8-56a38d762108
 caps.latest.revision: 40
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: cc489a8cb996d57c833a5b91b395c5885073e222
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: eab8cc56de346540491664a60c644ef868b02a25
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36053406"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37165260"
 ---
 # <a name="cube-element-assl"></a>Élément Cube (ASSL)
   Définit un cube régulier, virtuel ou lié dans un [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] [base de données](database-element-assl.md) élément.  
@@ -88,7 +88,7 @@ ms.locfileid: "36053406"
 |Relation|Élément|  
 |------------------|-------------|  
 |Éléments parents|[Cubes](../collections/cubes-element-assl.md)|  
-|Éléments enfants|[Actions](../collections/actions-element-assl.md), [AggregationPrefix](../properties/aggregationprefix-element-assl.md), [Annotations](../collections/annotations-element-assl.md), [Collation](../properties/collation-element-assl.md), [CreatedTimestamp](../properties/createdtimestamp-element-assl.md), [CubePermissions](../collections/cubepermissions-element-assl.md), [DefaultMeasure](measure-element-assl.md), [Description](../properties/description-element-assl.md), [Dimensions](../collections/dimensions-element-assl.md), [ErrorConfiguration](errorconfiguration-element-assl.md), [EstimatedRows](../properties/estimatedrows-element-assl.md), [ID](../properties/id-element-assl.md), [Kpis](../collections/kpis-element-assl.md), [Language](../properties/language-element-assl.md), [LastProcessed](../properties/lastprocessed-element-assl.md), [LastSchemaUpdate](../properties/lastschemaupdate-element-assl.md), [MdxScripts](../collections/mdxscripts-element-assl.md), [MeasureGroups](../collections/groups-element-assl.md), [Name](../properties/name-element-assl.md), [Perspectives](../collections/perspectives-element-assl.md), [ProactiveCaching](proactivecaching-element-assl.md), [ProcessingMode](../properties/processingmode-element-assl.md), [ProcessingPriority](../properties/processingpriority-element-assl.md), [ScriptCacheProcessingMode](../properties/scriptcacheprocessingmode-element-assl.md), [State](../properties/state-element-assl.md), [StorageLocation](../properties/storagelocation-element-assl.md), [StorageMode](../properties/storagemode-element-assl.md), [Translations](../collections/translations-element-assl.md), [Visible](../properties/visible-element-assl.md)|  
+|Éléments enfants|[Actions](../collections/actions-element-assl.md), [AggregationPrefix](../properties/aggregationprefix-element-assl.md), [Annotations](../collections/annotations-element-assl.md), [classement](../properties/collation-element-assl.md), [CreatedTimestamp](../properties/createdtimestamp-element-assl.md), [ CubePermissions](../collections/cubepermissions-element-assl.md), [DefaultMeasure](measure-element-assl.md), [Description](../properties/description-element-assl.md), [Dimensions](../collections/dimensions-element-assl.md), [ErrorConfiguration](errorconfiguration-element-assl.md) , [EstimatedRows](../properties/estimatedrows-element-assl.md), [ID](../properties/id-element-assl.md), [indicateurs de performance clés](../collections/kpis-element-assl.md), [langage](../properties/language-element-assl.md), [LastProcessed](../properties/lastprocessed-element-assl.md), [ LastSchemaUpdate](../properties/lastschemaupdate-element-assl.md), [MdxScripts](../collections/mdxscripts-element-assl.md), [MeasureGroups](../collections/groups-element-assl.md), [nom](../properties/name-element-assl.md), [Perspectives](../collections/perspectives-element-assl.md), [ProactiveCaching](proactivecaching-element-assl.md), [ProcessingMode](../properties/processingmode-element-assl.md), [ProcessingPriority](../properties/processingpriority-element-assl.md), [ScriptCacheProcessingMode](../properties/scriptcacheprocessingmode-element-assl.md), [état ](../properties/state-element-assl.md), [StorageLocation](../properties/storagelocation-element-assl.md), [StorageMode](../properties/storagemode-element-assl.md), [traductions](../collections/translations-element-assl.md), [Visible](../properties/visible-element-assl.md)|  
   
 ## <a name="remarks"></a>Notes  
  L’élément correspondant dans le modèle d’objet objets AMO (Analysis Management) est <xref:Microsoft.AnalysisServices.Cube>.  

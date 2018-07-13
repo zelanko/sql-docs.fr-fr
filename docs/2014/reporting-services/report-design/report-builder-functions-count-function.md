@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 7b50b101-daf8-4fb0-ae04-57384755779f
 caps.latest.revision: 7
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: e623374290e9620d048d651683a58bfcd3ddf573
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 3fc2b74413f2ecb7f0a1f72684494f85ecf82ca9
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36140239"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37152170"
 ---
 # <a name="count-function-report-builder-and-ssrs"></a>Fonction Count (Générateur de rapports et SSRS)
   Retourne le nombre de valeurs non Null spécifiées par l'expression, évaluée dans le contexte de l'étendue donnée.  
@@ -39,10 +39,10 @@ Count(expression, scope, recursive)
  (`Variant` ou `Binary`) expression sur laquelle effectuer l’agrégation, par exemple, `=Fields!FieldName.Value`.  
   
  *portée*  
- (`String`) Le nom d’une région de données, groupe ou groupe de données qui contient le rapport d’éléments auxquels appliquer la fonction d’agrégation. Si le paramètre *scope* n'est pas spécifié, l'étendue actuelle est utilisée.  
+ (`String`) Le nom d’un jeu de données, groupe ou région de données qui contient le rapport éléments auxquels appliquer la fonction d’agrégation. Si le paramètre *scope* n'est pas spécifié, l'étendue actuelle est utilisée.  
   
  *récursifs*  
- (**Type énuméré**) Facultatif. `Simple` (par défaut) ou `RdlRecursive`. Indique s'il faut effectuer l'agrégation de manière récursive.  
+ (**Type énuméré**) Facultatif. `Simple` (valeur par défaut) ou `RdlRecursive`. Indique s'il faut effectuer l'agrégation de manière récursive.  
   
 ## <a name="return-type"></a>Type de retour  
  Retourne un `Integer`.  
@@ -80,9 +80,9 @@ Count(expression, scope, recursive)
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Expression utilise des rapports de &#40;rapport Générateur et SSRS&#41;](expression-uses-in-reports-report-builder-and-ssrs.md)   
+ [Utilisation d’expressions dans les rapports &#40;Générateur de rapports et SSRS&#41;](expression-uses-in-reports-report-builder-and-ssrs.md)   
  [Exemples d’expressions &#40;Générateur de rapports et SSRS&#41;](expression-examples-report-builder-and-ssrs.md)   
  [Types de données dans les expressions &#40;Générateur de rapports et SSRS&#41;](expressions-report-builder-and-ssrs.md)   
- [Étendue des expressions pour les totaux, les agrégats et les Collections intégrées &#40;rapport Générateur et SSRS&#41;](expression-scope-for-totals-aggregates-and-built-in-collections.md)  
+ [Étendue des expressions pour les totaux, les agrégats et les Collections intégrées &#40;Générateur de rapports et SSRS&#41;](expression-scope-for-totals-aggregates-and-built-in-collections.md)  
   
   

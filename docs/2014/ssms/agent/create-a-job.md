@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - jobs [SQL Server Agent], creating
 - SQL Server Agent jobs, creating
 ms.assetid: b35af2b6-6594-40d1-9861-4d5dd906048c
 caps.latest.revision: 33
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: cb9d6f15c9819a9c5653130664b340931a9a5d93
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: d161129b14da33645c1a9238307c0eefe9539097
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36052770"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37181536"
 ---
 # <a name="create-a-job"></a>Créer un travail
   Cette rubrique explique comment créer un travail de l'Agent SQL Server dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] à l'aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], de [!INCLUDE[tsql](../../includes/tsql-md.md)] ou de SQL Server Management Objects (SMO).  
@@ -77,15 +77,15 @@ ms.locfileid: "36052770"
   
 4.  Dans la boîte de dialogue **Nouveau travail** , sur la page **Général** , modifiez les propriétés générales du travail. Pour plus d’informations sur les options disponibles sur cette page, consultez [propriétés du travail et la nouvelle tâche &#40;Général Page&#41;](../../integration-services/general-page-of-integration-services-designers-options.md)  
   
-5.  Sur la page **Étapes** , organisez les étapes de travail. Pour plus d’informations sur les options disponibles sur cette page, consultez [propriétés de la tâche : nouveau travail &#40;Page étapes&#41;](job-properties-new-job-steps-page.md)  
+5.  Sur la page **Étapes** , organisez les étapes de travail. Pour plus d’informations sur les options disponibles sur cette page, consultez [propriétés du travail : nouveau travail &#40;Page étapes&#41;](job-properties-new-job-steps-page.md)  
   
-6.  Sur la page **Planifications** , organisez les planifications du travail. Pour plus d’informations sur les options disponibles sur cette page, consultez [propriétés de la tâche : nouveau travail &#40;Page planifications&#41;](job-properties-new-job-schedules-page.md)  
+6.  Sur la page **Planifications** , organisez les planifications du travail. Pour plus d’informations sur les options disponibles sur cette page, consultez [propriétés du travail : nouveau travail &#40;Page planifications&#41;](job-properties-new-job-schedules-page.md)  
   
-7.  Sur la page **Alertes** , organisez les alertes pour le travail. Pour plus d’informations sur les options disponibles sur cette page, consultez [propriétés de la tâche : nouveau travail &#40;Page des alertes&#41;](job-properties-new-job-alerts-page.md)  
+7.  Sur la page **Alertes** , organisez les alertes pour le travail. Pour plus d’informations sur les options disponibles sur cette page, consultez [propriétés du travail : nouveau travail &#40;Page des alertes&#41;](job-properties-new-job-alerts-page.md)  
   
-8.  Sur la page **Notifications** , définissez des actions que l'Agent [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] devra exécuter une fois le travail terminé. Pour plus d’informations sur les options disponibles sur cette page, consultez [propriétés de la tâche : nouveau travail &#40;Page Notifications&#41;](job-properties-new-job-notifications-page.md).  
+8.  Sur la page **Notifications** , définissez des actions que l'Agent [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] devra exécuter une fois le travail terminé. Pour plus d’informations sur les options disponibles sur cette page, consultez [propriétés du travail : nouveau travail &#40;Page Notifications&#41;](job-properties-new-job-notifications-page.md).  
   
-9. Sur la page **Cibles** , gérez les serveurs cibles pour le travail. Pour plus d’informations sur les options disponibles sur cette page, consultez [propriétés de la tâche : nouveau travail &#40;Page cibles&#41;](job-properties-new-job-targets-page.md).  
+9. Sur la page **Cibles** , gérez les serveurs cibles pour le travail. Pour plus d’informations sur les options disponibles sur cette page, consultez [propriétés du travail : nouveau travail &#40;Page cibles&#41;](job-properties-new-job-targets-page.md).  
   
 10. Lorsque vous avez terminé, cliquez sur **OK**.  
   

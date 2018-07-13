@@ -1,5 +1,5 @@
 ---
-title: Définir la boîte de dialogue relation (Analysis Services - données multidimensionnelles) | Documents Microsoft
+title: Définir la boîte de dialogue relation (Analysis Services - données multidimensionnelles) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.cubeeditor.dimensionusage.definerelationship.f1
 helpviewer_keywords:
 - Define Relationship dialog box
 ms.assetid: 0fcee7f1-f138-4c2e-ae8c-245395ee0fe8
 caps.latest.revision: 30
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 5cb46c19a45b85e90a0484a5f0ac33eff0077298
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 93c76ad9d504e9ec6fc1ba417407a16bd93e8adf
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36051835"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37165500"
 ---
 # <a name="define-relationship-dialog-box-analysis-services---multidimensional-data"></a>Boîte de dialogue Définir une relation (Analysis Services - Données multidimensionnelles)
   Utilisez la boîte de dialogue **Définir une relation** pour définir une relation entre une dimension de cube et un groupe de mesures dans le Concepteur de cube. Pour afficher la boîte de dialogue **Définir une relation** , dans le Concepteur de cube, sous l’onglet **Utilisation de la dimension** , cliquez sur **...** dans une cellule dans le volet **Grille** .  
@@ -48,7 +48,7 @@ ms.locfileid: "36051835"
 |||**Table de groupe de mesures** : affiche la table de faits du groupe de mesures.|  
 |||**Relation**: affiche une grille de colonnes de dimension et de colonnes de groupe de mesures dont dépend la relation. Cette grille comporte les colonnes suivantes :<br /><br /> **Colonnes de dimension** : affiche les colonnes associées à l’attribut de granularité sélectionné. Remarque : si la dimension n’a pas encore été générée, cette option est définie sur la valeur **Générer**.<br />**Colonnes de groupe de mesures** :<br />                              Sélectionnez les colonnes dans le groupe de mesures qui sont associées aux colonnes de dimension.|  
 |||**Avancé** :<br />                      Cliquez sur ce bouton pour afficher la boîte de dialogue **Liaisons des groupes de mesures** et modifier les propriétés avancées, notamment le traitement NULL, sur les relations entre les attributs et les colonnes des groupes de mesures. Pour plus d’informations sur la boîte de dialogue **Liaisons des groupes de mesures**, consultez [Boîte de dialogue Liaisons des groupes de mesures &#40;Analysis Services - Données multidimensionnelles&#41;](measure-group-bindings-dialog-box-analysis-services-multidimensional-data.md).|  
-|**faits**|Spécifie une relation de dimension de faits. Les options suivantes s'affichent dans le volet **Détail** :|**Attribut de granularité** : sélectionnez l’attribut qui définit la granularité du groupe de mesures par rapport à la dimension. Cet attribut est généralement l'attribut clé de la dimension.|  
+|**Faits**|Spécifie une relation de dimension de faits. Les options suivantes s'affichent dans le volet **Détail** :|**Attribut de granularité** : sélectionnez l’attribut qui définit la granularité du groupe de mesures par rapport à la dimension. Cet attribut est généralement l'attribut clé de la dimension.|  
 |||**Table de dimension** : affiche la table de dimension principale.|  
 |||**Table de groupe de mesures** : <br />                      Affiche la table dont dépend le groupe de mesures.|  
 |**Référencé**|Spécifie une relation de dimension référencée. Les options suivantes s'affichent dans le volet **Détail** :|**Dimension de référence** : <br />                      Affiche la dimension sélectionnée.|  

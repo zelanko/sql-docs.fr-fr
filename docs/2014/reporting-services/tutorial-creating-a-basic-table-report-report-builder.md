@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: d9e30521-f8ae-4c45-89c3-d40727f622f7
 caps.latest.revision: 12
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 7c197e6f13497b82655f8c20872637d8bc8e7ed0
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 5a3831372791023edb9f83064aa77878dcf41dfd
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36053229"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37186056"
 ---
 # <a name="tutorial-creating-a-basic-table-report-report-builder"></a>Didacticiel : création d'un rapport de tableau de base (Générateur de rapports)
   Ce didacticiel vous apprend à créer un rapport de tableau de base à partir des exemples de données de ventes. L’illustration suivante montre le rapport que vous allez créer.  
@@ -45,7 +45,7 @@ ms.locfileid: "36053229"
   
 3.  [Format des données en tant que Date](#FormatDate)  
   
-4.  [Modifier les largeurs de colonne](#Width)  
+4.  [Modifier la largeur de colonne](#Width)  
   
 5.  [Ajouter un titre de rapport](#Title)  
   
@@ -68,13 +68,13 @@ ms.locfileid: "36053229"
      Le **mise en route** boîte de dialogue s’ouvre.  
   
     > [!NOTE]  
-    >  Si le **mise en route** boîte de dialogue n’apparaît pas, à partir de la **le Générateur de rapports** et sur **nouveau**.  
+    >  Si le **mise en route** boîte de dialogue n’apparaît pas, à partir de la **le Générateur de rapports** bouton, cliquez sur **New**.  
   
 2.  Dans le volet gauche, assurez-vous que **Nouveau rapport** est sélectionné.  
   
 3.  Dans le volet droit, vérifiez que **Assistant Tableau ou matrice** est sélectionné.  
   
-##  <a name="DataConnection"></a> 1. Spécifier une connexion de données dans l'Assistant Tableau  
+##  <a name="DataConnection"></a> 1 a. Spécifier une connexion de données dans l'Assistant Tableau  
  Une connexion de données contient les informations nécessaires pour se connecter à une source de données externe telle qu'une base de données [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . En règle générale, vous obtenez les informations de connexion et le type d'informations d'identification à utiliser auprès du propriétaire de la source de données. Pour spécifier une connexion de données, vous pouvez utiliser une source de données partagée sur le serveur de rapports ou créer une source de données incorporée utilisée uniquement dans ce rapport.  
   
  Dans ce didacticiel, vous allez utiliser une source de données incorporée. Pour en savoir plus sur l’utilisation des sources de données partagées, consultez [Autres procédures pour l’obtention d’une connexion de données &#40;Générateur de rapports&#41;](../reporting-services/alternative-ways-to-get-a-data-connection-report-builder.md).  
@@ -245,7 +245,7 @@ ms.locfileid: "36053229"
   
 3.  Sous l’onglet **Accueil** , dans le groupe **Nombre** , cliquez sur le bouton **Devise** . Les cellules changent pour afficher le format de devise.  
   
-     Si votre paramètre régional est Anglais (États-Unis), le texte d’exemple par défaut est [**$12,345.00**]. Si vous ne voyez pas une valeur de devise d’exemple, cliquez sur **Styles des espaces réservés** dans les **numéros** de groupe, puis cliquez sur **exemples de valeurs**.  
+     Si votre paramètre régional est Anglais (États-Unis), le texte d’exemple par défaut est [**$12,345.00**]. Si vous ne voyez pas un exemple de valeur monétaire, cliquez sur **Styles des espaces réservés** dans le **numéros** de groupe, puis cliquez sur **exemples de valeurs**.  
   
 4.  Cliquez sur **Exécuter** pour afficher un aperçu du rapport.  
   
@@ -260,7 +260,7 @@ ms.locfileid: "36053229"
   
 2.  Cliquez sur la cellule qui contient `[SalesDate]`.  
   
-3.  Dans le ruban, dans le **accueil** sous l’onglet le **nombre** groupe, dans la liste déroulante, sélectionnez **Date**.  
+3.  Dans le ruban, sur le **accueil** sous l’onglet le **nombre** groupe, dans la liste déroulante, sélectionnez **Date**.  
   
      La cellule affiche la date d’exemple **[1/31/2000]**. Si vous ne voyez pas s’afficher d’exemple de date, cliquez sur **Styles des espaces réservés** dans le groupe **Nombres** , puis cliquez sur **Valeurs d’aperçu**.  
   
@@ -274,7 +274,7 @@ ms.locfileid: "36053229"
   
 2.  Cliquez sur la cellule qui contient `[SalesDate]`.  
   
-3.  Sur le **accueil** sous l’onglet du **nombre** , cliquez sur le Lanceur de boîte de dialogue.  
+3.  Sur le **accueil** sous l’onglet le **nombre** , cliquez sur le Lanceur de boîte de dialogue.  
   
      Il s'agit de la petite flèche située à l'angle droit du groupe. La boîte de dialogue **Propriétés de la zone de texte** s’ouvre.  
   
@@ -360,7 +360,7 @@ ms.locfileid: "36053229"
 4.  Cliquez sur **Enregistrer**.  
   
 ##  <a name="Export"></a> 7. Exporter le rapport  
- Les rapports peuvent être exportés vers différents formats, par exemple Microsoft Excel et les fichiers de valeurs séparées par des virgules (CSV). Pour plus d’informations, consultez [exportation des rapports &#40;le Générateur de rapports et SSRS&#41;](report-builder/export-reports-report-builder-and-ssrs.md).  
+ Les rapports peuvent être exportés vers différents formats, par exemple Microsoft Excel et les fichiers de valeurs séparées par des virgules (CSV). Pour plus d’informations, consultez [exportation des rapports &#40;Générateur de rapports et SSRS&#41;](report-builder/export-reports-report-builder-and-ssrs.md).  
   
  Dans ce didacticiel, vous allez exporter le rapport vers Excel et définir une propriété du rapport afin de fournir un nom personnalisé pour l'onglet de classeur.  
   
@@ -370,7 +370,7 @@ ms.locfileid: "36053229"
   
 2.  Cliquez n'importe où en dehors du rapport.  
   
-3.  . Dans le volet Propriétés, recherchez la propriété InitialPageName et le type **ventes de produits Excel**.  
+3.  . Dans le volet Propriétés, recherchez la propriété InitialPageName et tapez **Product Sales Excel**.  
   
     > [!NOTE]  
     >  Si le volet Propriétés n’est pas visible, cliquez sur l’onglet Affichage sur le ruban, puis cliquez sur **propriétés**.  
@@ -385,7 +385,7 @@ ms.locfileid: "36053229"
   
 3.  Accédez à la **Documents** dossier.  
   
-4.  Dans le **nom de fichier** zone de texte, tapez **ventes de produits Excel**.  
+4.  Dans le **nom de fichier** zone de texte, tapez **Product Sales Excel**.  
   
 5.  Vérifiez que le type de fichier est **classeur Excel**.  
   
