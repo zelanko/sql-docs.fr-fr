@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server Agent, about SQL Server Agent
 - automatic administration steps
 ms.assetid: 8d1dc600-aabb-416f-b3af-fbc9fccfd0ec
 caps.latest.revision: 28
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: e90a916b586215b23f15e6d3237690352f9aedd1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 4f3a29acfe387b4b4e80d9e9a0ee232476d6074d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36045098"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37230469"
 ---
 # <a name="sql-server-agent"></a>SQL Server Agent
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent est un service Microsoft Windows qui exécute des tâches administratives planifiées appelées *travaux* dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
@@ -35,7 +35,7 @@ ms.locfileid: "36045098"
   
 -   [Sécurité pour l'administration de SQL Server Agent](#Security)  
   
-##  <a name="Benefits"></a> Avantages de l’Agent SQL Server  
+##  <a name="Benefits"></a> Avantages de SQL Server Agent  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent utilise [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pour stocker les informations sur les travaux. Les travaux contiennent une ou plusieurs étapes de travail. Chaque étape contient sa propre tâche, par exemple, la sauvegarde d'une base de données.  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent peut exécuter un travail sur la base d'une planification, en réponse à un événement spécifique ou sur demande. Par exemple, si vous sauvegardez l’ensemble des serveurs de l’entreprise chaque jour ouvrable après les horaires de bureau, vous pouvez automatiser cette tâche. Planifiez l'exécution de la sauvegarde après 22h00 du lundi au vendredi ; si la sauvegarde rencontre un problème, SQL Server Agent peut enregistrer l'événement et vous en avertir.  
@@ -43,7 +43,7 @@ ms.locfileid: "36045098"
 > [!NOTE]  
 >  Par défaut, le service de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent est désactivé lorsque [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] est installé, sauf si l'utilisateur choisit explicitement de démarrer automatiquement le service.  
   
-##  <a name="Components"></a> Composants de SQL Server Agent  
+##  <a name="Components"></a> Composants SQL Server Agent  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent utilise les composants ci-après pour définir les tâches à exécuter et quand les exécuter, et pour signaler si elles ont réussi ou échoué.  
   
 ### <a name="jobs"></a>travaux  
@@ -117,11 +117,11 @@ ms.locfileid: "36045098"
   
  Un opérateur peut être l'alias d'un groupe d'individus. De cette façon, tous les membres de cet alias sont avertis en une seule fois. Pour plus d’informations, consultez [Opérateurs](operators.md).  
   
-##  <a name="Security"></a> Sécurité pour l’Administration de l’Agent SQL Server  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] L’agent utilise le **SQLAgentUserRole**, **SQLAgentReaderRole**, et **SQLAgentOperatorRole** base de données fixe dans le **msdb** base de données pour contrôler l’accès à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent pour les utilisateurs qui ne sont pas membres de le `sysadmin` rôle serveur fixe. Outre ces rôles de base de données fixes, les sous-systèmes et les proxys aident les administrateurs de base de données à garantir que chaque étape de travail est exécutée avec les autorisations minimales nécessaires à la réalisation de cette tâche.  
+##  <a name="Security"></a> Sécurité pour l’Administration de SQL Server Agent  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent utilise le **SQLAgentUserRole**, **SQLAgentReaderRole**, et **SQLAgentOperatorRole** base de données fixe dans le **msdb** base de données pour contrôler l’accès à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent pour les utilisateurs qui ne sont pas membres de la `sysadmin` rôle serveur fixe. Outre ces rôles de base de données fixes, les sous-systèmes et les proxys aident les administrateurs de base de données à garantir que chaque étape de travail est exécutée avec les autorisations minimales nécessaires à la réalisation de cette tâche.  
   
 ### <a name="roles"></a>Rôles  
- Membres de la **SQLAgentUserRole**, **SQLAgentReaderRole**, et **SQLAgentOperatorRole** base de données fixe dans **msdb**, et membres de la `sysadmin` rôle de serveur fixe a accès à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] l’Agent. Un utilisateur qui n'appartient à aucun de ces rôles ne peut pas utiliser [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent. Pour plus d’informations sur les rôles utilisés par [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent, consultez [Implémenter la sécurité de SQL Server Agent](implement-sql-server-agent-security.md).  
+ Membres de la **SQLAgentUserRole**, **SQLAgentReaderRole**, et **SQLAgentOperatorRole** base de données fixe dans **msdb**, et membres de la `sysadmin` rôle de serveur fixe a accès à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent. Un utilisateur qui n'appartient à aucun de ces rôles ne peut pas utiliser [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent. Pour plus d’informations sur les rôles utilisés par [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent, consultez [Implémenter la sécurité de SQL Server Agent](implement-sql-server-agent-security.md).  
   
 ### <a name="subsystems"></a>Sous-systèmes  
  Un sous-système est un objet prédéfini qui représente la fonctionnalité disponible pour une étape de travail. Chaque proxy a accès à un ou plusieurs sous-systèmes. Les sous-systèmes assurent la sécurité en délimitant l'accès aux fonctionnalités mises à la disposition d'un proxy. Chaque étape de travail s'exécute dans le contexte d'un proxy, à l'exception des étapes de travail [!INCLUDE[tsql](../../includes/tsql-md.md)] . [!INCLUDE[tsql](../../includes/tsql-md.md)] utilise la commande EXECUTE AS pour définir le contexte de sécurité.  
@@ -130,7 +130,7 @@ ms.locfileid: "36045098"
   
 |Nom du sous-système|Description|  
 |--------------------|-----------------|  
-|Script ActiveX Microsoft|Permet d'exécuter une étape de travail de script ActiveX<br /><br /> **\*\* Important \* \***  sous-système de l’un script ActiveX sera supprimé de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent dans une future version de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Évitez d'utiliser cette fonctionnalité dans de nouveaux travaux de développement, et prévoyez de modifier les applications qui utilisent actuellement cette fonctionnalité.|  
+|Script ActiveX Microsoft|Permet d'exécuter une étape de travail de script ActiveX<br /><br /> **\*\* Important \* \***  sous-système de la création de scripts ActiveX sera supprimé à partir de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent dans une future version de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Évitez d'utiliser cette fonctionnalité dans de nouveaux travaux de développement, et prévoyez de modifier les applications qui utilisent actuellement cette fonctionnalité.|  
 |Système d’exploitation (**CmdExec**)|Permet de lancer un programme exécutable.|  
 |PowerShell|Exécutez une étape de travail de scripts PowerShell.|  
 |Serveur de distribution de réplication|Permet d'exécuter une étape de travail qui active l'Agent de distribution.|  

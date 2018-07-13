@@ -1,5 +1,5 @@
 ---
-title: Ensemble de lignes DISCOVER_TRACE_DEFINITION_PROVIDERINFO | Documents Microsoft
+title: Ensemble de lignes DISCOVER_TRACE_DEFINITION_PROVIDERINFO | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -12,15 +12,15 @@ ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: 8dda2ef7-202a-454b-93f9-a2b29c2d277c
 caps.latest.revision: 6
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 2f8775ea445a06659fa31f1fee14105525c1414d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: cdf975299c4a96d4052c3397fe9578d8f6df4690
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36051817"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37165200"
 ---
 # <a name="discovertracedefinitionproviderinfo-rowset"></a>DISCOVER_TRACE_DEFINITION_PROVIDERINFO, ensemble de lignes
   Retourne des informations de base sur le fournisseur de trace, telles que son nom et sa description.  

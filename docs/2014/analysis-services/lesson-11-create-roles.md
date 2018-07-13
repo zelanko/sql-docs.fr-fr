@@ -1,5 +1,5 @@
 ---
-title: 'Leçon 12 : Créer des rôles | Documents Microsoft'
+title: 'Leçon 12 : Créer des rôles | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 984face4-00fc-46d3-8ae1-9755bf737bdf
 caps.latest.revision: 11
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: jhubbard
-ms.openlocfilehash: 7c3b98fbbcbedca2a8bcdbefcd8e41e5d3d5c60b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 598491865120b2d401b0ca2447701cbebc12ce8d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36040082"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37278505"
 ---
 # <a name="lesson-12-create-roles"></a>Leçon 12 : Créer des rôles
   Dans cette leçon, vous allez créer des rôles. Les rôles fournissent la sécurité des objets et des données d'une base de données de modèles, en limitant l'accès aux utilisateurs Windows qui y sont membres. Chaque rôle est défini avec une autorisation unique : aucune autorisation, autorisation de lecture, autorisation de lecture et traitement, autorisation de traitement ou autorisation d'administrateur. Les rôles peuvent être définis lors de la création du modèle à l'aide de la boîte de dialogue Gestionnaire de rôles de [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]. Une fois le modèle déployé, vous pouvez gérer les rôles à l'aide de [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]. Pour plus d’informations, consultez [Rôles &#40;SSAS Tabulaire&#41;](tabular-models/roles-ssas-tabular.md).  
@@ -52,7 +52,7 @@ ms.locfileid: "36040082"
   
      Un nouveau rôle sans aucune autorisation est ajouté à la liste.  
   
-3.  Cliquez sur le nouveau rôle, puis, dans le **nom** colonne, renommez le rôle en `Internet Sales Manager`.  
+3.  Cliquez sur le nouveau rôle, puis dans le **nom** colonne, renommez le rôle en `Internet Sales Manager`.  
   
 4.  Dans la colonne **Autorisations** , cliquez sur la liste déroulante, puis sélectionnez l’autorisation **Lecture** .  
   
@@ -70,7 +70,7 @@ ms.locfileid: "36040082"
   
      Un nouveau rôle sans aucune autorisation est ajouté à la liste.  
   
-3.  Cliquez sur le nouveau rôle, puis, dans le **nom** colonne, renommez le rôle en `Internet Sales US`.  
+3.  Cliquez sur le nouveau rôle, puis dans le **nom** colonne, renommez le rôle en `Internet Sales US`.  
   
 4.  Dans la colonne **Autorisations** , cliquez sur la liste déroulante, puis sélectionnez l’autorisation **Lecture** .  
   
@@ -92,7 +92,7 @@ ms.locfileid: "36040082"
   
 1.  Dans la boîte de dialogue **Gestionnaire de rôles** , cliquez sur **Nouveau**.  
   
-2.  Cliquez sur le nouveau rôle, puis, dans le **nom** colonne, renommez le rôle en `Internet Sales Administrator`.  
+2.  Cliquez sur le nouveau rôle, puis dans le **nom** colonne, renommez le rôle en `Internet Sales Administrator`.  
   
 3.  Dans la colonne **Autorisations** , cliquez sur la liste déroulante, puis sélectionnez l’autorisation **Administrateur** .  
   

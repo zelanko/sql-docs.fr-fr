@@ -1,5 +1,5 @@
 ---
-title: Le modèle de prévision (didacticiel sur l’exploration des données intermédiaires) | Documents Microsoft
+title: Le modèle de prévision (didacticiel d’exploration de données intermédiaire) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 0a00f409-050f-4b92-9763-ba31a6aa3052
 caps.latest.revision: 52
 author: minewiskan
 ms.author: owend
-manager: kfile
-ms.openlocfilehash: 6f6cffb56dd4ef4a9df6618ce126e2b3d0340640
-ms.sourcegitcommit: 8c040e5b4e8c7d37ca295679410770a1af4d2e1f
+manager: craigg
+ms.openlocfilehash: f3e41c8060a007e52af23c0637c744e72f0d1fb4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/21/2018
-ms.locfileid: "36313037"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37167762"
 ---
 # <a name="exploring-the-forecasting-model-intermediate-data-mining-tutorial"></a>Exploration du modèle de prévision (Didacticiel sur l'exploration de données intermédiaire)
   Maintenant que vous avez créé le modèle de prévision d’exploration de données, vous pouvez explorer les résultats à l’aide de la **visionneuse de modèle d’exploration de données** onglet du Concepteur d’exploration de données. Le [!INCLUDE[msCoName](../includes/msconame-md.md)] temps série visionneuse contient deux onglets : **graphiques** et **modèle**.  
@@ -33,7 +33,7 @@ ms.locfileid: "36313037"
 -   [Visionneuse de contenu générique Microsoft](#bkmk_Content)  
   
 ##  <a name="bkmk_Charts"></a> Onglet graphiques  
- Le **graphiques** onglet du [!INCLUDE[msCoName](../includes/msconame-md.md)] temps série visionneuse graphique vous montre chacune des séries, y compris les données historiques et des prédictions. Chaque ligne dans le graphique de série chronologique représente une combinaison unique de produit, région et attribut prédictible.  
+ Le **graphiques** onglet de la [!INCLUDE[msCoName](../includes/msconame-md.md)] temps série visionneuse graphiquement vous montre chacune des séries, y compris les données historiques et des prédictions. Chaque ligne dans le graphique de série chronologique représente une combinaison unique de produit, région et attribut prédictible.  
   
  La légende à droite de la visionneuse répertorie la série chronologique disponible, en fonction des sélections de la liste déroulante. Vous pouvez cocher et décocher les cases de la légende pour indiquer la série chronologique à afficher dans le graphique.  
   
@@ -47,7 +47,7 @@ ms.locfileid: "36313037"
   
      Le graphique doit à présent contenir 24 lignes de série différentes.  
   
-3.  Dans les cases à cocher à droite du graphique, désactivez les cases pour masquer temporairement les lignes de toutes les séries sont basées sur la quantité.  
+3.  Dans les cases à cocher à droite du graphique, désactivez les cases pour masquer temporairement les lignes de toutes les séries basées sur Amount.  
   
      Maintenant, désactivez les cases à cocher en rapport avec les vélos R750 et R250.  
   
@@ -65,7 +65,7 @@ ms.locfileid: "36313037"
   
     -   **T1000 Pacific : quantité**  
   
- ![Série prédiction quantité M200 et T1000](../../2014/tutorials/media/6series-defaultforecasting.gif "M200 et T1000 la quantité de prédiction de série")  
+ ![Série de prédire la quantité M200 et T1000](../../2014/tutorials/media/6series-defaultforecasting.gif "M200 et T1000 la quantité de prédiction de série")  
   
  Le graphique affiché dans cette visionneuse comprend à la fois des données historiques et des données prédites. Les données prédites sont ombrées pour les distinguer des données historiques. Pour simplifier la comparaison de séries différentes, vous pouvez également modifier les couleurs associées à chaque ligne dans le graphique. Pour plus d’informations, consultez [Modifier les couleurs utilisées dans la visionneuse d’exploration de données](../../2014/analysis-services/data-mining/change-the-colors-used-in-the-data-mining-viewer.md).  
   
@@ -75,7 +75,7 @@ ms.locfileid: "36313037"
   
 #### <a name="to-change-prediction-and-display-options-in-the-chart-view"></a>Pour modifier les options de prédiction et d'affichage dans la vue Graphique  
   
-1.  Essayez de modifier la valeur de **étapes de prédiction** progressivement de **5** à **10**, puis revenez à **6**.  
+1.  Essayez de modifier la valeur de **étapes de prédiction** progressivement à partir de **5** à **10**, puis revenez à **6**.  
   
      Lorsque les données historiques fluctuent beaucoup, ces fluctuations ont tendance à se répéter ou même à s'amplifier lorsque vous augmentez le nombre de prédictions. Vous devrez éventuellement faire des recherches à ce stade, pour comprendre la cause de l'importance de l'augmentation des données historiques, puis choisir d'accepter ces résultats, de rechercher un certain type de correction des données sources, ou d'appliquer un certain type de lissage dans le modèle.  
   
@@ -83,7 +83,7 @@ ms.locfileid: "36313037"
   
      Cette option affiche l'estimation de la marge d'erreur pour chaque valeur prédite.  
   
-3.  Notez l'échelle de l'axe des X. Les modifications portant sur les données historiques et prédites sont toujours exprimées en pourcentage, mais les valeurs réelles sont ajustées automatiquement pour correspondre à toutes les valeurs présentées sur le graphique. Vous devez donc être vigilant lorsque vous comparez les modèles à ne pas compter uniquement sur les visuels. Pour obtenir la valeur, ou le pourcentage d’augmentation et la valeur pour les prédictions, placez la souris sur la ligne en pointillés ou les lignes pleines, ou cliquez sur les lignes pour afficher les valeurs dans le **légende d’exploration de données**.  
+3.  Notez l'échelle de l'axe des X. Les modifications portant sur les données historiques et prédites sont toujours exprimées en pourcentage, mais les valeurs réelles sont ajustées automatiquement pour correspondre à toutes les valeurs présentées sur le graphique. Vous devez donc être vigilant lorsque vous comparez les modèles à ne pas compter uniquement sur les visuels. Pour obtenir exactement la valeur, ou le pourcentage d’augmentation et la valeur pour les prédictions, placez la souris sur la ligne en pointillés ou des lignes pleines, ou cliquez sur les lignes pour afficher les valeurs dans le **légende d’exploration de données**.  
   
      **Conseil**: si le **légende d’exploration de données** n’est pas visible, basculez vers **modèle** afficher, avec le bouton droit n’importe quel nœud, puis sélectionnez **afficher la légende**.  
   
@@ -92,19 +92,19 @@ ms.locfileid: "36313037"
  [Retour au début](#bkmk_Charts)  
   
 ##  <a name="bkmk_Model"></a> Onglet modèle  
- Le **modèle** onglet du [!INCLUDE[msCoName](../includes/msconame-md.md)] visionneuse de série de temps dans le Concepteur d’exploration de données vous permet d’afficher le modèle de prévision sous la forme d’un graphique d’arbre.  
+ Le **modèle** onglet de la [!INCLUDE[msCoName](../includes/msconame-md.md)] visionneuse de série de temps dans le Concepteur d’exploration de données vous permet d’afficher le modèle de prévision sous la forme d’un graphique d’arbre.  
   
  D'abord, notez qu'en raison de la description faite par vos données de deux mesures différentes (Montant et Quantité) pour les ventes de plusieurs lignes de produits (T1000, etc.) dans trois régions différentes (Europe, Amérique du Nord, et Pacifique), le modèle que vous avez généré contient réellement 24 arborescences différentes, chacune représentant un modèle des modèles de ventes pour une autre combinaison de région, produit, et attribut prédictible.  
   
- Vous pouvez choisir la combinaison de la ligne de produits, région et mesures de ventes que vous souhaitez afficher en sélectionnant une série à partir de la **arborescence** liste déroulante de la **modèle** onglet.  
+ Vous pouvez choisir la combinaison de la gamme de produits, région et mesures de ventes que vous souhaitez afficher en sélectionnant une série à partir de la **arborescence** liste déroulante de la **modèle** onglet.  
   
  Que pouvez-vous donc apprendre à partir de l'affichage du modèle sous forme d'arborescence ? Par exemple, comparons deux modèles, un qui dispose de plusieurs niveaux dans l'arborescence et un qui dispose d'un nœud unique.  
   
 -   Lorsqu'un graphique d'arborescence contient un nœud unique, cela signifie que la tendance trouvée dans le modèle est principalement homogène avec le temps. Vous pouvez utiliser ce nœud unique, intitulé **tous les**, pour afficher la formule qui décrit la relation entre les variables d’entrée et le résultat.  
   
--   Lorsqu'un graphique d'arbre pour une série chronologique a plusieurs branches, cela signifie que la série chronologique qui a été détectée est trop complexe pour être représentée sous la forme d'une équation unique. Au lieu de cela, le graphique d’arborescence peut contenir plusieurs branches, chacune avec les conditions qui ont provoqué l’arbre *fractionner*. Lorsque l'arborescence se fractionne, chaque branche représente un segment de temps différent, à l'intérieur duquel la tendance peut être décrite comme une équation unique.  
+-   Lorsqu'un graphique d'arbre pour une série chronologique a plusieurs branches, cela signifie que la série chronologique qui a été détectée est trop complexe pour être représentée sous la forme d'une équation unique. Au lieu de cela, le graphique d’arbre peut contenir plusieurs branches, chaque branche libellée avec les conditions qui ont provoqué l’arbre *fractionner*. Lorsque l'arborescence se fractionne, chaque branche représente un segment de temps différent, à l'intérieur duquel la tendance peut être décrite comme une équation unique.  
   
-     Par exemple, si vous examinez le graphique et que vous voyez une augmentation soudaine du volume des ventes à partir de septembre et continue à un jour férié d’exercice, vous pouvez basculer vers le **modèle** pour afficher la date exacte dans laquelle la tendance a changé. Les branches de l'arborescence qui représentent « avant septembre » et « après septembre » contiendraient des formules différentes : une formule qui décrit mathématiquement les tendances des ventes jusqu'au fractionnement, et une autre formule qui décrit les tendances des ventes pour septembre jusqu'aux fêtes de fin d'année.  
+     Par exemple, si vous examinez le graphique et que vous constatez une augmentation soudaine du volume des ventes à partir d’un jour de septembre et continue jusqu’aux fêtes, vous pouvez basculer vers le **modèle** pour afficher la date exacte dans laquelle la tendance a changé. Les branches de l'arborescence qui représentent « avant septembre » et « après septembre » contiendraient des formules différentes : une formule qui décrit mathématiquement les tendances des ventes jusqu'au fractionnement, et une autre formule qui décrit les tendances des ventes pour septembre jusqu'aux fêtes de fin d'année.  
   
 #### <a name="to-explore-the-decision-tree-for-a-time-series-model"></a>Pour explorer l'arbre de décision d'un modèle de série chronologique  
   
@@ -112,7 +112,7 @@ ms.locfileid: "36313037"
   
      Cliquez sur le nœud intitulé **tous les**.  
   
-     Pour un **tous les** nœud, l’info-bulle qui apparaît inclut des informations telles que le nombre de cas dans la série entière et équations de série chronologique dérivées de l’analyse des données.  
+     Pour un **tous les** nœud, l’info-bulle qui apparaît inclut des informations telles que le nombre de cas dans la série entière et des équations de série chronologique dérivées de l’analyse des données.  
   
 2.  Si le **légende d’exploration de données** n’est pas visible, cliquez sur le nœud et sélectionnez **afficher la légende**.  
   
@@ -126,7 +126,7 @@ ms.locfileid: "36313037"
   
  La liste suivante décrit certaines fonctionnalités supplémentaires de la visionneuse d'arborescence :  
   
--   Vous pouvez modifier la variable qui est représentée dans le graphique à l’aide de la **arrière-plan** contrôle. Par défaut, les nœuds qui sont les plus sombres contiennent plus de cas, étant donné que la valeur de **arrière-plan** a la valeur **remplissage**. Pour voir uniquement le nombre de cas dans un nœud, placez la souris sur un nœud et afficher l’info-bulle qui s’affiche, ou cliquez sur le nœud et afficher les nombres dans les **légende du nœud** fenêtre.  
+-   Vous pouvez modifier la variable qui est représentée dans le graphique à l’aide de la **arrière-plan** contrôle. Par défaut, les nœuds plus sombres contiennent plus de cas, étant donné que la valeur de **arrière-plan** a la valeur **Population**. Pour voir juste le nombre de cas dans un nœud, placez la souris sur un nœud et afficher l’info-bulle qui s’affiche, ou cliquez sur le nœud et afficher les nombres dans les **légende du nœud** fenêtre.  
   
 -   La formule de régression du nœud peut également être affichée dans l'info-bulle ou en cliquant sur le nœud. Si vous avez créé un modèle mixte, vous pouvez voir deux formules, une pour ARTXP (dans les nœuds terminaux) et une pour ARIMA (dans le nœud racine de l'arborescence).  
   
@@ -135,11 +135,11 @@ ms.locfileid: "36313037"
  [Retour au début](#bkmk_Charts)  
   
 ##  <a name="bkmk_Content"></a> (Facultatif) Visionneuse de l’arborescence de contenu générique  
- En plus de la visionneuse personnalisée pour la série chronologique, [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] fournit le **visionneuse d’arborescence de contenu MicrosoftGeneric** pour une utilisation avec tous les modèles d’exploration de données. Cette visionneuse offre quelques avantages :  
+ En plus de la visionneuse personnalisée pour la série chronologique, [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] fournit le **visionneuse de l’arborescence de contenu MicrosoftGeneric** pour une utilisation avec tous les modèles d’exploration de données. Cette visionneuse offre quelques avantages :  
   
--   **Visionneuse de série heure**: cette vue fusionne les résultats des deux algorithmes. Bien que vous puissiez afficher chaque série séparément, vous ne pouvez pas déterminer comment les résultats de chaque algorithme ont été combinés. De plus, dans cette vue, les info-bulles et la légende d'exploration de données affichent uniquement les statistiques les plus importantes.  
+-   **Visionneuse de série de temps Microsoft**: cette vue fusionne les résultats des deux algorithmes. Bien que vous puissiez afficher chaque série séparément, vous ne pouvez pas déterminer comment les résultats de chaque algorithme ont été combinés. De plus, dans cette vue, les info-bulles et la légende d'exploration de données affichent uniquement les statistiques les plus importantes.  
   
--   **Visionneuse d’arborescence de contenu générique**: vous permet de parcourir et d’afficher toutes les séries de données qui ont été utilisés dans le modèle en même temps et si vous avez créé une combinaison de modèle, à la fois ARIMA et les arbres ARTXP sont affichés dans le même graphique.  
+-   **Visionneuse d’arborescence de contenu générique**: vous permet de parcourir et afficher toutes les séries de données qui ont été utilisés dans le modèle en même temps et si vous avez créé un mixte de modèle, les deux le ARIMA et les arbres ARTXP sont affichées dans le même graphique.  
   
      Vous pouvez utiliser cette visionneuse pour obtenir toutes les statistiques des deux algorithmes, ainsi que les distributions des valeurs.  
   
@@ -174,10 +174,10 @@ ms.locfileid: "36313037"
  [Retour au début](#bkmk_Charts)  
   
 ## <a name="next-task-in-lesson"></a>Tâche suivante de la leçon  
- [Création de prédictions de série chronologique &#40;intermédiaire Didacticiel d’exploration de données&#41;](../../2014/tutorials/creating-time-series-predictions-intermediate-data-mining-tutorial.md)  
+ [Création de prédictions de série chronologique &#40;didacticiel d’exploration de données intermédiaire&#41;](../../2014/tutorials/creating-time-series-predictions-intermediate-data-mining-tutorial.md)  
   
 ## <a name="see-also"></a>Voir aussi  
- [Exemples de requête de modèle de série de temps](../../2014/analysis-services/data-mining/time-series-model-query-examples.md)   
+ [Exemples de requêtes de modèle de série chronologique](../../2014/analysis-services/data-mining/time-series-model-query-examples.md)   
  [Informations techniques de référence sur l’algorithme MTS (Microsoft Time Series)](../../2014/analysis-services/data-mining/microsoft-time-series-algorithm-technical-reference.md)  
   
   

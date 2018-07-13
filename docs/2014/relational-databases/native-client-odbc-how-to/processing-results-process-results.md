@@ -1,28 +1,26 @@
 ---
-title: Traiter les résultats (ODBC) | Documents Microsoft
+title: Traiter les résultats (ODBC) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - processing results [ODBC]
 ms.assetid: 4810fe3f-78ee-4f0d-8bcc-a4659fbcf46f
 caps.latest.revision: 15
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: fa20ed943be8195eb7719265d3bd2ef0aa26a38c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: e3c929008c4be8a14bf5233d8d41b3349ba735b7
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36039730"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37412952"
 ---
 # <a name="process-results-odbc"></a>Traiter des résultats (ODBC)
     
@@ -38,7 +36,7 @@ ms.locfileid: "36039730"
   
     -   Si les colonnes dépendantes sont utilisées, utilisez les données à présent disponibles dans les mémoires tampons des colonnes dépendantes.  
   
-    -   Si des colonnes indépendantes sont utilisées, appelez [SQLGetData](../native-client-odbc-api/sqlgetdata.md) une ou plusieurs fois pour obtenir les données pour les colonnes indépendantes après la dernière colonne dépendante. Les appels à `SQLGetData` doit être dans l’ordre croissant de numéro de colonne.  
+    -   Si des colonnes indépendantes sont utilisées, appelez [SQLGetData](../native-client-odbc-api/sqlgetdata.md) une ou plusieurs fois pour obtenir les données pour les colonnes indépendantes après la dernière colonne dépendante. Les appels à `SQLGetData` doit se trouver dans l’ordre croissant de numéro de colonne.  
   
     -   Appelez plusieurs fois `SQLGetData` pour obtenir des données à partir d'une colonne text ou image.  
   
@@ -63,6 +61,6 @@ ms.locfileid: "36039730"
 >  Pour annuler le traitement d’un jeu de résultats avant que [SQLFetch](http://go.microsoft.com/fwlink/?LinkId=58401) ne retourne SQL_NO_DATA, appelez [SQLCloseCursor](../native-client-odbc-api/sqlclosecursor.md).  
   
 ## <a name="see-also"></a>Voir aussi  
- [Rubriques de procédures relatives aux résultats de traitement &#40;ODBC&#41;](../../database-engine/dev-guide/processing-results-how-to-topics-odbc.md)  
+ [Traitement des rubriques de procédures de résultats &#40;ODBC&#41;](../../database-engine/dev-guide/processing-results-how-to-topics-odbc.md)  
   
   

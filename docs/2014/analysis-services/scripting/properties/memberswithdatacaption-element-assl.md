@@ -1,5 +1,5 @@
 ---
-title: Élément MembersWithDataCaption (ASSL) | Documents Microsoft
+title: Élément MembersWithDataCaption (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - MembersWithDataCaption element
 ms.assetid: a5d59efd-5d67-485b-a360-67d54a1fe394
 caps.latest.revision: 34
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: ef845a4c77a66ad1c59a0bdad527856a86849de9
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: bd8884d67717267e44751841203ce2f73d07ecfb
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36050907"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37202299"
 ---
 # <a name="memberswithdatacaption-element-assl"></a>Élément MembersWithDataCaption (ASSL)
   Fournit une chaîne de modèle utilisée pour créer des légendes pour les membres de données générés par le système.  

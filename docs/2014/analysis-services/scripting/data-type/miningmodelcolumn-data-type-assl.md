@@ -1,5 +1,5 @@
 ---
-title: Type de données MiningModelColumn (ASSL) | Documents Microsoft
+title: Type de données MiningModelColumn (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - MiningModelColumn data type
 ms.assetid: de8bf815-43b4-4983-bdb9-b67e8563be0e
 caps.latest.revision: 35
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 6943acb9e15e1133da5aba8c49e0a14f3c61377c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 983c164d32408182d943e9509ce5a125efb25f9a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36045248"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37259665"
 ---
 # <a name="miningmodelcolumn-data-type-assl"></a>Type de données MiningModelColumn (ASSL)
   Définit un type de données primitif qui représente des informations sur une colonne dans un [MiningModel](../objects/miningmodel-element-assl.md) élément.  
@@ -64,13 +64,13 @@ ms.locfileid: "36045248"
 |Relation|Élément|  
 |------------------|-------------|  
 |Éléments parents|None|  
-|Éléments enfants|[Annotations](../collections/annotations-element-assl.md), [colonnes](../collections/columns-element-assl.md), [Description](../properties/description-element-assl.md), [ID](../properties/id-element-assl.md), [ModelingFlags](../collections/modelingflags-element-assl.md), [nom](../properties/name-element-assl.md) , [SourceColumnID](../properties/sourcecolumnid-element-assl.md), [traductions](../collections/translations-element-assl.md), [l’utilisation](../properties/usage-element-dimensionattribute-assl.md)|  
+|Éléments enfants|[Annotations](../collections/annotations-element-assl.md), [colonnes](../collections/columns-element-assl.md), [Description](../properties/description-element-assl.md), [ID](../properties/id-element-assl.md), [ModelingFlags](../collections/modelingflags-element-assl.md), [nom](../properties/name-element-assl.md) , [SourceColumnID](../properties/sourcecolumnid-element-assl.md), [traductions](../collections/translations-element-assl.md), [utilisation](../properties/usage-element-dimensionattribute-assl.md)|  
 |Éléments dérivés|[Colonne](../objects/column-element-assl.md) ([colonnes](../collections/columns-element-assl.md), collection de [MiningModel](../objects/miningmodel-element-assl.md))|  
   
 ## <a name="remarks"></a>Notes  
  L’élément correspondant dans le modèle d’objet objets AMO (Analysis Management) est <xref:Microsoft.AnalysisServices.MiningModelColumn>.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Types de données de script langage XML Analysis Services &#40;ASSL&#41;](analysis-services-scripting-language-xml-data-types-assl.md)  
+ [Types Analysis Services Scripting Language XML données &#40;ASSL&#41;](analysis-services-scripting-language-xml-data-types-assl.md)  
   
   

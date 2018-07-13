@@ -1,5 +1,5 @@
 ---
-title: Élément CustomRollupPropertiesColumn (ASSL) | Documents Microsoft
+title: Élément CustomRollupPropertiesColumn (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - CustomRollupPropertiesColumn element
 ms.assetid: 7f4a9825-c768-4523-acb3-511a5160fd44
 caps.latest.revision: 39
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: c9452dbc1d6c3104fe76760ad4460e636fdd45fe
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 92125569eec6b0642efea7c9164e41c7740ded66
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36051351"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37180836"
 ---
 # <a name="customrolluppropertiescolumn-element-assl"></a>Élément CustomRollupPropertiesColumn (ASSL)
   Définit les détails d'une colonne qui fournissent les propriétés d'une formule de cumul personnalisée.  
@@ -62,9 +62,9 @@ ms.locfileid: "36051351"
 |Éléments enfants|None|  
   
 ## <a name="remarks"></a>Notes  
- Pour plus d’informations sur la `DataItem` type, y compris un tableau d’objets d’Analysis Services Scripting Language (ASSL) et les propriétés de la `DataItem` de type, consultez [Type de données DataItem &#40;ASSL&#41;](../data-type/dataitem-data-type-assl.md).  
+ Pour plus d’informations sur la `DataItem` type, notamment un tableau des objets d’Analysis Services Scripting Language (ASSL) et les propriétés de la `DataItem` de type, consultez [Type de données DataItem &#40;ASSL&#41;](../data-type/dataitem-data-type-assl.md).  
   
- L’élément qui correspond au parent de `CustomRollupPropertiesColumn` dans l’objet d’objets AMO (Analysis Management) est modèle <xref:Microsoft.AnalysisServices.DimensionAttribute>.  
+ L’élément qui correspond au parent de `CustomRollupPropertiesColumn` dans l’objet d’objets AMO (Analysis Management) modèle est <xref:Microsoft.AnalysisServices.DimensionAttribute>.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Élément CustomRollupColumn &#40;ASSL&#41;](column-element-assl.md)   

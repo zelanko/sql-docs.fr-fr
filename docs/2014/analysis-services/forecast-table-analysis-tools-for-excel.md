@@ -1,5 +1,5 @@
 ---
-title: Prévisions (outils d’analyse de Table pour Excel) | Documents Microsoft
+title: Prévisions (outils d’analyse de Table pour Excel) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Table Analysis tools
 - forecasting
@@ -16,20 +16,20 @@ helpviewer_keywords:
 - time series [data mining]
 ms.assetid: 22bb0b5e-78f5-484e-883d-2b5985a12749
 caps.latest.revision: 17
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 40724491e971b150fa934f8a3294509d91b99d6a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 5a469765d20ea8a8330843fbaac401dc85b78f1c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36050937"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37239909"
 ---
 # <a name="forecast-table-analysis-tools-for-excel"></a>Prévisions (Outils d'analyse de table pour Excel)
-  ![Bouton prévision dans l’analyse de la Table des outils du ruban](media/tat-forecast.gif "bouton prévisions dans le ruban des outils d’analyse de Table")  
+  ![Ruban des outils de prévision de bouton dans l’analyse de Table](media/tat-forecast.gif "bouton prévisions dans le ruban des outils d’analyse de Table")  
   
- Le **prévision** outil vous permet de faire des prédictions basées sur des données dans une table de données Excel ou une autre source de données et également de consulter les probabilités associées à chaque valeur prédite. Par exemple, si vos données contiennent une colonne de date et une colonne qui affiche le total des ventes pour chaque jour du mois, vous pouvez prévoir les ventes des jours à venir. Vous pouvez également spécifier le nombre de prédictions à faire. Par exemple, vous pouvez prévoir cinq ou trente jours.  
+ Le **prévision** outil vous permet de faire des prédictions basées sur les données dans une table de données Excel ou une autre source de données et également de consulter les probabilités associées à chaque valeur prédite. Par exemple, si vos données contiennent une colonne de date et une colonne qui affiche le total des ventes pour chaque jour du mois, vous pouvez prévoir les ventes des jours à venir. Vous pouvez également spécifier le nombre de prédictions à faire. Par exemple, vous pouvez prévoir cinq ou trente jours.  
   
  Une fois l'outil terminé, celui-ci ajoute les nouvelles prédictions à la fin du tableau de données sources et met en évidence les nouvelles valeurs. Les nouvelles valeurs de série chronologique ne sont pas ajoutées ; vous pouvez ainsi examiner d'abord les prédictions.  
   
@@ -41,15 +41,15 @@ ms.locfileid: "36050937"
   
 1.  Ouvrez un tableau Excel qui contient des données numériques prévisibles.  
   
-2.  Cliquez sur **prévision** sur la **analyser** onglet.  
+2.  Cliquez sur **prévision** sur le **analyser** onglet.  
   
-3.  Spécifiez les colonnes à prévoir. L'outil sélectionne automatiquement les colonnes dont le type de données est prévisible, c'est-à-dire celles qui contiennent des données numériques continues. L'outil ne peut pas sélectionner certaines colonnes qui contiennent des données numériques continues si ces colonnes contiennent de nombreuses valeurs null ou égales à zéro, car les données manquantes peuvent affecter les résultats. Dans ce cas, vous pouvez corriger les données à l’aide de la [Réétiqueter &#40;des compléments d’exploration de données SQL Server&#41; ](relabel-sql-server-data-mining-add-ins.md) outil.  
+3.  Spécifiez les colonnes à prévoir. L'outil sélectionne automatiquement les colonnes dont le type de données est prévisible, c'est-à-dire celles qui contiennent des données numériques continues. L'outil ne peut pas sélectionner certaines colonnes qui contiennent des données numériques continues si ces colonnes contiennent de nombreuses valeurs null ou égales à zéro, car les données manquantes peuvent affecter les résultats. Si cela se produit, vous pouvez corriger les données à l’aide de la [Réétiqueter &#40;SQL Server Data Mining Add-ins&#41; ](relabel-sql-server-data-mining-add-ins.md) outil.  
   
-4.  Spécifiez la colonne qui contient la date, l'heure ou un autre identificateur pour la série. Si vous sélectionnez l’option  **\<aucun horodatage >** l’outil créera une série en fonction de la séquence des lignes dans la source de données.  
+4.  Spécifiez la colonne qui contient la date, l'heure ou un autre identificateur pour la série. Si vous sélectionnez l’option  **\<aucun horodatage >** l’outil créera une série selon l’ordre des lignes dans la source de données.  
   
 5.  Spécifiez le nombre de prédictions à faire.  
   
-6.  Vous pouvez également fournir un indicateur à l'algorithme sur la fréquence de vos données, hebdomadaires, mensuelles ou autres fréquences. Si vos données ne répondent pas aux modèles spécifiés, ou si vous ne savez pas de modèles, sélectionnez  **\<détecter automatiquement >** afin que l’outil recherche les périodes de temps extensible.  
+6.  Vous pouvez également fournir un indicateur à l'algorithme sur la fréquence de vos données, hebdomadaires, mensuelles ou autres fréquences. Si vos données ne répondent pas aux modèles spécifiés, ou si vous ne savez pas de modèles, sélectionnez  **\<détecter automatiquement >** pour que l’outil recherche les périodes de temps extensible.  
   
 7.  L'Assistant ajoute les prédictions au tableau source et crée un rapport de prévisions dans une nouvelle feuille de calcul.  
   
@@ -80,7 +80,7 @@ ms.locfileid: "36050937"
  Dans ce graphique, les valeurs historiques issues de votre table de données sont représentées sous la forme d'un trait noir. Les valeurs prédites apparaissent comme traits pointillés. Vous pouvez cliquer sur un point de la ligne pour consulter la valeur prédite.  
   
 > [!NOTE]  
->  Si vous ne voyez pas les étiquettes sur l’axe du temps pour les valeurs prédites dans le graphique, ouvrez la feuille de calcul qui contient les valeurs prédites et utilisez le **remplissage, séries** dans Excel pour étendre la colonne d’horodatage pour inclure le prédite (fonction) valeurs.  
+>  Si vous ne voyez pas les étiquettes sur l’axe temporel pour les valeurs prédites dans le graphique, ouvrez la feuille de calcul qui contient les valeurs prédites et utilisez le **remplissage, séries** dans Excel pour étendre la colonne d’horodatage pour inclure le prédite (fonction) valeurs.  
   
  Dans certains cas, la prévision peut ne pas contenir autant de tranches de temps que prévu. Cela signifie habituellement que les données sont insuffisantes pour permettre à l'algorithme de prévoir aussi loin dans l'avenir. Le **prévision** outil n’effectue que des prédictions qui répondent à un seuil de probabilité minimal.  
   
@@ -93,7 +93,7 @@ ms.locfileid: "36050937"
   
 -   Le **prévision** Assistant dans le Client d’exploration de données pour Excel vous offre la possibilité de personnaliser les paramètres.  
   
- Pour plus d’informations sur la **prévision** Assistant, consultez [Assistant de prévision &#40;des compléments d’exploration de données pour Excel&#41;](forecast-wizard-data-mining-add-ins-for-excel.md). Pour plus d'informations sur l'algorithme utilisé pour la prévision, consultez la rubrique « Algorithme MTS (Microsoft Time Series) » dans la documentation en ligne de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
+ Pour plus d’informations sur la **prévision** Assistant, consultez [Assistant prévision &#40;des compléments d’exploration de données pour Excel&#41;](forecast-wizard-data-mining-add-ins-for-excel.md). Pour plus d'informations sur l'algorithme utilisé pour la prévision, consultez la rubrique « Algorithme MTS (Microsoft Time Series) » dans la documentation en ligne de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
 ## <a name="see-also"></a>Voir aussi  
  [Outils d’analyse de table pour Excel](table-analysis-tools-for-excel.md)  

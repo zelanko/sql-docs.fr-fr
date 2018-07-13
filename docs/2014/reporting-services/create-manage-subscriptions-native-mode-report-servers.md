@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - subscriptions [Reporting Services], managing
 ms.assetid: 7f46cbdb-5102-4941-bca2-5e0ff9012c6b
 caps.latest.revision: 37
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 779b22bfbd8a99b5aef05d33725c1cce8364271a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 56fb4e61fe7e442247fb9977afc440f13e5276e6
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36052357"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37186176"
 ---
 # <a name="create-and-manage-subscriptions-for-native-mode-report-servers"></a>Créer et gérer des abonnements pour les serveurs de rapports en mode natif
   Cette section contient des rubriques sur le traitement, la supervision et le contrôle des abonnements. La gestion des abonnements varie selon qu'il s'agit d'abonnements standard ou pilotés par les données. Les abonnements standard sont généralement gérés par les utilisateurs qui en sont également les propriétaires. En revanche, les abonnements pilotés par les données sont généralement créés par un administrateur de serveur de rapports, qui en assure également la maintenance.  
@@ -36,9 +36,9 @@ ms.locfileid: "36052357"
 -   La tâche « Gérer tous les abonnements » permet aux utilisateurs d'accéder à tous les abonnements pour les modifier. Cette tâche est obligatoire pour créer des abonnements pilotés par les données. Dans les rôles prédéfinis, seul le rôle Gestionnaire de contenu inclut cette tâche.  
   
 ## <a name="disabling-subscriptions"></a>Désactivation des abonnements  
- Désactivez la tâche « Gérer les abonnements individuels » du rôle pour retirer aux utilisateurs la possibilité de créer des abonnements. Lorsque vous supprimez cette tâche, les pages Abonnements ne sont plus disponibles. Dans le Gestionnaire de rapports, la page Mes abonnements semble vide (il est impossible de la supprimer) même si elle contenait auparavant des abonnements. La suppression de tâches liées à des abonnements empêche les utilisateurs de créer et de modifier des abonnements, mais elle ne supprime pas les abonnements existants. Ces abonnements continuent de s'exécuter tant qu'ils ne sont pas supprimés. Pour plus d’informations sur la suppression d’abonnements, consultez [créer, modifier et supprimer des abonnements Standard &#40;Reporting Services en Mode natif&#41;](subscriptions/create-and-manage-subscriptions-for-native-mode-report-servers.md).  
+ Désactivez la tâche « Gérer les abonnements individuels » du rôle pour retirer aux utilisateurs la possibilité de créer des abonnements. Lorsque vous supprimez cette tâche, les pages Abonnements ne sont plus disponibles. Dans le Gestionnaire de rapports, la page Mes abonnements semble vide (il est impossible de la supprimer) même si elle contenait auparavant des abonnements. La suppression de tâches liées à des abonnements empêche les utilisateurs de créer et de modifier des abonnements, mais elle ne supprime pas les abonnements existants. Ces abonnements continuent de s'exécuter tant qu'ils ne sont pas supprimés. Pour plus d’informations sur la suppression des abonnements, consultez [créer, modifier et supprimer des abonnements Standard &#40;Reporting Services en Mode natif&#41;](subscriptions/create-and-manage-subscriptions-for-native-mode-report-servers.md).  
   
- Pour désactiver le traitement sur un serveur de rapports des abonnements, vous pouvez définir le `ScheduleEventsAndReportDeliveryEnabled` propriété `False` dans les **Configuration de zone de surface d’exposition pour Reporting Services** facette de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] basée sur des stratégies de gestion. Vous empêcherez ainsi l'exécution de toutes les opérations planifiées. Vous ne pouvez pas désactiver seulement le traitement des abonnements sur le serveur de rapports.  
+ Pour désactiver le traitement des abonnements sur un serveur de rapports, vous pouvez définir le `ScheduleEventsAndReportDeliveryEnabled` propriété `False` dans le **Configuration de Surface d’exposition pour Reporting Services** facette de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] basée sur des stratégies de gestion. Vous empêcherez ainsi l'exécution de toutes les opérations planifiées. Vous ne pouvez pas désactiver seulement le traitement des abonnements sur le serveur de rapports.  
   
  Pour obtenir des instructions sur la façon d’annuler l’abonnement est en cours sur le serveur de rapports, consultez [gérer un processus en cours d’exécution](subscriptions/manage-a-running-process.md).  
   
@@ -56,13 +56,13 @@ ms.locfileid: "36052357"
  Lorsqu'une extension de remise est supprimée, elle n'est plus disponible dans le Gestionnaire de rapports, ni dans un site SharePoint. La suppression d'une extension de remise peut engendrer des abonnements inactifs. Avant de supprimer une extension, prenez soin de supprimer ces abonnements ou configurez-les pour qu'ils utilisent une autre extension de remise.  
   
 ## <a name="in-this-section"></a>Contenu de cette section  
- [Utiliser mes abonnements](subscriptions/use-my-subscriptions-native-mode-report-server.md)  
+ [Utiliser Mes abonnements](subscriptions/use-my-subscriptions-native-mode-report-server.md)  
  Explique comment utiliser la page Mes abonnements pour gérer les abonnements dont vous êtes propriétaire.  
   
- [Suspendre des rapports et le traitement des abonnements](subscriptions/disable-or-pause-report-and-subscription-processing.md)  
+ [Suspendre le traitement des rapports et des abonnements](subscriptions/disable-or-pause-report-and-subscription-processing.md)  
  Décrit les différentes méthodes permettant de suspendre le traitement des rapports, comme l'utilisation des attributions de rôle ou la désactivation des ressources du serveur de rapports.  
   
- [Distribution des rapports de contrôle](../../2014/reporting-services/control-report-distribution.md)  
+ [Contrôler la distribution des rapports](../../2014/reporting-services/control-report-distribution.md)  
  Décrit les paramètres de configuration et les options de remise que vous pouvez utiliser pour contrôler la distribution des rapports.  
   
  [Analyser les abonnements Reportions Services](subscriptions/monitor-reporting-services-subscriptions.md)  

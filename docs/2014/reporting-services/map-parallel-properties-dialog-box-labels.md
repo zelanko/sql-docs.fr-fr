@@ -1,5 +1,5 @@
 ---
-title: Boîte de dialogue Propriétés des parallèles, étiquettes carte | Documents Microsoft
+title: Boîte de dialogue Propriétés des parallèles, étiquettes carte | Microsoft Docs
 ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.rtp.rptdesigner.mapparallelproperties.labels.f1
 - "10519"
 ms.assetid: 4560a7e4-e19b-4a6e-8ef4-e963497e01ae
 caps.latest.revision: 6
-author: douglaslM
+author: maggiesmsft
 ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: bf650bd0fa1f87ef7dd3916a24923335420851b5
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 107da5c6037988987beed9794ee1ef172ed17e4c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36050994"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37258116"
 ---
 # <a name="map-parallel-properties-dialog-box-labels"></a>Boîte de dialogue Propriétés des parallèles de la carte, Étiquettes
   Utilisez le **MapParallel propriétés** la boîte de dialogue options d’étiquette pour le quadrillage horizontal de la carte. Un parallèle représente la valeur suivante en fonction du système de coordonnées spécifié pour la fenêtre de carte :  
@@ -55,6 +55,6 @@ ms.locfileid: "36050994"
   
 ## <a name="see-also"></a>Voir aussi  
  [Cartes &#40;Générateur de rapports et SSRS&#41;](report-design/maps-report-builder-and-ssrs.md)   
- [Modifier les légendes de carte, l’échelle de couleurs et les règles associées &#40;rapport Générateur et SSRS&#41;](report-design/change-map-legends-color-scale-and-associated-rules-report-builder-and-ssrs.md)  
+ [Modifier les légendes de carte, l’échelle de couleurs et les règles associées &#40;Générateur de rapports et SSRS&#41;](report-design/change-map-legends-color-scale-and-associated-rules-report-builder-and-ssrs.md)  
   
   

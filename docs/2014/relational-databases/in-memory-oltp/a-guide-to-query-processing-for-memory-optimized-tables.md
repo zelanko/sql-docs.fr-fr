@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine-imoltp
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 065296fe-6711-4837-965e-252ef6c13a0f
 caps.latest.revision: 24
-author: stevestein
-ms.author: sstein
-manager: jhubbard
-ms.openlocfilehash: 86aeaad34575eec0a411cb84c17950b479a3169b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: a076691f045a5e9270a51b3500ea84f6b8756836
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36051559"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37177826"
 ---
 # <a name="a-guide-to-query-processing-for-memory-optimized-tables"></a>Guide du traitement des requêtes pour les tables optimisées en mémoire
   L'OLTP en mémoire introduit les tables optimisées en mémoire et les procédures stockées compilées en mode natif dans [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Cet article présente le traitement des requêtes pour les tables mémoire optimisées et les procédures stockées compilées en mode natif.  
@@ -96,7 +96,7 @@ SELECT o.*, c.* FROM dbo.[Customer] c INNER JOIN dbo.[Order] o ON c.CustomerID =
  ![Plan de requête d’une jointure hachée des tables sur disque.](../../database-engine/media/hekaton-query-plan-2.gif "Plan de requête d’une jointure hachée des tables sur disque.")  
 Plan de requête d'une jointure hachée des tables sur disque.  
   
- Dans cette requête, les lignes de la table Order sont récupérées à partir de l'index cluster. Le `Hash Match` opérateur physique est maintenant utilisé pour le `Inner Join`. L’index cluster sur Order n’est pas trié sur CustomerID et donc un `Merge Join` nécessite un opérateur de tri, ce qui affecte les performances. Notez le coût relatif de l'opérateur `Hash Match` (75 %) comparé au coût de l'opérateur `Merge Join` dans l'exemple précédent (46 %). L’optimiseur peut avoir considéré comme le `Hash Match` opérateur également dans l’exemple précédent, mais ont conclu que le `Merge Join` opérateur fournirait de meilleures performances.  
+ Dans cette requête, les lignes de la table Order sont récupérées à partir de l'index cluster. Le `Hash Match` opérateur physique est désormais utilisé pour le `Inner Join`. L’index cluster sur Order n’étant pas trié sur CustomerID et donc un `Merge Join` nécessite un opérateur de tri, ce qui affecte les performances. Notez le coût relatif de l'opérateur `Hash Match` (75 %) comparé au coût de l'opérateur `Merge Join` dans l'exemple précédent (46 %). L’optimiseur serait ont pris en compte la `Hash Match` opérateur également dans l’exemple précédent, mais ont conclu que le `Merge Join` opérateur fournirait de meilleures performances.  
   
 ## <a name="includessnoversionincludesssnoversion-mdmd-query-processing-for-disk-based-tables"></a>[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Traitement des requêtes pour les tables sur disque  
  Le diagramme suivant représente le flux de traitement des requêtes dans [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] pour les requêtes ad hoc :  
@@ -174,7 +174,7 @@ Plan de requête pour joindre des tables mémoire optimisées.
   
     -   Les index cluster ne sont pas pris en charge avec les tables mémoire optimisées. À la place, chaque table mémoire optimisée doit avoir au moins un index non cluster et tous les index des tables mémoire optimisées accéder efficacement à toutes les colonnes de la table sans devoir les stocker dans l'index ou les référencer dans un index cluster.  
   
--   Ce plan contient un `Hash Match` plutôt qu'un `Merge Join`. Les index des tables Order et Customer sont des index de hachage, et ne sont donc pas triés. A `Merge Join` nécessiterait des opérateurs de tri qui diminueraient les performances.  
+-   Ce plan contient un `Hash Match` plutôt qu'un `Merge Join`. Les index des tables Order et Customer sont des index de hachage, et ne sont donc pas triés. Un `Merge Join` nécessiterait des opérateurs de tri qui diminueraient les performances.  
   
 ## <a name="natively-compiled-stored-procedures"></a>procédures stockées compilées en mode natif  
  Les procédures stockées compilées en mode natif sont des procédures stockées en [!INCLUDE[tsql](../../../includes/tsql-md.md)] qui sont compilées dans le code machine, au lieu d'être interprétées par le moteur d'exécution de requête. Le script suivant crée une procédure stockée compilée en mode natif qui exécute l'exemple de requête (dans la section Exemple de requête).  
@@ -240,7 +240,7 @@ Exécution de procédures stockées compilées en mode natif.
   
  Les procédures stockées en [!INCLUDE[tsql](../../../includes/tsql-md.md)] interprété sont compilées à la première exécution, contrairement aux procédures stockées compilées en mode natif, qui sont compilées lors de la création. Lorsque des procédures stockées interprétées sont compilées au moment de l'appel, les valeurs des paramètres fournis pour cet appel sont utilisées par l'optimiseur lors de la génération du plan d'exécution. Cette utilisation des paramètres lors de la compilation est appelée « détection des paramètres ».  
   
- La détection des paramètres n'est pas utilisée pour compiler des procédures stockées compilées en mode natif. Tous les paramètres de la procédure stockée sont considérés comme ayant des valeurs UNKNOWN. Comme les procédures stockées interprétées, procédures stockées compilées également prise en charge la `OPTIMIZE FOR` indicateur. Pour plus d’informations, consultez [Indicateurs de requête &#40;Transact-SQL&#41;](/sql/t-sql/queries/hints-transact-sql-query).  
+ La détection des paramètres n'est pas utilisée pour compiler des procédures stockées compilées en mode natif. Tous les paramètres de la procédure stockée sont considérés comme ayant des valeurs UNKNOWN. Comme les procédures stockées interprétées, procédures stockées compilées nativement également prise en charge la `OPTIMIZE FOR` indicateur. Pour plus d’informations, consultez [Indicateurs de requête &#40;Transact-SQL&#41;](/sql/t-sql/queries/hints-transact-sql-query).  
   
 ### <a name="retrieving-a-query-execution-plan-for-natively-compiled-stored-procedures"></a>Récupération d'un plan d'exécution de requêtes pour les procédures stockées compilées en mode natif  
  Vous pouvez récupérer le plan d’exécution de requêtes pour une procédure stockée compilée en mode natif en utilisant le **plan d’exécution estimé** dans [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], ou en utilisant l’option SHOWPLAN_XML dans [!INCLUDE[tsql](../../../includes/tsql-md.md)]. Exemple :  

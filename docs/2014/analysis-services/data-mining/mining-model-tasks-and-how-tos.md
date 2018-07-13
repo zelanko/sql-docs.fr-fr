@@ -1,5 +1,5 @@
 ---
-title: Tâches liées aux modèles et les procédures d’exploration de données | Documents Microsoft
+title: Modèle tâches et procédures d’exploration de données | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - data mining [Analysis Services], models
 - mining models [Analysis Services], how-to topics
 ms.assetid: 7c2073e5-b40f-4bf8-aa51-021adb08e072
 caps.latest.revision: 33
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: e1ce8f3b6441c7b1ac09a2c4e5de9b151a14112c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 80f6f7d87f1e7ae3ffaf9fc7b17254a42675b192
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36051378"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37178916"
 ---
 # <a name="mining-model-tasks-and-how-tos"></a>Tâches du modèle d'exploration de données et procédures
   L’onglet **Modèles d’exploration de données** du Concepteur d’exploration de données dans [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] permet de gérer et de traiter les modèles d’exploration de données dans une structure d’exploration de données.  
@@ -39,7 +39,7 @@ ms.locfileid: "36051378"
   
 -   [Modifier la discrétisation d’une colonne dans un modèle d’exploration de données](change-the-discretization-of-a-column-in-a-mining-model.md)  
   
--   [Afficher ou modifier des indicateurs de modélisation &#40;d’exploration de données&#41;](modeling-flags-data-mining.md)  
+-   [Afficher ou modifier des indicateurs de modélisation &#40;exploration de données&#41;](modeling-flags-data-mining.md)  
   
 -   [Spécifier une colonne à utiliser comme régresseur dans un modèle](specify-a-column-to-use-as-regressor-in-a-model.md)  
   
@@ -61,7 +61,7 @@ ms.locfileid: "36051378"
   
 ## <a name="see-also"></a>Voir aussi  
  [Tâches de la Structure d’exploration de données et procédures](mining-structure-tasks-and-how-tos.md)   
- [Les modèles d’exploration de données &#40;Analysis Services - Exploration de données&#41;](mining-models-analysis-services-data-mining.md)   
- [Concepts d’exploration de données](data-mining-concepts.md)  
+ [Modèles d’exploration de données &#40;Analysis Services - Exploration de données&#41;](mining-models-analysis-services-data-mining.md)   
+ [Concepts de l’exploration de données](data-mining-concepts.md)  
   
   

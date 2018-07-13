@@ -1,13 +1,11 @@
 ---
-title: Le traitement des résultats | Documents Microsoft
+title: Traitement des résultats | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -17,22 +15,22 @@ helpviewer_keywords:
 - results [SQL Server Native Client]
 ms.assetid: 20887ac4-f649-4e7f-92e6-f929e2e70952
 caps.latest.revision: 29
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 7b1f2d039cf88e8487433d0d92e2e0f6c265f637
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: 987257e2e3afaa574a26481d9982c41ac3d304f5
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36039941"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37427818"
 ---
 # <a name="processing-results"></a>Traitement des résultats
   Si un objet d'ensemble de ligne est produit par l'exécution d'une commande ou la génération d'un objet d'ensemble de ligne directement à partir du fournisseur, le consommateur doit extraire et accéder aux données dans l'ensemble de lignes.  
   
- Les ensembles de lignes sont les objets centraux qui permettent au fournisseur OLE DB [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client d'exposer des données au format tabulaire. Conceptuellement, un ensemble de lignes est un jeu de lignes dans lequel chaque ligne possède des données de colonne. Un objet d’ensemble de lignes expose des interfaces telles que **IRowset** (contient des méthodes pour extraire les lignes à partir de l’ensemble de lignes de manière séquentielle), **IAccessor** (permet la définition d’un groupe de liaisons de colonne décrivant la données tabulaires de façon sont liées à des variables de programme de consommateur), **IColumnsInfo** (fournit des informations sur les colonnes dans l’ensemble de lignes), et **IRowsetInfo** (fournit des informations sur l’ensemble de lignes).  
+ Les ensembles de lignes sont les objets centraux qui permettent au fournisseur OLE DB [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client d'exposer des données au format tabulaire. Conceptuellement, un ensemble de lignes est un jeu de lignes dans lequel chaque ligne possède des données de colonne. Un objet rowset expose des interfaces telles que **IRowset** (contient des méthodes pour extraire les lignes à partir de l’ensemble de lignes séquentiellement,) **IAccessor** (autorise la définition d’un groupe de liaisons de colonne décrivant la données de façon tabulaires sont liées aux variables de programme de consommateur), **IColumnsInfo** (fournit des informations sur les colonnes dans l’ensemble de lignes), et **IRowsetInfo** (fournit des informations sur l’ensemble de lignes).  
   
- Un consommateur peut appeler le **IRowset::GetData** pour récupérer une ligne de données à partir de l’ensemble de lignes dans une mémoire tampon. Avant de **GetData** est appelée, le consommateur décrit la mémoire tampon à l’aide d’un ensemble de structures DBBINDING. Chaque liaison décrit la manière dont une colonne dans un ensemble de lignes est stockée dans une mémoire tampon de consommateur et contient les éléments suivants :  
+ Un consommateur peut appeler le **IRowset::GetData** méthode pour récupérer une ligne de données à partir de l’ensemble de lignes dans une mémoire tampon. Avant de **GetData** est appelée, le consommateur décrit la mémoire tampon à l’aide d’un ensemble de structures DBBINDING. Chaque liaison décrit la manière dont une colonne dans un ensemble de lignes est stockée dans une mémoire tampon de consommateur et contient les éléments suivants :  
   
 -   ordinal de la colonne (ou paramètre) auquel la liaison s'applique ;  
   

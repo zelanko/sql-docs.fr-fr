@@ -1,5 +1,5 @@
 ---
-title: Ensemble de lignes DISCOVER_LITERALS | Documents Microsoft
+title: Ensemble de lignes DISCOVER_LITERALS | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -18,20 +18,20 @@ helpviewer_keywords:
 - DISCOVER_LITERALS rowset
 ms.assetid: 1bf0a2e2-a419-4c25-b271-37dfa44de2ea
 caps.latest.revision: 33
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: a4643ab803f3e6a7d63c4172423e909b6badd64b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 6bd59dfdc385775f0846a1a0f9de41f7d3bf2750
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36044553"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37259965"
 ---
 # <a name="discoverliterals-rowset"></a>Ensemble de lignes DISCOVER_LITERALS
   Retourne des informations sur les littéraux pris en charge par le fournisseur XMLA (XML for Analysis) [!INCLUDE[msCoName](../../../includes/msconame-md.md)], y compris les types de données et les valeurs.  
   
- Si vous appelez le [Discover](../../xmla/xml-elements-methods-discover.md) méthode avec la `DISCOVER_LITERALS` valeur d’énumération dans le [RequestType](../../xmla/xml-elements-properties/type-element-xmla.md) élément, le `Discover` méthode retourne la `DISCOVER_LITERALS` ensemble de lignes.  
+ Si vous appelez le [Discover](../../xmla/xml-elements-methods-discover.md) méthode avec le `DISCOVER_LITERALS` valeur d’énumération dans le [RequestType](../../xmla/xml-elements-properties/type-element-xmla.md) élément, le `Discover` méthode retourne la `DISCOVER_LITERALS` ensemble de lignes.  
   
 ## <a name="rowset-columns"></a>Colonnes de l'ensemble de lignes  
  Le `DISCOVER_LITERALS` ensemble de lignes contient les colonnes suivantes.  
@@ -55,7 +55,7 @@ ms.locfileid: "36044553"
 |`LiteralName`|`DBTYPE_WSTR`|Facultatif.|  
   
 ## <a name="see-also"></a>Voir aussi  
- [XML for Analysis ensembles de lignes de schéma](xml-for-analysis-schema-rowsets.md)   
+ [XML for Analysis Schema Rowsets](xml-for-analysis-schema-rowsets.md)   
  [Ensemble de lignes DISCOVER_KEYWORDS &#40;XMLA&#41;](discover-keywords-rowset-xmla.md)  
   
   

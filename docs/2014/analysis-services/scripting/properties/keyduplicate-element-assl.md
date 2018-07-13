@@ -1,5 +1,5 @@
 ---
-title: Élément KeyDuplicate (ASSL) | Documents Microsoft
+title: Élément KeyDuplicate (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - KeyDuplicate element
 ms.assetid: d7000b8b-e81f-4401-8738-00c2e0f73a59
 caps.latest.revision: 33
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 353c8d1eac5803db6f76014519d1c812813f535d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 6bbd445a1b362e7ae5bc7c12df3404efe1a781ea
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36051593"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37192441"
 ---
 # <a name="keyduplicate-element-assl"></a>Élément KeyDuplicate (ASSL)
   Détermine comment [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] gère une erreur de clé dupliquée s’il rencontre une au cours du traitement.  
@@ -72,7 +72,7 @@ ms.locfileid: "36051593"
 |*ReportAndContinue*|Le traitement doit signaler l'erreur et se poursuivre.|  
 |*ReportAndStop*|Le traitement doit signaler l'erreur et s'arrêter.|  
   
- L’énumération qui correspond aux valeurs autorisées pour `KeyDuplicate` dans l’objet d’objets AMO (Analysis Management) est modèle <xref:Microsoft.AnalysisServices.ErrorOption>.  
+ L’énumération qui correspond aux valeurs autorisées pour `KeyDuplicate` dans l’objet d’objets AMO (Analysis Management) modèle est <xref:Microsoft.AnalysisServices.ErrorOption>.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Propriétés &#40;ASSL&#41;](properties-assl.md)  

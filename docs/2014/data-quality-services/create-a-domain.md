@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - data-quality-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dqs.kb.createdomain.f1
 ms.assetid: 5c4828f5-bd51-4c29-b3de-87b7d2f2d3e5
 caps.latest.revision: 22
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: fa65e6742004206c5116437c4e3bba7dbd316798
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: d60f4db93721d20b85b613459a034eaa896dc87a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36051599"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37165250"
 ---
 # <a name="create-a-domain"></a>Créer un domaine
   Cette rubrique décrit comment créer un domaine dans [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS). Les valeurs du domaine sont une représentation sémantique des données d'un champ. Pour plus d’informations sur les domaines, consultez [Gestion d’un domaine](../../2014/data-quality-services/managing-a-domain.md).  
@@ -46,7 +46,7 @@ ms.locfileid: "36051599"
   
 3.  Sélectionnez **Découverte des connaissances** comme activité, puis cliquez sur **Créer** pour créer la base de connaissances ou sur **Ouvrir** pour ouvrir une base de connaissances existante.  
   
-4.  Dans la page **Mapper** , spécifiez une connexion à la source de données. Pour plus d’informations, consultez [effectuer une découverte des connaissances](../../2014/data-quality-services/perform-knowledge-discovery.md).  
+4.  Dans la page **Mapper** , spécifiez une connexion à la source de données. Pour plus d’informations, consultez [Perform Knowledge Discovery](../../2014/data-quality-services/perform-knowledge-discovery.md).  
   
 5.  Dans la table **Mappages** , sélectionnez une colonne source dans la liste déroulante de la colonne **Colonne source** d'une ligne vide. Si aucun domaine correspondant n'existe, cliquez sur l'icône **Créer un domaine** .  
   
@@ -63,7 +63,7 @@ ms.locfileid: "36051599"
 1.  Dans la boîte de dialogue **Créer un domaine** , entrez un nom qui est unique dans la base de connaissances et une description limitée à 256 caractères.  
   
     > [!NOTE]  
-    >  Pour plus d’informations sur les propriétés du domaine, consultez [Set Domain Properties](../../2014/data-quality-services/set-domain-properties.md).  
+    >  Pour plus d’informations sur les propriétés de domaine, consultez [Set Domain Properties](../../2014/data-quality-services/set-domain-properties.md).  
   
 2.  Dans la liste **Type de données** , sélectionnez un type de données pour les valeurs dans le domaine. Le type de données peut être **String** (valeur par défaut), **Date**, **Integer**ou **Decimal**.  
   
@@ -91,7 +91,7 @@ ms.locfileid: "36051599"
   
 9. Cliquez sur **OK**.  
   
-10. Cliquez sur **Terminer** pour terminer l’activité de gestion de domaine, comme décrit dans [terminer l’activité de gestion de domaine](../../2014/data-quality-services/end-the-domain-management-activity.md).  
+10. Cliquez sur **Terminer** pour terminer l’activité de gestion de domaine, comme décrit dans [End the Domain Management Activity](../../2014/data-quality-services/end-the-domain-management-activity.md).  
   
 ##  <a name="FollowUp"></a> Suivi : Après la création d'un domaine  
  Après avoir créé un domaine, vous pouvez effectuer d'autres tâches de gestion des domaines sur le domaine, effectuer une découverte des connaissances pour ajouter des connaissances au domaine ou ajouter une stratégie de correspondance au domaine. Pour plus d’informations, consultez [Effectuer une découverte des connaissances](../../2014/data-quality-services/perform-knowledge-discovery.md), [Gestion d’un domaine](../../2014/data-quality-services/managing-a-domain.md) ou [Créer une stratégie de correspondance](../../2014/data-quality-services/create-a-matching-policy.md).  

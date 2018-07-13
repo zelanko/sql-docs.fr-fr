@@ -1,13 +1,11 @@
 ---
-title: bcp_columns | Documents Microsoft
+title: bcp_columns | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
@@ -20,15 +18,15 @@ helpviewer_keywords:
 - bcp_columns function
 ms.assetid: 5376f6fe-9508-439a-8c66-778d77f19ac3
 caps.latest.revision: 31
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: f2f7cb508f9b7715abbc2505f38b30795df2d142
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: c1107919200b3546274a3a78a89562c9ed715216
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36040627"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37427448"
 ---
 # <a name="bcpcolumns"></a>bcp_columns
   Définit le nombre total de colonnes trouvées dans le fichier utilisateur pour une utilisation avec une copie en bloc vers ou depuis [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. [bcp_setbulkmode](bcp-setbulkmode.md) peut être utilisé au lieu de bcp_columns et [bcp_colfmt](bcp-colfmt.md).  
@@ -58,7 +56,7 @@ nColumns
  SUCCEED ou FAIL.  
   
 ## <a name="remarks"></a>Notes  
- Cette fonction peut être appelée uniquement après [bcp_init](bcp-init.md) a été appelé avec un nom de fichier valide.  
+ Cette fonction peut être appelée uniquement après avoir [bcp_init](bcp-init.md) a été appelé avec un nom de fichier valide.  
   
  Vous devez appeler cette fonction uniquement si vous envisagez d'utiliser un format de fichier utilisateur qui diffère du format par défaut. Pour plus d’informations sur une description du format de fichier utilisateur par défaut, consultez **bcp_init**.  
   

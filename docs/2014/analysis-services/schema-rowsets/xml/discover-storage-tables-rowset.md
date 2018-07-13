@@ -1,5 +1,5 @@
 ---
-title: Ensemble de lignes DISCOVER_STORAGE_TABLES | Documents Microsoft
+title: Ensemble de lignes DISCOVER_STORAGE_TABLES | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -12,15 +12,15 @@ ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: 13df6f10-8efe-4fe9-83a6-96d108809ed1
 caps.latest.revision: 13
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: ae51d176ecef04060c58be629b72fe867cd51960
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 97f5e645098da53c720d37814b4dc4dbfe6f1c76
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36052037"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37169550"
 ---
 # <a name="discoverstoragetables-rowset"></a>Ensemble de lignes DISCOVER_STORAGE_TABLES
   Permet au client d'identifier les tables incluses dans une base de données Analysis Services qui fonctionne en mode tabulaire ou SharePoint.  

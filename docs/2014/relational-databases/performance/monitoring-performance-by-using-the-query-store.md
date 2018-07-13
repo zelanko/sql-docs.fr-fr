@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: e06344a4-22a5-4c67-b6c6-a7060deb5de6
 caps.latest.revision: 19
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 830df1dd0f44b237e1571700f81919abeca826ce
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 5a57623bc05b443de086835374b5f409f630b9de
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36051743"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37184276"
 ---
 # <a name="monitoring-performance-by-using-the-query-store"></a>Analyse des performances à l'aide du magasin de requêtes
-  La fonctionnalité de magasin de requêtes fournit aux administrateurs de bases de données des informations sur le choix de plan de requête et les performances. Elle simplifie la résolution des problèmes de performances en vous permettant de trouver rapidement les différences de performances provoquées par un changement de plan de requête. La fonctionnalité capture automatiquement l'historique des requêtes, des plans et des statistiques d'exécution et les conserve à des fins de consultation. Elle sépare les données en périodes, ce qui vous permet de voir les modèles d'utilisation de base de données et de comprendre à quel moment le changement de plan de requête a eu lieu sur le serveur. Le magasin de requêtes peut être configuré à l’aide de la [ALTER DATABASE SET](/sql/t-sql/statements/alter-database-transact-sql-set-options) option.  
+  La fonctionnalité de magasin de requêtes fournit aux administrateurs de bases de données des informations sur le choix de plan de requête et les performances. Elle simplifie la résolution des problèmes de performances en vous permettant de trouver rapidement les différences de performances provoquées par un changement de plan de requête. La fonctionnalité capture automatiquement l'historique des requêtes, des plans et des statistiques d'exécution et les conserve à des fins de consultation. Elle sépare les données en périodes, ce qui vous permet de voir les modèles d'utilisation de base de données et de comprendre à quel moment le changement de plan de requête a eu lieu sur le serveur. Le magasin de requête peut être configuré à l’aide de la [ALTER DATABASE SET](/sql/t-sql/statements/alter-database-transact-sql-set-options) option.  
   
 ||  
 |-|  
@@ -44,7 +44,7 @@ ms.locfileid: "36051743"
   
 #### <a name="by-using-transact-sql-statements"></a>En utilisant des instructions Transact-SQL  
   
-1.  Utilisez la `ALTER DATABASE` instruction pour activer le magasin de requêtes. Exemple :  
+1.  Utilisez la `ALTER DATABASE` instruction pour activer le magasin de requête. Exemple :  
   
     ```  
     ALTER DATABASE AdventureWorks2012 SET QUERY_STORE = ON;  
@@ -94,7 +94,7 @@ JOIN sys.query_store_query_text AS Txt
   
  ![Query Store](../../database-engine/media/querystore.PNG "Query Store")  
   
- En sélectionnant **requêtes en régression**, ouvre le **requêtes en régression** volet dans [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)]. Le volet Requêtes en régression affiche les requêtes et les plans du magasin de requêtes. Les listes déroulantes situées en haut vous permettent de sélectionner les requêtes selon différents critères. Sélectionnez un plan pour afficher le plan de requête sous forme graphique. Des boutons permettent d'afficher la requête source, de forcer un plan de requête et d’annuler son application forcée, ainsi que d'actualiser l'affichage.  
+ En sélectionnant **requêtes Régressées**, ouvre le **requêtes Régressées** volet dans [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)]. Le volet Requêtes en régression affiche les requêtes et les plans du magasin de requêtes. Les listes déroulantes situées en haut vous permettent de sélectionner les requêtes selon différents critères. Sélectionnez un plan pour afficher le plan de requête sous forme graphique. Des boutons permettent d'afficher la requête source, de forcer un plan de requête et d’annuler son application forcée, ainsi que d'actualiser l'affichage.  
   
  ![RegressedQueries](../../database-engine/media/regressedqueries.PNG "RegressedQueries")  
   
@@ -118,14 +118,14 @@ JOIN sys.query_store_query_text AS Txt
  INTERVAL_LENGTH_MINUTES  
  Détermine l'intervalle de temps à laquelle les données des statistiques d'exécution du runtime sont agrégées dans le magasin de requête. Pour optimiser l'espace, les statistiques d'exécution du runtime du magasin de statistiques du runtime sont agrégées sur une période fixe. Cette période fixe est configurée via INTERVAL_LENGTH_MINUTES.  
   
- Requête le `sys.database_query_store_options` pour déterminer les options actuelles du magasin de requête.  
+ Requête la `sys.database_query_store_options` vue pour déterminer les options actuelles du magasin de requête.  
   
  Pour plus d'informations sur la définition des options à l'aide d'instructions [!INCLUDE[tsql](../../includes/tsql-md.md)] , consultez [Gestion des options](#OptionMgmt).  
   
  
   
 ##  <a name="Related"></a> Vues, fonctions et procédures associées  
- Le magasin de requêtes peuvent être affiché et géré via [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)] ou à l’aide de vues et les procédures suivantes.  
+ Le Store de requête peuvent être affichée et gérée via [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)] ou en utilisant les vues et les procédures suivantes.  
   
 -   [sys.fn_stmt_sql_handle_from_sql_stmt &#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/sys-fn-stmt-sql-handle-from-sql-stmt-transact-sql)  
   
@@ -211,7 +211,7 @@ SET QUERY_STORE (INTERVAL_LENGTH_MINUTES = 15);
   
  Notez que les valeurs arbitraires ne sont pas autorisées. Vous devez utiliser une des valeurs suivantes : 1, 5, 10, 15, 30 et 60.  
   
- Nouvelle valeur pour l’intervalle est exposée via `sys.database_query_store_options` vue.  
+ Nouvelle valeur de l’intervalle est exposée via `sys.database_query_store_options` vue.  
   
  Si le stockage du magasin de requêtes est saturé, utilisez l'instruction suivante pour l’étendre.  
   
@@ -338,7 +338,7 @@ WHERE rs.last_execution_time > DATEADD(hour, -1, GETUTCDATE())
 ORDER BY rs.avg_duration DESC;  
 ```  
   
- **Le nombre de requêtes qui ont le plus grand e/s physiques moyenne lit dans les dernières 24 heures, avec correspondant nombre moyen de lignes et le nombre d’exécutions.**  
+ **Le nombre de requêtes ayant le plus gros e/s physiques moyenne lit dans les dernières 24 heures, avec le correspondantes nombre moyen de lignes et le nombre d’exécutions.**  
   
 ```  
 SELECT TOP 10 rs.avg_physical_io_reads, qt.query_sql_text,   
@@ -386,7 +386,7 @@ JOIN sys.query_store_query_text qt
 ORDER BY query_id, plan_id;  
 ```  
   
- **Requêtes ayant récemment rencontré une régression des performances (en comparant autre point dans le temps).** L'exemple de requête suivant retourne toutes les requêtes dont le temps d'exécution a doublé au cours des dernières 48 heures suite à un changement de plan. La requête compare tous les intervalles de statistiques d'exécution côte à côte.  
+ **Requêtes ayant récemment régressé en termes de performances (en comparant autre point dans le temps).** L'exemple de requête suivant retourne toutes les requêtes dont le temps d'exécution a doublé au cours des dernières 48 heures suite à un changement de plan. La requête compare tous les intervalles de statistiques d'exécution côte à côte.  
   
 ```  
 SELECT   
@@ -425,7 +425,7 @@ ORDER BY q.query_id, rsi1.start_time, rsi2.start_time;
   
  Si vous souhaitez voir toutes les régressions de performances (pas uniquement celles liées au changement de plan), supprimez simplement la condition `AND p1.plan_id <> p2.plan_id` de la requête précédente.  
   
- **Requêtes ayant récemment rencontré une régression des performances (en comparant les récentes et l’exécution de l’historique).** La requête suivante compare l'exécution des requête en fonction des périodes d'exécution. Dans cet exemple particulier, la requête compare l'exécution lors d'une période récente (1 heure) et l'exécution lors d'une période historique (la veille), puis identifie celles qui ont introduit une charge de travail supplémentaire. Cette mesure est calculée comme suit : différence entre la moyenne des exécutions récentes et la moyenne des exécutions historiques, multipliée par le nombre d'exécutions récentes. Elle représente en fait la durée supplémentaire introduite dans les exécutions récentes en comparaison avec les exécutions historiques :  
+ **Requêtes ayant récemment régressé en termes de performances (en comparant les exécutions d’historique récentes et).** La requête suivante compare l'exécution des requête en fonction des périodes d'exécution. Dans cet exemple particulier, la requête compare l'exécution lors d'une période récente (1 heure) et l'exécution lors d'une période historique (la veille), puis identifie celles qui ont introduit une charge de travail supplémentaire. Cette mesure est calculée comme suit : différence entre la moyenne des exécutions récentes et la moyenne des exécutions historiques, multipliée par le nombre d'exécutions récentes. Elle représente en fait la durée supplémentaire introduite dans les exécutions récentes en comparaison avec les exécutions historiques :  
   
 ```  
 --- "Recent" workload - last 1 hour  
@@ -503,7 +503,7 @@ OPTION (MERGE JOIN);
 
   
 ###  <a name="Stability"></a> Maintien de la stabilité des performances des requêtes  
- Pour les requêtes exécutées plusieurs fois vous pouvez remarquer que [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] utilisé différents plans, ce qui a entraîné l’utilisation des ressources différentes et une durée. Le magasin de requêtes permet de facilement détecter le moment où les performances des requêtes ont régressé et de déterminer le plan optimal dans un délai donné. Ensuite, vous pouvez forcer l'application de ce plan optimal pour l'exécution des requêtes ultérieures.  
+ Pour les requêtes qui sont exécutées plusieurs fois vous pouvez remarquer que [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] utilisé différents plans, ce qui a entraîné l’utilisation des ressources différentes et la durée. Le magasin de requêtes permet de facilement détecter le moment où les performances des requêtes ont régressé et de déterminer le plan optimal dans un délai donné. Ensuite, vous pouvez forcer l'application de ce plan optimal pour l'exécution des requêtes ultérieures.  
   
  Vous pouvez également identifier les performances de requêtes incohérentes avec des paramètres (définis manuellement ou automatiquement). Parmi les différents plans, vous pouvez identifier le plan qui est suffisamment rapide et optimal pour la totalité ou la plupart des valeurs de paramètre et forcer ce plan, en maintenant ainsi des performances prévisibles pour l'ensemble plus large de scénarios utilisateur.  
   
@@ -513,9 +513,9 @@ OPTION (MERGE JOIN);
 EXEC sp_query_store_force_plan @query_id = 48, @plan_id = 49;  
 ```  
   
- Lorsque vous utilisez `sp_query_store_force_plan` vous pouvez uniquement forcer des plans qui ont été enregistrés par le magasin de requêtes sous forme de plan pour cette requête. En d'autres termes, les plans disponibles pour une requête sont uniquement ceux qui ont déjà été utilisés pour exécuter Q1 lorsque le magasin de requêtes était actif.  
+ Lorsque vous utilisez `sp_query_store_force_plan` vous pouvez uniquement forcer des plans qui ont été enregistrés par le Store de la requête sous forme de plan pour cette requête. En d'autres termes, les plans disponibles pour une requête sont uniquement ceux qui ont déjà été utilisés pour exécuter Q1 lorsque le magasin de requêtes était actif.  
   
- **Supprimer l’application forcée du plan pour une requête.** Pour vous appuyer à nouveau sur le [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] optimiseur pour calculer le plan de requête optimal, utilisez de requête `sp_query_store_unforce_plan` à annuler son application forcée du plan qui a été sélectionné pour la requête.  
+ **Supprimer l’application forcée du plan pour une requête.** Pour vous appuyer à nouveau sur le [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] optimiseur pour calculer le plan de requête optimal, utilisez de requête `sp_query_store_unforce_plan` pour annuler l’application forcée du plan qui a été sélectionné pour la requête.  
   
 ```  
 EXEC sp_query_store_unforce_plan @query_id = 48, @plan_id = 49;  

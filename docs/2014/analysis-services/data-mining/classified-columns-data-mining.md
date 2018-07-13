@@ -1,5 +1,5 @@
 ---
-title: Classés de colonnes (exploration de données) | Documents Microsoft
+title: Classé colonnes (exploration de données) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - content types [data mining]
 - STDEV column
@@ -21,15 +21,15 @@ helpviewer_keywords:
 - SUPPORT column
 ms.assetid: 68bf3b78-dc12-497c-898f-b43a45646123
 caps.latest.revision: 26
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: c00a3e1e85beebba351340a9cacad5100e96dff6
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 403ab773012d9e9370959bd7094db51f9785e8d0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36050933"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37210339"
 ---
 # <a name="classified-columns-data-mining"></a>Colonnes classifiées (exploration de données)
   Lorsque vous définissez une colonne classée, vous créez une relation entre la colonne actuelle et une autre colonne de la structure d'exploration de données. Les données de la colonne de structure d'exploration de données que vous désignez comme colonne classée contiennent des informations catégorielles qui décrivent les valeurs dans une autre colonne de la structure d'exploration de données.  
@@ -40,7 +40,7 @@ ms.locfileid: "36050933"
 >  Les algorithmes fournis dans [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ne prennent pas en charge l’utilisation des colonnes classifiées ; cette fonctionnalité est fournie pour une utilisation dans la création d’algorithmes personnalisés.  
   
 ## <a name="defining-a-classified-column"></a>Définition d'une colonne classée  
- Le type de données d’une colonne classée doit être `Long` ou `Double`.  
+ Le type de données d’une colonne classifiée doit être soit `Long` ou `Double`.  
   
  La liste suivante décrit les types de contenu pris en charge par [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] pour les colonnes classifiées.  
   
@@ -63,8 +63,8 @@ ms.locfileid: "36050933"
  La valeur de la colonne représente le poids, ou facteur de réplication de cas, de la valeur associée.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Types de contenu &#40;d’exploration de données&#41;](content-types-data-mining.md)   
+ [Types de contenu &#40;exploration de données&#41;](content-types-data-mining.md)   
  [Structures d’exploration de données &#40;Analysis Services - Exploration de données&#41;](mining-structures-analysis-services-data-mining.md)   
- [Types de données &#40;d’exploration de données&#41;](data-types-data-mining.md)  
+ [Types de données &#40;exploration de données&#41;](data-types-data-mining.md)  
   
   

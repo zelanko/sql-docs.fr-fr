@@ -1,5 +1,5 @@
 ---
-title: Relations d’attributs | Documents Microsoft
+title: Relations d’attributs | Microsoft Docs
 ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
@@ -26,15 +26,15 @@ helpviewer_keywords:
 - relationships [Analysis Services], attributes
 ms.assetid: 2491422a-4cf5-4b23-b6ab-289222b22ce8
 caps.latest.revision: 46
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: e2eb8155b2515a04191eeeccadcc3c21843f19e2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 3b3d4667703aa76870ccc9ff5684597ee52a34f1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36051607"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37187256"
 ---
 # <a name="attribute-relationships"></a>Relations d’attributs
   Dans [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], attributs au sein d’une dimension sont toujours liés directement ou indirectement à l’attribut clé. Quand vous définissez une dimension basée sur un schéma en étoile, c'est-à-dire quand tous les attributs de la dimension sont dérivés de la même table relationnelle, une relation d'attribut est automatiquement définie entre l'attribut clé et chaque attribut non-clé de la dimension. Quand vous définissez une dimension basée sur un schéma en flocon, où les attributs de la dimension sont dérivés de plusieurs tables liées, une relation d'attribut est automatiquement définie comme suit :  
@@ -87,7 +87,7 @@ ms.locfileid: "36051607"
   
  La propriété `SourceAttribute` d'un niveau détermine l'attribut utilisé pour décrire le niveau. La propriété `KeyColumns` de l'attribut spécifie la colonne de la vue de source de données qui fournit les membres. La propriété `NameColumn` de l'attribut peut spécifier une colonne de nom différente pour les membres.  
   
- Pour définir un niveau dans une hiérarchie définie par l’utilisateur à l’aide de [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], le **Concepteur de dimensions** vous permet de sélectionner un attribut de dimension, d’une colonne dans une table de dimension ou d’une colonne d’une table associée incluse dans la vue de source de données pour le cube. Pour plus d’informations sur la création de hiérarchies définies par l’utilisateur, consultez [pourquoi hiérarchies](../multidimensional-models/user-defined-hierarchies-create.md).  
+ Pour définir un niveau dans une hiérarchie définie par l’utilisateur à l’aide de [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], le **Concepteur de dimensions** vous permet de sélectionner un attribut de dimension, une colonne dans une table de dimension ou une colonne d’une table associée incluse dans la vue de source de données pour le cube. Pour plus d’informations sur la création de hiérarchies définies par l’utilisateur, consultez [les hiérarchies définies par l’utilisateur](../multidimensional-models/user-defined-hierarchies-create.md).  
   
  Dans Analysis Services, une hypothèse est généralement faite à propos du contenu des membres. Les membres feuilles n'ont pas de descendants et contiennent des données dérivées des sources de données sous-jacentes. Les membres non-feuilles ont des descendants et contiennent des données dérivées des agrégations effectuées sur les membres enfants. Dans les niveaux agrégés, les membres sont basés sur les agrégations des niveaux inférieurs. Par conséquent, quand la propriété `IsAggregatable` est définie à `False` sur un attribut source pour un niveau, aucun attribut pouvant faire l'objet d'une agrégation ne peut être ajouté en tant que niveau au dessus de cet attribut.  
   
@@ -100,7 +100,7 @@ ms.locfileid: "36051607"
 ## <a name="see-also"></a>Voir aussi  
  [Attributs et hiérarchies d’attributs](attributes-and-attribute-hierarchies.md)   
  [Dimension Attribute Properties Reference](../multidimensional-models/dimension-attribute-properties-reference.md)   
- [Hiérarchies des utilisateurs](user-hierarchies.md)   
+ [Hiérarchies utilisateur](user-hierarchies.md)   
  [Propriétés de la hiérarchie utilisateur](user-hierarchies-properties.md)  
   
   

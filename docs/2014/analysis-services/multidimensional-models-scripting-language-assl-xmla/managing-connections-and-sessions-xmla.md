@@ -1,5 +1,5 @@
 ---
-title: Gestion des connexions et Sessions (XMLA) | Documents Microsoft
+title: Gestion des connexions et Sessions (XMLA) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -19,20 +19,20 @@ helpviewer_keywords:
 - sessions [XML for Analysis]
 ms.assetid: b83bb3ff-09be-4fda-9d1d-6248e04ffb21
 caps.latest.revision: 29
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 39051880aa27e6f81cce4ca3a41e1af203c1b257
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 16efaf9be9db55935cc7b6a3df0349f81d170b2e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36052321"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37192508"
 ---
 # <a name="managing-connections-and-sessions-xmla"></a>Gestion des connexions et des sessions (XMLA)
-  *Conservation de l’état* est une condition pendant laquelle le serveur préserve l’identité et le contexte d’un client entre les appels de méthode. *Abandon de l’état* est une condition pendant laquelle le serveur ne retient pas l’identité et le contexte d’un client après un appel de méthode se termine.  
+  *Conservation de l’état* est une condition pendant laquelle le serveur préserve l’identité et le contexte d’un client entre les appels de méthode. *Abandon de l’état* est une condition pendant laquelle le serveur ne retient pas l’identité et le contexte d’un client après un appel de méthode.  
   
- Pour assurer la conservation de l’état, XML for Analysis (XMLA) prend en charge *sessions* qui autorisent une série d’instructions pour être exécutés simultanément. À titre d'exemple, une telle série d'instructions pourrait servir à créer le membre calculé à utiliser dans des requêtes ultérieures.  
+ Pour assurer la conservation de l’état, XML for Analysis (XMLA) prend en charge *sessions* qui permettent une série d’instructions pour être exécutées simultanément. À titre d'exemple, une telle série d'instructions pourrait servir à créer le membre calculé à utiliser dans des requêtes ultérieures.  
   
  En général, les sessions XMLA suivent le comportement suivant énoncé par la spécification OLE DB 2.6 :  
   
@@ -40,7 +40,7 @@ ms.locfileid: "36052321"
   
 -   Plusieurs commandes peuvent être exécutées dans le contexte d'une seule session.  
   
--   Prise en charge des transactions dans le contexte XMLA est grâce aux commandes spécifiques au fournisseur envoyées avec la [Execute](../xmla/xml-elements-methods-execute.md) (méthode).  
+-   Prise en charge des transactions dans le contexte XMLA est par le biais des commandes spécifiques au fournisseur envoyées avec la [Execute](../xmla/xml-elements-methods-execute.md) (méthode).  
   
  XMLA définit une méthode de prise en charge des sessions dans un environnement Web selon un mode comparable à la méthode employée par le protocole DAV (Distributed Authoring and Versioning) pour implémenter le verrouillage dans un environnement faiblement couplé. Cette implémentation va de pair avec DAV en ce sens que le fournisseur est autorisé à faire expirer les sessions pour divers motifs (par exemple, dépassement de délai ou erreur de connexion). Lorsque les sessions sont prises en charge, les services Web doivent être en mesure de gérer des jeux de commandes interrompus qui doivent être redémarrés.  
   

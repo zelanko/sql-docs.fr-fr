@@ -1,5 +1,5 @@
 ---
-title: Le Générateur de rapports Options, boîte de dialogue, paramètres (Générateur de rapports) | Documents Microsoft
+title: Le Générateur de rapports Options, boîte de dialogue, paramètres (Générateur de rapports) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,23 +8,23 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - "10427"
 ms.assetid: 423360de-9bed-462e-921f-60a5abab004f
 caps.latest.revision: 13
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 7ae2490cf5dcdc241120c683994e7f46bcf0b6c6
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 49449391408701c16b7b6da9106913a24d084d66
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36044901"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37218839"
 ---
 # <a name="report-builder-options-dialog-box-settings-report-builder"></a>Boîte de dialogue Options du Générateur de rapports, Paramètres (Générateur de rapports)
-  Cliquez sur le **le Générateur de rapports** puis cliquez sur **Options** pour définir les options d’affichage des connexions et des fichiers récents. Vous pouvez également modifier le serveur de rapports par défaut ou en ajouter un si vous n'en avez pas déjà spécifié un.  
+  Cliquez sur le **le Générateur de rapports** bouton, puis cliquez sur **Options** pour définir les options d’affichage des connexions et des fichiers récents. Vous pouvez également modifier le serveur de rapports par défaut ou en ajouter un si vous n'en avez pas déjà spécifié un.  
   
 ## <a name="uielement-list"></a>Liste des éléments de l'interface utilisateur  
  **Utiliser ce serveur de rapports ou site SharePoint par défaut**  

@@ -1,5 +1,5 @@
 ---
-title: Techniques de l’algorithme d’arbres de décision Microsoft | Documents Microsoft
+title: Références techniques relatives aux algorithmes d’arbre de décision de Microsoft | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - MAXIMUM_INPUT_ATTRIBUTES parameter
 - SPLIT_METHOD parameter
@@ -21,15 +21,15 @@ helpviewer_keywords:
 - SCORE_METHOD parameter
 ms.assetid: 1e9f7969-0aa6-465a-b3ea-57b8d1c7a1fd
 caps.latest.revision: 29
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: edb2b9790ac2294f53c26b65e9897064f4050083
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 3a73db73c49f50c49fdfd36d754f8d70ce651547
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36052120"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37183406"
 ---
 # <a name="microsoft-decision-trees-algorithm-technical-reference"></a>Références techniques relatives à l'algorithme MDT (Microsoft Decision Trees)
   L'algorithme MDT ( [!INCLUDE[msCoName](../../includes/msconame-md.md)] Decision Trees) est un algorithme hybride qui incorpore des méthodes différentes pour créer une arborescence et prend en charge plusieurs tâches analytiques, dont la régression, la classification et l'association. L'algorithme MDT (Microsoft Decision Trees) prend en charge la modélisation des attributs discrets et continus.  
@@ -187,7 +187,7 @@ ms.locfileid: "36052120"
   
  Il est inutile de spécifier qu'une colonne de données numériques continues représente un régresseur. L'algorithme MDT ( [!INCLUDE[msCoName](../../includes/msconame-md.md)] Decision Trees) utilise automatiquement la colonne en tant que régresseur potentiel et partitionne le dataset en régions avec des séquences explicites même si vous ne définissez pas l'indicateur REGRESSOR sur la colonne.  
   
- Toutefois, vous pouvez utiliser le paramètre FORCED_REGRESSOR pour faire en sorte que l'algorithme utilise un régresseur particulier. Ce paramètre peut être utilisé uniquement avec les [!INCLUDE[msCoName](../../includes/msconame-md.md)] algorithmes MDT et [!INCLUDE[msCoName](../../includes/msconame-md.md)] MLR. Lorsque vous définissez l’indicateur de modélisation, l’algorithme essaie de rechercher des équations de régression du formulaire une * C1 + b\*C2 +... pour faire tenir les séquences dans les nœuds de l’arborescence. La somme des résiduels est calculée et, si l'écart est trop grand, l'arbre est fractionné.  
+ Toutefois, vous pouvez utiliser le paramètre FORCED_REGRESSOR pour faire en sorte que l'algorithme utilise un régresseur particulier. Ce paramètre peut être utilisé uniquement avec les [!INCLUDE[msCoName](../../includes/msconame-md.md)] algorithmes MDT et [!INCLUDE[msCoName](../../includes/msconame-md.md)] MLR. Lorsque vous définissez l’indicateur de modélisation, l’algorithme essaie de rechercher des équations de régression de la forme un * C1 + b\*C2 +... pour faire tenir les séquences dans les nœuds de l’arborescence. La somme des résiduels est calculée et, si l'écart est trop grand, l'arbre est fractionné.  
   
  Par exemple, si vous prédisez le comportement d'achat de vos clients en utilisant **Income** comme attribut et que vous définissez l'indicateur de modélisation REGRESSOR sur la colonne, l'algorithme essaie tout d'abord de faire tenir les valeurs **Income** en utilisant une formule de régression standard. Si l'écart est trop grand, la formule de régression est abandonnée et l'arbre est fractionné sur un autre attribut. L'algorithme MDT essaie ensuite de faire tenir un régresseur pour le revenu dans chacune des branches après le fractionnement.  
   
@@ -206,8 +206,8 @@ ms.locfileid: "36052120"
 >  Les types de contenu Cyclique et Trié sont pris en charge, mais l'algorithme les traite comme des valeurs discrètes et n'effectue pas de traitement spécial.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Algorithme d’arbres de décision Microsoft](microsoft-decision-trees-algorithm.md)   
- [Exemples de requête de modèle d’arborescences de décision](decision-trees-model-query-examples.md)   
+ [Algorithme d’arbres de décision de Microsoft](microsoft-decision-trees-algorithm.md)   
+ [Exemples de requête de modèle d’arbre de décision](decision-trees-model-query-examples.md)   
  [Contenu pour les modèles d’arbre de décision du modèle d’exploration de données &#40;Analysis Services - Exploration de données&#41;](mining-model-content-for-decision-tree-models-analysis-services-data-mining.md)  
   
   

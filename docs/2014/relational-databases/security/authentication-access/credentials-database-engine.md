@@ -5,10 +5,9 @@ ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-security
+ms.technology: security
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - principals [SQL Server], credentials
 - schemas [SQL Server], credentials
@@ -22,15 +21,15 @@ helpviewer_keywords:
 - credentials [SQL Server]
 ms.assetid: c8df6022-e0b4-46b8-9670-3f86938d3177
 caps.latest.revision: 28
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 9de71af86c410658ab37aa1959ab2c9962b30a1c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: edmacauley
+ms.author: edmaca
+manager: craigg
+ms.openlocfilehash: 579b9d6f9847652ab2088eeb5111372fc4377c02
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36051241"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37198779"
 ---
 # <a name="credentials-database-engine"></a>Informations d'identification (moteur de base de données)
   Les informations d'identification correspondent à un enregistrement qui contient les informations d'authentification requises pour la connexion à une ressource en dehors de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Ces informations sont utilisées en interne par [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. La plupart des informations d'identification contiennent un nom d'utilisateur et un mot de passe Windows.  
@@ -39,10 +38,10 @@ ms.locfileid: "36051241"
   
  Les informations d'identification système sont créées automatiquement et sont associées à des points de terminaison spécifiques. Le nom de ces informations d'identification système commence par deux signes dièse (##).  
   
- Pour plus d’informations sur les informations d’identification, consultez le [sys.credentials](/sql/relational-databases/system-catalog-views/sys-credentials-transact-sql) affichage catalogue.  
+ Pour plus d’informations sur les informations d’identification, consultez le [sys.credentials](/sql/relational-databases/system-catalog-views/sys-credentials-transact-sql) vue de catalogue.  
   
 ## <a name="related-content"></a>Contenu associé  
- [Créer des informations d’identification](../authentication-access/create-a-credential.md) [CREATE CREDENTIAL &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-credential-transact-sql)  
+ [Créer une information d’identification](../authentication-access/create-a-credential.md) [CREATE CREDENTIAL &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-credential-transact-sql)  
   
  [Sécurisation de SQL Server](../securing-sql-server.md)  
   

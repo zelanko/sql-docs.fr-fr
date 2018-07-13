@@ -1,5 +1,5 @@
 ---
-title: Créer et mapper un environnement serveur | Documents Microsoft
+title: Créer et mapper un environnement serveur | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.ssis.ssms.isenvprop.variables.f1
 - sql12.ssis.ssms.iscreateenv.f1
@@ -16,15 +16,15 @@ f1_keywords:
 - sql12.ssis.ssms.isenvprop.general.f1
 ms.assetid: b1cbb697-713f-48e4-b234-b23724d87451
 caps.latest.revision: 11
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 7b386dd13218d78bc8b70dacba6a0103bf9a8581
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: e5650c579c1fab390b98b3bb7777e9c8f8f07595
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36050866"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37173100"
 ---
 # <a name="create-and-map-a-server-environment"></a>Créer et mapper un environnement serveur
   Vous créez un environnement serveur pour spécifier les valeurs d'exécution des packages contenus dans un projet que vous avez déployé sur le serveur [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] . Vous pouvez ensuite mapper les variables d'environnement aux paramètres, pour un package spécifique, pour les packages de point d'entrée, ou pour tous les packages dans un projet donné. Un package de point d'entrée est généralement un package parent qui exécute un package enfant.  

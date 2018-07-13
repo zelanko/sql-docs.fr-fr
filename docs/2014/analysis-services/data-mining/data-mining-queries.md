@@ -1,5 +1,5 @@
 ---
-title: Requêtes d’exploration de données | Documents Microsoft
+title: Requêtes d’exploration de données | Microsoft Docs
 ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - prediction queries [Analysis Services]
 - queries [DMX], creating
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - mining models [Analysis Services], querying
 ms.assetid: 802806a6-69bb-4c3c-b9aa-d1a1ddfc7fc2
 caps.latest.revision: 44
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: c7d67cd0b51a8bd2a7219558d1488afebf50651b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: e735d73e8bad733c330d0d5134f13905c1ef8e15
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36052543"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37170200"
 ---
 # <a name="data-mining-queries"></a>Requêtes d’exploration de données
   Les requêtes d'exploration de données sont utiles à de nombreuses fins. Vous pouvez :  
@@ -57,19 +57,19 @@ ms.locfileid: "36052543"
 ##  <a name="bkmk_Understand"></a> Fonctionnement des requêtes d'exploration de données  
  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] prend en charge les types de requêtes suivants :  
   
--   [Requêtes de prédiction &#40;d’exploration de données&#41;](prediction-queries-data-mining.md)  
+-   [Requêtes de prédiction &#40;exploration de données&#41;](prediction-queries-data-mining.md)  
   
      Requêtes qui créent des inférences basées sur des schémas dans le modèle, et à partir des données d'entrée.  
   
--   [Requêtes de contenu &#40;d’exploration de données&#41;](content-queries-data-mining.md)  
+-   [Requêtes de contenu &#40;exploration de données&#41;](content-queries-data-mining.md)  
   
      Requêtes qui retournent des métadonnées, des statistiques et d'autres informations sur le modèle lui-même.  
   
--   [Requêtes d’extraction &#40;d’exploration de données&#41;](drillthrough-queries-data-mining.md)  
+-   [Requêtes d’extraction &#40;exploration de données&#41;](drillthrough-queries-data-mining.md)  
   
      Requêtes qui peuvent récupérer les données de cas sous-jacentes pour le modèle, ou même les données de la structure qui n'ont pas été utilisées dans le modèle.  
   
--   [Requêtes de définition de données &#40;d’exploration de données&#41;](data-definition-queries-data-mining.md)  
+-   [Requêtes de définition de données &#40;exploration de données&#41;](data-definition-queries-data-mining.md)  
   
      Requêtes qui ne retournent pas d'informations du modèle, mais qui sont plutôt utilisées pour générer des modèles et des structures ou pour mettre à jour les données dans un modèle ou une structure.  
   
@@ -86,7 +86,7 @@ ms.locfileid: "36052543"
   
  Une fois que vous êtes familiarisé avec les modèles d'exploration de données et la procédure de génération des requêtes, vous pouvez également écrire des requêtes directement à l'aide du langage d'extensions DMX (Data Mining Extensions). DMX est un langage de requête semblable à Transact-SQL, et que vous pouvez utiliser à partir de nombreux clients. DMX est l'outil de choix pour créer des prédictions personnalisées et des requêtes complexes. Pour obtenir une présentation de DMX, consultez [Création et interrogation de modèles d’exploration de données à l’aide du langage DMX : didacticiels &#40;Analysis Services - Exploration de données&#41;](../../tutorials/create-query-data-mining-models-dmx-tutorials.md).  
   
- Les éditeurs DMX sont fournis à la fois dans [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] et [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Vous pouvez également utiliser le générateur de requêtes de prédiction pour démarrer vos requêtes, puis changer la vue afin d'activer l'éditeur de texte et copier l'instruction DMX dans un autre client. Pour plus d’informations, consultez [les Interfaces de requête d’exploration de données](data-mining-query-tools.md).  
+ Les éditeurs DMX sont fournis à la fois dans [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] et [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Vous pouvez également utiliser le générateur de requêtes de prédiction pour démarrer vos requêtes, puis changer la vue afin d'activer l'éditeur de texte et copier l'instruction DMX dans un autre client. Pour plus d’informations, consultez [Interfaces de requête d’exploration de données](data-mining-query-tools.md).  
   
  Vous pouvez composer des instructions DMX par programmation et les envoyer depuis votre client vers le serveur [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] en utilisant AMO ou XMLA. Toutefois, DMX est le langage que vous devez utiliser pour créer des requêtes sur un modèle d'exploration de données.  
   
@@ -99,7 +99,7 @@ ms.locfileid: "36052543"
   
  La liste suivante fournit un résumé des fonctions que vous pouvez utiliser dans les requêtes :  
   
--   **Fonctions de prédiction générales :** le `Predict` fonction est polymorphe, ce qui signifie qu’il fonctionne avec tous les types de modèles. Cette fonction détecte automatiquement le type de modèle que vous utilisez et vous invite à saisir des paramètres supplémentaires. Pour plus d’informations, consultez [Predict &#40;DMX&#41;](/sql/dmx/predict-dmx).  
+-   **Fonctions de prédiction générales :** le `Predict` fonction est polymorphe, ce qui signifie qu’il fonctionne avec tous les types de modèle. Cette fonction détecte automatiquement le type de modèle que vous utilisez et vous invite à saisir des paramètres supplémentaires. Pour plus d’informations, consultez [Predict &#40;DMX&#41;](/sql/dmx/predict-dmx).  
   
     > [!WARNING]  
     >  Tous les modèles ne sont pas utilisés pour effectuer des prédictions. Par exemple, vous pouvez créer un modèle de clustering qui n'a pas d'attribut prédictible. Toutefois, même si un modèle ne dispose pas d'attribut prédictible, vous pouvez créer des requêtes de prédiction qui retournent d'autres types d'informations utiles à partir du modèle.  
@@ -112,7 +112,7 @@ ms.locfileid: "36052543"
   
     |||  
     |-|-|  
-    |[Exemples de requêtes de modèle d’association](association-model-query-examples.md)|[Algorithme Microsoft Naive Bayes](microsoft-naive-bayes-algorithm.md)|  
+    |[Exemples de requêtes de modèle d’association](association-model-query-examples.md)|[Algorithme MNB (Microsoft Naive Bayes)](microsoft-naive-bayes-algorithm.md)|  
     |[Exemples de requêtes de modèle de clustering](clustering-model-query-examples.md)|[Exemples de requêtes de modèle de réseau neuronal](neural-network-model-query-examples.md)|  
     |[Exemples de requêtes de modèle d’arbre de décision](decision-trees-model-query-examples.md)|[Exemples de requêtes de modèle Sequence Clustering](sequence-clustering-model-query-examples.md)|  
     |[Exemples de requête de modèle de régression linéaire](linear-regression-model-query-examples.md)|[Exemples de requêtes de modèle de séries chronologiques](time-series-model-query-examples.md)|  
@@ -128,7 +128,7 @@ ms.locfileid: "36052543"
   
 -   **Statistiques personnalisées :** des fonctions de prise en charge supplémentaires sont fournies pour chaque type de modèle, afin de générer des statistiques qui sont appropriées à la tâche analytique spécifique.  
   
-     Par exemple, lorsque vous travaillez avec un modèle de clustering, vous pouvez utiliser la fonction, `PredictCaseLikelihood`, afin de retourner le score de vraisemblance associé à un certain cas et cluster. Toutefois, si vous avez créé un modèle de régression linéaire, vous serez plus intéressé à récupérer le coefficient et l'ordonnée à l'origine, ce que vous pouvez effectuer à l'aide d'une requête de contenu.  
+     Par exemple, lorsque vous travaillez avec un modèle de clustering, vous pouvez utiliser la fonction, `PredictCaseLikelihood`, pour retourner le score de vraisemblance associé à un certain cas et cluster. Toutefois, si vous avez créé un modèle de régression linéaire, vous serez plus intéressé à récupérer le coefficient et l'ordonnée à l'origine, ce que vous pouvez effectuer à l'aide d'une requête de contenu.  
   
 -   **Fonctions de contenu de modèle :** le *contenu* de tous les modèles est représenté dans un format standardisé qui vous permet de récupérer des informations avec une requête simple. Vous créez des requêtes sur le contenu du modèle à l'aide du langage DMX. Vous pouvez également obtenir un certain type de contenu de modèle à l'aide des ensembles de lignes du schéma d'exploration de données.  
   
@@ -146,27 +146,27 @@ ms.locfileid: "36052543"
 ## <a name="in-this-section"></a>Dans cette section  
  Les rubriques de cette section présentent chaque type de requête d'exploration de données plus en détail et fournissent des liens vers des exemples détaillés de création de requêtes sur des modèles d'exploration de données.  
   
- [Requêtes de prédiction &#40;d’exploration de données&#41;](prediction-queries-data-mining.md)  
+ [Requêtes de prédiction &#40;exploration de données&#41;](prediction-queries-data-mining.md)  
   
- [Requêtes de contenu &#40;d’exploration de données&#41;](content-queries-data-mining.md)  
+ [Requêtes de contenu &#40;exploration de données&#41;](content-queries-data-mining.md)  
   
- [Requêtes d’extraction &#40;d’exploration de données&#41;](drillthrough-queries-data-mining.md)  
+ [Requêtes d’extraction &#40;exploration de données&#41;](drillthrough-queries-data-mining.md)  
   
- [Requêtes de définition de données &#40;d’exploration de données&#41;](data-definition-queries-data-mining.md)  
+ [Requêtes de définition de données &#40;exploration de données&#41;](data-definition-queries-data-mining.md)  
   
- [Interfaces de requête d’exploration de données](data-mining-query-tools.md)  
+ [Interface de requête d’exploration de données](data-mining-query-tools.md)  
   
 ## <a name="related-tasks"></a>Related Tasks  
  Utilisez ces liens pour apprendre à créer et à utiliser des requêtes d'exploration de données.  
   
 |Tâches|Liens|  
 |-----------|-----------|  
-|Afficher des didacticiels et des procédures pas à pas sur les requêtes d'exploration de données|[Leçon 6 : Création et utilisation de prédictions &#40;didacticiel d’exploration de données de base de données&#41;](../../tutorials/lesson-6-creating-and-working-with-predictions-basic-data-mining-tutorial.md)<br /><br /> [Didacticiel sur DMX de prédiction de série chronologique](../../tutorials/time-series-prediction-dmx-tutorial.md)|  
+|Afficher des didacticiels et des procédures pas à pas sur les requêtes d'exploration de données|[Leçon 6 : Création et utilisation de prédictions &#40;didacticiel d’exploration de données de base&#41;](../../tutorials/lesson-6-creating-and-working-with-predictions-basic-data-mining-tutorial.md)<br /><br /> [Tutoriel DMX sur la prédiction de série chronologique](../../tutorials/time-series-prediction-dmx-tutorial.md)|  
 |Utiliser les outils de requête d'exploration de données dans SQL Server Management Studio et [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]|[Créer une requête DMX dans SQL Server Management Studio](create-a-dmx-query-in-sql-server-management-studio.md)<br /><br /> [Créer une requête de prédiction à l’aide du Générateur de requêtes de prédiction](create-a-prediction-query-using-the-prediction-query-builder.md)<br /><br /> [Appliquer des fonctions de prédiction à un modèle](apply-prediction-functions-to-a-model.md)<br /><br /> [Modifier manuellement une requête de prédiction](manually-edit-a-prediction-query.md)|  
 |Utiliser des données externes utilisées dans des requêtes de prédiction|[Choisir et mapper les données d’entrée pour une requête de prédiction](choose-and-map-input-data-for-a-prediction-query.md)<br /><br /> [Choisir et mapper les données d’entrée pour une requête de prédiction](choose-and-map-input-data-for-a-prediction-query.md)|  
 |Utiliser les résultats de requêtes|[Afficher et enregistrer les résultats d’une requête de prédiction](view-and-save-the-results-of-a-prediction-query.md)|  
 |Utiliser les modèles de requête DMX et XMLA fournis dans Management Studio|[Créer une requête singleton de prédiction à partir d’un modèle](create-a-singleton-prediction-query-from-a-template.md)<br /><br /> [Créer une requête d’exploration de données à l’aide de XMLA](create-a-data-mining-query-by-using-xmla.md)<br /><br /> [Utiliser des modèles Analysis Services dans SQL Server Management Studio](../instances/use-analysis-services-templates-in-sql-server-management-studio.md)|  
-|En savoir plus sur les requêtes de contenu et afficher des exemples|[Créer une requête de contenu sur un modèle d’exploration de données](create-a-content-query-on-a-mining-model.md)<br /><br /> [Interroger les paramètres utilisés pour créer un modèle d’exploration de données](query-the-parameters-used-to-create-a-mining-model.md)<br /><br /> [Requêtes de contenu &#40;d’exploration de données&#41;](content-queries-data-mining.md)|  
+|En savoir plus sur les requêtes de contenu et afficher des exemples|[Créer une requête de contenu sur un modèle d’exploration de données](create-a-content-query-on-a-mining-model.md)<br /><br /> [Interroger les paramètres utilisés pour créer un modèle d’exploration de données](query-the-parameters-used-to-create-a-mining-model.md)<br /><br /> [Requêtes de contenu &#40;exploration de données&#41;](content-queries-data-mining.md)|  
 |Définir des options de requête et résoudre les problèmes liés aux autorisations et aux requêtes|[Modifier la valeur du délai d’attente pour les requêtes d’exploration de données](data-mining-queries.md)|  
 |Utiliser les composants d'exploration de données dans Integration Services|[Data Mining Query Task](../../integration-services/control-flow/data-mining-query-task.md)<br /><br /> [Data Mining Query Transformation](../../integration-services/data-flow/transformations/data-mining-query-transformation.md)|  
   

@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: a972c56e-b2af-4fe6-abbd-817406e2c93a
 caps.latest.revision: 9
-author: mgblythe
-ms.author: mblythe
-manager: jhubbard
-ms.openlocfilehash: 8c20daf51270931609fb876b9a7035da343d19f7
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: c64ba9da7884b1ccb82dd31480d60638c8d952ee
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36052006"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37192470"
 ---
 # <a name="import-the-sqlps-module"></a>Importer le module SQLPS
   La méthode recommandée pour gérer [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] à partir de PowerShell consiste à importer le module `sqlps` dans un environnement Windows PowerShell 2.0. Le module charge et inscrit les assemblys de facilité de gestion et les composants logiciels enfichables [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .  
@@ -52,7 +52,7 @@ ms.locfileid: "36052006"
   
 1.  Utilisez le `Set-ExecutionPolicy` applet de commande pour définir la stratégie d’exécution de scripts appropriée.  
   
-2.  Utilisez le `Import-Module` pour importer le module sqlps. Spécifiez le `DisableNameChecking` paramètre si vous souhaitez supprimer l’avertissement sur `Encode-Sqlname` et `Decode-Sqlname`.  
+2.  Utilisez le `Import-Module` applet de commande pour importer le module sqlps. Spécifiez le `DisableNameChecking` paramètre si vous souhaitez supprimer l’avertissement sur `Encode-Sqlname` et `Decode-Sqlname`.  
   
 ### <a name="example-powershell"></a>Exemple (PowerShell)  
  Cet exemple charge le module `sqlps` avec la fonction de vérification des noms désactivée.  

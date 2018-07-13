@@ -1,5 +1,5 @@
 ---
-title: Installer Analysis Services en Mode tabulaire | Documents Microsoft
+title: Installer Analysis Services en Mode tabulaire | Microsoft Docs
 ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: cd6ac80d-b735-4e3e-a024-489f1409ad33
 caps.latest.revision: 16
-author: markingmyname
-ms.author: maghan
-manager: jhubbard
-ms.openlocfilehash: f6fabd9129e3f3e1e07e813935f36e7c70c48072
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: b6ee555e975e89da584c0efab3fab8bb9f9429a8
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36052522"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37183446"
 ---
 # <a name="install-analysis-services-in-tabular-mode"></a>Installer Analysis Services en mode tabulaire
   Si vous installez Analysis Services afin d'utiliser les nouvelles fonctionnalités tabulaires de modélisation, vous devez installer Analysis Services dans un mode serveur qui prend en charge ce type de modèle. Le mode serveur est un mode tabulaire configuré pendant l'installation.  
@@ -33,7 +33,7 @@ ms.locfileid: "36052522"
   
 1.  Sélectionnez **Analysis Services** dans l'Arborescence de fonctionnalités dans l'Installation.  
   
-     ![Arborescence de fonctionnalités du programme d’installation d’Analysis Services](../../../sql-server/install/media/ssas-setupas.gif "arborescence de fonctionnalités du programme d’installation d’Analysis Services")  
+     ![Arborescence de fonctionnalités d’installation d’Analysis Services](../../../sql-server/install/media/ssas-setupas.gif "arborescence de fonctionnalités d’installation d’Analysis Services")  
   
 2.  Dans la page Configuration d'Analysis Services, veillez à sélectionner **Mode Tabulaire**.  
   
@@ -65,7 +65,7 @@ Setup.exe /q /IAcceptSQLServerLicenseTerms /ACTION=install /FEATURES=AS /ASSERVE
   
 ## <a name="see-also"></a>Voir aussi  
  [Déterminer le Mode de serveur d’une Instance Analysis Services](../determine-the-server-mode-of-an-analysis-services-instance.md)   
- [Configurer l’accès de DirectQuery pour une base de données de modèle tabulaire ou de mémoire](../../tabular-models/enable-directquery-mode-in-ssms.md)   
+ [Configurer l’accès de DirectQuery pour une base de données de modèle tabulaire ou de In-Memory](../../tabular-models/enable-directquery-mode-in-ssms.md)   
  [Modélisation tabulaire &#40;SSAS tabulaire&#41;](../../tabular-models/tabular-models-ssas.md)  
   
   

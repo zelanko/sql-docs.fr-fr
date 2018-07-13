@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 2d05ef4c-5f91-48b2-8795-f0a201a0b3cc
 caps.latest.revision: 8
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 03157682c4b5a5dcaa89c46a64b094f8e321ec8e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 44bb65b09d081ba43aef2de6991bb09b9f6ecf4f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36045193"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37228889"
 ---
 # <a name="tutorial-introducing-expressions"></a>Didacticiel : introduction aux expressions
-  Les expressions vous permettent de créer des rapports puissants et flexibles. Ce didacticiel vous apprend à créer et implémenter des expressions qui utilisent des fonctions et des opérateurs communs. Vous utiliserez le **Expression** boîte de dialogue pour écrire des expressions qui concatènent les valeurs de nom, rechercher des valeurs dans un dataset distinct, afficher des images différentes selon les valeurs de champ et ainsi de suite.  
+  Les expressions vous permettent de créer des rapports puissants et flexibles. Ce didacticiel vous apprend à créer et implémenter des expressions qui utilisent des fonctions et des opérateurs communs. Vous utiliserez le **Expression** boîte de dialogue pour écrire des expressions qui concatènent des valeurs de nom, recherchent des valeurs dans un dataset distinct, afficher des images différentes en fonction des valeurs de champ et ainsi de suite.  
   
  Le rapport est un rapport en barres avec des lignes en couleur alternées de lignes blanches. Le rapport inclut un paramètre de sélection de couleur pour les lignes non blanches.  
   
@@ -37,17 +37,17 @@ ms.locfileid: "36045193"
   
 2.  [Mettre à jour les noms par défaut des données Source et le jeu de données](#UpdateNames)  
   
-3.  [Prénom, initiale et le dernier nom d’affichage](#Concatenate)  
+3.  [Prénom, initiale et le nom d’affichage](#Concatenate)  
   
-4.  [Utiliser des Images pour afficher le sexe](#Gender)  
+4.  [Utilisez des Images pour afficher le sexe](#Gender)  
   
-5.  [Rechercher le nom de pays/région](#Lookup)  
+5.  [Rechercher le nom de CountryRegion](#Lookup)  
   
 6.  [Compter les jours depuis le dernier achat](#Count)  
   
 7.  [Utiliser un indicateur pour afficher la comparaison des ventes](#Indicator)  
   
-8.  [Vérifiez l’état de rapport « Bicolore »](#GreenBar)  
+8.  [Rendre le rapport « Bicolore » de rapports](#GreenBar)  
   
 ### <a name="other-optional-steps"></a>Autres étapes facultatives  
   
@@ -78,10 +78,10 @@ ms.locfileid: "36045193"
      La boîte de dialogue **Mise en route** s'affiche.  
   
     > [!NOTE]  
-    >  Si le **mise en route** boîte de dialogue n’apparaît pas, à partir de la **le Générateur de rapports** et sur **nouveau**.  
+    >  Si le **mise en route** boîte de dialogue n’apparaît pas, à partir de la **le Générateur de rapports** bouton, cliquez sur **New**.  
   
     > [!NOTE]  
-    >  Si vous préférez à l’aide de la version ClickOnce du Générateur de rapports, ouvrez le Gestionnaire de rapports et cliquez sur **le Générateur de rapports**, ou accédez à un site SharePoint sur les Services de création de rapports des types de contenu tels que les rapports sont activés et cliquez sur  **Génération de rapports** sur la **Nouveau Document** menu sur le **Documents** onglet d’une bibliothèque de documents partagés.  
+    >  Si vous préférez utiliser la version ClickOnce du Générateur de rapports, ouvrez le Gestionnaire de rapports et cliquez sur **le Générateur de rapports**, ou accédez à un site SharePoint sur les Services de création de rapports des types de contenu tels que les rapports sont activés et cliquez sur  **Rapport du Générateur de rapports** sur le **Nouveau Document** menu sur le **Documents** onglet d’une bibliothèque de documents partagés.  
   
 2.  Dans le volet gauche, assurez-vous que **Nouveau rapport** est sélectionné.  
   
@@ -146,7 +146,7 @@ ms.locfileid: "36045193"
     > [!NOTE]  
     >  Les champs FirstName et LastName ne sont pas inclus. Vous les ajouterez dans une prochaine étape.  
   
-13. Dans le **valeurs** liste, cliquez sur `CountryRegionID` et cliquez sur le **somme** option.  
+13. Dans le **valeurs** liste, avec le bouton droit `CountryRegionID` et cliquez sur le **somme** option.  
   
      L'agrégat Sum n'est plus appliqué à CountryRegionID.  
   
@@ -710,9 +710,9 @@ ms.locfileid: "36045193"
 ## <a name="see-also"></a>Voir aussi  
  [Expressions &#40;Générateur de rapports et SSRS&#41;](report-design/expressions-report-builder-and-ssrs.md)   
  [Exemples d’expressions &#40;Générateur de rapports et SSRS&#41;](report-design/expression-examples-report-builder-and-ssrs.md)   
- [Indicateurs &#40;rapport Générateur et SSRS&#41;](report-design/indicators-report-builder-and-ssrs.md)   
- [Images, zones de texte, Rectangles et lignes &#40;rapport Générateur et SSRS&#41;](report-design/rectangles-and-lines-report-builder-and-ssrs.md)   
+ [Indicateurs &#40;Générateur de rapports et SSRS&#41;](report-design/indicators-report-builder-and-ssrs.md)   
+ [Images, zones de texte, Rectangles et lignes &#40;Générateur de rapports et SSRS&#41;](report-design/rectangles-and-lines-report-builder-and-ssrs.md)   
  [Tables &#40;Générateur de rapports et SSRS&#41;](report-design/tables-report-builder-and-ssrs.md)   
- [Ajouter des données à un rapport &#40;rapport Générateur et SSRS&#41;](report-data/report-datasets-ssrs.md)  
+ [Ajouter des données à un rapport &#40;Générateur de rapports et SSRS&#41;](report-data/report-datasets-ssrs.md)  
   
   

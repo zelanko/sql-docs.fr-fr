@@ -1,5 +1,5 @@
 ---
-title: Test et Validation (exploration de données) | Documents Microsoft
+title: Test et Validation (exploration de données) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - testing data mining models
 - comparing mining models
@@ -29,15 +29,15 @@ helpviewer_keywords:
 - accuracy testing [data mining]
 ms.assetid: 197144f5-21ed-4009-b448-fe412fb3916c
 caps.latest.revision: 60
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 0e83f8e0ad6227444f4dbc0962a83e1aedd8a5f5
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: d3fb68f21136da8236c653aaae71c9a9e461b432
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36045267"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37230151"
 ---
 # <a name="testing-and-validation-data-mining"></a>Test et validation (exploration de données)
   La validation est le processus consistant à évaluer les performances de vos modèles d'exploration de données sur des données réelles. Il est important de valider les modèles d'exploration de données en comprenant leurs qualité et caractéristiques avant de les déployer dans un environnement de production.  
@@ -97,6 +97,6 @@ ms.locfileid: "36045267"
 ## <a name="see-also"></a>Voir aussi  
  [Outils d’exploration de données](data-mining-tools.md)   
  [Solutions d’exploration de données](data-mining-solutions.md)   
- [Test et des tâches de Validation et des procédures &#40;d’exploration de données&#41;](testing-and-validation-tasks-and-how-tos-data-mining.md)  
+ [Test et des tâches de Validation et des procédures &#40;exploration de données&#41;](testing-and-validation-tasks-and-how-tos-data-mining.md)  
   
   

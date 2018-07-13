@@ -5,23 +5,22 @@ ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
+ms.technology: supportability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - 21889 (Database Engine error)
 ms.assetid: ae199540-7986-4cc2-b782-cd22793236d3
 caps.latest.revision: 7
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 13c7ae116929c0178e9a9b2e0f381574a5cbfd75
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 6a6b2287ec4c66400182179b5783c7bb0db382b3
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36039726"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37410098"
 ---
 # <a name="mssqlserver21889"></a>MSSQLSERVER_21889
     
@@ -40,6 +39,6 @@ ms.locfileid: "36039726"
  Afin d'héberger la base de données du serveur de publication, l'instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] doit être un serveur de publication de réplication. `sp_validate_redirected_publisher` appelle `sp_helpdistributor` sur le serveur distant pour déterminer si le serveur est un serveur de publication de réplication. Cette erreur est retournée lorsque l'exécution de la procédure stockée `sp_helpdistributor` indique que l'instance cible de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] n'est pas un serveur de publication de réplication.  
   
 ## <a name="user-action"></a>Action de l'utilisateur  
- Exécutez `sp_adddistributor` dans l'instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] qui héberge la base de données du serveur de publication. Lors de l'exécution de `sp_adddistributor`, spécifiez le serveur de distribution correct. Utilisez la même valeur pour le *@password* paramètre que celle utilisée lorsque `sp_adddistributor` a été initialement exécuté sur le serveur de distribution.  
+ Exécutez `sp_adddistributor` dans l'instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] qui héberge la base de données du serveur de publication. Lors de l'exécution de `sp_adddistributor`, spécifiez le serveur de distribution correct. Utilisez la même valeur pour le *@password* paramètre que celui utilisé lorsque `sp_adddistributor` a été initialement exécuté sur le serveur de distribution.  
   
   

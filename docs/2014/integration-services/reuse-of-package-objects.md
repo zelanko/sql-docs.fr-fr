@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - GUID regenerating [Integration Services]
 - reusing packages
@@ -19,13 +19,13 @@ ms.assetid: 08f723bf-15b5-44bd-9a46-04e8781bfbfb
 caps.latest.revision: 22
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: fe70bf7dd471d11f023adab63f6581bcbb2feb9b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 2be515df284d420790350c6be6fcc609666bcd56
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36051297"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37206079"
 ---
 # <a name="reuse-of-package-objects"></a>Réutiliser des objets de packages
   Fonctionnalités usuelles de packages que vous souhaitez réutiliser. Si vous avez par exemple créé un ensemble de tâches, il peut être utile de réutiliser des éléments rassemblés en groupe, ou un élément unique, tel qu'un gestionnaire de connexions créé dans un autre projet [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] .  
@@ -45,8 +45,8 @@ ms.locfileid: "36051297"
   
 -   [Copier des objets de packages](../../2014/integration-services/copy-package-objects.md)  
   
--   [Copier les éléments de projet](../../2014/integration-services/copy-project-items.md)  
+-   [Copier des éléments de projet](../../2014/integration-services/copy-project-items.md)  
   
--   [Enregistrer un Package en tant que modèle de Package](../../2014/integration-services/save-a-package-as-a-package-template.md)  
+-   [Enregistrer un package en tant que modèle de package](../../2014/integration-services/save-a-package-as-a-package-template.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Attributs CSDLBI pour la création de rapports | Documents Microsoft
+title: Attributs CSDLBI pour la conception de rapports | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -12,15 +12,15 @@ ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: 61ba3a27-790e-43bc-b421-e01bf2fdbda6
 caps.latest.revision: 8
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: e9d68293f4f71280c09d43a6b60dfa087830dc4d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: 26454c7ed2c1daa5d4ce512066f0a0fcf0ec7479
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36045453"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37259385"
 ---
 # <a name="csdlbi-attributes-for-report-design"></a>Attributs CSDLBI pour la conception de rapport
   Cette section décrit les attributs des extensions au CSDL pour la modélisation tabulaire qui affectent la création de requête [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)].  
@@ -56,13 +56,13 @@ ms.locfileid: "36045453"
 |Nom de l'attribut|Type de données|Description|  
 |--------------------|---------------|-----------------|  
 |`ReferenceName`|Texte|Identificateur utilisé pour référencer cette entité dans une requête DAX. En cas d'omission, le nom du champ est utilisé.|  
-|`Caption`|Texte|Nom complet de l'entité. Si omis, du champ `ReferenceName` est utilisé.|  
+|`Caption`|Texte|Nom complet de l'entité. Si omis, le champ `ReferenceName` est utilisé.|  
 |`Documentation`|Texte|Texte descriptif pour aider les utilisateurs professionnels à comprendre la signification du champ.|  
 |`Hidden`|Booléen|Indique si le champ doit être affiché. La valeur par défaut est `false`, qui signifie que le champ est affiché.|  
 |`DisplayFolder`|Texte|Nom (chemin d'accès complet) du dossier dans lequel ce champ s'affiche. En cas d'omission, le champ s'affiche à la racine du modèle.|  
 |`ContextualNameRule`|Enum|Valeur qui indique si et comment le nom de la propriété doit être modifié en fonction du contexte dans lequel il est utilisé. Les valeurs possibles sont : `None`, `Role`, `Merge`.|  
 |`Alignment`|Enum|Valeur indiquant comment les valeurs de champ doivent être alignées dans une présentation tabulaire. Les valeurs possibles sont les suivantes : `Default`, `Center`, `Left`, `Right`. En cas d'omission, la valeur par défaut détermine l'alignement selon le type de données du champ.|  
-|`FormatString`|Texte|Chaîne de format .NET indiquant comment la valeur du champ doit être mise en forme par défaut. En cas d'omission, le format suivant est utilisé :<br /><br /> -Champs Datetime : date courte régionale ou « d »<br />-Fonction d’agrégation de champs à virgule flottante et champs intégraux avec une valeur par défaut : nombre local ou « n »<br />-Fonction d’agrégation des entiers sans valeur par défaut : nombre décimal local ou « d »<br /><br /> Pour tous les autres types de champs, aucune chaîne de format ne s'applique.|  
+|`FormatString`|Texte|Chaîne de format .NET indiquant comment la valeur du champ doit être mise en forme par défaut. En cas d'omission, le format suivant est utilisé :<br /><br /> -Champs Datetime : date courte régionale ou « d »<br />-Fonction d’agrégation des champs virgule flottante et champs intégraux avec une valeur par défaut : nombre local ou « n »<br />-Fonction d’agrégation entiers sans valeur par défaut : nombre décimal local ou « d »<br /><br /> Pour tous les autres types de champs, aucune chaîne de format ne s'applique.|  
 |`Units`|Texte|Symbole qui est appliqué aux valeurs de champ pour exprimer des unités. En cas d'omission, les unités sont inconnues.|  
 |`Width`|Entier|Largeur par défaut en caractères qui doit être réservée pour afficher les valeurs du champ dans une présentation tabulaire. En ca d'omission, une largeur par défaut est basée sur le type de données du champ.|  
 |`SortDirection`|Enum|Valeur indiquant comment les valeurs de champs sont généralement triées. Les valeurs possibles sont les suivantes : `Default`, `Ascending`, `Descending`. En cas d'omission, la valeur par défaut affecte un ordre de tri basé sur le type de données du champ.|  

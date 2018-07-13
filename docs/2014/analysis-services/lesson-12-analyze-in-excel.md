@@ -1,5 +1,5 @@
 ---
-title: 'Leçon 13 : Analyser dans Excel | Documents Microsoft'
+title: 'Leçon 13 : Analyser dans Excel | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: ce717071-193b-4c99-9654-c7a613e16327
 caps.latest.revision: 16
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: jhubbard
-ms.openlocfilehash: b1dea62cbd78ca375a52adb7f1e6fd2285ff35e4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 9b9e50bda2a6168d54be78fd178d3d1d9161eff2
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36050939"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37200359"
 ---
 # <a name="lesson-13-analyze-in-excel"></a>Leçon 13 : Analyser dans Excel
   Dans cette leçon, vous allez utiliser la fonction Analyser dans Excel dans [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] pour ouvrir Microsoft Excel, créer automatiquement une connexion de source de données à l'espace de travail du modèle et ajouter automatiquement un tableau croisé dynamique à la feuille de calcul. La fonction Analyser dans Excel offre un moyen simple et rapide de tester l'efficacité de votre conception de modèle avant de le déployer. Vous n'allez exécuter aucune analyse de données dans cette leçon. L'objectif de cette leçon est de vous familiariser, en tant qu'auteur de modèle, avec les outils que vous pouvez utiliser pour tester votre conception de modèle. Contrairement à la fonctionnalité Analyser dans Excel, qui est destinée aux auteurs de modèle, les utilisateurs finaux utilisent les applications de création de rapports clientes, par exemple Excel ou [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)], pour se connecter aux données du modèle déployé et les parcourir.  
@@ -42,7 +42,7 @@ ms.locfileid: "36050939"
   
      Excel s'ouvre avec un nouveau classeur. Une connexion de source de données est créée à l'aide du compte d'utilisateur actuel et la perspective par défaut est utilisée pour définir les champs visibles. Un tableau croisé dynamique est automatiquement ajouté à la feuille de calcul.  
   
-3.  Dans Excel, dans le **liste de champs de tableau croisé dynamique**, notez le **Date** et **Internet Sales** mesures s’affichent, ainsi que le **client**,  **Date**, **Geography**, **produit**, **Product Category**, **sous-catégorie de produit**et **Internet Sales** les tables avec toutes leurs colonnes respectives s’affichent.  
+3.  Dans Excel, dans le **liste de champs de tableau croisé dynamique**, notez le **Date** et **Internet Sales** les mesures apparaissent, ainsi que le **client**,  **Date**, **Geography**, **produit**, **Product Category**, **Product Subcategory**et **Internet Sales** apparition des tables avec toutes leurs colonnes respectives.  
   
 4.  Fermez Excel sans enregistrer le classeur.  
   

@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine-imoltp
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 5880fbd9-a23e-464a-8b44-09750eeb2dad
 caps.latest.revision: 22
-author: stevestein
-ms.author: sstein
-manager: jhubbard
-ms.openlocfilehash: d0e96880f661a05f150785c53c24afbfbf66d2ea
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: 4130e24dc67fd174130ed0e45e145242e79b86d3
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36045586"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37217349"
 ---
 # <a name="native-compilation-of-tables-and-stored-procedures"></a>Compilation en mode natif de tables et de procédures stockées
   L'OLTP en mémoire introduit le concept de compilation native. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] peut compiler en mode natif des procédures stockées qui accèdent aux tables optimisées en mémoire. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] peut également compiler en mode natif des tables optimisées en mémoire. La compilation native permet un accès aux données plus rapide et une exécution des requêtes plus efficace que le [!INCLUDE[tsql](../../includes/tsql-md.md)](traditionnel) interprété. La compilation en mode natif de tables et de procédures stockées produit des DLL.  
@@ -119,7 +119,7 @@ go
  La compilation native des tables et des procédures stockées utilise le compilateur de l'OLTP en mémoire. Ce compilateur génère des fichiers qui sont écrits sur le disque et chargés en mémoire. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilise les mécanismes suivants pour restreindre l'accès à ces fichiers.  
   
 ### <a name="native-compiler"></a>Compilateur natif  
- Le fichier exécutable du compilateur, ainsi que les fichiers binaires et les fichiers d'en-tête nécessaires pour la compilation native, sont installés dans le cadre de l'instance [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dans le dossier MSSQL\Binn\Xtp. Ainsi, si l’instance par défaut est installée dans C:\Program Files, les fichiers du compilateur sont installés dans C:\Program Files\\[!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSSQL12. MSSQLSERVER\MSSQL\Binn\Xtp.  
+ Le fichier exécutable du compilateur, ainsi que les fichiers binaires et les fichiers d'en-tête nécessaires pour la compilation native, sont installés dans le cadre de l'instance [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dans le dossier MSSQL\Binn\Xtp. Ainsi, si l’instance par défaut est installé sous C:\Program Files, les fichiers du compilateur sont installés dans C:\Program Files\\[!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSSQL12. MSSQLSERVER\MSSQL\Binn\Xtp.  
   
  Pour limiter l'accès au compilateur, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilise des listes de contrôle d'accès (ACL) qui permettent de restreindre l'accès aux fichiers binaires. Tous les fichiers binaires [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sont protégés contre la modification ou la falsification via des listes de contrôle d'accès. Les listes de contrôle d'accès du compilateur natif limitent également l'utilisation du compilateur ; seuls le compte de service [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et les administrateurs système disposent des autorisations de lecture et d'exécution des fichiers du compilateur natif.  
   
