@@ -1,13 +1,11 @@
 ---
-title: bcp_writefmt | Documents Microsoft
+title: bcp_writefmt | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
@@ -20,15 +18,15 @@ helpviewer_keywords:
 - bcp_writefmt function
 ms.assetid: cb4c1d37-667d-4bcd-b13c-eb638bcc9b69
 caps.latest.revision: 31
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 1fe386d49ea68e8b6f33048f246c3a3afd037b4f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: 4f82c05a8d605b056619e22f7f711762b1555ac7
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36153468"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37427878"
 ---
 # <a name="bcpwritefmt"></a>bcp_writefmt
   Crée un fichier de format qui contient une description du format du fichier de données de copie en bloc actif.  
@@ -60,7 +58,7 @@ szFormatFile
 ## <a name="remarks"></a>Notes  
  Le fichier de format spécifie le format de données d'un fichier de données créé par le biais d'une copie en bloc. Les appels à [bcp_columns](bcp-columns.md) et [bcp_colfmt](bcp-colfmt.md) définissent le format du fichier de données. **bcp_writefmt** enregistre cette définition dans le fichier référencé par l'argument *szFormatFile*. Pour plus d’informations, consultez [bcp_init](bcp-init.md).  
   
- Pour plus d’informations sur la structure des **bcp** fichiers de format de données, consultez [importer et exporter des données en bloc à l’aide de l’utilitaire bcp &#40;SQL Server&#41;](../import-export/import-and-export-bulk-data-by-using-the-bcp-utility-sql-server.md).  
+ Pour plus d’informations sur la structure de **bcp** fichiers de format de données, consultez [importer et exporter des données en bloc à l’aide de l’utilitaire bcp &#40;SQL Server&#41;](../import-export/import-and-export-bulk-data-by-using-the-bcp-utility-sql-server.md).  
   
  Pour charger un fichier de format enregistré, utilisez [bcp_readfmt](bcp-readfmt.md).  
   

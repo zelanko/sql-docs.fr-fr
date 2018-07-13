@@ -1,5 +1,5 @@
 ---
-title: Spécifier une Image en tant que pointeur sur une jauge (Générateur de rapports et SSRS) | Documents Microsoft
+title: Spécifier une Image en tant que pointeur sur une jauge (Générateur de rapports et SSRS) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 9d73b3c3-a068-4868-a2be-0cd261b6e92b
 caps.latest.revision: 7
-author: douglaslM
+author: maggiesmsft
 ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: bce410684b433d8a444d36affa91f8134673432d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: d96efa70219c841abae8d0129716810645d283d1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36154316"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37230139"
 ---
 # <a name="specify-an-image-as-a-pointer-on-a-gauge-report-builder-and-ssrs"></a>Spécifier une image en tant que pointeur dans une jauge (Générateur de rapports et SSRS)
   La jauge contient trois styles intégrés pouvant être utilisés pour personnaliser l'apparence du pointeur. Pour une jauge radiale, les styles intégrés sont les suivants : Aiguille, Marqueur et Barre. Pour une jauge linéaire, les styles intégrés sont les suivants : Marqueur, Barre et Thermomètre. Si un pointeur unique est requis, l'utilisateur peut créer et spécifier une image qui sera utilisée en tant que pointeur totalement fonctionnel.  
@@ -43,7 +43,7 @@ ms.locfileid: "36154316"
   
 3.  Cliquez sur le **insérer** onglet sur le ruban et double-cliquez sur l’icône d’image. La boîte de dialogue **Propriétés de l’image** s’ouvre.  
   
-4.  Ajoutez une image à votre rapport. Pour plus d’informations, consultez [incorporer une Image dans un rapport &#40;le Générateur de rapports et SSRS&#41;](report-design/embed-an-image-in-a-report-report-builder-and-ssrs.md).  
+4.  Ajoutez une image à votre rapport. Pour plus d’informations, consultez [incorporer une Image dans un rapport &#40;Générateur de rapports et SSRS&#41;](report-design/embed-an-image-in-a-report-report-builder-and-ssrs.md).  
   
 5.  Ouvrez le volet Propriétés.  
   
@@ -54,7 +54,7 @@ ms.locfileid: "36154316"
 8.  Dans **Source**, sélectionnez **Embedded** dans la liste déroulante.  
   
     > [!NOTE]  
-    >  Si votre image est stockée dans la base de données ou sur le web, vous pouvez spécifier l'option appropriée pour cette propriété. Pour plus d’informations, consultez [boîte de dialogue des propriétés Image, général &#40;le Générateur de rapports et SSRS&#41;](../../2014/reporting-services/image-properties-dialog-box-general-report-builder-and-ssrs.md).  
+    >  Si votre image est stockée dans la base de données ou sur le web, vous pouvez spécifier l'option appropriée pour cette propriété. Pour plus d’informations, consultez [boîte de dialogue de propriétés Image, général &#40;Générateur de rapports et SSRS&#41;](../../2014/reporting-services/image-properties-dialog-box-general-report-builder-and-ssrs.md).  
   
 9. Dans **valeur**, sélectionnez le nom de votre image dans la liste déroulante.  
   
@@ -62,7 +62,7 @@ ms.locfileid: "36154316"
   
 ## <a name="see-also"></a>Voir aussi  
  [Mise en forme des pointeurs sur une jauge &#40;Générateur de rapports et SSRS&#41;](report-design/formatting-pointers-on-a-gauge-report-builder-and-ssrs.md)   
- [Ajouter une jauge à un rapport &#40;rapport Générateur et SSRS&#41;](report-design/add-a-gauge-to-a-report-report-builder-and-ssrs.md)   
+ [Ajouter une jauge à un rapport &#40;Générateur de rapports et SSRS&#41;](report-design/add-a-gauge-to-a-report-report-builder-and-ssrs.md)   
  [Mise en forme des lignes, des couleurs et des images &#40;Générateur de rapports et SSRS&#41;](report-design/images-report-builder-and-ssrs.md)   
  [Jauges &#40;Générateur de rapports et SSRS&#41;](report-design/gauges-report-builder-and-ssrs.md)  
   

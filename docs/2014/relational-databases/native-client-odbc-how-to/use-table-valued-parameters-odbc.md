@@ -1,31 +1,29 @@
 ---
-title: Utiliser des paramètres table (ODBC) | Documents Microsoft
+title: Utiliser des paramètres table (ODBC) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: 6f8da6ab-9de6-4d0a-9b7e-acb76a50a2e7
 caps.latest.revision: 5
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 9fc29ab49b9a79b96cbef837182fa1a4ccfd39ab
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: 13cf47c37cf2b7936ed2e6be5d3aaa27eb74fdb0
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36152637"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37417118"
 ---
 # <a name="use-table-valued-parameters-odbc"></a>Utiliser des paramètres table (ODBC)
   Cet exemple indique comment utiliser les paramètres table pour insérer plusieurs lignes à plusieurs colonnes, avec un seul appel au serveur.  
   
- Pour plus d’informations sur les paramètres table, consultez [paramètres table &#40;ODBC&#41;](../native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md). Pour plus d’exemples à l’aide des paramètres table, consultez [exemples de programmation de paramètres ODBC Table-Valued](../../database-engine/dev-guide/odbc-table-valued-parameter-programming-examples.md).  
+ Pour plus d’informations sur les paramètres table, consultez [paramètres table &#40;ODBC&#41;](../native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md). Pour plus d’exemples à l’aide des paramètres table, consultez [sur Parameter Programming Examples](../../database-engine/dev-guide/odbc-table-valued-parameter-programming-examples.md).  
   
 ## <a name="example"></a>Exemple  
  Vous aurez besoin d'une source de données ODBC appelée TVPDemo. La base de données par défaut pour TVPDemo peut être n'importe quelle base de données de test sur votre ordinateur. Cette source de données doit être basée sur le pilote ODBC pour [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client.  

@@ -1,5 +1,5 @@
 ---
-title: Configuration avancée de plusieurs Site Web (SSRS en Mode natif) | Documents Microsoft
+title: Configuration avancée de plusieurs Web Site (Mode natif SSRS) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - SQL12.rsconfigtool.advancedmultiplewebsiteconfig.F1
 ms.assetid: af4ede43-2225-45b5-ae7e-9202411551ba
 caps.latest.revision: 6
 author: markingmyname
 ms.author: maghan
-manager: jhubbard
-ms.openlocfilehash: 880a5a496df597e929be8063323fa833696eabc3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: eafcc3b69916ba253b430a61fb5b510eb3480d91
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36142183"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37220729"
 ---
 # <a name="advanced-multiple-web-site-configuration-ssrs-native-mode"></a>Configuration avancée de plusieurs sites Web (SSRS en mode natif)
   Utilisez cette boîte de dialogue pour créer et gérer les URL permettant d'accéder à un serveur de rapports ou au Gestionnaire de rapports. La boîte de dialogue **Configuration de site Web multiple avancée** est utilisée pour créer des URL supplémentaires, des URL personnalisées qui incluent un nom d'en-tête de l'hôte ou spécifier une adresse IP au format IPv4 ou IPv6.  
@@ -30,7 +30,7 @@ ms.locfileid: "36142183"
   
  La création de plusieurs URLS est utile si vous souhaitez configurer les différents moyens d'accéder à un serveur de rapports. Par exemple, l'accès au serveur de rapports via une connexion intranet et extranet requiert en général que vous ayez une URL différente pour chaque type de connexion.  
   
- Pour ouvrir la **Configuration de Site Web Multiple avancée** boîte de dialogue, cliquez sur **avancé** sur la **URL du Service Web** ou **URL du Gestionnaire de rapports**page dans le [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Configuration Manager. Une fois la boîte de dialogue **Configuration de site Web multiple avancée** ouverte, vous pouvez cliquer sur **Ajoutez** ou sur **Modifier** pour définir de nouvelles URL ou modifier ou supprimer les URL existantes.  
+ Pour ouvrir le **Configuration de Site Web Multiple avancée** boîte de dialogue, cliquez sur **avancé** sur le **URL du Service Web** ou **URL du Gestionnaire de rapports**page dans le [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Configuration Manager. Une fois la boîte de dialogue **Configuration de site Web multiple avancée** ouverte, vous pouvez cliquer sur **Ajoutez** ou sur **Modifier** pour définir de nouvelles URL ou modifier ou supprimer les URL existantes.  
   
  Cliquez sur **OK** pour enregistrer vos modifications. Si vous ajoutez ou supprimez des URL, mais en revanche fermez la boîte de dialogue sans cliquer d'abord sur **OK**, vos modifications seront perdues.  
   
@@ -49,7 +49,7 @@ ms.locfileid: "36142183"
      Si vous avez plusieurs cartes, une adresse IP apparaît pour chacune d'elles. Si vous sélectionnez uniquement cette valeur, elle limite l'accès de l'application à la seule adresse IP (et à tout nom d'hôte mappé sur cette adresse par un serveur de noms de domaine). Vous ne pouvez pas utiliser localhost pour accéder à un serveur de rapports, et vous ne pouvez pas utiliser les adresses IP des autres cartes réseau installées sur le serveur de rapports.  
   
  **Port**  
- Spécifie le port que surveille le serveur de rapports pour les demandes. Le port par défaut est le port 80. Si vous utilisez le port 80, vous n'avez pas à l'inclure dans l'URL. Si vous utilisez tout autre numéro de port, vous devez toujours l’inclure dans l’URL (par exemple, http://localhost:8181/reports).  
+ Spécifie le port que surveille le serveur de rapports pour les demandes. Le port par défaut est le port 80. Si vous utilisez le port 80, vous n'avez pas à l'inclure dans l'URL. Si vous utilisez un autre numéro de port, vous devez toujours l’inclure dans l’URL (par exemple, http://localhost:8181/reports).  
   
  **En-tête de l'hôte**  
  Si vous avez déjà un en-tête de l'hôte défini sur un serveur de noms de domaine qui se résout sur votre ordinateur, vous pouvez spécifier cet en-tête de l'hôte dans une URL que vous configurez pour l'accès au serveur de rapports.  

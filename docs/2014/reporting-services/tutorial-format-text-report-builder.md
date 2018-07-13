@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 67d8513e-8a70-464b-b87f-e91d010cfd82
 caps.latest.revision: 13
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 48164ff35e06c6aa9cd2a8ac0c9ba39fcf37310e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 832034620db797bdbd602cf8f7c99fd51c804bbc
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36154975"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37175171"
 ---
 # <a name="tutorial-format-text-report-builder"></a>Didacticiel : mettre en forme du texte (Générateur de rapports)
   Dans ce didacticiel, vous pouvez vous entraîner à mettre en forme le texte de plusieurs façons. Après avoir configuré le rapport vierge avec la source de données et le dataset, vous pourrez choisir les étapes que vous souhaitez explorer.  
@@ -30,16 +30,16 @@ ms.locfileid: "36154975"
   
  Dans une étape, vous allez sciemment générer une erreur afin de voir pourquoi il s'agit d'une erreur. Vous corrigerez ensuite l'erreur pour obtenir l'effet souhaité.  
   
- Une version améliorée du rapport créé dans ce didacticiel est disponible sous forme d'exemple de rapport Générateur de rapports de [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]. Pour plus d’informations sur le téléchargement de cet exemple de rapport et d’autres, consultez [rapports exemple](http://go.microsoft.com/fwlink/?LinkId=184851).  
+ Une version améliorée du rapport créé dans ce didacticiel est disponible sous forme d'exemple de rapport Générateur de rapports de [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]. Pour plus d’informations sur le téléchargement de cet exemple de rapport et d’autres, consultez [exemples de rapports Générateur de rapports](http://go.microsoft.com/fwlink/?LinkId=184851).  
   
 ##  <a name="BackToTop"></a> Ce que vous allez apprendre  
   
 ### <a name="set-up-the-report"></a>Configurer le rapport  
- 1. [Créer un rapport vierge comportant des données Source et le jeu de données](#CreateReport)  
+ 1. [Créer un rapport vierge avec une données Source et le jeu de données](#CreateReport)  
   
  2. [Ajouter un champ à l’aire de conception de rapport (de façon incorrecte, puis correctement)](#AddField)  
   
- 3. [Ajouter une Table à l’aire de conception](#AddTable)  
+ 3. [Ajouter une Table à l’aire de conception de rapport](#AddTable)  
   
 ### <a name="pick-and-choose"></a>Choisir  
  [Ajouter un lien hypertexte au rapport](#AddHyperlink)  
@@ -57,7 +57,7 @@ ms.locfileid: "36154975"
 ## <a name="requirements"></a>Spécifications  
  Pour plus d’informations sur les spécifications, consultez [Éléments requis pour les didacticiels &#40;Générateur de rapports&#41;](../reporting-services/report-builder-tutorials.md).  
   
-##  <a name="CreateReport"></a> Créer un rapport vierge comportant des données Source et le jeu de données  
+##  <a name="CreateReport"></a> Créer un rapport vierge avec une données Source et le jeu de données  
   
 #### <a name="to-create-a-blank-report"></a>Pour créer un rapport vierge  
   
@@ -81,7 +81,7 @@ ms.locfileid: "36154975"
 4.  Vérifiez que le type de connexion est Microsoft SQL Server, puis, dans la zone **Chaîne de connexion**, tapez **Data Source = \<nom_serveur>**  
   
     > [!NOTE]  
-    >  L’expression \<nom_serveur >, pour l’exemple rapport001, spécifie un ordinateur sur lequel une instance du moteur de base de données SQL Server est installée. Ce didacticiel n'a pas besoin de données spécifiques. Il a juste besoin d'une connexion à une base de données [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] . Si une connexion à une source de données est déjà répertoriée sous **Connexions à la source de données**, vous pouvez la sélectionner et passer à la procédure suivante, « Pour créer un dataset ». Pour plus d’informations, consultez [Autres manières d’obtenir une connexion de données &#40;Générateur de rapports&#41;](../reporting-services/alternative-ways-to-get-a-data-connection-report-builder.md).  
+    >  L’expression \<servername >, par exemple rapport001, spécifie un ordinateur sur lequel une instance du moteur de base de données SQL Server est installée. Ce didacticiel n'a pas besoin de données spécifiques. Il a juste besoin d'une connexion à une base de données [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] . Si une connexion à une source de données est déjà répertoriée sous **Connexions à la source de données**, vous pouvez la sélectionner et passer à la procédure suivante, « Pour créer un dataset ». Pour plus d’informations, consultez [Autres manières d’obtenir une connexion de données &#40;Générateur de rapports&#41;](../reporting-services/alternative-ways-to-get-a-data-connection-report-builder.md).  
   
 5.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
@@ -138,18 +138,18 @@ ms.locfileid: "36154975"
   
 8.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-##  <a name="AddField"></a> Ajouter un champ à l’aire de conception  
+##  <a name="AddField"></a> Ajouter un champ à l’aire de conception de rapport  
  Si vous souhaitez qu'un champ de votre dataset apparaisse dans un rapport, votre premier réflexe peut être de le faire glisser directement sur l'aire de conception. Cet exercice montre pourquoi cela ne fonctionne pas et ce que vous devez faire à la place.  
   
 #### <a name="to-add-a-field-to-the-report-and-get-the-wrong-result"></a>Pour ajouter un champ au rapport (et obtenir le résultat incorrect)  
   
 1.  Faites glisser le champ **FullName** du volet Données du rapport vers l’aire de conception.  
   
-     Le Générateur de rapports crée une zone de texte avec une expression, représentée sous la forme \<Expr >.  
+     Générateur de rapports crée une zone de texte avec une expression, représentée sous la forme \<Expr >.  
   
 2.  Cliquez sur **Exécuter**.  
   
-     Notez qu’il existe qu’un seul enregistrement, **Fernando Ross**, qui est dans l’ordre alphabétique le premier enregistrement de la requête. Le champ ne se répète pas pour afficher les autres enregistrements.  
+     Notez qu’il existe qu’un seul enregistrement, **Fernando Ross**, qui est dans l’ordre alphabétique du premier enregistrement de la requête. Le champ ne se répète pas pour afficher les autres enregistrements.  
   
 3.  Cliquez sur **Conception** pour repasser en mode Conception.  
   
@@ -193,8 +193,8 @@ ms.locfileid: "36154975"
   
 7.  Sélectionnez la zone de liste et appuyez sur la touche Suppr.  
   
-##  <a name="AddTable"></a> Ajouter une Table à l’aire de conception  
- Créez cette table afin que vous disposiez d’un emplacement pour placer des liens hypertexte et le texte pivoté.  
+##  <a name="AddTable"></a> Ajouter une Table à l’aire de conception de rapport  
+ Créer cette table afin que vous avez un emplacement pour placer des liens hypertexte et le texte pivoté.  
   
 #### <a name="to-add-a-table-to-the-report"></a>Pour ajouter un tableau au rapport  
   
@@ -202,9 +202,9 @@ ms.locfileid: "36154975"
   
 2.  Sur le **choisir un dataset** page de l’Assistant nouveau tableau ou matrice, cliquez sur **choisir un dataset existant dans ce rapport ou un dataset partagé**, puis cliquez sur **TextDataset (dans ce rapport)**, puis cliquez sur **suivant**.  
   
-3.  Sur le **organiser les champs** page, faites glisser le **Territory**, **LinkText**, et **produit** champs **degroupesdelignes**, faites glisser le **Sales** au champ **valeurs**, puis cliquez sur **suivant**.  
+3.  Sur le **organiser les champs** page, faites glisser le **Territory**, **LinkText**, et **produit** champs **degroupesdelignes**, faites glisser le **Sales** champ **valeurs**, puis cliquez sur **suivant**.  
   
-4.  Sur le **choisir la disposition** page, désactivez la **développer/réduire les groupes** case à cocher afin de pouvoir afficher la totalité de la table, puis cliquez sur **suivant**.  
+4.  Sur le **choisir la disposition** page, désactivez le **développer/réduire les groupes** case à cocher afin de voir l’ensemble de table, puis cliquez sur **suivant**.  
   
 5.  Sur le **choisir un style** , cliquez sur **ardoise**, puis cliquez sur **Terminer**.  
   
@@ -218,9 +218,9 @@ ms.locfileid: "36154975"
   
 9. Avec le bouton droit de la zone de texte qui contient `[LinkText]`, puis cliquez sur **fractionner les cellules**.  
   
-10. Sélectionnez la cellule vide sous la `[LinkText]` la cellule, puis maintenez la touche MAJ enfoncée et sélectionnez les deux cellules à sa droite : le **Total** de cellule dans le **produit** colonne et la `[Sum(Sales)]` cellule dans le  **Ventes** colonne.  
+10. Sélectionnez la cellule vide sous la `[LinkText]` la cellule, puis maintenez la touche MAJ ENFONCÉE et sélectionnez les deux cellules à sa droite : la **Total** de cellule dans le **produit** colonne et la `[Sum(Sales)]` cellule dans le  **Ventes** colonne.  
   
-11. Avec ces trois cellules sélectionnées, cliquez sur une de ces cellules, sur **supprimer la ligne**.  
+11. Ces trois cellules étant sélectionnées, cliquez sur un de ces cellules et cliquez sur **supprimer la ligne**.  
   
 12. Cliquez sur **Exécuter**.  
   
@@ -233,7 +233,7 @@ ms.locfileid: "36154975"
   
 2.  Cliquez avec le bouton droit dans la cellule qui contient `[LinkText]`, puis cliquez sur **Propriétés de la zone de texte**.  
   
-3.  Dans le **propriétés de la zone de texte** , cliquez sur **Action**.  
+3.  Dans le **propriétés de la zone texte** , cliquez sur **Action**.  
   
 4.  Cliquez sur **atteindre l’URL**.  
   
@@ -243,7 +243,7 @@ ms.locfileid: "36154975"
   
 7.  Sélectionnez `[LinkText]`.  
   
-8.  Dans le **police** section de la **accueil** , cliquez sur le **Underline** bouton, puis cliquez sur la flèche déroulante à côté la **couleur** bouton, Cliquez sur **bleu**.  
+8.  Dans le **police** section de la **accueil** , cliquez sur le **souligné** bouton, puis cliquez sur la flèche déroulante à côté le **couleur** bouton, Cliquez sur **bleu**.  
   
 9. Cliquez sur **Exécuter**.  
   
@@ -264,14 +264,14 @@ ms.locfileid: "36154975"
   
 4.  Si le volet Propriétés n’est pas ouvert, sous l’onglet **Affichage** , cochez la case **Propriétés** .  
   
-5.  Dans le volet Propriétés, recherchez la propriété WritingMode.  
+5.  Recherchez la propriété WritingMode dans le volet Propriétés.  
   
     > [!NOTE]  
     >  Quand les propriétés du volet Propriétés sont organisées en catégories, WritingMode figure dans la catégorie **Localisation** . Assurez-vous que vous avez sélectionné la cellule et non le texte. WritingMode est une propriété de la zone de texte, pas du texte.  
   
 6.  Dans la zone de liste, cliquez sur **Rotate270**.  
   
-7.  Sur le **accueil** onglet dans le **paragraphe** , cliquez sur le **central** et **Center** boutons pour localiser le texte dans le centre de la cellule verticalement et horizontalement.  
+7.  Sur le **accueil** onglet dans le **paragraphe** , cliquez sur le **central** et **Center** boutons pour le texte dans le centre de la cellule verticalement et horizontalement.  
   
 8.  Cliquez sur Exécuter (**!**).  
   
@@ -309,7 +309,7 @@ ms.locfileid: "36154975"
   
 5.  Cliquez avec le bouton droit sur l’ensemble du texte sélectionné, puis cliquez sur **Propriétés du texte**.  
   
-6.  Sur le **général** sous **type de balise**, cliquez sur **HTML - interpréter les balises HTML comme styles**.  
+6.  Sur le **général** page sous **type de balise**, cliquez sur **HTML - interpréter les balises HTML comme styles**.  
   
 7.  Cliquez sur **OK**.  
   
@@ -327,7 +327,7 @@ ms.locfileid: "36154975"
   
 3.  Sous l’onglet **Accueil** , dans le groupe **Nombre** , cliquez sur le bouton **Devise** .  
   
-4.  (Facultatif) Sur le **accueil** sous l’onglet du **nombre** , cliquez sur le **Styles des espaces réservés** , puis cliquez sur **exemples de valeurs** pour voir comment les nombres seront mise en forme.  
+4.  (Facultatif) Sur le **accueil** sous l’onglet le **nombre** de groupe, cliquez sur le **Styles des espaces réservés** , puis cliquez sur **exemples de valeurs** pour voir comment les nombres mettre en forme.  
   
 5.  (Facultatif) Sous l’onglet **Accueil** , dans le groupe **Nombre** , cliquez sur le bouton **Réduire les décimales** à deux reprises, pour afficher les valeurs en dollars sans indication de centimes.  
   
@@ -367,7 +367,7 @@ ms.locfileid: "36154975"
 4.  Cliquez sur **Enregistrer**.  
   
 ## <a name="next-steps"></a>Étapes suivantes  
- Il existe plusieurs façons de mettre en forme le texte dans le Générateur de rapports [didacticiel : création d’un rapport de forme libre &#40;le Générateur de rapports&#41; ](../reporting-services/tutorial-creating-a-free-form-report-report-builder.md) contient d’autres exemples.  
+ Il existe plusieurs façons de mettre en forme le texte dans le Générateur de rapports [didacticiel : création d’un rapport de forme libre &#40;Générateur de rapports&#41; ](../reporting-services/tutorial-creating-a-free-form-report-report-builder.md) contient d’autres exemples.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Didacticiels &#40;Générateur de rapports&#41;](report-builder-tutorials.md)   

@@ -1,28 +1,26 @@
 ---
-title: Extraire et mettre à jour des ensembles de lignes (ODBC) | Documents Microsoft
+title: Extraire et mettre à jour des ensembles de lignes (ODBC) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - rowsets [ODBC]
 ms.assetid: cf0eb3b4-8b72-49fc-a845-95edc360cf93
 caps.latest.revision: 11
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 740b549021c4ef5fc9253b8e774b3d5e38323b2d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: d41ba76ceaa157070fc2584c5ebd6d080f415420
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36152809"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37419468"
 ---
 # <a name="fetch-and-update-rowsets-odbc"></a>Extraire et mettre à jour des ensembles de lignes (ODBC)
     
@@ -36,7 +34,7 @@ ms.locfileid: "36152809"
   
      Si des colonnes indépendantes sont utilisées, pour chaque ligne, appelez [SQLSetPos](http://go.microsoft.com/fwlink/?LinkId=58407) avec SQL_POSITION pour définir la position du curseur ; ensuite, pour chaque colonne indépendante :  
   
-    -   Appelez [SQLGetData](../../native-client-odbc-api/sqlgetdata.md) une ou plusieurs fois pour obtenir les données pour les colonnes indépendantes après la dernière colonne dépendante de l’ensemble de lignes. Les appels à [SQLGetData](../../native-client-odbc-api/sqlgetdata.md) doit être dans l’ordre croissant des numéros de colonne.  
+    -   Appelez [SQLGetData](../../native-client-odbc-api/sqlgetdata.md) une ou plusieurs fois pour obtenir les données pour les colonnes indépendant après la dernière colonne dépendante de l’ensemble de lignes. Les appels à [SQLGetData](../../native-client-odbc-api/sqlgetdata.md) doit se trouver dans l’ordre croissant des numéros de colonne.  
   
     -   Appelez plusieurs fois [SQLGetData](../../native-client-odbc-api/sqlgetdata.md) pour obtenir des données à partir d’une colonne text ou image.  
   
@@ -46,9 +44,9 @@ ms.locfileid: "36152809"
   
      Si des colonnes image ou text de données en cours d'exécution sont utilisées pour une opération de mise à jour ou d'ajout, gérez-les.  
   
-6.  Vous pouvez également exécuter une instruction UPDATE ou DELETE positionnée, en spécifiant le nom du curseur (disponible à partir de [SQLGetCursorName](../../native-client-odbc-api/sqlgetcursorname.md)) et à l’aide d’un descripteur d’instruction différent sur la même connexion.  
+6.  Si vous le souhaitez, exécuter une instruction UPDATE ou DELETE positionnée, en spécifiant le nom de curseur (disponible à partir de [SQLGetCursorName](../../native-client-odbc-api/sqlgetcursorname.md)) et l’utilisation d’un descripteur d’instruction différent sur la même connexion.  
   
 ## <a name="see-also"></a>Voir aussi  
- [À l’aide des rubriques de procédures relatives aux curseurs &#40;ODBC&#41;](using-cursors-how-to-topics-odbc.md)  
+ [À l’aide des rubriques de procédures de curseurs &#40;ODBC&#41;](using-cursors-how-to-topics-odbc.md)  
   
   

@@ -1,28 +1,27 @@
 ---
-title: Gestion d’une base de données de Publication AlwaysOn (SQL Server) | Documents Microsoft
+title: Maintenance d’une base de données de Publication AlwaysOn (SQL Server) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Availability Groups [SQL Server], interoperability
 - replication [SQL Server], AlwaysOn Availability Groups
 ms.assetid: 55b345fe-2eb9-4b04-a900-63d858eec360
 caps.latest.revision: 9
-author: MikeRayMSFT
-ms.author: mikeray
-manager: jhubbard
-ms.openlocfilehash: dd0f464aeefcbd77f2a4f0dee726516a55a60132
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 1a2e66a3537b62658458357a642a76d6e283abb8
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36154259"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37200199"
 ---
 # <a name="maintaining-an-alwayson-publication-database-sql-server"></a>Gestion d'une base de données de publication AlwaysOn (SQL Server)
   Cette rubrique comporte des remarques spécifiques sur la gestion d'une base de données de publication lors de l'utilisation de groupes de disponibilité AlwaysOn.  
@@ -36,17 +35,17 @@ ms.locfileid: "36154259"
   
 -   Le moniteur de réplication affiche toujours les informations de publication sous le serveur de publication d'origine. Toutefois, ces informations peuvent être consultées dans le moniteur de réplication à partir de tout réplica en ajoutant le serveur de publication d'origine comme serveur.  
   
--   Si vous faites appel aux procédures stockées ou aux Replication Management Objects pour gérer la réplication sur le principal actuel, vous devez spécifier comme serveur de publication le nom de l'instance où la base de données est activée pour la réplication (le serveur de publication d'origine). Pour déterminer le nom approprié, utilisez la fonction `PUBLISHINGSERVERNAME`. Lorsqu'une base de données de publication joint un groupe de disponibilité, les métadonnées de réplication stockées dans les réplicas de bases de données secondaires sont identiques à celles du principal. Par conséquent, en cas de bases de données de publication activées pour la réplication sur le principal, le nom d'instance du serveur de publication stocké dans les tables système du serveur secondaire est celui du serveur principal, et non du serveur secondaire. Cela affecte la configuration et l'administration de la réplication si la base de données de publication bascule sur un serveur secondaire. Par exemple, si vous configurez la réplication avec des procédures stockées sur un serveur secondaire après le basculement, et vous souhaitez un abonnement par extraction à une base de données de publication qui a été activé sur un réplica différent, vous devez spécifier le nom du serveur de publication d’origine au lieu de la serveur de publication actuel comme le *@publisher* paramètre de `sp_addpullsubscription` ou `sp_addmergepulllsubscription`. Toutefois, si vous activez une base de données de publication après un basculement, le nom de l'instance du serveur de publication stocké dans les tables système est le nom de l'hôte principal actuel. Dans ce cas, vous devez utiliser le nom d'hôte du réplica principal actuel pour le paramètre *@publisher* .  
+-   Si vous faites appel aux procédures stockées ou aux Replication Management Objects pour gérer la réplication sur le principal actuel, vous devez spécifier comme serveur de publication le nom de l'instance où la base de données est activée pour la réplication (le serveur de publication d'origine). Pour déterminer le nom approprié, utilisez la fonction `PUBLISHINGSERVERNAME`. Lorsqu'une base de données de publication joint un groupe de disponibilité, les métadonnées de réplication stockées dans les réplicas de bases de données secondaires sont identiques à celles du principal. Par conséquent, en cas de bases de données de publication activées pour la réplication sur le principal, le nom d'instance du serveur de publication stocké dans les tables système du serveur secondaire est celui du serveur principal, et non du serveur secondaire. Cela affecte la configuration et l'administration de la réplication si la base de données de publication bascule sur un serveur secondaire. Par exemple, si vous configurez la réplication avec des procédures stockées sur un serveur secondaire après le basculement, et vous souhaitez un abonnement par extraction à une base de données de publication qui a été activée sur un réplica différent, vous devez spécifier le nom du serveur de publication d’origine au lieu de la serveur de publication actuel comme le *@publisher* paramètre de `sp_addpullsubscription` ou `sp_addmergepulllsubscription`. Toutefois, si vous activez une base de données de publication après un basculement, le nom de l'instance du serveur de publication stocké dans les tables système est le nom de l'hôte principal actuel. Dans ce cas, vous devez utiliser le nom d'hôte du réplica principal actuel pour le paramètre *@publisher* .  
   
     > [!NOTE]  
-    >  Dans certaines procédures, tel que `sp_addpublication`, le *@publisher* paramètre est pris en charge uniquement pour les serveurs de publication qui ne sont pas des instances de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]; dans ce cas, il n’est pas pertinente pour [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] AlwaysOn.  
+    >  Dans certaines procédures, tel que `sp_addpublication`, le *@publisher* paramètre est pris en charge uniquement pour les serveurs de publication qui ne sont pas des instances de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]; dans ce cas, il n’est pas pertinent pour [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] AlwaysOn.  
   
 -   Pour synchroniser un abonnement dans [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)] après un basculement, synchronisez les abonnements par extraction à partir de l'abonné, puis synchronisez les abonnements par émission de données à partir du serveur de publication actif.  
   
 ##  <a name="RemovePublDb"></a> Suppression d'une base de données publiée d'un groupe de disponibilité  
  Considérez les points suivants lorsqu'une base de données publiée est supprimée d'un groupe de disponibilité, ou lorsqu'un groupe de disponibilité avec une base de données membre publiée est supprimé.  
   
--   Si la base de données de publication sur le serveur de publication d’origine est supprimé d’un réplica principal de groupe de disponibilité, vous devez exécuter `sp_redirect_publisher` sans spécifier de valeur pour le *@redirected_publisher* paramètre afin de supprimer le redirection de la paire serveur de publication/base de données.  
+-   Si la base de données de publication sur le serveur de publication d’origine est supprimé d’un réplica principal de groupe de disponibilité, vous devez exécuter `sp_redirect_publisher` sans spécifier de valeur pour le *@redirected_publisher* paramètre afin de pouvoir supprimer le redirection pour la paire serveur de publication/base de données.  
   
     ```  
     EXEC sys.sp_redirect_publisher   
@@ -108,7 +107,7 @@ ms.locfileid: "36154259"
   
 -   [Configurer la réplication pour les groupes de disponibilité AlwaysOn (SQL Server)](always-on-availability-groups-sql-server.md)  
   
--   [La réplication, le suivi des modifications, Capture de données modifiées et groupes de disponibilité AlwaysOn &#40;SQL Server&#41;](replicate-track-change-data-capture-always-on-availability.md)  
+-   [Réplication, le suivi des modifications, Capture de données modifiées et groupes de disponibilité AlwaysOn &#40;SQL Server&#41;](replicate-track-change-data-capture-always-on-availability.md)  
   
 -   [Administration &#40;réplication&#41;](../../../relational-databases/replication/administration/administration-replication.md)  
   

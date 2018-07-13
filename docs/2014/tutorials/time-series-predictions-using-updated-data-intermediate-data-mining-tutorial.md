@@ -1,5 +1,5 @@
 ---
-title: À l’aide de la mise à jour des données (didacticiel d’exploration de données intermédiaire) des prédictions de série chronologique | Documents Microsoft
+title: À l’aide de la mise à jour des données (didacticiel d’exploration de données intermédiaire) des prédictions de série chronologique | Microsoft Docs
 ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql-server-2014
@@ -8,42 +8,42 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: af73681d-ce1c-4b6e-b195-6df3d2fb5275
 caps.latest.revision: 23
 author: minewiskan
 ms.author: owend
-manager: kfile
-ms.openlocfilehash: 3478a52657e26fa8e376e88bc83a5c4d9813cdc8
-ms.sourcegitcommit: 8c040e5b4e8c7d37ca295679410770a1af4d2e1f
+manager: craigg
+ms.openlocfilehash: 8739f9be1ad015471017d17947ece1586663959b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/21/2018
-ms.locfileid: "36312357"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37278312"
 ---
 # <a name="time-series-predictions-using-updated-data-intermediate-data-mining-tutorial"></a>Prédictions de série chronologique à l'aide des données mises à jour (Didacticiel intermédiaire sur l'exploration de données)
     
 ## <a name="creating-predictions-using-the-extended-sales-data"></a>Création de prédictions à l'aide des données de ventes étendues  
  Dans cette leçon, vous allez créer une requête de prédiction qui ajoute les nouvelles données de ventes au modèle. En étendant le modèle avec de nouvelles données, vous pouvez obtenir des prédictions à jour qui comprennent les points de données les plus récents.  
   
- Est facile de créer des prédictions de série chronologique qui utilisent les nouvelles données : vous ajoutez simplement le paramètre EXTEND_MODEL_CASES à la [PredictTimeSeries &#40;DMX&#41; ](/sql/dmx/predicttimeseries-dmx) de fonction, spécifier la source des nouvelles données et spécifier combien vous souhaitez obtenir les prédictions.  
+ Est facile de créer des prédictions de série chronologique qui utilisent les nouvelles données : vous ajoutez simplement le paramètre EXTEND_MODEL_CASES à la [PredictTimeSeries &#40;DMX&#41; ](/sql/dmx/predicttimeseries-dmx) de fonction, spécifiez la source des nouvelles données et indiquez combien vous souhaitez obtenir les prédictions.  
   
 > [!WARNING]  
 >  Le paramètre EXTEND_MODEL_CASES est facultatif ; par défaut le modèle est étendu à chaque fois que vous créez une requête de prédiction de série chronologique en joignant de nouvelles données comme entrées.  
   
 #### <a name="to-build-the-prediction-query-and-add-new-data"></a>Pour générer la requête de prédiction et ajouter de nouvelles données  
   
-1.  Si le modèle n’est pas déjà ouvert, double-cliquez sur la structure Forecasting et dans le Concepteur d’exploration de données, cliquez sur le **prévision de modèle d’exploration de données** onglet.  
+1.  Si le modèle n’est pas déjà ouvert, double-cliquez sur la structure Forecasting, dans le Concepteur d’exploration de données, cliquez sur le **prévision de modèle d’exploration de données** onglet.  
   
-2.  Dans le **modèle d’exploration de données** volet, le modèle de prévision doit déjà être sélectionnée. Si elle n’est pas sélectionnée, cliquez sur **sélectionner le modèle**, puis sélectionnez le modèle, de prévision.  
+2.  Dans le **Mining Model** volet, le modèle de prévision doit déjà être sélectionnée. Si elle n’est pas sélectionnée, cliquez sur **sélectionner un modèle**, puis sélectionnez le modèle de la prévision.  
   
 3.  Dans le **sélectionner une ou plusieurs tables d’entrée** volet, cliquez sur **sélectionner la Table de cas**.  
   
 4.  Dans le **sélectionner une Table** boîte de dialogue, sélectionnez la source de données [!INCLUDE[ssAWDWsp](../includes/ssawdwsp-md.md)].  
   
-     Dans la liste des vues de sources de données, sélectionnez NewSalesData puis **OK**.  
+     Dans la liste des vues de sources de données, sélectionnez NewSalesData, puis cliquez **OK**.  
   
-5.  Avec le bouton droit de la surface de la zone de conception et sélectionnez **modifier les connexions**.  
+5.  Cliquez sur la surface de la zone de conception et sélectionnez **modifier les connexions**.  
   
 6.  À l’aide de la **modifier le mappage** boîte de dialogue zone, mappez les colonnes dans le modèle aux colonnes dans les données externes, comme suit :  
   
@@ -59,7 +59,7 @@ ms.locfileid: "36312357"
   
      D'abord, ajoutez une colonne à la requête de prédiction pour générer la sortie de la série à laquelle la prédiction s'applique.  
   
-    1.  Dans la grille, cliquez sur la première ligne vide, sous **Source**, puis sélectionnez les prévisions.  
+    1.  Dans la grille, cliquez sur la première ligne vide, sous **Source**, puis sélectionnez la prévision.  
   
     2.  Dans le **champ** colonne, sélectionnez Region de modèle et pour **Alias**, type `Model Region`.  
   
@@ -71,13 +71,13 @@ ms.locfileid: "36312357"
   
     3.  Pour **Alias**, type **valeurs prédites**.  
   
-    4.  Faites glisser le champ Quantité à partir de la **modèle d’exploration de données** volet dans le **critères/Argument** colonne.  
+    4.  Faites glisser le champ Quantité à partir de la **Mining Model** volet dans le **critères/Argument** colonne.  
   
     5.  Dans le **critères/Argument** colonne, après le nom de champ, tapez le texte suivant : **5, EXTEND_MODEL_CASES**  
   
          Le texte complet de le **critères/Argument** zone de texte doit être comme suit : `[Forecasting].[Quantity],5,EXTEND_MODEL_CASES`  
   
-9. Cliquez sur **résultats** et examinez les résultats.  
+9. Cliquez sur **résultats** et passez en revue les résultats.  
   
      Les prédictions commencent en juillet (première tranche de temps après la fin des données d'origine) et se terminent dans en novembre (cinquième tranche de temps après la fin des données d'origine).  
   
@@ -97,15 +97,15 @@ ms.locfileid: "36312357"
   
      `PredictTimeSeries([Forecasting 12].[Quantity],4,6,EXTEND_MODEL_CASES)`  
   
-3.  Cliquez sur **résultats** et examinez les résultats.  
+3.  Cliquez sur **résultats** et passez en revue les résultats.  
   
      À présent, les prédictions commencent en octobre (quatrième tranche de temps en partant de la fin des données d'origine) et se terminent en décembre (sixième tranche de temps en partant de la fin des données d'origine).  
   
 ## <a name="next-task-in-lesson"></a>Tâche suivante de la leçon  
- [À l’aide de données de remplacement des prédictions de série chronologique &#40;intermédiaire Didacticiel d’exploration de données&#41;](../../2014/tutorials/time-series-predictions-replacement-data-intermediate-data-mining.md)  
+ [À l’aide de données de remplacement des prédictions de série chronologique &#40;didacticiel d’exploration de données intermédiaire&#41;](../../2014/tutorials/time-series-predictions-replacement-data-intermediate-data-mining.md)  
   
 ## <a name="see-also"></a>Voir aussi  
  [Référence technique de Microsoft Time Series algorithme](../../2014/analysis-services/data-mining/microsoft-time-series-algorithm-technical-reference.md)   
- [Contenu pour les modèles de série chronologique du modèle d’exploration de données &#40;Analysis Services - Exploration de données&#41;](../../2014/analysis-services/data-mining/mining-model-content-for-time-series-models-analysis-services-data-mining.md)  
+ [Contenu du modèle pour les modèles de série chronologique d’exploration de données &#40;Analysis Services - Exploration de données&#41;](../../2014/analysis-services/data-mining/mining-model-content-for-time-series-models-analysis-services-data-mining.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: L’extraction sur les modèles d’exploration de données | Documents Microsoft
+title: Extraction sur les modèles d’exploration de données | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: f179a467-7d03-4d61-8e9a-6b5afb5fc2d5
 caps.latest.revision: 8
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 2f5b59e0a921e27bd5bdc62867130e71bbc67ffa
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: dd0bb8838b9b012d1951f6b6fe0bde67ed09842d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36144185"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37192939"
 ---
 # <a name="drillthrough-on-mining-models"></a>Extraction sur des modèles d'exploration de données
   *L'extraction* désigne la capacité d'interroger un modèle d'exploration de données ou une structure d'exploration de données pour obtenir des informations détaillées qui ne sont pas exposées dans le modèle.  
@@ -52,7 +52,7 @@ ms.locfileid: "36144185"
 |Algorithme MNB (Microsoft Naive Bayes)|Non pris en charge.<br /><br /> Ces algorithmes n'assignent pas de cas aux nœuds spécifiques du contenu.|  
 |Algorithme MNN (Microsoft Neural Network)|Non pris en charge.<br /><br /> Ces algorithmes n'assignent pas de cas aux nœuds spécifiques du contenu.|  
 |Algorithme MLR (Microsoft Logistic Regression)|Non pris en charge.<br /><br /> Ces algorithmes n'assignent pas de cas aux nœuds spécifiques du contenu.|  
-|Algorithme MLR (Microsoft Linear Regression)|Pris en charge.<br /><br /> Toutefois, étant donné que le modèle crée un nœud unique, `All`, l’extraction retourne tous les cas d’apprentissage pour le modèle. Si le jeu d'apprentissage est volumineux, le chargement des résultats peut durer plusieurs minutes.|  
+|Algorithme MLR (Microsoft Linear Regression)|Pris en charge.<br /><br /> Toutefois, étant donné que le modèle crée un nœud unique, `All`, extraction retourne tous les cas d’apprentissage pour le modèle. Si le jeu d'apprentissage est volumineux, le chargement des résultats peut durer plusieurs minutes.|  
 |Algorithme MTS (Microsoft Time Series)|Pris en charge.<br /><br /> Toutefois, vous ne pouvez pas extraire les données de structure ou de cas en utilisant la **Visionneuse de modèle d'exploration de données** dans le Concepteur de modèle d'exploration de données. Vous devez créer à la place une requête DMX.<br /><br /> De même, vous ne pouvez pas extraire des nœuds spécifiques ni écrire une requête DMX pour récupérer les cas de nœuds spécifiques d'un modèle de série chronologique. Vous pouvez récupérer les données de cas depuis le modèle ou la structure en utilisant d'autres critères, comme les valeurs de date ou d'attribut.<br /><br /> Si vous voulez consulter les détails des nœuds ARTXP et ARIMA créés par l’algorithme MTS (Microsoft Time Series), il vous sera peut-être plus simple d’utiliser la [Visionneuse de l’arborescence de contenu générique Microsoft &#40;exploration de données&#41;](../microsoft-generic-content-tree-viewer-data-mining.md).|  
   
 ## <a name="related-tasks"></a>Related Tasks  

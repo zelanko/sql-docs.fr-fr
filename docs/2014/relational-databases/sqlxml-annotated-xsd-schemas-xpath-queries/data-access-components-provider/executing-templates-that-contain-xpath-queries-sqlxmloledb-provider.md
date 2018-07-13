@@ -1,5 +1,5 @@
 ---
-title: Exécution de modèles qui contiennent des requêtes XPath (fournisseur SQLXMLOLEDB) | Documents Microsoft
+title: Exécution de modèles qui contiennent des requêtes XPath (fournisseur SQLXMLOLEDB) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - XML templates [SQLXML]
 ms.assetid: 7368c188-607e-459e-8254-8f23352dfa01
 caps.latest.revision: 28
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 1c51d8b0480a7a6dc86e1b878fef153604405266
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: eef3ff7d70d3287d70becd45d73b24d715440c14
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36155004"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37202829"
 ---
 # <a name="executing-templates-that-contain-xpath-queries-sqlxmloledb-provider"></a>Exécution de modèles contenant des requêtes XPath (fournisseur SQLXMLOLEDB)
   Cet exemple indique comment utiliser les propriétés suivantes spécifiques au fournisseur SQLXMLOLEDB :  
@@ -39,7 +39,7 @@ ms.locfileid: "36155004"
   
 -   Schéma de mappage  
   
- Dans cet exemple d’application ADO, un modèle XML qui se compose d’une requête XPath (racine) est spécifié sur le schéma de mappage XSD (MySchema.xml) qui est décrit dans [l’exécution des requêtes XPath &#40;fournisseur SQLXMLOLEDB&#41; ](executing-xpath-queries-sqlxmloledb-provider.md).  
+ Dans cet exemple d’application ADO, un modèle XML qui se compose d’une requête XPath (racine) est spécifié par rapport au schéma de mappage XSD (MySchema.xml) qui est décrit dans [l’exécution des requêtes XPath &#40;fournisseur SQLXMLOLEDB&#41; ](executing-xpath-queries-sqlxmloledb-provider.md).  
   
  La propriété de schéma de mappage fournit le schéma de mappage XSD par rapport à laquelle la requête XPath est exécutée. La propriété de chemin d’accès de Base fournit le chemin d’accès de fichier pour le schéma de mappage.  
   
@@ -48,7 +48,7 @@ ms.locfileid: "36155004"
  Dans l'application, une requête XPath est spécifiée directement. Par conséquent, le dialecte {5d531cb2-e6ed-11d2-b252-00c04f681b71} doit être inclus.  
   
 > [!NOTE]  
->  Dans le code, vous devez fournir le nom de l'instance de Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] dans la chaîne de connexion. En outre, cet exemple spécifie l’utilisation de la [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client (SQLNCLI11) pour le fournisseur de données qui nécessite un logiciel client réseau supplémentaire soit installé. Pour plus d’informations, consultez [configuration système requise pour SQL Server Native Client](../../native-client/system-requirements-for-sql-server-native-client.md).  
+>  Dans le code, vous devez fournir le nom de l'instance de Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] dans la chaîne de connexion. En outre, cet exemple spécifie l’utilisation de la [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client (SQLNCLI11) pour le fournisseur de données, ce qui nécessite l’installation du logiciel client réseau supplémentaire. Pour plus d’informations, consultez [configuration système requise pour SQL Server Native Client](../../native-client/system-requirements-for-sql-server-native-client.md).  
   
 ```  
 Option Explicit  

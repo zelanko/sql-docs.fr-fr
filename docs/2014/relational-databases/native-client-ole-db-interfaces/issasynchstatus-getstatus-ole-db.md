@@ -1,13 +1,11 @@
 ---
-title: ISSAsynchStatus::GetStatus (OLE DB) | Documents Microsoft
+title: ISSAsynchStatus::GetStatus (OLE DB) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
@@ -18,15 +16,15 @@ helpviewer_keywords:
 - GetStatus method
 ms.assetid: 354b6ee4-b5a1-48f6-9403-da3bdc911067
 caps.latest.revision: 12
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: baf7204719e865b93b7037e76f7b493e841644c6
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: c9b12653f05171514c3a311edd42b2a3af9f58da
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36153232"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37413128"
 ---
 # <a name="issasynchstatusgetstatus-ole-db"></a>ISSAsynchStatus::GetStatus (OLE DB)
   Retourne l'état d'une opération s'exécutant de manière asynchrone.  
@@ -112,7 +110,7 @@ HRESULT GetStatus(
  Une erreur spécifique au fournisseur s'est produite.  
   
 ## <a name="remarks"></a>Notes  
- Le **ISSAsynchStatus::GetStatus** méthode se comporte exactement comme le **IDBAsynchStatus::GetStatus** (méthode), sauf que si l’objet source de l’initialisation de données est abandonnée, E_UNEXPECTED est retourné au lieu de cela à DB_E_CANCELED (bien que [ISSAsynchStatus::WaitForAsynchCompletion](issasynchstatus-waitforasynchcompletion-ole-db.md) retourne DB_E_CANCELED). Cela est dû au fait que l'objet source de données ne reste pas dans l'état zombie habituel après un abandon, et ce pour autoriser d'autres tentatives d'initialisation.  
+ Le **ISSAsynchStatus::GetStatus** méthode se comporte exactement comme le **IDBAsynchStatus::GetStatus** (méthode), sauf que si l’objet de source de l’initialisation de données est abandonnée, E_UNEXPECTED est retourné au lieu de cela que DB_E_CANCELED (bien que [ISSAsynchStatus::WaitForAsynchCompletion](issasynchstatus-waitforasynchcompletion-ole-db.md) retourne DB_E_CANCELED). Cela est dû au fait que l'objet source de données ne reste pas dans l'état zombie habituel après un abandon, et ce pour autoriser d'autres tentatives d'initialisation.  
   
  Si l'ensemble de lignes est initialisé ou rempli de manière asynchrone, il doit prendre en charge cette méthode.  
   

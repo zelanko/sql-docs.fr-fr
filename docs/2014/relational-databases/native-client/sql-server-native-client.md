@@ -1,28 +1,25 @@
 ---
-title: Ce que&#39;nouveauté dans SQL Server Native Client | Documents Microsoft
+title: Ce que&#39;s Nouveautés de SQL Server Native Client | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: e4d4fe39-0090-42a7-8405-6378370d11cb
-caps.latest.revision: 36
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 7e7ad76095925236f13c1f8da549e05e05f74390
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: 16d5ad4f1f60978cedf380cbc17d6e3f09f1cb09
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36152305"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37426698"
 ---
-# <a name="what39s-new-in-sql-server-native-client"></a>Ce que&#39;nouveauté dans SQL Server Native Client
+# <a name="what39s-new-in-sql-server-native-client"></a>Ce que&#39;s Nouveautés de SQL Server Native Client
   [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] installe [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] Native Client. Il n'y a pas de [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Native Client.  
   
  Il n'y aura plus de mises à jour vers le pilote ODBC dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client. Le successeur du pilote ODBC dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client, appelé Pilote [!INCLUDE[msCoName](../../includes/msconame-md.md)] ODBC 11 pour [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sur Windows, est installé avec [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]. Pour plus d’informations sur la [!INCLUDE[msCoName](../../includes/msconame-md.md)] ODBC Driver 11 for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sur Windows, consultez [Microsoft ODBC Driver 11 for SQL Server - Windows](http://www.microsoft.com/download/details.aspx?id=36434).  
@@ -47,9 +44,9 @@ ms.locfileid: "36152305"
   
 -   C. Extensibilité du type de données Pour plus d’informations, consultez [des Types de données C dans ODBC](http://go.microsoft.com/fwlink/?LinkID=191495).  
   
-     Pour prendre en charge cette fonctionnalité dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client, SQLGetDescField peut retourner `SQL_C_SS_TIME2` (pour `time` types) ou `SQL_C_SS_TIMESTAMPOFFSET` (pour `datetimeoffset`) au lieu de `SQL_C_BINARY`, si votre application utilise ODBC 3.8. Pour plus d’informations, consultez [prise en charge du Type de données de Date ODBC et les améliorations apportées au](features/date-and-time-improvements.md).  
+     Pour prendre en charge cette fonctionnalité dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client, SQLGetDescField peut retourner `SQL_C_SS_TIME2` (pour `time` types) ou `SQL_C_SS_TIMESTAMPOFFSET` (pour `datetimeoffset`) au lieu de `SQL_C_BINARY`, si votre application utilise ODBC 3.8. Pour plus d’informations, consultez [prise en charge du Type de données pour les améliorations ODBC Date / heure](features/date-and-time-improvements.md).  
   
--   Appel de `SQLGetData` à plusieurs reprises avec une petite mémoire tampon pour récupérer une valeur de paramètre élevée. Pour plus d’informations, consultez [la récupération des paramètres de sortie à l’aide de SQLGetData](http://go.microsoft.com/fwlink/?LinkID=191494).  
+-   Appel de `SQLGetData` à plusieurs reprises avec une petite mémoire tampon pour récupérer une valeur de paramètre élevée. Pour plus d’informations, consultez [récupération des paramètres de sortie à l’aide de SQLGetData](http://go.microsoft.com/fwlink/?LinkID=191494).  
   
  Les rubriques suivantes décrivent des changements de comportement de Native Client [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dans [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)].  
   

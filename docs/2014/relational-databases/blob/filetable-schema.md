@@ -3,25 +3,23 @@ title: Schéma de FileTable | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
+ms.technology: filestream
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-blob
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - FileTables [SQL Server], table schema
 ms.assetid: e1cb3880-cfda-40ac-91fc-d08998287f44
-caps.latest.revision: 7
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 8515d78ddab2dd39e223087a44b0e021a5aca439
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 67578dadba93af562732a6e0152e13a3c180195d
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36155065"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37425028"
 ---
 # <a name="filetable-schema"></a>Schéma de FileTable
   Décrit le schéma prédéfini et fixe d'un FileTable.  
@@ -29,7 +27,7 @@ ms.locfileid: "36155065"
 |Nom d'attribut de fichier|Type|Taille|Valeur par défaut|Description|Accessibilité du système de fichiers|  
 |-------------------------|----------|----------|-------------|-----------------|-------------------------------|  
 |**path_locator**|`hierarchyid`|variable|Un `hierarchyid` qui identifie la position de cet élément.|Position de ce nœud dans le FileNamespace hiérarchique.<br /><br /> Clé primaire de la table|Peut être créée et modifiée en définissant les valeurs de chemin d'accès Windows.|  
-|**stream_id**|**[uniqueidentifier] rowguidcol**||Une valeur renvoyée par le `NEWID()` (fonction).|ID unique pour les données FILESTREAM.|Non applicable.|  
+|**stream_id**|**[uniqueidentifier] rowguidcol**||Valeur retournée par la `NEWID()` (fonction).|ID unique pour les données FILESTREAM.|Non applicable.|  
 |**file_stream**|`varbinary(max)`<br /><br /> `filestream`|variable|NULL|Contient les données FILESTREAM.|Non applicable.|  
 |**file_type**|`nvarchar(255)`|variable|NULL.<br /><br /> Une opération de création ou de changement de nom dans le système de fichiers remplit la valeur d'extension du fichier à partir du nom.|Représente le type du fichier.<br /><br /> Cette colonne peut être utilisée comme `TYPE COLUMN` lorsque vous créez un index de recherche en texte intégral.<br /><br /> **file_type** est une colonne calculée persistante.|Calculé automatiquement. Ne peut pas être définie.|  
 |**Nom**|`nvarchar(255)`|variable|Valeur GUID.|Nom du fichier ou du répertoire.|Peut être créé ou modifié à l'aide des API Windows.|  

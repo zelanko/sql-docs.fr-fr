@@ -1,5 +1,5 @@
 ---
-title: 'Leçon 4 : Exécution de l’Application (VB-VC #) | Documents Microsoft'
+title: 'Leçon 4 : Exécution de l’Application (VB-VC #) | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - VB
 ms.assetid: b65c74b6-889b-4323-9240-90827a70ab0e
 caps.latest.revision: 33
-author: douglaslM
+author: craigg-msft
 ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: a92d624b12fdf9efd0c0479554ac7aa4946055ce
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 63dbefcdf84ee0245ec6adffb46d4d3d859c1dbe
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36154736"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37183576"
 ---
 # <a name="lesson-4-running-the-application-vb-vc"></a>Leçon 4 : Exécution de l’Application (VB-VC #)
   [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] offre plusieurs méthodes pour créer et exécuter une application console à partir de l'interface IDE, notamment :  

@@ -1,5 +1,5 @@
 ---
-title: 'Leçon 3 : Accès au Service Web | Documents Microsoft'
+title: 'Leçon 3 : Accès au Service Web | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: c3e4c198-ab35-4548-9471-1b4e6b6e5dfd
 caps.latest.revision: 43
-author: douglaslM
+author: craigg-msft
 ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: f9cff3b2bec832eec9dc6cf8462511db89454eba
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: e9e5decf2f1d6c702b3bc3483ffb89bff9a2cd9f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36155156"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37230129"
 ---
 # <a name="lesson-3-accessing-the-web-service"></a>Leçon 3 : accès au service Web
   Après avoir ajouté une référence au service Web Report Server à votre projet, l'étape suivante consiste à créer une instance de la classe proxy du service Web. Vous pouvez alors accéder aux méthodes de ce service Web en les appelant dans la classe proxy. Lorsque votre application appelle ces méthodes, de code généré par la classe du proxy [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] gère les communications entre votre application et le service Web.  
@@ -117,7 +117,7 @@ ms.locfileid: "36155156"
   
 4.  Enregistrez la solution.  
   
- L’exemple de code de procédure pas à pas utilise le <xref:ReportService2010.ReportingService2010.GetProperties%2A> méthode du service Web pour récupérer les propriétés de l’exemple de rapport Company Sales 2012. Le <xref:ReportService2010.ReportingService2010.GetProperties%2A> méthode accepte deux arguments : le nom du rapport pour lequel vous souhaitez récupérer des informations sur les propriétés et un tableau de **Property []** objets qui contient les noms de propriétés dont vous souhaitez récupérer les valeurs. Cette méthode renvoie également un tableau d'objets **Property[]** qui contient les noms et les valeurs des propriétés spécifiées dans l'argument des propriétés.  
+ L’exemple de code de procédure pas à pas utilise le <xref:ReportService2010.ReportingService2010.GetProperties%2A> méthode du service Web pour récupérer les propriétés de l’exemple de rapport Company Sales 2012. Le <xref:ReportService2010.ReportingService2010.GetProperties%2A> méthode accepte deux arguments : le nom du rapport pour lequel vous souhaitez récupérer les informations de propriété et un tableau de **Property []** objets qui contient les noms des propriétés dont vous souhaitez récupérer les valeurs. Cette méthode renvoie également un tableau d'objets **Property[]** qui contient les noms et les valeurs des propriétés spécifiées dans l'argument des propriétés.  
   
 > [!NOTE]  
 >  Si vous fournissez un tableau **Property[]** vide pour l'argument des propriétés, toutes les propriétés disponibles sont renvoyées.  

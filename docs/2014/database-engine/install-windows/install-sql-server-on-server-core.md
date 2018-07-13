@@ -1,5 +1,5 @@
 ---
-title: Installer SQL Server 2014 sur Server Core | Documents Microsoft
+title: Installer SQL Server 2014 sur Server Core | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,23 +8,23 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 1dd294cc-5b69-4d0c-9005-3e307b75678b
 caps.latest.revision: 36
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 5a19e13c1f760e83e8a131e30e3878f8659e6116
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 0b4ca2154a7574ba787fe59737c6165c41bc1d6d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36154893"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37193879"
 ---
 # <a name="install-sql-server-2014-on-server-core"></a>Installer SQL Server 2014 sur Server Core
   Vous pouvez installer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sur une installation Server Core de [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] SP1 ou [!INCLUDE[win8srv](../../includes/win8srv-md.md)]. Cette rubrique fournit des détails spécifiques à l'installation de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] sur Server Core.  
   
- L'option d'installation de Server Core pour le système d'exploitation [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] ou [!INCLUDE[win8srv](../../includes/win8srv-md.md)] offre l'environnement minimal requis pour l'exécution de certains rôles de serveurs spécifiques. Cela permet de réduire les besoins en maintenance et gestion et l'exposition aux attaques de ces rôles de serveur. Pour plus d’informations sur Server Core implémenté sur [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)], consultez [Server Core de Windows Server 2008 R2](http://go.microsoft.com/fwlink/?LinkId=202439) (http://go.microsoft.com/fwlink/?LinkId=202439). Pour plus d’informations sur Server Core implémenté sur [!INCLUDE[win8srv](../../includes/win8srv-md.md)], consultez [Server Core for Windows Server 2012](http://msdn.microsoft.com/library/hh846323\(VS.85\).aspx) (http://msdn.microsoft.com/library/hh846323(VS.85).aspx).  
+ L'option d'installation de Server Core pour le système d'exploitation [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] ou [!INCLUDE[win8srv](../../includes/win8srv-md.md)] offre l'environnement minimal requis pour l'exécution de certains rôles de serveurs spécifiques. Cela permet de réduire les besoins en maintenance et gestion et l'exposition aux attaques de ces rôles de serveur. Pour plus d’informations sur Server Core implémenté sur [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)], consultez [Server Core pour Windows Server 2008 R2](http://go.microsoft.com/fwlink/?LinkId=202439) (http://go.microsoft.com/fwlink/?LinkId=202439). Pour plus d’informations sur Server Core implémenté sur [!INCLUDE[win8srv](../../includes/win8srv-md.md)], consultez [Server Core for Windows Server 2012](http://msdn.microsoft.com/library/hh846323\(VS.85\).aspx) (http://msdn.microsoft.com/library/hh846323(VS.85).aspx).  
   
 ## <a name="prerequisites"></a>Prérequis  
   
@@ -63,7 +63,7 @@ ms.locfileid: "36154893"
   
  <sup>[1] </sup>Pour plus d’informations sur le nouveau serveur Integration Services et ses fonctionnalités dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], consultez [Integration Services &#40;SSIS&#41; Server](../../integration-services/catalog/integration-services-ssis-server-and-catalog.md).  
   
- <sup>[2] </sup>L’installation de ces fonctionnalités sur Server Core n’est pas pris en charge. Ces composants peuvent être installés sur un serveur autre que [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] Server Core SP1 ou [!INCLUDE[win8srv](../../includes/win8srv-md.md)] Server Core et être connectés aux services de [!INCLUDE[ssDE](../../includes/ssde-md.md)] installés sur Server Core.  
+ <sup>[2] </sup>Installation de ces fonctionnalités sur Server Core n’est pas pris en charge. Ces composants peuvent être installés sur un serveur autre que [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] Server Core SP1 ou [!INCLUDE[win8srv](../../includes/win8srv-md.md)] Server Core et être connectés aux services de [!INCLUDE[ssDE](../../includes/ssde-md.md)] installés sur Server Core.  
   
  <sup>[3] </sup>Microsoft Sync Framework n’est pas inclus dans le [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] package d’installation. Vous pouvez télécharger la version appropriée de Sync Framework à partir de ce [Microsoft Download Center](http://go.microsoft.com/fwlink/?LinkId=221788) (http://go.microsoft.com/fwlink/?LinkId=221788) page et l’installer sur un ordinateur exécutant une installation Server Core de [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] SP1 ou [!INCLUDE[win8srv](../../includes/win8srv-md.md)].  
   

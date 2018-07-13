@@ -1,13 +1,11 @@
 ---
-title: Prise en charge de Type de données de Date ODBC et les améliorations apportées au | Documents Microsoft
+title: Type de données prise en charge pour les améliorations ODBC Date / heure | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -15,17 +13,17 @@ helpviewer_keywords:
 - ODBC, date/time improvements
 ms.assetid: 8e0d9ba2-3ec1-4680-86e3-b2590ba8e2e9
 caps.latest.revision: 28
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: ca1a2693acabdb28c221b08535c17dd686a43cb5
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: 3e0ee5b224f042cbf8f2b7a12fa96e9057b9a18d
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36152634"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37415108"
 ---
-# <a name="data-type-support-for-odbc-date-and-time-improvements"></a>Prise en charge du Type de données de Date ODBC et les améliorations apportées au
+# <a name="data-type-support-for-odbc-date-and-time-improvements"></a>Prise en charge du Type de données pour les améliorations ODBC Date / heure
   Cette rubrique fournit des informations sur les types ODBC qui prennent en charge les types des données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] date et time.  
   
 ## <a name="data-type-mapping-in-parameters-and-resultsets"></a>Mappage de type de données dans les paramètres et les jeux de résultats  
@@ -73,7 +71,7 @@ ms.locfileid: "36152634"
   
  Dans les résultats, les fractions de seconde utilisent toujours un point (.), plutôt que les deux-points (:).  
   
- Les valeurs de chaîne retournés aux applications sont toujours la même longueur pour une colonne donnée. La longueur maximale des composants année, mois, jour, heure, minute et seconde, est complétée avec des zéros non significatifs, et le jour et l'heure des valeurs datetime sont séparés par un espace. Il y a également un espace entre l'heure et le décalage horaire dans une valeur datetimeoffset. Un décalage horaire est toujours précédé d'un signe ; quand le décalage est nul, le signe est un plus (+). Les fractions de seconde sont complétées si nécessaire avec des zéros à droite, jusqu'à la précision maximale définie pour la colonne. Pour les colonnes datetime, il y a trois chiffres de fractions de seconde. Pour les colonnes smalldatetime, il n'y a pas de chiffres de fractions de seconde et les secondes sont toujours égales à zéro.  
+ Les valeurs de chaîne retournés aux applications ont toujours la même longueur pour une colonne donnée. La longueur maximale des composants année, mois, jour, heure, minute et seconde, est complétée avec des zéros non significatifs, et le jour et l'heure des valeurs datetime sont séparés par un espace. Il y a également un espace entre l'heure et le décalage horaire dans une valeur datetimeoffset. Un décalage horaire est toujours précédé d'un signe ; quand le décalage est nul, le signe est un plus (+). Les fractions de seconde sont complétées si nécessaire avec des zéros à droite, jusqu'à la précision maximale définie pour la colonne. Pour les colonnes datetime, il y a trois chiffres de fractions de seconde. Pour les colonnes smalldatetime, il n'y a pas de chiffres de fractions de seconde et les secondes sont toujours égales à zéro.  
   
  Une chaîne vide n'est pas un littéral de date et d'heure valide et ne représente pas une valeur NULL. La tentative de convertir une chaîne vide en valeur date/time provoque l'erreur SQLState 22018 et le message « Valeur de caractère non valide pour la spécification de la casse ».  
   
@@ -141,6 +139,6 @@ typedef struct tagSS_TIMESTAMPOFFSET_STRUCT {
  Si `timezone_hour` est négatif, `timezone_minute` doit être négatif ou égal à zéro. Si `timezone_hour` est positif, `timezone_minute` doit être positif ou égal à zéro. Si `timezone_hour` est égal à zéro, `timezone_minute` peut avoir une valeur comprise entre - 59 et + 59.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Date et heure améliorations &#40;ODBC&#41;](date-and-time-improvements-odbc.md)  
+ [Améliorations date / heure &#40;ODBC&#41;](date-and-time-improvements-odbc.md)  
   
   

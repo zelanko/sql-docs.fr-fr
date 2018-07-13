@@ -1,5 +1,5 @@
 ---
-title: Éléments XML (XMLA) | Documents Microsoft
+title: Éléments XML (XMLA) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -16,18 +16,18 @@ helpviewer_keywords:
 - elements [XML for Analysis]
 ms.assetid: 40ab2360-efb6-4ba6-bf23-e84964e51008
 caps.latest.revision: 32
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: 84775d7d4bb7499d8c1d5e5326ca3fa2d1fb27ef
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: 5e4de4bbe0b87068ead6ccc9b80f8625bf8014c7
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36154059"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37200249"
 ---
 # <a name="xml-elements-xmla"></a>Éléments XML (XMLA)
-  Les rubriques suivantes décrivent le XML différents pour les catégories d’élément Analysis (XMLA) prises en charge par [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].  
+  Les rubriques suivantes décrivent le code XML différents pour les catégories d’élément Analysis (XMLA) prises en charge par [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].  
   
 ## <a name="in-this-section"></a>Dans cette section  
   

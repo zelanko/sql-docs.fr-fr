@@ -1,5 +1,5 @@
 ---
-title: Installer PowerPivot à partir de l’invite de commandes | Documents Microsoft
+title: Installer PowerPivot à partir de l’invite de commandes | Microsoft Docs
 ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 7f1f2b28-c9f5-49ad-934b-02f2fa6b9328
 caps.latest.revision: 13
 author: markingmyname
 ms.author: maghan
-manager: jhubbard
-ms.openlocfilehash: 7adf6dfa581d10626c6513ecb2ee30d58c3bb6d3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 60949c1ff0431daf988e2fd5d4a1d2b8ad41b524
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36153640"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37210789"
 ---
 # <a name="install-powerpivot-from-the-command-prompt"></a>Installer PowerPivot à partir de l'invite de commandes
   Vous pouvez exécuter le programme d'installation depuis la ligne de commande pour installer SQL Server PowerPivot pour SharePoint. Vous devez inclure le paramètre de `/ROLE` dans votre commande et exclure le paramètre `/FEATURES`.  
@@ -31,7 +31,7 @@ ms.locfileid: "36153640"
   
  L'ordinateur doit être joint au même domaine que la batterie de serveurs SharePoint.  
   
-##  <a name="Commands"></a> RÔLE en fonction des options d’installation  
+##  <a name="Commands"></a> / Options d’installation en fonction du rôle  
  Dans les déploiements PowerPivot pour SharePoint, le paramètre `/ROLE` est utilisé à la place du paramètre `/FEATURES`. Les valeurs valides sont les suivantes :  
   
 -   `SPI_AS_ExistingFarm`  
@@ -86,7 +86,7 @@ Setup.exe /q /IAcceptSQLServerLicenseTerms /ACTION=install /ROLE=SPI_AS_NewFarm 
   
     ```  
   
-3.  Remplacez les espaces réservés pour \<domaine om_utilisateur > et \<StrongPassword > comptes d’utilisateurs valides et les mots de passe.  
+3.  Remplacez les espaces réservés pour \<domaine\nom d’utilisateur > et \<StrongPassword > avec les comptes d’utilisateurs valides et les mots de passe.  
   
      Le `/assvaccount` et **/assvcpassword** paramètres sont utilisés pour configurer le [!INCLUDE[ssGeminiSrv](../../includes/ssgeminisrv-md.md)] instance sur le serveur d’applications. Remplacez ces espaces réservés par des informations de compte valides.  
   
@@ -94,9 +94,9 @@ Setup.exe /q /IAcceptSQLServerLicenseTerms /ACTION=install /ROLE=SPI_AS_NewFarm 
   
 4.  Supprimez les sauts de ligne.  
   
-5.  Sélectionnez la commande entière puis **copie** dans le menu Edition.  
+5.  Sélectionnez la commande entière, puis cliquez **copie** dans le menu Edition.  
   
-6.  Ouvrez une invite de commandes d'administrateur. Pour ce faire, cliquez sur **Démarrer**, avec le bouton droit à l’invite de commandes, puis sélectionnez **exécuter en tant qu’administrateur**.  
+6.  Ouvrez une invite de commandes d'administrateur. Pour ce faire, cliquez sur **Démarrer**, avec le bouton droit de l’invite de commandes, puis sélectionnez **exécuter en tant qu’administrateur**.  
   
 7.  Accédez au lecteur ou au dossier partagé qui contient le support d'installation de SQL Server.  
   
@@ -110,6 +110,6 @@ Setup.exe /q /IAcceptSQLServerLicenseTerms /ACTION=install /ROLE=SPI_AS_NewFarm 
   
 ## <a name="see-also"></a>Voir aussi  
  [Configurer les comptes de Service PowerPivot](../../analysis-services/power-pivot-sharepoint/configure-power-pivot-service-accounts.md)   
- [Installation PowerPivot pour SharePoint 2010](../../../2014/sql-server/install/powerpivot-for-sharepoint-2010-installation.md)  
+ [Installation de PowerPivot pour SharePoint 2010](../../../2014/sql-server/install/powerpivot-for-sharepoint-2010-installation.md)  
   
   

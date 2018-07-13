@@ -1,5 +1,5 @@
 ---
-title: Personnalisation et traitement du modèle de prévision (didacticiel sur l’exploration des données intermédiaires) | Documents Microsoft
+title: Personnalisation et traitement du modèle de prévision (didacticiel d’exploration de données intermédiaire) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 4bd25e15-9d9e-4528-b7bc-ccb856643aec
 caps.latest.revision: 24
 author: minewiskan
 ms.author: owend
-manager: kfile
-ms.openlocfilehash: 3c012aec99eb39bc0cfa963bf255e2380d8f6cf2
-ms.sourcegitcommit: 8c040e5b4e8c7d37ca295679410770a1af4d2e1f
+manager: craigg
+ms.openlocfilehash: 5440574013fe2d15a833fb9758e896d361060050
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/21/2018
-ms.locfileid: "36312867"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37239989"
 ---
 # <a name="customizing-and-processing-the-forecasting-model-intermediate-data-mining-tutorial"></a>Personnalisation et traitement du modèle de prévision (Didacticiel sur l'exploration de données intermédiaire)
   L'algorithme MTS ([!INCLUDE[msCoName](../includes/msconame-md.md)]) fournit des paramètres qui affectent la façon dont un modèle est créé et la façon dont les données chronologiques sont analysées. La modification de ces propriétés peuvent affecter de manière importante la manière dont le modèle d'exploration de données élabore des prédictions.  
@@ -37,31 +37,31 @@ ms.locfileid: "36312867"
 ## <a name="setting-time-series-parameters"></a>Définition des paramètres de série chronologique  
  **Indications de périodicité**  
   
- Le *PERIODICITY_HINT* paramètre fournit l’algorithme avec plus d’informations sur les périodes supplémentaires que vous attendez à voir dans les données. Par défaut, les modèles de série chronologique essayeront de détecter automatiquement un modèle dans les données. Toutefois, si vous connaissez déjà le cycle de temps estimé, fournir un indicateur de périodicité peut potentiellement améliorer la précision du modèle. Toutefois, si vous fournissez le mauvais indicateur de périodicité, celui-ci peut diminuer la précision ; par conséquent, si vous ne savez pas précisément quelle valeur doit être utilisée, il est préférable d'utiliser la valeur par défaut.  
+ Le *PERIODICITY_HINT* paramètre fournit l’algorithme des informations sur les périodes supplémentaires que vous souhaitez voir dans les données. Par défaut, les modèles de série chronologique essayeront de détecter automatiquement un modèle dans les données. Toutefois, si vous connaissez déjà le cycle de temps estimé, fournir un indicateur de périodicité peut potentiellement améliorer la précision du modèle. Toutefois, si vous fournissez le mauvais indicateur de périodicité, celui-ci peut diminuer la précision ; par conséquent, si vous ne savez pas précisément quelle valeur doit être utilisée, il est préférable d'utiliser la valeur par défaut.  
   
- Par exemple, la vue utilisée pour ce modèle regroupe les données de ventes [!INCLUDE[ssAWDWsp](../includes/ssawdwsp-md.md)] mensuellement. Par conséquent, chaque tranche de temps utilisée par le modèle représente un mois et toutes les prédictions se feront également en termes de mois. Dans la mesure où il existe 12 mois dans une année et que vous prévoyez que modèles de ventes plus ou moins se répètent sur une base annuelle, vous allez définir la *PERIODICITY_HINT* paramètre `12`, pour indiquer que 12 tranches de temps (mois) constituent une cycle de ventes complet.  
+ Par exemple, la vue utilisée pour ce modèle regroupe les données de ventes [!INCLUDE[ssAWDWsp](../includes/ssawdwsp-md.md)] mensuellement. Par conséquent, chaque tranche de temps utilisée par le modèle représente un mois et toutes les prédictions se feront également en termes de mois. Dans la mesure où il existe 12 mois dans une année et vous attendez que les modèles de ventes plus ou moins répéter sur une base annuelle, vous allez définir la *PERIODICITY_HINT* paramètre `12`pour indiquer que 12 tranches de temps (mois) constituent une cycle de ventes complet.  
   
- **Méthode de prévisions**  
+ **Prévision (méthode)**  
   
  Le *FORECAST_METHOD* paramètre contrôle si l’algorithme de série chronologique est optimisé pour les prédictions à court terme ou à long terme. Par défaut, le *FORECAST_METHOD* paramètre est défini sur MIXED, ce qui signifie que les deux algorithmes différents sont fusionnés et équilibrés pour fournir de bons résultats pour la prédiction à court terme et à long terme.  
   
  Toutefois, si vous savez que vous souhaitez utiliser un algorithme particulier, vous pouvez modifier la valeur sur ARIMA ou ARTXP.  
   
- **Pondération à long terme contre. Prédictions à court terme**  
+ **Pondération de vs à long terme. Prédictions à court terme**  
   
  Vous pouvez également personnaliser la manière dont les prédictions à long terme et à court terme sont combinées à l'aide du paramètre PREDICTION_SMOOTHING. Par défaut, ce paramètre est défini sur 0,5, ce qui fournit généralement le meilleur équilibre pour une précision globale.  
   
 #### <a name="to-change-the-algorithm-parameters"></a>Pour changer les paramètres d'algorithme  
   
-1.  Sur le **des modèles d’exploration de données** droit **Forecasting**et sélectionnez **définir les paramètres d’algorithme**.  
+1.  Sur le **des modèles d’exploration de données** droit **Forecasting**et sélectionnez **paramètres d’algorithme définir**.  
   
 2.  Dans le `PERIODICITY_HINT` ligne de la **paramètres d’algorithme** boîte de dialogue, cliquez sur le **valeur** colonne, puis tapez `{12}`, y compris les accolades.  
   
      Par défaut, l'algorithme ajoute également la valeur {1}.  
   
-3.  Dans le `FORECAST_METHOD` de ligne, vérifiez que le **valeur** zone de texte est vide ou définie à `MIXED`. Si une valeur différente a été entrée, tapez `MIXED` pour modifier le paramètre à la valeur par défaut.  
+3.  Dans le `FORECAST_METHOD` de ligne, vérifiez que le **valeur** zone de texte est vide ou définie à `MIXED`. Si une valeur différente a été entrée, tapez `MIXED` pour le paramètre de rétablir la valeur par défaut.  
   
-4.  Dans le **PREDICTION_SMOOTHING** de ligne, vérifiez que le **valeur** zone de texte est vide ou définie sur 0,5. Si une valeur différente a été entrée, cliquez sur **valeur** et type `0.5` pour modifier le paramètre à la valeur par défaut.  
+4.  Dans le **PREDICTION_SMOOTHING** de ligne, vérifiez que le **valeur** zone de texte est vide ou définie sur 0,5. Si une valeur différente a été entrée, cliquez sur **valeur** et type `0.5` pour le paramètre de rétablir la valeur par défaut.  
   
     > [!NOTE]  
     >  Le paramètre PREDICTION_SMOOTHING est uniquement disponible dans [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Enterprise. Par conséquent, vous ne pouvez ni afficher ni modifier la valeur du paramètre PREDICTION_SMOOTHING dans [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Standard. Toutefois, le comportement par défaut consiste à utiliser les deux algorithmes et à les pondérer de manière égale.  
@@ -83,16 +83,16 @@ ms.locfileid: "36312867"
   
 #### <a name="to-specify-that-gaps-be-filled-by-averaging-values"></a>Pour spécifier le remplissage des vides par des valeurs moyennes  
   
-1.  Sur le **des modèles d’exploration de données** onglet, cliquez sur le **Forecasting** colonne, puis sélectionnez **définir les paramètres d’algorithme**.  
+1.  Sur le **des modèles d’exploration de données** onglet, cliquez sur le **Forecasting** colonne, puis sélectionnez **paramètres d’algorithme définir**.  
   
-2.  Dans le **paramètres d’algorithme** boîte de dialogue le **MISSING_VALUE_SUBSTITUTION** , cliquez sur le **valeur** colonne et tapez `Mean`.  
+2.  Dans le **paramètres d’algorithme** boîte de dialogue le **MISSING_VALUE_SUBSTITUTION** de ligne, cliquez sur le **valeur** colonne et tapez `Mean`.  
   
 ## <a name="build-the-model"></a>Générer le modèle  
  Pour utiliser le modèle, vous devez le déployer sur un serveur et traiter le modèle en exécutant les données d'apprentissage par l'algorithme.  
   
 #### <a name="to-process-the-forecasting-model"></a>Pour traiter le modèle de prévision  
   
-1.  Sur le **modèle d’exploration de données** menu de [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)], sélectionnez **traiter la Structure d’exploration de données et tous les modèles**.  
+1.  Sur le **Mining Model** menu de [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)], sélectionnez **traiter la Structure d’exploration de données et tous les modèles**.  
   
 2.  Cliquez sur **Oui**pour répondre à l'avertissement qui vous invite à indiquer si vous souhaitez générer et déployer le projet.  
   
@@ -105,11 +105,11 @@ ms.locfileid: "36312867"
 5.  Cliquez sur **fermer** pour quitter le **traiter la Structure d’exploration de données - prévision** boîte de dialogue.  
   
 ## <a name="next-task-in-lesson"></a>Tâche suivante de la leçon  
- [Le modèle de prévision &#40;intermédiaire Didacticiel d’exploration de données&#41;](../../2014/tutorials/exploring-the-forecasting-model-intermediate-data-mining-tutorial.md)  
+ [Exploration du modèle de prévision &#40;didacticiel d’exploration de données intermédiaire&#41;](../../2014/tutorials/exploring-the-forecasting-model-intermediate-data-mining-tutorial.md)  
   
 ## <a name="see-also"></a>Voir aussi  
  [Référence technique de Microsoft Time Series algorithme](../../2014/analysis-services/data-mining/microsoft-time-series-algorithm-technical-reference.md)   
  [Algorithme de série chronologique de Microsoft](../../2014/analysis-services/data-mining/microsoft-time-series-algorithm.md)   
- [Le traitement de la configuration requise et considérations &#40;d’exploration de données&#41;](../../2014/analysis-services/data-mining/processing-requirements-and-considerations-data-mining.md)  
+ [Traitement des exigences et considérations &#40;exploration de données&#41;](../../2014/analysis-services/data-mining/processing-requirements-and-considerations-data-mining.md)  
   
   

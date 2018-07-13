@@ -1,38 +1,36 @@
 ---
-title: Comportement avec les versions SQL Server antérieures (ODBC) de Type améliorées de Date et d’heure | Documents Microsoft
+title: Comportement avec les versions SQL Server antérieures (ODBC) de Type améliorées de Date et d’heure | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - date/time [ODBC], enhanced behavior with earlier SQL Server versions
 ms.assetid: cd4e137f-dc5e-4df7-bc95-51fe18c587e0
 caps.latest.revision: 21
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 0c0d2cd04460e7fd53db4a4c291c65cfcaa64ebc
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: 91052172849df1cd0234fe73cd39130d4568f131
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36155247"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37422958"
 ---
 # <a name="enhanced-date-and-time-type-behavior-with-previous-sql-server-versions-odbc"></a>Comportement des types de date et d'heure améliorés avec les versions SQL Server antérieures (ODBC)
   Cette rubrique décrit le comportement attendu lorsqu'une application cliente qui utilise les fonctionnalités améliorées de date et d'heure communique avec une version de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] antérieure à [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], et lorsqu'une application cliente qui utilise Microsoft Data Access Components, Windows Data Access Components ou une version de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client antérieure à [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] envoie des commandes à un serveur qui prend en charge les fonctionnalités améliorées de date et d'heure.  
   
 ## <a name="down-level-client-behavior"></a>Comportement de client de bas niveau  
- Les applications clientes compilées à l'aide d'une version de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client antérieure à [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] voient les nouveaux types de date et d'heure sous la forme de colonnes nvarchar. Le contenu de la colonne est les représentations sous forme de littéral, comme décrit dans la section « Formats de données : chaînes et littéraux » de [prise en charge du Type de données de Date ODBC et les améliorations apportées au](data-type-support-for-odbc-date-and-time-improvements.md). La taille de colonne correspond à la longueur littérale maximale pour la précision en fractions de seconde spécifiée pour la colonne.  
+ Les applications clientes compilées à l'aide d'une version de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client antérieure à [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] voient les nouveaux types de date et d'heure sous la forme de colonnes nvarchar. Le contenu de la colonne est les représentations sous forme de littéral, comme décrit dans la section « Formats de données : chaînes et littéraux » de [prise en charge du Type de données pour les améliorations ODBC Date / heure](data-type-support-for-odbc-date-and-time-improvements.md). La taille de colonne correspond à la longueur littérale maximale pour la précision en fractions de seconde spécifiée pour la colonne.  
   
  Les API du catalogue retournent des métadonnées conformes au code du type de données de bas niveau retourné au client (nvarchar, par exemple) et à la représentation de bas niveau associée (le format littéral approprié, par exemple). Toutefois, le nom du type de données retourné est le nom de type [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] réel.  
   
- Métadonnées d’instruction retournée par SQLDescribeCol, SQLDescribeParam, SQGetDescField et SQLColAttribute retournent des métadonnées qui sont cohérente avec le type de bas niveau à tous les égards, y compris le nom de type. Un exemple d'un tel type de bas niveau est `nvarchar`.  
+ Métadonnées d’instruction retournées par SQLDescribeCol, SQLDescribeParam, SQGetDescField et SQLColAttribute retournent des métadonnées qui est cohérente avec le type de bas niveau à tous les égards, y compris le nom de type. Un exemple d'un tel type de bas niveau est `nvarchar`.  
   
  Lorsqu’une application cliente de bas niveau s’exécute sur un [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] (ou version ultérieure) sur les modifications de schéma à la date/heure ont été apportées des types de serveur, le comportement attendu est comme suit :  
   
@@ -41,7 +39,7 @@ ms.locfileid: "36155247"
 |DATETIME|Date|SQL_C_TYPE_DATE|OK|OK (1)|  
 |||SQL_C_TYPE_TIMESTAMP|Champs d'heure définis à zéro.|OK (2)<br /><br /> Échoue si le champ d'heure n'est pas nul. Fonctionne avec [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)].|  
 ||Time(0)|SQL_C_TYPE_TIME|OK|OK (1)|  
-|||SQL_C_TYPE_TIMESTAMP|Champs de date définis à la date actuelle.|OK (2)<br /><br /> La date est ignorée. Échoue si les fractions de seconde sont différentes de zéro. Fonctionne avec [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)].|  
+|||SQL_C_TYPE_TIMESTAMP|Champs de date définis à la date actuelle.|OK (2)<br /><br /> La date est ignorée. Échoue si les fractions de seconde sont différents de zéro. Fonctionne avec [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)].|  
 ||Time(7)|SQL_C_TIME|Échec : littéral d'heure non valide.|OK (1)|  
 |||SQL_C_TYPE_TIMESTAMP|Échec : littéral d'heure non valide.|OK (1)|  
 ||Datetime2(3)|SQL_C_TYPE_TIMESTAMP|OK|OK (1)|  
@@ -114,6 +112,6 @@ ms.locfileid: "36155247"
  En cas de connexion à une instance de serveur d'une version antérieure à [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], toute tentative d'utiliser les nouveaux types de serveur ou les codes de métadonnées et les champs de descripteur associés provoquera le renvoi d'une erreur SQL_ERROR. Un enregistrement de diagnostic sera généré avec SQLSTATE HY004 et le message « Type de données SQL non valide pour la version du serveur lors de la connexion », ou avec 07006 et « Violation de l'attribut de type de données restreint ».  
   
 ## <a name="see-also"></a>Voir aussi  
- [Date et heure améliorations &#40;ODBC&#41;](date-and-time-improvements-odbc.md)  
+ [Améliorations date / heure &#40;ODBC&#41;](date-and-time-improvements-odbc.md)  
   
   

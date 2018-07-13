@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - HierarchyID
 ms.assetid: fd943d84-dbe6-4a05-912b-c88164998d80
 caps.latest.revision: 23
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 73a61c2af9d178911f206e2e5006dabd8620329e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: ded697f41f68e26e677fe5054e7e4f59955fc74c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36143446"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37186116"
 ---
 # <a name="populating-a-table-with-existing-hierarchical-data"></a>Remplissage d'une table avec des données hiérarchiques existantes
   Cette tâche crée une table et la remplit avec les données de la table **EmployeeDemo**. Les étapes de cette tâche sont les suivantes :  
@@ -117,7 +117,7 @@ ms.locfileid: "36143446"
   
      `10        4         2`  
   
-3.  Remplissez la table **NewOrg** . Utiliser les méthodes GetRoot et ToString pour concaténer les **Num** des valeurs dans le `hierarchyid` mettre en forme, puis mettez à jour le **OrgNode** colonne avec les valeurs hiérarchiques résultantes :  
+3.  Remplissez la table **NewOrg** . Utiliser les méthodes GetRoot et ToString pour concaténer le **Num** des valeurs dans le `hierarchyid` mettre en forme, puis mettez à jour le **OrgNode** colonne avec les valeurs hiérarchiques résultantes :  
   
     ```  
     WITH paths(path, EmployeeID)   

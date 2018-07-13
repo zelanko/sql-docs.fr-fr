@@ -1,5 +1,5 @@
 ---
-title: Élément BackupRemotePartitions (XMLA) | Documents Microsoft
+title: Élément BackupRemotePartitions (XMLA) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -24,18 +24,18 @@ helpviewer_keywords:
 - BackupRemotePartitions element
 ms.assetid: bd68bcf9-b324-4fa8-b6e5-1f5531f9992c
 caps.latest.revision: 12
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: c32fd50514e96fee8de289666d8e559a78fe985b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: d7cc7ccb441995d1c4aa3b22cccefcdc5224e486
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36154020"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37200069"
 ---
 # <a name="backupremotepartitions-element-xmla"></a>Élément BackupRemotePartitions (XMLA)
-  Détermine si le parent [sauvegarde](../xml-elements-commands/backup-element-xmla.md) commande sauvegarde des partitions distantes associées à l’objet.  
+  Détermine si le parent [sauvegarde](../xml-elements-commands/backup-element-xmla.md) commande sauvegarde de partitions distantes associées à l’objet.  
   
 ## <a name="syntax"></a>Syntaxe  
   

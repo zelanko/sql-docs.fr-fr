@@ -1,5 +1,5 @@
 ---
-title: Élément AssociationSet (CSDLBI) | Documents Microsoft
+title: Élément AssociationSet (CSDLBI) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -12,15 +12,15 @@ ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: 93e5ac4d-d7e8-490e-b775-28263a48cfcc
 caps.latest.revision: 8
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: d28f903b4e501f648329a65824292256bca7520b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: 7d418e75aa451c14db6010f6cb3673cd8c3a74bc
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36155109"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37229559"
 ---
 # <a name="associationset-element-csdlbi"></a>Élément AssociationSet (CSDLBI)
   L'élément `AssociationSet` est un type complexe qui définit une association. Dans un modèle de données CSDLBI, une association est une relation entre deux tables.  

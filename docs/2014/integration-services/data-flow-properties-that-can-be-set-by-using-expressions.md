@@ -1,5 +1,5 @@
 ---
-title: Les propriétés qui peuvent être définies en utilisant des Expressions de flux de données | Documents Microsoft
+title: Les propriétés qui peuvent être définies en utilisant des Expressions de flux de données | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - VB
 - CSharp
@@ -20,22 +20,22 @@ helpviewer_keywords:
 - property expressions [Integration Services]
 ms.assetid: cd0e171a-08be-45d6-81dc-ed94f37698b8
 caps.latest.revision: 43
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 0dccc1a7bb932ae044f6d1e2491c7521652e9033
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 9855c21e19e4e2ef0e9f9d7ab88d6d12fdadda16
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36154875"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37173170"
 ---
 # <a name="data-flow-properties-that-can-be-set-by-using-expressions"></a>Propriétés du flux de données pouvant être définies à l’aide d’expressions
   Les valeurs de certaines propriétés d'objets de flux de données peuvent être spécifiées à l'aide d'expressions de propriété disponibles sur le conteneur de tâche de flux de données.  
   
  Pour plus d’informations sur l’utilisation d’expressions de propriété, consultez [Expressions de propriété dans des packages](expressions/use-property-expressions-in-packages.md).  
   
- Vous pouvez utiliser des expressions de propriété pour personnaliser les configurations de chaque instance déployée d'un package. Vous pouvez également utiliser des expressions de propriété pour spécifier des contraintes d’exécution pour un package à l’aide de l’option **/set** avec l’utilitaire d’invite de commandes **dtexec** . Par exemple, vous pouvez limiter le `MaximumThreads` utilisé par la transformation de tri, ou le `MaxMemoryUsage` des transformations de regroupement probable et de recherche floue. Si elles sont libres, ces transformations peuvent mettre en cache de grandes quantités de données en mémoire.  
+ Vous pouvez utiliser des expressions de propriété pour personnaliser les configurations de chaque instance déployée d'un package. Vous pouvez également utiliser des expressions de propriété pour spécifier des contraintes d’exécution pour un package à l’aide de l’option **/set** avec l’utilitaire d’invite de commandes **dtexec** . Par exemple, vous pouvez contraindre le `MaximumThreads` utilisé par la transformation de tri ou la `MaxMemoryUsage` des transformations de regroupement probable et de recherche floue. Si elles sont libres, ces transformations peuvent mettre en cache de grandes quantités de données en mémoire.  
   
  Pour spécifier une expression de propriété pour une des propriétés d’objets de flux de données répertoriées dans cette rubrique, affichez la fenêtre **Propriétés** pour la tâche de flux de données en la sélectionnant sur l’aire **Flux de contrôle** du concepteur ou en sélectionnant l’onglet **Flux de données** du concepteur sans sélectionner de composant ou de chemin individuel. Sélectionnez la propriété **Expressions** , puis cliquez sur les points de suspension (...) pour afficher la boîte de dialogue de **l’Éditeur d’expressions de la propriété** . Déroulez la liste **Propriété** pour sélectionner une propriété, puis entrez une expression dans la zone de texte **Expression** ou cliquez sur les points de suspension (...) pour afficher la boîte de dialogue **Générateur d’expressions** .  
   
@@ -87,7 +87,7 @@ ms.locfileid: "36154875"
 ## <a name="see-also"></a>Voir aussi  
  [Utiliser des Expressions de propriété dans des Packages](expressions/use-property-expressions-in-packages.md)   
  [Propriétés communes](../../2014/integration-services/common-properties.md)   
- [Transformation de propriétés personnalisées](data-flow/transformations/transformation-custom-properties.md)   
- [Propriétés du chemin d’accès](../../2014/integration-services/path-properties.md)  
+ [Propriétés personnalisées de transformation](data-flow/transformations/transformation-custom-properties.md)   
+ [Propriétés du chemin](../../2014/integration-services/path-properties.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Organisateur d’indicateur de performance clé (onglet des indicateurs de performance clés, Concepteur de Cube) (Analysis Services - données multidimensionnelles) | Documents Microsoft
+title: Organisateur d’indicateur de performance clé (onglet des indicateurs de performance clés, Concepteur de Cube) (Analysis Services - données multidimensionnelles) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.cubeeditor.kpiorganizerpane.f1
 ms.assetid: b0f0388e-3d75-450d-b5fb-8a1d31cf8376
 caps.latest.revision: 21
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: f2a058a1698a5e7b202a63624d7f0d485c7a2a07
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: c82287e5fd5265e5cd112a1cb08c52f60c40bc07
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36154492"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37176976"
 ---
 # <a name="kpi-organizer-kpis-tab-cube-designer-analysis-services---multidimensional-data"></a>Organisateur d'indicateur de performance clé (KPI) (onglet Indicateurs de performance clés, Concepteur de cube) (Analysis Services - Données multidimensionnelles)
   Utilisez le volet **Organisateur d’indicateur de performance clé (KPI)** de l’onglet **Indicateurs de performance clés** accessible à partir du Concepteur de cube pour afficher et retrier les indicateurs de performance clés contenus dans le cube.  

@@ -1,5 +1,5 @@
 ---
-title: Exemples de requêtes modèle de clustering | Documents Microsoft
+title: Exemples de requêtes modèle de clustering | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - clustering [Data Mining]
 - content queries [DMX]
 - clustering algorithms [Analysis Services]
 ms.assetid: bf2ba332-9bc6-411a-a3af-b919c52432c8
 caps.latest.revision: 28
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: cee82332d6098544df5db02a223efc23b19d8820
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 6420e75c9961a094691a7be05e6e2b26fad45933
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36154306"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37200629"
 ---
 # <a name="clustering-model-query-examples"></a>Exemples de requêtes de modèle de clustering
   Lorsque vous créez une requête sur un modèle d'exploration de données, vous pouvez récupérer les métadonnées sur le modèle ou créer une requête de contenu qui fournit des détails sur les séquences découvertes dans l'analyse. Une autre solution consiste à créer une requête de prédiction qui utilise les séquences dans le modèle pour faire des prédictions pour les nouvelles données. Chaque type de requête fournit des informations différentes. Par exemple, une requête de contenu peut fournir des détails supplémentaires sur les clusters identifiés, tandis qu'une requête de prédiction peut vous dire à quel cluster un nouveau point de données est le plus susceptible d'appartenir.  
@@ -256,12 +256,12 @@ WHERE IsInNode('001')
 ## <a name="making-predictions-using-the-model"></a>Exécution de prédictions à l'aide du modèle  
  Bien que le clustering soit généralement utilisé pour décrire et comprendre des données, l'implémentation [!INCLUDE[msCoName](../../includes/msconame-md.md)] vous permet également de faire des prédictions sur l'appartenance au cluster et de retourner des probabilités associées à la prédiction. Cette section fournit des exemples de création de requêtes de prédiction sur des modèles de clustering. Vous pouvez faire des prédictions pour plusieurs cas, en spécifiant une source de données tabulaire, ou vous pouvez fournir une par une de nouvelles valeurs en créant une requête singleton. Pour plus de clarté, les exemples dans cette section sont tous des requêtes singleton.  
   
- Pour plus d’informations sur la création de requêtes de prédiction à l’aide de DMX, consultez [les Interfaces de requête d’exploration de données](data-mining-query-tools.md).  
+ Pour plus d’informations sur la création de requêtes de prédiction avec DMX, consultez [Interfaces de requête d’exploration de données](data-mining-query-tools.md).  
   
  [Retour en haut](#bkmk_top2)  
   
 ###  <a name="bkmk_Query8"></a> Exemple de requête 8 : prédiction de résultats à partir d'un modèle de clustering  
- Si le modèle de clustering que vous créez contient un attribut prévisible, vous pouvez utiliser le modèle pour faire des prédictions sur les résultats. Toutefois, le modèle gère l’attribut prédictible différemment selon que vous affectez à la colonne prédictible `Predict` ou `PredictOnly`. Si vous définissez l’utilisation de la colonne à `Predict`, les valeurs de cet attribut sont ajoutées au modèle de clustering et apparaissent en tant qu’attributs dans le modèle fini. Toutefois, si vous attribuez la valeur `PredictOnly` à la colonne, les valeurs ne sont pas utilisées pour créer des clusters. Au lieu de cela, lorsque le mode est terminé, l’algorithme de clustering crée de nouvelles valeurs pour le `PredictOnly` attribut basé sur les clusters auxquels chaque cas appartient.  
+ Si le modèle de clustering que vous créez contient un attribut prévisible, vous pouvez utiliser le modèle pour faire des prédictions sur les résultats. Toutefois, le modèle gère l’attribut prédictible différemment selon que vous affectez à la colonne prédictible `Predict` ou `PredictOnly`. Si vous définissez l’utilisation de la colonne à `Predict`, les valeurs de cet attribut sont ajoutées au modèle de clustering et apparaissent en tant qu’attributs dans le modèle fini. Toutefois, si vous attribuez la valeur `PredictOnly` à la colonne, les valeurs ne sont pas utilisées pour créer des clusters. Au lieu de cela, une fois que le mode terminé, l’algorithme de clustering crée de nouvelles valeurs pour le `PredictOnly` attribut basé sur les clusters auxquels chaque cas appartient.  
   
  La requête suivante fournit un nouveau cas unique au modèle, où les seules informations sur le cas sont l'âge et le sexe. L’instruction SELECT spécifie la paire attribut/valeur prévisible qui vous intéresse, et la fonction [PredictProbability &#40;DMX&#41;](/sql/dmx/predictprobability-dmx) indique la probabilité qu’un cas avec ces attributs ait le résultat désiré.  
   
@@ -275,7 +275,7 @@ NATURAL PREDICTION JOIN
   'F' AS [Gender]) AS t  
 ```  
   
- Exemple de résultats lors de l’utilisation est définie sur `Predict`:  
+ Exemple de résultats lorsque l’utilisation est définie sur `Predict`:  
   
 |Bike Buyer|Expression|  
 |----------------|----------------|  
@@ -394,6 +394,6 @@ NATURAL PREDICTION JOIN
 ## <a name="see-also"></a>Voir aussi  
  [Requêtes d’exploration de données](data-mining-queries.md)   
  [Microsoft Clustering algorithme informations techniques de référence](microsoft-clustering-algorithm-technical-reference.md)   
- [Algorithme Microsoft Clustering](microsoft-clustering-algorithm.md)  
+ [Algorithme de gestion de clusters Microsoft](microsoft-clustering-algorithm.md)  
   
   

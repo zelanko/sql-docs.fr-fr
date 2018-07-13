@@ -1,31 +1,29 @@
 ---
-title: Conversions de C en SQL | Documents Microsoft
+title: Conversions de C en SQL | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - conversions [ODBC], C to SQL
 ms.assetid: 7ac098db-9147-4883-8da9-a58ab24a0d31
 caps.latest.revision: 35
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 2941f9d95c8513762e8f77f8a84fcd34f682eafe
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: 638f3acea8ba4d9925851a26bd84ab20f76c38c9
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36153237"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37410077"
 ---
 # <a name="conversions-from-c-to-sql"></a>Conversions de C en SQL
-  Cette rubrique répertorie les problèmes à prendre en compte les lors de la conversion de types en types C [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] types date/heure.  
+  Cette rubrique répertorie les problèmes à prendre en compte lorsque vous effectuez une conversion à partir de types C en types [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] types date/heure.  
   
  Les conversions décrites dans le tableau suivant s'appliquent aux conversions effectuées sur le client. Dans les cas où le client spécifie la précision à la fraction de seconde pour un paramètre qui diffère de celui défini sur le serveur, la conversion cliente peut réussir, mais le serveur retourne une erreur en cas d'appel de `SQLExecute` ou `SQLExecuteDirect`. En particulier, ODBC traite toute troncation de fraction de seconde comme une erreur, alors que le comportement de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] consiste à arrondir ; par exemple, un arrondi se produit lorsque vous passez de `datetime2(6)` à `datetime2(2)`. Les colonnes datetime sont arrondies au 1/300ème de seconde et les secondes des colonnes smalldatetime sont définies avec la valeur zéro (0) par le serveur.  
   
@@ -68,6 +66,6 @@ ms.locfileid: "36153237"
 |Néant|Le comportement existant et antérieur de [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] est conservé.|  
   
 ## <a name="see-also"></a>Voir aussi  
- [Date et heure améliorations &#40;ODBC&#41;](date-and-time-improvements-odbc.md)  
+ [Améliorations date / heure &#40;ODBC&#41;](date-and-time-improvements-odbc.md)  
   
   

@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 99ebb4dc-41cc-42ac-82dd-a2b0e31155a0
 caps.latest.revision: 7
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 66738f617a6b882e1b72c526fb66aad5f438f969
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: c4b2c799771c6ff5e87100e4906411b4a8a613bb
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36154336"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37240399"
 ---
 # <a name="rendering-report-items-report-builder-and-ssrs"></a>Rendu des éléments de rapport (Générateur de rapports et SSRS)
   Le nombre, la taille et l'emplacement des éléments de rapport affectent la façon dont les convertisseurs mettent en page le corps du rapport. Vous trouverez ci-dessous une description de la façon dont les éléments de rapport sont rendus.  
@@ -81,13 +81,13 @@ ms.locfileid: "36154336"
   
 -   Les en-têtes de colonne et de ligne répétés.  
   
-     Les en-têtes sont prioritaires sur les pieds de page. Les groupes répétés internes sont prioritaires sur les groupes externes. Éléments pour lesquels le `RepeatWith` propriété est définie et qui sont plus proches de la région de données cible sont prioritaires sur les éléments qui sont éloignés de la région de données.  
+     Les en-têtes sont prioritaires sur les pieds de page. Les groupes répétés internes sont prioritaires sur les groupes externes. Éléments pour lesquels le `RepeatWith` propriété est définie et qui sont plus proches de la région de données cible sont prioritaires sur les éléments plus éloignés de la région de données.  
   
--   Petits éléments de rapport, tels que les zones de texte ou les rectangles, avec une propriété KeepTogether explicite `true`.  
+-   Petits éléments de rapport, tels que les zones de texte ou les rectangles, avec une propriété KeepTogether explicite ayant la valeur `true`.  
   
--   Grands éléments de rapport, tels que les sous-rapports ou un membre de tableau matriciel de non-le plus profond, avec une propriété KeepTogether explicite `true`.  
+-   Grands éléments de rapport, tels que les sous-rapports ou un membre de tableau matriciel non-le plus profond, avec une propriété KeepTogether explicite ayant la valeur `true`.  
   
--   Régions de données de tableau matriciel avec une propriété KeepTogether explicite définie sur `true`.  
+-   Régions de données de tableau matriciel avec une propriété KeepTogether explicite ayant la valeur `true`.  
   
 ### <a name="subreports"></a>Sous-rapports  
  Un sous-rapport est rendu sous la forme d'un rectangle qui contient un autre rapport défini dans un fichier rapport .rdl séparé. Le fichier de sous-rapport doit être publié sur un serveur de rapports avant qu'il soit accessible au rapport parent.  
@@ -111,7 +111,7 @@ ms.locfileid: "36154336"
 ## <a name="see-also"></a>Voir aussi  
  [Pagination dans Reporting Services &#40;Générateur de rapports et SSRS&#41;](pagination-in-reporting-services-report-builder-and-ssrs.md)   
  [Comportements de rendu &#40;Générateur de rapports et SSRS&#41;](rendering-behaviors-report-builder-and-ssrs.md)   
- [Fonctionnalité interactive des différentes Extensions de rendu de rapport &#40;rapport Générateur et SSRS&#41;](../report-builder/interactive-functionality-different-report-rendering-extensions.md)   
+ [Fonctionnalité interactive des différentes Extensions de rendu de rapport &#40;Générateur de rapports et SSRS&#41;](../report-builder/interactive-functionality-different-report-rendering-extensions.md)   
  [Listes &#40;Générateur de rapports et SSRS&#41;](tables-matrices-and-lists-report-builder-and-ssrs.md)  
   
   

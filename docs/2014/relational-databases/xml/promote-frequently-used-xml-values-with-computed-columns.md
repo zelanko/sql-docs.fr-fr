@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - dbe-xml
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - promoting properties [XML in SQL Server]
 - property promotion [XML in SQL Server]
 ms.assetid: f5111896-c2fd-4209-b500-f2baa45489ad
 caps.latest.revision: 11
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 6b9737311798edfe7f65ea74d03d7a941a145ef4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: d7a43e9ff408c185abf91a4ef71e7ccc734a3cb2
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36154798"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37278815"
 ---
 # <a name="promote-frequently-used-xml-values-with-computed-columns"></a>Promouvoir les valeurs XML les plus fréquentes à l'aide de colonnes calculées
   Si les requêtes portent essentiellement sur un petit nombre de valeurs d'élément et d'attribut, vous pouvez promouvoir ces quantités dans les colonnes relationnelles. Cela peut s'avérer utile lorsque les requêtes sont émises sur une petite partie des données XML et que l'ensemble de l'instance XML est récupéré. Il n'est pas nécessaire de créer un index XML sur la colonne XML. En revanche, la colonne promue peut être indexée. Les requêtes doivent être écrites en vue de l'utilisation de la colonne promue afin que l'optimiseur de requête ne redirige plus les requêtes de la colonne XML vers la colonne promue.  
@@ -30,7 +30,7 @@ ms.locfileid: "36154798"
  La colonne promue peut être une colonne calculée de la même table ou une colonne distincte, gérée par l'utilisateur, d'une autre table. Cela suffit lorsque des valeurs singleton sont promues à partir de chaque instance XML. Toutefois, en cas de propriétés à valeurs multiples, vous devez créer une table distincte pour la propriété, comme l'explique la section suivante.  
   
 ## <a name="computed-column-based-on-the-xml-data-type"></a>Colonne calculée basée sur le type de données xml  
- Une colonne calculée peut être créée à l’aide d’une fonction définie par l’utilisateur qui appelle `xml` méthodes du type de données. Le type de la colonne calculée peut être n'importe quel type SQL, y compris XML. L'exemple suivant illustre ce concept.  
+ Une colonne calculée peut être créée à l’aide d’une fonction définie par l’utilisateur qui appelle `xml` méthodes de type de données. Le type de la colonne calculée peut être n'importe quel type SQL, y compris XML. L'exemple suivant illustre ce concept.  
   
 ### <a name="example-computed-column-based-on-the-xml-data-type-method"></a>Exemple : colonne calculée basée sur la méthode du type de données xml  
  Créez la fonction définie par l'utilisateur pour extraire le numéro ISBN d'un livre :  
@@ -82,7 +82,7 @@ WHERE  ISBN = '0-7356-1588-2'
   
 -   Créez des déclencheurs sur la colonne XML pour assurer la maintenance des tables de propriétés. Dans les déclencheurs, procédez ainsi :  
   
-    -   Utilisez `xml` de type de données méthodes, telles que **nodes()** et **value()**, pour insérer et supprimer des lignes de tables de propriétés.  
+    -   Utilisez `xml` données telles que des méthodes de type **nodes()** et **value()**, pour insérer et supprimer des lignes des tables de propriété.  
   
     -   Créez des fonctions table multidiffusion dans CLR (Common Language Runtime) pour insérer et supprimer des lignes dans les tables de propriétés.  
   
@@ -176,7 +176,7 @@ WHERE    tblPropAuthor.propAuthor = 'David'
   
 3.  Définissez les déclencheurs insert, update et delete à l'aide de la fonction définie par l'utilisateur pour assurer la maintenance de la table de propriétés.  
   
- Pour cela, vous devez commencer par créer la fonction multidiffusion dans CLR. Le `xml` type de données est exposée comme une classe managée SqlXml dans ADO.NET et prend en charge la **CreateReader()** méthode qui retourne un XmlReader.  
+ Pour cela, vous devez commencer par créer la fonction multidiffusion dans CLR. Le `xml` type de données est exposé comme une classe managée SqlXml dans ADO.NET et prend en charge la **CreateReader()** méthode qui retourne un flux XmlReader.  
   
 > [!NOTE]  
 >  L'exemple de code de cette section utilise XPathDocument et XPathNavigator, ce qui vous oblige à charger tous les documents XML en mémoire. Si vous utilisez un code similaire dans votre application pour traiter plusieurs documents XML volumineux, ce code n'est pas évolutif. Au lieu de cela, laissez les allocations de mémoire petites et utilisez les interfaces multidiffusion chaque fois que possible. Pour plus d’informations sur les performances, consultez [Architecture d’intégration du CLR](../../database-engine/dev-guide/architecture-of-clr-integration.md).  

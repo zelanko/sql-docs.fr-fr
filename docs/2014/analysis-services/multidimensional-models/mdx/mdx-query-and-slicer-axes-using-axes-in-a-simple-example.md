@@ -1,5 +1,5 @@
 ---
-title: À l’aide d’Axes de requête et segment dans un exemple Simple (MDX) | Documents Microsoft
+title: À l’aide d’Axes de requête et segment dans un exemple Simple (MDX) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - slicer axis
 - query axis [MDX]
 ms.assetid: 85bcb26f-5971-4153-b334-61f8d8b475b5
 caps.latest.revision: 11
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 0be467a75ed63c91e97b7fcd9aeef2e59944f09b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 9b6eb6140795995f2fb035e9972a7c89396fd83a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36154047"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37197909"
 ---
 # <a name="using-query-and-slicer-axes-in-a-simple-example-mdx"></a>Utilisation d'axes de requête et de découpage dans un exemple simple (MDX)
   L'exemple simple fourni dans cette rubrique illustre les principes de base de la spécification et de l'utilisation d'axes de requête et de découpage.  

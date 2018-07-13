@@ -1,5 +1,5 @@
 ---
-title: Ajout de données vue de Source pour la prévision (didacticiel sur l’exploration des données intermédiaires) | Documents Microsoft
+title: Ajout d’une données vue de Source pour la prévision (didacticiel d’exploration de données intermédiaire) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,32 +8,32 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 2665040a-1291-4064-ba01-f458637dda57
 caps.latest.revision: 25
 author: minewiskan
 ms.author: owend
-manager: kfile
-ms.openlocfilehash: 3c355f9755e4dfd2ddd1fcc3f65e1b34857709ca
-ms.sourcegitcommit: 8c040e5b4e8c7d37ca295679410770a1af4d2e1f
+manager: craigg
+ms.openlocfilehash: 9cecd7cf22f5849e201aeca7779ceccb4a9e07dc
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/21/2018
-ms.locfileid: "36312217"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37185336"
 ---
 # <a name="adding-a-data-source-view-for-forecasting-intermediate-data-mining-tutorial"></a>Ajout d'une vue de source de données à des fins de prévision (Didacticiel sur l'exploration de données intermédiaire)
   Au cours de cette tâche, vous allez ajouter une vue de source de données qui sera utilisée pour le scénario de prévision. Un modèle de prévision requiert que les données contiennent une colonne pouvant être utilisée pour identifier des étapes dans une série chronologique. Si vous envisagez d'analyser plusieurs séries de données, toutes les séries doivent se terminer à la même date ou heure.  
   
 ### <a name="to-add-a-data-source-view"></a>Pour ajouter une vue de source de données  
   
-1.  Dans l’Explorateur de solutions, cliquez sur **vues de sources de données**, puis sélectionnez **nouvelle vue de Source de données**.  
+1.  Dans l’Explorateur de solutions, cliquez sur **les vues de sources de données**, puis sélectionnez **nouvelle vue de Source de données**.  
   
 2.  Dans la page **Assistant Vue de source de données** , cliquez sur **Suivant**.  
   
-3.  Sur le **sélectionner une Source de données** sous **sources de données relationnelles**, sélectionnez le [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)] source de données. Cliquez sur **Suivant**.  
+3.  Sur le **sélectionner une Source de données** page sous **sources de données relationnelles**, sélectionnez le [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)] source de données. Cliquez sur **Suivant**.  
   
     > [!NOTE]  
-    >  Si vous n’avez pas de cette source de données, vous trouverez les étapes de création de la source de données dans le [Basic Data Mining Tutorial](../../2014/tutorials/basic-data-mining-tutorial.md).  
+    >  Si vous n’avez pas de cette source de données, vous trouverez les étapes pour créer la source de données dans le [Basic Data Mining Tutorial](../../2014/tutorials/basic-data-mining-tutorial.md).  
   
 4.  Sur le **sélectionner des Tables et vues** page, sélectionnez la table vTimeSeries (dbo) et puis cliquez sur la flèche droite pour l’ajouter à la vue de source de données.  
   
@@ -41,16 +41,16 @@ ms.locfileid: "36312217"
   
 6.  Sur le **fin de l’Assistant** page, la vue de source de données est nommée par défaut [!INCLUDE[ssAWDWsp](../includes/ssawdwsp-md.md)]. Remplacez le nom par **SalesByRegion**, puis cliquez sur **Terminer**.  
   
-     Concepteur de vue de Source de données s’ouvre et le **SalesByRegion** vue de source de données s’affiche.  
+     Concepteur de vue de Source de données s’ouvre et la **SalesByRegion** vue de source de données s’affiche.  
   
 ## <a name="working-with-the-data-source-view"></a>Utilisation de la vue de source de données  
  Une fois que vous avez créé la vue de source de données, pour explorer les données, vous pouvez procéder des manières suivantes :  
   
 -   Avec le bouton droit de la table vTimeSeries dans le concepteur, puis sélectionnez **Explorer les données** pour ouvrir la table sélectionnée dans une grille.  
   
--   Cliquez sur **options d’échantillonnage** , puis utilisez le **Options d’Exploration de données** boîte de dialogue pour modifier la méthode d’échantillonnage. Cliquez sur **Actualiser** pour charger des données dans la table en utilisant les paramètres d’option. Par exemple, vous pouvez spécifier le nombre de lignes dans l’exemple de sortie, ou choisissez les n premières lignes.  
+-   Cliquez sur **options d’échantillonnage** , puis utilisez le **Options d’Exploration de données** boîte de dialogue pour modifier la méthode d’échantillonnage. Cliquez sur **Actualiser** pour charger des données dans la table en utilisant les nouveaux paramètres d’option. Par exemple, vous pouvez spécifier le nombre de lignes dans l’exemple de sortie, ou choisissez les n premières lignes.  
   
--   Avec le bouton droit de la table vTimeSeries et sélectionnez **propriétés** pour attribuer un nouveau nom à la table. Vous pouvez également sélectionner des colonnes individuelles dans la vue de source de données et modifier les propriétés des colonnes.  
+-   Cliquez sur la table vTimeSeries et sélectionnez **propriétés** pour attribuer un nouveau nom à la table. Vous pouvez également sélectionner des colonnes individuelles dans la vue de source de données et modifier les propriétés des colonnes.  
   
 -   Cliquez n'importe où dans la zone de conception de la vue de source de données pour créer une nouvelle requête et lui affecter un nom, pour créer des relations entre des tables, ou pour modifier la disposition de la zone de conception.  
   
@@ -59,9 +59,9 @@ ms.locfileid: "36312217"
  Dans la tâche suivante, vous allez explorer les données de série chronologique et déterminer la meilleure colonne à utiliser comme identificateur de série chronologique. Vous allez également apprendre à gérer les écarts dans les données de série chronologique.  
   
 ## <a name="next-task-in-lesson"></a>Tâche suivante de la leçon  
- [Fonctionnement de la configuration requise pour une série chronologique modèle &#40;intermédiaire Didacticiel d’exploration de données&#41;](../../2014/tutorials/time-series-model-requirements-intermediate-data-mining-tutorial.md)  
+ [Présentation de la configuration requise pour une série chronologique de modèle &#40;didacticiel d’exploration de données intermédiaire&#41;](../../2014/tutorials/time-series-model-requirements-intermediate-data-mining-tutorial.md)  
   
 ## <a name="see-also"></a>Voir aussi  
- [Algorithme de série chronologique de Microsoft](../../2014/analysis-services/data-mining/microsoft-time-series-algorithm.md)  
+ [Algorithme MTS (Microsoft Time Series)](../../2014/analysis-services/data-mining/microsoft-time-series-algorithm.md)  
   
   
