@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - attributes [Master Data Services], creating number attributes
 - creating number attributes [Master Data Services]
 ms.assetid: c0dbb6d8-ba78-485a-a40d-6d5cb7e75d0a
 caps.latest.revision: 6
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: a572422ea432977364bc49c5826d49c88053b79d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: 88811e8d6a571f8b51a8362310829b92bb2a57d7
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36151922"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37149260"
 ---
 # <a name="create-a-numeric-attribute-master-data-services"></a>Créer un attribut numérique (Master Data Services)
   Dans [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], créez un attribut numérique lorsque vous souhaitez que les utilisateurs entrent un nombre comme valeur d'attribut.  
@@ -69,7 +69,7 @@ ms.locfileid: "36151922"
   
 11. Dans la zone **Décimales** , tapez le nombre de chiffres qui peuvent être entrés après la virgule décimale.  
   
-12. À partir de la **masque de saisie** , sélectionnez un format pour les nombres négatifs.  
+12. À partir de la **masque d’entrée** liste, sélectionnez le format des nombres négatifs.  
   
 13. Sélectionnez éventuellement **Activer le suivi des modifications** pour effectuer le suivi des modifications apportées aux groupes d'attributs. Pour plus d’informations, consultez [Add Attributes to a Change Tracking Group &#40;Master Data Services&#41;](../../2014/master-data-services/add-attributes-to-a-change-tracking-group-master-data-services.md) .  
   

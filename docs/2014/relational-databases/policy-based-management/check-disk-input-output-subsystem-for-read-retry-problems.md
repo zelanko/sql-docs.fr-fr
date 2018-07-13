@@ -1,5 +1,5 @@
 ---
-title: Vérifiez le sous-système d’entrée/sortie de disque pour les problèmes de nouvelle tentative de lecture | Documents Microsoft
+title: Rechercher le sous-système d’entrée et sortie de disque pour les problèmes de nouvelle tentative de lecture | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Best Practices [Database Engine]
 ms.assetid: cedf4097-5b73-4964-9935-74a101847019
 caps.latest.revision: 7
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: ab76e533c5f4b4bd663b5a996f48fdb8d5282468
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 06494a0daae6dc141c930f3a73d4b808902834a4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36153464"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37190309"
 ---
-# <a name="check-disk-input-output-subsystem-for-read-retry-problems"></a>Vérifiez le sous-système d’entrée/sortie de disque pour les problèmes de nouvelle tentative de lecture
+# <a name="check-disk-input-output-subsystem-for-read-retry-problems"></a>Rechercher le sous-système d’entrée et sortie de disque pour les problèmes de nouvelle tentative de lecture
   Cette règle recherche le message d'erreur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 825 dans le journal des événements. Ce message indique que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] n'a pas pu lire les données du disque à la première tentative. Ce message signale un problème majeur avec le sous-système d'E/S. Il n’indique pas un problème avec [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Toutefois, le problème de disque peut entraîner la perte de données ou l'altération des bases de données s'il n'est pas résolu.  
   
 ## <a name="best-practices-recommendations"></a>Meilleures pratiques recommandées  

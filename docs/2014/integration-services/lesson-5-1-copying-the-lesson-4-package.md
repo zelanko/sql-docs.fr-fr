@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 8aa7d690-4649-4c0a-ac6f-9504637ee426
 caps.latest.revision: 25
-author: douglaslM
+author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 66c714d7b0e2555a732958b8b23259f6106e8389
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 653782ef61866adfa1a495deca49b563f12ca110
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36154198"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37176146"
 ---
 # <a name="step-1-copying-the-lesson-4-package"></a>Étape 1 : Copie du package de la leçon 4
   Dans cette tâche, vous créez une copie du package Lesson 4.dtsx que vous avez créé à la leçon 4. Vous pouvez également ajouter au projet le package final de la leçon 4 inclus avec le didacticiel, puis le copier. Vous allez utiliser cette nouvelle copie tout au long de la leçon 5.  
@@ -65,6 +65,6 @@ ms.locfileid: "36154198"
 5.  Copiez et collez le package de la leçon 4 comme décrit dans les étapes 3 à 8 de la procédure précédente.  
   
 ## <a name="next-task-in-lesson"></a>Tâche suivante de la leçon  
- [Étape 2 : Activation et configuration des Configurations de Package](lesson-5-2-enabling-and-configuring-package-configurations.md)  
+ [Étape 2 : Activation et configuration des configurations de package](lesson-5-2-enabling-and-configuring-package-configurations.md)  
   
   

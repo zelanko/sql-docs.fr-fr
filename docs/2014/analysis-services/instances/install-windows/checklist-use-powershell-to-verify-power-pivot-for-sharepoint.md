@@ -1,5 +1,5 @@
 ---
-title: 'Liste de vérification : Utiliser PowerShell pour vérifier PowerPivot pour SharePoint | Documents Microsoft'
+title: 'Liste de vérification : Utiliser PowerShell pour vérifier PowerPivot pour SharePoint | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 73a13f05-3450-411f-95f9-4b6167cc7607
 caps.latest.revision: 21
-author: markingmyname
-ms.author: maghan
-manager: jhubbard
-ms.openlocfilehash: a7d62eaa7acda26384b3bf8eb7dbb49af3ab5096
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: 1c7a70d4cfa7b47d4155abd46982a88c11ebdbca
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36154062"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37149780"
 ---
 # <a name="checklist-use-powershell-to-verify-powerpivot-for-sharepoint"></a>Liste de vérification : utiliser PowerShell pour vérifier PowerPivot pour SharePoint
   Aucune opération d'installation ou de récupération de [!INCLUDE[ssGeminiShort](../../../includes/ssgeminishort-md.md)] n'est terminée sans exécuter un test de vérification complet qui confirme que les services et les données sont opérationnels. Dans cet article, nous vous indiquons comment effectuer ces étapes avec Windows PowerShell. Nous avons consacré une section distincte à chaque étape afin que vous puissiez accéder directement aux tâches spécifiques. Par exemple, exécutez le script dans la section [Bases de données](#bkmk_databases) de cette rubrique pour vérifier le nom de l'application de service et des bases de données de contenu si vous souhaitez les planifier pour la maintenance ou la sauvegarde.  
@@ -36,7 +36,7 @@ ms.locfileid: "36154062"
   
 |||  
 |-|-|  
-|[Préparation de votre environnement PowerShell](#bkmk_prerequisites)<br /><br /> [Symptômes et actions recommandées](#bkmk_symptoms)<br /><br /> **(A)** [Service Windows Analysis Services](#bkmk_windows_service)<br /><br /> **(B)** [PowerPivotSystemService et PowerPivotEngineSerivce](#bkmk_engine_and_system_service)<br /><br /> **(C)** [Application(s) et proxys du service PowerPivot](#bkmk_powerpivot_service_application)<br /><br /> **(D)** [Bases de données](#bkmk_databases)<br /><br /> [Fonctionnalités SharePoint](#bkmk_features)<br /><br /> [Travaux du minuteur](#bkmk_timer_jobs)<br /><br /> [Règles d'intégrité](#bkmk_health_rules)<br /><br /> **(E)** [Journaux Windows et ULS](#bkmk_logs)<br /><br /> [Fournisseur MSOLAP](#bkmk_msolap)<br /><br /> [Bibliothèque cliente ADOMD.NET](#bkmk_adomd)<br /><br /> [Règles de collecte de données d'intégrité](#bkmk_health_collection)<br /><br /> [Solutions](#bkmk_solutions)<br /><br /> [Étapes manuelles de contrôle](#bkmk_manual)<br /><br /> [Plus de ressources](#bkmk_more_resources)<br /><br /> [Script PowerShell complet](#bkmk_full_script)|![contrôle PowerShell pour powerpivot](../../../sql-server/install/media/ssas-powershell-component-verification.png "vérification powershell de powerpivot")|  
+|[Préparation de votre environnement PowerShell](#bkmk_prerequisites)<br /><br /> [Symptômes et actions recommandées](#bkmk_symptoms)<br /><br /> **(A)** [Service Windows Analysis Services](#bkmk_windows_service)<br /><br /> **(B)** [PowerPivotSystemService et PowerPivotEngineSerivce](#bkmk_engine_and_system_service)<br /><br /> **(C)** [Application(s) et proxys du service PowerPivot](#bkmk_powerpivot_service_application)<br /><br /> **(D)** [Bases de données](#bkmk_databases)<br /><br /> [Fonctionnalités SharePoint](#bkmk_features)<br /><br /> [Travaux du minuteur](#bkmk_timer_jobs)<br /><br /> [Règles d'intégrité](#bkmk_health_rules)<br /><br /> **(E)** [Journaux Windows et ULS](#bkmk_logs)<br /><br /> [Fournisseur MSOLAP](#bkmk_msolap)<br /><br /> [Bibliothèque cliente ADOMD.NET](#bkmk_adomd)<br /><br /> [Règles de collecte de données d'intégrité](#bkmk_health_collection)<br /><br /> [Solutions](#bkmk_solutions)<br /><br /> [Étapes manuelles de contrôle](#bkmk_manual)<br /><br /> [Plus de ressources](#bkmk_more_resources)<br /><br /> [Script PowerShell complet](#bkmk_full_script)|![vérification de PowerShell de powerpivot](../../../sql-server/install/media/ssas-powershell-component-verification.png "vérification powershell de powerpivot")|  
   
 ##  <a name="bkmk_prerequisites"></a> Préparation de votre environnement PowerShell  
  Les étapes de cette section préparent votre environnement PowerShell. Elles peuvent ne pas être requises, selon la façon dont votre environnement de script est actuellement configuré.  
@@ -63,7 +63,7 @@ Add-PSSnapin Microsoft.Sharepoint.Powershell –EA 0
   
 |||  
 |-|-|  
-|![PowerPivot pour sharepoint généraux de l’application ensemble](../../../sql-server/install/media/ssas-powerpivot-logo.png "powerpivot dans l’ensemble de généraux de l’application sharepoint")|Vous pouvez éventuellement vérifier la plupart des composants dans l'Administration centrale, dans le tableau de bord de gestion de [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] . Pour ouvrir le tableau de bord dans l'Administration centrale, cliquez sur **Paramètres généraux de l'application**, puis cliquez sur **Tableau de bord de gestion** dans **PowerPivot**. Pour plus d’informations sur le tableau de bord, consultez [PowerPivot Management Dashboard and Usage Data](../../power-pivot-sharepoint/power-pivot-management-dashboard-and-usage-data.md).|  
+|![PowerPivot pour sharepoint généraux de l’application ensemble](../../../sql-server/install/media/ssas-powerpivot-logo.png "powerpivot dans l’ensemble des applications générales de sharepoint")|Vous pouvez éventuellement vérifier la plupart des composants dans l'Administration centrale, dans le tableau de bord de gestion de [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] . Pour ouvrir le tableau de bord dans l'Administration centrale, cliquez sur **Paramètres généraux de l'application**, puis cliquez sur **Tableau de bord de gestion** dans **PowerPivot**. Pour plus d’informations sur le tableau de bord, consultez [PowerPivot Management Dashboard and Usage Data](../../power-pivot-sharepoint/power-pivot-management-dashboard-and-usage-data.md).|  
   
 ##  <a name="bkmk_symptoms"></a> Symptômes et actions recommandées  
  Le tableau suivant répertorie les symptômes ou les problèmes et suggère la section correspondante de cette rubrique à consulter pour vous aider à résoudre le problème.  
@@ -135,7 +135,7 @@ Farm      : SPFarm Name=SharePoint_Config
 ##  <a name="bkmk_powerpivot_service_application"></a> Applications de Service PowerPivot et proxys  
  Vérifiez que l'état est **En ligne**. L'application Excel Services n'utilise pas une base de données d'application de service et par conséquent l'applet de commande ne retourne aucun nom de base de données. Notez la base de données utilisée par l'application de service de [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] , afin de pouvoir vérifier que la base de données est en ligne dans la section traitant des bases de données plus loin dans cette rubrique.  
   
- **PowerPivot et Excel Service applications**  
+ **PowerPivot et les applications de Service Excel**  
   
  Pour un déploiement SharePoint 2010, vérifiez que l'état est **En ligne**.  
   
@@ -185,7 +185,7 @@ SharePoint Web Services System Online DOMAIN\account     89b50ec3-49e3-4de7-881a
   
  ![Remarque](../../../reporting-services/media/rs-fyinote.png "Remarque")le pool d’applications peut également être vérifié dans la page Administration centrale **gérer les Applications de Service**. Cliquez sur le nom de l'application de service et cliquez sur **Propriétés** dans le ruban.  
   
- **Proxys d’Application PowerPivot et Excel Service**  
+ **PowerPivot et Excel Service Application proxy**  
   
  Vérifiez que l'état est **En ligne**.  
   
@@ -264,7 +264,7 @@ Online PowerPivot Setup Extension Timer Job                                     
 ```  
   
 ##  <a name="bkmk_health_rules"></a> Règles d'intégrité  
- Il y a moins de règles dans un déploiement SharePoint 2013. Pour obtenir la liste complète des règles pour chaque environnement SharePoint et une explication de l’utilisation des règles, consultez [configurer des règles de contrôle d’intégrité PowerPivot -](../../power-pivot-sharepoint/configure-power-pivot-health-rules.md).  
+ Il y a moins de règles dans un déploiement SharePoint 2013. Pour obtenir la liste complète des règles pour chaque environnement SharePoint et une explication de l’utilisation des règles, consultez [configurer des règles d’intégrité de PowerPivot -](../../power-pivot-sharepoint/configure-power-pivot-health-rules.md).  
   
 ```  
 Get-SPHealthAnalysisRule | select name, enabled, summary | where {$_.summary -like “*power*”}  | format-table -property * -autosize | out-default  
@@ -287,7 +287,7 @@ MidTierAcctReadPermissionRule    True PowerPivot: MidTier process account should
 ##  <a name="bkmk_logs"></a> Journaux Windows et ULS  
  **Journaux d'événements Windows**  
   
- La commande suivante recherche le journal des événements Windows pour les événements associés à l'instance d' [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] en mode SharePoint. Pour plus d’informations sur la désactivation des événements ou la modification du niveau d’événement, consultez [configurer et afficher les fichiers journaux SharePoint et la journalisation des diagnostics &#40;PowerPivot pour SharePoint&#41;](../../power-pivot-sharepoint/configure-and-view-sharepoint-and-diagnostic-logging.md).  
+ La commande suivante recherche le journal des événements Windows pour les événements associés à l'instance d' [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] en mode SharePoint. Pour plus d’informations sur la désactivation des événements ou de modification du niveau d’événement, consultez [configurer et afficher les fichiers journaux SharePoint et la journalisation des diagnostics &#40;PowerPivot pour SharePoint&#41;](../../power-pivot-sharepoint/configure-and-view-sharepoint-and-diagnostic-logging.md).  
   
  **Nom du service :** MSOLAP$POWERPIVOT  
   
@@ -403,7 +403,7 @@ PowerPivot Query Usage       Online    True AnalysisServicesRequests            
 PowerPivot Unload Data Usage Online    True AnalysisServicesUnloads                         14  
 ```  
   
- Pour plus d’informations, consultez [collecte des données d’utilisation PowerPivot](../../power-pivot-sharepoint/power-pivot-usage-data-collection.md).  
+ Pour plus d’informations, consultez [PowerPivot Usage Data Collection](../../power-pivot-sharepoint/power-pivot-usage-data-collection.md).  
   
 ##  <a name="bkmk_solutions"></a> Solutions  
  Si les autres composants sont en ligne, vous pouvez ignorer la vérification des solutions. Toutefois, si les règles d'intégrité sont absentes, vérifiez que les deux solutions existent et sont affichées, puis vérifiez que les deux solutions PowerPivot sont **En ligne** et **Déployées**.  
@@ -436,7 +436,7 @@ powerpivotwebapp.wsp Online     True WebApplicationDeployed {uesql11spoint2}
 ##  <a name="bkmk_manual"></a> Étapes manuelles de contrôle  
  Cette section décrit les étapes de vérification qui ne peuvent pas être effectuées par des applets de commande PowerShell.  
   
- **Actualisation de données planifiée :** configurez la planification d'actualisation d'un classeur sur **Aussi actualiser dès que possible**.  Pour plus d’informations, consultez la section « Vérifier l’actualisation des données » de [actualisation planifiée des données et les données Sources que faire pas prise en charge l’authentification Windows &#40;PowerPivot pour SharePoint&#41;](../../power-pivot-sharepoint/schedule-data-refresh-and-data-sources-no-windows-authentication.md).  
+ **Actualisation de données planifiée :** configurez la planification d'actualisation d'un classeur sur **Aussi actualiser dès que possible**.  Pour plus d’informations, consultez la section « Vérifier l’actualisation des données » de [actualisation planifiée des données et les données Sources que faire pas prise en charge Windows Authentication &#40;PowerPivot pour SharePoint&#41;](../../power-pivot-sharepoint/schedule-data-refresh-and-data-sources-no-windows-authentication.md).  
   
 ##  <a name="bkmk_more_resources"></a> Plus de ressources  
  [Applets de commande de l’administration du serveur Web (IIS) dans Windows PowerShell](http://technet.microsoft.com/library/ee790599.aspx).  

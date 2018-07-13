@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Report Designer [Reporting Services], previewing reports
 - previewing reports [Reporting Services]
@@ -18,13 +18,13 @@ ms.assetid: 85117f6c-828e-45c9-810f-e700d9bfba67
 caps.latest.revision: 42
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 0c1d7b819f181d8a4b2de8c448a80a5ef24a64cd
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: afcfb2cf31526f4e8898fafbe72f9492a1848886
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36152760"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37202529"
 ---
 # <a name="previewing-reports"></a>Aperçu des rapports
   Lorsque vous concevez un rapport, vous pouvez le visualiser avant de le publier sur l'environnement de production. Pour ce faire, vous disposez de plusieurs méthodes : en passant en mode aperçu dans le Concepteur de rapports, en utilisant la fenêtre d'aperçu du Concepteur de rapports et en publiant le rapport sur un serveur de rapports dans un environnement de test.  
@@ -33,12 +33,12 @@ ms.locfileid: "36152760"
 >  Lorsque vous prévisualisez un rapport, les données de ce rapport sont mises en cache dans un fichier sur l'ordinateur local. Ainsi, lorsque vous prévisualisez une nouvelle fois ce rapport (au moyen des mêmes requête, paramètres et informations d'identification), le Concepteur de rapports récupère l'exemplaire mis en cache au lieu d'exécuter à nouveau la requête. Le fichier de données est enregistré sous *\<nom_rapport>*.rdl.data dans le même répertoire que le fichier de définition de rapport. Le fichier n'est pas supprimé lorsque vous fermez le Générateur de rapports.  
   
 ## <a name="preview-mode"></a>Mode Aperçu  
- Vous pouvez afficher un aperçu d’un rapport dans le Concepteur de rapports en cliquant sur **aperçu**. Cette opération entraîne l'exécution du rapport localement. Elle utilise les mêmes fonctionnalités de traitement et de rendu de rapport que celles fournies par le serveur de rapports. Le rapport qui est affiché est une image interactive. Vous pouvez sélectionner des paramètres, cliquer sur des liens, afficher l'explorateur de documents, et développer ou réduire des zones masquées du rapport. Vous pouvez aussi exporter le rapport dans n'importe quel format de rendu installé.  
+ Vous pouvez prévisualiser un rapport dans le Concepteur de rapports en cliquant sur **aperçu**. Cette opération entraîne l'exécution du rapport localement. Elle utilise les mêmes fonctionnalités de traitement et de rendu de rapport que celles fournies par le serveur de rapports. Le rapport qui est affiché est une image interactive. Vous pouvez sélectionner des paramètres, cliquer sur des liens, afficher l'explorateur de documents, et développer ou réduire des zones masquées du rapport. Vous pouvez aussi exporter le rapport dans n'importe quel format de rendu installé.  
   
 ## <a name="standalone-preview"></a>Afficheur  
  Une autre manière d'afficher l'aperçu d'un rapport consiste à exécuter le projet de rapport dans une configuration de débogage, par exemple pour déboguer les assemblys personnalisés que vous écrivez. Vous pouvez exécuter un projet de trois manières :  
   
--   En cliquant sur **Démarrer** sur la **déboguer** menu.  
+-   En cliquant sur **Démarrer** sur le **déboguer** menu.  
   
 -   En cliquant sur le **Démarrer** bouton sur le [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] barre d’outils standard.  
   

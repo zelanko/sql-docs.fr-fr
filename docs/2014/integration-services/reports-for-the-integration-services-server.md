@@ -1,5 +1,5 @@
 ---
-title: Rapports pour le serveur Integration Services | Documents Microsoft
+title: Rapports pour le serveur Integration Services | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,23 +8,23 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - SQL12.SWB.SUMMARY.RENDER.CUSTOM.REPORT.F1
 ms.assetid: e976e7c0-a805-4370-bf73-356c8e3becfb
 caps.latest.revision: 14
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 9809de19a363c94365c0da88655d4e54b81b80cd
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 9c035c2d8dacf29f8ca4d81b13c0ace5500a2dbb
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36153754"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37180296"
 ---
 # <a name="reports-for-the-integration-services-server"></a>Rapports du serveur Integration Services
-  Dans la version actuelle de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)], les rapports standards sont disponibles dans [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] pour vous aider à surveiller [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] les projets qui ont été déployées sur le [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] server. Ces rapports vous aident à consulter l'état et l'historique du package et, si nécessaire, à identifier la cause des erreurs d'exécution du package.  
+  Dans la version actuelle de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)], deux rapports standard sont disponibles dans [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] pour vous aider à surveiller [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] projets qui ont été déployées sur le [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] server. Ces rapports vous aident à consulter l'état et l'historique du package et, si nécessaire, à identifier la cause des erreurs d'exécution du package.  
   
  En haut de chaque page de rapport, l'icône de retour permet de revenir à la page précédente, l'icône de rafraîchissement actualise les informations affichées dans la page et l'icône d'impression vous permet d'imprimer la page en cours.  
   
@@ -83,9 +83,9 @@ ms.locfileid: "36153754"
  Pour obtenir des instructions sur la manière de créer et d’ajouter un rapport personnalisé, consultez [Ajouter un rapport personnalisé à Management Studio](../ssms/object/add-a-custom-report-to-management-studio.md).  
   
 ## <a name="related-tasks"></a>Related Tasks  
- [Afficher des rapports pour le serveur Integration Services](../../2014/integration-services/view-reports-for-the-integration-services-server.md)  
+ [Afficher les rapports pour le serveur Integration Services](../../2014/integration-services/view-reports-for-the-integration-services-server.md)  
   
 ## <a name="related-content"></a>Contenu associé  
- [Pour les exécutions de Package et d’autres opérations d’analyse](performance/monitor-running-packages-and-other-operations.md)  
+ [Surveillance des exécutions de packages et d’autres opérations](performance/monitor-running-packages-and-other-operations.md)  
   
   

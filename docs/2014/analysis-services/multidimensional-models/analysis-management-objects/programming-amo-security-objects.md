@@ -1,5 +1,5 @@
 ---
-title: Programmation des objets de sécurité AMO | Documents Microsoft
+title: Programmation des objets de sécurité AMO | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -16,18 +16,18 @@ helpviewer_keywords:
 - AMO, security
 ms.assetid: 5d963721-6e6e-46eb-bc9b-18724dd0b751
 caps.latest.revision: 17
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 660afdf9a8c6c51c1dc97b8ee8de22ba6853708d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: e110e71630a43d30f29be89cd56197ab8f18fd7b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36142922"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37197949"
 ---
 # <a name="programming-amo-security-objects"></a>Programmation d'objets de sécurité AMO
-  Dans [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)], programmation des objets de sécurité ou d’applications qui utilisent des objets de sécurité AMO exige d’être membre du groupe administrateur du serveur ou du groupe administrateur de base de données. Administrateur du serveur et administrateur de base de données sont un accès niveaux fournie par [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)].  
+  Dans [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)], programmation des objets de sécurité ou l’exécution des applications qui utilisent des objets de sécurité AMO exige d’être membre du groupe administrateur du serveur ou le groupe administrateur de base de données. Administrateur du serveur et l’administrateur de base de données sont un accès niveaux fournie par [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)].  
   
  Dans [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)], l'accès utilisateur à tout objet est obtenu à travers la combinaison des rôles et des autorisations attribués à cet objet. Pour plus d’informations, consultez [Classes de sécurité AMO](amo-security-classes.md).  
   

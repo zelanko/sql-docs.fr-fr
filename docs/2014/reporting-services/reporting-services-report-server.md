@@ -1,5 +1,5 @@
 ---
-title: Report Server Reporting Services | Documents Microsoft
+title: Reporting Services Report Server | Microsoft Docs
 ms.custom: ''
 ms.date: 08/12/2015
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 applies_to:
 - SQL Server 2014
 helpviewer_keywords:
@@ -29,13 +29,13 @@ ms.assetid: 88ed5b97-1d28-4980-80e4-b36761f3c03a
 caps.latest.revision: 89
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: a1f0a11c1443126487ed49bd1489655e4e69368b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: f9aff1bba090ec29cad3eef94453858e1f2b0029
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36153197"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37189836"
 ---
 # <a name="reporting-services-report-server"></a>Serveur de rapports Reporting Services
   Cette rubrique est une vue d'ensemble du serveur de rapports [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] , le composant central d'une installation [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] . Il se compose d'une paire de moteurs de traitement et d'une collection d'extensions spécialisées qui gèrent l'authentification, le traitement des données, le rendu et les opérations de remise. Un serveur de rapports [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] s'exécute dans l'un des deux modes de déploiement : mode natif ou mode SharePoint. Consultez la section [Comparaison des fonctionnalités du mode natif et du mode SharePoint](#bkmk_featuresupport) pour obtenir une comparaison des fonctionnalités.  
@@ -56,7 +56,7 @@ ms.locfileid: "36153197"
   
 -   [Vue d’ensemble des Modes de serveur de rapports](#bkmk_overview)  
   
--   [Comparaison des fonctionnalités de SharePoint et en Mode natif](#bkmk_featuresupport)  
+-   [Comparaison des fonctionnalités de SharePoint et Mode natif](#bkmk_featuresupport)  
   
 -   [En Mode natif](#bkmk_nativemode)  
   
@@ -64,7 +64,7 @@ ms.locfileid: "36153197"
   
 -   [Mode SharePoint](#bkmk_sharepointmode)  
   
--   [Processus de rapport et de planification et de processus de remise](#bkmk_reportprocessor)  
+-   [Processus de rapports et de planification et processus de distribution](#bkmk_reportprocessor)  
   
 -   [Base de données du serveur de rapports](#bkmk_reportdatabase)  
   
@@ -87,7 +87,7 @@ ms.locfileid: "36153197"
   
  Dans [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] , vous ne pouvez pas basculer un serveur de rapports d'un mode à un autre. Si vous souhaitez modifier le type de serveur de rapports utilisé par votre environnement, vous devez installer le mode du serveur de rapports souhaité, puis copier ou déplacer les éléments de rapport ou la base de données du serveur de rapports de l'ancien serveur de rapports avec version vers le nouveau serveur de rapports. Ce processus est habituellement désigné sous le terme de « migration ». Les étapes nécessaires pour la migration dépendent du mode vers lequel vous effectuez la migration et de la version d'origine de la migration. Pour plus d'informations, consultez [Upgrade and Migrate Reporting Services](install-windows/upgrade-and-migrate-reporting-services.md)  
   
-##  <a name="bkmk_featuresupport"></a> Comparaison des fonctionnalités de SharePoint et en Mode natif  
+##  <a name="bkmk_featuresupport"></a> Comparaison des fonctionnalités de SharePoint et Mode natif  
   
 |Fonctionnalité ou composant|Mode natif|en mode SharePoint|  
 |--------------------------|-----------------|---------------------|  
@@ -110,7 +110,7 @@ ms.locfileid: "36153197"
 ##  <a name="bkmk_nativemode"></a> En Mode natif  
  En mode natif, un serveur de rapports est un serveur d'applications autonome qui assure l'ensemble de l'affichage, de la gestion, du traitement et de la remise des rapports et des modèles de rapport. Il s'agit du mode par défaut pour les instances de serveur de rapports. Vous pouvez installer un serveur de rapports en mode natif en le configurant pendant l'installation ou une fois l'installation terminée.  
   
- Le diagramme suivant illustre l’architecture à trois niveaux d’une [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] déploiement en mode natif. Il présente la base de données du serveur de rapports et les sources de données dans la couche Données, les composants de serveur de rapports au niveau intermédiaire, ainsi que les applications clientes et les outils intégrés ou personnalisés dans la couche de présentation. Enfin, il décrit le flux des demandes et des données entre les composants serveur en indiquant quels composants envoient et récupèrent du contenu dans une banque de données.  
+ Le diagramme suivant montre l’architecture à trois niveaux d’un [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] déploiement en mode natif. Il présente la base de données du serveur de rapports et les sources de données dans la couche Données, les composants de serveur de rapports au niveau intermédiaire, ainsi que les applications clientes et les outils intégrés ou personnalisés dans la couche de présentation. Enfin, il décrit le flux des demandes et des données entre les composants serveur en indiquant quels composants envoient et récupèrent du contenu dans une banque de données.  
   
  ![architecture Reporting Services](media/reporting-serv-arch.gif "architecture Reporting Services")  
   
@@ -143,9 +143,9 @@ ms.locfileid: "36153197"
 |**(3)**|Serveurs d'applications exécutant un service [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] partagé. Le traitement de rapports évolutif est géré dans le cadre de la batterie de serveurs SharePoint et par l'ajout du service [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] à des serveurs d'applications supplémentaires.|  
 |**(4)**|Vous pouvez créer plusieurs applications de service [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] , avec différentes configurations, y compris des autorisations, du courrier électronique, un proxy et des abonnements.|  
 |**(5)**|Les rapports, les sources de données et les autres éléments sont stockés dans les bases de données de contenu SharePoint.|  
-|**(6)**|[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] applications de service créer trois bases de données pour le serveur de rapports, les fonctions d’alerte de données et les données temporaires. Les paramètres de configuration qui s'appliquent à l'ensemble des applications de service SSRS sont stockés dans le fichier **RSReportserver.config** .|  
+|**(6)**|[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] créent trois bases de données pour le serveur de rapports, les fonctions d’alerte de données et les données temporaires. Les paramètres de configuration qui s'appliquent à l'ensemble des applications de service SSRS sont stockés dans le fichier **RSReportserver.config** .|  
   
-##  <a name="bkmk_reportprocessor"></a> Processus de rapport et de planification et de processus de remise  
+##  <a name="bkmk_reportprocessor"></a> Processus de rapports et de planification et processus de distribution  
  Le serveur de rapports comprend deux moteurs de traitement qui assurent les traitements préliminaire et intermédiaire des rapports ainsi que des opérations planifiées et de remise. Le processeur de rapports récupère la définition du rapport ou le modèle, combine des informations de mise en page avec des données provenant de l'extension pour le traitement des données et présente le rapport au format requis. Le processus de planification et de remise traite les rapports déclenchés par une planification et remet les rapports aux destinations cibles.  
   
 ##  <a name="bkmk_reportdatabase"></a> Base de données du serveur de rapports  
@@ -171,9 +171,9 @@ ms.locfileid: "36153197"
   
 |Tâche|Lien|  
 |----------|----------|  
-|Vérifier les configurations matérielle et logicielle requises|[Configurations matérielle et logicielle requises pour Reporting Services en Mode SharePoint](../../2014/sql-server/install/hardware-and-software-requirements-for-reporting-services-in-sharepoint-mode.md).|  
+|Vérifier les configurations matérielle et logicielle requises|[Matérielle et logicielle requise pour Reporting Services en Mode SharePoint](../../2014/sql-server/install/hardware-and-software-requirements-for-reporting-services-in-sharepoint-mode.md).|  
 |Installez [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] en mode SharePoint.|[Installer le mode SharePoint de Reporting Services pour SharePoint 2010](../../2014/sql-server/install/install-reporting-services-sharepoint-mode-for-sharepoint-2010.md)|  
-|Si vous êtes un développeur Web expérimenté dans la création de feuilles de style en cascade, vous pouvez modifier les styles par défaut à vos propres risques pour changer les couleurs, les polices et la disposition de la barre d'outils ou du Gestionnaire de rapports. Ni les feuilles de style par défaut, ni les instructions pour modifier ces feuilles de style ne sont documentées dans cette version.|[Personnaliser des feuilles de Style pour la visionneuse HTML et le Gestionnaire de rapports](../../2014/reporting-services/customize-style-sheets-for-html-viewer-and-report-manager.md)|  
+|Si vous êtes un développeur Web expérimenté dans la création de feuilles de style en cascade, vous pouvez modifier les styles par défaut à vos propres risques pour changer les couleurs, les polices et la disposition de la barre d'outils ou du Gestionnaire de rapports. Ni les feuilles de style par défaut, ni les instructions pour modifier ces feuilles de style ne sont documentées dans cette version.|[Personnaliser des feuilles de style pour la visionneuse HTML et pour le Gestionnaire de rapports](../../2014/reporting-services/customize-style-sheets-for-html-viewer-and-report-manager.md)|  
 |Les développeurs de sites Web qui sont habitués aux styles HTML et aux feuilles de style en cascade (CSS) peuvent utiliser les informations de cette rubrique pour déterminer les fichiers à modifier dans le but de personnaliser l'apparence du Gestionnaire de rapports.|[Configurer le Gestionnaire de rapports pour passer des cookies d’authentification personnalisée](security/configure-the-web-portal-to-pass-custom-authentication-cookies.md)|  
 |Explique comment ajuster les paramètres de la mémoire pour le service Web Report Server et le service Windows.|[Configurer la mémoire disponible pour les applications du serveur de rapports](report-server/configure-available-memory-for-report-server-applications.md)|  
 |Explique les étapes recommandées pour configurer un serveur de rapports pour l'administration à distance.|[Configurer un serveur de rapports pour l'administration à distance](report-server/configure-a-report-server-for-remote-administration.md)|  
@@ -184,10 +184,10 @@ ms.locfileid: "36153197"
  [Extensions Reporting Services](extensions/reporting-services-extensions.md)   
  [Outils de Reporting Services](tools/reporting-services-tools.md)   
  [Abonnements et remises &#40;Reporting Services&#41;](subscriptions/subscriptions-and-delivery-reporting-services.md)   
- [Base de données du serveur de rapports &#40;SSRS en Mode natif&#41;](report-server/report-server-database-ssrs-native-mode.md)   
+ [Serveur de base de données rapports &#40;SSRS en Mode natif&#41;](report-server/report-server-database-ssrs-native-mode.md)   
  [Implémentation d’une extension de sécurité](extensions/security-extension/implementing-a-security-extension.md)   
  [Implémentation d’une extension pour le traitement des données](extensions/data-processing/implementing-a-data-processing-extension.md)   
- [Sources de données pris en charge par Reporting Services &#40;SSRS&#41;](create-deploy-and-manage-mobile-and-paginated-reports.md)   
+ [Sources de données prises en charge par Reporting Services &#40;SSRS&#41;](create-deploy-and-manage-mobile-and-paginated-reports.md)   
  [Comment administrer SSRS à l’aide de PowerShell (réponse traitée)](http://go.microsoft.com/fwlink/?LinkId=321992)  
   
   

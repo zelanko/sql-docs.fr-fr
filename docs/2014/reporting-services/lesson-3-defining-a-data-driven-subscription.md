@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 89197b9b-7502-4fe2-bea3-ed7943eebf3b
 caps.latest.revision: 42
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 136335f0e56433a9478ddee37d0b8f585564776e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: dc37afd9e91b23ebef0e7f53fc5690f845f49d28
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36144220"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37152130"
 ---
 # <a name="lesson-3-defining-a-data-driven-subscription"></a>Leçon 3 : Définition d'un abonnement piloté par les données
   Au cours de cette leçon, vous allez utiliser les pages d'abonnement piloté par les données pour vous connecter à une source de données d'abonnement, créer une requête qui extrait des données d'abonnement et mapper le jeu de résultats aux options de remise et de rapport.  
@@ -35,13 +35,13 @@ ms.locfileid: "36144220"
   
 -   [Étape 1 : définir une description](#bkmk_definesubscription)  
   
--   [Étape 2 : définir une connexion à la Source de données](#bkmk_defineconnectiontosubscriber)  
+-   [Étape 2 : définir une connexion à la Source de données d’abonné](#bkmk_defineconnectiontosubscriber)  
   
--   [Étape 3 - définir une requête pour les données de récupérer un abonné](#bkmk_definequery)  
+-   [Étape 3 : définir une requête pour les données des abonnés de récupérer](#bkmk_definequery)  
   
 -   [Étape 4 : définir les Options de remise](#bkmk_set_deliveryoptions)  
   
--   [Étape 5 : configuration d’une valeur de paramètre de sortie du rapport très](#bkmk_configure_parameter)  
+-   [Étape 5 : configurer la valeur de paramètre de sortie des rapports très](#bkmk_configure_parameter)  
   
 -   [Étape 6 - pour planifier un abonnement](#bkmk_schedule_subscription)  
   
@@ -61,7 +61,7 @@ ms.locfileid: "36144220"
   
 3.  Sélectionnez **Spécifier pour cet abonnement uniquement**, puis cliquez sur **Suivant**.  
   
-##  <a name="bkmk_defineconnectiontosubscriber"></a> Étape 2 : définir une connexion à la Source de données  
+##  <a name="bkmk_defineconnectiontosubscriber"></a> Étape 2 : définir une connexion à la Source de données d’abonné  
   
 1.  Sélectionnez **Microsoft SQL Server** comme type de source de données.  
   
@@ -83,7 +83,7 @@ ms.locfileid: "36144220"
   
 5.  Sélectionnez l'option **Utiliser comme informations d'identification Windows lors de la connexion à la source de données**, puis cliquez sur **Suivant**.  
   
-##  <a name="bkmk_definequery"></a> Étape 3 - définir une requête pour les données de récupérer un abonné  
+##  <a name="bkmk_definequery"></a> Étape 3 : définir une requête pour les données des abonnés de récupérer  
   
 1.  Dans la zone de requête, tapez la requête suivante :  
   
@@ -113,7 +113,7 @@ ms.locfileid: "36144220"
   
 8.  Cliquez sur **Suivant.**  
   
-##  <a name="bkmk_configure_parameter"></a> Étape 5 : configuration d’une valeur de paramètre de sortie du rapport très  
+##  <a name="bkmk_configure_parameter"></a> Étape 5 : configurer la valeur de paramètre de sortie des rapports très  
   
 1.  Pour **OrderNumber**, sélectionnez **Obtenir la valeur de la base de données**. Dans Valeur, sélectionnez **Ordre**. Cliquez sur **Suivant.**  
   

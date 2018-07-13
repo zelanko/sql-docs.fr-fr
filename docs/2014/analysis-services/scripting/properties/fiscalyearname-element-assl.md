@@ -1,5 +1,5 @@
 ---
-title: Élément FiscalYearName (ASSL) | Documents Microsoft
+title: Élément FiscalYearName (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - FiscalYearName element
 ms.assetid: ce613a21-6890-4796-aac5-b029eca46255
 caps.latest.revision: 30
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 6e60ce6332e049f0528316a83c0dc62374c2bb4b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 2564345c916d73c5984be851523a234d2be6bbe4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36153572"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37197889"
 ---
 # <a name="fiscalyearname-element-assl"></a>Élément FiscalYearName (ASSL)
   Définit la convention d’affectation de noms pour le nom de l’année fiscale d’un [TimeBinding](../data-type/binding-data-type-assl.md) élément.  
@@ -69,7 +69,7 @@ ms.locfileid: "36153572"
 |*CalendarYearName*|Affecte le nom de l'année civile à l'année fiscale en cours.|  
 |*NextCalendarYearName*|Affecte le nom de l'année civile à l'année fiscale suivante.|  
   
- L’énumération qui correspond aux valeurs autorisées pour `FiscalYearName` dans l’objet d’objets AMO (Analysis Management) est modèle <xref:Microsoft.AnalysisServices.FiscalYearName>.  
+ L’énumération qui correspond aux valeurs autorisées pour `FiscalYearName` dans l’objet d’objets AMO (Analysis Management) modèle est <xref:Microsoft.AnalysisServices.FiscalYearName>.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Propriétés &#40;ASSL&#41;](properties-assl.md)  

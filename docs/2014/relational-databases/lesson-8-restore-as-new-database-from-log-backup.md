@@ -1,5 +1,5 @@
 ---
-title: Leçon 9. Restaurer une base de données du stockage Windows Azure | Documents Microsoft
+title: Leçon 9. Restaurer une base de données du stockage Microsoft Azure | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: ebba12c7-3d13-4c9d-8540-ad410a08356d
 caps.latest.revision: 10
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: b8ff5ec90f80262aae76abfb01ef6c737d13369c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 380ceeabb5a91dffafe0624e073856a837a99f14
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36154616"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37175916"
 ---
 # <a name="lesson-9-restore-a-database-from-windows-azure-storage"></a>Leçon 9. Restaurer une base de données du Stockage Microsoft Azure
   Dans cette leçon, vous allez apprendre comment restaurer un fichier de sauvegarde de base de données du Stockage Microsoft Azure dans une base de données, qui s'exécute localement ou dans une machine virtuelle Microsoft Azure. Pour suivre cette leçon, vous n'avez pas besoin de terminer les leçons 4, 5, 6, 7 et 8.  
@@ -46,7 +46,7 @@ ms.locfileid: "36154616"
   
 3.  Copiez et collez la totalité du script suivant dans la fenêtre de requête. Modifiez le script en fonction des besoins.  
   
-     **Remarque :** vous exécutez le `RESTORE` instruction pour restaurer la sauvegarde de base de données (.bak) dans le stockage Windows Azure à une instance de la base de données dans un autre ordinateur.  
+     **Remarque :** vous exécutez le `RESTORE` instruction pour restaurer la sauvegarde de base de données (.bak) dans le stockage Windows Azure à une instance de base de données dans un autre ordinateur.  
   
     ```tsql  
   

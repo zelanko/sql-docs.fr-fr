@@ -1,5 +1,5 @@
 ---
-title: Méthodes de discrétisation (exploration de données) | Documents Microsoft
+title: Méthodes de discrétisation (exploration de données) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - content types [data mining]
 - discretization [Analysis Services]
@@ -21,15 +21,15 @@ helpviewer_keywords:
 - coding [Data Mining]
 ms.assetid: 02c0df7b-6ca5-4bd0-ba97-a5826c9da120
 caps.latest.revision: 28
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: c2cedf4996536560ff415746c7948cc62a86de77
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 29ef2a25704911e1feb31f20a048952d45966925
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36152444"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37206249"
 ---
 # <a name="discretization-methods-data-mining"></a>Méthodes de discrétisation (exploration de données)
   Certains algorithmes utilisés pour créer des modèles d’exploration de données dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] nécessitent des types de contenu spécifiques pour pouvoir fonctionner correctement. Par exemple, l'algorithme [!INCLUDE[msCoName](../../includes/msconame-md.md)] Naive Bayes ne peut pas utiliser de colonnes continues comme entrée ni prédire des valeurs continues. En outre, certaines colonnes peuvent contenir tellement de valeurs que l'algorithme ne peut pas identifier facilement les motifs intéressants qui ressortent des données et qui vont servir à créer un modèle.  
@@ -61,12 +61,12 @@ ms.locfileid: "36152444"
 -   Le didacticiel du modèle d'exploration de données du réseau neuronal fournit un exemple montrant comment la discrétisation peut être personnalisée. Pour plus d’informations, consultez [leçon 5 : génération réseau neuronal et modèles de régression logistique &#40;didacticiel d’exploration de données intermédiaire&#41;](../../tutorials/lesson-5-build-models-intermediate-data-mining-tutorial.md).  
   
 ## <a name="see-also"></a>Voir aussi  
- [Types de contenu &#40;d’exploration de données&#41;](content-types-data-mining.md)   
+ [Types de contenu &#40;exploration de données&#41;](content-types-data-mining.md)   
  [Types de contenu &#40;DMX&#41;](/sql/dmx/content-types-dmx)   
  [Algorithmes d’exploration de données &#40;Analysis Services - Exploration de données&#41;](data-mining-algorithms-analysis-services-data-mining.md)   
  [Structures d’exploration de données &#40;Analysis Services - Exploration de données&#41;](mining-structures-analysis-services-data-mining.md)   
- [Types de données &#40;d’exploration de données&#41;](data-types-data-mining.md)   
+ [Types de données &#40;exploration de données&#41;](data-types-data-mining.md)   
  [Colonnes de Structure d’exploration de données](mining-structure-columns.md)   
- [Distributions de colonnes &#40;d’exploration de données&#41;](column-distributions-data-mining.md)  
+ [Distributions de colonnes &#40;exploration de données&#41;](column-distributions-data-mining.md)  
   
   

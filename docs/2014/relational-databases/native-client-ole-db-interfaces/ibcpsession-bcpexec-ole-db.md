@@ -1,13 +1,11 @@
 ---
-title: IBCPSession::BCPExec (OLE DB) | Documents Microsoft
+title: IBCPSession::BCPExec (OLE DB) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
@@ -18,15 +16,15 @@ helpviewer_keywords:
 - BCPExec method
 ms.assetid: 0f4ebb63-cf03-4e53-846e-6c3021cde007
 caps.latest.revision: 23
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 262593c696579352a1e369b369f8001e551d66be
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: eb0c10e4c12bba99225bc5f332a8ad6701de29fd
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36142708"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37414028"
 ---
 # <a name="ibcpsessionbcpexec-ole-db"></a>IBCPSession::BCPExec (OLE DB)
   Effectue l'opération de copie en bloc.  
@@ -40,7 +38,7 @@ DBROWCOUNT *pRowsCopied);
 ```  
   
 ## <a name="remarks"></a>Notes  
- Le **BCPExec** méthode copie les données à partir d’un fichier utilisateur dans une table de base de données ou vice versa, selon la valeur de la *eDirection* paramètre utilisé avec la [IBCPSession::BCPInit](ibcpsession-bcpinit-ole-db.md)(méthode).  
+ Le **BCPExec** méthode copie les données à partir d’un fichier utilisateur vers une table de base de données ou vice versa, selon la valeur de la *eDirection* paramètre utilisé avec le [IBCPSession::BCPInit](ibcpsession-bcpinit-ole-db.md)(méthode).  
   
  Avant d'appeler **BCPExec**, appelez la méthode **BCPInit** avec un nom de fichier utilisateur valide. L'échec de cette opération entraîne une erreur. La seule exception est si une requête doit être utilisée pour une opération de copie en bloc sortante. Dans ce cas, spécifiez NULL pour le nom de table dans la méthode **BCPInit** , puis spécifiez la requête à l'aide de l'option BCP_OPTION_HINTS.  
   

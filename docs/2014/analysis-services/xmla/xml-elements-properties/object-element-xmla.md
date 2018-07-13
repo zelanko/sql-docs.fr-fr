@@ -1,5 +1,5 @@
 ---
-title: Objet d’élément (XMLA) | Documents Microsoft
+title: Objet élément (XMLA) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -24,15 +24,15 @@ helpviewer_keywords:
 - Object element
 ms.assetid: 99470537-2c4a-4072-9613-940c41c12487
 caps.latest.revision: 16
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: 02d27280ab74e907558c07ece457d114f8dcbd1b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: 678838cd084fb8d3c7905f3e7363059fea28f541
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36153320"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37229579"
 ---
 # <a name="object-element-xmla"></a>Élément Object (XMLA)
   Contient une référence d'objet utilisée par l'élément parent.  
@@ -56,7 +56,7 @@ ms.locfileid: "36153320"
 |--------------------|-----------------|  
 |Type de données et longueur|None|  
 |Valeur par défaut|None|  
-|Cardinalité|Ancêtre ou Parent : [Alter](../xml-elements-commands/create-element-xmla.md) &#124; 0-1 : élément facultatif qui peut se produire qu’une seule fois et une seule fois.<br /><br /> Ancêtre ou Parent : tous les autres &#124; 1-1 : élément requis qui apparaît une fois et une seule fois.|  
+|Cardinalité|Ancêtre ou Parent : [Alter](../xml-elements-commands/create-element-xmla.md) &#124; 0-1 : élément facultatif qui peut se produire une seule fois et une seule fois.<br /><br /> Ancêtre ou Parent : toutes les autres &#124; 1-1 : élément requis qui apparaît une fois et une seule fois.|  
   
 ## <a name="element-relationships"></a>Relations entre les éléments  
   

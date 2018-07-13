@@ -1,5 +1,5 @@
 ---
-title: Prise en charge des fonctionnalités de SQL Server | Documents Microsoft
+title: Prise en charge des fonctionnalités de SQL Server | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine-imoltp
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: c39f03a7-e223-4fd7-bd30-142e28f51654
 caps.latest.revision: 48
-author: stevestein
-ms.author: sstein
-manager: jhubbard
-ms.openlocfilehash: 5233c8ab4eaa9926fe8c058c3f6d410d536306da
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: 038b429200532796e0fd5a373208af81e2aa82f1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36143761"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37205379"
 ---
 # <a name="supported-sql-server-features"></a>Fonctionnalités SQL Server prises en charge
   Cette rubrique décrit les fonctionnalités [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] qui sont prises en charge, et celles qui ne le sont pas, avec les objets mémoire optimisés.  
@@ -53,7 +53,7 @@ ms.locfileid: "36143761"
   
 -   Plusieurs conteneurs dans un groupe de fichiers mémoire optimisé pour stocker des objets de l'OLTP en mémoire et réduire l'objectif de temps de récupération (RTO).  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] blocs de journal de transactions calculer la somme de contrôle et les valider.  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] blocs de journal de transactions calculer la somme de contrôle et valider.  
   
 -   Nouvel indicateur de table SNAPSHOT. Pour plus d’informations, consultez [Indicateurs de table &#40;Transact-SQL&#41;](/sql/t-sql/queries/hints-transact-sql-table).  
   

@@ -1,5 +1,5 @@
 ---
-title: Utiliser mes abonnements | Documents Microsoft
+title: Utiliser mes abonnements | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - subscriptions [Reporting Services], My Subscriptions page
 - My Subscriptions page [Reporting Services]
@@ -16,16 +16,16 @@ ms.assetid: e96623ba-677e-4748-8787-f32bed3b5c12
 caps.latest.revision: 36
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: c1125792543e3a926ddb98e3d33e0f600328d232
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 4d06913da04eebdaa249e424fa7b4d66c8e8aaa1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36154961"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37153790"
 ---
 # <a name="use-my-subscriptions"></a>Utiliser Mes abonnements
-  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] Le Gestionnaire de rapports inclut un **Mes abonnements** page qui organise tous les abonnements à un emplacement. Vous pouvez utiliser cette page pour afficher, modifier et supprimer des abonnements existants. En revanche, vous ne pouvez pas l'utiliser pour créer des abonnements.  
+  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] Le Gestionnaire de rapports inclut un **Mes abonnements** page qui organise l’ensemble de vos abonnements dans un seul endroit. Vous pouvez utiliser cette page pour afficher, modifier et supprimer des abonnements existants. En revanche, vous ne pouvez pas l'utiliser pour créer des abonnements.  
   
 ||  
 |-|  

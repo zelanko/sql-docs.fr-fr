@@ -1,5 +1,5 @@
 ---
-title: Boîte de dialogue Paramètres du graphique (vue graphique d’analyse de précision d’exploration de données) de bénéfices | Documents Microsoft
+title: Bénéfices boîte dialogue Paramètres du graphique (vue graphique d’analyse de précision d’exploration de données) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dm.miningmodeleditor.accuracychart.profitcostdialog.f1
 ms.assetid: e534b40b-f4d2-4fbc-80e7-3b1dd8784cfd
 caps.latest.revision: 21
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 6e662f4db0a812253a8113779347457871ce1d2d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 44e18791656240d2f6253d325d2151e49f5b890f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36154039"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37187276"
 ---
 # <a name="profit-chart-settings-dialog-box-mining-accuracy-chart-view"></a>Boîte de dialogue Paramètres du graphique des bénéfices (vue Graphique d'analyse de précision de l'exploration de données)
   Utilisez la boîte de dialogue **Paramètres du graphique des bénéfices** pour configurer les paramètres de génération d'un graphique des bénéfices. Pour plus d’informations sur les graphiques de bénéfices, consultez [Graphique de courbes d’élévation &#40;Analysis Services - Exploration de données&#41;](data-mining/lift-chart-analysis-services-data-mining.md).  
@@ -40,8 +40,8 @@ ms.locfileid: "36154039"
  Entrez le revenu estimé qui résulte d'une vente ou d'un nouveau client.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Concepteur graphique d’analyse de précision d’exploration de données &#40;d’exploration de données&#41;](mining-accuracy-chart-designer-data-mining.md)   
- [Test et des tâches de Validation et des procédures &#40;d’exploration de données&#41;](data-mining/testing-and-validation-tasks-and-how-tos-data-mining.md)   
- [Test et Validation &#40;d’exploration de données&#41;](data-mining/testing-and-validation-data-mining.md)  
+ [Concepteur graphique d’analyse de précision d’exploration de données &#40;exploration de données&#41;](mining-accuracy-chart-designer-data-mining.md)   
+ [Test et des tâches de Validation et des procédures &#40;exploration de données&#41;](data-mining/testing-and-validation-tasks-and-how-tos-data-mining.md)   
+ [Test et Validation &#40;exploration de données&#41;](data-mining/testing-and-validation-data-mining.md)  
   
   

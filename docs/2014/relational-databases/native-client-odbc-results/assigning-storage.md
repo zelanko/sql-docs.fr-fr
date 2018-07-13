@@ -1,13 +1,11 @@
 ---
-title: Affectation de stockage | Documents Microsoft
+title: Assignation du stockage | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -23,15 +21,15 @@ helpviewer_keywords:
 - array binding
 ms.assetid: 11c81955-5300-495f-925f-9256f2587b58
 caps.latest.revision: 30
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: eb77a63cb3522d86b40742780e44a141dc0a6c15
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: cc3ce031d7f59395ec54abe1c21276e9b4be9054
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36140034"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37426348"
 ---
 # <a name="assigning-storage"></a>Assignation du stockage
   Une application peut assigner le stockage pour les résultats avant ou après avoir exécuté une instruction SQL. Si une application prépare ou exécute en premier l'instruction SQL, elle peut se renseigner à propos du jeu de résultats avant d'assigner le stockage pour les résultats. Par exemple, si le jeu de résultats est inconnu, l'application doit extraire le nombre de colonnes avant de pouvoir lui assigner du stockage.  
@@ -58,11 +56,11 @@ ms.locfileid: "36140034"
   
 -   La liaison basée sur les lignes est finie lorsque tous les paramètres dans l'instruction SQL sont liés en tant qu'unité à un tableau de structures qui contiennent les variables individuelles pour les paramètres.  
   
-     La liaison est spécifiée en appelant **SQLSetStmtAttr** avec *attribut* défini à SQL_ATTR_ROW_BIND_TYPE et *ValuePtr* défini avec la taille de l’exploitation de la structure du définir les colonnes variables qui recevront le résultat.  
+     La liaison est spécifiée en appelant **SQLSetStmtAttr** avec *attribut* défini à SQL_ATTR_ROW_BIND_TYPE et *ValuePtr* défini avec la taille de l’exploitation de la structure du colonnes du jeu de variables qui recevront le résultat.  
   
  L'application définit également SQL_ATTR_ROW_ARRAY_SIZE au nombre d'éléments dans les tableaux de colonnes ou de lignes et définit SQL_ATTR_ROW_STATUS_PTR et SQL_ATTR_ROWS_FETCHED_PTR.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Le traitement des résultats &#40;ODBC&#41;](processing-results-odbc.md)  
+ [Traitement des résultats &#40;ODBC&#41;](processing-results-odbc.md)  
   
   

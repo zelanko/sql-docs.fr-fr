@@ -5,28 +5,27 @@ ms.date: 04/27/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-search
+ms.technology: search
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - full-text indexes [SQL Server], thesaurus files
 - thesaurus [full-text search], configuring
 - thesaurus [full-text search]
 ms.assetid: 3ef96a63-8a52-45be-9a1f-265bff400e54
 caps.latest.revision: 82
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 64c63acf34e6f3d464fcd402d738c644002ddce7
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 19ca1d323f2b0e53e458aa808f791936b823eef7
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36144227"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37164260"
 ---
 # <a name="configure-and-manage-thesaurus-files-for-full-text-search"></a>Configurer et gérer les fichiers de dictionnaire des synonymes pour la recherche en texte intégral
-  Dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], requêtes de texte intégral peuvent rechercher les synonymes des termes de contrat spécifié par l’utilisateur via l’utilisation d’un dictionnaire des synonymes. A [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] *dictionnaire des synonymes* définit un jeu de synonymes pour une langue spécifique. Les administrateurs système peuvent définir deux formes de synonymes : les jeux d'expansion et les jeux de remplacement. En développant un dictionnaire des synonymes adapté à vos données de texte intégral, vous pouvez élargir efficacement l'étendue des requêtes de texte intégral sur ces données. Dictionnaire des synonymes intervient pour toutes les [FREETEXT](/sql/t-sql/queries/freetext-transact-sql) et [FREETEXTABLE](/sql/relational-databases/system-functions/freetexttable-transact-sql) requêtes et pour les [contient](/sql/t-sql/queries/contains-transact-sql) et [CONTAINSTABLE](/sql/relational-databases/system-functions/containstable-transact-sql) des requêtes Spécifiez la clause FORMSOF THESAURUS.  
+  Dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], les requêtes de recherche en texte intégral peuvent rechercher des synonymes des termes de contrat spécifié par l’utilisateur via l’utilisation d’un dictionnaire des synonymes. Un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] *dictionnaire des synonymes* définit un jeu de synonymes pour une langue spécifique. Les administrateurs système peuvent définir deux formes de synonymes : les jeux d'expansion et les jeux de remplacement. En développant un dictionnaire des synonymes adapté à vos données de texte intégral, vous pouvez élargir efficacement l'étendue des requêtes de texte intégral sur ces données. Mise en correspondance du dictionnaire des synonymes intervient pour toutes les [FREETEXT](/sql/t-sql/queries/freetext-transact-sql) et [FREETEXTABLE](/sql/relational-databases/system-functions/freetexttable-transact-sql) requêtes et pour les [CONTAINS](/sql/t-sql/queries/contains-transact-sql) et [CONTAINSTABLE](/sql/relational-databases/system-functions/containstable-transact-sql) qui interroge Spécifiez la clause FORMSOF THESAURUS.  
   
 ##  <a name="tasks"></a> Tâches de base pour la configuration d’un fichier de dictionnaire des synonymes  
  Pour que vos requêtes de recherche en texte intégral sur votre instance de serveur puissent rechercher les synonymes dans une langue donnée, vous devez au préalable définir des mappages de dictionnaire des synonymes pour cette langue. Chaque dictionnaire des synonymes doit être configuré manuellement de façon à définir les éléments suivants :  
@@ -81,7 +80,7 @@ ms.locfileid: "36144227"
 ##  <a name="location"></a> Emplacement des fichiers de dictionnaire des synonymes  
  L'emplacement par défaut des fichiers de dictionnaires des synonymes est :  
   
- *< Chemin_fichiers_données_sql_server >* \MSSQL12. MSSQLSERVER\MSSQL\FTDATA\  
+ *< SQL_Server_data_files_path >* \MSSQL12. MSSQLSERVER\MSSQL\FTDATA\  
   
  Cet emplacement par défaut contient les fichiers suivants :  
   
@@ -106,7 +105,7 @@ ms.locfileid: "36144227"
  Le fichier du dictionnaire des synonymes global correspond à la langue « neutre », avec le LCID 0. Cette valeur ne peut être modifiée que par des administrateurs.  
   
   
-##  <a name="how_queries_use_tf"></a> Utilisation des fichiers de dictionnaires des synonymes des requêtes  
+##  <a name="how_queries_use_tf"></a> Fonctionnement des fichiers de dictionnaires des synonymes des requêtes  
  Une requête de dictionnaire des synonymes utilise à la fois le dictionnaire des synonymes spécifique à la langue et le dictionnaire des synonymes global. En premier lieu, la requête recherche le fichier spécifique à la langue et le charge en vue du traitement (à moins qu'il ne soit déjà chargé). La requête est développée pour inclure les synonymes spécifiques à la langue spécifiés par les règles de jeu d'expansion et de jeu de remplacement définies dans le fichier du dictionnaire des synonymes. Ces étapes sont ensuite répétées pour le dictionnaire des synonymes global. Toutefois, si un terme fait déjà partie d'une correspondance dans le fichier du dictionnaire des synonymes spécifique à la langue, ce terme est inéligible pour la mise en correspondance dans le dictionnaire des synonymes global.  
   
   
@@ -192,7 +191,7 @@ ms.locfileid: "36144227"
   
   
 ##  <a name="editing"></a> Modification d’un fichier de dictionnaire des synonymes  
- Le dictionnaire des synonymes d'une langue donnée peut être configuré en modifiant son fichier XML. Pendant l’installation, vider les fichiers de dictionnaire des synonymes contenant uniquement le \<xml > conteneur et un exemple commenté \<dictionnaire des synonymes > élément sont installés. Pour les requêtes de recherche en texte intégral qui recherchent des synonymes fonctionnent correctement, vous devez créer une réelle \<dictionnaire des synonymes > élément qui définit un jeu de synonymes. Vous pouvez définir deux formes de synonymes : les jeux d'expansion et les jeux de remplacement.  
+ Le dictionnaire des synonymes d'une langue donnée peut être configuré en modifiant son fichier XML. Pendant l’installation, vider les fichiers de dictionnaire des synonymes contenant uniquement le \<xml > conteneur et un exemple commenté \<dictionnaire des synonymes > élément sont installés. Les requêtes de recherche en texte intégral qui recherchent des synonymes fonctionnent correctement, vous devez créer une réelle \<dictionnaire des synonymes > élément qui définit un jeu de synonymes. Vous pouvez définir deux formes de synonymes : les jeux d'expansion et les jeux de remplacement.  
   
  **Restrictions pour les fichiers de dictionnaire des synonymes**  
   
@@ -212,7 +211,7 @@ ms.locfileid: "36144227"
   
  Nous vous recommandons de ne pas utiliser de caractères spéciaux dans les entrées d'un fichier de dictionnaire des synonymes. En effet, le comportement des analyseurs lexicaux en ce qui concerne les caractères spéciaux est particulier. Si une entrée de dictionnaire des synonymes contient des caractères spéciaux, les analyseurs lexicaux utilisés en association avec cette entrée peuvent avoir des conséquences comportementales subtiles pour une requête de texte intégral.  
   
- Nous vous recommandons \<sub > entrées ne contiennent aucuns les mots vides, car les mots vides sont omis de l’index de recherche en texte intégral. Les requêtes sont étendues pour inclure les \<sub > entrées à partir d’un fichier de dictionnaire des synonymes et si un \<sub > contient des mots vides, la taille de la requête augmente inutilement.  
+ Nous vous recommandons \<sub > entrées ne contiennent aucun mots vides dans la mesure où les mots vides sont omis de l’index de recherche en texte intégral. Les requêtes sont étendues pour inclure le \<sub > entrées à partir d’un fichier de dictionnaire des synonymes et si un \<sub > contient des mots vides, la taille de la requête augmente inutilement.  
   
 #### <a name="to-edit-a-thesaurus-file"></a>Pour modifier un fichier de dictionnaire des synonymes  
   

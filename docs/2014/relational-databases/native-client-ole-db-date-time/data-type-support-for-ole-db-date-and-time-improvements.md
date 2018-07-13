@@ -1,13 +1,11 @@
 ---
-title: Prise en charge de Type de données pour OLE DB Date et heure améliorations | Documents Microsoft
+title: Type de données prise en charge pour les améliorations OLE DB Date / heure | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -15,17 +13,17 @@ helpviewer_keywords:
 - OLE DB, date/time improvements
 ms.assetid: d40e3fd6-9057-4371-8236-95cef300603e
 caps.latest.revision: 24
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 3c543de3b8062dba9090b405156d492f7b4ab3e5
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: 915a86b1170809bf1508f0214060fea9e0cf8a79
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36143759"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37427043"
 ---
-# <a name="data-type-support-for-ole-db-date-and-time-improvements"></a>Prise en charge du Type de données pour OLE DB Date et heure améliorations
+# <a name="data-type-support-for-ole-db-date-and-time-improvements"></a>Prise en charge du Type de données pour les améliorations OLE DB Date / heure
   Cette rubrique fournit des informations sur les types OLE DB ([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client) qui prennent en charge les types de données de date/heure [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ## <a name="data-type-mapping-in-rowsets-and-parameters"></a>Mappage de type de données dans les ensembles de lignes et les paramètres  
@@ -114,7 +112,7 @@ typedef struct tagDBTIMESTAMPOFFSET {
     } DBTIMESTAMPOFFSET;  
 ```  
   
- Si `timezone_hour` est négatif, `timezone_minute` doit être négatif ou égal à zéro. Si `timezone_hour` est un nombre positif, `timezone minute` doit être positif ou égal à zéro. Si `timezone_hour` est nul, `timezone minute` peut contenir une valeur comprise entre -59 et +59.  
+ Si `timezone_hour` est négatif, `timezone_minute` doit être négatif ou égal à zéro. Si `timezone_hour` est un nombre positif, `timezone minute` doit être positif ou zéro. Si `timezone_hour` est nul, `timezone minute` peut contenir une valeur comprise entre -59 et +59.  
   
 ### <a name="ssvariant"></a>SSVARIANT  
  Ce struct inclut désormais les nouvelles structures, DBTYPE_DBTIME2 et DBTYPE_DBTIMESTAMPOFFSET, et ajoute une échelle de fractions de seconde pour les types appropriés.  
@@ -182,9 +180,9 @@ enum SQLVARENUM {
 |DBTYPE_DBTIME2|`time`(p)|Le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fournisseur de OLE DB Native Client inspecte les membres *bScale* membre pour déterminer la précision en fractions de seconde.|  
 |DBTYPE_DBTIMESTAMPOFFSET|`datetimeoffset`(p)|Le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fournisseur de OLE DB Native Client inspecte les membres *bScale* membre pour déterminer la précision en fractions de seconde.|  
   
- Lorsqu’une application spécifie DBTYPE_DBTIMESTAMP dans *wType*, il peut remplacer le mappage à `datetime2` , vous devez fournir un nom de type dans *pwszTypeName*. Si `datetime` est spécifié, *bScale* doit être 3. Si `smalldatetime` est spécifié, *bScale* doit être 0. Si *bScale* n’est pas cohérent avec *wType* et *pwszTypeName*, DB_E_BADSCALE est retourné.  
+ Lorsqu’une application spécifie DBTYPE_DBTIMESTAMP dans *wType*, il peut remplacer le mappage à `datetime2` en fournissant un nom de type dans *pwszTypeName*. Si `datetime` est spécifié, *bScale* doit être 3. Si `smalldatetime` est spécifié, *bScale* doit être 0. Si *bScale* n’est pas cohérente avec *wType* et *pwszTypeName*, DB_E_BADSCALE est retourné.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Date et heure améliorations &#40;OLE DB&#41;](date-and-time-improvements-ole-db.md)  
+ [Améliorations date / heure &#40;OLE DB&#41;](date-and-time-improvements-ole-db.md)  
   
   

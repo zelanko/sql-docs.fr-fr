@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine-imoltp
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 92a44d4d-0e53-4fb0-b890-de264c65c95a
 caps.latest.revision: 20
-author: stevestein
-ms.author: sstein
-manager: jhubbard
-ms.openlocfilehash: 030b8563ac272b0594697048169ade487c2321bf
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: afcc00e0f6bcc3341f7aafc23aeddfee5e8e8dff
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36153028"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37170760"
 ---
 # <a name="accessing-memory-optimized-tables-using-interpreted-transact-sql"></a>Accès aux tables optimisées en mémoire à l’aide du Transact-SQL interprété
   À quelques exceptions près, vous accédez aux tables mémoire optimisées à l'aide d'une requête [!INCLUDE[tsql](../../includes/tsql-md.md)] ou d'une opération DML (SELECT, INSERT, UPDATE ou DELETE), de lots ad hoc et de modules SQL, tels que des procédures stockées, des fonctions table, des déclencheurs et des vues.  
@@ -46,7 +46,7 @@ ms.locfileid: "36153028"
 |Bases de données croisées|Requêtes de bases de données croisées<br /><br /> Transactions de bases de données croisées<br /><br /> Serveurs liés|  
   
 ## <a name="table-hints"></a>Indicateurs de table  
- Pour plus d'informations sur les indicateurs de table, consultez. [Indicateurs de table &#40;Transact-SQL&#41;](/sql/t-sql/queries/hints-transact-sql-table). Isolement d’instantané a été ajouté pour prendre en charge [!INCLUDE[hek_2](../../includes/hek-2-md.md)].  
+ Pour plus d'informations sur les indicateurs de table, consultez. [Indicateurs de table &#40;Transact-SQL&#41;](/sql/t-sql/queries/hints-transact-sql-table). Isolement de capture instantanée a été ajouté pour prendre en charge [!INCLUDE[hek_2](../../includes/hek-2-md.md)].  
   
  Les indicateurs de table suivants ne sont pas pris en charge lors de l'accès à une table de mémoire optimisée à l'aide du [!INCLUDE[tsql](../../includes/tsql-md.md)]interprété.  
   
@@ -57,7 +57,7 @@ ms.locfileid: "36153028"
 |READUNCOMMITTED|ROWLOCK|SPATIAL_WINDOW_MAX_CELLS = *integer*|TABLOCK|  
 |TABLOCKXX|UPDLOCK|XLOCK||  
   
- Lors de l'accès à une table mémoire optimisée à partir d'une transaction explicite ou implicite à l'aide du [!INCLUDE[tsql](../../includes/tsql-md.md)] interprété, vous devez inclure un indicateur de table de niveau d'isolement tel que SNAPSHOT, REPEATABLEREAD ou SERIALIZABLE, ou utiliser MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT. Pour plus d’informations, consultez [des recommandations pour les niveaux d’Isolation des transactions avec des Tables optimisées en mémoire](memory-optimized-tables.md) et [Options ALTER DATABASE SET &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql-set-options).  
+ Lors de l'accès à une table mémoire optimisée à partir d'une transaction explicite ou implicite à l'aide du [!INCLUDE[tsql](../../includes/tsql-md.md)] interprété, vous devez inclure un indicateur de table de niveau d'isolement tel que SNAPSHOT, REPEATABLEREAD ou SERIALIZABLE, ou utiliser MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT. Pour plus d’informations, consultez [instructions pour les niveaux d’Isolation des transactions avec Tables optimisées en mémoire](memory-optimized-tables.md) et [Options ALTER DATABASE SET &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql-set-options).  
   
 > [!NOTE]  
 >  Un indicateur de table de niveau d'isolation n'est pas obligatoire pour les tables mémoire optimisées accessibles par des requêtes qui s'exécutent en mode de validation automatique.  

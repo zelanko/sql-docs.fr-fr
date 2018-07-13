@@ -1,5 +1,5 @@
 ---
-title: Page nouvel abonnement ou modifier abonnement (Gestionnaire de rapports) | Documents Microsoft
+title: Page nouvel abonnement ou modifier abonnement (Gestionnaire de rapports) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: e02d6529-ce67-4305-b7f0-433997e99c21
 caps.latest.revision: 38
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: af32c10bd6c18a4cafc46ccba36859413942c98d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 4cbed3ea7bb8d96f82ae7ef14294d1f5f02c3d5c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36153882"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37212589"
 ---
 # <a name="new-subscription-or-edit-subscription-page-report-manager"></a>Page Nouvel abonnement ou Modifier l’abonnement (Gestionnaire de rapports)
   La page Nouvel abonnement ou Modifier l'abonnement permet de créer un abonnement ou de modifier un abonnement existant à un rapport. Les options de cette page varient selon votre attribution de rôle. Les utilisateurs qui possèdent des autorisations avancées peuvent utiliser des options supplémentaires.  
@@ -40,7 +40,7 @@ ms.locfileid: "36153882"
   
 3.  Dans le menu déroulant, effectuez l'une des opérations suivantes :  
   
-    -   Cliquez sur **Gérer**. La page des propriétés générales pour le rapport s'ouvre. Sélectionnez ensuite l'onglet **Abonnements** . Dans la barre d’outils, cliquez sur **nouvel abonnement**, ou sélectionnez un abonnement existant, puis cliquez sur **modifier**.  
+    -   Cliquez sur **Gérer**. La page des propriétés générales pour le rapport s'ouvre. Sélectionnez ensuite l'onglet **Abonnements** . Dans la barre d’outils, cliquez sur **nouvel abonnement**, ou sélectionnez un abonnement existant et cliquez sur **modifier**.  
   
     -   Cliquez sur **S'abonner**. Ainsi, vous ouvrez la page **Nouvel abonnement** pour le rapport.  
   
@@ -50,7 +50,7 @@ ms.locfileid: "36153882"
   
 -   Les abonnements par messagerie contiennent des champs qui sont familiers aux utilisateurs de messagerie (les champs **À**, **Objet**et **Priorité** , par exemple). Spécifiez **Inclure un rapport** pour incorporer ou joindre le rapport ou **Inclure un lien** pour inclure une adresse URL dans le rapport. Sélectionnez **Format du rendu** pour choisir un format de présentation pour le rapport joint ou incorporé.  
   
--   Les abonnements aux partages de fichiers fournissent des champs qui vous permettent de spécifier un emplacement cible. Vous pouvez remettre n'importe quel rapport dans un partage de fichiers. Toutefois, les rapports qui prennent en charge des fonctionnalités interactives (notamment les rapports de matrice qui prennent en charge l'extraction vers le bas pour les lignes et les colonnes) sont rendus sous forme de fichiers statiques. Vous ne pouvez pas afficher les lignes et les colonnes extraites d'un fichier statique. Le nom de partage de fichiers doit être spécifié au format de Uniform Naming Convention (UNC) (par exemple, \\\mycomputer\public\myreportfiles). N'incluez pas de barre oblique inverse à la fin du chemin d'accès. Le fichier de rapport sera remis dans un format de fichier qui est basé sur le format de rendu (si vous choisissez **Excel**, par exemple, le fichier sera remis en tant que fichier .xls).  
+-   Les abonnements aux partages de fichiers fournissent des champs qui vous permettent de spécifier un emplacement cible. Vous pouvez remettre n'importe quel rapport dans un partage de fichiers. Toutefois, les rapports qui prennent en charge des fonctionnalités interactives (notamment les rapports de matrice qui prennent en charge l'extraction vers le bas pour les lignes et les colonnes) sont rendus sous forme de fichiers statiques. Vous ne pouvez pas afficher les lignes et les colonnes extraites d'un fichier statique. Le nom de partage de fichiers doit être spécifié au format UNC Uniform Naming Convention () (par exemple, \\\mycomputer\public\myreportfiles). N'incluez pas de barre oblique inverse à la fin du chemin d'accès. Le fichier de rapport sera remis dans un format de fichier qui est basé sur le format de rendu (si vous choisissez **Excel**, par exemple, le fichier sera remis en tant que fichier .xls).  
   
  La disponibilité d'une extension de remise varie selon qu'elle est installée et configurée sur le serveur de rapports. La messagerie Report Server est l'extension de remise par défaut, mais elle doit être configurée avant de pouvoir être utilisée. La remise de partage de fichiers ne requiert aucune configuration, mais vous devez définir un dossier partagé pour pouvoir l'utiliser.  
   
@@ -73,6 +73,6 @@ ms.locfileid: "36153882"
  [Configurer un serveur de rapports pour la remise du courrier électronique &#40;Gestionnaire de Configuration de SSRS&#41;](../../2014/sql-server/install/configure-a-report-server-for-e-mail-delivery-ssrs-configuration-manager.md)   
  [Le Gestionnaire de rapports &#40;SSRS en Mode natif&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
  [Create, Modify, and Delete Schedules](subscriptions/create-modify-and-delete-schedules.md)   
- [Aide (F1) de gestionnaire de rapports](../../2014/reporting-services/report-manager-f1-help.md)  
+ [Aide (F1) du Gestionnaire de rapports](../../2014/reporting-services/report-manager-f1-help.md)  
   
   

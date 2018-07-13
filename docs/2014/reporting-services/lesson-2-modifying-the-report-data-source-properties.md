@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: c962b0ff-ce8a-4742-8262-dc730901afcf
 caps.latest.revision: 40
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: f2d985681028cf919e1f56d1138863497b931c30
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 2f7ede1d878eb966ec810098a3a8c1cd6475c4d9
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36154539"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37175242"
 ---
 # <a name="lesson-2-modifying-the-report-data-source-properties"></a>Lesson 2: Modifying the Report Data Source Properties
   Dans cette leçon, vous allez utiliser le Gestionnaire de rapports pour sélectionner un rapport qui sera remis à ses destinataires. L’abonnement piloté par les données que vous allez définir distribue le rapport **Sales Order** créé dans le didacticiel [Créer un rapport de tableau de base &amp;#40;Didacticiel SSRS&amp;#41;](../reporting-services/create-a-basic-table-report-ssrs-tutorial.md). Au cours des étapes qui suivent, vous allez modifier les informations de connexion à la source de données utilisée par le rapport pour extraire les données. Seuls les rapports qui utilisent des **informations d’identification stockées** pour accéder à une source de données de rapport peuvent être distribués par le biais d’un abonnement piloté par les données. Les informations d'identification stockées sont nécessaires pour traiter les rapports de façon autonome.  
@@ -38,7 +38,7 @@ ms.locfileid: "36154539"
   
 ##  <a name="bkmk_modify_datasource"></a> Pour modifier les propriétés de Source de données  
   
-1.  Démarrer [le Gestionnaire de rapports &#40;SSRS en Mode natif&#41; ](../../2014/reporting-services/report-manager-ssrs-native-mode.md) avec des privilèges d’administrateur, par exemple, cliquez sur l’icône d’Internet Explorer et cliquez sur **exécuter en tant qu’administrateur**.  
+1.  Démarrer [le Gestionnaire de rapports &#40;SSRS en Mode natif&#41; ](../../2014/reporting-services/report-manager-ssrs-native-mode.md) avec des privilèges d’administrateur, par exemple, cliquez sur l’icône pour Internet Explorer et cliquez sur **exécuter en tant qu’administrateur**.  
   
 2.  Accédez au dossier contenant le rapport **Sales Orders** et, dans le menu contextuel du rapport, cliquez sur **Gérer**.  
   
@@ -56,7 +56,7 @@ ms.locfileid: "36154539"
   
 6.  Cliquez sur **Informations d'identification stockées en sécurité dans le serveur de rapports**.  
   
-7.  Tapez votre nom d'utilisateur (en respectant le format *domaine\utilisateur*) et votre mot de passe. Si vous n’avez pas l’autorisation d’accéder à la [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] de base de données, spécifiez une connexion qui exécute.  
+7.  Tapez votre nom d'utilisateur (en respectant le format *domaine\utilisateur*) et votre mot de passe. Si vous n’avez pas l’autorisation d’accéder à la [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] de base de données, spécifiez une connexion qui effectue.  
   
 8.  Cliquez sur **Utiliser comme informations d'identification Windows lors de la connexion à la source de données**, puis cliquez sur **OK**. Si vous n’utilisez pas un compte de domaine (par exemple, si vous utilisez un [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] connexion), ne cliquez pas sur cette case à cocher.  
   
@@ -64,11 +64,11 @@ ms.locfileid: "36154539"
   
 10. Cliquez sur **Appliquer**.  
   
-11. Affichez le rapport pour vérifier qu'il s'exécute avec les informations d'identification que vous avez spécifiées. Pour afficher le rapport, cliquez sur l'onglet **Affichage** . Notez qu’une fois que le rapport est ouvert, vous devez sélectionner un nom d’employé et puis cliquez sur le **afficher le rapport** bouton pour afficher le rapport.  
+11. Affichez le rapport pour vérifier qu'il s'exécute avec les informations d'identification que vous avez spécifiées. Pour afficher le rapport, cliquez sur l'onglet **Affichage** . Notez que, une fois que le rapport est ouvert, vous devez sélectionner un nom d’employé et puis cliquez sur le **afficher le rapport** bouton pour afficher le rapport.  
   
 ##  <a name="bkmk_modify_dataset"></a> Pour modifier AdventureWorksDataset  
   
-1.  Ouvrez le rapport Sales Orders dans [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]  
+1.  Ouvrir le rapport Sales Orders dans [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]  
   
 2.  Cliquez avec le bouton droit sur le dataset `AdventureWorksDataset` et cliquez sur **Propriétés du dataset**.  
   
@@ -107,7 +107,7 @@ ms.locfileid: "36154539"
   
 6.  Cliquez sur **OK**. Ce paramètre sera ajouté dans le volet des **données de rapport** et il ressemblera à l'image suivante :  
   
-     ![Le nouveau paramètre est ajouté au volet des données de rapport](../../2014/tutorials/media/ssrs-tutorial-datadriven-parameter.gif "le nouveau paramètre est ajouté au volet des données de rapport")  
+     ![Le nouveau paramètre est ajouté au volet données du rapport](../../2014/tutorials/media/ssrs-tutorial-datadriven-parameter.gif "le nouveau paramètre est ajouté au volet données du rapport")  
   
 7.  Cliquez sur l'onglet **Aperçu** pour exécuter le rapport. Notez la zone d'entrée du paramètre en haut du rapport. Vous pouvez effectuer l'une des opérations suivantes :  
   

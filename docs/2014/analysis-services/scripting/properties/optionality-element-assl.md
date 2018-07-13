@@ -1,5 +1,5 @@
 ---
-title: Élément optionality (ASSL) | Documents Microsoft
+title: Élément optionality (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -20,18 +20,18 @@ helpviewer_keywords:
 - Optionality element
 ms.assetid: 6cd2ef0a-6fbe-4462-ab27-4cdfeb33f8ab
 caps.latest.revision: 13
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 971aaf70fe3cb2e239ace81d85f02d07374ce80f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: fe204e2b8eed7b5629b9c6d6060295383371aa48
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36153805"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37159360"
 ---
 # <a name="optionality-element-assl"></a>Élément Optionality (ASSL)
-  Indique le caractère facultatif des membres pour une [AttributeRelationship](../objects/attributerelationship-element-assl.md) élément.  
+  Indique le caractère facultatif des membres pour un [AttributeRelationship](../objects/attributerelationship-element-assl.md) élément.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -67,7 +67,7 @@ ms.locfileid: "36153805"
 |*Obligatoire*|Chaque membre dans l'attribut associé doit être associé à au moins un membre dans l'attribut propriétaire de l'élément `AttributeRelationship`.|  
 |*Ce paramètre est facultatif*|Chaque membre dans l'attribut associé ne doit pas être associé à au moins un membre dans l'attribut propriétaire de l'élément `AttributeRelationship`.|  
   
- L’énumération qui correspond aux valeurs autorisées pour `Cardinality` dans l’objet d’objets AMO (Analysis Management) est modèle <xref:Microsoft.AnalysisServices.Optionality>.  
+ L’énumération qui correspond aux valeurs autorisées pour `Cardinality` dans l’objet d’objets AMO (Analysis Management) modèle est <xref:Microsoft.AnalysisServices.Optionality>.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Attributs et hiérarchies d’attributs](../../multidimensional-models-olap-logical-dimension-objects/attributes-and-attribute-hierarchies.md)   

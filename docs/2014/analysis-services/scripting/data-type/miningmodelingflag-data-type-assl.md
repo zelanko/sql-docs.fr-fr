@@ -1,5 +1,5 @@
 ---
-title: Type de données MiningModelingFlag (ASSL) | Documents Microsoft
+title: Type de données MiningModelingFlag (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - MiningModelingFlag data type
 ms.assetid: aaa72ba8-051e-4b01-b1e9-9c8d83b8b752
 caps.latest.revision: 37
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 32ee744bdfcd084c4be88511ecba025ca9a270de
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: ece92d63c0d66c1ef845ce2d28d3317b2f65d66f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36151776"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37167520"
 ---
 # <a name="miningmodelingflag-data-type-assl"></a>Type de données MiningModelingFlag (ASSL)
   Définit un type de données primitif qui représente les indicateurs de modélisation pour une [ModelingFlag](../objects/modelingflag-element-assl.md) élément.  
@@ -66,11 +66,11 @@ ms.locfileid: "36151776"
 |*NON NULL*|La colonne ne peut pas accepter de valeurs NULL.|  
 |*RÉGRESSEUR*|La colonne fournit des valeurs de régresseur pour les scénarios de test.|  
   
- Indicateurs spécifiques au fournisseur supplémentaires peuvent être utilisés si des données ou OLE DB d’exploration de données tiers ont été agrégés sur l’instance de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)].  
+ Indicateurs spécifiques au fournisseur supplémentaires est envisageable si des données ou OLE DB d’exploration de données fournisseurs tiers ont été agrégés sur l’instance de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)].  
   
  Un élément étroitement lié dans le modèle objet AMO (Analysis Management Objects) est <xref:Microsoft.AnalysisServices.MiningModelingFlags>.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Types de données de script langage XML Analysis Services &#40;ASSL&#41;](analysis-services-scripting-language-xml-data-types-assl.md)  
+ [Types Analysis Services Scripting Language XML données &#40;ASSL&#41;](analysis-services-scripting-language-xml-data-types-assl.md)  
   
   

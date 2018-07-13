@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.afpstorageconn.f1
 - sql11.dts.designer.afpstorageconn.f1
@@ -16,16 +16,16 @@ ms.assetid: 68bd1d04-d20f-4357-a34e-7c9c76457062
 caps.latest.revision: 8
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 41ddc29a865b84ef01721931b0702476fe6b9ec1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 6289ec54afd8b649b937fe3d5b9140dd50874f48
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36153985"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37190819"
 ---
 # <a name="azure-storage-connection-manager"></a>Gestionnaire de connexions Azure Storage
-  Le Gestionnaire de connexions de stockage Azure permet à un package SSIS pour se connecter à un compte de stockage Azure en utilisant les valeurs que vous spécifiez pour les propriétés : nom de compte de stockage et clé de compte.  
+  Le Gestionnaire de connexions de stockage Azure permet à un package SSIS pour vous connecter à un compte de stockage Azure en utilisant les valeurs que vous spécifiez pour les propriétés : nom de compte de stockage et de la clé de compte.  
   
 1.  Dans la boîte de dialogue **Ajout d’un gestionnaire de connexions SSIS** , sélectionnez **AzureStorage**, puis cliquez sur **Ajouter**.  
   

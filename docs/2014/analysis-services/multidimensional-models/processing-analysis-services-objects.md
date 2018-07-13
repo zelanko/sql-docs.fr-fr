@@ -1,5 +1,5 @@
 ---
-title: Pour des objets de traitement Analysis Services | Documents Microsoft
+title: Traitement Analysis Services objets | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - OLAP objects [Analysis Services], processing
 - OLAP objects [Analysis Services]
 ms.assetid: c7e1f66f-16ca-43da-b8c7-4d3e1fa8b58d
 caps.latest.revision: 43
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 45fc3c5f6ba3effb69518987256b052f5225cd25
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 765db574f9db0a4e81dbdbfc4a154e1ccad01491
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36154735"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37210159"
 ---
 # <a name="processing-analysis-services-objects"></a>Traitement des objets Analysis Services
   Le traitement affecte les types d’objets [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] suivants : bases de données, cubes, dimensions, groupes de mesures, partitions, et structures et modèles d’exploration de données [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Pour chaque objet, vous pouvez spécifier le niveau de traitement de l’objet ou spécifier l’option Traiter par défaut pour permettre à [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] de sélectionner automatiquement le niveau optimal de traitement. Pour plus d’informations sur les différents niveaux de traitement pour chaque objet, consultez [Options et paramètres de traitement &#40;Analysis Services&#41;](processing-options-and-settings-analysis-services.md).  
@@ -98,7 +98,7 @@ ms.locfileid: "36154735"
   
 ## <a name="see-also"></a>Voir aussi  
  [Outils et approches de traitement &#40;Analysis Services&#41;](tools-and-approaches-for-processing-analysis-services.md)   
- [Traitement par lot &#40;Analysis Services&#41;](batch-processing-analysis-services.md)   
+ [Traitement par lots &#40;Analysis Services&#41;](batch-processing-analysis-services.md)   
  [Traitement des objets de modèle multidimensionnel](processing-a-multidimensional-model-analysis-services.md)  
   
   

@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - attribute groups [Master Data Services], changing name
 ms.assetid: 79510fcf-4c83-4426-bdd4-15b4170ecfbd
 caps.latest.revision: 4
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 94112254829868dbdf10972390359b7156dc1e45
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: a9160e39403d314a5b01e012e6c238400a2854d0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36153744"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37164922"
 ---
 # <a name="change-an-attribute-group-name-master-data-services"></a>Modifier le nom d'un groupe d'attributs (Master Data Services)
   Dans [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], vous pouvez modifier le nom d'un groupe d'attributs.  
@@ -49,7 +49,7 @@ ms.locfileid: "36153744"
   
 7.  Cliquez sur **modifier l’élément sélectionné**.  
   
-8.  Dans le **nom du groupe feuille** boîte, **nom du groupe consolidé** zone, ou **nom de groupe la Collection** , tapez le nom mis à jour du groupe d’attributs.  
+8.  Dans le **nom du groupe feuille** boîte, **nom du groupe consolidé** zone, ou **nom_groupe Collection** , tapez le nom mis à jour du groupe d’attributs.  
   
 9. Cliquez sur **Enregistrer le groupe**.  
   

@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dta.reports.f1
 - sql12.dta.sessionmonitor.f1
@@ -27,15 +27,15 @@ helpviewer_keywords:
 - viewing tuning output
 ms.assetid: 47f9d9a7-80b0-416d-9d9a-9e265bc190dc
 caps.latest.revision: 33
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 7474f3ca2ae832a343c2b356a1bccd7d0947a92a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 83b44addd88b83b424e9cd956dcc4bd7621ee118
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36155032"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37167100"
 ---
 # <a name="view-and-work-with-the-output-from-the-database-engine-tuning-advisor"></a>Afficher et utiliser la sortie de l’Assistant Paramétrage du moteur de base de données
   Lorsque l'Assistant Paramétrage du moteur de base de données paramètre des bases de données, il génère des résumés, des recommandations, des rapports et des journaux de paramétrage. Vous pouvez utiliser les résultats affichés dans le journal de paramétrage pour résoudre les problèmes liés aux sessions de l'Assistant Paramétrage du moteur de base de données. Vous pouvez vous aider des résumés, des recommandations et des rapports pour déterminer si les recommandations de paramétrage doivent être implémentées ou si le paramétrage doit se poursuivre afin d'atteindre un niveau de performance des requêtes répondant aux critères définis pour votre installation [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Pour plus d'informations sur l'utilisation de l'Assistant Paramétrage de base de données pour créer des charges de travail et paramétrer une base de données, consultez [Démarrer et utiliser l'Assistant Paramétrage du moteur de base de données](database-engine-tuning-advisor.md).  
@@ -167,7 +167,7 @@ ms.locfileid: "36155032"
   
 2.  Copiez et collez [l’Exemple de fichier d’entrée XML avec une configuration spécifiée par l’utilisateur &#40;DTA&#41;](../../tools/dta/xml-input-file-sample-with-user-specified-configuration-dta.md) dans votre éditeur XML ou dans un éditeur de texte. Utilisez cet exemple pour créer un fichier d'entrée XML pour votre session de paramétrage. Pour plus d'informations sur l'exécution de cette tâche, consultez la section « Créer des fichiers d'entrée XML » dans [Démarrer et utiliser l'Assistant Paramétrage du moteur de base de données](database-engine-tuning-advisor.md).  
   
-3.  Modifier la `TuningOptions` et `Configuration` les éléments dans l’exemple de fichier d’entrée XML. Dans la `TuningOptions` élément, spécifier quelles structures PDS Assistant de paramétrage du moteur de base de données à prendre en compte lors de la session de paramétrage. Dans l'élément `Configuration`, spécifiez les structures PDS qui correspondent à la configuration hypothétique des structures PDS de la base de données que doit analyser l'Assistant Paramétrage du moteur de base de données. Pour plus d’informations sur les attributs et les éléments enfants, vous pouvez utiliser avec le `TuningOptions` et `Configuration` éléments parents, consultez [référence de fichier d’entrée XML &#40;Assistant Paramétrage du moteur de base de données&#41;](../../tools/dta/xml-input-file-reference-database-engine-tuning-advisor.md).  
+3.  Modifier le `TuningOptions` et `Configuration` éléments dans l’exemple de fichier d’entrée XML. Dans le `TuningOptions` élément, préciser les structures PDS Assistant de paramétrage du moteur de base de données à prendre en compte lors de la session de paramétrage. Dans l'élément `Configuration`, spécifiez les structures PDS qui correspondent à la configuration hypothétique des structures PDS de la base de données que doit analyser l'Assistant Paramétrage du moteur de base de données. Pour plus d’informations sur les attributs et les éléments enfants, vous pouvez utiliser avec le `TuningOptions` et `Configuration` éléments parents, consultez [référence de fichier d’entrée XML &#40;l’Assistant Paramétrage du moteur de base de données&#41;](../../tools/dta/xml-input-file-reference-database-engine-tuning-advisor.md).  
   
 4.  Enregistrez le fichier d'entrée avec l'extension **.xml** .  
   
@@ -179,7 +179,7 @@ ms.locfileid: "36155032"
   
      Le schéma XML de l’Assistant Paramétrage du moteur de base de données est également disponible en ligne sur [http://schemas.microsoft.com/sqlserver/2004/07/dta](http://schemas.microsoft.com/sqlserver/2004/07/dta).  
   
-6.  Après avoir créé une charge de travail et un fichier d’entrée XML, vous êtes prêt à envoyer le fichier d’entrée vers l’utilitaire de ligne de commande **dta** pour l’analyser. Veillez à donner un nom au fichier de sortie XML pour l’argument **-ox** de l’utilitaire. Cette opération crée un fichier de sortie XML avec une configuration recommandée est spécifiée dans le `Configuration` élément. Si vous souhaitez exécuter l’Assistant de paramétrage du moteur de base de données pour vérifier une autre configuration hypothétique basée sur la sortie, vous pouvez copier et coller le `Configuration` le contenu d’éléments dans le fichier de sortie dans un nouveau ou de votre fichier d’entrée XML d’origine. Pour plus d’informations sur l’utilisation d’un fichier d’entrée XML avec l’utilitaire **dta** , consultez la section « Paramétrer une base de données à l’aide de l’utilitaire dta » de l’article [SDémarrer et utiliser l'Assistant Paramétrage du moteur de base de données](database-engine-tuning-advisor.md).  
+6.  Après avoir créé une charge de travail et un fichier d’entrée XML, vous êtes prêt à envoyer le fichier d’entrée vers l’utilitaire de ligne de commande **dta** pour l’analyser. Veillez à donner un nom au fichier de sortie XML pour l’argument **-ox** de l’utilitaire. Cette opération crée un fichier de sortie XML avec une configuration recommandée est spécifiée dans le `Configuration` élément. Si vous souhaitez exécuter l’Assistant de paramétrage du moteur de base de données pour vérifier une autre configuration hypothétique basée sur la sortie, vous pouvez copier et coller le `Configuration` contenu d’élément dans le fichier de sortie dans un nouveau ou votre fichier d’entrée XML d’origine. Pour plus d’informations sur l’utilisation d’un fichier d’entrée XML avec l’utilitaire **dta** , consultez la section « Paramétrer une base de données à l’aide de l’utilitaire dta » de l’article [SDémarrer et utiliser l'Assistant Paramétrage du moteur de base de données](database-engine-tuning-advisor.md).  
   
      Une fois le paramétrage terminé, utilisez l'interface utilisateur graphique de l'Assistant Paramétrage du moteur de base de données pour afficher les rapports de paramétrage, ou bien ouvrez le fichier de sortie XML pour afficher les éléments `TuningSummary` et `Configuration`, ainsi que les recommandations de l'Assistant Paramétrage du moteur de base de données. Pour plus d'informations sur l'affichage des résultats de votre session de paramétrage, consultez [Afficher les résultats d'un paramétrage](#View) plus haut dans cette rubrique. Notez également que le fichier de sortie XML peut contenir des rapports d'analyse de l'Assistant Paramétrage du moteur de base de données.  
   

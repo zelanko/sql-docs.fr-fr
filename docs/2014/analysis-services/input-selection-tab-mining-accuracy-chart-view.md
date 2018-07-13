@@ -1,5 +1,5 @@
 ---
-title: L’onglet Sélection (vue graphique d’analyse de précision d’exploration de données) d’entrée | Documents Microsoft
+title: Onglet de sélection (vue graphique d’analyse de précision d’exploration de données) des entrées | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dm.miningmodeleditor.accuracychart.columnmapping.f1
 ms.assetid: f8b1193c-5c86-4c7e-8e35-158d293184fa
 caps.latest.revision: 36
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: eb5abde47c5da9405f7768f1167496fdd603f04f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: bbee4807b3e68c79edd9e06fbbf85379dc49354b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36153594"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37198209"
 ---
 # <a name="input-selection-tab-mining-accuracy-chart-view"></a>Onglet Sélection d'entrée (vue Graphique d'analyse de précision de l'exploration de données)
   Utilisez l’onglet **Sélection d’entrée** du concepteur **Graphique d’analyse de précision de l’exploration de données** pour spécifier la source des données utilisées pour tester le modèle et générer le graphique d’analyse de précision.  
@@ -44,7 +44,7 @@ ms.locfileid: "36153594"
 |**Nom de la colonne prévisible**|Sélectionnez une colonne prédictible contenue dans les modèles d'exploration de données qui sont utilisés pour créer le graphique de courbes d'élévation.|  
 |**Prédire la valeur**|Sélectionnez une valeur pour la colonne prédictible. Si vous laissez ce champ vide, le graphique de courbes d'évaluation prédit le comportement du modèle pour tous les états de la colonne prédictible.|  
   
- **Sélectionnez le jeu de données à utiliser pour le graphique d’analyse de précision**  
+ **Sélectionner le jeu de données à utiliser pour le graphique de précision**  
  Groupe d'options qui contient trois options pour spécifier les données de test de précision.  
   
 |Valeur|Description|  
@@ -72,8 +72,8 @@ ms.locfileid: "36153594"
  Ouvre la boîte de dialogue **Filtre de jeu de données** qui vous permet de sélectionner des tables externes et de définir des conditions sur les colonnes de table de cas ; ouvre également la boîte de dialogue **Filtre** permettant de générer des conditions qui s’appliquent à chaque colonne de la table sélectionnée ou aux colonnes des tables imbriquées.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Test et des tâches de Validation et des procédures &#40;d’exploration de données&#41;](data-mining/testing-and-validation-tasks-and-how-tos-data-mining.md)   
- [Concepteur graphique d’analyse de précision d’exploration de données &#40;d’exploration de données&#41;](mining-accuracy-chart-designer-data-mining.md)   
+ [Test et des tâches de Validation et des procédures &#40;exploration de données&#41;](data-mining/testing-and-validation-tasks-and-how-tos-data-mining.md)   
+ [Concepteur graphique d’analyse de précision d’exploration de données &#40;exploration de données&#41;](mining-accuracy-chart-designer-data-mining.md)   
  [Appliquer un filtre à un modèle d’exploration de données](data-mining/apply-a-filter-to-a-mining-model.md)   
  [Filtres pour les modèles d’exploration de données &#40;Analysis Services - Exploration de données&#41;](data-mining/mining-models-analysis-services-data-mining.md)  
   

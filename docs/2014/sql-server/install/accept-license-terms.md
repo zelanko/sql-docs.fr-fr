@@ -1,5 +1,5 @@
 ---
-title: Acceptez les termes du contrat de licence | Documents Microsoft
+title: Acceptez les termes du contrat de licence | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - license terms
 helpviewer_keywords:
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - SQL Server Installation Wizard, Registration Information page
 ms.assetid: 08dd739d-5817-4418-bcff-74ab7f8bbd33
 caps.latest.revision: 38
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 55d500b13cc3ab3c859474bb3050e29a7487f4a3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: b060499f9b3a008e0106455afde5f1a7691d90f4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36154522"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37260091"
 ---
 # <a name="accept-license-terms"></a>Accepter les termes du contrat de licence
   Utilisez le **accepter les termes du contrat de licence** page de la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Assistant Installation pour accepter les termes du contrat de licence pour cette version de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -48,23 +48,23 @@ ms.locfileid: "36154522"
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Programme d’installation  
   
- Plus d’informations sur l’utilisation de la fonctionnalité sont envoyés à [!INCLUDE[msCoName](../../includes/msconame-md.md)], où elles sont stockées avec un accès limité.  
+ Plus d’informations sur l’utilisation des fonctionnalités sont envoyés à [!INCLUDE[msCoName](../../includes/msconame-md.md)], où elles sont stockées avec un accès limité.  
   
- Pour désactiver la création de rapports CEIP une fois l’installation terminée, utilisez le  **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] rapports d’erreurs et d’utilisation** outil sur le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **outils de Configuration** menu.  
+ Pour désactiver la création de rapports CEIP une fois l’installation terminée, utilisez le  **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] rapports d’erreurs et l’utilisation** outil sur le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **outils de Configuration** menu.  
   
  Pour les actions du programme d'installation, telles que l'installation, la mise à niveau, la réparation, entre autres, les informations sont recueillies et téléchargées uniquement pendant l'exécution du programme d'installation  
   
- Pour tous les autres composants [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], les informations sont recueillies une fois par jour pour toutes les instances activées de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Par défaut, la collecte est effectuée à minuit afin de réduire la charge sur le serveur. Si vous souhaitez changer l'heure de la collecte, vous pouvez modifier manuellement la clé du Registre concernée. Chaque instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] possède sa propre clé de Registre :  
+ Pour tous les autres composants [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], les informations sont recueillies une fois par jour pour toutes les instances activées de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Par défaut, la collecte est effectuée à minuit afin de réduire la charge sur le serveur. Si vous souhaitez changer l'heure de la collecte, vous pouvez modifier manuellement la clé du Registre concernée. Chaque instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a sa propre clé de Registre :  
   
- HKLM\Software\\[!INCLUDE[msCoName](../../includes/msconame-md.md)]\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSSQL12.\< ID d’instance > \CPE\TimeofReporting  
+ HKLM\Software\\[!INCLUDE[msCoName](../../includes/msconame-md.md)]\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSSQL12.\< ID_INSTANCE > \CPE\TimeofReporting  
   
  La valeur de cette clé de Registre inclut l'heure de la collecte ainsi que le nombre de minutes qui s'écoulent à partir de 00:00 (minuit). Par exemple, la valeur 60 fixe l'exécution de la collecte à 1:00 a.m., la valeur 1200 fixe l'exécution de la collecte à 8:00 p.m., et ainsi de suite.  
   
 ## <a name="error-reporting"></a>Rapport d'erreurs  
- Utilisez le **erreur et les paramètres de rapport d’utilisation** page de la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Assistant Installation pour activer les erreurs de fonctionnalité et d’utilisation de la création de rapports pour [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ Utilisez le **erreur et les paramètres de rapport d’utilisation** page de la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Assistant Installation pour activer les erreurs de fonctionnalité et des fonctionnalités pour des rapports d’utilisation [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ### <a name="options"></a>Options  
- Par défaut, la collecte des données d’utilisation et les fonctionnalités de rapport d’erreurs sont désactivées pour [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et ses composants dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+ Par défaut, la collecte des données d’utilisation des fonctionnalités et les fonctionnalités de rapport d’erreurs sont désactivées pour [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et ses composants dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
  Rapport d'erreurs  
  Si vous activez la fonctionnalité rapport d’erreurs, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] est configuré pour envoyer un rapport à [!INCLUDE[msCoName](../../includes/msconame-md.md)] automatiquement si une erreur irrécupérable se produit dans un des éléments suivants [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] composants :  
@@ -87,7 +87,7 @@ ms.locfileid: "36154522"
   
  Les rapports d'erreurs comprennent les informations suivantes :  
   
--   La condition de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] lorsque le problème s’est produit.  
+-   La condition de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] lorsque le problème s’est produite.  
   
 -   des informations sur la version du système d'exploitation et le matériel ;  
   
@@ -103,9 +103,9 @@ ms.locfileid: "36154522"
   
  Si vous activez les rapports d'erreurs et qu'une erreur irrécupérable se produit, vous pouvez voir une réponse de [!INCLUDE[msCoName](../../includes/msconame-md.md)] dans le journal des événements Windows, qui pointe sur un article de la Base de connaissances [!INCLUDE[msCoName](../../includes/msconame-md.md)] traitant cette erreur.  
   
- Pour désactiver le rapport d’utilisation de fonctionnalités pour toutes les instances de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et leurs composants une fois l’installation terminée, accédez à la **erreur et les paramètres de rapport d’utilisation** boîte de dialogue et désactivez les cases à cocher pour **d’utilisation des fonctionnalités** . Si **rapport d’erreurs** est activée pour plusieurs composants de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (le [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]et les composants partagés) vous pouvez désactiver le rapport d’erreurs pour chaque instance d’un individu composant, ainsi que des composants partagés répertoriés en tant que **d’autres**.  
+ Pour désactiver le rapport d’erreur ou d’utilisation des fonctionnalités pour toutes les instances de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et leurs composants une fois l’installation terminée, accédez à la **erreur et les paramètres de rapport d’utilisation** boîte de dialogue et désactivez les cases à cocher pour **l’utilisation des fonctionnalités** . Si **rapport d’erreurs** est activée pour plusieurs composants de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (le [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]et les composants partagés) vous pouvez désactiver le rapport d’erreurs pour chaque instance d’un individu composant, ainsi que des composants partagés, répertorié comme **d’autres**.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Sur le contrat de licence SQL Server](../../../2014/getting-started/about-the-sql-server-license-terms.md)  
+ [À propos des termes du contrat de licence SQL Server](../../../2014/getting-started/about-the-sql-server-license-terms.md)  
   
   

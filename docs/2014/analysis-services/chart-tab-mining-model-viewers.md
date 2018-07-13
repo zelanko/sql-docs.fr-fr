@@ -1,5 +1,5 @@
 ---
-title: Onglet (visionneuses de modèle d’exploration de données) du graphique | Documents Microsoft
+title: Graphique onglet (visionneuses de modèle d’exploration de données) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dm.miningmodeleditor.timeseries.chart.f1
 ms.assetid: 8803cdbb-f1b3-436c-994d-ee662ecf64dd
 caps.latest.revision: 23
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 08c1fbe446555e34354330b18ffe5bc5c4d80ef5
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: bd1c2cf7ecc6a4cc734197a55365fb4a661b1b36
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36154296"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37169800"
 ---
 # <a name="chart-tab-mining-model-viewers"></a>Onglet Graphique (Visionneuses de modèle d'exploration de données)
   Utilisez le volet **Graphique** pour afficher les données d’historique utilisées dans l’apprentissage d’un modèle de série chronologique, avec les valeurs prédites. L'axe vertical du graphique représente la valeur de la série et l'axe horizontal le temps. Les prévisions sont représentées par une ligne en pointillé.  
@@ -29,7 +29,7 @@ ms.locfileid: "36154296"
  **Pour plus d’informations :** [Algorithme MTS (Microsoft Time Series)](data-mining/microsoft-time-series-algorithm.md), [Explorer un modèle à l’aide de la visionneuse de l’algorithme MTS (Microsoft Time Series)](data-mining/browse-a-model-using-the-microsoft-time-series-viewer.md)  
   
 ## <a name="options"></a>Options  
- **Actualiser le contenu de la visionneuse**  
+ **Actualiser le contenu de l’Observateur**  
  Recharge le modèle d'exploration de données dans la visionneuse.  
   
  **Modèle d'exploration de données**  
@@ -44,7 +44,7 @@ ms.locfileid: "36154296"
  **Effectuer un zoom arrière**  
  Réduit le graphique.  
   
- **Diagramme à la taille de la fenêtre**  
+ **Diagramme de mise à l’échelle à la fenêtre**  
  Réduit la taille du graphique jusqu'à ce qu'il soit ajusté à l'écran.  
   
  **ABS**  

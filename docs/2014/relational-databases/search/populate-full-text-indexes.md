@@ -5,10 +5,9 @@ ms.date: 04/27/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-search
+ms.technology: search
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - index populations [full-text search]
 - incremental populations [full-text search]
@@ -25,36 +24,36 @@ helpviewer_keywords:
 - full-text indexes [SQL Server], populations
 ms.assetid: 76767b20-ef55-49ce-8dc4-e77cb8ff618a
 caps.latest.revision: 74
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: ce7d4774b40f43cc6a88c414cc18f7005a137e0a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: cbe50e41fb353e092edddf2eacc2f189d635aa5d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36153211"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37162260"
 ---
 # <a name="populate-full-text-indexes"></a>Alimenter des index de recherche en texte intégral
   La création et la maintenance d’un index de recherche en texte intégral impliquent le remplissage de l’index à l’aide d’un processus appelé *alimentation* (également appelé *analyse*).  
   
 ##  <a name="types"></a> Types d’alimentation  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] prend en charge les types suivants d’alimentation : alimentation complète, alimentation automatique ou manuelle basée sur le suivi modification et alimentation incrémentielle basée sur l’horodatage.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] prend en charge les types suivants d’alimentation : alimentation complète, alimentation automatique ou manuelle basée sur le suivi des modifications et alimentation incrémentielle basée sur un horodatage.  
   
 ### <a name="full-population"></a>Alimentation complète  
  Au cours d'une alimentation complète, les entrées d'index sont créées pour toutes les lignes d'une table ou d'une vue indexée. Une alimentation complète d'un index de recherche en texte intégral crée des entrées d'index pour toutes les lignes de la table de base ou de la vue indexée.  
   
- Par défaut, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] alimente complètement un nouvel index de recherche en texte intégral dès que celui-ci est créé. Cependant, une alimentation complète peut consommer beaucoup de ressources. Par conséquent, si vous créez un index de recherche en texte intégral pendant une période de pointe, il est recommandé de reporter l’alimentation complète à une période creuse, en particulier si la table de base d’un index de recherche en texte intégral est volumineuse. Toutefois, le catalogue de texte intégral auquel l'index appartient n'est pas utilisable tant que tous ses index de recherche en texte intégral ne sont pas alimentés. Pour créer un index de recherche en texte intégral sans l'alimenter immédiatement, spécifiez la clause CHANGE_TRACKING OFF, NO POPULATION dans l'instruction CREATE FULLTEXT INDEX. Si vous spécifiez CHANGE_TRACKING MANUAL, le Moteur d'indexation et de recherche en texte intégral utilise l'instruction. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] n’alimente pas le nouvel index de recherche en texte intégral tant que vous exécutez une instruction ALTER FULLTEXT INDEX à l’aide de la démarrer le remplissage complet ou la clause START INCREMENTAL POPULATION. Pour plus d'informations, consultez l'exemple « A. Création d'un index de recherche en texte intégral sans exécuter une alimentation complète » et l'exemple « B. Exécution d'une alimentation complète sur une table », présentés ultérieurement dans cette rubrique.  
+ Par défaut, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] alimente complètement un nouvel index de recherche en texte intégral dès que celui-ci est créé. Cependant, une alimentation complète peut consommer beaucoup de ressources. Par conséquent, si vous créez un index de recherche en texte intégral pendant une période de pointe, il est recommandé de reporter l’alimentation complète à une période creuse, en particulier si la table de base d’un index de recherche en texte intégral est volumineuse. Toutefois, le catalogue de texte intégral auquel l'index appartient n'est pas utilisable tant que tous ses index de recherche en texte intégral ne sont pas alimentés. Pour créer un index de recherche en texte intégral sans l'alimenter immédiatement, spécifiez la clause CHANGE_TRACKING OFF, NO POPULATION dans l'instruction CREATE FULLTEXT INDEX. Si vous spécifiez CHANGE_TRACKING MANUAL, le Moteur d'indexation et de recherche en texte intégral utilise l'instruction. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] n’alimente pas le nouvel index de recherche en texte intégral jusqu'à ce que vous exécutez une instruction ALTER FULLTEXT INDEX à l’aide de la START FULL POPULATION ou la clause START INCREMENTAL POPULATION. Pour plus d'informations, consultez l'exemple « A. Création d'un index de recherche en texte intégral sans exécuter une alimentation complète » et l'exemple « B. Exécution d'une alimentation complète sur une table », présentés ultérieurement dans cette rubrique.  
   
 
   
 ### <a name="change-tracking-based-population"></a>Alimentation basée sur le suivi des modifications  
- Vous pouvez éventuellement utiliser le suivi des modifications pour procéder à la gestion d'un index de recherche en texte intégral après son alimentation complète initiale. La surcharge associée au suivi des modifications est réduite, car [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] gère une table dans laquelle il suit les modifications apportées à la table de base depuis la dernière alimentation. Lorsque le suivi des modifications est utilisé, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] gère un enregistrement des lignes de la table de base ou la vue indexée qui ont été modifiés par les mises à jour, suppressions ou insère. Les modifications apportées aux données via WRITETEXT et UPDATETEXT ne sont pas répercutées dans l'index de recherche en texte intégral et ne sont pas prises en compte par le suivi des modifications.  
+ Vous pouvez éventuellement utiliser le suivi des modifications pour procéder à la gestion d'un index de recherche en texte intégral après son alimentation complète initiale. La surcharge associée au suivi des modifications est réduite, car [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] gère une table dans laquelle il suit les modifications apportées à la table de base depuis la dernière alimentation. Lorsque le suivi des modifications est utilisé, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] conserve un enregistrement des lignes dans la table de base ou la vue indexée qui ont été modifiés par les mises à jour, suppressions, ou insère. Les modifications apportées aux données via WRITETEXT et UPDATETEXT ne sont pas répercutées dans l'index de recherche en texte intégral et ne sont pas prises en compte par le suivi des modifications.  
   
 > [!NOTE]  
 >  Pour les tables contenant un `timestamp` colonne, vous pouvez utiliser des alimentations incrémentielles.  
   
- Lorsque le suivi des modifications est activé lors de la création d’index, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] remplit complètement le nouvel index de recherche en texte intégral immédiatement après sa création. Ensuite, les modifications font l'objet d'un suivi et propagées à l'index de recherche en texte intégral. Il existe deux types de suivi des modifications : automatique (option CHANGE_TRACKING AUTO) et manuel (option CHANGE_TRACKING MANUAL). Le suivi des modifications automatique est le comportement par défaut.  
+ Lorsque le suivi des modifications est activé pendant la création d’index, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] alimente complètement le nouvel index de recherche en texte intégral immédiatement après sa création. Ensuite, les modifications font l'objet d'un suivi et propagées à l'index de recherche en texte intégral. Il existe deux types de suivi des modifications : automatique (option CHANGE_TRACKING AUTO) et manuel (option CHANGE_TRACKING MANUAL). Le suivi des modifications automatique est le comportement par défaut.  
   
  Le type de suivi des modifications détermine la façon dont l'index de recherche en texte intégral est alimenté, comme expliqué ci-après.  
   
@@ -62,7 +61,7 @@ ms.locfileid: "36153211"
   
      Par défaut, ou si vous spécifiez CHANGE_TRACKING AUTO, le Moteur d'indexation et de recherche en texte intégral utilise l'alimentation automatique sur l'index de recherche en texte intégral. Une fois l'alimentation complète initiale terminée, les données modifiées dans la table de base font l'objet d'un suivi, et ces modifications sont propagées automatiquement. L'index de recherche en texte intégral étant toutefois mis à jour en arrière-plan, il se peut que les modifications propagées ne soient pas répercutées immédiatement dans l'index.  
   
-     **Pour configurer le suivi des modifications avec remplissage automatique**  
+     **Pour configurer le suivi des modifications avec alimentation automatique**  
   
     -   [CREATE FULLTEXT INDEX](/sql/t-sql/statements/create-fulltext-index-transact-sql) … WITH CHANGE_TRACKING AUTO  
   
@@ -212,16 +211,16 @@ GO
   
 
   
-##  <a name="crawl"></a> Résolution des erreurs dans un remplissage de texte intégral (analyse)  
- Lorsqu'une erreur se produit durant une analyse, la fonction d'analyse de la recherche en texte intégral crée et conserve un journal de l'analyse sous forme de fichier texte. Chaque journal de l'analyse correspond à un catalogue de texte intégral particulier. Par les journaux d’analyse par défaut pour une instance donnée, dans ce cas, la première instance se trouvent dans %ProgramFiles%\Microsoft SQL Server\MSSQL12. Dossier MSSQLSERVER\MSSQL\LOG. Le fichier journal de l'analyse respecte le modèle de dénomination suivant :  
+##  <a name="crawl"></a> Résolution des erreurs dans une alimentation de texte intégral (analyse)  
+ Lorsqu'une erreur se produit durant une analyse, la fonction d'analyse de la recherche en texte intégral crée et conserve un journal de l'analyse sous forme de fichier texte. Chaque journal de l'analyse correspond à un catalogue de texte intégral particulier. Par les journaux d’analyse par défaut pour une instance donnée, dans ce cas, la première instance, se trouvent dans %ProgramFiles%\Microsoft SQL Server\MSSQL12. Dossier MSSQLSERVER\MSSQL\LOG. Le fichier journal de l'analyse respecte le modèle de dénomination suivant :  
   
  SQLFT\<DatabaseID >\<FullTextCatalogID >. JOURNAUX [\<n >]  
   
  <`DatabaseID`>  
- ID d'une base de données. <`dbid`> est un chiffre cinq le nombre avec des zéros non significatifs.  
+ ID d'une base de données. <`dbid`> est un à cinq chiffres nombre commençant par des zéros non significatifs.  
   
  <`FullTextCatalogID`>  
- ID du catalogue de texte intégral. <`catid`> est un chiffre cinq le nombre avec des zéros non significatifs.  
+ ID du catalogue de texte intégral. <`catid`> est un à cinq chiffres nombre commençant par des zéros non significatifs.  
   
  <`n`>  
  Entier qui indique qu'il existe un ou plusieurs journaux d'analyse du même catalogue de texte intégral.  

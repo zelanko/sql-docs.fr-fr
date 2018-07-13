@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - summarizing query results
 - queries [SQL Server], results
 - aggregate queries [SQL Server]
 ms.assetid: c9e15350-ed57-4d95-814d-815fbebfd86b
 caps.latest.revision: 9
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: d447d321d89da666d6db044ef9adac8b523d5656
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 5684e2f5e75d37dfbcce3a2a19ed49d63ead6032
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36153614"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37198359"
 ---
 # <a name="summarize-query-results-visual-database-tools"></a>Résumé des résultats d'une requête (Visual Database Tools)
   Certains principes logiques s'appliquent à la création de requêtes d'agrégation. Par exemple, il est impossible d'afficher le contenu de lignes individuelles dans une requête de synthèse. Le Concepteur de requêtes et de vues vous aide à respecter ces principes dans le comportement du [volet Schéma](visual-database-tools.md) et du [volet Critères](criteria-pane-visual-database-tools.md) .  

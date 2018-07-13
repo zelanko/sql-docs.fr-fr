@@ -1,5 +1,5 @@
 ---
-title: Élément OnlineMode (ASSL) | Documents Microsoft
+title: Élément OnlineMode (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - OnlineMode element
 ms.assetid: 0bbac4e2-002f-4be4-8dd6-ccd7034f5f93
 caps.latest.revision: 30
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 3efda242b0563f4b6b853d3bf87b831da1ea8e00
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: a00e12eaa54724921195727fe16f6bd98f3f44a5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36153574"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37154850"
 ---
 # <a name="onlinemode-element-assl"></a>Élément OnlineMode (ASSL)
   Spécifie si la base de données est remise en ligne immédiatement dès le début de la reconstruction du cache ou seulement lorsque la reconstruction du cache est terminée.  
@@ -69,7 +69,7 @@ ms.locfileid: "36153574"
 |*Immédiate*|La base de données est remise en ligne immédiatement lorsque la reconstruction du cache est initiée.|  
 |*OnCacheComplete*|La base de données n'est remise en ligne que lorsque la reconstruction du cache est terminée.|  
   
- L’énumération qui correspond aux valeurs autorisées pour `OnlineMode` dans l’objet d’objets AMO (Analysis Management) est modèle <xref:Microsoft.AnalysisServices.ProactiveCaching>.  
+ L’énumération qui correspond aux valeurs autorisées pour `OnlineMode` dans l’objet d’objets AMO (Analysis Management) modèle est <xref:Microsoft.AnalysisServices.ProactiveCaching>.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Élément ProactiveCaching &#40;ASSL&#41;](../objects/proactivecaching-element-assl.md)  

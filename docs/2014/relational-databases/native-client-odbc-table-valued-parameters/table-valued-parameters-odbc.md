@@ -1,13 +1,11 @@
 ---
-title: Paramètres table (ODBC) | Documents Microsoft
+title: Paramètres table (ODBC) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -15,26 +13,26 @@ helpviewer_keywords:
 - ODBC, table-valued parameters
 ms.assetid: ef06cd13-18e2-4c65-8ede-c3955d820e54
 caps.latest.revision: 28
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 955ae0daa3a2c15a5b1e6146c269c8d4095fb146
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: ce0cd9e87d4bd594fb2c2be4a01e9f2cf8ef4a27
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36143885"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37421788"
 ---
 # <a name="table-valued-parameters-odbc"></a>Paramètres table (ODBC)
   La prise en charge des paramètres table par ODBC permet à une application cliente d'envoyer plus efficacement des données paramétrables au serveur par l'envoi de plusieurs lignes au serveur en un seul appel.  
   
- Pour plus d’informations sur les paramètres table sur le serveur, consultez [utiliser des paramètres &#40;moteur de base de données&#41;](../tables/use-table-valued-parameters-database-engine.md).  
+ Pour plus d’informations sur les paramètres table sur le serveur, consultez [utiliser les paramètres &#40;moteur de base de données&#41;](../tables/use-table-valued-parameters-database-engine.md).  
   
  Dans ODBC, vous pouvez envoyer des paramètres table au serveur de deux manières :  
   
--   Toutes les données de paramètre table peuvent être dans la mémoire à la fois SQLExecDirect ou SQLExecute est appelée. Ces données sont stockées dans des tableaux si la valeur de table contient plusieurs lignes.  
+-   Toutes les données de paramètre table peuvent être en mémoire à la fois SQLExecDirect ou SQLExecute est appelée. Ces données sont stockées dans des tableaux si la valeur de table contient plusieurs lignes.  
   
--   Une application peut spécifier data-at-execution pour un paramètre table lorsque SQLExecDirect ou SQLExecute est appelée. Dans ce cas, les lignes de données de la valeur de table peuvent être fournies par lots, ou une par une pour réduire la mémoire requise.  
+-   Une application peut spécifier-data-at-execution pour un paramètre table lorsque SQLExecDirect ou SQLExecute est appelée. Dans ce cas, les lignes de données de la valeur de table peuvent être fournies par lots, ou une par une pour réduire la mémoire requise.  
   
  La première option permet aux procédures stockées de renfermer une logique métier plus importante. Par exemple, une même procédure stockée peut encapsuler une transaction d'enregistrement de commande entière lorsque les éléments de la commande sont passés sous la forme de paramètre table. Cette option est très efficace, car un seul aller-retour sur le serveur est requis. Vous pouvez également utiliser différentes procédures pour gérer séparément l'en-tête de commande et les éléments de commande, ce qui nécessiterait davantage de code et un contrat plus complexe entre le client et le serveur.  
   
@@ -68,7 +66,7 @@ ms.locfileid: "36143885"
  Décrit comment une application peut obtenir des métadonnées pour un appel de procédure préparé.  
   
  [Métadonnées de paramètres table supplémentaires](additional-table-valued-parameter-metadata.md)  
- Décrit comment utiliser SQLProcedureColumns SQLTables et SQLColumns pour récupérer des métadonnées pour un paramètre table.  
+ Décrit comment utiliser SQLColumns, SQLProcedureColumns et SQLTables pour récupérer des métadonnées pour un paramètre table.  
   
  [Conversion des données des paramètres table, et autres erreurs et avertissements](table-valued-parameter-data-conversion-and-other-errors-and-warnings.md)  
  Décrit comment traiter les erreurs sur les valeurs de colonne de paramètre table.  
@@ -79,7 +77,7 @@ ms.locfileid: "36143885"
  [Récapitulatif des API de paramètre table ODBC](odbc-table-valued-parameter-api-summary.md)  
  Répertorie les fonctions ODBC qui prennent en charge les paramètres table.  
   
- [Exemples de programmation du paramètre table ODBC](../../database-engine/dev-guide/odbc-table-valued-parameter-programming-examples.md)  
+ [Exemples de programmation de paramètres table ODBC](../../database-engine/dev-guide/odbc-table-valued-parameter-programming-examples.md)  
  Décrit comment réaliser des tâches courantes.  
   
 ## <a name="see-also"></a>Voir aussi  

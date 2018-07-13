@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 9455d3cf-c1b7-4d48-8aff-7dc636ed5dc3
 caps.latest.revision: 28
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 762be955372568ad7930611b0216bbb3f1437158
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: 25f45f72ddbfc389deb77e6c20588660e599cb19
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36143062"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37205679"
 ---
 # <a name="web-application-requirements-master-data-services"></a>Configuration requise pour l'application Web (Master Data Services)
   [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] est une application web hébergée par IIS (Internet Information Services). [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] fonctionne uniquement dans Internet Explorer (IE) 7 ou version ultérieure. Internet Explorer 7 et versions antérieures, Microsoft Edge et Chrome ne sont pas pris en charge.  
@@ -34,11 +34,11 @@ ms.locfileid: "36143062"
 ### <a name="operating-system"></a>Système d'exploitation  
  Les systèmes d'exploitation Windows suivants incluent les fonctionnalités des services Internet (IIS) requises pour l'application Web [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] et le service Web.  
   
-|[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Developer x 64-x64 bits|[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Enterprise x 64-x64 bits|[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Business Intelligence x64 (64 bits)|  
+|[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Développeur x64 (64 64 bits)|[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Enterprise x64 (64 64 bits)|[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Business Intelligence x64 (64 bits)|  
 |-------------------------------------------------------|--------------------------------------------------------|-------------------------------------------------------------------|  
 |[!INCLUDE[firstref_longhorn](../../includes/firstref-longhorn-md.md)] SP2<br /><br /> Windows Server 2008 R2 SP1<br /><br /> Windows 7 Professionnel, Entreprise et Édition Intégrale<br /><br /> Windows 8.0 Professionnel, Entreprise et Édition Intégrale|[!INCLUDE[firstref_longhorn](../../includes/firstref-longhorn-md.md)] SP2<br /><br /> Windows Server 2008 R2 SP1<br /><br /> Windows Server 2012|[!INCLUDE[firstref_longhorn](../../includes/firstref-longhorn-md.md)] SP2<br /><br /> Windows Server 2008 R2 SP1<br /><br /> Windows Server 2012|  
   
- Pour obtenir la liste complète des systèmes d’exploitation Windows sont prises en charge par votre édition de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], consultez [matérielle et logicielle requise pour l’installation de SQL Server 2014](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md).  
+ Pour obtenir une liste complète des systèmes d’exploitation Windows pris en charge pour votre édition de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], consultez [Hardware and Software Requirements for Installing SQL Server 2014](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md).  
   
 ### <a name="microsoft-silverlight"></a>Microsoft Silverlight  
  Pour travailler dans l'application Web de [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] , Silverlight 5 doit être installé sur l'ordinateur client. Si vous n'avez pas la version requise de Silverlight, vous êtes invité à l'installer lorsque vous accédez à une partie de l'application Web qui l'utilise. Vous pouvez installer Silverlight 5 à partir de [cet emplacement](http://go.microsoft.com/fwlink/?LinkId=243096).  
@@ -47,7 +47,7 @@ ms.locfileid: "36143062"
  Sur Windows Server 2008 R2, vous pouvez utiliser le **Gestionnaire de serveur**, disponible dans Microsoft Management Console (MMC), pour installer le rôle **Serveur Web (IIS)** et les services de rôle requis suivants :  
   
 > [!NOTE]  
->  Sur [!INCLUDE[wiprlhext](../../includes/wiprlhext-md.md)] et les systèmes d’exploitation Windows 7, utilisez **programmes et fonctionnalités** dans le panneau de configuration pour activer ces options dans le **des fonctionnalités Windows** boîte de dialogue.  
+>  Sur [!INCLUDE[wiprlhext](../../includes/wiprlhext-md.md)] et systèmes d’exploitation de Windows 7, utilisez **programmes et fonctionnalités** dans le panneau de configuration pour activer ces options dans le **les fonctionnalités de Windows** boîte de dialogue.  
   
 ||  
 |-|  
@@ -64,10 +64,10 @@ ms.locfileid: "36143062"
 |Services Internet (IIS)<br /><br /> Outils de gestion Web<br /><br /> Console de gestion IIS<br /><br /> Services World Wide Web<br /><br /> Développement d'applications<br /><br /> Extensibilité .NET 3.5<br /><br /> Extensibilité .NET 4.5<br /><br /> ASP.NET 3.5<br /><br /> ASP.NET 4.5<br /><br /> Extensions ISAPI<br /><br /> Filtres ISAPI<br /><br /> Fonctionnalités HTTP communes<br /><br /> Document par défaut<br /><br /> Exploration de répertoire<br /><br /> Erreurs HTTP<br /><br /> Contenu statique<br /><br /> [Remarque : n'installez pas la publication WebDAV]<br /><br /> Intégrité et diagnostics<br /><br /> Journalisation HTTP<br /><br /> Observateur de demandes<br /><br /> Performances<br /><br /> Compression du contenu statique<br /><br /> Sécurité<br /><br /> Filtrage des demandes<br /><br /> Authentification Windows|  
   
 ### <a name="features-windows-server-2008-or-windows-server-2008-r2-windows-7-operating-systems"></a>Fonctionnalités (systèmes d'exploitation Windows Server 2008 ou Windows Server 2008 R2, Windows 7)  
- Sur [!INCLUDE[firstref_longhorn](../../includes/firstref-longhorn-md.md)] ou Windows Server 2008 R2, vous pouvez utiliser **le Gestionnaire de serveur** pour installer ces fonctionnalités requises.  
+ Sur [!INCLUDE[firstref_longhorn](../../includes/firstref-longhorn-md.md)] ou Windows Server 2008 R2, vous pouvez utiliser **le Gestionnaire de serveur** pour installer ce qui suit les fonctionnalités requises.  
   
 > [!NOTE]  
->  Sur [!INCLUDE[wiprlhext](../../includes/wiprlhext-md.md)] et les systèmes d’exploitation Windows 7, utilisez **programmes et fonctionnalités** dans le panneau de configuration pour activer ces options dans le **des fonctionnalités Windows** boîte de dialogue.  
+>  Sur [!INCLUDE[wiprlhext](../../includes/wiprlhext-md.md)] et systèmes d’exploitation de Windows 7, utilisez **programmes et fonctionnalités** dans le panneau de configuration pour activer ces options dans le **les fonctionnalités de Windows** boîte de dialogue.  
   
 ||  
 |-|  

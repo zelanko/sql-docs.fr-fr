@@ -1,5 +1,5 @@
 ---
-title: Partitions (Analysis Services - données multidimensionnelles) | Documents Microsoft
+title: Partitions (Analysis Services - données multidimensionnelles) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -25,22 +25,22 @@ helpviewer_keywords:
 - measure groups [Analysis Services], partitions
 ms.assetid: cd10ad00-468c-4d49-9f8d-873494d04b4f
 caps.latest.revision: 42
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 8ffcdd2f4dc92b832d94448ac14e39ae41f4ba94
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 3b9affca8de4e6b0cbd50e25eaaca6447ada4b0b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36144180"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37183326"
 ---
 # <a name="partitions-analysis-services---multidimensional-data"></a>Partitions (Analysis Services - Données multidimensionnelles)
   Une partition est un conteneur d'une portion des données d'un groupe de mesures. Les partitions ne sont pas considérées comme des requêtes MDX ; toutes les requêtes reflètent le contenu entier du groupe de mesures, indépendamment du nombre de partitions défini pour le groupe de mesures. Le contenu des données d'une partition est défini par les liaisons de requête de la partition et par l'expression de découpage.  
   
  Un objet <xref:Microsoft.AnalysisServices.Partition> simple est composé des informations de base, de la définition de découpage, de la conception d'agrégation et d'autres données. Les informations de base incluent le nom de la partition, le mode de stockage, le mode de traitement et d'autres informations. La définition de découpage est une expression MDX qui spécifie un tuple ou un jeu. La définition de découpage a les mêmes restrictions que la fonction MDX StrToSet. Avec le paramètre CONSTRAINED, la définition de découpage peut utiliser la dimension, la hiérarchie, les noms de niveau et de membre, les clés, les noms uniques ou d'autres objets nommés dans le cube, mais ne peut pas utiliser de fonctions MDX. La conception d'agrégation est une collection de définitions d'agrégation qu'il est possible de partager sur plusieurs partitions dans une base de données. La valeur par défaut est prise de la conception d'agrégation du cube parent.  
   
- Les partitions sont utilisées par [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] pour gérer et stocker des données et des agrégations pour un groupe de mesures dans un cube. Chaque groupe de mesures possède au moins une partition qui est créée lors de la définition du groupe de mesures. Lorsque vous créez une nouvelle partition pour un groupe de mesures, celle-ci s'ajoute à l'ensemble de partitions existant déjà pour ce groupe de mesures. Le groupe de mesures reflète la combinaison des données contenues dans l'ensemble de ses partitions. Vous devez donc veiller à ce que les données d'une partition dans un groupe de mesures ne contiennent pas les données d'une autre partition du groupe de mesures. Ainsi, les données ne figurent qu'une seule fois dans le groupe de mesures. La partition d'origine d'un groupe de mesures est basée sur une table de faits unique dans la vue de source de données du cube. Lorsqu'un groupe de mesures comporte plusieurs partitions, chacune d'entre elles peut faire référence à une table différente, soit de la vue de source de données, soit de la source de données relationnelles sous-jacente du cube. Plusieurs partitions d'un même groupe de mesures peuvent faire référence à la même table à condition de limiter chaque partition à différentes lignes de la table.  
+ Partitions sont utilisées par [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] pour gérer et stocker des données et les agrégations pour un groupe de mesures dans un cube. Chaque groupe de mesures possède au moins une partition qui est créée lors de la définition du groupe de mesures. Lorsque vous créez une nouvelle partition pour un groupe de mesures, celle-ci s'ajoute à l'ensemble de partitions existant déjà pour ce groupe de mesures. Le groupe de mesures reflète la combinaison des données contenues dans l'ensemble de ses partitions. Vous devez donc veiller à ce que les données d'une partition dans un groupe de mesures ne contiennent pas les données d'une autre partition du groupe de mesures. Ainsi, les données ne figurent qu'une seule fois dans le groupe de mesures. La partition d'origine d'un groupe de mesures est basée sur une table de faits unique dans la vue de source de données du cube. Lorsqu'un groupe de mesures comporte plusieurs partitions, chacune d'entre elles peut faire référence à une table différente, soit de la vue de source de données, soit de la source de données relationnelles sous-jacente du cube. Plusieurs partitions d'un même groupe de mesures peuvent faire référence à la même table à condition de limiter chaque partition à différentes lignes de la table.  
   
  Les partitions constituent un outil puissant et souple permettant de gérer les cubes, en particulier s'ils sont volumineux. Par exemple, un cube qui contient des informations sur les ventes peut réserver une partition pour les données de chaque année écoulée et utiliser d'autres partitions pour chaque trimestre de l'année en cours. Seule la partition du trimestre en cours doit être traitée si des informations sont ajoutées à un cube ; le traitement d'une plus petite quantité de données réduit le temps de traitement et améliore donc les performances de traitement. À la fin de l'année, les quatre partitions pour les trimestres peuvent être fusionnées dans une seule partition pour l'année et une nouvelle partition peut être créée pour le premier trimestre de l'année suivante. En outre, la création de cette partition peut être automatisée dans le cadre des procédures de chargement de l'entrepôt de données et de traitement du cube.  
   

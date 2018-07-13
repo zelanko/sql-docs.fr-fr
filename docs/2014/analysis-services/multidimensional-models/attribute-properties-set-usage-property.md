@@ -1,5 +1,5 @@
 ---
-title: Définir la propriété d’utilisation | Documents Microsoft
+title: Définir la propriété d’utilisation | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - attributes [Analysis Services], usage setting
 - usage options [Analysis Services]
 ms.assetid: 7b0ebc58-94b9-4523-8994-e7bc796b0bd8
 caps.latest.revision: 34
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 75c1bc644076e8cab5079eedf22567da7301361a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 8d71fd632ed57a27744687674c4a7d514981ab33
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36154050"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37189136"
 ---
 # <a name="set-usage-property"></a>Définir une propriété d'utilisation
   Vous pouvez définir l’utilisation d’un attribut en utilisant la vue **Structure de dimension** dans le Concepteur de dimensions, accessible à partir de [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  
@@ -45,6 +45,6 @@ ms.locfileid: "36154050"
   
 ## <a name="see-also"></a>Voir aussi  
  [Attributs et hiérarchies d’attributs](../multidimensional-models-olap-logical-dimension-objects/attributes-and-attribute-hierarchies.md)   
- [Ajouter un attribut à une Dimension](attribute-properties-add-an-attribute-to-a-dimension.md)  
+ [Ajouter un attribut à une dimension](attribute-properties-add-an-attribute-to-a-dimension.md)  
   
   

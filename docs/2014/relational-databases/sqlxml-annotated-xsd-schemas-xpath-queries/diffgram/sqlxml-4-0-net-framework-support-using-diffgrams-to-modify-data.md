@@ -1,5 +1,5 @@
 ---
-title: L’utilisation de DiffGrams pour modifier les données dans SQLXML 4.0 | Documents Microsoft
+title: À l’aide de DiffGrams pour modifier des données dans SQLXML 4.0 | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -27,18 +27,18 @@ helpviewer_keywords:
 - record deletions [SQLXML]
 ms.assetid: 48b8a8f9-f3af-404f-8c84-f4c3703364d9
 caps.latest.revision: 21
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: f9a96faa2192b7fb37ebf61cc6dc509944e496d5
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 4fbe2fcac8299f268922bcad815caf8a4b5cb3e8
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36154550"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37155830"
 ---
 # <a name="using-diffgrams-to-modify-data-in-sqlxml-40"></a>Utilisation de DiffGrams pour modifier des données dans SQLXML 4.0
-  Le format DiffGram est introduit dans le **DataSet** composant de le [!INCLUDE[msCoName](../../../includes/msconame-md.md)] .NET Framework. Dans le .NET Framework, vous pouvez créer des DiffGrams et les utiliser pour modifier des données dans les tables d'une base de données Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
+  Le format DiffGram est introduit dans le **DataSet** composant de la [!INCLUDE[msCoName](../../../includes/msconame-md.md)] .NET Framework. Dans le .NET Framework, vous pouvez créer des DiffGrams et les utiliser pour modifier des données dans les tables d'une base de données Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
 > [!NOTE]  
 >  Cette section fournit présente brièvement les DiffGrams et donne des exemples illustrant leur utilisation. Elle suppose que vous connaissez bien les DiffGrams dans le .NET Framework. Cette documentation porte principalement sur les problèmes liés aux DiffGrams spécifiques à SQLXML.  
@@ -47,7 +47,7 @@ ms.locfileid: "36154550"
  [Introduction aux DiffGrams dans SQLXML 4.0](introduction-to-diffgrams-in-sqlxml-4-0.md)  
  Fournit des informations de base sur les Diffgrams.  
   
- [Exemples de DiffGram &#40;SQLXML 4.0&#41;](diffgram-examples-sqlxml-4-0.md)  
+ [Exemples de DiffGrams &#40;SQLXML 4.0&#41;](diffgram-examples-sqlxml-4-0.md)  
  Fournit des exemples d'utilisation de Diffgrams.  
   
  [Exécution d’un DiffGram à l’aide d’ADO &#40;SQLXML 4.0&#41;](executing-a-diffgram-by-using-ado-sqlxml-4-0.md)  

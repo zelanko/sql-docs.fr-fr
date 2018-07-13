@@ -1,5 +1,5 @@
 ---
-title: Créer une Page d’abonnement piloté par les données (Gestionnaire de rapports) | Documents Microsoft
+title: Créer la Page abonnement piloté par les données (Gestionnaire de rapports) | Microsoft Docs
 ms.custom: ''
 ms.date: 05/24/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 814b4653-572a-48c7-847f-b310ba0f3046
 caps.latest.revision: 30
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: bc1a54e462b3f3219c70aa94caf7fc238942d240
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: a43e81feb0cd8e0ecfd134468cd37f3cfac92049
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36153421"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37223219"
 ---
 # <a name="create-data-driven-subscription-page-report-manager"></a>Page Créer un abonnement piloté par les données (Gestionnaire de rapports)
   Les pages Créer un abonnement piloté par les données vous permettent de générer ou modifier un abonnement qui interroge une base de données de l'abonné pour obtenir des informations sur l'abonnement chaque fois que l'abonnement est exécuté. Les abonnements pilotés par les données utilisent les résultats de la requête pour identifier les destinataires de l'abonnement, paramètres de remise et valeurs des paramètres de rapport. Lors de l'exécution, le serveur de rapports exécute une requête pour obtenir les valeurs utilisées pour les paramètres de l'abonnement. Vous pouvez utiliser ces pages pour définir la requête et attribuer des valeurs de requête aux paramètres de l'abonnement. Les valeurs et les options que vous spécifiez pour un abonnement piloté par les données sont réparties dans plusieurs pages (identiques à celles d'un Assistant). Il existe sept pages en tout.  
@@ -102,7 +102,7 @@ ms.locfileid: "36153421"
   
 |Sélectionnez cette option|Pour effectuer cette opération|  
 |-----------------|----------------|  
-|**Spécifiez une valeur statique**|Utiliser une valeur de constante pour le paramètre de remise. Certaines extensions de remise fournissent des valeurs statiques que vous pouvez sélectionner. Par exemple, la remise par courrier électronique à un serveur de rapports fournit des valeurs pour **Inclure un rapport**, **Format du rendu**, **Priorité**et **Inclure un lien**.|  
+|**Spécifier une valeur statique**|Utiliser une valeur de constante pour le paramètre de remise. Certaines extensions de remise fournissent des valeurs statiques que vous pouvez sélectionner. Par exemple, la remise par courrier électronique à un serveur de rapports fournit des valeurs pour **Inclure un rapport**, **Format du rendu**, **Priorité**et **Inclure un lien**.|  
 |**Obtenir la valeur de la base de données**|Utiliser une valeur du jeu de résultats. Les colonnes du jeu de résultats peuvent être utilisées pour fournir des données d'abonné et des valeurs des paramètres de rapport.|  
 |**Aucune valeur**|Omettre le paramètre de l'abonnement.|  
   
@@ -113,7 +113,7 @@ ms.locfileid: "36153421"
  Spécifie le nom de fichier du rapport. L'extension de remise par partage de fichiers remet un rapport en tant que fichier d'application statique dans un dossier partagé. Dans la plupart des cas, vous devez utiliser une valeur de la base de données pour créer le nom de fichier. Selon la façon dont vous définissez le mode écriture, l'utilisation d'une valeur statique provoquera le remplacement de la remise précédente par chaque nouvelle remise.  
   
  **Chemin d'accès**  
- Spécifiez un dossier partagé accessible via une connexion réseau. Pour vérifier que le dossier est accessible, cliquez sur **exécuter** dans le menu Démarrer et entrez le chemin d’accès du dossier dans ce format : \\ \\< nom_ordinateur\>\\< NomDossierPartagé\>.  
+ Spécifiez un dossier partagé accessible via une connexion réseau. Pour vérifier que le dossier est accessible, cliquez sur **exécuter** dans le menu Démarrer et entrez le chemin du dossier dans ce format : \\ \\< nom_ordinateur\>\\< NomDossierPartagé\>.  
   
  **Format de rendu**  
  Spécifiez le format de sortie du fichier. Le serveur de rapports peut écrire le fichier dans des formats d'application des extensions de rendu installées sur le serveur de rapports.  
@@ -125,7 +125,7 @@ ms.locfileid: "36153421"
  Spécifiez True pour ajouter une extension de fichier qui correspond au format de rendu que vous avez sélectionné.  
   
  **Nom d'utilisateur**  
- Entrez le compte d’utilisateur de domaine qui a l’autorisation d’ajouter des fichiers au dossier partagé sous ce format : \<domaine >\\< nom d’utilisateur\>.  
+ Entrez le compte d’utilisateur de domaine qui a l’autorisation d’ajouter des fichiers dans le dossier partagé au format suivant : \<domaine >\\< nom d’utilisateur\>.  
   
  **Mot de passe**  
  Entrez le mot de passe du compte.  
@@ -135,7 +135,7 @@ ms.locfileid: "36153421"
   
 |Sélectionnez cette option|Pour effectuer cette opération|  
 |-----------------|----------------|  
-|**Spécifiez une valeur statique**|Utiliser une valeur de constante pour le paramètre si vous souhaitez utiliser le même paramètre pour tous les abonnés. Si le paramètre comporte plusieurs valeurs, vous pouvez choisir une valeur dans la liste.|  
+|**Spécifier une valeur statique**|Utiliser une valeur de constante pour le paramètre si vous souhaitez utiliser le même paramètre pour tous les abonnés. Si le paramètre comporte plusieurs valeurs, vous pouvez choisir une valeur dans la liste.|  
 |**Par défaut**|Certains rapports contiennent une valeur par défaut pour l'ensemble ou certains des paramètres. Si le paramètre de rapport a une valeur par défaut, cliquez sur cette case à cocher pour l'utiliser.|  
 |**Obtenir la valeur de la base de données**|Utiliser une valeur du jeu de résultats. Les colonnes du jeu de résultats peuvent être sélectionnées comme une source d'une valeur de données à utiliser avec chaque instance d'abonnement.|  
   
@@ -155,12 +155,12 @@ ms.locfileid: "36153421"
  Définit une planification qui s'exécute toutes les heures.  
   
  **Quotidienne**  
- Définit une planification qui s'exécute les jours sélectionnés à une heure spécifique. Vous pouvez spécifier les jours des manières suivantes : chaque  *\<jour >*, tous les jours ouvrables et tous  *\<nombre >* jour. La sélection d'une option rend les autres inapplicables même si d'autres jours semblent sélectionnés.  
+ Définit une planification qui s'exécute les jours sélectionnés à une heure spécifique. Vous pouvez spécifier les jours comme suit : chaque  *\<jour >*, tous les jours ouvrables et chaque  *\<nombre >* jours. La sélection d'une option rend les autres inapplicables même si d'autres jours semblent sélectionnés.  
   
- **Toutes les semaines**  
+ **Hebdomadaire**  
  Définit une planification qui s'exécute de façon hebdomadaire à une heure spécifique. L'intervalle peut correspondre à des semaines entières (toutes les deux semaines, par exemple) ou à des jours compris dans la semaine.  
   
- **Tous les mois**  
+ **Mensuel**  
  Définit une planification qui s'exécute tous les mois. Dans un mois, vous pouvez choisir un jour basé sur un modèle (le dernier dimanche de chaque mois, par exemple) ou des dates spécifiques (tels que 1 et 15 pour indiquer le 1er et le 15e jour de chaque mois). À l'aide de virgules et de tirets, vous pouvez spécifier plusieurs jours et plages (1, 5, 7-12, 21, par exemple).  
   
  **Une fois**  
@@ -178,6 +178,6 @@ ms.locfileid: "36153421"
  [Créer un abonnement piloté par les données &#40;didacticiel SSRS&#41;](create-a-data-driven-subscription-ssrs-tutorial.md)   
  [Spécifier des informations d'identification et de connexion pour les sources de données de rapport](report-data/specify-credential-and-connection-information-for-report-data-sources.md)   
  [Abonnements et remises &#40;Reporting Services&#41;](subscriptions/subscriptions-and-delivery-reporting-services.md)   
- [Aide (F1) de gestionnaire de rapports](../../2014/reporting-services/report-manager-f1-help.md)  
+ [Aide (F1) du Gestionnaire de rapports](../../2014/reporting-services/report-manager-f1-help.md)  
   
   

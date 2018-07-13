@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 topic_type:
 - apiref
 helpviewer_keywords:
 - event classes [SQL Server], QN:Subscription
 ms.assetid: 4916167e-8541-43b4-900e-ec8e6adcbc34
 caps.latest.revision: 20
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 7dd4c06a89eeebe5c3b7e83a699ea17ca68bbd18
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 79e75ea52d0e1ed2d80dd4e2ef9dcc2d2092e6c3
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36155048"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37188476"
 ---
 # <a name="qnsubscription-event-class"></a>Classe d'événements QN:Subscription
   L'événement QN:Subscription fournit des informations sur les abonnements aux notifications.  
@@ -38,7 +38,7 @@ ms.locfileid: "36155048"
 |DatabaseName|`nvarchar`|Nom de la base de données dans laquelle l'instruction de l'utilisateur est exécutée.|35|Oui|  
 |EventClass|`int`|Type d’événement = 199.|27|non|  
 |EventSequence|`int`|Numéro de séquence de cet événement.|51|non|  
-|EventSubClass|`nvarchar`|Type de sous-classe d’événements, qui fournit des informations complémentaires concernant chaque classe d’événements. Cette colonne peut contenir les valeurs suivantes :<br /><br /> Abonnement enregistré : indique quand l’abonnement aux notifications de requête a été enregistré dans la base de données.<br /><br /> Abonnement rembobinée : indique à quel moment le [!INCLUDE[ssDE](../../includes/ssde-md.md)] reçoit une demande d’abonnement qui correspond exactement à un abonnement existant. Dans ce cas, le [!INCLUDE[ssDE](../../includes/ssde-md.md)] définit la valeur de délai de l’abonnement existant sur le délai spécifié dans la nouvelle demande d’abonnement.<br /><br /> Abonnement déclenché : indique quand un abonnement aux notifications produit un message de notification.<br /><br /> Déclenchement de l’événement a échoué avec l’erreur broker : indique quand un message de notification échoue en raison d’une [!INCLUDE[ssSB](../../includes/sssb-md.md)] erreur.<br /><br /> Échec de l’activation sans erreur broker : indique quand un message de notification échoue mais n’est pas dû à un [!INCLUDE[ssSB](../../includes/sssb-md.md)] erreur.<br /><br /> Erreur interceptée du service Broker : indique que [!INCLUDE[ssSB](../../includes/sssb-md.md)] généré une erreur dans la conversation que la notification de requête utilise.<br /><br /> Tentative de suppression d’abonnement : indique que le [!INCLUDE[ssDE](../../includes/ssde-md.md)] a tenté de supprimer un abonnement ayant expiré pour libérer des ressources.<br /><br /> Échoué de la suppression de l’abonnement : indique que la tentative de suppression d’un abonnement ayant expiré a échoué. Le [!INCLUDE[ssDE](../../includes/ssde-md.md)] replanifiera automatiquement la suppression de l’abonnement pour libérer des ressources.<br /><br /> Abonnement détruit : indique que le [!INCLUDE[ssDE](../../includes/ssde-md.md)] supprimé avec succès un abonnement ayant expiré|21|Oui|  
+|EventSubClass|`nvarchar`|Type de sous-classe d’événements, qui fournit des informations complémentaires concernant chaque classe d’événements. Cette colonne peut contenir les valeurs suivantes :<br /><br /> Abonnement enregistré : indique quand l’abonnement de notification de requête a été enregistré dans la base de données.<br /><br /> Abonnement rembobinée : indiquant à quel moment le [!INCLUDE[ssDE](../../includes/ssde-md.md)] reçoit une demande d’abonnement qui correspond exactement à un abonnement existant. Dans ce cas, le [!INCLUDE[ssDE](../../includes/ssde-md.md)] définit la valeur de délai de l’abonnement existant sur le délai spécifié dans la nouvelle demande d’abonnement.<br /><br /> Abonnement a été déclenché : indique quand un abonnement aux notifications produit un message de notification.<br /><br /> Déclenchement de l’événement a échoué avec l’erreur broker : indique quand un message de notification échoue en raison d’un [!INCLUDE[ssSB](../../includes/sssb-md.md)] erreur.<br /><br /> Échec de déclenchement sans erreur broker : indique quand un message de notification échoue mais n’est pas dû à un [!INCLUDE[ssSB](../../includes/sssb-md.md)] erreur.<br /><br /> Service Broker erreur interceptée : indique que [!INCLUDE[ssSB](../../includes/sssb-md.md)] généré une erreur dans la conversation qui utilise la notification de requête.<br /><br /> Tentative de suppression d’abonnement : indique que le [!INCLUDE[ssDE](../../includes/ssde-md.md)] a tenté de supprimer un abonnement ayant expiré pour libérer des ressources.<br /><br /> Échoué de la suppression de l’abonnement : indique que la tentative de suppression d’un abonnement ayant expiré a échoué. Le [!INCLUDE[ssDE](../../includes/ssde-md.md)] replanifiera automatiquement la suppression de l’abonnement pour libérer des ressources.<br /><br /> Abonnement détruit : indique que le [!INCLUDE[ssDE](../../includes/ssde-md.md)] supprimé avec succès un abonnement ayant expiré|21|Oui|  
 |GroupID|`int`|ID du groupe de charges de travail où l'événement Trace SQL se déclenche.|66|Oui|  
 |HostName|`nvarchar`|Nom de l'ordinateur sur lequel s'exécute le client. Cette colonne de données est remplie si le nom de l'hôte est fourni par le client. Pour déterminer le nom de l'hôte, utilisez la fonction HOST_NAME.|8|Oui|  
 |IsSystem|`int`|Indique si l'événement s'est produit sur un processus système ou sur un processus utilisateur.<br /><br /> 0 = utilisateur<br /><br /> 1 = système|60|non|  

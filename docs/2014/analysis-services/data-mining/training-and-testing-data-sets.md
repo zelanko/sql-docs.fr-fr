@@ -1,5 +1,5 @@
 ---
-title: Apprentissage et jeux de données de test | Documents Microsoft
+title: Apprentissage et jeux de données de test | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - testing mining models
 - holdout [data mining]
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - accuracy testing [data mining]
 ms.assetid: 5798fa48-ef3c-4e97-a17c-38274970fccd
 caps.latest.revision: 27
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 0789d5f5ae4c141e8b7e53f7cab9938fae488a87
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 770a5446b640cb3a2c5f5ce61f222e200f85ae3e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36154300"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37173550"
 ---
 # <a name="training-and-testing-data-sets"></a>Jeux de données d'apprentissage et de test
   La séparation des données en jeux d'apprentissage et jeux de test correspond à une partie importante de l'évaluation des modèles d'exploration de données. En général, lorsque vous séparez un jeu de données en un jeu d'apprentissage et un jeu de test, la plupart des données sont utilisées pour l'apprentissage et une plus petite partie des données est utilisée pour les tests. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] échantillonne de manière aléatoire les données afin de s'assurer que les jeux de test et d'apprentissage sont semblables. L'utilisation de données similaires pour l'apprentissage et les tests vous permet de minimiser les effets des différences de données et de mieux comprendre les caractéristiques du modèle.  
@@ -99,7 +99,7 @@ SELECT * from <structure>.CASES WHERE IsTestCase() AND <structure column name> =
   
 -   Dans la plupart des cas, la valeur d'exclusion par défaut 30 fournit un bon équilibre entre les données d'apprentissage et de test. Il n'existe pas de méthode simple pour déterminer le volume minimal du jeu de données permettant de fournir un apprentissage suffisant ou le volume maximal du jeu d'apprentissage permettant d'éviter un surajustement. Toutefois, après avoir construit un modèle, vous pouvez utiliser la validation croisée pour évaluer le jeu de données par rapport à un modèle particulier.  
   
--   Outre les propriétés répertoriées dans le tableau précédent, une propriété en lecture seule, `HoldoutActualSize`, est fournie dans les objets AMO et le langage DDL XML. Toutefois, étant donné que la taille réelle d’une partition ne peut pas être déterminée précisément jusqu'à ce que la structure a été traitée, vous devez vérifier si le modèle a été traité avant de récupérer la valeur de la `HoldoutActualSize` propriété.  
+-   Outre les propriétés répertoriées dans le tableau précédent, une propriété en lecture seule, `HoldoutActualSize`, est fournie dans les objets AMO et le langage DDL XML. Toutefois, étant donné que la taille réelle d’une partition ne peut pas être déterminée précisément avant une fois que la structure a été traitée, vous devez vérifier si le modèle a été traité avant de récupérer la valeur de la `HoldoutActualSize` propriété.  
   
 ## <a name="related-content"></a>Contenu associé  
   
@@ -108,13 +108,13 @@ SELECT * from <structure>.CASES WHERE IsTestCase() AND <structure column name> =
 |Décrit comment les filtres sur un modèle interagissent avec les jeux de données d'apprentissage et de test.|[Filtres pour les modèles d’exploration de données &#40;Analysis Services - Exploration de données&#41;](mining-models-analysis-services-data-mining.md)|  
 |Décrit comment l'utilisation des données d'apprentissage et de test affecte la validation croisée.|[La Validation croisée &#40;Analysis Services - Exploration de données&#41;](cross-validation-analysis-services-data-mining.md)|  
 |Fournit des informations sur les interfaces de programmation pour utiliser les jeux d'apprentissage et de test dans une structure d'exploration de données.|[Concepts et modèle objet AMO](../multidimensional-models/analysis-management-objects/amo-concepts-and-object-model.md)<br /><br /> [Élément MiningStructure &#40;ASSL&#41;](../scripting/objects/miningstructure-element-assl.md)|  
-|Fournit la syntaxe DMX pour créer des ensembles d'exclusion.|[CRÉER UNE STRUCTURE D’EXPLORATION DE DONNÉES &AMP;#40;DMX&AMP;#41;](/sql/dmx/create-mining-structure-dmx)|  
-|Récupérer des informations sur les cas dans les jeux d'apprentissage et de test.|[Ensembles de lignes de schéma d’exploration de données](../../relational-databases/native-client-ole-db-rowsets/rowsets.md)<br /><br /> [Interrogation des ensembles de lignes de schéma d’exploration de données de données &#40;Analysis Services - Exploration de données&#41;](data-mining-schema-rowsets-ssas.md)|  
+|Fournit la syntaxe DMX pour créer des ensembles d'exclusion.|[CRÉER LA STRUCTURE D’EXPLORATION DE &AMP;#40;DMX&AMP;#41;](/sql/dmx/create-mining-structure-dmx)|  
+|Récupérer des informations sur les cas dans les jeux d'apprentissage et de test.|[Ensembles de lignes de schéma d’exploration de données](../../relational-databases/native-client-ole-db-rowsets/rowsets.md)<br /><br /> [Interrogation des données d’exploration de données Schema Rowsets &#40;Analysis Services - Exploration de données&#41;](data-mining-schema-rowsets-ssas.md)|  
   
 ## <a name="see-also"></a>Voir aussi  
  [Outils d’exploration de données](data-mining-tools.md)   
  [Concepts d’exploration de données](data-mining-concepts.md)   
  [Solutions d’exploration de données](data-mining-solutions.md)   
- [Test et Validation &#40;d’exploration de données&#41;](testing-and-validation-data-mining.md)  
+ [Test et Validation &#40;exploration de données&#41;](testing-and-validation-data-mining.md)  
   
   

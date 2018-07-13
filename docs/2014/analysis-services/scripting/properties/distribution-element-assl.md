@@ -1,5 +1,5 @@
 ---
-title: Élément distribution (ASSL) | Documents Microsoft
+title: Élément distribution (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - Distribution element
 ms.assetid: a1309b90-8ad8-431b-a918-67f0cdd4fd20
 caps.latest.revision: 34
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: a556b4dc3745ecf45eab71339f2db3a0f9174f06
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: ea3422fead59b45957ebdb15735736fba89ddff2
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36144169"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37163540"
 ---
 # <a name="distribution-element-assl"></a>Élément Distribution (ASSL)
   Contient une valeur spécifique au fournisseur qui décrit les valeurs scalaires comment sont distribuées dans la colonne d’un [MiningStructure](../objects/miningstructure-element-assl.md) élément.  
@@ -64,7 +64,7 @@ ms.locfileid: "36144169"
 ## <a name="remarks"></a>Notes  
  Les valeurs disponibles pour le `Distribution` élément, tel que *Normal* ou *uniforme,* sont spécifiques à chaque fournisseur d’algorithme d’exploration de données. Pour plus d'informations sur les valeurs `Distribution` valides, consultez la documentation du fournisseur de l'algorithme d'exploration de données.  
   
- L’élément qui correspond au parent de `Distribution` dans l’objet d’objets AMO (Analysis Management) est modèle <xref:Microsoft.AnalysisServices.ScalarMiningStructureColumn>.  
+ L’élément qui correspond au parent de `Distribution` dans l’objet d’objets AMO (Analysis Management) modèle est <xref:Microsoft.AnalysisServices.ScalarMiningStructureColumn>.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Propriétés &#40;ASSL&#41;](properties-assl.md)  

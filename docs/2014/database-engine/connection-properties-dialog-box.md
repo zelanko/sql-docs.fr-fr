@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.connectionproperties.f1
 helpviewer_keywords:
 - Connection Properties dialog box
 ms.assetid: 6df812ad-4d80-4503-8a23-47719ce85624
 caps.latest.revision: 23
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 7f4f764af2fd823486ba4a8602d134ccea6e4317
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 339bbe1ec75abc3c3d384aeab5080270b4d5f3fb
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36153787"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37163360"
 ---
 # <a name="connection-properties-dialog-box"></a>Propriétés de connexion, boîte de dialogue
   Cette boîte de dialogue vous permet d'afficher les propriétés de la connexion en cours. Cette boîte de dialogue est disponible lorsque vous cliquez sur **Afficher les propriétés de connexion** dans les différentes boîtes de dialogue de l'Explorateur d'objets. Les propriétés affichées dans cette page sont en lecture seule.  

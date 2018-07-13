@@ -1,5 +1,5 @@
 ---
-title: Barre d’outils (onglet Utilisation de la Dimension, Concepteur de Cube) (Analysis Services - données multidimensionnelles) | Documents Microsoft
+title: Barre d’outils (onglet Utilisation de la Dimension, Concepteur de Cube) (Analysis Services - données multidimensionnelles) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 23cb6106-8799-4157-ba5e-408b4fbd8fbb
 caps.latest.revision: 21
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 026e5d8335b4353abdd208e3a21fe46687ee920b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 9246e554097ebd46e13eb9eeee218a3b319b0928
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36154692"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37189166"
 ---
 # <a name="toolbar-dimension-usage-tab-cube-designer-analysis-services---multidimensional-data"></a>Barre d'outils (onglet Utilisation de la dimension, Concepteur de cube) (Analysis Services - Données multidimensionnelles)
   Le volet **Barre d'outils** permet d'effectuer des actions courantes (ex. : ajouter une dimension de cube ou traiter le cube) dans l'onglet **Utilisation de la dimension** du Concepteur de cube.  

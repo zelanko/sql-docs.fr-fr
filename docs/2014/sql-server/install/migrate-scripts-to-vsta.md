@@ -1,5 +1,5 @@
 ---
-title: Migration des Scripts vers VSTA | Documents Microsoft
+title: Migration des Scripts vers VSTA | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - SSIS Script task, converting scripts
 - Script component [Integration Services], converting scripts
@@ -16,22 +16,22 @@ helpviewer_keywords:
 - SSIS Script component, converting scripts
 ms.assetid: d685098b-86a1-46bf-939a-63d56951e009
 caps.latest.revision: 44
-author: douglaslM
+author: mashamsft
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 99acbad66d2a614431bc1f08ad88bd12f2a3e6b4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 87c4c76ef7a09b8c03d0c95f83b647b73ccb3325
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36153866"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37157520"
 ---
 # <a name="migrate-scripts-to-vsta"></a>Migrer des scripts vers VSTA
-  Lorsque vous mettez à niveau [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] packages [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] migre les scripts dans toutes les tâches de Script ou des composants de Script à [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] Tools for Applications (VSTA). VSTA est l'environnement de script que [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] utilise. Dans [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], l’environnement de script pour [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] est [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] for Applications (VSA).  
+  Lorsque vous mettez à niveau [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] des packages vers [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] migre les scripts des tâches de Script ou des composants de Script à [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] Tools for Applications (VSTA). VSTA est l'environnement de script que [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] utilise. Dans [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], l’environnement de script pour [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] est [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] for Applications (VSA).  
   
- Si les scripts des tâches de script ou des composants Script font référence à des interfaces, il se peut que vous deviez modifier ces références avant de mettre le package à niveau. Si vous ne le faites pas, la mise à niveau du package ou la validation des scripts échoue, selon la méthode de mise à niveau choisie. Pour modifier ces références, remplacez les références à IDTS*xxx*90 interfaces avec des références à la IDTS correspondante*xxx*100 interfaces.  
+ Si les scripts des tâches de script ou des composants Script font référence à des interfaces, il se peut que vous deviez modifier ces références avant de mettre le package à niveau. Si vous ne le faites pas, la mise à niveau du package ou la validation des scripts échoue, selon la méthode de mise à niveau choisie. Pour modifier ces références, remplacez les références à IDTS*xxx*90 interfaces avec des références à le correspondantes IDTS*xxx*100 interfaces.  
   
- Pour plus d’informations sur la migration des scripts et packages de mise à niveau, consultez [mise à niveau des Packages Integration Services](../../integration-services/install-windows/upgrade-integration-services-packages.md).  
+ Pour plus d’informations sur la façon de migrer des scripts et de mise à niveau de packages, consultez [mise à niveau des Packages Integration Services](../../integration-services/install-windows/upgrade-integration-services-packages.md).  
   
 ## <a name="understanding-migration-failures"></a>Présentation des échecs de migration  
  Lorsque vous migrez les scripts, la migration peut échouer pour l'une des raisons suivantes :  

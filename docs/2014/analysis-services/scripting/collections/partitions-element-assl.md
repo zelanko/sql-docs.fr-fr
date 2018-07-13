@@ -1,5 +1,5 @@
 ---
-title: Élément (ASSL) des partitions | Documents Microsoft
+title: Partitions, élément (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,18 +22,18 @@ helpviewer_keywords:
 - Partitions element
 ms.assetid: e41c97ca-da44-48e9-a454-d25ee74209fd
 caps.latest.revision: 33
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 39e719c6ae4e04e1a05abc42f4290bbf0746e55b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: f54cab2990fcd5f3679da1c83c997921a59e67ac
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36153806"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37185207"
 ---
 # <a name="partitions-element-assl"></a>Élément Partitions (ASSL)
-  Contient la collection de [Partition](../objects/partition-element-assl.md) éléments utilisés par un [MeasureGroup](../objects/group-element-assl.md) élément ou la collection de liaisons de partition qui composent une hors ligne [MeasureGroupBinding](../data-type/measuregroupbinding-data-type-out-of-line-assl.md)élément.  
+  Contient la collection de [Partition](../objects/partition-element-assl.md) éléments utilisés par un [MeasureGroup](../objects/group-element-assl.md) élément, ou la collection des liaisons de partition qui composent une hors ligne [MeasureGroupBinding](../data-type/measuregroupbinding-data-type-out-of-line-assl.md)élément.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -62,7 +62,7 @@ ms.locfileid: "36153806"
   
 |Relation|Élément|  
 |------------------|-------------|  
-|Éléments parents|[Groupe de mesures](../objects/group-element-assl.md), [MeasureGroupBinding](../data-type/measuregroupbinding-data-type-out-of-line-assl.md)|  
+|Éléments parents|[MeasureGroup](../objects/group-element-assl.md), [MeasureGroupBinding](../data-type/measuregroupbinding-data-type-out-of-line-assl.md)|  
   
 |Ancêtre ou parent|Élément enfant|  
 |------------------------|-------------------|  

@@ -1,5 +1,5 @@
 ---
-title: Récupération de métadonnées à partir d’une Source de données analytiques | Documents Microsoft
+title: Récupération de métadonnées à partir d’une Source de données analytiques | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,15 +15,15 @@ helpviewer_keywords:
 - retrieving metadata
 ms.assetid: 00043ebd-7164-4ceb-b945-6e44378ea00a
 caps.latest.revision: 37
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 3a49a4ddc8687cd2e0cfdd47e4025e9bc51eefe6
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 2beb806c4a76aa3ac6062f8e6ae0e44c007520ae
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36154726"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37151670"
 ---
 # <a name="retrieving-metadata-from-an-analytical-data-source"></a>Récupération de métadonnées à partir d'une source de données analytiques
   Les métadonnées s'avèrent importantes pour les applications qui récupèrent et utilisent des données analytiques. Lorsqu'il s'agit de récupérer les données d'une source de données, la dimensionnalité de telles données est prévisible, même en présence de dataset imbriqués. Les jeux de résultats d'une base de données relationnelle présentent généralement une structure bidimensionnelle ou scalaire. Toutefois, les données extraites de sources de données analytiques peuvent avoir une dimensionnalité variable, organisées selon des hiérarchies d'une grande profondeur potentielle.  

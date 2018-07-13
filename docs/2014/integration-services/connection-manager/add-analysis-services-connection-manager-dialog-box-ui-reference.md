@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.olapconnection.f1
 helpviewer_keywords:
@@ -17,13 +17,13 @@ ms.assetid: 9d5e1bb1-adda-4985-80f6-56e14d5d295c
 caps.latest.revision: 24
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 88e2440ac19be6ed6990a6a303fc85bd234d5caf
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: cbb2fe2bc936fc66fe930ea5c0de60190b0ae5e0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36153765"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37184646"
 ---
 # <a name="add-analysis-services-connection-manager-dialog-box-ui-reference"></a>Référence de l'interface utilisateur de la boîte de dialogue Ajout d'un gestionnaire de connexions Analysis Services
   Utilisez la boîte de dialogue **Ajout d'un gestionnaire de connexions Analysis Services** pour créer une connexion à un serveur exécutant [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]ou pour modifier les propriétés de connexion.  
@@ -48,6 +48,6 @@ ms.locfileid: "36153765"
   
 ## <a name="see-also"></a>Voir aussi  
  [Integration Services Error and Message Reference](../integration-services-error-and-message-reference.md)   
- [Services d’intégration &#40;SSIS&#41; connexions](integration-services-ssis-connections.md)  
+ [Integration Services &#40;SSIS&#41; connexions](integration-services-ssis-connections.md)  
   
   

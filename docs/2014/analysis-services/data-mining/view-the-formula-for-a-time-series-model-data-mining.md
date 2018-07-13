@@ -1,5 +1,5 @@
 ---
-title: Afficher la formule d’une série chronologique (exploration de données) de modèle | Documents Microsoft
+title: Afficher la formule d’une série chronologique (exploration de données) de modèle | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - data mining [Analysis Services], how-to topics
 - ARTXP
@@ -18,20 +18,20 @@ helpviewer_keywords:
 - Time Series Viewer [Analysis Services]
 ms.assetid: 825ef719-2f44-4979-be01-5a81f54e1a53
 caps.latest.revision: 12
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 11427eb72ea27bd93e8cb360afcf1221ab19b05a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: dbdd4788ed35f38790c0e038acb15d0342c0bcc4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36154057"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37163450"
 ---
 # <a name="view-the-formula-for-a-time-series-model-data-mining"></a>Afficher la formule d'un modèle de série chronologique (exploration de données)
-  Le [!INCLUDE[msCoName](../../includes/msconame-md.md)] inData de visionneuse MTS Concepteur d’exploration fournit le moyen le plus simple pour afficher les détails de l’équation de régression utilisée dans un modèle de série chronologique.  
+  Le [!INCLUDE[msCoName](../../includes/msconame-md.md)] inData de visionneuse de série chronologique Concepteur d’exploration de données fournit le moyen le plus simple pour afficher les détails de l’équation de régression utilisée dans un modèle de série chronologique.  
   
- Vous pouvez extraire la formule de régression d'un modèle de série chronologique en interrogeant le contenu du modèle. Toutefois, pour afficher la formule complète ARTXP ou ARIMA, nous vous recommandons d’utiliser le **légende d’exploration de données** de la [série de temps visionneuse](browse-a-model-using-the-microsoft-time-series-viewer.md), qui présente toutes les constantes dans un format lisible.  
+ Vous pouvez extraire la formule de régression d'un modèle de série chronologique en interrogeant le contenu du modèle. Toutefois, pour afficher la formule complète ARTXP ou ARIMA, nous vous recommandons d’utiliser le **légende d’exploration de données** de la [Microsoft temps série visionneuse](browse-a-model-using-the-microsoft-time-series-viewer.md), qui présente toutes les constantes dans un format lisible.  
   
  Si vous créez un modèle mixte, les analyses ARIMA et ARTXP sont créées dans des arborescences séparées, jointes au nœud racine qui représente le modèle. Les structures des arbres ARIMA et ARTXP sont très différentes. Par exemple, l'arbre ARTXP est en fait une arborescence, comme un arbre de décision, alors que l'arbre ARIMA représente une série de moyennes mobiles. Par conséquent, bien que les deux représentations soient présentées dans un seul modèle pour des raisons de commodité, elles doivent être considérées comme deux modèles indépendants. Les équations sont également complètement différentes et ne peuvent pas être associées ou comparées.  
   
@@ -83,7 +83,7 @@ ms.locfileid: "36154057"
   
 ## <a name="see-also"></a>Voir aussi  
  [Tâches de la visionneuse modèle d’exploration de données et de procédures](mining-model-viewer-tasks-and-how-tos.md)   
- [Parcourir un modèle à l’aide de la visionneuse de série Microsoft Time](browse-a-model-using-the-microsoft-time-series-viewer.md)   
+ [Explorer un modèle à l’aide de la visionneuse de la série Microsoft Time](browse-a-model-using-the-microsoft-time-series-viewer.md)   
  [Exemples de requêtes de modèle de séries chronologiques](time-series-model-query-examples.md)  
   
   

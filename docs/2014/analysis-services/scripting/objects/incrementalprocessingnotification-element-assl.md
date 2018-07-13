@@ -1,5 +1,5 @@
 ---
-title: Élément IncrementalProcessingNotification (ASSL) | Documents Microsoft
+title: Élément IncrementalProcessingNotification (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - IncrementalProcessingNotification element
 ms.assetid: bfc9b0a4-4043-4aaf-82d9-67e7f1d1eb81
 caps.latest.revision: 15
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: ab48f74b38484d10b1142188e8a87f585495860f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: bd7e2a8defb588e722ac714d3fa07b22a581bf0a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36155131"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37189006"
 ---
 # <a name="incrementalprocessingnotification-element-assl"></a>Élément IncrementalProcessingNotification (ASSL)
   Contient des informations pour le [ProactiveCaching](proactivecaching-element-assl.md) élément sur une requête à exécuter pour déterminer la progression du traitement incrémentiel.  

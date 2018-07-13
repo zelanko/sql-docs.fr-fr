@@ -1,5 +1,5 @@
 ---
-title: Définir les propriétés d’un gestionnaire de connexions | Documents Microsoft
+title: Définir les propriétés d’un gestionnaire de connexions | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - connection managers [Integration Services], modifying
 - modifying connection managers
 ms.assetid: 54793114-2198-4d80-8091-e241d5a5d13c
 caps.latest.revision: 35
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 558616f859f89c5bc6220f8e84124001bc4c8796
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 42e6f4473e9589ce861c22d6e85d83502e6329b1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36154645"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37190609"
 ---
 # <a name="set-the-properties-of-a-connection-manager"></a>Définir les propriétés d’un gestionnaire de connexions
   Tous les gestionnaires de connexions peuvent être configurés à l'aide de la fenêtre **Propriétés** .  
@@ -57,8 +57,8 @@ ms.locfileid: "36154645"
   
     |Gestionnaire de connexions|Options|  
     |------------------------|-------------|  
-    |[Gestionnaire de connexions ADO](connection-manager/ado-connection-manager.md)|[Configurer le Gestionnaire de connexions OLE DB](configure-ole-db-connection-manager.md)|  
-    |[Gestionnaire de connexions ADO.NET](connection-manager/ado-net-connection-manager.md)|[Configurer le Gestionnaire de connexions ADO.NET](configure-ado-net-connection-manager.md)|  
+    |[Gestionnaire de connexions ADO](connection-manager/ado-connection-manager.md)|[Configurer le gestionnaire de connexions OLE DB](configure-ole-db-connection-manager.md)|  
+    |[Gestionnaire de connexions ADO.NET](connection-manager/ado-net-connection-manager.md)|[Configurer le gestionnaire de connexions ADO.NET](configure-ado-net-connection-manager.md)|  
     |[Gestionnaire de connexions Analysis Services](connection-manager/analysis-services-connection-manager.md)|[Référence de l’interface utilisateur de la boîte de dialogue Ajout d’un gestionnaire de connexions Analysis Services](connection-manager/add-analysis-services-connection-manager-dialog-box-ui-reference.md)|  
     |[Gestionnaire de connexions Excel](connection-manager/excel-connection-manager.md)|[Éditeur du gestionnaire de connexions Excel](../../2014/integration-services/excel-connection-manager-editor.md)|  
     |[Gestionnaire de connexions de fichiers](connection-manager/file-connection-manager.md)|[Éditeur du gestionnaire de connexions de fichiers](../../2014/integration-services/file-connection-manager-editor.md)|  
@@ -68,8 +68,8 @@ ms.locfileid: "36154645"
     |[Gestionnaires de connexions FTP](connection-manager/ftp-connection-manager.md)|[Éditeur du gestionnaire de connexions FTP](../../2014/integration-services/ftp-connection-manager-editor.md)|  
     |[Gestionnaire de connexions HTTP](connection-manager/http-connection-manager.md)|[Éditeur du Gestionnaire de connexions HTTP &#40;Page du serveur&#41;](../../2014/integration-services/http-connection-manager-editor-server-page.md)<br /><br /> [Éditeur du Gestionnaire de connexions HTTP &#40;Page Proxy&#41;](../../2014/integration-services/http-connection-manager-editor-proxy-page.md)|  
     |[Gestionnaire de connexions MSMQ](connection-manager/msmq-connection-manager.md)|[Éditeur du gestionnaire de connexions MSMQ](../../2014/integration-services/msmq-connection-manager-editor.md)|  
-    |[Gestionnaire de connexions ODBC](connection-manager/odbc-connection-manager.md)|[Référence de l’interface utilisateur du Gestionnaire de connexions ODBC](../../2014/integration-services/odbc-connection-manager-ui-reference.md)|  
-    |[Gestionnaire de connexions OLE DB](connection-manager/ole-db-connection-manager.md)|[Configurer le Gestionnaire de connexions OLE DB](configure-ole-db-connection-manager.md)|  
+    |[Gestionnaire de connexions ODBC](connection-manager/odbc-connection-manager.md)|[Informations de référence sur l’interface utilisateur du gestionnaire de connexions ODBC](../../2014/integration-services/odbc-connection-manager-ui-reference.md)|  
+    |[Gestionnaire de connexions OLE DB](connection-manager/ole-db-connection-manager.md)|[Configurer le gestionnaire de connexions OLE DB](configure-ole-db-connection-manager.md)|  
     |[Gestionnaire de connexions SMO](connection-manager/smo-connection-manager.md)|[Éditeur du gestionnaire de connexions SMO](../../2014/integration-services/smo-connection-manager-editor.md)|  
     |[Gestionnaire de connexions SMTP](connection-manager/smtp-connection-manager.md)|[Éditeur du gestionnaire de connexions SMTP](../../2014/integration-services/smtp-connection-manager-editor.md)|  
     |[Gestionnaire de connexions de SQL Server Compact Edition](connection-manager/sql-server-compact-edition-connection-manager.md)|[SQL Server Compact Edition Connection Manager Editor &#40;Page de connexion&#41;](../../2014/integration-services/sql-server-compact-edition-connection-manager-editor-connection-page.md)<br /><br /> [SQL Server Compact Edition Connection Manager Editor &#40;Page toutes les&#41;](../../2014/integration-services/sql-server-compact-edition-connection-manager-editor-all-page.md)|  
@@ -79,6 +79,6 @@ ms.locfileid: "36154645"
   
 ## <a name="see-also"></a>Voir aussi  
  [Connexions Integration Services &#40;SSIS&#41;](connection-manager/integration-services-ssis-connections.md)   
- [Ajouter, supprimer ou partager un gestionnaire de connexions dans un Package](../../2014/integration-services/add-delete-or-share-a-connection-manager-in-a-package.md)  
+ [Ajouter, supprimer ou partager un gestionnaire de connexions dans un package](../../2014/integration-services/add-delete-or-share-a-connection-manager-in-a-package.md)  
   
   

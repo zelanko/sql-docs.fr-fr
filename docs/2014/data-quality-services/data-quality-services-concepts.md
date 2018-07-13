@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - data-quality-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 837c71ee-48fa-4044-8744-2be9119aaa04
 caps.latest.revision: 15
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: b1f6eb37de996e8956468efb54fa74535e419f44
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 16ca3b28e9b19c0f7935f2938d054939f0cc57a1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36154906"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37155390"
 ---
 # <a name="data-quality-services-concepts"></a>Concepts Data Quality Services
   Cette rubrique fournit un bref résumé des concepts [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) relatifs à la gestion des connaissances, aux projets de qualité des données et à l'administration de la qualité des données.  
@@ -73,7 +73,7 @@ ms.locfileid: "36154906"
   
  **Analyse des activités**  
   
- L'analyse des activités affiche l'état de chaque activité comprise dans une plage de données, fournit des données pour chaque activité et permet aux administrateurs DQS de contrôler une activité. Pour plus d’informations, consultez [surveiller les activités DQS](../../2014/data-quality-services/monitor-dqs-activities.md).  
+ L'analyse des activités affiche l'état de chaque activité comprise dans une plage de données, fournit des données pour chaque activité et permet aux administrateurs DQS de contrôler une activité. Pour plus d’informations, consultez [Monitor DQS Activities](../../2014/data-quality-services/monitor-dqs-activities.md).  
   
  **Configuration**  
   
@@ -85,13 +85,13 @@ ms.locfileid: "36154906"
   
 -   Activer/désactiver les notifications de profilage Pour plus d’informations, consultez [Activer ou désactiver les notifications de profilage dans DQS](../../2014/data-quality-services/enable-or-disable-profiling-notifications-in-dqs.md).  
   
--   Configurer les niveaux de gravité des journaux DQS au niveau de l'activité ou au niveau du module (configuration plus avancée). Pour plus d’informations, consultez [configurer des niveaux de gravité pour les fichiers journaux DQS](../../2014/data-quality-services/configure-severity-levels-for-dqs-log-files.md).  
+-   Configurer les niveaux de gravité des journaux DQS au niveau de l'activité ou au niveau du module (configuration plus avancée). Pour plus d’informations, consultez [Configure Severity Levels for DQS Log Files](../../2014/data-quality-services/configure-severity-levels-for-dqs-log-files.md).  
   
  **Sécurité relative au magasin d'objets blob distants (DQS)**  
   
- Vous pouvez utiliser des rôles dans le mécanisme de sécurité SQL Server pour sécuriser DQS. Il existe trois rôles DQS qui déterminent le niveau d'accès d'un utilisateur à l'application [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] : dqs_administrator, dqs_kb_editor, et dqs_kb_operator. Vous ne pouvez pas accorder les rôles aux utilisateurs à l'aide de l'application [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] ; cela s'effectue à l'aide de SQL Server Management Studio. Pour plus d’informations, consultez [DQS Security](../../2014/data-quality-services/dqs-security.md).  
+ Vous pouvez utiliser des rôles dans le mécanisme de sécurité SQL Server pour sécuriser DQS. Il existe trois rôles DQS qui déterminent le niveau d'accès d'un utilisateur à l'application [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] : dqs_administrator, dqs_kb_editor, et dqs_kb_operator. Vous ne pouvez pas accorder les rôles aux utilisateurs à l'aide de l'application [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] ; cela s'effectue à l'aide de SQL Server Management Studio. Pour plus d’informations, consultez [sécurité DQS](../../2014/data-quality-services/dqs-security.md).  
   
- Pour plus d’informations sur l’administration DQS, consultez [DQS Administration](../../2014/data-quality-services/dqs-administration.md).  
+ Pour plus d’informations sur l’administration DQS, consultez [Administration de DQS](../../2014/data-quality-services/dqs-administration.md).  
   
 ## <a name="see-also"></a>Voir aussi  
  [Data Quality Services](../../2014/data-quality-services/data-quality-services.md)  

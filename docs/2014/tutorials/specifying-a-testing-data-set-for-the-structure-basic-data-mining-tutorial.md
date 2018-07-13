@@ -1,5 +1,5 @@
 ---
-title: Spécification d’un jeu de données de test pour la Structure (didacticiel d’exploration de données de base de données) | Documents Microsoft
+title: Spécification d’un jeu de données de test pour la Structure (didacticiel d’exploration de données de base) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 75cd508f-b126-418b-848d-3c4c3e6c303f
 caps.latest.revision: 25
 author: minewiskan
 ms.author: owend
-manager: kfile
-ms.openlocfilehash: 2023672b21e8ffde191b400329031895d200e1ea
-ms.sourcegitcommit: 8c040e5b4e8c7d37ca295679410770a1af4d2e1f
+manager: craigg
+ms.openlocfilehash: 09822e47f6fb8e1a4b91832a2b47492ae1d8c2b6
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/21/2018
-ms.locfileid: "36312627"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37198369"
 ---
 # <a name="specifying-a-testing-data-set-for-the-structure-basic-data-mining-tutorial"></a>Spécification d'un jeu de données de test pour la structure (Didacticiel sur l'exploration de données de base)
   Dans les écrans finals de l'Assistant Exploration de données, vous allez diviser vos données en un jeu de test et un jeu d'apprentissage. Vous nommerez ensuite votre structure et activerez l'extraction sur le modèle.  
@@ -53,14 +53,14 @@ ms.locfileid: "36312627"
 5.  Cliquez sur **Terminer**.  
   
 ## <a name="previous-task-in-lesson"></a>Tâche précédente de la leçon  
- [En spécifiant le Type de données et le Type de contenu &#40;didacticiel d’exploration de données de base de données&#41;](../../2014/tutorials/specifying-the-data-type-and-content-type-basic-data-mining-tutorial.md)  
+ [Spécification du Type de données et d’un Type de contenu &#40;didacticiel d’exploration de données de base&#41;](../../2014/tutorials/specifying-the-data-type-and-content-type-basic-data-mining-tutorial.md)  
   
 ## <a name="next-lesson"></a>Leçon suivante  
- [Leçon 3 : Ajout et traitement des modèles](../../2014/tutorials/lesson-3-adding-and-processing-models.md)  
+ [Leçon 3 : Ajout et traitement des modèles](../../2014/tutorials/lesson-3-adding-and-processing-models.md)  
   
 ## <a name="see-also"></a>Voir aussi  
  [Activer l’extraction pour un modèle d’exploration de données](../../2014/analysis-services/data-mining/enable-drillthrough-for-a-mining-model.md)   
- [Requêtes d’extraction &#40;d’exploration de données&#41;](../../2014/analysis-services/data-mining/drillthrough-queries-data-mining.md)   
+ [Requêtes d’extraction &#40;exploration de données&#41;](../../2014/analysis-services/data-mining/drillthrough-queries-data-mining.md)   
  [Spécifier les données d’apprentissage &#40;Assistant exploration de données&#41;](../../2014/analysis-services/specify-the-training-data-data-mining-wizard.md)  
   
   

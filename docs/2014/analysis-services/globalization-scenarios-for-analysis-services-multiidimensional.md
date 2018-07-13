@@ -1,5 +1,5 @@
 ---
-title: Scénarios de globalisation pour données multidimensionnelles Analysis Services | Documents Microsoft
+title: Scénarios de globalisation pour données multidimensionnelles Analysis Services | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - multiple language support [Analysis Services]
 - languages [Analysis Services]
@@ -19,18 +19,18 @@ helpviewer_keywords:
 - Analysis Services, international considerations
 ms.assetid: e8af85ff-ef33-4659-a003-bb34578eb2a2
 caps.latest.revision: 33
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 5d45b44c6536a7fc95543bebdbc9468c61fdf75b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 0c8aeb19e6773b3f772ae0a62e7d72f647ee365e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36154942"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37185396"
 ---
 # <a name="globalization-scenarios-for-analysis-services-multiidimensional"></a>Scénarios de globalisation pour données multidimensionnelles Analysis Services
-  [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] stocke et manipule des données et métadonnées dans les modèles de données multidimensionnelles et tabulaires. Le stockage des données est en Unicode (UTF-16), dans des jeux de caractères qui utilisent l'encodage Unicode. Si vous chargez des données ANSI dans un modèle de données, les caractères sont stockés à l'aide de points de code équivalents Unicode.  
+  [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] stocke et manipule des données multilingues et les métadonnées dans les deux modèles de données tabulaires et multidimensionnels. Le stockage des données est en Unicode (UTF-16), dans des jeux de caractères qui utilisent l'encodage Unicode. Si vous chargez des données ANSI dans un modèle de données, les caractères sont stockés à l'aide de points de code équivalents Unicode.  
   
  La prise en charge d'Unicode signifie qu' [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] peut stocker des données dans n'importe laquelle des langues prises en charge par les systèmes d'exploitation Windows clients et serveurs, ce qui autorise la lecture, l'écriture, le tri et la comparaison des données dans n'importe quel jeu de caractères utilisé sur un ordinateur Windows. Les applications clientes BI consommant des données [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] peuvent représenter les données dans la langue choisie par l'utilisateur, en supposant que les données existent dans cette langue dans le modèle.  
   
@@ -42,7 +42,7 @@ ms.locfileid: "36154942"
   
      Pour les modèles multidimensionnels uniquement, les légendes et les membres d'attributs peuvent être exprimés comme des traductions. Vous pouvez définir une ou plusieurs traductions, puis utiliser un identificateur de paramètres régionaux pour déterminer la traduction retournée au client. Pour plus d'informations, consultez [Fonctionnalités](#bkmk_features) plus loin dans cet article.  
   
--   Erreur, d’avertissement et messages d’information retournés à partir de la [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] moteur (msmdsrv) sont traduits dans les 43 langues prises en charge par Office et Office 365. Aucune configuration n'est nécessaire pour obtenir les messages dans une langue spécifique. Les paramètres régionaux de l'application cliente déterminent quelles chaînes sont retournées.  
+-   Messages d’erreur, avertissement et d’information retournés à partir de la [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] moteur (msmdsrv) sont traduits dans les 43 langues prises en charge par Office et Office 365. Aucune configuration n'est nécessaire pour obtenir les messages dans une langue spécifique. Les paramètres régionaux de l'application cliente déterminent quelles chaînes sont retournées.  
   
 -   Le fichier de configuration (msmdsrv.ini) et PowerShell AMO sont en anglais uniquement.  
   
@@ -63,11 +63,11 @@ ms.locfileid: "36154942"
   
  Au niveau du client, les applications globalisées qui consomment ou manipulent [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] données multidimensionnelles peuvent utiliser les fonctionnalités multilingues et multiculturelles dans [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]:  
   
--   [Traductions &#40;Analysis Services&#41; ](translations-analysis-services.md) servent à incorporer plusieurs légendes pour un objet unique, où chaque chaîne traduite peut coexister avec autres traductions. Vous pouvez utiliser [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] pour définir les traductions pour la légende, la description et les types de comptes pour des cubes, des mesures, des dimensions et des attributs. Vous pouvez récupérer des données et des métadonnées à partir d'objets [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] sur lesquels des traductions ont été définies automatiquement en fournissant un identificateur local lors de la connexion à une instance d' [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] .  
+-   [Traductions &#40;Analysis Services&#41; ](translations-analysis-services.md) servent à incorporer plusieurs légendes pour un seul objet, où chaque chaîne traduite peut coexister avec autres traductions. Vous pouvez utiliser [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] pour définir les traductions pour la légende, la description et les types de comptes pour des cubes, des mesures, des dimensions et des attributs. Vous pouvez récupérer des données et des métadonnées à partir d'objets [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] sur lesquels des traductions ont été définies automatiquement en fournissant un identificateur local lors de la connexion à une instance d' [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] .  
   
      Pour apprendre à utiliser cette fonctionnalité, consultez la [leçon 9 : définition de perspectives et de traductions](lesson-9-defining-perspectives-and-translations.md) du didacticiel [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)].  
   
--   [Conversions monétaires &#40;Analysis Services&#41; ](currency-conversions-analysis-services.md) s’effectue via des scripts MDX spécialisés qui convertissent les mesures contenant des données monétaires. Vous pouvez utiliser l'Assistant Business Intelligence de [!INCLUDE[ss_dtbi](../includes/ss-dtbi-md.md)] pour générer un script MDX qui utilise une combinaison de données et de métadonnées issues de dimensions, d'attributs et de groupes de mesures pour convertir des mesures contenant des données monétaires.  
+-   [Conversions monétaires &#40;Analysis Services&#41; ](currency-conversions-analysis-services.md) s’effectue via des scripts MDX spécialisés qui convertissent des mesures contenant des données monétaires. Vous pouvez utiliser l'Assistant Business Intelligence de [!INCLUDE[ss_dtbi](../includes/ss-dtbi-md.md)] pour générer un script MDX qui utilise une combinaison de données et de métadonnées issues de dimensions, d'attributs et de groupes de mesures pour convertir des mesures contenant des données monétaires.  
   
 ## <a name="in-this-section"></a>Dans cette section  
   
@@ -76,12 +76,12 @@ ms.locfileid: "36154942"
 |[Langues et classements &#40;Analysis Services&#41;](languages-and-collations-analysis-services.md)|Spécifiez la langue par défaut et le classement Windows pour une instance de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. Vos choix affectent les données et les métadonnées gérées par [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)].|  
 |[Traductions &#40;Analysis Services&#41;](translations-analysis-services.md)|Définir des traductions pour une [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] base de données et les objets contenus dans la base de données. Cette rubrique explique comment [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] résout les demandes de données et de métadonnées traduites envoyées par les applications clientes.|  
 |[Conversions monétaires &#40;Analysis Services&#41;](currency-conversions-analysis-services.md)|Définissez une conversion monétaire à l'aide de l'Assistant Business Intelligence.|  
-|[Conseils et meilleures pratiques en matière de globalisation &#40;Analysis Services&#41;](globalization-tips-and-best-practices-analysis-services.md)|Passe en revue plusieurs pratiques de conception et de codage qui peuvent vous aider à éviter les problèmes liés aux données multilingues.|  
+|[Globalisation conseils et meilleures pratiques &#40;Analysis Services&#41;](globalization-tips-and-best-practices-analysis-services.md)|Passe en revue plusieurs pratiques de conception et de codage qui peuvent vous aider à éviter les problèmes liés aux données multilingues.|  
   
 ## <a name="see-also"></a>Voir aussi  
  [Internationalisation pour les Applications Windows](http://msdn.microsoft.com/library/windows/desktop/dd318661%28v=vs.85%29.aspx)   
- [Atteindre le centre de développement](http://msdn.microsoft.com/goglobal/bb871628.aspx)   
- [Applications de l’écriture Windows Store avec conception adaptative en fonction des paramètres régionaux](http://blogs.windows.com/buildingapps/2014/03/06/writing-windows-store-apps-with-locale-based-adaptive-design/)   
+ [Accédez au centre de développement](http://msdn.microsoft.com/goglobal/bb871628.aspx)   
+ [Applications d’écriture Windows Store avec conception adaptative en fonction des paramètres régionaux](http://blogs.windows.com/buildingapps/2014/03/06/writing-windows-store-apps-with-locale-based-adaptive-design/)   
  [Développement d’applications Windows universelles avec c# et XAML](http://www.microsoftvirtualacademy.com/training-courses/developing-universal-windows-apps-with-c-and-xaml)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Création, modification et suppression d’index | Documents Microsoft
+title: Création, modification et suppression d’index | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,15 +14,15 @@ helpviewer_keywords:
 - indexes [SMO]
 ms.assetid: ad1befa5-46e0-4895-b9d3-42852e07607b
 caps.latest.revision: 49
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 7fbad26a835495958771ddd2d690668e3dcf64c7
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: fb90f4759e829526b53f38c4aa5714748b7ad62e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36153892"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37258465"
 ---
 # <a name="creating-altering-and-removing-indexes"></a>Création, modification et suppression d'index
   Dans la hiérarchie SMO ([!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Management Objects), les index sont représentés par l'objet <xref:Microsoft.SqlServer.Management.Smo.Index>. Les colonnes indexées sont représentées par une collection d'objets <xref:Microsoft.SqlServer.Management.Smo.IndexedColumn> représentés par la propriété <xref:Microsoft.SqlServer.Management.Smo.Index.IndexedColumns%2A>.  

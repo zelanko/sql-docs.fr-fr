@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Aggregate transformation [Integration Services]
 - aggregate values [Integration Services]
@@ -17,13 +17,13 @@ ms.assetid: 01b81c0f-d5e0-483b-81b2-73800a6945ac
 caps.latest.revision: 48
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 21f4e4749518036a1c2c40496102617c556f6aec
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: ab590e5016b7230124aa88a4a7fa73b0fcd7f4ca
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36144355"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37180383"
 ---
 # <a name="aggregate-values-in-a-dataset-by-using-the-aggregate-transformation"></a>Agréger les valeurs dans un dataset à l'aide de la transformation d'agrégation
   Pour pouvoir ajouter et configurer une transformation d'agrégation, le package doit inclure au moins une tâche de flux de données et une source.  
@@ -58,7 +58,7 @@ ms.locfileid: "36144355"
     > [!NOTE]  
     >  La fourniture du nombre de valeurs distinctes, exact ou approximatif, optimise les performances, car la transformation peut préallouer la quantité de mémoire appropriée pour effectuer son travail.  
   
-12. Si vous le souhaitez, cliquez sur **Avancé** et mettez à jour le nom de la sortie de la transformation d’agrégation. Si les agrégations contiennent un `Group By` opération, vous pouvez sélectionner un nombre approximatif de regroupement des valeurs de clés dans le **le nombre de clés** colonne ou spécifier un nombre exact de regroupement des valeurs de clés dans le **clés** colonne.  
+12. Si vous le souhaitez, cliquez sur **Avancé** et mettez à jour le nom de la sortie de la transformation d’agrégation. Si les agrégations contiennent une `Group By` opération, vous pouvez sélectionner un nombre approximatif de regroupement des valeurs de clés dans le **redéfinir le nombre de** colonne ou spécifier un nombre exact de regroupement des valeurs de clés dans le **clés** colonne.  
   
     > [!NOTE]  
     >  La fourniture du nombre de valeurs distinctes, exact ou approximatif, optimise les performances, car la transformation peut préallouer la quantité de mémoire appropriée pour effectuer son travail.  

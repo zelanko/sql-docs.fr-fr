@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - page breaks [Reporting Services], expressions
 - green-bar reports [Reporting Services]
@@ -26,15 +26,15 @@ helpviewer_keywords:
 - expressions [Reporting Services], examples
 ms.assetid: 87ddb651-a1d0-4a42-8ea9-04dea3f6afa4
 caps.latest.revision: 97
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 71b1e580ddb4e56a267fcfaf792858ed3566f2d8
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 97bfdd80fc183291f21042d11620d0a3e28e0b49
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36154825"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37205039"
 ---
 # <a name="expression-examples-report-builder-and-ssrs"></a>Exemples d'expressions (Générateur de rapports et SSRS)
   Les expressions sont fréquemment utilisées dans les rapports pour en contrôler le contenu et l'apparence. Les expressions sont écrites en [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)], et peuvent utiliser des fonctions intégrées, du code personnalisé, des variables de rapport et de groupe, et des variables définies par l’utilisateur. Les expressions commencent par un signe égal (=). Pour plus d’informations sur l’éditeur d’expressions et les types de références que vous pouvez inclure, consultez [Utilisation d’expressions dans les rapports &#40;Générateur de rapports et SSRS&#41;](expression-uses-in-reports-report-builder-and-ssrs.md), et [Ajouter une expression &#40;Générateur de rapports et SSRS&#41;](add-an-expression-report-builder-and-ssrs.md).  
@@ -58,19 +58,19 @@ ms.locfileid: "36154825"
   
  Pour obtenir des exemples d'expressions pour des utilisations spécifiques, consultez les rubriques suivantes :  
   
--   [Exemples d’expressions de groupe &#40;rapport Générateur et SSRS&#41;](expression-examples-report-builder-and-ssrs.md)  
+-   [Exemples d’expressions de groupe &#40;Générateur de rapports et SSRS&#41;](expression-examples-report-builder-and-ssrs.md)  
   
--   [Exemples d’équations de filtre &#40;rapport Générateur et SSRS&#41;](filter-equation-examples-report-builder-and-ssrs.md)  
+-   [Exemples d’équations de filtre &#40;Générateur de rapports et SSRS&#41;](filter-equation-examples-report-builder-and-ssrs.md)  
   
--   [Généralement utilisé des filtres &#40;rapport Générateur et SSRS&#41;](commonly-used-filters-report-builder-and-ssrs.md)  
+-   [Filtres couramment utilisés &#40;Générateur de rapports et SSRS&#41;](commonly-used-filters-report-builder-and-ssrs.md)  
   
--   [Rapports et de références à des Collections de Variables de groupe &#40;rapport Générateur et SSRS&#41;](built-in-collections-report-and-group-variables-references-report-builder.md)  
+-   [Rapport et de groupe de références à des Collections Variables &#40;Générateur de rapports et SSRS&#41;](built-in-collections-report-and-group-variables-references-report-builder.md)  
   
  Pour plus d’informations sur les expressions simples et complexes, l’endroit où vous pouvez utiliser des expressions et les types de références que vous pouvez inclure dans une expression, consultez les rubriques sous [Expressions &#40;Générateur de rapports et SSRS&#41;](expressions-report-builder-and-ssrs.md). Pour plus d’informations sur le contexte dans lequel les expressions sont évaluées pour calculer des agrégats, consultez [Étendue des expressions pour les totaux, les agrégats et les collections intégrées &#40;Générateur de rapports et SSRS&#41;](expression-scope-for-totals-aggregates-and-built-in-collections.md).  
   
  Pour apprendre à écrire des expressions qui utilisent plusieurs fonctions et opérateurs également utilisés par les exemples d'expressions de cette rubrique, mais dans le contexte de la rédaction d'un rapport, consultez [Tutorial: Introducing Expressions](../tutorial-introducing-expressions.md).  
   
- L'éditeur d'expressions inclut une vue hiérarchique des fonctions intégrées. Lorsque vous sélectionnez la fonction, un exemple de code apparaît dans le volet Valeurs. Pour plus d’informations, consultez la [boîte de dialogue Expression](../expression-dialog-box.md) ou [boîte de dialogue Expression &#40;le Générateur de rapports&#41;](../expression-dialog-box-report-builder.md).  
+ L'éditeur d'expressions inclut une vue hiérarchique des fonctions intégrées. Lorsque vous sélectionnez la fonction, un exemple de code apparaît dans le volet Valeurs. Pour plus d’informations, consultez le [boîte de dialogue Expression](../expression-dialog-box.md) ou [boîte de dialogue Expression &#40;Générateur de rapports&#41;](../expression-dialog-box-report-builder.md).  
   
  Si vous vous servez du concepteur de requêtes de modèle de rapport pour concevoir une requête de dataset qui utilise un modèle de rapport en tant que source de données, vous devez utiliser des formules au lieu d'expressions. Ces formules aident à spécifier les données de rapport à l'aide de calculs personnalisés intégrés dans la requête qui spécifie les données à retourner à partir de la source de données de modèle de rapport. Pour plus d’informations, consultez [Formules dans les requêtes de modèle de rapport &#40;Générateur de rapports et SSRS&#41;](formulas-in-report-model-queries-report-builder-and-ssrs.md).  
   
@@ -93,7 +93,7 @@ ms.locfileid: "36154825"
     = Round(1.3)  
     ```  
   
-     Vous pouvez également écrire une expression pour arrondir une valeur à un multiple de votre choix, similaire à la `MRound` fonction dans Excel. Multipliez la valeur par un facteur qui crée un entier, arrondissez le nombre, puis divisez-le par le même facteur. Par exemple, pour arrondir 1,3 au multiple le plus proche de 0,2 (1,4), utilisez l'expression suivante :  
+     Vous pouvez également écrire une expression pour arrondir une valeur à un multiple de votre choix, similaire à la `MRound` (fonction) dans Excel. Multipliez la valeur par un facteur qui crée un entier, arrondissez le nombre, puis divisez-le par le même facteur. Par exemple, pour arrondir 1,3 au multiple le plus proche de 0,2 (1,4), utilisez l'expression suivante :  
   
     ```  
     = Round(1.3*5)/5  
@@ -113,7 +113,7 @@ ms.locfileid: "36154825"
     =DateAdd(DateInterval.Month, 6, Parameters!StartDate.Value)  
     ```  
   
--   Le `Year` fonction affiche l’année pour une date particulière. Vous pouvez l'utiliser pour grouper des dates ou pour afficher l'année en tant que libellé d'un ensemble de dates. Cette expression affiche l'année pour un groupe donné de dates de commande client. Le `Month` (fonction) et autres fonctions peuvent également servir à manipuler des dates. Pour plus d’informations, consultez la documentation de [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)].  
+-   Le `Year` fonction affiche l’année pour une date particulière. Vous pouvez l'utiliser pour grouper des dates ou pour afficher l'année en tant que libellé d'un ensemble de dates. Cette expression affiche l'année pour un groupe donné de dates de commande client. Le `Month` (fonction) et autres fonctions peuvent également être utilisées pour manipuler des dates. Pour plus d’informations, consultez la documentation de [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)].  
   
     ```  
     =Year(Fields!OrderDate.Value)  
@@ -141,7 +141,7 @@ ms.locfileid: "36154825"
     =FORMAT(Fields!SellStartDate.Value, "dd/MM/yyyy")  
     ```  
   
--   La fonction `CDate` convertit la valeur en date. Le `Now` fonction retourne une valeur date contenant la date et heure actuelles en fonction de votre système. `DateDiff` retourne une valeur longue spécifiant le nombre d'intervalles de temps entre deux valeurs de date.  
+-   La fonction `CDate` convertit la valeur en date. Le `Now` fonction retourne une valeur date contenant la date actuelle et l’heure indiquée par votre système. `DateDiff` retourne une valeur longue spécifiant le nombre d'intervalles de temps entre deux valeurs de date.  
   
      L'exemple suivant affiche la date de début de l'année en cours  
   
@@ -161,14 +161,14 @@ ms.locfileid: "36154825"
     =DATEDIFF(“yyyy”, First(Fields!SellStartDate.Value, "DataSet1"), First(Fields!LastReceiptDate.Value, "DataSet2"))  
     ```  
   
--   Le `DatePart` fonction retourne une valeur entière qui contient le composant spécifié d’une valeur de Date donnée. L’expression suivante retourne l’année de la première valeur de SellStartDate dans DataSet1. L'étendue du dataset est spécifiée, car le rapport contient plusieurs datasets.  
+-   Le `DatePart` fonction retourne une valeur entière contenant le composant spécifié d’une valeur de Date donnée. L’expression suivante retourne l’année pour la première valeur de SellStartDate dans DataSet1. L'étendue du dataset est spécifiée, car le rapport contient plusieurs datasets.  
   
     ```  
     =Datepart("yyyy", First(Fields!SellStartDate.Value, "DataSet1"))  
   
     ```  
   
--   Le `DateSerial` fonction retourne une valeur Date représentant une année, mois et jour, avec l’heure définie sur minuit. L'exemple suivant affiche la date de fin du mois précédent en fonction du mois actuel.  
+-   Le `DateSerial` fonction retourne une valeur Date représentant une année spécifiée, le mois et le jour, avec l’heure définie sur minuit. L'exemple suivant affiche la date de fin du mois précédent en fonction du mois actuel.  
   
     ```  
     =DateSerial(Year(Now()), Month(Now()), "1").AddDays(-1)  
@@ -199,7 +199,7 @@ ms.locfileid: "36154825"
     =Format(Parameters!StartDate.Value, "D") & " through " &  Format(Parameters!EndDate.Value, "D")    
     ```  
   
-     Si la zone de texte contient uniquement une date ou un chiffre, vous devez utiliser la propriété Format de la zone de texte pour appliquer la mise en forme à la place de la `Format` la fonction de la zone de texte.  
+     Si la zone de texte contient uniquement une date ou un chiffre, vous devez utiliser la propriété Format de la zone de texte pour appliquer la mise en forme au lieu du `Format` fonction au sein de la zone de texte.  
   
 -   Le `Right`, `Len`, et `InStr` fonctions sont utiles pour renvoyer une sous-chaîne, par exemple, en réduisant *domaine*\\*nom d’utilisateur* pour le nom d’utilisateur. L’expression suivante retourne la partie de la chaîne à droite de la barre oblique inverse (\\) à partir d’un paramètre nommé *User*:  
   
@@ -213,7 +213,7 @@ ms.locfileid: "36154825"
     =Parameters!User.Value.Substring(Parameters!User.Value.IndexOf("\")+1, Parameters!User.Value.Length-Parameters!User.Value.IndexOf("\")-1)  
     ```  
   
--   Vous pouvez afficher les valeurs sélectionnées à partir d'un paramètre à valeurs multiples. L’exemple suivant utilise le `Join` (fonction) pour concaténer les valeurs sélectionnées du paramètre *MySelection* dans une chaîne unique qui peut être définie en tant qu’expression de la valeur d’une zone de texte dans un élément de rapport :  
+-   Vous pouvez afficher les valeurs sélectionnées à partir d'un paramètre à valeurs multiples. L’exemple suivant utilise le `Join` (fonction) pour concaténer les valeurs sélectionnées du paramètre *MySelection* en une chaîne unique qui peut être définie comme une expression de la valeur d’une zone de texte dans un élément de rapport :  
   
     ```  
     = Join(Parameters!MySelection.Value)  
@@ -226,7 +226,7 @@ ms.locfileid: "36154825"
   
     ```  
   
--   Le `Regex` fonctions à partir de la [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] <xref:System.Text.RegularExpressions> sont utiles pour modifier le format de chaînes existantes, par exemple, un numéro de téléphone de la mise en forme. L’expression suivante utilise la `Replace` fonction à modifier le format d’un numéro de téléphone à dix chiffres dans un champ à partir de «*nnn*-*nnn*-*nnnn* » à « (*nnn*) *nnn*-*nnnn*» :  
+-   Le `Regex` fonctions à partir de la [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] <xref:System.Text.RegularExpressions> sont utiles pour la modification du format de chaînes existantes, par exemple, mise en forme d’un numéro de téléphone. L’expression suivante utilise la `Replace` (fonction) pour modifier le format d’un numéro de téléphone à dix chiffres dans un champ à partir de «*nnn*-*nnn*-*nnnn* » à « (*nnn*) *nnn*-*nnnn*» :  
   
     ```  
     =System.Text.RegularExpressions.Regex.Replace(Fields!Phone.Value, "(\d{3})[ -.]*(\d{3})[ -.]*(\d{4})", "($1) $2-$3")  
@@ -245,7 +245,7 @@ ms.locfileid: "36154825"
   
 #### <a name="lookupset"></a>LookupSet  
   
--   En spécifiant un champ clé, vous pouvez utiliser la `LookupSet` fonction pour récupérer un ensemble de valeurs à partir d’un jeu de données d’une relation un-à-plusieurs. Par exemple, une personne peut avoir plusieurs numéros de téléphone. Dans l'exemple suivant, supposons que le dataset PhoneList contient un identificateur de personne et un numéro de téléphone sur chaque ligne. `LookupSet` Retourne un tableau de valeurs. L'expression suivante combine les valeurs de retour dans une chaîne unique et affiche la liste des numéros de téléphone de la personne spécifiée par ContactID :  
+-   En spécifiant un champ clé, vous pouvez utiliser le `LookupSet` fonction pour récupérer un ensemble de valeurs à partir d’un jeu de données pour une relation un-à-plusieurs. Par exemple, une personne peut avoir plusieurs numéros de téléphone. Dans l'exemple suivant, supposons que le dataset PhoneList contient un identificateur de personne et un numéro de téléphone sur chaque ligne. `LookupSet` Retourne un tableau de valeurs. L'expression suivante combine les valeurs de retour dans une chaîne unique et affiche la liste des numéros de téléphone de la personne spécifiée par ContactID :  
   
     ```  
     =Join(LookupSet(Fields!ContactID.Value, Fields!PersonID.Value, Fields!PhoneNumber.Value, "PhoneList"),",")  
@@ -274,7 +274,7 @@ ms.locfileid: "36154825"
     =IIF(Fields!LineTotal.Value > 100, True, False)  
     ```  
   
--   Utilisez plusieurs `IIF` fonctions (également appelé « IIf imbriqués ») pour retourner l’une des trois valeurs suivantes selon la valeur de `PctComplete`. L'expression ci-dessous peut être placée dans la couleur de remplissage d'une zone de texte afin de changer la couleur d'arrière-plan selon la valeur contenue dans la zone de texte.  
+-   Utilisez plusieurs `IIF` fonctions (également appelé « IIFs imbriqués ») pour retourner l’une des trois valeurs suivantes selon la valeur de `PctComplete`. L'expression ci-dessous peut être placée dans la couleur de remplissage d'une zone de texte afin de changer la couleur d'arrière-plan selon la valeur contenue dans la zone de texte.  
   
     ```  
     =IIF(Fields!PctComplete.Value >= 10, "Green", IIF(Fields!PctComplete.Value >= 1, "Blue", "Red"))  
@@ -296,7 +296,7 @@ ms.locfileid: "36154825"
     =IIF(DateDiff("d",Fields!ImportantDate.Value, Now())>7,"Red","Blue")  
     ```  
   
--   Tester la valeur de la `PhoneNumber` champ et retourne « No Value » si elle est `null` (`Nothing` dans [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]) ; sinon, retourne la valeur de numéro de téléphone. Cette expression peut être utilisée pour contrôler la valeur d'une zone de texte dans un élément de rapport.  
+-   Tester la valeur de la `PhoneNumber` champ et retourne « No Value » si elle est `null` (`Nothing` dans [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]) ; sinon retourne la valeur de numéro de téléphone. Cette expression peut être utilisée pour contrôler la valeur d'une zone de texte dans un élément de rapport.  
   
     ```  
     =IIF(Fields!PhoneNumber.Value Is Nothing,"No Value",Fields!PhoneNumber.Value)  
@@ -332,7 +332,7 @@ ms.locfileid: "36154825"
     =Sum(Fields!LineTotal.Value, "Order")  
     ```  
   
--   Vous pouvez également utiliser le `Sum` fonction pour les calculs d’agrégats conditionnels. Par exemple, si un dataset contient un champ nommé State dont les valeurs possibles sont Not Started, Started et Finished, l'expression suivante, lorsqu'elle est placée dans un en-tête de groupe, calcule la somme uniquement pour la valeur Finished :  
+-   Vous pouvez également utiliser le `Sum` (fonction) pour les calculs d’agrégats conditionnels. Par exemple, si un dataset contient un champ nommé State dont les valeurs possibles sont Not Started, Started et Finished, l'expression suivante, lorsqu'elle est placée dans un en-tête de groupe, calcule la somme uniquement pour la valeur Finished :  
   
     ```  
     =Sum(IIF(Fields!State.Value = "Finished", 1, 0))  
@@ -456,7 +456,7 @@ ms.locfileid: "36154825"
     =IIF(CountRows()>12,false,true)  
     ```  
   
--   L’expression suivante, lorsque la valeur le `Hidden` propriété d’une colonne, affiche la colonne uniquement si le champ existe dans le dataset de rapport une fois que les données sont récupérées à partir de la source de données :  
+-   L’expression suivante, lorsque la valeur le `Hidden` propriété d’une colonne, affiche la colonne uniquement si le champ existe dans le dataset du rapport une fois que les données sont récupérées à partir de la source de données :  
   
     ```  
     =IIF(Fields!Column_1.IsMissing, true, false)  
@@ -509,7 +509,7 @@ ms.locfileid: "36154825"
 ### <a name="using-group-variables-for-custom-aggregation"></a>Utilisation de variables de groupe pour une agrégation personnalisée  
  Vous pouvez initialiser la valeur pour une variable de groupe qui est locale à une étendue de groupe particulière, puis inclure une référence à cette variable dans les expressions. L'une des façons d'utiliser une variable de groupe avec du code personnalisé consiste à implémenter un agrégat personnalisé. Pour plus d'informations, consultez [Using Group Variables in Reporting Services 2008 for Custom Aggregation](http://go.microsoft.com/fwlink/?LinkId=128714)(en anglais).  
   
- Pour plus d’informations sur les variables, consultez [rapport et des références à des Collections de Variables groupe &#40;le Générateur de rapports et SSRS&#41;](built-in-collections-report-and-group-variables-references-report-builder.md).  
+ Pour plus d’informations sur les variables, consultez [rapport et des références à des Collections groupe Variables &#40;Générateur de rapports et SSRS&#41;](built-in-collections-report-and-group-variables-references-report-builder.md).  
   
 ## <a name="suppressing-null-or-zero-values-at-run-time"></a>Suppression de valeurs Null ou zéro au moment de l'exécution  
  Certaines valeurs d'une expression peuvent prendre la valeur Null ou une valeur indéfinie au moment du traitement du rapport. Des erreurs d’exécution peuvent alors se produire et provoquer l’affichage de **#Erreur** au lieu de l’expression évaluée dans la zone de texte. La fonction `IIF` est particulièrement sensible à ce comportement, car, contrairement à une instruction If-Then-Else, chaque partie de l'instruction `IIF` est évaluée (y compris les appels de fonction) avant d'être passée à la routine de test `true` ou `false`. L’instruction `=IIF(Fields!Sales.Value is NOTHING, 0, Fields!Sales.Value)` génère **#Erreur** dans le rapport rendu si `Fields!Sales.Value` a la valeur NOTHING.  
@@ -545,10 +545,10 @@ ms.locfileid: "36154825"
      Cela permet d'éviter les exceptions d'exécution. Vous pouvez maintenant utiliser une expression comme `=IIF(Me.Value < 0, "red", "black")` dans la propriété de `Color` de la zone de texte pour afficher de manière conditionnelle un texte selon que les valeurs sont supérieures ou inférieures à 0.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Exemples d’équations de filtre &#40;rapport Générateur et SSRS&#41;](filter-equation-examples-report-builder-and-ssrs.md)   
+ [Exemples d’équations de filtre &#40;Générateur de rapports et SSRS&#41;](filter-equation-examples-report-builder-and-ssrs.md)   
  [Exemples d’expressions de groupe &#40;Générateur de rapports et SSRS&#41;](expression-examples-report-builder-and-ssrs.md)   
- [Expression utilise des rapports de &#40;rapport Générateur et SSRS&#41;](expression-uses-in-reports-report-builder-and-ssrs.md)   
+ [Utilisation d’expressions dans les rapports &#40;Générateur de rapports et SSRS&#41;](expression-uses-in-reports-report-builder-and-ssrs.md)   
  [Expressions &#40;Générateur de rapports et SSRS&#41;](expressions-report-builder-and-ssrs.md)   
- [Généralement utilisé des filtres &#40;rapport Générateur et SSRS&#41;](commonly-used-filters-report-builder-and-ssrs.md)  
+ [Filtres couramment utilisés &#40;Générateur de rapports et SSRS&#41;](commonly-used-filters-report-builder-and-ssrs.md)  
   
   

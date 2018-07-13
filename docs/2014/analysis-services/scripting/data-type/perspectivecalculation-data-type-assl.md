@@ -1,5 +1,5 @@
 ---
-title: Type de données PerspectiveCalculation (ASSL) | Documents Microsoft
+title: Type de données PerspectiveCalculation (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,18 +22,18 @@ helpviewer_keywords:
 - PerspectiveCalculation data type
 ms.assetid: 5a5173d2-c96d-4a55-a35c-0cbfd5b0e599
 caps.latest.revision: 34
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 1214bc349c09f02f522569b26dd48e82d5e42b99
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: bec56d06fe2e2957f9409a43be3502b4e0196427
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36155133"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37185146"
 ---
 # <a name="perspectivecalculation-data-type-assl"></a>Type de données PerspectiveCalculation (ASSL)
-  Définit un type de données primitif qui représente la relation entre un calcul et une [Perspective](../objects/perspective-element-assl.md) élément.  
+  Définit un type de données primitif qui représente la relation entre un calcul et un [Perspective](../objects/perspective-element-assl.md) élément.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -65,6 +65,6 @@ ms.locfileid: "36155133"
  L’élément correspondant dans le modèle d’objet objets AMO (Analysis Management) est <xref:Microsoft.AnalysisServices.PerspectiveCalculation>.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Types de données de script langage XML Analysis Services &#40;ASSL&#41;](analysis-services-scripting-language-xml-data-types-assl.md)  
+ [Types Analysis Services Scripting Language XML données &#40;ASSL&#41;](analysis-services-scripting-language-xml-data-types-assl.md)  
   
   

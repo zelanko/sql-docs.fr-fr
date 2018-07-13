@@ -5,10 +5,9 @@ ms.date: 04/26/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-search
+ms.technology: search
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - performance [SQL Server], full-text search
 - full-text queries [SQL Server], performance
@@ -18,15 +17,15 @@ helpviewer_keywords:
 - batches [SQL Server], full-text search
 ms.assetid: ef39ef1f-f0b7-4582-8e9c-31d4bd0ad35d
 caps.latest.revision: 66
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: fb10d58c2197f422fe59ff2fa9a165bca5f8bf62
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: e1f24b14396b5277192ff0a7f7e814e66e40fdc1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36153019"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37212769"
 ---
 # <a name="improve-the-performance-of-full-text-indexes"></a>Améliorer les performances des index de recherche en texte intégral
   Les performances de l'indexation de texte intégral et des requêtes de texte intégral sont influencées par les ressources matérielles telles que la mémoire, la vitesse du disque et de l'UC ainsi que l'architecture de l'ordinateur.  
@@ -59,7 +58,7 @@ ms.locfileid: "36153019"
   
   
   
-##  <a name="tuning"></a> Paramétrage des performances des index de texte intégral  
+##  <a name="tuning"></a> Réglage des performances des index de recherche en texte intégral  
  Pour optimiser les performances de vos index de recherche en texte intégral, appliquez les bonnes pratiques suivantes :  
   
 -   Pour utiliser tous les processeurs ou cœurs au maximum, définissez [sp_configure](/sql/relational-databases/system-stored-procedures/sp-configure-transact-sql)'`max full-text crawl ranges`' pour le nombre de processeurs sur le système. Pour plus d’informations sur cette option de configuration, consultez [Maximum de la plage de l’analyse de texte intégral (option de configuration de serveur)](../../database-engine/configure-windows/max-full-text-crawl-range-server-configuration-option.md).  
@@ -74,7 +73,7 @@ ms.locfileid: "36153019"
   
   
   
-##  <a name="full"></a> Résolution des problèmes de performances des alimentations complètes  
+##  <a name="full"></a> Les performances des alimentations complètes de résolution des problèmes  
  Pour diagnostiquer les problèmes de performances, consultez les journaux d'analyse de texte intégral. Pour plus d’informations sur les journaux d’analyse, consultez [alimenter des index de recherche en texte intégral](../indexes/indexes.md).  
   
  Il est recommandé de suivre l'ordre de dépannage suivant si les performances des alimentations complètes ne sont pas satisfaisantes.  
@@ -135,7 +134,7 @@ ms.locfileid: "36153019"
 |x86|*F* **=** *Number of crawl ranges* **\*** 50|*M* **= minimum (** *T* **,** 2000 **) –*`F`*–** 500|  
 |x64|*F* **=** *nombre de plages d’analyse* **\*** 10 **\*** 8|*M* **=** *T* **–** *F* **–** 500|  
   
- <sup>1</sup> si plusieurs alimentations complètes sont en cours d’exécution, calculer les besoins en mémoire de chaque fdhost.exe séparément, en tant que *F1*, *F2*, et ainsi de suite. Ensuite, calculez *M* comme *T***–** sigma **(***F*i**)**.  
+ <sup>1</sup> si plusieurs alimentations complètes sont en cours, calculez les besoins en mémoire de chaque fdhost.exe séparément, en tant que *F1*, *F2*, et ainsi de suite. Ensuite, calculez *M* comme *T***–** sigma **(***F*i**)**.  
   
  <sup>2</sup> 500 Mo est une estimation de la mémoire requise par d’autres processus dans le système. Si le système effectue un travail supplémentaire, augmentez cette valeur en conséquence.  
   
@@ -147,13 +146,13 @@ ms.locfileid: "36153019"
   
  `F = 8*10*8=640`  
   
- Le calcul suivant obtient la valeur optimale de `max server memory`:*M*. *L*a mémoire physique totale disponible sur ce système en Mo—*T*—est `8192`.  
+ Le calcul suivant obtient la valeur optimale de `max server memory`—*M*. *L*a mémoire physique totale disponible sur ce système en Mo—*T*—est `8192`.  
   
  `M = 8192-640-500=7052`  
   
  **Exemple : Configuration de mémoire maximum du serveur**  
   
- Cet exemple utilise le [sp_configure](/sql/relational-databases/system-stored-procedures/sp-configure-transact-sql) et [reconfigurer](/sql/t-sql/language-elements/reconfigure-transact-sql) [!INCLUDE[tsql](../../../includes/tsql-md.md)] instructions pour définir `max server memory` à la valeur calculée pour *M* dans l’exemple précédent , `7052`:  
+ Cet exemple utilise le [sp_configure](/sql/relational-databases/system-stored-procedures/sp-configure-transact-sql) et [reconfigurer](/sql/t-sql/language-elements/reconfigure-transact-sql) [!INCLUDE[tsql](../../../includes/tsql-md.md)] instructions pour définir `max server memory` sur la valeur calculée pour *M* dans l’exemple précédent , `7052`:  
   
 ```  
 USE master;  
@@ -164,7 +163,7 @@ RECONFIGURE;
 GO  
 ```  
   
- **Pour définir le max server memory (option) configuration**  
+ **Pour définir des option de configuration mémoire maximum du serveur**  
   
 -   [server memory (options de configuration de serveur)](../../database-engine/configure-windows/server-memory-server-configuration-options.md)  
   
@@ -175,7 +174,7 @@ GO
   
 -   Temps d'attente élevé pour les pages  
   
-     Pour savoir si un délai d’attente de page est élevé, exécutez le code suivant [!INCLUDE[tsql](../../../includes/tsql-md.md)] instruction :  
+     Pour savoir si un délai d’attente de page est élevé, exécutez l’instruction suivante [!INCLUDE[tsql](../../../includes/tsql-md.md)] instruction :  
   
     ```  
     Execute SELECT TOP 10 * FROM sys.dm_os_wait_stats ORDER BY wait_time_ms DESC;  
@@ -207,7 +206,7 @@ GO
   
  Pour des raisons de sécurité, les filtres sont chargés par des processus hôtes de démon de filtre. Une instance de serveur utilise un processus multithread pour tous les filtres multithreads et un processus monothread pour tous les filtres monothreads. Lorsqu'un document qui utilise un filtre multithread contient un document incorporé qui utilise un filtre monothread, le Moteur d'indexation et de recherche en texte intégral lance un processus monothread pour le document incorporé. Par exemple, quand il rencontre un document Word qui contient un document PDF, le Moteur d’indexation et de recherche en texte intégral utilise le processus multithread pour le contenu Word et lance un processus monothread pour le contenu PDF. Toutefois, un filtre monothread peut ne pas fonctionner correctement dans cet environnement et peut déstabiliser le processus de filtrage. Dans certaines circonstances, lorsque ce type d'incorporation est courant, cette déstabilisation peut provoquer des blocages du processus de filtrage. Dans ce cas, le Moteur d'indexation et de recherche en texte intégral réachemine tout document ayant subi un échec (par exemple, un document Word avec du contenu PDF incorporé) vers le processus de filtrage monothread. Si le réacheminement a lieu fréquemment, il en résulte une détérioration des performances du processus d'indexation de texte intégral.  
   
- Pour contourner ce problème, marquez le filtre du document conteneur (Word dans le cas présent) en tant que filtre monothread. Vous pouvez modifier la valeur de Registre concernée pour marquer un filtre donné en tant que filtre monothread. Pour marquer un filtre comme filtre monothread, vous devez définir le **ThreadingModel** valeur de Registre pour le filtre à `Apartment Threaded`. Pour plus d’informations sur les threads uniques cloisonnés (STA), consultez le livre blanc intitulé [Présentation et utilisation des modèles de threads COM](http://go.microsoft.com/fwlink/?LinkId=209159).  
+ Pour contourner ce problème, marquez le filtre du document conteneur (Word dans le cas présent) en tant que filtre monothread. Vous pouvez modifier la valeur de Registre concernée pour marquer un filtre donné en tant que filtre monothread. Pour marquer un filtre en tant qu’un filtre monothread, vous devez définir le **ThreadingModel** valeur de Registre pour le filtre sur `Apartment Threaded`. Pour plus d’informations sur les threads uniques cloisonnés (STA), consultez le livre blanc intitulé [Présentation et utilisation des modèles de threads COM](http://go.microsoft.com/fwlink/?LinkId=209159).  
   
   
   

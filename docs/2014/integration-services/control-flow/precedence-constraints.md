@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - tasks [Integration Services], precedence constraints
 - control flow [Integration Services], precedence constraints
@@ -20,13 +20,13 @@ ms.assetid: c5ce5435-fd89-4156-a11f-68470a69aa9f
 caps.latest.revision: 50
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: cd1a3a39045330283b12aa74acbce64b1420c6ba
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 52729044444db0668870cc9878ee3184f17b49b9
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36154661"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37163040"
 ---
 # <a name="precedence-constraints"></a>Contraintes de précédence
   Les contraintes de précédence lient les exécutables, les conteneurs et les tâches des packages dans un flux de contrôle et spécifient les conditions qui déterminent si les exécutables s'exécutent. Un exécutable peut être une boucle For, une boucle Foreach, un conteneur de séquence, une tâche ou un gestionnaire d'événement. Les gestionnaires d'événements utilisent également les contraintes de précédence pour lier leurs exécutables dans un flux de contrôle.  
@@ -64,7 +64,7 @@ ms.locfileid: "36154661"
   
 -   Une expression ou une contrainte qui utilisent les résultats d'exécution de l'exécutable de précédence ou les résultats de retour de l'évaluation de l'expression.  
   
- [!INCLUDE[ssIS](../../../includes/ssis-md.md)] Le concepteur utilise la couleur pour identifier le type de contrainte de précédence. La contrainte Success (réussite) est verte, la contrainte Failure (échec) est rouge et la contrainte Completion (fin) est bleue. Pour afficher les étiquettes de texte indiquant le type de contrainte dans le concepteur [!INCLUDE[ssIS](../../../includes/ssis-md.md)], vous devez configurer les fonctionnalités d’accessibilité du Concepteur [!INCLUDE[ssIS](../../../includes/ssis-md.md)].  
+ [!INCLUDE[ssIS](../../../includes/ssis-md.md)] Concepteur utilise une couleur pour identifier le type de contrainte de précédence. La contrainte Success (réussite) est verte, la contrainte Failure (échec) est rouge et la contrainte Completion (fin) est bleue. Pour afficher les étiquettes de texte indiquant le type de contrainte dans le concepteur [!INCLUDE[ssIS](../../../includes/ssis-md.md)], vous devez configurer les fonctionnalités d’accessibilité du Concepteur [!INCLUDE[ssIS](../../../includes/ssis-md.md)].  
   
  L’expression doit être une expression [!INCLUDE[ssIS](../../../includes/ssis-md.md)] valide et elle peut inclure des fonctions, des opérateurs, et des variables système et personnalisées. Pour plus d’informations, consultez [Expressions Integration Services &#40;SSIS&#41; ](../expressions/integration-services-ssis-expressions.md) et [Variables Integration Services &#40;SSIS&#41;](../integration-services-ssis-variables.md).  
   
@@ -78,7 +78,7 @@ ms.locfileid: "36154661"
 -   L'échec requiert que l'exécutable de précédence échoue pour que l'exécutable contraint s'exécute.  
   
 > [!NOTE]  
->  Seules les contraintes de priorité sont membres du même `Precedence Constraint` collection peut être regroupée dans une condition AND logique. Par exemple, vous ne pouvez pas combiner des contraintes de précédence à partir de deux conteneurs de boucles Foreach.  
+>  Seules les contraintes de précédence qui sont membres du même `Precedence Constraint` collection peut être regroupée dans une condition AND logique. Par exemple, vous ne pouvez pas combiner des contraintes de précédence à partir de deux conteneurs de boucles Foreach.  
   
 ## <a name="configuration-of-the-precedence-constraint"></a>Configuration de la contrainte de précédence  
  Vous pouvez définir les propriétés par le biais du concepteur [!INCLUDE[ssIS](../../../includes/ssis-md.md)] ou par programmation.  
@@ -92,7 +92,7 @@ ms.locfileid: "36154661"
   
 -   [Définir les propriétés d’une contrainte de précédence](../set-the-properties-of-a-precedence-constraint.md)  
   
--   [Définir la valeur d’une contrainte de précédence en utilisant le Menu contextuel](../set-the-value-of-a-precedence-constraint-by-using-the-shortcut-menu.md)  
+-   [Définir la valeur d’une contrainte de précédence à l’aide du menu contextuel](../set-the-value-of-a-precedence-constraint-by-using-the-shortcut-menu.md)  
   
 -   [Connecter des tâches et des conteneurs à l’aide d’une contrainte de précédence par défaut](../connect-tasks-and-containers-by-using-a-default-precedence-constraint.md)  
   
@@ -103,6 +103,6 @@ ms.locfileid: "36154661"
   
 ## <a name="see-also"></a>Voir aussi  
  [Ajouter des Expressions aux contraintes de précédence](../add-expressions-to-precedence-constraints.md)   
- [Plusieurs contraintes de précédence](../multiple-precedence-constraints.md)  
+ [Contraintes de précédence multiples](../multiple-precedence-constraints.md)  
   
   

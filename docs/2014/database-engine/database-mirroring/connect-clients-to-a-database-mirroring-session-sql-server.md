@@ -5,10 +5,9 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - partners [SQL Server], connecting clients to
 - database mirroring [SQL Server], connecting clients to
@@ -16,15 +15,15 @@ helpviewer_keywords:
 - connections [SQL Server], database mirroring
 ms.assetid: 0d5d2742-2614-43de-9ab9-864addb6299b
 caps.latest.revision: 92
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 2af439599d16904cf7b66fa78882692ab87c05f7
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 482b72fac9416918bdee38b74fbc483027b4b345
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36152879"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37204042"
 ---
 # <a name="connect-clients-to-a-database-mirroring-session-sql-server"></a>Connecter des clients à une session de mise en miroir de bases de données (SQL Server)
   Pour établir une connexion avec une session de mise en miroir de bases de données, un client peut soit utiliser [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client, soit le fournisseur de données .NET Framework pour [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. S'ils sont configurés pour une base de données [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] , ces deux fournisseurs d'accès aux données prennent pleinement en charge la mise en miroir de bases de données. Pour plus d'informations sur les éléments de programmation à prendre en compte pour l'utilisation d'une base de données mise en miroir, consultez [Using Database Mirroring](../../relational-databases/native-client/features/using-database-mirroring.md). Qui plus est, l'instance de serveur principal actuelle doit être disponible et la connexion du client doit avoir été créée dans l'instance de serveur. Pour plus d’informations, consultez [Dépanner des utilisateurs orphelins &#40;SQL Server&#41;](../../sql-server/failover-clusters/troubleshoot-orphaned-users-sql-server.md). Les connexions clientes à une session de mise en miroir de base de données n'exigent pas l'intervention de l'instance de serveur témoin (le cas échéant).  
@@ -87,7 +86,7 @@ Network=dbnmpntw;
 >  Étant donné que le protocole des canaux nommés n'utilise pas l'algorithme de tentative de connexion TCP/IP, une tentative de connexion utilisant des canaux nommés risque, dans de nombreux cas, d'expirer avant de se connecter à une base de données mise en miroir.  
   
 #### <a name="server-attribute"></a>Attribut Server  
- La chaîne de connexion doit contenir un `Server` attribut qui fournit le nom du serveur partenaire initial, lequel doit identifier l’instance de serveur principal actuel.  
+ La chaîne de connexion doit contenir un `Server` attribut qui fournit le nom de serveur partenaire initial, lequel doit identifier l’instance de serveur principal actuel.  
   
  La façon la plus simple d’identifier l’instance de serveur est de spécifier son nom : *<nom_serveur>*[**\\***<nom_instance_SQL_Server>*]. Exemple :  
   
@@ -122,7 +121,7 @@ Server=123.34.45.56,4724;
 >  Cette chaîne omet les informations d'authentification.  
   
 > [!IMPORTANT]  
->  Intégration du préfixe de protocole avec le `Server` attribut (`Server=tcp:`*\<nom_serveur >*) n’est pas compatible avec le **réseau** d’attribut et en spécifiant le protocole dans les deux emplacements allez probablement obtenir une erreur. Par conséquent, nous recommandons qu’une chaîne de connexion spécifie le protocole à l’aide de la **réseau** d’attribut et spécifiez uniquement le nom du serveur dans le `Server` attribut (`"Network=dbmssocn; Server=`*\<servername >*`"`).  
+>  Intégration du préfixe de protocole avec le `Server` attribut (`Server=tcp:`*\<nom_serveur >*) n’est pas compatible avec le **réseau** attribut et en spécifiant le protocole dans aux deux endroits obtiendrez probablement une erreur. Par conséquent, nous recommandons qu’une chaîne de connexion spécifie le protocole à l’aide de la **réseau** d’attribut et spécifiez uniquement le nom du serveur dans le `Server` attribut (`"Network=dbmssocn; Server=`*\<nom_serveur >*`"`).  
   
 #### <a name="failover-partner-attribute"></a>Attribut partenaire de basculement  
  Outre le nom du serveur partenaire initial, le client peut aussi spécifier le nom du partenaire de basculement, lequel doit identifier l'instance du serveur miroir actuel. Le partenaire de basculement est spécifié par l'un des mots clés pour l'attribut de partenaire de basculement. Le mot clé de cet attribut dépend de l'API que vous utilisez. La table suivante répertorie ces mots clés :  

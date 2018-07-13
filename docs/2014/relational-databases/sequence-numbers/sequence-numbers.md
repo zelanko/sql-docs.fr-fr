@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - sequence number object, overview
 - sequence [Database Engine]
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - sequence number object
 ms.assetid: c900e30d-2fd3-4d5f-98ee-7832f37e79d1
 caps.latest.revision: 31
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: e3576cf9ce9df0d5d75f9657f4e0f70378b29fc2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 92a8365fe780da67a408ae1aa776ae97d0b4fa2e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36144231"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37162310"
 ---
 # <a name="sequence-numbers"></a>Numéros séquentiels
   Une séquence est un objet lié par schéma défini par l'utilisateur qui génère une séquence de valeurs numériques d'après la spécification avec laquelle la séquence a été créée. La séquence de valeurs numériques est générée dans un ordre croissant ou décroissant à un intervalle défini et peut effectuer un cycle (répétition) selon la demande. Les séquences, contrairement aux colonnes d'identité, ne sont pas associées à des tables. Une application fait référence à un objet séquence pour recevoir sa valeur suivante. La relation entre les séquences et les tables est contrôlée par l'application. Les applications utilisateur peuvent référencer un objet séquence et coordonner les clés des valeurs entre plusieurs lignes et tables.  
@@ -34,7 +34,7 @@ ms.locfileid: "36144231"
   
  Au lieu d’utiliser des valeurs de colonne d'identité, qui sont générées lors de l’insertion de lignes, une application peut obtenir le numéro séquentiel suivant avant d’insérer une ligne en appelant la fonction [NEXT VALUE FOR](/sql/t-sql/functions/next-value-for-transact-sql) . Le numéro séquentiel est alloué lors de l'appel de NEXT VALUE FOR, même si ce nombre n'est jamais inséré dans une table. La fonction NEXT VALUE FOR peut être utilisée comme valeur par défaut pour une colonne dans une définition de table. Utilisez [sp_sequence_get_range](/sql/relational-databases/system-stored-procedures/sp-sequence-get-range-transact-sql) pour obtenir une plage de plusieurs numéros séquentiels à la fois.  
   
- Une séquence peut être définie comme n'importe quel type de données integer. Si le type de données n’est pas spécifié, une séquence de valeur par défaut est `bigint`.  
+ Une séquence peut être définie comme n'importe quel type de données integer. Si le type de données n’est pas spécifié, une séquence par défaut est `bigint`.  
   
 ## <a name="using-sequences"></a>Utilisation de séquences  
  Utilisez les séquences à la place des colonnes d'identité dans les scénarios suivants :  

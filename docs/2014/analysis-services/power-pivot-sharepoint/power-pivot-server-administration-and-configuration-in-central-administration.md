@@ -1,5 +1,5 @@
 ---
-title: Administration de serveur PowerPivot et de Configuration dans l’Administration centrale | Documents Microsoft
+title: Administration de serveur PowerPivot et de Configuration dans l’Administration centrale | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 2cdbfdc5-45a9-4000-a03d-318cc7ac8fe9
 caps.latest.revision: 24
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 62232430002833de70ecbf1cf76a401324b12174
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 17a0dd962b2cd3bf3515df6151e1ce5d2ed9699b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36153590"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37200289"
 ---
 # <a name="powerpivot-server-administration-and-configuration-in-central-administration"></a>Administration et configuration d'un serveur PowerPivot dans l'Administration centrale
   L'administration et la configuration du serveur PowerPivot sont gérées par les administrateurs d'application de service SharePoint à l'aide de l'Administration centrale SharePoint.  
@@ -47,7 +47,7 @@ ms.locfileid: "36153590"
 ## <a name="related-content"></a>Contenu associé  
  [Configuration de PowerPivot à l’aide de Windows PowerShell](power-pivot-configuration-using-windows-powershell.md)  
   
- [Outils de Configuration PowerPivot](power-pivot-configuration-tools.md)  
+ [Outils de configuration de PowerPivot](power-pivot-configuration-tools.md)  
   
 ## <a name="related-tasks"></a>Related Tasks  
   
@@ -61,12 +61,12 @@ ms.locfileid: "36153590"
 |[Configurer PowerPivot compte d’actualisation des données sans assistance &#40;PowerPivot pour SharePoint&#41;](../configure-unattended-data-refresh-account-powerpivot-sharepoint.md)|Recommandation|Cette étape configure un compte spécial qui peut être utilisé pour exécuter des travaux d'actualisation des données sur le serveur.|  
 |[Configurer la collecte de données d’utilisation pour &#40;PowerPivot pour SharePoint](configure-usage-data-collection-for-power-pivot-for-sharepoint.md)|Ce paramètre est facultatif|La collecte des données d'utilisation est configurée par défaut. Vous pouvez utiliser ces étapes pour modifier les paramètres par défaut.|  
 |[Configurer l’actualisation des données uniquement ou le traitement des requêtes uniquement &#40;PowerPivot pour SharePoint&#41;](../configure-dedicated-data-refresh-query-only-processing-powerpivot-sharepoint.md)|Ce paramètre est facultatif|Une instance PowerPivot peut être consacrée uniquement aux travaux ou requêtes d'actualisation des données. En outre, vous pouvez modifier les paramètres par défaut pour les travaux parallèles d'actualisation des données.|  
-|[Configurer les comptes de Service PowerPivot](configure-power-pivot-service-accounts.md)|Ce paramètre est facultatif|Explique comment mettre à jour les mots de passe ou modifier les comptes de service.|  
+|[Configurer des comptes de service PowerPivot](configure-power-pivot-service-accounts.md)|Ce paramètre est facultatif|Explique comment mettre à jour les mots de passe ou modifier les comptes de service.|  
 |[Connecter une Application de Service PowerPivot à une Application Web SharePoint dans l’Administration centrale](connect-power-pivot-service-app-to-sharepoint-web-app-in-ca.md)|Ce paramètre est facultatif|Explique comment modifier les associations de service.|  
 |[Créer un emplacement approuvé pour les sites PowerPivot dans l’Administration centrale](create-a-trusted-location-for-power-pivot-sites-in-central-administration.md)|Ce paramètre est facultatif|Explique comment ajouter la galerie PowerPivot en tant qu'emplacement approuvé.|  
 |[Configurer et afficher les fichiers journaux SharePoint et la journalisation des diagnostics &#40;PowerPivot pour SharePoint&#41;](configure-and-view-sharepoint-and-diagnostic-logging.md)|Ce paramètre est facultatif|La journalisation des événements est configurée par défaut. Vous pouvez utiliser ces étapes pour modifier les paramètres par défaut.|  
-|[Règles de contrôle d’intégrité PowerPivot - configurer](configure-power-pivot-health-rules.md)|Ce paramètre est facultatif|Les règles d'intégrité du serveur sont configurées par défaut. Vous pouvez utiliser ces étapes pour modifier certains paramètres par défaut.|  
-|[Créer et personnaliser une galerie PowerPivot](create-and-customize-power-pivot-gallery.md)|Ce paramètre est facultatif|Pour les installations que vous configurez manuellement, cette procédure explique comment créer une bibliothèque Galerie PowerPivot qui affiche des images miniatures des classeurs PowerPivot qu'elle contient.|  
+|[Règles d’intégrité PowerPivot - configurer](configure-power-pivot-health-rules.md)|Ce paramètre est facultatif|Les règles d'intégrité du serveur sont configurées par défaut. Vous pouvez utiliser ces étapes pour modifier certains paramètres par défaut.|  
+|[Créer et personnaliser une Galerie PowerPivot](create-and-customize-power-pivot-gallery.md)|Ce paramètre est facultatif|Pour les installations que vous configurez manuellement, cette procédure explique comment créer une bibliothèque Galerie PowerPivot qui affiche des images miniatures des classeurs PowerPivot qu'elle contient.|  
 |[Ajouter un Type de contenu connexion de modèle sémantique BI à une bibliothèque &#40;PowerPivot pour SharePoint&#41;](add-bi-semantic-model-connection-content-type-to-library.md)|Ce paramètre est facultatif|Explique comment étendre une bibliothèque de documents pour prendre en charge la création de fichiers de connexion de modèles sémantiques BI.|  
   
 ## <a name="see-also"></a>Voir aussi  

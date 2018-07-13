@@ -1,5 +1,5 @@
 ---
-title: Fournisseurs de données utilisés pour les connexions Analysis Services | Documents Microsoft
+title: Fournisseurs de données utilisés pour les connexions Analysis Services | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 128f6dde-409d-4c12-9820-3305bab57b75
 caps.latest.revision: 12
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 7eb84d1a796268414c7f28e3c46e8a3de6cd295e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 357849f815fcdd8310d7056caa2f199d70675e64
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36155146"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37157200"
 ---
 # <a name="data-providers-used-for-analysis-services-connections"></a>Fournisseurs de données utilisés pour les connexions Analysis Services
   Analysis Services fournit trois fournisseurs de données pour l'accès au serveur et aux données. Toutes les applications qui se connectent à Analysis Services le font à l'aide de l'un de ces fournisseurs. Deux des fournisseurs ADOMD.NET et Analysis Services Management Objects (AMO) sont des fournisseurs de données managés. Le fournisseur OLE DB Analysis Services (DLL MSOLAP) est un fournisseur de données natif.  
@@ -43,9 +43,9 @@ ms.locfileid: "36155146"
 ##  <a name="bkmk_ServVers"></a> Procédure pour déterminer la version du serveur  
  Connaître la version de l'instance d'Analysis Services vous aidera à déterminer si vous devez installer les versions les plus récentes des fournisseurs de données sur les stations de travail de votre organisation.  
   
--   Dans SQL Server Management Studio, connectez-vous à l'instance d'Analysis Services. Cliquez sur l’instance que vous souhaitez vérifier, pointez vers **rapports**, puis cliquez sur **général**. Les informations de version et d'édition s'affichent dans le rapport.  
+-   Dans SQL Server Management Studio, connectez-vous à l'instance d'Analysis Services. Avec le bouton droit de l’instance que vous souhaitez vérifier, pointez sur **rapports**, puis cliquez sur **général**. Les informations de version et d'édition s'affichent dans le rapport.  
   
- Principales numéro de build de la version initiale de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] est 12.0.2000.9.  
+ Major numéro de build de la version initiale de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] est 12.0.2000.9.  
   
  Pour plus d’informations sur l’obtention des informations de version et de build, consultez [comment déterminer la version et l’édition de SQL Server et ses composants](http://support.microsoft.com/kb/321185).  
   
@@ -58,7 +58,7 @@ ms.locfileid: "36155146"
   
 1.  Accédez au dossier \Program Files\Microsoft Analysis Services\AS OLEDB\120.  
   
-2.  Cliquez sur msolap120.dll, puis cliquez sur **propriétés**.  
+2.  Cliquez sur msolap120.dll et sur **propriétés**.  
   
  Si vous ne parvenez pas à trouver le fichier à cet emplacement, ou si le chemin d'accès au dossier inclut AS OLEDB\110 ou AS OLEDB\90, c'est que vous utilisez une bibliothèque plus ancienne et que vous devez maintenant installer une version plus récente (AS OLEDB\11) pour vous connecter à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
@@ -70,7 +70,7 @@ ms.locfileid: "36155146"
   
      Pour AMO, cliquez avec le bouton droit sur Microsoft.AnalysisServices.  
   
- Pour plus d’informations sur les numéros de build et de version par version, consultez [SQL Server Builds sur Blogspot](http://sqlserverbuilds.blogspot.com).  
+ Pour plus d’informations sur les numéros de version et de build par version, consultez [SQL Server Builds sur Blogspot](http://sqlserverbuilds.blogspot.com).  
   
 ##  <a name="bkmk_downloadsite"></a> Où obtenir une version plus récente des fournisseurs de données  
  La version installée sur l'ordinateur client doit correspondre à la version principale du serveur qui fournit les données. Si l'installation du serveur est plus récente que les fournisseurs de données installés sur les stations de travail de votre réseau, vous devrez peut-être installer les dernières bibliothèques disponibles.  
@@ -110,7 +110,7 @@ ms.locfileid: "36155146"
   
  AMO est installé par le programme d'installation de SQL Server et est utilisé par les applications clientes SQL Server pour la connexion à Analysis Services. Vous pouvez également le télécharger et l’installer manuellement quand vous utilisez AMO dans du code personnalisé (consultez [Procédure : déterminer la version des fournisseurs de données Analysis Services](#bkmk_LibUpdate) , dans cette rubrique). AMO est disponible dans le Global Assembly Cache (GAC) en tant que `Microsoft.AnalysisServices`.  
   
- Une connexion à l’aide d’AMO est généralement minimaliste, consistant en « source de données =\<nom_serveur > ». Une fois la connexion établie, utilisez l'API pour travailler avec des collections et les objets principaux de base de données. SSDT et SSMS emploient AMO pour se connecter à une instance d'Analysis Services.  
+ Une connexion à l’aide d’AMO est généralement minimaliste indique uniquement « source de données =\<nom_serveur > ». Une fois la connexion établie, utilisez l'API pour travailler avec des collections et les objets principaux de base de données. SSDT et SSMS emploient AMO pour se connecter à une instance d'Analysis Services.  
   
  Pour plus d’informations sur la connexion par programmation, consultez [Programmation d’objets fondamentaux AMO](../multidimensional-models/analysis-management-objects/programming-amo-fundamental-objects.md).  
   

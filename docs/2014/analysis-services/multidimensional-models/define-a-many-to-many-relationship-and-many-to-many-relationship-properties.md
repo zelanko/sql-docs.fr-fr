@@ -1,5 +1,5 @@
 ---
-title: Définir une relation plusieurs-à-plusieurs et les propriétés de relation plusieurs-à-plusieurs | Documents Microsoft
+title: Définir une relation plusieurs-à-plusieurs et les propriétés de relation plusieurs-à-plusieurs | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - many-to-many relationships [Analysis Services]
 ms.assetid: edb5f61a-a581-467a-a367-134b7f9b849f
 caps.latest.revision: 11
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: db0d630f6efa2ed3499d6e42d7ebe8be5945700e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: b5a9e14fc0da918438c6284870d0612185231c22
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36152921"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37173572"
 ---
 # <a name="define-a-many-to-many-relationship-and-many-to-many-relationship-properties"></a>Définir une relation plusieurs à plusieurs et les propriétés d’une relation plusieurs à plusieurs
   Cette rubrique explique les dimensions plusieurs-à-plusieurs dans Analysis Services, à quel moment les utiliser, et comment les créer.  
@@ -51,7 +51,7 @@ ms.locfileid: "36152921"
   
  Cliquez sur le bouton pour ouvrir la boîte de dialogue Définir une relation, vérifier si le type de la relation est plusieurs-à-plusieurs, et pour voir quel groupe de mesures intermédiaire est utilisé dans la relation.  
   
- ![Bouton de relation définir dans l’utilisation de la dimension](../media/ssas-m2m-btndimusage.png "bouton Définir une relation dans l’utilisation de la dimension")  
+ ![Bouton de relation de définir dans l’utilisation de la dimension](../media/ssas-m2m-btndimusage.png "bouton Définir une relation dans l’utilisation de la dimension")  
   
  Dans les sections suivantes, vous découvrirez comment configurer une dimension plusieurs-à-plusieurs et tester les comportements du modèle. Si vous souhaitez obtenir davantage d'informations, ou commencer par un didacticiel, reportez-vous à la section **En savoir plus** à la fin de cet article.  
   
@@ -83,7 +83,7 @@ ms.locfileid: "36152921"
   
      L'exemple suivant confirme que les tables utilisées dans cette procédure sont liées à l'aide de clés primaires.  
   
-     ![Vue de gestion dynamique affichant les tables associées](../media/ssas-m2m-dsvpkeys.PNG "DSV affichant les tables associées")  
+     ![Vue DSV affichant les tables associées](../media/ssas-m2m-dsvpkeys.PNG "DSV affichant les tables associées")  
   
 #### <a name="step-2-create-dimensions-and-measure-groups"></a>Étape 2 - Créer des dimensions et des groupes de mesures  
   
@@ -135,7 +135,7 @@ ms.locfileid: "36152921"
   
      Notez que cette boîte de dialogue est utilisée pour spécifier une relation plusieurs-à-plusieurs. Si vous deviez ajouter des dimensions avec une relation normale, vous utiliseriez cette boîte de dialogue pour la modifier en relation plusieurs-à-plusieurs.  
   
-     ![Bouton de relation définir dans l’utilisation de la dimension](../media/ssas-m2m-btndimusage.png "bouton Définir une relation dans l’utilisation de la dimension")  
+     ![Bouton de relation de définir dans l’utilisation de la dimension](../media/ssas-m2m-btndimusage.png "bouton Définir une relation dans l’utilisation de la dimension")  
   
 3.  Déployez le projet dans une instance multidimensionnelle d'Analysis Services. Au cours de la prochaine étape, vous allez explorer le cube dans Excel pour vérifier ses comportements.  
   
@@ -183,7 +183,7 @@ ms.locfileid: "36152921"
 ##  <a name="bkmk_Learn"></a> Learn more  
  Consultez les liens suivants pour obtenir davantage d'informations sur ces concepts.  
   
- [Comment pour définir une dimension plusieurs-à-plusieurs dans Analysis Services](http://go.microsoft.com/fwlink/?LinkId=324759)  
+ [Comment définir une dimension plusieurs-à-plusieurs dans Analysis Services](http://go.microsoft.com/fwlink/?LinkId=324759)  
   
  [La révolution 2.0 des relations plusieurs-à-plusieurs](http://go.microsoft.com/fwlink/?LinkId=324760)  
   
@@ -191,7 +191,7 @@ ms.locfileid: "36152921"
   
 ## <a name="see-also"></a>Voir aussi  
  [Relations de dimension](../multidimensional-models-olap-logical-cube-objects/dimension-relationships.md)   
- [Installer les exemples de données et des projets pour les didacticiel de modélisation multidimensionnelle Analysis Services](../install-sample-data-and-projects.md)   
+ [Installer des exemples de données et les projets pour les didacticiel sur la modélisation multidimensionnelle Analysis Services](../install-sample-data-and-projects.md)   
  [Déployer des projets Analysis Services &#40;SSDT&#41;](deploy-analysis-services-projects-ssdt.md)   
  [Perspectives dans les modèles multidimensionnels](perspectives-in-multidimensional-models.md)  
   

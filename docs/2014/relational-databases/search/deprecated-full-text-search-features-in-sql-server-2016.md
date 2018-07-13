@@ -1,29 +1,28 @@
 ---
-title: Recherche en texte intégral déconseillées dans SQL Server 2014 | Documents Microsoft
+title: Fonctionnalités de recherche en texte intégral dans SQL Server 2014 dépréciées | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-search
+ms.technology: search
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - deprecated features [full-text search]
 - full-text search [SQL Server], deprecated features
 - full-text queries [SQL Server], proximity
 ms.assetid: ab0d799c-ba79-4459-837b-c4862730dafd
 caps.latest.revision: 31
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 7f6820edd97ae68872c56bd086e8e981c88f7399
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 140e7262d3cfc66e956ee0fc53ea1009d7afda0b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36153684"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37179686"
 ---
 # <a name="deprecated-full-text-search-features-in-sql-server-2014"></a>Fonctionnalités de la recherche en texte intégral déconseillées dans SQL Server 2014
   Cette rubrique décrit les fonctionnalités de la recherche en texte intégral déconseillées qui sont toujours disponibles dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Il est prévu que ces fonctionnalités soient supprimées dans une prochaine version de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Les fonctions déconseillées ne doivent pas être utilisées dans de nouvelles applications.  
@@ -52,7 +51,7 @@ ms.locfileid: "36153684"
   
 |Fonctionnalité déconseillée|Remplacement|Nom de la fonctionnalité|ID de la fonctionnalité|  
 |------------------------|-----------------|------------------|----------------|  
-|Opérateur NEAR générique CONTAINS et CONTAINSTABLE :<br /><br /> {<terme_simple> &#124; <terme_préfixe>}<br /><br /> {<br /><br /> { { NEAR &#124; ~ }    {<terme_simple> &#124; <terme_préfixe>} } [...*n*]<br /><br /> }|Opérateur NEAR personnalisé :<br /><br /> NEAR(<br /><br /> {   {<terme_simple> &#124; <terme_préfixe>} [ ,…*n* ]<br /><br /> &#124; ( {<terme_simple> &#124; <terme_préfixe>} [,…*n*] )<br /><br /> [,\<distance > [,\<commande >]]<br /><br /> }<br /><br /> )<br /><br /> \<distance > :: = {*entier* &#124; **MAX**}<br /><br /> \<commande > :: = {TRUE &#124; **FALSE**}|FULLTEXT_OLD_NEAR_SYNTAX|247|  
+|Opérateur NEAR générique CONTAINS et CONTAINSTABLE :<br /><br /> {<terme_simple> &#124; <terme_préfixe>}<br /><br /> {<br /><br /> { { NEAR &#124; ~ }    {<terme_simple> &#124; <terme_préfixe>} } [...*n*]<br /><br /> }|Opérateur NEAR personnalisé :<br /><br /> NEAR(<br /><br /> {   {<terme_simple> &#124; <terme_préfixe>} [ ,…*n* ]<br /><br /> &#124; ( {<terme_simple> &#124; <terme_préfixe>} [,…*n*] )<br /><br /> [,\<distance > [,\<ordre >]]<br /><br /> }<br /><br /> )<br /><br /> \<distance > :: = {*entier* &#124; **MAX**}<br /><br /> \<commande > :: = {TRUE &#124; **FALSE**}|FULLTEXT_OLD_NEAR_SYNTAX|247|  
 |Option CREATE FULLTEXT CATALOG :<br /><br /> IN PATH '*chemin_racine*'<br /><br /> ON FILEGROUP *filegroup*|Aucun.|CREATE FULLTEXT CATLOG IN PATH<br /><br /> Aucun.*|237<br /><br /> Aucun.<sup>*</sup>|  
 |Propriété DATABASEPROPERTYEX : IsFullTextEnabled|Aucun.|DATABASEPROPERTYEX **('IsFullTextEnabled')**|202|  
 |Option sp_detach_db :<br /><br /> [ @keepfulltextindexfile = ] '*conserver_fichier_index_recherche_en_texte-intégral*'|Aucun.|sp_detach_db @keepfulltextindexfile|226|  
@@ -61,8 +60,8 @@ ms.locfileid: "36153684"
  \** L’objet **SQL Server : fonctionnalités déconseillées** ne surveille pas les occurrences de CREATE FULLTEXT CATLOG ON FILEGROUP *groupe de fichiers*.  
   
 ## <a name="see-also"></a>Voir aussi  
- [SQL Server, objet fonctionnalités déconseillées](../performance-monitor/sql-server-deprecated-features-object.md)   
- [Modifications importantes apportées à la recherche en texte intégral](../../database-engine/breaking-changes-to-full-text-search.md)   
- [Fonctionnalités du moteur de base de données déconseillées dans SQL Server 2014](../../database-engine/deprecated-database-engine-features-in-sql-server-2016.md)  
+ [SQL Server, objet Deprecated Features](../performance-monitor/sql-server-deprecated-features-object.md)   
+ [Modifications avec rupture pour la recherche en texte intégral](../../database-engine/breaking-changes-to-full-text-search.md)   
+ [Fonctionnalités dépréciées du moteur de base de données dans SQL Server 2014](../../database-engine/deprecated-database-engine-features-in-sql-server-2016.md)  
   
   

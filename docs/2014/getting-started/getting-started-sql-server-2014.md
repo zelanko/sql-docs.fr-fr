@@ -1,5 +1,5 @@
 ---
-title: Mise en route (SQL Server 2014) | Documents Microsoft
+title: Mise en route (SQL Server 2014) | Microsoft Docs
 ms.custom: ''
 ms.date: 05/25/2017
 ms.prod: sql-server-2014
@@ -15,18 +15,18 @@ ms.technology:
 - reporting-services-native
 - reporting-services-sharepoint
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 5148c993-6cd4-42f0-9109-1ec08d8e798c
 caps.latest.revision: 8
 author: craigg-msft
 ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 6fdc2a443c0318fc7a40a21034171c5a043fd43d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: c5dc6314da166a0503f31326dfd562fc42a635f9
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36143088"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37205869"
 ---
 # <a name="getting-started-sql-server-2014"></a>Mise en route (SQL Server 2014)
   Recherchez des sources pour les informations, la configuration requise, les instructions d'installation relatives à [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)], entre autres.  
@@ -35,17 +35,17 @@ ms.locfileid: "36143088"
   
  [Nouveautés de SQL Server 2014](../sql-server/what-s-new-in-sql-server-2016.md)  
   
- [Introduction au Cloud hybride SQL Server 2014](introduction-to-sql-server-2014-hybrid-cloud.md)  
+ [Introduction au cloud hybride SQL Server 2014](introduction-to-sql-server-2014-hybrid-cloud.md)  
   
- [Installation de SQL Server 2014 de démarrage rapide](quick-start-installation-of-sql-server-2014.md)  
+ [Installation de démarrage rapide de SQL Server 2014](quick-start-installation-of-sql-server-2014.md)  
   
- [Prise en main Documentation produit de SQL Server](../2014-toc/books-online-for-sql-server-2014.md)  
+ [Bien démarrer avec la Documentation du produit pour SQL Server](../2014-toc/books-online-for-sql-server-2014.md)  
   
  [Obtention d’aide &#40;SQL Server 2014&#41;](getting-assistance-sql-server-2014.md)  
   
  [Compatibilité descendante](backward-compatibility.md)  
   
- [Sur le contrat de licence SQL Server](about-the-sql-server-license-terms.md)  
+ [À propos des termes du contrat de licence SQL Server](about-the-sql-server-license-terms.md)  
   
  [Déclaration de confidentialité de Microsoft SQL Server](microsoft-sql-server-privacy-statement.md)  
   
