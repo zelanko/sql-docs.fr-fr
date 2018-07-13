@@ -1,5 +1,5 @@
 ---
-title: Plan de conception de rapports et le déploiement de rapports (Reporting Services 2014) | Documents Microsoft
+title: Plan de conception de rapports et le déploiement de rapports (Reporting Services 2014) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 1c1e265e-52a2-4de3-96fd-ca4abae01c02
 caps.latest.revision: 17
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 42d95afee84fa57c6ad4cb9562be44820b228814
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 5bd53bceaae8b1a898aecf94cc05818653498904
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36143852"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37194849"
 ---
 # <a name="plan-for-report-design-and-report-deployment-reporting-services-2014"></a>Planifier la conception de rapports et le déploiement de rapports (Reporting Services 2014)
-  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] offre plusieurs approches pour la création et déploiement de rapports. Utilisez cette rubrique pour planifier un environnement de création de rapports et un serveur de rapports fonctionnant ensemble. Cette rubrique offre une vue d'ensemble de la prise en charge de la définition de rapport par les composants [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] . Une définition de rapport est un fichier XML écrit dans le langage RDL (Report Definition Language) ou RDLC (Report Definition Language for Clients). Chaque définition de rapport est conforme à une version de schéma spécifique qui est indiquée au début du fichier.  
+  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] offre plusieurs approches pour créer et déployer des rapports. Utilisez cette rubrique pour planifier un environnement de création de rapports et un serveur de rapports fonctionnant ensemble. Cette rubrique offre une vue d'ensemble de la prise en charge de la définition de rapport par les composants [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] . Une définition de rapport est un fichier XML écrit dans le langage RDL (Report Definition Language) ou RDLC (Report Definition Language for Clients). Chaque définition de rapport est conforme à une version de schéma spécifique qui est indiquée au début du fichier.  
   
  Les fichiers RDL sont créés dans le Concepteur de rapports dans les projets [!INCLUDE[ss_dtbi](../includes/ss-dtbi-md.md)] et dans le Générateur de rapports version 3.0. Les fichiers RDLC sont créés à l'aide des contrôles ReportViewer qui sont inclus dans [!INCLUDE[vsprvs](../includes/vsprvs-md.md)].  
   
@@ -94,7 +94,7 @@ ms.locfileid: "36143852"
 |---------------------------|--------------------------|------------------------|--------------------------------------|  
 |Concepteur de rapports dans SQL Server 2014 Data Tools - Business Intelligence pour Microsoft Visual Studio 2012, dans le Centre de téléchargement Microsoft.<br /><br /> Ou<br /><br /> Concepteur de rapports dans SQL Server 2012 Data Tools - Business Intelligence pour Microsoft Visual Studio 2012, dans le Centre de téléchargement Microsoft.<br /><br /> Ou<br /><br /> Concepteur de rapports dans [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] Data Tools, inclus dans [!INCLUDE[ssSQL11](../includes/sssql11-md.md)].|Crée RDL de 2010. À l'ouverture d'un RDL existant :<br /><br /> RDL 2000, mises à niveau vers RDL 2010<br /><br /> RDL 2005, mises à niveau vers RDL 2010<br /><br /> RDL 2008, mises à niveau vers RDL 2010|RDL 2008<br /><br /> RDL 2010|[!INCLUDE[ssSQL14](../includes/sssql14-md.md)]<br /><br /> [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]<br /><br /> [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)]|  
 |Concepteur de rapports dans [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] Business Intelligence Development Studio|Crée RDL de 2010. À l'ouverture d'un RDL existant :<br /><br /> RDL 2000, mises à niveau vers RDL 2010<br /><br /> RDL 2005, mises à niveau vers RDL 2010<br /><br /> RDL 2008, mises à niveau vers RDL 2010|RDL 2008<br /><br /> RDL 2010|[!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)]|  
-|Concepteur de rapports dans [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] Business Intelligence Development Studio|Crée des RDL 2008. À l'ouverture d'un RDL existant :<br /><br /> RDL 2000, mises à niveau vers RDL 2008<br /><br /> RDL 2005, mises à niveau vers RDL 2008|RDL 2008|[!INCLUDE[ssKatmai](../includes/sskatmai-md.md)]|  
+|Concepteur de rapports dans [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] Business Intelligence Development Studio|Crée de RDL 2008. À l'ouverture d'un RDL existant :<br /><br /> RDL 2000, mises à niveau vers RDL 2008<br /><br /> RDL 2005, mises à niveau vers RDL 2008|RDL 2008|[!INCLUDE[ssKatmai](../includes/sskatmai-md.md)]|  
 |[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] Générateur de rapports|Crée RDL de 2010. À l'ouverture d'un RDL existant :<br /><br /> RDL 2000, mises à niveau vers RDL 2010<br /><br /> RDL 2005, mises à niveau vers RDL 2010<br /><br /> RDL 2008, mises à niveau vers RDL 2010|RDL 2010|[!INCLUDE[ssSQL14](../includes/sssql14-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]<br /><br /> [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]<br /><br /> [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]|  
 |Concepteur de rapports Visual Studio RDLC|RDLC 2005|Néant|Néant|  
   
@@ -121,7 +121,7 @@ ms.locfileid: "36143852"
 -   [Ajout et configuration de contrôles ReportViewer](http://msdn.microsoft.com/library/ms252104.aspx)  
   
 ## <a name="see-also"></a>Voir aussi  
- [Rapports, parties de rapports et les définitions de rapport &#40;rapport Générateur et SSRS&#41;](report-design/reports-report-parts-and-report-definitions-report-builder-and-ssrs.md)   
+ [Rapports, parties de rapports et définitions de rapport &#40;Générateur de rapports et SSRS&#41;](report-design/reports-report-parts-and-report-definitions-report-builder-and-ssrs.md)   
  [Outils de Reporting Services](tools/reporting-services-tools.md)   
  [RDL (Report Definition Language) &#40;SSRS&#41;](reports/report-definition-language-ssrs.md)  
   

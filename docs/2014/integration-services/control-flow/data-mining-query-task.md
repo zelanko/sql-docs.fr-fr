@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.dataminingquerytask.f1
 helpviewer_keywords:
@@ -18,13 +18,13 @@ ms.assetid: f489348c-2008-4f66-8c2c-c07c3029439a
 caps.latest.revision: 44
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 2cda01c434fda1a17be4b26352629dc2bc0abb5b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: a075f3ed6dde5bccb648318c11bf8a456c5a1123
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36142334"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37277145"
 ---
 # <a name="data-mining-query-task"></a>Data Mining Query Task
   La tâche de requête d'exploration de données exécute des requêtes de prédiction basées sur les modèles d'exploration de données intégrés à [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. La requête de prédiction crée une prédiction de nouvelles données à l'aide de modèles d'exploration de données. Par exemple, une requête de prédiction peut prédire le nombre de voiliers susceptibles d'être vendus pendant les mois d'été ou générer la liste des prospects susceptibles d'acheter un voilier.  
@@ -42,7 +42,7 @@ ms.locfileid: "36142334"
   
  La tâche peut interroger plusieurs modèles d'exploration de données basés sur la même structure d'exploration de données. Un modèle d'exploration de données est construit à partir de l'un des algorithmes d'exploration de données fournis par [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . La structure d'exploration de données référencée par la tâche de requête d'exploration de données peut comprendre plusieurs modèles d'exploration de données, construits à partir de différents algorithmes. Pour plus d’informations, consultez [Structures d’exploration de données &#40;Analysis Services - exploration de données&#41;](../../analysis-services/data-mining/mining-structures-analysis-services-data-mining.md) et [Algorithmes d’exploration de données &#40;Analysis Services - Exploration de données&#41;](../../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md).  
   
- La requête de prédiction exécutée par la tâche de requête d'exploration de données renvoie un résultat qui se présente sous la forme d'une seule ligne ou d'un ensemble de données. Une requête qui ne retourne qu'une ligne est appelée « requête singleton » : par exemple, la requête qui prédit le nombre de voiliers susceptibles d'être vendus pendant les mois d'été retourne un nombre. Pour plus d’informations sur les requêtes de prédiction qui retournent une seule ligne, consultez [les Interfaces de requête d’exploration de données](../../analysis-services/data-mining/data-mining-query-tools.md).  
+ La requête de prédiction exécutée par la tâche de requête d'exploration de données renvoie un résultat qui se présente sous la forme d'une seule ligne ou d'un ensemble de données. Une requête qui ne retourne qu'une ligne est appelée « requête singleton » : par exemple, la requête qui prédit le nombre de voiliers susceptibles d'être vendus pendant les mois d'été retourne un nombre. Pour plus d’informations sur les requêtes de prédiction qui renvoient une seule ligne, consultez [Interfaces de requête d’exploration de données](../../analysis-services/data-mining/data-mining-query-tools.md).  
   
  Les résultats des requêtes sont enregistrés dans des tables. Si une table portant le nom spécifié par la tâche de requête d'exploration de données existe déjà, la tâche peut créer une nouvelle table à partir du même nom, auquel elle ajoute un nombre, ou bien remplacer le contenu de la table.  
   

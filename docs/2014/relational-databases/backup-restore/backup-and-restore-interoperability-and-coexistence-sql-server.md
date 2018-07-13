@@ -5,10 +5,9 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-backup-restore
+ms.technology: backup-restore
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - file restores [SQL Server], related features
 - restoring [SQL Server], files
@@ -17,15 +16,15 @@ helpviewer_keywords:
 - file backups [SQL Server], related features
 ms.assetid: 69f212b8-edcd-4c5d-8a8a-679ced33c128
 caps.latest.revision: 45
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 05d61a8b1c6ba7008cf25a4f7ce60fe9e2475de2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 655e4079fdd1bbdeaea6dd99fd5c36a0cac7f762
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36143921"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37180136"
 ---
 # <a name="backup-and-restore-interoperability-and-coexistence-sql-server"></a>Sauvegarde et restauration : Interopérabilité et coexistence (SQL Server)
   Cette rubrique comprend des observations sur la sauvegarde et la restauration pour plusieurs fonctionnalités de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Ces fonctionnalités concernent : la restauration de fichiers et le démarrage de bases de données, la restauration et la désactivation en ligne d'index, la mise en miroir de bases de données, la restauration fragmentaire et les index de recherche en texte intégral.  
@@ -52,7 +51,7 @@ ms.locfileid: "36143921"
   
  Si un problème se produit lors du démarrage de la base de données, la récupération échoue et la base de données est affectée de l'attribut SUSPECT. Si le problème peut être isolé dans un ou des fichiers, l'administrateur de la base de données peut placer les fichiers hors connexion et tenter de la redémarrer. Pour placer un fichier hors connexion, vous pouvez utiliser l'instruction [ALTER DATABASE](/sql/t-sql/statements/alter-database-transact-sql) suivante :  
   
- ALTER DATABASE *nom_base_de_données* MODIFY FILE (nom **='*`filename`*'**, hors connexion)  
+ ALTER DATABASE *database_name* MODIFY FILE (nom **='*`filename`*'**, OFFLINE)  
   
  Si le démarrage aboutit, les groupes de fichiers qui contiennent un fichier hors connexion demeurent hors connexion.  
   

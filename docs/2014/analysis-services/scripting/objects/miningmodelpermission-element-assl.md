@@ -1,5 +1,5 @@
 ---
-title: Élément MiningModelPermission (ASSL) | Documents Microsoft
+title: MiningModelPermission, élément (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,18 +22,18 @@ helpviewer_keywords:
 - MiningModelPermission element
 ms.assetid: 4bd2f7e7-ff0d-404e-96fb-7e2c4eeb91e9
 caps.latest.revision: 39
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 42a02eedcc2c054269872e4c0f9523ab63632eda
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: bb714eb08fac3a6611669d48bf10aaee3580ee8c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36143792"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37176436"
 ---
 # <a name="miningmodelpermission-element-assl"></a>Élément MiningModelPermission (ASSL)
-  Définit les autorisations de membres d’un [rôle](role-element-assl.md) élément avoir un individu [MiningModel](miningmodel-element-assl.md) élément.  
+  Définit les autorisations de membres d’un [rôle](role-element-assl.md) élément avoir sur un individu [MiningModel](miningmodel-element-assl.md) élément.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -64,7 +64,7 @@ ms.locfileid: "36143792"
 |Éléments enfants|[AllowBrowsing](../properties/allowbrowsing-element-assl.md), [AllowDrillThrough](../properties/allowdrillthrough-element-assl.md)|  
   
 ## <a name="remarks"></a>Notes  
- Dans [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)], vous pouvez activer l’extraction sur les structures d’exploration de données en ajoutant le `AllowDrillthrough` autorisé au [MiningStructurePermissions](../collections/miningstructurepermissions-element-assl.md) collection. Si `AllowDrillthrough` est activé sur la structure d’exploration de données et le modèle d’exploration de données, un membre d’un rôle qui a [AllowDrillThrough élément &#40;ASSL&#41; ](../properties/allowdrillthrough-element-assl.md) autorisations sur le modèle peuvent interroger le modèle d’exploration de données et retourner colonnes de structure qui n’étaient pas incluses dans le modèle, à l’aide de la syntaxe suivante :  
+ Dans [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)], vous pouvez activer l’extraction sur les structures d’exploration de données en ajoutant le `AllowDrillthrough` autorisé au [MiningStructurePermissions](../collections/miningstructurepermissions-element-assl.md) collection. Si `AllowDrillthrough` est activé sur la structure d’exploration de données et le modèle d’exploration de données, n’importe quel membre d’un rôle qui a [AllowDrillThrough élément &#40;ASSL&#41; ](../properties/allowdrillthrough-element-assl.md) autorisations sur le modèle peuvent interroger le modèle d’exploration de données et retourner colonnes de structure qui n’étaient pas incluses dans le modèle, à l’aide de la syntaxe suivante :  
   
 ```  
 SELECT StructureColumn('<column name>') FROM <model>.CASES  

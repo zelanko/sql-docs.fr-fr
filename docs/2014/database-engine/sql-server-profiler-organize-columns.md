@@ -1,5 +1,5 @@
 ---
-title: Générateur de profils SQL Server - organiser les colonnes | Documents Microsoft
+title: SQL Server Profiler - organiser les colonnes | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.pro.organize.columns.f1
 ms.assetid: bf5674f4-da5e-43f9-aeb2-76ca37993790
 caps.latest.revision: 8
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 69622d02bbe0eae497f7d6e463ea6d40eb6536cd
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 1bfa74b1d6f8eb7f3c13c294aba37bfb88f7e995
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36143957"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37162910"
 ---
 # <a name="sql-server-profiler---organize-columns"></a>Générateur de profils SQL Server - Organiser les colonnes
   Utilisez la boîte de dialogue **Organiser les colonnes** pour sélectionner des colonnes de données en vue de regrouper ou d'agréger des événements affichés dans une trace et faciliter ainsi la consultation et l'analyse des tables ou des fichiers de trace volumineux.  

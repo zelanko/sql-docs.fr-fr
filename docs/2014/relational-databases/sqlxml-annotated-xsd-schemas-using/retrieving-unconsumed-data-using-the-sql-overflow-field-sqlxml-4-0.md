@@ -1,5 +1,5 @@
 ---
-title: 'La récupération des données à l’aide de SQL : overflow-field (SQLXML 4.0) | Documents Microsoft'
+title: 'Récupération des données à l’aide de SQL : overflow-field (SQLXML 4.0) | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - sql:overflow-field
 ms.assetid: 8526998d-b47d-4a32-8dc2-7f50a8d11097
 caps.latest.revision: 29
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: d0787be7f62ae4a3fc593d750bb6fc6f2b949cc6
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 9b22aca6d379a4670cc44de1b07f6e18c8a26d47
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36143851"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37189995"
 ---
 # <a name="retrieving-unconsumed-data-using-the-sqloverflow-field-sqlxml-40"></a>Extraction de données non consommées à l'aide de sql:overflow-field (SQLXML 4.0)
   Lorsque les enregistrements sont insérés dans une base de données à partir d'un document XML à l'aide de la fonction [!INCLUDE[tsql](../../includes/tsql-md.md)] OPENXML, toutes les données non consommées du document XML source peuvent être stockées dans une colonne. Lors de la récupération des données à partir d'une base de données à l'aide des schémas annotés, l'attribut `sql:overflow-field` peut être spécifié pour identifier la colonne de la table où les données de dépassement de capacité sont stockées. Le `sql:overflow-field` attribut peut être spécifié sur  **\<élément >**.  

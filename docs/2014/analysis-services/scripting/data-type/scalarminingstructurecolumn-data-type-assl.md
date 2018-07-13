@@ -1,5 +1,5 @@
 ---
-title: Type de données ScalarMiningStructureColumn (ASSL) | Documents Microsoft
+title: Type de données ScalarMiningStructureColumn (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,18 +22,18 @@ helpviewer_keywords:
 - ScalarMiningStructureColumn data type
 ms.assetid: 8f4afc15-601c-4189-bc45-f5a216aed879
 caps.latest.revision: 34
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 15e88a5e82dc960e3428587b8d74a046781b90ef
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 90f855bf55292b310e32a167dc005ab2f2f81c14
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36142803"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37211689"
 ---
 # <a name="scalarminingstructurecolumn-data-type-assl"></a>Type de données ScalarMiningStructureColumn (ASSL)
-  Définit un type de données dérivé qui représente un [MiningStructureColumn](miningstructurecolumn-data-type-assl.md) élément qui contient des valeurs scalaires, par opposition aux tables imbriquées associés à la [TableMiningStructureColumn](tableminingstructurecolumn-data-type-assl.md) élément qui contient des tables imbriquées.  
+  Définit un type de données dérivé qui représente un [MiningStructureColumn](miningstructurecolumn-data-type-assl.md) élément qui contient des valeurs scalaires, par opposition aux tables imbriquées associées le [TableMiningStructureColumn](tableminingstructurecolumn-data-type-assl.md) élément qui contient des tables imbriquées.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -74,6 +74,6 @@ ms.locfileid: "36142803"
  L’élément correspondant dans le modèle d’objet objets AMO (Analysis Management) est <xref:Microsoft.AnalysisServices.ScalarMiningStructureColumn>.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Types de données de script langage XML Analysis Services &#40;ASSL&#41;](analysis-services-scripting-language-xml-data-types-assl.md)  
+ [Types Analysis Services Scripting Language XML données &#40;ASSL&#41;](analysis-services-scripting-language-xml-data-types-assl.md)  
   
   

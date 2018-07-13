@@ -5,31 +5,29 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-udf
+ms.technology: ''
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - user-defined functions [SQL Server], components
 - user-defined functions [SQL Server], about user-defined functions
 ms.assetid: d7ddafab-f5a6-44b0-81d5-ba96425aada4
-caps.latest.revision: 21
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 27830819baa6b5381b8e9b9c41a62067e66f65e4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: rothja
+ms.author: jroth
+manager: craigg
+ms.openlocfilehash: 1d8b8569a35a67d2700c0ce48c9c1cd4b29da7e1
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36140235"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37427468"
 ---
 # <a name="user-defined-functions"></a>Fonctions définies par l'utilisateur
   À l'instar des fonctions dans les langages de programmation, les fonctions définies par l'utilisateur de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sont des routines qui acceptent des paramètres, exécutent une action, par exemple un calcul complexe, et retournent le résultat de cette action sous forme de valeur. La valeur retournée peut être une valeur scalaire unique ou un jeu de résultats.  
   
  **Dans cette rubrique**  
   
- [Avantages de la fonction définie par l’utilisateur](#Benefits)  
+ [Avantages des fonctions définies par l’utilisateur](#Benefits)  
   
  [Types de fonctions](#FunctionTypes)  
   
@@ -43,7 +41,7 @@ ms.locfileid: "36140235"
   
  [Tâches associées](#Tasks)  
   
-##  <a name="Benefits"></a> Avantages de la fonction définie par l’utilisateur  
+##  <a name="Benefits"></a> Avantages des fonctions définies par l’utilisateur  
  Les avantages de l'utilisation des fonctions définies par l'utilisateur dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sont les suivants :  
   
 -   Elles permettent d'utiliser la programmation modulaire.  
@@ -65,7 +63,7 @@ ms.locfileid: "36140235"
   
 ##  <a name="FunctionTypes"></a> Types de fonctions  
  Fonction scalaire  
- Les fonctions scalaires définies par l'utilisateur retournent une valeur de donnée unique dont le type est défini dans la clause RETURNS. Une fonction scalaire incluse ne contient pas de corps ; la valeur scalaire est le résultat d'une instruction unique. Le corps d'une fonction scalaire à instructions multiples, défini dans un bloc BEGIN...END, contient une série d'instructions [!INCLUDE[tsql](../../includes/tsql-md.md)] qui retournent la valeur unique. Le type de retour peut être n’importe quel type de données à l’exception de `text`, `ntext`, `image`, `cursor`, et `timestamp`.  
+ Les fonctions scalaires définies par l'utilisateur retournent une valeur de donnée unique dont le type est défini dans la clause RETURNS. Une fonction scalaire incluse ne contient pas de corps ; la valeur scalaire est le résultat d'une instruction unique. Le corps d'une fonction scalaire à instructions multiples, défini dans un bloc BEGIN...END, contient une série d'instructions [!INCLUDE[tsql](../../includes/tsql-md.md)] qui retournent la valeur unique. Le type de retour peut être n’importe quel type de données à l’exception `text`, `ntext`, `image`, `cursor`, et `timestamp`.  
   
  Fonctions table  
  Fonctions table définies par l’utilisateur retournent un `table` type de données. Une fonction table incluse ne contient pas de corps ; la table est le jeu de résultats d'une instruction SELECT unique.  

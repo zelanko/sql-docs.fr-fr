@@ -1,5 +1,5 @@
 ---
-title: Utilitaires UDT | Documents Microsoft
+title: Utilitaires UDT | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -12,15 +12,15 @@ ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: 9e915268-9628-445b-81c2-b0ebd11e891e
 caps.latest.revision: 11
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 655bfd340dd7ad45c4e4266461058e7a4908cf22
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: bd4617a057a768522064546806dfd23e99366656
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36142882"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37211529"
 ---
 # <a name="udt-utilities"></a>Utilitaires UDT
   L'exemple Utilitaires UDT contient diverses fonctions utilitaires, Celles-ci incluent notamment des fonctions pour afficher les métadonnées d'un assembly dans Transact-SQL, des exemples de fonctions table en continu pour retourner les types dans un assembly sous forme de table, et enfin des fonctions pour retourner les champs, méthodes et propriétés dans un type défini par l'utilisateur. Les technologies illustrées comprennent les fonctions table en continu, les API de réflexion du .NET Framework et l'appel des fonctions table à partir de Transact-SQL.  
@@ -53,7 +53,7 @@ ms.locfileid: "36142882"
      `GO`  
   
     > [!NOTE]  
-    >  Pour activer le CLR, vous devez disposer `ALTER SETTINGS` autorisation de niveau serveur, qui est implicitement détenue par les membres de la `sysadmin` et `serveradmin` rôles serveur fixes.  
+    >  Pour activer le CLR, vous devez avoir `ALTER SETTINGS` autorisation de niveau serveur, qui est implicitement détenue par les membres de la `sysadmin` et `serveradmin` rôles serveur fixes.  
   
 -   La base de données [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] doit être installée sur l'instance [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que vous utilisez.  
   

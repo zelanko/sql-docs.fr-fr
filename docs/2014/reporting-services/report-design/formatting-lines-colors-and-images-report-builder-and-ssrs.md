@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.rtp.rptdesigner.textboxproperties.border.f1
 - "10502"
@@ -24,15 +24,15 @@ f1_keywords:
 - sql12.rtp.rptdesigner.reportbody.border.f1
 ms.assetid: 0f5f0d2a-9537-4152-b441-b40d7f04cf4c
 caps.latest.revision: 6
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 8b40615a063e9dfe24fa7a3373867047f0583485
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: a4ea6769c88498b15b3145992c3f7024aaf240b3
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36142431"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37258205"
 ---
 # <a name="formatting-lines-colors-and-images-report-builder-and-ssrs"></a>Mise en forme des lignes, couleurs et images (Générateur de rapports et SSRS)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] vous donne la possibilité de mettre en forme des lignes, des couleurs, des régions de données, des images ainsi que d'autres éléments de rapport.  
@@ -60,8 +60,8 @@ ms.locfileid: "36142431"
  Vous pouvez également ajouter des images telles que des logos à l'arrière-plan de votre rapport, à un rectangle, une zone de texte, un tableau, une matrice ou toute partie d'un graphique, ainsi qu'aux sections de corps et de page d'un rapport. Pour plus d’informations, consultez [Images &#40;Générateur de rapports et SSRS&#41;](images-report-builder-and-ssrs.md).  
   
 ## <a name="see-also"></a>Voir aussi  
- [Mise en forme du texte et des espaces réservés &#40;rapport Générateur et SSRS&#41;](formatting-text-and-placeholders-report-builder-and-ssrs.md)   
- [Mise en forme des nombres et des Dates &#40;rapport Générateur et SSRS&#41;](formatting-numbers-and-dates-report-builder-and-ssrs.md)   
+ [Mise en forme de texte et des espaces réservés &#40;Générateur de rapports et SSRS&#41;](formatting-text-and-placeholders-report-builder-and-ssrs.md)   
+ [Mise en forme des nombres et des Dates &#40;Générateur de rapports et SSRS&#41;](formatting-numbers-and-dates-report-builder-and-ssrs.md)   
  [Mettre en forme du texte dans une zone de texte &#40;Générateur de rapports et SSRS&#41;](format-text-in-a-text-box-report-builder-and-ssrs.md)   
  [Boîte de dialogue Remplissage &#40;Générateur de rapports et SSRS&#41;](../fill-dialog-box-report-builder-and-ssrs.md)  
   

@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - dates [Integration Services], YEAR
 - YEAR function
@@ -16,13 +16,13 @@ ms.assetid: 9d88dead-ace8-44b9-b8e2-916c1842e155
 caps.latest.revision: 35
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 90304da60ff77cf4bba98b0fb6b3b682801f318c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 4877e321e55d8dbe34d7be73be3b02b4158cd3fb
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36143530"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37162990"
 ---
 # <a name="year-ssis-expression"></a>YEAR (expression SSIS)
   Renvoie un entier qui représente la partie année d'une date.  
@@ -71,11 +71,11 @@ YEAR(GETDATE())
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [DATEADD &#40;Expression SSIS&#41;](dateadd-ssis-expression.md)   
- [DATEDIFF &#40;Expression SSIS&#41;](datediff-ssis-expression.md)   
+ [DATEADD &#40;SSIS Expression&#41;](dateadd-ssis-expression.md)   
+ [DATEDIFF &#40;SSIS Expression&#41;](datediff-ssis-expression.md)   
  [DATEPART &#40;expression SSIS&#41;](datepart-ssis-expression.md)   
  [DAY &#40;expression SSIS&#41;](day-ssis-expression.md)   
  [MONTH &#40;expression SSIS&#41;](month-ssis-expression.md)   
- [Fonctions &#40;Expression SSIS&#41;](functions-ssis-expression.md)  
+ [Fonctions &#40;SSIS Expression&#41;](functions-ssis-expression.md)  
   
   

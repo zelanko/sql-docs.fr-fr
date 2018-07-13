@@ -1,5 +1,5 @@
 ---
-title: Configuration Analysis Services – répertoires de données | Documents Microsoft
+title: Configuration Analysis Services – répertoires de données | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: ef732855-b7af-4f40-a619-5573c1c354bb
 caps.latest.revision: 20
-author: HeidiSteen
+author: heidisteen
 ms.author: heidist
-manager: jhubbard
-ms.openlocfilehash: b3b945938c0ffd8a5059f8b2c53546538ea97eee
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 64eb317972d33f2fc2957f40c74b0bdea9aac152
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36142656"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37204619"
 ---
 # <a name="analysis-services-configuration---data-directories"></a>Configuration de Analysis Services – Répertoires de données
   Les répertoires par défaut indiqués dans le tableau suivant sont configurables par l'utilisateur pendant l'installation de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. L’autorisation d’accéder à ces fichiers est accordée aux administrateurs locaux et aux membres du groupe de sécurité SQLServerMSASUser$\<instance> qui est créé et approvisionné lors de l’installation.  
@@ -29,9 +29,9 @@ ms.locfileid: "36142656"
 |Description|Répertoire par défaut|Recommandations|  
 |-----------------|-----------------------|---------------------|  
 |Répertoire de données racine|C:\Program Files\Microsoft SQL Server\MSAS12. \<Id_instance > \OLAP\Data\|Vérifiez que le dossier \Program Files\Microsoft SQL Server\ est protégé par des autorisations limitées. Le fonctionnement de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] dépend, dans de nombreuses configurations, de la performance de l'emplacement de stockage sur lequel le répertoire de données se trouve. Placez ce répertoire sur l'emplacement de stockage le plus performant raccordé au système. Pour les installations de cluster de basculement, vérifiez que les répertoires de données sont placés sur le disque partagé.|  
-|Répertoire de fichiers journaux|C:\Program Files\Microsoft SQL Server\MSAS12. \<InstanceID > \OLAP\Log\|c’est le répertoire pour [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] des fichiers journaux, y compris le journal FlightRecorder. Si vous augmentez la durée de la boîte noire, assurez-vous que le répertoire de journal dispose de l'espace adéquat.|  
+|Répertoire de fichiers journaux|C:\Program Files\Microsoft SQL Server\MSAS12. \<Id_instance > \OLAP\Log\|il s’agit du répertoire pour [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] des fichiers journaux, y compris le journal FlightRecorder. Si vous augmentez la durée de la boîte noire, assurez-vous que le répertoire de journal dispose de l'espace adéquat.|  
 |Répertoire Temp|C:\Program Files\Microsoft SQL Server\MSAS12. \<Id_instance > \OLAP\Temp\|placer le répertoire Temp sur le sous-système de stockage hautes performances.|  
-|Répertoire de sauvegarde|C:\Program Files\Microsoft SQL Server\MSAS12. \<Id_instance > \OLAP\Backup\|c’est le répertoire pour [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] par défaut des fichiers de sauvegarde. Pour les installations de PowerPivot pour SharePoint, il s'agit également de l'emplacement où les services système PowerPivot mettent en cache les fichiers de données PowerPivot.<br /><br /> Vérifiez que des autorisations appropriées sont définies pour empêcher la perte de données et vérifiez que le groupe d'utilisateurs pour le service [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] a les autorisations adéquates pour écrire dans le répertoire de sauvegarde. L'utilisation d'un lecteur mappé pour les répertoires de sauvegarde n'est pas prise en charge.|  
+|Répertoire de sauvegarde|C:\Program Files\Microsoft SQL Server\MSAS12. \<Id_instance > \OLAP\Backup\|il s’agit du répertoire pour [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] par défaut des fichiers de sauvegarde. Pour les installations de PowerPivot pour SharePoint, il s'agit également de l'emplacement où les services système PowerPivot mettent en cache les fichiers de données PowerPivot.<br /><br /> Vérifiez que des autorisations appropriées sont définies pour empêcher la perte de données et vérifiez que le groupe d'utilisateurs pour le service [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] a les autorisations adéquates pour écrire dans le répertoire de sauvegarde. L'utilisation d'un lecteur mappé pour les répertoires de sauvegarde n'est pas prise en charge.|  
   
 ## <a name="notes"></a>Remarques  
   

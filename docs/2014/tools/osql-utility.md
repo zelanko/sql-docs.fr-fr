@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - statements [SQL Server], command prompt
 - QUIT command
@@ -24,15 +24,15 @@ helpviewer_keywords:
 - CTRL+C command
 ms.assetid: cf530d9e-0609-4528-8975-ab8e08e40b9a
 caps.latest.revision: 48
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 2ebfb7cbe8a000a751243d1117d904056295d294
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: bd66af98effae023f2a1436b6eb88e76c78a2e44
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36142192"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37239999"
 ---
 # <a name="osql-utility"></a>Utilitaire osql
   L'utilitaire **osql** permet de spécifier des instructions [!INCLUDE[tsql](../includes/tsql-md.md)] , des procédures système, ainsi que des fichiers de script. Pour communiquer avec le serveur, cet utilitaire fait appel à ODBC.  

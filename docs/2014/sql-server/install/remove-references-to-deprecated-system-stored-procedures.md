@@ -1,5 +1,5 @@
 ---
-title: Supprimez les références aux procédures stockées système déconseillées | Documents Microsoft
+title: Supprimer les références aux procédures stockées système déconseillées | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - undocumented system stored procedures [SQL Server]
 - system stored procedures [SQL Server]
 ms.assetid: 487d24fc-41d5-495e-843c-0ac974ec472f
 caps.latest.revision: 20
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 45f10d9ab7697e84017da43d8767e52be23101bc
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 5a588f8ec25301d3c8a4343e6c7f0d77eebdfe75
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36143647"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37187576"
 ---
 # <a name="remove-references-to-deprecated-system-stored-procedures"></a>Supprimer les références aux procédures stockées système déconseillées
   Le Conseiller de mise à niveau a détecté des instructions faisant référence à des procédures stockées système non documentées et à des procédures stockées étendues qui ne sont plus disponibles dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Les instructions faisant référence à ces objets échoueront. N'utilisez pas les objets système et les API non documentés car la fonctionnalité peut être modifiée ou supprimée sans préavis dans une version ultérieure.  
