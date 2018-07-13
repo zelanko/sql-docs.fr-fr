@@ -1,5 +1,5 @@
 ---
-title: Ajouter des projets au contrôle de code Source | Documents Microsoft
+title: Ajouter des projets au contrôle de code Source | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - adding projects
 - projects [SQL Server Management Studio], adding
 ms.assetid: fd4616b2-a564-4a66-ac53-d1f5cba213c2
 caps.latest.revision: 27
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 3f0c63dec978d50ef8544c86c6cc4811f55ef195
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: f2fc1ae6eadef04ee183e5551a88ed480a696cf2
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36152682"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37148270"
 ---
 # <a name="add-projects-to-source-control"></a>Ajouter des projets au contrôle de code source
   Les solutions [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] peuvent héberger plusieurs projets de script. La méthode d'ajout d'un projet au contrôle de code source varie selon que la solution à laquelle appartient le projet est ou non sous contrôle de code source. Si la solution est sous contrôle de code source, le projet s'ajoute automatiquement au contrôle de code source lors de l'archivage de la solution. Pour plus d’informations sur l’archivage de solutions, consultez [dans les fichiers](../../2014/database-engine/check-in-files.md).  
@@ -40,7 +40,7 @@ ms.locfileid: "36152682"
 2.  Sur le **fichier** menu, pointez sur **contrôle de code Source**, puis cliquez sur **ajouter les projets sélectionnés au contrôle de code Source**.  
   
     > [!NOTE]  
-    >  Si vous utilisez la **ajouter les projets sélectionnés au contrôle de code Source** de commande pour ajouter un projet qui appartient à une solution sous contrôle de code source, vous êtes invité si vous souhaitez ajouter le projet en tant que sous-dossier de la solution sous contrôle de code source ou à ajouter le projet en tant qu’un dossier distinct.  
+    >  Si vous utilisez le **ajouter les projets sélectionnés au contrôle de code Source** commande pour ajouter un projet qui appartient à une solution sous contrôle de code source, vous êtes invité si vous souhaitez ajouter le projet en tant que sous-dossier de la solution sous contrôle de code source ou à ajouter le projet comme un dossier distinct.  
   
 3.  Si vous y êtes invité, connectez-vous à votre fournisseur de contrôle de code source.  
   
@@ -49,6 +49,6 @@ ms.locfileid: "36152682"
 5.  Dans le **dossiers** , ouvrez le dossier où vous souhaitez placer votre projet. Vous pouvez également cliquer sur **créer** pour créer un dossier avec le nom affiché dans le **projet** boîte.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Ajouter des Solutions et des projets au contrôle de code Source](../../2014/database-engine/add-solutions-and-projects-to-source-control.md)  
+ [Ajouter des solutions et des projets au contrôle de code source](../../2014/database-engine/add-solutions-and-projects-to-source-control.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Spécifier les Conventions d’affectation de noms (Assistant génération de schéma) (Analysis Services - données multidimensionnelles) | Documents Microsoft
+title: Spécifier les Conventions d’affectation de noms (Assistant génération de schéma) (Analysis Services - données multidimensionnelles) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.schemagenwizard.namingconventions.f1
 ms.assetid: 02d830ea-5b1f-4485-9f94-d64b8bea592b
 caps.latest.revision: 21
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 93be42d99f0f255807caa23cdf91582e24a8a132
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: a984b84c485c24302288eb16747cb3a964794156
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36152697"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37151530"
 ---
 # <a name="specify-naming-conventions-schema-generation-wizard-analysis-services---multidimensional-data"></a>Spécifier les conventions de nom (Assistant Génération de schéma) (Analysis Services - Données multidimensionnelles)
   Utilisez la page **Spécifier les conventions de nom** pour définir les conventions de nom utilisées par l'Assistant Génération de schéma lors de la création des objets de schéma.  

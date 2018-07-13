@@ -1,5 +1,5 @@
 ---
-title: Créer et gérer des Partitions dans la base de données (SSAS tabulaire) de l’espace de travail | Documents Microsoft
+title: Créer et gérer des Partitions dans la base de données d’espace de travail (SSAS tabulaire) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.bidtoolset.partitionmgr.f1
 ms.assetid: 0b3027d6-652b-4eb3-a197-58b25df65218
 caps.latest.revision: 14
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 12655b79c40b71540f314e4f525e7581feac8cc6
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 2ad3a73c669068129cb372144e008a484d784186
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36153094"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37151360"
 ---
 # <a name="create-and-manage-partitions-in-the-workspace-database-ssas-tabular"></a>Créer et gérer des partitions dans la base de données de l'espace de travail (SSAS Tabulaire)
   Les partitions divisent une table en sections logiques. Chaque partition peut ensuite être traitée (actualisée) indépendamment ou parallèlement à d'autres partitions. Les partitions peuvent améliorer l'évolutivité et la gestion de bases de données volumineuses. Par défaut, chaque table possède une partition qui inclut toutes les colonnes. Les tâches de cette rubrique décrivent comment créer et gérer des partitions dans la base de données model de l’espace de travail à l’aide de la boîte de dialogue **Gestionnaire de partition** dans [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]  

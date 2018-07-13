@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - selOraTabDia
 ms.assetid: 2e295dc8-999d-4c4d-96cc-1519674b47a4
 caps.latest.revision: 6
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: eb73c91e7f11a0a925b808589dfac77fc4bb7374
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 8bff65efbe755045a46721436d3b058725b9ed31
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36152664"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37150960"
 ---
 # <a name="select-oracle-tables-for-capturing-changes"></a>Sélectionner des tables Oracle pour capturer des modifications
   Cette boîte de dialogue permet de sélectionner les tables incluses dans l'instance de capture de données modifiées. Les tables sélectionnées sont ajoutées à la liste dans la page **Sélectionner des tables et des colonnes** de l'Assistant Nouvelle instance. Cette boîte de dialogue permet d'effectuer les opérations suivantes :  
@@ -49,7 +49,7 @@ ms.locfileid: "36152664"
 >  Si vous sélectionnez une table qui inclut un type de données non pris en charge, un message d'erreur s'affiche et la table n'est pas incluse.  
   
 ## <a name="see-also"></a>Voir aussi  
- [La création de l’Instance de base de données modifiées SQL Server](how-to-create-the-sql-server-change-database-instance.md)   
+ [Comment créer l’Instance de base de données de modifications SQL Server](how-to-create-the-sql-server-change-database-instance.md)   
  [Sélectionner des tables et des colonnes Oracle](select-oracle-tables-and-columns.md)  
   
   

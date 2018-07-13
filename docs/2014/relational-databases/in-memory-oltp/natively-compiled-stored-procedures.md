@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - database-engine-imoltp
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - natively compiled stored procedures
 ms.assetid: d5ed432c-10c5-4e4f-883c-ef4d1fa32366
 caps.latest.revision: 54
-author: stevestein
-ms.author: sstein
-manager: jhubbard
-ms.openlocfilehash: b566be21bdd5756a4f37be09a436c65fe1565bb1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
+ms.openlocfilehash: 377aa0cd89ad794bb9efb3744cbf62723512d12c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36152112"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37148710"
 ---
 # <a name="natively-compiled-stored-procedures"></a>procédures stockées compilées en mode natif
   Les procédures stockées compilées en mode natif sont des procédures stockées [!INCLUDE[tsql](../../includes/tsql-md.md)] compilées en code natif qui accèdent aux tables optimisées en mémoire. Elles permettent une exécution efficace des requêtes et de la logique métier des procédures stockées. Pour plus d'informations sur le processus de compilation en mode natif, consultez [Native Compilation of Tables and Stored Procedures](native-compilation-of-tables-and-stored-procedures.md). Pour plus d’informations sur la migration des procédures stockées sur disque vers des procédures stockées compilées en mode natif, consultez [Problèmes de migration pour les procédures stockées compilées en mode natif](migration-issues-for-natively-compiled-stored-procedures.md).  
@@ -37,9 +37,9 @@ ms.locfileid: "36152112"
   
 -   [Constructions prises en charge dans les procédures stockées compilées en mode natif](supported-features-for-natively-compiled-t-sql-modules.md)  
   
--   [À l’aide de Try... Catch dans les procédures stockées compilées en mode natif](../../database-engine/using-try-catch-in-natively-compiled-stored-procedures.md)  
+-   [Utilisation de Try..Catch dans des procédures stockées compilées en mode natif](../../database-engine/using-try-catch-in-natively-compiled-stored-procedures.md)  
   
--   [Constructions prises en charge sur les procédures stockées compilées en mode natif](supported-ddl-for-natively-compiled-t-sql-modules.md)  
+-   [Constructions prises en charge dans les procédures stockées compilées en mode natif](supported-ddl-for-natively-compiled-t-sql-modules.md)  
   
 -   [Procédures stockées compilées en mode natif et options SET d’exécution](natively-compiled-stored-procedures-and-execution-set-options.md)  
   

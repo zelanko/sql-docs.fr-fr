@@ -1,5 +1,5 @@
 ---
-title: Définir ou modifier la méthode de connexion par défaut pour DirectQuery | Documents Microsoft
+title: Définir ou modifier la méthode de connexion par défaut pour DirectQuery | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: f10d5678-d678-4251-8cce-4e30cfe15751
 caps.latest.revision: 5
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: bf6abf3e4576fb28155529ee1bdfd24520176010
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: c5c9ad99aad3ae46b3e97c3d3b6dfbec03dcff27
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36152210"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37149520"
 ---
 # <a name="set-or-change-the-preferred-connection-method-for-directquery"></a>Définir ou modifier la méthode de connexion par défaut pour DirectQuery
   Lorsque vous créez un modèle à utiliser en mode DirectQuery, vous devez d'abord configurer l'environnement de conception de façon à ce qu'il prenne en charge l'utilisation de DirectQuery. Pour ce faire, consultez [activer le Mode Création DirectQuery &#40;tabulaire SSAS&#41;](tabular-models/enable-directquery-mode-in-ssdt.md).  

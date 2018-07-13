@@ -1,5 +1,5 @@
 ---
-title: Élément AllMemberName (ASSL) | Documents Microsoft
+title: Élément AllMemberName (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - AllMemberName element
 ms.assetid: 5fda5563-cb7a-4402-82ad-3d6c432b6a7e
 caps.latest.revision: 39
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: faf238e9d79d0ab8ef6b9dcb49db9338623917c1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 62c2790a2c83111c45e09411c3ed4006b38a8195
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36153133"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37151420"
 ---
 # <a name="allmembername-element-assl"></a>Élément AllMemberName (ASSL)
   Contient la légende dans la langue par défaut pour le membre All d’un [hiérarchie](../objects/hierarchy-element-assl.md) élément.  
@@ -62,7 +62,7 @@ ms.locfileid: "36153133"
 |Éléments enfants|None|  
   
 ## <a name="remarks"></a>Notes  
- L’élément qui correspond au parent de `AllMemberName` dans l’objet d’objets AMO (Analysis Management) est modèle <xref:Microsoft.AnalysisServices.Hierarchy>.  
+ L’élément qui correspond au parent de `AllMemberName` dans l’objet d’objets AMO (Analysis Management) modèle est <xref:Microsoft.AnalysisServices.Hierarchy>.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Propriétés &#40;ASSL&#41;](properties-assl.md)  

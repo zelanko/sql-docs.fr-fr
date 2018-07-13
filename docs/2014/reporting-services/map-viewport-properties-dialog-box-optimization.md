@@ -1,5 +1,5 @@
 ---
-title: Boîte de dialogue Propriétés de la fenêtre d’affichage, l’optimisation de mapper | Documents Microsoft
+title: Boîte de dialogue Propriétés de la fenêtre d’affichage, l’optimisation de mapper | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.rtp.rptdesigner.mapviewport.optimization.f1
 - "10522"
 ms.assetid: 8c0310ba-eedd-4c9f-95bd-1f9e2a1a8ed3
 caps.latest.revision: 6
-author: douglaslM
+author: maggiesmsft
 ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 54606ed4dda94c569e1a4aef2438e42cd104eebd
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: da12f40cba7da5a7c56d702c20d7ad2e7759b796
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36153410"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37150250"
 ---
 # <a name="map-viewport-properties-dialog-box-optimization"></a>Boîte de dialogue Propriétés du point de vue de la carte, Optimisation
   Sélectionnez **Optimisation** dans la boîte de dialogue **Propriétés de la fenêtre d'affichage de la carte** pour contrôler la résolution appliquée lors de l'affichage d'une carte dans un rapport.  
@@ -38,11 +38,11 @@ ms.locfileid: "36153410"
  **Qualité**  
  Faites glisser le pointeur plus près de l'option **Qualité** pour dessiner la carte avec plus de détails.  
   
- **résolution de la carte**  
+ **Résolution de la carte**  
  Spécifiez la résolution de la carte. Cette valeur spécifie le plus petit détail que vous souhaitez afficher dans la carte restituée en points.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Cartes &#40;Générateur de rapports et SSRS&#41;](report-design/maps-report-builder-and-ssrs.md)   
- [Dépanner les rapports : Mapper des rapports &#40;rapport Générateur et SSRS&#41;](report-design/troubleshoot-reports-map-reports-report-builder-and-ssrs.md)  
+ [Dépanner les rapports : Mapper des rapports &#40;Générateur de rapports et SSRS&#41;](report-design/troubleshoot-reports-map-reports-report-builder-and-ssrs.md)  
   
   
