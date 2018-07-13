@@ -1,39 +1,38 @@
 ---
-title: Reporting Services avec les groupes de disponibilité AlwaysOn (SQL Server) | Documents Microsoft
+title: Reporting Services avec les groupes de disponibilité AlwaysOn (SQL Server) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Reporting Services, AlwaysOn Availability Groups
 - Availability Groups [SQL Server], interoperability
 ms.assetid: edeb5c75-fb13-467e-873a-ab3aad88ab72
 caps.latest.revision: 15
-author: MikeRayMSFT
-ms.author: mikeray
-manager: jhubbard
-ms.openlocfilehash: ec7c724049ad6ab85b72f2dee44ebcad0bf5ed07
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: fb5a36175e735393e079cdf7b611a11d3d50a834
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36052928"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37153120"
 ---
 # <a name="reporting-services-with-alwayson-availability-groups-sql-server"></a>Reporting Services avec les groupes de disponibilité AlwaysOn (SQL Server)
   Cette rubrique contient des informations sur la configuration de [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] en vue d'une utilisation avec [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] (groupes de disponibilité) dans [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. Les trois possibilités d'utilisation de [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] et de [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] sont les bases de données pour les sources de données de rapport, les bases de données de serveur de rapports et la conception de rapports. Les fonctionnalités prises en charge et la configuration requise diffèrent dans les trois cas.  
   
  L'un des principaux avantages d'utiliser [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] avec des sources de données [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] réside dans l'exploitation de réplicas secondaires accessibles en lecture en tant que source de données de rapports tandis que, dans le même temps, les réplicas secondaires permettent le basculement vers une base de données principale.  
   
- Pour plus d’informations sur [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)], consultez [FAQ AlwaysOn pour SQL Server 2012 (http://msdn.microsoft.com/sqlserver/gg508768)](http://msdn.microsoft.com/sqlserver/gg508768).  
+ Pour des informations générales sur [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)], consultez [Forum aux questions sur AlwaysOn pour SQL Server 2012 (http://msdn.microsoft.com/sqlserver/gg508768)](http://msdn.microsoft.com/sqlserver/gg508768).  
   
    
   
-##  <a name="bkmk_requirements"></a> Configuration requise pour l’utilisation de Reporting Services et les groupes de disponibilité AlwaysOn  
+##  <a name="bkmk_requirements"></a> Conditions d’utilisation de Reporting Services et les groupes de disponibilité AlwaysOn  
  Pour utiliser [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] avec [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)], vous devez télécharger et installer un correctif pour .Net 3.5 SP1. Ce correctif ajoute une prise en charge au client SQL concernant les fonctionnalités de groupes de disponibilité et la prise en charge des propriétés de chaîne de connexion **ApplicationIntent** et **MultiSubnetFailover**. Si ce correctif n'est pas installé sur chaque ordinateur qui héberge un serveur de rapports, les utilisateurs qui essaient d'afficher un aperçu des rapports recevront un message d'erreur similaire à celui ci-dessous et ce message sera enregistré dans le fichier journal de traces du serveur de rapports :  
   
 > **Message d'erreur :** « Mot clé non pris en charge : applicationintent. »  
@@ -58,7 +57,7 @@ ms.locfileid: "36052928"
   
  La chaîne de connexion peut également contenir de nouvelles propriétés de connexion AlwaysOn qui configurent les demandes de requêtes de rapport afin qu'elles utilisent un réplica secondaire pour la création de rapports en lecture seule. L'utilisation d'un réplica secondaire pour les demandes de création de rapports réduit la charge sur un réplica principal en lecture-écriture. L'illustration suivante est un exemple d'une configuration de groupe de disponibilité à trois réplicas dans laquelle les chaînes de connexion de source de données [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] ont été configurées avec ApplicationIntent=ReadOnly. Dans cet exemple, les demandes de requêtes de rapports sont envoyées à un réplica secondaire, et non au réplica principal.  
   
- ![Source de données SSRS à l’aide de groupes AG](../../media/rs-alwayson-basic.gif "SSRS de source de données à l’aide de groupes AG")  
+ ![Source de données SSRS à l’aide de groupes AG](../../media/rs-alwayson-basic.gif "source de données SSRS à l’aide de groupes AG")  
   
  Voici un exemple de chaîne de connexion, dans laquelle [AvailabilityGroupListenerName] correspond au **Nom DNS de l’écouteur** qui a été configuré au moment de la création des réplicas :  
   

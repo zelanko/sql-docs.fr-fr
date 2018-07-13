@@ -1,5 +1,5 @@
 ---
-title: Contenu du modèle d’exploration de données pour les modèles de Clustering (Analysis Services - Exploration de données) | Documents Microsoft
+title: Contenu du modèle d’exploration de données pour les modèles de Clustering (Analysis Services - Exploration de données) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - nearest neighbor [Data Mining]
 - clustering [Data Mining]
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - clustering algorithms [Analysis Services]
 ms.assetid: aed1b7d3-8f20-4eeb-b156-0229f942cefd
 caps.latest.revision: 15
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 19b4b4192fd38fe4e3bab142c6a327e4c2510d5d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: dc2d9ce1c0581d067b8a0a9be0ad52643ee6287a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36051843"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37153310"
 ---
 # <a name="mining-model-content-for-clustering-models-analysis-services---data-mining"></a>Contenu du modèle d'exploration de données pour les modèles de clustering (Analysis Services - Exploration de données)
   Cette rubrique décrit le contenu du modèle d'exploration de données qui est spécifique aux modèles qui utilisent l'algorithme de gestion de clusters Microsoft. Pour obtenir une explication générale du contenu du modèle d’exploration de données pour tous les types de modèles, consultez [Mining Model Content &#40;Analysis Services - Data Mining&#41;](mining-model-content-analysis-services-data-mining.md).  
@@ -32,7 +32,7 @@ ms.locfileid: "36051843"
 ## <a name="understanding-the-structure-of-a-clustering-model"></a>Présentation de la structure d'un modèle de clustering  
  Un modèle de clustering a une structure simple. Chaque modèle a un nœud parent unique qui représente le modèle et ses métadonnées, et chaque nœud parent possède une liste plate de clusters (NODE_TYPE = 5). Cette organisation est illustrée dans l'image suivante.  
   
- ![structure du contenu de modèle pour le clustering](../media/modelcontentstructure-clust.gif "structure du contenu de modèle pour le clustering")  
+ ![structure du contenu du modèle pour le clustering](../media/modelcontentstructure-clust.gif "structure du contenu du modèle pour le clustering")  
   
  Chaque nœud enfant représente un cluster unique et contient des statistiques détaillées sur les attributs des cas dans ce cluster, notamment le nombre de cas dans le cluster et la distribution des valeurs qui distinguent le cluster d'autres clusters.  
   
@@ -54,7 +54,7 @@ ms.locfileid: "36051843"
 > [!NOTE]  
 >  La variance représente la variance totale pour le cluster. Lorsque la valeur de la variance est faible, cela signifie que la plupart des valeurs dans la colonne sont assez proches de la moyenne. Pour obtenir l'écart type, calculez la racine carrée de la variance.  
   
- Notez que pour chacun des attributs est un `Missing` type valeur qui indique le nombre de cas ne possèdent pas de données pour cet attribut. Les données manquantes peuvent être importantes et affecter les calculs de différentes manières en fonction du type de données. Pour plus d’informations, consultez [Valeurs manquantes &#40;Analysis Services – Exploration de données&#41;](missing-values-analysis-services-data-mining.md).  
+ Notez que pour chacun des attributs est un `Missing` type valeur qui indique le nombre de cas n’avaient aucune donnée pour cet attribut. Les données manquantes peuvent être importantes et affecter les calculs de différentes manières en fonction du type de données. Pour plus d’informations, consultez [Valeurs manquantes &#40;Analysis Services – Exploration de données&#41;](missing-values-analysis-services-data-mining.md).  
   
 ## <a name="model-content-for-a-clustering-model"></a>Contenu du modèle pour un modèle de clustering  
  Cette section fournit des informations et des exemples pour les colonnes du contenu du modèle d'exploration de données qui s'appliquent aux modèles de clustering.  

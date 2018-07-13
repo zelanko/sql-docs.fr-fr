@@ -1,5 +1,5 @@
 ---
-title: Déclencheurs CLR | Documents Microsoft
+title: Déclencheurs CLR | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -27,18 +27,18 @@ helpviewer_keywords:
 - transactions [CLR integration]
 ms.assetid: 302a4e4a-3172-42b6-9cc0-4a971ab49c1c
 caps.latest.revision: 67
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 0f2f0d4d3c7dbe6ed46e169645de057492d55c42
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: c6702a9a3851e7ce41862f8f314d9aebdb7a5745
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36052053"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37160990"
 ---
 # <a name="clr-triggers"></a>Déclencheurs CLR
-  En raison de l'intégration de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] au CLR (Common Language Runtime) [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)], vous pouvez utiliser n'importe quel langage [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] pour créer des déclencheurs CLR. Cette section couvre des informations spécifiques aux déclencheurs implémentés avec l'intégration du CLR. Pour obtenir une description complète des déclencheurs, consultez [les déclencheurs DDL](../../relational-databases/triggers/ddl-triggers.md).  
+  En raison de l'intégration de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] au CLR (Common Language Runtime) [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)], vous pouvez utiliser n'importe quel langage [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] pour créer des déclencheurs CLR. Cette section couvre des informations spécifiques aux déclencheurs implémentés avec l'intégration du CLR. Pour obtenir une description complète des déclencheurs, consultez [déclencheurs DDL](../../relational-databases/triggers/ddl-triggers.md).  
   
 ## <a name="what-are-triggers"></a>Que sont les déclencheurs ?  
  Un déclencheur est un type spécial de procédure stockée qui s'exécute automatiquement lorsqu'un événement de langage s'exécute. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] intègre deux types généraux de déclencheurs : les déclencheurs du langage de manipulation de données (DML) et les déclencheurs du langage de définition de données (DDL). Les déclencheurs DML peuvent être utilisés lorsque des instructions `INSERT`, `UPDATE` ou `DELETE` modifient des données dans une table ou une vue spécifiée. Les déclencheurs DDL activent des procédures stockées en réponse à diverses instructions DDL, qui sont essentiellement des instructions qui commencent par `CREATE`, `ALTER` et `DROP`. Les déclencheurs DDL peuvent être utilisés dans des tâches d'administration telles que l'audit et la régulation d'opérations de base de données.  
@@ -54,7 +54,7 @@ ms.locfileid: "36052053"
   
 -   accéder aux informations sur les objets de base de données affectés par l'exécution d'instructions DDL.  
   
- Ces fonctionnalités sont fournies intrinsèquement dans le langage de requête, ou par la classe `SqlTriggerContext`. Pour plus d’informations sur les avantages de l’intégration du CLR et en choisissant entre le code managé et [!INCLUDE[tsql](../../includes/tsql-md.md)], consultez [vue d’ensemble de l’intégration CLR](../../relational-databases/clr-integration/clr-integration-overview.md).  
+ Ces fonctionnalités sont fournies intrinsèquement dans le langage de requête, ou par la classe `SqlTriggerContext`. Pour plus d’informations sur les avantages de l’intégration du CLR et le choix entre le code managé et [!INCLUDE[tsql](../../includes/tsql-md.md)], consultez [vue d’ensemble de l’intégration du CLR](../../relational-databases/clr-integration/clr-integration-overview.md).  
   
 ## <a name="using-the-sqltriggercontext-class"></a>Utilisation de la classe SqlTriggerContext  
  La classe `SqlTriggerContext` ne peut pas être construite publiquement et peut uniquement être obtenue en accédant à la propriété `SqlContext.TriggerContext` dans le corps d'un déclencheur CLR. La classe `SqlTriggerContext` peut être obtenue à partir du `SqlContext` actif en appelant la propriété `SqlContext.TriggerContext` :  
@@ -77,7 +77,7 @@ ms.locfileid: "36052053"
 -   Pour les déclencheurs DDL, la liste de valeurs TriggerAction possibles est considérablement plus longue. Pour plus d'informations, consultez la rubrique relative à l'énumération TriggerAction dans le Kit de développement logiciel (SDK) .NET Framework.  
   
 ### <a name="using-the-inserted-and-deleted-tables"></a>Utilisation des Tables Inserted et Deleted  
- Deux tables spéciales sont utilisées dans les instructions de déclencheur DML : la **inséré** table et la **supprimé** table. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] crée et gère automatiquement ces tables. Vous pouvez utiliser ces tables temporaires pour tester les effets de certaines modifications de données et définir des conditions pour les actions de déclencheur DML. Toutefois, vous ne pouvez pas modifier directement les données dans les tables.  
+ Deux tables spéciales sont utilisées dans les instructions de déclencheur DML : la **inséré** table et le **supprimé** table. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] crée et gère automatiquement ces tables. Vous pouvez utiliser ces tables temporaires pour tester les effets de certaines modifications de données et définir des conditions pour les actions de déclencheur DML. Toutefois, vous ne pouvez pas modifier directement les données dans les tables.  
   
  Déclencheurs CLR peuvent accéder à la **inséré** et **supprimé** tables via le fournisseur in-process CLR. Pour cela, un objet `SqlCommand` est obtenu de l'objet SqlContext. Exemple :  
   
@@ -138,7 +138,7 @@ reader.Close()
 ```  
   
 ### <a name="accessing-eventdata-for-clr-ddl-triggers"></a>Accès à EventData pour les déclencheurs DDL CLR  
- Comme les autres déclencheurs, les déclencheurs DDL activent des procédures stockées en réponse à un événement. Mais contrairement aux déclencheurs DML, ils ne sont pas activent en réponse à mettre à jour, insérer ou supprimer des instructions sur une table ou vue. Au lieu de cela, ils sont activés en réponse à diverses instructions DDL, qui sont essentiellement des instructions qui commencent par CREATE, ALTER et DROP. Les déclencheurs DDL peuvent être utilisés dans des tâches d'administration telles que l'audit et l'analyse des opérations de base de données et des modifications de schéma.  
+ Comme les autres déclencheurs, les déclencheurs DDL activent des procédures stockées en réponse à un événement. Mais contrairement aux déclencheurs DML, ils ne sont pas activés en réponse à mettre à jour, insérer ou supprimer des instructions sur une table ou vue. Au lieu de cela, ils sont activés en réponse à diverses instructions DDL, qui sont essentiellement des instructions qui commencent par CREATE, ALTER et DROP. Les déclencheurs DDL peuvent être utilisés dans des tâches d'administration telles que l'audit et l'analyse des opérations de base de données et des modifications de schéma.  
   
  Les informations sur un événement qui activent un déclencheur DDL sont disponibles dans la propriété `EventData` de la classe `SqlTriggerContext`. Cette propriété contient une valeur `xml`. Le schéma xml comprend des informations sur :  
   
@@ -235,7 +235,7 @@ End Class
  Dans cet exemple, imaginez le scénario suivant : vous laissez l'utilisateur entrer l'ID de son choix, mais vous souhaitez connaître les utilisateurs qui ont spécifiquement entré une adresse de messagerie en tant qu'ID. Le déclencheur suivant détecterait cette information et l'enregistrerait dans une table d'audit.  
   
 > [!NOTE]  
->  L'envoi de résultats et ds messages par le biais de l'objet `SqlPipe` est montré ici à titre indicatif uniquement. Cette opération est généralement déconseillée pour le code de production. Les données supplémentaires retournées peuvent être des erreurs d’application inattendues et entraîner un  
+>  L'envoi de résultats et ds messages par le biais de l'objet `SqlPipe` est montré ici à titre indicatif uniquement. Cette opération est généralement déconseillée pour le code de production. Données supplémentaires retournées peuvent être des erreurs d’application inattendues et générer pour  
   
 ```csharp  
 using System;  
@@ -485,7 +485,7 @@ GO CREATE TABLE UserNameAudit
 )  
 ```  
   
- Le [!INCLUDE[tsql](../../includes/tsql-md.md)] instruction qui crée le déclencheur dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] est comme suit et suppose que l’assembly **SQLCLRTest** est déjà inscrit dans le courant [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] base de données.  
+ Le [!INCLUDE[tsql](../../includes/tsql-md.md)] instruction qui crée le déclencheur dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se présente comme suit et suppose que l’assembly **SQLCLRTest** est déjà inscrit dans le courant [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] base de données.  
   
 ```  
 CREATE TRIGGER EmailAudit  
@@ -665,7 +665,7 @@ DROP TABLE Table1;
  [Déclencheurs DML](../../relational-databases/triggers/dml-triggers.md)   
  [Déclencheurs DDL](../../relational-databases/triggers/ddl-triggers.md)   
  [TRY...CATCH &#40;Transact-SQL&#41;](/sql/t-sql/language-elements/try-catch-transact-sql)   
- [Création d’objets de base de données avec le Common Language Runtime &#40;CLR&#41; Integration](../../relational-databases/clr-integration/database-objects/building-database-objects-with-common-language-runtime-clr-integration.md)   
+ [Création d’objets de base de données avec Common Language Runtime &#40;CLR&#41; intégration](../../relational-databases/clr-integration/database-objects/building-database-objects-with-common-language-runtime-clr-integration.md)   
  [EVENTDATA &#40;Transact-SQL&#41;](/sql/t-sql/functions/eventdata-transact-sql)  
   
   

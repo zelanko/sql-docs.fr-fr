@@ -1,5 +1,5 @@
 ---
-title: Élément FontFlags (ASSL) | Documents Microsoft
+title: Élément FontFlags (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,18 +22,18 @@ helpviewer_keywords:
 - FontFlags element
 ms.assetid: ea608da9-ab05-42ab-8872-c52cd9f3f546
 caps.latest.revision: 36
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 93dfd53940270fb444dd797bfd4d085ab459d200
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: c1896d01c47f7c2e2fa4289f09c10ef859eff1d4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36052514"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37156840"
 ---
 # <a name="fontflags-element-assl"></a>Élément FontFlags (ASSL)
-  Décrit les caractéristiques des polices d’affichage de la [CalculationProperty](../objects/calculationproperty-element-assl.md) ou [mesure](../objects/measure-element-assl.md) élément parent.  
+  Décrit les caractéristiques d’affichage liées à la police de la [CalculationProperty](../objects/calculationproperty-element-assl.md) ou [mesure](../objects/measure-element-assl.md) élément parent.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -62,7 +62,7 @@ ms.locfileid: "36052514"
 |Éléments enfants|None|  
   
 ## <a name="remarks"></a>Notes  
- Le `FontFlags` propriété contient une expression MDX (Multidimensional Expressions) et s’applique aux `CalculationProperty` les éléments qui ont un [CalculationType](calculationtype-element-assl.md) de *membre* ou *cellules* .  
+ Le `FontFlags` propriété contient une expression MDX (Multidimensional Expressions) et s’applique aux `CalculationProperty` éléments qui ont un [CalculationType](calculationtype-element-assl.md) de *membre* ou *cellules* .  
   
  Les éléments qui correspondent aux parents de `FontFlags` dans le modèle d’objet objets AMO (Analysis Management) sont <xref:Microsoft.AnalysisServices.CalculationProperty> et <xref:Microsoft.AnalysisServices.Measure>.  
   

@@ -1,5 +1,5 @@
 ---
-title: Type de données CubeDimensionBinding (ASSL) | Documents Microsoft
+title: Type de données CubeDimensionBinding (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - CubeDimensionBinding data type
 ms.assetid: 7288e345-4a3e-4197-82e9-9daa38f6e928
 caps.latest.revision: 40
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 44e652f281b6c5164b4ccc44fe85ed2b0a0b5a01
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: e511f26166e7f8457b2423df2bd3030e695edde1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36052513"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37157340"
 ---
 # <a name="cubedimensionbinding-data-type-assl"></a>Type de données CubeDimensionBinding (ASSL)
   Définit un type de données dérivé qui représente la liaison d’un [Dimension](../objects/dimension-element-assl.md), [mesure](../objects/measure-element-assl.md), ou [MiningModel](../objects/miningmodel-element-assl.md) élément à une dimension de cube.  
@@ -64,13 +64,13 @@ ms.locfileid: "36052513"
 |Éléments dérivés|Consultez [de liaison](binding-data-type-assl.md)|  
   
 ## <a name="remarks"></a>Notes  
- Pour plus d’informations sur la `Binding` type, y compris les tableaux des objets Analysis Services Scripting Language (ASSL) de la `Binding` type et la hiérarchie d’héritage de `Binding` types, consultez [Type de liaison de données &#40;ASSL&#41;](binding-data-type-assl.md).  
+ Pour plus d’informations sur la `Binding` type, y compris les tableaux des objets Analysis Services Scripting Language (ASSL) de la `Binding` type et la hiérarchie d’héritage de `Binding` types, consultez [Type de données de liaison &#40;ASSL&#41;](binding-data-type-assl.md).  
   
  Pour une vue d’ensemble des liaisons de données dans ASSL, consultez [des Sources de données et des liaisons &#40;multidimensionnels SSAS&#41;](../../multidimensional-models/data-sources-and-bindings-ssas-multidimensional.md).  
   
  L’élément correspondant dans le modèle d’objet objets AMO (Analysis Management) est <xref:Microsoft.AnalysisServices.CubeDimensionBinding>.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Types de données de script langage XML Analysis Services &#40;ASSL&#41;](analysis-services-scripting-language-xml-data-types-assl.md)  
+ [Types Analysis Services Scripting Language XML données &#40;ASSL&#41;](analysis-services-scripting-language-xml-data-types-assl.md)  
   
   

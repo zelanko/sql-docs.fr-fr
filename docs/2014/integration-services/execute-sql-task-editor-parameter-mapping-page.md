@@ -1,5 +1,5 @@
 ---
-title: Exécutez l’éditeur de tâche SQL (Page mappage de paramètre) | Documents Microsoft
+title: Exécuter l’éditeur de tâche SQL (Page mappage de paramètre) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.executesqltask.parametermapping.f1
 helpviewer_keywords:
 - Execute SQL Task Editor
 ms.assetid: 8ebe020a-7921-46b2-8823-398748f379b2
 caps.latest.revision: 42
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 863ae3b186cc60c4d2d2e04308dd81023f653f12
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 4baffae0ada8cddc911561f63ca32f9b4b578283
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36052441"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37152780"
 ---
 # <a name="execute-sql-task-editor-parameter-mapping-page"></a>Éditeur de tâche d'exécution de requête SQL (page Mappage de paramètre)
   Utilisez la page **Mappage de paramètre** de la boîte de dialogue **Éditeur de tâche d’exécution de requêtes SQL** pour associer des variables à des paramètres dans une instruction SQL.  
@@ -63,7 +63,7 @@ ms.locfileid: "36052441"
 ## <a name="see-also"></a>Voir aussi  
  [Integration Services Error and Message Reference](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Éditeur de tâche SQL exécution &#40;Page Général&#41;](general-page-of-integration-services-designers-options.md)   
- [Éditeur de tâche SQL exécution &#40;Page de jeu de résultats&#41;](../../2014/integration-services/execute-sql-task-editor-result-set-page.md)   
+ [Éditeur de tâche SQL exécution &#40;Page ensemble de résultats&#41;](../../2014/integration-services/execute-sql-task-editor-result-set-page.md)   
  [Référence Transact-SQL &#40;moteur de base de données&#41;](/sql/t-sql/language-reference)  
   
   

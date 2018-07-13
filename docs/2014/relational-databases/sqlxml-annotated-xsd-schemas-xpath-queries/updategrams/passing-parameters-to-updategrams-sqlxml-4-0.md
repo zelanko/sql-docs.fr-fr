@@ -1,5 +1,5 @@
 ---
-title: Passage de paramètres aux codes (SQLXML 4.0) | Documents Microsoft
+title: Passage de paramètres aux codes (SQLXML 4.0) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -18,15 +18,15 @@ helpviewer_keywords:
 - null values [SQLXML]
 ms.assetid: 2354e6e7-1860-471f-8711-4e374c5a4ed2
 caps.latest.revision: 30
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: fc95715341b5e7bf0194b6167f399acca92238c5
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 899dc3b4ae0de1b616e5d93d80d437c53e2d63da
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36053029"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37148500"
 ---
 # <a name="passing-parameters-to-updategrams-sqlxml-40"></a>Passage de paramètres aux codes de mise à jour (updategrams) (SQLXML 4.0)
   Les codes de mise à jour sont des modèles ; par conséquent, vous pouvez leur passer des paramètres. Pour plus d’informations sur le passage de paramètres aux modèles, consultez [considérations de sécurité de mise à jour &#40;SQLXML 4.0&#41;](../security/updategram-security-considerations-sqlxml-4-0.md).  
@@ -37,7 +37,7 @@ ms.locfileid: "36053029"
 >  Dans `<sql:header>` et `<updg:header>`, vous devez spécifier `nullvalue` comme non qualifié, tandis que dans `<updg:sync>`, vous spécifiez `nullvalue` comme qualifié (par exemple, `updg:nullvalue`).  
   
 ## <a name="examples"></a>Exemples  
- Pour créer des exemples fonctionnels à l’aide de la procédure ci-après, vous devez respecter la configuration requise spécifiée dans [configuration requise pour exécuter les exemples de SQLXML](../../sqlxml/requirements-for-running-sqlxml-examples.md).  
+ Pour créer des exemples de travail utilisant les exemples suivants, vous devez respecter les exigences spécifiées dans [configuration requise pour exécuter les exemples de SQLXML](../../sqlxml/requirements-for-running-sqlxml-examples.md).  
   
  Avant d'utiliser les exemples de code de mise à jour, notez les points suivants :  
   

@@ -1,5 +1,5 @@
 ---
-title: Dimensions (onglet Structure de Cube, Concepteur de Cube) (Analysis Services - données multidimensionnelles) | Documents Microsoft
+title: Dimensions (onglet Structure de Cube, Concepteur de Cube) (Analysis Services - données multidimensionnelles) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.cubeeditor.cubebuilder.dimensionspane.f1
 ms.assetid: 37eb7525-b423-4df5-9e62-9f4680d47b9b
 caps.latest.revision: 20
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: baa3754ed3fe72c19324ae830edf5c2e46a218a5
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: ed541a6abd2a6a966df88440d280aa67a1688dca
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36052960"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37149160"
 ---
 # <a name="dimensions-cube-structure-tab-cube-designer-analysis-services---multidimensional-data"></a>Dimensions (onglet Structure de cube, Concepteur de cube) (Analysis Services - Données multidimensionnelles)
   Utilisez le volet **Dimensions** pour afficher et modifier les dimensions d’un cube, notamment les hiérarchies et les attributs sous l’onglet **Structure de cube** du Concepteur de cube.  
@@ -30,12 +30,12 @@ ms.locfileid: "36052960"
  **Hierarchies**  
  Cliquez pour afficher les dimensions de cube disponibles et leurs hiérarchies de cube associées.  
   
- Développez une dimension de cube et sélectionnez **modifier \<dimension >** pour afficher le Concepteur de dimensions et de modifier la dimension de base de données sur laquelle repose la dimension de cube. Pour plus d’informations sur le Concepteur de dimensions, consultez [Concepteur de dimensions &#40;Analysis Services - Données multidimensionnelles&#41;](dimension-designer-analysis-services-multidimensional-data.md).  
+ Développez une dimension de cube et sélectionnez **modifier \<dimension >** pour afficher le Concepteur de dimensions et modifier la dimension de base de données sur laquelle repose la dimension de cube. Pour plus d’informations sur le Concepteur de dimensions, consultez [Concepteur de dimensions &#40;Analysis Services - Données multidimensionnelles&#41;](dimension-designer-analysis-services-multidimensional-data.md).  
   
  **Attributs**  
  Cliquez pour afficher les dimensions de cube disponibles et leurs attributs de cube associés.  
   
- Développez une dimension de cube et sélectionnez **modifier \<dimension >** pour afficher le Concepteur de dimensions et de modifier la dimension de base de données sur laquelle repose la dimension de cube. Pour plus d’informations sur le Concepteur de dimensions, consultez [Concepteur de dimensions &#40;Analysis Services - Données multidimensionnelles&#41;](dimension-designer-analysis-services-multidimensional-data.md).  
+ Développez une dimension de cube et sélectionnez **modifier \<dimension >** pour afficher le Concepteur de dimensions et modifier la dimension de base de données sur laquelle repose la dimension de cube. Pour plus d’informations sur le Concepteur de dimensions, consultez [Concepteur de dimensions &#40;Analysis Services - Données multidimensionnelles&#41;](dimension-designer-analysis-services-multidimensional-data.md).  
   
 ## <a name="context-menu"></a>Menu contextuel  
  Les options suivantes sont disponibles dans le menu contextuel qui s’affiche quand vous cliquez avec le bouton droit de la souris sur le volet **Dimensions** :  

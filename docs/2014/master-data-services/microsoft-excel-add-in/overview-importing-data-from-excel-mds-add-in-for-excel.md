@@ -1,5 +1,5 @@
 ---
-title: Publication de données (complément MDS pour Excel) | Documents Microsoft
+title: Publication de données (complément MDS pour Excel) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: ea84a9aa-aeec-411b-ab8d-bc1b14f864a3
 caps.latest.revision: 8
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 39acbad0925e8dfc250fcd4cc3913dbaf0ff0771
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: f9fbee4ad70222c81f8f2fc40c460974f6f5ac05
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36052428"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37155060"
 ---
 # <a name="publishing-data-mds-add-in-for-excel"></a>Publication des données (Complément MDS pour Excel)
   Dans le [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)], publiez les données dans le référentiel MDS lorsque vous souhaitez les partager avec d’autres utilisateurs. Dès que les données sont publiées, elles peuvent être téléchargées par les autres utilisateurs du complément.  
@@ -55,7 +55,7 @@ ms.locfileid: "36052428"
   
 |Description de la tâche|Rubrique|  
 |----------------------|-----------|  
-|Publiez des données à partir de la feuille de calcul active vers le référentiel MDS.|[Publier des données à partir d’Excel vers MDS &#40;complément MDS pour Excel&#41;](import-data-from-excel-to-master-data-services-mds-add-in-for-excel.md)|  
+|Publiez des données à partir de la feuille de calcul active vers le référentiel MDS.|[Publier des données à partir d’Excel dans MDS &#40;complément MDS pour Excel&#41;](import-data-from-excel-to-master-data-services-mds-add-in-for-excel.md)|  
 |Supprimez une ligne du référentiel MDS et de la feuille de calcul en même temps.|[Supprimer une ligne &#40;complément MDS pour Excel&#41;](delete-a-row-mds-add-in-for-excel.md)|  
   
 ## <a name="related-content"></a>Contenu associé  

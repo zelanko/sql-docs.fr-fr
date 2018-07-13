@@ -1,5 +1,5 @@
 ---
-title: XML for Analysis Schema Rowsets | Documents Microsoft
+title: XML for Analysis Schema Rowsets | Microsoft Docs
 ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql-server-2014
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - schema rowsets [XML for Analysis]
 ms.assetid: 36e3ecfd-fcc3-415a-9c43-f59921d2468a
 caps.latest.revision: 32
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 391f3ab14aef3680b9590e73c5bc94cc2e13b3a4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 6c8125b3543e6f3c088ad8b7ae7dd5952d52df26
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36051154"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37159270"
 ---
 # <a name="xml-for-analysis-schema-rowsets"></a>XML for Analysis Schema Rowsets
   Le fournisseur [!INCLUDE[msCoName](../../../includes/msconame-md.md)] XML for Analysis (XMLA) inclut des ensembles de lignes de schéma qui retournent des métadonnées sur l'état du serveur, l'activité et des objets. La récupération de métadonnées est nécessaire si vous développez une application cliente qui se connecte à un modèle Analysis Services dont la structure et les caractéristiques sont variables.  
@@ -75,11 +75,11 @@ ms.locfileid: "36051154"
 |[DISCOVER_TRANSACTIONS, ensemble de lignes](discover-transactions-rowset.md)|Retourne l'ensemble actuel des transactions en attente sur le système.|  
 |[DISCOVER_XML_METADATA, ensemble de lignes](discover-xml-metadata-rowset.md)|Retourne un document XML qui décrit un objet demandé.|  
   
- <sup>1</sup> des ensembles de schéma répertoriés ici sont pris en charge par le fournisseur de source de données MSOLAP pour le [!INCLUDE[msCoName](../../../includes/msconame-md.md)] fournisseur XMLA.  
+ <sup>1</sup> tous les ensembles de lignes schéma répertoriés ici sont pris en charge par le fournisseur de source de données MSOLAP pour le [!INCLUDE[msCoName](../../../includes/msconame-md.md)] fournisseur XMLA.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Développement avec XMLA dans Analysis Services](../../multidimensional-models-scripting-language-assl-xmla/developing-with-xmla-in-analysis-services.md)   
- [Utilisez les vues de gestion dynamique &#40;DMV&#41; pour surveiller Analysis Services](../../instances/use-dynamic-management-views-dmvs-to-monitor-analysis-services.md)   
+ [Utiliser des vues de gestion dynamique &#40;DMV&#41; pour surveiller Analysis Services](../../instances/use-dynamic-management-views-dmvs-to-monitor-analysis-services.md)   
  [Récupération de métadonnées à partir d’une source de données analytiques](../../multidimensional-models-adomd-net-client/retrieving-metadata-from-an-analytical-data-source.md)  
   
   

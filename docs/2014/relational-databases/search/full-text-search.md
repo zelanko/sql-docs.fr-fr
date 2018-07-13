@@ -5,23 +5,22 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-search
+ms.technology: search
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - full-text search [SQL Server]
 ms.assetid: a0ce315d-f96d-4e5d-b4eb-ff76811cab75
 caps.latest.revision: 47
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: d419f7a018817656ba9bb5910a71e2c2f810ae87
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 5b923b9b27fd7b67d61b25956f3d44102f1a5f79
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36052823"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37158020"
 ---
 # <a name="full-text-search"></a>Recherche en texte intégral
   La recherche en texte intégral dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] permet aux utilisateurs et aux applications d’exécuter des requêtes de texte intégral sur des données caractères dans des tables [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Avant de pouvoir exécuter des requêtes de texte intégral sur une table, l'administrateur de base de données doit créer un index de recherche en texte intégral sur la table. L'index de recherche en texte intégral inclut une ou plusieurs colonnes de caractères dans la table. Ces colonnes peuvent être un des types de données suivants : `char`, `varchar`, `nchar`, `nvarchar`, `text`, `ntext`, `image`, `xml`, ou `varbinary(max)` et FILESTREAM. Chaque index de recherche en texte intégral indexe une ou plusieurs colonnes de la table, et chaque colonne peut utiliser une langue spécifique.  
@@ -138,7 +137,7 @@ ms.locfileid: "36052823"
 ###  <a name="indexing"></a> Processus d’indexation de texte intégral  
  Au début d'une alimentation de texte intégral (également appelé analyse), le Moteur d'indexation et de recherche en texte intégral effectue l'envoi (push) de grands lots de données en mémoire et informe l'hôte de démon de filtre. L'hôte filtre et effectue une analyse lexicale des données et il convertit les données converties en listes de mots inversées. La recherche en texte intégral extrait ensuite les données converties des listes de mots, traite les données pour supprimer les mots vides et conserve les listes de mots pour un lot dans un ou plusieurs index inversés.  
   
- Lors de l’indexation des données stockées dans un `varbinary(max)` ou `image` colonne, le filtre qui implémente le **IFilter** extrait le texte en fonction du format de fichier spécifié pour ces données, l’interface (par exemple, [!INCLUDE[msCoName](../../includes/msconame-md.md)] Word). Dans certains cas, les composants de filtrage nécessitent la `varbinary(max)`, ou `image` données soient écrites dans le dossier de filtrage, au lieu d’être placé dans la mémoire.  
+ Lors de l’indexation des données stockées dans un `varbinary(max)` ou `image` colonne, le filtre, qui implémente le **IFilter** interface, extrait le texte en fonction du format de fichier spécifié pour ces données (par exemple, [!INCLUDE[msCoName](../../includes/msconame-md.md)] Word). Dans certains cas, les composants de filtrage nécessitent le `varbinary(max)`, ou `image` données être écrites dans le dossier de filtrage, au lieu d’être placé dans la mémoire.  
   
  Dans le cadre du traitement, les données de texte collectées sont transmises à un analyseur lexical pour décomposer le texte en jetons individuels ou mots clés. La langue utilisée pour la création de jetons peut être spécifiée au niveau de la colonne ou être identifiée au sein des données `varbinary(max)`, `image`, ou `xml` par le composant de filtrage.  
   
@@ -198,7 +197,7 @@ ms.locfileid: "36052823"
   
     -   [Alimenter des index de recherche en texte intégral](populate-full-text-indexes.md)  
   
-    -   [Gérer les index de recherche en texte intégral](../../database-engine/manage-full-text-indexes.md)  
+    -   [Gérer les index en texte intégral](../../database-engine/manage-full-text-indexes.md)  
   
     -   [Améliorer les performances des index de recherche en texte intégral](improve-the-performance-of-full-text-indexes.md)  
   
