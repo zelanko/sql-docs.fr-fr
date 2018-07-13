@@ -1,5 +1,5 @@
 ---
-title: Page de propriétés (Gestionnaire de rapports) Options d’instantanés | Documents Microsoft
+title: Page de propriétés (Gestionnaire de rapports) Options d’instantanés | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: f6641f59-5267-4f57-8957-63b93d1a9679
 caps.latest.revision: 30
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: b89de53a1e17413f8ebe6869122ea9d4b61af6dc
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: a221095f73da5d68256f91298e3bb0d35ee4121b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36051427"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37218869"
 ---
 # <a name="snapshot-options-properties-page-report-manager"></a>Page de propriétés Options d'instantanés (Gestionnaire de rapports)
   La page de propriétés Options d'instantanés vous permet de planifier les instantanés de rapport qui doivent être ajoutés à l'historique de rapport et de définir la limite du nombre d'instantanés de rapport qui sont stockés dans l'historique.  
@@ -44,7 +44,7 @@ ms.locfileid: "36051427"
  **Autoriser la création manuelle de l’historique de rapport**  
  Activez cette case à cocher pour ajouter des instantanés à l'historique de rapport en fonction des besoins. L'activation de cette case à cocher entraîne l'affichage du bouton **Nouvel instantané** dans la page Historique.  
   
- **Stocker tous les instantanés de l’exécution de rapport dans l’historique de rapport**  
+ **Store tous les instantanés de l’exécution de rapport dans l’historique de rapport**  
  Activez cette case à cocher pour copier un instantané de rapport que vous avez généré selon les propriétés d'exécution de rapport dans l'historique de rapport. Vous pouvez définir les propriétés d'exécution de rapport pour exécuter un rapport à partir d'un instantané générée. En définissant cette propriété d'historique de rapport, vous pouvez conserver un enregistrement de tous les instantanés des rapports générés au fil du temps en plaçant des copies de ces derniers dans un historique de rapport.  
   
  **Utiliser la planification suivante pour ajouter des instantanés à l’historique de rapport**  
@@ -67,7 +67,7 @@ ms.locfileid: "36051427"
 ## <a name="see-also"></a>Voir aussi  
  [Ajouter un instantané à l’historique de rapport &#40;le Gestionnaire de rapports&#41;](report-server/add-a-snapshot-to-report-history-report-manager.md)   
  [Le Gestionnaire de rapports &#40;SSRS en Mode natif&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
- [Créer, modifier et supprimer les instantanés de l’historique de rapport](report-server/create-modify-and-delete-snapshots-in-report-history.md)   
- [Aide (F1) de gestionnaire de rapports](../../2014/reporting-services/report-manager-f1-help.md)  
+ [Créer, modifier et supprimer des instantanés dans l’historique de rapport](report-server/create-modify-and-delete-snapshots-in-report-history.md)   
+ [Aide (F1) du Gestionnaire de rapports](../../2014/reporting-services/report-manager-f1-help.md)  
   
   

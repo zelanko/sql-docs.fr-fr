@@ -1,5 +1,5 @@
 ---
-title: Procédure pas à pas de dépendance réseau diagramme (compléments d’exploration de données) | Documents Microsoft
+title: Procédure pas à pas de dépendance réseau diagramme (compléments d’exploration de données) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Visio shapes, dependency network
 - shapes, data mining
@@ -19,18 +19,18 @@ helpviewer_keywords:
 - dependency network
 ms.assetid: aac732a8-5262-4649-b7d7-3ccf6f9cfa8b
 caps.latest.revision: 14
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 855c66124c5084e58432f605d38a4cbb53832c74
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 3efc5633a31af6d26fa7ae4abc5ce5b97f8542b1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36052535"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37218459"
 ---
 # <a name="dependency-network-diagram-walkthrough-data-mining-add-ins"></a>Procédure pas à pas Diagramme Réseau de dépendances (Compléments d'exploration de données)
-  Plusieurs types de modèles d'exploration de données différents utilisent un graphique de réseau comme manière d'explorer les relations dans les données. Vous pouvez importer ces modèles dans Visio à l’aide du **réseau de dépendances** mettre en forme et ensuite continuer à personnaliser et d’améliorer la disposition. Le **formes d’exploration de données pour Visio** incluent les contrôles personnalisés suivants pour l’utilisation des diagrammes de réseau de dépendance :  
+  Plusieurs types de modèles d'exploration de données différents utilisent un graphique de réseau comme manière d'explorer les relations dans les données. Vous pouvez importer ces modèles dans Visio à l’aide du **réseau de dépendances** mettre en forme, puis continuer de personnaliser et d’améliorer la disposition. Le **formes d’exploration de données pour Visio** incluent les contrôles personnalisés suivants pour travailler avec des diagrammes de réseau de dépendance :  
   
 -   Contrôles de rendu du graphique de réseau  
   
@@ -41,11 +41,11 @@ ms.locfileid: "36052535"
      Ces options sont ajoutées à l'espace de travail Visio pour vous aider à interagir avec le graphique de réseau de dépendances.  
   
 ## <a name="build-a-dependency-network-graph"></a>Créer un graphique de réseau de dépendances  
- Vous déposez une forme sur la page Visio pour lancer le **dépendance Net Assistant Création de forme Visio** et définir les options du diagramme.  
+ Vous déposez une forme sur la page Visio pour lancer le **Assistant forme Visio réseau de dépendances** et définir les options du diagramme.  
   
 #### <a name="use-the-dependency-net-visio-shape-wizard"></a>Utiliser l'Assistant Création de forme Réseau de dépendances Visio  
   
-1.  Si vous ne voyez pas **formes d’exploration de données Microsoft** dans le **formes** , cliquez sur **formes plus**, sélectionnez **ouvrir un gabarit**, puis ouvrez la modèle à partir de l’emplacement d’installation par défaut.  
+1.  Si vous ne voyez pas **formes d’exploration de données Microsoft** dans le **formes** , cliquez sur **formes plus**, sélectionnez **ouvrir un gabarit**, puis ouvrez le modèle à partir de l’emplacement d’installation par défaut.  
   
      \<lecteur > : \Program files (x85) \Microsoft SQL Server 2012 DM Add-Ins  
   
@@ -57,7 +57,7 @@ ms.locfileid: "36052535"
   
 5.  Sélectionnez un modèle d’exploration de données approprié, puis cliquez sur **suivant**.  
   
-     Pour sélectionner un modèle adéquat, vous pouvez consulter le nom, description, colonnes et type de données de la **propriétés** volet.  
+     Pour sélectionner un modèle adéquat, vous pouvez consulter le nom, description, colonnes et type de données dans le **propriétés** volet.  
   
      Cette forme prend en charge les modèles créés à l'aide des algorithmes suivants :  
   
@@ -94,11 +94,11 @@ ms.locfileid: "36052535"
   
  [espace réservé aux graphiques]  
   
-1.  Utilisez le **panoramique et Zoom** contrôle, dans le **volet** zone de Visio **vue** ruban, pour vous concentrer sur une section du graphique et vous déplacer dans le diagramme.  
+1.  Utilisez le **panoramique et Zoom** contrôle, dans le **volet** zone de Visio **vue** ruban pour vous concentrer sur une section du graphique et vous déplacer dans le diagramme.  
   
-2.  Faire des essais avec différentes dispositions de graphique fournie par Visio **Re-Layout Page** option.  
+2.  Faire des essais avec différentes dispositions de graphique fournie par le Visio **Redisposition** option.  
   
-3.  Cliquez sur le **compléments** de ruban et afficher une barre d’outils personnalisées utilisées pour travailler avec des diagrammes d’exploration de données :  
+3.  Cliquez sur le **Add-Ins** ruban et afficher une barre d’outils personnalisées utilisées pour travailler avec des diagrammes d’exploration de données :  
   
      **Mise en page**  
      Optimise la disposition des nœuds sur la page et modifie l'affichage pour que tous les nœuds soient visibles.  

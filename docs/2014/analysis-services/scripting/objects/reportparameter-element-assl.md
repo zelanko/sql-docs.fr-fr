@@ -1,5 +1,5 @@
 ---
-title: Élément ReportParameter (ASSL) | Documents Microsoft
+title: Élément ReportParameter (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,18 +22,18 @@ helpviewer_keywords:
 - ReportParameter element
 ms.assetid: 653a5c64-f1af-4796-bb7b-b44a40e52901
 caps.latest.revision: 35
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 58aeafeaee114c1d08d0ad8b0119bee2dc5d5dea
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: e1ceef5a3794aaaaec6ac24d9aca6e66384267ce
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36052032"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37197821"
 ---
 # <a name="reportparameter-element-assl"></a>Élément ReportParameter (ASSL)
-  Contient le nom et la valeur d’un paramètre est passé à une [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] rapport en cours d’exécution.  
+  Contient le nom et la valeur d’un paramètre qui est passé à un [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] rapport en cours d’exécution.  
   
 ## <a name="syntax"></a>Syntaxe  
   

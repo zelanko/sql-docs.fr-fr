@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine-imoltp
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 690b70b7-5be1-4014-af97-54e531997839
 caps.latest.revision: 12
-author: stevestein
-ms.author: sstein
-manager: jhubbard
-ms.openlocfilehash: f40638174ebd432a96ce61ea27805ea77fd5a151
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: 65d72bac30b1a531d332e88c4b8e59afc73f7afb
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36053310"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37193335"
 ---
 # <a name="altering-memory-optimized-tables"></a>Modification des tables à mémoire optimisée
   L'exécution d'opérations ALTER sur les tables mémoire optimisées n'est pas prise en charge. Cela comprend les opérations telles que la modification du nombre de compartiments, l'ajout ou la suppression d'un index et l'ajout ou la suppression d'une colonne. Cette rubrique fournit des instructions pour mettre à jour des tables mémoire optimisées.  
@@ -73,7 +73,7 @@ ms.locfileid: "36053310"
     select * into dbo.T_copy from dbo.T  
     ```  
   
-     S’il existe suffisamment de mémoire disponible, `T_copy` peut être une table optimisée en mémoire, ce qui rend les données plus rapide de copier.<sup> 2</sup>  
+     S’il existe suffisamment de mémoire disponible, `T_copy` peut être une table optimisée en mémoire, ce qui rend les données à copier plus rapidement.<sup> 2</sup>  
   
 5.  Supprimez les objets liés au schéma référençant la table d'origine.  
   
@@ -87,14 +87,14 @@ ms.locfileid: "36053310"
   
 10. Démarrez la charge de travail sur `T`.  
   
- <sup>1</sup> Notez que `T_copy` est conservée sur le disque dans cet exemple. Si une sauvegarde de `T` est disponible, `T_copy` peut être une table temporaire ou non durable.  
+ <sup>1</sup> Notez que `T_copy` est rendu persistant sur le disque dans cet exemple. Si une sauvegarde de `T` est disponible, `T_copy` peut être une table temporaire ou non durable.  
   
  <sup>2</sup> qu’il doit y avoir suffisamment de mémoire pour `T_copy`. La mémoire n'est pas libérée immédiatement lors de l'exécution de `DROP TABLE`. Si la table `T_copy` est mémoire optimisée, la mémoire disponible doit être suffisante pour deux copies supplémentaires de la table `T`. Si la table `T_copy` est sur disque, la mémoire disponible doit être suffisante pour une copie supplémentaire de la table `T`, car le garbage collector doit rattraper son retard après suppression de l'ancienne version de `T`.  
   
 ## <a name="changing-schema-powershell"></a>Modification du schéma (PowerShell)  
  Les scripts PowerShell suivants préparent et génèrent les modifications de schéma en créant un script des autorisations de table et associées.  
   
- Utilisation : prepare_schema_change.ps1 *nom_serveur ** db_name`schema_name`nom_table*  
+ Utilisation : prepare_schema_change.ps1 *nom_serveur ** db_name`schema_name`table_name*  
   
  Ce script accepte comme argument une table et génère le script de l'objet et de ses autorisations et des objets de référencement liés au schéma et leurs autorisations dans le dossier actif. Au total, sept scripts sont générés pour la mise à jour du schéma de la table d'entrée.  
   
@@ -112,7 +112,7 @@ ms.locfileid: "36053310"
   
 -   Supprimez la table temporaire.  
   
- Le script de l'étape 4 doit être mis à jour afin de refléter les modifications de schéma souhaitées. Si des modifications sont effectuées dans les colonnes de la table, les scripts pour les étapes 5 (copiez les données à partir de la table temporaire) et 6 (recréez les procédures stockées) doivent être mis à jour en fonction des besoins.  
+ Le script de l'étape 4 doit être mis à jour afin de refléter les modifications de schéma souhaitées. Si des modifications sont apportées dans les colonnes de la table, les scripts pour les étapes 5 (copier des données à partir de la table temporaire) et 6 (recréez les procédures stockées) doivent être mis à jour si nécessaire.  
   
 ```tsql  
 # Prepare for schema changes by scripting out the table, as well as associated permissions  
@@ -228,7 +228,7 @@ write-host ""
   
  Le script PowerShell suivant exécute les modifications de schéma qui ont fait l'objet d'un script dans l'exemple précédent. Ce script accepte comme argument une table et exécute les scripts de modification de schéma qui ont été générés pour cette table et les procédures stockées associées.  
   
- Utilisation : execute_schema_change.ps1 *nom_serveur ** db_name`schema_name`nom_table*  
+ Utilisation : execute_schema_change.ps1 *nom_serveur ** db_name`schema_name`table_name*  
   
 ```tsql  
 # stop execution once an error occurs  

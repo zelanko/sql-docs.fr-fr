@@ -5,10 +5,9 @@ ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-udf
+ms.technology: ''
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - built-in functions [SQL Server]
 - nondeterministic functions
@@ -16,16 +15,15 @@ helpviewer_keywords:
 - deterministic functions
 - user-defined functions [SQL Server], deterministic
 ms.assetid: 2f3ce5f5-c81c-4470-8141-8144d4f218dd
-caps.latest.revision: 41
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 11780f633b64f7eaa2cfe495bbe90f7c6ba2a832
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: rothja
+ms.author: jroth
+manager: craigg
+ms.openlocfilehash: f7b60f44d1ee8cf4224fd4b4bd24a0cba5862e4c
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36043790"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37423499"
 ---
 # <a name="deterministic-and-nondeterministic-functions"></a>Fonctions déterministes et non déterministes
   Les fonctions déterministes retournent toujours le même résultat quel que soit le moment auquel elles sont appelées avec un ensemble spécifique de valeurs d'entrée et sur la base du même état de la base de données. Les fonctions non déterministes peuvent retourner différents résultats chaque fois qu'elles sont appelées avec un ensemble spécifique de valeurs d'entrée, même si l'état de la base de données à laquelle elles accèdent demeure inchangé. Par exemple, la fonction AVG retourne toujours le même résultat pour les conditions ci-dessus, mais la fonction GETDATE, qui retourne la valeur datetime actuelle, retourne toujours un résultat différent.  
@@ -61,7 +59,7 @@ ms.locfileid: "36043790"
 |--------------|--------------|  
 |Toutes les fonctions d'agrégation|Toutes les fonctions d'agrégation sont déterministes, sauf si elles sont spécifiées avec les clauses OVER et ORDER BY. Pour obtenir la liste de ces fonctions, consultez [Fonctions d’agrégation &#40;Transact-SQL&#41;](/sql/t-sql/functions/aggregate-functions-transact-sql).|  
 |CAST|Déterministe sauf si elle est utilisée avec `datetime`, `smalldatetime` ou `sql_variant`.|  
-|CONVERT|Déterministe sauf dans l'un des cas suivants :<br /><br /> Le type de source est `sql_variant`.<br /><br /> Type de cible est `sql_variant` et son type de source est non déterministe.<br /><br /> Le type de source ou de cible est `datetime` ou `smalldatetime`, l'autre type de cible ou de source est une chaîne de caractères et un style non déterministe est spécifié. Pour être déterministe, le paramètre de style doit être une constante. De plus, les styles inférieurs ou égaux à 100 sont non-déterministes, à l'exception des styles 20 et 21. Les styles supérieurs à 100 sont déterministes, à l'exception des styles 106, 107, 109 et 113.|  
+|CONVERT|Déterministe sauf dans l'un des cas suivants :<br /><br /> Le type de source est `sql_variant`.<br /><br /> Type de cible est `sql_variant` et son type source est non déterministe.<br /><br /> Le type de source ou de cible est `datetime` ou `smalldatetime`, l'autre type de cible ou de source est une chaîne de caractères et un style non déterministe est spécifié. Pour être déterministe, le paramètre de style doit être une constante. De plus, les styles inférieurs ou égaux à 100 sont non-déterministes, à l'exception des styles 20 et 21. Les styles supérieurs à 100 sont déterministes, à l'exception des styles 106, 107, 109 et 113.|  
 |CHECKSUM|Déterministe, sauf CHECKSUM(*).|  
 |ISDATE|Déterministe uniquement si utilisé avec la fonction CONVERT, si le paramètre de style CONVERT est spécifié et si le style est différent de 0, 100, 9 ou 109.|  
 |RAND|RAND est déterministe uniquement quand un paramètre *seed* est spécifié.|  

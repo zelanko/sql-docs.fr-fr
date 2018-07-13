@@ -1,13 +1,11 @@
 ---
-title: L’exécution de requêtes (ODBC) | Documents Microsoft
+title: L’exécution de requêtes (ODBC) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -18,18 +16,18 @@ helpviewer_keywords:
 - queries [ODBC]
 ms.assetid: d935bcba-8ce6-4159-8395-6c86431602ad
 caps.latest.revision: 31
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 1ac76e677ba7afba9cff2523286a14c6b754dc48
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: 552a9d37d06ba145e371650dd56027ca38eb7c20
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36041595"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37416278"
 ---
 # <a name="executing-queries-odbc"></a>Exécution de requêtes (ODBC)
-  Après qu'une application ODBC a initialisé un handle de connexion et s'est connectée avec une source de données, elle alloue un ou plusieurs descripteurs d'instruction sur le handle de connexion. L’application peut alors exécuter [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instructions sur le handle d’instruction. La séquence générale des événements lors de l'exécution d'une instruction SQL est :  
+  Après qu'une application ODBC a initialisé un handle de connexion et s'est connectée avec une source de données, elle alloue un ou plusieurs descripteurs d'instruction sur le handle de connexion. L’application peut alors exécuter [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instructions sur le descripteur d’instruction. La séquence générale des événements lors de l'exécution d'une instruction SQL est :  
   
 1.  Définition des attributs de l'instruction requis.  
   
@@ -47,7 +45,7 @@ ms.locfileid: "36041595"
 INSERT INTO MyTable VALUES (?, ?, ?)  
 ```  
   
- Chaque marqueur de paramètre peut alors être lié à une variable de programme en appelant [SQLBindParameter](../native-client-odbc-api/sqlbindparameter.md).  
+ Chaque marqueur de paramètre peut ensuite être liée à une variable de programme en appelant [SQLBindParameter](../native-client-odbc-api/sqlbindparameter.md).  
   
  Après l'exécution de toutes les instructions SQL et le traitement de leurs jeux de résultats, l'application libère le descripteur d'instruction.  
   

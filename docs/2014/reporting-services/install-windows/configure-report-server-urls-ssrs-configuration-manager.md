@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Report Server Windows service, virtual directories
 - report servers [Reporting Services], virtual directories
@@ -18,20 +18,20 @@ ms.assetid: a0134ef0-086c-443e-93b9-7213a3d76393
 caps.latest.revision: 7
 author: markingmyname
 ms.author: maghan
-manager: jhubbard
-ms.openlocfilehash: e16c0149e7d0a590d3bf89ce6632a654bcb233c7
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 085eaf6b8b21462f675d2eca2033cbf8cfa4efa3
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36052792"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37230599"
 ---
 # <a name="configure-report-server-urls--ssrs-configuration-manager"></a>Configurer des URL de serveurs de rapports (Gestionnaire de configuration de SSRS)
-  Dans [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], les URL sont utilisées pour accéder au service Web Report Server et Gestionnaire de rapports. Avant de pouvoir utiliser l'une et l'autre application, vous devez configurer au moins une URL pour le service Web et pour le Gestionnaire de rapports. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] fournit des valeurs par défaut pour les URL des deux applications qui s’accommodent bien à la plupart des scénarios de déploiement, dont les déploiements côte à côte avec d’autres applications et services web.  
+  Dans [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], URL sont utilisées pour accéder au service Web Report Server et Gestionnaire de rapports. Avant de pouvoir utiliser l'une et l'autre application, vous devez configurer au moins une URL pour le service Web et pour le Gestionnaire de rapports. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] fournit des valeurs par défaut pour les URL des deux applications qui s’accommodent bien à la plupart des scénarios de déploiement, dont les déploiements côte à côte avec d’autres applications et services web.  
   
 -   Si vous avez installé la configuration par défaut, les URL ont été créées automatiquement à l'aide des valeurs par défaut.  
   
--   Si vous utilisez l'outil de configuration de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] pour créer ou modifier les URL, vous pouvez accepter les valeurs par défaut pour une URL ou spécifier des valeurs personnalisées. Un lien de test de l'URL apparaît sur la page lorsque vous définissez l'URL afin que vous puissiez confirmer immédiatement que les paramètres vous avez spécifiés résultent en une connexion valide. Pour obtenir des instructions sur la façon de configurer et tester une URL, consultez [configurer une URL &#40;Gestionnaire de Configuration de SSRS&#41;](configure-a-url-ssrs-configuration-manager.md).  
+-   Si vous utilisez l'outil de configuration de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] pour créer ou modifier les URL, vous pouvez accepter les valeurs par défaut pour une URL ou spécifier des valeurs personnalisées. Un lien de test de l'URL apparaît sur la page lorsque vous définissez l'URL afin que vous puissiez confirmer immédiatement que les paramètres vous avez spécifiés résultent en une connexion valide. Pour obtenir des instructions détaillées sur la façon de configurer et tester une URL, consultez [configurer une URL &#40;Gestionnaire de Configuration de SSRS&#41;](configure-a-url-ssrs-configuration-manager.md).  
   
 ## <a name="defining-a-report-server-url"></a>Définition d'une URL de serveur de rapports  
  L'URL identifie précisément l'emplacement d'une instance d'une application du serveur de rapports sur votre réseau. Lorsque vous créez une URL de serveur de rapports, vous devez spécifier les éléments suivants.  
@@ -80,7 +80,7 @@ ms.locfileid: "36052792"
  [URL des fichiers de Configuration de &#40;Gestionnaire de Configuration de SSRS&#41;](urls-in-configuration-files-ssrs-configuration-manager.md)  
  Le fichier RSReportServer.config contient plusieurs entrées pour les réservations d'URL et les URL utilisées par le Gestionnaire de rapports et la remise du courrier électronique du serveur de rapports. Cette rubrique résume les paramètres de configuration d'URL afin que vous puissiez apprendre à les comparer.  
   
- [Réservations d’URL pour plusieurs instances des déploiements de serveur de rapports &#40;Gestionnaire de Configuration de SSRS&#41;](url-reservations-for-multi-instance-report-server-deployments.md)  
+ [Déploiements de serveur de rapports de réservations d’URL pour les instances multiples &#40;Gestionnaire de Configuration de SSRS&#41;](url-reservations-for-multi-instance-report-server-deployments.md)  
  Lorsque vous installez plusieurs instances de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] sur un même ordinateur, vous augmentez la probabilité de rencontrer une duplication d'URL lors de l'inscription. Pour éviter ces erreurs, suivez les recommandations de cette rubrique pour créer des réservations d'URL spécifiques à l'instance.  
   
 ## <a name="see-also"></a>Voir aussi  

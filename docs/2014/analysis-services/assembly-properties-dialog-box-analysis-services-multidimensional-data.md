@@ -1,5 +1,5 @@
 ---
-title: Boîte de dialogue Propriétés de assembly (Analysis Services - données multidimensionnelles) | Documents Microsoft
+title: Boîte de dialogue de propriétés assembly (Analysis Services - données multidimensionnelles) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.sqlserverstudio.assemblyproperties.f1
 ms.assetid: da1174d6-d82b-4337-ac19-7368dbd95a84
 caps.latest.revision: 19
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: fa00c8753e30926113d90881401a8b38e573e6b8
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 20a5837b112106952e649bc25fcda5a3d93ab3fa
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36052969"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37192579"
 ---
 # <a name="assembly-properties-dialog-box-analysis-services---multidimensional-data"></a>Boîte de dialogue Propriétés de l'assembly (Analysis Services - Données multidimensionnelles)
   Utilisez la boîte de dialogue **Propriétés de l'assembly** dans [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] pour définir les propriétés d'une référence d'assembly dans une base de données [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] . Cliquez avec le bouton droit sur un assembly dans **l’Explorateur d’objets** et sélectionnez **Propriétés** pour afficher la boîte de dialogue **Propriétés de l’assembly**.  

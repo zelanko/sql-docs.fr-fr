@@ -1,5 +1,5 @@
 ---
-title: Composant WebPart Visionneuse de rapports sur un Site SharePoint | Documents Microsoft
+title: Composant WebPart Visionneuse de rapports sur un Site SharePoint | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - SharePoint integration [Reporting Services], viewing reports
 - Web Parts [Reporting Services]
@@ -18,13 +18,13 @@ ms.assetid: b6341a73-172f-4632-a9e9-cc79fed3f36b
 caps.latest.revision: 13
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 6be315ce2da4f17ab821a97c3a82f615e84cc181
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 87498b7eca136eba037a8454416b875f5690cae3
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36052568"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37198479"
 ---
 # <a name="report-viewer-web-part-on-a-sharepoint-site"></a>Composant WebPart Visionneuse de rapports sur un site SharePoint
   Le composant WebPart Visionneuse de rapports est un composant WebPart personnalisé qui est installé par le complément [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] pour les produits SharePoint. Vous pouvez utiliser le composant WebPart pour afficher les rapports, naviguer parmi ces derniers, les imprimer et les exporter sur un serveur de rapports configuré pour s'exécuter en mode intégré SharePoint. Le composant WebPart Visionneuse de rapports est associé aux fichiers de définition (.rdl) de rapports qui sont traités par un [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] serveur de rapports. Vous ne pouvez pas l'utiliser avec d'autres documents de rapport que vous créez dans d'autres produits logiciels.  
@@ -53,7 +53,7 @@ ms.locfileid: "36052568"
  Dans le menu**Exporter** , la commande **Exporter** affiche les formats d’application associés aux extensions de rendu déployées sur un serveur de rapports. Pour déterminer si un format spécifique est disponible, vous pouvez ajouter ou supprimer une extension de rendu sur le serveur de rapports ; par ailleurs, vous pouvez également modifier les paramètres de configuration afin de supprimer un format d'exportation particulier de la liste. Vous pouvez également spécifier des paramètres de configuration sur le serveur de rapports afin de contrôler les formats disponibles. Vous pouvez modifier le comportement par défaut d'un format spécifique en ajoutant et en modifiant les paramètres de configuration de l'extension de rendu correspondante.  
   
 ### <a name="print-action-on-the-report-toolbar"></a>Action d'impression sur la barre d'outils Rapport  
- **Imprimer** sur la **Actions** menu est une fonctionnalité d’impression personnalisée qui est fournie par le biais [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]. Quand vous cliquez sur **Imprimer**, un contrôle d’impression ActiveX côté client est téléchargé sur l’ordinateur client. Dans la plupart des cas, l’utilisateur qui clique sur **Imprimer** doit avoir les autorisations d’administrateur sur l’ordinateur local. Il est usuel de restreindre les téléchargements de contrôles ActiveX aux utilisateurs qui disposent d'autorisations d'administrateur. Vous pouvez utiliser l'Administration centrale de SharePoint pour activer ou désactiver le téléchargement du contrôle d'impression côté client.  
+ **Imprimer** sur le **Actions** menu est les fonctionnalités d’impression personnalisées via [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]. Quand vous cliquez sur **Imprimer**, un contrôle d’impression ActiveX côté client est téléchargé sur l’ordinateur client. Dans la plupart des cas, l’utilisateur qui clique sur **Imprimer** doit avoir les autorisations d’administrateur sur l’ordinateur local. Il est usuel de restreindre les téléchargements de contrôles ActiveX aux utilisateurs qui disposent d'autorisations d'administrateur. Vous pouvez utiliser l'Administration centrale de SharePoint pour activer ou désactiver le téléchargement du contrôle d'impression côté client.  
   
 ### <a name="find-action-on-the-report-toolbar"></a>Action de Recherche sur la barre d'outils Rapport  
  La commande**Rechercher** du menu **Actions** permet d’accéder à un emplacement cible dans le rapport. Vous pouvez rechercher un contenu dans un rapport en tapant un mot ou une expression que vous souhaitez rechercher. La valeur maximale d'une chaîne de recherche est 256 caractères. Si votre recherche trouve une valeur correspondante dans le rapport, le focus est placé sur la partie du rapport qui contient cette valeur.  

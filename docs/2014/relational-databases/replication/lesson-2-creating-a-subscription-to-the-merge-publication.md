@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - replication [SQL Server], tutorials
 ms.assetid: 06722baa-9065-443e-b1d5-99036cf89074
 caps.latest.revision: 16
 author: craigg-msft
 ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: ad258c2be4e7df3ff353a9fd1a1f9e7c083991d0
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 94f58681e368ce3eff15a5b6ec78afbc7be2018f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36051924"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37258425"
 ---
 # <a name="lesson-2-creating-a-subscription-to-the-merge-publication"></a>Leçon 2 : Création d'un abonnement à la publication de fusion
   Dans cette leçon, vous allez créer l’abonnement à l’aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Puis, vous définirez les autorisations sur la base de données d'abonnement et génèrerez manuellement l'instantané filtré des données du nouvel abonnement. Pour effectuer cette leçon, vous devez avoir terminé la leçon précédente, [Leçon 1 : Publication de données à l’aide de la réplication de fusion](lesson-1-publishing-data-using-merge-replication.md).  
@@ -40,7 +40,7 @@ ms.locfileid: "36051924"
   
 5.  Dans la page Emplacement de l’Agent de fusion, cliquez sur **Exécuter chaque agent sur son Abonné**, puis cliquez sur **Suivant**.  
   
-6.  Dans la page abonnés, sélectionnez le nom de l’instance de l’abonné et sous **base de données d’abonnement**, sélectionnez  **\<nouvelle base de données >** à partir de la liste.  
+6.  Dans la page abonnés, sélectionnez le nom de l’instance de l’abonné et sous **base de données d’abonnement**, sélectionnez  **\<nouvelle base de données >** dans la liste.  
   
 7.  Dans la boîte de dialogue **Nouvelle base de données** , entrez **SalesOrdersReplica** dans la zone **Nom de la base de données** , cliquez sur **OK**, puis cliquez sur **Suivant**.  
   
@@ -48,7 +48,7 @@ ms.locfileid: "36051924"
   
 9. Dans la page Initialiser les abonnements, sélectionnez **Lors de la première synchronisation** dans la liste **À quel moment** , cliquez sur **Suivant**, puis une nouvelle fois sur **Suivant** .  
   
-10. Dans la page valeurs de HOST_NAME, entrez la valeur `adventure-works\pamela0` dans les **valeur de HOST_NAME** zone, puis cliquez sur **Terminer**.  
+10. Dans la page valeurs de HOST_NAME, entrez la valeur `adventure-works\pamela0` dans le **valeur de HOST_NAME** , puis cliquez sur **Terminer**.  
   
 11. Cliquez à nouveau sur **Terminer** et, une fois l’abonnement créé, cliquez sur **Fermer**.  
   
@@ -70,7 +70,7 @@ ms.locfileid: "36051924"
   
 3.  Sélectionnez la page **Partitions de données** , puis cliquez sur **Ajouter**.  
   
-4.  Dans le **ajouter une Partition de données** boîte de dialogue, tapez `adventure-works\pamela0` dans les **valeur de HOST_NAME** zone, puis cliquez sur **OK**.  
+4.  Dans le **ajouter une Partition de données** boîte de dialogue, tapez `adventure-works\pamela0` dans le **valeur de HOST_NAME** , puis cliquez sur **OK**.  
   
 5.  Sélectionnez la partition nouvellement ajoutée, cliquez sur **Générer les instantanés sélectionnés maintenant**, puis sur **OK**.  
   

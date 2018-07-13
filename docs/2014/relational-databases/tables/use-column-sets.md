@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - sparse columns, column sets
 - column sets
 ms.assetid: a4f9de95-dc8f-4ad8-b957-137e32bfa500
 caps.latest.revision: 27
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: ec3a9c752a3ba03f61b21e6280afe47361435784
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 6c6807bbb743b39177e282f965916e5d5d78e4bc
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36052595"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37258215"
 ---
 # <a name="use-column-sets"></a>Utiliser des jeux de colonnes
   Les tables qui utilisent des colonnes éparses peuvent désigner un jeu de colonnes pour retourner toutes les colonnes éparses dans la table. Un jeu de colonnes est une représentation XML non typée qui combine toutes les colonnes éparses d'une table dans une sortie structurée. Un jeu de colonnes est semblable à une colonne calculée, dans la mesure où le jeu de colonnes n'est pas stocké physiquement dans la table. Un jeu de colonnes diffère d'une colonne calculée, dans le sens où le jeu de colonnes est peut être mis à jour directement.  
@@ -97,7 +97,7 @@ ms.locfileid: "36052595"
 ## <a name="inserting-or-modifying-data-in-a-column-set"></a>Insertion ou modification de données dans un jeu de colonnes  
  La manipulation des données d'une colonne éparse peut s'effectuer en utilisant le nom de chaque colonne ou en faisant référence au nom du jeu de colonnes et en spécifiant les valeurs du jeu de colonnes à l'aide du format XML du jeu de colonnes. Les colonnes éparses peuvent apparaître dans n'importe quel ordre dans la colonne XML.  
   
- Lorsque les valeurs de colonnes éparses sont insérées ou mises à jour à l’aide de l’ensemble de colonnes XML, les valeurs sont insérées dans les colonnes éparses sous-jacentes sont converties implicitement à partir du `xml` type de données. Dans le cas des colonnes numériques, une valeur vierge dans le XML pour la colonne numérique est convertie en chaîne vide. Cela provoque l'insertion d'un zéro dans la colonne numérique, comme illustré dans l'exemple suivant.  
+ Lorsque les valeurs de colonnes éparses sont insérées ou mises à jour à l’aide de l’ensemble de la colonne XML, les valeurs qui sont insérées dans les colonnes éparses sous-jacentes sont converties implicitement à partir de la `xml` type de données. Dans le cas des colonnes numériques, une valeur vierge dans le XML pour la colonne numérique est convertie en chaîne vide. Cela provoque l'insertion d'un zéro dans la colonne numérique, comme illustré dans l'exemple suivant.  
   
 ```  
 CREATE TABLE t (i int SPARSE, cs xml column_set FOR ALL_SPARSE_COLUMNS);  

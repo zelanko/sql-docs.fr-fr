@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: dee8ee42-156b-43b6-b202-02dfb9404284
 caps.latest.revision: 6
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 2073a7317ea012f2eb1dc1d4888778763cba1611
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: a4e6dcaedf09ca73691678cb21dd6066c23dbddf
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36042808"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37278403"
 ---
 # <a name="view-and-explore-native-mode-reports-using-sharepoint-web-parts-ssrs"></a>Afficher et explorer des rapports en mode natif à l’aide de composants WebPart SharePoint (SSRS)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] fournit plusieurs composants WebPart qui fonctionnent avec des versions spécifiques d'un serveur de rapports et dans des modes de déploiement particulier.  
@@ -170,7 +170,7 @@ ms.locfileid: "36042808"
   
 ## <a name="see-also"></a>Voir aussi  
  [Le Gestionnaire de rapports &#40;SSRS en Mode natif&#41;](../report-manager-ssrs-native-mode.md)   
- [Reporting Services Report Server &#40;en Mode SharePoint&#41;](../reporting-services-report-server-sharepoint-mode.md)   
+ [Reporting Services Report Server &#40;Mode SharePoint&#41;](../reporting-services-report-server-sharepoint-mode.md)   
  [Serveur de rapports Reporting Services &#40;mode natif&#41;](../report-server/reporting-services-report-server-native-mode.md)  
   
   

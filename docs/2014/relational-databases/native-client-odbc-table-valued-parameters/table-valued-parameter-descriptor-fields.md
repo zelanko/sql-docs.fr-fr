@@ -1,28 +1,26 @@
 ---
-title: Champs de descripteur de paramètre table | Documents Microsoft
+title: Champs de descripteur de paramètre table | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - table-valued parameters (ODBC), descriptor fields
 ms.assetid: 4e009eff-c156-4d63-abcf-082ddd304de2
 caps.latest.revision: 30
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 7d6f07c164b6f267301f26d0a5fcdad5da2871d8
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: 4d126c397680f03b82a6498d57dd77ec580a7ea1
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36043585"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37420948"
 ---
 # <a name="table-valued-parameter-descriptor-fields"></a>Champs de descripteur de paramètre table
   La prise en charge des paramètres table inclut de nouveaux champs spécifiques à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dans les descripteurs de paramètre d'application (APD) ODBC et les descripteurs de paramètre d'implémentation (IPD).  
@@ -31,7 +29,7 @@ ms.locfileid: "36043585"
   
 |Nom   |Emplacement|Type|Description|  
 |----------|--------------|----------|-----------------|  
-|SQL_CA_SS_TYPE_NAME|IPD|SQLTCHAR*|Nom du type de serveur du paramètre table.<br /><br /> Lorsqu’un nom de type de paramètre table est spécifié sur un appel à SQLBindParameter, il doit toujours être spécifié comme une valeur Unicode, même dans les applications qui sont générées comme applications ANSI. La valeur utilisée pour le paramètre *StrLen_or_IndPtr* doit être SQL_NTS ou la longueur de chaîne du nom multipliée par sizeof (WCHAR).<br /><br /> Lorsqu’un nom de type de paramètre table est spécifié via SQLSetDescField, il peut être spécifié à l’aide d’un littéral conforme à la façon dont l’application est créé. Le Gestionnaire de pilotes ODBC effectuera toute conversion Unicode requise.|  
+|SQL_CA_SS_TYPE_NAME|IPD|SQLTCHAR*|Nom du type de serveur du paramètre table.<br /><br /> Lorsqu’un nom de type de paramètre table est spécifié sur un appel à SQLBindParameter, il doit toujours être spécifié comme une valeur Unicode, même dans les applications qui sont générées comme applications ANSI. La valeur utilisée pour le paramètre *StrLen_or_IndPtr* doit être SQL_NTS ou la longueur de chaîne du nom multipliée par sizeof (WCHAR).<br /><br /> Quand un nom de type de paramètre table est spécifié via SQLSetDescField, il peut être spécifié en utilisant un littéral conforme à la façon dont l’application est généré. Le Gestionnaire de pilotes ODBC effectuera toute conversion Unicode requise.|  
 |SQL_CA_SS_TYPE_CATALOG_NAME (lecture seule)|IPD|SQLTCHAR*|Catalogue où le type est défini.|  
 |SQL_CA_SS_TYPE_SCHEMA_NAME|IPD|SQLTCHAR*|Schéma où le type est défini.|  
   

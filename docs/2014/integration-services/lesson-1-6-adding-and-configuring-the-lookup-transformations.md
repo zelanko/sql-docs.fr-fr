@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 5c59f723-9707-4407-80ae-f05f483cf65f
 caps.latest.revision: 38
-author: douglaslM
+author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: a670980605130532d5a93c17dd6827343dd68d59
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 405f70f2063ea9930c31b1c8a8cf60085c31889f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36052895"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37240955"
 ---
 # <a name="step-6-adding-and-configuring-the-lookup-transformations"></a>Étape 6 : Ajout et configuration des transformations de recherche
   Une fois que vous avez configuré la source de fichier plat pour extraire les données du fichier source, la tâche suivante consiste à définir les transformations de recherche nécessaires pour obtenir les valeurs de **CurrencyKey** et **DateKey**. Une transformation de recherche effectue une recherche en joignant les données dans la colonne d'entrée spécifiée à une colonne dans un dataset de référence. Le dataset de référence peut être une table ou une vue existante, une nouvelle table ou le résultat d'une instruction SQL. Dans ce didacticiel, la transformation de recherche utilise un gestionnaire de connexions OLE DB pour se connecter à la base de données qui contient les données servant de source au jeu de données de référence.  
@@ -98,7 +98,7 @@ ms.locfileid: "36052895"
   
 9. Double-cliquez sur la transformation Lookup Currency Key, puis cliquez sur **Propriétés**.  
   
-10. Dans la fenêtre Propriétés, vérifiez que le `LocaleID` est définie sur **anglais (États-Unis)** et **DefaultCodePage** est définie sur **1252**.  
+10. Dans la fenêtre Propriétés, vérifiez que le `LocaleID` propriété est définie sur **anglais (États-Unis)** et **DefaultCodePage** propriété est définie sur **1252**.  
   
 ### <a name="to-add-and-configure-the--lookup-datekey-transformation"></a>Pour ajouter et configurer la transformation Lookup Date Key  
   
@@ -132,10 +132,10 @@ ms.locfileid: "36052895"
   
 11. Double-cliquez sur la transformation Lookup Date Key, puis cliquez sur **Propriétés**.  
   
-12. Dans la fenêtre Propriétés, vérifiez que le `LocaleID` est définie sur **anglais (États-Unis)** et **DefaultCodePage** est définie sur **1252**.  
+12. Dans la fenêtre Propriétés, vérifiez que le `LocaleID` propriété est définie sur **anglais (États-Unis)** et **DefaultCodePage** propriété est définie sur **1252**.  
   
 ## <a name="next-task-in-lesson"></a>Tâche suivante de la leçon  
- [Étape 7 : Ajout et configuration de la Destination OLE DB](lesson-1-7-adding-and-configuring-the-ole-db-destination.md)  
+ [Étape 7 : Ajout et configuration de la destination OLE DB](lesson-1-7-adding-and-configuring-the-ole-db-destination.md)  
   
 ## <a name="see-also"></a>Voir aussi  
  [Transformation de recherche](data-flow/transformations/lookup-transformation.md)  

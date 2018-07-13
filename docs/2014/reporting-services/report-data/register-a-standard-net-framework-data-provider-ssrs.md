@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - reports [Reporting Services], data
 - .NET Framework data providers for Reporting Services
@@ -18,15 +18,15 @@ helpviewer_keywords:
 - Reporting Services, data sources
 ms.assetid: d92add64-e93c-4598-8508-55d1bc46acf6
 caps.latest.revision: 17
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: fcfaa1e1459df5bd3a399ce80b29dfd6a721e991
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: 94e37e8c947074d23b208ebdfc18f21220c1f0de
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36052796"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37200869"
 ---
 # <a name="register-a-standard-net-framework-data-provider-ssrs"></a>Inscrire un fournisseur de données .NET Framework standard (SSRS)
   Pour utiliser un fournisseur de données [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] tiers afin d’extraire des données pour un dataset de rapport [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , vous devez déployer et inscrire l’assembly de fournisseur de données [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] à deux emplacements : sur le client de création de rapports et sur le serveur de rapports. Sur le client de création de rapports, vous devez inscrire le fournisseur de données comme type de source des données et l'associer à un concepteur de requêtes. Vous pouvez ensuite sélectionner ce fournisseur de données comme type de source des données lorsque vous créez un dataset de rapport. Le concepteur de requêtes associé s'ouvre pour vous permettre de créer des requêtes pour ce type de source de données. Sur le serveur de rapports, vous devez inscrire le fournisseur de données comme type de source de données. Vous pouvez ensuite traiter les rapports publiés qui extraient les données d'une source de données à l'aide de ce fournisseur de données.  
@@ -48,7 +48,7 @@ ms.locfileid: "36052796"
   
 1.  Faites une sauvegarde du fichier RSReportServer.config dans le répertoire parent ReportServer du répertoire bin.  
   
-2.  Ouvrez RSReportServer.config. Vous pouvez ouvrir le fichier de configuration avec [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] ou d’un simple éditeur de texte, tel que le bloc-notes.  
+2.  Ouvrez RSReportServer.config. Vous pouvez ouvrir le fichier de configuration avec [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] ou un simple éditeur de texte, tel que le bloc-notes.  
   
 3.  Recherchez le `Data` élément dans le fichier RSReportServer.config. Effectuez une entrée pour le fournisseur de données [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] à l'emplacement suivant :  
   
@@ -87,7 +87,7 @@ ms.locfileid: "36052796"
   
 3.  Localisez l'élément `CodeGroup` dans le fichier rssrvpolicy.config.  
   
-4.  Ajouter un groupe de codes pour l’assembly de fournisseur de données qui accorde `FullTrust` autorisation. Votre groupe de codes doit ressembler au code suivant :  
+4.  Ajouter un groupe de codes pour l’assembly de fournisseur de données qui octroie `FullTrust` autorisation. Votre groupe de codes doit ressembler au code suivant :  
   
     ```  
     <CodeGroup class="UnionCodeGroup"  
@@ -172,7 +172,7 @@ ms.locfileid: "36052796"
   
 1.  Effectuez une copie de sauvegarde du fichier RSPreviewPolicy.config dans le répertoire PrivateAssemblies.  
   
-2.  Ouvrez le fichier RSPreviewPolicy.config avec [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] ou d’un simple éditeur de texte, tel que le bloc-notes.  
+2.  Ouvrez le fichier RSPreviewPolicy.config avec [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] ou un simple éditeur de texte, tel que le bloc-notes.  
   
 3.  Localisez l'élément `CodeGroup` dans le fichier RSPreviewPolicy.config.  
   
@@ -195,7 +195,7 @@ ms.locfileid: "36052796"
  L'appartenance d'URL n'est qu'une des nombreuses conditions d'appartenance que vous pouvez sélectionner pour le fournisseur de données.  
   
 ### <a name="verifying-the-deployment-and-registration-on-the-report-designer-client"></a>Vérification du déploiement et de l'inscription du client du Concepteur de rapports  
- Avant de vérifier le déploiement, vous devez fermer toutes les instances de [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] sur votre ordinateur local. Une fois que vous avez clôturé toutes les sessions actives, vous pouvez vérifier si votre fournisseur de données a été déployée avec succès au Concepteur de rapports en créant un nouveau projet de rapport dans [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)]. Le fournisseur de données doit être inclus dans la liste des types de source de données disponible lorsque vous créez un nouveau jeu de données pour votre rapport.  
+ Avant de vérifier le déploiement, vous devez fermer toutes les instances de [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] sur votre ordinateur local. Une fois que vous avez clôturé toutes les sessions actives, vous pouvez vérifier que votre fournisseur de données a été correctement déployée sur le Concepteur de rapports en créant un nouveau projet de rapport dans [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)]. Le fournisseur de données doit être inclus dans la liste des types de source de données disponible lorsque vous créez un nouveau jeu de données pour votre rapport.  
   
 ## <a name="platform-considerations"></a>Considérations relatives à la plateforme  
  Sur une plateforme 64 bits (x64), [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] s'exécute en mode WOW 32 bits. Lorsque vous publiez des rapports sur une plateforme x64, vous devez disposer de fournisseurs de données 32 bits sur le client de création de rapports pour prévisualiser vos rapports. Si vous publiez le rapport sur le même système, il vous faut des fournisseurs de données x64 pour prévisualiser le rapport à l'aide du Gestionnaire de rapports.  

@@ -1,5 +1,5 @@
 ---
-title: Se connecter à un rapport ou d’un flux de données (SSAS) | Documents Microsoft
+title: Se connecter à un rapport ou d’un flux de données (SSAS) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.bidtoolset.connreportdatafeed.f1
 ms.assetid: e0ccfb0b-e646-4de8-b7da-f88c986c96e4
 caps.latest.revision: 11
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 96e2ad7374493c375e85db4f9bff97a475174997
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 726007e635a41295c682ebc929e909fda8f0b0a9
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36051615"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37210289"
 ---
 # <a name="connect-to-a-report-or-data-feed-ssas"></a>Connexion à un flux de rapport ou de données (SSAS)
   Cette page de l' **Assistant Importation de table** vous permet de vous connecter à un flux de données. Pour accéder à l'Assistant [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)], dans le menu **Modèle** , cliquez sur **Importer à partir de la source de données**.  
@@ -48,7 +48,7 @@ ms.locfileid: "36051615"
  **Nom convivial de connexion**  
  Tapez un nom convivial pour la connexion au flux de données.  
   
- **URL de flux de données**  
+ **URL du flux de données**  
  Tapez le chemin d’accès complet à un document de service Atom (.atomsvc, .atom) ou l’URL d’un flux de données unique, ou cliquez sur **Parcourir** pour sélectionner un document de service Atom.  
   
  **Parcourir**  
@@ -75,7 +75,7 @@ ms.locfileid: "36051615"
  **Nom convivial de connexion**  
  Tapez un nom convivial pour la connexion au flux de données.  
   
- **URL de flux de données**  
+ **URL du flux de données**  
  Tapez le chemin d’accès complet à un document de service Atom (.atomsvc, .atom) ou l’URL d’un flux de données unique, ou cliquez sur **Parcourir** pour sélectionner un document de service Atom.  
   
  Cliquez sur **Inclure toutes les colonnes du flux** pour spécifier si toutes les colonnes du flux de données sont importées.  

@@ -1,28 +1,26 @@
 ---
-title: Prise en charge des API ODBC pour les fonctionnalités améliorées de Date et heure | Documents Microsoft
+title: Prise en charge des API ODBC pour les fonctionnalités améliorées de Date et heure | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - date/time [ODBC], API support
 ms.assetid: 430c029d-f8c1-4de7-a9dd-330e9b6bfc20
 caps.latest.revision: 7
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: dbeaccf1ae92805705728118813ec4f84d65aa79
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: 241073ede72de329c9027d32913b34a498dd319d
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36043836"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37418682"
 ---
 # <a name="odbc-api-support-for-enhanced-date-and-time-features"></a>Prise en charge des API ODBC pour les fonctionnalités améliorées de Date et heure
   Les API ODBC suivantes prennent en charge les fonctionnalités de date/heure améliorées :  
@@ -74,6 +72,6 @@ ms.locfileid: "36043836"
 -   [bcp_setcolfmt](../native-client-odbc-extensions-bulk-copy-functions/bcp-setcolfmt.md)  
   
 ## <a name="see-also"></a>Voir aussi  
- [Date et heure améliorations &#40;ODBC&#41;](date-and-time-improvements-odbc.md)  
+ [Améliorations date / heure &#40;ODBC&#41;](date-and-time-improvements-odbc.md)  
   
   

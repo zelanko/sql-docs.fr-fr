@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - publications [SQL Server replication], Oracle databases
 - Oracle publishing [SQL Server replication], configuring
 ms.assetid: b3812746-14b0-4b22-809e-b4a95e1c8083
 caps.latest.revision: 38
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: b989637b5c16d57aaf6d33fc033229fd08028dc7
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 2bd46103f4810564317c5072be78b297150c1f17
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36140037"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37190056"
 ---
 # <a name="create-a-publication-from-an-oracle-database"></a>Créer une publication à partir d'une base de données Oracle
   Cette rubrique explique comment créer une publication Oracle dans [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] à l'aide de [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] ou de [!INCLUDE[tsql](../../../includes/tsql-md.md)].  
@@ -118,7 +118,7 @@ ms.locfileid: "36140037"
   
 2.  S'il n'existe pas de serveur de distribution distant, configurez-en un. Pour plus d’informations, consultez [Configure Publishing and Distribution](../configure-publishing-and-distribution.md).  
   
-3.  Sur le serveur de distribution distant que le serveur de publication Oracle utilisera, exécutez [sp_adddistpublisher &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-adddistpublisher-transact-sql). Spécifiez le nom de réseau TNS (Transparent Substrate) de l’instance de base de données Oracle pour **@publisher** et la valeur `ORACLE` ou `ORACLE GATEWAY` pour **@publisher_type**. `Specify` le mode de sécurité utilisé lors de la connexion entre le Serveur de publication Oracle et le serveur de distribution [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] distant parmi les modes suivants :  
+3.  Sur le serveur de distribution distant que le serveur de publication Oracle utilisera, exécutez [sp_adddistpublisher &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-adddistpublisher-transact-sql). Spécifiez le nom de Transparent Network Substrate (TNS) de l’instance de base de données Oracle pour **@publisher** et la valeur `ORACLE` ou `ORACLE GATEWAY` pour **@publisher_type**. `Specify` le mode de sécurité utilisé lors de la connexion entre le Serveur de publication Oracle et le serveur de distribution [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] distant parmi les modes suivants :  
   
     -   Pour utiliser l'authentification standard Oracle (valeur par défaut), affectez la valeur **0** pour **@security_mode**, spécifiez la connexion du schéma utilisateur d'administration de réplication que vous avez créée sur le serveur de publication Oracle au cours de la configuration pour **@login**et le mot de passe pour **@password**.  
   

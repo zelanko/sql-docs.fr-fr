@@ -5,21 +5,20 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 3bbeb979-e6fc-4184-ad6e-cca62108de74
 caps.latest.revision: 30
-author: rothja
-ms.author: jroth
-manager: jhubbard
-ms.openlocfilehash: 6cd514ae1b9581a52e7dfdb382bc8fded757fb47
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: d975ed562e5343ceeb921358160309c20ff0bb4d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36051199"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37260075"
 ---
 # <a name="configure-healthchecktimeout-property-settings"></a>Configurer les paramètres de propriété HealthCheckTimeout
   Le paramètre HealthCheckTimeout est utilisé pour spécifier la durée, en millisecondes, la DLL de ressource SQL Server doit attendre les informations retournées par la [sp_server_diagnostics](/sql/relational-databases/system-stored-procedures/sp-server-diagnostics-transact-sql) procédure stockée avant de signaler le Basculement Cluster Instance (FCI) AlwaysOn comme sans réponse. Les modifications apportées aux paramètres de délai d'attente entrent immédiatement en vigueur et ne requièrent pas de redémarrage de la ressource SQL Server.  
@@ -46,7 +45,7 @@ ms.locfileid: "36051199"
   
 2.  Importez le module `FailoverClusters` pour activer les applets de commande de cluster.  
   
-3.  Utilisez le `Get-ClusterResource` applet de commande pour rechercher la [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ressource, puis utiliser `Set-ClusterParameter` applet de commande pour définir le **HealthCheckTimeout** propriété pour l’instance de cluster de basculement.  
+3.  Utiliser le `Get-ClusterResource` applet de commande pour rechercher la [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ressource, puis utiliser `Set-ClusterParameter` applet de commande pour définir le **HealthCheckTimeout** propriété pour l’instance de cluster de basculement.  
   
 > [!TIP]  
 >  Chaque fois que vous ouvrez une nouvelle fenêtre PowerShell, vous devez importer le `FailoverClusters` module.  

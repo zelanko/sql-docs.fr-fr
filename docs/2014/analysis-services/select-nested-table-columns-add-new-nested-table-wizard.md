@@ -1,5 +1,5 @@
 ---
-title: Sélectionnez les colonnes de Table imbriquée (Assistant Ajouter une nouvelle Table imbriquée) | Documents Microsoft
+title: Sélectionnez les colonnes de Table imbriquée (Assistant Ajouter une nouvelle Table imbriquée) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dm.dmwizard.selectnestedtablecolumns.f1
 ms.assetid: b78a820f-b5a2-4dfc-809a-8d6a949a3f3a
 caps.latest.revision: 21
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 34c7311d6f297e59d96dbe73888aeacbf1b284e9
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: efcf3c3b0b628cfb7aac93b24a1fc4c874ceb57e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36042981"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37278295"
 ---
 # <a name="select-nested-table-columns-add-new-nested-table-wizard"></a>Sélectionner les colonnes de la table imbriquée (Assistant Ajouter une nouvelle table imbriquée)
   Utilisez la page **Sélectionner les colonnes de la table imbriquée** pour sélectionner les attributs et les mesures à inclure dans la table imbriquée et pour définir comment le modèle d’exploration des données va les utiliser.  
@@ -39,7 +39,7 @@ ms.locfileid: "36042981"
  Sélectionnez cette option pour désigner si une mesure ou un attribut sera utilisé comme colonne prédictible dans le modèle d'exploration de données. Une colonne peut être marquée à la fois comme colonne d'entrée et comme colonne prédictible.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Aide (F1) de l’Assistant d’exploration de données &#40;Analysis Services - Exploration de données&#41;](data-mining-wizard-f1-help-analysis-services-data-mining.md)   
+ [Données d’aide F1 de l’Assistant exploration de données &#40;Analysis Services - Exploration de données&#41;](data-mining-wizard-f1-help-analysis-services-data-mining.md)   
  [Sélectionnez la clé de Table imbriquée &#40;Assistant Ajouter une nouvelle Table imbriquée&#41;](select-nested-table-key-add-new-nested-table-wizard.md)   
  [Spécifier l’utilisation des colonnes du modèle d’exploration de données &#40;Assistant exploration de données&#41;](specify-mining-model-column-usage-data-mining-wizard.md)  
   

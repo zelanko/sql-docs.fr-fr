@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - scripts [Reporting Services]
 - Reporting Services, scripting
@@ -17,22 +17,22 @@ ms.assetid: 1ac2646d-ed5a-4436-b18f-2150c33f3d87
 caps.latest.revision: 12
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 0d76693f37506cd78a7d198520344cb55f9d142f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 2b69a9713d015db66945a1c096f8896998459406
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36051861"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37212539"
 ---
 # <a name="scripting-and-powershell-with-reporting-services"></a>Scripts et PowerShell avec Reporting Services
-  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] prend en charge un large éventail de scénarios de développement et de gestion via script, notamment l’utilitaire de ligne de commande rs.exe, les applets de commande PowerShell pour les serveurs de rapports en mode SharePoint et en exploitant la [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] modèle objet à partir de PowerShell pour l’installation Native et Mode SharePoint.  
+  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] prend en charge un large éventail de scénarios de développement et de gestion via script, notamment l’utilitaire de ligne de commande rs.exe, les applets de commande PowerShell pour les serveurs de rapports en mode SharePoint et en exploitant la [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] modèle objet à partir de PowerShell pour natives et Mode SharePoint.  
   
 -   Les administrateurs peuvent écrire les scripts en [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] pour automatiser le déploiement et la gestion d'une installation du serveur de rapports. Les administrateurs peuvent également générer et exécuter des scripts [!INCLUDE[tsql](../../includes/tsql-md.md)] qui créent, configurent et mettent à jour une base de données du serveur de rapports. Les administrateurs peuvent aussi utiliser les fonctionnalités d'enregistrement et de lecture de scripts de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] pour automatiser les tâches régulières de maintenance.  
   
 -   Les développeurs peuvent créer des applications personnalisées incluant des scripts. Vous pouvez exécuter des scripts qui effectuent des appels au service Web Report Server. Pratiquement chaque opération que vous pouvez écrire en code managé peut également l'être écrite sous forme de script.  
   
--   [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] prend en charge [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] script .NET comme langage de script pouvant être traités par l’utilitaire RS.exe, un hôte de script qui s’exécute sur le serveur de rapports.  
+-   [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] prend en charge [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] script .NET comme langage de script qui peut être traité par l’utilitaire RS.exe, un hôte de script qui s’exécute sur le serveur de rapports.  
   
 ## <a name="reporting-services-sharepoint-mode-powershell-cmdlets-and-samples"></a>Exemples et applets de commande PowerShell du mode SharePoint de Reporting Services  
  ![Contenu relatif à PowerShell](../media/rs-powershellicon.jpg "Contenu relatif à PowerShell")  
@@ -54,7 +54,7 @@ ms.locfileid: "36051861"
   
  Appel du modèle d'objet principal par PowerShell, valide en grande partie pour les modes natif et SharePoint, comme les tâches de migration et d'abonnement, et d'autres exemples associés de tâches d'abonnement dans SQL15.  
   
--   [Utiliser PowerShell pour modifier et répertorier Reporting Services Subscription Owners and Run a Subscription](../subscriptions/manage-subscription-owners-and-run-subscription-powershell.md).  
+-   [Utiliser PowerShell pour modifier et répertorier les propriétaires d’abonnements Reporting Services et exécuter un abonnement](../subscriptions/manage-subscription-owners-and-run-subscription-powershell.md).  
   
 -   [Utilisation de PowerShell pour créer une machine virtuelle Azure avec un serveur de rapports en mode natif](http://msdn.microsoft.com/library/azure/dn449661.aspx).  
   
@@ -64,7 +64,7 @@ ms.locfileid: "36051861"
   
 ## <a name="rsexe-scripting-samples"></a>Exemples de scripts RS.exe  
   
--   [Exemple Script Reporting Services rs.exe pour migrer le contenu entre les serveurs de rapports](sample-reporting-services-rs-exe-script-to-copy-content-between-report-servers.md).  
+-   [Exemple Script Reporting Services rs.exe pour migrer le contenu entre serveurs de rapports](sample-reporting-services-rs-exe-script-to-copy-content-between-report-servers.md).  
   
 -   Pour obtenir des exemples supplémentaires de script, d'application et d'extension, consultez les [exemples de produit SQL Server Reporting Services](http://go.microsoft.com/fwlink/?LinkId=177889).  
   

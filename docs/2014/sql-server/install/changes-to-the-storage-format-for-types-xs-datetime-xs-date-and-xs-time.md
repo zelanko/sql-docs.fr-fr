@@ -1,5 +1,5 @@
 ---
-title: 'Modifie le format de stockage pour les types xs : DateTime, xs : date et xs : Time | Documents Microsoft'
+title: 'Modifie le format de stockage pour les types xs : DateTime, xs : date et xs : Time | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - xs:date
 - xs:time
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - DateTime
 ms.assetid: b9f758df-030c-4aec-8ade-1bf904aa2c61
 caps.latest.revision: 10
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 56342ff7c7754fb8ef1619fdb1b71e37600192b3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 1acc25889e693a69e55adc4f5da5ece616bc41a2
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36052342"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37222519"
 ---
 # <a name="changes-to-the-storage-format-for-types-xsdatetime-xsdate-and-xstime"></a>Modifications du format de stockage pour les types xs:dateTime, xs:date et xs:time
   La règle XMLDATETIME détermine si vos bases de données contiennent ou non des données XML typées qui deviendront non valides après la mise à niveau vers [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
@@ -33,7 +33,7 @@ ms.locfileid: "36052342"
  [!INCLUDE[ssDE](../../includes/ssde-md.md)]  
   
 ## <a name="description"></a>Description  
- Le format de stockage dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] pour les types xs : DateTime, xs : date et xs : Time a été modifié pour prendre en charge les valeurs avec ou sans informations de fuseau horaire et à permettre la conservation du fuseau horaire.  
+ Le format de stockage dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] pour les types xs : DateTime, xs : date et xs : Time a été modifié pour prendre en charge les valeurs avec ou sans informations de fuseau horaire et pour permettre la conservation du fuseau horaire.  
   
  Si une collection de schémas XML fait référence à l'un de ces types, les index XML sur toutes les colonnes associées à la collection seront désactivés après la mise à niveau vers [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Vous serez en mesure de les interroger en utilisant SELECT et/ou XQUERIES, mais l'index XML ne sera pas utilisé. Si une année négative est rencontrée, il en résultera une erreur d'exécution.  
   

@@ -1,5 +1,5 @@
 ---
-title: Création de prédictions sur un modèle Sequence Clustering (didacticiel sur l’exploration des données intermédiaires) | Documents Microsoft
+title: Création de prédictions sur un modèle Sequence Clustering (didacticiel d’exploration de données intermédiaire) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
@@ -8,23 +8,23 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 94a8d4f9-a76a-49c5-9785-917010359511
 caps.latest.revision: 20
 author: minewiskan
 ms.author: owend
-manager: kfile
-ms.openlocfilehash: 2334975b13b3d503a2208f5a73997549befae219
-ms.sourcegitcommit: 8c040e5b4e8c7d37ca295679410770a1af4d2e1f
+manager: craigg
+ms.openlocfilehash: 006418a07f393fd50334a2ea9c122cdd92353cda
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/21/2018
-ms.locfileid: "36312987"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37198299"
 ---
 # <a name="creating-predictions-on-a-sequence-clustering-model-intermediate-data-mining-tutorial"></a>Création de prédictions sur un modèle Sequence Clustering (Didacticiel intermédiaire sur l'exploration de données)
-  Après avoir identifié le modèle sequence clustering mieux parcouru dans la visionneuse, vous pouvez créer des requêtes de prédiction à l’aide du Générateur de requête de prédiction sur le **prévision de modèle d’exploration de données** onglet dans le Concepteur d’exploration de données. Pour créer une prédiction, commencez par sélectionner le modèle Sequence Clustering, puis sélectionnez les données d'entrée. Pour les entrées, vous pouvez utiliser une source de données externe, ou vous pouvez générer une requête singleton et fournir des valeurs dans une boîte de dialogue.  
+  Une fois que vous comprenez le modèle sequence clustering mieux parcouru dans la visionneuse, vous pouvez créer des requêtes de prédiction à l’aide du Générateur de requêtes de prédiction sur le **prévision de modèle d’exploration de données** onglet dans le Concepteur d’exploration de données. Pour créer une prédiction, commencez par sélectionner le modèle Sequence Clustering, puis sélectionnez les données d'entrée. Pour les entrées, vous pouvez utiliser une source de données externe, ou vous pouvez générer une requête singleton et fournir des valeurs dans une boîte de dialogue.  
   
- Cette leçon suppose que vous savez comment utiliser le générateur de requêtes de prédiction et souhaitez apprendre à générer des requêtes qui sont spécifiques à un modèle Sequence Clustering. Pour obtenir des informations générales sur l’utilisation du Générateur de requête de prédiction, consultez [les Interfaces de requête d’exploration de données](../../2014/analysis-services/data-mining/data-mining-query-tools.md) ou la section du didacticiel d’exploration de données de base, [création de prédictions &#40;Basic Data Mining Tutorial&#41;](../../2014/tutorials/creating-predictions-basic-data-mining-tutorial.md).  
+ Cette leçon suppose que vous savez comment utiliser le générateur de requêtes de prédiction et souhaitez apprendre à générer des requêtes qui sont spécifiques à un modèle Sequence Clustering. Pour obtenir des informations générales sur l’utilisation du Générateur de requêtes de prédiction, consultez [Interfaces de requête d’exploration de données](../../2014/analysis-services/data-mining/data-mining-query-tools.md) ou la section du didacticiel d’exploration de données de base, [création de prédictions &#40;Basic Data Mining Tutorial&#41;](../../2014/tutorials/creating-predictions-basic-data-mining-tutorial.md).  
   
 ## <a name="creating-predictions-on-the-regional-model"></a>Création de prédictions sur le modèle régional  
  Pour ce scénario, vous commencerez par créer des requêtes de prédiction singleton pour avoir une idée des différences entre les prédictions selon la région.  
@@ -33,11 +33,11 @@ ms.locfileid: "36312987"
   
 1.  Cliquez sur le **prévision de modèle d’exploration de données** onglet du Concepteur d’exploration de données.  
   
-2.  Dans le **modèle d’exploration de données** menu de colonne, sélectionnez **requête Singleton**.  
+2.  Dans le **Mining Model** colonne, sélectionnez **requête Singleton**.  
   
-     Le **modèle d’exploration de données** volet et **entrée de requête Singleton** volet s’affiche.  
+     Le **Mining Model** volet et **entrée de requête Singleton** volet s’affiche.  
   
-3.  Dans le **modèle d’exploration de données** volet, cliquez sur **sélectionner le modèle**. (Vous pouvez ignorer cette étape si le mode Sequence Clustering est déjà sélectionné.)  
+3.  Dans le **Mining Model** volet, cliquez sur **sélectionner un modèle**. (Vous pouvez ignorer cette étape si le mode Sequence Clustering est déjà sélectionné.)  
   
      Le **sélectionner un modèle d’exploration de données** boîte de dialogue s’ouvre.  
   
@@ -46,11 +46,11 @@ ms.locfileid: "36312987"
 5.  Dans la grille, cliquez sur la cellule vide sous **Source** et sélectionnez **fonction de prédiction.** Dans la cellule sous **champ**, sélectionnez **PredictSequence**.  
   
     > [!NOTE]  
-    >  Vous pouvez également utiliser le **Predict** (fonction). Si vous, veillez à choisir la version de la **Predict** fonction qui accepte une colonne de table en tant qu’argument...  
+    >  Vous pouvez également utiliser le **Predict** (fonction). Si vous fassiez, veillez à choisir la version de la **Predict** fonction qui prend une colonne de table comme argument...  
   
-6.  Dans le **modèle d’exploration de données** volet, sélectionnez la table imbriquée `v Assoc Seq Line Items`et faites-le glisser dans la grille, à la **critères/Argument** zone pour le **PredictSequence** (fonction).  
+6.  Dans le **Mining Model** volet, sélectionnez la table imbriquée `v Assoc Seq Line Items`et faites-le glisser dans la grille, à la **critères/Argument** zone pour le **PredictSequence** (fonction).  
   
-     Le glisser-déplacer des noms de table et de colonne vous permet de générer des instructions complexes sans erreurs de syntaxe. Toutefois, il remplace le contenu actuel de la cellule, lequel inclut d’autres arguments facultatifs pour le **PredictSequence** (fonction). Pour consulter les autres arguments, vous pouvez ajouter temporairement une deuxième instance de la fonction à la grille pour référence.  
+     Le glisser-déplacer des noms de table et de colonne vous permet de générer des instructions complexes sans erreurs de syntaxe. Toutefois, cette opération remplace le contenu actuel de la cellule, qui inclut d’autres arguments facultatifs pour le **PredictSequence** (fonction). Pour consulter les autres arguments, vous pouvez ajouter temporairement une deuxième instance de la fonction à la grille pour référence.  
   
 7.  Cliquez sur le **résultat** bouton dans le coin supérieur du Générateur de requêtes de prédiction.  
   
@@ -71,7 +71,7 @@ ms.locfileid: "36312987"
   
 2.  Dans le **entrée de requête Singleton** boîte de dialogue, cliquez sur le **valeur** boîte pour `Region`, puis sélectionnez **Europe**.  
   
-3.  Cliquez sur le **résultat** bouton pour afficher des prédictions pour les clients en Europe.  
+3.  Cliquez sur le **résultat** bouton pour consulter des prédictions pour les clients en Europe.  
   
 4.  Cliquez sur le **conception** bouton dans le coin supérieur gauche du Générateur de requêtes de prédiction pour revenir à la grille de création de requête.  
   
@@ -88,17 +88,17 @@ ms.locfileid: "36312987"
   
 2.  Dans la grille, sous **Source**, cliquez sur une nouvelle ligne, puis sélectionnez **Expression personnalisée**.  
   
-3.  Laissez la zone **champ** vide.  
+3.  Laissez la case sous **champ** vide.  
   
 4.  Pour **Alias**, type `t`.  
   
-5.  Dans le **critères/Argument** , tapez l’instruction de sous-sélection complète, comme indiqué dans l’exemple de code suivant. Veillez à inclure les parenthèses de début et de fin.  
+5.  Dans le **critères/Argument** , tapez l’instruction de sous-sélection complète comme illustré dans l’exemple de code suivant. Veillez à inclure les parenthèses de début et de fin.  
   
     ```  
     (SELECT PredictProbability([Model]) FROM PredictSequence([Sequence Clustering with Region].[v Assoc Seq Line Items]))  
     ```  
   
-6.  Cliquez sur le **résultat** bouton pour afficher des prédictions pour les clients en Europe.  
+6.  Cliquez sur le **résultat** bouton pour consulter des prédictions pour les clients en Europe.  
   
  Les résultats contiennent maintenant deux tables imbriquées, une avec la prédiction, et une avec la probabilité pour la prédiction. Si la requête ne fonctionne pas, vous pouvez basculer en mode affichage de conception de requête et examiner l'instruction de requête complète, qui doit être comme suit :  
   
@@ -117,7 +117,7 @@ NATURAL PREDICTION JOIN
   
 ##### <a name="to-flatten-nested-rowsets-in-a-prediction-query"></a>Pour aplatir des ensembles de lignes imbriqués dans une requête de prédiction  
   
-1.  Cliquez sur le **requête** situé dans l’angle du Générateur de requêtes de prédiction.  
+1.  Cliquez sur le **requête** bouton dans l’angle du Générateur de requêtes de prédiction.  
   
      La grille se transforme en un volet ouvert où vous pouvez afficher et modifier l'instruction DMX créée par le Générateur de requêtes de prédiction.  
   
@@ -143,7 +143,7 @@ NATURAL PREDICTION JOIN
  Les exemples précédents ont utilisé une colonne de table de cas, Région, comme entrée à la requête de prédiction singleton, parce que vous souhaitiez savoir si le modèle avait trouvé des différences entre des régions. Toutefois, après avoir exploré le modèle, vous avez décidé que les différences ne sont pas assez significatives pour justifier de personnaliser des recommandations de produits par région. Ce que vous cherchez vraiment à prédire sont les éléments que choisissent les clients. Par conséquent, dans les requêtes qui suivent, vous utiliserez le modèle Sequence Clustering qui n'inclut pas Région, pour générer des recommandations pour tous les clients.  
   
 ### <a name="using-nested-table-columns-as-input"></a>Utilisation de colonnes de table imbriquée comme entrée  
- En premier lieu, vous allez créer une requête de prédiction singleton qui prend un élément unique comme entrée et retourne l'élément suivant le plus probable. Pour obtenir une prédiction de ce type, vous devez utiliser une colonne de table imbriquée comme valeur d'entrée. En effet, l'attribut que vous prédisez, Model, fait partie d'une table imbriquée. Analysis Services fournit la **entrée de la Table imbriquée** boîte de dialogue pour vous aider à créer facilement des requêtes de prédiction sur imbriqués, les attributs de tables à l’aide du Générateur de requêtes de prédiction.  
+ En premier lieu, vous allez créer une requête de prédiction singleton qui prend un élément unique comme entrée et retourne l'élément suivant le plus probable. Pour obtenir une prédiction de ce type, vous devez utiliser une colonne de table imbriquée comme valeur d'entrée. En effet, l'attribut que vous prédisez, Model, fait partie d'une table imbriquée. Analysis Services fournit le **entrée de la Table imbriquée** boîte de dialogue pour vous aider à créer facilement des requêtes de prédiction sur imbriqués des attributs de tables, en utilisant le Générateur de requête de prédiction.  
   
 ##### <a name="to-use-a-nested-table-as-input-to-a-prediction"></a>Pour utiliser une table imbriquée comme entrée à une prédiction  
   
@@ -174,7 +174,7 @@ NATURAL PREDICTION JOIN
   
 ##### <a name="to-create-a-prediction-query-using-nested-table-inputs"></a>Pour créer une requête de prédiction à l'aide d'entrées de table imbriquée  
   
-1.  Dans le **modèle d’exploration de données** volet, sélectionnez le modèle Sequence Clustering, si elle n’est pas déjà sélectionnée.  
+1.  Dans le **Mining Model** volet, sélectionnez le modèle Sequence Clustering, si ce n’est pas déjà fait.  
   
 2.  Dans le **sélectionner une ou plusieurs tables d’entrée** boîte de dialogue, cliquez sur **sélectionner la Table de cas**.  
   
@@ -182,9 +182,9 @@ NATURAL PREDICTION JOIN
   
 4.  Dans le **sélectionner une ou plusieurs tables d’entrée** boîte de dialogue, cliquez sur **sélectionner la Table imbriquée**.  
   
-5.  Dans le **sélectionner une Table** boîte de dialogue, pour **Source de données**, sélectionnez Orders. Dans le **nom de la Table/vue** liste, sélectionnez vAssocSeqLineItems, puis cliquez sur **OK**.  
+5.  Dans le **sélectionner une Table** boîte de dialogue pour **Source de données**, sélectionnez Orders. Dans le **nom de la Table/vue** liste, sélectionnez vAssocSeqLineItems, puis cliquez sur **OK**.  
   
-     Analysis Services va tenter de détecter des relations et de les créer automatiquement si les types de données correspondent et les noms de colonne sont similaires. Si les relations qu’il crée sont incorrectes, vous pouvez cliquez sur la ligne de jointure et sélectionner **modifier les connexions** pour modifier la colonne mappage, ou vous pouvez avec le bouton droit de la ligne de jointure et sélectionner **supprimer** à supprimer complètement la relation. Dans ce cas, comme les tables ont déjà été jointes dans la vue de source de données, ces relations sont ajoutées automatiquement au volet de conception.  
+     Analysis Services va tenter de détecter des relations et de les créer automatiquement si les types de données correspondent et les noms de colonne sont similaires. Si les relations qu’il crée sont incorrectes, vous pouvez cliquez sur la ligne de jointure et sélectionner **modifier les connexions** pour modifier la colonne de mappage, ou vous pouvez avec le bouton droit de la ligne de jointure et sélectionner **supprimer** à supprimer complètement la relation. Dans ce cas, comme les tables ont déjà été jointes dans la vue de source de données, ces relations sont ajoutées automatiquement au volet de conception.  
   
 6.  Ajoutez une nouvelle ligne à la grille. Pour **Source**, sélectionnez vAssocSeqOrders et pour **champ**, sélectionnez CustomerKey.  
   
@@ -199,12 +199,12 @@ NATURAL PREDICTION JOIN
  Vous avez terminé le didacticiel sur les modèles Sequence Clustering.  
   
 ## <a name="next-steps"></a>Étapes suivantes  
- Si vous avez terminé toutes les sections de la [didacticiel d’exploration de données intermédiaire &#40;Analysis Services - Exploration de données&#41;](../../2014/tutorials/intermediate-data-mining-tutorial-analysis-services-data-mining.md), l’étape suivante peut être pour apprendre à utiliser des instructions des Extensions DMX (Data Mining) pour générer des modèles et générer des prédictions. Pour plus d’informations, consultez [création et interrogation des modèles d’exploration de données avec DMX : didacticiels &#40;Analysis Services - Exploration de données&#41;](../../2014/tutorials/create-query-data-mining-models-dmx-tutorials.md).  
+ Si vous avez terminé toutes les sections dans le [didacticiel d’exploration de données intermédiaire &#40;Analysis Services - Exploration de données&#41;](../../2014/tutorials/intermediate-data-mining-tutorial-analysis-services-data-mining.md), l’étape suivante consiste à apprendre à utiliser les instructions des Extensions DMX (Data Mining) pour générer des modèles et générer des prédictions. Pour plus d’informations, consultez [création et interrogation de modèles d’exploration de données avec DMX : didacticiels &#40;Analysis Services - Exploration de données&#41;](../../2014/tutorials/create-query-data-mining-models-dmx-tutorials.md).  
   
  Si vous maîtrisez les concepts de la programmation, vous pouvez utiliser également des objets AMO (Analysis Management Objects) pour utiliser par programme des objets d'exploration de données. Pour plus d’informations, consultez [Classes d’exploration de données AMO](../analysis-services/multidimensional-models/analysis-management-objects/amo-data-mining-classes.md).  
   
 ## <a name="see-also"></a>Voir aussi  
- [Sequence Clustering Model Query Examples](../../2014/analysis-services/data-mining/sequence-clustering-model-query-examples.md)   
- [Exploration du contenu du modèle pour les modèles Sequence Clustering &#40;Analysis Services - Exploration de données&#41;](../../2014/analysis-services/data-mining/mining-model-content-for-sequence-clustering-models.md)  
+ [Modèle Sequence Clustering Model Query Examples](../../2014/analysis-services/data-mining/sequence-clustering-model-query-examples.md)   
+ [Le contenu du modèle Sequence Clustering des modèles d’exploration de données &#40;Analysis Services - Exploration de données&#41;](../../2014/analysis-services/data-mining/mining-model-content-for-sequence-clustering-models.md)  
   
   

@@ -1,29 +1,28 @@
 ---
-title: Sélectionnez la Page de synchronisation des données initiale (Assistants de groupe de disponibilité AlwaysOn) | Documents Microsoft
+title: Sélectionnez la Page de synchronisation de données initiale (Assistants de groupe de disponibilité AlwaysOn) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.addreplicawizard.selectinitialdatasync.f1
 - sql12.swb.adddatabasewizard.selectinitialdatasync.f1
 - sql12.swb.newagwizard.selectinitialdatasync.f1
 ms.assetid: 457b1140-4819-4def-8f7c-54a406e6db12
 caps.latest.revision: 36
-author: MikeRayMSFT
-ms.author: mikeray
-manager: jhubbard
-ms.openlocfilehash: 2c949bd5ec421ac41d602b28af2d087153b0358c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: f9a3f04a5d6ea060cd905d2bf81d628c27d99eb8
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36053143"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37211769"
 ---
 # <a name="select-initial-data-synchronization-page-alwayson-availability-group-wizards"></a>Page Sélectionner la synchronisation de données initiale (assistants de groupe de disponibilité AlwaysOn)
   Utilisez la page AlwaysOn **Sélectionner la synchronisation de données initiale** afin d'indiquer votre préférence pour la synchronisation des données initiale des nouvelles bases de données secondaires. Cette page est commune à trois Assistants : [!INCLUDE[ssAoNewAgWiz](../../../includes/ssaonewagwiz-md.md)], [!INCLUDE[ssAoAddRepWiz](../../../includes/ssaoaddrepwiz-md.md)]et [!INCLUDE[ssAoAddDbWiz](../../../includes/ssaoadddbwiz-md.md)].  
@@ -95,14 +94,14 @@ ms.locfileid: "36053143"
   
      [Préparer manuellement une base de données secondaire pour un groupe de disponibilité &#40;SQL Server&#41;](manually-prepare-a-secondary-database-for-an-availability-group-sql-server.md)  
   
--   Si vous ajoutez une ou plusieurs bases de données primaires pour la copie des journaux de transaction à un groupe de disponibilité, vous pourrez peut-être effectuer une migration d'une ou de plusieurs bases de données secondaires correspondantes depuis la copie des journaux de transaction vers [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]. Pour plus d’informations, consultez [les conditions préalables pour la migration à partir de l’envoi de journaux pour les groupes de disponibilité AlwaysOn &#40;SQL Server&#41;](prereqs-migrating-log-shipping-to-always-on-availability-groups.md).  
+-   Si vous ajoutez une ou plusieurs bases de données primaires pour la copie des journaux de transaction à un groupe de disponibilité, vous pourrez peut-être effectuer une migration d'une ou de plusieurs bases de données secondaires correspondantes depuis la copie des journaux de transaction vers [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]. Pour plus d’informations, consultez [configuration requise pour la migration à partir de l’envoi de journaux aux groupes de disponibilité AlwaysOn &#40;SQL Server&#41;](prereqs-migrating-log-shipping-to-always-on-availability-groups.md).  
   
     > [!NOTE]  
     >  Après avoir créé toutes les bases de données secondaires pour le groupe de disponibilité, si vous souhaitez effectuer des sauvegardes sur des réplicas secondaires, vous devez reconfigurer la préférence de sauvegarde automatisée du groupe de disponibilité.  
   
      **Pour plus d'informations, consultez :**  
   
-     [Conditions préalables pour la migration à partir de journaux de transaction vers les groupes de disponibilité AlwaysOn &#40;SQL Server&#41;](prereqs-migrating-log-shipping-to-always-on-availability-groups.md)  
+     [Prérequis pour la migration à partir des journaux de transaction vers les groupes de disponibilité AlwaysOn &#40;SQL Server&#41;](prereqs-migrating-log-shipping-to-always-on-availability-groups.md)  
   
      [Configurer la sauvegarde sur des réplicas de disponibilité &#40;SQL Server&#41;](configure-backup-on-availability-replicas-sql-server.md)  
   

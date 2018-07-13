@@ -1,5 +1,5 @@
 ---
-title: Créer et gérer des Sources de données partagées (Reporting Services en Mode intégré SharePoint) | Documents Microsoft
+title: Créer et gérer des Sources de données partagées (Reporting Services en Mode intégré SharePoint) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - SharePoint integration [Reporting Services], shared data sources
 - shared data sources [Reporting Services]
 ms.assetid: 2d3428e4-a810-4e66-a287-ff18e57fad76
 caps.latest.revision: 12
-author: douglaslM
+author: maggiesmsft
 ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: cab3d9ce31bff00af668a5a10567919bdd106b36
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: d75ac29d1136106d88022bb8c5e3fd66e62124c0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36139757"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37194770"
 ---
 # <a name="create-and-manage-shared-data-sources-reporting-services-in-sharepoint-integrated-mode"></a>Créer et gérer des sources de données partagées (Reporting Services en mode intégré SharePoint)
   Lorsque vous exécutez un rapport à partir d'une bibliothèque SharePoint, les informations de connexion peuvent être définies dans le rapport ou dans un fichier externe lié au rapport. Si les informations de connexion sont incorporées dans le rapport, elles constituent une source de données personnalisée. Si les informations de connexion sont définies dans un fichier externe, elles constituent une source de données partagée. Le fichier externe peut être un fichier de source de données du serveur de rapports (.rsds) ou un fichier de connexion de données Office (.odc).  
@@ -46,7 +46,7 @@ ms.locfileid: "36139757"
   
 4.  Dans **Type de source de données**, sélectionnez le type de source de données dans la liste. Pour plus d’informations, consultez [Sources de données prises en charge par Reporting Services &#40;SSRS&#41;](create-deploy-and-manage-mobile-and-paginated-reports.md).  
   
-5.  Dans **Chaîne de connexion**, spécifiez un pointeur vers la source de données, ainsi que les autres paramètres nécessaires à l'établissement d'une connexion à la source de données externe. Le type de source de données utilisé détermine la syntaxe de la chaîne de connexion. Pour plus d’informations et d’exemples, consultez [des connexions de données, les Sources de données et les chaînes de connexion dans Reporting Services](../../2014/reporting-services/data-connections-data-sources-and-connection-strings-in-reporting-services.md).  
+5.  Dans **Chaîne de connexion**, spécifiez un pointeur vers la source de données, ainsi que les autres paramètres nécessaires à l'établissement d'une connexion à la source de données externe. Le type de source de données utilisé détermine la syntaxe de la chaîne de connexion. Pour plus d’informations et des exemples, consultez [des connexions de données, les Sources de données et les chaînes de connexion dans Reporting Services](../../2014/reporting-services/data-connections-data-sources-and-connection-strings-in-reporting-services.md).  
   
 6.  Dans **Informations d'identification**, spécifiez comment le serveur de rapports obtient les informations d'identification permettant d'accéder à la source de données externe. Les informations d'identification peuvent être stockées, demandées, intégrées ou configurées pour le traitement autonome des rapports.  
   

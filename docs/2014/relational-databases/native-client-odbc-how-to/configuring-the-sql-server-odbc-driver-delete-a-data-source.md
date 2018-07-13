@@ -1,35 +1,33 @@
 ---
-title: Supprimer une Source de données (ODBC) | Documents Microsoft
+title: Supprimer une Source de données (ODBC) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - data sources [ODBC]
 ms.assetid: 910e3e16-7b91-49d8-80bb-b4243926afaa
 caps.latest.revision: 16
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: d3b18bfe882147e0c60033dac9efd9dc4e3a6057
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: e870254043d9cc85d99203d76513816f67267560
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36042004"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37415188"
 ---
 # <a name="delete-a-data-source-odbc"></a>Supprimer une source de données (ODBC)
   Vous pouvez supprimer une source de données à l’aide de l’administrateur ODBC, par programmation (à l’aide de [SQLConfigDataSource](../native-client-odbc-api/sqlconfigdatasource.md)), ou en supprimant un fichier (si un nom de source de données de fichier).  
   
 ### <a name="to-delete-a-data-source-by-using-odbc-administrator"></a>Pour supprimer une source de données à l'aide de l'Administrateur ODBC  
   
-1.  Dans **le panneau de configuration**, ouvrez **outils d’administration**, puis double-cliquez sur **des Sources de données (ODBC)**. Vous pouvez également exécuter odbcad32.exe à partir de l'invite de commandes.  
+1.  Dans **le panneau de configuration**, ouvrez **outils d’administration**, puis double-cliquez sur **Sources de données (ODBC)**. Vous pouvez également exécuter odbcad32.exe à partir de l'invite de commandes.  
   
 2.  Cliquez sur le **DSN utilisateur**, **DSN système**, ou **fichier DSN** onglet.  
   
@@ -38,7 +36,7 @@ ms.locfileid: "36042004"
 4.  Cliquez sur **supprimer**, puis confirmez la suppression.  
   
 ## <a name="example"></a>Exemple  
- Pour supprimer par programmation une source de données, appelez [SQLConfigDataSource](../native-client-odbc-api/sqlconfigdatasource.md) utilisant ODBC_REMOVE_DSN ou ODBC_REMOVE_SYS_DSN comme deuxième paramètre.  
+ Pour supprimer par programmation une source de données, appelez [SQLConfigDataSource](../native-client-odbc-api/sqlconfigdatasource.md) en utilisant ODBC_REMOVE_DSN ou ODBC_REMOVE_SYS_DSN comme deuxième paramètre.  
   
  L'exemple suivant vous montre comment supprimer une source de données par programme.  
   
@@ -60,6 +58,6 @@ int main() {
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Configuration des rubriques de procédures de commande pilote SQL Server ODBC](../../database-engine/dev-guide/configuring-the-sql-server-odbc-driver-how-to-topics.md)  
+ [Rubriques des procédures relatives à la configuration du pilote ODBC SQL Server](../../database-engine/dev-guide/configuring-the-sql-server-odbc-driver-how-to-topics.md)  
   
   

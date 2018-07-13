@@ -5,25 +5,24 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-backup-restore
+ms.technology: backup-restore
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - STOPAT clause [RESTORE LOG statement]
 - point in time recovery [SQL Server]
 - restoring databases [SQL Server], point in time
 ms.assetid: 3a5daefd-08a8-4565-b54f-28ad01a47d32
 caps.latest.revision: 50
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 62676ecbbe57529a2f1eeec4448ef91a4ebf6d4e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 504810285ca79879e2442526747d40bbf0ed50bd
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36052049"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37203559"
 ---
 # <a name="restore-a-sql-server-database-to-a-point-in-time-full-recovery-model"></a>Restaurer une base de données SQL Server jusqu'à une limite dans le temps (mode de récupération complète)
   Cette rubrique explique comment restaurer une base de données à un point précis dans le temps dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] à l'aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou de [!INCLUDE[tsql](../../includes/tsql-md.md)]. Cette rubrique s'applique uniquement aux bases de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilisant le mode de restauration complète ou de récupération utilisant les journaux de transactions.  
@@ -136,9 +135,9 @@ ms.locfileid: "36052049"
   
  **Syntaxe [!INCLUDE[tsql](../../includes/tsql-md.md)] de base**  
   
- RESTORE LOG *nom_base_de_données* FROM < unité_sauvegarde > WITH STOPAT  **= *`time`*,** récupération...  
+ RESTORE LOG *database_name* FROM < unité_sauvegarde > WITH STOPAT  **= *`time`*,** récupération...  
   
- Le point de récupération est la dernière validation de transaction qui s’est produite à ou avant la `datetime` valeur qui est spécifiée par *temps*.  
+ Le point de récupération est la dernière validation de transaction qui s’est produite à ou avant la `datetime` valeur spécifiée par *temps*.  
   
  Pour restaurer uniquement les modifications apportées avant un moment spécifique dans le temps, spécifiez WITH STOPAT **=** *time* pour chaque sauvegarde que vous restaurez. De cette manière, vous êtes certain de ne pas dépasser le moment cible.  
   
@@ -156,7 +155,7 @@ ms.locfileid: "36052049"
   
 3.  Restaurez la dernière sauvegarde différentielle de base de données, si elle existe, sans récupérer la base de données (RESTORE DATABASE *database_name* FROM *backup_device* WITH NORECOVERY).  
   
-4.  Appliquez chaque sauvegarde du journal des transactions dans l’ordre dans lequel elles ont été créées, en spécifiant l’heure à laquelle vous avez l’intention d’arrêter la restauration du journal (RESTORE DATABASE *nom_base_de_données* à partir de < unité_sauvegarde > WITH STOPAT **= *`time`*,** Récupération).  
+4.  Appliquez chaque sauvegarde de journal de transactions dans l’ordre dans lequel ils ont été créés, en spécifiant l’heure à laquelle vous souhaitez arrêter la restauration du journal (RESTORE DATABASE *database_name* à partir de < appareil_sauvegarde > WITH STOPAT **= *`time`*,** Récupération).  
   
     > [!NOTE]  
     >  Options RECOVERY et STOPAT. Si la sauvegarde du journal des transactions ne contient pas l'heure demandée (par exemple, si l'heure spécifiée dépasse la dernière heure figurant dans le journal des transactions), un avertissement est émis et la base de données n'est pas récupérée.  

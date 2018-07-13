@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 7168c8d3-cef5-4c4a-a0bf-fff1ac5b8b71
 caps.latest.revision: 10
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: cb02d483de02ba4c9cc65a3e9597f5c04e3bb284
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 2d857f5c04318c88050f9aa63706f75902c8b445
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36053019"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37200829"
 ---
 # <a name="tutorial-creating-drillthrough-and-main-reports-report-builder"></a>Didacticiel : création d'un rapport principal et d'un rapport d'extraction (Générateur de rapports)
   Ce didacticiel vous apprend comment créer deux types de rapports : un rapport d'extraction et un rapport principal. Les exemples de données de ventes utilisés dans ces rapports sont récupérés d'un cube Analysis Services. L'illustration suivante montre les rapports que vous allez créer.  
@@ -31,7 +31,7 @@ ms.locfileid: "36053019"
  ![rs_DrillthroughCubeTutorialParmExpr](../../2014/tutorials/media/rs-drillthroughcubetutorialparmexpr.gif "rs_DrillthroughCubeTutorialParmExpr")  
   
 ## <a name="what-you-will-learn"></a>Contenu du didacticiel  
- **Dans le rapport d’extraction, vous allez apprendre comment :**  
+ **Dans le rapport d’extraction, vous apprendrez comment :**  
   
 1.  [Créer un rapport de matrice d’extraction et d’un jeu de données à partir de l’Assistant tableau ou matrice](#DMatrixAndDataset)  
   
@@ -39,15 +39,15 @@ ms.locfileid: "36053019"
   
     2.  [Créer une requête MDX](#DMDXQuery)  
   
-    3.  [Organiser les données dans des groupes Style](#DLayout)  
+    3.  [Organiser les données en groupes de Style](#DLayout)  
   
     4.  [Ajouter des sous-totaux et totaux](#DTotals)  
   
-    5.  [Choisissez un Style](#DStyle)  
+    5.  [Choisir un Style](#DStyle)  
   
 2.  [Format des données en tant que devises](#DFormat)  
   
-3.  [Ajouter des colonnes à afficher les valeurs de ventes dans les graphiques sparkline](#DSparkline)  
+3.  [Ajouter des colonnes à afficher les valeurs de ventes dans des graphiques sparkline](#DSparkline)  
   
 4.  [Ajouter un titre de rapport avec le nom de catégorie de produit](#DReportTitle)  
   
@@ -55,7 +55,7 @@ ms.locfileid: "36053019"
   
 6.  [Enregistrer le rapport dans une bibliothèque SharePoint](#DSave)  
   
- **Dans le rapport principal, vous allez apprendre comment :**  
+ **Dans le rapport principal, vous apprendrez comment :**  
   
 1.  [Créer le rapport de matrice principal et un jeu de données à partir de l’Assistant tableau ou matrice](#MMatrixAndDataset)  
   
@@ -67,13 +67,13 @@ ms.locfileid: "36053019"
   
     4.  [Ajouter des sous-totaux et totaux](#MTotals)  
   
-    5.  [Choisissez un Style](#MStyle)  
+    5.  [Choisir un Style](#MStyle)  
   
 2.  [Supprimer la ligne de Total général](#MGrandTotal)  
   
-3.  [Configurer l’Action de zone de texte pour l’extraction](#MDrillthrough)  
+3.  [Configurer une Action de zone de texte pour l’extraction](#MDrillthrough)  
   
-4.  [Remplacez les valeurs numériques avec des indicateurs](#MIndicators)  
+4.  [Remplacer les valeurs numériques par des indicateurs](#MIndicators)  
   
 5.  [Propriétés de paramètre de mise à jour](#MParameter)  
   
@@ -81,7 +81,7 @@ ms.locfileid: "36053019"
   
 7.  [Enregistrer le rapport dans une bibliothèque SharePoint](#MSave)  
   
-8.  [Exécuter le principal et les rapports d’extraction](#MRunReports)  
+8.  [Exécuter les rapports principal et extraction](#MRunReports)  
   
  Durée estimée pour effectuer ce didacticiel : 30 minutes.  
   
@@ -95,13 +95,13 @@ ms.locfileid: "36053019"
   
 1.  Cliquez sur **Démarrer**, pointez sur **programmes**, pointez sur [!INCLUDE[ssCurrentUI](../includes/sscurrentui-md.md)] **le Générateur de rapports**, puis cliquez sur **le Générateur de rapports**.  
   
-     Le **mise en route** boîte de dialogue s’ouvre. Si elle n’apparaît pas, à partir de la **le Générateur de rapports** et sur **nouveau**.  
+     Le **mise en route** boîte de dialogue s’ouvre. Si elle n’apparaît pas, à partir de la **le Générateur de rapports** bouton, cliquez sur **New**.  
   
 2.  Dans le volet gauche, assurez-vous que **Nouveau rapport** est sélectionné.  
   
 3.  Dans le volet droit, vérifiez que **Assistant Tableau ou matrice** est sélectionné.  
   
-##  <a name="DConnection"></a> 1. Spécifier une connexion de données  
+##  <a name="DConnection"></a> 1 a. Spécifier une connexion de données  
  Une connexion de données contient les informations nécessaires pour se connecter à une source de données externe telle qu'un cube Analysis Services ou une base de données [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . Pour spécifier une connexion de données, vous pouvez utiliser une source de données partagée sur le serveur de rapports ou créer une source de données incorporée utilisée uniquement dans ce rapport. Dans ce didacticiel, vous allez utiliser une source de données incorporée. Pour en savoir plus sur l’utilisation d’une source de données partagée, consultez [Autres manières d’obtenir une connexion de données &#40;Générateur de rapports&#41;](../reporting-services/alternative-ways-to-get-a-data-connection-report-builder.md).  
   
 #### <a name="to-create-an-embedded-data-source"></a>Pour créer une source de données incorporée  
@@ -402,7 +402,7 @@ ms.locfileid: "36053019"
   
 2.  Dans la boîte de dialogue **Prise en main** , vérifiez que **Nouveau rapport** est sélectionné, puis cliquez sur **Assistant Tableau ou matrice**.  
   
-##  <a name="MConnection"></a> 1. Spécifier une connexion de données  
+##  <a name="MConnection"></a> 1 a. Spécifier une connexion de données  
  Vous allez ajouter une source de données incorporée au rapport principal.  
   
 #### <a name="to-create-an-embedded-data-source"></a>Pour créer une source de données incorporée  
