@@ -1,5 +1,5 @@
 ---
-title: L’importation (SSAS) | Documents Microsoft
+title: L’importation (SSAS) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.bidtoolset.importing.f1
 ms.assetid: f1681be4-c543-4e77-875d-b13eeb75cf77
 caps.latest.revision: 11
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 72faf98eb62b72c18243bb190951f630bbe85218
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: e41bc4470ec16fdeecbca2e978d77e6c7dc7ef09
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36141651"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37259575"
 ---
 # <a name="importing-ssas"></a>Importation (SSAS)
   Cette page de **l’Assistant Importation de table** vous permet de suivre la progression de l’opération d’importation. Pour accéder à l'Assistant [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)], dans le menu **Modèle** , cliquez sur **Importer à partir de la source de données**.  

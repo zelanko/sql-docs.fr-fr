@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 3caa4372-aff3-4c0f-9ecd-97870948b8d0
 caps.latest.revision: 6
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 4c0c38e2aa12991ead24a0ba162462504d28e60d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 0f1a262a52bdc610da81c5b42785fa555967e8bb
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36139869"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37239349"
 ---
 # <a name="odata-connection-manager"></a>Gestionnaire de connexions OData
   Un gestionnaire de connexions OData permet à un package de se connecter à une source OData. Un composant source OData se connecte à une source OData à l'aide d'un gestionnaire de connexions OData et consomme les données du service. Consultez la [OData Source](../data-flow/odata-source.md)section qui traite des informations détaillées et des instructions d'installation de ces composants.  

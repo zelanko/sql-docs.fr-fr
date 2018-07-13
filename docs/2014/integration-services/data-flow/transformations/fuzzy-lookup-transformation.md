@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.fuzzylookuptrans.f1
 helpviewer_keywords:
@@ -33,13 +33,13 @@ ms.assetid: 019db426-3de2-4ca9-8667-79fd9a47a068
 caps.latest.revision: 75
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 47afae752c8e9f82e5904346de21613509499673
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: f73bbc60cfcc59cc53252239da9acc4ecf05919d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36142759"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37185186"
 ---
 # <a name="fuzzy-lookup-transformation"></a>transformation de recherche floue
   La transformation de recherche floue effectue des tâches de nettoyage des données telles que la standardisation des données, la correction des données et la fourniture de données manquantes.  
@@ -55,7 +55,7 @@ ms.locfileid: "36142759"
   
  Cette transformation a une entrée et une sortie.  
   
- Seules les colonnes d'entrée avec les types de données `DT_WSTR` et `DT_STR` peuvent être utilisées dans la correspondance floue. La correspondance exacte peut utiliser n'importe quel type de données DTS, à l'exception des types `DT_TEXT`, `DT_NTEXT` et `DT_IMAGE`. Pour plus d’informations, consultez [Types de données Integration Services](../integration-services-data-types.md). Les colonnes participant à la jointure entre l'entrée et la table de référence doivent avoir des types de données compatibles. Par exemple, il est valide pour joindre une colonne avec DTS `DT_WSTR` type de données à une colonne avec le [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] `nvarchar` type de données, mais non valide pour joindre une colonne avec le `DT_WSTR` type de données à une colonne avec le `int` type de données.  
+ Seules les colonnes d'entrée avec les types de données `DT_WSTR` et `DT_STR` peuvent être utilisées dans la correspondance floue. La correspondance exacte peut utiliser n'importe quel type de données DTS, à l'exception des types `DT_TEXT`, `DT_NTEXT` et `DT_IMAGE`. Pour plus d’informations, consultez [Types de données Integration Services](../integration-services-data-types.md). Les colonnes participant à la jointure entre l'entrée et la table de référence doivent avoir des types de données compatibles. Par exemple, il est valide pour joindre une colonne avec DTS `DT_WSTR` type de données à une colonne avec le [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] `nvarchar` type de données, mais pas d’effectuer la jointure entre une colonne avec le `DT_WSTR` type de données à une colonne avec le `int` type de données.  
   
  Vous pouvez personnaliser cette transformation en spécifiant le volume maximum de mémoire, l'algorithme de comparaison de lignes et la mise en cache d'index et de tables de référence utilisés par la transformation.  
   
@@ -113,12 +113,12 @@ ms.locfileid: "36142759"
 >  Dans la mesure où l’option **Conserver l’index stocké** requiert l’intégration du CLR, cette fonctionnalité n’est effective que lorsque vous sélectionnez une table de référence dans une instance de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] pour laquelle l’intégration du CLR est activée.  
   
 ## <a name="row-comparison"></a>Comparaison de lignes  
- Lorsque vous configurez la transformation de configuration floue, vous pouvez spécifier l'algorithme de comparaison utilisé par la transformation pour rechercher les enregistrements correspondants dans la table de référence. Si vous définissez la propriété Exhaustive sur `True`, la transformation compare chaque ligne de l’entrée à chaque ligne de la table de référence. Cet algorithme de comparaison peut produire des résultats plus précis, mais peut ralentir la transformation, sauf si le nombre de lignes dans la table de référence est faible. Si la propriété Exhaustive est définie `True`, la table de référence est chargée en mémoire. Pour éviter les problèmes de performances, il est recommandé de définir la propriété Exhaustive `True` lors du développement uniquement.  
+ Lorsque vous configurez la transformation de configuration floue, vous pouvez spécifier l'algorithme de comparaison utilisé par la transformation pour rechercher les enregistrements correspondants dans la table de référence. Si vous définissez la propriété Exhaustive sur `True`, la transformation compare chaque ligne dans l’entrée à chaque ligne de la table de référence. Cet algorithme de comparaison peut produire des résultats plus précis, mais peut ralentir la transformation, sauf si le nombre de lignes dans la table de référence est faible. Si la propriété Exhaustive est définie sur `True`, la table de référence est chargée en mémoire. Pour éviter les problèmes de performances, il est recommandé de définir la propriété Exhaustive `True` lors du développement uniquement.  
   
- Si la propriété Exhaustive est définie `False`, la transformation de recherche floue renvoie uniquement les correspondances qui ont au moins un jeton indexé ou sous-chaîne (la sous-chaîne est appelée un *q-gram*) en commun avec l’enregistrement d’entrée. Pour améliorer l'efficacité des recherches, seul un sous-ensemble des jetons de chaque ligne de la table est indexé dans la structure d'index inversée dont se sert la transformation de recherche floue pour rechercher les correspondances. Lorsque le jeu de données d’entrée est petit, vous pouvez définir la propriété Exhaustive `True` afin d’éviter manquantes pour lesquels aucun jeton commun n’existe dans la table d’index de correspondances.  
+ Si la propriété Exhaustive est définie sur `False`, la transformation de recherche floue renvoie uniquement les correspondances ayant au moins un jeton indexé ou une sous-chaîne (la sous-chaîne est appelée un *q-gram*) en commun avec l’enregistrement d’entrée. Pour améliorer l'efficacité des recherches, seul un sous-ensemble des jetons de chaque ligne de la table est indexé dans la structure d'index inversée dont se sert la transformation de recherche floue pour rechercher les correspondances. Lorsque le jeu de données d’entrée est petit, vous pouvez affecter à Exhaustive `True` afin d’éviter les correspondances manquantes pour lequel aucun jeton commun n’existe dans la table d’index.  
   
 ## <a name="caching-of-indexes-and-reference-tables"></a>Mise en cache des index et tables de référence  
- Lorsque vous configurez la transformation de recherche floue, vous pouvez spécifier si la transformation met partiellement en cache l'index et la table de référence dans la mémoire avant que la transformation soit exécutée. Si vous définissez la propriété WarmCaches sur `True`, la table de référence et les index sont chargés en mémoire. Lorsque l’entrée a le nombre de lignes, la propriété WarmCaches `True` peut améliorer les performances de la transformation. Lorsque le nombre de lignes d’entrée est petit, définissez la propriété de WarmCaches à `False` peut accélérer la réutilisation d’un index de grande taille.  
+ Lorsque vous configurez la transformation de recherche floue, vous pouvez spécifier si la transformation met partiellement en cache l'index et la table de référence dans la mémoire avant que la transformation soit exécutée. Si vous définissez la propriété WarmCaches sur `True`, la table de référence et des index sont chargées en mémoire. Lorsque l’entrée a de nombreuses lignes, la définition de la propriété WarmCaches `True` peut améliorer les performances de la transformation. Lorsque le nombre de lignes d’entrée est petit, définition de la propriété WarmCaches `False` peut accélérer la réutilisation d’un index de grande taille.  
   
 ## <a name="temporary-tables-and-indexes"></a>Tables et index temporaires  
  Lors de l'exécution, la transformation de recherche floue crée des objets temporaires tels que des tables et des index, dans la base de données [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] à laquelle la transformation se connecte. La taille de ces tables et index temporaires est proportionnelle au nombre de lignes et de jetons dans la table de référence et au nombre de jetons que la transformation de recherche floue crée ; ils peuvent donc occuper un volume important de l'espace disque. La transformation exécute également des requêtes sur ces tables temporaires. Vous devez donc envisager de connecter la transformation de recherche floue à une instance d’une base de données [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] qui ne soit pas en production, notamment si le serveur de production dispose d’un espace disque disponible limité.  
@@ -130,7 +130,7 @@ ms.locfileid: "36142759"
   
  Pour plus d’informations sur les propriétés définissables dans la boîte de dialogue **Éditeur de transformation de recherche floue** , cliquez sur l’une des rubriques suivantes :  
   
--   [Éditeur de Transformation de recherche floue &#40;onglet de la Table de référence&#41;](../../fuzzy-lookup-transformation-editor-reference-table-tab.md)  
+-   [Éditeur de Transformation de recherche floue &#40;onglet Table de référence&#41;](../../fuzzy-lookup-transformation-editor-reference-table-tab.md)  
   
 -   [Éditeur de Transformation de recherche floue &#40;onglet colonnes&#41;](../../fuzzy-lookup-transformation-editor-columns-tab.md)  
   

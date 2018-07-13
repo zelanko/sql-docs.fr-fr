@@ -1,13 +1,11 @@
 ---
-title: Copie en bloc à l’aide d’un fichier de Format (ODBC) | Documents Microsoft
+title: Copie en bloc à l’aide d’un fichier de Format (ODBC) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -15,15 +13,15 @@ helpviewer_keywords:
 - ODBC, bulk copy operations
 ms.assetid: 970fd3af-f918-4fc3-a5b1-92596515d4de
 caps.latest.revision: 8
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: e84914caf6b86b12db3f58beadd05ed3b75593e6
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: 5994c0904e688817fdbdcb58cd4d03e9a3338e16
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36053070"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37417578"
 ---
 # <a name="bulk-copy-by-using-a-format-file-odbc"></a>Effectuer une copie en bloc à l'aide d'un fichier de format (ODBC)
   Cet exemple montre comment utiliser la fonction ODBC bcp_init avec un fichier de format.  
@@ -46,7 +44,7 @@ ms.locfileid: "36053070"
   
     -   Direction de la copie : DB_IN du fichier vers la table ou vue.  
   
-5.  Appelez [bcp_readfmt](../../native-client-odbc-extensions-bulk-copy-functions/bcp-readfmt.md) pour lire le fichier de format décrivant le fichier de données à utiliser par l’opération de copie en bloc.  
+5.  Appelez [bcp_readfmt](../../native-client-odbc-extensions-bulk-copy-functions/bcp-readfmt.md) pour lire le fichier de format décrivant le fichier de données utilisable par l’opération de copie en bloc.  
   
 6.  Appelez [bcp_exec](../../native-client-odbc-extensions-bulk-copy-functions/bcp-exec.md) pour exécuter l’opération de copie en bloc.  
   
@@ -190,7 +188,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Copie en bloc avec les SQL Server ODBC Driver rubriques &#40;ODBC&#41;](bulk-copying-with-the-sql-server-odbc-driver-how-to-topics-odbc.md)   
+ [Copie en bloc avec les SQL Server ODBC Driver procédures &#40;ODBC&#41;](bulk-copying-with-the-sql-server-odbc-driver-how-to-topics-odbc.md)   
  [Utilisation de fichiers de données et de format](../../native-client-odbc-bulk-copy-operations/using-data-files-and-format-files.md)  
   
   

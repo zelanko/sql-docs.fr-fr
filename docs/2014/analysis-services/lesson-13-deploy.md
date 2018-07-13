@@ -1,5 +1,5 @@
 ---
-title: 'Leçon 14 : Déployer | Documents Microsoft'
+title: 'Leçon 14 : Déployer | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 24863a8a-9017-415a-a97b-fbac76ed0675
 caps.latest.revision: 19
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: jhubbard
-ms.openlocfilehash: 2b9bf4afde77cc0438e097c14f6b3743c7da427d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 2973afd208039534048908ca1403fc8154898fc3
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36141655"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37181036"
 ---
 # <a name="lesson-14-deploy"></a>Leçon 14 : Déploiement
   Dans cette leçon, vous allez configurer les propriétés de déploiement ; pour cela, vous allez spécifier une instance de serveur de déploiement d'Analysis Services qui s'exécute en mode tabulaire, ainsi qu'un nom pour le modèle que vous déployez. Vous allez ensuite déployer le modèle sur cette instance. Après son déploiement, les utilisateurs peuvent se connecter au modèle en utilisant une application de création de rapports cliente. Pour plus d’informations, consultez [Déploiement d’une solution de modèle tabulaire &#40;SSAS Tabulaire&#41;](tabular-models/tabular-model-solution-deployment-ssas-tabular.md).  
@@ -40,14 +40,14 @@ ms.locfileid: "36141655"
     > [!IMPORTANT]  
     >  Vous devez disposer d'autorisations d'administration sur une instance Analysis Services distante afin de déployer dans celle-ci.  
   
-3.  Vérifiez le **en Mode requête** est définie sur **In-Memory**.  
+3.  Vérifiez le **en Mode requête** propriété est définie sur **In-Memory**.  
   
     > [!NOTE]  
     >  Le modèle créé à l'aide de ce didacticiel n'est pas pris en charge en mode DirectQuery.  
   
-4.  Dans le **base de données** , tapez `Adventure Works Internet Sales Model`.  
+4.  Dans le **base de données** propriété, tapez `Adventure Works Internet Sales Model`.  
   
-5.  Dans le **Cube** nom, tapez `Adventure Works Internet Sales Model`.  
+5.  Dans le **Cube** propriété Name, tapez `Adventure Works Internet Sales Model`.  
   
 6.  Vérifiez vos sélections, puis cliquez sur **OK**.  
   
@@ -65,7 +65,7 @@ ms.locfileid: "36141655"
   
 ## <a name="see-also"></a>Voir aussi  
  [Mode DirectQuery &#40;SSAS Tabulaire&#41;](tabular-models/directquery-mode-ssas-tabular.md)   
- [Configurer les propriétés de déploiement et de la modélisation des données par défaut &#40;SSAS tabulaire&#41;](tabular-models/configure-default-data-modeling-and-deployment-properties-ssas-tabular.md)   
+ [Configurer les propriétés de déploiement et de modélisation des données par défaut &#40;SSAS tabulaire&#41;](tabular-models/configure-default-data-modeling-and-deployment-properties-ssas-tabular.md)   
  [Bases de données Model tabulaire &#40;SSAS tabulaire&#41;](tabular-models/tabular-model-databases-ssas-tabular.md)  
   
   

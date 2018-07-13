@@ -1,5 +1,5 @@
 ---
-title: Programmation des objets d’exploration de données AMO | Documents Microsoft
+title: Programmation des objets d’exploration de données AMO | Microsoft Docs
 ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql-server-2014
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - Analysis Management Objects, data mining
 ms.assetid: d27f58b9-91be-449c-8403-439aa6dd1ff9
 caps.latest.revision: 19
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 62ef444d7fa112267a4a272553834e24fe5b0df9
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 340030bcc2acdc220f6aff4634c6926163862c6f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36141912"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37176946"
 ---
 # <a name="programming-amo-data-mining-objects"></a>Programmation d'objets d'exploration de données AMO
   La programmation d'objets d'exploration de données à l'aide d'AMO est simple et directe. La première étape consiste à créer le modèle de structure de données pour prendre en charge le projet d'exploration de données. Vous devez ensuite créer le modèle d'exploration de données qui prend en charge l'algorithme d'exploration de données que vous souhaitez utiliser pour prédire ou rechercher les relations invisibles sur lesquelles reposent vos données. Dès lors que le projet d'exploration de données est créé (y compris la structure et les algorithmes), vous pouvez traiter les modèles d'exploration de données pour obtenir les modèles ayant fait l'objet d'un apprentissage que vous utiliserez par la suite lors des interrogations et des prédictions réalisées à partir de l'application cliente.  
@@ -53,7 +53,7 @@ ms.locfileid: "36141912"
   
      Il est possible de traiter les structures d'exploration de données. À cette occasion, les modèles d'exploration de données enfants sont traités ou font l'objet d'un nouvel apprentissage.  
   
- L'exemple de code suivant crée une structure d'exploration de données pour prévoir les ventes dans une série chronologique. Avant d’exécuter l’exemple de code, assurez-vous que la base de données *db*, passé comme paramètre pour `CreateSalesForecastingMiningStructure`, contient dans `db.DataSourceViews[0]` une référence à la vue *dbo.vTimeSeries* dans les [!INCLUDE[ssAWDWsp](../../../includes/ssawdwsp-md.md)]base de données exemple.  
+ L'exemple de code suivant crée une structure d'exploration de données pour prévoir les ventes dans une série chronologique. Avant d’exécuter l’exemple de code, assurez-vous que la base de données *db*, passé comme paramètre pour `CreateSalesForecastingMiningStructure`, contient dans `db.DataSourceViews[0]` une référence à la vue *dbo.vTimeSeries* dans le [!INCLUDE[ssAWDWsp](../../../includes/ssawdwsp-md.md)]base de données exemple.  
   
 ```  
 public static MiningStructure CreateSalesForecastingMiningStructure(Database db)  

@@ -1,13 +1,11 @@
 ---
-title: Métadonnées de paramètre de table supplémentaire | Documents Microsoft
+title: Métadonnées de paramètres Table-Valued supplémentaires | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -15,18 +13,18 @@ helpviewer_keywords:
 - table-valued parameters (ODBC), metadata
 ms.assetid: 6c193188-5185-4373-9a0d-76cfc150c828
 caps.latest.revision: 15
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 4dbb77a586a08d0a8284a1c79f5ea8a2ef904c4c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: f28c5baf528a975b987c68e81543932b63dc5761
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36051257"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37419748"
 ---
 # <a name="additional-table-valued-parameter-metadata"></a>Métadonnées de paramètres table supplémentaires
-  Pour récupérer des métadonnées pour un paramètre table, une application appelle SQLProcedureColumns. Pour un paramètre table, SQLProcedureColumns renvoie une ligne unique. Deux autres [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-des colonnes spécifiques, SS_TYPE_CATALOG_NAME et SS_TYPE_SCHEMA_NAME, ont été ajoutés pour fournir des informations de schéma et de catalogue pour les types de table associée aux paramètres table. En conformité avec la spécification ODBC, SS_TYPE_CATALOG_NAME et SS_TYPE_SCHEMA_NAME apparaissent avant toutes les colonnes spécifiques aux pilotes ajoutées dans les versions antérieures de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et après toutes les colonnes mandatées par ODBC lui-même.  
+  Pour récupérer les métadonnées pour un paramètre table, une application appelle SQLProcedureColumns. Pour un paramètre table, SQLProcedureColumns renvoie une seule ligne. Deux autres [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-des colonnes spécifiques, SS_TYPE_CATALOG_NAME et SS_TYPE_SCHEMA_NAME, ont été ajoutés pour fournir des informations de schéma et de catalogue pour les types de table associés aux paramètres table. En conformité avec la spécification ODBC, SS_TYPE_CATALOG_NAME et SS_TYPE_SCHEMA_NAME apparaissent avant toutes les colonnes spécifiques aux pilotes ajoutées dans les versions antérieures de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et après toutes les colonnes mandatées par ODBC lui-même.  
   
  Le tableau suivant répertorie les colonnes significatives pour les paramètres table.  
   
@@ -53,7 +51,7 @@ ms.locfileid: "36051257"
   
  Pour obtenir des métadonnées supplémentaires pour les paramètres table, une application utilise les fonctions de catalogue SQLColumns et SQLPrimaryKeys. Avant que ces fonctions ne soient appelées pour les paramètres table, l'application doit définir l'attribut d'instruction SQL_SOPT_SS_NAME_SCOPE avec la valeur SQL_SS_NAME_SCOPE_TABLE_TYPE. Cette valeur indique que l'application requiert les métadonnées pour un type table plutôt qu'une table réelle. L’application transmet ensuite le TYPE_NAME du paramètre table incluse en tant que le *TableName* paramètre. SS_TYPE_CATALOG_NAME et SS_TYPE_SCHEMA_NAME sont utilisés avec la *CatalogName* et *SchemaName* paramètres, respectivement, pour identifier le catalogue et le schéma pour le paramètre table. Quand une application a fini d'extraire les métadonnées des paramètres table, elle doit redéfinir SQL_SOPT_SS_NAME_SCOPE avec sa valeur par défaut SQL_SS_NAME_SCOPE_TABLE.  
   
- Lorsque SQL_SOPT_SS_NAME_SCOPE est défini avec la valeur SQL_SS_NAME_SCOPE_TABLE, les requêtes adressées aux serveurs liés échouent. Les appels à SQLColumns ou SQLPrimaryKeys avec un catalogue qui contient un composant serveur échoue.  
+ Lorsque SQL_SOPT_SS_NAME_SCOPE est défini avec la valeur SQL_SS_NAME_SCOPE_TABLE, les requêtes adressées aux serveurs liés échouent. Appels à SQLColumns ou SQLPrimaryKeys avec un catalogue qui contient un composant serveur échouent.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Paramètres table &#40;ODBC&#41;](table-valued-parameters-odbc.md)  

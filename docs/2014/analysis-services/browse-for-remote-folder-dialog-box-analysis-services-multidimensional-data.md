@@ -1,5 +1,5 @@
 ---
-title: Rechercher un dossier distant, boîte de dialogue (Analysis Services - données multidimensionnelles) | Documents Microsoft
+title: Rechercher un dossier distant, boîte de dialogue (Analysis Services - données multidimensionnelles) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.browseforremotepartition.f1
 ms.assetid: 1438c355-6a2c-4cf8-9b1d-19116fab45e7
 caps.latest.revision: 13
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: a5316d36dc38f41343c9f0dc3afa1638c68b1dbc
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: bbc311b4c096f5f834141084f705fa8bdf50c3e3
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36053178"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37212069"
 ---
 # <a name="browse-for-remote-folder-dialog-box-analysis-services---multidimensional-data"></a>Boîte de dialogue Rechercher un dossier distant (Analysis Services - Données multidimensionnelles)
   La boîte de dialogue **Rechercher un dossier distant** affiche la liste des dossiers de journaux et de données disponibles définis pour une instance de [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. Vous pouvez sélectionner un dossier répertorié ou spécifier un autre dossier, le cas échéant. La boîte de dialogue **Rechercher un dossier distant** s'ouvre lorsque vous suivez l'une des étapes suivantes :  
@@ -43,8 +43,8 @@ ms.locfileid: "36053178"
   
 ## <a name="see-also"></a>Voir aussi  
  [Concepteurs et boîtes de dialogue Analysis Services &#40;données multidimensionnelles&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)   
- [Emplacements de stockage et de traitement &#40;Assistant Partition&#41;](processing-and-storage-locations-partition-wizard.md)   
+ [Emplacements de stockage et traitement &#40;Assistant Partition&#41;](processing-and-storage-locations-partition-wizard.md)   
  [Partitions &#40;restaurer la boîte de dialogue base de données&#41; &#40;Analysis Services - données multidimensionnelles&#41;](partitions-restore-database-dialog-box-analysis-services-multidimensional-data.md)   
- [Les Partitions distantes - boîte de dialogue Paramètres avancées &#40;Analysis Services - données multidimensionnelles&#41;](remote-partitions-advanced-settings-dialog-analysis-services-multidimensional-data.md)  
+ [Partitions distantes - paramètres avancés, boîte de dialogue boîte &#40;Analysis Services - données multidimensionnelles&#41;](remote-partitions-advanced-settings-dialog-analysis-services-multidimensional-data.md)  
   
   

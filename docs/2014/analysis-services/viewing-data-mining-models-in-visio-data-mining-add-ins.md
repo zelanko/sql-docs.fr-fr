@@ -1,5 +1,5 @@
 ---
-title: Affichage des modèles d’exploration de données dans Visio (compléments d’exploration de données) | Documents Microsoft
+title: Affichage de modèles d’exploration de données dans Visio (compléments d’exploration de données) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - diagram, modifying
 - templates [Visio]
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - diagram
 ms.assetid: 5841adea-6650-4fae-8526-26af33edbede
 caps.latest.revision: 14
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 572bbd3b2c3bbcebbd1b5a829ac193ac0bb909a9
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 9dbb4e78685982dc3b7cd981fc6df6db9bf40a13
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36139891"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37259355"
 ---
 # <a name="viewing-data-mining-models-in-visio-data-mining-add-ins"></a>Affichage de modèles d'exploration de données dans Visio (Compléments d'exploration de données)
   Les formes Visio pour l'exploration de données vous permettent de vous connecter à un serveur et de créer un diagramme représentant un modèle d'exploration de données existant. Les diagrammes peuvent alors être personnalisés à l'aide de contrôles Visio, mais vous pouvez également explorer plus en détail les données, exposer une partie des statistiques sous-jacentes et utiliser le modèle sous-jacent.  
@@ -74,11 +74,11 @@ ms.locfileid: "36139891"
 ## <a name="walkthroughs"></a>Procédures pas à pas  
  Pour obtenir des exemples d'utilisation et d'interprétation d'un diagramme fini, consultez les rubriques suivantes :  
   
- [Procédure pas à pas diagramme de cluster](cluster-diagram-walkthrough-data-mining-add-ins.md)  
+ [Procédure pas à pas : Diagramme de cluster](cluster-diagram-walkthrough-data-mining-add-ins.md)  
   
  [Procédure pas à pas diagramme de réseau de dépendance](dependency-network-diagram-walkthrough-data-mining-add-ins.md)  
   
- [Procédure pas à pas diagramme d’arborescence de la décision](decision-tree-diagram-walkthrough-data-mining-add-ins.md)  
+ [Procédure pas à pas : Diagramme d’arbre de décision](decision-tree-diagram-walkthrough-data-mining-add-ins.md)  
   
 ## <a name="see-also"></a>Voir aussi  
  [Exploration des modèles dans Excel &#40;compléments d’exploration de données SQL Server&#41;](browsing-models-in-excel-sql-server-data-mining-add-ins.md)  

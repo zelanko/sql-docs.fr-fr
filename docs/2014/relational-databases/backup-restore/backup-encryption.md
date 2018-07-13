@@ -5,21 +5,20 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-backup-restore
+ms.technology: backup-restore
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 334b95a8-6061-4fe0-9e34-b32c9f1706ce
 caps.latest.revision: 14
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 09b00f2a95ae510cc387d60e3d810e03196bd76e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 4822bfe4b64e9fd169d02bd0b733bc64997d3b90
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36140297"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37190519"
 ---
 # <a name="backup-encryption"></a>Chiffrement de sauvegarde
   Cette rubrique fournit une présentation des options de chiffrement pour les sauvegardes [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Elle contient des informations détaillées sur l'utilisation, les avantages et les méthodes recommandées de chiffrement pendant la sauvegarde.  
@@ -139,7 +138,7 @@ C:\PS>Backup-SqlDatabase -ServerInstance . -Database "MyTestDB" -BackupFile "MyT
 |Rubrique/tâche|Description|  
 |-----------------|-----------------|  
 |[Créer une sauvegarde chiffrée](create-an-encrypted-backup.md)|Décrit les étapes de base requises pour créer une sauvegarde chiffrée.|  
-|[Sauvegarde managée SQL Server sur Windows Azure - paramètres de rétention et stockage](../../database-engine/sql-server-managed-backup-to-windows-azure-retention-and-storage-settings.md)|Décrit les étapes de base requises pour configurer [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] avec les options de chiffrement spécifiées.|  
+|[Sauvegarde managée SQL Server sur Microsoft Azure : Paramètres de conservation et de stockage](../../database-engine/sql-server-managed-backup-to-windows-azure-retention-and-storage-settings.md)|Décrit les étapes de base requises pour configurer [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] avec les options de chiffrement spécifiées.|  
 |[Gestion de clés extensible à l’aide d’Azure Key Vault &#40;SQL Server&#41;](../security/encryption/extensible-key-management-using-azure-key-vault-sql-server.md)|Fournit un exemple de création d'une sauvegarde chiffrée protégée par des clés dans le coffre de clés Azure.|  
   
 ## <a name="see-also"></a>Voir aussi  

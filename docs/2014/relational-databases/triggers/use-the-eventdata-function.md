@@ -5,24 +5,22 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-ddl
+ms.technology: ''
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - EVENTDATA function
 - DDL triggers, EVENTDATA function
 ms.assetid: 675b8320-9c73-4526-bd2f-91ba42c1b604
-caps.latest.revision: 37
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 610822ec0eb896180ebfffa40d53198749df0428
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: rothja
+ms.author: jroth
+manager: craigg
+ms.openlocfilehash: e45ee2308f7f399c08053f8ff4cd6b862b3978df
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36139544"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37427598"
 ---
 # <a name="use-the-eventdata-function"></a>Utiliser la fonction EVENTDATA
   Les informations sur un événement qui lance un déclencheur DDL sont capturées à l'aide de la fonction EVENTDATA. Cette fonction retourne une valeur `xml`. Le schéma XML inclut des informations sur les éléments suivants :  
@@ -53,7 +51,7 @@ AS
   
  `CREATE TABLE NewTable (Column1 int);`  
   
- L’instruction `EVENTDATA()` du déclencheur DDL capture le texte de l’instruction `CREATE TABLE` qui n’est pas autorisé. Cela est possible en utilisant une instruction XQuery par rapport à la `xml` des données générées par EVENTDATA et le \<CommandText > élément. Pour plus d’informations, consultez [Informations de référence sur le langage XQuery &#40;SQL Server&#41;](/sql/xquery/xquery-language-reference-sql-server).  
+ L’instruction `EVENTDATA()` du déclencheur DDL capture le texte de l’instruction `CREATE TABLE` qui n’est pas autorisé. Pour cela, à l’aide d’une instruction XQuery par rapport à la `xml` données générées par EVENTDATA et le \<CommandText > élément. Pour plus d’informations, consultez [Informations de référence sur le langage XQuery &#40;SQL Server&#41;](/sql/xquery/xquery-language-reference-sql-server).  
   
 > [!CAUTION]  
 >  EVENTDATA capture les données des événements CREATE_SCHEMA ainsi que l'<élément_de_schéma> de la définition CREATE SCHEMA correspondante, s'il existe. En outre, EVENTDATA reconnaît la définition <élément_de_schéma> en tant qu'événement distinct. En conséquence, un déclencheur DDL créé à la fois sur un événement CREATE_SCHEMA et sur un événement représenté par l'<élément_de_schéma> de la définition CREATE SCHEMA, peut retourner deux fois les mêmes données d'événement, telles que les données `TSQLCommand`. Par exemple, considérez qu'un déclencheur DDL est créé sur les deux événements CREATE_SCHEMA et CREATE_TABLE et que le traitement suivant est exécuté :  
@@ -99,7 +97,7 @@ ALTER TABLE Person.Address ALTER COLUMN ModifiedDate date;
   
 -   l'instruction [!INCLUDE[tsql](../../includes/tsql-md.md)] comprenant l'événement.  
   
- Là encore, les deux derniers éléments sont capturés en utilisant XQuery sur le `xml` des données générées par EVENTDATA.  
+ Là encore, les deux derniers éléments sont capturés en utilisant XQuery sur le `xml` données générées par EVENTDATA.  
   
 ```  
 USE AdventureWorks2012;  
@@ -129,7 +127,7 @@ GO
 ```  
   
 > [!NOTE]  
->  Pour retourner des données d'événement, nous vous recommandons d'utiliser la méthode XQuery `value()` à la place de la méthode `query()`. Le `query()` méthode retourne XML et séquence d’échappement perluète retour chariot et saut de ligne (CRLF) instances dans la sortie, tandis que le `value()` méthode restitue des instances CRLF invisibles à la sortie.  
+>  Pour retourner des données d'événement, nous vous recommandons d'utiliser la méthode XQuery `value()` à la place de la méthode `query()`. Le `query()` méthode retourne XML et séquence d’échappement perluète retour chariot et saut de ligne (CRLF) instances dans la sortie, tandis que le `value()` méthode restitue des instances CR/LF invisibles dans la sortie.  
   
  L'exemple de base de données [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] fournit un exemple similaire de déclencheur DDL. Pour trouver cet exemple, accédez au dossier des déclencheurs de base de données à l'aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Ce dossier se trouve dans le dossier **Programmabilité** de la base de données [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] . Cliquez avec le bouton droit sur **ddlDatabseTriggerLog** et sélectionnez **Générer un script du déclencheur de la base de données en tant que**. Par défaut, le déclencheur DDL **ddlDatabseTriggerLog** est désactivé.  
   

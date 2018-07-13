@@ -1,5 +1,5 @@
 ---
-title: Calculs | Documents Microsoft
+title: Calculs | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -18,25 +18,25 @@ helpviewer_keywords:
 - cubes [Analysis Services], calculations
 ms.assetid: 6be84916-fd05-4efc-ab98-6adbbad80154
 caps.latest.revision: 34
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: b4bc5f64930bdda9ce64db615a0b1bb1f250aad8
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 8ef953f375269917a7cab7d00a15def6acfb375e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36053604"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37222189"
 ---
 # <a name="calculations"></a>Calculs
-  Un calcul est une expression de MDX (Multidimensional Expressions) ou un script qui est utilisé pour définir un membre calculé, d’un jeu nommé ou d’une attribution d’étendue dans un cube [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Les calculs vous permettent d'ajouter des objets définis non pas par les données du cube, mais par des expressions qui peuvent référencer d'autres parties du cube, d'autres cubes voire des informations à l'extérieur de la base de données [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Les calculs vous permettent d'étendre les capacités d'un cube, en renforçant la flexibilité et la puissance des applications de décisionnel. Pour plus d’informations sur les calculs de script, consultez [Introduction aux scripts MDX dans Microsoft SQL Server 2005](http://go.microsoft.com/fwlink/?LinkId=81892). Pour plus d’informations sur les problèmes de performances liés aux calculs et des requêtes MDX, consultez le [Guide des performances SQL Server 2005 Analysis Services](http://go.microsoft.com/fwlink/?LinkId=81621).  
+  Un calcul est une expression de MDX (Multidimensional Expressions) ou un script qui est utilisé pour définir un membre calculé, un jeu nommé ou une attribution d’étendue dans un cube dans [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Les calculs vous permettent d'ajouter des objets définis non pas par les données du cube, mais par des expressions qui peuvent référencer d'autres parties du cube, d'autres cubes voire des informations à l'extérieur de la base de données [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Les calculs vous permettent d'étendre les capacités d'un cube, en renforçant la flexibilité et la puissance des applications de décisionnel. Pour plus d’informations sur les calculs de script, consultez [Introduction aux scripts MDX dans Microsoft SQL Server 2005](http://go.microsoft.com/fwlink/?LinkId=81892). Pour plus d’informations sur les problèmes de performances liés aux calculs et des requêtes MDX, consultez le [Guide des performances SQL Server 2005 Analysis Services](http://go.microsoft.com/fwlink/?LinkId=81621).  
   
 ## <a name="calculated-members"></a>Membres calculés  
  Un membre calculé est un membre dont la valeur est calculée au moment de l'exécution en utilisant une expression MDX (Multidimensional Expressions) que vous spécifiez lorsque vous définissez le membre calculé. Un membre calculé est disponible pour les applications de décisionnel comme n'importe quel autre membre. Les membres calculés n'augmentent pas la taille du cube, car seules les définitions sont stockées dans le cube ; les valeurs sont calculées dans la mémoire lorsqu'il faut répondre à une requête.  
   
  Les membres calculés peuvent être définis pour n'importe quelle dimension, y compris la dimension de mesures. Les membres calculés créés sur la dimension de mesures sont appelés mesures calculées.  
   
- Bien que les membres calculés reposent généralement sur les données qui existent déjà dans le cube, vous pouvez créer des expressions complexes en combinant les données avec des opérateurs arithmétiques, des nombres et des fonctions. Vous pouvez également utiliser des fonctions MDX, telles que LookupCube, pour accéder aux données d'autres cubes de la base de données [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] inclut des bibliothèques de fonctions Visual Studio standardisées et vous permet d'utiliser des procédures stockées pour récupérer des données à partir d'autres sources que la base de données [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] active. Pour plus d’informations sur les procédures stockées, consultez [définition de procédures stockées](../multidimensional-models-extending-olap-stored-procedures/defining-stored-procedures.md).  
+ Bien que les membres calculés reposent généralement sur les données qui existent déjà dans le cube, vous pouvez créer des expressions complexes en combinant les données avec des opérateurs arithmétiques, des nombres et des fonctions. Vous pouvez également utiliser des fonctions MDX, telles que LookupCube, pour accéder aux données d'autres cubes de la base de données [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] inclut des bibliothèques de fonctions Visual Studio standardisées et vous permet d'utiliser des procédures stockées pour récupérer des données à partir d'autres sources que la base de données [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] active. Pour plus d’informations sur les procédures stockées, consultez [définissant les procédures stockées](../multidimensional-models-extending-olap-stored-procedures/defining-stored-procedures.md).  
   
  Supposons, par exemple, que les cadres d'une société de transport veuillent déterminer les types de cargaisons les plus rentables à transporter, en fonction du bénéfice par unité de volume. Ils utilisent un cube Shipments qui contient les dimensions Cargo, Fleet et Time et les mesures Price_to_Ship, Cost_to_Ship et Volume_in_Cubic_Meters ; cependant, ce cube ne contient pas de mesure de rentabilité. Vous pouvez créer un membre calculé correspondant à une mesure appelée Profit_per_Cubic_Meter dans le cube en combinant les mesures existantes dans l'expression suivante :  
   
@@ -47,7 +47,7 @@ ms.locfileid: "36053604"
   
  Une fois que vous avez créé le membre calculé, Profit_per_Cubic_Meter s'affichera avec les autres mesures au prochain affichage du cube Shipments.  
   
- Pour créer des membres calculés, utilisez le **calcul**onglet dans le Concepteur de Cube. Pour plus d’informations, consultez [créer des membres calculés](../multidimensional-models/create-calculated-members.md)  
+ Pour créer des membres calculés, utilisez le **calcul**onglet Concepteur de Cube. Pour plus d’informations, consultez [créer des membres calculés](../multidimensional-models/create-calculated-members.md)  
   
 ## <a name="named-sets"></a>Jeux nommés  
  Un jeu nommé est une expression contenant une instruction MDX CREATE SET qui retourne un jeu. L’expression MDX est enregistrée en tant que partie de la définition d’un cube dans [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Un jeu nommé est créé afin d'être réutilisé dans les requêtes MDX (Multidimensional Expressions). Un jeu nommé permet aux utilisateurs professionnels de simplifier leurs requêtes et d'utiliser un nom de jeu au lieu d'une expression de jeu pour les expressions de jeu complexes et fréquemment employées. **Rubrique connexe :** [créer des jeux nommés](../multidimensional-models/create-named-sets.md)  

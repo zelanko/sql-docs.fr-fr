@@ -1,5 +1,5 @@
 ---
-title: Contrôle de l’affichage de la région de données de tableau matriciel sur une Page de rapport (Générateur de rapports et SSRS) | Documents Microsoft
+title: Contrôle de l’affichage de la région de données de tableau matriciel sur une Page de rapport (Générateur de rapports et SSRS) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: f81c48cc-f038-4f57-988d-e9a3cbb46424
 caps.latest.revision: 7
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 0e0221f8e610b7924c482492f0bc60b86bf8704e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 6484cf1a0ed924c740f4235873169c03daacc71e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36141455"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37179236"
 ---
 # <a name="controlling-the-tablix-data-region-display-on-a-report-page-report-builder-and-ssrs"></a>Contrôle de l'affichage de la région de données de tableau matriciel sur une page de rapport (Générateur de rapports et SSRS)
   Cette rubrique décrit les propriétés pour une région de données de tableau matriciel qui permettent de modifier la façon dont une région de données de tableau matriciel s'affiche dans un rapport.  
@@ -38,7 +38,7 @@ ms.locfileid: "36141455"
   
 -   **Affichage d'un message en l'absence de données**. Lorsqu'aucune donnée n'existe pour un dataset du rapport au moment de l'exécution, vous pouvez écrire votre propre message à afficher au lieu de la région de données. Pour plus d’informations, consultez [Définir un message d’absence de données pour une région de données &#40;Générateur de rapports et SSRS&#41;](../report-data/set-a-no-data-message-for-a-data-region-report-builder-and-ssrs.md).  
   
--   **Masquage conditionnel de données**. Pour contrôler de manière conditionnelle s’il faut afficher ou masquer une région de données ou des parties d’une région de données, vous pouvez définir la propriété Hidden `True` ou une expression. Les expressions peuvent inclure des références aux paramètres du rapport. Vous pouvez également spécifier un élément de bascule, afin que l'utilisateur puisse décider d'afficher ou non les données de détail. Pour plus d’informations, consultez [Action d’exploration &#40;Générateur de rapports et SSRS&#41;](drilldown-action-report-builder-and-ssrs.md).  
+-   **Masquage conditionnel de données**. Pour contrôler de manière conditionnelle s’il faut afficher ou masquer une région de données ou des parties d’une région de données, vous pouvez définir la propriété Hidden sur `True` ou une expression. Les expressions peuvent inclure des références aux paramètres du rapport. Vous pouvez également spécifier un élément de bascule, afin que l'utilisateur puisse décider d'afficher ou non les données de détail. Pour plus d’informations, consultez [Action d’exploration &#40;Générateur de rapports et SSRS&#41;](drilldown-action-report-builder-and-ssrs.md).  
   
 -   **Fusion de cellules.** Plusieurs cellules contiguës d'un tableau peuvent être combinées pour n'en former qu'une seule. Cette opération se nomme recouvrement de colonnes ou fusion de cellules. Les cellules peuvent être combinées uniquement verticalement ou horizontalement. Lors de la fusion, seules les données de la première cellule sont préservées. Les données des autres cellules sont supprimées. Les cellules fusionnées peuvent être fractionnées de sorte que les colonnes initiales soient rétablies. Pour plus d’informations, consultez [Fusionner des cellules dans une région de données &#40;Générateur de rapports et SSRS&#41;](merge-cells-in-a-data-region-report-builder-and-ssrs.md).  
   
@@ -78,8 +78,8 @@ ms.locfileid: "36141455"
 ## <a name="see-also"></a>Voir aussi  
  [Liaison de plusieurs régions de données à un même dataset &#40;Générateur de rapports et SSRS&#41;](linking-multiple-data-regions-to-the-same-dataset-report-builder-and-ssrs.md)   
  [Régions de données imbriquées &#40;Générateur de rapports et SSRS&#41;](nested-data-regions-report-builder-and-ssrs.md)   
- [Étendue des expressions pour les totaux, les agrégats et les Collections intégrées &#40;rapport Générateur et SSRS&#41;](expression-scope-for-totals-aggregates-and-built-in-collections.md)   
- [Contrôle de la Page s’arrête, des en-têtes, des colonnes et lignes &#40;rapport Générateur et SSRS&#41;](controlling-page-breaks-headings-columns-and-rows-report-builder-and-ssrs.md)   
+ [Étendue des expressions pour les totaux, les agrégats et les Collections intégrées &#40;Générateur de rapports et SSRS&#41;](expression-scope-for-totals-aggregates-and-built-in-collections.md)   
+ [Page de contrôle des sauts, des en-têtes, colonnes et lignes &#40;Générateur de rapports et SSRS&#41;](controlling-page-breaks-headings-columns-and-rows-report-builder-and-ssrs.md)   
  [Région de données de tableau matriciel &#40;Générateur de rapports et SSRS&#41;](../tablix-data-region-report-builder-and-ssrs.md)   
  [Tables &#40;Générateur de rapports et SSRS&#41;](tables-report-builder-and-ssrs.md)   
  [Matrices &#40;Générateur de rapports et SSRS&#41;](create-a-matrix-report-builder-and-ssrs.md)   

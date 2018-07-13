@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: e1792eeb-2874-4653-b20e-3063f4eb4e5d
 caps.latest.revision: 21
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 09ada3ef426e365ec6ff734cb35da7bb2e394b14
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 140fac99176fc41f5e3967c158c7929fe9554989
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36142776"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37180416"
 ---
 # <a name="considerations-for-installing-sql-server-using-sysprep"></a>Considérations relatives à l'installation de SQL Server à l'aide de SysPrep
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SysPrep vous permet de préparer une instance autonome de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sur un ordinateur et de terminer la configuration ultérieurement. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SysPrep implique un processus en deux étapes pour arriver à une instance autonome configurée de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Ces étapes sont les suivantes :  

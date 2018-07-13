@@ -1,5 +1,5 @@
 ---
-title: 'Leçon 4 : Exploration des modèles d’exploration de données Bike Buyer | Documents Microsoft'
+title: 'Leçon 4 : Exploration des modèles d’exploration de données Bike Buyer | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,23 +8,23 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 8de3c500-f881-42da-a096-b6c03300d58d
 caps.latest.revision: 21
 author: minewiskan
 ms.author: owend
-manager: kfile
-ms.openlocfilehash: a4144b7613b1af93f17a50381ec7b3b68507824c
-ms.sourcegitcommit: 8c040e5b4e8c7d37ca295679410770a1af4d2e1f
+manager: craigg
+ms.openlocfilehash: 5866ebce4673033bf9be78b81bb65ad705dd331a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/21/2018
-ms.locfileid: "36312577"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37278175"
 ---
 # <a name="lesson-4-browsing-the-bike-buyer-mining-models"></a>Leçon 4 : Exploration des modèles d'exploration de données Bike Buyer
-  Dans cette leçon, vous allez utiliser le [SELECT (DMX)](/sql/dmx/select-dmx) instruction pour Explorer le contenu de l’arbre de décision et du clustering d’exploration de données que vous avez créé dans les modèles [leçon 2 : ajout de modèles d’exploration de données à la Structure d’exploration de données prédictives](../../2014/tutorials/lesson-2-adding-mining-models-to-the-bike-buyer-mining-structure.md).  
+  Dans cette leçon, vous allez utiliser le [SELECT (DMX)](/sql/dmx/select-dmx) instruction pour Explorer le contenu dans l’arbre de décision et clustering d’exploration de données que vous avez créé dans les modèles [leçon 2 : ajout de modèles d’exploration de données à la Structure d’exploration de données prédictive](../../2014/tutorials/lesson-2-adding-mining-models-to-the-bike-buyer-mining-structure.md).  
   
- Les colonnes figurant dans un modèle d'exploration de données ne sont pas les colonnes définies par la structure d'exploration de données ; elles forment plutôt un ensemble spécifique de colonnes décrivant des tendances et des modèles identifiés par l'algorithme. Ces colonnes du modèle d’exploration de données sont décrits dans le [de lignes DMSCHEMA_MINING_MODEL_CONTENT](../analysis-services/schema-rowsets/data-mining/dmschema-mining-model-content-rowset.md) de lignes du schéma. Par exemple, la colonne MODEL_NAME située dans l'ensemble de lignes du schéma contient le nom du modèle d'exploration de données. Dans le cadre d'un modèle d'exploration de données clustering, la colonne NODE_CAPTION renferme le nom de chaque cluster et la colonne NODE_DESCRIPTION contient une description des caractéristiques de chacun de ces clusters. Vous pouvez parcourir ces colonnes à l’aide de SELECT FROM \<modèle >. Instruction contenue dans DMX. Le recours à cette instruction est également possible si vous souhaitez explorer les données utilisées pour la création du modèle d'exploration de données. Pour utiliser cette instruction, vous devez activer la fonction d'extraction dans la structure d'exploration de données. Pour plus d’informations sur l’instruction, consultez [SELECT FROM &#60;modèle&#62;. CAS &#40;DMX&#41;](/sql/dmx/select-from-model-content-dmx).  
+ Les colonnes figurant dans un modèle d'exploration de données ne sont pas les colonnes définies par la structure d'exploration de données ; elles forment plutôt un ensemble spécifique de colonnes décrivant des tendances et des modèles identifiés par l'algorithme. Ces colonnes du modèle d’exploration de données sont décrits dans le [de lignes DMSCHEMA_MINING_MODEL_CONTENT](../analysis-services/schema-rowsets/data-mining/dmschema-mining-model-content-rowset.md) ensemble de lignes de schéma. Par exemple, la colonne MODEL_NAME située dans l'ensemble de lignes du schéma contient le nom du modèle d'exploration de données. Dans le cadre d'un modèle d'exploration de données clustering, la colonne NODE_CAPTION renferme le nom de chaque cluster et la colonne NODE_DESCRIPTION contient une description des caractéristiques de chacun de ces clusters. Vous pouvez parcourir ces colonnes à l’aide de SELECT FROM \<modèle >. Instruction contenue dans DMX. Le recours à cette instruction est également possible si vous souhaitez explorer les données utilisées pour la création du modèle d'exploration de données. Pour utiliser cette instruction, vous devez activer la fonction d'extraction dans la structure d'exploration de données. Pour plus d’informations sur l’instruction, consultez [SELECT FROM &#60;modèle&#62;. CAS &#40;DMX&#41;](/sql/dmx/select-from-model-content-dmx).  
   
  Vous pouvez également afficher tous les états d'une colonne discrète par le biais de l'instruction SELECT DISTINCT. Par exemple, si vous effectuez cette opération sur une colonne Sexe, la requête retourne les valeurs `male` et `female`.  
   
@@ -38,7 +38,7 @@ ms.locfileid: "36312577"
 -   explorer les différents états disponibles pour une colonne discrète donnée.  
   
 ## <a name="returning-the-content-of-a-mining-model"></a>Retour du contenu d'un modèle d'exploration de données  
- Dans cette leçon, vous utilisez la [SELECT FROM &#60;modèle&#62;. CONTENU &#40;DMX&#41; ](/sql/dmx/select-from-model-dimension-content-dmx) instruction pour retourner le contenu du modèle de clustering.  
+ Dans cette leçon, vous utilisez le [SELECT FROM &#60;modèle&#62;. CONTENU &#40;DMX&#41; ](/sql/dmx/select-from-model-dimension-content-dmx) instruction pour retourner le contenu du modèle de clustering.  
   
  Voici un exemple générique de SELECT FROM \<modèle >. Instruction de contenu :  
   
@@ -71,11 +71,11 @@ WHERE NODE_SUPPORT > 100
   
 #### <a name="to-return-the-content-of-the-clustering-mining-model"></a>Pour retourner le contenu du modèle d'exploration de données clustering  
   
-1.  Dans **l’Explorateur d’objets**, cliquez sur l’instance de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], pointez sur **nouvelle requête**, puis cliquez sur **DMX**.  
+1.  Dans **Explorateur d’objets**, avec le bouton droit de l’instance de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], pointez sur **nouvelle requête**, puis cliquez sur **DMX**.  
   
      L'Éditeur de requête s'ouvre et contient une nouvelle requête vide.  
   
-2.  Copiez l’exemple générique de SELECT FROM \<modèle >. Instruction contenue dans la requête vide.  
+2.  Copiez l’exemple générique de SELECT FROM \<modèle >. Instruction de contenu dans la requête vide.  
   
 3.  Remplacez le code suivant :  
   
@@ -89,7 +89,7 @@ WHERE NODE_SUPPORT > 100
     *  
     ```  
   
-     Vous pouvez également remplacer * avec une liste de toutes les colonnes contenues dans le [de lignes DMSCHEMA_MINING_MODEL_CONTENT](../analysis-services/schema-rowsets/data-mining/dmschema-mining-model-content-rowset.md).  
+     Vous pouvez également remplacer * avec une liste d’une des colonnes contenues dans le [de lignes DMSCHEMA_MINING_MODEL_CONTENT](../analysis-services/schema-rowsets/data-mining/dmschema-mining-model-content-rowset.md).  
   
 4.  Remplacez le code suivant :  
   
@@ -118,7 +118,7 @@ WHERE NODE_SUPPORT > 100
      La requête retourne le contenu du modèle d'exploration de données.  
   
 ## <a name="use-drillthrough"></a>Utilisation de la fonction d'extraction  
- L'étape suivante consiste à utiliser l'instruction d'extraction pour retourner un éventail de cas utilisés pour l'apprentissage du modèle d'exploration de données d'arbre de décision. Dans cette leçon, vous utilisez la [SELECT FROM &#60;modèle&#62;. CAS &#40;DMX&#41; ](/sql/dmx/select-from-model-content-dmx) instruction pour retourner le contenu du modèle d’arbre de décision.  
+ L'étape suivante consiste à utiliser l'instruction d'extraction pour retourner un éventail de cas utilisés pour l'apprentissage du modèle d'exploration de données d'arbre de décision. Dans cette leçon, vous utilisez le [SELECT FROM &#60;modèle&#62;. CAS &#40;DMX&#41; ](/sql/dmx/select-from-model-content-dmx) instruction pour retourner le contenu du modèle d’arbre de décision.  
   
  Voici un exemple générique de SELECT FROM \<modèle >. Instruction de cas :  
   
@@ -146,7 +146,7 @@ WHERE IsInNode('<node id>')
   
 #### <a name="to-return-the-cases-that-were-used-to-train-the-mining-model"></a>Pour retourner les cas utilisés pour l'apprentissage du modèle d'exploration de données  
   
-1.  Dans **l’Explorateur d’objets**, cliquez sur l’instance de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], pointez sur **nouvelle requête**, puis cliquez sur **DMX**.  
+1.  Dans **Explorateur d’objets**, avec le bouton droit de l’instance de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], pointez sur **nouvelle requête**, puis cliquez sur **DMX**.  
   
      L'Éditeur de requête s'ouvre et contient une nouvelle requête vide.  
   
@@ -213,7 +213,7 @@ SELECT DISTINCT [<column>]
   
 #### <a name="to-return-the-states-of-a-discrete-column"></a>Pour retourner les états d'une colonne discrète  
   
-1.  Dans **l’Explorateur d’objets**, cliquez sur l’instance de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], pointez sur **nouvelle requête**, puis cliquez sur **DMX**.  
+1.  Dans **Explorateur d’objets**, avec le bouton droit de l’instance de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], pointez sur **nouvelle requête**, puis cliquez sur **DMX**.  
   
      L'Éditeur de requête s'ouvre et contient une nouvelle requête vide.  
   
@@ -261,6 +261,6 @@ SELECT DISTINCT [<column>]
  Au cours de la leçon suivante, vous allez évaluer si des clients potentiels sont des acheteurs de vélos à l'aide du modèle d'exploration de données d'arbre de décision.  
   
 ## <a name="next-lesson"></a>Leçon suivante  
- [Leçon 5 : Exécution des requêtes de prédiction](../../2014/tutorials/lesson-5-executing-prediction-queries.md)  
+ [Leçon 5 : Exécution des requêtes de prédiction](../../2014/tutorials/lesson-5-executing-prediction-queries.md)  
   
   

@@ -1,28 +1,26 @@
 ---
-title: Conversions effectuées à partir du Client au serveur | Documents Microsoft
+title: Conversions effectuées à partir du Client au serveur | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - conversions [OLE DB], client to server
 ms.assetid: 6bb24928-0f3e-4119-beda-cfd04a44a3eb
 caps.latest.revision: 37
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 155d6e55dac73df71fb25c388b9cd3af2360e9a7
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: 33aa66968fe93944172356a9be55d12fa459ddc3
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36044506"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37427898"
 ---
 # <a name="conversions-performed-from-client-to-server"></a>Conversions de client à serveur
   Cette rubrique décrit les conversions date/heure effectuées entre une application cliente écrite avec [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB et [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] (ou version ultérieure).  

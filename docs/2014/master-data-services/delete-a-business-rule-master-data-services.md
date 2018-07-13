@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - deleting business rules [Master Data Services]
 - business rules [Master Data Services], deleting
 ms.assetid: b97aa4f9-569f-451d-ad62-65b81f980299
 caps.latest.revision: 4
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: ab0f248a06e1a67ac119528774d98bb79d3dc9ec
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: 25d8aecc18ff8b92222a0df321cee66012c2f7da
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36140055"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37201539"
 ---
 # <a name="delete-a-business-rule-master-data-services"></a>Supprimer une règle d'entreprise (Master Data Services)
   Dans [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], supprimez une règle d'entreprise lorsque vous n'en avez plus besoin.  
@@ -53,9 +53,9 @@ ms.locfileid: "36140055"
   
 7.  Dans la grille, cliquez sur la ligne pour la règle d'entreprise à supprimer.  
   
-8.  Cliquez sur **règle d’entreprise sélectionnée Supprimer**.  
+8.  Cliquez sur **règle d’entreprise sélectionnée Delete**.  
   
-9. Dans la boîte de dialogue de confirmation, cliquez sur **OK**. La valeur de la **état** colonne est **suppression en attente**.  
+9. Dans la boîte de dialogue de confirmation, cliquez sur **OK**. La valeur dans le **état** colonne est **suppression en attente**.  
   
 10. Cliquez sur **Publier les règles d’entreprise**.  
   

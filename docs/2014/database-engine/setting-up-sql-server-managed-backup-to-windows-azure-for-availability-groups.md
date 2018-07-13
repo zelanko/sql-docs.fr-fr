@@ -1,25 +1,24 @@
 ---
-title: Configuration de SQL Server Managed Backup dans Windows Azure pour les groupes de disponibilité | Documents Microsoft
+title: Configuration de SQL Server Managed Backup pour Windows Azure pour les groupes de disponibilité | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-backup-restore
+ms.technology: backup-restore
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 0c4553cd-d8e4-4691-963a-4e414cc0f1ba
 caps.latest.revision: 23
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 8a367b7835b08c9a5b2b7226b8f3e4d127235487
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: ca66e49fb768e3742155c77f4f922299b38c5f4e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36142331"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37193570"
 ---
 # <a name="setting-up-sql-server-managed-backup-to-windows-azure-for-availability-groups"></a>Configuration de la sauvegarde managée de SQL Server sur Windows Azure pour les groupes de disponibilité
   Cette rubrique est un didacticiel sur la configuration de la [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] pour les bases de données participant à des groupes de disponibilité AlwaysOn.  
@@ -34,7 +33,7 @@ ms.locfileid: "36142331"
 ### <a name="configuring-includesssmartbackupincludesss-smartbackup-mdmd-for-availability-databases"></a>Configuration de la [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] pour les bases de données de disponibilité  
  **Autorisations :**  
   
--   Nécessite l’appartenance au **db_backupoperator** de la base de données de rôle, avec **ALTER ANY CREDENTIAL** autorisations, et `EXECUTE` autorisations sur **sp_delete_backuphistory**procédure stockée.  
+-   Nécessite l’appartenance au **db_backupoperator** rôle, de base de données avec **ALTER ANY CREDENTIAL** autorisations, et `EXECUTE` autorisations sur **sp_delete_backuphistory**procédure stockée.  
   
 -   Requiert **sélectionnez** autorisations sur le **smart_admin.fn_get_current_xevent_settings**(fonction).  
   
@@ -52,7 +51,7 @@ ms.locfileid: "36142331"
   
 4.  Sur chaque réplica, exécutez [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] configuration pour la base de données à l’aide de la **à puce-admin.sp_set_db_backup** procédure stockée.  
   
-     **[!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] comportement après un basculement :** [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] continuera à fonctionner et de conserver des copies de sauvegarde et de récupération après un événement de basculement. Aucune action spécifique n'est requise après un basculement.  
+     **[!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] comportement après un basculement :** [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] continueront à fonctionner et de conserver des copies de sauvegarde et la récupérabilité après un événement de basculement. Aucune action spécifique n'est requise après un basculement.  
   
 #### <a name="considerations-and-requirements"></a>Conditions requises et éléments à prendre en compte :  
  La configuration de la [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] pour des bases de données participant à un groupe de disponibilité AlwaysOn nécessite des conditions spécifiques. Voici la liste des éléments à prendre en considération et des conditions requises :  
@@ -74,13 +73,13 @@ ms.locfileid: "36142331"
   
 1.  **Créer un compte de stockage Windows Azure :** les sauvegardes sont stockées dans le service de stockage d’objets Blob Windows Azure. Si vous n'avez pas de compte de stockage Windows Azure, vous devez d'abord en créer un. Pour plus d’informations, consultez [création d’un compte de stockage Windows Azure](http://www.windowsazure.com/manage/services/storage/how-to-create-a-storage-account/). Notez le nom du compte de stockage, les clés d'accès et l'URL du compte de stockage. Le nom du compte de stockage et les informations de clé d'accès sont utilisés pour créer un objet contenant les informations d'identification SQL. La [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] se sert des informations d'identification SQL pour authentifier le compte de stockage pendant les opérations de sauvegarde.  
   
-2.  **Créer des informations d’identification SQL :** créer les informations d’identification SQL à l’aide le nom du compte de stockage en tant que l’identité et la clé d’accès de stockage en tant que le mot de passe.  
+2.  **Créer des informations d’identification SQL :** créer les informations d’identification SQL utilisant le nom du compte de stockage comme identité et la clé d’accès de stockage comme mot de passe.  
   
 3.  **Vérifiez que le service SQL Server Agent est démarré et exécuté** . Démarrez SQL Server Agent s'il n'est pas exécuté actuellement. [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] nécessite l'exécution de SQL Server Agent sur l'instance pour effectuer les opérations de sauvegarde.  Vous pouvez configurer l'exécution automatique de l'Agent SQL, pour vous assurer que les opérations de sauvegarde se déroulent régulièrement.  
   
 4.  **Déterminer la période de rétention :** déterminer la période de rétention souhaitée pour les fichiers de sauvegarde. La période de rétention est spécifiée en jours, sur une plage de 1 à 30. Elle détermine le délai de récupérabilité de la base de données.  
   
-5.  **Créer une certificat ou une clé asymétrique à utiliser pour le chiffrement lors de la sauvegarde jusqu'à :** créer le certificat sur le premier nœud Node1, puis l’exporter dans un fichier en utilisant [BACKUP CERTIFICATE &#40;Transact-SQL&#41;](/sql/t-sql/statements/backup-certificate-transact-sql)... Sur le nœud 2, créez un certificat en utilisant le fichier exporté du nœud 1. Pour plus d’informations sur la création d’un certificat à partir d’un fichier, consultez l’exemple de [CREATE CERTIFICATE &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-certificate-transact-sql).  
+5.  **Créer une certificat ou une clé asymétrique à utiliser pour le chiffrement lors de la sauvegarde :** créer le certificat sur le premier nœud Node1, puis exportez-le vers un fichier en utilisant [BACKUP CERTIFICATE &#40;Transact-SQL&#41;](/sql/t-sql/statements/backup-certificate-transact-sql)... Sur le nœud 2, créez un certificat en utilisant le fichier exporté du nœud 1. Pour plus d’informations sur la création d’un certificat à partir d’un fichier, consultez l’exemple dans [CREATE CERTIFICATE &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-certificate-transact-sql).  
   
 6.  **Activer et configurer [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] pour AGTestDB sur Node1 :** démarrez SQL Server Management Studio et connectez-vous à l’instance sur Node1, où est installée la base de données de disponibilité. Dans la fenêtre de requête, exécutez l'instruction suivante après avoir modifié les valeurs du nom de la base de données, de l'URL de stockage, des informations d'identification SQL et de la période de rétention selon vos besoins.  
   
@@ -99,7 +98,7 @@ ms.locfileid: "36142331"
   
     ```  
   
-     Pour plus d’informations sur la création d’un certificat pour le chiffrement, consultez la **créer un certificat de sauvegarde** l’étape [créer une sauvegarde chiffrée](../relational-databases/backup-restore/create-an-encrypted-backup.md).  
+     Pour plus d’informations sur la création d’un certificat pour le chiffrement, consultez le **créer un certificat de sauvegarde** étape dans [Create an Encrypted Backup](../relational-databases/backup-restore/create-an-encrypted-backup.md).  
   
 7.  **Activer et configurer [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] pour AGTestDB sur Node2 :** démarrez SQL Server Management Studio et connectez-vous à l’instance sur Node2, où est installée la base de données de disponibilité. Dans la fenêtre de requête, exécutez l'instruction suivante après avoir modifié les valeurs du nom de la base de données, de l'URL de stockage, des informations d'identification SQL et de la période de rétention selon vos besoins.  
   
@@ -126,9 +125,9 @@ ms.locfileid: "36142331"
     SELECT * FROM smart_admin.fn_get_current_xevent_settings()  
     ```  
   
-     Les événements du canal d'administration, opérationnel et analytique doivent être activés par défaut et ne doivent pas pouvoir être désactivés. Cela est en principe suffisant pour surveiller les événements qui nécessitent une intervention manuelle.  Vous pouvez activer les événements de débogage, mais ces canaux comprennent des événements d'information et de débogage que la [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] utilise pour détecter et résoudre les problèmes. Pour plus d’informations, consultez [Moniteur SQL Server Managed Backup to Windows Azure](../relational-databases/backup-restore/sql-server-managed-backup-to-microsoft-azure.md).  
+     Les événements du canal d'administration, opérationnel et analytique doivent être activés par défaut et ne doivent pas pouvoir être désactivés. Cela est en principe suffisant pour surveiller les événements qui nécessitent une intervention manuelle.  Vous pouvez activer les événements de débogage, mais ces canaux comprennent des événements d'information et de débogage que la [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] utilise pour détecter et résoudre les problèmes. Pour plus d’informations, consultez [moniteur sauvegarde managée SQL Server sur Windows Azure](../relational-databases/backup-restore/sql-server-managed-backup-to-microsoft-azure.md).  
   
-9. **Activez et configurez les notifications d’état d’intégrité :** [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] fournit une procédure stockée qui crée un travail de l’agent pour envoyer des notifications par courrier électronique des erreurs ou avertissements qui peuvent nécessiter une attention particulière.  Pour recevoir ces notifications, vous devez activer l'exécution de la procédure stockée qui crée un travail SQL Server Agent. Les étapes suivantes décrivent la procédure d'activation et de configuration des notifications par courrier électronique :  
+9. **Activez et configurez les notifications d’état d’intégrité :** [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] fournit une procédure stockée qui crée un travail d’agent pour envoyer des notifications par courrier électronique des erreurs ou avertissements qui peuvent nécessiter votre attention.  Pour recevoir ces notifications, vous devez activer l'exécution de la procédure stockée qui crée un travail SQL Server Agent. Les étapes suivantes décrivent la procédure d'activation et de configuration des notifications par courrier électronique :  
   
     1.  Configurez la messagerie de base de données si elle n'est pas déjà activée sur l'instance. Pour plus d'informations, consultez [Configure Database Mail](../relational-databases/database-mail/configure-database-mail.md).  
   
@@ -143,7 +142,7 @@ ms.locfileid: "36142331"
   
         ```  
   
-         Pour plus d’informations et un exemple de script complet, consultez [Moniteur SQL Server Managed Backup to Windows Azure](../relational-databases/backup-restore/sql-server-managed-backup-to-microsoft-azure.md).  
+         Pour plus d’informations et un exemple de script complet, consultez [moniteur sauvegarde managée SQL Server sur Windows Azure](../relational-databases/backup-restore/sql-server-managed-backup-to-microsoft-azure.md).  
   
 10. **Afficher les fichiers de sauvegarde dans le compte de stockage Windows Azure :** se connecter au compte de stockage à partir de SQL Server Management Studio ou le portail de gestion Azure. Vous verrez un conteneur pour l'instance de SQL Server qui héberge la base de données que vous avez configurée pour utiliser la [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]. Vous pourrez voir aussi une base de données et une sauvegarde de journal 15 minutes après l'activation de la [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] pour la base de données.  
   
@@ -194,10 +193,10 @@ ms.locfileid: "36142331"
   
     ```  
   
- Les étapes de cette section sont propres à la configuration initiale de la [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] sur la base de données. Vous pouvez modifier les configurations existantes à l’aide de la même procédure stockée système **smart_admin.sp_set_db_backup** et indiquer de nouvelles valeurs. Pour plus d’informations, consultez [SQL Server Managed Backup dans Windows Azure - paramètres de rétention et stockage](../../2014/database-engine/sql-server-managed-backup-to-windows-azure-retention-and-storage-settings.md).  
+ Les étapes de cette section sont propres à la configuration initiale de la [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] sur la base de données. Vous pouvez modifier les configurations existantes à l’aide de la même procédure stockée système **smart_admin.sp_set_db_backup** et indiquer de nouvelles valeurs. Pour plus d’informations, consultez [SQL Server Managed Backup pour Windows Azure - paramètres de rétention et stockage](../../2014/database-engine/sql-server-managed-backup-to-windows-azure-retention-and-storage-settings.md).  
   
 ### <a name="considerations-when-removing-a-database-from-alwayson-availability-group-configuration"></a>Éléments à prendre en considération lors de la suppression d'une base de données de la configuration d'un groupe de disponibilité AlwaysOn  
- Si une base de données est supprimée de la configuration du groupe de disponibilité AlwaysOn et est désormais une base de données autonome, nous vous recommandons d’effectuer la sauvegarde à l’aide [smart_admin.sp_backup_on_demand &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/managed-backup-sp-backup-on-demand-transact-sql). Lorsque vous créez une sauvegarde de base de données de cette façon, une nouvelle chaîne de sauvegarde et le fichier sont placés dans le conteneur associé à l'instance au lieu du conteneur de disponibilité où les sauvegardes ont été enregistrées lorsque la base de données faisait partie d'un groupe de disponibilité.  
+ Si une base de données est supprimée de la configuration de groupe de disponibilité AlwaysOn et est désormais une base de données autonome, nous vous recommandons d’effectuer la sauvegarde à l’aide [smart_admin.sp_backup_on_demand &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/managed-backup-sp-backup-on-demand-transact-sql). Lorsque vous créez une sauvegarde de base de données de cette façon, une nouvelle chaîne de sauvegarde et le fichier sont placés dans le conteneur associé à l'instance au lieu du conteneur de disponibilité où les sauvegardes ont été enregistrées lorsque la base de données faisait partie d'un groupe de disponibilité.  
   
 > [!WARNING]  
 >  Dans ce scénario, la récupérabilité de la base de données à partir de sauvegardes antérieures à la modification de l'état du groupe de disponibilité n'est pas garantie.  

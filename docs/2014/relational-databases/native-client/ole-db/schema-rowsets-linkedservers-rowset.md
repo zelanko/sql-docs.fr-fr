@@ -1,13 +1,11 @@
 ---
-title: Ensemble de lignes LINKEDSERVERS (OLE DB) | Documents Microsoft
+title: Ensemble de lignes LINKEDSERVERS (OLE DB) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -15,15 +13,15 @@ helpviewer_keywords:
 - enumerating data sources [OLE DB]
 ms.assetid: 2633fd8a-65e7-498d-9aed-8e4b1cca2381
 caps.latest.revision: 28
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 0901178fa2d99e4faf19c749026e2e1b1c17da7b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: 60930ce7a43066c9041dfdaa92e0c4be254d78ae
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36140259"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37422398"
 ---
 # <a name="linkedservers-rowset-ole-db"></a>Ensemble de lignes LINKEDSERVERS (OLE DB)
   Le **LINKEDSERVERS** ensemble de lignes énumère les sources de données d’organisation qui peuvent participer [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] les requêtes distribuées.  
@@ -42,6 +40,6 @@ ms.locfileid: "36140259"
  L'ensemble de lignes est trié sur SRV_NAME et une restriction unique est prise en charge sur SRV_NAME.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Prise en charge du jeu de lignes de schéma &#40;OLE DB&#41;](schema-rowset-support-ole-db.md)  
+ [Prise en charge des ensembles de lignes de schéma &#40;OLE DB&#41;](schema-rowset-support-ole-db.md)  
   
   

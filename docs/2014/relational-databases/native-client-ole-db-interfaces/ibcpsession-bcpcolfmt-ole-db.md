@@ -1,13 +1,11 @@
 ---
-title: IBCPSession::BCPColFmt (OLE DB) | Documents Microsoft
+title: IBCPSession::BCPColFmt (OLE DB) | Microsoft Docs
 ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
@@ -18,15 +16,15 @@ helpviewer_keywords:
 - BCPColFmt method
 ms.assetid: 2852f4ba-f1c6-4c4c-86b2-b77e4abe70de
 caps.latest.revision: 24
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 989ba82ebf889bc5f2ac98c71154ed220fb9e283
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: ea0872d071893e7d88a5d52d677702a984e49f02
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36044718"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37426718"
 ---
 # <a name="ibcpsessionbcpcolfmt-ole-db"></a>IBCPSession::BCPColFmt (OLE DB)
   Crée une liaison entre des variables de programme et des colonnes [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -80,7 +78,7 @@ DBORDINALidxServerCol);
  Index de champ dans le fichier de données de l'utilisateur.  
   
  *eUserDataType*[in]  
- Type de données de champ dans le fichier de données de l'utilisateur. Les types de données disponibles sont répertoriées dans le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] format de fichier d’en-tête Native Client (sqlncli.h) avec BCP_TYPE_XXX, par exemple, BCP_TYPE_SQLINT4. Si la valeur BCP_TYPE_DEFAULT est spécifiée, le fournisseur essaie d'utiliser le même type que la table ou la colonne de vue. Pour les opérations de copie en bloc de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et dans un fichier lorsque la `eUserDataType` argument est BCP_TYPE_SQLDECIMAL ou BCP_TYPE_SQLNUMERIC :  
+ Type de données de champ dans le fichier de données de l'utilisateur. Les types de données disponibles sont répertoriés dans le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] le fichier d’en-tête Native Client (sqlncli.h) avec bcp_type_xxx ; mettre en forme, par exemple, BCP_TYPE_SQLINT4. Si la valeur BCP_TYPE_DEFAULT est spécifiée, le fournisseur essaie d'utiliser le même type que la table ou la colonne de vue. Pour les opérations de copie en bloc de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et dans un fichier lorsque le `eUserDataType` argument est BCP_TYPE_SQLDECIMAL ou BCP_TYPE_SQLNUMERIC :  
   
 -   Si la colonne source n'est pas décimale ou numérique, la précision et l'échelle par défaut sont utilisées.  
   
@@ -92,13 +90,13 @@ DBORDINALidxServerCol);
  *cbUserData*[in]  
  Longueur maximale, en octets, des données de ce champ dans le fichier utilisateur, sans compter la longueur de tout indicateur de longueur ou marque de fin.  
   
- Paramètre `cbUserData` à BCP_LENGTH_NULL indique que toutes les valeurs dans les données des champs de fichier sont, ou doit être défini sur NULL. Paramètre `cbUserData` à BCP_LENGTH_VARIABLE indique que le système doit déterminer la longueur des données pour chaque champ. Pour certains champs, cela peut signifier qu'un indicateur de longueur/null est généré pour précéder les données sur une copie à partir de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], ou que l'indicateur est attendu dans les données copiées vers [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ Paramètre `cbUserData` à BCP_LENGTH_NULL indique que toutes les valeurs dans les données des champs de fichier sont ou doivent être NULL. Paramètre `cbUserData` à BCP_LENGTH_VARIABLE indique que le système doit déterminer la longueur des données pour chaque champ. Pour certains champs, cela peut signifier qu'un indicateur de longueur/null est généré pour précéder les données sur une copie à partir de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], ou que l'indicateur est attendu dans les données copiées vers [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
- Pour [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] caractères et les types de données binaires, `cbUserData` peut être BCP_LENGTH_VARIABLE, BCP_LENGTH_NULL, 0 ou une valeur positive. Si `cbUserData` est BCP_LENGTH_VARIABLE, le système utilise l’indicateur de longueur, le cas échéant, ou d’une séquence de terminaison pour déterminer la longueur des données. Si un indicateur de longueur et une séquence de terminaison sont fournis, la copie en bloc utilise celui qui implique le volume de données à copier le plus faible. Si `cbUserData` est BCP_LENGTH_VARIABLE, les données de type est un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] type caractère ou binaire, et si un indicateur de longueur, ni une séquence de terminaison est spécifiée, le système retourne un message d’erreur.  
+ Pour [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] caractère et les types de données binaires, `cbUserData` peut être BCP_LENGTH_VARIABLE, BCP_LENGTH_NULL, 0 ou une valeur positive. Si `cbUserData` est BCP_LENGTH_VARIABLE, le système utilise l’indicateur de longueur, le cas échéant, ou d’une séquence de marque de fin pour déterminer la longueur des données. Si un indicateur de longueur et une séquence de terminaison sont fournis, la copie en bloc utilise celui qui implique le volume de données à copier le plus faible. Si `cbUserData` est BCP_LENGTH_VARIABLE, les données de type est un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] type caractère ou binaire, et si un indicateur de longueur, ni une séquence de terminaison est spécifiée, le système retourne un message d’erreur.  
   
- Si `cbUserData` est égal à 0 ou une valeur positive, le système utilise `cbUserData` en tant que la longueur maximale des données. Toutefois, if, en plus d’un nombre positif `cbUserData`, une longueur indicateur ou marque de fin de séquence est fournie, le système détermine la longueur des données à l’aide de la méthode qui entraîne le moins de données à copier.  
+ Si `cbUserData` est égal à 0 ou une valeur positive, le système utilise `cbUserData` en tant que la longueur maximale des données. Toutefois, if, outre un positif `cbUserData`, une longueur indicateur ou marque de fin de séquence est fournie, le système détermine la longueur des données à l’aide de la méthode qui entraîne la plus petite quantité de données à copier.  
   
- Le `cbUserData` valeur représente le nombre d’octets de données. Si les données caractères sont représentées par des caractères Unicode étendus, un nombre positif `cbUserData` la valeur du paramètre représente le nombre de caractères multiplié par la taille, en octets, de chaque caractère.  
+ Le `cbUserData` valeur représente le nombre d’octets de données. Si les données caractères sont représentées par des caractères Unicode étendus, puis un positif `cbUserData` valeur du paramètre représente le nombre de caractères multiplié par la taille, en octets, de chaque caractère.  
   
  *pbUserDataTerm*[size_is][in]  
  Séquence de marque de fin à utiliser pour le champ. Ce paramètre est utile surtout pour les types de données de caractères puisque tous les autres types sont de longueur fixe ou, dans le cas des données binaires, nécessitent un indicateur de longueur pour enregistrer avec précision le nombre d'octets présents.  
@@ -123,7 +121,7 @@ DBORDINALidxServerCol);
  Une erreur spécifique au fournisseur s’est produite, pour des informations détaillées, utilisez le [ISQLServerErrorInfo](../../database-engine/dev-guide/isqlservererrorinfo-ole-db.md) interface.  
   
  E_UNEXPECTED  
- L'appel à la méthode était inattendu. Par exemple, le [IBCPSession::BCPInit](ibcpsession-bcpinit-ole-db.md) méthode n’a pas été appelée avant d’appeler cette méthode.  
+ L'appel à la méthode était inattendu. Par exemple, le [IBCPSession::BCPInit](ibcpsession-bcpinit-ole-db.md) (méthode) n’a pas été appelée avant d’appeler cette méthode.  
   
  E_INVALIDARG  
  L'argument n'était pas valide.  

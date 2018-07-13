@@ -1,5 +1,5 @@
 ---
-title: Résoudre les problèmes de traitement des données (SSAS tabulaire) | Documents Microsoft
+title: Résoudre les problèmes de traitement des données (SSAS tabulaire) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 678f523c-e181-4456-9a54-7b7bf044b8d2
 caps.latest.revision: 11
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 8ddebb4bb6a2e1c3e3d4bc53052ff207d7bb1d40
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: d066eaa1702d096e7e1d0919c988e6ea6e6bdbc0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36140366"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37239499"
 ---
 # <a name="troubleshoot-process-data-ssas-tabular"></a>Dépanner le traitement des données (SSAS Tabulaire)
   Cette rubrique fournit des informations à propos du traitement (actualisation) des données de modèle lors de la création d'un modèle à l'aide de [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]. Cette rubrique ne fournit pas d'informations sur le traitement des données dans les modèles qui ont été déployés vers une instance de serveur Analysis Services. Pour plus d’informations sur le traitement des données dans un modèle déployé, consultez [Tâches d’administration à l’aide de scripts dans Analysis Services](script-administrative-tasks-in-analysis-services.md).  
@@ -109,7 +109,7 @@ ms.locfileid: "36140366"
 -   Vous ne pouvez pas effectuer une multi-sélection de colonnes dans des tables différentes et modifier les propriétés des colonnes. Vous pouvez travailler avec une seule table ou vue à la fois.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Traiter manuellement des données &#40;SSAS tabulaire&#41;](manually-process-data-ssas-tabular.md)   
+ [Traiter manuellement les données &#40;SSAS tabulaire&#41;](manually-process-data-ssas-tabular.md)   
  [Modifier une connexion de Source de données existante &#40;SSAS tabulaire&#41;](edit-an-existing-data-source-connection-ssas-tabular.md)  
   
   

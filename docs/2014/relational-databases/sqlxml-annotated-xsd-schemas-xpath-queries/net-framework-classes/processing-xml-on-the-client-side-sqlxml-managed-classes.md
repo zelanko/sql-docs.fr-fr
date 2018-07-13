@@ -1,5 +1,5 @@
 ---
-title: Le traitement XML du côté Client (la Classes managées SQLXML) | Documents Microsoft
+title: Traitement XML du côté Client (la Classes managées SQLXML) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -18,20 +18,20 @@ helpviewer_keywords:
 - ClientSideXml property
 ms.assetid: 5e7ecf18-66fc-49ff-bc50-83635cd7ac0b
 caps.latest.revision: 21
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 2625832716861a5ed2e6819c661245f1ea16ae7f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 242e06d72b7a1773235e51c7211b2526af6d4608
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36139537"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37201099"
 ---
 # <a name="processing-xml-on-the-client-side-sqlxml-managed-classes"></a>traitement du XML côté client (classes managées SQLXML)
   Cet exemple illustre l’utilisation de la propriété ClientSideXml. L'application exécute une procédure stockée sur le serveur. Le résultat de la procédure stockée (un ensemble de lignes à deux colonnes) est traité sur le côté client pour produire un document XML.  
   
- Le GetContacts suivant procédure stockée renvoie **FirstName** et **LastName** des employés de la table Person.Contact dans la base de données AdventureWorks.  
+ Le GetContacts suivant procédure stockée renvoie **FirstName** et **LastName** des employés dans la table Person.Contact dans la base de données AdventureWorks.  
   
 ```  
 USE AdventureWorks  

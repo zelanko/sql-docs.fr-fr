@@ -5,23 +5,22 @@ ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
+ms.technology: supportability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - 21879 (Database Engine error)
 ms.assetid: fcfab735-05ca-423a-89f1-fdee7e2ed8c0
 caps.latest.revision: 8
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 067373cb329185e42b6fee2b506570fccfcd4f90
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 9cf6402984022284ca75505a924a3a0f270fc5e6
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36043880"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37413818"
 ---
 # <a name="mssqlserver21879"></a>MSSQLSERVER_21879
     
@@ -58,8 +57,8 @@ ms.locfileid: "36043880"
   
 -   Configurez [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pour l'authentification Kerberos. Consultez **Authentification Kerberos et SQL Server** dans la documentation en ligne de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
--   Utilisez `sp_changedistpublisher` pour modifier le mode de sécurité associé au serveur de publication d’origine dans MSdistpublishers, ainsi que pour spécifier une connexion et un mot de passe à utiliser pour la connexion.  
+-   Utilisez `sp_changedistpublisher` pour modifier le mode de sécurité associé à l’éditeur d’origine dans MSdistpublishers, ainsi que pour spécifier une connexion et un mot de passe à utiliser pour la connexion.  
   
--   Spécifiez le paramètre de ligne de commande *BypassPublisherValidation* sur la ligne de commande de l’agent de fusion pour ignorer la validation lorsque `sp_get_redirected_publisher` est appelé sur le serveur de distribution.  
+-   Spécifiez le paramètre de ligne de commande *BypassPublisherValidation* sur la ligne de commande de l’agent de fusion pour ignorer la validation lorsque `sp_get_redirected_publisher` est appelée sur le serveur de distribution.  
   
   

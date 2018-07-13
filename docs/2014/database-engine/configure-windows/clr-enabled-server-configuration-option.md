@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - assemblies [CLR integration], verifying can run
 - clr enabled option
 ms.assetid: 0722d382-8fd3-4fac-b4a8-cd2b7a7e0293
 caps.latest.revision: 34
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 1eb4bd97f6e008dbc84e7d7882b80cfff5c88f2c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 8eee4ca485f4bb48a4f2cb42ec728f20a7848509
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36142333"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37192529"
 ---
 # <a name="clr-enabled-server-configuration-option"></a>clr enabled (option de configuration de serveur)
   L'option clr enabled vous permet de spécifier si des assemblys utilisateur peuvent être exécutés par [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. L'option CLR activé fournit les valeurs suivantes.  
@@ -38,7 +38,7 @@ ms.locfileid: "36142333"
 >  Lorsque l'instruction RECONFIGURE est exécutée et que la valeur d'exécution de l'option CLR activé est 0 et non plus 1, tous les domaines d'application contenant des assemblys utilisateur sont immédiatement déchargés.  
   
 > [!NOTE]  
->  L'exécution du CLR (Common Language Runtime) n'est pas prise en charge sous l'option Regroupement léger. Désactivez l'une des deux options suivantes : « clr enabled » ou « lightweight pooling ». Les fonctionnalités qui reposent sur le CLR et qui ne fonctionnent pas correctement en mode fibre incluent le `hierarchy` type de données, la réplication et la gestion basée sur des stratégies.  
+>  L'exécution du CLR (Common Language Runtime) n'est pas prise en charge sous l'option Regroupement léger. Désactivez l'une des deux options suivantes : « clr enabled » ou « lightweight pooling ». Fonctionnalités qui reposent sur le CLR et qui ne fonctionnent pas correctement en mode fibre incluent le `hierarchy` type de données, réplication et la gestion basée sur des stratégies.  
   
 ## <a name="example"></a>Exemple  
  L'exemple suivant déclare indique d'abord le paramètre actuel de l'option clr enabled, puis active l'option en lui attribuant la valeur 1. Pour désactiver l'option, affectez-lui la valeur 0.  

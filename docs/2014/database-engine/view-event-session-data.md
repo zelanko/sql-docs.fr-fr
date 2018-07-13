@@ -1,5 +1,5 @@
 ---
-title: Afficher des données de Session d’événements | Documents Microsoft
+title: Afficher les données de Session d’événement | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: ac742a01-2a95-42c7-b65e-ad565020dc49
 caps.latest.revision: 9
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 503c9d39631ff2ec0e1ebafa437180dd7dc39739
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: a6602ceccaf574827dfc49e4a90cd84c9422522b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36053123"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37239459"
 ---
 # <a name="view-event-session-data"></a>Afficher des données de session d'événements
   Cette rubrique décrit l'utilisation de l'interface utilisateur pour afficher et analyser les données d'événements étendus :  
@@ -48,7 +48,7 @@ ms.locfileid: "36053123"
   
 -   Pour une cible event_file, affichez les données cibles du fichier (fichier .XEL) à l'aide de l'une des méthodes suivantes :  
   
-    -   Utilisez un fichier -> Ouvrir dans [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)].  
+    -   Utiliser un fichier -> Ouvrir dans [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)].  
   
     -   Faites glisser le fichier dans [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)].  
   
@@ -58,7 +58,7 @@ ms.locfileid: "36053123"
   
     -   [fn_xe_file_target_read_file](/sql/relational-databases/system-functions/sys-fn-xe-file-target-read-file-transact-sql)  
   
-    -   Vous pouvez afficher plusieurs. Fichier XEL en sélectionnant **fusionner les fichiers d’événements étendus** à partir du fichier -> Ouvrir le menu.  
+    -   Vous pouvez afficher plusieurs fois. Fichier XEL en sélectionnant **fusionner les fichiers d’événements étendus** à partir du fichier -> Ouvrir le menu.  
   
 ### <a name="watching-live-data"></a>Surveiller les données actives  
  Vous pouvez surveiller les données actives à mesure qu'elles sont capturées.  
@@ -89,7 +89,7 @@ ms.locfileid: "36053123"
  Le volet **Détails** affiche toutes les colonnes de l'événement sélectionné, notamment les champs et les actions. Vous pouvez ajouter une colonne à la table de données cible en cliquant avec le bouton droit sur une ligne dans le volet **Détails** et en sélectionnant **Afficher la colonne dans la table**.  
   
 ### <a name="create-modify-or-delete-merged-columns"></a>Créer, modifier ou supprimer des colonnes fusionnées  
- Une colonne fusionnée vous permet de combiner un ensemble de champs à afficher dans une colonne unique. La colonne fusionnée affiche les données du premier champ non NULL en fonction de l'ordre dans lequel ils sont ajoutés à la liste de champs. Cela est similaire à celle que vous voyez dans [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Profiler, où une colonne spécifique peut afficher des données différentes selon l’événement (l’exemple le plus courant de ce est le champ TextData dans [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] profileur). Pour obtenir un exemple, vous pouvez fusionner les champs d'instruction et de batch_text des événements sql_statement_completed et sql_batch_completed, respectivement, dans un champ nommé myStatement. Lorsque vous affichez la colonne myStatement dans la table, elle affiche les données appropriées pour l'événement associé.  
+ Une colonne fusionnée vous permet de combiner un ensemble de champs à afficher dans une colonne unique. La colonne fusionnée affiche les données du premier champ non NULL en fonction de l'ordre dans lequel ils sont ajoutés à la liste de champs. Ceci est similaire à ce que vous voyez dans [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Profiler, où une colonne spécifique peut afficher des données différentes selon l’événement (l’exemple le plus courant de ce est le champ TextData dans [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Profiler). Pour obtenir un exemple, vous pouvez fusionner les champs d'instruction et de batch_text des événements sql_statement_completed et sql_batch_completed, respectivement, dans un champ nommé myStatement. Lorsque vous affichez la colonne myStatement dans la table, elle affiche les données appropriées pour l'événement associé.  
   
  Vous pouvez créer, modifier ou supprimer des colonnes fusionnées :  
   
@@ -128,7 +128,7 @@ ms.locfileid: "36053123"
  Si vous avez regroupé des colonnes, le tri de la colonne ne concerne que les données du groupe.  
   
 ### <a name="group-results"></a>Regrouper les résultats  
- Les résultats groupés sont équivalents aux fonctionnalités de la `GROUP BY` clause dans [!INCLUDE[tsql](../includes/tsql-md.md)]. La table de données cible affiche les données regroupées et vous permet de développer/réduire les données.  
+ Résultats groupés sont équivalents aux fonctionnalités de la `GROUP BY` clause dans [!INCLUDE[tsql](../includes/tsql-md.md)]. La table de données cible affiche les données regroupées et vous permet de développer/réduire les données.  
   
  Vous devez regrouper les données avant de pouvoir les agréger. Par exemple, vous pouvez regrouper sur la base de la valeur de query_hash, effectuer un tri décroissant en fonction de la durée, obtenir la durée moyenne de chaque groupe, puis effectuer un tri décroissant sur l'agrégation.  Cela génère une liste qui affiche les instructions uniques de la plus longue à la plus courte durée moyenne. Lorsque vous développez le groupe supérieur, vous pouvez voir les différentes exécutions de cette requête spécifique triées de la plus longue à la plus courte.  
   
@@ -223,7 +223,7 @@ ms.locfileid: "36053123"
   
  Pour copier les résultats de trace, sélectionnez une cellule ou une ou plusieurs lignes, cliquez avec le bouton droit sur **Copier** , puis sélectionnez **Cellule**, **Ligne**ou **Détails**. Les événements étendus prennent en charge la copie jusqu'à un maximum de 1 000 lignes.  
   
- Vous pouvez exporter les résultats de trace à un. XEL fichier, de table, ou. Fichier CSV en sélectionnant **exporter vers** à partir de la **événements étendus** option de menu dans [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)].  
+ Vous pouvez exporter les résultats de trace à un. XEL fichier, table, ou. Fichier CSV en sélectionnant **exporter vers** à partir de la **événements étendus** option de menu dans [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)].  
   
 ### <a name="view-a-deadlock-graph-and-query-plans"></a>Afficher un graphique d'interblocage et les plans de requête  
  Vous pouvez afficher le graphique du blocage pour **xml_deadlock_report** dans le volet Détails afin de résoudre les blocages. Vous pouvez également afficher des graphiques de plan de requête pour les événements suivants :  

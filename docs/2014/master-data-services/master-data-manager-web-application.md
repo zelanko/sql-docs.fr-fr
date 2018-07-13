@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 8eac727c-2304-4612-bc1f-14539295b4b3
 caps.latest.revision: 4
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 33c154c67a98e7a46415a884096bfeba94e2b350
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: b9bc400b048f5817d844368f59ea27f5c4a67220
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36141622"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37199569"
 ---
 # <a name="master-data-manager-web-application"></a>Application Web Master Data Manager
   L'application Web [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] est principalement utilisée par les administrateurs pour effectuer des tâches d'administration. Par exemple, seuls les administrateurs peuvent créer des modèles, des règles d'entreprise, ou des versions de données. Pour plus d’informations sur les administrateurs, consultez [Administrateurs &#40;Master Data Services&#41;](administrators-master-data-services.md).  
@@ -34,6 +34,6 @@ ms.locfileid: "36141622"
   
  [Zone fonctionnelle Administration de système &#40;Master Data Manager&#41;](../../2014/master-data-services/system-administration-functional-area-master-data-manager.md)  
   
- [Autorisations d’accès de zone fonctionnelle &#40;Master Data Manager&#41;](../../2014/master-data-services/user-and-group-permissions-functional-area-master-data-manager.md)  
+ [Zone fonctionnelle autorisations d’accès &#40;Master Data Manager&#41;](../../2014/master-data-services/user-and-group-permissions-functional-area-master-data-manager.md)  
   
   

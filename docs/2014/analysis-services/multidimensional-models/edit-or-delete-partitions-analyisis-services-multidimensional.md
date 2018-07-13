@@ -1,5 +1,5 @@
 ---
-title: Modifier ou supprimer des Partitions (Analysis Services - multidimensionnel) | Documents Microsoft
+title: Modifier ou supprimer des Partitions (Analysis Services - multidimensionnel) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - modifying partitions
 - partitions [Analysis Services], modifying
 ms.assetid: fb7a64ca-d021-4926-b92d-83476fbc40a3
 caps.latest.revision: 29
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 693550400db63b73b29d01a7a9d198d5924893dc
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 333caebbfff1870341696ee9d5a6d215288459bd
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36140105"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37180926"
 ---
 # <a name="edit-or-delete-partitions-analyisis-services---multidimensional"></a>Modifier ou supprimer des partitions (Analysis Services - Multidimensionnel)
   Les partitions de cube sont modifiées à l’aide de l’onglet **Partitions** du Concepteur de cube dans [!INCLUDE[ssBIDevStudio](../../../includes/ssbidevstudio-md.md)]. L’onglet **Partitions** répertorie les partitions pour tous les groupes de mesures d’un cube. Il répertorie également les partitions d'écriture différée pour lesquelles l'écriture différée est activée.  
@@ -52,7 +52,7 @@ ms.locfileid: "36140105"
   
 ## <a name="see-also"></a>Voir aussi  
  [Créer et gérer une Partition locale &#40;Analysis Services&#41;](create-and-manage-a-local-partition-analysis-services.md)   
- [Conception d’agrégations &#40;Analysis Services - multidimensionnel&#41;](designing-aggregations-analysis-services-multidimensional.md)   
+ [Conception d’agrégations &#40;Analysis Services - données multidimensionnelles&#41;](designing-aggregations-analysis-services-multidimensional.md)   
  [Fusionner des Partitions dans Analysis Services &#40;SSAS - multidimensionnel&#41;](merge-partitions-in-analysis-services-ssas-multidimensional.md)  
   
   

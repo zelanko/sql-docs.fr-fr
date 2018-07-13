@@ -1,13 +1,11 @@
 ---
-title: Construction d’instructions SQL pour les curseurs | Documents Microsoft
+title: Construction d’instructions SQL pour les curseurs | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -19,18 +17,18 @@ helpviewer_keywords:
 - statements [ODBC], cursors
 ms.assetid: 134003fd-9c93-4f5c-a988-045990933b80
 caps.latest.revision: 35
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 16eefd4b60bc3c6c23cec3e628d6e7e8604bb316
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: 2911415122307216afc5f6ff7d41a8f54e46f059
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36043835"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37407477"
 ---
 # <a name="constructing-sql-statements-for-cursors"></a>Construction d'instructions SQL pour les curseurs
-  Le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pilote ODBC Native Client utilise des curseurs de serveur pour implémenter les fonctionnalités de curseur définie dans la spécification ODBC. Une application ODBC contrôle le comportement du curseur à l’aide de [SQLSetStmtAttr](../native-client-odbc-api/sqlsetstmtattr.md) pour définir les attributs d’instruction différent. Voici les attributs et leurs valeurs par défaut.  
+  Le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pilote ODBC Native Client utilise des curseurs côté serveur pour implémenter les fonctionnalités de curseur définie dans la spécification ODBC. Une application ODBC contrôle le comportement du curseur à l’aide de [SQLSetStmtAttr](../native-client-odbc-api/sqlsetstmtattr.md) pour définir les attributs d’instruction différent. Voici les attributs et leurs valeurs par défaut.  
   
 |Attribute|Valeur par défaut|  
 |---------------|-------------|  
@@ -40,7 +38,7 @@ ms.locfileid: "36043835"
 |SQL_ATTR_CURSOR_SENSITIVITY|SQL_UNSPECIFIED|  
 |SQL_ATTR_ROW_ARRAY_SIZE| 1|  
   
- Lorsque ces options sont définies à leurs valeurs par défaut à la fois une instruction SQL est exécutée, la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pilote ODBC Native Client n’utilise pas un curseur côté serveur pour implémenter le jeu de résultats ; au lieu de cela, il utilise un jeu de résultats par défaut. Si une de ces options sont modifiée à partir de leurs valeurs par défaut à la fois une instruction SQL est exécutée, la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pilote ODBC Native Client tente d’utiliser un curseur côté serveur pour implémenter le jeu de résultats.  
+ Lorsque ces options sont définies à leurs valeurs par défaut à la fois une instruction SQL est exécutée, le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pilote ODBC Native Client n’utilise pas un curseur côté serveur pour implémenter le jeu de résultats ; au lieu de cela, il utilise un jeu de résultats par défaut. Si un de ces options est modifié à partir de leurs valeurs par défaut à la fois une instruction SQL est exécutée, le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pilote ODBC Native Client tente d’utiliser un curseur côté serveur pour implémenter le jeu de résultats.  
   
  Les jeux de résultats par défaut prennent en charge toutes les instructions [!INCLUDE[tsql](../../includes/tsql-md.md)]. Il n'y a pas de restrictions concernant les types d'instructions SQL qui peuvent être exécutés lors de l'utilisation d'un jeu de résultats par défaut.  
   
@@ -78,7 +76,7 @@ szErrorMsgString: "[Microsoft][SQL Server Native Client][SQL Server]
                Cursor type changed."  
 ```  
   
- Applications ODBC qui reçoivent ce message peuvent appeler [SQLGetStmtAttr](../native-client-odbc-api/sqlgetstmtattr.md) pour déterminer les paramètres de curseur en cours.  
+ Applications ODBC qui reçoivent ce message peuvent appeler [SQLGetStmtAttr](../native-client-odbc-api/sqlgetstmtattr.md) pour déterminer les paramètres de curseur actuels.  
   
  Toute tentative d'exécution d'une procédure avec plusieurs instructions SELECT lors de l'utilisation de curseurs côté serveur génère l'erreur suivante :  
   

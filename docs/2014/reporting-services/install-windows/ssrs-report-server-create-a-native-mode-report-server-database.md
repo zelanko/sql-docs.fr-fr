@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - report servers [Reporting Services], databases
 - databases [Reporting Services], creating
@@ -16,13 +16,13 @@ ms.assetid: 81b9f4ad-800b-4688-8b47-a5a83dc8ff10
 caps.latest.revision: 9
 author: markingmyname
 ms.author: maghan
-manager: jhubbard
-ms.openlocfilehash: 2690d8684bd244ecc671168d9648832a5a2ca9eb
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 8ff6878b05138bb1ad4c23e57699dd896ab7b441
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36140017"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37198821"
 ---
 # <a name="create-a-native-mode-report-server-database--ssrs-configuration-manager"></a>Créer une base de données du serveur de rapports en mode natif (Gestionnaire de configuration de SSRS)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] en mode natif utilise une base de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pour le stockage interne. La base de données est un composant nécessaire et elle permet de stocker les rapports publiés, les modèles, les sources de données partagées, les données de session, les ressources et les métadonnées du serveur.  
@@ -36,7 +36,7 @@ ms.locfileid: "36140017"
 ## <a name="when-to-create-or-configure-the-report-server-databases"></a>Quand créer ou configurer les bases de données de serveur de rapports  
  Vous devez créer et configurer la base de données du serveur de rapports si vous avez installé le serveur de rapports en mode fichiers uniquement.  
   
- Si vous avez installé [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] soit la configuration par défaut pour le mode natif, la base de données du serveur de rapports a été créée et configurée automatiquement lorsque l’instance de serveur de rapports a été installée. Vous pouvez utiliser le Gestionnaire de configuration de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] pour afficher ou modifier les paramètres que le programme d'installation a configurés automatiquement.  
+ Si vous avez installé [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] soit la configuration par défaut pour le mode natif, la base de données de serveur de rapports a été créé et configuré automatiquement lorsque l’instance de serveur de rapports a été installée. Vous pouvez utiliser le Gestionnaire de configuration de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] pour afficher ou modifier les paramètres que le programme d'installation a configurés automatiquement.  
   
 ##  <a name="rsdbrequirements"></a> Avant de commencer  
  La création ou la configuration d'une base de données de serveur de rapports est un processus comportant plusieurs étapes. Avant de créer la base de données du serveur de rapports, pensez à la façon dont vous souhaitez spécifier les éléments suivants :  

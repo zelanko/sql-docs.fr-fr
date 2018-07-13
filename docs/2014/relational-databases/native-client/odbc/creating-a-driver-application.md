@@ -1,13 +1,11 @@
 ---
-title: Création d’une Application de pilote ODBC de SQL Server Native Client | Documents Microsoft
+title: Création d’une Application de pilote ODBC de SQL Server Native Client | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: native-client  - "database-engine" - "docset-sql-devref"
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -25,15 +23,15 @@ helpviewer_keywords:
 - function calls [ODBC]
 ms.assetid: c83c36e2-734e-4960-bc7e-92235910bc6f
 caps.latest.revision: 40
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 4e337b4bb5ab55c60cbf157ddd0a8ebab60e4264
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: f1912079b4bb85426a89517179ac7d79eadaf108
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36052173"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37412898"
 ---
 # <a name="creating-a-sql-server-native-client-odbc-driver-application"></a>Création d'une application de pilote ODBC SQL Server Native Client
   L'architecture ODBC possède quatre composants qui effectuent les fonctions ci-dessous.  
@@ -85,7 +83,7 @@ ms.locfileid: "36052173"
   
 -   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Attributs d’instruction spécifiques au pilote ODBC du Client natifs.  
   
--   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Attributs de colonne spécifiques au pilote ODBC du Client natifs.  
+-   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Attributs de colonne spécifiques aux pilotes ODBC du Client natifs.  
   
 -   Les types de données spécifiques à [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
@@ -105,14 +103,14 @@ ms.locfileid: "36052173"
   
 -   Appelez les fonctions API de métadonnées de requête distribuée pour obtenir les listes des serveurs liés et leurs catalogues.  
   
- Toute application ODBC C ou C++ qui utilise la fonctionnalité de copie en bloc de la [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] pilote ODBC Native Client doit être lié au fichier sqlncli11.lib. Les applications qui appellent les fonctions API de métadonnées de requête distribuée doivent également être liées à sqlncli11.lib. Les fichiers sqlncli.h et sqlncli11.lib sont distribués dans le cadre de la [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] les outils du développeur. Les répertoires [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Include et Lib doivent correspondre aux chemins d'accès INCLUDE et LIB du compilateur, comme suit :  
+ Toute application ODBC C ou C++ qui utilise la fonctionnalité de copie en bloc de la [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] pilote ODBC Native Client doit être lié au fichier sqlncli11.lib. Les applications qui appellent les fonctions API de métadonnées de requête distribuée doivent également être liées à sqlncli11.lib. Les fichiers sqlncli.h et sqlncli11.lib sont distribués dans le cadre de la [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] outils du développeur. Les répertoires [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Include et Lib doivent correspondre aux chemins d'accès INCLUDE et LIB du compilateur, comme suit :  
   
 ```  
 LIB=c:\Program Files\Microsoft Data Access SDK 2.8\Libs\x86\lib;C:\Program Files\Microsoft SQL Server\100\Tools\SDK\Lib;  
 INCLUDE=c:\Program Files\Microsoft Data Access SDK 2.8\inc;C:\Program Files\Microsoft SQL Server\100\Tools\SDK\Include;  
 ```  
   
- Une décision de conception à prendre tôt dans le processus de génération d'une application est de savoir si l'application doit avoir plusieurs appels ODBC en attente en même temps. Il existe deux méthodes de prise en charge des appels ODBC concurrents multiples ; elles sont décrites dans les autres rubriques de cette section. Pour plus d’informations, consultez la [de référence du programmeur ODBC](http://go.microsoft.com/fwlink/?LinkId=45250).  
+ Une décision de conception à prendre tôt dans le processus de génération d'une application est de savoir si l'application doit avoir plusieurs appels ODBC en attente en même temps. Il existe deux méthodes de prise en charge des appels ODBC concurrents multiples ; elles sont décrites dans les autres rubriques de cette section. Pour plus d’informations, consultez le [de référence du programmeur ODBC](http://go.microsoft.com/fwlink/?LinkId=45250).  
   
 ## <a name="in-this-section"></a>Dans cette section  
   

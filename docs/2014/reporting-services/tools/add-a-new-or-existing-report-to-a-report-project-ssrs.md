@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - reports [Reporting Services], creating
 ms.assetid: 8bc0bb53-ad8a-464d-bb6a-7fea5fa62c5c
 caps.latest.revision: 15
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: af7fe1fceeacc7b49daff9514f5ba1e10fc20518
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: 8d1d96273c21f2b22b3482a74b5b55370b09589e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36141453"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37230179"
 ---
 # <a name="add-a-new-or-existing-report-to-a-report-project-ssrs"></a>Ajouter un nouveau rapport ou un rapport existant à un projet de rapport (SSRS)
   Dans [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], vous pouvez ajouter un nouveau rapport à l’aide de l’Assistant rapport ou en ajoutant un nouveau rapport vide à votre projet. Vous pouvez aussi ajouter un rapport existant. Après avoir ajouté un rapport, vous pouvez voir son nom sous le dossier **Rapports** de votre projet.  
@@ -46,7 +46,7 @@ ms.locfileid: "36141453"
     -   **Choisissez un Style.** L'étape suivante consiste à appliquer un style au rapport en utilisant un modèle de style. Sélectionnez un modèle pour appliquer au rapport des styles comme des polices, des couleurs et des styles de bordure. Le Concepteur de rapports fournit six modèles de style : Ardoise, Forêt, Entreprise, Gras, Océan et Générique. Vous pouvez également ajouter des modèles de style supplémentaires.  
   
         > [!NOTE]  
-        >  Vous pouvez modifier des modèles existants ou ajouter de nouveaux en modifiant le fichier StyleTemplates.xml dans le \Program Files\Microsoft Visual Studio 10.0\Common7\IDE\PrivateAssemblies\Business Intelligence Wizards\Reports\Styles\\< lang\>dossier, où \<lang > est la langue que vous utilisez (par exemple, si vous utilisez la version en langue anglaise de [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)], le nom du dossier est « Fr »). Ce dossier se trouve sur l'ordinateur sur lequel le Concepteur de rapports est installé. Il existe deux exemplaires du fichier StyleTemplates.xml. Pour modifier les styles appliqués via l'Assistant Rapport, modifiez le fichier qui est dans le dossier créé pour la langue que vous utilisez.  
+        >  Vous pouvez modifier des modèles existants ou ajouter de nouveaux en modifiant le fichier StyleTemplates.xml dans le \Program Files\Microsoft Visual Studio 10.0\Common7\IDE\PrivateAssemblies\Business Intelligence Wizards\Reports\Styles\\< lang\>dossier, où \<lang > est le langage que vous utilisez (par exemple, si vous utilisez la version en langue anglaise de [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)], le nom du dossier est « Fr »). Ce dossier se trouve sur l'ordinateur sur lequel le Concepteur de rapports est installé. Il existe deux exemplaires du fichier StyleTemplates.xml. Pour modifier les styles appliqués via l'Assistant Rapport, modifiez le fichier qui est dans le dossier créé pour la langue que vous utilisez.  
   
     -   **Nommez le rapport.**  La dernière étape consiste à donner un nom au rapport et à vérifier les champs qui y seront inclus. Lorsque la procédure est terminée, le Concepteur de rapports crée le rapport et l'ajoute au projet du serveur de rapports.  
   

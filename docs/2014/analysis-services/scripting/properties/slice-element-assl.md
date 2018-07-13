@@ -1,5 +1,5 @@
 ---
-title: Slice, élément (ASSL) | Documents Microsoft
+title: Slice, élément (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - Slice element
 ms.assetid: 2c8c4107-c641-4724-bfa5-0c47e0ec8888
 caps.latest.revision: 34
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 3b1f693eddeebc0b4ad88e629eeeac9f76ca1083
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 299f84167ec64c4bdd795c56a608e76f61d348b0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36141884"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37178886"
 ---
 # <a name="slice-element-assl"></a>Élément Slice (ASSL)
   Contient une expression MDX (Multidimensional Expressions) qui définit le secteur contenu dans une partition.  
@@ -62,9 +62,9 @@ ms.locfileid: "36141884"
 |Éléments enfants|None|  
   
 ## <a name="remarks"></a>Notes  
- L'élément `Slice` contient une expression MDX de tuple ou d'ensemble qui identifie la partie du cube pour laquelle la partition stocke des informations. L’expression MDX est semblable à la [StrToSet](/sql/mdx/strtoset-mdx) fonction MDX avec le mot clé CONSTRAINED, dans la mesure où l’expression ne peut pas inclure de fonctions MDX ou définies par l’utilisateur.  
+ L'élément `Slice` contient une expression MDX de tuple ou d'ensemble qui identifie la partie du cube pour laquelle la partition stocke des informations. L’expression MDX est semblable à la [StrToSet](/sql/mdx/strtoset-mdx) fonction MDX avec le mot clé CONSTRAINED, dans l’expression ne peut pas inclure de fonctions MDX ou définies par l’utilisateur.  
   
- L’élément qui correspond au parent de `Slice` dans l’objet d’objets AMO (Analysis Management) est modèle <xref:Microsoft.AnalysisServices.Partition>.  
+ L’élément qui correspond au parent de `Slice` dans l’objet d’objets AMO (Analysis Management) modèle est <xref:Microsoft.AnalysisServices.Partition>.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Propriétés &#40;ASSL&#41;](properties-assl.md)  

@@ -1,5 +1,5 @@
 ---
-title: Traitement des objets de modèle multidimensionnel | Documents Microsoft
+title: Traitement des objets de modèle multidimensionnel | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - online mode [Analysis Services]
 - processing objects [Analysis Services]
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - cubes [Analysis Services], processing
 ms.assetid: 625aa5a6-aa09-4bac-be8a-778fa81c5a61
 caps.latest.revision: 51
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 2b933c003e840d0ef145159f278b9054b1637956
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: f9f95df4ac7d0bd9e0dd93c1a55189e9e46f747c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36140618"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37180976"
 ---
 # <a name="multidimensional-model-object-processing"></a>Traitement des objets de modèles multidimensionnels
   Le traitement est l'étape, ou la série d'étapes, dans lesquelles Analysis Services charge des données d'une source de données relationnelle dans un modèle multidimensionnel. Pour les objets qui utilisent le mode de stockage MOLAP, les données sont enregistrées sur le disque le dossier des fichiers de la base de données. Pour le mode de stockage ROLAP, le traitement s'effectue à la demande, en réponse à une requête MDX sur un objet. Pour les objets qui utilisent le stockage ROLAP, le traitement fait référence à la mise à jour du cache avant de retourner des résultats de la requête.  
@@ -49,7 +49,7 @@ ms.locfileid: "36140618"
   
 ##  <a name="bkmk_prereq"></a> Conditions préalables  
   
--   Le traitement nécessite des autorisations d'administration sur l'instance Analysis Services. Si effectuez le traitement de manière interactive dans [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] ou [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], vous devez être membre du rôle administrateur de serveur sur l'instance [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . En ce qui concerne le traitement sans assistance, par exemple à l'aide d'un package SSIS que vous planifiez via SQL Server Agent, le compte utilisé pour exécuter le package doit être membre du rôle administrateur de serveur. Pour plus d’informations sur la définition des autorisations d’administrateur, consultez [accorder des autorisations d’administrateur de serveur &#40;Analysis Services&#41;](../instances/grant-server-admin-rights-to-an-analysis-services-instance.md).  
+-   Le traitement nécessite des autorisations d'administration sur l'instance Analysis Services. Si effectuez le traitement de manière interactive dans [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] ou [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], vous devez être membre du rôle administrateur de serveur sur l'instance [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . En ce qui concerne le traitement sans assistance, par exemple à l'aide d'un package SSIS que vous planifiez via SQL Server Agent, le compte utilisé pour exécuter le package doit être membre du rôle administrateur de serveur. Pour plus d’informations sur la définition des autorisations d’administrateur, consultez [accorder des autorisations administrateur du serveur &#40;Analysis Services&#41;](../instances/grant-server-admin-rights-to-an-analysis-services-instance.md).  
   
 -   Le compte utilisé pour récupérer des données est spécifié dans l'objet source de données, en tant qu'option d'emprunt d'identité si vous utilisez l'authentification Windows, ou en tant que nom d'utilisateur dans la chaîne de connexion si vous utilisez l'authentification de base de données. Le compte doit disposer d'autorisations en lecture sur les sources de données relationnelles utilisées par le modèle.  
   

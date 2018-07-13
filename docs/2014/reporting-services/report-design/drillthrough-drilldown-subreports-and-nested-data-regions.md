@@ -1,5 +1,5 @@
 ---
-title: L’extraction, exploration, sous-rapports et régions de données imbriquées (Générateur de rapports et SSRS) | Documents Microsoft
+title: Extraction, exploration, sous-rapports et régions de données imbriquées (Générateur de rapports et SSRS) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 4791a157-b028-4698-905d-f1dd0887aa0d
 caps.latest.revision: 7
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 67d8ad863c6af2737aef283424a5c8f1cc469f50
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 4a951ab61a50ddf9983678a50989e5560d40f85e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36139745"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37228829"
 ---
 # <a name="drillthrough-drilldown-subreports-and-nested-data-regions-report-builder-and-ssrs"></a>Extraction, exploration, sous-rapports et régions de données imbriquées (Générateur de rapports et SSRS)
   Vous pouvez organiser les données de plusieurs façons pour montrer une relation du général au particulier.  Vous pouvez placer toutes les données dans le rapport et les masquer jusqu'à ce qu'un utilisateur clique pour afficher des détails ; il s'agit d'une action d' *exploration* . Vous pouvez afficher les données dans une région de données, telle qu'un tableau ou un graphique, *imbriquée* à l'intérieur d'une autre région de données, telle qu'un tableau ou une matrice. Vous pouvez afficher les données dans un *sous-rapport* intégralement contenu dans un rapport principal. Sinon, vous pouvez placer les données de détail dans des rapports d' *extraction* , des rapports distincts qui s'affichent lorsqu'un utilisateur clique sur un lien.  
@@ -86,19 +86,19 @@ ms.locfileid: "36139745"
 
   
 ##  <a name="InThisSection"></a> Dans cette section  
- [Rapports d’extraction &#40;rapport Générateur et SSRS&#41;](drillthrough-reports-report-builder-and-ssrs.md)  
+ [Rapports d’extraction &#40;Générateur de rapports et SSRS&#41;](drillthrough-reports-report-builder-and-ssrs.md)  
  Décrit les rapports qui s'ouvrent lorsqu'un utilisateur clique sur un lien dans un rapport principal.  
   
- [Sous-rapports &#40;rapport Générateur et SSRS&#41;](subreports-report-builder-and-ssrs.md)  
+ [Sous-rapports &#40;Générateur de rapports et SSRS&#41;](subreports-report-builder-and-ssrs.md)  
  Décrit les rapports qui s'affichent dans le corps d'un rapport principal.  
   
- [Régions de données imbriquées &#40;rapport Générateur et SSRS&#41;](nested-data-regions-report-builder-and-ssrs.md)  
+ [Régions de données imbriquées &#40;Générateur de rapports et SSRS&#41;](nested-data-regions-report-builder-and-ssrs.md)  
  Décrit l'imbrication d'une région de données dans une autre, par exemple un graphique imbriqué dans une matrice.  
   
- [Action d’extraction &#40;rapport Générateur et SSRS&#41;](drilldown-action-report-builder-and-ssrs.md)  
+ [Action d’extraction &#40;Générateur de rapports et SSRS&#41;](drilldown-action-report-builder-and-ssrs.md)  
  Décrit l'utilisation de l'action d'exploration pour masquer et afficher des éléments de rapport.  
   
- [Spécification des chemins d’accès à des éléments externes &#40;rapport Générateur et SSRS&#41;](specifying-paths-to-external-items-report-builder-and-ssrs.md)  
+ [Spécification des chemins d’accès à des éléments externes &#40;Générateur de rapports et SSRS&#41;](specifying-paths-to-external-items-report-builder-and-ssrs.md)  
  Explique comment faire référence aux éléments externes au fichier de définition de rapport.  
   
 ## <a name="see-also"></a>Voir aussi  

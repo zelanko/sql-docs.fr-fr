@@ -1,5 +1,5 @@
 ---
-title: Importer les stratégies à une seule Instance | Documents Microsoft
+title: Importer les stratégies à une seule Instance | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: bc5bcd87-663f-41d9-bb7b-b3e083cd63df
 caps.latest.revision: 8
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 945cd03bb574bc180af5567888a6d171966bccf6
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: craigg-msft
+ms.author: craigg
+manager: craigg
+ms.openlocfilehash: 4c45508880948c3ce1cb4814eca918278a66aacb
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36141669"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37177146"
 ---
 # <a name="import-the-policies-to-a-single-instance"></a>Importer les stratégies vers une instance unique
   Dans cette tâche, vous importerez les stratégies des meilleures pratiques que vous souhaitez planifier dans la Gestion basée sur des stratégies sur une instance unique de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
@@ -29,15 +29,15 @@ ms.locfileid: "36141669"
   
 ### <a name="import-the-best-practices-policies-for-the-database-engine"></a>Importer les stratégies des meilleures pratiques pour le moteur de base de données  
   
-1.  Démarrer [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)], puis connectez-vous à le [!INCLUDE[ssDE](../includes/ssde-md.md)].  
+1.  Démarrer [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)], puis connectez-vous à la [!INCLUDE[ssDE](../includes/ssde-md.md)].  
   
 2.  Dans l’Explorateur d’objets, développez **gestion**, puis développez **gestion des stratégies de**.  
   
-3.  Avec le bouton droit **stratégies**, puis cliquez sur **stratégie d’importation**.  
+3.  Avec le bouton droit **stratégies**, puis cliquez sur **importer une stratégie**.  
   
-4.  Dans le **importer** boîte de dialogue, à côté du **fichiers à importer** , cliquez sur le bouton de sélection (**...** ) bouton.  
+4.  Dans le **importer** boîte de dialogue, ensuite la **fichiers à importer** , cliquez sur le bouton de sélection (**...** ) bouton.  
   
-5.  Dans le **Regarder dans** liste, recherchez le dossier suivant, qui contient les stratégies des meilleures pratiques :  
+5.  Dans le **Regarder dans** liste, accédez au dossier suivant, qui contient les stratégies des meilleures pratiques :  
   
      **C:\Program fichiers (x86) \Microsoft SQL Server\110\Tools\Policies\DatabaseEngine\1033**  
   
@@ -48,9 +48,9 @@ ms.locfileid: "36141669"
   
      Pour sélectionner des fichiers non adjacents, cliquez sur un fichier, maintenez la touche CTRL enfoncée, puis cliquez sur chaque fichier supplémentaire. Pour sélectionner des fichiers adjacents, cliquez sur le premier fichier dans la séquence, maintenez la touche MAJ enfoncée, puis cliquez sur le dernier fichier.  
   
-7.  Lorsque vous avez fini de sélectionner les fichiers, cliquez sur **ouvrir**.  
+7.  Lorsque vous avez fini de sélectionner des fichiers, cliquez sur **Open**.  
   
-8.  Dans le **importer** boîte de dialogue zone, assurez-vous que le **état de la stratégie** liste de **conserver l’état de la stratégie lors de l’importation** (la valeur par défaut), puis cliquez sur **OK**.  
+8.  Dans le **importer** boîte de dialogue zone, assurez-vous que le **état de la stratégie** liste est définie sur **conserver l’état de la stratégie lors de l’importation** (la valeur par défaut), puis cliquez sur **OK**.  
   
      Les stratégies sont importées dans le **stratégies** nœud sous **gestion des stratégies de**. Par défaut, les stratégies importées sont définies sur le mode d'évaluation « à la demande ».  
   

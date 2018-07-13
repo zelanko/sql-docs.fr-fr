@@ -1,5 +1,5 @@
 ---
-title: Modifier les propriétés SQL Server Service avancées à l’aide de VBScript | Documents Microsoft
+title: Modifier les propriétés SQL Server Service avancées à l’aide de VBScript | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -18,15 +18,15 @@ helpviewer_keywords:
 - WMI Provider for Configuration Management, VBScript
 ms.assetid: f3c5d981-eaa3-4d34-9b91-37e42636aa81
 caps.latest.revision: 16
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 003755ca5366a8571cdcb63f0c59c51a8012bb11
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
+ms.openlocfilehash: b54407bb2481e6e7e697b94631d9920bba3a3290
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36141487"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37198769"
 ---
 # <a name="modify-sql-server-service-advanced-properties-using-vbscript"></a>Modifier les propriétés avancées du service SQL Server à l'aide de VBScript
   Cette section décrit comment créer un programme VBScript qui répertorie les versions des instances installées de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] qui s’exécutent sur un ordinateur.  

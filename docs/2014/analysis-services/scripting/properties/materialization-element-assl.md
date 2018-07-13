@@ -1,5 +1,5 @@
 ---
-title: Élément Materialization (ASSL) | Documents Microsoft
+title: Élément Materialization (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - Materialization element
 ms.assetid: a87a95ae-d89c-4005-b22c-47c8991673b7
 caps.latest.revision: 12
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 08e3607d1cb04f3a4483d43ead544edbbcf42a16
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: bf6b3121159a1a98cfac56c91af1920c5b96935b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36142574"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37176406"
 ---
 # <a name="materialization-element-assl"></a>Élément Materialization (ASSL)
   Indique le type de relation de dimension entre le groupe de mesures et la dimension de référence.  
@@ -49,7 +49,7 @@ ms.locfileid: "36142574"
 |Caractéristique|Description|  
 |--------------------|-----------------|  
 |Type de données et longueur|Chaîne (énumération)|  
-|Valeur par défaut|*Indirecte*|  
+|Valeur par défaut|*Indirect*|  
 |Cardinalité|0-1 : élément facultatif qui peut apparaître une fois et une seule.|  
   
 ## <a name="element-relationships"></a>Relations entre les éléments  
@@ -65,12 +65,12 @@ ms.locfileid: "36142574"
 |Valeur|Description|  
 |-----------|-----------------|  
 |*Régulière*|La dimension de référence dispose d'une relation régulière, comme dans le cas des dimensions régulières.|  
-|*Indirecte*|La dimension de référence dispose d'une relation indirecte, comme dans le cas des dimensions plusieurs à plusieurs.|  
+|*Indirect*|La dimension de référence dispose d'une relation indirecte, comme dans le cas des dimensions plusieurs à plusieurs.|  
   
- L’élément qui correspond au parent de `Materialization` dans l’objet d’objets AMO (Analysis Management) est modèle <xref:Microsoft.AnalysisServices.ReferenceMeasureGroupDimension>.  
+ L’élément qui correspond au parent de `Materialization` dans l’objet d’objets AMO (Analysis Management) modèle est <xref:Microsoft.AnalysisServices.ReferenceMeasureGroupDimension>.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Élément de dimension &#40;ASSL&#41;](../objects/dimension-element-assl.md)   
+ [Dimension élément &#40;ASSL&#41;](../objects/dimension-element-assl.md)   
  [Propriétés &#40;ASSL&#41;](properties-assl.md)  
   
   

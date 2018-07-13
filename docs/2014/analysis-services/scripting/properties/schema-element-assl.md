@@ -1,5 +1,5 @@
 ---
-title: Élément de schéma (ASSL) | Documents Microsoft
+title: Schema, élément (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - Schema element
 ms.assetid: 4b6375fb-7ad8-4d5f-88b1-abd3da2654db
 caps.latest.revision: 34
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 130d1363a007fb51db3bc7b39efcae4d9140c368
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 3bcf275eafb8a982fa2ddf9d5ecb82d45e435fa5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36053399"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37200039"
 ---
 # <a name="schema-element-assl"></a>Élément Schema (ASSL)
   Contient le schéma de la vue de source de données.  
@@ -58,13 +58,13 @@ ms.locfileid: "36053399"
   
 |Relation|Élément|  
 |------------------|-------------|  
-|Élément parent|[Élément DataSourceView](../objects/datasourceview-element-assl.md)|  
+|Élément parent|[DataSourceView](../objects/datasourceview-element-assl.md)|  
 |Éléments enfants|None|  
   
 ## <a name="remarks"></a>Notes  
  Le `Schema` est représenté à l'aide du format de DataSets XSD (XML Schema Definition) dans [!INCLUDE[msCoName](../../../includes/msconame-md.md)] .NET Framework, avec quelques extensions pour les DataSets et d'autres extensions spécifiques à cette utilisation dans le langage de définition de données (DDL). Les DataSets définissent un mappage flexible de XSD à un schéma relationnel, mais renvoient ensuite les définitions de schéma XSD sous une forme plus canonique. Seule cette forme canonique est valide dans les sources de données.  
   
- L’élément qui correspond au parent de `Schema` dans l’objet d’objets AMO (Analysis Management) est modèle <xref:Microsoft.AnalysisServices.DataSourceView>.  
+ L’élément qui correspond au parent de `Schema` dans l’objet d’objets AMO (Analysis Management) modèle est <xref:Microsoft.AnalysisServices.DataSourceView>.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Propriétés &#40;ASSL&#41;](properties-assl.md)  

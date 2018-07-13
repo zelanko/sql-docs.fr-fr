@@ -1,5 +1,5 @@
 ---
-title: Architecture d’exploration de données | Documents Microsoft
+title: Architecture d’exploration de données | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 105f52e1-ad3b-4cd0-b67b-06dbb451c304
 caps.latest.revision: 10
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 9fd364f897299bdee36f931f999bdd623a1878c3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: bb84b8ffc9f3dfbb5b1e89a50b0d57b2dafa9111
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36140418"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37239949"
 ---
 # <a name="data-mining-architecture"></a>Architecture d'exploration de données
   Cette section décrit l'architecture des solutions d'exploration de données qui sont hébergées dans une instance d' [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Les rubriques de cette section décrivent l'architecture logique et physique d'une instance d' [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] qui prend en charge l'exploration de données, et fournissent également des informations sur les clients, les fournisseurs et les protocoles qui peuvent être utilisés pour communiquer avec des serveurs d'exploration de données, et pour utiliser des objets d'exploration de données localement ou à distance.  
@@ -45,10 +45,10 @@ ms.locfileid: "36140418"
   
  [Gestion des solutions et des objets d’exploration de données](management-of-data-mining-solutions-and-objects.md)  
   
- [Vue d’ensemble de la sécurité &#40;d’exploration de données&#41;](security-overview-data-mining.md)  
+ [Vue d’ensemble de la sécurité &#40;exploration de données&#41;](security-overview-data-mining.md)  
   
 ## <a name="see-also"></a>Voir aussi  
  [Programmation de modèle multidimensionnel](../multidimensional-models/multidimensional-model-programming.md)   
- [Programmation d’exploration de données](../dev-guide/data-mining-programming.md)  
+ [Programmation de l’exploration de données](../dev-guide/data-mining-programming.md)  
   
   

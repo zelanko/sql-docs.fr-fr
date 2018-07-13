@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 6956ebd6-0217-4087-a4fa-5cc1c3804691
 caps.latest.revision: 10
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: f54e95b0b9bee1e989d9d9ccf85f513210302367
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 6f201b93b3469278d0335cbc60bcc00aa679e6b5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36141249"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37228749"
 ---
 # <a name="tutorial-add-a-bar-chart-to-your-report-report-builder"></a>Didacticiel : ajouter un graphique à barres à un rapport (Générateur de rapports)
   Un graphique à barres représente les données de catégorie horizontalement. Cela peut aider à :  
@@ -66,7 +66,7 @@ ms.locfileid: "36141249"
  Pour plus d’informations sur les spécifications, consultez [Éléments requis pour les didacticiels &#40;Générateur de rapports&#41;](../reporting-services/report-builder-tutorials.md).  
   
 ##  <a name="Chart"></a> 1. Créer un rapport de graphique à partir de l'Assistant Graphique  
- À partir de la **mise en route** boîte de dialogue, créez un dataset incorporé, choisissez une source de données partagée, créez un graphique à barres à l’aide de l’Assistant graphique.  
+ À partir de la **mise en route** boîte de dialogue, créez un dataset incorporé, choisir une source de données partagée et créer un graphique à barres à l’aide de l’Assistant graphique.  
   
 > [!NOTE]  
 >  Dans ce didacticiel, la requête contient les valeurs des données : elle n’a donc pas besoin d’une source de données externe. Cela rend la requête assez longue. Dans un environnement métier, une requête ne contient pas les données. Ceci est nécessaire à des fins de formation uniquement.  
@@ -78,7 +78,7 @@ ms.locfileid: "36141249"
      La boîte de dialogue **Mise en route** s'affiche.  
   
     > [!NOTE]  
-    >  Si le **mise en route** boîte de dialogue ne pas s’affichent, cliquez sur le bouton Générateur de rapports, puis cliquez sur **nouveau**.  
+    >  Si le **mise en route** boîte de dialogue ne pas s’affichent, cliquez sur le bouton Générateur de rapports, puis cliquez sur **New**.  
   
 2.  Dans le volet gauche, assurez-vous que **Nouveau rapport** est sélectionné.  
   
@@ -162,14 +162,14 @@ ms.locfileid: "36141249"
   
 4.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-5.  Avec le bouton droit à la verticale **titre de l’axe** et désactivez la **afficher le titre axe** case à cocher.  
+5.  Avec le bouton droit vertical **titre de l’axe** et désactivez le **afficher le titre de l’axe** case à cocher.  
   
 6.  Cliquez sur **Exécuter** pour afficher un aperçu du rapport.  
   
 > [!NOTE]  
 >  Si vous ne parvenez pas à lire les noms des commerciaux sur l'axe vertical, vous pouvez augmenter la taille de votre graphique ou modifier les options de mise en forme des étiquettes d'axe.  
   
-###  <a name="CategoryExpression"></a> Afficher le nom de famille et prénom sur l’axe Vertical  
+###  <a name="CategoryExpression"></a> Afficher le nom et prénom sur l’axe Vertical  
  Vous pouvez modifier l'expression de catégorie pour inclure le nom suivi du prénom de chaque commercial.  
   
 ##### <a name="to-change-the-category-expression"></a>Pour modifier l'expression de catégorie  
@@ -216,7 +216,7 @@ ms.locfileid: "36141249"
   
 7.  Cliquez sur **OK**.  
   
-8.  Sur le **propriétés du groupe de catégories** page, dans le **commande** la liste déroulante, sélectionnez **Z à A**. L'ordre alphabétique inversé est ainsi sélectionné de sorte que les noms apparaissent dans l'ordre de bas en haut.  
+8.  Sur le **propriétés du groupe de catégories** page, dans le **ordre** liste déroulante, sélectionnez **Z à A**. L'ordre alphabétique inversé est ainsi sélectionné de sorte que les noms apparaissent dans l'ordre de bas en haut.  
   
 9. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
@@ -264,7 +264,7 @@ ms.locfileid: "36141249"
   
 2.  Cliquez sur l'axe horizontal en bas du graphique pour le sélectionner.  
   
-     Dans le ruban, sur le **accueil** sous l’onglet le **nombre** , cliquez sur le **devise** bouton. Les étiquettes de l'axe horizontal changent et utilisent une devise.  
+     Dans le ruban, sur le **accueil** sous l’onglet le **nombre** de groupe, cliquez sur le **devise** bouton. Les étiquettes de l'axe horizontal changent et utilisent une devise.  
   
 3.  (Facultatif) Supprimez les chiffres décimaux. Près du bouton **Devise** , cliquez deux fois sur le bouton **Réduire les décimales** .  
   
@@ -276,7 +276,7 @@ ms.locfileid: "36141249"
   
 7.  Avec le bouton droit **titre de l’axe** et cliquez sur **propriétés du titre axe**.  
   
-8.  Dans le **texte de titre** , tapez **ventes en milliers** et cliquez sur **OK**.  
+8.  Dans le **texte du titre** , tapez **ventes en milliers** et cliquez sur **OK**.  
   
 9. Cliquez sur **Exécuter** pour afficher un aperçu du rapport.  
   
@@ -297,7 +297,7 @@ ms.locfileid: "36141249"
   
 5.  Cliquez sur **Ajouter**. Un nouveau filtre vide apparaît.  
   
-6.  Dans **Expression**, type **[SUM (salesyear2009)]**. Cela crée l’expression sous-jacente `=Sum(Fields!SalesYear2009.Value)`, que vous pouvez voir si vous cliquez sur le **fx** bouton.  
+6.  Dans **Expression**, type **[SUM (salesyear2009)]**. Cette opération crée l’expression sous-jacente `=Sum(Fields!SalesYear2009.Value)`, que vous pouvez voir si vous cliquez sur le **fx** bouton.  
   
 7.  Vérifiez que le type de données est **Text**.  
   
@@ -327,7 +327,7 @@ ms.locfileid: "36141249"
   
 3.  Sélectionnez **Graphique à barres des ventes**, puis cliquez sur le bouton **Gras** .  
   
-4.  Sélectionnez **cinq meilleurs vendeurs pour 2009**et dans le **police** section sur le **accueil** onglet, définissez la taille de police sur **10**.  
+4.  Sélectionnez **cinq meilleurs vendeurs pour 2009**, puis, dans le **police** section sur la **accueil** onglet, définissez la taille de police sur **10**.  
   
 5.  (Facultatif) Vous devrez peut-être agrandir la zone de texte Titre pour contenir les deux lignes de texte.  
   

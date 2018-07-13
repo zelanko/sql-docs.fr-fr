@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: cc6ef408-4a76-408a-9d3f-033481fe21cf
 caps.latest.revision: 6
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 3646edb01f7bf6e45bbe20c1e6f821b41e9b5969
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: aebaa04b6bdf4657f081b6a99b6cb158c144c8d3
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36141460"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37194859"
 ---
 # <a name="interactive-sort-document-maps-and-links-report-builder-and-ssrs"></a>Tri interactif, Explorateurs de documents et liens (Générateur de rapports et SSRS)
   Dans les environnements Web, vous pouvez ajouter un certain nombre de fonctionnalités qui permettent à vos utilisateurs d'intervenir sur les rapports. Vos utilisateurs peuvent modifier l'ordre de tri des valeurs dans votre rapport, afficher ou masquer des éléments du rapport ou cliquer sur les liens pointant vers d'autres rapports ou des pages Web. Vous pouvez également ajouter une table des matières ou un Explorateur de documents. Vos utilisateurs de rapport peuvent cliquer sur des éléments de la table des matières ou de l'Explorateur de documents pour accéder instantanément aux sections voulues du rapport.  
@@ -41,19 +41,19 @@ ms.locfileid: "36141460"
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
 ## <a name="in-this-section"></a>Dans cette section  
- [Tri interactif &#40;rapport Générateur et SSRS&#41;](interactive-sort-report-builder-and-ssrs.md)  
+ [Tri interactif &#40;Générateur de rapports et SSRS&#41;](interactive-sort-report-builder-and-ssrs.md)  
  Explique comment ajouter des boutons de tri interactifs à des en-têtes de colonne.  
   
  [Créer un explorateur de documents &#40;Générateur de rapports et SSRS&#41;](create-a-document-map-report-builder-and-ssrs.md)  
  Explique comment ajouter une table des matières pour prendre en charge la navigation dans un rapport volumineux.  
   
- [Ajouter un signet à un rapport &#40;rapport Générateur et SSRS&#41;](add-a-bookmark-to-a-report-report-builder-and-ssrs.md)  
+ [Ajouter un signet à un rapport &#40;Générateur de rapports et SSRS&#41;](add-a-bookmark-to-a-report-report-builder-and-ssrs.md)  
  Explique comment ajouter des signets pour créer des liens dans un rapport.  
   
- [Ajouter un lien hypertexte vers une URL &#40;rapport Générateur et SSRS&#41;](add-a-hyperlink-to-a-url-report-builder-and-ssrs.md)  
+ [Ajouter un lien hypertexte vers une URL &#40;Générateur de rapports et SSRS&#41;](add-a-hyperlink-to-a-url-report-builder-and-ssrs.md)  
  Explique comment ajouter un lien de votre rapport à une URL  
   
 ## <a name="see-also"></a>Voir aussi  
- [L’extraction, exploration, sous-rapports et régions de données imbriquées &#40;rapport Générateur et SSRS&#41;](drillthrough-drilldown-subreports-and-nested-data-regions.md)  
+ [Extraction, exploration, sous-rapports et régions de données imbriquées &#40;Générateur de rapports et SSRS&#41;](drillthrough-drilldown-subreports-and-nested-data-regions.md)  
   
   

@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 4b194714-46f7-4f0e-9632-7f89d9600762
 caps.latest.revision: 7
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: e741f590755ebd032b7d26af8fe59772110578cf
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: e3c75fe02c7db5857f9f3977c3808df0b61f0ede
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36141979"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37179206"
 ---
 # <a name="set-a-no-data-message-for-a-data-region-report-builder-and-ssrs"></a>Définir un message d'absence de données pour une région de données (Générateur de rapports et SSRS)
   Quand vous souhaitez qu’un texte s’affiche dans le rapport rendu à la place d’une région de données ne contenant pas de données, vous devez définir la propriété NoRowsMessage de la région de données de table, de matrice ou de liste souhaitée, la propriété NoDataMessage de la région de données de graphique et la propriété NoDataText de l’échelle de couleurs de la carte. Au moment de l'exécution, le processeur de rapports exécute la requête pour chaque dataset d'un rapport et la requête de dataset peut ne produire aucun jeu de résultats. Pour une région de données liée à un dataset vide, vous pouvez spécifier le texte à afficher à la place de la région de données vide. Vous pouvez également définir la propriété NoRowsMessage pour un sous-rapport quand aucun dataset de ce dernier ne contient de données au moment de l’exécution.  
@@ -31,7 +31,7 @@ ms.locfileid: "36141979"
   
 1.  En mode Conception, sur l'aire de conception, cliquez sur la table, la matrice, la région de données de type liste ou le sous-rapport souhaité pour sélectionner celle-ci / celui-ci. Le volet Propriétés affiche les propriétés de l'élément que vous venez de sélectionner.  
   
-2.  Dans le volet Propriétés, tapez le texte que vous souhaitez afficher sous la forme d’un message dans `NoRowsMessage` champ de propriété.  
+2.  Dans le volet Propriétés, tapez le texte que vous souhaitez afficher comme message dans `NoRowsMessage` champ de propriété.  
   
      Vous pouvez également cliquer sur l’option **Expression** de la liste déroulante pour ouvrir la boîte de dialogue **Expression** et créer l’expression souhaitée.  
   
@@ -41,7 +41,7 @@ ms.locfileid: "36141979"
   
 2.  Dans le volet Propriétés, développez le nœud pour `NoDataMessage`.  
   
-3.  Dans **légende**, tapez le texte que vous souhaitez afficher sous la forme d’un message dans `NoDataMessage` champ de propriété.  
+3.  Dans **légende**, tapez le texte que vous souhaitez afficher sous forme de message dans `NoDataMessage` champ de propriété.  
   
      Vous pouvez également cliquer sur l’option **Expression** de la liste déroulante pour ouvrir la boîte de dialogue **Expression** et créer l’expression souhaitée.  
   
@@ -49,7 +49,7 @@ ms.locfileid: "36141979"
   
 1.  En mode Conception, sur l'aire de conception, cliquez sur le sous-rapport souhaité pour le sélectionner. Le volet Propriétés affiche les propriétés de l'élément que vous venez de sélectionner.  
   
-2.  Dans le volet Propriétés, tapez le texte que vous souhaitez afficher sous la forme d’un message dans `NoRowsMessage` champ de propriété.  
+2.  Dans le volet Propriétés, tapez le texte que vous souhaitez afficher comme message dans `NoRowsMessage` champ de propriété.  
   
      Vous pouvez également cliquer sur l’option **Expression** de la liste déroulante pour ouvrir la boîte de dialogue **Expression** et créer l’expression souhaitée.  
   
@@ -62,10 +62,10 @@ ms.locfileid: "36141979"
      Vous pouvez également cliquer sur l’option **Expression** de la liste déroulante pour ouvrir la boîte de dialogue **Expression** et créer l’expression souhaitée.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Sous-rapports &#40;rapport Générateur et SSRS&#41;](../report-design/subreports-report-builder-and-ssrs.md)   
+ [Sous-rapports &#40;Générateur de rapports et SSRS&#41;](../report-design/subreports-report-builder-and-ssrs.md)   
  [Tables, matrices et listes &#40;Générateur de rapports et SSRS&#41;](../report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)   
  [Graphiques &#40;Générateur de rapports et SSRS&#41;](../report-design/charts-report-builder-and-ssrs.md)   
  [Cartes &#40;Générateur de rapports et SSRS&#41;](../report-design/maps-report-builder-and-ssrs.md)   
- [Sous-rapports &#40;rapport Générateur et SSRS&#41;](../report-design/subreports-report-builder-and-ssrs.md)  
+ [Sous-rapports &#40;Générateur de rapports et SSRS&#41;](../report-design/subreports-report-builder-and-ssrs.md)  
   
   

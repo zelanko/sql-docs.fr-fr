@@ -1,13 +1,11 @@
 ---
-title: Les Types définis par l’utilisateur CLR volumineux (ODBC) | Documents Microsoft
+title: Types définis par l’utilisateur CLR volumineux (ODBC) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: native-client  - "database-engine" - "docset-sql-devref"
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -15,20 +13,20 @@ helpviewer_keywords:
 - large user-defined types [ODBC]
 ms.assetid: ddce337e-bb6e-4a30-b7cc-4969bb1520a9
 caps.latest.revision: 15
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 98cb3dadf5b0009d4c1ce8cddb3a6cb21d1c4c2d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: e7e17bf897c91021a06ebb5605b072f27aa624d3
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36043840"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37422358"
 ---
 # <a name="large-clr-user-defined-types-odbc"></a>Types CLR volumineux définis par l’utilisateur (ODBC)
   Cette rubrique traite des modifications apportées à ODBC dans SQL Server Native Client pour prendre en charge les types CLR volumineux définis par l'utilisateur.  
   
- Pour voir un exemple montrant la prise en charge ODBC pour les UDT volumineux du CLR, [prend en charge pour les UDT volumineux](../../native-client-odbc-how-to/support-for-large-udts.md).  
+ Pour obtenir un exemple montrant la prise en charge ODBC pour les UDT volumineux du CLR, consultez [prennent en charge pour les UDT volumineux](../../native-client-odbc-how-to/support-for-large-udts.md).  
   
  Pour plus d’informations sur la prise en charge pour les UDT volumineux du CLR dans SQL Server Native Client, consultez [Large CLR User-Defined Types](../../clr-integration-database-objects-user-defined-types/clr-user-defined-types.md).  
   
@@ -67,12 +65,12 @@ ms.locfileid: "36043840"
 |SQL_DESC_TYPE|SQL_SS_UDT|SQL_SS_UDT|  
 |SQL_DESC_TYPE_NAME|"udt"|"udt"|  
 |SQL_DESC_UNSIGNED|SQL_TRUE|SQL_TRUE|  
-|SQL_CA_SS_UDT_CATALOG_NAME|Le nom du catalogue contenant l’UDT.|Le nom du catalogue contenant l’UDT.|  
+|SQL_CA_SS_UDT_CATALOG_NAME|Le nom du catalogue qui contient l’UDT.|Le nom du catalogue qui contient l’UDT.|  
 |SQL_CA_SS_UDT_SCHEMA_NAME|Nom du schéma contenant le type défini par l'utilisateur (UDT).|Le nom du schéma du contient l’UDT.|  
 |SQL_CA_SS_UDT_TYPE_NAME|Le nom de l’UDT.|Le nom de l’UDT.|  
 |SQL_CA_SS_UDT_ASSEMBLY_TYPE_NAME|Nom complet du type défini par l'utilisateur (UDT).|Nom complet du type défini par l'utilisateur (UDT).|  
   
- Pour les paramètres UDT, SQL_CA_SS_UDT_TYPE_NAME doit toujours être défini via **SQLSetDescField**. SQL_CA_SS_UDT_CATALOG_NAME et SQL_CA_SS_UDT_SCHEMA_NAME sont facultatifs.  
+ Pour les paramètres UDT, SQL_CA_SS_UDT_TYPE_NAME doit toujours être défini **SQLSetDescField**. SQL_CA_SS_UDT_CATALOG_NAME et SQL_CA_SS_UDT_SCHEMA_NAME sont facultatifs.  
   
  Si l'UDT est défini dans la même base de données avec un schéma différent de celui de la table, SQL_CA_SS_UDT_SCHEMA_NAME doit être défini.  
   
@@ -81,7 +79,7 @@ ms.locfileid: "36043840"
  En cas d'erreurs ou d'omissions dans les paramètres de SQL_CA_SS_UDT_TYPE_NAME, SQL_CA_SS_UDT_CATALOG_NAME ou SQL_CA_SS_UDT_SCHEMA_NAME, un enregistrement de diagnostic est généré avec SQLSTATE HY000 et un message spécifique au serveur.  
   
 ## <a name="descriptor-fields-for-results"></a>Champs de descripteur pour les résultats  
- Les informations retournées dans les champs IRD sont comme suit :  
+ Informations retournées dans les champs IRD sont comme suit :  
   
 |Champ de descripteur|SQL_SS_UDT<br /><br /> (longueur inférieure ou égale à 8 000 octets)|SQL_SS_UDT<br /><br /> (longueur supérieure à 8 000 octets)|  
 |----------------------|-------------------------------------------------------------------|----------------------------------------------------------|  
@@ -103,7 +101,7 @@ ms.locfileid: "36043840"
 |SQL_DESC_TYPE|SQL_SS_UDT|SQL_SS_UDT|  
 |SQL_DESC_TYPE_NAME|"udt"|"udt"|  
 |SQL_DESC_UNSIGNED|SQL_TRUE|SQL_TRUE|  
-|SQL_CA_SS_UDT_CATALOG_NAME|Le nom du catalogue contenant l’UDT.|Le nom du catalogue contenant l’UDT.|  
+|SQL_CA_SS_UDT_CATALOG_NAME|Le nom du catalogue qui contient l’UDT.|Le nom du catalogue qui contient l’UDT.|  
 |SQL_CA_SS_UDT_SCHEMA_NAME|Nom du schéma contenant le type défini par l'utilisateur (UDT).|Nom du schéma contenant le type défini par l'utilisateur (UDT).|  
 |SQL_CA_SS_UDT_TYPE_NAME|Le nom de l’UDT.|Le nom de l’UDT.|  
 |SQL_CA_SS_UDT_ASSEMBLY_TYPE_NAME|Nom complet du type défini par l'utilisateur (UDT).|Nom complet du type défini par l'utilisateur (UDT).|  
@@ -121,13 +119,13 @@ ms.locfileid: "36043840"
 |SQL_DATA_TYPE|SQL_SS_UDT|SQL_SS_UDT|  
 |SQL_DATETIME_SUB|NULL|NULL|  
 |CHAR_OCTET_LENGTH|*n*|SQL_SS_LENGTH_UNLIMITED (0)|  
-|SS_UDT_CATALOG_NAME|Le nom du catalogue contenant l’UDT.|Le nom du catalogue contenant l’UDT.|  
+|SS_UDT_CATALOG_NAME|Le nom du catalogue qui contient l’UDT.|Le nom du catalogue qui contient l’UDT.|  
 |SS_UDT_SCHEMA_NAME|Nom du schéma contenant le type défini par l'utilisateur (UDT).|Nom du schéma contenant le type défini par l'utilisateur (UDT).|  
 |SS_UDT_ASSEMBLY_TYPE_NAME|Nom complet du type défini par l'utilisateur (UDT).|Nom complet du type défini par l'utilisateur (UDT).|  
   
- Les trois dernières colonnes sont spécifiques au pilote. Ils sont ajoutés après les colonnes définies par ODBC, mais avant toutes les colonnes spécifiques au pilote existantes du jeu de résultats de SQLColumns ou SQLProcedureColumns.  
+ Les trois dernières colonnes sont spécifiques au pilote. Ils sont ajoutés après toutes les colonnes définies par ODBC, mais avant toutes les colonnes spécifiques au pilote existants du jeu de résultats de SQLColumns ou SQLProcedureColumns.  
   
- Aucuns lignes ne sont retournées par SQLGetTypeInfo, pour les UDT individuels ou pour le type générique « udt ».  
+ Aucune ligne n’est retournées par SQLGetTypeInfo, pour les UDT individuels ou pour le type générique « udt ».  
   
 ## <a name="bindings-and-conversions"></a>Liaisons et conversions  
  Les conversions suivantes sont prises en charge entre les types de données SQL et C :  
@@ -138,7 +136,7 @@ ms.locfileid: "36043840"
 |SQL_C_BINARY|Pris en charge|  
 |SQL_C_CHAR|Prise en charge *|  
   
- \* Données binaires sont converties en chaîne hexadécimale.  
+ \* Données binaires sont converties en une chaîne hexadécimale.  
   
  Les conversions suivantes sont prises en charge entre les types de données C et SQL :  
   
@@ -182,7 +180,7 @@ ms.locfileid: "36043840"
  Les valeurs retournées pour les UDT sont celles décrites dans la section « Champs de descripteur pour les résultats », plus haut dans cette rubrique.  
   
 ### <a name="sqlcolumns"></a>SQLColumns  
- Les valeurs retournées pour les UDT sont comme décrit dans la section « Colonne de métadonnées retourné par SQLColumns et SQLProcedureColumns (métadonnées de catalogue) », plus haut dans cette rubrique.  
+ Les valeurs retournées pour les UDT sont comme décrit dans la section « Colonne de métadonnées retournée par SQLColumns et SQLProcedureColumns (métadonnées de catalogue) », plus haut dans cette rubrique.  
   
 ### <a name="sqldescribecol"></a>SQLDescribeCol  
  Les valeurs retournées pour les UDT sont les suivantes :  

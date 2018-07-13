@@ -1,5 +1,5 @@
 ---
-title: Graphique de précision (SQL Server Data Mining Add-ins) | Documents Microsoft
+title: Graphique de précision (SQL Server Data Mining Add-ins) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - accuracy chart
 - mining models, validating
@@ -18,15 +18,15 @@ helpviewer_keywords:
 - lift [data mining]
 ms.assetid: 303973b4-71c0-4cfc-b7bc-92218b52509d
 caps.latest.revision: 19
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 16d669001ae0842c91853e28aae587dd5f4ebb51
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: d331c1acb84b67a19eba2c6aacebfe68b947b217
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36140409"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37222319"
 ---
 # <a name="accuracy-chart-sql-server-data-mining-add-ins"></a>Graphique de précision (Compléments d'exploration de données SQL Server)
   ![Bouton graphique de précision dans le ruban Exploration de données](media/dmc-accchart.gif "bouton graphique de précision dans le ruban Exploration de données")  
@@ -45,20 +45,20 @@ ms.locfileid: "36140409"
 ## <a name="using-the-accuracy-chart-wizard"></a>Utilisation de l'Assistant Graphique de précision  
  Pour créer un graphique de précision, vous devez référencer une structure d'exploration de données existante. Vous pouvez mesurer l'exactitude de plusieurs modèles basés sur cette structure, tant qu'ils prédisent la même chose.  
   
- Si vous n'êtes pas sûr de connaître les structures qui sont disponibles, vous pouvez parcourir le serveur. Pour plus d’informations, consultez [exploration des modèles dans Excel &#40;des compléments d’exploration de données SQL Server&#41;](browsing-models-in-excel-sql-server-data-mining-add-ins.md).  
+ Si vous n'êtes pas sûr de connaître les structures qui sont disponibles, vous pouvez parcourir le serveur. Pour plus d’informations, consultez [exploration des modèles dans Excel &#40;SQL Server Data Mining Add-ins&#41;](browsing-models-in-excel-sql-server-data-mining-add-ins.md).  
   
 #### <a name="to-create-an-accuracy-chart"></a>Pour créer un graphique de précision  
   
 1.  Cliquez sur le **Client d’exploration de données** ruban.  
   
-2.  Dans le **précision et Validation** , cliquez sur **graphique de précision**.  
+2.  Dans le **précision et Validation** de groupe, cliquez sur **graphique de précision**.  
   
-3.  Dans le **sélectionner une Structure ou modèle** boîte de dialogue, choisissez le modèle que vous souhaitez évaluer. Cliquez sur **Suivant**.  
+3.  Dans le **sélectionner une Structure ou modèle** boîte de dialogue, sélectionnez le modèle que vous souhaitez évaluer. Cliquez sur **Suivant**.  
   
     > [!NOTE]  
     >  Vous devez choisir un modèle qui correspond le mieux possible aux données que vous avez l'intention de tester.  
   
-4.  Dans le **spécifier colonne à prédire et valeur à prédire** boîte de dialogue zone, choisissez la colonne que vous souhaitez prédire une valeur cible, le cas échéant. Cliquez sur **Suivant**.  
+4.  Dans le **spécifier colonne à prédire et valeur à prédire** boîte de dialogue, sélectionnez la colonne que vous souhaitez prédire et une valeur cible, le cas échéant. Cliquez sur **Suivant**.  
   
      Par exemple, dans l'exemple ci-dessus, vous pouvez choisir la colonne qui modélise la réponse des clients et spécifier « Achat probable » comme valeur cible.  
   

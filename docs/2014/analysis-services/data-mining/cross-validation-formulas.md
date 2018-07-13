@@ -1,5 +1,5 @@
 ---
-title: Formules de Validation croisée | Documents Microsoft
+title: Formules de Validation croisée | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: fd1ea582-29a1-4154-8de2-47bab3539b4d
 caps.latest.revision: 8
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 97500036ed4021c0b1c6d907db1c4aa7858c8b68
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 5c41d6570b4e267109fbbf696bba7917b63f33b4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36140199"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37230069"
 ---
 # <a name="cross-validation-formulas"></a>Formules de validation croisée
   Lorsque vous créez un rapport de validation croisée, il contient des mesures de précision pour chaque modèle, selon le type du modèle d'exploration de données (autrement dit, l'algorithme utilisé pour créer le modèle), le type de données de l'attribut prédictible et la valeur de l'attribut prédictible, le cas échéant.  
@@ -49,7 +49,7 @@ ms.locfileid: "36140199"
 |**Erreur-type**|Attribut discret, cible non spécifiée|Racine carrée de la moyenne des carrés du complément du score de probabilité, divisée par le nombre de cas dans la partition, en excluant les cas avec des valeurs manquantes pour l'attribut cible.|  
   
 ## <a name="see-also"></a>Voir aussi  
- [Test et Validation &#40;d’exploration de données&#41;](testing-and-validation-data-mining.md)   
+ [Test et Validation &#40;exploration de données&#41;](testing-and-validation-data-mining.md)   
  [La Validation croisée &#40;Analysis Services - Exploration de données&#41;](cross-validation-analysis-services-data-mining.md)  
   
   

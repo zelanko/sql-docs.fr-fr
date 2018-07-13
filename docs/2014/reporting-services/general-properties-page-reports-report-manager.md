@@ -1,5 +1,5 @@
 ---
-title: Page propriétés générales, rapports (Gestionnaire de rapports) | Documents Microsoft
+title: Page propriétés générales, rapports (Gestionnaire de rapports) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 66c99d28-ab41-45f0-bf02-ed560293595d
 caps.latest.revision: 29
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 21ffa295452a4f025eb15600e48f0e99906ac2fa
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 607d50e68cef49fef5940b2729bea8156d7bf2f3
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36142975"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37189896"
 ---
 # <a name="general-properties-page-reports-report-manager"></a>Page Propriétés générales, Rapports (Gestionnaire de rapports)
   La page Propriétés générales des rapports vous permet de renommer, supprimer, déplacer ou remplacer la définition de rapport. Vous pouvez également utiliser cette page pour créer un rapport lié. Des informations détaillées sur l'utilisateur qui a créé et modifié le rapport, et la date des modifications sont affichées dans la partie supérieure de la page.  
@@ -54,7 +54,7 @@ ms.locfileid: "36142975"
  Cliquez pour supprimer le rapport de la base de données du serveur de rapports. La suppression d'un rapport entraîne celle de l'historique de rapport et de tous les abonnements et les planifications propres au rapport associés. Si le rapport est associé à des rapports liés, ces derniers deviennent non valides.  
   
  **Déplacer**  
- Cliquez pour déplacer un rapport dans l'arborescence des dossiers du serveur de rapports. Un clic sur ce bouton permet d'ouvrir la page Déplacer les éléments dans laquelle vous pouvez parcourir les dossiers pour sélectionner un nouvel emplacement. Pour plus d’informations, consultez [déplacer la Page éléments &#40;le Gestionnaire de rapports&#41;](../../2014/reporting-services/move-items-page-report-manager.md).  
+ Cliquez pour déplacer un rapport dans l'arborescence des dossiers du serveur de rapports. Un clic sur ce bouton permet d'ouvrir la page Déplacer les éléments dans laquelle vous pouvez parcourir les dossiers pour sélectionner un nouvel emplacement. Pour plus d’informations, consultez [Page déplacer les éléments &#40;le Gestionnaire de rapports&#41;](../../2014/reporting-services/move-items-page-report-manager.md).  
   
  **Créer un rapport lié**  
  Cliquez pour ouvrir la page Nouveau rapport lié. Pour plus d’informations sur cette page et les rapports liés, consultez [Page nouveau rapport lié &#40;le Gestionnaire de rapports&#41;](../../2014/reporting-services/new-linked-report-page-report-manager.md).  
@@ -69,11 +69,11 @@ ms.locfileid: "36142975"
  **Remplacer**  
  Cliquez pour remplacer la définition de rapport utilisée dans le rapport actuel par une définition différente d'un fichier .rdl situé dans le système de fichiers. Si vous mettez à jour une définition de rapport, vous devez redéfinir les paramètres de la source de données une fois la mise à jour terminée.  
   
- **Modifier la liaison**  
+ **Changer le lien**  
  Cliquez pour sélectionner une autre définition de rapport pour le rapport lié. Cette option apparaît si le rapport est un rapport lié. Si le rapport est un rapport lié, vous pouvez définir cette propriété pour remplacer la définition de rapport.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Le Gestionnaire de rapports &#40;SSRS en Mode natif&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
- [Aide (F1) de gestionnaire de rapports](../../2014/reporting-services/report-manager-f1-help.md)  
+ [Aide (F1) du Gestionnaire de rapports](../../2014/reporting-services/report-manager-f1-help.md)  
   
   

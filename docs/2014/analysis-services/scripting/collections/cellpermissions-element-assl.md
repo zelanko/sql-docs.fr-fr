@@ -1,5 +1,5 @@
 ---
-title: Élément CellPermissions (ASSL) | Documents Microsoft
+title: Élément CellPermissions (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,18 +22,18 @@ helpviewer_keywords:
 - CellPermissions element
 ms.assetid: 4a604f2f-f4c3-42bd-a42b-951263942cc6
 caps.latest.revision: 37
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: fe89d1e2de728773d9eaae32023e801676a02bb0
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: dafcaf786d58fd8c1441c0f1df50aa5a7d47be31
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36141647"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37176456"
 ---
 # <a name="cellpermissions-element-assl"></a>Élément CellPermissions (ASSL)
-  Contient la collection d’autorisations pour les cellules dans le type [Cube](../objects/cube-element-assl.md) élément.  
+  Contient la collection d’autorisations pour les cellules dans associé [Cube](../objects/cube-element-assl.md) élément.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -64,7 +64,7 @@ ms.locfileid: "36141647"
 |Éléments enfants|[CellPermission](../objects/cellpermission-element-assl.md)|  
   
 ## <a name="remarks"></a>Notes  
- La collection peut contenir au maximum un `CellPermission` de l’objet pour chaque valeur autorisée de la [accès](../properties/access-element-assl.md) élément.  
+ La collection peut contenir au maximum un `CellPermission` pour chaque valeur autorisée de l’objet le [accès](../properties/access-element-assl.md) élément.  
   
  L’élément correspondant dans le modèle d’objet objets AMO (Analysis Management) est <xref:Microsoft.AnalysisServices.CellPermissionCollection>.  
   

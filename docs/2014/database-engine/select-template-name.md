@@ -1,5 +1,5 @@
 ---
-title: Sélectionnez le nom du modèle | Documents Microsoft
+title: Sélectionnez le nom de modèle | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.pro.f1
 helpviewer_keywords:
 - Select Template Name dialog box
 ms.assetid: 30ac38b8-0c14-474c-b245-d2b8393d2f36
 caps.latest.revision: 7
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 08a22aa4b3877cc338197e2d21e8d20d0eda0120
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: b703b2a02146ab66ee3e0dee98dc920a70ef4a45
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36053358"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37241179"
 ---
 # <a name="select-template-name"></a>Sélectionnez le nom du modèle
   Utilisez la boîte de dialogue **Sélectionner le nom du modèle** pour sélectionner un modèle de trace [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] existant à exporter vers un fichier du système d'exploitation. Vous pouvez également utiliser cette boîte de dialogue pour sélectionner ou entrer un autre nom afin d'enregistrer un modèle de trace lorsqu'un modèle de trace existant est modifié. Pour accéder à cette boîte de dialogue lorsque vous exportez un modèle, dans le menu [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] **de** , pointez sur **Modèles**, puis cliquez sur **Exporter le modèle**. Pour accéder à cette boîte de dialogue lorsque vous changez le nom d'un modèle, dans le menu **Fichier** , pointez sur **Modèles**, sur **Modifier le modèle**, puis cliquez sur **Enregistrer sous**.  

@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - data-quality-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dqs.dm.rules.f1
 - sql12.dqs.dm.testdomainrule.f1
@@ -16,13 +16,13 @@ ms.assetid: 339fa10d-e22c-4468-b366-080c33f1a23f
 caps.latest.revision: 27
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: d579c7cd6b4376babf95d4514d46faa64e0fd0f4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: ccfd26db2b854de55f7ec7b905a16755dd152b53
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36140376"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37211549"
 ---
 # <a name="create-a-domain-rule"></a>Créer une règle de domaine
   Cette rubrique décrit comment créer une règle de domaine dans [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS). Une règle de domaine est une condition utilisée pour valider, corriger et normaliser les valeurs de domaine. Une règle de domaine doit avoir la valeur true sur un domaine pour que les valeurs de domaine soient considérées comme exactes et conformes aux besoins de l'entreprise. Les règles de domaine peuvent comprendre les règles de validation qui sont utilisées pour valider les valeurs de domaine, mais ne sont pas utilisées pour corriger les données dans les projets de qualité des données. Les règles incluent également les règles de normalisation qui sont appliquées sur les données valides et sont utilisées dans la correction des données.  
@@ -99,7 +99,7 @@ ms.locfileid: "36140376"
   
 2.  Cliquez sur **Ignorer toutes les modifications** pour supprimer toutes les modifications que vous avez apportées aux règles de domaine, rétablissant ainsi les règles précédemment appliquées ; les modifications apportées après la dernière application des règles ne s'appliqueront plus. La validité de chaque valeur du domaine sera mise à jour pour être conforme aux règles précédemment appliquées, pas aux modifications ignorées.  
   
-3.  Cliquez sur **Terminer** pour terminer l’activité de gestion de domaine, comme décrit dans [terminer l’activité de gestion de domaine](../../2014/data-quality-services/end-the-domain-management-activity.md).  
+3.  Cliquez sur **Terminer** pour terminer l’activité de gestion de domaine, comme décrit dans [End the Domain Management Activity](../../2014/data-quality-services/end-the-domain-management-activity.md).  
   
 ##  <a name="FollowUp"></a> Suivi : Après la création d'une règle de domaine  
  Après avoir créé une règle de domaine, vous pouvez effectuer d'autres tâches de gestion des domaines sur le domaine, effectuer une découverte des connaissances pour ajouter des connaissances au domaine ou ajouter une stratégie de correspondance au domaine. Pour plus d’informations, consultez [Effectuer une découverte des connaissances](../../2014/data-quality-services/perform-knowledge-discovery.md), [Gestion d’un domaine](../../2014/data-quality-services/managing-a-domain.md) ou [Créer une stratégie de correspondance](../../2014/data-quality-services/create-a-matching-policy.md).  

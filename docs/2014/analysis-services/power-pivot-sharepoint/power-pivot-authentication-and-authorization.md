@@ -1,5 +1,5 @@
 ---
-title: PowerPivot Authentication and Authorization | Documents Microsoft
+title: PowerPivot Authentication and Authorization | Microsoft Docs
 ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 48230cc0-4037-4f99-8360-dadf4bc169bd
 caps.latest.revision: 29
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: e24a764afb7aae49194847354800e580da88a9a1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: cea8b8e9d6f883d6933ed72591da20de73d55326
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36140621"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37210219"
 ---
 # <a name="powerpivot-authentication-and-authorization"></a>Authentification et autorisation PowerPivot
   Un déploiement PowerPivot pour SharePoint qui s'exécute dans une batterie de serveurs SharePoint 2010 utilise le sous-système d'authentification et le modèle d'autorisation fournis par les serveurs SharePoint. L'infrastructure de sécurité SharePoint s'étend au contenu et aux opérations PowerPivot, car l'ensemble du contenu relatif à PowerPivot est stocké dans des bases de données de contenu SharePoint et l'ensemble des opérations relatives à PowerPivot est effectué par des services partagés PowerPivot de la batterie de serveurs. Les utilisateurs qui demandent un classeur contenant des données PowerPivot sont authentifiés à l'aide d'une identité d'utilisateur SharePoint basée sur leur identité d'utilisateur Windows. Les autorisations d'affichage sur le classeur déterminent si la demande est accordée ou refusée.  
@@ -118,6 +118,6 @@ ms.locfileid: "36140621"
  [Configurer les comptes de Service PowerPivot](configure-power-pivot-service-accounts.md)   
  [Configurer PowerPivot compte d’actualisation des données sans assistance &#40;PowerPivot pour SharePoint&#41;](../configure-unattended-data-refresh-account-powerpivot-sharepoint.md)   
  [Créer un emplacement approuvé pour les sites PowerPivot dans l’Administration centrale](create-a-trusted-location-for-power-pivot-sites-in-central-administration.md)   
- [Architecture de sécurité de PowerPivot](http://go.microsoft.com/fwlink/?linkID=220970)  
+ [Architecture de sécurité PowerPivot](http://go.microsoft.com/fwlink/?linkID=220970)  
   
   

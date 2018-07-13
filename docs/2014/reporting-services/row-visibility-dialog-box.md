@@ -1,5 +1,5 @@
 ---
-title: Boîte de dialogue visibilité de ligne | Documents Microsoft
+title: Boîte de dialogue visibilité de ligne | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.rtp.rptdesigner.rowvisibility.f1
 - "10126"
 ms.assetid: 557ecf70-62b1-47f5-9322-0ebdc809d018
 caps.latest.revision: 12
-author: douglaslM
+author: maggiesmsft
 ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 8bcc02cc0e210bf2cbd7ee974ba5d2057658dfe7
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: aac18834e0fffce98ed0f0de508c019a737f6b0a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36141240"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37200759"
 ---
 # <a name="row-visibility-dialog-box"></a>Boîte de dialogue Visibilité de ligne
   Utilisez la boîte de dialogue **Visibilité de ligne** pour afficher ou masquer la ligne sélectionnée lorsque le rapport est exécuté pour la première fois ou pour utiliser un autre élément de rapport pour activer/désactiver la visibilité de la ligne.  
@@ -40,7 +40,7 @@ ms.locfileid: "36141240"
  **Afficher ou masquer en fonction d’une expression**  
  Sélectionnez cette option pour faire varier la visibilité initiale à l'aide d'une expression.  
   
- Tapez une expression qui correspond à un `Boolean` valeur `True` pour masquer l’élément et `False` pour afficher l’élément. Cliquez sur le bouton Expression (**fx**) pour modifier l’expression.  
+ Tapez une expression qui prend la valeur d’un `Boolean` valeur `True` pour masquer l’élément et `False` pour afficher l’élément. Cliquez sur le bouton Expression (**fx**) pour modifier l’expression.  
   
  **Affichage peut être activé ou désactivé par cet élément de rapport**  
  Choisissez cette option pour afficher une image bascule qui permet à l'utilisateur d'afficher ou de masquer cet élément de rapport dans une visionneuse de rapports HTML.  
@@ -50,7 +50,7 @@ ms.locfileid: "36141240"
 ## <a name="see-also"></a>Voir aussi  
  [Exemples d’expressions &#40;Générateur de rapports et SSRS&#41;](report-design/expression-examples-report-builder-and-ssrs.md)   
  [Ajouter une action Développer ou Réduire à un élément &#40;Générateur de rapports et SSRS&#41;](report-design/add-an-expand-or-collapse-action-to-an-item-report-builder-and-ssrs.md)   
- [Images &#40;rapport Générateur et SSRS&#41;](report-design/images-report-builder-and-ssrs.md)   
+ [Images &#40;Générateur de rapports et SSRS&#41;](report-design/images-report-builder-and-ssrs.md)   
  [Aide sur le concepteur de rapports via la touche F1](tools/report-designer-f1-help.md)  
   
   

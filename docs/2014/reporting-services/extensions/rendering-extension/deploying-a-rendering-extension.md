@@ -15,15 +15,15 @@ helpviewer_keywords:
 - rendering extensions [Reporting Services], deploying
 ms.assetid: 9fb8c887-5cb2-476e-895a-7b0e2dd11398
 caps.latest.revision: 43
-author: douglaslM
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 1cd6fb05217c0bde25dcc00e5f520dfd126385ce
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: 4847340ab6bb40a4a5c6e247a4b9f2e33034ca8e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36141255"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37181676"
 ---
 # <a name="deploying-a-rendering-extension"></a>Déploiement d'une extension de rendu
   Après avoir écrit et compilé votre extension de génération de rapport [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] dans une bibliothèque [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)], vous devez la rendre détectable par le serveur de rapports et par le Concepteur de rapports. Pour cela, copiez l'extension dans le répertoire approprié et ajoutez des entrées aux fichiers de configuration [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] appropriés.  
@@ -31,7 +31,7 @@ ms.locfileid: "36141255"
 ## <a name="configuration-file-rendering-extension-element"></a>Élément Extension de rendu de fichier de configuration  
  Une fois qu'une extension de rendu est compilée dans une .DLL, vous devez ajouter une entrée dans le fichier rsreportserver.config. Par défaut, celui-ci se trouve dans le dossier %ProgramFiles%\Microsoft SQL Server\MSRS10_50.\<nom_instance>\Reporting Services\ReportServer. L’élément parent est \<Render>. Sous l'élément Render se trouve un élément Extension pour chaque extension de rendu. Le `Extension` élément contient deux attributs, Name et Type.  
   
- Le tableau suivant décrit les attributs pour le `Extension` , élément pour les extensions de rendu :  
+ Le tableau suivant décrit les attributs de la `Extension` , élément pour les extensions de rendu :  
   
 |Attribute|Description|  
 |---------------|-----------------|  
@@ -69,7 +69,7 @@ ms.locfileid: "36141255"
     <Extension Name="My Rendering Extension Name" Type="CompanyName.ExtensionName.MyRenderingProvider, AssemblyName" />  
     ```  
   
-     La valeur définie pour **Name** correspond au nom unique de l'extension de rendu. La valeur définie pour **Type** est une liste séparée par des virgules comportant une entrée pour l’espace de noms complet de votre implémentation <xref:Microsoft.ReportingServices.OnDemandReportRendering.IRenderingExtension>, suivi du nom de votre assembly (l’extension de fichier .dll ne doit pas figurer dans cette entrée). Par défaut, les extensions de rendu sont visibles. Pour masquer une extension des interfaces utilisateur, telles que le Gestionnaire de rapports, ajoutez un **Visible** d’attribut pour le `Extension` élément et affectez-lui la valeur `false`.  
+     La valeur définie pour **Name** correspond au nom unique de l'extension de rendu. La valeur définie pour **Type** est une liste séparée par des virgules comportant une entrée pour l’espace de noms complet de votre implémentation <xref:Microsoft.ReportingServices.OnDemandReportRendering.IRenderingExtension>, suivi du nom de votre assembly (l’extension de fichier .dll ne doit pas figurer dans cette entrée). Par défaut, les extensions de rendu sont visibles. Pour masquer une extension des interfaces utilisateur, telles que le Gestionnaire de rapports, ajoutez un **Visible** attribut le `Extension` élément et affectez-lui la valeur `false`.  
   
 ## <a name="verifying-the-deployment"></a>Vérification du déploiement  
  Vous pouvez également ouvrir le Gestionnaire de rapports et vérifier que votre extension est répertoriée dans la liste des types d'exportation pour un rapport.  

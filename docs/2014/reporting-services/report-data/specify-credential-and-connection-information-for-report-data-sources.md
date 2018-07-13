@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - no credentials option [Reporting Services]
 - impersonation [Reporting Services]
@@ -29,15 +29,15 @@ helpviewer_keywords:
 - Windows integrated security [Reporting Services]
 ms.assetid: fee1a663-a313-424a-aed2-5082bfd114b3
 caps.latest.revision: 59
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 3e3dc577cf7b0db69fbcc8140996ce33a4802040
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: cb7ef033bc481772f0acbb524988fc8e85a2e91d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36141250"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37210739"
 ---
 # <a name="specify-credential-and-connection-information-for-report-data-sources"></a>Spécifier des informations d'identification et de connexion pour les sources de données de rapport
   Un serveur de rapports utilise des informations d'identification pour se connecter à des sources de données externes qui fournissent du contenu aux rapports ou des informations de destinataire aux abonnements pilotés par les données. Vous pouvez spécifier des informations d'identification qui utilisent l'authentification Windows, l'authentification de base de données, aucune authentification ou une authentification personnalisée. Lors de l'envoi d'une demande de connexion sur le réseau, le serveur de rapports emprunte l'identité d'un compte d'utilisateur ou du compte d'exécution sans assistance. Pour plus d’informations sur le contexte de sécurité sous lequel une demande de connexion est émise, consultez [Configuration d’une source de données et connexions réseau](#DataSourceConfigurationConnections) plus loin dans cette rubrique.  
@@ -114,7 +114,7 @@ ms.locfileid: "36141250"
     2.  Si le compte figure dans la liste, sélectionnez-le et cliquez sur **Supprimer**.  
   
 #### <a name="using-impersonation-with-stored-credentials"></a>Utilisation d'emprunt d'identité avec stockage des informations d'identification  
- Vous pouvez également utiliser des informations d'identification pour emprunter l'identité d'un autre utilisateur. Pour les bases de données SQL Server, à l’aide de l’emprunt d’identité les groupes d’options la [SETUSER](/sql/t-sql/statements/setuser-transact-sql) (fonction).  
+ Vous pouvez également utiliser des informations d'identification pour emprunter l'identité d'un autre utilisateur. Pour les bases de données SQL Server, à l’aide de l’emprunt d’identité options définit le [SETUSER](/sql/t-sql/statements/setuser-transact-sql) (fonction).  
   
 > [!IMPORTANT]  
 >  N'utilisez pas l'emprunt d'identité pour les rapports qui prennent en charge les abonnements ou qui utilisent des planifications pour générer des historiques de rapports ou actualiser un instantané d'exécution de rapport.  
@@ -144,8 +144,8 @@ ms.locfileid: "36141250"
  Vous pouvez définir des informations d'identification dans votre code pour contrôler l'accès aux rapports et au serveur de rapports. Pour plus d’informations, consultez [des Sources de données et les méthodes de connexion](../report-server-web-service/methods/data-sources-and-connection-methods.md).  
   
 ## <a name="see-also"></a>Voir aussi  
- [Sources de données pris en charge par Reporting Services &#40;SSRS&#41;](../create-deploy-and-manage-mobile-and-paginated-reports.md)   
- [Connexions de données, les Sources de données et les chaînes de connexion dans Reporting Services](../data-connections-data-sources-and-connection-strings-in-reporting-services.md)   
+ [Sources de données prises en charge par Reporting Services &#40;SSRS&#41;](../create-deploy-and-manage-mobile-and-paginated-reports.md)   
+ [Connexions de données, Sources de données et chaînes de connexion dans Reporting Services](../data-connections-data-sources-and-connection-strings-in-reporting-services.md)   
  [Gérer les Sources de données de rapport](../../integration-services/connection-manager/data-sources.md)   
  [Le Gestionnaire de rapports &#40;SSRS en Mode natif&#41;](../report-manager-ssrs-native-mode.md)   
  [Créer, supprimer ou modifier une Source de données partagée &#40;le Gestionnaire de rapports&#41;](../create-delete-or-modify-a-shared-data-source-report-manager.md)   

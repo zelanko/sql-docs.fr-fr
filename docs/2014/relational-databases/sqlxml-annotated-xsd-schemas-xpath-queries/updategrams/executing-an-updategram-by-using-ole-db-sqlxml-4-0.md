@@ -1,5 +1,5 @@
 ---
-title: L’exécution d’une mise à jour à l’aide de OLE DB (SQLXML 4.0) | Documents Microsoft
+title: Exécution d’une mise à jour à l’aide de OLE DB (SQLXML 4.0) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -17,21 +17,21 @@ helpviewer_keywords:
 - executing updategrams [SQLXML]
 ms.assetid: 4154c590-1541-49d0-8117-4ddf2ce5ccba
 caps.latest.revision: 23
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 058504e130291b8cc5e5adc812d51ac541d3f2d4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 7affd08d1b670fa653facb47f5aae5d0bd1d1aed
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36142993"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37177728"
 ---
 # <a name="executing-an-updategram-by-using-ole-db-sqlxml-40"></a>Exécution d'un code de mise à jour (updategram) à l'aide d'OLE DB (SQLXML 4.0)
   Cette rubrique fournit un exemple fonctionnel d’usingOLE DB pour exécuter une mise à jour.  
   
 ## <a name="using-icommandstream-to-set-an-xml-command"></a>Utilisation d'ICommandStream pour définir une commande XML  
- L’interface OLE DB (version 2.6 ou version ultérieure) ICommandStream transmet une commande comme un objet de flux, plutôt que sous forme de chaîne.  
+ L’interface OLE DB (version 2.6 ou version ultérieure) ICommandStream passe une commande comme un objet de flux, plutôt que sous forme de chaîne.  
   
  Cette interface permet à une commande d'être encodée dans n'importe quel format pris en charge par l'analyseur XML. Lorsque ICommand::Execute est appelée, le texte de commande est lu directement du flux et aucune conversion n’est requise. Par conséquent, l’exécution de commandes XML à l’aide d’ICommandStream interface est plus efficace.  
   
@@ -75,7 +75,7 @@ ms.locfileid: "36142993"
   
 4.  Utilisez ICommandStream::SetCommandStream pour spécifier le flux de commandes. Dans cet exemple, le modèle XML qui est exécuté est lu à partir d'un fichier. Cela s'avère utile lorsque vous souhaitez exécuter de grands modèles XML.  
   
-5.  Exécutez la commande XML avec ICommand::Execute, en demandant l’ID d’interface IID_ISequentialStream.  
+5.  Exécutez la commande XML à l’aide de ICommand::Execute, demandant l’ID d’interface IID_ISequentialStream.  
   
 6.  Traitez le résultat. Dans cet exemple, le code XML lu à partir du flux est affiché à l'écran.  
   

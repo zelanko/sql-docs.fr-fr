@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: b3884576-1f7e-4d40-bb7d-168312333bb3
 caps.latest.revision: 13
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: ef032c021bb8bdf2a64f63aad8d3eb79da044afb
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: f8890c0ccab740444845180a328f9753c7a50976
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36142441"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37194902"
 ---
 # <a name="dataset-fields-collection-report-builder-and-ssrs"></a>Collection de champs de dataset (Générateur de rapports et SSRS)
   Les champs de dataset représentent les données d'une connexion de données. Un champ peut représenter des données numériques ou non numériques. À titre d'exemples, citons des chiffres d'affaires, des totaux de ventes, des noms de client, des identificateurs de base de données, des URL, des images, des données spatiales et des adresses de messagerie. Sur l'aire de conception, les champs s'affichent sous la forme d'expressions dans les éléments de rapport tels que les zones de texte, les tables et les graphiques.  
@@ -90,7 +90,7 @@ ms.locfileid: "36142441"
   
 -   **Fournisseur de données ou extension pour le traitement des données** Il s'agit des types de données pris en charge par la version du fournisseur de données ou de l'extension pour le traitement des données que vous sélectionnez lorsque vous vous connectez à la source de données. Les fournisseurs de données se basant sur le [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] utilisent des types de données pris en charge par le CLR. Pour plus d’informations sur les types de données des fournisseurs de données [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] , consultez [Mappages de types de données (ADO.NET)](http://go.microsoft.com/fwlink/?LinkId=112178) et [Utilisation des types de base](http://go.microsoft.com/fwlink/?LinkId=112177) sur MSDN.  
   
-     Par exemple, les types de données classiques pris en charge par le [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] incluent `Int32` et `String`. Les dates et heures de calendrier sont prises en charge par la structure `DateTime`. Le [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 2.0 Service Pack 1 a introduit de prise en charge pour le `DateTimeOffset` structure pour les dates avec un décalage de fuseau horaire.  
+     Par exemple, types de données classiques pris en charge par le [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] incluent `Int32` et `String`. Les dates et heures de calendrier sont prises en charge par la structure `DateTime`. Le [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 2.0 Service Pack 1 introduit de prise en charge pour le `DateTimeOffset` structure pour les dates avec un décalage de fuseau horaire.  
   
     > [!NOTE]  
     >  Le serveur de rapports utilise les fournisseurs de données qui sont installés et configurés sur le serveur de rapports. Les clients de création de rapports en mode Aperçu utilisent les extensions pour le traitement des données installées et configurées sur l'ordinateur client. Vous devez tester votre rapport à la fois dans l'environnement de client de rapports et de serveur de rapports.  
@@ -118,7 +118,7 @@ ms.locfileid: "36142441"
 
   
 ## <a name="see-also"></a>Voir aussi  
- [Boîte de dialogue Propriétés du DataSet, champs &#40;Générateur de rapports&#41;](../dataset-properties-dialog-box-fields-report-builder.md)   
+ [Boîte de dialogue Propriétés de DataSet, champs &#40;Générateur de rapports&#41;](../dataset-properties-dialog-box-fields-report-builder.md)   
  [Parties de rapports et jeux de données dans le Générateur de rapports](report-parts-and-datasets-in-report-builder.md)   
  [Datasets incorporés dans le rapport et datasets partagés &#40;Générateur de rapports et SSRS&#41;](report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)  
   

@@ -1,5 +1,5 @@
 ---
-title: Effacer les Caches Analysis Services | Documents Microsoft
+title: Effacer les Caches Analysis Services | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 6bf66fdd-6a03-4cea-b7e2-eb676ff276ff
 caps.latest.revision: 11
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 02a7a6620927472b0019cb4d23a3695f02dd7138
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 6393e9d52bbe026adcda7db0c451e64a364ecbc1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36053412"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37211849"
 ---
 # <a name="clear-the-analysis-services-caches"></a>Effacer les caches Analysis Services
   Analysis Services met en cache des données pour optimiser les performances des requêtes. Cette rubrique fournit des recommandations pour l'utilisation de la commande XMLA ClearCache en vue d'effacer des caches qui ont été créés en réponse à une requête MDX. Les effets de l'exécution de la commande ClearCache varient selon que vous utilisez un modèle tabulaire ou multidimensionnel.  
@@ -36,7 +36,7 @@ ms.locfileid: "36053412"
   
  L'exécution de la commande ClearCache efface également les caches en mémoire dans le moteur d'analyse en mémoire xVelocity (VertiPaq). Le moteur xVelocity gère un petit ensemble de résultats mis en cache. L'exécution de la commande ClearCache invalidera ces caches dans le moteur xVelocity.  
   
- Enfin, en cours d’exécution ClearCache supprimera également les données résiduelles restant en mémoire lorsqu’un modèle tabulaire est reconfiguré pour `DirectQuery` mode. Cela est particulièrement important si le modèle contient des données sensibles qui sont soumises à des contrôles étroits. Dans ce cas, l'exécution de la commande ClearCache est une mesure de précaution que vous pouvez prendre pour garantir que des données sensibles existent uniquement à l'emplacement prévu. L'effacement manuel du cache est nécessaire si vous utilisez [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] pour déployer le modèle et pour modifier le mode de requête. À l'inverse, l'utilisation de [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] pour spécifier `DirectQuery` sur le modèle et les partitions permet d'effacer automatiquement le cache lorsque vous basculez le modèle pour utiliser ce mode de requête.  
+ Enfin, en cours d’exécution ClearCache supprimera également les données résiduelles reste en mémoire lorsqu’un modèle tabulaire est reconfiguré pour `DirectQuery` mode. Cela est particulièrement important si le modèle contient des données sensibles qui sont soumises à des contrôles étroits. Dans ce cas, l'exécution de la commande ClearCache est une mesure de précaution que vous pouvez prendre pour garantir que des données sensibles existent uniquement à l'emplacement prévu. L'effacement manuel du cache est nécessaire si vous utilisez [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] pour déployer le modèle et pour modifier le mode de requête. À l'inverse, l'utilisation de [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] pour spécifier `DirectQuery` sur le modèle et les partitions permet d'effacer automatiquement le cache lorsque vous basculez le modèle pour utiliser ce mode de requête.  
   
  Comparées aux recommandations pour effacer les caches de modèles multidimensionnels lors du test des performances, il n'y a aucune recommandation étendue pour effacer les caches de modèles tabulaires. Si vous ne gérer pas le déploiement d'un modèle tabulaire qui contient des données sensibles, il n'y a aucune tâche administrative spécifique qui demande d'effacer le cache.  
   

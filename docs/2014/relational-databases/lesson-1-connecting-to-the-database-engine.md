@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: e8db82f0-50ed-4531-9209-940006ed34cb
 caps.latest.revision: 22
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 02942c1f5e223cdf996cb691a4e7d42cc95c1b81
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: rothja
+ms.author: jroth
+manager: craigg
+ms.openlocfilehash: 0dd6a74e002a6eb8dcb266d2ede766becc89813b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36140773"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37184245"
 ---
 # <a name="lesson-1-connecting-to-the-database-engine"></a>Leçon 1 : Connexion au moteur de base de données
   Les outils installés lors de l'installation du [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]dépendent de l'édition du produit et de la configuration choisies. Cette leçon passe en revue les outils principaux et décrit comment faire pour se connecter et exécuter une fonction de base (autorisation de plusieurs utilisateurs).  
@@ -31,7 +31,7 @@ ms.locfileid: "36140773"
   
 ### <a name="basic-tools"></a>Outils de base  
   
--   [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] est l’outil principal pour administrer le [!INCLUDE[ssDE](../includes/ssde-md.md)] et en écriture [!INCLUDE[tsql](../includes/tsql-md.md)] code. Il est hébergé dans le shell [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] . Il n’est pas inclus dans [!INCLUDE[ssExpress](../includes/ssexpress-md.md)] mais reste disponible en téléchargement séparé à partir de [Microsoft Download Center](http://go.microsoft.com/fwlink/?LinkId=144346).  
+-   [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] est l’outil principal pour administrer le [!INCLUDE[ssDE](../includes/ssde-md.md)] et l’écriture [!INCLUDE[tsql](../includes/tsql-md.md)] code. Il est hébergé dans le shell [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] . Il n’est pas inclus dans [!INCLUDE[ssExpress](../includes/ssexpress-md.md)] mais n’est disponible en téléchargement séparé à partir de [Microsoft Download Center](http://go.microsoft.com/fwlink/?LinkId=144346).  
   
 -   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] est installé avec [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] et les outils clients. Il vous permet d'activer les protocoles serveur, configurer des options de protocole (notamment les ports TCP), configurer le démarrage automatique de services serveur et configurer des ordinateurs clients pour définir leur mode de connexion selon vos préférences. Cet outil configure les éléments de connectivité les plus avancés mais n'active pas les fonctionnalités.  
   
@@ -47,14 +47,14 @@ ms.locfileid: "36140773"
 -   Dans le menu **Démarrer** , pointez sur **Tous les programmes**, sur [!INCLUDE[ssCurrentUI](../includes/sscurrentui-md.md)]et sur **Outils de configuration**, puis cliquez sur **Gestionnaire de configuration SQL Server**.  
   
 ##  <a name="connect"></a> Connexion à Management Studio  
- Il est facile de se connecter à la [!INCLUDE[ssDE](../includes/ssde-md.md)] à partir des outils qui sont exécutent sur le même ordinateur, si vous connaissez le nom de l’instance, et si vous vous connectez en tant que membre du groupe Administrateurs sur l’ordinateur. Vous devez effectuer les procédures suivantes sur le même ordinateur qui héberge [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
+ Il est facile de se connecter à la [!INCLUDE[ssDE](../includes/ssde-md.md)] à partir des outils qui sont exécutent sur le même ordinateur si vous connaissez le nom de l’instance, et si vous vous connectez en tant que membre du groupe Administrateurs sur l’ordinateur. Vous devez effectuer les procédures suivantes sur le même ordinateur qui héberge [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
 ##### <a name="to-determine-the-name-of-the-instance-of-the-database-engine"></a>Pour définir le nom de l'instance du moteur de base de données  
   
 1.  Ouvrez une session Windows en tant que membre du groupe Administrateurs, puis ouvrez [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)].  
   
     > [!IMPORTANT]  
-    >  Si vous vous connectez à [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)] sur [!INCLUDE[wiprlhlong](../includes/wiprlhlong-md.md)] ou [!INCLUDE[nextref_longhorn](../includes/nextref-longhorn-md.md)] (ou plus récente), vous devrez peut-être avec le bouton droit [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] puis cliquez sur **exécuter en tant qu’administrateur** pour pouvoir vous connecter à l’aide de votre administrateur. informations d’identification. À partir de [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)], le programme d'installation ajoute les connexions sélectionnées à [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], aussi vos informations d'identification d'administrateur ne sont-elles pas nécessaires.  
+    >  Si vous vous connectez à [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)] sur [!INCLUDE[wiprlhlong](../includes/wiprlhlong-md.md)] ou [!INCLUDE[nextref_longhorn](../includes/nextref-longhorn-md.md)] (ou plus récente), vous devrez peut-être avec le bouton droit [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] puis cliquez sur **exécuter en tant qu’administrateur** afin de vous connecter à l’aide de votre administrateur informations d’identification. À partir de [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)], le programme d'installation ajoute les connexions sélectionnées à [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], aussi vos informations d'identification d'administrateur ne sont-elles pas nécessaires.  
   
 2.  Dans la boîte de dialogue **Se connecter au serveur** , cliquez sur **Annuler**.  
   
@@ -89,7 +89,7 @@ ms.locfileid: "36140773"
   
      La boîte de dialogue **Nouvelle connexion** apparaît.  
   
-2.  Sur le **général** page, dans le **nom de connexion** , tapez une connexion Windows au format  *\<domaine >\\< connexion\>*.  
+2.  Sur le **général** page, dans le **nom de connexion** , tapez un compte de connexion Windows au format  *\<domaine >\\< connexion\>*.  
   
 3.  Dans la zone **Base de données par défaut** , sélectionnez [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] (si disponible). Sinon, sélectionnez **master**.  
   

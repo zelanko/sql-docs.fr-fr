@@ -1,5 +1,5 @@
 ---
-title: Boîte de dialogue Propriétés de modèle d’exploration de données (Analysis Services - Exploration de données) | Documents Microsoft
+title: Boîte de dialogue Propriétés de modèle d’exploration de données (Analysis Services - Exploration de données) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.sqlserverstudio.miningmodelproperties.f1
 helpviewer_keywords:
 - Mining Model Properties dialog box
 ms.assetid: 8a4f0fa1-afb2-46fd-a713-52ba1887e537
 caps.latest.revision: 20
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 12fd331c19a9a831a1d09b6aefc9931a1cc833a0
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 142f9d3dde90037ce8de0c442a7032efdb9631f2
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36139689"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37198285"
 ---
 # <a name="mining-model-properties-dialog-box-analysis-services---data-mining"></a>Boîte de dialogue Propriétés du modèle d'exploration de données (Analysis Services – Exploration de données)
   Utilisez la boîte de dialogue **Propriétés du modèle d'exploration de données** dans [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] pour définir les propriétés du modèle d'exploration de données dans une base de données [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] . Vous pouvez afficher la boîte de dialogue **Propriétés du modèle d’exploration de données** en cliquant avec le bouton droit de la souris sur un modèle d’exploration de données dans **l’Explorateur d’objets** et en sélectionnant **Propriétés**.  

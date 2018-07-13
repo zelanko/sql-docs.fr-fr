@@ -8,23 +8,23 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - RSExecRole
 ms.assetid: 7ac17341-df7e-4401-870e-652caa2859c0
 caps.latest.revision: 22
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: b683b9778275f07b791df1881da6d7213e1d1d26
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 560b889359a428625131ff69d8aab5589834a39e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36141461"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37225289"
 ---
 # <a name="create-the-rsexecrole"></a>Créer le rôle RSExecRole
-  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] utilise un rôle de base de données prédéfini appelé `RSExecRole` pour accorder des autorisations de serveur à la base de données du serveur de rapports d’état. Le `RSExecRole` rôle est automatiquement créé avec la base de données du serveur de rapports. En règle générale, ne modifiez ou n'assignez jamais d'autres utilisateurs au rôle. Toutefois, lorsque vous déplacez une base de données du serveur de rapports vers un [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../../includes/ssde-md.md)] nouveau ou différent, vous devez recréer le rôle dans les bases de données système Master ou MSDB.  
+  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] utilise un rôle de base de données prédéfini appelé `RSExecRole` pour accorder des autorisations de serveur à la base de données de serveur de rapports d’état. Le `RSExecRole` rôle est créé automatiquement avec la base de données de serveur de rapports. En règle générale, ne modifiez ou n'assignez jamais d'autres utilisateurs au rôle. Toutefois, lorsque vous déplacez une base de données du serveur de rapports vers un [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../../includes/ssde-md.md)] nouveau ou différent, vous devez recréer le rôle dans les bases de données système Master ou MSDB.  
   
  À l'aide des instructions suivantes, vous exécuterez les étapes ci-dessous :  
   
@@ -37,9 +37,9 @@ ms.locfileid: "36141461"
   
 ## <a name="before-you-start"></a>Avant de commencer  
   
--   Effectuez une sauvegarde des clés de chiffrement afin de pouvoir les restaurer après le déplacement de la base de données. Cette étape n’affecte pas directement votre capacité à créer et de configurer le `RSExecRole`, mais vous devez avoir une sauvegarde des clés afin de vérifier votre travail. Pour plus d’informations, consultez [Back Up and Restore Reporting Services Encryption Keys](../install-windows/ssrs-encryption-keys-back-up-and-restore-encryption-keys.md).  
+-   Effectuez une sauvegarde des clés de chiffrement afin de pouvoir les restaurer après le déplacement de la base de données. Cette étape n’affecte pas directement votre capacité à créer et approvisionner la `RSExecRole`, mais vous devez avoir une sauvegarde des clés afin de vérifier votre travail. Pour plus d’informations, consultez [Back Up and Restore Reporting Services Encryption Keys](../install-windows/ssrs-encryption-keys-back-up-and-restore-encryption-keys.md).  
   
--   Vérifiez que vous êtes connecté en tant que compte d’utilisateur qui a `sysadmin` autorisations sur la [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] instance.  
+-   Vérifiez que vous êtes connecté en tant qu’un compte d’utilisateur qui a `sysadmin` autorisations sur le [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] instance.  
   
 -   Vérifiez que le service [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent est installé et en cours d'exécution sur l'instance du [!INCLUDE[ssDE](../../../includes/ssde-md.md)] que vous envisagez d'utiliser.  
   
@@ -48,11 +48,11 @@ ms.locfileid: "36141461"
  Les instructions permettant de créer manuellement le rôle `RSExecRole` sont destinées à être utilisées dans le contexte de la migration d'une installation du serveur de rapports. Les tâches importantes telles que la sauvegarde et le déplacement de la base de données du serveur de rapports ne sont pas traitées dans cette rubrique, mais sont présentées dans la documentation du moteur de base de données.  
   
 ## <a name="create-rsexecrole-in-master"></a>Création du rôle RSExecRole dans la base de données Master  
- [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] utilise des procédures stockées étendues [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] service de l’Agent pour prendre en charge les opérations planifiées. Les étapes suivantes expliquent comment octroyer au rôle `RSExecRole` des autorisations Execute pour les procédures.  
+ [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] utilise des procédures stockées étendues [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] service Agent pour prendre en charge les opérations planifiées. Les étapes suivantes expliquent comment octroyer au rôle `RSExecRole` des autorisations Execute pour les procédures.  
   
 #### <a name="to-create-rsexecrole-in-the-master-system-database-using-management-studio"></a>Pour créer RSExecRole dans la base de données système Master à l'aide de Management Studio  
   
-1.  Démarrer [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] et se connecter à la [!INCLUDE[ssDE](../../../includes/ssde-md.md)] instance qui héberge la base de données du serveur de rapports.  
+1.  Démarrer [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] et se connecter à la [!INCLUDE[ssDE](../../../includes/ssde-md.md)] instance qui héberge la base de données de serveur de rapports.  
   
 2.  Ouvrez **Bases de données**.  
   
@@ -66,7 +66,7 @@ ms.locfileid: "36141461"
   
 7.  Cliquez avec le bouton droit sur **Rôles de base de données**, puis sélectionnez **Nouveau rôle de base de données**. La page Général s'affiche.  
   
-8.  Dans **nom de rôle**, type `RSExecRole`.  
+8.  Dans **nom_rôle**, type `RSExecRole`.  
   
 9. Dans **Propriétaire**, tapez **DBO**.  
   
@@ -115,7 +115,7 @@ ms.locfileid: "36141461"
   
 5.  Cliquez avec le bouton droit sur **Rôles de base de données**, puis sélectionnez **Nouveau rôle de base de données**. La page Général s'affiche.  
   
-6.  Nom de rôle, tapez `RSExecRole`.  
+6.  Dans nom du rôle, tapez `RSExecRole`.  
   
 7.  Dans Propriétaire, tapez **DBO**.  
   

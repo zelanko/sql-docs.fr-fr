@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Snapshot Agent, security
 - agents [SQL Server replication], security
@@ -21,15 +21,15 @@ helpviewer_keywords:
 - replication [SQL Server], agents and profiles
 ms.assetid: 6d09fc8d-843a-4a7a-9812-f093d99d8192
 caps.latest.revision: 70
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: f8b227f4b5e1ea7cd48bd9be530e492bf1b7127a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: c093e7605e4adb86b3b1f42e12f90db83b962aa0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36140036"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37204989"
 ---
 # <a name="replication-agent-security-model"></a>Modèle de sécurité de l'Agent de réplication
   Le modèle de sécurité de l'Agent de réplication permet un contrôle fin des comptes sous lesquels les agents de réplication s'exécutent et établissent des connexions : un compte distinct peut être spécifié pour chaque agent. Pour plus d’informations sur la manière de spécifier des comptes, consultez [Gérer les connexions et les mots de passe dans la réplication](manage-logins-and-passwords-in-replication.md).  
@@ -59,7 +59,7 @@ ms.locfileid: "36140036"
 |Agent|Autorisations|  
 |-----------|-----------------|  
 |Agent d'instantané|Le compte Windows sous lequel s'exécute l'agent est utilisé pour se connecter au serveur de distribution. Ce compte doit obligatoirement :<br /><br /> - être au moins membre du rôle de base de données fixe **db_owner** dans la base de données de distribution ;<br /><br /> - disposer des autorisations de lecture, écriture et modification sur le partage de fichiers d’instantanés.<br /><br /> <br /><br /> Le compte utilisé pour se connecter au serveur de publication doit être au minimum membre du rôle de base de données fixe **db_owner** dans la base de données de publication.|  
-|l'Agent de lecture du journal ;|Le compte Windows sous lequel s'exécute l'agent est utilisé pour se connecter au serveur de distribution. Ce compte doit être au minimum membre du rôle de base de données fixe **db_owner** dans la base de données de distribution.<br /><br /> Le compte utilisé pour se connecter au serveur de publication doit être au minimum membre du rôle de base de données fixe **db_owner** dans la base de données de publication.<br /><br /> Lorsque vous sélectionnez le `sync_type` options *prise en charge de la réplication uniquement*, *initialisation avec sauvegarde*, ou *initialiser à partir de lsn*, l’agent de lecture du journal doit s’exécuter l’exécution de `sp_addsubscription`, de sorte que les scripts d’installation sont écrites dans la base de données de distribution. L'Agent de lecture du journal doit s'exécuter sous un compte membre du rôle serveur fixe **sysadmin** . Lorsque le `sync_type` option est définie sur *automatique*, aucune action de l’agent lecteur journal spécial est requise.|  
+|l'Agent de lecture du journal ;|Le compte Windows sous lequel s'exécute l'agent est utilisé pour se connecter au serveur de distribution. Ce compte doit être au minimum membre du rôle de base de données fixe **db_owner** dans la base de données de distribution.<br /><br /> Le compte utilisé pour se connecter au serveur de publication doit être au minimum membre du rôle de base de données fixe **db_owner** dans la base de données de publication.<br /><br /> Lorsque vous sélectionnez le `sync_type` options *prise en charge de la réplication uniquement*, *initialiser avec la sauvegarde*, ou *initialiser à partir de lsn*, l’agent de lecture du journal doit s’exécuter l’exécution de `sp_addsubscription`, de sorte que les scripts d’installation sont écrits dans la base de données de distribution. L'Agent de lecture du journal doit s'exécuter sous un compte membre du rôle serveur fixe **sysadmin** . Lorsque le `sync_type` option est définie sur *automatique*, aucune action de l’agent de lecture du journal spéciales n’est nécessaires.|  
 |Agent de distribution pour un abonnement par envoi de données (push)|Le compte Windows sous lequel s'exécute l'agent est utilisé pour se connecter au serveur de distribution. Ce compte doit obligatoirement :<br /><br /> - être au moins membre du rôle de base de données fixe **db_owner** dans la base de données de distribution ;<br /><br /> - être membre de la liste d’accès à la publication (PAL) ;<br /><br /> - avoir les autorisations de lecture sur le partage des fichiers d’instantanés ;<br /><br /> - avoir les autorisations de lecture sur le répertoire d’installation du fournisseur OLE DB pour l’Abonné si l’abonnement est destiné à un Abonné non-SQL Server.<br /><br /> - Lors de la réplication des données LOB, l’agent de distribution doit avoir des autorisations en écriture sur la réplication **C:\Program Files\Microsoft SQL Server\XX\COMfolder** , où XX représente l’ID d’instance.<br /><br /> <br /><br /> Le compte employé pour se connecter à l'Abonné doit au moins être membre du rôle de base de données fixe **db_owner** dans la base de données d'abonnement, ou bien disposer d'autorisations équivalentes si l'abonnement s'adresse à un Abonné non-SQL Server.<br /><br /> Remarque : Lorsque vous utilisez `-subscriptionstreams >= 2` sur l’agent de distribution que vous devez également accorder la `View Server State` autorisation sur les abonnés pour détecter les blocages.|  
 |Agent de distribution pour un abonnement par extraction de données (pull)|Le compte Windows sous lequel s'exécute l'agent est utilisé pour se connecter à l'Abonné. Ce compte doit être au minimum membre du rôle de base de données fixe **db_owner** dans la base de données d'abonnement. Le compte servant à se connecter au serveur de distribution doit obligatoirement :<br /><br /> - être membre de la liste d’accès à la publication (PAL) ;<br /><br /> - avoir les autorisations de lecture sur le partage des fichiers d’instantanés ;<br /><br /> - Lors de la réplication des données LOB, l’agent de distribution doit avoir des autorisations en écriture sur la réplication **C:\Program Files\Microsoft SQL Server\XX\COMfolder** , où XX représente l’ID d’instance.<br /><br /> <br /><br /> Remarque : Lorsque vous utilisez `-subscriptionstreams >= 2` sur l’agent de distribution que vous devez également accorder la `View Server State` autorisation sur les abonnés pour détecter les blocages.|  
 |Agent de fusion pour un abonnement par envoi de données (push)|Le compte Windows sous lequel s'exécute l'agent est utilisé pour se connecter au serveur de publication et au serveur de distribution. Ce compte doit obligatoirement :<br /><br /> - être au moins membre du rôle de base de données fixe **db_owner** dans la base de données de distribution ;<br /><br /> - être membre de la liste d’accès à la publication (PAL) ;<br /><br /> - être un compte de connexion associé à un utilisateur enregistré dans la base de données de publication ;<br /><br /> - avoir les autorisations de lecture sur le partage des fichiers d’instantanés ;<br /><br /> <br /><br /> Le compte utilisé pour se connecter à l'Abonné doit être au minimum membre du rôle de base de données fixe **db_owner** dans la base de données d'abonnement.|  
@@ -81,9 +81,9 @@ ms.locfileid: "36140036"
 |Agent de distribution pour les abonnements par envoi de données aux Abonnés non SQL Server|**\<ServeurPublication>-\<BasededonnéesPublication>-\<Publication>-\<Abonné>-\<entier>**|  
 |Agent de lecture de la file d'attente|**[\<Distributeur>].\<entier>**|  
   
- <sup>1</sup> pour les abonnements aux publications Oracle, le nom du travail est  **\<Publisher >-\<Publisher**> au lieu de  **\<Publisher >-\< Basedonnéespublication >**.  
+ <sup>1</sup> pour les abonnements aux publications Oracle, le nom du travail est  **\<Publisher >-\<Publisher**> au lieu de  **\<Publisher >-\< Base_de_données_publication >**.  
   
- <sup>2</sup> pour les abonnements extraits aux publications Oracle, le nom du travail est  **\<Publisher >-\<DistributionDatabase**> au lieu de  **\<Publisher >-\< Basedonnéespublication >**.  
+ <sup>2</sup> abonnements par extraction aux publications Oracle, le nom du travail est  **\<Publisher >-\<DistributionDatabase**> au lieu de  **\<Publisher >-\< Base_de_données_publication >**.  
   
  Lorsque vous configurez la réplication, vous spécifiez les comptes sous lesquels les agents doivent être exécutés. Cependant, toutes les étapes de travail s'exécutent dans le contexte de sécurité d'un *proxy*; la réplication effectue donc les mappages suivants en interne pour les comptes d'agent spécifiés :  
   

@@ -8,26 +8,26 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Best Practices [Database Engine]
 ms.assetid: 46788407-187e-4b0b-bfe4-529af8d77c60
 caps.latest.revision: 25
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 540b7ec825fa8cacb5fe3852e4ad3e8ea8e096f3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 0bc95e67c4fc29beb61dc518d2f33b203dcae3fc
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36140952"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37240569"
 ---
 # <a name="monitor-and-enforce-best-practices-by-using-policy-based-management"></a>Surveiller et appliquer les bonnes pratiques à l'aide de la Gestion basée sur des stratégies
-  Gestion basée sur la stratégie vous permet de surveiller les meilleures pratiques pour la [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] propose un ensemble de fichiers de stratégie que vous pouvez importer en tant que stratégies de meilleures pratiques, pour ensuite évaluer ces stratégies par rapport à un jeu de cibles qui inclut des instances, des objets d'instance, des bases de données ou des objets de base de données. Vous pouvez évaluer des stratégies manuellement, définir des stratégies pour évaluer un jeu de cibles selon une planification ou définir des stratégies pour évaluer un jeu de cibles en fonction d'un événement. Pour plus d’informations sur la gestion basée sur des stratégies, consultez [Administrer des serveurs à l’aide de la gestion basée sur des stratégies](administer-servers-by-using-policy-based-management.md).  
+  Gestion basée sur des stratégies vous permet de surveiller les bonnes pratiques pour la [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] propose un ensemble de fichiers de stratégie que vous pouvez importer en tant que stratégies de meilleures pratiques, pour ensuite évaluer ces stratégies par rapport à un jeu de cibles qui inclut des instances, des objets d'instance, des bases de données ou des objets de base de données. Vous pouvez évaluer des stratégies manuellement, définir des stratégies pour évaluer un jeu de cibles selon une planification ou définir des stratégies pour évaluer un jeu de cibles en fonction d'un événement. Pour plus d’informations sur la gestion basée sur des stratégies, consultez [Administrer des serveurs à l’aide de la gestion basée sur des stratégies](administer-servers-by-using-policy-based-management.md).  
   
 ## <a name="policy-and-rules-for-database-engine"></a>Stratégies et règles du moteur de base de données  
- Le tableau suivant répertorie les stratégies qui sont inclus avec l’installation de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et inclut des informations sur les règles de meilleures pratiques qui prend la valeur chaque stratégie. Les stratégies sont stockées sous la forme de fichiers XML et doivent être importées dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Pour plus d’informations sur l’importation de stratégies, consultez [Importer une stratégie de gestion basée sur des stratégies](import-a-policy-based-management-policy.md).  
+ Le tableau suivant répertorie les stratégies qui sont inclus avec l’installation de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et inclut des informations sur les règles de meilleures pratiques qui évalue chaque stratégie. Les stratégies sont stockées sous la forme de fichiers XML et doivent être importées dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Pour plus d’informations sur l’importation de stratégies, consultez [Importer une stratégie de gestion basée sur des stratégies](import-a-policy-based-management-policy.md).  
   
 |Nom de stratégie|Règle de meilleure pratique|  
 |-----------------|------------------------|  
@@ -42,7 +42,7 @@ ms.locfileid: "36140952"
 |Autorisations Invité|[Autorisations Invité sur les bases de données utilisateur](guest-permissions-on-user-databases.md)|  
 |Date de la dernière sauvegarde réussie|[Sauvegarde obsolète](outdated-backup.md)|  
 |Autorisations du serveur public non accordées|[Autorisations du serveur public](server-public-permissions.md)|  
-|Chevauchement de masque d’affinité de 32 bits SQL Server|[Masque d’affinité correcte et le chevauchement de masque d’affinité d’entrée/sortie](correct-affinity-mask-and-affinity-input-and-output-mask-overlap.md)|  
+|Chevauchement de masque d’affinité 32 bits SQL Server|[Masque d’affinité correcte et le chevauchement de masque d’affinité d’entrée/sortie](correct-affinity-mask-and-affinity-input-and-output-mask-overlap.md)|  
 |Chevauchement de masque d'affinité SQL Server 64 bits|[Masque d’affinité correcte et le chevauchement de masque d’affinité d’entrée/sortie](correct-affinity-mask-and-affinity-input-and-output-mask-overlap.md)|  
 |Masque d'affinité SQL Server|[Conserver la valeur par défaut du masque d'affinité](keep-the-affinity-mask-default-value.md)|  
 |Seuil de processus bloqué SQL Server|[Augmenter la valeur de l'option blocked process threshold ou la désactiver](increase-or-disable-blocked-process-threshold.md)|  
@@ -64,10 +64,10 @@ ms.locfileid: "36140952"
 |Journal des événements Windows : erreur liée à des ressources disque de cluster endommagées|[Détecter des problèmes de carte hôte SCSI](detect-scsi-host-adapter-issues.md)|  
 |Journal des événements Windows : erreur liée au contrôle de pilote de périphérique|[Erreur de contrôle du pilote de périphérique](device-driver-control-error.md)|  
 |Journal des événements Windows : erreur liée à un périphérique non prêt|[Erreur de périphérique non prêt](device-not-ready-error.md)|  
-|Journal des événements Windows : erreur liée à un échec de requête d'E/S|[Détecter les échecs d’entrée/sortie demande](detect-failed-input-and-output-requests.md)|  
+|Journal des événements Windows : erreur liée à un échec de requête d'E/S|[Détecter la demande d’entrée et sortie ayant échoué](detect-failed-input-and-output-requests.md)|  
 |Journal des événements Windows : avertissement lié à un retard d'E/S|[Rechercher des problèmes de délai d’E/S dans le sous-système d’E/S disque](check-disk-input-and-output-subsystem-for-io-delay-problems.md)|  
 |Journal des événements Windows : erreur liée à une erreur d'E/S durant une défaillance de page matérielle|[Erreur d’E/S lors du contrôle des erreurs de défaut de page matérielle](input-and-output-error-during-hard-page-fault.md)|  
-|Journal des événements Windows : erreur liée à une nouvelle tentative de lecture|[Vérifiez le sous-système d’entrée/sortie de disque pour les problèmes de nouvelle tentative de lecture](check-disk-input-output-subsystem-for-read-retry-problems.md)|  
+|Journal des événements Windows : erreur liée à une nouvelle tentative de lecture|[Rechercher des problèmes de nouvelle tentative de lecture dans le sous-système d’E/S disque](check-disk-input-output-subsystem-for-read-retry-problems.md)|  
 |Journal des événements Windows : erreur liée à un délai d'attente d'E/S au niveau du système de stockage|[Délai d’attente d’entrée-sortie du système de stockage](storage-system-input-output-time-out.md)|  
 |Journal des événements Windows : erreur liée à une défaillance du système|[Défaillances inattendues du système](unexpected-system-failures.md)|  
   

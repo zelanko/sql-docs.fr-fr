@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 topic_type:
 - apiref
 helpviewer_keywords:
 - event classes [SQL Server], QN:Parameter Table
 ms.assetid: 292da1ed-4c7e-4bd2-9b84-b9ee09917724
 caps.latest.revision: 21
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 7e3f5cdbece8396bcc75250146bd43ce79da7f5a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 5681c630cc3c45d0f2de06d3b5baa981bebe8c85
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36142256"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37184656"
 ---
 # <a name="qnparameter-table-event-class"></a>Classe d'événements QN:Parameter Table
   L'événement QN:Parameter Table fournit des informations sur les opérations requises pour créer et supprimer les tables internes chargées de stocker les informations de paramètre et maintenir les nombres de références de ces tables. Il signale également l'activité interne pour réinitialiser le nombre d'utilisations d'une table de paramètres.  
@@ -38,7 +38,7 @@ ms.locfileid: "36142256"
 |DatabaseName|`nvarchar`|Nom de la base de données dans laquelle l'instruction de l'utilisateur est exécutée.|35|Oui|  
 |EventClass|`Int`|Type d’événement = 200.|27|non|  
 |EventSequence|`int`|Numéro de séquence de cet événement.|51|non|  
-|EventSubClass|`nvarchar`|Type de sous-classe d’événements, qui fournit des informations complémentaires concernant chaque classe d’événements. Cette colonne peut contenir les valeurs suivantes :<br /><br /> Table créée : indique une table de paramètres a été créée dans la base de données.<br /><br /> Tentative de suppression de table : indique que la base de données a tenté de supprimer automatiquement une table de paramètres inutilisés pour libérer des ressources.<br /><br /> Échoué de la tentative de drop table : indique que la base de données a tenté de supprimer une table de paramètres inutilisée mais a échoué. Le [!INCLUDE[ssDE](../../includes/ssde-md.md)] replanifie alors automatiquement la suppression de la table de paramètres afin de libérer des ressources.<br /><br /> Table supprimée : indique que la base de données a correctement supprimé une table de paramètres.<br /><br /> Table épinglé : indique que la table de paramètres est marquée en cours d’utilisation par le traitement interne.<br /><br /> Table unpinned : indique que la table de paramètres est libre. Le traitement interne de la table est terminé.<br /><br /> Nombre d’utilisateurs incrémenté : indique que le nombre d’abonnements de notification de requête qui font référence à une table de paramètres a augmenté.<br /><br /> Nombre d’utilisateurs décrémentées : indique que le nombre d’abonnements de notification de requête qui font référence à une table de paramètres a diminué.<br /><br /> Réinitialisation du compteur LRU : indique que le nombre d’utilisations de la table de paramètres a été réinitialisé.<br /><br /> Tâche de nettoyage de démarrage : indique quand le nettoyage de tous les abonnements dans cette table de paramètres a débuté. Ceci se produit au démarrage de la base de données ou lorsqu'une table sous-jacente des abonnements de la table de paramètres est supprimée.<br /><br /> Tâche de nettoyage terminé : indique quand le nettoyage de tous les abonnements dans cette table de paramètres est terminé.|21|Oui|  
+|EventSubClass|`nvarchar`|Type de sous-classe d’événements, qui fournit des informations complémentaires concernant chaque classe d’événements. Cette colonne peut contenir les valeurs suivantes :<br /><br /> Table créée : indique une table de paramètres a été créée dans la base de données.<br /><br /> Tentative de drop table : indique que la base de données a tenté de supprimer automatiquement une table de paramètres inutilisée pour libérer des ressources.<br /><br /> Échoué de la tentative de drop table : indique que la base de données a tenté de supprimer une table de paramètres inutilisée mais a échoué. Le [!INCLUDE[ssDE](../../includes/ssde-md.md)] replanifie alors automatiquement la suppression de la table de paramètres afin de libérer des ressources.<br /><br /> Table déposée : indique que la base de données a correctement supprimé une table de paramètres.<br /><br /> Table épinglé : indique que la table de paramètres est marquée pour l’utilisation actuelle par le traitement interne.<br /><br /> Table unpinned : indique que la table de paramètres est libre. Le traitement interne de la table est terminé.<br /><br /> Nombre d’utilisateurs incrémenté : indique que le nombre d’abonnements de notification de requête qui font référence à une table de paramètres a augmenté.<br /><br /> Nombre d’utilisateurs décrémentées : indique que le nombre d’abonnements de notification de requête qui font référence à une table de paramètres a diminué.<br /><br /> Réinitialisation du compteur LRU : indique que le nombre d’utilisations de la table de paramètres a été réinitialisé.<br /><br /> Tâche de nettoyage de démarrage : indique à quel moment le nettoyage de tous les abonnements dans cette table de paramètres a débuté. Ceci se produit au démarrage de la base de données ou lorsqu'une table sous-jacente des abonnements de la table de paramètres est supprimée.<br /><br /> Tâche de nettoyage terminé : indique quand le nettoyage de tous les abonnements dans cette table de paramètres est terminé.|21|Oui|  
 |GroupID|`int`|ID du groupe de charges de travail où l'événement Trace SQL se déclenche.|66|Oui|  
 |HostName|`nvarchar`|Nom de l'ordinateur sur lequel s'exécute le client. Cette colonne de données est remplie si le nom de l'hôte est fourni par le client. Pour déterminer le nom de l'hôte, utilisez la fonction HOST_NAME.|8|Oui|  
 |IsSystem|`int`|Indique si l'événement s'est produit sur un processus système ou sur un processus utilisateur.<br /><br /> 0 = utilisateur<br /><br /> 1 = système|60|non|  

@@ -1,5 +1,5 @@
 ---
-title: Regroupement automatique des membres d’attribut | Documents Microsoft
+title: Regroupement automatique des membres d’attribut | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 9fb2cda3-a122-4a4c-82e0-3454865eef04
 caps.latest.revision: 14
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: jhubbard
-ms.openlocfilehash: eef5ca79172be96af5ded2c01a8c3f01e633caa7
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 10a6ae9dee61d211c178a42e38087ad104344343
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36143381"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37183426"
 ---
 # <a name="automatically-grouping-attribute-members"></a>Regroupement automatique des membres d'attribut
   Lorsque vous explorez un cube, vous dimensionnez généralement les membres d'une hiérarchie d'attributs en vous basant sur les membres d'une autre hiérarchie d'attributs. Par exemple, vous pouvez souhaiter regrouper les ventes par ville, par produit acheté ou par genre. Toutefois, avec certains types d'attributs, il est utile de demander à [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] de créer automatiquement des regroupements de membres d'attribut basés sur la distribution des membres au sein d'une hiérarchie d'attributs. Par exemple, vous pouvez demander à [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] de créer des groupes de revenus annuels pour les clients. Lorsque vous faites cela, les utilisateurs qui parcourent la hiérarchie d'attributs voient les noms et les valeurs des groupes au lieu de voir les membres eux-mêmes. Cela limite le nombre de niveaux présentés aux utilisateurs, ce qui est plus pratique pour l'analyse.  
@@ -48,7 +48,7 @@ ms.locfileid: "36143381"
   
 4.  Dans le volet **Attributs** , sélectionnez **Yearly Income**.  
   
-5.  Dans la fenêtre Propriétés, modifiez la valeur pour le **DiscretizationMethod** propriété **automatique** et modifiez la valeur pour le **DiscretizationBucketCount** propriété pour `5`.  
+5.  Dans la fenêtre Propriétés, modifiez la valeur pour le **DiscretizationMethod** propriété **automatique** et modifiez la valeur pour le **DiscretizationBucketCount** propriété à `5`.  
   
      L'illustration suivante montre les propriétés modifiées pour l'attribut **Yearly Income**.  
   
@@ -70,7 +70,7 @@ ms.locfileid: "36143381"
   
 6.  Dans le volet **Attributs** , sélectionnez **Vacation Hours**.  
   
-7.  Dans la fenêtre Propriétés, modifiez la valeur pour le **DiscretizationMethod** propriété **Equal_areas** et modifiez la valeur pour le **DiscretizationBucketCount** propriété pour `5`.  
+7.  Dans la fenêtre Propriétés, modifiez la valeur pour le **DiscretizationMethod** propriété **Equal_areas** et modifiez la valeur pour le **DiscretizationBucketCount** propriété à `5`.  
   
 ## <a name="browsing-the-modified-attribute-hierarchies"></a>Exploration des hiérarchies d'attributs modifiées  
   
@@ -130,6 +130,6 @@ ms.locfileid: "36143381"
  [Masquage et désactivation des hiérarchies d'attributs](../analysis-services/lesson-4-4-hiding-and-disabling-attribute-hierarchies.md)  
   
 ## <a name="see-also"></a>Voir aussi  
- [Groupe de membres d’attribut &#40;discrétisation&#41;](multidimensional-models/attribute-properties-group-attribute-members.md)  
+ [Regrouper les membres de l’attribut &#40;discrétisation&#41;](multidimensional-models/attribute-properties-group-attribute-members.md)  
   
   

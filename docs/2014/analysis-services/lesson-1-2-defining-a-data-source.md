@@ -1,5 +1,5 @@
 ---
-title: Définition d’une Source de données | Documents Microsoft
+title: Définition d’une Source de données | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 5a3e83c9-8788-431e-85b0-a68c79377ff3
 caps.latest.revision: 29
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: jhubbard
-ms.openlocfilehash: a564a314e92b683418b2bb3d12291fddeded016c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: f764d7e7640fc7549d97402a83f997b63f9105cd
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36142590"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37179076"
 ---
 # <a name="defining-a-data-source"></a>Définition d'une source de données
   Après avoir créé un projet [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], vous commencez généralement par définir une ou plusieurs sources de données à utiliser dans ce projet. Lorsque vous définissez une source de données, vous définissez les informations de la chaîne de connexion qui seront utilisées pour se connecter à la source de données. Pour plus d’informations, consultez [Créer une source de données &#40;SSAS Multidimensionnel&#41;](multidimensional-models/create-a-data-source-ssas-multidimensional.md).  
@@ -56,7 +56,7 @@ ms.locfileid: "36142590"
 >  Pour modifier les propriétés d’une source de données après qu’elle a été créée, double-cliquez sur cette source de données dans le dossier **Sources de données** pour en afficher les propriétés dans le **Concepteur de source de données**.  
   
 ## <a name="next-task-in-lesson"></a>Tâche suivante de la leçon  
- [Définition d’une vue de Source de données](lesson-1-3-defining-a-data-source-view.md)  
+ [Définition d’une vue de source de données](lesson-1-3-defining-a-data-source-view.md)  
   
 ## <a name="see-also"></a>Voir aussi  
  [Créer une Source de données &#40;SSAS multidimensionnel&#41;](multidimensional-models/create-a-data-source-ssas-multidimensional.md)  

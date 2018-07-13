@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 19ccbdba-e3da-40a4-b652-32c628cf32e5
 caps.latest.revision: 8
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 9e3a0f9aac098f7bc9998cc657e937c04b438359
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: cdc62c2e2fa4b4a6bfd662c1b20de6287fc8ff86
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36043542"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37278835"
 ---
 # <a name="lesson-8-create-a-data-filter"></a>Leçon 8 : créer un filtre de données
   Après avoir ajouté une action d'extraction dans le rapport parent, l'étape suivante consiste à créer un filtre de données pour la table de données que vous avez définie pour le rapport enfant.  
@@ -39,7 +39,7 @@ ms.locfileid: "36043542"
   
 1.  Ouvrez le rapport enfant.  
   
-2.  Sélectionnez un en-tête de colonne dans le tableau matriciel, cliquez sur la cellule grise qui apparaît au-dessus de l’en-tête de colonne, puis cliquez sur **propriétés du tableau matriciel**.  
+2.  Sélectionnez un en-tête de colonne dans le tableau matriciel, cliquez sur la cellule grise qui apparaît au-dessus de l’en-tête de colonne et puis cliquez sur **propriétés du tableau matriciel**.  
   
 3.  Cliquez sur le **filtres** page, puis cliquez sur **ajouter**.  
   
@@ -47,7 +47,7 @@ ms.locfileid: "36043542"
   
 5.  Cliquez sur l’égalité (**=**) opérateur dans le **opérateur** liste déroulante.  
   
-6.  Cliquez sur le bouton expression en regard du **valeur** , cliquez sur **paramètres** dans les **catégorie** zone, puis double-cliquez sur `productid` dans le  **Valeurs** zone. Le champ **Définir l’expression pour : Valeur** doit maintenant contenir une expression semblable à **=Parameters!productid.Value**.  
+6.  Cliquez sur le bouton expression en regard du **valeur** , cliquez sur **paramètres** dans le **catégorie** zone, puis double-cliquez sur `productid` dans le  **Valeurs** zone. Le champ **Définir l’expression pour : Valeur** doit maintenant contenir une expression semblable à **=Parameters!productid.Value**.  
   
 7.  Cliquez sur **OK,** et **OK** à nouveau dans le **propriétés du tableau matriciel** boîte de dialogue.  
   
@@ -59,7 +59,7 @@ ms.locfileid: "36043542"
   
 2.  Créez une fonction qui accepte un paramètre, `productid`, de type entier et retourne un `datatable` de l’objet et effectue les opérations suivantes.  
   
-    1.  Crée une instance du dataset, `DataSet2`, lequel a été créée à l’étape 2 de [leçon 4 : définir une connexion de données et la Table de données pour le rapport enfant](lesson-4-define-a-data-connection-and-data-table-for-child-report.md).  
+    1.  Crée une instance du jeu de données, `DataSet2`, lequel a été créée à l’étape 2 de [leçon 4 : définir une connexion de données et la Table de données pour le rapport enfant](lesson-4-define-a-data-connection-and-data-table-for-child-report.md).  
   
     2.  Crée une connexion à la base de données SqlServer pour exécuter la requête définie dans la **Leçon 4 : Définir une connexion de données et une table de données pour le rapport enfant**.  
   
@@ -113,7 +113,7 @@ ms.locfileid: "36043542"
   
 3.  Sur le **propriétés** , cliquez sur le **événements** icône.  
   
-4.  Double-cliquez sur le **l’extraction** événement.  
+4.  Double-cliquez sur le **extraction** événement.  
   
      Cette opération permet d'ajouter une section du gestionnaire d'événements dans le code, qui doit ressembler au bloc ci-dessous.  
   
@@ -127,7 +127,7 @@ ms.locfileid: "36043542"
   
     1.  Extraire la référence d’objet de rapport enfant du paramètre *DrillthroughEventArgs* .  
   
-    2.  Appelez la fonction, `GetPurchaseOrderDetail`  
+    2.  Appeler la fonction, `GetPurchaseOrderDetail`  
   
     3.  Liez l'objet DataTable `PurchaseOrderDetail` à la source de données correspondante du rapport.  
   
@@ -169,7 +169,7 @@ ms.locfileid: "36043542"
   
 2.  Créez une fonction qui accepte un paramètre, `productid`, de type entier et retourne un objet `datatable`, puis procédez comme suit.  
   
-    1.  Crée une instance du dataset, `DataSet2`, lequel a été créée à l’étape 2 de [leçon 4 : définir une connexion de données et la Table de données pour le rapport enfant](lesson-4-define-a-data-connection-and-data-table-for-child-report.md).  
+    1.  Crée une instance du jeu de données, `DataSet2`, lequel a été créée à l’étape 2 de [leçon 4 : définir une connexion de données et la Table de données pour le rapport enfant](lesson-4-define-a-data-connection-and-data-table-for-child-report.md).  
   
     2.  Créez une connexion à la base de données SqlServer pour exécuter la requête définie dans la **Leçon 4 : Définir une connexion de données et une table de données pour le rapport enfant**.  
   
@@ -224,7 +224,7 @@ ms.locfileid: "36043542"
   
 3.  Sur le **propriétés** volet, cliquez sur le **événements** icône.  
   
-4.  Double-cliquez sur le **l’extraction** événement.  
+4.  Double-cliquez sur le **extraction** événement.  
   
      Cette opération permet d'ajouter une section du gestionnaire d'événements dans le code, qui doit ressembler à ce qui suit.  
   

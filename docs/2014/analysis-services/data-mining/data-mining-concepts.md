@@ -1,5 +1,5 @@
 ---
-title: Concepts d’exploration de données | Documents Microsoft
+title: Concepts d’exploration de données | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server Analysis Services, data mining
 - cleaning data
@@ -25,15 +25,15 @@ helpviewer_keywords:
 - Analysis Services, data mining
 ms.assetid: 6da6c26b-7809-415c-b5dd-bb642b51c194
 caps.latest.revision: 49
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 296ef0bf077c7d28e7288e1c7cae999de592b8e9
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 1236bc9b0c7e18331d2a3dea660f38d81408176b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36141671"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37212009"
 ---
 # <a name="data-mining-concepts"></a>Concepts d'exploration de données
   L'exploration de données est un processus de recherche d'informations utilisables à partir de jeux de données de grande taille. L'exploration de données utilise l’analyse mathématique pour dégager les motifs et les tendances existant dans les données. En général, ces motifs ne peuvent pas être trouvés par l’exploration de données traditionnelle parce que les relations sont trop complexes ou parce que la quantité de données est trop importante.  
@@ -112,12 +112,12 @@ ms.locfileid: "36141671"
   
 -   [Data Quality Services](../../data-quality-services/data-quality-services.md)  
   
- Il est important de noter qu’il n’est pas nécessaire de stocker les données utilisées pour l'exploration de données dans un cube de traitement analytique en ligne (OLAP), ou même dans une base de données relationnelle, bien que vous puissiez utiliser ces deux supports comme sources de données. Vous pouvez effectuer l'exploration de données à l'aide de n’importe quelle source de données définie comme source de données [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Il peut s’agir de fichiers texte, de classeurs Excel ou de données provenant d'autres fournisseurs externes. Pour plus d’informations, consultez [prise en charge des Sources de données &#40;multidimensionnels SSAS&#41;](../multidimensional-models/supported-data-sources-ssas-multidimensional.md).  
+ Il est important de noter qu’il n’est pas nécessaire de stocker les données utilisées pour l'exploration de données dans un cube de traitement analytique en ligne (OLAP), ou même dans une base de données relationnelle, bien que vous puissiez utiliser ces deux supports comme sources de données. Vous pouvez effectuer l'exploration de données à l'aide de n’importe quelle source de données définie comme source de données [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Il peut s’agir de fichiers texte, de classeurs Excel ou de données provenant d'autres fournisseurs externes. Pour plus d’informations, consultez [Sources de données prises en charge &#40;multidimensionnels SSAS&#41;](../multidimensional-models/supported-data-sources-ssas-multidimensional.md).  
   
 ##  <a name="ExploringData"></a> Exploration des données  
  La troisième étape du processus d'exploration de données, mise en évidence dans le diagramme suivant, consiste à explorer les données préparées.  
   
- ![Troisième étape d’exploration : exploration de données](../media/dmprocess-exploring.gif "troisième étape d’exploration : exploration de données")  
+ ![Troisième étape de données d’exploration de données : exploration de données](../media/dmprocess-exploring.gif "troisième étape de données d’exploration de données : exploration de données")  
   
  Vous devez vous familiariser avec les données afin de prendre les décisions appropriées lors de la création des modèles d’exploration. Les techniques d'exploration comprennent le calcul des valeurs minimales et maximales, le calcul des écarts moyens et types, et l'examen de la distribution des données. Par exemple, vous pouvez déterminer en examinant les valeurs maximales, minimales et moyennes que les données ne sont pas représentatives de vos clients ou de vos processus d’entreprise, et que vous devez par conséquent obtenir des données plus équilibrées ou examiner les hypothèses sur lesquelles reposent vos attentes. Les écarts types et autres valeurs de distribution peuvent fournir des informations utiles sur la stabilité et la précision des résultats. Un grand écart type peut indiquer que l'ajout de données supplémentaires est susceptible d’améliorer le modèle. Les données qui se différencient fortement d'une distribution standard peuvent être faussées ou représenter l’image exacte d'un problème vécu, mais elles permettent difficilement d’ajuster un modèle en fonction des données.  
   

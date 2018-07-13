@@ -1,5 +1,5 @@
 ---
-title: Valeur cible scénario (outils d’analyse de Table pour Excel) | Documents Microsoft
+title: Valeur cible scénario (outils d’analyse de Table pour Excel) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,29 +8,29 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Table Analysis tools
 - scenario analysis
 - goal seek scenario
 ms.assetid: efe50306-cf7c-46b3-9cc4-e7f0b6968b0c
 caps.latest.revision: 22
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: ecf3d569cdee1bf2e0ea58e8d582f6b2d3829fca
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 2f17c85c7296daaead3b24b4d4002ad9c1be7221
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36140627"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37187296"
 ---
 # <a name="goal-seek-scenario-table-analysis-tools-for-excel"></a>Scénario Valeur cible (Outils d'analyse de table pour Excel)
-  ![Bouton de recherche d’objectif dans Outils d’analyse de Table](media/tat-goalseek.gif "valeur cible de bouton dans les outils d’analyse de Table")  
+  ![Bouton de recherche d’objectif dans Outils d’analyse de Table](media/tat-goalseek.gif "valeur cible de bouton dans Outils d’analyse de Table")  
   
- Le **valeur cible** outil scénario est complémentaire à la [que se passe-t-il si](what-if-scenario-table-analysis-tools-for-excel.md) outil de scénario. Le **simulation** outil vous indique l’impact d’une modification, alors que le **valeur cible** outil vous indique les facteurs sous-jacents qui doivent changer pour atteindre le résultat souhaité.  
+ Le **valeur cible** outil de scénario est complémentaire à la [que se passe-t-il si](what-if-scenario-table-analysis-tools-for-excel.md) outil de scénario. Le **What If** outil vous indique l’impact d’une modification, tandis que le **valeur cible** outil vous indique les facteurs sous-jacents qui doivent changer pour atteindre le résultat souhaité.  
   
- Par exemple, supposons que votre objectif est d'augmenter la satisfaction des clients. Vous pouvez utiliser **valeur cible** analyse pour déterminer les facteurs qui serait plus susceptibles d’augmenter la satisfaction des clients et de décider si ces modifications sont rentables.  
+ Par exemple, supposons que votre objectif est d'augmenter la satisfaction des clients. Vous pouvez utiliser **valeur cible** analyse pour déterminer les facteurs susceptibles d’augmenter la satisfaction des clients et décider si ces modifications sont rentables.  
   
  Lorsqu'il termine son analyse, l'outil crée deux nouvelles colonnes dans la table de données source. Ces colonnes indiquent la *probabilité* que vous pouvez obtenir le résultat visé, ainsi que la modification recommandée, le cas échéant.  
   
@@ -42,7 +42,7 @@ ms.locfileid: "36140627"
   
 2.  Cliquez sur **scénarios**, puis sélectionnez **valeur cible**.  
   
-3.  Dans le **analyse de scénario : valeur cible** boîte de dialogue, sélectionnez la colonne qui contient la cible de la valeur dans la liste.  
+3.  Dans le **analyse de scénario : valeur cible** boîte de dialogue, sélectionnez la colonne qui contient la cible valeur dans la liste.  
   
 4.  Spécifiez la valeur à atteindre.  
   
@@ -59,9 +59,9 @@ ms.locfileid: "36140627"
   
 7.  Indiquez si les prédictions à effectuer doivent porter sur la table entière ou uniquement sur la ligne sélectionnée.  
   
-8.  Si vous avez sélectionné le **toute table** option, l’outil ajoute les prédictions à la table source dans les deux nouvelles colonnes.  
+8.  Si vous avez sélectionné le **table entière** option, l’outil ajoute les prédictions à la table source dans les deux nouvelles colonnes.  
   
-9. Si vous avez sélectionné l’option **sur cette ligne**, les résultats d’analyse sont affichent dans la boîte de dialogue. La boîte de dialogue reste ouverte afin que vous puissiez continuer à essayer différentes valeurs et cibles.  
+9. Si vous avez sélectionné l’option **sur cette ligne**, les résultats d’analyse s’affichent à la boîte de dialogue pour révision. La boîte de dialogue reste ouverte afin que vous puissiez continuer à essayer différentes valeurs et cibles.  
   
 ### <a name="requirements"></a>Spécifications  
  Cet outil utilise l'algorithme MLR (Microsoft Logistic Regression), qui peut traiter des valeurs numériques ou discrètes.  
@@ -89,11 +89,11 @@ ms.locfileid: "36140627"
   
  **Valeur cible pour désir d’achat a trouvé une solution.**  
   
- **Correspondance la plus proche obtenue en remplaçant 'Distance domicile-travail' à 2 '-5 miles'.**  
+ **Correspondance la plus proche obtenue en remplaçant 'Distance domicile-travail' miles' ' 2-5.**  
   
  Ce résultat repose sur une ligne existante de la table de données. Autrement dit, si les données concernant un client lambda n'ont pas changé mais que sa distance domicile-travail a été ramenée à 3-8 km, le client sera, dans une certaine mesure, plus enclin à acheter une bicyclette.  
   
- Si vous créez des prédictions de recherche d’objectif pour toutes les lignes dans le tableau Excel en spécifiant **toute table**, thetool crée deux nouvelles colonnes dans la table de données d’origine. Dans la première colonne ajoutée à la table figure soit un cercle vert avec une coche pour indiquer que la cible a peut être atteinte, soit un cercle rouge avec un X pour indiquer qu'aucune modification permettant d'atteindre la cible ne peut être effectuée.  
+ Si vous créez des prédictions de recherche d’objectif pour toutes les lignes dans le tableau Excel en spécifiant **table entière**, thetool crée deux nouvelles colonnes dans la table de données d’origine. Dans la première colonne ajoutée à la table figure soit un cercle vert avec une coche pour indiquer que la cible a peut être atteinte, soit un cercle rouge avec un X pour indiquer qu'aucune modification permettant d'atteindre la cible ne peut être effectuée.  
   
  La deuxième colonne contient la modification recommandée.  
   

@@ -5,10 +5,9 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-backup-restore
+ms.technology: backup-restore
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - transaction logs [SQL Server], marks
 - STOPBEFOREMARK option [RESTORE statement]
@@ -23,15 +22,15 @@ helpviewer_keywords:
 - database restores [SQL Server], point in time
 ms.assetid: 77a0d9c0-978a-4891-8b0d-a4256c81c3f8
 caps.latest.revision: 37
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 5ca2529a4dbe6e237b3d8e833659a7c3df1fc941
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 8fc37a9704dde533ae9d626a9853ccfb147cb06a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36143051"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37188606"
 ---
 # <a name="recovery-of-related--databases-that-contain-marked-transaction"></a>Récupération de bases de données associées contenant une transaction marquée
   Cette rubrique s'applique uniquement aux bases de données qui contiennent des transactions marquées et qui utilisent le mode de récupération complète ou le mode de récupération utilisant les journaux de transactions.  
@@ -58,7 +57,7 @@ ms.locfileid: "36143051"
 BEGIN TRANSACTION Tx1 WITH MARK 'not the mark name, just a description'    
 ```  
   
- Le journal des transactions enregistre le nom de la marque (nom de la transaction), la description, la base de données, l’utilisateur, `datetime` plus d’informations et le numéro de séquence du journal (LSN). Le `datetime` informations sont utilisées avec le nom de marque pour identifier de façon unique la marque.  
+ Le journal des transactions enregistre le nom de la marque (nom de la transaction), la description, la base de données, l’utilisateur, `datetime` plus d’informations et le numéro de séquence de journal (LSN). Le `datetime` informations sont utilisées avec le nom de marque pour identifier la marque.  
   
  Pour plus d’informations sur la façon d’insérer une marque dans une transaction qui s’étend sur plusieurs bases de données, consultez [Utiliser les transactions marquées pour récupérer des bases de données associées uniformément &#40;mode de récupération complète&#41;](use-marked-transactions-to-recover-related-databases-consistently.md).  
   
@@ -69,7 +68,7 @@ BEGIN TRANSACTION Tx1 WITH MARK 'not the mark name, just a description'
   
      L'option STOPATMARK effectue une restauration par progression jusqu'à la marque et inclut la transaction marquée dans cette restauration.  
   
--   Utilisez le WITH STOPBEFOREMARK = **'*`<mark_name>`*'** clause pour spécifier que l’enregistrement de journal situé juste avant la marque est le point de récupération.  
+-   Utilisez WITH STOPBEFOREMARK = **'*`<mark_name>`*'** clause pour spécifier que l’enregistrement de journal situé juste avant la marque est le point de récupération.  
   
      L'option STOPBEFOREMARK effectue une restauration par progression jusqu'à la marque et exclut la transaction marquée de cette restauration.  
   

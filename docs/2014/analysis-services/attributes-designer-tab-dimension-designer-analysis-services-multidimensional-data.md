@@ -1,5 +1,5 @@
 ---
-title: Attributs (onglet Concepteur de relations d’attributs, Concepteur de dimensions) (Analysis Services - données multidimensionnelles) | Documents Microsoft
+title: Attributs (onglet Concepteur relations d’attributs, Concepteur de dimensions) (Analysis Services - données multidimensionnelles) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.dimensiondesigner.ardesigner.attributes.f1
 ms.assetid: 850a68aa-1d70-4f0f-ba39-aeca834596c1
 caps.latest.revision: 12
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 4f0324d78dd64db1a135a878809a90a8056b95ca
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: ff6836db1f179da6c1151d576af20fb210713980
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36140634"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37200599"
 ---
 # <a name="attributes-attribute-relationship-designer-tab-dimension-designer-analysis-services---multidimensional-data"></a>Attributs (onglet Concepteur de relations d'attributs, Concepteur de dimensions) (Analysis Services - Données multidimensionnelles)
   La liste **Attributs** permet de localiser un attribut spécifique dans le diagramme des relations d'attributs ou de définir une nouvelle relation d'attribut. Ce volet apparaît immédiatement sous le volet qui contient le diagramme des relations d'attributs.  

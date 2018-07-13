@@ -5,23 +5,22 @@ ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
+ms.technology: supportability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - 10509 (Database Engine error)
 ms.assetid: e9dd5357-ee3d-420a-9a89-d12ab5404e73
 caps.latest.revision: 10
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: fb203b703df342107384cf0c082917aea18c5f20
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: a0f66b064e6239f3bad07587520744e5529ab777
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36044509"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37415928"
 ---
 # <a name="mssqlserver10509"></a>MSSQLSERVER_10509
     
@@ -34,7 +33,7 @@ ms.locfileid: "36044509"
 |Source de l'événement|MSSQLSERVER|  
 |Composant|SQLEngine|  
 |Nom symbolique|PG_INVALID_STMT|  
-|Texte du message|Impossible de créer le repère de plan ' %. \*%.*ls, car l’instruction spécifiée par `@stmt` ou `@statement_start_offset` contient une erreur de syntaxe ou n’est pas éligible pour le repère de plan. Fournissez une seule instruction [!INCLUDE[tsql](../../includes/tsql-md.md)] valide ou une position de départ de l'instruction valide dans le lot. Pour obtenir une position de départ valide, interrogez la colonne statement_start_offset de la fonction de gestion dynamique sys.dm_exec_query_stats.|  
+|Texte du message|Impossible de créer le repère de plan ' %. \*%.*ls, car l’instruction spécifiée par `@stmt` ou `@statement_start_offset` contient une erreur de syntaxe ou n’est pas éligible pour une utilisation dans un repère de plan. Fournissez une seule instruction [!INCLUDE[tsql](../../includes/tsql-md.md)] valide ou une position de départ de l'instruction valide dans le lot. Pour obtenir une position de départ valide, interrogez la colonne statement_start_offset de la fonction de gestion dynamique sys.dm_exec_query_stats.|  
   
 ## <a name="explanation"></a>Explication  
  L'instruction spécifiée par `@stmt` ou `@statement_start_offset` contient une erreur de syntaxe ou n'est pas éligible pour une utilisation dans un repère de plan.  

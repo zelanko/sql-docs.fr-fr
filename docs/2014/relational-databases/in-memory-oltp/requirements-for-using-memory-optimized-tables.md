@@ -8,23 +8,23 @@ ms.suite: ''
 ms.technology:
 - database-engine-imoltp
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 applies_to:
 - SQL Server 2014
 ms.assetid: 47d9a7e8-c597-4b95-a58a-dcf66df8e572
 caps.latest.revision: 53
-author: stevestein
-ms.author: sstein
-manager: jhubbard
-ms.openlocfilehash: ea27e4ceb186e05acd8c16af56de2a30ed6f1e0f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
+ms.openlocfilehash: f4b47ee3a3f4274ca94175060f10722fa45b6693
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36140961"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37190389"
 ---
 # <a name="requirements-for-using-memory-optimized-tables"></a>Conditions requises pour l'utilisation des tables optimisées en mémoire
-  Outre la [matérielle et logicielle requise pour l’installation de SQL Server 2014](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md), voici la configuration requise pour utiliser OLTP en mémoire :  
+  Outre le [Hardware and Software Requirements for Installing SQL Server 2014](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md), voici la configuration requise pour utiliser OLTP en mémoire :  
   
 -   Édition 64 bits Enterprise, Developer ou Evaluation de [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)].  
   
@@ -42,7 +42,7 @@ ms.locfileid: "36140961"
   
 -   Pour installer l’OLTP en mémoire, sélectionnez **Services moteur de base de données** lorsque vous installez [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)].  
   
-     Pour installer la création de rapports ([déterminer si une Table ou une procédure stockée doit être déplacée vers l’OLTP en mémoire](determining-if-a-table-or-stored-procedure-should-be-ported-to-in-memory-oltp.md)) et [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] (pour gérer l’OLTP en mémoire via [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] l’Explorateur d’objets), sélectionnez **gestion Outils : base** ou **outils de gestion — avancés** lorsque vous installez [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)].  
+     Pour installer la création de rapports ([déterminer si une Table ou une procédure stockée doit être déplacée vers In-Memory OLTP](determining-if-a-table-or-stored-procedure-should-be-ported-to-in-memory-oltp.md)) et [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] (pour gérer l’OLTP en mémoire via [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] Explorateur d’objets), sélectionnez **gestion Outils : base** ou **outils de gestion — avancés** lorsque vous installez [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)].  
   
 ## <a name="important-notes-on-using-includehek2includeshek-2-mdmd"></a>Notes importantes lors de l'utilisation de l' [!INCLUDE[hek_2](../../../includes/hek-2-md.md)]  
   
@@ -54,7 +54,7 @@ ms.locfileid: "36140961"
   
 -   Dans cette première version de l’OLTP en mémoire (dans [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]), la seule façon de supprimer un groupe de fichiers mémoire optimisé consiste à supprimer de la base de données.  
   
--   Si vous tentez de supprimer une large plage de lignes qui fait simultanément l'objet d'une charge de travail d'insertion ou de mise à jour, la suppression échouera probablement. Pour éviter ce problème, vous devez arrêter la charge de travail d'insertion ou de mise à jour avant d'effectuer la suppression. Sinon, vous pouvez aussi décomposer la transaction en transactions plus petites, qui sont moins susceptibles d'être perturbées par une charge de travail simultanée. Comme avec toutes les opérations d’écriture sur les tables optimisées en mémoire, utilisez la logique de nouvelle tentative ([des recommandations pour la logique de nouvelle tentative pour les Transactions sur les Tables optimisées en mémoire](../../database-engine/guidelines-for-retry-logic-for-transactions-on-memory-optimized-tables.md)).  
+-   Si vous tentez de supprimer une large plage de lignes qui fait simultanément l'objet d'une charge de travail d'insertion ou de mise à jour, la suppression échouera probablement. Pour éviter ce problème, vous devez arrêter la charge de travail d'insertion ou de mise à jour avant d'effectuer la suppression. Sinon, vous pouvez aussi décomposer la transaction en transactions plus petites, qui sont moins susceptibles d'être perturbées par une charge de travail simultanée. Comme avec toutes les opérations d’écriture sur les tables optimisées en mémoire, utilisez la logique de nouvelle tentative ([instructions pour la logique de nouvelle tentative pour les Transactions sur les Tables optimisées en mémoire](../../database-engine/guidelines-for-retry-logic-for-transactions-on-memory-optimized-tables.md)).  
   
 -   Si vous créez une ou plusieurs bases de données avec des tables optimisées en mémoire, vous devez activer l'initialisation instantanée de fichiers (accordez au compte de démarrage du service [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] le droit de l'utilisateur SE_MANAGE_VOLUME_NAME) pour l'instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Faute d'initialisation instantanée, les fichiers de stockage optimisés en mémoire (fichiers de données et delta) seront initialisés à la création, ce qui peut avoir un impact négatif sur les performances de votre charge de travail. Pour plus d'informations sur l'initialisation instantanée de fichiers, consultez [Initialisation des fichiers de base de données](http://msdn.microsoft.com/library/ms175935\(SQL.105\).aspx). Pour plus d'informations sur la façon d'activer l'initialisation instantanée de fichiers, consultez [Comment et pourquoi activer l'initialisation instantanée de fichiers](http://blogs.msdn.com/b/sql_pfe_blog/archive/2009/12/23/how-and-why-to-enable-instant-file-initialization.aspx).  
   

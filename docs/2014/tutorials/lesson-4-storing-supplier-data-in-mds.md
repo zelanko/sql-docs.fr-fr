@@ -1,5 +1,5 @@
 ---
-title: 'Leçon 4 : Stockage des données des fournisseurs dans MDS | Documents Microsoft'
+title: 'Leçon 4 : Stockage des données des fournisseurs dans MDS | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -10,18 +10,18 @@ ms.technology:
 - integration-services
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: bacd9eaf-4d12-4f25-aec7-d785dec1b623
 caps.latest.revision: 6
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 40f09aa6544bc38378e547c5b6e94dd26956a549
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 4c366d18c9f8c4606da6cc864df7a7d399151c6a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36142619"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37180946"
 ---
 # <a name="lesson-4-storing-supplier-data-in-mds"></a>Leçon 4 : Stockage des données sur les fournisseurs dans MDS
   Master Data Services (MDS) est une solution SQL Server de gestion des données de référence. La gestion des données de référence (MDM) correspond aux efforts d'une organisation en vue de découvrir et de définir des listes de données non transactionnelles.  
@@ -55,6 +55,6 @@ ms.locfileid: "36142619"
 8.  Créer et utiliser une hiérarchie dérivée à l'aide de la relation d'attribut basé sur un domaine entre l'entité **Fournisseur** et l'entité **État** (l'attribut État de l'entité Fournisseur est un type d'entité État) à l'aide de **Master Data Manager**.  
   
 ## <a name="next-step"></a>Étape suivante  
- [Tâche 1 : Création d’un modèle fournisseurs à l’aide de Master Data Manager](../../2014/tutorials/task-1-creating-suppliers-model-using-master-data-manager.md)  
+ [Tâche 1 : Création d’un modèle Fournisseurs à l’aide de Master Data Manager](../../2014/tutorials/task-1-creating-suppliers-model-using-master-data-manager.md)  
   
   

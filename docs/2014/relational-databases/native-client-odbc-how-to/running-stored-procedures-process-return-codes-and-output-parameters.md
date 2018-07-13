@@ -1,13 +1,11 @@
 ---
-title: Traiter les Codes de retour et les paramètres de sortie (ODBC) | Documents Microsoft
+title: Traiter les Codes de retour et les paramètres de sortie (ODBC) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -15,15 +13,15 @@ helpviewer_keywords:
 - output parameters [ODBC]
 ms.assetid: 102ae1d0-973d-4e12-992c-d844bf05160d
 caps.latest.revision: 19
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 1303c15f94dc32e69378c38e5353f8e82bf1214a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: d8f5eab232d9651375ea9cd2857a8b8bb9129e88
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36044502"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37422528"
 ---
 # <a name="process-return-codes-and-output-parameters-odbc"></a>Traiter les codes de retour et les paramètres de sortie (ODBC)
   Les procédures stockées [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] peuvent avoir des codes de retour et des paramètres de sortie de type entier. Les codes de retour et les paramètres de sortie sont envoyés dans le dernier paquet du serveur et ne sont pas disponibles pour l’application tant que [SQLMoreResults](../native-client-odbc-api/sqlmoreresults.md) retourne SQL_NO_DATA. Si une erreur est retournée à partir d’une procédure stockée, appelez SQLMoreResults à passer au résultat suivant jusqu'à ce que SQL_NO_DATA soit retourné.  
@@ -35,7 +33,7 @@ ms.locfileid: "36044502"
   
 1.  Construisez une instruction SQL qui utilise la séquence d'échappement ODBC CALL. L'instruction doit utiliser des marqueurs de paramètre pour chaque paramètre d'entrée, d'entrée/sortie et de sortie et pour la valeur de retour de la procédure (le cas échéant).  
   
-2.  Appelez [SQLBindParameter](../native-client-odbc-api/sqlbindparameter.md) pour chaque entrée, entrée/sortie et paramètre de sortie et pour la procédure retourne la valeur (le cas échéant).  
+2.  Appelez [SQLBindParameter](../native-client-odbc-api/sqlbindparameter.md) pour chaque entrée, entrée/sortie et paramètre de sortie et pour connaître la procédure retourne la valeur (le cas échéant).  
   
 3.  Exécutez l'instruction avec `SQLExecDirect`.  
   
@@ -194,6 +192,6 @@ GO
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Rubriques de procédures stockées en cours d’exécution &#40;ODBC&#41;](../../database-engine/dev-guide/running-stored-procedures-how-to-topics-odbc.md)  
+ [Les rubriques de procédures de procédures stockées en cours d’exécution &#40;ODBC&#41;](../../database-engine/dev-guide/running-stored-procedures-how-to-topics-odbc.md)  
   
   

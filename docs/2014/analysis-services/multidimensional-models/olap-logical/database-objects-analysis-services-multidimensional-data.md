@@ -1,5 +1,5 @@
 ---
-title: Objets (Analysis Services - données multidimensionnelles) de base de données | Documents Microsoft
+title: Objets (Analysis Services - données multidimensionnelles) de base de données | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -19,18 +19,18 @@ helpviewer_keywords:
 - objects [Analysis Services]
 ms.assetid: f76d869b-fc1d-4807-9f28-da09c7be382d
 caps.latest.revision: 31
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 4f92a99eef0513a03d4158c4a30c8cc20210a516
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: ab12847fc040121bd1af8013f809e925e99f5eee
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36141421"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37192359"
 ---
 # <a name="database-objects-analysis-services---multidimensional-data"></a>Objets de bases de données (Analysis Services - Données multidimensionnelles)
-  A [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] instance contient des objets de base de données et des assemblys à utiliser pour le traitement analytique en ligne (OLAP) et d’exploration de données.  
+  Un [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] instance contient des objets de base de données et les assemblys pour une utilisation avec le traitement analytique en ligne (OLAP) et d’exploration de données.  
   
 -   Les bases de données contiennent des objets OLAP et des objets d'exploration de données, tels que des sources de données, des vues de sources de données, des cubes, des mesures, des groupes de mesures, des dimensions, des attributs, des hiérarchies, des structures d'exploration de données, des modèles d'exploration de données et des rôles.  
   
@@ -63,7 +63,7 @@ ms.locfileid: "36141421"
   
 |Rubrique|Description|  
 |-----------|-----------------|  
-|[Sources de données dans les modèles multidimensionnels](../data-sources-in-multidimensional-models.md)|Décrit les sources de données dans [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)].|  
+|[Sources de données dans des modèles multidimensionnels](../data-sources-in-multidimensional-models.md)|Décrit les sources de données dans [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)].|  
 |[Vues de sources de données dans les modèles multidimensionnels](../data-source-views-in-multidimensional-models.md)|Décrit un modèle de données logique basé sur une ou plusieurs sources de données dans [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)].|  
 |[Cubes dans les modèles multidimensionnels](../cubes-in-multidimensional-models.md)|Décrit les cubes et les objets de cube, y compris les mesures, les groupes de mesures, les relations d'utilisation de dimension, les calculs, les indicateurs de performance clés (KPI), les actions, les traductions, les partitions et les perspectives.|  
 |[Dimensions &#40;Analysis Services - données multidimensionnelles&#41;](../../multidimensional-models-olap-logical-dimension-objects/dimensions-analysis-services-multidimensional-data.md)|Décrit les dimensions et les objets de dimension, y compris les attributs, les relations d'attributs, les hiérarchies, les niveaux et les membres.|  
@@ -72,7 +72,7 @@ ms.locfileid: "36141421"
 |[Gestion des assemblys de modèle multidimensionnel](../multidimensional-model-assemblies-management.md)|Décrit les assemblys, des collections de fonctions définies par l'utilisateur qui sont utilisées pour étendre les langages MDX et DMX dans [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)].|  
   
 ## <a name="see-also"></a>Voir aussi  
- [Les Sources de données prises en charge &#40;SSAS multidimensionnel&#41;](../supported-data-sources-ssas-multidimensional.md)   
+ [Sources de données prises en charge &#40;SSAS multidimensionnel&#41;](../supported-data-sources-ssas-multidimensional.md)   
  [Solutions de modèles multidimensionnels &#40;SSAS&#41;](../multidimensional-model-solutions-ssas.md)   
  [Solutions d’exploration de données](../../data-mining/data-mining-solutions.md)  
   

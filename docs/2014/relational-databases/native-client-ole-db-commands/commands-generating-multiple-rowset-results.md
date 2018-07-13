@@ -1,13 +1,11 @@
 ---
-title: Commandes générant plusieurs ensembles de lignes résultats | Documents Microsoft
+title: Commandes générant des résultats de plusieurs ensembles de lignes | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -19,25 +17,25 @@ helpviewer_keywords:
 - multiple-rowset results
 ms.assetid: 4567668d-35fd-4162-b61f-f7536862cdcb
 caps.latest.revision: 29
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: da8db391849392ccae05e3abb330fbfa112fcc49
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: 9a741671fa2b667b2a7bc472f64967fc351f1d70
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36044714"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37414649"
 ---
 # <a name="commands-generating-multiple-rowset-results"></a>Commandes générant des résultats dans plusieurs ensembles de lignes
-  Le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Client fournisseur OLE DB natif peut retourner plusieurs ensembles de lignes à partir de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instructions. Les instructions [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] retournent des résultats dans plusieurs ensembles de lignes dans les conditions suivantes :  
+  Le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Client fournisseur OLE DB Native peut retourner plusieurs ensembles de lignes à partir de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instructions. Les instructions [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] retournent des résultats dans plusieurs ensembles de lignes dans les conditions suivantes :  
   
 -   des instructions SQL groupées sont soumises en tant que commande unique ;  
   
 -   des procédures stockées implémentent un lot d'instructions SQL ;  
   
 ## <a name="batches"></a>Lots  
- Le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fournisseur de OLE DB Native Client reconnaît le point-virgule comme délimiteur de lot pour les instructions SQL :  
+ Le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] les fournisseur OLE DB Native Client reconnaît le point-virgule comme délimiteur de lot pour les instructions SQL :  
   
 ```  
 WCHAR*       wSQLString = L"SELECT * FROM Categories; "  

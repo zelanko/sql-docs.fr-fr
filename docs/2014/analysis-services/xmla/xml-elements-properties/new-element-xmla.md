@@ -1,5 +1,5 @@
 ---
-title: Nouvel élément (XMLA) | Documents Microsoft
+title: Nouvel élément (XMLA) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -24,15 +24,15 @@ helpviewer_keywords:
 - New element
 ms.assetid: 1321adcb-67f7-40f0-8f20-b17c1d3e3f17
 caps.latest.revision: 11
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: 983c32cc19ebbc876d53d46865f81b0d37e10d59
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: f93da2c5c9dab8b8d7542db68e70df67a87afbe8
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36140364"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37203979"
 ---
 # <a name="new-element-xmla"></a>Élément New (XMLA)
   Contient le nouvel emplacement de stockage de système fichier utilisé par un [dossier](folder-element-xmla.md) élément.  
@@ -66,7 +66,7 @@ ms.locfileid: "36140364"
 ## <a name="remarks"></a>Notes  
  L'élément `New` contient un chemin UNC qui remplace la valeur de l'élément `Original` que contient l'élément `Folder` parent pour tous les objets restaurés ou synchronisés pendant une commande `Restore` ou `Synchronize`. La valeur de l'élément `Original` est comparée à la valeur de l'élément `StorageLocation` pour chaque cube, groupe de mesures ou partition et, si une correspondance est trouvée, la valeur de cet élément est utilisée pour mettre à jour l'élément `StorageLocation` de l'objet pendant la restauration ou la synchronisation.  
   
- Pour plus d’informations sur la sauvegarde et restauration des objets, consultez [sauvegarde et restauration des objets (XMLA)](../../multidimensional-models-scripting-language-assl-xmla/backing-up-restoring-and-synchronizing-databases-xmla.md).  
+ Pour plus d’informations sur la sauvegarde et restauration d’objets, consultez [sauvegarde et restauration des objets (XMLA)](../../multidimensional-models-scripting-language-assl-xmla/backing-up-restoring-and-synchronizing-databases-xmla.md).  
   
 ## <a name="see-also"></a>Voir aussi  
  [Élément d’origine &#40;XMLA&#41;](original-element-xmla.md)   

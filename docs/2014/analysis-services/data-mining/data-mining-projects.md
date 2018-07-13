@@ -1,5 +1,5 @@
 ---
-title: Projets d’exploration de données | Documents Microsoft
+title: Projets d’exploration de données | Microsoft Docs
 ms.custom: ''
 ms.date: 07/17/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 543d70fc-34d2-42dd-8d6d-0543109f94d0
 caps.latest.revision: 23
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 035a8a822ffa49502ec93978b2ce8b619fff9630
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 3e0c9df62ccc0c76dead70001e4ae253ff51cc9b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36141231"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37259715"
 ---
 # <a name="data-mining-projects"></a>Projets d'exploration de données
   Un projet d'exploration de données fait partie d'une solution [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Pendant le processus de conception, les objets que vous créez dans ce projet sont disponibles à des fins de test et d'interrogation dans le cadre d'une base de données d'espace de travail. Lorsque vous souhaitez que les utilisateurs puissent interroger ou parcourir les objets dans le projet, vous devez déployer le projet sur une instance d' [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] s'exécutant en mode multidimensionnel.  
@@ -33,7 +33,7 @@ ms.locfileid: "36141231"
  Si vous créez un projet d'exploration de données dans une solution existante, par défaut les objets d'exploration de données seront déployés vers une base de données [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] avec le même nom que le fichier solution. Vous pouvez modifier ce nom et le serveur cible à l'aide de la boîte de dialogue **Propriétés du projet** . Pour plus d’informations, consultez [Configurer les propriétés d’un projet Analysis Services &#40;SSDT&#41;](../multidimensional-models/configure-analysis-services-project-properties-ssdt.md).  
   
 > [!WARNING]  
->  Pour correctement générer et déployer votre projet, vous devez avoir accès à une instance d' [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] s'exécutant en mode d'exploration de données OLAP/Data. Vous ne pouvez pas développer ou déployer des solutions d’exploration de données sur une instance de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] qui prend en charge les modèles tabulaires, ni utiliser les données directement à partir d’un classeur PowerPivot ou d’un modèle tabulaire qui utilise le magasin de données en mémoire. Pour déterminer si l’instance de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] que vous avez peut prendre en charge l’exploration de données, consultez [Déterminer le mode serveur d’une instance Analysis Services](../instances/determine-the-server-mode-of-an-analysis-services-instance.md).  
+>  Pour correctement générer et déployer votre projet, vous devez avoir accès à une instance d' [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] s'exécutant en mode d'exploration de données OLAP/Data. Vous ne pouvez pas développer ou déployer des solutions d’exploration de données sur une instance de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] qui prend en charge les modèles tabulaires, ni utiliser de données directement à partir d’un classeur PowerPivot ou d’un modèle tabulaire qui utilise le magasin de données en mémoire. Pour déterminer si l’instance de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] que vous avez peut prendre en charge l’exploration de données, consultez [Déterminer le mode serveur d’une instance Analysis Services](../instances/determine-the-server-mode-of-an-analysis-services-instance.md).  
   
  Dans chaque projet d'exploration de données que vous créez, suivez ces étapes :  
   
@@ -204,13 +204,13 @@ ms.locfileid: "36141231"
 |Fournit des informations sur l'ajout de nouveaux modèles d'exploration de données et le traitement d'une structure et de modèles|[Ajouter des modèles d’exploration de données à une Structure &#40;Analysis Services - Exploration de données&#41;](add-mining-models-to-a-structure-analysis-services-data-mining.md)|  
 |Fournit des liens vers des ressources qui vous permettent de personnaliser les algorithmes qui génèrent des modèles d'exploration de données|[Personnaliser les modèles et les structures d’exploration de données](customize-mining-models-and-structure.md)|  
 |Fournit des liens vers des informations sur chacune des visionneuses de modèles d'exploration de données|[Visionneuses de modèle d’exploration de données](data-mining-model-viewers.md)|  
-|En savoir plus sur la création d'un graphique de courbes d'élévation, d'un graphique des bénéfices ou d'une matrice de classification, ou sur le test d'une structure d'exploration de données|[Test et Validation &#40;d’exploration de données&#41;](testing-and-validation-data-mining.md)|  
+|En savoir plus sur la création d'un graphique de courbes d'élévation, d'un graphique des bénéfices ou d'une matrice de classification, ou sur le test d'une structure d'exploration de données|[Test et Validation &#40;exploration de données&#41;](testing-and-validation-data-mining.md)|  
 |En savoir plus sur les options de traitement et les autorisations|[Traitement des objets d’exploration de données](processing-data-mining-objects.md)|  
 |Fournit des informations supplémentaires sur Analysis Services|[Bases de données Model multidimensionnelles &#40;SSAS&#41;](../multidimensional-models/multidimensional-model-databases-ssas.md)|  
   
 ## <a name="see-also"></a>Voir aussi  
  [Concepteur d’exploration de données](data-mining-designer.md)   
  [Création multidimensionnelles de modèles à l’aide de SQL Server Data Tools &#40;SSDT&#41;](../multidimensional-models/creating-multidimensional-models-using-sql-server-data-tools-ssdt.md)   
- [Base de données de l’espace de travail &#40;SSAS tabulaire&#41;](../tabular-models/workspace-database-ssas-tabular.md)  
+ [Espace de travail de base de données &#40;SSAS tabulaire&#41;](../tabular-models/workspace-database-ssas-tabular.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Élément DatabaseName (XMLA) | Documents Microsoft
+title: Élément DatabaseName (XMLA) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -24,18 +24,18 @@ helpviewer_keywords:
 - DatabaseName element
 ms.assetid: 5cfd9a1f-da53-497a-b677-c51be4641bd0
 caps.latest.revision: 12
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: fbfff4e4389406496cf5df467ad044b6fa847727
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: fc7969194f91afa5dcf4d795ce33fae39d00c398
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36141629"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37183206"
 ---
 # <a name="databasename-element-xmla"></a>Élément DatabaseName (XMLA)
-  Identifie la [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] base de données à restaurer par le parent [restaurer](../xml-elements-commands/restore-element-xmla.md) commande.  
+  Identifie le [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] doit être restaurée par le parent [restaurer](../xml-elements-commands/restore-element-xmla.md) commande.  
   
 ## <a name="syntax"></a>Syntaxe  
   
