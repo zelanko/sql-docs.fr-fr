@@ -1,5 +1,5 @@
 ---
-title: Procédure pas à pas de schéma (compléments d’exploration de données) de cluster | Documents Microsoft
+title: Procédure pas à pas de diagramme (compléments d’exploration de données) de cluster | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Visio shapes, cluster
 - diagram, cluster
@@ -17,18 +17,18 @@ helpviewer_keywords:
 - data mining layout toolbar
 ms.assetid: 761bef6a-37d4-4b19-944e-f2aadc75a242
 caps.latest.revision: 19
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: a8ab399dcc59873cc507e260eec82582a69f8ba6
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 808accf81389f97d2dff9383fe4c3fbe9d86068d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36152248"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37177256"
 ---
 # <a name="cluster-diagram-walkthrough-data-mining-add-ins"></a>Procédure pas à pas Diagramme de cluster (Compléments d'exploration de données)
-  Après avoir créé un modèle de clustering, vous pouvez l’importer dans Visio à l’aide du **Cluster** mettre en forme et ensuite continuer à personnaliser et d’améliorer la disposition. Le **formes d’exploration de données pour Visio** incluent les contrôles personnalisés suivants pour l’utilisation des diagrammes d’exploration de données :  
+  Une fois que vous avez créé un modèle de clustering, vous pouvez l’importer dans Visio à l’aide du **Cluster** mettre en forme, puis continuer de personnaliser et d’améliorer la disposition. Le **formes d’exploration de données pour Visio** incluent les contrôles personnalisés suivants pour l’utilisation des diagrammes d’exploration de données :  
   
 -   Contrôles de rendu du diagramme de cluster  
   
@@ -41,11 +41,11 @@ ms.locfileid: "36152248"
 ## <a name="build-a-cluster-diagram"></a>Créer un diagramme de cluster  
  Cette procédure pas à pas montre comment créer et personnaliser un diagramme de clustering dans Visio.  
   
- Pour pouvoir la suivre, vous devez disposer d'un modèle de clustering. Si vous n’avez pas d’un modèle, utilisez la [Assistant Cluster &#40;des compléments d’exploration de données pour Excel&#41; ](cluster-wizard-data-mining-add-ins-for-excel.md) Assistant et créer un modèle à l’aide de l’ensemble de données d’apprentissage dans l’exemple de classeur, à l’aide de toutes les valeurs par défaut.  
+ Pour pouvoir la suivre, vous devez disposer d'un modèle de clustering. Si vous n’avez pas d’un modèle, utilisez le [Assistant Cluster &#40;des compléments d’exploration de données pour Excel&#41; ](cluster-wizard-data-mining-add-ins-for-excel.md) Assistant et créer un modèle en utilisant le jeu de données d’apprentissage dans l’exemple de classeur, à l’aide de toutes les valeurs par défaut.  
   
 #### <a name="use-the-cluster-visio-shape-wizard"></a>Utiliser l'Assistant Création de forme Cluster Visio  
   
-1.  Si vous ne voyez pas **formes d’exploration de données Microsoft** dans le **formes** , cliquez sur **formes plus**, sélectionnez **ouvrir un gabarit**, puis ouvrez la modèle à partir de l’emplacement d’installation par défaut.  
+1.  Si vous ne voyez pas **formes d’exploration de données Microsoft** dans le **formes** , cliquez sur **formes plus**, sélectionnez **ouvrir un gabarit**, puis ouvrez le modèle à partir de l’emplacement d’installation par défaut.  
   
      \<lecteur > : \Program files\Microsoft SQL Server 2012 DM Add-Ins  
   
@@ -57,9 +57,9 @@ ms.locfileid: "36152248"
   
 5.  Sélectionnez un modèle d’exploration de données approprié, puis cliquez sur **suivant**.  
   
-     Pour vous assurer que vous choisissez un modèle de clustering, examinez la description dans la **propriétés** volet.  
+     Pour vous assurer que vous choisissez un modèle de clustering, passez en revue la description dans la **propriétés** volet.  
   
-6.  Si la connexion est réussie, dans la page, **Options de diagramme de cluster**, décidez du type de diagramme de cluster à inclure dans votre présentation Visio :  
+6.  Si la connexion est établie, dans la page, **Options du diagramme de cluster de**, décidez du type de diagramme de cluster à inclure dans votre présentation Visio :  
   
      **Afficher uniquement les formes de cluster**  
      Cette option crée un diagramme de cluster simple, chaque cluster étant représenté par un rectangle ou une autre forme que vous choisissez  
@@ -82,7 +82,7 @@ ms.locfileid: "36152248"
   
 8.  Cliquez sur **Avancé**.  
   
-     Le **Options Cluster** boîte de dialogue est l’emplacement où vous personnalisez l’apparence visuelle des formes utilisées dans le diagramme. Vous pouvez modifier les couleurs utilisées dans le graphique et la forme utilisée pour les clusters.  
+     Le **Options de Cluster** boîte de dialogue est que vous personnalisez l’apparence visuelle des formes utilisées dans le diagramme. Vous pouvez modifier les couleurs utilisées dans le graphique et la forme utilisée pour les clusters.  
   
      Le **Variable d’ombrage** contrôle ne fonctionne pas dans Office 2013.  
   
@@ -103,13 +103,13 @@ ms.locfileid: "36152248"
   
  Toutes les formes de cluster de base sont générées par l'Assistant ; utilisez les outils suivants pour mettre à jour et personnaliser le diagramme :  
   
-1.  Faites glisser le curseur la **Options Cluster** contrôle, pour filtrer les relations les plus faibles et de simplifier le diagramme.  
+1.  Faites glisser le curseur le **Options de Cluster** contrôle, pour filtrer les relations les plus faibles et simplifier le diagramme.  
   
-2.  Utilisez Visio **Re-Layout Page** option pour faire des essais avec les dispositions de cluster différent.  
+2.  Utilisez Visio **Redisposition** option pour faire des essais avec les dispositions de cluster différentes.  
   
 3.  Utilisez le **connecteurs** option sur le **conception** onglet pour modifier le style de connecteur pour empêcher les lignes de croiser les clusters.  
   
-4.  Cliquez sur le **compléments** de ruban et afficher une barre d’outils personnalisées utilisées pour travailler avec des diagrammes d’exploration de données :  
+4.  Cliquez sur le **Add-Ins** ruban et afficher une barre d’outils personnalisées utilisées pour travailler avec des diagrammes d’exploration de données :  
   
      **Mise en page**  
      Optimise la disposition des clusters pour qu'ils tiennent sur la page active.  
@@ -133,7 +133,7 @@ ms.locfileid: "36152248"
      **Ombrage**  
      Ce contrôle ne fonctionne pas dans Office 2013.  
   
-5.  Utilisez le **panoramique et Zoom** contrôle, dans le **volet** zone de Visio **vue** ruban, pour vous concentrer sur un ensemble de clusters et vous déplacer dans le diagramme.  
+5.  Utilisez le **panoramique et Zoom** contrôle, dans le **volet** zone de Visio **vue** ruban pour vous concentrer sur un ensemble de clusters et vous déplacer dans le diagramme.  
   
 6.  Cliquez avec le bouton droit sur un cluster pour afficher les options spécifiques à la forme du cluster :  
   

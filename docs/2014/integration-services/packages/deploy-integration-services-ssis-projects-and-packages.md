@@ -1,5 +1,5 @@
 ---
-title: Déploiement de projets et Packages | Documents Microsoft
+title: Déploiement de projets et Packages | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: bea8ce8d-cf63-4257-840a-fc9adceade8c
 caps.latest.revision: 20
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 50da655d029228c4fc2339b49245cd11f5967305
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: bf58e533b46304d4d8833626381e52e86d017404
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36143300"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37221661"
 ---
 # <a name="deployment-of-projects-and-packages"></a>Déploiement de projets et de packages
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] prend en charge deux modèles de déploiement : le modèle de déploiement de projet et le modèle de déploiement de package. Le modèle de déploiement de projet vous permet de déployer vos projets sur le serveur [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .  
@@ -61,7 +61,7 @@ ms.locfileid: "36143300"
   
 ## <a name="required-tasks"></a>Tâches requises  
   
--   [Déployer des projets pour le serveur Integration Services](../deploy-projects-to-integration-services-server.md)  
+-   [Déployer des projets sur le serveur Integration Services](../deploy-projects-to-integration-services-server.md)  
   
 ## <a name="related-content"></a>Contenu associé  
  Entrée de blog, [Thoughts on Branching Strategies for SSIS Projects](http://go.microsoft.com/fwlink/?LinkId=245739), sur mattmasson.com.  

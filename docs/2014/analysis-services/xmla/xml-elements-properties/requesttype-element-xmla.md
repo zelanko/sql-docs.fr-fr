@@ -1,5 +1,5 @@
 ---
-title: Élément RequestType (XMLA) | Documents Microsoft
+title: Élément RequestType (XMLA) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -24,18 +24,18 @@ helpviewer_keywords:
 - RequestType element
 ms.assetid: 54270a57-e327-4233-b4b2-d85b44652ac5
 caps.latest.revision: 12
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: b1b2bcc4bf6f97659239a9e53d4adac52d7794a4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: d73bcac80918bc79064e0b6e1a4eabf315cdcd9a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36151971"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37171190"
 ---
 # <a name="requesttype-element-xmla"></a>Élément RequestType (XMLA)
-  Détermine le type de métadonnées retournées par le [Discover](../xml-elements-methods-discover.md) (méthode).  
+  Détermine le type des métadonnées retournées par le [Discover](../xml-elements-methods-discover.md) (méthode).  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -64,7 +64,7 @@ ms.locfileid: "36151971"
 |Éléments enfants|None|  
   
 ## <a name="remarks"></a>Notes  
- L'élément `RequestType` détermine l'ensemble de lignes de schéma à partir duquel la méthode `Discover` retourne des données. Cette énumération est limitée aux noms des ensembles de lignes de schéma pris en charge par [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]. Pour plus d’informations sur les ensembles de lignes de schéma, consultez [ensembles de lignes de schéma Analysis Services](../../schema-rowsets/analysis-services-schema-rowsets.md).  
+ L'élément `RequestType` détermine l'ensemble de lignes de schéma à partir duquel la méthode `Discover` retourne des données. Cette énumération est limitée aux noms des ensembles de lignes de schéma pris en charge par [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]. Pour plus d’informations sur les ensembles de lignes de schéma, consultez [Analysis Services Schema Rowsets](../../schema-rowsets/analysis-services-schema-rowsets.md).  
   
 > [!NOTE]  
 >  L'élément `RequestType` n'énumère que des noms d'ensemble de lignes de schéma. Une erreur se produit si le GUID de l'ensemble de lignes de schéma est utilisé.  

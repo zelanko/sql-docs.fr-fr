@@ -5,10 +5,9 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-bulk-import-export
+ms.technology: data-movement
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - bulk importing [SQL Server], null values
 - bulk importing [SQL Server], default values
@@ -21,15 +20,15 @@ helpviewer_keywords:
 - data formats [SQL Server], default values
 ms.assetid: 6b91d762-337b-4345-a159-88abb3e64a81
 caps.latest.revision: 36
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 7840877066f5f941050d96c3274ab7bf6698326c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: f99b040dc2a2caa0b7df7847760e978fef010fc4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36152338"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37258775"
 ---
 # <a name="keep-nulls-or-use-default-values-during-bulk-import-sql-server"></a>Conserver les valeurs NULL ou utiliser la valeur par défaut lors de l'importation en bloc (SQL Server)
   Par défaut, lorsque des données sont importées dans une table, la commande **bcp** et l’instruction BULK INSERT inspectent toutes les valeurs par défaut définies pour les colonnes de la table. Par exemple, si un fichier de données contient un champ NULL, la valeur par défaut de la colonne est chargée à la place. La commande **bcp** et l’instruction BULK INSERT vous permettent de spécifier que les valeurs NULL doivent être conservées.  
@@ -86,7 +85,7 @@ bcp AdventureWorks..MyTestDefaultCol2 format nul -c -f C:\MyTestDefaultCol2-f-c.
 |**bcp**|`-k`|Commutateur|  
 |BULK INSERT|KEEPNULLS<sup>1</sup>|Argument|  
   
- <sup>1</sup> pour l’insertion en bloc, si les valeurs par défaut ne sont pas disponibles, la colonne de table doit être définie pour autoriser les valeurs null.  
+ <sup>1</sup> pour BULK INSERT, si les valeurs par défaut ne sont pas disponibles, la colonne de table doit être définie pour autoriser les valeurs null.  
   
 > [!NOTE]  
 >  Ces qualificateurs désactivent le contrôle des définitions DEFAULT sur une table par ces commandes d'importation en bloc. Toutefois, pour toute instruction INSERT concurrente, des définitions DEFAULT sont attendues.  
@@ -103,7 +102,7 @@ bcp AdventureWorks..MyTestDefaultCol2 format nul -c -f C:\MyTestDefaultCol2-f-c.
 |`1`|`Default value of Col2`|`DataField3`|  
 |`2`|`Default value of Col2`|`DataField3`|  
   
- Pour insérer «`NULL`« au lieu de »`Default value of Col2`», vous devez utiliser le `-k` commutateur ou l’option KEEPNULL, comme illustré dans l’exemple suivant **bcp** et des exemples BULK INSERT.  
+ Pour insérer «`NULL`« au lieu de »`Default value of Col2`», vous devez utiliser le `-k` commutateur ou l’option KEEPNULL, comme illustré dans l’exemple suivant **bcp** et exemples BULK INSERT.  
   
 #### <a name="using-bcp-and-keeping-null-values"></a>Utilisation de la commande bcp et conservation des valeurs NULL  
  L’exemple suivant montre comment conserver les valeurs NULL dans une commande **bcp** . La commande **bcp** contient les commutateurs suivants :  

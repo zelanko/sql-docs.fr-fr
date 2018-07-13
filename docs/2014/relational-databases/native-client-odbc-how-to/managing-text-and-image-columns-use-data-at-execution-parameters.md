@@ -1,28 +1,26 @@
 ---
-title: Utilisez les paramètres de données d’exécution (ODBC) | Documents Microsoft
+title: Utiliser des paramètres de Data-at-Execution (ODBC) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - data-at-execution
 ms.assetid: 2a738aef-c991-4f62-bdab-a5221c335f31
 caps.latest.revision: 15
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 55216e04305194bf16be23b33122b5433a84c43f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: 338d43146b1f782695025bb14470af58539b4bea
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36142480"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37409578"
 ---
 # <a name="use-data-at-execution-parameters-odbc"></a>Utiliser des paramètres de données en cours d'exécution (ODBC)
     

@@ -1,5 +1,5 @@
 ---
-title: Mettre en forme l’élément (ASSL) | Documents Microsoft
+title: Mettre en forme, élément (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - Format element
 ms.assetid: 881ea707-52a7-46f7-ba16-ac2ec44eca22
 caps.latest.revision: 35
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: b7434ba5d6e2db8d2a2e665fa333799b6b2e9eb8
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: b8b5fdae50b38c81ad29143887717b412084c2c2
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36152221"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37169500"
 ---
 # <a name="format-element-assl"></a>Élément Format (ASSL)
   Contient le format requis de la [DataItem](../data-type/dataitem-data-type-assl.md) élément.  
@@ -62,7 +62,7 @@ ms.locfileid: "36152221"
 |Éléments enfants|None|  
   
 ## <a name="remarks"></a>Notes  
- Valeurs autorisées pour le `Format` élément sont les formats Microsoft Office Excel et les chaînes *TrimRight*, *TrimLeft*, *TrimAll*, et  *TrimNone*. Pour la troncature, le paramètre par défaut est *TrimRight* .  
+ Valeurs autorisées pour le `Format` élément sont les formats de Microsoft Office Excel et les chaînes *TrimRight*, *TrimLeft*, *TrimAll*, et  *TrimNone*. Pour la troncature, le paramètre par défaut est *TrimRight* .  
   
  La valeur de cet élément est limitée à l'une des chaînes du tableau suivant.  
   
@@ -74,7 +74,7 @@ ms.locfileid: "36152221"
 |*TrimNone*|Les données ne sont pas tronquées.|  
 |*TrimRight*|Les données sont tronquées à droite.|  
   
- L’élément qui correspond au parent de `Format` dans l’objet d’objets AMO (Analysis Management) est modèle <xref:Microsoft.AnalysisServices.DataItem>.  
+ L’élément qui correspond au parent de `Format` dans l’objet d’objets AMO (Analysis Management) modèle est <xref:Microsoft.AnalysisServices.DataItem>.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Propriétés &#40;ASSL&#41;](properties-assl.md)  

@@ -1,13 +1,11 @@
 ---
-title: Définition de données volumineuses | Documents Microsoft
+title: Définition de données volumineuses | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -18,18 +16,18 @@ helpviewer_keywords:
 - large data, OLE objects
 ms.assetid: 9d0c524b-22b0-475a-9ff5-5a69a6393b46
 caps.latest.revision: 39
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 6fd64ccaa9d5b4abb87123bc6cb1d9977c6ef03b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: fa1b0857b155f077920f60eee85cbcebb2ef4250
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36143256"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37423018"
 ---
 # <a name="setting-large-data"></a>Définition de données volumineuses
-  Avec le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Client fournisseur OLE DB natif, vous pouvez définir des données BLOB en passant un pointeur vers un objet de stockage du consommateur.  
+  Avec le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fournisseur OLE DB Native Client, vous pouvez définir des données BLOB en passant un pointeur vers un objet de stockage du consommateur.  
   
  Le consommateur crée un objet de stockage qui contient les données et passe au fournisseur un pointeur vers cet objet de stockage. Le fournisseur lit ensuite les données de l'objet de stockage du consommateur et les écrit dans la colonne BLOB.  
   
@@ -50,7 +48,7 @@ ms.locfileid: "36143256"
   
 2.  Définissez les propriétés du groupe de propriétés DBPROPSET_ROWSET de sorte que l'ensemble de lignes puisse être mis à jour.  
   
-3.  Créez un jeu de liaisons (une pour chaque colonne) en utilisant un tableau de structures DBBINDING. Définir le *wType* élément de la structure DBBINDING à DBTYPE_IUNKNOWN et le *pObject* élément pour qu’il pointe vers la structure DBOBJECT que vous avez créé.  
+3.  Créez un jeu de liaisons (une pour chaque colonne) en utilisant un tableau de structures DBBINDING. Définir le *wType* élément dans la structure DBBINDING sur DBTYPE_IUNKNOWN et le *pObject* élément pour qu’il pointe vers la structure DBOBJECT que vous avez créé.  
   
 4.  Créez un accesseur à l'aide des informations de liaison du tableau des structures DBBINDINGS.  
   

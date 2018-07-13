@@ -1,5 +1,5 @@
 ---
-title: Exemple de Transactions CLR | Documents Microsoft
+title: Exemple de Transactions CLR | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -12,15 +12,15 @@ ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: b09161af-6ac1-406c-9d62-e40be3b4cf8d
 caps.latest.revision: 12
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: e1bf79778ca7c4376545570a538e41c5fa8db17f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 581510c786e31ab83399bb1ca0d21dd8391ff547
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36152875"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37154980"
 ---
 # <a name="clr-transactions-sample"></a>Exemple de transactions CLR
   Cet exemple montre comment contrôler les transactions à l'aide des API managées situées dans l'espace de noms `System.Transactions` . La classe `System.Transactions.TransactionScope` est notamment utilisée pour établir la limite d'une transaction de sorte que les chiffres de stock ne soient pas modifiés tant que le stock n'est pas suffisant pour répondre à la demande et, si le stock est suffisant, que le transfert du stock d'un emplacement à un autre s'effectue de manière atomique. L'inscription automatique dans une transaction distribuée s'effectue en enregistrant les modifications apportées au stock dans une base de données d'audit stockée sur une instance distincte de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -53,11 +53,11 @@ ms.locfileid: "36152875"
      `GO`  
   
     > [!NOTE]  
-    >  Pour activer le CLR, vous devez disposer `ALTER SETTINGS` autorisation de niveau serveur, qui est implicitement détenue par les membres de la `sysadmin` et `serveradmin` rôles serveur fixes.  
+    >  Pour activer le CLR, vous devez avoir `ALTER SETTINGS` autorisation de niveau serveur, qui est implicitement détenue par les membres de la `sysadmin` et `serveradmin` rôles serveur fixes.  
   
 -   La base de données AdventureWorks doit être installée sur l'instance [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que vous utilisez.  
   
--   Si vous n’êtes pas administrateur de le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance que vous utilisez, vous devez faire un administrateur vous accorder **CreateAssembly** autorisation de terminer l’installation.  
+-   Si vous n’êtes pas administrateur de le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance que vous utilisez, vous devez demander un administrateur vous accorder **CreateAssembly** autorisation pour terminer l’installation.  
   
 ## <a name="building-the-sample"></a>Génération de l'exemple  
   
@@ -83,7 +83,7 @@ ms.locfileid: "36152875"
   
     -   `sqlcmd -E -I -i install.sql -v root = "C:\MySample\"`  
   
-7.  Copie le [!INCLUDE[tsql](../../includes/tsql-md.md)] code de l’installation de base de données dans un fichier et enregistrez-le sous `installDB.sql` dans le répertoire d’exemple.  
+7.  Copie le [!INCLUDE[tsql](../../includes/tsql-md.md)] code de l’installation de base de données dans un fichier et enregistrez-le en tant que `installDB.sql` dans le répertoire d’exemple.  
   
 8.  Installez la base de données d'audit en exécutant  
   

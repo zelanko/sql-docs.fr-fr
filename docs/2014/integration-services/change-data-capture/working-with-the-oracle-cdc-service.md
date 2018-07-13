@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 04be5896-2301-45f5-a8ce-5f4ef2b69aa5
 caps.latest.revision: 12
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 4db31968d249659890924917be5c40533c0e19af
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 5ea0a37304bbde2ac84e5092e67744226a03b0db
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36142762"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37239399"
 ---
 # <a name="working-with-the-oracle-cdc-service"></a>Utilisation du service de capture de données modifiées Oracle
   Cette section décrit des concepts importants du service de capture de données modifiées Oracle. Les concepts inclus dans cette section sont les suivants :  
@@ -112,7 +112,7 @@ ms.locfileid: "36142762"
 |ref_count|Cet élément compte le nombre d'ordinateurs où le même service de capture de données modifiées Oracle est installé. Il est augmenté à chaque ajout de service de capture de données modifiées Oracle portant le même nom, et il est réduit lorsque ce service est supprimé. Lorsque le compteur atteint zéro, cette ligne est supprimée.|  
 |active_service_node|Nom du nœud Windows qui gère actuellement le service de capture de données modifiées. Lorsque le service est arrêté correctement, cette colonne a la valeur Null, ce qui indique qu'il ne s'agit plus d'un service actif.|  
 |active_service_heartbeat|Cet élément suit le service de capture de données modifiées actuel pour déterminer s'il est encore actif.<br /><br /> Cet élément est mis à jour avec l'horodateur UTC de la base de données active du service de capture de données modifiées actif à intervalles réguliers. L'intervalle par défaut est de 30 secondes ; cependant, vous pouvez le configurer.<br /><br /> Lorsqu'un service de capture de données modifiées en attente détecte que la pulsation n'a pas été mise à jour après que l'intervalle configuré est passé, le service en attente tente d'assumer le rôle de service de capture de données modifiées actif.|  
-|options|Cet élément spécifie les options secondaires, telles que suivi ou paramétrage. Il est enregistré au format **name[=value][; ]**. La chaîne d'options utilise la même sémantique que la chaîne de connexion ODBC. Si l'option est booléenne (avec une valeur oui/non), la valeur peut inclure le nom uniquement.<br /><br /> trace a les valeurs possibles suivantes :<br /><br /> true<br /><br /> actif<br /><br /> false<br /><br /> inactif<br /><br /> \<nom de classe > [, nom de la classe >]<br /><br /> La valeur par défaut est **false**.<br /><br /> <br /><br /> **service_heartbeat_interval** est l’intervalle de temps (en secondes) pour que le service mette à jour la colonne active_service_heartbeat. La valeur par défaut est **30**. La valeur maximale est **3600**.<br /><br /> **service_config_polling_interval** est la fréquence d’interrogation (en secondes) pour que le service de capture de données modifiées vérifie les modifications de configuration. La valeur par défaut est **30**. La valeur maximale est **3600**.<br /><br /> **sql_command_timeout** est le délai d’attente de commande qui fonctionne avec le serveur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. La valeur par défaut est **1**. La valeur maximale est **3600**.|  
+|options|Cet élément spécifie les options secondaires, telles que suivi ou paramétrage. Il est enregistré au format **name[=value][; ]**. La chaîne d'options utilise la même sémantique que la chaîne de connexion ODBC. Si l'option est booléenne (avec une valeur oui/non), la valeur peut inclure le nom uniquement.<br /><br /> trace a les valeurs possibles suivantes :<br /><br /> true<br /><br /> actif<br /><br /> false<br /><br /> inactif<br /><br /> \<nom de la classe > [, nom_classe >]<br /><br /> La valeur par défaut est **false**.<br /><br /> <br /><br /> **service_heartbeat_interval** est l’intervalle de temps (en secondes) pour que le service mette à jour la colonne active_service_heartbeat. La valeur par défaut est **30**. La valeur maximale est **3600**.<br /><br /> **service_config_polling_interval** est la fréquence d’interrogation (en secondes) pour que le service de capture de données modifiées vérifie les modifications de configuration. La valeur par défaut est **30**. La valeur maximale est **3600**.<br /><br /> **sql_command_timeout** est le délai d’attente de commande qui fonctionne avec le serveur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. La valeur par défaut est **1**. La valeur maximale est **3600**.|  
 ||  
   
 ### <a name="the-msxdbcdc-database-stored-procedures"></a>Procédures stockées de base de données MSXDBCDC  
@@ -190,7 +190,7 @@ ms.locfileid: "36142762"
 ### <a name="service-program-commands"></a>Commandes du programme de service  
  Cette section décrit les commandes suivantes utilisées pour configurer le service CDC.  
   
--   [Configuration](#BKMK_config)  
+-   [Config](#BKMK_config)  
   
 -   [Créer](#BKMK_create)  
   
@@ -265,7 +265,7 @@ ms.locfileid: "36142762"
  **Remarque**: Un paramètre qui contient des espaces ou des guillemets doubles doit être inclus entre guillemets doubles ("). Les guillemets doubles incorporés doivent être doublés (par exemple, pour utiliser **"A#B" D** comme mot de passe, entrez **""A#B"" D"**).  
   
 ## <a name="see-also"></a>Voir aussi  
- [L’utilisation de l’Interface de ligne de commande de Service de capture de données modifiées](how-to-use-the-cdc-service-command-line-interface.md)   
+ [Comment utiliser l’Interface de ligne de commande de Service de capture de données modifiées](how-to-use-the-cdc-service-command-line-interface.md)   
  [Guide pratique pour préparer SQL Server pour CDC](prepare-sql-server-for-cdc.md)  
   
   

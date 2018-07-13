@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - dbe-spatial
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: ae357f9b-e3e2-4cdf-af02-012acda2e466
 caps.latest.revision: 20
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 4943247f5364991efe937ca56759c09ed5617e32
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 143f549a4f3b1961c02587b4a913d56d6002bbe6
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36153200"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37172300"
 ---
 # <a name="compoundcurve"></a>CompoundCurve
   Un `CompoundCurve` est une collection de zéro ou plusieurs instances continues `CircularString` ou `LineString`, de type geometry ou geography.  
@@ -33,7 +33,7 @@ ms.locfileid: "36153200"
   
 2.  La séquence de `CircularString` ou `LineString` instances doivent être continues.  
   
- Si un `CompoundCurve` contient une séquence de plusieurs `CircularString` et `LineString` instances, le point de terminaison de fin pour chaque instance, à l’exception de la dernière instance doit être le point de terminaison initial pour l’instance suivante dans la séquence. Cela signifie que si le point de fin d'une instance précédente dans la séquence est (4 3 7 2), le point de départ de l'instance suivante dans la séquence doit être (4 3 7 2). Notez que les valeurs Z (élévation) et M (mesure) du point doivent également être identiques. Si les deux points présentent une différence, une `System.FormatException` est levée. Points dans un `CircularString` n’ont pas une valeur Z ou M. Si aucune valeur Z ou M n'est indiquée pour le point de fin de l'instance précédente, le point de départ de l'instance suivante ne peut pas inclure de valeur Z ou M. Si le point de fin de la séquence précédente est (4 3), le point de départ de la séquence suivante doit être (4 3), mais pas (4 3 7 2). Tous les points dans un `CompoundCurve` doit avoir aucune valeur Z ou la même valeur Z.  
+ Si un `CompoundCurve` contient une séquence de plusieurs `CircularString` et `LineString` les instances, le point de terminaison de fin pour chaque instance, à l’exception de la dernière instance doit être le point de terminaison initial pour l’instance suivante dans la séquence. Cela signifie que si le point de fin d'une instance précédente dans la séquence est (4 3 7 2), le point de départ de l'instance suivante dans la séquence doit être (4 3 7 2). Notez que les valeurs Z (élévation) et M (mesure) du point doivent également être identiques. Si les deux points présentent une différence, une `System.FormatException` est levée. Points dans un `CircularString` n’avez pas à avoir une valeur Z ou M. Si aucune valeur Z ou M n'est indiquée pour le point de fin de l'instance précédente, le point de départ de l'instance suivante ne peut pas inclure de valeur Z ou M. Si le point de fin de la séquence précédente est (4 3), le point de départ de la séquence suivante doit être (4 3), mais pas (4 3 7 2). Tous les points dans un `CompoundCurve` instance doit avoir aucune valeur Z ou la même valeur Z.  
   
 ## <a name="compoundcurve-instances"></a>Instances CompoundCurve  
  L’illustration suivante montre valide `CompoundCurve` types.  
@@ -52,7 +52,7 @@ ms.locfileid: "36153200"
   
 3.  Aucune des instances contenues n'est une instance vide.  
   
- L’exemple suivant montre acceptée `CompoundCurve` instances.  
+ L’exemple suivant montre accepté `CompoundCurve` instances.  
   
 ```  
 DECLARE @g1 geometry = 'COMPOUNDCURVE EMPTY';  
@@ -67,7 +67,7 @@ DECLARE @g2 geometry = 'COMPOUNDCURVE(CIRCULARSTRING(1 0, 0 1, -1 0), (1 0, 2 0)
 ```  
   
 ### <a name="valid-instances"></a>Instances valides  
- A `CompoundCurve` instance est valide si elle répond aux critères suivants.  
+ Un `CompoundCurve` instance est valide si elle répond aux critères suivants.  
   
 1.  Le `CompoundCurve` instance est acceptée.  
   

@@ -1,5 +1,5 @@
 ---
-title: Détails des traductions (onglet traductions, Concepteur de Cube) (Analysis Services - données multidimensionnelles) | Documents Microsoft
+title: Détails des traductions (onglet traductions, Concepteur de Cube) (Analysis Services - données multidimensionnelles) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.cubeeditor.translations.translationspane.translationdetails.f1
 ms.assetid: ba59fd0b-e2c5-4d42-ba99-eaf784b45975
 caps.latest.revision: 22
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 7f6c03a5a9f656bc32752c2dfacb242d0b9fac9d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 401c69274fad3e88b29d06bcb3446dd0c1e3bf59
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36151968"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37185276"
 ---
 # <a name="translation-details-translations-tab-cube-designer-analysis-services---multidimensional-data"></a>Détails des traductions (onglet Traductions, Concepteur de cube) (Analysis Services - Données multidimensionnelles)
   Utilisez le volet **Détails des transactions** sous l’onglet **Transactions** accessible dans le Concepteur de cube pour définir et gérer les traductions s’appliquant au cube actuellement sélectionné.  
@@ -65,7 +65,7 @@ ms.locfileid: "36151968"
   
      `Caption` Propriété  
   
- **\<Langue >**  
+ **\<Langage >**  
  Permet de saisir la valeur de la propriété de l'objet du cube dans la langue choisie.  
   
 ## <a name="context-menu"></a>Menu contextuel  

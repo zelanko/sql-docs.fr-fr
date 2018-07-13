@@ -1,5 +1,5 @@
 ---
-title: Options (requête d’exécution SQL Server Page Général) | Documents Microsoft
+title: Options (Page de requête d’exécution SQL Server-général) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - VS.ToolsOptionsPages.QueryExecution.SqlServer.SqlExecutionGeneral
 ms.assetid: 3f8d59bc-3f97-4e5d-8b86-5ac670d20780
 caps.latest.revision: 33
 author: craigg-msft
 ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 809a3a2d681285a0a0f02e6ca9ac18497ae28804
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 2c08ee6ab08fe90ffc075ef3f1ee0fe638d1da4e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36151955"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37167150"
 ---
-# <a name="options-query-execution-sql-server-general-page"></a>Options (requête d’exécution SQL Server Page Général)
+# <a name="options-query-execution-sql-server-general-page"></a>Options (Page de requête d’exécution SQL Server-général)
   Cette page vous permet de spécifier les options d'exécution des requêtes [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . Les modifications de ces options sont appliquées uniquement aux nouvelles requêtes [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Pour modifier les options relatives à une requête en cours, cliquez sur **Options de requête** dans le menu **Requête** ou cliquez avec le bouton droit dans une fenêtre Requête de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] et sélectionnez **Options de requête**.  
   
 ## <a name="options"></a>Options  

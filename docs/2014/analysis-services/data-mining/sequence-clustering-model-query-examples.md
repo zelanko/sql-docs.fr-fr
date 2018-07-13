@@ -1,5 +1,5 @@
 ---
-title: Exemples de requêtes modèle de Clustering de séquence | Documents Microsoft
+title: Sequence Clustering Model Query Examples | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - sequence clustering algorithms [Analysis Services]
 - content queries [DMX]
 - sequence [Analysis Services]
 ms.assetid: 64bebcdc-70ab-43fb-8d40-57672a126602
 caps.latest.revision: 23
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: d55120355f3b862372ca58098a044ec00ab4a34b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: d8ab6d3d16cff232107a4e2467d5a7d71dd59e8b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36153357"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37192979"
 ---
 # <a name="sequence-clustering-model-query-examples"></a>Sequence Clustering Model Query Examples
   Lorsque vous créez une requête sur un modèle d'exploration de données, vous pouvez soit créer une requête de contenu, qui fournit des détails sur les informations stockées dans le modèle, soit créer une requête de prédiction, qui utilise les séquences du modèle pour effectuer des prédictions basées sur les nouvelles données que vous fournissez. Pour un modèle Sequence Clustering, les requêtes de contenu fournissent en général des détails supplémentaires à propos des clusters trouvés ou les transitions dans ces clusters. Vous pouvez également extraire les métadonnées relatives au modèle en utilisant une requête.  
@@ -277,8 +277,8 @@ AS t
   
 ## <a name="see-also"></a>Voir aussi  
  [Requêtes d’exploration de données](data-mining-queries.md)   
- [Microsoft Sequence Clustering algorithme techniques de référence](microsoft-sequence-clustering-algorithm-technical-reference.md)   
- [Algorithme de Microsoft Sequence Clustering](microsoft-sequence-clustering-algorithm.md)   
- [Exploration du contenu du modèle pour les modèles Sequence Clustering &#40;Analysis Services - Exploration de données&#41;](mining-model-content-for-sequence-clustering-models.md)  
+ [Microsoft Sequence Clustering des références techniques relatives aux algorithmes](microsoft-sequence-clustering-algorithm-technical-reference.md)   
+ [Algorithme de Clustering de séquence de Microsoft](microsoft-sequence-clustering-algorithm.md)   
+ [Le contenu du modèle Sequence Clustering des modèles d’exploration de données &#40;Analysis Services - Exploration de données&#41;](mining-model-content-for-sequence-clustering-models.md)  
   
   

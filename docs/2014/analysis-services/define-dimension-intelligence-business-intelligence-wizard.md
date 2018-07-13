@@ -1,5 +1,5 @@
 ---
-title: Définir l’Intelligence des dimensions (Assistant Business Intelligence) | Documents Microsoft
+title: Définir l’Intelligence des dimensions (Assistant Business Intelligence) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.biwizard.dimensionintelligence.adddimensionintelligence.f1
 ms.assetid: 1089a788-763f-4c3e-80e3-b625e0728343
 caps.latest.revision: 19
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: fdb8d119a787d6444dcaa4eef1bc70ec612dc742
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 96f90e84bdd66d4b301193a4b3974964a6a7301e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36153150"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37171720"
 ---
 # <a name="define-dimension-intelligence-business-intelligence-wizard"></a>Définir l'intelligence des dimensions (Assistant Business Intelligence)
   Utilisez la page **Définir l'intelligence des dimensions** pour mapper les attributs de dimensions existant aux types d'attributs pour le type de dimension spécifié.  
@@ -43,7 +43,7 @@ ms.locfileid: "36153150"
  Sélectionnez l'attribut de dimension existant auquel mapper le type d'attribut correspondant.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Aide F1 l’Assistant Business Intelligence](business-intelligence-wizard-f1-help.md)   
+ [L’Assistant Business Intelligence F1](business-intelligence-wizard-f1-help.md)   
  [Concepteur de cube &#40;Analysis Services - données multidimensionnelles&#41;](cube-designer-analysis-services-multidimensional-data.md)   
  [Concepteur de dimensions &#40;Analysis Services - données multidimensionnelles&#41;](dimension-designer-analysis-services-multidimensional-data.md)  
   

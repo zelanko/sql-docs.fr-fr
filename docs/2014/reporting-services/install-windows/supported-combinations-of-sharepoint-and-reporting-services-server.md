@@ -1,5 +1,5 @@
 ---
-title: Prise en charge les combinaisons de SharePoint et Reporting Services serveur et complément (SQL Server 2014) | Documents Microsoft
+title: Prise en charge les combinaisons de SharePoint et Reporting Services serveur et complément (SQL Server 2014) | Microsoft Docs
 ms.custom: ''
 ms.date: 05/24/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - SharePoint mode
 - add-in for sharepoint
@@ -16,13 +16,13 @@ ms.assetid: dc6a3372-db26-43f0-b7aa-f725acc635c2
 caps.latest.revision: 27
 author: markingmyname
 ms.author: maghan
-manager: jhubbard
-ms.openlocfilehash: 4aaaa578f438beabd9c9c661eaaf852971545695
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 49b19aaf7d34b052eac0e53c44814a961d6c4b74
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36152989"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37194798"
 ---
 # <a name="supported-combinations-of-sharepoint-and-reporting-services-server-and-add-in-sql-server-2014"></a>Combinaisons de serveur et composant SharePoint et Reporting Services prises en charge (SQL Server 2014)
   Les serveurs de rapports [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] peuvent être installés en mode SharePoint et intégrés à un déploiement SharePoint. Certaines fonctionnalités ne sont pas prises en charge dans toutes les combinaisons de serveur de rapports, complément Reporting Services pour SharePoint et produits SharePoint. Cette rubrique résume les combinaisons prises en charge. Dans [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] l’intégration est le résultat de la combinaison des éléments suivants :  

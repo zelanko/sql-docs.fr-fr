@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - "10245"
 - "10252"
@@ -16,18 +16,18 @@ f1_keywords:
 - sql12.rtp.rptdesigner.seriesproperties.borders.f1
 ms.assetid: fe541501-cac5-47b1-b95f-c410db789190
 caps.latest.revision: 6
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: f3760096e00a6c418af3a0d8203f822b65c00508
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 22be979236bd7c42ba231cea42d98c7a47c15ab8
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36141744"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37278515"
 ---
 # <a name="formatting-series-colors-on-a-chart-report-builder-and-ssrs"></a>Mise en forme des couleurs des séries sur un graphique (Générateur de rapports et SSRS)
-  Reporting Services fournit plusieurs palettes intégrées pour les graphiques. Vous pouvez également définir une palette personnalisée. Par défaut, les graphiques utilisent la fonction intégrée **pastel brillant** palette de couleurs pour remplir chaque série. Ces couleurs sont également présentes dans la légende. Lorsque plusieurs séries sont ajoutées au graphique, le graphique assigne une couleur à chaque série, dans l'ordre dans lequel les couleurs ont été définies dans la palette.  
+  Reporting Services fournit plusieurs palettes intégrées pour les graphiques. Vous pouvez également définir une palette personnalisée. Par défaut, les graphiques utilisent intégrés **BrightPastel** palette de couleurs pour remplir chaque série. Ces couleurs sont également présentes dans la légende. Lorsque plusieurs séries sont ajoutées au graphique, le graphique assigne une couleur à chaque série, dans l'ordre dans lequel les couleurs ont été définies dans la palette.  
   
  Si le nombre de séries est plus élevé que le nombre de couleurs dans la palette, le graphique réutilise des couleurs. Deux séries peuvent donc avoir la même couleur. Cela se produit fréquemment si vous utilisez un graphique à base de formes, où une couleur de la palette est assignée à chaque point de données. Pour éviter toute confusion, définissez une palette personnalisée comportant au moins autant de couleurs qu'il y a de séries dans votre graphique.  
   
@@ -49,14 +49,14 @@ ms.locfileid: "36141744"
 ## <a name="using-a-color-fill-on-each-series"></a>Utilisation d'une couleur de remplissage pour chaque série  
  Vous pouvez également définir vos propres couleurs en spécifiant une couleur pour chaque série du graphique. Pour ce faire, ouvrez la boîte de dialogue **Propriétés de la série** et définissez la propriété **Couleur** du paramètre **Remplissage**. Cette opération remplace toutes les palettes définies. En général, mieux vaut utiliser une palette personnalisée pour définir vos propres couleurs. En effet, le nombre de séries dans votre dataset peut ne pas être connu jusqu'au traitement du rapport.  
   
- Cette approche est particulièrement adaptée si vous souhaitez définir une couleur de série conditionnelle, basée sur une expression.  Pour plus d’informations, consultez [mise en forme des Points de données sur un graphique &#40;le Générateur de rapports et SSRS&#41;](formatting-data-points-on-a-chart-report-builder-and-ssrs.md).  
+ Cette approche est particulièrement adaptée si vous souhaitez définir une couleur de série conditionnelle, basée sur une expression.  Pour plus d’informations, consultez [mise en forme des Points de données sur un graphique &#40;Générateur de rapports et SSRS&#41;](formatting-data-points-on-a-chart-report-builder-and-ssrs.md).  
   
 ## <a name="in-this-section"></a>Dans cette section  
  [Spécifier des couleurs cohérentes pour plusieurs graphiques à base de formes &#40;Générateur de rapports et SSRS&#41;](charts-report-builder-and-ssrs.md)  
   
  [Définir les couleurs d’un graphique à l’aide d’une palette &#40;Générateur de rapports et SSRS&#41;](define-colors-on-a-chart-using-a-palette-report-builder-and-ssrs.md)  
   
- [Mettez en surbrillance les données du graphique en ajoutant des franges &#40;rapport Générateur et SSRS&#41;](highlight-chart-data-by-adding-strip-lines-report-builder-and-ssrs.md)  
+ [Mettez en surbrillance les données du graphique en ajoutant des franges &#40;Générateur de rapports et SSRS&#41;](highlight-chart-data-by-adding-strip-lines-report-builder-and-ssrs.md)  
   
 ## <a name="see-also"></a>Voir aussi  
  [Mise en forme d’un graphique &#40;Générateur de rapports et SSRS&#41;](formatting-a-chart-report-builder-and-ssrs.md)   

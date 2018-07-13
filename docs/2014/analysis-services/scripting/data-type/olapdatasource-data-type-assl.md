@@ -1,5 +1,5 @@
 ---
-title: Type de données OlapDataSource (ASSL) | Documents Microsoft
+title: Type de données OlapDataSource (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,18 +22,18 @@ helpviewer_keywords:
 - OlapDataSource data type
 ms.assetid: cfe8937c-5f73-4773-a1e8-5e3310691966
 caps.latest.revision: 33
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 91ee0e55bab11a9a1100403c423c4e6629445b48
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 6ecfab3ea15e5f6a2cd134f0ced28ba2ad43245b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36143350"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37197959"
 ---
 # <a name="olapdatasource-data-type-assl"></a>Type de données OlapDataSource (ASSL)
-  Définit un type de données dérivé qui représente un multidimensionnels [DataSource](../objects/datasource-element-assl.md) élément.  
+  Définit un type de données dérivé qui représente un multidimensionnelles [DataSource](../objects/datasource-element-assl.md) élément.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -63,6 +63,6 @@ ms.locfileid: "36143350"
  L’élément correspondant dans le modèle d’objet objets AMO (Analysis Management) est <xref:Microsoft.AnalysisServices.OlapDataSource>.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Types de données de script langage XML Analysis Services &#40;ASSL&#41;](analysis-services-scripting-language-xml-data-types-assl.md)  
+ [Types Analysis Services Scripting Language XML données &#40;ASSL&#41;](analysis-services-scripting-language-xml-data-types-assl.md)  
   
   

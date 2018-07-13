@@ -1,5 +1,5 @@
 ---
-title: Utiliser des modèles Analysis Services dans SQL Server Management Studio | Documents Microsoft
+title: Utiliser des modèles Analysis Services dans SQL Server Management Studio | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 54ad1954-22e2-4628-b334-8fad8e9433b8
 caps.latest.revision: 11
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: ff28fee126f12906e562f2fb26463a7cffad9aab
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 387d1752c2e2e2a8f6bdc6e48b2d9b9e7952419f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36153156"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37153370"
 ---
 # <a name="use-analysis-services-templates-in-sql-server-management-studio"></a>Utiliser des modèles Analysis Services dans SQL Server Management Studio
   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] fournit un ensemble de modèles qui vous aident à créer rapidement des scripts XMLA et des requêtes DMX ou MDX, à créer des indicateurs de performance clés dans un cube ou un modèle tabulaire, à générer des scripts pour les opérations de sauvegarde et de restauration et à effectuer de nombreuses autres tâches. Les modèles sont situés dans l' **Explorateur de modèles** de [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)].  
@@ -45,7 +45,7 @@ ms.locfileid: "36153156"
   
  Pour ouvrir l' **Explorateur de modèles**, sélectionnez-le dans le menu **Affichage** . Ensuite, cliquez sur l'icône en forme de cube pour afficher la liste des modèles disponibles pour [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].  
   
- ![L’Explorateur de modèles, filtré par Analysis Services](../media/ssas-templateexplorer.gif "l’Explorateur de modèles, filtré par Analysis Services")  
+ ![Explorateur de modèles, filtré par Analysis Services](../media/ssas-templateexplorer.gif "Explorateur de modèles, filtré par Analysis Services")  
   
  Pour ouvrir un modèle, cliquez avec le bouton droit sur son nom et sélectionnez **Ouvrir**ou faites glisser le modèle dans une fenêtre de requête déjà ouverte. Une fois la fenêtre de requête ouverte, vous pouvez utiliser les commandes de la barre d'outils ou du menu Requête pour concevoir des instructions :  
   
@@ -75,7 +75,7 @@ ms.locfileid: "36153156"
   
     1.  Remplacez \<row_axis, mdx_set > avec **[Product Category]. [ Product Category Name]**.  
   
-    2.  Remplacez \<column_axis, mdx_set > avec **[Date]. [ Calendar Year]. [Année civile]** .  
+    2.  Remplacez \<column_axis, mdx_set > avec **[Date]. [ Calendar Year]. [Calendar Year]** .  
   
     3.  Remplacez \<from_clause, mdx_name > avec **[Internet Sales]**.  
   
@@ -171,12 +171,12 @@ SELECT * FROM $system.DISCOVER_SCHEMA_ROWSETS
   
 |Catégorie|Modèle d'élément|Description|  
 |--------------|-------------------|-----------------|  
-|DMX\Contenu des modèles|Requête de contenu|Montre comment utiliser l’instruction DMX SELECT FROM  *\<modèle >*. Instruction de contenu pour extraire le contenu de jeu de lignes du schéma de modèle d’exploration de données pour un modèle d’exploration de données spécifié.|  
+|DMX\Contenu des modèles|Requête de contenu|Montre comment utiliser l’instruction DMX SELECT FROM  *\<modèle >*. Instruction de contenu pour récupérer le contenu de jeu de lignes du schéma de modèle d’exploration de données pour un modèle d’exploration de données spécifié.|  
 ||Valeurs des colonnes continues|Montre comment utiliser l’instruction DMX SELECT DISTINCT FROM  *\<modèle >* instruction avec l’instruction DMX `RangeMin` et `RangeMax` fonctions pour récupérer un ensemble de valeurs dans une plage spécifiée à partir de colonnes continues dans un modèle d’exploration de données spécifié.|  
-||Valeurs des colonnes discrètes|Montre comment utiliser l’instruction DMX SELECT DISTINCT FROM  *\<modèle >* instruction récupérer un ensemble complet de valeurs de colonnes discrètes dans un modèle d’exploration de données spécifié.|  
+||Valeurs des colonnes discrètes|Montre comment utiliser l’instruction DMX SELECT DISTINCT FROM  *\<modèle >* instruction extraire un ensemble complet de valeurs de colonnes discrètes dans un modèle d’exploration de données spécifié.|  
 ||Requête d'extraction|Indique comment utiliser l'instruction DMX SELECT * FROM Model.CASES avec la fonction DMX IsInNode pour exécuter une requête d'extraction|  
 ||Attributs de modèle|Montre comment utiliser la fonction DMX System.GetModelAttributes pour retourner une liste d'attributs utilisés par un modèle.|  
-||Contenu PMML|Montre comment utiliser l’instruction DMX SELECT \* FROM  *\<modèle >*. Instruction PMML pour récupérer la représentation (Predictive Model Markup Language) du modèle d’exploration de données, pour les algorithmes qui prennent en charge cette fonctionnalité.|  
+||Contenu PMML|Montre comment utiliser l’instruction DMX SELECT \* FROM  *\<modèle >*. Instruction PMML pour récupérer la représentation sous forme de balisage langage PMML (Predictive Model) du modèle d’exploration de données, pour les algorithmes qui prennent en charge cette fonctionnalité.|  
 |DMX\Gestion des modèles|Ajouter un modèle|Indique comment utiliser l'instruction DMX ALTER MINING MODEL STRUCTURE pour ajouter un modèle d'exploration de données.|  
 ||Supprimer le modèle|Indique comment utiliser l'instruction DMX DELETE * FROM MINING MODEL pour supprimer le contenu d'un modèle d'exploration de données spécifié.|  
 ||Supprimer les exemples de structure|Indique comment utiliser l'instruction DMX DELETE FROM MINING STRUCTURE pour supprimer les exemples de structure de modèle d'exploration de données.|  
@@ -194,10 +194,10 @@ SELECT * FROM $system.DISCOVER_SCHEMA_ROWSETS
 ||Effectuer l'apprentissage du modèle|Indique comment utiliser l'instruction DMX INSERT INTO MINING MODEL pour effectuer l'apprentissage d'un modèle d'exploration de données dans une structure précédemment formée.|  
 ||Effectuer l'apprentissage de la structure imbriquée|Indique comment associer l'instruction DMX INSERT INTO MINING STRUCTURE à la requête de données sources SHAPE pour effectuer l'apprentissage d'un modèle d'exploration de données contenant des colonnes imbriquées avec des données contenant des tables imbriquées, récupérées à l'aide d'une requête, à partir d'une source de données existante.|  
 ||Effectuer l'apprentissage de la structure|Indique comment associer l'instruction DMX INSERT INTO MINING STRUCTURE à la requête de données sources OPENQUERY pour effectuer l'apprentissage d'une structure d'exploration de données.|  
-|DMX\Requêtes de prédictions|Prédiction de base|Montre comment associer une instruction DMX SELECT FROM  *\<modèle >* instruction PREDICTION JOIN avec la requête de données sources OPENQUERY pour exécuter une requête de prédiction sur un modèle d’exploration de données à l’aide des données récupérées à l’aide d’une requête, d’un source de données existante.|  
-||Prédiction imbriquée|Montre comment associer une instruction DMX SELECT FROM  *\<modèle >* instruction PREDICTION JOIN avec les requêtes de données sources SHAPE et OPENQUERY pour exécuter une requête de prédiction sur un modèle d’exploration de données à l’aide de données qui contient imbriquées tables, récupérés à l’aide d’une requête, à partir d’une source de données existante.|  
-||Prédiction de singleton imbriqué|Montre comment utiliser une instruction DMX SELECT FROM  *\<modèle >* clause NATURAL PREDICTION JOIN pour exécuter une requête de prédiction sur un modèle d’exploration de données à l’aide d’une seule valeur, explicitement spécifiée dans la requête de prédiction, dans une colonne dont le nom correspond à une colonne dans le modèle d’exploration de données et qui contient un ensemble de valeurs dans une table imbriquée, créé à l’aide d’une instruction UNION dont les noms correspondent également à des colonnes imbriquées dans le modèle d’exploration de données.|  
-||Prédiction de singleton|Montre comment utiliser une instruction DMX SELECT FROM \<modèle > NATURAL PREDICTION JOIN d’instruction à exécuter sur un modèle d’exploration de données à l’aide d’une seule valeur, explicitement spécifiée dans la requête de prédiction, dans une colonne dont le nom correspond à une colonne dans une requête de prédiction le modèle d’exploration de données.|  
+|DMX\Requêtes de prédictions|Prédiction de base|Montre comment associer une instruction DMX SELECT FROM  *\<modèle >* instruction PREDICTION JOIN avec la requête de données sources OPENQUERY pour exécuter une requête de prédiction sur un modèle d’exploration de données à l’aide des données récupérées au moyen d’une requête, à partir d’un source de données existante.|  
+||Prédiction imbriquée|Montre comment associer une instruction DMX SELECT FROM  *\<modèle >* instruction PREDICTION JOIN avec les requêtes de données sources SHAPE et OPENQUERY pour exécuter une requête de prédiction sur un modèle d’exploration de données à l’aide de données qui contient imbriquées tables, récupérées à l’aide d’une requête, à partir d’une source de données existante.|  
+||Prédiction de singleton imbriqué|Montre comment utiliser une instruction DMX SELECT FROM  *\<modèle >* clause NATURAL PREDICTION JOIN pour exécuter une requête de prédiction sur un modèle d’exploration de données en utilisant une seule valeur, explicitement spécifiée dans la requête de prédiction, dans une colonne dont le nom correspond à une colonne dans le modèle d’exploration de données et qui contient un ensemble de valeurs dans une table imbriquée, créé à l’aide d’une instruction UNION dont les noms correspondent également à des colonnes imbriquées dans le modèle d’exploration de données.|  
+||Prédiction de singleton|Montre comment utiliser une instruction DMX SELECT FROM \<modèle > NATURAL PREDICTION JOIN d’instruction à exécuter une requête de prédiction sur un modèle d’exploration de données à l’aide d’une valeur unique, explicitement spécifiée dans la requête de prédiction, dans une colonne dont le nom correspond à une colonne dans le modèle d’exploration de données.|  
 ||Appel de procédure stockée|Indique comment utiliser l'instruction DMX CALL pour appeler une procédure stockée.|  
 |MDX\Expressions|Moyenne mobile-fixe|Montre comment utiliser l’expression MDX `ParallelPeriod` et `CurrentMember` fonctions avec un jeu naturellement ordonné pour créer une mesure calculée qui fournit une moyenne mobile d’une mesure sur un nombre fixe de périodes de temps contenu par une hiérarchie dans une dimension de temps.|  
 ||Moyenne mobile-variable|Montre comment utiliser l’expression MDX `CASE` instruction dans le `Avg` fonction permettant de créer une mesure calculée qui fournit une moyenne mobile d’une mesure sur un nombre variable de périodes de temps contenu par une hiérarchie dans une dimension de temps.|  
@@ -205,22 +205,22 @@ SELECT * FROM $system.DISCOVER_SCHEMA_ROWSETS
 ||Ratio to Parent|Montre comment utiliser l’expression MDX `Parent` fonction permettant de créer une mesure calculée qui représente un pourcentage d’une mesure pour chaque enfant d’un membre parent dans une hiérarchie spécifiée.|  
 ||Ratio to Total|Indique comment utiliser le membre Tous pour créer une mesure calculée qui représente un pourcentage d'une mesure pour chaque membre dans une hiérarchie spécifiée.|  
 |MDX\Requêtes|Requête de base|Indique une instruction MDX SELECT de base à partir de laquelle vous pouvez générer une requête MDX.|  
-||Requête KPI|Montre comment utiliser l’expression MDX `KPIValue` et `KPIGoal` fonctions pour récupérer les informations d’indicateur de performance clé dans une requête MDX.|  
+||Requête KPI|Montre comment utiliser l’expression MDX `KPIValue` et `KPIGoal` fonctions pour récupérer les informations d’indicateur de performance de performance clés dans une requête MDX.|  
 ||Requête sub-select|Indique comment créer une instruction MDX SELECT pour récupérer des informations d'un sous-cube défini par une autre instruction SELECT.|  
 ||Avec membre calculé|Indique comment utiliser la clause MDX WITH dans une instruction SELECT pour définir un membre calculé pour une requête MDX.|  
 ||Avec jeu nommé|Indique comment utiliser la clause MDX WITH dans une instruction SELECT pour définir un jeu nommé pour une requête MDX.|  
-|XMLA\Gestion|Backup|Montre comment utiliser le code XMLA `Backup` commande pour sauvegarder un [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] dans un fichier de base de données.|  
-||Annuler|Montre comment utiliser le code XMLA `Cancel` commande pour annuler toutes les opérations en cours d’exécution sur la session en cours (pour les utilisateurs autres que les administrateurs ou administrateurs de serveur), la base de données (pour les administrateurs) ou de l’instance (pour les administrateurs de serveur.)|  
+|XMLA\Gestion|Backup|Montre comment utiliser le code XMLA `Backup` commande pour sauvegarder un [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] base de données dans un fichier.|  
+||Annuler|Montre comment utiliser le code XMLA `Cancel` commande pour annuler toutes les opérations en cours d’exécution sur la session active (pour les utilisateurs autres que les administrateurs ou administrateurs de serveur), la base de données (pour les administrateurs) ou l’instance (pour les administrateurs de serveur.)|  
 ||Créer une base de données de partition distante|Indique comment utiliser la commande XMLA `Create` avec l'élément ASSL ([!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Scripting Language) Database pour créer une base de données [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] et une source de données pour stocker les partitions distantes.|  
 ||DELETE|Montre comment utiliser le code XMLA `Delete` commande pour supprimer une existante [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] base de données.|  
 ||Traiter la dimension|Indique comment utiliser la commande XMLA `Batch`, associée à l'élément `Parallel` et à la commande `Process`, pour mettre à jour les attributs d'une dimension en utilisant une opération de traitement par lots parallèle.|  
-||Traiter la partition|Montre comment utiliser le code XMLA `Batch` commande, combiné avec le `Parallel` élément et la `Process` commande pour traiter complètement une partition à l’aide d’une opération de traitement par lots parallèle.|  
+||Traiter la partition|Montre comment utiliser le code XMLA `Batch` commande, combiné avec le `Parallel` élément et le `Process` commande, pour traiter complètement une partition à l’aide d’une opération de traitement par lots parallèle.|  
 ||Restaurer|Montre comment utiliser le code XMLA `Restore` commande pour restaurer un [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] base de données à partir d’un fichier de sauvegarde existant.|  
-||Synchroniser|Montre comment utiliser le code XMLA `Synchronize` pour synchroniser une autre commande [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] base de données avec actuel [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] de base de données à l’aide de l’option SkipMembership pour la balise SynchronizeSecurity.|  
+||Synchroniser|Montre comment utiliser le code XMLA `Synchronize` commande pour synchroniser une autre [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] base de données avec actuel [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] de base de données à l’aide de l’option SkipMembership pour la balise SynchronizeSecurity.|  
 |XMLA\Ensembles de lignes du schéma|Découvrir les ensembles de lignes du schéma|Indique comment utiliser la méthode XMLA `Discover` pour récupérer le contenu de l'ensemble de lignes du schéma DISCOVER_SCHEMA_ROWSETS.|  
 |XMLA\État de serveur|Connexions|Montre comment utiliser le code XMLA `Discover` méthode pour récupérer le contenu de l’ensemble de lignes de schéma DISCOVER_CONNECTIONS.|  
 ||travaux|Montre comment utiliser le code XMLA `Discover` méthode pour récupérer le contenu de l’ensemble de lignes du schéma DISCOVER_JOBS.|  
-||Emplacements|Montre comment utiliser le code XMLA `Discover` méthode pour récupérer le contenu de l’ensemble de lignes de schéma DISCOVER_LOCATIONS, en spécifiant le chemin d’accès de l’emplacement des fichiers de sauvegarde.|  
+||Emplacements|Montre comment utiliser le code XMLA `Discover` méthode pour récupérer le contenu de l’ensemble de lignes de schéma DISCOVER_LOCATIONS, en spécifiant le chemin de l’emplacement des fichiers de sauvegarde.|  
 ||Verrous|Indique comment utiliser la méthode XMLA `Discover` pour récupérer le contenu de l'ensemble de lignes du schéma DISCOVER_LOCKS.|  
 ||Mémoire octroyée|Indique comment utiliser la méthode XMLA `Discover` pour récupérer le contenu de l'ensemble de lignes du schéma DISCOVER_MEMORYGRANT.|  
 ||Compteurs de performances|Montre comment utiliser le code XMLA `Discover` méthode pour récupérer le contenu de l’ensemble de lignes du schéma DISCOVER_PERFORMANCE_COUNTERS.|  

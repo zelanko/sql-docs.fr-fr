@@ -1,5 +1,5 @@
 ---
-title: Ajouter une Table imbriquée à une Structure d’exploration de données | Documents Microsoft
+title: Ajouter une Table imbriquée à une Structure d’exploration de données | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - tables [Analysis Services], nested
 - nested tables
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - adding nested tables
 ms.assetid: 6cf9c701-9cff-4fae-94c2-73796c24ef59
 caps.latest.revision: 26
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: d69932ebba84a08646dd1d8798f52fc2ff36dd66
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 868ef7af9d2116e2b148925a2a60bc01da4140bc
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36152725"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37177156"
 ---
 # <a name="add-a-nested-table-to-a-mining-structure"></a>ajouter une table imbriquée à une structure d'exploration de données
   Utilisez le Concepteur d'exploration de données pour ajouter une table imbriquée à une structure d'exploration de données après l'avoir créée avec l'Assistant Exploration de données.  

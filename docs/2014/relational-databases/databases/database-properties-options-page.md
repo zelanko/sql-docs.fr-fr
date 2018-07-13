@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.databaseproperties.options.f1
 ms.assetid: a3447987-5507-4630-ac35-58821b72354d
 caps.latest.revision: 65
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 6747eb3df75a585236e85de6bc0103241f5b6d8f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 30a0bf869529c81b86e05a9bf6a8be8b43573705
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36152631"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37187016"
 ---
 # <a name="database-properties-options-page"></a>Propriétés de la base de données (page Options)
   Utilisez cette page pour consulter ou modifier les options de la base de données sélectionnée. Pour plus d’informations sur les options disponibles sur cette page, consultez [Options ALTER DATABASE SET &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql-set-options).  
@@ -63,7 +63,7 @@ ms.locfileid: "36152631"
   
  Lorsque `False`, les requêtes qui initialisent une mise à jour automatique des statistiques obsolètes, patientez jusqu'à ce que les statistiques mises à jour peuvent être utilisées dans le plan d’optimisation de requête.  
   
- Cette option `True` n’a aucun effet, sauf si **mise à jour automatique des statistiques** est également défini sur `True`.  
+ Définir cette option sur `True` n’a aucun effet, sauf si **mise à jour automatique des statistiques** est également défini sur `True`.  
   
 ## <a name="containment"></a>Containment  
  Dans les bases de données autonomes, certains paramètres généralement configurés au niveau serveur peuvent l'être au niveau de la base de données.  
@@ -87,10 +87,10 @@ ms.locfileid: "36152631"
   
 ## <a name="cursor"></a>Curseur  
  **Fermer le curseur lors de l'activation de la validation**  
- Spécifiez si les curseurs doivent être fermés une fois que la transaction qui a ouvert le curseur est validée. Les valeurs possibles sont `True` et `False`. Si la valeur de cette option est `True`, tout curseur ouvert au moment où une transaction est validée ou restaurée est fermé. Si la valeur est `False`, ces curseurs restent ouverts lorsqu'une transaction est validée, Lorsque `False`, restauration d’une transaction ferme tous les curseurs à l’exception de celles définies en tant que type INSENSITIVE ou STATIC. Pour plus d’informations, consultez [SET CURSOR_CLOSE_ON_COMMIT &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-cursor-close-on-commit-transact-sql).  
+ Spécifiez si les curseurs doivent être fermés une fois que la transaction qui a ouvert le curseur est validée. Les valeurs possibles sont `True` et `False`. Si la valeur de cette option est `True`, tout curseur ouvert au moment où une transaction est validée ou restaurée est fermé. Si la valeur est `False`, ces curseurs restent ouverts lorsqu'une transaction est validée, Lorsque `False`, restauration d’une transaction ferme tous les curseurs à l’exception de celles définies en tant que INSENSITIVE ou STATIC. Pour plus d’informations, consultez [SET CURSOR_CLOSE_ON_COMMIT &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-cursor-close-on-commit-transact-sql).  
   
  **Curseur par défaut**  
- Spécifiez le comportement du curseur par défaut. Si la valeur de cette option est `True`, les déclarations de curseur ont pour valeur par défaut LOCAL. Lorsque `False`, [!INCLUDE[tsql](../../includes/tsql-md.md)] les curseurs par défaut global.  
+ Spécifiez le comportement du curseur par défaut. Si la valeur de cette option est `True`, les déclarations de curseur ont pour valeur par défaut LOCAL. Lorsque `False`, [!INCLUDE[tsql](../../includes/tsql-md.md)] curseurs par défaut pour GLOBAL.  
   
 ## <a name="filestream"></a>FILESTREAM  
  **Nom du répertoire FILESTREAM**  
@@ -110,24 +110,24 @@ ms.locfileid: "36152631"
  Spécifiez si le remplissage ANSI est activé ou désactivé. Les valeurs autorisées sont `True` (activé) et `False` (désactivé). Pour plus d’informations, consultez [SET ANSI_PADDING &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-ansi-padding-transact-sql).  
   
  **Avertissements ANSI activés**  
- Spécifiez le comportement compatible avec la norme ISO de plusieurs conditions d'erreur. Lorsque `True`, un message d’avertissement est généré si des valeurs null apparaissent dans des fonctions d’agrégation (telles que SUM, AVG, MAX, MIN, STDEV, STDEVP, VAR, VARP ou COUNT). Lorsque `False`, aucun avertissement n’est émis. Pour plus d’informations, consultez [SET ANSI_WARNINGS &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-ansi-warnings-transact-sql).  
+ Spécifiez le comportement compatible avec la norme ISO de plusieurs conditions d'erreur. Lorsque `True`, un message d’avertissement est généré si des valeurs null apparaissent dans les fonctions d’agrégation (par exemple, SUM, AVG, MAX, MIN, STDEV, STDEVP, VAR, VARP ou COUNT). Lorsque `False`, aucun avertissement n’est émis. Pour plus d’informations, consultez [SET ANSI_WARNINGS &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-ansi-warnings-transact-sql).  
   
  **Annulation arithmétique activée**  
  Spécifiez si l'option d'annulation arithmétique est activée ou non pour la base de données. Les valeurs possibles sont `True` et `False`. Si la valeur de cette option est `True`, un dépassement de capacité ou une division par zéro provoquent l'arrêt du traitement de la requête ou du lot d'instructions. Si l'erreur se produit dans une transaction, cette dernière est restaurée. Si la valeur de cette option est `False`, un message d'avertissement s'affiche, mais le traitement de la requête, du lot d'instructions ou de la transaction se poursuit, comme s'il n'y avait pas d'erreur. Pour plus d’informations, consultez [SET ARITHABORT &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-arithabort-transact-sql).  
   
  **La concaténation de la valeur NULL donne NULL**  
- Spécifiez le comportement lorsque les valeurs NULL sont concaténées. Lorsque la valeur de propriété est `True`, `string` + NULL renvoie la valeur NULL. Lorsque `False`, le résultat est `string`. Pour plus d’informations, consultez [SET CONCAT_NULL_YIELDS_NULL &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-concat-null-yields-null-transact-sql).  
+ Spécifiez le comportement lorsque les valeurs NULL sont concaténées. Lorsque la valeur de propriété est `True`, `string` + NULL retourne NULL. Lorsque `False`, le résultat est `string`. Pour plus d’informations, consultez [SET CONCAT_NULL_YIELDS_NULL &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-concat-null-yields-null-transact-sql).  
   
  **Chaînage des propriétés des bases de données croisées activé**  
- Cette valeur en lecture seule indique si le chaînage des propriétés des bases de données croisées a été activé. Lorsque `True`, la base de données peut être la source ou la cible d’une chaîne de bases de données croisées. Utilisez l'instruction ALTER DATABASE pour définir cette propriété.  
+ Cette valeur en lecture seule indique si le chaînage des propriétés des bases de données croisées a été activé. Lorsque `True`, la base de données peut être la source ou la cible d’un chaînage des propriétés de bases de données croisées. Utilisez l'instruction ALTER DATABASE pour définir cette propriété.  
   
  **Optimisation des corrélations de dates activée**  
- Lorsque `True`, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] conserve les statistiques de corrélation entre deux tables dans la base de données qui sont liées par une contrainte FOREIGN KEY et comportent `datetime` colonnes.  
+ Lorsque `True`, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] conserve les statistiques de corrélation entre deux tables quelconques de la base de données qui sont liées par une contrainte FOREIGN KEY et comportent `datetime` colonnes.  
   
  Lorsque `False`, statistiques de corrélation ne sont pas conservées.  
   
  **Abandon en cas d'arrondi numérique**  
- Spécifiez comment la base de données gère les erreurs d'arrondi. Les valeurs possibles sont `True` et `False`. Si la valeur de cette option est `True`, une erreur est générée lorsqu'une perte de précision survient dans une expression. Lorsque `False`, les pertes de précision ne génèrent pas de messages d’erreur et le résultat est arrondi à la précision de la colonne ou la variable contenant le résultat. Pour plus d’informations, consultez [SET NUMERIC_ROUNDABORT &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-numeric-roundabort-transact-sql).  
+ Spécifiez comment la base de données gère les erreurs d'arrondi. Les valeurs possibles sont `True` et `False`. Si la valeur de cette option est `True`, une erreur est générée lorsqu'une perte de précision survient dans une expression. Lorsque `False`, pertes de précision ne génèrent pas de messages d’erreur et le résultat est arrondi à la précision de la colonne ou la variable contenant le résultat. Pour plus d’informations, consultez [SET NUMERIC_ROUNDABORT &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-numeric-roundabort-transact-sql).  
   
  **Paramétrage**  
  Si **SIMPLE**est spécifié, les requêtes sont paramétrables en fonction du comportement par défaut de la base de données. Si **FORCED**est spécifié, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] paramètre toutes les requêtes de la base de données.  
@@ -139,13 +139,13 @@ ms.locfileid: "36152631"
  Spécifiez si les déclencheurs peuvent être activés par d'autres déclencheurs. Les valeurs possibles sont `True` et `False`. Lorsque la valeur `True`, cela permet l’activation récursive des déclencheurs. Lorsque la valeur `False`, seule récursivité directe est désactivée. Pour désactiver la récurrence indirecte, affectez la valeur 0 à l'option de serveur déclencheurs imbriqués à l'aide de sp_configure. Pour plus d’informations, consultez [Créer des déclencheurs imbriqués](../triggers/create-nested-triggers.md).  
   
  `Trustworthy`  
- Lors de l’affichage `True`, cette option en lecture seule indique que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] autorise l’accès aux ressources en dehors de la base de données dans un contexte d’emprunt d’identité établi à l’intérieur de la base de données. Les contextes d'emprunt d'identité peuvent être établis dans la base de données à l'aide de l'instruction EXECUTE AS ou de l'une des clauses EXECUTE AS des modules de base de données.  
+ Lors de l’affichage `True`, cette option en lecture seule indique que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] autorise l’accès aux ressources en dehors de la base de données dans un contexte d’emprunt d’identité établi au sein de la base de données. Les contextes d'emprunt d'identité peuvent être établis dans la base de données à l'aide de l'instruction EXECUTE AS ou de l'une des clauses EXECUTE AS des modules de base de données.  
   
  Pour profiter de l'accès, le propriétaire de la base de données doit également bénéficier de l'autorisation AUTHENTICATE SERVER au niveau du serveur.  
   
  Cette propriété autorise également la création et l'exécution d'assemblys d'accès non sécurisés et externes dans la base de données. Il ne suffit pas d'affecter la valeur `True` à cette propriété ; le propriétaire de la base de données doit également avoir l'autorisation EXTERNAL ACCESS ASSEMBLY ou UNSAFE ASSEMBLY au niveau du serveur.  
   
- Par défaut, toutes les bases de données utilisateur et toutes les bases de données système (à l’exception de **MSDB**) cette propriété définie sur `False`. La valeur ne peut pas être modifiée pour les bases de données **model** et **tempdb** .  
+ Par défaut, toutes les bases de données utilisateur et toutes les bases de données système (à l’exception de **MSDB**) cette propriété est définie `False`. La valeur ne peut pas être modifiée pour les bases de données **model** et **tempdb** .  
   
  TRUSTWORTHY a la valeur `False` dès qu'une base de données est attachée au serveur.  
   

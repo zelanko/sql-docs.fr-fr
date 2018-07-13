@@ -1,5 +1,5 @@
 ---
-title: Élément Synchronize (XMLA) | Documents Microsoft
+title: Élément Synchronize (XMLA) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -24,18 +24,18 @@ helpviewer_keywords:
 - Synchronize command
 ms.assetid: 9401323c-feff-409a-a9da-94aee47e0563
 caps.latest.revision: 15
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: 367d237cab7ea63b85e000433742d866466b3f62
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: 3f88b07721d391c1f834ed93d21039753728081d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36143776"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37187096"
 ---
 # <a name="synchronize-element-xmla"></a>Élément Synchronize (XMLA)
-  Synchronise un [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] base de données avec une autre base de données existante.  
+  Synchronise une [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] base de données avec une autre base de données existante.  
   
 ## <a name="syntax"></a>Syntaxe  
   

@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: c2687e39-dc20-494f-a707-2aa29f4c329e
 caps.latest.revision: 15
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 399c6743f302bd616fe0a232527fcb5fc0af62ab
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: 874a47c99ff422484a25be756d65f4b6cbf7e051
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36152360"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37199669"
 ---
 # <a name="create-a-model-deployment-package-by-using-mdsmodeldeploy"></a>Créer un package de déploiement de modèle à l'aide de MDSModelDeploy
   Dans [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], utilisez l’outil MDSModelDeploy pour créer un package. Selon les commandes spécifiées, le package peut contenir :  
@@ -30,7 +30,7 @@ ms.locfileid: "36152360"
   
  Si vous souhaitez déployer un package qui contient uniquement des objets de modèle, vous pouvez utiliser l'Assistant Déploiement de modèle dans l'application Web [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] à la place. Pour plus d’informations, consultez [Créer un package de déploiement de modèle à l’aide de l’Assistant](../../2014/master-data-services/create-a-model-deployment-package-by-using-the-wizard.md).  
 > [!NOTE]  
-> Cette version de l’outil MDSModelDeploy ne peut pas utiliser plusieurs gigaoctets (Go) de mémoire. Lorsque vous créez ou que vous déployez des modèles de grande taille à l’aide **modèles objets et données** option, vous pouvez rencontrer « mémoire insuffisante » ou « Flux était trop long » des erreurs. Pour résoudre ce problème, utilisez MDS intermédiaire pour déployer les données ; mise à niveau ou à MDS 2016 ou version ultérieure, qui inclut la version mise à jour de l’outil MDSModelDeploy.
+> Cette version de l’outil MDSModelDeploy ne pouvez pas utiliser plusieurs gigaoctets (Go) de mémoire. Lorsque vous créez ou que vous déployez les modèles volumineux à l’aide de **objets et les données de modèle** option, vous pouvez rencontrer des erreurs de « Stream était trop long » ou de « mémoire insuffisante ». Pour résoudre ce problème, utilisez MDS intermédiaire pour déployer les données ; mise à niveau ou à MDS 2016 ou version ultérieure, qui inclut la version mise à jour de l’outil MDSModelDeploy.
 ## <a name="prerequisites"></a>Prérequis  
  Pour effectuer cette procédure :  
   

@@ -1,5 +1,5 @@
 ---
-title: Éditeur de formulaire de membre (onglet calculs, Concepteur de Cube) calculé (Analysis Services - données multidimensionnelles) | Documents Microsoft
+title: Éditeur de formulaire de membre (onglet calculs, Concepteur de Cube) calculé (Analysis Services - données multidimensionnelles) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.cubeeditor.calculationexpression.calculatedmember.f1
 ms.assetid: f7719b9e-b1e6-4792-90a6-30d9d8eb1196
 caps.latest.revision: 25
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: a697e65ae650726e59a2ddb515746f5ef1ebb63e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: b49b060b8c02219e9f1b8448700ce7f9b065bd5d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36144408"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37218369"
 ---
 # <a name="calculated-member-form-editor-calculations-tab-cube-designer-analysis-services---multidimensional-data"></a>Éditeur de formulaire de membre calculé (onglet Calculs, Concepteur de cube) (Analysis Services - Données multidimensionnelles)
   Utilisez le volet **Éditeur de formulaire de membre calculé** de l'onglet **Calculs** dans le Concepteur de cube pour créer et modifier un membre calculé.  
@@ -69,7 +69,7 @@ ms.locfileid: "36144408"
  Sélectionnez le nom de la mesure utilisée pour résoudre les requêtes NON EMPTY dans la chaîne MDX du membre calculé. Si la propriété **Comportement non vide** est vide, le membre calculé doit être évalué à plusieurs reprises pour déterminer si un membre est vide. Si la propriété **Comportement non vide** contient le nom d'une mesure, le membre calculé est considéré comme vide si la mesure spécifiée est vide.  
   
 > [!WARNING]  
->  Cette propriété est déconseillée. Évitez de l'utiliser. Consultez [Deprecated Analysis Services Features in SQL Server 2014](deprecated-analysis-services-features-in-sql-server-2014.md) pour plus d’informations.  
+>  Cette propriété est déconseillée. Évitez de l'utiliser. Consultez [Analysis Services déconseillées dans SQL Server 2014](deprecated-analysis-services-features-in-sql-server-2014.md) pour plus d’informations.  
   
  **Expressions de couleur**  
  Développez cette branche pour afficher les options **Couleur avant** et **Couleur d’arrière-plan** .  

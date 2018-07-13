@@ -1,5 +1,5 @@
 ---
-title: Élément ClearCache (XMLA) | Documents Microsoft
+title: Élément ClearCache (XMLA) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -24,15 +24,15 @@ helpviewer_keywords:
 - ClearCache command
 ms.assetid: e154b489-e443-469a-9490-43c62da62e11
 caps.latest.revision: 15
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: abf566bd7be4f1a0aaba504acc299d266f3fe2ae
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: 37b43439705b3288530a919f77da7b0ead461b35
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36152205"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37188966"
 ---
 # <a name="clearcache-element-xmla"></a>Élément ClearCache (XMLA)
   Efface le cache mémoire pour l’objet spécifié sur un [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] instance.  
@@ -64,7 +64,7 @@ ms.locfileid: "36152205"
 |Éléments enfants|[Objet](../xml-elements-properties/object-element-xmla.md)|  
   
 ## <a name="remarks"></a>Notes  
- Le `ClearCache` commande vide le cache pour une base de données spécifiée, la dimension, cube, groupe de mesures ou partition sur une [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] instance. Si un objet autre qu'une base de données, dimension, cube, groupe de mesures ou partition est spécifié dans l'élément `Object`, une erreur se produit.  
+ Le `ClearCache` commande vide le cache pour une base de données spécifiée, une dimension, un cube, un groupe de mesures ou une partition sur un [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] instance. Si un objet autre qu'une base de données, dimension, cube, groupe de mesures ou partition est spécifié dans l'élément `Object`, une erreur se produit.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Commandes &#40;XMLA&#41;](xml-elements-commands.md)  

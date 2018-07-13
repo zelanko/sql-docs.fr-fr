@@ -1,5 +1,5 @@
 ---
-title: Utilitaire ssbdiagnose (Service Broker) | Documents Microsoft
+title: Utilitaire (Service Broker) ssbdiagnose | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Service Broker, runtime reports
 - Service Broker, command prompt utilities
@@ -26,15 +26,15 @@ helpviewer_keywords:
 - ssbdiagnose
 ms.assetid: 0c1636e8-a3db-438e-be4c-1ea40d1f4877
 caps.latest.revision: 44
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 37b52dd752b04c9aacb6ee49e1dbc2d4c590332a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: fc76263bfc2be9d35839444b8fcd2cf8c116bc66
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36152039"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37172330"
 ---
 # <a name="ssbdiagnose-utility-service-broker"></a>Utilitaire ssbdiagnose (Service Broker)
   L’utilitaire **ssbdiagnose** signale des problèmes rencontrés dans des conversations [!INCLUDE[ssSB](../../includes/sssb-md.md)] ou dans la configuration des services [!INCLUDE[ssSB](../../includes/sssb-md.md)] . Des vérifications de configuration peuvent réalisées pour deux services ou pour un seul. Les problèmes sont signalés soit dans la fenêtre d’invite de commandes par un texte explicite, soit dans un fichier XML mis en forme qui peut être redirigé vers un fichier ou un autre programme.  
@@ -187,21 +187,21 @@ WHERE database_id = DB_ID();
  *conversation_handle*  
  Identificateur unique qui identifie un point de terminaison de conversation dans une application. Les descripteurs de conversation sont uniques à un point de terminaison d'une conversation, les points de terminaison initiateur et cible ont des descripteurs de conversation distincts.  
   
- Descripteurs de conversation sont retournés aux applications par le *@dialog_handle* paramètre de la **BEGIN DIALOG** instruction et le `conversation_handle` jeu de colonnes dans le résultat d’un **réception**  instruction.  
+ Descripteurs de conversation sont retournés aux applications par le *@dialog_handle* paramètre de la **BEGIN DIALOG** instruction et le `conversation_handle` jeu de colonnes dans le résultat d’une **réception**  instruction.  
   
- Les descripteurs de conversation sont signalés dans le `conversation_handle` colonne de la **sys.transmission_queue** et **sys.conversation_endpoints** affichages catalogue.  
+ Descripteurs de conversation sont signalés dans le `conversation_handle` colonne de la **sys.transmission_queue** et **sys.conversation_endpoints** affichages catalogue.  
   
  *conversation_group_id*  
  Identificateur unique qui identifie un groupe de conversations.  
   
- ID de groupe de conversations sont retournés aux applications par le *@conversation_group_id* paramètre de la **GET CONVERSATION GROUP** instruction et la `conversation_group_id` colonne du jeu de résultats d’une **Réception** instruction.  
+ ID de groupe de conversations sont retournés aux applications par le *@conversation_group_id* paramètre de la **GET CONVERSATION GROUP** instruction et le `conversation_group_id` colonne du jeu de résultats d’une **Réception** instruction.  
   
- ID de groupe de conversations sont signalés dans le `conversation_group_id` les colonnes de la **sys.conversation_groups** et **sys.conversation_endpoints** affichages catalogue.  
+ ID de groupe de conversations sont signalés dans le `conversation_group_id` colonnes de la **sys.conversation_groups** et **sys.conversation_endpoints** affichages catalogue.  
   
  *conversation_id*  
  Identificateur unique qui identifie une conversation. Les ID de conversation sont les mêmes pour les points de terminaison initiateur et cible d'une conversation.  
   
- ID de conversation sont signalés dans le `conversation_id` colonne de la **sys.conversation_endpoints** affichage catalogue.  
+ ID de conversation sont signalés dans le `conversation_id` colonne de la **sys.conversation_endpoints** vue de catalogue.  
   
  **-TIMEOUT** *intervalle_délai_d’attente*  
  Spécifie la durée d’exécution du rapport **RUNTIME** en secondes. Si vous ne spécifiez pas **-TIMEOUT** , le rapport d’exécution s’exécute indéfiniment. **-TIMEOUT** est utilisé uniquement sur les rapports **RUNTIME** , et non sur les rapports **CONFIGURATION** . Utilisez Ctrl+C pour quitter **ssbdiagnose** si **-TIMEOUT** n’a pas été spécifié, ou pour terminer un rapport d’exécution avant**-** l’expiration du délai d’attente. *intervalle_délai_d’attente* doit être un nombre compris entre 1 et 2 147 483 647.  

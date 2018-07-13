@@ -1,5 +1,5 @@
 ---
-title: Rubriques de procédures relatives à l’installation | Documents Microsoft
+title: Rubriques de procédures d’installation | Microsoft Docs
 ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - installation [SQL Server]
 - installing SQL Server, how-to topics
 ms.assetid: 59de41e7-557f-462a-8914-53ec35496baa
 caps.latest.revision: 17
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 7d9159ce105c284dd9e5c66ac3127bfa0df9713c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: f4fbf9a77563d670713836fb2dea7d248756bdb8
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36153376"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37170257"
 ---
 # <a name="installation-how-to-topics"></a>Rubriques de procédures relatives à l'installation
   Utilisez les rubriques suivantes pour installer [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
@@ -33,14 +33,14 @@ ms.locfileid: "36153376"
 |-----------|-----------------|  
 |[Installer SQL Server 2014 à partir de l’Assistant Installation &#40;le programme d’installation&#41;](../../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md)|Rubrique de procédure pour une installation [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] typique à l'aide de l'Assistant Installation.|  
 |[Installer SQL Server 2014 à partir de l’invite de commandes](../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md)|Rubrique de procédure qui fournit un exemple de syntaxe et de paramètres d'installation pour exécuter une installation sans assistance.|  
-|[Installer SQL Server 2014 à l’aide d’un fichier de Configuration](../../database-engine/install-windows/install-sql-server-using-a-configuration-file.md)|Rubrique de procédure qui fournit un exemple de syntaxe et de paramètres d'installation pour exécuter une installation à l'aide d'un fichier de configuration.|  
+|[Installer SQL Server 2014 à l’aide d’un fichier de configuration](../../database-engine/install-windows/install-sql-server-using-a-configuration-file.md)|Rubrique de procédure qui fournit un exemple de syntaxe et de paramètres d'installation pour exécuter une installation à l'aide d'un fichier de configuration.|  
 |[Installer PowerPivot pour SharePoint 2010](../../../2014/sql-server/install/install-powerpivot-for-sharepoint-2010.md)|Rubrique de procédure qui fournit des liens vers des procédures supplémentaires relatives à l'installation de [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] dans différentes configurations du serveur SharePoint.|  
 |[Ajouter des fonctionnalités à une Instance de SQL Server 2014 &#40;le programme d’installation&#41;](../../database-engine/install-windows/add-features-to-an-instance-of-sql-server-setup.md)|Rubrique de procédure pour mettre à jour les composants d'une instance existante de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].|  
-|[Supprimer une Installation SQL Server 2014](../../database-engine/install-windows/repair-a-failed-sql-server-installation.md)|Rubrique de procédure pour réparer une installation endommagée de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] .|  
+|[Ignorer une installation de SQL Server 2014](../../database-engine/install-windows/repair-a-failed-sql-server-installation.md)|Rubrique de procédure pour réparer une installation endommagée de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] .|  
 |[Renommer un ordinateur qui héberge une instance autonome de SQL Server](../../database-engine/install-windows/rename-a-computer-that-hosts-a-stand-alone-instance-of-sql-server.md)|Rubrique de procédure pour mettre à jour les métadonnées système stockées dans sys.servers.|  
 |[Afficher et lire les fichiers journaux d'installation de SQL Server](../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md)|Rubrique de procédure pour rechercher des erreurs dans les fichiers journaux d'installation.|  
 |[Désinstaller une instance existante de SQL Server &#40;programme d’installation&#41;](../../../2014/sql-server/install/uninstall-an-existing-instance-of-sql-server-setup.md)|Rubrique de procédure pour désinstaller manuellement une instance autonome de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
-|[Rubriques de procédures de mise à niveau](../../../2014/sql-server/install/upgrade-how-to-topics.md)|Rubriques de procédures pour mettre à niveau une instance de cluster ou autonome de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
+|[Rubriques de procédures relatives à la mise en niveau](../../../2014/sql-server/install/upgrade-how-to-topics.md)|Rubriques de procédures pour mettre à niveau une instance de cluster ou autonome de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
   
 ## <a name="see-also"></a>Voir aussi  
  [Planification d'une installation SQL Server](../../../2014/sql-server/install/planning-a-sql-server-installation.md)   

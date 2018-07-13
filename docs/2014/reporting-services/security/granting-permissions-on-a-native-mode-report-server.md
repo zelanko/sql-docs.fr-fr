@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - roles [Reporting Services], creating
 - authorization [Reporting Services]
@@ -25,13 +25,13 @@ ms.assetid: 260dc2e9-546c-4f04-9fa1-977e23c9d68c
 caps.latest.revision: 59
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: d889c606718bca0f917322cbf031f9c89c0ede3b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: c9628b3e6393c6fe33bcff6b5bf14933b46c2dd2
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36144210"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37260125"
 ---
 # <a name="granting-permissions-on-a-native-mode-report-server"></a>Octroi d'autorisations sur un serveur de rapports en mode natif
   SQL Server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] utilise l'autorisation basée sur les rôles et un sous-système d'authentification pour déterminer qui est habilité à effectuer des opérations et à accéder aux éléments d'un serveur de rapports. L'autorisation basée sur les rôles catégorise en rôles l'ensemble des actions qu'un utilisateur ou groupe peut effectuer. L'authentification repose sur l'authentification Windows intégrée ou sur un module d'authentification personnalisé que vous fournissez. Vous pouvez utiliser des rôles prédéfinis ou personnalisés avec chacun de ces types d'authentifications.  
@@ -43,7 +43,7 @@ ms.locfileid: "36144210"
   
  Pour accorder l'accès aux éléments et aux opérations du serveur de rapports, suivez les instructions suivantes :  
   
-1.  Examinez les rôles prédéfinis pour déterminer si vous pouvez les utiliser en l'état. Si vous devez ajuster les tâches ou définir des rôles supplémentaires, vous devez le faire avant de commencer à assigner des utilisateurs à des rôles spécifiques. Pour plus d’informations sur chaque rôle, consultez [de rôles prédéfinis](role-definitions-predefined-roles.md).  
+1.  Examinez les rôles prédéfinis pour déterminer si vous pouvez les utiliser en l'état. Si vous devez ajuster les tâches ou définir des rôles supplémentaires, vous devez le faire avant de commencer à assigner des utilisateurs à des rôles spécifiques. Pour plus d’informations sur chaque rôle, consultez [rôles prédéfinis](role-definitions-predefined-roles.md).  
   
 2.  Identifiez les utilisateurs et les groupes qui doivent accéder au serveur de rapports, et à quel niveau. Le rôle **Lecteur** ou le rôle **Générateur de rapports** doit être attribué à la plupart des utilisateurs. Le rôle **Serveur de publication** doit être attribué à un nombre restreint d'utilisateurs. Le rôle **Gestionnaire de contenu**ne doit être attribué qu'à un nombre très limité d'utilisateurs.  
   
@@ -72,7 +72,7 @@ ms.locfileid: "36144210"
 |Outil|Tâches|  
 |----------|-----------|  
 |Management Studio – Permet d'afficher, modifier, créer et supprimer des définitions de rôles.|[Créer, supprimer ou modifier un rôle &#40;Management Studio&#41;](role-definitions-create-delete-or-modify.md)|  
-|Gestionnaire de rapports – Permet d'assigner des utilisateurs et des groupes aux rôles.|[Cet accès à un serveur de rapports &#40;le Gestionnaire de rapports&#41;](grant-user-access-to-a-report-server.md)<br /><br /> [Modifier ou supprimer une affectation de rôle &#40;Gestionnaire de rapports&#41;](role-assignments-modify-or-delete.md)|  
+|Gestionnaire de rapports – Permet d'assigner des utilisateurs et des groupes aux rôles.|[Accordez à l’utilisateur l’accès à un serveur de rapports &#40;le Gestionnaire de rapports&#41;](grant-user-access-to-a-report-server.md)<br /><br /> [Modifier ou supprimer une affectation de rôle &#40;Gestionnaire de rapports&#41;](role-assignments-modify-or-delete.md)|  
   
 ## <a name="see-also"></a>Voir aussi  
  [Rôles prédéfinis](role-definitions-predefined-roles.md)   

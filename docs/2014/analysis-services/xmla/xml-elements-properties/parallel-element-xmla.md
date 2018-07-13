@@ -1,5 +1,5 @@
 ---
-title: Élément (XMLA) en parallèle | Documents Microsoft
+title: En parallèle, élément (XMLA) | Microsoft Docs
 ms.custom: ''
 ms.date: 2015-12-07
 ms.prod: sql-server-2014
@@ -24,18 +24,18 @@ helpviewer_keywords:
 - Parallel element
 ms.assetid: 04726d94-37ee-460b-9744-d62b45f536b9
 caps.latest.revision: 12
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: b139996598786827c1eef20cbe099473e725a416
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: b514732345cc8c4c7c0bc2c2f4f3fa0ad2d75993
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36152883"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37161020"
 ---
 # <a name="parallel-element-xmla"></a>Parallel Element (XMLA)
-  Identifie les commandes à exécuter en parallèle par le parent [lot](../xml-elements-commands/batch-element-xmla.md) commande.  
+  Identifie les commandes à exécuter en parallèle par le parent [Batch](../xml-elements-commands/batch-element-xmla.md) commande.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -63,13 +63,13 @@ ms.locfileid: "36152883"
 |Relation|Élément|  
 |------------------|-------------|  
 |Éléments parents|[Traitement par lots](../xml-elements-commands/batch-element-xmla.md)|  
-|Éléments enfants|[Élément Process](../xml-elements-commands/process-element-xmla.md)|  
+|Éléments enfants|[Process, élément](../xml-elements-commands/process-element-xmla.md)|  
   
 ## <a name="attributes"></a>Attributs  
   
 |Attribute|Description|  
 |---------------|-----------------|  
-|maxParallel|Facultatif `Integer` attribut. Indique le nombre maximal de threads sur lesquels exécuter des commandes en parallèle. Si non spécifié ou la valeur 0, l’instance de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] détermine un nombre optimal de threads en fonction du nombre de processeurs disponibles sur l’ordinateur.|  
+|maxParallel|Facultatif `Integer` attribut. Indique le nombre maximal de threads sur lesquels exécuter des commandes en parallèle. Si non spécifié ou défini sur 0, l’instance de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] détermine un nombre optimal de threads en fonction du nombre de processeurs disponibles sur l’ordinateur.|  
   
 ## <a name="remarks"></a>Notes  
   

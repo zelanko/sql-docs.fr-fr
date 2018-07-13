@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - memory [Reporting Services]
 - memory thresholds [Reporting Services]
@@ -16,13 +16,13 @@ ms.assetid: ac7ab037-300c-499d-89d4-756f8d8e99f6
 caps.latest.revision: 49
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: dbeb12e4fcf59b7336d9a1cf05e0887cf118d4ff
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 6958198b0482c792a952efea5c3792a182df8564
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36144453"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37198278"
 ---
 # <a name="configure-available-memory-for-report-server-applications"></a>Configurer la mémoire disponible pour les applications du serveur de rapports
   Bien que [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] puisse utiliser toute la mémoire disponible, vous pouvez substituer le comportement par défaut en configurant une limite supérieure pour la quantité totale des ressources de mémoire allouées aux applications serveur [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] . Vous pouvez également définir des seuils qui obligent le serveur de rapports à modifier son mode de traitement des requêtes et leur classement par ordre de priorité, selon que la sollicitation de la mémoire est faible, moyenne ou élevée. Face à de faibles niveaux de sollicitation de la mémoire, le serveur de rapports répond en donnant une priorité légèrement supérieure au traitement de rapport interactif ou à la demande. Face à des niveaux élevés de sollicitation de la mémoire, le serveur de rapports utilise plusieurs techniques pour rester opérationnel en utilisant les ressources limitées dont il dispose.  
@@ -56,11 +56,11 @@ ms.locfileid: "36144453"
  La modification des paramètres par défaut est utile si le modèle de charge inclut des pics. Lorsqu'il y a des pics soudains dans la charge de traitement, le serveur de rapports peut passer très rapidement de l'absence de sollicitation de la mémoire aux échecs d'allocation de mémoire. Cela peut se produire si plusieurs instances simultanées d'un rapport utilisant beaucoup de mémoire démarrent en même temps. Pour gérer ce type de charge de traitement, le serveur de rapports doit pouvoir répondre le plus rapidement possible à une sollicitation moyenne ou élevée de la mémoire, afin d'entraîner un ralentissement du traitement. Cela permet l'exécution d'un plus grand nombre de requêtes. Pour ce faire, vous devez baisser la valeur de `MemorySafetyMargin` afin que la zone de réponse à une faible sollicitation de la mémoire soit plus petite que les autres zones. Ainsi, les réponses aux sollicitations moyenne et élevée de la mémoire se produiront plus tôt.  
   
 ## <a name="configuration-settings-for-memory-management"></a>Paramètres de configuration pour la gestion de la mémoire  
- Les paramètres de configuration qui contrôlent l’allocation de mémoire pour le serveur de rapports incluent `WorkingSetMaximum`, `WorkingSetMinimum`, `MemorySafetyMargin`, et `MemoryThreshold`.  
+ Incluent des paramètres de configuration qui contrôlent l’allocation de mémoire pour le serveur de rapports `WorkingSetMaximum`, `WorkingSetMinimum`, `MemorySafetyMargin`, et `MemoryThreshold`.  
   
 -   `WorkingSetMaximum` et `WorkingSetMinimum` définissent la plage de mémoire disponible. Vous pouvez configurer ces paramètres pour définir une plage de mémoire disponible pour les applications du serveur de rapports. Cela peut être utile si vous hébergez plusieurs applications sur le même ordinateur et si vous réalisez que le serveur de rapports utilise une quantité disproportionnée de ressources système par rapport aux autres applications du même ordinateur.  
   
--   `MemorySafetyMargin` et `MemoryThreshold` définissent les limites des niveaux élevés de sollicitation de la mémoire, moyen et faible. Pour chaque état, [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] prend une action corrective pour garantir des demandes de traitement et d’autres rapports sont gérés de façon appropriée par rapport à la quantité de mémoire disponible sur l’ordinateur. Vous pouvez spécifier les paramètres de configuration qui déterminent la limite entre les niveaux faible, moyen et élevé de sollicitation de la mémoire.  
+-   `MemorySafetyMargin` et `MemoryThreshold` définissent les limites des faible, moyen et des niveaux élevés de sollicitation de la mémoire. Pour chaque état, [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] effectue une action corrective pour garantir des demandes de traitement et d’autres rapports sont gérées de manière appropriée par rapport à la quantité de mémoire disponible sur l’ordinateur. Vous pouvez spécifier les paramètres de configuration qui déterminent la limite entre les niveaux faible, moyen et élevé de sollicitation de la mémoire.  
   
      Bien que vous puissiez modifier les paramètres de configuration, cela n'améliorera pas les performances de traitement des rapports. La modification des paramètres de configuration n'est utile que si les requêtes sont supprimées avant la fin de leur exécution. La meilleure méthode pour améliorer les performances du serveur est de déployer le serveur de rapports ou des applications individuelles du serveur de rapports sur des ordinateurs dédiés.  
   
@@ -72,7 +72,7 @@ ms.locfileid: "36144453"
   
 |Élément|Description|  
 |-------------|-----------------|  
-|`WorkingSetMaximum`|Spécifie un seuil de mémoire au-delà duquel aucune nouvelle requête d'allocation de mémoire n'est accordée aux applications du serveur de rapports.<br /><br /> Par défaut, le serveur de rapports affecte à `WorkingSetMaximum` la quantité de mémoire disponible sur l'ordinateur. Cette valeur est détectée lorsque le service démarre.<br /><br /> Ce paramètre n'apparaît pas dans le fichier RSReportServer.config à moins que vous ne l'ajoutiez manuellement. Si vous souhaitez que le serveur de rapports utilise moins de mémoire, vous pouvez modifier le fichier RSReportServer.config en ajoutant l'élément et la valeur. La plage de valeurs valides s'étend de 0 à un entier maximal. Cette valeur est exprimée en kilo-octets.<br /><br /> Lorsque la valeur de `WorkingSetMaximum` est atteinte, le serveur de rapports n'accepte plus de nouvelle requête. La fin de l'exécution des requêtes en cours de traitement est autorisée. Les nouvelles requêtes sont acceptées uniquement lors de l’utilisation de mémoire inférieure à la valeur spécifiée à l’aide `WorkingSetMaximum`.<br /><br /> Si les requêtes existantes continuent de consommer de mémoire supplémentaire une fois la `WorkingSetMaximum` valeur a été atteinte, tous les domaines d’application de serveur de rapports va être recyclés. Pour plus d'informations, consultez [Application Domains for Report Server Applications](application-domains-for-report-server-applications.md).|  
+|`WorkingSetMaximum`|Spécifie un seuil de mémoire au-delà duquel aucune nouvelle requête d'allocation de mémoire n'est accordée aux applications du serveur de rapports.<br /><br /> Par défaut, le serveur de rapports affecte à `WorkingSetMaximum` la quantité de mémoire disponible sur l'ordinateur. Cette valeur est détectée lorsque le service démarre.<br /><br /> Ce paramètre n'apparaît pas dans le fichier RSReportServer.config à moins que vous ne l'ajoutiez manuellement. Si vous souhaitez que le serveur de rapports utilise moins de mémoire, vous pouvez modifier le fichier RSReportServer.config en ajoutant l'élément et la valeur. La plage de valeurs valides s'étend de 0 à un entier maximal. Cette valeur est exprimée en kilo-octets.<br /><br /> Lorsque la valeur de `WorkingSetMaximum` est atteinte, le serveur de rapports n'accepte plus de nouvelle requête. La fin de l'exécution des requêtes en cours de traitement est autorisée. Nouvelles demandes sont acceptées uniquement si l’utilisation de la mémoire tombe en dessous de la valeur spécifiée par le biais `WorkingSetMaximum`.<br /><br /> Si les requêtes existantes continuent de consommer de mémoire supplémentaire une fois la `WorkingSetMaximum` valeur a été atteinte, tous les domaines d’application de serveur de rapports sera recyclés. Pour plus d'informations, consultez [Application Domains for Report Server Applications](application-domains-for-report-server-applications.md).|  
 |`WorkingSetMinimum`|Spécifie une limite inférieure pour l'utilisation des ressources ; le serveur de rapports ne libère pas de mémoire si la quantité totale de mémoire utilisée est inférieure à cette limite.<br /><br /> Par défaut, la valeur est calculée au démarrage du service. La requête d'allocation de mémoire initiale doit représenter 60 pour cent de `WorkingSetMaximum`.<br /><br /> Ce paramètre n'apparaît pas dans le fichier RSReportServer.config à moins que vous ne l'ajoutiez manuellement. Si vous souhaitez personnaliser cette valeur, vous devez ajouter le `WorkingSetMinimum` élément dans le fichier RSReportServer.config. La plage de valeurs valides s'étend de 0 à un entier maximal. Cette valeur est exprimée en kilo-octets.|  
 |`MemoryThreshold`|Spécifie un pourcentage de `WorkingSetMaximum` qui définit la limite entre les scénarios de sollicitation élevée et moyenne. Si l'utilisation de la mémoire du serveur de rapports atteint cette valeur, ce dernier ralentit le traitement des requêtes et modifie la quantité de mémoire allouée aux différentes applications serveur. La valeur par défaut est 90. Cette valeur doit être supérieure à la valeur définie pour `MemorySafetyMargin`.|  
 |`MemorySafetyMargin`|Spécifie un pourcentage de `WorkingSetMaximum` qui définit la limite entre les scénarios correspondant à une sollicitation moyenne et basse. Cette valeur est le pourcentage de mémoire disponible réservée au système et ne peut pas être utilisée pour les opérations du serveur de rapports. La valeur par défaut est 80.|  
@@ -91,7 +91,7 @@ ms.locfileid: "36144453"
 ```  
   
 #### <a name="about-aspnet-memory-configuration-settings"></a>À propos des paramètres de configuration de la mémoire ASP.NET  
- Bien que le service Web Report Server et Gestionnaire de rapports sont [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] applications, aucune application répond à des paramètres de configuration de mémoire que vous spécifiez dans le `processModel` section du fichier machine.config pour [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] les applications qui exécuter en mode de compatibilité IIS 5.0. [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] lit les paramètres de configuration de la mémoire à partir du fichier RSReportServer.config uniquement.  
+ Bien que le service Web Report Server et Gestionnaire de rapports sont [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] applications, aucune d'entre elles ne répond aux paramètres de configuration de mémoire que vous spécifiez dans le `processModel` section de machine.config pour [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] applications qui exécuter en mode de compatibilité IIS 5.0. [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] lit les paramètres de configuration de la mémoire à partir du fichier RSReportServer.config uniquement.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Fichier de Configuration RSReportServer](rsreportserver-config-configuration-file.md)   

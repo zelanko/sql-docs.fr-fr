@@ -1,13 +1,11 @@
 ---
-title: Variables de programme à partir de la copie en bloc | Documents Microsoft
+title: Copie par bloc de Variables de programme | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -20,42 +18,42 @@ helpviewer_keywords:
 - program variables [ODBC]
 ms.assetid: e4284a1b-7534-4b34-8488-b8d05ed67b8c
 caps.latest.revision: 30
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 9c0606e62bbf7be89206164d9bb9827bf2da38e4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: 6d2e24f18efd321f5f56211be4dd0230be7cc39e
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36053521"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37426748"
 ---
 # <a name="bulk-copying-from-program-variables"></a>Copie en bloc à partir de variables de programme
-  Vous pouvez effectuer une copie en bloc directement à partir de variables de programme. Après avoir alloué des variables pour stocker les données d’une ligne et l’appel [bcp_init](../native-client-odbc-extensions-bulk-copy-functions/bcp-init.md) pour démarrer la copie en bloc, appelez [bcp_bind](../native-client-odbc-extensions-bulk-copy-functions/bcp-bind.md) pour chaque colonne spécifier l’emplacement et le format de la variable de programme à associer avec la colonne. Remplissez chaque variable avec des données, puis appelez [bcp_sendrow](../native-client-odbc-extensions-bulk-copy-functions/bcp-sendrow.md) pour envoyer une ligne de données sur le serveur. Répétez le processus de remplissage des variables et d’appel **bcp_sendrow** jusqu'à ce que toutes les lignes ont été envoyés au serveur, puis appelez [bcp_done](../native-client-odbc-extensions-bulk-copy-functions/bcp-done.md) pour spécifier que l’opération est terminée.  
+  Vous pouvez effectuer une copie en bloc directement à partir de variables de programme. Après avoir alloué des variables pour stocker les données pour une ligne et l’appel [bcp_init](../native-client-odbc-extensions-bulk-copy-functions/bcp-init.md) pour démarrer la copie en bloc, appelez [bcp_bind](../native-client-odbc-extensions-bulk-copy-functions/bcp-bind.md) pour chaque colonne pour spécifier l’emplacement et le format de la variable de programme à associer avec la colonne. Remplissez chaque variable avec des données, puis appelez [bcp_sendrow](../native-client-odbc-extensions-bulk-copy-functions/bcp-sendrow.md) pour envoyer une ligne de données sur le serveur. Répétez le processus de remplissage des variables et d’appel **bcp_sendrow** jusqu'à ce que toutes les lignes ont été envoyés au serveur, puis appelez [bcp_done](../native-client-odbc-extensions-bulk-copy-functions/bcp-done.md) pour spécifier que l’opération est terminée.  
   
- Le **bcp_bind *** pData* paramètre contient l’adresse de la variable liée à la colonne. Les données de chaque colonne peuvent être stockées de l'une des deux manières suivantes :  
+ Le **bcp_bind *** pData* paramètre contient l’adresse de la variable qui est liée à la colonne. Les données de chaque colonne peuvent être stockées de l'une des deux manières suivantes :  
   
 -   Allocation d'une variable destinée à contenir les données.  
   
 -   Allocation d'une variable indicateur suivie immédiatement de la variable de données.  
   
- La variable indicateur indique la longueur des données des colonnes de longueur variable et indique des valeurs NULL si la colonne autorise ces valeurs. Si seule une variable de données est utilisée, l’adresse de cette variable est stockée dans le **bcp_bind *** pData* paramètre. Si une variable indicateur est utilisée, l’adresse de la variable indicateur est stockée dans le **bcp_bind *** pData* paramètre. Les fonctions de copie en bloc calculent l’emplacement de la variable de données en ajoutant le **bcp_bind *** cbIndicator* et *pData* paramètres.  
+ La variable indicateur indique la longueur des données des colonnes de longueur variable et indique des valeurs NULL si la colonne autorise ces valeurs. Si seule une variable de données est utilisée, l’adresse de cette variable est stocké dans le **bcp_bind *** pData* paramètre. Si une variable indicateur est utilisée, l’adresse de la variable indicateur est stockée dans le **bcp_bind *** pData* paramètre. Les fonctions de copie en bloc calculent l’emplacement de la variable de données en ajoutant le **bcp_bind *** cbIndicator* et *pData* paramètres.  
   
  **bcp_bind** prend en charge trois méthodes pour traiter les données de longueur variable :  
   
--   Utilisez *cbData* avec uniquement une variable de données. La longueur des données dans *cbData*. Chaque fois que la longueur des données en bloc copiés les modifications, appelez [bcp_collen](../native-client-odbc-extensions-bulk-copy-functions/bcp-collen.md)réinitialiser *cbData*. Si une des deux autres méthodes est utilisée, spécifiez SQL_VARLEN_DATA pour *cbData*. Si toutes les valeurs de données qui est fournis pour une colonne sont NULL, spécifiez SQL_NULL_DATA pour *cbData*.  
+-   Utilisez *cbData* avec uniquement une variable de données. Indiquez la longueur des données dans *cbData*. Chaque fois que la longueur des données à être en bloc copié des modifications, appelez [bcp_collen](../native-client-odbc-extensions-bulk-copy-functions/bcp-collen.md)réinitialiser *cbData*. Si une des deux autres méthodes est utilisée, spécifiez SQL_VARLEN_DATA pour *cbData*. Si toutes les valeurs de données qui est fournis pour une colonne sont NULL, spécifiez SQL_NULL_DATA pour *cbData*.  
   
--   Utilisation de variables indicateur. Dès qu'une nouvelle valeur de données est déplacée dans la variable de données, stockez la longueur de la valeur dans la variable indicateur. Si un des deux autres méthodes est utilisé, spécifiez 0 pour *cbIndicator*.  
+-   Utilisation de variables indicateur. Dès qu'une nouvelle valeur de données est déplacée dans la variable de données, stockez la longueur de la valeur dans la variable indicateur. Si une des deux autres méthodes est utilisée, spécifiez 0 pour *cbIndicator*.  
   
--   Utilisation de pointeurs de terminateur. Charge le **bcp_bind *** pTerm* paramètre avec l’adresse du modèle binaire qui termine les données. Si un des deux autres méthodes est utilisé, spécifiez la valeur NULL pour *pTerm*.  
+-   Utilisation de pointeurs de terminateur. Charge le **bcp_bind *** pTerm* paramètre avec l’adresse du modèle binaire qui termine les données. Si une des deux autres méthodes est utilisée, spécifiez NULL pour *pTerm*.  
   
- Les trois de ces méthodes peuvent être utilisés sur le même **bcp_bind** appeler, auquel cas la spécification qui donne la plus petite quantité de données à copier est utilisée.  
+ Trois de ces méthodes peuvent être utilisés sur le même **bcp_bind** appeler, auquel cas la spécification qui donne la plus petite quantité de données à copier est utilisée.  
   
  Le **bcp_bind *** type* identificateurs de type de données paramètre utilise DB-Library, pas les identificateurs de type de données ODBC. Les identificateurs de type de données DB-Library sont définis dans sqlncli.h pour une utilisation avec ODBC **bcp_bind** (fonction).  
   
- Les fonctions de copie en bloc ne prennent pas en charge tous les types de données ODBC C. Par exemple, les fonctions de copie en bloc ne prennent pas en charge la structure ODBC SQL_C_TYPE_TIMESTAMP, alors utilisez [SQLBindCol](../native-client-odbc-api/sqlbindcol.md) ou [SQLGetData](../native-client-odbc-api/sqlgetdata.md) pour convertir des données ODBC SQL_TYPE_TIMESTAMP en variable SQL_C_CHAR. Si vous utilisez ensuite **bcp_bind** avec un *type* paramètre ayant la valeur sqlcharacter pour lier la variable à un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **datetime** de convertir la colonne, les fonctions de copie en bloc le clause d’échappement de timestamp dans la variable de caractère au format datetime approprié.  
+ Les fonctions de copie en bloc ne prennent pas en charge tous les types de données ODBC C. Par exemple, les fonctions de copie en bloc ne prennent pas en charge la structure ODBC SQL_C_TYPE_TIMESTAMP, utilisez [SQLBindCol](../native-client-odbc-api/sqlbindcol.md) ou [SQLGetData](../native-client-odbc-api/sqlgetdata.md) pour convertir des données ODBC SQL_TYPE_TIMESTAMP en variable SQL_C_CHAR. Si vous utilisez ensuite **bcp_bind** avec un *type* paramètre de SQLCHARACTER pour lier la variable à un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **datetime** de convertir la colonne, les fonctions de copie en bloc le clause d’échappement timestamp dans la variable de caractère au format datetime approprié.  
   
- Le tableau suivant répertorie les types de données recommandés à utiliser lors du mappage d’un type de données SQL ODBC à un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] type de données.  
+ Le tableau suivant répertorie les types de données recommandés à utiliser lors du mappage d’un type de données ODBC SQL pour un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] type de données.  
   
 |Type de données ODBC SQL|Type de données ODBC C|bcp_bind *type* paramètre|Type de données SQL Server|  
 |-----------------------|----------------------|--------------------------------|--------------------------|  
@@ -79,7 +77,7 @@ ms.locfileid: "36053521"
 |SQL_FLOAT|SQL_C_DOUBLE|SQLFLT8|**float**|  
 |SQL_DOUBLE|SQL_C_DOUBLE|SQLFLT8|**float**|  
 |SQL_BINARY|SQL_C_BINARY|SQLBINARY|**binaire**<br /><br /> **timestamp**|  
-|SQL_VARBINARY|SQL_C_BINARY|SQLBINARY|**varbinary**<br /><br /> **variable binaire**|  
+|SQL_VARBINARY|SQL_C_BINARY|SQLBINARY|**varbinary**<br /><br /> **binary varying**|  
 |SQL_LONGVARBINARY|SQL_C_BINARY|SQLBINARY|**image**|  
 |SQL_TYPE_DATE|SQL_C_CHAR|SQLCHARACTER|**datetime**<br /><br /> **smalldatetime**|  
 |SQL_TYPE_TIME|SQL_C_CHAR|SQLCHARACTER|**datetime**<br /><br /> **smalldatetime**|  
@@ -87,7 +85,7 @@ ms.locfileid: "36053521"
 |SQL_GUID|SQL_C_GUID|SQLUNIQUEID|**uniqueidentifier**|  
 |SQL_INTERVAL_|SQL_C_CHAR|SQLCHARACTER|**char**|  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ne pas avoir signé **tinyint**non signé **smallint**, non signé ou **int** des types de données. Pour empêcher la perte de valeurs de données lors de la migration de ces types de données, créez le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] table avec le type de données plus grand entier suivant. Pour empêcher les utilisateurs d'ajouter ultérieurement des valeurs en dehors de la plage autorisée par le type de données d'origine, appliquez une règle à la colonne [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de manière à limiter les valeurs autorisées à la plage prise en charge par le type de données dans la source d'origine :  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ne pas avoir signé **tinyint**, unsigned **smallint**, ou non signés **int** types de données. Pour empêcher la perte de valeurs de données lors de la migration de ces types de données, créez le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] table avec le type de données plus grand entier suivant. Pour empêcher les utilisateurs d'ajouter ultérieurement des valeurs en dehors de la plage autorisée par le type de données d'origine, appliquez une règle à la colonne [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de manière à limiter les valeurs autorisées à la plage prise en charge par le type de données dans la source d'origine :  
   
 ```  
 CREATE TABLE Sample_Ints(STinyIntCol   SMALLINT,  
@@ -107,13 +105,13 @@ sp_bindrule USmallInt_Rule, 'Sample_Ints.USmallIntCol'
 GO  
 ```  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ne prend pas en charge les types de données intervalle directement. Une application peut, toutefois, stocker des séquences d’échappement d’intervalle sous forme de chaînes de caractères dans un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] colonne de type caractère. L'application peut les lire pour une utilisation ultérieure, mais elles ne peuvent pas être utilisées dans des instructions [!INCLUDE[tsql](../../includes/tsql-md.md)].  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ne prend pas en charge les types de données intervalle directement. Une application peut, cependant, stocker des séquences d’échappement d’intervalle sous forme de chaînes de caractères dans un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] colonne de type caractère. L'application peut les lire pour une utilisation ultérieure, mais elles ne peuvent pas être utilisées dans des instructions [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
- Les fonctions de copie en bloc peuvent être utilisées pour charger des données dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] qui ont été lues à partir d’une source de données ODBC. Utilisez [SQLBindCol](../native-client-odbc-api/sqlbindcol.md) pour lier les colonnes d’un jeu de résultats aux variables de programme, puis utilisez **bcp_bind** pour lier ces mêmes variables de programme pour une opération de copie en bloc. Appel de [SQLFetchScroll](../native-client-odbc-api/sqlfetchscroll.md) ou **SQLFetch** extrait ensuite une ligne de données à partir de la source de données ODBC dans les variables de programme et l’appel [bcp_sendrow](../native-client-odbc-extensions-bulk-copy-functions/bcp-sendrow.md) copie en bloc des données variables de programme à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
+ Les fonctions de copie en bloc peuvent être utilisées pour charger rapidement des données dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] qui a été lu à partir d’une source de données ODBC. Utilisez [SQLBindCol](../native-client-odbc-api/sqlbindcol.md) pour lier les colonnes d’un jeu de résultats aux variables de programme, puis utilisez **bcp_bind** pour lier ces mêmes variables de programme à une opération de copie en bloc. Appel [SQLFetchScroll](../native-client-odbc-api/sqlfetchscroll.md) ou **SQLFetch** extrait ensuite une ligne de données à partir de la source de données ODBC dans les variables de programme et l’appel [bcp_sendrow](../native-client-odbc-extensions-bulk-copy-functions/bcp-sendrow.md) copie en bloc des données les variables de programme [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
  Une application peut utiliser le [bcp_colptr](../native-client-odbc-extensions-bulk-copy-functions/bcp-colptr.md) fonction dès qu’il a besoin de modifier l’adresse de la variable de données spécifiée à l’origine dans le **bcp_bind** *pData* paramètre. Une application peut utiliser le [bcp_collen](../native-client-odbc-extensions-bulk-copy-functions/bcp-collen.md) fonction dès qu’il a besoin de modifier la longueur de données spécifiée à l’origine dans le **bcp_bind *** cbData* paramètre.  
   
- Vous ne pouvez pas lire les données à partir de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dans des variables de programme à l’aide de la copie en bloc ; il n’existe une fonction similaire à « bcp_readrow ». Vous pouvez seulement envoyer des données de l'application au serveur.  
+ Vous ne pouvez pas lire les données à partir de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dans des variables de programme à l’aide de la copie en bloc ; rien ne vaut une fonction similaire à « bcp_readrow ». Vous pouvez seulement envoyer des données de l'application au serveur.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Exécution d’opérations de copie en bloc &#40;ODBC&#41;](performing-bulk-copy-operations-odbc.md)  

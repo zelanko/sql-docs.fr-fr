@@ -1,5 +1,5 @@
 ---
-title: Comparer les fonctionnalités de Business Intelligence dans différents environnements Microsoft | Documents Microsoft
+title: Comparer les fonctionnalités de Business Intelligence dans différents environnements Microsoft | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 1fb759ee-8172-4c4c-9f7d-49af2c731006
 caps.latest.revision: 18
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: ae54486aa141880189a012d897251604a292aefe
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 97ac603e2e043810d468d9c9ada00c11a4f78d15
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36151864"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37188086"
 ---
 # <a name="compare-business-intelligence-capabilities-in-different-microsoft-environments"></a>Comparer les fonctionnalités de Business Intelligence dans différents environnements Microsoft
   Microsoft [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Business Intelligence peut être déployé dans plusieurs environnements différents, y compris [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] avec SharePoint Server, SharePoint Online et Power BI pour Office 365. Cette rubrique compare les composants et les fonctionnalités pris en charge dans chaque environnement.  
@@ -43,9 +43,9 @@ ms.locfileid: "36151864"
 |Surveillance de l'utilisation|Oui|non|Oui|  
 |Ligne de tirer parti en fonction de sécurité de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] cubes|Oui|non|non|  
   
- **<sup>1</sup>**[compréhension du rôle des gestionnaires de données de gestion des données](https://support.office.com/Article/Understanding-the-Role-of-Data-Stewards-in-Data-Management-ae3352f3-4389-45e8-a682-7fd6edb92524?ui=en-US&rs=en-US&ad=US) et [vidéo : gestion des informations de BI et la gestion des données de l’alimentation](https://www.youtube.com/watch?v=8dHOj68ts7c).    
+ **<sup>1</sup>**[compréhension du rôle des gestionnaires de données dans la gestion des données](https://support.office.com/Article/Understanding-the-Role-of-Data-Stewards-in-Data-Management-ae3352f3-4389-45e8-a682-7fd6edb92524?ui=en-US&rs=en-US&ad=US) et [vidéo : gestion des informations de BI et gestion des données Power](https://www.youtube.com/watch?v=8dHOj68ts7c).    
   
- **<sup>2</sup>**[power BI Q & r : optimiser un classeur de Power BI (modélisation du cloud)](https://support.office.com/article/Power-BI-Q-A-Optimize-a-Power-BI-workbook-cloud-modeling--96dc5941-d0f1-44e2-9d9d-c038a3a55849?ui=en-US&rs=en-US&ad=US).    
+ **<sup>2</sup>**[power BI Q & r : optimiser un classeur Power BI (modélisation cloud)](https://support.office.com/article/Power-BI-Q-A-Optimize-a-Power-BI-workbook-cloud-modeling--96dc5941-d0f1-44e2-9d9d-c038a3a55849?ui=en-US&rs=en-US&ad=US).    
   
  **<sup>3</sup>**[présentation des nouvelles capacités de prévision de Power View pour Office 365](http://blogs.msdn.com/b/powerbi/archive/2014/05/08/introducing-new-forecasting-capabilities-in-power-view-for-office-365.aspx).    
   
@@ -63,7 +63,7 @@ ms.locfileid: "36151864"
   
  **<sup>2</sup>**[des classeurs PowerPivot comme Source de données  ](http://blogs.technet.com/b/excel_services__powerpivot_for_sharepoint_support_blog/archive/2013/02/15/powerpivot-workbook-as-a-data-source.aspx)  
   
- **<sup>3</sup>**[mobile prise en charge sur les outils Business Intelligence (BI)](http://msdn.microsoft.com/library/dn151146\(v=sql.110\).aspx) et [planification pour Reporting Services et la prise en charge de navigateur Power View (Reporting Services 2014)](http://msdn.microsoft.com/library/ms156511.aspx).    
+ **<sup>3</sup>**[prise en charge mobile sur les outils d’analyse décisionnelle (BI)](http://msdn.microsoft.com/library/dn151146\(v=sql.110\).aspx) et [planification pour Reporting Services et la prise en charge de navigateur Power View (Reporting Services 2014)](http://msdn.microsoft.com/library/ms156511.aspx).    
   
 ## <a name="more-information"></a>Informations complémentaires  
   
@@ -79,7 +79,7 @@ ms.locfileid: "36151864"
   
 -   [Comparer un site BI Center à des sites Power BI pour Office 365](http://technet.microsoft.com/library/dn394343\(v=office.15\).aspx).  
   
--   [Présentation des outils d’analyse et de rapports Microsoft BI](http://go.microsoft.com/fwlink/p/?LinkId=617093)  
+-   [Présentation des outils d’analyse et de création de rapports Microsoft BI](http://go.microsoft.com/fwlink/p/?LinkId=617093)  
   
 ## <a name="community-content"></a>Contenus de la Communauté  
  [BI en libre-service Microsoft en local et dans le cloud](http://businessintelligist.com/2014/02/07/microsoft-self-service-bi-on-premise-vs-could/).  

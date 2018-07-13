@@ -1,5 +1,5 @@
 ---
-title: 'Leçon 2 : Ajout des modèles d’exploration de données à la Structure d’exploration de données de série chronologique | Documents Microsoft'
+title: 'Leçon 2 : Ajout des modèles d’exploration de données à la Structure d’exploration de données de série chronologique | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,24 +8,24 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 75c2a74b-21ce-44fb-a26b-68be4c685c12
 caps.latest.revision: 16
 author: minewiskan
 ms.author: owend
-manager: kfile
-ms.openlocfilehash: cee3d839ae7a7bcce62c8a3a1d2f7cb62b1155e2
-ms.sourcegitcommit: 8c040e5b4e8c7d37ca295679410770a1af4d2e1f
+manager: craigg
+ms.openlocfilehash: 368ab5b56fb55e083d5d8c38e34a0bdae98afe7b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/21/2018
-ms.locfileid: "36312487"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37211989"
 ---
 # <a name="lesson-2-adding-mining-models-to-the-time-series-mining-structure"></a>Leçon 2 : Ajout de modèles d'exploration de données à la structure d'exploration de données de série chronologique
-  Dans cette leçon, vous allez ajouter un nouveau modèle d’exploration de données à la structure d’exploration de données que vous venez de créer dans [leçon 1 : création d’un modèle d’exploration de données de série chronologique et la Structure d’exploration de](../../2014/tutorials/lesson-1-creating-a-time-series-mining-model-and-mining-structure.md).  
+  Dans cette leçon, vous allez ajouter un nouveau modèle d’exploration de données à la structure d’exploration de données que vous venez de créer dans [leçon 1 : création d’un modèle d’exploration de données de série chronologique et de la Structure d’exploration de](../../2014/tutorials/lesson-1-creating-a-time-series-mining-model-and-mining-structure.md).  
   
 ## <a name="alter-mining-structure-statement"></a>Instruction ALTER MINING STRUCTURE  
- Pour ajouter un nouveau modèle d’exploration de données à une structure d’exploration de données existante, vous devez utiliser la [ALTER MINING STRUCTURE &#40;DMX&#41;] (instruction (~/dmx/alter-mining-structure-dmx.md). Le code dans l’instruction peut être classée dans les sections suivantes :  
+ Pour ajouter un nouveau modèle d’exploration de données à une structure d’exploration de données existante, vous utilisez le [ALTER MINING STRUCTURE &#40;DMX&#41;] (instruction (~/dmx/alter-mining-structure-dmx.md). Le code dans l’instruction peut être divisé en parties suivantes :  
   
 -   Identification de la structure d'exploration de données  
   
@@ -79,7 +79,7 @@ USING <algorithm name>([<algorithm parameters>])
 WITH DRILLTHROUGH  
 ```  
   
- Pour plus d’informations sur les paramètres d’algorithme que vous pouvez régler, consultez [Microsoft Time Series algorithme Technical Reference](../../2014/analysis-services/data-mining/microsoft-time-series-algorithm-technical-reference.md).  
+ Pour plus d’informations sur les paramètres d’algorithme que vous pouvez ajuster, consultez [Microsoft Time Series algorithme Technical Reference](../../2014/analysis-services/data-mining/microsoft-time-series-algorithm-technical-reference.md).  
   
  Vous pouvez spécifier l'utilisation d'une colonne du modèle d'exploration de données à des fins de prédiction en utilisant la syntaxe suivante :  
   
@@ -99,7 +99,7 @@ WITH DRILLTHROUGH
   
 #### <a name="to-add-an-arima-time-series-mining-model"></a>Pour ajouter un modèle d'exploration de données de série chronologique ARIMA  
   
-1.  Dans **l’Explorateur d’objets**, cliquez sur l’instance de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], pointez sur **nouvelle requête**, puis cliquez sur **DMX** pour ouvrir l’éditeur de requête et une nouvelle requête vide.  
+1.  Dans **Explorateur d’objets**, avec le bouton droit de l’instance de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], pointez sur **nouvelle requête**, puis cliquez sur **DMX** pour ouvrir l’éditeur de requête et une nouvelle requête vide.  
   
 2.  Copiez l'exemple générique de l'instruction ALTER MINING STRUCTURE dans la requête vide.  
   
@@ -222,7 +222,7 @@ WITH DRILLTHROUGH
  Dans la leçon suivante, vous allez traiter tous les modèles et la structure d'exploration de données.  
   
 ## <a name="next-lesson"></a>Leçon suivante  
- [Leçon 3 : Traitement de la série chronologique Structure et des modèles](../../2014/tutorials/lesson-3-processing-the-time-series-structure-and-models.md)  
+ [Leçon 3 : Traitement de la structure et des modèles de série chronologique](../../2014/tutorials/lesson-3-processing-the-time-series-structure-and-models.md)  
   
 ## <a name="see-also"></a>Voir aussi  
  [Algorithme de série chronologique de Microsoft](../../2014/analysis-services/data-mining/microsoft-time-series-algorithm.md)   

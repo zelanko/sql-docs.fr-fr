@@ -1,5 +1,5 @@
 ---
-title: Rapport des propriétés du serveur (onglet Ouvrir une session) | Documents Microsoft
+title: Rapport des propriétés du serveur (onglet Ouvrir une session) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - configmgr-client
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: f54be594-f290-4db2-bf18-fd2521728a4a
 caps.latest.revision: 12
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: e359bd1ab752813f816702787cd9f75b41f05cbb
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 45fdd95854ee676bea03ff3c322089901f240026
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36152470"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37161610"
 ---
 # <a name="report-server-properties-log-on-tab"></a>Propriétés de SQL Server Reporting Services (onglet Ouvrir une session)
   L'onglet **Ouvrir une session** de la boîte de dialogue **Propriétés de SQL Server Reporting Services** permet de spécifier le compte utilisé par le service Report Server, ainsi que de démarrer et d'arrêter ce service.  

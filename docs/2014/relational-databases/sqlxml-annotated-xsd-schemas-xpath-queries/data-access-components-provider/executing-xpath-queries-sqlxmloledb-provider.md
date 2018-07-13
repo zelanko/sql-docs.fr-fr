@@ -1,5 +1,5 @@
 ---
-title: L’exécution de requêtes XPath (fournisseur SQLXMLOLEDB) | Documents Microsoft
+title: Exécution de requêtes XPath (fournisseur SQLXMLOLEDB) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -18,15 +18,15 @@ helpviewer_keywords:
 - Mapping Schema property
 ms.assetid: 19063222-dc9c-48ae-a55f-778103674a9e
 caps.latest.revision: 29
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: da43bc10ea80c1019e9cd7ae785024bb78fcbe9e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 34acdfc5c7957476534b2d637077a401144fc29e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36143439"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37181654"
 ---
 # <a name="executing-xpath-queries-sqlxmloledb-provider"></a>Exécution de requêtes XPath (fournisseur SQLXMLOLEDB)
   Cet exemple illustre l'utilisation des propriétés suivantes spécifiques au fournisseur SQLXMLOLEDB :  
@@ -59,14 +59,14 @@ ms.locfileid: "36143439"
 </xsd:schema>  
 ```  
   
- La propriété de schéma de mappage fournit le schéma de mappage sur lequel la requête XPath est exécutée. Le schéma de mappage peut être un schéma XSD ou XDR. La propriété de chemin d’accès de Base fournit le chemin d’accès de fichier pour le schéma de mappage.  
+ La propriété de schéma de mappage fournit le schéma de mappage par rapport à laquelle la requête XPath est exécutée. Le schéma de mappage peut être un schéma XSD ou XDR. La propriété de chemin d’accès de Base fournit le chemin d’accès de fichier pour le schéma de mappage.  
   
  La propriété ClientSideXML est définie sur True. Par conséquent, le document XML est généré sur le client.  
   
  Dans l'application, une requête XPath est spécifiée directement. Par conséquent, le dialecte XPath {ec2a4293-e898-11d2-b1b7-00c04f680c56} doit être inclus.  
   
 > [!NOTE]  
->  Dans le code, vous devez fournir le nom de l'instance de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] dans la chaîne de connexion. En outre, cet exemple spécifie l’utilisation de la [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client (SQLNCLI11) pour le fournisseur de données qui nécessite un logiciel client réseau supplémentaire soit installé. Pour plus d’informations, consultez [configuration système requise pour SQL Server Native Client](../../native-client/system-requirements-for-sql-server-native-client.md).  
+>  Dans le code, vous devez fournir le nom de l'instance de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] dans la chaîne de connexion. En outre, cet exemple spécifie l’utilisation de la [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client (SQLNCLI11) pour le fournisseur de données, ce qui nécessite l’installation du logiciel client réseau supplémentaire. Pour plus d’informations, consultez [configuration système requise pour SQL Server Native Client](../../native-client/system-requirements-for-sql-server-native-client.md).  
   
 ```  
 Option Explicit  

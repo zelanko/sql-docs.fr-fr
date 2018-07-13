@@ -1,5 +1,5 @@
 ---
-title: Présentation de génération incrémentielle | Documents Microsoft
+title: Présentation de la génération incrémentielle | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - incremental generation [Analysis Services]
 - Schema Generation Wizard, incremental generation
 - relational schema [Analysis Services], incremental generation
 ms.assetid: 3ca0aa63-3eb5-4fe9-934f-8e96dee84eaa
 caps.latest.revision: 29
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 38116af87dc9fe02232994aac7085945ce695215
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: a22eb09d21e1ef63a52ae7248fd6fa2a54832c15
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36153146"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37177066"
 ---
 # <a name="understanding-incremental-generation"></a>Présentation de la génération incrémentielle
   Après la génération de schéma initiale, vous pouvez modifier les définitions de cubes et de dimensions à l'aide de [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], puis exécuter à nouveau l'Assistant Génération de schéma. L'Assistant met à jour le schéma dans la base de données de la zone de sujet et dans la vue de source de données associée pour refléter les modifications, en conservant si possible les données qui existent actuellement dans les tables à régénérer. Si vous avez modifié les tables après la génération initiale, l'Assistant Génération de schéma préserve ces modifications si possible en appliquant les règles suivantes :  

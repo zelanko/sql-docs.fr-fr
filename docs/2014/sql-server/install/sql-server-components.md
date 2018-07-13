@@ -1,5 +1,5 @@
 ---
-title: Composants de SQL Server | Documents Microsoft
+title: Composants SQL Server | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server Upgrade Advisor, components
 - listing components to analyze
@@ -22,22 +22,22 @@ helpviewer_keywords:
 - identifying components to analyze
 ms.assetid: 539b9525-ce3f-4950-9146-5527a5a297ee
 caps.latest.revision: 41
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 85a89e2114cd00b28444cf6ee62d12ff1abdec42
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 99998b5b9e24de92f826a73941bf6b86e5ad4318
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36143639"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37177118"
 ---
 # <a name="sql-server-components"></a>Composants SQL Server
   Vous pouvez exécuter l’Assistant analyse du Conseiller de mise à niveau sur un ordinateur local ou distant qui a [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], ou [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] installé. La première étape de l'analyse de pré-mise à niveau consiste à identifier l'ordinateur et les composants à analyser.  
   
 ## <a name="options"></a>Options  
  **Nom de l’ordinateur**  
- Spécifie le nom de l'ordinateur à analyser. Conseiller de mise à niveau remplit la **nom du serveur** zone avec le nom de l’ordinateur local. Vous pouvez également utiliser "." et "localhost" pour vous connecter à l'ordinateur local.  
+ Spécifie le nom de l'ordinateur à analyser. Conseiller de mise à niveau remplit la **nom du serveur** boîte avec le nom de l’ordinateur local. Vous pouvez également utiliser "." et "localhost" pour vous connecter à l'ordinateur local.  
   
  Pour analyser un autre ordinateur, appliquez les instructions suivantes :  
   
@@ -66,10 +66,10 @@ ms.locfileid: "36143639"
 -   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] est détecté si [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] se trouve dans le Registre de l'ordinateur. Cependant, le Conseiller de mise à niveau analyse uniquement les serveurs de rapports locaux.  
   
  **Components**  
- Sélectionnez les composants à analyser. Vous pouvez cliquer sur le **détecter** pour sélectionner tous les composants installés sur l’ordinateur. Une coche apparaît en regard des composants détectés comme étant installés sur l'ordinateur. Vous pouvez également sélectionner manuellement les composants à analyser en activant ou désactivant la case à cocher en regard de chaque composant.  
+ Sélectionnez les composants à analyser. Vous pouvez cliquer sur le **détecter** bouton pour sélectionner tous les composants installés sur l’ordinateur. Une coche apparaît en regard des composants détectés comme étant installés sur l'ordinateur. Vous pouvez également sélectionner manuellement les composants à analyser en activant ou désactivant la case à cocher en regard de chaque composant.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Utilisation avec le Conseiller de mise à niveau](../../../2014/sql-server/install/working-with-upgrade-advisor.md)   
+ [Utilisation de l’Assistant Mise à niveau](../../../2014/sql-server/install/working-with-upgrade-advisor.md)   
  [Référence de l’Interface utilisateur Conseiller de mise à niveau](../../../2014/sql-server/install/upgrade-advisor-user-interface-reference.md)  
   
   

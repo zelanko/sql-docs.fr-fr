@@ -1,5 +1,5 @@
 ---
-title: Connecter un filtre ou le composant WebPart Documents (Reporting Services en Mode intégré SharePoint) | Documents Microsoft
+title: Connecter un filtre ou le composant WebPart Documents (Reporting Services en Mode intégré SharePoint) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Filter Web Part [Reporting Services]
 - SharePoint integration [Reporting Services], Web Parts
@@ -18,13 +18,13 @@ ms.assetid: 6a303135-c0ef-44cd-a423-1cea8df3dcf3
 caps.latest.revision: 11
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: f43de4f4118ca7b43370eb8493fe56cd072db2a1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 697726db338c9165bdd909b0c324ecf52a472013
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36143205"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37240159"
 ---
 # <a name="connect-filter-or-documents-web-part-reporting-services-in-sharepoint-integrated-mode"></a>Connecter un composant WebPart de filtre ou de documents (Reporting Services en mode intégré SharePoint)
   Si vous utilisez un produit SharePoint, vous pouvez créer un tableau de bord ou une page WebPart qui inclut un composant WebPart de filtre ou un composant WebPart de documents et un composant WebPart Visionneuse de rapports. Les versions prises en charge sont [!INCLUDE[SPF2010](../includes/spf2010-md.md)] et [!INCLUDE[SPS2010](../includes/sps2010-md.md)]. [!INCLUDE[winSPServ3](../includes/winspserv3-md.md)] et [!INCLUDE[offSPServ](../includes/offspserv-md.md)] 2007 sont également pris en charge. En connectant un composant WebPart de filtre, les utilisateurs qui sélectionnent des valeurs de filtre dans un composant WebPart de filtre peuvent envoyer la valeur à un rapport paramétrable sur la même page. En connectant un composant WebPart de documents, les utilisateurs qui cliquent sur des rapports dans la bibliothèque de documents peuvent afficher les rapports dans un composant WebPart de visionneuse de rapports adjacent.  

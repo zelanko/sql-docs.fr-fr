@@ -1,5 +1,5 @@
 ---
-title: 'Leçon 6 : Exécution de l’Application de schéma RDL (VB-c#) | Documents Microsoft'
+title: 'Leçon 6 : Exécuter l’Application de schéma RDL (VB-c#) | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: a2cd2386-2df8-4b69-ab81-9ad1a31f6d27
 caps.latest.revision: 15
-author: douglaslM
+author: craigg-msft
 ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 95ef194a66d6c5480f8a83cbd0b78547e79804e6
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: a56a29edc9b30577dca3db245d3ace5e4c7814d6
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36152025"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37169790"
 ---
-# <a name="lesson-6-run-the-rdl-schema-application-vb-c"></a>Leçon 6 : Exécution de l’Application de schéma RDL (VB-C#)
+# <a name="lesson-6-run-the-rdl-schema-application-vb-c"></a>Leçon 6 : Exécuter l’Application de schéma RDL (VB-c#)
   [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] offre deux méthodes pour créer et exécuter une application console à partir de l'environnement de développement intégré (IDE) :  
   
 -   Exécuter (avec débogage)  
@@ -50,7 +50,7 @@ ms.locfileid: "36152025"
 3.  Quand l'exécution de l'exemple d'application est terminée, une copie mise à jour du rapport est enregistrée sur le serveur de rapports.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Mise à jour des rapports à l’aide des Classes générées à partir du schéma RDL &#40;didacticiel SSRS&#41;](../../2014/tutorials/updating-reports-using-classes-generated-from-the-rdl-schema-ssrs-tutorial.md)   
+ [La mise à jour des rapports à l’aide des Classes générées à partir du schéma RDL &#40;didacticiel SSRS&#41;](../../2014/tutorials/updating-reports-using-classes-generated-from-the-rdl-schema-ssrs-tutorial.md)   
  [RDL (Report Definition Language) &#40;SSRS&#41;](../reporting-services/reports/report-definition-language-ssrs.md)  
   
   

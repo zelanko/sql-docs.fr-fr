@@ -1,13 +1,11 @@
 ---
-title: ISSAsynchStatus::WaitForAsynchCompletion (OLE DB) | Documents Microsoft
+title: ISSAsynchStatus::WaitForAsynchCompletion (OLE DB) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
@@ -18,15 +16,15 @@ helpviewer_keywords:
 - WaitForAsynchCompletion method
 ms.assetid: 9f65e9e7-eb93-47a1-bc42-acd4649fbd0e
 caps.latest.revision: 29
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 5c8b2bf4b7ffbc3a478dc872a32053799b6419b6
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: 10fa772517ac96f59510245ab25ef0e5a05438d8
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36141583"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37425849"
 ---
 # <a name="issasynchstatuswaitforasynchcompletion-ole-db"></a>ISSAsynchStatus::WaitForAsynchCompletion (OLE DB)
   Attend que l'opération s'exécutant de façon asynchrone se termine ou qu'un délai d'expiration soit dépassé.  
@@ -60,12 +58,12 @@ HRESULT WaitForAsynchCompletion(
 >  Outre les valeurs de code de retour répertoriées ci-dessus, la méthode **ISSAsynchStatus::WaitForAsynchCompletion** prend également en charge les valeurs de code de retour retournées par les méthodes OLEDB **ICommand::Execute** et **IDBInitialize::Initialize** principales.  
   
 ## <a name="remarks"></a>Notes  
- La méthode **ISSAsynchStatus::WaitForAsynchCompletion** n'est pas retournée tant que la valeur du délai d'attente (en millisecondes) n'est pas passée ou que l'opération en attente n'est pas terminée. L'objet **Command** a une propriété **CommandTimeout** qui contrôle le nombre de secondes pendant lesquelles une requête doit s'exécuter avant l'expiration du délai imparti. Le **CommandTimeout** propriété sera ignorée si utilisée avec **ISSAsynchStatus::WaitForAsynchCompletion** (méthode).  
+ La méthode **ISSAsynchStatus::WaitForAsynchCompletion** n'est pas retournée tant que la valeur du délai d'attente (en millisecondes) n'est pas passée ou que l'opération en attente n'est pas terminée. L'objet **Command** a une propriété **CommandTimeout** qui contrôle le nombre de secondes pendant lesquelles une requête doit s'exécuter avant l'expiration du délai imparti. Le **CommandTimeout** propriété sera ignorée si utilisé conjointement avec **ISSAsynchStatus::WaitForAsynchCompletion** (méthode).  
   
  La propriété relative au délai d'expiration est ignorée pour les opérations asynchrones. Le paramètre de délai d'expiration de **ISSAsynchStatus::WaitForAsynchCompletion** spécifie la durée maximale qui doit s'écouler avant que le contrôle ne soit retourné à l'appelant. Si ce délai expire, DB_S_ASYNCHRONOUS est retourné. L'expiration des délais d'attente n'annule jamais les opérations asynchrones. Si l'application doit annuler une opération asynchrone qui ne se termine pas dans un délai imparti, elle doit attendre l'expiration du délai, puis annuler explicitement l'opération si DB_S_ASYNCHRONOUS est retourné.  
   
 > [!NOTE]  
->  Lorsque les composants du Service OLE DB sont utilisés, S_OK peut être retourné lorsque DB_S_ASYNCHRONOUS est attendu, les applications doivent appeler [ISSAsynchStatus::GetStatus](issasynchstatus-getstatus-ole-db.md) à vérifier pour achèvement lorsque S_OK ou DB_S_ASYNCHRONOUS est retourné.  
+>  Lorsque les composants du Service OLE DB sont utilisés, S_OK peut être retourné lorsque DB_S_ASYNCHRONOUS est attendu, les applications doivent appeler [ISSAsynchStatus::GetStatus](issasynchstatus-getstatus-ole-db.md) pour vérifier d’achèvement lorsque S_OK ou DB_S_ASYNCHRONOUS est retourné.  
   
  Si la valeur de *dwMillisecTimeOut* est INFINITE, la méthode **ISSAsynchStatus::WaitForAsynchCompletion** se bloque jusqu'à ce que l'opération soit terminée. Si la valeur de *dwMillisecTimeOut* est 0, la méthode est retournée immédiatement avec l'état de l'opération en attente. Si le délai d'attente expire avant que l'opération ne soit terminée, DB_S_ASYNCHRONOUS est retourné.  
   

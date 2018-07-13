@@ -1,5 +1,5 @@
 ---
-title: Page Mes abonnements (Gestionnaire de rapports) | Documents Microsoft
+title: Page Mes abonnements (Gestionnaire de rapports) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 491a85a3-f323-4155-a0a8-de2779899995
 caps.latest.revision: 28
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 5f75d31ab49d706200ff90d49295d18bc9ba6487
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 5e973ec6a3c50c43f6ee6bdee4ecfd70f2e2c9b2
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36143664"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37177616"
 ---
 # <a name="my-subscriptions-page-report-manager"></a>Page Mes abonnements (Gestionnaire de rapports)
   La page Mes abonnements vous permet d'afficher tous vos abonnements à un seul emplacement. À partir de cette page, vous pouvez accéder à vos propres abonnements et les modifier ou les supprimer. Vous ne possédez que les abonnements que vous créez. En revanche, vous ne pouvez pas accéder aux abonnements des autres utilisateurs ou à ceux que vous utilisez mais dont vous n'êtes pas propriétaire (par exemple, si votre nom a été ajouté à un abonnement existant défini par un autre utilisateur). Vous ne pouvez pas créer d'abonnements à partir de cette page. Pour plus d’informations sur la création d’abonnements, consultez le [nouvel abonnement ou modifier la Page d’abonnement &#40;le Gestionnaire de rapports&#41;](../../2014/reporting-services/new-subscription-or-edit-subscription-page-report-manager.md).  
@@ -72,6 +72,6 @@ ms.locfileid: "36143664"
   
 ## <a name="see-also"></a>Voir aussi  
  [Abonnements et remises &#40;Reporting Services&#41;](subscriptions/subscriptions-and-delivery-reporting-services.md)   
- [Aide (F1) de gestionnaire de rapports](../../2014/reporting-services/report-manager-f1-help.md)  
+ [Aide (F1) du Gestionnaire de rapports](../../2014/reporting-services/report-manager-f1-help.md)  
   
   

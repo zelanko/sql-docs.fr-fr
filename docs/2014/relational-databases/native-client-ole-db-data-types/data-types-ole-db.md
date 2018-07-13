@@ -1,13 +1,11 @@
 ---
-title: Types de données (OLE DB) | Documents Microsoft
+title: Types de données (OLE DB) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -17,18 +15,18 @@ helpviewer_keywords:
 - OLE DB, data types
 ms.assetid: 15953706-f0d1-45f5-a2eb-a8bd36e1a5fc
 caps.latest.revision: 31
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 6b24b5425fb89794e7af3129039219d699769427
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: 31083fe39332d15afa357045103a39114f1b4f6d
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36140959"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37412768"
 ---
 # <a name="data-types-ole-db"></a>Types de données (OLE DB)
-  Afin d’exécuter le [!INCLUDE[tsql](../../includes/tsql-md.md)] instructions et traiter les résultats à l’aide de la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Client fournisseur OLE DB natif, vous devez savoir comment la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] maps du fournisseur OLE DB Native Client [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] des types de données aux types de données OLE DB lors de la liaison paramètres ou colonnes dans un ensemble de lignes, et lorsqu’il utilise le **ITableDefinition** interface pour créer une table dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+  Afin d’exécuter [!INCLUDE[tsql](../../includes/tsql-md.md)] instructions et traiter les résultats à l’aide de la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fournisseur OLE DB Native Client, vous devez savoir comment la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] maps du fournisseur OLE DB Native Client [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] des types de données aux types de données OLE DB lors de la liaison paramètres ou colonnes dans un ensemble de lignes, et lorsqu’il utilise le **ITableDefinition** interface pour créer une table dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ## <a name="in-this-section"></a>Dans cette section  
   

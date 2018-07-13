@@ -1,5 +1,5 @@
 ---
-title: Installer PowerPivot pour SharePoint 2010 | Documents Microsoft
+title: Installer PowerPivot pour SharePoint 2010 | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: eec38696-5e26-46fa-bc83-aa776f470ce8
 caps.latest.revision: 52
 author: markingmyname
 ms.author: maghan
-manager: jhubbard
-ms.openlocfilehash: c77fa146f7703fb67cf0d1ad5c9aa0c042737976
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 59b187ec488716200c53021afb0c6da42cba291c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36152748"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37161820"
 ---
 # <a name="install-powerpivot-for-sharepoint-2010"></a>Installer PowerPivot pour SharePoint 2010
   [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] est une collection de services de couche intermédiaire et de services principaux qui fournissent l'accès aux données PowerPivot dans une batterie de serveurs SharePoint 2010. Si votre organisation utilise l'application cliente, [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] pour Excel 2010, pour créer des classeurs qui contiennent des données analytiques, vous devez disposer de [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] pour accéder à ces données dans un environnement serveur. Cette rubrique vous guide tout au long de la procédure d'installation de base et propose des liens vers des rubriques supplémentaires pour vous aider à configurer PowerPivot.  
@@ -30,7 +30,7 @@ ms.locfileid: "36152748"
   
  
   
- Pour obtenir des instructions sur la façon d’installer [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] et [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] sur le même serveur, consultez [liste de vérification de déploiement : Reporting Services, Power View et PowerPivot pour SharePoint](deployment-checklist-reporting-services-power-view-power-pivot-for-sharepoint.md).  
+ Pour obtenir des instructions sur l’installation [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] et [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] sur le même serveur, consultez [liste de vérification de déploiement : Reporting Services, Power View et PowerPivot pour SharePoint](deployment-checklist-reporting-services-power-view-power-pivot-for-sharepoint.md).  
   
 ## <a name="prerequisites"></a>Prérequis  
   
@@ -128,13 +128,13 @@ ms.locfileid: "36152748"
   
 -   [Configurer ou réparer PowerPivot pour SharePoint 2010 &#40;outil de Configuration PowerPivot&#41;](../../../2014/analysis-services/configure-repair-powerpivot-sharepoint-2010.md)  
   
--   [Administration de serveur PowerPivot et de Configuration dans l’Administration centrale](../../analysis-services/power-pivot-sharepoint/power-pivot-server-administration-and-configuration-in-central-administration.md)  
+-   [Administration et configuration d’un serveur PowerPivot dans l’Administration centrale](../../analysis-services/power-pivot-sharepoint/power-pivot-server-administration-and-configuration-in-central-administration.md)  
   
 -   [Configuration de PowerPivot à l’aide de Windows PowerShell](../../analysis-services/power-pivot-sharepoint/power-pivot-configuration-using-windows-powershell.md)  
   
- **Connexion à l’Instance du moteur de base de données.** Lorsque vous avez installé [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)], le programme d'installation de SQL Server vous a donné la possibilité d'ajouter une instance du moteur de base de données à votre installation. C'est une possibilité si vous installez une nouvelle batterie de serveurs et que vous avez besoin qu'un serveur de base de données exécute la configuration de la batterie et les bases de données de contenu. Si vous avez ajouté le moteur de base de données, il a été installé en tant qu'instance nommée [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]. Chaque fois que vous devez spécifier une connexion à cette instance (par exemple, dans la batterie de serveurs Assistant configuration si vous utilisez cet Assistant pour configurer la batterie de serveurs), n’oubliez pas d’entrer le nom de la base de données dans ce format : <`servername`> \PowerPivot.  
+ **Connexion à l’Instance du moteur de base de données.** Lorsque vous avez installé [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)], le programme d'installation de SQL Server vous a donné la possibilité d'ajouter une instance du moteur de base de données à votre installation. C'est une possibilité si vous installez une nouvelle batterie de serveurs et que vous avez besoin qu'un serveur de base de données exécute la configuration de la batterie et les bases de données de contenu. Si vous avez ajouté le moteur de base de données, il a été installé en tant qu'instance nommée [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]. Chaque fois que vous devez spécifier une connexion à cette instance (par exemple, dans la batterie de serveurs Assistant configuration si vous utilisez cet Assistant pour configurer la batterie de serveurs), n’oubliez pas d’entrer le nom de base de données dans ce format : <`servername`> \PowerPivot.  
   
-##  <a name="bkmk_redist"></a> Étape 3 : Les fournisseurs installer Analysis Services OLE DB sur les serveurs d’applications Excel Services  
+##  <a name="bkmk_redist"></a> Étape 3 : Fournisseurs d’installation Analysis Services OLE DB sur les serveurs d’Application Excel Services  
  Des étapes de configuration supplémentaires sont requises si vous exécutez les services de calcul Excel et [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] sur des serveurs d'applications distincts. Sur les serveurs d'applications exécutant les services de calcul Excel, installez la version appropriée du fournisseur OLE DB Analysis Services (MSOLAP).  
   
 -   La version [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] de MSOLAP est incluse dans le programme d'installation de SQL Server ; par conséquent, l'installation explicite de la version [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] de MSOLAP n'est nécessaire que si votre serveur d'applications n'est pas un serveur d'applications PowerPivot.  
@@ -152,7 +152,7 @@ ms.locfileid: "36152748"
 ## <a name="see-also"></a>Voir aussi  
  [Installation PowerPivot pour SharePoint 2010](../../../2014/sql-server/install/powerpivot-for-sharepoint-2010-installation.md)   
  [Liste de vérification de déploiement : Reporting Services, Power View et PowerPivot pour SharePoint](deployment-checklist-reporting-services-power-view-power-pivot-for-sharepoint.md)   
- [Liste de vérification : déploiement avec montée en charge en ajoutant des serveurs PowerPivot à une batterie de serveurs SharePoint 2010](../../../2014/sql-server/install/deployment-checklist-scale-out-adding-powerpivot-servers-sharepoint-2010-farm.md)   
+ [Liste de vérification de déploiement : Montée en puissance en ajoutant des serveurs PowerPivot à une batterie de serveurs SharePoint 2010](../../../2014/sql-server/install/deployment-checklist-scale-out-adding-powerpivot-servers-sharepoint-2010-farm.md)   
  [Liste de vérification de déploiement : Installation à plusieurs serveurs de PowerPivot pour SharePoint 2010](../../../2014/sql-server/install/deployment-checklist-multiserver-installation-powerpivot-sharepoint-2010.md)  
   
   

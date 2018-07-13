@@ -1,5 +1,5 @@
 ---
-title: Sélectionnez la Source de données | Documents Microsoft
+title: Sélectionnez la Source de données | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.rtp.rptwizard.selectdatasource.f1
 ms.assetid: cdd84ad8-7c6a-41ac-bf51-1b0973434829
 caps.latest.revision: 31
-author: douglaslM
+author: maggiesmsft
 ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 8cb8cb384b83c4d5ca8ba16e017cbf79d53f3742
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 888e3415163fafee1d5300b2a62c5063f61c8621
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36153177"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37155790"
 ---
 # <a name="select-the-data-source"></a>Sélectionner la source de données
   Utilisez cette page de l'Assistant Rapport pour définir une source de données pour le rapport.  
@@ -50,11 +50,11 @@ ms.locfileid: "36153177"
  Sélectionnez cette option pour stocker la source de données dans le projet en tant que source de données partagée et non dans le rapport. De cette façon, vous pouvez l'utiliser comme source de données pour d'autres rapports dans le projet.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Incorporée et partagée des connexions de données ou Sources de données &#40;rapport Générateur et SSRS&#41;](../../2014/reporting-services/embedded-and-shared-data-connections-or-data-sources-report-builder-and-ssrs.md)   
+ [Incorporée et partagée des connexions de données ou Sources de données &#40;Générateur de rapports et SSRS&#41;](../../2014/reporting-services/embedded-and-shared-data-connections-or-data-sources-report-builder-and-ssrs.md)   
  [Spécifier des informations d'identification et de connexion pour les sources de données de rapport](report-data/specify-credential-and-connection-information-for-report-data-sources.md)   
  [Serveur de rapports Reporting Services](../../2014/reporting-services/reporting-services-report-server.md)   
  [Fichier de configuration RSReportDesigner](report-server/rsreportdesigner-configuration-file.md)   
- [Connexions de données, les Sources de données et les chaînes de connexion dans Reporting Services](../../2014/reporting-services/data-connections-data-sources-and-connection-strings-in-reporting-services.md)   
- [Aide de l’Assistant rapport](../../2014/reporting-services/report-wizard-help.md)  
+ [Connexions de données, Sources de données et chaînes de connexion dans Reporting Services](../../2014/reporting-services/data-connections-data-sources-and-connection-strings-in-reporting-services.md)   
+ [Aide de l’Assistant Rapport](../../2014/reporting-services/report-wizard-help.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Déployer une Solution d’exploration de données pour les Versions précédentes de SQL Server | Documents Microsoft
+title: Déployer une Solution d’exploration de données aux Versions précédentes de SQL Server | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - backward compatibility [Analysis Services]
 - holdout [data mining]
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - deployment [Analysis Services]
 ms.assetid: 2715c245-f206-43af-8bf5-e6bd2585477a
 caps.latest.revision: 15
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 28bb6c9ffd7f51c322e1e01d1c60cb40feb20492
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: b56e7e62c0717c94edfb4c8aaf7183f8e3e1f88b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36151780"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37177236"
 ---
 # <a name="deploy-a-data-mining-solution-to-previous-versions-of-sql-server"></a>Déployer une solution d'exploration de données sur des versions antérieures de SQL Server
   Cette section décrit des problèmes de compatibilité connus qui peuvent survenir lorsque vous essayez de déployer un modèle d'exploration de données ou une structure d'exploration de données créée dans une instance de [!INCLUDE[ssASCurrent](../../includes/ssascurrent-md.md)] sur une base de données qui utilise SQL Server 2005 Analysis Services, ou lorsque vous déployez des modèles créés dans SQL Server 2005 sur une instance de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
@@ -64,7 +64,7 @@ ms.locfileid: "36151780"
   
  Lorsque vous ouvrez la structure d'exploration de données dans SQL Server 2005 Analysis Services, [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] génère une erreur, puis régénère la structure pour supprimer la partition d'exclusion.  
   
- Une fois que la structure a été reconstruite, la taille de la partition d’exclusion n’est plus disponible dans la fenêtre Propriétés. Toutefois, la valeur \<ddl100_100 : holdoutmaxpercent > 30\</ddl100_100:HoldoutMaxPercent >) peuvent toujours être présents dans le fichier de script ASSL.  
+ Une fois que la structure a été régénérée, la taille de la partition d’exclusion n’est plus disponible dans la fenêtre Propriétés. Toutefois, la valeur \<ddl100_100 : holdoutmaxpercent > 30\</ddl100_100:HoldoutMaxPercent >) peuvent toujours être présents dans le fichier de script ASSL.  
   
 ##  <a name="bkmk_Filter"></a> Déploiement de modèles avec filtres  
  Si vous utilisez [!INCLUDE[ssASCurrent](../../includes/ssascurrent-md.md)] pour appliquer un filtre à un modèle d'exploration de données, le modèle peut être déployé sur une instance de SQL Server 2005, mais le filtre ne sera pas appliqué.  
@@ -82,6 +82,6 @@ ms.locfileid: "36151780"
  Si vous essayez de synchroniser une base de données [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] , le serveur retourne une erreur et la synchronisation de la base de données échoue.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Compatibilité descendante Analysis Services](../analysis-services-backward-compatibility.md)  
+ [Compatibilité descendante d’Analysis Services](../analysis-services-backward-compatibility.md)  
   
   

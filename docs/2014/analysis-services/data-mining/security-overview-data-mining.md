@@ -1,5 +1,5 @@
 ---
-title: Vue d’ensemble de la sécurité (exploration de données) | Documents Microsoft
+title: Vue d’ensemble de la sécurité (exploration de données) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - security [Analysis Services - data mining], about security
 ms.assetid: 387bde00-bcf3-4612-b27b-f9f608dbf71e
 caps.latest.revision: 11
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: a20982584b08256cf02d0ca1bb6a3fb3012190b0
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 0d7432450357e77875695983f65661f0e645c7a8
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36152455"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37177016"
 ---
 # <a name="security-overview-data-mining"></a>Vue d'ensemble de la sécurité (exploration de données)
   La sécurisation de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] a lieu à plusieurs niveaux. Vous devez sécuriser chaque instance d' [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] et ses sources de données pour vous assurer que seuls les utilisateurs autorisés disposent d'autorisations de lecture/écriture sur les dimensions, les modèles d'exploration de données et les sources de données sélectionnés. Vous devez également sécuriser les sources de données sous-jacentes pour empêcher les utilisateurs non autorisés de compromettre volontairement les informations professionnelles sensibles. Le processus de sécurisation d’une instance de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] est décrit dans les rubriques suivantes.  
@@ -35,7 +35,7 @@ ms.locfileid: "36152455"
   
 -   [Configurer les comptes de Service &#40;Analysis Services&#41;](../instances/configure-service-accounts-analysis-services.md)  
   
--   [Autoriser l’accès aux objets et des opérations &#40;Analysis Services&#41;](../multidimensional-models/authorizing-access-to-objects-and-operations-analysis-services.md)  
+-   [Autoriser l’accès aux objets et aux opérations &#40;Analysis Services&#41;](../multidimensional-models/authorizing-access-to-objects-and-operations-analysis-services.md)  
   
 ##  <a name="bkmk_Logon"></a> Configuration du compte d'ouverture de session d'Analysis Services  
  Vous devez sélectionner un compte d’ouverture de session approprié pour [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] et définir ses autorisations. Vous devez vérifier que le compte d’ouverture de session [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] dispose uniquement des autorisations indispensables pour effectuer les tâches nécessaires, notamment les autorisations appropriées sur les sources de données sous-jacentes.  

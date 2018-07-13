@@ -1,5 +1,5 @@
 ---
-title: Élément translations (XMLA) | Documents Microsoft
+title: Élément translations (XMLA) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -24,15 +24,15 @@ helpviewer_keywords:
 - Translations element
 ms.assetid: 86fd2119-9bea-4306-829e-cc439da05566
 caps.latest.revision: 10
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: 180a570d7b466a33c0c057066d88b1bd28d00d27
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: 64dcf6e45cd70270ca0a5160b777044082c1c27d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36143341"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37205649"
 ---
 # <a name="translations-element-xmla"></a>Élément Translations (XMLA)
   Contient une collection d'éléments [Translation](translation-element-xmla.md) utilisés pour identifier les clés de membre du membre d'attribut représenté par l'élément [Attribute](attribute-element-xmla.md) parent.  
@@ -68,7 +68,7 @@ ms.locfileid: "36143341"
 ## <a name="remarks"></a>Notes  
   
 ## <a name="see-also"></a>Voir aussi  
- [Insérer l’élément &#40;XMLA&#41;](../xml-elements-commands/insert-element-xmla.md)   
+ [Insérer un élément &#40;XMLA&#41;](../xml-elements-commands/insert-element-xmla.md)   
  [Mettre à jour d’élément &#40;XMLA&#41;](../xml-elements-commands/update-element-xmla.md)   
  [Propriétés &#40;XMLA&#41;](xml-elements-properties.md)  
   

@@ -1,5 +1,5 @@
 ---
-title: Élément Translation (XMLA) | Documents Microsoft
+title: Élément Translation (XMLA) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -24,15 +24,15 @@ helpviewer_keywords:
 - Translation element
 ms.assetid: ce962d4b-dda9-4a16-a56c-ff7a5275c48a
 caps.latest.revision: 12
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: 63072fae7d585f18fdc3b3bc1da5ffbef5bb9b8c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: 2ce94966eae0cb1088ff462f551bdd27ad4304ee
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36152197"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37180786"
 ---
 # <a name="translation-element-xmla"></a>Élément Translation (XMLA)
   Définit une traduction pour un membre d'attribut.  
@@ -67,7 +67,7 @@ ms.locfileid: "36152197"
 |Éléments enfants|[Language](language-element-xmla.md), [Name](name-element-xmla.md)|  
   
 ## <a name="remarks"></a>Notes  
- A `Translation` élément définit les informations nécessaires pour associer un membre d’attribut à une traduction définie pour un attribut donné pendant un [insérer](../xml-elements-commands/insert-element-xmla.md) ou [mise à jour](../xml-elements-commands/update-element-xmla.md) commande.  
+ Un `Translation` élément définit les informations nécessaires pour associer un membre d’attribut à une traduction définie pour un attribut donné pendant un [insérer](../xml-elements-commands/insert-element-xmla.md) ou [mise à jour](../xml-elements-commands/update-element-xmla.md) commande.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Propriétés &#40;XMLA&#41;](xml-elements-properties.md)  

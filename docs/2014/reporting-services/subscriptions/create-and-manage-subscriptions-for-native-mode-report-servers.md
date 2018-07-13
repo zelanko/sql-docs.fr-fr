@@ -1,5 +1,5 @@
 ---
-title: Créer, modifier et supprimer des abonnements Standard (Reporting Services en Mode natif) | Documents Microsoft
+title: Créer, modifier et supprimer des abonnements Standard (Reporting Services en Mode natif) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - standard subscriptions [Reporting Services]
 - subscriptions [Reporting Services], standard
@@ -16,13 +16,13 @@ ms.assetid: 5ab1c661-9bfa-434a-b315-faac34ed12b1
 caps.latest.revision: 46
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 508ffaa05c0f5d30204832b49dcdf2b3b791c567
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: a8c38acc8b25853db76bf89008189928c4cef578
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36152077"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37230389"
 ---
 # <a name="create-modify-and-delete-standard-subscriptions-reporting-services-in-native-mode"></a>Créer, modifier et supprimer les abonnements standard (Reporting Services en mode natif)
   L'abonnement standard est un abonnement créé par des utilisateurs individuels qui souhaitent recevoir des rapports par messagerie électronique ou dans un dossier partagé. Ce type d'abonnement est toujours défini en fonction du rapport sur lequel il est basé.  
@@ -34,7 +34,7 @@ ms.locfileid: "36152077"
   
  Suivant les paramètres du fichier de configuration **RSReportServer.config** , les utilisateurs ont la possibilité d'ajouter des utilisateurs supplémentaires à un abonnement. Un responsable peut ainsi ajouter les adresses de messagerie de ses subordonnés directs pour qu'ils reçoivent une copie du rapport. La prise en charge de ceci varie selon que le champ À : est visible ou non lors de la définition d'abonnements individuels. Pour plus d’informations, consultez [configurer un serveur de rapports pour la remise du courrier électronique &#40;Gestionnaire de Configuration de SSRS&#41;](../../sql-server/install/configure-a-report-server-for-e-mail-delivery-ssrs-configuration-manager.md).  
   
- Cette rubrique fournit des informations sur les abonnements standard qui sont créés et gérés par des utilisateurs individuels. Les abonnements pilotés par les données ne fonctionnent pas de la même façon et sont décrits dans une rubrique distincte. Pour plus d’informations, consultez [créer, modifier et supprimer un abonnement piloté](data-driven-subscriptions.md).  
+ Cette rubrique fournit des informations sur les abonnements standard qui sont créés et gérés par des utilisateurs individuels. Les abonnements pilotés par les données ne fonctionnent pas de la même façon et sont décrits dans une rubrique distincte. Pour plus d’informations, consultez [créer, modifier et supprimer un abonnement piloté par les données](data-driven-subscriptions.md).  
   
  Dans cette rubrique :  
   
@@ -53,7 +53,7 @@ ms.locfileid: "36152077"
   
 -   Le contenu de cette rubrique explique comment créer des abonnements sur un serveur de rapports en mode natif à l'aide du Gestionnaire de rapports de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Après avoir défini un abonnement, vous avez la possibilité d'y accéder dans le Gestionnaire de rapports via la page Mes abonnements ou l'onglet **Abonnements** d'un rapport spécifique.  
   
--   [Créer et gérer des abonnements pour les serveurs de rapports en Mode SharePoint](create-and-manage-subscriptions-for-sharepoint-mode-report-servers.md) explique comment utiliser les pages d’application dans un site SharePoint pour vous abonner à des rapports sur un serveur de rapports qui s’exécute en mode intégré SharePoint.  
+-   [Créer et gérer des abonnements pour les serveurs de rapports en Mode SharePoint](create-and-manage-subscriptions-for-sharepoint-mode-report-servers.md) explique comment utiliser les pages d’application dans un site SharePoint pour vous abonner aux rapports sur un serveur de rapports qui s’exécute en mode intégré SharePoint.  
   
  Cette rubrique détaille la procédure de création d'un abonnement pour une remise par courrier électronique ou dans un partage de fichiers.  
   
@@ -61,7 +61,7 @@ ms.locfileid: "36152077"
   
 -   Si vous souhaitez utiliser la remise par partage de fichiers, le dossier cible doit avoir été défini. Pour plus d’informations, consultez [configurer un serveur de rapports pour la remise du courrier électronique &#40;Gestionnaire de Configuration de SSRS&#41;](../../sql-server/install/configure-a-report-server-for-e-mail-delivery-ssrs-configuration-manager.md).  
   
- Pour que vous puissiez vous abonner à un rapport, la source de données du rapport doit être configurée pour utiliser des informations d'identification stockées ou aucune information d'identification. Pour plus d’informations, consultez [informations d’identification de magasin dans une Source de données Reporting Services](../report-data/store-credentials-in-a-reporting-services-data-source.md). Si aucune information d'identification n'est utilisée, le bouton **Nouvel abonnement** n'est pas disponible.  
+ Pour que vous puissiez vous abonner à un rapport, la source de données du rapport doit être configurée pour utiliser des informations d'identification stockées ou aucune information d'identification. Pour plus d’informations, consultez [Store les informations d’identification dans une Source de données Reporting Services](../report-data/store-credentials-in-a-reporting-services-data-source.md). Si aucune information d'identification n'est utilisée, le bouton **Nouvel abonnement** n'est pas disponible.  
   
  Cette rubrique n'explique pas comment créer un abonnement piloté par les données. Pour obtenir des instructions sur la création d’un abonnement piloté par les données, consultez [Créer un abonnement piloté par les données &#40;didacticiel SSRS&#41;](../create-a-data-driven-subscription-ssrs-tutorial.md) ou recherchez la page d’informations relatives à la création d’un abonnement piloté par les données dans l’aide en ligne du Gestionnaire de rapports.  
   
@@ -79,7 +79,7 @@ ms.locfileid: "36152077"
   
 6.  Sélectionnez **Ajouter une extension de fichier lorsque le fichier est créé**. Cette option ajoute une extension de trois caractères au nom de fichier. L'extension de fichier est déterminée par le format de sortie sélectionné pour le rapport.  
   
-7.  Dans le **chemin d’accès** texte, tapez un chemin d’accès UNC Universal Naming Convention () à un dossier existant dans lequel vous souhaitez remettre les rapports (par exemple, \\ \\< nom_serveur\>\\< MyReports\>). Insérez deux barres obliques inverses au début du chemin d'accès. Ne spécifiez pas de barre oblique de fin.  
+7.  Dans le **chemin d’accès** texte, tapez un chemin d’accès UNC Universal Naming Convention () vers un dossier existant dans lequel vous souhaitez remettre les rapports (par exemple, \\ \\< nom_serveur\>\\< MyReports\>). Insérez deux barres obliques inverses au début du chemin d'accès. Ne spécifiez pas de barre oblique de fin.  
   
 8.  Dans Format du rendu, sélectionnez un format de sortie du rapport pour la remise de fichier. Choisissez un format qui correspond à l'application bureautique qui sera utilisée pour ouvrir le rapport. Évitez les formats qui n'effectuent pas le rendu d'un rapport en un seul flux ou qui introduisent une interactivité non prise en charge dans un fichier statique (par exemple le format HTML 4.0).  
   
@@ -110,7 +110,7 @@ ms.locfileid: "36152077"
   
 3.  Dans **Remis par**, sélectionnez **Messagerie électronique**. Si ce type de remise n'est pas disponible, votre serveur de rapports n'est pas configuré pour les abonnements par messagerie électronique.  
   
-4.  Dans la zone de texte **À** , le nom du destinataire dans le champ À : est renseigné automatiquement à l'aide de votre compte d'utilisateur de domaine. Les paramètres de configuration du serveur de rapports déterminent si le champ **À** est renseigné automatiquement à l'aide de votre compte d'utilisateur. Pour plus d’informations sur les adresses de messagerie des paramètres de configuration, consultez [configurer un serveur de rapports pour la remise du courrier électronique &#40;Gestionnaire de Configuration de SSRS&#41;](../../sql-server/install/configure-a-report-server-for-e-mail-delivery-ssrs-configuration-manager.md).  
+4.  Dans la zone de texte **À** , le nom du destinataire dans le champ À : est renseigné automatiquement à l'aide de votre compte d'utilisateur de domaine. Les paramètres de configuration du serveur de rapports déterminent si le champ **À** est renseigné automatiquement à l'aide de votre compte d'utilisateur. Pour plus d’informations sur la modification les adresses de messagerie des paramètres de configuration, consultez [configurer un serveur de rapports pour la remise du courrier électronique &#40;Gestionnaire de Configuration de SSRS&#41;](../../sql-server/install/configure-a-report-server-for-e-mail-delivery-ssrs-configuration-manager.md).  
   
     > [!NOTE]  
     >  En fonction de vos autorisations, vous pouvez taper l'adresse de messagerie à laquelle le rapport doit être remis. Si vous spécifiez plusieurs adresses, séparez-les par des points-virgules (;). Vous pouvez aussi taper des adresses e-mail supplémentaires dans les zones de texte **Cc**, **Cci**et **Répondre à** . Pour cela, vous devez disposer de l'autorisation de gestion de tous les abonnements.  
@@ -181,6 +181,6 @@ ms.locfileid: "36152077"
  [Abonnements pilotés par les données](data-driven-subscriptions.md)   
  [Abonnements et remises &#40;Reporting Services&#41;](subscriptions-and-delivery-reporting-services.md)   
  [Le Gestionnaire de rapports &#40;SSRS en Mode natif&#41;](../report-manager-ssrs-native-mode.md)   
- [Utiliser mes abonnements](use-my-subscriptions-native-mode-report-server.md)  
+ [Utiliser Mes abonnements](use-my-subscriptions-native-mode-report-server.md)  
   
   

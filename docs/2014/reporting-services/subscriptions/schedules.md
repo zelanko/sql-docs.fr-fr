@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - schedules [Reporting Services]
 - schedules [Reporting Services], about schedules
@@ -20,26 +20,26 @@ ms.assetid: ecccd16b-eba9-4e95-b55d-f15c621e003f
 caps.latest.revision: 50
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 800dce34cebf45e3962b5226929267afe1fc727f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 5b673c1dfe86caab3feeeae6bdbdfda853bd2a5f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36141248"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37278407"
 ---
 # <a name="schedules"></a>Planifications
-  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Fournit des planifications partagées et les planifications spécifiques aux rapports pour vous aider à contrôler le traitement et la distribution des rapports. La différence entre ces deux types de planifications réside dans la façon dont elles sont définies, stockées et gérées. La construction interne des deux types de planifications est la même. Toutes les planifications spécifient un type de périodicité : mensuelle, hebdomadaire ou quotidienne. Dans le type de périodicité, vous définissez les intervalles et la plage pour configurer la fréquence à laquelle un événement se produit. Qu'il s'agisse de créer une planification partagée ou une planification spécifique aux rapports, le type de périodicité et la façon dont elle est spécifiée restent inchangés.  
+  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Fournit des planifications partagées et planifications spécifiques aux rapports pour vous aider à contrôler le traitement et la distribution des rapports. La différence entre ces deux types de planifications réside dans la façon dont elles sont définies, stockées et gérées. La construction interne des deux types de planifications est la même. Toutes les planifications spécifient un type de périodicité : mensuelle, hebdomadaire ou quotidienne. Dans le type de périodicité, vous définissez les intervalles et la plage pour configurer la fréquence à laquelle un événement se produit. Qu'il s'agisse de créer une planification partagée ou une planification spécifique aux rapports, le type de périodicité et la façon dont elle est spécifiée restent inchangés.  
   
  Dans cette rubrique :  
   
 -   [Ce que vous pouvez faire avec les planifications](#bkmk_whatyoucando)  
   
--   [Comparaison des planifications partagées et spécifique aux rapports](#bkmk_compare)  
+-   [Comparaison des planifications partagées et spécifiques aux rapports](#bkmk_compare)  
   
 -   [Configurer les Sources de données](#bkmk_configuredatasources)  
   
--   [Stocker les informations d’identification et comptes de traitement](#bkmk_credentials)  
+-   [Store les informations d’identification et comptes de traitement](#bkmk_credentials)  
   
 -   [La planification et le fonctionnement du traitement de remise](#bkmk_how_scheduling_works)  
   
@@ -67,7 +67,7 @@ ms.locfileid: "36141248"
   
  Lorsque vous créez une planification, le rapport enregistre les informations de planification dans la base de données du serveur de rapports ou, pour le mode SharePoint, la base de données d'application de service. Le serveur de rapports crée également un travail de l'Agent [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] qui est utilisé pour déclencher la planification. Le traitement des planifications est basé sur l'heure locale du serveur de rapports contenant la planification. Le format horaire se conforme à celui du système d'exploitation [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows.  
   
- Pour plus d’informations sur la façon de créer et gérer des planifications, consultez [créer, modifier et supprimer des planifications](create-modify-and-delete-schedules.md).  
+ Pour plus d’informations sur la façon de créer et gérer des planifications, consultez [créer, modifier et supprimer les planifications](create-modify-and-delete-schedules.md).  
   
 > [!NOTE]  
 >  Les opérations de planification ne sont pas disponibles dans toutes les édition de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Pour obtenir la liste des fonctionnalités prises en charge par les éditions de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], consultez [Fonctionnalités prises en charge par les éditions de SQL Server 2012](http://go.microsoft.com/fwlink/?linkid=232473) (http://go.microsoft.com/fwlink/?linkid=232473).  
@@ -104,7 +104,7 @@ ms.locfileid: "36141248"
 |Créer, modifier ou supprimer des planifications spécifiques aux rapports dans un abonnement défini par l'utilisateur|Gérer les abonnements individuels|Navigateur, Générateur de rapports, Mes rapports, Gestionnaire de contenu|Visiteurs, membres|  
 |Créer, modifier ou supprimer des planifications spécifiques aux rapports pour toutes les autres opérations planifiées|Gérer l'historique de rapport, gérer tous les abonnements, gérer les rapports|Gestionnaire de contenu|Propriétaires|  
   
- Pour plus d’informations sur la sécurité en mode natif [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], consultez [de rôles prédéfinis](../security/role-definitions-predefined-roles.md), [octroi d’autorisations sur un serveur de rapports en Mode natif](../security/granting-permissions-on-a-native-mode-report-server.md) et [tâches et autorisations](../security/tasks-and-permissions.md). Pour le mode SharePoint, consultez [Comparer des rôles et des tâches dans Reporting Services pour des autorisations et des groupes SharePoint](../reporting-services-roles-tasks-vs-sharepoint-groups-permissions.md)  
+ Pour plus d’informations sur la sécurité en mode natif [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], consultez [rôles prédéfinis](../security/role-definitions-predefined-roles.md), [octroi d’autorisations sur un serveur de rapports en Mode natif](../security/granting-permissions-on-a-native-mode-report-server.md) et [tâches et autorisations](../security/tasks-and-permissions.md). Pour le mode SharePoint, consultez [Comparer des rôles et des tâches dans Reporting Services pour des autorisations et des groupes SharePoint](../reporting-services-roles-tasks-vs-sharepoint-groups-permissions.md)  
   
 ##  <a name="bkmk_how_scheduling_works"></a> Fonctionnement du traitement des planifications et des livraisons  
  Le processeur de planification et de livraison présente les fonctionnalités suivantes :  
@@ -132,7 +132,7 @@ ms.locfileid: "36141248"
  Reporting Services gère une file d'attente d'événements pour toutes les opérations planifiées. Il interroge régulièrement la file d'attente pour vérifier si elle contient de nouveaux événements. Par défaut, la file d'attente fait l'objet d'une analyse toutes les 10 secondes. Vous pouvez modifier l’intervalle en modifiant le `PollingInterval`, `IsNotificationService`, et `IsEventService` des paramètres de configuration dans le fichier RSReportServer.config. Le mode SharePoint utilise également le fichier RSreporserver.config pour ces paramètres et les valeurs s'appliquent à toutes les applications de service [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Pour plus d'informations, consultez [RSReportServer Configuration File](../report-server/rsreportserver-config-configuration-file.md).  
   
 ##  <a name="bkmk_serverdependencies"></a> Dépendances de serveur  
- Il est impératif que le service Report Server et l'Agent SQL Server s'exécutent pour que le processeur de planification et de livraison fonctionne. La fonctionnalité de planification de traitement et des livraisons doit être activée via le `ScheduleEventsAndReportDeliveryEnabled` propriété de la **Configuration de zone de surface d’exposition pour Reporting Services** facette dans la gestion basée sur des stratégies. Enfin, les opérations planifiées ne peuvent se déclencher que si l'Agent SQL Server et le service Report Server sont en cours d'exécution.  
+ Il est impératif que le service Report Server et l'Agent SQL Server s'exécutent pour que le processeur de planification et de livraison fonctionne. La fonctionnalité de planification de traitement et des livraisons doit être activée via le `ScheduleEventsAndReportDeliveryEnabled` propriété de la **Configuration de Surface d’exposition pour Reporting Services** facette dans la gestion basée sur des stratégies. Enfin, les opérations planifiées ne peuvent se déclencher que si l'Agent SQL Server et le service Report Server sont en cours d'exécution.  
   
 > [!NOTE]  
 >  Vous pouvez utiliser la facette **Configuration de la surface d'exposition pour Reporting Services** pour interrompre temporairement ou définitivement des opérations planifiées. Bien que vous puissiez créer et déployer des extensions de remise personnalisées, le processeur de planification et de livraison n'est en lui-même pas extensible. Vous ne pouvez pas modifier la manière dont il gère les événements et les notifications. Pour plus d'informations sur la désactivation des fonctionnalités, consultez la section **Événements planifiés et remise** de [Turn Reporting Services Features On or Off](../report-server/turn-reporting-services-features-on-or-off.md).  
@@ -147,7 +147,7 @@ ms.locfileid: "36141248"
  Si vous arrêtez le service Report Server, l'Agent SQL Server continue malgré tout d'ajouter des demandes de traitement de rapport à la file d'attente. Les informations d'état de SQL Server Agent indiquent que les travaux ont été correctement effectués. Toutefois, aucun traitement de rapport n'a, en réalité, été réalisé puisque le service Report Server ne fonctionne pas. Les demandes continueront de s'accumuler dans la file d'attente jusqu'à ce que le service Report Server redémarre. Une fois ce service relancé, toutes les demandes de traitement de rapport présentes dans la file d'attente sont traitées dans l'ordre.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Créer, modifier et supprimer les instantanés de l’historique de rapport](../report-server/create-modify-and-delete-snapshots-in-report-history.md)   
+ [Créer, modifier et supprimer des instantanés dans l’historique de rapport](../report-server/create-modify-and-delete-snapshots-in-report-history.md)   
  [Abonnements et remises &#40;Reporting Services&#41;](subscriptions-and-delivery-reporting-services.md)   
  [Abonnements pilotés par les données](data-driven-subscriptions.md)   
  [Mise en cache de rapports &#40;SSRS&#41;](../report-server/caching-reports-ssrs.md)   

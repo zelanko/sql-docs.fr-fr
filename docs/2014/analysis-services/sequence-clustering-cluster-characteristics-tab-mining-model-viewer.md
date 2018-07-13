@@ -1,5 +1,5 @@
 ---
-title: Sequence Clustering onglet caractéristiques du Cluster (visionneuse de modèle d’exploration de données) | Documents Microsoft
+title: Sequence Clustering onglet caractéristiques du Cluster (visionneuse de modèle d’exploration de données) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dm.miningmodeleditor.sequenceclustering.characteristics.f1
 ms.assetid: 3a9e8a0c-7d03-47cc-8625-e68d73a8c947
 caps.latest.revision: 23
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 75601cb33f04eaacfdb3970f858dd8a359abd4bd
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 4272975a16da0cf0d9db534df34d00e329dc5430
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36153122"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37153180"
 ---
 # <a name="sequence-clustering-cluster-characteristics-tab-mining-model-viewer"></a>Onglet Caractéristiques du cluster du modèle Sequence Clustering (Visionneuse de modèle d'exploration de données)
   L'onglet **Caractéristiques du cluster** dans la **Visionneuse de l'algorithme MSC** (Microsoft Sequence Clustering) fournit une liste détaillée des caractéristiques qui définissent un cluster de séquence. Ces fonctionnalités peuvent inclure des paires attribut-valeur simples, ainsi que des transitions entre les états.  
@@ -31,7 +31,7 @@ ms.locfileid: "36153122"
  **Pour plus d’informations :** [Algorithme MSC (Microsoft Sequence Clustering)](data-mining/microsoft-sequence-clustering-algorithm.md), [Explorer un modèle à l’aide de la visionneuse de l’algorithme MSC (Microsoft Sequence Cluster)](data-mining/browse-a-model-using-the-microsoft-sequence-cluster-viewer.md)  
   
 ## <a name="options"></a>Options  
- **Actualiser le contenu de la visionneuse**  
+ **Actualiser le contenu de l’Observateur**  
  Recharge le modèle d'exploration de données dans la visionneuse.  
   
  **Modèle d'exploration de données**  
@@ -43,7 +43,7 @@ ms.locfileid: "36153122"
  **Cluster**  
  Choisissez le cluster à afficher.  
   
- **Caractéristiques de \<Cluster >**  
+ **Caractéristiques pour \<Cluster >**  
  Ce tableau présente une liste des séquences affectées au cluster actuel, classée par la probabilité. Souvenez-vous qu'une séquence est à la base une paire attribut-valeur, suivie d'un ou plusieurs paires attribut-valeur supplémentaires. La combinaison des séquences et leurs probabilités constituent les caractéristiques de définition de chaque cluster.  
   
  Par exemple, dans un modèle Sequence Clustering basé sur l'analyse du panier d'achat, un cluster peut avoir comme principale caractéristique un client choisissant l'article de vente puis mettant fin à la transaction sans effectuer d'autres achats. Dans un modèle Sequence Clustering qui cherche à analyser les erreurs d'un serveur, les caractéristiques principales d'un cluster peuvent être une série d'événements d'erreurs de fréquence élevée.  

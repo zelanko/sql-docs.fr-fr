@@ -1,13 +1,11 @@
 ---
-title: SQLMoreResults | Documents Microsoft
+title: SQLMoreResults | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 topic_type:
@@ -16,15 +14,15 @@ helpviewer_keywords:
 - SQLMoreResults function
 ms.assetid: f65698c3-7291-480d-9dab-58b13feb7771
 caps.latest.revision: 32
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: a882abd409468bdd9a52a8affcdca13b3bc93bd3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: aed3bff56fcb794f50958f96ffe14df83205bb07
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36142714"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37410478"
 ---
 # <a name="sqlmoreresults"></a>SQLMoreResults
   **SQLMoreResults** permet à l'application de récupérer plusieurs jeux de lignes de résultat. Une instruction [!INCLUDE[tsql](../../includes/tsql-md.md)] SELECT contenant une clause COMPUTE, ou un lot soumis d'instructions ODBC ou [!INCLUDE[tsql](../../includes/tsql-md.md)] , entraîne la génération de plusieurs jeux de résultats par le pilote ODBC [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] n'autorise pas la création d'un curseur côté serveur pour traiter les résultats. Par conséquent, le développeur doit s'assurer que l'instruction ODBC bloque. Il doit consommer les données retournées ou annuler l'instruction ODBC avant de traiter les données des autres instructions actives sur la connexion.  

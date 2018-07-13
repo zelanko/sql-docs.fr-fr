@@ -8,24 +8,24 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 43551300-89b2-4f4e-af09-69084324afaf
 caps.latest.revision: 6
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 31dcb2ef4f2d4881bd2e4ffb94865c9a9d71faad
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: a05f5b165c72fa57795d22b2dc86d8dac616268b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36152492"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37198529"
 ---
 # <a name="merge-cells-in-a-data-region-report-builder-and-ssrs"></a>Fusionner des cellules dans une région de données (Générateur de rapports et SSRS)
   Vous pouvez fusionner des cellules dans une région de données pour les combiner, améliorer l'apparence de la région de données ou fournir des étiquettes étendues pour les groupes de colonnes et de lignes.  
   
 > [!NOTE]  
->  Les cellules peuvent uniquement être fusionnées à l'intérieur de chaque zone d'une région de données : angle, en-têtes de colonne, définition de groupe (ou en-têtes de ligne) et corps. Vous ne pouvez pas fusionner de cellules dépassant les limites de la zone. Vous ne pouvez par exemple pas fusionner une cellule située dans la zone d'angle de la région de données avec une cellule située dans la zone de groupe de lignes. Pour plus d’informations sur les zones de tableau matriciel, consultez [répertorie &#40;le Générateur de rapports et SSRS&#41;](tables-matrices-and-lists-report-builder-and-ssrs.md).  
+>  Les cellules peuvent uniquement être fusionnées à l'intérieur de chaque zone d'une région de données : angle, en-têtes de colonne, définition de groupe (ou en-têtes de ligne) et corps. Vous ne pouvez pas fusionner de cellules dépassant les limites de la zone. Vous ne pouvez par exemple pas fusionner une cellule située dans la zone d'angle de la région de données avec une cellule située dans la zone de groupe de lignes. Pour plus d’informations sur les zones de tableau matriciel, consultez [répertorie &#40;Générateur de rapports et SSRS&#41;](tables-matrices-and-lists-report-builder-and-ssrs.md).  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  

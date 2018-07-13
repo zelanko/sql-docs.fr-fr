@@ -1,5 +1,5 @@
 ---
-title: Élément DiscoverResponse (XMLA) | Documents Microsoft
+title: Élément DiscoverResponse (XMLA) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -24,15 +24,15 @@ helpviewer_keywords:
 - DiscoverResponse element
 ms.assetid: 20e10a82-dbd1-4ead-b92d-f84b4b2f10c6
 caps.latest.revision: 13
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: 6834a0dbd0842cce7a3756ffbeb53be6f9515713
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: 61552da233cdcd405fc9d0e07ecc93e186295422
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36144372"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37180804"
 ---
 # <a name="discoverresponse-element-xmla"></a>Élément DiscoverResponse (XMLA)
   Contient les informations retournées par une instance de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] en réponse à une [Discover](xml-elements-methods-discover.md) appel de méthode.  
@@ -61,7 +61,7 @@ ms.locfileid: "36144372"
 |Relation|Élément|  
 |------------------|-------------|  
 |Éléments parents|None|  
-|Éléments enfants|[De retour](xml-elements-properties/return-element-xmla.md)|  
+|Éléments enfants|[retour](xml-elements-properties/return-element-xmla.md)|  
   
 ## <a name="remarks"></a>Notes  
  L'élément `DiscoverResponse` est l'élément le plus haut dans le corps d'une réponse SOAP pour la méthode `Discover`.  

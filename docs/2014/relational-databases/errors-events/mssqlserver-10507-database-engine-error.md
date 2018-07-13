@@ -5,23 +5,22 @@ ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
+ms.technology: supportability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - 10507 (Database Engine error)
 ms.assetid: cd83fa81-ac37-4eda-a3c3-17610b051de2
 caps.latest.revision: 10
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: dc1510ff82b619ef4462be95b592ca89133eecdb
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 7614a550b0a7e60ac1d8d355fa68299aa8812e90
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36142041"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37410128"
 ---
 # <a name="mssqlserver10507"></a>MSSQLSERVER_10507
     
@@ -34,7 +33,7 @@ ms.locfileid: "36142041"
 |Source de l'événement|MSSQLSERVER|  
 |Composant|SQLEngine|  
 |Nom symbolique|PG_STMT_DOES_NOT_MATCH|  
-|Texte du message|Impossible de créer le repère de plan ' %. \*%.*ls, car l’instruction spécifiée par `@stmt` et `@module_or_batch`, ou par `@plan_handle` et `@statement_start_offset`, ne pas correspondre à n’importe quelle instruction dans le module spécifié ou du lot. Modifiez les valeurs pour qu'elles correspondent à une instruction dans le module ou le lot.|  
+|Texte du message|Impossible de créer le repère de plan ' %. \*%.*ls, car l’instruction spécifiée par `@stmt` et `@module_or_batch`, ou par `@plan_handle` et `@statement_start_offset`, ne correspond à aucune instruction dans le module spécifié ou lot. Modifiez les valeurs pour qu'elles correspondent à une instruction dans le module ou le lot.|  
   
 ## <a name="explanation"></a>Explication  
  Une instruction dans le module ou le lot spécifié n'a pas pu être mise en correspondance avec l'instruction ou la valeur de décalage de l'instruction spécifiée.  

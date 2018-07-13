@@ -1,5 +1,5 @@
 ---
-title: Créer un emplacement approuvé pour les sites PowerPivot dans l’Administration centrale | Documents Microsoft
+title: Créer un emplacement approuvé pour les sites PowerPivot dans l’Administration centrale | Microsoft Docs
 ms.custom: ''
 ms.date: 04/28/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: a666f365-cd93-43a3-9d3d-e429dfc19b66
 caps.latest.revision: 6
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 56bc807ef54538a0d72bab8f3136df9304b6615e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 5661842742c4f0f80b56186704a6b9ac967e8db8
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36153338"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37153330"
 ---
 # <a name="create-a-trusted-location-for-powerpivot-sites-in-central-administration"></a>Créer un emplacement approuvé pour les sites PowerPivot dans l'Administration centrale
   Excel Services vous permet de spécifier les emplacements qui constituent des référentiels valides pour les classeurs que vous ouvrez sur un serveur SharePoint. Ces emplacements sont appelés « emplacements approuvés ». Vous pouvez utiliser des paramètres de configuration différents pour chaque emplacement approuvé créé. Pour un déploiement de PowerPivot pour SharePoint, vous envisagez peut être de créer un emplacement approuvé pour les sites qui contiennent des classeurs PowerPivot, pour pouvoir appliquer les paramètres les plus appropriés à l'accès aux données PowerPivot tout en conservant les paramètres par défaut pour le reste de la batterie.  
@@ -29,7 +29,7 @@ ms.locfileid: "36153338"
 ## <a name="prerequisites"></a>Prérequis  
  Vous devez être administrateur de service ou de batterie de serveurs pour désigner une URL comme emplacement approuvé.  
   
- Vous devez connaître l'adresse URL du site SharePoint contenant la Galerie PowerPivot ou une autre bibliothèque qui stocke vos classeurs. Pour obtenir l’adresse, ouvrez le site qui contient la bibliothèque, cliquez sur **la galerie PowerPivot**, sélectionnez **propriétés**, puis copiez la première partie de l’adresse (URL) qui contient le nom du serveur et le site chemin d’accès.  
+ Vous devez connaître l'adresse URL du site SharePoint contenant la Galerie PowerPivot ou une autre bibliothèque qui stocke vos classeurs. Pour obtenir l’adresse, ouvrez le site qui contient la bibliothèque, cliquez sur **galerie PowerPivot**, sélectionnez **propriétés**, puis copiez la première partie de l’adresse (URL) qui contient le nom du serveur et le site chemin d’accès.  
   
 ##  <a name="overview"></a> Vue d'ensemble  
  Une installation initiale d'Excel Services spécifie 'http://' comme son emplacement approuvé, ce qui signifie que les classeurs de n'importe quel site de la batterie peuvent être ouverts sur le serveur. Si vous avez besoin d'un contrôle plus strict sur les emplacements à considérer comme dignes de confiance, vous pouvez créer de nouveaux emplacements approuvés qui mappent à des sites spécifiques dans votre batterie, puis faire varier les paramètres et les autorisations pour chacun.  
@@ -66,8 +66,8 @@ ms.locfileid: "36153338"
 11. Cliquez sur **OK**.  
   
 ## <a name="see-also"></a>Voir aussi  
- [La galerie PowerPivot](../../2014-toc/books-online-for-sql-server-2014.md)   
+ [Galerie PowerPivot](../../2014-toc/books-online-for-sql-server-2014.md)   
  [Créer et personnaliser une galerie PowerPivot](create-and-customize-power-pivot-gallery.md)   
- [Utiliser la galerie PowerPivot](use-power-pivot-gallery.md)  
+ [Utiliser la Galerie PowerPivot](use-power-pivot-gallery.md)  
   
   

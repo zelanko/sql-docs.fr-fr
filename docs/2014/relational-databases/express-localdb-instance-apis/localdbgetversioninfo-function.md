@@ -1,5 +1,5 @@
 ---
-title: Fonction LocalDBGetVersionInfo | Documents Microsoft
+title: Fonction LocalDBGetVersionInfo | Microsoft Docs
 ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
@@ -18,15 +18,15 @@ topic_type:
 - apiref
 ms.assetid: d4aaea30-1d0d-4436-bcdc-5c101d27b1c1
 caps.latest.revision: 10
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 03e8e4a07dfed1dc2430f020ad221bfb494eb41f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
+ms.openlocfilehash: dc8b45c449a8bea7ca25e2f75fd0e21432838af1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36152340"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37186536"
 ---
 # <a name="localdbgetversioninfo-function"></a>Fonction LocalDBGetVersionInfo
   Retourne des informations pour la version spécifiée de SQL Server Express LocalDB, notamment si elle existe, ainsi que le numéro de version complet de LocalDB (avec les numéros de build et de version).  
@@ -90,9 +90,9 @@ HRESULT LocalDBGetVersionInfo(
  Une erreur inattendue s'est produite. Pour plus d'informations, consultez le journal des événements.  
   
 ## <a name="details"></a>Détails  
- Les raisons qui justifient l’introduction de la `struct` argument de taille (*lpVersionInfoSize*) consiste à activer l’API doit retourner différentes versions de la **LocalDBVersionInfostruct**, activation de la compatibilité descendante et ascendante.  
+ Le raisonnement derrière l’introduction de la `struct` argument de taille (*lpVersionInfoSize*) consiste à activer l’API doit retourner différentes versions de la **LocalDBVersionInfostruct**, efficacement activation de la compatibilité descendante et ascendante.  
   
- Si le `struct` argument de taille (*lpVersionInfoSize*) correspond à la taille d’une version connue de le **LocalDBVersionInfostruct**, cette version de la `struct` est retourné. Sinon, LOCALDB_ERROR_INVALID_PARAMETER est retourné.  
+ Si le `struct` argument de taille (*lpVersionInfoSize*) correspond à la taille d’une version connue de la **LocalDBVersionInfostruct**, cette version de la `struct` est retourné. Sinon, LOCALDB_ERROR_INVALID_PARAMETER est retourné.  
   
  Un exemple typique de **LocalDBGetVersionInfo** utilisation de l’API se présente comme suit :  
   

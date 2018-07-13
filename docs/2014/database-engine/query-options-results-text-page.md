@@ -1,5 +1,5 @@
 ---
-title: Options de requête – résultats (Page texte) | Documents Microsoft
+title: Options de requête (Page texte) de résultats | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.query.text.f1
 ms.assetid: fd2fb409-58f9-4ede-8349-ce007126b68d
 caps.latest.revision: 15
 author: craigg-msft
 ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 51e1a98f00bc4d33e0609f1b03ceca928bded049
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: d6c4fb6fe50f20bcac8d4f16644a35466a7b2f2e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36152184"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37205749"
 ---
 # <a name="query-options-results-text-page"></a>Options de requête — Résultats de requête (page Texte)
   Utilisez cette page pour définir les options d'affichage d'un jeu de résultats de requête au format texte. Ses paramètres s'appliquent également lorsque **Résultats dans un fichier** est sélectionné.  
@@ -38,7 +38,7 @@ ms.locfileid: "36152184"
  **Défilement pendant réception des résultats**  
  Activez cette case à cocher pour cibler l'affichage sur les derniers enregistrements retournés au bas de la fenêtre. Désactivez-la pour cibler l'affichage sur les premières lignes retournées.  
   
- **Aligner les valeurs numériques à droite**  
+ **Aligner à droite des valeurs numériques**  
  Activez cette case à cocher pour aligner les valeurs numériques à droite de la colonne. Cela peut faciliter l'analyse de nombres comportant un nombre de décimales invariable.  
   
  **Ignorer les résultats après l’exécution de requête**  

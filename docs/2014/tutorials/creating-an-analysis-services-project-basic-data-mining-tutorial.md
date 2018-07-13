@@ -1,5 +1,5 @@
 ---
-title: Création d’une analyse de Services de projet (didacticiel d’exploration de données de base de données) | Documents Microsoft
+title: Création d’une analyse de projet (didacticiel d’exploration de données de base) Services | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 784c0401-0358-4117-9c85-4e8220ce71d9
 caps.latest.revision: 50
 author: minewiskan
 ms.author: owend
-manager: kfile
-ms.openlocfilehash: d650feead984a358d169851fba246215a58b6d34
-ms.sourcegitcommit: 8c040e5b4e8c7d37ca295679410770a1af4d2e1f
+manager: craigg
+ms.openlocfilehash: d7f191090750d9a4417b6432ce31f24f3214376b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/21/2018
-ms.locfileid: "36312527"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37260115"
 ---
 # <a name="creating-an-analysis-services-project-basic-data-mining-tutorial"></a>Création d'un projet Analysis Services (Didacticiel sur l'exploration de données de base)
   Chaque [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] projet définit les objets dans un seul [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] base de données. Une base de données [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] contient plusieurs types d'objets.  
@@ -32,7 +32,7 @@ ms.locfileid: "36312527"
   
  Notez que vous **n'avez pas** besoin d'un cube pour effectuer l'exploration de données. Si vous devez effectuer l'exploration de données sur un cube existant, vous devez ajouter les modèles d'exploration de données au projet utilisé pour générer le cube. Cependant, dans la plupart des cas, vous créez vos modèles sur des sources de données relationnelles, par exemple un entrepôt de données, et vous obtenez de meilleures performances si un cube n'est pas impliqué.  
   
- Dans ce didacticiel, vous allez utiliser un entrepôt de données relationnelles, [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)], comme la source de données. Vous allez déployer tous vos objets d’exploration de données sur un [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] base de données nommée `BasicDataMining`, utilisée uniquement pour l’exploration de données.  
+ Dans ce didacticiel, vous allez utiliser un data warehouse relationnel, [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)], comme la source de données. Vous allez déployer tous vos objets d’exploration de données sur un [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] base de données nommée `BasicDataMining`, utilisée uniquement pour l’exploration de données.  
   
  Par défaut, [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] utilise le **localhost** instance pour les nouveaux projets. Si vous utilisez une instance nommée ou un serveur différent, vous devez d'abord créer et ouvrir le projet, puis modifier le nom de l'instance.  
   
@@ -48,7 +48,7 @@ ms.locfileid: "36312527"
   
 4.  Dans le volet **Modèles** , sélectionnez **Projet multidimensionnel et d'exploration de données Analysis Services**.  
   
-5.  Dans le **nom** zone, nommez le nouveau projet `BasicDataMining`.  
+5.  Dans le **nom** boîte, nommez le nouveau projet `BasicDataMining`.  
   
 6.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
@@ -61,7 +61,7 @@ ms.locfileid: "36312527"
 3.  Dans la partie droite du volet **Pages de propriétés** , sous **Cible**, vérifiez que le nom du **Serveur** est **localhost**. Si vous utilisez une instance différente, tapez le nom de l'instance. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
 ## <a name="next-task-in-lesson"></a>Tâche suivante de la leçon  
- [Création d’une Source de données &#40;didacticiel d’exploration de données de base de données&#41;](../../2014/tutorials/creating-a-data-source-basic-data-mining-tutorial.md)  
+ [Création d’une Source de données &#40;didacticiel d’exploration de données de base&#41;](../../2014/tutorials/creating-a-data-source-basic-data-mining-tutorial.md)  
   
 ## <a name="see-also"></a>Voir aussi  
  [Générer des projets Analysis Services &#40;SSDT&#41;](../analysis-services/multidimensional-models/build-analysis-services-projects-ssdt.md)   

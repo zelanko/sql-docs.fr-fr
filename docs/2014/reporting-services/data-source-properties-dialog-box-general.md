@@ -1,5 +1,5 @@
 ---
-title: Général, boîte de dialogue Propriétés de Source de données | Documents Microsoft
+title: Général, boîte de dialogue Propriétés de Source de données | Microsoft Docs
 ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.rtp.rptdesigner.datasourceproperties.general.f1
 - "10120"
 ms.assetid: 44b5edd3-5c11-4d3d-91b8-5871aa0572ed
 caps.latest.revision: 35
-author: douglaslM
+author: maggiesmsft
 ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 823604c6116c78f4313d5f1e328d98d7ed35f950
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: d5e5b2f1c1792a2fdbc6b83d94f85dd5883b8954
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36151859"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37206729"
 ---
 # <a name="data-source-properties-dialog-box-general"></a>Boîte de dialogue Propriétés de la source de données, Général
   Sélectionnez **Général** dans la boîte de dialogue **Propriétés de la source de données** pour afficher et modifier les informations de connexion d'une source de données du rapport.  
@@ -47,9 +47,9 @@ ms.locfileid: "36151859"
  Sélectionnez cette option pour indiquer que les datasets qui utilisent cette source de données sont exécutés dans une transaction unique sur la base de données. Pour inclure des transactions pour les sous-rapports qui utilisent la même source de données, définissez **MergeTransactions** à **True** dans la section **Autre** du volet **Propriétés** du sous-rapport.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Ajouter des données à un rapport &#40;rapport Générateur et SSRS&#41;](report-data/report-datasets-ssrs.md)   
+ [Ajouter des données à un rapport &#40;Générateur de rapports et SSRS&#41;](report-data/report-datasets-ssrs.md)   
  [Créer une Source de données incorporée ou partagée &#40;SSRS&#41;](../../2014/reporting-services/create-an-embedded-or-shared-data-source-ssrs.md)   
- [Connexions de données, les Sources de données et les chaînes de connexion dans Reporting Services](../../2014/reporting-services/data-connections-data-sources-and-connection-strings-in-reporting-services.md)   
- [Boîte de dialogue Propriétés données Source, informations d’identification](../../2014/reporting-services/data-source-properties-dialog-box-credentials.md)  
+ [Connexions de données, Sources de données et chaînes de connexion dans Reporting Services](../../2014/reporting-services/data-connections-data-sources-and-connection-strings-in-reporting-services.md)   
+ [Propriétés de la source de données, boîte de dialogue (Informations d’identification)](../../2014/reporting-services/data-source-properties-dialog-box-credentials.md)  
   
   

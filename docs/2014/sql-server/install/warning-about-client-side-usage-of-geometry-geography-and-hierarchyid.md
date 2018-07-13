@@ -1,5 +1,5 @@
 ---
-title: Avertissement sur l’utilisation du côté client de GEOMETRY, GEOGRAPHY et HIERARCHYID | Documents Microsoft
+title: Avertissement concernant l’utilisation du côté client de GEOMETRY, GEOGRAPHY et HIERARCHYID | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 500ee6b3-2154-45d2-a3cf-8760166d9413
 caps.latest.revision: 8
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 02748f9dca8e4f9f29c7c94658d2a4068b1ba65e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 46e4f63ef0909ca07eeac5d09b8233fb509f87a3
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36153172"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37166110"
 ---
 # <a name="warning-about-client-side-usage-of-geometry-geography-and-hierarchyid"></a>Avertissement sur l'utilisation du côté client de GEOMETRY, de la GÉOGRAPHIE et du HIERARCHYID
   L’assembly **Microsoft.SqlServer.Types.dll**, qui contient les types de données spatiales, a été mis à niveau de la version 10.0 vers la version 11.0. Les applications personnalisées qui font référence à cet assembly peuvent échouer lorsque certaines conditions sont vraies.  
@@ -30,11 +30,11 @@ ms.locfileid: "36153172"
 ## <a name="description"></a>Description  
  L’assembly **Microsoft.SqlServer.Types.dll**, qui contient les types de données spatiales, a été mis à niveau de la version 10.0 vers la version 11.0. Les applications personnalisées qui font référence à cet assembly peuvent échouer lorsque les conditions suivantes sont remplies.  
   
--   Lorsque vous déplacez une application personnalisée à partir d’un ordinateur sur lequel [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] a été installé sur un ordinateur sur lequel seul [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] est installé, l’application échoue, car la version référencée 10.0 de le **SqlTypes** assembly n’est pas présent. Ce message d'erreur peut s'afficher : `“Could not load file or assembly 'Microsoft.SqlServer.Types, Version=10.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91' or one of its dependencies. The system cannot find the file specified.”`  
+-   Lorsque vous déplacez une application personnalisée à partir d’un ordinateur sur lequel [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] a été installé sur un ordinateur sur lequel uniquement [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] est installé, l’application échoue, car la version référencée 10.0 de le **SqlTypes** assembly n’est pas présent. Ce message d'erreur peut s'afficher : `“Could not load file or assembly 'Microsoft.SqlServer.Types, Version=10.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91' or one of its dependencies. The system cannot find the file specified.”`  
   
 -   Lorsque vous référencez le **SqlTypes** version 11.0, de l’assembly et la version 10.0 est également installée, vous pouvez voir ce message d’erreur : `“System.InvalidCastException: Unable to cast object of type 'Microsoft.SqlServer.Types.SqlGeometry' to type 'Microsoft.SqlServer.Types.SqlGeometry'.”`  
   
--   Lorsque vous référencez le **SqlTypes** assembly version 11.0 d’une application personnalisée qui cible le .NET 3.5, 4 ou 4.5, l’application échouera, car SqlClient charge la version 10.0 de l’assembly. Cette erreur se produit lorsque l'application appelle l'une des méthodes suivantes :  
+-   Lorsque vous référencez le **SqlTypes** version de l’assembly 11.0 à partir d’une application personnalisée qui cible le .NET 3.5, 4 ou 4.5, l’application échoue, car SqlClient charge la version 10.0 de l’assembly. Cette erreur se produit lorsque l'application appelle l'une des méthodes suivantes :  
   
     -   méthode `GetValue` de la classe `SqlDataReader`  
   

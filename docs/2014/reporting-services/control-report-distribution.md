@@ -1,5 +1,5 @@
 ---
-title: Contrôler la Distribution des rapports | Documents Microsoft
+title: Contrôler la Distribution des rapports | Microsoft Docs
 ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - subscriptions [Reporting Services], report distribution
 - subscriptions [Reporting Services], e-mail
@@ -21,19 +21,19 @@ ms.assetid: 8f15e2c6-a647-4b05-a519-1743b5d8654c
 caps.latest.revision: 32
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 0b184eadeefa4b9f1177597172476b743094de8d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: d73a5e483219df7a8b7c06a3c4719850aaf7a3f7
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36152772"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37160180"
 ---
 # <a name="control-report-distribution"></a>Distribution des rapports de contrôle
   Vous pouvez configurer un serveur de rapports de façon à réduire les risques de sécurité associés à la remise par messagerie électronique ou dans un partage de fichiers.  
   
 ## <a name="securing-reports"></a>Sécurisation des rapports  
- La première étape du contrôle de la distribution des rapports consiste à sécuriser le rapport contre les accès non autorisés. Pour être utilisé dans un abonnement, un rapport doit utiliser un ensemble stocké d'informations d'identification qui ne varie pas pour les remises individuelles. Tout utilisateur pouvant accéder à un rapport sur le serveur de rapports peut l'exécuter et éventuellement le distribuer. Pour empêcher cela, vous devez limiter l'accès au rapport aux seuls utilisateurs qui en ont besoin. Pour plus d’informations, consultez [sécuriser les rapports et ressources](security/secure-reports-and-resources.md) et [sécuriser les dossiers](security/secure-folders.md).  
+ La première étape du contrôle de la distribution des rapports consiste à sécuriser le rapport contre les accès non autorisés. Pour être utilisé dans un abonnement, un rapport doit utiliser un ensemble stocké d'informations d'identification qui ne varie pas pour les remises individuelles. Tout utilisateur pouvant accéder à un rapport sur le serveur de rapports peut l'exécuter et éventuellement le distribuer. Pour empêcher cela, vous devez limiter l'accès au rapport aux seuls utilisateurs qui en ont besoin. Pour plus d’informations, consultez [sécuriser des rapports et des ressources](security/secure-reports-and-resources.md) et [dossiers sécurisés](security/secure-folders.md).  
   
  Les rapports hautement confidentiels qui utilisent la sécurité de la base de données pour autoriser l'accès ne peuvent pas être distribués par voie d'abonnement.  
   

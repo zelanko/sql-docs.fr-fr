@@ -5,23 +5,22 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-backup-restore
+ms.technology: backup-restore
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.selectbackupdest.f1
 ms.assetid: f79e824b-1525-45de-8ede-513563af41b6
 caps.latest.revision: 33
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 304e1f865c023d8edada929cb6b803d8331b4161
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: ca8c14c4daae046786bfcd78e04c0bd1b08139d5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36152145"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37160560"
 ---
 # <a name="select-backup-destination"></a>Sélectionner la destination de la sauvegarde
   Utilisez la boîte de dialogue **Sélectionner la destination de la sauvegarde** pour choisir le périphérique de destination de vos sauvegardes. La destination de la sauvegarde peut être un disque ou une unité logique de sauvegarde.  
@@ -44,7 +43,7 @@ ms.locfileid: "36152145"
   
 |||  
 |-|-|  
-|**Nom de fichier**|Sélectionnez cette option pour entrer le nom d'un fichier local ou distant de destination de la sauvegarde, dans la zone de texte.<br /><br /> Pour spécifier un fichier local, cliquez sur le bouton Parcourir à droite de la zone de texte et accédez à un fichier sur les lecteurs fixes de l’ordinateur exécutant le serveur ou entrez le chemin d’accès complet et le nom de fichier directement. par exemple, `C:\Program Files\Microsoft SQL Server\MSSQL\Backup\AdventureWorksBackup.bak`.<br /><br /> Pour spécifier un fichier distant en tant que destination de sauvegarde, tapez son nom complet UNC (Universal Naming Convention). Pour plus d’informations, consultez [Unités de sauvegarde &#40;SQL Server&#41;](backup-devices-sql-server.md).<br /><br /> **\*\* Important \*\*** Étant donné que la sauvegarde de données sur un réseau peut faire l’objet d’erreurs réseau, nous vous recommandons de vérifier l’opération de sauvegarde quand elle est terminée. Pour plus d’informations, consultez [RESTORE VERIFYONLY &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-verifyonly-transact-sql).|  
+|**Nom de fichier**|Sélectionnez cette option pour entrer le nom d'un fichier local ou distant de destination de la sauvegarde, dans la zone de texte.<br /><br /> Pour spécifier un fichier local, cliquez sur le bouton Parcourir à droite de la zone de texte et accédez à un fichier sur les lecteurs fixes de l’ordinateur qui exécute le serveur ou entrez le chemin d’accès complet et le nom de fichier directement ; par exemple, `C:\Program Files\Microsoft SQL Server\MSSQL\Backup\AdventureWorksBackup.bak`.<br /><br /> Pour spécifier un fichier distant en tant que destination de sauvegarde, tapez son nom complet UNC (Universal Naming Convention). Pour plus d’informations, consultez [Unités de sauvegarde &#40;SQL Server&#41;](backup-devices-sql-server.md).<br /><br /> **\*\* Important \*\*** Étant donné que la sauvegarde de données sur un réseau peut faire l’objet d’erreurs réseau, nous vous recommandons de vérifier l’opération de sauvegarde quand elle est terminée. Pour plus d’informations, consultez [RESTORE VERIFYONLY &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-verifyonly-transact-sql).|  
 |**unité de sauvegarde**|Choisissez cette option pour sélectionner une unité logique de sauvegarde.<br /><br /> Remarque : Pour plus d’informations sur la création d’une unité de sauvegarde sur disque, consultez [Définir une unité de sauvegarde logique pour un fichier de disque &#40;SQL Server&#41;](define-a-logical-backup-device-for-a-disk-file-sql-server.md).|  
   
  **Destinations sur bande**  

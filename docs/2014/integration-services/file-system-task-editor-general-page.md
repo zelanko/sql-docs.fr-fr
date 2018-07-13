@@ -1,5 +1,5 @@
 ---
-title: Éditeur de tâche de système de fichiers (Page Général) | Documents Microsoft
+title: Éditeur de tâche de système de fichiers (Page Général) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.filesystemtask.general.f1
 helpviewer_keywords:
 - File System Task Editor
 ms.assetid: 51fe6614-3418-4eff-a28d-02ea31cc9aa9
 caps.latest.revision: 43
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: a7bc28798bbdfe79d05923252e1add422217d763
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 120e86946f920a616b9df7c443441fb4ce6d5efc
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36152164"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37156650"
 ---
 # <a name="file-system-task-editor-general-page"></a>Éditeur de tâche de système de fichiers (page Général)
   Utilisez la page **Général** de l' **Éditeur de tâche de système de fichiers** pour configurer l'opération de système de fichiers qu'exécute la tâche.  
@@ -73,8 +73,8 @@ ms.locfileid: "36152164"
 |**Supprimer le contenu du répertoire**|Supprimer le contenu d'un répertoire. Cette valeur affiche les options dynamiques d'une source.|  
 |**Supprimer le fichier**|Supprimer un fichier. Cette valeur affiche les options dynamiques d'une source.|  
 |**Déplacer le répertoire**|Déplacer un répertoire. Cette valeur affiche les options dynamiques d'une source et d'une destination.|  
-|**Déplacer le fichier**|Déplacer un fichier. Cette valeur affiche les options dynamiques d'une source et d'une destination.<br /><br /> Remarque : Lorsque vous déplacez un fichier, n’incluez pas un nom de fichier dans le chemin d’accès du répertoire que vous fournissez comme destination.|  
-|**Renommer le fichier**|Renommer un fichier. Cette valeur affiche les options dynamiques d'une source et d'une destination.<br /><br /> Remarque : Lorsque vous renommez un fichier, incluez le nouveau nom de fichier dans le chemin d’accès du répertoire que vous fournissez pour la destination.|  
+|**Déplacer le fichier**|Déplacer un fichier. Cette valeur affiche les options dynamiques d'une source et d'une destination.<br /><br /> Remarque : Lorsque vous déplacez un fichier, n’incluez pas un nom de fichier dans le chemin du répertoire que vous fournissez comme destination.|  
+|**Renommer le fichier**|Renommer un fichier. Cette valeur affiche les options dynamiques d'une source et d'une destination.<br /><br /> Remarque : Lorsque vous renommez un fichier, incluez le nouveau nom de fichier dans le chemin du répertoire que vous fournissez pour la destination.|  
 |**Définir les attributs**|Définir les attributs d'un fichier ou d'un répertoire. Cette valeur affiche les options dynamiques d'une source et d'une opération.|  
   
  `IsSourcePathVariable`  

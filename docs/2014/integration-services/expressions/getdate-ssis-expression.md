@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - current date
 - GETDATE function
@@ -17,13 +17,13 @@ ms.assetid: 6d20ec93-3244-4d63-baf6-70eff7bd598c
 caps.latest.revision: 34
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 9161d114b9f103dc857c26a07b3c107d14a00b40
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: ed8a87ea53054aff7db3ed5461c0074244ee97db
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36152156"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37166860"
 ---
 # <a name="getdate-ssis-expression"></a>GETDATE (expression SSIS)
   Renvoie la date actuelle du système dans un format DT_DBTIMESTAMP. La fonction GETDATE ne prend aucun argument.  
@@ -64,7 +64,7 @@ DATEADD("Month",3,GETDATE())
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [GETUTCDATE &#40;Expression SSIS&#41;](getutcdate-ssis-expression.md)   
- [Fonctions &#40;Expression SSIS&#41;](functions-ssis-expression.md)  
+ [GETUTCDATE &#40;SSIS Expression&#41;](getutcdate-ssis-expression.md)   
+ [Fonctions &#40;SSIS Expression&#41;](functions-ssis-expression.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Élément SolveOrder (ASSL) | Documents Microsoft
+title: Élément SolveOrder (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -22,18 +22,18 @@ helpviewer_keywords:
 - SolveOrder element
 ms.assetid: ec43e055-97dd-4f2a-9a7c-2df2e1119e56
 caps.latest.revision: 35
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: ed5092f93494162179dc2ee142a6769eddd5d6da
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: defbaca134f92df4cf765dda68ad2fb30c848800
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36152427"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37173290"
 ---
 # <a name="solveorder-element-assl"></a>Élément SolveOrder (ASSL)
-  Indique l’ordre de résolution dans lequel le [CalculationProperty](../objects/calculationproperty-element-assl.md) est appliqué à un membre calculé ou une définition de cellule calculée.  
+  Indique l’ordre de résolution dans lequel le [CalculationProperty](../objects/calculationproperty-element-assl.md) élément est appliqué à un membre calculé ou une définition de cellule calculée.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -64,7 +64,7 @@ ms.locfileid: "36152427"
 ## <a name="remarks"></a>Notes  
  Le `SolveOrder` propriété s’applique aux `CalculationProperty` éléments avec un [CalculationType](calculationtype-element-assl.md) de *membre* ou *cellules*.  
   
- L’élément qui correspond au parent de `SolveOrder` dans l’objet d’objets AMO (Analysis Management) est modèle <xref:Microsoft.AnalysisServices.CalculationProperty>.  
+ L’élément qui correspond au parent de `SolveOrder` dans l’objet d’objets AMO (Analysis Management) modèle est <xref:Microsoft.AnalysisServices.CalculationProperty>.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Élément CalculationProperties &#40;ASSL&#41;](../collections/calculationproperties-element-assl.md)   

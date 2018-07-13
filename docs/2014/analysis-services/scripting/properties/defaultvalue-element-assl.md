@@ -1,5 +1,5 @@
 ---
-title: Élément DefaultValue (ASSL) | Documents Microsoft
+title: Élément DefaultValue (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
@@ -22,18 +22,18 @@ helpviewer_keywords:
 - DefaultValue element
 ms.assetid: 87e964a3-f317-46c3-98c7-b3621765c77b
 caps.latest.revision: 37
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: a319f22dc353f860ca3b0fa3a8e4b0cf60f421ee
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: f4137e73097630d62358ea874a38afda6d90eb87
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36142902"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37277845"
 ---
 # <a name="defaultvalue-element-assl"></a>Élément DefaultValue (ASSL)
-  Contient la valeur par défaut en lecture seule de la [ServerProperty](../objects/serverproperty-element-assl.md) élément.  
+  Contient la valeur par défaut en lecture seule associé [ServerProperty](../objects/serverproperty-element-assl.md) élément.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -64,11 +64,11 @@ ms.locfileid: "36142902"
 ## <a name="remarks"></a>Notes  
  Cet élément contient la valeur par défaut en lecture seule installation le `ServerProperty` pour l’instance actuelle de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]. La valeur par défaut est fournie par l'instance et ne peut, en règle générale, être modifiée.  
   
- L’élément qui correspond au parent de `DefaultValue` dans l’objet d’objets AMO (Analysis Management) est modèle <xref:Microsoft.AnalysisServices.ServerProperty>.  
+ L’élément qui correspond au parent de `DefaultValue` dans l’objet d’objets AMO (Analysis Management) modèle est <xref:Microsoft.AnalysisServices.ServerProperty>.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Élément ServerProperties &#40;ASSL&#41;](../collections/serverproperties-element-assl.md)   
- [Élément serveur &#40;ASSL&#41;](../objects/server-element-assl.md)   
+ [Élément de serveur &#40;ASSL&#41;](../objects/server-element-assl.md)   
  [Propriétés &#40;ASSL&#41;](properties-assl.md)  
   
   

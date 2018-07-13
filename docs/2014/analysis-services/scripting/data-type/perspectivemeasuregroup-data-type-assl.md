@@ -1,5 +1,5 @@
 ---
-title: Type de données PerspectiveMeasureGroup (ASSL) | Documents Microsoft
+title: Type de données PerspectiveMeasureGroup (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - PerspectiveMeasureGroup data type
 ms.assetid: 5927120d-f30e-4f87-8523-6d17012817d7
 caps.latest.revision: 34
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: bc1978c2ae733b07071c7c95d3fd232c207d2853
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: da4817ba23f7e4be50eb11aa97a3163e48536425
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36144171"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37154950"
 ---
 # <a name="perspectivemeasuregroup-data-type-assl"></a>Type de données PerspectiveMeasureGroup (ASSL)
   Définit un type de données primitif qui représente des informations sur un groupe de mesures dans un [Perspective](../objects/perspective-element-assl.md) élément.  
@@ -59,7 +59,7 @@ ms.locfileid: "36144171"
 |------------------|-------------|  
 |Éléments parents|None|  
 |Éléments enfants|[Annotations](../collections/annotations-element-assl.md), [MeasureGroupID](../properties/id-element-assl.md), [mesures](../collections/measures-element-assl.md)|  
-|Éléments dérivés|[Groupe de mesures](../objects/group-element-assl.md) ([MeasureGroups](../collections/groups-element-assl.md) collection de [Perspective](../objects/perspective-element-assl.md))|  
+|Éléments dérivés|[MeasureGroup](../objects/group-element-assl.md) ([MeasureGroups](../collections/groups-element-assl.md) collection de [Perspective](../objects/perspective-element-assl.md))|  
   
 ## <a name="remarks"></a>Notes  
  Un groupe de mesures dans une perspective a la même structure qu'un groupe de mesures dans le cube sous-jacent.  
@@ -67,6 +67,6 @@ ms.locfileid: "36144171"
  L’élément correspondant dans le modèle d’objet objets AMO (Analysis Management) est <xref:Microsoft.AnalysisServices.PerspectiveMeasureGroup>.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Types de données de script langage XML Analysis Services &#40;ASSL&#41;](analysis-services-scripting-language-xml-data-types-assl.md)  
+ [Types Analysis Services Scripting Language XML données &#40;ASSL&#41;](analysis-services-scripting-language-xml-data-types-assl.md)  
   
   

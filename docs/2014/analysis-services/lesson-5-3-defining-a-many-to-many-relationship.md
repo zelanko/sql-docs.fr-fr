@@ -1,5 +1,5 @@
 ---
-title: Définition d’une relation plusieurs-à-plusieurs | Documents Microsoft
+title: Définition d’une relation plusieurs-à-plusieurs | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 7bebb174-148c-4cbb-a285-2f6d536a16d5
 caps.latest.revision: 16
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: jhubbard
-ms.openlocfilehash: 89ec38cf3bd3b197c6a58a5d51758ee6c6f29269
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 868c814c1031f9ffb499f80da2d7e9314d80e3bc
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36143127"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37189236"
 ---
 # <a name="defining-a-many-to-many-relationship"></a>Définition d’une relation plusieurs-à-plusieurs
   Lorsque vous définissez une dimension, chaque fait est joint généralement à un et un seul membre de dimension, tandis qu'un même membre de dimension peut être associé à plusieurs faits différents. Par exemple, chaque client peut avoir plusieurs commandes mais chaque commande se rapporte à un seul client. Dans la terminologie des bases de données relationnelles, on parle de *relation un-à-plusieurs*. Cependant, un seul fait peut parfois être joint à plusieurs membres de dimension. Dans la terminologie des bases de données relationnelles, on parle de *relation plusieurs-à-plusieurs*. Par exemple, l'achat d'un client peut être motivé par plusieurs raisons et un même motif d'achat peut être associé à plusieurs achats. Une table de jointure sert à définir les motifs de vente relatifs à chaque achat. Une dimension Sales Reason créée à partir de relations de ce type aura par conséquent plusieurs membres associés à une seule transaction de vente. Les dimensions plusieurs-à-plusieurs étendent le modèle dimensionnel au-delà du schéma en étoile classique et prend en charge les analyses complexes lorsque les dimensions ne sont pas reliées directement à une table de faits.  
@@ -51,13 +51,13 @@ ms.locfileid: "36143127"
   
 6.  Dans le menu **Format** , pointez sur **Disposition automatique**, puis cliquez sur **Diagramme**.  
   
-7.  Dans la fenêtre Propriétés, modifiez la **FriendlyName** propriété de la **DimSalesReason** table `SalesReason`, puis modifiez le **FriendlyName** propriété de la **FactInternetSalesReason** table `InternetSalesReason`.  
+7.  Dans la fenêtre Propriétés, modifiez le **FriendlyName** propriété de la **DimSalesReason** table `SalesReason`, puis modifiez le **FriendlyName** propriété de la **FactInternetSalesReason** table `InternetSalesReason`.  
   
 8.  Dans le volet **Tables** , développez **InternetSalesReason (dbo.FactInternetSalesReason)**, sélectionnez **SalesOrderNumber**, puis vérifiez la propriété **DataType** pour cette colonne de données dans la fenêtre des propriétés.  
   
      Notez que le type de données de la colonne **SalesOrderNumber** est un type de données chaîne.  
   
-9. Passez en revue les types de données pour les autres colonnes dans la `InternetSalesReason` table.  
+9. Passez en revue les types de données pour les autres colonnes dans le `InternetSalesReason` table.  
   
      Notez que les types de données des deux autres colonnes dans cette table sont des types de données numériques.  
   
@@ -73,7 +73,7 @@ ms.locfileid: "36143127"
   
 2.  Cliquez dans le volet **Mesures** et choisissez **Nouveau groupe de mesures**. Pour plus d’informations, consultez [Création de mesures et de groupes de mesures dans les modèles multidimensionnels](multidimensional-models/create-measures-and-measure-groups-in-multidimensional-models.md).  
   
-3.  Dans le **nouveau groupe de mesures** boîte de dialogue, sélectionnez `InternetSalesReason` dans les **sélectionner une table à partir de la vue de source de données** liste, puis cliquez sur **OK**.  
+3.  Dans le **nouveau groupe de mesures** boîte de dialogue, sélectionnez `InternetSalesReason` dans le **sélectionnez une table dans la vue de source de données** liste, puis cliquez sur **OK**.  
   
      Notez que le groupe de mesures **Internet Sales Reason** apparaît maintenant dans le volet **Mesures** .  
   
@@ -91,7 +91,7 @@ ms.locfileid: "36143127"
   
      L’illustration suivante montre les propriétés de la mesure **Internet Sales Reason Count** .  
   
-     ![Les propriétés pour la mesure Internet Sales Reason Count](../../2014/tutorials/media/l5-many-to-many-2.gif "propriétés pour la mesure Internet Sales Reason Count")  
+     ![Propriétés de mesure de Internet Sales Reason Count](../../2014/tutorials/media/l5-many-to-many-2.gif "propriétés pour les mesures Internet Sales Reason Count")  
   
 ## <a name="defining-the-many-to-many-dimension"></a>Définition d'une dimension plusieurs-à-plusieurs  
   
@@ -117,13 +117,13 @@ ms.locfileid: "36143127"
   
 11. Dans le menu **Fichier** , cliquez sur **Enregistrer tout**.  
   
-12. Dans le **attributs** volet du Concepteur de dimensions pour la **Sales Reason** dimension, sélectionnez **Sales Reason Key**, puis modifiez le **nom**propriété dans la fenêtre Propriétés pour `Sales Reason.`  
+12. Dans le **attributs** volet du Concepteur de dimensions pour la **Sales Reason** dimension, sélectionnez **Sales Reason Key**, puis modifiez le **nom**propriété dans la fenêtre des propriétés `Sales Reason.`  
   
-13. Dans le **hiérarchies** volet du Concepteur de dimensions, créez un **motifs de vente** hiérarchie utilisateur qui contient le `Sales Reason Type` niveau et la **Sales Reason** niveau, dans Cet ordre.  
+13. Dans le **hiérarchies** volet du Concepteur de dimensions, créez un **Sales Reasons** hiérarchie utilisateur qui contient le `Sales Reason Type` niveau et la **Sales Reason** niveau dans Cet ordre.  
   
-14. Dans la fenêtre Propriétés, définissez `All Sales Reasons` comme valeur pour le **AllMemberName** propriété de la hiérarchie de motifs de vente.  
+14. Dans la fenêtre Propriétés, définissez `All Sales Reasons` comme valeur pour le **AllMemberName** propriété de la hiérarchie Sales Reasons.  
   
-15. Définir `All Sales Reasons` en tant que la valeur de **AttributeAllMemberName** propriété de la dimension Sales Reason.  
+15. Définir `All Sales Reasons` comme valeur pour **AttributeAllMemberName** propriété de la dimension Sales Reason.  
   
 16. Pour ajouter la dimension créée récemment au cube du didacticiel [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] comme dimension du cube, basculez vers le **Concepteur de cube**. Sous l’onglet **Structure de cube** , cliquez avec le bouton droit dans le volet **Dimensions** et sélectionnez **Ajouter une dimension de cube**.  
   
@@ -165,7 +165,7 @@ ms.locfileid: "36143127"
   
 5.  Dans le volet Métadonnées, développez **Customer**, **Location**, **Customer Geography**, **Members**, **All Customers**et **Australia**, cliquez avec le bouton droit sur **Queensland**, puis cliquez sur **Ajouter au filtre**.  
   
-6.  Développez chaque membre de la `Sales Reason Type` niveau pour passer en revue les valeurs en dollars qui sont associés à chaque motif, un client Queensland a donné pour leur achat d’un [!INCLUDE[ssSampleDBCoShort](../includes/sssampledbcoshort-md.md)] produit via Internet.  
+6.  Développez chaque membre de la `Sales Reason Type` niveau pour passer en revue les valeurs en dollars associées à chaque motif, un client Queensland a donné pour leur achat d’un [!INCLUDE[ssSampleDBCoShort](../includes/sssampledbcoshort-md.md)] produit via Internet.  
   
      Notez que la somme des totaux associés à chaque raison de vente est supérieure au total des ventes. Cela s'explique par le fait que certains clients ont cité plusieurs raisons pour leur achat.  
   

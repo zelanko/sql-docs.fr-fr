@@ -1,5 +1,5 @@
 ---
-title: L’exécution de requêtes SQL (fournisseur SQLXMLOLEDB) | Documents Microsoft
+title: Exécution de requêtes SQL (fournisseur SQLXMLOLEDB) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - SQL queries [SQLXML]
 ms.assetid: 50334cf5-9c87-4c00-9beb-e08577c4fa82
 caps.latest.revision: 28
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 746c3869fb7c10fcedc3452e67acb85b487c11dd
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 1173e11fb6a5b1ed6dd61af23491cc8146a36d7f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36143673"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37225215"
 ---
 # <a name="executing-sql-queries-sqlxmloledb-provider"></a>Exécution de requêtes SQL (fournisseur SQLXMLOLEDB)
   Cet exemple illustre l'utilisation des propriétés suivantes spécifiques au fournisseur SQLXMLOLEDB :  

@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - filters [SQL Server], events
 - events [SQL Server], filters
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - traces [SQL Server], filters
 ms.assetid: 019c10ab-68f6-4e40-a5e8-735b2e1270db
 caps.latest.revision: 26
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 23d93e00dde20ef9d97fd707dbb938907e9ef7a9
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 367a9669c11cb1841a4af3801abb98e385571388
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36143242"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37212829"
 ---
 # <a name="filter-a-trace"></a>Filtrer une trace
   Les filtres limitent les événements recueillis dans une trace. Si aucun filtre n'est défini, tous les événements des classes d'événements sélectionnées sont retournés dans le résultat de trace. Par exemple, limiter les noms d'utilisateurs Windows d'une trace à des utilisateurs particuliers réduit le volume des données de sortie à ces seuls utilisateurs.  
@@ -141,7 +141,7 @@ ms.locfileid: "36143242"
 |**Writes**|=, <>, >=, <=|  
 |**XactSequence**|=, <>, >=, <=|  
   
- <sup>1</sup> si le traçage des événements à partir de la **osql** utilitaire ou **sqlcmd** utilitaire, toujours ajouter **%** aux filtres de la **TextData**  colonne de données.  
+ <sup>1</sup> si le traçage des événements à partir de la **osql** utilitaire ou le **sqlcmd** utilitaire, toujours ajouter **%** aux filtres de la **TextData**  colonne de données.  
   
  En tant que mécanisme de sécurité, le Générateur de profils SQL omet automatiquement de la trace les procédures stockées de sécurité qui affectent les mots de passe. Ce mécanisme de sécurité n'est pas configurable et est toujours actif. Il empêche les utilisateurs, qui par ailleurs ont l'autorisation de tracer l'ensemble de l'activité de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], d'intercepter les mots de passe.  
   

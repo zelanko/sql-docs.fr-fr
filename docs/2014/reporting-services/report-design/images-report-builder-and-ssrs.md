@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: fcc2db5c-5c26-4607-ae2b-f65c80360536
 caps.latest.revision: 10
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: a4fb5fa5f0ac040c5642d4a14279407c7b3b7bbc
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 4fcb1a4246968e0f42b99ec5c0c596b8d7d36b2b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36141480"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37278282"
 ---
 # <a name="images-report-builder-and-ssrs"></a>Images [Générateur de rapports et SSRS]
   Une image est un élément de rapport qui contient une référence à une image qui est incorporée dans le rapport, stockée dans une base de données, stockée sur le serveur de rapports ou stockée à un autre emplacement sur le Web. Une image peut se répéter avec des lignes de données. Vous pouvez également utiliser une image en guise d'arrière-plan pour certains éléments de rapport.  
@@ -79,18 +79,18 @@ ms.locfileid: "36141480"
 
   
 ##  <a name="HowTo"></a> Rubriques de procédures  
- [Ajouter une Image externe &#40;rapport Générateur et SSRS&#41;](add-an-external-image-report-builder-and-ssrs.md)  
+ [Ajouter une Image externe &#40;Générateur de rapports et SSRS&#41;](add-an-external-image-report-builder-and-ssrs.md)  
   
- [Incorporer une Image dans un rapport &#40;rapport Générateur et SSRS&#41;](embed-an-image-in-a-report-report-builder-and-ssrs.md)  
+ [Incorporer une Image dans un rapport &#40;Générateur de rapports et SSRS&#41;](embed-an-image-in-a-report-report-builder-and-ssrs.md)  
   
- [Ajouter une Image d’arrière-plan &#40;rapport Générateur et SSRS&#41;](add-a-background-image-report-builder-and-ssrs.md)  
+ [Ajouter une Image d’arrière-plan &#40;Générateur de rapports et SSRS&#41;](add-a-background-image-report-builder-and-ssrs.md)  
   
- [Ajouter une Image liée aux données &#40;rapport Générateur et SSRS&#41;](add-a-data-bound-image-report-builder-and-ssrs.md)  
+ [Ajouter une Image liée aux données &#40;Générateur de rapports et SSRS&#41;](add-a-data-bound-image-report-builder-and-ssrs.md)  
   
   
   
 ## <a name="see-also"></a>Voir aussi  
- [Exportation vers un fichier Image &#40;rapport Générateur et SSRS&#41;](../report-builder/exporting-to-an-image-file-report-builder-and-ssrs.md)   
+ [Exportation vers un fichier Image &#40;Générateur de rapports et SSRS&#41;](../report-builder/exporting-to-an-image-file-report-builder-and-ssrs.md)   
  [Comportements de rendu &#40;Générateur de rapports et SSRS&#41;](rendering-behaviors-report-builder-and-ssrs.md)  
   
   
