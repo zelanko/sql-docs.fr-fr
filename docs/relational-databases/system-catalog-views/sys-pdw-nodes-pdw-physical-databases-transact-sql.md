@@ -1,14 +1,13 @@
 ---
-title: Sys.pdw_nodes_pdw_physical_databases (Transact-SQL) | Documents Microsoft
+title: Sys.pdw_nodes_pdw_physical_databases (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: ''
 ms.prod_service: sql-data-warehouse, pdw
 ms.service: sql-data-warehouse
-ms.component: system-catalog-views
+ms.component: system-objects
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: system-objects
 ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
@@ -19,23 +18,23 @@ author: ronortloff
 ms.author: rortloff
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: cfc242de943ef2f4cf88b86a789fa88f84a6dd51
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
-ms.translationtype: MT
+ms.openlocfilehash: cd8793713fafdaa6a92785eecd9c269c42fae307
+ms.sourcegitcommit: abd71294ebc39695d403e341c4f77829cb4166a8
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33180725"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36785204"
 ---
 # <a name="syspdwnodespdwphysicaldatabases-transact-sql"></a>Sys.pdw_nodes_pdw_physical_databases (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
 
-  Contient une ligne pour chaque base de données physique sur un nœud de calcul. Regrouper des informations de base de données physique pour obtenir des informations détaillées sur les bases de données. Pour combiner les données, vous devez joindre le `sys.pdw_nodes_pdw_physical_databases` à la `sys.pdw_database_mappings` et `sys.databases` tables.  
+  Contient une ligne pour chaque base de données physique sur un nœud de calcul. Agréger des informations de base de données physique pour obtenir des informations détaillées sur les bases de données. Pour combiner les données, vous devez joindre le `sys.pdw_nodes_pdw_physical_databases` à la `sys.pdw_database_mappings` et `sys.databases` tables.  
   
-|Nom de la colonne|Type de données| Description|  
+|Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
-|database_id|**int**|L’ID d’objet pour la base de données. Notez que cette valeur n’est pas identique à un database_id dans le [sys.databases &#40;Transact-SQL&#41; ](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) vue.|  
-|physical_name|**sysname**|Le nom physique de la base de données sur les nœuds de calcul / l’interpréteur de commandes. Cette valeur est identique à une valeur dans la colonne physical_name le [sys.pdw_database_mappings &#40;Transact-SQL&#41; ](../../relational-databases/system-catalog-views/sys-pdw-database-mappings-transact-sql.md) vue.|  
-|pdw_node_id|**int**|Id numérique unique associé au nœud.|  
+|database_id|**Int**|L’ID d’objet pour la base de données. Notez que cette valeur n’est pas identique à un database_id dans le [sys.databases &#40;Transact-SQL&#41; ](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) vue.|  
+|physical_name|**sysname**|Le nom physique de la base de données sur les nœuds de Shell/calcul. Cette valeur est identique à une valeur dans la colonne physical_name le [sys.pdw_database_mappings &#40;Transact-SQL&#41; ](../../relational-databases/system-catalog-views/sys-pdw-database-mappings-transact-sql.md) vue.|  
+|pdw_node_id|**Int**|Id numérique unique associé au nœud.|  
   
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Exemples : [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] et [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
@@ -93,7 +92,7 @@ SELECT TOP 1 encryption_state
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Entrepôt de données SQL et les vues de catalogue de l’entrepôt de données en parallèle](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)   
+ [SQL Data Warehouse et les vues de catalogue Parallel Data Warehouse](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)   
  [sys.databases &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)   
  [sys.pdw_database_mappings &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-pdw-database-mappings-transact-sql.md)  
   

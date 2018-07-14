@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine-imoltp
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 6e005de0-3a77-4b91-b497-14cc0f9f6605
 caps.latest.revision: 5
-author: stevestein
-ms.author: sstein
-manager: jhubbard
-ms.openlocfilehash: 4d13b8b46066eb6c2c8c855859fdab0114269700
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
+ms.openlocfilehash: 5c8b5a9f50c30cccb7a0e24799ca59105294aba0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36038343"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37236769"
 ---
 # <a name="configuring-storage-for-memory-optimized-tables"></a>Configuration du stockage des tables optimisées en mémoire
   Vous devez configurer des opérations d'entrée/sortie par seconde (IOPS) et la capacité de stockage.  
@@ -34,11 +34,11 @@ ms.locfileid: "36038343"
   
 -   Les tables mémoire optimisées sont conservées dans des fichiers distribués sur un ou plusieurs conteneurs. Chaque conteneur doit généralement être mappé à son propre axe, et est utilisé pour augmenter la capacité de stockage et améliorer les performances. Vous devez vous assurer que ces IOPS séquentielles du support de stockage peuvent prendre en charge une augmentation 3 fois supérieure dans le débit du journal des transactions.  
   
-     Par exemple, si les tables optimisées en mémoire génèrent 500 Mo/sec d’activité dans le journal des transactions, le stockage des tables optimisées en mémoire doit prendre en charge 1,5 Go/sec. La nécessité de prendre en charge une fois 3 augmentation du débit du journal des transactions provient de l’observation que les paires de fichiers de données et delta sont d’abord écrites avec les données initiales et puis doivent être lues/réécrites dans le cadre d’une opération de fusion.  
+     Par exemple, si les tables mémoire optimisées génèrent 500 Mo/sec d’activité dans le journal des transactions, le stockage des tables optimisées en mémoire doit prendre en charge 1,5 Go/s. La nécessité de prendre en charge un 3 fois augmentation du débit de journaux de transaction proviennent de l’observation que les paires de fichiers de données et delta sont d’abord écrites avec les données initiales et puis doivent être lues/réécrites dans le cadre d’une opération de fusion.  
   
      Le temps de récupération des tables mémoire optimisées est un autre facteur entrant en compte dans l'estimation du débit pour le stockage. Les données des tables durables doivent être lues en mémoire avant qu'une base de données puisse être mise à la disposition des applications. Généralement, le chargement de données dans les tables mémoire optimisées peut être effectué à la vitesse des opérations d’E/S par seconde (IOPS). Si le stockage total des tables durables, mémoire optimisées, s'élève à 60 Go et que vous souhaitez pouvoir charger ces données en une minute, les IOPS du stockage doivent être définies à 1 Go/sec.  
   
--   Si vous avez un nombre pair d'axes, vous devez créer deux fois le nombre de conteneurs, chaque paire étant mappée au même axe. Cela est nécessaire pour répartir les IOPS et le stockage. Pour plus d’informations, consultez [le mémoire optimisé groupe de fichiers](the-memory-optimized-filegroup.md).  
+-   Si vous avez un nombre pair d'axes, vous devez créer deux fois le nombre de conteneurs, chaque paire étant mappée au même axe. Cela est nécessaire pour répartir les IOPS et le stockage. Pour plus d’informations, consultez [les fichiers optimisés en mémoire](the-memory-optimized-filegroup.md).  
   
 ## <a name="see-also"></a>Voir aussi  
  [Création et gestion du stockage des objets mémoire optimisés](creating-and-managing-storage-for-memory-optimized-objects.md)  

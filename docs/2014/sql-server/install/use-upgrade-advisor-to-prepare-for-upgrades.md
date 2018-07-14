@@ -1,5 +1,5 @@
 ---
-title: Utilisez le Conseiller de mise à niveau pour préparer des mises à niveau | Documents Microsoft
+title: Utilisez le Conseiller de mise à niveau pour préparer des mises à niveau | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Upgrade Advisor [SQL Server]
 - upgrading SQL Server, Upgrade Advisor
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - analyzing installations for upgrading [SQL Server]
 ms.assetid: d85b0833-ddeb-42e3-9397-97ea60d521b7
 caps.latest.revision: 51
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 2e2e852fe295ac2e72c4a06f653033f734ac6150
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 4e669b214e73d462f141022aa84d41224e88ac0c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36037933"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37234419"
 ---
 # <a name="use-upgrade-advisor-to-prepare-for-upgrades"></a>Utiliser le Conseiller de mise à niveau pour la préparation des mises à niveau
   Le Conseiller de mise à niveau de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] vous assiste lors de la préparation des mises à niveau vers [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Le Conseiller de mise à niveau analyse les composants installés des versions antérieures de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], puis génère un rapport qui identifie les problèmes à résoudre avant ou après la mise à niveau.  
@@ -68,7 +68,7 @@ ms.locfileid: "36037933"
   
 -   [!INCLUDE[firstref_longhorn](../../includes/firstref-longhorn-md.md)] SP2, Windows 7 SP1, et [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] SP1.  
   
--   Windows Installer depuis la version 4.5. Vous pouvez installer Windows Installer à partir de la [site Web du programme d’installation Windows](http://go.microsoft.com/fwlink/?LinkId=49112).  
+-   Windows Installer depuis la version 4.5. Vous pouvez installer le programme d’installation de Windows à partir de la [site Web du programme d’installation Windows](http://go.microsoft.com/fwlink/?LinkId=49112).  
   
 -   Microsoft .NET Framework 4. .NET framework 4 est disponible sur le [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] support du produit et à partir de la [page de téléchargement de .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=209895).  
   
@@ -76,9 +76,9 @@ ms.locfileid: "36037933"
   
  Pour installer le Conseiller de mise à niveau à partir du Web, cliquez sur le bouton Télécharger figurant sur la page de téléchargement. Vous pouvez alors soit exécuter l'installation immédiatement, soit enregistrer le fichier SQLUA.msi afin de l'exécuter ultérieurement. Si vous installez à partir du disque du produit, exécutez sqlua.msi directement à partir du disque du produit.  
   
- Après avoir installé le Conseiller de mise à niveau, vous pouvez l’ouvrir à partir de la **Démarrer** menu :  
+ Une fois que vous installez le Conseiller de mise à niveau, vous pouvez l’ouvrir à partir de la **Démarrer** menu :  
   
--   Cliquez sur **Démarrer**, pointez sur **tous les programmes**, pointez sur [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)], puis cliquez sur  **[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Conseiller de mise à niveau**.  
+-   Cliquez sur **Démarrer**, pointez sur **tous les programmes**, pointez sur [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)], puis cliquez sur  **[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Upgrade Advisor**.  
   
  Pour plus d'informations, consultez la documentation relative au Conseiller de mise à niveau incluse dans le téléchargement du Conseiller de mise à niveau, ainsi que les Notes de publication de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   

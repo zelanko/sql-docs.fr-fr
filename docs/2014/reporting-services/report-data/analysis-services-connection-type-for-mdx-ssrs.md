@@ -8,25 +8,25 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: bd2e7148-3124-4e07-9734-22333127c3be
 caps.latest.revision: 10
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 7ee40544fc76385d65d6b0b4d38b39c7112218d6
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: e3e40443fc2691c33a1d40603b932a4ac031d0a1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36037937"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37246301"
 ---
 # <a name="analysis-services-connection-type-for-mdx-ssrs"></a>Type de connexion Analysis Services pour MDX (SSRS)
   Pour inclure des données d’un cube [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] dans votre rapport, vous devez avoir un dataset basé sur une source de données de rapport de type [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Ce type de source de données intégré est basé sur l'extension de données [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Vous pouvez récupérer les métadonnées relatives aux dimensions, hiérarchies, niveaux, indicateurs de performance clés (KPI), mesures et attributs d'un cube [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] afin de les utiliser comme données de rapport.  
   
  Cette extension pour le traitement des données prend en charge des paramètres à valeurs multiples, des agrégats de serveur et des informations d'identification qui sont gérés séparément de la chaîne de connexion.  
   
- Utilisez les informations de cette rubrique pour générer une source de données. Pour obtenir des instructions, consultez [ajouter et vérifier une connexion de données ou une Source de données &#40;le Générateur de rapports et SSRS&#41;](add-and-verify-a-data-connection-report-builder-and-ssrs.md).  
+ Utilisez les informations de cette rubrique pour générer une source de données. Pour obtenir des instructions détaillées, consultez [ajouter et vérifier une connexion de données ou d’une Source de données &#40;Générateur de rapports et SSRS&#41;](add-and-verify-a-data-connection-report-builder-and-ssrs.md).  
   
 ##  <a name="Connection"></a> Chaîne de connexion  
  Quand vous vous connectez à un cube [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , vous vous connectez à l’objet de base de données d’une instance d’Analysis Services sur un serveur. La base de données peut avoir plusieurs cubes. Vous spécifiez le cube dans le concepteur de requêtes lorsque vous générez la requête. L’exemple suivant affiche une chaîne de connexion :  
@@ -75,7 +75,7 @@ data source=<server name>;initial catalog=<database name>
   
  Au moment de la conception, exécutez la requête pour afficher un jeu de résultats. Les résultats de la requête sont automatiquement récupérés comme un ensemble de lignes aplati. Les colonnes dans le jeu de résultats d'une requête remplissent la collection de champs pour un dataset. Après avoir généré la requête, affichez la collection de champs de dataset générée à partir des métadonnées dans le volet des données de rapport. Lorsque le rapport s'exécute, les données réelles sont retournées à partir de la source de données externe.  
   
- L’extension pour le traitement des données [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] prend en charge les propriétés de champ de dataset étendues. Il s'agit des valeurs disponibles dans la source de données externe mais qui ne s'affichent pas dans le volet des données de rapport. Vous pouvez utiliser les propriétés de champ étendues prises en charge par le [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] extension pour le traitement des données dans votre rapport via la fonction intégrée `Fields` collection. Pour les propriétés qui possèdent des valeurs dans la source de données, vous pouvez accéder à des valeurs de propriété prédéfinies telles que `FormattedValue`, `Color` ou `UniqueName`. Pour plus d’informations, consultez [Propriétés de champ étendues pour une base de données Analysis Services &#40;SSRS&#41;](extended-field-properties-for-an-analysis-services-database-ssrs.md).  
+ L’extension pour le traitement des données [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] prend en charge les propriétés de champ de dataset étendues. Il s'agit des valeurs disponibles dans la source de données externe mais qui ne s'affichent pas dans le volet des données de rapport. Vous pouvez utiliser les propriétés de champ étendues prises en charge par le [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] extension pour le traitement des données dans votre rapport via intégrés `Fields` collection. Pour les propriétés qui possèdent des valeurs dans la source de données, vous pouvez accéder à des valeurs de propriété prédéfinies telles que `FormattedValue`, `Color` ou `UniqueName`. Pour plus d’informations, consultez [Propriétés de champ étendues pour une base de données Analysis Services &#40;SSRS&#41;](extended-field-properties-for-an-analysis-services-database-ssrs.md).  
   
   
   
@@ -98,7 +98,7 @@ data source=<server name>;initial catalog=<database name>
 ##  <a name="Related"></a> Sections connexes  
  Ces sections de la documentation fournissent des informations de fond d'ordre conceptuel sur les données de rapport, ainsi que des informations sur les procédures de définition, de personnalisation et d'utilisation des parties d'un rapport qui sont liées aux données.  
   
- [Ajouter des données à un rapport &#40;rapport Générateur et SSRS&#41;](report-datasets-ssrs.md)  
+ [Ajouter des données à un rapport &#40;Générateur de rapports et SSRS&#41;](report-datasets-ssrs.md)  
  Fournit une vue d'ensemble de l'accès aux données pour votre rapport.  
   
  [Connexions de données, sources de données et chaînes de connexion dans le Générateur de rapports](../data-connections-data-sources-and-connection-strings-in-report-builder.md)  
@@ -110,7 +110,7 @@ data source=<server name>;initial catalog=<database name>
  [Collection de champs de dataset &#40;Générateur de rapports et SSRS&#41;](dataset-fields-collection-report-builder-and-ssrs.md)  
  Fournit des informations sur la collection de champs de dataset générée par la requête.  
   
- [Propriétés de champ étendues pour une analyse des Services de base de données &#40;SSRS&#41;](extended-field-properties-for-an-analysis-services-database-ssrs.md)  
+ [Propriétés de champ étendues pour une Analysis Services de base de données &#40;SSRS&#41;](extended-field-properties-for-an-analysis-services-database-ssrs.md)  
  Fournit des informations sur les champs supplémentaires disponibles via le fournisseur de données XMLA.  
   
  [Sources de données prises en charge par Reporting Services &#40;SSRS&#41;](../create-deploy-and-manage-mobile-and-paginated-reports.md) dans la section [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] de la [documentation en ligne](http://go.microsoft.com/fwlink/?linkid=121312) de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  

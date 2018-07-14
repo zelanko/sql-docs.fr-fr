@@ -1,5 +1,5 @@
 ---
-title: Mapper des paramètres de requête à des Variables dans une tâche d’exécution SQL | Documents Microsoft
+title: Mapper des paramètres de requête à des Variables dans une tâche d’exécution SQL | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - queries [Integration Services], parameter mapping
 - parameterized SQL commands [Integration Services]
@@ -18,15 +18,15 @@ helpviewer_keywords:
 - variables [Integration Services], mapping parameters to
 ms.assetid: 6a164349-dfcf-4995-80bc-d4e7aee52a83
 caps.latest.revision: 28
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: e6427fe7773569abc5d3989e6ca830c0999a962c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 92972c340a71587329146f71542e15d8a45cb914
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36038372"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37233389"
 ---
 # <a name="map-query-parameters-to-variables-in-an-execute-sql-task"></a>Mapper des paramètres de requête à des variables dans une tâche d'exécution SQL
   Cette rubrique décrit la façon d'utiliser une instruction SQL paramétrable dans la tâche d'exécution SQL et de créer des mappages entre des variables et les paramètres de l'instruction SQL.  
@@ -109,6 +109,6 @@ ms.locfileid: "36038372"
 ## <a name="see-also"></a>Voir aussi  
  [Exécution de requêtes SQL, tâche](control-flow/execute-sql-task.md)   
  [Paramètres et Codes de retour dans la tâche d’exécution SQL](../../2014/integration-services/parameters-and-return-codes-in-the-execute-sql-task.md)   
- [Services d’intégration &#40;SSIS&#41; Variables](integration-services-ssis-variables.md)  
+ [Integration Services &#40;SSIS&#41; Variables](integration-services-ssis-variables.md)  
   
   
