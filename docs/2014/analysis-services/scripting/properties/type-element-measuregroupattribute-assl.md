@@ -1,5 +1,5 @@
 ---
-title: Type d’élément (MeasureGroupAttribute) (ASSL) | Documents Microsoft
+title: Type d’élément (MeasureGroupAttribute) (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - Type element
 ms.assetid: 93740504-297a-4a06-ab3e-b598e466eebb
 caps.latest.revision: 37
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 0d06b5df3ba99e54ec62de5c6f274874289cbbc4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 49155b00ca70c613ffec01e898e7c6f071e24c84
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36052031"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37254851"
 ---
 # <a name="type-element-measuregroupattribute-assl"></a>Élément Type (MeasureGroupAttribute) (ASSL)
   Contient le type d’un [MeasureGroupAttribute](../data-type/measuregroupattribute-data-type-assl.md) élément.  
@@ -67,11 +67,11 @@ ms.locfileid: "36052031"
 |Valeur|Description|  
 |-----------|-----------------|  
 |*Régulière*|Représente un attribut régulier.|  
-|*granularité*|Represents a granularity attribute.|  
+|*Granularité*|Represents a granularity attribute.|  
   
- L’énumération qui correspond aux valeurs autorisées pour `Type` dans l’objet d’objets AMO (Analysis Management) est modèle <xref:Microsoft.AnalysisServices.MeasureGroupAttributeType>.  
+ L’énumération qui correspond aux valeurs autorisées pour `Type` dans l’objet d’objets AMO (Analysis Management) modèle est <xref:Microsoft.AnalysisServices.MeasureGroupAttributeType>.  
   
- L’élément qui correspond au parent de `Type` dans l’objet d’objets AMO (Analysis Management) est modèle <xref:Microsoft.AnalysisServices.MeasureGroupAttribute>.  
+ L’élément qui correspond au parent de `Type` dans l’objet d’objets AMO (Analysis Management) modèle est <xref:Microsoft.AnalysisServices.MeasureGroupAttribute>.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Attributs d’élément &#40;ASSL&#41;](../collections/attributes-element-assl.md)   

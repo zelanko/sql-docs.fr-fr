@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 2fcb9be2-1daa-4c92-ad00-5f63cdf39f70
 caps.latest.revision: 6
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: dd3018910d3285ff833ef6e42ff8421e585669cb
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 7acf39da6b68b353c4c659dd2ac641b1759f3ae4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36051425"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37216619"
 ---
 # <a name="sort-data-in-a-data-region-report-builder-and-ssrs"></a>Trier des données dans une région de données (Générateur de rapports et SSRS)
   Pour changer l'ordre de tri des données dans une région de données à la première exécution d'un rapport, vous devez définir l'expression de tri sur le groupe ou la région de données. Par défaut, l'expression de tri d'un groupe a automatiquement la même valeur que l'expression de groupe.  

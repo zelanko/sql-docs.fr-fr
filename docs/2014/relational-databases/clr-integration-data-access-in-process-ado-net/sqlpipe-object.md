@@ -1,13 +1,11 @@
 ---
-title: SqlPipe, objet | Documents Microsoft
+title: Objet SqlPipe | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: clr
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -16,15 +14,15 @@ helpviewer_keywords:
 - tabular results
 ms.assetid: 3e090faf-085f-4c01-a565-79e3f1c36e3b
 caps.latest.revision: 54
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 9b67acce373f412ef4adca2c9957f4f5046f35a8
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: rothja
+ms.author: jroth
+manager: craigg
+ms.openlocfilehash: 61ece1402c9675f4f737098580283f1a6e777b76
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36152829"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37350851"
 ---
 # <a name="sqlpipe-object"></a>Objet SqlPipe
   Dans les versions antérieures de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], il est très fréquent d'écrire une procédure stockée (ou une procédure stockée étendue) qui envoie des résultats ou des paramètres de sortie au client appelant.  
@@ -144,7 +142,7 @@ EXEC uspGetProductLineVB 'T';
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [SqlDataRecord, objet](sqldatarecord-object.md)   
+ [Objet SqlDataRecord](sqldatarecord-object.md)   
  [Procédures stockées CLR](../../database-engine/dev-guide/clr-stored-procedures.md)   
  [Extensions spécifiques in-process de SQL Server à ADO.NET](sql-server-in-process-specific-extensions-to-ado-net.md)  
   

@@ -1,11 +1,11 @@
 ---
-title: Appel de fonctions d’agrégation définies par l’utilisateur CLR | Documents Microsoft
+title: Appel de fonctions d’agrégation définies par l’utilisateur CLR | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: reference
+ms.technology: clr
 ms.tgt_pltfrm: ''
 ms.topic: reference
 dev_langs:
@@ -21,12 +21,12 @@ caps.latest.revision: 53
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 7731be96b2cf9eaccdad14274250346c04b67a75
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
+ms.openlocfilehash: ca243bc1961b703839ff72e5b559349e3a4c3e36
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35700340"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37355371"
 ---
 # <a name="clr-user-defined-aggregate---invoking-functions"></a>Agrégat défini par l’utilisateur CLR - appel de fonctions
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

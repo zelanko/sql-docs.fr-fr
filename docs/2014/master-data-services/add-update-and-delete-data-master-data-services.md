@@ -1,5 +1,5 @@
 ---
-title: Ajouter, mettre à jour et supprimer des données (Master Data Services) | Documents Microsoft
+title: Ajouter, mettre à jour et supprimer des données (Master Data Services) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 applies_to:
 - SQL Server 2014
 ms.assetid: b6295ead-bd2f-49dd-8756-35c6afb59648
 caps.latest.revision: 6
-author: douglaslM
+author: leolimsft
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 665925f4d9298b3bfaf1dcc5841b78993978a94e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: cd14b50e3b883a92aa611b13553a6ecc5647f32c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36044525"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37311989"
 ---
 # <a name="add-update-and-delete-data-master-data-services"></a>Ajouter, mettre à jour et supprimer des données (Master Data Services)
   Vous pouvez ajouter des données et apporter des modifications de données à un modèle en bloc dans [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)].  
@@ -44,7 +44,7 @@ ms.locfileid: "36044525"
   
     -   Pour déplacer des membres dans les hiérarchies explicites, la table est stg.\<nom>_Relationship. Pour plus d’informations sur les champs requis, consultez [Table de mise en lots des relations &#40;Master Data Services&#41;](../../2014/master-data-services/relationship-staging-table-master-data-services.md).  
   
-         Pour une vue d’ensemble du déplacement de membres dans les hiérarchies explicites, consultez [importation des données &#40;Master Data Services&#41;](overview-importing-data-from-tables-master-data-services.md).  
+         Pour une vue d’ensemble sur le déplacement de membres dans les hiérarchies explicites, consultez [importation des données &#40;Master Data Services&#41;](overview-importing-data-from-tables-master-data-services.md).  
   
     -   Utilisez la valeur du champ **ImportType** pour spécifier que vous créez des membres, que vous désactivez des membres ou que vous supprimez des membres. Pour plus d’informations sur les valeurs, consultez [Table de mise en lots des membres feuille &#40;Master Data Services&#41;](../../2014/master-data-services/leaf-member-staging-table-master-data-services.md) et [Table de mise en lots des membres consolidés &#40;Master Data Services&#41;](../../2014/master-data-services/consolidated-member-staging-table-master-data-services.md).  
   
@@ -62,7 +62,7 @@ ms.locfileid: "36044525"
   
     -   Exécutez la procédure stockée de mise en lots qui correspond à la table de mise en lots vers laquelle vous voulez déplacer des données.  
   
-         Pour une vue d’ensemble de procédures stockées intermédiaires et les tables intermédiaires, consultez [importation des données &#40;Master Data Services&#41;](overview-importing-data-from-tables-master-data-services.md). Pour plus d’informations sur les paramètres des procédures stockées de mise en lots et un exemple de code, consultez [Procédure stockée de mise en lots &#40;Master Data Services&#41;](../../2014/master-data-services/staging-stored-procedure-master-data-services.md).  
+         Pour une vue d’ensemble de procédures stockées de mise en lots et d’organiser les tables, consultez [importation des données &#40;Master Data Services&#41;](overview-importing-data-from-tables-master-data-services.md). Pour plus d’informations sur les paramètres des procédures stockées de mise en lots et un exemple de code, consultez [Procédure stockée de mise en lots &#40;Master Data Services&#41;](../../2014/master-data-services/staging-stored-procedure-master-data-services.md).  
   
     -   Utilisez la zone de la fonction **Gestion de l'intégration** de la gestion des données de référence.  
   

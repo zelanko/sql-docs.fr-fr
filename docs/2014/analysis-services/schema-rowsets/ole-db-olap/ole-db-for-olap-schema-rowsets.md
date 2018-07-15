@@ -1,5 +1,5 @@
 ---
-title: OLE DB pour OLAP Schema Rowsets | Documents Microsoft
+title: OLE DB pour OLAP Schema Rowsets | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -17,23 +17,23 @@ helpviewer_keywords:
 - rowsets [Analysis Services], OLE DB for OLAP
 ms.assetid: 5fad3ecc-407c-4148-862e-ea6119cc7480
 caps.latest.revision: 31
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 898749e17cb5b85e61a2b2c3a94b7247a7ab219b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 406451b0e8e6edce92d69cde493888f70813f4de
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36051173"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37306479"
 ---
 # <a name="ole-db-for-olap-schema-rowsets"></a>Ensembles de lignes de schéma OLE DB pour OLAP
   Le fournisseur XMLA ([!INCLUDE[msCoName](../../../includes/msconame-md.md)] XML for Analysis) prend en charge les ensembles de lignes de schéma OLE DB pour OLAP suivants.  
   
 > [!NOTE]  
->  Pour vérifier si un fournisseur de source de données particulière prend en charge un ensemble de lignes, utilisez la `DISCOVER_ENUMERATIONS` ensemble de lignes avec le [Discover](../../xmla/xml-elements-methods-discover.md) (méthode).  
+>  Pour vérifier si un fournisseur de source de données particulier prend en charge un ensemble de lignes, utilisez la `DISCOVER_ENUMERATIONS` ensemble de lignes avec le [Discover](../../xmla/xml-elements-methods-discover.md) (méthode).  
   
- Vous trouverez également des informations détaillées sur ces ensembles de lignes en recherchant la rubrique « Ensembles de lignes schéma OLAP », dans la bibliothèque MSDN [site Web de Microsoft](http://go.microsoft.com/fwlink/?LinkId=15426).  
+ Vous trouverez également des informations détaillées sur ces ensembles de lignes en recherchant la rubrique « OLAP Schema Rowsets » dans MSDN Library à cela [site Web de Microsoft](http://go.microsoft.com/fwlink/?LinkId=15426).  
   
 ## <a name="in-this-section"></a>Dans cette section  
   
@@ -56,7 +56,7 @@ ms.locfileid: "36051173"
 |[MDSCHEMA_PROPERTIES, ensemble de lignes](mdschema-properties-rowset.md)|Décrit les propriétés des membres au sein d’une base de données.|  
 |[MDSCHEMA_SETS, ensemble de lignes](mdschema-sets-rowset.md)|Décrit les ensembles actuellement définis dans une base de données, y compris les ensembles de niveau session.|  
   
- <sup>1</sup> des ensembles de schéma répertoriés ici sont pris en charge par le fournisseur de source de données MSOLAP pour le [!INCLUDE[msCoName](../../../includes/msconame-md.md)] fournisseur XMLA.  
+ <sup>1</sup> tous les ensembles de lignes schéma répertoriés ici sont pris en charge par le fournisseur de source de données MSOLAP pour le [!INCLUDE[msCoName](../../../includes/msconame-md.md)] fournisseur XMLA.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Ensemble de lignes DISCOVER_ENUMERATORS](../xml/discover-enumerators-rowset.md)   

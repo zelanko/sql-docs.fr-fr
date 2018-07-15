@@ -5,28 +5,27 @@ ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-backup-restore
+ms.technology: backup-restore
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: de676bea-cec7-479d-891a-39ac8b85664f
 caps.latest.revision: 20
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: b4da3c1af787d41c7b1b49ba3edc6b2a191d3ac1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: f2c7a2cc478659dc3ba50a650a15168b37644619
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36044755"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37277075"
 ---
 # <a name="sql-server-backup-to-url-best-practices-and-troubleshooting"></a>Meilleures pratiques et dépannage de sauvegarde SQL Server vers une URL
   Cette rubrique présente les pratiques recommandées et des conseils de dépannage pour la sauvegarde et la restauration SQL Server dans le service d'objets blob Windows Azure.  
   
  Pour plus d'informations sur l'utilisation du service de stockage d'objets blob Windows Azure pour les opérations de sauvegarde et de restauration SQL Server, consultez :  
   
--   [SQL Server Backup and Restore with Windows Azure Blob Storage Service](sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)  
+-   [Sauvegarde et restauration SQL Server avec le service Stockage Blob Microsoft Azure](sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)  
   
 -   [Didacticiel : Sauvegarde et restauration SQL Server dans le service de stockage d'objets blob Windows Azure](../tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md)  
   
@@ -45,14 +44,14 @@ ms.locfileid: "36044755"
   
 ## <a name="handling-large-files"></a>Gestion des fichiers volumineux  
   
--   L'opération de sauvegarde [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilise plusieurs threads pour optimiser le transfert de données vers les services de stockage d'objets blob Windows Azure.  Toutefois, les performances dépendent de divers facteurs, tels que la bande passante de l'éditeur de logiciels et la taille de la base de données. Si vous envisagez de sauvegarder des bases de données ou groupes de fichiers volumineux à partir d'une base de données SQL Server locale, nous vous recommandons de commencer par tester le débit. [Windows Azure SLA du stockage](http://go.microsoft.com/fwlink/?LinkId=271619) ont le temps de traitement maximum pour les objets BLOB que vous pouvez prendre en considération.  
+-   L'opération de sauvegarde [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilise plusieurs threads pour optimiser le transfert de données vers les services de stockage d'objets blob Windows Azure.  Toutefois, les performances dépendent de divers facteurs, tels que la bande passante de l'éditeur de logiciels et la taille de la base de données. Si vous envisagez de sauvegarder des bases de données ou groupes de fichiers volumineux à partir d'une base de données SQL Server locale, nous vous recommandons de commencer par tester le débit. [Windows Azure SLA du stockage](http://go.microsoft.com/fwlink/?LinkId=271619) ont des temps de traitement maximum pour les objets BLOB que vous pouvez prendre en considération.  
   
 -   L’utilisation de l’option `WITH COMPRESSION`, comme recommandé dans la section **Gestion de la sauvegarde**, est très importante lors de la sauvegarde de fichiers volumineux.  
   
 ## <a name="troubleshooting-backup-to-or-restore-from-url"></a>Dépannage des problèmes de sauvegarde vers une URL ou de restauration depuis une URL  
  Voici quelques méthodes rapides qui vous aideront à résoudre les erreurs survenant lors de la sauvegarde ou de la restauration vers/depuis le service de stockage d'objets blob Windows Azure.  
   
- Pour éviter les erreurs en raison des limitations ou des options non prises en charge, passez en revue la liste des limitations et prendre en charge sur les commandes BACKUP et RESTORE dans le [SQL Server Backup and Restore with Windows Azure Blob Storage Service](sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md) l’article.  
+ Pour éviter les erreurs en raison des limitations ou des options non prises en charge, passez en revue la liste des limitations et prise en charge pour la sauvegarde et restauration sur les commandes dans le [SQL Server Backup and Restore with Windows Azure Blob Storage Service](sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md) article.  
   
  **Erreurs d'authentification :**  
   
@@ -121,7 +120,7 @@ ms.locfileid: "36044755"
   
  Les serveurs proxy peuvent avoir des paramètres qui limitent le nombre de connexions par minute. Le processus de sauvegarde vers l'URL est un processus multithread et, par conséquent, il peut dépasser cette limite. Si cela se produit, le serveur proxy supprime la connexion. Pour résoudre ce problème, modifiez les paramètres du proxy afin que SQL Server n'utilise pas le proxy.   Voici quelques exemples des types d'erreur ou des messages qui peuvent s'afficher dans le journal des erreurs :  
   
--   Écrire sur «http://storageaccount.blob.core.windows.net/container/BackupAzurefile.bak» a échoué : sauvegarde vers l’URL a reçu une exception du point de terminaison distant. Message d'exception : impossible de lire les données de la connexion de transport : la connexion a été fermée.  
+-   Écriture sur «http://storageaccount.blob.core.windows.net/container/BackupAzurefile.bak» a échoué : sauvegarde vers une URL a reçu une exception à partir du point de terminaison distant. Message d'exception : impossible de lire les données de la connexion de transport : la connexion a été fermée.  
   
 -   Une erreur d’E/S non récupérable s’est produite sur le fichier « http://storageaccount.blob.core.windows.net/container/BackupAzurefile.bak: ». L’erreur n’a pas pu être collectée à partir du point de terminaison distant.  
   
@@ -129,7 +128,7 @@ ms.locfileid: "36044755"
   
      La sauvegarde de base de données s'est terminée anormalement.  
   
--   BackupIoRequest::ReportIoError : échec d’écriture sur l’unité de sauvegarde http://storageaccount.blob.core.windows.net/container/BackupAzurefile.bak'. Erreur de système d'exploitation. La sauvegarde vers l'URL a reçu une exception du point de terminaison distant. Message d'exception : impossible de lire les données de la connexion de transport : la connexion a été fermée.  
+-   BackupIoRequest::ReportIoError : échec d’écriture sur l’unité de sauvegarde http://storageaccount.blob.core.windows.net/container/BackupAzurefile.bak». Erreur de système d'exploitation. La sauvegarde vers l'URL a reçu une exception du point de terminaison distant. Message d'exception : impossible de lire les données de la connexion de transport : la connexion a été fermée.  
   
  Si vous activez la journalisation détaillée à l'aide de l'indicateur de trace 3051, vous pouvez également voir le message suivant dans les journaux :  
   
@@ -158,9 +157,9 @@ ms.locfileid: "36044755"
 2.  Placez le fichier de configuration dans le dossier Binn de l'instance de SQL Server. Par exemple, si mon instance SQL Server est installé sur le lecteur C de l’ordinateur, placez le fichier de configuration ici : *C:\Program Files\Microsoft SQL Server\MSSQL12.\< Nom_instance > \MSSQL\Binn*.  
   
 ## <a name="troubleshooting-sql-server-managed-backup-to-windows-azure"></a>Dépannage de la sauvegarde managée de SQL Server sur Windows Azure  
- Étant donné que la sauvegarde managée de SQL Server est générée par dessus la sauvegarde vers l'URL, les conseils de dépannage décrits dans les premières sections s'appliquent aux bases de données ou aux instances qui utilisent la sauvegarde managée de SQL Server.  Informations sur le dépannage de SQL Server Managed Backup dans Windows Azure sont décrite en détail dans [dépannage de sauvegarde managée SQL Server vers Windows Azure](sql-server-managed-backup-to-microsoft-azure.md).  
+ Étant donné que la sauvegarde managée de SQL Server est générée par dessus la sauvegarde vers l'URL, les conseils de dépannage décrits dans les premières sections s'appliquent aux bases de données ou aux instances qui utilisent la sauvegarde managée de SQL Server.  Informations sur le dépannage de SQL Server Managed Backup pour Windows Azure sont décrite en détail dans [dépannage de sauvegarde managée SQL Server sur Windows Azure](sql-server-managed-backup-to-microsoft-azure.md).  
   
 ## <a name="see-also"></a>Voir aussi  
- [Restauration à partir de sauvegardes stockées dans Windows Azure](restoring-from-backups-stored-in-microsoft-azure.md)  
+ [Restauration à partir des sauvegardes stockées dans Microsoft Azure](restoring-from-backups-stored-in-microsoft-azure.md)  
   
   

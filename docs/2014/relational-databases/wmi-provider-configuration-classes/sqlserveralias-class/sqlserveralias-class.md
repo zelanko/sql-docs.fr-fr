@@ -1,5 +1,5 @@
 ---
-title: Classe SqlServerAlias | Documents Microsoft
+title: Classe SqlServerAlias | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - SqlServerAlias class
 ms.assetid: 475662b9-6985-45bf-b1e9-b0f26ef50443
 caps.latest.revision: 33
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 01e66c9362a8e1c91bd43e4d6821e12f93d23152
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
+ms.openlocfilehash: 68976bc9c8683554ac58a0744196ecfa5bc7e689
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36044479"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37274275"
 ---
 # <a name="sqlserveralias-class"></a>Classe SqlServerAlias
   La [classe SqlServerAlias](sqlserveralias-class.md) représente un alias de connexion au serveur.  
@@ -39,7 +39,7 @@ ms.locfileid: "36044479"
   
 -   l'instance de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] à laquelle le client est connecté écoute sur un autre canal nommé.  
   
- **Remarque :** le [classe SqlServerAlias](sqlserveralias-class.md) hérite la `Put` méthode à partir de la classe de fournisseur. Toutefois, elle ne retourne pas de résultats comme indiqué par la méthode `Provider::Put`. Pour plus d'informations, consultez la documentation relative à WMI.  
+ **Remarque :** le [classe SqlServerAlias](sqlserveralias-class.md) hérite le `Put` méthode à partir de la classe de fournisseur. Toutefois, elle ne retourne pas de résultats comme indiqué par la méthode `Provider::Put`. Pour plus d'informations, consultez la documentation relative à WMI.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Configurer des protocoles clients](http://technet.microsoft.com/library/ms181035.aspx)  

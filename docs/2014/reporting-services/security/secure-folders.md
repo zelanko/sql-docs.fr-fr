@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - high-security folders [Reporting Services]
 - low-security folders
@@ -18,13 +18,13 @@ ms.assetid: 0fd91f77-0143-476b-9af0-87293be78e44
 caps.latest.revision: 33
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: fb5806011f24d6853962b54b172d874829cb65f1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 4889b0385f3f55b4e0ca220d6b1f5f9ecda356b0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36051668"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37238249"
 ---
 # <a name="secure-folders"></a>Dossiers sécurisés
   La sécurité des dossiers constitue la base de la sécurisation de tout autre contenu du serveur de rapports. Étant donné que la sécurité est héritée au sein de la structure de dossiers, vous pouvez désigner de grandes ou de petites sections de la hiérarchie de dossiers afin d'autoriser certains types d'accès.  

@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 topic_type:
 - apiref
 helpviewer_keywords:
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - lock escalation [SQL Server], event class
 ms.assetid: d253b44c-7600-4afa-a3a7-03cc937c6a4b
 caps.latest.revision: 46
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 6a94bcf40a3a87571d0d79584585a5c9945ca51b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 8ad2b7025a97d4f5d3ec585531b786c437b8e453
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36044734"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37280165"
 ---
 # <a name="lockescalation-event-class"></a>Classe d'événements Lock:Escalation
   La classe d’événements **Lock:Escalation** indique qu’un verrouillage spécifique s’est transformé en verrouillage de plus grande ampleur, comme par exemple un verrou de ligne transformé en verrou d’objet. La classe d'événements Escalation est l'ID d'événement 60.  

@@ -1,5 +1,5 @@
 ---
-title: Créer une Structure d’exploration de données OLAP | Documents Microsoft
+title: Créer une Structure d’exploration de données OLAP | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - mining structures [Analysis Services], OLAP
 - mining structures [Analysis Services], creating
 - OLAP [Analysis Services], mining models
 ms.assetid: 368f4273-a016-4748-bcb6-505a3e745af3
 caps.latest.revision: 32
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: de5f39fe05cef96739205c06ecc00cf4481e141b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: dc5138c448aa0f149916bc61be35a0ce5d75e8c2
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36043728"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37297439"
 ---
 # <a name="create-a-new-olap-mining-structure"></a>Créer une structure d’exploration de données OLAP
   Vous pouvez utiliser l’Assistant Exploration de données dans [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] pour créer une structure d’exploration de données qui utilise les données d’un modèle multidimensionnel. Les modèles d'exploration de données basés sur des cubes OLAP peuvent utiliser la colonne et les valeurs des tables de faits, les dimensions et les groupes de mesures comme attributs pour l'analyse.  
@@ -84,7 +84,7 @@ ms.locfileid: "36043728"
   
         -   Si vous souhaitez inclure la colonne dans l’un des attributs prédictibles du modèle, sélectionnez **Prédire**.  
   
-        -   Tout élément qui vous incluez dans la structure mais que vous ne spécifiez pas en tant qu’entrée ou l’attribut prédictible est ajouté à la structure avec l’indicateur `Ignore`; cela signifie que les données sont traitées lorsque vous générez le modèle, mais n’êtes pas utilisé dans l’analyse et êtes disponible uniquement pour la récupération d’urgence illthrough. Cela peut être pratique si vous souhaitez inclure des détails, tels que des noms de clients mais ne souhaitez pas les utiliser dans l'analyse.  
+        -   Tout élément inclus dans la structure mais ne spécifiez pas en tant qu’entrée ou un attribut prédictible est ajouté à la structure avec l’indicateur `Ignore`; cela signifie que les données sont traitées lorsque vous générez le modèle, mais n’êtes pas utilisé dans l’analyse et êtes disponible uniquement pour la récupération d’urgence illthrough. Cela peut être pratique si vous souhaitez inclure des détails, tels que des noms de clients mais ne souhaitez pas les utiliser dans l'analyse.  
   
      Cliquez sur **Terminer** pour fermer la partie de l’Assistant qui fonctionne avec les tables imbriquées. Vous pouvez répéter le processus pour ajouter plusieurs colonnes imbriquées.  
   

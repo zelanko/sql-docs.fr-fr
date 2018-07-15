@@ -1,5 +1,5 @@
 ---
-title: Ensemble de lignes DISCOVER_XEVENT_TRACE_DEFINITION | Documents Microsoft
+title: Ensemble de lignes DISCOVER_XEVENT_TRACE_DEFINITION | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -12,15 +12,15 @@ ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: e1ce2d2d-f994-4318-801a-ee0385aecd84
 caps.latest.revision: 6
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 2994ce526ff0f8035d16485bf99b146e2366389e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 26bfb6747562f5f0c64d77aaceec1baa4f1bd6d8
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36045060"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37237689"
 ---
 # <a name="discoverxeventtracedefinition-rowset"></a>DISCOVER_XEVENT_TRACE_DEFINITION, ensemble de lignes
   Fournit des informations sur les traces XEvent qui sont actuellement actives sur le serveur.  
@@ -47,8 +47,8 @@ ms.locfileid: "36045060"
 |String|DISCOVER_XEVENT_TRACE_DEFINITION|  
   
 ## <a name="see-also"></a>Voir aussi  
- [XML for Analysis ensembles de lignes de schéma](../schema-rowsets/xml/xml-for-analysis-schema-rowsets.md)   
+ [XML for Analysis Schema Rowsets](../schema-rowsets/xml/xml-for-analysis-schema-rowsets.md)   
  [Utiliser des événements étendus SQL Server &#40;XEvents&#41; pour surveiller Analysis Services](../instances/monitor-analysis-services-with-sql-server-extended-events.md)   
- [Utilisez les vues de gestion dynamique &#40;DMV&#41; pour surveiller Analysis Services](../instances/use-dynamic-management-views-dmvs-to-monitor-analysis-services.md)  
+ [Utiliser des vues de gestion dynamique &#40;DMV&#41; pour surveiller Analysis Services](../instances/use-dynamic-management-views-dmvs-to-monitor-analysis-services.md)  
   
   

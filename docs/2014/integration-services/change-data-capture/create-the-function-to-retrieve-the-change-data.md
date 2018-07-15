@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - incremental load [Integration Services],creating function
 ms.assetid: 55dd0946-bd67-4490-9971-12dfb5b9de94
 caps.latest.revision: 28
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: c9367e4715022afcff7c988cbe877a1565f41cab
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 5c8eec2498cace997c8f67493772c9ac23d374bc
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36051575"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37217829"
 ---
 # <a name="create-the-function-to-retrieve-the-change-data"></a>Créer la fonction de récupération des données modifiées
   Une fois que vous avez terminé le flux de contrôle d’un package [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] qui effectue un chargement incrémentiel des données modifiées, la tâche suivante consiste à créer une fonction table qui récupère les données modifiées. Vous ne devez créer cette fonction qu'une seule fois avant le premier chargement incrémentiel.  
@@ -145,7 +145,7 @@ deallocate #hfunctions
 ## <a name="writing-your-own-table-value-function"></a>Écriture de votre propre fonction table  
  Vous pouvez également utiliser [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] pour écrire votre propre fonction wrapper table qui appelle la fonction de requête de capture de données modifiées et qui stocke la fonction wrapper table dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Pour plus d’informations sur la création d’une fonction Transact-SQL, consultez [CREATE FUNCTION &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-function-transact-sql).  
   
- L'exemple suivant définit une fonction table qui récupère les modifications d'une table Customer pour l'intervalle de modification spécifié. Cette fonction utilise modification fonctions capture des données pour mapper le `datetime` de séquence de valeurs dans le journal binaire des valeurs de numéro séquentiel qui les tables de modifications utilisent en interne. Cette fonction gère également plusieurs conditions spéciales :  
+ L'exemple suivant définit une fonction table qui récupère les modifications d'une table Customer pour l'intervalle de modification spécifié. Cette fonction utilise data capture des fonctions modifiées pour mapper le `datetime` séquence de valeurs dans le journal binaire des valeurs de numéro séquentiel que les tables de modifications utilisent en interne. Cette fonction gère également plusieurs conditions spéciales :  
   
 -   Lorsqu'une valeur NULL est passée pour l'heure de début, cette fonction utilise la valeur correspondante à la première heure disponible.  
   

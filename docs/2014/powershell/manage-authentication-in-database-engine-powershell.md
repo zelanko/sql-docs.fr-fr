@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: ab9212a6-6628-4f08-a38c-d3156e05ddea
 caps.latest.revision: 8
-author: mgblythe
-ms.author: mblythe
-manager: jhubbard
-ms.openlocfilehash: d444739180c4326dd68af08be0a382c0e0ff6cb8
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: f7ec9327a35e9ba110dd9d93db53c50b5c130f6c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36051554"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37227809"
 ---
 # <a name="manage-authentication-in-database-engine-powershell"></a>Gérer l'authentification dans le moteur de base de données PowerShell
   Par défaut, les composants de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] PowerShell utilisent l'authentification Windows lors de la connexion à une instance du [!INCLUDE[ssDE](../includes/ssde-md.md)]. Vous pouvez utiliser l’authentification SQL Server en définissant un lecteur virtuel PowerShell ou en spécifiant le `–Username` et `–Password` paramètres pour `Invoke-Sqlcmd`.  
@@ -31,7 +31,7 @@ ms.locfileid: "36051554"
 ##  <a name="Permissions"></a> Permissions  
  Toutes les actions que vous pouvez effectuer dans une instance du [!INCLUDE[ssDE](../includes/ssde-md.md)] sont contrôlées par les autorisations accordées aux informations d'identification utilisées pour la connexion à l'instance. Par défaut, le fournisseur et les applets de commande [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] utilisent le compte Windows sous lequel ils s'exécutent pour établir une connexion via l'authentification Windows au [!INCLUDE[ssDE](../includes/ssde-md.md)].  
   
- Pour établir une connexion via l'authentification [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , vous devez fournir un ID de connexion et un mot de passe d'authentification SQL Server. Lorsque vous utilisez la [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] fournisseur, vous devez associer le [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] informations d’identification de connexion à un lecteur virtuel, puis utilisez la commande Changer de répertoire (`cd`) pour se connecter à ce lecteur. Dans Windows PowerShell, les informations d'identification de sécurité peuvent être associées uniquement à des lecteurs virtuels.  
+ Pour établir une connexion via l'authentification [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , vous devez fournir un ID de connexion et un mot de passe d'authentification SQL Server. Lorsque vous utilisez le [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] fournisseur, vous devez associer le [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] informations d’identification de connexion à un lecteur virtuel, puis utilisez la commande Changer de répertoire (`cd`) pour se connecter à ce lecteur. Dans Windows PowerShell, les informations d'identification de sécurité peuvent être associées uniquement à des lecteurs virtuels.  
   
 ##  <a name="SQLAuthVirtDrv"></a> Authentification SQL Server avec un lecteur virtuel  
  **Pour créer un lecteur virtuel associé à une connexion via l'authentification SQL Server**  
@@ -51,7 +51,7 @@ ms.locfileid: "36051554"
 ### <a name="example-virtual-drive"></a>Exemple (lecteur virtuel)  
  Cet exemple crée une fonction nommée **sqldrive** que vous pouvez utiliser pour créer un lecteur virtuel associé à la connexion via l'authentification [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] et à l'instance spécifiées.  
   
- La fonction **sqldrive** vous invite à entrer le mot de passe de votre connexion, en masquant celui-ci à mesure que vous le tapez. Ensuite, chaque fois que vous utilisez la commande Changer de répertoire (`cd`) pour vous connecter à un chemin d’accès en utilisant le nom de lecteur virtuel, toutes les opérations sont effectuées à l’aide de la [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] informations d’identification de connexion d’authentification que vous avez fournies lors de la création du lecteur.  
+ La fonction **sqldrive** vous invite à entrer le mot de passe de votre connexion, en masquant celui-ci à mesure que vous le tapez. Ensuite, chaque fois que vous utilisez la commande Changer de répertoire (`cd`) pour vous connecter à un chemin d’accès en utilisant le nom de lecteur virtuel, toutes les opérations sont effectuées en utilisant le [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] informations d’identification de connexion d’authentification que vous avez fournies lorsque vous avez créé le lecteur.  
   
 ```  
 ## Create a function that specifies the login and prompts for the password.  
@@ -74,7 +74,7 @@ cd SQLAuth
 ##  <a name="SQLAuthInvSqlCmd"></a> Authentification SQL Server avec Invoke-Sqlcmd  
  **Pour utiliser Invoke-Sqlcmd avec l'authentification SQL Server**  
   
-1.  Utilisez le `–Username` paramètre pour spécifier un ID de connexion et le `–Password` pour spécifier le mot de passe associé.  
+1.  Utilisez le `–Username` paramètre pour spécifier un ID de connexion et le `–Password` paramètre pour spécifier le mot de passe associé.  
   
 ### <a name="example-invoke-sqlcmd"></a>Exemple (Invoke-Sqlcmd)  
  Cet exemple utilise l'applet de commande read-host pour inviter l'utilisateur à entrer un mot de passe, puis se connecte via l'authentification SQL Server.  

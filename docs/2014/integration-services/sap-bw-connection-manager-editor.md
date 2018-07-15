@@ -1,5 +1,5 @@
 ---
-title: Éditeur du Gestionnaire de connexions SAP BW | Documents Microsoft
+title: Éditeur du Gestionnaire de connexions SAP BW | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: ec970319-e749-4753-8675-9cf76ed99669
 caps.latest.revision: 9
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: b1aa5052eb720fd212426bda989ada2f26993364
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: dbfeaf04ca7eb8a07637c295a5aa80cc02bedd58
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36044769"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37231459"
 ---
 # <a name="sap-bw-connection-manager-editor"></a>Éditeur du gestionnaire de connexions SAP BW
   Utilisez l' **Éditeur du gestionnaire de connexions SAP BW** pour spécifier les propriétés à utiliser pour se connecter à un système SAP Netweaver BW version 7.  
@@ -117,6 +117,6 @@ ms.locfileid: "36044769"
  Testez la connexion à l'aide des valeurs que vous avez fournies. Après avoir cliqué sur **Tester la connexion**, un message apparaît et indique si la connexion a été établie ou si elle a échoué.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Microsoft Connector 1.1 pour SAP BW F1 Aide](microsoft-connector-for-sap-bw-f1-help.md)  
+ [Aide (F1) sur Microsoft Connector 1.1 pour SAP BW](microsoft-connector-for-sap-bw-f1-help.md)  
   
   

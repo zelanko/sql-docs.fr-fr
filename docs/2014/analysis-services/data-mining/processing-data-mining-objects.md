@@ -1,5 +1,5 @@
 ---
-title: Traitement des objets d’exploration de données | Documents Microsoft
+title: Traitement des objets d’exploration de données | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - processing objects [Analysis Services]
 - mining structures [Analysis Services]
@@ -18,15 +18,15 @@ helpviewer_keywords:
 - mining structures [Analysis Services], processing
 ms.assetid: 0f6993c0-0917-4935-82f9-7b8a8a7cc627
 caps.latest.revision: 19
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 52caf01ea2f82b2d566b41ba402fa31b81283638
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 09f62e8f3b9abcde430557641beb92a1f7566f1f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36045472"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37257465"
 ---
 # <a name="processing-data-mining-objects"></a>Traitement des objets d'exploration de données
   Un objet d'exploration de données n'est rien de plus qu'un conteneur vide tant qu'il n'est pas traité. Le*traitement* d’un modèle d’exploration de données est également appelé *apprentissage*.  
@@ -60,9 +60,9 @@ ms.locfileid: "36045472"
  Pour plus d’informations, consultez [Exigences et considérations concernant le traitement &#40;exploration de données&#41;](processing-requirements-and-considerations-data-mining.md).  
   
 ## <a name="see-also"></a>Voir aussi  
- [Requêtes d’extraction &#40;d’exploration de données&#41;](drillthrough-queries-data-mining.md)   
+ [Requêtes d’extraction &#40;exploration de données&#41;](drillthrough-queries-data-mining.md)   
  [Structures d’exploration de données &#40;Analysis Services - Exploration de données&#41;](mining-structures-analysis-services-data-mining.md)   
- [Les modèles d’exploration de données &#40;Analysis Services - Exploration de données&#41;](mining-models-analysis-services-data-mining.md)   
+ [Modèles d’exploration de données &#40;Analysis Services - Exploration de données&#41;](mining-models-analysis-services-data-mining.md)   
  [Architecture logique &#40;Analysis Services - Exploration de données&#41;](logical-architecture-analysis-services-data-mining.md)  
   
   

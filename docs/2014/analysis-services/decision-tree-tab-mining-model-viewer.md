@@ -1,5 +1,5 @@
 ---
-title: La décision de l’onglet arbre (visionneuse de modèle d’exploration de données) | Documents Microsoft
+title: La décision de l’onglet arbre (visionneuse de modèle d’exploration de données) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dm.miningmodeleditor.decisiontree.f1
 ms.assetid: dc88606f-ba7c-4f8d-af65-bfa17ec16e2b
 caps.latest.revision: 22
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 8ac997463e15b862dafbb5e561e9ab5dd29601b5
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 86c229c4adc57200a2d1867c167aa3d998498765
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36051611"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37276335"
 ---
 # <a name="decision-tree-tab-mining-model-viewer"></a>Onglet Arbre de décision (Visionneuse de modèle d'exploration de données)
   Le volet **Arbre de décision** affiche une représentation visuelle des règles de décision créées dans un modèle d’arbre de décision. Les règles de décision décrivent les chemins d'accès vers certains résultats.  
@@ -29,7 +29,7 @@ ms.locfileid: "36051611"
  **Pour plus d’informations :** [Algorithme MDT (Microsoft Decision Trees)](data-mining/microsoft-decision-trees-algorithm.md), [Explorer un modèle à l’aide de la Visionneuse d’arborescences Microsoft](data-mining/browse-a-model-using-the-microsoft-tree-viewer.md)  
   
 ## <a name="options"></a>Options  
- **Actualiser le contenu de la visionneuse**  
+ **Actualiser le contenu de l’Observateur**  
  Recharge le modèle d'exploration de données dans la visionneuse.  
   
  **Modèle d'exploration de données**  
@@ -50,7 +50,7 @@ ms.locfileid: "36051611"
  **Copier le graphique entier**  
  Copie la totalité du diagramme dans le Presse-papiers.  
   
- **Diagramme à la taille de la fenêtre**  
+ **Diagramme de mise à l’échelle à la fenêtre**  
  Réduit la taille du diagramme jusqu'à ce que l'intégralité de la structure arborescente soit ajustée à la taille de l'écran.  
   
  **Histogrammes**  

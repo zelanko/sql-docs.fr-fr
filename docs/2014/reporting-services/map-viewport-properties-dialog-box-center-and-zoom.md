@@ -1,5 +1,5 @@
 ---
-title: Mapper la boîte de dialogue Propriétés de la fenêtre d’affichage, Centrer et zoomer | Documents Microsoft
+title: Mapper la boîte de dialogue Propriétés de la fenêtre d’affichage, Centrer et zoomer | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.rtp.rptdesigner.mapviewport.centerandzoom.f1
 - "10506"
 ms.assetid: 642a06f5-293f-48e0-97a6-1489dbefa719
 caps.latest.revision: 6
-author: douglaslM
+author: maggiesmsft
 ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: c3c75a22ee1a367f752cd310a19aebdb241c90eb
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 33fb01fb1383edd45200f6d803960ff72c981a1b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36044688"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37255781"
 ---
 # <a name="map-viewport-properties-dialog-box-center-and-zoom"></a>Boîte de dialogue Propriétés du point de vue de la carte, Centrer et zoomer
   Sélectionnez **Centrer et zoomer** dans la boîte de dialogue **Propriétés de la fenêtre d'affichage de la carte** pour définir le centre d'affichage et le facteur de zoom d'une carte. Après avoir spécifié une source de données cartographiques et les limites de la carte que vous souhaitez inclure dans votre rapport, vous pouvez spécifier le centre d'affichage et le facteur de zoom pour contrôler encore davantage l'affichage de la carte. Les options disponibles varient en fonction de la méthode utilisée pour spécifier le centre et les valeurs de zoom. Cliquez sur le bouton **Expression** (*fx*) pour modifier une expression qui définit la valeur de l'option.  
@@ -50,7 +50,7 @@ ms.locfileid: "36044688"
  **Vue Centre (X) %**  
  Coordonnée horizontale. La valeur par défaut, 50 %, centre la vue à mi-chemin entre les valeurs horizontales minimale et maximale.  
   
- **Affichage center (Y) %**  
+ **Vue Centre (Y) %**  
  Coordonnée verticale. La valeur par défaut, 50 %, centre la vue à mi-chemin entre les valeurs verticales minimale et maximale.  
   
  **Niveau de zoom (%)**  

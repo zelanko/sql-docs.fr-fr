@@ -1,5 +1,5 @@
 ---
-title: Contrôle de code Source de l’Explorateur de solutions | Documents Microsoft
+title: Contrôle de code Source de l’Explorateur de solutions | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Visual SourceSafe
 - SQL Server Management Studio [SQL Server], source control services
@@ -19,18 +19,18 @@ helpviewer_keywords:
 - VSS [Visual SourceSafe]
 ms.assetid: 6373adb8-3d81-4945-a9fc-1d0d5799d29a
 caps.latest.revision: 28
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 7165143ad238bbbeda14ac91f214f1410082beb2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 3975c43263e8ad7dc19c5bd8b01c1f32badea35c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36044533"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37213699"
 ---
 # <a name="solution-explorer-source-control"></a>Contrôle de code source de l'Explorateur de solutions
-  [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] L’Explorateur de solutions peut être intégré à un système de contrôle de source distinct. Après intégration d'une solution ou d'un projet à un système de contrôle de code source, vous pouvez contrôler l'accès aux fichiers et les versions pour les scripts et les requêtes de vos projets.  
+  [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] L’Explorateur de solutions peut être intégré dans un système de contrôle de source distinct. Après intégration d'une solution ou d'un projet à un système de contrôle de code source, vous pouvez contrôler l'accès aux fichiers et les versions pour les scripts et les requêtes de vos projets.  
   
 ## <a name="solution-and-project-source-control"></a>Contrôle de code source de solution et de projet  
   
@@ -54,11 +54,11 @@ ms.locfileid: "36044533"
 |Rubrique|Description|  
 |-----------|-----------------|  
 |[Présentation du contrôle de code source](../../2014/database-engine/source-control-basics.md)|Indique la terminologie de base du contrôle de code source et détermine les avantages présentés par les services de contrôle de code source dans le cadre d'un projet.|  
-|[Ajouter des Solutions et des projets au contrôle de code Source](../../2014/database-engine/add-solutions-and-projects-to-source-control.md)|Explique comment utiliser l'environnement [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] pour ajouter des solutions et des projets au contrôle de code source.|  
-|[Ouvrir des Solutions et des projets à partir du contrôle de code Source](../../2014/database-engine/open-solutions-and-projects-from-source-control.md)|Explique comment utiliser l'environnement [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] pour ouvrir des solutions et des projets sous contrôle de code source.|  
+|[Ajouter des solutions et des projets au contrôle de code source](../../2014/database-engine/add-solutions-and-projects-to-source-control.md)|Explique comment utiliser l'environnement [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] pour ajouter des solutions et des projets au contrôle de code source.|  
+|[Ouvrir des solutions et des projets à partir du contrôle de code source](../../2014/database-engine/open-solutions-and-projects-from-source-control.md)|Explique comment utiliser l'environnement [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] pour ouvrir des solutions et des projets sous contrôle de code source.|  
 |[Gérer les extractions](../../2014/database-engine/manage-checkouts.md)|Indique le mode d'extraction de solutions et de fichiers du contrôle de code source.|  
 |[Gérer les archivages](../../2014/database-engine/manage-checkins.md)|Indique le mode d'archivage de solutions et de fichiers dans le contrôle de code source.|  
-|[Définir et récupérer des informations de Version](../../2014/database-engine/set-and-retrieve-version-information.md)|Indique le mode de récupération de l'historique d'un projet ou d'un élément, le mode de récupération d'une copie locale d'un élément et le mode de comparaison de deux versions d'un élément.|  
+|[Définir et récupérer des informations sur la version](../../2014/database-engine/set-and-retrieve-version-information.md)|Indique le mode de récupération de l'historique d'un projet ou d'un élément, le mode de récupération d'une copie locale d'un élément et le mode de comparaison de deux versions d'un élément.|  
 |||  
   
 ## <a name="see-also"></a>Voir aussi  

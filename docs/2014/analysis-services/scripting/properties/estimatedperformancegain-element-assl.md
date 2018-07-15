@@ -1,5 +1,5 @@
 ---
-title: Élément EstimatedPerformanceGain (ASSL) | Documents Microsoft
+title: Élément EstimatedPerformanceGain (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - EstimatedPerformanceGain element
 ms.assetid: d7487977-73c3-4244-ad5d-3c357b219db4
 caps.latest.revision: 33
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: c4e2c8ffa997c46b6d4587a971de436c25792694
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 8b4b9c2c80bbeadf716313756470d1f8d7994152
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36050912"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37267405"
 ---
 # <a name="estimatedperformancegain-element-assl"></a>Élément EstimatedPerformanceGain (ASSL)
   Affiche le pourcentage en lecture seule des gains de performance estimés pour la partition.  
@@ -62,7 +62,7 @@ ms.locfileid: "36050912"
 |Éléments enfants|None|  
   
 ## <a name="remarks"></a>Notes  
- L’élément qui correspond au parent de `EstimatedPerformanceGain` dans l’objet d’objets AMO (Analysis Management) est modèle <xref:Microsoft.AnalysisServices.AggregationDesign>.  
+ L’élément qui correspond au parent de `EstimatedPerformanceGain` dans l’objet d’objets AMO (Analysis Management) modèle est <xref:Microsoft.AnalysisServices.AggregationDesign>.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Propriétés &#40;ASSL&#41;](properties-assl.md)  

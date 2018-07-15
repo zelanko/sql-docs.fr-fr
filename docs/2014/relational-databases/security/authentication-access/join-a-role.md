@@ -5,10 +5,9 @@ ms.date: 07/14/2016
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-security
+ms.technology: security
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - SQL12.SWB.DATABASEUSER.MEMBERSHIP.F1
 helpviewer_keywords:
@@ -16,15 +15,15 @@ helpviewer_keywords:
 - join a role
 ms.assetid: 05c8d10d-5823-46c6-8b1a-81722da6a42b
 caps.latest.revision: 12
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: d01aa38a22025763f824b67073319ceaeacbdd5f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: edmacauley
+ms.author: edmaca
+manager: craigg
+ms.openlocfilehash: 61557c9cbc9d11a23af9bfc0beda9ab84b319eca
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36053036"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37214939"
 ---
 # <a name="join-a-role"></a>joindre un rôle
   Cette rubrique décrit comment affecter des rôles aux utilisateurs des connexions et des bases de données dans [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] à l'aide de [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] ou de [!INCLUDE[tsql](../../../includes/tsql-md.md)]. Utilisez les rôles dans [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] pour gérer efficacement les autorisations. Affectez des autorisations aux rôles, puis ajoutez et supprimez des utilisateurs et des connexions aux rôles. L'utilisation de rôles évite de devoir maintenir individuellement les autorisations pour chaque utilisateur.  
@@ -66,7 +65,7 @@ ms.locfileid: "36053036"
 ###  <a name="Security"></a> Sécurité  
   
 ####  <a name="Permissions"></a> Permissions  
- Requiert `ALTER ANY ROLE` sur la base de données, `ALTER` l’autorisation sur le rôle, ou l’appartenance au **db_securityadmin**.  
+ Requiert `ALTER ANY ROLE` autorisation sur la base de données, `ALTER` autorisation sur le rôle, ou l’appartenance dans **db_securityadmin**.  
   
 ##  <a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
   

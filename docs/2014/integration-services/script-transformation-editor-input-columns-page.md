@@ -1,5 +1,5 @@
 ---
-title: Éditeur de Transformation de script (Page colonnes d’entrée) | Documents Microsoft
+title: Éditeur de Transformation de script (Page colonnes d’entrée) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.scriptcomponent.inputcolumn.f1
 helpviewer_keywords:
 - Script Transformation Editor
 ms.assetid: d6e4ce84-3335-48e6-82d3-1c359ed87f63
 caps.latest.revision: 31
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 456f1abba1045da01c162dfb23738bcb989a9341
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: a08f02fec89079e50842de83ec79061e31d83f0c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36045603"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37256765"
 ---
 # <a name="script-transformation-editor-input-columns-page"></a>Éditeur de transformation de script (page Colonnes d'entrée)
   Utilisez la page **Colonnes d’entrée** de la boîte de dialogue **Éditeur de transformation de script** pour définir les propriétés des colonnes d’entrée.  
@@ -52,7 +52,7 @@ ms.locfileid: "36045603"
 ## <a name="see-also"></a>Voir aussi  
  [Integration Services Error and Message Reference](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Sélectionner le Type de composant de Script](../../2014/integration-services/select-script-component-type.md)   
- [Éditeur de Transformation de script &#40;les entrées et sorties de Page&#41;](../../2014/integration-services/script-transformation-editor-inputs-and-outputs-page.md)   
+ [Éditeur de Transformation de script &#40;entrées et de sorties de Page&#41;](../../2014/integration-services/script-transformation-editor-inputs-and-outputs-page.md)   
  [Éditeur de Transformation de script &#40;Page Script&#41;](../../2014/integration-services/script-transformation-editor-script-page.md)   
  [Éditeur de Transformation de script &#40;Page gestionnaires de connexions&#41;](../../2014/integration-services/script-transformation-editor-connection-managers-page.md)   
  [Exemples supplémentaires du composant Script](extending-packages-scripting-data-flow-script-component-examples/additional-script-component-examples.md)  

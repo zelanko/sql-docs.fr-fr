@@ -1,5 +1,5 @@
 ---
-title: Type de données MeasureGroupAttribute (ASSL) | Documents Microsoft
+title: Type de données MeasureGroupAttribute (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - MeasureGroupAttribute data type
 ms.assetid: dc7f71e6-3755-4d99-9fcd-5830e10eb653
 caps.latest.revision: 35
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 05dfd16d5e1f3cb5a2af3926cca398678b649675
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 43177fe7c63c241f4a66b326af2eca94bcd5d600
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36051350"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37261325"
 ---
 # <a name="measuregroupattribute-data-type-assl"></a>Type de données MeasureGroupAttribute (ASSL)
   Définit un type de données primitif représentant la relation entre un attribut et un groupe de mesures.  
@@ -66,6 +66,6 @@ ms.locfileid: "36051350"
  L’élément correspondant dans le modèle d’objet objets AMO (Analysis Management) est <xref:Microsoft.AnalysisServices.MeasureGroupAttribute>.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Types de données de script langage XML Analysis Services &#40;ASSL&#41;](analysis-services-scripting-language-xml-data-types-assl.md)  
+ [Types Analysis Services Scripting Language XML données &#40;ASSL&#41;](analysis-services-scripting-language-xml-data-types-assl.md)  
   
   

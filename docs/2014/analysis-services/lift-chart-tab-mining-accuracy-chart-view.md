@@ -1,5 +1,5 @@
 ---
-title: L’onglet graphique (vue graphique d’analyse de précision d’exploration de données) de courbes d’élévation | Documents Microsoft
+title: Onglet graphique (vue graphique d’analyse de précision d’exploration de données) de courbes d’élévation | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dm.miningmodeleditor.accuracychart.liftchart.f1
 ms.assetid: f1674e2e-d38e-40c7-b8d1-5585ce9a0168
 caps.latest.revision: 24
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 480f224d3948b88117b5b708900639539cfdffab
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 09b0acd6bb7a4d079476b866a56f47029192db47
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36052751"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37224649"
 ---
 # <a name="lift-chart-tab-mining-accuracy-chart-view"></a>Onglet Graphique de courbes d'élévation (vue Graphique d'analyse de précision de l'exploration de données)
   Le volet **Graphique de courbes d’élévation** permet d’afficher un graphique qui compare tous les modèles d’exploration de données sélectionnés de la structure d’exploration de données sélectionnée.  
@@ -47,8 +47,8 @@ ms.locfileid: "36052751"
  Copie le graphique dans le Presse-papiers.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Concepteur graphique d’analyse de précision d’exploration de données &#40;d’exploration de données&#41;](mining-accuracy-chart-designer-data-mining.md)   
- [Test et des tâches de Validation et des procédures &#40;d’exploration de données&#41;](data-mining/testing-and-validation-tasks-and-how-tos-data-mining.md)   
- [Test et Validation &#40;d’exploration de données&#41;](data-mining/testing-and-validation-data-mining.md)  
+ [Concepteur graphique d’analyse de précision d’exploration de données &#40;exploration de données&#41;](mining-accuracy-chart-designer-data-mining.md)   
+ [Test et des tâches de Validation et des procédures &#40;exploration de données&#41;](data-mining/testing-and-validation-tasks-and-how-tos-data-mining.md)   
+ [Test et Validation &#40;exploration de données&#41;](data-mining/testing-and-validation-data-mining.md)  
   
   

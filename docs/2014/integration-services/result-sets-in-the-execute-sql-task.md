@@ -1,5 +1,5 @@
 ---
-title: Ensembles de résultats dans la tâche d’exécution SQL | Documents Microsoft
+title: Ensembles de résultats dans la tâche d’exécution SQL | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - result sets [Integration Services]
 - Execute SQL task [Integration Services]
 ms.assetid: 62605b63-d43b-49e8-a863-e154011e6109
 caps.latest.revision: 30
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 0be727ad9370a56de710c0528949398c12050299
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: d1ff4dd56ea104d32a2821bc826ad8919712aea1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36053106"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37217559"
 ---
 # <a name="result-sets-in-the-execute-sql-task"></a>Ensembles de résultats dans la tâche d’exécution SQL
   Dans un package [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] , le retour d'un jeu de résultats à la tâche d'exécution SQL dépend du type de commande SQL que la tâche utilise. Par exemple, une instruction SELECT retourne généralement un ensemble de résultats, contrairement à une instruction INSERT.  
@@ -35,7 +35,7 @@ ms.locfileid: "36053106"
   
 -   [Remplir une variable à l’aide d’un jeu de résultats](#Populate_variable_with_result_set)  
   
--   [Résultats de configuration définit dans l’éditeur de tâche exécution de SQL](#Configure_result_sets)  
+-   [Configuration des résultats définit dans Execute SQL Task Editor](#Configure_result_sets)  
   
 ##  <a name="Result_set_type"></a> Spécification d’un résultat de Type d’ensemble  
  La tâche d'exécution SQL prend en charge les types de jeux de résultats suivants :  
@@ -59,11 +59,11 @@ ms.locfileid: "36053106"
   
  Si le type de l'ensemble de résultats est **Ensemble de résultats complet** ou **XML**, vous devez utiliser 0 comme nom de jeu de résultats.  
   
- Lorsque vous associez une variable à un ensemble de résultats à l'aide du type **Ligne unique** , la variable doit être d'un type de données compatible avec celui de la colonne contenue dans l'ensemble de résultats. Par exemple, vous ne pouvez pas associer un ensemble de résultats contenant un type de données `String` à une variable de type de données numérique. Lorsque vous définissez la **TypeConversionMode** propriété `Allowed`, la tâche d’exécution SQL tente de convertir le paramètre de sortie et les résultats aux données de type de la variable les résultats de requête sont affectés.  
+ Lorsque vous associez une variable à un ensemble de résultats à l'aide du type **Ligne unique** , la variable doit être d'un type de données compatible avec celui de la colonne contenue dans l'ensemble de résultats. Par exemple, vous ne pouvez pas associer un ensemble de résultats contenant un type de données `String` à une variable de type de données numérique. Lorsque vous définissez la **TypeConversionMode** propriété `Allowed`, la tâche d’exécution SQL tente de convertir le paramètre de sortie et le type de résultats aux données de la variable les résultats de requête sont affectés.  
   
- Un ensemble de résultats XML ne peut être associé qu'à une variable de type de données `String` ou `Object`. Si la variable a le `String` de type de données, la tâche d’exécution SQL retourne une chaîne et la source XML peuvent consommer les données XML. Si la variable a le `Object` type de données, la tâche d’exécution SQL retourne un objet de modèle DOM (Document Object).  
+ Un ensemble de résultats XML ne peut être associé qu'à une variable de type de données `String` ou `Object`. Si la variable a la `String` de type de données, la tâche d’exécution SQL retourne une chaîne et la source XML peuvent consommer les données XML. Si la variable a la `Object` type de données, la tâche d’exécution SQL retourne un objet de modèle DOM (Document Object).  
   
- A **ensemble de résultats complet** doit correspondre à une variable de la `Object` type de données. Le résultat obtenu est un objet d'ensemble de lignes. Vous pouvez utiliser un conteneur de boucles Foreach pour extraire les valeurs de ligne de table qui sont stockées dans la variable Object dans les variables de package, et utiliser une tâche de script pour écrire dans un fichier les données stockées dans les variables de package. Pour une démonstration de l'utilisation d'un conteneur de boucles Foreach et d'une tâche de script, voir l'exemple CodePlex, [Execute SQL Parameters and Result Sets](http://go.microsoft.com/fwlink/?LinkId=157863)(en anglais), sur msftisprodsamples.codeplex.com.  
+ Un **ensemble de résultats complet** doit correspondre à une variable de la `Object` type de données. Le résultat obtenu est un objet d'ensemble de lignes. Vous pouvez utiliser un conteneur de boucles Foreach pour extraire les valeurs de ligne de table qui sont stockées dans la variable Object dans les variables de package, et utiliser une tâche de script pour écrire dans un fichier les données stockées dans les variables de package. Pour une démonstration de l'utilisation d'un conteneur de boucles Foreach et d'une tâche de script, voir l'exemple CodePlex, [Execute SQL Parameters and Result Sets](http://go.microsoft.com/fwlink/?LinkId=157863)(en anglais), sur msftisprodsamples.codeplex.com.  
   
  Le tableau suivant récapitule les types de données des variables pouvant correspondre à des ensembles de résultats.  
   
@@ -84,17 +84,17 @@ ms.locfileid: "36053106"
   
  Pour plus d’informations sur le chargement d’un jeu de résultats dans une variable, consultez [Mapper des ensembles de résultats à des variables dans une tâche d’exécution SQL](control-flow/execute-sql-task.md).  
   
-##  <a name="Configure_result_sets"></a> Configuration des résultats des jeux la tâche d’exécution SQL  
+##  <a name="Configure_result_sets"></a> Résultat de configuration définit la tâche d’exécution SQL  
  Pour plus d'informations sur les propriétés de jeux de résultats que vous pouvez définir dans le concepteur [!INCLUDE[ssIS](../includes/ssis-md.md)] , cliquez sur la rubrique suivante :  
   
--   [Éditeur de tâche SQL exécution &#40;Page de jeu de résultats&#41;](../../2014/integration-services/execute-sql-task-editor-result-set-page.md)  
+-   [Éditeur de tâche SQL exécution &#40;Page ensemble de résultats&#41;](../../2014/integration-services/execute-sql-task-editor-result-set-page.md)  
   
  Pour plus d'informations sur la définition de ces propriétés dans le concepteur [!INCLUDE[ssIS](../includes/ssis-md.md)] , cliquez sur la rubrique suivante :  
   
 -   [Définir les propriétés d’une tâche ou d’un conteneur](../../2014/integration-services/set-the-properties-of-a-task-or-container.md)  
   
 ## <a name="related-tasks"></a>Related Tasks  
- [Ensembles de résultat du mappage à des Variables dans une tâche d’exécution SQL](control-flow/execute-sql-task.md)  
+ [Mapper des ensembles de résultats à des variables dans une tâche d’exécution SQL](control-flow/execute-sql-task.md)  
   
 ## <a name="related-content"></a>Contenu associé  
   

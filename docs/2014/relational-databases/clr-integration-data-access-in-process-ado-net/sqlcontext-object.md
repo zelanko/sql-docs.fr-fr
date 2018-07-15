@@ -1,13 +1,11 @@
 ---
-title: Objet SqlContext | Documents Microsoft
+title: Objet SqlContext | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: clr
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -16,15 +14,15 @@ helpviewer_keywords:
 - context [CLR integration]
 ms.assetid: 67437853-8a55-44d9-9337-90689ebba730
 caps.latest.revision: 54
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: ea7cd3ca105fd599f3b157f64189210b539de4ee
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: rothja
+ms.author: jroth
+manager: craigg
+ms.openlocfilehash: 46ff059b14d5937d1214e0d97ad9aa13083e7fd3
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36141814"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37354011"
 ---
 # <a name="sqlcontext-object"></a>Objet SqlContext
   Vous appelez le code managé dans le serveur lorsque vous appelez une procédure ou une fonction, lorsque vous appelez une méthode sur un type CLR défini par l'utilisateur ou lorsque votre action active un déclencheur défini dans l'un des langages du [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework. Comme l'exécution de ce code est demandée dans le cadre d'une connexion utilisateur, l'accès au contexte de l'appelant à partir du code en cours d'exécution dans le serveur est requis. De plus, certaines opérations d'accès aux données ne peuvent être valides que si elles sont exécutées sous le contexte de l'appelant. Par exemple, l'accès à des pseudo-tables insérées et supprimées utilisées dans les opérations de déclencheur n'est valide que sous le contexte de l'appelant.  
@@ -33,9 +31,9 @@ ms.locfileid: "36141814"
   
  `SqlContext` fournit l'accès aux composants suivants :  
   
--   `SqlPipe` : l'objet `SqlPipe` représente le « canal » à travers lequel les résultats transitent vers le client. Pour plus d’informations sur la `SqlPipe` d’objets, consultez [SqlPipe, objet](sqlpipe-object.md).  
+-   `SqlPipe` : l'objet `SqlPipe` représente le « canal » à travers lequel les résultats transitent vers le client. Pour plus d’informations sur la `SqlPipe` d’objets, consultez [objet SqlPipe](sqlpipe-object.md).  
   
--   `SqlTriggerContext` : l'objet `SqlTriggerContext` ne peut être extrait qu'à partir d'un déclencheur CLR. Il fournit des informations sur l'opération qui a provoqué l'activation du déclencheur et un mappage des colonnes mises à jour. Pour plus d’informations sur la `SqlTriggerContext` d’objets, consultez [SqlTriggerContext, objet](sqltriggercontext-object.md).  
+-   `SqlTriggerContext` : l'objet `SqlTriggerContext` ne peut être extrait qu'à partir d'un déclencheur CLR. Il fournit des informations sur l'opération qui a provoqué l'activation du déclencheur et un mappage des colonnes mises à jour. Pour plus d’informations sur la `SqlTriggerContext` d’objets, consultez [objet SqlTriggerContext](sqltriggercontext-object.md).  
   
 -   `IsAvailable` : la propriété `IsAvailable` est utilisée pour déterminer la disponibilité du contexte.  
   
@@ -133,8 +131,8 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [SqlPipe, objet](sqlpipe-object.md)   
- [SqlTriggerContext, objet](sqltriggercontext-object.md)   
+ [Objet SqlPipe](sqlpipe-object.md)   
+ [Objet SqlTriggerContext](sqltriggercontext-object.md)   
  [Déclencheurs CLR](../../database-engine/dev-guide/clr-triggers.md)   
  [Extensions spécifiques in-process de SQL Server à ADO.NET](sql-server-in-process-specific-extensions-to-ado-net.md)  
   

@@ -1,5 +1,5 @@
 ---
-title: Exemple Hello World | Documents Microsoft
+title: Exemple Hello World | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -12,20 +12,20 @@ ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: fed6c358-f5ee-4d4c-9ad6-089778383ba7
 caps.latest.revision: 16
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 05ac9594d985766e48fbd5757dca48bdd47c2aa1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 75ac8eafd490dc3a9b7501f7c653bc8aaf99cde4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36044538"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37269925"
 ---
 # <a name="hello-world-sample"></a>Exemple Hello World
   L'exemple Hello World montre les opérations de base à effectuer pour créer, déployer et tester une procédure stockée simple et basée sur l'intégration du CLR (Common Language Runtime). Cet exemple montre également comment retourner des données via un enregistrement qui est construit dynamiquement par la procédure stockée et retourné à l'appelant.  
   
- Le `HelloWorld` procédure stockée retourne la chaîne « Hello world ! » dans un jeu de résultats composé d’une ligne. Cet exemple illustre plusieurs utilisations pour les classes [Microsoft.SqlServer.Server.SqlMetaData](http://go.microsoft.com/fwlink/?LinkID=193572), [Microsoft.SqlServer.Server.SqlDataRecord](http://go.microsoft.com/fwlink/?LinkID=193573) et [ Microsoft.SqlServer.Server.Pipe](http://go.microsoft.com/fwlink/?LinkID=193571).  
+ Le `HelloWorld` procédure stockée retourne la chaîne « Hello world ! » dans un jeu de résultats composé d’une ligne. Cet exemple illustre quelques utilisations pour les classes [Microsoft.SqlServer.Server.SqlMetaData](http://go.microsoft.com/fwlink/?LinkID=193572), [Microsoft.SqlServer.Server.SqlDataRecord](http://go.microsoft.com/fwlink/?LinkID=193573) et [ Microsoft.SqlServer.Server.Pipe](http://go.microsoft.com/fwlink/?LinkID=193571).  
   
 ## <a name="prerequisites"></a>Prérequis  
  Pour créer et exécuter ce projet, les logiciels suivants doivent être installés :  
@@ -55,11 +55,11 @@ ms.locfileid: "36044538"
      `GO`  
   
     > [!NOTE]  
-    >  Pour activer le CLR, vous devez disposer `ALTER SETTINGS` autorisation de niveau serveur, qui est implicitement détenue par les membres de la `sysadmin` et `serveradmin` rôles serveur fixes.  
+    >  Pour activer le CLR, vous devez avoir `ALTER SETTINGS` autorisation de niveau serveur, qui est implicitement détenue par les membres de la `sysadmin` et `serveradmin` rôles serveur fixes.  
   
 -   La base de données AdventureWorks doit être installée sur l'instance [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que vous utilisez.  
   
--   Si vous n’êtes pas administrateur de le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance que vous utilisez, vous devez faire un administrateur vous accorder **CreateAssembly** autorisation de terminer l’installation.  
+-   Si vous n’êtes pas administrateur de le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance que vous utilisez, vous devez demander un administrateur vous accorder **CreateAssembly** autorisation pour terminer l’installation.  
   
 ## <a name="building-the-sample"></a>Génération de l'exemple  
   

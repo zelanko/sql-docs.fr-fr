@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 41947b4c-8ecf-4e4f-b30e-66e1d6692b74
 caps.latest.revision: 6
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 7c74ae6ba5a8f69a0fef8f5fce9f4a18828867c8
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: b8b08d19493528f1c93cea4752f548040fb47322
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36051432"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37286695"
 ---
 # <a name="managing-report-parts"></a>Gestion de parties de rapport
   À partir de [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], parties de rapports peuvent être publiés sur les serveurs de rapports et réutilisées dans d’autres rapports et par d’autres utilisateurs s’ils ont les autorisations appropriées.  
@@ -35,7 +35,7 @@ ms.locfileid: "36051432"
  Lorsque les parties de rapports sont publiées à partir d'une application de création de rapports telle que le Générateur de rapports, sur un serveur de rapports en mode intégré SharePoint, le catalogue du serveur de rapports est également mis à jour et les recherches à partir de la bibliothèque reflètent précisément la partie de rapport nouvelle ou mise à jour.  
   
 #### <a name="directly-uploading-report-parts-to-a-sharepoint-folder"></a>Téléchargement direct de parties de rapports dans un dossier SharePoint  
- Si une partie de rapport est téléchargée directement dans un dossier de documents SharePoint plutôt que publiée à partir d'une application de création de rapports, le catalogue du serveur de rapports n'est pas mis à jour. Les recherches de la bibliothèque de parties de rapports ne trouveront pas la partie de rapport téléchargée. Pour aider à garder vos dossiers SharePoint et votre catalogue du serveur de rapports synchronisés, vous pouvez activer la fonctionnalité de synchronisation des fichiers de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] sur le serveur SharePoint. Pour plus d’informations, consultez [activer la fonctionnalité de synchronisation de fichier de serveur de rapports dans l’Administration centrale de SharePoint](../activate-report-server-file-sync-feature-sharepoint-central-administration.md).  
+ Si une partie de rapport est téléchargée directement dans un dossier de documents SharePoint plutôt que publiée à partir d'une application de création de rapports, le catalogue du serveur de rapports n'est pas mis à jour. Les recherches de la bibliothèque de parties de rapports ne trouveront pas la partie de rapport téléchargée. Pour aider à garder vos dossiers SharePoint et votre catalogue du serveur de rapports synchronisés, vous pouvez activer la fonctionnalité de synchronisation des fichiers de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] sur le serveur SharePoint. Pour plus d’informations, consultez [activer la fonctionnalité de synchronisation de fichier de serveur de rapports dans Administration centrale de SharePoint](../activate-report-server-file-sync-feature-sharepoint-central-administration.md).  
   
  Les fichiers peuvent également être synchronisés en appelant certaines API d'administration Reporting Services telles que GetProperties et SetProperties.  
   
@@ -97,9 +97,9 @@ ms.locfileid: "36051432"
 ## <a name="see-also"></a>Voir aussi  
  [Parties de rapports et jeux de données dans le Générateur de rapports](../report-data/report-parts-and-datasets-in-report-builder.md)   
  [Page propriétés générales, parties de rapport &#40;le Gestionnaire de rapports&#41;](../general-properties-page-report-parts-report-manager.md)   
- [Déplacer les éléments &#40;le Gestionnaire de rapports&#41;](../move-items-page-report-manager.md)   
+ [Déplacer les éléments de Page &#40;le Gestionnaire de rapports&#41;](../move-items-page-report-manager.md)   
  [Gestion de contenu de serveur de rapports &#40;SSRS en Mode natif&#41;](../report-server/report-server-content-management-ssrs-native-mode.md)   
- [Résoudre les problèmes de parties de rapport &#40;rapport Générateur et SSRS&#41;](../report-parts-report-builder-and-ssrs.md)   
+ [Résoudre les problèmes de parties de rapports &#40;Générateur de rapports et SSRS&#41;](../report-parts-report-builder-and-ssrs.md)   
  [Parties de rapports dans le Concepteur de rapports &#40;SSRS&#41;](report-parts-in-report-designer-ssrs.md)  
   
   

@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 92dce484-f39b-403c-9caf-d8772bc3aca3
 caps.latest.revision: 6
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 28c5f5063aa7e1c6e6fabe68405eb08a31feaad4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: c9bf84f3d8cd8e0c1b00c4a2e891d6a727b9b91a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36051422"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37220791"
 ---
 # <a name="publish-and-republish-report-parts-report-builder-and-ssrs"></a>Publier et republier des parties de rapports (Générateur de rapports et SSRS)
   Vous pouvez publier une partie de rapport avec des paramètres par défaut à un emplacement par défaut, ou vous pouvez modifier des métadonnées de partie de rapport, telles que le nom et la description, puis les enregistrer ailleurs sur un serveur de rapports. Vous pouvez également les enregistrer sur un site SharePoint intégré avec un serveur de rapports si vous avez les autorisations appropriées.  
@@ -61,10 +61,10 @@ ms.locfileid: "36051422"
 >  Si vous la publiez en tant que nouvelle partie de rapport, elle aura un nouvel ID unique. Elle ne recevra plus les mises à jour si la partie de rapport d'origine est modifiée.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Parties de rapport &#40;rapport Générateur et SSRS&#41;](../report-parts-report-builder-and-ssrs.md)   
+ [Parties de rapport &#40;Générateur de rapports et SSRS&#41;](../report-parts-report-builder-and-ssrs.md)   
  [Parties de rapports et jeux de données dans le Générateur de rapports](../report-data/report-parts-and-datasets-in-report-builder.md)   
- [Résoudre les problèmes de parties de rapport &#40;rapport Générateur et SSRS&#41;](../troubleshoot-report-parts-report-builder-and-ssrs.md)   
- [Recherchez les mises à jour ou désactiver les mises à jour &#40;rapport Générateur et SSRS&#41;](../check-for-updates-or-turn-updates-off-report-builder-and-ssrs.md)   
- [Rechercher des parties de rapports et définir un dossier par défaut &#40;rapport Générateur et SSRS&#41;](browse-for-report-parts-and-set-a-default-folder-report-builder-and-ssrs.md)  
+ [Résoudre les problèmes de parties de rapports &#40;Générateur de rapports et SSRS&#41;](../troubleshoot-report-parts-report-builder-and-ssrs.md)   
+ [Recherchez les mises à jour ou désactiver les mises à jour &#40;Générateur de rapports et SSRS&#41;](../check-for-updates-or-turn-updates-off-report-builder-and-ssrs.md)   
+ [Rechercher des parties de rapports et définir un dossier par défaut &#40;Générateur de rapports et SSRS&#41;](browse-for-report-parts-and-set-a-default-folder-report-builder-and-ssrs.md)  
   
   

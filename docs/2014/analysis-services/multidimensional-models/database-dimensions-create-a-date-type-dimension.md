@@ -1,5 +1,5 @@
 ---
-title: Créer une Dimension de type Date | Documents Microsoft
+title: Créer une Dimension de type Date | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - time dimensions [Analysis Services]
 - dimensions [Analysis Services], time
@@ -18,15 +18,15 @@ helpviewer_keywords:
 - time intelligence [Analysis Services]
 ms.assetid: 6d692856-4b01-4dca-a650-f97ac220c114
 caps.latest.revision: 37
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 8f57269c2f2400b9ccf2e090fd0c0a97a21c9efc
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: f1e38812dbdff6ecf36bd0c1398ce733d29af6e0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36051156"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37315082"
 ---
 # <a name="create-a-date-type-dimension"></a>Créer une dimension de type Date
   Dans [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], une dimension de temps est un type de dimension dont les attributs représentent des périodes, telles que des années, des semestres, des trimestres, des mois et des jours. Les périodes d'une dimension de temps fournissent des niveaux de granularité de temps pour l'analyse et les rapports. Les attributs sont organisés en hiérarchies, la granularité de la dimension de temps est largement déterminée par les besoins commerciaux et les besoins en rapports pour les données historiques. Par exemple, la majorité des données financières et de vente dans les applications décisionnelles utilisent la granularité mensuelle ou trimestrielle.  
@@ -72,8 +72,8 @@ ms.locfileid: "36051156"
 >  Vous ne pouvez pas utiliser l'Assistant Business Intelligence pour ajouter des éléments en fonction du temps à des dimensions de temps du serveur. L'Assistant Business Intelligence ajoute une hiérarchie pour prendre en charge les éléments en fonction du temps, et cette hiérarchie doit se trouver dans une colonne de la table de la dimension de temps. Les dimensions de temps du serveur n'ont pas de table de dimension de temps correspondante et ne peuvent donc pas prendre en charge cette hiérarchie supplémentaire.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Créer une Dimension de temps en générant une Table de temps](create-a-time-dimension-by-generating-a-time-table.md)   
- [Aide F1 l’Assistant Business Intelligence](../business-intelligence-wizard-f1-help.md)   
+ [Créer une Dimension de temps en générant une Table temporelle](create-a-time-dimension-by-generating-a-time-table.md)   
+ [L’Assistant Business Intelligence F1](../business-intelligence-wizard-f1-help.md)   
  [Types de dimensions](../multidimensional-models-olap-logical-dimension-objects/database-dimension-properties-types.md)  
   
   

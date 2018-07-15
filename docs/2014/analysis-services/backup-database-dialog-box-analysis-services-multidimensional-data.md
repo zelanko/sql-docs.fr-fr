@@ -1,5 +1,5 @@
 ---
-title: Sauvegarde de base de données, boîte de dialogue (Analysis Services - données multidimensionnelles) | Documents Microsoft
+title: Sauvegarde de base de données, boîte de dialogue (Analysis Services - données multidimensionnelles) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.sqlserverstudio.Backup.f1
 ms.assetid: 7811ce7d-6c37-4189-bfa6-ef36fb4932db
 caps.latest.revision: 27
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 64e8b814cab69ca66127f28b55062232e45a60fb
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 1d325d1cb634f1fb7548ff0a1030c97e866681b3
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36051617"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37234439"
 ---
 # <a name="backup-database-dialog-box-analysis-services---multidimensional-data"></a>Boîte de dialogue Sauvegarder la base de données (Analysis Services - Données multidimensionnelles)
   Utilisez la boîte de dialogue **Sauvegarder la base de données** dans [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] pour sauvegarder une base de données [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] dans un fichier de sauvegarde en utilisant le format de fichier de sauvegarde .abf [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)].  
@@ -58,7 +58,7 @@ ms.locfileid: "36051617"
  **Parcourir**  
  Cliquez pour afficher la boîte de dialogue **Enregistrer le fichier sous** et sélectionnez le chemin et le nom du fichier de sauvegarde à utiliser. Pour plus d’informations sur la boîte de dialogue **Enregistrer le fichier sous**, consultez [Boîte de dialogue Enregistrer le fichier sous &#40;Analysis Services - Données multidimensionnelles&#41;](save-file-as-dialog-box-analysis-services-multidimensional-data.md).  
   
- **Autoriser le remplacement du fichier**  
+ **Autoriser le remplacement de fichier**  
  Sélectionnez cette option pour remplacer un fichier de sauvegarde existant ou un fichier de sauvegarde distant, s'il en existe un.  
   
 > [!NOTE]  
@@ -95,7 +95,7 @@ ms.locfileid: "36051617"
 |------------|-----------------|  
 |**Server**|Affiche l'instance [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] qui gère les partitions distantes.|  
 |**Sauvegarde de la base de données**|Affiche la base de données [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] qui contient les partitions distantes.|  
-|**Liste de partitions**|Affiche la liste des partitions distantes contenues dans la base de données affichée dans **Base de données**.|  
+|**Liste de partition**|Affiche la liste des partitions distantes contenues dans la base de données affichée dans **Base de données**.|  
 |**Fichier de sauvegarde à distance**|Tapez le chemin complet et le nom du fichier de sauvegarde distant à utiliser, ou cliquez sur le bouton représentant des points de suspension (**...**) pour afficher la boîte de dialogue **Enregistrer le fichier sous** et sélectionner le chemin et le nom du fichier de sauvegarde distant à utiliser. Pour plus d’informations sur la boîte de dialogue **Enregistrer le fichier sous**, consultez [Boîte de dialogue Enregistrer le fichier sous &#40;Analysis Services - Données multidimensionnelles&#41;](save-file-as-dialog-box-analysis-services-multidimensional-data.md).|  
   
 ## <a name="see-also"></a>Voir aussi  

@@ -5,10 +5,9 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-backup-restore
+ms.technology: backup-restore
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - media sets [SQL Server], about media sets
 - backup media [SQL Server], about backup media
@@ -24,15 +23,15 @@ helpviewer_keywords:
 - backup sets [SQL Server]
 ms.assetid: 2b8f19a2-ee9d-4120-b194-fbcd2076a489
 caps.latest.revision: 58
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 06ebab2fa2db5be88f30b228d209318469788ff4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: b787ab534cc5c38413a7415e8333911590e7647f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36051565"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37231419"
 ---
 # <a name="media-sets-media-families-and-backup-sets-sql-server"></a>Jeux de supports, familles de supports et jeux de sauvegarde (SQL Server)
   Cette rubrique présente la terminologie de base des supports de sauvegarde propre aux sauvegardes et restaurations dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Cette rubrique s'adresse aux lecteurs qui font leurs premiers pas dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Cette rubrique décrit le format utilisé par [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pour les supports de sauvegarde, la correspondance entre le support de sauvegarde et les unités de sauvegarde, l'organisation des sauvegardes sur le support de sauvegarde, et plusieurs considérations relatives aux jeux de supports et aux familles de supports. La rubrique décrit également les étapes de l'initialisation ou la mise en forme du support de sauvegarde avant de l'utiliser pour la première fois ou de remplacer un jeu de supports ancien par un nouveau, comment remplacer d'anciens jeux de sauvegarde dans un jeu de supports, et comment ajouter de nouveaux jeux de sauvegarde à un jeu de supports.  
@@ -93,7 +92,7 @@ ms.locfileid: "36051565"
 -   Si la description du support contient une étiquette de support MTF ou une description du support.  
   
     > [!NOTE]  
-    >  Tous les supports qui sont utilisés pour une opération de sauvegarde ou de restauration utilisent un format de sauvegarde standard appelé [!INCLUDE[msCoName](../../includes/ssnoversion-md.md)] préserve toute étiquette de support MTF écrite par une autre application, mais n’écrit pas d’étiquettes de support MTF.  
+    >  Tous les supports qui sont utilisées pour une opération de sauvegarde ou de restauration utilisent un format de sauvegarde standard appelé [!INCLUDE[msCoName](../../includes/ssnoversion-md.md)] conserve un exemplaire de support MTF écrite par une autre application, mais n’écrit pas d’étiquettes de support MTF.  
   
 -   Étiquette au format de bande [!INCLUDE[msCoName](../../../includes/msconame-md.md)] ou description du support au format texte libre.  
   
@@ -110,7 +109,7 @@ ms.locfileid: "36051565"
 ### <a name="backup-sets"></a>Jeux de sauvegarde  
  Une sauvegarde réussie ajoute un seul *jeu de sauvegarde* au jeu de supports. Le jeu de sauvegarde est décrit selon le support de sauvegarde auquel appartient la sauvegarde. Si le support de sauvegarde se compose d'une seule famille de supports, celle-ci contient tout le jeu de sauvegarde. Si le support de sauvegarde se compose de plusieurs familles de supports, le jeu de sauvegarde est réparti entre elles. Sur chaque support, le jeu de sauvegarde contient un en-tête qui le décrit.  
   
- L’exemple suivant montre un [!INCLUDE[tsql](../../includes/tsql-md.md)] instruction qui crée un support de sauvegarde nommé `MyAdvWorks_MediaSet_1` pour la [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] à l’aide de trois lecteurs de bandes comme unités de sauvegarde de base de données :  
+ L’exemple suivant montre un [!INCLUDE[tsql](../../includes/tsql-md.md)] instruction qui crée un jeu de supports nommé `MyAdvWorks_MediaSet_1` pour le [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] à l’aide de trois lecteurs de bandes comme unités de sauvegarde de base de données :  
   
 ```  
 BACKUP DATABASE AdventureWorks2012  
@@ -185,7 +184,7 @@ GO
 2.  Écriture d'un nouvel en-tête de support sur le support de sauvegarde (bande ou fichier disque) de chaque unité de sauvegarde.  
   
   
-###  <a name="UseExistingMediaSet"></a> Sauvegarde sur support de sauvegarde existant  
+###  <a name="UseExistingMediaSet"></a> Effectuez une sauvegarde sur un support de sauvegarde existant  
  Pour effectuer une sauvegarde sur un jeu de supports existant, vous disposez des deux options suivantes :  
   
 -   Ajouter au jeu de sauvegarde existant.  
@@ -263,7 +262,7 @@ GO
      Pour une restauration à partir d'une sauvegarde de disque et pour une restauration en ligne, vous devez monter simultanément toutes les familles de supports. Pour une restauration hors connexion à partir d'une sauvegarde sur bande, vous pouvez traiter les familles de supports avec moins d'unités de sauvegarde. Chaque famille de supports doit être complètement traitée avant de démarrer le traitement d'une autre famille de supports. Les familles de supports sont toujours traitées en parallèle, sauf si la restauration a lieu sur une seule unité.  
   
 ##  <a name="RelatedTasks"></a> Tâches associées  
- **Pour créer un nouveau support de sauvegarde**  
+ **Pour créer un nouveau support de jeu**  
   
 -   [Créer une sauvegarde complète de base de données &#40;SQL Server&#41;](create-a-full-database-backup-sql-server.md) (option **Sauvegarder sur un nouveau support de sauvegarde et effacer tous les jeux de sauvegarde existants**)  
   
@@ -287,7 +286,7 @@ GO
   
 -   [Définir la date d’expiration d’une sauvegarde &#40;SQL Server&#41;](set-the-expiration-date-on-a-backup-sql-server.md)  
   
- **Pour afficher les numéros de séquence de séquence et la famille de supports**  
+ **Pour afficher les numéros de séquence de séquence et de la famille de support**  
   
 -   [Afficher les propriétés et le contenu d’une unité de sauvegarde logique &#40;SQL Server&#41;](view-the-properties-and-contents-of-a-logical-backup-device-sql-server.md)  
   

@@ -1,5 +1,5 @@
 ---
-title: 'Conversions de types de données et SQL : DataType Annotation (SQLXML 4.0) | Documents Microsoft'
+title: 'Forçages de Type de données et SQL : DataType Annotation (SQLXML 4.0) | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -23,15 +23,15 @@ helpviewer_keywords:
 - XSD schemas [SQLXML], mapping data types
 ms.assetid: db192105-e8aa-4392-b812-9d727918c005
 caps.latest.revision: 28
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: cb04ef325a598382e014257dafdc979a47c05eff
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 095df15d5a917b54e1a518445f49a7ab1f351378
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36043817"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37297939"
 ---
 # <a name="data-type-coercions-and-the-sqldatatype-annotation-sqlxml-40"></a>Forçages de type de données et annotation sql:datatype (SQLXML 4.0)
   Dans un schéma XSD, l'attribut `xsd:type` spécifie le type de données XSD d'un élément ou d'un attribut. Lorsqu'un schéma XSD est utilisé pour extraire des données de la base de données, le type de données spécifié est utilisé pour formater les données.  
@@ -39,7 +39,7 @@ ms.locfileid: "36043817"
  Outre la spécification d'un type XSD dans un schéma, vous pouvez également spécifier un type de données Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en utilisant l'annotation `sql:datatype`. Les attributs `xsd:type` et `sql:datatype` contrôlent le mappage entre les types de données XSD et les types de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ## <a name="xsdtype-attribute"></a>Attribut xsd:type  
- Vous pouvez utiliser l'attribut `xsd:type` pour spécifier le type de données XML d'un attribut ou d'un élément qui est mappé à une colonne. L'attribut `xsd:type` affecte le document qui est retourné à partir du serveur, de même que la requête XPath qui est exécutée. Lorsqu'une requête XPath est exécutée sur un schéma de mappage qui contient `xsd:type`, XPath utilise le type de données spécifié lors du traitement de la requête. Pour plus d’informations sur l’utilisation de XPath `xsd:type`, consultez [mappage des Types de données XSD aux Types de données XPath &#40;SQLXML 4.0&#41;](../sqlxml-annotated-xsd-schemas-xpath-queries/xpath-data-types-sqlxml-4-0.md).  
+ Vous pouvez utiliser l'attribut `xsd:type` pour spécifier le type de données XML d'un attribut ou d'un élément qui est mappé à une colonne. L'attribut `xsd:type` affecte le document qui est retourné à partir du serveur, de même que la requête XPath qui est exécutée. Lorsqu'une requête XPath est exécutée sur un schéma de mappage qui contient `xsd:type`, XPath utilise le type de données spécifié lors du traitement de la requête. Pour plus d’informations sur l’utilisation de XPath `xsd:type`, consultez [mappage des Types de données XSD en Types de données XPath &#40;SQLXML 4.0&#41;](../sqlxml-annotated-xsd-schemas-xpath-queries/xpath-data-types-sqlxml-4-0.md).  
   
  Dans un document retourné, tous les types de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sont convertis en représentations sous forme de chaîne. Certains types de données requièrent des conversions supplémentaires. Le tableau suivant répertorie les conversions qui sont utilisées pour différentes valeurs de `xsd:type`.  
   
@@ -91,7 +91,7 @@ ms.locfileid: "36043817"
 ## <a name="sqldatatype-annotation"></a>Annotation sql:datatype  
  L'annotation `sql:datatype` permet de spécifier le type de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ; cette annotation doit être spécifiée dans les cas suivants :  
   
--   Vous effectuez un chargement en masse dans un `dateTime` [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] colonne à partir d’un fichier XSD `dateTime`, `date`, ou `time` type. Dans ce cas, vous devez identifier le type de données de colonne [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en utilisant `sql:datatype="dateTime"`. Cette règle s'applique également aux codes de mise à jour.  
+-   Vous effectuez un chargement en bloc dans un `dateTime` [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] colonne à partir d’un fichier XSD `dateTime`, `date`, ou `time` type. Dans ce cas, vous devez identifier le type de données de colonne [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en utilisant `sql:datatype="dateTime"`. Cette règle s'applique également aux codes de mise à jour.  
   
 -   Vous effectuez un chargement en bloc dans une colonne de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `uniqueidentifier` type et la valeur XSD est un GUID qui inclut des accolades ({et}). Lorsque vous spécifiez `sql:datatype="uniqueidentifier"`, les accolades sont supprimées de la valeur avant son insertion dans la colonne. Si `sql:datatype` n'est pas spécifié, la valeur est envoyée avec les accolades et l'insertion ou la mise à jour échoue.  
   
@@ -122,11 +122,11 @@ ms.locfileid: "36043817"
   
  Dans ce schéma XSD, trois attributs retournent une valeur de date à partir de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Lorsque le schéma :  
   
--   Spécifie `xsd:type=date` sur la **OrderDate** d’attribut, la partie date de la valeur retournée par [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pour le **OrderDate** attribut s’affiche.  
+-   Spécifie `xsd:type=date` sur le **OrderDate** d’attribut, la partie date de la valeur retournée par [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pour le **OrderDate** attribut s’affiche.  
   
--   Spécifie `xsd:type=time` sur la **ShipDate** d’attribut, la partie heure de la valeur retournée par [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pour le **ShipDate** attribut s’affiche.  
+-   Spécifie `xsd:type=time` sur le **ShipDate** d’attribut, la partie heure de la valeur retournée par [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pour le **ShipDate** attribut s’affiche.  
   
--   Ne spécifiez pas `xsd:type` sur la **DueDate** d’attribut, la même valeur que celle qui est retournée par [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] s’affiche.  
+-   Ne spécifie pas `xsd:type` sur le **DueDate** d’attribut, la même valeur que celle qui est retournée par [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] s’affiche.  
   
 ##### <a name="to-test-a-sample-xpath-query-against-the-schema"></a>Pour tester un exemple de requête XPath sur le schéma  
   

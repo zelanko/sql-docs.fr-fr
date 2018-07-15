@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: b96936c9-c387-41a9-8c19-6eb325769ffd
 caps.latest.revision: 6
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: baceb951040c86be5b42e8d881deb51d84df3849
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 5a8bfc88933351eb818b1412c249475fa34222c2
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36045104"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37294229"
 ---
 # <a name="print-a-report-report-builder-and-ssrs"></a>Imprimer un rapport (Générateur de rapports et SSRS)
   Après avoir enregistré un rapport sur un serveur de rapports, vous pouvez l'afficher et l'imprimer à partir d'un navigateur, du Gestionnaire de rapports ou de toute application permettant d'afficher un rapport exporté. Avant d'enregistrer un rapport, vous pouvez l'imprimer après avoir affiché son aperçu.  
@@ -101,7 +101,7 @@ ms.locfileid: "36045104"
   
 ## <a name="see-also"></a>Voir aussi  
  [Imprimer des rapports &#40;Générateur de rapports et SSRS&#41;](print-reports-report-builder-and-ssrs.md)   
- [Exportation de rapports &#40;rapport Générateur et SSRS&#41;](export-reports-report-builder-and-ssrs.md)   
+ [Exportation de rapports &#40;Générateur de rapports et SSRS&#41;](export-reports-report-builder-and-ssrs.md)   
  [Boîte de dialogue Propriétés du rapport, Mise en page &#40;Générateur de rapports&#41;](../report-properties-dialog-box-page-setup-report-builder.md)   
  [Mode Création de rapport &#40;Générateur de rapports&#41;](report-design-view-report-builder.md)  
   

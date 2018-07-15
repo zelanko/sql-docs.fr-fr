@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - "10056"
 - "10424"
 ms.assetid: c32d4d89-45e4-4f77-a3e9-0429f53f9d6f
 caps.latest.revision: 7
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 2ccf39ac0ed4a45f7163d5be6b45ad7201bce47b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: b8d4695edc8d87c9462ea0cc94aa538e0108fd2e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36051882"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37284625"
 ---
 # <a name="understanding-groups-report-builder-and-ssrs"></a>Fonctionnement des groupes (Générateur de rapports et SSRS)
   Dans le Générateur de rapports, un groupe est un jeu de données nommé provenant du dataset du rapport qui est lié à une région de données. En principe, un groupe organise une vue d'un dataset du rapport. Tous les groupes d'une région de données spécifient des vues différentes du même dataset de rapport.  
@@ -75,7 +75,7 @@ ms.locfileid: "36051882"
      En principe, le groupe de détails spécifie les données qui s'affichent lorsque vous exécutez une requête de dataset dans un concepteur de requêtes. Par exemple, vous avez une requête qui extrait toutes les colonnes d'un tableau de commandes client. Les données dans ce groupe de détails incluent donc toutes les valeurs de chaque ligne pour toutes les colonnes du tableau. Les données dans ce groupe de détails incluent également des valeurs pour tous les champs de dataset calculés que vous avez créés.  
   
     > [!NOTE]  
-    >  Les données d'un groupe de détails peuvent également inclure des agrégats de serveurs, qui sont des agrégats calculés sur la source de données et récupérés dans votre requête. Par défaut, le Générateur de rapports et le Concepteur de rapports traitent les agrégats de serveurs comme des données de détail, sauf si votre rapport inclut une expression qui utilise la fonction d’agrégation. Pour plus d’informations, consultez [d’agrégation](report-builder-functions-aggregate-function.md).  
+    >  Les données d'un groupe de détails peuvent également inclure des agrégats de serveurs, qui sont des agrégats calculés sur la source de données et récupérés dans votre requête. Par défaut, le Générateur de rapports et le Concepteur de rapports traitent les agrégats de serveurs comme des données de détail, sauf si votre rapport inclut une expression qui utilise la fonction d’agrégation. Pour plus d’informations, consultez [agrégation](report-builder-functions-aggregate-function.md).  
   
      Par défaut, lorsque vous ajoutez un tableau ou une liste à votre rapport, le Générateur de rapports et le Concepteur de rapports créent automatiquement le groupe de détails et ajoute une ligne pour afficher les données de détail. Par défaut, lorsque vous ajoutez des champs de dataset aux cellules de cette ligne, vous voyez des expressions simples pour les champs, par exemple, [Sales]. Lorsque vous consultez la région de données, la ligne de détails n'est utilisée qu'à une seule reprise pour chaque valeur du jeu de résultats.  
   
@@ -95,7 +95,7 @@ ms.locfileid: "36051882"
   
  Après que vous avez ajouté un groupe, les handles de ligne et de colonne de la région de données se modifient pour refléter l'appartenance aux groupes. Lorsque vous supprimez un groupe, vous avez le choix entre supprimer la définition de groupe uniquement et supprimer le groupe et toutes ses lignes et colonnes associées. Pour plus d’informations, consultez [Cellules, lignes et colonnes de région de données de tableau matriciel &#40;Générateur de rapports et SSRS&#41;](tablix-data-region-cells-rows-and-columns-report-builder-and-ssrs.md).  
   
- Pour limiter les données à afficher ou utiliser dans les calculs pour les données de détail ou de groupe, définissez des filtres sur le groupe. Pour plus d’informations, consultez [ajouter des filtres de Dataset, filtres de régions de données et les filtres de groupe &#40;le Générateur de rapports et SSRS&#41;](add-dataset-filters-data-region-filters-and-group-filters.md).  
+ Pour limiter les données à afficher ou utiliser dans les calculs pour les données de détail ou de groupe, définissez des filtres sur le groupe. Pour plus d’informations, consultez [ajouter des filtres de Dataset, les filtres de régions de données et les filtres de groupe &#40;Générateur de rapports et SSRS&#41;](add-dataset-filters-data-region-filters-and-group-filters.md).  
   
  Par défaut, lorsque vous créez un groupe, l'expression de tri pour ce groupe est identique à l'expression de groupe. Pour modifier l'ordre de tri, modifiez l'expression de tri. Pour plus d’informations, consultez [Filtrer, regrouper et trier des données &#40;Générateur de rapports et SSRS&#41;](filter-group-and-sort-data-report-builder-and-ssrs.md)  
   
@@ -103,10 +103,10 @@ ms.locfileid: "36051882"
  Les cellules d'une ligne ou d'une colonne d'une région de données de tableau matriciel peuvent appartenir à plusieurs groupes de lignes et de colonnes. Lorsque vous définissez une expression dans la zone de texte d'une cellule qui utilise une fonction d'agrégation (par exemple, `=Sum(Fields!FieldName.Value`), l'étendue de groupe par défaut pour une cellule est le groupe enfant le plus profond auquel il appartient. Lorsqu'une cellule appartient à la fois à des groupes de lignes et de colonnes, l'étendue correspond aux deux groupes les plus profonds. Vous pouvez également écrire des expressions qui calculent des sous-totaux agrégés étendus à un groupe relatif à un autre groupe de données. Par exemple, vous pouvez calculer le pourcentage d'un groupe par rapport au groupe de colonnes ou à toutes les données de la région de données (par exemple, `=Sum(Fields!FieldName.Value)/Sum(Fields!FieldName.Value,"ColumnGroup")`). Pour plus d’informations, consultez [Région de données de tableau matriciel &#40;Générateur de rapports et SSRS&#41;](../tablix-data-region-report-builder-and-ssrs.md) et [Étendue des expressions pour les totaux, les agrégats et les collections intégrées &#40;Générateur de rapports et SSRS&#41;](expression-scope-for-totals-aggregates-and-built-in-collections.md).  
   
 ## <a name="see-also"></a>Voir aussi  
- [Ajouter ou supprimer un groupe dans une région de données &#40;rapport Générateur et SSRS&#41;](add-or-delete-a-group-in-a-data-region-report-builder-and-ssrs.md)   
+ [Ajouter ou supprimer un groupe dans une région de données &#40;Générateur de rapports et SSRS&#41;](add-or-delete-a-group-in-a-data-region-report-builder-and-ssrs.md)   
  [Ajouter un total à un groupe ou à une région de données de tableau matriciel &#40;Générateur de rapports et SSRS&#41;](add-a-total-to-a-group-or-tablix-data-region-report-builder-and-ssrs.md)   
  [Trier des données dans une région de données &#40;Générateur de rapports et SSRS&#41;](sort-data-in-a-data-region-report-builder-and-ssrs.md)   
- [Action d’extraction &#40;rapport Générateur et SSRS&#41;](drilldown-action-report-builder-and-ssrs.md)   
+ [Action d’extraction &#40;Générateur de rapports et SSRS&#41;](drilldown-action-report-builder-and-ssrs.md)   
  [Listes &#40;Générateur de rapports et SSRS&#41;](tables-matrices-and-lists-report-builder-and-ssrs.md)  
   
   

@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vs.findresults1
 - findresultswindow
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - Find Results Windows dialog box
 ms.assetid: 3b68dbb7-26d6-4bc9-bd2c-c27e5dc385c3
 caps.latest.revision: 16
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: cb713255228083fb18ff1e338b26ab8f90b06311
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: 0df41e184e2a1efe3b74d3feb541e7e0ce3bf43c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36052164"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37251761"
 ---
 # <a name="find-results-windows"></a>Fenêtres Résultats de la recherche
   Les deux fenêtres Résultats de la recherche affichent les correspondances trouvées par une recherche effectuée à l'aide des onglets **Rechercher dans les fichiers** ou **Remplacer dans les fichiers** de la boîte de dialogue **Rechercher et remplacer** . La commande **Options de résultat** pour **Rechercher dans les fichiers** et **Remplacer dans les fichiers** vous permet de choisir la fenêtre Résultats de la recherche dans laquelle seront répertoriées, le cas échéant, les occurrences trouvées.  

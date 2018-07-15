@@ -1,5 +1,5 @@
 ---
-title: Se connecter à une base de données Oracle (SSAS) | Documents Microsoft
+title: Se connecter à une base de données Oracle (SSAS) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.bidtoolset.connoracledb.f1
 ms.assetid: 9bd177fb-8539-46cd-bf96-189ade52c2a1
 caps.latest.revision: 10
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 119a40f6d102ca6cd1ab158c064f865f144e0e57
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: b0068f805467e9503e7a1bc2d194c3cd7b593179
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36052752"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37218259"
 ---
 # <a name="connect-to-an-oracle-database-ssas"></a>Connexion à une base de données Oracle (SSAS)
   Cette page de l' **Assistant Importation de table** vous permet de spécifier des paramètres pour vous connecter à une base de données Oracle. Pour accéder à l'Assistant [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)], dans le menu **Modèle** , cliquez sur **Importer à partir de la source de données**.  

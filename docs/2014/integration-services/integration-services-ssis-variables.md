@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - variables [Integration Services], passing between packages
 - user-defined variables [Integration Services]
@@ -21,13 +21,13 @@ ms.assetid: c1e81ad6-628b-46d4-9b09-d2866517b6ca
 caps.latest.revision: 59
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: b6a5737635ffd69a7d09a93ac1104a1ee65b8277
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: d7352ff51810a16f2c3e81b5362bad764955f67a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36044764"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37283615"
 ---
 # <a name="integration-services-ssis-variables"></a>Variables Integration Services (SSIS)
   Les variables stockent des valeurs qu'un package [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] et ses conteneurs, tâches et gestionnaires d'événements peuvent utiliser au moment de l'exécution. Les scripts de la tâche de script et du composant Script peuvent également utiliser des variables. Les contraintes de précédence qui séquencent les tâches et les conteneurs dans un flux de travail peuvent utiliser des variables lorsque leurs définitions de contraintes incluent des expressions.  
@@ -90,7 +90,7 @@ ms.locfileid: "36044764"
  Spécifie la description de la variable.  
   
  EvaluateAsExpression  
- Lorsque la propriété a la valeur `True`, l’expression fournie est utilisée pour définir la valeur de la variable.  
+ Lorsque la propriété est définie `True`, l’expression fournie est utilisée pour définir la valeur de la variable.  
   
  Expression  
  Spécifie l'expression affectée à la variable.  
@@ -118,13 +118,13 @@ ms.locfileid: "36044764"
  IncludeInDebugDump  
  Indiquez si la valeur variable est incluse dans les fichiers de vidage de débogage.  
   
- Pour les variables définies par l’utilisateur et les variables système, la valeur par défaut pour le **InclueInDebugDump** option est `true`.  
+ Pour les variables système et les variables définies par l’utilisateur, la valeur par défaut pour le **InclueInDebugDump** option est `true`.  
   
  Toutefois, pour les variables définies par l’utilisateur, le système réinitialise le **IncludeInDebugDump** option `false` lorsque les conditions suivantes sont remplies :  
   
--   Si le **EvaluateAsExpression** variable est définie sur `true`, le système réinitialise le **IncludeInDebugDump** option `false`.  
+-   Si le **EvaluateAsExpression** a la valeur de propriété de variable `true`, le système réinitialise le **IncludeInDebugDump** option `false`.  
   
-     Pour inclure le texte de l’expression en tant que la valeur de la variable dans les fichiers de vidage du débogage, définissez le **IncludeInDebugDump** option `true`.  
+     Pour inclure le texte de l’expression en tant que valeur de la variable dans les fichiers de vidage du débogage, définissez le **IncludeInDebugDump** option `true`.  
   
 -   Si le type de données de variable est changé en une chaîne, le système réinitialise le **IncludeInDebugDump** option `false`.  
   
@@ -146,14 +146,14 @@ ms.locfileid: "36044764"
   
  Pour plus d’informations sur les propriétés définissables dans le concepteur [!INCLUDE[ssIS](../includes/ssis-md.md)], consultez [Fenêtre Variables](../../2014/integration-services/variables-window.md).  
   
- Pour en savoir plus sur les propriétés de la variable et pour plus d’informations sur la définition par programme de ces propriétés, consultez <xref:Microsoft.SqlServer.Dts.Runtime.Variable>.  
+ Pour en savoir plus sur les propriétés de la variable et pour plus d’informations sur la définition par programmation de ces propriétés, consultez <xref:Microsoft.SqlServer.Dts.Runtime.Variable>.  
   
 ## <a name="related-tasks"></a>Related Tasks  
- [Ajouter, supprimer ou modifier l’étendue de la Variable définie par l’utilisateur dans un Package](../../2014/integration-services/add-delete-change-scope-of-user-defined-variable-in-a-package.md)  
+ [Ajouter, supprimer, modifier l’étendue d’une variable définie par l’utilisateur dans un package](../../2014/integration-services/add-delete-change-scope-of-user-defined-variable-in-a-package.md)  
   
- [Définir les propriétés d’une Variable définie par l’utilisateur](../../2014/integration-services/set-the-properties-of-a-user-defined-variable.md)  
+ [Définir les propriétés d’une variable définie par l’utilisateur](../../2014/integration-services/set-the-properties-of-a-user-defined-variable.md)  
   
- [Utiliser les valeurs des Variables et des paramètres dans un Package enfant](../../2014/integration-services/use-the-values-of-variables-and-parameters-in-a-child-package.md)  
+ [Utiliser les valeurs des variables et des paramètres dans un package enfant](../../2014/integration-services/use-the-values-of-variables-and-parameters-in-a-child-package.md)  
   
  [Mapper des paramètres de requête à des variables dans un composant de flux de données](data-flow/map-query-parameters-to-variables-in-a-data-flow-component.md)  
   

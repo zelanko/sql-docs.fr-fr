@@ -1,5 +1,5 @@
 ---
-title: SQLXML 4.0 Concepts de programmation | Documents Microsoft
+title: SQLXML 4.0 Concepts de programmation | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -15,15 +15,15 @@ helpviewer_keywords:
 - SQLXML
 ms.assetid: 5a11cda2-b8a3-4453-848f-641afdaa7024
 caps.latest.revision: 37
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 2ab9bd2ff6cfddcf96e4844eb9ea14eea414b650
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 5d745284f575feb39f488f0667f5ab976144392e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36052804"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37227071"
 ---
 # <a name="sqlxml-40-programming-concepts"></a>Concepts de la programmation SQLXML 4.0
   SQLXML 3.0 a été proposé comme version Web pour fournir des fonctionnalités XML côté client supplémentaires et des améliorations aux fonctionnalités existantes, telles que les schémas XSD annotés, le chargement XML en masse, la prise en charge des services Web (SOAP) et les codes de mise à jour (updategram).  
@@ -59,16 +59,16 @@ ms.locfileid: "36052804"
  [Utilisation de codes de mise à jour pour modifier des données dans SQLXML 4.0](../sqlxml-annotated-xsd-schemas-xpath-queries/updategrams/using-updategrams-to-modify-data-in-sqlxml-4-0.md)  
  Fournit des informations sur les codes de mise à jour (updategram), qui modifient les données d'une base de données en travaillant sur les vues XML fournies par les schémas XSD (ou XDR) annotés.  
   
- [Effectuer le chargement en masse des données XML &#40;SQLXML 4.0&#41;](../sqlxml-annotated-xsd-schemas-xpath-queries/bulk-load-xml/performing-bulk-load-of-xml-data-sqlxml-4-0.md)  
+ [Chargement en masse des données XML &#40;SQLXML 4.0&#41;](../sqlxml-annotated-xsd-schemas-xpath-queries/bulk-load-xml/performing-bulk-load-of-xml-data-sqlxml-4-0.md)  
  Décrit comment charger en masse XML dans SQLXML 4.0.  
   
- [Composants d’accès aux données 4.0 SQLXML](../sqlxml-annotated-xsd-schemas-xpath-queries/data-access-components-provider/sqlxml-4-0-data-access-components-sqlxmloledb-provider.md)  
+ [Composants d’accès aux données SQLXML 4.0](../sqlxml-annotated-xsd-schemas-xpath-queries/data-access-components-provider/sqlxml-4-0-data-access-components-sqlxmloledb-provider.md)  
  Documente le fournisseur SQLXMLOLEDB et fournit des liens vers d'autre composants d'accès aux données SQLXML 4.0.  
   
- [Prise en charge SQLXML 4.0 pour Microsoft .NET Framework](../../database-engine/dev-guide/sqlxml-4-0-net-framework-support.md)  
+ [Prise en charge de SQLXML 4.0 pour .NET Framework](../../database-engine/dev-guide/sqlxml-4-0-net-framework-support.md)  
  Décrit la prise en charge de SQLXML 4.0 pour le .NET Framework.  
   
- [Mise en cache des modèles, XSL et schémas &#40;SQLXML 4.0&#41;](../sqlxml-annotated-xsd-schemas-xpath-queries/caching-templates-xml-schemas/caching-templates-xsl-and-schemas-sqlxml-4-0.md)  
+ [La mise en cache des modèles, XSL et schémas &#40;SQLXML 4.0&#41;](../sqlxml-annotated-xsd-schemas-xpath-queries/caching-templates-xml-schemas/caching-templates-xsl-and-schemas-sqlxml-4-0.md)  
  Décrit les fonctionnalités de mise en cache fournies dans SQLXML pour améliorer les performances.  
   
  [Considérations relatives à la sécurité SQLXML 4.0](../sqlxml-annotated-xsd-schemas-xpath-queries/security/sqlxml-4-0-security-considerations.md)  

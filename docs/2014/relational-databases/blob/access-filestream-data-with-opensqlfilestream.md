@@ -5,10 +5,9 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-blob
+ms.technology: filestream
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 api_name:
 - OpenSqlFilestream
 api_location:
@@ -17,18 +16,18 @@ helpviewer_keywords:
 - OpenSqlFilestream
 ms.assetid: d8205653-93dd-4599-8cdf-f9199074025f
 caps.latest.revision: 45
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 81dab09c293fff8ad4d47df63a7069e48f63d638
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: ee7c3745466565a5baf8262fe6cc20dc80c0a3d0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36045209"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37250339"
 ---
 # <a name="access-filestream-data-with-opensqlfilestream"></a>Accéder à des données FILESTREAM avec OpenSqlFilestream
-  L’API OpenSqlFilestream Obtient un descripteur de fichier compatible Win32 pour un objet FILESTREAM (BLOB) stockées dans le système de fichiers. Le descripteur peut être passé à chacune des API Win32 suivantes : [ReadFile](http://go.microsoft.com/fwlink/?LinkId=86422), [WriteFile](http://go.microsoft.com/fwlink/?LinkId=86423), [TransmitFile](http://go.microsoft.com/fwlink/?LinkId=86424), [SetFilePointer](http://go.microsoft.com/fwlink/?LinkId=86425), [SetEndOfFile](http://go.microsoft.com/fwlink/?LinkId=86426)ou [FlushFileBuffers](http://go.microsoft.com/fwlink/?LinkId=86427). Si vous passez ce descripteur à une autre API Win32, l'erreur ERROR_ACCESS_DENIED est retournée. Le descripteur doit être fermé en le passant à l’API [CloseHandle](http://go.microsoft.com/fwlink/?LinkId=86428) Win32 avant que la transaction soit validée ou restaurée. Si le descripteur n'est pas fermé, il peut y avoir des fuites de ressources côté serveur.  
+  L’API OpenSqlFilestream Obtient un descripteur de fichier compatible Win32 pour un objet FILESTREAM (BLOB) qui est stocké dans le système de fichiers. Le descripteur peut être passé à chacune des API Win32 suivantes : [ReadFile](http://go.microsoft.com/fwlink/?LinkId=86422), [WriteFile](http://go.microsoft.com/fwlink/?LinkId=86423), [TransmitFile](http://go.microsoft.com/fwlink/?LinkId=86424), [SetFilePointer](http://go.microsoft.com/fwlink/?LinkId=86425), [SetEndOfFile](http://go.microsoft.com/fwlink/?LinkId=86426)ou [FlushFileBuffers](http://go.microsoft.com/fwlink/?LinkId=86427). Si vous passez ce descripteur à une autre API Win32, l'erreur ERROR_ACCESS_DENIED est retournée. Le descripteur doit être fermé en le passant à l’API [CloseHandle](http://go.microsoft.com/fwlink/?LinkId=86428) Win32 avant que la transaction soit validée ou restaurée. Si le descripteur n'est pas fermé, il peut y avoir des fuites de ressources côté serveur.  
   
  Tous les accès de conteneur de données FILESTREAM doivent être effectuées dans un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] transaction. [!INCLUDE[tsql](../../includes/tsql-md.md)] Vous pouvez également exécuter des instructions dans la même transaction. Cela maintient la cohérence entre les données SQL et les données BLOB FILESTREAM.  
   
@@ -52,7 +51,7 @@ ULONGOpenOptions,LPBYTEFilestreamTransactionContext,SIZE_TFilestreamTransactionC
   
 #### <a name="parameters"></a>Paramètres  
  *FilestreamPath*  
- [in] Est la `nvarchar(max)` chemin d’accès qui est retourné par la [chemin d’accès](/sql/relational-databases/system-functions/pathname-transact-sql) (fonction). PathName doit être appelé à partir du contexte d’un compte qui dispose des autorisations [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SELECT ou UPDATE sur la table et la colonne FILESTREAM.  
+ [in] Est le `nvarchar(max)` chemin d’accès qui est retourné par la [PathName](/sql/relational-databases/system-functions/pathname-transact-sql) (fonction). PathName doit être appelé à partir du contexte d’un compte qui dispose des autorisations [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SELECT ou UPDATE sur la table et la colonne FILESTREAM.  
   
  *DesiredAccess*  
  [in] Définit le mode utilisé pour accéder aux données BLOB FILESTREAM. Cette valeur est passée à la [fonction DeviceIoControl](http://go.microsoft.com/fwlink/?LinkId=105527).  

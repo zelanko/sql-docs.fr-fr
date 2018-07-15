@@ -1,5 +1,5 @@
 ---
-title: À l’aide des données de Table imbriquée comme entrée pour un graphique de précision | Documents Microsoft
+title: À l’aide des données de Table imbriquée comme entrée pour un graphique de précision | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Mining Accuracy Chart [Analysis Services], nested tables
 - Mining Accuracy Chart [Analysis Services], input tables
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - adding nested tables
 ms.assetid: 162e0686-ada3-4dd3-9151-9589926e6613
 caps.latest.revision: 23
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 63f25ca15b3ce9cdf8c97a15f91d192ef6e7de96
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 53b61da97453d2572f14062a9f471de1fc63aab4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36043967"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37321329"
 ---
 # <a name="using-nested-table-data-as-an-input-for-an-accuracy-chart"></a>Utilisation des données de table imbriquée comme entrée pour un graphique d'analyse de précision
   Si vous testez l'exactitude d'un modèle d'exploration de données en utilisant des données externes et que le modèle d'exploration de données contient des tables imbriquées, les données externes doivent également contenir une table de cas et une table imbriquée associée.  
@@ -58,7 +58,7 @@ ms.locfileid: "36043967"
      Si vous devez modifier la relation entre la table imbriquée et la table de cas, cliquez sur **Modifier la jointure** pour ouvrir la boîte de dialogue **Créer une relation** .  
   
 ## <a name="see-also"></a>Voir aussi  
- [Choisir et mapper le modèle de données de test](choose-and-map-model-testing-data.md)   
+ [Choisir et mapper les données de test du modèle](choose-and-map-model-testing-data.md)   
  [Appliquer des filtres aux données de test du modèle](apply-filters-to-model-testing-data.md)  
   
   

@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - connections [Reporting Services], configuring
 - connections [Reporting Services]
@@ -20,13 +20,13 @@ ms.assetid: 9759a9fb-35e9-4215-969b-a9f1fea18487
 caps.latest.revision: 9
 author: markingmyname
 ms.author: maghan
-manager: jhubbard
-ms.openlocfilehash: 8eb2cc1bcfa9528eccd2764af954fb165b74daa4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 43cf572cca1062471e73ab47be5e687fee40c1db
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36044889"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37208544"
 ---
 # <a name="configure-a-report-server-database-connection--ssrs-configuration-manager"></a>Configurer une connexion à la base de données du serveur de rapports (Gestionnaire de configuration de SSRS)
   Chaque instance de serveur de rapports requiert une connexion à la base de données de serveur de rapports qui stocke les rapports, les modèles de rapport, les sources de données partagées, les ressources et les métadonnées gérées par le serveur. La connexion initiale peut être créée lors de l'installation d'un serveur de rapports si vous installez la configuration par défaut. Dans la plupart des cas, vous utilisez l'outil de configuration de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] pour configurer la connexion une fois l'installation terminée. Vous pouvez modifier la connexion à tout moment afin de changer de type de compte ou de redéfinir les informations d'identification. Pour obtenir des instructions détaillées sur la création de la base de données et la configuration de la connexion, consultez [Créer une base de données du serveur de rapports en mode natif &#40;Gestionnaire de configuration de SSRS&#41;](../../reporting-services/install-windows/ssrs-report-server-create-a-native-mode-report-server-database.md).  
@@ -46,7 +46,7 @@ ms.locfileid: "36044889"
   
  La base de données du serveur de rapports est un composant interne, accessible uniquement par le serveur de rapports. Les informations d'identification et de connexion que vous spécifiez pour la base de données du serveur de rapports sont utilisées exclusivement par le serveur de rapports. Les utilisateurs qui demandent des rapports n'ont pas besoin d'autorisations de base de données ou d'une connexion de base de données pour la base de données du serveur de rapports.  
   
- [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] utilise `System.Data.SqlClient` pour se connecter à la [!INCLUDE[ssDE](../../includes/ssde-md.md)] qui héberge la base de données du serveur de rapports. Si vous utilisez une instance locale du [!INCLUDE[ssDE](../../includes/ssde-md.md)], le serveur de rapports établit la connexion à l'aide de la mémoire partagée. Si vous utilisez un serveur de base de données distant pour la base de données du serveur de rapports, il se peut que vous ayez à activer les connexions distantes selon l'édition que vous utilisez. Si vous utilisez l’édition Enterprise, les connexions distantes sont activées par défaut pour TCP/IP.  
+ [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] utilise `System.Data.SqlClient` pour se connecter à la [!INCLUDE[ssDE](../../includes/ssde-md.md)] qui héberge la base de données de serveur de rapports. Si vous utilisez une instance locale du [!INCLUDE[ssDE](../../includes/ssde-md.md)], le serveur de rapports établit la connexion à l'aide de la mémoire partagée. Si vous utilisez un serveur de base de données distant pour la base de données du serveur de rapports, il se peut que vous ayez à activer les connexions distantes selon l'édition que vous utilisez. Si vous utilisez l’édition Enterprise, les connexions distantes sont activées par défaut pour TCP/IP.  
   
  Pour vérifier que l’instance accepte les connexions à distance, cliquez successivement sur **Démarrer**, **Tous les programmes**, [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)], **Outils de configuration**, **Gestionnaire de configuration SQL Server**, puis vérifiez que le protocole TCP/IP est activé pour chaque service.  
   
@@ -57,7 +57,7 @@ ms.locfileid: "36044889"
   
 -   Nom de l'instance du [!INCLUDE[ssDE](../../includes/ssde-md.md)] hébergeant la base de données du serveur de rapports.  
   
--   Nom de la base de données du serveur de rapports. Lorsque vous créez une connexion pour la première fois, vous pouvez créer une nouvelle base de données de serveur de rapports ou sélectionner une base de données existante. Pour plus d’informations, consultez [créer une base de données du serveur de rapports &#40;Gestionnaire de Configuration de SSRS&#41;](../../../2014/sql-server/install/create-a-report-server-database-ssrs-configuration-manager.md).  
+-   Nom de la base de données du serveur de rapports. Lorsque vous créez une connexion pour la première fois, vous pouvez créer une nouvelle base de données de serveur de rapports ou sélectionner une base de données existante. Pour plus d’informations, consultez [créer une base de données de serveur de rapports &#40;Gestionnaire de Configuration de SSRS&#41;](../../../2014/sql-server/install/create-a-report-server-database-ssrs-configuration-manager.md).  
   
 -   Type d'informations d'identification. Vous pouvez utiliser les comptes de service, un compte de domaine Windows ou une connexion de base de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
@@ -126,7 +126,7 @@ ms.locfileid: "36044889"
  Vous pouvez configurer plusieurs serveurs de rapports de manière à utiliser la même base de données de serveur de rapports. Cette configuration de déploiement est appelée déploiement avec montée en puissance parallèle. Cette configuration est une condition préalable requise si vous voulez exécuter plusieurs serveurs de rapports dans un cluster de serveurs. Toutefois, vous pouvez aussi utiliser cette configuration pour segmenter les applications de service ou pour tester l'installation et les paramètres d'une nouvelle instance de serveur de rapports afin de la comparer à l'installation existante d'un serveur de rapports. Pour plus d’informations, consultez [Configurer un déploiement par montée en puissance parallèle de serveurs de rapports en mode natif &#40;Gestionnaire de configuration de SSRS&#41;](../../reporting-services/install-windows/configure-a-native-mode-report-server-scale-out-deployment.md).  
   
 ## <a name="see-also"></a>Voir aussi  
- [Créer une base de données du serveur de rapports &#40;Gestionnaire de Configuration de SSRS&#41;](../../../2014/sql-server/install/create-a-report-server-database-ssrs-configuration-manager.md)   
+ [Créer une base de données de serveur de rapports &#40;Gestionnaire de Configuration de SSRS&#41;](../../../2014/sql-server/install/create-a-report-server-database-ssrs-configuration-manager.md)   
  [Gérer un serveur de rapports Reporting Services (SSRS) en mode natif](../../reporting-services/report-server/manage-a-reporting-services-native-mode-report-server.md)   
  [Configurer le compte de service Report Server &#40;Gestionnaire de configuration de SSRS&#41;](../../reporting-services/install-windows/configure-the-report-server-service-account-ssrs-configuration-manager.md)  
   

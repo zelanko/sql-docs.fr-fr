@@ -1,5 +1,5 @@
 ---
-title: Élément CalculationReference (ASSL) | Documents Microsoft
+title: Élément CalculationReference (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -22,18 +22,18 @@ helpviewer_keywords:
 - CalculationReference element
 ms.assetid: 4dd18b1f-55c3-4673-afbe-736d1bce8331
 caps.latest.revision: 37
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 19d96e9f589a9a83d4d31c5b7b1dfb9c37f29633
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: aace0256c454505e07b4226efc63da0d5d3581c7
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36052933"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37224059"
 ---
 # <a name="calculationreference-element-assl"></a>Élément CalculationReference (ASSL)
-  Contient le nom du jeu nommé ou de cellule calculée référencée par la [CalculationProperty](../objects/calculationproperty-element-assl.md).  
+  Contient le nom du jeu nommé ou de cellule calculée référencée par le [CalculationProperty](../objects/calculationproperty-element-assl.md).  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -64,7 +64,7 @@ ms.locfileid: "36052933"
 ## <a name="remarks"></a>Notes  
  Si la valeur de l'élément `CalculationReference` ne correspond pas au nom d'un jeu nommé existant ou d'une définition de cellule calculée, l'élément `CalculationReference` est ignoré.  
   
- L’élément qui correspond au parent de `CalculationReference` dans l’objet d’objets AMO (Analysis Management) est modèle <xref:Microsoft.AnalysisServices.CalculationProperty>.  
+ L’élément qui correspond au parent de `CalculationReference` dans l’objet d’objets AMO (Analysis Management) modèle est <xref:Microsoft.AnalysisServices.CalculationProperty>.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Élément CalculationProperties &#40;ASSL&#41;](../collections/calculationproperties-element-assl.md)   

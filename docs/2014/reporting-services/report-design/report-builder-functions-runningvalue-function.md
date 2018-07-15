@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 6bee2f15-0e69-49c8-9689-b04544063b1d
 caps.latest.revision: 8
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 41f2345cf31347fba98448a02d4d3014b8883d73
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: be8b75318aec2bd921a7d995f63e722f38881426
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36043535"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37319859"
 ---
 # <a name="runningvalue-function-report-builder-and-ssrs"></a>Fonction RunningValue (Générateur de rapports et SSRS)
   Retourne un agrégat cumulé de toutes les valeurs numériques non Null spécifiées par l'expression, évaluée pour l'étendue donnée.  
@@ -42,17 +42,17 @@ RunningValue(expression, function, scope)
  (`Enum`) Le nom de la fonction d’agrégation à appliquer à l’expression, par exemple, `Sum`. Cette fonction ne peut pas être `RunningValue`, `RowNumber`, ou `Aggregate`.  
   
  *portée*  
- (`String`) Constante de chaîne qui correspond au nom d'un dataset, d'une région de données ou d'un groupe, ou valeur Null (`Nothing` en [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]), qui spécifie le contexte dans lequel évaluer l'agrégation. `Nothing` Spécifie le contexte le plus extérieur, habituellement le dataset de rapport.  
+ (`String`) Constante de chaîne qui correspond au nom d'un dataset, d'une région de données ou d'un groupe, ou valeur Null (`Nothing` en [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]), qui spécifie le contexte dans lequel évaluer l'agrégation. `Nothing` Spécifie le contexte le plus extérieur, habituellement le dataset du rapport.  
   
 ## <a name="return-type"></a>Type de retour  
  Déterminé par la fonction d'agrégation spécifiée dans le paramètre *function* .  
   
 ## <a name="remarks"></a>Notes  
- La valeur de `RunningValue` réinitialise à 0 pour chaque nouvelle instance de la portée. Si vous spécifiez un groupe, la valeur d'exécution est réinitialisée lorsque l'expression de groupe change. Si vous indiquez une région de données, le cumul est réinitialisé pour chaque nouvelle instance de la région de données. Si vous spécifiez un dataset, la valeur d'exécution n'est pas réinitialisée dans l'ensemble du dataset.  
+ La valeur de `RunningValue` est réinitialisée sur 0 pour chaque nouvelle instance de l’étendue. Si vous spécifiez un groupe, la valeur d'exécution est réinitialisée lorsque l'expression de groupe change. Si vous indiquez une région de données, le cumul est réinitialisé pour chaque nouvelle instance de la région de données. Si vous spécifiez un dataset, la valeur d'exécution n'est pas réinitialisée dans l'ensemble du dataset.  
   
  `RunningValue` ne peut pas être utilisé dans une expression de filtre ou de tri.  
   
- Le jeu des données pour lequel la valeur d'exécution est calculée doit avoir le même type de données. Pour convertir des données qui ont plusieurs types de données numériques vers le même type de données, utilisez les fonctions de conversion, comme `CInt`, `CDbl` ou `CDec`. Pour plus d'informations, consultez [Fonctions de conversion de types de données](http://go.microsoft.com/fwlink/?LinkId=96142).  
+ Le jeu des données pour lequel la valeur d'exécution est calculée doit avoir le même type de données. Pour convertir les données qui ont plusieurs types de données numériques vers le même type de données, utilisez les fonctions de conversion comme `CInt`, `CDbl` ou `CDec`. Pour plus d'informations, consultez [Fonctions de conversion de types de données](http://go.microsoft.com/fwlink/?LinkId=96142).  
   
  *Scope* ne peut pas être une expression.  
   
@@ -92,9 +92,9 @@ RunningValue(expression, function, scope)
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Expression utilise des rapports de &#40;rapport Générateur et SSRS&#41;](expression-uses-in-reports-report-builder-and-ssrs.md)   
+ [Utilisation d’expressions dans les rapports &#40;Générateur de rapports et SSRS&#41;](expression-uses-in-reports-report-builder-and-ssrs.md)   
  [Exemples d’expressions &#40;Générateur de rapports et SSRS&#41;](expression-examples-report-builder-and-ssrs.md)   
  [Types de données dans les expressions &#40;Générateur de rapports et SSRS&#41;](expressions-report-builder-and-ssrs.md)   
- [Étendue des expressions pour les totaux, les agrégats et les Collections intégrées &#40;rapport Générateur et SSRS&#41;](expression-scope-for-totals-aggregates-and-built-in-collections.md)  
+ [Étendue des expressions pour les totaux, les agrégats et les Collections intégrées &#40;Générateur de rapports et SSRS&#41;](expression-scope-for-totals-aggregates-and-built-in-collections.md)  
   
   

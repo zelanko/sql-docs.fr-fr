@@ -1,12 +1,11 @@
 ---
-title: Surveillance et dépannage gérés les objets de base de données | Documents Microsoft
+title: Surveillance et dépannage des objets de base de données gérés | Microsoft Docs
 ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
-ms.prod_service: database-engine
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: reference
+ms.technology: clr
 ms.topic: reference
 helpviewer_keywords:
 - common language runtime [SQL Server], performance
@@ -17,12 +16,12 @@ caps.latest.revision: 18
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 741a863617109c6193fe45e0fe9da94136890e96
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
+ms.openlocfilehash: 895d99a7f693443a11340157be96a68b8d107d16
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35702760"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37355591"
 ---
 # <a name="monitoring-and-troubleshooting-managed-database-objects"></a>Surveillance et dépannage des objets de base de données managés
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -35,7 +34,7 @@ ms.locfileid: "35702760"
 |-----------|-----------------|  
 |[Classe d'événements Assembly Load](http://msdn.microsoft.com/library/cfb0b69d-4ce0-4067-a3df-d82775e57886)|Utilisé pour surveiller des demandes de chargement d'assembly (succès et échecs).|  
 |[Classe d’événements SQL : BatchStarting](../../relational-databases/event-classes/sql-batchstarting-event-class.md), [classe d’événements SQL : BatchCompleted](../../relational-databases/event-classes/sql-batchcompleted-event-class.md)|Fournit des informations sur des lots [!INCLUDE[tsql](../../includes/tsql-md.md)] qui ont démarré ou ont été finalisés.|  
-|[SP : Starting, classe d’événements](../../relational-databases/event-classes/sp-starting-event-class.md), [SP : Completed événement (classe)](../../relational-databases/event-classes/sp-completed-event-class.md)|Utilisé pour surveiller l'exécution des procédures stockées [!INCLUDE[tsql](../../includes/tsql-md.md)].|  
+|[SP : Starting, classe d’événements](../../relational-databases/event-classes/sp-starting-event-class.md), [SP : Completed, classe d’événements](../../relational-databases/event-classes/sp-completed-event-class.md)|Utilisé pour surveiller l'exécution des procédures stockées [!INCLUDE[tsql](../../includes/tsql-md.md)].|  
 |[Classe d’événements SQL : StmtStarting](../../relational-databases/event-classes/sql-stmtstarting-event-class.md), [classe d’événements SQL : StmtCompleted](../../relational-databases/event-classes/sql-stmtcompleted-event-class.md)|Utilisé pour surveiller l'exécution du CLR (Common Language Runtime) et des routines [!INCLUDE[tsql](../../includes/tsql-md.md)].|  
   
 ## <a name="performance-counters"></a>Compteurs de performances  

@@ -1,5 +1,5 @@
 ---
-title: Méthode SetDisable (classe ServerNetworkProtocolIPAddress) | Documents Microsoft
+title: Setdisable, méthode (classe ServerNetworkProtocolIPAddress) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - SetDisable method
 ms.assetid: 7a7cc8cc-9fb8-4bf5-b483-2150d633ee10
 caps.latest.revision: 31
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 310660fed0cf74f7fef6367bfee4484a76446d72
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
+ms.openlocfilehash: 1ee702aad8ef492cb4484590724b04b8d818f4d0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36045123"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37246294"
 ---
 # <a name="setdisable-method-servernetworkprotocolipaddress-class"></a>Méthode SetDisable (classe ServerNetworkProtocolIPAddress)
   Désactive l'adresse IP.  
@@ -44,7 +44,7 @@ object
   
 ## <a name="parts"></a>Éléments  
  *object*  
- Un [classe ServerNetworkProtocolIPAdress] servernetworkprotocolipaddress-class.md) objet qui représente une adresse IP pour le protocole réseau sur une instance de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
+ Un servernetworkprotocolipaddress [classe ServerNetworkProtocolIPAdress]-class.md) objet qui représente une adresse IP pour le protocole réseau sur une instance de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
 ## <a name="property-valuereturn-value"></a>Valeur de propriété/valeur de retour  
  Valeur uint32 égale à 0 si le service a été correctement modifié, égale à 1 si la demande n'est pas prise en charge ou égale à tout autre nombre pour indiquer une erreur.  

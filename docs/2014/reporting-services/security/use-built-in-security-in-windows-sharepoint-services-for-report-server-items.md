@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - permissions [Reporting Services], SharePoint integrated mode
 - SharePoint integration [Reporting Services], permissions
@@ -17,13 +17,13 @@ ms.assetid: 9577e88d-c22b-4934-936f-e0f1400cedf5
 caps.latest.revision: 13
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 4d9231800ea1cf583ae554fe10ecc217fa1e9a49
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 80c3ca9a6ca7b966ba3af54e096d839314158082
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36045513"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37294139"
 ---
 # <a name="use-built-in-security-in-windows-sharepoint-services-for-report-server-items"></a>Utiliser la sécurité intégrée dans Windows SharePoint Services pour les éléments de serveur de rapports
   SharePoint fournit des fonctionnalités de sécurité intégrée qui vous permettent d'accéder aux éléments d'un serveur de rapports à partir de sites et de bibliothèques SharePoint. Si vous avez déjà affecté des autorisations de site et de listes aux utilisateurs, ces derniers auront accès aux éléments et opérations de serveur de rapports dès que vous aurez configuré les paramètres d'intégration entre SharePoint et un serveur de rapports.  

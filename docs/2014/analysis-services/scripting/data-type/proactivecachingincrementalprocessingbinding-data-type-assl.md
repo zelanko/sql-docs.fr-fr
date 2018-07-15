@@ -1,5 +1,5 @@
 ---
-title: Type de données ProactiveCachingIncrementalProcessingBinding (ASSL) | Documents Microsoft
+title: Type de données ProactiveCachingIncrementalProcessingBinding (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - ProactiveCachingIncrementalProcessingBinding data type
 ms.assetid: f49c0c96-4277-417b-9660-d77a4faebd00
 caps.latest.revision: 15
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 128d118c5f1a6dd05a8bab5434b1dba1f9f22ce1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: ad1107d1ad2e135e65b2ef4f05fd2e85d799123c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36052033"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37247719"
 ---
 # <a name="proactivecachingincrementalprocessingbinding-data-type-assl"></a>Type de données ProactiveCachingIncrementalProcessingBinding (ASSL)
   Définit un type de données dérivé qui représente une liaison à la [ProactiveCaching](../objects/proactivecaching-element-assl.md) élément sur l’état du processus de reconstruction du cache.  
@@ -69,6 +69,6 @@ ms.locfileid: "36052033"
  L’élément correspondant dans le modèle d’objet objets AMO (Analysis Management) est <xref:Microsoft.AnalysisServices.ProactiveCachingIncrementalProcessingBinding>.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Types de données de script langage XML Analysis Services &#40;ASSL&#41;](analysis-services-scripting-language-xml-data-types-assl.md)  
+ [Types Analysis Services Scripting Language XML données &#40;ASSL&#41;](analysis-services-scripting-language-xml-data-types-assl.md)  
   
   

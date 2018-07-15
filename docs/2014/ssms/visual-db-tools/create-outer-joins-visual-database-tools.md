@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - outer joins
 - joins [SQL Server], outer
 ms.assetid: 18de47b1-f936-427d-b852-fe6d20334f71
 caps.latest.revision: 12
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: cbde6fbf96809a3ab05ecf1814ce90437436a503
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: ef4e658ffd8af66ec8b3ad7e43eba8dade79bf85
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36043507"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37306869"
 ---
 # <a name="create-outer-joins-visual-database-tools"></a>Créer des jointures externes (Visual Database Tools)
   Par défaut, le [Concepteur de requêtes et de vues](visual-database-tools.md) crée une jointure interne entre des tables. Les jointures internes éliminent les lignes qui ne correspondent pas à une ligne de l'autre table. Quant aux jointures externes, elles retournent toutes les lignes d'au moins une des tables ou vues mentionnées dans la clause FROM, pour autant que ces lignes répondent à une des conditions de recherche WHERE ou HAVING. Pour inclure, dans l'ensemble de résultats, des lignes de données qui n'ont pas de correspondances dans la table jointe, vous pouvez créer une jointure externe.  
@@ -62,7 +62,7 @@ WHERE (jobs.job_id IS NULL)
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Requête avec des jointures &#40;Visual Database Tools&#41;](query-with-joins-visual-database-tools.md)   
+ [Interroger avec des jointures &#40;Visual Database Tools&#41;](query-with-joins-visual-database-tools.md)   
  [Boîte de dialogue Joindre &#40;Visual Database Tools&#41;](join-dialog-box-visual-database-tools.md)  
   
   

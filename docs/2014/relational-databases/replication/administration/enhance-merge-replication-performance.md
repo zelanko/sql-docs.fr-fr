@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - publications [SQL Server replication], design and performance
 - designing databases [SQL Server], replication performance
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - agents [SQL Server replication], performance
 ms.assetid: f929226f-b83d-4900-a07c-a62f64527c7f
 caps.latest.revision: 47
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 4fd41d63d0086ac582cf0ca033453bf0d9bc7776
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 78221050ed5832f76843a57d20ed3a518b1ebea9
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36051031"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37256328"
 ---
 # <a name="enhance-merge-replication-performance"></a>Améliorer les performances de réplication de fusion
   Après avoir considéré les conseils en matière de performances qui sont décrits dans la rubrique [Amélioration des performances générales de la réplication](enhance-general-replication-performance.md), considérez ces autres aspects spécifiques à la réplication de fusion.  
@@ -45,7 +45,7 @@ ms.locfileid: "36051031"
   
 -   Envisagez de surnormaliser les tables qui incluent des types de données LOB.  
   
-     Lors d'une synchronisation, l'Agent de fusion peut avoir besoin de lire et de transférer la totalité de la ligne de données à partir d'un serveur de publication ou d'un Abonné. Si la ligne contient des colonnes utilisant des données de type LOB, ce processus peut nécessiter un surcroît d'allocation de mémoire et nuire aux performances, même si ces colonnes peuvent ne pas avoir été mises à jour. Pour limiter la probabilité d'une perte de performance, vous pouvez envisager de placer les colonnes LOB dans une table indépendante en les reliant aux autres données de la ligne avec une relation un-à-un. Les types de données `text`, `ntext`, et `image` sont déconseillés. Si vous n’incluez pas les objets volumineux, nous vous recommandons d’utiliser les types de données `varchar(max)`, `nvarchar(max)`, `varbinary(max)`, respectivement.  
+     Lors d'une synchronisation, l'Agent de fusion peut avoir besoin de lire et de transférer la totalité de la ligne de données à partir d'un serveur de publication ou d'un Abonné. Si la ligne contient des colonnes utilisant des données de type LOB, ce processus peut nécessiter un surcroît d'allocation de mémoire et nuire aux performances, même si ces colonnes peuvent ne pas avoir été mises à jour. Pour limiter la probabilité d'une perte de performance, vous pouvez envisager de placer les colonnes LOB dans une table indépendante en les reliant aux autres données de la ligne avec une relation un-à-un. Les types de données `text`, `ntext`, et `image` sont déconseillés. Si vous incluez des LOB, nous vous recommandons d’utiliser les types de données `varchar(max)`, `nvarchar(max)`, `varbinary(max)`, respectivement.  
   
 ## <a name="publication-design"></a>Conception de la publication  
   

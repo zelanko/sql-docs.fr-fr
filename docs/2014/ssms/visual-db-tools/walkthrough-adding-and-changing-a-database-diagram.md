@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - database diagrams [SQL Server], about database diagrams
 - database diagrams [SQL Server], designing
 - database diagrams [SQL Server], creating
 ms.assetid: 228caa0d-8f24-46ab-86d1-b6d8631322bc
 caps.latest.revision: 12
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 8f49bf89391a0863a54cc57858cd5fb9c05fba90
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 9d3ac48037a5a61bd70179927b3c6de0eba90c9c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36051638"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37244020"
 ---
 # <a name="walkthrough-adding-and-changing-a-database-diagram"></a>Procédure pas à pas : ajouter et modifier un schéma de base de données
   Cette procédure pas à pas montre comment créer et modifier un schéma de base de données et apporter des modifications à la base de données par l'intermédiaire du composant des schémas de base de données. Vous apprendrez à ajouter des tables aux schémas, à créer des relations entre les tables, créer des contraintes et des index sur des colonnes et modifier le niveau des informations qui s'affichent pour chaque table.  
@@ -213,7 +213,7 @@ ms.locfileid: "36051638"
 ## <a name="see-also"></a>Voir aussi  
  [Personnaliser la quantité d’informations affichées dans les schémas &#40;Visual Database Tools&#41;](visual-database-tools.md)   
  [Configurer le Concepteur de schémas de base de données &#40;Visual Database Tools&#41;](set-up-database-diagram-designer-visual-database-tools.md)   
- [Ajouter des Tables à des schémas &#40;Visual Database Tools&#41;](add-tables-to-diagrams-visual-database-tools.md)   
+ [Ajouter des Tables aux schémas &#40;Visual Database Tools&#41;](add-tables-to-diagrams-visual-database-tools.md)   
  [Créer des relations entre les Tables dans un diagramme de &#40;Visual Database Tools&#41;](create-relationships-between-tables-on-a-diagram-visual-database-tools.md)   
  [Créer des index XML](../../relational-databases/xml/create-xml-indexes.md)   
  [Copier une Image d’un schéma de base de données dans le Presse-papiers &#40;Visual Database Tools&#41;](copy-an-image-of-a-database-diagram-to-the-clipboard-visual-database-tools.md)   

@@ -17,15 +17,15 @@ helpviewer_keywords:
 - extensions [Reporting Services], custom security
 ms.assetid: d2327e7c-0d48-49e3-bcd9-3bba4e67a68b
 caps.latest.revision: 39
-author: douglaslM
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: db26efcf405b2c32e231245c2291491ff4b15162
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: 27707a7736c10794aec6c80679728988528665ba
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36051218"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37216769"
 ---
 # <a name="implementing-a-security-extension"></a>Implémentation d'une extension de sécurité
   L’authentification Windows de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] constitue le principal système permettant de sécuriser des rapports dans [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]. Dans certains cas, en revanche, vous pouvez avoir besoin d'étendre le système de sécurité [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] pour personnaliser la sécurité dans votre entreprise. Pour cela, vous pouvez utiliser la plate-forme de développement fournie par l'API [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]. Cette section présente une vue d'ensemble des extensions de sécurité dans [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)].  

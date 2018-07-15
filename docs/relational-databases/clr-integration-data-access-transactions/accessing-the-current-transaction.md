@@ -1,11 +1,11 @@
 ---
-title: L’accès à la Transaction actuelle | Documents Microsoft
+title: Accès à la Transaction actuelle | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: reference
+ms.technology: clr
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -17,16 +17,16 @@ caps.latest.revision: 17
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 01f0f1513d2b627f0097005487bae4e86f2507e8
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
+ms.openlocfilehash: 66d123ca233bc71ce401fb7d76fe5b1fc29e0870
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35695280"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37358751"
 ---
 # <a name="accessing-the-current-transaction"></a>Accès à la transaction actuelle
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  Si une transaction est active au point le code du common language runtime (CLR) en cours d’exécution [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] est entré, la transaction est exposée via le **transaction System.Transactions.Transaction** classe. La propriété **Transaction.Current** est utilisée pour accéder à la transaction actuelle. Dans la plupart des cas il n'est pas nécessaire d'accéder explicitement à la transaction. Pour les connexions de base de données, ADO.NET vérifie **Transaction.Current** automatiquement lorsque la méthode **Connection.Open** est appelée et inscrit de façon transparente la connexion dans cette transaction (à moins que le mot clé **Enlist** n'ait la valeur « false » dans la chaîne de connexion).  
+  Si une transaction est active au point le code du common language runtime (CLR) en cours d’exécution [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] est entré, la transaction est exposée à travers le **System.Transactions.Transaction** classe. La propriété **Transaction.Current** est utilisée pour accéder à la transaction actuelle. Dans la plupart des cas il n'est pas nécessaire d'accéder explicitement à la transaction. Pour les connexions de base de données, ADO.NET vérifie **Transaction.Current** automatiquement lorsque la méthode **Connection.Open** est appelée et inscrit de façon transparente la connexion dans cette transaction (à moins que le mot clé **Enlist** n'ait la valeur « false » dans la chaîne de connexion).  
   
  Vous souhaiter peut-être utiliser l'objet **Transaction** directement dans les scénarios suivants :  
   

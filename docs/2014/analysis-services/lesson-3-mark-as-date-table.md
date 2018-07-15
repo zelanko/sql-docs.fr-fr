@@ -1,5 +1,5 @@
 ---
-title: 'Leçon 4 : Marquer en tant que Table de dates | Documents Microsoft'
+title: 'Leçon 4 : Marquer en tant que Table de dates | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: c32cc336-b7d8-4122-9d62-4936344d2315
 caps.latest.revision: 7
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: jhubbard
-ms.openlocfilehash: a283b56c215e51dbdb0df90b9c51c21e232df2f9
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 5a2a6ce44a66fbb1e9045116580acc726f648df9
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36044566"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37265745"
 ---
 # <a name="lesson-4-mark-as-date-table"></a>Leçon 4 : Marquer en tant que table de dates
   Dans la lecon 2 : Ajouter des données, vous avez importé une table de dimension nommée DimDate. Vous avez ensuite renommé la table DimDate dans la lecon 3 : Renommer des colonnes, en lui attribuant le nom Date. Alors que dans votre modèle cette table s’appelle désormais Date, elle peut également être désignée par *Table de Date*, car elle contient des données de date et d’heure.  

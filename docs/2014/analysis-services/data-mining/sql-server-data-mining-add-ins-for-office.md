@@ -1,5 +1,5 @@
 ---
-title: SQL Server Data Mining Add-Ins for Office | Documents Microsoft
+title: SQL Server Data Mining Add-Ins for Office | Microsoft Docs
 ms.custom: ''
 ms.date: 12/29/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: c9021a19-2c19-4f0a-a293-5f7e0ac2524c
 caps.latest.revision: 8
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 66865664b7713f869ef1f007ba5b35f04218e8f2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 7d8897cdb41d1d72806bf93335b13bf8c683cc31
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36044863"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37273895"
 ---
 # <a name="sql-server-data-mining-add-ins-for-office"></a>Compléments d'exploration de données SQL Server pour Office
   [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] Compléments d'exploration de données est un ensemble d'outils légers pour l'analyse prédictive qui vous permet d'utiliser les données dans Excel pour générer des modèles d'analyse pour la prédiction, les recommandations ou l'exploration.  
@@ -65,7 +65,7 @@ ms.locfileid: "36044863"
   
 -   [Formes d’exploration de données pour Visio](../data-mining-shapes-for-visio.md)  
   
--   [Se connecter à un serveur d’exploration de données](../connect-to-a-data-mining-server.md)  
+-   [Connexion à un serveur d’exploration de données](../connect-to-a-data-mining-server.md)  
   
 ## <a name="support-and-requirements"></a>Prise en charge et configuration requise  
  Les compléments d'exploration de données SQL Server pour Office peuvent être téléchargés gratuitement. Vous devez disposer de l'une des versions suivantes d'Office déjà installée pour utiliser ces outils :  
@@ -87,6 +87,6 @@ ms.locfileid: "36044863"
   
  Selon l'édition de SQL Server Analysis Services à laquelle vous vous connectez, certains algorithmes avancés peuvent ne pas être disponibles. Pour plus d'informations, consultez [Fonctionnalités prises en charge par les éditions de SQL Server 2014](https://msdn.microsoft.com/en-us/library/cc645993.aspx).  
   
- Pour plus d’informations d’installation, consultez cette page du centre de téléchargement : [http://www.microsoft.com/download/details.aspx?id=29061](http://www.microsoft.com/download/details.aspx?id=29061)  
+ Pour plus d’informations avec l’installation, consultez cette page sur le centre de téléchargement : [http://www.microsoft.com/download/details.aspx?id=29061](http://www.microsoft.com/download/details.aspx?id=29061)  
   
   

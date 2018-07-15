@@ -1,5 +1,5 @@
 ---
-title: Relations (SSAS tabulaire) | Documents Microsoft
+title: Relations (SSAS tabulaire) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 21e0144a-3cfd-4bc7-87ff-bb7d1800ed2f
 caps.latest.revision: 25
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 2796fb23a51d0da71e4314cdbeaab70a13332d5f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 517446889205621e4cb9b866e858f53a622bf75d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36051147"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37314535"
 ---
 # <a name="relationships-ssas-tabular"></a>Relations (SSAS Tabulaire)
   Dans les modèles tabulaires, une relation est une connexion entre deux tables de données. La relation établit la façon dont les données des deux tables doivent être mises en corrélation. Par exemple, il est possible de créer une relation entre une table Clients et une table Commandes afin d'indiquer le nom du client associé à chaque commande.  
@@ -116,7 +116,7 @@ ms.locfileid: "36051147"
 ### <a name="single-active-relationship-between-tables"></a>Relation active unique entre des tables  
  Plusieurs relations pourraient générer des dépendances ambiguës entre des tables. Pour créer des calculs exacts, vous avez besoin d'un chemin d'accès unique entre une table et la table suivante. Par conséquent, il ne peut y avoir qu'une seule relation active entre chaque paire de tables. Par exemple, dans AdventureWorks DW 2012, la table DimDate contient une colonne DateKey qui est associée à trois colonnes différentes dans la table FactInternetSales : OrderDate, DueDate et ShipDate. Si vous tentez d'importer ces tables, la première relation est créée avec succès, mais vous recevrez l'erreur suivante sur les relations consécutives qui impliquent la même colonne :  
   
- \* Relation : table [colonne 1] -> table [colonne 2] - état : erreur - raison : Impossible de créer une relation entre tables \<table 1 > et \<tableau 2 >. Une seule relation directe ou indirecte peut exister entre deux tables.  
+ \* Relation : table [colonne 1] -> table [colonne 2] - état : erreur - raison : Impossible de créer une relation entre tables \<table 1 > et \<table 2 >. Une seule relation directe ou indirecte peut exister entre deux tables.  
   
  Si vous avez deux tables et plusieurs relations entre elles, vous devez importer plusieurs copies de la table qui contient la colonne de recherche et créer une relation entre chaque paire de tables.  
   

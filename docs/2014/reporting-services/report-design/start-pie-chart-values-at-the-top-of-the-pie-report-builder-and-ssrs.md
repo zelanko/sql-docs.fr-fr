@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: d0e6fb59-ca4e-4d70-97cb-0ad183da21d3
 caps.latest.revision: 5
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 4537b00b59bec4459f7740e49c93a19da0ab08dc
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 2da5ccaf0fe846a26959970bd9bf3e939b5a2558
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36050982"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37256258"
 ---
 # <a name="start-pie-chart-values-at-the-top-of-the-pie-report-builder-and-ssrs"></a>Démarrer des valeurs de graphique à secteurs en haut du graphique à secteurs (Générateur de rapports et SSRS)
   Par défaut dans les graphiques à secteurs, la première valeur du dataset démarre à 90 degrés à partir du haut du graphique à secteurs. Vous souhaiterez peut-être que la première valeur démarre en haut.  
@@ -41,6 +41,6 @@ ms.locfileid: "36050982"
   
 ## <a name="see-also"></a>Voir aussi  
  [Mise en forme d’un graphique &#40;Générateur de rapports et SSRS&#41;](formatting-a-chart-report-builder-and-ssrs.md)   
- [Les graphiques en secteurs &#40;rapport Générateur et SSRS&#41;](charts-report-builder-and-ssrs.md)  
+ [Graphiques en secteurs &#40;Générateur de rapports et SSRS&#41;](charts-report-builder-and-ssrs.md)  
   
   

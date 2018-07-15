@@ -1,5 +1,5 @@
 ---
-title: Application sqllogship | Documents Microsoft
+title: Application sqllogship | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,25 +8,25 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - sqllogship
 ms.assetid: 8ae70041-f3d9-46e4-8fa8-31088572a9f8
 caps.latest.revision: 9
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 66b07b7867d8337941c052818d665d9590550806
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 065491c5bdf2254f6ee356383f7992c6d52b6c0e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36051392"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37306679"
 ---
 # <a name="sqllogship-application"></a>Application sqllogship
   L’application **sqllogship** effectue une opération de sauvegarde, de copie ou de restauration, ainsi que les tâches de nettoyage associées pour une configuration d’envoi de journaux. L'opération a lieu sur une instance spécifique de [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] pour une base de données spécifique.  
   
- ![Icône de lien de rubrique](../../2014/database-engine/media/topic-link.gif "icône lien de rubrique") pour les conventions de syntaxe, consultez [référence utilitaire d’invite de commandes &#40;moteur de base de données&#41;](../tools/command-prompt-utility-reference-database-engine.md).  
+ ![Icône lien de rubrique](../../2014/database-engine/media/topic-link.gif "icône lien de rubrique") pour les conventions de syntaxe, consultez [référence utilitaire d’invite de commandes &#40;moteur de base de données&#41;](../tools/command-prompt-utility-reference-database-engine.md).  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -78,7 +78,7 @@ instance_name { -backupprimary_id | -copysecondary_id | -restoresecondary_id } [
   
  L'historique d'envoi de journaux créé par **sqllogship** comprend également l'historique des travaux de restauration, de copie et de sauvegarde de l'envoi de journaux. Si vous envisagez d'utiliser **sqllogship** de manière répétée pour effectuer des opérations de restauration, de copie ou de sauvegarde pour une configuration de l'envoi de journaux, pensez à désactiver le ou les travaux d'envoi de journaux correspondants. Pour plus d’informations, consultez [Disable or Enable a Job](../ssms/agent/disable-or-enable-a-job.md).  
   
- Le **sqllogship** application, SqlLogShip.exe, est installée dans le répertoire x:\Program Files\Microsoft SQL Server\120\Tools\Binn.  
+ Le **sqllogship** application, SqlLogShip.exe, est installée dans le répertoire de x:\Program Files\Microsoft SQL Server\120\Tools\Binn.  
   
 ## <a name="permissions"></a>Autorisations  
  **sqllogship** utilise l'authentification Windows. Le compte d'authentification Windows où s'exécute la commande nécessite un accès au répertoire Windows et des autorisations [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . La configuration requise dépend de l’option spécifiée par la commande **sqllogship** : **-backup**, **-copy**ou **-restore** .  

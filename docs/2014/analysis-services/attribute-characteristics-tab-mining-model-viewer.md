@@ -1,5 +1,5 @@
 ---
-title: Attribut de l’onglet caractéristiques (visionneuse de modèle d’exploration de données) | Documents Microsoft
+title: Attribut de l’onglet caractéristiques (visionneuse de modèle d’exploration de données) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dm.miningmodeleditor.naivebayse.characteristics.f1
 ms.assetid: f0c3350d-84c0-4ab8-9fb8-1527c2647299
 caps.latest.revision: 25
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 9a2e67e05ac9129bd667f50bc4b6acbe673d8729
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: bc627e45bdf57b956dd55795b48dde642eed4bf7
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36045074"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37234259"
 ---
 # <a name="attribute-characteristics-tab-mining-model-viewer"></a>Onglet Caractéristiques d'attribut (Visionneuse de modèle d'exploration de données)
   Le volet **Caractéristiques d’attribut** permet d’explorer les relations entre les résultats et les attributs d’entrée dans un modèle Naïve Bayes. Vous pouvez choisir la valeur de l'attribut cible, puis consulter la liste des attributs d'entrée qui ont l'effet le plus important sur les résultats.  
@@ -29,7 +29,7 @@ ms.locfileid: "36045074"
  **Pour plus d’informations :** [Algorithme MNB (Microsoft Naive Bayes)](data-mining/microsoft-naive-bayes-algorithm.md), [Explorer un modèle à l’aide de la visionneuse de l’algorithme MNB (Microsoft Naive Bayes)](data-mining/browse-a-model-using-the-microsoft-naive-bayes-viewer.md)  
   
 ## <a name="options"></a>Options  
- **Actualiser le contenu de la visionneuse**  
+ **Actualiser le contenu de l’Observateur**  
  Recharge le modèle d'exploration de données dans la visionneuse.  
   
  **Modèle d'exploration de données**  
@@ -44,7 +44,7 @@ ms.locfileid: "36045074"
  **Value**  
  Choisissez un état pour l’attribut prédictible que vous avez défini dans **Attribut**. Étant donné que les modèles Naïve Bayes ne prennent pas en charge les variables continues, tous les attributs cibles possèdent des résultats discrets ou discrétisés. L'attribut manquant est toujours ajouté automatiquement à la liste.  
   
- **Caractéristiques de \<état prévisible >**  
+ **Caractéristiques pour \<état prévisible >**  
  Ce graphique contient les colonnes suivantes, qui décrivent la relation des états des attributs d'entrée par rapport à l'état de l'attribut prédictible sélectionné.  
   
 |Valeur|Description|  

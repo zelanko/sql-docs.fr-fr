@@ -1,5 +1,5 @@
 ---
-title: Propriétés de mémoire | Documents Microsoft
+title: Propriétés de mémoire | Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,27 +9,27 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 57a40130b9cf8ddf2b2f9d3c43d464436a0f4730
-ms.sourcegitcommit: 6e55a0a7b7eb6d455006916bc63f93ed2218eae1
-ms.translationtype: MT
+ms.openlocfilehash: b0239d2d203e7cb32a2ea587ee069d26ad003b0e
+ms.sourcegitcommit: 44e9bf62f2c75449c17753ed66bf85c43928dbd5
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/08/2018
-ms.locfileid: "35239114"
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37854351"
 ---
 # <a name="memory-properties"></a>Propriétés de mémoire
 [!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
 
-  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] pré-alloue une petite quantité de mémoire au démarrage afin que les demandes peuvent être traitées immédiatement. De la mémoire supplémentaire est allouée à mesure que les charges de travail de requête et de traitement augmentent. 
+  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Préalloue une petite quantité de mémoire au démarrage, afin que les requêtes puissent être traitées immédiatement. De la mémoire supplémentaire est allouée à mesure que les charges de travail de requête et de traitement augmentent. 
   
   En spécifiant des paramètres de configuration, vous pouvez contrôler les seuils auxquels la mémoire est libérée. Par exemple, le paramètre **HardMemoryLimit** spécifie une condition de mémoire insuffisante auto-imposée (par défaut, ce seuil est désactivé), où les nouvelles requêtes sont rejetées en bloc jusqu’à ce que des ressources supplémentaires soient disponibles.
 
-Pour en savoir plus sur la mémoire maximale utilisée par instance d’Analysis Services par l’édition, consultez [éditions et des fonctionnalités prises en charge de SQL Server](../../sql-server/editions-and-components-of-sql-server-2017.md#Cross-BoxScaleLimits).
+Pour en savoir plus sur la mémoire maximale utilisée par instance d’Analysis Services par édition, consultez [éditions et fonctionnalités prises en charge de SQL Server](../../sql-server/editions-and-components-of-sql-server-2017.md#Cross-BoxScaleLimits).
   
  Sauf indication contraire, les paramètres suivants s’appliquent à la fois en mode serveur tabulaire et multidimensionnelle.  
  
 ## <a name="default-memory-configuration"></a>Configuration par défaut de la mémoire
 
-Dans la configuration par défaut, chaque instance d’Analysis Services alloue une petite quantité de RAM (Mo 40 à 50 Mo) au démarrage, même si l’instance est inactive. 
+Dans la configuration par défaut, chaque instance d’Analysis Services alloue une petite quantité de RAM (40 Mo à 50 Mo) au démarrage, même si l’instance est inactive. 
 
 Rappelez-vous que les paramètres de configuration sont définie par instance. Si vous exécutez plusieurs instances Analysis Services, par exemple une instance multidimensionnelle et une instance tabulaire sur le même matériel, chaque instance alloue sa propre mémoire indépendamment des autres instances.
 
@@ -49,16 +49,16 @@ Sauf indication contraire, les propriétés suivantes s’appliquent à la fois 
  Les valeurs comprises entre 1 et 100 représentent des pourcentages de **mémoire physique totale** ou d' **espace d'adressage virtuel**, la valeur la plus petite étant retenue. Les valeurs supérieures à 100 représentent les limites de mémoire en octets.
   
  **LowMemoryLimit**  
- Signé 64 bits double précision à virgule flottante numérique propriété qui définit le premier seuil Analysis Services de début de libération de mémoire pour les objets de faible priorité, par exemple un cache rarement utilisé. Une fois la mémoire allouée, le serveur ne libère pas de mémoire en dessous de cette limite. La valeur par défaut est 65, ce qui indique que la limite de mémoire inférieure correspond à 65 % de la mémoire physique ou de l'espace d'adressage virtuel, la valeur inférieure étant applicable.  
+ Signé 64 bits double précision à virgule flottante numéro propriété qui définit le premier seuil auquel Analysis Services commence à libérer la mémoire pour les objets de faible priorité, comme un cache peu fréquemment utilisé. Une fois la mémoire allouée, le serveur ne libère pas de mémoire en dessous de cette limite. La valeur par défaut est 65, ce qui indique que la limite de mémoire inférieure correspond à 65 % de la mémoire physique ou de l'espace d'adressage virtuel, la valeur inférieure étant applicable.  
   
  **TotalMemoryLimit**  
  Définit un seuil qui, une fois atteint, a pour effet d’indiquer au serveur de désallouer de la mémoire afin de créer de l’espace pour les autres requêtes. Lorsque cette limite est atteinte, l'instance commence lentement à nettoyer la mémoire des caches en fermant les sessions expirées et en déchargeant les calculs non utilisés. La valeur par défaut est 80 % de la mémoire physique ou de l'espace d'adressage virtuel, la valeur inférieure étant applicable. **TotalMemoryLimit** doit toujours être inférieure à **HardMemoryLimit**  
   
  **HardMemoryLimit**  
- Spécifie un seuil de mémoire après lequel l'instance ferme de façon intensive les sessions utilisateur actives pour réduire l'utilisation de la mémoire. Toutes les sessions terminées recevront une erreur d’annulation par sollicitation de la mémoire. La valeur par défaut, zéro (0), signifie que **HardMemoryLimit** aura une valeur intermédiaire entre **TotalMemoryLimit** et la mémoire physique totale du système ; si la mémoire physique du système est supérieure à l’espace d’adressage virtuel du processus, l’espace d’adressage virtuel est utilisé à la place pour calculer **HardMemoryLimit**.  
+ Spécifie un seuil de mémoire après lequel l'instance ferme de façon intensive les sessions utilisateur actives pour réduire l'utilisation de la mémoire. Toutes les sessions terminées recevront une erreur indiquant l’annulation par sollicitation de la mémoire. La valeur par défaut, zéro (0), signifie que **HardMemoryLimit** aura une valeur intermédiaire entre **TotalMemoryLimit** et la mémoire physique totale du système ; si la mémoire physique du système est supérieure à l’espace d’adressage virtuel du processus, l’espace d’adressage virtuel est utilisé à la place pour calculer **HardMemoryLimit**.  
 
 **QueryMemoryLimit**   
-Services d’analyse Azure uniquement. Une propriété avancée pour contrôler la quantité de mémoire utilisable par les résultats temporaires lors d’une requête. S’applique uniquement aux requêtes et les mesures DAX. Requêtes MDX sur des serveurs en mode multidimensionnel n’utilisent pas cette limite. Il ne tient pas compte général l’allocation de mémoire utilisée par la requête. Spécifié sous forme de pourcentage. La valeur par défaut 0 indique aucune limite n’est spécifiée.
+Azure Analysis Services. Une propriété avancée pour contrôler la quantité de mémoire utilisable par les résultats temporaires au cours d’une requête. S’applique uniquement aux requêtes et les mesures DAX. Requêtes MDX sur des serveurs en mode multidimensionnel n’utilisent pas cette limite. Il ne tient pas compte des allocations de mémoire générale utilisées par la requête. Spécifiée en pourcentage. La valeur par défaut de 0 signifie qu'aucune limite n’est spécifiée.
 
  **VirtualMemoryLimit**  
   Propriété avancée que vous ne devez pas modifier, sauf si vous bénéficiez de l'assistance du support technique [!INCLUDE[msCoName](../../includes/msconame-md.md)] .  
@@ -95,7 +95,7 @@ Lorsque la valeur définie est 1, le traitement est moins susceptible d’échou
 **-1** | (par défaut) Automatique. Le moteur décidera de l’option à utiliser.
 **1** | Segment de mémoire Analysis Services.
 **2** | LFH Windows.
-**5** | Allocateur hybride. Cet allocateur utilisera LFH Windows pour \<= allocations de 16 Ko et le tas AS pour > allocations de 16 Ko. 
+**5** | Allocateur hybride. Cet allocateur utilisera LFH Windows pour \<= allocations de 16 Ko et le segment de mémoire pour > allocations de 16 Ko. 
 **6** | Allocateur Intel TBB. Disponible dans SQL Server 2016 SP1 Analysis Services (et version ultérieure).
   
   
@@ -104,6 +104,7 @@ Lorsque la valeur définie est 1, le traitement est moins susceptible d’échou
   
    Paramètre | Description
 --------|------------
+**-1** | (par défaut) Automatique. Le moteur décidera de l’option à utiliser.
 **0** | Segment de mémoire LFH Windows.
 **1** | Allocateur d’emplacement Analysis Services.
 **3** | Chaque objet possède son propre segment de mémoire Analysis Services.

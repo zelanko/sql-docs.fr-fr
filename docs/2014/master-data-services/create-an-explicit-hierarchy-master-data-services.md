@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - creating explicit hierarchies [Master Data Services]
 - explicit hierarchies, creating
 ms.assetid: ba768393-6990-4eda-8cb0-d58cb3cfc2e2
 caps.latest.revision: 7
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: de4402b3baf2991d8334eec9e679d6fac2390310
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: 29d75b956b6d9be23bd17e3df705724d3876d583
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36051560"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37219489"
 ---
 # <a name="create-an-explicit-hierarchy-master-data-services"></a>Créer une hiérarchie explicite (Master Data Services)
   Dans [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], créez une hiérarchie explicite lorsque vous avez besoin d'une hiérarchie déséquilibrée dans laquelle les membres peuvent exister à tous les niveaux. Les hiérarchies explicites contiennent des membres d'une entité unique.  
@@ -52,7 +52,7 @@ ms.locfileid: "36051560"
   
 6.  Sur le **modifier l’entité** page, dans le **hiérarchies explicites** volet, cliquez sur **ajouter une hiérarchie explicite**.  
   
-7.  Sur le **ajouter une hiérarchie explicite** page, dans le **nom de hiérarchie explicite** zone, tapez un nom pour la hiérarchie.  
+7.  Sur le **ajouter une hiérarchie explicite** page, dans le **nom de la hiérarchie explicite** zone, tapez un nom pour la hiérarchie.  
   
 8.  Décochez éventuellement la case **Hiérarchie obligatoire** pour créer la hiérarchie comme une hiérarchie non obligatoire. Pour plus d’informations sur les types de hiérarchies, consultez [Explicit Hierarchies &#40;Master Data Services&#41;](../../2014/master-data-services/explicit-hierarchies-master-data-services.md).  
   

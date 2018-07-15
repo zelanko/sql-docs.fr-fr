@@ -1,5 +1,5 @@
 ---
-title: 'Leçon 5 : Extension de la série chronologique modèle | Documents Microsoft'
+title: 'Leçon 5 : Extension de la série chronologique de modèle | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 7aad4946-c903-4e25-88b9-b087c20cb67d
 caps.latest.revision: 16
 author: minewiskan
 ms.author: owend
-manager: kfile
-ms.openlocfilehash: fe6a783cef802e9b68a063cf80016e7f31011cfa
-ms.sourcegitcommit: 8c040e5b4e8c7d37ca295679410770a1af4d2e1f
+manager: craigg
+ms.openlocfilehash: aab77b225eeef6844dc74deb272430b0434de71e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/21/2018
-ms.locfileid: "36313017"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37194389"
 ---
 # <a name="lesson-5-extending-the-time-series-model"></a>Leçon 5 : Extension du modèle de série chronologique
   Dans [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] Enterprise, vous pouvez ajouter de nouvelles données à un modèle de série chronologique et les incorporer automatiquement au modèle. Vous ajoutez de nouvelles données à un modèle d'exploration de données de série chronologique de l'une des deux manières suivantes :  
@@ -53,7 +53,7 @@ PREDICTION JOIN <source query>
   
 #### <a name="to-create-a-singleton-prediction-query-on-a-time-series-model"></a>Pour créer une requête singleton de prédiction sur un modèle de série chronologique  
   
-1.  Dans **l’Explorateur d’objets**, cliquez sur l’instance de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], pointez sur **nouvelle requête**, puis cliquez sur **DMX**.  
+1.  Dans **Explorateur d’objets**, avec le bouton droit de l’instance de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], pointez sur **nouvelle requête**, puis cliquez sur **DMX**.  
   
      L'Éditeur de requête s'ouvre et contient une nouvelle requête vide.  
   
@@ -196,7 +196,7 @@ PREDICTION JOIN <source query>
   
 -   Demandez des prédictions pour quatre tranches de temps, dont le point de départ est la tranche de temps 3 et le point de terminaison la tranche de temps 6.  
   
- En d’autres termes, si vos nouvelles données contiennent n tranches de temps et que vous demandez des prédictions pour les étapes 1 à n, les prédictions coïncideront avec la même période que les nouvelles données. Pour obtenir de nouvelles prédictions pour des périodes non couvertes par vos données, vous devez commencer les prédictions à la tranche de temps n+1 après la nouvelle série de données ou vous assurer de demander des tranches de temps supplémentaires.  
+ En d’autres termes, si vos nouvelles données contiennent n tranches horaires et que vous demandez des prédictions pour les étapes 1 à n, les prédictions coïncideront avec la même période que les nouvelles données. Pour obtenir de nouvelles prédictions pour des périodes non couvertes par vos données, vous devez commencer les prédictions à la tranche de temps n+1 après la nouvelle série de données ou vous assurer de demander des tranches de temps supplémentaires.  
   
 > [!NOTE]  
 >  Vous ne pouvez pas effectuer de prédictions historiques lorsque vous ajoutez de nouvelles données.  
@@ -237,7 +237,7 @@ WHERE [ModelRegion] = 'M200 Europe'
  Le remplacement des cas de modèles s'avère utile lorsque vous souhaitez effectuer l'apprentissage d'un modèle sur un ensemble de cas, puis appliquer ce modèle à une série de données différente. Une description détaillée de ce scénario est présentée dans [leçon 2 : génération d’un scénario de prévision &#40;didacticiel d’exploration de données intermédiaire&#41;](../../2014/tutorials/lesson-2-building-a-forecasting-scenario-intermediate-data-mining-tutorial.md).  
   
 ## <a name="see-also"></a>Voir aussi  
- [Exemples de requête de modèle de série de temps](../../2014/analysis-services/data-mining/time-series-model-query-examples.md)   
+ [Exemples de requêtes de modèle de série chronologique](../../2014/analysis-services/data-mining/time-series-model-query-examples.md)   
  [PredictTimeSeries &#40;DMX&#41;](/sql/dmx/predicttimeseries-dmx)  
   
   

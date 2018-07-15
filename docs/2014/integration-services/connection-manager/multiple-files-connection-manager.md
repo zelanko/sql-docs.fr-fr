@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - folders [Integration Services], connections
 - files [Integration Services], connections
@@ -20,13 +20,13 @@ ms.assetid: 10bdc56e-c5cd-4ddb-b2f7-375fe57fe8b2
 caps.latest.revision: 36
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 22fe47c60aadc0f5014b7aef2171399f8ea0d22a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 4a8e21696d9ae963f756a503bfd9833c5ef21809
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36051999"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37246929"
 ---
 # <a name="multiple-files-connection-manager"></a>Gestionnaire de connexions de fichiers multiples
   Un gestionnaire de connexions de fichiers multiples permet à un package de référencer des fichiers et dossiers existants ou de créer des fichiers ou dossiers au moment de l'exécution.  
@@ -49,7 +49,7 @@ ms.locfileid: "36051999"
 ## <a name="configuration-of-the-multiple-files-connection-manager"></a>Configuration du gestionnaire de connexions de fichiers multiples  
  Lorsque vous ajoutez un gestionnaire de connexions de fichiers multiples à un package, [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] crée un gestionnaire de connexions qui sera converti en connexion de fichiers multiples au moment de l'exécution, définit les propriétés de la connexion de fichiers multiples et ajoute la connexion de fichiers multiples à la collection `Connections` du package.  
   
- Le `ConnectionManagerType` du Gestionnaire de connexions est définie sur `MULTIFILE`.  
+ Le `ConnectionManagerType` propriété du Gestionnaire de connexions est définie sur `MULTIFILE`.  
   
  Vous pouvez configurer un gestionnaire de connexions de fichiers multiples de plusieurs manières :  
   
@@ -63,12 +63,12 @@ ms.locfileid: "36051999"
   
  \<*chemin*>|\<*chemin*>  
   
- Vous pouvez également spécifier plusieurs fichiers ou dossiers en utilisant des caractères génériques. Par exemple, pour la référence de lecteur de tous les fichiers de texte sur le C, la valeur de la `ConnectionString` propriété peut être définie sur C:\\*.txt.  
+ Vous pouvez également spécifier plusieurs fichiers ou dossiers en utilisant des caractères génériques. Par exemple, pour référencer tous les fichiers texte sur le C lecteur, la valeur de la `ConnectionString` propriété peut être définie sur C:\\*.txt.  
   
  Vous pouvez définir les propriétés par le biais du concepteur [!INCLUDE[ssIS](../../includes/ssis-md.md)] ou par programmation.  
   
  Pour plus d’informations sur les propriétés définissables dans le concepteur [!INCLUDE[ssIS](../../includes/ssis-md.md)] , consultez [Référence de l’interface utilisateur de la boîte de dialogue Ajouter un gestionnaire de connexions de fichiers](add-file-connection-manager-dialog-box-ui-reference.md).  
   
- Pour plus d’informations sur la configuration d’un gestionnaire de connexions par programme, consultez <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> et [Ajout de connexions par programme](../building-packages-programmatically/adding-connections-programmatically.md).  
+ Pour plus d’informations sur la configuration d’un gestionnaire de connexions par programmation, consultez <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> et [Ajout de connexions par programmation](../building-packages-programmatically/adding-connections-programmatically.md).  
   
   

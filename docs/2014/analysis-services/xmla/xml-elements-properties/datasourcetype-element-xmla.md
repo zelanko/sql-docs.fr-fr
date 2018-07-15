@@ -1,5 +1,5 @@
 ---
-title: Élément DataSourceType (XMLA) | Documents Microsoft
+title: Élément DataSourceType (XMLA) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -24,15 +24,15 @@ helpviewer_keywords:
 - DataSourceType element
 ms.assetid: f5a348b1-911b-4139-832e-4bcb6d80a728
 caps.latest.revision: 12
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: cc083742521abfe9114ea474fe0987861d12c04e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: c911f2a0e224cb8ccc9e7fa5b32a89a972fd1c26
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36051795"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37207669"
 ---
 # <a name="datasourcetype-element-xmla"></a>Élément DataSourceType (XMLA)
   Indique si un [emplacement](location-element-xmla.md) élément spécifié pour un [restaurer](../xml-elements-commands/restore-element-xmla.md) ou [synchroniser](../xml-elements-commands/synchronize-element-xmla.md) commande est local ou distant.  

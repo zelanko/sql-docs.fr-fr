@@ -1,12 +1,11 @@
 ---
-title: Activation de l’intégration de CLR | Documents Microsoft
+title: Activation de l’intégration de CLR | Microsoft Docs
 ms.custom: ''
 ms.date: 08/01/2016
 ms.prod: sql
-ms.prod_service: database-engine
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: reference
+ms.technology: clr
 ms.topic: reference
 helpviewer_keywords:
 - clr enabled option
@@ -16,16 +15,16 @@ caps.latest.revision: 19
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 37be3af485d43180c03c2214b8ee88b0535a4ea2
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
+ms.openlocfilehash: cf4d327ecc82f047d80eba8da709fea1fd7e82dd
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35703390"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37358211"
 ---
 # <a name="clr-integration---enabling"></a>Intégration du CLR - activation
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  La fonctionnalité d'intégration du Common Language Runtime (CLR) est désactivée par défaut et doit être activée pour pouvoir utiliser des objets implémentés à l'aide de l'intégration du CLR. Pour activer l’intégration du CLR, utilisez le **clr activé** option de le **sp_configure** procédure stockée dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]:  
+  La fonctionnalité d'intégration du Common Language Runtime (CLR) est désactivée par défaut et doit être activée pour pouvoir utiliser des objets implémentés à l'aide de l'intégration du CLR. Pour activer l’intégration du CLR, utilisez le **clr activé** possibilité du **sp_configure** procédure stockée dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]:  
   
 ```sql  
   
@@ -39,10 +38,10 @@ RECONFIGURE;
 GO  
 ```  
   
- Vous pouvez désactiver l’intégration de CLR en définissant le **clr activé** option à 0. Lorsque vous désactivez l'intégration du CLR, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] arrête l'exécution de toutes les routines CLR et décharge tous les domaines d'application.  
+ Vous pouvez désactiver l’intégration de CLR en définissant le **clr activé** option sur 0. Lorsque vous désactivez l'intégration du CLR, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] arrête l'exécution de toutes les routines CLR et décharge tous les domaines d'application.  
   
 > [!NOTE]  
->  Pour activer l’intégration du CLR, vous devez disposer de ALTER SETTINGS autorisation au niveau serveur, qui est implicitement détenue par les membres de la **sysadmin** et **serveradmin** rôles serveur fixes.  
+>  Pour activer l’intégration du CLR, vous devez disposer d’ALTER SETTINGS autorisation de niveau serveur, qui est implicitement détenue par les membres de la **sysadmin** et **serveradmin** rôles serveur fixes.  
   
 > [!NOTE]  
 >  Il est possible que les ordinateurs dotés de grandes quantités de mémoire et d'un grand nombre de processeurs ne puissent pas charger la fonctionnalité d'intégration du CLR de SQL Server au démarrage du serveur. Pour résoudre ce problème, démarrez le serveur à l’aide de la **-gmemory_to_reserve** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] option de démarrage du service et spécifiez une valeur de mémoire suffisamment élevée. Pour plus d’informations, consultez [Options de démarrage du service moteur de base de données](../../database-engine/configure-windows/database-engine-service-startup-options.md).  

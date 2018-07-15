@@ -14,15 +14,15 @@ helpviewer_keywords:
 - ReportViewer controls
 ms.assetid: 4c200f36-4012-4108-8095-370b426ccf8d
 caps.latest.revision: 23
-author: douglaslM
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 907ee3eb093f4b240aef2199b0928dab602341ac
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: 21d48953edad8d454f75fa919f9e0facdfb5280b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36052157"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37251321"
 ---
 # <a name="using-the-webforms-reportviewer-control"></a>Utilisation du contrôle WebForms ReportViewer
   Pour consulter des rapports déployés sur un serveur de rapports ou situés sur le système de fichiers local, vous pouvez utiliser le contrôle WebForms ReportViewer afin de les afficher dans une application Windows.  
@@ -47,7 +47,7 @@ ms.locfileid: "36052157"
   
  Si vous souhaitez afficher un rapport en mode local, sélectionnez l’option **Concevoir un nouveau rapport** afin de lancer le Concepteur de rapports, ou sélectionnez un rapport déjà inclus dans le projet existant. Après avoir sélectionné un rapport, veillez à entrer le nom du fichier de définition de rapport RDLC dans la propriété **ReportPath** du contrôle ReportViewer. Cette propriété apparaît sous le nœud **LocalReport** dans le volet **Propriétés**.  
   
- Vous avez l'option de masquer un ou plusieurs éléments dans la barre d'outils ReportViewer lorsque le rapport est rendu. Par exemple, vous pouvez masquer le bouton d'impression. Pour masquer des éléments de barre d’outils, définissez les propriétés ReportViewer suivantes `False` dans les **propriétés** volet.  
+ Vous avez l'option de masquer un ou plusieurs éléments dans la barre d'outils ReportViewer lorsque le rapport est rendu. Par exemple, vous pouvez masquer le bouton d'impression. Pour masquer les éléments de barre d’outils, définissez les propriétés ReportViewer suivantes `False` dans le **propriétés** volet.  
   
 -   `ShowBackButton`  
   
@@ -66,7 +66,7 @@ ms.locfileid: "36052157"
 ## <a name="viewing-reports-in-remote-processing-mode"></a>Affichage de rapports en mode de traitement à distance  
  L'exemple suivant montre comment effectuer un rendu d'un rapport qui a été déployé sur un serveur de rapports. Cet exemple utilise le rapport Sales Order Detail inclus avec le projet d'exemples de rapports [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)].  
   
- L'exemple utilise l'authentification Windows intégrée. Vous devez par conséquent commencer par activer l'emprunt d'identité. Pour faire cela insérez la ligne suivante dans le `web.config` fichier :  
+ L'exemple utilise l'authentification Windows intégrée. Vous devez par conséquent commencer par activer l'emprunt d'identité. Pour faire cela, insérez la ligne suivante dans le `web.config` fichier :  
   
 ```  
 <!-- Web.config file. -->  

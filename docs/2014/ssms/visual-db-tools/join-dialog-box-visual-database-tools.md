@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vdt.ppg.joinline
 - vdtsql.chm:69638
 ms.assetid: 0d9516bb-4ad3-4fcf-bb77-93474dea698f
 caps.latest.revision: 11
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: e6adb9f0f9ee0d265124e0c3648279516018eb92
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 57490e0592f11e78ffddf44f0d3c3f60d90925a4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36051641"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37238169"
 ---
 # <a name="join-dialog-box-visual-database-tools"></a>Boîte de dialogue Joindre (Visual Database Tools)
   Utilisez cette boîte de dialogue afin de spécifier des options de jointure de tables. Pour accéder à cette boîte de dialogue, sélectionnez une ligne de jointure dans le volet **Design** . Ensuite, dans la fenêtre **Propriétés** , cliquez sur **Condition et type de jointure**, puis sur le bouton de sélection **(…)** qui s’affiche à droite de la propriété.  
@@ -41,7 +41,7 @@ ms.locfileid: "36051641"
 |**Toutes les lignes de \<table1 >**|Spécifie que toutes les lignes de la table de gauche apparaissent dans la sortie, y compris s'il n'existe aucune correspondance dans la table de droite. Les colonnes auxquelles ne correspond aucune donnée dans la table de droite apparaissent avec la valeur NULL. Choisir cette option équivaut à spécifier LEFT OUTER JOIN dans l'instruction SQL.|  
 |**Toutes les lignes de \<table2 >**|Spécifie que toutes les lignes de la table de droite apparaissent dans la sortie, y compris s'il n'existe aucune correspondance dans la table de gauche. Les colonnes auxquelles ne correspond aucune donnée dans la table de gauche apparaissent avec la valeur NULL. Choisir cette option équivaut à spécifier RIGHT OUTER JOIN dans l'instruction SQL.|  
   
- Sélection de toutes les **des lignes de \<table1 >** et **toutes les lignes de \<table2 >** revient à spécifier FULL OUTER JOIN dans l’instruction SQL.  
+ En sélectionnant toutes les **lignes \<table1 >** et **toutes les lignes de \<table2 >** équivaut à spécifier FULL OUTER JOIN dans l’instruction SQL.  
   
  Lorsque vous sélectionnez une option pour créer une jointure externe, le losange sur la ligne de jointure change pour indiquer qu'il s'agit d'une jointure externe gauche, droite ou entière.  
   
@@ -49,7 +49,7 @@ ms.locfileid: "36051641"
 >  Les mots « gauche » et « droite » ne correspondent pas forcément à la position des tables dans le volet Schéma. « Gauche » désigne la table dont le nom apparaît à gauche du mot clé JOIN dans l'instruction SQL et « droite » la table dont le nom apparaît à droite du mot clé JOIN. Si vous déplacez les tables dans le volet **Schéma** , vous ne changez en rien cette désignation.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Requête avec des jointures &#40;Visual Database Tools&#41;](visual-database-tools.md)   
+ [Interroger avec des jointures &#40;Visual Database Tools&#41;](visual-database-tools.md)   
  [Rubriques de procédures relatives à la conception de requêtes et de vues &#40;Visual Database Tools&#41;](design-queries-and-views-how-to-topics-visual-database-tools.md)  
   
   

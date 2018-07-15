@@ -1,5 +1,5 @@
 ---
-title: Élément AttributeAllMemberName (ASSL) | Documents Microsoft
+title: Élément AttributeAllMemberName (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - AttributeAllMemberName element
 ms.assetid: 5ede46a7-d8b0-40be-98d7-b01047b27d2e
 caps.latest.revision: 36
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 9014fb486a11dc5b35f8fcab394032f26408b338
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 425e9c092dff8cc3c303672b6bfb1e2b3a8096ad
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36051595"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37208049"
 ---
 # <a name="attributeallmembername-element-assl"></a>Élément AttributeAllMemberName (ASSL)
   Contient la légende dans la langue par défaut du membre All de la dimension.  
@@ -62,10 +62,10 @@ ms.locfileid: "36051595"
 |Éléments enfants|None|  
   
 ## <a name="remarks"></a>Notes  
- L’élément qui correspond au parent de `AttributeAllMemberName` dans l’objet d’objets AMO (Analysis Management) est modèle <xref:Microsoft.AnalysisServices.Dimension>.  
+ L’élément qui correspond au parent de `AttributeAllMemberName` dans l’objet d’objets AMO (Analysis Management) modèle est <xref:Microsoft.AnalysisServices.Dimension>.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Configurer le &#40;tous les&#41; niveau pour les hiérarchies d’attributs](../../multidimensional-models/database-dimensions-configure-the-all-level-for-attribute-hierarchies.md)   
+ [Configurer le &#40;tous les&#41; niveau hiérarchies d’attributs](../../multidimensional-models/database-dimensions-configure-the-all-level-for-attribute-hierarchies.md)   
  [Propriétés &#40;ASSL&#41;](properties-assl.md)  
   
   

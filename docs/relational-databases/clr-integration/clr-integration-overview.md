@@ -1,12 +1,11 @@
 ---
-title: Vue d’ensemble de l’intégration du CLR | Documents Microsoft
+title: Vue d’ensemble de l’intégration du CLR | Microsoft Docs
 ms.custom: ''
 ms.date: 04/19/2017
 ms.prod: sql
-ms.prod_service: database-engine
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: reference
+ms.technology: clr
 ms.topic: reference
 helpviewer_keywords:
 - common language runtime [SQL Server], about CLR integration
@@ -21,12 +20,12 @@ caps.latest.revision: 50
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 3e1be655f6f1da49e9c432243e46d34e4d0412ec
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
+ms.openlocfilehash: 8f4fb83b806fe03bf1b68e7f9d70beb7ce876f7e
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35696780"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37351341"
 ---
 # <a name="clr-integration---overview"></a>Intégration du CLR - vue d’ensemble
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -65,7 +64,7 @@ ms.locfileid: "35696780"
 ## <a name="see-also"></a>Voir aussi  
  [Installation du .NET Framework](http://technet.microsoft.com/library/ms166014\(v=SQL.105\).aspx)   
  [Architecture d’intégration du CLR](http://msdn.microsoft.com/library/05e4b872-3d21-46de-b4d5-739b5f2a0cf9)   
- [Accès aux données depuis les objets de base de données CLR](../../relational-databases/clr-integration/data-access/data-access-from-clr-database-objects.md)   
+ [Accès aux données à partir des objets de base de données CLR](../../relational-databases/clr-integration/data-access/data-access-from-clr-database-objects.md)   
  [Prise en main de l’intégration du CLR](../../relational-databases/clr-integration/database-objects/getting-started-with-clr-integration.md)  
   
   

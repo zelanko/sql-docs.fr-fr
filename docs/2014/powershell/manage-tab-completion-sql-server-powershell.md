@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 6296848a-890f-4ad3-8d9f-92ed6a79aa00
 caps.latest.revision: 6
-author: mgblythe
-ms.author: mblythe
-manager: jhubbard
-ms.openlocfilehash: 96eb376791d1b30fb73d834733de07df8a46c64e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: a3f19a5c197eb519aa9e78a0d99d7e88132da123
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36051296"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37231429"
 ---
 # <a name="manage-tab-completion-sql-server-powershell"></a>Gérer la saisie semi-automatique par tabulation (SQL Server PowerShell)
-  Le [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] les composants logiciels enfichables PowerShell introduisent trois variables (`$SqlServerMaximumTabCompletion`, `$SqlServerMaximumChildItems`, et `$SqlServerIncludeSystemObjects`) au contrôle de saisie semi-automatique par tabulation de Windows PowerShell. La saisie semi-automatique par tabulation réduit la quantité de caractères que vous devez taper en renvoyant des tableaux d'éléments dont le nom commence par la chaîne que vous tapez.  
+  Le [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] des composants logiciels enfichables PowerShell introduisent trois variables (`$SqlServerMaximumTabCompletion`, `$SqlServerMaximumChildItems`, et `$SqlServerIncludeSystemObjects`) au contrôle de saisie semi-automatique par tabulation Windows PowerShell. La saisie semi-automatique par tabulation réduit la quantité de caractères que vous devez taper en renvoyant des tableaux d'éléments dont le nom commence par la chaîne que vous tapez.  
   
 ## <a name="before-you-begin"></a>Avant de commencer  
  Avec la saisie semi-automatique par tabulation de Windows PowerShell, une fois que vous avez tapé une partie d'un chemin d'accès ou d'un nom d'applet de commande, vous pouvez appuyer sur la touche Tab pour obtenir la liste des éléments dont le nom correspond à ce que vous avez déjà tapé. Vous pouvez alors sélectionner l'élément souhaité dans la liste sans avoir à taper le reste du nom.  

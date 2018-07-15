@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - dbe-xml
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - IDREF directive
 - ID directive
 ms.assetid: 7ff1ea73-71ca-4786-bd42-564f1b5de2d9
 caps.latest.revision: 10
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: f0bdc2134723cddd5acf6ead6e137b91bf52f68e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 1b6ea8ca74c7ca587b0ecbc6ef4ee3c3f1decc16
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36045526"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37319759"
 ---
 # <a name="example-specifying-the-id-and-idref-directives"></a>Exemple : spécification des directives ID et IDREF
   Cet exemple est presque identique à l'exemple [Spécification de la directive ELEMENTXSINIL](example-specifying-the-elementxsinil-directive.md) . La seule différence est que la requête spécifie les directives **ID** et **IDREF** . Ces directives remplacent les types de l’attribut **SalesPersonID** des éléments <`OrderHeader`> et <`OrderDetail`>. Il en résulte des liens à l'intérieur du document. Vous avez besoin du schéma pour visualiser les types remplacés. Par conséquent, la requête spécifie l'option **XMLDATA** dans la clause FOR XML pour extraire le schéma.  

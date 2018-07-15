@@ -1,5 +1,5 @@
 ---
-title: Choisissez la colonne à utiliser pour tester un modèle d’exploration de données | Documents Microsoft
+title: Choisir la colonne à utiliser pour tester un modèle d’exploration de données | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - columns [data mining], predictable mining columns
 - Mining Accuracy Chart [Analysis Services], columns
 - predictable mining columns [Analysis Services]
 ms.assetid: c6a8f23a-da21-4f31-9521-99460d624649
 caps.latest.revision: 34
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 1c6ef161be9da0dfa64653753858ea4e17809404
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: a0458e4ad7b17b4f4713b8aa1aad0a10dba88098
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36051193"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37304659"
 ---
 # <a name="choose-the-column-to-use-for-testing-a-mining-model"></a>Choisir la colonne à utiliser pour tester un modèle d'exploration de données
   Avant de pouvoir mesurer la précision d'un modèle d'exploration de données, vous devez déterminer le résultat que vous voulez évaluer. La plupart des modèles d'exploration de données requièrent que vous choisissiez au moins une colonne à utiliser comme attribut prédictible lorsque vous créez le modèle. Par conséquent, lorsque vous testez la précision du modèle, vous devez généralement sélectionner cet attribut comme devant être testé.  
@@ -59,7 +59,7 @@ ms.locfileid: "36051193"
 5.  Si vous souhaitez déterminer l’élévation pour un modèle, vous devez sélectionner une valeur de résultat spécifique à mesurer dans la liste **Prédire la valeur** .  
   
 ## <a name="see-also"></a>Voir aussi  
- [Choisir et mapper le modèle de données de test](choose-and-map-model-testing-data.md)   
+ [Choisir et mapper les données de test du modèle](choose-and-map-model-testing-data.md)   
  [Choisir un type de graphique d’analyse de précision et définir des options de graphique](choose-an-accuracy-chart-type-and-set-chart-options.md)  
   
   

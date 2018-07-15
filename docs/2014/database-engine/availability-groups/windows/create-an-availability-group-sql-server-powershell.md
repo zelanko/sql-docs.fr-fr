@@ -5,23 +5,22 @@ ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Availability Groups [SQL Server], creating
 ms.assetid: bc69a7df-20fa-41e1-9301-11317c5270d2
 caps.latest.revision: 39
-author: rothja
-ms.author: jroth
-manager: jhubbard
-ms.openlocfilehash: 9d02bd4202848c0c22033b00d818c2f0d2554bc2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 65663e51d915b86a796bb98126c9efeebf74bf14
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36051600"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37273505"
 ---
 # <a name="create-an-availability-group-sql-server-powershell"></a>Créer un groupe de disponibilité (SQL Server PowerShell)
   Cette rubrique explique comment utiliser des applets de commande PowerShell pour créer et configurer un groupe de disponibilité AlwaysOn à l'aide de PowerShell dans [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. Un *groupe de disponibilité* définit un jeu de bases de données utilisateur qui basculent en tant qu'unité unique et un jeu de partenaires de basculement, appelés *réplicas de disponibilité*, qui prennent en charge le basculement.  
@@ -57,7 +56,7 @@ ms.locfileid: "36051600"
 |Préparer la base de données secondaire|`Backup-SqlDatabase` et `Restore-SqlDatabase`|Créez des sauvegardes sur l'instance de serveur qui héberge le réplica principal.<br /><br /> Restaurez les sauvegardes sur chaque instance de serveur qui héberge un réplica secondaire, à l'aide du paramètre de restauration `NoRecovery`. Si les chemins d'accès de fichier diffèrent entre les ordinateurs qui hébergent le réplica principal et le réplica secondaire cible, utilisez également le paramètre de restauration `RelocateFile`.|  
 |Démarrer la synchronisation des données en joignant chaque base de données secondaire au groupe de disponibilité|`Add-SqlAvailabilityDatabase`|Exécutez sur chaque instance de serveur qui héberge un réplica secondaire.|  
   
- **<sup>*</sup>**  Pour effectuer une tâche donnée, remplacez le répertoire (`cd`) pour les instances de serveur indiqué.  
+ **<sup>*</sup>**  Pour effectuer une tâche donnée, remplacez le répertoire (`cd`) aux instances de serveur indiquées.  
   
 ###  <a name="PsProviderLinks"></a> Pour installer et utiliser le fournisseur SQL Server PowerShell  
   
@@ -87,7 +86,7 @@ ms.locfileid: "36051600"
   
 7.  Joignez chaque nouvelle base de données secondaire au groupe de disponibilité. Pour plus d’informations, consultez [Joindre un réplica secondaire à un groupe de disponibilité &#40;SQL Server&#41;](join-a-secondary-replica-to-an-availability-group-sql-server.md).  
   
-8.  Vous pouvez également utiliser les fenêtres `dir` pour vérifier le contenu du nouveau groupe de disponibilité.  
+8.  Si vous le souhaitez, utiliser le Windows `dir` commande pour vérifier le contenu du nouveau groupe de disponibilité.  
   
 > [!NOTE]  
 >  Si les comptes de service [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] des instances serveur s'exécutent sous des comptes utilisateur de domaine différents, sur chaque instance serveur, créez une connexion pour l'autre instance serveur et accordez l'autorisation CONNECT sur le point de terminaison de mise en miroir de bases de données local.  
@@ -173,7 +172,7 @@ Add-SqlAvailabilityDatabase -Path "SQLSERVER:\SQL\SecondaryComputer\Instance\Ava
   
 -   [Activer et désactiver les groupes de disponibilité AlwaysOn &#40;SQL Server&#41;](enable-and-disable-always-on-availability-groups-sql-server.md)  
   
--   [Créer une base de données mise en miroir du point de terminaison pour les groupes de disponibilité AlwaysOn &#40;SQL Server PowerShell&#41;](database-mirroring-always-on-availability-groups-powershell.md)  
+-   [Créer une base de données mise en miroir de point de terminaison pour les groupes de disponibilité AlwaysOn &#40;SQL Server PowerShell&#41;](database-mirroring-always-on-availability-groups-powershell.md)  
   
  **Pour configurer les propriétés du groupe de disponibilité et du réplica**  
   
@@ -217,7 +216,7 @@ Add-SqlAvailabilityDatabase -Path "SQLSERVER:\SQL\SecondaryComputer\Instance\Ava
   
 -   [Résoudre les problèmes de Configuration des groupes de disponibilité AlwaysOn (SQL Server) supprimé](troubleshoot-always-on-availability-groups-configuration-sql-server.md)  
   
--   [Résoudre une opération d’ajout de fichier &#40;groupes de disponibilité AlwaysOn&#41;](troubleshoot-a-failed-add-file-operation-always-on-availability-groups.md)  
+-   [Résoudre une opération d’ajout de fichier ayant échoué &#40;groupes de disponibilité AlwaysOn&#41;](troubleshoot-a-failed-add-file-operation-always-on-availability-groups.md)  
   
 ##  <a name="RelatedContent"></a> Contenu associé  
   
@@ -225,7 +224,7 @@ Add-SqlAvailabilityDatabase -Path "SQLSERVER:\SQL\SecondaryComputer\Instance\Ava
   
      [AlwaysON - HADRON Learning Series : Worker Pool Usage for HADRON Enabled Databases](http://blogs.msdn.com/b/psssql/archive/2012/05/17/alwayson-hadron-learning-series-worker-pool-usage-for-hadron-enabled-databases.aspx)  
   
-     [Configuration d’AlwaysOn avec SQL Server PowerShell](http://blogs.msdn.com/b/sqlalwayson/archive/2012/02/03/configuring-alwayson-with-sql-server-powershell.aspx)  
+     [Configuration AlwaysOn avec SQL Server PowerShell](http://blogs.msdn.com/b/sqlalwayson/archive/2012/02/03/configuring-alwayson-with-sql-server-powershell.aspx)  
   
      [Blogs de l’équipe AlwaysOn SQL Server : Le Blog officiel de SQL Server AlwaysOn Team](http://blogs.msdn.com/b/sqlalwayson/)  
   
@@ -233,9 +232,9 @@ Add-SqlAvailabilityDatabase -Path "SQLSERVER:\SQL\SecondaryComputer\Instance\Ava
   
 -   **Vidéos :**  
   
-     [Microsoft SQL Server nom de code « Denali », série AlwaysOn, partie 1 : Présentation de la Solution haute disponibilité de prochaine génération](http://channel9.msdn.com/Events/TechEd/NorthAmerica/2011/DBI302)  
+     [Microsoft SQL Server nom de code « Denali », série AlwaysOn, partie 1 : Présentation de la Solution de haute disponibilité prochaine génération](http://channel9.msdn.com/Events/TechEd/NorthAmerica/2011/DBI302)  
   
-     [Microsoft SQL Server nom de code « Denali », série AlwaysOn, partie 2 : Création d’une Solution de haute disponibilité maximale à l’aide d’AlwaysOn](http://channel9.msdn.com/Events/TechEd/NorthAmerica/2011/DBI404)  
+     [Microsoft SQL Server nom de code « Denali », série AlwaysOn, partie 2 : Création d’une Solution de haute disponibilité critique à l’aide d’AlwaysOn](http://channel9.msdn.com/Events/TechEd/NorthAmerica/2011/DBI404)  
   
 -   **Livres blancs :**  
   

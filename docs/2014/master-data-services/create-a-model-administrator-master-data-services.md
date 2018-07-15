@@ -8,23 +8,23 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - administrators [Master Data Services], creating
 ms.assetid: dae17afc-3b39-490e-b51f-2d8da26d429e
 caps.latest.revision: 4
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 06f5acf3bf8c9c4f8df7282934c99b38480a1bd3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: 400be71a74676d0d95ddcd56d1927aed3e7711f8
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36044744"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37195019"
 ---
 # <a name="create-a-model-administrator-master-data-services"></a>Créer un administrateur de modèle (Master Data Services)
-  Dans [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], créer un administrateur de modèle lorsque vous souhaitez un groupe ou à l’utilisateur **mise à jour** autorisation à tous les objets dans un ou plusieurs modèles.  
+  Dans [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], créez un administrateur de modèle lorsque vous souhaitez un groupe ou à l’utilisateur **mise à jour** autorisation à tous les objets dans un ou plusieurs modèles.  
   
 > [!TIP]  
 >  Pour simplifier l'administration, créez un groupe Windows ou local et configurez-le comme un administrateur de modèle. Vous pouvez ensuite ajouter et supprimer des utilisateurs dans le groupe sans accéder à l'interface utilisateur de [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)].  
@@ -61,7 +61,7 @@ ms.locfileid: "36044744"
 ## <a name="remarks"></a>Notes  
  N'affectez pas d'autres autorisations à des objets modèle ou membres de hiérarchie. Si vous le faites, l’utilisateur n’est plus un administrateur et ne peut pas afficher le modèle dans une zone fonctionnelle autre que **Explorer**.  
   
- Il existe une exception : si l’utilisateur a **mise à jour** une autorisation attribuée à une hiérarchie **racine** sur la **membres de hiérarchie** onglet, l’utilisateur est toujours considérée comme un modèle administrateur.  
+ Il existe une exception : si l’utilisateur a **mise à jour** autorisation affectée à une hiérarchie **racine** sur le **membres de hiérarchie** onglet, l’utilisateur est toujours considéré comme un modèle administrateur.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Les administrateurs &#40;Master Data Services&#41;](administrators-master-data-services.md)   

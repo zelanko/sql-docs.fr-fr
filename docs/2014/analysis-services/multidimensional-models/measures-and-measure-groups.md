@@ -1,5 +1,5 @@
 ---
-title: Mesures et groupes de mesures | Documents Microsoft
+title: Mesures et groupes de mesures | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - measure groups [Analysis Services]
 - measures [Analysis Services], about measures
@@ -21,15 +21,15 @@ helpviewer_keywords:
 - fact tables [Analysis Services]
 ms.assetid: 4f0122f9-c3a5-4172-ada3-5bc5f7b1cc9a
 caps.latest.revision: 42
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 74904af589aee642d0c83524f3a6dd71b3390371
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: ba5a5c5b9ebf6bf7dcbf3b5340db941c7f662cf7
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36045462"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37255631"
 ---
 # <a name="measures-and-measure-groups"></a>Mesures et groupes de mesures
   Un cube inclut des *mesures* contenues dans des *groupes de mesures*, une logique métier, ainsi qu'une collection de dimensions qui donnent le contexte d'évaluation des données numériques fournies par une mesure. Les mesures et les groupes de mesures constituent chacun un composant essentiel d'un cube. Un cube ne peut pas exister sans au moins un de chacun de ces composants.  
@@ -50,7 +50,7 @@ ms.locfileid: "36045462"
   
  Chaque cube doit posséder au moins une mesure, mais la plupart en ont plusieurs, parfois même des centaines. D'un point de vue structurel, une mesure est souvent mappée à une colonne source d'une table de faits, cette colonne fournissant les valeurs utilisées pour charger la mesure. Vous pouvez également définir une mesure à l'aide de MDX.  
   
- Les mesures sont contextuelles et s'appliquent à des données numériques dans un contexte qui est déterminé par tout membre de dimension inclus dans la requête. Par exemple, une mesure qui calcule **Reseller Sales** est associée à un `Sum` (opérateur) et ajoute les montants des ventes pour chaque membre de dimension inclus dans la requête. Que la requête spécifie des produits individuels, qu'elle effectue un classement dans une catégorie ou qu'elle soit segmentée par tranches horaires ou par situation géographique, la mesure doit produire une opération qui est valide pour les dimensions incluses dans la requête.  
+ Les mesures sont contextuelles et s'appliquent à des données numériques dans un contexte qui est déterminé par tout membre de dimension inclus dans la requête. Par exemple, une mesure qui calcule **Reseller Sales** est associée à un `Sum` opérateur et ajoute les montants des ventes pour chaque membre de dimension inclus dans la requête. Que la requête spécifie des produits individuels, qu'elle effectue un classement dans une catégorie ou qu'elle soit segmentée par tranches horaires ou par situation géographique, la mesure doit produire une opération qui est valide pour les dimensions incluses dans la requête.  
   
  Dans cet exemple, **Reseller Sales** est agrégé en différents niveaux dans la hiérarchie **Sales Territory** .  
   
@@ -60,7 +60,7 @@ ms.locfileid: "36045462"
   
  Que se passe-t-il si la mesure n'est pas associée aux dimensions utilisées dans la requête ? En général, Analysis Services affiche la mesure par défaut, et la valeur est la même pour tous les membres. Dans cet exemple, les ventes sur Internet ( **Internet Sales**), qui mesurent la vente directe correspondant aux commandes passées par les clients à l’aide du catalogue en ligne, n’ont aucune relation avec l’organisation commerciale.  
   
- ![Valeurs de mesure de tableau croisé dynamique affichant répétées](../media/ssas-unrelatedmeasure.PNG "tableau croisé dynamique affichant répétées des valeurs de mesure")  
+ ![Tableau croisé dynamique affichant répétées des valeurs de mesure](../media/ssas-unrelatedmeasure.PNG "tableau croisé dynamique affichant répétées des valeurs de mesure")  
   
  Pour réduire les risques de rencontrer ces comportements dans une application cliente, vous pouvez créer plusieurs cubes ou perspectives dans la même base de données, et vous assurer que chaque cube ou perspective contient uniquement les objets associés. Les relations que vous devez vérifier sont celles entre le groupe de mesures (mappé à la table de faits) et les dimensions.  
   

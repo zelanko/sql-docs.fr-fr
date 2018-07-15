@@ -8,23 +8,23 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Report Data pane, docking
 ms.assetid: 8b87bb59-6083-44cb-ab34-493855b41585
 caps.latest.revision: 14
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 0792825135920bff993088c00bf5eec1694a342d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: e3d682f7018261e967729a26db201bef5a3b6e41
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36051201"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37220719"
 ---
 # <a name="dock-the-report-data-pane-in-report-designer-ssrs"></a>Ancrer le volet des données de rapport dans le Concepteur de rapports (SSRS)
-  Dans le Concepteur de rapports dans [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], le volet des données de rapport affiche une vue hiérarchique des objets de données que vous pouvez utiliser dans un rapport, y compris les sources de données, des datasets, champs, paramètres et images. Les sources de données dans cette vue peuvent être incorporées ou représenter des références aux sources de données partagées affichées dans l'Explorateur de solutions.  
+  Dans le Concepteur de rapports dans [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], le volet données du rapport affiche une vue hiérarchique des objets de données que vous pouvez utiliser dans un rapport, y compris les sources de données, des jeux de données, des champs, des paramètres et des images. Les sources de données dans cette vue peuvent être incorporées ou représenter des références aux sources de données partagées affichées dans l'Explorateur de solutions.  
   
 ### <a name="to-display-the-report-data-pane"></a>Pour afficher le volet Données du rapport  
   
@@ -48,6 +48,6 @@ ms.locfileid: "36051201"
   
 ## <a name="see-also"></a>Voir aussi  
  [Volet données du rapport](../report-data/report-data-pane.md)   
- [Connexions de données, les Sources de données et les chaînes de connexion dans Reporting Services](../data-connections-data-sources-and-connection-strings-in-reporting-services.md)  
+ [Connexions de données, sources de données et chaînes de connexion dans Reporting Services](../data-connections-data-sources-and-connection-strings-in-reporting-services.md)  
   
   

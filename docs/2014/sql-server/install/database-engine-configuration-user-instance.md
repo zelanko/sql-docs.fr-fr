@@ -1,5 +1,5 @@
 ---
-title: Configuration du moteur - Instance utilisateur de base de données | Documents Microsoft
+title: Instance utilisateur - Configuration du moteur de base de données | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - database engine configuration
 - database engine configuration, user instance
 ms.assetid: dfc27c1e-0fe2-4221-bed5-f52667ddd3c8
 caps.latest.revision: 11
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 00ce0b457fcb64c8568662ce4a64b8929c29e5ff
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: fdba96d79e842f568ba3077c7da0254483b81d60
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36044675"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37274345"
 ---
 # <a name="database-engine-configuration---user-instance"></a>Configuration du moteur de base de données – Instance utilisateur
   La page **Instance utilisateur** permet de générer une instance distincte du [!INCLUDE[ssDE](../../includes/ssde-md.md)] pour les utilisateurs sans autorisations d’administrateur, et d’ajouter des utilisateurs dans le rôle d’administrateur.  

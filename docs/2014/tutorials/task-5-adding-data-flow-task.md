@@ -1,5 +1,5 @@
 ---
-title: 'Tâche 5 : Ajout d’une tâche de flux de données | Documents Microsoft'
+title: 'Tâche 5 : Ajout de tâche de flux de données | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -10,18 +10,18 @@ ms.technology:
 - integration-services
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: ae466627-cc36-4460-a234-fe060f6f01c0
 caps.latest.revision: 6
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: df6bc1e33852258e223d9d02ac69a8dde820d80c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 6d41ec312bb20e14d1d7adc7d3f834663ebc4950
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36043727"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37325169"
 ---
 # <a name="task-5-adding-data-flow-task"></a>Tâche 5 : Ajout d'une tâche de flux de données
   Dans cette tâche, vous allez ajouter une tâche de flux de données au flux de contrôle du package SSIS.  
@@ -30,13 +30,13 @@ ms.locfileid: "36043727"
   
      ![Tâche à partir de la boîte à outils SSIS de flux de données de glisser-déplacer](../../2014/tutorials/media/et-addingdataflowtask.jpg "tâche à partir de la boîte à outils SSIS de flux de données de glisser-déplacer")  
   
-2.  Avec le bouton droit le **Data Flow Task** dans les **flux de contrôle** onglet et cliquez sur **renommer**.  
+2.  Avec le bouton droit le **Data Flow Task** dans le **flux de contrôle** onglet et cliquez sur **renommer**.  
   
 3.  Type **recevoir, nettoyer, correspondance et maintenir les données des fournisseurs** et appuyez sur **entrée**.  
   
 4.  Double-cliquez sur le **Data Flow Task** pour basculer vers le **de flux de données** onglet.  
   
 ## <a name="next-step"></a>Étape suivante  
- [Tâche 6 : Ajout de la Source Excel au flux de données](task-6-adding-excel-source-to-the-data-flow.md)  
+ [Tâche 6 : Ajout d’une source Excel au flux de données](task-6-adding-excel-source-to-the-data-flow.md)  
   
   

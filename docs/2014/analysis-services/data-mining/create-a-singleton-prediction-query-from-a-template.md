@@ -1,5 +1,5 @@
 ---
-title: Créer une requête de prédiction Singleton à partir d’un modèle | Documents Microsoft
+title: Créer une requête de prédiction Singleton à partir d’un modèle | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - singleton query predictions [DMX]
 ms.assetid: e0a68ab0-bece-4d25-b464-47f1719302e6
 caps.latest.revision: 12
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 91180f533afbbb18472d933891ab607a5ba7f6d4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 09d7a8b9de92e18646c00b045cb1d55b0eb311d4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36051618"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37224589"
 ---
 # <a name="create-a-singleton-prediction-query-from-a-template"></a>Créer une requête singleton de prédiction à partir d'un modèle
   Une requête singleton est utile lorsque vous disposez d'un modèle à utiliser pour la prédiction, mais vous ne souhaitez pas le mapper à un jeu de données d'entrée externe ou élaborer des prédictions en bloc. Avec une requête singleton, vous pouvez fournir une ou plusieurs valeurs au modèle et immédiatement consulter la valeur prédite.  
@@ -73,15 +73,15 @@ AS [t]
   
 5.  Dans la ligne **modèle d'exploration de données** , tapez le nom du modèle d'exploration de données extrait de la liste des modèles d'exploration de données qui apparaissent dans l' **Explorateur d'objets**.  
   
-     Dans l’exemple de code présenté au début de cette rubrique, la **modèle d’exploration de** ligne a été définie sur le nom, `TM_Decision_Tree`.  
+     Pour l’exemple de code présenté au début de cette rubrique, le **modèle d’exploration de** ligne a été définie sur le nom, `TM_Decision_Tree`.  
   
 6.  Dans la ligne **valeur** , tapez la nouvelle valeur des données pour lesquelles vous souhaitez effectuer une prédiction.  
   
-     Dans l’exemple de code présenté au début de cette rubrique, la **valeur** ligne a été définie sur `2` pour prédire le comportement en fonction du nombre d’enfants à domicile d’achat de vélos.  
+     Pour l’exemple de code présenté au début de cette rubrique, le **valeur** ligne a été définie sur `2` pour prédire le comportement en fonction du nombre d’enfants à domicile d’achat de bicyclettes.  
   
 7.  Dans la ligne **colonne** , tapez le nom de la colonne du modèle d'exploration de données à laquelle les nouvelles données doivent être mappées.  
   
-     Dans l’exemple de code présenté au début de cette rubrique, la **colonne** ligne a été définie sur `Number Children at Home`.  
+     Pour l’exemple de code présenté au début de cette rubrique, le **colonne** ligne a été définie sur `Number Children at Home`.  
   
     > [!NOTE]  
     >  Lorsque vous utilisez la boîte de dialogue **Spécifier les valeurs des paramètres du modèle** , vous n'avez pas besoin de mettre le nom de colonne entre crochets. Les crochets seront ajoutés automatiquement.  
@@ -97,6 +97,6 @@ AS [t]
 11. Cliquez sur **Exécuter**.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Création de prédictions &#40;didacticiel d’exploration de données de base de données&#41;](../../tutorials/creating-predictions-basic-data-mining-tutorial.md)  
+ [Création de prédictions &#40;didacticiel d’exploration de données de base&#41;](../../tutorials/creating-predictions-basic-data-mining-tutorial.md)  
   
   

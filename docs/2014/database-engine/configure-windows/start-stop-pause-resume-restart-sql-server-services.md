@@ -1,5 +1,5 @@
 ---
-title: Démarrer, arrêter, suspendre, reprendre, barre redémarrer le moteur de base de données, l’Agent SQL Server ou le Service SQL Server Browser | Documents Microsoft
+title: Démarrer, arrêter, suspendre, reprendre, redémarrer le moteur de base de données, l’Agent SQL Server ou le Service SQL Server Browser | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server Configuration Manager, start and stop services
 - stopping SQL Server Agent
@@ -41,15 +41,15 @@ helpviewer_keywords:
 - Management Studio [SQL Server], starting or stopping services
 ms.assetid: 32660a02-e5a1-411a-9e57-7066ca459df6
 caps.latest.revision: 17
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 22a7d3321cfdcbcbd07e5771fd908f409002999a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 760ad35b8212ab8b38e441a3f5db332bce9f2bec
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36045437"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37326279"
 ---
 # <a name="start-stop-pause-resume-restart-the-database-engine-sql-server-agent-or-sql-server-browser-service"></a>Démarrer, arrêter, suspendre, reprendre, redémarrer le moteur de base de données, SQL Server Agent ou le service SQL Server Browser
   Cette rubrique explique comment démarrer, des commandes arrêter, des commandes interrompre, des commandes reprendre, des commandes ou redémarrer le [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], des commandes l'Agent [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou le service [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser à l'aide du Gestionnaire de configuration [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , des commandes de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], des commandes **net** à partir d'une invite de commandes, de des commandes [!INCLUDE[tsql](../../includes/tsql-md.md)], des commandes or PowerShell.  

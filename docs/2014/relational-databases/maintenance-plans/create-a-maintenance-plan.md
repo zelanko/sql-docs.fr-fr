@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - maintenance plans [SQL Server], creating
 ms.assetid: a945cb65-ba7a-42f4-bbd9-6ec675745523
 caps.latest.revision: 29
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: cce3b394ad2f2522a7a16c69dc7e4849623ef239
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 3d72b6d102dde3bdde34dcf621aafe7e1e84a276
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36043842"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37310059"
 ---
 # <a name="create-a-maintenance-plan"></a>Créer un plan de maintenance
   Cette rubrique explique comment créer un plan de serveur ou de maintenance multiserveur unique dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] à l'aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou de [!INCLUDE[tsql](../../includes/tsql-md.md)]. Avec [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], vous pouvez créer ces plans de maintenance de deux manières : avec l'Assistant Plan de maintenance ou au moyen de l'aire de conception. L'Assistant est conseillé pour créer des plans de maintenance de base, tandis que la zone de conception permet d'utiliser un flux de travail optimisé.  

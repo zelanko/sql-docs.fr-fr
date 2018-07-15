@@ -5,25 +5,24 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-security
+ms.technology: security
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Key Management
 - Extensible Key Management
 - EKM, described
 ms.assetid: 9bfaf500-2d1e-4c02-b041-b8761a9e695b
 caps.latest.revision: 45
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 02590440104caba60d6e102ece0844f9424595ee
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: aliceku
+ms.author: aliceku
+manager: craigg
+ms.openlocfilehash: c0537173f3b3750c56ef7e4ef2b582df162f54df
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36044493"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37288665"
 ---
 # <a name="extensible-key-management-ekm"></a>Gestion de clés extensible (EKM)
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] fournit des fonctions de chiffrement de données en même temps que la *gestion de clés extensible* (EKM, Extensible Key Management) à l’aide du fournisseur de *l’API Microsoft Cryptography* (MSCAPI) pour le chiffrement et la génération de clés. Les clés de chiffrement pour les données et le chiffrement à clé sont créés dans des conteneurs de clé transitoires, et ils doivent être exportés d'un fournisseur avant d'être stockés dans la base de données. Cette approche permet à la gestion des clés, qui comprend une hiérarchie de clé de chiffrement et une sauvegarde de clé, d'être gérée par [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
@@ -139,7 +138,7 @@ DECRYPTION BY EKM_AKey1
 ## <a name="related-tasks"></a>Related Tasks  
  [Fournisseur EKM activé (option de configuration de serveur)](../../../database-engine/configure-windows/ekm-provider-enabled-server-configuration-option.md)  
   
- [Activer le chiffrement transparent des données à l’aide de la gestion de clés extensible](enable-tde-on-sql-server-using-ekm.md)  
+ [Activer le chiffrement transparent des données à l’aide de la gestion de clés extensible (EKM)](enable-tde-on-sql-server-using-ekm.md)  
   
  [Gestion de clés extensible à l’aide d’Azure Key Vault &#40;SQL Server&#41;](extensible-key-management-using-azure-key-vault-sql-server.md)  
   

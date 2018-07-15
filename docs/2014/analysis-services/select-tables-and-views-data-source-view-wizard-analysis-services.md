@@ -1,5 +1,5 @@
 ---
-title: Sélectionner des Tables et vues (Assistant vue de Source de données) (Analysis Services) | Documents Microsoft
+title: Sélectionner des Tables et vues (Assistant vue de Source de données) (Analysis Services) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.datasourceviewwizard.selecttablesandviews.f1
 ms.assetid: ea7d1232-f213-46e9-90d9-0fd616ca003d
 caps.latest.revision: 25
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 8bf3897fe2466b00c0346590147884696b632b7b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: b0ec6553114e5a6a5a0700a852c56d4be51eba39
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36051810"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37279505"
 ---
 # <a name="select-tables-and-views-data-source-view-wizard-analysis-services"></a>Sélectionner des tables et des vues (Assistant Vue de source de données) (Analysis Services)
   Utilisez la page **Sélectionner des tables et des vues** pour sélectionner des tables ou des vues dans la source de données que vous voulez inclure dans la vue de la source des données.  
@@ -56,7 +56,7 @@ ms.locfileid: "36051810"
  Ajoute toutes les tables associées à celles figurant dans la liste **Objets inclus**. Cette option n'ajoute pas de vues. Néanmoins, elle ajoute des tables partitionnées. Si vous sélectionnez des critères de correspondance des noms dans la page **Correspondance de noms** de l’Assistant, cette option inclut également les tables logiquement selon les critères sélectionnés. Les tables sont également incluses si elles sont associées à des tables récemment ajoutées et si leur structure est identique à celle de la table d'origine.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Aide (F1) Assistant de vue de Source données &#40;Analysis Services&#41;](data-source-view-wizard-f1-help-analysis-services.md)   
+ [Aide F1 de données Source vue Assistant &#40;Analysis Services&#41;](data-source-view-wizard-f1-help-analysis-services.md)   
  [Vues de sources de données dans les modèles multidimensionnels](multidimensional-models/data-source-views-in-multidimensional-models.md)  
   
   
