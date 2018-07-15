@@ -1,5 +1,5 @@
 ---
-title: Configurer les propriétés de comportement de Table pour les rapports Power View (SSAS tabulaire) | Documents Microsoft
+title: Configurer les propriétés de comportement de Table pour les rapports Power View (SSAS tabulaire) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.bidtoolset.tablebehavior.f1
 ms.assetid: 1386aae0-1d73-4a50-9c69-ae12405d855c
 caps.latest.revision: 7
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: cae146a14e85ed1e41a771f6ad97a9589f0fe272
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: b6ca5036b2e3355ba4866096206296538f07bbae
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36139508"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37267196"
 ---
 # <a name="configure-table-behavior-properties-for-power-view-reports-ssas-tabular"></a>Configurer les propriétés de comportement de table pour les rapports Power View (SSAS Tabulaire)
   Si vous utilisez un modèle tabulaire comme modèle de données pour [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)], vous pouvez définir les propriétés de comportement de table qui exposent les lignes de détails à un niveau plus granulaire. La définition des propriétés de comportement de table modifie le comportement de regroupement des lignes de détail et produit un meilleur placement par défaut des informations d'identification (tels que les noms, les cartes d'identité avec photo ou les images de logo) dans les mises en page de mosaïque, de carte et de graphique.  
@@ -96,7 +96,7 @@ ms.locfileid: "36139508"
 ### <a name="images-are-missing"></a>Des images sont manquantes  
  Les propriétés que vous définissez dans le modèle déterminent si les images sont visualisées dans un rapport, ou représentées comme des valeurs texte dans le rapport.  
   
- ![URL de l’image apparaissent sous forme de texte dans un rapport](../media/ssas-rptprop-noimageurl.gif "URL des images affichées sous forme de texte dans un rapport")  
+ ![URL des images affichées sous forme de texte dans un rapport](../media/ssas-rptprop-noimageurl.gif "URL des images affichées sous forme de texte dans un rapport")  
   
  Par défaut, le texte dans le modèle est interprété comme du texte dans le rapport. Si une colonne de texte est une adresse URL pointant vers une image de rapport, n'oubliez pas de définir la propriété **URL de l'image** afin que [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] récupère le fichier image. Pour les images binaires, n'oubliez pas de définir la propriété **Identificateur de ligne** .  
   
@@ -109,7 +109,7 @@ ms.locfileid: "36139508"
   
  Pour modifier le comportement de regroupement par défaut, définissez les propriétés **Identificateur de ligne** et **Conserver les lignes uniques** . Dans **Conserver les lignes uniques**, choisissez la colonne Nom de sorte que cette valeur soit répétée pour une ligne, même si elle figure déjà dans une autre ligne. Après avoir modifié les propriétés et republié le classeur, vous pouvez créer le même rapport, seulement cette fois-ci, vous verrez les deux clients nommés **Jon Yang**, avec un **Résultat annuel** correctement affecté à chacun.  
   
- ![Ligne de données contenant les doublons en fonction des ID de ligne](../media/ssas-jonyang.gif "contenant les doublons en fonction des ID de ligne de données de ligne")  
+ ![Ligne de données contenant les doublons en fonction des ID de ligne](../media/ssas-jonyang.gif "contenant des doublons basées sur les ID de ligne de données de ligne")  
   
 ### <a name="matrix-layout-is-too-crowded"></a>La disposition de la matrice est surchargée  
  Lorsque vous présentez une table de détail sous forme de matrice, le regroupement par défaut fournit une valeur de synthèse pour chaque colonne. En fonction de vos objectifs, le niveau de synthèse peut être supérieur à ce que vous souhaitez. Pour modifier ce comportement, vous pouvez définir l' **Identificateur de ligne**. Aucune propriété supplémentaire ne doit être définie ; il vous suffit de définir l'identificateur de ligne pour modifier le regroupement de sorte que les synthèses soient calculées pour chaque ligne en fonction de son identificateur de ligne unique.  
@@ -131,11 +131,11 @@ ms.locfileid: "36139508"
   
  **Avant : regroupement par défaut en fonction des champs dans le graphique**  
   
- ![Graphique basé sur le regroupement par défaut au niveau du champ](../media/ssas-rptprop-chartfieldgroup.gif "graphique basé sur le regroupement par défaut au niveau du champ")  
+ ![Graphique basé sur le regroupement par défaut au niveau du champ](../media/ssas-rptprop-chartfieldgroup.gif "graphique basé sur le regroupement par défaut au niveau des champs")  
   
  **Après : regroupement en fonction de l'identificateur de ligne (l'identificateur de ligne devient l'axe)**  
   
- ![Graphique basé sur le regroupement d’ID de ligne](../media/ssas-rptprop-chartrowid.gif "graphique basé sur le regroupement d’ID de ligne")  
+ ![Graphique basé sur le regroupement par ID de ligne](../media/ssas-rptprop-chartrowid.gif "graphique basé sur le regroupement par ID de ligne")  
   
 ## <a name="next-steps"></a>Étapes suivantes  
  Après avoir évalué les tables dans votre modèle et défini les propriétés de comportement de table sur celles contenant les lignes de détails qui doivent toujours apparaître comme des éléments individuels, vous pouvez optimiser le modèle à l'aide de propriétés ou de paramètres supplémentaires.  

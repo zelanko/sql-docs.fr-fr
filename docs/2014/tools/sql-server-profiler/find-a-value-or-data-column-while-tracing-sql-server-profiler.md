@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - searching while trace running
 - traces [SQL Server], running
 - traces [SQL Server], searching while trace running
 ms.assetid: fa5212af-1f49-4227-9d80-58003062146f
 caps.latest.revision: 20
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 868330fc32bdc9c9918c99d8e8540328cad18109
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 37b497001238c21642863fe22dcfaf027f2f9d67
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36141932"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37257675"
 ---
 # <a name="find-a-value-or-data-column-while-tracing-sql-server-profiler"></a>Retrouver une valeur ou une colonne de données pendant le suivi (SQL Server Profiler)
   Cette rubrique décrit comment rechercher une valeur ou une colonne de données particulière au sein des données de sortie de la trace pendant la réalisation de la trace, à l'aide du [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)].  

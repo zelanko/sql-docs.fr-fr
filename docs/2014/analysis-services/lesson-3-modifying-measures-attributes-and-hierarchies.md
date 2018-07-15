@@ -1,5 +1,5 @@
 ---
-title: 'Leçon 3 : Modification des mesures, des attributs et hiérarchies | Documents Microsoft'
+title: 'Leçon 3 : Modification des mesures, des attributs et des hiérarchies | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 17d243cb-9bfb-43d7-8e6f-4d601fd62150
 caps.latest.revision: 14
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: jhubbard
-ms.openlocfilehash: e985dc25323960ccaab5ad9c320bf12bd14bf43a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: f6d1f397b5950144ed898e4907c7ea30bc582f1c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36155147"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37255491"
 ---
 # <a name="lesson-3-modifying-measures-attributes-and-hierarchies"></a>Leçon 3 : Modification des mesures, des attributs et des hiérarchies
   Après avoir défini votre cube initial, vous êtes prêt à améliorer son utilité et sa convivialité. Pour ce faire, ajoutez des hiérarchies qui prennent en charge la navigation et l'agrégation à différents niveaux, appliquez des formats à la mesure spécifique et définissez des calculs et des relations.  
@@ -32,20 +32,20 @@ ms.locfileid: "36155147"
  [Modification des mesures](lesson-3-1-modifying-measures.md)  
  Au cours de cette tâche, vous allez spécifier des propriétés de formatage pour les mesures relatives aux devises et aux pourcentages dans le cube du didacticiel [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] .  
   
- [Modification de la Dimension Customer](lesson-3-2-modifying-the-customer-dimension.md)  
+ [Modification de la dimension Customer](lesson-3-2-modifying-the-customer-dimension.md)  
  Au cours de cette tâche, vous allez définir une hiérarchie utilisateur, créer des calculs nommés, modifier des attributs pour utiliser des calculs nommés et grouper des hiérarchies d'attributs et des hiérarchies utilisateur dans des dossiers d'affichage.  
   
- [Modification de la Dimension de produit](lesson-3-3-modifying-the-product-dimension.md)  
+ [Modification de la dimension Product](lesson-3-3-modifying-the-product-dimension.md)  
  Au cours de cette tâche, vous allez définir une nouvelle hiérarchie utilisateur, créer des calculs nommés, définir le nom de membre All et définir des dossiers d'affichage.  
   
- [Modification de la Dimension Date](lesson-3-4-modifying-the-date-dimension.md)  
+ [Modification de la dimension Date](lesson-3-4-modifying-the-date-dimension.md)  
  Au cours de cette tâche, vous allez définir une hiérarchie utilisateur, modifier des noms de membres d'attribut et utiliser des clés composites pour spécifier des membres d'attribut unique.  
   
- [Exploration du Cube déployé](lesson-3-5-browsing-the-deployed-cube.md)  
+ [Exploration du cube déployé](lesson-3-5-browsing-the-deployed-cube.md)  
  Au cours de cette tâche, vous allez parcourir les données du cube à l'aide du navigateur du Concepteur de cube.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Scénario du didacticiel Analysis Services](analysis-services-tutorial-scenario.md)   
- [Modélisation multidimensionnelle &#40;Adventure Works didacticiel&#41;](multidimensional-modeling-adventure-works-tutorial.md)  
+ [Modélisation multidimensionnelle &#40;didacticiel Adventure Works&#41;](multidimensional-modeling-adventure-works-tutorial.md)  
   
   

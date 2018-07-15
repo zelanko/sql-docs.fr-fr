@@ -8,23 +8,23 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 68ec746e-8c82-47f5-8c3d-dbe403a441e5
 caps.latest.revision: 7
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 82b27a6c90694626a5afc1f2256f1b10868f723f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 2c6bcbf4ce4a3bb3121bd55b8df95070de817f93
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36154991"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37232689"
 ---
 # <a name="exporting-to-a-csv-file-report-builder-and-ssrs"></a>Exportation vers un fichier CSV (Générateur de rapports et SSRS)
   L'extension de rendu CSV (valeurs séparées par des virgules) permet de rendre les rapports sous la forme d'une représentation aplatie des données d'un rapport dans un format standardisé, texte brut qui peut être facilement lu et échangé avec de nombreuses applications.  
   
- L'extension de rendu CSV utilise un caractère en tant que délimiteur de chaîne pour dissocier les champs et les lignes. Le délimiteur peut être configuré pour être un caractère autre que la virgule. Le fichier résultant peut être ouvert dans un tableur comme [!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)] ou utilisé comme format d'importation pour d'autres programmes. Le rapport exporté devient un fichier .csv et retourne le type MIME `text/csv`.  
+ L'extension de rendu CSV utilise un caractère en tant que délimiteur de chaîne pour dissocier les champs et les lignes. Le délimiteur peut être configuré pour être un caractère autre que la virgule. Le fichier résultant peut être ouvert dans un tableur comme [!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)] ou utilisé comme format d'importation pour d'autres programmes. Le rapport exporté devient un fichier .csv et retourne un type MIME de `text/csv`.  
   
  Si vous souhaitez utiliser des données liées aux graphiques, barres de données, graphiques sparkline, jauges et indicateurs dans [!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)], exportez le rapport vers un fichier CSV, puis ouvrez le fichier dans [!INCLUDE[msCoName](../../includes/msconame-md.md)] Excel.  
   
@@ -151,7 +151,7 @@ ms.locfileid: "36154991"
 ## <a name="see-also"></a>Voir aussi  
  [Pagination dans Reporting Services &#40;Générateur de rapports et SSRS&#41;](../report-design/pagination-in-reporting-services-report-builder-and-ssrs.md)   
  [Comportements de rendu &#40;Générateur de rapports et SSRS&#41;](../report-design/rendering-behaviors-report-builder-and-ssrs.md)   
- [Fonctionnalité interactive des différentes Extensions de rendu de rapport &#40;rapport Générateur et SSRS&#41;](interactive-functionality-different-report-rendering-extensions.md)   
+ [Fonctionnalité interactive des différentes Extensions de rendu de rapport &#40;Générateur de rapports et SSRS&#41;](interactive-functionality-different-report-rendering-extensions.md)   
  [Rendu des éléments de rapport &#40;Générateur de rapports et SSRS&#41;](../report-design/rendering-report-items-report-builder-and-ssrs.md)   
  [Tables, matrices et listes &#40;Générateur de rapports et SSRS&#41;](../report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)  
   

@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - reverting queries
 - queries [SQL Server], discarding changes
 - discarding query changes
 ms.assetid: 7bb17ece-1222-4622-b476-5789d7641c64
 caps.latest.revision: 9
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: c5804f6dd20fbe2d5d015f4e1b1d2bc1c51fd712
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 4d2766bc1c064a98b241b6be06518857a3822886
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36041934"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37272145"
 ---
 # <a name="discard-changes-made-to-queries-visual-database-tools"></a>Abandonner les modifications apportées aux requêtes (Visual Database Tools)
   Vous pouvez abandonner les modifications apportées à une définition de requête avant de les enregistrer. Une fois enregistrées, leur état antérieur ne peut pas être rétabli.  
@@ -41,7 +41,7 @@ ms.locfileid: "36041934"
   
 ## <a name="see-also"></a>Voir aussi  
  [Enregistrer des requêtes &#40;Visual Database Tools&#41;](visual-database-tools.md)   
- [Rubriques de procédures de requêtes et les vues de conception &#40;Visual Database Tools&#41;](design-queries-and-views-how-to-topics-visual-database-tools.md)   
+ [Concevoir des requêtes et des vues des rubriques de procédures &#40;Visual Database Tools&#41;](design-queries-and-views-how-to-topics-visual-database-tools.md)   
  [Effectuer des opérations de base avec des requêtes &#40;Visual Database Tools&#41;](perform-basic-operations-with-queries-visual-database-tools.md)   
  [Utiliser des données du volet de résultats &#40;Visual Database Tools&#41;](results-pane-visual-database-tools.md)  
   

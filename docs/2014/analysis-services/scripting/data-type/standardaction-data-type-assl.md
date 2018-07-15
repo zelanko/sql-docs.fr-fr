@@ -1,5 +1,5 @@
 ---
-title: Type de données StandardAction (ASSL) | Documents Microsoft
+title: Type de données StandardAction (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,18 +22,18 @@ helpviewer_keywords:
 - StandardAction data type
 ms.assetid: 81b574d5-06c1-4587-8bd2-0e5c5e3b1d99
 caps.latest.revision: 37
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: bdf3282c6f75cc762ae67a9fab9fc641f25fa3a4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 57116b91719dec65efef9be50926456e33109b4f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36042100"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37267545"
 ---
 # <a name="standardaction-data-type-assl"></a>Type de données StandardAction (ASSL)
-  Définit un type de données dérivé représentant tous les éléments [Action](../objects/action-element-assl.md) éléments autres qu’un [DrillThroughAction](action-data-type-assl.md) élément ou un [ReportAction](reportaction-data-type-assl.md) élément.  
+  Définit un type de données dérivé qui représente tout [Action](../objects/action-element-assl.md) les éléments autres qu’un [DrillThroughAction](action-data-type-assl.md) élément ou un [ReportAction](reportaction-data-type-assl.md) élément.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -64,6 +64,6 @@ ms.locfileid: "36042100"
  L’élément correspondant dans le modèle d’objet objets AMO (Analysis Management) est <xref:Microsoft.AnalysisServices.StandardAction>.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Types de données de script langage XML Analysis Services &#40;ASSL&#41;](analysis-services-scripting-language-xml-data-types-assl.md)  
+ [Types Analysis Services Scripting Language XML données &#40;ASSL&#41;](analysis-services-scripting-language-xml-data-types-assl.md)  
   
   

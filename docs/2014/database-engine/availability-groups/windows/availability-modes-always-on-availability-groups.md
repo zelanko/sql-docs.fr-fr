@@ -5,10 +5,9 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Availability Groups [SQL Server], availability replicas
 - Availability Groups [SQL Server], asynchronous commit
@@ -18,15 +17,15 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], availability modes
 ms.assetid: 10e7bac7-4121-48c2-be01-10083a8c65af
 caps.latest.revision: 37
-author: rothja
-ms.author: jroth
-manager: jhubbard
-ms.openlocfilehash: 924708dabd2cfe4fa94eb6f726e29613d6917d86
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 13676e5706743cb2ce16e0f94e72ab8301695a71
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36139883"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37273745"
 ---
 # <a name="availability-modes-always-on-availability-groups"></a>Modes de disponibilité (Groupes de disponibilité Always On)
   Dans [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)], le *mode de disponibilité* est une propriété de réplica qui détermine si un réplica de disponibilité donné peut fonctionner en mode de validation synchrone. Pour chaque réplica de disponibilité, le mode de disponibilité doit être configuré pour le mode de validation synchrone ou pour le mode de validation asynchrone.  Si le réplica principal est configuré pour le *mode de validation asynchrone*, il n’attend pas que le réplica secondaire écrive des enregistrements dans le journal des transactions entrantes sur le disque (pour *renforcer le journal*). Si un réplica secondaire donné est configuré en mode de validation asynchrone, le réplica principal n'attend pas que ce réplica secondaire renforce le journal. Si le réplica principal et un réplica secondaire donné sont configurés pour le *mode de validation synchrone*, le réplica principal attend que le réplica secondaire confirme qu’il a renforcé le journal (sauf si le réplica secondaire n’envoie pas de commande ping au réplica principal pendant la *période d’expiration de session*du réplica principal).  
@@ -66,7 +65,7 @@ ms.locfileid: "36139883"
   
  Un réplica secondaire avec validation asynchrone tente de suivre les enregistrements de journal reçus du réplica principal. Cependant, en mode avec validation asynchrone, les bases de données secondaires ne sont jamais synchronisées et peuvent rester derrière les bases de données principales correspondantes. Généralement, l'intervalle entre une base de données secondaire avec validation asynchrone et la base de données primaire correspondante est faible. Mais l'intervalle peut devenir substantiel si le serveur qui héberge le réplica secondaire est surchargé ou si le réseau est lent.  
   
- La seule forme de basculement prise en charge par le mode avec validation asynchrone est le basculement forcé (avec perte de données possible). Le basculement forcé est un dernier recours adapté uniquement aux situations dans lesquelles le réplica principal reste indisponible pendant une période prolongée et la disponibilité immédiate des bases de données primaires est plus importante que le risque de perte de données. La cible de basculement doit être un réplica dont le rôle est dans l’état SECONDARY ou RESOLVING. La cible de basculement passe dans le rôle principal et ses copies de bases de données deviennent la base de données primaire. Toutes les bases de données secondaires restantes, avec les bases de données primaires précédentes, une fois qu'elles sont disponibles, sont interrompues jusqu'à ce que vous les repreniez manuellement et individuellement. En mode de validation asynchrone, tous les journaux des transactions que le réplica principal d'origine n'avait pas envoyés à l'ancien réplica secondaire sont perdus. Cela signifie que les transactions validées récemment peuvent manquer dans certaines ou toutes les nouvelles bases de données principales. Pour plus d’informations sur le fonctionnement du basculement forcé et sur les méthodes conseillées pour son utilisation, consultez [basculement et Modes de basculement &#40;groupes de disponibilité AlwaysOn&#41;](failover-and-failover-modes-always-on-availability-groups.md).  
+ La seule forme de basculement prise en charge par le mode avec validation asynchrone est le basculement forcé (avec perte de données possible). Le basculement forcé est un dernier recours adapté uniquement aux situations dans lesquelles le réplica principal reste indisponible pendant une période prolongée et la disponibilité immédiate des bases de données primaires est plus importante que le risque de perte de données. La cible de basculement doit être un réplica dont le rôle est dans l’état SECONDARY ou RESOLVING. La cible de basculement passe dans le rôle principal et ses copies de bases de données deviennent la base de données primaire. Toutes les bases de données secondaires restantes, avec les bases de données primaires précédentes, une fois qu'elles sont disponibles, sont interrompues jusqu'à ce que vous les repreniez manuellement et individuellement. En mode de validation asynchrone, tous les journaux des transactions que le réplica principal d'origine n'avait pas envoyés à l'ancien réplica secondaire sont perdus. Cela signifie que les transactions validées récemment peuvent manquer dans certaines ou toutes les nouvelles bases de données principales. Pour plus d’informations sur le fonctionnement du basculement forcé et sur les meilleures pratiques pour son utilisation, consultez [basculement et Modes de basculement &#40;groupes de disponibilité AlwaysOn&#41;](failover-and-failover-modes-always-on-availability-groups.md).  
   
 ##  <a name="SyncCommitAvMode"></a> Synchronous-Commit Availability Mode  
  En mode de disponibilité avec validation synchrone (*mode avec validation synchrone*), quand on l’attache à un groupe de disponibilité, une base de données secondaire rattrape la base de données primaire correspondante et passe à l’état SYNCHRONIZED. La base de données secondaire reste à l'état SYNCHRONIZED tant que la synchronisation des données continue. Cela garantit que chaque transaction validée sur une base de données primaire donnée a également été validée sur la base de données secondaire correspondante. Lorsque chaque base de données secondaire sur un réplica secondaire donné est synchronisée, l'état synchronization_health de l'ensemble du réplica secondaire est HEALTHY.  
@@ -155,7 +154,7 @@ ms.locfileid: "36139883"
   
 -   [Guide de Solutions Microsoft SQL Server AlwaysOn pour une haute disponibilité et récupération d’urgence](http://go.microsoft.com/fwlink/?LinkId=227600)  
   
--   [Blog de l’équipe AlwaysOn SQL Server : Le Blog officiel de SQL Server AlwaysOn équipe](http://blogs.msdn.com/b/sqlalwayson/)  
+-   [Blog de l’équipe AlwaysOn SQL Server : Le Blog officiel de SQL Server AlwaysOn Team](http://blogs.msdn.com/b/sqlalwayson/)  
   
 ## <a name="see-also"></a>Voir aussi  
  [Vue d’ensemble des groupes de disponibilité AlwaysOn &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   

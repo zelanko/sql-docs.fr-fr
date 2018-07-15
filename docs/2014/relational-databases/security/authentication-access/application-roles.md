@@ -5,10 +5,9 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-security
+ms.technology: security
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - application roles [SQL Server], about application roles
 - principals [SQL Server], application roles
@@ -21,15 +20,15 @@ helpviewer_keywords:
 - groups [SQL Server], roles
 ms.assetid: dca18b8a-ca03-4b7f-9a46-8474d5b66f76
 caps.latest.revision: 31
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 8da65658242f5b8192fa2ec5fb27dc07de704163
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: edmacauley
+ms.author: edmaca
+manager: craigg
+ms.openlocfilehash: 5613f0657b8b8c5a3a9083be022865d83264e5db
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36143862"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37262285"
 ---
 # <a name="application-roles"></a>Rôles d'applications
   Un rôle d'application est un principal de base de données qui permet à une application de s'exécuter avec ses propres autorisations de type utilisateur. Vous pouvez utiliser les rôles d'application pour permettre l'accès à des données spécifiques aux utilisateurs qui se connectent via une application spécifique. À la différence des rôles de base de données, les rôles d'application ne contiennent pas de membres et sont inactifs par défaut. Les rôles d'application fonctionnent avec les deux modes d'authentification. Les rôles d’application sont activés grâce à **sp_setapprole**qui nécessite un mot de passe. Les rôles d’application étant un principal au niveau des bases de données, ils peuvent uniquement accéder à d’autres bases de données par le biais des autorisations accordées dans ces bases de données à **invité**. Toute base de données où **invité** a été désactivé est donc inaccessible aux rôles d’application des autres bases de données.  

@@ -1,5 +1,5 @@
 ---
-title: Configurer le débogueur Transact-SQL | Documents Microsoft
+title: Configurer le débogueur Transact-SQL | Microsoft Docs
 ms.custom: ''
 ms.date: 10/20/2016
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vs.debug.error.sqlde_register_failed
 - vs.debug.error.sqlde_accessdenied
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - TCP/IP [SQL Server], port numbers
 ms.assetid: f50e0b0d-eaf0-4f4a-be83-96f5be63e7ea
 caps.latest.revision: 41
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 747165efe7f5493263da0deec3ec5b2ebcdbad04
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: 79bb9e677f078f4ee1f4a18142fa3068f61349b4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36155009"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37262515"
 ---
 # <a name="configure-the-transact-sql-debugger"></a>Configurer le débogueur Transact-SQL
   Vous devez configurer des règles de Pare-feu Windows pour permettre le débogage [!INCLUDE[tsql](../../includes/tsql-md.md)] en cas de connexion à une instance du [!INCLUDE[ssDE](../../includes/ssde-md.md)] qui s'exécute sur un autre ordinateur que l'Éditeur de requête du [!INCLUDE[ssDE](../../includes/ssde-md.md)] .  
@@ -160,7 +160,7 @@ ms.locfileid: "36155009"
   
 * La fenêtre de l'éditeur de requête du [!INCLUDE[ssDE](../../includes/ssde-md.md)] doit être connectée à une instance du [!INCLUDE[ssDE](../../includes/ssde-md.md)] de [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Service Pack 2 (SP2) ou version ultérieure. Vous ne pouvez pas exécuter le débogueur lorsque la fenêtre de l'éditeur de requête est connectée à une instance en mode mono-utilisateur.
 
-* Le serveur doit communiquer avec le client par le biais de RPC. Le compte sous lequel le service est en cours d’exécution de SQL Server doit avoir authentifier des autorisations pour le client.  
+* Le serveur doit communiquer avec le client par le biais de RPC. Le compte sous lequel le service est en cours d’exécution de SQL Server doit avoir des autorisations au client d’authentification.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Débogueur Transact-SQL](transact-sql-debugger.md)   

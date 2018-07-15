@@ -1,5 +1,5 @@
 ---
-title: Prise en charge MDX (MDX) | Documents Microsoft
+title: Prise en charge MDX (MDX) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - MDX [Analysis Services], statements
 - MDX [Analysis Services], functions
 ms.assetid: 308bc0b3-4fd6-4435-972b-5e40d9e3c99b
 caps.latest.revision: 32
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 0db1a0ef59eafcf20e240aa863ba7ce61edfad55
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 3301717dda71b51283f971fa1a21dbca1c228781
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36154479"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37191156"
 ---
 # <a name="supported-mdx-mdx"></a>Éléments MDX (MDX) pris en charge
   Les instructions et les fonctions suivantes sont prises en charge avec les scripts MDX (Multidimensional Expressions) :  
@@ -57,7 +57,7 @@ ms.locfileid: "36154479"
  [Cela &#40;MDX&#41;](/sql/mdx/this-mdx)  
   
 > [!NOTE]  
->  MDX prend en charge l'assignation aux propriétés de cellule suivantes : `BACK_COLOR`, `FORE_COLOR`, `FORMAT_STRING`, `FONT_FLAGS`, `FONT_NAME` et `FONT_SIZE`. Pour plus d’informations, consultez [Utilisation des propriétés de cellule &#40;MDX&#41;](mdx-cell-properties-using-cell-properties.md). MDX prend également en charge l’affectation à la `NON_EMPTY_BEHAVIOR` propriété de la [CREATE MEMBER](/sql/mdx/mdx-data-definition-create-member) instruction.  
+>  MDX prend en charge l'assignation aux propriétés de cellule suivantes : `BACK_COLOR`, `FORE_COLOR`, `FORMAT_STRING`, `FONT_FLAGS`, `FONT_NAME` et `FONT_SIZE`. Pour plus d’informations, consultez [Utilisation des propriétés de cellule &#40;MDX&#41;](mdx-cell-properties-using-cell-properties.md). MDX prend également en charge l’assignation à la `NON_EMPTY_BEHAVIOR` propriété de la [CREATE MEMBER](/sql/mdx/mdx-data-definition-create-member) instruction.  
   
  [Instruction SCOPE &#40;MDX&#41;](/sql/mdx/mdx-scripting-scope)  
   

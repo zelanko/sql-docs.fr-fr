@@ -1,5 +1,5 @@
 ---
-title: Erreurs et événements du fournisseur WMI | Documents Microsoft
+title: Erreurs et événements du fournisseur WMI | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,15 +14,15 @@ helpviewer_keywords:
 - WMI errors
 ms.assetid: 8d17d074-9937-422c-965a-0f0b31a30d37
 caps.latest.revision: 5
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: aa1928c649e08760ec05ef5d34c566183da7b46e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: ade088611479eca1c79a905ac076c9bbb56c6203
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36140329"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37237369"
 ---
 # <a name="wmi-provider-events-and-errors"></a>Événements et erreurs du fournisseur WMI
   Cette rubrique contient des informations sur les causes et résolutions de certaines erreurs WMI relatives à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  

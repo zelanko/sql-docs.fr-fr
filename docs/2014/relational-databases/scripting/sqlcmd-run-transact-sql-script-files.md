@@ -8,23 +8,23 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - transact sql scripts
 ms.assetid: 90067eb8-ca3e-44e8-bb1a-bf7d1a359423
 caps.latest.revision: 41
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: ff18203f0120210f3443973ed7e44761b84ac8ea
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: 4aa1fd4418e4758ca41cce9d3aeba70838a0dce0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36141265"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37260405"
 ---
 # <a name="run-transact-sql-script-files-using-sqlcmd"></a>Exécuter des fichiers de script Transact-SQL à l'aide de sqlcmd
-  Vous pouvez utiliser `sqlcmd` pour exécuter un fichier de script [!INCLUDE[tsql](../../includes/tsql-md.md)]. A [!INCLUDE[tsql](../../includes/tsql-md.md)] fichier de script est un fichier texte qui peut contenir une combinaison de [!INCLUDE[tsql](../../includes/tsql-md.md)] instructions, `sqlcmd` commandes et variables de script.  
+  Vous pouvez utiliser `sqlcmd` pour exécuter un fichier de script [!INCLUDE[tsql](../../includes/tsql-md.md)]. Un [!INCLUDE[tsql](../../includes/tsql-md.md)] fichier de script est un fichier texte qui peut contenir une combinaison de [!INCLUDE[tsql](../../includes/tsql-md.md)] instructions, `sqlcmd` commandes et variables de script.  
   
  Pour créer un fichier de script [!INCLUDE[tsql](../../includes/tsql-md.md)] simple à l'aide du Bloc-notes, procédez comme suit :  
   

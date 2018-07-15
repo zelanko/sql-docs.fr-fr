@@ -1,5 +1,5 @@
 ---
-title: Vues système, procédures stockées, vues de gestion dynamique et des Types d’attente pour l’OLTP en mémoire | Documents Microsoft
+title: Vues système, procédures stockées, DMV et Types d’attente pour l’OLTP en mémoire | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine-imoltp
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: efaa59e3-dbfa-407f-b1aa-cb0c6602ea17
 caps.latest.revision: 27
 author: stevestein
 ms.author: sstein
-manager: jhubbard
-ms.openlocfilehash: a4e50744a716e42e0fd2767ec9cc677b2ccc085f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 0a11867eafdcd747da207c2ff6783391ed3485f2
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36144559"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37245219"
 ---
 # <a name="system-views-stored-procedures-dmvs-and-wait-types-for-in-memory-oltp"></a>Vues système, des procédures stockées, des vues de gestion dynamique et des Types d’attente pour l’OLTP en mémoire
   Cette rubrique fournit de brèves descriptions et des liens vers de nombreux objets de base de données qui prennent en charge OLTP en mémoire.  
@@ -42,7 +42,7 @@ ms.locfileid: "36144559"
 |Fonction de métadonnées|Description|Fonctionnalité OLTP en mémoire|  
 |-----------------------|-----------------|-----------------------------|  
 |[OBJECTPROPERTYEX &#40;Transact-SQL&#41;](/sql/t-sql/functions/objectproperty-transact-sql)|Vérifiez si les objets de base de données sont optimisés en mémoire.|**ExecIsWithNativeCompilation** et **TableIsMemoryOptimized** propriétés.<br /><br /> Le **IsSchemaBound** propriété prend en charge le type d’objet Procedure (retourne 0 pour les procédures au lieu de NULL).|  
-|[SERVERPROPERTY &#40;Transact-SQL&#41;](/sql/t-sql/functions/serverproperty-transact-sql)|Vérifiez si un serveur prend en charge OLTP en mémoire.|**IsXTPSupported** propriété.|  
+|[SERVERPROPERTY &#40;Transact-SQL&#41;](/sql/t-sql/functions/serverproperty-transact-sql)|Vérifiez si un serveur prend en charge OLTP en mémoire.|**La propriété IsXTPSupported** propriété.|  
   
 ### <a name="system-stored-procedures"></a>Procédures stockées système  
   
@@ -63,7 +63,7 @@ ms.locfileid: "36144559"
 ## <a name="wait-types"></a>Type d’attente  
  Il existe plusieurs types d'attente qui prennent en charge OLTP en mémoire.  
   
- Pour plus d’informations, consultez les types qui sont précédés d’attente **WAIT_XTP**, et **XTPPROC** dans les [sys.dm_os_wait_stats &#40;Transact-SQL&#41; ](/sql/relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql) rubrique.  
+ Pour plus d’informations, consultez les types qui sont précédés d’attentes **WAIT_XTP**, et **XTPPROC** dans le [sys.dm_os_wait_stats &#40;Transact-SQL&#41; ](/sql/relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql) rubrique.  
   
 ## <a name="see-also"></a>Voir aussi  
  [OLTP en mémoire &#40;optimisation en mémoire&#41;](../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)   

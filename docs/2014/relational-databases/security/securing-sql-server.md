@@ -5,10 +5,9 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-security
+ms.technology: security
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - Security [SQL Server]
 helpviewer_keywords:
@@ -19,15 +18,15 @@ helpviewer_keywords:
 - applications [SQL Server], security
 ms.assetid: 4d93489e-e9bb-45b3-8354-21f58209965d
 caps.latest.revision: 28
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 89342bf3f94c2ed56e2040a1fa29b7c74bcf8c7b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: edmacauley
+ms.author: edmaca
+manager: craigg
+ms.openlocfilehash: 4b3b01893519137c5fb707e9cd6b9dad7366c3bf
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36053268"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37250089"
 ---
 # <a name="securing-sql-server"></a>Sécurisation de SQL Server
   La sécurisation de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] peut être vue comme une série d’étapes impliquant quatre domaines : la plateforme, l’authentification, les objets (notamment les données) et les applications qui accèdent au système. Les rubriques suivantes vous guideront tout au long des processus de création et de mise en place d'un plan de sécurité efficace.  
@@ -54,7 +53,7 @@ ms.locfileid: "36053268"
 |Pour obtenir des informations sur|Consultez|  
 |---------------------------|---------|  
 |Configuration d’un pare-feu fonctionnant avec [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|[Configurer un pare-feu Windows pour accéder au moteur de base de données](../../database-engine/configure-windows/configure-a-windows-firewall-for-database-engine-access.md)|  
-|Configuration d’un pare-feu fonctionnant avec [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]|[Configurer un pare-feu Windows pour l’accès au Service SSIS](../../integration-services/configure-a-windows-firewall-for-access-to-the-ssis-service.md)|  
+|Configuration d’un pare-feu fonctionnant avec [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]|[Configurer un Pare-feu Windows pour l’accès au service SSIS](../../integration-services/configure-a-windows-firewall-for-access-to-the-ssis-service.md)|  
 |Configuration d’un pare-feu fonctionnant avec [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]|[Configurer le pare-feu Windows pour autoriser l'accès à Analysis Services](../../analysis-services/instances/configure-the-windows-firewall-to-allow-analysis-services-access.md)|  
 |Ouverture de ports spécifiques sur un pare-feu pour permettre l’accès à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|[Configurer le Pare-feu Windows pour autoriser l'accès à SQL Server](../../sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md)|  
 |Configuration de la prise en charge de la Protection étendue de l'authentification à l'aide de la liaison de canal et liaison de service|[Se connecter au moteur de base de données à l'aide de la protection étendue](../../database-engine/configure-windows/connect-to-the-database-engine-using-extended-protection.md)|  

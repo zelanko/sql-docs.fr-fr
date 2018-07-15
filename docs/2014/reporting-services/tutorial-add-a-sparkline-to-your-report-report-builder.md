@@ -8,23 +8,23 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 18c90a36-48bf-4805-a960-2d1e8f00c2dc
 caps.latest.revision: 13
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 7051dfeda3af9e4bc8de42eaee7f1b52c92589d8
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: f4e61e4ce1c3db29354657f4eb6e3e6c746d7f3f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36041956"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37214499"
 ---
 # <a name="tutorial-add-a-sparkline-to-your-report-report-builder"></a>Didacticiel : ajouter un graphique sparkline à un rapport (Générateur de rapports)
   Dans ce didacticiel, vous allez créer un rapport de tableau de base reposant sur les exemples de données de vente, puis ajouter un graphique sparkline à une cellule du tableau.  
   
- Une version améliorée du rapport créé dans ce didacticiel est disponible sous forme d'exemple de rapport Générateur de rapports de [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]. Pour plus d’informations sur le téléchargement de cet exemple de rapport et d’autres, consultez [rapports exemple](http://go.microsoft.com/fwlink/?LinkId=184851). L'illustration suivante montre l'exemple de rapport similaire à celui que vous allez créer.  
+ Une version améliorée du rapport créé dans ce didacticiel est disponible sous forme d'exemple de rapport Générateur de rapports de [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]. Pour plus d’informations sur le téléchargement de cet exemple de rapport et d’autres, consultez [exemples de rapports Générateur de rapports](http://go.microsoft.com/fwlink/?LinkId=184851). L'illustration suivante montre l'exemple de rapport similaire à celui que vous allez créer.  
   
  ![rs_SparklineMatrixTutorial](../../2014/tutorials/media/rs-sparklinematrixtutorial.gif "rs_SparklineMatrixTutorial")  
   
@@ -37,7 +37,7 @@ ms.locfileid: "36041956"
   
  2. [Créer une requête dans l’Assistant tableau ou matrice](#Query)  
   
- 3. [Ajouter un graphique Sparkline au tableau](#Sparkline)  
+ 3. [Ajouter un graphique Sparkline à la Table](#Sparkline)  
   
  4. [Aligner les graphiques sparkline verticalement et horizontalement](#AlignSparklines)  
   
@@ -46,7 +46,7 @@ ms.locfileid: "36041956"
   
  6. [Format des données en tant que Dates](#FormatDates)  
   
- 7. [Modifier les largeurs de colonne](#Width)  
+ 7. [Modifier la largeur de colonne](#Width)  
   
  8. [Ajouter un titre de rapport](#Title)  
   
@@ -66,7 +66,7 @@ ms.locfileid: "36041956"
      Le **mise en route** boîte de dialogue s’ouvre.  
   
     > [!NOTE]  
-    >  Si le **mise en route** boîte de dialogue n’apparaît pas, à partir de la **le Générateur de rapports** et sur **nouveau**.  
+    >  Si le **mise en route** boîte de dialogue n’apparaît pas, à partir de la **le Générateur de rapports** bouton, cliquez sur **New**.  
   
 2.  Dans le volet gauche, assurez-vous que **Nouveau rapport** est sélectionné.  
   
@@ -87,7 +87,7 @@ ms.locfileid: "36041956"
   
      **Source de données =\<nom_serveur >**  
   
-     L’expression \<nom_serveur >, pour l’exemple rapport001, spécifie un ordinateur sur lequel une instance du moteur de base de données SQL Server est installée. Dans la mesure où les données du rapport ne sont pas extraites d'une base de données SQL Server, vous n'avez pas besoin d'inclure le nom d'une base de données. La base de données par défaut sur le serveur spécifié est utilisée pour analyser la requête.  
+     L’expression \<servername >, par exemple rapport001, spécifie un ordinateur sur lequel une instance du moteur de base de données SQL Server est installée. Dans la mesure où les données du rapport ne sont pas extraites d'une base de données SQL Server, vous n'avez pas besoin d'inclure le nom d'une base de données. La base de données par défaut sur le serveur spécifié est utilisée pour analyser la requête.  
   
 9. Cliquez sur **Informations d'identification**. Entrez les informations d'identification nécessaires pour accéder à la source de données externe.  
   
@@ -254,15 +254,15 @@ ms.locfileid: "36041956"
   
 1.  Cliquez sur **Conception** pour basculer en mode Conception.  
   
-2.  Cliquez sur la cellule de la deuxième ligne (sous la ligne des en-têtes de colonne) dans le **SalesDate** colonne et faites-le glisser pour sélectionner toutes les cellules qui contiennent des `[Sum(Sales)]`.  
+2.  Cliquez sur la cellule dans la deuxième ligne (sous la ligne des en-têtes de colonne) dans le **SalesDate** colonne et faites glisser pour sélectionner toutes les cellules qui contiennent des `[Sum(Sales)]`.  
   
 3.  Sous l’onglet **Accueil** , dans le groupe **Nombre** , cliquez sur le bouton **Devise** . Les cellules changent pour afficher le format de devise.  
   
-     Si votre paramètre régional est Anglais (États-Unis), le texte d’exemple par défaut est [**$12,345.00**]. Si vous ne voyez pas une valeur de devise d’exemple, cliquez sur **Styles des espaces réservés** dans les **numéros** de groupe, puis cliquez sur **exemples de valeurs**.  
+     Si votre paramètre régional est Anglais (États-Unis), le texte d’exemple par défaut est [**$12,345.00**]. Si vous ne voyez pas un exemple de valeur monétaire, cliquez sur **Styles des espaces réservés** dans le **numéros** de groupe, puis cliquez sur **exemples de valeurs**.  
   
 4.  Cliquez sur **Exécuter** pour afficher un aperçu du rapport.  
   
- Les valeurs de synthèse pour **Sales** afficher sous forme de devise.  
+ Les valeurs de synthèse pour **Sales** afficher en tant que devises.  
   
 ##  <a name="FormatDates"></a> 6. (Facultatif) Mettre en forme les données en tant que dates  
  Par défaut, le champ **SalesDate** affiche les informations de date et d’heure. Vous pouvez le mettre en forme de sorte qu'il n'affiche que la date.  
@@ -273,7 +273,7 @@ ms.locfileid: "36041956"
   
 2.  Cliquez sur la cellule qui contient `[SalesDate]`.  
   
-3.  Dans le ruban, dans le **accueil** sous l’onglet le **nombre** groupe, dans la liste déroulante, sélectionnez **Date**.  
+3.  Dans le ruban, sur le **accueil** sous l’onglet le **nombre** groupe, dans la liste déroulante, sélectionnez **Date**.  
   
      La cellule affiche la date d’exemple **[1/31/2000]**. Si vous ne voyez pas s’afficher d’exemple de date, cliquez sur **Styles des espaces réservés** dans le groupe **Nombres** , puis cliquez sur **Valeurs d’aperçu**.  
   

@@ -8,23 +8,23 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: da880fb8-13cc-4d5f-b992-91ed0ec3ca7d
 caps.latest.revision: 10
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: b320adc42b3ff13f2fe7621eb07f7529a1f96e4d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: 40ef90cde297a3d7cb0ba2e51b078d22a6d05163
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36040821"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37224889"
 ---
 # <a name="report-model-connection-ssrs"></a>Connexion à un modèle de rapport (SSRS)
   Pour inclure les données d'un modèle de rapport, vous devez avoir un dataset basé sur un modèle de rapport en tant que source de données. Contrairement aux autres sources de données de rapport, il n'y a aucune extension de données pour un modèle de rapport. Dans le Générateur de rapports, vous recherchez et sélectionnez le modèle directement à partir du serveur de rapports. Dans le Concepteur de rapports, vous spécifiez l'URL au modèle de rapport.  
   
- Utilisez les informations de cette rubrique pour générer une source de données. Pour obtenir des instructions, consultez [ajouter et vérifier une connexion de données ou une Source de données &#40;le Générateur de rapports et SSRS&#41;](add-and-verify-a-data-connection-report-builder-and-ssrs.md).  
+ Utilisez les informations de cette rubrique pour générer une source de données. Pour obtenir des instructions détaillées, consultez [ajouter et vérifier une connexion de données ou d’une Source de données &#40;Générateur de rapports et SSRS&#41;](add-and-verify-a-data-connection-report-builder-and-ssrs.md).  
   
 ##  <a name="Connection"></a> Chaîne de connexion  
  Vous n'avez pas besoin d'une chaîne de connexion pour utiliser un modèle de rapport en tant que source de données. Pour vous connecter à un modèle de rapport, accédez à un serveur de rapports ou un site SharePoint, puis sélectionnez un modèle publié. Sur un site SharePoint, l'extension de nom de fichier de modèle de rapport est .smdl.  
@@ -64,7 +64,7 @@ ms.locfileid: "36040821"
 ##  <a name="HowTo"></a> Rubriques de procédures  
  Cette section contient des instructions pas à pas sur l'utilisation des connexions de données, des sources de données et des datasets.  
   
- [Ajouter et vérifier une connexion de données ou une Source de données &#40;rapport Générateur et SSRS&#41;](add-and-verify-a-data-connection-report-builder-and-ssrs.md)  
+ [Ajouter et vérifier une connexion de données ou d’une Source de données &#40;Générateur de rapports et SSRS&#41;](add-and-verify-a-data-connection-report-builder-and-ssrs.md)  
   
  [Créer un dataset partagé ou incorporé &#40;Générateur de rapports et SSRS&#41;](create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md)  
   
@@ -75,7 +75,7 @@ ms.locfileid: "36040821"
 ##  <a name="Related"></a> Sections connexes  
  Ces sections de la documentation fournissent des informations de fond d'ordre conceptuel sur les données de rapport, ainsi que des informations sur les procédures de définition, de personnalisation et d'utilisation des parties d'un rapport qui sont liées aux données.  
   
- [Ajouter des données à un rapport &#40;rapport Générateur et SSRS&#41;](report-datasets-ssrs.md)  
+ [Ajouter des données à un rapport &#40;Générateur de rapports et SSRS&#41;](report-datasets-ssrs.md)  
  Fournit une vue d'ensemble de l'accès aux données pour votre rapport.  
   
  [Connexions de données, sources de données et chaînes de connexion dans le Générateur de rapports](../data-connections-data-sources-and-connection-strings-in-report-builder.md)  

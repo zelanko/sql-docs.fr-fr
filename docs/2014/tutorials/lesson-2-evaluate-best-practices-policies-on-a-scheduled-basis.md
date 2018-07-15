@@ -1,5 +1,5 @@
 ---
-title: 'Leçon 2 : Évaluer les stratégies des meilleures pratiques de manière planifiée | Documents Microsoft'
+title: 'Leçon 2 : Évaluer les stratégies des meilleures pratiques selon une planification | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 37ffad63-d6db-4609-8deb-786200659554
 caps.latest.revision: 4
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: cd4874e722c12813eb574d94c073cc069f72a4b6
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: craigg-msft
+ms.author: craigg
+manager: craigg
+ms.openlocfilehash: bfdad3793673e24ddf87d504ab71c96c0bac16f9
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36140859"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37196599"
 ---
 # <a name="lesson-2-evaluate-best-practices-policies-on-a-scheduled-basis"></a>Leçon 2 : évaluer les stratégies des meilleures pratiques de façon planifiée
   Vous pouvez configurer des évaluations planifiées des stratégies des meilleures pratiques sur une ou plusieurs instances de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Pour configurer l'exécution des stratégies des meilleures pratiques de façon planifiée, vous devez importer les stratégies dans l'instance cible.  
@@ -39,11 +39,11 @@ ms.locfileid: "36140859"
   
  Cette leçon contient les rubriques suivantes :  
   
--   [Importer les stratégies vers une Instance unique](../../2014/tutorials/import-the-policies-to-a-single-instance.md)  
+-   [Importer les stratégies vers une instance unique](../../2014/tutorials/import-the-policies-to-a-single-instance.md)  
   
 -   [Planifier les stratégies](../../2014/tutorials/schedule-the-policies.md)  
   
--   [Déployer des stratégies planifiées sur plusieurs Instances](../../2014/tutorials/deploy-scheduled-policies-to-multiple-instances.md)  
+-   [Déployer des stratégies planifiées sur plusieurs instances](../../2014/tutorials/deploy-scheduled-policies-to-multiple-instances.md)  
   
 ## <a name="see-also"></a>Voir aussi  
  [Administrer plusieurs serveurs à l'aide de serveurs de gestion centralisée](../relational-databases/administer-multiple-servers-using-central-management-servers.md)  

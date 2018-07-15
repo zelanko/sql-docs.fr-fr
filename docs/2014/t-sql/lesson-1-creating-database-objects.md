@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 9fb8656b-0e4e-4ada-b404-4db4d3eea995
 caps.latest.revision: 19
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 4ed1e12e60f7c738d81412ab306f66ba0f64d1ef
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: edmacauley
+ms.author: edmaca
+manager: craigg
+ms.openlocfilehash: 2a5d2a0984403c5aeec611dd2555a3b3f9736f6f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36152735"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37253391"
 ---
 # <a name="lesson-1-creating-database-objects"></a>Leçon 1 : Création des objets de base de données
   Cette leçon vous montre comment créer une base de données, une table dans la base de données, puis accéder aux données et les modifier dans la table. Étant donné que cette leçon est une introduction à l’utilisation de [!INCLUDE[tsql](../includes/tsql-md.md)], elle n’utilise pas ni ne décrit les nombreuses options disponibles pour ces instructions.  
@@ -46,7 +46,7 @@ ms.locfileid: "36152735"
   
 -   [Lecture des données dans une Table &#40;didacticiel&#41;](lesson-1-4-reading-the-data-in-a-table.md)  
   
--   [Résumé : Création des objets de base de données](lesson-1-5-summary-creating-database-objects.md)  
+-   [Résumé : Création des objets de base de données](lesson-1-5-summary-creating-database-objects.md)  
   
 ## <a name="next-task-in-lesson"></a>Tâche suivante de la leçon  
  [Création d’une base de données &#40;didacticiel&#41;](lesson-1-1-creating-a-database.md)  

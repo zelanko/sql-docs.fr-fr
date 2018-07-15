@@ -1,5 +1,5 @@
 ---
-title: Utilisez les fonctions d’agrégation | Documents Microsoft
+title: Utiliser les fonctions d’agrégation | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,27 +8,27 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - aggregate functions [Analysis Services]
 ms.assetid: c42166ef-b75c-45f4-859c-09a3e9617664
 caps.latest.revision: 29
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 9520426cdb177b8851f0766448f637563b125693
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 68ec0250382ad6ec865ff37adcb847ba6afec978
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36153814"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37257545"
 ---
 # <a name="use-aggregate-functions"></a>Utiliser des fonctions d'agrégation
   Lorsqu'une dimension est utilisée pour segmenter une mesure, celle-ci est résumée en fonction des hiérarchies contenues dans la dimension. Le comportement de sommation dépend de la fonction d'agrégation spécifiée pour la mesure. Pour la plupart des mesures contenant des données numériques, `Sum` est la fonction d'agrégation à utiliser. La valeur de la mesure est la somme de montants différents selon le niveau auquel la hiérarchie est active.  
   
- Dans Analysis Services, chaque mesure que vous créez s'appuie sur une fonction d'agrégation qui détermine l'opération associée à la mesure. Les types d’agrégation prédéfinis incluent `Sum`, `Min`, `Max`, `Count`, **comptage de valeurs**et plusieurs autres fonctions plus spécialisées. Si vous avez besoin d'agrégations basées sur des formules complexes ou personnalisées, vous pouvez aussi créer un calcul MDX au lieu d'utiliser une fonction d'agrégation prédéfinie. Par exemple, si vous souhaitez définir une mesure pour une valeur de pourcentage, utilisez une mesure calculée dans MDX. Consultez [Instruction CREATE MEMBER &#40;MDX&#41;](/sql/mdx/mdx-data-definition-create-member).  
+ Dans Analysis Services, chaque mesure que vous créez s'appuie sur une fonction d'agrégation qui détermine l'opération associée à la mesure. Types d’agrégation prédéfinis incluent `Sum`, `Min`, `Max`, `Count`, **comptage de valeurs**, ainsi que plusieurs autres fonctions plus spécialisées. Si vous avez besoin d'agrégations basées sur des formules complexes ou personnalisées, vous pouvez aussi créer un calcul MDX au lieu d'utiliser une fonction d'agrégation prédéfinie. Par exemple, si vous souhaitez définir une mesure pour une valeur de pourcentage, utilisez une mesure calculée dans MDX. Consultez [Instruction CREATE MEMBER &#40;MDX&#41;](/sql/mdx/mdx-data-definition-create-member).  
   
- Les mesures créées à l'aide de l'Assistant Cube sont affectées à un type d'agrégation au moment de leur définition. Le type d’agrégation est toujours `Sum`, en supposant que la colonne source contienne des données numériques. `Sum` est affecté, quelle que soit le type de données de la colonne source. Par exemple, si vous avez utilisé l'Assistant Cube pour créer des mesures et que vous avez extrait toutes les colonnes d'une table de faits, vous remarquerez que toutes les mesures obtenues comportent une agrégation de la fonction `Sum`, même si la colonne source est de type date/heure. Examinez toujours les méthodes d'agrégation prédéfinies pour les mesures créées via l'Assistant pour vous assurer que la fonction d'agrégation est appropriée.  
+ Les mesures créées à l'aide de l'Assistant Cube sont affectées à un type d'agrégation au moment de leur définition. Le type d’agrégation est toujours `Sum`, en supposant que la colonne source contient des données numériques. `Sum` est affecté, quel que soit le type de données de la colonne source. Par exemple, si vous avez utilisé l'Assistant Cube pour créer des mesures et que vous avez extrait toutes les colonnes d'une table de faits, vous remarquerez que toutes les mesures obtenues comportent une agrégation de la fonction `Sum`, même si la colonne source est de type date/heure. Examinez toujours les méthodes d'agrégation prédéfinies pour les mesures créées via l'Assistant pour vous assurer que la fonction d'agrégation est appropriée.  
   
  Vous pouvez affecter ou changer la méthode d’agrégation dans la définition du cube, via [!INCLUDE[ss_dtbi](../../includes/ss-dtbi-md.md)] ou via MDX. Pour obtenir d’autres instructions, consultez [Créer des mesures et groupes de mesures dans les modèles multidimensionnels](create-measures-and-measure-groups-in-multidimensional-models.md) ou [Aggregate &#40;MDX&#41;](/sql/mdx/aggregate-mdx).  
   

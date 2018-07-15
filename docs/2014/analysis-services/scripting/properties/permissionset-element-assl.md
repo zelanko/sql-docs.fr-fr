@@ -1,5 +1,5 @@
 ---
-title: Élément PermissionSet (ASSL) | Documents Microsoft
+title: Élément PermissionSet (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - PermissionSet element
 ms.assetid: da5a9175-48e4-4b5e-a780-3e0077939974
 caps.latest.revision: 35
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: a6246058af826a73b589f1854b0236de946a4d65
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 471ef43aea9fadcca7ab8a4a36870a3bdddee22f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36141642"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37263465"
 ---
 # <a name="permissionset-element-assl"></a>Élément PermissionSet (ASSL)
   Identifie le jeu d’autorisations associé à un [!INCLUDE[msCoName](../../../includes/msconame-md.md)] assembly .NET Framework.  
@@ -68,15 +68,15 @@ ms.locfileid: "36141642"
 |-----------|-----------------|  
 |*Safe*|Seul un accès aux données local et le calcul interne sont autorisés. *Safe* est le jeu d'autorisations le plus restrictif. Le code exécuté par un assembly à l'aide des autorisations *Safe* ne peut pas accéder aux ressources système externes telles que les fichiers, le réseau, les variables d'environnement ou le Registre.|  
 |*ExternalAccess*|*Safe*avec possibilité en prime d'accéder aux ressources système externes, notamment aux fichiers, aux réseaux, aux variables d'environnement et au Registre.|  
-|*Non restreint*|Unrestricted autorise l’accès sans restriction aux ressources, au sein et en dehors de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Le code qui s'exécute dans un assembly *Unrestricted* peut appeler du code non managé.|  
+|*Non restreint*|Unrestricted autorise les assemblys un accès illimité aux ressources, à la fois au sein et en dehors de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Le code qui s'exécute dans un assembly *Unrestricted* peut appeler du code non managé.|  
   
- L’énumération qui correspond aux valeurs autorisées pour `PermissionSet` dans l’objet d’objets AMO (Analysis Management) est modèle <xref:Microsoft.AnalysisServices.PermissionSet>.  
+ L’énumération qui correspond aux valeurs autorisées pour `PermissionSet` dans l’objet d’objets AMO (Analysis Management) modèle est <xref:Microsoft.AnalysisServices.PermissionSet>.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Type de données ComAssembly &#40;ASSL&#41;](../data-type/comassembly-data-type-assl.md)   
  [Élément Assemblies &#40;ASSL&#41;](../collections/assemblies-element-assl.md)   
  [Élément de base de données &#40;ASSL&#41;](../objects/database-element-assl.md)   
- [Élément serveur &#40;ASSL&#41;](../objects/server-element-assl.md)   
+ [Élément de serveur &#40;ASSL&#41;](../objects/server-element-assl.md)   
  [Propriétés &#40;ASSL&#41;](properties-assl.md)  
   
   

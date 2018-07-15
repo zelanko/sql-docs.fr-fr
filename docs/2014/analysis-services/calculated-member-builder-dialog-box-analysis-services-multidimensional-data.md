@@ -1,5 +1,5 @@
 ---
-title: Boîte de dialogue Générateur de membres (Analysis Services - données multidimensionnelles) calculés | Documents Microsoft
+title: Calculé la boîte de dialogue Générateur de membres (Analysis Services - données multidimensionnelles) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.calculatedmemberbuilderdialog.f1
 ms.assetid: 73b89a9f-f403-4ab8-99f7-e3ceb870c260
 caps.latest.revision: 10
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 471f90f9caf9fbe3c6b8bf8463ab458e24a938ee
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
-ms.translationtype: HT
+manager: craigg
+ms.openlocfilehash: 8b2df3f9bdb11a344d332a50580a992680118afa
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36039409"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37220499"
 ---
 # <a name="calculated-member-builder-dialog-box-analysis-services---multidimensional-data"></a>Boîte de dialogue Générateur de membres calculés (Analysis Services - Données multidimensionnelles)
   Utilisez la boîte de dialogue **Générateur de membres calculés** dans [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] pour créer un membre calculé.  

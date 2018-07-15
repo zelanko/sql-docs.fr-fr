@@ -1,5 +1,5 @@
 ---
-title: Parcourir la boîte de dialogue Source de données (Analysis Services - données multidimensionnelles) | Documents Microsoft
+title: Parcourir la boîte de dialogue Source de données (Analysis Services - données multidimensionnelles) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.cubeeditor.datasourcebrowse.f1
 helpviewer_keywords:
 - Browse Data Source dialog box
 ms.assetid: 134355cb-69a7-4b16-8076-82ede43ce940
 caps.latest.revision: 18
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 1a9d79dcdd46725f9f25e99fd137a0ae03157779
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: fa774aa43f42ce049f47f7c52204217a22f3be63
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36140858"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37196629"
 ---
 # <a name="browse-data-source-dialog-box-analysis-services---multidimensional-data"></a>Boîte de dialogue Parcourir la source de données (Analysis Services - Données multidimensionnelles)
   Utilisez la boîte de dialogue **Parcourir la source de données** dans [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] pour afficher les 1 000 premiers enregistrements de la table sélectionnée.  

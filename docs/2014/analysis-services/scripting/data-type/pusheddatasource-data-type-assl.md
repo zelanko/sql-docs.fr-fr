@@ -1,5 +1,5 @@
 ---
-title: Type de données PushedDataSource (ASSL) | Documents Microsoft
+title: Type de données PushedDataSource (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - PushedDataSource data type
 ms.assetid: b319ee87-7c0a-41ec-a8af-cc7089aeb6ad
 caps.latest.revision: 36
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: cd0dec86e7c3abedf241fd79e44bdafd28297c7c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 98309a1fa1706efaed47ab27cdf88d0b3e313fa5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36152706"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37235569"
 ---
 # <a name="pusheddatasource-data-type-assl"></a>Type de données PushedDataSource (ASSL)
   Définit un type de données primitif qui représente une source de données (comme un [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] package) utilisé pour « pousser » des données dans un [Cube](../objects/cube-element-assl.md) élément.  
@@ -64,6 +64,6 @@ ms.locfileid: "36152706"
  `PushedDataSource` est utilisé uniquement dans une commande de traitement en tant que source de données hors ligne. Les sources de données persistantes ne sont jamais de ce type.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Types de données de script langage XML Analysis Services &#40;ASSL&#41;](analysis-services-scripting-language-xml-data-types-assl.md)  
+ [Types Analysis Services Scripting Language XML données &#40;ASSL&#41;](analysis-services-scripting-language-xml-data-types-assl.md)  
   
   

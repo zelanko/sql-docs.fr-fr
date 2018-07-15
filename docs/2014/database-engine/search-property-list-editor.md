@@ -1,33 +1,32 @@
 ---
-title: Éditeur de liste de propriétés de recherche | Documents Microsoft
+title: Éditeur de liste de propriétés de recherche | Microsoft Docs
 ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-search
+ms.technology: search
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.spl.searchpropertylisteditor.f1
 ms.assetid: 0f3ced6e-0dfd-49fc-b175-82378c3d668e
 caps.latest.revision: 26
 author: craigg-msft
 ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: e34bcf522675e13e9b1fa987f0f3bfc6aba36efb
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 3f55070e129328e8b876a97382bfca4462a4cf70
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36140074"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37231529"
 ---
 # <a name="search-property-list-editor"></a>Éditeur de listes de propriétés de recherche
   Utilisez cette boîte de dialogue pour ajouter ou supprimer des propriétés de recherche dans une liste de propriétés de recherche.  
   
 ## <a name="to-use-sql-server-management-studio-to-manage-search-property-lists"></a>Pour utiliser SQL Server Management Studio pour gérer des listes de propriétés de recherche  
- Pour plus d’informations sur la façon de créer, afficher ou supprimer une liste de propriétés de recherche et sur la configuration d’un index de recherche en texte intégral pour la recherche de propriétés, consultez [recherche les propriétés de Document avec des listes de propriétés de recherche](../relational-databases/search/search-document-properties-with-search-property-lists.md).  
+ Pour plus d’informations sur la façon de créer, afficher ou supprimer une liste de propriétés de recherche et sur la configuration d’un index de recherche en texte intégral pour la recherche de propriétés, consultez [Search Document Properties with Search Property Lists](../relational-databases/search/search-document-properties-with-search-property-lists.md).  
   
 ## <a name="options"></a>Options  
  **Nom de propriété**  
@@ -35,7 +34,7 @@ ms.locfileid: "36140074"
   
  Les développeurs utilisent le nom de propriété pour identifier la propriété dans le [CONTAINS](/sql/t-sql/queries/contains-transact-sql) prédicat. Par conséquent, lors de l'ajout d'une propriété, il est important de spécifier une valeur qui représente la propriété de manière significative.  
   
- **GUID du jeu**  
+ **GUID du jeu de propriété**  
  Spécifiez l'identificateur du jeu de propriétés auquel appartient la propriété. Il s'agit d'un identificateur global unique (GUID). Un jeu de propriétés est un groupe de propriétés connexes du point du vue logique. Pour plus d'informations sur l'obtention de cette valeur, consultez les « Notes », dans la suite de cette rubrique.  
   
  **ID entier de propriété**  

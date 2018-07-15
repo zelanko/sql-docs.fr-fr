@@ -1,5 +1,5 @@
 ---
-title: Installer SQL Server 2014 à partir de l’Assistant Installation (programme d’installation) | Documents Microsoft
+title: Installer SQL Server 2014 à partir de l’Assistant Installation (installation) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,35 +8,35 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - installing SQL Server, steps
 - Setup [SQL Server], steps
 - SQL Server, installing
 ms.assetid: 6ad23de1-2bab-4933-9122-c09f5565028d
 caps.latest.revision: 79
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 684a9d837fa08beaf8917a7193edff622aea4cc5
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 6ff8c854a7f2004b30caa11c48423de0995d4652
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36042757"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37250619"
 ---
 # <a name="install-sql-server-2014-from-the-installation-wizard-setup"></a>Installer SQL Server 2014 avec l'assistant d'installation (programme d'installation)
-  Cette rubrique fournit une procédure d'installation pas à pas d'une nouvelle instance [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] avec l'Assistant Installation du programme d'installation [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . L'Assistant Installation de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fournit une seule arborescence de fonctionnalités pour l'installation de tous les composants [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ce qui vous évite d'installer individuellement les composants. Pour plus d’informations sur les différents composants qui peuvent être installés, consultez [Installation de SQL Server 2014](installation-for-sql-server.md).  Pour plus d’informations sur la façon d’installer le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] composants individuellement, consultez [installer SQL Server 2014](install-sql-server.md).  
+  Cette rubrique fournit une procédure d'installation pas à pas d'une nouvelle instance [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] avec l'Assistant Installation du programme d'installation [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . L'Assistant Installation de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fournit une seule arborescence de fonctionnalités pour l'installation de tous les composants [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ce qui vous évite d'installer individuellement les composants. Pour plus d’informations sur les différents composants qui peuvent être installés, consultez [Installation pour SQL Server 2014](installation-for-sql-server.md).  Pour plus d’informations sur la façon d’installer le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] composants individuellement, consultez [installer SQL Server 2014](install-sql-server.md).  
   
  Ces rubriques supplémentaires décrivent d'autres façons d'installer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:  
   
 -   [Installer SQL Server 2014 à partir de l’invite de commandes](install-sql-server-from-the-command-prompt.md).  
   
--   [Installer SQL Server 2014 à l’aide d’un fichier de Configuration](install-sql-server-using-a-configuration-file.md)  
+-   [Installer SQL Server 2014 à l’aide d’un fichier de configuration](install-sql-server-using-a-configuration-file.md)  
   
--   [Installation de SQL Server 2014 à l’aide de SysPrep](install-sql-server-using-sysprep.md)  
+-   [Installer SQL Server 2014 à l’aide de SysPrep](install-sql-server-using-sysprep.md)  
   
--   [Créer un Cluster de basculement SQL Server &#40;le programme d’installation&#41;](../../sql-server/failover-clusters/install/create-a-new-sql-server-failover-cluster-setup.md).  
+-   [Créer un nouveau Cluster de basculement SQL Server &#40;le programme d’installation&#41;](../../sql-server/failover-clusters/install/create-a-new-sql-server-failover-cluster-setup.md).  
   
 -   [Mise à niveau vers SQL Server 2014 à l’aide de l’Assistant Installation &#40;le programme d’installation&#41;](upgrade-sql-server-using-the-installation-wizard-setup.md).  
   
@@ -114,7 +114,7 @@ ms.locfileid: "36042757"
   
     -   Mode de sécurité — Sélectionnez l'authentification Windows ou le mode d'authentification mixte pour votre instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Si vous sélectionnez Mode d'authentification mixte, vous devez fournir un mot de passe fort pour le compte administrateur système [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] intégré.  
   
-         Lorsque la connexion d'un périphérique à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]est établie, le mécanisme de sécurité est le même pour l'authentification Windows et le mode mixte. Pour plus d’informations, consultez [Configuration du moteur de base de données - configuration du compte](../../sql-server/install/database-engine-configuration-account-provisioning.md).  
+         Lorsque la connexion d'un périphérique à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]est établie, le mécanisme de sécurité est le même pour l'authentification Windows et le mode mixte. Pour plus d’informations, consultez [Configuration du moteur de base de données - l’approvisionnement de comptes](../../sql-server/install/database-engine-configuration-account-provisioning.md).  
   
     -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] — Vous devez spécifier au moins un administrateur système pour l'instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Pour ajouter le compte sous lequel le programme d'installation de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] s'exécute, cliquez sur **Ajouter l'utilisateur actuel**. Pour ajouter ou supprimer des comptes dans la liste des administrateurs système, cliquez sur **Ajouter** ou sur **Supprimer**, puis modifiez la liste des utilisateurs, groupes ou ordinateurs qui disposeront des privilèges d'administrateur pour l'instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   

@@ -1,5 +1,5 @@
 ---
-title: Élément KeyColumn (ASSL) | Documents Microsoft
+title: Élément KeyColumn (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - KeyColumn element
 ms.assetid: 7b03eeb3-d478-4c38-822e-8cdfcc485039
 caps.latest.revision: 39
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 7594a92eb8c2eb4cdb423c7298bc3929dc49dc32
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 3e27744d2c8e2d54d44318ceac7b79dc4e4e10e4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36042994"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37247759"
 ---
 # <a name="keycolumn-element-assl"></a>Élément KeyColumn (ASSL)
   Contient la définition d'une colonne qui est la clé d'un attribut ou en fait partie.  
@@ -60,7 +60,7 @@ ms.locfileid: "36042994"
 |Éléments enfants|None|  
   
 ## <a name="remarks"></a>Notes  
- Pour plus d’informations sur la `DataItem` type, y compris un tableau d’objets d’Analysis Services Scripting Language (ASSL) et les propriétés de la `DataItem` de type, consultez [Type de données DataItem &#40;ASSL&#41;](../data-type/dataitem-data-type-assl.md).  
+ Pour plus d’informations sur la `DataItem` type, notamment un tableau des objets d’Analysis Services Scripting Language (ASSL) et les propriétés de la `DataItem` de type, consultez [Type de données DataItem &#40;ASSL&#41;](../data-type/dataitem-data-type-assl.md).  
   
  Les éléments qui correspondent aux parents de la collection `KeyColumns` dans le modèle objet AMO (Analysis Management Objects) sont <xref:Microsoft.AnalysisServices.AggregationInstanceAttribute>, <xref:Microsoft.AnalysisServices.DimensionAttribute>, <xref:Microsoft.AnalysisServices.MeasureGroupAttribute> et <xref:Microsoft.AnalysisServices.ScalarMiningStructureColumn>.  
   

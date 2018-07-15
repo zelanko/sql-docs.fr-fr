@@ -1,5 +1,5 @@
 ---
-title: Type de données RelationalDataSource (ASSL) | Documents Microsoft
+title: Type de données RelationalDataSource (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,18 +22,18 @@ helpviewer_keywords:
 - RelationalDataSource data type
 ms.assetid: 2b99d7d0-731d-4506-8c37-678a5dc29c8a
 caps.latest.revision: 34
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 2928f86dd45538cc1507718008113522d02f80a4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 0739648e7e843bbfce62953a1bae543be4f2f9c4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36142570"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37204129"
 ---
 # <a name="relationaldatasource-data-type-assl"></a>Type de données RelationalDataSource (ASSL)
-  Définit un type de données dérivé qui représente un [DataSource](../objects/datasource-element-assl.md) élément basé sur une source de données relationnelle.  
+  Définit un type de données dérivé qui représente un [DataSource](../objects/datasource-element-assl.md) élément basé sur une source de données relationnelles.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -63,6 +63,6 @@ ms.locfileid: "36142570"
  L’élément correspondant dans le modèle d’objet objets AMO (Analysis Management) est <xref:Microsoft.AnalysisServices.RelationalDataSource>.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Types de données de script langage XML Analysis Services &#40;ASSL&#41;](analysis-services-scripting-language-xml-data-types-assl.md)  
+ [Types Analysis Services Scripting Language XML données &#40;ASSL&#41;](analysis-services-scripting-language-xml-data-types-assl.md)  
   
   

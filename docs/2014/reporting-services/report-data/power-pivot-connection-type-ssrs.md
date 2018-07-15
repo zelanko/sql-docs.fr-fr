@@ -1,5 +1,5 @@
 ---
-title: Type de connexion PowerPivot (SSRS) | Documents Microsoft
+title: Type de connexion PowerPivot (SSRS) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,23 +8,23 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: a104c3c7-f118-4d02-9a0f-6859f1469d11
 caps.latest.revision: 8
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: cf22b7c44d554f4e82eb330752d8580102469cc2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: 3cf73cb88d2d7e88836e41e5b1a8c3a80368e8a7
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36052997"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37234749"
 ---
 # <a name="powerpivot-connection-type-ssrs"></a>Type de connexion PowerPivot (SSRS)
   Vous pouvez utiliser l'extension pour le traitement des données SQL Server Analysis Services pour récupérer des données d'un classeur PowerPivot qui est publié dans une Galerie SharePoint PowerPivot.  
   
- Utilisez les informations de cette rubrique pour générer une source de données. Pour obtenir des instructions, consultez [ajouter et vérifier une connexion de données ou une Source de données &#40;le Générateur de rapports et SSRS&#41;](add-and-verify-a-data-connection-report-builder-and-ssrs.md).  
+ Utilisez les informations de cette rubrique pour générer une source de données. Pour obtenir des instructions détaillées, consultez [ajouter et vérifier une connexion de données ou d’une Source de données &#40;Générateur de rapports et SSRS&#41;](add-and-verify-a-data-connection-report-builder-and-ssrs.md).  
   
 ## <a name="prerequisites"></a>Prérequis  
  La source de données PowerPivot doit être publiée dans une Galerie PowerPivot sur un site SharePoint.  
@@ -56,7 +56,7 @@ ms.locfileid: "36052997"
   
  Les données contenues dans un classeur PowerPivot sont fortement compressées ; les données récupérées à partir du classeur PowerPivot pour un rapport ne sont pas compressées. Utilisez le concepteur de requêtes pour spécifier des filtres et des paramètres afin de limiter les données à ce qui est absolument nécessaire dans le rapport.  
   
- Contrairement à la connexion à un cube Analysis Services, un modèle PowerPivot n'a pas de hiérarchies. Pour fournir des fonctionnalités semblables aux segments associés dans le classeur, vous devez créer des paramètres en cascade dans le rapport. Pour plus d’informations, consultez [ajouter des paramètres en cascade à un rapport &#40;le Générateur de rapports et SSRS&#41;](../report-design/add-cascading-parameters-to-a-report-report-builder-and-ssrs.md).  
+ Contrairement à la connexion à un cube Analysis Services, un modèle PowerPivot n'a pas de hiérarchies. Pour fournir des fonctionnalités semblables aux segments associés dans le classeur, vous devez créer des paramètres en cascade dans le rapport. Pour plus d’informations, consultez [ajouter des paramètres en cascade à un rapport &#40;Générateur de rapports et SSRS&#41;](../report-design/add-cascading-parameters-to-a-report-report-builder-and-ssrs.md).  
   
  Dans certains cas, vous devrez peut-être ajuster les expressions pour adapter les valeurs de données sous-jacentes du modèle PowerPivot. Vous devrez peut-être modifier des expressions pour convertir les données dans le type de données approprié, ou ajouter ou supprimer une fonction d'agrégation. Par exemple, pour convertir le type de données de Chaîne en Entier, utilisez `=CInt`. Vérifiez toujours que le rapport affiche les valeurs attendues des données dans le modèle PowerPivot avant de publier le rapport.  
   
@@ -67,7 +67,7 @@ ms.locfileid: "36052997"
 -   Le rapport contient uniquement des données PowerPivot provenant d'une source de données PowerPivot.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Interface utilisateur du Concepteur de requêtes MDX de Analysis Services &#40;Générateur de rapports&#41;](../analysis-services-mdx-query-designer-user-interface-report-builder.md)   
+ [Interface utilisateur du Concepteur de requêtes MDX Analysis Services &#40;Générateur de rapports&#41;](../analysis-services-mdx-query-designer-user-interface-report-builder.md)   
  [Expressions &#40;Générateur de rapports et SSRS&#41;](../report-design/expressions-report-builder-and-ssrs.md)  
   
   

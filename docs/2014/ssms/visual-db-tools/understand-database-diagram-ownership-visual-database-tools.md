@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vdt.diagnostic.CannotOpenWithInvalidOwner
 helpviewer_keywords:
@@ -17,18 +17,18 @@ helpviewer_keywords:
 - owners [SQL Server], database diagrams
 ms.assetid: 4a27a48e-c4ef-4017-82b8-0cac4d0bbcac
 caps.latest.revision: 19
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 6a05d1be7a194bd3ed47aed4936cdc51d479e81f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 7da66b3b6958d2b726d3e4229773284ae991e5ec
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36154083"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37272125"
 ---
 # <a name="understand-database-diagram-ownership-visual-database-tools"></a>Comprendre la propriété du schéma de base de données (Visual Database Tools)
-  Pour utiliser le Concepteur de schémas de base de données, il doit d'abord être installé par un membre du rôle db_owner (rôle de base de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]) pour contrôler l'accès aux schémas. Chaque schéma a un seul propriétaire : l'utilisateur qui l'a créé. Pour plus d’informations sur la définition des schémas, consultez [définir de Concepteur de schémas de base de données &#40;Visual Database Tools&#41;](visual-database-tools.md).  
+  Pour utiliser le Concepteur de schémas de base de données, il doit d'abord être installé par un membre du rôle db_owner (rôle de base de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]) pour contrôler l'accès aux schémas. Chaque schéma a un seul propriétaire : l'utilisateur qui l'a créé. Pour plus d’informations sur la configuration des schémas, consultez [Set Up Database Diagram Designer &#40;Visual Database Tools&#41;](visual-database-tools.md).  
   
  Voici quelques points à retenir au sujet de la propriété des schémas :  
   

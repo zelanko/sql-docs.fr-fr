@@ -1,5 +1,5 @@
 ---
-title: Déconnexion d’une Instance de SQL Server | Documents Microsoft
+title: Déconnexion d’une Instance de SQL Server | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -17,18 +17,18 @@ helpviewer_keywords:
 - disconnecting [SMO]
 ms.assetid: 4ca7f7eb-6b3f-4c73-ac63-88afa8570b61
 caps.latest.revision: 43
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 1f2ce4ae7ce42df42be9b6bc68c3d13acf949dba
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 5a232aefef8293ef84b99dce5aa3864e9702dab1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36141483"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37225259"
 ---
 # <a name="disconnecting-from-an-instance-of-sql-server"></a>Déconnexion d'une instance de SQL Server
-  Fermeture et la déconnexion [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] les objets Management Objects (SMO) n’est pas obligatoire. Les connexions sont ouvertes et fermées en fonction des besoins.  
+  Fermeture et la déconnexion [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] les objets SMO (Management Objects) n’est pas obligatoire. Les connexions sont ouvertes et fermées en fonction des besoins.  
   
 ## <a name="connection-pooling"></a>Regroupement de connexions  
  Lorsque le <xref:Microsoft.SqlServer.Management.Common.ConnectionManager.Connect%2A> est appelée, la connexion n’est pas automatiquement libérée. La méthode <xref:Microsoft.SqlServer.Management.Common.ConnectionManager.Disconnect%2A> doit être appelée explicitement pour libérer la connexion au pool de connexions. Vous pouvez également demander une connexion non regroupée. Pour ce faire, vous définissez la propriété <xref:Microsoft.SqlServer.Management.Common.ConnectionSettings.NonPooledConnection%2A> de la propriété <xref:Microsoft.SqlServer.Management.Smo.Server.ConnectionContext%2A> qui fait référence à l'objet <xref:Microsoft.SqlServer.Management.Common.ServerConnection>.  

@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Activity Monitor [SQL Server], setting the refresh interval
 - refresh interval for Activity Monitor
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - opening Activity Monitor
 ms.assetid: 0a6eeb16-f02b-479d-9a60-543e40ebf46b
 caps.latest.revision: 33
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: c2f067d5efbf5b8e3262311e3b351e0443920287
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 8b1910e465e9f2f5d8341c5dd51596d5a6710bb0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36142707"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37262435"
 ---
 # <a name="open-activity-monitor-sql-server-management-studio"></a>Ouvrir le Moniteur d'activité (SQL Server Management Studio)
   Cette rubrique décrit la façon d'ouvrir le Moniteur d'activité pour obtenir des informations sur les processus [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et la façon dont ces processus affectent l'instance actuelle de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Elle explique également comment définir l'intervalle d'actualisation du Moniteur d'activité.  
@@ -75,7 +75,7 @@ ms.locfileid: "36142707"
   
 4.  Pour activer les modifications, fermez et rouvrez [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
-###  <a name="Refresh"></a> Pour définir l’intervalle d’actualisation activité  
+###  <a name="Refresh"></a> Pour définir l’intervalle d’actualisation de moniteur activité  
   
 -   Ouvrez le Moniteur d'activité.  
   

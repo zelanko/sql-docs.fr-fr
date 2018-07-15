@@ -1,5 +1,5 @@
 ---
-title: Groupe de membres d’attribut (discrétisation) | Documents Microsoft
+title: Regrouper des membres d’attribut (discrétisation) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - NameColumn property
 - discretization [Analysis Services]
@@ -23,15 +23,15 @@ helpviewer_keywords:
 - names [Analysis Services], member groups
 ms.assetid: 5cf2f407-accc-4baf-b54f-7703af338325
 caps.latest.revision: 34
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: bc2c51f16733597af532fe256c73c69649f0e1c9
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 8e07f85d5a6162bed15393d8c255a55cf01b903c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36152235"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37251451"
 ---
 # <a name="group-attribute-members-discretization"></a>Regrouper des membres d'un attribut (discrétisation)
   Un groupe de membres est une collection de membres de dimension contigus générée par le système. Dans [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], les membres d’un attribut peuvent être regroupés en plusieurs groupes de membres via un processus nommé discrétisation. Un niveau dans une hiérarchie contient soit des groupes de membres, soit des membres, mais pas les deux. Lorsque les utilisateurs professionnels parcourent un niveau qui contient des groupes de membres, ils voient les noms et les valeurs de cellule de ces groupes. Les membres générés par [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] pour prendre en charge les groupes de membres s'appellent membres de regroupement et se présentent comme des membres ordinaires.  
@@ -41,7 +41,7 @@ ms.locfileid: "36152235"
 |Paramètre `DiscretizationMethod`|Description|  
 |--------------------------------------|-----------------|  
 |`None`|Affiche les membres.|  
-|`Automatic`|Sélectionne la méthode qui correspond le mieux les données : soit le `EqualAreas` méthode ou la `Clusters` (méthode).|  
+|`Automatic`|Sélectionne la méthode qui représente mieux les données : soit le `EqualAreas` méthode ou le `Clusters` (méthode).|  
 |`EqualAreas`|Tente de diviser les membres de l'attribut en groupes contenant un nombre égal de membres.|  
 |`Clusters`|Tente de diviser les membres de l'attribut en groupes en échantillonnant les données d'apprentissage, en initialisant à un certain nombre de points aléatoires, puis en exécutant plusieurs itérations de l'algorithme de clustering EM (Expectation-Maximization).<br /><br /> Cette méthode est utile, car elle peut être appliquée à toute courbe de distribution, mais elle demande davantage de temps de traitement.|  
   
@@ -49,7 +49,7 @@ ms.locfileid: "36152235"
   
  L’ordre de tri des membres dans les groupes de membres est contrôlé à l’aide de la `OrderBy` propriété de l’attribut. Sur la base de cet ordre de tri, les membres d'un groupe de membres sont ordonnés les uns à la suite des autres.  
   
- Les groupes de membres servent généralement à permettre une exploration vers le bas entre un niveau contenant peu de membres et un autre contenant un grand nombre de membres. Pour permettre aux utilisateurs d'explorer vers le bas entre plusieurs niveaux, modifiez la propriété `DiscretizationMethod` sur l'attribut pour le niveau qui contient un grand nombre de membres en remplaçant sa valeur `None` par l'une des méthodes de discrétisation décrites dans le tableau précédent. Par exemple, une dimension Client contient une hiérarchie d'attribut Client Name avec 500 000 membres. Vous pouvez renommer cet attribut Client Groups et définir le `DiscretizationMethod` propriété `Automatic` pour afficher les groupes de membres au niveau du membre de hiérarchie attribut.  
+ Les groupes de membres servent généralement à permettre une exploration vers le bas entre un niveau contenant peu de membres et un autre contenant un grand nombre de membres. Pour permettre aux utilisateurs d'explorer vers le bas entre plusieurs niveaux, modifiez la propriété `DiscretizationMethod` sur l'attribut pour le niveau qui contient un grand nombre de membres en remplaçant sa valeur `None` par l'une des méthodes de discrétisation décrites dans le tableau précédent. Par exemple, une dimension Client contient une hiérarchie d'attribut Client Name avec 500 000 membres. Vous pouvez renommer cet attribut Client Groups et définir le `DiscretizationMethod` propriété `Automatic` pour afficher les groupes de membres l’attribut membre au niveau de hiérarchie.  
   
  Pour descendre au niveau des clients individuels dans chaque groupe, vous pouvez créer une autre hiérarchie d'attribut Client Name liée à la même colonne de table. Ensuite, créez une hiérarchie d'utilisateur à partir des deux attributs. Le niveau supérieur est basé sur l'attribut Client Groups et le niveau inférieur est basé sur l'attribut Client Name. La propriété `IsAggregatable` a la valeur `True` sur les deux attributs. L'utilisateur peut développer le niveau (Tout) sur la hiérarchie pour afficher les membres du groupe et développer les membres du groupe pour afficher les membres feuilles de la hiérarchie Pour masquer le niveau « group » ou « client », vous pouvez affecter `AttributeHierarchyVisible` à la propriété `False` sur l'attribut correspondant.  
   

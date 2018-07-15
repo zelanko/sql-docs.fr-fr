@@ -1,5 +1,5 @@
 ---
-title: 'Leçon 11 : Créer des Partitions | Documents Microsoft'
+title: 'Leçon 11 : Créer des Partitions | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 92eb21a8-5fc4-4999-ad37-1332ce26431d
 caps.latest.revision: 19
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: jhubbard
-ms.openlocfilehash: c480583da42aee4f73e6053d20e7bf8b6542547c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 8e2f9ab8d98ae4ffbb8be67c4b64f5022b0f7f8e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36042332"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37261361"
 ---
 # <a name="lesson-11-create-partitions"></a>Leçon 11 : Créer des partitions
   Dans cette leçon, vous allez créer des partitions pour diviser la table Internet Sales en parties logiques plus petites pouvant être traitées (actualisées) indépendamment d'autres partitions. Par défaut, chaque table que vous incluez dans votre modèle a une partition qui comprend toutes les lignes et colonnes de la table. Pour la table Internet Sales, nous souhaitons diviser les données par année ; une partition pour tous les cinq ans de la table.  Chaque partition peut ensuite être traitée indépendamment. Pour plus d’informations, consultez [Partitions &#40;SSAS Tabulaire&#41;](tabular-models/partitions-ssas-tabular.md).  
@@ -91,7 +91,7 @@ ms.locfileid: "36042332"
   
 2.  Dans **nom de la Partition**, type `Internet Sales 2006`.  
   
-3.  Dans l’instruction SQL, dans l’ordre de la partition inclure uniquement les lignes pour l’année 2006, remplacez la clause WHERE avec les éléments suivants :  
+3.  Dans l’instruction SQL, dans l’ordre pour la partition inclue uniquement les lignes pour l’année 2006, remplacez la clause WHERE avec les éléments suivants :  
   
     ```  
     WHERE (([OrderDate] >= N'2006-01-01 00:00:00') AND ([OrderDate] < N'2007-01-01 00:00:00'))  
@@ -103,23 +103,23 @@ ms.locfileid: "36042332"
   
 2.  Dans **nom de la Partition**, type `Internet Sales 2007`.  
   
-3.  Dans **basculer vers**, sélectionnez **l’éditeur de requête**.  
+3.  Dans **basculer vers**, sélectionnez **éditeur de requête**.  
   
-4.  Dans l’instruction SQL, dans l’ordre de la partition inclure uniquement les lignes pour l’année 2007, remplacez la clause WHERE avec les éléments suivants :  
+4.  Dans l’instruction SQL, dans l’ordre pour la partition inclue uniquement les lignes pour l’année 2007, remplacez la clause WHERE avec les éléments suivants :  
   
     ```  
     WHERE (([OrderDate] >= N'2007-01-01 00:00:00') AND ([OrderDate] < N'2008-01-01 00:00:00'))  
     ```  
   
-#### <a name="to-create-a-partition-for-the-2008-year-in-the-internet-sales-table"></a>Pour créer une partition de l’année 2008 dans la table Internet Sales  
+#### <a name="to-create-a-partition-for-the-2008-year-in-the-internet-sales-table"></a>Pour créer une partition pour l’année 2008 dans la table Internet Sales  
   
 1.  Dans la boîte de dialogue **Gestionnaire de partition** , cliquez sur **Nouveau**.  
   
 2.  Dans **nom de la Partition**, type `Internet Sales 2008`.  
   
-3.  Dans **basculer vers**, sélectionnez **l’éditeur de requête**.  
+3.  Dans **basculer vers**, sélectionnez **éditeur de requête**.  
   
-4.  Dans l’instruction SQL, dans l’ordre de la partition inclure uniquement les lignes de l’année 2008, remplacez la clause WHERE avec les éléments suivants :  
+4.  Dans l’instruction SQL, dans l’ordre pour la partition inclue uniquement les lignes de l’année 2008, remplacez la clause WHERE avec les éléments suivants :  
   
     ```  
     WHERE (([OrderDate] >= N'2008-01-01 00:00:00') AND ([OrderDate] < N'2009-01-01 00:00:00'))  
@@ -131,7 +131,7 @@ ms.locfileid: "36042332"
   
 2.  Dans **nom de la Partition**, type `Internet Sales 2009`.  
   
-3.  Dans **basculer vers**, sélectionnez **l’éditeur de requête**.  
+3.  Dans **basculer vers**, sélectionnez **éditeur de requête**.  
   
 4.  Dans l'instruction SQL, pour que la partition inclue uniquement les lignes pour l'année 2009, remplacez la clause WHERE par :  
   
@@ -154,7 +154,7 @@ ms.locfileid: "36042332"
   
      Si vous êtes invité à fournir les informations d'emprunt d'identité, entrez le nom d'utilisateur Windows et le mot de passe spécifiés dans la leçon 2, étape 6.  
   
-     Le **données processus** boîte de dialogue apparaît ensuite et affiche les détails du processus pour chaque partition. Notez qu'un nombre de lignes différent est transféré pour chaque partition. Cela est dû au fait que chaque partition contient uniquement les lignes de l'année spécifiée dans la clause WHERE dans l'instruction SQL. Il n'y a pas de données pour l'année 2010.  
+     Le **données processus** boîte de dialogue s’affiche, puis affiche les détails du processus pour chaque partition. Notez qu'un nombre de lignes différent est transféré pour chaque partition. Cela est dû au fait que chaque partition contient uniquement les lignes de l'année spécifiée dans la clause WHERE dans l'instruction SQL. Il n'y a pas de données pour l'année 2010.  
   
 ## <a name="next-steps"></a>Étapes suivantes  
  Pour continuer ce didacticiel, passez à la leçon suivante : [Leçon 12 : Créer des rôles](lesson-11-create-roles.md).  

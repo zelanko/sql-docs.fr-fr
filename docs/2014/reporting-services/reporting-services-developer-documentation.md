@@ -1,5 +1,5 @@
 ---
-title: Développeur&#39;s Guide (Reporting Services) | Documents Microsoft
+title: Développeur&#39;s Guide (Reporting Services) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - programming [Reporting Services]
 ms.assetid: d8afa405-1012-4349-a72d-e10d94f8453d
 caps.latest.revision: 21
-author: douglaslM
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 30fba34bd5c00935e4d41a657481fb8225f9a669
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: 0cb0e08f48dbb873d3dec7d4d688182ebe3415fb
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36041537"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37249899"
 ---
 # <a name="developer39s-guide-reporting-services"></a>Développeur&#39;s Guide (Reporting Services)
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] offre plusieurs interfaces de programmation dont vous pouvez tirer parti dans vos propres applications. Vous pouvez utiliser les fonctionnalités existantes de [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] pour créer des outils de génération de rapports et de gestion personnalisés dans des sites Web et des applications Windows, ou vous pouvez étendre la plateforme [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)].  

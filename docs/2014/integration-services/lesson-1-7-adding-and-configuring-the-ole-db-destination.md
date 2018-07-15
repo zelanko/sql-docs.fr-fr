@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 442c841d-d528-4bf0-8724-7156f909ee50
 caps.latest.revision: 24
-author: douglaslM
+author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 9492f985dda337159257257c675fe37d39f162b5
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 4f85ebcc3be06d86110a99e498a9349d973a9ca6
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36152158"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37260935"
 ---
 # <a name="step-7-adding-and-configuring-the-ole-db-destination"></a>Étape 7 : ajout et configuration de la destination OLE DB
   Votre package peut maintenant extraire des données à partir de la source de fichier plat pour les transformer dans un format compatible avec la destination. La tâche suivante consiste à charger les données transformées dans la destination. Pour charger les données, vous devez ajouter une destination OLE DB au flux de données. La destination OLE DB peut utiliser une table de base de données, un affichage ou une commande SQL pour charger les données dans plusieurs bases de données compatibles OLE DB.  
@@ -54,10 +54,10 @@ ms.locfileid: "36152158"
   
 13. Cliquez avec le bouton droit sur la **Destination OLE DB exemple** , puis cliquez sur **Propriétés**.  
   
-14. Dans la fenêtre Propriétés, vérifiez que le `LocaleID` est définie sur **anglais (États-Unis)** et`DefaultCodePage` est définie sur **1252**.  
+14. Dans la fenêtre Propriétés, vérifiez que le `LocaleID` propriété est définie sur **anglais (États-Unis)** et`DefaultCodePage` propriété est définie sur **1252**.  
   
 ## <a name="next-task-in-lesson"></a>Tâche suivante de la leçon  
- [Étape 8 : Comment rendre le Package de la leçon 1 plus facile à comprendre](lesson-1-8-making-the-lesson-1-package-easier-to-understand.md)  
+ [Étape 8 : Rendre le package de la leçon 1 plus facile à comprendre](lesson-1-8-making-the-lesson-1-package-easier-to-understand.md)  
   
 ## <a name="see-also"></a>Voir aussi  
  [Destination OLE DB](data-flow/ole-db-destination.md)  

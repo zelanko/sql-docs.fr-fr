@@ -1,5 +1,5 @@
 ---
-title: Boîte de dialogue Supprimer le groupe | Documents Microsoft
+title: Boîte de dialogue Supprimer le groupe | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.rtp.rptdesigner.deletegroup.f1
 - "10138"
@@ -18,13 +18,13 @@ ms.assetid: bc1c0f27-41cb-49ad-8bef-634a4c23586f
 caps.latest.revision: 8
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 6e5ef71b94f16d90ef611ad950e7b280cd17fe3b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: d5a3195d350e27e68c937e57b1325a00b05f056d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36053459"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37236539"
 ---
 # <a name="delete-group-dialog-box"></a>Boîte de dialogue Supprimer le groupe
   Utilisez la boîte de dialogue **Supprimer le groupe** pour supprimer un groupe d'une table, matrice ou région de données de type liste. Si des lignes ou colonnes sont associées à ce groupe, vous pouvez également supprimer ces structures.  
@@ -38,7 +38,7 @@ ms.locfileid: "36053459"
   
 ## <a name="see-also"></a>Voir aussi  
  [Aide sur le Concepteur de rapports accessible à l’aide de la touche F1](tools/report-designer-f1-help.md)   
- [Présentation des groupes &#40;rapport Générateur et SSRS&#41;](report-design/understanding-groups-report-builder-and-ssrs.md)   
+ [Présentation des groupes &#40;Générateur de rapports et SSRS&#41;](report-design/understanding-groups-report-builder-and-ssrs.md)   
  [Tables, matrices et listes &#40;Générateur de rapports et SSRS&#41;](report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)  
   
   

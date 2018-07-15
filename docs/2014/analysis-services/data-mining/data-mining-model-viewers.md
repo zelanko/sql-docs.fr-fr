@@ -1,5 +1,5 @@
 ---
-title: Visionneuses de modèle d’exploration de données | Documents Microsoft
+title: Visionneuses de modèle d’exploration de données | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - displaying data mining models
 - mining models [Analysis Services], viewing
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - exploring data mining models [Analysis Services]
 ms.assetid: 14c8e656-f63c-4e8a-a3af-1d580e823d28
 caps.latest.revision: 40
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 63ac3ddb345718e21a30592d17df4a4aff8dd30e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 87713f6c83c11ee6bc9d0f3a0445e8c6fe108a15
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36141435"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37255061"
 ---
 # <a name="data-mining-model-viewers"></a>Visionneuses de modèle d’exploration de données
   Après avoir effectué l’apprentissage d’un modèle d’exploration de données dans [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], vous pouvez explorer le modèle pour rechercher des tendances intéressantes. Étant donné que les résultats des modèles d'exploration de données sont complexes et peuvent être difficiles à comprendre dans un format brut, l'examen visuel des données constitue souvent le moyen le plus simple pour comprendre les règles et les relations que les algorithmes découvrent au sein des données.  
@@ -49,7 +49,7 @@ ms.locfileid: "36141435"
   
      À gauche, la visionneuse générique affiche une liste des nœuds du modèle. Vous pouvez cliquer sur un nœud pour afficher son contenu dans le volet droit.  
   
- ![Vue d’ensemble du Concepteur de modèle d’exploration de données](../media/generic-mining-model-tab1.gif "vue d’ensemble du Concepteur de modèle d’exploration de données")  
+ ![Vue d’ensemble du Concepteur de modèles d’exploration de données](../media/generic-mining-model-tab1.gif "vue d’ensemble du Concepteur de modèles d’exploration de données")  
   
 ## <a name="more-about-the-microsoft-generic-content-tree-viewer"></a>En savoir plus sur la visionneuse de l'arborescence de contenu générique Microsoft  
  Chaque modèle peut également être affiché à l’aide de la [Visionneuse de l’arborescence de contenu générique Microsoft &#40;exploration de données&#41;](../microsoft-generic-content-tree-viewer-data-mining.md). Cette visionneuse affiche le contenu du modèle d'exploration de données en respectant un format de table HTML standard. Toutefois, la disposition des nœuds et le contenu de chaque nœud diffèrent considérablement selon l'algorithme utilisé pour générer les résultats.  

@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.xmlsource.f1
 helpviewer_keywords:
@@ -19,13 +19,13 @@ ms.assetid: 68c27ea5-e93d-4e26-bfb2-d967ca0a5282
 caps.latest.revision: 46
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 6dbda4a8b745e0745ff13d641a93c3350c8af20e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 6aafcdccb92c093b6ff0e8c2a4a163cc6878b21e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36042549"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37217729"
 ---
 # <a name="xml-source"></a>Source XML
   La source XML lit un fichier de données XML et remplit les colonnes de la sortie source avec les données.  
@@ -69,7 +69,7 @@ ms.locfileid: "36042549"
 ## <a name="configuration-of-the-xml-source"></a>Configuration de la source XML  
  La source XML prend en charge trois modes différents d'accès aux données. Vous pouvez spécifier l'emplacement du fichier de données XML, la variable qui contient cet emplacement ou celle qui contient les données XML.  
   
- La source XML inclut les `XMLData` et `XMLSchemaDefinition` des propriétés personnalisées qui peuvent être mis à jour par les expressions de propriété lorsque le package est chargé. Pour plus d’informations, consultez [Expressions Integration Services &#40;SSIS&#41;](../expressions/integration-services-ssis-expressions.md), [Expressions de propriété dans des packages](../expressions/use-property-expressions-in-packages.md) et [Propriétés personnalisées des sources XML](xml-source-custom-properties.md).  
+ La source XML inclut le `XMLData` et `XMLSchemaDefinition` des propriétés personnalisées qui peuvent être mis à jour par les expressions de propriété lorsque le package est chargé. Pour plus d’informations, consultez [Expressions Integration Services &#40;SSIS&#41;](../expressions/integration-services-ssis-expressions.md), [Expressions de propriété dans des packages](../expressions/use-property-expressions-in-packages.md) et [Propriétés personnalisées des sources XML](xml-source-custom-properties.md).  
   
  La source XML prend en charge plusieurs sorties standard et plusieurs sorties d'erreur.  
   

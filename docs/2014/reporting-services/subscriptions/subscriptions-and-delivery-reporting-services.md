@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - subscriptions [Reporting Services], report distribution
 - reports [Reporting Services], distributing
@@ -24,13 +24,13 @@ ms.assetid: be7ec052-28e2-4558-bc09-8479e5082926
 caps.latest.revision: 55
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 083cadfe123af29861e4bfccd8ed6182705003c8
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: aa14730ce105b17e3eb016effd2c409fc4a37851
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36154784"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37268605"
 ---
 # <a name="subscriptions-and-delivery-reporting-services"></a>Abonnements et remise (Reporting Services)
   Un abonnement [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] est une configuration qui remet un rapport à une heure donnée ou en réponse à un événement, et dans un format de fichier que vous définissez. Par exemple, tous les mercredis, enregistrer le rapport MonthlySales.rdl au format de document Microsoft Word sur un partage de fichiers. Vous pouvez utiliser des abonnements pour planifier et automatiser la remise d'un rapport avec un ensemble de valeurs de paramètres de rapport spécifique.  
@@ -42,11 +42,11 @@ ms.locfileid: "36154784"
  Les abonnements ne sont pas disponibles dans toutes les éditions de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Pour obtenir une liste des fonctionnalités prises en charge par les éditions de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], consultez [Features Supported by the Editions of SQL Server 2014](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md).  
   
 > [!NOTE]  
->  En commençant par [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] vous pouvez transférer la propriété d’un abonnement par programmation. Aucune interface utilisateur ne permet de transférer la propriété des abonnements. Pour plus d’informations, consultez <xref:ReportService2010.ReportingService2010.ChangeSubscriptionOwner%2A>et [utiliser PowerShell pour modifier et liste Reporting Services Subscription Owners et exécuter un abonnement](manage-subscription-owners-and-run-subscription-powershell.md).  
+>  En commençant par [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] vous pouvez transférer la propriété d’un abonnement par programmation. Aucune interface utilisateur ne permet de transférer la propriété des abonnements. Pour plus d’informations, consultez <xref:ReportService2010.ReportingService2010.ChangeSubscriptionOwner%2A>et [utiliser PowerShell pour la modification et liste Reporting Services Subscription Owners et exécuter un abonnement](manage-subscription-owners-and-run-subscription-powershell.md).  
   
  **Dans cette rubrique :**  
   
--   [Scénarios d’abonnement et remise](#bkmk_subscription_scenarios)  
+-   [Abonnement et les scénarios de remise](#bkmk_subscription_scenarios)  
   
 -   [Abonnements standard et pilotés par les données](#bkmk_standard_and_datadriven)  
   
@@ -78,7 +78,7 @@ ms.locfileid: "36154784"
   
 -   [Utiliser PowerShell pour modifier et répertorier les propriétaires d’abonnements Reporting Services, et exécuter un abonnement](manage-subscription-owners-and-run-subscription-powershell.md)  
   
-##  <a name="bkmk_subscription_scenarios"></a> Scénarios d’abonnement et remise  
+##  <a name="bkmk_subscription_scenarios"></a> Abonnement et les scénarios de remise  
  Pour chaque abonnement, vous configurez les options de remise et les options disponibles sont déterminées par l'extension de remise que vous choisissez. Une extension de remise est un module qui prend en charge un mode quelconque de distribution. [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] comprend plusieurs extensions de remise et d’autres extensions peuvent vous être proposées par des fournisseurs tiers.  
   
  Si vous êtes un développeur, vous pouvez créer des extensions de remise personnalisées pour prendre en charge des scénarios supplémentaires. Pour plus d'informations, consultez [Implémentation d'une extension de remise](../extensions/delivery-extension/implementing-a-delivery-extension.md).  

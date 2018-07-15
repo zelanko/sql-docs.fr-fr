@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - FINDSTRING function
 ms.assetid: c83cb1b1-3c52-4496-b518-4c9253b9336d
 caps.latest.revision: 41
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: f7ab632914299e22b4ac153ca8431455c273651d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 82b5df9c4ee132a313b822da4aadc0bc5f90fd75
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36041158"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37272826"
 ---
 # <a name="findstring-ssis-expression"></a>FINDSTRING (expression SSIS)
   Renvoie l'emplacement de l'occurrence spécifiée d'une chaîne dans une expression de caractères. Le résultat obtenu est l'index de base un de l'occurrence. Le paramètre de chaîne doit s'évaluer à une expression de caractères et le paramètre de l'occurrence doit s'évaluer à un entier. Si la chaîne est introuvable, la valeur retournée est 0. Si la chaîne se produit moins souvent que l'argument de l'occurrence ne le spécifie, la valeur retournée est 0.  
@@ -81,7 +81,7 @@ FINDSTRING(Name,Size,1)
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Remplacez &#40;Expression SSIS&#41;](replace-ssis-expression.md)   
- [Fonctions &#40;Expression SSIS&#41;](functions-ssis-expression.md)  
+ [Remplacez &#40;SSIS Expression&#41;](replace-ssis-expression.md)   
+ [Fonctions &#40;SSIS Expression&#41;](functions-ssis-expression.md)  
   
   

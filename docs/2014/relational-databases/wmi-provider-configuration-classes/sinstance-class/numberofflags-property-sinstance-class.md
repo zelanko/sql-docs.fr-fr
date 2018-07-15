@@ -1,5 +1,5 @@
 ---
-title: Propriété NumberOfFlags (classe SInstance) | Documents Microsoft
+title: Numberofflags, propriété (classe SInstance) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - NumberOfFlags property
 ms.assetid: b62005f8-9af3-4fc8-9344-a1ccdb713053
 caps.latest.revision: 30
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: e60c65a8acfbcbf3d3961815b5096d8b7e6df2c9
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
+ms.openlocfilehash: 543d708cc90c9b7911ad3603e53446f172bccc64
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36041318"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37262397"
 ---
 # <a name="numberofflags-property-sinstance-class"></a>Propriété NumberOfFlags (classe SInstance)
   Obtient le nombre d’indicateurs pour l’instance de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  

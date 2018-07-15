@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.oledbdest.f1
 helpviewer_keywords:
@@ -23,13 +23,13 @@ ms.assetid: 873a2fa0-2a02-41fc-a80a-ec9767f36a8a
 caps.latest.revision: 77
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: f6b3cbdff4e837facc8a6cd2c2b0498ae6bf92a7
-ms.sourcegitcommit: d463f543e8db4a768f8e9736ff28fedb3fb17b9f
+manager: craigg
+ms.openlocfilehash: eee342244a6a057a98d5ab6252c6ab970b515118
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/22/2018
-ms.locfileid: "36324703"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37243089"
 ---
 # <a name="ole-db-destination"></a>Destination OLE DB
   La destination OLE DB charge des données dans différentes bases de données compatibles OLE DB à l'aide d'une table ou d'une vue de base de données ou d'une commande SQL. Par exemple, la source OLE DB peut charger des données dans des tables de bases de données [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office Access et [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
@@ -49,7 +49,7 @@ ms.locfileid: "36324703"
 > [!NOTE]  
 >  La destination OLE DB ne prend pas en charge les paramètres. Si vous devez exécuter une instruction INSERT paramétrable, envisagez d'utiliser la transformation de commande OLE DB. Pour plus d’informations, consultez [OLE DB Command Transformation](transformations/ole-db-command-transformation.md).  
   
- Lorsque la destination OLE DB charge des données qui utilisent un jeu de caractères codés sur deux octets (DBCS), les données risquent d'être endommagées si le mode d'accès aux données n'utilise pas l'option de chargement rapide et si le gestionnaire de connexions OLE DB utilise le fournisseur [!INCLUDE[msCoName](../../includes/msconame-md.md)] OLE DB pour SQL Server [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (SQLOLEDB). Pour garantir l’intégrité des données DBCS, vous devez configurer le gestionnaire de connexions OLE DB pour utiliser [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ou l’un des modes d’accès avec chargement rapide : **Table ou vue - chargement rapide** ou **Variable de nom de table ou de vue - chargement rapide**. Ces deux options sont disponibles dans la boîte de dialogue **Éditeur de destination OLE DB** . Lorsque vous programmez la [!INCLUDE[ssIS](../../includes/ssis-md.md)] modèle d’objet, vous devez définir la propriété AccessMode sur `OpenRowset Using FastLoad`, ou `OpenRowset Using FastLoad From Variable`.  
+ Lorsque la destination OLE DB charge des données qui utilisent un jeu de caractères codés sur deux octets (DBCS), les données risquent d'être endommagées si le mode d'accès aux données n'utilise pas l'option de chargement rapide et si le gestionnaire de connexions OLE DB utilise le fournisseur [!INCLUDE[msCoName](../../includes/msconame-md.md)] OLE DB pour SQL Server [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (SQLOLEDB). Pour garantir l’intégrité des données DBCS, vous devez configurer le gestionnaire de connexions OLE DB pour utiliser [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ou l’un des modes d’accès avec chargement rapide : **Table ou vue - chargement rapide** ou **Variable de nom de table ou de vue - chargement rapide**. Ces deux options sont disponibles dans la boîte de dialogue **Éditeur de destination OLE DB** . Lorsque vous programmez le [!INCLUDE[ssIS](../../includes/ssis-md.md)] modèle d’objet, vous devez définir la propriété AccessMode sur `OpenRowset Using FastLoad`, ou `OpenRowset Using FastLoad From Variable`.  
   
 > [!NOTE]  
 >  Si vous utilisez la boîte de dialogue **Éditeur de destination OLE DB** dans le concepteur [!INCLUDE[ssIS](../../includes/ssis-md.md)] pour créer la table de destination dans laquelle la destination OLE DB insère des données, vous devrez peut-être sélectionner la table que vous venez de créer manuellement. La sélection manuelle est nécessaire lorsqu'un fournisseur OLE DB tel que le fournisseur OLE DB pour DB2, ajoute manuellement des identificateurs de schéma au nom de la table.  
@@ -80,7 +80,7 @@ ms.locfileid: "36324703"
   
 -   Spécifier le nombre de lignes dans le traitement et la taille de validation.  
   
- Certaines options de chargement rapide sont stockées dans des propriétés spécifiques de la destination OLE DB. Par exemple, FastLoadKeepIdentity spécifie s’il convient de conserver des valeurs d’identification, FastLoadKeepNulls précise s’il faut conserver des valeurs NULL et FastLoadMaxInsertCommitSize spécifie le nombre de lignes à valider en tant que traitement. D’autres options de chargement rapide sont stockées dans une liste séparée par des virgules dans la propriété FastLoadOptions. Si la destination OLE DB utilise toutes les options de chargement rapide qui sont stockées FastLoadOptions et répertoriées dans le **éditeur de Destination OLE DB** boîte de dialogue, la valeur de la propriété est définie `TABLOCK, CHECK_CONSTRAINTS, ROWS_PER_BATCH=1000`. La valeur 1 000 indique que la destination est configurée pour utiliser des traitements de 1 000 lignes.  
+ Certaines options de chargement rapide sont stockées dans des propriétés spécifiques de la destination OLE DB. Par exemple, FastLoadKeepIdentity spécifie s’il convient de conserver des valeurs d’identification, FastLoadKeepNulls précise s’il faut conserver des valeurs NULL et FastLoadMaxInsertCommitSize spécifie le nombre de lignes à valider en tant que traitement. D’autres options de chargement rapide sont stockées dans une liste séparée par des virgules dans la propriété FastLoadOptions. Si la destination OLE DB utilise toutes les options de chargement rapide qui sont stockées dans FastLoadOptions et répertoriées dans le **éditeur de Destination OLE DB** boîte de dialogue, la valeur de la propriété est définie sur `TABLOCK, CHECK_CONSTRAINTS, ROWS_PER_BATCH=1000`. La valeur 1 000 indique que la destination est configurée pour utiliser des traitements de 1 000 lignes.  
   
 > [!NOTE]  
 >  Tout échec de contrainte à la destination entraîne l’échec de la totalité du lot de lignes définies par FastLoadMaxInsertCommitSize.  
@@ -126,7 +126,7 @@ ms.locfileid: "36324703"
 ## <a name="related-content"></a>Contenu associé  
  [Source OLE DB](ole-db-source.md)  
   
- [Services d’intégration &#40;SSIS&#41; Variables](../integration-services-ssis-variables.md)  
+ [Integration Services &#40;SSIS&#41; Variables](../integration-services-ssis-variables.md)  
   
  [Flux de données](data-flow.md)  
   

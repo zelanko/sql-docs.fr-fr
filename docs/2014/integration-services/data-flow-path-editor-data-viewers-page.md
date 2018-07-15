@@ -1,5 +1,5 @@
 ---
-title: Éditeur du chemin d’accès (Page visionneuses de données) de flux de données | Documents Microsoft
+title: Éditeur du chemin d’accès (Page visionneuses de données) de flux de données | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.patheditor.visualizers.f1
 helpviewer_keywords:
 - Data Flow Path Editor dialog box
 ms.assetid: 38b5f077-9083-406a-a9a4-8bc39972dda2
 caps.latest.revision: 20
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: b292b8589af99aaccc896bcb92c6b73c7096b7c4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 1815402b13ad8ba1550472a7a2dc1cb70374a4d7
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36151936"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37231539"
 ---
 # <a name="data-flow-path-editor-data-viewers-page"></a>Éditeur du chemin d'accès au flux de données (Page Visionneuses de données)
   Utilisez la page **Visionneuses de données** de la boîte de dialogue **Éditeur du chemin d'accès au flux de données** pour gérer les visionneuses de données liées au chemin d'accès.  

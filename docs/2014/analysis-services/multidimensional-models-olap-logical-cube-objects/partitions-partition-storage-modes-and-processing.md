@@ -1,5 +1,5 @@
 ---
-title: Modes de stockage et le traitement de partition | Documents Microsoft
+title: Modes de stockage et traitement de partition | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -23,15 +23,15 @@ helpviewer_keywords:
 - ROLAP
 ms.assetid: 86d17547-a0b6-47ac-876c-d7a5b15ac327
 caps.latest.revision: 40
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 3987845b805fb824afe802c681b03459388ea99d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 70214fb48ffa66fdfeca56eccebdb335c11a214f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36053173"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37273435"
 ---
 # <a name="partition-storage-modes-and-processing"></a>Traitement et modes de stockage des partitions
   Le mode de stockage d'une partition affecte les performances de traitement et des requêtes, les besoins en espace de stockage, ainsi que les emplacements de stockage de la partition, de son cube et de son groupe de mesures parents. Le mode de stockage a également une incidence sur les options de traitement.  
@@ -77,7 +77,7 @@ ms.locfileid: "36053173"
   
     -   QUOTED_IDENTIFIER  
   
--   La taille totale de l’index de clé, en [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], ne peut pas dépasser 900 octets. [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] vérifie cette condition basée sur les colonnes clés de longueur fixe lors du traitement de l’instruction CREATE INDEX. Toutefois, s’il existe des colonnes de longueur variable dans la clé d’index, [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] vérifie également cette condition pour chaque mise à jour les tables de base. Dans la mesure où des agrégations différentes correspondent à des définitions de vues différentes, le traitement ROLAP à l'aide de vues indexées peut réussir ou échouer en fonction de la structure de l'agrégation.  
+-   La taille totale de l’index de clé, en [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], ne peut pas dépasser 900 octets. [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] vérifie cette condition grâce aux colonnes de clés de longueur fixe lors du traitement de l’instruction CREATE INDEX. Toutefois, s’il existe des colonnes de longueur variable dans la clé d’index, [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] vérifie également cette condition pour chaque mise à jour pour les tables de base. Dans la mesure où des agrégations différentes correspondent à des définitions de vues différentes, le traitement ROLAP à l'aide de vues indexées peut réussir ou échouer en fonction de la structure de l'agrégation.  
   
 -   Les options suivantes doivent être activées (ON) pour la session de création de la vue indexée : ARITHABORT, CONCAT_NULL_YEILDS_NULL, QUOTED_IDENTIFIER, ANSI_NULLS, ANSI_PADDING et ANSI_WARNING. Ce paramétrage peut être effectué dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   

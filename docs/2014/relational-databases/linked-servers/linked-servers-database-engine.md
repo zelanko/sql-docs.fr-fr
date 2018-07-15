@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - OLE DB, linked servers
 - OLE DB provider, linked servers
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - linked servers [SQL Server], about linked servers
 ms.assetid: 6ef578bf-8da7-46e0-88b5-e310fc908bb0
 caps.latest.revision: 36
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: c18f75059e9021c7e654d22cc97092f60e8210f3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: bcb1df0fdccee488bfdfeaae99f16f567618afd2
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36153239"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37256655"
 ---
 # <a name="linked-servers-database-engine"></a>Serveurs liés (Moteur de base de données)
   Configurez un serveur lié pour permettre à [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] d'exécuter des commandes sur des sources de données OLE DB situées en dehors de l'instance de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. En général, les serveurs liés sont configurés pour permettre au [!INCLUDE[ssDE](../../includes/ssde-md.md)] d'exécuter une instruction [!INCLUDE[tsql](../../includes/tsql-md.md)] qui inclut des tables situées dans une autre instance de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]ou un autre produit de base de données comme Oracle. De nombreux types de sources de données OLE DB peuvent être configurés comme serveurs liés, y compris [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Access et Excel. Les serveurs liés offrent les avantages suivants :  

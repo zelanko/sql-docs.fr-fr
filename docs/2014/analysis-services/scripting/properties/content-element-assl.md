@@ -1,5 +1,5 @@
 ---
-title: Élément (ASSL) de contenu | Documents Microsoft
+title: Élément (ASSL) de contenu | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - Content element
 ms.assetid: 221addef-2f88-49c5-b8f5-9eee330497a9
 caps.latest.revision: 42
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 98d2de4a0ce93e857a63ebd9fe79dd18d0f9a86e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: bd9e3c237d8009ac153e8c69033ce9cce958aba3
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36041892"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37267475"
 ---
 # <a name="content-element-assl"></a>Élément Content (ASSL)
   Décrit le contenu de la colonne dans la [MiningStructure](../objects/miningstructure-element-assl.md) élément.  
@@ -78,15 +78,15 @@ ms.locfileid: "36041892"
 |*StdDev*|Les valeurs de la colonne spécifient un écart type pour les colonnes contenues dans l'élément `ClassifiedColumns` de la `ScalarMiningStructureColumn` parente.|  
 |*ProbabilityVariance*|Les valeurs de la colonne spécifient une variance de probabilité pour les colonnes contenues dans l'élément `ClassifiedColumns` de la `ScalarMiningStructureColumn` parente.|  
 |*ProbabilityStdDev*|Les valeurs de la colonne spécifient un écart type de probabilité pour les colonnes contenues dans l'élément `ClassifiedColumns` de la `ScalarMiningStructureColumn` parente.|  
-|*Prise en charge*|Les valeurs de la colonne spécifient des informations de support technique pour la colonne contenue dans l'élément `ClassifiedColumns` de la `ScalarMiningStructureColumn` parente. **Remarque :** cette colonne est fournie en tant que partie de la norme pour les fournisseurs d’algorithmes d’exploration de données tiers. **Remarque :** fournis par Microsoft algorithmes n’ont pas de toute utilisation de cette colonne. <br /><br /> .|  
-|*Clé*|La colonne est une colonne clé. **Remarque :** ce type de contenu s’applique uniquement aux colonnes clés, dans lequel le `IsKey` a la valeur `True`.|  
+|*Prise en charge*|Les valeurs de la colonne spécifient des informations de support technique pour la colonne contenue dans l'élément `ClassifiedColumns` de la `ScalarMiningStructureColumn` parente. **Remarque :** cette colonne est fournie dans le cadre de la norme pour les fournisseurs d’algorithmes d’exploration de données tiers. **Remarque :** fournis par Microsoft algorithmes n’ont pas toutes l’utilisation de cette colonne. <br /><br /> .|  
+|*Clé*|La colonne est une colonne clé. **Remarque :** ce type de contenu s’applique uniquement aux colonnes clés, dans lequel le `IsKey` élément est défini sur `True`.|  
   
  Outre ces valeurs standards, d’exploration de données des fournisseurs d’algorithmes inclus avec [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] prennent en charge les valeurs dans le tableau suivant.  
   
 |Valeur|Description|  
 |-----------|-----------------|  
-|*Séquence de touches*|La colonne est une colonne clé, et les valeurs de la colonne représentent une séquence d'événements. **Remarque :** ce type de contenu s’applique uniquement aux colonnes clés, dans lequel le `IsKey` a la valeur `True`.|  
-|*Temps clé*|La colonne est une colonne clé, et les valeurs de la colonne représentent des unités de mesure du temps. **Remarque :** ce type de contenu s’applique uniquement aux colonnes clés, dans lequel le `IsKey` a la valeur `True`.|  
+|*Séquence clé*|La colonne est une colonne clé, et les valeurs de la colonne représentent une séquence d'événements. **Remarque :** ce type de contenu s’applique uniquement aux colonnes clés, dans lequel le `IsKey` élément est défini sur `True`.|  
+|*Temps clé*|La colonne est une colonne clé, et les valeurs de la colonne représentent des unités de mesure du temps. **Remarque :** ce type de contenu s’applique uniquement aux colonnes clés, dans lequel le `IsKey` élément est défini sur `True`.|  
 |*Sequence*|Les valeurs de la colonne représentent une séquence d'événements.|  
 |*Time*|Les valeurs de la colonne représentent des unités de mesure du temps.|  
   

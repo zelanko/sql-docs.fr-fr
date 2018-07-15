@@ -25,13 +25,13 @@ ms.assetid: c3913c15-66aa-4b61-89b5-68488fa5f0a4
 caps.latest.revision: 64
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 5a964501cd247007b2b7de6cd277977701bc0539
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
-ms.translationtype: HT
+manager: craigg
+ms.openlocfilehash: 821d47f8a112efb3c2f70a094c139fdc7936ab32
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36153064"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37203989"
 ---
 # <a name="coding-and-debugging-the-script-component"></a>Codage et débogage du composant Script
   Dans le Concepteur [!INCLUDE[ssIS](../../../includes/ssis-md.md)], le composant Script propose deux modes : le mode Création des métadonnées et le mode Création du code. Lorsque vous ouvrez l’**Éditeur de transformation de script**, le composant entre en mode Création des métadonnées, dans lequel vous configurez des métadonnées et définissez les propriétés du composant. Après avoir défini les propriétés du composant Script et avoir configuré l'entrée et les sorties en mode Création des métadonnées, vous pouvez basculer vers le mode Création du code pour écrire votre script personnalisé. Pour plus d’informations sur le mode Création des métadonnées et le mode Création de code, consultez [Configuration du composant Script dans l’Éditeur de composant Script](configuring-the-script-component-in-the-script-component-editor.md).  
@@ -64,11 +64,11 @@ ms.locfileid: "36153064"
   
     -   Une classe de collection `Connections` qui contient des références aux connexions sélectionnées dans la page Gestionnaire de connexions de l'Éditeur de transformation de script.  
   
-    -   A `Variables` classe de collection qui contient des références aux variables entrées dans le `ReadOnlyVariable` et `ReadWriteVariables` propriétés sur le **Script** page de la **éditeur de Transformation de Script**.  
+    -   Un `Variables` classe de collection qui contient des références aux variables entrées dans le `ReadOnlyVariable` et `ReadWriteVariables` propriétés sur le **Script** page de la **éditeur de Transformation de Script**.  
   
 -   Le `BufferWrapper` élément de projet contient une classe qui hérite de <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptBuffer> pour chaque entrée et sortie configurée sur le **entrées et sorties** page de la **éditeur de Transformation de Script**. Chacune de ces classes contient des propriétés d'accesseur typées qui correspondent aux colonnes d'entrée et de sortie configurées, ainsi que des tampons de flux de données qui contiennent les colonnes.  
   
- Pour plus d’informations sur l’utilisation de ces objets, méthodes et propriétés, consultez [comprendre le Model]((understanding-the-script-component-object-model.md) d’objet de composant Script. Pour plus d’informations sur l’utilisation des méthodes et des propriétés de ces classes dans un type de composant Script particulier, consultez la section [Autres exemples de composants Script](../../extending-packages-scripting-data-flow-script-component-examples/additional-script-component-examples.md). Les rubriques d'exemples contiennent également des exemples de code complets.  
+ Pour plus d’informations sur l’utilisation de ces objets, les méthodes et les propriétés, consultez [présentation de le Model]((understanding-the-script-component-object-model.md) d’objet de composant Script. Pour plus d’informations sur l’utilisation des méthodes et des propriétés de ces classes dans un type de composant Script particulier, consultez la section [Autres exemples de composants Script](../../extending-packages-scripting-data-flow-script-component-examples/additional-script-component-examples.md). Les rubriques d'exemples contiennent également des exemples de code complets.  
   
  Lorsque vous configurez le composant Script en tant que transformation, l'élément de projet `ScriptMain` contient le code généré automatiquement suivant. Le modèle de code fournit également une vue d'ensemble du composant Script, ainsi que des informations supplémentaires sur la récupération et la manipulation des objets SSIS, tels que les variables, les événements et les connexions.  
   
@@ -189,11 +189,11 @@ public class ScriptMain : UserComponent
   
  Vous pouvez également surveiller l'exécution du composant Script en utilisant les méthodes suivantes :  
   
--   Interrompez l’exécution et afficher un message modal en utilisant le `MessageBox.Show` méthode dans le **System.Windows.Forms** espace de noms. (Supprimez ce code une fois que vous avez terminé le processus de débogage.)  
+-   Interrompez l’exécution et affichez un message modal en utilisant le `MessageBox.Show` méthode dans le **System.Windows.Forms** espace de noms. (Supprimez ce code une fois que vous avez terminé le processus de débogage.)  
   
 -   Déclenchez des événements pour les messages d'information, les avertissements et les erreurs. Les méthodes FireInformation, FireWarning et FireError affichent la description des événements dans la fenêtre **Sortie** de Visual Studio. Toutefois, les méthodes FireProgress, Console.Write et Console.WriteLine n’affichent aucune information dans la fenêtre **Sortie**. Les messages de l’événement FireProgress apparaissent sous l’onglet **Progression** du concepteur [!INCLUDE[ssIS](../../../includes/ssis-md.md)]. Pour plus d’informations, consultez [Déclenchement d’événements dans le composant Script](../../data-flow/transformations/script-component.md).  
   
--   Journalisez les événements ou les messages définis par l'utilisateur dans les modules fournisseurs d'informations activés. Pour plus d’informations, consultez [enregistrement dans le Script Component]((logging-in-the-script-component.md).  
+-   Journalisez les événements ou les messages définis par l'utilisateur dans les modules fournisseurs d'informations activés. Pour plus d’informations, consultez [journalisation dans le Script Component]((logging-in-the-script-component.md).  
   
  Si vous souhaitez simplement examiner la sortie d’un composant Script configuré en tant que source ou transformation, sans enregistrer les données dans une destination, vous pouvez arrêter le flux de données avec une [transformation Nombre de lignes](../../data-flow/transformations/row-count-transformation.md) et attacher une visionneuse de données à la sortie du composant Script. Pour plus d’informations sur les visionneuses de données, consultez [Débogage d’un flux de données](../../troubleshooting/debugging-data-flow.md).  
   
@@ -213,7 +213,7 @@ public class ScriptMain : UserComponent
   
 -   Entrée de blog, [VSTA setup and configuration troubles for SSIS 2008 and R2 installations](http://go.microsoft.com/fwlink/?LinkId=215661), sur blogs.msdn.com.  
   
-![Icône Integration Services (petite)](../../media/dts-16.gif "icône Integration Services (petite)")**restent jusqu'à la Date avec Integration Services** <br /> Pour obtenir les derniers téléchargements, articles, exemples et vidéos de Microsoft, ainsi que des solutions sélectionnées par la communauté, visitez la page [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] sur MSDN :<br /><br /> [Visitez la page Integration Services sur MSDN](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Pour recevoir une notification automatique de ces mises à jour, abonnez-vous aux flux RSS disponibles sur la page.  
+![Icône Integration Services (petite)](../../media/dts-16.gif "icône Integration Services (petite)")**rester jusqu'à la Date avec Integration Services** <br /> Pour obtenir les derniers téléchargements, articles, exemples et vidéos de Microsoft, ainsi que des solutions sélectionnées par la communauté, visitez la page [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] sur MSDN :<br /><br /> [Visitez la page Integration Services sur MSDN](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Pour recevoir une notification automatique de ces mises à jour, abonnez-vous aux flux RSS disponibles sur la page.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Configuration du composant Script dans l’éditeur de composant de script](configuring-the-script-component-in-the-script-component-editor.md)  

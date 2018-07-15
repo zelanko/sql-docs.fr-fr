@@ -1,5 +1,5 @@
 ---
-title: Sélectionnez la boîte de dialogue du membre Parent (Analysis Services - données multidimensionnelles) | Documents Microsoft
+title: Sélectionnez la boîte de dialogue du membre Parent (Analysis Services - données multidimensionnelles) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.saveparentmemberdilaog.f1
 helpviewer_keywords:
 - Select Parent Member dialog box
 ms.assetid: d3fea023-3334-493f-97ce-5c9829e7ce71
 caps.latest.revision: 14
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 5cf6bc82a1b56d83a92bae3023a9fc09142ce6c0
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 8b61d285a7e08c5e91a0f9b215fd6ecd18951515
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36155105"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37224159"
 ---
 # <a name="select-parent-member-dialog-box-analysis-services---multidimensional-data"></a>Boîte de dialogue Sélectionnez le membre parent (Analysis Services - Données multidimensionnelles)
   Utilisez la boîte de dialogue **Sélectionnez le membre parent** dans [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] pour sélectionner un membre parent d'un membre calculé. Pour afficher la boîte de dialogue **Sélectionnez le membre parent** , cliquez sur **Modifier** dans le volet **Éditeur de formulaire de membre calculé** de l'onglet **Calculs** du Concepteur de cube.  

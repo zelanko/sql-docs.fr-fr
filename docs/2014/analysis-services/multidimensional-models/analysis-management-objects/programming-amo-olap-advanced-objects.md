@@ -1,5 +1,5 @@
 ---
-title: Programmation OLAP AMO avancés objets | Documents Microsoft
+title: Objets avancés OLAP de programmation AMO | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -17,20 +17,20 @@ helpviewer_keywords:
 - AMO, OLAP
 ms.assetid: b75f35a7-32df-4f22-983d-324aa98e15a9
 caps.latest.revision: 22
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 6408cfd8dd3a7b8f7d6993ca84c3325bedddee24
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 8c511fe1a542804ebf05077d5f9a46c77dd69b2f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36042586"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37254921"
 ---
 # <a name="programming-amo-olap-advanced-objects"></a>Programmation d'objets OLAP AMO avancés
   Cette rubrique explique en détails la programation d'objets OLAP AMO (Analysis Management Objects) avancés. Cette rubrique contient les sections suivantes :  
   
--   [Objets action](#Action)  
+-   [Objets d’action](#Action)  
   
 -   [Objets KPI](#KPI)  
   
@@ -61,7 +61,7 @@ ms.locfileid: "36042586"
   
 3.  Ajoutez l'action à la collection du cube et mettez ce dernier à jour. L'action est un objet qui ne peut pas être mis à jour.  
   
- Pour tester l'action, vous avez besoin d'une application différente. Vous pouvez tester votre action dans [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)]. Tout d’abord, vous devez installer [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] exemples, consultez [traitement d’un objet de modèle multidimensionnel](../processing-a-multidimensional-model-analysis-services.md).  
+ Pour tester l'action, vous avez besoin d'une application différente. Vous pouvez tester votre action dans [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)]. Tout d’abord, vous devez installer [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] d’exemples, consultez [traitement d’un objet de modèle multidimensionnel](../processing-a-multidimensional-model-analysis-services.md).  
   
  L'exemple de code suivant réplique trois actions différentes de l'exemple de projet Analysis Services Adventure Works. Vous pouvez distinguer les actions les unes des autres, car celles que vous introduisez au moyen du code suivant commencent par « My ».  
   

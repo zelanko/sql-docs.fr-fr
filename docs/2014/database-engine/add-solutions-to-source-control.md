@@ -1,5 +1,5 @@
 ---
-title: Ajouter des Solutions au contrôle de code Source | Documents Microsoft
+title: Ajouter des Solutions au contrôle de code Source | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,26 +8,26 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - adding solutions
 - solutions [SQL Server Management Studio], adding
 ms.assetid: b9e36569-616d-4e47-9140-0978a9bfe923
 caps.latest.revision: 22
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 3fe6d83b0f9fab4370e8e587a57796ce610031cd
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 3e80ac60bddaf19fb42cb4e197cb9316d1f2ab2f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36144368"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37269885"
 ---
 # <a name="add-solutions-to-source-control"></a>Ajouter des solutions au contrôle de code source
   Lorsque vous ajoutez une solution au contrôle de code source, vous souhaitez la plupart du temps ajouter l'ensemble de la solution avec tous les projets qu'elle comporte. Vous pouvez utiliser [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] pour ajouter une solution au contrôle de code source.  
   
- Un projet [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] se trouve entièrement sur votre disque local. Vous modifiez, enregistrez et créez localement les projets. Après avoir ajouté le projet au contrôle de code source, vous pouvez utiliser la **Check Out** commande pour vérifier les fichiers du projet contrôle de code source.  
+ Un projet [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] se trouve entièrement sur votre disque local. Vous modifiez, enregistrez et créez localement les projets. Après avoir ajouté le projet au contrôle de code source, vous pouvez utiliser la **Check Out** commande pour vérifier les fichiers du projet en dehors du contrôle de code source.  
   
 ### <a name="to-add-a-solution-to-source-control"></a>Pour ajouter une solution au contrôle de code source  
   
@@ -43,6 +43,6 @@ ms.locfileid: "36144368"
   
 ## <a name="see-also"></a>Voir aussi  
  [Ajouter des Solutions et des projets au contrôle de code Source](../../2014/database-engine/add-solutions-and-projects-to-source-control.md)   
- [Ajouter des projets au contrôle de code Source](../../2014/database-engine/add-projects-to-source-control.md)  
+ [Ajouter des projets au contrôle de code source](../../2014/database-engine/add-projects-to-source-control.md)  
   
   

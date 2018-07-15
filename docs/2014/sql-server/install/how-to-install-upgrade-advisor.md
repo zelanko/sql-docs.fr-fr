@@ -1,5 +1,5 @@
 ---
-title: 'Comment : installer le Conseiller de mise à niveau | Documents Microsoft'
+title: 'Comment : installer le Conseiller de mise à niveau | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - installing Upgrade Advisor
 - Setup [Upgrade Advisor]
@@ -16,20 +16,20 @@ helpviewer_keywords:
 - Upgrade Advisor [SQL Server], installing
 ms.assetid: 481b0704-ce79-4543-b141-67306128aa2b
 caps.latest.revision: 24
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: b98a4b134025d22ad9d13ce9fa38a7e4f2605e0b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 241bae15e3d4edf548e12cfcb06ca09cab8c8a89
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36152959"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37216439"
 ---
 # <a name="how-to-install-upgrade-advisor"></a>Procédure : installer le Conseiller de mise à niveau
   Le Conseiller de mise à niveau prend en charge l'analyse distante de tous les composants pris en charge, à l'exception de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Si vous n'analysez pas d'instances de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], vous pouvez installer le Conseiller de mise à niveau sur n'importe quel ordinateur pouvant se connecter à vos instances de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Les composants requis du Conseiller de mise à niveau doivent également être installés sur l'ordinateur. Si vous analysez des instances de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], vous devez installer le Conseiller de mise à niveau sur le serveur de rapports.  
   
- Pour plus d’informations, consultez [installer le Conseiller de mise à niveau](../../../2014/sql-server/install/installing-upgrade-advisor.md).  
+ Pour plus d’informations, consultez [Installing Upgrade Advisor](../../../2014/sql-server/install/installing-upgrade-advisor.md).  
   
 ### <a name="to-install-upgrade-advisor"></a>Pour installer le Conseiller de mise à niveau  
   
@@ -42,7 +42,7 @@ ms.locfileid: "36152959"
     > [!NOTE]  
     >  Le Conseiller de mise à niveau nécessite [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework 4. S'il n'est pas installé, ou si vous disposez d'une version préliminaire, un message d'erreur s'affiche. Désinstallez toute version antérieure du [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)], puis installez la version la plus récente de .NET Framework 4.  
     >   
-    >  Le [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[tsql](../../includes/tsql-md.md)] ScriptDom est requis pour l’installation [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Conseiller de mise à niveau et n’est pas installé par l’installation du Conseiller de mise à niveau. Le programme d’installation, vous devez télécharger et installer le [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[tsql](../../includes/tsql-md.md)] ScriptDom à partir de la [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Feature Pack.  
+    >  Le [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[tsql](../../includes/tsql-md.md)] ScriptDom est requis pour l’installation [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Conseiller de mise à niveau et n’est pas installé par l’installation du Conseiller de mise à niveau. Le programme d’installation vous oblige à télécharger et installer le [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[tsql](../../includes/tsql-md.md)] ScriptDom à partir de la [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Feature Pack.  
   
 2.  Sur le **Bienvenue dans le [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] installation du Conseiller de mise à niveau** , cliquez sur **suivant**.  
   
@@ -50,13 +50,13 @@ ms.locfileid: "36152959"
   
 4.  Sur le **informations d’inscription** , entrez votre nom et la société.  
   
-5.  Sur le **sélection des fonctionnalités** page, passez en revue les **chemin d’Installation** valeur. Si nécessaire, utilisez le **Parcourir** pour modifier l’emplacement. Cliquez sur **Suivant**.  
+5.  Sur le **sélection des fonctionnalités** page, passez en revue la **chemin d’Installation** valeur. Si nécessaire, utilisez le **Parcourir** bouton pour modifier l’emplacement. Cliquez sur **Suivant**.  
   
 6.  Sur le **prêt à installer le programme** , cliquez sur **installer** pour installer le Conseiller de mise à niveau.  
   
 7.  Cliquez sur **Terminer** pour quitter l'Assistant.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Configuration requise du Conseiller de mise à niveau](../../../2014/sql-server/install/upgrade-advisor-prerequisites.md)  
+ [Prérequis pour le Conseiller de mise à niveau](../../../2014/sql-server/install/upgrade-advisor-prerequisites.md)  
   
   

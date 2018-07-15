@@ -1,5 +1,5 @@
 ---
-title: Options de schéma de base de données de zone (Assistant génération de schéma) de sujet (Analysis Services - données multidimensionnelles) | Documents Microsoft
+title: Objet d’Options de schéma de base de données de zone (Assistant génération de schéma) (Analysis Services - données multidimensionnelles) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.schemagenwizard.subjectareaschemaopts.f1
 ms.assetid: 4c109bb8-e19d-412b-908f-bfdd7f872439
 caps.latest.revision: 19
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: ce756687e73e628d1b66a797e19711a3d6889eec
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: eb617bca3a906162f372ce482269d3fca386acec
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36038894"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37235589"
 ---
 # <a name="subject-area-database-schema-options-schema-generation-wizard-analysis-services---multidimensional-data"></a>Options du schéma de la base de données de la zone de sujet (Assistant Génération de schéma) (Analysis Services - Données multidimensionnelles)
   Utilisez la page **Options du schéma de la base de données de la zone de sujet** pour contrôler la génération du schéma et définir la préservation des données.  
@@ -42,7 +42,7 @@ ms.locfileid: "36038894"
  **Appliquer l’intégrité référentielle**  
  Applique l'intégrité référentielle dans le schéma généré. Si vous ne sélectionnez pas cette option, les relations sont créées, mais pas appliquées.  
   
- **Conserver les données lors de la régénération**  
+ **Préserver les données lors de la régénération**  
  Conserve les données dans base de données de la zone de sujet lorsque l'Assistant termine son exécution. Si vous ne sélectionnez pas cette option, toutes les données de la base de données de la zone de sujet peuvent être effacées sans avertissement.  
   
  **Remplir une ou plusieurs tables de temps**  

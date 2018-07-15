@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - report servers [Reporting Services], encryption
 - joining report server instances [SQL Server]
@@ -24,13 +24,13 @@ ms.assetid: 53f1318d-bd2d-4c08-b19f-c8b698b5b3d3
 caps.latest.revision: 55
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 46b2afdb0687586761160397b1af197cdba8cd0a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: e39e1bd9772ea1e05e4e2c0dbb951cba721caaa1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36042161"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37214829"
 ---
 # <a name="rskeymgmt-utility-ssrs"></a>Utilitaire rskeymgmt (SSRS)
   Extrait, restaure, crée et supprime la clé symétrique utilisée pour protéger les données sensibles de serveur de rapports contre un accès non autorisé. Cet utilitaire sert également à joindre des instances de serveur de rapports dans un déploiement évolutif. Un *déploiement évolutif de serveurs de rapports* correspond à plusieurs instances de serveur de rapports qui partagent une base de données de serveur de rapports unique.  
@@ -82,7 +82,7 @@ ms.locfileid: "36042161"
  **-r**  *installationID*  
  Supprime les informations de clé symétrique pour une instance de serveur de rapports spécifique, supprimant de ce fait le serveur de rapports d'un déploiement évolutif. *installationID* est une valeur GUID se trouvant dans le fichier RSReportserver.config.  
   
- `-f`  *Fichier*  
+ `-f`  *fichier*  
  Définit un chemin d'accès complet au fichier qui stocke une copie de sauvegarde des clés symétriques.  
   
  Pour **rskeymgmt -e**, la clé symétrique est écrite dans le fichier que vous spécifiez.  
@@ -105,7 +105,7 @@ ms.locfileid: "36042161"
  Spécifie le compte d'administrateur sur l'ordinateur distant que vous joignez au déploiement évolutif. Si un compte n'est pas spécifié, les informations d'identification de l'utilisateur actuel sont employées.  
   
  `-v`  *Mot de passe*  
- (Requis pour `-u`) spécifie le mot de passe d’un compte d’administrateur sur l’ordinateur distant que vous souhaitez joindre au déploiement avec montée en charge.  
+ (Requis pour `-u`) spécifie le mot de passe d’un compte administrateur sur l’ordinateur distant que vous souhaitez joindre au déploiement avec montée en puissance.  
   
  **-t**  *trace*  
  Envoie des messages d'erreur au journal de suivi. Cet argument ne prend pas de valeur. Pour plus d’informations, consultez [Report Server Service Trace Log](../report-server/report-server-service-trace-log.md).  
@@ -151,7 +151,7 @@ rskeymgmt -j -m <remotecomputer> -n <namedreportserverinstance> -u <administrato
 >  Un déploiement évolutif de serveur de rapports se réfère à un modèle de déploiement où plusieurs instances de serveur de rapports partagent la même base de données de serveur de rapports. Une base de données de serveur de rapports peut être utilisée par n'importe quelle instance de serveur de rapports qui stocke ses clés symétriques dans la base de données. Par exemple, si une base de données de serveurs de rapport contient des informations clés pour trois instances de serveur de rapports, les trois instances sont considérées comme étant membres du même déploiement évolutif.  
   
 #### <a name="joining-report-server-instances-on-the-same-computer"></a>Jonction d'instances de serveur de rapports sur un même ordinateur  
- Vous pouvez créer un déploiement évolutif à partir de plusieurs instances de serveur de rapports installées sur un même ordinateur. Ne définissez pas le `-u` et `-v` arguments si vous joignez des instances de serveur de rapports sont installés localement. Utilisez les arguments `-u` et `-v` uniquement lorsque vous joignez une instance d'un ordinateur distant. Si vous spécifiez ces arguments, l'erreur suivante s'affiche : « Les références utilisateur ne peuvent pas être utilisées pour des connexions locales ».  
+ Vous pouvez créer un déploiement évolutif à partir de plusieurs instances de serveur de rapports installées sur un même ordinateur. Ne définissez pas la `-u` et `-v` arguments si vous joignez des instances de serveur de rapports sont installés localement. Utilisez les arguments `-u` et `-v` uniquement lorsque vous joignez une instance d'un ordinateur distant. Si vous spécifiez ces arguments, l'erreur suivante s'affiche : « Les références utilisateur ne peuvent pas être utilisées pour des connexions locales ».  
   
  L'exemple suivant illustre la syntaxe de création d'un déploiement évolutif à l'aide de plusieurs instances locales. Dans cet exemple, <`initializedinstance`> est le nom d'une instance qui est déjà initialisée pour utiliser la base de données du serveur de rapports, et <`newinstance`> est le nom de l'instance à ajouter au déploiement :  
   

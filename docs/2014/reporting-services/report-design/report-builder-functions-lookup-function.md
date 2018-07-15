@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: e60e5bab-b286-4897-9685-9ff12703517d
 caps.latest.revision: 7
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 8e2617d9704db585e4f8ac3558941a957876fc05
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 41a75e8559738294986bc5fb203b1b0469305f57
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36042826"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37222909"
 ---
 # <a name="lookup-function-report-builder-and-ssrs"></a>Fonction Lookup (Générateur de rapports et SSRS)
   Retourne la première valeur correspondante pour le nom spécifié d'un dataset contenant des paires nom/valeur.  
@@ -42,16 +42,16 @@ Lookup(source_expression, destination_expression, result_expression, dataset)
  (`Variant`) Expression évaluée pour chaque ligne d'un dataset et qui spécifie le nom ou la clé de correspondance. Par exemple, `=Fields!ProductID.Value`.  
   
  *result_expression*  
- (`Variant`) Expression évaluée pour la ligne dans le jeu de données où *expression_source* = *expression_destination*, et qui spécifie la valeur à récupérer. Par exemple, `=Fields!ProductName.Value`.  
+ (`Variant`) Une expression qui est évaluée pour la ligne dans le jeu de données où *source_expression* = *destination_expression*, et qui spécifie la valeur à récupérer. Par exemple, `=Fields!ProductName.Value`.  
   
  *dataset*  
  Constante qui spécifie le nom d'un dataset dans le rapport. Par exemple, « Products ».  
   
 ## <a name="return"></a>Return  
- Retourne un `Variant`, ou `Nothing` si aucune correspondance.  
+ Retourne un `Variant`, ou `Nothing` s’il n’existe aucune correspondance.  
   
 ## <a name="remarks"></a>Notes  
- Utilisez `Lookup` pour récupérer la valeur à partir du dataset spécifié pour une paire nom/valeur où il existe une relation 1-à-1. Par exemple, pour un champ d'ID dans une table, vous pouvez utiliser `Lookup` pour récupérer le champ Nom correspondant d'un dataset qui n'est pas lié à la région de données.  
+ Utilisez `Lookup` pour récupérer la valeur à partir du dataset spécifié pour une paire nom/valeur où il existe une relation 1 à 1. Par exemple, pour un champ d'ID dans une table, vous pouvez utiliser `Lookup` pour récupérer le champ Nom correspondant d'un dataset qui n'est pas lié à la région de données.  
   
  `Lookup` effectue les opérations suivantes :  
   
@@ -63,11 +63,11 @@ Lookup(source_expression, destination_expression, result_expression, dataset)
   
 -   Renvoie la valeur d'expression de résultat.  
   
- Pour récupérer plusieurs valeurs pour un seul champ de nom ou de clé dans lequel une relation un-à-plusieurs existe, utilisez [Fonction LookupSet &#40;Générateur de rapports et SSRS&#41;](report-builder-functions-lookupset-function.md). Pour appeler `Lookup` pour un ensemble de valeurs, utilisez [Multilookup fonction &#40;le Générateur de rapports et SSRS&#41;](report-builder-functions-lookup-function.md).  
+ Pour récupérer plusieurs valeurs pour un seul champ de nom ou de clé dans lequel une relation un-à-plusieurs existe, utilisez [Fonction LookupSet &#40;Générateur de rapports et SSRS&#41;](report-builder-functions-lookupset-function.md). Pour appeler `Lookup` pour un ensemble de valeurs, utilisez [fonction Multilookup &#40;Générateur de rapports et SSRS&#41;](report-builder-functions-lookup-function.md).  
   
  Les restrictions suivantes s'appliquent :  
   
--   `Lookup` est évalué après que toutes les expressions de filtre sont appliquées.  
+-   `Lookup` est évaluée une fois que toutes les expressions de filtre sont appliquées.  
   
 -   Un seul niveau de recherche est pris en charge. Une expression source, destination ou de résultat ne peut pas inclure de référence à une fonction de recherche.  
   
@@ -101,9 +101,9 @@ Lookup(source_expression, destination_expression, result_expression, dataset)
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Expression utilise des rapports de &#40;rapport Générateur et SSRS&#41;](expression-uses-in-reports-report-builder-and-ssrs.md)   
+ [Utilisation d’expressions dans les rapports &#40;Générateur de rapports et SSRS&#41;](expression-uses-in-reports-report-builder-and-ssrs.md)   
  [Exemples d’expressions &#40;Générateur de rapports et SSRS&#41;](expression-examples-report-builder-and-ssrs.md)   
  [Types de données dans les expressions &#40;Générateur de rapports et SSRS&#41;](expressions-report-builder-and-ssrs.md)   
- [Étendue des expressions pour les totaux, les agrégats et les Collections intégrées &#40;rapport Générateur et SSRS&#41;](expression-scope-for-totals-aggregates-and-built-in-collections.md)  
+ [Étendue des expressions pour les totaux, les agrégats et les Collections intégrées &#40;Générateur de rapports et SSRS&#41;](expression-scope-for-totals-aggregates-and-built-in-collections.md)  
   
   

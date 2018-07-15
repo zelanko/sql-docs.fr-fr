@@ -1,5 +1,5 @@
 ---
-title: 'Leçon 6 : Créer des colonnes calculées | Documents Microsoft'
+title: 'Leçon 6 : Créer des colonnes calculées | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: d126766a-5699-4e9f-8213-8c7eea0fc14e
 caps.latest.revision: 19
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: jhubbard
-ms.openlocfilehash: efec616591ab3e6d85b9199a5a4706ecd740c66e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 2f837fd314cd8a279e03cdfa2aa420920509510a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36041910"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37228409"
 ---
 # <a name="lesson-6-create-calculated-columns"></a>Leçon 6 : Créer des colonnes calculées
   Dans cette leçon, vous allez créer des données dans votre modèle en ajoutant des colonnes calculées. Une colonne calculée est basée sur les données qui existent déjà dans votre modèle. Pour en savoir plus, consultez [Colonnes calculées &#40;SSAS Tabulaire&#41;](tabular-models/ssas-calculated-columns.md).  
@@ -41,9 +41,9 @@ ms.locfileid: "36041910"
   
 2.  Dans le concepteur de modèles, cliquez sur la table **Date** (onglet).  
   
-3.  Cliquez sur le **trimestre** colonne, puis cliquez sur **insérer une colonne**.  
+3.  Cliquez sur le **Calendar Quarter** colonne, puis cliquez sur **insérer une colonne**.  
   
-     Une nouvelle colonne nommée **CalculatedColumn1** est insérée à gauche de la **trimestre** colonne.  
+     Une nouvelle colonne nommée **CalculatedColumn1** est inséré à gauche de la **Calendar Quarter** colonne.  
   
 4.  Dans la barre de formule au-dessus de la table, tapez la formule suivante. La saisie semi-automatique vous aide à taper les noms complets de colonnes et de tables et répertorie les fonctions disponibles.  
   
@@ -72,7 +72,7 @@ ms.locfileid: "36041910"
   
      Lorsque vous avez terminé de générer la formule, appuyez sur ENTRÉE pour l'accepter.  
   
-3.  Renommer la colonne `Day of Week`.  
+3.  Renommez la colonne en `Day of Week`.  
   
 4.  Cliquez sur l’en-tête de colonne et faites glisser la colonne entre les colonnes **Day Name** et **Day of Month** .  
   
@@ -93,7 +93,7 @@ ms.locfileid: "36041910"
   
      Lorsque vous avez terminé de générer la formule, appuyez sur ENTRÉE pour l'accepter.  
   
-4.  Renommer la colonne `Product Subcategory Name`.  
+4.  Renommez la colonne en `Product Subcategory Name`.  
   
  La colonne calculée Product Subcategory Name est utilisée pour créer une hiérarchie dans la table Product, incluant les données de la colonne Product Subcategory Name dans la table Product Subcategory. Les hiérarchies ne peuvent pas couvrir plusieurs tables. Vous allez créer des hiérarchies plus loin, dans la leçon 7.  
   
@@ -107,7 +107,7 @@ ms.locfileid: "36041910"
   
      Lorsque vous avez terminé de générer la formule, appuyez sur ENTRÉE pour l'accepter.  
   
-3.  Renommer la colonne `Product Category Name`.  
+3.  Renommez la colonne en `Product Category Name`.  
   
  La colonne calculée Product Category Name est utilisée pour créer une hiérarchie dans la table Product, incluant les données de la colonne Product Category Name dans la table Product Category. Les hiérarchies ne peuvent pas couvrir plusieurs tables.  
   
@@ -123,7 +123,7 @@ ms.locfileid: "36041910"
   
      Lorsque vous avez terminé de générer la formule, appuyez sur ENTRÉE pour l'accepter.  
   
-4.  Renommer la colonne `Margin`.  
+4.  Renommez la colonne en `Margin`.  
   
 5.  Faites glisser la colonne entre les colonnes **Sales Amount** et **Tax Amt** .  
   

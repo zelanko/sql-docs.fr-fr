@@ -1,5 +1,5 @@
 ---
-title: À distance du traitement (Analysis Services) | Documents Microsoft
+title: À distance de traitement (Analysis Services) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: d58bcb3c-0b3f-4ab0-81eb-4fdcc86153af
 caps.latest.revision: 4
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: e89e3be5679f9e4152eed81ee77d4a5e6bc89628
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: eddc902acb9d3e1d2339f9d8efe2c62a9c07ad54
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36152715"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37274145"
 ---
 # <a name="remote-processing-analysis-services"></a>Traitement à distance (Analysis Services)
   Vous pouvez exécuter un traitement planifié ou sans assistance sur une instance [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . La demande de traitement proviendra d'un ordinateur, mais s'exécutera sur un autre ordinateur du même réseau.  
@@ -95,10 +95,10 @@ ms.locfileid: "36152715"
 2.  Dans la dernière étape, modifiez le travail pour qu'il soit exécuté selon la planification de votre choix, en ajoutant toutes les alertes ou notifications nécessaires à la gestion du travail. Vous pouvez également affiner le script de traitement ou créer plusieurs étapes au sein du travail pour traiter les objets indépendamment.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Composants de SQL Server Agent](../../ssms/agent/sql-server-agent.md#Components)   
+ [Composants SQL Server Agent](../../ssms/agent/sql-server-agent.md#Components)   
  [Planification des tâches administratives SSAS avec SQL Server Agent](../instances/schedule-ssas-administrative-tasks-with-sql-server-agent.md)   
- [Traitement par lot &#40;Analysis Services&#41;](batch-processing-analysis-services.md)   
+ [Traitement par lots &#40;Analysis Services&#41;](batch-processing-analysis-services.md)   
  [Traitement des objets de modèle multidimensionnel](processing-a-multidimensional-model-analysis-services.md)   
- [Le traitement des objets &#40;XMLA&#41;](../xmla/xml-elements-objects.md)  
+ [Traitement des objets &#40;XMLA&#41;](../xmla/xml-elements-objects.md)  
   
   

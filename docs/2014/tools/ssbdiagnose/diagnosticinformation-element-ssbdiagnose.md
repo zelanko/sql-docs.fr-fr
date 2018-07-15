@@ -1,5 +1,5 @@
 ---
-title: DiagnosticInformation Élément (ssbdiagnose) | Documents Microsoft
+title: DiagnosticInformation Élément (ssbdiagnose) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - XML output file format [ssbdiagnose], diagnosticinformation element
 - diagnosticinformation element
 - ssbdiagnose
 ms.assetid: 0cfda544-542c-4cf4-86d2-8031c91b10f6
 caps.latest.revision: 14
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 0e7bf7140b5340e90517d65cf76fbeccf46ebc34
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 410d6378f37046779faeccf4635868f26ef96621
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36140201"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37269965"
 ---
 # <a name="diagnosticinformation-element-ssbdiagnose"></a>Élément DiagnosticInformation (ssbdiagnose)
   L’élément **DiagnosticInformation** contient tous les éléments qui signalent les informations de diagnostic trouvées par l’utilitaire. **DiagnosticInformation** est l’élément racine d’un fichier de sortie XML **ssbdiagnostic** .  
@@ -56,7 +56,7 @@ ms.locfileid: "36140201"
 |Relation|Éléments|  
 |------------------|--------------|  
 |**Élément parent**|Aucun.|  
-|**Éléments enfants**|[Bannière élément &#40;ssbdiagnose&#41;](banner-element-ssbdiagnose.md)<br /><br /> [Élément issue &#40;ssbdiagnose&#41;](issue-element-ssbdiagnose.md)|  
+|**Éléments enfants**|[Élément de bannière &#40;ssbdiagnose&#41;](banner-element-ssbdiagnose.md)<br /><br /> [Élément issue &#40;ssbdiagnose&#41;](issue-element-ssbdiagnose.md)|  
   
 ## <a name="remarks"></a>Notes  
  Pour plus d'informations sur les espaces de noms XML, consultez l'article [Namespaces in an XML Document](http://go.microsoft.com/fwlink/?LinkId=7341) dans la bibliothèque [!INCLUDE[msCoName](../../includes/msconame-md.md)] MSDN.  

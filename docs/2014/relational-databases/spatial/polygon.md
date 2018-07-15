@@ -8,27 +8,27 @@ ms.suite: ''
 ms.technology:
 - dbe-spatial
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - geometry subtypes [SQL Server]
 - Polygon geometry subtype [SQL Server]
 ms.assetid: b6a21c3c-fdb8-4187-8229-1c488454fdfb
 caps.latest.revision: 25
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 6a76fc29f234418e5f44586f4fb7e121c3395264
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 629dd979c00c9a40915c94c5bfe79d28b746f44a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36155006"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37238759"
 ---
 # <a name="polygon"></a>Polygon
-  A `Polygon` est une surface à deux dimensions stockée en tant que séquence de points définissant un anneau englobant extérieur et zéro ou plusieurs anneaux intérieurs.  
+  Un `Polygon` est une surface à deux dimensions stockée sous forme de séquence de points définissant un anneau englobant extérieur et zéro ou plusieurs anneaux intérieurs.  
   
 ## <a name="polygon-instances"></a>Instances Polygon  
- A `Polygon` instance peut être formée à partir d’un anneau qui possède au moins trois points distincts. A `Polygon` instance peut également être vide.  
+ Un `Polygon` instance peut être formée à partir d’un anneau qui possède au moins trois points distincts. Un `Polygon` instance peut également être vide.  
   
  Les anneaux extérieurs et intérieurs d’un `Polygon` définissent sa limite. L'espace dans les anneaux définit l'intérieur du `Polygon`.  
   
@@ -38,7 +38,7 @@ ms.locfileid: "36155006"
   
  Comme indiqué par l'illustration :  
   
-1.  La figure 1 est un `Polygon` instance dont la limite est définie par un anneau extérieur.  
+1.  Figure 1 est un `Polygon` instance dont la limite est définie par un anneau extérieur.  
   
 2.  La Figure 2 est une instance `Polygon` dont la limite est définie par un anneau extérieur et deux anneaux intérieurs. La zone à l'intérieur des anneaux intérieurs fait partie de l'extérieur de l'instance `Polygon`.  
   
@@ -59,7 +59,7 @@ ms.locfileid: "36155006"
   
 -   Les points de début et de fin de l'instance `LineString` doivent être les mêmes.  
   
- L’exemple suivant montre acceptée `Polygon` instances.  
+ L’exemple suivant montre accepté `Polygon` instances.  
   
 ```  
 DECLARE @g1 geometry = 'POLYGON EMPTY';  
@@ -108,7 +108,7 @@ DECLARE @g6 geometry = 'POLYGON((1 1, 1 1, 1 1, 1 1))';
 SELECT @g1.STIsValid(), @g2.STIsValid(), @g3.STIsValid(), @g4.STIsValid(), @g5.STIsValid(), @g6.STIsValid();  
 ```  
   
- `@g1` n’est pas valide, car la boucle interne touche l’anneau intérieur à deux endroits. `@g2` n’est pas valide, car le deuxième anneau intérieur est à l’intérieur du premier anneau intérieur. `@g3` n’est pas valide, car les deux anneaux intérieurs se touchent à plusieurs points consécutifs. `@g4` n’est pas valide, car les parties intérieures des deux anneaux intérieurs se chevauchent. `@g5` n’est pas valide, car l’anneau extérieur n’est pas le premier anneau. `@g6` n’est pas valide, car la boucle n’a pas au moins trois points distincts.  
+ `@g1` n’est pas valide, car la boucle interne touche l’anneau intérieur à deux endroits. `@g2` n’est pas valide, car le deuxième anneau intérieur est à l’intérieur du premier anneau intérieur. `@g3` n’est pas valide, car les deux anneaux intérieurs se touchent au niveau de plusieurs points consécutifs. `@g4` n’est pas valide, car les parties intérieures des deux anneaux intérieurs se chevauchent. `@g5` n’est pas valide, car l’anneau extérieur n’est pas le premier anneau. `@g6` n’est pas valide, car la boucle n’a pas au moins trois points distincts.  
   
 ## <a name="examples"></a>Exemples  
  L’exemple suivant crée une instance `geometry``Polygon` simple avec un trou et un SRID 10.  

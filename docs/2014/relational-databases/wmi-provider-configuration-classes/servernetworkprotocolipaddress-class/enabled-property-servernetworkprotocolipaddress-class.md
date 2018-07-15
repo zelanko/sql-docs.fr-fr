@@ -1,5 +1,5 @@
 ---
-title: Enabled, propriété (classe ServerNetworkProtocolIpAddress) | Documents Microsoft
+title: Enabled, propriété (classe ServerNetworkProtocolIpAddress) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - Enabled property
 ms.assetid: 870fd4d0-6c77-462a-b480-d42eb044b2e7
 caps.latest.revision: 14
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 655acfd106800927bbec8b2fa8021a3b2ba4be87
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
+ms.openlocfilehash: a2296ec80dc8c97fef8588b810d5d4179dd5ed7c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36141470"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37268505"
 ---
 # <a name="enabled-property-servernetworkprotocolipaddress-class"></a>Propriété Enabled (classe ServerNetworkProtocolIpAddress)
   Obtient la propriété booléenne qui spécifie si une adresse IP est activée.  

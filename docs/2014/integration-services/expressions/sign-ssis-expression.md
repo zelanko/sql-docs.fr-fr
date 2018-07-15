@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - positive values [Integration Services]
 - SIGN function
@@ -17,13 +17,13 @@ ms.assetid: 1547db08-4329-4781-91c2-36898ed71b15
 caps.latest.revision: 32
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: a68d4a3879c173298b99c305702aaaf61d43a194
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: c61c52a44caf90e6e5c7e819d2d8e4e3707caed9
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36052894"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37207379"
 ---
 # <a name="sign-ssis-expression"></a>SIGN (expression SSIS)
   Renvoie le nombre positif (+1), le nombre négatif (-1) ou zéro (0) selon le signe d'une expression numérique.  
@@ -59,6 +59,6 @@ SIGN(DealerPrice - StandardCost)
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Fonctions &#40;Expression SSIS&#41;](functions-ssis-expression.md)  
+ [Fonctions &#40;SSIS Expression&#41;](functions-ssis-expression.md)  
   
   

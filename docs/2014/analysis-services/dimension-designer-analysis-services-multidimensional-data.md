@@ -1,5 +1,5 @@
 ---
-title: Dimension du concepteur (Analysis Services - données multidimensionnelles) | Documents Microsoft
+title: Dimension du concepteur (Analysis Services - données multidimensionnelles) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Dimension Designer
 ms.assetid: 46bf7d1c-a354-4212-9bfa-258361203b0e
 caps.latest.revision: 28
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: cd1efb474f3e9c70641496fcc023ef0795b579f1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: e7c5920ede56424510e1a6edca52e6de8d56b099
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36040768"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37208109"
 ---
 # <a name="dimension-designer-analysis-services---multidimensional-data"></a>Concepteur de dimensions (Analysis Services - Données multidimensionnelles)
   Le Concepteur de dimensions dans [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] permet de parcourir les données que la dimension contient et de modifier diverses propriétés d'une dimension existante : attributs, hiérarchies, niveaux, relations d'attributs et traductions.  

@@ -1,5 +1,5 @@
 ---
-title: Validation des modèles et à l’aide de modèles pour la prédiction (exploration de données des compléments pour Excel) | Documents Microsoft
+title: Validation des modèles et à l’aide de modèles pour la prédiction (Data Mining Add-ins pour Excel) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - mining models, validating
 - mining models, charting
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - mining models, testing
 ms.assetid: e245ac1f-1230-48e9-9091-e70b131aa2a8
 caps.latest.revision: 13
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: c399f7db81923e51676066fa54e0ac79614a7ba2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 6cf4beef0255948a416b5a8e8867a3608d7db151
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36040040"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37250829"
 ---
 # <a name="validating-models-and-using-models-for-prediction-data-mining-add-ins-for-excel"></a>Validation des modèles et utilisation des modèles pour la prédiction (compléments d'exploration de données pour Excel)
   Le test et la validation de votre modèle est une étape importante du processus d'exploration de données. Vous devez savoir dans quelle mesure vos modèles d'exploration de données sont efficaces sur des données réelles avant de les déployer dans un environnement de production.  
@@ -32,7 +32,7 @@ ms.locfileid: "36040040"
  Les compléments d'exploration de données incluent des outils qui permettent de tester les modèles que vous avez créés, et de créer des prédictions et des recommandations à l'aide des modèles.  
   
 ## <a name="accuracy-chart"></a>Graphique de précision  
- Le **graphique de précision** Assistant vous aide à créer une requête de prédiction et d’en évaluer les performances d’un modèle d’exploration de données en créant un graphique de courbes d’élévation ou un graphique à nuages de points. Le graphique de courbes d'élévation permet de différencier les modèles dans les structures où ils sont presque identiques et de déterminer quels sont ceux permettant d'obtenir les prédictions les plus précises.  
+ Le **graphique de précision** Assistant vous aide à créer une requête de prédiction et évaluer les performances d’un modèle d’exploration de données en créant un graphique de courbes d’élévation ou un graphique à nuages de points. Le graphique de courbes d'élévation permet de différencier les modèles dans les structures où ils sont presque identiques et de déterminer quels sont ceux permettant d'obtenir les prédictions les plus précises.  
   
  [Graphique de précision &#40;compléments d’exploration de données SQL Server&#41;](accuracy-chart-sql-server-data-mining-add-ins.md)  
   
@@ -65,7 +65,7 @@ ms.locfileid: "36040040"
 ## <a name="advanced-query-editor"></a>Éditeur de requête avancé  
  Le **éditeur de requêtes avancé** est un ensemble interactif de boîtes de dialogue qui vous permet de créer tous les types d’instructions DMX, allant de l’exécution des requêtes personnalisées à la création et apprentissage de nouveaux modèles, la suppression de modèles, ou créer de nouvelles données définit.  
   
- [Éditeur de requête d’exploration de données données avancé](advanced-data-mining-query-editor.md)  
+ [Éditeur de requêtes d’exploration de données avancée](advanced-data-mining-query-editor.md)  
   
 ## <a name="see-also"></a>Voir aussi  
  [Exploration et nettoyage des données](exploring-and-cleaning-data.md)   

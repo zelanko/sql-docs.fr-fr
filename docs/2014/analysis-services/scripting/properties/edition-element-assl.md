@@ -1,5 +1,5 @@
 ---
-title: Élément Edition (ASSL) | Documents Microsoft
+title: Élément Edition (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - Edition element
 ms.assetid: 521e1286-097e-494f-b036-61047096e87e
 caps.latest.revision: 38
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: c9d801f2055513323f473a73662337349207ea6e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 8a94ed085a345100579b3305fa43e7e360fe8258
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36053175"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37245659"
 ---
 # <a name="edition-element-assl"></a>Élément Edition (ASSL)
   Contient la version en lecture seule de l’instance de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] représenté par le [Server](../objects/server-element-assl.md) élément.  
@@ -68,17 +68,17 @@ ms.locfileid: "36053175"
 |-----------|-----------------|  
 |*Standard*|[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Édition standard pour les processeurs 32 bits.|  
 |*Enterprise*|[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Enterprise edition pour les processeurs 32 bits.|  
-|*EnterpriseCore*|[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Édition Enterprise : gestion des licences par cœur pour les processeurs 32 bits.|  
+|*EnterpriseCore*|[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Édition entreprise : gestion des licences par cœur pour les processeurs 32 bits.|  
 |*Business Intelligence*|[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Business Intelligence edition pour processeurs 32 bits.|  
 |*Développeur*|[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Developer edition pour processeurs 32 bits|  
-|*Évaluation*|[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Édition d’évaluation pour processeurs 64 bits.|  
+|*Version d’évaluation*|[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Version d’évaluation pour processeurs 64 bits.|  
 |*Local*|[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Édition locale pour les processeurs 32 bits.|  
-|*Standard 64*|[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Édition standard pour processeurs 64 bits.|  
+|*Standard 64*|[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Édition standard pour les processeurs 64 bits.|  
 |*Enterprise 64*|[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Enterprise edition pour les processeurs 64 bits.|  
-|*Enterprisecore 64*|[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Édition Enterprise : gestion des licences par cœur pour processeurs 64 bits.|  
+|*Enterprisecore 64*|[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Édition entreprise : gestion des licences par cœur pour processeurs 64 bits.|  
 |*Business Intelligence 64*|[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Business Intelligence edition pour processeurs 64 bits.|  
 |*Developer 64*|[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Developer edition pour processeurs 64 bits|  
-|*Évaluation 64*|[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Édition d’évaluation pour processeurs 64 bits.|  
+|*Évaluation 64*|[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Version d’évaluation pour processeurs 64 bits.|  
 |*Local64*|[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Local d’edition pour processeurs 64 bits.|  
   
  L'énumération qui correspond aux valeurs autorisées de l'élément `ServerEdition` dans le modèle objet AMO (Analysis Management Objects) est <xref:Microsoft.AnalysisServices.ServerEdition>.  

@@ -1,5 +1,5 @@
 ---
-title: Élément MimeType (ASSL) | Documents Microsoft
+title: Élément MimeType (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - MimeType element
 ms.assetid: 710e2519-6892-4ce8-a10f-a4edf7077e18
 caps.latest.revision: 11
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 5ae8ddac41536e2857fb51cfe7fe6420d5c74c15
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 4c5514f057e954ff81e79fb1727f1856ce161030
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36041888"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37254801"
 ---
 # <a name="mimetype-element-assl"></a>Élément MimeType (ASSL)
   Contient le type MIME Multipurpose Internet Mail Extensions (), le cas échéant, des données représentées par le [DataItem](../data-type/dataitem-data-type-assl.md) élément.  

@@ -1,5 +1,5 @@
 ---
-title: Référence XML for Analysis (XMLA) | Documents Microsoft
+title: Référence XML for Analysis (XMLA) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -15,20 +15,20 @@ helpviewer_keywords:
 - XMLA, reference
 ms.assetid: 88045e05-ce47-4e28-999b-7f9c74af9faf
 caps.latest.revision: 33
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 32093211db376a156c456d4f769f78bcc1135ceb
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: ec0d843ac46cbcf5d032d1f93190869fd5a37cb2
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36038877"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37241279"
 ---
 # <a name="xml-for-analysis--xmla-reference"></a>Référence XML for Analysis (XMLA)
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] utilise le protocole XML for Analysis (XMLA) pour gérer toutes les communications entre les applications clientes et une instance Analysis Services. Au niveau de base, d'autres bibliothèques clientes telles que ADOMD.NET et AMO génèrent des requêtes et décodent les réponses en XMLA, servant d'intermédiaires à une instance d'Analysis Services qui utilise exclusivement XMLA.  
   
- Pour prendre en charge la détection et la manipulation des données multidimensionnelles et tabulaires des formats, la spécification XMLA définit deux méthodes généralement accessibles, [Discover](xml-elements-methods-discover.md) et [Execute](xml-elements-methods-execute.md)et un collection de types d’éléments et les données XML. Du fait que XML autorise l'exploitation d'une architecture client et serveur faiblement couplée, ces deux méthodes gèrent les informations entrantes et sortantes au format XML. Analysis Services est compatible avec la spécification XMLA 1.1, mais l'étend pour inclure la fonction de définition de données et de manipulation implémentée sous la forme d'annotations sur les méthodes `Discover` et `Execute`. La syntaxe XML étendue est désignée par le terme ASSL (Analysis Services Scripting Language). ASSL repose sur la spécification XMLA sans la décomposer. L'interopérabilité basée sur XMLA est garantie si vous utilisez uniquement XMLA ou XMLA et ASSL.  
+ Pour prendre en charge la découverte et la manipulation de données dans des formats multidimensionnelles et tabulaires, la spécification XMLA définit deux méthodes généralement accessibles, [Discover](xml-elements-methods-discover.md) et [Execute](xml-elements-methods-execute.md)et un collection de types d’éléments et les données XML. Du fait que XML autorise l'exploitation d'une architecture client et serveur faiblement couplée, ces deux méthodes gèrent les informations entrantes et sortantes au format XML. Analysis Services est compatible avec la spécification XMLA 1.1, mais l'étend pour inclure la fonction de définition de données et de manipulation implémentée sous la forme d'annotations sur les méthodes `Discover` et `Execute`. La syntaxe XML étendue est désignée par le terme ASSL (Analysis Services Scripting Language). ASSL repose sur la spécification XMLA sans la décomposer. L'interopérabilité basée sur XMLA est garantie si vous utilisez uniquement XMLA ou XMLA et ASSL.  
   
  En tant que programmeur, vous pouvez utiliser XMLA comme interface de programmation si les spécifications de solution spécifient des protocoles standard, tels que XML, SOAP et HTTP. Les programmeurs et les administrateurs peuvent également utiliser XMLA sur une base ad hoc pour récupérer les informations du serveur ou pour exécuter des commandes.  
   

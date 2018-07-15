@@ -1,5 +1,5 @@
 ---
-title: Matrice de classification (SQL Server Data Mining Add-ins) | Documents Microsoft
+title: Matrice de classification (SQL Server Data Mining Add-ins) | Microsoft Docs
 ms.custom: ''
 ms.date: 12/29/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - mining models, validating
 - classification matrix
@@ -16,22 +16,22 @@ helpviewer_keywords:
 - mining models, testing
 ms.assetid: d6f620f4-39af-4714-9628-28ce3c361fca
 caps.latest.revision: 14
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 1944620e5c83485a01b9bc856cc67e9e6908c769
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 3d87c2d37ed69e2cc3f3e224ddf1a489b34425b8
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36040546"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37249639"
 ---
 # <a name="classification-matrix-sql-server-data-mining-add-ins"></a>Matrice de classification (Compléments d'exploration de données SQL Server)
   ![Bouton matrice de classification, ruban Exploration de données](media/dmc-cmatrix.gif "bouton matrice de Classification, ruban Exploration de données")  
   
  Utilisez la matrice de classification pour évaluer la précision d'un modèle de prédiction. Pour créer une matrice de classification, vous exécutez un jeu de données de test dans le modèle, et l'outil matrice de classification compare les valeurs réelles du jeu de test par rapport aux prédictions effectuées par le modèle. Consultez la matrice pour indiquer, d'un seul coup d'œil, la fréquence à laquelle le modèle est correct, et la fréquence à laquelle les prédictions sont incorrectes.  
   
- Dans ces compléments, utilisez le **matrice de Classification** Assistant pour sélectionner un modèle, spécifiez les données de test, puis générer une matrice de résultats.  
+ Dans ces compléments, utilisez le **matrice de Classification** Assistant pour sélectionner un modèle, spécifiez les données de test et puis générer une matrice de résultats.  
   
 ## <a name="how-to-read-a-classification-matrix"></a>Procédure : lire une matrice de classification  
  Supposons que votre objectif est de créer un programme de fidélisation des clients et d'affecter les clients aux catégories appropriées, afin que vous puissiez leur fournir un niveau approprié d'incitation. Vous avez implémenté trois niveaux pour le programme de récompense (bronze, argent et or) et les avez divulgué aux clients dans une phase de test. Vous avez également conçu un modèle qui analyse les clients et prédit les catégories correctes. Maintenant vous allez utiliser la matrice de classification sur les données de test pour déterminer la qualité du modèle est prédire l'offre correcte pour tous les clients.  
@@ -44,7 +44,7 @@ ms.locfileid: "36040546"
 |Or|2.72 %|**84.82 %**|0.00%|  
 |Argent|1.84 %|0.00%|**93.80 %**|  
 |*Corriger*|*95.45 %*|*84.82 %*|*98.30 %*|  
-|*Mal classés*|*4.55 %*|*15.18 %*|*1.70 %*|  
+|*Mal classées*|*4.55 %*|*15.18 %*|*1.70 %*|  
   
 -   Chaque colonne indique les valeurs réelles dans le jeu de données de test.  
   
@@ -66,7 +66,7 @@ ms.locfileid: "36040546"
   
      Conseil : Il peut être difficile d'interpréter une matrice de classification si votre colonne prédictible possède plusieurs colonnes à comparer.  
   
-     Dans le **sélectionner les colonnes à prédire** page, vous pouvez également spécifier si vous souhaitez afficher le nombre de valeurs correctes et incorrectes, ou un pourcentage.  
+     Dans le **sélectionner des colonnes à prédire** page, vous pouvez également spécifier si vous souhaitez afficher le nombre de valeurs correctes et incorrectes, ou afficher un pourcentage.  
   
 4.  Sur la page Sélectionner les données source, indiquez si vous utilisez des données de test externes, ou les données de test enregistrées avec le modèle.  
   

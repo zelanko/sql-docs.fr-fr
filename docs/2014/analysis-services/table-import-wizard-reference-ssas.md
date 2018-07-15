@@ -1,5 +1,5 @@
 ---
-title: Table de référence de l’Assistant Importation (SSAS) | Documents Microsoft
+title: Table de référence de l’Assistant Importation (SSAS) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.bidtoolset.tableimportwizard.f1
 ms.assetid: 2ac05e89-c002-4adc-86c7-438df70e9ed5
 caps.latest.revision: 12
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: cbd2caf29b53fe6bdb8313dc11645068ff65c64f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 348e92e73e4ca03e995fa17546691dc032f03ad3
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36052497"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37267245"
 ---
 # <a name="table-import-wizard-reference-ssas"></a>Référence de l'Assistant Importation de table (SSAS)
   Cette section fournit de l'aide sur l' **Assistant Importation de table**. Cet Assistant vous permet d'importer des données à partir de diverses sources de données. Pour accéder à l'Assistant depuis le générateur de modèles, dans le menu **Modèle** , cliquez sur **Importer à partir de la source de données**.  
@@ -30,7 +30,7 @@ ms.locfileid: "36052497"
   
 -   [Paramètres avancés &#40;SSAS&#41;](advanced-settings-ssas.md)  
   
--   [Concepteur de requêtes MDX de Analysis Services &#40;SSAS&#41;](analysis-services-mdx-query-designer-ssas.md)  
+-   [Analysis Services Concepteur de requêtes MDX &#40;SSAS&#41;](analysis-services-mdx-query-designer-ssas.md)  
   
 -   [Choisir comment importer les données &#40;SSAS&#41;](choose-how-to-import-the-data-ssas.md)  
   

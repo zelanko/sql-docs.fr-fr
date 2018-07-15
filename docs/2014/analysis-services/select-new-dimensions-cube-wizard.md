@@ -1,5 +1,5 @@
 ---
-title: Sélectionner de nouvelles Dimensions (Assistant Cube) | Documents Microsoft
+title: Sélectionner de nouvelles Dimensions (Assistant Cube) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.cubewizard.newdimselection.f1
 ms.assetid: 7241a3b3-bba9-4b4c-99d9-61ec92ab969a
 caps.latest.revision: 9
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 3233f1e421479cac1d2e4bfc3e9150cc9a83afcc
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 6ef4e23603077b75ef173c246a861996bed9fdbe
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36041457"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37271565"
 ---
 # <a name="select-new-dimensions-cube-wizard"></a>Sélectionner de nouvelles dimensions (Assistant Cube)
   Utilisez la page **Sélectionner de nouvelles dimensions** pour sélectionner les nouvelles dimensions à créer.  

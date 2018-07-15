@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 92256240-0cd5-4be4-8904-d1e3b93cb6b3
 caps.latest.revision: 6
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 13064f5d0033a1a4677789c6031b1f9b0f322379
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 26e3fe8feb400bb9280a37f8f33bebf510377fe0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36039226"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37261875"
 ---
 # <a name="hide-legend-items-on-the-chart-report-builder-and-ssrs"></a>Masquer des éléments de légende dans le graphique (Générateur de rapports et SSRS)
   Par défaut, toute série ajoutée à un graphique qui n'est pas à base de formes sera ajoutée en tant qu'élément à la légende. Pour les graphiques à secteurs, en anneau, en entonnoir et en pyramide, toute série ajoutée au graphique ajoutera des points de données individuels à la légende.  
@@ -39,8 +39,8 @@ ms.locfileid: "36039226"
     >  Vous ne pouvez pas masquer une série d'un groupe et pas des autres. Si vous avez ajouté un champ à la zone **Groupes de séries** , toutes les séries qui appartiennent à ce groupe seront masquées.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Mise en forme de la légende sur un graphique &#40;rapport Générateur et SSRS&#41;](chart-legend-formatting-report-builder.md)   
- [Mise en forme des Points de données sur un graphique &#40;rapport Générateur et SSRS&#41;](formatting-data-points-on-a-chart-report-builder-and-ssrs.md)   
+ [Mise en forme de la légende sur un graphique &#40;Générateur de rapports et SSRS&#41;](chart-legend-formatting-report-builder.md)   
+ [Mise en forme des Points de données sur un graphique &#40;Générateur de rapports et SSRS&#41;](formatting-data-points-on-a-chart-report-builder-and-ssrs.md)   
  [Modifier le texte d’un élément de légende &#40;Générateur de rapports et SSRS&#41;](chart-legend-change-item-text-report-builder.md)   
  [Ajouter une moyenne mobile à un graphique &#40;Générateur de rapports et SSRS&#41;](add-a-moving-average-to-a-chart-report-builder-and-ssrs.md)   
  [Boîte de dialogue Propriétés de la légende, Général &#40;Générateur de rapports et SSRS&#41;](../legend-properties-dialog-box-general-report-builder-and-ssrs.md)  

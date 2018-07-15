@@ -1,5 +1,5 @@
 ---
-title: Élément MiningModelID (ASSL) | Documents Microsoft
+title: Élément MiningModelID (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - MiningModelID element
 ms.assetid: fada8720-1590-44be-bafc-0ab3612b00e5
 caps.latest.revision: 34
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: e0ee845e245ea94f04ddb6114000859e3cb04367
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: f5cc241819884cd8307c03d39d2d4daa575454f6
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36142901"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37267275"
 ---
 # <a name="miningmodelid-element-assl"></a>Élément MiningModelID (ASSL)
   Associe un modèle d'exploration de données à une dimension d'exploration de données.  
@@ -62,7 +62,7 @@ ms.locfileid: "36142901"
 |Éléments enfants|None|  
   
 ## <a name="remarks"></a>Notes  
- L’élément qui correspond au parent de `MiningModelID` dans l’objet d’objets AMO (Analysis Management) est modèle <xref:Microsoft.AnalysisServices.Dimension>.  
+ L’élément qui correspond au parent de `MiningModelID` dans l’objet d’objets AMO (Analysis Management) modèle est <xref:Microsoft.AnalysisServices.Dimension>.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Élément MiningModel &#40;ASSL&#41;](../objects/miningmodel-element-assl.md)   

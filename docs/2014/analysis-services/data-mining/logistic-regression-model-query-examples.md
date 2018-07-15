@@ -1,5 +1,5 @@
 ---
-title: Exemples de requêtes de modèle de régression logistique | Documents Microsoft
+title: Exemples de requête de modèle de régression logistique | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - logistic regression [Analysis Services]
 - content queries [DMX]
 ms.assetid: 7c8e13a3-5c67-46c2-abfa-4881e6ef9c62
 caps.latest.revision: 22
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: b079609e6d2df8d104b3430488ae37ac0e9ea179
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 8f908b029074e58866f51dbd7deff571763e11b4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36154068"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37189596"
 ---
 # <a name="logistic-regression-model-query-examples"></a>Exemples de requêtes de modèle de régression logistique
   Lorsque vous créez une requête sur un modèle d'exploration de données, vous pouvez créer une requête de contenu, qui fournit des détails sur les modèles (ou séquences) découverts au cours de l'analyse, ou créer une requête de prédiction, qui utilise les séquences du modèle pour effectuer des prédictions à l'aide de nouvelles données.  
@@ -161,7 +161,7 @@ NATURAL PREDICTION JOIN
   
 6.  Sous l’onglet **Structure d’exploration de données** , cliquez avec le bouton droit sur la colonne de Service Grade, puis sélectionnez **Propriétés**.  
   
-7.  Modifier la `Content` propriété à partir de **continu** à **Discretized**. Modifier la `DiscretizationMethod` propriété **Clusters**. Pour DiscretizationBucketCount, tapez **3**.  
+7.  Modifier le `Content` propriété à partir de **continu** à **Discretized**. Modifier le `DiscretizationMethod` propriété **Clusters**. Pour DiscretizationBucketCount, tapez **3**.  
   
     > [!NOTE]  
     >  Ces paramètres sont utilisés juste pour illustrer le processus et ne produisent pas nécessairement de modèle valide.  
@@ -213,9 +213,9 @@ NATURAL PREDICTION JOIN
   
 ## <a name="see-also"></a>Voir aussi  
  [Requêtes d’exploration de données](data-mining-queries.md)   
- [Algorithme Microsoft Logistic Regression](microsoft-logistic-regression-algorithm.md)   
+ [Algorithme de régression logistique de Microsoft](microsoft-logistic-regression-algorithm.md)   
  [Référence technique de Microsoft Logistic Regression algorithme](microsoft-logistic-regression-algorithm-technical-reference.md)   
- [Exploration du contenu du modèle pour les modèles de régression logistique &#40;Analysis Services - Exploration de données&#41;](mining-model-content-for-logistic-regression-models.md)   
- [Leçon 5 : Génération de réseau neuronal et modèles de régression logistique &#40;intermédiaire Didacticiel d’exploration de données&#41;](../../tutorials/lesson-5-build-models-intermediate-data-mining-tutorial.md)  
+ [Contenu du modèle pour les modèles de régression logistique d’exploration de données &#40;Analysis Services - Exploration de données&#41;](mining-model-content-for-logistic-regression-models.md)   
+ [Leçon 5 : Génération de réseau neuronal et modèles de régression logistique &#40;didacticiel d’exploration de données intermédiaire&#41;](../../tutorials/lesson-5-build-models-intermediate-data-mining-tutorial.md)  
   
   

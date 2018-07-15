@@ -1,5 +1,5 @@
 ---
-title: Rapport du journal d’exécution de serveur et vue ExecutionLog3 | Documents Microsoft
+title: Rapport de journal d’exécution de serveur et vue ExecutionLog3 | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - logs [Reporting Services], execution
 - execution logs [Reporting Services]
@@ -16,13 +16,13 @@ ms.assetid: a7ead67d-1404-4e67-97e7-4c7b0d942070
 caps.latest.revision: 40
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 9059bf91729065342e0013770b7b4b688df6fa17
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 38ffd98216c7943f164ad633603fa51aa717a552
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36052586"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37255691"
 ---
 # <a name="report-server-execution-log-and-the-executionlog3-view"></a>Journal des exécutions du serveur de rapports et vue ExecutionLog3
   Le journal d'exécution du serveur de rapports contient des informations sur les rapports qui sont exécutés sur le serveur ou sur plusieurs serveurs en mode natif regroupés dans un déploiement évolutif ou une batterie de serveurs SharePoint. Vous pouvez l'utiliser pour connaître la fréquence de demande d'un rapport, les formats de sortie les plus utilisés et le nombre de millisecondes de traitement consacré à chaque phrase du traitement. Le journal contient des informations sur le temps passé pour l'exécution d'une requête de dataset dans un rapport et le temps passé pour le traitement des données. Si vous êtes administrateur de serveur de rapports, vous pouvez passer en revue les informations du journal, identifier les tâches longues et faire des suggestions aux auteurs de rapports pour améliorer des zones du rapport (dataset ou traitement).  
@@ -127,7 +127,7 @@ select * from ExecutionLog3 order by TimeStart DESC
 |TimeDataRetrieval|Nombre de millisecondes passées pour la récupération des données.|  
 |TimeProcessing|Nombre de millisecondes passées pour le traitement du rapport.|  
 |TimeRendering|Nombre de millisecondes passées pour le rendu du rapport.|  
-|Source|Source d'exécution du rapport. Valeurs possibles :<br /><br /> **Live**<br /><br /> **Cache**: indique une exécution mise en cache, dataset, par exemple, les requêtes ne sont pas exécutées en direct.<br /><br /> **Snapshot**<br /><br /> **Historique**<br /><br /> **AdHoc** : indique soit un rapport généré de façon dynamique en fonction de modèle d’extraction, soit un rapport du Générateur de rapports affiché en aperçu sur un client utilisant le serveur de rapports pour le traitement et le rendu.<br /><br /> **Session**: indique une requête de suivi dans une session déjà établie.  Par exemple, la requête initiale concerne l'affichage de la page 1 et la requête de suivi concerne l'exportation vers Excel avec l'état de la session active.<br /><br /> **RDCE**: indique une Extension de personnalisation de définition de rapport. Une extension RDCE personnalisée peut personnaliser dynamiquement une définition de rapport avant qu'elle ne soit passée au moteur de traitement lors de l'exécution.|  
+|Source|Source d'exécution du rapport. Valeurs possibles :<br /><br /> **Live**<br /><br /> **Cache**: indique une exécution mise en cache, par exemple, jeu de données de requêtes ne sont pas exécutées en temps réel.<br /><br /> **Snapshot**<br /><br /> **Historique**<br /><br /> **Ad hoc** : indique soit un rapport généré dynamiquement en fonction de modèle d’extraction, soit un rapport du Générateur de rapports affiché en aperçu sur un client utilisant le serveur de rapports pour le traitement et de rendu.<br /><br /> **Session**: indique une requête de suivi dans une session déjà établie.  Par exemple, la requête initiale concerne l'affichage de la page 1 et la requête de suivi concerne l'exportation vers Excel avec l'état de la session active.<br /><br /> **RDCE**: indique une Report Definition Customization Extension. Une extension RDCE personnalisée peut personnaliser dynamiquement une définition de rapport avant qu'elle ne soit passée au moteur de traitement lors de l'exécution.|  
 |État|État (soit rsSuccess, soit un code d'erreur. En cas de plusieurs erreurs, seule la première est enregistrée).|  
 |ByteCount|Taille en octets des rapports rendus.|  
 |RowCount|Nombre de lignes retournées par les requêtes.|  
@@ -226,13 +226,13 @@ select * from ExecutionLog3 order by TimeStart DESC
   
 ```  
   
- La section suivante décrit certaines des propriétés que vous voyez dans le champ AdditionalInfo :  
+ La section suivante décrit certaines des propriétés que s’affiche dans le champ AdditionalInfo :  
   
 -   **ProcessingEngine**: 1 = SQL Server 2005, 2 = le nouveau moteur de traitement de la demande. Si la plupart de vos rapports affichent toujours la valeur 1, vous pouvez envisager de les reconcevoir afin qu'ils utilisent le nouveau moteur de traitement à la demande, plus efficace.  
   
      `<ProcessingEngine>2</ProcessingEngine>`  
   
--   **ScalabilityTime**: le nombre de millisecondes consacré à effectuer des opérations d’échelle dans le moteur de traitement. La valeur 0 indique qu'aucune période de temps supplémentaire n'a été passée sur les opérations d'échelle et indique également que la demande ne présente pas une mémoire insuffisante.  
+-   **ScalabilityTime**: le nombre de millisecondes passées pour exécuter des opérations d’échelle dans le moteur de traitement. La valeur 0 indique qu'aucune période de temps supplémentaire n'a été passée sur les opérations d'échelle et indique également que la demande ne présente pas une mémoire insuffisante.  
   
     ```  
     <ScalabilityTime>  
@@ -256,7 +256,7 @@ select * from ExecutionLog3 order by TimeStart DESC
     </DataExtension>  
     ```  
   
--   **ExternalImages**la valeur est exprimée en millisecondes. Ces données peuvent être utilisées pour diagnostiquer les problèmes de performances. Le temps nécessaire pour récupérer des images d'un serveur web externe peut ralentir l'exécution globale des rapports. Ajouté dans [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)].  
+-   **ExternalImages**la valeur est exprimée en millisecondes. Ces données peuvent être utilisées pour diagnostiquer les problèmes de performances. Le temps nécessaire pour récupérer des images d'un serveur web externe peut ralentir l'exécution globale des rapports. Ajout dans [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)].  
   
     ```  
     <ExternalImages>  
@@ -266,7 +266,7 @@ select * from ExecutionLog3 order by TimeStart DESC
     </ExternalImages>  
     ```  
   
--   **Connexions**: une structure à plusieurs niveaux. Ajouté dans [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)].  
+-   **Connexions**: une structure à plusieurs niveaux. Ajout dans [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)].  
   
     ```  
     <Connections>  

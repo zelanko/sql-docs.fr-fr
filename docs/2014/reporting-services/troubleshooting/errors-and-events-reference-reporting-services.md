@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - messages [Reporting Services]
 - errors [Reporting Services]
@@ -19,19 +19,19 @@ ms.assetid: 818b4cc1-e65d-4f1a-bf7d-fe269e6dd739
 caps.latest.revision: 40
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: c01067a787782649b415343a9d4c70911ebe1b57
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 0a09771deaff3f6996250840920675159209daf4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36053456"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37255381"
 ---
 # <a name="errors-and-events-reference-reporting-services"></a>Guide de référence des erreurs et des événements (Reporting Services)
-  Cette rubrique fournit des informations sur les erreurs et les événements pour [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Les fichiers journaux [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] contiennent également des informations sur les erreurs. Pour plus d’informations sur les types de fichiers journaux qui sont disponibles et comment afficher les journaux, consultez [des fichiers journaux et Sources](../report-server/reporting-services-log-files-and-sources.md).  
+  Cette rubrique fournit des informations sur les erreurs et les événements pour [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Les fichiers journaux [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] contiennent également des informations sur les erreurs. Pour plus d’informations sur les types de fichiers journaux qui sont disponibles et comment afficher les journaux, consultez [Sources et fichiers journaux Reporting Services](../report-server/reporting-services-log-files-and-sources.md).  
   
 ## <a name="cause-and-resolution-for-reporting-services-error-messages"></a>Cause et solution des messages d'erreur de Reporting Services  
- Les sites Web de [!INCLUDE[msCoName](../../includes/msconame-md.md)] contiennent des informations sur les causes des erreurs rencontrées le plus fréquemment, ainsi que les solutions correspondantes. Pour plus d’informations, consultez [Cause et résolution des erreurs de Services Reporting](cause-and-resolution-of-reporting-services-errors.md).  
+ Les sites Web de [!INCLUDE[msCoName](../../includes/msconame-md.md)] contiennent des informations sur les causes des erreurs rencontrées le plus fréquemment, ainsi que les solutions correspondantes. Pour plus d’informations, consultez [Cause et résolution de Reporting Services Errors](cause-and-resolution-of-reporting-services-errors.md).  
   
 ## <a name="report-server-events"></a>Événements du serveur de rapports  
  Les événements suivants du serveur de rapports sont consignés dans le journal des applications [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows.  
@@ -69,7 +69,7 @@ ms.locfileid: "36053456"
 |134|Error|Gestion|Serveur de rapports|Le serveur de rapports n'a pas réussi à chiffrer les valeurs d'un paramètre dans le fichier de configuration.|  
   
 ## <a name="see-also"></a>Voir aussi  
- [Surveiller les abonnements Reporting Services](../subscriptions/monitor-reporting-services-subscriptions.md)   
+ [Surveiller les abonnements Reportions Services](../subscriptions/monitor-reporting-services-subscriptions.md)   
  [Fichiers journaux et sources de Reporting Services](../report-server/reporting-services-log-files-and-sources.md)  
   
   

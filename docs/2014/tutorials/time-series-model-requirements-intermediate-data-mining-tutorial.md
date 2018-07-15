@@ -1,5 +1,5 @@
 ---
-title: Présentation de la configuration requise pour une série chronologique de modèle (didacticiel sur l’exploration des données intermédiaires) | Documents Microsoft
+title: Présentation de la configuration requise pour une série chronologique de modèle (didacticiel d’exploration de données intermédiaire) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 1ce2b3e3-108a-4f7e-985f-a20b816d0da7
 caps.latest.revision: 26
 author: minewiskan
 ms.author: owend
-manager: kfile
-ms.openlocfilehash: a60d807aa63f57be7811482cadaabe40bded12b9
-ms.sourcegitcommit: 8c040e5b4e8c7d37ca295679410770a1af4d2e1f
+manager: craigg
+ms.openlocfilehash: df76b7ac5b50f5dfa9206b0352de4443bfd07a19
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/21/2018
-ms.locfileid: "36312657"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37255221"
 ---
 # <a name="understanding-the-requirements-for-a-time-series-model-intermediate-data-mining-tutorial"></a>Spécifications pour un modèle de série chronologique (Didacticiel sur l'exploration de données intermédiaire)
   Lorsque vous préparez des données afin de les utiliser dans un modèle de prévision, vous devez veiller à ce qu'elles contiennent une colonne pouvant être utilisée pour identifier les étapes dans la série chronologique. Cette colonne sera désignée comme colonne `Key Time`. Puisqu'il s'agit d'une clé, la colonne doit contenir des valeurs numériques uniques.  
@@ -28,7 +28,7 @@ ms.locfileid: "36312657"
   
  Pour ce didacticiel, les données de ventes sont collectées quotidiennement dans la base de données des ventes transactionnelles, mais pour l'exploration de données, les données ont été préagrégées par mois, à l'aide d'une vue.  
   
- De plus, il est souhaitable pour l'analyse que les données aient aussi peu d'écart possible. Si vous envisagez d'analyser plusieurs séries de données, toutes les séries devraient commencer et se terminer de préférence aux mêmes dates. Si les données ont des espaces, mais les écarts ne sont pas au début ou à la fin d’une série, vous pouvez utiliser le paramètre MISSING_VALUE_SUBSTITUTION pour remplir la série. [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] fournit également plusieurs options permettant de remplacer des données manquantes par des données, telles que l'utilisation de moyennes ou de constantes.  
+ De plus, il est souhaitable pour l'analyse que les données aient aussi peu d'écart possible. Si vous envisagez d'analyser plusieurs séries de données, toutes les séries devraient commencer et se terminer de préférence aux mêmes dates. Si les données ont des écarts, mais les écarts ne sont pas au début ou à la fin d’une série, vous pouvez utiliser le paramètre MISSING_VALUE_SUBSTITUTION pour remplir la série. [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] fournit également plusieurs options permettant de remplacer des données manquantes par des données, telles que l'utilisation de moyennes ou de constantes.  
   
 > [!WARNING]  
 >  Les outils de graphique croisé dynamique et de tableau croisé dynamique qui ont été inclus dans les versions antérieures du concepteur de vue de source de données ne sont plus fournis. Nous vous conseillons d'identifier au préalable les écarts dans les données de série chronologique à l'aide des outils tels que le profileur de données inclus dans [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)].  
@@ -45,7 +45,7 @@ ms.locfileid: "36312657"
   
 3.  Dans l’aire de conception vue de source de données, sélectionnez la colonne, la Date de création de rapports, puis sélectionnez **propriétés**. Ensuite, cliquez sur la colonne TimeIndex et sélectionnez **propriétés**.  
   
-     Le champ TimeIndex a les type de données System.Int32, tandis que le champ Date de création de rapports comporte les données de type System.DateTime. De nombreux entrepôts de données convertissent les valeurs date/heure en entiers et utilisent la colonne des entiers comme clé pour améliorer les performances d'indexation. Toutefois, si vous utilisez cette colonne, l'algorithme MTS établit des prédictions à l'aide de valeurs futures, telles que 201014, 201014, etc. Étant donné que vous souhaitez représenter vos données de vente de prévision à l’aide de dates de calendrier, vous utiliserez la colonne de Date de création de rapports en tant qu’identificateur de série unique.  
+     Le champ TimeIndex a les type de données System.Int32, tandis que le champ Date de création d’un rapport au type de données System.DateTime. De nombreux entrepôts de données convertissent les valeurs date/heure en entiers et utilisent la colonne des entiers comme clé pour améliorer les performances d'indexation. Toutefois, si vous utilisez cette colonne, l'algorithme MTS établit des prédictions à l'aide de valeurs futures, telles que 201014, 201014, etc. Étant donné que vous souhaitez représenter vos données de ventes de prévision à l’aide de dates de calendrier, vous allez utiliser la colonne Reportingdate comme identificateur de série unique.  
   
 ### <a name="to-set-the-key-in-the-data-source-view"></a>Pour définir la clé dans la vue de source de données  
   
@@ -62,16 +62,16 @@ ms.locfileid: "36312657"
   
  Pour ce scénario, certaines données manquent au début d'une série : autrement dit, il n'y a pas de données pour la gamme de produits T1000 jusqu'en juillet 2007. Sinon, toutes les séries se terminent à la même date et aucune valeur ne manque.  
   
- La spécification de l’algorithme MTS est que toute série que vous incluez dans un modèle unique doit avoir le même **fin** point. Étant donné que le modèle de vélo T1000 a été introduit en 2007, les données de cette série démarrent plus tard que pour les autres modèles de vélos, mais la série se termine à la même date ; les données peuvent donc être utilisées.  
+ La configuration requise de l’algorithme Microsoft Time Series est que toute série que vous incluez dans un modèle unique doit avoir le même **fin** point. Étant donné que le modèle de vélo T1000 a été introduit en 2007, les données de cette série démarrent plus tard que pour les autres modèles de vélos, mais la série se termine à la même date ; les données peuvent donc être utilisées.  
   
 #### <a name="to-close-the-data-source-view-designer"></a>Pour fermer le concepteur de vues de source de données  
   
 -   Cliquez sur l’onglet, **Explorer la Table vTimeSeries**, puis sélectionnez **fermer**.  
   
 ## <a name="next-task-in-lesson"></a>Tâche suivante de la leçon  
- [Création d’une Structure de prévision et un modèle &#40;intermédiaire Didacticiel d’exploration de données&#41;](../../2014/tutorials/creating-a-forecasting-structure-and-model-intermediate-data-mining-tutorial.md)  
+ [Création d’une Structure de prévision et un modèle &#40;didacticiel d’exploration de données intermédiaire&#41;](../../2014/tutorials/creating-a-forecasting-structure-and-model-intermediate-data-mining-tutorial.md)  
   
 ## <a name="see-also"></a>Voir aussi  
- [Algorithme de série chronologique de Microsoft](../../2014/analysis-services/data-mining/microsoft-time-series-algorithm.md)  
+ [Algorithme MTS (Microsoft Time Series)](../../2014/analysis-services/data-mining/microsoft-time-series-algorithm.md)  
   
   

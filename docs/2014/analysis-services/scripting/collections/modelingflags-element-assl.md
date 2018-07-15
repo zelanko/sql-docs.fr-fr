@@ -1,5 +1,5 @@
 ---
-title: Élément ModelingFlags (ASSL) | Documents Microsoft
+title: Élément ModelingFlags (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,18 +22,18 @@ helpviewer_keywords:
 - ModelingFlags element
 ms.assetid: 83968c1e-aae8-4657-aa53-d971de0dc834
 caps.latest.revision: 31
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 219b5b7dfc0ff50a1dfe5a49be69121925ce63ee
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: bcaab47515c02a2ba40a6fb837309a7f5bed4308
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36155136"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37207909"
 ---
 # <a name="modelingflags-element-assl"></a>Élément ModelingFlags (ASSL)
-  Contient la collection de [ModelingFlag](../objects/modelingflag-element-assl.md) les éléments d’une colonne dans un [MiningStructure](../objects/miningstructure-element-assl.md) ou un [MiningModel](../objects/miningmodel-element-assl.md).  
+  Contient la collection de [ModelingFlag](../objects/modelingflag-element-assl.md) éléments pour une colonne dans un [MiningStructure](../objects/miningstructure-element-assl.md) ou un [MiningModel](../objects/miningmodel-element-assl.md).  
   
 ## <a name="syntax"></a>Syntaxe  
   

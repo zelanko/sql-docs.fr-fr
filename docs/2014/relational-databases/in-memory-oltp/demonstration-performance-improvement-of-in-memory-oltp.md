@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine-imoltp
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: c6def45d-d2d4-4d24-8068-fab4cd94d8cc
 caps.latest.revision: 17
-author: stevestein
-ms.author: sstein
-manager: jhubbard
-ms.openlocfilehash: 40bda40f2ed8114f77a28e8a7b0b382107cecdd0
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
+ms.openlocfilehash: 171af425cfa479dcf9be3f555250de9a246daa1e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36154613"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37248499"
 ---
 # <a name="demonstration-performance-improvement-of-in-memory-oltp"></a>Démonstration : optimisation des performances de l'OLTP en mémoire
   Cet exemple illustre les améliorations des performances obtenues avec l'OLTP en mémoire en comparant les différences des temps de réponse lors de l'exécution d'une requête Transact-SQL identique sur des tables optimisées en mémoire et des tables sur disque classiques. En outre, une procédure stockée compilée en mode natif est également créée (selon la même requête), puis exécutée pour montrer que vous obtenez généralement les meilleurs temps de réponse lors de l'interrogation d'une table optimisée en mémoire avec une procédure stockée compilée en mode natif. Cet exemple ne montre qu'un aspect des améliorations des performances lors de l'accès aux données dans des tables optimisées en mémoire : l'efficacité de l'accès aux données lors de l'exécution d'insertions. Cet échantillon est monothread et ne tire pas profit des avantages de concurrence de l'OLTP en mémoire. Une charge de travail utilisant la concurrence aura des gains de performance supérieurs.  
@@ -29,13 +29,13 @@ ms.locfileid: "36154613"
   
  Pour exécuter cet exemple, vous allez effectuer les opérations suivantes :  
   
-1.  Créer une base de données nommée **imoltp** et modifier ses détails de fichier pour le configurer pour à l’aide de l’OLTP en mémoire.  
+1.  Créer une base de données nommée **imoltp** et modifier ses détails de fichier pour le configurer à l’aide de l’OLTP en mémoire à.  
   
 2.  créer les objets de base de données pour notre exemple : trois tables et une procédure stockée compilée en mode natif ;  
   
 3.  exécuter les différentes requêtes et afficher les temps de réponse pour chacune d'elles.  
   
- À l’installation de le **imoltp** dans notre exemple de base de données, commencez par créer un dossier vide : **c:\imoltp_data**, puis exécutez le code suivant :  
+ Pour le programme d’installation le **imoltp** dans notre exemple de base de données, commencez par créer un dossier vide : **c:\imoltp_data**, puis exécutez le code suivant :  
   
 ```tsql  
 USE master  

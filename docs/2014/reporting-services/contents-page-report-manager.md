@@ -1,5 +1,5 @@
 ---
-title: Contenu de la Page (Gestionnaire de rapports) | Documents Microsoft
+title: Contenu de la Page (Gestionnaire de rapports) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 6b16869b-158a-4934-9c85-bee934b35378
 caps.latest.revision: 5
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 32054fea94b8786fca74ecca9c223d4af9c9d6d3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 05e7f592527e237798618b8af08cf471759d8786
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36154551"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37224819"
 ---
 # <a name="contents-page-report-manager"></a>Page Contenu (Gestionnaire de rapports)
   La page Contenu vous permet d'afficher le contenu du dossier actif, de sélectionner les éléments à afficher ou d'accéder à d'autres dossiers. Elle s'ouvre lorsque vous sélectionnez un dossier. Elle correspond également à la page d'accueil du Gestionnaire de rapports.  
@@ -42,7 +42,7 @@ ms.locfileid: "36154551"
  **Télécharger le fichier**  
  Cliquez pour ouvrir la page Télécharger un fichier, qui permet de copier un fichier du système de fichiers sur un serveur de rapports. Vous pouvez télécharger des fichiers pour ajouter des rapports et des ressources (telles que des graphiques, des documents ou tout autre type de contenu secondaire que vous souhaitez conserver avec un rapport). Les fichiers téléchargés sont stockés dans une base de données du serveur de rapports qui les gère. Pour télécharger un rapport, sélectionnez un fichier doté de l'extension .rdl.  
   
- **Affichage des détails**  
+ **Mode Détails**  
  Cliquez pour afficher la page Contenu dans une liste qui contient des informations supplémentaires sur les éléments. En **Mode Détails**, vous pouvez utiliser les boutons **Supprimer** et **Déplacer** pour supprimer et déplacer des éléments dans le dossier.  
   
  Pointez sur un élément et cliquez sur la flèche déroulante pour ouvrir le menu déroulant à partir duquel vous pouvez accéder aux propriétés de l'élément sélectionné et les configurer.  
@@ -61,6 +61,6 @@ ms.locfileid: "36154551"
 ## <a name="see-also"></a>Voir aussi  
  [Le Gestionnaire de rapports &#40;SSRS en Mode natif&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
  [Gestion de contenu de serveur de rapports &#40;SSRS en Mode natif&#41;](report-server/report-server-content-management-ssrs-native-mode.md)   
- [Aide (F1) de gestionnaire de rapports](../../2014/reporting-services/report-manager-f1-help.md)  
+ [Aide (F1) du Gestionnaire de rapports](../../2014/reporting-services/report-manager-f1-help.md)  
   
   

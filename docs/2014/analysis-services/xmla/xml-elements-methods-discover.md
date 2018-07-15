@@ -1,5 +1,5 @@
 ---
-title: Méthode Discover (XMLA) | Documents Microsoft
+title: Méthode Discover (XMLA) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -26,18 +26,18 @@ helpviewer_keywords:
 - Discover method
 ms.assetid: 0eb52d88-c081-416e-a229-610e4373b0b3
 caps.latest.revision: 36
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: ead875bbe88ea71c8741450f8a3127efcf4b313d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: cec0774478c0eb34e9094bd9b6b1663e55339c1a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36140373"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37196019"
 ---
 # <a name="discover-method-xmla"></a>Méthode Discover (XMLA)
-  Récupère les informations, telles que la liste des bases de données disponibles ou des détails concernant un objet spécifique, à partir d’une instance de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Les données récupérées à l'aide de la méthode `Discover` dépendent des valeurs des paramètres qui lui sont transmis.  
+  Récupère des informations, telles que la liste des bases de données disponibles ou des détails concernant un objet spécifique, à partir d’une instance de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Les données récupérées à l'aide de la méthode `Discover` dépendent des valeurs des paramètres qui lui sont transmis.  
   
  **Espace de noms** urn:schemas-microsoft-com:xml-analysis  
   
@@ -70,7 +70,7 @@ ms.locfileid: "36140373"
 |Éléments enfants|[Propriétés](xml-elements-properties/properties-element-xmla.md), [RequestType](xml-elements-properties/type-element-xmla.md), [Restrictions](xml-elements-properties/restrictions-element-xmla.md)|  
   
 ## <a name="remarks"></a>Notes  
- La méthode `Discover` demande les métadonnées sur des instances [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] et des objets. Métadonnées sont retournées à l’aide de la XMLA [ensemble de lignes](xml-data-types/rowset-data-type-xmla.md) type de données.  
+ La méthode `Discover` demande les métadonnées sur des instances [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] et des objets. Métadonnées sont retournées à l’aide de XMLA [ensemble de lignes](xml-data-types/rowset-data-type-xmla.md) type de données.  
   
 ## <a name="example"></a>Exemple  
  Dans l'exemple de code suivant, le client envoie l'appel `Discover` pour demander une liste de cubes de l'exemple [!INCLUDE[ssAWDWsp](../../includes/ssawdwsp-md.md)] de la base de données [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] :  

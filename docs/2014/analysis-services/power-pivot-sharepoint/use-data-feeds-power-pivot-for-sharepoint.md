@@ -1,5 +1,5 @@
 ---
-title: Utiliser des flux de données (PowerPivot pour SharePoint) | Documents Microsoft
+title: Utiliser des flux de données (PowerPivot pour SharePoint) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 50140fdf-6fd1-41a1-9c14-8ecfb97ba2e1
 caps.latest.revision: 11
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 3c8ecd6c4d3cde888559886154c679c0a4f7a5e0
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 0e974c81b3f65ef7830362bc80fc7f15df0f1009
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36139679"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37249409"
 ---
 # <a name="use-data-feeds-powerpivot-for-sharepoint"></a>Utiliser des flux de données (PowerPivot pour SharePoint)
   Les flux de données comportent un ou plusieurs flux de données générés à partir d'une source de données en ligne et transmis en continu à un document ou une application de destination. Si vous utilisez PowerPivot pour Excel, les flux peuvent vous aider à obtenir des données d'entreprise ou données métier à partir de sources de données arbitraires et qui s'affichent dans la fenêtre PowerPivot dans votre classeur Excel 2010. Après avoir importé un flux dans un classeur, vous pouvez y faire référence ultérieurement dans toute opération d'actualisation des données que vous planifiez sur un serveur SharePoint.  
@@ -41,7 +41,7 @@ ms.locfileid: "36139679"
 ##  <a name="prereq"></a> Conditions préalables  
  Vous devez disposer de PowerPivot pour Excel pour importer un flux de données dans Excel 2010.  
   
- Vous devez disposer d'un service Web ou d'un service de données qui fournit des données au format Atom 1.0. [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] et SharePoint 2010 peuvent fournir des données à ce format.  
+ Vous devez disposer d'un service Web ou d'un service de données qui fournit des données au format Atom 1.0.  [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] et SharePoint 2010 peuvent fournir des données à ce format.  
   
  Avant de pouvoir exporter une liste SharePoint sous forme de flux de données, vous devez installer ADO.NET Data Services sur le serveur SharePoint. Pour plus d’informations, voir [Installation d’ADO.NET Data Services pour prendre en charge les exportations de flux de données des listes SharePoint](../../sql-server/install/install-ado-net-data-services-to-support-data-feed-exports-of-sharepoint-lists.md).  
   
@@ -69,12 +69,12 @@ ms.locfileid: "36139679"
  Pour obtenir des instructions sur l’exportation d’un flux de données à partir d’un rapport, consultez [Générer des flux de données à partir d’un rapport &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-builder/generate-data-feeds-from-a-report-report-builder-and-ssrs.md) dans le [fichier d’aide du Générateur de rapports](http://go.microsoft.com/fwlink/?LinkId=154494).  
   
 > [!NOTE]  
->  Pour configurer une planification périodique d'actualisation des données qui réimporte les données de rapport dans un classeur PowerPivot publié dans une bibliothèque SharePoint, le serveur de rapports doit être configuré pour l'intégration SharePoint. Pour plus d’informations sur l’utilisation de PowerPivot pour SharePoint et Reporting Services, ensemble, consultez [Configuration et Administration d’un serveur de rapports &#40;Reporting Services SharePoint Mode&#41;](../../reporting-services/configure-administer-report-server-reporting-services-sharepoint-mode.md).  
+>  Pour configurer une planification périodique d'actualisation des données qui réimporte les données de rapport dans un classeur PowerPivot publié dans une bibliothèque SharePoint, le serveur de rapports doit être configuré pour l'intégration SharePoint. Pour plus d’informations sur l’utilisation de PowerPivot pour SharePoint et Reporting Services ensemble, consultez [Configuration et Administration d’un serveur de rapports &#40;Reporting Services SharePoint Mode&#41;](../../reporting-services/configure-administer-report-server-reporting-services-sharepoint-mode.md).  
   
 ##  <a name="dsdoc"></a> Créer un flux à partir d'un document de service de données  
  Si vous avez un service de données personnalisé qui génère des flux Atom, vous pouvez configurer un document de service de données en tant que méthode pour rendre les données accessibles aux utilisateurs et aux applications. Un fichier de *document de service de données* (.atomsvc) spécifie une ou plusieurs connexions à des sources en ligne qui publient des données au format câble Atom. Les documents de service de données peuvent être créés dans une *bibliothèque de flux de données*, qui est une bibliothèque à usage spécifique qui fournit un point d’accès commun pour l’exploration de documents de service de données publiés sur un serveur SharePoint. Les travailleurs de l'information sont autorisés à accéder aux documents de service de données dans la bibliothèque de flux peuvent faire référence à l'URL SharePoint du document pour importer les flux dans leurs classeurs et applications.  
   
-1.  Ouvrez une bibliothèque de flux créée par votre administrateur de site. Pour plus d’informations, consultez [créer ou personnaliser une bibliothèque de source de données &#40;PowerPivot pour SharePoint&#41;](create-or-customize-a-data-feed-library-power-pivot-for-sharepoint.md).  
+1.  Ouvrez une bibliothèque de flux créée par votre administrateur de site. Pour plus d’informations, consultez [créer ou personnaliser une bibliothèque de flux de données &#40;PowerPivot pour SharePoint&#41;](create-or-customize-a-data-feed-library-power-pivot-for-sharepoint.md).  
   
 2.  Dans Outils de bibliothèque, cliquez sur **Documents**.  
   

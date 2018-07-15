@@ -1,14 +1,13 @@
 ---
-title: Gestion des connexions et des travaux pour les bases de données d’un groupe de disponibilité (SQL Server) | Documents Microsoft
+title: Gestion des connexions et des travaux pour les bases de données d’un groupe de disponibilité (SQL Server) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Availability Groups [SQL Server], deploying
 - Availability Groups [SQL Server], failover
@@ -17,13 +16,13 @@ ms.assetid: d7da14d3-848c-44d4-8e49-d536a1158a61
 caps.latest.revision: 14
 author: rothja
 ms.author: jroth
-manager: jhubbard
-ms.openlocfilehash: 0a1229f999cc4fc5a1b4ffa1426e2c4f3597674c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 63e50f50613f8be8ddbf3969d538521f3aa3b126
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36051117"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37196079"
 ---
 # <a name="management-of-logins-and-jobs-for-the-databases-of-an-availability-group-sql-server"></a>Gestion des connexions et des travaux pour les bases de données d'un groupe de disponibilité (SQL Server)
   Vous devez maintenir régulièrement le même ensemble de connexions utilisateur et de travaux de l'Agent [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] sur chaque base de données primaire d'un groupe de disponibilité AlwaysOn et les bases de données secondaires correspondantes. Les connexions et les travaux doivent être reproduits sur chaque instance de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] qui héberge un réplica de disponibilité pour le groupe de disponibilité.  
