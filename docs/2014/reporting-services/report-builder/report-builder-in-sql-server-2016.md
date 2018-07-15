@@ -1,5 +1,5 @@
 ---
-title: Dans SQL Server 2014 le Générateur de rapports | Documents Microsoft
+title: Générateur de rapports dans SQL Server 2014 | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - "10428"
 helpviewer_keywords:
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - getting started
 ms.assetid: 55bf4f9c-d037-412f-ae57-3fc39ce32fa5
 caps.latest.revision: 29
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: ab3d87e730ee8788f010f776899d3d494887ed96
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 911b88bc7b707e837bbd042814a2f8e84a61daa0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36051669"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37261925"
 ---
 # <a name="report-builder-in-sql-server-2014"></a>Générateur de rapports dans SQL Server 2014
   Le Générateur de rapports est un environnement de création de rapports destiné aux utilisateurs professionnels qui préfèrent travailler dans l'environnement [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Office. Lorsque vous concevez un rapport, vous spécifiez l'emplacement des données à obtenir, leur nature et leur mode d'affichage. Au moment de l'exécution du rapport, le processeur de rapports assimile l'ensemble des informations que vous avez spécifiées, puis il récupère les données et les combine à la mise en page du rapport pour générer le rapport. Vous pouvez soit afficher un aperçu de vos rapports dans le Générateur de rapports, soit les publier sur un serveur de rapports ou un serveur de rapports en mode intégré SharePoint, pour permettre à d'autres utilisateurs de les exécuter.  
@@ -47,13 +47,13 @@ ms.locfileid: "36051669"
   
 ##  <a name="DesignRept"></a> Concevoir votre rapport  
   
--   **Créer des rapports avec la table, matrice, graphique et mises en page du rapport de forme libre.** Créez des rapports de tableau pour des données en colonnes, des rapports de matrice (tels que des rapports d'analyse croisée ou de tableau croisé dynamique) pour des données synthétisées, des rapports de graphique pour des données graphiques et enfin, des rapports au format libre pour tout autre type de données. Les rapports peuvent incorporer d'autres rapports et graphiques, avec des listes, des graphiques et des contrôles pour les applications web dynamiques.  
+-   **Créer des rapports avec la table, matrice, graphique et une disposition de rapport de forme libre.** Créez des rapports de tableau pour des données en colonnes, des rapports de matrice (tels que des rapports d'analyse croisée ou de tableau croisé dynamique) pour des données synthétisées, des rapports de graphique pour des données graphiques et enfin, des rapports au format libre pour tout autre type de données. Les rapports peuvent incorporer d'autres rapports et graphiques, avec des listes, des graphiques et des contrôles pour les applications web dynamiques.  
   
 -   **Créez des rapports à partir de diverses sources de données.** Générez des rapports à l’aide de données provenant de tout type de source de données ayant un fournisseur de données managées [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)], un fournisseur OLE DB ou une source de données ODBC. Vous pouvez créer des rapports qui utilisent des données relationnelles et multidimensionnelles provenant de bases de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], Oracle, Hypérion, entre autres. Utilisez une extension pour le traitement des données XML et récupérez des données de n'importe quelle source XML. Vous pouvez utiliser des fonctions table pour concevoir des sources de données personnalisées.  
   
 -   **Modifiez des rapports existants.** En utilisant le Générateur de rapports, vous pouvez personnaliser et mettre à jour des rapports qui ont été créés dans [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]le Concepteur de rapports.  
   
--   **Modifier vos données** par filtrage, regroupement et tri des données, ou en ajoutant des formules ou des expressions.  
+-   **Modifiez vos données** par filtrage, regroupement et tri des données, ou en ajoutant des formules ou des expressions.  
   
 -   **Ajoutez des graphiques, des jauges, des graphiques sparkline et des indicateurs** pour synthétiser les données dans un format visuel et présenter d'un coup d'œil de grandes quantités d'informations agrégées.  
   
@@ -79,7 +79,7 @@ ms.locfileid: "36051669"
 
   
 ##  <a name="InThisSection"></a> Dans cette section  
- [Quelles sont les nouveautés dans le Générateur de rapports pour SQL Server 2014](../what-s-new-in-report-builder-for-sql-server-2014.md)  
+ [Nouveautés du Générateur de rapports pour SQL Server 2014](../what-s-new-in-report-builder-for-sql-server-2014.md)  
  Décrit les nouvelles fonctionnalités de cette version du Générateur de rapports, notamment les cartes.  
   
  [Didacticiel : Création d’un rapport de graphique rapide en mode hors connexion](tutorial-create-a-quick-chart-report-offline-report-builder.md)  
@@ -88,19 +88,19 @@ ms.locfileid: "36051669"
  [Planification d’un rapport &#40;Générateur de rapports&#41;](../report-design/planning-a-report-report-builder.md)  
  Fournit des informations sur les éléments à prendre en considération avant de commencer à créer un rapport.  
   
- [Concepts de création de rapports &#40;rapport Générateur et SSRS&#41;](../report-design/report-authoring-concepts-report-builder-and-ssrs.md)  
+ [Concepts de création de rapports &#40;Générateur de rapports et SSRS&#41;](../report-design/report-authoring-concepts-report-builder-and-ssrs.md)  
  Définit les concepts clés utilisés dans la documentation du Générateur de rapports.  
   
  [Mode Création de rapport &#40;Générateur de rapports&#41;](report-design-view-report-builder.md)  
  Explique les différents volets et régions du mode création de rapport.  
   
- [Affichage de la création de Dataset partagé &#40;Générateur de rapports&#41;](shared-dataset-design-view-report-builder.md)  
+ [Mode de création de Dataset partagé &#40;Générateur de rapports&#41;](shared-dataset-design-view-report-builder.md)  
  Explique les différents volets et régions du mode création de dataset partagé.  
   
  [Raccourcis clavier &#40;Générateur de rapports&#41;](keyboard-shortcuts-report-builder.md)  
  Présente les touches de raccourci disponibles pour la navigation et la conception de rapports dans le Générateur de rapports.  
   
- [Démarrer le Générateur de rapports &#40;Générateur de rapports&#41;](start-report-builder.md)  
+ [Démarrer le Générateur de &#40;Générateur de rapports&#41;](start-report-builder.md)  
  Explique comment démarrer les deux versions différentes du Générateur de rapports : autonome et [!INCLUDE[ndptecclick](../../includes/ndptecclick-md.md)].  
   
   

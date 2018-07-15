@@ -8,25 +8,25 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - installing SQL Server, what's new
 - SQL Server, what's new
 - SQL Server, installing
 ms.assetid: c8642a96-3a09-4ec7-a9c3-c539147e6330
 caps.latest.revision: 60
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 18bfdcd9ae27a984cfc3c8259ffca89d3a5acc8f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 41721eea4f1e4b58f5d1e6a1d6ae99bbebc71ff5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36050961"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37255321"
 ---
 # <a name="what39s-new-in-sql-server-installation"></a>Nouveautés dans l’installation de SQL Server
-  Windows Vista n'est pas un système d'exploitation pris en charge pour [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]. Service Pack 1 reste la configuration minimale requise pour les systèmes d'exploitation [!INCLUDE[win7](../../includes/win7-md.md)] et [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)]. Pour plus d’informations sur la configuration requise du système d’exploitation, consultez [matérielle et logicielle requise pour l’installation de SQL Server 2014](hardware-and-software-requirements-for-installing-sql-server.md).  
+  Windows Vista n'est pas un système d'exploitation pris en charge pour [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]. Service Pack 1 reste la configuration minimale requise pour les systèmes d'exploitation [!INCLUDE[win7](../../includes/win7-md.md)] et [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)]. Pour plus d’informations sur la configuration requise du système d’exploitation, consultez [Hardware and Software Requirements for Installing SQL Server 2014](hardware-and-software-requirements-for-installing-sql-server.md).  
   
  L'installation de [!INCLUDE[ssExpCurrent](../../includes/ssexpcurrent-md.md)] vous invite à spécifier le répertoire dans lequel enregistrer le package extrait. Si aucun emplacement n'est indiqué, [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] utilise par défaut le lecteur système de l'ordinateur. Les fichiers extraits sont conservés une fois que l'installation de [!INCLUDE[ssExpCurrent](../../includes/ssexpcurrent-md.md)] est terminée.  
   

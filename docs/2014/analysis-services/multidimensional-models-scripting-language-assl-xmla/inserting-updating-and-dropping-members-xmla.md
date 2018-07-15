@@ -1,5 +1,5 @@
 ---
-title: Insertion, mise à jour et suppression de membres (XMLA) | Documents Microsoft
+title: Insertion, mise à jour et suppression de membres (XMLA) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -21,18 +21,18 @@ helpviewer_keywords:
 - dimensions [Analysis Services], XML for Analysis
 ms.assetid: bba922b5-8b88-4051-9506-ff055248182a
 caps.latest.revision: 13
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 4b283d0eec203422b97b9e7981783ac81999dc18
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 394a0448101846db2b6852224e39fedc2dd5fe74
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36052077"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37308519"
 ---
 # <a name="inserting-updating-and-dropping-members-xmla"></a>Insertion, mise à jour et suppression de membres (XMLA)
-  Vous pouvez utiliser la [insérer](../xmla/xml-elements-commands/insert-element-xmla.md), [mettre à jour](../xmla/xml-elements-commands/update-element-xmla.md), et [supprimer](../xmla/xml-elements-commands/drop-element-xmla.md) commandes XML for Analysis (XMLA) pour respectivement, insérer, mettre à jour ou supprimer des membres dans une dimension activée en écriture. Pour plus d’informations sur les dimensions activées en écriture, consultez [Write Dimensions](../multidimensional-models-olap-logical-dimension-objects/write-enabled-dimensions.md).  
+  Vous pouvez utiliser la [insérer](../xmla/xml-elements-commands/insert-element-xmla.md), [mettre à jour](../xmla/xml-elements-commands/update-element-xmla.md), et [Drop](../xmla/xml-elements-commands/drop-element-xmla.md) commandes XML for Analysis (XMLA) pour respectivement, insérer, mettre à jour ou supprimer des membres dans une dimension activée en écriture. Pour plus d’informations sur les dimensions activées en écriture, consultez [Write Dimensions](../multidimensional-models-olap-logical-dimension-objects/write-enabled-dimensions.md).  
   
 ## <a name="inserting-new-members"></a>Insertion de nouveaux membres  
  La commande `Insert` permet d'insérer de nouveaux membres dans les attributs spécifiés d'une dimension activée en écriture.  
@@ -51,7 +51,7 @@ ms.locfileid: "36052077"
   
  La commande `Insert` prend uniquement deux propriétés :  
   
--   Le [objet](../xmla/xml-elements-properties/object-element-xmla.md) propriété, qui contient une référence d’objet pour la dimension dans laquelle les membres doivent être insérées. La référence d'objet contient l'identificateur de base de données, l'identificateur de cube et l'identificateur de la dimension.  
+-   Le [objet](../xmla/xml-elements-properties/object-element-xmla.md) propriété, qui contient une référence d’objet pour la dimension dans lequel les membres doivent être insérés. La référence d'objet contient l'identificateur de base de données, l'identificateur de cube et l'identificateur de la dimension.  
   
 -   Le [attributs](../xmla/xml-elements-properties/attributes-element-xmla.md) propriété, qui contient un ou plusieurs [attribut](../xmla/xml-elements-properties/attribute-element-xmla.md) éléments pour identifier les attributs dans lequel les membres doivent être insérés. Chaque élément `Attribute` identifie un attribut et fournit le nom, la valeur, les traductions, l'opérateur unaire, le cumul personnalisé, les propriétés de cumul personnalisé et les niveaux ignorés du membre unique à ajouter à l'attribut identifié.  
   
@@ -80,7 +80,7 @@ ms.locfileid: "36052077"
     > [!NOTE]  
     >  Toutes les propriétés de l'élément `Attribute` doivent être incluses. Sinon, une erreur risque de se produire.  
   
--   Le [où](../xmla/xml-elements-properties/where-element-xmla.md) propriété, qui contient un ou plusieurs `Attribute` éléments qui contraignent les attributs dans lequel les membres doivent être mis à jour. Le `Where` propriété s’avère indispensable pour limiter une `Update` commande à des instances spécifiques d’un membre. Si le `Where` propriété n’est pas spécifiée, toutes les instances d’un membre donné sont mises à jour. Par exemple, supposons que vous voulez modifier le nom de la ville de trois clients (Bellevue à la place de Redmond). Pour changer le nom de la ville, vous devez fournir une propriété `Where` qui identifie les trois membres de l'attribut Customer (Client) dont les membres de l'attribut City (Ville) doivent être modifiés. Si vous ne fournissez pas cette propriété `Where`, tous les clients dont le nom de ville actuel est Redmond seront associés au nom de ville Bellevue une fois la commande `Update` exécutée.  
+-   Le [où](../xmla/xml-elements-properties/where-element-xmla.md) propriété, qui contient un ou plusieurs `Attribute` éléments qui limitent les attributs dans lequel les membres doivent être mis à jour. Le `Where` propriété est essentielle de limiter un `Update` commande à des instances spécifiques d’un membre. Si le `Where` propriété n’est pas spécifiée, toutes les instances d’un membre donné sont mises à jour. Par exemple, supposons que vous voulez modifier le nom de la ville de trois clients (Bellevue à la place de Redmond). Pour changer le nom de la ville, vous devez fournir une propriété `Where` qui identifie les trois membres de l'attribut Customer (Client) dont les membres de l'attribut City (Ville) doivent être modifiés. Si vous ne fournissez pas cette propriété `Where`, tous les clients dont le nom de ville actuel est Redmond seront associés au nom de ville Bellevue une fois la commande `Update` exécutée.  
   
     > [!NOTE]  
     >  À l'exception des nouveaux membres, la commande `Update` ne peut mettre à jour que les valeurs de clé des attributs non inclus dans la clause `Where`. Par exemple, le nom de ville ne peut pas être mis à jour lors de la mise à jour d'un client ; sinon, le nom de ville est modifié pour tous les clients.  
@@ -116,7 +116,7 @@ ms.locfileid: "36052077"
   
 ## <a name="see-also"></a>Voir aussi  
  [Élément DROP &#40;XMLA&#41;](../xmla/xml-elements-commands/drop-element-xmla.md)   
- [Insérer l’élément &#40;XMLA&#41;](../xmla/xml-elements-commands/insert-element-xmla.md)   
+ [Insérer un élément &#40;XMLA&#41;](../xmla/xml-elements-commands/insert-element-xmla.md)   
  [Mettre à jour d’élément &#40;XMLA&#41;](../xmla/xml-elements-commands/update-element-xmla.md)   
  [Définition et identification d’objets &#40;XMLA&#41;](../xmla/xml-elements-objects.md)   
  [Développement avec XMLA dans Analysis Services](developing-with-xmla-in-analysis-services.md)  

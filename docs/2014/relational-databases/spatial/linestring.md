@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - dbe-spatial
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - LineString geometry subtype [SQL Server]
 - geometry subtypes [SQL Server]
 ms.assetid: e50d0b86-8b31-4285-be71-ad05c7712cbd
 caps.latest.revision: 24
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 93794bc4f692f84b7c44b9e8b6ccca36fb43afe7
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 2bbe45e006930798396c13136f999c8152c4f48b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36045328"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37286897"
 ---
 # <a name="linestring"></a>LineString
   Un `LineString` est un objet unidimensionnel qui représente une séquence de points et les segments de ligne qui les connectent.  
@@ -36,7 +36,7 @@ ms.locfileid: "36045328"
   
 -   La Figure 1 est une instance `LineString` simple et non fermée.  
   
--   La figure 2 est un non simple, et non fermée `LineString` instance.  
+-   Figure 2 est un non simple, et non fermée `LineString` instance.  
   
 -   La Figure 3 est une instance `LineString` fermée et simple ; il s'agit par conséquent d'un anneau.  
   
@@ -53,7 +53,7 @@ DECLARE @g3 geometry = 'LINESTRING(1 1, 1 1)';
   
  `@g3` montre qu'une instance `LineString` peut être acceptée, mais non valide.  
   
- Les éléments suivants `LineString` instance n’est pas acceptée. Elle lèvera une `System.FormatException`.  
+ Ce qui suit `LineString` instance n’est pas acceptée. Elle lèvera une `System.FormatException`.  
   
 ```  
 DECLARE @g geometry = 'LINESTRING(1 1)';  
@@ -66,7 +66,7 @@ DECLARE @g geometry = 'LINESTRING(1 1)';
   
 2.  Si une instance `LineString` n'est pas vide, elle doit contenir au moins deux points distincts.  
   
-3.  Le `LineString` instance ne peut pas se chevaucher sur un intervalle de deux ou plusieurs points consécutifs.  
+3.  Le `LineString` instance ne peut pas se chevaucher elle-même sur un intervalle de deux ou plusieurs points consécutifs.  
   
  Les instances `LineString` suivantes sont valides.  
   
@@ -79,7 +79,7 @@ SELECT @g1.STIsValid(), @g2.STIsValid(), @g3.STIsValid(), @g4.STIsValid();
   
 ```  
   
- Les éléments suivants `LineString` instances ne sont pas valides.  
+ Ce qui suit `LineString` instances ne sont pas valides.  
   
 ```  
 DECLARE @g1 geometry = 'LINESTRING(1 4, 3 4, 2 4, 2 0)';  

@@ -1,5 +1,5 @@
 ---
-title: Instructions d’utilisation des index sur les Tables mémoire optimisées | Documents Microsoft
+title: Instructions d’utilisation des index sur les Tables mémoire optimisées | Microsoft Docs
 ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - database-engine-imoltp
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - hash indexes
 ms.assetid: 16ef63a4-367a-46ac-917d-9eebc81ab29b
 caps.latest.revision: 49
 author: stevestein
 ms.author: sstein
-manager: jhubbard
-ms.openlocfilehash: e047c19deb12d67b23a4627410b998e8c2465107
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 7ca4c8ea603df8b57cfb0bb603500ee1ffd74758
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36044790"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37263385"
 ---
 # <a name="guidelines-for-using-indexes-on-memory-optimized-tables"></a>Instructions pour utiliser les index sur les tables optimisées en mémoire
   Les index sont utilisés pour accéder efficacement aux données dans les tables [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Spécifier les index appropriés peut améliorer considérablement les performances des requêtes. Par exemple, considérez la requête :  
@@ -54,7 +54,7 @@ SELECT c1, c2 FROM t WHERE c1 = 1;
   
  Chaque index consomme de la mémoire. Les index de hachage consomment une quantité fixe de mémoire, en fonction du nombre de compartiments. Pour les index non cluster, la consommation de mémoire est une fonction du nombre de lignes et de la taille des colonnes clés d'index, avec une surcharge supplémentaire dépendant de la charge de travail. La mémoire pour les index optimisés en mémoire est en plus et est distincte de la mémoire utilisée pour stocker les lignes dans les tables optimisées en mémoire.  
   
- Les valeurs de clé en double partagent le même compartiment de hachage. Si un index de hachage contient plusieurs clés en double, les chaînes de hachage longues qui en résulte auront un impact sur les performances. Les collisions de hachage, qui se produisent dans un index de hachage, réduisent également les performances dans ce scénario. Pour cette raison, si le nombre de clés d’index uniques est au moins 100 fois plus petit que le nombre de lignes, vous pouvez réduire le risque de collisions de hachage en effectuant le compartiment de nombre (au moins huit fois le nombre de clés d’index uniques, consultez [déterminer le Nombre de compartiments correct pour les index de hachage](../../2014/database-engine/determining-the-correct-bucket-count-for-hash-indexes.md) pour plus d’informations) ou vous pouvez éliminer les collisions de hachage en utilisant un index non cluster.  
+ Les valeurs de clé en double partagent le même compartiment de hachage. Si un index de hachage contient plusieurs clés en double, les chaînes de hachage longues qui en résulte auront un impact sur les performances. Les collisions de hachage, qui se produisent dans un index de hachage, réduisent également les performances dans ce scénario. Pour cette raison, si le nombre de clés d’index uniques est au moins 100 fois plus petit que le nombre de lignes, vous pouvez réduire le risque de collisions de hachage en rendant le compartiment compter beaucoup plus volumineux (au moins huit fois le nombre de clés d’index uniques ; consultez [déterminer le Nombre de compartiments correct pour les index de hachage](../../2014/database-engine/determining-the-correct-bucket-count-for-hash-indexes.md) pour plus d’informations) ou vous pouvez éliminer les collisions de hachage en utilisant un index non cluster.  
   
 ## <a name="determining-which-indexes-to-use-for-a-memory-optimized-table"></a>Détermination des index à utiliser pour une table optimisée en mémoire  
  Chaque table optimisée en mémoire doit avoir au moins un index. Notez que chaque contrainte PRIMARY KEY crée implicitement un index. Par conséquent, si une table possède une clé primaire, elle possède un index. Une clé primaire est requise pour une table optimisée en mémoire durable.  
@@ -81,7 +81,7 @@ SELECT c1, c2 FROM t WHERE c1 = 1;
   
  Dans la table, Oui signifie que l'index peut traiter la demande et Non signifie que l'index ne peut pas être utilisé pour répondre à cette demande.  
   
- <sup>1</sup> pour un index non cluster mémoire optimisés, la clé complète n’est pas nécessaire pour effectuer une recherche d’index. Même si, en fonction de l'ordre des colonnes de la clé d'index, une analyse se produit si une valeur d'une colonne vient après une colonne manquante.  
+ <sup>1</sup> pour un index non cluster optimisé en mémoire, la clé complète n’est pas nécessaire pour effectuer une recherche d’index. Même si, en fonction de l'ordre des colonnes de la clé d'index, une analyse se produit si une valeur d'une colonne vient après une colonne manquante.  
   
 ## <a name="index-count"></a>Nombre d'index  
  Une table optimisée en mémoire peut avoir jusqu'à 8 index, y compris l'index créé avec la clé primaire.  
@@ -177,7 +177,7 @@ go
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Index sur les Tables mémoire optimisées](../relational-databases/in-memory-oltp/memory-optimized-tables.md)   
+ [Index des Tables optimisées en mémoire](../relational-databases/in-memory-oltp/memory-optimized-tables.md)   
  [Déterminer le nombre de compartiments Correct pour les index de hachage](../../2014/database-engine/determining-the-correct-bucket-count-for-hash-indexes.md)   
  [Index de hachage](hash-indexes.md)  
   

@@ -8,25 +8,25 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.impexpwizard.providesourcequery.f1
 ms.assetid: c8cbd07e-b9c3-422f-94b8-d6fc8cf31cf5
 caps.latest.revision: 32
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 1c8ad78723a1325ac6e21365b3e00e43f2d36d55
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: d85fb5d22f88e363c3cc6fd07cf0b7c757911d83
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36052207"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37291025"
 ---
 # <a name="provide-a-source-query-sql-server-import-and-export-wizard"></a>Fournir une requête source (Assistant Importation et Exportation SQL Server)
-  Utilisez le **fournir une requête Source** page pour taper l’instruction SQL qui génère les données à copier à partir de la source de données vers la destination.  
+  Utilisez le **fournir une requête Source** pour taper l’instruction SQL qui génère les données à copier à partir de la source de données vers la destination.  
   
- Pour en savoir plus sur cet Assistant, consultez [SQL Server Assistant Importation et exportation](import-and-export-data-with-the-sql-server-import-and-export-wizard.md). Pour en savoir plus sur les options de démarrage de l’Assistant, ainsi que les autorisations requises pour exécuter l’Assistant, consultez [exécuter le SQL Server Assistant Importation et exportation](start-the-sql-server-import-and-export-wizard.md).  
+ Pour en savoir plus sur cet Assistant, consultez [SQL Server Assistant Importation et exportation](import-and-export-data-with-the-sql-server-import-and-export-wizard.md). Pour en savoir plus sur les options de démarrage de l’Assistant, ainsi que les autorisations requises pour exécuter l’Assistant avec succès, consultez [exécuter le SQL Server Assistant Importation et exportation](start-the-sql-server-import-and-export-wizard.md).  
   
  La fonction de l'Assistant Importation et Exportation SQL Server est de copier des données d'une source vers une destination. L'Assistant peut également créer une base de données de destination et des tables de destination à votre intention. Toutefois, si vous devez copier plusieurs tables ou bases de données, ou autres types d'objets de bases de données, vous devez plutôt utiliser l'Assistant Copie de base de données. Pour plus d'informations, consultez [Use the Copy Database Wizard](../../relational-databases/databases/use-the-copy-database-wizard.md).  
   
@@ -47,6 +47,6 @@ WHERE CommissionPct > 0.015
 >  Si le temps requis pour vérifier la syntaxe de l'instruction dépasse la valeur du délai d'attente de 30 secondes, l'analyse s'arrête et génère une erreur. Vous ne serez pas en mesure de dépasser cette page de l'Assistant tant que l'analyse n'aura pas réussi. Une solution consiste à créer une vue de base de données basée sur la requête, puis à interroger la vue à partir de l'Assistant, au lieu d'entrer directement le texte de requête.  
   
  **Parcourir**  
- Sélectionnez un fichier contenant une instruction SQL à l’aide de la **ouvrir** boîte de dialogue. La sélection d'un fichier copie le texte dans la zone de texte **Instruction de requête** .  
+ Sélectionnez un fichier contenant une instruction SQL à l’aide de la **Open** boîte de dialogue. La sélection d'un fichier copie le texte dans la zone de texte **Instruction de requête** .  
   
   

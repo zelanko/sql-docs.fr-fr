@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 8d831356-7efa-40cc-ae95-383b3eecf833
 caps.latest.revision: 9
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: d95395b74de40bcc6f8a93a246deae9c9d799198
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 76795367b5f03e65673468d4af8e7f7c7222e73b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36052361"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37249739"
 ---
 # <a name="tutorial-map-report-report-builder"></a>Didacticiel : Rapport cartographique (Générateur de rapports)
   Ce didacticiel est conçu pour vous aider à découvrir les fonctionnalités cartographiques que vous pouvez utiliser pour afficher des données de rapport sur un arrière-plan géographique.  
@@ -35,25 +35,25 @@ ms.locfileid: "36052361"
   
 1.  [Créer une carte avec une couche de polygones à partir de l’Assistant carte](#Map)  
   
-2.  [Ajouter une couche de points pour les emplacements de magasins d’affichage](#PointLayer)  
+2.  [Ajouter une couche de points pour les emplacements de Store de l’affichage](#PointLayer)  
   
 3.  [Ajouter une couche de lignes pour afficher un itinéraire](#LineLayer)  
   
-4.  [Ajouter un arrière-plan de mosaïques Bing](#TileLayer)  
+4.  [Ajouter un arrière-plan de mosaïques Bing Maps](#TileLayer)  
   
 5.  [Rendre une couche transparente](#Transparent)  
   
-6.  [Changer la couleur du comté selon les ventes](#Vary)  
+6.  [Faites varier la couleur du comté selon les ventes](#Vary)  
   
     1.  [Créer une relation entre les données spatiales et analytiques](#Relationship)  
   
     2.  [Spécifier des règles de couleur pour les polygones](#ColorRules)  
   
-    3.  [Mettre en forme les données de l’échelle de couleurs en tant que devises](#ColorScale)  
+    3.  [Mettre en forme les données dans l’échelle de couleurs en tant que devises](#ColorScale)  
   
     4.  [Créer une légende](#NewLegend)  
   
-    5.  [Associer une légende aux règles de couleur](#Associate)  
+    5.  [Associer une légende et des règles de couleur](#Associate)  
   
     6.  [Supprimer la couleur des comtés sans données](#NoData)  
   
@@ -203,7 +203,7 @@ ms.locfileid: "36052361"
   
      Le dataset de rapport nommé DataSet1 est créé automatiquement. Après avoir terminé l'exécution de l'Assistant, vous pouvez utiliser le volet des données de rapport pour afficher la collection de champs correspondante.  
   
-11. Sur le **choisissez les données spatiales et les options de vue cartographique** page, vérifiez que le **champ Spatial** est `SpatialLocation` et que le **type de couche** est **Point**. Acceptez les autres valeurs par défaut dans cette page.  
+11. Sur le **choisir les données spatiales et les options de vue cartographique** page, vérifiez que le **champ Spatial** est `SpatialLocation` et que le **type de couche** est **Point**. Acceptez les autres valeurs par défaut dans cette page.  
   
      La vue cartographique affiche des cercles pour marquer l'emplacement de chaque magasin.  
   
@@ -584,9 +584,9 @@ ms.locfileid: "36052361"
 ## <a name="next-steps"></a>Étapes suivantes  
  Ceci conclut la procédure pas à pas décrivant comment ajouter une carte à votre rapport.  
   
- Pour plus d’informations, consultez [cartes &#40;le Générateur de rapports et SSRS&#41; ](report-design/maps-report-builder-and-ssrs.md) et l’entrée de blog [cartographiques ajustement de données spatiales pour SQL Server Reporting Services](http://go.microsoft.com/fwlink/?LinkId=152771) sur blogs.msdn.com.  
+ Pour plus d’informations, consultez [Maps &#40;Générateur de rapports et SSRS&#41; ](report-design/maps-report-builder-and-ssrs.md) et l’entrée de blog [cartographiques ajustement de données spatiales pour SQL Server Reporting Services](http://go.microsoft.com/fwlink/?LinkId=152771) sur blogs.msdn.com.  
   
- Pour les autres didacticiels, consultez [didacticiels &#40;le Générateur de rapports&#41;](report-builder-tutorials.md).  
+ Pour plus de didacticiels, consultez [didacticiels &#40;Générateur de rapports&#41;](report-builder-tutorials.md).  
   
 ## <a name="see-also"></a>Voir aussi  
  [Didacticiels &#40;Générateur de rapports&#41;](report-builder-tutorials.md)   

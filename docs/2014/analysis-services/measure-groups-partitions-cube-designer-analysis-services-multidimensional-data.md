@@ -1,5 +1,5 @@
 ---
-title: (Onglet Partitions, Concepteur de Cube) de groupes de mesures (Analysis Services - données multidimensionnelles) | Documents Microsoft
+title: Mesurer les groupes (onglet Partitions, Concepteur de Cube) (Analysis Services - données multidimensionnelles) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.cubeeditor.partitions.partitionspane.measuregroupdetail.f1
 ms.assetid: 58e44b24-cfcd-4908-b445-d4374b961b98
 caps.latest.revision: 24
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 205b5260d67421cffe8b05abb4c27243d1dc8386
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: a372e8418692c0db98332b7fa67d8563265d1de4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36052946"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37249439"
 ---
 # <a name="measure-groups-partitions-tab-cube-designer-analysis-services---multidimensional-data"></a>Groupes de mesures (onglet Partitions, Concepteur de cube) (Analysis Services - Données multidimensionnelles)
   Le volet **Groupes de mesures** de l’onglet **Partitions** du Concepteur de cube permet de gérer les partitions associées à chaque groupe de mesures du cube.  
@@ -70,7 +70,7 @@ ms.locfileid: "36052946"
 |**Nouvelle Partition**|Cliquez pour afficher **l’Assistant Partition** et créer une partition dans le groupe de mesures sélectionné.|  
 |**Renommer la Partition**|Sélectionnez pour renommer la partition sélectionnée.|  
 |**Supprimer**|Cliquez sur cette option pour afficher la boîte de dialogue **Supprimer les objets** et supprimer l’action sélectionnée.<br /><br /> Remarque : cette option est désactivée si une partition d’écriture différée est sélectionnée.|  
-|**Créer des agrégations**|Cliquez sur cette option pour afficher **l’Assistant Conception d’agrégation** et créer une conception d’agrégation pour la partition sélectionnée.<br /><br /> Remarque : cette option est désactivée si une partition d’écriture différée est sélectionnée.|  
+|**Concevoir des agrégations**|Cliquez sur cette option pour afficher **l’Assistant Conception d’agrégation** et créer une conception d’agrégation pour la partition sélectionnée.<br /><br /> Remarque : cette option est désactivée si une partition d’écriture différée est sélectionnée.|  
 |**Paramètres de stockage**|Cliquez sur cette option pour afficher la boîte de dialogue **Paramètres de stockage** et définir les paramètres de mode de stockage, de mise en cache proactive et de notification pour la partition sélectionnée.|  
 |**Paramètres d’écriture différée**|Cliquez sur cette option pour afficher la boîte de dialogue **Activer/Désactiver l’écriture différée** et définir les paramètres d’écriture différée pour le groupe de mesures contenant la partition sélectionnée.|  
 |**L’optimisation basée sur l’utilisation**|Cliquez sur cette option pour afficher **l’Assistant Optimisation de l’utilisation** et créer une conception d’agrégation basée sur des modèles d’utilisation existants pour la partition sélectionnée.<br /><br /> Remarque : cette option est désactivée si une partition d’écriture différée est sélectionnée.|  

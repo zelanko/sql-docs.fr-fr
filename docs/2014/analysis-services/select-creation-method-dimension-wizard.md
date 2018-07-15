@@ -1,5 +1,5 @@
 ---
-title: Sélectionnez la méthode de création (Assistant Dimension) | Documents Microsoft
+title: Sélectionnez la méthode de création (Assistant Dimension) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.dimensionwizard.dimensiondefinition.f1
 ms.assetid: 291b0b2d-a03a-4df6-82f7-90ad92d4d1cf
 caps.latest.revision: 28
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 10d52966956d39f7a495e353bdf6acd595cc51ab
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 9d10005b2b689078eb7677547ebfc905fbdcc996
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36052300"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37267155"
 ---
 # <a name="select-creation-method-dimension-wizard"></a>Sélectionner la méthode de création (Assistant Dimension)
   La page **Sélectionner la méthode de création** permet de choisir la méthode de création de la dimension.  
@@ -66,7 +66,7 @@ ms.locfileid: "36052300"
 >  Cette option est disponible uniquement quand l’option **Générer une table non temporelle dans la source de données** a été sélectionnée.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Aide (F1) de l’Assistant Dimension](dimension-wizard-f1-help.md)   
+ [Aide F1 de l’Assistant Dimension](dimension-wizard-f1-help.md)   
  [Dimensions &#40;Analysis Services - données multidimensionnelles&#41;](multidimensional-models-olap-logical-dimension-objects/dimensions-analysis-services-multidimensional-data.md)   
  [Dimensions dans les modèles multidimensionnels](multidimensional-models/dimensions-in-multidimensional-models.md)  
   

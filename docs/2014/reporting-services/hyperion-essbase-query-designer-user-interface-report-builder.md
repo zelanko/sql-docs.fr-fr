@@ -1,5 +1,5 @@
 ---
-title: Interface requêtes Hyperion Essbase utilisateur du concepteur (Générateur de rapports) | Documents Microsoft
+title: Interface requêtes Hyperion Essbase utilisateur du concepteur (Générateur de rapports) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - "10013"
 helpviewer_keywords:
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - query designers, Hyperion
 ms.assetid: d89a6773-dbe5-48e5-bda9-db0e67100696
 caps.latest.revision: 13
-author: douglaslM
+author: maggiesmsft
 ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 27dd20fae08317cd58fd9ca9b5084fda000906c3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 3653c8bf79c3c7527f72d01282fe7af961fbbec8
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36052158"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37208589"
 ---
 # <a name="hyperion-essbase-query-designer-user-interface-report-builder"></a>Interface utilisateur du Concepteur de requêtes Hyperion Essbase (Générateur de rapports)
   [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] fournit un concepteur de requêtes graphique permettant de générer des requêtes MDX (Multidimensional Expression) pour une source de données [!INCLUDE[extEssbase](../includes/extessbase-md.md)]. Le concepteur de requêtes graphique MDX comporte deux modes : le mode Création et le mode Requête. Chaque mode fournit un volet Métadonnées à partir duquel vous pouvez faire glisser des membres d'un cube défini sur la source de données pour créer une requête MDX qui récupère des données lors du traitement du rapport.  
@@ -35,7 +35,7 @@ ms.locfileid: "36052158"
  Cette section décrit les boutons de la barre d'outils et les volets du Concepteur de requêtes pour chaque mode du concepteur de requêtes graphique.  
   
 ## <a name="graphical-query-designer-in-design-mode"></a>Concepteur de requêtes graphique en mode Création  
- Lorsque vous modifiez une requête MDX pour un jeu de données qui utilise un [!INCLUDE[extEssbase](../includes/extessbase-md.md)] source de données, le Concepteur de requêtes graphique s’ouvre en mode Création. La figure suivante présente les différents volets du mode Création.  
+ Lorsque vous modifiez une requête MDX pour un dataset qui utilise un [!INCLUDE[extEssbase](../includes/extessbase-md.md)] source de données, le Concepteur de requêtes graphique s’ouvre en mode Création. La figure suivante présente les différents volets du mode Création.  
   
  ![Concepteur de requêtes pour la source de données Hyperion Essbase](media/rsqd-dshyperionessbase-mdx-designmode.gif "Concepteur de requêtes pour la source de données Hyperion Essbase")  
   

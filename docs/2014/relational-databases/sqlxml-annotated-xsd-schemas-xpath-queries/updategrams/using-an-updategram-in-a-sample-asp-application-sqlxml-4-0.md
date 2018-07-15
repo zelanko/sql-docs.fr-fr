@@ -1,5 +1,5 @@
 ---
-title: À l’aide d’une mise à jour dans un exemple d’Application ASP (SQLXML 4.0) | Documents Microsoft
+title: À l’aide d’une mise à jour dans un exemple d’Application ASP (SQLXML 4.0) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - updategrams [SQLXML], ASP applications
 ms.assetid: 10eff799-4c39-4b52-8b38-7ea6f68454a8
 caps.latest.revision: 26
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 851d82413ec1959487132ec277d50e3f0a771b4f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 037b7fc64a53bdba26154933a19b3f147b8c1b3f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36044910"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37260415"
 ---
 # <a name="using-an-updategram-in-a-sample-asp-application-sqlxml-40"></a>Utilisation d'un code de mise à jour (updategram) dans un exemple d'application ASP (SQLXML 4.0)
   Cette application ASP (Active Server Pages) vous permet de mettre à jour des informations client dans la table Person.Contact dans l'exemple de base de données AdventureWorks dans Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. L'application effectue les actions suivantes :  

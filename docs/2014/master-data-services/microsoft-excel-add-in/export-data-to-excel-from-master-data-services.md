@@ -1,5 +1,5 @@
 ---
-title: Charger des données à partir de MDS dans Excel | Documents Microsoft
+title: Charger des données à partir de MDS dans Excel | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,23 +8,23 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: dd29389b-928c-4e50-995c-c6af27f97805
 caps.latest.revision: 12
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 8bee7252d1adfcce827eadbd62cb7d38416d7596
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: b74f5fc00ea25f434a4191c04b0f890e04d8aca0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36051060"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37316549"
 ---
 # <a name="load-data-from-mds-into-excel"></a>Charger des données MDS dans Excel
-  Dans le [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] [!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)], vous devez charger les données à partir du référentiel MDS afin des pour manipuler.  
+  Dans le [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] [!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)], vous devez charger des données à partir du référentiel MDS afin des pour manipuler.  
   
- Si vous souhaitez filtrer le dataset avant le chargement, consultez [avant le chargement des données de filtre &#40;complément MDS pour Excel&#41; ](filter-data-before-exporting-mds-add-in-for-excel.md) à la place.  
+ Si vous souhaitez filtrer le dataset avant le chargement, consultez [filtrer les données avant le chargement &#40;complément MDS pour Excel&#41; ](filter-data-before-exporting-mds-add-in-for-excel.md) à la place.  
   
 ## <a name="prerequisites"></a>Prérequis  
  Pour effectuer cette procédure :  
@@ -51,7 +51,7 @@ ms.locfileid: "36051060"
     >  Quand vous chargez des données de texte délimitées à l’aide du complément pour Microsoft Excel avec Excel 32 bits et que les paramètres des propriétés **Nombre de cellules à charger** et **Nombre de cellules à publier** ont une valeur maximale de 1000, une erreur de mémoire insuffisante se produit. Vous devez utiliser Excel 64 bits pour utiliser les paramètres maximaux de **Nombre de cellules à charger** et **Nombre de cellules à publier**.  
   
 ## <a name="next-steps"></a>Étapes suivantes  
- [Publier des données à partir d’Excel vers MDS &#40;complément MDS pour Excel&#41;](import-data-from-excel-to-master-data-services-mds-add-in-for-excel.md)  
+ [Publier des données à partir d’Excel dans MDS &#40;complément MDS pour Excel&#41;](import-data-from-excel-to-master-data-services-mds-add-in-for-excel.md)  
   
 ## <a name="see-also"></a>Voir aussi  
  [Le chargement des données &#40;complément MDS pour Excel&#41;](overview-exporting-data-to-excel-mds-add-in-for-excel.md)   

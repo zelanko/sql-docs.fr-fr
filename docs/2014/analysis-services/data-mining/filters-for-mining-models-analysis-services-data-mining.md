@@ -1,5 +1,5 @@
 ---
-title: Filtres pour les modèles d’exploration de données (Analysis Services - Exploration de données) | Documents Microsoft
+title: Filtres pour les modèles d’exploration de données (Analysis Services - Exploration de données) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - attributes [data mining]
 - filter syntax [data mining]
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - filtering data [Analysis Services]
 ms.assetid: 0f29c19c-4be3-4bc7-ab60-f4130a10d59c
 caps.latest.revision: 27
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: feefadeab6d4cde4a202b767223939edac63106f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 6c92fc27326167977f5fcab323e3b885f9ede635
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36044657"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37312709"
 ---
 # <a name="filters-for-mining-models-analysis-services---data-mining"></a>Filtres pour les modèles d'exploration de données (Analysis Services - Exploration de données)
   Le filtrage de modèle basé sur les données est utile pour créer des modèles d'exploration de données qui utilisent les sous-ensembles de données d'une structure d'exploration de données. Le filtrage offre une certaine souplesse lorsque vous concevez vos structures d'exploration de données et sources de données, car vous pouvez créer une structure d'exploration de données unique basée sur une vue détaillée de la source de données. Vous pouvez créer ensuite des filtres pour utiliser uniquement une partie de ces données à des fins de formation et de test de divers modèles, au lieu de générer une structure différente et un modèle associé pour chaque sous-ensemble de données.  
@@ -47,14 +47,14 @@ ms.locfileid: "36044657"
   
 -   En utilisant l’onglet **Modèles d’exploration de données** du Concepteur d’exploration de données pour générer les conditions à l’aide des boîtes de dialogue de l’Éditeur de filtre.  
   
--   Tapez une expression de filtre directement dans le `Filter` propriété du modèle d’exploration de données.  
+-   Taper une expression de filtre directement dans le `Filter` propriété du modèle d’exploration de données.  
   
 -   En définissant des conditions de filtrage sur un modèle par programmation, à l’aide d’AMO.  
   
 ### <a name="creating-model-filters-using-data-mining-designer"></a>Création des filtres de modèle à l'aide du Concepteur d'exploration de données  
  Vous filtrez un modèle dans le Concepteur d'exploration de données en modifiant la propriété `Filter` du modèle d'exploration de données. Vous pouvez taper directement une expression de filtre dans le volet **Propriétés** ou ouvrir une boîte de dialogue de filtre pour créer des conditions.  
   
- Il existe deux boîtes de dialogue de filtre. La première permet de créer des conditions appliquées à la table de cas. Si la source de données contient plusieurs tables, sélectionnez d'abord une table, puis sélectionnez une colonne et spécifiez les opérateurs et les conditions qui s'appliquent à cette colonne. Vous pouvez lier plusieurs conditions à l’aide de `AND` / `OR` opérateurs. Les opérateurs disponibles pour définir les valeurs varient selon que la colonne contient des valeurs discrètes ou continues. Par exemple, avec des valeurs continues, vous pouvez utiliser `greater than` et `less than` opérateurs. Toutefois, vous pouvez utiliser uniquement les opérateurs `= (equal to)`, `!= (not equal to)` et `is null` avec les valeurs discrètes.  
+ Il existe deux boîtes de dialogue de filtre. La première permet de créer des conditions appliquées à la table de cas. Si la source de données contient plusieurs tables, sélectionnez d'abord une table, puis sélectionnez une colonne et spécifiez les opérateurs et les conditions qui s'appliquent à cette colonne. Vous pouvez lier plusieurs conditions à l’aide de `AND` / `OR` opérateurs. Les opérateurs disponibles pour définir les valeurs varient selon que la colonne contient des valeurs discrètes ou continues. Par exemple, avec les valeurs continues, vous pouvez utiliser `greater than` et `less than` opérateurs. Toutefois, vous pouvez utiliser uniquement les opérateurs `= (equal to)`, `!= (not equal to)` et `is null` avec les valeurs discrètes.  
   
 > [!NOTE]  
 >  Le `LIKE` mot clé n’est pas pris en charge. Si vous souhaitez inclure plusieurs attributs discrets, vous devez créer des conditions séparées et les lier avec l'opérateur `OR`.  
@@ -126,6 +126,6 @@ ms.locfileid: "36044657"
   
 ## <a name="see-also"></a>Voir aussi  
  [Syntaxe de filtre et des exemples de modèle &#40;Analysis Services - Exploration de données&#41;](model-filter-syntax-and-examples-analysis-services-data-mining.md)   
- [Test et Validation &#40;d’exploration de données&#41;](testing-and-validation-data-mining.md)  
+ [Test et Validation &#40;exploration de données&#41;](testing-and-validation-data-mining.md)  
   
   

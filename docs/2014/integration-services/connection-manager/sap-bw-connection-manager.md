@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 06b166a1-a9df-48ea-a0e8-9b8d6979c0a1
 caps.latest.revision: 10
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 61106ce6c6eca051f6ad762577d0b4ea72d021a4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: a541988192c0233426a8f08a79743b822d3f3709
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36053350"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37223756"
 ---
 # <a name="sap-bw-connection-manager"></a>Gestionnaire de connexions SAP BW
   Le gestionnaire de connexions SAP BW est le composant de gestionnaire de connexions de [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector 1.1 pour SAP BW. Ainsi, le gestionnaire de connexions SAP BW fournit la connectivité à un système SAP Netweaver BW version 7 dont ont besoin les composants source et de destination de [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector 1.1 pour SAP BW. (La source et la destination SAP BW qui font partie du package [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector 1.1 pour SAP BW sont les seuls composants [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] qui utilisent le gestionnaire de connexions SAP BW.)  
@@ -27,7 +27,7 @@ ms.locfileid: "36053350"
 > [!IMPORTANT]  
 >  La documentation de Microsoft Connector 1.1 pour SAP BW suppose que vous êtes familiarisé avec l'environnement SAP Netweaver BW. Pour plus d'informations sur SAP Netweaver BW, ou sur la configuration des objets et des processus SAP Netweaver BW objets, consultez la documentation SAP.  
   
- Lorsque vous ajoutez un gestionnaire de connexions SAP BW à un package, le `ConnectionManagerType` du Gestionnaire de connexions est définie sur `SAPBI`.  
+ Lorsque vous ajoutez un gestionnaire de connexions SAP BW à un package, le `ConnectionManagerType` propriété du Gestionnaire de connexions est définie sur `SAPBI`.  
   
 ## <a name="configuring-the-sap-bw-connection-manager"></a>Configuration du gestionnaire de connexions SAP BW  
  Vous pouvez configurer le gestionnaire de connexions SAP BW de plusieurs manières :  
@@ -52,9 +52,9 @@ ms.locfileid: "36053350"
 ### <a name="using-the-ssis-designer-to-configure-the-source"></a>Utilisation du concepteur SSIS pour configurer la source  
  Pour plus d'informations sur les propriétés du gestionnaire de connexions SAP BW que vous pouvez définir dans le concepteur [!INCLUDE[ssIS](../../includes/ssis-md.md)] , cliquez sur la rubrique suivante :  
   
--   [Éditeur du Gestionnaire de connexions SAP BW](../sap-bw-connection-manager-editor.md)  
+-   [Éditeur du gestionnaire de connexions SAP BW](../sap-bw-connection-manager-editor.md)  
   
 ## <a name="see-also"></a>Voir aussi  
- [Microsoft Connector 1.1 pour SAP BW composants](../microsoft-connector-for-sap-bw-components.md)  
+ [Composants de Microsoft Connector 1.1 pour SAP BW](../microsoft-connector-for-sap-bw-components.md)  
   
   

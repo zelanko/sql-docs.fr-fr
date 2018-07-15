@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: b2f6cc27-dbc9-4f3f-961e-e81e76375248
 caps.latest.revision: 3
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 70dcc1e8f35f288b4693bd87308d7f2abcff0136
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: 94507eb6cae0db3206a02b43062871140d5f21c7
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36139613"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37223641"
 ---
 # <a name="make-an-attribute-group-visible-to-users-master-data-services"></a>Rendre un groupe d'attributs visible pour les utilisateurs (Master Data Services)
   Dans [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], rendez un groupe d'attributs visible aux utilisateurs ou aux groupes lorsque vous souhaitez que les utilisateurs disposent d'onglets au-dessus de la grille dans la zone fonctionnelle **Explorateur** .  
@@ -45,7 +45,7 @@ ms.locfileid: "36139613"
   
 4.  Dans la liste **Entité** , sélectionnez une entité.  
   
-5.  Cliquez sur le signe plus pour développer **groupes feuille**, **groupes consolidés**, ou **groupes de collections**, selon le type de groupe que vous souhaitez rendre visible.  
+5.  Cliquez sur le signe plus pour développer **groupes feuille**, **groupes consolidés**, ou **groupes de collections**, selon le type de groupe que vous voulez rendre visible.  
   
 6.  Cliquez sur le signe plus (+) pour développer le groupe que vous souhaitez rendre visible.  
   
@@ -53,7 +53,7 @@ ms.locfileid: "36139613"
   
 8.  Cliquez sur **modifier l’élément sélectionné**.  
   
-9. Cliquez sur utilisateurs ou des groupes dans le **disponible** , puis cliquez sur le **ajouter** flèche. Pour les ajouter tous, cliquez sur la flèche **Ajouter tout** .  
+9. Cliquez sur les utilisateurs ou groupes dans le **disponible** , puis cliquez sur le **ajouter** flèche. Pour les ajouter tous, cliquez sur la flèche **Ajouter tout** .  
   
 10. Cliquez sur **Enregistrer**.  
   

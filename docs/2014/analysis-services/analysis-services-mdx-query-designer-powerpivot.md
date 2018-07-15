@@ -1,5 +1,5 @@
 ---
-title: Analysis Services (PowerPivot) du Concepteur de requêtes MDX | Documents Microsoft
+title: Analysis Services (PowerPivot) du Concepteur de requêtes MDX | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: b1524b18-b9f1-46d2-a34e-dd7c91ca4684
 caps.latest.revision: 4
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 09e174f18e06b8284f260dbc41be7ce2b4acf8a3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 235f7cb4c724f03fddc662231a34b30639bc0256
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36052547"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37270005"
 ---
 # <a name="analysis-services-mdx-query-designer-powerpivot"></a>Concepteur de requêtes MDX Analysis Services (PowerPivot)
   Le concepteur de requêtes MDX (Multidimensional Expression) Analysis Services fournit une interface graphique utilisateur qui vous aide à créer des requêtes MDX pour une source de données [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] . Le concepteur de requêtes graphique MDX comporte deux modes : le mode Création et le mode Requête. Chaque mode fournit un volet Métadonnées à partir duquel vous pouvez faire glisser des membres de cubes sélectionnés pour créer une requête MDX qui extrait les données que vous souhaitez utiliser.  

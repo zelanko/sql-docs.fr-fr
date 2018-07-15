@@ -1,5 +1,5 @@
 ---
-title: Type de données ProactiveCachingTablesBinding (ASSL) | Documents Microsoft
+title: Type de données ProactiveCachingTablesBinding (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - ProactiveCachingTablesBinding data type
 ms.assetid: f6b3f6fc-757c-4b1e-bb3a-d26482888d14
 caps.latest.revision: 16
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: ed926bb00b0593cef9d82d4b829325c8f21ca5ac
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 98091714acb85771972c8c90c6b445744a33cce6
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36052716"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37275605"
 ---
 # <a name="proactivecachingtablesbinding-data-type-assl"></a>Type de données ProactiveCachingTablesBinding (ASSL)
   Définit un type de données dérivé qui représente les informations de la [ProactiveCaching](../objects/proactivecaching-element-assl.md) élément sur les modifications de source de données dans les tables et vues qui exigent une reconstruction du cache spécifiées.  
@@ -68,6 +68,6 @@ ms.locfileid: "36052716"
  L’élément correspondant dans le modèle d’objet objets AMO (Analysis Management) est <xref:Microsoft.AnalysisServices.ProactiveCachingTablesBinding>.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Types de données de script langage XML Analysis Services &#40;ASSL&#41;](analysis-services-scripting-language-xml-data-types-assl.md)  
+ [Types Analysis Services Scripting Language XML données &#40;ASSL&#41;](analysis-services-scripting-language-xml-data-types-assl.md)  
   
   

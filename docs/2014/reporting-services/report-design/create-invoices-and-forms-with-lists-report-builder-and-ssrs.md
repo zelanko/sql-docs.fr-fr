@@ -1,5 +1,5 @@
 ---
-title: Listes (Générateur de rapports et SSRS) | Documents Microsoft
+title: Listes (Générateur de rapports et SSRS) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: c33231a5-b3a8-42e4-95bc-d05bdf2222f5
 caps.latest.revision: 9
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 0fcc8632285b80b2b4ba00310b8718650e39d99b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 43558261eff0d22d597cdfe63f7d01137aa467a6
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36051666"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37296029"
 ---
 # <a name="lists-report-builder-and-ssrs"></a>Listes (Générateur de rapports et SSRS)
   Une région de données de liste est répétée pour chaque groupe ou ligne du dataset du rapport. Une liste peut être utilisée pour créer des formulaires ou des rapports de forme libre, tels que des factures, ou associés à d'autres régions de données. Vous pouvez définir des listes contenant n'importe quel nombre d'éléments de rapport. Une liste peut être imbriquée dans une autre pour fournir plusieurs groupes de données.  
@@ -77,7 +77,7 @@ ms.locfileid: "36051666"
 
   
 ## <a name="see-also"></a>Voir aussi  
- [Référence des fonctions d’agrégation &#40;rapport Générateur et SSRS&#41;](report-builder-functions-aggregate-functions-reference.md)   
+ [Référence aux fonctions d’agrégation &#40;Générateur de rapports et SSRS&#41;](report-builder-functions-aggregate-functions-reference.md)   
  [Exemples d’expressions &#40;Générateur de rapports et SSRS&#41;](expression-examples-report-builder-and-ssrs.md)  
   
   

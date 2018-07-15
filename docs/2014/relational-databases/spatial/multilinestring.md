@@ -8,24 +8,24 @@ ms.suite: ''
 ms.technology:
 - dbe-spatial
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - MultiLineString geometry subtype [SQL Server]
 - geometry subtypes [SQL Server]
 ms.assetid: 95deeefe-d6c5-4a11-b347-379e4486e7b7
 caps.latest.revision: 19
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: e87912fc00924698bf2fe735c0bd9ce9433cdb1e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: c340afc52dbd60f4accb1da7d3883e62d36974f6
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36052367"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37288525"
 ---
 # <a name="multilinestring"></a>MultiLineString
-  A `MultiLineString` est une collection de zéro ou plusieurs `geometry` ou **geographyLineString** instances.  
+  Un `MultiLineString` est une collection de zéro ou plusieurs `geometry` ou **geographyLineString** instances.  
   
 ## <a name="multilinestring-instances"></a>Instances MultiLineString  
  L’illustration ci-dessous montre des exemples de `MultiLineString` instances.  
@@ -34,20 +34,20 @@ ms.locfileid: "36052367"
   
  Comme indiqué par l'illustration :  
   
--   La figure 1 est un simple `MultiLineString` instance dont la limite est de quatre points de terminaison de ses deux `LineString` éléments.  
+-   Figure 1 est une simple `MultiLineString` instance dont la limite est de quatre points de terminaison de ses deux `LineString` éléments.  
   
 -   La Figure 2 est une instance `MultiLineString` simple car seuls les points de terminaison des éléments `LineString` se croisent. La limite est constituée des deux points de terminaison non chevauchants.  
   
--   La Figure 3 est une instance `MultiLineString` non simple car l'intérieur de l'un de ses éléments `LineString` est croisé. La limite de cette `MultiLineString` instance est les quatre points de terminaison.  
+-   La Figure 3 est une instance `MultiLineString` non simple car l'intérieur de l'un de ses éléments `LineString` est croisé. La limite de cette `MultiLineString` instance est de quatre points de terminaison.  
   
 -   Figure 4 est un non simple, et non fermée `MultiLineString` instance.  
   
--   La Figure 5 est une `MultiLineString` simple et non fermée. Il n’est pas fermé, car son `LineStrings` éléments ne sont pas fermées. Il est simple car aucun des intérieurs de la `LineStrings` instances se croisent.  
+-   La Figure 5 est une `MultiLineString` simple et non fermée. Il n’est pas fermé, car son `LineStrings` éléments ne sont pas fermés. C’est simple, car aucun des intérieurs de le `LineStrings` instances se croisent.  
   
--   La figure 6 est une simple et fermée `MultiLineString` instance. Elle est fermée car tous ses éléments sont fermés. Elle est simple car aucun de ses éléments ne se croise aux intérieurs.  
+-   Figure 6 est une simple et fermée `MultiLineString` instance. Elle est fermée car tous ses éléments sont fermés. Elle est simple car aucun de ses éléments ne se croise aux intérieurs.  
   
 ### <a name="accepted-instances"></a>Instances acceptées  
- Pour un `MultiLineString` instance soit acceptée, elle doit être vide ou contenir uniquement `LineString` instances qui sont acceptées. Pour plus d’informations sur accepté `LineString` instances, consultez [LineString](../spatial/linestring.md). Les exemples suivants illustrent des instances `MultiLineString` acceptées.  
+ Pour un `MultiLineString` instance à être acceptée, elle doit être vide ou contenir uniquement `LineString` instances qui sont acceptées. Pour plus d’informations sur accepté `LineString` instances, consultez [LineString](../spatial/linestring.md). Les exemples suivants illustrent des instances `MultiLineString` acceptées.  
   
 ```  
 DECLARE @g1 geometry = 'MULTILINESTRING EMPTY';  
@@ -79,7 +79,7 @@ DECLARE @g4 geometry = 'MULTILINESTRING((1 1, 3 3, 5 5),(3 3, 5 5, 7 7))';
 SELECT @g1.STIsValid(), @g2.STIsValid(), @g3.STIsValid(), @g4.STIsValid();  
 ```  
   
- `@g4` n’est pas valide, car la deuxième `LineString` instance chevauche la première `LineString` instance à un intervalle. Elles se touchent à un nombre infini de points.  
+ `@g4` n’est pas valide, car la deuxième `LineString` chevauche la première `LineString` instance à un intervalle. Elles se touchent à un nombre infini de points.  
   
 ## <a name="examples"></a>Exemples  
  L’exemple suivant crée une instance `geometry``MultiLineString` simple qui contient deux éléments `LineString` avec le SRID 0.  

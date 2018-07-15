@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - modifying data types
 - data types [Integration Services], listed
@@ -21,13 +21,13 @@ ms.assetid: 896fc3e8-3aa6-4396-ba82-5d7741cffa56
 caps.latest.revision: 97
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: c25bb056540c718c67d5de8ab78f80c3290bc5de
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 2a9c9cb0f668f6484a35be458654bdae26869a2f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36052252"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37265342"
 ---
 # <a name="integration-services-data-types"></a>Types de données d'Integration Services
   Quand des données entrent dans un flux de données dans un package, la source qui extrait les données les convertit en type [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Les données numériques se voient attribuer le type de données numeric, les données chaînes le type de données character et les dates le type de données date. Le type de données [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] approprié est également affecté aux autres données, comme les GUID et les BLOB (Binary Large Object Blocks). Si le type des données ne peut pas être converti en un type de données [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , une erreur se produit.  
@@ -65,8 +65,8 @@ ms.locfileid: "36052252"
 |DT_UI8|Entier non signé de 8 octets.|  
 |DT_WSTR|Chaîne de caractères Unicode se terminant par une valeur Null avec une longueur maximale de 4 000 caractères. (Si une valeur de colonne contient des indicateurs de fin Null, la chaîne apparaît tronquée dès la première valeur Null.)|  
 |DT_IMAGE|Une valeur binaire avec une taille maximale de 2<sup>31</sup>-1 (2 147 483 647) octets. .|  
-|DT_NTEXT|Chaîne de caractères Unicode avec une longueur maximale de 2<sup>30</sup> - 1 (1 073 741 823) caractères.|  
-|DT_TEXT|Un [!INCLUDE[vcpransi](../../../includes/vcpransi-md.md)]/MBCS chaîne de caractères d’une longueur maximale de 2<sup>31</sup>-1 (2 147 483 647) caractères.|  
+|DT_NTEXT|Une chaîne de caractères Unicode avec une longueur maximale de 2<sup>30</sup> - 1 (1 073 741 823) caractères.|  
+|DT_TEXT|Un [!INCLUDE[vcpransi](../../../includes/vcpransi-md.md)]/MBCS de chaîne avec une longueur maximale de 2 caractères<sup>31</sup>-1 (2 147 483 647) caractères.|  
   
 ## <a name="conversion-of-data-types"></a>Conversion de types de données  
  Si les données d'une colonne n'ont pas besoin de toute la largeur qui leur est allouée par le type de données source, vous voudrez peut-être changer le type de données de la colonne. La réduction de la longueur de chaque ligne de données permet d'optimiser les performances lors du transfert de données car plus la ligne est courte, plus les données sont transférées rapidement de la source vers la destination.  

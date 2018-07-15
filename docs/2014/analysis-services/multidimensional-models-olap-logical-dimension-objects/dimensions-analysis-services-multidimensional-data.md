@@ -1,5 +1,5 @@
 ---
-title: Dimensions (Analysis Services - données multidimensionnelles) | Documents Microsoft
+title: Dimensions (Analysis Services - données multidimensionnelles) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - Analysis Services objects, dimensions
 ms.assetid: 2b114135-2572-4479-8c81-3ccf0cfeb9f7
 caps.latest.revision: 39
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: bfe683915d9cacfa21bdd5f32533024da7a7ee34
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 48cba502e905c1f83503ac8955184116971316c4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36044374"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37301149"
 ---
 # <a name="dimensions-analysis-services---multidimensional-data"></a>Dimensions (Analysis Services - Données multidimensionnelles)
   Dans [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], les dimensions sont un composant fondamental des cubes. Les dimensions organisent les données en relation avec un domaine d'intérêt (clients, magasins ou employés, par exemple) pour les utilisateurs. Les dimensions dans [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] contiennent des attributs qui correspondent à des colonnes dans des tables de dimension. Ces attributs apparaissent en tant que hiérarchies d'attributs et peuvent être organisés en hiérarchies définies par l'utilisateur ou peuvent être définies en tant que hiérarchies parent-enfant basées sur des colonnes dans la table de dimensions sous-jacente. Les hiérarchies sont utilisées pour organiser les mesures contenues dans un cube. Les rubriques suivantes donnent un aperçu des dimensions, des attributs et des hiérarchies.  

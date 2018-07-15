@@ -1,13 +1,11 @@
 ---
-title: Création d’un Assembly | Documents Microsoft
+title: Création d’un Assembly | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: clr
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -19,18 +17,18 @@ helpviewer_keywords:
 - assemblies [CLR integration], creating
 ms.assetid: a2bc503d-b6b2-4963-8beb-c11c323f18e0
 caps.latest.revision: 26
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: e7f58e9cd0122739b7d55e8cfe96731a39684fc3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: rothja
+ms.author: jroth
+manager: craigg
+ms.openlocfilehash: a7dcaae61cdfa6466f8f7194b4f93977ec2e7d97
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36044969"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37353342"
 ---
 # <a name="creating-an-assembly"></a>Création d'un assembly
-  Les objets de base de données managés, tels que les procédures stockées ou les déclencheurs, sont successivement compilés et déployés dans des unités appelées « assemblys ». Assemblys DLL managés doivent être enregistrés dans [!INCLUDE[msCoName](../../../includes/ssnoversion-md.md)] avant de pouvoir utiliser la fonctionnalité fournie par l’assembly. Pour enregistrer un assembly dans une base de données [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , utilisez l'instruction CREATE ASSEMBLY. Cette rubrique explique comment enregistrer un assembly dans une base de données à l'aide de l'instruction CREATE ASSEMBLY, puis comment spécifier les paramètres de sécurité de l'assembly.  
+  Les objets de base de données managés, tels que les procédures stockées ou les déclencheurs, sont successivement compilés et déployés dans des unités appelées « assemblys ». Les assemblys DLL managés doivent être enregistrés dans [!INCLUDE[msCoName](../../../includes/ssnoversion-md.md)] avant de pouvoir utiliser la fonctionnalité fournie par l’assembly. Pour enregistrer un assembly dans une base de données [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , utilisez l'instruction CREATE ASSEMBLY. Cette rubrique explique comment enregistrer un assembly dans une base de données à l'aide de l'instruction CREATE ASSEMBLY, puis comment spécifier les paramètres de sécurité de l'assembly.  
   
 ## <a name="the-create-assembly-statement"></a>Instruction CREATE ASSEMBLY  
  L'instruction CREATE ASSEMBLY permet de créer un assembly dans une base de données. Par exemple :  
@@ -83,13 +81,13 @@ FROM 'C:\MyDBApp\SQLCLRTest.dll';
   
 1.  L'assembly est signé avec un nom fort ou porte une signature Authenticode avec certificat. Ce nom fort (ou certificat) est créé dans [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] en tant que clé asymétrique (ou certificat) et dispose d'une connexion correspondante avec l'autorisation `EXTERNAL ACCESS ASSEMBLY` (pour les assemblys à accès externe) ou l'autorisation `UNSAFE ASSEMBLY` (pour les assemblys non sécurisés).  
   
-2.  Le propriétaire de la base de données (DBO) a `EXTERNAL ACCESS ASSEMBLY` (pour `EXTERNAL ACCESS` assemblys) ou `UNSAFE ASSEMBLY` (pour `UNSAFE` assemblys) l’autorisation et la base de données a la [propriété de base de données TRUSTWORTHY](../../security/trustworthy-database-property.md) la valeur `ON`.  
+2.  Le propriétaire de la base de données (DBO) a `EXTERNAL ACCESS ASSEMBLY` (pour `EXTERNAL ACCESS` assemblys) ou `UNSAFE ASSEMBLY` (pour `UNSAFE` assemblys) autorisation et la base de données a la [TRUSTWORTHY Database Property](../../security/trustworthy-database-property.md) défini sur `ON`.  
   
  Les deux conditions mentionnées ci-dessus sont également vérifiées au moment du chargement de l'assembly (exécution incluse). Une des conditions doit au minimum être satisfaite pour le chargement de l'assembly.  
   
- Nous recommandons que la [propriété de base de données TRUSTWORTHY](../../security/trustworthy-database-property.md) sur une base de données ne pas définir `ON` uniquement pour exécuter le common language runtime (CLR) de code dans le processus serveur. Il est préférable, à la place, de créer une clé asymétrique à partir du fichier d'assembly dans la base de données master. Une connexion mappée à cette clé asymétrique doit ensuite être créée. Cette connexion doit disposer de l'autorisation `EXTERNAL ACCESS ASSEMBLY` ou `UNSAFE ASSEMBLY`.  
+ Nous vous recommandons le [TRUSTWORTHY Database Property](../../security/trustworthy-database-property.md) sur une base de données ne pas définir `ON` uniquement pour exécuter le common language runtime (CLR) de code dans le processus serveur. Il est préférable, à la place, de créer une clé asymétrique à partir du fichier d'assembly dans la base de données master. Une connexion mappée à cette clé asymétrique doit ensuite être créée. Cette connexion doit disposer de l'autorisation `EXTERNAL ACCESS ASSEMBLY` ou `UNSAFE ASSEMBLY`.  
   
- Les éléments suivants [!INCLUDE[tsql](../../../includes/tsql-md.md)] instructions avant d’exécuter l’instruction CREATE ASSEMBLY.  
+ Ce qui suit [!INCLUDE[tsql](../../../includes/tsql-md.md)] instructions avant d’exécuter l’instruction CREATE ASSEMBLY.  
   
 ```  
 USE master;   
@@ -112,7 +110,7 @@ FROM 'C:\MyDBApp\SQLCLRTest.dll'
 WITH PERMISSION_SET = EXTERNAL_ACCESS;  
 ```  
   
- Les éléments suivants [!INCLUDE[tsql](../../../includes/tsql-md.md)] instructions avant d’exécuter l’instruction CREATE ASSEMBLY.  
+ Ce qui suit [!INCLUDE[tsql](../../../includes/tsql-md.md)] instructions avant d’exécuter l’instruction CREATE ASSEMBLY.  
   
 ```  
 USE master;   
@@ -140,6 +138,6 @@ WITH PERMISSION_SET = UNSAFE;
  [Suppression d’un Assembly](dropping-an-assembly.md)   
  [Sécurité d’accès du Code CLR Integration](../security/clr-integration-code-access-security.md)   
  [Propriété de base de données TRUSTWORTHY](../../security/trustworthy-database-property.md)   
- [Autoriser partiellement approuvé appelants](../../../database-engine/dev-guide/allowing-partially-trusted-callers.md)  
+ [Autorisation d’appelants partiellement approuvés](../../../database-engine/dev-guide/allowing-partially-trusted-callers.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Passez en revue l’utilisation d’agrégation (Assistant d’optimisation basée sur l’utilisation) | Documents Microsoft
+title: Passez en revue l’utilisation d’agrégation (basée sur l’utilisation de l’Assistant Optimisation de le) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.storagedesignwizard.reviewaggregationusage.f1
 ms.assetid: 49ce2094-c4dc-4e46-8cef-c17c5db084ca
 caps.latest.revision: 7
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 21618aabe9c7e429c7d78a68c7fcfb9d61a0754c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 76140fbc19eaa8beae41c1196143a326dc5c6414
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36052038"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37235679"
 ---
 # <a name="review-aggregation-usage-usage-based-optimiation-wizard"></a>Passer en revue l'utilisation d'agrégation (Assistant Optimisation de l'utilisation)
   Utilisez la page **Passer en revue l'utilisation d'agrégation** pour configurer des paramètres d'utilisation d'agrégation.  
@@ -43,7 +43,7 @@ ms.locfileid: "36052038"
  Sélectionnez pour définir les paramètres d'utilisation d'agrégation de tous les attributs avec la valeur par défaut.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Aide F1 l’Assistant conception d’agrégation](aggregation-design-wizard-f1-help.md)   
+ [Aide de F1 l’Assistant conception d’agrégation](aggregation-design-wizard-f1-help.md)   
  [Assistants Analysis Services &#40;données multidimensionnelles&#41;](analysis-services-wizards-multidimensional-data.md)  
   
   

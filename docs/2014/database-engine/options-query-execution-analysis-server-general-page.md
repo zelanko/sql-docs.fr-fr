@@ -1,5 +1,5 @@
 ---
-title: Options (requête d’exécution-Analysis Server Page Général) | Documents Microsoft
+title: Options (la requête d’exécution-Analysis Server Page Général) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - VS.ToolsOptionsPages.QueryExecution.AnalysisServer.AnalysisServicesExecutionGeneral
 ms.assetid: 456867d0-724c-449c-abf9-013a694d7924
 caps.latest.revision: 22
 author: craigg-msft
 ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: cf08120536537f094798c332e78febb1e7adf03b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: e8445b20cccc8e5976860ba625c309e0fbebf22c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36044280"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37316989"
 ---
-# <a name="options-query-execution-analysis-server-general-page"></a>Options (requête d’exécution-Analysis Server Page Général)
+# <a name="options-query-execution-analysis-server-general-page"></a>Options (la requête d’exécution-Analysis Server Page Général)
   Cette page vous permet de spécifier les options d'exécution des requêtes [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] . Pour afficher ces paramètres, dans le menu **Outils** , cliquez sur **Options**. Sous **Exécution de la requête** , développez le dossier **Serveur d'analyse** , puis cliquez sur **Général**.  
   
 ## <a name="uielement-list"></a>Liste des éléments de l'interface utilisateur  

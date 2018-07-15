@@ -1,5 +1,5 @@
 ---
-title: Élément AttributeHierarchyDisplayFolder (ASSL) | Documents Microsoft
+title: Élément AttributeHierarchyDisplayFolder (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - AttributeHierarchyDisplayFolder element
 ms.assetid: d4a3aff7-553e-416c-9c42-819a96ae264d
 caps.latest.revision: 36
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 8edc310c53df3f81651ec7de66e938ac41c4bb31
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 8893e107502b2dff47f54c4d8bbd0b0989111608
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36052305"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37215859"
 ---
 # <a name="attributehierarchydisplayfolder-element-assl"></a>Élément AttributeHierarchyDisplayFolder (ASSL)
   Identifie le dossier dans lequel la hiérarchie d'attribut associée est à afficher.  
@@ -63,7 +63,7 @@ ms.locfileid: "36052305"
 |Éléments enfants|None|  
   
 ## <a name="remarks"></a>Notes  
- L’élément qui correspond au parent de `AttributeHierarchyDisplayFolder` dans l’objet d’objets AMO (Analysis Management) est modèle <xref:Microsoft.AnalysisServices.DimensionAttribute>.  
+ L’élément qui correspond au parent de `AttributeHierarchyDisplayFolder` dans l’objet d’objets AMO (Analysis Management) modèle est <xref:Microsoft.AnalysisServices.DimensionAttribute>.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Propriétés &#40;ASSL&#41;](properties-assl.md)  

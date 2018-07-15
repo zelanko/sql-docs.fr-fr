@@ -1,5 +1,5 @@
 ---
-title: Vue (Concepteur de modèle d’exploration de données) de la Structure d’exploration de données | Documents Microsoft
+title: Vue (Concepteur de modèle d’exploration de données) de la Structure d’exploration de données | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dm.miningmodeleditor.structure.f1
 ms.assetid: 3ddd0ab7-a4a1-4451-bac8-a0ad0b48be09
 caps.latest.revision: 18
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: d032e92d3ca08cd666026a5244bcf9794ef4caed
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 105b4e33e916dda945e3cec77d0c0ca06b09b3c5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36051377"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37303069"
 ---
 # <a name="mining-structure-view-data-mining-model-designer"></a>Vue Structure d'exploration de données (Concepteur de modèle d'exploration de données)
   Utilisez les vues **Structure d'exploration de données** pour modifier les structures d'exploration de données et pour traiter une structure d'exploration de données et tous ses modèles d'exploration de données associés.  
@@ -37,7 +37,7 @@ ms.locfileid: "36051377"
 ## <a name="see-also"></a>Voir aussi  
  [Vue modèles d’exploration de données &#40;Concepteur de modèle d’exploration de données&#41;](mining-models-view-data-mining-model-designer.md)   
  [Visionneuses de modèle d’exploration de données &#40;Concepteur de modèle d’exploration de données&#41;](mining-model-viewers-data-mining-model-designer.md)   
- [Concepteur graphique d’analyse de précision d’exploration de données &#40;d’exploration de données&#41;](mining-accuracy-chart-designer-data-mining.md)   
- [Générateur de requête de prédiction &#40;d’exploration de données&#41;](prediction-query-builder-data-mining.md)  
+ [Concepteur graphique d’analyse de précision d’exploration de données &#40;exploration de données&#41;](mining-accuracy-chart-designer-data-mining.md)   
+ [Générateur de requêtes de prédiction &#40;exploration de données&#41;](prediction-query-builder-data-mining.md)  
   
   

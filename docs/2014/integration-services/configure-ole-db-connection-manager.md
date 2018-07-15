@@ -1,5 +1,5 @@
 ---
-title: Configurer le Gestionnaire de connexions OLE DB | Documents Microsoft
+title: Configurer le Gestionnaire de connexions OLE DB | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.oledbconnection.f1
 helpviewer_keywords:
 - Configure OLE DB Connection Manager dialog box
 ms.assetid: 66b60dda-1f1b-45d0-9818-8434ea1121eb
 caps.latest.revision: 20
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 9d1dddc0595fec4aa8f8710ba2b01b4296f04186
-ms.sourcegitcommit: d463f543e8db4a768f8e9736ff28fedb3fb17b9f
+manager: craigg
+ms.openlocfilehash: d9a91e43bc26efc37a38f4316866fa80048e2ccb
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/22/2018
-ms.locfileid: "36324593"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37292839"
 ---
 # <a name="configure-ole-db-connection-manager"></a>Configurer le gestionnaire de connexions OLE DB
   La boîte de dialogue **Configurer le gestionnaire de connexions OLE DB** vous permet d’ajouter une connexion à une source de données, qui peut être une nouvelle connexion ou la copie d’une connexion existante.  

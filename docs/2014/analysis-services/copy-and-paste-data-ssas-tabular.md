@@ -1,5 +1,5 @@
 ---
-title: Copier et coller des données (SSAS tabulaire) | Documents Microsoft
+title: Copier et coller des données (SSAS tabulaire) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.bidtoolset.pastepreviewdb.f1
 ms.assetid: 2f8d8b3d-810b-4c31-98f2-341015e13da8
 caps.latest.revision: 15
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 02f2675214908685964e22f216e3f40ac91d5a85
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 83b7c0c4b3861ff18008580e60d0b508c1526fd0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36139700"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37224659"
 ---
 # <a name="copy-and-paste-data-ssas-tabular"></a>Copier et coller des données (SSAS Tabulaire)
   Vous pouvez copier des données de table depuis des applications externes et les coller dans une table nouvelle ou existante du générateur de modèles. Les données que vous collez à partir du Presse-papiers doivent être au format HTML, notamment les données copiées à partir d’Excel ou de Word. Le générateur de modèles détecte et applique automatiquement les types de données aux données collées. Vous pouvez également modifier manuellement le type de données ou la mise en forme d'affichage d'une colonne.  
@@ -91,7 +91,7 @@ ms.locfileid: "36139700"
   
 ## <a name="see-also"></a>Voir aussi  
  [Importer des données &#40;SSAS tabulaire&#41;](import-data-ssas-tabular.md)   
- [Les Sources de données prises en charge &#40;SSAS tabulaire&#41;](tabular-models/data-sources-supported-ssas-tabular.md)   
- [Définir le Type de données d’une colonne &#40;SSAS tabulaire&#41;](tabular-models/set-the-data-type-of-a-column-ssas-tabular.md)  
+ [Sources de données prises en charge &#40;SSAS tabulaire&#41;](tabular-models/data-sources-supported-ssas-tabular.md)   
+ [Définissez le Type de données d’une colonne &#40;SSAS tabulaire&#41;](tabular-models/set-the-data-type-of-a-column-ssas-tabular.md)  
   
   

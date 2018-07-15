@@ -8,30 +8,30 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - reports, creating
 - tutorials, getting started
 - creating reports
 ms.assetid: 6b1db67a-cf75-494c-b70c-09f1e6a8d414
 caps.latest.revision: 25
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 03ec9b9f8f953f0c4947e3f39cd125e54d6d7272
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: a5298705230f13aca363cd266a274c807e4e09a1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36052160"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37216809"
 ---
 # <a name="tutorial-create-a-quick-chart-report-offline-report-builder"></a>Didacticiel : créer un rapport de graphique rapide en mode hors connexion (Générateur de rapports)
   Dans ce didacticiel, vous allez créer un graphique à secteurs à l'aide d'un Assistant, puis le modifier quelque peu afin d'obtenir un petit aperçu des opérations réalisables. Vous pouvez effectuer ce didacticiel de deux façons différentes. Les deux méthodes aboutissent au même résultat, à savoir un graphique à secteurs semblable à celui de l'illustration suivante :  
   
- ! [Afficher « Mon premier graphique à secteurs » dans l’exécution] (.. /Media/RS-my1stpierunview.gif « « mon premier graphique à secteurs » dans exécuter afficher »)  
+ ! [Afficher « Mon premier graphique à secteurs « à exécution] (.. /Media/RS-my1stpierunview.gif » « mon premier graphique à secteurs « à exécution afficher »)  
   
 ## <a name="prerequisites"></a>Prérequis  
- Que vous utilisiez des données XML ou une requête [!INCLUDE[tsql](../../../includes/tsql-md.md)], vous devez avoir accès au Générateur de rapports [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. Vous pouvez exécuter la version autonome ou la version ClickOnce disponible à partir du Gestionnaire de rapports ou d'un site SharePoint. Seule la première étape, l'ouverture du Générateur de rapports, est différente pour les versions ClickOnce. Pour plus d’informations, consultez [d’installation, désinstallation et prise en charge du Générateur de rapports](../install-uninstall-and-report-builder-support.md).  
+ Que vous utilisiez des données XML ou une requête [!INCLUDE[tsql](../../../includes/tsql-md.md)], vous devez avoir accès au Générateur de rapports [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. Vous pouvez exécuter la version autonome ou la version ClickOnce disponible à partir du Gestionnaire de rapports ou d'un site SharePoint. Seule la première étape, l'ouverture du Générateur de rapports, est différente pour les versions ClickOnce. Pour plus d’informations, consultez [installation, désinstallation et prise en charge du Générateur de rapports](../install-uninstall-and-report-builder-support.md).  
   
 ##  <a name="TwoWays"></a> Deux façons de réaliser ce didacticiel  
   
@@ -45,11 +45,11 @@ ms.locfileid: "36052160"
  [Créer le graphique à secteurs avec des données XML](#CreatePieChartXML)  
   
 ### <a name="using-a-transact-sql-query-that-contains-data-for-this-tutorial"></a>Utilisation d'une requête Transact-SQL qui contient les données de ce didacticiel  
- Vous pouvez copier une requête comprenant des données incluses à partir de cette rubrique et la coller dans l'Assistant. Vous avez besoin du nom d’une instance de [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] et les informations d’identification suffisantes pour l’accès en lecture seule aux bases de données. La requête de dataset du didacticiel utilise des données littérales, mais la requête doit être traitée par une instance de [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] pour retourner les métadonnées nécessaires à un dataset de rapport.  
+ Vous pouvez copier une requête comprenant des données incluses à partir de cette rubrique et la coller dans l'Assistant. Vous aurez besoin du nom d’une instance de [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] et informations d’identification suffisantes pour l’accès en lecture seule aux bases de données. La requête de dataset du didacticiel utilise des données littérales, mais la requête doit être traitée par une instance de [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] pour retourner les métadonnées nécessaires à un dataset de rapport.  
   
  L'avantage lié à l'utilisation de la requête [!INCLUDE[tsql](../../../includes/tsql-md.md)] vient du fait que tous les autres didacticiels du Générateur de rapports utilisent la même méthode ; par conséquent, lorsque vous effectuerez d'autres didacticiels, vous saurez déjà quoi faire.  
   
- Le [!INCLUDE[tsql](../../../includes/tsql-md.md)] requête nécessite quelques autres conditions préalables. Pour plus d’informations, voir [Éléments requis pour les didacticiels (Générateur de rapports)](../report-builder-tutorials.md).  
+ Le [!INCLUDE[tsql](../../../includes/tsql-md.md)] requête requiert quelques autres conditions préalables. Pour plus d’informations, voir [Éléments requis pour les didacticiels (Générateur de rapports)](../report-builder-tutorials.md).  
   
  [Créer le graphique à secteurs avec une requête Transact-SQL qui contient des données](#CreatePieQueryData)  
   
@@ -67,7 +67,7 @@ ms.locfileid: "36052160"
      La boîte de dialogue **Mise en route** s'affiche.  
   
     > [!NOTE]  
-    >  Si le **mise en route** boîte de dialogue n’apparaît pas, à partir de la **le Générateur de rapports** et sur **nouveau**.  
+    >  Si le **mise en route** boîte de dialogue n’apparaît pas, à partir de la **le Générateur de rapports** bouton, cliquez sur **New**.  
   
 2.  Dans le volet gauche, assurez-vous que **Rapport** est sélectionné.  
   
@@ -142,7 +142,7 @@ ms.locfileid: "36052160"
   
 1.  Cliquez sur **Démarrer**, pointez sur **Programmes**, sur **Générateur de rapports Microsoft SQL Server 2012**, puis cliquez sur **Générateur de rapports version**.  
   
-2.  Dans le **nouveau rapport ou dataset** boîte de dialogue zone, vérifiez que **rapport** est sélectionné dans le volet gauche.  
+2.  Dans le **nouveau rapport ou dataset** boîte de dialogue, vérifiez que **rapport** est sélectionné dans le volet gauche.  
   
 3.  Dans le volet droit, cliquez sur **Assistant Graphique**, puis sur **Créer**.  
   
@@ -202,24 +202,24 @@ ms.locfileid: "36052160"
   
 1.  Avec le bouton droit sur le graphique à secteurs et sélectionnez **afficher les étiquettes de données**. Les étiquettes de données doivent apparaître dans chaque secteur du graphique.  
   
-2.  Avec le bouton droit sur les étiquettes et sélectionnez **propriétés étiquette de la série**. La boîte de dialogue **Propriétés de l'étiquette de la série** s'affiche.  
+2.  Avec le bouton droit sur les étiquettes et sélectionnez **propriétés de l’étiquette série**. La boîte de dialogue **Propriétés de l'étiquette de la série** s'affiche.  
   
-3.  Type `#PERCENT{P0}` pour le **étiqueter des données** option.  
+3.  Type `#PERCENT{P0}` pour le **données de l’étiquette** option.  
   
-     La `{P0}` indique le pourcentage sans décimales. Si vous tapez simplement `#PERCENT`, vos chiffres comporteront deux décimales. `#PERCENT` est un mot clé qui effectue un calcul ou une fonction Il existe de nombreux autres.  
+     Le `{P0}` vous donne le pourcentage sans décimales. Si vous tapez simplement `#PERCENT`, vos nombres comporteront deux décimales. `#PERCENT` est un mot clé qui effectue un calcul ou une fonction pour vous ; Il existe de nombreux autres.  
   
  Pour plus d’informations sur la personnalisation des étiquettes et légendes de graphique, voir [Afficher des valeurs en pourcentage dans un graphique à secteurs (Générateur de rapports et SSRS)](../report-design/display-percentage-values-on-a-pie-chart-report-builder-and-ssrs.md) et [Modifier le texte d’un élément de légende (Générateur de rapports et SSRS)](../report-design/chart-legend-change-item-text-report-builder.md).  
   
  ![Icône de flèche utilisée avec le lien Retour au début](../../2014-toc/media/uparrow16x16.gif "Icône de flèche utilisée avec le lien Retour au début") [Retour au début](#TwoWays)  
   
 ##  <a name="WhatsNext"></a> Étape suivante  
- Maintenant que vous avez créé votre premier rapport dans le Générateur de rapports, vous pouvez effectuer les autres didacticiels et commencer à créer des rapports à partir de vos propres données. Pour exécuter le Générateur de rapports, vous devez avoir l’autorisation d’accéder à vos sources de données, telles que des bases de données, avec un *chaîne de connexion*, ce qui vous connecte en fait à la source de données. Votre administrateur système sera en mesure de vous fournir les informations nécessaires.  
+ Maintenant que vous avez créé votre premier rapport dans le Générateur de rapports, vous pouvez effectuer les autres didacticiels et commencer à créer des rapports à partir de vos propres données. Pour exécuter le Générateur de rapports, vous devez avoir l’autorisation d’accéder à vos sources de données, telles que des bases de données, avec un *chaîne de connexion*, ce qui permet de vous connecter à la source de données. Votre administrateur système sera en mesure de vous fournir les informations nécessaires.  
   
- Pour utiliser les autres didacticiels, vous avez besoin du nom d’une instance de [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] et les informations d’identification suffisantes pour l’accès en lecture seule aux bases de données. Là encore, vous pouvez vous adresser à votre administrateur système.  
+ Pour utiliser les autres didacticiels, vous avez besoin du nom d’une instance de [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] et informations d’identification suffisantes pour l’accès en lecture seule aux bases de données. Là encore, vous pouvez vous adresser à votre administrateur système.  
   
  Pour finir, afin d'enregistrer vos rapports sur un serveur de rapports ou un site SharePoint intégré à un serveur de rapports, il vous faut posséder l'URL et les autorisations nécessaires. Vous pouvez créer les rapports que vous créez directement à partir de votre ordinateur, mais les rapports procurent davantage de fonctionnalités lorsqu'ils sont exécutés à partir du serveur de rapports ou d'un site SharePoint. Vous devez disposer des autorisations nécessaires pour exécuter vos rapports (ou d'autres rapports) à partir du serveur de rapports ou du site SharePoint sur lequel ils sont publiés. Pour obtenir ces autorisations, contactez votre administrateur système.  
   
- Avant de continuer, il peut être utile de lire certains documents relatifs à certains concepts et termes. Pour plus d’informations, consultez [Concepts de création de rapports &#40;le Générateur de rapports et SSRS&#41;](../report-design/report-authoring-concepts-report-builder-and-ssrs.md). Il est également conseillé d'accorder un peu de temps à la planification avant de créer votre premier rapport. Ce temps consacré vous sera utile. Pour plus d’informations, consultez [planification d’un rapport &#40;le Générateur de rapports&#41;](../report-design/planning-a-report-report-builder.md).  
+ Avant de continuer, il peut être utile de lire certains documents relatifs à certains concepts et termes. Pour plus d’informations, consultez [Concepts de création de rapport &#40;Générateur de rapports et SSRS&#41;](../report-design/report-authoring-concepts-report-builder-and-ssrs.md). Il est également conseillé d'accorder un peu de temps à la planification avant de créer votre premier rapport. Ce temps consacré vous sera utile. Pour plus d’informations, consultez [planification d’un rapport &#40;Générateur de rapports&#41;](../report-design/planning-a-report-report-builder.md).  
   
  ![Icône de flèche utilisée avec le lien Retour au début](../../2014-toc/media/uparrow16x16.gif "Icône de flèche utilisée avec le lien Retour au début") [Retour au début](#TwoWays)  
   

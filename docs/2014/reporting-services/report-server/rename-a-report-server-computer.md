@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - renaming report servers
 ms.assetid: 82fc4ba2-291a-4939-a025-271b8d687c54
 caps.latest.revision: 45
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: be5f32d7859d21409930428711c247b208b97e23
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 6deb9cf058343e5b2a84d90c5ead07776447c355
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36044673"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37321729"
 ---
 # <a name="rename-a-report-server-computer"></a>Changement de nom d'un ordinateur serveur de rapports
   Le renommage d’un ordinateur entraîne une modification équivalente du nom pour le serveur web et l’instance [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (si elle se trouve sur le même ordinateur). Dans certains cas, il est possible que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ne soit pas accessible après la modification du nom d'un ordinateur. Suivez les instructions de cette rubrique pour reconfigurer un serveur de rapports après un changement de nom d'ordinateur.  
@@ -42,7 +42,7 @@ ms.locfileid: "36044673"
 ## <a name="renaming-a-report-server-computer"></a>Changement de nom d'un ordinateur serveur de rapports  
  Si vous renommez un ordinateur qui exécute un serveur de rapports, procédez comme suit :  
   
-1.  Ouvrez **RSReportServer.config** dans un éditeur de texte et modifiez le `UrlRoot` paramètre afin de refléter le nouveau nom du serveur. Le paramètre `UrlRoot` est utilisé par les extensions de remise pour composer l'URL permettant d'accéder aux éléments stockés sur le serveur de rapports. La modification de l’adresse URL du serveur de rapports nécessite que vous mettiez à jour le `UrlRoot` paramètre afin que les abonnements continuent à remettre des rapports comme prévu.  
+1.  Ouvrez **RSReportServer.config** dans un éditeur de texte et modifiez le `UrlRoot` paramètre afin de refléter le nouveau nom du serveur. Le paramètre `UrlRoot` est utilisé par les extensions de remise pour composer l'URL permettant d'accéder aux éléments stockés sur le serveur de rapports. La modification de l’adresse URL de serveur de rapports requiert que vous mettez à jour le `UrlRoot` paramètre afin que les abonnements continuent à remettre des rapports comme prévu.  
   
 2.  Dans le même fichier, s’il est défini, modifiez le `ReportServerUrl` paramètre afin de refléter le nouveau nom du serveur. Notez que ce paramètre n'est pas utilisé dans chaque installation. S'il est vide, ne faites rien.  
   

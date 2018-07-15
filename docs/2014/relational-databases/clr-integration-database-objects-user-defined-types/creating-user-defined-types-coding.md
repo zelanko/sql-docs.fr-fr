@@ -1,13 +1,11 @@
 ---
-title: Codage de Types définis par l’utilisateur | Documents Microsoft
+title: Codage de Types définis par l’utilisateur | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: clr
 ms.tgt_pltfrm: ''
 ms.topic: reference
 dev_langs:
@@ -33,15 +31,15 @@ helpviewer_keywords:
 - exposing UDT properties [CLR integration]
 ms.assetid: 1e5b43b3-4971-45ee-a591-3f535e2ac722
 caps.latest.revision: 36
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: ab1bc1114d6bfd0ab29a2cc1e16b73466baa1d9a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: rothja
+ms.author: jroth
+manager: craigg
+ms.openlocfilehash: 25560f82b1a697618dd606f7df8393abb74727c6
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36051065"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37354421"
 ---
 # <a name="coding-user-defined-types"></a>Codage de types définis par l'utilisateur
   Lorsque vous codez votre définition de type défini par l'utilisateur (UDT, User-Defined Type), vous devez implémenter différentes fonctionnalités, selon que vous implémentez le type défini par l'utilisateur comme classe ou comme structure, et selon les options de format et de sérialisation que vous avez choisies.  
@@ -372,10 +370,10 @@ private bool ValidatePoint()
 ### <a name="validation-method-limitations"></a>Limitations de méthode de validation  
  Le serveur appelle la méthode de validation lorsqu'il effectue des conversions, et non lorsque des données sont insérées en définissant des propriétés individuelles ou à l'aide d'une instruction INSERT [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
- Vous devez appeler explicitement la méthode de validation à partir d’accesseurs Set de propriété et la `Parse` méthode si vous souhaitez que la méthode de validation à exécuter dans toutes les situations. Cela n'est pas obligatoire, et dans certains cas peut ne pas être souhaitable.  
+ Vous devez appeler explicitement la méthode de validation à partir des accesseurs Set de propriété et la `Parse` méthode si vous souhaitez que la méthode de validation à exécuter dans toutes les situations. Cela n'est pas obligatoire, et dans certains cas peut ne pas être souhaitable.  
   
 ### <a name="parse-validation-example"></a>Exemple de validation Parse  
- Pour vous assurer que le `ValidatePoint` méthode est appelée dans le `Point` (classe), vous devez l’appeler à partir de la `Parse` (méthode) et à partir de la propriété des valeurs de coordonnées procédures qui définissent des X et Y. Le fragment de code suivant montre comment appeler le `ValidatePoint` méthode de validation à partir de la `Parse` (fonction).  
+ Pour vous assurer que le `ValidatePoint` méthode est appelée dans le `Point` (classe), vous devez l’appeler à partir de la `Parse` (méthode) et à partir de la propriété les valeurs de coordonnées de procédures qui définissent les coordonnées X et Y. Le fragment de code suivant montre comment appeler le `ValidatePoint` méthode de validation à partir de la `Parse` (fonction).  
   
 ```vb  
 <SqlMethod(OnNullCall:=False)> _  
@@ -421,7 +419,7 @@ public static Point Parse(SqlString s)
 ```  
   
 ### <a name="property-validation-example"></a>Exemple de validation de propriété  
- Le fragment de code suivant montre comment appeler le `ValidatePoint` méthode de validation à partir de procédures de propriété définir les coordonnées X et Y.  
+ Le fragment de code suivant montre comment appeler le `ValidatePoint` méthode de validation à partir de procédures de propriété à définir les coordonnées X et Y.  
   
 ```vb  
 Public Property X() As Int32  
@@ -495,7 +493,7 @@ public Int32 Y
 ```  
   
 ## <a name="coding-udt-methods"></a>Codage de méthodes UDT  
- Lors du codage de méthodes UDT, considérez si l'algorithme utilisé pourrait changer avec le temps. Si c'est le cas, vous pourriez envisager de créer une classe séparée pour les méthodes utilisées par votre type défini par l'utilisateur. Si l'algorithme change, vous pouvez recompiler la classe avec le nouveau code et charger l'assembly dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sans affecter le type défini par l'utilisateur. Dans de nombreux cas, les types définis par l'utilisateur peuvent être rechargés à l'aide de l'instruction  [!INCLUDE[tsql](../../includes/tsql-md.md)] ALTER ASSEMBLY, mais cela pourrait provoquer des problèmes avec les données existantes. Par exemple, le `Currency` UDT inclus avec le **AdventureWorks** exemple de base de données utilise un **ConvertCurrency** de fonction pour convertir des valeurs monétaires, implémentée dans une classe distincte. Il est possible que les algorithmes de conversion puissent changer de manière imprévisible dans le futur, ou que de nouvelles fonctionnalités soient requises. Séparer le **ConvertCurrency** fonction à partir de la `Currency` implémentation d’UDT offre davantage de flexibilité lors de la planification des modifications futures.  
+ Lors du codage de méthodes UDT, considérez si l'algorithme utilisé pourrait changer avec le temps. Si c'est le cas, vous pourriez envisager de créer une classe séparée pour les méthodes utilisées par votre type défini par l'utilisateur. Si l'algorithme change, vous pouvez recompiler la classe avec le nouveau code et charger l'assembly dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sans affecter le type défini par l'utilisateur. Dans de nombreux cas, les types définis par l'utilisateur peuvent être rechargés à l'aide de l'instruction  [!INCLUDE[tsql](../../includes/tsql-md.md)] ALTER ASSEMBLY, mais cela pourrait provoquer des problèmes avec les données existantes. Par exemple, le `Currency` UDT inclus avec le **AdventureWorks** exemple de base de données utilise un **ConvertCurrency** fonction pour convertir des valeurs monétaires, implémentée dans une classe distincte. Il est possible que les algorithmes de conversion puissent changer de manière imprévisible dans le futur, ou que de nouvelles fonctionnalités soient requises. En séparant le **ConvertCurrency** fonction à partir de la `Currency` implémentation d’UDT offre davantage de flexibilité lors de la planification pour les futurs changements.  
   
 ### <a name="example"></a>Exemple  
  Le `Point` classe contient trois méthodes simples pour calculer la distance : **Distance**, **DistanceFrom** et **DistanceFromXY**. Chacune retourne un `double` qui calcule la distance de `Point` à zéro, la distance d'un point spécifié à `Point` et la distance des coordonnées X et Y spécifiées à `Point`. **Distance** et **DistanceFrom** chaque appel **DistanceFromXY**et montrent comment utiliser différents arguments pour chaque méthode.  
@@ -752,6 +750,6 @@ public void Read(System.IO.BinaryReader r)
  Pour le code complet pour le `Currency` UDT, consultez [exemples pour le moteur de base de données SQL Server](http://msftengprodsamples.codeplex.com/).  
   
 ## <a name="see-also"></a>Voir aussi  
- [Création d’un Type défini par l’utilisateur](creating-user-defined-types.md)  
+ [Création d’un type défini par l’utilisateur](creating-user-defined-types.md)  
   
   

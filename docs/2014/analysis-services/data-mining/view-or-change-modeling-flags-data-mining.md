@@ -1,5 +1,5 @@
 ---
-title: Afficher ou modifier les indicateurs de modélisation (exploration de données) | Documents Microsoft
+title: Afficher ou modifier les indicateurs de modélisation (exploration de données) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: d1169735-fb18-417b-b8d6-9a161e444020
 caps.latest.revision: 5
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 235b87b8f0aba0753044511f955cedab031e0ac1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 7a225d0c20148d8e9728b1e502a36ccc3b0891b0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36044376"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37303139"
 ---
 # <a name="view-or-change-modeling-flags-data-mining"></a>Afficher ou modifier les indicateurs de modélisation (Exploration de données)
   Les indicateurs de modélisation sont des propriétés que vous définissez sur une colonne de structure d'exploration de données ou des colonnes du modèle d'exploration de données afin de contrôler la façon dont l'algorithme traite les données pendant l'analyse.  
@@ -55,7 +55,7 @@ ms.locfileid: "36044376"
     ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Tâches liées aux modèles d’exploration de données et procédures](mining-model-tasks-and-how-tos.md)   
- [Les indicateurs de modélisation &#40;d’exploration de données&#41;](modeling-flags-data-mining.md)  
+ [Tâches du modèle d’exploration de données et procédures](mining-model-tasks-and-how-tos.md)   
+ [Indicateurs de modélisation &#40;exploration de données&#41;](modeling-flags-data-mining.md)  
   
   

@@ -1,13 +1,11 @@
 ---
-title: Types CLR définis par l’utilisateur | Documents Microsoft
+title: Types CLR définis par l’utilisateur | Microsoft Docs
 ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: clr
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -34,15 +32,15 @@ helpviewer_keywords:
 - indexes [CLR integration]
 ms.assetid: 27c4889b-c543-47a8-a630-ad06804f92df
 caps.latest.revision: 66
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 45f3107a7b57fd50891e147878474da9ee1484c9
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: rothja
+ms.author: jroth
+manager: craigg
+ms.openlocfilehash: ee6c24bbf6017604d4999964478d3d19a763fb64
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36044971"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37352541"
 ---
 # <a name="clr-user-defined-types"></a>Types CLR définis par l'utilisateur
   Dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vous pouvez créer des objets de base de données programmés à partir d'un assembly créé dans le CLR (Common Language Runtime) .NET Framework. Les objets de base de données pouvant tirer parti du modèle de programmation évolué fourni par le CLR comprennent les déclencheurs, les procédures stockées, les fonctions, les fonctions d'agrégation et les types.  
@@ -62,7 +60,7 @@ ms.locfileid: "36044971"
   
  Le processus de développement de types UDT dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] comprend les étapes suivantes :  
   
-1.  **Le code et générer l’assembly qui définit l’UDT.** Les UDT sont définis à l’aide d’un des langages pris en charge par le.NET Framework common language runtime (CLR) de produisent du code vérifiable. notamment Visual C# et Visual Basic .NET. Les données sont exposées en tant que champs et propriétés d'une classe ou d'une structure .NET Framework, et les comportements sont définis par des méthodes de la classe ou de la structure.  
+1.  **Coder et générer l’assembly qui définit l’UDT.** Les types UDT sont définis à l’aide d’un des langages pris en charge par le.NET Framework common language runtime (CLR) de produisent du code vérifiable. notamment Visual C# et Visual Basic .NET. Les données sont exposées en tant que champs et propriétés d'une classe ou d'une structure .NET Framework, et les comportements sont définis par des méthodes de la classe ou de la structure.  
   
 2.  **Inscrire l’assembly.** Les types UDT peuvent être déployés par l'intermédiaire de l'interface utilisateur Visual Studio dans un projet de base de données, ou à l'aide de l'instruction [!INCLUDE[tsql](../../includes/tsql-md.md)] CREATE ASSEMBLY, qui copie l'assembly contenant la classe ou la structure dans une base de données.  
   
@@ -71,10 +69,10 @@ ms.locfileid: "36044971"
     > [!NOTE]  
     >  Dans les versions antérieures à [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], les types UDT créés à partir d'assemblys .NET Framework n'étaient pas pris en charge. Toutefois, vous pouvez toujours utiliser [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] des types de données alias à l’aide de **sp_addtype**. La syntaxe CREATE TYPE peut être utilisée pour créer à la fois des types de données définis par l'utilisateur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] natifs et des types UDT.  
   
-4.  **Créer des tables, des variables ou des paramètres à l’aide de l’UDT** commençant par [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], un type défini par l’utilisateur peut être utilisé en tant que définition de colonne d’une table, en tant que variable dans un [!INCLUDE[tsql](../../includes/tsql-md.md)] lot, ou en tant qu’argument d’un [!INCLUDE[tsql](../../includes/tsql-md.md)] de fonction ou stockées procédure.  
+4.  **Créer des tables, des variables ou des paramètres à l’aide de l’UDT** commençant par [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], un type défini par l’utilisateur peut être utilisé en tant que la définition de colonne d’une table, en tant que variable dans un [!INCLUDE[tsql](../../includes/tsql-md.md)] batch, ou en tant qu’argument d’un [!INCLUDE[tsql](../../includes/tsql-md.md)] de fonction ou stockées procédure.  
   
 ## <a name="in-this-section"></a>Dans cette section  
- [Création d’un Type défini par l’utilisateur](creating-user-defined-types.md)  
+ [Création d’un type défini par l’utilisateur](creating-user-defined-types.md)  
  Décrit comment créer des types UDT.  
   
  [Inscription de types définis par l’utilisateur dans SQL Server](registering-user-defined-types-in-sql-server.md)  

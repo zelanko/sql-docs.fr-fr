@@ -1,5 +1,5 @@
 ---
-title: Importer un projet Integration Services | Documents Microsoft
+title: Importer un projet Integration Services | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 3301c328-b0f5-4517-915c-93713413e453
 caps.latest.revision: 5
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 020f81f5345fb59957a32364ce23199c9bf7f878
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
-ms.translationtype: HT
+manager: craigg
+ms.openlocfilehash: a433b21a4713388376c3b5c513e755d706e93c84
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36051765"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37296789"
 ---
 # <a name="import-an-integration-services-project"></a>Importer un projet Integration Services
   Utilisez [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]**l’Assistant Importation de projet** pour créer un projet à partir d’un fichier existant de déploiement (.ispac) ou d’un projet déployé sur le catalogue Integration Services. Cette fonctionnalité est particulièrement utile lorsque vous n'avez pas la copie originale du projet, mais que vous voulez en créer un à partir d'un fichier .ispac ou d'un catalogue SSISDB.  

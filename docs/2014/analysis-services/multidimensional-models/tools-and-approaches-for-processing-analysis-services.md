@@ -1,5 +1,5 @@
 ---
-title: Outils et approches de traitement (Analysis Services) | Documents Microsoft
+title: Outils et approches de traitement (Analysis Services) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - process [Analysis Services]
 - processing [Analysis Services]
 ms.assetid: 82347a16-4145-4655-8adf-2a300f1fdf99
 caps.latest.revision: 33
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 8c191732dd66214c19c949d28e3dcd0efe01f7fa
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: f00c1a31869bdfb9375d1e97822c98a0e4f9f914
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36045058"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37261402"
 ---
 # <a name="tools-and-approaches-for-processing-analysis-services"></a>Outils et approches de traitement (Analysis Services)
   Le traitement est une opération selon laquelle Analysis Services interroge les données provenant d'une source de données relationnelle et remplit des objets Analysis Services à l'aide de ces données.  

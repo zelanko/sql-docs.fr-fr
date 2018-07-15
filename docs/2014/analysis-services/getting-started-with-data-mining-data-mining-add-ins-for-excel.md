@@ -1,5 +1,5 @@
 ---
-title: Mise en route avec l’exploration de données (les données des compléments d’exploration de données pour Excel) | Documents Microsoft
+title: Mise en route avec les données d’exploration de données (Data Mining Add-ins pour Excel) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,23 +8,23 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: cbe10a19-e194-408e-a65b-5fdf3fb1e880
 caps.latest.revision: 9
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: c2d82f4569dbdf2c9e6c686c1235300de40bf445
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 0faa8178d535fa5cd493f65e002e27e5565059c1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36051180"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37303129"
 ---
 # <a name="getting-started-with-data-mining-data-mining-add-ins-for-excel"></a>Mise en route avec l'exploration de données (compléments d'exploration de données pour Excel)
   L'exploration de données est le processus de découverte des tendances au travers de données. L'exploration de données est un complément naturel du processus d'exploration et d'analyse de vos données via la BI traditionnelle. Les algorithmes d'ordinateur peuvent traiter de grandes quantités de données et dégager des tendances et des séquences qui resteraient autrement masquées.  
   
- Pour effectuer l’exploration de données, collectez les données ne s’applique à une question spécifique, tel que « qui sont de mes clients ? » ou « quels produits ont été achetés ? » puis appliquez un algorithme pour rechercher des corrélations statistiques dans les données. Les schémas et les tendances identifiés par l'analyse sont stockés en tant que modèle d'exploration de données. Appliquez ensuite le modèle d'exploration de données aux nouvelles données, dans des scénarios d'entreprise comme :  
+ Pour effectuer l’exploration de données, vous collectez des données qui se rapportent à une question spécifique, tel que « qui sont mes clients ? » ou « quels produits ont été achetés ? » puis appliquez un algorithme pour rechercher des corrélations statistiques dans les données. Les schémas et les tendances identifiés par l'analyse sont stockés en tant que modèle d'exploration de données. Appliquez ensuite le modèle d'exploration de données aux nouvelles données, dans des scénarios d'entreprise comme :  
   
 -   Utilisation des tendances passées pour prévoir les ventes du trimestre suivant, les besoins du stock, ou la satisfaction des clients.  
   
@@ -90,12 +90,12 @@ ms.locfileid: "36051180"
   
  Une fois votre modèle terminé, attachez-vous à revoir les résultats et à identifier comment modifier les données ou obtenir de meilleurs scores. Il est rare qu'un modèle initial apporte toutes les réponses. L'exploration de données est généralement un processus itératif.  
   
- Lorsque vous essayez de lier vos données de diverses façons, ou ajouter de nouvelles colonnes, pensez à utiliser le **Document modèle** Assistant pour capturer un instantané de métadonnées et les résultats de chaque modèle. Avec un enregistrement, vous suivrez plus facilement le progression de votre exploration.  
+ Lorsque vous essayez de lier vos données de différents façons, ou ajouter de nouvelles colonnes, pensez à utiliser le **Document modèle** Assistant pour capturer un instantané des métadonnées et les résultats de chaque modèle. Avec un enregistrement, vous suivrez plus facilement le progression de votre exploration.  
   
  [Exploration et nettoyage des données](exploring-and-cleaning-data.md)  
   
 ## <a name="validate-your-model"></a>Valider votre modèle  
- Lorsque vous exécutez un Assistant ou un outil, l'algorithme analyse le contenu des données et détermine si un modèle valide d'un point de vue statistique existe. Si l'algorithme ne trouve pas de modèles valides, vous recevrez un message d'erreur. Cependant, même si un modèle a été correctement créé, vous devrez le tester pour voir s'il valide vos hypothèses. Vous pouvez utiliser des outils tels que le [graphique de précision &#40;des compléments d’exploration de données SQL Server&#41; ](accuracy-chart-sql-server-data-mining-add-ins.md) ou [la Validation croisée &#40;des compléments d’exploration de données SQL Server&#41; ](cross-validation-sql-server-data-mining-add-ins.md) pour produire des statistiques mesures de qualité du modèle.  
+ Lorsque vous exécutez un Assistant ou un outil, l'algorithme analyse le contenu des données et détermine si un modèle valide d'un point de vue statistique existe. Si l'algorithme ne trouve pas de modèles valides, vous recevrez un message d'erreur. Cependant, même si un modèle a été correctement créé, vous devrez le tester pour voir s'il valide vos hypothèses. Vous pouvez utiliser des outils tels que le [graphique de précision &#40;SQL Server Data Mining Add-ins&#41; ](accuracy-chart-sql-server-data-mining-add-ins.md) ou [la Validation croisée &#40;SQL Server Data Mining Add-ins&#41; ](cross-validation-sql-server-data-mining-add-ins.md) pour produire des statistiques mesures de qualité du modèle.  
   
  Lorsque vous évaluez les résultats de votre premier modèle, posez-vous des questions telles que :  
   
@@ -126,7 +126,7 @@ ms.locfileid: "36051180"
   
  Parmi les utilisations importantes des modèles d'exploration de données, l'une consiste à créer des prédictions et des recommandations. Les compléments d'exploration de données pour Excel incluent des outils qui simplifient la génération de requêtes de prédiction même complexes, afin de convertir des analyses en résultats utilisables. Tous ces outils sont totalement intégrés à Excel.  
   
- [Affichage de modèles &#40;les données des compléments d’exploration de données pour Office&#41;](viewing-models-data-mining-add-ins-for-office.md)  
+ [Affichage de modèles &#40;Data Mining Add-ins for Office&#41;](viewing-models-data-mining-add-ins-for-office.md)  
   
  [Validation des modèles et à l’aide de modèles pour la prédiction &#40;les données des compléments d’exploration de données pour Excel&#41;](validating-models-and-using-models-for-prediction-data-mining-add-ins-for-excel.md)  
   

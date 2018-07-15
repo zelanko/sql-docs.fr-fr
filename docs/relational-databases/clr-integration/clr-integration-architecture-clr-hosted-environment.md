@@ -1,12 +1,11 @@
 ---
-title: Environnement de CLR hébergé | Documents Microsoft
+title: CLR hébergé d’environnement | Microsoft Docs
 ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
-ms.prod_service: database-engine
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: reference
+ms.technology: clr
 ms.topic: reference
 helpviewer_keywords:
 - type-safe code [CLR integration]
@@ -30,14 +29,14 @@ caps.latest.revision: 60
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 6292f8fd453b0031b36e1c9a244c442e94d323f1
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
+ms.openlocfilehash: 50343b871322c373b297e5b1a062df844621ba2d
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35697510"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37352811"
 ---
-# <a name="clr-integration-architecture---clr-hosted-environment"></a>Architecture d’intégration CLR - environnement hébergé CLR
+# <a name="clr-integration-architecture---clr-hosted-environment"></a>Architecture d’intégration de CLR - environnement hébergé CLR
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   L'intégration [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] avec le Common Language Runtime (CLR) .NET Framework permet aux programmeurs de base de données d'utiliser des langages tels que Visual C#, Visual Basic .NET et Visual C++. Les fonctions, procédures stockées, déclencheurs, types de données et agrégats sont parmi les types de logique métier que les programmeurs peuvent écrire avec ces langages.  
   
@@ -101,7 +100,7 @@ ms.locfileid: "35697510"
   
 -   ExternalProcessMgmt, qui indique si l'API expose une méthode pour contrôler le processus hôte.  
   
- Étant donné ces attributs, l'hôte peut spécifier une liste de HPA, tels que l'attribut SharedState, qui doivent être rejetés dans l'environnement hébergé. Dans ce cas, le CLR refuse les tentatives d'appel par code utilisateur des API annotées par les HPA dans la liste interdite. Pour plus d’informations, consultez [attributs de Protection d’hôte et de la programmation de l’intégration CLR](../../relational-databases/clr-integration-security-host-protection-attributes/host-protection-attributes-and-clr-integration-programming.md).  
+ Étant donné ces attributs, l'hôte peut spécifier une liste de HPA, tels que l'attribut SharedState, qui doivent être rejetés dans l'environnement hébergé. Dans ce cas, le CLR refuse les tentatives d'appel par code utilisateur des API annotées par les HPA dans la liste interdite. Pour plus d’informations, consultez [les attributs de Protection hôte et programmation de l’intégration de CLR](../../relational-databases/clr-integration-security-host-protection-attributes/host-protection-attributes-and-clr-integration-programming.md).  
   
 ## <a name="how-sql-server-and-the-clr-work-together"></a>Comment SQL Server et le CLR fonctionnent-ils ensemble ?  
  Cette section explique comment [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] intègre le threading, la planification, la synchronisation et les modèles de gestion de la mémoire de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et du CLR. En particulier, cette section examine l'intégration du point de vue de l'évolutivité, de la fiabilité et des objectifs en matière de sécurité. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] agit essentiellement comme un système d'exploitation pour le CLR lorsque celui-ci est hébergé au sein de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Le CLR appelle les routines de bas niveau implémentées par [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pour le threading, la planification, la synchronisation et la gestion de la mémoire. Ce sont les mêmes primitives que le reste du moteur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilise. Cette approche fournit plusieurs avantages en termes d'évolutivité, de fiabilité et de sécurité.  

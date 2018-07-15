@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - replication [SQL Server], tutorials
 ms.assetid: f248984a-0b59-4c2f-a56d-31f8dafe72b5
 caps.latest.revision: 19
 author: craigg-msft
 ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: ab6c3ab7b14b8e7443b9ac6b39225aa02671fa88
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 633e71fd1755746a37c258500d4f98c93db28b4a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36044496"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37322219"
 ---
 # <a name="lesson-3-configuring-distribution"></a>Leçon 3 : Configuration de la distribution
   Dans cette leçon, vous allez configurer la distribution sur le serveur de publication et définir les autorisations requises sur les bases de données de publication et de distribution. Si vous avez déjà configuré le serveur de distribution, vous devez d'abord désactiver la publication et la distribution avant de commencer cette leçon. Ne procédez pas ainsi si vous devez conserver une topologie de réplication existante.  
@@ -57,13 +57,13 @@ ms.locfileid: "36044496"
   
 3.  Sur la page **Mappage de l'utilisateur** , dans la liste **Utilisateurs mappés à cette connexion** , sélectionnez les bases de données **distribution** et [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] .  
   
-     Dans le **l’appartenance au rôle de base de données** liste Sélectionnez le `db_owner` rôle pour la connexion pour les bases de données.  
+     Dans le **l’appartenance au rôle de base de données** liste Sélectionnez le `db_owner` rôle pour la connexion pour les deux bases de données.  
   
 4.  Cliquez sur **OK** pour créer la connexion.  
   
 5.  Répétez les étapes 1 à 4 pour créer une connexion pour le compte local repl_logreader. Cette connexion doit également être mappée aux utilisateurs qui sont membres de la `db_owner` rôle de base de données fixe dans le **distribution** et **AdventureWorks** bases de données.  
   
-6.  Répétez les étapes 1 à 4 pour créer une connexion pour le compte local repl_distribution. Cette connexion doit être mappée à un utilisateur qui est membre de la `db_owner` rôle de base de données fixe dans le **distribution** base de données.  
+6.  Répétez les étapes 1 à 4 pour créer une connexion pour le compte local repl_distribution. Cette connexion doit être mappée à un utilisateur est membre de la `db_owner` rôle de base de données fixe dans le **distribution** base de données.  
   
 7.  Répétez les étapes 1 à 4 pour créer une connexion pour le compte local repl_merge. Cette connexion doit avoir les mappages d'utilisateur des bases de données de **distribution** et **AdventureWorks** .  
   

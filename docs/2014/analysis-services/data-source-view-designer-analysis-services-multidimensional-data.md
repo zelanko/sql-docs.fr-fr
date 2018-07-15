@@ -1,5 +1,5 @@
 ---
-title: Le Concepteur de vue (Analysis Services - données multidimensionnelles) la Source de données | Documents Microsoft
+title: Concepteur (Analysis Services - données multidimensionnelles) de la vue de Source de données | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.dsvdesigner.f1
 helpviewer_keywords:
 - Data Source View Designer
 ms.assetid: 6f40a074-761f-440b-a999-09b755bd86ce
 caps.latest.revision: 24
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 2b440c0186e60e6622d861110a8de2284e2b2589
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 08fb948e9dd0cd401e1cc2fa3fe2a4bc60ff4e11
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36051608"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37296049"
 ---
 # <a name="data-source-view-designer-analysis-services---multidimensional-data"></a>Concepteur de vue de source de données (Analysis Services - Données multidimensionnelles)
   Une vue de source de données (DSV) est une vue logique d'une source de données relationnelle externe utilisée pour créer des cubes et des dimensions dans un modèle multidimensionnel.  
@@ -57,6 +57,6 @@ ms.locfileid: "36051608"
   
 ## <a name="see-also"></a>Voir aussi  
  [Vues de sources de données dans les modèles multidimensionnels](multidimensional-models/data-source-views-in-multidimensional-models.md)   
- [Ajout ou suppression des Tables ou des vues dans les données de vue de Source &#40;Analysis Services&#41;](multidimensional-models/adding-or-removing-tables-or-views-in-a-data-source-view-analysis-services.md)  
+ [Ajout ou suppression des Tables ou des vues de données de vue de Source &#40;Analysis Services&#41;](multidimensional-models/adding-or-removing-tables-or-views-in-a-data-source-view-analysis-services.md)  
   
   

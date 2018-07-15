@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: a8b1aac1-53ef-47a4-afc0-8fa866c6c480
 caps.latest.revision: 6
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: e32774c7577f357677c149bd3e222498945b9b82
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: e6e09fbd1af47c63d12d5c1b726e6a0ad23cf5b7
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36051212"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37294129"
 ---
 # <a name="add-or-delete-an-indicator-report-builder-and-ssrs"></a>Ajouter ou supprimer un indicateur (Générateur de rapports et SSRS)
   Les indicateurs sont des jauges minimales qui communiquent en un coup d'œil l'état d'une valeur de donnée unique. Pour plus d’informations les concernant, consultez [Indicateurs &#40;Générateur de rapports et SSRS&#41;](indicators-report-builder-and-ssrs.md).  
@@ -30,11 +30,11 @@ ms.locfileid: "36051212"
   
  Vous pouvez mettre à jour les valeurs et les états d'indicateurs. Pour plus d'informations, consultez les rubriques suivantes :  
   
--   [Modifier les icônes d’indicateur et jeux d’indicateurs &#40;rapport Générateur et SSRS&#41;](change-indicator-icons-and-indicator-sets-report-builder-and-ssrs.md)  
+-   [Modifier les icônes d’indicateur et jeux d’indicateurs &#40;Générateur de rapports et SSRS&#41;](change-indicator-icons-and-indicator-sets-report-builder-and-ssrs.md)  
   
--   [Définir et configurer des unités de mesure &#40;rapport Générateur et SSRS&#41;](set-and-configure-measurement-units-report-builder-and-ssrs.md)  
+-   [Définir et configurer des unités de mesure &#40;Générateur de rapports et SSRS&#41;](set-and-configure-measurement-units-report-builder-and-ssrs.md)  
   
--   [Définir l’étendue de synchronisation &#40;rapport Générateur et SSRS&#41;](set-synchronization-scope-report-builder-and-ssrs.md)  
+-   [Définir l’étendue de synchronisation &#40;Générateur de rapports et SSRS&#41;](set-synchronization-scope-report-builder-and-ssrs.md)  
   
  Étant donné qu’un indicateur est positionné à l’intérieur du panneau de jauge, vous devez sélectionner l’indicateur au lieu du panneau quand vous souhaitez configurer l’indicateur à l’aide de la boîte de dialogue **Propriétés des indicateurs** ou du volet **Propriétés** . L'image suivante illustre un indicateur sélectionné dans son panneau de jauge.  
   

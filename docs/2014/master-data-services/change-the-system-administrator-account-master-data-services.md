@@ -1,5 +1,5 @@
 ---
-title: Modifier le compte d’administrateur système (Master Data Services) | Documents Microsoft
+title: Modifier le compte d’administrateur système (Master Data Services) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - administrators [Master Data Services], changing
 ms.assetid: cf30312e-4338-49a7-90f0-6e4f7b431ff8
 caps.latest.revision: 6
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: a0e9a79120b4f184fb7acf07eeaf46101740a173
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: a6d15bf7b140445ca80f23fe22e058a78d6fdce0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36044250"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37298609"
 ---
 # <a name="change-the-system-administrator-account-master-data-services"></a>Modifier le compte de l'administrateur système (Master Data Services)
   Vous pouvez modifier le compte d’utilisateur qui est désigné comme le [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] administrateur système.  

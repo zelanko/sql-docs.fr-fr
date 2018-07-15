@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 54405a3a-d7fa-4d95-8963-9aa224e5901e
 caps.latest.revision: 47
-author: markingmyname
-ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: ba7042030a88a616d5d4b23df4475111a63ee76b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: c9e828696135d13263a68219c1a248325a14676d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36052793"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37196789"
 ---
 # <a name="lesson-2-specifying-connection-information-reporting-services"></a>Leçon 2 : Spécification des informations de connexion (Reporting Services)
   Après avoir ajouté un rapport au projet Didacticiel, vous devez définir une *source de données*, qui sont des informations de connexion que le rapport utilise pour accéder aux données à partir d’une base de données relationnelle, d’une base de données multidimensionnelle ou d’une autre ressource.  
@@ -62,6 +62,6 @@ ms.locfileid: "36052793"
  Vous avez défini avec succès une connexion à la [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] base de données exemple. Vous allez ensuite créer un rapport. Consultez [Leçon 3 : Définition d’un dataset destiné à un rapport de table &#40;Reporting Services&#41;](lesson-3-defining-a-dataset-for-the-table-report-reporting-services.md).  
   
 ## <a name="see-also"></a>Voir aussi  
- [Connexions de données, les Sources de données et les chaînes de connexion dans Reporting Services](data-connections-data-sources-and-connection-strings-in-reporting-services.md)  
+ [Connexions de données, sources de données et chaînes de connexion dans Reporting Services](data-connections-data-sources-and-connection-strings-in-reporting-services.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Analysis Services PowerShell | Documents Microsoft
+title: Analysis Services PowerShell | Microsoft Docs
 ms.custom: ''
 ms.date: 03/11/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 60bb9610-7229-42eb-a95f-a377268a8720
 caps.latest.revision: 24
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 593d6eb0594e90b78899a511b000e09725e57484
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 7fe6625cf512586c5f5e42bb4d5d4f601db41a70
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36052132"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37265685"
 ---
 # <a name="analysis-services-powershell"></a>PowerShell Analysis Services
   [!INCLUDE[ssASCurrent](../includes/ssascurrent-md.md)] inclut un fournisseur et des applets de commande PowerShell Analysis Services (SQLAS) afin que vous puissiez utiliser Windows PowerShell pour parcourir, administrer et interroger des objets Analysis Services.  
@@ -122,17 +122,17 @@ PS SQLSERVER:\SQLAS\Localhost\default> Remove-Variable -Name pwd
   
  Cette section décrit les tâches courantes pour l'utilisation de PowerShell Analysis Services.  
   
--   [Charge l’analyse des applets de commande et le fournisseur de Services](#bkmk_load)  
+-   [Charger l’analyse applets de commande et le fournisseur de Services](#bkmk_load)  
   
 -   [Activer l’Administration à distance](#bkmk_remote)  
   
 -   [Se connecter à un objet Analysis Services](#bkmk_connect)  
   
--   [L’administration du Service](#bkmk_admin)  
+-   [Administrer le Service](#bkmk_admin)  
   
 -   [Obtenir de l’aide de PowerShell Analysis Services](#bkmk_help)  
   
-###  <a name="bkmk_load"></a> Charge l’analyse des applets de commande et le fournisseur de Services  
+###  <a name="bkmk_load"></a> Charger l’analyse applets de commande et le fournisseur de Services  
  Le fournisseur Analysis Services est une extension du fournisseur racine SQL Server qui devient disponible lorsque vous importez le module SQLPS. Les applets de commande Analysis Services sont chargés simultanément ; vous pouvez également les charger indépendamment si vous souhaitez les utiliser sans le fournisseur.  
   
 -   Exécutez l'applet de commande Import-module pour charger SQLPS qui inclut toutes les fonctionnalités PowerShell Analysis Services. Si vous ne pouvez pas importer le module, vous pouvez temporairement utiliser une stratégie d'exécution sans restriction afin de charger le module. Pour plus d’informations, consultez [Importer le module SQLPS](../../2014/database-engine/import-the-sqlps-module.md).  
@@ -162,11 +162,11 @@ PS SQLSERVER:\SQLAS\Localhost\default> Remove-Variable -Name pwd
   
 5.  Ouvrez Configuration ordinateur, Modèles d'administration, Réseau, Connexions réseau, Pare-feu Windows, puis Profil de domaine.  
   
-6.  Double-cliquez sur **pare-feu Windows : autoriser l’exception d’administration à distance entrante**, sélectionnez **activé**, puis cliquez sur **OK**.  
+6.  Double-cliquez sur **pare-feu de Windows : autoriser l’exception d’administration à distance entrante**, sélectionnez **activé**, puis cliquez sur **OK**.  
   
-7.  Double-cliquez sur **pare-feu Windows : autoriser les fichiers entrants et l’exception de partage d’imprimantes**, sélectionnez **activé**, puis cliquez sur **OK**.  
+7.  Double-cliquez sur **pare-feu de Windows : autoriser les fichiers entrants et exception de partage d’imprimante**, sélectionnez **activé**, puis cliquez sur **OK**.  
   
-8.  Sur l’ordinateur local qui comporte les outils clients, utilisez les applets de commande suivantes pour vérifier l’administration à distance, en remplaçant le nom du serveur pour le *nom du serveur à distance* espace réservé. Omettez le nom de l'instance si Analysis Services est installé comme instance par défaut. Vous devez avoir déjà importé le module SQLPS pour que la commande fonctionne.  
+8.  Sur l’ordinateur local qui comporte les outils clients, utilisez les applets de commande suivantes pour vérifier l’administration à distance, en remplaçant le nom de serveur réel pour le *nom du serveur à distance* espace réservé. Omettez le nom de l'instance si Analysis Services est installé comme instance par défaut. Vous devez avoir déjà importé le module SQLPS pour que la commande fonctionne.  
   
     ```  
     PS SQLSERVER:\> cd sqlas  
@@ -218,7 +218,7 @@ PS SQLSERVER\sqlas\http_ds\http%3A%2F%2Flocalhost%2olap%2msmdpump%2Edll:> dir
   
  Vous devez voir les collections suivantes : Assemblies, Databases, Roles et Traces. Si vous ne pouvez pas afficher le contenu de ces collections, vérifiez les paramètres d'authentification dans le répertoire virtuel OLAP. Vérifiez que l'accès anonyme est désactivé. Si vous utilisez l'authentification Windows, assurez-vous que votre compte d'utilisateur Windows dispose d'autorisations d'administrateur sur l'instance Analysis Services.  
   
-###  <a name="bkmk_admin"></a> L’administration du Service  
+###  <a name="bkmk_admin"></a> Administrer le Service  
  Vérifiez que le service est en cours d'exécution. Retourne l'état, le nom et le nom complet pour les services SQL Server, notamment Analysis Services (MSSQLServerOLAPService) et le moteur de base de données.  
   
 ```  
@@ -281,7 +281,7 @@ Restart-service mssqlserverolapservice
   
 ## <a name="see-also"></a>Voir aussi  
  [Installer SQL Server PowerShell](../database-engine/install-windows/install-sql-server-powershell.md)   
- [Gérer sous forme de tableau des modèles à l’aide de PowerShell (blog)](http://go.microsoft.com/fwlink/?linkID=227685)   
+ [Gérer tabulaires des modèles à l’aide de PowerShell (blog)](http://go.microsoft.com/fwlink/?linkID=227685)   
  [Configurer l’accès HTTP à Analysis Services sur Internet Information Services &#40;IIS&#41; 8.0](instances/configure-http-access-to-analysis-services-on-iis-8-0.md)  
   
   

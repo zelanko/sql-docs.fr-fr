@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine-imoltp
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 14106cc9-816b-493a-bcb9-fe66a1cd4630
 caps.latest.revision: 12
-author: stevestein
-ms.author: sstein
-manager: jhubbard
-ms.openlocfilehash: e68b94ce70e24d16ac1cc94274b9dac05974dbe7
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
+ms.openlocfilehash: 6b18989012a733d39dca843f475ec23e99893d0c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36052405"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37246903"
 ---
 # <a name="the-memory-optimized-filegroup"></a>Groupe de fichiers mémoire optimisé
   Pour créer des tables mémoire optimisées, vous devez d'abord créer un groupe de fichiers mémoire optimisé. Le groupe de fichiers mémoire optimisé contient un ou plusieurs conteneurs. Chaque conteneur contient des fichiers de données, des fichiers delta ou les deux.  
@@ -61,7 +61,7 @@ ms.locfileid: "36052405"
   
  Dans un scénario à plusieurs conteneurs et à plusieurs lecteurs, les fichiers de données et delta sont alloués dans des conteneurs selon le principe du tourniquet. Le premier fichier de données est alloué depuis le premier conteneur, le fichier delta depuis le conteneur suivant, et ainsi de suite. Cette méthode d'allocation répartit les fichiers de données et delta de manière uniforme entre les conteneurs si vous avez un nombre impair de lecteurs, chacun étant mappé à un conteneur. Toutefois, si vous avez un nombre pair de lecteurs, chacun étant mappé à un conteneur, cela peut entraîner un stockage déséquilibré, les fichiers de données étant mappés aux lecteurs impairs et les fichiers delta aux lecteurs pairs. Pour obtenir un flux équilibré d'E/S lors de la récupération, envisagez de placer des paires de fichiers de données et delta sur les mêmes axes/stockages, comme indiqué dans l'exemple ci-dessous.  
   
- **Exemple :** prendre en compte un groupe de fichiers mémoire optimisé avec deux conteneurs : conteneur 1 sur le lecteur X et conteneur 2 sur le lecteur Y. Étant donné que la répartition des données et des fichiers delta s’effectue de tourniquet, conteneur 1 aura uniquement les fichiers de données et conteneur 2 aura uniquement les fichiers delta, ce qui aboutit persistance déséquilibrée au niveau de stockage ainsi que les opérations d’entrée/sortie par seconde, en tant que fichiers de données sont beaucoup plus important que les fichiers delta. Pour répartir uniformément les fichiers de données et delta sur les lecteurs X et Y, créez quatre conteneurs au lieu de deux et mappez les deux premiers conteneurs au lecteur X et les deux conteneurs suivants au lecteur Y. Allocation de tourniquet, les premières données et le premier fichier delta seront alloués depuis le conteneur-1 et 2 de conteneur respectivement qui sont mappés au lecteur X. De même, le fichier suivant de données et delta est alloué depuis le conteneur-3 et 4 conteneur qui sont mappés au lecteur Y. Cela permet de répartir des données et des fichiers delta entre deux lecteurs uniformément.  
+ **Exemple :** envisager un groupe de fichiers mémoire optimisé avec deux conteneurs : conteneur 1 sur le lecteur X et conteneur 2 sur le lecteur Y. Dans la mesure où l’allocation des fichiers de données et delta s’effectue de manière alternée, conteneur 1 aura uniquement les fichiers de données et conteneur 2 aura uniquement les fichiers delta, ce qui entraîne une persistance déséquilibrée pour le stockage, ainsi que des opérations d’entrée/sortie par seconde, en tant que fichiers de données sont beaucoup plus volumineuses que les fichiers delta. Pour distribuer les fichiers de données et delta uniformément sur les lecteurs X et Y, créez quatre conteneurs au lieu de deux et mappez les deux premiers conteneurs au lecteur X et les deux conteneurs suivants au lecteur Y. Avec l’allocation de tourniquet (round-robin), les premières données premier fichier delta seront alloués depuis le conteneur-1 et 2 de conteneur respectivement mappés au lecteur X. De même, le fichier suivant de données et delta est alloué depuis le conteneur-3 et 4 conteneur qui sont mappés au lecteur Y. Cela permet de répartir uniformément des fichiers de données et delta entre deux lecteurs.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Création et gestion du stockage des objets mémoire optimisés](creating-and-managing-storage-for-memory-optimized-objects.md)  

@@ -1,5 +1,5 @@
 ---
-title: Comprendre les schémas de base de données | Documents Microsoft
+title: Présentation des schémas de base de données | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Schema Generation Wizard, database schema
 - database schema [Analysis Services]
@@ -18,15 +18,15 @@ helpviewer_keywords:
 - denormalized schemas
 ms.assetid: 51e411f9-ee3f-4b92-9833-c2bce8c6b752
 caps.latest.revision: 28
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: bf611a2ae8e2c2275fc59d3abc124d8fa202d388
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: ef75cf2773781f94bd02a26c5c94958b9f4dfe3f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36051157"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37282245"
 ---
 # <a name="understanding-the-database-schemas"></a>Présentation des schémas de base de données
   L'Assistant Génération de schéma crée pour la base de données de la zone de sujet un schéma relationnel dénormalisé basé sur les dimensions et les groupes de mesures définis dans [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. L'Assistant génère pour chaque dimension une table relationnelle appelée table de dimension, destinée à stocker les données de dimension, et pour chaque groupe de mesures une table relationnelle appelée table de faits, servant à stocker les données de faits. Lorsqu'il génère ces tables relationnelles, l'Assistant ignore les dimensions liées, les groupes de mesures liés et les dimensions de temps de serveur.  
@@ -48,7 +48,7 @@ ms.locfileid: "36051157"
  Pour chaque dimension, l'Assistant Génération de schéma crée une table de dimension à inclure dans la base de données de la zone de sujet. La structure de la table de dimension dépend des choix effectués lors de la conception de la dimension sur laquelle elle est basée.  
   
  Colonnes  
- L’Assistant génère une colonne pour les liaisons associées à chaque attribut dans la dimension sur laquelle est basée la table de dimension, telles que les liaisons pour le `KeyColumns`, `NameColumn`, `ValueColumn`, `CustomRollupColumn`, `CustomRollupPropertiesColumn`et `UnaryOperatorColumn`propriétés de chaque attribut.  
+ L’Assistant génère une colonne pour les liaisons associées à chaque attribut dans la dimension sur laquelle la table de dimension est basée, par exemple les liaisons pour le `KeyColumns`, `NameColumn`, `ValueColumn`, `CustomRollupColumn`, `CustomRollupPropertiesColumn`et `UnaryOperatorColumn`propriétés de chaque attribut.  
   
  Relations  
  L'Assistant génère une relation entre la colonne de chaque attribut parent et la clé primaire de la table de dimension.  
@@ -86,7 +86,7 @@ ms.locfileid: "36051157"
  L'Assistant génère une table séparée pour stocker les valeurs traduites de toute propriété du groupe de mesures qui nécessite une colonne de traduction. L'Assistant crée également une colonne séparée pour chacune des langues requises.  
   
 ## <a name="data-type-conversion-and-default-lengths"></a>Conversion de type de données et longueurs par défaut  
- Assistant génération de schéma ignore les types de données dans tous les cas sauf pour les colonnes qui utilisent le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `wchar` type de données. Le `wchar` données traduit directement le `nvarchar` type de données. Toutefois, si la longueur spécifiée d'une colonne utilisant le type `wchar` dépasse 4 000 octets, l'Assistant Génération de schéma produit une erreur.  
+ Assistant génération de schéma ignore les types de données dans tous les cas sauf pour les colonnes qui utilisent le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `wchar` type de données. Le `wchar` données se traduit directement en la `nvarchar` type de données. Toutefois, si la longueur spécifiée d'une colonne utilisant le type `wchar` dépasse 4 000 octets, l'Assistant Génération de schéma produit une erreur.  
   
  Le tableau suivant indique la longueur par défaut de la colonne si un élément de données, par exemple la liaison d'un attribut, n'a pas de longueur spécifiée.  
   
@@ -99,7 +99,7 @@ ms.locfileid: "36051157"
 |UnaryOperatorColumn| 1|  
   
 ## <a name="see-also"></a>Voir aussi  
- [Fonctionnement de la génération incrémentielle](understanding-incremental-generation.md)   
+ [Présentation de la génération incrémentielle](understanding-incremental-generation.md)   
  [Gérer des modifications dans les vues de source de données et les sources de données](manage-changes-to-data-source-views-and-data-sources.md)  
   
   

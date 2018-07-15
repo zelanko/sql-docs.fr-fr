@@ -5,25 +5,24 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.newagwizard.listeners.f1
 - sql12.swb.newagwizard.specifyreplicas.f1
 - sql12.swb.addreplicawizard.specifyreplicas.f1
 ms.assetid: 2d90fc12-a67b-4bd0-b0ab-899b73017196
 caps.latest.revision: 33
-author: rothja
-ms.author: jroth
-manager: jhubbard
-ms.openlocfilehash: 878e1a5df6e67129c9146b1ff0c47e4167b54950
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: a25a08e57395ca8523b29f976b93179e0989a8ac
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36051803"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37279635"
 ---
 # <a name="specify-replicas-page-new-availability-group-wizard-add-replica-wizard"></a>Page Spécifier les réplicas (Assistant Nouveau groupe de disponibilité : Assistant Ajout de réplica)
   Cette rubrique décrit les options de la page **Spécifier les réplicas** . Cette page s'applique à l' [!INCLUDE[ssAoNewAgWiz](../../../includes/ssaonewagwiz-md.md)] et à l' [!INCLUDE[ssAoAddRepWiz](../../../includes/ssaoaddrepwiz-md.md)] de [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. Utilisez la page **Spécifier les réplicas** pour spécifier et configurer un ou plusieurs réplicas de disponibilité afin d'ajouter le groupe de disponibilité. Cette page contient quatre onglets, qui sont présentés dans le tableau suivant. Cliquez sur le nom d'un onglet du tableau pour atteindre la section correspondante, plus loin dans cette rubrique.  
@@ -47,12 +46,12 @@ ms.locfileid: "36051803"
  **Basculement automatique (jusqu'à 2)**  
  Activez cette case à cocher uniquement si vous souhaitez que ce réplica de disponibilité soit un partenaire de basculement automatique. Pour configurer le basculement automatique, vous devez choisir cette option pour le réplica principal initial et pour un réplica secondaire. Les deux réplicas utilisent le mode de disponibilité avec validation synchrone. Seuls deux réplicas peuvent prendre en charge le basculement automatique.  
   
- Pour plus d’informations sur le mode de disponibilité à validation synchrone, consultez [Modes de disponibilité (groupes de disponibilité AlwaysOn)](availability-modes-always-on-availability-groups.md). Pour plus d’informations sur le basculement automatique, consultez [Basculement et modes de basculement &#40;groupes de disponibilité AlwaysOn&#41;](failover-and-failover-modes-always-on-availability-groups.md).  
+ Pour plus d’informations sur le mode de disponibilité avec validation synchrone, consultez [Modes de disponibilité (groupes de disponibilité AlwaysOn)](availability-modes-always-on-availability-groups.md). Pour plus d’informations sur le basculement automatique, consultez [Basculement et modes de basculement &#40;groupes de disponibilité AlwaysOn&#41;](failover-and-failover-modes-always-on-availability-groups.md).  
   
  **Validation synchrone (jusqu'à 3)**  
  Si vous avez sélectionné **Basculement automatique (jusqu'à 2)** pour le réplica, l'option **Validation asynchrone (jusqu'à 3)** est également sélectionnée. Si la case à cocher est vide, sélectionnez-la uniquement si vous souhaitez que ce réplica utilise le mode de validation synchrone avec le basculement manuel planifié uniquement. Seuls trois réplicas peuvent utiliser le mode de validation synchrone.  
   
- Si vous souhaitez que ce réplica utilise le mode de disponibilité avec validation asynchrone, n'activez pas cette case à cocher. Le réplica ne prendra en charge que le basculement manuel forcé (avec possible perte de données). Pour plus d’informations sur le mode de disponibilité en validation asynchrone, consultez [Modes de disponibilité (groupes de disponibilité AlwaysOn)](availability-modes-always-on-availability-groups.md). Pour plus d’informations sur le basculement manuel planifié et le basculement manuel forcé, consultez [Basculement et modes de basculement &#40;groupes de disponibilité AlwaysOn&#41;](failover-and-failover-modes-always-on-availability-groups.md).  
+ Si vous souhaitez que ce réplica utilise le mode de disponibilité avec validation asynchrone, n'activez pas cette case à cocher. Le réplica ne prendra en charge que le basculement manuel forcé (avec possible perte de données). Pour plus d’informations sur le mode de disponibilité avec validation asynchrone, consultez [Modes de disponibilité (groupes de disponibilité AlwaysOn)](availability-modes-always-on-availability-groups.md). Pour plus d’informations sur le basculement manuel planifié et le basculement manuel forcé, consultez [Basculement et modes de basculement &#40;groupes de disponibilité AlwaysOn&#41;](failover-and-failover-modes-always-on-availability-groups.md).  
   
  **Rôle secondaire accessible en lecture**  
  Sélectionnez une valeur dans la liste déroulante **Rôle secondaire accessible en lecture** , comme suit :  
@@ -210,7 +209,7 @@ ms.locfileid: "36051803"
   
 -   [CREATE ENDPOINT &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-endpoint-transact-sql)  
   
--   [Créer une base de données mise en miroir du point de terminaison pour les groupes de disponibilité AlwaysOn &#40;SQL Server PowerShell&#41;](database-mirroring-always-on-availability-groups-powershell.md)  
+-   [Créer une base de données mise en miroir de point de terminaison pour les groupes de disponibilité AlwaysOn &#40;SQL Server PowerShell&#41;](database-mirroring-always-on-availability-groups-powershell.md)  
   
 ## <a name="see-also"></a>Voir aussi  
  [Vue d’ensemble des groupes de disponibilité AlwaysOn &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   

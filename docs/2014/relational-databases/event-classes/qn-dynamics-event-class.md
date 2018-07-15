@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 topic_type:
 - apiref
 helpviewer_keywords:
 - event classes [SQL Server], QN:Dynamics
 ms.assetid: 3c1ffa0c-c9e5-40a6-a26b-28339f60ebc3
 caps.latest.revision: 24
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 0187f27bd7375b22cd703c6e7caa818cc3a7dd38
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 83a51fb2449bce6f671ad8ba73d4c6dd4cd79714
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36044520"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37300469"
 ---
 # <a name="qndynamics-event-class"></a>Classe d'événements QN:Dynamics
   La classe d'événements QN:Dynamics fournit des informations sur l'activité d'arrière-plan que le [!INCLUDE[ssDE](../../includes/ssde-md.md)] effectue pour la prise en charge des notifications de requête. Dans le [!INCLUDE[ssDE](../../includes/ssde-md.md)], un thread d’arrière-plan surveille les délais d’abonnement, les abonnements en attente à déclencher et la destruction de la table de paramètres.  
@@ -38,7 +38,7 @@ ms.locfileid: "36044520"
 |DatabaseName|`nvarchar`|Nom de la base de données dans laquelle l'instruction de l'utilisateur est exécutée.|35|Oui|  
 |EventClass|`int`|Type d'événement = 202|27|non|  
 |EventSequence|`int`|Numéro de séquence de cet événement.|51|non|  
-|EventSubClass|`nvarchar`|Type de sous-classe d’événements, qui fournit des informations complémentaires concernant chaque classe d’événements. Cette colonne peut contenir les valeurs suivantes :<br /><br /> Horloge a commencé : indique que le thread d’arrière-plan dans le [!INCLUDE[ssDE](../../includes/ssde-md.md)] que les planifications tables de paramètres expirés pour le nettoyage a démarré.<br /><br /> Horloge exécuter terminé : indique que le thread d’arrière-plan dans le [!INCLUDE[ssDE](../../includes/ssde-md.md)] que les planifications tables de paramètres expirés pour le nettoyage est terminé.<br /><br /> Tâche de nettoyage maître de démarrage : indique le démarrage du nettoyage (garbage collection) pour supprimer les données d’abonnement de notification de requête expirées.<br /><br /> Tâche de nettoyage Master terminé : indique quand se termine le nettoyage (garbage collection) pour supprimer les données d’abonnement de notification de requête expirées.<br /><br /> Tâche de nettoyage Master ignorée : indique que le [!INCLUDE[ssDE](../../includes/ssde-md.md)] n’a pas effectué le nettoyage (garbage collection) pour supprimer les données d’abonnement de notification de requête expirées.|21|Oui|  
+|EventSubClass|`nvarchar`|Type de sous-classe d’événements, qui fournit des informations complémentaires concernant chaque classe d’événements. Cette colonne peut contenir les valeurs suivantes :<br /><br /> Horloge exécution démarrée : indique que le thread d’arrière-plan dans le [!INCLUDE[ssDE](../../includes/ssde-md.md)] que planifications tables de paramètres expirés pour le nettoyage a démarré.<br /><br /> Horloge exécuter terminé : indique que le thread d’arrière-plan dans le [!INCLUDE[ssDE](../../includes/ssde-md.md)] que planifications tables de paramètres expirés pour le nettoyage a pris fin.<br /><br /> Tâche de nettoyage maître démarré : indique au démarrage de nettoyage (garbage collection) pour supprimer les données d’abonnement de notification de requête expirées.<br /><br /> Tâche de nettoyage maître terminé : indique quand se termine le nettoyage (garbage collection) pour supprimer les données d’abonnement de notification de requête expirées.<br /><br /> Tâche de nettoyage maître ignorée : indique que le [!INCLUDE[ssDE](../../includes/ssde-md.md)] n’a pas effectué le nettoyage (garbage collection) pour supprimer les données d’abonnement de notification de requête expirées.|21|Oui|  
 |GroupID|`int`|ID du groupe de charges de travail où l'événement Trace SQL se déclenche.|66|Oui|  
 |HostName|`nvarchar`|Nom de l'ordinateur sur lequel s'exécute le client. Cette colonne de données est remplie si le nom de l'hôte est fourni par le client. Pour déterminer le nom de l'hôte, utilisez la fonction HOST_NAME.|8|Oui|  
 |IsSystem|`int`|Indique si l'événement s'est produit sur un processus système ou sur un processus utilisateur.<br /><br /> 0 = utilisateur<br /><br /> 1 = système|60|non|  

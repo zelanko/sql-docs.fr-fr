@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.dataprofilingtask.profilerequests.f1
 helpviewer_keywords:
@@ -17,13 +17,13 @@ ms.assetid: c72acb3d-380e-436e-8041-ed364eddfabd
 caps.latest.revision: 26
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 1a493e342b9637d6e1498e38f9689897d8b65e64
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: bc2c19b0ae0247a8cccbb75f56d943ef277625e5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36051578"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37292909"
 ---
 # <a name="data-profiling-task-editor-profile-requests-page"></a>Éditeur de tâche de profilage de données (page Demandes de profil)
   Utilisez la page **Demandes de profil** de **l’Éditeur de tâche de profilage de données** pour sélectionner et configurer les profils que vous souhaitez calculer. Dans une même tâche de profilage des données, vous pouvez calculer plusieurs profils pour plusieurs colonnes ou des combinaisons de colonnes dans plusieurs tables ou vues.  
@@ -74,7 +74,7 @@ ms.locfileid: "36051578"
 |**Demande de profil de distribution de longueurs de colonne**|Calculez un profil de distribution de longueurs de colonne.<br /><br /> Le profil de distribution de longueurs de colonne signale toutes les longueurs distinctes des valeurs de chaîne dans la colonne sélectionnée, ainsi que le pourcentage de lignes dans la table que chaque longueur représente. Ce profil peut vous aider à identifier des problèmes dans vos données, tels que des valeurs non valides. Par exemple, vous profilez une colonne de codes d'états des États-Unis à deux caractères et découvrez des valeurs excédant deux caractères.|  
 |**Demande de profil de ratio de colonne Null**|Calculez un profil de ratio de colonne Null.<br /><br /> Le profil de ratio de colonne Null signale le pourcentage de valeurs Null dans la colonne sélectionnée. Ce profil peut vous aider à identifier des problèmes dans vos données, tels qu'un ratio élevé inattendu de valeurs Null dans une colonne. Par exemple, vous profilez une colonne de codes postaux et découvrez un pourcentage élevé et inacceptable de codes manquants.|  
 |**Demande de profil de modèle de colonne**|Calculez un profil de modèle de colonne.<br /><br /> Le profil de modèle de colonne signale un ensemble d'expressions régulières qui reflètent le pourcentage spécifié pour les valeurs dans une colonne de chaîne. Ce profil peut vous aider à identifier des problèmes dans vos données, tels que les chaînes non valides. Il peut également suggérer des expressions régulières susceptibles d'être utilisées à l'avenir pour la validation de nouvelles valeurs. Par exemple, le profil de modèle d'une colonne de codes postaux peut générer les expressions régulières suivantes : \d{5}-\d{4}, \d{5} et \d{9}. Si vous rencontrez d'autres expressions régulières, il est probable que vos données contiennent des valeurs qui ne sont pas valides ou utilisent un format incorrect.|  
-|**Demande de profil de statistiques de colonnes**|Sélectionnez cette option pour calculer un profil de statistiques de colonnes à l'aide des paramètres par défaut pour toutes les colonnes applicables dans la table ou la vue sélectionnée.<br /><br /> Le profil de statistiques de colonne signale des statistiques telles que minimum, maximum, moyenne et écart type pour les colonnes numériques et au minimum et maximum pour `datetime` colonnes. Ce profil peut vous aider à identifier des problèmes dans vos données, tels que les dates non valides. Par exemple, vous profilez une colonne de dates historiques et découvrez une date maximum dont l'échéance est à venir.|  
+|**Demande de profil de statistiques de colonnes**|Sélectionnez cette option pour calculer un profil de statistiques de colonnes à l'aide des paramètres par défaut pour toutes les colonnes applicables dans la table ou la vue sélectionnée.<br /><br /> Le profil de statistiques de colonne signale des statistiques, telles que le minimum, maximum, moyenne et écart type pour les colonnes numériques et au minimum et maximum pour `datetime` colonnes. Ce profil peut vous aider à identifier des problèmes dans vos données, tels que les dates non valides. Par exemple, vous profilez une colonne de dates historiques et découvrez une date maximum dont l'échéance est à venir.|  
 |**Demande de profil de distribution de valeurs de colonne**|Calculez un profil de distribution de valeurs de colonne.<br /><br /> Le profil de distribution de valeurs de colonne permet de préciser toutes les valeurs distinctes dans la colonne sélectionnée, ainsi que le pourcentage de lignes dans la table que représente chaque valeur. Ce profil peut également signaler des valeurs qui représentent beaucoup plus qu'un pourcentage spécifié dans la table. Il peut vous aider à identifier des problèmes dans vos données, tels qu'un nombre incorrect de valeurs distinctes dans une colonne. Par exemple, vous profilez une colonne qui contient les états des États-Unis et découvrez plus de 50 valeurs distinctes.|  
 |**Demande de profil de dépendance fonctionnelle**|Calculez un profil de dépendance fonctionnelle.<br /><br /> Le profil de dépendance fonctionnelle indique le degré de dépendance entre les valeurs d'une colonne (colonne dépendante) et celles d'une autre colonne ou d'un ensemble de colonnes (colonne déterminante). Ce profil peut également vous aider à identifier des problèmes dans vos données, tels que des valeurs non valides. Par exemple, vous profilez une dépendance entre une colonne États-Unis/Code postal et une colonne des états des États-Unis. Le même code postal doit toujours afficher le même état mais le profil détecte des violations de la dépendance.|  
 |**Demande de profil d'inclusion de valeur**|Calculez un profil d'inclusion de valeur.<br /><br /> Le profil d'inclusion de valeur calcule le chevauchement des valeurs entre deux colonnes ou des ensembles de colonnes. Ce profil permet également de déterminer si une colonne ou un ensemble de colonnes peut servir de clé étrangère entre les tables sélectionnées. Ce profil peut également vous aider à identifier des problèmes dans vos données, tels que les valeurs non valides. Par exemple, vous profilez la colonne ProductID d'une table Sales et découvrez que la colonne contient des valeurs qui sont introuvables dans la colonne ProductID de la table Products.|  
@@ -138,17 +138,17 @@ ms.locfileid: "36051578"
   
 -   [Options de demande de profil de Ratio Null de la colonne &#40;tâche de profilage des données&#41;](column-null-ratio-profile-request-options-data-profiling-task.md)  
   
--   [Options de demande de profil de statistiques de colonne &#40;tâche de profilage des données&#41;](column-statistics-profile-request-options-data-profiling-task.md)  
+-   [Options demande de profil de statistiques de colonnes &#40;tâche de profilage des données&#41;](column-statistics-profile-request-options-data-profiling-task.md)  
   
--   [Options de demande de profil de Distribution de valeur de colonne &#40;tâche de profilage des données&#41;](column-value-distribution-profile-request-options-data-profiling-task.md)  
+-   [Options de demande de profil de Distribution de valeurs de colonne &#40;tâche de profilage des données&#41;](column-value-distribution-profile-request-options-data-profiling-task.md)  
   
--   [Options de demande de profil colonne longueur Distribution &#40;tâche de profilage des données&#41;](column-length-distribution-profile-request-options-data-profiling-task.md)  
+-   [Options de demande de profil de Distribution de longueurs de colonne &#40;tâche de profilage des données&#41;](column-length-distribution-profile-request-options-data-profiling-task.md)  
   
 -   [Options de demande de profil de modèle de colonne &#40;tâche de profilage des données&#41;](column-pattern-profile-request-options-data-profiling-task.md)  
   
 -   [Options de demande de profil de dépendance fonctionnelle &#40;tâche de profilage des données&#41;](functional-dependency-profile-request-options-data-profiling-task.md)  
   
--   [Options de demande de profil d’Inclusion de valeur &#40;tâche de profilage des données&#41;](value-inclusion-profile-request-options-data-profiling-task.md)  
+-   [Options demande de profil d’Inclusion de valeur &#40;tâche de profilage des données&#41;](value-inclusion-profile-request-options-data-profiling-task.md)  
   
 ## <a name="see-also"></a>Voir aussi  
  [Éditeur de tâche de profilage des données &#40;Page Général&#41;](../general-page-of-integration-services-designers-options.md)   

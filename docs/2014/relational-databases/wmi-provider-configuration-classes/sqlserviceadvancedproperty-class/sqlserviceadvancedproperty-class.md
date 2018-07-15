@@ -1,5 +1,5 @@
 ---
-title: Classe SqlServiceAdvancedProperty | Documents Microsoft
+title: Classe SqlServiceAdvancedProperty | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - SqlServiceAdvancedProperty class
 ms.assetid: a5d06bde-6058-464c-a4aa-444d83f2331f
 caps.latest.revision: 31
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: a9d1d9f3fc8f30047542e35bce4e7549d41d2d8f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
+ms.openlocfilehash: 903d18b16aba79f4b0188058dbf801d09808a540
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36045125"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37197069"
 ---
 # <a name="sqlserviceadvancedproperty-class"></a>Classe SqlServiceAdvancedProperty
   Le [classe SqlServiceAdvancedProperty](sqlserviceadvancedproperty-class.md) représente une propriété avancée du service qui est référencé par le [classe SqlService](../sqlservice-class/sqlservice-class.md) objet.  

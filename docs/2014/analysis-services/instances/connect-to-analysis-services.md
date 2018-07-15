@@ -1,5 +1,5 @@
 ---
-title: Se connecter à Analysis Services | Documents Microsoft
+title: Se connecter à Analysis Services | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - instances of Analysis Services, connections
 ms.assetid: 73ee8171-3379-4384-bfc8-071b3eebbc8f
 caps.latest.revision: 45
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 564ca915bf24dbdb04829eb6815dbd7fc23135be
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 5daf8d36d648298343d8989db01aa5fabcf3168d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36051834"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37255731"
 ---
 # <a name="connect-to-analysis-services"></a>Se connecter à Analysis Services
   Utilisez les informations de cette section pour en savoir plus sur les propriétés de chaîne de connexion, les bibliothèques clientes utilisées pour les connexions, les méthodes d'authentification prises en charge par Analysis Services et la procédure permettant de définir ou supprimer les connexions avant de déconnecter un serveur.  

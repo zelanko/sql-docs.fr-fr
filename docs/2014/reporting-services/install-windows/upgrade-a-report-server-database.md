@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - upgrading databases
 - report server database
@@ -17,20 +17,20 @@ ms.assetid: 4091cf87-9d97-4048-a393-67f1f9207401
 caps.latest.revision: 42
 author: markingmyname
 ms.author: maghan
-manager: jhubbard
-ms.openlocfilehash: 1c27b2bed8932fd5dbb415be7889242c0752b52b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 18ee01868f27e12f709ec5784e868eadcdd46f6c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36053021"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37253573"
 ---
 # <a name="upgrade-a-report-server-database"></a>Mettre à niveau une base de données du serveur de rapports
   La base de données du serveur de rapports offre un espace de stockage pour une ou plusieurs instances du serveur de rapports. Comme le schéma de base de données du serveur de rapports peut changer à chaque nouvelle version de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], il est nécessaire que la version de la base de données corresponde à la version de l'instance du serveur de rapports que vous utilisez. Dans la plupart des cas, une base de données du serveur de rapports peut être mise à niveau automatiquement sans aucune intervention de votre part.  
   
  **Mode natif :** En mode natif [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , la base de données de serveur de rapports est composée de deux bases de données portent les noms par défaut « ReportServer et ReportServerTempDB ».  
   
- **Mode SharePoint :** dans [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] le rapport de serveur de base de données est une collection de bases de données qui est créée pour chaque instance de la [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] application de service.  
+ **Mode SharePoint :** dans [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] le rapport de serveur de base de données est une collection de bases de données est créée pour chaque instance de la [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] application de service.  
   
 ## <a name="ways-to-upgrade-a-native-mode-report-server-database"></a>Méthodes de mise à niveau d'une base de données de serveur de rapports en mode natif  
  La liste suivante identifie toutes les conditions selon lesquelles une base de données du serveur de rapports est mise à niveau :  
@@ -70,7 +70,7 @@ ms.locfileid: "36053021"
   
 ## <a name="see-also"></a>Voir aussi  
  [Gestionnaire de Configuration de Reporting Services &#40;en Mode natif&#41;](../../sql-server/install/reporting-services-configuration-manager-native-mode.md)   
- [Créer une base de données du serveur de rapports &#40;Gestionnaire de Configuration de SSRS&#41;](../../sql-server/install/create-a-report-server-database-ssrs-configuration-manager.md)   
+ [Créer une base de données de serveur de rapports &#40;Gestionnaire de Configuration de SSRS&#41;](../../sql-server/install/create-a-report-server-database-ssrs-configuration-manager.md)   
  [Modifier la base de données Assistant &#40;SSRS en Mode natif&#41;](../../sql-server/install/change-database-wizard-ssrs-native-mode.md)   
  [Mettre à niveau et migrer Reporting Services](upgrade-and-migrate-reporting-services.md)   
  [Migrer une Installation Reporting Services &#40;en Mode natif&#41;](migrate-a-reporting-services-installation-native-mode.md)  

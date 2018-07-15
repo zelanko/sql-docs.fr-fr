@@ -1,5 +1,5 @@
 ---
-title: Grille (onglet Utilisation de la Dimension, Concepteur de Cube) (Analysis Services - données multidimensionnelles) | Documents Microsoft
+title: Grille (onglet Utilisation de la Dimension, Concepteur de Cube) (Analysis Services - données multidimensionnelles) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: ed63b1da-0fce-4f24-a722-5cff378831e8
 caps.latest.revision: 15
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: b5a470ffb94a457d68b8f47b30b06520984aba87
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 8e112b3cd1a732b403c7e2da2dde185e5e4c7df5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36044558"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37295829"
 ---
 # <a name="grid-dimension-usage-tab-cube-designer-analysis-services---multidimensional-data"></a>Grille (onglet Utilisation de la dimension, Concepteur de cube) (Analysis Services - Données multidimensionnelles)
   Utilisez le volet **Grille** de l'onglet **Utilisation de la dimension** du Concepteur de cube pour afficher et modifier les relations de dimension entre des dimensions d'un cube et des groupes de mesures. Chaque relation de dimension est représentée sous forme d'une cellule d'une grille dans laquelle les groupes de mesures figurent en colonnes et les dimensions en lignes.  
@@ -50,7 +50,7 @@ ms.locfileid: "36044558"
  [Objets de cube &#40;Analysis Services - données multidimensionnelles&#41;](multidimensional-models-olap-logical-cube-objects/cube-objects-analysis-services-multidimensional-data.md)   
  [Cubes dans les modèles multidimensionnels](multidimensional-models/cubes-in-multidimensional-models.md)   
  [Utilisation de la dimension &#40;Concepteur de Cube&#41; &#40;Analysis Services - données multidimensionnelles&#41;](dimension-usage-cube-designer-analysis-services-multidimensional-data.md)   
- [Barre d’outils &#40;sous l’onglet Utilisation de la Dimension, Concepteur de Cube&#41; &#40;Analysis Services - données multidimensionnelles&#41;](toolbar-dimension-usage-cube-designer-analysis-services-multidimensional-data.md)   
+ [Barre d’outils &#40;onglet Utilisation de Dimension, Concepteur de Cube&#41; &#40;Analysis Services - données multidimensionnelles&#41;](toolbar-dimension-usage-cube-designer-analysis-services-multidimensional-data.md)   
  [Utilisation de la dimension &#40;Concepteur de Cube&#41; &#40;Analysis Services - données multidimensionnelles&#41;](dimension-usage-cube-designer-analysis-services-multidimensional-data.md)  
   
   

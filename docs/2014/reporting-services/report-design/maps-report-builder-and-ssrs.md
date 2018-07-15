@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.rtp.rptdesigner.mapproperties.general.f1
 - "10508"
@@ -18,15 +18,15 @@ f1_keywords:
 - "10500"
 ms.assetid: b5e9ef21-11b7-4ed2-838e-d8eecdb5c5f0
 caps.latest.revision: 28
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: b73b5364e4ccd9cdb86210a25a8ee281dc6ad85c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 801c4ef8ce4c07491d45577224726167c86b0250
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36052165"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37313295"
 ---
 # <a name="maps-report-builder-and-ssrs"></a>Cartes (Générateur de rapports et SSRS)
   Pour visualiser des données métier sur un arrière-plan géographique, vous pouvez ajouter une carte à votre rapport. Le type de carte que vous sélectionnez dépend des informations que vous souhaitez communiquer dans votre rapport. Vous pouvez ajouter une carte qui affiche uniquement des emplacements géographiques, ou une carte à bulles dans laquelle la taille des bulles varie en fonction du nombre de ménages habitant dans une zone, ou une carte à marqueurs faisant varier le style de marqueur en fonction du produit ayant le plus gros chiffre d'affaires pour chaque magasin, ou encore une carte linéaire pour afficher des itinéraires entre des magasins.  
@@ -92,7 +92,7 @@ ms.locfileid: "36052165"
   
      Dans le jeu de résultats affiché dans le concepteur de requêtes, chaque ligne de données spatiales est traitée comme une unité et stockée dans un élément cartographique unique. Par exemple, si plusieurs points sont définis dans une ligne dans le jeu de résultats, les propriétés d'affichage s'appliquent à tous les points de cet élément cartographique.  
   
--   **Emplacements personnalisés que vous créez.** Vous pouvez ajouter manuellement des emplacements en tant que points incorporés à une couche de points incorporés. Pour plus d’informations, consultez [ajouter des emplacements personnalisés à une carte &#40;le Générateur de rapports et SSRS&#41;](add-custom-locations-to-a-map-report-builder-and-ssrs.md).  
+-   **Emplacements personnalisés que vous créez.** Vous pouvez ajouter manuellement des emplacements en tant que points incorporés à une couche de points incorporés. Pour plus d’informations, consultez [ajouter des emplacements personnalisés à un mappage &#40;Générateur de rapports et SSRS&#41;](add-custom-locations-to-a-map-report-builder-and-ssrs.md).  
   
 #### <a name="spatial-data-in-design-view"></a>Données spatiales en mode Conception  
  En mode Conception, le processeur de rapports affiche des exemples de données spatiales pour vous aider à concevoir la couche. Les données affichées dépendent de la disponibilité des données spatiales :  
@@ -175,7 +175,7 @@ ms.locfileid: "36052165"
   
 -   Nécessité ou non d'utiliser une connexion sécurisée pour récupérer les mosaïques du service Web Bing Maps.  
   
- Pour obtenir des instructions, consultez [ajouter, modifier ou supprimer une carte ou une couche &#40;le Générateur de rapports et SSRS&#41;](add-change-or-delete-a-map-or-map-layer-report-builder-and-ssrs.md).  
+ Pour obtenir des instructions détaillées, consultez [ajouter, modifier ou supprimer une carte ou une couche &#40;Générateur de rapports et SSRS&#41;](add-change-or-delete-a-map-or-map-layer-report-builder-and-ssrs.md).  
   
  Pour plus d'informations sur les mosaïques, consultez [Système de mosaïques Bing Maps](http://go.microsoft.com/fwlink/?linkid=147315)(éventuellement en anglais). Pour plus d'informations sur l'utilisation de mosaïques Bing dans votre rapport, consultez [Conditions supplémentaires d'utilisation](http://go.microsoft.com/fwlink/?LinkId=151371) et [Déclaration de confidentialité](http://go.microsoft.com/fwlink/?LinkId=151372)(éventuellement en anglais).  
   
@@ -254,29 +254,29 @@ ms.locfileid: "36052165"
 ##  <a name="HowTo"></a> Rubriques de procédures  
  Cette section répertorie les procédures qui vous montrent pas à pas comment utiliser des cartes et des couches dans vos rapports.  
   
--   [Ajouter, modifier ou supprimer une carte ou une couche &#40;rapport Générateur et SSRS&#41;](add-change-or-delete-a-map-or-map-layer-report-builder-and-ssrs.md)  
+-   [Ajouter, modifier ou supprimer une carte ou une couche &#40;Générateur de rapports et SSRS&#41;](add-change-or-delete-a-map-or-map-layer-report-builder-and-ssrs.md)  
   
--   [Modifier les légendes de carte, l’échelle de couleurs et les règles associées &#40;rapport Générateur et SSRS&#41;](change-map-legends-color-scale-and-associated-rules-report-builder-and-ssrs.md)  
+-   [Modifier les légendes de carte, l’échelle de couleurs et les règles associées &#40;Générateur de rapports et SSRS&#41;](change-map-legends-color-scale-and-associated-rules-report-builder-and-ssrs.md)  
   
--   [Ajouter des emplacements personnalisés à une carte &#40;rapport Générateur et SSRS&#41;](add-custom-locations-to-a-map-report-builder-and-ssrs.md)  
+-   [Ajouter des emplacements personnalisés à un mappage &#40;Générateur de rapports et SSRS&#41;](add-custom-locations-to-a-map-report-builder-and-ssrs.md)  
   
  
   
 ##  <a name="Section"></a> Dans cette section  
- [Planifier un rapport cartographique &#40;rapport Générateur et SSRS&#41;](plan-a-map-report-report-builder-and-ssrs.md)  
+ [Planifier un rapport cartographique &#40;Générateur de rapports et SSRS&#41;](plan-a-map-report-report-builder-and-ssrs.md)  
   
  [Assistant Carte et Assistant Couche &#40;Générateur de rapports et SSRS&#41;](map-wizard-and-map-layer-wizard-report-builder-and-ssrs.md)  
   
- [Personnaliser les données et l’affichage d’une carte ou une couche &#40;rapport Générateur et SSRS&#41;](customize-the-data-and-display-of-a-map-or-map-layer-report-builder-and-ssrs.md)  
+ [Personnaliser des données et l’affichage d’une carte ou une couche &#40;Générateur de rapports et SSRS&#41;](customize-the-data-and-display-of-a-map-or-map-layer-report-builder-and-ssrs.md)  
   
  [Modifier l’affichage des polygones, des lignes et des points à l’aide de règles et de données analytiques &#40;Générateur de rapports et SSRS&#41;](vary-polygon-line-and-point-display-by-rules-and-analytical-data.md)  
   
- [Ajouter, modifier ou supprimer une carte ou une couche &#40;rapport Générateur et SSRS&#41;](add-change-or-delete-a-map-or-map-layer-report-builder-and-ssrs.md)  
+ [Ajouter, modifier ou supprimer une carte ou une couche &#40;Générateur de rapports et SSRS&#41;](add-change-or-delete-a-map-or-map-layer-report-builder-and-ssrs.md)  
   
- [Modifier les légendes de carte, l’échelle de couleurs et les règles associées &#40;rapport Générateur et SSRS&#41;](change-map-legends-color-scale-and-associated-rules-report-builder-and-ssrs.md)  
+ [Modifier les légendes de carte, l’échelle de couleurs et les règles associées &#40;Générateur de rapports et SSRS&#41;](change-map-legends-color-scale-and-associated-rules-report-builder-and-ssrs.md)  
   
- [Ajouter des emplacements personnalisés à une carte &#40;rapport Générateur et SSRS&#41;](add-custom-locations-to-a-map-report-builder-and-ssrs.md)  
+ [Ajouter des emplacements personnalisés à un mappage &#40;Générateur de rapports et SSRS&#41;](add-custom-locations-to-a-map-report-builder-and-ssrs.md)  
   
- [Dépanner les rapports : Mapper des rapports &#40;rapport Générateur et SSRS&#41;](troubleshoot-reports-map-reports-report-builder-and-ssrs.md)  
+ [Dépanner les rapports : Mapper des rapports &#40;Générateur de rapports et SSRS&#41;](troubleshoot-reports-map-reports-report-builder-and-ssrs.md)  
   
   

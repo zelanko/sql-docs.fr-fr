@@ -1,5 +1,5 @@
 ---
-title: Élément CurrentStorageMode (ASSL) | Documents Microsoft
+title: Élément CurrentStorageMode (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - CurrentStorageMode element
 ms.assetid: 050c21e4-368b-4ff0-b0c5-349f93fe9747
 caps.latest.revision: 37
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: cce7bfd399c0c986a79e919c6227ee604e9ff470
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 0b26d26138e7752b6b41f147f0cc1fd1051e5afc
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36045244"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37233819"
 ---
 # <a name="currentstoragemode-element-assl"></a>Élément CurrentStorageMode (ASSL)
   Détermine le mode de stockage actuel pour l'élément parent.  
@@ -50,7 +50,7 @@ ms.locfileid: "36045244"
 |--------------------|-----------------|  
 |Type de données et longueur|Chaîne (énumération)|  
 |Valeur par défaut|*ROLAP*|  
-|Cardinalité|0-1 : élément facultatif qui peut se produire qu’une seule fois ou pas du tout.|  
+|Cardinalité|0-1 : élément facultatif qui peut se produire une seule fois ou pas du tout.|  
   
 ## <a name="element-relationships"></a>Relations entre les éléments  
   

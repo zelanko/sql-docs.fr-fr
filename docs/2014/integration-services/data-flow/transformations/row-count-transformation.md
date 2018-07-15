@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.rowcounttrans.f1
 helpviewer_keywords:
@@ -21,13 +21,13 @@ ms.assetid: b68293b9-a68c-40be-9d81-77342da1be29
 caps.latest.revision: 42
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 035ba7e1777dac88efb59265ea61ab6181bada1f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 966f42cf41f93c162ef3aac7be17fce920edbceb
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36052227"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37209529"
 ---
 # <a name="row-count-transformation"></a>transformation de calcul du nombre de lignes
   La transformation de calcul du nombre de lignes compte les lignes à mesure qu'elles passent par un flux de données et stocke le nombre final dans une variable.  
@@ -51,7 +51,7 @@ ms.locfileid: "36052227"
  Pour plus d’informations sur la définition des propriétés de ce composant, consultez [Définir les propriétés d’un composant de flux de données](../set-the-properties-of-a-data-flow-component.md).  
   
 ## <a name="see-also"></a>Voir aussi  
- [Services d’intégration &#40;SSIS&#41; Variables](../../integration-services-ssis-variables.md)   
+ [Integration Services &#40;SSIS&#41; Variables](../../integration-services-ssis-variables.md)   
  [Flux de données](../data-flow.md)   
  [Transformations Integration Services](integration-services-transformations.md)  
   

@@ -1,5 +1,5 @@
 ---
-title: Actualisation des données PowerPivot avec SharePoint 2013 | Documents Microsoft
+title: Actualisation des données PowerPivot avec SharePoint 2013 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 34f03407-2ec4-4554-b16b-bc9a6c161815
 caps.latest.revision: 13
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: ca3c358b6cd8d371a0b93b33ab449998a38d24b0
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: fa5a4ddce8c51b3e360c4fc4f243b90b310fd07f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36052741"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37280775"
 ---
 # <a name="powerpivot-data-refresh-with-sharepoint-2013"></a>Actualisation des données PowerPivot avec SharePoint 2013
   La conception de l'actualisation des modèles de données [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] dans SharePoint 2013 utilise Excel Services en tant que composant principal pour charger et actualiser des modèles de données sur une instance de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] exécutée en mode SharePoint. Le serveur [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] s'exécute en externe sur la batterie de serveurs SharePoint.  
@@ -135,7 +135,7 @@ ms.locfileid: "36052741"
 ##  <a name="bkmk_scheduled_refresh"></a> Scheduled Data Refresh  
  **Points clés de l'actualisation planifiée des données :**  
   
--   Nécessite le déploiement du complément PowerPivot pour SharePoint. Pour plus d’informations, consultez [installer ou désinstaller PowerPivot pour SharePoint Add-in &#40;SharePoint 2013&#41;](../instances/install-windows/install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2013.md).  
+-   Nécessite le déploiement du complément PowerPivot pour SharePoint. Pour plus d’informations, consultez [installer ou désinstaller le PowerPivot pour SharePoint Add-in &#40;SharePoint 2013&#41;](../instances/install-windows/install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2013.md).  
   
 -   Un utilisateur configure une planification d'actualisation pour un classeur. À l'heure planifiée, le service système PowerPivot envoie une requête dans Excel Services pour :  
   
@@ -147,7 +147,7 @@ ms.locfileid: "36052741"
   
 -   **Informations d'identification :** Utilise les informations d'identification stockées. N'utilise pas l'identité de l'utilisateur actuel.  
   
--   **Classeurs pris en charge :** classeurs créés à l’aide de la [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] complément PowerPivot pour Excel 2010 ou à l’aide d’Excel 2013. Les classeurs créés dans Excel 2010 avec le [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] complément PowerPivot n’est pas pris en charge. Mettre à niveau le classeur au moins au [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] format PowerPivot. Pour plus d’informations, consultez [Mettre à niveau les classeurs et l’actualisation planifiée des données &#40;SharePoint 2013&#41;](../instances/install-windows/upgrade-workbooks-and-scheduled-data-refresh-sharepoint-2013.md).  
+-   **Classeurs pris en charge :** classeurs créés à l’aide de la [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] complément PowerPivot pour Excel 2010 ou à l’aide d’Excel 2013. Classeurs créés dans Excel 2010 avec le [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] le complément PowerPivot n’est pas pris en charge. Mettre à niveau le classeur au moins au [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] format PowerPivot. Pour plus d’informations, consultez [Mettre à niveau les classeurs et l’actualisation planifiée des données &#40;SharePoint 2013&#41;](../instances/install-windows/upgrade-workbooks-and-scheduled-data-refresh-sharepoint-2013.md).  
   
  Pour afficher la page de **Gérer l'actualisation des données** :  
   
@@ -167,7 +167,7 @@ ms.locfileid: "36052741"
   
     -   Enregistrer le classeur dans la base de données de contenu.  
   
- ![menu de contexte de l’actualisation de données de gestion](../media/as-manage-datarefresh-sharepoint2013.gif "gérer menu de contexte de l’actualisation de données")  
+ ![gérer le menu de contexte de l’actualisation de données](../media/as-manage-datarefresh-sharepoint2013.gif "gérer du menu de contexte de l’actualisation de données")  
   
 > [!TIP]  
 >  Pour plus d’informations sur l’actualisation des classeurs depuis SharePoint online, consultez [actualisation des classeurs Excel avec les modèles PowerPivot depuis SharePoint Online (livre blanc)](http://technet.microsoft.com/library/jj992650.aspx) (http://technet.microsoft.com/library/jj992650.aspx).  
@@ -175,7 +175,7 @@ ms.locfileid: "36052741"
 ##  <a name="bkmk_refresh_architecture"></a> Architecture de l'actualisation planifiée des données dans SharePoint 2013  
  L'illustration suivante présente l'architecture d'actualisation des données dans SharePoint 2013 et SQL Server 2012 SP1.  
   
- ![architecture d’actualisation des données SQL Server 2012 SP1](../media/as-scheduled-data-refresh2012sp1-architecture.gif "architecture d’actualisation des données SQL Server 2012 SP1")  
+ ![architecture d’actualisation des données de SQL Server 2012 SP1](../media/as-scheduled-data-refresh2012sp1-architecture.gif "architecture d’actualisation des données de SQL Server 2012 SP1")  
   
 ||Description||  
 |-|-----------------|-|  
@@ -229,7 +229,7 @@ ms.locfileid: "36052741"
   
 4.  Dans **Propriétés de connexion** , cliquez sur **Définition**, puis cliquez sur le bouton **Paramètres d'authentification…** .  
   
- ![paramètres d’authentification de services Excel](../media/as-authentication-settings-4-ecs-in-excel2013.gif "paramètres excel services d’authentification")  
+ ![paramètres d’authentification de services Excel](../media/as-authentication-settings-4-ecs-in-excel2013.gif "paramètres d’authentification de services excel")  
   
  Pour plus d'informations sur l'authentification de l'actualisation des données et l'utilisation des informations d'identification, consultez la publication de blog [Actualisation des données PowerPivot dans SharePoint 2013](http://blogs.msdn.com/b/analysisservices/archive/2012/12/21/refreshing-powerpivot-data-in-sharepoint-2013.aspx).  
   
@@ -240,6 +240,6 @@ ms.locfileid: "36052741"
   
 ## <a name="see-also"></a>Voir aussi  
  [Mettre à niveau les classeurs et l’actualisation planifiée des données &#40;SharePoint 2013&#41;](../instances/install-windows/upgrade-workbooks-and-scheduled-data-refresh-sharepoint-2013.md)   
- [Installation PowerPivot pour SharePoint 2013](../instances/install-windows/install-analysis-services-in-power-pivot-mode.md)  
+ [Installation de PowerPivot pour SharePoint 2013](../instances/install-windows/install-analysis-services-in-power-pivot-mode.md)  
   
   

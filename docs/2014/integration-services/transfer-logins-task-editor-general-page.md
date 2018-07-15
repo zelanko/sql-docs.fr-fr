@@ -1,5 +1,5 @@
 ---
-title: Transfert de l’éditeur de tâche de connexions (Page Général) | Documents Microsoft
+title: Transfert de l’éditeur de tâche de connexions (Page Général) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.transferloginstask.general.f1
 helpviewer_keywords:
 - Transfer Logins Task Edito
 ms.assetid: 738989b6-7ec0-432c-9cc1-714486124d20
 caps.latest.revision: 20
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: ef184aff503e5fe7a77a683f49d8b2818e06aff3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 304a619981f696a27acabd6f841295b8bdd9808f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36044978"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37298639"
 ---
 # <a name="transfer-logins-task-editor-general-page"></a>Éditeur de tâche de transfert de connexions (page Général)
   Utilisez la page **Général** de la boîte de dialogue **Éditeur de tâche de transfert de connexions** pour donner un nom et une description à la tâche de transfert de connexions. Pour plus d'informations sur cette tâche, consultez [Transfer Logins Task](control-flow/transfer-logins-task.md).  

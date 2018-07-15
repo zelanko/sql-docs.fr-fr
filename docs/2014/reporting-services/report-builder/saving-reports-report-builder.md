@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 59ddc4b8-9517-4d3f-9c88-a07e9907cecb
 caps.latest.revision: 7
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: e5f14bd16fa44247508ef04bf68d2d02c0503394
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: c34c0764e0dd8b8eb64c9bf776a8ed071310fae3
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36051895"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37290225"
 ---
 # <a name="saving-reports-report-builder"></a>Enregistrement des rapports (Générateur de rapports)
   Dans le Générateur de rapports vous avez la possibilité d'enregistrer un rapport sur un serveur de rapports, une bibliothèque SharePoint, un partage de fichiers sur lequel vous disposez d'une autorisation d'écriture, ou sur votre ordinateur. Vous pouvez enregistrer un rapport au même emplacement que celui où vous l'avez ouvert, l'enregistrer à un emplacement différent ou avec un nouveau nom au même emplacement ou à un emplacement différent. Par défaut, un rapport est réenregistré à l'emplacement où vous l'avez ouvert. Lorsque vous enregistrez le rapport, vous enregistrez en fait la définition de rapport, laquelle décrit la disposition du rapport. Les données ne sont pas enregistrées. Chaque fois que vous exécutez le rapport, les données de rapport sont actualisées et peuvent être différentes de celles obtenues lors de la dernière exécution du rapport.  
@@ -34,7 +34,7 @@ ms.locfileid: "36051895"
   
  Pour en savoir plus sur l’affichage et la gestion des rapports directement sur le serveur de rapports, consultez [Recherche, affichage et gestion des rapports &#40;Générateur de rapports et SSRS&#41;](finding-viewing-and-managing-reports-report-builder-and-ssrs.md) et [Serveur de rapports Reporting Services &#40;mode natif&#41;](../report-server/reporting-services-report-server-native-mode.md) dans la [documentation en ligne](http://go.microsoft.com/fwlink/?LinkId=154888) [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sur msdn.microsoft.com.  
   
-##  <a name="SavingReportDefinitions"></a> Enregistrement de définitions de rapport  
+##  <a name="SavingReportDefinitions"></a> Enregistrement des définitions de rapport  
  Bien que vous puissiez enregistrer des rapports sur votre ordinateur, l'enregistrement des rapports sur un serveur de rapports offre de nombreux avantages.  
   
  L'enregistrement d'un rapport sur un serveur de rapports offre les avantages suivants :  
@@ -56,7 +56,7 @@ ms.locfileid: "36051895"
 
   
 ##  <a name="ExportingAndSavingReports"></a> Exportation et enregistrement des rapports  
- Si vous avez un petit nombre de rapports à archiver, optez pour la solution consistant à exporter un rapport puis à l'enregistrer dans un fichier. Une fois que vous avez exporté un rapport vers une application (au format PDF ou Excel par exemple), vous pouvez l'enregistrer en tant que fichier et le placer dans un répertoire partagé protégé sur le réseau. Vous pouvez également télécharger le fichier enregistré au format PDF ou Excel en tant qu'élément de ressource si vous souhaitez conserver toutes les copies d'un rapport, quel que soit leur format, dans la base de données du serveur de rapports. Pour plus d’informations sur l’exportation d’un rapport, consultez [exportation des rapports &#40;le Générateur de rapports et SSRS&#41; ](export-reports-report-builder-and-ssrs.md) et [télécharger un fichier ou un rapport &#40;le Gestionnaire de rapports&#41;](../reports/upload-a-file-or-report-report-manager.md).  
+ Si vous avez un petit nombre de rapports à archiver, optez pour la solution consistant à exporter un rapport puis à l'enregistrer dans un fichier. Une fois que vous avez exporté un rapport vers une application (au format PDF ou Excel par exemple), vous pouvez l'enregistrer en tant que fichier et le placer dans un répertoire partagé protégé sur le réseau. Vous pouvez également télécharger le fichier enregistré au format PDF ou Excel en tant qu'élément de ressource si vous souhaitez conserver toutes les copies d'un rapport, quel que soit leur format, dans la base de données du serveur de rapports. Pour plus d’informations sur l’exportation d’un rapport, consultez [exportation des rapports &#40;Générateur de rapports et SSRS&#41; ](export-reports-report-builder-and-ssrs.md) et [télécharger un fichier ou un rapport &#40;le Gestionnaire de rapports&#41;](../reports/upload-a-file-or-report-report-manager.md).  
   
 
   
@@ -81,10 +81,10 @@ ms.locfileid: "36051895"
 
   
 ## <a name="see-also"></a>Voir aussi  
- [Rapports, parties de rapports et les définitions de rapport &#40;rapport Générateur et SSRS&#41;](../report-design/reports-report-parts-and-report-definitions-report-builder-and-ssrs.md)   
+ [Rapports, parties de rapports et définitions de rapport &#40;Générateur de rapports et SSRS&#41;](../report-design/reports-report-parts-and-report-definitions-report-builder-and-ssrs.md)   
  [Installer, désinstaller et prise en charge du Générateur de rapports](../install-uninstall-and-report-builder-support.md)   
  [Recherche, affichage et gestion des rapports &#40;Générateur de rapports et SSRS&#41;](finding-viewing-and-managing-reports-report-builder-and-ssrs.md)   
- [Exportation de rapports &#40;rapport Générateur et SSRS&#41;](export-reports-report-builder-and-ssrs.md)   
+ [Exportation de rapports &#40;Générateur de rapports et SSRS&#41;](export-reports-report-builder-and-ssrs.md)   
  [Imprimer des rapports &#40;Générateur de rapports et SSRS&#41;](print-reports-report-builder-and-ssrs.md)  
   
   

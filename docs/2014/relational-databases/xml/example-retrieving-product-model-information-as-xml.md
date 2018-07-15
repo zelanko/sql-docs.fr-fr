@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - dbe-xml
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - RAW mode, retrieving XML information example
 ms.assetid: 3828b4ca-3ab2-444f-9c58-8be6e7f064a6
 caps.latest.revision: 12
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 6c6eead2a8016572cf8fe2491463fb396218e58f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: f79b3c047edccbf53a7b5f1ba4b6116703792e1a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36051672"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37262255"
 ---
 # <a name="example-retrieving-product-model-information-as-xml"></a>Exemple : récupération des informations de modèle de produit au format XML
   La requête suivante retourne des informations sur le modèle d'un produit. `RAW` Le mode est spécifié dans la clause `FOR XML` .  
@@ -69,7 +69,7 @@ GO
 </row>  
 ```  
   
- Vous pouvez éventuellement spécifier le `TYPE` pour récupérer les résultats en tant que directive `xml` type. La directive `TYPE` ne modifie pas le contenu des résultats. Seul le type de données des résultats est affecté.  
+ Vous pouvez éventuellement spécifier le `TYPE` directive pour récupérer les résultats en tant que `xml` type. La directive `TYPE` ne modifie pas le contenu des résultats. Seul le type de données des résultats est affecté.  
   
 ```  
 USE AdventureWorks2012;  

@@ -1,5 +1,5 @@
 ---
-title: Élément OrderBy (ASSL) | Documents Microsoft
+title: OrderBy, élément (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - OrderBy element
 ms.assetid: d7a0564b-430e-44eb-913a-fe1f98917d0f
 caps.latest.revision: 31
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 18fa2af79937c7f927413f0e601b6969bbfeb3bc
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 2151ac4cdcaa095d663682c936158557c1fea2be
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36052512"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37291315"
 ---
 # <a name="orderby-element-assl"></a>Élément OrderBy (ASSL)
   Décrit comment classer les membres contenus dans l'attribut.  
@@ -71,7 +71,7 @@ ms.locfileid: "36052512"
 |*AttributeKey*|Trier par la clé de membre de l’attribut spécifié dans le [OrderByAttributeID](id-element-assl.md) élément de `DimensionAttribute`.|  
 |*AttributeName*|Classement d'après le nom de membre de l'attribut spécifié dans l'élément `OrderByAttributeID` de `DimensionAttribute`.|  
   
- L’énumération qui correspond aux valeurs autorisées pour `OrderBy` dans l’objet d’objets AMO (Analysis Management) est modèle <xref:Microsoft.AnalysisServices.OrderBy>.  
+ L’énumération qui correspond aux valeurs autorisées pour `OrderBy` dans l’objet d’objets AMO (Analysis Management) modèle est <xref:Microsoft.AnalysisServices.OrderBy>.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Propriétés &#40;ASSL&#41;](properties-assl.md)  

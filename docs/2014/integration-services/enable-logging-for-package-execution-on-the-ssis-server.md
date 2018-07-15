@@ -1,5 +1,5 @@
 ---
-title: Activer la journalisation de l’exécution du Package sur le serveur SSIS | Documents Microsoft
+title: Activer la journalisation pour l’exécution du Package sur le serveur SSIS | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 8930c63c-bc6f-46c2-b428-b3c29ee89a7d
 caps.latest.revision: 12
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: c5c963fc18667a3cbe5397af9e09b34ad45b01a8
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 6d6dc6dedc92fd70d4b3a9e1adf6eb6deb4bc3bc
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36050858"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37245239"
 ---
 # <a name="enable-logging-for-package-execution-on-the-ssis-server"></a>Activer la journalisation des exécutions de package sur le serveur SSIS
   Cette procédure explique comment définir ou modifier le niveau de journalisation d'un package lorsque vous exécutez un package déployé sur le serveur [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]. Le niveau de journalisation que vous définissez lorsque vous exécutez le package remplace la journalisation du package configurée à l'aide de [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]. Pour plus d’informations, consultez [Activer la journalisation des packages dans les outils de données SQL Server](../../2014/integration-services/enable-package-logging-in-sql-server-data-tools.md) .  
@@ -54,7 +54,7 @@ ms.locfileid: "36050858"
 |Commentaires|Tous les événements sont enregistrés, y compris les événements personnalisés et de diagnostic.<br /><br /> L'événement DiagnosticEx est un exemple d'événement de diagnostic. Chaque fois qu'une tâche d'exécution de package exécute un package enfant, enregistre cet événement. Le message d’événement qui se compose des valeurs de paramètre passées aux packages enfants<br /><br /> La valeur de la colonne de message pour DiagnosticEx est du texte XML. . Pour afficher le texte du message pour une exécution de package, interrogez la vue [catalog.operation_messages &#40;base de données SSISDB&#41;](/sql/integration-services/system-views/catalog-operation-messages-ssisdb-database).<br /><br /> Remarque : Les événements personnalisés sont notamment les événements consignés par [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] tâches. Pour plus d’informations, consultez [Custom Messages for Logging](../../2014/integration-services/custom-messages-for-logging.md).<br /><br /> La vue [catalog.execution_data_statistics](../relational-databases/statistics/statistics.md) affiche une ligne chaque fois qu’un composant de flux de données envoie des données à un composant en aval, pour une exécution de package. Le niveau de journalisation doit avoir la valeur **Commentaires** pour capturer ces informations dans la vue.|  
   
 ## <a name="see-also"></a>Voir aussi  
- [Services d’intégration &#40;SSIS&#41; journalisation](performance/integration-services-ssis-logging.md)   
+ [Integration Services &#40;SSIS&#41; journalisation](performance/integration-services-ssis-logging.md)   
  [Activer la journalisation des packages dans SQL Server Data Tools](../../2014/integration-services/enable-package-logging-in-sql-server-data-tools.md)  
   
   

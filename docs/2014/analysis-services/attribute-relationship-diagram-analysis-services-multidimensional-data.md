@@ -1,5 +1,5 @@
 ---
-title: Attribut du diagramme des relations (onglet Concepteur de relations d’attributs, Concepteur de dimensions) (Analysis Services - données multidimensionnelles) | Documents Microsoft
+title: Diagramme des relations (onglet Concepteur relations d’attributs, Concepteur de dimensions) d’attribut (Analysis Services - données multidimensionnelles) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.dimensiondesigner.ardesigner.ardiagram.f1
 ms.assetid: 320989ad-bd95-43f4-a2e7-b262d66dbda7
 caps.latest.revision: 14
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 9a8d895599cf800b7ca0e6b882f3d1451800b0db
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: e4467e0ca268edd9d9e38ca4d915c489c5f65014
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36045276"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37208119"
 ---
 # <a name="attribute-relationship-diagram-attribute-relationship-designer-tab-dimension-designer-analysis-services---multidimensional-data"></a>Diagramme des relations d'attributs (onglet Concepteur de relations d'attributs, Concepteur de dimensions) (Analysis Services - Données multidimensionnelles)
   Le volet situé immédiatement sous la barre d'outils dans l'onglet **Relations d'attribut** permet d'afficher le diagramme des relations d'attributs et de créer, modifier et supprimer des relations d'attributs.  
@@ -49,7 +49,7 @@ ms.locfileid: "36045276"
  **Organiser automatiquement les formes**  
  Organise automatiquement les formes dans le diagramme d'après l'algorithme de disposition utilisé par le Concepteur de dimensions. Par défaut, l'option **Organiser automatiquement les formes** est activée.  
   
- **Afficher les affichages de liste**  
+ **Afficher les affichages en liste**  
  Affiche ou masque les listes **Attributs** et **Relations d’attributs** . Ces listes apparaissent dans leurs propres volets immédiatement sous le volet qui contient le diagramme des relations d'attributs.  
   
  **Développer toutes les formes**  

@@ -1,5 +1,5 @@
 ---
-title: LANGUAGE et FORMAT_STRING sur FORMATED_VALUE | Documents Microsoft
+title: LANGUAGE et FORMAT_STRING sur FORMATED_VALUE | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 7534ff5f-954e-47d4-a2ed-4b5b8ccb30e6
 caps.latest.revision: 13
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: e68843728ebf28dca0734c7d12953d90b3449e72
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: de58b31abed2a082964d70ca4036e204767d1f43
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36051165"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37319269"
 ---
 # <a name="language-and-formatstring-on-formatedvalue"></a>LANGUAGE et FORMAT_STRING sur FORMATED_VALUE
   La propriété FORMATTED_VALUE est basée sur les interactions des propriétés VALUE, FORMAT_STRING et LANGUAGE de la cellule. Cette rubrique explique comment ces propriétés interagissent pour générer la propriété FORMATTED_VALUE.  
@@ -37,7 +37,7 @@ ms.locfileid: "36051165"
  Spécification de paramètres régionaux à appliquer dans toute la propriété FORMAT_STRING pour générer une version localisée de FORMATTED_VALUE  
   
 ## <a name="formattedvalue-constructed"></a>Création de FORMATTED_VALUE  
- La propriété FORMATTED_VALUE est créée en utilisant la valeur de la propriété VALUE et en appliquant le modèle de mise en forme spécifié dans la propriété FORMAT_STRING à cette valeur. En outre, chaque fois que la valeur mise en forme est un `named formatting literal` la spécification de la propriété LANGUAGE modifie la sortie de FORMAT_STRING pour suivre l’utilisation de la langue pour la mise en forme nommée. Les littéraux de mise en forme nommée sont tous définis d'une façon permettant leur localisation. Par exemple, `"General Date"` est une spécification qui peut être localisée, par opposition au modèle suivant `"YYYY-MM-DD hh:nn:ss",` qui présente la date sous la forme définie par le modèle indépendamment de la spécification de langue.  
+ La propriété FORMATTED_VALUE est créée en utilisant la valeur de la propriété VALUE et en appliquant le modèle de mise en forme spécifié dans la propriété FORMAT_STRING à cette valeur. En outre, chaque fois que la valeur mise en forme est un `named formatting literal` la spécification de la propriété LANGUAGE modifie la sortie de FORMAT_STRING pour suivre l’utilisation du langage pour la mise en forme nommée. Les littéraux de mise en forme nommée sont tous définis d'une façon permettant leur localisation. Par exemple, `"General Date"` est une spécification qui peut être localisée, par opposition au modèle suivant `"YYYY-MM-DD hh:nn:ss",` qui présente la date sous la forme définie par le modèle indépendamment de la spécification de langue.  
   
  S'il y a un conflit entre le modèle FORMAT_STRING et la spécification LANGUAGE, le modèle FORMAT_STRING remplace la spécification LANGUAGE. Par exemple, si FORMAT_STRING="$ #0" et LANGUAGE=1034 (Espagne), et si VALUE=123.456, puis FORMATTED_VALUE="$ 123" au lieu de FORMATTED_VALUE="€ 123", le format attendu est en euros car la valeur du modèle de mise en forme remplace la langue spécifiée.  
   

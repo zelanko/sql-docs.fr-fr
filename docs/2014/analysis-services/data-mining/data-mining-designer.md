@@ -1,5 +1,5 @@
 ---
-title: Concepteur d’exploration de données | Documents Microsoft
+title: Concepteur d’exploration de données | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - data mining [Analysis Services], structure
 - mining structures [Analysis Services], modifying
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - data mining [Analysis Services], modifying
 ms.assetid: 2540db5b-2bf3-4b6c-87c8-79c48d71acce
 caps.latest.revision: 34
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 91e69ba979d4b17c1d5197e444d8cc4fed9834b0
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 07f6d732e2c22bd33b6d5df3c6c68a2703f8acfc
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36052747"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37247749"
 ---
 # <a name="data-mining-designer"></a>Concepteur d’exploration de données
   Le Concepteur d’exploration de données est l’environnement principal dans lequel vous utilisez des modèles d’exploration de données dans [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Pour accéder au concepteur, vous pouvez sélectionner une structure d'exploration de données existante ou utiliser l'Assistant Exploration de données pour créer une structure d'exploration de données et un modèle d'exploration de données. Vous pouvez utiliser le Concepteur d'exploration de données pour effectuer les tâches suivantes :  
@@ -54,7 +54,7 @@ ms.locfileid: "36052747"
   
  Consultez les rubriques suivantes pour plus d'informations sur l'utilisation des modèles d'exploration de données :  
   
- [Les modèles d’exploration de données &#40;Analysis Services - Exploration de données&#41;](mining-models-analysis-services-data-mining.md)  
+ [Modèles d’exploration de données &#40;Analysis Services - Exploration de données&#41;](mining-models-analysis-services-data-mining.md)  
   
  [Tâches et procédures des modèles d’exploration de données](mining-model-tasks-and-how-tos.md)  
   
@@ -72,9 +72,9 @@ ms.locfileid: "36052747"
   
  Consultez les rubriques suivantes pour plus d'informations sur le test et la validation des modèles d'exploration de données :  
   
- [Test et Validation &#40;d’exploration de données&#41;](testing-and-validation-data-mining.md)  
+ [Test et Validation &#40;exploration de données&#41;](testing-and-validation-data-mining.md)  
   
- [Test et des tâches de Validation et des procédures &#40;d’exploration de données&#41;](testing-and-validation-tasks-and-how-tos-data-mining.md)  
+ [Test et des tâches de Validation et des procédures &#40;exploration de données&#41;](testing-and-validation-tasks-and-how-tos-data-mining.md)  
   
 ## <a name="mining-model-prediction-tab"></a>Onglet Prévision de modèle d'exploration de données  
  L’onglet **Prévision de modèle d’exploration de données** contient le Générateur de requêtes de prédictions, que vous pouvez utiliser pour créer une requête de prédiction DMX (Data Mining Extensions). Cet onglet contient également des outils pour spécifier des modèles d'exploration de données et des tables d'entrée, mapper les colonnes du modèle d'exploration de données vers les colonnes de la table d'entrée, ajouter des fonctions à une requête et pour spécifier des critères pour chaque colonne.  

@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - permissions [Master Data Services], determining permissions
 ms.assetid: 1dc0b43a-d023-4e7d-b027-8b1459fd058c
 caps.latest.revision: 5
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 49929fedf5b7d1e44a300919f2c9d903efca5bc9
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: cd396e077ba63369d256c39ba104427f595f4df4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36044245"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37324399"
 ---
 # <a name="how-permissions-are-determined-master-data-services"></a>Mode de détermination des autorisations (Master Data Services)
   Dans [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], la méthode la plus simple pour configurer la sécurité est d'affecter des autorisations d'objet de modèle à un groupe dont l'utilisateur est membre.  
@@ -48,9 +48,9 @@ ms.locfileid: "36044245"
   
 -   Tout objet situé au même niveau que l'entité est refusé implicitement.  
   
--   Tout objet situé à un niveau supérieur obtient un accès de navigation. Pour plus d’informations sur l’accès de navigation, consultez [l’accès de navigation &#40;Master Data Services&#41;](navigational-access-master-data-services.md).  
+-   Tout objet situé à un niveau supérieur obtient un accès de navigation. Pour plus d’informations sur l’accès de navigation, consultez [accès de navigation &#40;Master Data Services&#41;](navigational-access-master-data-services.md).  
   
- Dans cet exemple, **en lecture seule** autorisation est attribuée à une entité et héritée par son attribut, qui se trouve à un niveau inférieur dans la structure du modèle. Le modèle fournit l’accès à cette entité et son attribut de navigation. L'autre entité dans le modèle ne dispose d'aucune autorisation explicite attribuée et n'hérite d'aucune autorisation, donc elle est refusée implicitement.  
+ Dans cet exemple, **en lecture seule** autorisation est attribuée à une entité et cette autorisation est héritée par son attribut, qui se trouve à un niveau inférieur dans la structure du modèle. Le modèle fournit l’accès de navigation pour cette entité et ses attributs. L'autre entité dans le modèle ne dispose d'aucune autorisation explicite attribuée et n'hérite d'aucune autorisation, donc elle est refusée implicitement.  
   
  ![mds_conc_inheritance_model](../../2014/master-data-services/media/mds-conc-inheritance-model.gif "mds_conc_inheritance_model")  
   
@@ -80,7 +80,7 @@ ms.locfileid: "36044245"
  Dans ce cas, le chevauchement des autorisations de l'utilisateur et du groupe doit être résolu avant que les autorisations de l'objet de modèle et des membres de la hiérarchie puissent être comparées. Pour plus d’informations, consultez [Overlapping User and Group Permissions &#40;Master Data Services&#41;](../../2014/master-data-services/overlapping-user-and-group-permissions-master-data-services.md).  
   
 ## <a name="see-also"></a>Voir aussi  
- [Chevauchement des autorisations d’accès &#40;Master Data Services&#41;](../../2014/master-data-services/overlapping-user-and-group-permissions-master-data-services.md)   
+ [Chevauchement des autorisations de groupe &#40;Master Data Services&#41;](../../2014/master-data-services/overlapping-user-and-group-permissions-master-data-services.md)   
  [Chevauchement des autorisations de modèle et de membre &#40;Master Data Services&#41;](../../2014/master-data-services/overlapping-model-and-member-permissions-master-data-services.md)  
   
   

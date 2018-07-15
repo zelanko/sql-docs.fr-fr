@@ -1,5 +1,5 @@
 ---
-title: Le tri des membres d’attribut basé sur un attribut secondaire | Documents Microsoft
+title: Tri des membres d’attribut basé sur un attribut secondaire | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 67dacf68-9ab7-4524-8698-844d0f6e6c6d
 caps.latest.revision: 17
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: jhubbard
-ms.openlocfilehash: 5286bcca918cd77985ea6aef98cd3c99b89e20f9
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 6245cc93f107ff437e3c17e6cc5e789dd5994698
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36051609"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37299289"
 ---
 # <a name="sorting-attribute-members-based-on-a-secondary-attribute"></a>Tri des membres d'attribut sur la base d'un attribut secondaire
   Au cours de la leçon 3, vous avez appris à trier les membres d'attribut en fonction de leur nom ou de la valeur de leur clé. Vous avez également appris à utiliser une clé de membre composite pour modifier les membres d'attribut et l'ordre de tri. Pour plus d’informations, consultez [Modification de la dimension Date](../analysis-services/lesson-3-4-modifying-the-date-dimension.md). Toutefois, si ni le nom ni la clé de l'attribut principal ne fournissent l'ordre de tri que vous souhaitez, vous pouvez utiliser un attribut secondaire pour obtenir l'ordre de tri désiré. En définissant une relation entre les attributs, vous pouvez utiliser le deuxième attribut pour trier les membres du premier attribut.  
@@ -73,7 +73,7 @@ ms.locfileid: "36051609"
   
      Notez que les mois sont bien triés par ordre chronologique, comme montré dans l'illustration suivante.  
   
-     ![Modification de hiérarchie de l’utilisateur dans l’ordre chronologique](../../2014/tutorials/media/l4-memberproperties-3.gif "modifié la hiérarchie de l’utilisateur dans l’ordre chronologique")  
+     ![Modification de la hiérarchie utilisateur dans l’ordre chronologique](../../2014/tutorials/media/l4-memberproperties-3.gif "modifié la hiérarchie de l’utilisateur dans l’ordre chronologique")  
   
 ## <a name="defining-attribute-relationships-and-sort-order-in-the-customer-dimension"></a>Définition des relations d'attributs et d'un ordre de tri dans la dimension Customer  
   
@@ -83,7 +83,7 @@ ms.locfileid: "36051609"
   
      L’illustration suivante montre les membres de la hiérarchie d’attribut **Commute Distance** , triés en fonction des valeurs ASCII de la clé de membre.  
   
-     ![Commute la hiérarchie d’attribut Distance](../../2014/tutorials/media/l4-memberproperties-4.gif "hiérarchie d’attribut Commute Distance")  
+     ![Domicile-travail de la hiérarchie d’attribut Distance](../../2014/tutorials/media/l4-memberproperties-4.gif "hiérarchie d’attribut Commute Distance")  
   
 2.  Affichez l’onglet **Structure de dimension** dans le Concepteur de dimensions pour la dimension Customer, cliquez avec le bouton droit sur **CommuteDistanceSort** dans la table **Customer** du volet **Vue de source de données** et choisissez **Nouvel attribut de colonne**.  
   
@@ -119,9 +119,9 @@ ms.locfileid: "36051609"
   
      Notez que les membres de la hiérarchie d'attribut sont maintenant triés par ordre croissant, comme montré dans l'illustration suivante.  
   
-     ![Hiérarchie d’attribut Commute Distance de nouveau tri](../../2014/tutorials/media/l4-memberproperties-5.gif "hiérarchie d’attribut Re-sorted Commute Distance")  
+     ![Retrier hiérarchie d’attribut Commute Distance](../../2014/tutorials/media/l4-memberproperties-5.gif "hiérarchie d’attribut Re-sorted Commute Distance")  
   
 ## <a name="next-task-in-lesson"></a>Tâche suivante de la leçon  
- [Spécifier les relations entre les attributs dans une hiérarchie définie par l’utilisateur](4-6-specifying-attribute-relationships-in-user-defined-hierarchy.md)  
+ [Spécification des relations d’attribut dans une hiérarchie définie par l’utilisateur](4-6-specifying-attribute-relationships-in-user-defined-hierarchy.md)  
   
   

@@ -5,25 +5,24 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - witness [SQL Server], about witness
 - witness [SQL Server]
 - database mirroring [SQL Server], witness
 ms.assetid: 05606de8-90c3-451a-938d-1ed34211dad7
 caps.latest.revision: 71
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: c415d1bea0b901025762bec04114ec4ba8ef558f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: e8d91cd6ff4cd5b96ec95218686101e4427e75c0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36053126"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37218119"
 ---
 # <a name="database-mirroring-witness"></a>Témoin de mise en miroir de base de données
   Pour permettre la prise en charge du basculement automatique, une session de mise en miroir de bases de données doit être configurée en mode haute sécurité et disposer d’une troisième instance de serveur, appelée *témoin*. Le témoin correspond à une instance facultative de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] qui active le serveur miroir dans une session en mode haute sécurité pour déterminer s'il est nécessaire d'initier un basculement automatique. Contrairement aux deux autres, le témoin ne dessert pas la base de données. La prise en charge du basculement automatique est le seul rôle rempli par le témoin.  
@@ -55,7 +54,7 @@ ms.locfileid: "36053126"
 ##  <a name="SwHwRecommendations"></a> Recommandations logicielles et matérielles  
  Nous vous recommandons vivement de placer le témoin sur un ordinateur distinct de celui des partenaires. Les serveurs partenaires de mise en miroir de bases de données sont pris en charge uniquement par l'édition [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Standard et l'édition [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Enterprise. Les témoins, en revanche, sont également pris en charge dans l'édition [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Workgroup et l'édition [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express. À l'exception d'une mise à niveau depuis une version antérieure de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], les instances de serveur dans une session de mise en miroir doivent toutes exécuter la même version de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Par exemple, un témoin [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] est pris en charge lorsque vous effectuez une mise à niveau depuis une configuration de mise en miroir [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] , mais ne peut pas être ajouté à une configuration de mise en miroir [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] ou ultérieure.  
   
- Un témoin peut s'exécuter sur tout système informatique fiable prenant en charge ces éditions de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Cependant, nous recommandons que chaque instance de serveur utilisée en tant que témoin soit conforme à la configuration minimale requise pour la version de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Standard que vous exécutez. Pour plus d’informations sur ces exigences, consultez [matérielle et logicielle requise pour l’installation de SQL Server 2014](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md).  
+ Un témoin peut s'exécuter sur tout système informatique fiable prenant en charge ces éditions de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Cependant, nous recommandons que chaque instance de serveur utilisée en tant que témoin soit conforme à la configuration minimale requise pour la version de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Standard que vous exécutez. Pour plus d’informations sur ces exigences, consultez [Hardware and Software Requirements for Installing SQL Server 2014](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md).  
   
 ##  <a name="InAutoFo"></a> Rôle du témoin en basculement automatique  
  Pendant tout le déroulement d'une session de mise en miroir d'une base de données, toutes les instances de serveur surveillent l'état de leur connexion. Si les partenaires se déconnectent, ils s'en remettent au témoin pour vérifier qu'un seul d'entre eux sert actuellement la base de données. Si un serveur miroir synchronisé perd sa connexion au serveur principal, mais reste connecté au témoin, le serveur miroir contacte le témoin pour déterminer si le témoin a perdu sa connexion au serveur principal :  

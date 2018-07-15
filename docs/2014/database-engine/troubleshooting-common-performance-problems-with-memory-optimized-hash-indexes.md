@@ -1,5 +1,5 @@
 ---
-title: Dépannage des problèmes de Performance courants avec des index de hachage mémoire optimisés | Documents Microsoft
+title: Résoudre les problèmes de performances courants avec des index de hachage mémoire optimisés | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,28 +8,28 @@ ms.suite: ''
 ms.technology:
 - database-engine-imoltp
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 1954a997-7585-4713-81fd-76d429b8d095
 caps.latest.revision: 6
 author: stevestein
 ms.author: sstein
-manager: jhubbard
-ms.openlocfilehash: 625bde655c6d95ac30966dd39a52534fc5a84299
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 96153240af41f0942f93fe0a6dddc0f2149c2d9a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36051582"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37316939"
 ---
 # <a name="troubleshooting-common-performance-problems-with-memory-optimized-hash-indexes"></a>Résoudre les problèmes de performance courants avec les index de hachage mémoire optimisés
   Cette rubrique traite du dépannage et des solutions de contournement des problèmes couramment rencontrés avec les index de hachage.  
   
 ## <a name="search-requires-a-subset-of-hash-index-key-columns"></a>La recherche nécessite un sous-ensemble de colonnes clés d'index de hachage  
- **Problème :** index de hachage exigent des valeurs pour toutes les colonnes clés d’index pour calculer la valeur de hachage et rechercher les lignes correspondantes dans la table de hachage. Par conséquent, si une requête contient des prédicats d'égalité pour un seul sous-ensemble de clés d'index dans la clause WHERE, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ne peut pas utiliser la recherche d'index pour trouver les lignes correspondant aux prédicats dans la clause WHERE.  
+ **Problème :** index de hachage exigent des valeurs pour toutes les colonnes clés d’index afin de calculer la valeur de hachage et rechercher les lignes correspondantes dans la table de hachage. Par conséquent, si une requête contient des prédicats d'égalité pour un seul sous-ensemble de clés d'index dans la clause WHERE, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ne peut pas utiliser la recherche d'index pour trouver les lignes correspondant aux prédicats dans la clause WHERE.  
   
  Par opposition, les index triés comme les index non cluster sur disque et les index non cluster mémoire optimisés, prennent en charge la recherche d'index sur un sous-ensemble de colonnes clés d'index, tant qu'il s'agit des premières colonnes de l'index.  
   
- **Symptôme :** cela entraîne une dégradation des performances, en tant que [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] doit exécuter des analyses de tables complètes plutôt qu’une recherche d’index, qui est généralement une opération plus rapide.  
+ **Symptôme :** cela entraîne une dégradation des performances, en tant que [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] doit exécuter des analyses de tables complètes plutôt que d’une recherche d’index, ce qui est généralement une opération plus rapide.  
   
  **Comment résoudre les problèmes :** en dehors de la dégradation des performances, l’inspection des plans de requête indiquera une analyse au lieu d’une recherche d’index. Si la requête est relativement simple, l'inspection du texte de la requête et de la définition d'index montrera également si la recherche nécessite un sous-ensemble de colonnes clés d'index.  
   
@@ -52,7 +52,7 @@ WITH (MEMORY_OPTIMIZED = ON)
   
  La table a un index de hachage sur les deux colonnes (o_id, od_id), tandis que la requête a un prédicat d'égalité sur (o_id). Étant donné que la requête possède des prédicats d'égalité uniquement sur un sous-ensemble de colonnes clés d'index, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ne peut pas effectuer d'opération de recherche d'index à l'aide de PK_od ; à la place, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] doit revenir à une analyse complète d'index.  
   
- **Solutions de contournement :** il existe plusieurs solutions de contournement possibles. Exemple :  
+ **Solutions de contournement :** un certain nombre de solutions de contournement possibles. Exemple :  
   
 -   Recréez l'index en tant que type non cluster au lieu d'un hachage non cluster. L'index mémoire optimisé non cluster est trié, et [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] peut effectuer une recherche d'index sur les colonnes clés d'index. La définition de clé primaire de l'exemple serait `constraint PK_od primary key nonclustered`.  
   

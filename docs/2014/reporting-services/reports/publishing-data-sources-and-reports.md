@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - publishing data sources [Reporting Services]
 - publishing reports [Reporting Services]
 - data sources [Reporting Services], managing
 ms.assetid: 3a740f8a-1060-4ec3-938b-2305b6887ebd
 caps.latest.revision: 11
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: cc6610ad05fceb4ccfa51e7e383f9bb286e9a6b6
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: 147892370a3cb93831ae2d99cf77906eca67ca5e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36053222"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37214509"
 ---
 # <a name="publishing-data-sources-and-reports"></a>Publication des sources de données et des rapports
   Avant de publier votre rapport, vous devez en afficher un aperçu pour voir à quoi il ressemblera une fois exécuté. Vous pouvez continuer à peaufiner sa conception jusqu'à ce que vous soyez satisfait du résultat obtenu.  
@@ -39,16 +39,16 @@ ms.locfileid: "36053222"
  [Publication de rapports sur un serveur de rapports](publishing-reports-to-a-report-server.md)  
  Décrit comment publier un rapport sur un serveur de rapports.  
   
- [Exemples d’URL pour les éléments de rapport publié sur un serveur de rapports en Mode SharePoint &#40;SSRS&#41;](../tools/url-examples-for-items-on-a-report-server-sharepoint-mode.md)  
+ [Exemples d’URL pour les éléments de rapport publiés sur un serveur de rapports en Mode SharePoint &#40;SSRS&#41;](../tools/url-examples-for-items-on-a-report-server-sharepoint-mode.md)  
  Décrit comment publier un rapport sur un site SharePoint.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Connexions de données, les Sources de données et les chaînes de connexion dans Reporting Services](../data-connections-data-sources-and-connection-strings-in-reporting-services.md)   
- [Ajouter des données à un rapport &#40;rapport Générateur et SSRS&#41;](../report-data/report-datasets-ssrs.md)   
+ [Connexions de données, Sources de données et chaînes de connexion dans Reporting Services](../data-connections-data-sources-and-connection-strings-in-reporting-services.md)   
+ [Ajouter des données à un rapport &#40;Générateur de rapports et SSRS&#41;](../report-data/report-datasets-ssrs.md)   
  [Mise en page et rendu &#40;Générateur de rapports et SSRS&#41;](../report-design/page-layout-and-rendering-report-builder-and-ssrs.md)   
- [Ajouter des données à un rapport &#40;rapport Générateur et SSRS&#41;](../report-data/report-datasets-ssrs.md)   
+ [Ajouter des données à un rapport &#40;Générateur de rapports et SSRS&#41;](../report-data/report-datasets-ssrs.md)   
  [Recherche, affichage et gestion des rapports &#40;Générateur de rapports et SSRS&#41;](../report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)   
- [Exportation de rapports &#40;rapport Générateur et SSRS&#41;](../report-builder/export-reports-report-builder-and-ssrs.md)   
+ [Exportation de rapports &#40;Générateur de rapports et SSRS&#41;](../report-builder/export-reports-report-builder-and-ssrs.md)   
  [Imprimer des rapports &#40;Générateur de rapports et SSRS&#41;](../report-builder/print-reports-report-builder-and-ssrs.md)  
   
   

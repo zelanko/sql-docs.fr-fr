@@ -1,5 +1,5 @@
 ---
-title: Ensemble de lignes DISCOVER_MEMORYUSAGE | Documents Microsoft
+title: Ensemble de lignes DISCOVER_MEMORYUSAGE | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -12,15 +12,15 @@ ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: e416ea61-9615-468c-a96f-bbf731f803b1
 caps.latest.revision: 6
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 248b1a999cafddd69a4b71aebdb9d52210d38646
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 7cbe35889e3a703e85b37f2f1c107a9a72ecff90
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36044840"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37304579"
 ---
 # <a name="discovermemoryusage-rowset"></a>DISCOVER_MEMORYUSAGE, ensemble de lignes
   Retourne les statistiques DISCOVER_MEMORYUSAGE pour plusieurs objets alloués par le serveur.  

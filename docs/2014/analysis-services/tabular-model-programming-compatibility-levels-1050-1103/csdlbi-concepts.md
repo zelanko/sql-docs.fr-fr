@@ -1,5 +1,5 @@
 ---
-title: Concepts CSDLBI | Documents Microsoft
+title: Concepts CSDLBI | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -12,15 +12,15 @@ ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: 2fbdf621-a94d-4a55-a088-3d56d65016ac
 caps.latest.revision: 28
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: 150ebbbf646f8c51a226f25f9b4799463608f823
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: cf610ad76b4ccc4e30e5f1e4f55c5dcd293a8bc9
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36044825"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37257305"
 ---
 # <a name="csdlbi-concepts"></a>Concepts CSDLBI
   Le langage CSDL (Conceptual Schema Definition Language) avec annotations Business Intelligence (CSDLBI) est basé sur l'infrastructure de données d'entités (Entity Data Framework), qui est une abstraction pour représenter différents types de données de façon à activer les jeux de données disparates pour qu'ils soient accessibles, interrogés ou exportés par programme. CSDLBI est utilisé pour représenter les modèles de données créés à l'aide d'[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], car il prend en charge les applications et la création de rapports complets pilotée par les données.  
@@ -88,11 +88,11 @@ ms.locfileid: "36044825"
  Pour limiter la taille du document CSDLBI généré, les propriétés qui apparaissent plus d'une fois dans une entité sont spécifiées par une référence à une propriété existante, afin que la propriété soit répertoriée une seule fois pour l'`EntityType`. L'application cliente peut obtenir la valeur de la propriété en recherchant l'`EntityType` qui représente l'`OriginEntityType`.  
   
 ### <a name="relationships"></a>Relations  
- Dans l’Entity Data Framework, les relations sont définies en tant que *associations* entre des entités.  
+ Dans l’Entity Data Framework, les relations sont définies comme *associations* entre des entités.  
   
- Les associations ont toujours exactement deux terminaisons, chacune pointant sur un champ ou colonne dans une table. Par conséquent, plusieurs relations sont possibles entre deux tables, si les relations ont des points de terminaison différents. Un rôle de nom est affecté aux points de terminaison de l'association, et indique comment l'association est utilisée dans le contexte du modèle de données. Un exemple de nom de rôle peut être **ShipTo**, quand il est appliqué à un ID de client qui est associé à l’ID de client dans une table Orders.  
+ Les associations ont toujours exactement deux terminaisons, chacune pointant sur un champ ou colonne dans une table. Par conséquent, plusieurs relations sont possibles entre deux tables, si les relations ont des points de terminaison différents. Un rôle de nom est affecté aux points de terminaison de l'association, et indique comment l'association est utilisée dans le contexte du modèle de données. Un exemple de nom de rôle peut être **ShipTo**, lorsqu’il est appliqué à un ID de client qui est lié à l’ID de client dans une table de commandes.  
   
- La représentation sous forme de CSDLBI du modèle contient également les attributs de l’association qui déterminent la façon dont les entités sont mappées entre eux en termes de la *multiplicité* de l’association. La pluralité indique si l'attribut ou la colonne au point de terminaison d'une relation entre des tables se trouve du côté « un » d'une relation ou du côté « plusieurs ». Il n'y a aucune valeur distincte pour les relations un-à-un. Les annotations CSDLBI prennent en charge la pluralité 0 (ce qui signifie que l'entité n'est associée à aucun élément) ou bien 0..1, ce qui indique soit une relation un-à-un, soit une relation un-à-plusieurs.  
+ La représentation CSDLBI du modèle contient également les attributs de l’association qui déterminent la façon dont les entités sont mappées entre eux en termes de la *multiplicité* de l’association. La pluralité indique si l'attribut ou la colonne au point de terminaison d'une relation entre des tables se trouve du côté « un » d'une relation ou du côté « plusieurs ». Il n'y a aucune valeur distincte pour les relations un-à-un. Les annotations CSDLBI prennent en charge la pluralité 0 (ce qui signifie que l'entité n'est associée à aucun élément) ou bien 0..1, ce qui indique soit une relation un-à-un, soit une relation un-à-plusieurs.  
   
  L'exemple suivant représente la sortie CSDLBI d'une relation entre les tables, Date et ProductInventory, où les deux tables sont jointes sur la colonne DateAlternateKey. Notez que, par défaut, le nom de l'`AssociationSet` est le nom complet des colonnes impliquées dans la relation. Toutefois, vous pouvez modifier ce comportement lorsque vous concevez le modèle et utiliser un format de nom différent.  
   
@@ -138,13 +138,13 @@ ms.locfileid: "36044825"
   
  **Hiérarchies :** hiérarchies sont pris en charge et représentées en CSDLBI en tant qu’ensemble de niveaux.  
   
- **Membres :** prend en charge pour le membre par défaut a été ajouté et les valeurs par défaut sont automatiquement ajoutées à la sortie CSDLBI.  
+ **Membres :** prennent en charge pour le membre par défaut a été ajouté et les valeurs par défaut sont automatiquement ajoutées à la sortie CSDLBI.  
   
  **Les membres calculés :** les modèles multidimensionnels prennent en charge les membres calculés pour l’enfant de **tous les** avec un membre réel unique.  
   
- **Attributs de dimension :** dans la sortie CSDLBI, les attributs de dimension sont pris en charge et est automatiquement marqués comme ne pouvant.  
+ **Attributs de dimension :** dans la sortie CSDLBI, les attributs de dimension sont pris en charge et automatiquement marquées comme non regroupable.  
   
- **Indicateurs de performance clés :** indicateurs de performance clés ont été pris en charge en CSDLBI version 1.1, mais la représentation a changé. Avant, un indicateur de performance clé était la propriété d'une mesure. Dans la version 1.1, l’élément de l’indicateur de performance clé peut être ajouté à une mesure  
+ **Indicateurs de performance clés :** indicateurs de performance clés étaient pris en charge en CSDLBI version 1.1, mais la représentation a changé. Avant, un indicateur de performance clé était la propriété d'une mesure. Dans la version 1.1, l’élément KPI peut être ajouté à une mesure  
   
  **Nouvelles propriétés :** des attributs supplémentaires ont été ajoutées pour prendre en charge les modèles DirectQuery.  
   

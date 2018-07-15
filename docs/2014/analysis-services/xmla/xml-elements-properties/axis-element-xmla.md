@@ -1,5 +1,5 @@
 ---
-title: Élément Axis (XMLA) | Documents Microsoft
+title: Élément Axis (XMLA) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -23,18 +23,18 @@ helpviewer_keywords:
 - Axis element
 ms.assetid: 336895e1-4a57-4b43-9a53-e31569866e6c
 caps.latest.revision: 11
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: e30ff03b6e1a58a079d35f8e846ed176c42a3a31
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: e3e68903dc828f4b14ac60892d1b6fc2baed2f30
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36052462"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37263225"
 ---
 # <a name="axis-element-xmla"></a>Élément Axis (XMLA)
-  Contient un jeu de tuples utilisé pour représenter un axe unique dans un jeu de données multidimensionnel contenue par un [Axes](axes-element-xmla.md) élément qui utilise le [MDDataSet](../xml-data-types/mddataset-data-type-xmla.md) type de données retourné par la [Execute](../xml-elements-methods-execute.md) (méthode).  
+  Contient un jeu de tuples utilisé pour représenter un axe unique dans un jeu de données multidimensionnel contenue par un [Axes](axes-element-xmla.md) élément qui utilise le [MDDataSet](../xml-data-types/mddataset-data-type-xmla.md) type de données, retourné par la [Execute](../xml-elements-methods-execute.md) (méthode).  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -74,7 +74,7 @@ ms.locfileid: "36052462"
  Lorsqu’une application cliente définit le `AxisFormat` propriété *TupleFormat*, un axe est représenté comme un jeu de tuples. Chaque élément `Axis` contient un élément `Tuples` qui représente l'ensemble de tuples sur cet axe. Chaque tuple est représenté à l'aide d'un élément `Tuple` qui contient des éléments `Member` de chaque hiérarchie sur l'axe.  
   
 ## <a name="clusterformat"></a>ClusterFormat  
- Lorsqu’une application cliente définit le `AxisFormat` propriété *ClusterFormat*, les membres de chaque axe sont divisés en clusters dans lequel chaque cluster représente un produit croisé entre des ensembles ordonnés de membres de chaque hiérarchie. Chaque élément `Axis` consiste en un ou plusieurs éléments `CrossProduct`. Chaque élément `CrossProduct` contient un élément `Members` pour chaque hiérarchie sur l'axe.  
+ Lorsqu’une application cliente définit le `AxisFormat` propriété *ClusterFormat*, les membres sur chaque axe sont divisés en clusters dans lequel chaque cluster représente un produit croisé entre des ensembles ordonnés de membres de chaque hiérarchie. Chaque élément `Axis` consiste en un ou plusieurs éléments `CrossProduct`. Chaque élément `CrossProduct` contient un élément `Members` pour chaque hiérarchie sur l'axe.  
   
 ## <a name="customformat"></a>CustomFormat  
  Lorsqu’une application cliente définit le `AxisFormat` propriété *CustomFormat*, la valeur est traitée identique à la *TupleFormat* valeur par une instance d’Analysis Services.  

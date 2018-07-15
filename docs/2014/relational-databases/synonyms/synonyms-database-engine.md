@@ -5,25 +5,23 @@ ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-synonyms
+ms.technology: ''
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - TSQL
 helpviewer_keywords:
 - synonyms [SQL Server], about synonyms
 ms.assetid: 6210e1d5-075f-47e4-ac8d-f84bcf26fbc0
-caps.latest.revision: 30
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: e83afab22daea5314947baf3edbf5b786a58f991
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 8bfd08ba265fb901c6a8225b3df451c7b3617731
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36051909"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37284635"
 ---
 # <a name="synonyms-database-engine"></a>Synonymes (moteur de base de données)
   Un synonyme est un objet de base de données utilisé aux fins suivantes :  
@@ -47,7 +45,7 @@ ms.locfileid: "36051909"
 |Fonction table inline SQL|Procédure stockée SQL|  
 |Affichage|Table<sup>1</sup> (définie par l’utilisateur)|  
   
- <sup>1</sup> inclut des tables temporaires locales et globales  
+ <sup>1</sup> comprend des tables temporaires locales et globales  
   
 > [!NOTE]  
 >  Les noms en quatre parties des objets de base de fonction ne sont pas pris en charge.  

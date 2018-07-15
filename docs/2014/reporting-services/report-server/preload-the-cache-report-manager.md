@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - cache [Reporting Services]
 - preloading cache
@@ -16,13 +16,13 @@ ms.assetid: 152a1051-8aa5-4c01-bc85-f8be8971b0cd
 caps.latest.revision: 34
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: b24be62a990b92b522d6bf4d0bb04873b743fa99
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: ef7898589335192022fa83095f19a72ee4549798
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36051424"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37253911"
 ---
 # <a name="preload-the-cache-report-manager"></a>préchargement du cache (Gestionnaire de rapports)
   Vous pouvez précharger le cache pour un dataset partagé en créant un plan d'actualisation du cache pour le dataset partagé.  
@@ -127,7 +127,7 @@ ms.locfileid: "36051424"
  [Abonnements pilotés par les données](../subscriptions/data-driven-subscriptions.md)   
  [Créer un abonnement piloté par les données &#40;didacticiel SSRS&#41;](../create-a-data-driven-subscription-ssrs-tutorial.md)   
  [Performances, instantanés, mise en cache &#40;Reporting Services&#41;](performance-snapshots-caching-reporting-services.md)   
- [Définir les propriétés de traitement des rapports](set-report-processing-properties.md)   
+ [Définir les propriétés de traitement de rapport](set-report-processing-properties.md)   
  [La mise en cache des rapports &#40;SSRS&#41;](caching-reports-ssrs.md)  
   
   

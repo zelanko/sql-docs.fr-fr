@@ -1,5 +1,5 @@
 ---
-title: Modifier un modèle de Trace (SQL Server Profiler) | Documents Microsoft
+title: Modifier un modèle de Trace (SQL Server Profiler) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - templates [SQL Server], traces
 - trace templates [SQL Server]
 - modifying traces
 ms.assetid: b81df2a1-e202-43d8-92b0-0beb145f0116
 caps.latest.revision: 25
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: afa7876575dca287f492f07cc69d6dd7dfe27222
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 8079f4dfa5893915a10ae044045d1cc9eb59baa8
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36051581"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37299369"
 ---
 # <a name="modify-a-trace-template-sql-server-profiler"></a>Modifier un modèle de trace (SQL Server Profiler)
   Cette rubrique explique comment modifier un modèle de trace avec le [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)].  
@@ -45,7 +45,7 @@ ms.locfileid: "36051581"
 4.  Cliquez sur **Enregistrer**ou **Enregistrer sous**pour enregistrer le modèle de trace sous un autre nom.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Spécifier les événements et les colonnes de données d’un fichier de Trace &#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/specify-events-and-data-columns-for-a-trace-file-sql-server-profiler.md)   
+ [Spécifier des événements et les colonnes de données d’un fichier de Trace &#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/specify-events-and-data-columns-for-a-trace-file-sql-server-profiler.md)   
  [Dériver un modèle à partir d’une trace en cours d’exécution &#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/derive-a-template-from-a-running-trace-sql-server-profiler.md)   
  [Dériver un modèle à partir d’un fichier de trace ou d’une table de trace &#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/derive-a-template-from-a-trace-file-or-trace-table-sql-server-profiler.md)   
  [Modèles et autorisations du générateur de SQL Server Profiler](../tools/sql-server-profiler/sql-server-profiler-templates-and-permissions.md)   

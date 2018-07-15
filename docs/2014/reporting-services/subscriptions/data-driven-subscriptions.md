@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - subscriptions [Reporting Services], data-driven
 - data-driven subscriptions
@@ -16,13 +16,13 @@ ms.assetid: ba009f62-0d4f-45e7-a27c-36fd5f0cd3a8
 caps.latest.revision: 55
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 04a5269f5e809a6e17b5b2f50b122abebec17627
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 423a893fc3586334464d50357626c319d9a27ffe
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36052344"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37270315"
 ---
 # <a name="data-driven-subscriptions"></a>abonnements pilotés par les données
   Un abonnement piloté par les données constitue un moyen d'utiliser des données d'abonnement dynamiques extraites à partir d'une source de données externe au moment de l'exécution. Un abonnement piloté par les données peut également utiliser du texte statique et des valeurs par défaut que vous spécifiez au moment de définir l'abonnement. Vous pouvez vous servir d'abonnements pilotés par les données pour effectuer les opérations suivantes :  
@@ -50,14 +50,14 @@ ms.locfileid: "36052344"
   
 -   Pour plus d’informations sur les éditions de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] qui prennent en charge la fonctionnalité d’abonnement piloté par les données, consultez [Fonctionnalités prises en charge par les éditions de SQL Server 2012](http://go.microsoft.com/fwlink/?linkid=232473) (http://go.microsoft.com/fwlink/?linkid=232473).  
   
--   Pour les données d'abonnement, choisissez une source de données capable de fournir des informations sur les schémas au serveur de rapports. Les données relationnelles [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , les bases de données Oracle et [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , les données de package [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , les sources de données ODBC et les sources de données OLE DB sont des exemples de types de sources de données pris en charge. Pour plus d’informations sur les exigences de source de données abonné, consultez [utiliser une Source de données externe pour les données d’abonné &#40;Data-Driven abonnement&#41;](use-an-external-data-source-for-subscriber-data-data-driven-subscription.md).  
+-   Pour les données d'abonnement, choisissez une source de données capable de fournir des informations sur les schémas au serveur de rapports. Les données relationnelles [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , les bases de données Oracle et [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , les données de package [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , les sources de données ODBC et les sources de données OLE DB sont des exemples de types de sources de données pris en charge. Pour plus d’informations sur les spécifications de source de données abonné, consultez [utiliser une Source de données externe pour les données d’abonné &#40;les abonnement piloté par les données&#41;](use-an-external-data-source-for-subscriber-data-data-driven-subscription.md).  
   
 ## <a name="working-with-data-driven-subscriptions"></a>Utilisation des abonnements pilotés par les données  
  Les rubriques suivantes fournissent des informations supplémentaires sur les abonnements pilotés par les données.  
   
 |Rubriques|Description|  
 |------------|-----------------|  
-|[Créer, modifier et supprimer un abonnement piloté par les données](data-driven-subscriptions.md)|Explique comment créer, modifier ou supprimer un abonnement piloté par les données.|  
+|[Créer, modifier et supprimer des abonnements pilotés par les données](data-driven-subscriptions.md)|Explique comment créer, modifier ou supprimer un abonnement piloté par les données.|  
 |[Utiliser une Source de données externe pour les données d’abonné &#40;abonnement piloté par les données&#41;](use-an-external-data-source-for-subscriber-data-data-driven-subscription.md)|Fournit des informations sur les sources de données que vous pouvez utiliser pour un abonnement piloté par les données.|  
 |[Créer un abonnement piloté par les données &#40;didacticiel SSRS&#41;](../create-a-data-driven-subscription-ssrs-tutorial.md)|Fournit des instructions pas à pas pour apprendre à créer un abonnement piloté par les données.|  
 |[La mise en cache des rapports &#40;SSRS&#41;](../report-server/caching-reports-ssrs.md)|Décrit comment utiliser le fournisseur de remise Null avec un abonnement piloté par les données pour précharger la mémoire cache.|  

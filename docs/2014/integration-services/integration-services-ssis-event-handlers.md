@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Integration Services packages, events
 - run-time [Integration Services]
@@ -24,13 +24,13 @@ ms.assetid: 6f60cf93-35dc-431c-908d-2049c4ab66ba
 caps.latest.revision: 50
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 23a2004083f5d5c5ce2262e5ca1c1286c9cfb2cf
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 0df91ac6e5742a5326b98238ec81b31fddc62854
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36053112"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37227799"
 ---
 # <a name="integration-services-ssis-event-handlers"></a>Gestionnaires d'événements Integration Services (SSIS)
   Lors de l'exécution, les exécutables (packages, conteneurs de boucles Foreach, conteneurs de boucles For, conteneurs de séquences et conteneurs d'hôtes de tâches) déclenchent des événements. Par exemple, un événement OnError se déclenche lorsqu'une erreur se produit. Vous pouvez créer des gestionnaires d'événements personnalisés pour ces événements afin d'étendre les fonctionnalités des packages et les rendre plus faciles à gérer au moment de l'exécution. Les gestionnaires d'événements peuvent réaliser des tâches comme les suivantes :  
@@ -49,7 +49,7 @@ ms.locfileid: "36053112"
   
  ![Package, boucle For, hôte de tâche et tâche d’exécution SQL](media/mw-dts-eventhandlerpkg.gif "Package, boucle For, hôte de tâche et tâche d’exécution SQL")  
   
- Seul le package possède un gestionnaire d'événements (pour son événement `OnError`). Si une erreur se produit lorsque la tâche d’exécution SQL s’exécute, le `OnError` Gestionnaire d’événements pour le package s’exécute. Le diagramme suivant illustre la séquence d’appels qui provoque le `OnError` Gestionnaire d’événements pour le package s’exécute.  
+ Seul le package possède un gestionnaire d'événements (pour son événement `OnError`). Si une erreur se produit lorsque la tâche d’exécution SQL s’exécute, le `OnError` Gestionnaire d’événements pour le package s’exécute. Le diagramme suivant illustre la séquence d’appels qui conduit le `OnError` Gestionnaire d’événements pour le package à exécuter.  
   
  ![Flux de gestionnaire d’événements](media/mw-dts-eventhandlers.gif "Flux de gestionnaire d’événements")  
   

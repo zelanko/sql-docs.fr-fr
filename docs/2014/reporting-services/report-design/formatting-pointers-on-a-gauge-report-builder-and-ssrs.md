@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 2fdf670a-5237-48fe-813d-97657c5c77d2
 caps.latest.revision: 8
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 7aa25d7a3d09fbf3d85b64a43e8caf04759a4336
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: cc0d66393fc649df0720406c40bd07faee93c6c3
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36045312"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37238469"
 ---
 # <a name="formatting-pointers-on-a-gauge-report-builder-and-ssrs"></a>Mise en forme des pointeurs sur une jauge (Générateur de rapports et SSRS)
   Un pointeur de jauge indique la valeur actuelle de la jauge. Par défaut, lorsqu'un champ est ajouté, les valeurs contenues dans le champ sont agrégées en une valeur représentée par le pointeur sur la jauge. Vous pouvez ajouter plusieurs pointeurs à la jauge pour indiquer plusieurs valeurs sur la même échelle ou ajouter plusieurs échelles et un pointeur pour chaque échelle ajoutée. Après avoir ajouté un champ à une jauge, vous devez définir les valeurs maximale et minimale sur l'échelle correspondante pour donner le contexte de la valeur du pointeur. Vous avez également la possibilité de définir des valeurs minimale et maximale sur une plage qui représente une zone critique sur l'échelle.  
@@ -36,7 +36,7 @@ ms.locfileid: "36045312"
 ##  <a name="HowPointer"></a> Comment le pointeur est associé aux données  
  Par défaut, lorsqu'une jauge est ajoutée, elle contient un pointeur sans champ associé. C'est ce que l'on appelle un pointeur vide. Il affichera la valeur zéro jusqu'à ce qu'un champ soit ajouté au volet des données. Lorsque vous ajoutez un champ au volet des données, le pointeur est associé à ce champ. Si vous supprimez un champ du volet des données, le pointeur associé à ce champ est également supprimé.  
   
- Une fois les données ajoutées, quand vous cliquez avec le bouton droit sur le pointeur, vous obtenez les options **Effacer la valeur du pointeur** et **Supprimer le pointeur** . L'option **Effacer la valeur du pointeur** supprime le champ associé à la jauge, mais le pointeur apparaît toujours sur la jauge. L'option **Supprimer le pointeur** supprime le champ de la jauge et le pointeur de la vue. Si vous ajoutez à nouveau un champ à la jauge, le pointeur par défaut réapparaît. Lorsque vous définissez le pointeur **masqué** propriété `True`, le pointeur n’est pas masqué sur l’aire de conception, mais il est masqué au moment de l’exécution.  
+ Une fois les données ajoutées, quand vous cliquez avec le bouton droit sur le pointeur, vous obtenez les options **Effacer la valeur du pointeur** et **Supprimer le pointeur** . L'option **Effacer la valeur du pointeur** supprime le champ associé à la jauge, mais le pointeur apparaît toujours sur la jauge. L'option **Supprimer le pointeur** supprime le champ de la jauge et le pointeur de la vue. Si vous ajoutez à nouveau un champ à la jauge, le pointeur par défaut réapparaît. Lorsque vous définissez le pointeur **Hidden** propriété `True`, le pointeur n’est pas masqué sur l’aire de conception, mais il est masqué au moment de l’exécution.  
   
   
 ##  <a name="DisplayingMultiple"></a> Affichage de plusieurs pointeurs sur la jauge  
@@ -50,18 +50,18 @@ ms.locfileid: "36045312"
   
   
 ##  <a name="SettingSnappingInterval"></a> Définition d'un intervalle d'alignement  
- Un intervalle d'alignement définit le multiple auquel les valeurs sont arrondies. Par défaut, la jauge pointera sur la valeur exacte du champ que vous avez spécifiée dans le volet des données. Toutefois, vous pouvez arrondir la valeur exacte à la valeur supérieure ou inférieure afin que le pointeur s'aligne sur un intervalle prédéfini. Par exemple, si la valeur sur votre jauge est 34,2 et que vous spécifiez un intervalle d'alignement de 5, le pointeur de jauge pointera sur 35. Si la valeur sur votre jauge est 31,2 et que vous spécifiez un intervalle d'alignement de 5, le pointeur de jauge pointera sur 30. Pour plus d’informations, consultez [définir un intervalle d’alignement sur une jauge &#40;le Générateur de rapports et SSRS&#41;](../set-a-snapping-interval-on-a-gauge-report-builder-and-ssrs.md).  
+ Un intervalle d'alignement définit le multiple auquel les valeurs sont arrondies. Par défaut, la jauge pointera sur la valeur exacte du champ que vous avez spécifiée dans le volet des données. Toutefois, vous pouvez arrondir la valeur exacte à la valeur supérieure ou inférieure afin que le pointeur s'aligne sur un intervalle prédéfini. Par exemple, si la valeur sur votre jauge est 34,2 et que vous spécifiez un intervalle d'alignement de 5, le pointeur de jauge pointera sur 35. Si la valeur sur votre jauge est 31,2 et que vous spécifiez un intervalle d'alignement de 5, le pointeur de jauge pointera sur 30. Pour plus d’informations, consultez [définir un intervalle d’alignement sur une jauge &#40;Générateur de rapports et SSRS&#41;](../set-a-snapping-interval-on-a-gauge-report-builder-and-ssrs.md).  
   
   
 ##  <a name="SpecifyingImage"></a> Spécification d'une image en tant que pointeur sur une jauge radiale  
  En plus de la liste intégrée de styles de pointeur, vous pouvez choisir une image comme pointeur. Cela fonctionne très bien lorsque vous utilisez une image pour remplacer un style de pointeur de type aiguille existant. L'image est superposée au pointeur, mais toutes les fonctionnalités du pointeur sont conservées. Les options de couleur et de dégradé ne sont pas applicables lorsqu'une image est utilisée comme pointeur.  
   
- Si l'image du pointeur a une forme irrégulière, vous devez définir la couleur comme transparente afin de masquer les zones de votre image qui ne doivent pas apparaître sur la jauge. Lorsque vous définissez une couleur transparente, la jauge transpose l'image sur votre pointeur existant et rogne l'image afin que seule la forme du pointeur apparaisse. La jauge recadre l'image en fonction de la taille de votre pointeur. Lorsque vous spécifiez une image comme pointeur, tout pointeur ajouté ultérieurement sur la jauge est dessiné sous l'image. C'est pourquoi il est préférable de ne pas spécifier d'image pour le pointeur s'il y a plusieurs pointeurs sur la jauge. Pour plus d’informations, consultez [spécifier une Image en tant que pointeur sur une jauge &#40;le Générateur de rapports et SSRS&#41;](../specify-an-image-as-a-pointer-on-a-gauge-report-builder-and-ssrs.md).  
+ Si l'image du pointeur a une forme irrégulière, vous devez définir la couleur comme transparente afin de masquer les zones de votre image qui ne doivent pas apparaître sur la jauge. Lorsque vous définissez une couleur transparente, la jauge transpose l'image sur votre pointeur existant et rogne l'image afin que seule la forme du pointeur apparaisse. La jauge recadre l'image en fonction de la taille de votre pointeur. Lorsque vous spécifiez une image comme pointeur, tout pointeur ajouté ultérieurement sur la jauge est dessiné sous l'image. C'est pourquoi il est préférable de ne pas spécifier d'image pour le pointeur s'il y a plusieurs pointeurs sur la jauge. Pour plus d’informations, consultez [spécifier une Image en tant que pointeur sur une jauge &#40;Générateur de rapports et SSRS&#41;](../specify-an-image-as-a-pointer-on-a-gauge-report-builder-and-ssrs.md).  
   
   
 ## <a name="see-also"></a>Voir aussi  
  [Mise en forme des échelles sur une jauge &#40;Générateur de rapports et SSRS&#41;](formatting-scales-on-a-gauge-report-builder-and-ssrs.md)   
- [Mise en forme de plages sur une jauge &#40;rapport Générateur et SSRS&#41;](formatting-ranges-on-a-gauge-report-builder-and-ssrs.md)   
+ [Mise en forme de plages sur une jauge &#40;Générateur de rapports et SSRS&#41;](formatting-ranges-on-a-gauge-report-builder-and-ssrs.md)   
  [Jauges &#40;Générateur de rapports et SSRS&#41;](gauges-report-builder-and-ssrs.md)  
   
   

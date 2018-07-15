@@ -1,5 +1,5 @@
 ---
-title: Code (Générateur de rapports), boîte de dialogue Propriétés de rapport | Documents Microsoft
+title: Code (Générateur de rapports), boîte de dialogue Propriétés de rapport | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - "10081"
 ms.assetid: 24a479e4-3084-4442-8692-889895f111ad
 caps.latest.revision: 12
-author: douglaslM
+author: maggiesmsft
 ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 4fddd5933314b22fecbfe3791af209f40c3e02d4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 457eb70ec1ce9883a5de4c2032fae60ec664703b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36139735"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37220755"
 ---
 # <a name="report-properties-dialog-box-code-report-builder"></a>Boîte de dialogue Propriétés du rapport, Code (Générateur de rapports)
   Sélectionnez **Code** dans la boîte de dialogue **Propriétés du rapport** pour définir un code personnalisé à utiliser par les expressions dans le rapport.  

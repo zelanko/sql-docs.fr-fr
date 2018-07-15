@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - truncating data
 - data conversion errors [Integration Services]
@@ -23,13 +23,13 @@ ms.assetid: c61667b4-25cb-4d45-a52f-a733e32863f4
 caps.latest.revision: 57
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 125bcb31a9edb23e4ffe3ba05cdc46227da33cac
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: ecae86e05bc67275d21d0811d3b1abd642a7e62c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36045196"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37201619"
 ---
 # <a name="error-handling-in-data"></a>Gestion des erreurs dans les données
   Lorsqu'un composant de flux de données applique une transformation à des données de colonne, extrait des données à partir de sources ou charge des données dans des destinations, des erreurs peuvent se produire. Les erreurs sont fréquemment dues à des valeurs de données inattendues. Par exemple, une conversion de données échoue car une colonne contient une chaîne au lieu d'un nombre, une insertion dans une colonne de base de données échoue car les données sont une date et que la colonne a un type de données numérique, ou l'évaluation d'une expression échoue car la valeur d'une colonne est nulle, ce qui engendre une opération mathématique non valide.  
@@ -72,7 +72,7 @@ ms.locfileid: "36045196"
 ## <a name="adding-the-error-description"></a>Ajout de la description de l'erreur  
  Par défaut, une sortie d'erreur fournit le code d'erreur numérique et contient généralement l'identificateur de la colonne dans laquelle l'erreur s'est produite. Vous pouvez utiliser le composant Script pour inclure la description de l'erreur dans une colonne supplémentaire en utilisant une ligne unique de script pour appeler la méthode <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.GetErrorDescription%2A> de l'interface <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100>.  
   
- Le composant Script peut être ajouté au segment d'erreur du flux de données n'importe où en aval des composants de flux de données dont vous souhaitez capturer les erreurs, mais est généralement placé immédiatement avant l'écriture des lignes en erreur vers une destination. De cette manière, le script recherche uniquement les descriptions des lignes d'erreurs écrites. Par exemple, le segment d'erreur du flux de données peut corriger certaines erreurs sans écrire ces lignes dans une destination d'erreur. Pour plus d’informations, consultez [amélioration de la sortie d’erreur avec le composant Script](../extending-packages-scripting-data-flow-script-component-examples/enhancing-an-error-output-with-the-script-component.md).  
+ Le composant Script peut être ajouté au segment d'erreur du flux de données n'importe où en aval des composants de flux de données dont vous souhaitez capturer les erreurs, mais est généralement placé immédiatement avant l'écriture des lignes en erreur vers une destination. De cette manière, le script recherche uniquement les descriptions des lignes d'erreurs écrites. Par exemple, le segment d'erreur du flux de données peut corriger certaines erreurs sans écrire ces lignes dans une destination d'erreur. Pour plus d’informations, consultez [amélioration d’une sortie d’erreur avec le composant Script](../extending-packages-scripting-data-flow-script-component-examples/enhancing-an-error-output-with-the-script-component.md).  
   
 ### <a name="to-configure-an-error-output"></a>Pour configurer un affichage des erreurs  
   

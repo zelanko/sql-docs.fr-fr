@@ -24,13 +24,13 @@ ms.assetid: 262babc6-eea5-4609-bc65-07d64cbcfee9
 caps.latest.revision: 39
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 246ee644377bf1e0da6e368e9bbb943d333dc992
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 5434546f2a6d392cb8eed82704d8164c31620e91
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36045210"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37271645"
 ---
 # <a name="integration-services-programming-overview"></a>Vue d'ensemble de la programmation Integration Services
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] a une architecture qui sépare le déplacement et la transformation de données du flux de contrôle et de la gestion de packages. Cette architecture se définit par deux moteurs distincts qui peuvent être automatisés et étendus lors de la programmation [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]. Le moteur d'exécution implémente l'infrastructure de flux de contrôle et de gestion de packages qui permet aux développeurs de contrôler le flux d'exécution et de définir des options pour la journalisation, les gestionnaires d'événements et les variables. Le moteur de flux de données est un moteur spécialisé, hautement performant, exclusivement dédié à l'extraction, la transformation et le chargement de données. La programmation [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] s'effectue à partir de ces deux moteurs.  
@@ -47,7 +47,7 @@ ms.locfileid: "36045210"
 ## <a name="integration-services-data-flow-engine"></a>Moteur de flux de données Integration Services  
  Le moteur de flux de données gère la tâche de flux de données, qui est une tâche spécialisée, hautement performante, destinée à déplacer et transformer les données provenant de sources disparates. Contrairement à d'autres tâches, la tâche de flux de données contient des objets supplémentaires, appelés composants de flux de données, qui peuvent être des sources, des transformations ou des destinations. Ces composants constituent les principaux éléments en mouvement de la tâche. Ils définissent le déplacement et la transformation des données. La programmation du moteur de flux de données permet aux développeurs d'automatiser la création et la configuration des composants dans une tâche de flux de données et de créer des composants personnalisés.  
   
- Pour plus d’informations, consultez [étendre le flux de données avec le composant Script] (extending-packages-scripting/data-flow-script-component/extending-the-données-flow-with-the-script-component.md, [développer un composant de flux de données personnalisé ](extending-packages-custom-objects/data-flow/developing-a-custom-data-flow-component.md), et [génération de Packages par programme](building-packages-programmatically/building-packages-programmatically.md).  
+ Pour plus d’informations, consultez [extension du flux de données avec le composant Script] (extending-packages-scripting/data-flow-script-component/extending-the-données-flow-with-the-script-component.md, [développement d’un composant de flux de données personnalisé ](extending-packages-custom-objects/data-flow/developing-a-custom-data-flow-component.md), et [génération de Packages par programmation](building-packages-programmatically/building-packages-programmatically.md).  
   
 ## <a name="supported-languages"></a>Langues prises en charge  
  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] prend entièrement en charge le [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)]. Les développeurs peuvent ainsi programmer [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] dans les langages compatibles .NET de leur choix. Bien qu'ils soient écrits en code natif, le moteur d'exécution et le moteur de flux de données sont accessibles par le biais d'un modèle objet entièrement managé.  
@@ -79,6 +79,6 @@ ms.locfileid: "36045210"
   
 ||  
 |-|  
-![Icône Integration Services (petite)](media/dts-16.gif "icône Integration Services (petite)")**restent jusqu'à la Date avec Integration Services** <br /> Pour obtenir les derniers téléchargements, articles, exemples et vidéos de Microsoft, ainsi que des solutions sélectionnées par la communauté, visitez la page [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] sur MSDN :<br /><br /> [Visitez la page Integration Services sur MSDN](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Pour recevoir une notification automatique de ces mises à jour, abonnez-vous aux flux RSS disponibles sur la page.  
+![Icône Integration Services (petite)](media/dts-16.gif "icône Integration Services (petite)")**rester jusqu'à la Date avec Integration Services  **<br /> Pour obtenir les derniers téléchargements, articles, exemples et vidéos de Microsoft, ainsi que des solutions sélectionnées par la communauté, visitez la page [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] sur MSDN :<br /><br /> [Visitez la page Integration Services sur MSDN](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Pour recevoir une notification automatique de ces mises à jour, abonnez-vous aux flux RSS disponibles sur la page.  
   
   

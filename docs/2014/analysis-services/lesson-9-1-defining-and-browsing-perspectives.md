@@ -1,5 +1,5 @@
 ---
-title: Définition et exploration de Perspectives | Documents Microsoft
+title: Définition et exploration de Perspectives | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 766004b9-6578-4914-a445-6f44843a5fb0
 caps.latest.revision: 14
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: jhubbard
-ms.openlocfilehash: 461c093bb3b946316cfee37cd531d1492176db9d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 642d9a0f80f0efb0bc9d26b9a08ab7a6dbd521e1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36052540"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37208189"
 ---
 # <a name="defining-and-browsing-perspectives"></a>Définition et exploration de perspectives
   Une perspective peut simplifier l'affichage d'un cube à des fins spécifiques. Par défaut, les utilisateurs peuvent voir tous les éléments d'un cube auquel ils sont autorisés à accéder. Ce que les utilisateurs voient lorsqu'ils affichent l'intégralité d'un cube [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] est la perspective par défaut du cube. Il peut s'avérer très difficile de naviguer à travers une vue du cube tout entier, surtout pour les utilisateurs auxquels il suffit d'interagir avec une petite partie du cube pour satisfaire leurs besoins en matière de décisionnel et de rapports.  
@@ -43,9 +43,9 @@ ms.locfileid: "36052540"
   
      Une nouvelle perspective apparaît dans la colonne **Nom de perspective** avec le nom de perspective par défaut de **Perspective**, comme le montre l’image suivante. Observez que les cases à cocher de tous les objets sont activées ; cette perspective est identique à la perspective par défaut de ce cube jusqu'à ce que vous désactiviez la case à cocher d'un objet.  
   
-     ![Nouvelle perspective dans la colonne nom de Perspective](../../2014/tutorials/media/l9-perspectives-2.gif "nouvelle perspective dans la colonne nom de Perspective")  
+     ![Nouvelle perspective dans la colonne de nom de Perspective](../../2014/tutorials/media/l9-perspectives-2.gif "nouvelle perspective dans la colonne de nom de Perspective")  
   
-3.  Modifier le nom de perspective à `Internet Sales`.  
+3.  Remplacez le nom de perspective par `Internet Sales`.  
   
 4.  Sur la ligne suivante, affectez à DefaultMeasure la valeur **Internet Sales-Sales Amount**.  
   
@@ -97,7 +97,7 @@ ms.locfileid: "36052540"
   
 1.  Dans la barre d’outils de l’onglet **Perspectives** , cliquez sur **Nouvelle perspective** .  
   
-2.  Modifier le nom de la nouvelle perspective à `Reseller Sales`.  
+2.  Modifier le nom de la nouvelle perspective en `Reseller Sales`.  
   
 3.  Définissez **Reseller Sales-Sales Amount** comme mesure par défaut.  
   
@@ -135,7 +135,7 @@ ms.locfileid: "36052540"
   
 1.  Dans la barre d’outils de l’onglet **Perspectives** , cliquez sur **Nouvelle perspective** .  
   
-2.  Modifier le nom de la nouvelle perspective à `Sales Summary`.  
+2.  Modifier le nom de la nouvelle perspective en `Sales Summary`.  
   
     > [!NOTE]  
     >  Vous ne pouvez pas spécifier une mesure calculée comme mesure par défaut.  
@@ -174,19 +174,19 @@ ms.locfileid: "36052540"
   
 4.  L'analyse dans Excel vous invite à choisir la perspective à utiliser pour parcourir le modèle dans Excel, comme le montre l'image suivante.  
   
-     ![Objets de la perspective Internet Sales](../../2014/tutorials/media/l9-perspectives-3.gif "objets pour la perspective Internet Sales")  
+     ![Objets pour la perspective Internet Sales](../../2014/tutorials/media/l9-perspectives-3.gif "objets pour la perspective ventes sur Internet")  
   
 5.  Sinon, vous pouvez ouvrir Excel à partir du menu Démarrer de Windows, définir une connexion à la base de données Analysis Services Tutorial sur localhost, et choisir une perspective l'Assistant Connexion de données, comme le montre l'image suivante.  
   
      ![Assistant de connexion de données dans Excel](../../2014/tutorials/media/l9-perspectives-3b.gif "Assistant connexion de données dans Excel")  
   
-6.  Sélectionnez `Internet Sales` dans les **Perspective** liste, puis examinez les mesures et dimensions dans le volet métadonnées.  
+6.  Sélectionnez `Internet Sales` dans le **Perspective** liste, puis examinez les mesures et dimensions dans le volet métadonnées.  
   
      Observez que seuls les objets spécifiés pour la perspective Internet Sales apparaissent.  
   
 7.  Dans le volet de métadonnées, développez **Mesures**.  
   
-     Notez que seuls les `Internet Sales` groupe de mesures apparaît, avec la **Internet GPM** et **Internet Sales Ratio to All Products** membres calculés.  
+     Notez que seul le `Internet Sales` groupe de mesures apparaît, avec la **Internet GPM** et **Internet Sales Ratio to All Products** membres calculés.  
   
 8.  Dans le modèle, sélectionnez à nouveau Excel. Sélectionnez `Sales Summary`.  
   
