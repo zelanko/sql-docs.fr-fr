@@ -1,5 +1,5 @@
 ---
-title: Ensemble de lignes MDSCHEMA_MEMBERS | Documents Microsoft
+title: Ensemble de lignes MDSCHEMA_MEMBERS | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -18,15 +18,15 @@ helpviewer_keywords:
 - MDSCHEMA_MEMBERS rowset
 ms.assetid: 0b1aada0-67f8-4ef6-81b2-0100b65e0c2f
 caps.latest.revision: 35
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 2473797ef34c0fd204c878da8c6044a307cc1ee3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: d36a065ea73f249ce5c4d9dc37cc047ac864cb84
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36153141"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37280015"
 ---
 # <a name="mdschemamembers-rowset"></a>Ensemble de lignes MDSCHEMA_MEMBERS
   Décrit les membres d'une base de données.  
@@ -48,7 +48,7 @@ ms.locfileid: "36153141"
 |`MEMBER_UNIQUE_NAME`|`DBTYPE_WSTR`||Nom unique du membre.|  
 |`MEMBER_TYPE`|`DBTYPE_I4`||Type du membre :<br /><br /> -   `MDMEMBER_TYPE_REGULAR` (`1`)<br />-   `MDMEMBER_TYPE_ALL` (`2`)<br />-   `MDMEMBER_TYPE_MEASURE` (`3`)<br />-   `MDMEMBER_TYPE_FORMULA` (`4`)<br />-   `MDMEMBER_TYPE_UNKNOWN` (`0`)<br />-   `MDMEMBER_TYPE_FORMULA` est prioritaire sur `MDMEMBER_TYPE_MEASURE`. Par exemple, si la dimension Measures comprend un membre de formule (calculé), ce dernier est répertorié sous la forme `MDMEMBER_TYPE_FORMULA`.|  
 |`MEMBER_GUID`|`DBTYPE_GUID`||GUID du membre. `NULL` s'il n'existe aucun GUID.|  
-|`MEMBER_CAPTION`|`DBTYPE_WSTR`||Étiquette ou légende associée au membre. Principalement utilisée à des fins d'affichage. Si une légende n’existe pas, `MEMBER_NAME` est retourné.|  
+|`MEMBER_CAPTION`|`DBTYPE_WSTR`||Étiquette ou légende associée au membre. Principalement utilisée à des fins d'affichage. Si une légende n’existe pas, `MEMBER_NAME` est retournée.|  
 |`CHILDREN_CARDINALITY`|`DBTYPE_UI4`||Nombre d'enfants de ce membre. Ce nombre peut être une estimation ; il ne doit donc pas être considéré comme le nombre exact. Les fournisseurs doivent renvoyer la meilleure estimation possible.|  
 |`PARENT_LEVEL`|`DBTYPE_UI4`||Distance du parent du membre par rapport au niveau racine de la hiérarchie. Le niveau de la racine est égal à zéro (0).|  
 |`PARENT_UNIQUE_NAME`|`DBTYPE_WSTR`||Nom unique du parent du membre. `NULL` est retournée pour tout membre situé au niveau de la racine.|  
@@ -79,7 +79,7 @@ ms.locfileid: "36153141"
 |`MEMBER_UNIQUE_NAME`|`DBTYPE_WSTR`|Facultatif.|  
 |`MEMBER_CAPTION`|`DBTYPE_WSTR`|Facultatif.|  
 |`MEMBER_TYPE`|`DBTYPE_I4`|Facultatif.|  
-|`TREE_OP`|`DBTYPE_I4`|(Facultatif) S'applique uniquement à un membre unique :<br /><br /> -   `MDTREEOP_ANCESTORS` (`0x20`) renvoie tous les ancêtres.<br />-   `MDTREEOP_CHILDREN` (`0x01`) renvoie uniquement les enfants immédiats.<br />-   `MDTREEOP_SIBLINGS` (`0x02`) renvoie les membres du même niveau.<br />-   `MDTREEOP_PARENT` (`0x04`) retourne uniquement le parent immédiat.<br />-   `MDTREEOP_SELF` (`0x08`) se retourne lui-même dans la liste des lignes retournées.<br />-   `MDTREEOP_DESCENDANTS` (`0x10`) renvoie tous les descendants.|  
+|`TREE_OP`|`DBTYPE_I4`|(Facultatif) S'applique uniquement à un membre unique :<br /><br /> -   `MDTREEOP_ANCESTORS` (`0x20`) retourne tous les ancêtres.<br />-   `MDTREEOP_CHILDREN` (`0x01`) retourne uniquement les enfants immédiats.<br />-   `MDTREEOP_SIBLINGS` (`0x02`) retourne les membres du même niveau.<br />-   `MDTREEOP_PARENT` (`0x04`) retourne uniquement le parent immédiat.<br />-   `MDTREEOP_SELF` (`0x08`) retourne lui-même dans la liste des lignes retournées.<br />-   `MDTREEOP_DESCENDANTS` (`0x10`) retourne tous les descendants.|  
 |`CUBE_SOURCE`|`DBTYPE_UI2`|(Facultatif) Bitmap avec l'une des valeurs valides suivantes :<br /><br /> -CUBE 1<br />-DIMENSION DE 2<br /><br /> La restriction par défaut est la valeur 1.|  
   
 ## <a name="see-also"></a>Voir aussi  

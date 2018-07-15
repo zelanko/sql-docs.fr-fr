@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - reports [Reporting Services], deploying
 - publishing reports [Reporting Services]
@@ -18,13 +18,13 @@ ms.assetid: 18201ca0-bf4a-484f-b3a2-95d1046a6a9b
 caps.latest.revision: 41
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: f656681c39367bc82c4b5f2b548df69e6106fffa
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 2cf985f4f16f60378dd3d866489fc7c64c940928
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36154317"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37276375"
 ---
 # <a name="set-deployment-properties-reporting-services"></a>Définir des propriétés de déploiement (Reporting Services)
   Dans[!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], vous devez spécifier le serveur de rapports et éventuellement les dossiers pour les rapports et les sources de données partagées afin de pouvoir publier les éléments dans un projet Report Server sur un serveur de rapports. Les propriétés et valeurs dont [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] a besoin pour générer, visualiser et déployer des rapports sont stockées dans les configurations de projet du projet Report Server. Vous pouvez créer plusieurs jeux nommés pour ces propriétés de projet afin de pouvoir aisément basculer entre les jeux de propriétés. Chaque jeu de propriétés est une configuration. Par exemple, vous pouvez avoir une configuration pour publier des rapports sur un serveur de test et une configuration différente pour publier des rapports sur un serveur de production.  
@@ -48,7 +48,7 @@ ms.locfileid: "36154317"
   
 3.  Dans le **OutputPath** zone de texte, tapez ou collez le chemin d’accès dans votre système de fichiers local pour stocker la définition de rapport utilisée dans la vérification de la génération, déploiement et l’aperçu des rapports. Le chemin d'accès doit être différent de celui que vous utilisez pour le projet et un chemin d'accès relatif qui est un dossier enfant sous le chemin d'accès du projet.  
   
-4.  Dans le **ErrorLevel** zone de texte, tapez la gravité de la build problèmes sont signalés comme des erreurs. Niveaux de problèmes qui se produisent lors de la génération de rapports, sources de données ou autres ressources du projet avec le niveau de gravité inférieur ou égal à la valeur de **ErrorLevel** sont signalés comme erreurs ; sinon, les problèmes sont signalés comme avertissements. Toute erreur provoquera l'échec de la tâche de génération. Les niveaux de gravité valides sont compris entre 0 et 4. La valeur par défaut est 2.  
+4.  Dans le **ErrorLevel** zone de texte, tapez la gravité de la build problèmes sont signalés comme des erreurs. Les problèmes qui se produisent lors de la génération de rapports, sources de données ou autres ressources du projet avec la gravité des niveaux inférieur ou égal à la valeur de **ErrorLevel** sont signalés comme erreurs ; sinon, les problèmes sont signalés comme avertissements. Toute erreur provoquera l'échec de la tâche de génération. Les niveaux de gravité valides sont compris entre 0 et 4. La valeur par défaut est 2.  
   
      **ErrorLevel** peut être utilisé pour augmenter ou diminuer la sensibilité de la génération. Par exemple, lorsqu'un rapport avec une carte est généré pendant le déploiement vers un serveur de rapports [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] , une erreur s'affiche par défaut et la génération du rapport échoue. Si vous diminuez la valeur de **ErrorLevel** , la carte est supprimée du rapport, un avertissement s'affiche et la génération du rapport continue.  
   
@@ -56,7 +56,7 @@ ms.locfileid: "36154317"
   
 6.  Dans la liste **OverwriteDataSources** , sélectionnez **True** pour remplacer la source de données partagée sur le serveur chaque fois que des sources de données partagées sont publiées ou sélectionnez **False** pour conserver la source de données sur le serveur.  
   
-7.  Dans le **TargetServerVersion** liste, sélectionnez le [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ou [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] version de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ou sélectionnez **détecter la Version** à déterminer automatiquement la version installée sur le serveur identifié par le **Targetserverurl** propriété. La valeur par défaut est **SQL Server 2008 R2**.  
+7.  Dans le **TargetServerVersion** liste, sélectionnez le [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ou [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] version de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ou sélectionnez **détecter la Version** pour déterminer automatiquement la version installée sur le serveur identifié par le **Targetserverurl** propriété. La valeur par défaut est **SQL Server 2008 R2**.  
   
      Utilisez **TargetServerVersion** pour personnaliser les rapports créés, placés dans le chemin d'accès spécifié dans OutputPath, pour la version du serveur de rapports spécifié dans **TargetServerURL**.  
   

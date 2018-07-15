@@ -1,5 +1,5 @@
 ---
-title: Fonctionnalités du moteur de base de données dans SQL Server 2014 déconseillées | Documents Microsoft
+title: Fonctionnalités du moteur de base de données dans SQL Server 2014 dépréciées | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - deprecated features [SQL Server]
 - Database Engine [SQL Server], backward compatibility
 - deprecation [SQL Server], feature list
 ms.assetid: c10eeaa5-3d3c-49b4-a4bd-5dc4fb190142
 caps.latest.revision: 208
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 553d47cd9c9637492fce0fe0a943e8de6cde3eb8
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 05cf9071049947adceaeeccf2e728f1d5045d05d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36143585"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37326399"
 ---
 # <a name="deprecated-database-engine-features-in-sql-server-2014"></a>Fonctionnalités du moteur de base de données déconseillées dans SQL Server 2014
   Cette rubrique décrit les fonctionnalités [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] déconseillées qui sont toujours disponibles dans [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]. Il est prévu que ces fonctionnalités soient supprimées dans une prochaine version de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Les fonctions déconseillées ne doivent pas être utilisées dans de nouvelles applications.  
@@ -64,8 +64,8 @@ ms.locfileid: "36143585"
 |Types de données|sp_addtype<br /><br /> sp_droptype|CREATE TYPE<br /><br /> DROP TYPE|sp_addtype<br /><br /> sp_droptype|62<br /><br /> 63|  
 |Types de données|Syntaxe de `timestamp` pour le type de données `rowversion`|`rowversion` syntaxe de type de données|timestamp|158|  
 |Types de données|Possibilité d’insérer des valeurs null dans `timestamp` colonnes.|Utilisez DEFAULT à la place.|INSERT NULL dans des colonnes TIMESTAMP|179|  
-|Types de données|Option de table 'text in row'|Utilisez `varchar(max)`, `nvarchar(max)`, et `varbinary(max)` des types de données. Pour plus d’informations, consultez [sp_tableoption &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-tableoption-transact-sql).|Option de table text in row|9|  
-|Types de données|Types de données :<br /><br /> `text`<br /><br /> `ntext`<br /><br /> `image`|Utilisez `varchar(max)`, `nvarchar(max)`, et `varbinary(max)` des types de données.|Types de données : `text`, `ntext` ou `image`|4|  
+|Types de données|Option de table 'text in row'|Utilisez `varchar(max)`, `nvarchar(max)`, et `varbinary(max)` types de données. Pour plus d’informations, consultez [sp_tableoption &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-tableoption-transact-sql).|Option de table text in row|9|  
+|Types de données|Types de données :<br /><br /> `text`<br /><br /> `ntext`<br /><br /> `image`|Utilisez `varchar(max)`, `nvarchar(max)`, et `varbinary(max)` types de données.|Types de données : `text`, `ntext` ou `image`|4|  
 |Gestion de base de données|sp_attach_db<br /><br /> sp_attach_single_file_db|Instruction CREATE DATABASE avec l'option FOR ATTACH. Pour recréer plusieurs fichiers journaux, lorsqu'un ou plusieurs d'entre eux possèdent un nouvel emplacement, utilisez FOR ATTACH_REBUILD_LOG.|sp_attach_db<br /><br /> sp_attach_single_file_db|81<br /><br /> 82|  
 |Objets de base de données|CREATE DEFAULT<br /><br /> DROP DEFAULT<br /><br /> sp_bindefault<br /><br /> sp_unbindefault|Mot clé DEFAULT dans CREATE TABLE et ALTER TABLE|CREATE_DROP_DEFAULT<br /><br /> sp_bindefault<br /><br /> sp_unbindefault|162<br /><br /> 64<br /><br /> 65|  
 |Objets de base de données|CREATE RULE<br /><br /> DROP RULE<br /><br /> sp_bindrule<br /><br /> sp_unbindrule|Mot clé CHECK dans CREATE TABLE et ALTER TABLE|CREATE_DROP_RULE<br /><br /> sp_bindrule<br /><br /> sp_unbindrule|161<br /><br /> 66<br /><br /> 67|  
@@ -117,9 +117,9 @@ ms.locfileid: "36143585"
 |Sécurité|Algorithmes de chiffrement RC4 et DESX|Utilisez un autre algorithme, par exemple AES.|Algorithme DESX|238|  
 |Options définies|SET FMTONLY|[sys.dm_exec_describe_first_result_set &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-transact-sql), [sys.dm_exec_describe_first_result_set_for_object &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-for-object-transact-sql), [sp_describe_first_result_set &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql), and [sp_describe_undeclared_parameters &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-describe-undeclared-parameters-transact-sql).|SET FMTONLY|250|  
 |Options de configuration de serveur|Option c2 audit<br /><br /> Trace par défaut activée (option)|[common criteria compliance enabled (option de configuration de serveur)](configure-windows/common-criteria-compliance-enabled-server-configuration-option.md)<br /><br /> [Événements étendus](../relational-databases/extended-events/extended-events.md)|sp_configure 'c2 audit mode'<br /><br /> sp_configure 'default trace enabled'|252<br /><br /> 253|  
-|Classes SMO|`Microsoft.SQLServer.Management.Smo.Information` Classe<br /><br /> `Microsoft.SQLServer.Management.Smo.Settings` Classe<br /><br /> `Microsoft.SQLServer.Management.Smo.DatabaseOptions` Classe<br /><br /> `Microsoft.SqlServer.Management.Smo.DatabaseDdlTrigger.NotForReplication` Propriété|`Microsoft.SqlServer.Management.Smo.Server` Classe<br /><br /> `Microsoft.SqlServer.Management.Smo.Server` Classe<br /><br /> `Microsoft.SqlServer.Management.Smo.Database` Classe<br /><br /> None|None|None|  
+|Classes SMO|`Microsoft.SQLServer.Management.Smo.Information` classe<br /><br /> `Microsoft.SQLServer.Management.Smo.Settings` classe<br /><br /> `Microsoft.SQLServer.Management.Smo.DatabaseOptions` classe<br /><br /> `Microsoft.SqlServer.Management.Smo.DatabaseDdlTrigger.NotForReplication` propriété|`Microsoft.SqlServer.Management.Smo.Server` classe<br /><br /> `Microsoft.SqlServer.Management.Smo.Server` classe<br /><br /> `Microsoft.SqlServer.Management.Smo.Database` classe<br /><br /> None|None|None|  
 |SQL Server Agent|Notification**net send** <br /><br /> Notification par radiomessagerie<br /><br /> Sous-système ActiveX|Notification par courrier électronique<br /><br /> Notification par courrier électronique<br /><br /> Scripts Command ou PowerShell|None|None|  
-|[!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]|Intégration de l’Explorateur de solutions dans [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]<br /><br /> Intégration de contrôle de code source dans [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]||None|None|  
+|[!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]|Intégration de l’Explorateur de solutions dans [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]<br /><br /> Intégration du contrôle de code source [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]||None|None|  
 |Procédures stockées système|sp_db_increased_partitions|Aucun. La prise en charge de plus de partitions est disponible par défaut dans [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)].|sp_db_increased_partitions|253|  
 |Tables système|sysaltfiles<br /><br /> syscacheobjects<br /><br /> syscolumns<br /><br /> syscomments<br /><br /> sysconfigures<br /><br /> sysconstraints<br /><br /> syscurconfigs<br /><br /> sysdatabases<br /><br /> sysdepends<br /><br /> sysdevices<br /><br /> sysfilegroups<br /><br /> sysfiles<br /><br /> sysforeignkeys<br /><br /> sysfulltextcatalogs<br /><br /> sysindexes<br /><br /> sysindexkeys<br /><br /> syslockinfo<br /><br /> syslogins<br /><br /> sysmembers<br /><br /> sysmessages<br /><br /> sysobjects<br /><br /> sysoledbusers<br /><br /> sysopentapes<br /><br /> sysperfinfo<br /><br /> syspermissions<br /><br /> sysprocesses<br /><br /> sysprotects<br /><br /> sysreferences<br /><br /> sysremotelogins<br /><br /> sysservers<br /><br /> systypes<br /><br /> sysusers|Vues de compatibilité. Pour plus d’informations, consultez [Vues de compatibilité &#40;Transact-SQL&#41;](/sql/relational-databases/system-compatibility-views/system-compatibility-views-transact-sql).<br /><br /> **\*\* Important \*\*** Les vues de compatibilité n’exposent pas les métadonnées pour les fonctionnalités introduites dans [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)]. Il est recommandé de mettre à niveau les applications pour pouvoir utiliser les affichages catalogue. Pour plus d’informations, consultez [Affichages catalogue &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/catalog-views-transact-sql).|sysaltfiles<br /><br /> syscacheobjects<br /><br /> syscolumns<br /><br /> syscomments<br /><br /> sysconfigures<br /><br /> sysconstraints<br /><br /> syscurconfigs<br /><br /> sysdatabases<br /><br /> sysdepends<br /><br /> sysdevices<br /><br /> sysfilegroups<br /><br /> sysfiles<br /><br /> sysforeignkeys<br /><br /> sysfulltextcatalogs<br /><br /> sysindexes<br /><br /> sysindexkeys<br /><br /> syslockinfo<br /><br /> syslogins<br /><br /> sysmembers<br /><br /> sysmessages<br /><br /> sysobjects<br /><br /> sysoledbusers<br /><br /> sysopentapes<br /><br /> sysperfinfo<br /><br /> syspermissions<br /><br /> sysprocesses<br /><br /> sysprotects<br /><br /> sysreferences<br /><br /> sysremotelogins<br /><br /> sysservers<br /><br /> systypes<br /><br /> sysusers|141<br /><br /> None<br /><br /> 133<br /><br /> 126<br /><br /> 146<br /><br /> 131<br /><br /> 147<br /><br /> 142<br /><br /> 123<br /><br /> 144<br /><br /> 128<br /><br /> 127<br /><br /> 130<br /><br /> 122<br /><br /> 132<br /><br /> 134<br /><br /> 143<br /><br /> 140<br /><br /> 119<br /><br /> 137<br /><br /> 125<br /><br /> 139<br /><br /> 145<br /><br /> 157<br /><br /> 121<br /><br /> 153<br /><br /> 120<br /><br /> 129<br /><br /> 138<br /><br /> 136<br /><br /> 135<br /><br /> 124|  
 |Tables système|sys.numbered_procedures<br /><br /> sys.numbered_procedure_parameters|None|numbered_procedures<br /><br /> numbered_procedure_parameters|148<br /><br /> 149|  

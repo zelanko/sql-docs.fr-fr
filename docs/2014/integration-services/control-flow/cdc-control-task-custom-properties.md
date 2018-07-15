@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 2a073699-79a2-4ea1-a68e-fc17a80b74ba
 caps.latest.revision: 8
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 4a45fb326b728ae5df24f0ea91124d145d2c1761
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 230479af0ffa24130bb1ea63f0a72b758a3c81fe
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36153530"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37298739"
 ---
 # <a name="cdc-control-task-custom-properties"></a>Propriétés personnalisées de la tâche de contrôle de capture de données modifiées
   Le tableau suivant décrit les propriétés personnalisées de la tâche de contrôle de capture de données modifiées. Toutes les propriétés sont en lecture/écriture.  
@@ -37,7 +37,7 @@ ms.locfileid: "36153530"
 |CommandTimeout|entier|Cette valeur indique le délai d’attente (en secondes) à utiliser pour communiquer avec la base de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Cette valeur est utilisée lorsque le temps de réponse de la base de données est très lent et que la valeur par défaut (30 secondes) n’est pas suffisante.|  
   
 ## <a name="see-also"></a>Voir aussi  
- [Tâche de contrôle de capture de données modifiées](cdc-control-task.md)   
+ [Tâche de contrôle CDC](cdc-control-task.md)   
  [Éditeur de tâche de contrôle CDC](../cdc-control-task-editor.md)  
   
   

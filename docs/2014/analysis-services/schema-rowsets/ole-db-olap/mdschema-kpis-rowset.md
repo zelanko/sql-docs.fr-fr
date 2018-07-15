@@ -1,5 +1,5 @@
 ---
-title: Ensemble de lignes MDSCHEMA_KPIS | Documents Microsoft
+title: Ensemble de lignes MDSCHEMA_KPIS | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -18,15 +18,15 @@ helpviewer_keywords:
 - MDSCHEMA_KPIS rowset
 ms.assetid: 40fb5112-6a90-4455-82b3-8b6322490222
 caps.latest.revision: 34
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 28a5f4af179c058f822a773dc691383dbee028fd
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 391c27165b9b4482160b2a8396e64e46650aa87e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36153578"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37314769"
 ---
 # <a name="mdschemakpis-rowset"></a>Ensemble de lignes MDSCHEMA_KPIS
   Décrit les indicateurs de performance clés (KPI) dans une base de données.  
@@ -41,7 +41,7 @@ ms.locfileid: "36153578"
 |`CUBE_NAME`|`DBTYPE_WSTR`||Cube parent de l'indicateur de performance clé.|  
 |`MEASUREGROUP_NAME`|`DBTYPE_WSTR`||Groupe de mesures associé pour l'indicateur de performance clé.<br /><br /> Vous pouvez utiliser cette colonne pour déterminer la dimensionnalité de l'indicateur de performance clé. Si «**\<NULL >**», l’indicateur de performance clé sera dimensionné par tous les groupes de mesures.<br /><br /> La valeur par défaut est «**\<NULL >**».|  
 |`KPI_NAME`|`DBTYPE_WSTR`||Nom de l'indicateur de performance clé.|  
-|`KPI_CAPTION`|`DBTYPE_WSTR`||Étiquette ou légende associée à l'indicateur de performance clé. Principalement utilisée à des fins d'affichage. Si une légende n’existe pas, `KPI_NAME` est retourné.|  
+|`KPI_CAPTION`|`DBTYPE_WSTR`||Étiquette ou légende associée à l'indicateur de performance clé. Principalement utilisée à des fins d'affichage. Si une légende n’existe pas, `KPI_NAME` est retournée.|  
 |`KPI_DESCRIPTION`|`DBTYPE_WSTR`||Description explicite de l'indicateur de performance clé.|  
 |`KPI_DISPLAY_FOLDER`|`DBTYPE_WSTR`||Chaîne qui identifie le chemin d'accès du dossier d'affichage que l'application cliente utilise pour afficher le membre. Le séparateur de niveau de dossier est défini par l'application cliente. Pour les outils et les clients fournis par [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)], la barre oblique inverse (\\) est le séparateur de niveau. Pour fournir plusieurs dossiers d’affichage, utilisez un point-virgule ( ;) pour séparer les dossiers.|  
 |`KPI_VALUE`|`DBTYPE_WSTR`||Nom unique du membre dans la dimension de mesures pour la valeur de l'indicateur de performance clé.|  

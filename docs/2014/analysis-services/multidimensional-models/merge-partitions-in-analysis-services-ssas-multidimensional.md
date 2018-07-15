@@ -1,5 +1,5 @@
 ---
-title: Fusionner des Partitions dans Analysis Services (SSAS - multidimensionnel) | Documents Microsoft
+title: Fusionner des Partitions dans Analysis Services (SSAS - multidimensionnel) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - partitions [Analysis Services], merging
 - merging partitions [Analysis Services]
 ms.assetid: b3857b9b-de43-4911-989d-d14da0196f89
 caps.latest.revision: 33
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: b926c685b87f863c0b04e4ce570bec2573aebdf4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 78fcd5ce33ba73b4eb11e6449b84f3afe3f2028a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36052319"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37306569"
 ---
 # <a name="merge-partitions-in-analysis-services-ssas---multidimensional"></a>Fusionner des partitions dans Analysis Services (SSAS - Multidimensionnel)
   Vous pouvez fusionner des partitions dans une base de données [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] existante pour consolider les données de faits de plusieurs partitions du même groupe de mesures.  
@@ -73,7 +73,7 @@ ms.locfileid: "36052319"
 ##  <a name="bkmk_Where"></a> Mettre à jour la source de partition après avoir fusionné les partitions  
  Les partitions sont segmentées par requête, comme la clause WHERE d'une requête SQL utilisée pour traiter les données, ou par une table ou une requête nommée qui fournit des données à la partition. La propriété `Source` sur la partition indique si la partition est liée à une requête ou une table.  
   
- Lorsque vous fusionnez des partitions, le contenu des partitions est consolidé, mais la `Source` propriété n’est pas mis à jour pour refléter l’étendue supplémentaire de la partition. Cela signifie que si vous Retraitez par la suite d’une partition qui conserve son état d’origine `Source`, vous obtenez des données incorrectes à partir de cette partition. La partition agrégera à tort des données au niveau parent. L’exemple suivant illustre ce comportement.  
+ Lorsque vous fusionnez des partitions, le contenu des partitions est consolidé, mais le `Source` propriété n’est pas mis à jour pour refléter l’étendue supplémentaire de la partition. Cela signifie que si vous Retraitez par la suite d’une partition qui conserve son état d’origine `Source`, vous obtenez des données incorrectes de cette partition. La partition agrégera à tort des données au niveau parent. L’exemple suivant illustre ce comportement.  
   
  **Le problème**  
   
@@ -81,16 +81,16 @@ ms.locfileid: "36052319"
   
  **La solution**  
   
- La solution consiste à mettre à jour le `Source` propriété, le réglage de la clause WHERE ou une requête nommée ou la fusion manuelle des données à partir des tables de faits sous-jacentes, pour garantir que les traitements ultérieurs sont exactes, étant donné l’étendue supplémentaire de la partition.  
+ La solution consiste à mettre à jour le `Source` propriété, en ajustant la clause WHERE ou la requête nommée, ou en fusionnant manuellement les données à partir de tables de faits sous-jacentes, pour garantir que les traitements ultérieurs sont exactes, étant donné l’étendue supplémentaire de la partition.  
   
  Dans cet exemple, après la fusion de la partition 3 dans la partition 2, vous pouvez créer un filtre, tel que ("Product" = 'ColaDecaf' OR "Product" = 'ColaDiet') dans la partition obtenue (partition2) pour spécifier que seules les données relatives à [ColaDecaf] et [ColaDiet] doivent être extraites de la table de faits, et que les données de [ColaFull] doivent être exclues. Vous pouvez également spécifier des filtres pour la partition2 et la partition 3 au moment de la création de ces partitions. Ces filtres seront associés pendant la fusion. Dans les deux cas, après le traitement de la partition, le cube ne contiendra pas de données en double.  
   
  **La conclusion**  
   
- Une fois que vous fusionnez des partitions, vous devez toujours vérifier le `Source` pour vérifier le filtre est correct pour les données fusionnées. Si vous avez commencé par une partition qui incluait des données historiques pour Q1, Q2 et Q3 et que vous fusionnez maintenant Q4, vous devez ajuster le filtre de manière à inclure Q4. Sinon, le traitement ultérieur de la partition générera des résultats erronés. Il ne sera pas correct pour Q4.  
+ Une fois que vous fusionnez des partitions, vous devez toujours vérifier le `Source` pour vérifier le filtre est approprié pour les données fusionnées. Si vous avez commencé par une partition qui incluait des données historiques pour Q1, Q2 et Q3 et que vous fusionnez maintenant Q4, vous devez ajuster le filtre de manière à inclure Q4. Sinon, le traitement ultérieur de la partition générera des résultats erronés. Il ne sera pas correct pour Q4.  
   
 ##  <a name="bkmk_fact"></a> Considérations spéciales pour les partitions segmentées par une table de faits ou une requête nommée  
- Outre les requêtes, les partitions peuvent également être segmentées par une table ou une requête nommée. Si la partition source et la partition cible utilisent la même table de faits dans une source de données ou une vue de source de données, la propriété `Source` est valide après la fusion des partitions. Elle spécifie les données de la table de faits qui sont appropriées à la partition résultante. Étant donné que les faits qui sont requis pour la partition résultante existent dans le fait de table, aucune modification à la `Source` propriété n’est nécessaire.  
+ Outre les requêtes, les partitions peuvent également être segmentées par une table ou une requête nommée. Si la partition source et la partition cible utilisent la même table de faits dans une source de données ou une vue de source de données, la propriété `Source` est valide après la fusion des partitions. Elle spécifie les données de la table de faits qui sont appropriées à la partition résultante. Étant donné les faits qui sont requis pour la partition résultante existent dans le fait de table, aucune modification de la `Source` propriété n’est nécessaire.  
   
  Les partitions utilisant des données provenant de plusieurs tables de faits ou requêtes nommées requièrent un travail supplémentaire. Vous devez fusionner manuellement les faits de la table de faits de la partition source dans la table de faits de la partition de destination.  
   
@@ -121,7 +121,7 @@ ms.locfileid: "36052319"
   
 1.  Dans l’Explorateur d’objets, développez le nœud **Groupes de mesures** du cube contenant les partitions à fusionner, développez **Partitions**, cliquez avec le bouton droit sur la partition correspondant à la cible ou à la destination de la fusion. Par exemple, si vous déplacez des données de faits trimestrielles vers une partition qui stocke des données de faits annuelles, sélectionnez la partition qui contient les données de faits annuelles.  
   
-2.  Cliquez sur **fusionner des Partitions** pour ouvrir le **Partition de fusion \<nom de la partition >** boîte de dialogue.  
+2.  Cliquez sur **fusionner des Partitions** pour ouvrir le **Partition de fusion \<nom_partition >** boîte de dialogue.  
   
 3.  Sous **Partitions sources**, cochez la case à côté de chaque partition source que vous voulez fusionner avec la partition cible, puis cliquez sur **OK**.  
   

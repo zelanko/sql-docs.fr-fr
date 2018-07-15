@@ -1,5 +1,5 @@
 ---
-title: Traductions dans les modèles multidimensionnels | Documents Microsoft
+title: Traductions dans les modèles multidimensionnels | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,26 +8,26 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.dimensiondesigner.deletelanguagefirm.f1
 ms.assetid: 5521f8ef-b10a-4861-9df7-1e43e0a1fb3f
 caps.latest.revision: 8
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: edb58addda246c716224b578aad3713812708476
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: e018bf778a877ed62612e631951ca92258aaec0e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36052954"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37275565"
 ---
 # <a name="translations-in-multidimensional-models"></a>Traductions dans les modèles multidimensionnels
   Prise en charge multilingue dans [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] s’effectue en utilisant des traductions. Une traduction contient un identificateur de langue et des liaisons pour les propriétés d'objets [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] qui peuvent être présentées dans plusieurs langues. Par exemple, vous pouvez définir une traduction pour une base de données [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] afin de présenter la légende et la description de cette base de données dans une langue donnée. Pour plus d’informations sur les traductions, consultez [traductions de Cube](../multidimensional-models-olap-logical-cube-objects/cube-translations.md).  
   
 ## <a name="defining-translations"></a>Définition des traductions  
- Vous pouvez définir des traductions dans [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] en utilisant le concepteur correspondant à l’objet [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] à traduire. Définition d’une traduction crée un `Translation` objet associé approprié [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] objet ayant des valeurs littérales explicites spécifiées, dans la langue spécifiée, pour les propriétés de la [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] objet.  
+ Vous pouvez définir des traductions dans [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] en utilisant le concepteur correspondant à l’objet [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] à traduire. Définition d’une traduction crée un `Translation` objet associé avec le bon [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] objet ayant des valeurs littérales explicites spécifiées, dans la langue spécifiée, pour les propriétés d’associé [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] objet.  
   
  Vous pouvez associer des traductions aux objets et propriétés [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] suivants :  
   
@@ -57,7 +57,7 @@ ms.locfileid: "36052954"
   
 -   un classement Windows différent du classement spécifié pour l'instance peut être utilisé afin que les membres de l'attribut puissent être triés de manière appropriée pour la langue spécifiée dans la traduction.  
   
- Vous pouvez utiliser la **traduction de données d’attribut** boîte de dialogue de [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] pour définir des traductions pour les attributs dans les dimensions de la base de données. Pour plus d’informations sur la **traduction de données d’attribut** boîte de dialogue, consultez [boîte de dialogue traduction de données attribut &#40;Analysis Services - données multidimensionnelles&#41;](../attribute-data-translation-dialog-box-analysis-services-multidimensional-data.md).  
+ Vous pouvez utiliser la **traduction de données d’attribut** boîte de dialogue dans [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] pour définir des traductions pour les attributs dans les dimensions de la base de données. Pour plus d’informations sur la **traduction de données d’attribut** boîte de dialogue, consultez [boîte de dialogue traduction de données attribut &#40;Analysis Services - données multidimensionnelles&#41;](../attribute-data-translation-dialog-box-analysis-services-multidimensional-data.md).  
   
 ## <a name="resolving-translations"></a>Résolution des traductions  
  Si une application cliente demande des informations dans un identificateur de langue spécifié, l’instance d’ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] tente de convertir les données et les métadonnées des objets [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] dans l’identificateur de langue le plus proche possible. Si l’application cliente ne spécifie pas de langue par défaut ou si elle spécifie l’identificateur local neutre (0) ou l’identificateur de langue de traitement par défaut (1024), alors [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] utilise la langue par défaut de l’instance pour renvoyer les données et les métadonnées des objets [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .  

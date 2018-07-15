@@ -1,5 +1,5 @@
 ---
-title: Déploiement et prise en charge de la Version de SQL Server Data Tools (SSRS) | Documents Microsoft
+title: Déploiement et les versions prises en charge dans SQL Server Data Tools (SSRS) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 36f5686d-7e40-4f31-be81-bd197ca33a02
 caps.latest.revision: 17
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: d52ae21eb9313bbb58d04305c9dd79eb41551290
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: 856834aa8c29ebaba0661012383d52ad30e3ad59
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36143196"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37313230"
 ---
 # <a name="deployment-and-version-support-in-sql-server-data-tools-ssrs"></a>Prise en charge des déploiements et des versions dans SQL Server Data Tools (SSRS)
   [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] prend en charge les scénarios suivants :  
@@ -72,9 +72,9 @@ ms.locfileid: "36143196"
 |Projet Report Server<br /><br /> ou Gestionnaire de configuration<br /><br /> Assistant Projet Report Server|[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]|Schéma RDL 2005|[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] ou [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] serveur de rapports||  
 |Projet Report Server|[!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]|Schéma RDL 2003|Non pris en charge||  
 |[!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] Concepteur de rapports RDLC|[!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 2005<br /><br /> [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 2008|Schéma RDL 2005|Non pris en charge|Ne prend pas en charge le schéma RDL 2008.|  
-|[!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] Contrôles de la visionneuse|[!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 2005<br /><br /> [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 2008|Éléments RDL 2008 non pris en charge en mode local|Néant|Peut afficher des rapports RDL 2008 sur [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] serveur de rapports en mode serveur.|  
+|[!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] Contrôles de visionneuse|[!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 2005<br /><br /> [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 2008|Éléments RDL 2008 non pris en charge en mode local|Néant|Peut afficher des rapports RDL 2008 sur [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] serveur de rapports en mode serveur.|  
   
- Pour plus d’informations sur l’ouverture des rapports dans une version précédente du schéma de définition de rapport, consultez [mise à niveau des rapports](../install-windows/upgrade-reports.md). Pour plus d'informations sur des schémas de définition de rapport spécifiques, consultez la rubrique consacrée à la [spécification RDL (Report Definition Language)](http://go.microsoft.com/fwlink/?linkid=116865).  
+ Pour plus d’informations sur l’ouverture des rapports dans une version précédente du schéma de définition de rapport, consultez [Upgrade Reports](../install-windows/upgrade-reports.md). Pour plus d'informations sur des schémas de définition de rapport spécifiques, consultez la rubrique consacrée à la [spécification RDL (Report Definition Language)](http://go.microsoft.com/fwlink/?linkid=116865).  
   
 ## <a name="see-also"></a>Voir aussi  
  [Publication de sources de données et de rapports](../reports/publishing-data-sources-and-reports.md)  

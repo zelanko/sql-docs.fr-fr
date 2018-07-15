@@ -1,5 +1,5 @@
 ---
-title: Définition de jeux nommés | Documents Microsoft
+title: Définition de jeux nommés | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 47254fd3-525f-4c35-b93d-316607652517
 caps.latest.revision: 14
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: jhubbard
-ms.openlocfilehash: 5d2988a40cdbf9294a89982396535c7389fb2bea
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: f2f1e53e6dd8aacf6bcf347f2d604ae1e5c1aa6a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36154056"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37312689"
 ---
 # <a name="defining-named-sets"></a>Définition de jeux nommés
   Un jeu nommé est une expression MDX (Multidimensional Expressions) qui retourne un ensemble de membres de dimension. Vous pouvez définir des jeux nommés et les enregistrer en tant que partie de la définition du cube ; vous pouvez aussi créer des jeux nommés dans des applications clientes. Vous créez des jeux nommés en combinant des données de cube, des opérateurs arithmétiques, des nombres et des fonctions. Les jeux nommés peuvent être employés par les utilisateurs dans des requêtes MDX dans des applications clientes. Ils peuvent aussi être utilisés pour définir des jeux dans des sous-cubes. Un sous-cube est une collection de jeux joints entre eux qui limite l'espace du cube au sous-espace défini pour les instructions suivantes. Définir un espace de cube limité est un des concepts fondamentaux des scripts MDX.  
@@ -51,9 +51,9 @@ ms.locfileid: "36154056"
   
 ## <a name="defining-a-large-resellers-named-set"></a>Définition d'un jeu nommé Large Resellers  
   
-1.  Avec le bouton droit `[Core Products]` dans les **organisateur de Script** volet, puis cliquez sur **nouveau jeu nommé**.  
+1.  Avec le bouton droit `[Core Products]` dans le **organisateur de Script** volet, puis cliquez sur **nouveau jeu nommé**.  
   
-2.  Dans le **nom** , changez le nom de ce jeu nommé en `[Large Resellers]`.  
+2.  Dans le **nom** , changez le nom de ce nouveau jeu nommé en `[Large Resellers]`.  
   
 3.  Dans le **Expression** , tapez `Exists()`.  
   
@@ -79,17 +79,17 @@ ms.locfileid: "36154056"
   
 8.  Ouvrez le Concepteur de dimensions pour la dimension **Reseller** , puis cliquez sur **Number of Employees** dans le volet **Attributs** .  
   
-9. Dans la fenêtre Propriétés, modifiez la `DiscretizationMethod` propriété **automatique**, puis modifiez le `DiscretizationBucketCount` propriété `5`. Pour plus d’informations, consultez [Regrouper des membres d’un attribut &#40;discrétisation&#41;](multidimensional-models/attribute-properties-group-attribute-members.md).  
+9. Dans la fenêtre Propriétés, modifiez le `DiscretizationMethod` propriété **automatique**, puis modifiez le `DiscretizationBucketCount` propriété `5`. Pour plus d’informations, consultez [Regrouper des membres d’un attribut &#40;discrétisation&#41;](multidimensional-models/attribute-properties-group-attribute-members.md).  
   
 10. Dans le menu **Générer** de [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], cliquez sur **Déployer Analysis Services Tutorial**.  
   
 11. Une fois le déploiement achevé, ouvrez le cube du didacticiel de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] dans le Concepteur de cube, puis cliquez sur **Reconnexion** dans la barre d'outils de l'onglet **Calculs** .  
   
-12. Sur le **métadonnées** onglet dans le **outils de calcul** volet, développez **Number of Employees** dans les **Reseller** dimension, développez `Members`, puis développez **tous les revendeurs**.  
+12. Sur le **métadonnées** onglet dans le **outils de calcul** volet, développez **Number of Employees** dans le **revendeur** dimension, développez `Members`, puis développez **tous les revendeurs**.  
   
      Observez que les membres de cette hiérarchie d'attributs sont maintenant contenus dans cinq groupes, numérotés de 0 à 4. Pour afficher le numéro d'un groupe, arrêtez le pointeur sur le groupe qui vous intéresse pour faire apparaître une info-bulle. Pour la plage `2 -17`, l'info-bulle doit contenir `[Reseller].[Number of Employees].&[0]`.  
   
-     Les membres de cette hiérarchie d’attribut sont groupés parce que la propriété DiscretizationBucketCount a `5` et a la valeur de la propriété DiscretizationMethod **automatique**.  
+     Les membres de cette hiérarchie d’attribut sont groupés, car la propriété DiscretizationBucketCount a `5` et la propriété DiscretizationMethod est définie sur **automatique**.  
   
 13. Dans la zone **Expression** , ajoutez une virgule à l’expression d’ensemble Exists après la fonction Members et avant la parenthèse fermante, puis faites glisser **83 - 100** depuis le volet **Métadonnées** jusqu’à la position suivant immédiatement cette virgule.  
   
@@ -127,13 +127,13 @@ ms.locfileid: "36154056"
   
      Notez que seuls le membre **Bike** de l'attribut **Category** et les membres des sous-catégories de **Bike** restent dans le cube. Cela est dû au fait que le jeu nommé **Core Products** est utilisé pour définir un sous-cube. Ce sous-cube limite les membres de l'attribut **Category** dans la dimension **Product** à l'intérieur du sous-cube à ceux qui sont membres du jeu nommé **Core Product** , comme le montre l'image suivante.  
   
-     ![Les membres du produit de base de jeu nommé](../../2014/tutorials/media/l6-named-set-04.gif "jeu nommé de membres de produit de base")  
+     ![Jeu nommé de membres du produit Core](../../2014/tutorials/media/l6-named-set-04.gif "jeu nommé de membres du noyau du produit")  
   
 7.  Dans le volet **Métadonnées** , développez **Reseller**, ajoutez **Large Resellers** à la zone de filtre.  
   
      Notez que la mesure Reseller Sales Amount dans le volet Données n'affiche les montants des ventes que pour les grands revendeurs de vélos. Observez également que le volet Filtre affiche maintenant les deux jeux nommés utilisés pour définir ce sous-cube particulier, comme le montre l'image suivante.  
   
-     ![Volet filtre contenant deux nommé définit](../../2014/tutorials/media/l6-named-set-05.gif "volet filtre contenant deux nommé définit")  
+     ![Volet filtre contenant deux nommées définit](../../2014/tutorials/media/l6-named-set-05.gif "définit volet filtre contenant deux nommées")  
   
 ## <a name="next-task-in-lesson"></a>Tâche suivante de la leçon  
  [Leçon 7 : Définition d’indicateurs de performance clés &#40;KPIs&#41;](../analysis-services/lesson-7-defining-key-performance-indicators-kpis.md)  

@@ -1,5 +1,5 @@
 ---
-title: Stockage (Analysis Services - données multidimensionnelles) du cube | Documents Microsoft
+title: Stockage (Analysis Services - données multidimensionnelles) du cube | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -19,18 +19,18 @@ helpviewer_keywords:
 - storage [Analysis Services], cubes
 ms.assetid: 1b1ad360-9a9b-4996-bee9-84238a2bb4ac
 caps.latest.revision: 40
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: e0e586c404575c0e7fe3b8b04641d8dba06b0f14
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 5e88e2987bf456a3746b7c50fc986f10f6573ba0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36154935"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37295929"
 ---
 # <a name="cube-storage-analysis-services---multidimensional-data"></a>Stockage de cube (Analysis Services - Données multidimensionnelles)
-  Il se peut que le stockage n'inclue que les métadonnées de cube, ou toutes les données sources de la table de faits ainsi que les agrégations définies par des dimensions liées au groupe de mesures. La quantité de données stockée dépend du mode de stockage sélectionné et du nombre d'agrégations défini. Cette quantité de données stockées influence directement les performances des requêtes. [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] utilise plusieurs techniques destinées à minimiser l’espace requis pour le stockage des données de cube et les agrégations :  
+  Il se peut que le stockage n'inclue que les métadonnées de cube, ou toutes les données sources de la table de faits ainsi que les agrégations définies par des dimensions liées au groupe de mesures. La quantité de données stockée dépend du mode de stockage sélectionné et du nombre d'agrégations défini. Cette quantité de données stockées influence directement les performances des requêtes. [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] utilise plusieurs techniques pour minimiser l’espace nécessaire pour le stockage des données de cube et les agrégations :  
   
 -   Les options de stockage permettent de choisir les modes et emplacements de stockage qui conviennent le mieux aux données de cube.  
   
@@ -50,7 +50,7 @@ ms.locfileid: "36154935"
  L'utilisateur ne voit pas les partitions des cubes. Cependant, le choix des paramètres de stockage des différentes partitions peut affecter la disponibilité immédiate des données, la quantité d'espace disque utilisé et les performances des requêtes. Des partitions peuvent être stockées sur plusieurs instances [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Vous disposez ainsi d'une approche en cluster du stockage du cube et d'une répartition de la charge entre plusieurs serveurs [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Pour plus d’informations, consultez [traitement et Modes de stockage de Partition](partitions-partition-storage-modes-and-processing.md), [Partitions distantes](partitions-remote-partitions.md), et [Partitions &#40;Analysis Services - données multidimensionnelles&#41; ](partitions-analysis-services-multidimensional-data.md).  
   
 ## <a name="linked-measure-groups"></a>Groupes de mesures liés  
- Cette approche peut nécessiter un espace disque considérable afin de stocker plusieurs copies d'un cube sur différentes instances [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], mais elle permet de réduire tangiblement l'espace nécessaire en remplaçant les copies du groupe de mesures par des groupes de mesures liés. Un groupe de mesures lié est basé sur un groupe de mesures d'un cube dans une autre base de données [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], sur la même instance [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ou sur une instance différente. Un groupe de mesures lié peut également être utilisé avec des dimensions liées provenant du même cube source. Les dimensions et les groupes de mesures liés utilisent les agrégations du cube source et n'ont aucun besoin de stockage de données propre. Par conséquent, en conservant les groupes de mesures et les dimensions sources dans une base de données et en créant des cubes et des dimensions liés dans des cubes d'autres bases de données, vous pouvez économiser de l'espace disque destiné autrement au stockage. Pour plus d’informations, consultez [des groupes de mesures liés](../multidimensional-models/linked-measure-groups.md).  
+ Cette approche peut nécessiter un espace disque considérable afin de stocker plusieurs copies d'un cube sur différentes instances [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], mais elle permet de réduire tangiblement l'espace nécessaire en remplaçant les copies du groupe de mesures par des groupes de mesures liés. Un groupe de mesures lié est basé sur un groupe de mesures d'un cube dans une autre base de données [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], sur la même instance [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ou sur une instance différente. Un groupe de mesures lié peut également être utilisé avec des dimensions liées provenant du même cube source. Les dimensions et les groupes de mesures liés utilisent les agrégations du cube source et n'ont aucun besoin de stockage de données propre. Par conséquent, en conservant les groupes de mesures et les dimensions sources dans une base de données et en créant des cubes et des dimensions liés dans des cubes d'autres bases de données, vous pouvez économiser de l'espace disque destiné autrement au stockage. Pour plus d’informations, consultez [Linked Measure Groups](../multidimensional-models/linked-measure-groups.md).  
   
 ## <a name="see-also"></a>Voir aussi  
  [Agrégations et conceptions d’agrégation](aggregations-and-aggregation-designs.md)  

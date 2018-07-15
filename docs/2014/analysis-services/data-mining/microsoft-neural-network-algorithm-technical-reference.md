@@ -1,5 +1,5 @@
 ---
-title: Référence technique de Microsoft Neural Network algorithme | Documents Microsoft
+title: Référence technique de Microsoft Neural Network algorithme | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - HIDDEN_NODE_RATIO parameter
 - MAXIMUM_INPUT_ATTRIBUTES parameter
@@ -29,15 +29,15 @@ helpviewer_keywords:
 - HOLDOUT_SEED parameter
 ms.assetid: b8fac409-e3c0-4216-b032-364f8ea51095
 caps.latest.revision: 24
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 0e34d664a9eb2338f1a686c8a37303c03c8451ca
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 18c5395a8da571a0c131cc6138a9eb499b3ef786
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36139938"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37276505"
 ---
 # <a name="microsoft-neural-network-algorithm-technical-reference"></a>Microsoft Neural Network Algorithm Technical Reference
   L’algorithme MNN ( [!INCLUDE[msCoName](../../includes/msconame-md.md)] Neural Network) utilise un réseau *perceptron multicouche* , également appelé *réseau à règle delta à rétropropagation*, qui peut comporter jusqu’à trois couches de neurones, ou *perceptrons*. une couche d'entrée, une couche masquée facultative et une couche de sortie.  
@@ -106,15 +106,15 @@ ms.locfileid: "36139938"
   
  **Valeurs discrètes**  
   
- Μ = p-probabilité antérieure d’un état  
+ Μg = p : probabilité antérieure d’un état  
   
  StdDev = sqrt(p(1-p))  
   
  **Valeurs continues**  
   
- Valeur présente = 1 - μ/σ  
+ Valeur présente = 1 - μg/σ  
   
- Aucune valeur existante = - μ/σ  
+ Aucune valeur existante = - μg/σ  
   
  Une fois les valeurs encodées, les entrées font l'objet d'une addition pondérée, avec les contours du réseau comme poids.  
   
@@ -205,8 +205,8 @@ ms.locfileid: "36139938"
 >  Les types de contenu Cyclique et Trié sont pris en charge, mais l'algorithme les traite comme des valeurs discrètes et n'effectue pas de traitement spécial.  
   
 ## <a name="see-also"></a>Voir aussi  
- [MNN (Microsoft Neural Network)](microsoft-neural-network-algorithm.md)   
- [Exploration du contenu du modèle pour les modèles de réseau neuronal &#40;Analysis Services - Exploration de données&#41;](mining-model-content-for-neural-network-models-analysis-services-data-mining.md)   
+ [Algorithme de réseau neuronal de Microsoft](microsoft-neural-network-algorithm.md)   
+ [Contenu du modèle pour les modèles de réseau neuronal d’exploration de données &#40;Analysis Services - Exploration de données&#41;](mining-model-content-for-neural-network-models-analysis-services-data-mining.md)   
  [Exemples de requêtes de modèle de réseau neuronal](neural-network-model-query-examples.md)  
   
   

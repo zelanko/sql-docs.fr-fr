@@ -1,5 +1,5 @@
 ---
-title: Gestion des Exceptions SMO | Documents Microsoft
+title: Gestion des Exceptions SMO | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - inner exceptions [SMO]
 ms.assetid: 4c725ff2-6588-44ca-b86a-87979e164153
 caps.latest.revision: 39
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 329cc87a9a82545708f71202f15de4eb219463e7
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 2d8e121a9fdc76073a016041f102fa36e6685f72
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36140937"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37299839"
 ---
 # <a name="handling-smo-exceptions"></a>Gestion des exceptions SMO
   En code managé, des exceptions sont levées lorsqu'une erreur se produit. Les méthodes et propriétés SMO ne signalent ni la réussite ni l'échec dans la valeur de retour. Au lieu de cela, les exceptions peuvent être interceptées et gérées par un gestionnaire d'exceptions.  
@@ -35,12 +35,12 @@ ms.locfileid: "36140937"
  Les instructions de gestion des exceptions sont spécifiques au langage de programmation. Par exemple, dans [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual Basic, il s'agit de l'instruction `Catch`.  
   
 ## <a name="inner-exceptions"></a>Exceptions internes  
- Les exceptions peuvent être générales ou spécifiques. Les exceptions générales contiennent un jeu d'exceptions spécifiques. Plusieurs `Catch` instructions peuvent être utilisées pour gérer les erreurs anticipées et faire restantes passer les erreurs à l’exception générale, la gestion du code. Les exceptions se produisent souvent dans une séquence en cascade. Il arrive fréquemment qu'une exception SMO soit provoquée par une exception SQL. Détecter consiste à utiliser le `InnerException` propriété successivement pour déterminer l’exception d’origine ayant provoqué l’exception finale, de niveau supérieur.  
+ Les exceptions peuvent être générales ou spécifiques. Les exceptions générales contiennent un jeu d'exceptions spécifiques. Plusieurs `Catch` instructions peuvent être utilisées pour gérer les erreurs anticipées et faire passer les erreurs via Gestion des code exceptions générales restantes. Les exceptions se produisent souvent dans une séquence en cascade. Il arrive fréquemment qu'une exception SMO soit provoquée par une exception SQL. Pour le détecter cela consiste à utiliser le `InnerException` propriété successivement pour déterminer l’exception d’origine ayant provoqué l’exception finale, de niveau supérieur.  
   
 > [!NOTE]  
->  Le `SQLException` exception est déclaré dans le **System.Data.SqlClient** espace de noms.  
+>  Le `SQLException` exception est déclarée dans le **System.Data.SqlClient** espace de noms.  
   
- ![Diagramme illustrant les niveaux à partir de laquelle une excp](../../../database-engine/dev-guide/media/exception-flow.gif "un diagramme qui affiche les niveaux à partir de laquelle une excp")  
+ ![Un diagramme qui montre les niveaux à partir de laquelle un excp](../../../database-engine/dev-guide/media/exception-flow.gif "un diagramme qui montre les niveaux à partir de laquelle un excp")  
   
  Le diagramme affiche le flux d'exceptions à travers les couches de l'application.  
   

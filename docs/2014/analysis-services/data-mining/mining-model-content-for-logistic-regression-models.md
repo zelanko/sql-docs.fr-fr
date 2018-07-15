@@ -1,5 +1,5 @@
 ---
-title: Exploration du contenu du modèle pour les modèles de régression logistique (Analysis Services - Exploration de données) | Documents Microsoft
+title: Contenu du modèle pour les modèles de régression logistique d’exploration de données (Analysis Services - Exploration de données) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - logistic regression [Analysis Services]
 - mining model content, logistic regression models
 - regression algorithms [Analysis Services]
 ms.assetid: 69cc0b86-e8bc-4d6c-903e-85724f5c0396
 caps.latest.revision: 15
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: e9846361e76eac9f4ad61edde10c0fda20f4f546
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 6af2d4d2e3f5007cbe0721fe734073e7306b95a3
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36038482"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37328931"
 ---
 # <a name="mining-model-content-for-logistic-regression-models-analysis-services---data-mining"></a>Contenu du modèle d'exploration de données pour les modèles de régression logistique (Analysis Services - Exploration de données)
   Cette rubrique décrit le contenu du modèle d'exploration de données spécifique aux modèles qui utilisent l'algorithme MLR (Microsoft Logistic Regression). Pour obtenir une explication sur la procédure d’interprétation des statistiques et de la structure partagées par tous les types de modèles et pour obtenir des définitions générales de termes en rapport avec le contenu du modèle d’exploration de données, consultez [Contenu du modèle d’exploration &#40;Analysis Services - Exploration de données&#41;](mining-model-content-analysis-services-data-mining.md).  
@@ -188,9 +188,9 @@ ms.locfileid: "36038482"
  Vous pouvez utiliser ces ID pour déterminer comment les attributs de sortie sont liés aux attributs spécifiques de la couche d'entrée, en consultant la table NODE_DISTRIBUTION du nœud de sortie. Chaque ligne de cette table contient un ID qui renvoie à un nœud d'attribut d'entrée spécifique. La table NODE_DISTRIBUTION contient également le coefficient correspondant à cette paire entrée/sortie.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Algorithme Microsoft Logistic Regression](microsoft-logistic-regression-algorithm.md)   
- [Exploration du contenu du modèle pour les modèles de réseau neuronal &#40;Analysis Services - Exploration de données&#41;](mining-model-content-for-neural-network-models-analysis-services-data-mining.md)   
- [Exemples de requêtes de modèle de régression logistique](logistic-regression-model-query-examples.md)   
+ [Algorithme de régression logistique de Microsoft](microsoft-logistic-regression-algorithm.md)   
+ [Contenu du modèle pour les modèles de réseau neuronal d’exploration de données &#40;Analysis Services - Exploration de données&#41;](mining-model-content-for-neural-network-models-analysis-services-data-mining.md)   
+ [Exemples de requête de modèle de régression logistique](logistic-regression-model-query-examples.md)   
  [Informations techniques de référence sur l’algorithme Microsoft Logistic Regression](microsoft-logistic-regression-algorithm-technical-reference.md)  
   
   

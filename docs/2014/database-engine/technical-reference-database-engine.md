@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - technical reference [SQL Server Database Engine]
 - Database Engine [SQL Server], getting assistance
@@ -16,13 +16,13 @@ ms.assetid: e9533f6b-c48a-4f53-a7a0-379e092bb667
 caps.latest.revision: 31
 author: craigg-msft
 ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: d4632f40972cfa555358746dac5b0ff49422e61a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: c79c55c9eab4c165f2fd49e57c622a802c549375
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36052004"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37298929"
 ---
 # <a name="technical-reference-database-engine"></a>Informations techniques de référence (moteur de base de données)
   Trouvez la documentation de référence de programmation relative aux outils, langages et à l'administration pour le [!INCLUDE[ssDE](../includes/ssde-md.md)] dans [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)].  
@@ -34,7 +34,7 @@ ms.locfileid: "36052004"
   
  [Aide (F1) de Visual Database Tools](../ssms/visual-db-tools/visual-database-tools-f1-help.md)  
   
- ![Icône de dossier petit fichier](../../2014/integration-services/media/filefolder-small.gif "petite icône du dossier") **référence utilitaire d’invite de commandes**  
+ ![Icône de dossier petit fichier](../../2014/integration-services/media/filefolder-small.gif "icône dossier de petits fichiers") **référence utilitaire d’invite de commandes**  
  [Utilitaire bcp](../tools/bcp-utility.md)  
   
  [Utilitaire dta](../tools/dta/dta-utility.md)  
@@ -43,15 +43,15 @@ ms.locfileid: "36052004"
   
  [Plus…](../tools/command-prompt-utility-reference-database-engine.md)  
   
- ![Icône de dossier petit fichier](../../2014/integration-services/media/filefolder-small.gif "petite icône du dossier") **applets de commande PowerShell de moteur de base de données**  
+ ![Icône de dossier petit fichier](../../2014/integration-services/media/filefolder-small.gif "icône dossier de petits fichiers") **applets de commande PowerShell du moteur de base de données**  
  [Invoke-PolicyEvaluation (applet de commande)](../../2014/database-engine/invoke-policyevaluation-cmdlet.md)  
   
  [Invoke-Sqlcmd, applet de commande](../../2014/database-engine/invoke-sqlcmd-cmdlet.md)  
   
- ![Icône de dossier petit fichier](../../2014/integration-services/media/filefolder-small.gif "petite icône du dossier") **erreurs et événements référence**  
+ ![Icône de dossier petit fichier](../../2014/integration-services/media/filefolder-small.gif "icône dossier de petits fichiers") **erreurs et référence des événements**  
  [Erreurs et les événements du moteur de base de données] (.. /Relational-Databases/Errors-Events/Database-Engine-Events-and-Errors.md0  
   
- ![Icône de dossier petit fichier](../../2014/integration-services/media/filefolder-small.gif "petite icône du dossier") **de référence des opérateurs logiques et physiques Showplan**  
+ ![Icône de dossier petit fichier](../../2014/integration-services/media/filefolder-small.gif "icône dossier de petits fichiers") **Showplan de référence des opérateurs logiques et physiques**  
  [Guide de référence des opérateurs Showplan logiques et physiques](../relational-databases/showplan-logical-and-physical-operators-reference.md)  
   
   

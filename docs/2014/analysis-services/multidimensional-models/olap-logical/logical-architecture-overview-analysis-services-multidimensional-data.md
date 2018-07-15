@@ -1,5 +1,5 @@
 ---
-title: Vue d’ensemble de l’Architecture logique (Analysis Services - données multidimensionnelles) | Documents Microsoft
+title: Présentation de l’Architecture logique (Analysis Services - données multidimensionnelles) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
@@ -15,23 +15,23 @@ helpviewer_keywords:
 - cubes [Analysis Services], about cubes
 ms.assetid: 1a547bce-dacf-4d32-bc0f-3829f4b026e1
 caps.latest.revision: 40
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 89260e7ed530216d514e3237ed0ffe11322e17d9
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: c2d249097413675c4284bc8d19038eebbf88f446
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36142375"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37284115"
 ---
 # <a name="logical-architecture-overview-analysis-services---multidimensional-data"></a>Vue d'ensemble de l'architecture logique (Analysis Services - données multidimensionnelles)
   Analysis Services s'exécute en mode de déploiement du serveur qui détermine l'architecture de la mémoire et l'environnement d'exécution utilisés par différents types de modèles Analysis Services. Le mode serveur est déterminé lors de l'installation. **Mode multidimensionnel et exploration de données** prend en charge OLAP traditionnel et exploration de données. **En mode tabulaire** prend en charge les modèles tabulaires. **En mode intégré SharePoint** fait référence à une instance d’Analysis Services qui a été installé en tant que PowerPivot pour SharePoint, utilisé pour le chargement et l’interrogation de modèles de données Excel ou PowerPivot à l’intérieur d’un classeur.  
   
- Cette rubrique explique l'architecture de base d'Analysis Services lors de l'exploitation en mode multidimensionnel et d'exploration de données. Pour plus d’informations sur les autres modes, consultez [de modélisation tabulaire &#40;tabulaire SSAS&#41; ](../../tabular-models/tabular-models-ssas.md) et [comparaison sous forme de tableau et les Solutions multidimensionnelles &#40;SSAS&#41;](../../../analysis-services/comparing-tabular-and-multidimensional-solutions-ssas.md).  
+ Cette rubrique explique l'architecture de base d'Analysis Services lors de l'exploitation en mode multidimensionnel et d'exploration de données. Pour plus d’informations sur les autres modes, consultez [modélisation tabulaire &#40;tabulaire SSAS&#41; ](../../tabular-models/tabular-models-ssas.md) et [comparaison sous forme de tableau et les Solutions multidimensionnelles &#40;SSAS&#41;](../../../analysis-services/comparing-tabular-and-multidimensional-solutions-ssas.md).  
   
 ## <a name="basic-architecture"></a>Architecture de base  
- Une instance d'[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] peut contenir plusieurs bases de données, et une base de données peut contenir en même temps des objets OLAP et des objets d'exploration de données. Les applications se connectent à une instance spécifiée de [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] et à une base de données spécifiée. Un ordinateur serveur peut héberger plusieurs instances de [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]. Instances de [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] sont nommés «\<nom_serveur >\\< nom_instance\>». L’illustration suivante montre toutes les relations mentionnées entre [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] objets.  
+ Une instance d'[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] peut contenir plusieurs bases de données, et une base de données peut contenir en même temps des objets OLAP et des objets d'exploration de données. Les applications se connectent à une instance spécifiée de [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] et à une base de données spécifiée. Un ordinateur serveur peut héberger plusieurs instances de [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]. Instances de [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] sont nommées en tant que «\<nom_serveur >\\< nom_instance\>». L’illustration suivante montre toutes les relations mentionnées entre [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] objets.  
   
  ![Relations d’objets AMO en cours d’exécution](../../../analysis-services/dev-guide/media/amo-runningobjects.gif "relations d’objets AMO en cours d’exécution")  
   
@@ -77,7 +77,7 @@ ms.locfileid: "36142375"
  La dimension Route représente le mode de transport par lequel les importations arrivent à destination. Les membres de cette dimension sont notamment ground, nonground, air, sea, road ou rail. La dimension Source représente les lieux de production des biens importés, par exemple Africa ou Asia. La dimension Time représente les trimestres et les semestres d'une année.  
   
 ### <a name="aggregates"></a>Agrégats  
- Les utilisateurs professionnels d'un cube peuvent déterminer les valeurs des mesures pour chaque membre de toutes les dimensions, quel que soit le niveau du membre dans la dimension, parce que [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] agrège les valeurs à des niveaux supérieurs s'il y a lieu. Par exemple, les valeurs de mesure dans l’illustration précédente peuvent être agrégées en fonction d’une hiérarchie de calendrier standard à l’aide de la hiérarchie de calendrier dans la dimension de temps, comme illustré dans le diagramme suivant.  
+ Les utilisateurs professionnels d'un cube peuvent déterminer les valeurs des mesures pour chaque membre de toutes les dimensions, quel que soit le niveau du membre dans la dimension, parce que [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] agrège les valeurs à des niveaux supérieurs s'il y a lieu. Par exemple, les valeurs de mesure dans l’illustration précédente peuvent être agrégées en fonction d’une hiérarchie de calendrier standard à l’aide de la hiérarchie de temps de calendrier dans la dimension de temps, comme illustré dans le diagramme suivant.  
   
  ![Diagramme de mesures organisé le long de la dimension de temps](../../../analysis-services/dev-guide/media/cubeintro2.gif "diagramme de mesures organisé le long de la dimension de temps")  
   
@@ -87,9 +87,9 @@ ms.locfileid: "36142375"
 |-|-|-|--------------|-|-|----------|-|-|  
 ||||All Sources|Eastern Hemisphere|Western Hemisphere|All Sources|Eastern Hemisphere|Western Hemisphere|  
 |All Time|||25110|6547|18563|DEC-29-99|DEC-22-99|DEC-29-99|  
-||1st half||11173|2977|8196|Jun-28-99|Jun-20-99|Jun-28-99|  
+||1st half||11173|2977|8196|Jun-28-99|Juin-20-99|Jun-28-99|  
 |||1st quarter|5108|1452|3656|Mar-30-99|Mar-19-99|Mar-30-99|  
-|||2nd quarter|6065|1525|4540|Jun-28-99|Jun-20-99|Jun-28-99|  
+|||2nd quarter|6065|1525|4540|Jun-28-99|Juin-20-99|Jun-28-99|  
 ||2nd half||13937|3570|10367|DEC-29-99|DEC-22-99|DEC-29-99|  
 |||3rd quarter|6119|1444|4675|Sep-30-99|SEP-18-99|Sep-30-99|  
 |||4th quarter|7818|2126|5692|DEC-29-99|DEC-22-99|DEC-29-99|  
@@ -110,7 +110,7 @@ ms.locfileid: "36142375"
 |Attribut Half dans la dimension Time|1st half,2nd half|TimeDimensionTable|Half|2nd half|  
 |Attribut Quarter dans la dimension Time|1st quarter,2nd quarter,3rd quarter,4th quarter|TimeDimensionTable|Quarter|3rd quarter|  
   
- Les données d'une cellule de cube proviennent généralement de plusieurs lignes de la table de faits. Par exemple, la cellule du cube à l’intersection du membre air, du membre Africa et du membre quarter 1er contient une valeur qui est dérivée en agrégeant les lignes suivantes dans le **ImportsFactTable** table de faits.  
+ Les données d'une cellule de cube proviennent généralement de plusieurs lignes de la table de faits. Par exemple, la cellule du cube à l’intersection du membre air, du membre Africa et du membre 1 st quarter contient une valeur qui est dérivée en agrégeant les lignes suivantes dans le **ImportsFactTable** table de faits.  
   
 |||||||  
 |-|-|-|-|-|-|  
@@ -122,7 +122,7 @@ ms.locfileid: "36142375"
 |3645541| 1|6| 1|20|Feb-09-99|  
 |3674906| 1|6| 1|36|Feb-17-99|  
   
- Dans le tableau précédent, chaque ligne possède les mêmes valeurs pour le **RouteKey**, **SourceKey**, et **TimeKey** colonnes, indiquant que ces lignes participent à la même cellule de cube.  
+ Dans le tableau précédent, chaque ligne a les mêmes valeurs pour le **RouteKey**, **SourceKey**, et **TimeKey** colonnes, indiquant que ces lignes participent à la même cellule de cube.  
   
  L'exemple présenté ici concerne un cube très simple, qui n'a qu'un seul groupe de mesures et auquel toutes les tables de dimension sont jointes à la table de faits dans un schéma en étoile. Dans un autre schéma commun, appelé schéma en flocons, une ou plusieurs tables de dimension sont jointes à une autre table de dimension au lieu d'être jointes directement à la table de faits. **Rubrique connexe :**[Dimensions &#40;Analysis Services - données multidimensionnelles&#41;](../../multidimensional-models-olap-logical-dimension-objects/dimensions-analysis-services-multidimensional-data.md).  
   

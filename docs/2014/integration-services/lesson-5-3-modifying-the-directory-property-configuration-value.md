@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: ba2a091f-361c-4331-afe2-53b465164c36
 caps.latest.revision: 29
-author: douglaslM
+author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: f9e1be6c1c9fc9abb12716cda9ba244d8ce5427b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 8675de132f15b723b6d7d2a651d31ef7b3e85063
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36140991"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37304269"
 ---
 # <a name="step-3-modifying-the-directory-property-configuration-value"></a>Étape 3 : modification de la valeur de configuration de la propriété Directory
   Dans cette tâche, vous modifiez le paramètre de configuration (stocké dans le fichier SSISTutorial.dtsConfig) pour la propriété Value de la variable de niveau package `User::varFolderName`. Cette variable met à jour la propriété Directory du conteneur de boucles Foreach. La valeur modifiée pointe vers le `New Sample Data` dossier que vous avez créé dans la tâche précédente. Une fois le paramètre de configuration modifié et le package exécuté, la propriété Directory est mise à jour par la variable, en utilisant la valeur récupérée dans le fichier de configuration au lieu de la valeur de la propriété Directory configurée au départ dans le package.  
@@ -37,6 +37,6 @@ ms.locfileid: "36140991"
 3.  Enregistrez les modifications, puis fermez l'éditeur de texte.  
   
 ## <a name="next-task-in-lesson"></a>Tâche suivante de la leçon  
- [Étape 4 : Test de la leçon 5 du Package du didacticiel](../integration-services/lesson-5-4-testing-the-lesson-5-tutorial-package.md)  
+ [Étape 4 : Test de la leçon 5 du Package du tutoriel](../integration-services/lesson-5-4-testing-the-lesson-5-tutorial-package.md)  
   
   

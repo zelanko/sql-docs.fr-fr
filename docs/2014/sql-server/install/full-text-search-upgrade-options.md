@@ -1,5 +1,5 @@
 ---
-title: Options de mise à niveau de recherche en texte intégral | Documents Microsoft
+title: Options de mise à niveau de recherche en texte intégral | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - Full-Text Search
 - Upgrade options, Full-Text Search
@@ -16,13 +16,13 @@ ms.assetid: 16c9376b-5fbb-4495-a429-06a2493849c9
 caps.latest.revision: 18
 author: craigg-msft
 ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: af3bf4f26b94e6fc8ce18c07ed052ef53087f68c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 52490126091c122a272d0404f95026a1d68d12ea
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36154309"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37280715"
 ---
 # <a name="full-text-search-upgrade-options"></a>Options de mise à niveau de recherche en texte intégral
   Utilisez la page des options de mise à niveau de recherche en texte intégral de l'Assistant Installation [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pour sélectionner l'option de mise à niveau de recherche en texte intégral à utiliser pour les bases de données que vous mettez actuellement à niveau.  

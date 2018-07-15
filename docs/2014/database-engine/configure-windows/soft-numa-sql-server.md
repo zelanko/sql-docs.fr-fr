@@ -1,5 +1,5 @@
 ---
-title: Configurer SQL Server pour utiliser Soft-NUMA (SQL Server) | Documents Microsoft
+title: Configurer SQL Server pour utiliser Soft-NUMA (SQL Server) | Microsoft Docs
 ms.custom: ''
 ms.date: 07/12/2016
 ms.prod: sql-server-2014
@@ -8,35 +8,35 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - NUMA
 - non-uniform memory access
 ms.assetid: 1af22188-e08b-4c80-a27e-4ae6ed9ff969
 caps.latest.revision: 38
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 827975fcb4c5bbba6253f3b44e1813a6e70f6fcf
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
+ms.openlocfilehash: 434e569b17fa70b6f6b3f4763e54e08e271dc99b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36153315"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37279557"
 ---
 # <a name="configure-sql-server-to-use-soft-numa-sql-server"></a>Configurer SQL Server pour utiliser soft-NUMA (SQL Server)
-Les processeurs modernes disposent de nombreux noyaux par socket. Chaque socket est généralement représenté sous forme de nœud NUMA unique. Le moteur de base de données SQL Server partitionne plusieurs structures internes et threads de service de partitionnement par nœud NUMA. Les processeurs contenant 10 noyaux par socket, à l’aide de logiciels NUMA (soft-NUMA) pour fractionner les nœuds NUMA matériels généralement augmente l’évolutivité et les performances.   
+Les processeurs modernes disposent de nombreux noyaux par socket. Chaque socket est généralement représenté sous forme de nœud NUMA unique. Le moteur de base de données SQL Server partitionne plusieurs structures internes et threads de service de partitionnement par nœud NUMA. Avec les processeurs contenant 10 ou plusieurs noyaux par socket, à l’aide de logiciels NUMA (soft-NUMA) pour fractionner les nœuds NUMA matériels généralement augmente l’évolutivité et performances.   
 
 > [!NOTE]
 > Les processeurs ajoutés à chaud ne sont pas pris en charge par le soft-NUMA.
   
 ## <a name="automatic-soft-numa"></a>Soft-NUMA automatique
 
-Nœuds soft-NUMA depuis SQL Server 2014 Service Pack 2, chaque fois que le serveur du moteur de base de données détecte plus de 8 processeurs physiques au démarrage, sont créés automatiquement si l’indicateur de trace 8079 est activé en tant que paramètre de démarrage. Hyper-threaded cœurs d’UC ne sont pas prises en compte pour lors du décompte des processeurs physiques. Lorsque le nombre de processeurs physiques détecté est supérieur à 8 par socket, le service de moteur de base de données crée des nœuds soft-NUMA que dans l’idéal, contient 8 cœurs, mais peuvent descendre 5 à 9 processeurs logiques par nœud. La taille du nœud matériel peut être limitée par un masque d'affinité de l’UC. Le nombre de nœuds NUMA ne dépasse jamais le nombre maximal de nœuds NUMA pris en charge.
+Nœuds soft-NUMA à partir de SQL Server 2014 Service Pack 2, chaque fois que le serveur de moteur de base de données détecte plus de 8 processeurs physiques au démarrage, sont créés automatiquement si l’indicateur de trace 8079 est activé en tant que paramètre de démarrage. Cœurs de processeurs multithreads ne sont pas prises en compte pour lors du décompte des processeurs physiques. Lorsque le nombre de processeurs physiques détectés est supérieur à 8 par socket, le service de moteur de base de données crée des nœuds soft-NUMA que dans l’idéal, contient 8 cœurs, chiffre peuvent varier de 5 ou jusqu'à 9 processeurs logiques par nœud. La taille du nœud matériel peut être limitée par un masque d'affinité de l’UC. Le nombre de nœuds NUMA ne dépasse jamais le nombre maximal de nœuds NUMA pris en charge.
 
 Sans l’indicateur de trace, soft-NUMA est désactivée par défaut. Vous pouvez activer soft-NUMA à l’aide de l’indicateur de trace 8079. La modification de ce paramètre requiert le redémarrage du moteur de base de données pour s’appliquer.
 
-La figure ci-dessous montre le type d’informations concernant le soft-NUMA que vous voyez dans le journal des erreurs SQL Server lorsque SQL Server détecte des nœuds NUMA matériels avec plus de 8 processeurs logiques et si l’indicateur de trace 8079 est activée.
+La figure ci-dessous illustre le type d’informations concernant le soft-NUMA qui s’affiche dans le journal des erreurs SQL Server lorsque SQL Server détecte des nœuds NUMA matériels avec plus de 8 processeurs logiques et si l’indicateur de trace 8079 est activé.
 
 ![Soft-NUMA](./media/soft-numa-sql-server/soft-numa.PNG)
 

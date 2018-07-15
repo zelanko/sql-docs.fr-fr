@@ -8,25 +8,25 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.impexpwizard.configureflatfiledest.f1
 ms.assetid: 318e8da0-37d3-46cd-943a-fc5d66aad93a
 caps.latest.revision: 30
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 033b602d712d4ec6e0caf136b1228cd82b552e08
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 14e1742f83496b2976466d152cdd7aab39f76346
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36052655"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37289365"
 ---
 # <a name="configure-flat-file-destination-sql-server-import-and-export-wizard"></a>Configurer la destination du fichier plat (Assistant Importation et Exportation SQL Server)
-  Utilisez le **configurer la Destination de fichier plat** pour spécifier les options de mise en forme pour le fichier plat de destination, ainsi que pour afficher un aperçu des résultats avant de continuer.  
+  Utilisez le **configurer la Destination de fichier plat** page pour spécifier les options de mise en forme pour le fichier plat de destination et de prévisualiser les résultats avant de continuer.  
   
- Pour en savoir plus sur cet Assistant, consultez [SQL Server Assistant Importation et exportation](import-and-export-data-with-the-sql-server-import-and-export-wizard.md). Pour en savoir plus sur les options de démarrage de l’Assistant, ainsi que les autorisations requises pour exécuter l’Assistant, consultez [exécuter le SQL Server Assistant Importation et exportation](start-the-sql-server-import-and-export-wizard.md).  
+ Pour en savoir plus sur cet Assistant, consultez [SQL Server Assistant Importation et exportation](import-and-export-data-with-the-sql-server-import-and-export-wizard.md). Pour en savoir plus sur les options de démarrage de l’Assistant, ainsi que les autorisations requises pour exécuter l’Assistant avec succès, consultez [exécuter le SQL Server Assistant Importation et exportation](start-the-sql-server-import-and-export-wizard.md).  
   
  La fonction de l'Assistant Importation et Exportation SQL Server est de copier des données d'une source vers une destination. L'Assistant peut également créer une base de données de destination et des tables de destination à votre intention. Toutefois, si vous devez copier plusieurs tables ou bases de données, ou autres types d'objets de bases de données, vous devez plutôt utiliser l'Assistant Copie de base de données. Pour plus d'informations, consultez [Use the Copy Database Wizard](../../relational-databases/databases/use-the-copy-database-wizard.md).  
   
@@ -63,9 +63,9 @@ ms.locfileid: "36052655"
 |**Barre verticale {&#124;}**|Les colonnes sont délimitées par une barre verticale.|  
   
  **Aperçu**  
- Afficher dans le **aperçu des données** boîte de dialogue options des résultats de la mise en forme sélectionnée pour le fichier plat de destination.  
+ Afficher dans le **aperçu des données** boîte de dialogue options de résultats de la mise en forme sélectionnée pour le fichier plat de destination.  
   
  **Modifier la transformation**  
- Supprimer des lignes, d’ajouter des lignes et de configurer des colonnes dans le fichier de destination à l’aide de la **mappages de colonnes** boîte de dialogue.  
+ Supprimer des lignes, ajouter des lignes et configurer des colonnes dans le fichier de destination à l’aide de la **mappages de colonnes** boîte de dialogue.  
   
   

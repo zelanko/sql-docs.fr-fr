@@ -1,5 +1,5 @@
 ---
-title: L’octroi d’autorisations de base de données de processus | Documents Microsoft
+title: Octroi d’autorisations de base de données de processus | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 69ba952e-09ae-49a9-9297-00e32e8e89a8
 caps.latest.revision: 17
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: jhubbard
-ms.openlocfilehash: c309ca3781bea3594c6d7e8d1b912730371635e7
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 2f3cce413fa5a5c47afa5ea9a97b142a75d23472
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36152728"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37306519"
 ---
 # <a name="granting-process-database-permissions"></a>Attribution de l'autorisation de traiter la base de données
   Après avoir installé une instance de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], tous les membres du rôle d'administrateur de serveur [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] dans cette instance disposent d'autorisations sur le serveur pour exécuter n'importe quelle tâche dans l'instance de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. Par défaut, aucun autre utilisateur n'est autorisé à administrer ou afficher des objets dans l'instance de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)].  
@@ -34,7 +34,7 @@ ms.locfileid: "36152728"
   
 2.  Activez la case à cocher **Traiter la base de données** .  
   
-3.  Dans la fenêtre Propriétés, modifiez la **nom** propriété pour ce nouveau rôle en `Process Database Objects Role`.  
+3.  Dans la fenêtre Propriétés, modifiez le **nom** propriété pour ce nouveau rôle en `Process Database Objects Role`.  
   
      ![Concepteur de rôle](../../2014/tutorials/media/l10-security-1.png "Concepteur de rôle")  
   

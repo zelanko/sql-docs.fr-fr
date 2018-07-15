@@ -1,14 +1,13 @@
 ---
-title: Basculement et Modes de basculement (groupes de disponibilité AlwaysOn) | Documents Microsoft
+title: Basculement et Modes de basculement (groupes de disponibilité AlwaysOn) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Availability Groups [SQL Server], availability replicas
 - Availability Groups [SQL Server], failover
@@ -16,15 +15,15 @@ helpviewer_keywords:
 - failover [SQL Server], AlwaysOn Availability Groups
 ms.assetid: 378d2d63-50b9-420b-bafb-d375543fda17
 caps.latest.revision: 71
-author: MikeRayMSFT
-ms.author: mikeray
-manager: jhubbard
-ms.openlocfilehash: a2bff986de8e70cca18a5dc978ed05db9cc42061
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 03cbd2d25c3695cc24438bc2b7f871b7cd5093f3
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36154697"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37310439"
 ---
 # <a name="failover-and-failover-modes-alwayson-availability-groups"></a>Basculement et modes de basculement (groupes de disponibilité AlwaysOn)
   Dans le contexte d'un groupe de disponibilité, le rôle principal et le rôle secondaire des réplicas de disponibilité sont généralement interchangeables au moyen d'un processus appelé *basculement*. Trois formes de basculement existent : basculement automatique (sans perte de données), basculement manuel planifié (sans perte de données) et basculement manuel forcé (avec perte de données possible), ce dernier étant généralement appelé *basculement forcé*. Les basculements automatiques et planifiés manuels préservent vos données. Un groupe de disponibilité bascule au niveau d'un réplica de disponibilité. Autrement dit, un groupe de disponibilité bascule vers l’un de ses réplicas secondaires ( *cible de basculement*actuelle).  
@@ -239,14 +238,14 @@ ms.locfileid: "36154697"
   
 1.  Connectez-vous au réplica principal.  
   
-2.  Requête le `last_commit_lsn` (LSN de la dernière transaction validée) et `last_commit_time` colonnes (heure de la dernière validation) de le [sys.dm_hadr_database_replica_states](/sql/relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-states-transact-sql) vue de gestion dynamique.  
+2.  Requête la `last_commit_lsn` (LSN de la dernière transaction validée) et `last_commit_time` colonnes (heure de la dernière validation) de la [sys.dm_hadr_database_replica_states](/sql/relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-states-transact-sql) vue de gestion dynamique.  
   
 3.  Comparez les valeurs retournées pour chaque base de données primaire et pour chacune de ses bases de données secondaires. La différence entre leurs LSN de dernière validation indique le niveau du décalage.  
   
 4.  Vous pouvez déclencher une alerte lorsque le niveau de décalage de la base de données, ou d'un ensemble de bases de données, dépasse le décalage maximal autorisé pour une période donnée. Par exemple, la requête peut être exécutée par une tâche qui s'exécute toutes les minutes sur chaque base de données primaire. Si la différence entre le `last_commit_time` de la base de données primaire et de chacune de ses bases de données secondaires dépasse l'objectif de point de récupération (RPO) (par exemple, 5 minutes) depuis la dernière exécution de la tâche, celle-ci peut déclencher une alerte.  
   
 > [!IMPORTANT]  
->  Lorsque le cluster WSFC ne dispose pas de quorum ou quorum a été forcé, `last_commit_lsn` et `last_commit_time` ont la valeur NULL. Pour plus d’informations sur la façon d’éviter la perte de données après avoir forcé un quorum, consultez « Méthodes possibles pour éviter la perte de données après un quorum forcé » dans [Effectuer un basculement manuel forcé d’un groupe de disponibilité &#40;SQL Server&#41;](perform-a-forced-manual-failover-of-an-availability-group-sql-server.md).  
+>  Lorsque le cluster WSFC ne dispose pas de quorum ou de quorum a été forcé, `last_commit_lsn` et `last_commit_time` ont la valeur NULL. Pour plus d’informations sur la façon d’éviter la perte de données après avoir forcé un quorum, consultez « Méthodes possibles pour éviter la perte de données après un quorum forcé » dans [Effectuer un basculement manuel forcé d’un groupe de disponibilité &#40;SQL Server&#41;](perform-a-forced-manual-failover-of-an-availability-group-sql-server.md).  
   
 ###  <a name="ForcedFailoverManagingDataLoss"></a> Gestion de la perte de données potentielle  
  Après un basculement forcé, toutes les bases de données secondaires sont interrompues. Cela inclut les anciennes bases de données principales, une fois que l'ancien réplica principal est repassé en ligne et découvre qu'il s'agit maintenant d'un réplica secondaire. Vous devez reprendre manuellement chaque base de données interrompue individuellement sur chaque réplica secondaire.  
@@ -313,13 +312,13 @@ ms.locfileid: "36154697"
   
 -   [Guide de Solutions Microsoft SQL Server AlwaysOn pour une haute disponibilité et récupération d’urgence](http://go.microsoft.com/fwlink/?LinkId=227600)  
   
--   [Blog de l’équipe AlwaysOn SQL Server : Le Blog officiel de SQL Server AlwaysOn équipe](http://blogs.msdn.com/b/sqlalwayson/)  
+-   [Blog de l’équipe AlwaysOn SQL Server : Le Blog officiel de SQL Server AlwaysOn Team](http://blogs.msdn.com/b/sqlalwayson/)  
   
 ## <a name="see-also"></a>Voir aussi  
  [Vue d’ensemble des groupes de disponibilité AlwaysOn &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   
  [Modes de disponibilité &#40;groupes de disponibilité AlwaysOn&#41;](availability-modes-always-on-availability-groups.md)   
  [Clustering de basculement Windows Server &#40;WSFC&#41; avec SQL Server](../../../sql-server/failover-clusters/windows/windows-server-failover-clustering-wsfc-with-sql-server.md)   
- [Les Transactions entre bases de données non pris en charge pour la mise en miroir de base de données ou de groupes de disponibilité AlwaysOn &#40;SQL Server&#41;](transactions-always-on-availability-and-database-mirroring.md)   
+ [Transactions entre bases de données non pris en charge pour la mise en miroir de base de données ou de groupes de disponibilité AlwaysOn &#40;SQL Server&#41;](transactions-always-on-availability-and-database-mirroring.md)   
  [Stratégie de basculement pour les instances de cluster de basculement](../../../sql-server/failover-clusters/windows/failover-policy-for-failover-cluster-instances.md)   
  [Stratégie flexible pour le basculement automatique d’un groupe de disponibilité &#40;Transact-SQL&#41;](flexible-automatic-failover-policy-availability-group.md)  
   

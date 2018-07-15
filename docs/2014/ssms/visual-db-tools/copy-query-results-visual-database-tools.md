@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Visual Database Tools [SQL Server], queries
 ms.assetid: 65883f21-c898-4857-a0b8-d1851e1486e1
 caps.latest.revision: 10
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 3400a487a7e5775908cdd4c1dd69f8bb134e2c23
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 200fd0b8db6b3816cd6870c153ca16e09aabfa9d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36152946"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37284355"
 ---
 # <a name="copy-query-results-visual-database-tools"></a>Copier les résultats d'une requête (Visual Database Tools)
   Vous pouvez copier le jeu de résultats sous la forme de texte séparé par des tabulations à partir du volet **Résultats** . Vous pouvez copier le jeu de résultats complet ou plusieurs lignes ou cellules contiguës ou non contiguës.  

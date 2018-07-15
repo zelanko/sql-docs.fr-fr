@@ -5,24 +5,23 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Availability Groups [SQL Server], about
 - Availability Groups [SQL Server], interoperability
 ms.assetid: daf87f90-2623-42ca-912c-b8f07d210510
 caps.latest.revision: 18
-author: rothja
-ms.author: jroth
-manager: jhubbard
-ms.openlocfilehash: e7a8ea0a461bb261b8a85769b0fe2048e6cc569c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 604933cc3cf24941ae0d1ef1b23c0966ffb007b3
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36144373"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37321189"
 ---
 # <a name="always-on-availability-groups-interoperability-sql-server"></a>Groupes de disponibilité Always On : interopérabilité (SQL Server)
   Cette rubrique documente l'interopérabilité de [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] avec d'autres fonctionnalités de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] dans [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)].  
@@ -34,22 +33,22 @@ ms.locfileid: "36144373"
   
 |Fonctionnalité|Informations supplémentaires|  
 |-------------|----------------------|  
-|Capture des données modifiées|[La réplication, le suivi des modifications, Capture de données modifiées et groupes de disponibilité AlwaysOn &#40;SQL Server&#41;](replicate-track-change-data-capture-always-on-availability.md)|  
-|Suivi des modifications|[La réplication, le suivi des modifications, Capture de données modifiées et groupes de disponibilité AlwaysOn &#40;SQL Server&#41;](replicate-track-change-data-capture-always-on-availability.md)|  
-|Bases de données autonomes|[Ces bases de données avec des groupes de disponibilité AlwaysOn (SQL Server)](always-on-availability-groups-sql-server.md)|  
-|Chiffrement de base de données|[Chiffrées des bases de données avec des groupes de disponibilité AlwaysOn &#40;SQL Server&#41;](encrypted-databases-with-always-on-availability-groups-sql-server.md)|  
-|Instantanés de base de données|[Avec les groupes de disponibilité AlwaysOn, les instantanés de base de données &#40;SQL Server&#41;](database-snapshots-with-always-on-availability-groups-sql-server.md)|  
+|Capture des données modifiées|[Réplication, le suivi des modifications, Capture de données modifiées et groupes de disponibilité AlwaysOn &#40;SQL Server&#41;](replicate-track-change-data-capture-always-on-availability.md)|  
+|Suivi des modifications|[Réplication, le suivi des modifications, Capture de données modifiées et groupes de disponibilité AlwaysOn &#40;SQL Server&#41;](replicate-track-change-data-capture-always-on-availability.md)|  
+|Bases de données autonomes|[Bases de données autonomes avec groupes de disponibilité AlwaysOn (SQL Server)](always-on-availability-groups-sql-server.md)|  
+|Chiffrement de base de données|[Bases de données avec des groupes de disponibilité AlwaysOn chiffrées &#40;SQL Server&#41;](encrypted-databases-with-always-on-availability-groups-sql-server.md)|  
+|Instantanés de base de données|[Base de données des captures instantanées avec les groupes de disponibilité AlwaysOn &#40;SQL Server&#41;](database-snapshots-with-always-on-availability-groups-sql-server.md)|  
 |FILESTREAM et FileTable|[FILESTREAM et FileTable avec groupes de disponibilité AlwaysOn &#40;SQL Server&#41;](filestream-and-filetable-with-always-on-availability-groups-sql-server.md)|  
 |Recherche en texte intégral|Remarque : les index de recherche en texte intégral sont synchronisés avec les bases de données secondaires AlwaysOn.|  
-|Envoi des journaux de transaction|[Conditions préalables pour la migration à partir de journaux de transaction vers les groupes de disponibilité AlwaysOn &#40;SQL Server&#41;](prereqs-migrating-log-shipping-to-always-on-availability-groups.md)|  
-|Magasin d'objets blob distants (RBS)|[Magasin d’objets Blob distants &#40;RBS&#41; et groupes de disponibilité AlwaysOn &#40;SQL Server&#41;](remote-blob-store-rbs-and-always-on-availability-groups-sql-server.md)|  
-|Réplication[configurer la réplication pour les groupes de disponibilité AlwaysOn (SQL Server)](configure-replication-for-always-on-availability-groups-sql-server.md)<br /><br /> [Gestion d’une base de données de Publication AlwaysOn &#40;SQL Server&#41;](maintaining-an-always-on-publication-database-sql-server.md)<br /><br /> [La réplication, le suivi des modifications, Capture de données modifiées et groupes de disponibilité AlwaysOn &#40;SQL Server&#41;](replicate-track-change-data-capture-always-on-availability.md)<br /><br /> [Abonnés de réplication et groupes de disponibilité AlwaysOn &#40;SQL Server&#41;](replication-subscribers-and-always-on-availability-groups-sql-server.md)|  
-|Analysis Services|[Analysis Services avec des groupes de disponibilité AlwaysOn](analysis-services-with-always-on-availability-groups.md)|  
+|Envoi des journaux de transaction|[Prérequis pour la migration à partir des journaux de transaction vers les groupes de disponibilité AlwaysOn &#40;SQL Server&#41;](prereqs-migrating-log-shipping-to-always-on-availability-groups.md)|  
+|Magasin d'objets blob distants (RBS)|[Remote Blob Store &#40;RBS&#41; et groupes de disponibilité AlwaysOn &#40;SQL Server&#41;](remote-blob-store-rbs-and-always-on-availability-groups-sql-server.md)|  
+|Réplication[configurer la réplication pour les groupes de disponibilité AlwaysOn (SQL Server)](configure-replication-for-always-on-availability-groups-sql-server.md)<br /><br /> [Maintenance d’une base de données de Publication AlwaysOn &#40;SQL Server&#41;](maintaining-an-always-on-publication-database-sql-server.md)<br /><br /> [Réplication, le suivi des modifications, Capture de données modifiées et groupes de disponibilité AlwaysOn &#40;SQL Server&#41;](replicate-track-change-data-capture-always-on-availability.md)<br /><br /> [Abonnés de réplication et groupes de disponibilité AlwaysOn &#40;SQL Server&#41;](replication-subscribers-and-always-on-availability-groups-sql-server.md)|  
+|Analysis Services|[Analysis Services avec les groupes de disponibilité AlwaysOn](analysis-services-with-always-on-availability-groups.md)|  
 |Reporting Services|Utilisez des réplicas secondaires en lecture seule comme source de données de création de rapports et réduisez la charge sur votre réplica principal en lecture-écriture.<br /><br /> [Reporting Services avec les groupes de disponibilité AlwaysOn &#40;SQL Server&#41;](reporting-services-with-always-on-availability-groups-sql-server.md)|  
 |Service Broker|[Service Broker avec les groupes de disponibilité AlwaysOn &#40;SQL Server&#41;](service-broker-with-always-on-availability-groups-sql-server.md)|  
 |SQL Server Agent||  
   
-##  <a name="NoInterop"></a> Fonctionnalités qui n’interagissent pas avec les groupes de disponibilité AlwaysOn  
+##  <a name="NoInterop"></a> Fonctionnalités qui n’interopèrent pas avec les groupes de disponibilité AlwaysOn  
  [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] n'interagit pas avec les fonctionnalités suivantes :  
   
 -   Transactions entre bases de données/transactions distribuées  
@@ -70,7 +69,7 @@ ms.locfileid: "36144373"
   
 -   **Livres blancs :**  
   
-     [Guide de migration : Migration vers les groupes de disponibilité AlwaysOn à partir des déploiements antérieurs combinant la mise en miroir de base de données et journaux de transaction](http://msdn.microsoft.com/library/jj635217)  
+     [Guide de migration : Migration vers les groupes de disponibilité AlwaysOn à partir des déploiements antérieurs combinant la mise en miroir de base de données et des journaux de transaction](http://msdn.microsoft.com/library/jj635217)  
   
      [Guide de Solutions Microsoft SQL Server AlwaysOn pour une haute disponibilité et récupération d’urgence](http://go.microsoft.com/fwlink/?LinkId=227600)  
   

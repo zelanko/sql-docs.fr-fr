@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - TSQL
 helpviewer_keywords:
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - dropping articles
 ms.assetid: 185b58fc-38c0-4abe-822e-6ec20066c863
 caps.latest.revision: 41
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: fa5cfaec81c0e2b22e7b66a36907daf57e443bdb
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: a9b4b452f37f06610ccccd042fd1aae6d616bac2
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36144222"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37305449"
 ---
 # <a name="delete-an-article"></a>Supprimer un article
   Cette rubrique explique comment supprimer un article dans [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] à l'aide de [!INCLUDE[tsql](../../../includes/tsql-md.md)] ou des objets RMO (Replication Management Objects). Pour plus d’informations sur les conditions dans lesquelles un article peut être supprimé et pour savoir si la suppression d’un article requiert un nouvel instantané ou la réinitialisation des abonnements, consultez [Ajouter et supprimer des articles de publications existantes](add-articles-to-and-drop-articles-from-existing-publications.md).  
@@ -72,7 +72,7 @@ ms.locfileid: "36144222"
   
 4.  Définissez la connexion créée à l'étape 1 pour la propriété <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> .  
   
-5.  Vérifiez la propriété <xref:Microsoft.SqlServer.Replication.ReplicationObject.IsExistingObject%2A> pour vérifier que l'article existe. Si la valeur de cette propriété est `false`, soit les propriétés d’article à l’étape 3 ont été définies de manière incorrecte ou l’article n’existe pas.  
+5.  Vérifiez la propriété <xref:Microsoft.SqlServer.Replication.ReplicationObject.IsExistingObject%2A> pour vérifier que l'article existe. Si la valeur de cette propriété est `false`, les propriétés de l’article à l’étape 3 ont été définies de manière incorrecte ou de l’article n’existe pas.  
   
 6.  Appelez la méthode <xref:Microsoft.SqlServer.Replication.Article.Remove%2A> .  
   
@@ -88,7 +88,7 @@ ms.locfileid: "36144222"
   
 4.  Définissez la connexion créée à l'étape 1 pour la propriété <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> .  
   
-5.  Vérifiez la propriété <xref:Microsoft.SqlServer.Replication.ReplicationObject.IsExistingObject%2A> pour vérifier que l'article existe. Si la valeur de cette propriété est `false`, soit les propriétés d’article à l’étape 3 ont été définies de manière incorrecte ou l’article n’existe pas.  
+5.  Vérifiez la propriété <xref:Microsoft.SqlServer.Replication.ReplicationObject.IsExistingObject%2A> pour vérifier que l'article existe. Si la valeur de cette propriété est `false`, les propriétés de l’article à l’étape 3 ont été définies de manière incorrecte ou de l’article n’existe pas.  
   
 6.  Appelez la méthode <xref:Microsoft.SqlServer.Replication.Article.Remove%2A> .  
   

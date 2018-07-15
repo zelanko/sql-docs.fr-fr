@@ -1,5 +1,5 @@
 ---
-title: Ajouter le Gestionnaire de connexions SSIS | Documents Microsoft
+title: Ajouter le Gestionnaire de connexions SSIS | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.adddtsconnection.f1
 helpviewer_keywords:
 - Add SSIS Connection Manager
 ms.assetid: 8b85278a-aa1f-4587-9e13-db3b7fcbadfb
 caps.latest.revision: 25
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 2ed1371dd53ededc54719f92460a317930a0537e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 2196ea43487a18ea30b6a09d96e85ae6cba33862
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36052673"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37295069"
 ---
 # <a name="add-ssis-connection-manager"></a>Ajout d'un gestionnaire de connexions SSIS
   La boîte de dialogue **Ajout d'un gestionnaire de connexions SSIS** vous permet de sélectionner le type de connexion à ajouter à un package.  
@@ -39,6 +39,6 @@ ms.locfileid: "36052673"
   
 ## <a name="see-also"></a>Voir aussi  
  [Integration Services Error and Message Reference](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Ajouter, supprimer ou partager un gestionnaire de connexions dans un Package](../../2014/integration-services/add-delete-or-share-a-connection-manager-in-a-package.md)  
+ [Ajouter, supprimer ou partager un gestionnaire de connexions dans un package](../../2014/integration-services/add-delete-or-share-a-connection-manager-in-a-package.md)  
   
   

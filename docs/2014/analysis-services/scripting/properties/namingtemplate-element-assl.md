@@ -1,5 +1,5 @@
 ---
-title: Élément NamingTemplate (ASSL) | Documents Microsoft
+title: Élément NamingTemplate (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - NamingTemplate element
 ms.assetid: d68d765c-f012-40c1-acd4-32741ee2eadf
 caps.latest.revision: 34
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: d8eb2589b0b33a0b3268e6104b51c3e3612ad894
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 8ba346be8664cf26992143c15789684c503fdf2a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36052029"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37300839"
 ---
 # <a name="namingtemplate-element-assl"></a>Élément NamingTemplate (ASSL)
   Définit la façon dont les niveaux sont appelés dans une hiérarchie parent-enfant construite à partir de la [DimensionAttribute](../data-type/dimensionattribute-data-type-assl.md) élément parent.  
@@ -74,9 +74,9 @@ ms.locfileid: "36052029"
   
  Chaque nom dans la liste est traité comme un modèle pour garantir l'unicité des noms de niveaux (par exemple, en utilisant des résultats `Manager;Team Lead;Manager;Team Lead;Worker *` dans les noms de niveaux `Manager`, `Team Lead`, `Manager 01`, `Team Lead 01`, `Worker 05`, `Worker 06`).  
   
- Utilisez deux astérisques (*) pour inclure l’astérisque (\*) dans un nom de niveau dans le cadre d’un modèle d’affectation de noms.  
+ Utilisez deux astérisques (*) pour inclure l’astérisque (\*) caractère dans un nom de niveau dans le cadre d’un modèle d’affectation de noms.  
   
- L’élément qui correspond au parent de `NamingTemplate` dans l’objet d’objets AMO (Analysis Management) est modèle <xref:Microsoft.AnalysisServices.DimensionAttribute>.  
+ L’élément qui correspond au parent de `NamingTemplate` dans l’objet d’objets AMO (Analysis Management) modèle est <xref:Microsoft.AnalysisServices.DimensionAttribute>.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Élément NamingTemplateTranslations &#40;ASSL&#41;](../collections/translations-element-assl.md)   

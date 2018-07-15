@@ -1,5 +1,5 @@
 ---
-title: Type de données RowBinding (ASSL) | Documents Microsoft
+title: Type de données RowBinding (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - RowBinding data type
 ms.assetid: 5a49a6e3-25f3-43c8-8529-bcf245b02415
 caps.latest.revision: 37
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: e6859f7627be5a9b3ff6ab108962fa71a0d12642
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 599632bd6dd93b05a12a5c7b95facea85ea8c6c1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36154470"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37297419"
 ---
 # <a name="rowbinding-data-type-assl"></a>Type de données RowBinding (ASSL)
   Définit un type de données dérivé qui représente une liaison aux lignes d’une table dans un [DataSourceView](../objects/datasourceview-element-assl.md) élément.  
@@ -68,6 +68,6 @@ ms.locfileid: "36154470"
  L’élément correspondant dans le modèle d’objet objets AMO (Analysis Management) est <xref:Microsoft.AnalysisServices.RowBinding>.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Types de données de script langage XML Analysis Services &#40;ASSL&#41;](analysis-services-scripting-language-xml-data-types-assl.md)  
+ [Types Analysis Services Scripting Language XML données &#40;ASSL&#41;](analysis-services-scripting-language-xml-data-types-assl.md)  
   
   

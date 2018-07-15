@@ -1,5 +1,5 @@
 ---
-title: 'Tâche 6 : Définition des synonymes | Documents Microsoft'
+title: 'Tâche 6 : Définition des synonymes | Microsoft Docs'
 ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
@@ -10,18 +10,18 @@ ms.technology:
 - integration-services
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: b7d35ee9-d1c9-41d9-bbc5-0ca7db93e54d
 caps.latest.revision: 8
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 3019c7cf3466fae5579548e3aa8fa9c028145f98
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 11be818da421f02ec07b13c632c4fcda87652442
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36040987"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37323869"
 ---
 # <a name="task-6-setting-synonyms"></a>Tâche 6 : Définition des synonymes
   Dans cette tâche, vous devez définir deux valeurs de domaine, **USA** et **États-Unis**, du domaine **Pays** comme synonymes, avec **États-Unis** comme valeur menante. Dans la mesure où l'option **Utiliser des valeurs menantes** a été sélectionnée lors de la création du domaine **Pays** , toutes les valeurs **USA** pour le domaine **Pays** seront remplacées par **États-Unis** (car États-Unis est la valeur menante). Consultez [Modifier les valeurs de domaine](http://msdn.microsoft.com/library/hh510408.aspx) pour plus de détails.  
@@ -43,6 +43,6 @@ ms.locfileid: "36040987"
      ![United States et USA comme synonymes](../../2014/tutorials/media/et-settingsynonyms-02.jpg "United States et USA comme synonymes")  
   
 ## <a name="next-step"></a>Étape suivante  
- [Tâche 7 : Création d’un domaine Composite](../../2014/tutorials/task-7-creating-a-composite-domain.md)  
+ [Tâche 7 : Création d’une règle de domaine composite](../../2014/tutorials/task-7-creating-a-composite-domain.md)  
   
   

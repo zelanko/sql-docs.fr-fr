@@ -8,24 +8,24 @@ ms.suite: ''
 ms.technology:
 - dbe-xml
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - xml data type [SQL Server], variables
 - xml data type [SQL Server], columns
 ms.assetid: 8994ab6e-5519-4ba2-97a1-fac8af6f72db
 caps.latest.revision: 13
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 62f1bd69d60fb7a0c919b07a8582d28a08e666e2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: c3c7b01d8238c4e82fd66dd7bba85d47ae2bbe83
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36140459"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37309389"
 ---
 # <a name="create-xml-data-type-variables-and-columns"></a>Créer des variables et des colonnes de type de données XML
-  Le type de données `xml` est un type de données intégré à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], quelque peu similaire aux autres types intégrés, tels que `int` et `varchar`. Comme avec d’autres types intégrés, vous pouvez utiliser la `xml` de type de données comme type de colonne lorsque vous créez une table sous la forme d’un type de variable, type de paramètre, un type de retour de fonction, ou dans [CAST et CONVERT](/sql/t-sql/functions/cast-and-convert-transact-sql).  
+  Le type de données `xml` est un type de données intégré à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], quelque peu similaire aux autres types intégrés, tels que `int` et `varchar`. Comme avec d’autres types intégrés, vous pouvez utiliser la `xml` de type de données comme type de colonne lorsque vous créez une table sous la forme d’un type de variable, un type de paramètre, un type de retour de fonction, ou dans [CAST et CONVERT](/sql/t-sql/functions/cast-and-convert-transact-sql).  
   
 ## <a name="creating-columns-and-variables"></a>Création de variables et de colonnes  
  Pour créer une colonne de type `xml` dans le cadre d’une table, utilisez une instruction `CREATE TABLE` , comme illustré dans l’exemple suivant :  
@@ -95,7 +95,7 @@ CREATE TABLE T (XmlColumn xml NOT NULL)
   
 -   RULE  
   
- Une alternative à l’aide de contraintes consiste à créer un wrapper, la fonction définie par l’utilisateur pour encapsuler la `xml` méthode de type de données et spécifier la fonction définie par l’utilisateur dans la contrainte de validation comme indiqué dans l’exemple suivant.  
+ Une alternative à l’aide de contraintes consiste à créer un wrapper, la fonction définie par l’utilisateur pour encapsuler le `xml` méthode de type de données et spécifier la fonction définie par l’utilisateur dans la contrainte de validation comme indiqué dans l’exemple suivant.  
   
  Dans l'exemple suivant, la contrainte sur `Col2` spécifie que chaque instance XML stockée dans cette colonne doit posséder un élément `<ProductDescription>` doté d'un attribut `ProductID` . Cette contrainte est appliquée par cette fonction définie par l'utilisateur :  
   
@@ -133,7 +133,7 @@ INSERT INTO T values(1,'<Product />')
 ## <a name="same-or-different-table"></a>Table identique ou différente  
  Un `xml` colonne de type de données peut être créée dans une table qui contient d’autres colonnes relationnelles ou dans une table distincte dotée d’une relation de clé étrangère avec une table principale.  
   
- Créer un `xml` colonne de type de données dans la même table lorsqu’une des conditions suivantes est remplie :  
+ Créer un `xml` colonne de type de données dans la même table lorsqu’une des conditions suivantes est vraie :  
   
 -   Votre application récupère les données dans la colonne XML sans exiger qu'un index XML existe dans la colonne XML.  
   
@@ -141,7 +141,7 @@ INSERT INTO T values(1,'<Product />')
   
  Créer le `xml` colonne de type de données dans une table distincte si les conditions suivantes sont remplies :  
   
--   Vous souhaitez créer un index XML la `xml` colonne de type de données, mais la clé primaire de la table principale est différente de sa clé de clustering, ou de la table principale n’a pas d’une clé primaire ou de la table principale est un segment de mémoire (sans clé de clustering). Cela peut se produire si la table principale existe déjà.  
+-   Vous souhaitez créer un index XML sur le `xml` colonne de type de données, mais la clé primaire de la table principale est différente de sa clé de clustering, ou de la table principale n’a pas une clé primaire ou de la table principale est un segment de mémoire (sans clé de clustering). Cela peut se produire si la table principale existe déjà.  
   
 -   Vous ne voulez pas voir les analyses de la table ralentir suite à la présence d'une colonne XML dans la table. La quantité d'espace utilisée varie selon que le stockage se fait en ligne ou hors ligne.  
   

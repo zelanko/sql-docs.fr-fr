@@ -1,5 +1,5 @@
 ---
-title: Utiliser la galerie PowerPivot | Documents Microsoft
+title: Utiliser la galerie PowerPivot | Microsoft Docs
 ms.custom: ''
 ms.date: 09/01/2015
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: c9ff92d1-787a-4f34-990f-6676b61875d7
 caps.latest.revision: 14
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 17ae0f4d1c8fea1e5e320ea0131575c01bf44008
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: c6864e7144ce3a1098e7733924e02978b13c744c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36039201"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37321259"
 ---
 # <a name="use-powerpivot-gallery"></a>Utiliser la Galerie PowerPivot
   La Galerie [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] est une bibliothèque de documents SharePoint à usage spécial qui fournit des options d'aperçu et de gestion des documents pour les classeurs Excel publiés et des rapports Reporting Services contenant des données PowerPivot et d'autres types de documents.  
@@ -37,7 +37,7 @@ ms.locfileid: "36039201"
   
 -   [Ouvrir un classeur ou un rapport en mode page entière](#view)  
   
--   [Planifier l’actualisation des données des classeurs PowerPivot dans la galerie PowerPivot](#newdr)  
+-   [Planifier l’actualisation des données pour les classeurs PowerPivot dans la galerie PowerPivot](#newdr)  
   
 -   [Supprimer un classeur ou un rapport dans la galerie PowerPivot](#delete)  
   
@@ -122,7 +122,7 @@ ms.locfileid: "36039201"
   
  Vous avez également la possibilité d'ouvrir le classeur dans Excel sur une station de travail cliente au lieu de l'afficher dans un navigateur. Vous devez disposer d’Excel 2013 ou d’Excel 2010 et du complément [!INCLUDE[ssGeminiClient](../../includes/ssgeminiclient-md.md)] pour afficher le fichier. Vous pouvez utiliser Excel 2007 pour ouvrir le fichier, mais pas pour ajouter un tableau croisé dynamique sur les données. Par conséquent, les versions Excel 2013 ou Excel 2010 sont recommandées à la fois pour afficher et pour créer des données PowerPivot. Si vous ne disposez pas des applications requises, vous devez utiliser un navigateur pour afficher le classeur dans SharePoint.  
   
-##  <a name="newdr"></a> Planifier l’actualisation des données des classeurs PowerPivot dans la galerie PowerPivot  
+##  <a name="newdr"></a> Planifier l’actualisation des données pour les classeurs PowerPivot dans la galerie PowerPivot  
  [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] d'un classeur Excel publié peuvent être actualisées à des fréquences planifiées.  
   
 |||  
@@ -166,7 +166,7 @@ ms.locfileid: "36039201"
   
 ## <a name="see-also"></a>Voir aussi  
  [Créer un emplacement approuvé pour les sites PowerPivot dans l’Administration centrale](create-a-trusted-location-for-power-pivot-sites-in-central-administration.md)   
- [Supprimer une bibliothèque PowerPivot](delete-power-pivot-gallery.md)   
+ [Supprimer la galerie PowerPivot](delete-power-pivot-gallery.md)   
  [Créer et personnaliser une galerie PowerPivot](create-and-customize-power-pivot-gallery.md)   
  [Planifier une actualisation des données &#40;PowerPivot pour SharePoint&#41;](../schedule-a-data-refresh-powerpivot-for-sharepoint.md)  
   

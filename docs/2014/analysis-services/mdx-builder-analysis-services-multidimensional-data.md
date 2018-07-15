@@ -1,5 +1,5 @@
 ---
-title: Générateur MDX (Analysis Services - données multidimensionnelles) | Documents Microsoft
+title: Générateur MDX (Analysis Services - données multidimensionnelles) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.mdxbuilderdialof.f1
 helpviewer_keywords:
 - MDX Builder dialog box
 ms.assetid: fecbf093-65ea-4e1b-b637-f04876f1cb0f
 caps.latest.revision: 11
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 1df3416ee7b7016cbc6db8a1d694eadfdbc33a5d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
-ms.translationtype: HT
+manager: craigg
+ms.openlocfilehash: 26bc55eb874f0d404c1d4f330e0c0841a8183157
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36052317"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37308539"
 ---
 # <a name="mdx-builder-analysis-services---multidimensional-data"></a>Générateur MDX (Analysis Services - Données multidimensionnelles)
   Utilisez la boîte de dialogue **Générateur MDX** de [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] ou [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] pour créer une expression MDX (Multidimensional Expressions). Pour afficher la boîte de dialogue **Générateur MDX** , cliquez sur le bouton d’exploration **Modifier MDX** (**…**) de l’option **Autoriser la lecture du contenu du cube** , **Autoriser la lecture du contingent de contenu des cellules selon la sécurité des cellules** ou **Autoriser la lecture et l’écriture du contenu du cube** de la page **Données des cellules** du **Concepteur de rôle**.  

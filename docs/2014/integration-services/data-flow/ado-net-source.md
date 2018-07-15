@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.adonetsource.f1
 helpviewer_keywords:
@@ -21,13 +21,13 @@ ms.assetid: 2a2f1750-2cda-4dda-9dca-623a96a6b3c0
 caps.latest.revision: 101
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: ec77f66bc627d851295a6afa90fb515c85b2ab84
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 9082ded2ceacd4a29364e3ee9b513887b2fcb1a1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36143768"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37320769"
 ---
 # <a name="ado-net-source"></a>Source ADO NET
   La source ADO .NET exploite des données issues d'un fournisseur .NET et les met à la disposition du flux de données.  
@@ -71,7 +71,7 @@ ms.locfileid: "36143768"
 >  Lorsque vous utilisez une instruction SQL pour appeler une procédure stockée qui retourne des résultats à partir d'une table temporaire, utilisez l'option WITH RESULT SETS afin de définir les métadonnées du jeu de résultats.  
   
 > [!NOTE]  
->  Si vous utilisez une instruction SQL à exécuter une procédure stockée et le package échoue avec l’erreur suivante, vous pourrez peut-être résoudre l’erreur en ajoutant la `SET FMTONLY OFF` instruction avant l’instruction exec.  
+>  Si vous utilisez une instruction SQL pour exécuter une procédure stockée et le package échoue avec l’erreur suivante, vous pourrez peut-être résoudre l’erreur en ajoutant le `SET FMTONLY OFF` instruction avant l’instruction exec.  
 >   
 >  **La colonne « nom_colonne » est introuvable dans la source de données.**  
   

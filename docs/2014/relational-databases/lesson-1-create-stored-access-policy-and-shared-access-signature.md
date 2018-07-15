@@ -1,5 +1,5 @@
 ---
-title: Leçon 2. Créer une stratégie sur le conteneur et générer une clé de Signature d’accès partagé (SAS) | Documents Microsoft
+title: Leçon 2. Créer une stratégie sur le conteneur et générer une clé de Signature d’accès partagé (SAP) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 41674d9d-8132-4bff-be4d-85a861419f3d
 caps.latest.revision: 7
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: c5313872497e120ebfce452547f755f61ba567e4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 708c347e587d19ebfb7c2f24e94fd59db0289c52
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36141280"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37324299"
 ---
 # <a name="lesson-2-create-a-policy-on-container-and-generate-a-shared-access-signature-sas-key"></a>Leçon 2. Créer une stratégie sur le conteneur et générer une clé de signature d'accès partagé
   Dans cette leçon, vous allez apprendre comment créer une stratégie sur le conteneur d'objets blob et générer une clé SAS.  
@@ -28,7 +28,7 @@ ms.locfileid: "36141280"
   
  Créez une stratégie et une signature d'accès partagé en utilisant une des méthodes suivantes :  
   
--   Opérations d’API REST Windows Azure : [créer un conteneur](https://msdn.microsoft.com/library/azure/dd179468.aspx), [définir des ACL de conteneur](https://msdn.microsoft.com/library/azure/dd179391.aspx), et [obtenir des ACL de conteneur](https://msdn.microsoft.com/library/azure/dd179469.aspx).  
+-   Opérations d’API REST Windows Azure : [créer un conteneur](https://msdn.microsoft.com/library/azure/dd179468.aspx), [définir des ACL de conteneur](https://msdn.microsoft.com/library/azure/dd179391.aspx), et [obtenir les ACL de conteneur](https://msdn.microsoft.com/library/azure/dd179469.aspx).  
   
 -   [Méthode CloudBlobContainer.GetSharedAccessSignature](https://msdn.microsoft.com/library/azure/microsoft.windowsazure.storageclient.cloudblobcontainer.getsharedaccesssignature.aspx) dans Windows Azure SDK.  
   
@@ -44,10 +44,10 @@ ms.locfileid: "36141280"
   
     ```  
   
--   Outil d’un Explorateur de Windows Azure tiers, tel que [Azure Storage Explorer](http://azurestorageexplorer.codeplex.com/).  
+-   Outil d’une exploration de Windows Azure tiers, tel que [Azure Storage Explorer](http://azurestorageexplorer.codeplex.com/).  
   
  **Leçon suivante :**  
   
- [Leçon 3 : Créer des informations d’identification SQL Server](../relational-databases/lesson-2-create-a-sql-server-credential-using-a-shared-access-signature.md)  
+ [Leçon 3 : Créer des informations d’identification SQL Server](../relational-databases/lesson-2-create-a-sql-server-credential-using-a-shared-access-signature.md)  
   
   

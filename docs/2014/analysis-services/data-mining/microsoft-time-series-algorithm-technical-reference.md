@@ -1,5 +1,5 @@
 ---
-title: Référence technique de Microsoft Time Series algorithme | Documents Microsoft
+title: Référence technique de Microsoft Time Series algorithme | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - ARTXP
 - HISTORICAL_MODEL_GAP parameter
@@ -28,15 +28,15 @@ helpviewer_keywords:
 - PREDICTION_SMOOTHING parameter
 ms.assetid: 7ab203fa-b044-47e8-b485-c8e59c091271
 caps.latest.revision: 35
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 3ab83d1cefec896835d8ecb0c9baa49d4ea44b68
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 78a54bc173a3d3b780e57752d86aebc33249066a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36053420"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37323619"
 ---
 # <a name="microsoft-time-series-algorithm-technical-reference"></a>Informations techniques de référence sur l’algorithme MTS (Microsoft Time Series)
   L'algorithme MTS (Microsoft Time Series) [!INCLUDE[msCoName](../../includes/msconame-md.md)] inclut deux algorithmes séparés pour l'analyse de la série chronologique :  
@@ -71,7 +71,7 @@ ms.locfileid: "36053420"
   
  L'algorithme MTS (Microsoft Time Series) fonctionne en enregistrant des valeurs dans une série de données et en tentant d'adapter les données à un modèle. Si la série de données n'est pas encore stationnaire, l'algorithme applique un ordre de différence. Chaque augmentation dans l'ordre de différence tend à rendre la série chronologique plus stationnaire.  
   
- Par exemple, si vous disposez de la série chronologique (z1, z2,..., zn) et effectuez des calculs à l’aide d’un ordre de différence, vous obtenez où une nouvelle série (y1, y2,..., yn-1), *yi = zi + 1-zi*. Lorsque l’ordre de différence est 2, l’algorithme génère une autre série (x1, x2,..., xn-2), en fonction de la série y qui était dérivée de l’équation du premier ordre. L'ampleur correcte pour la différenciation dépend des données. Un ordre de différenciation unique est plus commun dans les modèles qui indiquent une tendance constante, le second ordre de différenciation peut indiquer une tendance qui varie dans le temps.  
+ Par exemple, si vous avez la série chronologique (z1, z2, …, zn) et effectuez des calculs à l’aide d’un ordre de différence, vous obtenez où une nouvelle série (y1, y2,..., yn-1), *yi = zi + 1-zi*. Lorsque l’ordre de différence est 2, l’algorithme génère une autre série (x1, x2,..., xn-2), en fonction de la série y qui était dérivée de l’équation du premier ordre. L'ampleur correcte pour la différenciation dépend des données. Un ordre de différenciation unique est plus commun dans les modèles qui indiquent une tendance constante, le second ordre de différenciation peut indiquer une tendance qui varie dans le temps.  
   
  Par défaut, l'ordre de différence utilisé dans l'algorithme MTS est -1, ce qui signifie que l'algorithme détectera automatiquement la meilleure valeur pour l'ordre de différence. Généralement, la meilleure valeur est 1 (lorsqu'une différenciation est requise), mais dans certains cas, l'algorithme va augmenter cette valeur à 2 au maximum.  
   
@@ -79,7 +79,7 @@ ms.locfileid: "36053420"
   
  Lorsque la valeur de ARIMA_AR_ORDER est supérieure à 1, l'algorithme multiplie la série chronologique par un terme polynomial. Si un terme de la formule polynomiale est résolu en une racine de 1, ou proche de 1, l'algorithme tente de préserver la stabilité du modèle en supprimant le terme et en augmentant l'ordre de différence par 1. Si l'ordre de différence est déjà au maximum, le terme est supprimé et l'ordre de différence ne change pas.  
   
- Par exemple, si la valeur de AR = 2, le AR résultant terme polynomial peut ressembler à ceci : 1 : 1. 4 b + .45B ^ 2 = (1-.9B) (1 - 0.5B). Notez le terme (1-.9B) qui a une racine d’environ 0,9. L'algorithme supprime ce terme de la formule polynomiale, mais ne peut pas augmenter l'ordre de différence d'un car il a déjà atteint la valeur maximale de 2.  
+ Par exemple, si la valeur de AR = 2, l’AR résultant terme polynomial peut se présenter comme suit : 1 : 1. 4 b + .45B ^ 2 = (1-.9B) (1 - 0.5B). Notez le terme (1-.9B) qui a une racine d’environ 0,9. L'algorithme supprime ce terme de la formule polynomiale, mais ne peut pas augmenter l'ordre de différence d'un car il a déjà atteint la valeur maximale de 2.  
   
  Il est important de noter que le seul moyen de **forcer** un changement dans l’ordre de différence est d’utiliser le paramètre non pris en charge ARIMA_DIFFERENCE_ORDER. Ce paramètre caché contrôle le nombre de fois que l'algorithme exécute une différenciation sur la série chronologique et peut être défini en entrant un paramètre d'algorithme personnalisé. Toutefois, nous ne vous recommandons pas de modifier cette valeur, sauf à titre expérimental et si vous connaissez bien les calculs impliqués. Notez également qu'il n'y a actuellement aucun mécanisme ni paramètre caché, qui vous permet de contrôler le seuil de déclenchement de l'augmentation de l'ordre de différence.  
   
@@ -102,7 +102,7 @@ ms.locfileid: "36053420"
 >  Les algorithmes ARTXP et ARIMA sont tous les deux très sensibles aux indications de saisonnalité. Par conséquent, le fait de fournir une indication fausse peut nuire aux résultats.  
   
 ### <a name="choosing-an-algorithm-and-specifying-the-blend-of-algorithms"></a>Choix d'un algorithme et spécification de la fusion d'algorithmes  
- Par défaut, ou lorsque vous sélectionnez l'option MIXED, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] combine les algorithmes et leur affecte un poids égal. Toutefois, dans [!INCLUDE[ssEnterpriseEd10](../../includes/ssenterpriseed10-md.md)], vous pouvez spécifier un algorithme particulier, ou vous pouvez personnaliser la proportion de chaque algorithme dans les résultats en définissant un paramètre qui pondère les résultats vers la prédiction à long terme soit à court. Par défaut, le paramètre *FORECAST_METHOD* a la valeur MIXED, et [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] utilise les deux algorithmes, puis pondère leurs valeurs pour optimiser les points forts de chacun.  
+ Par défaut, ou lorsque vous sélectionnez l'option MIXED, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] combine les algorithmes et leur affecte un poids égal. Toutefois, dans [!INCLUDE[ssEnterpriseEd10](../../includes/ssenterpriseed10-md.md)], vous pouvez spécifier un algorithme particulier, ou vous pouvez personnaliser la proportion de chaque algorithme dans les résultats en définissant un paramètre qui pondère les résultats vers à court ou la prédiction à long terme. Par défaut, le paramètre *FORECAST_METHOD* a la valeur MIXED, et [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] utilise les deux algorithmes, puis pondère leurs valeurs pour optimiser les points forts de chacun.  
   
 -   Pour contrôler le choix de l’algorithme, vous devez définir le paramètre *FORECAST_METHOD* .  
   
@@ -124,11 +124,11 @@ ms.locfileid: "36053420"
   
  Le diagramme suivant illustre la façon dont le modèle fusionne les algorithmes quand *PREDICTION_SMOOTHING* a la valeur par défaut, 0.5. ARIMA et ARTXP ont la même pondération au début, mais au fil de l'augmentation du nombre d'étapes de prédiction, ARIMA est pondéré de manière plus importante.  
   
- ![courbe par défaut pour la combinaison d’algorithmes de série chronologique](../media/time-series-mixing-default.gif "courbe par défaut pour la combinaison d’algorithmes de série chronologique")  
+ ![courbe par défaut pour combinaison d’algorithmes de série chronologique](../media/time-series-mixing-default.gif "courbe par défaut pour combinaison d’algorithmes de série chronologique")  
   
  À l’inverse, le diagramme suivant illustre la fusion des algorithmes quand *PREDICTION_SMOOTHING* a la valeur 0.2. Pour l'étape [!INCLUDE[tabValue](../../includes/tabvalue-md.md)], le modèle pondère ARIMA avec la valeur 0.2 et ARTXP avec la valeur 0.8. La pondération d'ARIMA augmente ensuite de façon exponentielle alors que la pondération d'ARTXP diminue de la même façon.  
   
- ![courbe de délai pour combinaison de modèles de série heure](../media/time-series-blending-curve.gif "courbe de délai pour combinaison de modèles de série heure")  
+ ![courbe de délai pour la combinaison de modèles de série heure](../media/time-series-blending-curve.gif "courbe de délai pour la combinaison de modèles de série heure")  
   
 ### <a name="setting-algorithm-parameters"></a>Définition des paramètres de l'algorithme  
  Le tableau suivant décrit les paramètres qui peuvent être utilisés avec l'algorithme MTS ( [!INCLUDE[msCoName](../../includes/msconame-md.md)] Time Series).  
@@ -144,7 +144,7 @@ ms.locfileid: "36053420"
 |*MAXIMUM_SERIES_VALUE*|Spécifie la valeur maximale à utiliser pour les prédictions. Ce paramètre est utilisé avec *MINIMUM_SERIES_VALUE*pour limiter les prédictions à une certaine plage attendue. Par exemple, vous pouvez spécifier que le volume de ventes prédites pour un jour ne doit jamais dépasser le nombre de produits dans l'inventaire.<br /><br /> Remarque : ce paramètre est uniquement disponible dans certaines éditions de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |*MINIMUM_SERIES_VALUE*|Spécifie la valeur minimale qui peut être prédite. Ce paramètre est utilisé avec *MAXIMUM_SERIES_VALUE*pour limiter les prédictions à une certaine plage attendue. Par exemple, vous pouvez spécifier que la quantité de ventes prédite ne doit jamais être un nombre négatif.<br /><br /> Remarque : ce paramètre est uniquement disponible dans certaines éditions de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |*MINIMUM_SUPPORT*|Spécifie le nombre minimal de tranches de temps qui sont requises pour générer un fractionnement dans chaque arbre de série chronologique. La valeur par défaut est 10.|  
-|*MISSING_VALUE_SUBSTITUTION*|Spécifie la façon dont les vides dans les données d'historique sont comblés. Par défaut, les vides dans les données ne sont pas autorisés. Si vos données contiennent plusieurs séries, les séries ne peuvent pas non plus avoir des extrémités déséquilibrées. En d'autres termes, toutes les séries doivent avoir les mêmes points de départ et d'arrêt. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] utilise également la valeur de ce paramètre pour combler les vides dans les nouvelles données lorsque vous effectuez une opération `PREDICTION JOIN` sur un modèle de série chronologique. Le tableau suivant répertorie les valeurs possibles de ce paramètre :<br /><br /> None : par défaut. Remplace les valeurs manquantes par les valeurs représentées le long de la courbe du modèle ayant fait l'objet d'un apprentissage.<br /><br /> Précédente : Répète la valeur de la tranche de temps précédente.<br /><br /> Moyenne : Utilise une moyenne mobile des tranches de temps utilisées pour l’apprentissage.<br /><br /> Constante numérique : utilise le nombre spécifié pour remplacer toutes les valeurs manquantes.|  
+|*MISSING_VALUE_SUBSTITUTION*|Spécifie la façon dont les vides dans les données d'historique sont comblés. Par défaut, les vides dans les données ne sont pas autorisés. Si vos données contiennent plusieurs séries, les séries ne peuvent pas non plus avoir des extrémités déséquilibrées. En d'autres termes, toutes les séries doivent avoir les mêmes points de départ et d'arrêt. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] utilise également la valeur de ce paramètre pour combler les vides dans les nouvelles données lorsque vous effectuez une opération `PREDICTION JOIN` sur un modèle de série chronologique. Le tableau suivant répertorie les valeurs possibles de ce paramètre :<br /><br /> None : par défaut. Remplace les valeurs manquantes par les valeurs représentées le long de la courbe du modèle ayant fait l'objet d'un apprentissage.<br /><br /> Précédent : Répète la valeur de la tranche horaire précédente.<br /><br /> Moyenne : Utilise une moyenne mobile des tranches de temps utilisées pour l’apprentissage.<br /><br /> Constante numérique : utilise le nombre spécifié pour remplacer toutes les valeurs manquantes.|  
 |*PERIODICITY_HINT*|Fournit à l'algorithme une indication de la périodicité des données. Par exemple, si les ventes varient chaque année, et que l'unité de mesure de la série est le mois, la périodicité est égale à 12. Ce paramètre s'affiche sous la forme {n [, n]}, où n est un nombre positif.<br /><br /> Le n entre crochets [] est facultatif et peut être répété autant de fois que nécessaire. Par exemple, pour fournir plusieurs indications de périodicité pour les données fournies mensuellement, vous pouvez entrer {12, 3, 1} pour détecter les modèles pour l'année, le trimestre et le mois. Toutefois, la périodicité a une répercussion importante sur la qualité du modèle. Si l'indication que vous fournissez diffère de la périodicité réelle, vos résultats peuvent être gravement compromis.<br /><br /> La valeur par défaut est {1}.<br /><br /> Remarque : Les accolades sont obligatoires. Par ailleurs, ce paramètre a un type de données chaîne. Par conséquent, si vous tapez ce paramètre dans une instruction DMX (Data Mining Extensions), vous devez placer le nombre et les accolades entre guillemets.|  
 |*PREDICTION_SMOOTHING*|Spécifie la façon dont le modèle doit être combiné pour optimiser la prévision. Ce paramètre est uniquement disponible dans certaines éditions de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Vous pouvez taper toute valeur comprise entre [!INCLUDE[tabValue](../../includes/tabvalue-md.md)] et 1, ou utiliser l'une des valeurs suivantes :<br /><br /> [!INCLUDE[tabValue](../../includes/tabvalue-md.md)]: Spécifie que la prédiction utilise uniquement ARTXP. La prévision est optimisée pour un petit nombre de prédictions.<br /><br /> 0,5 : (valeur par défaut) Spécifie que pour les deux algorithmes doivent être utilisés de prédiction et les résultats fusionnés.<br /><br /> 1 : spécifie que la prédiction utilise uniquement ARIMA. La prévision est optimisée pour un grand nombre de prédictions.<br /><br /> <br /><br /> Remarque : Utilisez le *FORECAST_METHOD* paramètre pour contrôler l’apprentissage.|  
   
@@ -172,7 +172,7 @@ ms.locfileid: "36053420"
   
 ## <a name="see-also"></a>Voir aussi  
  [Algorithme de série chronologique de Microsoft](microsoft-time-series-algorithm.md)   
- [Exemples de requête de modèle de série de temps](time-series-model-query-examples.md)   
- [Contenu pour les modèles de série chronologique du modèle d’exploration de données &#40;Analysis Services - Exploration de données&#41;](mining-model-content-for-time-series-models-analysis-services-data-mining.md)  
+ [Exemples de requêtes de modèle de série chronologique](time-series-model-query-examples.md)   
+ [Contenu du modèle pour les modèles de série chronologique d’exploration de données &#40;Analysis Services - Exploration de données&#41;](mining-model-content-for-time-series-models-analysis-services-data-mining.md)  
   
   

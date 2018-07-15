@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - clusters [SQL Server], virtual servers
 - renaming virtual servers
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - failover clustering [SQL Server], virtual servers
 ms.assetid: 2a49d417-25fb-4760-8ae5-5871bfb1e6f3
 caps.latest.revision: 16
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: defb9efed51b1739f35d7dc8f1bdfbae12decb5b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 006abb7b37e67938a060ed05ced726c3699dfbd3
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36039222"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37294009"
 ---
 # <a name="rename-a-sql-server-failover-cluster-instance"></a>Renommer une instance de cluster de basculement SQL Server
   Lorsqu'une instance de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] fait partie d'un cluster de basculement, le processus permettant de renommer un serveur virtuel diffère du processus permettant de renommer une instance autonome. Pour plus d’informations, consultez [Renommer un ordinateur qui héberge une instance autonome de SQL Server](../../../database-engine/install-windows/rename-a-computer-that-hosts-a-stand-alone-instance-of-sql-server.md).  
@@ -48,7 +48,7 @@ ms.locfileid: "36039222"
 ## <a name="verify-the-renaming-operation"></a>Vérification de l'opération d'attribution d'un nom  
  Une fois qu'un serveur virtuel a été renommé, toute connexion qui utilisait l'ancien nom doit maintenant se connecter à l'aide du nouveau nom.  
   
- Pour vérifier que l’opération de changement de nom, sélectionnez les informations de `@@servername` ou `sys.servers`. La fonction `@@servername` retourne le nouveau nom de serveur virtuel et la table `sys.servers` affiche le nouveau nom de serveur virtuel. Pour vérifier que le processus de basculement fonctionne correctement avec le nouveau nom, l'utilisateur doit également essayer de faire basculer la ressource [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] vers les autres nœuds.  
+ Pour vérifier que l’opération de renommage a abouti, sélectionnez les informations de `@@servername` ou `sys.servers`. La fonction `@@servername` retourne le nouveau nom de serveur virtuel et la table `sys.servers` affiche le nouveau nom de serveur virtuel. Pour vérifier que le processus de basculement fonctionne correctement avec le nouveau nom, l'utilisateur doit également essayer de faire basculer la ressource [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] vers les autres nœuds.  
   
  Pour les connexions établies à partir d'un nœud du cluster, le nouveau nom peut être utilisé presque immédiatement. Toutefois, pour les connexions utilisant le nouveau nom à partir d'un ordinateur client, le nouveau nom ne peut être utilisé pour se connecter au serveur qu'une fois qu'il est visible à cet ordinateur client. La durée nécessaire à la propagation du nouveau nom sur le réseau peut aller de quelques secondes à quelques minutes, selon la configuration du réseau ; il faudra peut-être davantage de temps avant que l'ancien nom du serveur virtuel ne soit plus visible sur le réseau.  
   
@@ -67,7 +67,7 @@ ms.locfileid: "36039222"
 ## <a name="additional-considerations-after-the-renaming-operation"></a>Éléments supplémentaires à prendre en considération après une opération Renommer  
  Après avoir renommé le nom réseau d'un cluster de basculement, nous devons vérifier et suivre les instructions suivantes pour que tous les scénarios dans [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent et [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]soient opérationnels.  
   
- **[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]:** Une fois que vous avez changé le nom réseau d’une instance de cluster de basculement [!INCLUDE[ssASCurrent](../../../includes/ssascurrent-md.md)] à l’aide de l’outil Administrateur de cluster Windows, une opération de mise à niveau ou de désinstallation ultérieure peut échouer. Pour résoudre cette mise à jour du problème le **ClusterName** entrée de Registre suivant les instructions fournies dans la section Résolution de [cela](http://go.microsoft.com/fwlink/?LinkId=244002) (http://go.microsoft.com/fwlink/?LinkId=244002).  
+ **[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]:** Une fois que vous avez changé le nom réseau d’une instance de cluster de basculement [!INCLUDE[ssASCurrent](../../../includes/ssascurrent-md.md)] à l’aide de l’outil Administrateur de cluster Windows, une opération de mise à niveau ou de désinstallation ultérieure peut échouer. Pour résoudre cette mise à jour du problème la **ClusterName** entrée de Registre suivant les instructions fournies dans la section Résolution de [cela](http://go.microsoft.com/fwlink/?LinkId=244002) (http://go.microsoft.com/fwlink/?LinkId=244002).  
   
  **[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent :** Effectuez des vérifications et les actions supplémentaires suivantes pour le service [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent :  
   

@@ -1,5 +1,5 @@
 ---
-title: Type de données ManyToManyMeasureGroupDimension (ASSL) | Documents Microsoft
+title: Type de données ManyToManyMeasureGroupDimension (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - ManyToManyMeasureGroupDimension data type
 ms.assetid: f2b914cb-c817-43ff-9cb4-ac8d326136b5
 caps.latest.revision: 36
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 14233f2e39771174b4d1b15acdeafb76bc76f32d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 96a6df09c6474994a38930fa07c0a7b5f73cfd61
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36052944"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37308419"
 ---
 # <a name="manytomanymeasuregroupdimension-data-type-assl"></a>Type de données ManyToManyMeasureGroupDimension (ASSL)
   Définit un type de données dérivé représentant la relation entre une dimension plusieurs à plusieurs et un groupe de mesures.  
@@ -65,6 +65,6 @@ ms.locfileid: "36052944"
  L’élément correspondant dans le modèle d’objet objets AMO (Analysis Management) est <xref:Microsoft.AnalysisServices.ManyToManyMeasureGroupDimension>.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Types de données de script langage XML Analysis Services &#40;ASSL&#41;](analysis-services-scripting-language-xml-data-types-assl.md)  
+ [Types Analysis Services Scripting Language XML données &#40;ASSL&#41;](analysis-services-scripting-language-xml-data-types-assl.md)  
   
   

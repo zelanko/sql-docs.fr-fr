@@ -1,11 +1,11 @@
 ---
-title: Types de données SQL Server dans le .NET Framework | Documents Microsoft
+title: Types de données SQL Server dans le .NET Framework | Microsoft Docs
 ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: reference
+ms.technology: clr
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -22,16 +22,16 @@ caps.latest.revision: 38
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: fe3a5c99e2c1e9bf569ecdbb1ab31d683d340206
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
+ms.openlocfilehash: ed5a1608807d1a05638ee1854ff6676c4cdc7db6
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35702050"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37350191"
 ---
 # <a name="sql-server-data-types-in-the-net-framework"></a>Types de données SQL Server dans le .NET Framework
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  Le **SqlTypes** bibliothèque fait partie de la bibliothèque de classes de base de la [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework. Elle est conçue pour fournir des types de données avec les mêmes sémantique et précision que celles figurant dans la base de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Cette rubrique décrit la nouvelle sémantique aux programmeurs .NET Framework et introduit les types implémentés dans le **System.Data.SqlTypes** espace de noms qui est inclus dans le **System.Data** bibliothèque.  
+  Le **SqlTypes** bibliothèque fait partie de la bibliothèque de classe de base de la [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework. Elle est conçue pour fournir des types de données avec les mêmes sémantique et précision que celles figurant dans la base de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Cette rubrique décrit la nouvelle sémantique aux programmeurs .NET Framework et introduit les types implémentés dans le **System.Data.SqlTypes** espace de noms qui est inclus dans le **System.Data** bibliothèque.  
   
  Le tableau ci-dessous répertorie les rubriques de cette section.  
   
@@ -41,7 +41,7 @@ ms.locfileid: "35702050"
  [Classement et types de données de l’intégration du CLR](../../relational-databases/clr-integration-database-objects-types-net-framework/collation-and-clr-integration-data-types.md)  
  Décrit comment les classements sont traités avec l'intégration du CLR.  
   
- [La gestion des objets volumineux &#40;LOB&#41; paramètres dans le CLR](../../relational-databases/clr-integration-database-objects-types-net-framework/handling-large-object-lob-parameters-in-the-clr.md)  
+ [Gestion des objets volumineux &#40;LOB&#41; paramètres dans le CLR](../../relational-databases/clr-integration-database-objects-types-net-framework/handling-large-object-lob-parameters-in-the-clr.md)  
  Décrit comment transmettre des types LOB entre [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et le CLR.  
   
  [Mappage des données de paramètres CLR](../../relational-databases/clr-integration-database-objects-types-net-framework/mapping-clr-parameter-data.md)  

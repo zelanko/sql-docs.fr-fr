@@ -1,5 +1,5 @@
 ---
-title: Sélectionner les membres (Assistant Business Intelligence) | Documents Microsoft
+title: Sélectionner les membres (Assistant Business Intelligence) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.biwizard.currencyconversion.memberconversion.f1
 ms.assetid: 1a147461-d594-41e7-a41d-09d2d003e1e0
 caps.latest.revision: 25
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 75cd6c2aeca77d55b4ec66baa3dccb4c77f4a66e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 8b1bdcf78e3a7fd35da53e7a39bea5c24e217ae8
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36141640"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37321239"
 ---
 # <a name="select-members-business-intelligence-wizard"></a>Sélectionner les membres (Assistant Business Intelligence)
   Utilisez la page **Sélectionner les membres** pour déterminer à quels membres l'Assistant Business Intelligence doit appliquer la fonction de conversion monétaire spécifiée à la page **Définir les options de conversion monétaire** .  
@@ -41,7 +41,7 @@ ms.locfileid: "36141640"
 |**Mesures**|Sélectionnez la mesure dans le groupe de mesures de taux qui contient le taux de change à utiliser lors de la conversion de la mesure sélectionnée à la section **Types de mesures intégrés** .|  
   
  **Hiérarchie de compte**  
- Sélectionnez cette option afin d'appliquer la fonctionnalité de conversion monétaire à un ou plusieurs membres dans la hiérarchie de comptes de la dimension incluse dans le cube. La hiérarchie de comptes est dans le compte de la hiérarchie de dimension dont `Type` est définie sur *compte*.  
+ Sélectionnez cette option afin d'appliquer la fonctionnalité de conversion monétaire à un ou plusieurs membres dans la hiérarchie de comptes de la dimension incluse dans le cube. La hiérarchie de compte est la hiérarchie dans le compte de dimension dont la propriété `Type` propriété est définie sur *compte*.  
   
  Une fois cette option sélectionnée, la grille affiche les options répertoriées dans le tableau suivant.  
   
@@ -51,7 +51,7 @@ ms.locfileid: "36141640"
 |**Mesures**|Sélectionnez la mesure dans le groupe de mesures Taux qui contient le taux de change à utiliser lors de la conversion des mesures relatives au membre choisi dans **Membre du compte** .|  
   
  **Selon le type de hiérarchie de compte**  
- Sélectionnez cette option pour appliquer la fonctionnalité de conversion monétaire à tous les membres des attributs dans la hiérarchie dont `Type` est définie sur un type de compte spécifié.  
+ Sélectionnez cette option pour appliquer la fonctionnalité de conversion monétaire à tous les membres des attributs dans la hiérarchie de comptes dont `Type` propriété est définie sur un type de compte spécifié.  
   
  Une fois cette option sélectionnée, la grille affiche les options répertoriées dans le tableau suivant.  
   
@@ -61,7 +61,7 @@ ms.locfileid: "36141640"
 |**Mesures**|Sélectionnez la mesure dans le groupe de mesures Taux qui contient le taux de change à utiliser lors de la conversion des mesures relatives aux membres d'attributs dont le type de compte correspond à celui indiqué dans **Type de compte** .|  
   
 ## <a name="see-also"></a>Voir aussi  
- [Aide F1 l’Assistant Business Intelligence](business-intelligence-wizard-f1-help.md)   
+ [L’Assistant Business Intelligence F1](business-intelligence-wizard-f1-help.md)   
  [Concepteur de cube &#40;Analysis Services - données multidimensionnelles&#41;](cube-designer-analysis-services-multidimensional-data.md)   
  [Concepteur de dimensions &#40;Analysis Services - données multidimensionnelles&#41;](dimension-designer-analysis-services-multidimensional-data.md)  
   

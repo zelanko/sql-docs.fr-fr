@@ -1,5 +1,5 @@
 ---
-title: Élément KeyNotFound (ASSL) | Documents Microsoft
+title: Élément KeyNotFound (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - KeyNotFound element
 ms.assetid: 2a93bbfa-2409-4e94-8b68-926532895a4c
 caps.latest.revision: 35
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 545ae163b4dda53adb60f5300e7f8b75cf926d52
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 58228d8f4029fecf22062a3e3c5c0c9adf3eafe1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36143791"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37281805"
 ---
 # <a name="keynotfound-element-assl"></a>Élément KeyNotFound (ASSL)
   Spécifie comment [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] répond quand il rencontre une erreur d’intégrité référentielle.  
@@ -72,7 +72,7 @@ ms.locfileid: "36143791"
 |*ReportAndContinue*|Le traitement doit signaler l'erreur et se poursuivre.|  
 |*ReportAndStop*|Le traitement doit signaler l'erreur et s'arrêter.|  
   
- L’énumération qui correspond aux valeurs autorisées pour `KeyNotFound` dans l’objet d’objets AMO (Analysis Management) est modèle <xref:Microsoft.AnalysisServices.ErrorOption>.  
+ L’énumération qui correspond aux valeurs autorisées pour `KeyNotFound` dans l’objet d’objets AMO (Analysis Management) modèle est <xref:Microsoft.AnalysisServices.ErrorOption>.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Propriétés &#40;ASSL&#41;](properties-assl.md)  
