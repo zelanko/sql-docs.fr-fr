@@ -1,13 +1,11 @@
 ---
-title: Appel de fonctions d’agrégation définies par l’utilisateur CLR | Documents Microsoft
+title: Appel de fonctions d’agrégation définies par l’utilisateur CLR | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: clr
 ms.tgt_pltfrm: ''
 ms.topic: reference
 dev_langs:
@@ -20,15 +18,15 @@ helpviewer_keywords:
 - user-defined functions [CLR integration]
 ms.assetid: 5a188b50-7170-4069-acad-5de5c915f65d
 caps.latest.revision: 52
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 96aaaeda1fd22044c5a4f86c11051966f3d8b341
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: rothja
+ms.author: jroth
+manager: craigg
+ms.openlocfilehash: b648c81da85be1214dc8b1c7b78235cd23ab525a
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36038144"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37355051"
 ---
 # <a name="invoking-clr-user-defined-aggregate-functions"></a>Appel de fonctions d'agrégation CLR définies par l'utilisateur
   Dans les instructions SELECT [!INCLUDE[tsql](../../includes/tsql-md.md)] , vous pouvez appeler les agrégats CLR (Common Language Runtime) définis par l'utilisateur et soumis à toutes les règles qui s'appliquent aux fonctions d'agrégation système.  
@@ -39,9 +37,9 @@ ms.locfileid: "36038144"
   
 -   Les agrégats définis par l'utilisateur doivent être appelés à l'aide d'un nom en deux parties, sous la forme *nom_schéma.nom_udagg*.  
   
--   Le type d’argument de l’agrégat défini par l’utilisateur doit correspondre ou être implicitement convertible vers le *input_type* de l’agrégat, tel que défini dans la `CREATE AGGREGATE` instruction.  
+-   Type d’argument de l’agrégat défini par l’utilisateur doit correspondre ou être implicitement convertible dans le *input_type* de l’agrégat, tel que défini dans le `CREATE AGGREGATE` instruction.  
   
--   Le type de retour de l’agrégat défini par l’utilisateur doit correspondre à la *return_type* dans la `CREATE AGGREGATE` instruction.  
+-   Le type de retour de l’agrégat défini par l’utilisateur doit correspondre à la *return_type* dans le `CREATE AGGREGATE` instruction.  
   
 ## <a name="example-1"></a>Exemple 1  
  Voici un exemple de fonction d'agrégation définie par l'utilisateur qui concatène un jeu de valeurs de chaîne extraites d'une colonne de table :  

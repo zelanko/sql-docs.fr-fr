@@ -1,13 +1,11 @@
 ---
-title: Mise à jour de colonnes UDT avec DataAdapters | Documents Microsoft
+title: Mise à jour de colonnes UDT avec DataAdapters | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: clr
 ms.tgt_pltfrm: ''
 ms.topic: reference
 dev_langs:
@@ -25,21 +23,21 @@ helpviewer_keywords:
 - data adapters [CLR integration]
 ms.assetid: 4489c938-ba03-4fdb-b533-cc3f5975ae50
 caps.latest.revision: 12
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 683e1f82aaf76a21f20fed02b6be1c39347d7302
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: rothja
+ms.author: jroth
+manager: craigg
+ms.openlocfilehash: 7a69065a293d5ffedba91308c9b4ac7c6d02b7c7
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36039314"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37354871"
 ---
 # <a name="updating-udt-columns-with-dataadapters"></a>Mise à jour de colonnes UDT avec DataAdapters
   Les types définis par l'utilisateur (UDT) sont pris en charge en utilisant un `System.Data.DataSet` et un `System.Data.SqlClient.SqlDataAdapter` pour extraire et modifier des données.  
   
 ## <a name="populating-a-dataset"></a>Remplissage d'un dataset  
- Vous pouvez utiliser une instruction SELECT [!INCLUDE[tsql](../../includes/tsql-md.md)] pour sélectionner des valeurs de colonne UDT pour remplir un dataset à l'aide d'un adaptateur de données. L’exemple suivant suppose que vous avez un **Points** table est définie avec la structure suivante et quelques exemples de données. Les éléments suivants [!INCLUDE[tsql](../../includes/tsql-md.md)] instructions créent le **Points** de table et insèrent quelques lignes.  
+ Vous pouvez utiliser une instruction SELECT [!INCLUDE[tsql](../../includes/tsql-md.md)] pour sélectionner des valeurs de colonne UDT pour remplir un dataset à l'aide d'un adaptateur de données. L’exemple suivant suppose que vous avez un **Points** table définie avec la structure suivante et des exemples de données. Ce qui suit [!INCLUDE[tsql](../../includes/tsql-md.md)] instructions créent le **Points** table et insèrent quelques lignes.  
   
 ```  
 CREATE TABLE dbo.Points (id int PRIMARY Key, p Point);  
@@ -90,9 +88,9 @@ INSERT INTO dbo.Points_ts (id, p) VALUES (4, CONVERT(Point, '4,6'));
   
  L'exemple ADO.NET suivant contient deux méthodes :  
   
--   `UserProvidedCommands`, qui montre comment fournir `InsertCommand`, `UpdateCommand`, et `DeleteCommand` objets de mise à jour la `Point` UDT dans la **Points** table (qui ne contient pas un `timestamp` colonne).  
+-   `UserProvidedCommands`, qui montre comment fournir `InsertCommand`, `UpdateCommand`, et `DeleteCommand` objets pour la mise à jour le `Point` UDT dans la **Points** table (qui ne contient pas un `timestamp` colonne).  
   
--   `CommandBuilder`, qui montre comment utiliser un `SqlCommandBuilder` dans les **Points_ts** table qui contient le `timestamp` colonne.  
+-   `CommandBuilder`, qui montre comment utiliser un `SqlCommandBuilder` dans le **Points_ts** table qui contient le `timestamp` colonne.  
   
 ```vb  
 Imports System  
