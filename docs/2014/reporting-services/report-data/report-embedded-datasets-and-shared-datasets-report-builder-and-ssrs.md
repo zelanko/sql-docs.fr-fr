@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - "10420"
 ms.assetid: c5852c8a-40e4-424d-a847-64eb151448ff
 caps.latest.revision: 16
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 78da740dfbdaa9976b2a518cbb5b12146e1371f7
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: 7ba4bd70c21072d77f4972870fbbee7e27b18b18
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36052590"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37218929"
 ---
 # <a name="report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs"></a>Datasets incorporés dans le rapport et datasets partagés (Générateur de rapports et SSRS)
   Un dataset spécifie les données que vous souhaitez utiliser à partir d'une connexion de données. Un dataset est basé sur une connexion de données enregistrée dans le rapport en tant que source de données incorporée ou référence à une source de données partagée sur un serveur de rapports. Le dataset inclut une requête qui spécifie un ensemble de champs. Lorsque vous faites glisser ces champs vers l'aire de conception, vous créez des expressions qui correspondent aux données effectives lorsque le rapport s'exécute.  
@@ -50,7 +50,7 @@ ms.locfileid: "36052590"
   
 7.  **Métadonnées du schéma** Le fournisseur de données exécute une commande de requête de schéma indépendamment de la requête afin de récupérer des métadonnées pour la collection de champs de dataset. Par exemple, un [!INCLUDE[tsql](../../../includes/tsql-md.md)] `SELECT` instruction retourne les noms de colonnes pour une table de base de données. Utilisez le volet Données du rapport pour développer le dataset afin d'afficher la collection de champs de dataset.  
   
- Il est également possible d'inclure des données dans un rapport à l'aide de datasets partagés et de parties de rapports partagées. Ces éléments possèdent déjà les informations de connexion de données dont vous avez besoin. Pour plus d’informations, consultez [ajouter des données à un rapport &#40;le Générateur de rapports et SSRS&#41; ](report-datasets-ssrs.md) et [parties de rapport &#40;le Générateur de rapports et SSRS&#41;](../report-parts-report-builder-and-ssrs.md).  
+ Il est également possible d'inclure des données dans un rapport à l'aide de datasets partagés et de parties de rapports partagées. Ces éléments possèdent déjà les informations de connexion de données dont vous avez besoin. Pour plus d’informations, consultez [ajouter des données à un rapport &#40;Générateur de rapports et SSRS&#41; ](report-datasets-ssrs.md) et [parties de rapports &#40;Générateur de rapports et SSRS&#41;](../report-parts-report-builder-and-ssrs.md).  
   
  Pour plus d’informations sur les types de sources de données intégrés et les extensions de données, consultez [Ajouter des données depuis des sources de données externes &#40;SSRS&#41;](add-data-from-external-data-sources-ssrs.md).  
   
@@ -60,7 +60,7 @@ ms.locfileid: "36052590"
 ##  <a name="Overview"></a> Fonctionnement des datasets de rapport et des requêtes  
  Un dataset de rapport contient une commande de requête qui s'exécute sur la source de données externe et spécifie les données à récupérer. Pour générer la commande de requête, vous utilisez le concepteur de requêtes associé à l'extension de données pour la source de données externe. Dans le concepteur de requêtes, vous pouvez exécuter la commande de requête et afficher un jeu de résultats. Le jeu de résultats est un ensemble de lignes rectangulaire qui a des noms de colonnes et des lignes avec le même nombre de valeurs dans chaque ligne. Les données hiérarchiques, également appelées *hiérarchies déséquilibrées*, ne sont pas prises en charge. Les noms des colonnes sont enregistrés dans la définition de rapport sous forme de liste de champs de dataset.  
   
- Après avoir ajouté des datasets à votre rapport, vous faites glisser des champs de leurs collections de champs dans le volet Données du rapport vers les tables, graphiques et autres éléments de rapport que vous utilisez pour concevoir le modèle de rapport. Pour plus d’informations sur l’utilisation des champs, consultez [Collection de champs du Dataset &#40;le Générateur de rapports et SSRS&#41;](dataset-fields-collection-report-builder-and-ssrs.md).  
+ Après avoir ajouté des datasets à votre rapport, vous faites glisser des champs de leurs collections de champs dans le volet Données du rapport vers les tables, graphiques et autres éléments de rapport que vous utilisez pour concevoir le modèle de rapport. Pour plus d’informations sur l’utilisation des champs, consultez [Collection de champs de Dataset &#40;Générateur de rapports et SSRS&#41;](dataset-fields-collection-report-builder-and-ssrs.md).  
   
 ### <a name="understanding-data-from-a-report-dataset"></a>Fonctionnement des données d'un dataset de rapport  
  Selon l'extension de données, un dataset de rapport peut être constitué des types de données suivants :  
@@ -83,7 +83,7 @@ ms.locfileid: "36052590"
   
  Lorsque le rapport est traité au moment de l'exécution, le jeu de résultats réel retourné pour une requête peut comporter aucune ou plusieurs lignes. Les colonnes définies dans la requête peuvent également être manquantes dans la source de données. Les valeurs NULL à partir de la source de données sont mappées à la [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] valeur `System.DBNull.Value`.  
   
- Pour plus d’informations sur les champs de dataset, consultez [Collection de champs du Dataset &#40;le Générateur de rapports et SSRS&#41;](dataset-fields-collection-report-builder-and-ssrs.md).  
+ Pour plus d’informations sur les champs de dataset, consultez [Collection de champs de Dataset &#40;Générateur de rapports et SSRS&#41;](dataset-fields-collection-report-builder-and-ssrs.md).  
   
 ### <a name="dataset-query"></a>Requête de dataset  
  Lorsque vous exécutez une requête de dataset dans un concepteur de requêtes lors de la conception, vous voyez s'afficher un ensemble de lignes extrait de la source de données en guise de données d'exemple. Au moment de l'exécution, lorsqu'un utilisateur consulte le rapport, la requête de dataset peut produire des valeurs différentes, car les données sur la source de données ont changé. Chaque fois que le rapport est traité, de nouvelles données peuvent apparaître.  
@@ -110,7 +110,7 @@ ms.locfileid: "36052590"
   
 -   Créez un champ personnalisé en fonction d'un champ de base de données et fournissez un format personnalisé.  
   
- Pour plus d’informations, consultez [Collection de champs du Dataset &#40;le Générateur de rapports et SSRS&#41;](dataset-fields-collection-report-builder-and-ssrs.md).  
+ Pour plus d’informations, consultez [Collection de champs de Dataset &#40;Générateur de rapports et SSRS&#41;](dataset-fields-collection-report-builder-and-ssrs.md).  
   
 ### <a name="importing-existing-queries-for-a-dataset"></a>Importation de requêtes existantes pour un dataset  
  Lorsque vous créez un dataset, vous pouvez créer une requête ou vous pouvez importer une requête existante à partir d'un fichier ou d'un autre rapport. Lorsque vous importez une requête à partir d'un autre rapport, vous pouvez choisir la requête à importer de la liste des datasets du rapport.  
@@ -209,7 +209,7 @@ ms.locfileid: "36052590"
   
 -   Vous affichez les données provenant de chaque dataset à l'aide d'une région de données distincte. Pour plus d’informations, consultez [Régions de données et cartes &#40;Générateur de rapports et SSRS&#41;](../report-design/data-regions-and-maps-report-builder-and-ssrs.md).  
   
--   Vous pouvez lier plusieurs régions de données à un dataset et fournir plusieurs vues des mêmes données. Pour plus d’informations, consultez [lier plusieurs régions de données à un même Dataset &#40;le Générateur de rapports et SSRS&#41;](../report-design/linking-multiple-data-regions-to-the-same-dataset-report-builder-and-ssrs.md).  
+-   Vous pouvez lier plusieurs régions de données à un dataset et fournir plusieurs vues des mêmes données. Pour plus d’informations, consultez [liaison de plusieurs régions de données à un même Dataset &#40;Générateur de rapports et SSRS&#41;](../report-design/linking-multiple-data-regions-to-the-same-dataset-report-builder-and-ssrs.md).  
   
 -   Vous pouvez utiliser des datasets pour fournir une liste déroulante des valeurs disponibles et des valeurs par défaut pour un paramètre de rapport. Pour plus d’informations, consultez [Report Parameters &#40;Report Builder and Report Designer&#41;](../report-design/report-parameters-report-builder-and-report-designer.md).  
   
@@ -225,7 +225,7 @@ ms.locfileid: "36052590"
   
 ## <a name="see-also"></a>Voir aussi  
  [Collection de champs de dataset &#40;Générateur de rapports et SSRS&#41;](dataset-fields-collection-report-builder-and-ssrs.md)   
- [Connexions de données, les Sources de données et les chaînes de connexion dans le Générateur de rapports](../data-connections-data-sources-and-connection-strings-in-report-builder.md)   
- [Ajouter des données à un rapport &#40;rapport Générateur et SSRS&#41;](report-datasets-ssrs.md)  
+ [Connexions de données, Sources de données et chaînes de connexion dans le Générateur de rapports](../data-connections-data-sources-and-connection-strings-in-report-builder.md)   
+ [Ajouter des données à un rapport &#40;Générateur de rapports et SSRS&#41;](report-datasets-ssrs.md)  
   
   

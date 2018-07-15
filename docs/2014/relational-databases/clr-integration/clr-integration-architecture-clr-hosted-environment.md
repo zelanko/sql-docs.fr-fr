@@ -1,13 +1,11 @@
 ---
-title: Environnement de CLR hébergé | Documents Microsoft
+title: CLR hébergé d’environnement | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: clr
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -29,15 +27,15 @@ helpviewer_keywords:
 - HPAs [CLR integration]
 ms.assetid: d280d359-08f0-47b5-a07e-67dd2a58ad73
 caps.latest.revision: 59
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 06301efa5022c5ed686a4db97951c62bc85daf35
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: rothja
+ms.author: jroth
+manager: craigg
+ms.openlocfilehash: ea3ca5dbbc51a7e675d1876114209d37fc928c89
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36041634"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37354691"
 ---
 # <a name="clr-hosted-environment"></a>Environnement hébergé CLR
   Le CLR (Common Language Runtime) [!INCLUDE[msCoName](../../../includes/msconame-md.md)] .NET Framework est un environnement qui exécute de nombreux langages de programmation modernes, y compris [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual C#, [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual Basic et [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual C++. Le CLR propose une mémoire récupérée par le garbage collector, un threading préemptif, des services de métadonnées (réflexion de type), la vérifiabilité du code et la sécurité d'accès du code. Le CLR utilise les métadonnées pour rechercher et charger des classes, placer des instances en mémoire, résoudre des appels de méthode, générer un code natif, appliquer la sécurité et définir les limites du contexte d'exécution.  
@@ -100,7 +98,7 @@ ms.locfileid: "36041634"
   
 -   ExternalProcessMgmt, qui indique si l'API expose une méthode pour contrôler le processus hôte.  
   
- Étant donné ces attributs, l'hôte peut spécifier une liste de HPA, tels que l'attribut SharedState, qui doivent être rejetés dans l'environnement hébergé. Dans ce cas, le CLR refuse les tentatives d'appel par code utilisateur des API annotées par les HPA dans la liste interdite. Pour plus d’informations, consultez [attributs de Protection d’hôte et de la programmation de l’intégration CLR](../clr-integration-security-host-protection-attributes/host-protection-attributes-and-clr-integration-programming.md).  
+ Étant donné ces attributs, l'hôte peut spécifier une liste de HPA, tels que l'attribut SharedState, qui doivent être rejetés dans l'environnement hébergé. Dans ce cas, le CLR refuse les tentatives d'appel par code utilisateur des API annotées par les HPA dans la liste interdite. Pour plus d’informations, consultez [les attributs de Protection hôte et programmation de l’intégration de CLR](../clr-integration-security-host-protection-attributes/host-protection-attributes-and-clr-integration-programming.md).  
   
 ## <a name="how-sql-server-and-the-clr-work-together"></a>Comment SQL Server et le CLR fonctionnent-ils ensemble ?  
  Cette section explique comment [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] intègre le threading, la planification, la synchronisation et les modèles de gestion de la mémoire de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] et du CLR. En particulier, cette section examine l'intégration du point de vue de l'évolutivité, de la fiabilité et des objectifs en matière de sécurité. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] agit essentiellement comme un système d'exploitation pour le CLR lorsque celui-ci est hébergé au sein de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Le CLR appelle les routines de bas niveau implémentées par [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] pour le threading, la planification, la synchronisation et la gestion de la mémoire. Ce sont les mêmes primitives que le reste du moteur [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] utilise. Cette approche fournit plusieurs avantages en termes d'évolutivité, de fiabilité et de sécurité.  

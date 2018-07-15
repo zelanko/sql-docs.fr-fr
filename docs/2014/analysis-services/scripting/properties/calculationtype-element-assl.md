@@ -1,5 +1,5 @@
 ---
-title: Élément CalculationType (ASSL) | Documents Microsoft
+title: Élément CalculationType (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -22,18 +22,18 @@ helpviewer_keywords:
 - CalculationType element
 ms.assetid: b974b3d3-fbf7-4d77-8f6e-4e05a258fe84
 caps.latest.revision: 37
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 434d0151009119a5e05d49180c6a9d1eb9519d77
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 24e8f95af2ab7eb8be754eb2d1c7de96fee91ea7
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36043943"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37275935"
 ---
 # <a name="calculationtype-element-assl"></a>Élément CalculationType (ASSL)
-  Décrit le type de calcul défini dans le type [CalculationProperty](../objects/calculationproperty-element-assl.md) élément.  
+  Décrit le type de calcul défini dans associé [CalculationProperty](../objects/calculationproperty-element-assl.md) élément.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -67,7 +67,7 @@ ms.locfileid: "36043943"
 |Valeur|Description|  
 |-----------|-----------------|  
 |*Membre*|La propriété de calcul s'applique à une définition de membre calculé.|  
-|*ensemble*|La propriété de calcul s'applique à une définition de jeu nommé.|  
+|*Ensemble*|La propriété de calcul s'applique à une définition de jeu nommé.|  
 |*Cellules*|La propriété de calcul s'applique à une définition de cellule calculée.|  
   
  L'énumération qui correspond aux valeurs autorisées de l'élément `CalculationType` dans le modèle objet AMO (Analysis Management Objects) est <xref:Microsoft.AnalysisServices.CalculationType>.  

@@ -1,5 +1,5 @@
 ---
-title: Configurer et afficher les fichiers journaux SharePoint et (PowerPivot pour SharePoint) de journalisation des Diagnostics | Documents Microsoft
+title: Configurer et afficher les fichiers journaux SharePoint et Diagnostic journalisation (PowerPivot pour SharePoint) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 85f62d29-cdc6-45b3-be1f-ff1182939858
 caps.latest.revision: 7
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 5d78836a24938511939c65e127425439aa59f1fb
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: c32447beac0d531f053e6945769b6eba12be23ed
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36044029"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37255841"
 ---
 # <a name="configure-and-view-sharepoint-log-files--and-diagnostic-logging-powerpivot-for-sharepoint"></a>Configurer et afficher les fichiers journaux SharePoint et la journalisation des diagnostics (PowerPivot pour SharePoint)
-  [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] opérations de serveur, les événements et les messages sont enregistrés dans les fichiers journaux SharePoint. Utilisez les informations de cette rubrique pour configurer les niveaux de journalisation et afficher les informations du fichier journal. Vous pouvez contrôler les événements du serveur [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] qui sont enregistrés dans le fichier. Vous pouvez également contrôler la gravité des messages enregistrés. Pour plus d’informations, consultez [configurer la collecte de données d’utilisation pour &#40;PowerPivot pour SharePoint](configure-usage-data-collection-for-power-pivot-for-sharepoint.md).  
+  [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] opérations de serveur, les événements et les messages sont enregistrés dans les fichiers journaux SharePoint. Utilisez les informations de cette rubrique pour configurer les niveaux de journalisation et afficher les informations du fichier journal. Vous pouvez contrôler les événements du serveur [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] qui sont enregistrés dans le fichier. Vous pouvez également contrôler la gravité des messages enregistrés. Pour plus d’informations, consultez [Configure Usage Data Collection pour &#40;PowerPivot pour SharePoint](configure-usage-data-collection-for-power-pivot-for-sharepoint.md).  
   
  Dans cette rubrique :  
   
@@ -54,7 +54,7 @@ ms.locfileid: "36044029"
   
 4.  Développez la catégorie et sélectionnez des catégories.  
   
-     **Demande de Page application** spécifie les événements déclenchés par l’application de service lors de la recherche un [!INCLUDE[ssGeminiSrv](../../includes/ssgeminisrv-md.md)] pour le chargement d’une source de données PowerPivot et de communiquer avec d’autres serveurs dans la batterie de serveurs.  
+     **Demande de Page application** spécifie les événements déclenchés par l’application de service lors de la localisation un [!INCLUDE[ssGeminiSrv](../../includes/ssgeminisrv-md.md)] pour le chargement d’une source de données PowerPivot et la communication avec d’autres serveurs dans la batterie de serveurs.  
   
      **Traitement des demandes** spécifie les événements déclenchés par des requêtes sur une base de données PowerPivot chargée sur un serveur de la batterie.  
   
@@ -125,11 +125,11 @@ ms.locfileid: "36044029"
 |w3wp.exe|Service PowerPivot|Utilisation|Commentaires|There are no current request statistics, nothing to log.|À intervalles prédéfinis, le service fournit les statistiques de réponse aux requêtes en tant qu'événement d'utilisation au système de collecte des données d'utilisation. Ce message indique qu'il n'existe aucune statistique sur les requêtes à signaler.|  
 |w3wp.exe|Service PowerPivot|Web frontal|Commentaires|Démarrage de localiser un serveur d’applications pour la source de données =\<*chemin d’accès*>|Lorsqu'il reçoit une demande de connexion, le service [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] identifie un [!INCLUDE[ssGeminiSrv](../../includes/ssgeminisrv-md.md)] disponible pour gérer la demande. Si la batterie de serveurs ne contient qu'un seul serveur, le serveur local accepte toujours la demande.|  
 |w3wp.exe|Service PowerPivot|Web frontal|Commentaires|Locating the application server succeeded.|La requête a été allouée à une application de service [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] .|  
-|w3wp.exe|Service PowerPivot|Web frontal|Commentaires|Demande de redirection pour la \< *PowerPivotdata source*> à la [!INCLUDE[ssGeminiSrv](../../includes/ssgeminisrv-md.md)].|La demande a été envoyée au [!INCLUDE[ssGeminiSrv](../../includes/ssgeminisrv-md.md)].|  
+|w3wp.exe|Service PowerPivot|Web frontal|Commentaires|Demande de redirection pour la \< *Redirecting source*> à la [!INCLUDE[ssGeminiSrv](../../includes/ssgeminisrv-md.md)].|La demande a été envoyée au [!INCLUDE[ssGeminiSrv](../../includes/ssgeminisrv-md.md)].|  
 |w3wp.exe|Service PowerPivot|Traitement des demandes|Commentaires|Demande de redirection pour le nom d’utilisateur\<*utilisateur SharePoint*> à la base de données|Une connexion avec emprunt d'identité à la source de données [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] a été créée au nom de l'utilisateur SharePoint.|  
   
 ## <a name="see-also"></a>Voir aussi  
- [Collecte des données d’utilisation PowerPivot](power-pivot-usage-data-collection.md)   
+ [Collecte des données d’utilisation de PowerPivot](power-pivot-usage-data-collection.md)   
  [Afficher et lire les fichiers journaux d’installation de SQL Server](../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md)   
  [Configurer la collecte de données d’utilisation pour &#40;PowerPivot pour SharePoint](configure-usage-data-collection-for-power-pivot-for-sharepoint.md)  
   

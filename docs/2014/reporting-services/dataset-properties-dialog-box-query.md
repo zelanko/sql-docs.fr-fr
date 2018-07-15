@@ -1,5 +1,5 @@
 ---
-title: Boîte de dialogue Propriétés du DataSet, requête | Documents Microsoft
+title: Boîte de dialogue Propriétés de DataSet, requête | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - "10160"
 - sql12.rtp.rptdesigner.datasetproperties.query.f1
 ms.assetid: 1fa34a4b-7de0-4e92-99fa-bc28a206773f
 caps.latest.revision: 37
-author: douglaslM
+author: maggiesmsft
 ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 56030cb08b8197958436e46438e1561165776101
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: db00bf6e36f20da59e548acef394c786a70d40fd
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36045315"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37208559"
 ---
 # <a name="dataset-properties-dialog-box-query"></a>Boîte de dialogue Propriétés du dataset, Requête
   Sélectionnez **Requête** dans la boîte de dialogue **Propriétés du dataset** pour choisir une source de données et créer une requête.  
@@ -31,7 +31,7 @@ ms.locfileid: "36045315"
   
 -   [Propriétés de jeux de données, boîte de dialogue, paramètres](report-data/dataset-properties-dialog-box-parameters.md)  
   
--   [Boîte de dialogue Propriétés du DataSet, champs](../../2014/reporting-services/dataset-properties-dialog-box-fields.md)  
+-   [Propriétés du dataset, boîte de dialogue (Champs)](../../2014/reporting-services/dataset-properties-dialog-box-fields.md)  
   
 -   [Propriétés de jeux de données, boîte de dialogue, options](../../2014/reporting-services/dataset-properties-dialog-box-options.md)  
   
@@ -66,8 +66,8 @@ ms.locfileid: "36045315"
  Tapez la valeur en secondes du délai d'expiration de la requête. La valeur par défaut est 30 secondes. La valeur de **Délai dépassé** doit être vide ou supérieure à zéro. Si elle ne contient aucune valeur, la requête n'est soumise à aucun délai d'expiration.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Connexions de données, les Sources de données et les chaînes de connexion dans Reporting Services](../../2014/reporting-services/data-connections-data-sources-and-connection-strings-in-reporting-services.md)   
- [Ajouter des données à un rapport &#40;rapport Générateur et SSRS&#41;](report-data/report-datasets-ssrs.md)   
+ [Connexions de données, Sources de données et chaînes de connexion dans Reporting Services](../../2014/reporting-services/data-connections-data-sources-and-connection-strings-in-reporting-services.md)   
+ [Ajouter des données à un rapport &#40;Générateur de rapports et SSRS&#41;](report-data/report-datasets-ssrs.md)   
  [Concepteurs de requêtes &#40;Générateur de rapports&#41;](../../2014/reporting-services/query-designers-report-builder.md)   
  [Concepteurs de requêtes Reporting Services](../../2014/reporting-services/reporting-services-query-designers.md)  
   

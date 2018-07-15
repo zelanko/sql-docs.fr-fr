@@ -1,5 +1,5 @@
 ---
-title: Objet SqlXmlCommand (Classes managées de SQLXML) | Documents Microsoft
+title: Objet SqlXmlCommand (Classes managées de SQLXML) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -32,18 +32,18 @@ helpviewer_keywords:
 - CommandStream property
 ms.assetid: c1f9e0bb-a89d-4d6a-a96e-289ef516a3a6
 caps.latest.revision: 23
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: cec5927dd6342af922bfc80f92e28c400f689c38
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: f4cec787d682ae0ee16945518887fce980acc101
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36051008"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37250069"
 ---
 # <a name="sqlxmlcommand-object-sqlxml-managed-classes"></a>Objet SqlXmlCommand (classes managées SQLXML)
-  Il s’agit du constructeur de l’objet SqlXmlCommand :  
+  Il s’agit du constructeur pour l’objet SqlXmlCommand :  
   
 ```  
 public SqlXmlCommand(string cnString)  
@@ -56,19 +56,19 @@ public SqlXmlCommand(string cnString)
  Pour obtenir un exemple fonctionnel, consultez [l’exécution des requêtes SQL &#40;Classes managées SQLXML&#41;](sqlxml-4-0-net-framework-support-managed-classes.md).  
   
 ## <a name="methods"></a>Méthodes  
- TheSqlXmlCommand objet prend en charge plusieurs méthodes, y compris les méthodes suivantes pour exécuter une commande :  
+ TheSqlXmlCommand objet prend en charge plusieurs méthodes, notamment les méthodes suivantes pour exécuter une commande :  
   
  ExecuteNonQuery() void  
  Exécute la commande, mais ne retourne rien. Cette méthode est utile si vous souhaitez exécuter une commande autre qu'une requête (autrement dit, une commande qui ne retourne rien). L'exécution d'un code de mise à jour (updategram) ou d'un DiffGram qui met à jour des enregistrements mais ne retourne rien est un exemple d'une telle méthode.  
   
- ExecuteStream() du flux de données  
- Retourne un objet de flux. Cette méthode est utile lorsque vous souhaitez que les résultats de la requête vous soient retournés dans un nouveau flux de données. Pour obtenir un exemple fonctionnel, consultez [l’exécution des requêtes SQL &#40;Classes managées SQLXML&#41;](sqlxml-4-0-net-framework-support-managed-classes.md).  
+ ExecuteStream() de Stream  
+ Retourne un nouvel objet Stream. Cette méthode est utile lorsque vous souhaitez que les résultats de la requête vous soient retournés dans un nouveau flux de données. Pour obtenir un exemple fonctionnel, consultez [l’exécution des requêtes SQL &#40;Classes managées SQLXML&#41;](sqlxml-4-0-net-framework-support-managed-classes.md).  
   
  ExecuteToStream void publique (Stream outputStream)  
- Écrit les résultats de la requête dans un flux de données existant. Cette méthode est utile lorsque vous disposez d’un flux de données à laquelle vous voulez ajouter (par exemple, pour que les résultats de requête écrites dans le System.Web.HttpResponse.OutputStream) les résultats. Pour obtenir un exemple fonctionnel, consultez [l’exécution des requêtes SQL &#40;Classes managées SQLXML&#41;](sqlxml-4-0-net-framework-support-managed-classes.md).  
+ Écrit les résultats de la requête dans un flux de données existant. Cette méthode est utile lorsque vous avez un flux auquel vous voulez ajouter (par exemple, pour obtenir les résultats de requête écrites dans le System.Web.HttpResponse.OutputStream) les résultats. Pour obtenir un exemple fonctionnel, consultez [l’exécution des requêtes SQL &#40;Classes managées SQLXML&#41;](sqlxml-4-0-net-framework-support-managed-classes.md).  
   
  ExecuteXmlReader() de XmlReader  
- Retourne un objet XmlReader. Vous pouvez utiliser cette méthode manipulent directement les données dans l’objet XmlReader ou connectez l’architecture chainable de System.Xml. Pour plus d'informations, consultez la documentation sur [!INCLUDE[msCoName](../../../includes/msconame-md.md)] .NET Framework. Pour obtenir un exemple fonctionnel, consultez [l’exécution de requêtes SQL à l’aide de la méthode ExecuteXMLReader](executing-sql-queries-by-using-the-executexmlreader-method.md).  
+ Retourne un objet XmlReader. Vous pouvez utiliser cette méthode à manipuler directement les données dans l’objet XmlReader ou incorporer dans l’architecture chainable de System.Xml. Pour plus d'informations, consultez la documentation sur [!INCLUDE[msCoName](../../../includes/msconame-md.md)] .NET Framework. Pour obtenir un exemple fonctionnel, consultez [l’exécution de requêtes SQL à l’aide de la méthode ExecuteXMLReader](executing-sql-queries-by-using-the-executexmlreader-method.md).  
   
  Objet de TheSqlXmlCommand prend également en charge ces méthodes supplémentaires :  
   
@@ -85,13 +85,13 @@ public SqlXmlCommand(string cnString)
  Si la valeur est True, cela indique que la conversion de l'ensemble de lignes en XML doit se produire sur le client et non pas sur le serveur. Cette propriété s'avère utile si vous souhaitez déplacer la charge de performance vers le niveau intermédiaire. La propriété vous permet également d'imbriquer les procédures stockées existantes avec FOR XML pour obtenir une sortie XML.  
   
  SchemaPath  
- Nom du schéma de mappage avec le chemin d'accès au répertoire (par exemple, C:\x\y\MySchema.xml). Cette propriété est utile pour spécifier un schéma de mappage pour des requêtes XPath. Le chemin d'accès spécifié peut être absolu ou relatif. Si le chemin d’accès est relatif, le chemin d’accès de base qui est spécifié dans le chemin d’accès de Base permet de résoudre le chemin d’accès relatif. Si aucun chemin d'accès de base n'est spécifié, le chemin d'accès relatif se rapporte au répertoire en cours. Pour obtenir un exemple fonctionnel, consultez [l’accès à des fonctionnalités de SQLXML dans l’environnement .NET](accessing-sqlxml-functionality-in-the-net-environment.md).  
+ Nom du schéma de mappage avec le chemin d'accès au répertoire (par exemple, C:\x\y\MySchema.xml). Cette propriété est utile pour spécifier un schéma de mappage pour des requêtes XPath. Le chemin d'accès spécifié peut être absolu ou relatif. Si le chemin d’accès est relatif, le chemin d’accès de base qui est spécifié dans le chemin d’accès de Base est utilisé pour résoudre le chemin d’accès relatif. Si aucun chemin d'accès de base n'est spécifié, le chemin d'accès relatif se rapporte au répertoire en cours. Pour obtenir un exemple fonctionnel, consultez [l’accès à des fonctionnalités de SQLXML dans l’environnement .NET](accessing-sqlxml-functionality-in-the-net-environment.md).  
   
  XslPath  
- Nom du fichier XSL avec le chemin d'accès au répertoire. Le chemin d'accès spécifié peut être absolu ou relatif. Si le chemin d’accès est relatif, le chemin d’accès de base qui est spécifié dans le chemin d’accès de Base permet de résoudre le chemin d’accès relatif. Si aucun chemin d'accès de base n'est spécifié, le chemin d'accès relatif se rapporte au répertoire en cours. Pour obtenir un exemple fonctionnel, consultez [appliquer une Transformation XSL &#40;Classes managées SQLXML&#41;](applying-an-xsl-transformation-sqlxml-managed-classes.md).  
+ Nom du fichier XSL avec le chemin d'accès au répertoire. Le chemin d'accès spécifié peut être absolu ou relatif. Si le chemin d’accès est relatif, le chemin d’accès de base qui est spécifié dans le chemin d’accès de Base est utilisé pour résoudre le chemin d’accès relatif. Si aucun chemin d'accès de base n'est spécifié, le chemin d'accès relatif se rapporte au répertoire en cours. Pour obtenir un exemple fonctionnel, consultez [appliquer une Transformation XSL &#40;Classes managées SQLXML&#41;](applying-an-xsl-transformation-sqlxml-managed-classes.md).  
   
  Chemin d’accès de base  
- Chemin d'accès de base (chemin d'accès à un répertoire). Cette propriété est utile pour résoudre un chemin d’accès relatif est spécifié pour un fichier XSL (en utilisant la xslpath, propriété), un fichier de schéma de mappage (à l’aide de la schemapath, propriété) ou une référence au schéma externe dans un modèle XML (spécifié à l’aide de la `mapping-schema` (attribut).  
+ Chemin d'accès de base (chemin d'accès à un répertoire). Cette propriété est utile pour résoudre un chemin relatif est spécifié pour un fichier XSL (en utilisant la xslpath, propriété), un fichier de schéma de mappage (en utilisant la schemapath, propriété) ou une référence de schéma externes dans un modèle XML (spécifié à l’aide de la `mapping-schema` attribut).  
   
  OutputEncoding  
  Spécifie l'encodage pour le flux de données retourné lorsque la commande s'exécute. Cette propriété est utile pour demander un encodage spécifique pour le flux de données retourné. Entre autres, les encodages communément utilisés sont UTF-8, ANSI et Unicode. UTF-8 est l'encodage par défaut.  
@@ -106,7 +106,7 @@ public SqlXmlCommand(string cnString)
  Texte de la commande. Cette propriété est utilisée pour spécifier le texte de la commande que vous souhaitez exécuter. Pour obtenir un exemple fonctionnel, consultez [l’exécution des requêtes SQL &#40;Classes managées SQLXML&#41;](sqlxml-4-0-net-framework-support-managed-classes.md).  
   
  CommandStream  
- Flux de commande. Cette propriété est utile si vous souhaitez exécuter une commande à partir d'un fichier (par exemple, un modèle XML). Lorsque vous utilisez uniquement CommandStream, **« Modèle »**, **« UpdateGram »** et **« DiffGram » CommandType** valeurs sont prises en charge. Pour obtenir un exemple fonctionnel, consultez [l’exécution des fichiers de modèle à l’aide de la propriété CommandStream](executing-template-files-by-using-the-commandstream-property.md).  
+ Flux de commande. Cette propriété est utile si vous souhaitez exécuter une commande à partir d'un fichier (par exemple, un modèle XML). Lorsque vous utilisez CommandStream, uniquement **« Modèle »**, **« UpdateGram »** et **« DiffGram » CommandType** valeurs sont prises en charge. Pour obtenir un exemple fonctionnel, consultez [l’exécution des fichiers de modèle à l’aide de la propriété CommandStream](executing-template-files-by-using-the-commandstream-property.md).  
   
  CommandType  
  Identifie le type de commande. Cette propriété est utilisée pour spécifier le type de commande que vous souhaitez exécuter. Les valeurs du tableau ci-dessous déterminent le type de la commande. Pour obtenir un exemple fonctionnel, consultez [l’accès à des fonctionnalités de SQLXML dans l’environnement .NET](accessing-sqlxml-functionality-in-the-net-environment.md).  

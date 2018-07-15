@@ -1,5 +1,5 @@
 ---
-title: Importer à partir de PowerPivot (SSAS tabulaire) | Documents Microsoft
+title: Importation à partir de PowerPivot (SSAS tabulaire) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.bidtoolset.importfromppt.f1
 ms.assetid: ac1a6a79-bda3-4122-a717-8b1e2f77da02
 caps.latest.revision: 23
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 4636578c435ac158f92ef4968072e374af7fb4f9
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 3f6480cf0b577a0faa48691a85248efb77a84531
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36051356"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37245739"
 ---
 # <a name="import-from-powerpivot-ssas-tabular"></a>Importer à partir de PowerPivot (SSAS Tabulaire)
   Cette rubrique décrit la procédure de création d'un projet de modèle tabulaire en important les métadonnées et les données d'un classeur PowerPivot à l'aide du modèle de projet Importer à partir de PowerPivot dans [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  
@@ -51,7 +51,7 @@ ms.locfileid: "36051356"
 4.  Dans la boîte de dialogue **Ouvrir** , sélectionnez le fichier [!INCLUDE[ssGeminiClient](../../includes/ssgeminiclient-md.md)] qui contient les données et les métadonnées de modèle que vous souhaitez importer, puis cliquez sur **Ouvrir**.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Base de données de l’espace de travail &#40;SSAS tabulaire&#41;](workspace-database-ssas-tabular.md)   
+ [Espace de travail de base de données &#40;SSAS tabulaire&#41;](workspace-database-ssas-tabular.md)   
  [Copier et coller des données &#40;SSAS tabulaire&#41;](../copy-and-paste-data-ssas-tabular.md)  
   
   

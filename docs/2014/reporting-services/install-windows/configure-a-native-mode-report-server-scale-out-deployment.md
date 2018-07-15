@@ -1,5 +1,5 @@
 ---
-title: Configurer un déploiement avec montée en charge en Mode natif Report Server (Gestionnaire de Configuration de SSRS) | Documents Microsoft
+title: Configurer un déploiement de montée en puissance de serveurs de rapports en Mode natif (Gestionnaire de Configuration de SSRS) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - report servers [Reporting Services], deployments
 - deploying [Reporting Services], scale-out deployment model
@@ -17,13 +17,13 @@ ms.assetid: b30d0308-4d9b-4f85-9f83-dece4dcb2775
 caps.latest.revision: 11
 author: markingmyname
 ms.author: maghan
-manager: jhubbard
-ms.openlocfilehash: 04d66fcb5151a325402ff541fb4fd4f97d442d5e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 153d97c15dcde21e70f29aeb77d80aee1e55adc5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36045120"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37296069"
 ---
 # <a name="configure-a-native-mode-report-server-scale-out-deployment-ssrs-configuration-manager"></a>Configurer un déploiement par montée en puissance parallèle de serveurs de rapports en mode natif (Gestionnaire de configuration de SSRS)
   Le mode natif de Reporting Services prend en charge un modèle de déploiement par montée en puissance parallèle qui vous permet d'exécuter plusieurs instances de serveur de rapports partageant une base de données du serveur de rapports unique. Les déploiements avec montée en puissance parallèle sont utilisés pour augmenter l'évolutivité des serveurs de rapports afin de gérer davantage d'utilisateurs simultanés et de plus grandes charges d'exécution de rapport. Ils peuvent également être utilisés pour dédier des serveurs spécifiques au traitement des rapports interactifs ou planifiés.  
@@ -42,7 +42,7 @@ ms.locfileid: "36045120"
   
  **Pour planifier, installer et configurer un déploiement avec montée en puissance parallèle, suivez ces étapes :**  
   
--   Révision [installer SQL Server 2014 à partir de l’Assistant Installation &#40;le programme d’installation&#41; ](../../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md) dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] la documentation en ligne pour obtenir des instructions sur la façon d’installer des instances de serveur de rapports.  
+-   Révision [installer SQL Server 2014 à partir de l’Assistant Installation &#40;le programme d’installation&#41; ](../../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md) dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] la documentation en ligne pour obtenir des instructions sur l’installation des instances de serveur de rapports.  
   
 -   Si vous prévoyez d'héberger le déploiement avec montée en puissance parallèle sur un cluster à charge réseau équilibrée, vous devez configurer le cluster avant de configurer le déploiement avec montée en puissance parallèle. Pour plus d’informations, consultez [configurer un serveur de rapports sur un Cluster d’équilibrage de charge réseau](../report-server/configure-a-report-server-on-a-network-load-balancing-cluster.md).  
   
@@ -110,7 +110,7 @@ ms.locfileid: "36045120"
   
      ![Capture d’écran partielle de la page de déploiement avec montée en puissance parallèle](../../../2014/sql-server/install/media/scaloutscreen.gif "Capture d’écran partielle de la page de déploiement avec montée en puissance parallèle")  
   
-3.  Dans la page déploiement avec montée en puissance parallèle, sélectionnez l’instance de serveur de rapports qui est en attente de joindre le déploiement, puis cliquez sur **ajouter un serveur**.  
+3.  Sur la page déploiement avec montée en puissance, sélectionnez l’instance de serveur de rapports qui est en attente de joindre le déploiement, puis cliquez sur **ajouter un serveur**.  
   
     > [!NOTE]  
     >  **Problème :** au moment de joindre une instance de serveur de rapports Reporting Services au déploiement avec montée en puissance parallèle, un message d’erreur du type « Accès refusé » peut s’afficher.  

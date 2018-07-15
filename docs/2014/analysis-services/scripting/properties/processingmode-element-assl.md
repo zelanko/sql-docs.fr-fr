@@ -1,5 +1,5 @@
 ---
-title: Élément ProcessingMode (ASSL) | Documents Microsoft
+title: Élément ProcessingMode (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - ProcessingMode element
 ms.assetid: dff6eeba-f09c-4d8c-ad81-caef76254af0
 caps.latest.revision: 33
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: a4f302608db355a639d9fb82e024a7a72cf560b3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 9a966a1d800107b18316e875bd8c9552df613cfe
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36043931"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37273785"
 ---
 # <a name="processingmode-element-assl"></a>Élément ProcessingMode (ASSL)
   Indique si l'instance doit créer les index et effectuer l'agrégation lors du traitement ou après celui-ci.  
@@ -71,7 +71,7 @@ ms.locfileid: "36043931"
 |*Régulière*|L'instance crée des index et effectue des agrégations au cours du traitement.|  
 |*LazyOptimizations*|L'instance crée des index et effectue des agrégations après le traitement.|  
   
- L’énumération qui correspond aux valeurs autorisées pour `ProcessingMode` dans l’objet d’objets AMO (Analysis Management) est modèle <xref:Microsoft.AnalysisServices.ProcessingMode>.  
+ L’énumération qui correspond aux valeurs autorisées pour `ProcessingMode` dans l’objet d’objets AMO (Analysis Management) modèle est <xref:Microsoft.AnalysisServices.ProcessingMode>.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Propriétés &#40;ASSL&#41;](properties-assl.md)  

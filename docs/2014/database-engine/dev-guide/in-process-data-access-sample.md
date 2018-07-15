@@ -1,5 +1,5 @@
 ---
-title: Exemple d’accès aux données in-Process | Documents Microsoft
+title: Exemple d’accès aux données in-Process | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -12,15 +12,15 @@ ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: 155be272-4f9a-4d86-9f4f-714c4f45b49a
 caps.latest.revision: 12
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: c6f90e5ba1dd6c90f5d941dfcb2ccaa42c8d9c07
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: f74adfc254b0606fb62a93b72b2c8b5a038f2a7b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36044282"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37285795"
 ---
 # <a name="in-process-data-access-sample"></a>Exemple d'accès aux données in-process
   L'exemple `InProcessDataAccess` contient plusieurs fonctions simples qui illustrent différentes fonctionnalités du fournisseur d'accès aux données in-process [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] CLR.  
@@ -53,11 +53,11 @@ ms.locfileid: "36044282"
      `GO`  
   
     > [!NOTE]  
-    >  Pour activer le CLR, vous devez disposer `ALTER SETTINGS` autorisation de niveau serveur, qui est implicitement détenue par les membres de la `sysadmin` et `serveradmin` rôles serveur fixes.  
+    >  Pour activer le CLR, vous devez avoir `ALTER SETTINGS` autorisation de niveau serveur, qui est implicitement détenue par les membres de la `sysadmin` et `serveradmin` rôles serveur fixes.  
   
 -   La base de données AdventureWorks doit être installée sur l'instance [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que vous utilisez.  
   
--   Si vous n’êtes pas administrateur de le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance que vous utilisez, vous devez faire un administrateur vous accorder **CreateAssembly** autorisation de terminer l’installation.  
+-   Si vous n’êtes pas administrateur de le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance que vous utilisez, vous devez demander un administrateur vous accorder **CreateAssembly** autorisation pour terminer l’installation.  
   
 ## <a name="building-the-sample"></a>Génération de l'exemple  
   
@@ -360,7 +360,7 @@ EXTERNAL NAME [InProcDA].[DataAccessDemo].[SendReaderToClient];
 GO  
 ```  
   
- Les éléments suivants [!INCLUDE[tsql](../../includes/tsql-md.md)] (`test.sql`) teste l’exemple en exerçant les procédures stockées et une fonction définie dans cet exemple.  
+ Ce qui suit [!INCLUDE[tsql](../../includes/tsql-md.md)] (`test.sql`) teste l’exemple en exerçant les procédures stockées et une fonction définie dans cet exemple.  
   
 ```  
 USE AdventureWorks;  

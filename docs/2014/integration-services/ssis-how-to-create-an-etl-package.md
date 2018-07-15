@@ -1,5 +1,5 @@
 ---
-title: 'Didacticiel SSIS : Création d’un Package ETL Simple | Documents Microsoft'
+title: 'Didacticiel SSIS : Création d’un Package ETL Simple | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - SSIS, tutorials
 - packages [Integration Services], tutorials
@@ -20,16 +20,16 @@ ms.assetid: d6d5bb1f-4cb1-4605-9cd6-f60b858382c4
 caps.latest.revision: 37
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 9d5a3522e857f7cb053f181a46e17cb44288a850
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 7b2e8b7f78e7dc64bc3649270e279b740b041abb
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36045402"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37263155"
 ---
 # <a name="ssis-tutorial-creating-a-simple-etl-package"></a>Didacticiel SSIS : Création d'un package ETL simple
-  [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] (SSIS) est une plateforme de génération des solutions d’intégration de données, y compris l’extraction, transformation et chargement (ETL) des packages pour l’entreposage des données hautes performances. SSIS propose des outils graphiques et des assistants permettant de créer et de déboguer des packages ; des tâches permettant de réaliser des fonctions de flux de travail comme les opérations FTP, l'exécution d'instructions SQL et l'envoi de messages électroniques ; des sources de données et des destinations permettant d'extraire et de charger des données ; des transformations permettant de nettoyer, d'agréger, de fusionner et de copier des données ; un service de gestion, le service [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] , permettant d'administrer l'exécution et le stockage des packages, et des API (Application Programming Interface) permettant de programmer le modèle objet [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] .  
+  [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] (SSIS) est une plateforme pour créer des solutions d’intégration de données, y compris d’extraction, transformation et chargement (ETL) des packages pour l’entreposage des données très performantes. SSIS propose des outils graphiques et des assistants permettant de créer et de déboguer des packages ; des tâches permettant de réaliser des fonctions de flux de travail comme les opérations FTP, l'exécution d'instructions SQL et l'envoi de messages électroniques ; des sources de données et des destinations permettant d'extraire et de charger des données ; des transformations permettant de nettoyer, d'agréger, de fusionner et de copier des données ; un service de gestion, le service [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] , permettant d'administrer l'exécution et le stockage des packages, et des API (Application Programming Interface) permettant de programmer le modèle objet [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] .  
   
  Au cours de ce didacticiel, vous allez apprendre à utiliser le Concepteur [!INCLUDE[ssIS](../includes/ssis-md.md)] pour créer un package [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] simple. Ce package extrait les données d'un fichier plat, les reformate et les insère dans une table de faits. Au cours des leçons suivantes, ce package est développé pour illustrer le bouclage, les options de configuration de package, l'écriture dans un journal et le flux d'erreurs.  
   
@@ -59,19 +59,19 @@ ms.locfileid: "36045402"
     3.  Cliquez sur le fichier SQL2012.Integration_Services.Create_Simple_ETL_Tutorial.Sample.zip.  
   
 ## <a name="lessons-in-this-tutorial"></a>Leçons du didacticiel  
- [Leçon 1 : Création du projet et un Package de base](lesson-1-create-a-project-and-basic-package-with-ssis.md)  
+ [Leçon 1 : Création du package de base et du package du projet](lesson-1-create-a-project-and-basic-package-with-ssis.md)  
  Au cours de cette leçon, vous allez créer un package ETL simple qui extrait des données d'un seul fichier plat, transforme ces données en utilisant des transformations de recherche et enfin, charge le résultat dans une destination de table de faits.  
   
- [Leçon 2 : Ajout d’un bouclage](lesson-2-adding-looping-with-ssis.md)  
+ [Leçon 2 : Ajout d’un bouclage](lesson-2-adding-looping-with-ssis.md)  
  Au cours de cette leçon, vous allez développer le package créé au cours de la leçon 1 pour pouvoir utiliser les nouvelles fonctionnalités de bouclage et extraire des données de plusieurs fichiers plats en un seul processus de flux de données.  
   
- [Leçon 3 : Ajout de la journalisation](lesson-3-add-logging-with-ssis.md)  
+ [Leçon 3 : Ajout de la journalisation](lesson-3-add-logging-with-ssis.md)  
  Au cours de cette leçon, vous allez développer le package que vous avez créé au cours de la leçon 2 pour tirer parti des nouvelles fonctions d'écriture dans un journal.  
   
- [Leçon 4 : Ajout de Redirection de flux d’erreur](lesson-4-add-error-flow-redirection-with-ssis.md)  
+ [Leçon 4 : Ajout de redirection de flux d’erreurs](lesson-4-add-error-flow-redirection-with-ssis.md)  
  Dans cette leçon, vous allez développer le package que vous avez créé au cours de la leçon 3 pour tirer parti des nouvelles configurations de sortie d'erreur.  
   
- [Leçon 5 : Ajout de Configurations de Package pour le modèle de déploiement de Package](lesson-5-add-ssis-package-configurations-for-the-package-deployment-model.md)  
+ [Leçon 5 : Ajout de configurations de package pour le modèle de déploiement de package](lesson-5-add-ssis-package-configurations-for-the-package-deployment-model.md)  
  Au cours de cette leçon, vous allez développer le package que vous avez créé au cours de la leçon 4 pour tirer parti des nouvelles options de configuration de package.  
   
  [Leçon 6 : Utilisation des paramètres dans le modèle de déploiement de projet](lesson-6-using-parameters-with-the-project-deployment-model-in-ssis.md)  

@@ -1,5 +1,5 @@
 ---
-title: Page choisir l’élément emplacement (Gestionnaire de rapports) | Documents Microsoft
+title: Page choisir l’élément emplacement (Gestionnaire de rapports) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 4a53a1a8-d1e1-47ef-b1fc-63352ece7d3c
 caps.latest.revision: 22
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: bf08188225c10d72230eea781ac9ebbff3d7c5f4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: a3e0f94a0785aa13fc4c83c304e207b8775e58b4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36044202"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37260515"
 ---
 # <a name="choose-item-location-page-report-manager"></a>Page Choisir l'emplacement de l'élément (Gestionnaire de rapports)
   La page Choisir l'emplacement de l'élément vous permet de sélectionner un dossier pour un nouveau rapport lié ou modèle. Si vous créez un rapport lié ou un modèle pour un groupe d'utilisateurs spécifique, vous pouvez souhaiter placer l'élément dans un dossier qui contient d'autres rapports et modèles qu'ils utilisent. Vous devez choisir un dossier qui existe déjà et pour lequel vous êtes autorisé à ajouter du contenu.  
@@ -67,6 +67,6 @@ ms.locfileid: "36044202"
 ## <a name="see-also"></a>Voir aussi  
  [Page Nouveau rapport lié &#40;Gestionnaire de rapports&#41;](../../2014/reporting-services/new-linked-report-page-report-manager.md)   
  [Page nouveau modèle &#40;le Gestionnaire de rapports&#41;](../../2014/reporting-services/new-model-page-report-manager.md)   
- [Aide (F1) de gestionnaire de rapports](../../2014/reporting-services/report-manager-f1-help.md)  
+ [Aide (F1) du Gestionnaire de rapports](../../2014/reporting-services/report-manager-f1-help.md)  
   
   

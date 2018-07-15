@@ -1,5 +1,5 @@
 ---
-title: Estimer l’Assistant (les données des compléments d’exploration de données pour Excel) | Documents Microsoft
+title: Estimer l’Assistant (Data Mining Add-ins pour Excel) | Microsoft Docs
 ms.custom: ''
 ms.date: 12/29/2017
 ms.prod: sql-server-2014
@@ -8,34 +8,34 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - data modeling [data mining]
 - estimation
 ms.assetid: 7f2b1d5f-c9b3-4939-b35a-34ae099af15f
 caps.latest.revision: 23
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 231afdcfdc5c6e9e461e463fb5b6c3c682e70cde
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 6e81ee7d3ff6115cbec5774d8c139c0d9933afb0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36044033"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37231982"
 ---
 # <a name="estimate-wizard-data-mining-add-ins-for-excel"></a>Assistant Estimation (Compléments d'exploration de données pour Excel)
-  ![Assistant Estimation du ruban Exploration de données de](media/dmc-estimate.gif "Assistant estimation dans le ruban Exploration de données")  
+  ![Assistant estimation dans le ruban Exploration de données](media/dmc-estimate.gif "Assistant estimation dans le ruban Exploration de données")  
   
  Le **estimation** Assistant vous permet de créer un modèle d’estimation. Un modèle d'estimation extrait les séquences remarquables des données et utilise ces séquences pour prédire les facteurs qui affectent les résultats.  
   
- L'estimation est utilisée pour prévoir les résultats numériques. Par exemple, si votre colonne cible contient le taux de graduation pour l’enseignement, avec un taux d’obtention de diplômes exprimées sous forme de pourcentages, vous pouvez analyser les facteurs qui font augmentent ou diminuer les taux d’obtention de diplômes, telles que le nombre d’élèves par école, le -professeur et le nombre de professeurs.  
+ L'estimation est utilisée pour prévoir les résultats numériques. Par exemple, si votre colonne cible contient le taux d’obtention du diplôme pour les écoles, avec des taux d’obtention du diplôme exprimé sous forme de pourcentages, vous pouvez analyser les facteurs qui font augmenter ou diminuer les taux d’obtention du diplôme, telles que le nombre d’élèves par école, le rapport élève-professeur et le nombre de professeurs.  
   
 ## <a name="using-the-estimate-data-wizard"></a>Utilisation de l'Assistant Estimation des données  
   
-1.  Sur le **d’exploration de données** du ruban, cliquez sur **estimation**.  
+1.  Sur le **d’exploration de données** ruban, cliquez sur **estimation**.  
   
-2.  Dans le **sélectionner les données Source** boîte de dialogue, sélectionnez les données source à utiliser. Vous pouvez utiliser des données dans Excel **Table**, Excel **plage de données**, ou à partir d’un **source de données externe**.  
+2.  Dans le **sélectionner les données Source** boîte de dialogue, sélectionnez les données source à utiliser. Vous pouvez utiliser des données dans un Excel **Table**, d’Excel **plage de données**, ou à partir d’un **source de données externe**.  
   
      Si vous utilisez une source de données externe, vous pouvez créer des vues personnalisées ou des requêtes et les enregistrer en tant que source de données [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)].  
   
@@ -49,14 +49,14 @@ ms.locfileid: "36044033"
   
 5.  Le **estimation** Assistant sélectionne l’algorithme optimal pour votre jeu de données. Toutefois, vous pouvez cliquer sur **paramètres** pour ouvrir le **paramètres d’algorithme** boîte de dialogue et définir des options avancées.  
   
-6.  Si vos données sont numériques et que vous pouvez utiliser la méthode Microsoft Linear Regression, vous pouvez vérifier le **régresseur** boîte pour toutes les colonnes numériques que vous connaissez (ou présumez fortement) à mettre en corrélation avec la valeur prévisible.  
+6.  Si vos données sont numériques, et vous pouvez utiliser la méthode Microsoft Linear Regression, vous pouvez vérifier le **régresseur** boîte pour toutes les colonnes numériques que vous connaissez (ou présumez fortement) à mettre en corrélation avec la valeur prévisible.  
   
-     L'algorithme testera ensuite les valeurs dans cette colonne pour déterminer si elles affectent les résultats. Si vous n’êtes pas sûr, cliquez sur **suggérer** et l’algorithme est toutes les colonnes et détecter automatiquement les meilleures valeurs à utiliser comme régresseur.  
+     L'algorithme testera ensuite les valeurs dans cette colonne pour déterminer si elles affectent les résultats. Si vous ne savez pas, cliquez sur **suggérer** et l’algorithme sera toutes les colonnes et détecter automatiquement les meilleures valeurs à utiliser comme régresseur.  
   
     > [!NOTE]  
     >  Un régresseur est requis pour créer une évaluation. L'Assistant recommande toujours le meilleur régresseur, en fonction selon d'une analyse initiale des données. Par conséquent, si vous n'êtes pas sûr, il vaut mieux accepter les sélections recommandées.  
   
-7.  Sur le **fractionner les données en jeux d’apprentissage et jeux de test** , spécifiez si vous souhaitez créer un petit sous-ensemble de données pour le test.  
+7.  Sur le **fractionner les données d’apprentissage et jeux de test** , spécifiez si vous souhaitez créer un petit sous-ensemble de données pour le test.  
   
 8.  Sur le **Terminer** page, fournir des noms pour la nouvelle structure d’exploration de données et le mode d’exploration de données ou acceptez les noms par défaut qui sont fournies.  
   
@@ -75,7 +75,7 @@ ms.locfileid: "36044033"
 ## <a name="more-about-estimation-models"></a>En savoir plus sur les modèles d'estimation  
  Le **estimation** Assistant prend en charge l’utilisation d’un des algorithmes suivants :  
   
--   Algorithme d’arbre de décision Microsoft  
+-   Algorithme d’arbre de décision de Microsoft  
   
 -   Algorithme MLR (Microsoft Linear Regression)  
   

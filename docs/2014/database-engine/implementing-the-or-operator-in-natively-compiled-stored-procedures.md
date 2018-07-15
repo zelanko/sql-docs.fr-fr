@@ -1,5 +1,5 @@
 ---
-title: Implémentation de l’OR (opérateur) dans les procédures stockées compilées en mode natif | Documents Microsoft
+title: Implémentation de l’opérateur OR opérateur dans les procédures stockées compilées en mode natif | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine-imoltp
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: f2528e74-2b1c-48cb-861b-c4e57b51ac35
 caps.latest.revision: 6
 author: stevestein
 ms.author: sstein
-manager: jhubbard
-ms.openlocfilehash: 562917bdb9cad0fd8471d97663e01616091ce475
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: ce9b8660fa52d2a09302b51b0f95e368071caa4d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36050880"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37228179"
 ---
 # <a name="implementing-the-or-operator-in-natively-compiled-stored-procedures"></a>Implémentation de l'opérateur OR dans les procédures stockées compilées en mode natif
   Les opérateurs OR ne sont pas pris en charge dans les prédicats de requête des procédures stockées compilées en mode natif. Les opérateurs NOT n'étant pas pris en charge non plus dans les prédicats de requête des procédures stockées compilées en mode natif, les effets des opérateurs OR ne peuvent pas être simulés en utilisant uniquement des opérateurs logiques équivalents. Toutefois, les effets d'un opérateur OR peuvent être simulés avec des variables de table mémoire optimisée.  
@@ -50,7 +50,7 @@ ms.locfileid: "36050880"
   
 5.  Utilisez le contenu de la variable de table mémoire optimisée comme résultat de la requête.  
   
- L'exemple suivant utilise les tables de la base de données AdventureWorks2012 mises à jour pour [!INCLUDE[hek_2](../includes/hek-2-md.md)]. Pour télécharger les fichiers de cet exemple, goto [bases de données AdventureWorks – 2012, 2008R2 et 2008](http://msftdbprodsamples.codeplex.com/releases/view/93587). Pour appliquer [!INCLUDE[hek_2](../includes/hek-2-md.md)] code échantillon AdventureWorks2012, accédez à [exemple d’OLTP en mémoire SQL Server 2014](https://msftdbprodsamples.codeplex.com/releases/view/114491).  
+ L'exemple suivant utilise les tables de la base de données AdventureWorks2012 mises à jour pour [!INCLUDE[hek_2](../includes/hek-2-md.md)]. Pour télécharger les fichiers de cet exemple, goto [bases de données AdventureWorks – 2012, 2008R2 et 2008](http://msftdbprodsamples.codeplex.com/releases/view/93587). Pour appliquer [!INCLUDE[hek_2](../includes/hek-2-md.md)] code échantillon à AdventureWorks2012, accédez à [exemple d’OLTP en mémoire SQL Server 2014](https://msftdbprodsamples.codeplex.com/releases/view/114491).  
   
  Ajoutez la procédure stockée suivante à la base de données. Nous convertirons cette procédure stockée pour utiliser la compilation native.  
   
@@ -165,7 +165,7 @@ GO
   
 5.  Utilisez le contenu de la variable de table mémoire optimisée comme résultat de la requête.  
   
- L'exemple suivant utilise les tables de la base de données AdventureWorks2012 mises à jour pour [!INCLUDE[hek_2](../includes/hek-2-md.md)]. Pour télécharger les fichiers de cet exemple, goto [bases de données AdventureWorks – 2012, 2008R2 et 2008](http://msftdbprodsamples.codeplex.com/releases/view/93587). Pour appliquer [!INCLUDE[hek_2](../includes/hek-2-md.md)] code échantillon AdventureWorks2012, accédez à [exemple d’OLTP en mémoire SQL Server 2014](https://msftdbprodsamples.codeplex.com/releases/view/114491).  
+ L'exemple suivant utilise les tables de la base de données AdventureWorks2012 mises à jour pour [!INCLUDE[hek_2](../includes/hek-2-md.md)]. Pour télécharger les fichiers de cet exemple, goto [bases de données AdventureWorks – 2012, 2008R2 et 2008](http://msftdbprodsamples.codeplex.com/releases/view/93587). Pour appliquer [!INCLUDE[hek_2](../includes/hek-2-md.md)] code échantillon à AdventureWorks2012, accédez à [exemple d’OLTP en mémoire SQL Server 2014](https://msftdbprodsamples.codeplex.com/releases/view/114491).  
   
  Ajoutez la procédure stockée suivante à la base de données. Nous convertirons cette procédure stockée pour utiliser la compilation native. Cet exemple utilise des conditions INNER JOIN.  
   

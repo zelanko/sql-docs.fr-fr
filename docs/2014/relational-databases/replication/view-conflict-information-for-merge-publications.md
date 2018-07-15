@@ -1,5 +1,5 @@
 ---
-title: Afficher des informations sur les conflits pour les Publications de fusion (programmation Transact-SQL de la réplication) | Documents Microsoft
+title: Afficher les informations relatives aux conflits pour les Publications de fusion (programmation Transact-SQL de la réplication) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - TSQL
 helpviewer_keywords:
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - sp_helpmergearticleconflicts
 ms.assetid: 4907fe35-10ee-4f81-b924-fc419b1864d2
 caps.latest.revision: 22
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: e94a8d9fdccf19668a09917aecea84e645ac2601
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 48225870d89fc6bf39355957187fac84a704093d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36043131"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37316099"
 ---
 # <a name="view-conflict-information-for-merge-publications-replication-transact-sql-programming"></a>Afficher les informations relatives aux conflits pour les publications de fusion (programmation Transact-SQL de la réplication)
   Lorsqu'un conflit est résolu dans une réplication de fusion, les données de la ligne perdante sont écrites dans une table de conflits. Ces données peuvent être affichées par programme en utilisant des procédures stockées de réplication. Pour plus d’informations, consultez [Advanced Merge Replication Conflict Detection and Resolution](merge/advanced-merge-replication-conflict-detection-and-resolution.md).  

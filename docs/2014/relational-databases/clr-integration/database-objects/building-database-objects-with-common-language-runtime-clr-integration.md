@@ -1,13 +1,11 @@
 ---
-title: Création d’objets de base de données avec l’intégration du Common Language Runtime (CLR) | Documents Microsoft
+title: Création d’objets de base de données avec l’intégration du Common Language Runtime (CLR) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: clr
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -19,15 +17,15 @@ helpviewer_keywords:
 - .NET Framework routines [SQL Server]
 ms.assetid: ce34132c-bfa3-447b-9131-b6e17c672efe
 caps.latest.revision: 47
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 070e9df2a42cbed665de1b076600d333926f6ea1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: rothja
+ms.author: jroth
+manager: craigg
+ms.openlocfilehash: 72d68e213d240e3c6182f99e8c1637c1f1ebedfb
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36143061"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37351011"
 ---
 # <a name="building-database-objects-with-common-language-runtime-clr-integration"></a>Création d'objets de base de données avec intégration du Common Language Runtime (CLR)
   Vous pouvez créer des objets de base de données à l’aide de la [!INCLUDE[ssNoVersion](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] est appelé « routine CLR ». Ces routines incluent :  
@@ -61,7 +59,7 @@ ms.locfileid: "36143061"
  [Types de données SQL Server dans .NET Framework](../../clr-integration-database-objects-types-net-framework/sql-server-data-types-in-the-net-framework.md)  
  Vue d'ensemble de types de données [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] et de leurs équivalents .NET Framework.  
   
- [Vue d’ensemble des attributs personnalisés de l’intégration de CLR](../../../database-engine/dev-guide/overview-of-clr-integration-custom-attributes.md)  
+ [Vue d’ensemble des attributs personnalisés de l’intégration du CLR](../../../database-engine/dev-guide/overview-of-clr-integration-custom-attributes.md)  
  Fournit des informations sur les attributs personnalisés de l'intégration du CLR.  
   
  [Fonctions CLR définies par l’utilisateur](../../clr-integration-database-objects-user-defined-functions/clr-user-defined-functions.md)  
@@ -77,6 +75,6 @@ ms.locfileid: "36143061"
  Explique comment implémenter et utiliser les déclencheurs CLR.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Common Language Runtime &#40;CLR&#41; vue d’ensemble](../common-language-runtime-integration-overview.md)  
+ [Common Language Runtime &#40;CLR&#41; présentation de l’intégration](../common-language-runtime-integration-overview.md)  
   
   

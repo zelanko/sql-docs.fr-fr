@@ -1,5 +1,5 @@
 ---
-title: Analysis Services des éléments XML de script Language (ASSL) | Documents Microsoft
+title: Éléments Analysis Services Scripting Language XML (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -18,17 +18,17 @@ helpviewer_keywords:
 - ASSL, elements
 ms.assetid: 7ac07e82-8806-4e9e-8123-22c09c0296de
 caps.latest.revision: 34
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: ceb9c779556bfe05384ca8993a74ea28b8dae2df
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 84ab700589ac454605aa2128b7057e3aa07c6de9
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36044830"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37323079"
 ---
-# <a name="analysis-services-scripting-language-xml-elements-assl"></a>Analysis Services des éléments XML de script Language (ASSL)
+# <a name="analysis-services-scripting-language-xml-elements-assl"></a>Éléments Analysis Services Scripting Language XML (ASSL)
   Bien que le schéma ASSL (Analysis Services Scripting Language) contienne uniquement des éléments XML, ces éléments correspondent, du point de vue du développeur, aux concepts suivants :  
   
 -   Objets, tels que `Database`, `Cube`, et `Dimension` objets, dans la hiérarchie des objets contenus dans une instance de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].  

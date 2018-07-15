@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - LEN function
 - number of characters
@@ -16,13 +16,13 @@ ms.assetid: d961398b-e4d0-4936-be17-8f4c5882a640
 caps.latest.revision: 36
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: a857b198ea18282e6d59d9a0e75d2ec2c692921c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 8e0158fef91845d189e9caa0647e23999ab27900
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36050865"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37195599"
 ---
 # <a name="len-ssis-expression"></a>LEN (expression SSIS)
   Renvoie le nombre de caractères d'une expression de caractères. Si la chaîne comprend des espaces de début et de fin, la fonction les inclut dans le nombre. La fonction LEN renvoie la même valeur pour une chaîne donnée, que celle-ci soit composée de caractères codés sur un octet ou sur deux octets.  
@@ -70,6 +70,6 @@ LEN(@MachineName)
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Fonctions &#40;Expression SSIS&#41;](functions-ssis-expression.md)  
+ [Fonctions &#40;SSIS Expression&#41;](functions-ssis-expression.md)  
   
   

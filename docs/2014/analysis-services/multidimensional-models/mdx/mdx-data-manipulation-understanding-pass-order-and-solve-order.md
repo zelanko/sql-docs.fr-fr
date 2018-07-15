@@ -1,5 +1,5 @@
 ---
-title: Présentation des ordre de passage et résoudre Order (MDX) | Documents Microsoft
+title: Ordre de passage de comprendre et résoudre Order (MDX) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - evaluation order [MDX]
 - calculation order [MDX]
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - expressions [MDX], solve orders
 ms.assetid: 7ed7d4ee-4644-4c5d-99a4-c4b429d0203c
 caps.latest.revision: 34
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 6275971580e7885d0ccdd92aa128811c07f297bb
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: e62af2057276bf6533753d5c1543e686ddb5e92c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36050928"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37196529"
 ---
 # <a name="understanding-pass-order-and-solve-order-mdx"></a>Présentation des concepts d'ordre de passage et d'ordre de résolution (MDX)
   Lorsqu'un cube est calculé dans le cadre d'un script MDX, il peut subir de nombreuses étapes de calcul, en fonction de l'utilisation de diverses fonctionnalités liées au calcul. Chacune de ces étapes porte le nom de test de calcul.  
@@ -127,9 +127,9 @@ FROM [Adventure Works]
  La différence entre les jeux de résultats des deux requêtes provient de la différence d'emplacement du membre calculé. Dans la première requête, le membre calculé fait partie de l'axe ROWS, et non de l'axe COLUMNS illustré dans la deuxième requête. Cette différence d'emplacement devient importante dans la requête suivante, qui combine les deux membres calculés dans une même requête MDX.  
   
 ### <a name="query-3combined-year-difference-and-net-income-calculations"></a>Requête 3—Calculs combinés de différence sur l'année et de revenus nets  
- Dans cette dernière requête combinant les deux exemples précédents en une seule requête MDX, l'ordre de résolution devient important en raison des calculs à la fois sur les colonnes et sur les lignes. Pour vous assurer que les calculs sont effectués dans l’ordre approprié, définir l’ordre dans lequel les calculs sont effectués à l’aide de la `SOLVE_ORDER` (mot clé).  
+ Dans cette dernière requête combinant les deux exemples précédents en une seule requête MDX, l'ordre de résolution devient important en raison des calculs à la fois sur les colonnes et sur les lignes. Pour vous assurer que les calculs sont effectués dans l’ordre approprié, définir l’ordre dans lequel les calculs à l’aide de la `SOLVE_ORDER` mot clé.  
   
- Le mot clé `SOLVE_ORDER` spécifie l'ordre de résolution des membres calculés dans une requête MDX ou une commande `CREATE MEMBER`. Les valeurs entières utilisées avec le `SOLVE_ORDER` mot clé sont relatives, en n’avez pas besoin pour commencer à zéro et non besoin d’être consécutives. La valeur indique simplement à la requête MDX de calculer un membre en fonction des valeurs dérivées du calcul des membres ayant une valeur supérieure. Si un membre calculé est défini sans le `SOLVE_ORDER` (mot clé), la valeur par défaut de ce membre calculé est zéro.  
+ Le mot clé `SOLVE_ORDER` spécifie l'ordre de résolution des membres calculés dans une requête MDX ou une commande `CREATE MEMBER`. Les valeurs entières utilisées avec le `SOLVE_ORDER` mot clé sont relatives, pas besoin pour commencer à zéro et ne le faites pas doivent-ils être consécutives. La valeur indique simplement à la requête MDX de calculer un membre en fonction des valeurs dérivées du calcul des membres ayant une valeur supérieure. Si un membre calculé est défini sans le `SOLVE_ORDER` mot clé, la valeur par défaut de ce membre calculé est zéro.  
   
  Par exemple, si vous combinez les calculs utilisés dans les deux premiers exemples de requêtes, les deux membres calculés, `Year Difference` et `Profit Margin`, se croisent à une cellule unique dans le dataset des résultats de l'exemple de requête MDX. Seul l’ordre de résolution permet de déterminer la façon dont [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] évaluera cette cellule. Les formules utilisées pour construire cette cellule produiront différents résultats, en fonction de l'ordre de résolution des deux membres calculés.  
   

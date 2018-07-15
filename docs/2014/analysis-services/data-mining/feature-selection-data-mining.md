@@ -1,5 +1,5 @@
 ---
-title: Fonctionnalité de sélection (exploration de données) | Documents Microsoft
+title: Fonctionnalité de sélection (exploration de données) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - mining models [Analysis Services], feature selections
 - attributes [data mining]
@@ -22,18 +22,18 @@ helpviewer_keywords:
 - coding [Data Mining]
 ms.assetid: b044e785-4875-45ab-8ae4-cd3b4e3033bb
 caps.latest.revision: 36
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 35afd46d2956cd61669e9a4ea8168e3e3759ec47
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: bb4a3282137aa76db08b1d6084db27d1a476140f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36044869"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37295999"
 ---
 # <a name="feature-selection-data-mining"></a>Sélection des fonctionnalités (exploration de données)
-  *Sélection des fonctionnalités* est un terme utilisé communément dans l’exploration de données pour décrire les outils et techniques disponibles pour réduire les entrées à une taille gérable pour le traitement et l’analyse. Sélection de fonctionnalités implique non seulement *la réduction de cardinalité*, ce qui signifie imposer une coupure aléatoire ou prédéfinie du nombre d’attributs qui peuvent être considérés lors de la création d’un modèle, mais également au choix des attributs, ce qui signifie que que l’analyste ou l’outil de modélisation activement sélectionne ou ignore les attributs en fonction de leur utilité pour l’analyse.  
+  *Sélection des fonctionnalités* est un terme couramment utilisé dans l’exploration de données pour décrire les outils et techniques disponibles pour réduire les entrées à une taille gérable pour le traitement et l’analyse. Sélection de fonctionnalités implique non seulement *la réduction de cardinalité*, ce qui signifie que d’imposer une coupure aléatoire ou prédéfinie sur le nombre d’attributs pouvant être pris en compte lors de la création d’un modèle, mais également le choix des attributs, ce qui signifie que que l’analyste ou l’outil de modélisation activement sélectionne ou ignore les attributs en fonction de leur utilité pour l’analyse.  
   
  La possibilité d'appliquer la sélection des fonctionnalités est essentielle pour une analyse efficace, car les datasets contiennent souvent beaucoup plus d'informations que nécessaire pour générer le modèle. Par exemple, un dataset peut contenir 500 colonnes qui décrivent les caractéristiques des clients, mais si les données de certaines colonnes sont très éparses, vous tireriez peu de bénéfices à les ajouter au modèle. Si vous gardez les colonnes inutiles pendant la génération du modèle, plus d'UC et de mémoire sont nécessaires au cours du processus d'apprentissage, et plus d'espace de stockage est requis pour le modèle terminé.  
   
@@ -71,9 +71,9 @@ ms.locfileid: "36044869"
  La section suivante décrit chaque méthode de sélection des fonctionnalités.  
   
 #### <a name="interestingness-score"></a>Score d'intérêt et de pertinence  
- Une fonctionnalité présente un intérêt si elle fournit des informations utiles. Étant donné que la définition de ce qui est utile varie selon le scénario, le secteur d’exploration de données a développé des différentes façons de mesurer *intérêt et pertinence*. Par exemple, *nouveauté* peut être intéressant de détection d’observation ABERRANTE, mais la possibilité de faire la distinction entre des éléments étroitement liés, ou *poids discriminant*, peut être plus intéressante pour classification.  
+ Une fonctionnalité présente un intérêt si elle fournit des informations utiles. Étant donné que la définition de ce qui est utile varie selon le scénario, l’industrie d’exploration de données a développé des différentes façons de mesurer *pertinence*. Par exemple, *fantaisie* peut être intéressant de détection d’observation ABERRANTE, mais la possibilité de faire la distinction entre des éléments étroitement liés connexes, ou *poids discriminant*, peut être plus intéressante pour classification.  
   
- La mesure de pertinence utilisée dans SQL Server Analysis Services est *entropie*, ce qui signifie que les attributs avec des distributions aléatoires ont une entropie plus élevée et des gains d’informations inférieures ; par conséquent, ces attributs sont inférieurs intéressantes. L'entropie pour un attribut particulier est comparée à l'entropie de tous les autres attributs, comme suit :  
+ La mesure de pertinence utilisée dans SQL Server Analysis Services est *entropie*, ce qui signifie que les attributs avec des distributions aléatoires ont une entropie plus élevée et moins d’informations ; par conséquent, ces attributs sont inférieurs intéressant. L'entropie pour un attribut particulier est comparée à l'entropie de tous les autres attributs, comme suit :  
   
  Intérêt/Pertinence(Attribut) = - (m - Entropie(Attribut)) * (m - Entropie(Attribut))  
   

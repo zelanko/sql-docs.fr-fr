@@ -1,5 +1,5 @@
 ---
-title: Afficher la liste des fichiers modifiés | Documents Microsoft
+title: Afficher la liste des fichiers modifiés | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - VisualStudio.SourceControl.CheckinWindow
 helpviewer_keywords:
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - checking in files
 ms.assetid: 1b053719-8500-4300-a169-fffca5801dd0
 caps.latest.revision: 24
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: affad7b7830088a955794f4825a68e72f12fca96
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 22309ba15a3df2ed65fd27a002000e58f4beca36
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36052456"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37228239"
 ---
 # <a name="view-a-list-of-modified-files"></a>Afficher une liste de fichiers modifiés
   Vous pouvez utiliser la **archivages en attente** fenêtre pour afficher à tout moment une liste des fichiers extraits dans la solution actuelle, et pour archiver ces fichiers avec un seul bouton Cliquez sur.  
@@ -34,7 +34,7 @@ ms.locfileid: "36052456"
   
 1.  Sur le **vue** menu, cliquez sur **archivages en attente**.  
   
-2.  Pour archiver les fichiers sélectionnés, cliquez sur **archiver**. Ou bien, vous pouvez ancrer la **archivages en attente** fenêtre sur le côté droit de la [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] environnement afin que vous puissiez vérifier dans les fichiers lorsque vous avez terminé fonctionne.  
+2.  Pour archiver les fichiers sélectionnés, cliquez sur **archiver**. Vous pouvez également ancrer la **archivages en attente** fenêtre sur le côté droit de la [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] environnement afin que vous puissiez vérifier dans les fichiers lorsque vous avez terminé fonctionne.  
   
      **Date d'arrivée**  
      Archive la solution.  
@@ -62,7 +62,7 @@ ms.locfileid: "36052456"
      Affiche les fichiers que vous archivez sous forme de listes en 2D sous leur connexion de contrôle de code source.  
   
      **Comparer les Versions**  
-     Ouvre le Visual SourceSafe **Options de différences** boîte de dialogue, qui compare un fichier sélectionné dans votre projet d’environnement de développement à un autre fichier sélectionné et vous présente les différences, le cas échéant.  
+     Ouvre le Visual SourceSafe **Options de différence** boîte de dialogue, qui compare un fichier sélectionné dans votre projet d’environnement de développement à un autre fichier sélectionné et vous présente les différences, le cas échéant.  
   
      **Annuler l’extraction**  
      Annule l’extraction de tous les éléments sélectionnés dans le **archivages en attente** fenêtre.  

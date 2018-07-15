@@ -1,5 +1,5 @@
 ---
-title: Type de données MeasureGroupBinding (hors de ligne) (ASSL) | Documents Microsoft
+title: Type de données MeasureGroupBinding (hors de ligne) (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - MeasureGroupBinding data type
 ms.assetid: e6c65597-89ac-457e-a0e5-01d85449a1b7
 caps.latest.revision: 30
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 4c467267028e60910be01466754648e216c685d8
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: f1b67e063402a1488f77c3fc8bf43e54f580c513
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36045529"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37291505"
 ---
 # <a name="measuregroupbinding-data-type-out-of-line-assl"></a>Type de données MeasureGroupBinding (hors ligne) (ASSL)
   Définit un type de données primitif représentant une liaison à un groupe de mesures.  
@@ -68,6 +68,6 @@ ms.locfileid: "36045529"
  Pour plus d’informations, consultez la section, les liaisons hors ligne, dans [des Sources de données et des liaisons &#40;multidimensionnels SSAS&#41;](../../multidimensional-models/data-sources-and-bindings-ssas-multidimensional.md).  
   
 ## <a name="see-also"></a>Voir aussi  
- [Types de données de script langage XML Analysis Services &#40;ASSL&#41;](analysis-services-scripting-language-xml-data-types-assl.md)  
+ [Types Analysis Services Scripting Language XML données &#40;ASSL&#41;](analysis-services-scripting-language-xml-data-types-assl.md)  
   
   

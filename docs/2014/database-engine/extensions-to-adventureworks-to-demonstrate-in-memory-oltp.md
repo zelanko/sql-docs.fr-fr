@@ -1,5 +1,5 @@
 ---
-title: Extensions à AdventureWorks pour présenter l’OLTP en mémoire | Documents Microsoft
+title: Extensions à AdventureWorks pour présenter l’OLTP en mémoire | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,23 +8,23 @@ ms.suite: ''
 ms.technology:
 - database-engine-imoltp
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 0186b7f2-cead-4203-8360-b6890f37cde8
 caps.latest.revision: 15
 author: stevestein
 ms.author: sstein
-manager: jhubbard
-ms.openlocfilehash: 6bc04894a372f4391c12622158673e4ba4068098
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: f8135f70466ecef4fb77a876a38823af7dd8c27d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36045249"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37312329"
 ---
 # <a name="extensions-to-adventureworks-to-demonstrate-in-memory-oltp"></a>Extensions à AdventureWorks pour présenter l'OLTP en mémoire
     
 ## <a name="overview"></a>Vue d'ensemble  
- Cet exemple présente les nouvelles [!INCLUDE[hek_2](../includes/hek-2-md.md)] fonctionnalité, qui fait partie de [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]. Il montre les nouvelles tables optimisées en mémoire et les procédures stockées compilées en mode natif et peut être utilisé pour illustrer les gains de performance de [!INCLUDE[hek_2](../includes/hek-2-md.md)].  
+ Cet exemple présente les nouvelles [!INCLUDE[hek_2](../includes/hek-2-md.md)] fonctionnalité, qui fait partie de [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]. Il affiche les nouvelles tables optimisées en mémoire et les procédures stockées compilées en mode natif et peut être utilisé pour démontrer les avantages de performances de [!INCLUDE[hek_2](../includes/hek-2-md.md)].  
   
 > [!NOTE]  
 >  Pour afficher cette rubrique pour SQL Server 2016, consultez [Extensions à AdventureWorks pour présenter l’OLTP en mémoire](https://msdn.microsoft.com/en-US/library/mt465764.aspx)  
@@ -91,7 +91,7 @@ ms.locfileid: "36045249"
     ALTER AUTHORIZATION ON DATABASE::AdventureWorks2014 TO [<NewLogin>]  
     ```  
   
-5.  Télécharger l’exemple de script '[!INCLUDE[ssSQL14](../includes/sssql14-md.md)] RTM [!INCLUDE[hek_2](../includes/hek-2-md.md)] Sample.sql » à partir de [SQL Server 2014 RTM In-Memory OLTP exemple](http://go.microsoft.com/fwlink/?LinkID=396372) dans un dossier local.  
+5.  Télécharger l’exemple de script «[!INCLUDE[ssSQL14](../includes/sssql14-md.md)] RTM [!INCLUDE[hek_2](../includes/hek-2-md.md)] Sample.sql » à partir de [SQL Server 2014 RTM In-Memory OLTP exemple](http://go.microsoft.com/fwlink/?LinkID=396372) dans un dossier local.  
   
 6.  Mettez à jour la valeur « checkpoint_files_location » dans le script « [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] RTM [!INCLUDE[hek_2](../includes/hek-2-md.md)] Sample.sql », pour pointer à l'emplacement cible des fichiers de point de contrôle d'[!INCLUDE[hek_2](../includes/hek-2-md.md)]. Les fichiers de point de contrôle doivent être placés sur un lecteur avec de bonnes performances d'E/S séquentielles.  
   
@@ -190,7 +190,7 @@ ms.locfileid: "36045249"
   
 -   *Colonnes autorisant des valeurs NULL dans l’index* : dans la table d’origine, la colonne SalesPersonID autorise les valeurs NULL, tandis que dans les nouvelles tables, la colonne n’accepte pas les valeurs NULL et a une contrainte par défaut avec la valeur (-1). Cela est dû au fait que les index des tables optimisées en mémoire ne peuvent pas avoir de colonnes autorisant des valeurs NULL dans la clé d'index ; -1 est un substitut de la valeur NULL dans ce cas.  
   
--   *Colonnes calculées[!INCLUDE[ssSQL14](../includes/sssql14-md.md)] : les colonnes calculées SalesOrderNumber et TotalDue sont omises, car*  ne prend pas en charge les colonnes calculées dans les tables optimisées en mémoire. La nouvelle vue Sales.vSalesOrderHeader_extended_inmem reflète les colonnes SalesOrderNumber et TotalDue. Par conséquent, vous pouvez utiliser cette vue si ces colonnes sont nécessaires.  
+-   *Colonnes calculées[!INCLUDE[ssSQL14](../includes/sssql14-md.md)] : les colonnes calculées SalesOrderNumber et TotalDue sont omises, car * ne prend pas en charge les colonnes calculées dans les tables optimisées en mémoire. La nouvelle vue Sales.vSalesOrderHeader_extended_inmem reflète les colonnes SalesOrderNumber et TotalDue. Par conséquent, vous pouvez utiliser cette vue si ces colonnes sont nécessaires.  
   
 -   *Contraintes de clé étrangère* ne sont pas pris en charge pour les tables mémoire optimisées dans [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]. En outre, SalesOrderHeader_inmem est une table très sollicitée dans l'exemple de charge de travail, et les contraintes de clé étrangère nécessitent un traitement supplémentaire pour toutes les opérations DML, avec des recherches dans les autres tables référencées dans ces contraintes. Par conséquent, on formule l'hypothèse que l'application garantit l'intégrité référentielle, et celle-ci n'est pas validée lorsque des lignes sont insérées. L'intégrité référentielle des données de cette table peut être vérifiée à l'aide de la procédure stockée dbo.usp_ValidateIntegrity, en utilisant le script suivant :  
   
@@ -227,7 +227,7 @@ ms.locfileid: "36045249"
   
 -   *Types définis par l’utilisateur (UDT) alias* : la table d’origine utilise le type de données défini par l’utilisateur dbo.Flag, qui est équivalent au bit de type de données système. La table migrée utilise le type de données bit à la place.  
   
--   *Classement BIN2* – les colonnes Name et ProductNumber sont incluses dans les clés d’index et doit avoir les classements BIN2 [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]. Ici, l'hypothèse est que l'application ne tient pas compte des spécificités du classement, comme le non-respect de la casse.  
+-   *Classement BIN2* – les colonnes et Name et ProductNumber sont incluses dans les clés d’index et doit avoir les classements BIN2 [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]. Ici, l'hypothèse est que l'application ne tient pas compte des spécificités du classement, comme le non-respect de la casse.  
   
 -   *Rowguid* : la colonne ROWGUID est omise. Pour plus d'informations consultez la description de la table SalesOrderHeader.  
   

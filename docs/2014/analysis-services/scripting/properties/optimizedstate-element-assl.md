@@ -1,5 +1,5 @@
 ---
-title: Élément OptimizedState (ASSL) | Documents Microsoft
+title: Élément OptimizedState (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - OptimizedState element
 ms.assetid: 120dcc4c-8fe8-4471-bbd6-99ad534364f0
 caps.latest.revision: 33
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 665d84185ceab6b907a7acdd3bfc9f600baaaf89
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 932ef541a0e9613ad46a032be5c218eccd5276ae
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36052715"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37224069"
 ---
 # <a name="optimizedstate-element-assl"></a>Élément OptimizedState (ASSL)
   Détermine le niveau d'optimisation appliqué à la hiérarchie.  
@@ -69,7 +69,7 @@ ms.locfileid: "36052715"
 |*FullyOptimized*|L'instance construit des index pour la hiérarchie afin d'augmenter les performances en matière de requêtes.|  
 |*NotOptimized*|L'instance ne construit pas d'index supplémentaire.|  
   
- L’énumération qui correspond aux valeurs autorisées pour `OptimizedState` dans l’objet d’objets AMO (Analysis Management) est modèle <xref:Microsoft.AnalysisServices.OptimizationType>.  
+ L’énumération qui correspond aux valeurs autorisées pour `OptimizedState` dans l’objet d’objets AMO (Analysis Management) modèle est <xref:Microsoft.AnalysisServices.OptimizationType>.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Propriétés &#40;ASSL&#41;](properties-assl.md)  
