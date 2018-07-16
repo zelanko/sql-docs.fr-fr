@@ -1,5 +1,5 @@
 ---
-title: Éditeur de tâche requête de données d’exploration de données (onglet Sortie) | Documents Microsoft
+title: Éditeur de tâche requête de données d’exploration de données (onglet Sortie) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.dmquerytask.output.f1
 helpviewer_keywords:
 - Data Mining Query Task Editor
 ms.assetid: 62f9e015-6fe0-4396-ad90-3ad51bf00025
 caps.latest.revision: 28
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 7509dd4140236fc7aea3358aff1071f4585fb987
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 2f730d9c7544263bc925c8464d4c150318997376
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36039349"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37237129"
 ---
 # <a name="data-mining-query-task-editor-output-tab"></a>Éditeur de tâche de requête d'exploration de données (onglet Sortie)
   Utilisez l'onglet **Sortie** de la boîte de dialogue **Éditeur de tâche de requête d'exploration de données** pour définir la destination de la requête de prédiction.  

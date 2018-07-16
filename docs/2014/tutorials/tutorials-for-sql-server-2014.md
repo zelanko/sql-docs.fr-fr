@@ -1,5 +1,5 @@
 ---
-title: Didacticiels pour SQL Server 2014 | Documents Microsoft
+title: Didacticiels pour SQL Server 2014 | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,18 +15,18 @@ ms.technology:
 - reporting-services-native
 - reporting-services-sharepoint
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: a93667ad-e856-405a-9328-065331b7ab7b
 caps.latest.revision: 30
-author: mgblythe
-ms.author: mblythe
-manager: jhubbard
-ms.openlocfilehash: 142d31727b94a8a5fcab36495314ac853fa92328
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: craigg-msft
+ms.author: craigg
+manager: craigg
+ms.openlocfilehash: bae57aef6469c47f71fadcd28567375ce2156c08
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36140635"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37241719"
 ---
 # <a name="tutorials-for-sql-server-2014"></a>Didacticiels pour SQL Server 2014
   [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] introduit de nombreuses nouvelles technologies et fonctionnalités.  
@@ -40,7 +40,7 @@ ms.locfileid: "36140635"
 -   Pour télécharger un classeur [!INCLUDE[ssGemini](../includes/ssgemini-md.md)] et des rapports [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)] à utiliser avec des didacticiels [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)] , accédez à [Fichiers image pour l'exemple de modèle HelloWorldPicnic dans PowerPivot et Power View](http://www.microsoft.com/download/details.aspx?id=26719).  
   
     > [!NOTE]  
-    >  [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)] est une fonctionnalité de [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] pour [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[SPS2010](../includes/sps2010-md.md)] Enterprise Edition.  
+    >  [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)] est une fonctionnalité de [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] complément pour [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[SPS2010](../includes/sps2010-md.md)] Enterprise Edition.  
   
 -   Pour télécharger les versions [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] des bases de données [!INCLUDE[ssSampleDBCoShort](../includes/sssampledbcoshort-md.md)] , accédez à [Exemples de bases de données AdventureWorks 2014](http://msftdbprodsamples.codeplex.com/releases/view/125550) sur CodePlex.  
   

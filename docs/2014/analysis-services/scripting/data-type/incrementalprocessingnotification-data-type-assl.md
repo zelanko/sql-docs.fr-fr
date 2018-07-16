@@ -1,5 +1,5 @@
 ---
-title: Type de données IncrementalProcessingNotification (ASSL) | Documents Microsoft
+title: Type de données IncrementalProcessingNotification (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - IncrementalProcessingNotification data type
 ms.assetid: 66e27f92-65c1-4a34-b9c2-bfbb5aeb7d7c
 caps.latest.revision: 13
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: a913d847e6d328c3fc1289f964170af463a3f5be
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 38ca951d727e32f576e4dc65bc005a5b423e90c0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36053597"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37231809"
 ---
 # <a name="incrementalprocessingnotification-data-type-assl"></a>Type de données IncrementalProcessingNotification (ASSL)
   Définit un type de données dérivé qui représente les informations pour le [ProactiveCaching](../objects/proactivecaching-element-assl.md) élément sur la requête à exécuter pour déterminer la progression du traitement incrémentiel.  
@@ -64,6 +64,6 @@ ms.locfileid: "36053597"
   
 ## <a name="see-also"></a>Voir aussi  
  [Type de données ProactiveCachingQueryBinding &#40;ASSL&#41;](binding-data-type-assl.md)   
- [Types de données de script langage XML Analysis Services &#40;ASSL&#41;](analysis-services-scripting-language-xml-data-types-assl.md)  
+ [Types Analysis Services Scripting Language XML données &#40;ASSL&#41;](analysis-services-scripting-language-xml-data-types-assl.md)  
   
   

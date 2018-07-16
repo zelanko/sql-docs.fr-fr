@@ -1,5 +1,5 @@
 ---
-title: Élément AllMemberAggregationUsage (ASSL) | Documents Microsoft
+title: Élément AllMemberAggregationUsage (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - AllMemberAggregationUsage element
 ms.assetid: 264fe9d8-8e9a-4642-8cee-7c2804126926
 caps.latest.revision: 40
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 1da20a067a1f293bafbca858623ab477aacac6b2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 35d13952ed0cc77405f1c0518562a67749d1521f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36139890"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37252951"
 ---
 # <a name="allmemberaggregationusage-element-assl"></a>Élément AllMemberAggregationUsage (ASSL)
   Contrôles comment le Concepteur d’agrégation dans [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] crée des agrégations.  
@@ -72,11 +72,11 @@ ms.locfileid: "36139890"
 |*Par défaut*|Identique à *Unrestricted*.|  
   
 ## <a name="remarks"></a>Notes  
- L’élément qui correspond au parent de `AllMemberAggregationUsage` dans l’objet d’objets AMO (Analysis Management) est modèle <xref:Microsoft.AnalysisServices.CubeDimension>.  
+ L’élément qui correspond au parent de `AllMemberAggregationUsage` dans l’objet d’objets AMO (Analysis Management) modèle est <xref:Microsoft.AnalysisServices.CubeDimension>.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Élément de cube &#40;ASSL&#41;](../objects/cube-element-assl.md)   
- [Élément de dimension &#40;ASSL&#41;](../objects/dimension-element-assl.md)   
+ [Dimension élément &#40;ASSL&#41;](../objects/dimension-element-assl.md)   
  [Propriétés &#40;ASSL&#41;](properties-assl.md)  
   
   

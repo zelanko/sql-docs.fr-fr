@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.executesqltask.f1
 helpviewer_keywords:
@@ -20,13 +20,13 @@ ms.assetid: bebb2e8c-0410-43b2-ac2f-6fc80c8f2e9e
 caps.latest.revision: 113
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: fcddb47c254b897403cb784810703a1c7b20437a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 77db86a684089c0696d499499bc52c816f35c0d0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36038385"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37231549"
 ---
 # <a name="execute-sql-task"></a>Tâche d’exécution de requêtes SQL
   La tâche d'exécution SQL exécute des instructions ou des procédures stockées SQL à partir d'un package. La tâche peut contenir une seule ou plusieurs instructions SQL s'exécutant de façon séquentielle. Vous pouvez utiliser la tâche d'exécution SQL aux fins suivantes :  
@@ -84,7 +84,7 @@ ms.locfileid: "36038385"
 -   Si la tâche utilise la liaison de paramètre, toutes les requêtes du traitement doivent avoir le même nombre et les mêmes types de paramètres.  
   
 ## <a name="running-parameterized-sql-commands"></a>Exécution de commandes SQL paramétrables  
- Les instructions et les procédures stockées SQL utilisent fréquemment des paramètres d'entrée, des paramètres de sortie et des codes de retour. La tâche d’exécution SQL prend en charge la `Input`, `Output`, et `ReturnValue` des types de paramètres. Vous utilisez la `Input` type pour les paramètres d’entrée, `Output` pour les paramètres de sortie, et `ReturnValue` pour les codes de retour.  
+ Les instructions et les procédures stockées SQL utilisent fréquemment des paramètres d'entrée, des paramètres de sortie et des codes de retour. La tâche d’exécution SQL prend en charge la `Input`, `Output`, et `ReturnValue` types de paramètres. Vous utilisez le `Input` type pour les paramètres d’entrée, `Output` pour les paramètres de sortie, et `ReturnValue` pour les codes de retour.  
   
 > [!NOTE]  
 >  Vous ne pouvez utiliser des paramètres dans une tâche d'exécution SQL que si le fournisseur de données les prend en charge.  
@@ -99,7 +99,7 @@ ms.locfileid: "36038385"
 ## <a name="troubleshooting-the-execute-sql-task"></a>Résolution des problèmes liés à la tâche d'exécution SQL  
  Vous pouvez consigner les appels que la tâche d'exécution SQL effectue auprès de fournisseurs de données externes. Vous pouvez utiliser cette fonctionnalité de journalisation pour résoudre les problèmes liés aux commandes SQL qu'exécute la tâche d'exécution SQL. Pour consigner les appels que la tâche d’exécution SQL passe à des fournisseurs de données externes, activez la journalisation des packages et sélectionnez l’événement **Diagnostic** au niveau du package. Pour plus d’informations, consultez [Outils de dépannage pour l’exécution des packages](../troubleshooting/troubleshooting-tools-for-package-execution.md).  
   
- Parfois, une commande SQL ou une procédure stockée retourne plusieurs jeux de résultats. Ces jeux de résultats inclure non seulement les ensembles de lignes qui sont le résultat de `SELECT` requêtes, mais les valeurs uniques qui sont le résultat d’erreurs de `RAISERROR` ou `PRINT` instructions. Le fait que la tâche ignore les erreurs dans des jeux de résultats qui se produisent après le premier jeu de résultats dépend du type de gestionnaire de connexions utilisé :  
+ Parfois, une commande SQL ou une procédure stockée retourne plusieurs jeux de résultats. Ces jeux de résultats inclure non seulement les ensembles de lignes qui sont le résultat de `SELECT` les requêtes, mais des valeurs uniques qui sont le résultat d’erreurs de `RAISERROR` ou `PRINT` instructions. Le fait que la tâche ignore les erreurs dans des jeux de résultats qui se produisent après le premier jeu de résultats dépend du type de gestionnaire de connexions utilisé :  
   
 -   Lorsque vous utilisez les gestionnaires de connexions OLE DB et ADO, la tâche ignore les jeux de résultats qui se produisent après le premier jeu de résultats. Par conséquent, avec ces gestionnaires de connexions, la tâche ignore une erreur retournée par une commande SQL ou une procédure stockée lorsque l'erreur ne fait pas partie du premier jeu de résultats.  
   
@@ -135,7 +135,7 @@ ms.locfileid: "36038385"
   
 -   [Éditeur de tâche SQL exécution &#40;Page mappage de paramètre&#41;](../execute-sql-task-editor-parameter-mapping-page.md)  
   
--   [Éditeur de tâche SQL exécution &#40;Page de jeu de résultats&#41;](../execute-sql-task-editor-result-set-page.md)  
+-   [Éditeur de tâche SQL exécution &#40;Page ensemble de résultats&#41;](../execute-sql-task-editor-result-set-page.md)  
   
 -   [Page Expressions](../expressions/expressions-page.md)  
   
@@ -150,13 +150,13 @@ ms.locfileid: "36038385"
   
 ## <a name="related-tasks"></a>Related Tasks  
   
--   [Mapper des paramètres de requête à des Variables dans une tâche d’exécution SQL](../map-query-parameters-to-variables-in-an-execute-sql-task.md)  
+-   [Mapper des paramètres de requête à des variables dans une tâche d’exécution SQL](../map-query-parameters-to-variables-in-an-execute-sql-task.md)  
   
--   [Ensembles de résultat du mappage à des Variables dans une tâche d’exécution SQL](../map-result-sets-to-variables-in-an-execute-sql-task.md)  
+-   [Mapper des ensembles de résultats à des variables dans une tâche d’exécution SQL](../map-result-sets-to-variables-in-an-execute-sql-task.md)  
   
 ## <a name="related-content"></a>Contenu associé  
   
--   [Paramètres et Codes de retour dans la tâche d’exécution SQL](execute-sql-task.md)  
+-   [Paramètres et codes de retour dans la tâche d’exécution SQL](execute-sql-task.md)  
   
 -   [Ensembles de résultats dans la tâche d’exécution SQL](../result-sets-in-the-execute-sql-task.md)  
   

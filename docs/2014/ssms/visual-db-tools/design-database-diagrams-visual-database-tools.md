@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vdtsql.chm:65536
 - vdt.DatabaseDesigner
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - diagrams [SQL Server], designing
 ms.assetid: 6d2c14e1-3d73-4d10-ae5b-7f2b5d6c4ea8
 caps.latest.revision: 11
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 5f4b54da69923a73d5c73647683fd9136c970e81
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 00f9386b6940d24f3ce7a063a58fb76c436221f1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36143397"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37255391"
 ---
 # <a name="design-database-diagrams-visual-database-tools"></a>Créer des schémas de base de données (Visual Database Tools)
   Outil visuel Concepteur de base de données permettant de concevoir et de visualiser une base de données à laquelle vous êtes connecté. Lors du design d'une base de données, le Concepteur de bases de données permet de créer, de modifier ou de supprimer des tables, des colonnes, des clés, des index, des relations et des contraintes. Pour visualiser une base de données, vous pouvez créer un ou plusieurs schémas illustrant toutes les tables, colonnes, clés et relations, ou quelques-unes d'entre elles.  
@@ -45,7 +45,7 @@ ms.locfileid: "36143397"
   
  Si vous avez modifié une table sans l'enregistrer, un astérisque (*) s'ajoute à la fin du nom de la table pour signaler les modifications non encore enregistrées. Pour plus d’informations sur l’enregistrement de tables et de schémas modifiés, consultez [Utiliser des schémas de base de données &#40;Visual Database Tools&#41;](visual-database-tools.md)  
   
- **Sélecteur de ligne** Vous pouvez cliquer sur le sélecteur de ligne pour sélectionner une colonne de la table. Le sélecteur de ligne affiche le symbole d'une clé si la colonne fait partie de la clé primaire de la table. Pour plus d’informations sur les clés primaires, consultez [principal et les contraintes de clé étrangère](../../relational-databases/tables/primary-and-foreign-key-constraints.md).  
+ **Sélecteur de ligne** Vous pouvez cliquer sur le sélecteur de ligne pour sélectionner une colonne de la table. Le sélecteur de ligne affiche le symbole d'une clé si la colonne fait partie de la clé primaire de la table. Pour plus d’informations sur les clés primaires, consultez [Primary and Foreign Key Constraints](../../relational-databases/tables/primary-and-foreign-key-constraints.md).  
   
  **Colonnes de propriétés** Cet ensemble de colonnes n’est visible que dans certaines vues de votre table. Il est possible de choisir entre cinq vues différentes d'une même table, ce qui permet de mieux gérer la taille et la présentation du schéma.  
   
@@ -73,7 +73,7 @@ ms.locfileid: "36143397"
   
 ## <a name="see-also"></a>Voir aussi  
  [Utiliser des schémas de base de données &#40;Visual Database Tools&#41;](visual-database-tools.md)   
- [Utiliser des Tables dans le schéma de base de données &#40;Visual Database Tools&#41;](work-with-tables-in-database-diagram-visual-database-tools.md)   
+ [Utiliser des Tables dans le diagramme de base de données &#40;Visual Database Tools&#41;](work-with-tables-in-database-diagram-visual-database-tools.md)   
  [Utiliser une disposition de schémas &#40;Visual Database Tools&#41;](work-with-diagram-layout-visual-database-tools.md)  
   
   

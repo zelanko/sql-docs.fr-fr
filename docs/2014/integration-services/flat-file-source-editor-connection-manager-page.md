@@ -1,5 +1,5 @@
 ---
-title: Éditeur de Source de fichier (Page Gestionnaire de connexions) plats | Documents Microsoft
+title: Flat File Source Editor (Page Gestionnaire de connexions) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.flatfilesourceadapter.connection.f1
 helpviewer_keywords:
 - Flat File Source Editor
 ms.assetid: 2efd6baa-ed75-4f3f-b667-514024cebdb8
 caps.latest.revision: 29
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 72cf4b3ee9dbcedb7a8f917328a0bdb715ba575a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: e88beab545eee8349672d6e2651882a84c110153
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36039776"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37252371"
 ---
 # <a name="flat-file-source-editor-connection-manager-page"></a>Éditeur de source de fichier plat (page Gestionnaire de connexions)
   Utilisez la page **Gestionnaire de connexions** de la boîte de dialogue **Éditeur de source de fichier plat** pour sélectionner le gestionnaire de connexions de fichiers plats qui sera utilisé par la source de fichier plat. La source de fichier plat lit les données d'un fichier texte qui peut être au format délimité, à largeur fixe ou mixte.  
@@ -51,8 +51,8 @@ ms.locfileid: "36039776"
   
 ## <a name="see-also"></a>Voir aussi  
  [Integration Services Error and Message Reference](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Éditeur de Source de fichier plats &#40;Page colonnes&#41;](../../2014/integration-services/flat-file-source-editor-columns-page.md)   
- [Éditeur de Source de fichier plats &#40;Page sortie d’erreur&#41;](../../2014/integration-services/flat-file-source-editor-error-output-page.md)   
+ [Flat File Source Editor &#40;Page colonnes&#41;](../../2014/integration-services/flat-file-source-editor-columns-page.md)   
+ [Flat File Source Editor &#40;Page sortie d’erreur&#41;](../../2014/integration-services/flat-file-source-editor-error-output-page.md)   
  [Gestionnaire de connexions de fichiers plats](connection-manager/file-connection-manager.md)  
   
   

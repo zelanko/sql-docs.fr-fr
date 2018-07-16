@@ -1,5 +1,5 @@
 ---
-title: 'Filtrage des valeurs à l’aide de SQL : limit-champ et SQL : limit-value (SQLXML 4.0) | Documents Microsoft'
+title: 'Filtrage des valeurs à l’aide de SQL : limit-champ et SQL : limit-value (SQLXML 4.0) | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - filtering [SQLXML]
 ms.assetid: c0f7ae92-eeec-430e-a66a-f22c3ae64a5e
 caps.latest.revision: 29
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 6cc802c42db2f688ee7d4cab0876e64ee9becc28
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: d2ae0fe5a6bc85a9c2535b65f1989a8d5cd72904
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36052591"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37260555"
 ---
 # <a name="filtering-values-using-sqllimit-field-and-sqllimit-value-sqlxml-40"></a>Filtrage de valeurs à l'aide des annotations sql:limit-field et sql:limit-value (SQLXML 4.0)
   Vous pouvez limiter les lignes qui sont retournées à partir d'une requête de base de données et d'après une valeur de limitation. Les annotations `sql:limit-field` et `sql:limit-value` sont utilisées pour identifier la colonne de base de données qui contient les valeurs de limitation et spécifier une valeur de limitation spécifique à utiliser pour filtrer les données retournées.  
@@ -58,7 +58,7 @@ ms.locfileid: "36052591"
   
  Un client peut disposer d'une adresse de livraison et/ou d'une adresse de facturation. Les valeurs de la colonne AddressType sont Shipping et Billing.  
   
- Il s’agit du schéma de mappage dans lequel le **ShipTo** attribut de schéma est mappé à la colonne StreetAddress dans la relation Addresses. Les valeurs retournées pour cet attribut sont limitées uniquement aux adresses de livraison en spécifiant les annotations `sql:limit-field` et `sql:limit-value`. De même, la **BillTo** attribut de schéma retourne uniquement l’adresse de facturation d’un client.  
+ Il s’agit du schéma de mappage dans lequel le **ShipTo** attribut de schéma est mappé à la colonne StreetAddress dans la relation Addresses. Les valeurs retournées pour cet attribut sont limitées uniquement aux adresses de livraison en spécifiant les annotations `sql:limit-field` et `sql:limit-value`. De même, le **BillTo** attribut de schéma retourne uniquement l’adresse de facturation d’un client.  
   
  Voici le schéma :  
   
@@ -175,7 +175,7 @@ ms.locfileid: "36052591"
   
 -   OrderDetails (OrderID, ProductID, UnitPrice, Quantity, Price, Discount)  
   
- Il s’agit du schéma de mappage dans lequel le **OrderID** attribut sur les détails de commande est mappé à la colonne OrderID dans la relation orders. Les valeurs retournées pour cet attribut sont limitées à celles qui ont une valeur de 2, 0000000e-001 (0,2) comme spécifié pour le **remise** d’attribut à l’aide de la `sql:limit-field` et `sql:limit-value` annotations.  
+ Il s’agit du schéma de mappage dans lequel le **OrderID** attribut sur les détails de commande est mappé à la colonne OrderID dans la relation orders. Les valeurs qui sont retournées pour cet attribut sont limitées à celles qui ont une valeur de 2, 0000000e-001 (0,2) que celui spécifié pour le **Discount** attribut à l’aide de la `sql:limit-field` et `sql:limit-value` annotations.  
   
  Voici le schéma :  
   

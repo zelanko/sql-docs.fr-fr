@@ -1,5 +1,5 @@
 ---
-title: Recommandations pour les niveaux d’Isolation des transactions avec des Tables mémoire optimisées | Documents Microsoft
+title: Instructions pour les niveaux d’Isolation des transactions avec Tables optimisées en mémoire | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine-imoltp
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: e365e9ca-c34b-44ae-840c-10e599fa614f
 caps.latest.revision: 25
 author: stevestein
 ms.author: sstein
-manager: jhubbard
-ms.openlocfilehash: f21b7340b4c2d0cc3457cf0a2169d0a7fe17b311
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 3d4c515d6eb3c86143e1344b342b8ee29a781358
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36139499"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37320728"
 ---
 # <a name="guidelines-for-transaction-isolation-levels-with-memory-optimized-tables"></a>Instructions pour les niveaux d'isolement des transactions sur les tables mémoire optimisées
   Dans de nombreux scénarios, vous devez spécifier le niveau d'isolation de la transaction. L'isolation des transactions pour les tables mémoire optimisées est différente de celle des tables sur disque.  
@@ -28,13 +28,13 @@ ms.locfileid: "36139499"
   
 -   TRANSACTION ISOLATION LEVEL est une option requise pour le bloc ATOMIC contenant le contenu d'une procédure stockée compilée en mode natif.  
   
--   En raison des restrictions d'utilisation du niveau d'isolation dans les transactions entre conteneurs, l'utilisation des tables mémoire optimisées en [!INCLUDE[tsql](../includes/tsql-md.md)] interprété doit généralement être accompagnée d'un indicateur de table spécifiant le niveau d'isolation utilisé pour accéder à la table. Pour plus d’informations sur les indicateurs de niveau d’isolation et les transactions entre conteneurs, consultez [niveaux d’Isolation des transactions](../../2014/database-engine/transaction-isolation-levels.md).  
+-   En raison des restrictions d'utilisation du niveau d'isolation dans les transactions entre conteneurs, l'utilisation des tables mémoire optimisées en [!INCLUDE[tsql](../includes/tsql-md.md)] interprété doit généralement être accompagnée d'un indicateur de table spécifiant le niveau d'isolation utilisé pour accéder à la table. Pour plus d’informations sur les indicateurs de niveau d’isolement et les transactions entre conteneurs, consultez [niveaux d’Isolation des transactions](../../2014/database-engine/transaction-isolation-levels.md).  
   
 -   Le niveau d'isolation de la transaction souhaité doit être déclaré explicitement. Il n'est pas possible d'utiliser des indicateurs de verrouillage (tels que XLOCK) pour garantir l'isolation de certaines lignes ou tables dans la transaction.  
   
 -   L'application qui accède à la base de données doit implémenter la logique de nouvelle tentative pour traiter les erreurs résultant de conflits qui condamnent la transaction, les échecs de validation et les échecs de dépendance de validation. Notez que les échecs de validation de dépendance peuvent se produire même avec les transactions en lecture seule.  
   
--   Les transactions longues doivent être évitées avec les tables mémoire optimisées. De telles transactions augmentent la probabilité des conflits et l'arrêt des transactions suivantes. Une transaction longue diffère également l'opération de garbage collection. Plus une transaction s’exécute, les versions de ligne récemment supprimée du conserve de OLTP en mémoire plus de temps, qui peuvent diminuer les performances de recherche de nouvelles transactions.  
+-   Les transactions longues doivent être évitées avec les tables mémoire optimisées. De telles transactions augmentent la probabilité des conflits et l'arrêt des transactions suivantes. Une transaction longue diffère également l'opération de garbage collection. Plus une transaction s’exécute, les versions de ligne récemment supprimée du conserve de OLTP en mémoire plus de temps, ce qui peuvent réduire les performances de recherche de nouvelles transactions.  
   
  Les tables sur disque reposent généralement sur le verrouillage et le blocage de l'isolation des transactions. Les tables mémoire optimisées reposent sur plusieurs contrôles de version et la détection de conflit pour garantir l'isolation. Pour plus d’informations, consultez la section sur la détection de conflit, Validation et contrôles de dépendance de validation dans [Transactions dans les Tables optimisées en mémoire](../relational-databases/in-memory-oltp/memory-optimized-tables.md).  
   
@@ -60,7 +60,7 @@ ms.locfileid: "36139499"
   
  La garantie fournie par le niveau d'isolation SNAPSHOT (le plus bas niveau d'isolation pris en charge pour les tables mémoire optimisées) inclut les garanties de READ COMMITTED. Chaque instruction dans la transaction lit la même version cohérente de la base de données. Non seulement les lignes sont lues par la transaction validée dans la base de données, mais toutes les opérations de lecture voient l'ensemble des modifications effectuées par le même jeu de transactions.  
   
- **Indication**: si seule la garantie d’isolation READ COMMITTED est nécessaire, utilisez l’isolation SNAPSHOT avec des procédures stockées compilées en mode natif et pour accéder aux tables optimisées en mémoire via interprété [!INCLUDE[tsql](../includes/tsql-md.md)].  
+ **Indication**: si seule la garantie d’isolation READ COMMITTED est nécessaire, utilisez l’isolation SNAPSHOT avec des procédures stockées compilées en mode natif et pour accéder aux tables mémoire optimisées via interprété [!INCLUDE[tsql](../includes/tsql-md.md)].  
   
  Pour les transactions avec validation automatique, le niveau d'isolation READ COMMITTED est mappé implicitement pour les tables mémoire optimisées. Par conséquent, si le paramètre de session TRANSACTION ISOLATION LEVEL est défini sur READ COMMITTED, il n'est pas nécessaire de spécifier le niveau d'isolation par un indicateur de table lors de l'accès aux tables mémoire optimisées.  
   
@@ -95,13 +95,13 @@ COMMIT
   
      Certaines applications peuvent supposer que les lecteurs attendent toujours la validation des enregistreurs, notamment s'il y a une synchronisation entre les deux transactions dans la couche Application.  
   
-     **Orientation :** Applications ne peut pas s’appuient sur un comportement de blocage. Si une application nécessite une synchronisation entre des transactions simultanées, une telle logique peut être implémentée dans la couche application ou au niveau de la base de données, via [sp_getapplock &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-getapplock-transact-sql).  
+     **Indication :** Applications ne peut pas se fier au blocage de comportement. Si une application nécessite une synchronisation entre des transactions simultanées, cette logique peut être implémentée dans la couche application ou au niveau de la base de données, via [sp_getapplock &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-getapplock-transact-sql).  
   
 -   Dans les transactions qui utilisent l'isolation READ COMMITTED, chaque instruction voit la dernière version des lignes dans la base de données. Par conséquent, les instructions suivantes voient les modifications de l'état de la base de données.  
   
      Interroger une table avec une boucle WHILE jusqu'à ce qu'une nouvelle ligne soit détectée est un exemple de modèle d'application qui utilise cette hypothèse. Avec chaque itération de la boucle, la requête verra les dernières mises à jour dans la base de données.  
   
-     **Orientation :** si une application doit interroger une table mémoire optimisée pour obtenir les lignes les plus récentes écrites dans la table, déplacez la boucle d’interrogation en dehors de l’étendue de la transaction.  
+     **Indication :** si une application doit interroger une table optimisée en mémoire pour obtenir les lignes les plus récentes écrites dans la table, déplacez la boucle d’interrogation en dehors de l’étendue de la transaction.  
   
      Voici un exemple de modèle d'application qui utilise cette hypothèse. Interroger une table avec une boucle WHILE jusqu'à ce qu'une nouvelle ligne soit détectée. Dans chaque itération de la boucle, la requête accède aux dernières mises à jour dans la base de données.  
   
@@ -127,15 +127,15 @@ COMMIT
 ```  
   
 ## <a name="locking-table-hints"></a>Indicateurs de table de verrouillage  
- Indicateurs de verrouillage ([indicateurs de Table &#40;Transact-SQL&#41;](/sql/t-sql/queries/hints-transact-sql-table)) comme HOLDLOCK et XLOCK peuvent être utilisé avec les tables sur disque pour que [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] prendre plus de verrous que nécessaire pour le niveau d’isolement spécifié.  
+ Indicateurs de verrouillage ([indicateurs de Table &#40;Transact-SQL&#41;](/sql/t-sql/queries/hints-transact-sql-table)) tels que HOLDLOCK et XLOCK peuvent être utilisés avec les tables sur disque pour avoir [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] prenne plus de verrous que nécessaire pour le niveau d’isolation spécifié.  
   
  Les tables mémoire optimisées n'utilisent pas de verrous. Des niveaux d'isolation plus élevés comme REPEATABLE READ et SERIALIZABLE peuvent être utilisés pour déclarer les garanties de votre choix.  
   
  Les indicateurs de verrouillage ne sont pas pris en charge. En revanche, déclarez les garanties requises via les niveaux d'isolation des transactions. (NOLOCK est pris en charge, car [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] n'utilise pas de verrous sur les tables mémoire optimisées. Notez que contrairement, aux tables sur disque, NOLOCK n'implique pas le comportement UNCOMMITTED READ pour les tables mémoire optimisées.)  
   
 ## <a name="see-also"></a>Voir aussi  
- [Présentation des Transactions sur les Tables mémoire optimisées](../../2014/database-engine/understanding-transactions-on-memory-optimized-tables.md)   
- [Logique de nouvelle tentative pour les instructions pour les Transactions sur les Tables mémoire optimisées](../../2014/database-engine/guidelines-for-retry-logic-for-transactions-on-memory-optimized-tables.md)   
+ [Présentation des Transactions sur les Tables optimisées en mémoire](../../2014/database-engine/understanding-transactions-on-memory-optimized-tables.md)   
+ [Logique de nouvelle tentative pour les instructions pour les Transactions sur les Tables optimisées en mémoire](../../2014/database-engine/guidelines-for-retry-logic-for-transactions-on-memory-optimized-tables.md)   
  [Niveaux d’isolation de la transaction](../../2014/database-engine/transaction-isolation-levels.md)  
   
   

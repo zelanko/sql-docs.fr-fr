@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-xml
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - schema collections [SQL Server], viewing
 - XML schemas [SQL Server], viewing
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - viewing XML schema collections
 ms.assetid: e38031af-22df-4cd9-a14e-e316b822f91b
 caps.latest.revision: 30
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 164b207ab8191486005491eaf64323fed83aaee6
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 1560eb844657d806862d6a4e85bb9a52682b77d6
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36038526"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37301777"
 ---
 # <a name="view-a-stored-xml-schema-collection"></a>Afficher une collection de schémas XML stockée
   Après l’importation d’une collection de schémas XML à l’aide de l’instruction [CREATE XML SCHEMA COLLECTION](/sql/t-sql/statements/create-xml-schema-collection-transact-sql), les composants du schéma sont stockés dans les métadonnées. Vous pouvez utiliser la fonction intrinsèque [xml_schema_namespace](/sql/t-sql/xml/xml-schema-namespace)pour reconstruire la collection de schémas XML. Cette fonction retourne un `xml` instance de type de données.  
@@ -39,7 +39,7 @@ SELECT xml_schema_namespace(N'Production',N'ProductDescriptionSchemaCollection')
 GO  
 ```  
   
- Si vous souhaitez ne voir qu’un seul schéma à partir de la collection de schémas XML, vous pouvez spécifier la requête XQuery portant sur la `xml` type de résultat qui est retourné par `xml_schema_namespace`.  
+ Si vous voulez ne consulter qu’un seul schéma de la collection de schémas XML, vous pouvez spécifier la requête XQuery portant sur la `xml` type de résultat qui est retourné par `xml_schema_namespace`.  
   
 ```  
 SELECT xml_schema_namespace(N'RelationalSchemaName',N'XmlSchemaCollectionName').query('  

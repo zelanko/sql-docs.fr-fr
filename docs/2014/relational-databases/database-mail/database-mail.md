@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - architecture [SQL Server], Database Mail
 - Database Mail [SQL Server], architecture
 - Database Mail [SQL Server], components
 ms.assetid: 9e4563dd-4799-4b32-a78a-048ea44a44c1
 caps.latest.revision: 46
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: b013bb201730117c824d4f2e792557b35c8bec3f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 40f485a3e75e02c47e1e0c15e1ab47650040b983
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36139837"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37285365"
 ---
 # <a name="database-mail"></a>Messagerie de base de données
   La messagerie de base de données est une solution d'entreprise qui permet l'envoi de messages électroniques à partir du [!INCLUDE[ssDEnoversion](../../../includes/ssdenoversion-md.md)]. Grâce à la messagerie de base de données, vos applications de bases de données peuvent envoyer des messages électroniques aux utilisateurs. Ces messages peuvent contenir les résultats d'une requête, voire des fichiers de n'importe quelle ressource de votre réseau.  

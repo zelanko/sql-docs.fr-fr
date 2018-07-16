@@ -1,5 +1,5 @@
 ---
-title: Programmation d’exploration de données | Documents Microsoft
+title: Programmation d’exploration de données | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -16,13 +16,13 @@ ms.assetid: 9fd77b16-0b89-44ce-bcf1-7c04b62499da
 caps.latest.revision: 19
 author: minewiskan
 ms.author: owend
-manager: kfile
-ms.openlocfilehash: 1ad8f0d8e066fde6f199af26c977b5a9ba3d8917
-ms.sourcegitcommit: 8c040e5b4e8c7d37ca295679410770a1af4d2e1f
+manager: craigg
+ms.openlocfilehash: fce4bd16cdc64aeabb2367d757b0b68a5cab6144
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/21/2018
-ms.locfileid: "36313287"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37297369"
 ---
 # <a name="data-mining-programming"></a>Programmation de l'exploration de données
   Si vous estimez que les outils et composants intégrés dans [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ne répondent pas à vos besoins, vous pouvez étendre la puissance de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] en codant vos propres extensions. Dans cette optique, deux options sont à votre disposition :  
@@ -61,7 +61,7 @@ ms.locfileid: "36313287"
   
 ## <a name="related-reference"></a>Référence connexe  
  [Développement avec ADOMD.NET](../multidimensional-models/adomd-net/developing-with-adomd-net.md)  
- Présente les clients et serveur de programmation d’objets ADOMD.NET.  
+ Introduit les clients et serveur de programmation d’objets ADOMD.NET.  
   
  [Développement avec Analysis Management Objects &#40;AMO&#41;](../multidimensional-models/analysis-management-objects/developing-with-analysis-management-objects-amo.md)  
  Présente la bibliothèque de programmation AMO.  

@@ -1,5 +1,5 @@
 ---
-title: Page filtres, boîtes de dialogue graphique (Générateur de rapports et SSRS) | Documents Microsoft
+title: Page filtres, boîtes de dialogue graphique (Générateur de rapports et SSRS) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.rtp.rptdesigner.categorygroupproperties.filters.f1
 - "10409"
@@ -18,18 +18,18 @@ f1_keywords:
 - "10165"
 ms.assetid: fab97b2f-d53f-42f2-900c-c159653d89ed
 caps.latest.revision: 14
-author: douglaslM
+author: maggiesmsft
 ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 5b695b45a43f388a7dabf64bad327404ef4f6510
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 3123a7c1ba3a520ad743ffe7dbd65dfd57443672
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36140455"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37317899"
 ---
 # <a name="filters-page-chart-dialog-boxes-report-builder-and-ssrs"></a>Page Filtres, boîtes de dialogue Graphique (Générateur de rapports et SSRS)
-  Cliquez sur **filtres** dans les :  
+  Cliquez sur **filtres** dans le :  
   
 -   la boîte de dialogue**Propriétés du groupe de catégories** pour filtrer les points de données dans une série regroupée par catégorie ;  
   
@@ -70,6 +70,6 @@ ms.locfileid: "36140455"
  [Ajouter des filtres de datasets, des filtres de régions de données et des filtres de groupes &#40;Générateur de rapports et SSRS&#41;](report-design/add-dataset-filters-data-region-filters-and-group-filters.md)   
  [Exemples d’expressions &#40;Générateur de rapports et SSRS&#41;](report-design/expression-examples-report-builder-and-ssrs.md)   
  [Expressions &#40;Générateur de rapports et SSRS&#41;](report-design/expressions-report-builder-and-ssrs.md)   
- [Filtrer, regrouper et trier les données &#40;rapport Générateur et SSRS&#41;](report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)  
+ [Filtrer, regrouper et trier les données &#40;Générateur de rapports et SSRS&#41;](report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Un déclencheur AFTER imbriqué déclenche même lorsque l’imbrication du déclencheur est OFF | Documents Microsoft
+title: Un déclencheur AFTER imbriqué déclenche même si imbrication du déclencheur est désactivée (OFF) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - DML triggers, nested
 - nested triggers option
 - triggers [SQL Server], nested
 ms.assetid: 94d72960-676e-40d9-81bc-08bffe778110
 caps.latest.revision: 21
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: f53e478c212793c6798f0fcabbf00cb1486134d1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 683ffcfa3bb4715b25fb912fa12808be3b0873ec
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36038990"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37247829"
 ---
 # <a name="nested-after-trigger-fires-even-when-trigger-nesting-is-off"></a>Un déclencheur AFTER imbriqué est exécuté même lorsque l'imbrication du déclencheur est OFF
   Le Conseiller de mise à niveau a détecté un déclencheur AFTER imbriqué à l'intérieur d'un déclencheur INSTEAD OF défini sur une ou plusieurs tables. Les déclencheurs imbriqués AFTER peuvent s'exécuter même lorsque l'option de configuration du serveur `nested triggers` a la valeur 0.  

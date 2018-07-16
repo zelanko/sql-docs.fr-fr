@@ -1,5 +1,5 @@
 ---
-title: Les concepteurs de l’interface utilisateur et les boîtes de dialogue pour l’analyse multidimensionnelle | Documents Microsoft
+title: Concepteurs d’interfaces utilisateur et les boîtes de dialogue pour l’analyse multidimensionnelle | Microsoft Docs
 ms.custom: ''
 ms.date: 05/17/2018
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
-author: Minewiskan
+ms.topic: conceptual
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 918ae7edaba07762efa81937412e4aff9c20f32e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: a2e5c5fc61e206206df7666357990bdf517799f1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36140818"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37267185"
 ---
-# <a name="ui-designers-and-dialogs-for-multidimensional-analysis"></a>Les concepteurs de l’interface utilisateur et les boîtes de dialogue pour l’analyse multidimensionnelle
+# <a name="ui-designers-and-dialogs-for-multidimensional-analysis"></a>Concepteurs d’interfaces utilisateur et les boîtes de dialogue pour l’analyse multidimensionnelle
 
-Cette section contient la documentation sur les concepteurs d’interface utilisateur utilisateur et les boîtes de dialogue pour l’analyse multidimensionnelle.
+Cette section contient la documentation sur les concepteurs d’interface (UI) utilisateur et les boîtes de dialogue pour l’analyse multidimensionnelle.
 
 ## <a name="next-steps"></a>Étapes suivantes
 
-- [Concepteurs et boîtes de dialogue (multidimensionnels) Analysis Services](../analysis-services-designers-and-dialog-boxes-multidimensional-data.md)
+- [Concepteurs et boîtes de dialogue d’Analysis Services (Multidimensionnel)](../analysis-services-designers-and-dialog-boxes-multidimensional-data.md)
 

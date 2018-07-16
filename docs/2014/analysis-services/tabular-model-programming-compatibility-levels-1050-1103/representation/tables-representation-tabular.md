@@ -1,5 +1,5 @@
 ---
-title: Tables de représentation (tabulaire) | Documents Microsoft
+title: Tables de représentation (tabulaire) | Microsoft Docs
 ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
@@ -12,15 +12,15 @@ ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: a636fc13-4054-4cea-bce1-192ec4796063
 caps.latest.revision: 9
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: e642969cb2fa91b6edf5d514a47a9135d39a0ed7
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 33f266b37ea40a6c0796f6b8f5676f12fbbe6666
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36141042"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37205979"
 ---
 # <a name="tables-representation-tabular"></a>Représentation de tables (tabulaire)
   Dans les modèles tabulaires, une table est une représentation de base de données.  

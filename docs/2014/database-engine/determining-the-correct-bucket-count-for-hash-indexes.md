@@ -1,5 +1,5 @@
 ---
-title: Déterminer le nombre de compartiments Correct pour les index de hachage | Documents Microsoft
+title: Déterminer le nombre de compartiments Correct pour les index de hachage | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,25 +8,25 @@ ms.suite: ''
 ms.technology:
 - database-engine-imoltp
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 6d1ac280-87db-4bd8-ad43-54353647d8b5
 caps.latest.revision: 18
 author: stevestein
 ms.author: sstein
-manager: jhubbard
-ms.openlocfilehash: 4fa6a93a3f66a3db6c2cc7f74b11fb66073a4013
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 5dbb50c928f066e595b48737da2cc2fc6b9f45eb
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36140588"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37306166"
 ---
 # <a name="determining-the-correct-bucket-count-for-hash-indexes"></a>Déterminer le nombre de compartiments correct pour les index de hachage
-  Vous devez spécifier une valeur pour le `BUCKET_COUNT` paramètre lorsque vous créez la table optimisée en mémoire. Cette rubrique fournit des recommandations pour déterminer la valeur appropriée du paramètre `BUCKET_COUNT`. Si vous ne pouvez pas déterminer le nombre de compartiments correct, utilisez un index non cluster à la place.  Une valeur `BUCKET_COUNT` incorrecte, en particulier une valeur trop basse, peut avoir un impact important sur les performances de la charge de travail, ainsi que sur le temps de récupération de la base de données. Il vaut mieux surestimer le nombre de compartiments.  
+  Vous devez spécifier une valeur pour le `BUCKET_COUNT` paramètre lorsque vous créez la table mémoire optimisée. Cette rubrique fournit des recommandations pour déterminer la valeur appropriée du paramètre `BUCKET_COUNT`. Si vous ne pouvez pas déterminer le nombre de compartiments correct, utilisez un index non cluster à la place.  Une valeur `BUCKET_COUNT` incorrecte, en particulier une valeur trop basse, peut avoir un impact important sur les performances de la charge de travail, ainsi que sur le temps de récupération de la base de données. Il vaut mieux surestimer le nombre de compartiments.  
   
  Les clés d'index dupliquées peuvent réduire les performances avec un index hach car elles sont hachées dans le même compartiment, ce qui entraîne l'augmentation de la chaîne du compartiment.  
   
- Pour plus d’informations sur les index de hachage non cluster, consultez [index de hachage](hash-indexes.md) et [des recommandations pour l’utilisation d’index sur les Tables optimisées en mémoire](../relational-databases/in-memory-oltp/memory-optimized-tables.md).  
+ Pour plus d’informations sur les index de hachage non cluster, consultez [index de hachage](hash-indexes.md) et [les instructions Using Indexes on Memory-Optimized Tables](../relational-databases/in-memory-oltp/memory-optimized-tables.md).  
   
  Une table de hachage est allouée pour chaque index de hachage sur une table mémoire optimisée. La taille de la table de hachage allouée pour un index est spécifié par le `BUCKET_COUNT` paramètre dans [CREATE TABLE &#40;Transact-SQL&#41; ](/sql/t-sql/statements/create-table-transact-sql) ou [CREATE TYPE &#40;Transact-SQL&#41; ](/sql/t-sql/statements/create-type-transact-sql). Le nombre de compartiment est arrondi en interne à la puissance de 2 suivante. Par exemple, la spécification d'un nombre de compartiments égal à 300 000 créera un nombre réel de compartiments égal à 524 288.  
   
@@ -67,7 +67,7 @@ FROM
  Pour l'exemple d'index sur (SpecialOfferID, ProductID), cela aboutit à 121317 / 484 = 251. Cela signifie que les valeurs de clé d'index ont une moyenne de 251, par conséquent, ceci doit être un index non cluster.  
   
 ## <a name="troubleshooting-the-bucket-count"></a>Résolution des problèmes liés au nombre de compartiments  
- Pour résoudre les problèmes de nombre de compartiments dans des tables optimisées en mémoire, utilisez [sys.dm_db_xtp_hash_index_stats &#40;Transact-SQL&#41; ](/sql/relational-databases/system-dynamic-management-views/sys-dm-db-xtp-hash-index-stats-transact-sql) pour obtenir les statistiques sur les compartiments vides et la longueur des chaînes de ligne. La requête suivante peut être utilisée pour obtenir les statistiques sur tous les index de hachage dans la base de données active. Son exécution peut prendre plusieurs minutes s'il existe de grandes tables dans la base de données.  
+ Pour résoudre les problèmes de nombre de compartiments dans les tables optimisées en mémoire, utilisez [sys.dm_db_xtp_hash_index_stats &#40;Transact-SQL&#41; ](/sql/relational-databases/system-dynamic-management-views/sys-dm-db-xtp-hash-index-stats-transact-sql) pour obtenir les statistiques sur les compartiments vides et la longueur des chaînes de ligne. La requête suivante peut être utilisée pour obtenir les statistiques sur tous les index de hachage dans la base de données active. Son exécution peut prendre plusieurs minutes s'il existe de grandes tables dans la base de données.  
   
 ```tsql  
 SELECT   
@@ -91,7 +91,7 @@ FROM sys.dm_db_xtp_hash_index_stats AS hs
  Si *empty_bucket_percent* est inférieur à 10 pour cent, le nombre de compartiments est probablement trop bas. Idéalement, *empty_bucket_percent* devrait être de 33 pour cent ou plus. Si le nombre de compartiments correspond au nombre de valeurs de clés d'index, environ 1/3 des compartiments est vide, en raison de la distribution du hachage.  
   
  *avg_chain_length*  
- *avg_chain_length* indique la durée moyenne des chaînes de lignes dans les compartiments de hachage.  
+ *avg_chain_length* indique la longueur moyenne des chaînes de lignes dans les compartiments de hachage.  
   
  Si *avg_chain_length* est supérieur à 10 et *empty_bucket_percent* est supérieur à 10 pour cent, il existe probablement plusieurs valeurs de clé d'index dupliquées et un index non cluster serait plus approprié. Une longueur de chaîne moyenne de 1 est idéale.  
   
@@ -147,7 +147,7 @@ GO
   
 -   Index de clé primaire (PK__SalesOrder…) : 36 pour cent des compartiments sont vides, ce qui est correct. En outre, la longueur de chaîne moyenne est de 1, ce qui est également correct. Aucun changement n'est requis.  
   
- Pour plus d’informations sur la résolution des problèmes liés à vos index de hachage mémoire optimisés, consultez [dépannage de problèmes de Performance courants avec les index de hachage à mémoire optimisée](../../2014/database-engine/troubleshooting-common-performance-problems-with-memory-optimized-hash-indexes.md).  
+ Pour plus d’informations sur la résolution des problèmes avec vos index de hachage mémoire optimisés, consultez [dépannage de problèmes de performances courants avec des index de hachage à mémoire optimisée](../../2014/database-engine/troubleshooting-common-performance-problems-with-memory-optimized-hash-indexes.md).  
   
 ## <a name="detailed-considerations-for-further-optimization"></a>Observations détaillées pour une meilleure optimisation  
  Cette section décrit d'autres éléments à prendre en considération pour optimiser le nombre de compartiments.  
@@ -156,7 +156,7 @@ GO
   
 -   Plus la valeur du nombre de compartiments est élevée, plus les compartiments vides seront nombreux dans l'index. Cela a un impact sur l'utilisation de la mémoire (8 octets par compartiment) et les performances des analyses de table, car chaque compartiment est analysé dans le cadre d'une analyse de table.  
   
--   Plus le nombre de compartiments est faible, plus le nombre de valeurs affectées à un seul compartiment est grand. Cela réduit les performances pour les recherches de point et des insertions, car [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] doit pouvoir franchir plusieurs valeurs dans un seul compartiment pour trouver la valeur spécifiée par le prédicat de recherche.  
+-   Plus le nombre de compartiments est faible, plus le nombre de valeurs affectées à un seul compartiment est grand. Cela réduit les performances pour les recherches de points et les insertions, étant donné que [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] doit pouvoir franchir plusieurs valeurs dans un seul compartiment pour rechercher la valeur spécifiée par le prédicat de recherche.  
   
  Si le nombre de compartiments est considérablement inférieur au nombre de clés d'index uniques, plusieurs valeurs mapperont à chaque compartiment. Cela dégrade les performances de la plupart des opérations DML, en particulier les recherches de points (recherches de clés d'index individuelles) et des opérations d'insertion. Par exemple, vous pouvez constater des performances médiocres des requêtes et SELECT et des opérations UPDATE et DELETE avec des prédicats d'égalité correspondant aux colonnes clés d'index dans la clause WHERE. Un nombre de compartiments faible affectera également le temps de récupération de la base de données, car les index sont recréés au démarrage de la base de données.  
   
@@ -181,7 +181,7 @@ GO
 -   Si les analyses complètes d'index sont les principales opérations critiques pour les performances, utilisez un nombre de compartiments qui est proche du nombre réel de valeurs de clés d'index.  
   
 ### <a name="big-tables"></a>Grandes tables  
- Pour les grandes tables, l'utilisation de la mémoire peut devenir un problème. Par exemple, avec une table de 250 millions de lignes qui a 4 index de hachage, chacun avec un nombre de compartiments d’un milliard, la charge pour les tables de hachage est de 4 index * 1 milliard de compartiments \* 8 octets = 32 gigaoctets d’utilisation de la mémoire. Lorsque vous choisissez un nombre de compartiments de 250 millions pour chacun des index, la charge totale pour les tables de hachage est de 8 gigaoctets. Notez que cela s’ajoute aux 8 octets de mémoire utilisée par chaque index ajoute à chaque ligne individuelle, qui est de 8 gigaoctets dans ce scénario (4 index \* 8 octets \* 250 millions de lignes).  
+ Pour les grandes tables, l'utilisation de la mémoire peut devenir un problème. Par exemple, avec une table de 250 millions de lignes qui a 4 index de hachage, chacun avec un nombre de compartiments d’un milliard, la surcharge pour les tables de hachage est de 4 index * 1 milliard de compartiments \* 8 octets = 32 gigaoctets d’utilisation de la mémoire. Lorsque vous choisissez un nombre de compartiments de 250 millions pour chacun des index, la charge totale pour les tables de hachage est de 8 gigaoctets. Notez que cela s’ajoute aux 8 octets de l’utilisation de la mémoire chaque index ajoute à chaque ligne individuelle, ce qui est de 8 gigaoctets dans ce scénario (4 index \* 8 octets \* 250 millions de lignes).  
   
  Les analyses de table complètes ne sont généralement pas un problème critique pour les performances pour les charges de travail OLTP. Par conséquent, un choix doit être fait entre l'utilisation de la mémoire et les performances de la recherche de point et des opérations d'insertion :  
   

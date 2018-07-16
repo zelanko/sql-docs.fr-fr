@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - referencing URL items for report server access
 - URL access [Reporting Services], report servers
@@ -16,13 +16,13 @@ ms.assetid: a58b4ca6-129d-45e9-95c7-e9169fe5bba4
 caps.latest.revision: 41
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: d8c509675ed604582fe83ce7ddf539b0e7be717e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: e7184a0a5aa72ea7fe4ff681103044f2791bdf33
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36143671"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37227083"
 ---
 # <a name="access-report-server-items-using-url-access"></a>Accéder à des éléments de serveur de rapports à l'aide de l'accès URL
   Cette rubrique explique comment accéder aux éléments du catalogue de types différents dans une base de données du serveur de rapports ou dans un site SharePoint en utilisant *rs:Command*=*Value*.  
@@ -69,7 +69,7 @@ ms.locfileid: "36143671"
 </DataSourceDefinition>  
 ```  
   
- La chaîne de connexion est retournée selon le paramètre **SecureConnectionLevel** du serveur de rapports. Pour plus d’informations sur la **SecureConnectionLevel** , consultez [à l’aide des méthodes de Service Web sécurisé](report-server-web-service/net-framework/using-secure-web-service-methods.md).  
+ La chaîne de connexion est retournée selon le paramètre **SecureConnectionLevel** du serveur de rapports. Pour plus d’informations sur la **SecureConnectionLevel** définition, consultez [à l’aide des méthodes de Service Web sécurisées](report-server-web-service/net-framework/using-secure-web-service-methods.md).  
   
 ## <a name="access-the-contents-of-a-folder"></a>Accéder au contenu d'un dossier  
  Pour accéder au contenu d’un dossier, utilisez le paramètre *rs:Command*=*GetChildren* . Il retourne une page générique de navigation des dossiers qui contient des liens vers les sous-dossiers, rapports, sources de données et ressources dans le dossier demandé. Exemple :  

@@ -1,5 +1,5 @@
 ---
-title: Élément DisplayFolder (ASSL) | Documents Microsoft
+title: Élément DisplayFolder (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - DisplayFolder element
 ms.assetid: 55184c02-03e7-4d6c-b87a-d4d34bc11d0e
 caps.latest.revision: 36
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: c959f1c2fe298217b46849c6a13d3e0f313f6803
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 646a98170e24c36841ab445bf87897a0b4e9686f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36045046"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37293199"
 ---
 # <a name="displayfolder-element-assl"></a>Élément DisplayFolder (ASSL)
   Spécifie le dossier dans lequel l'élément parent doit être répertorié. [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] pour les développeurs et les administrateurs peut-être prendre en charge l’utilisation des dossiers d’affichage pour permettre le classement visuel plusieurs éléments.  
@@ -68,9 +68,9 @@ ms.locfileid: "36045046"
   
 -   Contenir un seul nom de dossier, ce qui indique que la mesure doit être rendue comme appartenant à un dossier du même nom.  
   
--   Contenir plusieurs noms de dossier séparés par une barre oblique inverse (\\), ce qui indique une hiérarchie de dossiers incorporée.  
+-   Contenir plusieurs noms de dossier séparés par une barre oblique inverse (\\), qui dénote une hiérarchie de dossiers incorporée.  
   
- Le `DisplayFolder` propriété s’applique aux `CalculationProperty` if uniquement des éléments la valeur de [CalculationType](calculationtype-element-assl.md) a la valeur *membre*.  
+ Le `DisplayFolder` propriété s’applique aux `CalculationProperty` if seuls éléments la valeur de [CalculationType](calculationtype-element-assl.md) a la valeur *membre*.  
   
  Les éléments qui correspondent aux parents de `DisplayFolder` dans le modèle objet AMO (Analysis Management Objects) sont <xref:Microsoft.AnalysisServices.CalculationProperty>, <xref:Microsoft.AnalysisServices.Hierarchy>, <xref:Microsoft.AnalysisServices.Kpi>, <xref:Microsoft.AnalysisServices.Measure> et <xref:Microsoft.AnalysisServices.Translation>.  
   

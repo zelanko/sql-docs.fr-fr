@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: ba6b5bdd-d8c6-4aa8-ba32-3a10b11969d4
 caps.latest.revision: 5
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 0e722f2884b0137b261f8442021199f4cc1cb0ff
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 6bb76e6e17562ae1ed16acba6a63f17d665ca05b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36141488"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37318049"
 ---
 # <a name="previewing-reports-in-report-builder"></a>Aperçu des rapports dans le Générateur de rapports
   Lors de la création d'un rapport, il est utile d'afficher fréquemment un aperçu du rapport afin de vérifier qu'il s'affiche comme vous le souhaitez. Cliquez sur **Exécuter**pour afficher un aperçu du rapport. Le rapport est restitué en mode Aperçu.  
@@ -80,7 +80,7 @@ ms.locfileid: "36141488"
  Si un sous-rapport utilisé par votre rapport est modifié après la création de votre session d'édition, le rendu du rapport échouera dans l'aperçu. Pour afficher un aperçu du rapport avec succès, vous devez enregistrer le rapport ou cliquer sur **Actualiser** pour obtenir de nouvelles données.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Ajouter des données à un rapport &#40;rapport Générateur et SSRS&#41;](../report-data/report-datasets-ssrs.md)   
+ [Ajouter des données à un rapport &#40;Générateur de rapports et SSRS&#41;](../report-data/report-datasets-ssrs.md)   
  [Mise en forme des éléments de rapport &#40;Générateur de rapports et SSRS&#41;](../report-design/formatting-report-items-report-builder-and-ssrs.md)   
  [Tables, matrices et listes &#40;Générateur de rapports et SSRS&#41;](../report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)   
  [Graphiques &#40;Générateur de rapports et SSRS&#41;](../report-design/charts-report-builder-and-ssrs.md)   

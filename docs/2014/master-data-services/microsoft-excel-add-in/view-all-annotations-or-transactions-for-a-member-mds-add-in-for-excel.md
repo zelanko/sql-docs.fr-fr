@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: de90c81c-9e7f-4997-bf96-e22b97b2862c
 caps.latest.revision: 5
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 11903306315023c5de25212cc7c8196210fa0f3d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: 8396e4509f77310f785dc221b0eebed8979872b9
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36053547"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37197539"
 ---
 # <a name="view-all-annotations-or-transactions-for-a-member-mds-add-in-for-excel"></a>Afficher toutes les annotations ou transactions pour un membre (Complément MDS pour Excel)
   Dans [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)], voir les annotations (commentaires) et les transactions des lignes de données (membres) quand vous souhaitez consulter les mises à jour des données dans le temps.  

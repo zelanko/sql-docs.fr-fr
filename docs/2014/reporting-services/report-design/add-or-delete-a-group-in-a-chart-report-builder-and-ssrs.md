@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 0445b0ac-acae-4462-80fb-fe9735ac66db
 caps.latest.revision: 6
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: efd8edf59e3faf02ce5833092681f144f820263a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: d09b654ccd9a3b73f75aeed3ad5c2651eb11b529
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36140227"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37196639"
 ---
 # <a name="add-or-delete-a-group-in-a-chart-report-builder-and-ssrs"></a>Ajouter ou supprimer un groupe dans un graphique (Générateur de rapports et SSRS)
-  Cliquez dans la région de données de graphique pour afficher les **les données du graphique** volet. Créez des groupes en faisant glisser des champs de dataset vers les zones **Groupes de séries** et **Groupes de catégories** . Pour ajouter des groupes imbriqués, ajoutez plusieurs champs à la zone.  
+  Cliquez dans la région de données de graphique pour afficher le **données du graphique** volet. Créez des groupes en faisant glisser des champs de dataset vers les zones **Groupes de séries** et **Groupes de catégories** . Pour ajouter des groupes imbriqués, ajoutez plusieurs champs à la zone.  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
@@ -60,6 +60,6 @@ ms.locfileid: "36140227"
 2.  Cliquez avec le bouton droit sur le groupe dans la zone **Groupes de catégories** ou **Groupes de séries** , puis sélectionnez **Supprimer**.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Graphiques &#40;rapport Générateur et SSRS&#41;](charts-report-builder-and-ssrs.md)  
+ [Graphiques &#40;Générateur de rapports et SSRS&#41;](charts-report-builder-and-ssrs.md)  
   
   

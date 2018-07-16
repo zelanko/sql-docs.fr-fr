@@ -1,14 +1,13 @@
 ---
-title: Clustering de basculement et groupes de disponibilité AlwaysOn (SQL Server) | Documents Microsoft
+title: Clustering de basculement et groupes de disponibilité AlwaysOn (SQL Server) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - clustering [SQL Server]
 - Availability Groups [SQL Server], WSFC clusters
@@ -18,15 +17,15 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], Failover Cluster Instances
 ms.assetid: 613bfbf1-9958-477b-a6be-c6d4f18785c3
 caps.latest.revision: 43
-author: MikeRayMSFT
-ms.author: mikeray
-manager: jhubbard
-ms.openlocfilehash: 842003d531b655e4e302941dba67591a94006a84
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: e0fc322f09ab45756de441e3edf806ab99a02e5c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36038662"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37267145"
 ---
 # <a name="failover-clustering-and-alwayson-availability-groups-sql-server"></a>Clustering de basculement et groupes de disponibilité AlwaysOn (SQL Server)
   [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)], la solution haute disponibilité et de récupération d'urgence introduite dans [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)], requiert le Clustering de basculement Windows Server (WSFC). En outre, bien que [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] ne dépende pas du Clustering de basculement [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , vous pouvez utiliser une instance de clustering de basculement pour héberger un réplica de disponibilité pour un groupe de disponibilité. Il est important de connaître le rôle de chaque technologie de clustering, ainsi que les observations nécessaires lorsque vous concevez votre environnement [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)].  
@@ -124,7 +123,7 @@ ms.locfileid: "36038662"
   
 -   **Livres blancs :**  
   
-     [Guide d’Architecture AlwaysOn : Création d’une haute disponibilité et la Solution de récupération d’urgence à l’aide d’Instances de Cluster de basculement et groupes de disponibilité](http://msdn.microsoft.com/library/jj215886.aspx)  
+     [Guide de l’Architecture AlwaysOn : Création d’une haute disponibilité et la Solution de récupération d’urgence à l’aide d’Instances de Cluster de basculement et groupes de disponibilité](http://msdn.microsoft.com/library/jj215886.aspx)  
   
      [Guide de Solutions Microsoft SQL Server AlwaysOn pour une haute disponibilité et récupération d’urgence](http://go.microsoft.com/fwlink/?LinkId=227600)  
   

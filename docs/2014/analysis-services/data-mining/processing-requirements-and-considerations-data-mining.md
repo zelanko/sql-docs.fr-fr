@@ -1,5 +1,5 @@
 ---
-title: Le traitement de la configuration requise et considérations (exploration de données) | Documents Microsoft
+title: Traitement des exigences et considérations (exploration de données) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - data mining [Analysis Services], objects
 - mining structures [Analysis Services], processing
 - mining models [Analysis Services], processing
 ms.assetid: f7331261-6f1c-4986-b2c7-740f4b92ca44
 caps.latest.revision: 30
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: cbb38b12357b90b8ee2e4183af2d44724e7ce969
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 982349548e300e17f97c61f4679c085ed98b3208
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36038701"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37232389"
 ---
 # <a name="processing-requirements-and-considerations-data-mining"></a>Exigences et considérations concernant le traitement (exploration de données)
   Cette rubrique décrit quelques considérations techniques que vous devez garder à l'esprit lors du traitement des objets d'exploration de données. Pour une présentation générale du traitement et de la manière dont il s’applique à l’exploration de données, consultez [Traitement des objets d’exploration de données](processing-data-mining-objects.md).  

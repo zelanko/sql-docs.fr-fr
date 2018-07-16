@@ -1,5 +1,5 @@
 ---
-title: Installez Reporting Services et Internet Informations Services côte à côte (SSRS en Mode natif) | Documents Microsoft
+title: Installer Reporting Services et Internet Informations Services côte à côte (SSRS en Mode natif) | Microsoft Docs
 ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - deploying [Reporting Services], IIS
 ms.assetid: 9b651fa5-f582-4f18-a77d-0dde95d9d211
 caps.latest.revision: 34
 author: markingmyname
 ms.author: maghan
-manager: jhubbard
-ms.openlocfilehash: 2111d9ceda6e38f4abc079b94d678d981b075a91
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 3db5a0da0050541b0adec9b726184a959ac59001
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36140695"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37274655"
 ---
 # <a name="install-reporting-services-and-internet-information-services-side-by-side-ssrs-native-mode"></a>Installation côte à côte de Reporting Services et d'Internet Information Services (SSRS en mode natif)
   Vous pouvez installer et exécuter [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] (SSRS) et Internet Information Services (IIS) sur le même ordinateur. La version des services IIS (Internet Information Services) que vous utilisez détermine les problèmes d'interopérabilité que vous devez traiter.  
@@ -47,9 +47,9 @@ ms.locfileid: "36140695"
   
 |Exemple|Demande|  
 |-------------|-------------|  
-|http://123.234.345.456:80/reports|Reçoit toutes les requêtes sont envoyées à http://123.234.345.456/reports ou http://\<nom_ordinateur > /Reports si un service de nom de domaine peut résoudre l’adresse IP pour ce nom d’hôte.|  
+|http://123.234.345.456:80/reports|Reçoit toutes les requêtes sont envoyées à http://123.234.345.456/reports ou http://\<nom_ordinateur > /Reports si un service de nom de domaine peut résoudre l’adresse IP vers ce nom d’hôte.|  
 |http://+:80/reports|Reçoit toutes les requêtes envoyées à une adresse IP ou un nom d'hôte valide pour cet ordinateur, tant que l'URL contient le nom de répertoire virtuel « reports ».|  
-|http://123.234.345.456:80|Reçoit les requêtes qui spécifient http://123.234.345.456 ou http://\<nom_ordinateur > Si un service de nom de domaine peut résoudre l’adresse IP pour ce nom d’hôte.|  
+|http://123.234.345.456:80|Reçoit les requêtes qui spécifient http://123.234.345.456 ou http://\<nom_ordinateur > Si un service de nom de domaine peut convertir l’adresse IP vers ce nom d’hôte.|  
 |http://+:80|Reçoit les requêtes qui ne sont pas déjà reçues par d'autres applications, pour tous les points de terminaison d'application mappés à **Assigné**.|  
 |http://*:80|Reçoit les requêtes qui ne sont pas déjà reçues par d'autres applications, pour les points de terminaison d'application mappés à **Non assigné**.|  
   
@@ -61,7 +61,7 @@ ms.locfileid: "36140695"
 |Application|Réservation d'URL|Description|Réception de requête|  
 |-----------------|---------------------|-----------------|---------------------|  
 |Serveur de rapports|http://+:80/ReportServer|Caractère générique fort sur le port 80, avec le répertoire virtuel du serveur de rapports.|Reçoit toutes les requêtes sur le port 80 qui spécifient le répertoire virtuel du serveur de rapports. Le service web Report Server reçoit toutes les requêtes vers http://\<nom_ordinateur>/reportserver.|  
-|Gestionnaire de rapports|http://+:80/Reports|Caractère générique fort sur le port 80, avec le répertoire virtuel Reports.|Reçoit toutes les requêtes sur le port 80 qui spécifient le répertoire virtuel reports. Le Gestionnaire de rapports reçoit toutes les requêtes vers http://\<nom_ordinateur > /Reports.|  
+|Gestionnaire de rapports|http://+:80/Reports|Caractère générique fort sur le port 80, avec le répertoire virtuel Reports.|Reçoit toutes les requêtes sur le port 80 qui spécifient le répertoire virtuel reports. Le Gestionnaire de rapports reçoit toutes les requêtes vers http://\<nom_ordinateur > / reports.|  
 |IIS|http://*:80/|Caractère générique faible sur le port 80.|Reçoit toutes les requêtes restantes sur le port 80, qui ne sont pas reçues par une autre application.|  
   
 ## <a name="side-by-side-deployments-of-includesscurrentincludessscurrent-mdmd-and-sql-server-2005-reporting-services-on-iis-60-70-80-85"></a>Déploiements côte à côte de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] et de SQL Server 2005 Reporting Services sur IIS 6.0, 7.0, 8.0, 8.5  
@@ -69,7 +69,7 @@ ms.locfileid: "36140695"
   
 -   Site Web IIS assigné au port 80 et répertoire virtuel nommé « Reports ».  
   
--   A [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] instance de serveur de rapports installé dans la configuration par défaut, où la réservation d’URL spécifie également le port 80 et l’application Gestionnaire de rapports utilise également « Reports » pour le nom de répertoire virtuel.  
+-   Un [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] instance de serveur de rapports installé dans la configuration par défaut, où la réservation d’URL spécifie également le port 80 et l’application Gestionnaire de rapports utilise également « Reports » pour le nom de répertoire virtuel.  
   
  Avec cette configuration, une demande est envoyée à http://\<nom_ordinateur > : 80/reports sera reçue par le Gestionnaire de rapports. L'application accessible via le répertoire virtuel Reports dans IIS ne reçoit plus de requêtes une fois que l'instance du serveur de rapports [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] est installée.  
   

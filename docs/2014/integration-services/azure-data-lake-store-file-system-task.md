@@ -8,26 +8,26 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - SQL12.DTS.DESIGNER.AFPADLSTASK.F1
 - SQL11.DTS.DESIGNER.AFPADLSTASK.F1
 ms.assetid: 02b9edd7-6ef9-463e-abbf-e1830bcae875
 caps.latest.revision: 3
-author: Lingxi-Li
-ms.author: lingxl
-manager: jhubbard
-ms.openlocfilehash: 240780efd1b12596b0ebb6156ad98c508f0e8051
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslms
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 768113129fd380d335895364344742eb9bb8e791
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36038384"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37292849"
 ---
 # <a name="azure-data-lake-store-file-system-task"></a>Système de fichiers Azure Data Lake Store, tâche
-Le **lac de données Azure Store File System Task** permet aux utilisateurs d’effectuer diverses opérations de système de fichiers sur [Azure données Lake Store (ADLS)](https://azure.microsoft.com/en-us/services/data-lake-store/).
+Le **tâche de système de fichiers Azure Data Lake Store** permet aux utilisateurs d’effectuer diverses opérations de système de fichiers sur [Azure Data Lake Store (ADLS)](https://azure.microsoft.com/en-us/services/data-lake-store/).
 
-Pour ajouter une tâche de système de fichiers Azure Data Lake Store à un package, faites-la glisser depuis la boîte à outils SSIS vers la zone de conception. Puis double-cliquez sur la tâche, ou avec le bouton droit de la tâche et sélectionnez **modifier**pour ouvrir la boîte de dialogue de l’éditeur de tâche.
+Pour ajouter une tâche de système de fichiers Azure Data Lake Store à un package, faites-la glisser depuis la boîte à outils SSIS vers la zone de conception. Double-cliquez sur la tâche, ou avec le bouton droit de la tâche, puis sélectionnez **modifier**pour ouvrir la boîte de dialogue de l’éditeur de tâche.
 
 La propriété **Opération** indique l’opération de système de fichiers à réaliser. Les opérations suivantes sont prises en charge.
 
@@ -39,11 +39,11 @@ Pour toute opération, vous devez spécifier un gestionnaire de connexions Azure
 Voici les descriptions des propriétés spécifiques à chaque opération.
 
 ## <a name="copytoadls"></a>CopyToADLS
-* **LocalDirectory :** Spécifie le répertoire source qui contient les fichiers à télécharger.
-* **FileNamePattern :** spécifie un filtre de nom de fichier pour les fichiers sources. Seuls les fichiers dont le nom correspond au modèle spécifié seront téléchargés. Les caractères génériques `*` et `?` sont pris en charge.
+* **LocalDirectory :** Spécifie le répertoire source qui contient les fichiers à charger.
+* **FileNamePattern :** spécifie un filtre de nom de fichier pour les fichiers sources. Charger uniquement les fichiers dont le nom correspond au modèle spécifié. Les caractères génériques `*` et `?` sont pris en charge.
 * **SearchRecursively :** indique si des fichiers à charger doivent être recherchés de manière récursive dans le répertoire source.
 * **AzureDataLakeDirectory :** spécifie le répertoire de destination ADLS dans lequel charger les fichiers.
-* **FileExpiry :** spécifie une date d’expiration et l’heure pour les fichiers téléchargement vers ADLS, ou laissez cette propriété vide pour indiquer que les fichiers n’expirent jamais.
+* **FileExpiry :** spécifie une date d’expiration et l’heure pour les fichiers chargés dans ADLS, ou laissez cette propriété vide pour indiquer que les fichiers n’expirent jamais.
 
 ## <a name="copyfromadls"></a>CopyFromADLS
 * **AzureDataLakeDirectory :** spécifie le répertoire source ADLS qui contient les fichiers à télécharger.

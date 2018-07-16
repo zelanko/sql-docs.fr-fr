@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.fuzzygroupingtrans.f1
 helpviewer_keywords:
@@ -28,13 +28,13 @@ ms.assetid: e43f17bd-9d13-4a8f-9f29-cce44cac1025
 caps.latest.revision: 58
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 4a50b92570ad8cf28c537ce5fe657223058ac7d2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 4d5c49bcf93c7b80ab60341136dbcae4e16c94a5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36139863"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37209379"
 ---
 # <a name="fuzzy-grouping-transformation"></a>Transformation de regroupement approximatif
   La transformation de regroupement probable effectue des tâches de nettoyage des données en identifiant les lignes de données susceptibles d'être des doublons et en sélectionnant une ligne canonique de données à utiliser pour standardiser les données.  
@@ -73,7 +73,7 @@ ms.locfileid: "36139863"
  Cette transformation a une entrée et une sortie. Elle ne prend pas en charge de sortie d'erreur.  
   
 ## <a name="row-comparison"></a>Comparaison de lignes  
- Lorsque vous configurez la transformation de regroupement probable, vous pouvez spécifier l'algorithme de comparaison utilisé par la transformation pour comparer les lignes dans l'entrée de transformation. Si vous définissez la propriété Exhaustive sur `true`, la transformation compare chaque ligne de l’entrée à chaque autre ligne de l’entrée. Cet algorithme de comparaison peut produire des résultats plus précis, mais il peut ralentir la transformation, sauf si le nombre de lignes dans l'entrée est peu élevé. Pour éviter les problèmes de performances, il est recommandé de définir la propriété Exhaustive `true` uniquement lors du développement du package.  
+ Lorsque vous configurez la transformation de regroupement probable, vous pouvez spécifier l'algorithme de comparaison utilisé par la transformation pour comparer les lignes dans l'entrée de transformation. Si vous définissez la propriété Exhaustive sur `true`, la transformation compare chaque ligne dans l’entrée à chaque autre ligne dans l’entrée. Cet algorithme de comparaison peut produire des résultats plus précis, mais il peut ralentir la transformation, sauf si le nombre de lignes dans l'entrée est peu élevé. Pour éviter les problèmes de performances, il est recommandé de définir la propriété Exhaustive `true` uniquement lors du développement du package.  
   
 ## <a name="temporary-tables-and-indexes"></a>Tables et index temporaires  
  Au moment de l'exécution, la transformation de regroupement approximatif crée des objets temporaires, tels que des tables et des index, parfois de taille importante, dans la base de données [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] à laquelle la transformation se connecte. La taille des tables et des index est proportionnelle au nombre de lignes dans l'entrée de la transformation et au nombre de jetons créés par la transformation de regroupement probable.  

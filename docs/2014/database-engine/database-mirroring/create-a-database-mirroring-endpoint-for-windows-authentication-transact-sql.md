@@ -5,10 +5,9 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - database mirroring [SQL Server], deployment
 - database mirroring [SQL Server], endpoint
@@ -17,15 +16,15 @@ helpviewer_keywords:
 - database mirroring [SQL Server], security
 ms.assetid: baf1a4b1-6790-4275-b261-490bca33bdb9
 caps.latest.revision: 58
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: efb3386935bd8f3b1f3b359b0eeb40613709e9b0
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 561c02100785ba1b56b6498fdd0f8fd3b3b6241f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36053368"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37197929"
 ---
 # <a name="create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql"></a>Créer un point de terminaison de mise en miroir de bases de données pour l'authentification Windows (Transact-SQL)
   Cette rubrique explique comment créer un point de terminaison de mise en miroir de bases de données qui utilise l'authentification Windows dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] à l'aide de [!INCLUDE[tsql](../../includes/tsql-md.md)]. Pour prendre en charge la mise en miroir de bases de données ou [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] , chaque instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nécessite un point de terminaison de mise en miroir de bases de données. Une instance de serveur ne peut disposer que d'un seul point de terminaison de mise en miroir de bases de données, lequel possède un port unique. Un point de terminaison de mise en miroir de bases de données peut utiliser n'importe quel point disponible sur le système local lors de la création du point de terminaison. Toutes les sessions de mise en miroir des bases de données sur une instance de serveur écoutent ce port, et toutes les connexions entrantes pour la mise en miroir des bases de données utilisent ce port.  
@@ -184,7 +183,7 @@ GO
 ##  <a name="RelatedTasks"></a> Tâches associées  
  **Pour configurer un point de terminaison de mise en miroir de bases de données**  
   
--   [Créer une base de données mise en miroir du point de terminaison pour les groupes de disponibilité AlwaysOn &#40;SQL Server PowerShell&#41;](../availability-groups/windows/database-mirroring-always-on-availability-groups-powershell.md)  
+-   [Créer une base de données mise en miroir de point de terminaison pour les groupes de disponibilité AlwaysOn &#40;SQL Server PowerShell&#41;](../availability-groups/windows/database-mirroring-always-on-availability-groups-powershell.md)  
   
 -   [Utiliser des certificats pour un point de terminaison de mise en miroir de bases de données &#40;Transact-SQL&#41;](use-certificates-for-a-database-mirroring-endpoint-transact-sql.md)  
   

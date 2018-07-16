@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - UAC
 - installing Reporting Services
@@ -20,16 +20,16 @@ ms.assetid: 312c6bb8-b3f7-4142-a55f-c69ee15bbf52
 caps.latest.revision: 18
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 80cdb989ed49604f2b860cf8d01ae15ae799f432
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 660a96d968410c2035ff194d83abb3e00c78d35d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36141719"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37273965"
 ---
 # <a name="configure-a-native-mode-report-server-for-local-administration-ssrs"></a>Configurer un serveur de rapports en mode natif pour l'administration locale (SSRS)
-  Le déploiement d'un serveur de rapports [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] sur l'un des systèmes d'exploitation suivants requiert davantage d'étapes de configuration si vous souhaitez administrer l'instance du serveur de rapports localement. Cette rubrique explique comment configurer le serveur de rapports pour l'administration locale. Si vous n’avez pas encore installé ou configuré le serveur de rapports, consultez [installer SQL Server 2014 à partir de l’Assistant Installation &#40;le programme d’installation&#41; ](../../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md) et [gérer un Native Mode Report Server Reporting Services](manage-a-reporting-services-native-mode-report-server.md).  
+  Le déploiement d'un serveur de rapports [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] sur l'un des systèmes d'exploitation suivants requiert davantage d'étapes de configuration si vous souhaitez administrer l'instance du serveur de rapports localement. Cette rubrique explique comment configurer le serveur de rapports pour l'administration locale. Si vous n’avez pas encore installé ou configuré le serveur de rapports, consultez [installer SQL Server 2014 à partir de l’Assistant Installation &#40;le programme d’installation&#41; ](../../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md) et [gérer un serveur Reporting Services Native Mode rapport](manage-a-reporting-services-native-mode-report-server.md).  
   
 ||  
 |-|  
@@ -59,7 +59,7 @@ ms.locfileid: "36141719"
   
 -   [Pour configurer SQL Server Management Studio (SSMS) pour l'administration du serveur de rapports local](#bkmk_configure_ssms)  
   
--   [Pour configurer SQL Server Data Tools BI (SSDT) pour publier sur un serveur de rapports Local](#bkmk_configure_ssdt)  
+-   [Pour configurer SQL Server Data Tools BI (SSDT) pour la publication sur un serveur de rapports Local](#bkmk_configure_ssdt)  
   
 -   [Informations supplémentaires](#bkmk_addiitonal_informaiton)  
   
@@ -161,7 +161,7 @@ ms.locfileid: "36141719"
   
  Maintenant, lorsque vous ouvrez [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] et vous ne sélectionnez pas explicitement **Exécuter en tant qu'administrateur** , vous avez accès aux propriétés du serveur de rapports.  
   
-##  <a name="bkmk_configure_ssdt"></a> Pour configurer SQL Server Data Tools BI (SSDT) pour publier sur un serveur de rapports Local  
+##  <a name="bkmk_configure_ssdt"></a> Pour configurer SQL Server Data Tools BI (SSDT) pour la publication sur un serveur de rapports Local  
  Si vous avez installé [!INCLUDE[SSDTDev11](../../includes/ssdtdev11-md.md)] sur l’un des systèmes d’exploitation répertoriés dans la première section de cette rubrique et que vous souhaitez que SSDT interagisse avec un serveur de rapports local en mode natif, vous rencontrerez des erreurs d’autorisation sauf si vous ouvrez [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] avec des autorisations élevées ou si vous configurez des rôles Reporting Services. Par exemple, si vous n'avez pas les autorisations suffisantes, vous rencontrerez des avertissements semblables au suivant :  
   
 -   Lorsque vous tentez de déployer des éléments de rapport sur le serveur de rapports local, vous voyez un message d'erreur similaire au suivant dans la fenêtre **Liste d'erreurs** :  

@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 8ae26ec3-c5d5-4c4f-a810-2951a7454439
 caps.latest.revision: 4
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: ba6915e8d5e39af32279fbaca208c97fd076d337
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: cd4544aefe0f8a5b474b073ef4279f50c4d8a434
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36051758"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37320289"
 ---
 # <a name="building-a-model-mds-add-in-for-excel"></a>Génération d'un modèle (Complément MDS pour Excel)
   Dans le [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)], les administrateurs peuvent effectuer un sous-ensemble des fonctions d’administration disponibles dans l’application web [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] .  
@@ -44,7 +44,7 @@ ms.locfileid: "36051758"
 |Créer des règles d'entreprise.|[!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] Application web ou service web|[Créer et publier une règle d’entreprise &#40;Master Data Services&#41;](../create-and-publish-a-business-rule-master-data-services.md)|  
 |Créer des vues d'abonnement.|[!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] Application web ou service web|[Créer une vue d’abonnement &#40;Master Data Services&#41;](../create-a-subscription-view-to-export-data-master-data-services.md)|  
 |créer des hiérarchies ;|[!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] Application web ou service web|[Créer une hiérarchie dérivée &#40;Master Data Services&#41;](../create-a-derived-hierarchy-master-data-services.md)<br /><br /> [Créer une hiérarchie explicite &#40;Master Data Services&#41;](../create-an-explicit-hierarchy-master-data-services.md)|  
-|Créer des collections.|[!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] Application web ou service web|[Créer un regroupement &#40;Master Data Services&#41;](../create-a-collection-master-data-services.md)|  
+|Créer des collections.|[!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] Application web ou service web|[Créer une Collection &#40;Master Data Services&#41;](../create-a-collection-master-data-services.md)|  
 |Créer des versions de données.|[!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] Application web ou service web|[Verrouiller une Version &#40;Master Data Services&#41;](../lock-a-version-master-data-services.md)|  
 |Déployer des modèles.|[!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] Application web, service web ou outil MDSModelDeploy.|[Créer un package de déploiement de modèle à l’aide de MDSModelDeploy](../create-a-model-deployment-package-by-using-mdsmodeldeploy.md)|  
   

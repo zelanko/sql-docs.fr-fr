@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.foreachloopcontainer.f1
 helpviewer_keywords:
@@ -20,13 +20,13 @@ ms.assetid: dd6cc2ba-631f-4adf-89dc-29ef449c6933
 caps.latest.revision: 75
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 9188401b9bbfd3b0c70d446943cfebf22dd93616
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 47318402206bc0a11ce943d74df8a612acd5f128
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36052899"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37280425"
 ---
 # <a name="foreach-loop-container"></a>Conteneur de boucles Foreach
   Le conteneur de boucles Foreach définit un flux de contrôle répétitif dans un package. La mise en œuvre de la boucle est similaire à la structure de bouclage **Foreach** des langages de programmation. Dans un package, le bouclage repose sur l'utilisation d'un énumérateur Foreach.  Le conteneur de boucles Foreach répète le flux de contrôle pour chaque membre d'un énumérateur spécifié.  
@@ -57,7 +57,7 @@ ms.locfileid: "36052899"
   
  ![Conteneur de boucles Foreach énumérant un dossier](../media/ssis-foreachloop.gif "Conteneur de boucles Foreach énumérant un dossier")  
   
- Vous pouvez utiliser une combinaison de variables et d'expressions de propriété pour mettre à jour la propriété de l'objet de package avec la valeur de la collection de l'énumérateur. Vous mappez la valeur de la collection avec une variable définie par l'utilisateur, puis vous mettez en œuvre une expression de propriété sur la propriété qui utilise la variable. Par exemple, la valeur de la collection de l’énumérateur Foreach File est mappée à une variable appelée `MyFile` et la variable est ensuite utilisée dans l’expression de propriété pour la propriété de l’objet d’une tâche Envoyer un message. À l’exécution du package, la propriété Subject est mise à jour avec le nom d’un fichier à chaque répétition de la boucle. Pour plus d’informations, consultez [Expressions de propriété dans des packages](../expressions/use-property-expressions-in-packages.md).  
+ Vous pouvez utiliser une combinaison de variables et d'expressions de propriété pour mettre à jour la propriété de l'objet de package avec la valeur de la collection de l'énumérateur. Vous mappez la valeur de la collection avec une variable définie par l'utilisateur, puis vous mettez en œuvre une expression de propriété sur la propriété qui utilise la variable. Par exemple, la valeur de la collection de l’énumérateur Foreach File est mappée à une variable appelée `MyFile` et la variable est ensuite utilisée dans l’expression de propriété pour la propriété Subject d’une tâche Envoyer un message. À l’exécution du package, la propriété Subject est mise à jour avec le nom d’un fichier à chaque répétition de la boucle. Pour plus d’informations, consultez [Expressions de propriété dans des packages](../expressions/use-property-expressions-in-packages.md).  
   
  Vous pouvez également utiliser dans des expressions et des scripts les variables mappées à la valeur de la collection de l'énumérateur.  
   

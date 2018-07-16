@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - table modifications [SQL Server], multiple users
 - reconciling changes made by multiple users
 - modifications made by multiple users
 ms.assetid: fc7ed4f2-ad3d-47fc-a3ef-51e5bb069ef0
 caps.latest.revision: 13
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: df791875016fbe6b999a20ca1d5e40c6ec5ecf18
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: e1e1b53f7ae933317935eb29f1eb62643495c26c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36139512"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37264185"
 ---
 # <a name="reconcile-changes-made-by-multiple-users-visual-database-tools"></a>Rapprocher les modifications effectuées par plusieurs utilisateurs (Visual Database Tools)
   Dans un environnement multi-utilisateur, des modifications peuvent être apportées à un même objet par plusieurs utilisateurs simultanément. Cela peut se produire lorsque vous travaillez sur la structure de l'objet dans le Concepteur de tables ou dans le Concepteur de schémas de base de données, ou dans les valeurs des résultats retournés dans le volet Résultats du Concepteur de requêtes et de vues. Cela peut provoquer des conflits que vous souhaiterez résoudre.  

@@ -1,5 +1,5 @@
 ---
-title: Boîte de dialogue Source (Analysis Services - données multidimensionnelles) de la partition | Documents Microsoft
+title: Boîte de dialogue Source (Analysis Services - données multidimensionnelles) de partition | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.partitionsourcedialog.f1
 ms.assetid: c414dabe-9bad-49b7-9a3c-dfca87fef92b
 caps.latest.revision: 12
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 801de033534137ad6e37dcaf3475ec670ddd2494
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 43e370a9926e342f105b68bfceba943ad4298244
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36142379"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37214173"
 ---
 # <a name="partition-source-dialog-box-analysis-services---multidimensional-data"></a>Boîte de dialogue Source de partition (Analysis Services - Données multidimensionnelles)
   Utilisez la boîte de dialogue **Source de partition** dans [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] pour définir la source des données de table de faits d'une partition. Pour afficher la boîte de dialogue **Source de partition** :  

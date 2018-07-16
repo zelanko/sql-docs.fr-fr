@@ -1,5 +1,5 @@
 ---
-title: Concepteurs de requêtes Reporting Services | Documents Microsoft
+title: Concepteurs de requêtes Reporting Services | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - query designers [Reporting Services]
 ms.assetid: 07efd3f1-804f-45f7-b62a-3e727a3d9835
 caps.latest.revision: 16
-author: douglaslM
+author: maggiesmsft
 ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: ca805856f4cd09d6d1172b5602a7a9e54b4cc16c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: aed7304b4e7e48eff1691970da5ff68b03fd0962
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36040359"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37222939"
 ---
 # <a name="reporting-services-query-designers"></a>Concepteurs de requêtes Reporting Services
   [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] Fournit des concepteurs de requêtes graphiques et textuels pour vous aider à générer des requêtes pour chaque type de source de données dans votre rapport.  
@@ -38,7 +38,7 @@ ms.locfileid: "36040359"
   
 -   **Par prise en charge de la partie schéma d'un nom d'objet de base de données.** Lorsqu'une source de données utilise des schémas dans l'identificateur d'objets de la base de données, le nom du schéma doit être fourni dans la requête pour les noms qui ne font pas appel au schéma par défaut. Par exemple, `SELECT FirstName, LastName FROM [Person].[Person]`.  
   
--   **Par prise en charge des paramètres de requête.** La prise en charge des paramètres varie selon les fournisseurs de données. Certains fournisseurs de données prennent en charge des paramètres nommés ; par exemple, `SELECT Col1, Col2 FROM Table WHERE <parameter identifier><parameter name> = <value>`. Certains fournisseurs de données prennent en charge des paramètres sans nom ; par exemple, `SELECT Col1, Col2 FROM Table WHERE <column name> = ?`. Identificateur du paramètre peut varier selon le fournisseur de données. par exemple, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] utilise le « at » (@) du symbole, Oracle utilise le signe deux-points ( :). Certains fournisseurs de données ne prennent pas en charge les paramètres.  
+-   **Par prise en charge des paramètres de requête.** La prise en charge des paramètres varie selon les fournisseurs de données. Certains fournisseurs de données prennent en charge des paramètres nommés ; par exemple, `SELECT Col1, Col2 FROM Table WHERE <parameter identifier><parameter name> = <value>`. Certains fournisseurs de données prennent en charge des paramètres sans nom ; par exemple, `SELECT Col1, Col2 FROM Table WHERE <column name> = ?`. L’identificateur de paramètre peut varier selon le fournisseur de données ; par exemple, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] utilise le « au » (@) symbole, Oracle utilise le signe deux-points ( :)). Certains fournisseurs de données ne prennent pas en charge les paramètres.  
   
 -   **Par capacité à importer des requêtes.** Par exemple, pour une source de données de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , vous pouvez importer une requête à partir d'un fichier de définition de rapport (.rdl) ou d'un fichier .sql.  
   
@@ -64,9 +64,9 @@ ms.locfileid: "36040359"
 -   [Interface utilisateur du concepteur de requêtes textuel](../../2014/reporting-services/text-based-query-designer-user-interface.md)  
   
 ## <a name="see-also"></a>Voir aussi  
- [Sources de données pris en charge par Reporting Services &#40;SSRS&#41;](create-deploy-and-manage-mobile-and-paginated-reports.md)   
+ [Sources de données prises en charge par Reporting Services &#40;SSRS&#41;](create-deploy-and-manage-mobile-and-paginated-reports.md)   
  [Ajouter des données à partir de sources de données externes &#40;SSRS&#41;](report-data/add-data-from-external-data-sources-ssrs.md)   
- [Extensions pour le traitement des données et les fournisseurs de données .NET Framework &#40;SSRS&#41;](report-data/data-processing-extensions-and-net-framework-data-providers-ssrs.md)   
+ [Extensions de traitement des données et les fournisseurs de données .NET Framework &#40;SSRS&#41;](report-data/data-processing-extensions-and-net-framework-data-providers-ssrs.md)   
  [Extensions &#40;SSRS&#41;](extensions-ssrs.md)  
   
   

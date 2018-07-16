@@ -1,5 +1,5 @@
 ---
-title: Les changements de comportement à Analysis Services des fonctionnalités de SQL Server 2014 | Documents Microsoft
+title: Changements de comportement pour Analysis Services des fonctionnalités dans SQL Server 2014 | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,24 +8,24 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 92ebd5cb-afb6-4b62-968f-39f5574a452b
 caps.latest.revision: 17
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 51e0c23301c21cfb86ace1cf99e8aacef4b77fce
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 87ec5b84d5d74bae3be3c05dfcafd3a609780f82
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36139933"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37289875"
 ---
 # <a name="behavior-changes-to-analysis-services-features-in-sql-server-2014"></a>Modifications de comportement des fonctionnalités Analysis Services dans SQL Server 2014
   Cette rubrique décrit les changements de comportement dans [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] multidimensionnel, tabulaire, exploration de données, et [!INCLUDE[ssGeminiShort](../includes/ssgeminishort-md.md)] déploiements. Les modifications de comportement affectent le mode de fonctionnement ou d’interaction des fonctionnalités dans la version actuelle de SQL Server par rapport aux versions précédentes.  
   
 > [!NOTE]  
->  En revanche, une modification avec rupture empêche un modèle de données ou une application intégrée à [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] de s’exécuter. Pour plus d’informations, consultez [modifications avec rupture des fonctionnalités Analysis Services dans SQL Server 2014](breaking-changes-to-analysis-services-features-in-sql-server-2014.md).  
+>  En revanche, une modification avec rupture empêche un modèle de données ou une application intégrée avec [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] de s’exécuter. Pour plus d’informations, consultez [modifications avec rupture des fonctionnalités Analysis Services dans SQL Server 2014](breaking-changes-to-analysis-services-features-in-sql-server-2014.md).  
   
  Dans cette rubrique :  
   
@@ -36,18 +36,18 @@ ms.locfileid: "36139933"
 -   [Changements de comportement dans SQL Server 2012](#bkmk_sql2012)  
   
 ##  <a name="bkmk_sql2014"></a> Changements de comportement dans [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]  
- Aucune nouvelle modification de comportement annoncé tabulaire, multidimensionnel, exploration de données, ou [!INCLUDE[ssGeminiShort](../includes/ssgeminishort-md.md)] fonctionnalités dans cette version.  Toutefois, étant donné que [!INCLUDE[ssASCurrent](../includes/ssascurrent-md.md)] est similaire à celle du [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] et [!INCLUDE[ssSQL11SP1](../includes/sssql11sp1-md.md)] des versions, les changements de comportement des deux versions précédentes sont fournies ici à titre informatif au cas où vous mettez à niveau à partir de [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)].  
+ Il n’y a aucune nouvelle modification de comportement annoncée tabulaire, multidimensionnel, exploration de données, ou [!INCLUDE[ssGeminiShort](../includes/ssgeminishort-md.md)] fonctionnalités dans cette version.  Toutefois, étant donné que [!INCLUDE[ssASCurrent](../includes/ssascurrent-md.md)] ressemble beaucoup à la [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] et [!INCLUDE[ssSQL11SP1](../includes/sssql11sp1-md.md)] versions, les changements de comportement des deux versions précédentes sont fournies ici à titre informatif au cas où vous mettez à niveau à partir de [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)].  
   
 ##  <a name="bkmk_sql2012sp1"></a> Changements de comportement dans [!INCLUDE[ssSQL11SP1](../includes/sssql11sp1-md.md)]  
- Cette section documente les changements de comportement signalés pour [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] des fonctionnalités dans [!INCLUDE[ssSQL11SP1](../includes/sssql11sp1-md.md)]. Ces modifications s’appliquent également aux [!INCLUDE[ssSQL14](../includes/sssql14-md.md)].  
+ Cette section documente les changements de comportement signalés pour [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] fonctionnalités dans [!INCLUDE[ssSQL11SP1](../includes/sssql11sp1-md.md)]. Ces modifications s’appliquent également aux [!INCLUDE[ssSQL14](../includes/sssql14-md.md)].  
   
 |Problème|Description|  
 |-----------|-----------------|  
-|Les classeurs PowerPivot SQL Server 2008 R2 ne mettent pas à niveau et n'actualisent pas silencieusement les modèles lorsqu'ils sont utilisés dans SQL Server 2012 SP1 PowerPivot pour SharePoint 2013. Par conséquent, les actualisations de données planifiée ne fonctionnent pas pour les classeurs PowerPivot SQL Server 2008 R2.|Les classeurs 2008 R2 seront ouvrent dans [!INCLUDE[ssGeminiShortvnext](../includes/ssgeminishortvnext-md.md)], mais les actualisations planifiées ne fonctionnent pas. Si vous observez l'historique d'actualisation, vous pouvez voir un message d'erreur semblable au message suivant :<br /> « Le classeur contient un modèle PowerPivot non pris en charge. Le modèle PowerPivot dans le classeur est au format SQL Server 2008 R2 PowerPivot pour Excel 2010. Les modèles PowerPivot pris en charge sont les suivants : <br />SQL Server 2012 PowerPivot pour Excel 2010<br />SQL Server 2012 PowerPivot pour Excel 2013 »<br /><br /> **Comment mettre à niveau un classeur :** l'actualisation planifiée ne fonctionne pas tant que vous n'avez pas mis à niveau le classeur vers un classeur 2012. Pour mettre à niveau le classeur et le modèle qu'il contient, procédez de l'une des façons suivantes :<br /><br /> Téléchargez et ouvrez le classeur dans Microsoft Excel 2010 avec le complément SQL Server 2012 PowerPivot pour Excel installé. Ensuite, enregistrez le classeur et republiez-le sur le serveur SharePoint.<br /><br /> Téléchargez et ouvrez le classeur dans Microsoft Excel 2013. Ensuite, enregistrez le classeur et republiez-le sur le serveur SharePoint.<br /><br /> <br /><br /> Pour plus d’informations sur la mise à niveau du classeur, consultez [mettre les classeurs et l’actualisation planifiée des données &#40;SharePoint 2013&#41;](instances/install-windows/upgrade-workbooks-and-scheduled-data-refresh-sharepoint-2013.md).|  
-|Changement de comportement dans DAX [fonction ALL](https://msdn.microsoft.com/library/ee634802(v=sql.120).aspx).|Antérieures à [!INCLUDE[ssSQL11SP1](../includes/sssql11sp1-md.md)], si vous spécifiez une colonne [Date] dans marquer en tant que Table de dates, pour une utilisation dans time intelligence, et que la colonne [Date] est passé en tant qu’argument à la fonction ALL, à leur tour, passé comme un filtre à une fonction CALCULATE, tous les filtres pour toutes les colonnes de la table sont ignorés, quel que soit n’importe quel segment sur la colonne de date.<br /><br /> Par exemple,<br /><br /> `= CALCULATE (<expression>, ALL (DateTable[Date]))`<br /><br /> Antérieures à [!INCLUDE[ssSQL11SP1](../includes/sssql11sp1-md.md)], tous les filtres sont ignorés pour toutes les colonnes de DateTable, quel que soit la colonne [Date] passée comme argument à l’ensemble.<br /><br /> Dans [!INCLUDE[ssSQL11SP1](../includes/sssql11sp1-md.md)] et ignore les filtres uniquement pour la colonne spécifiée passée en tant qu’argument à toutes les dans PowerPivot dans Excel 2013, le comportement.<br /><br /> Pour contourner le nouveau comportement, ignorer toutes les colonnes passées en tant que filtre pour l'intégralité de la table, excluez la colonne [Date] de l'argument, par exemple.<br /><br /> `=CALCULATE (<expression>, ALL(DateTable))`<br /><br /> Le résultat obtenu sera identique à celui du comportement antérieur à [!INCLUDE[ssSQL11SP1](../includes/sssql11sp1-md.md)].|  
+|Les classeurs PowerPivot SQL Server 2008 R2 ne mettent pas à niveau et n'actualisent pas silencieusement les modèles lorsqu'ils sont utilisés dans SQL Server 2012 SP1 PowerPivot pour SharePoint 2013. Par conséquent, les actualisations de données planifiée ne fonctionnent pas pour les classeurs PowerPivot SQL Server 2008 R2.|Les classeurs 2008 R2 seront ouvre dans [!INCLUDE[ssGeminiShortvnext](../includes/ssgeminishortvnext-md.md)], mais l’actualisation planifiée ne fonctionne pas. Si vous observez l'historique d'actualisation, vous pouvez voir un message d'erreur semblable au message suivant :<br /> « Le classeur contient un modèle PowerPivot non pris en charge. Le modèle PowerPivot dans le classeur est au format SQL Server 2008 R2 PowerPivot pour Excel 2010. Les modèles PowerPivot pris en charge sont les suivants : <br />SQL Server 2012 PowerPivot pour Excel 2010<br />SQL Server 2012 PowerPivot pour Excel 2013 »<br /><br /> **Comment mettre à niveau un classeur :** l'actualisation planifiée ne fonctionne pas tant que vous n'avez pas mis à niveau le classeur vers un classeur 2012. Pour mettre à niveau le classeur et le modèle qu'il contient, procédez de l'une des façons suivantes :<br /><br /> Téléchargez et ouvrez le classeur dans Microsoft Excel 2010 avec le complément SQL Server 2012 PowerPivot pour Excel installé. Ensuite, enregistrez le classeur et republiez-le sur le serveur SharePoint.<br /><br /> Téléchargez et ouvrez le classeur dans Microsoft Excel 2013. Ensuite, enregistrez le classeur et republiez-le sur le serveur SharePoint.<br /><br /> <br /><br /> Pour plus d’informations sur la mise à niveau du classeur, consultez [mettre les classeurs et l’actualisation planifiée des données &#40;SharePoint 2013&#41;](instances/install-windows/upgrade-workbooks-and-scheduled-data-refresh-sharepoint-2013.md).|  
+|Changement de comportement dans DAX [fonction ALL](https://msdn.microsoft.com/library/ee634802(v=sql.120).aspx).|Antérieures à [!INCLUDE[ssSQL11SP1](../includes/sssql11sp1-md.md)], si vous spécifiez une colonne [Date] dans marquer en tant que Table de dates, pour utilisation dans time intelligence et que la colonne [Date] est passée en tant qu’argument à la fonction ALL, à leur tour, passé comme un filtre à une fonction CALCULATE, tous les filtres pour toutes les colonnes dans la table sont ignorés, indépendamment de tout segment sur la colonne de date.<br /><br /> Par exemple,<br /><br /> `= CALCULATE (<expression>, ALL (DateTable[Date]))`<br /><br /> Antérieures à [!INCLUDE[ssSQL11SP1](../includes/sssql11sp1-md.md)], tous les filtres sont ignorés pour toutes les colonnes de DateTable, quel que soit la colonne [Date] passée comme argument à l’ensemble.<br /><br /> Dans [!INCLUDE[ssSQL11SP1](../includes/sssql11sp1-md.md)] et dans PowerPivot pour Excel 2013, le comportement ignore les filtres uniquement pour la colonne spécifiée passée en tant qu’argument à tous.<br /><br /> Pour contourner le nouveau comportement, ignorer toutes les colonnes passées en tant que filtre pour l'intégralité de la table, excluez la colonne [Date] de l'argument, par exemple.<br /><br /> `=CALCULATE (<expression>, ALL(DateTable))`<br /><br /> Le résultat obtenu sera identique à celui du comportement antérieur à [!INCLUDE[ssSQL11SP1](../includes/sssql11sp1-md.md)].|  
   
 ##  <a name="bkmk_sql2012"></a> Changements de comportement dans [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]  
- Cette section documente les changements de comportement signalés pour [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] des fonctionnalités dans [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]. Ces modifications s’appliquent également aux [!INCLUDE[ssSQL14](../includes/sssql14-md.md)].  
+ Cette section documente les changements de comportement signalées pour [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] fonctionnalités dans [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]. Ces modifications s’appliquent également aux [!INCLUDE[ssSQL14](../includes/sssql14-md.md)].  
   
 ### <a name="analysis-services-multidimensional-mode"></a>Analysis Services, mode multidimensionnel  
   
@@ -110,6 +110,6 @@ ms.locfileid: "36139933"
   
 ## <a name="see-also"></a>Voir aussi  
  [Compatibilité descendante](../../2014/getting-started/backward-compatibility.md)   
- [Modifications avec rupture Analysis Services des fonctionnalités de SQL Server 2014](breaking-changes-to-analysis-services-features-in-sql-server-2014.md)  
+ [Modifications avec rupture Analysis Services des fonctionnalités dans SQL Server 2014](breaking-changes-to-analysis-services-features-in-sql-server-2014.md)  
   
   

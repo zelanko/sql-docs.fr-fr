@@ -1,5 +1,5 @@
 ---
-title: Syntaxe de filtre et des exemples de modèle (Analysis Services - Exploration de données) | Documents Microsoft
+title: Syntaxe de filtre et des exemples de modèle (Analysis Services - Exploration de données) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - model filter [data mining]
 - filter syntax [data mining]
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - filters [Analysis Services]
 ms.assetid: c729d9b3-8fda-405e-9497-52b2d7493eae
 caps.latest.revision: 18
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 881b62a2e013d9e01a21272d3adeaf6819b2abb6
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 252af15e8afcf42d407176c4ff72f0076053b52e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36038935"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37236339"
 ---
 # <a name="model-filter-syntax-and-examples-analysis-services---data-mining"></a>Syntaxe de filtre de modèle et exemples (Analysis Services - Exploration de données)
   Cette section fournit des informations détaillées sur la syntaxe des filtres de modèle, avec quelques exemples d'expressions.  
@@ -298,7 +298,7 @@ FILTER (EXISTS (Products))
 > [!NOTE]  
 >  Notez que toutes les colonnes que vous ajoutez au modèle peuvent affecter les résultats. Par conséquent, si vous ne souhaitez pas que la colonne soit utilisée dans le calcul de la série, vous devez ajouter la colonne uniquement à la structure d'exploration de données et non au modèle. Vous pouvez également définir l’indicateur de modèle sur la colonne à `PredictOnly` ou `Ignore`. Pour plus d’informations, consultez [Indicateurs de modélisation &#40;Exploration de données&#41;](modeling-flags-data-mining.md).  
   
- Pour les autres types de modèles, vous pouvez comme dans toute autre colonne utiliser des dates en tant que critères d'entrée ou de filtre. Toutefois, si vous avez besoin d’utiliser un niveau spécifique de granularité qui n’est pas pris en charge par un `Continuous` type de données, vous pouvez créer une valeur dérivée dans la source de données à l’aide d’expressions pour extraire l’unité à utiliser pour le filtrage et l’analyse.  
+ Pour les autres types de modèles, vous pouvez comme dans toute autre colonne utiliser des dates en tant que critères d'entrée ou de filtre. Toutefois, si vous devez utiliser un niveau spécifique de granularité qui n’est pas pris en charge par un `Continuous` type de données, vous pouvez créer une valeur dérivée dans la source de données à l’aide d’expressions pour extraire l’unité à utiliser pour le filtrage et l’analyse.  
   
 > [!WARNING]  
 >  Lorsque vous spécifiez des dates comme critères de filtre, vous devez utiliser le format suivant, indépendamment du format de date du système d'exploitation actuel : `mm/dd/yyyy`. Tout autre format provoque une erreur.  
@@ -309,6 +309,6 @@ FILTER (EXISTS (Products))
   
 ## <a name="see-also"></a>Voir aussi  
  [Filtres pour les modèles d’exploration de données &#40;Analysis Services - Exploration de données&#41;](mining-models-analysis-services-data-mining.md)   
- [Test et Validation &#40;d’exploration de données&#41;](testing-and-validation-data-mining.md)  
+ [Test et Validation &#40;exploration de données&#41;](testing-and-validation-data-mining.md)  
   
   

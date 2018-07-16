@@ -1,5 +1,5 @@
 ---
-title: Créer la Structure d’exploration de données (Assistant exploration de données) | Documents Microsoft
+title: Créer la Structure d’exploration de données (Assistant exploration de données) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dm.dmwizard.selectminingtechnique.f1
 ms.assetid: d1ff17b2-fff3-4ed7-a5d6-42d131e59f93
 caps.latest.revision: 28
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: f7f857256c2c8ab55b3ae35f48dce8ac3448baa3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 638fa1cef33676b35415d29c1ff47602d3e1e56b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36142374"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37241829"
 ---
 # <a name="create-the-data-mining-structure-data-mining-wizard"></a>Créer la structure d'exploration de données (Assistant Exploration de données)
   Utilisez la page **Créer la structure d’exploration de données** pour créer une structure d’exploration de données et créer éventuellement un modèle d’exploration de données associé.  
@@ -47,7 +47,7 @@ ms.locfileid: "36142374"
  Affiche la description de l'algorithme sélectionné.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Aide (F1) de l’Assistant d’exploration de données &#40;Analysis Services - Exploration de données&#41;](data-mining-wizard-f1-help-analysis-services-data-mining.md)   
+ [Données d’aide F1 de l’Assistant exploration de données &#40;Analysis Services - Exploration de données&#41;](data-mining-wizard-f1-help-analysis-services-data-mining.md)   
  [Sélectionnez la vue de Source de données &#40;Assistant exploration de données&#41;](select-data-source-view-data-mining-wizard.md)   
  [Sélectionnez la méthode de définition &#40;Assistant exploration de données&#41;](select-the-definition-method-data-mining-wizard.md)  
   

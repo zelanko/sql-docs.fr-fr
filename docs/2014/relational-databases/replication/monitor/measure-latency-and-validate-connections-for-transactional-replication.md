@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Replication Monitor, performance
 - tracer tokens [SQL Server replication]
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - monitoring performance [SQL Server replication], tracer tokens
 ms.assetid: 4addd426-7523-4067-8d7d-ca6bae4c9e34
 caps.latest.revision: 35
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: cee723effa7edf573c71fa1783b4fce720ade23e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: c313792beb9f07438f13a169d7502f631bab25b0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36053060"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37294729"
 ---
 # <a name="measure-latency-and-validate-connections-for-transactional-replication"></a>Mesurer la latence et valider les connexions pour la réplication transactionnelle
   Cette rubrique explique comment mesurer la latence et valider les connexions pour la réplication transactionnelle dans [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] à l'aide du Moniteur de réplication, de [!INCLUDE[tsql](../../../includes/tsql-md.md)]ou d'objets RMO (Replication Management Objects). La réplication transactionnelle offre la fonctionnalité de jeton de suivi, moyen facile de mesurer la latence dans les topologies de réplication transactionnelle et de valider les connexions entre le serveur de publication, le serveur de distribution et les Abonnés. Un jeton (une petite quantité de données) est écrit dans le journal des transactions de la base de données de publication et est marqué comme s'il s'agissait d'une transaction standard répliquée, puis est envoyé dans le système, permettant ainsi le calcul :  

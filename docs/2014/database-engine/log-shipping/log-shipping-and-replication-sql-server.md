@@ -5,24 +5,23 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - replication [SQL Server], log shipping and
 - log shipping [SQL Server], replication and
 ms.assetid: 132bebfd-0206-4d23-829a-b38e5ed17bc9
 caps.latest.revision: 29
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 3ad675990c9cd2db400a9be293dde45160f67d27
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 2ff05cc362f5be17df9b5ae0b282d55db4d030ac
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36052688"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37217839"
 ---
 # <a name="log-shipping-and-replication-sql-server"></a>Copie des journaux de transaction et réplication (SQL Server)
   La copie des journaux de transaction consiste à avoir deux exemplaires d'une même base de données qui résident généralement sur des ordinateurs différents. À un moment donné précis, les clients ne peuvent accéder qu'à un seul exemplaire de la base de données. Cet exemplaire s'appelle la base de données primaire. Les mises à jour apportées par les clients à la base de données primaire sont répercutées, par copie des journaux de transaction, à l'autre exemplaire de la base de données appelé base de données secondaire. La copie des journaux de transaction consiste à répercuter dans la base de données secondaire chaque insertion, mise à jour ou suppression apportée à la base de données primaire.  

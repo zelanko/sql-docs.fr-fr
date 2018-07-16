@@ -15,15 +15,15 @@ helpviewer_keywords:
 - system-specific properties [Reporting Services]
 ms.assetid: cd874117-00e5-4ae6-8629-eb9ba9f40478
 caps.latest.revision: 55
-author: douglaslM
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 79fb5e55f54a07f8b3a770f39b3c738a59dab16e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: cc749db6d8eee973ef4c146d62ce5ebebda230e2
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36141743"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37276595"
 ---
 # <a name="report-server-system-properties"></a>Propriétés système de Report Server
   Les noms de propriétés système suivants sont réservés. Vous ne pouvez pas créer des propriétés définies par l'utilisateur du même nom. Vous pouvez lire ou modifier nombre de ces propriétés à l'aide des méthodes de service Web.  
@@ -40,7 +40,7 @@ ms.locfileid: "36141743"
 |EnableMyReports|Indique si la fonctionnalité Mes rapports est activée. La valeur `true` indique que la fonctionnalité est activée.|  
 |MyReportsRole|Nom du rôle utilisé lors de la création des stratégies de sécurité sur le dossier Mes rapports de l'utilisateur. La valeur par défaut est `My Reports Role`.|  
 |EnableExecutionLogging|Indique si la journalisation de l'exécution des rapports est activée. La valeur par défaut est `true`.|  
-|ExecutionLogDaysKept|Nombre de jours pendant lesquels conserver les informations sur l'exécution du rapport dans le journal des exécutions. Les valeurs valides pour cette propriété sont `0` via `2`,`147`,`483`,`647`. Si la valeur est égale à `0`, les entrées ne sont pas supprimées de la table du journal des exécutions. La valeur par défaut est `60`.|  
+|ExecutionLogDaysKept|Nombre de jours pendant lesquels conserver les informations sur l'exécution du rapport dans le journal des exécutions. Valeurs valides pour cette propriété sont `0` via `2`,`147`,`483`,`647`. Si la valeur est égale à `0`, les entrées ne sont pas supprimées de la table du journal des exécutions. La valeur par défaut est `60`.|  
 |SnapshotCompression|Définit le mode de compression des instantanés. La valeur par défaut est `SQL`. Les valeurs valides sont les suivantes :<br /><br /> `SQL` = les instantanés sont compressés lorsqu'ils sont stockés dans la base de données du serveur de rapports. Il s'agit du comportement actuel.<br /><br /> **None** = les instantanés ne sont pas compressés.<br /><br /> `All` = les instantanés sont compressés pour toutes les options de stockage, qui incluent la base de données du serveur de rapports ou le système de fichiers.|  
 |EnableClientPrinting|Détermine si le contrôle ActiveX RSClientPrint peut être téléchargé à partir du serveur de rapports. Les valeurs valides sont `true` et `false`. La valeur par défaut est `true`. Pour plus d’informations sur les paramètres supplémentaires nécessaires pour ce contrôle, consultez [Activer et désactiver l’impression côté client pour Reporting Services](../../report-server/enable-and-disable-client-side-printing-for-reporting-services.md).|  
 |EnableIntegratedSecurity|Détermine si la sécurité intégrée est prise en charge pour les connexions à la source de données de rapports. La valeur par défaut est `True`. Les valeurs valides sont les suivantes :<br /><br /> `True` = la sécurité intégrée est activée.<br /><br /> `False` = la sécurité intégrée n'est pas activée. Les sources de données de rapports qui sont configurées de manière à utiliser la sécurité intégrée ne seront pas exécutées.|  

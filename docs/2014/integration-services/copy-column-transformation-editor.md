@@ -1,5 +1,5 @@
 ---
-title: Éditeur de Transformation de colonne de copier | Documents Microsoft
+title: Copier l’éditeur de Transformation de colonne | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.copymaptransformation.f1
 helpviewer_keywords:
 - Copy Column Transformation Editor
 ms.assetid: d8e70541-d563-4ce4-bf66-bc888a0d3026
 caps.latest.revision: 25
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 361e0426e4101a281bfb302dad8f4b9d4cc5ded9
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: fd2e21da9766248e2004e2101b4422f8a1942cbc
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36039560"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37250469"
 ---
 # <a name="copy-column-transformation-editor"></a>Éditeur de transformation de copie de colonne
   Utilisez la boîte de dialogue **Éditeur de transformation de copie de colonne** pour sélectionner des colonnes à copier et attribuer des noms aux nouvelles colonnes de sortie.  

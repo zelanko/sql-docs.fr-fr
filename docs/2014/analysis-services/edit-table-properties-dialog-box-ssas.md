@@ -1,5 +1,5 @@
 ---
-title: Modifier la boîte de dialogue Propriétés de Table (SSAS) | Documents Microsoft
+title: Modifier la boîte de dialogue Propriétés Table (SSAS) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.bidtoolset.edittablepropdb.f1
 ms.assetid: 8d913e83-7246-44cc-8fc7-31729023c0d8
 caps.latest.revision: 12
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 36cabf1186738420e3dbd35504a81ea0318b966b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: cd8e464967dbe4b2546f51889f2a2da49d81e4df
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36140152"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37249589"
 ---
 # <a name="edit-table-properties-dialog-box-ssas"></a>Modifier les propriétés de la table, boîte de dialogue (SSAS)
   La boîte de dialogue **Modifier les propriétés de la table** vous permet d'afficher et de modifier les propriétés des tables importées dans le générateur de modèles à l'aide de l'Assistant Importation de table. Pour accéder à cette boîte de dialogue, dans le générateur de modèles, sélectionnez une table, puis cliquez sur le menu **Table** , puis sur **Propriétés de la table**.  

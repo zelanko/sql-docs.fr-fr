@@ -5,23 +5,22 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-security
+ms.technology: security
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - keys [SQL Server], database encryption
 ms.assetid: 15c0a5e8-9177-484c-ae75-8c552dc0dac0
 caps.latest.revision: 18
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 03e1b85250115c3deb8b1615782c3e64c896bed8
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: aliceku
+ms.author: aliceku
+manager: craigg
+ms.openlocfilehash: 7a7e5c9979dfe42b956a90eb61d1a03a9ef65181
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36140249"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37234889"
 ---
 # <a name="sql-server-and-database-encryption-keys-database-engine"></a>SQL Server et clés de chiffrement de base de données (moteur de base de données)
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] utilise des clés de chiffrement pour mieux sécuriser les données, les informations d’identification et les informations de connexion qui sont stockées dans une base de données du serveur. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] a deux types de clés : des clés *symétriques* et *asymétriques*. Les clés symétriques utilisent le même mot de passe pour chiffrer et déchiffrer des données. Les clés asymétriques utilisent un premier mot de passe pour chiffrer des données (appelé clé *publique* ) et un second mot de passe pour déchiffrer les données (appelé clé *privée* ).  
@@ -35,9 +34,9 @@ ms.locfileid: "36140249"
   
  La clé principale de base de données est une clé symétrique qui permet de protéger les clés privées des certificats et des clés asymétriques présentes dans la base de données. Elle peut également être utilisée pour chiffrer des données, mais elle présente des limitations de longueur qui la rendent moins pratique pour les données que l'utilisation d'une clé symétrique.  
   
- Lors de sa création, la clé principale est chiffrée à l'aide de l'algorithme Triple DES et d'un mot de passe fourni par l'utilisateur. Pour activer le déchiffrement automatique de la clé principale, une copie de la clé est chiffrée au moyen de la clé SMK. Il est stocké dans la base de données où elle est utilisée et dans le `master` base de données système.  
+ Lors de sa création, la clé principale est chiffrée à l'aide de l'algorithme Triple DES et d'un mot de passe fourni par l'utilisateur. Pour activer le déchiffrement automatique de la clé principale, une copie de la clé est chiffrée au moyen de la clé SMK. Elle est stockée dans la base de données où elle est utilisée et dans le `master` base de données système.  
   
- La copie de la clé DMK stockée dans le `master` base de données système est mise à jour silencieusement chaque fois que la clé DMK est modifiée. Toutefois, cette valeur par défaut peut être modifié à l’aide de la `DROP ENCRYPTION BY SERVICE MASTER KEY` option de la `ALTER MASTER KEY` instruction. Une clé DMK qui n'est pas chiffrée par la clé principale de service doit être ouverte à l'aide de l'instruction `OPEN MASTER KEY` et d'un mot de passe.  
+ La copie de la clé DMK stockée dans le `master` base de données système est mise à jour silencieusement chaque fois que la clé DMK est modifiée. Toutefois, cette valeur par défaut peut être modifiée à l’aide de la `DROP ENCRYPTION BY SERVICE MASTER KEY` possibilité du `ALTER MASTER KEY` instruction. Une clé DMK qui n'est pas chiffrée par la clé principale de service doit être ouverte à l'aide de l'instruction `OPEN MASTER KEY` et d'un mot de passe.  
   
 ## <a name="managing-sql-server-and-database-keys"></a>Gestion des clés SQL Server et de base de données  
  La gestion des clés de chiffrement consiste à créer de nouvelles clés de base de données, à créer une sauvegarde des clés de serveur et de base de données et à savoir quand et comment restaurer, supprimer et modifier les clés.  
@@ -86,7 +85,7 @@ ms.locfileid: "36140249"
   
  [Gestion de clés extensible à l’aide d’Azure Key Vault &#40;SQL Server&#41;](extensible-key-management-using-azure-key-vault-sql-server.md)  
   
- [Activer le chiffrement transparent des données à l’aide de la gestion de clés extensible](enable-tde-on-sql-server-using-ekm.md)  
+ [Activer le chiffrement transparent des données à l’aide de la gestion de clés extensible (EKM)](enable-tde-on-sql-server-using-ekm.md)  
   
 ## <a name="related-content"></a>Contenu associé  
  [CREATE MASTER KEY &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-master-key-transact-sql)  

@@ -1,5 +1,5 @@
 ---
-title: Élément ConnectionStringSecurity (ASSL) | Documents Microsoft
+title: Élément ConnectionStringSecurity (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - ConnectionStringSecurity element
 ms.assetid: f25c4448-bb0d-4945-bc84-9c015eefa0eb
 caps.latest.revision: 37
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: fce202b78364b4a3de68a33416922b929521727c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 9479865bd2e3f10570418ee33064bc30f4b7b786
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36141425"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37300869"
 ---
 # <a name="connectionstringsecurity-element-assl"></a>Élément ConnectionStringSecurity (ASSL)
   Spécifie si le mot de passe de l'utilisateur est supprimé de la chaîne de connexion à la source de données pour des raisons de sécurité.  
@@ -67,7 +67,7 @@ ms.locfileid: "36141425"
 |Valeur|Description|  
 |-----------|-----------------|  
 |*PasswordRemoved*|Le mot de passe a été supprimé de la chaîne de connexion.|  
-|*Non modifié*|La chaîne de connexion n'a pas été modifiée.|  
+|*Inchangé*|La chaîne de connexion n'a pas été modifiée.|  
   
  L'énumération qui correspond aux valeurs autorisées de l'élément `ConnectionStringSecurity` dans le modèle objet AMO (Analysis Management Objects) est <xref:Microsoft.AnalysisServices.ConnectionStringSecurity>.  
   

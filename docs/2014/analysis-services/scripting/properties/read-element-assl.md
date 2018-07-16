@@ -1,5 +1,5 @@
 ---
-title: Lire l’élément (ASSL) | Documents Microsoft
+title: Lire l’élément (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - Read element
 ms.assetid: 2e2c1173-72ca-4e8a-a6cd-fd348ef96d78
 caps.latest.revision: 12
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 1e7f26c9064f754633420cd58a0f15197189d1ab
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 5d4d8b256e29f3f4e4998fdc029f0d9eb3e1a893
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36053589"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37321199"
 ---
 # <a name="read-element-assl"></a>Élément Read (ASSL)
   Détermine si les données ou les métadonnées peuvent être lues pour un donné [CubeDimensionPermission](../data-type/permission-data-type-assl.md) ou [autorisation](../data-type/permission-data-type-assl.md) élément.  
@@ -72,7 +72,7 @@ ms.locfileid: "36053589"
   
 ## <a name="see-also"></a>Voir aussi  
  [Élément de cube &#40;ASSL&#41;](../objects/cube-element-assl.md)   
- [Élément de dimension &#40;ASSL&#41;](../objects/dimension-element-assl.md)   
+ [Dimension élément &#40;ASSL&#41;](../objects/dimension-element-assl.md)   
  [Élément CubePermission &#40;ASSL&#41;](../objects/cubepermission-element-assl.md)   
  [Type de données d’autorisation &#40;ASSL&#41;](../data-type/permission-data-type-assl.md)   
  [Propriétés &#40;ASSL&#41;](properties-assl.md)  

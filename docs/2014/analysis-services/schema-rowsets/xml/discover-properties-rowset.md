@@ -1,5 +1,5 @@
 ---
-title: Ensemble de lignes DISCOVER_PROPERTIES | Documents Microsoft
+title: Ensemble de lignes DISCOVER_PROPERTIES | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -18,20 +18,20 @@ helpviewer_keywords:
 - DISCOVER_PROPERTIES rowset
 ms.assetid: 3e2b50e2-3855-4091-8b02-4968e8e57d4c
 caps.latest.revision: 32
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: af566467345e29362a7b2fdd2c5bda04a35a6dd5
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: bc02dd29ee02ad4d1730a6af72c5df3c3fee1c55
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36139906"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37271835"
 ---
 # <a name="discoverproperties-rowset"></a>Ensemble de lignes DISCOVER_PROPERTIES
   Retourne une liste d'informations et de valeurs sur les propriétés standard et spécifiques au fournisseur prises en charge par le fournisseur XML for Analysis (XMLA) [!INCLUDE[msCoName](../../../includes/msconame-md.md)] pour la source de données spécifiée. Les propriétés non prises en charge ne sont pas répertoriées dans le jeu de résultats retourné.  
   
- Si vous appelez le [Discover](../../xmla/xml-elements-methods-discover.md) méthode avec la `DISCOVER_PROPERTIES` valeur d’énumération dans le [RequestType](../../xmla/xml-elements-properties/type-element-xmla.md) élément, le `Discover` méthode retourne la `DISCOVER_PROPERTIES` ensemble de lignes...  
+ Si vous appelez le [Discover](../../xmla/xml-elements-methods-discover.md) méthode avec le `DISCOVER_PROPERTIES` valeur d’énumération dans le [RequestType](../../xmla/xml-elements-properties/type-element-xmla.md) élément, le `Discover` méthode retourne la `DISCOVER_PROPERTIES` ensemble de lignes...  
   
 ## <a name="rowset-columns"></a>Colonnes de l'ensemble de lignes  
  Le `DISCOVER_PROPERTIES` ensemble de lignes contient les colonnes suivantes.  

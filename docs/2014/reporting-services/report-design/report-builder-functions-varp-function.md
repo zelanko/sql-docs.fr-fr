@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: e4f86ab3-bdb3-4e4a-9a9d-7ae7abdf4dc4
 caps.latest.revision: 7
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 83acba12894a07a75c43119095d0c3ab6263142d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 64764a82da2b41401631c1eeb31a7f0928df4e3a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36141966"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37268905"
 ---
 # <a name="varp-function-report-builder-and-ssrs"></a>Fonction VarP (Générateur de rapports et SSRS)
   Retourne la variance de remplissage de toutes les valeurs numériques non Null spécifiées par l'expression, évaluée dans le contexte de l'étendue donnée.  
@@ -42,13 +42,13 @@ VarP(expression, scope, recursive)
  (`String`) Facultatif. Nom d'un dataset, d'un groupe ou d'une région de données qui contient les éléments de rapport auxquels appliquer la fonction d'agrégation. Si le paramètre *scope* n'est pas spécifié, l'étendue actuelle est utilisée.  
   
  *récursifs*  
- (**Type énuméré**) Facultatif. `Simple` (par défaut) ou `RdlRecursive`. Indique s'il faut effectuer l'agrégation de manière récursive.  
+ (**Type énuméré**) Facultatif. `Simple` (valeur par défaut) ou `RdlRecursive`. Indique s'il faut effectuer l'agrégation de manière récursive.  
   
 ## <a name="return-type"></a>Type de retour  
  Retourne un `Decimal` pour les expressions décimales et une `Double` pour toutes les autres expressions.  
   
 ## <a name="remarks"></a>Notes  
- Le jeu de données spécifié dans l'expression doit avoir le même type de données. Pour convertir des données qui ont plusieurs types de données numériques vers le même type de données, utilisez les fonctions de conversion, comme `CInt`, `CDbl` ou `CDec`. Pour plus d'informations, consultez [Fonctions de conversion de types de données](http://go.microsoft.com/fwlink/?LinkId=96142).  
+ Le jeu de données spécifié dans l'expression doit avoir le même type de données. Pour convertir les données qui ont plusieurs types de données numériques vers le même type de données, utilisez les fonctions de conversion comme `CInt`, `CDbl` ou `CDec`. Pour plus d'informations, consultez [Fonctions de conversion de types de données](http://go.microsoft.com/fwlink/?LinkId=96142).  
   
  La valeur du paramètre *scope* doit être une constante de chaîne et ne peut pas être une expression. Pour les agrégats externes ou les agrégats qui ne spécifient pas d'autres agrégats, le paramètre *scope* doit faire référence à l'étendue actuelle ou à une étendue contenante. Pour les agrégats d'agrégats, les agrégats imbriqués peuvent spécifier une étendue enfant.  
   
@@ -74,9 +74,9 @@ VarP(expression, scope, recursive)
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Expression utilise des rapports de &#40;rapport Générateur et SSRS&#41;](expression-uses-in-reports-report-builder-and-ssrs.md)   
+ [Utilisation d’expressions dans les rapports &#40;Générateur de rapports et SSRS&#41;](expression-uses-in-reports-report-builder-and-ssrs.md)   
  [Exemples d’expressions &#40;Générateur de rapports et SSRS&#41;](expression-examples-report-builder-and-ssrs.md)   
  [Types de données dans les expressions &#40;Générateur de rapports et SSRS&#41;](expressions-report-builder-and-ssrs.md)   
- [Étendue des expressions pour les totaux, les agrégats et les Collections intégrées &#40;rapport Générateur et SSRS&#41;](expression-scope-for-totals-aggregates-and-built-in-collections.md)  
+ [Étendue des expressions pour les totaux, les agrégats et les Collections intégrées &#40;Générateur de rapports et SSRS&#41;](expression-scope-for-totals-aggregates-and-built-in-collections.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Définir des périodes (Assistant Dimension) | Documents Microsoft
+title: Définir des périodes (Assistant Dimension) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.dimensionwizard.timefrequency.f1
 ms.assetid: 6bda6b7e-d306-4e68-9acb-84de8f44d1b4
 caps.latest.revision: 21
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 6d0eaa7b29e84be26032618fe7470652adc1a7b6
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: f46d6cea52d34599e44a4439121730c1412e08bd
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36140207"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37315929"
 ---
 # <a name="define-time-periods-dimension-wizard"></a>Définir des périodes (Assistant Dimension)
   Utilisez la page **Définir des périodes** pour définir les informations d'année civile et les fréquences de temps à inclure dans la dimension de temps ou la dimension de temps du serveur.  
@@ -48,11 +48,11 @@ ms.locfileid: "36140207"
 > [!NOTE]  
 >  La période `Date` est requise.  
   
- **Langue pour les noms de membres de temps**  
+ **Langue pour les noms de membre de temps**  
  Sélectionnez la langue des membres de la dimension de temps.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Aide (F1) de l’Assistant Dimension](dimension-wizard-f1-help.md)   
+ [Aide F1 de l’Assistant Dimension](dimension-wizard-f1-help.md)   
  [Dimensions &#40;Analysis Services - données multidimensionnelles&#41;](multidimensional-models-olap-logical-dimension-objects/dimensions-analysis-services-multidimensional-data.md)   
  [Dimensions dans les modèles multidimensionnels](multidimensional-models/dimensions-in-multidimensional-models.md)   
  [Sélectionner des calendriers &#40;Assistant Dimension&#41;](select-calendars-dimension-wizard.md)  

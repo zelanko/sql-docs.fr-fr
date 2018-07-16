@@ -1,5 +1,5 @@
 ---
-title: Création de prédictions de série chronologique (didacticiel sur l’exploration des données intermédiaires) | Documents Microsoft
+title: Création de prédictions de série chronologique (didacticiel d’exploration de données intermédiaire) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: fb22cffa-ac99-4d34-ac4a-9c93068e33e8
 caps.latest.revision: 28
 author: minewiskan
 ms.author: owend
-manager: kfile
-ms.openlocfilehash: 999dcdec7c6a30617c9c9e04512da26ddebfdcc3
-ms.sourcegitcommit: 8c040e5b4e8c7d37ca295679410770a1af4d2e1f
+manager: craigg
+ms.openlocfilehash: 2e2a9fa7f42e547940e1b4576f63cc3067e01da0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/21/2018
-ms.locfileid: "36312947"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37310829"
 ---
 # <a name="creating-time-series-predictions-intermediate-data-mining-tutorial"></a>Création de prédictions de série chronologique (Didacticiel intermédiaire sur l'exploration de données)
   Dans les tâches précédentes de cette leçon, vous avez créé un modèle de série chronologique et exploré les résultats. Par défaut, [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] crée toujours un jeu de cinq (5) prédictions pour un modèle de série chronologique et affiche les valeurs prédites dans le graphique de prévision. Toutefois, vous pouvez également créer des prévisions en générant des requêtes de prédiction DMX (Data Mining Extensions).  
@@ -33,7 +33,7 @@ ms.locfileid: "36312947"
   
 #### <a name="to-select-a-model-and-input-table"></a>Pour sélectionner un modèle et une table d'entrée  
   
-1.  Sur le **prévision de modèle d’exploration de données** onglet du Concepteur d’exploration de données, dans le **modèle d’exploration de données** , cliquez sur **sélectionner le modèle**.  
+1.  Sur le **prévision de modèle d’exploration de données** onglet du Concepteur d’exploration de données, dans le **Mining Model** , cliquez sur **sélectionner un modèle**.  
   
 2.  Dans le **sélectionner un modèle d’exploration de données** boîte de dialogue, développez la structure Forecasting, sélectionnez le **Forecasting** de modèle dans la liste, puis cliquez sur **OK**.  
   
@@ -42,7 +42,7 @@ ms.locfileid: "36312947"
     > [!NOTE]  
     >  Pour un modèle de série chronologique, vous n'avez pas besoin de spécifier une entrée séparée sauf si vous faites de la prédiction croisée.  
   
-4.  Dans le **Source** colonne, dans la grille sur le **prévision de modèle d’exploration de données** onglet, cliquez sur la cellule dans la première ligne vide, puis sélectionnez **modèle d’exploration de données de prévision**.  
+4.  Dans le **Source** colonne, dans la grille sur la **prévision de modèle d’exploration de données** onglet, cliquez sur la cellule dans la première ligne vide, puis sélectionnez **modèle d’exploration de données de prévision**.  
   
 5.  Dans le **champ** colonne, sélectionnez **Model Region**.  
   
@@ -69,7 +69,7 @@ ms.locfileid: "36312947"
   
 12. Dans le **champ** colonne, sélectionnez **PredictTimeSeries**.  
   
-13. Dans le **modèle d’exploration de données** volet, sélectionnez la colonne quantité, puis faites-la glisser dans le **critères/argument** zone pour la deuxième **PredictTimeSeries** (fonction).  
+13. Dans le **Mining Model** volet, sélectionnez la colonne Quantity, puis faites-le glisser vers le **critères/argument** zone pour la deuxième **PredictTimeSeries** (fonction).  
   
 14. Cliquez sur le **critères/argument** , puis tapez une virgule, suivie **5**, après le nom du champ.  
   
@@ -137,7 +137,7 @@ ms.locfileid: "36312947"
   
 #### <a name="to-flatten-the-results-in-the-results-pane"></a>Pour aplatir les résultats dans le volet Résultats  
   
-1.  Dans le Générateur de requête de prédiction, cliquez sur **basculer vers l’affichage de conception de requête**.  
+1.  Dans le Générateur de requêtes de prédiction, cliquez sur **basculer vers l’affichage de conception de requête**.  
   
      La vue se modifie pour autoriser l'édition manuelle du texte de la requête DMX.  
   
@@ -172,7 +172,7 @@ ms.locfileid: "36312947"
   
 1.  Cliquez sur **enregistrer les résultats de la requête**.  
   
-2.  Dans le **résultat de requête d’exploration de données Enregistrer** boîte de dialogue, pour **Source de données**, sélectionnez [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)]. Vous pouvez également créer une source de données si vous souhaitez enregistrer les données dans une base de données relationnelles différente.  
+2.  Dans le **enregistrer le résultat de requête Data Mining** boîte de dialogue pour **Source de données**, sélectionnez [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)]. Vous pouvez également créer une source de données si vous souhaitez enregistrer les données dans une base de données relationnelles différente.  
   
 3.  Dans le **nom de la Table** colonne, type de nom, de la table temporaire nouveau comme **tester les prédictions**.  
   
@@ -187,7 +187,7 @@ ms.locfileid: "36312947"
  Les tâches restantes dans ce didacticiel sont facultatives et décrivent les prédictions avancées de série chronologique. Si vous décidez de continuer, vous allez apprendre à ajouter de nouvelles données à votre modèle et à créer des prédictions sur la série étendue. Vous apprendrez également comment effectuer la prédiction croisée en utilisant la tendance du modèle mais en remplaçant les données à une nouvelle série de données.  
   
 ## <a name="next-lesson"></a>Leçon suivante  
- [Avancée des prédictions de série chronologique &#40;intermédiaire Didacticiel d’exploration de données&#41;](../../2014/tutorials/advanced-time-series-predictions-intermediate-data-mining-tutorial.md)  
+ [Avancée des prédictions de série chronologique &#40;didacticiel d’exploration de données intermédiaire&#41;](../../2014/tutorials/advanced-time-series-predictions-intermediate-data-mining-tutorial.md)  
   
 ## <a name="see-also"></a>Voir aussi  
  [Exemples de requêtes de modèle de séries chronologiques](../../2014/analysis-services/data-mining/time-series-model-query-examples.md)  

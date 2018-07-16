@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - OR operator
 - logical OR (||)
@@ -17,13 +17,13 @@ ms.assetid: a3c07c09-f121-4187-9617-b01adcf843c4
 caps.latest.revision: 33
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 271de03eb56cc6195c15045dcd44637600c37ef9
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: f69d71354db0c658a644c0cd4068e894b3fb94fe
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36053335"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37316969"
 ---
 # <a name="-logical-or-ssis-expression"></a>|| (OU logique) (expression SSIS)
   Effectue une opération OR logique. L'expression renvoie la valeur TRUE si au moins une des deux conditions s'évalue à TRUE.  
@@ -68,9 +68,9 @@ StandardCost < @SPrice || ListPrice > @LPrice
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [&#124;&#40;Au niveau du bit OR inclusif&#41; &#40;Expression SSIS&#41;](bitwise-inclusive-or-ssis-expression.md)   
+ [&#124;&#40;Au niveau du bit OR inclusif&#41; &#40;SSIS Expression&#41;](bitwise-inclusive-or-ssis-expression.md)   
  [^ &#40;OR exclusif au niveau du bit&#41; &#40;expression SSIS&#41;](bitwise-exclusive-or-ssis-expression.md)   
  [Opérateurs et associativité](operator-precedence-and-associativity.md)   
- [Opérateurs &#40;Expression SSIS&#41;](operators-ssis-expression.md)  
+ [Opérateurs &#40;SSIS Expression&#41;](operators-ssis-expression.md)  
   
   

@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - modifying target servers
 - SQL Server Agent jobs, target servers
 - target servers [SQL Server], modifying
 ms.assetid: 9dbe24f2-acec-4aa2-920c-e8e96efa18e4
 caps.latest.revision: 23
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: dab9b2cca2848864400af2e86a47b600db2aed04
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: b8c4775cff2d539f68e566dc7e5d02feb7d60eb0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36038979"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37292099"
 ---
 # <a name="modify-the-target-servers-for-a-job"></a>Modifier les serveurs cibles pour un travail
   Cette rubrique explique comment modifier les serveurs cibles pour les travaux du service de l'Agent [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] à l'aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou [!INCLUDE[tsql](../../includes/tsql-md.md)].  

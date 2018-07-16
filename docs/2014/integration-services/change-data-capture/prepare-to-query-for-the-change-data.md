@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - incremental load [Integration Services],preparing query
 ms.assetid: 9ea2db7a-3dca-4bbf-9903-cccd2d494b5f
 caps.latest.revision: 26
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 6fc278beec749f8698977a153c30b5c584ea8424
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 88f2dd6e5caf6cf5b601f07ca826d85808f9e6f9
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36053356"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37248809"
 ---
 # <a name="prepare-to-query-for-the-change-data"></a>Préparer la recherche des données modifiées
   Dans le flux de contrôle d'un package [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] qui effectue un chargement incrémentiel des données modifiées, la troisième et dernière tâche consiste à préparer la recherche des données modifiées et à ajouter une tâche de flux de données.  
@@ -128,7 +128,7 @@ ms.locfileid: "36053356"
   
         ```  
   
-5.  Laissez la ligne par défaut du code qui renvoie `DtsExecResult.Success` à partir de l’exécution du script.  
+5.  Laissez la ligne de code qui retourne par défaut `DtsExecResult.Success` à partir de l’exécution du script.  
   
 6.  Fermez l’environnement de développement de script et **l’Éditeur de tâche de script**.  
   
@@ -174,7 +174,7 @@ ms.locfileid: "36053356"
         ```  
   
         > [!NOTE]  
-        >  Le `else` clause dans cet exemple génère une requête pour le chargement initial des données modifiées en passant une valeur null pour la date et heure de début. Cet exemple ne s'applique pas au scénario selon lequel des modifications qui ont été apportées avant l'activation de la capture de données modifiées doivent aussi être téléchargées dans l'entrepôt de données.  
+        >  Le `else` clause dans cet exemple génère une requête pour le chargement initial des données modifiées en passant une valeur null pour la date et l’heure. Cet exemple ne s'applique pas au scénario selon lequel des modifications qui ont été apportées avant l'activation de la capture de données modifiées doivent aussi être téléchargées dans l'entrepôt de données.  
   
 3.  Dans la page **Mappage de paramètre** de **l’Éditeur de tâche d’exécution de requêtes SQL**, effectuez le mappage suivant :  
   

@@ -1,5 +1,5 @@
 ---
-title: Redistribution d’ADOMD.NET | Documents Microsoft
+title: Redistribution d’ADOMD.NET | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -15,15 +15,15 @@ helpviewer_keywords:
 - redistributing ADOMD.NET
 ms.assetid: f8db3c99-0243-4b92-b486-0d8786c264f4
 caps.latest.revision: 34
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 0451623dd44f5730a62e26232916a6c093155f3d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 6fde698740a417076f7fe139250765b9610e91b5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36142144"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37245609"
 ---
 # <a name="redistributing-adomdnet"></a>Redistribution d'ADOMD.NET
   Lorsque vous écrivez une application qui utilise ADOMD.NET, vous devez redistribuer la version appropriée d'ADOMD.NET en même temps que votre application. Pour redistribuer ADOMD.NET, incluez le programme d'installation ADOMD.NET dans le programme d'installation de votre application.  

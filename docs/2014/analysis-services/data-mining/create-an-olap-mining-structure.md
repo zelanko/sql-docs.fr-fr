@@ -1,5 +1,5 @@
 ---
-title: Créer une Structure d’exploration de données OLAP | Documents Microsoft
+title: Créer une Structure d’exploration de données OLAP | Microsoft Docs
 ms.custom: ''
 ms.date: 07/17/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 21cbdc9d-d33c-4026-b9ef-1be2bd92b3b1
 caps.latest.revision: 11
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 71efb42dd17c6b959fedab50841d09625f62f458
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 060b2fc3a8cfcb54470d21dace787cd1ccbc025c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36038696"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37232429"
 ---
 # <a name="create-an-olap-mining-structure"></a>Create an OLAP Mining Structure
   Il existe de nombreux avantages à la création d'un modèle d'exploration de données basé sur un cube OLAP ou une autre banque de données multidimensionnelles. Une solution OLAP contient déjà de grandes quantités de données qui sont correctement organisées, nettoyées et mises en forme ; toutefois, la complexité des données est telle que les utilisateurs ont peu de chances de trouver des modèles explicites par une exploration ad hoc. L'exploration de données offre la possibilité de découvrir de nouvelles corrélations et de fournir un éclairage utilisable.  
@@ -117,7 +117,7 @@ ms.locfileid: "36038696"
 |Rechercher des cellules intéressantes ou anormales|Identifiez les ventes des magasins qui ne suivent pas les tendances générales dans le temps.|[!INCLUDE[msCoName](../../includes/msconame-md.md)] Time Series)|  
 |Rechercher des corrélations|Identifiez les facteurs qui sont liés au temps mort de serveur, notamment la zone, le type de l'ordinateur, le système d'exploitation ou la date d'achat.|[!INCLUDE[msCoName](../../includes/msconame-md.md)] Naïve Bayes|  
   
-##  <a name="bkmk_Filters"></a> Découpage d’un Cube et. filtrage de modèles  
+##  <a name="bkmk_Filters"></a> Un Cube et de découpage. filtrage de modèles  
  Le découpage du cube lorsque vous générez un modèle revient à créer un filtre sur un modèle d'exploration de données relationnel. Dans un modèle relationnel, le filtre sur la source de données est défini comme une clause WHERE sur une instruction SQL ; dans un cube, vous utilisez l’éditeur pour créer des instructions de filtre à l’aide de MDX.  
   
  Par exemple, un cube peut contenir des informations sur des achats de produits dans le monde entier, mais pour votre campagne de marketing, vous souhaitez créer un modèle basé sur l'analyse des clients femmes de plus de 30 ans résidant au Royaume-Uni.  

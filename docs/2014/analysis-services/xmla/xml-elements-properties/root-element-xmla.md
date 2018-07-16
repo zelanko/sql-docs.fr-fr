@@ -1,5 +1,5 @@
 ---
-title: root Element (XMLA) | Documents Microsoft
+title: racine d’élément (XMLA) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -24,15 +24,15 @@ helpviewer_keywords:
 - root element
 ms.assetid: ecd9d6e8-b16c-4d62-9a87-107c413a0056
 caps.latest.revision: 16
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: 481947e1d58fe5da34b29f43405bfff48583b8c9
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: 11045be6946a5a73f0ad86fdcfcc53610800a6c4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36141869"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37321079"
 ---
 # <a name="root-element-xmla"></a>Élément racine (Root) (XMLA)
   Contient un résultat retourné par la [Discover](../xml-elements-methods-discover.md) méthode ou une commande XML for Analysis (XMLA) exécutée à l’aide de la [Execute](../xml-elements-methods-execute.md) (méthode).  
@@ -70,7 +70,7 @@ ms.locfileid: "36141869"
   
 |Relation|Élément|  
 |------------------|-------------|  
-|Éléments parents|[résultats](results-element-xmla.md), [de retour](return-element-xmla.md)|  
+|Éléments parents|[résultats](results-element-xmla.md), [retourner](return-element-xmla.md)|  
 |Éléments enfants|None|  
   
 ## <a name="remarks"></a>Notes  

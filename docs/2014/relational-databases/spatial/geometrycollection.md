@@ -8,24 +8,24 @@ ms.suite: ''
 ms.technology:
 - dbe-spatial
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - GeomCollection geometry subtype [SQL Server]
 - geometry subtypes [SQL Server]
 ms.assetid: 4445c0d9-a66b-4d7c-88e4-a66fa6f7d9fd
 caps.latest.revision: 17
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 1a5c21c01ab776a17d3e160fee51167c426dfa0c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 3a0f4ad36d9664d6627d02edfc401af9ed3d8b55
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36142003"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37307519"
 ---
 # <a name="geometrycollection"></a>GeometryCollection
-  A `GeometryCollection` est une collection de zéro ou plusieurs `geometry` ou `geography` instances. Un `GeometryCollection` peut être vide.  
+  Un `GeometryCollection` est une collection de zéro ou plusieurs `geometry` ou `geography` instances. Un `GeometryCollection` peut être vide.  
   
 ## <a name="geometrycollection-instances"></a>Instances GeometryCollection  
   

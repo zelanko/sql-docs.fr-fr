@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - merge replication data validation [SQL Server replication], partitions
 - parameterized filters [SQL Server replication], validating partition information
 - validating partition information
 ms.assetid: c059553e-df2c-4333-ba79-e8d6e2890c34
 caps.latest.revision: 35
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 3e38aaf47455eb2a949d6fe850a76af12ff62ba9
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 5167ea48bf73e7be2946e4739b99a1d92edb9270
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36140244"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37234879"
 ---
 # <a name="validate-partition-information-for-a-merge-subscriber"></a>Valider des informations de partition pour un Abonné de fusion
   Quand vous définissez un filtre de lignes paramétrable pour une publication de fusion, vous utilisez une fonction qui référence des informations de l'Abonné, telles que son nom de connexion. Par défaut, la réplication valide les informations de l'Abonné sur la base de cette fonction avant chaque synchronisation et si un instantané est appliqué à l'Abonné. Le processus de validation vérifie que ces données sont partitionnées correctement pour chaque Abonné. Le fonctionnement de la validation est contrôlé par la propriété de publication **validate_subscriber_info**, qui peut être modifiée à l’aide de [sp_changemergepublication &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql) ou sur la page **Options d’abonnement** de la boîte de dialogue **Propriétés de la publication**. Pour plus d'informations sur la modification des propriétés d'une publication, consultez [Afficher et modifier les propriétés d’une publication](publish/view-and-modify-publication-properties.md).  

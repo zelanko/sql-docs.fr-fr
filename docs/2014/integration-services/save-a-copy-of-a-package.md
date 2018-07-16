@@ -1,5 +1,5 @@
 ---
-title: Enregistrer une copie d’un Package | Documents Microsoft
+title: Enregistrer une copie d’un Package | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Integration Services packages, saving
 - packages [Integration Services], saving
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - SQL Server Integration Services packages, saving
 ms.assetid: 21482a20-e420-4452-b7eb-8f9fa1929f31
 caps.latest.revision: 23
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: d1a550e97bcb4cb14c56492edfa8cdd333599ecb
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 94439ee54ad468af77b89557fa63ad9c108d4f63
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36141304"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37314159"
 ---
 # <a name="save-a-copy-of-a-package"></a>Enregistrer une copie d'un package
   Cette procédure décrit comment enregistrer une copie d’un package dans le système de fichiers, dans le magasin de packages ou dans la base de données **msdb** dans [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Lorsque vous spécifiez un emplacement dans lequel enregistrer la copie du package, vous pouvez également mettre à jour le nom de celui-ci.  
@@ -68,7 +68,7 @@ ms.locfileid: "36141304"
 9. Cliquez sur **OK**.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Services d’intégration &#40;SSIS&#41; Packages](../../2014/integration-services/integration-services-ssis-packages.md)   
- [Configuration de l’intégration de Service Services &#40;Service SSIS&#41;](service/integration-services-service-ssis-service.md)  
+ [Integration Services &#40;SSIS&#41; Packages](../../2014/integration-services/integration-services-ssis-packages.md)   
+ [Configuration de l’intégration des Services Service &#40;Service SSIS&#41;](service/integration-services-service-ssis-service.md)  
   
   

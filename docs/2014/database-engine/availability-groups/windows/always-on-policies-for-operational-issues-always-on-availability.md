@@ -1,28 +1,27 @@
 ---
-title: Stratégies Always On pour les problèmes opérationnels avec des groupes de disponibilité (SQL Server) Always On | Documents Microsoft
+title: Stratégies Always On pour les problèmes opérationnels avec des groupes de disponibilité (SQL Server) Always On | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Availability Groups [SQL Server], troubleshooting
 - Availability Groups [SQL Server], policies
 ms.assetid: afa5289c-641a-4c03-8749-44862384ec5f
 caps.latest.revision: 19
-author: rothja
-ms.author: jroth
-manager: jhubbard
-ms.openlocfilehash: d046706bcdfa5259feb19a7ad92805b8f37f7c7f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 44d086a00d2e18bfd87410848a5acd73461fac6d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36053372"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37287915"
 ---
 # <a name="always-on-policies-for-operational-issues-with-always-on-availability-groups-sql-server"></a>Stratégies Always On pour les problèmes opérationnels avec des groupes de disponibilité Always On (SQL Server)
   Le modèle d'intégrité [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] évalue un ensemble de stratégies de gestion basées sur des stratégies prédéfinies. Vous pouvez les utiliser pour afficher l'intégrité d'un groupe de disponibilité AlwaysOn et de ses réplicas de disponibilité et bases de données dans [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)].  
@@ -33,7 +32,7 @@ ms.locfileid: "36053372"
  Stratégies prédéfinies AlwaysOn  
  Ensemble de stratégies intégrées qui permettent à un administrateur de base de données de vérifier qu'un groupe de disponibilité et ses réplicas de disponibilité et bases de données sont conformes aux états définis par les stratégies AlwaysOn.  
   
- [Groupes de disponibilité AlwaysOn](always-on-availability-groups-sql-server.md) une solution de haute disponibilité et récupération d’urgence qui fournit une alternative au niveau de l’entreprise pour la mise en miroir de base de données.  
+ [Groupes de disponibilité AlwaysOn](always-on-availability-groups-sql-server.md) une solution de haute disponibilité et récupération d’urgence qui fournit une alternative au niveau entreprise pour la mise en miroir de base de données.  
   
  Groupe de disponibilité  
  Conteneur d’un jeu discret de bases de données utilisateur, appelées *bases de données de disponibilité*, qui basculent ensemble.  
@@ -85,10 +84,10 @@ ms.locfileid: "36053372"
   
 -   Si le basculement sur le groupe de disponibilité est une solution possible à un problème, fournit un point de lancement pour les liens[Assistant Basculer le groupe de disponibilité](use-the-fail-over-availability-group-wizard-sql-server-management-studio.md). Cet Assistant guide l'administrateur de base de données dans le processus manuel de basculement.  
   
-##  <a name="ExtendHealthModel"></a> Extension du modèle de contrôle d’intégrité AlwaysOn  
+##  <a name="ExtendHealthModel"></a> Extension du modèle d’intégrité AlwaysOn  
  L'extension du modèle d'intégrité [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] consiste à créer vos propres stratégies définies par l'utilisateur et à les placer dans certaines catégories en fonction du type d'objet surveillé.  Après que vous avez modifié quelques paramètres, le tableau de bord AlwaysOn évalue automatiquement vos propres stratégies définies par l'utilisateur, ainsi que les stratégies prédéfinies AlwaysOn.  
   
- Une stratégie définie par l'utilisateur peut utiliser les facettes PBM disponibles, notamment celles utilisées par les stratégies prédéfinies AlwaysOn (consultez [Stratégies prédéfinies et problèmes rencontrés](#AlwaysOnPBM), précédemment dans cette rubrique). La facette serveur fournit les propriétés suivantes pour l’analyse [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] contrôle d’intégrité : (`IsHadrEnabled` et `HadrManagerStatus`). La facette serveur fournit également les propriétés des stratégies suivantes pour la surveillance de la configuration du cluster WSFC : `ClusterQuorumType` et `ClusterQuorumState`.  
+ Une stratégie définie par l'utilisateur peut utiliser les facettes PBM disponibles, notamment celles utilisées par les stratégies prédéfinies AlwaysOn (consultez [Stratégies prédéfinies et problèmes rencontrés](#AlwaysOnPBM), précédemment dans cette rubrique). La facette serveur fournit les propriétés suivantes pour la surveillance [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] santé : (`IsHadrEnabled` et `HadrManagerStatus`). La facette serveur fournit également les propriétés des stratégies suivantes pour la surveillance de la configuration du cluster WSFC : `ClusterQuorumType` et `ClusterQuorumState`.  
   
  Pour plus d'informations, consultez [Modèle d'intégrité AlwaysOn Partie 2 - Extension du modèle d'intégrité](http://blogs.msdn.com/b/sqlalwayson/archive/2012/02/13/extending-the-alwayson-health-model.aspx) (blog de l'équipe de SQL Server AlwaysOn).  
   
@@ -104,13 +103,13 @@ ms.locfileid: "36053372"
   
 -   [Effectuer un basculement manuel forcé d’un groupe de disponibilité &#40;SQL Server&#41;](perform-a-forced-manual-failover-of-an-availability-group-sql-server.md)  
   
--   [Résoudre une opération d’ajout de fichier &#40;groupes de disponibilité AlwaysOn&#41;](troubleshoot-a-failed-add-file-operation-always-on-availability-groups.md)  
+-   [Résoudre une opération d’ajout de fichier ayant échoué &#40;groupes de disponibilité AlwaysOn&#41;](troubleshoot-a-failed-add-file-operation-always-on-availability-groups.md)  
   
 ##  <a name="RelatedContent"></a> Contenu associé  
   
 -   [La modèle d’intégrité AlwaysOn partie 1--Architecture du modèle d’intégrité](http://blogs.msdn.com/b/sqlalwayson/archive/2012/02/13/extending-the-alwayson-health-model.aspx)  
   
--   [La modèle d’intégrité AlwaysOn partie 2--extension du modèle de contrôle d’intégrité](http://blogs.msdn.com/b/sqlalwayson/archive/2012/02/13/extending-the-alwayson-health-model.aspx)  
+-   [La modèle d’intégrité AlwaysOn partie 2--Extending the Health Model](http://blogs.msdn.com/b/sqlalwayson/archive/2012/02/13/extending-the-alwayson-health-model.aspx)  
   
 -   [Guide de Solutions Microsoft SQL Server AlwaysOn pour une haute disponibilité et récupération d’urgence](http://go.microsoft.com/fwlink/?LinkId=227600)  
   

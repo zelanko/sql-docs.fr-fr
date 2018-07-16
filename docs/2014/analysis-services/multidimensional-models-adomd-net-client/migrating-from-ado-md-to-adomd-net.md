@@ -1,5 +1,5 @@
 ---
-title: Migration d’ADO MD vers ADOMD.NET | Documents Microsoft
+title: Migration d’ADO MD vers ADOMD.NET | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -16,22 +16,22 @@ helpviewer_keywords:
 - ADO MD migration [ADOMD.NET]
 ms.assetid: 8c760db3-c475-468e-948d-e5f599d985ad
 caps.latest.revision: 38
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: ca9b4ba7dae762dead880c39c228391898e36e27
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: bc10312f8e4a19c334c0eeba7284d7af0eabd0df
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36141656"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37245726"
 ---
 # <a name="migrating-from-ado-md-to-adomdnet"></a>Migration d'ADO MD vers ADOMD.NET
   La bibliothèque ADOMD.NET est semblable à la bibliothèque ADO MD (ActiveX Data Objects Multidimensional), extension de la bibliothèque ADO (ActiveX Data Objects) utilisée pour accéder aux données multidimensionnelles dans les applications clientes COM (Component Object Model). ADO MD facilite l'accès aux données multidimensionnelles à partir de langages non managés tels que C++ et [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Basic. ADOMD.NET facilite l'accès aux données analytiques (multidimensionnelles et d'exploration de données) à partir de langages managés tels que [!INCLUDE[msCoName](../../includes/msconame-md.md)] C# et [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Basic .NET. En outre, ADOMD.NET fournit un modèle objet de métadonnées amélioré.  
   
  Il est simple de faire migrer des applications clientes existantes d'ADO MD vers ADOMD.NET, mais il existe plusieurs différences importantes sur le plan de la migration :  
   
- **Pour fournir l’accès de connectivité et des données pour les applications clientes**  
+ **Pour fournir la connectivité et accès aux données pour les applications clientes**  
  |ADO MD|ADOMD.NET|  
 |------------|---------------|  
 |Nécessite des références à Adodb.dll et Adomd.dll.|Nécessite une seule référence à Microsoft.AnalysisServices.AdomdClient.dll.|  
@@ -59,7 +59,7 @@ ms.locfileid: "36141656"
  **Pour récupérer les métadonnées du modèle d’exploration de données**  
  |ADO MD|ADOMD.NET|  
 |------------|---------------|  
-|Aucune classe disponible.|Utilise l'une des collections d'exploration de données suivantes :<br /><br /> -La <xref:Microsoft.AnalysisServices.AdomdClient.MiningModelCollection> contient une liste de tous les modèles d’exploration de données de la source de données.<br />-La <xref:Microsoft.AnalysisServices.AdomdClient.MiningServiceCollection> fournit des informations sur les algorithmes d’exploration de données.<br />-La <xref:Microsoft.AnalysisServices.AdomdClient.MiningStructureCollection> expose des informations sur les structures d’exploration de données sur le serveur.|  
+|Aucune classe disponible.|Utilise l'une des collections d'exploration de données suivantes :<br /><br /> -Le <xref:Microsoft.AnalysisServices.AdomdClient.MiningModelCollection> contient une liste de tous les modèles d’exploration de données de la source de données.<br />-Le <xref:Microsoft.AnalysisServices.AdomdClient.MiningServiceCollection> fournit des informations sur les algorithmes d’exploration de données.<br />-Le <xref:Microsoft.AnalysisServices.AdomdClient.MiningStructureCollection> expose des informations sur les structures d’exploration de données sur le serveur.|  
   
  Pour mettre en évidence ces différences, l'exemple de migration suivant compare une application ADO MD existante à une application ADOMD.NET équivalente.  
   
@@ -67,7 +67,7 @@ ms.locfileid: "36141656"
  L'exemple de code ADO MD et sont équivalent ADOMD.NET présentés dans cette section exécutent les mêmes actions : création d'une connexion, exécution d'une instruction MDX (Multidimensional Expressions) et récupération de métadonnées et de données. Toutefois, ces deux ensembles de code n'utilisent pas les mêmes objets pour effectuer ces tâches.  
   
 ### <a name="existing-ado-md-code"></a>Code ADO MD existant  
- L’exemple de code suivant, tiré de la documentation ADO MD 2.8, est écrit [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Basic® 6.0 et utilise ADO MD pour illustrer comment se connecter et d’interroger un [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] source de données. Cet exemple ADO MD utilise les objets suivants :  
+ L’exemple de code suivant, dessiné à partir de la documentation ADO MD 2.8, est écrit [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Basic® 6.0 et utilise ADO MD pour montrer comment vous connecter à et interroger un [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] source de données. Cet exemple ADO MD utilise les objets suivants :  
   
 -   Crée une connexion à partir d'un objet `Catalog`.  
   

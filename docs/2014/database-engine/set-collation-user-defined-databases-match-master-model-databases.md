@@ -1,5 +1,5 @@
 ---
-title: Définissez les bases de données défini par le classement de l’utilisateur correspondent à celles du principal et de bases de données model | Documents Microsoft
+title: Définissez les bases de données défini par le classement de l’utilisateur correspondent à ceux du serveur principal et de bases de données model | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Best Practices [Database Engine]
 ms.assetid: c686446f-dae1-4b05-a3df-837b3422988d
 caps.latest.revision: 12
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 9b437463c35face45918e567cbf42d31f63161cc
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: a2c6cbe79e2af21444e39fb7da7546122cd273ed
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36038163"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37314579"
 ---
 # <a name="set-the-collation-of-user-defined-databases-to-match-those-of-the-master-and-model-databases"></a>Définir le même classement pour les bases de données définies par l'utilisateur que pour les bases de données MASTER ou model
   Cette règle vérifie si les bases de données définies par l'utilisateur sont définies en utilisant un classement de base de données identique à celui de la base de données MASTER ou model.  

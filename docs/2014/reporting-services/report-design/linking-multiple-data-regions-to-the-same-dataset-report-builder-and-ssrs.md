@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 90c94a91-8fb2-42cb-b998-563691f30d2d
 caps.latest.revision: 7
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 11b4552c73c07f40e40c900aeb29bf738c554dc5
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: c17a66cff53551f9bb4aa6687b8529c45e7f42e4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36142427"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37301759"
 ---
 # <a name="linking-multiple-data-regions-to-the-same-dataset-report-builder-and-ssrs"></a>Liaison de plusieurs régions de données à un même dataset (Générateur de rapports et SSRS)
   Vous pouvez ajouter plusieurs régions de données à un rapport pour proposer des vues différentes des données d'un même dataset de rapport. Par exemple, vous pouvez afficher des données dans une table et les représenter dans un graphique. Pour ce faire, vous devez utiliser des étendues et des expressions identiques pour les expressions de filtre, les expressions de tri et les expressions de groupe appropriées.  
@@ -36,6 +36,6 @@ ms.locfileid: "36142427"
 ## <a name="see-also"></a>Voir aussi  
  [Graphiques &#40;Générateur de rapports et SSRS&#41;](charts-report-builder-and-ssrs.md)   
  [Listes &#40;Générateur de rapports et SSRS&#41;](tables-matrices-and-lists-report-builder-and-ssrs.md)   
- [Régions de données imbriquées &#40;rapport Générateur et SSRS&#41;](nested-data-regions-report-builder-and-ssrs.md)  
+ [Régions de données imbriquées &#40;Générateur de rapports et SSRS&#41;](nested-data-regions-report-builder-and-ssrs.md)  
   
   

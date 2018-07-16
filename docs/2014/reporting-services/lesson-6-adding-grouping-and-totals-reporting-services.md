@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: e3d61228-2aa4-42cc-955e-602dbf3406a7
 caps.latest.revision: 50
-author: markingmyname
-ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: c71c785f6d5cd5130223335830f53cc0fa8bf6f2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: c411b3780f1e3f5b91d00d08093f281a5daa286f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36039446"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37218879"
 ---
 # <a name="lesson-6-adding-grouping-and-totals-reporting-services"></a>Lesson 6: Adding Grouping and Totals (Reporting Services)
   Ajoutez un regroupement et des totaux à votre rapport pour organiser et synthétiser vos données.  
@@ -44,13 +44,13 @@ ms.locfileid: "36039446"
   
 2.  Si vous ne voyez pas le volet **Groupes de lignes** , cliquez avec le bouton droit sur l'aire de conception, puis sélectionnez **Vue** et cliquez sur **Regroupement**.  
   
-3.  À partir de la **les données de rapport** volet, faites glisser le `Date` au champ la **groupes de lignes** volet. Placez-le au-dessus de la ligne appelée **(Details)**.  
+3.  À partir de la **les données de rapport** volet, faites glisser le `Date` champ la **groupes de lignes** volet. Placez-le au-dessus de la ligne appelée **(Details)**.  
   
      Notez que le descripteur de ligne comporte maintenant un crochet, qui indique un groupe. En outre, le tableau présente désormais deux colonnes Date, placées de part et d'autre d'une ligne verticale en pointillé.  
   
      ![](../../2014/tutorials/media/rs-basictablegroups1design.gif "rs_BasicTableGroups1Design")  
   
-4.  À partir de la **les données de rapport** volet, faites glisser le `Order` au champ la **groupes de lignes** volet. Placez-le au-dessous du champ Date et au-dessus de la ligne **(Details)**.  
+4.  À partir de la **les données de rapport** volet, faites glisser le `Order` champ la **groupes de lignes** volet. Placez-le au-dessous du champ Date et au-dessus de la ligne **(Details)**.  
   
      Notez que le descripteur de ligne comporte maintenant deux crochets, qui indiquent deux groupes. Le tableau présente désormais deux `Order` colonnes, trop.  
   
@@ -88,7 +88,7 @@ ms.locfileid: "36039446"
   
 1.  Avec le bouton droit de la cellule Order, pointez sur **ajouter un Total**, puis cliquez sur **après**.  
   
-     Cette opération ajoute une nouvelle ligne contenant la somme de la quantité de la quantité et en dollars pour chaque jour et l’étiquette «**Total**» dans la colonne Order.  
+     Cette opération ajoute une nouvelle ligne contenant la somme des quantités et en dollars pour chaque jour et l’étiquette «**Total**» dans la colonne Order.  
   
 2.  Tapez le mot **quotidien** après le mot **Total** dans la même cellule. Vous obtenez : **Total quotidien**.  
   
@@ -102,7 +102,7 @@ ms.locfileid: "36039446"
   
 1.  Cliquez avec le bouton droit dans la cellule Date, pointez sur **Ajouter un total**, puis cliquez sur **Après**.  
   
-     Cette opération ajoute une nouvelle ligne contenant la somme des quantités et dollar dollars pour l’intégralité du rapport et le **Total** étiquette dans les `Date` colonne.  
+     Cette opération ajoute une nouvelle ligne contenant la somme de la quantité de quantité et en dollars pour l’intégralité du rapport et le **Total** étiquette dans le `Date` colonne.  
   
 2.  Tapez le mot **général** après le mot **Total** dans la même cellule. Vous obtenez : **Total général**.  
   
@@ -124,7 +124,7 @@ ms.locfileid: "36039446"
   
 2.  Dans la barre d'outils, cliquez sur **Projet** , puis sur **Propriétés du didacticiel...**  
   
-3.  Dans le **TargetServerURL** tapez le nom du nom de votre serveur de rapports, par exemple **http://\<nom_serveur > / reportserver**  
+3.  Dans le **TargetServerURL** tapez le nom du nom de votre serveur de rapports, par exemple **http://\<servername > / reportserver**  
   
 4.  Cliquez sur **OK**  
   
@@ -132,11 +132,11 @@ ms.locfileid: "36039446"
   
      Si vous voyez un message semblable à ce qui suit dans la fenêtre de sortie, c'est que le déploiement a été réalisé avec succès.  
   
-    > ------ Création démarrée : Projet : didacticiel, Configuration : débogage ------« Sales Orders.rdl » ignoré. Élément est à jour. Fin de la génération--0 erreur, 0 avertissement---début du déploiement : projet : didacticiel, Configuration : débogage---déploiement vers http://\<nom du serveur > / /reportserverdeploying report '/ tutorial/Sales Orders'. Déployer terminée--0 erreur, 0 avertissement === génération : 1 a réussi ou mis à jour, 0 a échoué, 0 a été ignoré === déployer : 1 a réussi, 0 a échoué, 0 a été ignoré ===  
+    > ------ Création démarrée : Projet : didacticiel, Configuration : débogage ------« Sales Orders.rdl » ignoré. Élément est à jour. Fin de la génération--0 erreur, 0 avertissement---début du déploiement : projet : tutorial, Configuration : débogage---déploiement vers http://\<nom du serveur > / /reportserverdeploying report '/ tutorial/Sales Orders'. Déployer terminée--0 erreur, 0 avertissement === générer : 1 a réussi ou mis à jour, 0 a échoué, 0 a été ignoré === déployer : 1 a réussi, 0 a échoué, 0 a été ignoré ===  
   
      Si un message d'erreur semblable au suivant s'affiche, vérifiez que vous disposez d'autorisations sur le serveur de rapports et que vous avez démarré [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] avec des privilèges d'administrateur.  
   
-    > « Les autorisations accordées à l’utilisateur ' XXXXXXXX\\< votre nom d’utilisateur\>' sont insuffisantes pour effectuer cette opération »  
+    > « Les autorisations accordées à l’utilisateur « XXXXXXXX\\< votre nom d’utilisateur\>' sont insuffisantes pour effectuer cette opération »  
   
 6.  Démarrez le Gestionnaire de rapports avec des privilèges d'administrateur ; cliquez, par exemple, avec le bouton droit sur l'icône d'Internet Explorer et sélectionnez **Exécuter en tant qu'administrateur**.  
   
@@ -148,6 +148,6 @@ ms.locfileid: "36039446"
  Vous avez réalisé le didacticiel de création d'un rapport de tableau de base.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Filtrer, regrouper et trier les données &#40;rapport Générateur et SSRS&#41;](report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)  
+ [Filtrer, regrouper et trier les données &#40;Générateur de rapports et SSRS&#41;](report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)  
   
   

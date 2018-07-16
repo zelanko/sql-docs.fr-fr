@@ -1,5 +1,5 @@
 ---
-title: "L'emplacement approuvé dans lequel le classeur est stocké n'autorise pas les connexions de données externes. Impossible d’actualiser les connexions suivantes : données PowerPivot | Documents Microsoft"
+title: "L'emplacement approuvé dans lequel le classeur est stocké n'autorise pas les connexions de données externes. Impossible d’actualiser les connexions suivantes : données PowerPivot | Microsoft Docs"
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: dc0cedfd-a7d0-40ef-bdd6-ea508130640a
 caps.latest.revision: 5
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 449ac77f0eaff4a5d3550711b18ec57751460918
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: dfe65034f58640f913374db2b4daad2de681d405
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36039394"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37234229"
 ---
 # <a name="the-trusted-location-where-the-workbook-is-stored-does-not-allow-external-data-connections-the-following-connections-failed-to-refresh-powerpivot-data"></a>L'emplacement approuvé dans lequel le classeur est stocké n'autorise pas les connexions de données externes. Échec de l'actualisation des connexions suivantes : Données PowerPivot
   Pour les classeurs Excel contenant les données PowerPivot, Excel Services retourne cette erreur s'il ne peut pas se connecter aux sources de données incorporées.  

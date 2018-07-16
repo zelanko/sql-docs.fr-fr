@@ -1,5 +1,5 @@
 ---
-title: Type de données de relation (ASSL) | Documents Microsoft
+title: Type de données de relation (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -12,15 +12,15 @@ ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: 73d7c48d-d8e0-4119-849d-b5f912d449e4
 caps.latest.revision: 4
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 81421605828b064644f0b9a0cfae2a7ed1b301a8
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: f4c5be48e7a5d4c5913a4bc881b6bd5b5c58ec57
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36141057"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37224039"
 ---
 # <a name="relationship-data-type-assl"></a>Type de données de relation (ASSL)
   Définit un type de données primitif représentant une relation dans une dimension.  
@@ -49,13 +49,13 @@ ms.locfileid: "36141057"
 |Relation|Élément|  
 |------------------|-------------|  
 |Éléments parents|None|  
-|Éléments enfants|[ID](../properties/id-element-assl.md), [Visible](../properties/visible-element-assl.md), [dimensionid](relationshipend-data-type-assl.md), [ToRelationshipEnd](relationshipend-data-type-assl.md)|  
+|Éléments enfants|[ID](../properties/id-element-assl.md), [Visible](../properties/visible-element-assl.md), [FromRelationshipEnd](relationshipend-data-type-assl.md), [ToRelationshipEnd](relationshipend-data-type-assl.md)|  
 |Éléments dérivés||  
   
 ## <a name="remarks"></a>Notes  
  L’élément correspondant dans le modèle d’objet objets AMO (Analysis Management) est <xref:Microsoft.AnalysisServices.Relationship>.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Types de données de script langage XML Analysis Services &#40;ASSL&#41;](analysis-services-scripting-language-xml-data-types-assl.md)  
+ [Types Analysis Services Scripting Language XML données &#40;ASSL&#41;](analysis-services-scripting-language-xml-data-types-assl.md)  
   
   

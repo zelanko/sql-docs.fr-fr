@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - automatic report server tasks
 - rs utility
@@ -21,13 +21,13 @@ ms.assetid: bd6f958f-cce6-4e79-8a0f-9475da2919ce
 caps.latest.revision: 55
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 26e1dccb1d72ac0a743a545e29b175f5e8bb79fe
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 9889c2a14d48a7c2bccd7087c96567e92e1e4112
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36045512"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37255461"
 ---
 # <a name="rsexe-utility-ssrs"></a>Utilitaire RS.exe (SSRS)
   L'utilitaire rs.exe traite le script que vous fournissez dans un fichier d'entrée. Utilisez cet utilitaire pour automatiser les tâches de déploiement et d'administration du serveur de rapports.  
@@ -77,7 +77,7 @@ ms.locfileid: "36045512"
  `-u` [*domaine*\\]*nom d’utilisateur*  
  (Facultatif) Spécifie un compte d'utilisateur utilisé pour se connecter au serveur de rapports. Si `-u` et `-p` sont absents, le compte d'utilisateur Windows actuel est utilisé.  
   
- `-p` *Mot de passe*  
+ `-p` *mot de passe*  
  (Obligatoire si `-u` est spécifié) spécifie le mot de passe à utiliser avec le `-u` argument. Cette valeur respecte la casse.  
   
  `-e`  
@@ -93,11 +93,11 @@ ms.locfileid: "36045512"
   
  Si une valeur n'est pas spécifiée, le point de terminaison Mgmt2005 est utilisé. Pour plus d’informations sur les points de terminaison SOAP, consultez [Report Server Web Service Endpoints](../report-server-web-service/methods/report-server-web-service-endpoints.md).  
   
- `-l` *délai_attente*  
+ `-l` *time_out*  
  (Facultatif) Spécifie le délai d'expiration de la connexion au serveur, en secondes. La valeur par défaut est 60 secondes. Si vous ne spécifiez pas de délai d'expiration, la valeur par défaut est utilisée. La valeur `0` indique que la connexion n'arrive jamais à expiration.  
   
  **-b**  
- (Facultatif) Spécifie que les commandes du fichier script s'exécutent dans un lot. En cas d'échec d'une commande, l'ensemble du lot est annulé. Certaines commandes ne peuvent pas être traitées par lot ; leur exécution se déroule normalement. Seules les exceptions générées qui ne sont pas gérées par le code du script entraînent une annulation. Si le script gère une exception et se poursuit normalement à partir de `Main`, le lot est validé. Si vous omettez ce paramètre, les commandes s'exécutent sans créer de lot. Pour plus d’informations, consultez [Batching Methods](../report-server-web-service-net-framework-soap-headers/batching-methods.md).  
+ (Facultatif) Spécifie que les commandes du fichier script s'exécutent dans un lot. En cas d'échec d'une commande, l'ensemble du lot est annulé. Certaines commandes ne peuvent pas être traitées par lot ; leur exécution se déroule normalement. Seules les exceptions générées qui ne sont pas gérées par le code du script entraînent une annulation. Si le script gère une exception et retourne normalement à partir de `Main`, le lot est validé. Si vous omettez ce paramètre, les commandes s'exécutent sans créer de lot. Pour plus d’informations, consultez [Batching Methods](../report-server-web-service-net-framework-soap-headers/batching-methods.md).  
   
  `-v` *GlobalVar*  
  (Facultatif) Spécifie les variables globales utilisées dans le script. Si le script utilise des variables globales, vous devez spécifier cet argument. La valeur que vous spécifiez doit être une valeur correcte définie dans le fichier .rss pour les variables globales. Vous devez spécifier une variable globale pour chaque argument **–v** .  
@@ -106,7 +106,7 @@ ms.locfileid: "36045512"
   
  `rs.exe -i myScriptFile.rss -s http://myServer/reportserver -v parentFolder="Financial Reports"`  
   
- Les variables globales sont créées avec les noms donnés et prennent les valeurs fournies. Par exemple, **- v un =**»`1`» **- v b =**»`2`» des résultats dans une variable nommée `a` avec la valeur «`1`» et une variable **b**avec la valeur «`2`».  
+ Les variables globales sont créées avec les noms donnés et prennent les valeurs fournies. Par exemple, **- v un =**»`1`» **- v b =**»`2`» des résultats dans une variable nommée `a` avec une valeur de «`1`» et une variable **b**avec la valeur «`2`».  
   
  Les variables globales sont accessibles à n'importe quelle fonction du script. Une barre oblique inverse suivie d’un guillemet (**\\"**) est interprétée comme un guillemet double. Les guillemets sont obligatoires uniquement si la chaîne contient un espace. Les noms de variables doivent être valides pour [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]; ils doivent commencer par un caractère alphabétique ou un trait de soulignement et ne contenir que des lettres, des nombres ou des traits de soulignement. Les mots réservés ne peuvent pas être utilisés en tant que noms de variables. Pour plus d’informations sur l’utilisation de variables globales, consultez [Collections intégrées dans les expressions &#40;Générateur de rapports et SSRS&#41;](../report-design/built-in-collections-in-expressions-report-builder.md).  
   

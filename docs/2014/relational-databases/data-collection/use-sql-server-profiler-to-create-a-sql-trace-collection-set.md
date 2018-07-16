@@ -1,5 +1,5 @@
 ---
-title: Utiliser SQL Server Profiler pour créer un jeu de collecte Trace SQL (SQL Server Management Studio) | Documents Microsoft
+title: Utiliser SQL Server Profiler pour créer un jeu de Collection de Trace SQL (SQL Server Management Studio) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - SQL Trace collector set
 ms.assetid: b6941dc0-50f5-475d-82eb-ce7c68117489
 caps.latest.revision: 19
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 5abf2baf12e8ae265020e9d4a5766506e9bcace3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 50754e92bad8bb6241129b53339b173d6d1d1bf5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36052886"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37260855"
 ---
 # <a name="use-sql-server-profiler-to-create-a-sql-trace-collection-set-sql-server-management-studio"></a>Utiliser SQL Server Profiler pour créer un jeu d'éléments de collecte Trace SQL (SQL Server Management Studio)
   Dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] , vous pouvez exploiter les fonctions de trace côté serveur de [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] pour exporter une définition de trace que vous pouvez utiliser afin de créer un jeu d’éléments de collecte qui utilise le type de collecteur Trace SQL générique. Ce processus se décompose en deux parties :  
@@ -76,7 +76,7 @@ ms.locfileid: "36052886"
   
     1.  Dans la liste de filtres, cliquez sur **Durée**.  
   
-    2.  Dans la fenêtre de l’opérateur booléen, développez le **égal ou supérieur** nœud, tapez `80` comme valeur, puis cliquez sur **OK**.  
+    2.  Dans la fenêtre de l’opérateur booléen, développez le **supérieur ou égal** nœud, tapez `80` comme la valeur, puis cliquez sur **OK**.  
   
 9. Cliquez sur **Exécuter** pour démarrer la trace.  
   
@@ -110,7 +110,7 @@ ms.locfileid: "36052886"
   
     2.  Développez **Gestion**, puis **Collecte de données**.  
   
-     Le `SPROC_CollectionSet` jeu apparaît au même niveau que le **jeux de regroupement de données système** nœud. Par défaut, le jeu d'éléments de collecte est désactivé.  
+     Le `SPROC_CollectionSet` collection apparaît au même niveau que le **jeux d’éléments de données de système** nœud. Par défaut, le jeu d'éléments de collecte est désactivé.  
   
 6.  Utilisez l'Explorateur d'objets pour modifier les propriétés de SPROC_CollectionSet, tel que le mode de collecte et la planification de téléchargement. Procédez de la même manière que pour les jeux d'éléments de collecte de données système fournis avec le collecteur de données.  
   

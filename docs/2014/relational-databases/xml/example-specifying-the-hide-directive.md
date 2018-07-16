@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - dbe-xml
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - HIDE directive
 ms.assetid: 87504d87-1cbd-412a-9041-47884b6efcec
 caps.latest.revision: 10
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 38ec212177dc13d823ceb3f1927cceba645d14f9
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 5069864e30f02d02fe7d3bf02324c013f6a69219
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36038528"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37252051"
 ---
 # <a name="example-specifying-the-hide-directive"></a>Exemple : spécification de la directive HIDE
   Cet exemple illustre l'utilisation de la directive **HIDE** . Cette directive est utile quand vous souhaitez que la requête renvoie un attribut pour classer les lignes de la table universelle renvoyée par la requête, sans que cet attribut figure dans le document XML obtenu au final.  

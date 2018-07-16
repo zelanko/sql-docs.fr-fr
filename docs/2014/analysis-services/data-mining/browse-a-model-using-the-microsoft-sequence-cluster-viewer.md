@@ -1,5 +1,5 @@
 ---
-title: Parcourir un modèle à l’aide de la séquence de Microsoft Cluster Viewer | Documents Microsoft
+title: Explorer un modèle à l’aide de la séquence de Microsoft Cluster Viewer | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Sequence Cluster Viewer
 - clusters [Analysis Services]
@@ -21,15 +21,15 @@ helpviewer_keywords:
 - transitions [Analysis Services]
 ms.assetid: 3ada00aa-da9e-488a-9f53-c3e188f81f84
 caps.latest.revision: 36
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 37a7d3c5be648c1861dbbb33ac20a824e462296f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 14b1cb2c1aff17b9953865846ba2d4d100132397
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36141434"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37276215"
 ---
 # <a name="browse-a-model-using-the-microsoft-sequence-cluster-viewer"></a>Explorer un modèle à l'aide de la visionneuse de l'algorithme MSC (Microsoft Sequence Cluster)
   La Visionneuse de l’algorithme MSC ( [!INCLUDE[msCoName](../../includes/msconame-md.md)] Sequence Clustering) de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] affiche les modèles d’exploration de données qui sont générés avec l’algorithme MSC ( [!INCLUDE[msCoName](../../includes/msconame-md.md)] Sequence Clustering). L’algorithme MSC ( [!INCLUDE[msCoName](../../includes/msconame-md.md)] Sequence Clustering) est un algorithme d’analyse de séquence conçu pour l’exploration des données qui contiennent des événements pouvant être liés par des chemins consécutifs, ou *séquences*. Pour plus d’informations sur cet algorithme, consultez [Algorithme MSC (Microsoft Sequence Clustering)](microsoft-sequence-clustering-algorithm.md).  
@@ -65,7 +65,7 @@ ms.locfileid: "36141434"
  [Retour au début](#BKMK_ViewerTabs)  
   
 ###  <a name="BKMK_Profile"></a> Profils du cluster  
- L’onglet **Profil du cluster** fournit une vue d’ensemble des clusters créés par l’algorithme de votre modèle. Chacune des colonnes situées après la colonne **Remplissage** dans la grille représente un cluster qui a été découvert par le modèle. Le \<attribut > .samples ligne représente plusieurs séquences de données qui existent dans le cluster, et le \<attribut > ligne décrit tous les éléments que le cluster contient et leur distribution globale.  
+ L’onglet **Profil du cluster** fournit une vue d’ensemble des clusters créés par l’algorithme de votre modèle. Chacune des colonnes situées après la colonne **Remplissage** dans la grille représente un cluster qui a été découvert par le modèle. Le \<attribut > .samples ligne représente les différentes séquences de données qui existent dans le cluster, et le \<attribut > ligne décrit tous les éléments que le cluster contient et leur distribution globale.  
   
  L’option **Barres de l’histogramme** contrôle le nombre de barres qui sont visibles dans l’histogramme. Si le nombre réel de barres est supérieur au nombre de barres à afficher, les barres les plus importantes sont conservées et le reste des barres est regroupé dans un compartiment gris.  
   
@@ -97,7 +97,7 @@ ms.locfileid: "36141434"
 ## <a name="see-also"></a>Voir aussi  
  [Tâches de la visionneuse modèle d’exploration de données et de procédures](mining-model-viewer-tasks-and-how-tos.md)   
  [Tâches de la visionneuse modèle d’exploration de données et de procédures](mining-model-viewer-tasks-and-how-tos.md)   
- [Algorithme de Microsoft Sequence Clustering](microsoft-sequence-clustering-algorithm.md)   
+ [Algorithme de Clustering de séquence de Microsoft](microsoft-sequence-clustering-algorithm.md)   
  [Outils d’exploration de données](data-mining-tools.md)   
  [Visionneuses de modèle d’exploration de données](data-mining-model-viewers.md)   
  [Explorer un modèle à l’aide de Microsoft Cluster Viewer](browse-a-model-using-the-microsoft-cluster-viewer.md)  

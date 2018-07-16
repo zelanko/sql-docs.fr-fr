@@ -1,5 +1,5 @@
 ---
-title: Élément ReportingWeekToMonthPattern (ASSL) | Documents Microsoft
+title: Élément ReportingWeekToMonthPattern (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - ReportingWeekToMonthPattern element
 ms.assetid: 8d7c694d-d5c5-4faa-af78-155779e84fe9
 caps.latest.revision: 31
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: b90c07018747c7ad04bbd2324bb0bd697f7d774c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: fcbbf8a7783d152c66ec4f222ba79b00181b60f5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36139894"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37324819"
 ---
 # <a name="reportingweektomonthpattern-element-assl"></a>Élément ReportingWeekToMonthPattern (ASSL)
   Définit le modèle de semaine en mois de création de rapports pour le [TimeBinding](../data-type/binding-data-type-assl.md) élément.  
@@ -66,11 +66,11 @@ ms.locfileid: "36139894"
   
 |Valeur|Description|  
 |-----------|-----------------|  
-|*445*|le premier mois du trimestre, 4 semaines dans le deuxième mois et cinq semaines dans le troisième mois 4 semaines.|  
-|*454*|le premier mois du trimestre, 5 semaines dans le deuxième mois et 4 semaines dans le troisième mois 4 semaines.|  
-|*544*|5 semaines le premier mois du trimestre, 4 semaines dans le deuxième mois et 4 semaines dans le troisième mois.|  
+|*445*|4 semaines dans le premier mois du trimestre, 4 semaines dans le deuxième mois et 5 semaines dans le troisième mois.|  
+|*454*|4 semaines dans le premier mois du trimestre, 5 semaines dans le deuxième mois et 4 semaines dans le troisième mois.|  
+|*544*|5 semaines dans le premier mois du trimestre, 4 semaines dans le deuxième mois et 4 semaines dans le troisième mois.|  
   
- L’énumération qui correspond aux valeurs autorisées pour `ReportingWeekToMonthPattern` dans l’objet d’objets AMO (Analysis Management) est modèle <xref:Microsoft.AnalysisServices.ReportingWeekToMonthPattern>.  
+ L’énumération qui correspond aux valeurs autorisées pour `ReportingWeekToMonthPattern` dans l’objet d’objets AMO (Analysis Management) modèle est <xref:Microsoft.AnalysisServices.ReportingWeekToMonthPattern>.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Propriétés &#40;ASSL&#41;](properties-assl.md)  

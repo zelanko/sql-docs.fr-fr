@@ -1,5 +1,5 @@
 ---
-title: Éditeur du Gestionnaire de connexions de fichier (Page avancé) plats | Documents Microsoft
+title: Éditeur du Gestionnaire de connexions de fichier (Page avancé) plats | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.ffileconnection.columnproperties.f1
 helpviewer_keywords:
 - Flat File Connection Manager Editor
 ms.assetid: 58aa3dee-4774-4e0b-a956-96d199be4c3a
 caps.latest.revision: 35
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 3b2aa339c8f68d65bdb1566ff781facccf927358
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 364328b3ce519b849b4e7a0c6c7a725f1c24a14b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36141835"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37219659"
 ---
 # <a name="flat-file-connection-manager-editor-advanced-page"></a>Éditeur du gestionnaire de connexions de fichiers plats (page Avancé)
   La page **Avancé** de la boîte de dialogue **Éditeur du gestionnaire de connexions de fichiers plats** vous permet de définir des propriétés qui spécifient la manière dont Integration Services lit et écrit des données dans les fichiers plats. Vous pouvez modifier les noms des colonnes dans le fichier plat et définir des propriétés qui incluent le type de données et des séparateurs pour chaque colonne du fichier.  

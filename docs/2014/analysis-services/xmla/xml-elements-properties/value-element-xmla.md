@@ -1,5 +1,5 @@
 ---
-title: Valeur d’élément (XMLA) | Documents Microsoft
+title: Valeur d’élément (XMLA) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -24,18 +24,18 @@ helpviewer_keywords:
 - Value element
 ms.assetid: f87ca7f8-d9fe-4730-a706-5d50fcfe21df
 caps.latest.revision: 14
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: 7a422298e8d1b77f3d036b4cea5761dc6dc6dde4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: 8defb7fe2115bd1ea9ccb7b3f23b0717db8b9aef
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36039586"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37263247"
 ---
 # <a name="value-element-xmla"></a>Élément Value (XMLA)
-  Contient la valeur souhaitée d’un [attribut](attribute-element-xmla.md) élément à ajouter à un [insérer](../xml-elements-commands/insert-element-xmla.md) commande, ou un [cellule](cell-element-xmla.md) élément être mis à jour par une [UpdateCells](../xml-elements-commands/updatecells-element-xmla.md)commande.  
+  Contient la valeur souhaitée d’un [attribut](attribute-element-xmla.md) élément doit être ajouté par un [insérer](../xml-elements-commands/insert-element-xmla.md) commande, ou un [cellule](cell-element-xmla.md) élément à mettre à jour par un [UpdateCells](../xml-elements-commands/updatecells-element-xmla.md)commande.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -73,8 +73,8 @@ ms.locfileid: "36039586"
  Pour plus d’informations sur la mise à jour des cellules, consultez [Mise à jour de cellules &#40;XMLA&#41;](../../multidimensional-models-scripting-language-assl-xmla/updating-cells-xmla.md).  
   
 ## <a name="see-also"></a>Voir aussi  
- [L’élément CellOrdinal &#40;XMLA&#41;](cellordinal-element-xmla.md)   
- [Insérer l’élément &#40;XMLA&#41;](../xml-elements-commands/insert-element-xmla.md)   
+ [Élément CellOrdinal &#40;XMLA&#41;](cellordinal-element-xmla.md)   
+ [Insérer un élément &#40;XMLA&#41;](../xml-elements-commands/insert-element-xmla.md)   
  [Élément UpdateCells &#40;XMLA&#41;](../xml-elements-commands/updatecells-element-xmla.md)   
  [Propriétés &#40;XMLA&#41;](xml-elements-properties.md)  
   

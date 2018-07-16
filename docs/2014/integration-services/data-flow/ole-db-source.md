@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.oledbsource.f1
 helpviewer_keywords:
@@ -18,13 +18,13 @@ ms.assetid: f87cc5f6-b078-40f3-9d87-7a65e13e4c86
 caps.latest.revision: 69
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 077ccf4ad3793db7bbf067460f42cf8c8e98b427
-ms.sourcegitcommit: d463f543e8db4a768f8e9736ff28fedb3fb17b9f
+manager: craigg
+ms.openlocfilehash: b9ff94d28a55da5d199647af200c6179ccadc2d2
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/22/2018
-ms.locfileid: "36324673"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37271315"
 ---
 # <a name="ole-db-source"></a>Source OLE DB
   La source OLE DB extrait des données d'une série de bases de données relationnelles compatibles OLE DB à l'aide d'une table de base de données, d'une vue ou d'une commande SQL. Par exemple, la source OLE DB peut extraire des données de tables de bases de données [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office Access ou [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
@@ -121,7 +121,7 @@ ms.locfileid: "36324673"
   
 ## <a name="see-also"></a>Voir aussi  
  [Destination OLE DB](ole-db-destination.md)   
- [Services d’intégration &#40;SSIS&#41; Variables](../integration-services-ssis-variables.md)   
+ [Integration Services &#40;SSIS&#41; Variables](../integration-services-ssis-variables.md)   
  [Flux de données](data-flow.md)  
   
   

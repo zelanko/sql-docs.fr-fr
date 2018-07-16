@@ -1,5 +1,5 @@
 ---
-title: Élément OrderByAttributeID (ASSL) | Documents Microsoft
+title: Élément OrderByAttributeID (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - OrderByAttributeID element
 ms.assetid: 41d7b650-ac40-4f1a-850d-2f81a19b28cb
 caps.latest.revision: 33
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 42d8e9246340b72fad871e92bc30008c68ce786a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: c336d9c210c9e6fb5ffa44e5f1d37a445e0e5694
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36142116"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37235609"
 ---
 # <a name="orderbyattributeid-element-assl"></a>Élément OrderByAttributeID (ASSL)
   Identifie un autre attribut selon lequel trier les membres de la [Dimension](../data-type/dimensionattribute-data-type-assl.md) attribut.  
@@ -62,9 +62,9 @@ ms.locfileid: "36142116"
 |Éléments enfants|None|  
   
 ## <a name="remarks"></a>Notes  
- Le `OrderByAttributeID` élément est utilisé uniquement lorsque la valeur de la [OrderBy](orderby-element-assl.md) , élément pour les `DimensionAttribute` a la valeur *AttributeKey* ou *AttributeName*.  
+ Le `OrderByAttributeID` élément est utilisé uniquement lorsque la valeur de la [OrderBy](orderby-element-assl.md) élément pour le `DimensionAttribute` a la valeur *AttributeKey* ou *AttributeName*.  
   
- L’élément qui correspond au parent de `OrderByAttributeID` dans l’objet d’objets AMO (Analysis Management) est modèle <xref:Microsoft.AnalysisServices.DimensionAttribute>.  
+ L’élément qui correspond au parent de `OrderByAttributeID` dans l’objet d’objets AMO (Analysis Management) modèle est <xref:Microsoft.AnalysisServices.DimensionAttribute>.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Propriétés &#40;ASSL&#41;](properties-assl.md)  

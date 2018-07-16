@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - snapshots [SQL Server replication], alternate folder locations
 - snapshot replication [SQL Server], alternate folder locations
 - alternate snapshot folders [SQL Server replication]
 ms.assetid: 9293f0eb-5531-47ec-b6e2-0392823ce5cc
 caps.latest.revision: 40
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: ef44144a53ce16622bc834627aa800a42a65438b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 48168354fd6609e4e43571c53c99cb80193aa98e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36039471"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37256111"
 ---
 # <a name="specify-an-alternate-snapshot-folder-location-sql-server-management-studio"></a>Spécifier un autre emplacement de dossier d'instantané (SQL Server Management Studio)
   Spécifiez un autre emplacement d’instantané dans la page **Instantané** de la boîte de dialogue **Propriétés de publication - \<Publication>**. Pour plus d'informations sur l'accès à cette boîte de dialogue, consultez [Afficher et modifier les propriétés d’un serveur de publication](view-and-modify-publication-properties.md).  
