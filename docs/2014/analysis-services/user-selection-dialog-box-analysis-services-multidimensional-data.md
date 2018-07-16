@@ -1,5 +1,5 @@
 ---
-title: Boîte de dialogue de sélection utilisateur (Analysis Services - données multidimensionnelles) | Documents Microsoft
+title: Boîte de dialogue de sélection utilisateur (Analysis Services - données multidimensionnelles) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.userselectiondialog.f1
 ms.assetid: f7261d5e-ff2a-4597-a188-1946f343a32a
 caps.latest.revision: 10
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 44372f10a991f95642f8f67787d31f7b3c9bbc73
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 111c599b287ddf9ad75a8e7c98eaab121452cf33
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36154260"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37287955"
 ---
 # <a name="user-selection-dialog-box-analysis-services---multidimensional-data"></a>Boîte de dialogue Sélection de l'utilisateur (Analysis Services - Données multidimensionnelles)
   Utilisez la boîte de dialogue **Sélection de l’utilisateur** de [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] et [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] pour sélectionner les utilisateurs sur lesquels filtrer les requêtes stockées dans le journal des requêtes pour l’Assistant Optimisation de l’utilisation.  
@@ -34,6 +34,6 @@ ms.locfileid: "36154260"
   
 ## <a name="see-also"></a>Voir aussi  
  [Concepteurs et boîtes de dialogue Analysis Services &#40;données multidimensionnelles&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)   
- [Spécifiez les critères de requête &#40;optimisation basée sur l’utilisation de l’Assistant&#41;](specify-query-criteria-usage-based-optimization-wizard.md)  
+ [Spécifier des critères de requête &#40;Assistant Optimisation basée sur l’utilisation&#41;](specify-query-criteria-usage-based-optimization-wizard.md)  
   
   

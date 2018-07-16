@@ -1,5 +1,5 @@
 ---
-title: Supprimer une vue de Source de données (Analysis Services) | Documents Microsoft
+title: Supprimer une vue de Source de données (Analysis Services) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - deleting data source views
 - data source views [Analysis Services], deleting
 - removing data source views
 ms.assetid: ae3f5ca0-ecbf-4b52-8386-eb457719d854
 caps.latest.revision: 36
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 9e4467d476acbb45e0ec18c7a28fd1a9a143c386
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: c8d04731a4b555b6e4afe9c8697fc5c4f907a9a1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36154297"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37284017"
 ---
 # <a name="delete-a-data-source-view-analysis-services"></a>Supprimer une vue de source de données (Analysis Services)
   Si vous n’utilisez plus de vue de source de données (DSV) dans un projet OLAP, vous pouvez la supprimer du projet dans [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)].  
@@ -38,6 +38,6 @@ ms.locfileid: "36154297"
   
 ## <a name="see-also"></a>Voir aussi  
  [Vues de sources de données dans les modèles multidimensionnels](data-source-views-in-multidimensional-models.md)   
- [Modifier les propriétés dans une vue de Source de données &#40;Analysis Services&#41;](change-properties-in-a-data-source-view-analysis-services.md)  
+ [Modifier les propriétés d’une vue de Source de données &#40;Analysis Services&#41;](change-properties-in-a-data-source-view-analysis-services.md)  
   
   

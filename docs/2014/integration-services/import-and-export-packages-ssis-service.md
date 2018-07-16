@@ -1,5 +1,5 @@
 ---
-title: Importer et exporter des Packages (Service SSIS) | Documents Microsoft
+title: Importer et exporter des Packages (Service SSIS) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - packages [Integration Services], importing
 - packages [Integration Services], exporting
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - exporting packages
 ms.assetid: ef18ec11-b536-47d9-abd1-794099f43486
 caps.latest.revision: 50
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 8ee81709bb8f0c9b30ab528d78a21b4ff72c1eed
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 96f87aedbadd6535fc6e82feb92a822a85b49f0c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36143948"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37322689"
 ---
 # <a name="import-and-export-packages-ssis-service"></a>Importer et exporter des packages (Service SSIS)
     

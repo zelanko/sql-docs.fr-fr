@@ -1,5 +1,5 @@
 ---
-title: 'Tâche 11 : Publication de la Base de connaissances | Documents Microsoft'
+title: 'Tâche 11 : Publication de la Base de connaissances | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -10,25 +10,25 @@ ms.technology:
 - integration-services
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 9ba826a0-11c5-4819-9435-3e17d53cffa7
 caps.latest.revision: 6
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: d83e55bf66f6d8f15a79e687467936b60eb3679a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 90a030f55e1fc21ef43caa27e6ad6389e48b4b3c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36152245"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37232469"
 ---
 # <a name="task-11-publishing-the-knowledge-base"></a>Tâche 11 : Publication de la base de connaissances
   Dans cette tâche, vous allez publier la base de connaissances. Une base de connaissances publiée peut être utilisée pour les activités de nettoyage ou de mise en correspondance dans un projet de qualité des données.  
   
-1.  Cliquez sur **Terminer** situé en bas de la fenêtre.  
+1.  Cliquez sur **Terminer** bouton en bas de la fenêtre.  
   
-2.  Cliquez sur **publier** dans les **SQL Server Data Quality Services** boîte de dialogue.  
+2.  Cliquez sur **publier** dans le **SQL Server Data Quality Services** boîte de dialogue.  
   
 3.  Cliquez sur **OK** pour fermer le message.  
   

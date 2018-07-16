@@ -1,5 +1,5 @@
 ---
-title: Élément (XMLA) de sauvegarde | Documents Microsoft
+title: Sauvegarde, élément (XMLA) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -24,18 +24,18 @@ helpviewer_keywords:
 - Backup command
 ms.assetid: 5bcbc14c-9db9-45b2-99de-f3a265bcb0c4
 caps.latest.revision: 19
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: bd1f2317c28acd2e6037520334168491ec0bbcbe
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: a571681f52fb34e55df238229f659aa883bc84ac
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36155110"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37215649"
 ---
 # <a name="backup-element-xmla"></a>Élément Backup (XMLA)
-  Sauvegarde une [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] base de données à un fichier de sauvegarde.  
+  Sauvegarde un [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] base de données à un fichier de sauvegarde.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -71,9 +71,9 @@ ms.locfileid: "36155110"
 |Éléments enfants|[AllowOverwrite](../xml-elements-properties/allowoverwrite-element-xmla.md), [ApplyCompression](../xml-elements-properties/applycompression-element-xmla.md), [BackupRemotePartitions](../xml-elements-properties/backupremotepartitions-element-xmla.md), [fichier](../xml-elements-properties/file-element-xmla.md), [emplacements](../xml-elements-properties/locations-element-xmla.md), [ Objet](../xml-elements-properties/object-element-xmla.md), [mot de passe](../xml-elements-properties/password-element-xmla.md), [sécurité](../xml-elements-properties/security-element-xmla.md)|  
   
 ## <a name="remarks"></a>Notes  
- Le `Backup` commande sauvegarde le [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] base de données spécifiée dans le [objet](../xml-elements-properties/object-element-xmla.md) élément à un fichier de sauvegarde et sauvegarde éventuellement les partitions distantes pour les fichiers de sauvegarde distants. Si l'élément `Object` fait référence à un objet autre qu'une base de données [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)], une erreur se produit.  
+ Le `Backup` commande sauvegarde la [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] base de données spécifiée dans le [objet](../xml-elements-properties/object-element-xmla.md) élément dans un fichier de sauvegarde et sauvegarde éventuellement des partitions distantes dans des fichiers de sauvegarde distants. Si l'élément `Object` fait référence à un objet autre qu'une base de données [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)], une erreur se produit.  
   
- Les informations de la `Backup` commande sauvegarde varie selon le mode de stockage utilisé par les objets dans la base de données. Le tableau suivant répertorie les informations sauvegardées selon le mode de stockage utilisé.  
+ Quelles informations le `Backup` commande sauvegarde varie selon le mode de stockage utilisé par les objets dans la base de données. Le tableau suivant répertorie les informations sauvegardées selon le mode de stockage utilisé.  
   
 |Mode de stockage|Informations sauvegardées|  
 |------------------|-----------------------------------|  
@@ -81,9 +81,9 @@ ms.locfileid: "36155110"
 |Hybrid OLAP (HOLAP)|Agrégations et métadonnées|  
 |OLAP relationnel (ROLAP)|Métadonnées|  
   
- Pendant un `Backup` de commande, un verrou partagé est placé sur le [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] base de données spécifiée dans le `Object` élément. Le verrou partagé est libéré lorsque la `Backup` commande est terminée.  
+ Pendant un `Backup` commande, un verrou partagé est placé sur le [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] base de données spécifiée dans le `Object` élément. Le verrou partagé est libéré lorsque la `Backup` commande est terminée.  
   
- Plusieurs `Backup` commandes peuvent être exécutées en parallèle, si les commandes sont inclus dans le [parallèles](../xml-elements-properties/parallel-element-xmla.md) collection d’un [lot](batch-element-xmla.md) commande. La collection `Parallel` permet de sauvegarder une base de données dans plusieurs fichiers de sauvegarde simultanément.  
+ Plusieurs `Backup` commandes peuvent être exécutées en parallèle, si les commandes sont incluses dans le [parallèles](../xml-elements-properties/parallel-element-xmla.md) collection d’un [Batch](batch-element-xmla.md) commande. La collection `Parallel` permet de sauvegarder une base de données dans plusieurs fichiers de sauvegarde simultanément.  
   
  Pour plus d’informations sur la sauvegarde et restauration des bases de données, consultez [sauvegarde, restauration et synchronisation de bases de données de &#40;XMLA&#41;](../../multidimensional-models-scripting-language-assl-xmla/backing-up-restoring-and-synchronizing-databases-xmla.md).  
   

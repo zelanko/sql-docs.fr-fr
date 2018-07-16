@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - items [Reporting Services], expressions
 - data [Reporting Services], expressions
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - SQL Server Reporting Services, expressions
 ms.assetid: ae8a0166-2ccc-45f4-8d28-c150da7b73de
 caps.latest.revision: 76
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 9a313408046919de0c3a07739792d36b88eafa4b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: 6a239f80c3b560e60ca0b60b9a9fa7deb68a20a8
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36154340"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37220849"
 ---
 # <a name="custom-code-and-assembly-references-in-expressions-in-report-designer-ssrs"></a>Code personnalisé et références d'assembly dans les expressions du Concepteur de rapports (SSRS)
   Vous pouvez ajouter des références à du code personnalisé incorporé dans un rapport ou à des assemblys personnalisés que vous générez et enregistrez sur votre ordinateur et déployez sur le serveur de rapports. L'incorporation de code convient dans le cas de constantes personnalisées, de fonctions complexes ou de fonctions utilisées plusieurs fois dans un même rapport. Quant aux assemblys personnalisés, il est préférable de les utiliser si vous voulez centraliser du code en un emplacement unique et le partager en vue de son utilisation par plusieurs rapports. Le code personnalisé peut inclure de nouvelles constantes personnalisées, variables, fonctions ou sous-routines. Vous pouvez inclure des références en lecture seule à des collections intégrées, telles que la collection de paramètres. Cependant, les fonctions personnalisées ne peuvent pas recevoir des ensembles de valeurs de données de rapport : les agrégations personnalisées ne sont notamment pas prises en charge.  
@@ -71,13 +71,13 @@ ms.locfileid: "36154340"
 ##  <a name="Embedded"></a> Intégration de code incorporé  
  Pour ajouter du code incorporé à un rapport, utilisez l'onglet Code de la boîte de dialogue **Propriétés du rapport** . Le bloc de code que vous créez peut contenir plusieurs méthodes. Les méthodes du code incorporé doivent être écrites en [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] et doivent être basées sur des instances. Le processeur de rapports ajoute automatiquement des références pour les espaces de noms System.Convert et System.Math. Utilisez la page **Références** de la boîte de dialogue **Propriétés du rapport** pour ajouter des références d'assembly supplémentaires. Pour plus d’informations, consultez [Ajouter une référence d’assembly à un rapport &#40;SSRS&#41;](add-an-assembly-reference-to-a-report-ssrs.md).  
   
- Les méthodes du code incorporé sont disponibles par l'intermédiaire d'un membre `Code` globalement défini. Vous pouvez y accéder en faisant référence à la `Code` membre et le nom de la méthode. L’exemple suivant appelle la méthode `ToUSD`, qui convertit la valeur dans la `StandardCost` champ à une valeur exprimée en dollars :  
+ Les méthodes du code incorporé sont disponibles par l'intermédiaire d'un membre `Code` globalement défini. Vous pouvez y accéder en faisant référence à la `Code` membre et le nom de la méthode. L’exemple suivant appelle la méthode `ToUSD`, qui convertit la valeur dans le `StandardCost` champ à une valeur exprimée en dollars :  
   
 ```  
 =Code.ToUSD(Fields!StandardCost.Value)  
 ```  
   
- Pour faire référence à des collections intégrées dans votre code personnalisé, incluez une référence à la fonction intégrée `Report` objet :  
+ Pour faire référence à des collections intégrées dans votre code personnalisé, incluez une référence à intégrés `Report` objet :  
   
 ```  
 =Report.Parameters!Param1.Value  
@@ -105,7 +105,7 @@ Public Dim MyDoubleVersion As Double = 123.456
   
  `=Code.FixSpelling(Fields!SubCategory.Value)`  
   
- Le code suivant, lorsqu'il est incorporé dans un bloc de code de définition de rapport, affiche une implémentation de la méthode `FixSpelling`. Cet exemple vous montre comment utiliser une référence complète à la [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] `StringBuilder` classe.  
+ Le code suivant, lorsqu'il est incorporé dans un bloc de code de définition de rapport, affiche une implémentation de la méthode `FixSpelling`. Cet exemple vous montre comment utiliser une référence qualifiée complète pour le [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] `StringBuilder` classe.  
   
 ```vb  
 Public Function FixSpelling(ByVal s As String) As String  
@@ -121,7 +121,7 @@ End Function
  Pour plus d’informations sur les collections d’objets intégrées et leur initialisation, consultez [Références à des champs Globals et Users prédéfinis &#40;Générateur de rapports et SSRS&#41;](built-in-collections-built-in-globals-and-users-references-report-builder.md) et [Initialisation d’objets Assembly personnalisés](../custom-assemblies/initializing-custom-assembly-objects.md).  
   
 ##  <a name="Parameters"></a> Intégration de références à des paramètres de code  
- Vous pouvez référencer la collection globale de paramètres via du code personnalisé dans un bloc de code de la définition de rapport ou dans un assembly personnalisé que vous fournissez. La collection de paramètres est en lecture seule et ne possède aucun itérateur public. Vous ne pouvez pas utiliser un [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] `For Each` construction pour parcourir la collection. Vous devez connaître le nom du paramètre défini dans la définition de rapport pour pouvoir ensuite le référencer dans votre code. Cependant, vous pouvez effectuer une itération dans toutes les valeurs d'un paramètre à valeurs multiples.  
+ Vous pouvez référencer la collection globale de paramètres via du code personnalisé dans un bloc de code de la définition de rapport ou dans un assembly personnalisé que vous fournissez. La collection de paramètres est en lecture seule et ne possède aucun itérateur public. Vous ne pouvez pas utiliser un [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] `For Each` construire pour parcourir la collection. Vous devez connaître le nom du paramètre défini dans la définition de rapport pour pouvoir ensuite le référencer dans votre code. Cependant, vous pouvez effectuer une itération dans toutes les valeurs d'un paramètre à valeurs multiples.  
   
  Le tableau suivant présente des exemples du référencement de la collection `Parameters` intégrée à partir du code personnalisé :  
   
@@ -133,15 +133,15 @@ End Function
 ##  <a name="Custom"></a> Intégration de références à du code d'assemblys personnalisés  
  Pour utiliser un assembly personnalisé dans un rapport, vous devez créer l'assembly, le rendre accessible au Concepteur de rapports, ajouter une référence à l'assembly dans le rapport et utiliser une expression dans le rapport qui fait référence aux méthodes contenues dans cet assembly. Lorsque le rapport est déployé sur le serveur de rapports, vous devez également déployer l'assembly personnalisé sur le serveur de rapports.  
   
- Pour plus d’informations sur la création d’un assembly personnalisé et le rendre disponible pour [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], consultez [à l’aide des assemblys personnalisés avec des rapports](../custom-assemblies/using-custom-assemblies-with-reports.md).  
+ Pour plus d’informations sur la création d’un assembly personnalisé et de rendre disponible pour les [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], consultez [à l’aide des assemblys personnalisés avec des rapports](../custom-assemblies/using-custom-assemblies-with-reports.md).  
   
- Pour faire référence à du code personnalisé dans une expression, vous devez appeler le membre d'une classe au sein de l'assembly. La procédure pour ce faire dépend du type de méthode, à savoir statique ou basée sur une instance. Les méthodes statiques d'un assembly personnalisé sont disponibles de façon globale dans le rapport. Elles sont accessibles dans les expressions en spécifiant l'espace de noms, la classe et le nom de la méthode. L’exemple suivant appelle la méthode `ToGBP`, qui convertit la valeur de la **StandardCost** valeur exprimée en livres sterling :  
+ Pour faire référence à du code personnalisé dans une expression, vous devez appeler le membre d'une classe au sein de l'assembly. La procédure pour ce faire dépend du type de méthode, à savoir statique ou basée sur une instance. Les méthodes statiques d'un assembly personnalisé sont disponibles de façon globale dans le rapport. Elles sont accessibles dans les expressions en spécifiant l'espace de noms, la classe et le nom de la méthode. L’exemple suivant appelle la méthode `ToGBP`, qui convertit la valeur de la **StandardCost** valeur à partir de dollars en livres sterling :  
   
 ```  
 =CurrencyConversion.DollarCurrencyConversion.ToGBP(Fields!StandardCost.Value)  
 ```  
   
- Les méthodes basées sur des instances sont disponibles par l'intermédiaire d'un membre `Code` globalement défini. Vous pouvez y accéder en faisant référence au membre `Code`, suivi du nom de l'instance et de la méthode. L’exemple suivant appelle la méthode d’instance `ToEUR`, qui convertit la valeur de **StandardCost** de dollars en euros :  
+ Les méthodes basées sur des instances sont disponibles par l'intermédiaire d'un membre `Code` globalement défini. Vous pouvez y accéder en faisant référence au membre `Code`, suivi du nom de l'instance et de la méthode. L’exemple suivant appelle la méthode d’instance `ToEUR`, qui convertit la valeur de **StandardCost** exprimée en euros :  
   
 ```  
 =Code.m_myDollarCoversion.ToEUR(Fields!StandardCost.Value)  
@@ -164,7 +164,7 @@ End Function
  Comme le contenu des collections *Fields* et *ReportItems* peut changer dynamiquement pendant l’exécution, vous ne devriez pas les conserver entre les appels à l’assembly personnalisé (par exemple, dans une variable membre). La même recommandation s'applique généralement à toutes les collections intégrées.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Ajouter du Code à un rapport &#40;SSRS&#41;](add-code-to-a-report-ssrs.md)   
+ [Ajoutez le Code à un rapport &#40;SSRS&#41;](add-code-to-a-report-ssrs.md)   
  [Utilisation d’assemblys personnalisés avec des rapports](../custom-assemblies/using-custom-assemblies-with-reports.md)   
  [Ajouter une référence d’assembly à un rapport &#40;SSRS&#41;](add-an-assembly-reference-to-a-report-ssrs.md)   
  [Didacticiels sur Reporting Services &#40;SSRS&#41;](../reporting-services-tutorials-ssrs.md)   

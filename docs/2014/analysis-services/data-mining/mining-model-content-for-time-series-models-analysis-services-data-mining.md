@@ -1,5 +1,5 @@
 ---
-title: Contenu pour les modèles de série chronologique du modèle d’exploration de données (Analysis Services - Exploration de données) | Documents Microsoft
+title: Contenu du modèle pour les modèles de série chronologique d’exploration de données (Analysis Services - Exploration de données) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - time series algorithms [Analysis Services]
 - time series [Analysis Services]
 - mining model content, time series models
 ms.assetid: bb225387-fbbf-4189-b172-9daa2495fa9c
 caps.latest.revision: 24
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: ae3e235b2a80248327a4aa4a69e2b357b36d2a1c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: b0c69583fec1e43ba65ac1da2c321f7b0a5d9599
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36155174"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37214619"
 ---
 # <a name="mining-model-content-for-time-series-models-analysis-services---data-mining"></a>Contenu du modèle d'exploration de données pour les modèles de séries chronologiques (Analysis Services - Exploration de données)
   Tous les modèles d'exploration de données utilisent la même structure pour stocker leur contenu. Cette structure est définie d'après l'ensemble de lignes de schéma du contenu de l'exploration de données. Toutefois, dans cette structure standard, les nœuds qui contiennent des informations sont organisés de différentes façons pour représenter différents types d'arbres. Cette rubrique décrit l'organisation des nœuds, ainsi que la signification de chacun, pour les modèles d'exploration de données qui sont basés sur l'algorithme MTS ( [!INCLUDE[msCoName](../../includes/msconame-md.md)] Time Series).  
@@ -39,7 +39,7 @@ ms.locfileid: "36155174"
   
  Le diagramme suivant présente un exemple de modèle d'exploration de données de série chronologique qui a été créé avec les paramètres par défaut pour créer un modèle mixte. Afin que vous puissiez comparer plus aisément les différences entre les deux modèles, le modèle ARTXP est affiché ici sur le côté gauche du diagramme et le modèle ARIMA est affiché du côté droit.  Alors qu'ARTXP est une structure en forme d'arbre qui se divise en branches de plus en plus petites, la structure créée par l'algorithme ARIMA ressemble plus à une pyramide construite vers le haut à partir de composants plus petits.  
   
- ![Structure du contenu de modèle pour les modèles de série chronologique](../media/modelcontentstructure-ts.gif "Structure du contenu de modèle pour les modèles de série chronologique")  
+ ![Structure de contenu de modèle pour les modèles de série chronologique](../media/modelcontentstructure-ts.gif "Structure du contenu du modèle pour les modèles de série chronologique")  
   
  Le point important à retenir est que les informations sont organisées de façons complètement différentes dans les arbres ARIMA et ARTXP, et vous devez considérer les deux arbres comme liés uniquement au niveau du nœud racine. Bien que les deux représentations soient présentées dans un seul modèle pour des raisons de commodité, elles doivent être considérées comme deux modèles indépendants. ARTXP représente un arbre réel, mais pas ARIMA.  
   
@@ -250,7 +250,7 @@ ms.locfileid: "36155174"
 ### <a name="elements-of-the-artxp-time-series-formula"></a>Éléments de la formule de série chronologique ARTXP  
  Pour afficher la formule complète pour un arbre ou une branche ARTXP, nous vous recommandons d'utiliser la **légende d'exploration de données** de la [Visionneuse de l'algorithme MTS (Microsoft Time Series)](browse-a-model-using-the-microsoft-time-series-viewer.md), laquelle présente toutes les constantes dans un format lisible.  
   
--   [Afficher la formule d’une série chronologique modèle &#40;d’exploration de données&#41;](view-the-formula-for-a-time-series-model-data-mining.md)  
+-   [Afficher la formule d’une série chronologique modèle &#40;exploration de données&#41;](view-the-formula-for-a-time-series-model-data-mining.md)  
   
  La section suivante présente un exemple d'équation et explique la terminologie de base.  
   
@@ -263,7 +263,7 @@ ms.locfileid: "36155174"
   
  Quantity = 21.322  
   
- -0.293 * quantité (R250 du Nord, Amérique-7) + 0.069 \* quantité (R250 Europe,-1) + 0.023 \*  
+ -0,293 * quantité (R250 du Nord, Amérique-7) + 0.069 \* quantité (R250 Europe,-1) + 0.023 \*  
   
  Quantity(R250 Europe,-3) -0.142 * Quantity(R750 Europe,-8)  
   
@@ -379,7 +379,7 @@ AND (NODE_TYPE = 29 or NODE_TYPE = 30)
 ### <a name="time-series-formula-for-arima"></a>Formule de série chronologique pour ARIMA  
  Pour afficher la formule complète pour n'importe quel nœud ARIMA, nous vous recommandons d'utiliser la **légende d'exploration de données** de la [Visionneuse de l'algorithme MTS (Microsoft Time Series)](browse-a-model-using-the-microsoft-time-series-viewer.md), laquelle présente l'ordre autorégressif, les moyennes mobiles et d'autres éléments de l'équation déjà composés dans un format cohérent.  
   
--   [Afficher la formule d’une série chronologique modèle &#40;d’exploration de données&#41;](view-the-formula-for-a-time-series-model-data-mining.md)  
+-   [Afficher la formule d’une série chronologique modèle &#40;exploration de données&#41;](view-the-formula-for-a-time-series-model-data-mining.md)  
   
  Cette section présente un exemple d'équation et explique la terminologie de base.  
   
@@ -390,7 +390,7 @@ AND (NODE_TYPE = 29 or NODE_TYPE = 30)
   
  ARIMA ({1,1}, 0,{1,1.49791920964142,1.10640053499397,0.888873034670339,-5.05429403071953E-02,-0.905265316720334,-0.961908900643379,-0.649991020901922}) Intercept : 56.8888888888889  
   
- Cette équation est le format ARIMA long, qui inclut les valeurs des coefficients et l'ordonnée à l'origine. La forme abrégée de cette équation serait {1,0,7}, où 1 indique la période sous la forme d’un nombre de tranches de temps, 0 indique l’ordre de différence de terme et 7 indique le nombre de coefficients.  
+ Cette équation est le format ARIMA long, qui inclut les valeurs des coefficients et l'ordonnée à l'origine. La forme abrégée de cette équation serait {1,0,7}, où 1 indique la période sous la forme d’un nombre de tranches de temps, 0 indique l’ordre de différence de terme, et 7 indique le nombre de coefficients.  
   
 > [!NOTE]  
 >  Une constante est calculée par Analysis Services pour calculer la variance, mais la constante elle-même n'est pas affichée n'importe où dans l'interface utilisateur. Toutefois, vous pouvez afficher la variance de n'importe quel point de la série sous la forme d'une fonction de cette constante si vous sélectionnez **Afficher les écarts** dans la vue **Graphique** . L'info-bulle de chaque série de données affiche la variance d'un point prédit spécifique.  
@@ -422,7 +422,7 @@ AND (NODE_TYPE = 29 or NODE_TYPE = 30)
 |29 (ARIMA autorégressif)|Coefficient<br /><br /> (complément de coefficient)|7|  
 |30 (Moyenne mobile ARIMA)|Valeur à t<br /><br /> Valeur à t-1<br /><br /> …<br /><br /> Valeur à t-n|7|  
   
- La valeur de l' *ordre des moyennes mobiles* indique le nombre de moyennes mobiles dans une série. En général la moyenne mobile est calculée de n-1 fois les termes du contrat de n dans une série, mais si le nombre peut être réduit pour faciliter le calcul.  
+ La valeur de l' *ordre des moyennes mobiles* indique le nombre de moyennes mobiles dans une série. En général la moyenne mobile est calculée n-1 fois s’il existe des termes n dans une série, mais le nombre peut être réduit pour faciliter le calcul.  
   
  La valeur de l' *ordre autorégressif* indique le nombre de séries autorégressives.  
   
@@ -447,7 +447,7 @@ AND (NODE_TYPE = 29 or NODE_TYPE = 30)
 ## <a name="see-also"></a>Voir aussi  
  [Contenu du modèle d’exploration de données &#40;Analysis Services - Exploration de données&#41;](mining-model-content-analysis-services-data-mining.md)   
  [Algorithme de série chronologique de Microsoft](microsoft-time-series-algorithm.md)   
- [Exemples de requête de modèle de série de temps](time-series-model-query-examples.md)   
+ [Exemples de requêtes de modèle de série chronologique](time-series-model-query-examples.md)   
  [Informations techniques de référence sur l’algorithme MTS (Microsoft Time Series)](microsoft-time-series-algorithm-technical-reference.md)  
   
   

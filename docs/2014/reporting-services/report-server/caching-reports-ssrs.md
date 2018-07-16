@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - report execution properties [Reporting Services]
 - cache [Reporting Services]
@@ -25,13 +25,13 @@ ms.assetid: 146542c3-8efd-4b89-a8d8-77d22896630e
 caps.latest.revision: 43
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 22bad94dc3102b48b858f22354039bcb61fea06e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 0dd80e542132cb2ebd36b1431e274e823970d9af
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36154345"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37206549"
 ---
 # <a name="caching-reports-ssrs"></a>Mise en cache de rapports (SSRS)
   Un serveur de rapports peut mettre en mémoire cache la copie d'un rapport traité et retourner cette copie lorsqu'un utilisateur ouvre le rapport. Pour cet utilisateur, la date et l'heure de l'exécution du rapport sont les seules informations qui lui permettent de savoir que ce rapport est une copie en cache. Si la date ou l'heure n'est pas celle en cours et que le rapport n'est pas un instantané, ceci signifie que le rapport a été extrait du cache.  
@@ -66,7 +66,7 @@ ms.locfileid: "36154345"
   
  La mise en cache d'un rapport est particulièrement utile si vous souhaitez mettre en cache plusieurs instances d'un rapport paramétrable dans lesquelles différentes valeurs de paramètres sont utilisées pour produire différentes instances de rapport. Notez que vous ne pouvez spécifier que des paramètres reposant sur des requêtes dans le rapport.  
   
- Lorsque vous spécifiez une planification ou créez l'abonnement piloté par les données, vous devez planifier la fréquence de remise de ces rapports dans le cache. Ces copies de rapports doivent avoir expiré pour que de nouveaux exemplaires les remplacent dans le cache. Ainsi, les propriétés d'exécution du rapport doivent être configurées pour englober les paramètres d'expiration du cache. Les valeurs de ces paramètres doivent tenir compte de la planification de l'abonnement que vous définissez. De fait, si vous créez un abonnement qui s'exécute chaque nuit, le cache doit également expirer chaque nuit, avant l'heure d'exécution de l'abonnement. Si les propriétés d'exécution n'incluent aucune limite d'expiration, les remises plus récentes sont ignorées. Pour plus d’informations sur les plans d’actualisation du cache, consultez [planifications](../subscriptions/schedules.md). Pour plus d’informations sur la définition des propriétés, consultez [définir les propriétés de traitement de rapport](set-report-processing-properties.md). Pour plus d’informations sur l’utilisation des abonnements pilotés par les données, consultez [abonnements pilotés par les](../subscriptions/data-driven-subscriptions.md).  
+ Lorsque vous spécifiez une planification ou créez l'abonnement piloté par les données, vous devez planifier la fréquence de remise de ces rapports dans le cache. Ces copies de rapports doivent avoir expiré pour que de nouveaux exemplaires les remplacent dans le cache. Ainsi, les propriétés d'exécution du rapport doivent être configurées pour englober les paramètres d'expiration du cache. Les valeurs de ces paramètres doivent tenir compte de la planification de l'abonnement que vous définissez. De fait, si vous créez un abonnement qui s'exécute chaque nuit, le cache doit également expirer chaque nuit, avant l'heure d'exécution de l'abonnement. Si les propriétés d'exécution n'incluent aucune limite d'expiration, les remises plus récentes sont ignorées. Pour plus d’informations sur les plans d’actualisation du cache, consultez [planifications](../subscriptions/schedules.md). Pour plus d’informations sur la définition des propriétés, consultez [définir les propriétés de traitement de rapport](set-report-processing-properties.md). Pour plus d’informations sur l’utilisation des abonnements pilotés par les données, consultez [les abonnements pilotés par les données](../subscriptions/data-driven-subscriptions.md).  
   
 ## <a name="conditions-that-cause-cache-expiration"></a>Conditions entraînant l’expiration du cache  
  Un rapport mis en cache peut être invalidé si les événements suivants se produisent : la définition du rapport est modifiée, les paramètres de rapport sont modifiés, les informations d'identification de la source de données sont modifiées ou les options d'exécution du rapport sont modifiées. Si vous supprimez un rapport stocké dans le cache, la version mise en cache disparaît également.  
@@ -75,7 +75,7 @@ ms.locfileid: "36154345"
   
 ## <a name="see-also"></a>Voir aussi  
  [Définir les Options de traitement &#40;Reporting Services dans SharePoint Mode intégré&#41;](../set-processing-options-reporting-services-in-sharepoint-integrated-mode.md)   
- [Définir les propriétés de traitement des rapports](set-report-processing-properties.md)   
+ [Définir les propriétés de traitement de rapport](set-report-processing-properties.md)   
  [Concepts de Reporting Services &#40;SSRS&#41;](../reporting-services-concepts-ssrs.md)   
  [Précharger le cache &#40;Gestionnaire de rapports&#41;](preload-the-cache-report-manager.md)   
  [Planifications](../subscriptions/schedules.md)   

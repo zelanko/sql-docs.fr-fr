@@ -5,23 +5,22 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-search
+ms.technology: search
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - semantic search [SQL Server], enabling
 ms.assetid: 895d220c-6749-4954-9dd3-2ea4c6a321ff
 caps.latest.revision: 20
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 64ed077658de8ba855bc2301a3db403e12a47511
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 8187e19e40eba87e663c800ba9e593b30fe87a86
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36041074"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37296439"
 ---
 # <a name="enable-semantic-search-on-tables-and-columns"></a>Activer la recherche sémantique sur les tables et les colonnes
   Décrit la procédure d'activation ou de désactivation de l'indexation sémantique statistique sur des colonnes sélectionnées qui contiennent des documents ou du texte.  
@@ -30,7 +29,7 @@ ms.locfileid: "36041074"
   
 ##  <a name="BasicEnabling"></a> Création d’un Index sémantique  
   
-###  <a name="reqenable"></a> Exigences et Restrictions concernant la création d’un Index sémantique  
+###  <a name="reqenable"></a> Exigences et Restrictions pour la création d’un Index sémantique  
   
 -   Vous pouvez créer un index sur des objets de base de données pris en charge pour l'indexation de texte intégral, notamment les tables et les vues indexées.  
   
@@ -275,11 +274,11 @@ GO
   
  Si le type de document que vous souhaitez indexer ne figure pas dans la liste des types pris en charge, vous devrez peut-être rechercher, télécharger et installer des filtres supplémentaires. Pour plus d’informations, consultez [Afficher ou modifier des filtres et des analyseurs lexicaux inscrits](view-or-change-registered-filters-and-word-breakers.md).  
   
-##  <a name="BestPracticeFilegroup"></a> Recommandation : Envisagez la création d’un groupe de fichiers distinct pour les index sémantiques et de recherche en texte intégral  
+##  <a name="BestPracticeFilegroup"></a> Bonne pratique : Prendre en compte la création d’un groupe de fichiers séparé pour la recherche en texte intégral et les index sémantiques  
  Créez un groupe de fichiers séparé pour les index sémantiques et de recherche en texte intégral si l'allocation d'espace disque pose problème. Les index sémantiques sont créés dans le même groupe de fichiers que l'index de recherche en texte intégral. Un index sémantique entièrement rempli peut contenir un grand nombre de données.  
   
 ##  <a name="BestPracticeUnderstand"></a>   
-##  <a name="IssueNoResults"></a> Problème : La recherche sur une colonne spécifique ne retourne aucun résultat  
+##  <a name="IssueNoResults"></a> Problème : Recherche sur une colonne spécifique ne retourne aucun résultat  
  **Est-ce qu'un LCID non-Unicode a été spécifié pour une langue Unicode ?**  
  Il est possible d'activer l'indexation sémantique sur un type de colonne non-Unicode avec un LCID de langue qui comporte uniquement des termes Unicode, tels que LCID 1049 pour le russe. Dans ce cas, aucun résultat ne sera jamais retourné des index sémantiques sur cette colonne.  
   

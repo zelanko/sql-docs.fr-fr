@@ -1,5 +1,5 @@
 ---
-title: Élément AggregateFunction (ASSL) | Documents Microsoft
+title: Élément AggregateFunction (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - AggregateFunction element
 ms.assetid: 880b6bd0-d62a-4221-831c-39f748ee84f2
 caps.latest.revision: 33
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: e292a0c509a746130493c7df601a9d373096c406
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: bc2eccf4ca6e41ffba52424c4f45edb71c9c1c46
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36041696"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37261205"
 ---
 # <a name="aggregatefunction-element-assl"></a>Élément AggregateFunction (ASSL)
   Définit le type de fonction d’agrégation utilisée par un [mesure](../objects/measure-element-assl.md) élément.  
@@ -76,10 +76,10 @@ ms.locfileid: "36041696"
 |*AverageOfChildren*|La mesure est agrégée par retour de la moyenne de ses enfants.|  
 |*FirstChild*|La mesure est agrégée par retour de son premier membre enfant.|  
 |*LastChild*|La mesure est agrégée par retour de son dernier membre enfant.|  
-|*Premier non vide*|La mesure est agrégée par retour de son premier membre non vide.|  
+|*FirstNonEmpty*|La mesure est agrégée par retour de son premier membre non vide.|  
 |*LastNonEmpty*|La mesure est agrégée par retour de son dernier membre non vide.|  
   
- L’énumération qui correspond aux valeurs autorisées pour `AggregateFunction` dans l’objet d’objets AMO (Analysis Management) est modèle <xref:Microsoft.AnalysisServices.AggregationFunction>.  
+ L’énumération qui correspond aux valeurs autorisées pour `AggregateFunction` dans l’objet d’objets AMO (Analysis Management) modèle est <xref:Microsoft.AnalysisServices.AggregationFunction>.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Propriétés &#40;ASSL&#41;](properties-assl.md)  

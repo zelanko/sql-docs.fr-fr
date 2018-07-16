@@ -1,5 +1,5 @@
 ---
-title: Exécuter SQL Server Assistant Importation et exportation | Documents Microsoft
+title: Exécuter le serveur SQL Server Assistant Importation et exportation | Microsoft Docs
 ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server Import and Export Wizard
 - starting SQL Server Import and Export Wizard
@@ -18,13 +18,13 @@ ms.assetid: 5fc4f6d1-1f6f-444e-9aeb-827f85e1c405
 caps.latest.revision: 67
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 817172e78c7f7702aa4dc9d7555b25f6866a6897
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: d39f6988fafe56210e5641b85f54adb644b8d8b6
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36153514"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37307990"
 ---
 # <a name="run-the-sql-server-import-and-export-wizard"></a>Exécuter l'Assistant Importation et Exportation SQL Server
   L'Assistant Importation et Exportation [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] constitue la méthode la plus simple pour copier des données entre des sources de données et pour construire des packages de base. Pour plus d’informations sur l’Assistant, consultez [SQL Server Assistant Importation et exportation](import-and-export-data-with-the-sql-server-import-and-export-wizard.md).  
@@ -52,7 +52,7 @@ ms.locfileid: "36153514"
      Dans une fenêtre d'invite de commandes, exécutez DTSWizard.exe qui se trouve dans C:\Program Files\Microsoft SQL Server\100\DTS\Binn.  
   
     > [!NOTE]  
-    >  Sur un ordinateur 64 bits, [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] installe la version 64 bits de l'Assistant Importation et Exportation [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (DTSWizard.exe). Toutefois, certaines sources de données, telles qu'Access ou Excel, ne dispose que d'un fournisseur 32 bits. Pour utiliser ces sources de données, il peut s'avérer nécessaire d'installer et d'exécuter la version 32 bits de l'Assistant. Pour installer la version 32 bits de l’Assistant, sélectionnez Outils clients ou [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] lors de l’installation.  
+    >  Sur un ordinateur 64 bits, [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] installe la version 64 bits de l'Assistant Importation et Exportation [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (DTSWizard.exe). Toutefois, certaines sources de données, telles qu'Access ou Excel, ne dispose que d'un fournisseur 32 bits. Pour utiliser ces sources de données, il peut s'avérer nécessaire d'installer et d'exécuter la version 32 bits de l'Assistant. Pour installer la version 32 bits de l’Assistant, sélectionnez Outils clients ou [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] pendant l’installation.  
   
 ### <a name="to-import-or-export-data-by-using-the-sql-server-import-and-export-wizard"></a>Pour importer ou exporter des données à l'aide de l'Assistant Importation et Exportation SQL Server  
   
@@ -65,7 +65,7 @@ ms.locfileid: "36153514"
     > [!NOTE]  
     >  Le fournisseur de données [!INCLUDE[msCoName](../../includes/msconame-md.md)] OLE DB Provider pour Oracle ne prend pas en charge les types de données Oracle BLOB, CLOB, NCLOB, BFILE et UROWID. Par conséquent, la source OLE DB ne peut pas extraire de données des tables qui contiennent des colonnes avec ces types de données.  
   
-     Les destinations de données disponibles incluent [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] des fournisseurs de données, les fournisseurs OLE DB, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client, Excel, Access et la destination de fichier plat.  
+     Les destinations de données disponibles incluent [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] fournisseurs de données, les fournisseurs OLE DB, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client, Excel, Access et la destination de fichier plat.  
   
 3.  Définissez les options pour le type de destination sélectionné.  
   
@@ -123,9 +123,9 @@ ms.locfileid: "36153514"
   
      Si l'Assistant est démarré à partir de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou de l'invite de commandes, le package peut s'exécuter immédiatement. Vous pouvez éventuellement enregistrer le package à le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **msdb** base de données ou au système de fichiers. Pour plus d’informations sur la **msdb** de base de données, consultez [gestion des packages &#40;Service SSIS&#41;](../service/package-management-ssis-service.md).  
   
-     Lorsque vous enregistrez le package, vous pouvez définir son niveau de protection et, si ce niveau utilise un mot de passe, fournir celui-ci. Pour plus d’informations sur les niveaux de protection de package, consultez [le contrôle d’accès pour les données sensibles dans des Packages](../security/access-control-for-sensitive-data-in-packages.md).  
+     Lorsque vous enregistrez le package, vous pouvez définir son niveau de protection et, si ce niveau utilise un mot de passe, fournir celui-ci. Pour plus d’informations sur les niveaux de protection de package, consultez [contrôle d’accès pour les données sensibles dans les Packages](../security/access-control-for-sensitive-data-in-packages.md).  
   
-     Si l’Assistant est lancé à partir une [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] projet [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], vous ne pouvez pas exécuter le package de l’Assistant. Au lieu de cela, le package est ajouté au projet [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] à partir duquel vous avez démarré l'Assistant. Vous pouvez ensuite exécuter le package dans [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  
+     Si l’Assistant est démarré à partir d’un [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] projet [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], vous ne pouvez pas exécuter le package à partir de l’Assistant. Au lieu de cela, le package est ajouté au projet [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] à partir duquel vous avez démarré l'Assistant. Vous pouvez ensuite exécuter le package [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  
   
     > [!NOTE]  
     >  Dans [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)], la possibilité d’enregistrer le package créé par l’Assistant n’est pas disponible.  

@@ -1,5 +1,5 @@
 ---
-title: Exécutez le Conseiller de mise à niveau (invite de commandes) | Documents Microsoft
+title: Exécutez le Conseiller de mise à niveau (invite de commandes) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Upgrade Advisor [SQL Server], running
 - command prompt [Upgrade Advisor]
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - XML formats [Upgrade Advisor]
 ms.assetid: 7c83049b-9227-4723-9b7f-66288bc6bd1d
 caps.latest.revision: 25
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 525cb2237795e778bef2aa33ad43cff7c2e5ad6d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: f30f9169e352b7ac7b889d0ca066eadf6c1778db
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36038299"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37330949"
 ---
 # <a name="running-upgrade-advisor-command-prompt"></a>Exécution du Conseiller de mise à niveau (Invite de commandes)
   Utilisez le **UpgradeAdvisorWizardCmd** utilitaire pour exécuter le Conseiller de mise à niveau à partir de l’invite de commandes. Vous pouvez choisir de recevoir les résultats dans le format XML ou dans un fichier dont les valeurs sont séparées par des virgules.  
@@ -47,36 +47,36 @@ where <server_info> is any combination of the following:
  Affiche la syntaxe de la commande.  
   
  **-ConfigFile** *nom de fichier*  
- Est le nom de chemin d’accès et le nom d’un fichier XML qui contient les paramètres à utiliser lorsque vous exécutez le **UpgradeAdvisorWizardCmd** utilitaire.  
+ Est le nom de chemin d’accès et le nom de fichier d’un fichier XML qui contient les paramètres à utiliser lorsque vous exécutez le **UpgradeAdvisorWizardCmd** utilitaire.  
   
  *< détails_serveur >*  
  Spécifie l'ordinateur et l'instance à analyser. Servez-vous de ces options si vous n'utilisez pas de fichier de configuration.  
   
  *< détails_serveur >* peut être n’importe quelle combinaison des quatre arguments suivants :  
   
- **-Server** *nom_serveur*  
+ **-Serveur** *nom_serveur*  
  Spécifie le nom de l'ordinateur à analyser. Il peut s'agir de l'ordinateur local , qui correspond à la valeur par défaut, ou d'un ordinateur distant.  
   
  **-Instance** *nom_instance*  
  Spécifie le nom de l'instance à analyser. Il n’y a pas de valeur par défaut. Si vous ne spécifiez pas ce paramètre, le [!INCLUDE[ssDE](../../includes/ssde-md.md)] n’est pas analysé. La valeur d'une instance par défaut de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] est MSSQLSERVER. Pour une instance nommée, utilisez le nom de l'instance.  
   
- **-ASInstance***nom_instance_as*   
+ **-ASInstance***nom_instance_as  *  
  Spécifie le nom de l'instance de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] à analyser. Il n’y a pas de valeur par défaut. Si vous ne spécifiez pas cette valeur, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] n'est pas analysé. La valeur d'une instance par défaut d'[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] est MSSQLServerOLAPService. Pour une instance nommée, utilisez le nom de l'instance.  
   
- **-RSInstance***nom_instance_rs*   
+ **-RSInstance***nom_instance_rs  *  
  Spécifie le nom de l'instance de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] à analyser. Il n’y a pas de valeur par défaut. Si vous ne spécifiez pas cette valeur, [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] n'est pas analysé. La valeur d'une instance par défaut de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] est ReportServer. Pour une instance nommée, utilisez le nom de l'instance.  
   
  **-SqlUser** *login_id*  
  Si vous recourez à l'authentification [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], cette valeur est le compte de connexion [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que le Conseiller de mise à niveau utilise pour se connecter à l'instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Si vous ne spécifiez pas de compte de connexion, l'authentification Windows permet de se connecter à l'instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  **-SqlPassword** *mot de passe*  
- Si vous utilisez la **- SqlUser** argument, cet argument permet de spécifier le mot de passe pour la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] connexion.  
+ Si vous utilisez le **- SqlUser** argument, utilisez cet argument pour spécifier le mot de passe pour le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] connexion.  
   
  **-CSV**  
- Indique que les résultats doivent être fournis sous forme de valeurs séparées par des virgules dans un fichier .csv en plus du format XML standard. Les résultats sont écrits dans le Mes Documents\\ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Advisor\110\Reports de mise à niveau dossier.  
+ Indique que les résultats doivent être fournis sous forme de valeurs séparées par des virgules dans un fichier .csv en plus du format XML standard. Résultats sont écrits dans les Documents Mes\\ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Advisor\110\Reports mise à niveau dossier.  
   
 ## <a name="return-values"></a>Valeurs de retour  
- Le tableau suivant indique les valeurs que **UpgradeAdvisorWizardCmd** retourne.  
+ Le tableau suivant montre les valeurs que **UpgradeAdvisorWizardCmd** retourne.  
   
 |Valeur|Description|  
 |-----------|-----------------|  
@@ -145,8 +145,8 @@ where <server_info> is any combination of the following:
 |`Database` de l'élément `AnalysisServices`|Spécifie le nom d'une base de données à analyser.|Obligatoire une ou plusieurs fois si l'élément `Databases` est présent. Si un élément `Database` contient la valeur "*", toutes les bases de données de l'instance sont analysées. Il n’y a pas de valeur par défaut.|  
 |`ReportingServices`|Spécifie d'exécuter l'analyse sur [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].|Facultatif une fois par fichier de configuration. S'il n'est pas spécifié, [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] n'est pas analysé.|  
 |`RSInstance`|Spécifie le nom d’une instance de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].|Obligatoire une fois par `ReportingServices` élément. Il n’y a pas de valeur par défaut.|  
-|`IntegrationServices`|Contient les paramètres d’analyse de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)].|Facultatif une fois par fichier de configuration. S'il n'est pas spécifié, [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] n'est pas analysé.|  
-|`PackagePath`|Spécifie le chemin d'accès d'un jeu de packages [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)].|Facultatif une fois par `IntegrationServices` élément. Si cet élément n’est pas présent, l’analyse se produit sur le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance et non en externe des packages stockés sont analysés. Il n’y a pas de valeur par défaut.|  
+|`IntegrationServices`|Contient des paramètres d’analyse de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)].|Facultatif une fois par fichier de configuration. S'il n'est pas spécifié, [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] n'est pas analysé.|  
+|`PackagePath`|Spécifie le chemin d'accès d'un jeu de packages [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)].|Facultatif une fois par `IntegrationServices` élément. Si cet élément n’est pas présent, une analyse se produit sur le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance et non en externe des packages stockés sont analysés. Il n’y a pas de valeur par défaut.|  
   
 ## <a name="examples"></a>Exemples  
   
@@ -174,7 +174,7 @@ UpgradeAdvisorWizardCmd -ConfigFile "C:\My Documents\UpgradeConfig1.xml"
   
 ## <a name="see-also"></a>Voir aussi  
  [Résolution des problèmes de mise à niveau](../../../2014/sql-server/install/resolving-upgrade-issues.md)   
- [Utilisation avec le Conseiller de mise à niveau](../../../2014/sql-server/install/working-with-upgrade-advisor.md)   
+ [Utilisation de l’Assistant Mise à niveau](../../../2014/sql-server/install/working-with-upgrade-advisor.md)   
  [Exécutez le Conseiller de mise à niveau &#40;Interface utilisateur&#41;](../../../2014/sql-server/install/running-upgrade-advisor-user-interface.md)  
   
   

@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Reporting Services, Report Builder
 - Report Builder 1.0, configuring access
@@ -17,13 +17,13 @@ ms.assetid: a79003d0-c905-4d4c-9560-93a7cc1e1dd4
 caps.latest.revision: 46
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 76c13b3c73879e40be793d622ca0918bce39edca
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: e715595ae4ed8394fc4e30c2819af140eb8e3681
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36152271"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37328891"
 ---
 # <a name="configure-report-builder-access"></a>Configurer l'accès au Générateur de rapports
   Le Générateur de rapports est un outil de génération d’états ad hoc qui s’installe avec un serveur de rapports [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] configuré pour le mode natif ou pour le mode intégré SharePoint.  
@@ -41,7 +41,7 @@ ms.locfileid: "36152271"
 ## <a name="prerequisites"></a>Prérequis  
  Le Générateur de rapports n’est pas disponible dans toutes les éditions de [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Pour obtenir une liste des fonctionnalités prises en charge par les éditions de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], consultez [Features Supported by the Editions of SQL Server 2014](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md).  
   
- [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 2.0 doit être installé sur l’ordinateur client. Le [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] fournit l’infrastructure permettant d’exécuter les applications [!INCLUDE[ndptecclick](../../includes/ndptecclick-md.md)] .  
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 2.0 doit être installé sur l’ordinateur client. Le [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] fournit l’infrastructure permettant d’exécuter les applications [!INCLUDE[ndptecclick](../../includes/ndptecclick-md.md)] .  
   
  Vous devez utiliser [!INCLUDE[msCoName](../../includes/msconame-md.md)] Internet Explorer 6.0 ou version ultérieure.  
   
@@ -54,7 +54,7 @@ ms.locfileid: "36152271"
   
 -   Pour utiliser Management Studio, connectez-vous au serveur de rapports et utilisez la page de propriétés avancées du serveur pour affecter `EnableReportDesignClientDownload` à `false`. Pour plus d’informations sur l’ouverture de cette page, consultez [Définir les propriétés du serveur de rapports &#40;Management Studio&#41;](../tools/set-report-server-properties-management-studio.md).  
   
--   Pour afficher un exemple de script qui définit une propriété de serveur de rapports, consultez [tâches d’administration et déploiement de Script](../tools/script-deployment-and-administrative-tasks.md).  
+-   Pour afficher un exemple de script qui définit une propriété de serveur de rapports, consultez [des tâches d’administration et déploiement de Script](../tools/script-deployment-and-administrative-tasks.md).  
   
 ## <a name="role-assignments-granting-report-builder-access-on-a-native-mode-report-server"></a>Attributions de rôles qui octroient l'accès au Générateur de rapports sur un serveur de rapports en mode natif  
  Sur un serveur de rapports en mode natif, créez des attributions de rôles d'utilisateur qui incluent des tâches pour l'utilisation du Générateur de rapports. Vous devez être Gestionnaire de contenu et Administrateur système pour créer ou modifier des définitions de rôles et des attributions de rôles sur les éléments et au niveau du site.  
@@ -146,7 +146,7 @@ ms.locfileid: "36152271"
 ## <a name="permissions-granting-report-builder-access-on-a-sharepoint-integrated-mode-report-server"></a>Autorisations octroyant l'accès au Générateur de rapports sur un serveur de rapports en mode intégré SharePoint  
  Sur un serveur de rapports en mode intégré SharePoint, l'accès au Générateur de rapports est octroyé aux utilisateurs SharePoint qui disposent de niveaux d'autorisation Collaboration ou Contrôle total.  
   
- Si vous utilisez des niveaux d'autorisation personnalisés, vous devez inclure Ajouter les éléments et Modifier les éléments dans le niveau d'autorisation. Pour plus d’informations sur l’accès du Générateur de rapports via les niveaux d’autorisation prédéfinis, consultez [utilise la sécurité intégrée de Windows SharePoint Services pour les éléments de serveur de rapports](../security/use-built-in-security-in-windows-sharepoint-services-for-report-server-items.md). Pour plus d’informations sur les autorisations requises pour les niveaux d’autorisation personnalisés, consultez [définir des autorisations pour les opérations de serveur de rapports dans une Application Web SharePoint](../security/set-permissions-for-report-server-operations-in-a-sharepoint-web-application.md).  
+ Si vous utilisez des niveaux d'autorisation personnalisés, vous devez inclure Ajouter les éléments et Modifier les éléments dans le niveau d'autorisation. Pour plus d’informations sur l’accès du Générateur de rapports via les niveaux d’autorisation prédéfinis, consultez [utiliser la sécurité intégrée dans Windows SharePoint Services pour les éléments de serveur de rapports](../security/use-built-in-security-in-windows-sharepoint-services-for-report-server-items.md). Pour plus d’informations sur les conditions requises pour les niveaux d’autorisation personnalisés, consultez [définir des autorisations pour les opérations de serveur de rapports dans une Application Web SharePoint](../security/set-permissions-for-report-server-operations-in-a-sharepoint-web-application.md).  
   
 ## <a name="authentication-considerations-and-credential-reuse"></a>Considérations relatives à l'authentification et réutilisation des informations d'identification  
  Le Générateur de rapports utilise la technologie ClickOnce pour télécharger et installer ses fichiers d'application sur un ordinateur client. La technologie ClickOnce est destinée au déploiement unidirectionnel d'applications qui place les fichiers programme sur un ordinateur client et exécute l'application en tant que processus distinct sous l'identité de l'utilisateur par défaut. Étant donné que le Générateur de rapports doit se reconnecter au serveur de rapports pour obtenir les fichiers d'application et des données du serveur de rapports, il est important de comprendre comment ClickOnce définit le contexte de sécurité et émet des demandes aux ordinateurs distants sous différents scénarios :  
@@ -168,8 +168,8 @@ ms.locfileid: "36152271"
   
 ## <a name="see-also"></a>Voir aussi  
  [Authentification avec le serveur de rapports](../security/authentication-with-the-report-server.md)   
- [Planification de Reporting Services et la prise en charge du navigateur Power View &#40;Reporting Services 2014&#41;](../browser-support-for-reporting-services-and-power-view.md)   
- [Démarrer le Générateur de rapports &#40;Générateur de rapports&#41;](../report-builder/start-report-builder.md)   
+ [Planification pour Reporting Services et la prise en charge du navigateur Power View &#40;Reporting Services 2014&#41;](../browser-support-for-reporting-services-and-power-view.md)   
+ [Démarrer le Générateur de &#40;Générateur de rapports&#41;](../report-builder/start-report-builder.md)   
  [Le Gestionnaire de rapports &#40;SSRS en Mode natif&#41;](../report-manager-ssrs-native-mode.md)   
  [Se connecter à un serveur de rapports dans Management Studio](../tools/connect-to-a-report-server-in-management-studio.md)   
  [Propriétés système du serveur de rapports](../report-server-web-service/net-framework/reporting-services-properties-report-server-system-properties.md)  

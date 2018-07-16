@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.summary.new.custom.report.f1
 helpviewer_keywords:
 - SQL Server Management Studio [SQL Server], custom reports
 ms.assetid: 1ba3f758-f39b-4f5f-91ca-516cedc78979
 caps.latest.revision: 12
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 59819655763d017ebe549b7325aa920960000fa0
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 08c664c7e8f2c345331b90d5b4ad502638a0c5be
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36152473"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37263755"
 ---
 # <a name="custom-reports-in-management-studio"></a>Rapports personnalisés dans Management Studio
   Dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], un grand nombre de nœuds de l’Explorateur d’objets proposent un ensemble de rapports standard créés par [!INCLUDE[msCoName](../../includes/msconame-md.md)]. Ces rapports fournissent généralement les informations serveur demandées. À partir de [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Service Pack 2, les administrateurs peuvent exécuter des rapports personnalisés qui ont été créés dans [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] à partir de [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)].  
@@ -75,11 +75,11 @@ ms.locfileid: "36152473"
 >  Toute instruction [!INCLUDE[tsql](../../includes/tsql-md.md)] valide peut être incorporée dans un rapport et exécutée depuis ce rapport. L'exécution d'un rapport avec un compte d'utilisateur doté de privilèges élevés permet d'exécuter sans aucune difficulté toutes ces instructions incorporées.  
   
 ## <a name="report-samples"></a>Exemples de rapports  
- [Exemples de rapports](http://go.microsoft.com/fwlink/?LinkId=81792), y compris les rapports standards créés par [!INCLUDE[msCoName](../../includes/msconame-md.md)], sont disponibles en téléchargement. Vous pouvez modifier ces exemples à l'aide de [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  
+ [Exemples de rapports](http://go.microsoft.com/fwlink/?LinkId=81792), y compris les rapports standards créés par [!INCLUDE[msCoName](../../includes/msconame-md.md)], sont disponibles au téléchargement. Vous pouvez modifier ces exemples à l'aide de [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  
   
 ## <a name="see-also"></a>Voir aussi  
  [Ajouter un rapport personnalisé à Management Studio](add-a-custom-report-to-management-studio.md)   
- [Rétablir les avertissements de l’exécution de rapports personnalisés](unsuppress-run-custom-report-warnings.md)   
+ [Annuler la suppression avertissements d’exécution de rapports personnalisés](unsuppress-run-custom-report-warnings.md)   
  [Utiliser des rapports personnalisés avec les propriétés de nœud de l’Explorateur d’objets](use-custom-reports-with-object-explorer-node-properties.md)  
   
   

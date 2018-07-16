@@ -1,5 +1,5 @@
 ---
-title: Les connexions SQL Server 6.5 dormantes ne peuvent pas être mis à niveau | Documents Microsoft
+title: Les connexions SQL Server 6.5 dormantes ne peuvent pas être mis à niveau | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - passwords [SQL Server], dormant logins
 - dormant logins
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - password hashes [SQL Server]
 ms.assetid: ebe18a74-0375-4df4-b894-239f8fdabb64
 caps.latest.revision: 23
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 7bf1bc14deea80f60692b9b25cc1f119ac69d307
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 0103f835ddd3e876984a771901e72926de4c4614
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36152481"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37323679"
 ---
 # <a name="dormant-sql-server-65-logins-cannot-be-upgraded"></a>Les connexions SQL Server 6.5 dormantes ne peuvent pas être mises à niveau
   Le Conseiller de mise à niveau a détecté un nom de connexion [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dont le mot de passe ne peut pas être directement mis à niveau vers [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  

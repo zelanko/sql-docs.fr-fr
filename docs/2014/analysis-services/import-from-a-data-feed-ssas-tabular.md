@@ -1,5 +1,5 @@
 ---
-title: Importer à partir d’un flux de données (SSAS tabulaire) | Documents Microsoft
+title: Importer à partir d’un flux de données (SSAS tabulaire) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 0686e519-67c2-4f9b-8cd2-84a4871499ee
 caps.latest.revision: 13
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 7869e07a67e7e3a74ee93ebef495eaba26d55317
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 3b476ed1641b5db87afefc8bc4787efed01e2a5a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36152239"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37325139"
 ---
 # <a name="import-from-a-data-feed-ssas-tabular"></a>Importer à partir d'un flux de données (SSAS Tabulaire)
   Les flux de données désignent un ou plusieurs flux de données XML générés à partir d'une source de données en ligne et transmis en continu à un document ou une application de destination. Vous pouvez importer des données à partir d'un flux de données dans votre modèle à l'aide de l'Assistant Importation de table.  
@@ -126,7 +126,7 @@ ms.locfileid: "36152239"
   
 3.  Dans la page **Connexion à un flux de données** , tapez un nom descriptif pour le flux auquel vous accédez. Si vous importez plusieurs flux ou sources de données, l'utilisation de noms descriptifs pour la connexion peut vous aider à vous souvenir de la façon dont la connexion est utilisée.  
   
-4.  Dans l’URL du flux de données, tapez l’adresse pour le service de données de liste, en remplaçant \<server-name > par le nom réel de votre serveur SharePoint :  
+4.  Dans l’URL du flux de données, tapez l’adresse au service de données de liste, en remplaçant \<server-name > par le nom réel de votre serveur SharePoint :  
   
     ```  
     http://<server-name>/_vti_bin/listdata.svc  
@@ -160,7 +160,7 @@ ms.locfileid: "36152239"
   
 4.  Cliquez sur **Parcourir** , puis sélectionnez un serveur de rapports.  
   
-     Si vous utilisez régulièrement des rapports sur un serveur de rapports, le serveur peut figurer dans **Sites et serveurs récents**. Sinon, dans le champ Nom, tapez l’adresse d’un serveur de rapports, puis cliquez sur **Ouvrir** pour parcourir les dossiers sur le site du serveur de rapports. Un exemple d’adresse du serveur de rapports peut être http://\<nom_ordinateur > / reportserver.  
+     Si vous utilisez régulièrement des rapports sur un serveur de rapports, le serveur peut figurer dans **Sites et serveurs récents**. Sinon, dans le champ Nom, tapez l’adresse d’un serveur de rapports, puis cliquez sur **Ouvrir** pour parcourir les dossiers sur le site du serveur de rapports. Un exemple d’adresse pour un serveur de rapports peut être http://\<nom_ordinateur > / reportserver.  
   
 5.  Sélectionnez le rapport et cliquez sur **Ouvrir**. Vous pouvez également coller un lien vers le rapport, notamment le chemin complet et le nom du rapport, dans la zone de texte **Nom** . L'Assistant Importation de table se connecte au rapport et le restitue dans la zone d'aperçu.  
   
@@ -194,7 +194,7 @@ ms.locfileid: "36152239"
 12. Dans la page **Sélectionner des tables et des vues** , cliquez sur **Terminer**.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Les Sources de données prises en charge &#40;SSAS tabulaire&#41;](tabular-models/data-sources-supported-ssas-tabular.md)   
+ [Sources de données prises en charge &#40;SSAS tabulaire&#41;](tabular-models/data-sources-supported-ssas-tabular.md)   
  [Types de données pris en charge &#40;SSAS tabulaire&#41;](tabular-models/data-types-supported-ssas-tabular.md)   
  [L’emprunt d’identité &#40;SSAS tabulaire&#41;](tabular-models/impersonation-ssas-tabular.md)   
  [Traiter les données &#40;SSAS tabulaire&#41;](process-data-ssas-tabular.md)   

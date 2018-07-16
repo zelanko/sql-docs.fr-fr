@@ -1,5 +1,5 @@
 ---
-title: Implémenter la sécurité dynamique à l’aide de filtres de lignes | Documents Microsoft
+title: Implémenter la sécurité dynamique à l’aide de filtres de lignes | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 8bf03c45-caf5-4eda-9314-e4f8f24a159f
 caps.latest.revision: 15
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: jhubbard
-ms.openlocfilehash: 066e628cc40f4ac4745f4b2edaa93ecdbd8d93d8
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 4364b9c18125b5aa4baa479ae92a2dc688d9fe18
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36153624"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37257595"
 ---
 # <a name="implement-dynamic-security-by-using-row-filters"></a>Implémentation de la sécurité dynamique à l'aide des filtres de lignes
   Dans cette leçon supplémentaire, vous allez créer un rôle supplémentaire qui implémente la sécurité dynamique. La sécurité dynamique permet de définir la sécurité de niveau ligne en fonction du nom d'utilisateur ou de l'ID de connexion de l'utilisateur actuellement connecté. Pour plus d’informations, consultez [Rôles &#40;SSAS Tabulaire&#41;](../analysis-services/tabular-models/roles-ssas-tabular.md).  
@@ -144,7 +144,7 @@ ms.locfileid: "36153624"
   
      Un nouveau rôle sans aucune autorisation est ajouté à la liste.  
   
-3.  Cliquez sur le nouveau rôle, puis, dans le **nom** colonne, renommez le rôle en `Sales Employees by Territory`.  
+3.  Cliquez sur le nouveau rôle, puis dans le **nom** colonne, renommez le rôle en `Sales Employees by Territory`.  
   
 4.  Dans la colonne **Autorisations** , cliquez sur la liste déroulante, puis sélectionnez l’autorisation **Lecture** .  
   
@@ -156,7 +156,7 @@ ms.locfileid: "36153624"
   
 7.  Cliquez sur l’onglet **Filtres de lignes** .  
   
-8.  Pour le `Employee Security` table, dans le **filtre DAX** colonne, tapez la formule suivante.  
+8.  Pour le `Employee Security` de table, dans le **filtre DAX** colonne, tapez la formule suivante.  
   
      `=FALSE()`  
   

@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.afpsubscrconn.f1
 - sql11.dts.designer.afpsubscrconn.f1
@@ -16,16 +16,16 @@ ms.assetid: e1225327-c308-4c50-8f44-c411f52ef378
 caps.latest.revision: 9
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 878f8fc674659d91a732549fcd68da134cdf5fc4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 1fa0589e7ac68f3662929c6316cdd0ddf427911d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36154225"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37306109"
 ---
 # <a name="azure-subscription-connection-manager"></a>Gestionnaire de connexions d’abonnement Azure
-  Le Gestionnaire de connexions Azure HDInsight permet à un package SSIS pour se connecter à un abonnement Azure en utilisant les valeurs que vous spécifiez pour les propriétés : ID d’abonnement Azure et certificat de gestion.  
+  Le Gestionnaire de connexions Azure HDInsight permet à un package SSIS pour vous connecter à un abonnement Azure en utilisant les valeurs que vous spécifiez pour les propriétés : ID d’abonnement Azure et certificat de gestion.  
   
 1.  Dans la boîte de dialogue **Ajout d’un gestionnaire de connexions SSIS** ci-dessus, sélectionnez **Abonnement Azure**, puis cliquez sur **Ajouter**.  Vous devez voir s’afficher la boîte de dialogue **Éditeur du gestionnaire de connexions d’abonnement Azure** .  
   

@@ -1,5 +1,5 @@
 ---
-title: Élément invocation (ASSL) | Documents Microsoft
+title: Élément invocation (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - Invocation element
 ms.assetid: f6bf64ad-ae57-4d46-bf92-1d07a65378bb
 caps.latest.revision: 35
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: bd9d04f677049a932e3f974c22d7e2fb7cb8aade
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 62f6b15f8aa8426930fdc3572bbd37bfb033afd6
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36154029"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37312239"
 ---
 # <a name="invocation-element-assl"></a>Élément Invocation (ASSL)
   Spécifie comment un [Action](../objects/action-element-assl.md) doit être appelé.  
@@ -62,7 +62,7 @@ ms.locfileid: "36154029"
 |Éléments enfants|None|  
   
 ## <a name="remarks"></a>Notes  
- Le mode d'invocation d'une action dépend de l'application cliente. Le `Invocation` élément suggère à une application cliente, comment une action doit être gérée et n’indique pas à l’instance de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] comment appeler une action.  
+ Le mode d'invocation d'une action dépend de l'application cliente. Le `Invocation` élément suggère à une application cliente comment une action doit être gérée, mais n’indique pas à l’instance de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] comment appeler une action.  
   
  La valeur de cet élément est limitée à l'une des chaînes du tableau suivant.  
   
@@ -72,7 +72,7 @@ ms.locfileid: "36154029"
 |*OnOpen*|Appelé lors de l'ouverture de l'objet par une application cliente.|  
 |*Traitement par lots*|Appelé par une commande de traitement par lots.|  
   
- L’énumération qui correspond aux valeurs autorisées pour `Invocation` dans l’objet d’objets AMO (Analysis Management) est modèle <xref:Microsoft.AnalysisServices.Action>.  
+ L’énumération qui correspond aux valeurs autorisées pour `Invocation` dans l’objet d’objets AMO (Analysis Management) modèle est <xref:Microsoft.AnalysisServices.Action>.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Propriétés &#40;ASSL&#41;](properties-assl.md)  

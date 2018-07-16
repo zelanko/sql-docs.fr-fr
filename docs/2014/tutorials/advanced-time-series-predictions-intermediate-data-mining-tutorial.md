@@ -1,5 +1,5 @@
 ---
-title: Avancée des prédictions de série chronologique (didacticiel sur l’exploration des données intermédiaires) | Documents Microsoft
+title: Avancée des prédictions de série chronologique (didacticiel d’exploration de données intermédiaire) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: b614ebdb-07ca-44af-a0ff-893364bd4b71
 caps.latest.revision: 32
 author: minewiskan
 ms.author: owend
-manager: kfile
-ms.openlocfilehash: 2d26b05a6d6929947054cd1546b46a976aa2dc2c
-ms.sourcegitcommit: 8c040e5b4e8c7d37ca295679410770a1af4d2e1f
+manager: craigg
+ms.openlocfilehash: 81297beab8cea567277bd7f1e015859547ab2f7a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/21/2018
-ms.locfileid: "36312917"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37326889"
 ---
 # <a name="advanced-time-series-predictions-intermediate-data-mining-tutorial"></a>Prédictions de série chronologique avancées (Didacticiel intermédiaire sur l'exploration de données)
   Le modèle de prévision vous a appris que même si les ventes dans la plupart des régions suivent une tendance similaire, certaines régions et certains modèles, tels que le modèle M200 dans la région Pacific, présentent des tendances très différentes. Ceci n'est pas une surprise puisque vous savez que les différences entre les régions sont courantes et sont causées par de nombreux facteurs, notamment les promotions marketing, la création de rapports inexacts ou des événements géopolitiques.  
@@ -32,15 +32,15 @@ ms.locfileid: "36312917"
   
 1.  [Préparer les données de ventes étendues (pour la prédiction)](#bkmk_newExtendData)  
   
-2.  [Préparer les données agrégées (pour la génération du modèle)](#bkmk_newReplaceData)  
+2.  [Préparer les données agrégées (pour générer le modèle)](#bkmk_newReplaceData)  
   
 3.  [Préparer les données de série (pour la prédiction croisée)](#bkmk_CrossData2)  
   
-4.  [Prédire à l’aide d’EXTEND](../../2014/tutorials/time-series-predictions-using-updated-data-intermediate-data-mining-tutorial.md)  
+4.  [Prédiction à l’aide d’étendre](../../2014/tutorials/time-series-predictions-using-updated-data-intermediate-data-mining-tutorial.md)  
   
 5.  [Créer le modèle de prédiction croisée](../../2014/tutorials/time-series-predictions-replacement-data-intermediate-data-mining.md)  
   
-6.  [Prédire à l’aide de REPLACE](../../2014/tutorials/time-series-predictions-replacement-data-intermediate-data-mining.md)  
+6.  [Prédiction à l’aide de remplacement](../../2014/tutorials/time-series-predictions-replacement-data-intermediate-data-mining.md)  
   
 7.  [Passez en revue les nouvelles prédictions](../../2014/tutorials/comparing-predictions-for-forecasting-models-intermediate-data-mining-tutorial.md)  
   
@@ -105,17 +105,17 @@ ms.locfileid: "36312917"
   
      **Source de données**: [!INCLUDE[ssAWDWsp](../includes/ssawdwsp-md.md)]  
   
-     **Sélectionner des Tables et vues**: sélectionnez la table que vous venez de créée, NewSalesData.  
+     **Sélectionner des Tables et vues**: sélectionnez la table que vous venez de créer, NewSalesData.  
   
 3.  Cliquez sur **Terminer**.  
   
-4.  Dans l’aire de conception vue de Source de données avec le bouton droit NewSalesData et sélectionnez **Explorer les données** pour vérifier les données.  
+4.  Dans l’aire de conception vue de Source de données, avec le bouton droit NewSalesData, puis sélectionnez **Explorer les données** pour vérifier les données.  
   
 > [!WARNING]  
 >  Vous allez utiliser ces données uniquement pour la prédiction, donc il n'est pas important que ces données soient incomplètes.  
   
 ##  <a name="bkmk_CrossData2"></a> Création des données pour le modèle de prédiction croisée  
- Les données qui a été utilisées dans la version d’origine prévision de modèle a été déjà quelque peu regroupées par la vue vTimeSeries réduit plusieurs modèles de vélos de diminuer le nombre de catégories et fusionné les résultats de différents pays en régions. Pour créer un modèle qui peut être utilisé pour les projections internationales, vous allez créer des agrégations simples supplémentaires directement dans le Concepteur de vue de source de données. La nouvelle vue de source de données ne contiendra qu'une somme et une moyenne des ventes de tous les produits pour toutes les régions.  
+ Les données qui a été utilisées dans la version d’origine la prévision de modèle a été déjà quelque peu regroupées par la vue vTimeSeries réduit plusieurs modèles de vélos de diminuer le nombre de catégories et fusionné les résultats de différents pays en régions. Pour créer un modèle qui peut être utilisé pour les projections internationales, vous allez créer des agrégations simples supplémentaires directement dans le Concepteur de vue de source de données. La nouvelle vue de source de données ne contiendra qu'une somme et une moyenne des ventes de tous les produits pour toutes les régions.  
   
  Après avoir créé la source de données utilisée pour le modèle, vous devez créer une nouvelle vue de source de données pour la prédiction. Par exemple, si vous souhaitez prédire des ventes pour l'Europe à l'aide du nouveau modèle international, vous devez charger uniquement les données de la région Europe. Vous allez définir une nouvelle vue de source de données qui filtre les données d'origine et modifier la condition de filtre pour chaque ensemble de requêtes de prédiction.  
   
@@ -133,7 +133,7 @@ ms.locfileid: "36312917"
   
 6.  Ensuite, cliquez avec le bouton droit sur l'aire de conception Vue de source de données vierge, puis sélectionnez **Nouvelle requête nommée**.  
   
-7.  Dans le **créer une requête nommée** boîte de dialogue, pour **nom**, type `AllRegions`et pour **Description**, type **somme et moyenne des ventes pour tous les modèles et régions**.  
+7.  Dans le **créer une requête nommée** boîte de dialogue pour **nom**, type `AllRegions`et pour **Description**, type **somme et moyenne des ventes pour tous les modèles et régions**.  
   
 8.  Dans le volet Texte SQL, tapez l'instruction suivante et cliquez sur OK :  
   
@@ -146,7 +146,7 @@ ms.locfileid: "36312917"
     GROUP BY ReportingDate  
     ```  
   
-9. Cliquez sur le `AllRegions` de table, puis sélectionnez **Explorer les données**.  
+9. Cliquez sur le `AllRegions` table, puis sélectionnez **Explorer les données**.  
   
 ###  <a name="bkmk_CrossData"></a> Pour créer les données de série pour la prédiction croisée  
   
@@ -181,12 +181,12 @@ ms.locfileid: "36312917"
     > [!NOTE]  
     >  Puisque vous devez créer des prédictions séparément pour chaque série, vous pouvez copier le texte de la requête et l'enregistrer dans un fichier texte afin de le réutiliser pour les autres séries de données.  
   
-6.  Dans l’aire de conception vue de Source de données avec le bouton droit T1000 Pacific et sélectionnez **Explorer les données** pour vérifier que les données sont filtrées correctement.  
+6.  Dans l’aire de conception vue de Source de données, cliquez sur T1000 Pacific, puis sélectionnez **Explorer les données** pour vérifier que les données sont filtrées correctement.  
   
      Vous utiliserez ces données comme entrée au modèle lors de la création des requêtes de prédiction croisée.  
   
 ## <a name="next-task-in-lesson"></a>Tâche suivante de la leçon  
- [À l’aide de la mise à jour des données des prédictions de série chronologique &#40;intermédiaire Didacticiel d’exploration de données&#41;](../../2014/tutorials/time-series-predictions-using-updated-data-intermediate-data-mining-tutorial.md)  
+ [À l’aide des données mises à jour des prédictions de série chronologique &#40;didacticiel d’exploration de données intermédiaire&#41;](../../2014/tutorials/time-series-predictions-using-updated-data-intermediate-data-mining-tutorial.md)  
   
 ## <a name="see-also"></a>Voir aussi  
  [Algorithme de série chronologique de Microsoft](../../2014/analysis-services/data-mining/microsoft-time-series-algorithm.md)   

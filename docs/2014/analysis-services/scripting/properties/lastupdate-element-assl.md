@@ -1,5 +1,5 @@
 ---
-title: Élément LastUpdate (ASSL) | Documents Microsoft
+title: Élément LastUpdate (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -20,18 +20,18 @@ helpviewer_keywords:
 - LastUpdate element
 ms.assetid: 639db733-a082-4f57-868d-a3bcd5e7a4f6
 caps.latest.revision: 12
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 2a0cc42c5853e34ed4b1525cde528aa349f67ae7
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 01429b3086f6de62b7ad0b921ad89f042c341891
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36151982"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37302779"
 ---
 # <a name="lastupdate-element-assl"></a>Élément LastUpdate (ASSL)
-  Contient en lecture seule horodateur qui indique la dernière fois que le texte associé [base de données](../objects/database-element-assl.md) ou un des principaux objets contenant la base de données a été modifié.  
+  Contient en lecture seule horodatage qui indique la dernière fois qu’associé [base de données](../objects/database-element-assl.md) ou un des principaux objets que contient la base de données a été modifié.  
   
 ## <a name="syntax"></a>Syntaxe  
   

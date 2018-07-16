@@ -1,5 +1,5 @@
 ---
-title: Clés de chiffrement (SSRS en Mode natif) | Documents Microsoft
+title: Clés de chiffrement (SSRS en Mode natif) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - SQL12.rsconfigtool.encryptionkeypanel.F1
 ms.assetid: cc7e6f84-80e1-4b5e-9409-d0e074edd147
 caps.latest.revision: 7
 author: markingmyname
 ms.author: maghan
-manager: jhubbard
-ms.openlocfilehash: 43c1935debbb7ef5f26579c2a526b177d14d38d0
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: a494ca4f59abb618c9cbfbffd36bc57e481a71e6
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36140432"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37328909"
 ---
 # <a name="encryption-keys-ssrs-native-mode"></a>Clés de chiffrement (SSRS en mode natif)
   Utilisez la page Clés de chiffrement pour gérer la clé symétrique utilisée pour chiffrer et déchiffrer les données dans un serveur de rapports. La gestion des clés de chiffrement représente une partie importante de la configuration du serveur de rapports. La clé symétrique est créée et appliquée automatiquement lorsque vous créez la base de données du serveur de rapports. Créez une copie de sauvegarde de la clé symétrique de façon à pouvoir effectuer les opérations de maintenance de routine. Les tâches de maintenance suivantes nécessitent une copie valide de la clé symétrique :  
@@ -46,7 +46,7 @@ ms.locfileid: "36140432"
 > [!IMPORTANT]  
 >  La suppression de la clé symétrique ou la création d'une nouvelle clé ne peut pas être inversée ou annulée. La suppression de la clé symétrique ou la création d'une nouvelle clé peut avoir d'importantes conséquences sur votre installation actuelle. Si vous supprimez la clé, toute donnée existante chiffrée par la clé symétrique sera également supprimée. Les données supprimées incluent les chaînes de connexion aux sources de données de rapport externes, les chaînes de connexion stockées et certaines informations d'abonnement.  
   
- Pour ouvrir cette page, démarrez le [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Gestionnaire de Configuration et sélectionnez le lien dans le volet de navigation. Pour plus d’informations, consultez [Gestionnaire de configuration de Reporting Services &#40;mode natif&#41;](../../../2014/sql-server/install/reporting-services-configuration-manager-native-mode.md).  
+ Pour ouvrir cette page, démarrez le [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Configuration Manager et sélectionnez le lien dans le volet de navigation. Pour plus d’informations, consultez [Gestionnaire de configuration de Reporting Services &#40;mode natif&#41;](../../../2014/sql-server/install/reporting-services-configuration-manager-native-mode.md).  
   
 ## <a name="options"></a>Options  
  **Sauvegarde**  

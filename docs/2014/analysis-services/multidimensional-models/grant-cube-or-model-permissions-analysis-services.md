@@ -1,5 +1,5 @@
 ---
-title: Accorder des autorisations de cube ou du modèle (Analysis Services) | Documents Microsoft
+title: Accorder des autorisations de cube ou de modèle (Analysis Services) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.roledesignerdialog.cubes.f1
 helpviewer_keywords:
@@ -18,15 +18,15 @@ helpviewer_keywords:
 - permissions [Analysis Services], cubes
 ms.assetid: 55b1456e-2f6b-4101-b316-c926f40304e3
 caps.latest.revision: 30
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 4f3c50f06e71d69b893e5bbebc1ca9870da04f54
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 2c2602f95332f48b71f56ce1fb3028c22c51d2ee
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36152437"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37306559"
 ---
 # <a name="grant-cube-or-model-permissions-analysis-services"></a>Octroyer des autorisations de cube ou de modèle (Analysis Services)
   Un cube ou modèle tabulaire est le principal objet de requête dans un modèle de données Analysis Services. Lors de la connexion à des données tabulaires ou multidimensionnelles à partir d'Excel pour l'exploration de données ad hoc, les utilisateurs commencent en général par sélectionner un cube ou modèle tabulaire spécifique comme structure de données derrière l'objet de rapport de tableau croisé dynamique. Cette rubrique explique comment accorder les autorisations nécessaires pour l'accès aux données tabulaires ou de cube.  
@@ -38,7 +38,7 @@ ms.locfileid: "36152437"
  Pour conserver les définitions des rôles d'un déploiement de solution au suivant, une meilleure pratique consiste à définir des rôles dans [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] comme partie intégrante du modèle, puis à faire en sorte qu'un administrateur de base de données assigne des appartenances aux rôles dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] une fois la base de données publiée. Vous pouvez cependant utiliser l'un ou l'autre outil pour ces deux tâches. Pour simplifier l'exercice, nous allons utiliser [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] pour la définition et l'appartenance aux rôles.  
   
 > [!NOTE]  
->  Seuls les administrateurs de serveur, ou les administrateurs de base de données ayant des autorisations Contrôle total, peuvent déployer un cube à partir de fichiers sources vers un serveur ou créer des rôles et assigner des membres. Consultez [accorder des autorisations d’administrateur de serveur &#40;Analysis Services&#41; ](../instances/grant-server-admin-rights-to-an-analysis-services-instance.md) et [accorder des autorisations de base de données &#40;Analysis Services&#41; ](grant-database-permissions-analysis-services.md) pour plus d’informations sur ces autorisations. niveaux.  
+>  Seuls les administrateurs de serveur, ou les administrateurs de base de données ayant des autorisations Contrôle total, peuvent déployer un cube à partir de fichiers sources vers un serveur ou créer des rôles et assigner des membres. Consultez [accorder des autorisations administrateur du serveur &#40;Analysis Services&#41; ](../instances/grant-server-admin-rights-to-an-analysis-services-instance.md) et [accorder des autorisations de base de données &#40;Analysis Services&#41; ](grant-database-permissions-analysis-services.md) pour plus d’informations sur ces autorisations niveaux.  
   
 #### <a name="step-1-create-the-role"></a>Étape 1 : Créer le rôle  
   

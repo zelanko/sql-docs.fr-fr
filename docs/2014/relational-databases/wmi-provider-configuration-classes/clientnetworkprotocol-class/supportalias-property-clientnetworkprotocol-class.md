@@ -1,5 +1,5 @@
 ---
-title: Supportalias, propriété (classe ClientNetworkProtocol) | Documents Microsoft
+title: Supportalias, propriété (classe ClientNetworkProtocol) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -20,18 +20,18 @@ helpviewer_keywords:
 - SupportAlias property
 ms.assetid: 1e7a2e87-c356-40a6-a6d9-e492467629f9
 caps.latest.revision: 16
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: be78007f210519c9b9fb67a9e2a67f3697b4a2b8
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
+ms.openlocfilehash: bd18c837ca94878887bdf30fc0412dddff59cb83
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36151858"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37327549"
 ---
 # <a name="supportalias-property-clientnetworkprotocol-class"></a>Propriété SupportAlias (classe ClientNetworkProtocol)
-  Obtient la propriété booléenne qui spécifie si le protocole réseau actuel spécifié par le [setordervalue, méthode (classe ClientNetworkProtocol)](clientnetworkprotocol-class.md) prend en charge les alias.  
+  Obtient la propriété booléenne qui spécifie si le protocole réseau actuel spécifié par le [setordervalue, méthode (classe ClientNetworkProtocol)](clientnetworkprotocol-class.md) prennent en charge les alias.  
   
 ## <a name="syntax"></a>Syntaxe  
   

@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.advancededitor.columnmappings.f1
 - sql12.dts.designer.advancededitor.inputcolumns.f1
@@ -19,13 +19,13 @@ ms.assetid: 5ad0ac71-fa8b-4c26-bd42-e6ef00c87571
 caps.latest.revision: 6
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: e9549fcb2363fcdd132de2136a9b6edeccef1085
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 9be2c9e5b3d3243b9e0a3f0fd68eba30c915c696
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36142855"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37328149"
 ---
 # <a name="advanced-editor"></a>Éditeur avancé
   Utilisez la boîte de dialogue **Éditeur avancé** pour configurer les propriétés du composant de l'objet [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] sélectionné.  
@@ -50,7 +50,7 @@ ms.locfileid: "36142855"
   
 -   [Propriétés personnalisées des transformations](data-flow/transformations/transformation-custom-properties.md)  
   
--   [Propriétés du chemin d’accès](../../2014/integration-services/path-properties.md)  
+-   [Propriétés du chemin](../../2014/integration-services/path-properties.md)  
   
  Pour plus d'informations sur le composant spécifique que vous modifiez, consultez la description du composant dans la section « Composants des flux de données » de la documentation Objets et concepts d' [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] :  
   

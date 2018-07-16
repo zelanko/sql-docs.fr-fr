@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - manSer
 ms.assetid: 645ae53f-f352-4d6a-9eb0-264e53a93a18
 caps.latest.revision: 5
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 69e44adb0ee84c2831062acd7cd35432f5de5af5
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: e0c2078adeff636f11acdc86b78355c43c46a30a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36142096"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37329919"
 ---
 # <a name="manage-a-cdc-service"></a>Gérer un service de capture de données modifiées
   Utilisez la console du concepteur CDC pour afficher les services que vous avez créés à l'aide de la console de configuration du service de capture de données modifiées et gérer toutes les instances dans le service de capture de données modifiées Oracle.  
@@ -47,7 +47,7 @@ ms.locfileid: "36142096"
  Cliquez sur **Arrêter toutes les instances** pour arrêter la capture de données modifiées pour toutes les instances dans le service.  
   
 ## <a name="see-also"></a>Voir aussi  
- [La création de l’Instance de base de données modifiées SQL Server](how-to-create-the-sql-server-change-database-instance.md)   
+ [Comment créer l’Instance de base de données de modifications SQL Server](how-to-create-the-sql-server-change-database-instance.md)   
  [Comment gérer un Service de capture de données modifiées à partir de la Console du Concepteur de capture de données modifiées](how-to-manage-a-cdc-service-from-the-cdc-designer-console.md)   
  [Utiliser l’Assistant Nouvelle instance](use-the-new-instance-wizard.md)  
   

@@ -1,5 +1,5 @@
 ---
-title: Dépanner le Générateur de rapports | Documents Microsoft
+title: Résoudre les problèmes de générateur de rapports | Microsoft Docs
 ms.custom: ''
 ms.date: 12/29/2017
 ms.prod: sql-server-2014
@@ -8,39 +8,39 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 3806fc48-56f8-44d1-a3c1-df8c33cce0a3
 caps.latest.revision: 7
-author: douglaslM
+author: maggiesmsft
 ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: ea90051d521f14465543ea135a8a2472aef5be68
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: ff8bc634306d783e943388d19f149e735d15383f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36153635"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37255501"
 ---
 # <a name="troubleshoot-report-builder"></a>Résolution des problèmes liés au Générateur de rapports
-  Le Générateur de rapports est un outil de création de rapport [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] qui permet de générer des rapports à partir de nombreux types différents de sources de données et de les publier sur un serveur de rapports ou un site SharePoint. Les rapports que vous créez peuvent être affichées dans le Générateur de rapports, dans un navigateur Web, ou en tant que partie d’un [!INCLUDE[msCoName](../includes/msconame-md.md)] application Windows ou un site SharePoint.  
+  Le Générateur de rapports est un outil de création de rapport [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] qui permet de générer des rapports à partir de nombreux types différents de sources de données et de les publier sur un serveur de rapports ou un site SharePoint. Les rapports que vous créez sont consultables dans le Générateur de rapports, dans un navigateur Web, ou en tant que partie d’un [!INCLUDE[msCoName](../includes/msconame-md.md)] application de Windows ou un site SharePoint.  
   
- Pour savoir comment utiliser le Générateur de rapports et exécuter de nombreuses tâches, consultez la [didacticiels](report-builder-tutorials.md).  
+ Pour savoir comment utiliser le Générateur de rapports et exécuter de nombreuses tâches, consultez le [didacticiels](report-builder-tutorials.md).  
   
  Les rubriques suivantes peuvent vous aider à résoudre des problèmes liés aux rapports, selon que vous êtes un auteur de rapport ou un administrateur de serveur de rapports.  
   
 ## <a name="report-authors"></a>Auteurs de rapports  
- [Dépanner les rapports : Mapper des rapports &#40;rapport Générateur et SSRS&#41;](report-design/troubleshoot-reports-map-reports-report-builder-and-ssrs.md)  
+ [Dépanner les rapports : Mapper des rapports &#40;Générateur de rapports et SSRS&#41;](report-design/troubleshoot-reports-map-reports-report-builder-and-ssrs.md)  
   
- [Résoudre les problèmes de parties de rapport &#40;rapport Générateur et SSRS&#41;](report-parts-report-builder-and-ssrs.md)  
+ [Résoudre les problèmes de parties de rapports &#40;Générateur de rapports et SSRS&#41;](report-parts-report-builder-and-ssrs.md)  
   
- [Résoudre les problèmes graphiques &#40;rapport Générateur et SSRS&#41;](report-design/charts-report-builder-and-ssrs.md)  
+ [Résoudre les problèmes graphiques &#40;Générateur de rapports et SSRS&#41;](report-design/charts-report-builder-and-ssrs.md)  
   
 ## <a name="administrators"></a>Administrateurs  
- [Installer, désinstaller et prise en charge du Générateur de rapports](../../2014/reporting-services/install-uninstall-and-report-builder-support.md)  
+ [Installer, désinstaller et prendre en charge le Générateur de rapports](../../2014/reporting-services/install-uninstall-and-report-builder-support.md)  
   
  En outre, consultez les rubriques suivantes dans le [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] documentation dans [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [la documentation en ligne](http://go.microsoft.com/fwlink/?linkid=121312):  
   
--   [Planifier la prise en charge des rapports de mappage](../../2014/reporting-services/plan-for-map-report-support.md)  
+-   [Planifier la prise en charge de rapport cartographique](../../2014/reporting-services/plan-for-map-report-support.md)  
   
 -   [Planifier la conception de rapports et le déploiement de rapports &#40;Reporting Services 2014&#41;](plan-for-report-design-and-report-deployment-reporting-services.md)  
   
@@ -51,9 +51,9 @@ ms.locfileid: "36153635"
   
  Lisez ce que les membres de l’équipe Reporting Services ont à dire dans le [blog de l’équipe Reporting Services](http://go.microsoft.com/fwlink/?LinkId=118788).
   
- Si vous n’avez toujours pas trouvé une réponse, [envoyer des commentaires](http://go.microsoft.com/fwlink/?LinkId=118791).  
+ Si vous n’avez pas encore trouvé une réponse, [envoyer des commentaires](http://go.microsoft.com/fwlink/?LinkId=118791).  
   
 ## <a name="see-also"></a>Voir aussi  
- [Installer, désinstaller et prise en charge du Générateur de rapports](../../2014/reporting-services/install-uninstall-and-report-builder-support.md)  
+ [Installer, désinstaller et prendre en charge le Générateur de rapports](../../2014/reporting-services/install-uninstall-and-report-builder-support.md)  
   
   

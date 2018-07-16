@@ -1,5 +1,5 @@
 ---
-title: 'Nouvelle attribution de rôle système : Modifier la Page attributions de rôle système (Gestionnaire de rapports) | Documents Microsoft'
+title: 'Nouvelle attribution de rôle système : Modifier la Page attributions de rôle système (Gestionnaire de rapports) | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 62a22ab9-1eb4-4ce5-8dd7-06b5ed2d9a2a
 caps.latest.revision: 26
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 4cc3521561aac3e91e2af2dd8f45eea77b74b58e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 6b580fc8ab1a2558d8c356372d6ccbd4f40ebb95
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36142632"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37331269"
 ---
 # <a name="new-system-role-assignments-edit-system-role-assignments-page-report-manager"></a>Page Nouvelle attribution de rôle système : Modifier les attributions de rôles système (Gestionnaire de rapports)
   La page Nouvelle attribution de rôle système ou Modifier les attributions de rôle système vous permet de définir la sécurité pour le serveur de rapports. La sécurité est définie par l'intermédiaire des attributions de rôle qui mappent des groupes ou des utilisateurs spécifiques aux tâches qu'ils peuvent effectuer. La liste des tâches est représentée sous la forme d'une définition de rôle que vous sélectionnez lors de l'attribution de rôle.  
@@ -69,7 +69,7 @@ ms.locfileid: "36142632"
 >  Ce bouton est disponible uniquement dans la page Modifier l'attribution de rôle.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Aide (F1) de gestionnaire de rapports](../../2014/reporting-services/report-manager-f1-help.md)   
+ [F1 du Gestionnaire de rapports](../../2014/reporting-services/report-manager-f1-help.md)   
  [Attributions de rôles](security/role-assignments.md)   
  [Définitions de rôles](security/role-definitions.md)  
   

@@ -1,5 +1,5 @@
 ---
-title: Ajouter l’Intelligence comptable à une Dimension | Documents Microsoft
+title: Ajouter l’Intelligence comptable à une Dimension | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - dimensions [Analysis Services], Business Intelligence enhancements
 - Business Intelligence enhancements [Analysis Services], account intelligence
 - account intelligence [Analysis Services]
 ms.assetid: 36f454ae-a9f2-4a59-b19d-40310af9f901
 caps.latest.revision: 33
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 7114a48bf24fcd7f22f68d83ecff8bf3873c3b4e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 80704cdf9df5481f1ec098ca29443e38fcf97bc1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36041219"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37301179"
 ---
 # <a name="add-account-intelligence-to-a-dimension"></a>Ajouter de l'intelligence comptable à une dimension
   Ajoutez l'intelligence comptable à un cube ou une dimension pour affecter des classes comptables standard, par exemple recettes et dépenses, aux membres d'un attribut de compte. Cette amélioration identifie également les types de comptes (tels que l'actif et le passif) et affecte l'agrégation appropriée à chaque type de compte. [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] peut utiliser les classifications pour agréger les comptes sur une période.  
@@ -54,7 +54,7 @@ ms.locfileid: "36041219"
     |**Dettes**|`LastNonEmpty`|Prix ou valeur de choses dues à un instant spécifique. Ce type de compte n'effectue pas de cumuls sur le temps écoulé et, de ce fait, ne s'agrège pas naturellement avec le temps. Par exemple, le montant Year est la valeur du dernier mois avec des données. Ce type de compte effectue des conversions entre les monnaies avec le taux End of Period.|  
     |**Actif**|`LastNonEmpty`|Prix ou valeur de choses détenues à un instant spécifique. Ce type de compte s’accumule au fil du temps et, de ce fait, ne s’agrège pas naturellement avec le temps. Par exemple, le montant Year est la valeur du dernier mois avec des données. Ce type de compte effectue des conversions entre les monnaies avec le taux End of Period.|  
     |**Balance**|`LastNonEmpty`|Nombre d'un objet à un instant spécifique. Ce type de compte effectue des cumuls sur le temps écoulé, mais ne s'agrège pas naturellement avec le temps. Par exemple, le montant Year est la valeur du dernier mois avec des données.|  
-    |**Flux**|`Sum`|Nombre incrémentiel d'un objet. Ce type de compte regroupe en tant qu’un `Sum` au fil du temps, mais ne convertit pas avec les règles de conversion monétaire.|  
+    |**Flux**|`Sum`|Nombre incrémentiel d'un objet. Ce type de compte agrège sous un `Sum` au fil du temps, mais ne convertit pas avec les règles de conversion de devise.|  
     |**Dépenses**|`Sum`|Prix ou valeur de choses dépensées. Ce type de compte s'agrège sous forme de somme (`Sum`) avec le temps et effectue les conversions entre les monnaies avec un taux moyen.|  
     |**Revenu**|`Sum`|Prix ou valeur de choses reçues. Ce type de compte s'agrège sous forme de somme (`Sum`) avec le temps et effectue les conversions entre les monnaies avec un taux moyen.|  
   

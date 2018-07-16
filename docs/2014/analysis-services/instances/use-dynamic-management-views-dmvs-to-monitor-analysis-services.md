@@ -1,5 +1,5 @@
 ---
-title: Utilisez les vues de gestion dynamique (DMV) pour surveiller Analysis Services | Documents Microsoft
+title: Utiliser des vues de gestion dynamique (DMV) pour surveiller Analysis Services | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,23 +8,23 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 22b82b2d-867f-4ebf-9288-79d1cdd62f18
 caps.latest.revision: 15
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 3ef037d3d2745a5cfce8949ca7ac14e0d5743326
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 789811d4588efe47848d7a6045342d506e1975ee
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36153599"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37288565"
 ---
 # <a name="use-dynamic-management-views-dmvs-to-monitor-analysis-services"></a>Utiliser des vues de gestion dynamique (DMV) pour surveiller Analysis Services
   Les vues de gestion dynamique (DMV) d'Analysis Services sont des structures de requête qui exposent des informations sur les opérations de serveur local et l'intégrité du serveur. La structure de requête est une interface vers des ensembles de lignes de schéma qui retournent des métadonnées et des informations d'analyse relatives à une instance Analysis Services.  
   
- Pour la plupart des requêtes DMV, vous utilisez un `SELECT` instruction et `$System` schéma avec un ensemble de lignes de schéma XML/A.  
+ Pour la plupart des requêtes DMV, vous utilisez un `SELECT` instruction et le `$System` schéma avec un ensemble de lignes de schéma XML/A.  
   
 ```  
 SELECT * FROM $System.<schemaRowset>  
@@ -102,7 +102,7 @@ ORDER BY TABLE_NAME ASC
 ```  
   
 > [!NOTE]  
->  Si une vue DMV n’est pas disponible pour un ensemble de lignes donné, le serveur renvoie l’erreur suivante : « la \<schemarowset > type de demande n’est pas reconnu par le serveur ». Toutes les autres erreurs signalent des problèmes de syntaxe.  
+>  Si une vue DMV n’est pas disponible pour un ensemble de lignes donné, le serveur retourne l’erreur suivante : « la \<schemarowset > type de demande n’est pas reconnu par le serveur ». Toutes les autres erreurs signalent des problèmes de syntaxe.  
   
 |Ensemble de lignes|Description|  
 |------------|-----------------|  
@@ -141,7 +141,7 @@ ORDER BY TABLE_NAME ASC
 |[DISCOVER_TRACE_EVENT_CATEGORIES, ensemble de lignes](../schema-rowsets/xml/discover-trace-event-categories-rowset.md)|Retourne la liste des catégories disponibles.|  
 |[DISCOVER_TRACES, ensemble de lignes](../schema-rowsets/xml/discover-traces-rowset.md)|Retourne la liste des traces actives sur la connexion actuelle.|  
 |[DISCOVER_TRANSACTIONS, ensemble de lignes](../schema-rowsets/xml/discover-transactions-rowset.md)|Retourne la liste des transactions actives sur la connexion actuelle.|  
-|[Ensemble de lignes DISCOVER_XEVENT_TRACE_DEFINITION](../dev-guide/discover-xevent-trace-definition-rowset.md)|Retourne la liste des traces xevent actives sur la connexion actuelle.|  
+|[DISCOVER_XEVENT_TRACE_DEFINITION, ensemble de lignes](../dev-guide/discover-xevent-trace-definition-rowset.md)|Retourne la liste des traces xevent actives sur la connexion actuelle.|  
 |[DMSCHEMA_MINING_COLUMNS, ensemble de lignes](../schema-rowsets/data-mining/dmschema-mining-columns-rowset.md)|Répertorie les colonnes de tous les modèles d'exploration de données disponibles sur la connexion actuelle.|  
 |[DMSCHEMA_MINING_FUNCTIONS, ensemble de lignes](../schema-rowsets/data-mining/dmschema-mining-functions-rowset.md)|Retourne la liste des fonctions prises en charge par les algorithmes d'exploration de données sur le serveur.|  
 |[DMSCHEMA_MINING_MODEL_CONTENT, ensemble de lignes](../schema-rowsets/data-mining/dmschema-mining-model-content-rowset.md)|Retourne un ensemble de lignes composé de colonnes qui décrivent le modèle actuel.|  
@@ -168,7 +168,7 @@ ORDER BY TABLE_NAME ASC
   
 ## <a name="see-also"></a>Voir aussi  
  [Guide des opérations de SQL Server 2008 R2 Analysis Services](http://go.microsoft.com/fwlink/?LinkID=225539&clcid=0x409)   
- [Nouveau System.Discover_Object_Activity](http://go.microsoft.com/fwlink/?linkid=221322)   
+ [New System.Discover_Object_Activity](http://go.microsoft.com/fwlink/?linkid=221322)   
  [Nouvelle fonction SYSTEMRESTRICTEDSCHEMA pour les ensembles de lignes restreints et les vues de gestion dynamique](http://go.microsoft.com/fwlink/?LinkId=231885)  
   
   

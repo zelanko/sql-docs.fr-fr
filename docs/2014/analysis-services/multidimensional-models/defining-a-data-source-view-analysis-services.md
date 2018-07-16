@@ -1,5 +1,5 @@
 ---
-title: Définition des données de Source de vue (Analysis Services) | Documents Microsoft
+title: Définition des données d’une Source de vue (Analysis Services) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - names [Analysis Services], data source views
 - name matching criteria [Analysis Services]
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - data source views [Analysis Services], creating
 ms.assetid: 0bae4ee4-1742-40e9-bebe-17c788854484
 caps.latest.revision: 42
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 90c3085f0dde8ba5fd317ce8768926787ac5f585
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 46e84e7a5f546dc90bf3ffbe141dcf5bec4b2792
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36154053"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37308549"
 ---
 # <a name="defining-a-data-source-view-analysis-services"></a>Définition d'une vue de source de données (Analysis Services)
   Une vue de source de données contient le modèle logique du schéma utilisé par les objets multidimensionnels de base de données [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , autrement dit des cubes, des dimensions et des structures d’exploration de données. Une vue de source de données représente la définition, stockée au format XML, des métadonnées de ces éléments de schéma utilisés par le modèle UDM (Unified Dimensional Model) et par les structures d'exploration de données. Une vue de source de données :  
@@ -111,7 +111,7 @@ ms.locfileid: "36154053"
 ##  <a name="bkmk_secondaryDS"></a> Ajouter une source de données secondaire  
  Lorsque vous définissez une vue de source de données qui contient des tables, des vues ou des colonnes de plusieurs sources de données, la première source de données à partir de laquelle vous ajoutez des objets à la vue de source de données est désignée comme étant la source de données primaire (vous ne pourrez pas la changer une fois qu'elle sera définie). Après avoir défini une vue de source de données reposant sur des objets d'une seule source de données, vous pouvez ajouter des objets d'autres sources de données.  
   
- Si un traitement OLAP ou une requête d’exploration de données nécessite des données à partir de plusieurs sources de données dans une requête unique, la source de données primaire doit prendre en charge les requêtes distantes à l’aide de `OpenRowset`. Il s’agit généralement d’une source de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Par exemple, si vous créez une dimension OLAP qui contient des attributs liés aux colonnes de plusieurs sources de données, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] construit une requête `OpenRowset` pour peupler cette dimension lors du traitement. Toutefois, si un objet OLAP peut être rempli ou d’exploration de données requête résolu à partir d’une source de données, puis un `OpenRowset` requête ne sera construite. Dans certaines situations, vous pourrez définir des relations d'attribut pour éviter la création d'une requête `OpenRowset`. Pour plus d’informations sur les relations d’attributs, consultez [Relations d’attributs](../multidimensional-models-olap-logical-dimension-objects/attribute-relationships.md), [Adding or Removing Tables or Views in a Data Source View &#40;Analysis Services&#41;](adding-or-removing-tables-or-views-in-a-data-source-view-analysis-services.md) et [Define Relations d’attributs](attribute-relationships-define.md).  
+ Si un traitement OLAP ou une requête d’exploration de données nécessite des données à partir de plusieurs sources de données dans une requête unique, la source de données primaire doit prendre en charge les requêtes distantes à l’aide de `OpenRowset`. Il s’agit généralement d’une source de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Par exemple, si vous créez une dimension OLAP qui contient des attributs liés aux colonnes de plusieurs sources de données, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] construit une requête `OpenRowset` pour peupler cette dimension lors du traitement. Toutefois, si un objet OLAP peut être rempli ou d’exploration de données requête peut être résolue à partir d’une source de données, puis un `OpenRowset` requête ne sera construite. Dans certaines situations, vous pourrez définir des relations d'attribut pour éviter la création d'une requête `OpenRowset`. Pour plus d’informations sur les relations d’attributs, consultez [Relations d’attributs](../multidimensional-models-olap-logical-dimension-objects/attribute-relationships.md), [Adding or Removing Tables or Views in a Data Source View &#40;Analysis Services&#41;](adding-or-removing-tables-or-views-in-a-data-source-view-analysis-services.md) et [Define Relations d’attributs](attribute-relationships-define.md).  
   
  Pour ajouter des tables et des colonnes d'une deuxième source de données, double-cliquez sur la vue DSV dans l'Explorateur de solutions afin de l'ouvrir dans le concepteur de vue de source de données, puis utilisez la boîte de dialogue Ajouter/supprimer des tables pour inclure des objets d'autres sources de données définies dans votre projet. Pour plus d’informations, consultez [Ajout ou suppression de tables ou de vues dans une vue de source de données &#40;Analysis Services&#41;](adding-or-removing-tables-or-views-in-a-data-source-view-analysis-services.md).  
   
@@ -135,7 +135,7 @@ ms.locfileid: "36154053"
 >  Une fois que vous avez terminé l'exécution de l'Assistant Vue de source de données, vous pouvez ajouter ou supprimer des relations dans le volet Schéma du Concepteur de vue de source de données. Pour plus d’informations, consultez [Définir des relations logiques dans une vue de source de données &#40;Analysis Services&#41;](define-logical-relationships-in-a-data-source-view-analysis-services.md).  
   
 ## <a name="see-also"></a>Voir aussi  
- [Ajout ou suppression des Tables ou des vues dans les données de vue de Source &#40;Analysis Services&#41;](adding-or-removing-tables-or-views-in-a-data-source-view-analysis-services.md)   
+ [Ajout ou suppression des Tables ou des vues de données de vue de Source &#40;Analysis Services&#41;](adding-or-removing-tables-or-views-in-a-data-source-view-analysis-services.md)   
  [Définir des clés primaires logiques dans une vue de Source de données &#40;Analysis Services&#41;](define-logical-primary-keys-in-a-data-source-view-analysis-services.md)   
  [Définir des calculs nommés dans une vue de Source de données &#40;Analysis Services&#41;](define-named-calculations-in-a-data-source-view-analysis-services.md)   
  [Définir des requêtes nommées dans une vue de Source de données &#40;Analysis Services&#41;](define-named-queries-in-a-data-source-view-analysis-services.md)   

@@ -1,5 +1,5 @@
 ---
-title: Général (Générateur de rapports), boîte de dialogue Propriétés de Source de données | Documents Microsoft
+title: Général (Générateur de rapports), boîte de dialogue Propriétés de Source de données | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - "10018"
 ms.assetid: b956f43a-8426-4679-acc1-00f405d5ff5b
 caps.latest.revision: 14
-author: douglaslM
+author: maggiesmsft
 ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: edd997ab55e63abe4b5085bbe0b11c197020c2ad
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 30114b93158424512e9a9be6441dc5c3ab8dd460
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36152764"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37288455"
 ---
 # <a name="data-source-properties-dialog-box-general-report-builder"></a>Boîte de dialogue Propriétés de la source de données, Général (Générateur de rapports)
   Sélectionnez **Général** dans la boîte de dialogue **Propriétés de la source de données** pour sélectionner une source de données partagée à partir d'un serveur de rapports, ou pour créer ou modifier les informations de connexion d'une source de données incorporée au rapport.  
@@ -68,9 +68,9 @@ ms.locfileid: "36152764"
  Cliquez pour vérifier le fonctionnement de la connexion à la source de données à l'aide des informations d'identification spécifiées. Si la connexion ne peut pas être établie, vérifiez vos informations d'identification et la disponibilité du serveur. Vous pouvez tester la connexion de la source de données à des sources de données incorporées et partagées.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Ajouter des données à un rapport &#40;rapport Générateur et SSRS&#41;](report-data/report-datasets-ssrs.md)   
- [Ajouter et vérifier une connexion de données ou une Source de données &#40;rapport Générateur et SSRS&#41;](report-data/add-and-verify-a-data-connection-report-builder-and-ssrs.md)   
- [Connexions de données, les Sources de données et les chaînes de connexion dans le Générateur de rapports](../../2014/reporting-services/data-connections-data-sources-and-connection-strings-in-report-builder.md)   
+ [Ajouter des données à un rapport &#40;Générateur de rapports et SSRS&#41;](report-data/report-datasets-ssrs.md)   
+ [Ajouter et vérifier une connexion de données ou d’une Source de données &#40;Générateur de rapports et SSRS&#41;](report-data/add-and-verify-a-data-connection-report-builder-and-ssrs.md)   
+ [Connexions de données, Sources de données et chaînes de connexion dans le Générateur de rapports](../../2014/reporting-services/data-connections-data-sources-and-connection-strings-in-report-builder.md)   
  [Informations d’identification, boîte de dialogue Propriétés de Source de données &#40;Générateur de rapports&#41;](../../2014/reporting-services/data-source-properties-dialog-box-credentials-report-builder.md)   
  [Aide du Générateur de rapports pour les boîtes de dialogue, volets et les Assistants](../../2014/reporting-services/report-builder-help-for-dialog-boxes-panes-and-wizards.md)  
   

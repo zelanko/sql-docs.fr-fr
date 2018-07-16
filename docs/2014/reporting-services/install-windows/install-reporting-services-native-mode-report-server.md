@@ -1,5 +1,5 @@
 ---
-title: Installer le serveur de rapports en Mode natif de Services Reporting | Documents Microsoft
+title: Installer le serveur de rapports en Mode natif de Services Reporting | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - default configuration [Reporting Services]
 - report servers [Reporting Services], default configurations
@@ -17,13 +17,13 @@ ms.assetid: 8f25e6dc-b753-400e-9e9a-50f4f35bf6c4
 caps.latest.revision: 58
 author: markingmyname
 ms.author: maghan
-manager: jhubbard
-ms.openlocfilehash: 090432d75605eb1678eacc77fafe1c213825d5ed
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 0260982df5dff6640a4a273916c8e4455bd18621
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36140236"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37329439"
 ---
 # <a name="install-reporting-services-native-mode-report-server"></a>Installer le serveur de rapports Reporting Services en mode natif
   Un serveur de rapports en mode natif [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] peut être installé via l'Assistant Installation de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou à partir de la ligne de commande. Dans l'Assistant Installation, vous pouvez choisir 1) d'installer les fichiers te de configurer le serveur avec les paramètres par défaut ou 2) d'installer uniquement les fichiers et le serveur n'est pas configuré par l'Assistant Installation. Cette rubrique passe en revue *la configuration par défaut pour le mode natif* où le programme d'installation installe et configure une instance de serveur de rapports. Une fois l'installation terminée, le serveur de rapports fonctionne et est opérationnel. Un serveur de rapports en mode natif s'exécute comme serveur d'applications autonome. Le mode natif est le mode serveur par défaut.  
@@ -101,9 +101,9 @@ ms.locfileid: "36140236"
 |Élément|Description|  
 |----------|-----------------|  
 |Prefix|Le préfixe par défaut est HTTP. Si vous avez préalablement installé un certificat SSL (Secure Sockets Layer), l'installation tente de créer des réservations d'URL qui utilisent le préfixe HTTPS.|  
-|Nom d'hôte|Le nom d'hôte par défaut est un caractère générique fort (+). Il spécifie que le serveur de rapports accepte toute requête HTTP sur le port désigné pour tout nom d’hôte qui correspond à l’ordinateur, y compris http://\<nom_ordinateur > / reportserver, http://localhost/reportserver, ou http://\<Adresse_ip > / ReportServer.|  
+|Nom d'hôte|Le nom d'hôte par défaut est un caractère générique fort (+). Il spécifie que le serveur de rapports accepte toute requête HTTP sur le port désigné pour tout nom d’hôte qui correspond à l’ordinateur, y compris http://\<nom_ordinateur > / reportserver, http://localhost/reportserver, ou http://\<IPAddress > / ReportServer.|  
 |d’|Le port par défaut est 80. Notez que si vous utilisez un port autre que le port 80, vous devez l'ajouter explicitement à l'URL lorsque vous ouvrez une application Web [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] dans une fenêtre de navigateur.|  
-|Répertoire virtuel|Par défaut, les répertoires virtuels sont créés dans le format reportserver_\<*nom_instance*> pour le service Web Report Server et Reports_\<*nom_instance*> Gestionnaire de rapports. Pour le service Web Report Server, le répertoire virtuel par défaut est **reportserver**. Par défaut, le répertoire virtuel du Gestionnaire de rapports est **reports**.|  
+|Répertoire virtuel|Par défaut, les répertoires virtuels sont créés au format ReportServer_\<*nom_instance*> pour le service Web Report Server et Reports_\<*nom_instance*> pour le Gestionnaire de rapports. Pour le service Web Report Server, le répertoire virtuel par défaut est **reportserver**. Par défaut, le répertoire virtuel du Gestionnaire de rapports est **reports**.|  
   
  Voici un exemple de chaîne URL complète :  
   
@@ -157,7 +157,7 @@ setup /q /ACTION=install /FEATURES=SQL,RS,TOOLS /INSTANCENAME=MSSQLSERVER /SQLSY
 SERVICE" /RSSVCSTARTUPTYPE="Manual" /RSINSTALLMODE="DefaultNativeMode"  
 ```  
   
- Pour plus d’informations et d’exemples, consultez [invite de commandes de Reporting Services SharePoint Mode d’Installation et en Mode natif](../../reporting-services/install-windows/install-reporting-services-at-the-command-prompt.md) et [installer SQL Server 2014 à partir de l’invite de commandes](../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md)  
+ Pour plus d’informations et des exemples, consultez [invite de commandes de Reporting Services SharePoint Mode d’Installation et en Mode natif](../../reporting-services/install-windows/install-reporting-services-at-the-command-prompt.md) et [installer SQL Server 2014 à partir de l’invite de commandes](../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md)  
   
 ## <a name="see-also"></a>Voir aussi  
  [Dépanner une installation de Reporting Services](../../reporting-services/install-windows/troubleshoot-a-reporting-services-installation.md)   
@@ -170,6 +170,6 @@ SERVICE" /RSSVCSTARTUPTYPE="Manual" /RSINSTALLMODE="DefaultNativeMode"
  [Configurer des connexions SSL sur un serveur de rapports en Mode natif](../security/configure-ssl-connections-on-a-native-mode-report-server.md)   
  [Configurer des URL de serveurs de rapports &#40;Gestionnaire de configuration de SSRS&#41;](../../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md)   
  [Configurer les comptes de service Windows et les autorisations](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md)   
- [Installation de SQL Server 2014 de démarrage rapide](../../../2014/getting-started/quick-start-installation-of-sql-server-2014.md)  
+ [Installation de démarrage rapide de SQL Server 2014](../../../2014/getting-started/quick-start-installation-of-sql-server-2014.md)  
   
   

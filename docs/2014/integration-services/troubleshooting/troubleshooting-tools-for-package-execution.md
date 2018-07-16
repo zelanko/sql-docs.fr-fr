@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server Integration Services packages, troubleshooting
 - SSIS packages, troubleshooting
@@ -19,13 +19,13 @@ ms.assetid: f18d6ff6-e881-444c-a399-730b52130e7c
 caps.latest.revision: 57
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 37c82e4f4977e9749413a29fd539379476b29c47
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 4b6b76ce027321eb681a2cd6872c1b24050c569f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36042946"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37329909"
 ---
 # <a name="troubleshooting-tools-for-package-execution"></a>Outils de dépannage pour l'exécution des packages
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] intègre des fonctionnalités et des outils que vous pouvez utiliser pour résoudre des problèmes liés aux packages que vous exécutez après les avoir menés à terme et les avoir déployés.  
@@ -56,7 +56,7 @@ ms.locfileid: "36042946"
   
 -   **Dotez les sorties d'erreur d'informations conviviales**. Vous pouvez faciliter le travail d'analyse de la sortie d'erreur en ajoutant des informations descriptives, en plus des deux identificateurs numériques fournis par la sortie d'erreur.  
   
-     **Ajouter la description de l’erreur**. Vous pouvez aisément rechercher une description de l'erreur à l'aide d'un composant Script. Pour plus d’informations, consultez [amélioration de la sortie d’erreur du composant de Script](../extending-packages-scripting-data-flow-script-component-examples/enhancing-an-error-output-with-the-script-component.md).  
+     **Ajouter la description de l’erreur**. Vous pouvez aisément rechercher une description de l'erreur à l'aide d'un composant Script. Pour plus d’informations, consultez [amélioration d’une sortie d’erreur pour le composant Script](../extending-packages-scripting-data-flow-script-component-examples/enhancing-an-error-output-with-the-script-component.md).  
   
      **Ajoutez le nom de la colonne d’erreur**. La recherche du nom de colonne correspondant à l'ID de colonne enregistré dans la sortie d'erreur n'est pas facile dans le composant Script et exige d'autres étapes. Chaque ID de colonne au sein d'un flux de données est unique dans la tâche de flux de données concernée et demeure dans le package au moment de la conception. L'approche suivante est une solution qui suggère l'ajout du nom de la colonne à la sortie d'erreur. Pour obtenir un exemple montrant comment utiliser cette approche, consultez [Ajout du nom de colonne d’erreur à une sortie d’erreur](http://go.microsoft.com/fwlink/?LinkId=261546) sur dougbert.com.  
   
@@ -70,7 +70,7 @@ ms.locfileid: "36042946"
  Pour plus d’informations, voir [Troubleshooting Reports for Package Execution](troubleshooting-reports-for-package-execution.md).  
   
 ## <a name="troubleshoot-package-execution-by-using-ssisdb-views"></a>Résoudre les problèmes liés à l'exécution des packages à l'aide de vues SSISDB  
- Vous pouvez interroger plusieurs vues de base de données SSISDB pour contrôler les informations relatives à l'exécution des packages et à d'autres opérations. Pour plus d’informations, consultez [pour les exécutions de Package et d’autres opérations d’analyse](../performance/monitor-running-packages-and-other-operations.md).  
+ Vous pouvez interroger plusieurs vues de base de données SSISDB pour contrôler les informations relatives à l'exécution des packages et à d'autres opérations. Pour plus d’informations, consultez [surveillance des exécutions de Package et d’autres opérations](../performance/monitor-running-packages-and-other-operations.md).  
   
 ## <a name="troubleshoot-package-execution-by-using-logging"></a>Résoudre les problèmes liés à l'exécution des packages à l'aide de la journalisation  
  Vous pouvez contrôler la plupart des opérations réalisées dans vos packages en cours d'exécution en activant la fonction de journalisation. Les modules fournisseur d'informations permettent de capturer des informations sur des événements spécifiques à des fins d'analyse ultérieure, puis d'enregistrer ces informations dans une table de base de données, un fichier plat, un fichier XML ou un autre format de sortie pris en charge.  
@@ -97,9 +97,9 @@ ms.locfileid: "36042946"
 ## <a name="troubleshoot-run-time-validation-issues"></a>Résoudre les problèmes de validation au moment de l'exécution  
  Il est possible, parfois, que vous ne parveniez pas à vous connecter à vos sources de données ou que des parties de votre package ne puissent pas être validées jusqu'à ce que les précédentes tâches du package aient été exécutées. [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] vous permettent d'éviter des erreurs de validation susceptibles de survenir dans ces conditions :  
   
--   **Configurez la propriété DelayValidation dans les éléments de package non valides lors du chargement du package**. Vous pouvez définir `DelayValidation` à `True` sur les éléments de package dont la configuration n’est pas valide, pour éviter les erreurs de validation lors du chargement du package. Par exemple, vous pouvez disposer d'une tâche Flux de données qui utilise une table de destination qui n'existe pas jusqu'à ce qu'une tâche d'exécution SQL crée la table au moment de l'exécution. Le `DelayValidation` propriété peut être activée au niveau du package ou au niveau des tâches individuelles et des conteneurs inclus dans le package.  
+-   **Configurez la propriété DelayValidation dans les éléments de package non valides lors du chargement du package**. Vous pouvez définir `DelayValidation` à `True` sur les éléments de package dont la configuration n’est pas valide, afin d’éviter les erreurs de validation lors du chargement du package. Par exemple, vous pouvez disposer d'une tâche Flux de données qui utilise une table de destination qui n'existe pas jusqu'à ce qu'une tâche d'exécution SQL crée la table au moment de l'exécution. Le `DelayValidation` propriété peut être activée au niveau du package ou au niveau des tâches individuelles et des conteneurs inclus dans le package.  
   
-     Le `DelayValidation` propriété peut être définie sur une tâche de flux de données, mais pas sur les données des composants de flux. Vous pouvez obtenir un résultat similaire en affectant à la propriété <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.ValidateExternalMetadata%2A> des composants de flux de données individuels la valeur `false`. Toutefois, lorsque la valeur de cette propriété est `false`, le composant n’est pas informé des modifications apportées aux métadonnées des sources de données externes. Lorsque la valeur `true`, le <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.ValidateExternalMetadata%2A> propriété permet d’éviter les problèmes de blocage provoqués par un verrouillage dans la base de données, en particulier lorsque le package utilise des transactions.  
+     Le `DelayValidation` propriété peut être définie sur une tâche de flux de données, mais pas sur les données individuelles des composants de flux. Vous pouvez obtenir un résultat similaire en affectant à la propriété <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.ValidateExternalMetadata%2A> des composants de flux de données individuels la valeur `false`. Toutefois, lorsque la valeur de cette propriété est `false`, le composant n’a pas connaissance des modifications apportées aux métadonnées des sources de données externes. Lorsque la valeur `true`, le <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.ValidateExternalMetadata%2A> propriété peut aider à éviter les problèmes de blocage provoqués par un verrouillage dans la base de données, en particulier lorsque le package utilise des transactions.  
   
 ## <a name="troubleshoot-run-time-permissions-issues"></a>Résoudre les problèmes d'autorisations au moment de l'exécution  
  Si vous rencontrez des erreurs lorsque vous tentez d'exécuter des packages déployés à l'aide de l'Agent [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , il est possible que les comptes employés par ce dernier ne disposent pas des autorisations nécessaires. Pour plus d'informations sur la résolution des problèmes liés aux packages que vous exécutez à partir des travaux de l'Agent [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , consultez [Un package SSIS n'est pas exécuté lorsque vous appelez le package SSIS à partir d'une étape de travail de SQL Server Agent](http://support.microsoft.com/kb/918760). Pour plus d’informations sur l’exécution de packages à partir des travaux de l’Agent [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], consultez [Travaux de l’Agent SQL Server pour les packages](../packages/sql-server-agent-jobs-for-packages.md).  

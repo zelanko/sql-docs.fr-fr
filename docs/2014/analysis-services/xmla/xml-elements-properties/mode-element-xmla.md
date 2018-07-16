@@ -1,5 +1,5 @@
 ---
-title: Élément mode (XMLA) | Documents Microsoft
+title: Élément mode (XMLA) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -24,15 +24,15 @@ helpviewer_keywords:
 - Mode element
 ms.assetid: 43a54181-6494-48c3-b14b-376d8939fa9f
 caps.latest.revision: 13
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: 5634e273e1708f9de213436e20008cc6874f50a7
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: c90d67995e6775c035265db57c2b55380ad0fe76
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36155120"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37267645"
 ---
 # <a name="mode-element-xmla"></a>Élément Mode (XMLA)
   Identifie le mode à utiliser par le parent [verrou](../xml-elements-commands/lock-element-xmla.md) élément lors de la création d’un verrou sur un objet spécifié.  
@@ -68,7 +68,7 @@ ms.locfileid: "36155120"
   
 |Valeur|Description|  
 |-----------|-----------------|  
-|*CommitShared*|Un verrou partagé est établi sur l'objet spécifié. D'autres verrous partagés peuvent être créés pour le même objet.<br /><br /> Un verrou partagé empêche les transactions contenant des opérations d’écriture, telles qu’une [Execute](../xml-elements-methods-execute.md) appel de méthode en cours d’exécution un [Alter](../xml-elements-commands/alter-element-xmla.md) commande sur un objet spécifié, à partir de la validation jusqu'à ce que le verrou partagé est supprimé. Un verrou partagé n’empêche pas les transactions contenant des opérations de lecture, comme un [Discover](../xml-elements-methods-discover.md) appel de méthode ou un `Execute` appel de méthode en cours d’exécution un [instruction](../xml-elements-commands/statement-element-xmla.md) commande à partir de la validation.|  
+|*CommitShared*|Un verrou partagé est établi sur l'objet spécifié. D'autres verrous partagés peuvent être créés pour le même objet.<br /><br /> Un verrou partagé empêche les transactions contenant des opérations d’écriture, comme un [Execute](../xml-elements-methods-execute.md) appel de méthode en cours d’exécution un [Alter](../xml-elements-commands/alter-element-xmla.md) commande, sur un objet spécifié, à partir de la validation jusqu'à ce que le verrou partagé est supprimé. Un verrou partagé n’empêche pas les transactions contenant des opérations de lecture, comme un [Discover](../xml-elements-methods-discover.md) appel de méthode ou un `Execute` appel de méthode en cours d’exécution un [instruction](../xml-elements-commands/statement-element-xmla.md) commande, à partir de la validation.|  
 |*CommitExclusive*|Un verrou exclusif est établi sur l'objet spécifié. Aucun autre verrou partagé ou exclusif ne peut être créé pour le même objet.<br /><br /> Jusqu'à sa suppression, un verrou exclusif empêche la validation des transactions contenant des opérations de lecture ou d'écriture sur un objet spécifié.|  
   
 ## <a name="see-also"></a>Voir aussi  
