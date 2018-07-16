@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - spoofing attacks
 - service binding
@@ -18,15 +18,15 @@ helpviewer_keywords:
 - Extended Protection
 ms.assetid: ecfd783e-7dbb-4a6c-b5ab-c6c27d5dd57f
 caps.latest.revision: 22
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 359590e10c3017ec225017c9e321ce34b6e5cfbb
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 2ed63bd9188dc25b6edfea09f8378d4243776b9b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36045228"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37323229"
 ---
 # <a name="connect-to-the-database-engine-using-extended-protection"></a>Se connecter au moteur de base de données à l'aide de la protection étendue
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] prend en charge la **protection étendue** depuis [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]. La**protection étendue de l'authentification** est une fonctionnalité des composants réseau implémentée par le système d'exploitation. La**protection étendue** est prise en charge dans Windows 7 et Windows Server 2008 R2. La**protection étendue** figure dans les Service Packs pour les systèmes d'exploitation [!INCLUDE[msCoName](../../includes/msconame-md.md)] plus anciens. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] est plus sécurisé lorsque les connexions sont établies à l'aide de la **protection étendue**.  

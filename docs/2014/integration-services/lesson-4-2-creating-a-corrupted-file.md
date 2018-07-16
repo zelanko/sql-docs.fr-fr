@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: cd0b18dc-66c3-4d88-86ef-8e40cb660fae
 caps.latest.revision: 23
-author: douglaslM
+author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 80961e5899162575ae832d5d6a8dd35824b43a49
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: dd40a67ecd13dde8c78b38ba0f37d4928b86dd0a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36052204"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37324549"
 ---
 # <a name="step-2-creating-a-corrupted-file"></a>Étape 2 : Création d'un fichier corrompu
   Afin de démontrer l'utilisation des fonctions de configuration et de gestion des erreurs de transformation, vous allez devoir créer un exemple de fichier plat qui, lors de son traitement, entraîne l'échec d'un composant.  
@@ -38,12 +38,12 @@ ms.locfileid: "36052204"
   
     3.  Cliquez sur le fichier SQL2012.Integration_Services.Create_Simple_ETL_Tutorial.Sample.zip.  
   
-2.  Utilisez Rechercher l’éditeur de texte et pour retrouver toutes les instances de `VEB` et remplacez-les par `BAD`.  
+2.  Utilisez Rechercher l’éditeur de texte et remplacer pour retrouver toutes les instances de `VEB` et remplacez-les par `BAD`.  
   
 3.  Dans le même dossier que les autres fichiers de données d’exemple, enregistrez le fichier modifié en tant que `Currency_BAD.txt`.  
   
     > [!IMPORTANT]  
-    >  Assurez-vous que `Currency_BAD.txt` est enregistré le même dossier que les autres fichiers de données d’exemple.  
+    >  Assurez-vous que l’option `Currency_BAD.txt` est enregistré le même dossier que les autres fichiers de données d’exemple.  
   
 4.  Fermez l'éditeur de texte.  
   
@@ -65,6 +65,6 @@ ms.locfileid: "36052204"
     >  Le nombre 27 désigne l'ID du composant. Cette valeur est attribuée lors de la création du flux de données ; la valeur définie dans votre package peut être différente.  
   
 ## <a name="next-steps"></a>Étapes suivantes  
- [Étape 3 : Ajout de Redirection de flux d’erreur](lesson-4-3-adding-error-flow-redirection.md)  
+ [Étape 3 : Ajout de la redirection de flux d’erreurs](lesson-4-3-adding-error-flow-redirection.md)  
   
   

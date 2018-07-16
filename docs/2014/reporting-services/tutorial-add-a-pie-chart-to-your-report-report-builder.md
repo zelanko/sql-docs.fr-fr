@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: eaadf7bf-c312-428a-b214-0a1fbf959c3f
 caps.latest.revision: 10
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 39633ecaa8c0fbb73e712d1d227c4fe39c8f00dd
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 70d23d19f2719aaa86ba81617bfb33544279bd2b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36052345"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37236239"
 ---
 # <a name="tutorial-add-a-pie-chart-to-your-report-report-builder"></a>Didacticiel : ajouter un graphique à secteurs à un rapport (Générateur de rapports)
   Les graphiques à secteurs et les graphiques en anneau affichent des données sous la forme d'une proportion de la totalité. Les graphiques en secteurs sont utilisés le plus souvent pour faire des comparaisons entre des groupes. Les graphique à secteurs et les graphiques en anneau, ainsi que les graphiques en pyramide et les graphiques en entonnoir, constituent un groupe de graphiques connus sous le nom de graphiques à base de formes. Les graphiques à base de formes n'ont pas d'axe. Lorsqu'un champ numérique est placé sur un graphique à base de formes, le graphique calcule le pourcentage de chaque valeur par rapport au total.  
@@ -39,7 +39,7 @@ ms.locfileid: "36052345"
   
 3.  [Afficher des pourcentages dans chaque secteur](#Percentages)  
   
-4.  [Combiner plusieurs petits secteurs en un secteur](#CombineSlices)  
+4.  [Combiner des petits secteurs en un secteur](#CombineSlices)  
   
 5.  [Personnaliser l’effet de dessin](#DrawingEffect)  
   
@@ -136,13 +136,13 @@ ms.locfileid: "36052345"
   
 2.  Cliquez avec le bouton droit sur le graphique à secteurs, puis cliquez sur **Afficher les étiquettes de données**. Les étiquettes de données s'affichent sur le graphique.  
   
-3.  Cliquez sur une étiquette, puis cliquez sur **propriétés étiquette de la série**.  
+3.  Cliquez sur une étiquette, puis cliquez sur **propriétés de l’étiquette série**.  
   
 4.  Dans les données de l’étiquette, dans la zone de liste déroulante, sélectionnez **#PERCENT**.  
   
      Pour afficher les valeurs sous forme de pourcentages, la propriété UseValueAsLabel doit avoir la valeur false. Si vous êtes invité à définir cette valeur dans la boîte de dialogue **Confirmer l’action** , cliquez sur **Oui**.  
   
-5.  (Facultatif) Pour spécifier le nombre de décimales l’étiquette, tapez `#PERCENT{Pn}` où *n* est le nombre de décimales à afficher. Par exemple, pour ne pas afficher de décimale, tapez `#PERCENT{P0}`.  
+5.  (Facultatif) Pour spécifier l’étiquette affiche le nombre de décimales, tapez `#PERCENT{Pn}` où *n* est le nombre de décimales à afficher. Par exemple, pour ne pas afficher de décimale, tapez `#PERCENT{P0}`.  
   
     > [!NOTE]  
     >  L’option**Format de nombre** de la boîte de dialogue **Propriétés de l’étiquette de la série** n’a aucun effet quand vous mettez en forme des pourcentages. Elle met uniquement en forme les étiquettes sous forme de pourcentages, mais ne calcule pas le pourcentage représenté par chaque secteur du graphique à secteurs.  
@@ -160,7 +160,7 @@ ms.locfileid: "36052345"
   
 1.  Basculez en mode création de rapport.  
   
-2.  Sur le **vue** sous l’onglet du **afficher/masquer** groupe, sélectionnez **propriétés**.  
+2.  Sur le **vue** sous l’onglet le **afficher/masquer** groupe, sélectionnez **propriétés**.  
   
 3.  Dans l'aire de conception, cliquez sur un secteur du graphique. Les propriétés de la série sont affichées dans le volet Propriétés.  
   
@@ -172,7 +172,7 @@ ms.locfileid: "36052345"
   
 7.  Vérifiez que la propriété **CollectedThresholdUsePercent** a la valeur **True**.  
   
-8.  Dans le ruban, dans le **accueil** , cliquez sur **exécuter** pour afficher un aperçu du rapport.  
+8.  Dans le ruban, sur le **accueil** , cliquez sur **exécuter** pour afficher un aperçu du rapport.  
   
  Dans la légende, la catégorie « Autre » est désormais présente. Le nouveau secteur regroupe tous les secteurs de moins de 5 % dans un seul secteur qui représente 6 % de l'ensemble.  
   
@@ -183,7 +183,7 @@ ms.locfileid: "36052345"
   
 1.  Basculez en mode création de rapport.  
   
-2.  Si le volet Propriétés n'est pas déjà ouvert, dans le **vue** onglet, sélectionnez **propriétés**.  
+2.  Si le volet Propriétés n'est pas déjà ouvert, sous la **vue** onglet, sélectionnez **propriétés**.  
   
 3.  Double-cliquez sur le graphique à secteurs lui-même. Les propriétés de série du graphique à secteurs sont affichées dans le volet Propriétés.  
   
@@ -192,7 +192,7 @@ ms.locfileid: "36052345"
 5.  Définir le **PieDrawingStyle** à **SoftEdge**.  
   
     > [!NOTE]  
-    >  Les effets de dessin et les effets en trois dimensions sont des options exclusives. Si un graphique a des effets en trois dimensions appliqués, **PieDrawingStyle** n’est pas disponible dans le volet Propriétés.  
+    >  Les effets de dessin et les effets en trois dimensions sont des options exclusives. Si un graphique des effets en trois dimensions appliqués, **PieDrawingStyle** n’est pas disponible dans le volet Propriétés.  
   
 6.  Cliquez sur **Exécuter** pour afficher un aperçu du rapport.  
   
@@ -214,7 +214,7 @@ ms.locfileid: "36052345"
   
 3.  Sélectionnez **caméra ventes et caméscopes**et cliquez sur le **gras** bouton à partir de la **police** section de la **accueil** onglet du ruban.  
   
-4.  Sélectionnez **en tant que pourcentage du Total des ventes**et dans le **police** section sur le **accueil** onglet, définissez la taille de police sur **10**.  
+4.  Sélectionnez **en tant que pourcentage du Total des ventes**, puis, dans le **police** section sur la **accueil** onglet, définissez la taille de police sur **10**.  
   
 5.  (Facultatif) Vous devrez peut-être agrandir la zone de texte Titre pour contenir les deux lignes de texte.  
   

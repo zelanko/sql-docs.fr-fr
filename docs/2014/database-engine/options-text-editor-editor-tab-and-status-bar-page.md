@@ -1,5 +1,5 @@
 ---
-title: 'Options (éditeur de texte : onglet Éditeur et Page barre d’état) | Documents Microsoft'
+title: 'Options (éditeur de texte : onglet Éditeur et Page barre d’état) | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.sqleditors.editorcontextsettings
 - VS.ToolsOptionsPages.Text_Editor.EditorTabAndStatusBar
@@ -16,13 +16,13 @@ ms.assetid: e4815678-7885-4631-878f-c6a2b857ee05
 caps.latest.revision: 15
 author: craigg-msft
 ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: bfaef2b11c331416134eba0e7325875f47a014b6
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 1fdef7c6b3a72b4c6556ec5d8e6354c837d6be04
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36052471"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37267265"
 ---
 # <a name="options-text-editor-editor-tab-and-status-bar-page"></a>Options (Éditeur de texte/onglet Éditeur et page Barre d’état)
   L' **onglet Éditeur et la page Barre d'état** vous permettent de personnaliser les informations affichées par les éditeurs de requête [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] . Vous pouvez spécifier le niveau d'informations affiché dans l'onglet et la barre d'état de la fenêtre Éditeur de requête, et indiquer si la barre d'état doit apparaître en haut ou en bas de la fenêtre de l'éditeur.  
@@ -44,7 +44,7 @@ ms.locfileid: "36052471"
  **Fin**  
  La barre d'état affiche l'heure réelle du jour pendant l'exécution du script. À l'achèvement du script, l'affichage indique l'heure du jour à laquelle le script s'est terminé.  
   
- **Écoulé.**  
+ **Écoulé**  
  La barre d'état affiche la durée d'exécution du script. Lorsque le script s'achève, l'affichage indique la durée nécessaire pour exécuter le script.  
   
  **Inclure le nom de la base de données**  
@@ -74,7 +74,7 @@ ms.locfileid: "36052471"
  **Top**  
  La barre d'état apparaît en haut de la fenêtre de l'éditeur de requête.  
   
- **Bas**  
+ **En bas**  
  La barre d'état apparaît au bas de la fenêtre de l'éditeur de requête.  
   
 ## <a name="tab-text"></a>Texte de l'onglet  

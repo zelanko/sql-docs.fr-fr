@@ -1,5 +1,5 @@
 ---
-title: Lien vers des exemples de programmation | Documents Microsoft
+title: Lien vers des exemples de programmation | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - SQL Server Management Objects, samples
 ms.assetid: 5eb28044-8437-466e-9c55-60941c237fbb
 caps.latest.revision: 41
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: df2b9636b3edb5ebb9ef45530204db543e204312
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mikeraymsft
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: c516bfd0f4086f9ec91974205e546e686612d2f2
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36039025"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37215009"
 ---
 # <a name="link-to-programming-samples"></a>Lien vers les exemples de programmation
   Le tableau suivant répertorie les exemples de programmation SMO ([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Management Objects) disponibles dans le répertoire [!INCLUDE[ssSampPathEng](../../includes/sssamppatheng-md.md)]Programmability\SMO. Ces exemples sont disponibles dans les deux [!INCLUDE[csprcs](../../includes/csprcs-md.md)] et [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] .NET.  
@@ -39,7 +39,7 @@ ms.locfileid: "36039025"
 |DatabaseSearch|Affiche tous les objets d'une base de données.|  
 |DependencyExplorer|Implémente l'arborescence des dépendances et la fenêtre d'affichage des propriétés.|  
 |IndexSizes|Affiche le nom et la taille de l'index de la base de données sélectionnée.|  
-|LoadRegAssembly|Montre comment charger et inscrire un [!INCLUDE[msCoName](../../includes/msconame-md.md)] Assembly .NET à [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Utilise l'assembly UtilityConversion.|  
+|LoadRegAssembly|Montre comment charger et inscrire un [!INCLUDE[msCoName](../../includes/msconame-md.md)] Assembly .NET dans [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Utilise l'assembly UtilityConversion.|  
 |ManageDatabases|Montre comment créer, modifier et supprimer une base de données. Cet exemple inclut l'ajout d'un nouveau groupe de fichiers et d'un fichier journal.|  
 |ManageDatabaseUsers|Montre comment ajouter, modifier et supprimer des utilisateurs.|  
 |ManageTables|Montre comment créer, modifier et supprimer des tables.|  

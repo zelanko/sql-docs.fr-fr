@@ -1,5 +1,5 @@
 ---
-title: Exploration du contenu du modèle pour les modèles Naive Bayes (Analysis Services - Exploration de données) | Documents Microsoft
+title: Pour les modèles Naive Bayes contenu du modèle d’exploration de données (Analysis Services - Exploration de données) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - naive bayes model [Analysis Services]
 - Bayesian classifiers
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - mining model content, naive bayes models
 ms.assetid: 63fa15b0-e00c-4aa3-aa49-335f5572ff7e
 caps.latest.revision: 15
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 5b6c53452892eb928267b3f04078633274905633
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 14aa876539bafb265ddac5514d25519b003e646d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36140205"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37216119"
 ---
 # <a name="mining-model-content-for-naive-bayes-models-analysis-services---data-mining"></a>Contenu du modèle d'exploration de données pour les modèles Naive Bayes (Analysis Services - Exploration de données)
   Cette rubrique décrit le contenu du modèle d'exploration de données spécifique aux modèles utilisant l'algorithme Naive Bayes [!INCLUDE[msCoName](../../includes/msconame-md.md)] . Pour obtenir une explication sur la procédure d’interprétation des statistiques et de la structure partagées par tous les types de modèles et pour obtenir des définitions générales de termes en rapport avec le contenu du modèle d’exploration de données, consultez [Mining Model Content &#40;Analysis Services - Data Mining&#41;](mining-model-content-analysis-services-data-mining.md).  
@@ -37,7 +37,7 @@ ms.locfileid: "36140205"
 > [!NOTE]  
 >  Comme un modèle Naive Bayes n'autorise pas les types de données continues, toutes les valeurs des colonnes d'entrée sont traitées comme discrètes ou discrétisées. Vous pouvez spécifier comment une valeur est discrétisée. Pour plus d’informations, consultez [Modifier la discrétisation d’une colonne dans un modèle d’exploration de données](change-the-discretization-of-a-column-in-a-mining-model.md).  
   
- ![structure du contenu de modèle pour Naive bayes](../media/modelcontentstructure-nb.gif "structure du contenu de modèle pour Naive bayes")  
+ ![structure du contenu du modèle pour Naive bayes](../media/modelcontentstructure-nb.gif "structure du contenu du modèle pour Naive bayes")  
   
 ## <a name="model-content-for-a-naive-bayes-model"></a>Contenu d’un modèle Naive Bayes  
  Cette section fournit des informations et des exemples liés uniquement aux colonnes du contenu du modèle d'exploration de données se rapportant aux modèles Naive Bayes.  
@@ -289,12 +289,12 @@ AND NODE_CAPTION = 'Bike Buyer -> Marital Status = S'
   
  Dans un modèle Naive Bayes, il ne peut pas y avoir d'attributs continus ; par conséquent, toutes les données numériques sont représentées comme discrètes (VALUE_TYPE = 4) ou discrétisées (VALUE_TYPE = 5).  
   
- A `Missing` valeur (VALUE_TYPE = 1) est ajouté à chaque attribut d’entrée et de sortie pour représenter les valeurs potentielles qui n’étaient pas présentes dans les données d’apprentissage. Vous devez être prudent de faire la distinction entre « manquant » en tant que chaîne et la valeur par défaut `Missing` valeur. Pour plus d’informations, consultez [Valeurs manquantes &#40;Analysis Services – Exploration de données&#41;](missing-values-analysis-services-data-mining.md).  
+ Un `Missing` valeur (VALUE_TYPE = 1) est ajouté à chaque attribut d’entrée et de sortie pour représenter les valeurs potentielles qui ne figuraient pas dans les données d’apprentissage. Vous devez être prudent de faire la distinction entre « manquant » en tant que chaîne et la valeur par défaut `Missing` valeur. Pour plus d’informations, consultez [Valeurs manquantes &#40;Analysis Services – Exploration de données&#41;](missing-values-analysis-services-data-mining.md).  
   
 ## <a name="see-also"></a>Voir aussi  
  [Contenu du modèle d’exploration de données &#40;Analysis Services - Exploration de données&#41;](mining-model-content-analysis-services-data-mining.md)   
  [Visionneuses de modèle d’exploration de données](data-mining-model-viewers.md)   
  [Requêtes d’exploration de données](data-mining-queries.md)   
- [Algorithme Microsoft Naive Bayes](microsoft-naive-bayes-algorithm.md)  
+ [Algorithme MNB (Microsoft Naive Bayes)](microsoft-naive-bayes-algorithm.md)  
   
   

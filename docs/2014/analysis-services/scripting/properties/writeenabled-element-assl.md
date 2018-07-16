@@ -1,5 +1,5 @@
 ---
-title: Élément WriteEnabled (ASSL) | Documents Microsoft
+title: Élément WriteEnabled (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - WriteEnabled element
 ms.assetid: 681290b3-ae8f-4659-9b17-a26d401a3fb0
 caps.latest.revision: 35
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: f78be490a8d171dbdbbf6fddbd9ffb1d4289f050
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 900aa5be98245eeaef4b40cb9e8492182604499d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36052721"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37243619"
 ---
 # <a name="writeenabled-element-assl"></a>Élément WriteEnabled (ASSL)
   Indique si l'écriture différée de dimension est disponible (soumise à des autorisations de sécurité).  
@@ -62,7 +62,7 @@ ms.locfileid: "36052721"
 |Éléments enfants|None|  
   
 ## <a name="remarks"></a>Notes  
- L’élément qui correspond au parent de `WriteEnabled` dans l’objet d’objets AMO (Analysis Management) est modèle <xref:Microsoft.AnalysisServices.Dimension>.  
+ L’élément qui correspond au parent de `WriteEnabled` dans l’objet d’objets AMO (Analysis Management) modèle est <xref:Microsoft.AnalysisServices.Dimension>.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Propriétés &#40;ASSL&#41;](properties-assl.md)  

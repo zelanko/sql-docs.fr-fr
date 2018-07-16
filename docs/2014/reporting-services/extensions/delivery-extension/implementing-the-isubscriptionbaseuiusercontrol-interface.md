@@ -1,5 +1,5 @@
 ---
-title: Implémentation de l’Interface ISubscriptionBaseUIUserControl pour une Extension de remise | Documents Microsoft
+title: Implémentation de l’Interface ISubscriptionBaseUIUserControl pour une Extension de remise | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - delivery extensions [Reporting Services], user controls
 ms.assetid: a1e9122c-aa0b-45de-b536-4f1202875ab1
 caps.latest.revision: 34
-author: douglaslM
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: e6ab2e8476374aac35fcd6e7f309de9db6f7d637
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: 9f7ec690a116d16920219d968161178cd849946a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36053018"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37286785"
 ---
 # <a name="implementing-the-isubscriptionbaseuiusercontrol-interface-for-a-delivery-extension"></a>Implémentation de l'interface ISubscriptionBaseUIUserControl pour une extension de remise
   Les extensions de remise [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] peuvent contenir une implémentation d'une interface utilisateur d'abonnement pour rassembler des informations spécifiques à l'extension dans le Gestionnaire de rapports. L'interface utilisateur est appelée lorsqu'un utilisateur crée un abonnement ou en modifie un. Lorsqu'un nouvel abonnement est créé, l'interface utilisateur affiche des valeurs par défaut appropriées et active des utilisateurs pour interagir avec le fournisseur de remise. Lorsqu'un abonnement est modifié, l'interface utilisateur est pré-remplie avec les informations dans l'abonnement actuel.  

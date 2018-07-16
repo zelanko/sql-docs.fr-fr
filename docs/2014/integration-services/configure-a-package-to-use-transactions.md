@@ -1,5 +1,5 @@
 ---
-title: Configurer un Package pour utiliser des Transactions | Documents Microsoft
+title: Configurer un Package pour utiliser des Transactions | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - transactions [Integration Services], configuring packages to use
 ms.assetid: 8bf14957-27b4-456b-81d9-e1a0e0ca94b7
 caps.latest.revision: 28
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 8637409c0248506de68fa6615dcd6b9edbf7a5bf
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 8e443740244e6e70336eb6c711e4e7ade7d2b698
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36154666"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37306162"
 ---
 # <a name="configure-a-package-to-use-transactions"></a>Configurer un package pour l'utilisation de transactions
   Lorsque vous configurez un package pour l'utilisation de transactions, vous avez le choix entre deux options :  
@@ -33,7 +33,7 @@ ms.locfileid: "36154666"
  Les procédures ci-dessous montrent comment configurer ces deux options.  
   
 ## <a name="configuring-a-single-transaction"></a>Configuration d'une transaction unique  
- Dans cette option, le package lui-même lance une transaction unique. Vous configurez le package pour lancer cette opération en définissant la propriété TransactionOption du package à `Required`.  
+ Dans cette option, le package lui-même lance une transaction unique. Vous configurez le package pour lancer cette transaction en définissant la propriété TransactionOption du package à `Required`.  
   
  Ensuite, vous inscrivez des tâches et des conteneurs spécifiques dans cette transaction unique. Pour inscrire une tâche ou un conteneur dans une transaction, vous définissez la propriété TransactionOption de cette tâche ou le conteneur à `Supported`.  
   

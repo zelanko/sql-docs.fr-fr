@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 862957db-bbc6-4dda-bc0e-591457f1baa7
 caps.latest.revision: 9
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: a95aebfde3b4feb803dd4f49fb70e5a2e099d447
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: b622708d0e8e8eaeedf75488146fc09018348c51
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36155310"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37237189"
 ---
 # <a name="sap-bw-destination-editor-advanced-page"></a>Éditeur de destination SAP BW (page Avancé)
   Utilisez la page **Avancé** de **l’Éditeur de destination SAP BW** pour définir les paramètres avancés tels que la taille du package et les informations de temps d’attente.  
@@ -61,6 +61,6 @@ ms.locfileid: "36155310"
  [Éditeur de Destination SAP BW &#40;Page Gestionnaire de connexions&#41;](sap-bw-destination-editor-connection-manager-page.md)   
  [Éditeur de Destination SAP BW &#40;Page mappages&#41;](sap-bw-destination-editor-mappings-page.md)   
  [Éditeur de destination SAP BW &#40;page Sortie d’erreur&#41;](sap-bw-destination-editor-error-output-page.md)   
- [Microsoft Connector 1.1 pour SAP BW F1 Aide](../microsoft-connector-for-sap-bw-f1-help.md)  
+ [Aide (F1) sur Microsoft Connector 1.1 pour SAP BW](../microsoft-connector-for-sap-bw-f1-help.md)  
   
   

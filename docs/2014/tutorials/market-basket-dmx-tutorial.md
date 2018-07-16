@@ -1,5 +1,5 @@
 ---
-title: Didacticiel DMX Market Basket | Documents Microsoft
+title: Didacticiel DMX Market Basket | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - DMX [Analysis Services], tutorials
 - data mining [Analysis Services], tutorials
@@ -21,13 +21,13 @@ ms.assetid: 6e262a1d-c89e-4033-8368-46cf25168ef5
 caps.latest.revision: 28
 author: minewiskan
 ms.author: owend
-manager: kfile
-ms.openlocfilehash: a8806eceb5c16354d6581c8fcdd4e664619d2d2a
-ms.sourcegitcommit: 8c040e5b4e8c7d37ca295679410770a1af4d2e1f
+manager: craigg
+ms.openlocfilehash: b73a618c5318d88ec6ee09751e09327687d865f4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/21/2018
-ms.locfileid: "36312927"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37220579"
 ---
 # <a name="market-basket-dmx-tutorial"></a>Didacticiel DMX Market Basket
   Dans ce didacticiel, vous allez apprendre à créer et explorer des modèles d'exploration de données, ou à en effectuer l'apprentissage, à l'aide du langage de requête DMX (Data Mining Extensions). Vous utiliserez ensuite ces modèles d'exploration pour établir des prédictions décrivant les produits susceptibles d'être achetés simultanément.  
@@ -37,7 +37,7 @@ ms.locfileid: "36312927"
 ## <a name="tutorial-scenario"></a>Scénario du didacticiel  
  [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] a choisi de créer une application personnalisée qui exploite des fonctionnalités d'exploration de données capables de prévoir les types de produits que ses clients sont susceptibles d'acheter en même temps. L'objectif de cette application personnalisée est de pouvoir spécifier un ensemble de produits et de prédire les autres produits qui seront achetés avec ces produits. [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] utilisera ensuite ces informations pour ajouter un outil de « suggestion » sur son site Web et mieux organiser la manière dont l'information est présentée à ses clients.  
   
- [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] fournit plusieurs outils qui peuvent être utilisés pour accomplir cette tâche :  
+ [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] fournit plusieurs outils qui peuvent être utilisées pour accomplir cette tâche :  
   
 -   Langage de requête DMX  
   
@@ -49,10 +49,10 @@ ms.locfileid: "36312927"
   
  L'objectif de ce didacticiel est de fournir des requêtes DMX à utiliser dans l'application personnalisée.  
   
- **Pour plus d’informations :** [des Solutions d’exploration de données](../../2014/analysis-services/data-mining/data-mining-solutions.md)  
+ **Pour plus d’informations :** [Solutions d’exploration de données](../../2014/analysis-services/data-mining/data-mining-solutions.md)  
   
 ## <a name="mining-structure-and-mining-models"></a>Structure et modèles d'exploration de données  
- Avant de créer des instructions DMX, il est primordial de comprendre les objets principaux auxquels [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] fait appel pour créer des modèles d'exploration de données. Le *structure d’exploration de* est une structure de données qui définit le domaine de données à partir duquel les modèles d’exploration de données sont créés. Une structure d’exploration de données unique peut contenir plusieurs *les modèles d’exploration de données* qui partagent le même domaine. Un modèle d'exploration applique un algorithme de modèle d'exploration aux données qui sont représentées par une structure d'exploration de données.  
+ Avant de créer des instructions DMX, il est primordial de comprendre les objets principaux auxquels [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] fait appel pour créer des modèles d'exploration de données. Le *structure d’exploration de* est une structure de données qui définit le domaine de données à partir de laquelle les modèles d’exploration de données sont créés. Une structure d’exploration de données unique peut contenir plusieurs *les modèles d’exploration de données* qui partagent le même domaine. Un modèle d'exploration applique un algorithme de modèle d'exploration aux données qui sont représentées par une structure d'exploration de données.  
   
  Les composants constituant la structure d'exploration de données sont les colonnes de structure d'exploration de données qui décrivent les données inscrites dans la source de données. Ces colonnes contiennent des informations, telles que le type de données, le type de contenu et le mode de distribution des données.  
   
@@ -85,21 +85,21 @@ ms.locfileid: "36312927"
   
  **Pour plus d’informations**  
   
- [Data Mining Extensions &#40;DMX&#41; référence](/sql/dmx/data-mining-extensions-dmx-reference), [présentation de l’instruction DMX Select (instruction)](/sql/dmx/understanding-the-dmx-select-statement), [Structure et l’utilisation de requêtes de prédiction DMX](/sql/dmx/structure-and-usage-of-dmx-prediction-queries)  
+ [Data Mining Extensions &#40;DMX&#41; référence](/sql/dmx/data-mining-extensions-dmx-reference), [présentation de l’instruction DMX instruction Select](/sql/dmx/understanding-the-dmx-select-statement), [Structure et utilisation des requêtes de prédiction DMX](/sql/dmx/structure-and-usage-of-dmx-prediction-queries)  
   
 ## <a name="what-you-will-learn"></a>Contenu du didacticiel  
  Ce didacticiel contient les leçons suivantes :  
   
- [Leçon 1 : Création de la Structure d’exploration de données de panier d’achat](../../2014/tutorials/lesson-1-creating-the-market-basket-mining-structure.md)  
+ [Leçon 1 : Création de la structure d’exploration de données Market Basket](../../2014/tutorials/lesson-1-creating-the-market-basket-mining-structure.md)  
  Dans cette leçon, vous allez apprendre à utiliser l'instruction `CREATE` pour créer des structures d'exploration de données.  
   
- [Leçon 2 : Ajout des modèles d’exploration de données à la Structure d’exploration de données de panier d’achat](../../2014/tutorials/lesson-2-adding-mining-models-to-the-market-basket-mining-structure.md)  
+ [Leçon 2 : Ajout de modèles d’exploration de données à la structure d’exploration de données Market Basket](../../2014/tutorials/lesson-2-adding-mining-models-to-the-market-basket-mining-structure.md)  
  Dans cette leçon, vous allez apprendre à utiliser l'instruction `ALTER` pour ajouter des modèles d'exploration de données à une structure d'exploration de données.  
   
- [Leçon 3 : Traitement de la Structure d’exploration de données de panier d’achat](../../2014/tutorials/lesson-3-processing-the-market-basket-mining-structure.md)  
+ [Leçon 3 : Traitement de la structure d’exploration de données Market Basket](../../2014/tutorials/lesson-3-processing-the-market-basket-mining-structure.md)  
  Dans cette leçon, vous allez apprendre à utiliser le `INSERT INTO` instruction pour traiter les structures d’exploration de données et leurs modèles d’exploration de données associée.  
   
- [Leçon 4 : Exécution de prédictions Market Basket](../../2014/tutorials/lesson-4-executing-market-basket-predictions.md)  
+ [Leçon 4 : Exécution de prédictions Market Basket](../../2014/tutorials/lesson-4-executing-market-basket-predictions.md)  
  Dans cette leçon, vous allez apprendre à utiliser l'instruction `PREDICTION JOIN` pour établir des prédictions par rapport à des modèles d'exploration de données.  
   
 ## <a name="requirements"></a>Spécifications  
@@ -118,7 +118,7 @@ ms.locfileid: "36312927"
   
 ## <a name="see-also"></a>Voir aussi  
  [Didacticiel DMX Bike Buyer](../../2014/tutorials/bike-buyer-dmx-tutorial.md)   
- [Didacticiel d’exploration de données de base de données](../../2014/tutorials/basic-data-mining-tutorial.md)   
- [Leçon 3 : Génération d’un scénario de panier d’achat &#40;intermédiaire Didacticiel d’exploration de données&#41;](../../2014/tutorials/lesson-3-building-a-market-basket-scenario-intermediate-data-mining-tutorial.md)  
+ [Didacticiel d’exploration de données de base](../../2014/tutorials/basic-data-mining-tutorial.md)   
+ [Leçon 3 : Génération d’un scénario de panier &#40;didacticiel d’exploration de données intermédiaire&#41;](../../2014/tutorials/lesson-3-building-a-market-basket-scenario-intermediate-data-mining-tutorial.md)  
   
   

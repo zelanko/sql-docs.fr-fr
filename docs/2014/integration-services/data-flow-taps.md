@@ -1,5 +1,5 @@
 ---
-title: Drainages de flux de données | Documents Microsoft
+title: Drainages de flux de données | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 2d847adf-4b3d-4949-a195-ef43de275077
 caps.latest.revision: 6
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: e51ba64f0c9793b4d3cb0b0485c636de1acee3b3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: bbf61a735450551573d0c3b2f2a6f5542bb7dc97
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36052900"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37271475"
 ---
 # <a name="data-flow-taps"></a>Drainage des flux de données
-  [!INCLUDE[ssISCurrent](../includes/ssiscurrent-md.md)] introduit une nouvelle fonctionnalité qui vous permet d’ajouter un drainage de données sur un chemin d’accès du flux de données d’un package lors de l’exécution et de diriger la sortie de la collecte de données vers un fichier externe. Pour utiliser cette fonctionnalité, vous devez déployer votre projet SSIS à l'aide du modèle de déploiement de projet sur un serveur SSIS. Après avoir déployé le package sur le serveur, vous devez exécuter des scripts T-SQL sur la base de données SSISDB pour ajouter des drainages de données avant d'exécuter le package. Voici un exemple de scénario :  
+  [!INCLUDE[ssISCurrent](../includes/ssiscurrent-md.md)] introduit une nouvelle fonctionnalité qui vous permet d’ajouter un drainage de données sur un chemin d’accès du flux de données d’un package lors de l’exécution et diriger la sortie à partir du drainage de données vers un fichier externe. Pour utiliser cette fonctionnalité, vous devez déployer votre projet SSIS à l'aide du modèle de déploiement de projet sur un serveur SSIS. Après avoir déployé le package sur le serveur, vous devez exécuter des scripts T-SQL sur la base de données SSISDB pour ajouter des drainages de données avant d'exécuter le package. Voici un exemple de scénario :  
   
 1.  Créez une instance d’exécution d’un package à l’aide de la procédure stockée [catalog.create_execution &#40;base de données SSISDB&#41;](/sql/integration-services/system-stored-procedures/catalog-create-execution-ssisdb-database).  
   

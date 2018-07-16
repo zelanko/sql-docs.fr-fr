@@ -1,5 +1,5 @@
 ---
-title: Définir le comportement semi-additif | Documents Microsoft
+title: Définir le comportement semi-additif | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - semiadditive
 - Business Intelligence enhancements [Analysis Services], semiadditive behavior
 - measures [Analysis Services], semiadditive
 ms.assetid: b25726bc-728b-4601-ad87-9015c39dc615
 caps.latest.revision: 28
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 8aa76cf01672dec4edde7ded1049efbd2035839f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 5a96921b37affe35fcb4344a66ef36aaf26cadeb
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36052945"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37265415"
 ---
 # <a name="define-semiadditive-behavior"></a>Définir le comportement semi-additif
   Les mesures semi-additives, qui n'agrègent pas uniformément toutes les dimensions, sont très fréquentes dans les scénarios d'entreprise. Chaque cube qui se base sur l'instantané de soldes dans le temps pose ce problème. Ces instantanés s'utilisent dans des applications traitant de titres de placement, de soldes de compte, de budgétisation, de ressources humaines, de polices et de déclarations d'assurance, et de nombreux autres domaines d'activité.  
@@ -38,7 +38,7 @@ ms.locfileid: "36052945"
  Dans la page **Définir le comportement semi-additif** de l’Assistant, choisissez comment définir le comportement semi-additif en sélectionnant l’une des options suivantes :  
   
  **Désactiver le comportement semi-additif**  
- Supprime le comportement semi-additif d'un cube dans lequel le comportement semi-additif était auparavant défini. Cette sélection réinitialise une mesure pour `SUM` s’il est défini à un des types de fonction d’agrégation suivants :  
+ Supprime le comportement semi-additif d'un cube dans lequel le comportement semi-additif était auparavant défini. Cette sélection redéfinit une mesure pour `SUM` si elle est définie à l’un des types de fonction d’agrégation suivants :  
   
 -   By Account  
   

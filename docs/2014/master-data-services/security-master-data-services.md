@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 56bc41ea-de28-4184-aa7e-99111ae55af5
 caps.latest.revision: 12
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: bbb9817ac5e9ef4c779dd8a283223622b28c9119
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: 138ab7faa61857de9f130b9feffe7879095a32c3
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36052646"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37287565"
 ---
 # <a name="security-master-data-services"></a>Sécurité (Master Data Services)
   Utilisez la sécurité dans [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]pour vous assurer que les utilisateurs ont accès aux données de référence spécifiques nécessaires pour réaliser leur travail, et les empêcher d'accéder aux données qui ne doivent pas leur être accessibles.  
@@ -42,7 +42,7 @@ ms.locfileid: "36052646"
   
 -   [Accès à la zone fonctionnelle](../../2014/master-data-services/functional-area-permissions-master-data-services.md), qui détermine laquelle des cinq zones fonctionnelles de l'interface utilisateur est accessible à l'utilisateur.  
   
--   [Autorisations d’objet de modèle](../../2014/master-data-services/model-object-permissions-master-data-services.md), qui déterminent les attributs d’un utilisateur peut accéder et le type d’accès (lecture ou mise à jour) dont dispose l’utilisateur sur ces attributs.  
+-   [Autorisations d’objet de modèle](../../2014/master-data-services/model-object-permissions-master-data-services.md), qui déterminent les attributs d’un utilisateur peut accéder et le type d’accès (lecture ou mise à jour) dont l’utilisateur dispose sur ces attributs.  
   
 -   Si vous le souhaitez, [autorisations des membres de hiérarchie](../../2014/master-data-services/hierarchy-member-permissions-master-data-services.md), qui déterminent les membres auxquels un utilisateur peut accéder, et le type d’accès (lecture ou mise à jour) l’utilisateur dispose sur ces membres.  
   
@@ -79,6 +79,6 @@ ms.locfileid: "36052646"
  [Autorisations de zone fonctionnelle &#40;Master Data Services&#41;](../../2014/master-data-services/functional-area-permissions-master-data-services.md)   
  [Autorisations d’objet de modèle &#40;Master Data Services&#41;](../../2014/master-data-services/model-object-permissions-master-data-services.md)   
  [Autorisations des membres de hiérarchie &#40;Master Data Services&#41;](../../2014/master-data-services/hierarchy-member-permissions-master-data-services.md)   
- [Comment les autorisations sont déterminées &#40;Master Data Services&#41;](../../2014/master-data-services/how-permissions-are-determined-master-data-services.md)  
+ [Mode de détermination des autorisations &#40;Master Data Services&#41;](../../2014/master-data-services/how-permissions-are-determined-master-data-services.md)  
   
   

@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - clusters [SQL Server], preinstallation checklist
 - installing failover clusters
 - failover clustering [SQL Server], preinstallation checklist
 ms.assetid: a655225d-8c54-4b30-95fd-31f588167899
 caps.latest.revision: 137
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 262d4eb283d8149e5a339fe2e95954d4558b26a2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
-ms.translationtype: HT
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 0e4ec4708141badd4f215484cf746633f8a670eb
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36155194"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37268155"
 ---
 # <a name="before-installing-failover-clustering"></a>Avant l'installation du clustering de basculement
   Avant d'installer un cluster de basculement [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], vous devez sélectionner le matériel et le système d'exploitation que [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] utilisera. Vous devez aussi configurer le clustering de basculement Windows Server (WSFC) et examiner le réseau, la sécurité ainsi que les points importants à prendre en compte pour les autres logiciels qui seront exécutés sur votre cluster de basculement.  
@@ -34,7 +34,7 @@ ms.locfileid: "36155194"
   
 |Description des rubriques|Rubrique|  
 |-----------------------|-----------|  
-|Décrit les concepts de clustering de basculement [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] et fournit des liens vers les contenus et tâches associés.|[Les Instances de Cluster de basculement AlwaysOn (SQL Server)](../windows/always-on-failover-cluster-instances-sql-server.md)|  
+|Décrit les concepts de clustering de basculement [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] et fournit des liens vers les contenus et tâches associés.|[Instances de Cluster de basculement AlwaysOn (SQL Server)](../windows/always-on-failover-cluster-instances-sql-server.md)|  
 |Décrit les concepts de stratégie de basculement [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] et fournit des liens pour la configuration de la stratégie de basculement selon les besoins de votre organisation.|[Stratégie de basculement pour les instances de cluster de basculement](../windows/failover-policy-for-failover-cluster-instances.md)|  
 |Décrit comment gérer votre cluster de basculement existant [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .|[Administration et maintenance de l'instance de cluster de basculement](../windows/failover-cluster-instance-administration-and-maintenance.md)|  
 |Explique comment installer [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] sur un cluster de basculement Windows Server (WSFC).|[Procédure : mettre en cluster SQL Server Analysis Services](http://go.microsoft.com/fwlink/p/?LinkId=396548)|  
@@ -194,7 +194,7 @@ ms.locfileid: "36155194"
   
 |[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] édition|[!INCLUDE[firstref_longhorn](../../../includes/firstref-longhorn-md.md)] Enterprise|[!INCLUDE[firstref_longhorn](../../../includes/firstref-longhorn-md.md)] Datacenter Server|[!INCLUDE[winserver2008r2](../../../includes/winserver2008r2-md.md)] Enterprise|[!INCLUDE[winserver2008r2](../../../includes/winserver2008r2-md.md)] Datacenter Server|  
 |---------------------------------------|------------------------------------------------|-------------------------------------------------------|----------------------------------------------|-----------------------------------------------------|  
-|[!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] Enterprise x 64-x64 bits<sup>1</sup>|Oui|Oui|Oui<sup>2</sup>|Oui<sup>2</sup>|  
+|[!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] Enterprise x64 (64 64 bits)<sup>1</sup>|Oui|Oui|Oui<sup>2</sup>|Oui<sup>2</sup>|  
 |[!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] Enterprise (32 bits)|Oui|Oui|||  
 |[!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] bits) Developer (64|Oui|Oui|Oui <sup>2</sup>|Oui <sup>2</sup>|  
 |[!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] Developer (32 bits)|Oui|Oui|||  
@@ -269,7 +269,7 @@ ms.locfileid: "36155194"
   
   
 ## <a name="see-also"></a>Voir aussi  
- [Configurations matérielle et logicielle requises pour l’installation de SQL Server 2014](../../install/hardware-and-software-requirements-for-installing-sql-server.md)   
+ [Matérielle et logicielle requise pour l’installation de SQL Server 2014](../../install/hardware-and-software-requirements-for-installing-sql-server.md)   
  [Paramètres de l'outil d'analyse de configuration système](../../../database-engine/install-windows/check-parameters-for-the-system-configuration-checker.md)   
  [Administration et maintenance de l'instance de cluster de basculement](../windows/failover-cluster-instance-administration-and-maintenance.md)  
   

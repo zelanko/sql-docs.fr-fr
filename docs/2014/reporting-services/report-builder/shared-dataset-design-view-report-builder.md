@@ -8,25 +8,25 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 47c502da-d163-45d9-bf04-0849e5ba7929
 caps.latest.revision: 8
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 387db446f8fc0f3c5ac90ab31466ae8c8597ce1b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 874137b75fbade0468a284f28397b30334936bd7
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36051448"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37249749"
 ---
 # <a name="shared-dataset-design-view-report-builder"></a>Mode création de dataset partagé (Générateur de rapports)
   La fenêtre du mode création de dataset partagé vous aide à créer une requête de dataset que vous pouvez partager avec d'autres utilisateurs. La fenêtre vous permet de sélectionner une source de données partagée, de spécifier des propriétés pour le dataset partagé et de créer une requête dans le concepteur de requêtes.  
   
  ![rs_SharedDatasetDesignMode](../media/rs-shareddatasetdesignmode.gif "rs_SharedDatasetDesignMode")  
   
- Pour plus d’informations sur l’utilisation des données dans un rapport, consultez [ajouter des données à un rapport &#40;le Générateur de rapports et SSRS&#41;](../report-data/report-datasets-ssrs.md).  
+ Pour plus d’informations sur l’utilisation des données dans un rapport, consultez [ajouter des données à un rapport &#40;Générateur de rapports et SSRS&#41;](../report-data/report-datasets-ssrs.md).  
   
 ##  <a name="Ribbon"></a> Ruban  
  Le ruban vous permet de trouver rapidement les commandes dont vous avez besoin pour effectuer une tâche. Les commandes sont organisées selon les groupes logiques suivants : Connexion, Dataset et Concepteur de requêtes.  
@@ -56,12 +56,12 @@ ms.locfileid: "36051448"
   
  Pour plus d’informations, consultez [Datasets incorporés dans les rapports et datasets partagés &#40;Générateur de rapports et SSRS&#41;](../report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md).  
   
- Pour plus d’informations sur les plans d’actualisation du cache, consultez [Cache des Datasets partagés &#40;SSRS&#41; ](../report-server/cache-shared-datasets-ssrs.md) dans la documentation de Reporting Services dans [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [la documentation en ligne](http://go.microsoft.com/fwlink/?linkid=121312).  
+ Pour plus d’informations sur les plans d’actualisation du cache, consultez [Cache les Datasets partagés &#40;SSRS&#41; ](../report-server/cache-shared-datasets-ssrs.md) dans la documentation de Reporting Services dans [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [la documentation en ligne](http://go.microsoft.com/fwlink/?linkid=121312).  
   
 ### <a name="query-designer"></a>Concepteur de requêtes  
  Utilisez la barre d'outils du concepteur de requêtes pour générer une requête qui spécifie les données à récupérer à partir de la connexion de données. La barre d'outils que vous voyez dépend du concepteur de requêtes associé au type de source de données de la connexion de données.  
   
- Pour plus d’informations, consultez la rubrique qui correspond au type de source de données dans [ajouter des données à partir de Sources de données externes &#40;SSRS&#41; ](../report-data/add-data-from-external-data-sources-ssrs.md) et [concepteurs de requêtes &#40;le Générateur de rapports&#41; ](../query-designers-report-builder.md) .  
+ Pour plus d’informations, consultez la rubrique qui correspond au type de source de données dans [ajouter des données à partir de Sources de données externes &#40;SSRS&#41; ](../report-data/add-data-from-external-data-sources-ssrs.md) et [concepteurs de requêtes &#40;Générateur de rapports&#41; ](../query-designers-report-builder.md) .  
   
 
   
@@ -72,7 +72,7 @@ ms.locfileid: "36051448"
   
  Certains types de sources de données prennent en charge un concepteur de requêtes textuel que vous pouvez utiliser pour coller des requêtes que vous avez créées dans d’autres outils, tels que [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
- Chaque type de source de données a des besoins spécifiques pour la requête basée sur la source de données externe. Pour plus d’informations, consultez la rubrique qui correspond au type de source de données dans [ajouter des données à partir de Sources de données externes &#40;SSRS&#41; ](../report-data/add-data-from-external-data-sources-ssrs.md) et [des Sources de données prises en charge par Reporting Services &#40;SSRS&#41; ](../create-deploy-and-manage-mobile-and-paginated-reports.md) dans la documentation de Reporting Services dans [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [la documentation en ligne](http://go.microsoft.com/fwlink/?linkid=121312).  
+ Chaque type de source de données a des besoins spécifiques pour la requête basée sur la source de données externe. Pour plus d’informations, consultez la rubrique qui correspond au type de source de données dans [ajouter des données à partir de Sources de données externes &#40;SSRS&#41; ](../report-data/add-data-from-external-data-sources-ssrs.md) et [Sources de données prises en charge par Reporting Services &#40;SSRS&#41; ](../create-deploy-and-manage-mobile-and-paginated-reports.md) dans la documentation de Reporting Services dans [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [la documentation en ligne](http://go.microsoft.com/fwlink/?linkid=121312).  
   
 
   
@@ -100,7 +100,7 @@ ms.locfileid: "36051448"
 
   
 ## <a name="see-also"></a>Voir aussi  
- [Ajouter des données à un rapport &#40;rapport Générateur et SSRS&#41;](../report-data/report-datasets-ssrs.md)   
+ [Ajouter des données à un rapport &#40;Générateur de rapports et SSRS&#41;](../report-data/report-datasets-ssrs.md)   
  [Filtrer, regrouper et trier des données &#40;Générateur de rapports et SSRS&#41;](../report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)   
  [Paramètres de rapport &#40;Générateur de rapports et Concepteur de rapports&#41;](../report-design/report-parameters-report-builder-and-report-designer.md)  
   

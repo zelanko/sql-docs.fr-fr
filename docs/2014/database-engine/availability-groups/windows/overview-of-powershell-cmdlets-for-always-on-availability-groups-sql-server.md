@@ -1,29 +1,28 @@
 ---
-title: Vue d’ensemble des applets de commande PowerShell pour les groupes de disponibilité AlwaysOn (SQL Server) | Documents Microsoft
+title: Vue d’ensemble des applets de commande PowerShell pour les groupes de disponibilité AlwaysOn (SQL Server) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Availability Groups [SQL Server], PowerShell cmdlets
 - Availability Groups [SQL Server], about
 - PowerShell [SQL Server], cmdlets
 ms.assetid: b3fef0d5-b6d7-4386-a0f0-d06c165ad4de
 caps.latest.revision: 35
-author: MikeRayMSFT
-ms.author: mikeray
-manager: jhubbard
-ms.openlocfilehash: 3d3b1715a61ed7711217148a3a42bbcd5340308a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 09fbe31747ef722775a0156939f02fb49103fd22
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36052702"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37231969"
 ---
 # <a name="overview-of-powershell-cmdlets-for-alwayson-availability-groups-sql-server"></a>Vue d'ensemble des applets de commande PowerShell pour les groupes de disponibilité AlwaysOn (SQL Server)
   [!INCLUDE[msCoName](../../../includes/msconame-md.md)] PowerShell est un interpréteur de ligne de commande et un langage de script basé sur des tâches tout spécialement conçu pour l’administration système. [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] fournit un ensemble d'applets de commande PowerShell dans [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] qui vous permet de déployer, gérer et surveiller des groupes de disponibilité, des réplicas de disponibilité et des bases de données de disponibilité.  
@@ -55,7 +54,7 @@ ms.locfileid: "36052702"
 |Applets de commande|Description|Prise en charge sur|  
 |-------------|-----------------|------------------|  
 |`Disable-SqlAlwaysOn`|Désactive la fonctionnalité [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] sur une instance de serveur.|Instance de serveur spécifiée par le paramètre `Path`, `InputObject` ou `Name`. (Il doit s'agir d'une édition de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] qui prend en charge [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)].)|  
-|`Enable-SqlAlwaysOn`|Active [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] sur une instance de [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] qui prend en charge la fonctionnalité [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] . Pour plus d’informations sur la prise en charge de [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)], consultez [conditions préalables, Restrictions et recommandations pour les groupes de disponibilité AlwaysOn &#40;SQL Server&#41;](prereqs-restrictions-recommendations-always-on-availability.md).|Toute édition de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] qui prend en charge [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)].|  
+|`Enable-SqlAlwaysOn`|Active [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] sur une instance de [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] qui prend en charge la fonctionnalité [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] . Pour plus d’informations sur la prise en charge de [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)], consultez [prérequis, Restrictions et recommandations pour les groupes de disponibilité AlwaysOn &#40;SQL Server&#41;](prereqs-restrictions-recommendations-always-on-availability.md).|Toute édition de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] qui prend en charge [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)].|  
 |`New-SqlHadrEndPoint`|Crée un nouveau point de terminaison de mise en miroir de bases de données sur une instance de serveur. Ce point de terminaison est requis pour le déplacement des données entre des bases de données primaires et secondaires.|Toute instance de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]|  
 |`Set-SqlHadrEndpoint`|Modifie les propriétés d'un point de terminaison de mise en miroir de bases de données existant, telles que le nom, l'état ou les propriétés d'authentification.|Instance de serveur qui prend en charge [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] et ne dispose pas d'un point de terminaison de mise en miroir de bases de données|  
   
@@ -64,7 +63,7 @@ ms.locfileid: "36052702"
 |Applets de commande|Description|Prise en charge sur|  
 |-------------|-----------------|------------------|  
 |`Backup-SqlDatabase`|Crée une sauvegarde de données ou de journal.|Base de données en ligne (pour [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)], base de données sur l'instance de serveur qui héberge le réplica principal)|  
-|`Restore-SqlDatabase`|Restaure une sauvegarde.|Instance de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] (pour [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)], instance de serveur qui héberge un réplica secondaire)<br /><br /> **\*\* Important \* \***  lorsque vous préparez une base de données secondaire, vous devez utiliser le `-NoRecovery` paramètre dans chaque `Restore-SqlDatabase` commande.|  
+|`Restore-SqlDatabase`|Restaure une sauvegarde.|Instance de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] (pour [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)], instance de serveur qui héberge un réplica secondaire)<br /><br /> **\*\* Important \* \* ** lorsque vous préparez une base de données secondaire, vous devez utiliser le `-NoRecovery` paramètre dans chaque `Restore-SqlDatabase` commande.|  
   
  Pour plus d’informations sur l’utilisation de ces applets de commande pour préparer une base de données secondaire, consultez [Préparer manuellement une base de données secondaire pour un groupe de disponibilité &#40;SQL Server&#41;](manually-prepare-a-secondary-database-for-an-availability-group-sql-server.md).  
   
@@ -89,7 +88,7 @@ ms.locfileid: "36052702"
   
 |Applets de commande|Description|Prise en charge sur|  
 |-------------|-----------------|------------------|  
-|**New-SqlAvailabilityReplica**|Crée un réplica de disponibilité. Vous pouvez utiliser la `-AsTemplate` paramètre pour créer un objet réplica de disponibilité en mémoire pour chaque nouveau réplica de disponibilité.|Instance de serveur qui héberge le réplica principal|  
+|**New-SqlAvailabilityReplica**|Crée un réplica de disponibilité. Vous pouvez utiliser le `-AsTemplate` paramètre pour créer un objet réplica de disponibilité en mémoire pour chaque nouveau réplica de disponibilité.|Instance de serveur qui héberge le réplica principal|  
 |`Join-SqlAvailabilityGroup`|Joint un réplica secondaire au groupe de disponibilité.|Instance de serveur qui héberge le réplica secondaire.|  
 |**Remove-SqlAvailabilityReplica**|Supprime un réplica de disponibilité.|Instance de serveur qui héberge le réplica principal|  
 |`Set-SqlAvailabilityReplica`|Définit les propriétés d'un réplica de disponibilité.|Instance de serveur qui héberge le réplica principal|  
@@ -117,7 +116,7 @@ ms.locfileid: "36052702"
   
  *Pour afficher des informations sur tous les réplicas de disponibilité d’un groupe de disponibilité, utilisez l’instance de serveur qui héberge le réplica principal.  
   
- Pour plus d’informations, consultez [utiliser les stratégies pour afficher l’intégrité d’un groupe de disponibilité AlwaysOn &#40;SQL Server&#41;](use-always-on-policies-to-view-the-health-of-an-availability-group-sql-server.md).  
+ Pour plus d’informations, consultez [utiliser les stratégies AlwaysOn pour afficher l’intégrité d’un groupe de disponibilité &#40;SQL Server&#41;](use-always-on-policies-to-view-the-health-of-an-availability-group-sql-server.md).  
   
 ## <a name="see-also"></a>Voir aussi  
  [Vue d’ensemble des groupes de disponibilité AlwaysOn &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   

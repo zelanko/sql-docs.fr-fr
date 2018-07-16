@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - template databases [SQL Server]
 - model database [SQL Server], about model databases
 - model database [SQL Server]
 ms.assetid: 4e4f739b-fd27-4dce-8be6-3d808040d8d7
 caps.latest.revision: 47
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 3f8fd67f968701440b06274bbd40600be94c00b5
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 729c2d4ea6f89a8b97917d6b22ca885342618018
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36051059"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37242879"
 ---
 # <a name="model-database"></a>model, base de données
   La base de données **model** fait office de modèle pour toutes les bases de données créées sur une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Étant donné que la base de données **tempdb** est créée chaque fois que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] est démarré, la base de données **model** doit toujours exister sur un système [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Tout le contenu de la base de données **model** , y compris ses options, est copié dans la nouvelle base de données. Certains paramètres de **model** sont également utilisés pour la création d'une nouvelle base de données **tempdb** au démarrage, de sorte que la base de données **model** doit toujours exister sur un système [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
@@ -39,7 +39,7 @@ ms.locfileid: "36051059"
  Si vous modifiez la base de données **model** , toutes les bases de données créées ultérieurement héritent des modifications apportées. Par exemple, vous pouvez définir des autorisations ou des options de base de données, ou bien ajouter des objets tels que des tables, des fonctions ou des procédures stockées. Les propriétés de fichier de la base de données **model** sont une exception et sont ignorées, à l'exception de la taille initiale du fichier de données.  
   
 ## <a name="physical-properties-of-model"></a>Propriétés physiques de la base de données model  
- Le tableau ci-dessous répertorie les valeurs de configuration initiales des fichiers journaux et de données **model** . La taille de ces fichiers peut varier légèrement en fonction des différentes éditions de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ Le tableau ci-dessous répertorie les valeurs de configuration initiales des fichiers journaux et de données **model** . Les tailles de ces fichiers peuvent varier légèrement en fonction des éditions différentes de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 |Fichier|Nom logique|Nom physique|Croissance du fichier|  
 |----------|------------------|-------------------|-----------------|  

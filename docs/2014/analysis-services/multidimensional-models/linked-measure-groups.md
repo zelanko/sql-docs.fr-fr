@@ -1,5 +1,5 @@
 ---
-title: Lier les groupes de mesures | Documents Microsoft
+title: Groupes de mesures liés | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - linked measure groups [Analysis Services]
 - referencing measure groups
@@ -17,20 +17,20 @@ helpviewer_keywords:
 - linked dimensions [Analysis Services]
 ms.assetid: 7f838452-8669-4194-8e15-7afdc7f15251
 caps.latest.revision: 41
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: f01313ce33a2dca510846a66d34d972540d72d85
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: e67d39b1cafa212b2a43b55d9de58e5df918bd11
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36053166"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37251471"
 ---
 # <a name="linked-measure-groups"></a>Groupes de mesures liés
   Un groupe de mesures lié est basé sur un autre groupe de mesures situé dans un autre cube de la même base de données ou d'une autre base de données Analysis Services. Utilisez un groupe de mesures lié si vous voulez réutiliser un jeu de mesures, et les valeurs de données correspondantes, dans plusieurs cubes.  
   
- Microsoft recommande que les groupes de mesures liés et d'origine se trouvent dans des solutions exécutées sur le même serveur. Liaison à un groupe de mesures sur un serveur distant est planifiée pour l’abandon dans une version ultérieure (voir [Deprecated Analysis Services Features in SQL Server 2014](../deprecated-analysis-services-features-in-sql-server-2014.md)).  
+ Microsoft recommande que les groupes de mesures liés et d'origine se trouvent dans des solutions exécutées sur le même serveur. Liaison à un groupe de mesures sur un serveur distant sera déconseillée dans une version ultérieure (voir [Analysis Services déconseillées dans SQL Server 2014](../deprecated-analysis-services-features-in-sql-server-2014.md)).  
   
 > [!IMPORTANT]  
 >  Les groupes de mesures liés sont en lecture seule. Pour récupérer les dernières modifications, vous devez supprimer et recréer tous les groupes de mesures liés en fonction de l'objet source modifié. Pour cette raison, groupes de mesures et la zone de collage entre les projets est une approche lieu que vous devez comme au cas où futures de modifications au groupe de mesures seront requises.  
@@ -72,7 +72,7 @@ ms.locfileid: "36053166"
 ## <a name="secure-a-linked-measure"></a>Sécuriser une mesure liée  
  Une fois le lien défini, l'accès aux mesures d'un groupe de mesures lié est géré de la même façon que l'accès aux autres groupes de mesures. Un objet lié apparaît à côté de ses homologues non liés dans le Concepteur de rôle. Pour plus d’informations sur la gestion de la sécurité d’un groupe de mesures, consultez [Octroyer des autorisations de cube ou de modèle &#40;Analysis Services&#41;](grant-cube-or-model-permissions-analysis-services.md).  
   
- Afin de définir ou utiliser un groupe de mesures lié, les fenêtres de compte de service pour le [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] instance doit appartenir à un [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] rôle de base de données qui a `ReadDefinition` et `Read` droits sur la source d’accès [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] d’instance pour le source du cube et mesure de groupe, ou doivent appartenir à la [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] rôle Administrateurs pour la source de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] instance.  
+ Pour définir ou utiliser un groupe de mesures lié, les Windows compte de service pour le [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] instance doit appartenir à un [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] rôle de base de données a `ReadDefinition` et `Read` droits sur la source d’accès [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] l’instance à la source du cube et mesure au groupe, ou doit appartenir à la [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] rôle Administrateurs pour la source de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] instance.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Définir des dimensions liées](define-linked-dimensions.md)  

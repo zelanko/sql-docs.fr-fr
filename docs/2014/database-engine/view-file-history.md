@@ -1,5 +1,5 @@
 ---
-title: Afficher l’historique des fichiers | Documents Microsoft
+title: Afficher l’historique des fichiers | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,24 +8,24 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - version control services [SQL Server], file history
 - historical information [SQL Server], files
 ms.assetid: 9d80d4ea-a0f6-4a79-885d-79143ca09c00
 caps.latest.revision: 22
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: f7ec533709d829807311f1c6aef4af1cbad006a6
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: e0e658cbbc1d121c6433a49d5d42d8a42962eb02
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36153996"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37318849"
 ---
 # <a name="view-file-history"></a>Afficher l'historique d'un fichier
-  Vous pouvez utiliser la **historique** commande pour afficher un historique de version pour les fichiers de contrôle de code source. Cet historique indique la date et l'heure auxquelles le fichier a été ajouté au contrôle de code source ou y a été archivé.  
+  Vous pouvez utiliser la **historique** commande pour afficher un historique des versions pour les fichiers sous contrôle de code source. Cet historique indique la date et l'heure auxquelles le fichier a été ajouté au contrôle de code source ou y a été archivé.  
   
 ### <a name="to-view-the-history-of-a-file"></a>Pour afficher l'historique d'un fichier  
   

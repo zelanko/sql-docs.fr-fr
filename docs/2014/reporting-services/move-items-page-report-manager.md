@@ -1,5 +1,5 @@
 ---
-title: Déplacer les éléments de Page (Gestionnaire de rapports) | Documents Microsoft
+title: Déplacer les éléments de Page (Gestionnaire de rapports) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: fc83b8d2-bc79-4b56-8970-34a1cbbcc176
 caps.latest.revision: 29
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 8de86adb899b08cf37151524f2b451b6c54723b7
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 5914bd0020a2d82e9f38ed4f5b60f0c880aaeb66
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36053457"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37290275"
 ---
 # <a name="move-items-page-report-manager"></a>Page Déplacer les éléments (Gestionnaire de rapports)
   La page Déplacer les éléments vous permet de déplacer un rapport, un dossier ou un autre élément vers un nouvel emplacement sur le serveur de rapports. Vous pouvez taper le chemin d'accès au nouvel emplacement ou utiliser l'arborescence pour naviguer jusqu'à un nouvel emplacement dans l'espace de noms du serveur de rapports. Vous pouvez déplacer uniquement les éléments que vous êtes autorisé à déplacer et qui sont stockés sur le serveur de rapports actuel.  
@@ -74,6 +74,6 @@ ms.locfileid: "36053457"
  [Page Propriétés générales, Rapports &#40;Gestionnaire de rapports&#41;](../../2014/reporting-services/general-properties-page-reports-report-manager.md)   
  [Page propriétés générales, ressources &#40;le Gestionnaire de rapports&#41;](../../2014/reporting-services/general-properties-page-resources-report-manager.md)   
  [Page propriétés générales, des Sources de données partagées &#40;le Gestionnaire de rapports&#41;](../../2014/reporting-services/general-properties-page-shared-data-sources-report-manager.md)   
- [Aide (F1) de gestionnaire de rapports](../../2014/reporting-services/report-manager-f1-help.md)  
+ [Aide (F1) du Gestionnaire de rapports](../../2014/reporting-services/report-manager-f1-help.md)  
   
   

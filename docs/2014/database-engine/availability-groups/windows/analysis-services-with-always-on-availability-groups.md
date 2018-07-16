@@ -5,21 +5,20 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 14d16bfd-228c-4870-b463-a283facda965
 caps.latest.revision: 13
-author: HeidiSteen
-ms.author: heidist
-manager: jhubbard
-ms.openlocfilehash: 12a3b3cb6bc31060857a86481a7a952cc19679b7
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: fa5c34ec3c794cf87b96feefbf15c323fbc43e27
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36052494"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37261367"
 ---
 # <a name="analysis-services-with-always-on-availability-groups"></a>Analysis Services avec les groupes de disponibilité Always On
   Un groupe de disponibilité AlwaysOn est une collection prédéfinie de bases de données relationnelles SQL Server qui basculent ensemble lorsque les conditions déclenchent un basculement dans l'une des bases de données, redirigeant les requêtes vers une base de données mise en miroir sur une autre instance dans le même groupe de disponibilité. Si vous utilisez des groupes de disponibilité pour votre solution haute disponibilité, vous pouvez utiliser une base de données de ce groupe comme source de données dans une solution Analysis Services tabulaire ou multidimensionnelle. Toutes les opérations d'Analysis Services s'exécutent comme prévu lorsque vous utilisez une base de données de disponibilité : le traitement ou l'importation des données, l'interrogation directe des données relationnelles (à l'aide du stockage ROLAP ou du mode DirectQuery) et l'écriture différée.  
@@ -159,7 +158,7 @@ ms.locfileid: "36052494"
   
 1.  Démarrez le Générateur de profils SQL Server et connectez-vous à l'instance SQL Server qui héberge le réplica secondaire.  
   
-     Comme la trace s’exécute, le `SQL:BatchStarting` et `SQL:BatchCompleting` événements affichent les requêtes émises à partir d’Analysis Services en cours d’exécution sur l’instance du moteur de base de données. Ces événements sont sélectionnés par défaut, par conséquent il vous suffit de démarrer la trace.  
+     Comme la trace s’exécute, le `SQL:BatchStarting` et `SQL:BatchCompleting` événements s’affichent les requêtes émises à partir d’Analysis Services qui s’exécutent sur l’instance du moteur de base de données. Ces événements sont sélectionnés par défaut, par conséquent il vous suffit de démarrer la trace.  
   
 2.  Dans [!INCLUDE[ssBIDevStudio](../../../includes/ssbidevstudio-md.md)], ouvrez le projet ou la solution Analysis Services contenant la connexion à la source de données que vous souhaitez tester. Assurez-vous que la source de données spécifie l'écouteur du groupe de disponibilité et non une instance du groupe.  
   
@@ -169,7 +168,7 @@ ms.locfileid: "36052494"
   
 4.  Déployez la solution puis, lorsque cela est terminé, arrêtez la trace.  
   
-     Dans la fenêtre de trace, vous devez voir les événements de l'application **Microsoft SQL Server Analysis Services**. Vous devez voir `SELECT` instructions qui extraient des données à partir d’une base de données sur l’instance de serveur qui héberge le réplica secondaire, ce qui prouve que la connexion a été établie via l’écouteur pour le réplica secondaire.  
+     Dans la fenêtre de trace, vous devez voir les événements de l'application **Microsoft SQL Server Analysis Services**. Vous devriez voir `SELECT` instructions qui extraient des données à partir d’une base de données sur l’instance de serveur qui héberge le réplica secondaire, ce qui prouve que la connexion a été établie via l’écouteur vers le réplica secondaire.  
   
 #### <a name="step-2-perform-a-planned-failover-to-test-the-configuration"></a>Étape 2 : Effectuer un basculement planifié pour tester la configuration  
   

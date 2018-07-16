@@ -1,5 +1,5 @@
 ---
-title: Configuration de l’intégration des Services Service (Service SSIS) | Documents Microsoft
+title: Configuration de l’intégration des Services Service (Service SSIS) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Integration Services service, configuring
 - configuration files [Integration Services]
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - default configuration files
 ms.assetid: 36d78393-a54c-44b0-8709-7f003f44c27f
 caps.latest.revision: 70
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 4d934191b491d4e8d348b7bd91004afc8f8f9545
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 71a0436edf57e820b7e6b559814f65823d4390eb
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36051572"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37283675"
 ---
 # <a name="configuring-the-integration-services-service-ssis-service"></a>Configuration du service Integration Services (Service SSIS)
     

@@ -1,28 +1,27 @@
 ---
-title: Se connecter à la Page des réplicas secondaires existants (Assistant Ajouter un réplica et ajouter des bases de données Assistant) | Documents Microsoft
+title: Se connecter à la Page des réplicas secondaires existants (Assistant Ajouter un réplica et ajoutez l’Assistant de bases de données) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.addreplicawizard.connecttoreplicas.f1
 - sql12.swb.adddatabasewizard.connecttoreplicas.f1
 ms.assetid: 850f1bc8-d7d0-425c-bd7b-03f0e9d3348e
 caps.latest.revision: 5
-author: rothja
-ms.author: jroth
-manager: jhubbard
-ms.openlocfilehash: c64f0ec6d4e54da8be90063cadfac60b2837ddef
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 6f7282c48e5c31dc4ee71ddb8dee5d828f70a049
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36042751"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37245829"
 ---
 # <a name="connect-to-existing-secondary-replicas-page-add-replica-wizard-and-add-databases-wizard"></a>Se connecter à la Page des réplicas secondaires existants (Assistant Ajouter un réplica et ajouter des bases de données Assistant)
   Cette rubrique d’aide décrit les options de la page **Se connecter à des réplicas secondaires existants** . Cette rubrique est utilisée par l' [!INCLUDE[ssAoAddRepWiz](../../../includes/ssaoaddrepwiz-md.md)] et par l' [!INCLUDE[ssAoAddDbWiz](../../../includes/ssaoadddbwiz-md.md)] de [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)].  

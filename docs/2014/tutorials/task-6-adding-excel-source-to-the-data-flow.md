@@ -1,5 +1,5 @@
 ---
-title: 'Tâche 6 : Ajout de Source Excel au flux de données | Documents Microsoft'
+title: 'Tâche 6 : Ajout de Source Excel au flux de données | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -10,18 +10,18 @@ ms.technology:
 - integration-services
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 0209055e-cb6b-4a07-909e-836596727a2c
 caps.latest.revision: 6
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 1cde5dc49851e7d8c808d4a6273f4d4caf6603e2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 2ce6d1ec5ab2fc9c57bd56e12b56b13231e74606
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36155157"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37279995"
 ---
 # <a name="task-6-adding-excel-source-to-the-data-flow"></a>Tâche 6 : Ajout d'une source Excel au flux de données
   Dans cette tâche, vous allez ajouter une source Excel au flux de données pour lire les données des fournisseurs à partir du fichier Excel source. La source Excel extrait des données depuis des feuilles de calcul ou des plages dans des classeurs Microsoft Excel. Consultez la rubrique [Source Excel](http://msdn.microsoft.com/library/ms141683.aspx) pour plus de détails.  
@@ -38,11 +38,11 @@ ms.locfileid: "36155157"
   
 6.  Dans la boîte de dialogue **Gestionnaire de connexions Excel** , cliquez sur **Parcourir**, puis recherchez le fichier **Suppliers.xls** dans le dossier **EIM Tutorial** . Vérifiez que **Microsoft Excel 97-2003** est sélectionné dans la zone **Version Excel** , puis cliquez sur **OK**.  
   
-     ![Boîte de dialogue Gestionnaire de connexions Excel](../../2014/tutorials/media/et-addingexcelsourcetothedataflow-01.jpg "boîte de dialogue Gestionnaire de connexions Excel")  
+     ![Boîte de dialogue du Gestionnaire de connexions Excel](../../2014/tutorials/media/et-addingexcelsourcetothedataflow-01.jpg "boîte de dialogue du Gestionnaire de connexions Excel")  
   
 7.  Dans la boîte de dialogue **Éditeur de source Excel** , sélectionnez **IncomingSuppliers$** dans la zone de liste **Nom de la feuille Excel** .  
   
-     ![Nom de la feuille Excel - fournisseurs entrants $](../../2014/tutorials/media/et-addingexcelsourcetothedataflow-02.jpg "nom de la feuille Excel - fournisseurs entrants $")  
+     ![Nom de feuille Excel - fournisseurs entrants $](../../2014/tutorials/media/et-addingexcelsourcetothedataflow-02.jpg "nom de feuille Excel - fournisseurs entrants $")  
   
 8.  Cliquez sur **Aperçu** pour afficher un aperçu des données dans le fichier Excel.  
   
@@ -51,6 +51,6 @@ ms.locfileid: "36155157"
 10. Faites glisser la transformation **Nettoyage DQS** dans **Autres transformations** dans la **Boîte à outils SSIS** vers l'onglet **Flux de données** sous **Lire les données des fournisseurs à partir d'un fichier Excel**. La transformation de nettoyage DQS utilise Data Quality Services (DQS) pour corriger les données en appliquant des règles approuvées dans la base de connaissances. Cette transformation, au moment de l'exécution, crée un projet de nettoyage DQS sur le serveur DQS. Consultez la rubrique [Transformation de nettoyage DQS](http://msdn.microsoft.com/library/ee677619.aspx) pour plus de détails.  
   
 ## <a name="next-step"></a>Étape suivante  
- [Tâche 7 : Ajout d’une transformation au flux de données de nettoyage DQS](../integration-services/data-flow/data-flow.md)  
+ [Tâche 7 : Ajout d’une transformation de nettoyage DQS au flux de données](../integration-services/data-flow/data-flow.md)  
   
   

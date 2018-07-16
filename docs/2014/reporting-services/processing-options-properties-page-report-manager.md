@@ -1,5 +1,5 @@
 ---
-title: Le traitement des Options de la Page de propriétés (Gestionnaire de rapports) | Documents Microsoft
+title: Traitement des Options de la Page de propriétés (Gestionnaire de rapports) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 28f07c70-7132-4d15-9505-4fdf31dc9cc0
 caps.latest.revision: 35
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 17db40e24318fad194ec21ca30e6394f3fe607e3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: aa0b3682b6358ee2aa7c246156cf59eecdf4559a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36052554"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37288385"
 ---
 # <a name="processing-options-properties-page-report-manager"></a>Page de propriétés Options de traitement (Gestionnaire de rapports)
   La page de propriétés Options de traitement vous permet de définir les propriétés d'exécution du rapport actuellement sélectionné. Ces options déterminent à quel moment se produit le traitement des données du rapport. Vous pouvez définir ces options pour récupérer les données du rapport aux heures creuses. Si un rapport est consulté fréquemment, vous pouvez mettre en cache de façon temporaire des copies de ce dernier pour éliminer les temps d'attente lorsque plusieurs utilisateurs y accèdent à quelques minutes d'intervalle.  
@@ -65,9 +65,9 @@ ms.locfileid: "36052554"
  Cette valeur s'applique au traitement du rapport sur le serveur de rapports. Elle ne définit aucun délai d'attente pour le traitement des données sur le serveur de base de données qui fournit les données pour le rapport. Toutefois, la valeur que vous spécifiez doit être suffisante pour terminer le traitement des données et du rapport. Le nombre pour le traitement du rapport commence lorsque le rapport est sélectionné et se termine lors de l'ouverture du rapport.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Définir les propriétés de traitement des rapports](report-server/set-report-processing-properties.md)   
+ [Définir les propriétés de traitement de rapport](report-server/set-report-processing-properties.md)   
  [Mise en cache de rapports &#40;SSRS&#41;](report-server/caching-reports-ssrs.md)   
  [Create, Modify, and Delete Schedules](subscriptions/create-modify-and-delete-schedules.md)   
- [Aide (F1) de gestionnaire de rapports](../../2014/reporting-services/report-manager-f1-help.md)  
+ [Aide (F1) du Gestionnaire de rapports](../../2014/reporting-services/report-manager-f1-help.md)  
   
   

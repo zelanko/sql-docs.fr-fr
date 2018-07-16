@@ -1,5 +1,5 @@
 ---
-title: Type de données CubeDimension (ASSL) | Documents Microsoft
+title: Type de données CubeDimension (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - CubeDimension data type
 ms.assetid: 128ac790-65a1-4e35-b909-8dba2a61b24c
 caps.latest.revision: 40
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 4a043895929e09a59d3ae14c5995804c4fa5c7eb
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: a02ef89f5dac200450faf8151a71aeae703e8b35
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36039211"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37220320"
 ---
 # <a name="cubedimension-data-type-assl"></a>Type de données CubeDimension (ASSL)
   Définit un type de données primitif représentant la relation entre une dimension et un cube.  
@@ -72,13 +72,13 @@ ms.locfileid: "36039211"
 ## <a name="remarks"></a>Notes  
  Il y a un type de données `CubeDimension` pour chaque relation de dimension sur un `Cube`. Le type de données `CubeDimension` couvre tous les éléments `MeasureGroups` du cube.  
   
- A `CubeDimension` doit inclure un [CubeHierarchy](hierarchy-data-type-assl.md) si la dimension a une influence spécifique sur la hiérarchie, y compris la désactivation de la hiérarchie (ce qui permet la sélection des hiérarchies s’appliquent à un emplacement donné utilisation de la dimension), ou en rendant la hiérarchie invisible.  
+ Un `CubeDimension` doit inclure un [CubeHierarchy](hierarchy-data-type-assl.md) si la dimension a une influence spécifique sur la hiérarchie, y compris la désactivation de la hiérarchie (ce qui permet de sélectionner les hiérarchies s’appliquent à un emplacement donné utilisation de la dimension), ou en rendant la hiérarchie invisible.  
   
  De même, un `CubeDimension` doit inclure un [CubeAttribute](cubeattribute-data-type-assl.md) uniquement si la dimension a une influence spécifique sur l’attribut. (Bien qu'il n'y ait aucun moyen de sélectionner quels attributs appliquer à une utilisation de dimension particulière, les attributs peuvent être rendus invisibles).  
   
  L’élément correspondant dans le modèle d’objet objets AMO (Analysis Management) est <xref:Microsoft.AnalysisServices.CubeDimension>.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Types de données de script langage XML Analysis Services &#40;ASSL&#41;](analysis-services-scripting-language-xml-data-types-assl.md)  
+ [Types Analysis Services Scripting Language XML données &#40;ASSL&#41;](analysis-services-scripting-language-xml-data-types-assl.md)  
   
   

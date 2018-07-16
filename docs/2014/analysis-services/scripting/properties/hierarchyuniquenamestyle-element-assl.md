@@ -1,5 +1,5 @@
 ---
-title: Élément HierarchyUniqueNameStyle (ASSL) | Documents Microsoft
+title: Élément HierarchyUniqueNameStyle (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - HierarchyUniqueNameStyle element
 ms.assetid: 2ac57825-e9e5-4ec4-9856-fa2326d2c43f
 caps.latest.revision: 12
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: a4948cc104e39c6d7aec7e2822594e891c52b112
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: d19fa53581241686d68179162762a0909fcc69f5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36052298"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37304289"
 ---
 # <a name="hierarchyuniquenamestyle-element-assl"></a>Élément HierarchyUniqueNameStyle (ASSL)
   Détermine comment des noms uniques sont générés pour les hiérarchies qui sont contenus dans le [CubeDimension](../data-type/dimension-data-type-assl.md).  
@@ -67,11 +67,11 @@ ms.locfileid: "36052298"
 |*IncludeDimensionName*|Le nom de la dimension est inclus dans le nom de la hiérarchie.|  
 |*ExcludeDimensionName*|Le nom de la dimension n'est pas inclus dans le nom de la hiérarchie.|  
   
- L’élément qui correspond au parent de `HierarchyUniqueNameStyle` dans l’objet d’objets AMO (Analysis Management) est modèle <xref:Microsoft.AnalysisServices.CubeDimension>.  
+ L’élément qui correspond au parent de `HierarchyUniqueNameStyle` dans l’objet d’objets AMO (Analysis Management) modèle est <xref:Microsoft.AnalysisServices.CubeDimension>.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Élément de cube &#40;ASSL&#41;](../objects/cube-element-assl.md)   
- [Élément de dimension &#40;ASSL&#41;](../objects/dimension-element-assl.md)   
+ [Dimension élément &#40;ASSL&#41;](../objects/dimension-element-assl.md)   
  [Propriétés &#40;ASSL&#41;](properties-assl.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Mettre à niveau les classeurs et l’actualisation planifiée des données (SharePoint 2013) | Documents Microsoft
+title: Mettre à niveau les classeurs et l’actualisation planifiée des données (SharePoint 2013) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: a49c4af4-e243-4926-be97-74da1f9d54eb
 caps.latest.revision: 18
-author: markingmyname
-ms.author: maghan
-manager: jhubbard
-ms.openlocfilehash: fd35257533c7cbf639ea1c1fecadcf3bcff4acd0
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: 5bb205ac875315770454a9075ab0c6acbabd97fa
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36043019"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37216179"
 ---
 # <a name="upgrade-workbooks-and-scheduled-data-refresh-sharepoint-2013"></a>Mettre à niveau les classeurs et l'actualisation planifiée des données (SharePoint 2013)
   Cette rubrique traite de l'utilisation des classeurs créés dans les environnements PowerPivot précédents et comment mettre à niveau les classeurs PowerPivot afin de pouvoir tirer parti des nouvelles fonctionnalités introduites dans cette version. Pour en savoir plus sur les nouvelles fonctionnalités, consultez [Nouveautés de PowerPivot](http://go.microsoft.com/fwlink/?LinkID=203917).  
@@ -33,9 +33,9 @@ ms.locfileid: "36043019"
   
 -   [Mettre à niveau des classeurs SQL Server 2008 R2 vers des classeurs SQL Server 2012 Service Pack 1 (SP1)](#bkmk_to_2012sp1_from_2008r2)  
   
--   [Mise à niveau vers des classeurs Office 2013 à partir de Versions créées à l’aide de le 2012 PowerPivot Add-In pour Excel](#bkmk_to_2012sp1_from_2012)  
+-   [Mise à niveau vers des classeurs Office 2013 à partir de Versions créées à l’aide de la 2012 PowerPivot Add-In pour Excel](#bkmk_to_2012sp1_from_2012)  
   
--   [Mise à niveau vers des classeurs SQL Server 2012 à partir de Versions créées à l’aide du 2008 R2 PowerPivot Add-In pour Excel 2010](#bkmk_to_2012_from_2008R2)  
+-   [Mettre à niveau vers des classeurs SQL Server 2012 à partir de Versions créées à l’aide de la 2008 R2 PowerPivot Add-In pour Excel 2010](#bkmk_to_2012_from_2008R2)  
   
 -   [Exécution de plusieurs versions de classeurs sur un serveur plus récent](#bkmk_runold)  
   
@@ -87,11 +87,11 @@ ms.locfileid: "36043019"
   
      Ensuite, enregistrez le classeur et republiez-le sur le serveur SharePoint.  
   
- Pour plus d’informations sur les modifications apportées aux fonctionnalités Analysis Services, consultez [les changements de comportement des fonctionnalités Analysis Services dans SQL Server 2014](../../behavior-changes-to-analysis-services-features-in-sql-server-2014.md)  
+ Pour plus d’informations sur les modifications apportées aux fonctionnalités Analysis Services, consultez [changements de comportement Analysis Services Features in SQL Server 2014](../../behavior-changes-to-analysis-services-features-in-sql-server-2014.md)  
   
- Pour plus d’informations sur l’historique d’actualisation, consultez [l’historique d’actualisation des données d’affichage &#40;PowerPivot pour SharePoint&#41;](../../power-pivot-sharepoint/view-data-refresh-history-power-pivot-for-sharepoint.md).  
+ Pour plus d’informations sur l’historique d’actualisation, consultez [historique des actualisations des données d’affichage &#40;PowerPivot pour SharePoint&#41;](../../power-pivot-sharepoint/view-data-refresh-history-power-pivot-for-sharepoint.md).  
   
-##  <a name="bkmk_to_2012sp1_from_2012"></a> Mise à niveau vers des classeurs Office 2013 à partir de Versions créées à l’aide de le 2012 PowerPivot Add-In pour Excel  
+##  <a name="bkmk_to_2012sp1_from_2012"></a> Mise à niveau vers des classeurs Office 2013 à partir de Versions créées à l’aide de la 2012 PowerPivot Add-In pour Excel  
  Cette section décrit la mise à niveau **de** classeurs SQL Server 2012 PowerPivot pour Excel 2010 **vers** SQL Server 2012 SP1 PowerPivot pour Excel 2013.  
   
  La mise à niveau d'un classeur résout l'erreur suivante qui se produit lors de la tentative d'actualisation planifiée des données sur le classeur de version précédente :  
@@ -108,7 +108,7 @@ ms.locfileid: "36043019"
   
 4.  Ensuite, enregistrez le classeur et republiez-le sur le serveur SharePoint 2013.  
   
-##  <a name="bkmk_to_2012_from_2008R2"></a> Mise à niveau vers des classeurs SQL Server 2012 à partir de Versions créées à l’aide du 2008 R2 PowerPivot Add-In pour Excel 2010  
+##  <a name="bkmk_to_2012_from_2008R2"></a> Mettre à niveau vers des classeurs SQL Server 2012 à partir de Versions créées à l’aide de la 2008 R2 PowerPivot Add-In pour Excel 2010  
  Cette section décrit la mise à niveau de classeurs **de** SQL Server 2008 R2 PowerPivot pour Excel 2010 **vers** SQL Server 2012 PowerPivot pour Excel 2010.  
   
  La mise à niveau d'un classeur résout l'erreur suivante qui se produit lors de la tentative d'actualisation planifiée des données sur le classeur de version précédente :  
@@ -119,9 +119,9 @@ ms.locfileid: "36043019"
   
  Vous pouvez effectuer la mise à niveau de deux façons :  
   
-1.  Mise à niveau de chaque classeur manuellement en l’ouvrant dans Excel sur un ordinateur qui possède le [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] version de PowerPivot pour Excel, puis republiez-le sur le serveur. Lorsque vous ouvrez le classeur dans une version plus récente du complément, les opérations internes suivantes se produisent : le fournisseur de données dans la chaîne de connexion de données du classeur est mis à jour vers MSOLAP.5, les métadonnées sont mises à jour et les relations sont recréées pour assurer la conformité avec une implémentation plus récente.  
+1.  Mettre à niveau de chaque classeur manuellement en l’ouvrant dans Excel sur un ordinateur qui a le [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] version de PowerPivot pour Excel, puis republiez-le sur le serveur. Lorsque vous ouvrez le classeur dans une version plus récente du complément, les opérations internes suivantes se produisent : le fournisseur de données dans la chaîne de connexion de données du classeur est mis à jour vers MSOLAP.5, les métadonnées sont mises à jour et les relations sont recréées pour assurer la conformité avec une implémentation plus récente.  
   
-2.  Sinon, un administrateur SharePoint peut activer la fonctionnalité de mise à niveau automatique pour le Service système PowerPivot dans une batterie de serveurs SharePoint mettre à niveau automatiquement un [!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)] classeur PowerPivot lorsque l’actualisation planifiée des données s’exécute (seuls les classeurs qui sont configuré pour l’actualisation planifiée des données sont mis à niveau).  
+2.  Vous pouvez également, un administrateur SharePoint peut activer la fonctionnalité de mise à niveau automatique pour le Service système PowerPivot dans une batterie de serveurs SharePoint mettre à niveau automatiquement un [!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)] classeur PowerPivot lorsque l’actualisation planifiée des données s’exécute (seuls les classeurs sont configuré pour l’actualisation planifiée des données sont mis à niveau).  
   
     > [!NOTE]  
     >  La mise à niveau automatique est une fonctionnalité de configuration de serveur ; vous ne pouvez pas l'activer ou la désactiver pour des classeurs, des bibliothèques ou les collections de sites spécifiques.  
@@ -136,7 +136,7 @@ ms.locfileid: "36043019"
 PS C:\Windows\system32> Get-PowerPivotSystemService  
 ```  
   
- La sortie de la commande Get-PowerPivotSystemService est une liste de propriétés et de valeurs correspondantes. Vous devez voir `WorkbookUpgradeOnDataRefresh` dans la liste de propriétés. Elle aura la valeur **true** si la mise à niveau automatique est activée. Si elle a la valeur **false**, passez à l'étape suivante, pour activer la mise à niveau automatique des classeurs.  
+ La sortie de la commande Get-PowerPivotSystemService est une liste de propriétés et de valeurs correspondantes. Vous devriez voir `WorkbookUpgradeOnDataRefresh` dans la liste de propriétés. Elle aura la valeur **true** si la mise à niveau automatique est activée. Si elle a la valeur **false**, passez à l'étape suivante, pour activer la mise à niveau automatique des classeurs.  
   
  Pour activer la mise à niveau automatique des classeurs, exécutez la commande suivante :  
   
@@ -153,7 +153,7 @@ PS C:\Windows\system32> Set-PowerPivotSystemService –WorkbookUpgradeOnDataRefr
   
  Notez que la publication de classeurs de version plus récente sur des instances SQL Server antérieures de [!INCLUDE[ssGeminiShort](../../../includes/ssgeminishort-md.md)] n'est pas prise en charge. Une instance de [!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)] ne charge pas un classeur créé dans la version [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] de [!INCLUDE[ssGeminiClient](../../../includes/ssgeminiclient-md.md)], et une instance de SQL Server 2012 ne charge pas les classeurs Office 2013 avec des modèles de données avancés que vous avez créés à l'aide de la version [!INCLUDE[ssSQL11SP1](../../../includes/sssql11sp1-md.md)] de PowerPivot dans Excel.  
   
-###  <a name="bkmk_msolapxslx"></a> Comment rechercher les informations de fournisseur de données MSOLAP dans un classeur PowerPivot  
+###  <a name="bkmk_msolapxslx"></a> Comment vérifier les informations de fournisseur de données MSOLAP dans un classeur PowerPivot  
  Suivez les instructions suivantes pour vérifier le fournisseur OLE DB utilisé dans un classeur PowerPivot. La vérification des informations de connexion de données ne nécessite pas l'installation du complément [!INCLUDE[ssGeminiClient](../../../includes/ssgeminiclient-md.md)] .  
   
 1.  Dans Excel, dans l'onglet Données, cliquez sur **Connexions**. Cliquez sur **Propriétés**.  

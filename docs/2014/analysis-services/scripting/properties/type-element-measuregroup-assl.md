@@ -1,5 +1,5 @@
 ---
-title: Type d’élément (MeasureGroup) (ASSL) | Documents Microsoft
+title: Type d’élément (MeasureGroup) (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - Type element
 ms.assetid: 3a584baf-36bb-4e1d-9128-c4758c0b8f06
 caps.latest.revision: 35
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: f1e583e8debf2f8416ac46574e8c4f5dbc8d4453
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: a8e8bab8b822ccb4cf8a17fe4759519eeefb974a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36140096"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37226369"
 ---
 # <a name="type-element-measuregroup-assl"></a>Élément Type (MeasureGroup) (ASSL)
   Spécifie le type de la [MeasureGroup](../objects/group-element-assl.md).  
@@ -67,16 +67,16 @@ ms.locfileid: "36140096"
 |Valeur|Description|  
 |-----------|-----------------|  
 |*Régulière*|Contient des mesures ordinaires.|  
-|*ExchangeRate*|Contient des mesures de taux de change de devises.|  
+|*Valeur ExchangeRate*|Contient des mesures de taux de change de devises.|  
 |*Ventes*|Contient des mesures de ventes.|  
-|*Allocation de réserve*|Contient des mesures de budget.|  
+|*Budget*|Contient des mesures de budget.|  
 |*FinancialReporting*|Contient des mesures de comptabilité.|  
 |*Marketing*|Contient des mesures de marketing.|  
 |*Inventaire*|Contient des mesures d'inventaire.|  
   
- L’énumération qui correspond aux valeurs autorisées pour `Type` dans l’objet d’objets AMO (Analysis Management) est modèle <xref:Microsoft.AnalysisServices.MeasureGroupType>.  
+ L’énumération qui correspond aux valeurs autorisées pour `Type` dans l’objet d’objets AMO (Analysis Management) modèle est <xref:Microsoft.AnalysisServices.MeasureGroupType>.  
   
- L’élément qui correspond au parent de `Type` dans l’objet d’objets AMO (Analysis Management) est modèle <xref:Microsoft.AnalysisServices.MeasureGroup>.  
+ L’élément qui correspond au parent de `Type` dans l’objet d’objets AMO (Analysis Management) modèle est <xref:Microsoft.AnalysisServices.MeasureGroup>.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Propriétés &#40;ASSL&#41;](properties-assl.md)  

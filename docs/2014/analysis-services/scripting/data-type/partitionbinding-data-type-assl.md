@@ -1,5 +1,5 @@
 ---
-title: Type de données PartitionBinding (ASSL) | Documents Microsoft
+title: Type de données PartitionBinding (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - PartitionBinding data type
 ms.assetid: 859d4b47-31c7-4678-9388-254fec484299
 caps.latest.revision: 37
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: c4e265cd83401d480de74adf89949dd8edf73616
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 0c34bee83ab6a32fe10d00b6d3450412e12729dd
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36053402"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37281915"
 ---
 # <a name="partitionbinding-data-type-assl"></a>Type de données PartitionBinding (ASSL)
   Définit un type de données dérivé qui représente une liaison à un [Partition](../objects/partition-element-assl.md) élément.  
@@ -63,11 +63,11 @@ ms.locfileid: "36053402"
 |Éléments dérivés|Consultez [de liaison](binding-data-type-assl.md)|  
   
 ## <a name="remarks"></a>Notes  
- Pour plus d’informations sur la `Binding` type, y compris les tableaux des objets Analysis Services Scripting Language (ASSL) de la `Binding` type et la hiérarchie d’héritage de `Binding` types, consultez [Type de liaison de données &#40;ASSL&#41;](binding-data-type-assl.md).  
+ Pour plus d’informations sur la `Binding` type, y compris les tableaux des objets Analysis Services Scripting Language (ASSL) de la `Binding` type et la hiérarchie d’héritage de `Binding` types, consultez [Type de données de liaison &#40;ASSL&#41;](binding-data-type-assl.md).  
   
  Pour une vue d’ensemble des liaisons de données dans ASSL, consultez [des Sources de données et des liaisons &#40;multidimensionnels SSAS&#41;](../../multidimensional-models/data-sources-and-bindings-ssas-multidimensional.md).  
   
 ## <a name="see-also"></a>Voir aussi  
- [Types de données de script langage XML Analysis Services &#40;ASSL&#41;](analysis-services-scripting-language-xml-data-types-assl.md)  
+ [Types Analysis Services Scripting Language XML données &#40;ASSL&#41;](analysis-services-scripting-language-xml-data-types-assl.md)  
   
   

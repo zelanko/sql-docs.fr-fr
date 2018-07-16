@@ -1,5 +1,5 @@
 ---
-title: 'Options (Page XML:Tabs : l’éditeur de texte) | Documents Microsoft'
+title: 'Options (Page de l’éditeur : XML:Tabs texte) | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - VS.ToolsOptionsPages.Text_Editor.XML.Tabs
 ms.assetid: 13bf5f8c-aba3-4c05-b8bb-eb475797c9bd
 caps.latest.revision: 19
 author: craigg-msft
 ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: bb41fb44ad1f820623ab3db96b1bf6108fd580a0
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 2843acbc8935d8bd9f505a9265c704a342ddee3d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36040929"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37324919"
 ---
-# <a name="options-text-editorxmltabs-page"></a>Options (Page XML:Tabs : l’éditeur de texte)
+# <a name="options-text-editorxmltabs-page"></a>Options (Page : XML:Tabs de l’éditeur de texte)
   Cette boîte de dialogue vous permet de modifier le comportement de tabulation de l'Éditeur XML, qui permet de modifier des documents XML. Pour afficher ces paramètres, cliquez sur **Options** dans le menu **Outils** , développez le dossier **Éditeur de texte** , puis le sous-dossier **XML** , et cliquez ensuite sur **Tabulations**.  
   
 ## <a name="setting-options-in-multiple-locations"></a>Définition d'options en plusieurs emplacements  
@@ -33,10 +33,10 @@ ms.locfileid: "36040929"
  **Aucun**  
  Lorsque cette option est activée, la nouvelle ligne créée grâce à la touche ENTRÉE n'est pas mise en retrait. Le curseur est placé au niveau de la première colonne de la nouvelle ligne.  
   
- **bloc**  
+ **Bloc**  
  Lorsque cette option est sélectionnée, la nouvelle ligne créée lorsque vous appuyez sur Entrée est automatiquement mise en retrait comme la ligne précédente.  
   
- **Actives**  
+ **Intelligent**  
  Lorsque cette option est activée, la nouvelle ligne créée grâce à la touche ENTRÉE est positionnée en fonction du contexte. Par exemple, après une accolade ouvrante ({), les lignes incluses sont automatiquement mises en retrait d'une tabulation supplémentaire. L'accolade fermante (}) correspondante est réalignée sur l'accolade ouvrante.  
   
 ## <a name="tabs"></a>Tabulations  

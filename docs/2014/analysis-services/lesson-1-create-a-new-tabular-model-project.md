@@ -1,5 +1,5 @@
 ---
-title: 'Leçon 1 : Créer un nouveau projet de modèle tabulaire | Documents Microsoft'
+title: 'Leçon 1 : Créer un nouveau projet de modèle tabulaire | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,23 +8,23 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 0d2eb34d-78c8-41ff-b92d-49b62c16b2ac
 caps.latest.revision: 27
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: jhubbard
-ms.openlocfilehash: 6a5f5c938289963373d09891f20c3a87495a33a1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 0ffb0804ab6edd3afbbf3a3e618ca7c417744b21
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36140403"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37226629"
 ---
 # <a name="lesson-1-create-a-new-tabular-model-project"></a>Leçon 1 : Créer un projet de modèle tabulaire
   Dans cette leçon, vous allez créer un nouveau projet de modèle tabulaire vide dans [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]. Une fois que votre projet est créé, vous pouvez commencer à ajouter des données à l'aide de l'Assistant Importation de table. En plus de créer un nouveau projet, cette leçon inclut également une brève introduction à l'environnement de création de modèles tabulaires dans [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)].  
   
- Pour en savoir plus sur les différents types de projets de modèles tabulaires, consultez [Projets de modèles tabulaires &#40;SSAS Tabulaire&#41;](tabular-models/tabular-model-projects-ssas-tabular.md). Pour en savoir plus sur l’environnement de création de modèle tabulaire, consultez [Concepteur de modèles tabulaires &#40;tabulaire SSAS&#41;](tabular-model-designer-ssas-tabular.md).  
+ Pour en savoir plus sur les différents types de projets de modèles tabulaires, consultez [Projets de modèles tabulaires &#40;SSAS Tabulaire&#41;](tabular-models/tabular-model-projects-ssas-tabular.md). Pour en savoir plus sur l’environnement de création de modèles tabulaires, consultez [Générateur de modèles tabulaires &#40;tabulaire SSAS&#41;](tabular-model-designer-ssas-tabular.md).  
   
  Durée estimée pour effectuer cette leçon : **10 minutes**  
   
@@ -48,7 +48,7 @@ ms.locfileid: "36140403"
 ## <a name="understanding-the-sql-server-data-tools-tabular-model-authoring-environment"></a>Présentation de l'environnement de création du modèle tabulaire d'outils de données SQL Server  
  Maintenant que vous avez créé un nouveau projet de modèle tabulaire, prenons un moment pour explorer l'environnement de création du modèle tabulaire dans [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] (Visual Studio 2010 ou versions ultérieures).  
   
- Une fois votre projet créé, il s'ouvre dans [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]. Un modèle vide apparaît dans le concepteur de modèles et le fichier **Model.bim** est sélectionné dans la fenêtre de **l’Explorateur de solutions** . Lorsque vous ajoutez des données, les tables et les colonnes apparaissent dans le concepteur. Si vous ne voyez pas dans le concepteur (la fenêtre vide avec l’onglet Model.bim), **l’Explorateur de solutions**, sous `AW Internet Sales Tabular Model`, double-cliquez sur le **Model.bim** fichier.  
+ Une fois votre projet créé, il s'ouvre dans [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]. Un modèle vide apparaît dans le concepteur de modèles et le fichier **Model.bim** est sélectionné dans la fenêtre de **l’Explorateur de solutions** . Lorsque vous ajoutez des données, les tables et les colonnes apparaissent dans le concepteur. Si vous ne voyez pas le concepteur (la fenêtre vide avec l’onglet Model.bim), dans **l’Explorateur de solutions**, sous `AW Internet Sales Tabular Model`, double-cliquez sur le **Model.bim** fichier.  
   
  Vous pouvez afficher les propriétés du projet de base dans la fenêtre **Propriétés** . Dans **l’Explorateur de solutions**, cliquez sur `AW Internet Sales Tabular Model`. Notez que dans la fenêtre **Propriétés** , dans **Fichier projet**, vous allez voir **Modèle tabulaire AW Internet Sales.smproj**. Il s’agit du nom du fichier du projet, avec son emplacement dans le champ **Dossier du projet**.  
   

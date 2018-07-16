@@ -1,5 +1,5 @@
 ---
-title: Éditeur de tâche MSMQ (Page Envoyer) | Documents Microsoft
+title: Éditeur de tâche MSMQ (Page Envoyer) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.msgqueuetask.send.f1
 helpviewer_keywords:
 - Message Queue Task Editor
 ms.assetid: 565aa079-ac44-4407-8efc-cddab839de30
 caps.latest.revision: 37
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 152b01a69c462e7d736b5e2aeef7d96af4cf5ac3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: fc35be8153ec5ebbaa5da4ebe5004deb360f9766
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36053100"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37250399"
 ---
 # <a name="message-queue-task-editor-send-page"></a>Éditeur de tâche MSMQ (page Envoyer)
   Utilisez la page **Envoyer** de la boîte de dialogue **Éditeur de tâche MSMQ** pour configurer une tâche MSMQ afin d'envoyer des messages depuis un package [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] .  
@@ -71,7 +71,7 @@ ms.locfileid: "36053100"
 ## <a name="see-also"></a>Voir aussi  
  [Integration Services Error and Message Reference](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Éditeur de tâche MSMQ &#40;Page Général&#41;](general-page-of-integration-services-designers-options.md)   
- [Éditeur de tâche MSMQ &#40;Page de réception&#41;](../../2014/integration-services/message-queue-task-editor-receive-page.md)   
+ [Éditeur de tâche MSMQ &#40;Page recevoir&#41;](../../2014/integration-services/message-queue-task-editor-receive-page.md)   
  [Page Expressions](expressions/expressions-page.md)  
   
   
