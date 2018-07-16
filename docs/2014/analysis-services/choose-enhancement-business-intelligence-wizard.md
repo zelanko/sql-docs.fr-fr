@@ -1,5 +1,5 @@
 ---
-title: Choisir des améliorations (Assistant Business Intelligence) | Documents Microsoft
+title: Choisir des améliorations (Assistant Business Intelligence) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.biwizard.bienhancement.f1
 ms.assetid: 39e2f36c-2c02-4a71-af8f-5dbd373190dc
 caps.latest.revision: 25
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 1377e93214ff5d9e459698946551ffaed6723390
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 35634d3094647cd7698ec1961b94cb2b6b5744e6
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36153602"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37243979"
 ---
 # <a name="choose-enhancement-business-intelligence-wizard"></a>Choisir des améliorations (Assistant Business Intelligence)
   Utilisez la page **Choisir des améliorations** pour choisir l'amélioration Business Intelligence à ajouter au cube ou à la dimension.  
@@ -46,7 +46,7 @@ ms.locfileid: "36153602"
  Fournit une brève description de l'amélioration Business Intelligence sélectionnée.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Aide F1 l’Assistant Business Intelligence](business-intelligence-wizard-f1-help.md)   
+ [L’Assistant Business Intelligence F1](business-intelligence-wizard-f1-help.md)   
  [Concepteur de cube &#40;Analysis Services - données multidimensionnelles&#41;](cube-designer-analysis-services-multidimensional-data.md)   
  [Concepteur de dimensions &#40;Analysis Services - données multidimensionnelles&#41;](dimension-designer-analysis-services-multidimensional-data.md)  
   

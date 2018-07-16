@@ -1,5 +1,5 @@
 ---
-title: Créer une Dimension de type devise | Documents Microsoft
+title: Créer une Dimension de type devise | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - dimensions [Analysis Services], currency
 - currency [Analysis Services]
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - currency dimensions [Analysis Services]
 ms.assetid: b1f037d1-ce47-4e47-a1c2-5ec9e781cff6
 caps.latest.revision: 16
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: f45683b404e9a33260edda6163aae9f783c8b7f4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 7b9eb36a77501a7195c18138eab0d767fc7aed63
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36040763"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37232019"
 ---
 # <a name="create-a-currency-type-dimension"></a>Créer une dimension de type monétaire
   Dans [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], une dimension de type monétaire est une dimension dont les attributs représentent une liste de devises utilisée dans les rapports financiers.  
@@ -37,14 +37,14 @@ ms.locfileid: "36040763"
   
  À partir de ces informations, l'Assistant Business Intelligence crée un processus de conversion monétaire qui identifie la dimension monétaire de destination appropriée (la dimension monétaire qui représente les devises de destination). Selon le nombre de conversions monétaires nécessaires à la solution décisionnelle, l'Assistant Business Intelligence peut définir plusieurs dimensions monétaires de destination. Pour plus d’informations sur la définition de conversions monétaires, consultez [Conversions monétaires &#40;Analysis Services&#41;](../currency-conversions-analysis-services.md).  
   
- Pour définir une dimension comme dimension monétaire, affectez le `Type` propriété de la dimension à `Currency`.  
+ Pour définir une dimension comme dimension monétaire, affectez la `Type` propriété de la dimension à `Currency`.  
   
 ## <a name="dimension-structure"></a>Structure de la dimension  
  Une dimension monétaire contient au moins un attribut clé qui identifie les devises dans la table de la dimension monétaire. La valeur de l'attribut clé est différente dans les dimensions monétaires source et de destination :  
   
 -   Pour définir un attribut comme attribut clé d'une dimension monétaire source, affectez à la propriété `Type` de l'attribut la valeur `CurrencySource`.  
   
--   Pour définir un attribut comme dimension monétaire de destination, affectez le `Type` propriété de l’attribut à `CurrencyDestination`.  
+-   Pour définir un attribut comme dimension monétaire de destination, affectez la `Type` propriété de l’attribut à `CurrencyDestination`.  
   
  Pour les rapports, les dimensions monétaires source et de destination peuvent contenir éventuellement les attributs suivants :  
   
@@ -58,7 +58,7 @@ ms.locfileid: "36040763"
   
 -   Un code ISO (International Standards Organization) de devise  
   
-     Pour définir un attribut comme attribut de code ISO de devise, affectez le `Type` propriété de l’attribut à `CurrencyIsoCode`.  
+     Pour définir un attribut comme attribut de code ISO de devise, affectez la `Type` propriété de l’attribut à `CurrencyIsoCode`.  
   
  Pour plus d’informations sur les types d’attributs, consultez [Configurer des types d’attributs](attribute-properties-configure-attribute-types.md).  
   
@@ -67,7 +67,7 @@ ms.locfileid: "36040763"
   
 ## <a name="see-also"></a>Voir aussi  
  [Attributs et hiérarchies d’attributs](../multidimensional-models-olap-logical-dimension-objects/attributes-and-attribute-hierarchies.md)   
- [Aide F1 l’Assistant Business Intelligence](../business-intelligence-wizard-f1-help.md)   
+ [L’Assistant Business Intelligence F1](../business-intelligence-wizard-f1-help.md)   
  [Types de dimensions](../multidimensional-models-olap-logical-dimension-objects/database-dimension-properties-types.md)  
   
   

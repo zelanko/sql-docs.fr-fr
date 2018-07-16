@@ -1,5 +1,5 @@
 ---
-title: Nom d’élément pour la Table (DTA) | Documents Microsoft
+title: Nom d’élément pour la Table (DTA) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - XML
 helpviewer_keywords:
 - Name element
 ms.assetid: 422a755f-ee52-4863-b1aa-f4ef1b8fd0bb
 caps.latest.revision: 12
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 0cb54e42b9acf1ac4b4224feb0c25dcdb98cab8b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 2158ea2131d917ff1ca5ababcc93392ffce8c0dd
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36154505"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37303149"
 ---
 # <a name="name-element-for-table-dta"></a>Name, élément pour les tables (Assistant Paramétrage de base de données)
   Spécifie un nom de table pour le paramétrage.  

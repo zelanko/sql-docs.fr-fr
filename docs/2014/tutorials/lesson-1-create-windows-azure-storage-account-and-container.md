@@ -1,5 +1,5 @@
 ---
-title: 'Leçon 1 : Créer le compte de stockage Azure Windows et conteneur | Documents Microsoft'
+title: 'Leçon 1 : Créer le compte de stockage Azure Windows et conteneur | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: efdbd930-cde5-41b0-90ad-58a6cc68dddc
 caps.latest.revision: 15
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 9c4a2fb1db64456fe63bc814adda8278b253937a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: craigg-msft
+ms.author: craigg
+manager: craigg
+ms.openlocfilehash: 3953936761ac031a352ef17544e4818c276ab54a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36143609"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37299309"
 ---
 # <a name="lesson-1-create-windows-azure-storage-account-and-container"></a>Leçon 1 : Créer un compte et un conteneur de Stockage Microsoft Azure
   Avant de stocker des fichiers de données SQL Server dans le Stockage Windows Azure, vous devez d'abord créer un compte de stockage Windows Azure et un conteneur d'objets blob, ainsi qu'une signature d'accès partagé. La leçon 1 présente les étapes de connexion au Portail de gestion Windows Azure, puis de création d'un compte de stockage, d'un conteneur d'objets blob et d'une signature d'accès partagé.  
@@ -65,6 +65,6 @@ ms.locfileid: "36143609"
   
  **Leçon suivante :**  
   
- [Leçon 2. Créer une stratégie sur le conteneur et générer une Signature d’accès partagé &#40;SAS&#41; clé](../relational-databases/lesson-1-create-stored-access-policy-and-shared-access-signature.md)  
+ [Leçon 2 : Créer une stratégie sur le conteneur et générer une Signature d’accès partagé &#40;SAS&#41; clé](../relational-databases/lesson-1-create-stored-access-policy-and-shared-access-signature.md)  
   
   

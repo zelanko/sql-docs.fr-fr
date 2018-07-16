@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: e3751e53-77c7-47d0-8fe8-73ed1a53413a
 caps.latest.revision: 17
-author: douglaslM
+author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 4cfd164c250f60aa2e6fe2a3c74487a90eeb3e4c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 1adf7606b40f4665aae9e264c30d17038da0193a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36142538"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37296779"
 ---
 # <a name="step-8-making-the-lesson-1-package-easier-to-understand"></a>Étape 8 : comment rendre le package de la leçon 1 plus facile à assimiler
   Une fois la configuration du package de la leçon 1 terminée; il peut être judicieux de mettre un peu d'ordre dans la disposition du package. Si les formes dans la disposition des flux de contrôle et de données affichent des tailles aléatoires, ou si elles ne sont pas alignées ou groupées, la maîtrise des fonctionnalités du package peut s'avérer plus délicate.  
@@ -55,6 +55,6 @@ ms.locfileid: "36142538"
      Si vous n'ajoutez aucun texte dans la zone de l'annotation, cette dernière disparaît lorsque vous cliquez en dehors.  
   
 ## <a name="next-steps"></a>Étapes suivantes  
- [Étape 9 : Test de la leçon 1 du Package du didacticiel](../integration-services/lesson-1-9-testing-the-lesson-1-tutorial-package.md)  
+ [Étape 9 : Test de la leçon 1 du package du tutoriel](../integration-services/lesson-1-9-testing-the-lesson-1-tutorial-package.md)  
   
   

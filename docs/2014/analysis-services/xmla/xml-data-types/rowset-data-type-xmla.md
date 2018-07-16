@@ -1,5 +1,5 @@
 ---
-title: Type de données de l’ensemble de lignes (XMLA) | Documents Microsoft
+title: Type de données rowset (XMLA) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
@@ -24,20 +24,20 @@ helpviewer_keywords:
 - Rowset data type
 ms.assetid: a3e6e227-2d53-4530-b369-afa8b4df0a40
 caps.latest.revision: 29
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 554217fe6d660040b51788d82a63f11ea0b7ce7f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: b6f7dd6bc7f19d7d3eba42c21cda71a9216cbe32
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36154696"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37279445"
 ---
 # <a name="rowset-data-type-xmla"></a>Type de données Rowset (XMLA)
-  Définit un type de données dérivé qui représente un [racine](../xml-elements-properties/root-element-xmla.md) élément qui retourne des données tabulaires d’un [Discover](../xml-elements-methods-discover.md) ou [Execute](../xml-elements-methods-execute.md) appel de méthode.  
+  Définit un type de données dérivé qui représente un [racine](../xml-elements-properties/root-element-xmla.md) élément qui retourne des données tabulaires à partir d’un [Discover](../xml-elements-methods-discover.md) ou [Execute](../xml-elements-methods-execute.md) appel de méthode.  
   
- **Namespace** urn : schemas-microsoft-com-analysis : rowset  
+ **Namespace** urn : schemas-microsoft-com-analysis : ensemble de lignes  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -62,13 +62,13 @@ ms.locfileid: "36154696"
 |Relation|Élément|  
 |------------------|-------------|  
 |Éléments parents|None|  
-|Éléments enfants|[Ligne](../xml-elements-properties/row-element-xmla.md)|  
+|Éléments enfants|[ligne](../xml-elements-properties/row-element-xmla.md)|  
 |Éléments dérivés|[racine](../xml-elements-properties/root-element-xmla.md)|  
   
 ## <a name="remarks"></a>Notes  
- XML n'autorise pas certains caractères en tant que noms d'élément et d'attribut. Pour résoudre cette contrainte d’attribution de noms, XML for Analysis (XMLA) prend en charge l’encodage tel que défini par [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Pour les noms de colonnes qui contiennent des caractères de nom XML qui ne sont pas valides en fonction de la spécification XML 1.0, XMLA utilise les valeurs hexadécimales correspondantes pour encoder des caractères Unicode qui ne sont pas valides. Les valeurs hexadécimales sont échappés sous la forme _x*HHHH*\_, où *HHHH* représente le code de UCS-2 hexadécimal à quatre chiffres du caractère dans l’ordre premier bit le plus significatif. Par exemple, XMLA encode le nom Order Details sous la forme Order_x0020_Details remplaçant ainsi l'espace par le code hexadécimal correspondant.  
+ XML n'autorise pas certains caractères en tant que noms d'élément et d'attribut. Pour répondre à cette contrainte d’affectation de noms, XML for Analysis (XMLA) prend en charge l’encodage tel que défini par [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Pour les noms de colonnes qui contiennent des caractères de nom XML qui ne sont pas valides après la spécification XML 1.0, XMLA utilise les valeurs hexadécimales correspondantes pour encoder des caractères Unicode qui ne sont pas valides. Les valeurs hexadécimales sont échappés sous la forme _x*HHHH*\_, où *HHHH* représente le code de UCS-2 hexadécimal à quatre chiffres du caractère dans l’ordre premier bit le plus significatif. Par exemple, XMLA encode le nom Order Details sous la forme Order_x0020_Details remplaçant ainsi l'espace par le code hexadécimal correspondant.  
   
- L'encodage peut rendre les transformations XSL (Extensible Style Language) difficiles. Pour prendre en charge une recherche rapide de réels non codées les noms de colonnes, ajoutez le `sql:field`d’attribut pour le schéma d’ensemble de lignes XML pour chaque colonne, comme indiqué dans l’exemple suivant :  
+ L'encodage peut rendre les transformations XSL (Extensible Style Language) difficiles. Pour prendre en charge une recherche rapide des réelle, non codées noms de colonnes, ajoutez le `sql:field`attribut au schéma d’ensemble de lignes XML pour chaque colonne, comme illustré dans l’exemple suivant :  
   
 ```  
 <xsd:element name="Order_x0020_Details" type="string" sql:field="Order Details" />  

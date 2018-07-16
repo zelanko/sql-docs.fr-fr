@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - incremental loads [SQL Server change data capture]
 - change data capture [SQL Server], Integration Services and
@@ -16,13 +16,13 @@ ms.assetid: c4aaba1b-73e5-4187-a97b-61c10069cc5a
 caps.latest.revision: 39
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 4c1dba16a2a0d923bba1d99bad19112634c31ebb
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: ccc292cda8b3263c7e1457a52e4426dc9d24460d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36152167"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37263235"
 ---
 # <a name="change-data-capture-ssis"></a>Capture de données modifiées (SSIS)
   Dans [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], la capture de données modifiées constitue une solution efficace au défi de l'optimisation des chargements incrémentiels de tables sources vers des mini-Data Warehouses et des entrepôts de données.  
@@ -47,23 +47,23 @@ ms.locfileid: "36152167"
  **Étape 1 : Conception du flux de contrôle**  
  Dans le flux de contrôle du package, les tâches suivantes doivent être définies :  
   
--   Calculer le démarrage et de fin `datetime` valeurs pour l’intervalle des modifications apportées à la source de données que vous souhaitez récupérer.  
+-   Calculer le démarrage et de fin `datetime` valeurs pour l’intervalle des modifications apportées aux données sources que vous souhaitez récupérer.  
   
      Pour calculer ces valeurs, utilisez une tâche d’exécution SQL ou [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] expressions avec `datetime` fonctions. Vous stockez ensuite ces points de terminaison dans des variables de package pour une utilisation ultérieure dans le package.  
   
-     **Pour plus d’informations :**[spécifier un intervalle de modification de données  ](specify-an-interval-of-change-data.md)  
+     **Pour plus d’informations :**[spécifier un intervalle de données modifiées  ](specify-an-interval-of-change-data.md)  
   
 -   Déterminer si les données modifiées pour l'intervalle sélectionné sont prêtes. Cette étape est nécessaire car le processus de capture asynchrone n'a peut-être pas encore atteint le point de terminaison sélectionné.  
   
      Pour déterminer si les données sont prêtes, commencez si nécessaire par un conteneur de boucles For pour différer l'exécution, jusqu'à ce que les données modifiées pour l'intervalle sélectionné soient prêtes. Dans le conteneur de boucles, utilisez une tâche d'exécution SQL pour interroger les tables de mappage du temps gérées par la capture de données modifiées. Utilisez ensuite une tâche de script qui appelle la méthode `Thread.Sleep` ou une autre tâche d'exécution SQL avec une instruction `WAITFOR` pour différer temporairement l'exécution du package si nécessaire. Utilisez éventuellement une autre tâche de script pour enregistrer une condition d'erreur ou un délai d'attente.  
   
-     **Pour plus d’informations :**[déterminer si la modification de données est prêt  ](determine-whether-the-change-data-is-ready.md)  
+     **Pour plus d’informations :**[déterminer si les données modifiées est prêtes  ](determine-whether-the-change-data-is-ready.md)  
   
 -   Préparer la chaîne de requête qui sera utilisée pour rechercher les données modifiées.  
   
      Utilisez une tâche de script ou une tâche d'exécution SQL pour assembler l'instruction SQL qui sera utilisée pour rechercher les modifications.  
   
-     **Pour plus d’informations :**[préparer la requête pour les données modifiées  ](prepare-to-query-for-the-change-data.md)  
+     **Pour plus d’informations :**[préparer la recherche des données modifiées  ](prepare-to-query-for-the-change-data.md)  
   
  **Étape 2 : Configuration de la requête pour rechercher les données modifiées**  
  Créez la fonction table qui recherchera les données.  
@@ -85,7 +85,7 @@ ms.locfileid: "36152167"
   
      Pour fractionner les modifications, utilisez une transformation de fractionnement conditionnel pour diriger les insertions, les mises à jour et les suppressions vers les différentes sorties pour un traitement approprié.  
   
-     **Pour plus d’informations :**[processus insère, mises à jour et suppressions  ](process-inserts-updates-and-deletes.md)  
+     **Pour plus d’informations :**[traiter les insertions, mises à jour et des suppressions  ](process-inserts-updates-and-deletes.md)  
   
 -   Appliquer les insertions, les suppressions et les mises à jour à la destination.  
   
@@ -97,7 +97,7 @@ ms.locfileid: "36152167"
  Le processus exposé précédemment fait référence à un chargement incrémentiel à partir d'une table unique. Pour effectuer un chargement incrémentiel à partir de plusieurs tables, le processus d'ensemble est le même. Toutefois, la conception du package doit être modifié pour prendre en charge le traitement de plusieurs tables. Pour plus d’informations sur la création d’un package qui effectue un chargement incrémentiel à partir de plusieurs tables, consultez [Exécuter un chargement incrémentiel de plusieurs table](perform-an-incremental-load-of-multiple-tables.md).  
   
 ## <a name="samples-of-change-data-capture-packages"></a>Exemples de packages de capture de données modifiées  
- [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] fournit deux exemples qui montrent comment utiliser la capture de données dans les packages de modification. Pour plus d'informations, consultez les rubriques suivantes :  
+ [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] fournit deux exemples qui montrent comment utiliser change data capture dans les packages. Pour plus d'informations, consultez les rubriques suivantes :  
   
 -   [Fichier Lisezmoi de l'exemple de package de capture de données modifiées pour l'intervalle spécifié](http://go.microsoft.com/fwlink/?LinkId=133507)  
   

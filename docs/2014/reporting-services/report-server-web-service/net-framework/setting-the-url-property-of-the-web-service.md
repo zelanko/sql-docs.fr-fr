@@ -19,15 +19,15 @@ helpviewer_keywords:
 - Web references [Reporting Services]
 ms.assetid: 4eac4e40-dafb-4403-acde-13df317c8ec8
 caps.latest.revision: 35
-author: douglaslM
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 0759a42086606ea478ef7248e6ef22254382d9a1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: 6e59e0804ae2100ee3ced29725d20ec5e89b4d15
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36154335"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37284555"
 ---
 # <a name="setting-the-url-property-of-the-web-service"></a>Définition de la propriété Url du service Web
   Dans vos applications [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)], vous pouvez à tout moment modifier l’URL de base du service web Report Server vers lequel votre application est actuellement dirigée. Pour ce faire, il vous suffit de définir la propriété **Url** de l’objet de service. Exemple :  

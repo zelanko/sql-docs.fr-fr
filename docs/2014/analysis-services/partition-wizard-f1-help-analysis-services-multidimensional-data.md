@@ -1,5 +1,5 @@
 ---
-title: Aide (F1) de l’Assistant (Analysis Services - données multidimensionnelles) de la partition | Documents Microsoft
+title: L’Assistant F1 (Analysis Services - données multidimensionnelles) de partition | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Partition Wizard
 ms.assetid: 3b6d7053-aeef-4d9e-af70-f5b40256e859
 caps.latest.revision: 21
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 000e6d0cd8dcaab6aab55de6394527c118396ea9
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: e9c8346f5319bbc8f7552546e52537157c699152
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36039609"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37245694"
 ---
 # <a name="partition-wizard-f1-help-analysis-services---multidimensional-data"></a>Aide (F1) de l'Assistant Partition (Analysis Services - Données multidimensionnelles)
   Vous pouvez utiliser l'Assistant Partition pour définir des partitions pour un groupe de mesures dans un cube. Par défaut, une seule partition est définie pour chaque groupe de mesures dans un cube. Toutefois, les accès et le traitement peuvent se dégrader s'il s'agit de grandes partitions. En créant plusieurs partitions, chacune contenant une partie des données d'un groupe de mesures, vous pouvez améliorer les accès et les performances de traitement du groupe de mesures.  
@@ -45,11 +45,11 @@ ms.locfileid: "36039609"
   
 -   [Restreindre les lignes &#40;Assistant Partition&#41;](restrict-rows-partition-wizard.md)  
   
--   [Emplacements de stockage et de traitement &#40;Assistant Partition&#41;](processing-and-storage-locations-partition-wizard.md)  
+-   [Emplacements de stockage et traitement &#40;Assistant Partition&#41;](processing-and-storage-locations-partition-wizard.md)  
   
 -   [Fin de l’Assistant &#40;Assistant Partition&#41;](completing-the-wizard-partition-wizard.md)  
   
--   [Rechercher un dossier distant, boîte de dialogue boîte &#40;Analysis Services - données multidimensionnelles&#41;](browse-for-remote-folder-dialog-box-analysis-services-multidimensional-data.md)  
+-   [Recherchez la boîte de dialogue dossier distant &#40;Analysis Services - données multidimensionnelles&#41;](browse-for-remote-folder-dialog-box-analysis-services-multidimensional-data.md)  
   
 ## <a name="see-also"></a>Voir aussi  
  [Partitions &#40;Analysis Services - données multidimensionnelles&#41;](multidimensional-models-olap-logical-cube-objects/partitions-analysis-services-multidimensional-data.md)  

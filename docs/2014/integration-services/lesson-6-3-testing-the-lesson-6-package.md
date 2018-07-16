@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: c184c92d-948f-4037-a502-5fabd909c84c
 caps.latest.revision: 3
-author: douglaslM
+author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 5ea5879f9aa7cc3ddce608e39d221dcef743f556
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 77fa6d4f000f58322524b7a32917ed7e29144b8f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36153513"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37271145"
 ---
 # <a name="step-3-testing-the-lesson-6-package"></a>Étape 3 : Test du package de la leçon 6
   Au moment de l'exécution, votre package obtient la valeur de la propriété Directory à partir du paramètre VarFolderName.  

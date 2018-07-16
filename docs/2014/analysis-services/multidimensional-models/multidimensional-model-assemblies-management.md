@@ -1,5 +1,5 @@
 ---
-title: Gestion des assemblys de modèle multidimensionnel | Documents Microsoft
+title: Gestion des assemblys de modèle multidimensionnel | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - permissions [Analysis Services], assemblies
 - calling user-defined functions
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - application domains [Analysis Services]
 ms.assetid: b2645d10-6d17-444e-9289-f111ec48bbfb
 caps.latest.revision: 35
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 1c8c27856135007c172e2e53b066b14a1a3a7eb2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: aa24fc7d6b9bc2d22ef852d039637cf5c0f35b71
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36152246"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37243489"
 ---
 # <a name="multidimensional-model-assemblies-management"></a>Gestion des assemblys de modèles multidimensionnels
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] offre de nombreuses fonctions intrinsèques à utiliser avec les langages MDX (Multidimensional Expressions) et DMX (Data Mining Extensions). Ces fonctions sont conçues pour effectuer toutes les opérations possibles, des calculs statistiques standard au parcours des membres d’une hiérarchie. Cependant, comme dans tout autre produit complexe et robuste, il est toujours nécessaire d'étendre la fonctionnalité de ce type d'outil.  
@@ -95,7 +95,7 @@ Call MyAssembly.MyClass.MyVoidProcedure(a, b, c)
 |Paramètre d'autorisation|Description|  
 |------------------------|-----------------|  
 |`Safe`|Fournit une autorisation de traitement interne. Ce compartiment d'autorisations ne donne pas d'autorisations pour accéder aux ressources protégées dans le .NET Framework. Il s'agit du compartiment d'autorisations par défaut pour un assembly si aucun n'est spécifié avec la propriété `PermissionSet`.|  
-|`ExternalAccess`|Fournit le même accès que le `Safe` paramètre, avec possibilité en prime d’accéder aux ressources système externes. Ce compartiment d'autorisations n'offre pas de garanties de sécurité (même s'il est possible de sécuriser ce scénario), mais il donne des garanties de fiabilité.|  
+|`ExternalAccess`|Fournit le même accès que le `Safe` définition, avec possibilité en prime d’accéder aux ressources système externes. Ce compartiment d'autorisations n'offre pas de garanties de sécurité (même s'il est possible de sécuriser ce scénario), mais il donne des garanties de fiabilité.|  
 |`Unsafe`|Ne fournit pas de restrictions. Aucune garantie de sécurité ou de fiabilité ne peut être donnée pour du code managé s'exécutant sous cet ensemble d'autorisations. Toutes les autorisations, même une autorisation personnalisée incluse par l'administrateur, sont accordées au code s'exécutant à ce niveau de confiance.|  
   
  Quand le CLR est hébergé par [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], la vérification des autorisations basée sur le parcours de pile s'arrête à la limite avec le code [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] natif. Tout code managé dans des assemblys [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] tombe toujours dans une des trois catégories d'autorisations dont la liste est donnée ci-dessus.  
@@ -103,13 +103,13 @@ Call MyAssembly.MyClass.MyVoidProcedure(a, b, c)
  Les routines d'assembly COM (ou non managée) ne prennent pas en charge le modèle de sécurité CLR.  
   
 ### <a name="impersonation"></a>Emprunt d'identité  
- Quand du code managé accède à une ressource en dehors d'[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] suit les règles associées à un paramètre de la propriété `ImpersonationMode` de l'assembly de façon à garantir que l'accès se fait dans un contexte de sécurité Windows approprié. Car les assemblys à l’aide de la `Safe` paramètre d’autorisation ne peut pas accéder aux ressources en dehors de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], ces règles sont appliquent uniquement aux assemblys à l’aide de la `ExternalAccess` et `Unsafe` paramètres d’autorisation.  
+ Quand du code managé accède à une ressource en dehors d'[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] suit les règles associées à un paramètre de la propriété `ImpersonationMode` de l'assembly de façon à garantir que l'accès se fait dans un contexte de sécurité Windows approprié. Car les assemblys à l’aide de la `Safe` paramètre d’autorisation ne peut pas accéder aux ressources en dehors de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], ces règles sont appliquent uniquement aux assemblys à l’aide la `ExternalAccess` et `Unsafe` paramètres d’autorisation.  
   
 -   Si le contexte d’exécution actuel correspond à une connexion authentifiée Windows et qu’il est le même que le contexte de l’appelant d’origine (c’est-à-dire qu’il n’y a pas d’instruction intermédiaire EXECUTE AS), [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] emprunte l’identité de la connexion authentifiée Windows avant d’accéder à la ressource.  
   
 -   S'il y a une instruction EXECUTE AS intermédiaire qui a changé le contexte relativement à celui de l'appelant d'origine, la tentative d'accès à une ressource externe échoue.  
   
- Le `ImpersonationMode` propriété peut être définie sur `ImpersonateCurrentUser` ou `ImpersonateAnonymous`. Le paramètre par défaut, `ImpersonateCurrentUser`, exécute un assembly sous le compte de connexion réseau de l’utilisateur actuel. Si le `ImpersonateAnonymous` paramètre est utilisé, le contexte d’exécution est correspond au compte utilisateur de connexion Windows IUSER_*nom_serveur* sur le serveur. Il s'agit du compte Invité Internet, qui a des droits limités sur le serveur. Un assembly s'exécutant dans ce contexte peut seulement accéder à des ressources limitées sur le serveur local.  
+ Le `ImpersonationMode` propriété peut être définie sur `ImpersonateCurrentUser` ou `ImpersonateAnonymous`. Le paramètre par défaut, `ImpersonateCurrentUser`, exécute un assembly sous le compte de connexion de réseau de l’utilisateur actuel. Si le `ImpersonateAnonymous` paramètre est utilisé, le contexte d’exécution correspond au compte utilisateur de connexion Windows IUSER_*nom_serveur* sur le serveur. Il s'agit du compte Invité Internet, qui a des droits limités sur le serveur. Un assembly s'exécutant dans ce contexte peut seulement accéder à des ressources limitées sur le serveur local.  
   
 ### <a name="application-domains"></a>Domaines d'application  
  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] n’expose pas directement les domaines d’application. Grâce à un ensemble d'assemblys s'exécutant dans le même domaine d'application, les domaines d'application sont capables de se découvrir les uns les autres au moment de l'exécution à l'aide de l'espace de noms `System.Reflection` dans .NET Framework ou par d'autres moyens, et ils sont capables d'y faire des appels en mode de liaison tardive. De tels appels font l'objet des vérifications d'autorisations utilisées par la sécurité basée sur les autorisations de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .  

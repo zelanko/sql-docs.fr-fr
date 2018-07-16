@@ -1,5 +1,5 @@
 ---
-title: Page propriétés générales, rapports parties (Gestionnaire de rapports) | Documents Microsoft
+title: Page propriétés générales, rapports parties (Gestionnaire de rapports) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 93ddce72-31f1-42f7-abd5-8191acbb00c5
 caps.latest.revision: 4
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 0ce0b1ca08f1d0d97f268f3ec8c145c117d56a60
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 3823b01bfc318f26ba0135d054d913d3ffe1fd6d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36040136"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37238508"
 ---
 # <a name="general-properties-page-report-parts-report-manager"></a>Page Propriétés générales, parties de rapport (Gestionnaire de rapports)
   Utilisez la page Propriétés pour afficher et gérer les propriétés générales d'une partie de rapport.  
@@ -72,7 +72,7 @@ ms.locfileid: "36040136"
  Permet de supprimer la partie de rapport de la base de données du serveur de rapports. La suppression d'une partie de rapport du serveur n'empêche pas le rendu des rapports existants auxquels la partie de rapport a été ajoutée.  
   
  **Déplacer**  
- Ouvre la page Déplacer des éléments qui permet de déplacer une partie de rapport dans l'arborescence des dossiers du serveur de rapports. Pour plus d’informations, consultez [déplacer la Page éléments &#40;le Gestionnaire de rapports&#41;](../../2014/reporting-services/move-items-page-report-manager.md).  
+ Ouvre la page Déplacer des éléments qui permet de déplacer une partie de rapport dans l'arborescence des dossiers du serveur de rapports. Pour plus d’informations, consultez [Page déplacer les éléments &#40;le Gestionnaire de rapports&#41;](../../2014/reporting-services/move-items-page-report-manager.md).  
   
  **Télécharger**  
  Permet d'extraire une copie de la définition de partie de rapport à enregistrer en tant que fichier .rsc. Le fichier .rsc peut être soit téléchargé dans un dossier du serveur de rapports, soit utilisé pour remplacer une partie de rapport existante dans un dossier du serveur de rapports.  
@@ -81,11 +81,11 @@ ms.locfileid: "36040136"
  Permet de remplacer la définition de partie de rapport par une autre à partir d'un fichier .rsc.  
   
 ## <a name="see-also"></a>Voir aussi  
- [La gestion des parties de rapport](report-design/managing-report-parts.md)   
+ [La gestion des parties de rapports](report-design/managing-report-parts.md)   
  [Le Gestionnaire de rapports &#40;SSRS en Mode natif&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
- [Afficher la Page contenu &#40;le Gestionnaire de rapports&#41;](../../2014/reporting-services/contents-page-report-manager.md)   
- [Parties de rapport &#40;rapport Générateur et SSRS&#41;](report-parts-report-builder-and-ssrs.md)   
- [Aide (F1) de gestionnaire de rapports](../../2014/reporting-services/report-manager-f1-help.md)   
+ [Contenu de la Page &#40;le Gestionnaire de rapports&#41;](../../2014/reporting-services/contents-page-report-manager.md)   
+ [Parties de rapport &#40;Générateur de rapports et SSRS&#41;](report-parts-report-builder-and-ssrs.md)   
+ [F1 du Gestionnaire de rapports](../../2014/reporting-services/report-manager-f1-help.md)   
  [Composants de rapports et jeux de données dans le Générateur de rapports](report-data/report-parts-and-datasets-in-report-builder.md)  
   
   

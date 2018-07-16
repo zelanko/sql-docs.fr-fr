@@ -1,5 +1,5 @@
 ---
-title: Définir les Options d’agrégation (Assistant Optimisation de l’utilisation) | Documents Microsoft
+title: Définir les Options d’agrégation (Assistant Optimisation de l’utilisation) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.storagedesignwizard.setaggregateoptions.f1
 ms.assetid: 5e5c59f3-5a2d-44de-b1ba-2c56b76d3c8d
 caps.latest.revision: 25
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 2aef7f8d21b65a1b6d454b252bcddda720e1d481
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 288ba907435b9600e685be9912095f39889cfa21
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36143578"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37228279"
 ---
 # <a name="set-aggregation-options-usage-based-optimization-wizard"></a>Définir les options d'agrégation (Assistant Optimisation de l'utilisation)
   La page **Définir les options d’agrégation** permet de lancer le processus de conception d’agrégation et de définir les limites de stockage ou de performance des agrégations générées par l’Assistant Optimisation de l’utilisation.  
@@ -46,7 +46,7 @@ ms.locfileid: "36143578"
  Restaure toutes les valeurs par défaut de toutes les options d'agrégation de la page.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Aide (F1) de l’Assistant Optimisation de l’utilisation](usage-based-optimization-wizard-f1-help.md)   
+ [Aide F1 de l’Assistant Optimisation de l’utilisation](usage-based-optimization-wizard-f1-help.md)   
  [Assistants Analysis Services &#40;données multidimensionnelles&#41;](analysis-services-wizards-multidimensional-data.md)  
   
   

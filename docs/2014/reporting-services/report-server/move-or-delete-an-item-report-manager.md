@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - moving items
 - items [Reporting Services], moving
@@ -16,13 +16,13 @@ ms.assetid: 980a66c7-a18b-4af7-8954-45726fa517d6
 caps.latest.revision: 44
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: b3b4ede3a29c43cf2c77b61e2fe8fb6fb3b9e6ff
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 9ac8b351e0d3cd76650df17e2aa5aa00ed427be3
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36151827"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37309319"
 ---
 # <a name="move-or-delete-an-item-report-manager"></a>Déplacer ou supprimer un élément (Gestionnaire de rapports)
   Les rapports et les éléments connexes que vous publiez sur un serveur de rapports sont stockés dans des dossiers. Vous pouvez déplacer ces éléments dans un dossier différent de sorte que les références à ces éléments soient gérées automatiquement par le serveur de rapports. Avant de supprimer un élément, demandez-vous si d'autres éléments en dépendent.  
@@ -62,7 +62,7 @@ ms.locfileid: "36151827"
  Vous pouvez aussi accéder à l’objet à déplacer, cliquer sur **Propriétés**, puis sur **Déplacer** en haut de la page.  
   
 ## <a name="delete-an-item"></a>Supprimer un élément  
- Avant de supprimer un élément, déterminez s'il est utilisé par d'autres éléments. Par exemple, si vous supprimez une source de données partagée, les rapports et les modèles qui l'utilisent ne pourront plus s'exécuter. Si vous supprimez un rapport, les abonnements et l'historique de rapport associés sont également supprimés. Pour rechercher des éléments dépendants pour un élément, consultez [Page d’éléments dépendants &#40;le Gestionnaire de rapports&#41;]... / manager.md du rapport page dépendante des éléments).  
+ Avant de supprimer un élément, déterminez s'il est utilisé par d'autres éléments. Par exemple, si vous supprimez une source de données partagée, les rapports et les modèles qui l'utilisent ne pourront plus s'exécuter. Si vous supprimez un rapport, les abonnements et l'historique de rapport associés sont également supprimés. Pour rechercher des éléments dépendants pour un élément, consultez [Page éléments dépendants &#40;le Gestionnaire de rapports&#41;]... / manager.md du rapport page dépendante des éléments).  
   
 #### <a name="to-delete-a-report-or-item"></a>Pour supprimer un rapport ou un élément  
   
@@ -77,7 +77,7 @@ ms.locfileid: "36151827"
 5.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
 ## <a name="see-also"></a>Voir aussi  
- [Afficher la Page contenu &#40;le Gestionnaire de rapports&#41;]... / contenu-page-rapport-manager.md)   
+ [Contenu de la Page &#40;le Gestionnaire de rapports&#41;]... / contenu-page-rapport-manager.md)   
  [Recherche, affichage et gestion de rapports &#40;Générateur de rapports et SSRS&#41;](../report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)  
   
   

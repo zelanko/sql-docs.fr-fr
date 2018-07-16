@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - upgrading databases
 - databases [Analysis Services], upgrading
@@ -21,18 +21,18 @@ helpviewer_keywords:
 - SSAS, upgrading
 ms.assetid: a131d329-386e-4470-aaa9-ffcde4e5ec0c
 caps.latest.revision: 63
-author: markingmyname
-ms.author: maghan
-manager: jhubbard
-ms.openlocfilehash: dd4ae8ef0eb99859885dfbd33af284c843c282d4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: Minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: f59e24f7028dd54b39ea7b27ab98ad85c149cadd
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36040701"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37245249"
 ---
 # <a name="upgrade-analysis-services"></a>Mettre à niveau Analysis Services
-  Utilisez le programme d'installation de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pour mettre à niveau [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Pour plus d’informations sur la mise à niveau [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en mode SharePoint, consultez [mise à niveau de PowerPivot pour SharePoint](upgrade-power-pivot-for-sharepoint.md). Pour plus d’informations sur la mise à niveau d’un serveur SQL existant d’une instance, consultez [mise à niveau vers SQL Server 2014 avec l’Assistant Installation &#40;le programme d’installation&#41;](upgrade-sql-server-using-the-installation-wizard-setup.md).  
+  Utilisez le programme d'installation de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pour mettre à niveau [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Pour plus d’informations sur la mise à niveau [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en mode SharePoint, consultez [mise à niveau de PowerPivot pour SharePoint](upgrade-power-pivot-for-sharepoint.md). Pour plus d’informations sur la mise à niveau un serveur SQL existant d’une instance, consultez [mise à niveau vers SQL Server 2014 avec l’Assistant Installation &#40;le programme d’installation&#41;](upgrade-sql-server-using-the-installation-wizard-setup.md).  
   
 ## <a name="known-upgrade-issues"></a>Problèmes de mise à niveau connus  
  Avant de mettre à niveau vers [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], consultez les rubriques suivantes :  
@@ -54,14 +54,14 @@ ms.locfileid: "36040701"
   
 -   [Sauvegarde et restauration de bases de données Analysis Services](../../analysis-services/multidimensional-models/backup-and-restore-of-analysis-services-databases.md)  
   
--   [Utilisez le Conseiller de mise à niveau pour préparer des mises à niveau](../../sql-server/install/use-upgrade-advisor-to-prepare-for-upgrades.md)  
+-   [Utiliser le Conseiller de mise à niveau pour la préparation des mises à niveau](../../sql-server/install/use-upgrade-advisor-to-prepare-for-upgrades.md)  
   
 ## <a name="upgrading-analysis-services"></a>Mise à niveau d'Analysis Services  
  Différentes approches s'offrent à vous pour mettre à niveau le serveur et les données :  
   
--   Un **mise à niveau sur place** remplace le programme existant de fichiers avec [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] fichiers programme. Les bases de données restent au même emplacement. Les dossiers programme sont mis à jour pour refléter le nouveau nom.  
+-   Un **mise à niveau in situ** remplace les fichiers programme existants avec [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] fichiers programme. Les bases de données restent au même emplacement. Les dossiers programme sont mis à jour pour refléter le nouveau nom.  
   
--   A **mise à niveau côte à côte** est une nouvelle installation de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] sur le même ordinateur qui possède une instance d’Analysis Services existante. Vous pouvez déplacer les bases de données vers la nouvelle instance du même ordinateur, puis désinstaller l'ancienne version si vous n'en avez plus l'utilité.  
+-   Un **mise à niveau côte à côte** est une nouvelle installation de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] sur le même ordinateur que celui qui a une instance Analysis Services existante. Vous pouvez déplacer les bases de données vers la nouvelle instance du même ordinateur, puis désinstaller l'ancienne version si vous n'en avez plus l'utilité.  
   
 -   Vous pouvez également installer Analysis Services sur le nouveau matériel, puis migrer les bases de données existantes vers ce serveur.  
   
@@ -71,7 +71,7 @@ ms.locfileid: "36040701"
  Pour mettre à niveau une instance existante, exécutez le programme d'installation et spécifiez le nom de l'instance existante comme nom de la nouvelle instance.  
   
 ## <a name="upgrading-databases"></a>La mise à niveau des bases de données  
- Les bases de données créées dans les versions antérieures d' [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] s'exécutent sur le serveur mis à niveau sous un ancien paramétrage de niveau de compatibilité de base de données. Le niveau de compatibilité des bases de données créées dans les versions suivantes est 105. Vous pouvez modifier le niveau de compatibilité si vous souhaitez utiliser des fonctionnalités qui nécessitent un niveau de compatibilité de base de données plus récent. Une autre solution consiste à exécuter les bases de données sur le serveur mis à niveau en utilisant les paramètres d'origine. Pour plus d’informations, consultez [définir le niveau de compatibilité de base de données multidimensionnelle &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/compatibility-level-of-a-multidimensional-database-analysis-services.md).  
+ Les bases de données créées dans les versions antérieures d' [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] s'exécutent sur le serveur mis à niveau sous un ancien paramétrage de niveau de compatibilité de base de données. Le niveau de compatibilité des bases de données créées dans les versions suivantes est 105. Vous pouvez modifier le niveau de compatibilité si vous souhaitez utiliser des fonctionnalités qui nécessitent un niveau de compatibilité de base de données plus récent. Une autre solution consiste à exécuter les bases de données sur le serveur mis à niveau en utilisant les paramètres d'origine. Pour plus d’informations, consultez [définir le niveau de compatibilité d’une base de données multidimensionnelle &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/compatibility-level-of-a-multidimensional-database-analysis-services.md).  
   
 -   [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]  
   
@@ -87,6 +87,6 @@ ms.locfileid: "36040701"
  [Présentation de l’Architecture Microsoft OLAP](../../analysis-services/multidimensional-models/olap-physical/understanding-microsoft-olap-architecture.md)   
  [Mise à niveau PowerPivot pour SharePoint](upgrade-power-pivot-for-sharepoint.md)   
  [Installer Analysis Services en mode multidimensionnel et exploration de données](../../sql-server/install/install-analysis-services-in-multidimensional-and-data-mining-mode.md)   
- [Installation PowerPivot pour SharePoint 2010](../../sql-server/install/powerpivot-for-sharepoint-2010-installation.md)  
+ [Installation de PowerPivot pour SharePoint 2010](../../sql-server/install/powerpivot-for-sharepoint-2010-installation.md)  
   
   

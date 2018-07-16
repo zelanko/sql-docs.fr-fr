@@ -1,5 +1,5 @@
 ---
-title: Préparer les données de Trace d’entrée | Documents Microsoft
+title: Préparer les données de Trace d’entrée | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: c14fd3d2-5770-47c2-a851-cc13ddbc9bf5
 caps.latest.revision: 23
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 30b9108a8586e56f7a96695be513e6e33fe39c85
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 7da90e14d33fb19b421e0cd5a9219ac356952e83
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36153362"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37196719"
 ---
 # <a name="prepare-the-input-trace-data"></a>Préparer les données de trace d'entrée
   Avant de pouvoir démarrer une relecture distribuée avec la fonctionnalité [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Distributed Replay, vous devez préparer les données de trace d'entrée en initialisant l'étape de prétraitement de l'outil d'administration de relecture distribuée. Dans l'étape de prétraitement, Distributed Replay Controller traite les données de trace et génère un fichier intermédiaire :  
@@ -45,7 +45,7 @@ ms.locfileid: "36153362"
   
 2.  **Initialiser l’étape de prétraitement**: pour préparer les données de trace d’entrée, vous devez exécuter l’outil d’administration avec l’option **preprocess** . Pour plus d’informations, consultez [Option preprocess &#40;outil d’administration Distributed Replay&#41;](preprocess-option-distributed-replay-administration-tool.md).  
   
-    1.  Ouvrez l’utilitaire d’invite de commandes Windows (`CMD.exe`), puis accédez à l’emplacement d’installation de l’outil d’administration Distributed Replay (`DReplay.exe`).  
+    1.  Ouvrez l’utilitaire d’invite de commandes Windows (`CMD.exe`) et accédez à l’emplacement d’installation de l’outil d’administration Distributed Replay (`DReplay.exe`).  
   
     2.  (Facultatif) Utilisez le paramètre *controller* , **-m**, pour spécifier le contrôleur, si le service du contrôleur s’exécute sur un ordinateur différent de l’outil d’administration.  
   
@@ -64,7 +64,7 @@ ms.locfileid: "36153362"
 ## <a name="see-also"></a>Voir aussi  
  [SQL Server Distributed Replay](sql-server-distributed-replay.md)   
  [Conditions préalables de relecture distribuée](distributed-replay-requirements.md)   
- [Options de ligne de commande administration d'outils &#40;Distributed Replay Utility&#41;](administration-tool-command-line-options-distributed-replay-utility.md)   
+ [Options de ligne de l’outil d’administration &#40;Distributed Replay Utility&#41;](administration-tool-command-line-options-distributed-replay-utility.md)   
  [Configurer Distributed Replay](configure-distributed-replay.md)  
   
   

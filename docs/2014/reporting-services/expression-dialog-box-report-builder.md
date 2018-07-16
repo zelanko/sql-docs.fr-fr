@@ -1,5 +1,5 @@
 ---
-title: Boîte de dialogue Expression (Générateur de rapports) | Documents Microsoft
+title: Boîte de dialogue Expression (Générateur de rapports) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,32 +8,32 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - "10040"
 helpviewer_keywords:
 - expressions
 ms.assetid: e89c4d97-5d41-4b55-8695-79329edac15d
 caps.latest.revision: 16
-author: douglaslM
+author: maggiesmsft
 ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 9625b461128b1aa9785edbe92b4defa47e85bc55
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 130d436ceb8080e6e7d70adc41196f3e76b07edb
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36142203"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37244499"
 ---
 # <a name="expression-dialog-box-report-builder"></a>Boîte de dialogue Expression (Générateur de rapports)
   Utilisez le **Expression** boîte de dialogue pour écrire [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vbprvb](../includes/vbprvb-md.md)] propriétés d’un élément expressions pour les rapports. Vous pouvez utiliser des expressions pour définir un grand nombre de propriétés, notamment la couleur, la police et les bordures. Au moment de l'exécution, le processeur de rapports évalue les expressions et remplace le résultat de la valeur de la propriété.  
   
- La boîte de dialogue **Expression** contient une fenêtre de code, une arborescence des catégories, des éléments de catégorie, un volet de description et un volet d’exemple. Le **Expression** boîte de dialogue est contextuelle ; les éléments de catégorie et les descriptions changent en réponse à la catégorie d’expression que vous travaillez. Pour plus d’informations, consultez [exemples d’expressions &#40;le Générateur de rapports et SSRS&#41;](report-design/expression-examples-report-builder-and-ssrs.md), [Expressions &#40;le Générateur de rapports et SSRS&#41;](report-design/expressions-report-builder-and-ssrs.md)  
+ La boîte de dialogue **Expression** contient une fenêtre de code, une arborescence des catégories, des éléments de catégorie, un volet de description et un volet d’exemple. Le **Expression** boîte de dialogue est contextuelle ; les éléments de catégorie et les descriptions changent en réponse à la catégorie d’expression que vous travaillez. Pour plus d’informations, consultez [exemples d’expressions &#40;Générateur de rapports et SSRS&#41;](report-design/expression-examples-report-builder-and-ssrs.md), [Expressions &#40;Générateur de rapports et SSRS&#41;](report-design/expressions-report-builder-and-ssrs.md)  
   
 ## <a name="expression-constructs"></a>Composants d'une expression  
  Les expressions commencent par un signe égal (=) et peuvent inclure des constantes, des littéraux, des opérateurs, ainsi que des références à des champs prédéfinis, à des collections intégrées, à des fonctions intégrées, à des fonctions de la bibliothèque d'exécutables [!INCLUDE[vbprvb](../includes/vbprvb-md.md)], à des classes Common Language Runtime (CLR) [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] et à des fonctions personnalisées. La liste suivante décrit les catégories et les valeurs que vous pouvez ajouter à une expression.  
   
- **Définir l’expression pour :***\<PropertyName >*   
+ **Définir l’expression pour :***\<PropertyName >  *  
  Nom de la propriété pour laquelle vous définissez une expression. Vous pouvez également définir cette propriété, par son nom, dans le volet Propriétés.  
   
  **Constantes**  
@@ -47,7 +47,7 @@ ms.locfileid: "36142203"
  **Paramètres**  
  Fournit la liste des paramètres de rapport.  
   
- **Champs (**  *\<sélectionné du jeu de données >* **)**  
+ **Champs (** * \<dataset_sélectionné >* **)**  
  Affiche la liste des champs du dataset sélectionné dans la catégorie Datasets. Double-cliquez sur un champ pour le copier dans la zone **Expression** .  
   
  **Jeux de données**  
@@ -75,7 +75,7 @@ ms.locfileid: "36142203"
  Lorsque vous tapez un nom de fonction suivi d'une parenthèse ouvrante, une info-bulle qui fournit des informations sur les paramètres et les valeurs de retour de fonction s'affiche.  
   
  **Catégorie**  
- Affiche les catégories d'expressions. Le choix d'une catégorie établit un contexte pour la création d'une expression et modifie la liste des valeurs valides dans le volet Élément. Par exemple, pour une expression pour une valeur de zone de texte, développez fonctions communes et sélectionnez les fonctions d’agrégation pour afficher `Avg`, `Count`et d’autres fonctions dans les **élément** volet.  
+ Affiche les catégories d'expressions. Le choix d'une catégorie établit un contexte pour la création d'une expression et modifie la liste des valeurs valides dans le volet Élément. Par exemple, pour une expression pour une valeur de zone de texte, développez fonctions communes et sélectionnez les fonctions d’agrégation pour afficher `Avg`, `Count`et d’autres fonctions dans le **élément** volet.  
   
  **Élément**  
  Affiche la liste des valeurs valides pour la catégorie sélectionnée. Double-cliquez sur un élément pour ajouter le texte de l'expression pour cet élément au point d'insertion dans la fenêtre de code.  
@@ -86,13 +86,13 @@ ms.locfileid: "36142203"
 ## <a name="see-also"></a>Voir aussi  
  [Expressions &#40;Générateur de rapports et SSRS&#41;](report-design/expressions-report-builder-and-ssrs.md)   
  [Mise en forme des éléments de rapport &#40;Générateur de rapports et SSRS&#41;](report-design/formatting-report-items-report-builder-and-ssrs.md)   
- [Mise en forme des nombres et des Dates &#40;rapport Générateur et SSRS&#41;](report-design/formatting-numbers-and-dates-report-builder-and-ssrs.md)   
+ [Mise en forme des nombres et des Dates &#40;Générateur de rapports et SSRS&#41;](report-design/formatting-numbers-and-dates-report-builder-and-ssrs.md)   
  [Références à la collection Parameters&#40;Générateur de rapports et SSRS&#41;](report-design/built-in-collections-parameters-collection-references-report-builder.md)   
  [Exemples d’expressions de groupe &#40;Générateur de rapports et SSRS&#41;](report-design/group-expression-examples-report-builder-and-ssrs.md)   
- [Exemples d’équations de filtre &#40;rapport Générateur et SSRS&#41;](report-design/filter-equation-examples-report-builder-and-ssrs.md)   
- [Références à la Collection de champs de DataSet &#40;rapport Générateur et SSRS&#41;](report-design/built-in-collections-dataset-fields-collection-references-report-builder.md)   
- [Référence des fonctions d’agrégation &#40;rapport Générateur et SSRS&#41;](report-design/report-builder-functions-aggregate-functions-reference.md)   
+ [Exemples d’équations de filtre &#40;Générateur de rapports et SSRS&#41;](report-design/filter-equation-examples-report-builder-and-ssrs.md)   
+ [Références à la Collection de champs de DataSet &#40;Générateur de rapports et SSRS&#41;](report-design/built-in-collections-dataset-fields-collection-references-report-builder.md)   
+ [Référence aux fonctions d’agrégation &#40;Générateur de rapports et SSRS&#41;](report-design/report-builder-functions-aggregate-functions-reference.md)   
  [Types de données dans les expressions &#40;Générateur de rapports et SSRS&#41;](report-design/data-types-in-expressions-report-builder-and-ssrs.md)   
- [Sélectionnez la boîte de dialogue couleur &#40;rapport Générateur et SSRS&#41;](../../2014/reporting-services/select-color-dialog-box-report-builder-and-ssrs.md)  
+ [Sélectionnez la boîte de dialogue couleur &#40;Générateur de rapports et SSRS&#41;](../../2014/reporting-services/select-color-dialog-box-report-builder-and-ssrs.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: 'À l’aide des Annotations SQL : Identity et SQL : GUID | Documents Microsoft'
+title: 'À l’aide de le : Identity des Annotations et | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -25,18 +25,18 @@ helpviewer_keywords:
 - updategrams [SQLXML], GUID values
 ms.assetid: 7661dfd0-6573-4692-a8f1-3597adcd33c4
 caps.latest.revision: 24
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: b54109b005956241b87efe89a33bf1c949b792e3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: fa8661c437f33cd11165c0aa2ad3945a79d5fa7b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36152780"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37197119"
 ---
 # <a name="using-the-sqlidentity-and-sqlguid-annotations"></a>Utilisation des annotations sql:identity et sql:guid
-  Vous pouvez spécifier le `sql:identity` et `sql:guid` annotations dans un schéma XSD pour n’importe quel nœud mappé à une colonne de base de données dans [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Le format de code de mise à jour (updategram) prend en charge les attributs `updg:at-identity` et `updg:guid`, contrairement au format de DiffGram. L'attribut `updg:at-identity` définit le comportement de mise à jour d'une colonne de type IDENTITY. L'attribut `updg:guid` permet d'obtenir une valeur GUID à partir de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et de l'utiliser dans le code de mise à jour (updategram). Pour plus d’informations et des exemples fonctionnels, consultez [insertion de données à l’aide de programmes &#40;SQLXML 4.0&#41;](../sqlxml-annotated-xsd-schemas-xpath-queries/updategrams/inserting-data-using-xml-updategrams-sqlxml-4-0.md).  
+  Vous pouvez spécifier le `sql:identity` et `sql:guid` annotations dans un schéma XSD pour n’importe quel nœud qui mappe à une colonne de base de données dans [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Le format de code de mise à jour (updategram) prend en charge les attributs `updg:at-identity` et `updg:guid`, contrairement au format de DiffGram. L'attribut `updg:at-identity` définit le comportement de mise à jour d'une colonne de type IDENTITY. L'attribut `updg:guid` permet d'obtenir une valeur GUID à partir de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et de l'utiliser dans le code de mise à jour (updategram). Pour plus d’informations et pour obtenir des exemples fonctionnels, consultez [insertion de données à l’aide de programmes &#40;SQLXML 4.0&#41;](../sqlxml-annotated-xsd-schemas-xpath-queries/updategrams/inserting-data-using-xml-updategrams-sqlxml-4-0.md).  
   
  Les annotations `sql:identity` et `sql:guid` étendent ces fonctionnalités aux DiffGrams.  
   

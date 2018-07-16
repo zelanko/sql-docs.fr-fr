@@ -5,21 +5,19 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- tools-ssms
+ms.technology: ssms
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 8e0965ef-cc3a-43d5-82ad-01f525654b2f
-caps.latest.revision: 35
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 36d4d60f7aa6a677ac7ec85d81f3996d8b01c996
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: c196db40452128395fa4c2c1f803b86cbfe8d99a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36144406"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37301389"
 ---
 # <a name="show-the-object-explorer-details-page"></a>Afficher la page Détails de l'Explorateur d'objets
   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] peut afficher un rapport pour chaque objet sélectionné dans l’Explorateur d’objets. Ce rapport, appelé page Détails de l'Explorateur d'objets, est créé par [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]et s'ouvre dans la fenêtre de document.  

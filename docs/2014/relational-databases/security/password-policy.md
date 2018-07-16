@@ -5,10 +5,9 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-security
+ms.technology: security
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - ALTER LOGIN statement
 - passwords [SQL Server], policy enforcement
@@ -33,15 +32,15 @@ helpviewer_keywords:
 - characters [SQL Server], password policies
 ms.assetid: c0040c0a-a18f-45b9-9c40-0625685649b1
 caps.latest.revision: 39
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 6afa1e403abefd071124f938d3e88f73a6ffc8c1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: edmacauley
+ms.author: edmaca
+manager: craigg
+ms.openlocfilehash: 3e6ac04417e8b8d136d05f943d941c4d1177e087
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36154572"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37268535"
 ---
 # <a name="password-policy"></a>Stratégie de mot de passe
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] peut exploiter les mécanismes de stratégie de mot de passe Windows. La stratégie de mot de passe s'applique à une connexion qui utilise l'authentification [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et à un utilisateur de base de données autonome avec un mot de passe.  

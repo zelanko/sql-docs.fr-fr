@@ -1,5 +1,5 @@
 ---
-title: Configuration et Administration d’un serveur de rapports (Reporting Services SharePoint Mode) | Documents Microsoft
+title: Configuration et Administration d’un serveur de rapports (Reporting Services SharePoint Mode) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 846e86d0-fbbb-426c-97f9-f179cd42b390
 caps.latest.revision: 9
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: bd580d08512b72d6643e97b1dda6f7a58d092714
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 7546ee205dc20dccbac6a83e8f1fea8420ee511d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36141252"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37329349"
 ---
 # <a name="configuration-and-administration-of-a-report-server-reporting-services-sharepoint-mode"></a>Configuration et administration d'un serveur de rapports (mode SharePoint de Reporting Services)
-  [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] est une plateforme de création de rapports basée sur le serveur qui fournit une gamme complète d’outils de prêt à l’emploi et de services pour vous aider à créer, déployer et gérer des rapports pour votre organisation, ainsi que les fonctionnalités de programmation qui vous permettent d’étendre et personnaliser votre rapport fonctionnalité. Vous pouvez intégrer votre environnement de création de rapports à un produit SharePoint afin de tirer parti des avantages liés à l'utilisation de l'environnement de collaboration fourni par les sites SharePoint.  
+  [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] est une plateforme de création de rapports basée sur le serveur qui fournit une gamme complète d’outils de prêts à l’emploi et des services pour vous aider à créer, déployer et gérer des rapports pour votre organisation, ainsi que les fonctionnalités de programmation qui vous permettent d’étendre et personnaliser vos rapports fonctionnalité. Vous pouvez intégrer votre environnement de création de rapports à un produit SharePoint afin de tirer parti des avantages liés à l'utilisation de l'environnement de collaboration fourni par les sites SharePoint.  
   
 ## <a name="in-this-section"></a>Contenu de cette section  
  Utilisez les sections suivantes pour vous aider à comprendre entre autres les concepts, scénarios de déploiement et procédures pour l'intégration de votre environnement [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] à un produit ou une technologie SharePoint :  

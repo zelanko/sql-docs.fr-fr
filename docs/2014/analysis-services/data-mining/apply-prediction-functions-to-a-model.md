@@ -1,5 +1,5 @@
 ---
-title: Appliquer des fonctions de prédiction à un modèle | Documents Microsoft
+title: Appliquer des fonctions de prédiction à un modèle | Microsoft Docs
 ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Mining Model Prediction [Analysis Services], selecting mining models
 ms.assetid: cf9a97e2-c249-441b-af12-c977c1a91c44
 caps.latest.revision: 15
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: abd75a7a7be7cacc0395af11e02b5dc55828e31d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: a512c4e9f288c0e776b7ac6de91604da39d9f4d7
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36152924"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37270015"
 ---
 # <a name="apply-prediction-functions-to-a-model"></a>Appliquer des fonctions de prédiction à un modèle
   Pour créer une requête de prédiction, vous devez d'abord sélectionner le modèle d'exploration de données sur lequel la requête sera basée. Vous pouvez sélectionner n'importe quel modèle d'exploration de données existant du projet actuel.  
@@ -72,7 +72,7 @@ ms.locfileid: "36152924"
     |||  
     |-|-|  
     |**\<nom du modèle >**|Sélectionnez cette option pour inclure des valeurs du modèle d'exploration de données dans la sortie. Vous pouvez uniquement ajouter des colonnes prédictibles.<br /><br /> Lorsque vous ajoutez une colonne du modèle, le résultat retourné est la liste non distinctive des valeurs se trouvant dans cette colonne.<br /><br /> Les colonnes que vous ajoutez à cette option sont incluses dans la partie SELECT de l'instruction DMX obtenue.|  
-    |**Prediction Function**|Sélectionnez cette option pour parcourir une liste de fonctions de prédiction.<br /><br /> Les valeurs ou fonctions que vous sélectionnez sont ajoutées à la partie SELECT de l'instruction DMX obtenue.<br /><br /> La liste des fonctions de prédiction n'est pas filtrée ou limitée par le type de modèle sélectionné. Par conséquent, si vous avez un doute sur la prise en charge, ou non, de la fonction pour le type de modèle actuel, vous pouvez simplement ajouter la fonction à la liste et voir s'il y a une erreur.<br /><br /> Éléments de liste qui sont précédés par $ (tel que $AdjustedProbability) représentent les colonnes de la table imbriquée qui est produite lors de l’utilisation de la fonction, `PredictHistogram`. Vous trouverez ci-après les raccourcis que vous pouvez utiliser pour retourner une seule colonne, et non une table imbriquée.|  
+    |**Prediction Function**|Sélectionnez cette option pour parcourir une liste de fonctions de prédiction.<br /><br /> Les valeurs ou fonctions que vous sélectionnez sont ajoutées à la partie SELECT de l'instruction DMX obtenue.<br /><br /> La liste des fonctions de prédiction n'est pas filtrée ou limitée par le type de modèle sélectionné. Par conséquent, si vous avez un doute sur la prise en charge, ou non, de la fonction pour le type de modèle actuel, vous pouvez simplement ajouter la fonction à la liste et voir s'il y a une erreur.<br /><br /> Les éléments de liste qui sont précédés de $ (tel que $AdjustedProbability) représentent les colonnes de la table imbriquée qui est générée lorsque vous utilisez la fonction, `PredictHistogram`. Vous trouverez ci-après les raccourcis que vous pouvez utiliser pour retourner une seule colonne, et non une table imbriquée.|  
     |**Expression personnalisée**|Sélectionnez cette option pour taper une expression personnalisée puis affecter un alias à la sortie.<br /><br /> L'expression personnalisée est ajoutée à la partie SELECT de la requête de prédiction DMX obtenue.<br /><br /> Cette option est utile si vous voulez ajouter du texte pour une sortie avec chaque ligne, pour appeler des fonctions VB ou pour appeler des procédures stockées personnalisées.<br /><br /> Pour plus d’informations sur l’utilisation de fonctions VBA et Excel à partir de DMX, consultez [Fonctions VBA dans MDX et DAX](/sql/mdx/vba-functions-in-mdx-and-dax).|  
   
 3.  Après avoir ajouté une fonction ou expression, basculez vers la vue DMX pour voir comment la fonction est ajoutée dans l'instruction DMX.  
@@ -98,7 +98,7 @@ ms.locfileid: "36152924"
   
 6.  Pour **Source**, sélectionnez **fonction de prédiction**et ajoutez la fonction `Cluster`.  
   
-7.  Pour **Source**, sélectionnez **fonction de prédiction**, ajoutez la fonction `PredictSupport`et faites glisser la colonne de modèle [Bike Buyer] dans le **critères/Argument** boîte. Tapez **Support** dans la colonne **Alias** .  
+7.  Pour **Source**, sélectionnez **fonction de prédiction**, ajoutez la fonction `PredictSupport`, puis faites glisser la colonne du modèle [Bike Buyer] dans le **critères/Argument** boîte. Tapez **Support** dans la colonne **Alias** .  
   
      Copiez l’expression représentant la fonction de prédiction et la référence de colonne dans la zone **Critères/Argument** .  
   

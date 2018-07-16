@@ -1,5 +1,5 @@
 ---
-title: Éditeur de Transformation de colonne (Page colonnes) d’exportation | Documents Microsoft
+title: Exporter l’éditeur de Transformation de colonne (Page colonnes) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.fileextractortransformation.columns.f1
 helpviewer_keywords:
 - Export Column Transformation Editor
 ms.assetid: b659a5c2-5509-4b5b-9c82-136c971d5c7f
 caps.latest.revision: 28
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 86f14583351c2ff734ec0cc3e09abaa270c1c9ca
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: b427d8a727f0db31b63d43efbe00378c7ef0f18b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36152655"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37207449"
 ---
 # <a name="export-column-transformation-editor-columns-page"></a>Éditeur de transformation d'exportation de colonne (page Colonnes)
   Utilisez la page **Colonnes** de la boîte de dialogue **Éditeur de transformation d'exportation de colonne** pour spécifier les colonnes du flux de données à extraire dans des fichiers. Vous pouvez préciser si la transformation d'exportation de colonne ajoute des données à la fin d'un fichier ou écrase le fichier existant.  
@@ -44,10 +44,10 @@ ms.locfileid: "36152655"
  Permet de préciser si la transformation supprime le contenu des fichiers existants avant d'écrire des données. La valeur par défaut est `false`.  
   
  **Écrire la marque d'ordre d'octet**  
- Indique s'il est nécessaire d'écrire une marque d'ordre d'octet (BOM, Byte-Order Mark) dans le fichier. Un marque BOM est écrite uniquement si les données ont le `DT_NTEXT` ou le type de données DT_WSTR et ne sont pas ajoutées à un fichier de données existant.  
+ Indique s'il est nécessaire d'écrire une marque d'ordre d'octet (BOM, Byte-Order Mark) dans le fichier. Un BOM est écrite uniquement si les données ont le `DT_NTEXT` ou type de données DT_WSTR et ne sont pas ajoutées à un fichier de données existant.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Integration Services Error and Message Reference](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Éditeur de Transformation de colonne d’exportation &#40;Page sortie d’erreur&#41;](../../2014/integration-services/export-column-transformation-editor-error-output-page.md)  
+ [Exporter l’éditeur de Transformation de colonne &#40;Page sortie d’erreur&#41;](../../2014/integration-services/export-column-transformation-editor-error-output-page.md)  
   
   

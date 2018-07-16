@@ -1,5 +1,5 @@
 ---
-title: Élément Create (XMLA) | Documents Microsoft
+title: Créer l’élément (XMLA) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -24,18 +24,18 @@ helpviewer_keywords:
 - Create command (XMLA)
 ms.assetid: a623d362-a1ac-40e4-8816-65fac89cb391
 caps.latest.revision: 17
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: 19e7673c63d7e305d706efb910222f8ba0da7215
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: a3679fd48885b3538996b38286709e14b665bef0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36144166"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37247730"
 ---
 # <a name="create-element-xmla"></a>Élément Create (XMLA)
-  Contient des éléments d’Analysis Services Scripting Language (ASSL) utilisés par le `Execute` méthode pour créer des objets sur un [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] instance.  
+  Contient des éléments Analysis Services Scripting Language (ASSL) utilisés par le `Execute` méthode pour créer des objets sur un [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] instance.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -69,7 +69,7 @@ ms.locfileid: "36144166"
 |Attribute|Description|  
 |---------------|-----------------|  
 |AllowOverwrite|Facultatif `Boolean` attribut. S'il possède la valeur True, les objets définis dans l'élément `ObjectDefinition` peuvent remplacer des objets existants sur l'instance [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]. Si cet attribut est omis ou possède la valeur False, la présence d'un objet existant génère une erreur.|  
-|Portée|Facultatif `Enum` attribut. Définit la durée des objets définis dans l'élément `ObjectDefinition`. Si cet attribut est omis, les objets définis dans l'élément `ObjectDefinition` sont conservés dans l'instance [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]. Les valeurs suivantes sont disponibles :<br /><br /> -   *session*<br />     Les objets définis dans l'élément `ObjectDefinition` existent uniquement pendant la durée de la session XMLA (XML for Analysis). **Remarque :** lorsque vous utilisez la *Session* définition, le `ObjectDefinition` élément ne peut contenir [Dimension](../../scripting/objects/dimension-element-assl.md), [Cube](../../scripting/objects/cube-element-assl.md), ou [MiningModel ](../../scripting/objects/miningmodel-element-assl.md) Éléments ASSL.|  
+|Portée|Facultatif `Enum` attribut. Définit la durée des objets définis dans l'élément `ObjectDefinition`. Si cet attribut est omis, les objets définis dans l'élément `ObjectDefinition` sont conservés dans l'instance [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]. Les valeurs suivantes sont disponibles :<br /><br /> -   *session*<br />     Les objets définis dans l'élément `ObjectDefinition` existent uniquement pendant la durée de la session XMLA (XML for Analysis). **Remarque :** lorsque vous utilisez le *Session* définition, le `ObjectDefinition` élément ne peut contenir [Dimension](../../scripting/objects/dimension-element-assl.md), [Cube](../../scripting/objects/cube-element-assl.md), ou [MiningModel ](../../scripting/objects/miningmodel-element-assl.md) Éléments ASSL.|  
   
 ## <a name="remarks"></a>Notes  
  Chaque opération `Create` crée un objet principal sous un parent défini par l'élément `ParentObject`. Si l'objet parent est omis, il est considéré comme l'instance [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] de destination. Ceci génère une erreur si le parent d'un objet principal ne correspond pas à l'instance de destination.  

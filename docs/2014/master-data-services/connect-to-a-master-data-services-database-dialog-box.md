@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.mds.configmanager.srvconnect.f1
 ms.assetid: b2f8c9b9-c31e-4f0d-9095-978709423190
 caps.latest.revision: 7
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 090fb178f00965044eaf32a3f5152d1a45c02581
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: 3fcec4c67e6c942e8f2a5f09a057696779f30106
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36039554"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37195589"
 ---
 # <a name="connect-to-a-master-data-services-database-dialog-box"></a>Se connecter à la boîte de dialogue Base de données Master Data Services
   Utilisez la boîte de dialogue **Connexion à une base de données Master Data Services** pour sélectionner une base de données [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] .  
@@ -46,6 +46,6 @@ ms.locfileid: "36039554"
   
 ## <a name="see-also"></a>Voir aussi  
  [Page Configuration de base de données &#40;Gestionnaire de configuration Master Data Services&#41;](../../2014/master-data-services/database-configuration-page-master-data-services-configuration-manager.md)   
- [Configurer le site Web et la base de données pour Master Data Services](set-up-the-database-and-website-for-master-data-services.md)  
+ [Configurer la base de données et le site web de Master Data Services](set-up-the-database-and-website-for-master-data-services.md)  
   
   

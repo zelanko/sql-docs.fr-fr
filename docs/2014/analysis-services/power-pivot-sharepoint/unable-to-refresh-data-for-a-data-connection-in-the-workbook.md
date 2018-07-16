@@ -1,5 +1,5 @@
 ---
-title: "Impossible d'actualiser les données pour une connexion de données dans le classeur. Essayez encore ou contactez votre administrateur système. Impossible d’actualiser les connexions suivantes : données PowerPivot | Documents Microsoft"
+title: "Impossible d'actualiser les données pour une connexion de données dans le classeur. Essayez encore ou contactez votre administrateur système. Impossible d’actualiser les connexions suivantes : données PowerPivot | Microsoft Docs"
 ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 0f6fd52d-ac72-43e3-aa08-05a2d2bb873d
 caps.latest.revision: 15
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 705aa014770346e7554a41d01a75235b3e2a0451
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 396b4b32d2af95b8c7d49beab0fde988d2bee903
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36040985"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37220269"
 ---
 # <a name="unable-to-refresh-data-for-a-data-connection-in-the-workbook-try-again-or-contact-your-system-administrator-the-following-connections-failed-to-refresh-powerpivot-data"></a>Impossible d'actualiser les données pour une connexion de données dans le classeur. Essayez encore ou contactez votre administrateur système. Échec de l'actualisation des connexions suivantes : Données PowerPivot
   Pour les classeurs Excel qui contiennent des données PowerPivot, Excel Services retourne cette erreur en cas de demande de connexion à un serveur PowerPivot qui échoue.  
@@ -44,13 +44,13 @@ ms.locfileid: "36040985"
   
  Le classeur que vous essayez d'ouvrir peut avoir été créé dans la version SQL Server 2008 R2 de PowerPivot pour Excel. Très probablement, le fournisseur de données Analysis Services qui est spécifié dans la chaîne de connexion de données n'est pas présent sur l'ordinateur qui gère la demande.  
   
- Si c’est le cas, vous trouverez ce message dans le journal ULS : « Échec de l’actualisation pour les données de PowerPivot dans le classeur '\<URL du classeur >' », suivi par « Impossible d’obtenir une connexion ».  
+ Si c’est le cas, vous trouverez ce message dans le journal ULS : « Échec de l’actualisation pour les données de PowerPivot dans le classeur '\<URL du classeur >' », suivi de « Impossible d’obtenir une connexion ».  
   
  Pour déterminer la version du classeur, ouvrez-le dans Excel et vérifiez quel fournisseur de données est spécifié dans la chaîne de connexion. Un classeur SQL Server 2008 R2 utilise MSOLAP.4 comme fournisseur de données.  
   
  Pour contourner ce problème, vous pouvez mettre à niveau le classeur. Ou bien, vous pouvez installer les bibliothèques clientes de la version SQL Server 2008 R2 d'Analysis Services sur des ordinateurs physiques exécutant PowerPivot pour SharePoint ou Excel Services :  
   
- [Installer le fournisseur Analysis Services OLE DB sur les serveurs SharePoint](../../sql-server/install/install-the-analysis-services-ole-db-provider-on-sharepoint-servers.md)  
+ [Installer le fournisseur OLE DB Analysis Services sur des serveurs SharePoint](../../sql-server/install/install-the-analysis-services-ole-db-provider-on-sharepoint-servers.md)  
   
  **Scénario 2b : Excel Services s'exécute sur un serveur d'applications qui a une version incorrecte des bibliothèques clientes**  
   
@@ -66,7 +66,7 @@ ms.locfileid: "36040985"
   
  Pour contourner ce problème, joignez l'ordinateur au même domaine que le serveur PowerPivot ou installez un contrôleur de domaine sur votre ordinateur local. La deuxième solution, l'installation du contrôleur de domaine, oblige à créer des comptes de domaine locaux pour tous les services et utilisateurs. Vous devrez configurer des comptes de service et des autorisations SharePoint pour les comptes que vous définissez.  
   
- L'installation d'un contrôleur de domaine sur votre ordinateur est utile si votre objectif est d'utiliser PowerPivot pour SharePoint hors connexion. Pour obtenir des instructions détaillées sur la façon d’utiliser PowerPivot hors connexion, consultez l’entrée de blog « Sortir votre serveur PowerPivot sur le réseau », [ http://www.powerpivotgeek.com ](http://go.microsoft.com/fwlink/?LinkId=184241).  
+ L'installation d'un contrôleur de domaine sur votre ordinateur est utile si votre objectif est d'utiliser PowerPivot pour SharePoint hors connexion. Pour obtenir des instructions détaillées sur la façon d’utiliser PowerPivot hors connexion, consultez l’entrée de blog « Sortir votre serveur PowerPivot sur le réseau » [ http://www.powerpivotgeek.com ](http://go.microsoft.com/fwlink/?LinkId=184241).  
   
  **Scénario 4 : serveur instable**  
   

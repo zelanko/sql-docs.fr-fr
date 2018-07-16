@@ -1,5 +1,5 @@
 ---
-title: Programmation d’objets de base OLAP AMO | Documents Microsoft
+title: Programmation des objets de base OLAP AMO | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - AMO, OLAP
 ms.assetid: ad1c970e-c0cb-4687-9563-56ab62c2db5f
 caps.latest.revision: 28
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: df3206f9bf6bd0548749abf981d6088e9ab85c0b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 1b36af3a013c10567e23852c338c79a834bc8376
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36041497"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37228249"
 ---
 # <a name="programming-amo-olap-basic-objects"></a>Programmation d'objets de base OLAP AMO
   La création d'objets [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] complexes ne présente pas de difficultés notoires, mais elle demande de la rigueur. Cette rubrique explique les détails de la programmation d'objets de base OLAP. Cette rubrique contient les sections suivantes :  
@@ -38,7 +38,7 @@ ms.locfileid: "36041497"
   
 -   [Objets de partition](#Part)  
   
--   [Objets d’agrégation](#AD)  
+-   [Objets Aggregation](#AD)  
   
 ##  <a name="Dim"></a> Objets de dimension  
  Pour gérer ou traiter une dimension, vous devez programmer l'objet <xref:Microsoft.AnalysisServices.Dimension>.  
@@ -165,7 +165,7 @@ static DataItem CreateDataItem(DataSourceView dsv, string tableName, string colu
 ### <a name="processing-a-dimension"></a>Traitement d'une dimension  
  Le traitement d'une dimension est aussi simple que d'utiliser la méthode Process de l'objet <xref:Microsoft.AnalysisServices.Dimension>.  
   
- Le traitement d'une dimension peut affecter tous les cubes qui utilisent la dimension. Pour plus d’informations sur les options de traitement, consultez [le traitement des objets &#40;XMLA&#41; ](../../xmla/xml-elements-objects.md) et [traitement d’un objet de modèle multidimensionnel](../processing-a-multidimensional-model-analysis-services.md).  
+ Le traitement d'une dimension peut affecter tous les cubes qui utilisent la dimension. Pour plus d’informations sur les options de traitement, consultez [traitement des objets &#40;XMLA&#41; ](../../xmla/xml-elements-objects.md) et [traitement d’un objet de modèle multidimensionnel](../processing-a-multidimensional-model-analysis-services.md).  
   
  Le code suivant effectue une mise à jour incrémentielle dans toutes les dimensions d'une base de données fournie :  
   
@@ -252,7 +252,7 @@ static void CreateAdventureWorksCube(Database db, string datasourceName)
 ### <a name="processing-a-cube"></a>Traitement d'un cube  
  Le traitement d'un cube est aussi simple que d'utiliser la méthode Process de l'objet <xref:Microsoft.AnalysisServices.Cube>. Le traitement d'un cube traite également tous les groupes de mesures du cube, ainsi que toutes les partitions du groupe de mesures. Dans un cube, les partitions sont les seuls objets à pouvoir être traités ; dans le cadre du traitement, les groupes de mesures ne sont que des conteneurs de partitions. Le type de traitement spécifié pour le cube est propagé aux partitions. Le traitement de cube et de groupe de mesures en interne se résume au traitement des dimensions et des partitions.  
   
- Pour plus d’informations sur les options de traitement, consultez [le traitement des objets &#40;XMLA&#41;](../../xmla/xml-elements-objects.md), et [traitement d’un objet de modèle multidimensionnel](../processing-a-multidimensional-model-analysis-services.md).  
+ Pour plus d’informations sur les options de traitement, consultez [traitement des objets &#40;XMLA&#41;](../../xmla/xml-elements-objects.md), et [traitement d’un objet de modèle multidimensionnel](../processing-a-multidimensional-model-analysis-services.md).  
   
  Le code suivant effectuera un traitement complet sur tous les cubes d'une base de données spécifiée :  
   
@@ -419,7 +419,7 @@ static void CreateInternetSalesMeasureGroup(Cube cube)
 ### <a name="processing-a-measure-group"></a>Traitement d'un groupe de mesures  
  Le traitement d'un groupe de mesures est aussi simple que d'utiliser la méthode Process de l'objet <xref:Microsoft.AnalysisServices.MeasureGroup>. Le traitement d'un groupe de mesures traite toutes les partitions qui appartiennent au groupe de mesures. Le traitement d'un groupe de mesures en interne se résume au traitement des dimensions et des partitions. Consultez [Traitement d'une partition](#ProcPart) dans ce document.  
   
- Pour plus d’informations sur les options de traitement, consultez [le traitement des objets &#40;XMLA&#41;](../../xmla/xml-elements-objects.md), et [traitement d’un objet de modèle multidimensionnel](../processing-a-multidimensional-model-analysis-services.md).  
+ Pour plus d’informations sur les options de traitement, consultez [traitement des objets &#40;XMLA&#41;](../../xmla/xml-elements-objects.md), et [traitement d’un objet de modèle multidimensionnel](../processing-a-multidimensional-model-analysis-services.md).  
   
  Le code suivant assurera un traitement complet dans tous les groupes de mesures d'un cube fourni.  
   
@@ -485,7 +485,7 @@ static void CreateInternetSalesMeasureGroupPartitions(MeasureGroup mg)
 ###  <a name="ProcPart"></a> Traitement d’une Partition  
  Le traitement d'une partition est aussi simple que d'utiliser la méthode Process de l'objet <xref:Microsoft.AnalysisServices.Partition>.  
   
- Pour plus d’informations sur les options de traitement, consultez [le traitement des objets &#40;XMLA&#41; ](../../xmla/xml-elements-objects.md) et [traitement d’un objet de modèle multidimensionnel](../processing-a-multidimensional-model-analysis-services.md).  
+ Pour plus d’informations sur les options de traitement, consultez [traitement des objets &#40;XMLA&#41; ](../../xmla/xml-elements-objects.md) et [traitement d’un objet de modèle multidimensionnel](../processing-a-multidimensional-model-analysis-services.md).  
   
  L'exemple de code suivant effectue un traitement complet dans toutes les partitions d'un groupe de mesures spécifié.  
   
@@ -510,7 +510,7 @@ static void FullProcessAllPartitions(MeasureGroup mg)
   
 -   les partitions résident sur le même serveur ; les partitions distantes peuvent être fusionnées si elle se trouvent sur le même serveur.  
   
- Contrairement aux versions précédentes, dans [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] n’est pas nécessaire que toutes les partitions sources aient une conception des agrégations identiques.  
+ Contrairement aux versions précédentes, dans [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] n’est pas nécessaire que toutes les partitions de sources aient une conception d’agrégation identiques.  
   
  Le jeu d'agrégations obtenu pour la partition cible a le même état que le jeu d'agrégations avant l'exécution de la commande merge.  
   

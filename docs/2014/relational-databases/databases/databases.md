@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - data warehouse [SQL Server]
 - OLTP databases [SQL Server]
 - databases [SQL Server], about databases
 ms.assetid: 316eea58-81b8-4bf3-a1fc-801946740e94
 caps.latest.revision: 26
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: de7f79af288674b5bf2dbb53979071dea505428c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: d2d95b8a11ba3d1772bbb108435317e2e55e3c89
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36144255"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37250239"
 ---
 # <a name="databases"></a>Bases de données
   Dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , une base de données est constituée d'une collection de tables qui renferment un ensemble spécifique de données structurées. Une table se compose de lignes, également appelées enregistrements ou tuples, et de colonnes, également appelées attributs. Chaque colonne d'une table est conçue pour stocker un certain type d'informations, par exemple, des données, des noms, des valeurs monétaires ou des nombres.  
@@ -45,9 +45,8 @@ ms.locfileid: "36144255"
 |||  
 |-|-|  
 |[Bases de données système](system-databases.md)|[Supprimer des fichiers de données ou des fichiers journaux d’une base de données](delete-data-or-log-files-from-a-database.md)|  
-|
-  [Bases de données autonomes](contained-databases.md)|[Afficher les informations sur l’espace occupé par les données et par le journal d’une base de données](display-data-and-log-space-information-for-a-database.md)|  
-|[Fichiers de données SQL Server dans Windows Azure](sql-server-data-files-in-microsoft-azure.md)|[Augmenter la taille d’une base de données](increase-the-size-of-a-database.md)|  
+|[Bases de données autonomes](contained-databases.md)|[Afficher les informations sur l’espace occupé par les données et par le journal d’une base de données](display-data-and-log-space-information-for-a-database.md)|  
+|[Fichiers de données SQL Server dans Microsoft Azure](sql-server-data-files-in-microsoft-azure.md)|[Augmenter la taille d’une base de données](increase-the-size-of-a-database.md)|  
 |[Groupes de fichiers et fichiers de base de données](database-files-and-filegroups.md)|[Renommer une base de données](rename-a-database.md)|  
 |[États d'une base de données](database-states.md)|[Définir une base de données en mode mono-utilisateur](set-a-database-to-single-user-mode.md)|  
 |[États des fichiers](file-states.md)|[Réduire une base de données](shrink-a-database.md)|  

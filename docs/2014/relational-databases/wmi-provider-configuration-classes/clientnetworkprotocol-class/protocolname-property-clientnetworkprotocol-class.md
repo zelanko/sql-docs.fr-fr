@@ -1,5 +1,5 @@
 ---
-title: Propriété ProtocolName (classe ClientNetworkProtocol) | Documents Microsoft
+title: ProtocolName, propriété (classe ClientNetworkProtocol) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -20,18 +20,18 @@ helpviewer_keywords:
 - ProtocolName property
 ms.assetid: f8527121-fbcd-4d30-9b4a-1461149cb5a8
 caps.latest.revision: 35
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: f3f0392aecb7ce6b09f00f448d05cb2c4bf8b5f2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
+ms.openlocfilehash: 71c1cb6ea19e9bc29308af6150856f57e8866dea
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36142989"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37227131"
 ---
 # <a name="protocolname-property-clientnetworkprotocol-class"></a>Propriété ProtocolName (classe ClientNetworkProtocol)
-  Obtient le nom du protocole réseau actuel spécifié par le [configurer des protocoles clients](http://technet.microsoft.com/library/ms181035.aspx).  
+  Obtient le nom complet du protocole réseau actuel spécifié par le [configurer des protocoles clients](http://technet.microsoft.com/library/ms181035.aspx).  
   
 ## <a name="syntax"></a>Syntaxe  
   

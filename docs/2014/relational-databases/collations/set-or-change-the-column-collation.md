@@ -8,24 +8,24 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - tempdb database [SQL Server], collations
 - collations [SQL Server], column
 ms.assetid: d7a9638b-717c-4680-9b98-8849081e08be
 caps.latest.revision: 29
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 3de84f26e894f00760a45d5e65769c0db8d4b009
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: e215539e97e09fd7512f7673015d07f32e956730
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36039069"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37298509"
 ---
 # <a name="set-or-change-the-column-collation"></a>Définir ou changer le classement des colonnes
-  Vous pouvez remplacer le classement de base de données pour `char`, `varchar`, `text`, `nchar`, `nvarchar`, et `ntext` les données en spécifiant un classement différent pour une colonne spécifique d’une table et en utilisant l’une des opérations suivantes :  
+  Vous pouvez remplacer le classement de base de données pour `char`, `varchar`, `text`, `nchar`, `nvarchar`, et `ntext` données en spécifiant un classement différent pour une colonne spécifique d’une table et en utilisant l’une des opérations suivantes :  
   
 -   Clause COLLATE de [CREATE TABLE](/sql/t-sql/statements/create-table-transact-sql) et [ALTER TABLE](/sql/t-sql/statements/alter-table-transact-sql). Exemple :  
   
@@ -42,7 +42,7 @@ ms.locfileid: "36039069"
   
 -   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Pour plus d’informations, consultez [Prise en charge d’Unicode et du classement](collation-and-unicode-support.md).  
   
--   À l’aide de la `Column.Collation` propriété [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Management Objects (SMO).  
+-   À l’aide de la `Column.Collation` propriété dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Management Objects (SMO).  
   
  Vous ne pouvez pas modifier le classement d'une colonne actuellement référencée par l'un des éléments suivants :  
   
@@ -59,7 +59,7 @@ ms.locfileid: "36039069"
  Quand vous utilisez **tempdb**, la clause [COLLATE](/sql/t-sql/statements/collations) contient une option *database_default* pour spécifier qu’une colonne de table temporaire utilise, pour la connexion, le classement par défaut de la base de données utilisateur active à la place du classement de **tempdb**.  
   
 ## <a name="collations-and-text-columns"></a>Classements et colonnes text  
- Vous pouvez insérer ou mettre à jour les valeurs dans une `text` dont le classement est différent de la page de codes du classement par défaut de la base de données de colonne. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] convertit implicitement les valeurs en fonction du classement de la colonne.  
+ Vous pouvez insérer ou mettre à jour les valeurs dans un `text` colonne dont le classement est différent de la page de codes du classement par défaut de la base de données. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] convertit implicitement les valeurs en fonction du classement de la colonne.  
   
 ## <a name="collations-and-tempdb"></a>Classements et tempdb  
  La base de données **tempdb** est créée à chaque démarrage de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et a le même classement par défaut que la base de données **model** . Il est en général identique au classement par défaut de l'instance. Si vous créez une base de données utilisateur et spécifiez un classement par défaut différent de **model**, la base de données utilisateur a un classement par défaut différent de **tempdb**. Toutes les procédures stockées ou tables temporaires sont créées et stockées dans **tempdb**. En d'autres termes, toutes les colonnes implicites des tables temporaires et toutes les constantes, variables et paramètres modifiables par défaut des procédures stockées temporaires ont d'autres classements que les objets comparables créés dans les tables et procédures stockées permanentes.  

@@ -1,5 +1,5 @@
 ---
-title: Générateur de modèles tabulaires (SSAS tabulaire) | Documents Microsoft
+title: Générateur de modèles tabulaires (SSAS tabulaire) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - SQL12.ASVS.BIDTOOLSET.TOPLEVSEMMODUIENTRY.F1
 ms.assetid: 45735c57-2a95-4e45-8994-7242df6c9c5f
 caps.latest.revision: 16
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 7d0fc5ae763542c5f46bdcdb474a71f71250733c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 20beaf68692cfecbdc047752ff873921cce6a740
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36154030"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37263345"
 ---
 # <a name="tabular-model-designer-ssas-tabular"></a>Générateur de modèles tabulaires (SSAS Tabulaire)
   Le générateur de modèles tabulaires fait partie de [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], intégré à Microsoft [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 2010 ou une version ultérieure, avec les modèles supplémentaires de type de projet spécifiques au développement de solutions de modèles tabulaires professionnelles.  
@@ -32,7 +32,7 @@ ms.locfileid: "36154030"
   
 -   [Modèles de projet](#bkmk_proj_temp)  
   
--   [Fenêtres et Menus](#bkmk_wind_men)  
+-   [Windows et les Menus](#bkmk_wind_men)  
   
 -   [Intégration de Visual Studio](#bkmk_vsint)  
   

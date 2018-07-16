@@ -1,5 +1,5 @@
 ---
-title: Onglet (visionneuse de modèle d’exploration de données) des profils de cluster | Documents Microsoft
+title: Profils de cluster onglet (visionneuse de modèle d’exploration de données) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dm.miningmodeleditor.clustering.profiles.f1
 ms.assetid: 1ebafa1f-74e9-4c05-b278-a690fa8543bd
 caps.latest.revision: 22
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 3cf0d0437b8aea93c692e993d3d2e7167cc4a1c1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: e1b3e9bc36c75e0786f0e7de4799fd54f13120ec
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36155154"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37267597"
 ---
 # <a name="cluster-profiles-tab-mining-model-viewer"></a>Onglet Profils du cluster (Visionneuse de modèle d'exploration de données)
   Utilisez l’onglet **Profils du cluster** pour obtenir une vue globale des clusters détectés par l’algorithme au sein d’un modèle de clustering. L'onglet affiche chaque attribut, accompagné de sa répartition dans chaque cluster.  
@@ -29,7 +29,7 @@ ms.locfileid: "36155154"
  **Pour plus d’informations :** [Algorithme de gestion de clusters Microsoft](data-mining/microsoft-clustering-algorithm.md), [Explorer un modèle à l’aide de Microsoft Sequence Cluster](data-mining/browse-a-model-using-the-microsoft-cluster-viewer.md)  
   
 ## <a name="options"></a>Options  
- **Actualiser le contenu de la visionneuse**  
+ **Actualiser le contenu de l’Observateur**  
  Recharge le modèle d'exploration de données dans la visionneuse.  
   
  **Modèle d'exploration de données**  

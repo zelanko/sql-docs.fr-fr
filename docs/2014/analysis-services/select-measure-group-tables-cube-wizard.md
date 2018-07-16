@@ -1,5 +1,5 @@
 ---
-title: Tables de sélectionner le groupe de mesures (Assistant Cube) | Documents Microsoft
+title: Tables de sélectionner le groupe de mesures (Assistant Cube) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,26 +8,26 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.cubewizard.mgtableselection.f1
 ms.assetid: 67e8e1ef-c7c6-434e-bd36-4b35f3cb7759
 caps.latest.revision: 10
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 7226745d8b192366b0b811738fea599cd9fa3d72
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: cde02ccb771ba34fcd8614c5de9f9107c2fcc80f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36040728"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37250851"
 ---
 # <a name="select-measure-group-tables-cube-wizard"></a>Sélectionner les tables de groupes de mesures (Assistant Cube)
   Utilisez la page **Sélectionner les tables de groupes de mesures** pour identifier la vue de source de données et sélectionner les tables de groupes de mesures pour le cube.  
   
 ## <a name="options"></a>Options  
- **vue de source de données**  
+ **Vue de source de données**  
  Permet de sélectionner la vue de source de données à utiliser pour le cube.  
   
  **Tables de groupes de mesures**  

@@ -1,5 +1,5 @@
 ---
-title: Liste de vérification de la préparation pour l’exploration de données | Documents Microsoft
+title: Liste de vérification de préparation pour l’exploration de données | Microsoft Docs
 ms.custom: ''
 ms.date: 12/29/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 0e056c95-ba06-413e-8dc1-4d411a447c3b
 caps.latest.revision: 9
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 4f7429dd799a1081bd1a03e985a8772b04498129
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 0bed960058bdc9120089d89a32a3ede0bf2f3160
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36153832"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37232499"
 ---
 # <a name="checklist-of-preparation-for-data-mining"></a>Liste de vérification : préparation pour l'exploration de données
   Bien que les compléments d'exploration de données facilitent et agrémentent la création de modèles et leur expérimentation, lorsque vous devez obtenir des résultats reproductibles et utilisables, vous devez prévoir suffisamment de temps pour formuler les critères fondamentaux pour l'entreprise, ainsi que pour obtenir et préparer les données. Cette section fournit une liste de vérification pour vous aider à planifier les tâches d'inspection, et décrit les problèmes courants.  
@@ -38,7 +38,7 @@ ms.locfileid: "36153832"
   
 -   Pouvez-vous mapper les nouvelles données d'entrée aux résultats attendus ?  
   
- **Je connais la signification, types de données et la distribution des données d’entrée.**  
+ **Je sais la signification, types de données et la distribution des données d’entrée.**  
  Prenez le temps d'explorer et comprendre vos données source. Il est important que les personnes qui examinent le modèle comprennent le type de données d'entrée qui a été utilisé et sachent interpréter les types de données et la variabilité, ainsi que l'équilibre et la qualité.  
   
 -   De quel volume de données disposez-vous ? Les données sont-elles suffisantes pour la modélisation ?  
@@ -85,14 +85,14 @@ ms.locfileid: "36153832"
   
 -   Votre infrastructure de traitement des données peut-elle également appliquer des algorithmes d'apprentissage automatique, réaliser des tests et visualiser les résultats ?  
   
- **Nous sommes entendus sur la granularité souhaitée des prédictions et nos données ont été modifiées pour obtenir ces unités.**  
+ **Nous sommes entendus sur la granularité souhaitée des prédictions et nos données ont été modifiées pour ces unités de sortie.**  
  Décidez de la granularité des résultats que vous recherchez avant de préparer des données. Par exemple, avez-vous besoin des prédictions de ventes chaque jour ou pour chaque trimestre ? Envisagez éventuellement de configurer différentes structures de données pour les mêmes données de façon à gérer différents niveaux de résumé.  
   
 -   Quelle est l'unité de mesure ou l'unité de temps actuelle ?  
   
      Quelle unité souhaitez-vous utiliser dans les résultats ?  
   
--   Il est possible de définir une unité de base (par exemple, date / heure / min / appel d’instruction) pour toutes les données d’entrée ?  
+-   Il est possible de définir une unité de base (par exemple, jour / heure / min / appel d’instruction) pour toutes les données d’entrée ?  
   
      Voulez-vous effectuer le cumul aux unités supérieures ?  
   
@@ -107,7 +107,7 @@ ms.locfileid: "36153832"
   
 -   Avez-vous décidé d'utiliser une valeur initiale pour le modèle ?  
   
- **Nous ont des connaissances dans le domaine pour valider les résultats, ou avoir accès à des experts techniques qui peuvent nous conseiller.**  
+ **Nous disposent de connaissances de domaine pour valider les résultats, ou avoir accès à des experts techniques qui peuvent nous conseiller.**  
  Prenez le temps de valider les variables, le modèle et les résultats. Obtenez de l'aide auprès d'experts pour évaluer les interactions et les résultats. Toutefois, ne laissez aucun des hypothèses remplacer une preuve. Soyez ouvert aux résultats nouveaux et inattendus.  
   
 -   La connaissance de domaine est-elle disponible pour faciliter le filtrage des données et réduire le bruit des données d'entrée ?  

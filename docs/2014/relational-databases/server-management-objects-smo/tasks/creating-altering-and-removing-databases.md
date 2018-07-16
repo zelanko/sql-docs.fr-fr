@@ -1,5 +1,5 @@
 ---
-title: Création, modification et suppression de bases de données | Documents Microsoft
+title: Création, modification et suppression des bases de données | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - databases [SMO], deleting
 ms.assetid: fcfb3ec2-7556-4f72-971a-501295892cb0
 caps.latest.revision: 38
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: cc53250e518b58e8f30c01da9c38bf68a0fd37a0
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 4a23c44b3260f3ce4e8dbe018ba1a24598cb5e59
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36039930"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37318069"
 ---
 # <a name="creating-altering-and-removing-databases"></a>Création, modification et suppression de bases de données
   Dans SMO, une base de données est représentée par l'objet <xref:Microsoft.SqlServer.Management.Smo.Database>.  

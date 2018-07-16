@@ -1,5 +1,5 @@
 ---
-title: Options (Page de mise en forme de l’éditeur de texte - XML -) | Documents Microsoft
+title: Options (Page de mise en forme de l’éditeur de texte - XML -) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - VS.ToolsOptionsPages.Text_Editor.XML.Formatting
 ms.assetid: 97373178-d288-4127-af37-d9f5fe1b8607
 caps.latest.revision: 12
 author: craigg-msft
 ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 5d77f7351d712f63e9cfc92c3ff03b131cb6d5d3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 667b01cbdaa1e5107dcbac8a68879a94d6efc06e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36040027"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37209589"
 ---
 # <a name="options-text-editor---xml---formatting-page"></a>Options (Éditeur de texte - XML - Page Mise en forme)
   Cette boîte de dialogue vous permet de spécifier les paramètres de mise en forme de l'Éditeur XML. Vous pouvez accéder à la boîte de dialogue **Options** à partir du menu **Outils**.  
@@ -36,7 +36,7 @@ ms.locfileid: "36040027"
 > [!NOTE]  
 >  Si les attributs se trouvent sur plusieurs lignes, l'éditeur met en retrait chaque ligne d'attributs de façon à correspondre à la mise en retrait de l'élément parent.  
   
- **Aligner les attributs chacun sur une ligne distincte**  
+ **Aligne chaque attribut sur une ligne distincte**  
  Aligne verticalement le deuxième attribut et les attributs suivants de façon à correspondre à la mise en retrait du premier attribut. Le texte XML suivant montre comment les attributs sont alignés lorsque cette option est sélectionnée.  
   
 ```  
@@ -50,7 +50,7 @@ ms.locfileid: "36040027"
  **Lors du collage à partir du Presse-papiers.**  
  Remet en forme le texte XML collé à partir du Presse-papiers.  
   
- **À la fin de la balise de fin**  
+ **Sur la balise de fin**  
  Remet en forme l'élément lorsque la balise de fin est insérée.  
   
 ## <a name="mixed-content"></a>Contenu mixte  
@@ -65,7 +65,7 @@ ms.locfileid: "36040027"
   <file readOnly="false">test2.txt</file>  
 ```  
   
- \<dir >  
+ \</dir >  
   
 ## <a name="see-also"></a>Voir aussi  
  [Éditeur XML &#40;SQL Server Management Studio&#41;](../ssms/sql-server-management-studio-ssms.md)  

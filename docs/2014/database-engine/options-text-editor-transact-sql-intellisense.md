@@ -1,5 +1,5 @@
 ---
-title: Options (éditeur de texte-Transact-SQL-IntelliSense) | Documents Microsoft
+title: Options (éditeur de texte-Transact-SQL-IntelliSense) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - VS.ToolsOptionsPages.Text_Editor.SQL.Advanced
 dev_langs:
@@ -17,13 +17,13 @@ ms.assetid: 1855d916-5bf9-4d94-b0fb-9f9bb05ff950
 caps.latest.revision: 15
 author: craigg-msft
 ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 67dc90ab7682d4882a3d64b78af1a69968fd2247
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 7c63a9d226372e155f52f57b473346c9caf7ba1e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36153994"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37332225"
 ---
 # <a name="options-text-editor-transact-sql-intellisense"></a>Options (Text Editor-Transact-SQL-IntelliSense)
   La boîte de dialogue **Options** vous permet de modifier les paramètres IntelliSense pour l'éditeur de requête du [!INCLUDE[ssDE](../includes/ssde-md.md)] . Pour accéder à ces paramètres, dans le menu **Outils** , cliquez sur **Options**, développez le dossier **Éditeur de texte** , puis le dossier **Transact-SQL** , et cliquez sur **Avancés**.  

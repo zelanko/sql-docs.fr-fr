@@ -1,5 +1,5 @@
 ---
-title: Créer un projet SMO Visual Basic dans Visual Studio .NET | Documents Microsoft
+title: Créer un projet SMO Visual Basic dans Visual Studio .NET | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -16,20 +16,20 @@ helpviewer_keywords:
 - Visual Basic [SMO]
 ms.assetid: d7a3892c-0f1c-4c4d-8480-b58dce3720bc
 caps.latest.revision: 43
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 3a3f3db2487a60c80d9fdb933298784b69db8718
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 0a3cacc04d8ce4afd863c7ef3cc8d21e1446c319
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36144569"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37213789"
 ---
 # <a name="create-a-visual-basic-smo-project-in-visual-studio-net"></a>Créer un projet SMO Visual Basic dans Visual Studio .NET
   Cette section décrit comment élaborer une application de console SMO simple.  
   
- Cet exemple importe des espaces de noms, qui permettent au programme de référencer des types SMO. L'importation de l'espace de noms `Agent` est facultative. Utilisez-la lorsque vous écrivez un programme qui utilise [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent. L'espace de noms `Common` est requis pour établir une connexion sécurisée avec l'instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. L'espace de noms `SqlClient` est utilisé pour traiter les erreurs d'exception SQL.  
+ Cet exemple importe des espaces de noms, qui permettent au programme de référencer des types SMO. L'importation de l'espace de noms `Agent` est facultative. Utilisez-le lorsque vous écrivez un programme qui utilise [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent. L'espace de noms `Common` est requis pour établir une connexion sécurisée avec l'instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. L'espace de noms `SqlClient` est utilisé pour traiter les erreurs d'exception SQL.  
   
 ### <a name="creating-a-visual-basic-smo-project-in-visual-studionet"></a>Création d'un projet SMO Visual Basic dans Visual Studio.NET  
   

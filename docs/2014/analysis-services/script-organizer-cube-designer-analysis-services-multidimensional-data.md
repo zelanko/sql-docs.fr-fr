@@ -1,5 +1,5 @@
 ---
-title: Générer un script organisateur (onglet calculs, Concepteur de Cube) (Analysis Services - données multidimensionnelles) | Documents Microsoft
+title: Script organisateur (onglet calculs, Concepteur de Cube) (Analysis Services - données multidimensionnelles) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.cubeeditor.calculationsview.scriptorganizerpane.f1
 ms.assetid: 92624ca4-de67-4ebd-aab2-8adb527d327e
 caps.latest.revision: 20
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: d079ca2d921000390f1d0f66265474febe1f1988
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 82bde6a6773306fb0e90617d82c9198606c3c202
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36142582"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37216109"
 ---
 # <a name="script-organizer-calculations-tab-cube-designer-analysis-services---multidimensional-data"></a>Organisateur de script (onglet Calculs, Concepteur de cube) (Analysis Services - Données multidimensionnelles)
   Utilisez le volet **Organisateur de script** de l’onglet **Calculs** dans le Concepteur de cube pour accéder aux membres calculés, jeux nommés et commandes du script du cube défini, et pour les réorganiser.  

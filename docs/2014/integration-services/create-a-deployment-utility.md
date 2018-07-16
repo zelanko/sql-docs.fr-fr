@@ -1,5 +1,5 @@
 ---
-title: Créer un utilitaire de déploiement | Documents Microsoft
+title: Créer un utilitaire de déploiement | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - deploying packages [Integration Services], deployment utility
 - deployment utility [Integration Services]
 ms.assetid: 354322a4-ae8c-4d92-8e71-42d29dbd0614
 caps.latest.revision: 49
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: c7e51388856f6bbd63382410100b5655194ec3d6
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 09c39bccc82df8539fc419180465739cf1ed8054
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36154228"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37273115"
 ---
 # <a name="create-a-deployment-utility"></a>Créer un utilitaire de déploiement
   La première étape de déploiement des packages consiste à créer un utilitaire de déploiement pour un projet [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]. L'utilitaire de déploiement est un dossier qui contient les fichiers dont vous avez besoin pour déployer les packages dans un projet [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] sur un serveur différent. L'utilitaire de déploiement est créé sur l'ordinateur sur lequel le projet [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] est stocké.  
@@ -51,7 +51,7 @@ ms.locfileid: "36154228"
   
 3.  Dans la boîte de dialogue **\<Pages de propriétés de <nom_projet**, cliquez sur **Utilitaire de déploiement**.  
   
-4.  Pour mettre à jour les configurations de package lors du déploiement de packages, définissez **AllowConfigurationChanges** à `True`.  
+4.  Pour mettre à jour les configurations de package lors du déploiement de packages, définir **AllowConfigurationChanges** à `True`.  
   
 5.  Définissez `CreateDeploymentUtility` à `True`.  
   

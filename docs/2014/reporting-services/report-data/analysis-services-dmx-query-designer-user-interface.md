@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - "10012"
 - sql12.rtp.rptdesigner.dataview.asquerydesigner.f1
@@ -18,18 +18,18 @@ helpviewer_keywords:
 - query designers [DMX]
 ms.assetid: 5fd726a4-aed7-4e6c-9404-ccb2db66cf26
 caps.latest.revision: 34
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 69ac2db218c6c33ae7477874e6817da77ce9d591
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: d8b4d662cb54e827f8810695c4945f2eee25d327
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36040125"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37286705"
 ---
 # <a name="analysis-services-dmx-query-designer-user-interface"></a>Interface utilisateur du Concepteur de requêtes DMX Analysis Services
-  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] fournit des concepteurs de requêtes graphiques pour la création de requêtes DMX (Data Mining Expressions) et MDX (Multidimensional Expression) pour une source de données [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]. Cette rubrique offre une description du Concepteur de requêtes DMX. Pour plus d’informations sur le Concepteur de requêtes MDX, consultez [Interface utilisateur des Concepteur de requêtes Analysis Services MDX](analysis-services-mdx-query-designer-user-interface.md).  
+  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] fournit des concepteurs de requêtes graphiques pour la création de requêtes DMX (Data Mining Expressions) et MDX (Multidimensional Expression) pour une source de données [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]. Cette rubrique offre une description du Concepteur de requêtes DMX. Pour plus d’informations sur le Concepteur de requêtes MDX, consultez [Interface utilisateur Concepteur de requêtes MDX Analysis Services](analysis-services-mdx-query-designer-user-interface.md).  
   
  Le Concepteur de requêtes graphique DMX comporte trois modes : Création, Requête et Résultat. Pour passer d'un mode à l'autre, cliquez avec le bouton droit dans le volet Concepteur de requêtes et sélectionnez le mode souhaité. Chaque mode fournit un volet Métadonnées à partir duquel vous pouvez faire glisser des membres de cubes sélectionnés pour créer une requête DMX qui extrait des données pour un dataset lors du traitement du rapport.  
   
@@ -88,12 +88,12 @@ ms.locfileid: "36040125"
  Pour repasser en mode Création ou en mode Requête, cliquez avec le bouton droit dans le volet Résultat et sélectionnez **Conception** ou **Requête**.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Définir des paramètres dans le Concepteur de requêtes MDX pour Analysis Services &#40;rapport Générateur et SSRS&#41;](define-parameters-in-the-mdx-query-designer-for-analysis-services.md)   
+ [Définir des paramètres dans le Concepteur de requêtes MDX pour Analysis Services &#40;Générateur de rapports et SSRS&#41;](define-parameters-in-the-mdx-query-designer-for-analysis-services.md)   
  [Créer un dataset partagé ou incorporé &#40;Générateur de rapports et SSRS&#41;](create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md)   
- [Analysis Services de Type de connexion pour DMX &#40;SSRS&#41;](analysis-services-connection-type-for-dmx-ssrs.md)   
+ [Type de connexion Analysis Services pour DMX &#40;SSRS&#41;](analysis-services-connection-type-for-dmx-ssrs.md)   
  [Récupérer des données d’un modèle d’exploration de données &#40;DMX&#41; &#40;SSRS&#41;](retrieve-data-from-a-data-mining-model-dmx-ssrs.md)   
  [Fichier de configuration RSReportDesigner](../report-server/rsreportdesigner-configuration-file.md)   
- [Analysis Services de Type de connexion pour MDX &#40;SSRS&#41;](analysis-services-connection-type-for-mdx-ssrs.md)   
- [Analysis Services de Type de connexion pour DMX &#40;SSRS&#41;](analysis-services-connection-type-for-dmx-ssrs.md)  
+ [Type de connexion Analysis Services pour MDX &#40;SSRS&#41;](analysis-services-connection-type-for-mdx-ssrs.md)   
+ [Type de connexion Analysis Services pour DMX &#40;SSRS&#41;](analysis-services-connection-type-for-dmx-ssrs.md)  
   
   

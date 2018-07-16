@@ -1,5 +1,5 @@
 ---
-title: Aperçu de la Table sélectionnée (SSAS) | Documents Microsoft
+title: Aperçu de la Table (SSAS) sélectionnée | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.bidtoolset.previewselecttable.f1
 ms.assetid: b6b34b5a-43b3-4a75-9f3b-b2ad1084b1b6
 caps.latest.revision: 11
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: ccaa243593d2885ab935e1cbe4da5c194d36b708
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 49207b2d1574593c14ca6b005febebb28864dec3
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36038683"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37314985"
 ---
 # <a name="preview-selected-table-ssas"></a>Aperçu de la table sélectionnée (SSAS)
   Cette page de l' **Assistant Importation de table** vous permet d'afficher un aperçu des données dans la table sélectionnée, pour sélectionner les colonnes à inclure dans l'importation de données et pour filtrer des données dans les colonnes sélectionnées. Pour accéder à l'Assistant [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)], dans le menu **Modèle** , cliquez sur **Importer à partir de la source de données**.  
@@ -39,7 +39,7 @@ ms.locfileid: "36038683"
  **Bouton de flèche vers le bas dans l’en-tête de colonne**  
  Filtrez les données dans la colonne.  
   
- **Désactivez les filtres de lignes**  
+ **Effacer les filtres de lignes**  
  Supprimez tous les filtres appliqués aux données dans les colonnes.  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Attacher et détacher des bases de données Analysis Services | Documents Microsoft
+title: Attacher et détacher des bases de données Analysis Services | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.ssms.detachdatabase.f1
 - sql12.asvs.ssms.attachdatabase.f1
@@ -19,21 +19,21 @@ helpviewer_keywords:
 - databases [Analysis Services], detach
 ms.assetid: 41887413-2d47-49b8-8614-553cb799fb18
 caps.latest.revision: 23
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: f8c997e90d611f1ab574ae483d4c71ee5d8fa777
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 4e9853b445f795d5bafdfb8839496056a521900d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36040766"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37271745"
 ---
 # <a name="attach-and-detach-analysis-services-databases"></a>Attacher et détacher des bases de données Analysis Services
-  Il existe souvent des cas où un administrateur de base de données [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] (dba) souhaite mettre une base de données hors connexion pendant un certain temps, puis la replacer en ligne sur la même (ou une autre) instance de serveur. Ces cas sont souvent motivés par des impératifs d’exploitation, tels que le déplacement de la base de données vers un autre disque afin d’obtenir de meilleures performances, le gain de place afin de permettre la croissance de la base de données, ou la mise à niveau d'un produit. Pour tous ces cas, entre autres, les `Attach` et `Detach` commandes permettent le [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] dba pour mettre la base de données hors connexion et les mettre en ligne avec un minimum d’effort.  
+  Il existe souvent des cas où un administrateur de base de données [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] (dba) souhaite mettre une base de données hors connexion pendant un certain temps, puis la replacer en ligne sur la même (ou une autre) instance de serveur. Ces cas sont souvent motivés par des impératifs d’exploitation, tels que le déplacement de la base de données vers un autre disque afin d’obtenir de meilleures performances, le gain de place afin de permettre la croissance de la base de données, ou la mise à niveau d'un produit. Pour tous ces cas et bien plus encore, le `Attach` et `Detach` commandes activent le [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] dba pour mettre la base de données hors connexion et la mettre en ligne avec peu d’efforts.  
   
 ## <a name="attach-and-detach-commands"></a>Commandes Attach et Detach  
- Le `Attach` vous permet de mettre en ligne une base de données qui a été mis hors connexion. Vous pouvez attacher la base de données à l'instance de serveur d'origine ou à une autre instance. Lorsque vous attachez une base de données, l'utilisateur peut spécifier le paramètre **ReadWriteMode** pour la base de données. La commande `Detach` permet de placer en mode hors connexion une base de données du serveur.  
+ Le `Attach` commande vous permet de mettre en ligne une base de données qui a été mis hors connexion. Vous pouvez attacher la base de données à l'instance de serveur d'origine ou à une autre instance. Lorsque vous attachez une base de données, l'utilisateur peut spécifier le paramètre **ReadWriteMode** pour la base de données. La commande `Detach` permet de placer en mode hors connexion une base de données du serveur.  
   
 ## <a name="attach-and-detach-usage"></a>Utilisation des commandes Attach et Detach  
  Le `Attach` commande est utilisée pour mettre en ligne une structure de base de données existante. Si la base de données est attachée en `ReadWrite` mode, il peut être jointe qu’une seule fois à une instance de serveur. Toutefois, si la base de données est attachée en `ReadOnly` mode, il peut être jointe plusieurs fois pour différentes instances de serveur. Par ailleurs, la même base de données ne peut pas être attachée plus d'une fois à la même instance de serveur. Une erreur est déclenchée en cas de tentative faite pour attacher la même base de données plusieurs fois, même si les données ont été copiées dans des dossiers distincts.  
@@ -55,7 +55,7 @@ ms.locfileid: "36040766"
  Les commandes `Attach` et `Detach` doivent être exécutées comme de simples opérations. Elles ne peuvent pas être combinées à d'autres opérations de la même transaction. En outre, le `Attach` et `Detach` commandes sont des commandes transactionnelles atomiques. Cela signifie que soit l'opération réussit, soit elle échoue. Aucune base de données ne demeurera dans un état inachevé.  
   
 > [!IMPORTANT]  
->  Serveur de base de données de privilèges d’administrateur sont nécessaires pour exécuter le `Detach` commande.  
+>  Serveur ou des privilèges d’administrateur de base de données sont nécessaires pour exécuter le `Detach` commande.  
   
 > [!IMPORTANT]  
 >  Les privilèges d'administrateur de serveur sont requis pour exécuter la commande `Attach`.  

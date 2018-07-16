@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - connections [Reporting Services], configuring
 - rsconfig utility
@@ -19,13 +19,13 @@ ms.assetid: 84e45a2f-3ca6-4c16-8259-c15ff49d72ad
 caps.latest.revision: 46
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 631b2dfd94ce74dd96a7d411f18ecb07182460e6
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 5598de66babc70f9301894d96b215e903e6654e6
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36154324"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37196759"
 ---
 # <a name="rsconfig-utility-ssrs"></a>Utilitaire rsconfig (SSRS)
   L’utilitaire **rsconfig.exe** chiffre et stocke des valeurs de connexion et de compte dans le fichier RSReportServer.config. Les valeurs chiffrées incluent les informations de connexion à la base de données du serveur de rapports et les valeurs de compte utilisées pour le traitement des rapports sans assistance.  
@@ -60,7 +60,7 @@ ms.locfileid: "36154324"
 |`-d`  *DatabaseName*|Obligatoire.|Spécifie le nom de la base de données du serveur de rapports.|  
 |`-a`  *méthode d’authentification*|Obligatoire.|Détermine la méthode d'authentification utilisée par le serveur de rapports pour la connexion à la base de données du serveur de rapports. Les valeurs valides sont `Windows` ou `SQL` (cet argument ne respecte pas la casse).<br /><br /> `Windows` spécifie que le serveur de rapports utilise l'authentification Windows.<br /><br /> `SQL` Spécifie que le serveur de rapports utilise l’authentification SQL Server.|  
 |`-u`  *[domaine\\] nom d’utilisateur*|Obligatoire avec `-e` Facultatif avec `-c`.|Spécifie un compte d'utilisateur pour la connexion à la base de données du serveur de rapports ou pour le compte sans assistance.<br /><br /> Pour **rsconfig -e**, cet argument est obligatoire. Il doit être un compte d'utilisateur de domaine.<br /><br /> Pour **rsconfig - c** et `-a SQL`, cet argument doit spécifier un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] connexion.<br /><br /> Pour **rsconfig - c** et `-a Windows`, cet argument doit spécifier un utilisateur de domaine, un compte intégré ou informations d’identification du compte de service. Si vous spécifiez un compte de domaine, spécifiez *domain* et *username* sous la forme *domaine\nom_utilisateur*. Si vous utilisez un compte prédéfini, cet argument est facultatif. Si vous souhaitez utiliser des informations d'identification de compte de service, omettez cet argument.|  
-|`-p`  *Mot de passe*|Obligatoire si `-u` est spécifié.|Définit le mot de passe à utiliser avec l'argument *username* . Vous pouvez affecter une valeur vide à cet argument si le compte n'exige pas de mot de passe. Cette valeur respecte la casse pour les comptes de domaine.|  
+|`-p`  *mot de passe*|Obligatoire si `-u` est spécifié.|Définit le mot de passe à utiliser avec l'argument *username* . Vous pouvez affecter une valeur vide à cet argument si le compte n'exige pas de mot de passe. Cette valeur respecte la casse pour les comptes de domaine.|  
 |`-t`|Facultatif.|Envoie des messages d'erreur au journal de suivi. Cet argument ne prend pas de valeur. Pour plus d’informations, consultez [Report Server Service Trace Log](../report-server/report-server-service-trace-log.md).|  
   
 ## <a name="permissions"></a>Autorisations  
@@ -132,6 +132,6 @@ rsconfig -e -m <REMOTECOMPUTERNAME> -s <SQLSERVERNAME> -u <DOMAIN\ACCOUNT> -p <P
  [Stocker des données chiffrées du serveur de rapports &#40;Gestionnaire de configuration de SSRS&#41;](../install-windows/ssrs-encryption-keys-store-encrypted-report-server-data.md)   
  [Fichiers de configuration de Reporting Services](../report-server/reporting-services-configuration-files.md)   
  [Utilitaires d’invite de commandes de serveur de rapports &#40;SSRS&#41;](report-server-command-prompt-utilities-ssrs.md)   
- [Fichier de Configuration RSReportServer](../report-server/rsreportserver-config-configuration-file.md)  
+ [Fichier de configuration RSReportServer](../report-server/rsreportserver-config-configuration-file.md)  
   
   

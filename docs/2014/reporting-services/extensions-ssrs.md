@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 2bb0fdca-1837-49f5-b542-61826bab0b46
 caps.latest.revision: 6
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 17b923177aed9583b3757baadce00b6a1aa01038
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: d9f51af9131329a37be6772310dd2817e4f62fd2
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36153660"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37282935"
 ---
 # <a name="extensions-ssrs"></a>Extensions (SSRS)
   Le serveur de rapports dans [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] utilise des extensions pour moduler les types d’entrées ou de sorties qu’il accepte pour l’authentification, le traitement des données, le rendu et la remise de rapports. Cela facilite l'utilisation de nouveau standards logiciels, tels qu'un nouveau schéma d'authentification ou un type de source de données personnalisé, par les installations de [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] existantes. Le serveur de rapports prend en charge les extensions d'authentification personnalisées, les extensions pour le traitement des données, les extensions pour le traitement des rapports, les extensions de rendu et les extensions de remise. De plus, les extensions qui sont à la disposition des utilisateurs sont configurables dans le fichier de configuration RSReportServer.config. Par exemple, vous pouvez limiter les formats d'exportation que la visionneuse de rapport est autorisée à utiliser. Un serveur de rapports nécessite au moins une extension d'authentification, une extension pour le traitement des données et une extension de rendu. Les extensions de remise et de traitement des rapports sont facultatives, mais nécessaires si vous voulez prendre en charge la diffusion des rapports ou les contrôles personnalisés.  
@@ -59,7 +59,7 @@ ms.locfileid: "36153660"
 ## <a name="rendering-extensions"></a>Extensions de rendu  
  Les extensions de rendu transforment les données et les informations de mise en page du processeur de rapport en un format spécifique au périphérique. [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] inclut sept extensions de rendu : HTML, Excel, CSV, XML, Image, PDF et [!INCLUDE[msCoName](../includes/msconame-md.md)] Word.  
   
--   **Extension de rendu HTML** Quand vous demandez un rapport auprès du serveur de rapports par le biais d’un navigateur web, le serveur de rapports utilise l’extension de rendu HTML pour le rendu du rapport. L'extension de rendu HTML génère l'ensemble du HTML selon la norme d'encodage UTF-8. Pour plus d’informations, consultez [rendu au format HTML &#40;le Générateur de rapports et SSRS&#41; ](report-builder/rendering-to-html-report-builder-and-ssrs.md) et [planification pour Reporting Services et la prise en charge du navigateur Power View &#40;Reporting Services 2014&#41; ](../../2014/reporting-services/browser-support-for-reporting-services-and-power-view.md).  
+-   **Extension de rendu HTML** Quand vous demandez un rapport auprès du serveur de rapports par le biais d’un navigateur web, le serveur de rapports utilise l’extension de rendu HTML pour le rendu du rapport. L'extension de rendu HTML génère l'ensemble du HTML selon la norme d'encodage UTF-8. Pour plus d’informations, consultez [rendu au format HTML &#40;Générateur de rapports et SSRS&#41; ](report-builder/rendering-to-html-report-builder-and-ssrs.md) et [planification pour Reporting Services et la prise en charge du navigateur Power View &#40;Reporting Services 2014&#41; ](../../2014/reporting-services/browser-support-for-reporting-services-and-power-view.md).  
   
 -   **Extension de rendu Excel** L’extension de rendu Excel effectue un rendu de rapport qu’il est possible d’afficher et de modifier dans [!INCLUDE[ofprexcel](../includes/ofprexcel-md.md)] 97 ou version ultérieure. Cette extension de rendu crée des fichiers au format BIFF (Binary Interchange File Format), soit le format de fichier natif des données Excel. Les rapports générés dans [!INCLUDE[ofprexcel](../includes/ofprexcel-md.md)] prennent en charge toutes les fonctionnalités disponibles pour n'importe quelle feuille de calcul. Pour plus d’informations, consultez [Exporting to Microsoft Excel &#40;Report Builder and SSRS&#41;](report-builder/exporting-to-microsoft-excel-report-builder-and-ssrs.md).  
   

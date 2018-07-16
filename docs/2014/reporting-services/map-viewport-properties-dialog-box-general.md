@@ -1,5 +1,5 @@
 ---
-title: Mapper la boîte de dialogue Propriétés de la fenêtre d’affichage, général | Documents Microsoft
+title: Mapper la boîte de dialogue Propriétés de la fenêtre d’affichage, général | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,34 +8,34 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.rtp.rptdesigner.mapviewport.general.f1
 - "10505"
 ms.assetid: 6c9c773e-5c56-4571-95ed-8a157cfdfe52
 caps.latest.revision: 6
-author: douglaslM
+author: maggiesmsft
 ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 98b0749983e079249c35d98e2d033b04273e2dd6
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: ea57f5e98aec1e95264908cc080d229d8be573f6
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36154337"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37284645"
 ---
 # <a name="map-viewport-properties-dialog-box-general"></a>Boîte de dialogue Propriétés du point de vue de la carte, Général
   Sélectionnez **Général** dans la boîte de dialogue **Propriétés de la fenêtre d'affichage de la carte** pour modifier le système de coordonnées, la projection et les options de limite.  
   
 ## <a name="options"></a>Options  
- **système de coordonnées**  
+ **Système de coordonnées**  
  Indiquez le type de système de coordonnées utilisé par les données de la carte.  
   
 -   **Planaire** Choisissez cette option lorsque les données cartographiques sont des coordonnées X et Y, par exemple pour des plans de bâtiment.  
   
 -   **Géographique** Choisissez cette option lorsque les données cartographiques sont des coordonnées de longitude et de latitude, par exemple pour l'emplacement des villes.  
   
- **projection**  
+ **Projection**  
  Spécifiez la méthode à utiliser pour projeter des coordonnées géographiques sur une surface à deux dimensions. Choisissez une projection compatible avec les données que vous visualisez. Les quatre propriétés spatiales affectées par la projection sont la zone, la forme, la distance et la direction. Pour des vues du monde, le choix de projection approprié dépend du centre d'affichage, des limites de la carte et du facteur de zoom.  
   
  Chacune des projections suivantes conserve une ou plusieurs de ces propriétés spatiales :  
@@ -70,7 +70,7 @@ ms.locfileid: "36154337"
  **X maximal**  
  Valeur X la plus élevée. Disponible uniquement pour l'option **Planaire** .  
   
- **Y minimum**  
+ **Y minimal**  
  Valeur Y la plus basse. Disponible uniquement pour l'option **Planaire** .  
   
  **Y maximal**  

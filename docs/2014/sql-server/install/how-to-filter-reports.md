@@ -1,5 +1,5 @@
 ---
-title: 'Comment : filtrer les rapports | Documents Microsoft'
+title: 'Comment : filtrer les rapports | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - reports [Upgrade Advisor], filtering
 - filtering reports [Reporting Services]
 ms.assetid: bc3dbe16-f6c1-4f07-8d88-2b8e86302c7e
 caps.latest.revision: 20
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 784c435a62a4388ec18ef86383c5ccf024d093bc
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 0e7a37889bfd795fda62074f2d74efc7d0647eb0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36141954"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37191189"
 ---
 # <a name="how-to-filter-reports"></a>Procédure : filtrer des rapports
   Cette rubrique décrit comment vous pouvez utiliser la visionneuse de rapports de conseiller de mise à niveau pour appliquer des filtres à un rapport.  
@@ -31,7 +31,7 @@ ms.locfileid: "36141954"
   
 1.  Dans la visionneuse de rapports, affichez le rapport que vous souhaitez filtrer. Pour obtenir des instructions, consultez [Comment : afficher un rapport du Conseiller de mise à niveau](../../../2014/sql-server/install/how-to-view-an-upgrade-advisor-report.md).  
   
-2.  Dans le **filtrer par** , sélectionnez un type de problème pour afficher :  
+2.  Dans le **filtrer par** liste, sélectionnez un type de problème à afficher :  
   
     -   **Tous les problèmes**. Cela affiche tous les problèmes qui n'ont pas été marqués comme résolus.  
   
@@ -49,6 +49,6 @@ ms.locfileid: "36141954"
  [Comment : exécuter l’Assistant analyse du Conseiller de mise à niveau](../../../2014/sql-server/install/how-to-run-the-upgrade-advisor-analysis-wizard.md)   
  [Résolution des problèmes de mise à niveau](../../../2014/sql-server/install/resolving-upgrade-issues.md)   
  [Les rubriques de procédures de conseiller de mise à niveau](../../../2014/sql-server/install/upgrade-advisor-how-to-topics.md)   
- [Utilisation avec le Conseiller de mise à niveau](../../../2014/sql-server/install/working-with-upgrade-advisor.md)  
+ [Utilisation du Conseiller de mise à niveau](../../../2014/sql-server/install/working-with-upgrade-advisor.md)  
   
   

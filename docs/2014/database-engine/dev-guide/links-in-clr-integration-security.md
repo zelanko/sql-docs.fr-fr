@@ -1,5 +1,5 @@
 ---
-title: Liens de sécurité de l’intégration CLR | Documents Microsoft
+title: Liens de la sécurité de l’intégration CLR | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - gated links [CLR integration]
 ms.assetid: 168efd01-d12e-4bdf-a1b3-0b5c76474eaf
 caps.latest.revision: 37
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: edd8600e3c8e577ef020d732cce3924252393ce1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 58f1d4ada74d7d64b9a5c44060f0cdd0fce8fcce
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36153997"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37243099"
 ---
 # <a name="links-in-clr-integration-security"></a>Liens dans la sécurité d'intégration du CLR
   Cette section décrit la façon dont les parties de code utilisateur peuvent s'appeler dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], en langage [!INCLUDE[tsql](../../includes/tsql-md.md)] ou dans l'un des langages managés. Ces relations entre objets sont connues sous le nom de liens.  

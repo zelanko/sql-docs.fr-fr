@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - greater than operator (>)
 - '> (greater than operator)'
@@ -16,13 +16,13 @@ ms.assetid: 2e22efa3-eeb1-4984-a95c-9bccdcf98892
 caps.latest.revision: 47
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 8e9333ffac363c12176057ab4da006881ce4cbe8
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 9d03b080b757fc8cdc8ffdc52d4ac7c0734cdbfe
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36144356"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37250549"
 ---
 # <a name="gt-greater-than-ssis-expression"></a>&gt; (Supérieur à) (expression SSIS)
   Effectue une comparaison pour déterminer si la première expression est supérieure à la deuxième. L'évaluateur d'expression convertit automatiquement de nombreux types de données avant de réaliser la comparaison.  
@@ -104,11 +104,11 @@ ListPrice > 500
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [&#60;&#40;Moins&#41; &#40;Expression SSIS&#41;](less-than-ssis-expression.md)   
+ [&#60;&#40;Inférieure à&#41; &#40;SSIS Expression&#41;](less-than-ssis-expression.md)   
  [&#62;= &#40;Supérieur ou égal à&#41; &#40;expression SSIS&#41;](greater-than-or-equal-to-ssis-expression.md)   
  [&#60;= &#40;Inférieur ou égal à&#41; &#40;expression SSIS&#41;](less-than-or-equal-to-ssis-expression.md)   
- [== &#40;Égal&#41; &#40;Expression SSIS&#41;](equal-ssis-expression.md)   
+ [== &#40;Égal&#41; &#40;SSIS Expression&#41;](equal-ssis-expression.md)   
  [Opérateurs et associativité](operator-precedence-and-associativity.md)   
- [Opérateurs &#40;Expression SSIS&#41;](operators-ssis-expression.md)  
+ [Opérateurs &#40;SSIS Expression&#41;](operators-ssis-expression.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: 'Leçon 4 : Mettre à jour la définition de rapport par programme | Documents Microsoft'
+title: 'Leçon 4 : Mettre à jour la définition de rapport par programme | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 1f0a1d46-6d6d-4f67-b51e-06dbbbffacf9
 caps.latest.revision: 20
-author: douglaslM
+author: craigg-msft
 ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: bb51cfc7677f60d729efeb1e878c4d4709943860
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 18fc88beee15b995c3f705e9b6582d695d94d703
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36152731"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37286495"
 ---
 # <a name="lesson-4-update-the-report-definition-programmatically"></a>Leçon 4 : Mise à jour par programme de la définition du rapport
   Maintenant que la définition du rapport a été chargée depuis le serveur de rapports et que vous pouvez y faire référence à l'aide du champ du rapport, vous devez la mettre à jour. Pour cet exemple, vous allez mettre à jour la propriété `Description` du rapport.  
@@ -92,9 +92,9 @@ ms.locfileid: "36152731"
     ```  
   
 ## <a name="next-lesson"></a>Leçon suivante  
- Dans la leçon suivante, vous allez réenregistrer la définition modifiée du rapport sur le serveur de rapports. Consultez [leçon 5 : publier la définition de rapport au serveur de rapports](../../2014/tutorials/lesson-5-publish-the-report-definition-to-the-report-server.md).  
+ Dans la leçon suivante, vous allez réenregistrer la définition modifiée du rapport sur le serveur de rapports. Consultez [leçon 5 : publier la définition de rapport sur le serveur de rapports](../../2014/tutorials/lesson-5-publish-the-report-definition-to-the-report-server.md).  
   
 ## <a name="see-also"></a>Voir aussi  
- [Mise à jour des rapports à l’aide des Classes générées à partir du schéma RDL &#40;didacticiel SSRS&#41;](../../2014/tutorials/updating-reports-using-classes-generated-from-the-rdl-schema-ssrs-tutorial.md)  
+ [La mise à jour des rapports à l’aide des Classes générées à partir du schéma RDL &#40;didacticiel SSRS&#41;](../../2014/tutorials/updating-reports-using-classes-generated-from-the-rdl-schema-ssrs-tutorial.md)  
   
   

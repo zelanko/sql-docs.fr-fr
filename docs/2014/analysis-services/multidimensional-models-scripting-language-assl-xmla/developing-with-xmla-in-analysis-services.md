@@ -1,5 +1,5 @@
 ---
-title: Développement avec XMLA dans Analysis Services | Documents Microsoft
+title: Développement avec XMLA dans Analysis Services | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - XMLA, Analysis Services tasks
 ms.assetid: 54445ee7-720c-4683-99a6-e75b3dcca904
 caps.latest.revision: 31
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 04c3459dca4edabcc56753a076bad1e4ffdddfde
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: f4eef38459df5d2d872646a7bc64973028d25ac4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36154489"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37265655"
 ---
 # <a name="developing-with-xmla-in-analysis-services"></a>Développement avec XMLA dans Analysis Services
   XMLA (XML for Analysis) est un protocole XML basé sur SOAP (Simple Object Access Protocol) conçu spécifiquement pour offrir un accès universel à n'importe quelle source de données multidimensionnelle standard accessible via une connexion HTTP. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] utilise XMLA comme seul protocole pour communiquer avec les applications clientes. Fondamentalement, toutes les bibliothèques clientes prises en charge par Analysis Services formulent des demandes et des réponses XMLA.  
@@ -44,21 +44,21 @@ ms.locfileid: "36154489"
 |[Gestion des erreurs et avertissements &#40;XMLA&#41;](handling-errors-and-warnings-xmla.md)|Indique comment [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] retourne les informations d'erreur et d'avertissement pour les méthodes et les commandes XMLA.|  
 |[Définition et identification d’objets &#40;XMLA&#41;](../xmla/xml-elements-objects.md)|Décrit les identificateurs et références d'objet et explique comment les utiliser dans les commandes XMLA.|  
 |[Gestion des Transactions &#40;XMLA&#41;](managing-transactions-xmla.md)|Explique comment utiliser le [BeginTransaction](../xmla/xml-elements-commands/begintransaction-element-xmla.md), [CommitTransaction](../xmla/xml-elements-commands/committransaction-element-xmla.md), et [RollbackTransaction](../xmla/xml-elements-commands/rollbacktransaction-element-xmla.md) commandes pour définir explicitement et gérer une transaction sur le code XMLA en cours session.|  
-|[Annulation de commandes &#40;XMLA&#41;](../multidimensional-models-scripting-language-assl-xmla/canceling-commands-xmla.md)|Décrit comment utiliser le [Annuler](../xmla/xml-elements-commands/cancel-element-xmla.md)commande pour annuler des commandes, les sessions et connexions XMLA.|  
-|[Exécution d’opérations de traitement par lots &#40;XMLA&#41;](performing-batch-operations-xmla.md)|Décrit comment utiliser le [lot](../xmla/xml-elements-commands/batch-element-xmla.md) commande à exécuter XMLA plusieurs commandes, en série ou en parallèle, dans la même transaction ou en tant que transactions distinctes, à l’aide d’un seul XMLA [Execute](../xmla/xml-elements-methods-execute.md) (méthode).|  
-|[Création et modification d’objets &#40;XMLA&#41;](creating-and-altering-objects-xmla.md)|Décrit comment utiliser le [créer](../xmla/xml-elements-commands/create-element-xmla.md), [Alter](../xmla/xml-elements-commands/alter-element-xmla.md), et [supprimer](../xmla/xml-elements-commands/delete-element-xmla.md) commandes, ainsi que les éléments d’Analysis Services Scripting Language (ASSL), pour définir, modifier ou supprimer objets d’un [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] instance.|  
+|[Annulation de commandes &#40;XMLA&#41;](../multidimensional-models-scripting-language-assl-xmla/canceling-commands-xmla.md)|Décrit comment utiliser le [Annuler](../xmla/xml-elements-commands/cancel-element-xmla.md)commande pour annuler des commandes, les sessions et connexions dans XMLA.|  
+|[Exécution d’opérations de traitement par lots &#40;XMLA&#41;](performing-batch-operations-xmla.md)|Décrit comment utiliser le [Batch](../xmla/xml-elements-commands/batch-element-xmla.md) commande à exécuter XMLA plusieurs commandes, en série ou en parallèle, dans la même transaction ou en tant que transactions distinctes, à l’aide d’un seul XMLA [Execute](../xmla/xml-elements-methods-execute.md) (méthode).|  
+|[Création et modification d’objets &#40;XMLA&#41;](creating-and-altering-objects-xmla.md)|Décrit comment utiliser le [créer](../xmla/xml-elements-commands/create-element-xmla.md), [Alter](../xmla/xml-elements-commands/alter-element-xmla.md), et [supprimer](../xmla/xml-elements-commands/delete-element-xmla.md) commandes, ainsi que des éléments Analysis Services Scripting Language (ASSL), pour définir, modifier ou supprimer objets à partir d’un [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] instance.|  
 |[Verrouillage et déverrouillage de bases de données &#40;XMLA&#41;](locking-and-unlocking-databases-xmla.md)|Explique comment utiliser le [verrou](../xmla/xml-elements-commands/lock-element-xmla.md) et [Unlock](../xmla/xml-elements-commands/unlock-element-xmla.md) commandes pour verrouiller et déverrouiller une [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] base de données.|  
-|[Le traitement des objets &#40;XMLA&#41;](processing-objects-xmla.md)|Décrit comment utiliser le [processus](../xmla/xml-elements-commands/process-element-xmla.md) commande au processus un [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] objet.|  
-|[La fusion de Partitions &#40;XMLA&#41;](merging-partitions-xmla.md)|Décrit comment utiliser le [MergePartitions](../xmla/xml-elements-commands/mergepartitions-element-xmla.md) commande pour fusionner des partitions sur un [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] instance.|  
-|[Conception d’agrégations &#40;XMLA&#41;](designing-aggregations-xmla.md)|Décrit comment utiliser le [DesignAggregations](../xmla/xml-elements-commands/designaggregations-element-xmla.md) commande, soit dans itératif ou en mode de traitement par lots, pour concevoir des agrégations pour une conception d’agrégation dans [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].|  
+|[Traitement des objets &#40;XMLA&#41;](processing-objects-xmla.md)|Décrit comment utiliser le [processus](../xmla/xml-elements-commands/process-element-xmla.md) commande au processus un [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] objet.|  
+|[Fusion de Partitions &#40;XMLA&#41;](merging-partitions-xmla.md)|Décrit comment utiliser le [MergePartitions](../xmla/xml-elements-commands/mergepartitions-element-xmla.md) commande pour fusionner des partitions sur un [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] instance.|  
+|[Conception d’agrégations &#40;XMLA&#41;](designing-aggregations-xmla.md)|Décrit comment utiliser le [DesignAggregations](../xmla/xml-elements-commands/designaggregations-element-xmla.md) commande, soit dans itératif ou en mode batch, pour concevoir des agrégations pour une conception d’agrégation dans [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].|  
 |[Sauvegarde, restauration et synchronisation de bases de données &#40;XMLA&#41;](backing-up-restoring-and-synchronizing-databases-xmla.md)|Décrit comment utiliser le [sauvegarde](../xmla/xml-elements-commands/backup-element-xmla.md) et [restaurer](../xmla/xml-elements-commands/restore-element-xmla.md) commandes pour sauvegarder et restaurer un [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] base de données à partir d’un fichier de sauvegarde.<br /><br /> Décrit également comment utiliser le [synchroniser](../xmla/xml-elements-commands/synchronize-element-xmla.md) commande pour synchroniser un [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] base de données avec une base de données existante sur la même instance ou sur une autre instance.|  
-|[Insertion, mise à jour et suppression de membres &#40;XMLA&#41;](inserting-updating-and-dropping-members-xmla.md)|Décrit comment utiliser le [insérer](../xmla/xml-elements-commands/insert-element-xmla.md), [mise à jour](../xmla/xml-elements-commands/update-element-xmla.md), et [supprimer](../xmla/xml-elements-commands/drop-element-xmla.md) commandes permettant d’ajouter, modifier ou supprimer des membres dans une dimension activée en écriture.|  
-|[Mise à jour de cellules &#40;XMLA&#41;](updating-cells-xmla.md)|Décrit comment utiliser le [UpdateCells](../xmla/xml-elements-commands/updatecells-element-xmla.md) commande pour modifier les valeurs des cellules dans une partition activée en écriture.|  
+|[Insertion, mise à jour et suppression de membres &#40;XMLA&#41;](inserting-updating-and-dropping-members-xmla.md)|Décrit comment utiliser le [insérer](../xmla/xml-elements-commands/insert-element-xmla.md), [mise à jour](../xmla/xml-elements-commands/update-element-xmla.md), et [Drop](../xmla/xml-elements-commands/drop-element-xmla.md) commandes pour ajouter, modifier ou supprimer des membres dans une dimension activée en écriture.|  
+|[La mise à jour de cellules &#40;XMLA&#41;](updating-cells-xmla.md)|Décrit comment utiliser le [UpdateCells](../xmla/xml-elements-commands/updatecells-element-xmla.md) commande pour modifier les valeurs des cellules dans une partition activée en écriture.|  
 |[Gestion des Caches &#40;XMLA&#41;](managing-caches-xmla.md)|Explique comment utiliser le [ClearCache](../xmla/xml-elements-commands/clearcache-element-xmla.md) commande pour effacer les caches de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] objets.|  
-|[Surveillance de Traces &#40;XMLA&#41;](monitoring-traces-xmla.md)|Décrit comment utiliser le [s’abonner](../xmla/xml-elements-commands/subscribe-element-xmla.md) commande s’abonner à et surveiller une trace existante sur un [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] instance.|  
+|[Surveillance de Traces &#40;XMLA&#41;](monitoring-traces-xmla.md)|Décrit comment utiliser le [s’abonner](../xmla/xml-elements-commands/subscribe-element-xmla.md) commande pour s’abonner et surveiller une trace existante sur un [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] instance.|  
   
 ## <a name="data-mining-with-xmla"></a>Exploration de données avec XMLA  
- XML for Analysis prend entièrement en charge les ensembles de lignes de schéma d'exploration de données. Ces ensembles de lignes fournissent des informations permettant d’interroger des modèles d’exploration de données à l’aide de la [Discover](../xmla/xml-elements-methods-discover.md) (méthode). Pour plus d’informations sur les ensembles de lignes de schéma de données d’exploration de données, consultez [Data Mining Schema Rowsets](../schema-rowsets/data-mining/data-mining-schema-rowsets.md) 
+ XML for Analysis prend entièrement en charge les ensembles de lignes de schéma d'exploration de données. Ces ensembles de lignes fournissent des informations pour l’interrogation des modèles d’exploration de données à l’aide de la [Discover](../xmla/xml-elements-methods-discover.md) (méthode). Pour plus d’informations sur les ensembles de lignes de schéma de données d’exploration de données, consultez [Data Mining Schema Rowsets](../schema-rowsets/data-mining/data-mining-schema-rowsets.md) 
   
  Pour plus d’informations sur DMX, consultez [Data Mining Extensions &#40;DMX&#41; référence](/sql/dmx/data-mining-extensions-dmx-reference).  
   

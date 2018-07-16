@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 0e709c96-7517-4547-8ef6-5632f8118524
 caps.latest.revision: 7
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 9b5c7c1d879b2ffc9cb333bed193af9239996536
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 1271756e0a8caf036872e03aa1f55fa1da259860
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36141961"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37313132"
 ---
 # <a name="enable-and-disable-client-side-printing-for-reporting-services"></a>Activer et désactiver l'impression côté client pour Reporting Services
   Le [!INCLUDE[msCoName](../../includes/msconame-md.md)] contrôle ActiveX, **RSClientPrint**, permet une impression côté client pour les rapports affichés dans un navigateur. Le contrôle affiche une boîte de dialogue d'impression personnalisée qui prend en charge des fonctionnalités communes à d'autres boîtes de dialogue d'impression. Les fonctionnalités incluent l'aperçu avant impression, les sélections de page pour spécifier des pages et des plages spécifiques, les marges des pages, et l'orientation. Bien que l'impression côté client soit activée par défaut, vous pouvez désactiver cette fonctionnalité pour l'empêcher d'être utilisée.  
@@ -28,11 +28,11 @@ ms.locfileid: "36141961"
 >  Des autorisations d'administrateur sont nécessaires pour le téléchargement des contrôles ActiveX.  
   
 ## <a name="downloading-the-activex-control"></a>Téléchargement du contrôle ActiveX  
- Chaque utilisateur souhaitant utiliser la fonctionnalité d'impression doit télécharger et installer le contrôle ActiveX qui permet l'impression côté client. La première fois qu’un utilisateur clique sur le **imprimante** icône sur la barre d’outils rapport, le contrôle est téléchargé sur l’ordinateur Microsoft ActiveX. Une fois que le contrôle est téléchargé, la **impression** boîte de dialogue affiche chaque fois que l’utilisateur clique sur le **imprimante** icône.  
+ Chaque utilisateur souhaitant utiliser la fonctionnalité d'impression doit télécharger et installer le contrôle ActiveX qui permet l'impression côté client. La première fois qu’un utilisateur clique sur le **imprimante** icône sur la barre d’outils rapport, le Microsoft contrôle ActiveX est téléchargé sur l’ordinateur. Une fois que le contrôle est téléchargé, le **impression** boîte de dialogue affiche chaque fois que l’utilisateur clique sur le **imprimante** icône.  
   
  En fonction des paramètres du navigateur, l'installation du contrôle peut être demandée à l'utilisateur, être bloquée ou s'effectuer de manière transparente en arrière-plan.  
   
- Pour [!INCLUDE[msCoName](../../includes/msconame-md.md)] Internet Explorer, les paramètres qui affectent le téléchargement du contrôle ActiveX et l’installation sont spécifiés via le **ActiveX plug-ins et les contrôles** nœud dans le **paramètres de sécurité** page la zone de contenu Web. Les paramètres suivants déterminent si les utilisateurs peuvent télécharger et exécuter le contrôle d'impression, en fonction des spécifications de sécurité de la zone Web :  
+ Pour [!INCLUDE[msCoName](../../includes/msconame-md.md)] Internet Explorer, les paramètres qui affectent le téléchargement du contrôle ActiveX et l’installation sont spécifiés via le **ActiveX plug-ins et contrôles** nœud dans le **paramètres de sécurité** page la zone de contenu Web. Les paramètres suivants déterminent si les utilisateurs peuvent télécharger et exécuter le contrôle d'impression, en fonction des spécifications de sécurité de la zone Web :  
   
 -   Télécharger les contrôles ActiveX signés.  
   
@@ -42,14 +42,14 @@ ms.locfileid: "36141961"
   
  Les utilisateurs qui souhaitent utiliser **RSClientPrint** pour effectuer l’impression côté client doive activer ce qui suit :  
   
--   **Télécharger les contrôles ActiveX signés** et **contrôle de Script ActiveX reconnus sûr pour l’écriture de scripts** pour l’installation.  
+-   **Télécharger les contrôles ActiveX signés** et **contrôles ActiveX reconnus sûrs pour l’écriture de scripts** pour l’installation.  
   
 -   **Exécuter les contrôles ActiveX et plug-ins** pour les opérations d’impression en cours.  
   
  Le **RSClientPrint** contrôle ActiveX est signé, ce qui signifie qu’il contient un certificat numérique valide à partir de [!INCLUDE[msCoName](../../includes/msconame-md.md)].  
   
 ## <a name="enabling-and-disabling-client-side-printing"></a>Activation et désactivation de l'impression côté client  
- Les administrateurs de serveur de rapports ont la possibilité de désactiver la fonctionnalité d’impression en définissant la propriété de système de serveur de rapports **EnableClientPrinting** à `false`. Cela entraîne la désactivation de l'impression côté client pour tous les rapports gérés par ce serveur. Par défaut, **EnableClientPrinting** a la valeur `true`. Vous pouvez désactiver l'impression côté client de différentes façons :  
+ Les administrateurs de serveur de rapports ont la possibilité de désactiver la fonctionnalité d’impression en définissant la propriété de système de serveur de rapports **EnableClientPrinting** à `false`. Cela entraîne la désactivation de l'impression côté client pour tous les rapports gérés par ce serveur. Par défaut, **EnableClientPrinting** est défini sur `true`. Vous pouvez désactiver l'impression côté client de différentes façons :  
   
 -   Pour un **serveur de rapports en mode natif**:  
   

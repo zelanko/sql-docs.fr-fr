@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 applies_to:
 - SQL Server (starting with 2008)
 f1_keywords:
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - linked servers [SQL Server], creating
 ms.assetid: 3228065d-de8f-4ece-a9b1-e06d3dca9310
 caps.latest.revision: 15
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: fcfb3933a1ce88855ec32a9b4ac86a5c2075819d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 47292d5659b5244a6c318b330b45825ad5408486
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36155044"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37294783"
 ---
 # <a name="create-linked-servers-sql-server-database-engine"></a>Créer des serveurs liés (moteur de base de données SQL Server)
   Cette rubrique indique comment créer un serveur lié et accéder aux données provenant d'un autre [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] à l'aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou de [!INCLUDE[tsql](../../includes/tsql-md.md)]. En créant un serveur lié, vous pouvez utiliser des données provenant de plusieurs sources. Il n'est pas nécessaire que le serveur lié soit une autre instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], mais il s'agit d'un scénario courant.  
@@ -41,7 +41,7 @@ ms.locfileid: "36155044"
 ##  <a name="Security"></a> Sécurité  
   
 ### <a name="permissions"></a>Autorisations  
- Lors de l’utilisation [!INCLUDE[tsql](../../includes/tsql-md.md)] instructions, nécessite `ALTER ANY LINKED SERVER` autorisation sur le serveur ou l’appartenance dans le **setupadmin** rôle serveur fixe. Lorsque vous utilisez [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] requiert `CONTROL SERVER` autorisation ou l’appartenance dans le **sysadmin** rôle serveur fixe.  
+ Lorsque vous utilisez [!INCLUDE[tsql](../../includes/tsql-md.md)] instructions, nécessite `ALTER ANY LINKED SERVER` sur le serveur ou l’appartenance dans le **setupadmin** rôle serveur fixe. Lorsque vous utilisez [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] requiert `CONTROL SERVER` autorisation ou l’appartenance dans le **sysadmin** rôle serveur fixe.  
   
 ##  <a name="Procedures"></a> Comment créer un serveur lié  
  Vous pouvez utiliser l'une des options suivantes :  
@@ -184,7 +184,7 @@ ms.locfileid: "36155044"
      Seules les interfaces OLE DB de niveau 0 sont invoquées pour le fournisseur.  
   
      **Autoriser inprocess**  
-     [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] autorise l’instanciation du fournisseur en tant que serveur in-process. Lorsque cette option n'est pas définie, le comportement par défaut consiste à instancier le fournisseur en dehors du processus [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . L'instanciation du fournisseur en dehors du processus [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] protège le processus [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] des erreurs contenues dans le fournisseur. Lorsque le fournisseur est instancié en dehors de la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] traiter, mises à jour ou insertions faisant référence à des colonnes longues (`text`, `ntext`, ou `image`) ne sont pas autorisés.  
+     [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] autorise l’instanciation du fournisseur en tant que serveur in-process. Lorsque cette option n'est pas définie, le comportement par défaut consiste à instancier le fournisseur en dehors du processus [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . L'instanciation du fournisseur en dehors du processus [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] protège le processus [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] des erreurs contenues dans le fournisseur. Lorsque le fournisseur est instancié en dehors de la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] traiter, les mises à jour ou insertions faisant référence à des colonnes longues (`text`, `ntext`, ou `image`) ne sont pas autorisés.  
   
      **Mises à jour non transactionnelles**  
      [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] autorise les mises à jour, même si **ITransactionLocal** n’est pas disponible. Si cette option est activée, les mises à jour du fournisseur ne sont pas récupérables puisque celui-ci ne prend pas en charge les transactions.  

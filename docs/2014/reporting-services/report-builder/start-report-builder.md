@@ -1,5 +1,5 @@
 ---
-title: Démarrer le Générateur de rapports (Générateur de rapports) | Documents Microsoft
+title: Démarrer le Générateur de rapports (Générateur de rapports) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Report Builder, launching
 - launching Report Builder
@@ -16,27 +16,27 @@ helpviewer_keywords:
 - starting Report Builder
 ms.assetid: 8c8c7d2e-b315-418d-bf65-90e7685e4259
 caps.latest.revision: 50
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: bb09858869f76fd32a1e05151eef48870f96f68a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: c2802b0ed89de430e892baacdd8ec3dfce8485c1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36152291"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37227009"
 ---
 # <a name="start-report-builder-report-builder"></a>Démarrer le Générateur de rapports (Générateur de rapports)
   [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] comprend une version autonome et [!INCLUDE[ndptecclick](../../includes/ndptecclick-md.md)] versions du Générateur de rapports. La version [!INCLUDE[ndptecclick](../../includes/ndptecclick-md.md)] peut être utilisée avec [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] en mode natif ou en mode intégré SharePoint.  
   
 > [!NOTE]  
->  Il n'est pas possible d'installer le Générateur de rapports sur les ordinateurs Itanium 64. Cela s’applique à la [!INCLUDE[ndptecclick](../../includes/ndptecclick-md.md)] et les versions autonomes du Générateur de rapports.  
+>  Il n'est pas possible d'installer le Générateur de rapports sur les ordinateurs Itanium 64. Cela s’applique à la [!INCLUDE[ndptecclick](../../includes/ndptecclick-md.md)] et des versions autonomes du Générateur de rapports.  
   
  Si la version [!INCLUDE[ndptecclick](../../includes/ndptecclick-md.md)] du Générateur de rapports qui s'ouvre est une version antérieure, contactez votre administrateur qui peut mettre à jour le Gestionnaire de rapports et le site SharePoint de façon à utiliser la version [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] du Générateur de rapports  
   
  Vous pouvez également utiliser la version [!INCLUDE[ndptecclick](../../includes/ndptecclick-md.md)] du Générateur de rapports pour créer des rapports sur un classeur [!INCLUDE[ssGeminiClient](../../includes/ssgeminiclient-md.md)] publié sur SharePoint. Pour plus d’informations sur l’utilisation du Générateur de rapports avec [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)], consultez [créer un rapport Reporting Services avec des données PowerPivot](http://go.microsoft.com/fwlink/?LinkId=185238) sur le site technet.microsoft.com.  
   
- Pour démarrer le Générateur de rapports autonome à partir de la **Démarrer** menu sur votre ordinateur local, un administrateur ou vous-même devez installer le Générateur de rapports directement sur votre ordinateur avant que l’outil est disponible, vous pouvez utiliser. La version autonome ne s'installe pas lorsque vous installez [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] ; vous devez la télécharger et l'installer séparément. Pour télécharger le Générateur de rapports, consultez [le Générateur de rapports Microsoft® SQL Server® 2012](http://go.microsoft.com/fwlink/?LinkId=401502).  
+ Pour démarrer le Générateur de rapports autonome à partir de la **Démarrer** menu sur votre ordinateur local, vous ou un administrateur doit installer le Générateur de rapports directement sur votre ordinateur avant de l’outil est disponible que vous pouvez utiliser. La version autonome ne s'installe pas lorsque vous installez [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] ; vous devez la télécharger et l'installer séparément. Pour télécharger le Générateur de rapports, consultez [le Générateur de rapports Microsoft® SQL Server® 2012](http://go.microsoft.com/fwlink/?LinkId=401502).  
   
 ### <a name="to-start-report-builder-clickonce-from-report-manager"></a>Pour démarrer la version ClickOnce du Générateur de rapports à partir du Gestionnaire de rapports  
   
@@ -82,7 +82,7 @@ ms.locfileid: "36152291"
   
 4.  Pour ouvrir un rapport existant stocké sur votre ordinateur local ou sur un serveur de rapports, cliquez sur l'icône SQL Server dans l'angle supérieur gauche, puis cliquez sur Ouvrir.  
   
-     Si vous ne voyez pas le serveur de rapports dans la liste des serveurs existants, fermez le **ouvrir le rapport** boîte de dialogue, puis cliquez sur **connexion** au bas du Générateur de rapports pour se connecter au serveur.  
+     Si vous ne voyez pas le serveur de rapports dans la liste des serveurs existants, fermez le **ouvrir le rapport** boîte de dialogue, puis cliquez sur **Connect** en bas du Générateur de rapports pour se connecter au serveur.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Générateur de rapports dans SQL Server 2014](report-builder-in-sql-server-2016.md)  

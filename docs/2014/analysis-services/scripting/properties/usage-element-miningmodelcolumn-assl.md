@@ -1,5 +1,5 @@
 ---
-title: Élément usage (MiningModelColumn) (ASSL) | Documents Microsoft
+title: Élément usage (MiningModelColumn) (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -22,18 +22,18 @@ helpviewer_keywords:
 - Usage element
 ms.assetid: 435a857e-37a9-434e-9de1-354f1ff2993f
 caps.latest.revision: 33
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 4a4e4c2b11a9a9281f64062390257bf5ddf3145b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: a6767c4c5ac535ac603cc6182cbe645088c8ac05
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36142796"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37265297"
 ---
 # <a name="usage-element-miningmodelcolumn-assl"></a>Élément Usage (MiningModelColumn) (ASSL)
-  Décrit comment la colonne associée dans le parent [MiningStructure](../objects/miningstructure-element-assl.md) est utilisé.  
+  Décrit comment la colonne associée de la page parente [MiningStructure](../objects/miningstructure-element-assl.md) est utilisé.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -70,9 +70,9 @@ ms.locfileid: "36142796"
 |*Entrée*|La colonne est une colonne d'entrée.|  
 |*Predict*|La colonne est une colonne de prévision.|  
 |*PredictOnly*|La colonne est uniquement une colonne de prévision.|  
-|*Aucun*|La colonne n'est pas utilisée par le modèle. **Avertissement :** lorsque la valeur de l’utilisation est « None », Analysis Services n’envoie pas n’importe quelle valeur au serveur par défaut ; par conséquent, l’attribut d’utilisation n’est pas inclus dans la demande/réponse.|  
+|*Aucun*|La colonne n'est pas utilisée par le modèle. **Avertissement :** lorsque la valeur de l’utilisation est « None », Analysis Services n’envoie pas n’importe quelle valeur au serveur par défaut ; par conséquent, l’attribut de l’utilisation n’est pas inclus dans la demande/réponse.|  
   
- L’énumération qui correspond aux valeurs autorisées pour `Usage` dans l’objet d’objets AMO (Analysis Management) est modèle <xref:Microsoft.AnalysisServices.MiningModelColumnUsages>.  
+ L’énumération qui correspond aux valeurs autorisées pour `Usage` dans l’objet d’objets AMO (Analysis Management) modèle est <xref:Microsoft.AnalysisServices.MiningModelColumnUsages>.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Propriétés &#40;ASSL&#41;](properties-assl.md)  

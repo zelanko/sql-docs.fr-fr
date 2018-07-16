@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 19519697-c219-44a8-9339-ee1b02545445
 caps.latest.revision: 5
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 68e220c2f80260359234fb80869844c531744bfd
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: f26531b3b4e783c70e1a3b060e803908cbf275b0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36039775"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37191929"
 ---
 # <a name="master-data-services-features-and-tasks"></a>Fonctionnalités et tâches Master Data Services
   Apprenez à utiliser [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] pour gérer les données de référence de votre organisation. Apprenez comment créer et manipuler les objets de modèle, qui sont des conteneurs de données. Apprenez comment organiser et gérer les données de référence elles-mêmes. Apprenez comment importer et exporter des données de référence et partager des modèles entre les environnements de test et de production. Enfin, apprenez comment développer des applications personnalisées qui accèdent au service Web de [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] .  

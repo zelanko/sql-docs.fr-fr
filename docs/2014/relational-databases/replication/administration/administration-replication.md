@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - transactional replication, administering
 - administering replication
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - merge replication [SQL Server replication], administering
 ms.assetid: a3d4e7c6-feb5-411b-8bb9-70b6d943420c
 caps.latest.revision: 37
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: bb76775ba3a53dca64604dfac3e77196f393bd8b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: adc39c68b201f4de69da8e65a66272e0e1c4729e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36041091"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37225329"
 ---
 # <a name="administration-replication"></a>Administration (réplication)
   Cette section contient des informations relatives à l'administration des topologies de réplication. Nous vous recommandons de commencer par lire la rubrique présentant les bonnes pratiques en matière de réplication avant de sélectionner les liens de la présente rubrique pour accéder à des informations plus complètes de cette section ou d'autres sections.  

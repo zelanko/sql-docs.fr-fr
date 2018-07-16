@@ -1,5 +1,5 @@
 ---
-title: Options de requête – exécution (Page avancé) | Documents Microsoft
+title: Options de requête d’exécution (Page avancée) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.query.advanced.f1
 ms.assetid: 661595ce-99b9-4316-ad80-ed04002d04d5
 caps.latest.revision: 21
 author: craigg-msft
 ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 5cdff5f44079c6c4946f30f9d4cc12ecc1bcac85
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 548f8a0dd6a8c24c91144598f649e3bc564e614c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36038634"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37293039"
 ---
 # <a name="query-options-execution-advanced-page"></a>Options Exécution de la requête (page Avancé)
   Différentes options sont disponibles à l'aide de l'instruction **SET** . Cette page vous permet de spécifier une option **set** pour exécuter les requêtes Microsoft SQL Server. Pour des informations détaillées sur chacune de ces options, consultez la documentation en ligne de SQL Server.  

@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: cf751f1e-2348-4a77-904c-bd92c0d7d0ae
 caps.latest.revision: 9
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: aa28260303bc7be87ac166ce3e22aa55c32a2a0e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 4e13fa57378ac9dac263cb89d48da84b94739a2f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36142858"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37213669"
 ---
 # <a name="odbc-flow-components"></a>Composants de flux ODBC
   Cette rubrique décrit les concepts nécessaires pour créer un flux de données ODBC à l'aide de [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)]  
@@ -114,8 +114,8 @@ Il n’existe aucune prise en charge des types de données pour les types C exte
 |SQL_DOUBLE|DT_R8|  
 |SQL_FLOAT|DT_R8|  
 |SQL_REAL|DT_R4|  
-|SQL_NUMERIC (p,s)|DT_NUMERIC (p,s)<br /><br />DT_R8<br /><br />DT_CY|Le type de données numérique est mappé à DT_NUMERIC lorsque P est supérieur ou égal à 38 et S est supérieur ou égal à 0 et que S est inférieur ou égal à P. Le type de données numérique est mappé à DT_R8 lorsqu’au moins un des éléments suivants est vrai :<br /><br />La précision est supérieure à 38<br /><br />L'échelle est inférieure à zéro<br /><br />L'échelle est supérieure à 38<br /><br />L'échelle est supérieure à la précision<br /><br /><br /><br />Notez que le type de données numérique est mappé à DT_CY lorsqu’il est déclaré comme un type de données money.|  
-|SQL_DECIMAL (p,s)|DT_NUMERIC (p,s)<br /><br />DT_R8<br /><br />DT_CY|Le type de données décimal est mappé à DT_NUMERIC lorsque P est supérieur ou égal à 38 et S est supérieur ou égal à 0 et que S est inférieur ou égal à P. Le type de données décimal est mappé à DT_R8 lorsqu’au moins un des éléments suivants est vrai :<br /><br />La précision est supérieure à 38<br /><br />L'échelle est inférieure à zéro<br /><br />L'échelle est supérieure à 38<br /><br />L'échelle est supérieure à la précision<br /><br />Notez que le type de données décimal est mappé à DT_CY lorsqu’il est déclaré comme un type de données money.|  
+|SQL_NUMERIC (p,s)|DT_NUMERIC (p,s)<br /><br />DT_R8<br /><br />DT_CY|Le type de données numérique est mappé à DT_NUMERIC lorsque P est supérieur ou égal à 38 et S est supérieur ou égal à 0 et que S est inférieur ou égal à P. Le type de données numérique est mappé à DT_R8 lorsqu’au moins une des opérations suivantes est vraie :<br /><br />La précision est supérieure à 38<br /><br />L'échelle est inférieure à zéro<br /><br />L'échelle est supérieure à 38<br /><br />L'échelle est supérieure à la précision<br /><br /><br /><br />Notez que le type de données numérique est mappé à DT_CY lorsqu’il est déclaré comme un type de données money.|  
+|SQL_DECIMAL (p,s)|DT_NUMERIC (p,s)<br /><br />DT_R8<br /><br />DT_CY|Le type de données décimal est mappé à DT_NUMERIC lorsque P est supérieur ou égal à 38 et S est supérieur ou égal à 0 et que S est inférieur ou égal à P. Le type de données décimal est mappé à DT_R8 lorsqu’au moins une des opérations suivantes est vraie :<br /><br />La précision est supérieure à 38<br /><br />L'échelle est inférieure à zéro<br /><br />L'échelle est supérieure à 38<br /><br />L'échelle est supérieure à la précision<br /><br />Notez que le type de données décimal est mappé à DT_CY lorsqu’il est déclaré comme un type de données money.|  
 |SQL_DATE<br /><br />SQL_TYPE_DATE|DT_DBDATE|  
 |SQL_TIME<br /><br />SQL_TYPE_TIME|DT_DBTIME|  
 |SQL_TIMESTAMP<br /><br />SQL_TYPE_TIMESTAMP|DT_DBTIMESTAMP<br /><br />DT_DBTIMESTAMP2|Les types de données SQL_TIMESTAMP sont mappés à DT_DBTIMESTAMP2 si l'échelle est supérieure à 3. Dans tous les autres cas, ils sont mappés à DT_DBTIMESTAMP.|  

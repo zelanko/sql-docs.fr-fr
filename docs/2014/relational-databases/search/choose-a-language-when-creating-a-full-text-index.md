@@ -5,10 +5,9 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-search
+ms.technology: search
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - languages [full-text search]
 - full-text indexes [SQL Server], languages
@@ -20,15 +19,15 @@ helpviewer_keywords:
 - word breakers [full-text search]
 ms.assetid: 670a5181-ab80-436a-be96-d9498fbe2c09
 caps.latest.revision: 48
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 7d6f87d5916bcda7db3ff52fcca222d2c3f21816
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 3ce5d56ec84c1dcf33e3a915a8fa8bf94b1cdced
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36039536"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37268675"
 ---
 # <a name="choose-a-language-when-creating-a-full-text-index"></a>Choisir une langue lors de la création d'un index de recherche en texte intégral
   Lorsque vous créez un index de recherche en texte intégral, vous devez spécifier une langue au niveau de la colonne pour la colonne indexée. L’ [analyseur lexical et les générateurs de formes dérivées](configure-and-manage-word-breakers-and-stemmers-for-search.md) de la langue spécifiée seront utilisés par les requêtes de texte intégral sur la colonne. Plusieurs aspects doivent être pris en considération pour le choix de la langue d'une colonne lors de la création d'un index de texte intégral. Ces aspects sont liés à la façon dont les unités lexicales de votre texte sont créées et à la façon dont ce texte est ensuite indexé par le Moteur d'indexation et de recherche en texte intégral.  
@@ -53,7 +52,7 @@ ms.locfileid: "36039536"
   
 -   Sécurité  
   
-     Les nouveaux analyseurs lexicaux sont activés par défaut dans [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] grâce aux améliorations de sécurité dans des composants linguistiques. Nous recommandons vivement que les composants externes tels que les analyseurs lexicaux et filtres soient signés afin d'améliorer la sécurité globale et la robustesse de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Vous pouvez configurer le texte intégral pour vérifier que ces composants sont signés comme suit :  
+     Les nouveaux analyseurs lexicaux sont activés par défaut dans [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] grâce aux améliorations de sécurité dans les composants linguistiques. Nous recommandons vivement que les composants externes tels que les analyseurs lexicaux et filtres soient signés afin d'améliorer la sécurité globale et la robustesse de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Vous pouvez configurer le texte intégral pour vérifier que ces composants sont signés comme suit :  
   
     ```  
     EXEC sp_fulltext_service 'verify_signature';  
@@ -63,7 +62,7 @@ ms.locfileid: "36039536"
   
      Les analyseurs lexicaux ont été repensés, et les tests ont montré que les nouveaux analyseurs lexicaux fournissent une qualité sémantique supérieure à celle des analyseurs lexicaux précédents. Cela augmente l'exactitude de rappel.  
   
--   Pour couvrir une longue liste de langues, les analyseurs lexicaux sont inclus dans [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] hors de la zone et activé par défaut.  
+-   Pour couvrir une longue liste de langues, les analyseurs lexicaux sont inclus dans [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] hors de la zone et activée par défaut.  
   
  Pour obtenir la liste des langues pour lesquelles [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] comprend des analyseurs lexicaux et générateurs de formes dérivées, consultez [sys.fulltext_languages &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-fulltext-languages-transact-sql).  
   
@@ -73,7 +72,7 @@ ms.locfileid: "36039536"
  Lorsque vous créez un index de recherche en texte intégral, vous devez spécifier un nom de langue valide pour chaque colonne. Si un nom de langue est valide mais n’est pas retourné par l’affichage catalogue [sys.fulltext_languages &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-fulltext-languages-transact-sql) , la recherche en texte intégral revient, le cas échéant, au nom de la langue disponible le plus proche de la même famille de langues. Sinon, la recherche en texte intégral revient à l'analyseur lexical neutre. Ce comportement de repli peut affecter l'exactitude de rappel. Par conséquent, nous vous recommandons vivement de spécifier un nom de langue valide et disponible pour chaque colonne lors de la création d'un index de recherche en texte intégral.  
   
 > [!NOTE]  
->  Le LCID est appliqué à tous les types de données pouvant faire l'objet d'une indexation de texte intégral (par exemple `char` ou `nchar`). Si vous avez l’ordre de tri d’un `char`, `varchar`, ou `text` colonne de type défini pour une langue différente de la langue identifiée par le LCID, ce dernier est néanmoins utilisé durant l’indexation et l’interrogation de ces colonnes de texte intégral.  
+>  Le LCID est appliqué à tous les types de données pouvant faire l'objet d'une indexation de texte intégral (par exemple `char` ou `nchar`). Si vous avez l’ordre de tri d’un `char`, `varchar`, ou `text` colonne de type défini pour une langue différente de la langue identifiée par le LCID, ce dernier est néanmoins utilisé durant l’indexation et interrogation de ces colonnes de texte intégral.  
   
 
   
@@ -100,7 +99,7 @@ ms.locfileid: "36039536"
   
 -   Pour un contenu de texte brut  
   
-     Lorsque votre contenu est du texte brut, vous pouvez le convertir vers le `xml` type de données et ajouter des balises de langue qui indiquent la langue qui correspond à chaque section de document ou un document spécifique. Pour que cette option fonctionne toutefois, vous devez connaître la langue avant l'indexation de recherche en texte intégral.  
+     Lorsque votre contenu est du texte brut, vous pouvez la convertir vers le `xml` type de données et ajouter des balises de langue qui indiquent la langue qui correspond à chaque section de document ou un document spécifique. Pour que cette option fonctionne toutefois, vous devez connaître la langue avant l'indexation de recherche en texte intégral.  
   
 
   

@@ -8,25 +8,25 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - clickthrough reports
 - customizing clickthrough reports
 - clickthrough reports, customizing
 ms.assetid: cf2c396e-b0c6-41f9-8c45-ddc8406f7e85
 caps.latest.revision: 28
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: c6bb00e29b5edc039d33a345addc596f18669f3e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: 2f8c96a114557bcef8252f2c21b70c9a50dbfb94
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36152960"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37216649"
 ---
 # <a name="clickthrough-reports-ssrs"></a>Rapports générés interactifs (SSRS)
-  Dans le Générateur de rapports, un rapport généré interactif est un rapport qui fournit des informations détaillées sur les données contenues dans le rapport principal. Un rapport consultable à l'aide de clics est affiché lorsque l'utilisateur clique sur des données interactives apparaissant dans le rapport principal. Ces rapports sont automatiquement générés par le serveur de rapports. Vous, en tant que le Générateur de modèles, déterminer ce qui est affiché dans les rapports générés interactifs en définissant le `DefaultDetailAttribute` et `DefaultAggregateAttribute` les propriétés que vous attribuez à une entité dans le modèle de rapport.  
+  Dans le Générateur de rapports, un rapport généré interactif est un rapport qui fournit des informations détaillées sur les données contenues dans le rapport principal. Un rapport consultable à l'aide de clics est affiché lorsque l'utilisateur clique sur des données interactives apparaissant dans le rapport principal. Ces rapports sont automatiquement générés par le serveur de rapports. Vous, en tant que le Générateur de modèles, déterminer ce qui est affiché dans les rapports générés interactifs en définissant le `DefaultDetailAttribute` et `DefaultAggregateAttribute` propriétés que vous attribuez à une entité dans le modèle de rapport.  
   
 > [!NOTE]  
 >  Rapports générés interactifs ne sont pas disponibles dans toutes les éditions de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Pour obtenir une liste des fonctionnalités prises en charge par les éditions de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], consultez [Features Supported by the Editions of SQL Server 2014](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md). Si vous ne savez pas quelle édition de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] est utilisée par votre organisation, contactez votre administrateur de base de données.  
@@ -53,6 +53,6 @@ ms.locfileid: "36152960"
 >  L'entité principale ou de base employée dans le rapport doit être celle à laquelle vous liez le rapport.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Lier un rapport à un modèle en tant qu’un rapport généré interactif](../link-a-report-to-a-model-as-a-clickthrough-report.md)  
+ [Lier un rapport à un modèle en tant que rapport généré interactif](../link-a-report-to-a-model-as-a-clickthrough-report.md)  
   
   

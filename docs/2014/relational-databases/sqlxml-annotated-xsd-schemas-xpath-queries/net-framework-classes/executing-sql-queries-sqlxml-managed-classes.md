@@ -1,5 +1,5 @@
 ---
-title: Exécution de requêtes SQL (la Classes managées SQLXML) | Documents Microsoft
+title: Exécution de requêtes SQL (la Classes managées SQLXML) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -18,15 +18,15 @@ helpviewer_keywords:
 - SQL queries [SQLXML]
 ms.assetid: a561ae83-a8b6-4b9b-a819-9b86839546b4
 caps.latest.revision: 22
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 2da4e8f0757dad1fb052ec890be695ee957a9df3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 72e16fe5cc17e48b110c70f03a6e900be3b76c2f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36039701"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37288295"
 ---
 # <a name="executing-sql-queries-sqlxml-managed-classes"></a>Exécution de requêtes SQL (classes managées SQLXML)
   Cet exemple montre :  
@@ -125,7 +125,7 @@ cmd = null;
 ```  
   
 ## <a name="using-executetostream"></a>Utilisation de la méthode ExecuteToStream  
- Si vous avez un flux existant, vous pouvez utiliser la méthode ExecuteToStream au lieu de la création d’un objet de flux de données et à l’aide de la méthode Execute. Le code de l’exemple précédent a été modifié ici pour utiliser la méthode ExecuteToStream :  
+ Si vous avez un flux existant, vous pouvez utiliser la méthode ExecuteToStream au lieu de la création d’un objet Stream et à l’aide de la méthode Execute. Le code de l’exemple précédent a été modifié ici pour utiliser la méthode ExecuteToStream :  
   
 ```  
 using System;  
@@ -158,6 +158,6 @@ class Test
 ```  
   
 > [!NOTE]  
->  Vous pouvez également utiliser le ExecuteXMLReadermethod qui retourne un objet XmlReader. Pour plus d’informations, consultez [l’exécution de requêtes SQL à l’aide de la méthode ExecuteXMLReader](executing-sql-queries-by-using-the-executexmlreader-method.md).  
+>  Vous pouvez également utiliser ExecuteXMLReadermethod qui retourne un objet XmlReader. Pour plus d’informations, consultez [l’exécution de requêtes SQL à l’aide de la méthode ExecuteXMLReader](executing-sql-queries-by-using-the-executexmlreader-method.md).  
   
   

@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: e2763613-79ef-414a-8dbf-837a0331ebf8
 caps.latest.revision: 6
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 1b92e520492b579009c0f68e07592b7c2916fd75
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: e1e100be7ab60e98b53681cf11a811b9627cfb57
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36152845"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37309979"
 ---
 # <a name="explorer-functional-area-master-data-manager"></a>Zone fonctionnelle Explorateur (Master Data Manager)
   Dans la zone fonctionnelle Explorateur, vous pouvez mettre à jour les données et utiliser les hiérarchies et les collections.  
@@ -47,7 +47,7 @@ ms.locfileid: "36152845"
   
  [Les règles d’entreprise &#40;Master Data Services&#41;](../../2014/master-data-services/business-rules-master-data-services.md)  
   
- [Valider des membres spécifiques par rapport aux règles d’entreprise &#40;Master Data Services&#41;](../../2014/master-data-services/validate-specific-members-against-business-rules-master-data-services.md)  
+ [Valider des membres spécifiques par rapport aux règles métier &#40;Master Data Services&#41;](../../2014/master-data-services/validate-specific-members-against-business-rules-master-data-services.md)  
   
 ## <a name="hierarchies-and-collections"></a>Hiérarchies et collections  
  [Hiérarchies &#40;Master Data Services&#41;](../../2014/master-data-services/hierarchies-master-data-services.md)  

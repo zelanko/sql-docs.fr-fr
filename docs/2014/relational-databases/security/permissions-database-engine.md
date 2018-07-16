@@ -5,10 +5,9 @@ ms.date: 10/14/2015
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-security
+ms.technology: security
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 applies_to:
 - SQL Server 2014
 f1_keywords:
@@ -21,26 +20,26 @@ helpviewer_keywords:
 - naming conventions [SQL Server]
 ms.assetid: f28e3dea-24e6-4a81-877b-02ec4c7e36b9
 caps.latest.revision: 63
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 4f4be5133cc17aef8c24bea72c214039debffb34
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: edmacauley
+ms.author: edmaca
+manager: craigg
+ms.openlocfilehash: f45a4c892af973850161733508cd9ab43eb7e772
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36043357"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37331469"
 ---
 # <a name="permissions-database-engine"></a>Autorisations (moteur de base de données)
   Chaque élément sécurisable [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a des autorisations associées qui peuvent être accordées à un principal. Cette rubrique fournit les informations suivantes :  
   
--   [Conventions de dénomination des autorisations](#_conventions)  
+-   [Conventions de nommage des autorisations](#_conventions)  
   
--   [Autorisations relatives aux éléments sécurisables spécifiques](#_securables)  
+-   [Autorisations liées aux éléments sécurisables spécifiques](#_securables)  
   
 -   [Autorisations SQL Server](#_permissions)  
   
--   [Algorithme de vérification](#_algorithm)  
+-   [Algorithme de vérification d’autorisation](#_algorithm)  
   
 -   [Exemples](#_examples)  
   

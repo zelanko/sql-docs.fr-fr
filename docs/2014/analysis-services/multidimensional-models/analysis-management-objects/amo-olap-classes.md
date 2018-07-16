@@ -1,5 +1,5 @@
 ---
-title: Des Classes OLAP AMO | Documents Microsoft
+title: Classes OLAP AMO | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -16,20 +16,20 @@ helpviewer_keywords:
 - AMO, OLAP
 ms.assetid: 397509b7-a4fb-40de-aa30-c66dc9ed2105
 caps.latest.revision: 25
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 6db043eff86d0cd1675674cefee6aa74508e33f1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: c1fcf669d63554c9a57dc927cb0071fbc17a9f2f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36153153"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37280405"
 ---
 # <a name="amo-olap-classes"></a>Classes OLAP AMO
   Les classes OLAP AMO (Analysis Management Objects) permettent de créer, modifier, supprimer et traiter les cubes, les dimensions et les objets connexes tels que les indicateurs de performance clés, les actions et la mise en cache proactive.  
   
- Pour plus d’informations sur la configuration de l’environnement de programmation AMO, comment établir une connexion avec un serveur, l’accès à une base de données ou la définition des données sources et les vues de source de données, consultez [des Classes fondamentales AMO](amo-fundamental-classes.md).  
+ Pour plus d’informations sur la configuration de l’environnement de programmation AMO, comment établir une connexion avec un serveur, l’accès à une base de données ou la définition des données sources et les vues de source de données, consultez [Classes fondamentales AMO](amo-fundamental-classes.md).  
   
  Cette rubrique contient les sections suivantes :  
   
@@ -43,9 +43,9 @@ ms.locfileid: "36153153"
   
 -   [Objets AggregationDesign](#AggregationDesign)  
   
--   [Objets d’agrégation](#Aggregation)  
+-   [Objets Aggregation](#Aggregation)  
   
--   [Objets action](#Action)  
+-   [Objets d’action](#Action)  
   
 -   [Objets KPI](#KPI)  
   
@@ -75,14 +75,14 @@ ms.locfileid: "36153153"
   
  Pour supprimer un cube, il est nécessaire d'utiliser la méthode Drop de l'objet <xref:Microsoft.AnalysisServices.Cube>. La suppression d'un cube de la collection n'a aucun effet sur le serveur.  
   
- Un objet <xref:Microsoft.AnalysisServices.Cube> peut être traité après avoir été créé. Le <xref:Microsoft.AnalysisServices.Cube> peuvent être traitées à l’aide de sa propre méthode process ou elle peut être traitée lorsqu’un objet parent lui-même traite avec sa propre méthode Process.  
+ Un objet <xref:Microsoft.AnalysisServices.Cube> peut être traité après avoir été créé. Le <xref:Microsoft.AnalysisServices.Cube> peuvent être traitées à l’aide de sa propre méthode process ou elles peuvent être traitées lorsqu’un objet parent traite lui-même avec sa propre méthode Process.  
   
  Pour plus d'informations sur les méthodes et les propriétés disponibles, consultez <xref:Microsoft.AnalysisServices.Cube> dans <xref:Microsoft.AnalysisServices>.  
   
 ###  <a name="MeasureGroups"></a>Objets MeasureGroup  
  Pour créer un groupe de mesures, il convient de l'ajouter à la collection de groupes de mesures du cube, puis de mettre à jour l'objet <xref:Microsoft.AnalysisServices.MeasureGroup> sur le serveur à l'aide de sa propre méthode Update. Pour supprimer un objet <xref:Microsoft.AnalysisServices.MeasureGroup>, il convient d'utiliser sa propre méthode Drop.  
   
- Un objet <xref:Microsoft.AnalysisServices.MeasureGroup> peut être traité après avoir été créé. Le <xref:Microsoft.AnalysisServices.MeasureGroup> peuvent être traités à l’aide de sa propre méthode Process ou elle peut être traitée lorsqu’un objet parent lui-même traite avec sa propre méthode Process.  
+ Un objet <xref:Microsoft.AnalysisServices.MeasureGroup> peut être traité après avoir été créé. Le <xref:Microsoft.AnalysisServices.MeasureGroup> peuvent être traitées à l’aide de sa propre méthode Process ou elles peuvent être traitées lorsqu’un objet parent traite lui-même avec sa propre méthode Process.  
   
  Pour plus d'informations sur les méthodes et les propriétés disponibles, consultez <xref:Microsoft.AnalysisServices.MeasureGroup> dans <xref:Microsoft.AnalysisServices>.  
   
@@ -162,8 +162,8 @@ ms.locfileid: "36153153"
 ## <a name="see-also"></a>Voir aussi  
  <xref:Microsoft.AnalysisServices>   
  [Présentation des Classes AMO](amo-classes-introduction.md)   
- [Programmation d’objets de base OLAP AMO](programming-amo-olap-basic-objects.md)   
- [Objets OLAP de programmation AMO avancés](programming-amo-olap-advanced-objects.md)   
+ [Programmation des objets de base OLAP AMO](programming-amo-olap-basic-objects.md)   
+ [Objets avancés OLAP AMO de programmation](programming-amo-olap-advanced-objects.md)   
  [Architecture logique &#40;Analysis Services - données multidimensionnelles&#41;](../olap-logical/understanding-microsoft-olap-logical-architecture.md)   
  [Objets de base de données &#40;Analysis Services - données multidimensionnelles&#41;](../olap-logical/database-objects-analysis-services-multidimensional-data.md)  
   

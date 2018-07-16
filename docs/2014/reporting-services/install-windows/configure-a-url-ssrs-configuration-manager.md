@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - URL access [Reporting Services], syntax
 ms.assetid: 851e163a-ad2a-491e-bc1e-4df92327092f
 caps.latest.revision: 9
 author: markingmyname
 ms.author: maghan
-manager: jhubbard
-ms.openlocfilehash: 8426f8980bd10877c07d814921f3c73ee91f0c4f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: c22aac59568cac600904ebdd7e1508d0ada8bc98
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36142435"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37288575"
 ---
 # <a name="configure-a-url--ssrs-configuration-manager"></a>Configurer une URL (Gestionnaire de configuration de SSRS)
   Avant de pouvoir utiliser le Gestionnaire de rapports ou le service Web Report Server, vous devez configurer au moins une URL pour chaque application. La configuration des URL est obligatoire si vous avez installé [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] en mode « fichiers uniquement » (autrement dit, en sélectionnant l’option **Installer mais ne pas configurer le serveur** dans la page Options d’installation du serveur de rapports dans l’Assistant Installation). Si vous avez installé [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] dans la configuration par défaut, les URL sont déjà configurées pour chaque application. Si vous disposez d'un serveur de rapports configuré pour s'exécuter en mode intégré SharePoint et que vous mettez à jour l'URL du service Web Report Server à l'aide de l'outil de configuration [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], vous devez également mettre à jour l'URL dans l'Administration centrale de SharePoint.  
@@ -38,7 +38,7 @@ ms.locfileid: "36142435"
   
 -   Définir les propriétés URL avancées pour définir des URL supplémentaires.  
   
- Pour plus d’informations sur comment les URL sont stockées et conservées ou des problèmes d’interopérabilité, consultez [sur les réservations d’URL et l’inscription &#40;Gestionnaire de Configuration de SSRS&#41; ](about-url-reservations-and-registration-ssrs-configuration-manager.md) et [installer Reporting Services et Internet Information Services côte à côte &#40;SSRS en Mode natif&#41;](install-reporting-and-internet-information-services-side-by-side.md)dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] la documentation en ligne. Pour obtenir des exemples d'URL souvent utilisées dans une installation Reporting Services, consultez [Exemples d'URL](#URLExamples) dans cette rubrique.  
+ Pour plus d’informations sur comment les URL sont stockés et gérés ou des problèmes d’interopérabilité, consultez [sur les réservations d’URL et l’inscription &#40;Gestionnaire de Configuration de SSRS&#41; ](about-url-reservations-and-registration-ssrs-configuration-manager.md) et [Install Reporting Services et Internet Information Services côte à côte &#40;SSRS en Mode natif&#41;](install-reporting-and-internet-information-services-side-by-side.md)dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] la documentation en ligne. Pour obtenir des exemples d'URL souvent utilisées dans une installation Reporting Services, consultez [Exemples d'URL](#URLExamples) dans cette rubrique.  
   
 ## <a name="prerequisites"></a>Prérequis  
  Avant de créer ou de modifier une URL, souvenez-vous des points suivants :  
@@ -47,11 +47,11 @@ ms.locfileid: "36142435"
   
 -   Si IIS 6.0 ou 7.0 sont installés sur le même ordinateur, vérifiez les noms des répertoires virtuels sur les sites Web qui utilisent le port 80. Si vous consultez les répertoires virtuels qui utilisent les noms de répertoire virtuel Reporting Services par défaut (autrement dit, Reports et ReportServer), choisissez des noms de répertoire virtuel différents pour les URL [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] que vous configurez.  
   
--   Vous devez utiliser l'outil de configuration de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] pour configurer l'URL : N'utilisez pas d'utilitaire système. Ne modifiez jamais les réservations d’URL dans la `URLReservations` section directement le fichier RSReportServer.config. L'utilisation de l'outil de configuration de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] est nécessaire pour mettre à jour la réservation d'URL sous-jacente stockée en interne et pour synchroniser les paramètres URL stockés dans le fichier RSReportServer.config.  
+-   Vous devez utiliser l'outil de configuration de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] pour configurer l'URL : N'utilisez pas d'utilitaire système. Ne modifiez jamais les réservations d’URL dans la `URLReservations` section du fichier RSReportServer.config directement. L'utilisation de l'outil de configuration de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] est nécessaire pour mettre à jour la réservation d'URL sous-jacente stockée en interne et pour synchroniser les paramètres URL stockés dans le fichier RSReportServer.config.  
   
 -   Choisissez une heure qui présente une activité de rapport basse. À chaque modification de la réservation d'URL, vous pouvez vous attendre à ce que les domaines d'application pour le service Web Report Server et le Gestionnaire de rapports soient recyclés.  
   
--   Pour une vue d’ensemble de la construction des URL et l’utilisation dans [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], consultez [configurer l’URL de Report Server &#40;Gestionnaire de Configuration de SSRS&#41;](configure-report-server-urls-ssrs-configuration-manager.md).  
+-   Pour une vue d’ensemble de la construction de l’URL et l’utilisation dans [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], consultez [configurer l’URL de Report Server &#40;Gestionnaire de Configuration de SSRS&#41;](configure-report-server-urls-ssrs-configuration-manager.md).  
   
 ### <a name="to-configure-a-url-for-the-report-server-web-service"></a>Pour configurer une URL pour le service Web Report Server  
   
@@ -99,7 +99,7 @@ ms.locfileid: "36142435"
   
 10. Testez l'URL en cliquant sur le lien dans la section **URL** de la page. Notez que la base de données du serveur de rapports doit être créée et configurée avant que vous puissiez tester l'URL. Pour obtenir des instructions, consultez [Créer une base de données du serveur de rapports en mode natif &#40;Gestionnaire de configuration de SSRS&#41;](ssrs-report-server-create-a-native-mode-report-server-database.md).  
   
-11. De plus, si votre serveur de rapports est configuré pour utiliser le mode intégré SharePoint, configurez l'URL du service Web Report Server dans l'Administration centrale de SharePoint. Pour plus d’informations sur la façon de mettre à jour l’URL du service Web Report Server dans l’Administration centrale de SharePoint, consultez [Configuration et Administration d’un serveur de rapports &#40;Reporting Services SharePoint Mode&#41; ](../configure-administer-report-server-reporting-services-sharepoint-mode.md) et [Report Server reporting Services &#40;en Mode SharePoint&#41;](../reporting-services-report-server-sharepoint-mode.md).  
+11. De plus, si votre serveur de rapports est configuré pour utiliser le mode intégré SharePoint, configurez l'URL du service Web Report Server dans l'Administration centrale de SharePoint. Pour plus d’informations sur comment mettre à jour l’URL du service Web Report Server dans l’Administration centrale de SharePoint, consultez [Configuration et Administration d’un serveur de rapports &#40;Reporting Services SharePoint Mode&#41; ](../configure-administer-report-server-reporting-services-sharepoint-mode.md) et [Reporting Services Report Server &#40;Mode SharePoint&#41;](../reporting-services-report-server-sharepoint-mode.md).  
   
 ### <a name="to-create-a-url-reservation-for-report-manager"></a>Pour créer une réservation d'URL pour le Gestionnaire de rapports  
   

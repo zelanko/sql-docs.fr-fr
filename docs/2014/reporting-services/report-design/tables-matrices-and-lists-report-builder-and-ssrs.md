@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.rtp.rptdesigner.tablix.visibility.f1
 - sql12.rtp.rptdesigner.groupproperties.advanced.f1
@@ -36,15 +36,15 @@ f1_keywords:
 - sql12.rtp.rptdesigner.tablix.filter.f1
 ms.assetid: 9dcf3fc8-bf9c-4a14-a03d-e78254aa4098
 caps.latest.revision: 9
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 80661ab558038af26a9b98fef925c2ec24df83ef
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 8579071257a3f4026a111aaf16d7898bbd28cbb5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36141973"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37323899"
 ---
 # <a name="tables-matrices-and-lists-report-builder-and-ssrs"></a>Tables, matrices et listes (Générateur de rapports et SSRS)
   Les tables, matrices et listes sont des régions de données qui affichent les données du rapport dans des cellules organisées en lignes et colonnes. Les cellules contiennent en général des données texte, telles que du texte, des dates et des nombres, mais elles peuvent également contenir des jauges, des graphiques ou des éléments de rapport, par exemple des images. Ensemble, les tables, matrices et listes sont fréquemment connues sous le nom de régions de données de tableau matriciel.  
@@ -91,7 +91,7 @@ ms.locfileid: "36141973"
   
  Vous pouvez également inclure des bascules d'extraction qui permettent initialement de masquer les données de détail ; l'utilisateur peut ensuite cliquer sur ces bascules pour afficher plus ou moins de détails, en fonction de ses besoins.  
   
- Pour plus d’informations, consultez [Matrices &#40;le Générateur de rapports et SSRS&#41;](create-a-matrix-report-builder-and-ssrs.md).  
+ Pour plus d’informations, consultez [Matrices &#40;Générateur de rapports et SSRS&#41;](create-a-matrix-report-builder-and-ssrs.md).  
   
 
   
@@ -100,7 +100,7 @@ ms.locfileid: "36141973"
   
  ![Nouvelle liste ajoutée à partir de la boîte à outils, sélectionnée](../media/rs-listtemplatenewselected.gif "Nouvelle liste ajoutée à partir de la boîte à outils, sélectionnée")  
   
- Pour plus d’informations, consultez [répertorie &#40;le Générateur de rapports et SSRS&#41;](create-invoices-and-forms-with-lists-report-builder-and-ssrs.md).  
+ Pour plus d’informations, consultez [répertorie &#40;Générateur de rapports et SSRS&#41;](create-invoices-and-forms-with-lists-report-builder-and-ssrs.md).  
   
 
   
@@ -134,51 +134,51 @@ ms.locfileid: "36141973"
 ##  <a name="HowTo"></a> Rubriques de procédures  
  Cette section répertorie les procédures qui vous indiquent pas à pas comment utiliser les tables, matrices et listes dans vos rapports, afficher des données dans les lignes et les colonnes, ajouter et supprimer des colonnes, fusionner des cellules, et inclure des sous-totaux pour les groupes de lignes et de colonnes.  
   
--   [Ajouter un groupe de détails &#40;rapport Générateur et SSRS&#41;](add-a-details-group-report-builder-and-ssrs.md)  
+-   [Ajouter un groupe de détails &#40;Générateur de rapports et SSRS&#41;](add-a-details-group-report-builder-and-ssrs.md)  
   
--   [Ajouter un Total à un groupe ou d’une région de données de tableau matriciel &#40;rapport Générateur et SSRS&#41;](add-a-total-to-a-group-or-tablix-data-region-report-builder-and-ssrs.md)  
+-   [Ajouter un Total à un groupe ou d’une région de données de tableau matriciel &#40;Générateur de rapports et SSRS&#41;](add-a-total-to-a-group-or-tablix-data-region-report-builder-and-ssrs.md)  
   
--   [Modifier un élément dans une cellule &#40;rapport Générateur et SSRS&#41;](change-an-item-within-a-cell-report-builder-and-ssrs.md)  
+-   [Modifier un élément dans une cellule &#40;Générateur de rapports et SSRS&#41;](change-an-item-within-a-cell-report-builder-and-ssrs.md)  
   
--   [Modifier la hauteur de ligne ou la largeur de colonne &#40;rapport Générateur et SSRS&#41;](change-row-height-or-column-width-report-builder-and-ssrs.md)  
+-   [Modifier la hauteur de ligne ou de la largeur de colonne &#40;Générateur de rapports et SSRS&#41;](change-row-height-or-column-width-report-builder-and-ssrs.md)  
   
--   [Insérer ou supprimer une colonne &#40;rapport Générateur et SSRS&#41;](insert-or-delete-a-column-report-builder-and-ssrs.md)  
+-   [Insérer ou supprimer une colonne &#40;Générateur de rapports et SSRS&#41;](insert-or-delete-a-column-report-builder-and-ssrs.md)  
   
--   [Insérer ou supprimer une ligne &#40;rapport Générateur et SSRS&#41;](insert-or-delete-a-row-report-builder-and-ssrs.md)  
+-   [Insérer ou supprimer une ligne &#40;Générateur de rapports et SSRS&#41;](insert-or-delete-a-row-report-builder-and-ssrs.md)  
   
--   [Fusionner des cellules dans une région de données &#40;rapport Générateur et SSRS&#41;](merge-cells-in-a-data-region-report-builder-and-ssrs.md)  
+-   [Fusionner des cellules dans une région de données &#40;Générateur de rapports et SSRS&#41;](merge-cells-in-a-data-region-report-builder-and-ssrs.md)  
   
--   [Créer un groupe de hiérarchies récursives &#40;rapport Générateur et SSRS&#41;](create-a-recursive-hierarchy-group-report-builder-and-ssrs.md)  
+-   [Créer un groupe de hiérarchies récursives &#40;Générateur de rapports et SSRS&#41;](create-a-recursive-hierarchy-group-report-builder-and-ssrs.md)  
   
--   [Ajouter ou supprimer un groupe dans une région de données &#40;rapport Générateur et SSRS&#41;](add-or-delete-a-group-in-a-data-region-report-builder-and-ssrs.md)  
+-   [Ajouter ou supprimer un groupe dans une région de données &#40;Générateur de rapports et SSRS&#41;](add-or-delete-a-group-in-a-data-region-report-builder-and-ssrs.md)  
   
--   [Afficher des en-têtes et pieds de page avec un groupe &#40;rapport Générateur et SSRS&#41;](display-headers-and-footers-with-a-group-report-builder-and-ssrs.md)  
+-   [Afficher des en-têtes et pieds de page avec un groupe &#40;Générateur de rapports et SSRS&#41;](display-headers-and-footers-with-a-group-report-builder-and-ssrs.md)  
   
--   [Créer un rapport en escalier &#40;rapport Générateur et SSRS&#41;](create-a-stepped-report-report-builder-and-ssrs.md)  
+-   [Créer un rapport en escalier &#40;Générateur de rapports et SSRS&#41;](create-a-stepped-report-report-builder-and-ssrs.md)  
   
--   [Ajouter, déplacer ou supprimer une Table, matrice ou liste &#40;rapport Générateur et SSRS&#41;](add-move-or-delete-a-table-matrix-or-list-report-builder-and-ssrs.md)  
+-   [Ajouter, déplacer ou supprimer une Table, matrice ou liste &#40;Générateur de rapports et SSRS&#41;](add-move-or-delete-a-table-matrix-or-list-report-builder-and-ssrs.md)  
   
 
   
 ##  <a name="InThisSection"></a> Dans cette section  
  Les rubriques suivantes fournissent des informations supplémentaires sur l'utilisation de la région de données de tableau matriciel.  
   
- [Région de données de tableau matriciel &#40;rapport Générateur et SSRS&#41;](../tablix-data-region-report-builder-and-ssrs.md)  
+ [Région de données de tableau matriciel &#40;Générateur de rapports et SSRS&#41;](../tablix-data-region-report-builder-and-ssrs.md)  
  Explique les principaux concepts relatifs à la région de données de tableau matriciel, par exemple les zones du tableau matriciel, les données de détail et groupées, les groupes de colonnes et de lignes ainsi que les lignes et colonnes statiques et dynamiques.  
   
- [Ajout de données à une région de données de tableau matriciel &#40;rapport Générateur et SSRS&#41;](adding-data-to-a-tablix-data-region-report-builder-and-ssrs.md)  
+ [Ajout de données à une région de données de tableau matriciel &#40;Générateur de rapports et SSRS&#41;](adding-data-to-a-tablix-data-region-report-builder-and-ssrs.md)  
  Fournit des informations détaillées sur l'ajout de données de détail et groupées, de sous-totaux et totaux, et d'étiquettes à une région de données de tableau matriciel.  
   
- [Contrôle de l’affichage de la région de données de tableau matriciel sur une Page de rapport &#40;rapport Générateur et SSRS&#41;](controlling-the-tablix-data-region-display-on-a-report-page.md)  
+ [Contrôle de l’affichage de la région de données de tableau matriciel sur une Page de rapport &#40;Générateur de rapports et SSRS&#41;](controlling-the-tablix-data-region-display-on-a-report-page.md)  
  Décrit les propriétés d'une région de données de tableau matriciel que vous pouvez modifier pour changer l'affichage d'une région de données de tableau matriciel dans un rapport.  
   
- [Contrôle des en-têtes de ligne et colonne &#40;rapport Générateur et SSRS&#41;](controlling-row-and-column-headings-report-builder-and-ssrs.md)  
+ [Contrôle des en-têtes de colonne et de ligne &#40;Générateur de rapports et SSRS&#41;](controlling-row-and-column-headings-report-builder-and-ssrs.md)  
  Décrit comment contrôler les en-têtes de lignes et de colonnes lorsqu'une région de données de table, matrice ou liste peut s'étendre sur plusieurs pages horizontalement ou verticalement.  
   
- [Création de groupes de hiérarchies récursives &#40;rapport Générateur et SSRS&#41;](creating-recursive-hierarchy-groups-report-builder-and-ssrs.md)  
+ [Création de groupes de hiérarchies récursives &#40;Générateur de rapports et SSRS&#41;](creating-recursive-hierarchy-groups-report-builder-and-ssrs.md)  
  Décrit comment afficher des données récursives là où la relation entre parent et enfant est représentée par des champs dans le dataset.  
   
- [Présentation des groupes &#40;rapport Générateur et SSRS&#41;](understanding-groups-report-builder-and-ssrs.md)  
+ [Présentation des groupes &#40;Générateur de rapports et SSRS&#41;](understanding-groups-report-builder-and-ssrs.md)  
  Définit les groupes et le moment de les utiliser ainsi que les groupes disponibles pour les différentes régions de données de tableau matriciel.  
   
 

@@ -1,5 +1,5 @@
 ---
-title: Masquage et désactivation des hiérarchies d’attributs | Documents Microsoft
+title: Masquage et désactivation des hiérarchies d’attributs | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 095039c2-7104-414c-a9a6-327b03ce79df
 caps.latest.revision: 16
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: jhubbard
-ms.openlocfilehash: 0e83f548ebefd90b3bb990629980f95620e30ad6
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: d980e87255d24d754e19d8358b423ba38440d05d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36152438"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37271955"
 ---
 # <a name="hiding-and-disabling-attribute-hierarchies"></a>Masquage et désactivation des hiérarchies d'attributs
   Par défaut, une hiérarchie d'attribut est créée pour chaque attribut dans une dimension, et chaque hiérarchie est disponible pour dimensionner les données de faits. Cette hiérarchie se compose d'un niveau « All » et d'un niveau de détail contenant tous les membres de la hiérarchie. Comme vous l'avez déjà appris, vous pouvez organiser les attributs en hiérarchies définies par l'utilisateur pour fournir les chemins de navigation dans un cube. Dans certaines circonstances, vous pouvez être amené à choisir de désactiver ou de masquer certains attributs et leurs hiérarchies. Par exemple, certains attributs, tels que les numéros de sécurité sociale ou les numéros de carte d'identité, les taux de rémunération, les dates de naissance et les informations de connexion ne sont pas des attributs par lesquels les utilisateurs pourront dimensionner les informations d'un cube. Ces informations sont au contraire généralement affichées uniquement comme détails d'un membre d'attribut spécifique. Vous pouvez choisir de masquer ces hiérarchies d'attributs, ce qui permet de laisser les attributs affichés uniquement en tant que propriétés de membre d'un attribut spécifique. Vous pouvez également choisir d'afficher les membres d'autres attributs, tels que les noms de clients ou les codes postaux, uniquement lorsqu'ils sont visualisés via une hiérarchie utilisateur et non indépendamment via une hiérarchie d'attributs. L'une des raisons qui amène à procéder ainsi est le nombre même de membres distincts dans la hiérarchie d'attributs. Enfin, pour améliorer les performances de traitement, vous devez désactiver les hiérarchies d'attributs auxquelles les utilisateurs ne feront pas appel pour l'exploration.  
@@ -111,7 +111,7 @@ ms.locfileid: "36152438"
   
      L'illustration suivante montre la propriété **AttributeHierarchyVisible** avec la valeur False.  
   
-     ![La propriété AttributeHierarchyVisible est définie sur False](../../2014/tutorials/media/l4-hierarchyvisible-1.gif "propriété AttributeHierarchyVisible est définie sur False")  
+     ![Propriété AttributeHierarchyVisible est définie sur False](../../2014/tutorials/media/l4-hierarchyvisible-1.gif "propriété AttributeHierarchyVisible est définie sur False")  
   
 5.  Faites glisser l'attribut **Postal Code** du volet **Attributs** vers la hiérarchie utilisateur **Customer Geography** du volet **Hiérarchies et niveaux** , immédiatement sous le niveau **City** .  
   
@@ -130,6 +130,6 @@ ms.locfileid: "36152438"
      Notez que les niveaux masqués, **Postal Code** et **Full Name**, sont visibles dans la hiérarchie définie par l’utilisateur.  
   
 ## <a name="next-task-in-lesson"></a>Tâche suivante de la leçon  
- [Tri des membres d'attribut sur la base d'un attribut secondaire](../analysis-services/lesson-4-5-sorting-attribute-members-based-on-a-secondary-attribute.md)  
+ [Tri des membres d’attribut sur la base d’un attribut secondaire](../analysis-services/lesson-4-5-sorting-attribute-members-based-on-a-secondary-attribute.md)  
   
   

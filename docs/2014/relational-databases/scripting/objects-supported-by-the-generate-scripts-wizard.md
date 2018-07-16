@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 071eb2cb-f073-41ca-9f4d-11d3b8803495
 caps.latest.revision: 5
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: f102fa4366106581c5f3ec4ff141d537531dbaa4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: e2d0cc8bb86c84b9b4c9416f844eaff8251b3445
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36040598"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37233079"
 ---
 # <a name="objects-supported-by-the-generate-scripts-wizard"></a>Objets pris en charge par l'Assistant Génération de scripts
   L'Assistant Générer et publier des scripts prend en charge un sous-ensemble des objets pris en charge par le [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)].  
@@ -37,6 +37,6 @@ ms.locfileid: "36040598"
   
  <sup>1</sup> publié sans chiffrement.  
   
- <sup>2</sup> tous les utilisateurs non-système qui existent dans la base de données sont publiés en tant que rôles.  
+ <sup>2</sup> tous les utilisateurs non-système qui existent dans la base de données sont publiés comme rôles.  
   
   

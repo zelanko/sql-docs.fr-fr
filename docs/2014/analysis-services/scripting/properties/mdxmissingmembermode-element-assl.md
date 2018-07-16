@@ -1,5 +1,5 @@
 ---
-title: Élément MdxMissingMemberMode (ASSL) | Documents Microsoft
+title: Élément MdxMissingMemberMode (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - MdxMissingMemberMode element
 ms.assetid: aca6130b-5fb8-4fa1-af8b-8e1ef361926f
 caps.latest.revision: 13
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: feba98157b8e3f6048e0513d7f8b11bb165ca45c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 4bf066a836d329096d36366b3d4a5f2835957fc5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36144380"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37319409"
 ---
 # <a name="mdxmissingmembermode-element-assl"></a>Élément MdxMissingMemberMode (ASSL)
   Détermine comment les membres manquants sont gérés pour les instructions MDX (Multidimensional Expressions).  
@@ -68,7 +68,7 @@ ms.locfileid: "36144380"
 |*Erreur*|Une erreur est déclenchée si des membres manquants sont détectés.|  
 |*Par défaut*|Les membres manquants sont ignorés.|  
   
- L’élément qui correspond au parent de `MdxMissingMemberMode` dans l’objet d’objets AMO (Analysis Management) est modèle <xref:Microsoft.AnalysisServices.Dimension>.  
+ L’élément qui correspond au parent de `MdxMissingMemberMode` dans l’objet d’objets AMO (Analysis Management) modèle est <xref:Microsoft.AnalysisServices.Dimension>.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Expressions multidimensionnelles &#40;MDX&#41; référence](/sql/mdx/multidimensional-expressions-mdx-reference)   

@@ -1,5 +1,5 @@
 ---
-title: Source de l’élément (Binding) (ASSL) | Documents Microsoft
+title: Élément (Binding) (ASSL) source | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - Source element
 ms.assetid: 1032558c-7546-4ca7-888d-8139df23cb62
 caps.latest.revision: 40
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 58bacab7c84d1432a57d16c709b08c8c79ac143d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 54257415a19530a82b27e759dea03a4e41dcb0cd
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36143786"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37257237"
 ---
 # <a name="source-element-binding-assl"></a>Élément Source (Binding) (ASSL)
   Identifie la source de données à laquelle l'élément parent est lié.  
@@ -83,7 +83,7 @@ ms.locfileid: "36143786"
   
 |Parent DataItem|Types de données autorisés|  
 |---------------------|------------------------|  
-|[DimensionAttribute](../data-type/attributebinding-data-type-assl.md), [ColumnBinding](../data-type/columnbinding-data-type-assl.md), [TimeAttributeBinding](../data-type/timeattributebinding-data-type-assl.md) (uniquement pour les [KeyColumns](../collections/columns-element-assl.md)).|  
+|[DimensionAttribute](../data-type/attributebinding-data-type-assl.md), [ColumnBinding](../data-type/columnbinding-data-type-assl.md), [TimeAttributeBinding](../data-type/timeattributebinding-data-type-assl.md) (uniquement pour [KeyColumns](../collections/columns-element-assl.md)).|  
 |[MeasureGroupAttribute](../data-type/measuregroupattribute-data-type-assl.md)|[AttributeBinding](../data-type/attributebinding-data-type-assl.md), [ColumnBinding](../data-type/columnbinding-data-type-assl.md), [InheritedBinding](../data-type/inheritedbinding-data-type-assl.md).|  
 |[ScalarMiningStructureColumn](../data-type/miningstructurecolumn-data-type-assl.md)|[ColumnBinding](../data-type/columnbinding-data-type-assl.md)|  
   

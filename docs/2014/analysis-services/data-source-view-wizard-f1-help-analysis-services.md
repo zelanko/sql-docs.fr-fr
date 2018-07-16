@@ -1,5 +1,5 @@
 ---
-title: Aide F1 (Analysis Services) de données Source vue Assistant | Documents Microsoft
+title: Data Source View Assistant F1 (Analysis Services) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Data Source View Wizard
 ms.assetid: 0f5057a3-2d3a-4966-8b61-99c4b8ec3433
 caps.latest.revision: 22
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: f866ebe7d18a749409d1bdeb0f2b7d2b073c5f74
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: efc9c20cc6e79ae4e03838d9d4621fca383a5b43
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36152244"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37269825"
 ---
 # <a name="data-source-view-wizard-f1-help-analysis-services"></a>Aide (F1) de l'Assistant Vue de source de données (Analysis Services)
   Utilisez l'Assistant Vue de source de données pour créer une vue de source de données à utiliser dans les projets Business Intelligence suivants dans [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]:  

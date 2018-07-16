@@ -1,5 +1,5 @@
 ---
-title: Exploration des modèles dans Excel (SQL Server Data Mining Add-ins) | Documents Microsoft
+title: Exploration des modèles dans Excel (SQL Server Data Mining Add-ins) | Microsoft Docs
 ms.custom: ''
 ms.date: 12/29/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - mining models, browsing
 - browse models
 - mining models, viewing
 ms.assetid: a8cca1d7-602a-449a-875c-99da564965bc
 caps.latest.revision: 16
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 6c2badba8baf8abad2c366c6b21a28e2e2a236e0
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 5204d7f7084d6efd457a7928132048a8c1597eec
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36142833"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37214359"
 ---
 # <a name="browsing-models-in-excel-sql-server-data-mining-add-ins"></a>Exploration des modèles dans Excel (Compléments d'exploration de données SQL Server)
   ![Bouton Parcourir le modèle dans le ruban Exploration de données](media/dmc-browse.gif "bouton Parcourir le modèle dans le ruban Exploration de données")  
@@ -36,28 +36,28 @@ ms.locfileid: "36142833"
   
 1.  Cliquez sur le **d’exploration de données** onglet.  
   
-2.  Dans le **l’utilisation du modèle** , cliquez sur **Parcourir**.  
+2.  Dans le **l’utilisation du modèle** de groupe, cliquez sur **Parcourir**.  
   
 3.  Dans le **sélectionner un modèle** boîte de dialogue, choisissez un modèle d’exploration de données dans la liste, puis cliquez sur **suivant**.  
   
-4.  L’Assistant s’ouvre un **Parcourir** fenêtre qui est appropriée pour le type de modèle que vous avez sélectionné.  
+4.  L’Assistant s’ouvre un **Parcourir** fenêtre approprié pour le type de modèle que vous avez sélectionné.  
   
 ## <a name="list-of-data-mining-viewers"></a>Liste des visionneuses d'exploration de données  
- Selon l’algorithme d’exploration de données que vous avez utilisé lorsque vous avez créé le modèle, le **Parcourir** fenêtre aura un aspect un peu différent. Elle peut inclure des graphiques pour faciliter l'interprétation des résultats, des légendes contenant des informations supplémentaires et des contrôles pour interagir avec les données.  
+ Selon l’algorithme d’exploration de données que vous avez utilisé lorsque vous avez créé le modèle, le **Parcourir** fenêtre aura un aspect un peu différente. Elle peut inclure des graphiques pour faciliter l'interprétation des résultats, des légendes contenant des informations supplémentaires et des contrôles pour interagir avec les données.  
   
  Les rubriques suivantes fournissent des recommandations concernant l'utilisation de chacune des visionneuses, notamment des conseils sur l'interprétation des graphiques complexes, et la manière de modifier, de copier ou d'utiliser les résultats.  
   
- [Exploration d’un modèle de règles d’Association](browsing-an-association-rules-model.md)  
+ [Exploration d’un modèle de règles d’association](browsing-an-association-rules-model.md)  
   
- [Exploration d’un modèle de Clustering](browsing-a-clustering-model.md)  
+ [Exploration d’un modèle de clustering](browsing-a-clustering-model.md)  
   
- [Exploration d’un modèle d’arbres de décision](browsing-a-decision-trees-model.md)  
+ [Exploration d’un modèle d’arbre de décision](browsing-a-decision-trees-model.md)  
   
  [Exploration d’un modèle de prévision](browsing-a-forecasting-model.md)  
   
  [Exploration d’un modèle Naive Bayes](browsing-a-naive-bayes-model.md)  
   
- [Exploration d’un modèle de réseau neuronal](browsing-a-neural-network-model.md)  
+ [Exploration d’un modèle MNN (Microsoft Neural Network)](browsing-a-neural-network-model.md)  
   
 ## <a name="see-also"></a>Voir aussi  
  [Affichage de modèles d’exploration de données dans Visio &#40;compléments d’exploration de données&#41;](viewing-data-mining-models-in-visio-data-mining-add-ins.md)   

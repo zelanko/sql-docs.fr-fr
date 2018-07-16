@@ -8,28 +8,28 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 1d7d87e2-bf0d-4ebb-a287-80b5a967a3f2
 caps.latest.revision: 7
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 5912a29ddfd19ef5e191be6c4d102117d125421d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: f6a3c90fe0df58b27f99df2f1e37d66c1ff523b6
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36153876"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37268627"
 ---
 # <a name="extended-field-properties-for-an-analysis-services-database-ssrs"></a>Propriétés de champ étendues pour une base de données Analysis Services (SSRS)
-  L’extension pour le traitement des données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] prend en charge les propriétés de champ étendues. Les propriétés de champs étendues sont des propriétés complémentaires aux propriétés `Value` et `IsMissing` qui sont disponibles sur la source de données et prises en charge par l'extension pour le traitement des données. Les propriétés étendues ne figurent pas dans le volet des données de rapport dans le cadre de la collection de champs pour un dataset de rapport. Vous pouvez inclure des valeurs de propriété de champ étendues dans votre rapport en écrivant des expressions qui spécifient les par nom à l’aide de la fonction intégrée `Fields` collection.  
+  L’extension pour le traitement des données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] prend en charge les propriétés de champ étendues. Les propriétés de champs étendues sont des propriétés complémentaires aux propriétés `Value` et `IsMissing` qui sont disponibles sur la source de données et prises en charge par l'extension pour le traitement des données. Les propriétés étendues ne figurent pas dans le volet des données de rapport dans le cadre de la collection de champs pour un dataset de rapport. Vous pouvez inclure des valeurs de propriété de champ étendues dans votre rapport en écrivant des expressions qui en spécifient le nom à l’aide intégrée `Fields` collection.  
   
- Les propriétés étendues incluent des propriétés prédéfinies et des propriétés personnalisées. Les propriétés prédéfinies sont des propriétés communes à plusieurs sources de données qui sont mappées à des noms de propriété de champ spécifique et est accessible via la fonction intégrée `Fields` collection par nom. Les propriétés personnalisées sont spécifiques à chaque fournisseur de données et sont accessibles par l'intermédiaire de la collection `Fields` intégrée uniquement par la syntaxe utilisant le nom de la propriété étendue comme chaîne.  
+ Les propriétés étendues incluent des propriétés prédéfinies et des propriétés personnalisées. Propriétés prédéfinies sont des propriétés communes à plusieurs sources de données qui sont mappés aux noms de propriété de champ spécifique et sont accessibles via l’intégrée `Fields` collection par nom. Les propriétés personnalisées sont spécifiques à chaque fournisseur de données et sont accessibles par l'intermédiaire de la collection `Fields` intégrée uniquement par la syntaxe utilisant le nom de la propriété étendue comme chaîne.  
   
  Quand vous utilisez le Concepteur de requêtes MDX [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] en mode graphique pour définir votre requête, un ensemble prédéfini de propriétés de cellule et de propriétés de dimension est ajouté automatiquement à la requête MDX. Vous pouvez uniquement utiliser des propriétés étendues qui sont répertoriées spécifiquement dans la requête MDX de votre rapport. Selon votre rapport, vous souhaiterez peut-être modifier le texte de la commande MDX par défaut pour inclure d'autres propriétés personnalisées ou de dimension définies dans le cube. Pour plus d’informations sur les champs étendus disponibles dans les sources de données [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], consultez [Création et utilisation de valeurs de propriétés &#40;MDX&#41;](../../analysis-services/creating-and-using-property-values-mdx.md).  
   
 ## <a name="working-with-field-properties-in-a-report"></a>Utilisation des propriétés de champ dans un rapport  
- Les propriétés de champ étendues incluent des propriétés prédéfinies et des propriétés spécifiques au fournisseur de données. Les propriétés de champ n’apparaissent pas avec la liste de champs dans le volet **Données du rapport** , même si elles figurent dans la requête générée pour un dataset ; par conséquent, vous ne pouvez pas faire glisser les propriétés de champ vers l’aire de conception du rapport. Au lieu de cela, vous devez faites glisser le champ dans le rapport, puis modifier le `Value` propriété du champ à la propriété que vous souhaitez utiliser. Par exemple, si les données de cellule d’un cube ont déjà été mises en forme, vous pouvez utiliser la propriété de champ FormattedValue en utilisant l’expression suivante : `=Fields!FieldName.FormattedValue`.  
+ Les propriétés de champ étendues incluent des propriétés prédéfinies et des propriétés spécifiques au fournisseur de données. Les propriétés de champ n’apparaissent pas avec la liste de champs dans le volet **Données du rapport** , même si elles figurent dans la requête générée pour un dataset ; par conséquent, vous ne pouvez pas faire glisser les propriétés de champ vers l’aire de conception du rapport. Au lieu de cela, vous devez faire glisser le champ dans le rapport, puis modifier le `Value` propriété du champ à la propriété que vous souhaitez utiliser. Par exemple, si les données de cellule d’un cube ont déjà été mises en forme, vous pouvez utiliser la propriété de champ FormattedValue en utilisant l’expression suivante : `=Fields!FieldName.FormattedValue`.  
   
  Pour faire référence à une propriété étendue qui n'est pas prédéfinie, utilisez la syntaxe suivante dans une expression :  
   
@@ -50,7 +50,7 @@ ms.locfileid: "36153876"
 |------------------|--------------|---------------------------------------|  
 |`Value`|`Object`|Précise la valeur de données du champ.|  
 |`IsMissing`|`Boolean`|Indique si le champ figure dans le dataset obtenu.|  
-|`UniqueName`|`String`|Retourne le nom complet d'un niveau. Par exemple, le `UniqueName` valeur pour un employé peut être *[Employee]. [ Département de l’employé]. [Service]. & [Sales]. & [responsable des ventes Amérique du Nord]. & [272]*.|  
+|`UniqueName`|`String`|Retourne le nom complet d'un niveau. Par exemple, le `UniqueName` valeur d’un employé peut être *[Employee]. [ Employee Department]. [Department]. & [Sales]. & [responsable des ventes Amérique du Nord]. & [272]*.|  
 |`BackgroundColor`|`String`|Retourne la couleur d'arrière-plan définie dans la base de données pour le champ.|  
 |`Color`|`String`|Retourne la couleur de premier plan définie dans la base de données pour l'élément.|  
 |`FontFamily`|`String`|Retourne le nom de la police définie dans la base de données pour l'élément.|  
@@ -58,7 +58,7 @@ ms.locfileid: "36153876"
 |`FontWeight`|`String`|Retourne l'épaisseur de la police définie dans la base de données pour l'élément.|  
 |`FontStyle`|`String`|Retourne le style de la police définie dans la base de données pour l'élément.|  
 |`TextDecoration`|`String`|Retourne la mise en forme de texte spéciale définie dans la base de données pour l'élément.|  
-|`FormattedValue`|`String`|Retourne la valeur mise en forme d'une mesure ou d'un chiffre clé. Par exemple, le `FormattedValue` propriété **Sales Amount Quota** retourne un format monétaire tel que $1,124,400.00.|  
+|`FormattedValue`|`String`|Retourne la valeur mise en forme d'une mesure ou d'un chiffre clé. Par exemple, le `FormattedValue` propriété pour **Sales Amount Quota** retourne un format monétaire tel que $1,124,400.00.|  
 |`Key`|`Object`|Retourne la clé d'un niveau.|  
 |`LevelNumber`|`Integer`|Dans le cas des hiérarchies parent-enfant, cette propriété retourne le nombre de niveaux ou de dimensions.|  
 |`ParentUniqueName`|`String`|Dans le cas des hiérarchies parent-enfant, cette propriété retourne le nom complet du niveau parent.|  
@@ -144,7 +144,7 @@ CELL PROPERTIES
 |FONT_SIZE|(Null)|  
 |FONT_FLAGS|(Null)|  
   
- Si vous créez un dataset de rapport avec cette requête et que vous liez celui-ci à une table, vous pouvez consulter la propriété VALUE par défaut pour un champ ; par exemple, `=Fields!Month_of_Year!Value`. Si vous définissez cette expression en tant que l’expression de tri pour la table, les résultats seront pour trier la table par ordre alphabétique par mois, car le champ valeur utilise un `String` type de données. Pour trier la table pour afficher les mois dans l'ordre d'apparition au cours de l'année (janvier au début, décembre à la fin), utilisez l'expression suivante :  
+ Si vous créez un dataset de rapport avec cette requête et que vous liez celui-ci à une table, vous pouvez consulter la propriété VALUE par défaut pour un champ ; par exemple, `=Fields!Month_of_Year!Value`. Si vous définissez cette expression en tant que l’expression de tri pour la table, vos résultats seront pour trier la table par ordre alphabétique par mois, car le champ valeur utilise un `String` type de données. Pour trier la table pour afficher les mois dans l'ordre d'apparition au cours de l'année (janvier au début, décembre à la fin), utilisez l'expression suivante :  
   
 ```  
 =Fields!Month_of_Year("MEMBER_VALUE")  
@@ -154,7 +154,7 @@ CELL PROPERTIES
   
 ## <a name="see-also"></a>Voir aussi  
  [Expressions &#40;Générateur de rapports et SSRS&#41;](../report-design/expressions-report-builder-and-ssrs.md)   
- [Collections intégrées dans les Expressions &#40;rapport Générateur et SSRS&#41;](../report-design/built-in-collections-in-expressions-report-builder.md)   
+ [Collections intégrées dans les Expressions &#40;Générateur de rapports et SSRS&#41;](../report-design/built-in-collections-in-expressions-report-builder.md)   
  [Collection de champs de dataset &#40;Générateur de rapports et SSRS&#41;](dataset-fields-collection-report-builder-and-ssrs.md)  
   
   

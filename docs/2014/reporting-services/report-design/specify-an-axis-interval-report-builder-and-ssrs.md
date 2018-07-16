@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: ae46712d-a5bf-44c0-9929-e30ccc1e7e33
 caps.latest.revision: 10
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 1ce88458add3922b5626a3d883a3df414d76221e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 3c619ec718e3471eb6518f6604a65c97cb367508
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36142209"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37304989"
 ---
 # <a name="specify-an-axis-interval-report-builder-and-ssrs"></a>Spécifier un intervalle d'axe (Générateur de rapports et SSRS)
   L'intervalle d'axe définit le nombre d'étiquettes et de graduations associées sur un axe. Sur l'axe des ordonnées, les intervalles de l'axe fournissent une mesure cohérente des points de données sur le graphique. Toutefois, sur l'axe des abscisses, cette fonctionnalité peut entraîner l'affichage des catégories sans étiquettes d'axe. Vous pouvez spécifier le nombre d’intervalles souhaité dans la propriété Intervalle de l’axe. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] calcule le nombre d'intervalles au moment de l'exécution en fonction des données contenues dans le jeu de résultats. Pour plus d’informations sur le calcul des intervalles de l’axe, consultez [Mise en forme des étiquettes des axes sur un graphique &#40;Générateur de rapports et SSRS&#41;](formatting-axis-labels-on-a-chart-report-builder-and-ssrs.md).  
@@ -40,7 +40,7 @@ ms.locfileid: "36142209"
   
 1.  Cliquez avec le bouton droit sur l'axe des abscisses, puis cliquez sur **Propriétés de l'axe**. La boîte de dialogue **Propriétés de l'axe** s'ouvre.  
   
-2.  Dans **Options de l’axe**, définissez `Interval` à **1**. Chaque étiquette de groupe de catégories est affichée. Si vous souhaitez afficher une étiquette de groupe de catégories sur deux sur l'axe des abscisses, tapez **2**.  
+2.  Dans **Options de l’axe**, affectez la valeur `Interval` à **1**. Chaque étiquette de groupe de catégories est affichée. Si vous souhaitez afficher une étiquette de groupe de catégories sur deux sur l'axe des abscisses, tapez **2**.  
   
 3.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
@@ -51,13 +51,13 @@ ms.locfileid: "36142209"
   
 1.  Cliquez avec le bouton droit sur l'axe de graphique à modifier, puis cliquez sur **Propriétés de l'axe**. La boîte de dialogue **Propriétés de l'axe** s'ouvre.  
   
-2.  Dans **Options de l’axe**, définissez `Interval` à **automatique**. Le graphique affiche le nombre optimal d'étiquettes de catégories qui peuvent s'ajuster le long de l'axe.  
+2.  Dans **Options de l’axe**, affectez la valeur `Interval` à **automatique**. Le graphique affiche le nombre optimal d'étiquettes de catégories qui peuvent s'ajuster le long de l'axe.  
   
 3.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
 ## <a name="see-also"></a>Voir aussi  
  [Mise en forme d’un graphique &#40;Générateur de rapports et SSRS&#41;](formatting-a-chart-report-builder-and-ssrs.md)   
- [Mise en forme des Points de données sur un graphique &#40;rapport Générateur et SSRS&#41;](formatting-data-points-on-a-chart-report-builder-and-ssrs.md)   
+ [Mise en forme des Points de données sur un graphique &#40;Générateur de rapports et SSRS&#41;](formatting-data-points-on-a-chart-report-builder-and-ssrs.md)   
  [Trier des données dans une région de données &#40;Générateur de rapports et SSRS&#41;](sort-data-in-a-data-region-report-builder-and-ssrs.md)   
  [Boîte de dialogue Propriétés de l’axe, Options de l’axe &#40;Générateur de rapports et SSRS&#41;](../axis-properties-dialog-box-axis-options-report-builder-and-ssrs.md)   
  [Spécifier une échelle logarithmique &#40;Générateur de rapports et SSRS&#41;](specify-a-logarithmic-scale-report-builder-and-ssrs.md)   

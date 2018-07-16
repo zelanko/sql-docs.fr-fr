@@ -1,5 +1,5 @@
 ---
-title: Page propriétés générales, Datasets partagés (rapport Gestionnaire) | Documents Microsoft
+title: Page propriétés générales, Datasets partagés (rapport Gestionnaire) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 10798e41-24c3-4e69-893b-7ee6af7fc958
 caps.latest.revision: 4
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 3378300841bb6ad4f37ee7b7da5d7add6e78adb1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 747121123f3a654ccd475913ffe8b4a8c7e79be0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36152292"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37290305"
 ---
 # <a name="general-properties-page-shared-datasets-report-manager"></a>Page Propriétés générales, Datasets partagés (Gestionnaire de rapports)
   La page Dataset partagé permet d'afficher et de gérer les propriétés d'un élément de dataset partagé.  
@@ -59,7 +59,7 @@ ms.locfileid: "36152292"
  Permet de supprimer le dataset partagé de la base de données du serveur de rapports. La suppression d'un dataset partagé désactive les rapports ou les versions mises en cache. Pour réactiver un rapport, vous devez l'ouvrir dans un outil de création de rapports et spécifier un dataset portant le même nom et utilisant la même collection de champs. Vous pouvez également mettre à jour chaque référence de région de données pour qu'elle utilise un dataset différent avec la même collection de champs.  
   
  **Déplacer**  
- Permet de déplacer un dataset partagé dans l'arborescence des dossiers du serveur de rapports. Un clic sur ce bouton permet d'ouvrir la page Déplacer les éléments dans laquelle vous pouvez parcourir les dossiers pour sélectionner un nouvel emplacement. Pour plus d’informations, consultez [déplacer la Page éléments &#40;le Gestionnaire de rapports&#41;](../../2014/reporting-services/move-items-page-report-manager.md).  
+ Permet de déplacer un dataset partagé dans l'arborescence des dossiers du serveur de rapports. Un clic sur ce bouton permet d'ouvrir la page Déplacer les éléments dans laquelle vous pouvez parcourir les dossiers pour sélectionner un nouvel emplacement. Pour plus d’informations, consultez [Page déplacer les éléments &#40;le Gestionnaire de rapports&#41;](../../2014/reporting-services/move-items-page-report-manager.md).  
   
  **Télécharger**  
  Permet d'extraire une copie de la définition du dataset partagé. Selon les associations de fichiers définies sur votre ordinateur, le fichier s'ouvre dans Visual Studio ou une autre application. Dans la plupart des cas, le dataset partagé s'ouvre dans un fichier XML.  
@@ -69,11 +69,11 @@ ms.locfileid: "36152292"
   
 ## <a name="see-also"></a>Voir aussi  
  [Le Gestionnaire de rapports &#40;SSRS en Mode natif&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
- [Afficher la Page contenu &#40;le Gestionnaire de rapports&#41;](../../2014/reporting-services/contents-page-report-manager.md)   
- [Aide (F1) de gestionnaire de rapports](../../2014/reporting-services/report-manager-f1-help.md)   
+ [Contenu de la Page &#40;le Gestionnaire de rapports&#41;](../../2014/reporting-services/contents-page-report-manager.md)   
+ [F1 du Gestionnaire de rapports](../../2014/reporting-services/report-manager-f1-help.md)   
  [Options d’actualisation de cache &#40;le Gestionnaire de rapports&#41;](../../2014/reporting-services/cache-refresh-options-report-manager.md)   
  [Page mise en cache, Datasets partagés &#40;le Gestionnaire de rapports&#41;](../../2014/reporting-services/caching-page-shared-datasets-report-manager.md)   
- [Gérer les Datasets partagés](report-data/manage-shared-datasets.md)   
+ [Gérer des Datasets partagés](report-data/manage-shared-datasets.md)   
  [Cache des Datasets partagés &#40;SSRS&#41;](report-server/cache-shared-datasets-ssrs.md)  
   
   

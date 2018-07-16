@@ -1,5 +1,5 @@
 ---
-title: Test de la précision avec des graphiques de courbes d’élévation (didacticiel d’exploration de données de base de données) | Documents Microsoft
+title: Test de la précision avec des graphiques de courbes d’élévation (didacticiel d’exploration de données de base) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 822d414b-4a39-473f-80c3-53476e30655a
 caps.latest.revision: 48
 author: minewiskan
 ms.author: owend
-manager: kfile
-ms.openlocfilehash: 8ce5ba972af0b1dda27521dbc5dc58041e386a69
-ms.sourcegitcommit: 8c040e5b4e8c7d37ca295679410770a1af4d2e1f
+manager: craigg
+ms.openlocfilehash: 864f255556063ea5011e3d3954294edcbdd9cb5b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/21/2018
-ms.locfileid: "36312557"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37328993"
 ---
 # <a name="testing-accuracy-with-lift-charts-basic-data-mining-tutorial"></a>Test de la précision à l'aide de graphiques de courbes d'élévation (Didacticiel sur l'exploration de données de base)
-  Sur le **graphique de précision d’exploration de données** onglet du Concepteur d’exploration de données, vous pouvez calculer la manière dont chacun de vos modèles effectue des prédictions et comparer les résultats de chaque modèle directement sur les résultats des autres modèles. Cette méthode de comparaison est appelée un *graphique de courbes d’élévation*. En général, la précision prédictive d'un modèle d'exploration de données se mesure par la finesse ou la précision de classification. Pour ce didacticiel, nous utiliserons le graphique de courbes d'élévation uniquement.  
+  Sur le **graphique de précision d’exploration de données** onglet du Concepteur d’exploration de données, vous pouvez calculer le degré chacun de vos modèles effectue des prédictions et comparer les résultats de chaque modèle directement sur les résultats des autres modèles. Cette méthode de comparaison est appelée un *graphique de courbes d’élévation*. En général, la précision prédictive d'un modèle d'exploration de données se mesure par la finesse ou la précision de classification. Pour ce didacticiel, nous utiliserons le graphique de courbes d'élévation uniquement.  
   
  Au cours de cette rubrique, vous allez effectuer les tâches suivantes :  
   
@@ -30,14 +30,14 @@ ms.locfileid: "36312557"
   
 -   [Configurer les paramètres du graphique d’analyse de précision](#BKMK_Selecting)  
   
-##  <a name="BKMK_InputData"></a> Sélection des données d’entrée  
+##  <a name="BKMK_InputData"></a> Choisir les données d’entrée  
  La première étape du test de précision de vos modèles d'exploration de données consiste à sélectionner la source de données que vous allez utiliser pour les tests. Vous allez tester le degré de précision des modèles avec vos données de test, puis vous les utiliserez avec des données externes.  
   
 #### <a name="to-select-the-data-set"></a>Pour sélectionner le jeu de données  
   
 1.  Basculez vers le **graphique de précision d’exploration de données** onglet dans le Concepteur d’exploration de données dans [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] et sélectionnez le **sélection d’entrée** onglet.  
   
-2.  Dans le **sélectionner le jeu de données à utiliser pour le graphique d’analyse de précision** zone de groupe, sélectionnez **utiliser des scénarios de test de structure d’exploration de données**. Il s'agit du jeu de données que vous avez mis de côté lorsque vous avez créé la structure d'exploration de données.  
+2.  Dans le **sélectionner le jeu de données à utiliser pour le graphique de précision** zone de groupe, sélectionnez **utiliser des scénarios de test de structure d’exploration de données**. Il s'agit du jeu de données que vous avez mis de côté lorsque vous avez créé la structure d'exploration de données.  
   
      Pour plus d’informations sur les autres options, consultez [choisir un Type de graphique d’analyse de précision et de définir les Options de graphique](../../2014/analysis-services/data-mining/choose-an-accuracy-chart-type-and-set-chart-options.md).  
   
@@ -48,15 +48,15 @@ ms.locfileid: "36312557"
   
 -   L'attribut prédictible à mesurer Certains modèles peuvent avoir plusieurs cibles, mais chaque graphique ne mesure qu'un seul résultat à la fois.  
   
-     Pour utiliser une colonne en tant que le **nom de la colonne prédictible** dans un graphique de précision, les colonnes doivent avoir le type d’utilisation `Predict` ou `Predict Only`. En outre, le type de contenu de la colonne cible doit être `Discrete` ou `Discretized`. En d'autres termes, vous ne pouvez pas utiliser le graphique de courbes d'élévation pour mesurer la précision par rapport à des valeurs numériques continues.  
+     Pour utiliser une colonne en tant que le **nom de la colonne prédictible** dans un graphique de précision, les colonnes doivent avoir le type d’utilisation de `Predict` ou `Predict Only`. En outre, le type de contenu de la colonne cible doit être `Discrete` ou `Discretized`. En d'autres termes, vous ne pouvez pas utiliser le graphique de courbes d'élévation pour mesurer la précision par rapport à des valeurs numériques continues.  
   
 -   Voulez-vous mesurer la précision générale du modèle, ou sa précision lors de la prédiction d'une valeur spécifique (notamment [Bike Buyer] = « Oui »)  
   
 #### <a name="to-generate-the-lift-chart"></a>Pour générer le graphique de courbes d'élévation  
   
-1.  Sur le **sélection d’entrée** onglet du Concepteur d’exploration de données, sous **sélectionner les colonnes du modèle d’exploration de données prévisibles à afficher dans le graphique de courbes d’élévation**, activez la case à cocher pour **synchroniser les colonnes de prédiction et Valeurs**.  
+1.  Sur le **sélection d’entrée** onglet du Concepteur d’exploration de données, sous **sélectionner des colonnes de modèle d’exploration de données prévisibles à afficher dans le graphique de courbes d’élévation**, activez la case à cocher pour **synchroniser les colonnes de prédiction et Valeurs**.  
   
-2.  Dans le **nom de la colonne prédictible** colonne, vérifiez que **Bike Buyer** est sélectionnée pour chaque modèle.  
+2.  Dans le **nom de la colonne prédictible** colonne, vérifiez que **Bike Buyer** est sélectionné pour chaque modèle.  
   
 3.  Dans le **afficher** colonne, sélectionnez chacun des modèles.  
   
@@ -83,7 +83,7 @@ ms.locfileid: "36312557"
  Pour obtenir une explication approfondie d’un graphique de courbes d’élévation semblable à celui créé dans cette leçon, consultez [graphique de courbes d’élévation &#40;Analysis Services - Exploration de données&#41;](../../2014/analysis-services/data-mining/lift-chart-analysis-services-data-mining.md).  
   
 ## <a name="next-task-in-lesson"></a>Tâche suivante de la leçon  
- [Test d’un modèle filtré &#40;didacticiel d’exploration de données de base de données&#41;](../../2014/tutorials/testing-a-filtered-model-basic-data-mining-tutorial.md)  
+ [Test d’un modèle filtré &#40;didacticiel d’exploration de données de base&#41;](../../2014/tutorials/testing-a-filtered-model-basic-data-mining-tutorial.md)  
   
 ## <a name="see-also"></a>Voir aussi  
  [Graphique de courbes d’élévation &#40;Analysis Services - Exploration de données&#41;](../../2014/analysis-services/data-mining/lift-chart-analysis-services-data-mining.md)   

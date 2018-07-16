@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - viewing replication properties
 - modifying replication properties, articles
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - publications [SQL Server replication], modifying
 ms.assetid: 27d72ea4-bcb6-48f2-b4aa-eb1410da7efc
 caps.latest.revision: 43
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 8168a9cb358f2be2a4b5c7c120ee06a8c10f7ccc
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: bc7d6dd823e7f19ad13a8921146d13e59f4e443f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36152309"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37230839"
 ---
 # <a name="view-and-modify-publication-properties"></a>Afficher et modifier les propriétés d'une publication
   Cette rubrique décrit comment afficher et modifier les propriétés de la publication dans [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] à l'aide de [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], de [!INCLUDE[tsql](../../../includes/tsql-md.md)]ou d'objets RMO (Replication Management Objects).  
@@ -162,9 +162,9 @@ ms.locfileid: "36152309"
   
 3.  Appelez la méthode <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> pour obtenir les propriétés de l'objet. Si cette méthode retourne `false`, soit les propriétés de la publication à l’étape 2 ont été définies de manière incorrecte ou que la publication n’existe pas.  
   
-4.  (Facultatif) Pour modifier les propriétés, définissez une nouvelle valeur pour l'une des propriétés paramétrables. Utiliser l’opérateur AND logique (`&` dans Microsoft Visual c# et `And` dans Microsoft Visual Basic) pour déterminer si une donnée <xref:Microsoft.SqlServer.Replication.PublicationAttributes> a la valeur pour le <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A> propriété. Utilisez l'opérateur OR logique inclusif (`|` en Visual C# et `Or` en Visual Basic) et l'opérateur OR logique exclusif (`^` en Visual C# et `Xor` en Visual Basic) pour modifier les valeurs <xref:Microsoft.SqlServer.Replication.PublicationAttributes> de la propriété <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A>.  
+4.  (Facultatif) Pour modifier les propriétés, définissez une nouvelle valeur pour l'une des propriétés paramétrables. Utilisez l’opérateur AND logique (`&` dans Microsoft Visual c# et `And` dans Microsoft Visual Basic) pour déterminer si une donnée <xref:Microsoft.SqlServer.Replication.PublicationAttributes> a la valeur pour le <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A> propriété. Utilisez l'opérateur OR logique inclusif (`|` en Visual C# et `Or` en Visual Basic) et l'opérateur OR logique exclusif (`^` en Visual C# et `Xor` en Visual Basic) pour modifier les valeurs <xref:Microsoft.SqlServer.Replication.PublicationAttributes> de la propriété <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A>.  
   
-5.  (Facultatif) Si vous avez spécifié une valeur de `true` pour <xref:Microsoft.SqlServer.Replication.ReplicationObject.CachePropertyChanges%2A>, appelez le <xref:Microsoft.SqlServer.Replication.ReplicationObject.CommitPropertyChanges%2A> méthode de validation des modifications sur le serveur. Si vous avez spécifié une valeur de `false` pour <xref:Microsoft.SqlServer.Replication.ReplicationObject.CachePropertyChanges%2A> (la valeur par défaut), les modifications sont envoyées au serveur immédiatement.  
+5.  (Facultatif) Si vous avez spécifié une valeur de `true` pour <xref:Microsoft.SqlServer.Replication.ReplicationObject.CachePropertyChanges%2A>, appelez le <xref:Microsoft.SqlServer.Replication.ReplicationObject.CommitPropertyChanges%2A> méthode pour valider les modifications sur le serveur. Si vous avez spécifié une valeur de `false` pour <xref:Microsoft.SqlServer.Replication.ReplicationObject.CachePropertyChanges%2A> (la valeur par défaut), les modifications sont envoyées au serveur immédiatement.  
   
 #### <a name="to-view-or-modify-properties-of-a-merge-publication"></a>Pour afficher ou modifier les propriétés d'une publication de fusion  
   
@@ -176,7 +176,7 @@ ms.locfileid: "36152309"
   
 4.  (Facultatif) Pour modifier les propriétés, définissez une nouvelle valeur pour l'une des propriétés paramétrables. Utilisez l'opérateur AND logique (`&` en Visual C# et `And` en Visual Basic) pour déterminer si une valeur <xref:Microsoft.SqlServer.Replication.PublicationAttributes> donnée est définie pour la propriété <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A>. Utilisez l'opérateur OR logique inclusif (`|` en Visual C# et `Or` en Visual Basic) et l'opérateur OR logique exclusif (`^` en Visual C# et `Xor` en Visual Basic) pour modifier les valeurs <xref:Microsoft.SqlServer.Replication.PublicationAttributes> de la propriété <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A>.  
   
-5.  (Facultatif) Si vous avez spécifié une valeur de `true` pour <xref:Microsoft.SqlServer.Replication.ReplicationObject.CachePropertyChanges%2A>, appelez le <xref:Microsoft.SqlServer.Replication.ReplicationObject.CommitPropertyChanges%2A> méthode de validation des modifications sur le serveur. Si vous avez spécifié une valeur de `false` pour <xref:Microsoft.SqlServer.Replication.ReplicationObject.CachePropertyChanges%2A> (la valeur par défaut), les modifications sont envoyées au serveur immédiatement.  
+5.  (Facultatif) Si vous avez spécifié une valeur de `true` pour <xref:Microsoft.SqlServer.Replication.ReplicationObject.CachePropertyChanges%2A>, appelez le <xref:Microsoft.SqlServer.Replication.ReplicationObject.CommitPropertyChanges%2A> méthode pour valider les modifications sur le serveur. Si vous avez spécifié une valeur de `false` pour <xref:Microsoft.SqlServer.Replication.ReplicationObject.CachePropertyChanges%2A> (la valeur par défaut), les modifications sont envoyées au serveur immédiatement.  
   
 ###  <a name="PShellExample"></a> Exemples (RMO)  
  Cet exemple définit des attributs de publication pour une publication transactionnelle. Les modifications sont mises en cache jusqu'à leur envoi explicite au serveur.  

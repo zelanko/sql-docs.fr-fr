@@ -1,5 +1,5 @@
 ---
-title: Boîte de dialogue liaisons de groupe de mesures (Analysis Services - données multidimensionnelles) | Documents Microsoft
+title: Boîte de dialogue liaisons de groupe de mesures (Analysis Services - données multidimensionnelles) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.cubeeditor.dimensionusage.definerelationship.measuregroupbindings.f1
 helpviewer_keywords:
 - Measure Group Bindings dialog box
 ms.assetid: ed642780-5350-438e-af73-b9ceab3f876d
 caps.latest.revision: 14
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 1508624a9d0e5a9f36c8ec7c15093f56b37977ea
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 2c306ba41e8ebb6fe2615be0bec8f3cebd560e65
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36152015"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37226409"
 ---
 # <a name="measure-group-bindings-dialog-box-analysis-services---multidimensional-data"></a>Boîte de dialogue Liaisons des groupes de mesures (Analysis Services - Données multidimensionnelles)
   Utilisez la boîte de dialogue **Liaisons des groupes de mesures** pour créer et modifier des relations directes entre des attributs non granulaires d’une dimension d’un cube et les colonnes d’un groupe de mesures. Elle permet également de spécifier des options de traitement des valeurs NULL pour tout attribut dans une dimension d’un cube, à partir de la boîte de dialogue **Définir une relation**.  
@@ -37,7 +37,7 @@ ms.locfileid: "36152015"
   
 |Option|Définition|  
 |------------|----------------|  
-|**Nom d’attribut**|Affiche le nom de l'attribut.|  
+|**Nom de l’attribut**|Affiche le nom de l'attribut.|  
 |**Table de dimension**|Affiche le nom de la table de dimension dont l'attribut est dérivé.|  
   
  **Relation**  

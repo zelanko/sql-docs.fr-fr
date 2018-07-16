@@ -5,10 +5,9 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-data-compression
+ms.technology: ''
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - page compression [Database Engine]
 - indexes [SQL Server], compressed
@@ -23,18 +22,18 @@ helpviewer_keywords:
 - compressed tables [SQL Server]
 ms.assetid: 5f33e686-e115-4687-bd39-a00c48646513
 caps.latest.revision: 57
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 986f0e94559804539889eeb1e7618327eee68165
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: d76a9fa3b31b90890ae261ccce89acbc9829cc14
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36151919"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37320409"
 ---
 # <a name="data-compression"></a>Data Compression
-  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] prend en charge la compression de ligne et de page d’index et tables rowstore et prend en charge de columnstore et la compression d’archivage columnstore pour les index et les tables columnstore.  
+  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] prend en charge la compression de ligne et de page d’index et les tables rowstore et prend en charge de columnstore et la compression d’archivage columnstore pour les index et les tables columnstore.  
   
  Pour les tables et les index rowstore, utilisez la fonctionnalité de compression de données afin de réduire la taille de la base de données. Outre les économies d'espace, la compression des données peut améliorer les performances des charges de travail nécessitant de nombreuses E/S, car les données sont stockées dans beaucoup moins de pages et les requêtes doivent lire moins pages sur le disque. Toutefois, des ressources processeur supplémentaires sont nécessaires sur le serveur de base de données pour compresser et décompresser les données, alors que les données sont échangées avec l'application. La compression des lignes et des pages peut être configurée pour les objets de base de données suivants :  
   
@@ -67,7 +66,7 @@ ms.locfileid: "36151919"
   
 -   La compression permet de stocker davantage de lignes dans une page, mais elle ne modifie pas la taille maximale des lignes d'une table ou d'un index.  
   
--   Une table ne peut pas être activée pour la compression lorsque la taille de ligne maximale plus la charge mémoire de compression dépasse la taille de ligne maximale de 8 060 octets. Par exemple, une table qui possède les colonnes c1`char(8000)` et c2`char(53)` ne peut pas être compressée en raison de la charge de compression supplémentaire. Lorsque le format de stockage VarDecimal est utilisé, le contrôle de taille de ligne est effectué lorsque le format est activé. Pour la compression de ligne et de page, le contrôle de taille de ligne est effectué lorsque l'objet est compressé initialement, puis vérifié à mesure que chaque ligne est insérée ou modifiée. La compression met en vigueur les deux règles suivantes :  
+-   Une table ne peut pas être activée pour la compression lorsque la taille de ligne maximale plus la charge mémoire de compression dépasse la taille de ligne maximale de 8 060 octets. Par exemple, une table qui possède les colonnes c1`char(8000)` et c2`char(53)` ne peut pas être compressée en raison de la surcharge de compression supplémentaire. Lorsque le format de stockage VarDecimal est utilisé, le contrôle de taille de ligne est effectué lorsque le format est activé. Pour la compression de ligne et de page, le contrôle de taille de ligne est effectué lorsque l'objet est compressé initialement, puis vérifié à mesure que chaque ligne est insérée ou modifiée. La compression met en vigueur les deux règles suivantes :  
   
     -   Une mise à jour d'un type de longueur fixe doit toujours réussir.  
   

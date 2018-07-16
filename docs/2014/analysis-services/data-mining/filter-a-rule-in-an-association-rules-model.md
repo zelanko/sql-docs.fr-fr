@@ -1,5 +1,5 @@
 ---
-title: Filtre de modèle de règles d’une règle dans une Association | Documents Microsoft
+title: Filtre de modèle de règles d’une règle dans une Association | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - filtering rules [Analysis Services]
 - Mining Model Viewer [Analysis Services], rules
 - Rules Viewer
 ms.assetid: 26cdba5b-5bf1-439e-80a3-8759774e918b
 caps.latest.revision: 27
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 36332206119e0cf3c75e62650f8f6d9ac60897e7
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: e2abb9180b446183764d96e95fe85f74d9bcd40f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36154731"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37289795"
 ---
 # <a name="filter-a-rule-in-an-association-rules-model"></a>Filtrer une règle dans un modèle de règles d'association
   Vous pouvez utiliser le filtrage avec des modèles d'association pour restreindre les résultats aux associations qui vous intéressent. Par exemple, vous pouvez filtrer les règles pour afficher uniquement celles qui incluent un produit spécifique.  
@@ -64,7 +64,7 @@ ms.locfileid: "36154731"
   
 ## <a name="see-also"></a>Voir aussi  
  [Tâches de la visionneuse modèle d’exploration de données et de procédures](mining-model-viewer-tasks-and-how-tos.md)   
- [Parcourir un modèle à l’aide de la visionneuse de règles Microsoft Association](browse-a-model-using-the-microsoft-association-rules-viewer.md)   
- [Leçon 3 : Génération d’un scénario de panier d’achat &#40;intermédiaire Didacticiel d’exploration de données&#41;](../../tutorials/lesson-3-building-a-market-basket-scenario-intermediate-data-mining-tutorial.md)  
+ [Explorer un modèle à l’aide de la visionneuse de règles Microsoft Association](browse-a-model-using-the-microsoft-association-rules-viewer.md)   
+ [Leçon 3 : Génération d’un scénario de panier &#40;didacticiel d’exploration de données intermédiaire&#41;](../../tutorials/lesson-3-building-a-market-basket-scenario-intermediate-data-mining-tutorial.md)  
   
   

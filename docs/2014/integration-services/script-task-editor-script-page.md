@@ -1,5 +1,5 @@
 ---
-title: Éditeur de tâche de script (Page Script) | Documents Microsoft
+title: Éditeur de tâche de script (Page Script) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.scripttask.script.f1
 helpviewer_keywords:
 - Script Task Editor
 ms.assetid: 93da0e0d-83f5-406d-b144-4cce216571cb
 caps.latest.revision: 40
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 0b5641a837761e113368eea47777c3c3bf82ee20
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: aa423929b775dcfb50ef8d49329689820c797772
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36155062"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37295039"
 ---
 # <a name="script-task-editor-script-page"></a>Éditeur de tâche de script (page Script)
   Utilisez la page **Script** de la boîte de dialogue **Éditeur de tâche de script** pour définir les propriétés du script et vérifier les variables auxquelles le script peut accéder.  
@@ -67,7 +67,7 @@ ms.locfileid: "36155062"
  [Éditeur de tâche de script &#40;Page Général&#41;](../../2014/integration-services/script-task-editor-general-page.md)   
  [Page expressions](expressions/expressions-page.md)   
  [Exemples de tâche de script](extending-packages-scripting-task-examples/script-task-examples.md)   
- [Services d’intégration &#40;SSIS&#41; Variables](integration-services-ssis-variables.md)   
- [Ajouter, supprimer ou modifier l’étendue de la Variable définie par l’utilisateur dans un Package](../../2014/integration-services/add-delete-change-scope-of-user-defined-variable-in-a-package.md)  
+ [Integration Services &#40;SSIS&#41; Variables](integration-services-ssis-variables.md)   
+ [Ajouter, supprimer, modifier l’étendue d’une variable définie par l’utilisateur dans un package](../../2014/integration-services/add-delete-change-scope-of-user-defined-variable-in-a-package.md)  
   
   

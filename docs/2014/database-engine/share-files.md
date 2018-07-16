@@ -1,5 +1,5 @@
 ---
-title: Partager des fichiers | Documents Microsoft
+title: Partager des fichiers | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - sharing files
 - file sharing [SQL Server]
 - version control services [SQL Server], file sharing
 ms.assetid: 645f5c0a-e949-4e87-8988-85e4d6128464
 caps.latest.revision: 20
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 528e0ac6eb185089fc7e5e38f654dd1acf2fb64e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: b931d9ebcf8ef5889158a4c393833298dc3b097a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36143313"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37308079"
 ---
 # <a name="share-files"></a>Partager des fichiers
   Vous pouvez utiliser [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] pour partager des éléments avec des projets du contrôle de code source. Lorsque vous partagez un élément, toute modification apportée à cet élément est réfléchie sur chaque projet avec lequel l'élément est partagé.  
@@ -40,7 +40,7 @@ ms.locfileid: "36143313"
   
 2.  Sur le **fichier** menu, pointez sur **contrôle de code Source**, puis cliquez sur **partage**.  
   
-3.  Dans le **partager avec** boîte de dialogue, parcourez la liste de répertoire pour l’élément que vous souhaitez partager et cliquez sur cet élément.  
+3.  Dans le **partager avec** boîte de dialogue Parcourir la liste de répertoires pour l’élément que vous souhaitez partager, puis cliquez sur cet élément.  
   
 4.  Cliquez sur **partage**.  
   

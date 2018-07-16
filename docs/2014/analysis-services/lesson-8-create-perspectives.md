@@ -1,5 +1,5 @@
 ---
-title: 'Leçon 9 : Créer des Perspectives | Documents Microsoft'
+title: 'Leçon 9 : Créer des Perspectives | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 55b0f0d0-1cdf-4876-9c3d-d0c848be3f5d
 caps.latest.revision: 18
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: jhubbard
-ms.openlocfilehash: fe2e746ec290aeb3b8690f818875616f2b9dd2f1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 55c9ef5ca0049c3adda66405f941f4270f562b65
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36144394"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37295949"
 ---
 # <a name="lesson-9-create-perspectives"></a>Leçon 9 : Créer des perspectives
   Dans cette leçon, vous allez créer une perspective Internet Sales. Une perspective définit un sous-ensemble visualisable d'un modèle et des points de vue du modèle focalisés sur un domaine d'activité ou sur une application. Lorsqu'un utilisateur se connecte à un modèle à l'aide d'une perspective, il voit uniquement les objets de modèle (tables, colonnes, mesures, hiérarchies et KPI) en tant que champs définis dans cette perspective.  
@@ -39,13 +39,13 @@ ms.locfileid: "36144394"
   
 #### <a name="to-create-an-internet-sales-perspective"></a>Pour créer une perspective Internet Sales  
   
-1.  Dans le Générateur de modèles, cliquez sur le **modèle** menu, puis sur **Perspectives**.  
+1.  Dans le Concepteur de modèles, cliquez sur le **modèle** menu, puis sur **Perspectives**.  
   
 2.  Dans la boîte de dialogue **Perspectives** , cliquez sur **Nouvelle perspective**.  
   
 3.  Pour renommer la perspective, double-cliquez sur le **nouvelle Perspective 1** en-tête de colonne, puis tapez `Internet Sales`.  
   
-4.  Dans **champs**, sélectionnez les tables suivantes **Date**, **Geography**, **produit**, **Product Category**, **Sous-catégorie de produit**, et `Internet Sales`.  
+4.  Dans **champs**, sélectionnez les tables suivantes **Date**, **Geography**, **produit**, **Product Category**, **Product Subcategory**, et `Internet Sales`.  
   
      Notez que vous avez exclu la table Customer et toutes ses colonnes de cette perspective. Ultérieurement, au cours de la leçon 12, vous utiliserez la fonctionnalité Analyser dans Excel pour tester cette perspective. La liste de champs de tableau croisé dynamique Excel inclut chaque table sauf la table Customer.  
   

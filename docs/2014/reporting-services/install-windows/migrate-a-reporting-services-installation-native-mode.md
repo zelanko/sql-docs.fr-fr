@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - manual Reporting Services migrations
 - Report Server Windows service
@@ -21,13 +21,13 @@ ms.assetid: a6fc56c1-c504-438d-a2b0-5ed29c24e7d6
 caps.latest.revision: 51
 author: markingmyname
 ms.author: maghan
-manager: jhubbard
-ms.openlocfilehash: 60c6e0833fb2e8a8c20ca1dca6f3fe8bb43bed9f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 85ac1d802949d0398f628ba267afb4dcb354151a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36153662"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37309459"
 ---
 # <a name="migrate-a-reporting-services-installation-native-mode"></a>Migrer une installation Reporting Services (mode natif)
   Cette rubrique fournit des instructions détaillées de migration de l’une des versions prises en charge suivantes d’un déploiement en mode natif de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] vers une nouvelle instance de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] :  
@@ -38,7 +38,7 @@ ms.locfileid: "36153662"
   
 -   [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]  
   
--   [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] (Nécessite davantage d’étapes, consultez [vous ne pouvez pas utiliser SQL Server 2005 pour héberger les bases de données Report Server 2014](http://support.microsoft.com/kb/2796721).  
+-   [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] (Nécessite des étapes supplémentaires, consultez [vous ne pouvez pas utiliser SQL Server 2005 pour héberger les bases de données Report Server 2014](http://support.microsoft.com/kb/2796721).  
   
 ||  
 |-|  
@@ -80,7 +80,7 @@ ms.locfileid: "36153662"
   
  Des restrictions s'appliquent pour les éditions de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] qui hébergent la base de données du serveur de rapports. Consultez la rubrique suivante si vous réutilisez une base de données du serveur de rapports créée dans une installation précédente.  
   
--   [Créer une base de données du serveur de rapports &#40;Gestionnaire de Configuration de SSRS&#41;](../../sql-server/install/create-a-report-server-database-ssrs-configuration-manager.md)  
+-   [Créer une base de données de serveur de rapports &#40;Gestionnaire de Configuration de SSRS&#41;](../../sql-server/install/create-a-report-server-database-ssrs-configuration-manager.md)  
   
 ##  <a name="bkmk_fixed_database_name"></a> Nom de base de données fixe  
  Vous ne pouvez pas renommer la base de données du serveur de rapports. L'identité de la base de données est enregistrée dans des procédures stockées du serveur de rapports lors de la création de la base de données. Renommer les bases de données primaires ou temporaires du serveur de rapports provoque des erreurs lors de l'exécution des procédures, invalidant alors votre installation du serveur de rapports.  
@@ -114,7 +114,7 @@ ms.locfileid: "36153662"
   
 -   Si vous utilisez des feuilles de style en cascade personnalisées dans votre environnement de création de rapports, elles ne seront pas migrées. Vous devez les déplacer manuellement après la migration.  
   
- Pour plus d’informations sur les modifications apportées dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], consultez la documentation relative au conseiller de mise à niveau et [Nouveautés &#40;Reporting Services&#41;](../what-s-new-reporting-services.md).  
+ Pour plus d’informations sur les modifications apportées dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], consultez la documentation relative au conseiller de mise à niveau et [What ' s New &#40;Reporting Services&#41;](../what-s-new-reporting-services.md).  
   
 ##  <a name="bkmk_backup"></a> Sauvegarde des fichiers et des données  
  Avant d'installer une nouvelle instance de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], assurez-vous de sauvegarder tous les fichiers de votre installation actuelle.  
@@ -243,7 +243,7 @@ ms.locfileid: "36153662"
 |Gestionnaire de rapports sur une instance distante|[Configurer le Gestionnaire de rapports &#40;en Mode natif&#41;](../report-server/configure-web-portal.md)|  
   
 ##  <a name="bkmk_windowsservice_group"></a> Groupe de service Windows et ACL de sécurité  
- Dans [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)], il existe un groupe de service, le groupe de service Windows [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , utilisé pour créer des listes de contrôle d’accès (ACL) de sécurité pour toutes les clés de Registre, les fichiers et les dossiers installés avec [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Ce nom de groupe Windows apparaît au format SQLServerReportServerUser$\<*nom_ordinateur*>$\<*nom_instance*>. Ce groupe prend la place des deux groupes de service Windows dans [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Si vous avez des ACL personnalisé associé à un de le [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] groupes Windows, vous devez appliquer ces ACL au nouveau groupe pour votre nouvelle instance de serveur de rapports dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
+ Dans [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)], il existe un groupe de service, le groupe de service Windows [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , utilisé pour créer des listes de contrôle d’accès (ACL) de sécurité pour toutes les clés de Registre, les fichiers et les dossiers installés avec [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Ce nom de groupe Windows apparaît au format SQLServerReportServerUser$\<*nom_ordinateur*>$\<*nom_instance*>. Ce groupe prend la place des deux groupes de service Windows dans [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Si vous avez des ACL personnalisées associées à une de la [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] groupes Windows, vous devrez appliquer ces ACL au nouveau groupe pour votre nouvelle instance de serveur de rapports dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
   
 ##  <a name="bkmk_verify"></a> Vérification de votre déploiement  
   
@@ -271,8 +271,8 @@ ms.locfileid: "36153662"
 2.  Supprimez IIS si vous n'en avez plus besoin sur cet ordinateur.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Migrer une Installation Reporting Services &#40;en Mode SharePoint&#41;](migrate-a-reporting-services-installation-sharepoint-mode.md)   
- [Base de données du serveur de rapports &#40;SSRS en Mode natif&#41;](../report-server/report-server-database-ssrs-native-mode.md)   
+ [Migrer une Installation Reporting Services &#40;Mode SharePoint&#41;](migrate-a-reporting-services-installation-sharepoint-mode.md)   
+ [Serveur de base de données rapports &#40;SSRS en Mode natif&#41;](../report-server/report-server-database-ssrs-native-mode.md)   
  [Mettre à niveau et migrer Reporting Services](upgrade-and-migrate-reporting-services.md)   
  [Compatibilité descendante de Reporting Services](../reporting-services-backward-compatibility.md)   
  [Gestionnaire de configuration de Reporting Services &#40;mode natif&#41;](../../sql-server/install/reporting-services-configuration-manager-native-mode.md)  

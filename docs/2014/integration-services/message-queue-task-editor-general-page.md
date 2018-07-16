@@ -1,5 +1,5 @@
 ---
-title: Éditeur de tâche MSMQ (Page Général) | Documents Microsoft
+title: Éditeur de tâche MSMQ (Page Général) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.msgqueuetask.general.f1
 helpviewer_keywords:
 - Message Queue Task Editor
 ms.assetid: 09368b18-37a5-4321-a173-7cfe5d42d2a2
 caps.latest.revision: 25
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: f6f6a3624a387ede27cc10e366a1632a1df38b08
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 22a76ae1c006eae5b2670e0405fb0c61c3b8f6e3
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36144352"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37320649"
 ---
 # <a name="message-queue-task-editor-general-page"></a>Éditeur de tâche MSMQ (page Général)
   Utilisez la page **Général** de la boîte de dialogue **Éditeur de tâche MSMQ** pour nommer et décrire la tâche MSMQ, pour spécifier le format du message et indiquer si la tâche envoie ou reçoit des messages.  
@@ -53,7 +53,7 @@ ms.locfileid: "36144352"
   
 ## <a name="see-also"></a>Voir aussi  
  [Integration Services Error and Message Reference](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Éditeur de tâche MSMQ &#40;Page de réception&#41;](../../2014/integration-services/message-queue-task-editor-receive-page.md)   
+ [Éditeur de tâche MSMQ &#40;Page recevoir&#41;](../../2014/integration-services/message-queue-task-editor-receive-page.md)   
  [Éditeur de tâche MSMQ &#40;envoyer la Page&#41;](../../2014/integration-services/message-queue-task-editor-send-page.md)   
  [Page Expressions](expressions/expressions-page.md)  
   
