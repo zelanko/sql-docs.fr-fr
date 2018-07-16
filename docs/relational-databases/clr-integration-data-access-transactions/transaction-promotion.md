@@ -1,11 +1,11 @@
 ---
-title: Promotion des transactions | Documents Microsoft
+title: Promotion des transactions | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: reference
+ms.technology: clr
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -18,12 +18,12 @@ caps.latest.revision: 13
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: b995753073a371b3eb6c27a4c50f3a5351b9dc73
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
+ms.openlocfilehash: 4e02887ad3014ff88cf80456ccafd9d2f07a879d
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35703200"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37351491"
 ---
 # <a name="transaction-promotion"></a>Promotion des transactions
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "35703200"
  La propriété **ConnectionString** d'un objet **SqlConnection** prend en charge le mot clé **Enlist** , qui indique si **System.Data.SqlClient** détecte les contextes transactionnels et inscrit automatiquement la connexion dans une transaction distribuée. Si le mot clé est défini avec la valeur true (valeur par défaut), la connexion est automatiquement inscrite dans le contexte de transaction actif du thread d'ouverture. S'il est défini avec la valeur false, la connexion SqlClient n'interagit pas avec une transaction distribuée. Si **Enlist** n'est pas spécifié dans la chaîne de connexion, la connexion est inscrite automatiquement dans une transaction distribuée si celle-ci est détectée au moment où la connexion est ouverte.  
   
 ## <a name="distributed-transactions"></a>Transactions distribuées  
- Les transactions distribuées consomment en général d'importantes ressources système. [!INCLUDE[msCoName](../../includes/msconame-md.md)] Distributed Transaction Coordinator (MS DTC) gère ces transactions et intègre tous les gestionnaires de ressources qui y sont accédés. Promotion des transactions, est en revanche, une forme particulière d’un **System.Transactions** transaction qui délègue efficacement le travail à une simple [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] transaction. **System.Transactions**, **System.Data.SqlClient**, et [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] coordonnent le travail de gestion de la transaction, en promouvant au niveau d’une transaction entièrement distribuée en fonction des besoins.  
+ Les transactions distribuées consomment en général d'importantes ressources système. [!INCLUDE[msCoName](../../includes/msconame-md.md)] Distributed Transaction Coordinator (MS DTC) gère ces transactions et intègre tous les gestionnaires de ressources qui y sont accédés. Promotion des transactions, est en revanche, une forme spéciale d’un **System.Transactions** transaction qui délègue efficacement le travail à une simple [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] transaction. **System.Transactions**, **System.Data.SqlClient**, et [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] coordonner le travail impliqué dans la gestion de la transaction, la promotion à une transaction entièrement distribuée en fonction des besoins.  
   
  L'avantage de l'utilisation de la promotion des transaction est que lorsqu'une connexion est ouverte avec une transaction **TransactionScope** active et qu'aucune autre connexion n'est ouverte, la transaction est validée comme transaction légère, au lieu d'encourir les charges mémoire supplémentaires d'une transaction distribuée complète. Pour plus d’informations sur **TransactionScope**, consultez [à l’aide de System.Transactions](../../relational-databases/clr-integration-data-access-transactions/using-system-transactions.md).  
   

@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 88a973cc-0f23-4ecf-adb6-5b06279c2df6
 caps.latest.revision: 36
-author: douglaslM
+author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 3f0691fea33b8e69fcea5f58eba6f60318dfadbc
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 52aa26064a9a0e80af03649d89140a71a78f41d7
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36152851"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37311999"
 ---
 # <a name="step-2-adding-and-configuring-the-foreach-loop-container"></a>Étape 2 : ajout et configuration du conteneur de boucles Foreach
   Dans cette tâche, vous allez activer la fonction qui permet d'effectuer des boucles dans un dossier de fichiers plats et d'appliquer la transformation de flux de données utilisée dans la leçon 1 à chacun de ces fichiers plats. Pour activer cette fonction, vous allez ajouter et configurer un conteneur de boucles Foreach dans le flux de contrôle.  
@@ -30,7 +30,7 @@ ms.locfileid: "36152851"
   
 -   **Conteneur de boucles Foreach :** vous allez mapper la valeur énumérée du conteneur à une variable de package définie par l’utilisateur. Le conteneur va ensuite utiliser cette variable définie par l'utilisateur pour modifier dynamiquement la propriété `ConnectionString` du Gestionnaire de connexions de fichiers plats et répéter la connexion à chaque fichier plat dans le dossier.  
   
--   **Gestionnaire de connexions de fichiers plats :** vous allez modifier le Gestionnaire de connexions a été créé dans la leçon 1, à l’aide d’une variable définie par l’utilisateur pour remplir le Gestionnaire de connexions `ConnectionString` propriété.  
+-   **Gestionnaire de connexions de fichiers plats :** vous allez modifier le Gestionnaire de connexions a été créé dans la leçon 1 à l’aide d’une variable définie par l’utilisateur pour remplir le Gestionnaire de connexions `ConnectionString` propriété.  
   
  Les procédures de cette tâche montrent comment créer et modifier le conteneur de boucles Foreach pour utiliser une variable de package définie par l'utilisateur et comment ajouter la tâche de flux de données à la boucle. Au cours de la tâche suivante, vous allez apprendre à modifier le Gestionnaire de connexions de fichiers plats pour qu'il utilise une variable définie par l'utilisateur.  
   
@@ -49,7 +49,7 @@ ms.locfileid: "36152851"
   
 4.  Dans le **éditeur de boucle Foreach** boîte de dialogue le **général** page, pour **nom**, entrez `Foreach File in Folder`. Cliquez sur **OK**.  
   
-5.  Cliquez sur le conteneur de boucles Foreach, cliquez sur **propriétés**, puis dans la fenêtre Propriétés, vérifiez que le `LocaleID` est définie sur **anglais (États-Unis)**.  
+5.  Cliquez sur le conteneur de boucles Foreach, cliquez sur **propriétés**, puis dans la fenêtre Propriétés, vérifiez que le `LocaleID` propriété est définie sur **anglais (États-Unis)**.  
   
 ### <a name="to-configure-the-enumerator-for-the-foreach-loop-container"></a>Pour configurer l'énumérateur pour le conteneur de boucles Foreach  
   
@@ -79,7 +79,7 @@ ms.locfileid: "36152851"
   
 2.  Dans la page **Mappages de variables**, dans la colonne **Variable**, cliquez sur la cellule vide et sélectionnez **\<Nouvelle variable>**.  
   
-3.  Dans le **ajouter une Variable** boîte de dialogue, pour **nom**, type `varFileName`.  
+3.  Dans le **ajouter une Variable** boîte de dialogue pour **nom**, type `varFileName`.  
   
     > [!IMPORTANT]  
     >  Les noms des variables tiennent compte de la casse.  
@@ -90,13 +90,13 @@ ms.locfileid: "36152851"
   
 ### <a name="to-add-the-data-flow-task-to-the-loop"></a>Pour ajouter la tâche de flux de données à la boucle  
   
--   Faites glisser le **Extract Sample Currency Data** tâche de flux de données sur le conteneur de boucles Foreach désormais appelé `Foreach File in Folder`.  
+-   Faites glisser le **Extract Sample Currency Data** tâche de flux de données vers le conteneur de boucles Foreach maintenant renommé `Foreach File in Folder`.  
   
 ## <a name="next-lesson-task"></a>Tâche suivante de la leçon  
- [Étape 3 : Modification du Gestionnaire de connexions de fichiers plats](lesson-2-3-modifying-the-flat-file-connection-manager.md)  
+ [Étape 3 : Modification du gestionnaire de connexions de fichiers plats](lesson-2-3-modifying-the-flat-file-connection-manager.md)  
   
 ## <a name="see-also"></a>Voir aussi  
  [Configurer un conteneur de boucles Foreach](control-flow/foreach-loop-container.md)   
- [Utiliser des Variables dans des Packages](use-variables-in-packages.md)  
+ [Utiliser des variables dans des packages](use-variables-in-packages.md)  
   
   

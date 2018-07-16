@@ -1,5 +1,5 @@
 ---
-title: Algorithme de gestion de clusters Microsoft | Documents Microsoft
+title: Algorithme de gestion de clusters Microsoft | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - segmentation algorithms [Analysis Services]
 - nearest neighbor [Data Mining]
@@ -21,15 +21,15 @@ helpviewer_keywords:
 - clustering algorithms [Analysis Services]
 ms.assetid: 92a1e67e-f46e-4960-99b2-4d20f6192fbd
 caps.latest.revision: 61
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 74e1a00c89050b632ca01a5f67f734484bff8de7
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 6d42992680de6772d305c425d1f921fea44cd584
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36041911"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37308789"
 ---
 # <a name="microsoft-clustering-algorithm"></a>Algorithme de clustering Microsoft
   Le [!INCLUDE[msCoName](../../includes/msconame-md.md)] algorithme de Clustering est un algorithme de segmentation fourni par [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. L'algorithme utilise des techniques itératives pour grouper les cas d'un jeu de données en clusters contenant des caractéristiques similaires. Ces regroupements sont utiles pour l'exploration des données, l'identification d'anomalies dans les données et la création de prédictions.  
@@ -61,7 +61,7 @@ ms.locfileid: "36041911"
   
 -   **Des colonnes d’entrée** Chaque modèle doit posséder au moins une colonne d’entrée qui contient les valeurs utilisées pour générer les clusters. Vous pouvez avoir autant de colonnes d'entrée que vous le souhaitez. Toutefois, en fonction du nombre de valeurs dans chaque colonne, l'ajout de colonnes supplémentaires peut accroître le temps nécessaire à l'apprentissage du modèle.  
   
--   **Une colonne prédictible facultative** L’algorithme n’a pas besoin de colonne prédictible pour générer le modèle, mais vous pouvez ajouter une colonne prédictible de n’importe quel type de données ou presque. Les valeurs de la colonne prédictible peuvent être traitées en tant qu'entrée du modèle de clustering, ou vous pouvez spécifier qu'elles soit uniquement utilisées à des fins de prédiction. Par exemple, si vous souhaitez prédire les revenus des clients par le clustering sur les données démographiques telles que l’âge ou la région, vous indiquez les bénéfices `PredictOnly` et ajoutez toutes les autres colonnes, telles que la région ou l’âge, en tant qu’entrées.  
+-   **Une colonne prédictible facultative** L’algorithme n’a pas besoin de colonne prédictible pour générer le modèle, mais vous pouvez ajouter une colonne prédictible de n’importe quel type de données ou presque. Les valeurs de la colonne prédictible peuvent être traitées en tant qu'entrée du modèle de clustering, ou vous pouvez spécifier qu'elles soit uniquement utilisées à des fins de prédiction. Par exemple, si vous souhaitez prédire le revenu du client en cluster les données démographiques telles que la région ou l’âge, vous spécifiez le revenu en tant que `PredictOnly` et ajoutez tous les autres colonnes, telles que la région ou l’âge, en tant qu’entrées.  
   
  Pour des informations plus détaillées sur les types de contenu et les types de données pris en charge pour les modèles de clustering, consultez la section relative aux spécifications dans [Références techniques relatives à l’algorithme de gestion de clusters Microsoft](microsoft-clustering-algorithm-technical-reference.md).  
   

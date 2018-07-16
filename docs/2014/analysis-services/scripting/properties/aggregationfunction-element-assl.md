@@ -1,5 +1,5 @@
 ---
-title: Élément AggregationFunction (ASSL) | Documents Microsoft
+title: Élément AggregationFunction (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - AggregationFunction element
 ms.assetid: 40cfc7f9-1089-45f9-be90-a29770ed9682
 caps.latest.revision: 39
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 6c8b28c740e82d661c2664eac576f0e079fd3d46
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 90908001138f59d4270811376ac44025148889cf
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36041896"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37308439"
 ---
 # <a name="aggregationfunction-element-assl"></a>Élément AggregationFunction (ASSL)
   Contient la fonction d'agrégation à utiliser pour le type de compte.  
@@ -75,13 +75,13 @@ ms.locfileid: "36041896"
 |*AverageOfChildren*|La mesure est agrégée par retour de la moyenne de ses enfants.|  
 |*FirstChild*|La mesure est agrégée par retour de son premier membre enfant.|  
 |*LastChild*|La mesure est agrégée par retour de son dernier membre enfant.|  
-|*Premier non vide*|La mesure est agrégée par retour de son premier membre non vide.|  
+|*FirstNonEmpty*|La mesure est agrégée par retour de son premier membre non vide.|  
 |*LastNonEmpty*|La mesure est agrégée par retour de son dernier membre non vide.|  
   
- L’énumération qui correspond aux valeurs autorisées pour `AggregationFunction` dans l’objet d’objets AMO (Analysis Management) est modèle <xref:Microsoft.AnalysisServices.AggregationFunction>.  
+ L’énumération qui correspond aux valeurs autorisées pour `AggregationFunction` dans l’objet d’objets AMO (Analysis Management) modèle est <xref:Microsoft.AnalysisServices.AggregationFunction>.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Comptes d’élément &#40;ASSL&#41;](../collections/accounts-element-assl.md)   
+ [Comptes élément &#40;ASSL&#41;](../collections/accounts-element-assl.md)   
  [Propriétés &#40;ASSL&#41;](properties-assl.md)  
   
   

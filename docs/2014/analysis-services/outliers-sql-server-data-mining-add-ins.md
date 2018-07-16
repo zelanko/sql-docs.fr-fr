@@ -1,5 +1,5 @@
 ---
-title: Valeurs hors norme (SQL Server Data Mining Add-ins) | Documents Microsoft
+title: Valeurs hors norme (SQL Server Data Mining Add-ins) | Microsoft Docs
 ms.custom: ''
 ms.date: 12/29/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - exceptions [data mining]
 - data preparation
@@ -16,20 +16,20 @@ helpviewer_keywords:
 - data cleaning
 ms.assetid: e6fa7c62-4005-4792-9211-3b699377a517
 caps.latest.revision: 19
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 48073f6ce9c1d5836d85cf468b2b9a45256f8163
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 01e87ee3f7bedb9b33b484b195492064cc4f0334
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36041690"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37306499"
 ---
 # <a name="outliers-sql-server-data-mining-add-ins"></a>Valeurs hors norme (Compléments d'exploration de données SQL Server)
   ![Assistant valeurs hors norme dans le ruban Exploration de données](media/dmc-outliers.gif "Assistant valeurs hors norme dans le ruban Exploration de données")  
   
- Un *valeur hors norme* signifie une valeur de données qui peut être problématique pour l’une des raisons suivantes :  
+ Un *observation ABERRANTE* signifie une valeur de données qui pose problème pour l’une des raisons suivantes :  
   
 -   La valeur se trouve en dehors de la plage prévue.  
   
@@ -48,9 +48,9 @@ ms.locfileid: "36041690"
   
 -   Tout d'abord, vous pouvez explorer les données afin de mieux comprendre la distribution des valeurs et la relation des observations aberrantes et des autres données.  
   
-     Par exemple, vous pouvez utiliser la **Explorer les données** tâche pour examiner et corriger les valeurs. Le **suppression des observations aberrantes** Assistant affiche également un graphique, une ligne ou un graphique à barres, pour vous aider à comprendre la distribution de toutes les valeurs.  
+     Par exemple, vous pouvez utiliser la **Explorer les données** tâche pour examiner et corriger les valeurs. Le **suppression des observations aberrantes** Assistant affiche également un graphique, une ligne ou un graphique à barres, pour vous aider à mieux comprendre la distribution de toutes les valeurs.  
   
--   Ensuite, vous pouvez utiliser la **observations aberrantes** Assistant pour supprimer ou modifier des valeurs hors norme. La méthode qui vous utilisez varie selon que les valeurs sont discrètes ou continues.  
+-   Ensuite, vous pouvez utiliser la **valeurs hors norme** Assistant pour supprimer ou modifier des valeurs hors norme. La méthode qui vous utilisez varie selon que les valeurs sont discrètes ou continues.  
   
      L'Assistant affiche des valeurs discrètes dans un graphique à barres, où chaque barre représente une valeur spécifique et la hauteur de la barre indique le nombre de cas pour chaque valeur. En faisant glisser le contrôle de seuil sur le graphique, vous pouvez éliminer les barres qui représentent des groupes de valeurs extrêmes ou mauvaises.  
   
@@ -64,12 +64,12 @@ ms.locfileid: "36041690"
   
 ### <a name="using-the-outlier-wizard"></a>Utilisation de l'Assistant Suppression des observations aberrantes  
   
-1.  Dans le **d’exploration de données** du ruban, cliquez sur **nettoyer les données**, puis sélectionnez **valeurs hors norme**.  
+1.  Dans le **d’exploration de données** ruban, cliquez sur **nettoyer les données**, puis sélectionnez **valeurs hors norme**.  
   
 2.  Dans le **sélectionner les données Source** boîte de dialogue, sélectionnez une table de données Excel ou une plage de cellules, puis cliquez sur **suivant**.  
   
     > [!WARNING]  
-    >  Vous ne pouvez pas utiliser le **observations aberrantes** Assistant sur des données externes, sauf si vous le copier tout d’abord vers Excel.  
+    >  Vous ne pouvez pas utiliser le **valeurs hors norme** Assistant sur des données externes, sauf si vous le copiez tout d’abord dans Excel.  
   
 3.  Dans le **sélectionner la colonne** boîte de dialogue, sélectionnez un **unique** colonne.  
   
@@ -83,7 +83,7 @@ ms.locfileid: "36041690"
   
     -   Si la colonne contient des données numériques, vous pouvez cliquer sur le **vue comme discrètes** bouton ou le **afficher sous la forme numérique** bouton pour basculer entre l’affichage des valeurs dans un graphique à barres ou un graphique en courbes.  
   
-5.  Dans le **spécifier les seuils** boîte de dialogue, choisissez la plage de données que vous souhaitez conserver en tapant une valeur minimale et maximale, ou en faisant glisser les barres de curseur. Cliquez sur **Suivant**.  
+5.  Dans le **spécifier les seuils** boîte de dialogue, sélectionnez la plage de données que vous souhaitez conserver en tapant une valeur minimale et maximale, ou en faisant glisser les barres de curseur. Cliquez sur **Suivant**.  
   
 6.  Dans le **gestion des observations aberrantes** boîte de dialogue, spécifiez si vous souhaitez que les valeurs soient supprimées ou remplacées, puis cliquez sur **suivant**.  
   
@@ -95,7 +95,7 @@ ms.locfileid: "36041690"
 |**Options**|**Commentaire**|  
 |-----------------|-----------------|  
 |**Sélectionnez la colonne**|Vous pouvez travailler avec une seule colonne à la fois.|  
-|**Spécifier la gestion des seuils**|Définir un seuil à l’aide de **Minimum** pour exclure les valeurs qui figurent dans moins de lignes que la valeur de seuil.<br /><br /> Initialement, la valeur **minimale** est égale à la valeur avec le moins de lignes, et vous ne pouvez pas la valeur minimale inférieure à cette valeur.|  
+|**Spécifier la gestion des seuils**|Définir un seuil à l’aide **Minimum** pour exclure les valeurs qui sont trouvent dans moins de lignes que la valeur de seuil.<br /><br /> Initialement, la valeur **minimale** est égale à la valeur avec le moins de lignes, et vous ne pouvez pas la valeur minimale inférieure à cette valeur.|  
 |**Gestion des valeurs hors norme**|Si vous décidez de supprimer des valeurs hors norme, modifiez les données dans la feuille de calcul active, ou créez une copie des données dans une nouvelle feuille de calcul.|  
   
 ## <a name="see-also"></a>Voir aussi  

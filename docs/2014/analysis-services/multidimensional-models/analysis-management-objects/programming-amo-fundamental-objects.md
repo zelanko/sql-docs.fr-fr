@@ -1,5 +1,5 @@
 ---
-title: Programmation d’objets fondamentaux AMO | Documents Microsoft
+title: Programmation d’objets fondamentaux AMO | Microsoft Docs
 ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql-server-2014
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - Analysis Management Objects, database objects
 ms.assetid: 3f1ab656-f3bc-432d-8b6d-cdf204e5be10
 caps.latest.revision: 23
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 9c85b48c62e271dff6a4db582527c68a7735f0dc
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: d85bbc23bd016f2e1dd1d4842a5bd66645035ec2
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36041235"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37321299"
 ---
 # <a name="programming-amo-fundamental-objects"></a>Programmation d'objets fondamentaux AMO
   Les objets fondamentaux sont généralement des objets simples et rudimentaires. En règle générale, ces objets sont créés et instanciés puis, une fois qu'ils n'ont plus d'utilité, l'utilisateur s'en déconnecte. Les classes fondamentales se composent des objets suivants : <xref:Microsoft.AnalysisServices.Server>, <xref:Microsoft.AnalysisServices.Database>, <xref:Microsoft.AnalysisServices.DataSource> et <xref:Microsoft.AnalysisServices.DataSourceView>. Parmi les objets fondamentaux AMO, le seul objet complexe est <xref:Microsoft.AnalysisServices.DataSourceView>. Celui-ci exige de nombreux détails pour générer le modèle abstrait qui représente la vue de source de données.  
@@ -37,13 +37,13 @@ ms.locfileid: "36041235"
   
  Cette rubrique contient les sections suivantes :  
   
--   [Objets serveur](#ServerObjects)  
+-   [Objets de serveur](#ServerObjects)  
   
 -   [Objets d’Exception AMOException](#AMO)  
   
 -   [Objets de base de données](#DatabaseObjects)  
   
--   [Objets de source de données](#DataSource)  
+-   [Objets DataSource](#DataSource)  
   
 -   [Objets DataSourceView](#DSV)  
   
@@ -108,7 +108,7 @@ if ( (svr != null) && ( svr.Connected))
 ```  
   
 ###  <a name="AMO"></a> Objets d’Exception AmoException  
- AMO lève des exceptions lorsque certains problèmes sont rencontrés. Pour obtenir une explication détaillée des exceptions, consultez [méthodes et Classes autres AMO](amo-other-classes-and-methods.md). L'exemple de code suivant présente la méthode à employer pour capturer des exceptions dans AMO :  
+ AMO lève des exceptions lorsque certains problèmes sont rencontrés. Pour obtenir une explication détaillée des exceptions, consultez [Classes autres AMO et méthodes](amo-other-classes-and-methods.md). L'exemple de code suivant présente la méthode à employer pour capturer des exceptions dans AMO :  
   
 ```  
 try  

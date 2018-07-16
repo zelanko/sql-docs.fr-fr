@@ -1,5 +1,5 @@
 ---
-title: Spécifier les informations Source (Assistant Partition) | Documents Microsoft
+title: Spécifier les informations Source (Assistant Partition) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.partitionwizard.specifydsvandfacttables.f1
 ms.assetid: b6c13587-c690-45d9-af90-b3d652afc55b
 caps.latest.revision: 20
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 1d29067eabeb7050ec033cc5d274f9f5373c97ed
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: c6f60f8470c45e8dbc97de12d7a13b19bea9becb
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36154462"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37310449"
 ---
 # <a name="specify-source-information-partition-wizard"></a>Spécifier des informations sur la source (Assistant Partition)
   La page **Spécifier des informations sur la source** permet de sélectionner le groupe de mesures dans lequel doit être créée la partition ainsi que la vue de source de données et les tables filtrées se rapportant à cette dernière.  
@@ -30,7 +30,7 @@ ms.locfileid: "36154462"
 >  Si vous spécifiez une table dans **Tables disponibles** qui est déjà utilisée par une autre partition, vous devez définir une requête dans la page **Restreindre les lignes** . Sinon, vous risquez d’obtenir des données en double dans le cube.  
   
 ## <a name="options"></a>Options  
- **groupe de mesures**  
+ **Groupe de mesures**  
  Permet de sélectionner un groupe de mesures destiné à cette partition.  
   
  **Look in**  

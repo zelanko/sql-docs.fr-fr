@@ -1,5 +1,5 @@
 ---
-title: Concevoir le volet (vue prévision de modèle d’exploration de données) | Documents Microsoft
+title: Volet (vue prévision de modèle d’exploration de données) de conception | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dm.miningmodeleditor.prediction.design.f1
 ms.assetid: 17f24c8d-43cd-4f4d-83b3-a41ee8fbe8e8
 caps.latest.revision: 26
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: f170ff6d780871a6ddbb9b1048fb0a521b4fb015
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 8ea979da7db4f0288a01a7bfe9655d1fb34518d6
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36042131"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37316029"
 ---
 # <a name="design-pane-mining-model-prediction-view"></a>Volet Conception (vue Prévision de modèle d'exploration de données)
   Le volet **Conception** contient le Générateur de requêtes de prédiction qui peut servir à créer des prédictions d’exploration de données. Vous pouvez concevoir des requêtes de prédiction qui utilisent des tables de données d'entrée d'une vue de source de données, pour générer des prédictions en bloc, ou vous pouvez créer des requêtes singleton de prédiction qui vous permettent de fournir des valeurs individuelles.  
@@ -36,7 +36,7 @@ ms.locfileid: "36042131"
  **Pour plus d’informations :**[Requêtes d’exploration de données](data-mining/data-mining-queries.md)  
   
 ## <a name="options"></a>Options  
- **Basculer vers l’affichage des résultats de requête**  
+ **Basculez vers l’affichage des résultats de requête**  
  Sélectionnez cette option pour basculer entre les volets **Conception**, **Requête**et **Résultat** . Lorsque vous basculez vers le volet **Résultat** , la requête est exécutée.  
   
  **Enregistrer le résultat de requête**  
@@ -45,7 +45,7 @@ ms.locfileid: "36042131"
  **Requête singleton**  
  Permet la création d'une requête singleton, dans laquelle vous pouvez fournir directement des valeurs pour la requête au lieu d'une table comme source des données connues. Le tableau **Sélectionner une ou plusieurs tables d’entrée** est remplacé par un tableau **Entrée de requête singleton** .  
   
- **Actualiser les résultats de la requête**  
+ **Actualiser les résultats de requête**  
  Traite une nouvelle fois la requête de prévision. Cette option est activée uniquement dans le volet **Résultat** .  
   
  **Modèle d'exploration de données**  
@@ -57,7 +57,7 @@ ms.locfileid: "36042131"
  **Sélectionnez une ou plusieurs tables d’entrée**  
  Affiche les tables d'entrée sélectionnées qui contiennent les données connues sur lesquelles baser les prévisions.  
   
- **Supprimer une Table**  
+ **Supprimer la Table**  
  Supprime la table sélectionnée. Ce bouton est désactivé si aucune table n'a été sélectionnée ou si elle n'existe pas.  
   
  **Sélectionnez la Table de cas**  
@@ -97,6 +97,6 @@ ms.locfileid: "36042131"
 ## <a name="see-also"></a>Voir aussi  
  [Data Mining Extensions &#40;DMX&#41; référence des instructions](/sql/dmx/data-mining-extensions-dmx-statements)   
  [Interfaces de requête d’exploration de données](data-mining/data-mining-query-tools.md)   
- [Générateur de requête de prédiction &#40;d’exploration de données&#41;](prediction-query-builder-data-mining.md)  
+ [Générateur de requêtes de prédiction &#40;exploration de données&#41;](prediction-query-builder-data-mining.md)  
   
   

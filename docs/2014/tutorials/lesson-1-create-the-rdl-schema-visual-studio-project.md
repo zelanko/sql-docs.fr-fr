@@ -1,5 +1,5 @@
 ---
-title: 'Leçon 1 : Créer le projet Visual Studio du schéma RDL | Documents Microsoft'
+title: 'Leçon 1 : Créer le projet Visual Studio du schéma RDL | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: f420509c-51aa-4170-8c25-64c2954f4bb9
 caps.latest.revision: 17
-author: douglaslM
+author: craigg-msft
 ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: b6c502205f669c48efe1f939ba88e5352205f4de
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: fc69b4bbcc40fa669ca9cf5f889944cb302e4b14
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36151807"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37319809"
 ---
 # <a name="lesson-1-create-the-rdl-schema-visual-studio-project"></a>Leçon 1 : Création du projet Visual Studio du schéma RDL
   Dans ce didacticiel, vous allez créer une application console simple. Ce didacticiel suppose que vous développez dans [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vs_dev10_long](../includes/vs-dev10-long-md.md)].  
@@ -71,7 +71,7 @@ ms.locfileid: "36151807"
   
      Dans la boîte de dialogue **Ajouter une référence** , dans l'onglet **.NET** , sélectionnez **System.Web.Services**, puis cliquez sur **OK**.  
   
-     Pour plus d’informations sur la façon de se connecter au service Web Report Server, consultez [génération d’Applications à l’aide du Service Web et le .NET Framework](../reporting-services/report-server-web-service/net-framework/building-applications-using-the-web-service-and-the-net-framework.md).  
+     Pour plus d’informations sur la connexion au service Web Report Server, consultez [création d’Applications à l’aide du Service Web et le .NET Framework](../reporting-services/report-server-web-service/net-framework/building-applications-using-the-web-service-and-the-net-framework.md).  
   
 10. Dans l'Explorateur de solutions, développez le nœud du projet. Vous verrez un fichier de code avec le nom par défaut du fichier Program.cs (Module1.vb pour [!INCLUDE[vbprvb](../includes/vbprvb-md.md)]) a été ajouté à votre projet.  
   
@@ -204,7 +204,7 @@ ms.locfileid: "36151807"
  Dans la prochaine leçon, vous allez utiliser l'outil de définition de schéma XML (Xsd.exe) pour générer des classes à partir du schéma RDL et les inclure dans votre projet. Consultez [leçon 2 : générer des Classes à partir du schéma RDL à l’aide de l’outil xsd](../../2014/tutorials/lesson-2-generate-classes-from-the-rdl-schema-using-the-xsd-tool.md).  
   
 ## <a name="see-also"></a>Voir aussi  
- [Mise à jour des rapports à l’aide des Classes générées à partir du schéma RDL &#40;didacticiel SSRS&#41;](../../2014/tutorials/updating-reports-using-classes-generated-from-the-rdl-schema-ssrs-tutorial.md)   
+ [La mise à jour des rapports à l’aide des Classes générées à partir du schéma RDL &#40;didacticiel SSRS&#41;](../../2014/tutorials/updating-reports-using-classes-generated-from-the-rdl-schema-ssrs-tutorial.md)   
  [RDL (Report Definition Language) &#40;SSRS&#41;](../reporting-services/reports/report-definition-language-ssrs.md)  
   
   

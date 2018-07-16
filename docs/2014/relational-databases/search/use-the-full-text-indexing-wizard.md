@@ -5,10 +5,9 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-search
+ms.technology: search
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.fulltextindexingwizard.selecttablecolumns.f1
 - sql12.swb.fulltextindexingwizard.welcome.f1
@@ -24,15 +23,15 @@ helpviewer_keywords:
 - full-text search [SQL Server], Full-Text Indexing Wizard
 ms.assetid: 3e9d9605-6525-4781-9168-fdaa06db3459
 caps.latest.revision: 22
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 69b7caacb7d6731731aaae11c18e9f960278136c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 5395a6ee63d3fbf4456a3da4e4e19390e042e2b4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36155010"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37309519"
 ---
 # <a name="use-the-full-text-indexing-wizard"></a>Utiliser l'Assistant Indexation de texte intégral
   L'Assistant Indexation de texte intégral vous guide tout au long d'une série d'étapes destinées à vous aider à créer un index de texte intégral.  
@@ -47,13 +46,13 @@ ms.locfileid: "36155010"
      **Colonnes disponibles**  
      Pour inclure une colonne dans l'index, activez la case à cocher en regard du nom de la colonne. Les colonnes sur lesquelles ne doivent pas porter l'indexation de texte intégral sont grisées et leur case à cocher est désactivée.  
   
-     **Langue de l’analyseur lexical**  
+     **Langage pour le séparateur de mots**  
      Sélectionnez une langue dans la liste déroulante. Ce choix sera utilisé par [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pour identifier les analyseurs lexicaux appropriés pour l'index. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilise des analyseurs lexicaux pour identifier les limites des mots dans les données indexées en texte intégral.  
   
      **Colonne de type**  
      Sélectionnez le nom de la colonne qui contient le type de document de la colonne indexée en texte intégral.  
   
-     Le **colonne de Type** est activée uniquement lorsque la colonne nommée dans le **colonnes disponibles** colonne est de type `varbinary(max)` ou `image`.  
+     Le **colonne de Type** est activé uniquement lorsque la colonne nommée dans le **colonnes disponibles** colonne est de type `varbinary(max)` ou `image`.  
   
      **Sémantique statistique**  
      Sélectionnez s'il faut activer l'indexation sémantique pour la colonne sélectionnée. Pour plus d’informations, consultez [Recherche sémantique &#40;SQL Server&#41;](semantic-search-sql-server.md).  
@@ -113,7 +112,7 @@ ms.locfileid: "36155010"
     |Valeur|Description|  
     |-----------|-----------------|  
     |**\<système >**|Sélectionnez cette option pour utiliser la liste de mots vides système sur le nouvel index de recherche en texte intégral. Il s'agit du paramètre par défaut.|  
-    |**\<désactiver >**|Sélectionnez cette option pour désactiver des listes de mots vides pour le nouvel index de recherche en texte intégral.|  
+    |**\<OFF >**|Sélectionnez cette option pour désactiver des listes de mots vides pour le nouvel index de recherche en texte intégral.|  
     |*user-defined-stoplist-name*|La liste affiche le nom de chaque liste de mots vides définie par l'utilisateur, le cas échéant, qui a été créée sur la base de données. Sélectionnez une liste de mots vides définie par l'utilisateur à utiliser pour le nouvel index de recherche en texte intégral.|  
   
 4.  Éventuellement, vous pouvez définir la planification de remplissage. Les opérations d'indexation commencent alors immédiatement, sauf si elles ont été planifiées pour plus tard. Les planifications sont créées immédiatement, même si elles ne seront pas exécutées avant l'heure planifiée.  

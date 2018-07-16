@@ -1,5 +1,5 @@
 ---
-title: Informations d’identification (SSAS) la Source de données | Documents Microsoft
+title: Informations d’identification (SSAS) la Source de données | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.bidtoolset.datasourcecreden.f1
 ms.assetid: c1089021-20d9-4d73-820f-819a0bfd66fc
 caps.latest.revision: 8
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 28343ea9bff245092201a6e7af7c9421a5bce59f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: e90532feb1120a76ecddadd688b109c5c4f710e3
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36041913"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37325049"
 ---
 # <a name="data-source-credentials-ssas"></a>Informations d'identification de la source de données (SSAS)
   Cette page de l' **Assistant Importation de table** vous permet d'entrer les nom d'utilisateur et mot de passe de la connexion à la source de données existante que vous avez sélectionnée. Pour accéder à l'Assistant [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)], dans le menu **Modèle** , cliquez sur **Importer à partir de la source de données**.  

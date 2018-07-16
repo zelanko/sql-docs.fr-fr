@@ -5,23 +5,22 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - database mirroring [SQL Server], deployment
 ms.assetid: da45efed-55eb-4c71-be34-ac2589dfce8d
 caps.latest.revision: 59
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: cbe6727f9f3a031e5400dcb260095a518ca69dd9
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 1aea3a970763cc47c48176cb0fdd5f14a005258b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36041859"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37314409"
 ---
 # <a name="setting-up-database-mirroring-sql-server"></a>Configuration de la mise en miroir de bases de données (SQL Server)
   Cette section décrit les conditions préalables, les recommandations et les étapes relatives à la configuration de la mise en miroir d'une base de données. Pour une présentation de la mise en miroir de bases de données, consultez [Mise en miroir de bases de données &#40;SQL Server&#41;](database-mirroring-sql-server.md).  
@@ -36,7 +35,7 @@ ms.locfileid: "36041859"
   
 1.  Le serveur principal, le serveur miroir et le serveur témoin, le cas échéant, doivent être hébergés par des instances de serveur distinctes, chacune devant se trouver sur des systèmes hôtes distincts. Chacune des instances de serveur nécessite un point de terminaison de mise en miroir de bases de données. Si vous devez créer un point de terminaison de mise en miroir de bases de données, vérifiez qu'il est accessible aux autres instances de serveur.  
   
-     Le type d'authentification utilisé pour la mise en miroir de la base de données par une instance de serveur est une propriété de son point de terminaison de mise en miroir de bases de données. Deux types de sécurité de transport sont disponibles pour la mise en miroir de bases de données : Authentification Windows ou authentification basée sur les certificats. Pour plus d’informations, consultez [sécurité du Transport de mise en miroir de base de données et les groupes de disponibilité AlwaysOn &#40;SQL Server&#41;](transport-security-database-mirroring-always-on-availability.md).  
+     Le type d'authentification utilisé pour la mise en miroir de la base de données par une instance de serveur est une propriété de son point de terminaison de mise en miroir de bases de données. Deux types de sécurité de transport sont disponibles pour la mise en miroir de bases de données : Authentification Windows ou authentification basée sur les certificats. Pour plus d’informations, consultez [sécurité du Transport de mise en miroir de base de données et de groupes de disponibilité AlwaysOn &#40;SQL Server&#41;](transport-security-database-mirroring-always-on-availability.md).  
   
      Les spécifications liées à l'accès réseau sont spécifiques à la forme d'authentification, comme suit :  
   
@@ -122,7 +121,7 @@ ms.locfileid: "36041859"
  [Exemple : Configuration de la mise en miroir de bases de données à l’aide de certificats &#40;Transact-SQL&#41;](example-setting-up-database-mirroring-using-certificates-transact-sql.md)  
  Contient un exemple de toutes les étapes nécessaires à la création d'une session de mise en miroir de bases de données avec un serveur témoin, en utilisant l'authentification basée sur les certificats.  
   
- [Configurer les comptes de connexion pour la mise en miroir de base de données ou les groupes de disponibilité AlwaysOn &#40;SQL Server&#41;](set-up-login-accounts-database-mirroring-always-on-availability.md)  
+ [Configurer des comptes de connexion pour la mise en miroir de base de données ou des groupes de disponibilité AlwaysOn &#40;SQL Server&#41;](set-up-login-accounts-database-mirroring-always-on-availability.md)  
  Décrit la création d'une connexion pour une instance de serveur distant qui n'utilise pas le même compte que l'instance de serveur local.  
   
 ##  <a name="RelatedTasks"></a> Tâches associées  
@@ -150,7 +149,7 @@ ms.locfileid: "36041859"
   
  **Transact-SQL/SQL Server Management Studio**  
   
--   [Réduire le temps mort pour les bases de données en miroir lors de la mise à niveau des Instances de serveur](upgrading-mirrored-instances.md)  
+-   [Réduire le temps d’indisponibilité des bases de données mises en miroir lors de la mise à niveau d’instances de serveur](upgrading-mirrored-instances.md)  
   
 -   [Préparer une base de données miroir pour la mise en miroir &#40;SQL Server&#41;](prepare-a-mirror-database-for-mirroring-sql-server.md)  
   
@@ -161,7 +160,7 @@ ms.locfileid: "36041859"
 ## <a name="see-also"></a>Voir aussi  
  [Mise en miroir de bases de données &#40;SQL Server&#41;](database-mirroring-sql-server.md)   
  [Mise en miroir de bases de données : interopérabilité et coexistence &#40;SQL Server&#41;](database-mirroring-interoperability-and-coexistence-sql-server.md)   
- [Sécurité de transport pour la mise en miroir de base de données et de groupes de disponibilité AlwaysOn &#40;SQL Server&#41;](transport-security-database-mirroring-always-on-availability.md)   
+ [Sécurité du transport pour la mise en miroir de base de données et de groupes de disponibilité AlwaysOn &#40;SQL Server&#41;](transport-security-database-mirroring-always-on-availability.md)   
  [Spécifier une adresse réseau de serveur &#40;mise en miroir de bases de données&#41;](specify-a-server-network-address-database-mirroring.md)  
   
   

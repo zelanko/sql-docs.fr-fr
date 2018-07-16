@@ -1,5 +1,5 @@
 ---
-title: Référence l’interface utilisateur de l’Assistant Configuration de package | Documents Microsoft
+title: Package Configuration Wizard UI Reference | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.configwizard.selectobjects.f1
 - sql12.dts.configwizard.selecconfigtype.f1
@@ -16,15 +16,15 @@ f1_keywords:
 - sql12.dts.configwizard.welcome.f1
 ms.assetid: adca6938-6d5a-40ec-950e-dceb79d044fe
 caps.latest.revision: 25
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: e88427ce2a7450e2e03638254da720d0c464fb8f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 9a95f28077a06d52d8b597cae8d6a36d5cd1d502
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36154878"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37322429"
 ---
 # <a name="package-configuration-wizard-ui-reference"></a>Référence de l'interface utilisateur de l'Assistant Configuration de package
   **L’Assistant Configuration de package** vous permet de créer des configurations chargées de mettre à jour les propriétés d’un package [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] ainsi que les objets qui s’y rattachent au moment de l’exécution. Cet Assistant s’exécute quand vous ajoutez une nouvelle configuration ou modifiez une configuration existante dans la boîte de dialogue **Bibliothèque des configurations du package** . Pour ouvrir la boîte de dialogue **Bibliothèque des configurations du package**, sélectionnez **Configurations du package** dans le menu **SSIS** de [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]. Pour plus d’informations, consultez [Créer des configurations de package](../../2014/integration-services/create-package-configurations.md).  
@@ -160,6 +160,6 @@ ms.locfileid: "36154878"
  Crée la configuration et quitte **l’Assistant Configuration de package**.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Créer des Configurations de Package](../../2014/integration-services/create-package-configurations.md)  
+ [Créer des configurations de package](../../2014/integration-services/create-package-configurations.md)  
   
   

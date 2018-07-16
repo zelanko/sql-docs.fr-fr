@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - data-quality-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dqs.kb.createcd.f1
 - sql12.dqs.dm.cdproperties.f1
@@ -16,13 +16,13 @@ ms.assetid: c7f0bd84-a02e-4a81-885d-985e6415c499
 caps.latest.revision: 20
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: a92c8b9f7bc75a0a825e883ada82de72e34aca30
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: edf358f8ed321274d8af55accd5dbc4ac4692db2
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36041461"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37308529"
 ---
 # <a name="create-a-composite-domain"></a>Créer un domaine composite
   Cette rubrique explique comment créer un domaine composite dans une base de connaissances dans [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS). Un domaine composite comprend un ou plusieurs domaines uniques qui s'appliquent à un seul champ de données. Pour plus d’informations sur les domaines composites, consultez [Gestion d’un domaine composite](../../2014/data-quality-services/managing-a-composite-domain.md).  
@@ -49,7 +49,7 @@ ms.locfileid: "36041461"
   
 3.  Sélectionnez **Découverte des connaissances** comme activité, puis cliquez sur **Créer** pour créer la base de connaissances ou sur **Ouvrir** pour ouvrir une base de connaissances existante.  
   
-4.  Dans la page **Mapper** , spécifiez une connexion à la source de données. Pour plus d’informations, consultez [effectuer une découverte des connaissances](../../2014/data-quality-services/perform-knowledge-discovery.md).  
+4.  Dans la page **Mapper** , spécifiez une connexion à la source de données. Pour plus d’informations, consultez [Perform Knowledge Discovery](../../2014/data-quality-services/perform-knowledge-discovery.md).  
   
 5.  Dans la table **Mappages** , sélectionnez une colonne source dans la liste déroulante de la colonne **Colonne source** d'une ligne vide. Assurez-vous que la colonne source contient le domaine composite pris en compte par deux domaines uniques existants. S'il n'existe aucun domaine unique correspondant, cliquez sur l'icône **Créer un domaine** .  
   
@@ -91,7 +91,7 @@ ms.locfileid: "36041461"
   
 5.  Si vous avez sélectionné **Délimiteurs** pour la méthode d'analyse, vous pouvez également sélectionner **Utiliser l'analyse de Base de connaissances**. Pour plus d’informations, consultez [Knowledge-Based Parsing](#KnowledgeBaseParsing).  
   
-6.  Cliquez sur **Terminer** pour terminer l’activité de gestion de domaine, comme décrit dans [terminer l’activité de gestion de domaine](../../2014/data-quality-services/end-the-domain-management-activity.md).  
+6.  Cliquez sur **Terminer** pour terminer l’activité de gestion de domaine, comme décrit dans [End the Domain Management Activity](../../2014/data-quality-services/end-the-domain-management-activity.md).  
   
 ##  <a name="FollowUp"></a> Suivi : Après la création d'un domaine composite  
  Après avoir créé un domaine composite, vous pouvez effectuer d'autres tâches de gestion des domaines sur le domaine, effectuer une découverte des connaissances pour ajouter des connaissances au domaine ou ajouter une stratégie de correspondance au domaine. Pour plus d’informations, consultez [Effectuer une découverte des connaissances](../../2014/data-quality-services/perform-knowledge-discovery.md), [Gestion d’un domaine](../../2014/data-quality-services/managing-a-domain.md) ou [Créer une stratégie de correspondance](../../2014/data-quality-services/create-a-matching-policy.md).  

@@ -1,12 +1,11 @@
 ---
-title: Sécurité d’intégration du CLR | Documents Microsoft
+title: Sécurité de l’intégration CLR | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
-ms.prod_service: database-engine
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: reference
+ms.technology: clr
 ms.topic: reference
 helpviewer_keywords:
 - security [CLR integration]
@@ -18,12 +17,12 @@ caps.latest.revision: 55
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 73a8fbad7022a68f74d2c25c21bc9867c9953083
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
+ms.openlocfilehash: 8cef01a53327a0487119dd8c450da26f9fd0111c
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35700030"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37352121"
 ---
 # <a name="clr-integration-security"></a>Sécurité de l'intégration du CLR
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -49,16 +48,16 @@ ms.locfileid: "35700030"
  [Attributs de protection de l’hôte et programmation de l’intégration du CLR](../../../relational-databases/clr-integration-security-host-protection-attributes/host-protection-attributes-and-clr-integration-programming.md)  
  Fournit des informations à propos des valeurs d'attributs de protection de l'hôte (HPA) interdites dans les assemblys SAFE et EXTERNAL_ACCESS.  
   
- [Liens de sécurité d’intégration du CLR](http://msdn.microsoft.com/library/168efd01-d12e-4bdf-a1b3-0b5c76474eaf)  
+ [Liens dans la sécurité d’intégration du CLR](http://msdn.microsoft.com/library/168efd01-d12e-4bdf-a1b3-0b5c76474eaf)  
  Décrit comment les segments de code utilisateur peuvent s'appeler dans [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
- [L’emprunt d’identité et de sécurité d’intégration du CLR](http://msdn.microsoft.com/library/1495a7af-2248-4cee-afdb-9269fb3a7774)  
+ [Emprunt d’identité et sécurité de l’intégration du CLR](http://msdn.microsoft.com/library/1495a7af-2248-4cee-afdb-9269fb3a7774)  
  Discute la manière dont le code managé accède aux ressources externes à l'aide de l'emprunt d'identité.  
   
- [Autoriser partiellement approuvé appelants](http://msdn.microsoft.com/library/20b0248f-36da-4fc3-97d2-3789fcf6e084)  
+ [Autorisation d’appelants partiellement approuvés](http://msdn.microsoft.com/library/20b0248f-36da-4fc3-97d2-3789fcf6e084)  
  Discute des problèmes qui surviennent lorsqu'une méthode managée appelle une méthode dans une classe contenue dans un autre assembly.  
   
- [Domaines d’application et de sécurité d’intégration du CLR](http://msdn.microsoft.com/library/54ee904e-e21a-4ee7-b4ad-a6f6f71bd473)  
+ [Domaines d’application et sécurité de l’intégration du CLR](http://msdn.microsoft.com/library/54ee904e-e21a-4ee7-b4ad-a6f6f71bd473)  
  Décrit la façon dont les assemblys sont chargés dans les domaines d'application.  
   
 ## <a name="see-also"></a>Voir aussi  

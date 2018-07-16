@@ -1,5 +1,5 @@
 ---
-title: FOR XML AUTO requêtes retournent des références de table dérivée en mode de compatibilité 90 ou ultérieur | Documents Microsoft
+title: FOR XML AUTO requêtes retournent des références de table dérivée en mode de compatibilité 90 ou ultérieur | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - FOR XML AUTO [SQL Server]
 ms.assetid: 10c32f06-f7e1-40e0-8f79-6d921f2bef1d
 caps.latest.revision: 15
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: a056ae122c30b6014d325e4e87a43921426905c4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 578222ffcdfe7d9b73205e64528441a8300f1959
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36040568"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37321739"
 ---
 # <a name="for-xml-auto-queries-return-derived-table-references-in-90-or-later-compatibility-modes"></a>Les requêtes FOR XML AUTO retournent des références de tables dérivées en mode de compatibilité 90 ou ultérieur
   Lorsque le niveau de compatibilité de la base de données est supérieur ou égal à 90, les requêtes FOR XML qui s'exécutent en mode AUTO retournent des références à des alias de table dérivée. Lorsque le niveau de compatibilité est égal à 80, les instructions FOR XML AUTO retournent des références à des tables de base qui définissent une table dérivée.  

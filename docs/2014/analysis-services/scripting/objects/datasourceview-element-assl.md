@@ -1,5 +1,5 @@
 ---
-title: Élément DataSourceView (ASSL) | Documents Microsoft
+title: Élément DataSourceView (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - DataSourceView element
 ms.assetid: cda26126-8af2-4519-8237-f4a57976a284
 caps.latest.revision: 34
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 9d1813af76ff460aedb5345156b85e8d9b9667cf
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 2d8f72a69164071af4c9c2346c549cee2a56020b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36154034"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37324899"
 ---
 # <a name="datasourceview-element-assl"></a>Élément DataSourceView (ASSL)
   Définit une vue de source de données utilisée par un [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] [base de données](database-element-assl.md) élément.  

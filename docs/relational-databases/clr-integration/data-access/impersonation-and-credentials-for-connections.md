@@ -1,12 +1,11 @@
 ---
-title: L’emprunt d’identité et les informations d’identification pour les connexions | Documents Microsoft
+title: L’emprunt d’identité et les informations d’identification pour les connexions | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
-ms.prod_service: database-engine
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: reference
+ms.technology: clr
 ms.topic: reference
 helpviewer_keywords:
 - impersonation [CLR integration]
@@ -22,12 +21,12 @@ caps.latest.revision: 31
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 54fbeba549f5a8733c7459fb822a7a67164cc60d
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
+ms.openlocfilehash: 828357e883ddcf1b1aa1792878d1aedc52105f99
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35703370"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37358891"
 ---
 # <a name="impersonation-and-credentials-for-connections"></a>Emprunt d'identité et informations d'identification pour les connexions
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -35,9 +34,9 @@ ms.locfileid: "35703370"
   
  Par défaut, un processus SQL Server qui se connecte à Windows acquiert le contexte de sécurité du compte de service Windows SQL Server. Mais il est possible de mapper une fonction CLR à une identité de proxy afin que ses connexions sortantes aient un contexte de sécurité différent de celui du compte de service Windows.  
   
- Dans certains cas, vous souhaiterez emprunter l’identité de l’appelant à l’aide de la **SqlContext.WindowsIdentity** propriété au lieu de l’exécution en tant que le compte de service. Le **WindowsIdentity** instance représente l’identité du client qui a appelé le code appelant et est disponible uniquement lorsque le client utilise l’authentification Windows. Après avoir obtenu le **WindowsIdentity** instance, vous pouvez appeler **Impersonate** pour modifier le jeton de sécurité du thread, puis ouvrez les connexions ADO.NET part du client.  
+ Dans certains cas, vous souhaiterez peut-être d’emprunter l’identité de l’appelant à l’aide de la **SqlContext.WindowsIdentity** propriété au lieu de l’exécution en tant que le compte de service. Le **WindowsIdentity** instance représente l’identité du client qui a appelé le code appelant et est uniquement disponible lorsque le client utilise l’authentification Windows. Une fois que vous avez obtenu le **WindowsIdentity** instance, vous pouvez appeler **Impersonate** pour modifier le jeton de sécurité du thread, puis ouvrez les connexions ADO.NET part du client.  
   
- Après avoir appelé SQLContext.WindowsIdentity.Impersonate, vous ne pouvez pas accéder aux données locales, et vous ne pouvez pas accéder aux données système. Pour accéder aux données à nouveau, vous devez appeler la méthode WindowsImpersonationContext.Undo.  
+ Après avoir appelé SQLContext.WindowsIdentity.Impersonate, vous ne pouvez pas accéder aux données locales et vous ne pouvez pas accéder aux données système. Pour accéder aux données à nouveau, vous devez appeler WindowsImpersonationContext.Undo.  
   
  L’exemple suivant montre comment emprunter l’identité de l’appelant à l’aide de la **SqlContext.WindowsIdentity** propriété.  
   
@@ -75,7 +74,7 @@ catch
 ```  
   
 > [!NOTE]  
->  Pour plus d’informations sur les modifications du comportement d’emprunt d’identité, consultez [modifications avec rupture des fonctionnalités du moteur de base de données dans SQL Server 2016](../../../database-engine/breaking-changes-to-database-engine-features-in-sql-server-2016.md).  
+>  Pour plus d’informations sur les changements de comportement dans l’emprunt d’identité, consultez [modifications avec rupture des fonctionnalités du moteur de base de données dans SQL Server 2016](../../../database-engine/breaking-changes-to-database-engine-features-in-sql-server-2016.md).  
   
  Par ailleurs, si vous avez obtenu l'instance de l'identité [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows, vous ne pouvez pas, par défaut, propager cette instance à un autre ordinateur, cette opération étant restreinte par défaut par l'infrastructure de sécurité Windows. Il existe cependant un mécanisme, appelé « délégation », qui permet la propagation d'identités Windows sur plusieurs ordinateurs approuvés. Plus d’informations sur la délégation dans l’article TechNet, «[Kerberos Protocol Transition and Constrained Delegation](http://go.microsoft.com/fwlink/?LinkId=50419)».  
   

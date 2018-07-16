@@ -1,5 +1,5 @@
 ---
-title: Éditeur de Source Excel (Page colonnes) | Documents Microsoft
+title: Éditeur de Source Excel (Page colonnes) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.excelsourceadapter.columns.f1
 helpviewer_keywords:
 - Excel Source Editor
 ms.assetid: 50024686-a18d-4824-b20e-c84123f89d0b
 caps.latest.revision: 16
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 83ed9947f8541a0de6af25ab47ce1baf2cdf731f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: a8c32af4737ae537d363e8373e2acebbb0a0625f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36155304"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37306049"
 ---
 # <a name="excel-source-editor-columns-page"></a>Éditeur de source Excel (page Colonnes)
   La page **Colonnes** de la boîte de dialogue **Éditeur de source Excel** vous permet de mapper une colonne de sortie à chaque colonne externe (source).  

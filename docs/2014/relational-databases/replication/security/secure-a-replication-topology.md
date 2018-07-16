@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - replication [SQL Server], security
 ms.assetid: d7292121-1c8e-4b8e-ac44-8eea36ae27fe
 caps.latest.revision: 37
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: f18e04757068a33456f442648fe5f49ff29bbb65
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: a097c43f6081e024b0c7f06e0df9fe88234b5bce
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36153686"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37311365"
 ---
 # <a name="secure-a-replication-topology"></a>Sécuriser une topologie de réplication
   Les comptes de sécurité, les connexions et les mots de passe requis par la réplication sont fournis lors de la configuration de la réplication et lors de la création des publications et abonnements. Ces paramètres de sécurité peuvent être modifiés ultérieurement à l'aide de [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], des procédures stockées de réplication et des objets RMO (Replication Management Objects). Les rubriques ci-dessous expliquent comment modifier les paramètres de sécurité de la réplication.  

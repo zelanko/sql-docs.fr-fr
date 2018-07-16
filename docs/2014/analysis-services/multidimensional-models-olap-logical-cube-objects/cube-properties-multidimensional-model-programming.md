@@ -1,5 +1,5 @@
 ---
-title: Propriétés de cube | Documents Microsoft
+title: Propriétés de cube | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -33,15 +33,15 @@ helpviewer_keywords:
 - ProactiveCaching property
 ms.assetid: 72ca3387-620d-4473-8e23-7fe1f2b3d5bf
 caps.latest.revision: 40
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: beae78f264c9ac0ce3aef5690f4e11e51ef191c3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 785bc878c238b1fbba5acbd7ba3bc0525b8d6cc6
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36041493"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37312479"
 ---
 # <a name="cube-properties"></a>Propriétés de cube
   Les cubes ont un grand nombre de propriétés que vous pouvez définir pour affecter le comportement à l'échelle du cube. Ces propriétés sont présentées dans le tableau suivant.  
@@ -73,7 +73,7 @@ ms.locfileid: "36041493"
 |`Visible`|Détermine la visibilité du cube.|  
   
 > [!NOTE]  
->  Pour plus d’informations sur la définition des valeurs pour la propriété ErrorConfiguration lorsque vous travaillez avec des valeurs null et d’autres problèmes d’intégrité des données, consultez [la gestion des problèmes d’intégrité des données dans Analysis Services 2005](http://go.microsoft.com/fwlink/?LinkId=81891).  
+>  Pour plus d’informations sur la définition des valeurs pour la propriété ErrorConfiguration lorsque vous travaillez avec des valeurs null et d’autres problèmes d’intégrité des données, consultez [gestion des problèmes d’intégrité des données dans Analysis Services 2005](http://go.microsoft.com/fwlink/?LinkId=81891).  
   
 ## <a name="see-also"></a>Voir aussi  
  [Mise en cache proactive &#40;Partitions&#41;](partitions-proactive-caching.md)  

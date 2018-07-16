@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Windows authentication [Reporting Services]
 - Reporting Services, configuration
@@ -16,13 +16,13 @@ ms.assetid: 4de9c3dd-0ee7-49b3-88bb-209465ca9d86
 caps.latest.revision: 23
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 3147e590c5a7fa7c258b705404d5b9ae5a8c1ea3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: c71455bc6f9748cdd31cddfde2f3cfb01f6a9589
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36153393"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37325719"
 ---
 # <a name="configure-windows-authentication-on-the-report-server"></a>Configurer une authentification Windows sur le serveur de rapports
   Par défaut, [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] accepte les demandes qui spécifient l'authentification Negotiate ou NTLM. Si votre déploiement inclut des applications clientes et des navigateurs clients qui utilisent ces fournisseurs de sécurité, vous pouvez utiliser les valeurs par défaut sans configuration supplémentaire. Si vous voulez utiliser un fournisseur de sécurité différent pour la sécurité intégrée de Windows (par exemple, si vous voulez utiliser Kerberos directement), ou si vous avez modifié les valeurs par défaut et que vous voulez restaurer les paramètres d'origine, vous pouvez utiliser les informations de cette rubrique pour spécifier des paramètres d'authentification sur le serveur de rapports.  
@@ -31,10 +31,10 @@ ms.locfileid: "36153393"
   
  Les exigences supplémentaires suivantes doivent également être respectées :  
   
--   Les fichiers RSeportServer.config doit être `AuthenticationType` la valeur `RSWindowsNegotiate`, `RSWindowsKerberos`, ou `RSWindowsNTLM`. Par défaut, le fichier RSReportServer.config inclut le paramètre `RSWindowsNegotiate` si le compte de service Report Server est NetworkService ou LocalSystem ; sinon, le paramètre `RSWindowsNTLM` est utilisé. Vous pouvez ajouter `RSWindowsKerberos` si vous possédez des applications qui utilisent uniquement l'authentification Kerberos.  
+-   Les fichiers RSeportServer.config doit être `AuthenticationType` définie sur `RSWindowsNegotiate`, `RSWindowsKerberos`, ou `RSWindowsNTLM`. Par défaut, le fichier RSReportServer.config inclut le paramètre `RSWindowsNegotiate` si le compte de service Report Server est NetworkService ou LocalSystem ; sinon, le paramètre `RSWindowsNTLM` est utilisé. Vous pouvez ajouter `RSWindowsKerberos` si vous possédez des applications qui utilisent uniquement l'authentification Kerberos.  
   
     > [!IMPORTANT]  
-    >  À l’aide de `RSWindowsNegotiate` entraîne une erreur d’authentification Kerberos si vous avez configuré le service Report Server pour s’exécuter sous un compte d’utilisateur de domaine et que vous n’avez pas inscrit un nom Principal de Service (SPN) pour le compte. Pour plus d'informations, consultez [Résolution des erreurs d'authentification Kerberos lors de la connexion à un serveur de rapports](#proxyfirewallRSWindowsNegotiate) dans cette rubrique.  
+    >  À l’aide de `RSWindowsNegotiate` entraîne une erreur d’authentification Kerberos si vous avez configuré le service de serveur de rapports s’exécute sous un compte d’utilisateur de domaine et vous n’avez pas inscrit un nom Principal de Service (SPN) pour le compte. Pour plus d'informations, consultez [Résolution des erreurs d'authentification Kerberos lors de la connexion à un serveur de rapports](#proxyfirewallRSWindowsNegotiate) dans cette rubrique.  
   
 -   [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] doit être configuré pour l'authentification Windows. Par défaut, les fichiers Web.config pour le service Web Report Server et Gestionnaire de rapports incluent le \<mode d’authentification = « Windows » > paramètre. Si vous le remplacez par \<authentication mode="Forms">, l’authentification Windows pour [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] échouera.  
   
@@ -49,13 +49,13 @@ ms.locfileid: "36153393"
  Les instructions suivantes sont destinées à un serveur de rapports en mode natif. Si le serveur de rapports est déployé en mode intégré SharePoint, vous devez utiliser les paramètres d'authentification par défaut qui spécifient la sécurité intégrée de Windows. Le serveur de rapports utilise des fonctionnalités internes dans l'extension d'authentification Windows par défaut pour prendre en charge les serveurs de rapports en mode intégré SharePoint.  
   
 ## <a name="extended-protection-for-authentication"></a>Protection étendue de l'authentification  
- À compter de [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], la prise en charge de la protection étendue de l'authentification est disponible. La fonctionnalité [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] prend en charge l'utilisation de la liaison de canal et la liaison de service pour améliorer la protection de l'authentification. Les fonctionnalités [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] doivent être utilisées avec un système d'exploitation qui prend en charge la protection étendue. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] pour la protection étendue est déterminée par les paramètres contenus dans le fichier RSReportServer.config. Le fichier peut être mis à jour en le modifiant ou à l'aide des API WMI. Pour plus d’informations, consultez [la Protection étendue pour l’authentification avec Reporting Services](extended-protection-for-authentication-with-reporting-services.md).  
+ À compter de [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], la prise en charge de la protection étendue de l'authentification est disponible. La fonctionnalité [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] prend en charge l'utilisation de la liaison de canal et la liaison de service pour améliorer la protection de l'authentification. Les fonctionnalités [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] doivent être utilisées avec un système d'exploitation qui prend en charge la protection étendue. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] pour la protection étendue est déterminée par les paramètres contenus dans le fichier RSReportServer.config. Le fichier peut être mis à jour en le modifiant ou à l'aide des API WMI. Pour plus d’informations, consultez [Protection étendue pour l’authentification avec Reporting Services](extended-protection-for-authentication-with-reporting-services.md).  
   
 ### <a name="to-configure-a-report-server-to-use-windows-integrated-security"></a>Pour configurer un serveur de rapports afin qu'il utilise la sécurité intégrée de Windows  
   
 1.  Ouvrez RSReportServer.config dans un éditeur de texte.  
   
-2.  Recherchez <`Authentication`>.  
+2.  Trouver <`Authentication`>.  
   
 3.  Copiez, parmi les structures XML suivantes, celle qui répond le mieux à vos besoins. Vous pouvez spécifier `RSWindowsNegotiate`, `RSWindowsNTLM`, et `RSWindowsKerberos` dans n’importe quel ordre. Vous devez activer la permanence de l'authentification si vous voulez authentifier la connexion plutôt que chaque demande individuelle. En cas de permanence de l'authentification, toutes les demandes qui requièrent une authentification seront autorisées pendant la durée de la connexion.  
   
@@ -128,7 +128,7 @@ ms.locfileid: "36153393"
   
  Vous pouvez détecter l'erreur si vous avez activé l'enregistrement Kerberos. Le fait que vous soyez invité plusieurs fois à entrer les informations d'identification, puis qu'une fenêtre de navigateur vide s'affiche, constitue un autre symptôme de l'erreur.  
   
- Vous pouvez vérifier que vous rencontrez une erreur d’authentification Kerberos en supprimant < `RSWindowsNegotiate` / > à partir de votre fichier de configuration et retenter la connexion.  
+ Vous pouvez confirmer que vous rencontrez une erreur d’authentification Kerberos en supprimant < `RSWindowsNegotiate` / > à partir de votre fichier de configuration et retenter la connexion.  
   
  Après avoir confirmé le problème, vous pouvez le résoudre de l'une des manières suivantes :  
   

@@ -1,5 +1,5 @@
 ---
-title: Déboguer un Package en définissant des points d’arrêt sur une tâche ou un conteneur | Documents Microsoft
+title: Déboguer un Package en définissant des points d’arrêt sur une tâche ou un conteneur | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - containers [Integration Services], breakpoints
 - breakpoints [Integration Services]
 - tasks [Integration Services], breakpoints
 ms.assetid: e7fa106a-2221-403a-bb74-efc9f12bb450
 caps.latest.revision: 33
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 6535657a5b193b92b76fd32fee9497e8ef76580e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: b063089105af1de7656387be8cc12639498e7c37
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36153760"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37308109"
 ---
 # <a name="debug-a-package-by-setting-breakpoints-on-a-task-or-a-container"></a>Déboguer un package en définissant des points d'arrêt sur une tâche ou un conteneur
   Cette section décrit la procédure de définition des points d'arrêt dans un package, une tâche, un conteneur de boucle For ou Foreach ou un conteneur de séquences.  
@@ -49,8 +49,8 @@ ms.locfileid: "36153760"
 6.  Pour enregistrer le package, cliquez sur **Enregistrer les éléments sélectionnés** dans le menu **Fichier** .  
   
 ## <a name="see-also"></a>Voir aussi  
- [Outils de dépannage pour le développement de packages](troubleshooting/troubleshooting-tools-for-package-development.md)   
- [Déboguer un Script en définissant des points d’arrêt dans une tâche de Script et le composant de Script](data-flow/transformations/script-component.md)   
+ [Outils de dépannage pour le développement de Package](troubleshooting/troubleshooting-tools-for-package-development.md)   
+ [Déboguer un Script en définissant des points d’arrêt dans une tâche de Script et le composant Script](data-flow/transformations/script-component.md)   
  [Codage et débogage de la tâche de Script](control-flow/script-task.md)   
  [Codage et débogage du composant Script](extending-packages-scripting/data-flow-script-component/coding-and-debugging-the-script-component.md)  
   

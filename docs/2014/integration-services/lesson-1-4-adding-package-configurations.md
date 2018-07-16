@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: e04a5321-63d5-4ec5-85b9-cb4eaf6c87f6
 caps.latest.revision: 27
-author: douglaslM
+author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 11d97017f27634c5c6f3f913cd41447780b68199
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 29da6dedad91566c0d111acfeb18b3778d2da4df
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36042262"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37308119"
 ---
 # <a name="step-4-adding-package-configurations"></a>Étape 4 : Ajout de configurations au package
   Au cours de cette tâche, vous allez ajouter une configuration à chaque package. Les configurations mettent à jour les valeurs des propriétés de package et des objets de package au moment de l'exécution.  
@@ -46,7 +46,7 @@ ms.locfileid: "36042262"
   
 5.  Dans la page Assistant Configuration de package, cliquez sur **Suivant**.  
   
-6.  Dans la page Sélectionner un Type de Configuration, sélectionnez **fichier de configuration XML** dans les **le type de Configuration** , sélectionnez le **emplacement de Configuration est stocké dans une variable d’environnement** option et tapez `DataTransfer,` ou sélectionnez le **DataTransfer** variable d’environnement dans la liste.  
+6.  Dans la page Sélectionner un Type de Configuration, sélectionnez **fichier de configuration XML** dans le **type de Configuration** , sélectionnez le **emplacement de Configuration est stocké dans une variable d’environnement** option, puis tapez `DataTransfer,` ou sélectionnez le **DataTransfer** variable d’environnement dans la liste.  
   
     > [!NOTE]  
     >  Pour que la variable d'environnement soit disponible dans la liste, vous devrez peut-être redémarrer votre ordinateur après l'ajout de la variable. Si vous ne souhaitez pas redémarrer l'ordinateur, vous pouvez taper le nom de la variable d'environnement.  
@@ -97,7 +97,7 @@ ms.locfileid: "36042262"
   
 5.  Dans la page Assistant Configuration de package, cliquez sur **Suivant**.  
   
-6.  Dans la page Sélectionner un Type de Configuration, sélectionnez **fichier de configuration XML** dans les **le type de Configuration** , sélectionnez le **emplacement de Configuration est stocké dans une variable d’environnement** option, tapez `LoadXMLData` ou sélectionnez le `LoadXMLData` variable d’environnement dans la liste.  
+6.  Dans la page Sélectionner un Type de Configuration, sélectionnez **fichier de configuration XML** dans le **type de Configuration** , sélectionnez le **emplacement de Configuration est stocké dans une variable d’environnement** option, tapez `LoadXMLData` ou sélectionnez le `LoadXMLData` variable d’environnement dans la liste.  
   
     > [!NOTE]  
     >  Pour que la variable d'environnement soit disponible dans la liste, vous devrez peut-être redémarrer votre ordinateur après l'ajout de la variable.  
@@ -135,11 +135,11 @@ ms.locfileid: "36042262"
 ## <a name="next-task-in-lesson"></a>Tâche suivante de la leçon  
  [Étape 5 : Test des packages mis à jour](../integration-services/lesson-1-5-testing-the-updated-packages.md)  
   
-![Icône Integration Services (petite)](media/dts-16.gif "icône Integration Services (petite)")**restent jusqu'à la Date avec Integration Services** <br /> Pour obtenir les derniers téléchargements, articles, exemples et vidéos de Microsoft, ainsi que des solutions sélectionnées par la communauté, visitez la page [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] sur MSDN :<br /><br /> [Visitez la page Integration Services sur MSDN](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Pour recevoir une notification automatique de ces mises à jour, abonnez-vous aux flux RSS disponibles sur la page.  
+![Icône Integration Services (petite)](media/dts-16.gif "icône Integration Services (petite)")**rester jusqu'à la Date avec Integration Services  **<br /> Pour obtenir les derniers téléchargements, articles, exemples et vidéos de Microsoft, ainsi que des solutions sélectionnées par la communauté, visitez la page [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] sur MSDN :<br /><br /> [Visitez la page Integration Services sur MSDN](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Pour recevoir une notification automatique de ces mises à jour, abonnez-vous aux flux RSS disponibles sur la page.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Configurations de package](../../2014/integration-services/package-configurations.md)   
  [Créer des Configurations de Package](../../2014/integration-services/create-package-configurations.md)   
- [Accès aux fichiers utilisés par les Packages](../../2014/integration-services/access-to-files-used-by-packages.md)  
+ [Accéder aux fichiers utilisés par des packages](../../2014/integration-services/access-to-files-used-by-packages.md)  
   
   

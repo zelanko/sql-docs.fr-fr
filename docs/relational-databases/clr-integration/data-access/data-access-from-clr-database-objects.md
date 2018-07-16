@@ -1,12 +1,11 @@
 ---
-title: Accès aux données depuis les objets de base de données CLR | Documents Microsoft
+title: Accès aux données à partir des objets de base de données CLR | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
-ms.prod_service: database-engine
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: reference
+ms.technology: clr
 ms.topic: reference
 helpviewer_keywords:
 - common language runtime [SQL Server], data access
@@ -26,19 +25,19 @@ caps.latest.revision: 41
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 1ff4b57fc7557fd2fd339e08b1529605d505cd44
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
+ms.openlocfilehash: 590c5ec05efbb59c59cf307d98e589b42d69da47
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35701840"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37357671"
 ---
 # <a name="data-access-from-clr-database-objects"></a>Accès aux données à partir d'objets de base de données CLR
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  Une routine du common language runtime (CLR) peut accéder facilement aux données stockées dans l’instance de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] dans lequel elle s’exécute, ainsi que les données stockées dans les instances distantes. Les données particulières auxquelles la routine peut accéder sont déterminées par le contexte utilisateur dans lequel le code s'exécute. Accéder aux données à partir d’un objet de base de données CLR à l’aide du fournisseur de données .NET Framework pour [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], également connue sous le nom **SqlClient**. Il s'agit du même fournisseur que celui utilisé par les développeurs accédant aux données [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] d'applications clientes managées et de couche intermédiaire. Pour cette raison, vous pouvez approfondir vos connaissances d’ADO.NET et **SqlClient** dans les applications clientes et de couche intermédiaire.  
+  Une routine du common language runtime (CLR) peut accéder facilement aux données stockées dans l’instance de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] dans laquelle elle s’exécute, ainsi que des données stockées dans les instances distantes. Les données particulières auxquelles la routine peut accéder sont déterminées par le contexte utilisateur dans lequel le code s'exécute. Accéder aux données à partir d’un objet de base de données CLR à l’aide du fournisseur de données .NET Framework pour [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], également connue sous le nom **SqlClient**. Il s'agit du même fournisseur que celui utilisé par les développeurs accédant aux données [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] d'applications clientes managées et de couche intermédiaire. Pour cette raison, vous pouvez exploiter vos connaissances d’ADO.NET et **SqlClient** dans les applications clientes et de couche intermédiaire.  
   
 > [!NOTE]  
->  Les méthodes de type défini par l'utilisateur et les fonctions définies par l'utilisateur ne sont pas autorisées à effectuer un accès aux données par défaut. Vous devez définir le **DataAccess** propriété du **SqlMethodAttribute** ou **SqlFunctionAttribute** à **DataAccessKind.Read** pour activer en lecture seule aux données à partir des méthodes de type défini par l’utilisateur (UDT) ou des fonctions définies par l’utilisateur. Les opérations de modification des données ne sont pas autorisées à partir des types définis par l'utilisateur ou des fonctions définies par l'utilisateur ; par ailleurs, elles lèvent des exceptions au moment de l'exécution, à la moindre tentative.  
+>  Les méthodes de type défini par l'utilisateur et les fonctions définies par l'utilisateur ne sont pas autorisées à effectuer un accès aux données par défaut. Vous devez définir le **DataAccess** propriété du **SqlMethodAttribute** ou **SqlFunctionAttribute** à **DataAccessKind.Read** pour activer accès en lecture seule des données à partir de méthodes de type défini par l’utilisateur (UDT) ou des fonctions définies par l’utilisateur. Les opérations de modification des données ne sont pas autorisées à partir des types définis par l'utilisateur ou des fonctions définies par l'utilisateur ; par ailleurs, elles lèvent des exceptions au moment de l'exécution, à la moindre tentative.  
   
  Cette section décrit uniquement les différences spécifiques en matière de fonctionnement et de comportement lors de l'accès aux données à partir d'un objet de base de données CLR. Pour plus d'informations sur les fonctionnalités d'ADO.NET, consultez la documentation ADO.NET incluse dans le Kit de développement logiciel .NET Framework (SDK).  
   
@@ -56,7 +55,7 @@ ms.locfileid: "35701840"
  [Intégration et transactions du CLR](../../../relational-databases/clr-integration-data-access-transactions/clr-integration-and-transactions.md)  
  Explique comment la nouvelle infrastructure de transaction fournie dans l'espace de noms System.Transactions s'intègre à ADO.NET et décrit l'intégration du CLR de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
- [Sérialisation XML à partir des objets de base de données CLR](http://msdn.microsoft.com/library/ac84339b-9384-4710-bebc-01607864a344)  
+ [Sérialisation XML à partir d'objets de base de données CLR](http://msdn.microsoft.com/library/ac84339b-9384-4710-bebc-01607864a344)  
  Explique comment activer les scénarios de sérialisation XML des objets de base de données CLR dans [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
   

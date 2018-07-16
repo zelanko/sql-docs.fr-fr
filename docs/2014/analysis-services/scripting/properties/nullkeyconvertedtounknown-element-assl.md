@@ -1,5 +1,5 @@
 ---
-title: Élément NullKeyConvertedToUnknown (ASSL) | Documents Microsoft
+title: Élément NullKeyConvertedToUnknown (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - NullKeyConvertedToUnknown element
 ms.assetid: 1a6cde33-01ba-4095-b464-16d1ad3c6905
 caps.latest.revision: 37
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 8e11f7de1b3fa7b11774a960351a1b3c974ce4f4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: cebeef3421533b429a38f6c5696780cb008eca69
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36154702"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37316919"
 ---
 # <a name="nullkeyconvertedtounknown-element-assl"></a>Élément NullKeyConvertedToUnknown (ASSL)
   Spécifie l'action à entreprendre en cas d'erreur de conversion de type NULL.  
@@ -62,7 +62,7 @@ ms.locfileid: "36154702"
 |Éléments enfants|None|  
   
 ## <a name="remarks"></a>Notes  
- Les erreurs de conversion de valeur NULL se produisent lorsqu'une valeur NULL est rencontrée dans une colonne clé et interprétée comme membre `Unknown`. Toutefois, cette erreur se produit uniquement si le [NullProcessing](nullprocessing-element-assl.md) , élément pour les [DataItem](../data-type/dataitem-data-type-assl.md) ancêtre de la `ErrorConfiguration` élément parent a la valeur *UnknownMember*.  
+ Les erreurs de conversion de valeur NULL se produisent lorsqu'une valeur NULL est rencontrée dans une colonne clé et interprétée comme membre `Unknown`. Toutefois, cette erreur se produit uniquement si le [NullProcessing](nullprocessing-element-assl.md) élément pour le [DataItem](../data-type/dataitem-data-type-assl.md) ancêtre de la `ErrorConfiguration` élément parent a la valeur *UnknownMember*.  
   
  La valeur de cet élément est limitée à l'une des chaînes répertoriées dans le tableau suivant.  
   
@@ -72,7 +72,7 @@ ms.locfileid: "36154702"
 |*ReportAndContinue*|Le traitement signale l'erreur et continue.|  
 |*ReportAndStop*|Le traitement signale l'erreur et s'arrête.|  
   
- L’énumération qui correspond aux valeurs autorisées pour `NullKeyConvertedToUnknown` dans l’objet d’objets AMO (Analysis Management) est modèle <xref:Microsoft.AnalysisServices.ErrorOption>.  
+ L’énumération qui correspond aux valeurs autorisées pour `NullKeyConvertedToUnknown` dans l’objet d’objets AMO (Analysis Management) modèle est <xref:Microsoft.AnalysisServices.ErrorOption>.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Élément ErrorConfiguration &#40;ASSL&#41;](../objects/errorconfiguration-element-assl.md)   

@@ -8,24 +8,24 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server Management Studio [SQL Server], user interface elements
 - user interface [SQL Server Management Studio]
 ms.assetid: 436d9afb-09c3-4838-9b54-4449a5178d0f
 caps.latest.revision: 23
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 5257ca5f93c5256f52b4ca590af3e75ed7339888
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 16e231872e0f1cd653b7dab3807cd299c1a7cb1d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36040779"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37315555"
 ---
 # <a name="general-user-interface-elements"></a>Éléments généraux relatifs à l'interface utilisateur
-  **L’éditeur**, la fenêtre **Propriétés** et la **boîte à outils** représentent certains des éléments d’interface utilisateur de base de [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)].  
+   **L’éditeur**, la fenêtre **Propriétés** et la **boîte à outils** représentent certains des éléments d’interface utilisateur de base de [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)].  
   
 ## <a name="in-this-section"></a>Dans cette section  
  [Boîte de dialogue À propos de](about-dialog-box.md)  

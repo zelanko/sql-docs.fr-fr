@@ -1,5 +1,5 @@
 ---
-title: Onglet Profils de Sequence Clustering Cluster (visionneuse de modèle d’exploration de données | Documents Microsoft
+title: Onglet Profils de Sequence Clustering Cluster (visionneuse de modèle d’exploration de données | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,30 +8,30 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dm.miningmodeleditor.sequenceclustering.profiles.f1
 ms.assetid: 44230895-0a42-4032-8d6c-0cdb8a2dbb8c
 caps.latest.revision: 26
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: f7730b07877b0cfe6cdcc6d4a749d28ce4cf093d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: b69066bd09f74fddd0fc7151eae216b74444e8f0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36042759"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37323129"
 ---
 # <a name="sequence-clustering-cluster-profiles-tab-mining-model-viewer"></a>Onglet Profils du cluster du modèle Sequence Clustering (Visionneuse de modèle d'exploration de données)
   L’onglet **Profils du cluster** dans la **Visionneuse de l’algorithme MSC** (Microsoft Sequence Clustering) fournit une vue à code de couleurs des séquences incluses dans chaque cluster.  
   
  Utilisez cette vue d'un modèle Sequence Clustering pour obtenir une vue rapide de la façon dont les séquences trouvées par le modèle sont regroupées. Vous pouvez voir d'un coup d'œil le nombre de séquences qui sont longues et celles qui sont courtes. Vous pouvez également cliquer sur un cluster et afficher la **Légende d’exploration de données** pour voir exactement les états représentés par les couleurs dans chaque séquence.  
   
- **Pour plus d’informations :**[algorithme Microsoft Sequence Clustering](data-mining/microsoft-sequence-clustering-algorithm.md), [parcourir un modèle à l’aide de la séquence de Microsoft Cluster Viewer  ](data-mining/browse-a-model-using-the-microsoft-sequence-cluster-viewer.md)  
+ **Pour plus d’informations :**[algorithme Microsoft Sequence Clustering](data-mining/microsoft-sequence-clustering-algorithm.md), [Explorer un modèle à l’aide de la séquence de Microsoft Cluster Viewer  ](data-mining/browse-a-model-using-the-microsoft-sequence-cluster-viewer.md)  
   
 ## <a name="options"></a>Options  
- **Actualiser le contenu de la visionneuse**  
+ **Actualiser le contenu de l’Observateur**  
  Recharge le modèle d'exploration de données dans la visionneuse.  
   
  **Modèle d'exploration de données**  
@@ -62,7 +62,7 @@ ms.locfileid: "36042759"
   
 ## <a name="see-also"></a>Voir aussi  
  [Algorithmes d’exploration de données &#40;Analysis Services - Exploration de données&#41;](data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
- [Algorithme de Microsoft Sequence Clustering](data-mining/microsoft-sequence-clustering-algorithm.md)   
+ [Algorithme de Clustering de séquence de Microsoft](data-mining/microsoft-sequence-clustering-algorithm.md)   
  [Visionneuses de modèle d’exploration de données &#40;Concepteur de modèle d’exploration de données&#41;](mining-model-viewers-data-mining-model-designer.md)   
  [Visionneuses de modèle d’exploration de données](data-mining/data-mining-model-viewers.md)   
  [Explorer un modèle à l’aide de la visionneuse de l’algorithme MSC (Microsoft Sequence Cluster)](data-mining/browse-a-model-using-the-microsoft-sequence-cluster-viewer.md)  

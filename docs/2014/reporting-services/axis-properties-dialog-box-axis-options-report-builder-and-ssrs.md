@@ -1,5 +1,5 @@
 ---
-title: Boîte de dialogue de propriétés axe, Options de l’axe (Générateur de rapports et SSRS) | Documents Microsoft
+title: Boîte de dialogue Propriétés de l’axe, Options de l’axe (Générateur de rapports et SSRS) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
@@ -8,27 +8,27 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.rtp.rptdesigner.axisproperties.axisoptions.f1
 - "10138"
 ms.assetid: b276e210-7a12-48ae-971b-7dabae51df11
 caps.latest.revision: 10
-author: douglaslM
+author: maggiesmsft
 ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 947b985ef25eec47ec8f064c752c5dad49fdf30b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: c2b769fd686ba2bd32611b073cfe08a71e224d89
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36041047"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37315449"
 ---
 # <a name="axis-properties-dialog-box-axis-options-report-builder-and-ssrs"></a>Boîte de dialogue Propriétés de l'axe, Options de l'axe (Générateur de rapports et SSRS)
-  Sélectionnez **Options de l’axe** sur la **Horizontal** ou **VerticalAxis propriétés** boîte de dialogue pour définir l’apparence de l’axe spécifié du graphique. Dans les versions précédentes de [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)], le graphique affichait par défaut toutes les étiquettes sur l'axe des abscisses. En revanche, dans [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 2008, le graphique ignore les étiquettes pour produire une image plus lisible et éviter les collisions d'étiquette. Pour plus d’informations, consultez [Mise en forme des points de données sur un graphique &#40;Générateur de rapports et SSRS&#41;](report-design/formatting-axis-labels-on-a-chart-report-builder-and-ssrs.md).  
+  Sélectionnez **Options de l’axe** sur le **Horizontal** ou **propriétés de l’axe vertical** boîte de dialogue pour définir l’apparence de l’axe spécifié du graphique. Dans les versions précédentes de [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)], le graphique affichait par défaut toutes les étiquettes sur l'axe des abscisses. En revanche, dans [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 2008, le graphique ignore les étiquettes pour produire une image plus lisible et éviter les collisions d'étiquette. Pour plus d’informations, consultez [Mise en forme des points de données sur un graphique &#40;Générateur de rapports et SSRS&#41;](report-design/formatting-axis-labels-on-a-chart-report-builder-and-ssrs.md).  
   
 ## <a name="options"></a>Options  
- **Activer les séparateurs d’échelle**  
+ **Activer les séparations d’échelle**  
  Sélectionnez cette option pour permettre au graphique de dessiner un séparateur d'échelle lorsque cela est nécessaire. Lorsque cette option est activée, le graphique calculera automatiquement si la différence est suffisante entre les points hauts et bas du dataset pour dessiner un séparateur d'échelle.  
   
  **Inverser la direction**  
@@ -69,8 +69,8 @@ ms.locfileid: "36041047"
  [Mise en forme des couleurs des séries sur un graphique &#40;Générateur de rapports et SSRS&#41;](report-design/formatting-series-colors-on-a-chart-report-builder-and-ssrs.md)   
  [Spécifier un intervalle d’axe &#40;Générateur de rapports et SSRS&#41;](report-design/specify-an-axis-interval-report-builder-and-ssrs.md)   
  [Mettre en forme les étiquettes des axes en tant que dates ou devises &#40;Générateur de rapports et SSRS&#41;](report-design/format-axis-labels-as-dates-or-currencies-report-builder-and-ssrs.md)   
- [Tracer des données sur un axe secondaire &#40;rapport Générateur et SSRS&#41;](report-design/plot-data-on-a-secondary-axis-report-builder-and-ssrs.md)   
+ [Tracer des données sur un axe secondaire &#40;Générateur de rapports et SSRS&#41;](report-design/plot-data-on-a-secondary-axis-report-builder-and-ssrs.md)   
  [Graphiques sparkline et barres de données &#40;Générateur de rapports et SSRS&#41;](report-design/sparklines-and-data-bars-report-builder-and-ssrs.md)   
- [Ajouter ou supprimer des marges dans un graphique &#40;rapport Générateur et SSRS&#41;](report-design/add-or-remove-margins-from-a-chart-report-builder-and-ssrs.md)  
+ [Ajouter ou supprimer des marges dans un graphique &#40;Générateur de rapports et SSRS&#41;](report-design/add-or-remove-margins-from-a-chart-report-builder-and-ssrs.md)  
   
   
