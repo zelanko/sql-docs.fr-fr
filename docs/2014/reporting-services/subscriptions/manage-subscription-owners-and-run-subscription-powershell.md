@@ -1,5 +1,5 @@
 ---
-title: Utiliser PowerShell pour modifier et répertorier Reporting Services Subscription Owners and Run a Subscription | Documents Microsoft
+title: Utiliser PowerShell pour modifier et répertorier les propriétaires d’abonnements Reporting Services et exécuter un abonnement | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 0fa6cb36-68fc-4fb8-b1dc-ae4f12bf6ff0
 caps.latest.revision: 14
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: daed1f77d5e1470f39e8ad2d7afe52e66db7e219
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 31bf54cf103a269900ce9edc6caf9ec192a4f4b3
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36052994"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37323819"
 ---
 # <a name="use-powershell-to-change-and-list-reporting-services-subscription-owners-and-run-a-subscription"></a>Utiliser PowerShell pour modifier et répertorier les propriétaires d’abonnements Reporting Services, et exécuter un abonnement
-  En commençant par [!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] vous pouvez transférer par programme la propriété d’un [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] abonnement à partir d’un seul utilisateur à un autre. Cette rubrique fournit plusieurs scripts Windows PowerShell que vous pouvez utiliser pour modifier ou simplement dresser la liste des appartenances aux abonnements. Chaque exemple comprend un exemple de syntaxe pour le mode Natif et le mode SharePoint. Une fois que vous avez modifié le propriétaire d'un abonnement, celui-ci s'exécute dans le contexte de sécurité du nouveau propriétaire et le champ User!UserID du rapport affiche la valeur du nouveau propriétaire. Pour plus d’informations sur le modèle objet appelé par les exemples PowerShell, consultez <xref:ReportService2010.ReportingService2010.ChangeSubscriptionOwner%2A>  
+  En commençant par [!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] vous pouvez transférer par programmation la propriété d’un [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] abonnement à partir d’un seul utilisateur à un autre. Cette rubrique fournit plusieurs scripts Windows PowerShell que vous pouvez utiliser pour modifier ou simplement dresser la liste des appartenances aux abonnements. Chaque exemple comprend un exemple de syntaxe pour le mode Natif et le mode SharePoint. Une fois que vous avez modifié le propriétaire d'un abonnement, celui-ci s'exécute dans le contexte de sécurité du nouveau propriétaire et le champ User!UserID du rapport affiche la valeur du nouveau propriétaire. Pour plus d’informations sur le modèle objet appelé par les exemples PowerShell, consultez <xref:ReportService2010.ReportingService2010.ChangeSubscriptionOwner%2A>  
   
  ![Contenu relatif à PowerShell](../media/rs-powershellicon.jpg "Contenu relatif à PowerShell")  
   
@@ -71,7 +71,7 @@ ms.locfileid: "36052994"
   
  **Mode SharePoint :**  
   
--   Liste des abonnements : ManageAlerts ou (lien hypertexte «http://technet.microsoft.com/library/microsoft.sharepoint.spbasepermissions.aspx» CreateAlerts sur le rapport et l’utilisateur est propriétaire de l’abonnement et l’abonnement est un abonnement).  
+-   Liste des abonnements : ManageAlerts ou (lien hypertexte «http://technet.microsoft.com/library/microsoft.sharepoint.spbasepermissions.aspx» CreateAlerts sur le rapport et l’utilisateur est propriétaire de l’abonnement et l’abonnement est un abonnement planifié).  
   
 -   Modifier des abonnements : ManageWeb  
   

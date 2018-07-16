@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: f4088de3-16d8-419c-96a1-a2cd005d0a5b
 caps.latest.revision: 27
-author: douglaslM
+author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 00f6cc4f2a6d2283a44b91319362bf0cd171a448
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: d30e1259da07f315b424747ad977917e8c68eb30
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36053551"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37285474"
 ---
 # <a name="step-4-adding-a-flat-file-destination"></a>Étape 4 : Ajout d'une destination de fichier plat
   La sortie d'erreur de la transformation Lookup Currency Key réachemine vers la transformation Script toutes les lignes de données ayant échoué au cours de l'opération de recherche. Pour améliorer les informations recueillies sur les erreurs survenues, la transformation Script exécute un script chargé d'obtenir la description des erreurs.  
@@ -40,11 +40,11 @@ ms.locfileid: "36053551"
   
 6.  Dans la boîte de dialogue **Format de fichier plat** , assurez-vous que **Délimité** est sélectionné, puis cliquez sur **OK**.  
   
-7.  Dans le **Éditeur du Gestionnaire de connexions de fichiers plats**, dans le **nom du Gestionnaire de connexions** zone `Error Data`.  
+7.  Dans le **Éditeur du Gestionnaire de connexions de fichiers plats**, dans le **nom de gestionnaire de connexions** zone, tapez `Error Data`.  
   
 8.  Dans la boîte de dialogue **Éditeur du gestionnaire de connexions de fichiers plats** , cliquez sur **Parcourir**, puis recherchez le dossier dans lequel le fichier est à stocker.  
   
-9. Dans le **ouvrir** boîte de dialogue, pour **nom de fichier**, type `ErrorOutput.txt`, puis cliquez sur **ouvrir**.  
+9. Dans le **Open** boîte de dialogue pour **nom de fichier**, type `ErrorOutput.txt`, puis cliquez sur **Open**.  
   
 10. Dans la boîte de dialogue **Éditeur du gestionnaire de connexions de fichiers plats** , vérifiez que la zone **Paramètres régionaux** contient la valeur Anglais (États-Unis) et la zone **Page de codes** la valeur 1252 (ANSI - Latin I).  
   
@@ -63,6 +63,6 @@ ms.locfileid: "36053551"
 15. Cliquez sur **OK**.  
   
 ## <a name="next-steps"></a>Étapes suivantes  
- [Étape 5 : Test de la leçon 4 du Package du didacticiel](../integration-services/lesson-4-5-testing-the-lesson-4-tutorial-package.md)  
+ [Étape 5 : Test de la leçon 4 du Package du tutoriel](../integration-services/lesson-4-5-testing-the-lesson-4-tutorial-package.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Création, modification et suppression de fonctions définies par l’utilisateur | Documents Microsoft
+title: Création, modification et suppression de fonctions définies par l’utilisateur | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,24 +14,24 @@ helpviewer_keywords:
 - user-defined functions [SMO]
 ms.assetid: 0ebebd3b-0775-41c2-989d-aa4cf81af12a
 caps.latest.revision: 46
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: f7bbe1edc3ce68022f990b441b5c06c737d705e8
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 0960e46b83b191745169fde64f68f30fa2fc5c64
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36139562"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37246269"
 ---
 # <a name="creating-altering-and-removing-user-defined-functions"></a>Création, modification et suppression de fonctions définies par l'utilisateur
   Le <xref:Microsoft.SqlServer.Management.Smo.UserDefinedFunction> objet fournit une fonctionnalité qui permet aux utilisateurs de gérer par programmation des fonctions définies par l’utilisateur dans [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Les fonctions définies par l'utilisateur prennent en charge les paramètres d'entrée et de sortie, ainsi que les références directes aux colonnes de table.  
   
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] requiert des assemblys à inscrire dans une base de données que ceux-ci peuvent être utilisés dans les procédures stockées, les types de données définis par l’utilisateur, les déclencheurs et les fonctions définies par l’utilisateur. SMO prend en charge cette fonctionnalité avec l'objet <xref:Microsoft.SqlServer.Management.Smo.SqlAssembly>.  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] nécessite des assemblys à inscrire dans une base de données que ceux-ci peuvent être utilisés dans les procédures stockées, fonctions, les déclencheurs et les types de données définis par l’utilisateur défini par l’utilisateur. SMO prend en charge cette fonctionnalité avec l'objet <xref:Microsoft.SqlServer.Management.Smo.SqlAssembly>.  
   
  Le <xref:Microsoft.SqlServer.Management.Smo.UserDefinedFunction> objet fait référence à l’assembly .NET avec le <xref:Microsoft.SqlServer.Management.Smo.UserDefinedFunction.AssemblyName%2A>, <xref:Microsoft.SqlServer.Management.Smo.UserDefinedFunction.ClassName%2A>, et <xref:Microsoft.SqlServer.Management.Smo.UserDefinedFunction.MethodName%2A> propriétés.  
   
- Lorsque le <xref:Microsoft.SqlServer.Management.Smo.UserDefinedFunction> objet fait référence à un assembly .NET, vous devez inscrire l’assembly en créant un <xref:Microsoft.SqlServer.Management.Smo.SqlAssembly> objet et en l’ajoutant à la <xref:Microsoft.SqlServer.Management.Smo.SqlAssemblyCollection> objet, qui appartienne à la <xref:Microsoft.SqlServer.Management.Smo.Database> objet.  
+ Lorsque le <xref:Microsoft.SqlServer.Management.Smo.UserDefinedFunction> objet fait référence à un assembly .NET, vous devez inscrire l’assembly en créant un <xref:Microsoft.SqlServer.Management.Smo.SqlAssembly> objet et en l’ajoutant à la <xref:Microsoft.SqlServer.Management.Smo.SqlAssemblyCollection> objet auquel appartient le <xref:Microsoft.SqlServer.Management.Smo.Database> objet.  
   
 ## <a name="example"></a>Exemple  
  Pour utiliser un exemple de code qui est fourni, vous devrez choisir l'environnement de programmation, le modèle de programmation et le langage de programmation dans lequel créer votre application. Pour plus d’informations, consultez [créer un projet SMO Visual Basic dans Visual Studio .NET](../../../database-engine/dev-guide/create-a-visual-basic-smo-project-in-visual-studio-net.md) ou [créer un Visual C&#35; projet SMO dans Visual Studio .NET](../how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  

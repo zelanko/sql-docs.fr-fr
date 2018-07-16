@@ -1,5 +1,5 @@
 ---
-title: Modification des mesures | Documents Microsoft
+title: Modification des mesures | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 7bd48810-15ce-45ff-862b-372d08606995
 caps.latest.revision: 14
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: jhubbard
-ms.openlocfilehash: f95003c329dc121c3a743f1f4447a3aa8a9a506a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 447032ab32e222f3827c34020aef612e8125a518
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36139923"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37232379"
 ---
 # <a name="modifying-measures"></a>Modification des mesures
   Vous pouvez utiliser la propriété **FormatString** pour définir des paramètres de mise en forme qui contrôlent comment les mesures sont affichées aux utilisateurs. Au cours de cette tâche, vous allez spécifier des propriétés de formatage pour les mesures relatives aux devises et aux pourcentages dans le cube du didacticiel [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] .  
@@ -60,7 +60,7 @@ ms.locfileid: "36139923"
   
 7.  Dans la zone de liste déroulante en haut de la fenêtre des propriétés (sous la barre de titre), sélectionnez la mesure **Unit Price Discount Pct**, puis sélectionnez **Percent** dans la liste **FormatString** .  
   
-8.  Dans la fenêtre Propriétés, modifiez la **nom** propriété pour le **Unit Price Discount Pct** mesure `Unit Price Discount Percentage`.  
+8.  Dans la fenêtre Propriétés, modifiez le **nom** propriété pour le **Unit Price Discount Pct** mesure `Unit Price Discount Percentage`.  
   
 9. Dans le **mesures** volet, cliquez sur **Tax Amt** et modifiez le nom de cette mesure en `Tax Amount`.  
   
@@ -69,10 +69,10 @@ ms.locfileid: "36139923"
 11. Dans le menu **Fichier** , cliquez sur **Enregistrer tout**.  
   
 ## <a name="next-task-in-lesson"></a>Tâche suivante de la leçon  
- [Modification de la Dimension Customer](lesson-3-2-modifying-the-customer-dimension.md)  
+ [Modification de la dimension Customer](lesson-3-2-modifying-the-customer-dimension.md)  
   
 ## <a name="see-also"></a>Voir aussi  
- [Définir les Dimensions de la base de données](multidimensional-models/define-database-dimensions.md)   
+ [Définir des Dimensions de base de données](multidimensional-models/define-database-dimensions.md)   
  [Configurer des propriétés de mesure](multidimensional-models/configure-measure-properties.md)  
   
   

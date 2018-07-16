@@ -5,10 +5,9 @@ ms.date: 03/07/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-backup-restore
+ms.technology: backup-restore
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - system databases [SQL Server], backing up and restoring
 - restoring system databases [SQL Server]
@@ -17,15 +16,15 @@ helpviewer_keywords:
 - servers [SQL Server], backup
 ms.assetid: aef0c4fa-ba67-413d-9359-1a67682fdaab
 caps.latest.revision: 57
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 39266ab9ca20c174ee61a1ed2e52c33fb0d4b5ac
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 81645730d3a854eff8b318ef04ee234f6206b4d0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36039076"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37197549"
 ---
 # <a name="back-up-and-restore-of-system-databases-sql-server"></a>Sauvegarder et restaurer des bases de données système (SQL Server)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] assure la maintenance d’un jeu de bases de données au niveau système, les*bases de données système*, qui sont essentielles au fonctionnement d’une instance de serveur. Il est nécessaire de sauvegarder plusieurs bases de données système après chaque mise à jour importante. Les bases de données système qui doivent toujours êtres sauvegardées sont les suivantes : **msdb**, **master**, et **model**. Si une base de données utilise la réplication sur l'instance de serveur, vous devez également sauvegarder la base de données système **distribution** . La sauvegarde de ces bases de données système permet de restaurer et de récupérer le système [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en cas d'incident système, comme le dysfonctionnement du disque dur.  

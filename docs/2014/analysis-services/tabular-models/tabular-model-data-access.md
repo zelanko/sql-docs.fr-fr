@@ -1,5 +1,5 @@
 ---
-title: Accès aux données de modèle tabulaire | Documents Microsoft
+title: Accès aux données de modèle tabulaire | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 6ae74a8b-0025-450d-94a5-4e601831d420
 caps.latest.revision: 24
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 47494073312225884997c2ca89ccfd84ed6968c6
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 6e5a92c5f71f670fe8e592087a8826217a0fd6c3
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36139902"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37316979"
 ---
 # <a name="tabular-model-data-access"></a>Accès aux données de modèle tabulaire
   Les bases de données model tabulaires dans Analysis Services sont accessibles par la plupart des mêmes clients, interfaces et langues que vous utilisez pour récupérer les données ou les métadonnées d'un modèle multidimensionnel. Pour plus d’informations, consultez [Accès aux données de modèles multidimensionnels &#40;Analysis Services - Données multidimensionnelles &#41;](../multidimensional-models/mdx/multidimensional-model-data-access-analysis-services-multidimensional-data.md).  
@@ -87,7 +87,7 @@ ms.locfileid: "36139902"
   
 -   Exemple AMO de modèle tabulaire sur Codeplex  
   
--   [Utilisez les vues de gestion dynamique &#40;DMV&#41; pour surveiller Analysis Services](../instances/use-dynamic-management-views-dmvs-to-monitor-analysis-services.md)  
+-   [Utiliser des vues de gestion dynamique &#40;DMV&#41; pour surveiller Analysis Services](../instances/use-dynamic-management-views-dmvs-to-monitor-analysis-services.md)  
   
  Vous pouvez utiliser le fournisseur OLE DB pour Analysis Services 9.0 dans des applications clientes non managées afin de prendre en charge l'accès du fournisseur OLE DB aux modèles tabulaires. Une version mise à jour du fournisseur OLE DB pour Analysis Services est nécessaire pour activer l'accès au modèle tabulaire. Pour plus d’informations sur les fournisseurs utilisés avec les modèles tabulaires, voir [Installer le fournisseur OLE DB Analysis Services sur les serveurs SharePoint](../../sql-server/install/install-the-analysis-services-ole-db-provider-on-sharepoint-servers.md) .  
   
@@ -117,7 +117,7 @@ ms.locfileid: "36139902"
   
      Nouvel ensemble de lignes de schéma pour obtenir la représentation CSDL d'un modèle tabulaire  
   
--   [Ensemble de lignes DISCOVER_XEVENT_TRACE_DEFINITION](../dev-guide/discover-xevent-trace-definition-rowset.md)  
+-   [DISCOVER_XEVENT_TRACE_DEFINITION, ensemble de lignes](../dev-guide/discover-xevent-trace-definition-rowset.md)  
   
      Nouvel ensemble de lignes de schéma pour surveiller les événements étendus SQL Server. Pour plus d’informations, consultez [utilisez SQL Server Extended Events &#40;XEvents&#41; pour surveiller Analysis Services](../instances/monitor-analysis-services-with-sql-server-extended-events.md).  
   
@@ -127,7 +127,7 @@ ms.locfileid: "36139902"
   
 -   [MDSCHEMA_HIERARCHIES, ensemble de lignes](../schema-rowsets/ole-db-olap/mdschema-hierarchies-rowset.md)  
   
-     Nouvelle `STRUCTURE_TYPE` énumération prend en charge l’identification des hiérarchies définies par l’utilisateur créé dans les modèles tabulaires. Pour plus d’informations, consultez [Hiérarchies &#40;SSAS Tabulaire&#41;](hierarchies-ssas-tabular.md).  
+     Nouvelle `STRUCTURE_TYPE` énumération prend en charge l’identification des hiérarchies définies par l’utilisateur créées dans les modèles tabulaires. Pour plus d’informations, consultez [Hiérarchies &#40;SSAS Tabulaire&#41;](hierarchies-ssas-tabular.md).  
   
  Il n'y a aucune mise à jour apportée à OLE DB pour les ensembles de lignes de schéma d'exploration de données dans cette version.  
   

@@ -1,5 +1,5 @@
 ---
-title: Utilisation d’Annotations dans les schémas XSD (SQLXML 4.0) | Documents Microsoft
+title: À l’aide des Annotations dans les schémas XSD (SQLXML 4.0) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - mapping schema [SQLXML], scenarios for using
 ms.assetid: 78f318a4-7a36-473b-9852-a4bae6940ce5
 caps.latest.revision: 26
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 56db3f001d68bcaf65d71f793744896944318fc1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 26fd2f853697765fda82b869aae7780976753749
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36140469"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37321949"
 ---
 # <a name="using-annotations-in-xsd-schemas-sqlxml-40"></a>Utilisation des annotations dans les schémas XSD (SQLXML 4.0)
   Dans [!INCLUDE[msCoName](../../includes/msconame-md.md)] SQLXML 4.0, le langage de schéma XSD prend en charge les annotations d'une manière similaire aux annotations introduites avec le langage de schéma XDR (XML-Data Reduced). Des annotations supplémentaires ont été introduites dans XSD qui ne sont pas prises en charge dans XDR.  
@@ -47,7 +47,7 @@ ms.locfileid: "36140469"
  [Annotations XSD &#40;SQLXML 4.0&#41;](xsd-annotations-sqlxml-4-0.md)  
  Répertorie les annotations que vous pouvez utiliser avec les schémas XSD, leurs descriptions et les annotations équivalentes pour XDR.  
   
- [Mappage par défaut des éléments XSD et des attributs aux Tables et colonnes &#40;SQLXML 4.0&#41;](default-mapping-of-xsd-elements-and-attributes-to-tables-and-columns-sqlxml-4-0.md)  
+ [Mappage par défaut d’éléments XSD et d’attributs aux Tables et colonnes &#40;SQLXML 4.0&#41;](default-mapping-of-xsd-elements-and-attributes-to-tables-and-columns-sqlxml-4-0.md)  
  Explique le mappage par défaut et fournit des exemples de tâches en rapport avec le mappage par défaut.  
   
  [Mappage explicite d’éléments XSD et d’attributs aux Tables et colonnes &#40;SQLXML 4.0&#41;](explicit-mapping-xsd-elements-and-attributes-to-tables-and-columns.md)  
@@ -68,28 +68,28 @@ ms.locfileid: "36140469"
  [Filtrage des valeurs à l’aide de SQL : limit-champ et SQL : limit-valeur &#40;SQLXML 4.0&#41;](../sqlxml-annotated-xsd-schemas-xpath-queries/bulk-load-xml/annotation-interpretation-sql-limit-field-and-sql-limit-value.md)  
  Décrit et fournit des exemples des annotations `sql:limit-field` et `sql:limit-value`.  
   
- [Identification des colonnes de clés à l’aide de SQL : Key-champs &#40;SQLXML 4.0&#41;](identifying-key-columns-using-sql-key-fields-sqlxml-4-0.md)  
+ [Identification des colonnes de clé à l’aide de SQL : Key-champs &#40;SQLXML 4.0&#41;](identifying-key-columns-using-sql-key-fields-sqlxml-4-0.md)  
  Décrit et fournit des exemples de l'annotation `sql:key-fields`.  
   
- [Spécification d’une cible Namespace à l’aide de l’attribut targetNamespace &#40;SQLXML 4.0&#41;](specifying-a-target-namespace-using-the-targetnamespace-attribute-sqlxml-4-0.md)  
+ [En spécifiant une cible Namespace à l’aide de l’attribut targetNamespace &#40;SQLXML 4.0&#41;](specifying-a-target-namespace-using-the-targetnamespace-attribute-sqlxml-4-0.md)  
  Décrit et fournit des exemples de la **targetNamespace** attribut.  
   
  [Création d’ID valide, IDREF et IDREFS à des attributs de Type à l’aide de SQL : Prefix &#40;SQLXML 4.0&#41;](creating-valid-id-idref-and-idrefs-type-attributes-using-sql-prefix-sqlxml-4-0.md)  
  Décrit et fournit des exemples de l'annotation `sql:prefix`.  
   
- [Conversions de types de données et de l’Annotation SQL : DataType &#40;SQLXML 4.0&#41;](data-type-coercions-and-the-sql-datatype-annotation-sqlxml-4-0.md)  
+ [Forçages de Type de données et de l’Annotation SQL : DataType &#40;SQLXML 4.0&#41;](data-type-coercions-and-the-sql-datatype-annotation-sqlxml-4-0.md)  
  Décrit et fournit des exemples de l'annotation `sql:datatype`.  
   
  [Mappage des Types de données XSD aux Types de données XPath &#40;SQLXML 4.0&#41;](../sqlxml-annotated-xsd-schemas-xpath-queries/xpath-data-types-sqlxml-4-0.md)  
  Fournit une table qui compare les types de données XSD, XDR et Xpath, et répertorie les conversions [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] appropriées.  
   
- [Création à l’aide des Sections CDATA de SQL : use-cdata &#40;SQLXML 4.0&#41;](creating-cdata-sections-using-sql-use-cdata-sqlxml-4-0.md)  
+ [Création de Sections CDATA à l’aide de SQL : use-cdata &#40;SQLXML 4.0&#41;](creating-cdata-sections-using-sql-use-cdata-sqlxml-4-0.md)  
  Décrit et fournit des exemples de l'annotation `sql:use-data`.  
   
- [Demande de références URL à des données d’objet BLOB à l’aide de sql : encode &#40;SQLXML 4.0&#41;](requesting-url-references-to-blob-data-using-sql-encode-sqlxml-4-0.md)  
+ [Demande de références URL à des données BLOB à l’aide de sql : encode &#40;SQLXML 4.0&#41;](requesting-url-references-to-blob-data-using-sql-encode-sqlxml-4-0.md)  
  Décrit et fournit des exemples de l'annotation `sql:encode`.  
   
- [La récupération des données à l’aide de SQL : Overflow-champ &#40;SQLXML 4.0&#41;](../sqlxml-annotated-xsd-schemas-xpath-queries/bulk-load-xml/annotation-interpretation-sql-overflow-field.md)  
+ [Récupération des données à l’aide de SQL : Overflow-champ &#40;SQLXML 4.0&#41;](../sqlxml-annotated-xsd-schemas-xpath-queries/bulk-load-xml/annotation-interpretation-sql-overflow-field.md)  
  Décrit et fournit des exemples de l'annotation `sql:overflow-field`.  
   
  [Masquage d’éléments et d’attributs à l’aide de sql:hide](hiding-elements-and-attributes-by-using-sql-hide.md)  

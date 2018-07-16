@@ -1,5 +1,5 @@
 ---
-title: 'Leçon 3 : Traitement de la Structure de la série chronologique et modélise les | Documents Microsoft'
+title: 'Traitement de la leçon 3 : La série chronologique Structure et des modèles | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 16e27b57-eae1-47a7-a02c-47b6ed487d87
 caps.latest.revision: 11
 author: minewiskan
 ms.author: owend
-manager: kfile
-ms.openlocfilehash: 652d88a0c977b45f6c1628020ae4e6fd8fae4ad9
-ms.sourcegitcommit: 8c040e5b4e8c7d37ca295679410770a1af4d2e1f
+manager: craigg
+ms.openlocfilehash: f69c21f87a56a65fabd781c18612e6b475ca85c0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/21/2018
-ms.locfileid: "36312647"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37271985"
 ---
 # <a name="lesson-3-processing-the-time-series-structure-and-models"></a>Leçon 3 : Traitement de la structure et des modèles de série chronologique
   Dans cette leçon, vous allez utiliser le [INSERT INTO &#40;DMX&#41; ](/sql/dmx/insert-into-dmx) instruction pour traiter la série chronologique, structures d’exploration de données et que vous avez créé des modèles d’exploration de données.  
@@ -28,7 +28,7 @@ ms.locfileid: "36312647"
   
  Lorsque vous ajoutez un modèle d'exploration de données à une structure d'exploration de données déjà traitée, vous pouvez utiliser l'instruction `INSERT INTO MINING MODEL` pour traiter uniquement le nouveau modèle d'exploration de données à l'aide des données existantes.  
   
- Pour plus d’informations sur le traitement des modèles d’exploration de données, consultez [le traitement des exigences et les considérations &#40;d’exploration de données&#41;](../../2014/analysis-services/data-mining/processing-requirements-and-considerations-data-mining.md).  
+ Pour plus d’informations sur les modèles d’exploration de données de traitement, consultez [traitement des exigences et considérations &#40;exploration de données&#41;](../../2014/analysis-services/data-mining/processing-requirements-and-considerations-data-mining.md).  
   
 ## <a name="insert-into-statement"></a>Instruction INSERT INTO  
  Pour l’apprentissage de la structure d’exploration de données de série chronologique et tous ses modèles d’exploration de données associé, utilisez le [INSERT INTO &#40;DMX&#41; ](/sql/dmx/insert-into-dmx) instruction. Le code de cette instruction peut être divisé selon les sections suivantes :  
@@ -82,7 +82,7 @@ OPENQUERY (<source data definition>)
   
 #### <a name="to-process-the-mining-structure-and-related-mining-models-by-using-insert-into"></a>Pour traiter la structure d'exploration de données et les modèles associés à l'aide d'une instruction INSERT INTO  
   
-1.  Dans **l’Explorateur d’objets**, cliquez sur l’instance de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], pointez sur **nouvelle requête**, puis cliquez sur **DMX**.  
+1.  Dans **Explorateur d’objets**, avec le bouton droit de l’instance de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], pointez sur **nouvelle requête**, puis cliquez sur **DMX**.  
   
      L'Éditeur de requête s'ouvre et contient une nouvelle requête vide.  
   
@@ -126,7 +126,7 @@ OPENQUERY (<source data definition>)
     FROM vTimeSeries ORDER BY [ReportingDate]')  
     ```  
   
-     La requête source fait référence à la [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)] source de données définie dans le projet exemple IntermediateTutorial. Elle utilise cette source de données pour accéder à la vue vTimeSeries. Cette vue renferme les données sources à utiliser pour l'apprentissage du modèle d'exploration de données. Si vous n’êtes pas familiarisé avec ce projet ou ces vues, consultez[leçon 2 : génération d’un scénario de prévision &#40;didacticiel d’exploration de données intermédiaire&#41;](../../2014/tutorials/lesson-2-building-a-forecasting-scenario-intermediate-data-mining-tutorial.md).  
+     La requête source fait référence le [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)] source de données définie dans le projet exemple IntermediateTutorial. Elle utilise cette source de données pour accéder à la vue vTimeSeries. Cette vue renferme les données sources à utiliser pour l'apprentissage du modèle d'exploration de données. Si vous n’êtes pas familiarisé avec ce projet ou ces vues, consultez[leçon 2 : génération d’un scénario de prévision &#40;didacticiel d’exploration de données intermédiaire&#41;](../../2014/tutorials/lesson-2-building-a-forecasting-scenario-intermediate-data-mining-tutorial.md).  
   
      L'instruction tout entière doit se présenter comme suit :  
   
@@ -150,10 +150,10 @@ OPENQUERY (<source data definition>)
  Une fois que l'exécution de la requête est terminée, vous pouvez créer des prédictions en utilisant les modèles d'exploration de données traités. Dans la leçon suivante, vous allez créer plusieurs prédictions basées sur les modèles d'exploration de données que vous avez créés.  
   
 ## <a name="next-lesson"></a>Leçon suivante  
- [Leçon 4 : Création de prédictions de série chronologique à l’aide de DMX](../../2014/tutorials/lesson-4-creating-time-series-predictions-using-dmx.md)  
+ [Leçon 4 : Création de prédictions de série chronologique à l’aide d’extensions DMX](../../2014/tutorials/lesson-4-creating-time-series-predictions-using-dmx.md)  
   
 ## <a name="see-also"></a>Voir aussi  
- [Le traitement de la configuration requise et considérations &#40;d’exploration de données&#41;](../../2014/analysis-services/data-mining/processing-requirements-and-considerations-data-mining.md)   
+ [Traitement des exigences et considérations &#40;exploration de données&#41;](../../2014/analysis-services/data-mining/processing-requirements-and-considerations-data-mining.md)   
  [&#60;requête de source de données&#62;](/sql/dmx/source-data-query)   
  [OPENQUERY &AMP;#40;DMX&AMP;#41;](/sql/dmx/source-data-query-openquery)  
   

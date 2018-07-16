@@ -1,5 +1,5 @@
 ---
-title: Spécifiez une Version comme étant la dernière Version | Documents Microsoft
+title: Spécifiez une Version comme étant la dernière Version | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - version control services [SQL Server], latest version
 - latest file version specified
 - file versions [SQL Server]
 ms.assetid: 407dffb1-3ecf-461e-835d-124781f26ee7
 caps.latest.revision: 24
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 598fc6f2d90220f85cef590600d8fcf397384f28
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 2f90851ebb0c5425e7f3948f7f0e040d2cab0618
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36040218"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37225919"
 ---
 # <a name="specify-a-version-as-the-latest-version"></a>Désigner une version comme étant la dernière version
   Lorsque vous archivez un fichier dans le contrôle de code source, la version que vous archivez devient la dernière version. Les utilisateurs qui extraient ou récupèrent la dernière version reçoivent des copies locales du tout dernier élément archivé.  
@@ -44,7 +44,7 @@ ms.locfileid: "36040218"
   
 3.  Sur le **fichier** menu, pointez sur **contrôle de code Source** et cliquez sur **ViewHistory**.  
   
-4.  Dans le **l’historique de** \<fichier > boîte de dialogue, sélectionnez la version que vous souhaitez spécifier en tant que la dernière version, puis cliquez sur **code confidentiel**.  
+4.  Dans le **historique de** \<fichier > boîte de dialogue, sélectionnez la version que vous souhaitez spécifier en tant que la dernière version, puis cliquez sur **Pin**.  
   
      Un symbole de mise en attente s'affiche à côté de la version sélectionnée, indiquant qu'il s'agit de la version en cours du fichier. En cas de chargement d'une version différente dans [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)], le système vous demande de recharger le fichier.  
   
@@ -56,7 +56,7 @@ ms.locfileid: "36040218"
   
 3.  Sur le **fichier** menu, pointez sur **contrôle de code Source** et cliquez sur **historique**.  
   
-4.  Dans le **Options d’historique** boîte de dialogue, cliquez sur **OK** pour afficher les **historique du fichier** boîte de dialogue.  
+4.  Dans le **Options d’historique** boîte de dialogue, cliquez sur **OK** pour afficher le **historique du fichier** boîte de dialogue.  
   
 5.  Dans le **historique du fichier** , sélectionnez la version que vous voulez spécifier comme étant la dernière version, puis cliquez sur **restauration**.  
   
@@ -66,6 +66,6 @@ ms.locfileid: "36040218"
   
 ## <a name="see-also"></a>Voir aussi  
  [Gérer les archivages](../../2014/database-engine/manage-checkins.md)   
- [Archiver les fichiers](../../2014/database-engine/check-in-files.md)  
+ [Archiver des fichiers](../../2014/database-engine/check-in-files.md)  
   
   

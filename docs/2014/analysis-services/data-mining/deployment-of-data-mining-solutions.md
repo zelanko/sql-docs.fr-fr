@@ -1,5 +1,5 @@
 ---
-title: Déploiement de Solutions d’exploration de données | Documents Microsoft
+title: Déploiement de Solutions d’exploration de données | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - mining models [Analysis Services], deploying
 - deploying [Analysis Services], production environments
@@ -17,20 +17,20 @@ helpviewer_keywords:
 - models [Analysis Services], data mining
 ms.assetid: d83effc7-437d-42e9-8ac3-b65f79e27043
 caps.latest.revision: 14
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 32f154993f65fc2e86538ebf5bff8528d2c491bb
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 73e598996172c6e29e8e6ed14ba863d28a7b3b43
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36040542"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37249459"
 ---
 # <a name="deployment-of-data-mining-solutions"></a>Déploiement de solutions d’exploration de données
   La dernière étape du processus d'exploration de données consiste à déployer les modèles dans un environnement de production. Le déploiement est important car il met les modèles à la disposition des utilisateurs afin de vous permettre d'effectuer n'importe laquelle des tâches suivantes :  
   
--   Utiliser les modèles pour créer des prédictions et prendre des décisions d'entreprise. Pour plus d’informations sur les outils que vous pouvez utiliser pour créer des requêtes, consultez [les Interfaces de requête d’exploration de données](data-mining-query-tools.md).  
+-   Utiliser les modèles pour créer des prédictions et prendre des décisions d'entreprise. Pour plus d’informations sur les outils que vous pouvez utiliser pour créer des requêtes, consultez [Interfaces de requête d’exploration de données](data-mining-query-tools.md).  
   
 -   Incorporer la fonctionnalité d'exploration de données directement dans une application. Vous pouvez inclure des objets AMO (Analysis Management Objects) ou un assembly contenant un ensemble d'objets qui peuvent être utilisés par votre application pour créer, modifier, traiter et supprimer des structures d'exploration de données et des modèles d'exploration de données.  
   
@@ -88,6 +88,6 @@ ms.locfileid: "36040542"
 ## <a name="see-also"></a>Voir aussi  
  [Traitement des objets de modèle multidimensionnel](../multidimensional-models/processing-a-multidimensional-model-analysis-services.md)   
  [Interfaces de requête d’exploration de données](data-mining-query-tools.md)   
- [Le traitement de la configuration requise et considérations &#40;d’exploration de données&#41;](processing-requirements-and-considerations-data-mining.md)  
+ [Traitement des exigences et considérations &#40;exploration de données&#41;](processing-requirements-and-considerations-data-mining.md)  
   
   

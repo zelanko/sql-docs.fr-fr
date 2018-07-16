@@ -1,5 +1,5 @@
 ---
-title: Référence l’interface utilisateur de l’Assistant Installation de package | Documents Microsoft
+title: Référence de l’interface utilisateur Assistant Installation de package | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.deploymentwizard.confirminstallation.f1
 - sql12.dts.deploymentwizard.deploydtspackages.f1
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - Package Installer Wizard
 ms.assetid: 6fca44d9-5001-4644-bcf3-c2d10a674b97
 caps.latest.revision: 23
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 72e058913f4447ea14aa21934bffaf75bde62bdd
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 637ed65f38b53cf39630d4fb3ba04ab9f7a2158d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36140313"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37316809"
 ---
 # <a name="package-installation-wizard-ui-reference"></a>Référence de l'interface utilisateur de l'Assistant Installation de package
   **L’Assistant Installation de package** permet de déployer un projet [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)], dont les packages et les divers fichiers qu’il contient, ainsi que les dépendances de package éventuelles.  

@@ -15,15 +15,15 @@ helpviewer_keywords:
 - assemblies [Reporting Services], data processing extension deployments
 ms.assetid: 3614e601-004e-4a16-8388-836ffd67e9dd
 caps.latest.revision: 40
-author: douglaslM
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: f95040735e7ec8987bfdfd194ef1d7f0933df3ed
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: 25b6bfa824f6004fbd35b3a31e7268ff388fab6e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36041036"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37216729"
 ---
 # <a name="how-to-deploy-a-data-processing-extension-to-report-designer"></a>Procédure : déployer une extension pour le traitement des données sur le Concepteur de rapports
   Le Concepteur de rapports utilise des extensions pour le traitement des données afin de récupérer et traiter des données pendant que vous concevez des rapports. Vous devez déployer votre assembly d'extension pour le traitement des données sur le Concepteur de rapports en tant qu'assembly privé. Vous devez également créer une entrée dans le fichier de configuration du Concepteur de rapports (RSReportDesigner.config.)  
@@ -44,13 +44,13 @@ ms.locfileid: "36041036"
     </Extensions>  
     ```  
   
-4.  Ajoutez une entrée pour votre extension pour le traitement de données qui inclut un **Extension** élément avec des valeurs pour le `Name`, `Type`, et `Visible` attributs. Votre entrée peut se présenter comme suit :  
+4.  Ajoutez une entrée pour votre extension de traitement des données qui inclut un **Extension** élément avec des valeurs pour le `Name`, `Type`, et `Visible` attributs. Votre entrée peut se présenter comme suit :  
   
     ```  
     <Extension Name="ExtensionName" Type="CompanyName.ExtensionName.MyConnectionClass, AssemblyName" />  
     ```  
   
-     La valeur `Name` doit correspondre au nom unique de l'extension utilisée pour le traitement des données. La valeur `Type` est une liste séparée par des virgules comportant une entrée dans laquelle doit figurer l'espace de noms complet de la classe qui implémente les interfaces <xref:Microsoft.ReportingServices.Interfaces.IExtension> et <xref:Microsoft.ReportingServices.DataProcessing.IDbConnection>, suivi du nom de votre assembly (l'extension de fichier .dll ne doit pas figurer dans cette entrée). Par défaut, les extensions utilisées pour le traitement des données sont visibles par les utilisateurs finaux. Pour masquer des interfaces utilisateur, tels que le Concepteur de rapports, ajoutez un `Visible` d’attribut pour le **Extension** élément et affectez-lui la valeur `false`.  
+     La valeur `Name` doit correspondre au nom unique de l'extension utilisée pour le traitement des données. La valeur `Type` est une liste séparée par des virgules comportant une entrée dans laquelle doit figurer l'espace de noms complet de la classe qui implémente les interfaces <xref:Microsoft.ReportingServices.Interfaces.IExtension> et <xref:Microsoft.ReportingServices.DataProcessing.IDbConnection>, suivi du nom de votre assembly (l'extension de fichier .dll ne doit pas figurer dans cette entrée). Par défaut, les extensions utilisées pour le traitement des données sont visibles par les utilisateurs finaux. Pour masquer des interfaces utilisateur, comme le Concepteur de rapports, ajouter un `Visible` attribut le **Extension** élément et affectez-lui la valeur `false`.  
   
 5.  Enfin, vous devez définir un groupe de codes pour votre assembly personnalisé octroyant l’autorisation **FullTrust** à votre extension. Pour cela, ajoutez le groupe de codes au fichier rspreviewpolicy.config qui se trouve par défaut à l'emplacement C:\Program Files\Microsoft Visual Studio 9.0\Common7\IDE\PrivateAssemblies. Ce groupe de codes peut se présenter comme suit :  
   

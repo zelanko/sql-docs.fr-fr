@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 32bd8af8-a832-4dc8-afff-01668e6b2b51
 caps.latest.revision: 12
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 93418f885f5c14d2d6ad43b7892f64906a43a2be
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: rothja
+ms.author: jroth
+manager: craigg
+ms.openlocfilehash: 6ab4e0486cfcac8eaf4d5ed9d4a0456d4bb6d9dd
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36038585"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37290895"
 ---
 # <a name="database-engine-tutorials"></a>Didacticiels sur le moteur de base de données
   Cette section contient les didacticiels pour [!INCLUDE[ssDECurrent](../includes/ssdecurrent-md.md)].  
@@ -48,13 +48,13 @@ ms.locfileid: "36038585"
  [Didacticiel : Administration de serveurs à l'aide de la Gestion basée sur des stratégies](policy-based-management/tutorial-administering-servers-by-using-policy-based-management.md)  
  Il vous apprend comment créer des stratégies qui appliquent des normes d'administration de site.  
   
- [Didacticiel : Évaluation des meilleures pratiques à l’aide de la gestion basée sur des stratégies](../tutorials/tutorial-evaluating-best-practices-by-using-policy-based-management.md)  
+ [Tutoriel : Évaluation des bonnes pratiques à l’aide de la Gestion basée sur des stratégies](../tutorials/tutorial-evaluating-best-practices-by-using-policy-based-management.md)  
  Il vous apprend comment créer des stratégies qui peuvent être utilisées pour analyser les instances du [!INCLUDE[ssDE](../includes/ssde-md.md)] à la recherche des problèmes connus.  
   
  [Didacticiel : Sauvegarde et restauration SQL Server dans le service de stockage d'objets blob Windows Azure](tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md)  
  Ce didacticiel explique comment effectuer une sauvegarde et une restauration SQL Server dans le service de Stockage Blob Windows Azure.  
   
- [Didacticiel : Fichiers de données du serveur SQL dans le service de stockage Windows Azure](tutorial-use-azure-blob-storage-service-with-sql-server-2016.md)  
+ [Tutoriel : Fichiers de données SQL Server dans le service Stockage Microsoft Azure](tutorial-use-azure-blob-storage-service-with-sql-server-2016.md)  
  Ce didacticiel explique comment stocker directement des fichiers de données SQL Server dans le service de stockage d'objets blob Windows Azure.  
   
 ## <a name="see-also"></a>Voir aussi  

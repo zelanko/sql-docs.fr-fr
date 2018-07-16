@@ -1,5 +1,5 @@
 ---
-title: Extensions personnalisées ont été détectées sur le serveur de rapports (Conseiller de mise à niveau) | Documents Microsoft
+title: Extensions personnalisées ont été détectées sur le serveur de rapports (Conseiller de mise à niveau) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - rendering extensions [Reporting Services], custom extensions
 - security extensions [Reporting Services]
@@ -19,13 +19,13 @@ ms.assetid: fa184bd7-11d6-4ea3-9249-bc1b13db49e5
 caps.latest.revision: 32
 author: markingmyname
 ms.author: maghan
-manager: jhubbard
-ms.openlocfilehash: 4ae9dbac7395e44bf67731bd0e7a714c73fac296
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 213113dedeed3e5401081ff8ff7345b5d2fb09f6
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36040360"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37220839"
 ---
 # <a name="custom-extensions-were-detected-on-the-report-server-upgrade-advisor"></a>Des extensions personnalisées ont été détectées sur le serveur de rapports (Conseiller de mise à niveau)
   Le Conseiller de mise à niveau a détecté des paramètres d'extension personnalisés dans les fichiers de configuration, ce qui indique que votre installation inclut une ou plusieurs extensions personnalisées pour le traitement des données, la remise, le rendu, la sécurité ou l'authentification. La mise à niveau déplacera les paramètres de configuration d'extension avec le serveur de rapports mis à niveau. Toutefois, si les extensions personnalisées sont installées dans le dossier installation du serveur de rapports existant, les fichiers d'assembly pour ces extensions personnalisées ne seront pas déplacés vers le nouveau dossier d'installation pendant la mise à niveau. Une fois la mise à niveau terminée, vous devez déplacer les fichiers d'assembly vers le nouveau dossier d'installation de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
@@ -50,7 +50,7 @@ ms.locfileid: "36040360"
 ## <a name="corrective-action"></a>Action corrective  
  Utilisez les sections suivantes pour déterminer les étapes à effectuer en plus de la mise à niveau de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ou avant celle-ci :  
   
- [Le traitement des données personnalisées ou des extensions de remise](#dataprocdeliver)  
+ [Traitement des données personnalisées ou des extensions de remise](#dataprocdeliver)  
   
  [Extensions de rendu personnalisées](#render)  
   
@@ -68,14 +68,14 @@ ms.locfileid: "36040360"
   
 3.  Reconstruisez la solution pour lier l'extension.  
   
- Si vous décidez de ne pas poursuivre la mise à niveau, vous pouvez choisir de migrer [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] à la place. Pour les étapes de migration d’extensions personnalisées, consultez [migration d’extensions personnalisées](#migrcustext) dans cette rubrique.  
+ Si vous décidez de ne pas poursuivre la mise à niveau, vous pouvez choisir de migrer [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] à la place. Pour obtenir des instructions sur la migration d’extensions personnalisées, consultez [migration d’extensions personnalisées](#migrcustext) dans cette rubrique.  
   
-###  <a name="dataprocdeliver"></a> Le traitement des données personnalisées ou des extensions de remise  
+###  <a name="dataprocdeliver"></a> Traitement des données personnalisées ou des extensions de remise  
  Si le Conseiller de mise à niveau détecte des extensions pour le traitement des données ou de remise personnalisées, la mise à niveau n'est pas bloquée. Toutefois, une fois la mise à niveau terminée, vous devrez peut-être effectuer des étapes supplémentaires pour que les fonctionnalités personnalisées fournies par ces extensions fonctionnent. Par exemple, vous devez effectuer des étapes supplémentaires lorsque les fichiers des extensions personnalisées sont installés dans le dossier d'installation de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
   
 ##### <a name="post-upgrade-steps-for-custom-data-processing-or-delivery-extensions"></a>Étapes postérieures à la mise à niveau pour les extensions pour le traitement des données ou de remise personnalisées  
   
-1.  Déplacez le ou les fichiers d'extension vers le nouveau dossier du programme pour le serveur de rapports. Par défaut, le dossier de programme de serveur de rapports est dans \Program Files\Microsoft SQL Server\MSRS10_50. \< *nom_instance*> \report server.  
+1.  Déplacez le ou les fichiers d'extension vers le nouveau dossier du programme pour le serveur de rapports. Par défaut, le dossier de programme de serveur de rapports est en \Program Files\Microsoft SQL Server\MSRS10_50. \< *nom_instance*> \report server.  
   
  Pour plus d'informations, consultez « Déploiement d'une extension pour le traitement des données » et « Implémentation d'une extension de remise » dans la documentation en ligne de SQL Server.  
   
@@ -146,6 +146,6 @@ ms.locfileid: "36040360"
 3.  Configurez les extensions sur la nouvelle instance.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Problèmes de mise à niveau Reporting Services &#40;le Conseiller de mise à niveau&#41;](../../../2014/sql-server/install/reporting-services-upgrade-issues-upgrade-advisor.md)  
+ [Problèmes de mise à niveau Reporting Services &#40;Conseiller de mise à niveau&#41;](../../../2014/sql-server/install/reporting-services-upgrade-issues-upgrade-advisor.md)  
   
   

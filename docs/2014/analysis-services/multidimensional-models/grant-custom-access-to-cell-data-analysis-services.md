@@ -1,5 +1,5 @@
 ---
-title: Octroyer un accès personnalisé à des données de cellule (Analysis Services) | Documents Microsoft
+title: Octroyer un accès personnalisé aux données des cellules (Analysis Services) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.roledesignerdialog.celldata.f1
 helpviewer_keywords:
@@ -20,22 +20,22 @@ helpviewer_keywords:
 - custom cell data access [Analysis Services]
 ms.assetid: 3b13a4ae-f3df-4523-bd30-b3fdf71e95cf
 caps.latest.revision: 31
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 979209ce262ee26efbe1e4c575243d29e4a1dc56
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 4932341742a0760b1bfb1ccab502cbf960aa01d9
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36053415"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37317109"
 ---
 # <a name="grant-custom-access-to-cell-data-analysis-services"></a>Octroyer un accès personnalisé à des données de cellule (Analysis Services)
   La sécurité de cellule permet d'accorder ou de refuser l'accès à des données de mesure dans un cube. L'illustration ci-dessous montre une combinaison de mesures autorisées et refusées dans un tableau croisé dynamique, quand vous êtes connecté en tant qu'utilisateur dont le rôle autorise uniquement l'accès à certaines mesures. Dans cet exemple, **Reseller Sales Amount** et **Reseller Total Product Cost** sont les seules mesures accessibles avec ce rôle. L'accès à toutes les autres mesures est refusé de manière implicite (les étapes nécessaires pour obtenir ce résultat sont fournies plus bas dans la section suivante, intitulée Autoriser l'accès à des mesures spécifiques).  
   
- ![Tableau croisé dynamique montrant autorisé et refusé les cellules](../media/ssas-permscellsallowed.png "tableau croisé dynamique montrant autorisé et refusé les cellules")  
+ ![Tableau croisé dynamique montrant autorisés et refusés des cellules](../media/ssas-permscellsallowed.png "tableau croisé dynamique montrant autorisés et refusés des cellules")  
   
- Les autorisations de cellules s'appliquent aux données qui figurent à l'intérieur des cellules, et non à leurs métadonnées. Notez que la cellule est encore visible dans les résultats d'une requête et contient la valeur `#N/A` au lieu de sa valeur réelle. Le `#N/A` valeur apparaît dans la cellule, sauf si l’application cliente convertit la valeur, ou une autre valeur est spécifiée en définissant la propriété de valeur de cellule sécurisé dans la chaîne de connexion.  
+ Les autorisations de cellules s'appliquent aux données qui figurent à l'intérieur des cellules, et non à leurs métadonnées. Notez que la cellule est encore visible dans les résultats d'une requête et contient la valeur `#N/A` au lieu de sa valeur réelle. Le `#N/A` valeur apparaît dans la cellule, sauf si l’application cliente traduise la valeur ou une autre valeur est spécifiée en définissant la propriété Secured Cell Value dans la chaîne de connexion.  
   
  Pour masquer complètement la cellule, vous devez limiter les membres (dimensions, attributs de dimension et membres d'attributs de dimension) qui sont visibles. Pour plus d’informations, consultez [Grant custom access to dimension data &#40;Analysis Services&#41;](grant-custom-access-to-dimension-data-analysis-services.md).  
   
@@ -50,7 +50,7 @@ ms.locfileid: "36053415"
 ## <a name="allow-access-to-specific-measures"></a>Autoriser l'accès à des mesures spécifiques  
  Vous pouvez utiliser la sécurité de cellule pour choisir de manière explicite les mesures qui sont disponibles. Une fois que vous avez identifié de manière spécifique les membres qui sont autorisés, toutes les autres mesures deviennent indisponibles. Il s'agit peut-être du scénario le plus simple à implémenter via un script MDX, comme l'illustrent les étapes ci-dessous.  
   
-1.  Dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] , connectez-vous à l’instance de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], sélectionnez une base de données, ouvrez le dossier **Rôles** , puis cliquez sur un rôle de base de données (ou créez-en un). L’appartenance doit déjà être spécifiée, et le rôle doit avoir `Read` accès au cube. Pour plus d’informations, consultez [Grant cube or model permissions &#40;Analysis Services&#41;](grant-cube-or-model-permissions-analysis-services.md) .  
+1.  Dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] , connectez-vous à l’instance de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], sélectionnez une base de données, ouvrez le dossier **Rôles** , puis cliquez sur un rôle de base de données (ou créez-en un). L’appartenance doit déjà être spécifiée et le rôle doit avoir `Read` accès au cube. Pour plus d’informations, consultez [Grant cube or model permissions &#40;Analysis Services&#41;](grant-cube-or-model-permissions-analysis-services.md) .  
   
 2.  Dans **Données des cellules**, vérifiez la sélection du cube pour être sûr d'avoir choisi le bon cube, puis sélectionnez **Activer les autorisations de lecture**.  
   

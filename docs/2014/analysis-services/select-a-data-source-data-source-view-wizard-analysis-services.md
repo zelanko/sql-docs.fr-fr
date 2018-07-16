@@ -1,5 +1,5 @@
 ---
-title: Sélectionnez une Source de données (Assistant vue de Source de données) (Analysis Services) | Documents Microsoft
+title: Sélectionnez une Source de données (Assistant vue de Source de données) (Analysis Services) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.datasourceviewwizard.selectdatasource.f1
 ms.assetid: 51282270-8ca8-42cf-8538-a6baf0006656
 caps.latest.revision: 20
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 98fd253da693a23ccbda57c605edb9f59dcc1540
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 9a7db15f7dcf8e963e9df38dbda0dd05aa208b55
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36139671"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37291415"
 ---
 # <a name="select-a-data-source-data-source-view-wizard-analysis-services"></a>Sélectionner une source de données (Assistant Vue de source de données) (Analysis Services)
   Utilisez la page **Sélectionner une source de données** pour sélectionner une source de données pour la vue de source de données.  
@@ -42,8 +42,8 @@ ms.locfileid: "36139671"
  Ouvre l'Assistant Source de données dans lequel vous pouvez créer une source de données à ajouter au projet.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Aide (F1) Assistant de vue de Source données &#40;Analysis Services&#41;](data-source-view-wizard-f1-help-analysis-services.md)   
+ [Aide F1 de données Source vue Assistant &#40;Analysis Services&#41;](data-source-view-wizard-f1-help-analysis-services.md)   
  [Vues de sources de données dans les modèles multidimensionnels](multidimensional-models/data-source-views-in-multidimensional-models.md)   
- [Aide (F1) de l’Assistant Source de données &#40;Analysis Services&#41;](data-source-wizard-f1-help-analysis-services.md)  
+ [Aide F1 de l’Assistant Source de données &#40;Analysis Services&#41;](data-source-wizard-f1-help-analysis-services.md)  
   
   

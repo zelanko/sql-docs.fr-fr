@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 934b199c-9918-4e6b-83f4-5862b94fc904
 caps.latest.revision: 33
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 37f778e52088df89a12b46b636aa1948623b9ac9
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: 5f3ad348ebfc89706eb57dea34f91342550189b1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36141491"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37236299"
 ---
 # <a name="reporting-services-concepts-ssrs"></a>Concepts de Reporting Services (SSRS)
   Cette rubrique fournit un bref résumé des concepts de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] .  
@@ -84,7 +84,7 @@ ms.locfileid: "36141491"
   
  **RDLC.** Le Concepteur de rapports Visual Studio produit des fichiers de définition de rapport client (.rdlc) au format XML à utiliser avec le contrôle ReportViewer.  
   
- **Connexions de données et sources de données de rapport**  
+ **Connexions de données et sources de données de rapports**  
  Les rapports utilisent des connexions de données pour récupérer les données nécessaires lorsqu'une requête s'exécute ou lorsque le rapport est traité. Dans une définition de rapport, la connexion de données est identique à la source de données. Dans la liste correspondante, choisissez un type de connexion de données intégré pour vous connecter à une base de données relationnelle, une base de données multidimensionnelle, un service Web ou toute autre source de données. Les termes suivants sont utilisés lors de la description des connexions de données.  
   
 -   **Connexion de données.** Également appelée *Source de données*. Une connexion de données inclut un nom et des propriétés de connexion qui dépendent du type de connexion. Par défaut, une connexion de données n'inclut pas d'informations d'identification. Une connexion de données ne spécifie pas les données à récupérer à partir de la source de données externe. Pour ce faire, vous devez spécifier une requête lorsque vous créez un dataset.  
@@ -131,9 +131,9 @@ ms.locfileid: "36141491"
   
 -   **Table.** Une table est une région de données qui présente les données ligne par ligne. Les colonnes de table sont statiques : vous déterminez le nombre de colonnes lorsque vous concevez votre rapport. Les lignes de table sont dynamiques : elles s'étendent vers le bas pour contenir les données. Vous pouvez ajouter aux tables des groupes, qui organisent les données par champs ou expressions sélectionnés. Pour plus d’informations, consultez [Tables &#40;Générateur de rapports et SSRS&#41;](report-design/tables-report-builder-and-ssrs.md).  
   
--   **Matrice.** Une matrice est également connue sous le nom d'analyse croisée. Une région de données de type matrice contient à la fois des colonnes et des lignes dynamiques : elles s'étendent pour contenir les données. Une matrice peut posséder des lignes et des colonnes dynamiques, ainsi que des lignes et des colonnes statiques. Les colonnes ou les lignes peuvent contenir d'autres colonnes ou lignes ; en outre, elles peuvent être utilisées pour regrouper des données. Pour plus d’informations, consultez [Matrices &#40;le Générateur de rapports et SSRS&#41;](report-design/create-a-matrix-report-builder-and-ssrs.md).  
+-   **Matrice.** Une matrice est également connue sous le nom d'analyse croisée. Une région de données de type matrice contient à la fois des colonnes et des lignes dynamiques : elles s'étendent pour contenir les données. Une matrice peut posséder des lignes et des colonnes dynamiques, ainsi que des lignes et des colonnes statiques. Les colonnes ou les lignes peuvent contenir d'autres colonnes ou lignes ; en outre, elles peuvent être utilisées pour regrouper des données. Pour plus d’informations, consultez [Matrices &#40;Générateur de rapports et SSRS&#41;](report-design/create-a-matrix-report-builder-and-ssrs.md).  
   
--   **Liste.** Une liste est une région de données qui présente les données selon une disposition libre. Vous pouvez organiser les éléments de rapport de façon à créer un formulaire avec des zones de texte, des images et d'autres régions de données placées aux emplacements de votre choix dans la liste. Pour plus d’informations, consultez [répertorie &#40;le Générateur de rapports et SSRS&#41;](report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md).  
+-   **Liste.** Une liste est une région de données qui présente les données selon une disposition libre. Vous pouvez organiser les éléments de rapport de façon à créer un formulaire avec des zones de texte, des images et d'autres régions de données placées aux emplacements de votre choix dans la liste. Pour plus d’informations, consultez [répertorie &#40;Générateur de rapports et SSRS&#41;](report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md).  
   
 -   **Graphique.** Un graphique présente les données graphiquement. Les exemples de graphiques courants sont les graphiques à barres, à secteurs et en courbes, mais de nombreux autres styles de graphiques sont pris en charge. Pour plus d’informations, consultez [Graphiques &#40;Générateur de rapports et SSRS&#41;](report-design/charts-report-builder-and-ssrs.md).  
   
@@ -147,7 +147,7 @@ ms.locfileid: "36141491"
   
 -   Utilisez la fonction `Lookup` pour rechercher des valeurs dans des paires nom/valeur dans un dataset différent.  
   
- **parties de rapports**  
+ **Parties de rapports**  
  Une définition de partie de rapport (.rsc) est un élément de serveur de rapport qui est un fragment XML d'un fichier de définition de rapport. Vous créez des parties de rapports en créant une définition de rapport, puis en sélectionnant séparément des éléments de rapport dans le rapport à publier sous forme de parties de rapports. Les parties de rapports incluent des régions de données, des rectangles et les éléments qu'ils contiennent, ainsi que des images. Vous pouvez enregistrer une partie de rapport avec ses références aux sources de données partagées et ses datasets dépendants, afin de pouvoir le réutiliser dans d'autres rapports. Pour plus d’informations, consultez [Parties de rapports dans le Concepteur de rapports &#40;SSRS&#41;](report-design/report-parts-in-report-designer-ssrs.md).  
   
  **Alertes de données**  
@@ -156,13 +156,13 @@ ms.locfileid: "36141491"
 ##  <a name="bkmk_TypesofReports"></a> Types de rapports  
  Dans [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)], *le rapport* de terme peut s'appliquer à un type spécifique d'élément de serveur de rapports, à une conception de mise en page, ou à une conception de solution. Un seul et même rapport peut avoir des caractéristiques de plusieurs types ; par exemple, un rapport peut être, simultanément, un rapport autonome, un sous-rapport référencé par un rapport principal, la cible d'un rapport d'extraction dans un rapport principal différent, et un rapport lié.  
   
- **Rapports d’analyse**  
+ **Rapports d’extraction**  
  Un rapport d'analyse est une création de mise en page qui masque initialement la complexité et permet à l'utilisateur de basculer des éléments de rapport masqués de façon conditionnelle pour contrôler la quantité de données de détail affichées. Les rapports d'analyse doivent extraire toutes les données possibles pouvant être affichées dans le rapport. En présence de rapports utilisant de gros volumes de données, préférez les rapports d'extraction. Pour plus d’informations, consultez [Action d’exploration &#40;Générateur de rapports et SSRS&#41;](report-design/drilldown-action-report-builder-and-ssrs.md).  
   
  **Sous-rapports**  
  Un sous-rapport est un élément de rapport que vous ajoutez à un rapport en tant qu'élément de mise en page. Un sous-rapport point vers un rapport différent et s'affiche dans le corps d'un rapport principal comme sous-rapport instance. Le sous-rapport peut utiliser des sources de données différentes de celles utilisées pour le rapport principal. Bien qu'un sous-rapport puisse être répété dans des régions de données en utilisant un paramètre pour filtrer les données dans chaque instance du sous-rapport, les sous-rapports sont généralement utilisés avec un rapport principal comme un dossier de synthèse ou comme un conteneur pour une collection de rapports connexes. Chaque instance d'un sous-rapport change le contexte pour le traitement des rapports entre le rapport principal et le sous-rapport. En présence de rapports utilisant de nombreuses instances de sous-rapports, préférez les rapports d'extraction. Pour plus d’informations, consultez [Sous-rapports &#40;Générateur de rapports et SSRS&#41;](report-design/subreports-report-builder-and-ssrs.md).  
   
- **Rapports d’extraction et des rapports principaux/détaillés**  
+ **Rapports principaux/détaillés et des rapports d’extraction**  
  Une solution de rapport principal/détaillé inclut un rapport principal qui affiche des informations de résumé doté de liens hypertexte à un ou plusieurs rapports qui affichent des informations détaillées.  Le rapport détaillé fonctionne uniquement si un lecteur de rapport clique sur un lien vers celui-ci. Le rapport d'extraction s'ouvre hors du rapport principal. Un lien hypertexte peut être défini sur n'importe quel élément de rapport qui a une propriété Action, par exemple une zone de texte, d'espace réservé ou une série de graphiques. Pour plus d’informations, consultez [Rapports d’extraction &#40;Générateur de rapports et SSRS&#41;](report-design/drillthrough-reports-report-builder-and-ssrs.md).  
   
  **Rapports liés**  
@@ -203,10 +203,10 @@ ms.locfileid: "36141491"
  ![diagramme de traitement des rapports](media/report-execution.gif "diagramme de traitement des rapports")  
 Illustration du traitement d'un rapport  
   
- **définition de rapport**  
+ **Définition de rapport**  
  Le fichier de définition de rapport (.rdl) stocké sur un serveur de rapports. Pour plus d’informations, consultez [Langage de définition de rapport &#40;SSRS, Report Definition Language&#41;](reports/report-definition-language-ssrs.md).  
   
- **Rapport compilé et format de rapport intermédiaire**  
+ **Rapport compilé et format de rapports intermédiaires**  
  Le rapport qui utilise des expressions évaluées, des paramètres et des propriétés de paramètres évalués.  
   
  **L’historique de rapport ou d’instantané**  
@@ -215,11 +215,11 @@ Illustration du traitement d'un rapport
  **Rapport traité**  
  Un rapport totalement traité qui contient des données et des informations relatives à la mise en page.  
   
- **rapport rendu**  
+ **Rapport rendu**  
  Un rapport totalement traité est envoyé vers un rapport rendu pour combiner les données et la mise en page de chaque page du format de rendu ciblé. Les extensions de rendu sont personnalisables et extensibles. Le format de rendu de rapport par défaut est HTML 4.0. Pour plus d’informations, consultez [Mise en page et rendu &#40;Générateur de rapports et SSRS&#41;](report-design/page-layout-and-rendering-report-builder-and-ssrs.md) et [Extensions &#40;SSRS&#41;](extensions-ssrs.md).  
   
  **Rapport exporté**  
- Un rapport exporté est un rapport totalement paginé enregistré dans un format de fichier spécifique. Les formats d'exportation dépendent des extensions de rendu installées et peuvent être personnalisés. Par défaut, les formats d'exportation comprennent Excel, Word, XML, PDF, TIFF et CSV. Pour plus d’informations, consultez [exportation des rapports &#40;le Générateur de rapports et SSRS&#41;](report-builder/export-reports-report-builder-and-ssrs.md).  
+ Un rapport exporté est un rapport totalement paginé enregistré dans un format de fichier spécifique. Les formats d'exportation dépendent des extensions de rendu installées et peuvent être personnalisés. Par défaut, les formats d'exportation comprennent Excel, Word, XML, PDF, TIFF et CSV. Pour plus d’informations, consultez [exportation des rapports &#40;Générateur de rapports et SSRS&#41;](report-builder/export-reports-report-builder-and-ssrs.md).  
   
 ## <a name="see-also"></a>Voir aussi  
  [Fonctionnalités et tâches Reporting Services &#40;SSRS&#41;](reporting-services-features-and-tasks-ssrs.md)   

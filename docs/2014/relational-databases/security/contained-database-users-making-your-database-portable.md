@@ -5,24 +5,23 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-security
+ms.technology: security
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - contained database, users
 - user [SQL Server], about contained database users
 ms.assetid: e57519bb-e7f4-459b-ba2f-fd42865ca91d
 caps.latest.revision: 30
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: ee7c93ee0502deef50be0ed07e72bd6f0dab4342
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: edmacauley
+ms.author: edmaca
+manager: craigg
+ms.openlocfilehash: bf2413a954c0034e8122586f1054bdc0cffef2db
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36039036"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37294710"
 ---
 # <a name="contained-database-users---making-your-database-portable"></a>Utilisateurs de base de données autonome - Rendre votre base de données portable
   Faites appel à des utilisateurs de base de données autonome pour authentifier les connexions [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et [!INCLUDE[ssSDS](../../includes/sssds-md.md)] au niveau de la base de données. Une base de données autonome est une base de données qui est isolée d'autres bases de données et de l'instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]/[!INCLUDE[ssSDS](../../includes/sssds-md.md)] (et la base de données MASTER) qui héberge la base de données. 
@@ -37,9 +36,9 @@ ms.locfileid: "36039036"
  L'important est que la connexion (de la base de données MASTER) et l'utilisateur (de la base de données utilisateur) doivent exister et être liés entre eux. Cela signifie que la connexion à la base de données utilisateur a une dépendance à l’égard de la connexion de la base de données MASTER, ce qui limite la capacité de la base de données à être déplacée vers un autre serveur d’hébergement [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] . Et si, pour une raison quelconque, une connexion à la base de données MASTER n'est pas disponible (par exemple, un basculement en cours), le temps global de connexion augmente ou la connexion peut expirer. Il peut en résulter une réduction de l'extensibilité de la connexion.  
   
 ## <a name="contained-database-user-model"></a>Modèle utilisateur de base de données autonome  
- Dans le modèle utilisateur de la base de données autonome, la connexion de la base de données MASTER n'est pas présente. Au lieu de cela, le processus d'authentification se produit sur la base de données utilisateur, et l'utilisateur de base de données de la base de données utilisateur n'a pas de connexion associée dans la base de données MASTER. Le modèle utilisateur de base de données prend en charge l’authentification Windows (dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]) et [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] l’authentification (dans les deux [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et [!INCLUDE[ssSDS](../../includes/sssds-md.md)]). Pour vous connecter en tant qu'utilisateur de base de données autonome, la chaîne de connexion doit toujours contenir un paramètre de la base de données utilisateur afin que [!INCLUDE[ssDE](../../includes/ssde-md.md)] sache quelle base de données est chargée de gérer le processus d'authentification. L'activité de l'utilisateur de base de données autonome étant limitée à l'authentification de base de données, lorsque vous vous connectez en tant qu'utilisateur de base de données autonome, le compte d'utilisateur base de données doit être créé indépendamment dans chaque base de données dont l'utilisateur a besoin. Pour modifier les bases de données, les utilisateurs [!INCLUDE[ssSDS](../../includes/sssds-md.md)] doivent créer une connexion. Les utilisateurs de base de données autonome dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] peuvent modifier les bases de données si un même utilisateur est présent dans une autre base de données.  
+ Dans le modèle utilisateur de la base de données autonome, la connexion de la base de données MASTER n'est pas présente. Au lieu de cela, le processus d'authentification se produit sur la base de données utilisateur, et l'utilisateur de base de données de la base de données utilisateur n'a pas de connexion associée dans la base de données MASTER. Le modèle utilisateur de base de données de relation contenant-contenu prend en charge à la fois l’authentification Windows (dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]) et [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] l’authentification (dans les deux [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et [!INCLUDE[ssSDS](../../includes/sssds-md.md)]). Pour vous connecter en tant qu'utilisateur de base de données autonome, la chaîne de connexion doit toujours contenir un paramètre de la base de données utilisateur afin que [!INCLUDE[ssDE](../../includes/ssde-md.md)] sache quelle base de données est chargée de gérer le processus d'authentification. L'activité de l'utilisateur de base de données autonome étant limitée à l'authentification de base de données, lorsque vous vous connectez en tant qu'utilisateur de base de données autonome, le compte d'utilisateur base de données doit être créé indépendamment dans chaque base de données dont l'utilisateur a besoin. Pour modifier les bases de données, les utilisateurs [!INCLUDE[ssSDS](../../includes/sssds-md.md)] doivent créer une connexion. Les utilisateurs de base de données autonome dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] peuvent modifier les bases de données si un même utilisateur est présent dans une autre base de données.  
   
- Pour [!INCLUDE[ssSDS](../../includes/sssds-md.md)], aucune modification n’est requise pour la chaîne de connexion lorsque vous passez du modèle traditionnel au modèle utilisateur de base de données. Pour les connexions [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , le nom de la base de données doit être ajoutée à la chaîne de connexion, s’il n'est pas déjà présent.  
+ Pour [!INCLUDE[ssSDS](../../includes/sssds-md.md)], aucune modification n’est nécessaire pour la chaîne de connexion lorsque vous passez du modèle traditionnel au modèle utilisateur base de données de relation contenant-contenu. Pour les connexions [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , le nom de la base de données doit être ajoutée à la chaîne de connexion, s’il n'est pas déjà présent.  
   
 > [!IMPORTANT]  
 >  Lorsque vous utilisez le modèle traditionnel, les rôles de niveau serveur et les autorisations de niveau serveur peuvent limiter l'accès à toutes les bases de données. Lorsque vous utilisez le modèle de base de données autonome, les propriétaires et les utilisateurs de base de données ayant l'autorisation ALTER ANY USER peuvent accorder l'accès à la base de données. Cela réduit le contrôle d'accès des connexions serveur dotées de privilèges élevés et étend le contrôle d'accès pour inclure les utilisateurs de base de données à privilèges élevés.  

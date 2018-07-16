@@ -5,21 +5,19 @@ ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- tools-ssms
+ms.technology: ssms
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 25ffaea6-0eee-4169-8dd0-1da417c28fc6
-caps.latest.revision: 43
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 2f928645fb89757b2284628d0400847cf5f3a1f2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 97aae9bc9e495694868c2f8dec8570cdb1742fc4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36039426"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37270225"
 ---
 # <a name="start-sql-server-management-studio"></a>Démarrer SQL Server Management Studio
   Pour commencer ce didacticiel, commençons par regarder [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
@@ -31,7 +29,7 @@ ms.locfileid: "36039426"
 1.  Sur le **Démarrer** menu, pointez sur **tous les programmes**, pointez sur [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)], puis cliquez sur **SQL Server Management Studio**.  
   
     > [!NOTE]  
-    >  Par défaut, [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] n'est pas installé. Si [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] n'est pas disponible, installez-le en exécutant le programme d'installation. [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] n’est pas disponible avec [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]. [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] Express peut être téléchargé gratuitement depuis le [Microsoft Download Center](http://go.microsoft.com/fwlink/?LinkID=37075&clcid=0x409), mais a une interface utilisateur différente qu’est décrite dans ce didacticiel.  
+    >  Par défaut, [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] n'est pas installé. Si [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] n'est pas disponible, installez-le en exécutant le programme d'installation. [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] n’est pas disponible avec [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]. [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] Express est disponible en téléchargement gratuit à partir de la [Microsoft Download Center](http://go.microsoft.com/fwlink/?LinkID=37075&clcid=0x409), mais a une interface utilisateur différente qu’est décrite dans ce didacticiel.  
   
 2.  Dans la boîte de dialogue **Se connecter à un serveur** , vérifiez les paramètres par défaut, puis cliquez sur **Se connecter**. Pour vous connecter, le **nom du serveur** zone doit contenir le nom de l’ordinateur où [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] est installé. Si le [!INCLUDE[ssDE](../../includes/ssde-md.md)] est une instance nommée, le **nom du serveur** zone doit également contenir le nom d’instance dans le format \< *Nom_Ordinateur* > \\ < *nom_instance*>.  
   
@@ -50,7 +48,7 @@ ms.locfileid: "36039426"
   
      La fenêtre Serveurs inscrits apparaît au-dessus de l'Explorateur d'objets. La fenêtre Serveurs inscrits présente la liste des serveurs que vous administrez fréquemment. Il est possible d'ajouter et de supprimer des serveurs de cette liste. Les seuls serveurs répertoriés sont les instances [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] installées sur l'ordinateur sur lequel vous exécutez [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)].  
   
-2.  Si votre serveur n’apparaît pas, dans serveurs inscrits, cliquez sur **moteur de base de données**, puis cliquez sur **mise à jour l’inscription du serveur Local**.  
+2.  Si votre serveur n’apparaît pas, dans serveurs inscrits, cliquez sur **moteur de base de données**, puis cliquez sur **l’inscription du serveur Local mise à jour**.  
   
 ## <a name="next-task-in-lesson"></a>Tâche suivante de la leçon  
  [Connexion avec le composant Serveurs inscrits et l'Explorateur d'objets](../object/object-explorer.md)  

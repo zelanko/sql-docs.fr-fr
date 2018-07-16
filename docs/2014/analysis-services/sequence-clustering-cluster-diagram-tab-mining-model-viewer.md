@@ -1,5 +1,5 @@
 ---
-title: Sequence Clustering onglet Diagramme de Cluster (visionneuse de modèle d’exploration de données | Documents Microsoft
+title: Sequence Clustering onglet Diagramme de Cluster (visionneuse de modèle d’exploration de données | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dm.miningmodeleditor.sequenceclustering.diagrams.f1
 ms.assetid: 4b705397-9af4-4678-9eda-149bc5d762fa
 caps.latest.revision: 26
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 56c384e39ae4ef364f608cef8fa507d20bb746ef
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 862dca35dcec3c1113117cf472b3866fb9df0be3
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36040046"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37257241"
 ---
 # <a name="sequence-clustering-cluster-diagram-tab-mining-model-viewer"></a>Onglet Diagramme de cluster du modèle Sequence Clustering (Visionneuse de modèle d'exploration de données)
   L’onglet **Diagramme de cluster** de la **visionneuse MSC** (Microsoft Sequence Clustering) affiche sous forme graphique tous les clusters contenus dans le modèle Sequence Clustering.  
@@ -31,7 +31,7 @@ ms.locfileid: "36040046"
  **Pour plus d’informations :** [Algorithme MSC (Microsoft Sequence Clustering)](data-mining/microsoft-sequence-clustering-algorithm.md), [Explorer un modèle à l’aide de la visionneuse de l’algorithme MSC (Microsoft Sequence Cluster)](data-mining/browse-a-model-using-the-microsoft-sequence-cluster-viewer.md)  
   
 ## <a name="options"></a>Options  
- **Actualiser le contenu de la visionneuse**  
+ **Actualiser le contenu de l’Observateur**  
  Recharge le modèle d'exploration de données dans la visionneuse.  
   
  **Modèle d'exploration de données**  
@@ -52,10 +52,10 @@ ms.locfileid: "36040046"
  **Copier le graphique entier**  
  Copie la totalité du diagramme dans le Presse-papiers.  
   
- **Diagramme à la taille de la fenêtre**  
+ **Diagramme de mise à l’échelle à la fenêtre**  
  Réduit la taille du diagramme jusqu'à ce qu'il soit ajusté à l'écran.  
   
- **Trouver le nœud**  
+ **Nœud introuvable**  
  Utilisez la boîte de dialogue **Rechercher un nœud** pour filtrer les clusters dans le graphique et ainsi faciliter la recherche d’un cluster spécifique. Pour plus d’informations, consultez [Boîte de dialogue Rechercher un nœud &#40;visionneuse de modèle d’exploration de données&#41;](find-node-dialog-box-mining-model-viewer.md).  
   
  Notez que dans ce contexte, vous recherchez uniquement le nom du cluster, pas les attributs du cluster ; par conséquent, cette option est très utile si vous avez affecté des noms descriptifs à votre cluster. Vous pouvez affecter des noms aux clusters dans la visionneuse en cliquant avec le bouton droit sur chaque cluster et en sélectionnant **Renommer**.  

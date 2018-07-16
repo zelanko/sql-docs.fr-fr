@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - database [Master Data Services], about the database
 - database [Master Data Services]
 ms.assetid: 5f590cc1-6ec2-4b8c-a598-03de0f6051a0
 caps.latest.revision: 5
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 9f152caf03dd4997dad8b1e177227c330a5e9a30
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: d426c9c7ffb874cd304932889d41660cf0d3edac
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36140289"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37326169"
 ---
 # <a name="master-data-services-database"></a>Base de données Master Data Services
   La base de données contient toutes les informations pour le système [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] . Elle est au centre d’un déploiement [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] . La base de données [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] :  
@@ -39,11 +39,11 @@ ms.locfileid: "36140289"
   
 ## <a name="in-this-section"></a>Dans cette section  
   
--   [Table intermédiaire des membres de feuille &#40;Master Data Services&#41;](leaf-member-staging-table-master-data-services.md)  
+-   [Les terminaux de Table intermédiaire des membres &#40;Master Data Services&#41;](leaf-member-staging-table-master-data-services.md)  
   
--   [Table intermédiaire des membres de consolidation &#40;Master Data Services&#41;](../../2014/master-data-services/consolidated-member-staging-table-master-data-services.md)  
+-   [Consolidés Table intermédiaire des membres &#40;Master Data Services&#41;](../../2014/master-data-services/consolidated-member-staging-table-master-data-services.md)  
   
--   [Table intermédiaire de relation &#40;Master Data Services&#41;](../../2014/master-data-services/relationship-staging-table-master-data-services.md)  
+-   [Table de mise en lots des relations &#40;Master Data Services&#41;](../../2014/master-data-services/relationship-staging-table-master-data-services.md)  
   
 -   [Erreurs du processus de mise en lots &#40;Master Data Services&#41;](../../2014/master-data-services/staging-process-errors-master-data-services.md)  
   

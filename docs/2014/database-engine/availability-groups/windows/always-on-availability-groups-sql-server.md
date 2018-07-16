@@ -5,10 +5,9 @@ ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Availability Groups [SQL Server], about
 - secondary replicas, see Availability Groups [SQL Server]
@@ -17,15 +16,15 @@ helpviewer_keywords:
 - Availability Groups [SQL Server]
 ms.assetid: aa427606-8422-4656-b205-c9e665ddc8c1
 caps.latest.revision: 32
-author: MikeRayMSFT
-ms.author: mikeray
-manager: jhubbard
-ms.openlocfilehash: a1591695b5676e4c37e7cd2a38b6c95c3a84ef75
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 178df2f7de27a124eab42b472258c5b1b5d438d1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36053127"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37314519"
 ---
 # <a name="always-on-availability-groups-sql-server"></a>Groupes de disponibilité Always On (SQL Server)
   La fonctionnalité [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] est une solution de haute disponibilité et de récupération d'urgence qui fournit une alternative au niveau de l'entreprise à la mise en miroir de bases de données. Introduite dans [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)], [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] optimise la disponibilité d'un ensemble de bases de données utilisateur pour l'entreprise. Un *groupe de disponibilité* prend en charge un environnement de basculement pour un ensemble discret de bases de données utilisateur, appelées *bases de données de disponibilité*, qui basculent de concert. Un groupe de disponibilité prend en charge un ensemble de bases de données primaires en lecture-écriture et un à huit ensembles de bases de données secondaires correspondantes. Éventuellement, les bases de données secondaires peuvent être rendues disponibles pour l'accès en lecture seule et/ou certaines opérations de sauvegarde.  
@@ -39,7 +38,7 @@ ms.locfileid: "36053127"
 -   Prend en charge jusqu'à neuf réplicas de disponibilité. Un *réplica de disponibilité* est une instanciation d'un groupe de disponibilité hébergé par une instance spécifique de SQL Server qui conserve une copie locale de chaque base de données de disponibilité appartenant au groupe de disponibilité. Chaque groupe de disponibilité prend en charge un réplica principal et jusqu'à huit réplicas secondaires. Pour plus d’informations, consultez [Vue d’ensemble des groupes de disponibilité Always On &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md).  
   
     > [!IMPORTANT]  
-    >  Chaque réplica de disponibilité doit résider sur un nœud différent d'un cluster de clustering de basculement Windows Server (WSFC). Pour plus d’informations sur les conditions préalables, restrictions et recommandations pour les groupes de disponibilité, consultez [conditions préalables, Restrictions et recommandations pour les groupes de disponibilité AlwaysOn ; SQL Server ; ](prereqs-restrictions-recommendations-always-on-availability.md).  
+    >  Chaque réplica de disponibilité doit résider sur un nœud différent d'un cluster de clustering de basculement Windows Server (WSFC). Pour plus d’informations sur les conditions préalables, restrictions et recommandations pour les groupes de disponibilité, consultez [prérequis, Restrictions et recommandations pour les groupes de disponibilité AlwaysOn ; SQL Server ; ](prereqs-restrictions-recommendations-always-on-availability.md).  
   
 -   Prend en charge d'autres modes de disponibilité, comme suit :  
   
@@ -63,7 +62,7 @@ ms.locfileid: "36053127"
   
 -   Prend en charge une stratégie de basculement flexible pour un contrôle optimisé du basculement de cluster de disponibilité. Pour plus d’informations, consultez [basculement et Modes de basculement ; Toujours sur les groupes de disponibilité ; ](failover-and-failover-modes-always-on-availability-groups.md).  
   
--   Prend en charge la réparation de page automatique pour éviter les pages endommagées. Pour plus d’informations, consultez [réparation de Page automatique &#40;pour les groupes de disponibilité et de la mise en miroir de base de données ;](../../../sql-server/failover-clusters/automatic-page-repair-availability-groups-database-mirroring.md).  
+-   Prend en charge la réparation de page automatique pour éviter les pages endommagées. Pour plus d’informations, consultez [réparation de Page automatique &#40;pour les groupes de disponibilité et de la base de données mise en miroir ;](../../../sql-server/failover-clusters/automatic-page-repair-availability-groups-database-mirroring.md).  
   
 -   Prend en charge le chiffrement et la compression, qui fournissent un transport sécurisé et efficace.  
   
@@ -77,11 +76,11 @@ ms.locfileid: "36053127"
   
         -   L'[!INCLUDE[ssAoAddDbWiz](../../../includes/ssaoadddbwiz-md.md)] ajoute une ou plusieurs bases de données primaires à un groupe de disponibilité existant. Dans certains environnements, cet Assistant peut également préparer automatiquement les bases de données secondaires et démarrer la synchronisation de données pour chacune d'elles. Pour plus d’informations, consultez [Utiliser l’Assistant Ajouter une base de données au groupe de disponibilité (SQL Server)](availability-group-add-database-to-group-wizard.md).  
   
-        -   L' [!INCLUDE[ssAoAddRepWiz](../../../includes/ssaoaddrepwiz-md.md)] ajoute un ou plusieurs réplicas secondaires à un groupe de disponibilité existant. Dans certains environnements, cet Assistant peut également préparer automatiquement les bases de données secondaires et démarrer la synchronisation de données pour chacune d'elles. Pour plus d’informations, consultez [utiliser l’Assistant groupe de disponibilité ; ajouter un réplica SQL Server Management Studio ; ](use-the-add-replica-to-availability-group-wizard-sql-server-management-studio.md).  
+        -   L' [!INCLUDE[ssAoAddRepWiz](../../../includes/ssaoaddrepwiz-md.md)] ajoute un ou plusieurs réplicas secondaires à un groupe de disponibilité existant. Dans certains environnements, cet Assistant peut également préparer automatiquement les bases de données secondaires et démarrer la synchronisation de données pour chacune d'elles. Pour plus d’informations, consultez [utiliser Ajouter un réplica à l’Assistant groupe de disponibilité ; SQL Server Management Studio ; ](use-the-add-replica-to-availability-group-wizard-sql-server-management-studio.md).  
   
         -   L'[!INCLUDE[ssAoFoAgWiz](../../../includes/ssaofoagwiz-md.md)] démarre un basculement manuel sur un groupe de disponibilité. En fonction de la configuration et de l'état du réplica secondaire que vous spécifiez comme cible de basculement, l'Assistant peut effectuer un basculement manuel planifié ou forcé. Pour plus d’informations, consultez [utiliser l’Assistant basculer le disponibilité groupe ; SQL Server Management Studio ; ](use-the-fail-over-availability-group-wizard-sql-server-management-studio.md).  
   
-    -   Le [!INCLUDE[ssAoDash](../../../includes/ssaodash-md.md)] surveille les groupes de disponibilité, réplicas de disponibilité et bases de données de disponibilité AlwaysOn et évalue les résultats pour les stratégies AlwaysOn. Pour plus d’informations, consultez [utiliser le tableau de bord AlwaysOn ; SQL Server Management Studio ; ](use-the-always-on-dashboard-sql-server-management-studio.md).  
+    -   Le [!INCLUDE[ssAoDash](../../../includes/ssaodash-md.md)] surveille les groupes de disponibilité, les réplicas de disponibilité et les bases de données de disponibilité AlwaysOn et évalue les résultats des stratégies AlwaysOn. Pour plus d’informations, consultez [utiliser le tableau de bord AlwaysOn ; SQL Server Management Studio ; ](use-the-always-on-dashboard-sql-server-management-studio.md).  
   
     -   Le volet Détails de l'Explorateur d'objets affiche des informations de base à propos des groupes de disponibilité existants. Pour plus d’informations, consultez [utiliser les détails de l’Explorateur d’objets pour le groupe de disponibilité du moniteur ; SQL Server Management Studio ; ](use-object-explorer-details-to-monitor-availability-groups.md).  
   
@@ -149,7 +148,7 @@ ms.locfileid: "36053127"
   
 ##  <a name="RelatedTasks"></a> Tâches associées  
   
--   [Prise en main de toujours sur les groupes de disponibilité ; SQL Server ;](getting-started-with-always-on-availability-groups-sql-server.md)  
+-   [Prise en main toujours sur les groupes de disponibilité ; SQL Server ;](getting-started-with-always-on-availability-groups-sql-server.md)  
   
 ##  <a name="RelatedContent"></a> Contenu associé  
   
@@ -163,7 +162,7 @@ ms.locfileid: "36053127"
   
      [Microsoft SQL Server Code-Named "Denali" Always On Series,Part 1: Introducing the Next Generation High Availability Solution (Présentation de la solution haute disponibilité de nouvelle génération)](http://channel9.msdn.com/Events/TechEd/NorthAmerica/2011/DBI302)  
   
-     [Microsoft SQL Server nom de code « Denali » Always On Series, Part 2 : Création d’une Solution de haute disponibilité maximale à l’aide d’AlwaysOn](http://channel9.msdn.com/Events/TechEd/NorthAmerica/2011/DBI404)  
+     [Microsoft SQL Server nom de code « Denali » Always On Series, Part 2 : Création d’une Solution de haute disponibilité critique à l’aide d’AlwaysOn](http://channel9.msdn.com/Events/TechEd/NorthAmerica/2011/DBI404)  
   
 -   **Livres blancs :**  
   

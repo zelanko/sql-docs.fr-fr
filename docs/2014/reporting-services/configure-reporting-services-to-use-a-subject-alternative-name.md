@@ -1,5 +1,5 @@
 ---
-title: Configurer Reporting Services pour utiliser un autre nom d’objet | Documents Microsoft
+title: Configurer Reporting Services pour utiliser un autre nom de sujet | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: ce458f9f-4b4f-4a58-aa75-9a90dda1e622
 caps.latest.revision: 4
-author: douglaslM
+author: maggiesmsft
 ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 3826590033cfd21bc12fa623633f88d9fa11d76b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 2890cea5f4c39d27ce89d4d9c5bcc3efe7384039
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36038318"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37284785"
 ---
 # <a name="configure-reporting-services-to-use-a-subject-alternative-name"></a>Configurer Reporting Services pour utiliser un autre nom de l'objet
   Cette rubrique explique comment configurer [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] (SSRS) pour utiliser un autre nom de l’objet (SAN, Subject Alternative Name) en modifiant le fichier rsreportserver.config et en utilisant l’outil Netsh.exe.  
@@ -32,7 +32,7 @@ ms.locfileid: "36038318"
   
  Pour utiliser un nom SAN, le certificat SSL doit être inscrit sur le serveur, être signé et posséder la clé privée. Vous ne pouvez pas utiliser un certificat auto-signé.  
   
- URL [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] peut être configuré pour utiliser un certificat SSL. Normalement, un certificat a juste un nom d'objet qui n'autorise qu'une seule URL pour une session SSL (Secure Sockets Layer). Le nom SAN est un champ supplémentaire dans le certificat qui permet à un service SSL d'être à l'écoute et d'être valide pour plusieurs URL. Il permet également au service SSL de partager le port SSL avec d'autres applications. Le nom du SAN ressemble à ceci : www.s2.com.  
+ URL dans [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] peut être configuré pour utiliser un certificat SSL. Normalement, un certificat a juste un nom d'objet qui n'autorise qu'une seule URL pour une session SSL (Secure Sockets Layer). Le nom SAN est un champ supplémentaire dans le certificat qui permet à un service SSL d'être à l'écoute et d'être valide pour plusieurs URL. Il permet également au service SSL de partager le port SSL avec d'autres applications. Le nom du SAN ressemble à ceci : www.s2.com.  
   
  Pour plus d’informations sur les paramètres SSL pour [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)], consultez [configurer des connexions SSL sur un serveur de rapports en Mode natif](security/configure-ssl-connections-on-a-native-mode-report-server.md).  
   

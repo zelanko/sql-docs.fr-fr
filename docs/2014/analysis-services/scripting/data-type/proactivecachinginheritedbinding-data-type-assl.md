@@ -1,5 +1,5 @@
 ---
-title: Type de données ProactiveCachingInheritedBinding (ASSL) | Documents Microsoft
+title: Type de données ProactiveCachingInheritedBinding (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - ProactiveCachingInheritedBinding data type
 ms.assetid: 913fa19f-1ecb-4fca-897e-12f0fb02cf8b
 caps.latest.revision: 16
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 97013002cc5fd57e8239ee1f4b1769d52279c5af
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: c97f39574e6df202104bef0b34ab850f6cefdd6c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36038679"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37250981"
 ---
 # <a name="proactivecachinginheritedbinding-data-type-assl"></a>Type de données ProactiveCachingInheritedBinding (ASSL)
   Définit un type de données dérivé qui représente les informations de la [ProactiveCaching](../objects/proactivecaching-element-assl.md) élément sur les modifications de source de données dans les tables et les vues identifiées par le biais des liaisons de données existantes qui exigent une reconstruction du cache.  
@@ -67,6 +67,6 @@ ms.locfileid: "36038679"
  L’élément correspondant dans le modèle d’objet objets AMO (Analysis Management) est <xref:Microsoft.AnalysisServices.ProactiveCachingInheritedBinding>.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Types de données de script langage XML Analysis Services &#40;ASSL&#41;](analysis-services-scripting-language-xml-data-types-assl.md)  
+ [Types Analysis Services Scripting Language XML données &#40;ASSL&#41;](analysis-services-scripting-language-xml-data-types-assl.md)  
   
   

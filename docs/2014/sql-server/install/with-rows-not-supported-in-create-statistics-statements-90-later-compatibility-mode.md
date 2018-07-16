@@ -1,5 +1,5 @@
 ---
-title: AVEC des lignes n’est pas pris en charge dans les instructions CREATE STATISTICS dans le mode de compatibilité 90 ou ultérieur | Documents Microsoft
+title: AVEC des lignes n’est pas pris en charge dans les instructions CREATE STATISTICS dans le mode de compatibilité 90 ou plus tard | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - WITH ROWS in CREATE STATISTICS statement
 ms.assetid: 197b2ecf-a1a3-4a3a-a523-a0ee919c1dde
 caps.latest.revision: 21
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 9d509352d99cab9359e7ea222f5fb2d5d7e28075
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 98aec243141e642cd0ef77719795490a1333f473
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36139714"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37294089"
 ---
 # <a name="with-rows-is-not-supported-in-create-statistics-statements-in-the-compatibility-mode-of-90-or-later"></a>La clause WITH ROWS n'est pas prise en charge dans les instructions CREATE STATISTICS en mode de compatibilité 90 ou ultérieur
   La spécification de la clause WITH ROWS dans les instructions CREATE STATISTICS n'est pas prise en charge lorsque vous exécutez [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en mode de compatibilité 90 ou ultérieur.  

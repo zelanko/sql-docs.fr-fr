@@ -1,5 +1,5 @@
 ---
-title: Gestion des Services de rubriques de procédures (Gestionnaire de Configuration SQL Server) | Documents Microsoft
+title: Gestion des Services des rubriques de procédures (Gestionnaire de Configuration SQL Server) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server Configuration Manager, managing services
 ms.assetid: 78dee169-df0c-4c95-9af7-bf033bc9fdc6
 caps.latest.revision: 25
 author: craigg-msft
 ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 9969dde00baf89afcdd8c2ab4027b60566ccded1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 43f640c9d4e876870cd64e60e289385838492f2a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36039787"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37248909"
 ---
 # <a name="managing-services-how-to-topics-sql-server-configuration-manager"></a>Rubriques de procédures concernant la gestion des services (Gestionnaire de configuration SQL Server)
   Le [!INCLUDE[ssDE](../includes/ssde-md.md)] et l'Agent [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] sont exécutés en tant que services sous les systèmes d'exploitation [!INCLUDE[msCoName](../includes/msconame-md.md)] Windows. Pour plus d’informations sur les services, consultez [Gérer les services du moteur de base de données](configure-windows/manage-the-database-engine-services.md).  

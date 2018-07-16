@@ -1,5 +1,5 @@
 ---
-title: Utilisation des ensembles de lignes de schéma dans ADOMD.NET | Documents Microsoft
+title: Working with Schema Rowsets in ADOMD.NET | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - schema rowsets [ADOMD.NET]
 ms.assetid: 7bf75bf8-f1e1-44f6-ac42-c38a681654cf
 caps.latest.revision: 37
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 9c6acc3ffe3a0f0b7ae5523833cbb85f0c152cc5
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: e77a3a4c7d38779da149f63644ad9a3106034f51
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36140625"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37310749"
 ---
 # <a name="working-with-schema-rowsets-in-adomdnet"></a>Utilisation d'ensembles de lignes de schéma dans ADOMD.NET
   Lorsque vous avez besoin de plus de métadonnées que celles disponibles dans le modèle objet ADOMD.NET, ADOMD.NET offre la possibilité de récupérer la gamme complète d'ensembles de lignes de schéma XMLA (XML for Analysis), OLE DB, OLE DB pour OLAP et OLE DB pour l'exploration de données :  
@@ -32,7 +32,7 @@ ms.locfileid: "36140625"
  **Métadonnées XMLA**  
  Les ensembles de lignes de schéma XMLA offrent une méthode de récupération d'informations de bas niveau sur le serveur. Parmi les informations disponibles figurent entre autres les sources de données disponibles sur le serveur, les mots clés réservés par le fournisseur et les littéraux pris en charge par le fournisseur. Vous pouvez même utiliser un ensemble de lignes de schéma XMLA pour découvrir tous les ensembles de lignes de schéma pris en charge par le fournisseur.  
   
- Pour plus d’informations : [XML for Analysis ensembles de lignes de schéma](../schema-rowsets/xml/xml-for-analysis-schema-rowsets.md)  
+ Pour plus d’informations : [XML for Analysis Schema Rowsets](../schema-rowsets/xml/xml-for-analysis-schema-rowsets.md)  
   
  **Métadonnées OLE DB**  
  Les ensembles de lignes de schéma OLE DB fournissent une méthode standard de récupération d'informations auprès de divers fournisseurs.  
@@ -42,12 +42,12 @@ ms.locfileid: "36140625"
  **Métadonnées OLAP**  
  Parmi les informations de schéma fournies pour une source de données analytiques figurent notamment les bases de données ou les catalogues disponibles auprès de la source de données analytiques, des cubes et modèles d'exploration de données d'une base de données et des rôles qui existent pour les cubes au niveau de la source de données.  
   
- Pour plus d’informations : [OLE DB pour OLAP Schema Rowsets](../schema-rowsets/ole-db-olap/ole-db-for-olap-schema-rowsets.md)  
+ Pour plus d’informations : [OLE DB for OLAP Schema Rowsets](../schema-rowsets/ole-db-olap/ole-db-for-olap-schema-rowsets.md)  
   
  **Métadonnées d’exploration de données**  
  En plus des métadonnées OLAP, les métadonnées d'exploration de données peuvent être récupérées par le biais d'ensembles de lignes de schéma. Les ensembles de lignes disponibles présentent des informations sur les modèles d'exploration de données disponibles dans la base de données, les algorithmes d'exploration de données disponibles, les paramètres requis par les algorithmes, les structures d'exploration de données, entre autres.  
   
- Pour plus d’informations : [ensembles de lignes de schéma d’exploration de données](../schema-rowsets/data-mining/data-mining-schema-rowsets.md)  
+ Pour plus d’informations : [Data Mining Schema Rowsets](../schema-rowsets/data-mining/data-mining-schema-rowsets.md)  
   
  Pour chacun de ces différents ensembles de lignes de schéma, les métadonnées sont récupérées à partir de l'ensemble de lignes en passant un GUID ou un nom XMLA via la méthode <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.GetSchemaDataSet%2A> de l'objet <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection>.  
   
@@ -75,7 +75,7 @@ ms.locfileid: "36140625"
  Chacune de ces méthodes retourne une instance d'un objet `DataSet` rempli des informations de schéma. L'objet `DataSet` provient de l'espace de noms `System.Data` de la bibliothèque de classes Microsoft .NET Framework.  
   
 ## <a name="example"></a>Exemple  
- Dans l’exemple suivant, la fonction GetActions prend une connexion, le nom du cube, une coordonnée et un type de coordonnée, récupère un [de lignes MDSCHEMA_ACTIONS](../schema-rowsets/ole-db-olap/mdschema-actions-rowset.md)et retourne les actions disponibles sur la coordonnée sélectionnée.  
+ Dans l’exemple suivant, la fonction GetActions prend une connexion, le nom du cube, une coordonnée et un type de coordonnée, récupère un [ensemble de lignes MDSCHEMA_ACTIONS](../schema-rowsets/ole-db-olap/mdschema-actions-rowset.md)et retourne les actions disponibles sur la coordonnée sélectionnée.  
   
  [!code-csharp[Adomd.NetClient#GetActions](../../snippets/csharp/SQL14/adomd.net/adomd.netclient/cs/adomdexample.cs#getactions)]  
   

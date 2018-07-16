@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.toolboxcommon.F1
 - sql12.dts.designer.toolbox.F1
@@ -17,13 +17,13 @@ ms.assetid: 552ff592-eeef-46e8-b4a2-9b2384c869aa
 caps.latest.revision: 12
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: b34cd549a8a8debf43121f8b401d16c41acde66a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 779b710f06a32a7e5add974281d9cd5c2e6eed93
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36140994"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37248729"
 ---
 # <a name="ssis-toolbox"></a>Boîte à outils SSIS
   Tous les composants installés sur l’ordinateur local, y compris les composants tiers générés pour SQL Server 2008 et 2008 R2, apparaissent maintenant automatiquement dans la nouvelle **boîte à outils SSIS**. Lorsque vous installez des composants additionnels, cliquez avec le bouton droit dans la boîte à outils, puis cliquez sur **Boîte à outils Actualiser** pour ajouter les composants.  
@@ -43,6 +43,6 @@ ms.locfileid: "36140994"
   
 ## <a name="related-tasks"></a>Related Tasks  
   
--   [Déplacer des éléments de boîte à outils SSIS](../../2014/integration-services/move-ssis-toolbox-items.md)  
+-   [Déplacer des éléments de la boîte à outils SSIS](../../2014/integration-services/move-ssis-toolbox-items.md)  
   
   

@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - custom data processing extensions [Reporting Services]
 - IDbConnection interface, connection strings
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - data processing extensions [Reporting Services], connections
 ms.assetid: 2cddc9ea-0e28-4350-80ae-332412908e47
 caps.latest.revision: 20
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: a1577c387561a74356bc31e9ce8058cf804b0235
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: a0d1026ad56474a974d261c85adf86145671c414
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36040369"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37222959"
 ---
 # <a name="specify-connections-for-custom-data-processing-extensions"></a>Spécifier des connexions pour des extensions de traitement de données personnalisées
   Vous pouvez créer des extensions pour le traitement des données personnalisées ou utiliser des extensions tierces sur un serveur de rapports, soit pour améliorer la capacité de traitement des sources de données prises en charge, soit pour prendre en charge des types de données supplémentaires qui ne sont pas disponibles dans une installation [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] par défaut. Les connexions sont traitées différemment en fonction de l'implémentation. Les implémentations suivantes sont disponibles pour les extensions de traitement de données :  
@@ -54,8 +54,8 @@ ms.locfileid: "36040369"
   
 |Informations d'identification|Connexions|  
 |-----------------|-----------------|  
-|Sécurité intégrée|Si votre fournisseur de données la prend en charge, vous pouvez utiliser la sécurité intégrée Windows. La demande est envoyée en utilisant les informations d'identification de l'utilisateur actuel.<br /><br /> Lorsque vous définissez la chaîne de connexion, veillez à inclure des arguments qui spécifient la sécurité intégrée (par exemple, une connexion à un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] source de données peut inclure `Integrated Security=SSPI` sur la chaîne de connexion).|  
-|Authentification Windows|Si votre fournisseur de données le prend en charge, vous pouvez utiliser un compte d'utilisateur de domaine Windows. Le serveur de rapports emprunte l'identité du compte d'utilisateur avant l'appel de l'extension de traitement de données.<br /><br /> Lorsque vous définissez la chaîne de connexion, veillez à inclure des arguments qui spécifient la sécurité intégrée (par exemple, une connexion à un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] source de données peut inclure `Integrated Security=SSPI` sur la chaîne de connexion).|  
+|Sécurité intégrée|Si votre fournisseur de données la prend en charge, vous pouvez utiliser la sécurité intégrée Windows. La demande est envoyée en utilisant les informations d'identification de l'utilisateur actuel.<br /><br /> Lorsque vous définissez la chaîne de connexion, veillez à inclure les arguments qui spécifient la sécurité intégrée (par exemple, une connexion à un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] source de données peut inclure `Integrated Security=SSPI` sur la chaîne de connexion).|  
+|Authentification Windows|Si votre fournisseur de données le prend en charge, vous pouvez utiliser un compte d'utilisateur de domaine Windows. Le serveur de rapports emprunte l'identité du compte d'utilisateur avant l'appel de l'extension de traitement de données.<br /><br /> Lorsque vous définissez la chaîne de connexion, veillez à inclure les arguments qui spécifient la sécurité intégrée (par exemple, une connexion à un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] source de données peut inclure `Integrated Security=SSPI` sur la chaîne de connexion).|  
 |Informations d'identification de la base de données|L'authentification de la base de données n'est pas prise en charge pour les connexions établies au moyen d'un fournisseur de données .NET personnalisé. Dans tous les cas, le serveur de rapports ne pourra pas établir la connexion.|  
 |Ne pas demander les informations d'identification|Vous pouvez utiliser l'option Ne pas demander les informations d'identification avec les fournisseurs de données .NET personnalisés. Si le compte d'exécution sans assistance est spécifié, la chaîne de connexion détermine les informations d'identification qui sont utilisées. Le serveur de rapports emprunte l'identité du compte d'exécution sans assistance pour établir la connexion.<br /><br /> Si le compte d'exécution sans assistance n'est pas défini, le serveur de rapports ne peut pas établir la connexion. Pour plus d’informations sur la définition du compte, consultez [configurer le compte d’exécution sans assistance &#40;Gestionnaire de Configuration de SSRS&#41;](../install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md).|  
   
@@ -75,15 +75,15 @@ ms.locfileid: "36040369"
   
 |Informations d'identification|Connexions|  
 |-----------------|-----------------|  
-|Sécurité intégrée|Si votre fournisseur de données prend en charge, vous pouvez utiliser la sécurité intégrée de Windows avec les extensions de traitement de données personnalisées qui utilisent `IDbConnectionExtension`.<br /><br /> Lorsque vous définissez la chaîne de connexion, veillez à inclure des arguments qui spécifient la sécurité intégrée (par exemple, une connexion à un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] source de données peut inclure `Integrated Security=SSPI` sur la chaîne de connexion).|  
-|Authentification Windows|Si votre fournisseur de données prend en charge, vous pouvez utiliser un compte d’utilisateur de domaine Windows pour les extensions de traitement de données personnalisées qui utilisent `IDbConnectionExtension`.<br /><br /> Le serveur de rapports emprunte l'identité du compte d'utilisateur avant l'appel de l'extension de traitement de données. Lorsque vous définissez la chaîne de connexion, veillez à inclure des arguments qui spécifient la sécurité intégrée (par exemple, une connexion à un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] source de données peut inclure `Integrated Security=SSPI` sur la chaîne de connexion).|  
+|Sécurité intégrée|Si votre fournisseur de données le prend en charge, vous pouvez utiliser la sécurité intégrée de Windows avec des extensions de traitement des données personnalisées qui utilisent `IDbConnectionExtension`.<br /><br /> Lorsque vous définissez la chaîne de connexion, veillez à inclure les arguments qui spécifient la sécurité intégrée (par exemple, une connexion à un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] source de données peut inclure `Integrated Security=SSPI` sur la chaîne de connexion).|  
+|Authentification Windows|Si votre fournisseur de données le prend en charge, vous pouvez utiliser un compte d’utilisateur de domaine Windows pour les extensions de traitement des données personnalisées qui utilisent `IDbConnectionExtension`.<br /><br /> Le serveur de rapports emprunte l'identité du compte d'utilisateur avant l'appel de l'extension de traitement de données. Lorsque vous définissez la chaîne de connexion, veillez à inclure les arguments qui spécifient la sécurité intégrée (par exemple, une connexion à un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] source de données peut inclure `Integrated Security=SSPI` sur la chaîne de connexion).|  
 |Informations d'identification de la base de données|Vous pouvez utiliser l'authentification de base de données pour configurer des connexions pour des extensions de traitement de données personnalisées qui utilisent `IDbConnectionExtension`.|  
 |Ne pas demander les informations d'identification|Si le compte d'exécution sans assistance est spécifié, la chaîne de connexion détermine les informations d'identification qui sont utilisées.<br /><br /> Si le compte d'exécution sans assistance n'est pas défini, le serveur de rapports ne peut pas établir la connexion.|  
   
 ## <a name="see-also"></a>Voir aussi  
  [Configurer le compte d’exécution sans assistance &#40;Gestionnaire de Configuration de SSRS&#41;](../install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md)   
  [Spécifier des informations d'identification et de connexion pour les sources de données de rapport](specify-credential-and-connection-information-for-report-data-sources.md)   
- [Connexions de données, les Sources de données et les chaînes de connexion dans Reporting Services](../data-connections-data-sources-and-connection-strings-in-reporting-services.md)   
+ [Connexions de données, Sources de données et chaînes de connexion dans Reporting Services](../data-connections-data-sources-and-connection-strings-in-reporting-services.md)   
  [Implémentation d’une extension pour le traitement des données](../extensions/data-processing/implementing-a-data-processing-extension.md)   
  [Le Gestionnaire de rapports &#40;SSRS en Mode natif&#41;](../report-manager-ssrs-native-mode.md)   
  [Créer, supprimer ou modifier une Source de données partagée &#40;le Gestionnaire de rapports&#41;](../create-delete-or-modify-a-shared-data-source-report-manager.md)   

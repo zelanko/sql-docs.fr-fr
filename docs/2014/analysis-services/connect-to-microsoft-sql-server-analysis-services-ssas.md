@@ -1,5 +1,5 @@
 ---
-title: Se connecter à Microsoft SQL Server Analysis Services (SSAS) | Documents Microsoft
+title: Se connecter à Microsoft SQL Server Analysis Services (SSAS) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.bidtoolset.connsqlserveras.f1
 ms.assetid: 7f3244ee-b690-471c-893d-68e361c2d416
 caps.latest.revision: 11
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 800df54ac7fedcad048ada667376cead7447fd53
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 43a7dd31c52c81f7a2bfcbf87d1a8df3f6740081
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36053182"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37323659"
 ---
 # <a name="connect-to-microsoft-sql-server-analysis-services-ssas"></a>Connexion à Microsoft SQL Server Analysis Services (SSAS)
   Cette page de l' **Assistant Importation de table** vous permet de spécifier les paramètres d'importation de données à partir d'un cube Microsoft SQL Server Analysis Services ou d'un classeur PowerPivot hébergé sur SharePoint. Pour accéder à l'Assistant [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)], dans le menu **Modèle** , cliquez sur **Importer à partir de la source de données**.  

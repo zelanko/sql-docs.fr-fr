@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - '* (multiply operator)'
 - multiply operator (*)
@@ -16,13 +16,13 @@ ms.assetid: d457f052-ffbb-4485-833f-f4bed4349b69
 caps.latest.revision: 29
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: a65d028ec5c9fd739c59b3d4bf5f89c622b4d5f7
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: ea47f8957d942e57a6dfda79e263dcbe5600e38c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36140784"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37254871"
 ---
 # <a name="-multiply-ssis-expression"></a>* (Multiplication) (expression SSIS)
   Multiplie deux expressions numériques.  
@@ -66,6 +66,6 @@ ListPrice - (ListPrice * @[Discount%])
   
 ## <a name="see-also"></a>Voir aussi  
  [Opérateurs et associativité](operator-precedence-and-associativity.md)   
- [Opérateurs &#40;Expression SSIS&#41;](operators-ssis-expression.md)  
+ [Opérateurs &#40;SSIS Expression&#41;](operators-ssis-expression.md)  
   
   

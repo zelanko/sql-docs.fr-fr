@@ -1,5 +1,5 @@
 ---
-title: Élément Goal (ASSL) | Documents Microsoft
+title: Élément Goal (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - Goal element
 ms.assetid: 75fa5b57-418e-43ad-8704-764e4f0a40cf
 caps.latest.revision: 32
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 8b408e73bd8cb376afe0b8cf36157628be908780
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 81a85c6bec79add033825311bb790ba6e39349bd
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36039188"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37250909"
 ---
 # <a name="goal-element-assl"></a>Élément Goal (ASSL)
   Identifie l’objectif souhaité dans un [Kpi](../objects/kpi-element-assl.md) élément.  
@@ -64,7 +64,7 @@ ms.locfileid: "36039188"
 ## <a name="remarks"></a>Notes  
  L'élément `Goal` contient une expression MDX (Multidimensional Expressions).  
   
- L’élément qui correspond au parent de `Goal` dans l’objet d’objets AMO (Analysis Management) est modèle <xref:Microsoft.AnalysisServices.Kpi>.  
+ L’élément qui correspond au parent de `Goal` dans l’objet d’objets AMO (Analysis Management) modèle est <xref:Microsoft.AnalysisServices.Kpi>.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Élément Status &#40;ASSL&#41;](status-element-assl.md)   

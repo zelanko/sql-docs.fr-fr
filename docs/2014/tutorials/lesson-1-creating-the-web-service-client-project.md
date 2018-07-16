@@ -1,5 +1,5 @@
 ---
-title: 'Leçon 1 : Création du projet de Client de Service Web | Documents Microsoft'
+title: 'Leçon 1 : Création du projet de Client de Service Web | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 0070daa6-56b0-4663-83b2-44c96acafad8
 caps.latest.revision: 30
-author: douglaslM
+author: craigg-msft
 ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 291061b72b0ffaedb5bb97ad0ebd5406fe5a5a68
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 9799bfa53aeaa5557177fe619c6ed378db58683a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36038706"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37208409"
 ---
 # <a name="lesson-1-creating-the-web-service-client-project"></a>Leçon 1 : création du projet client du service Web
   Dans cette procédure pas à pas, vous allez créer une application console simple qui accède au service Web Report Server. Il est supposé que vous utilisez [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] pour le développement.  
@@ -34,7 +34,7 @@ ms.locfileid: "36038706"
   
 4.  Dans la zone **Nom** , tapez le nom de votre projet. Tapez le nom `GetPropertiesSample`.  
   
-5.  Dans le **emplacement** , entrez le chemin d’accès où vous souhaitez enregistrer votre projet, ou cliquez sur la zone **Parcourir** pour accéder au dossier.  
+5.  Dans le **emplacement** , entrez le chemin d’accès où vous souhaitez enregistrer votre projet, ou cliquez sur **Parcourir** pour accéder au dossier.  
   
 6.  [!INCLUDE[clickOK](../includes/clickok-md.md)] Une vue réduite de votre projet apparaît dans l’Explorateur de solutions.  
   

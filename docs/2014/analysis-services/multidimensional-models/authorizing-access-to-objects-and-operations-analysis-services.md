@@ -1,5 +1,5 @@
 ---
-title: Autoriser l’accès aux objets et des opérations (Analysis Services) | Documents Microsoft
+title: Autoriser l’accès aux objets et aux opérations (Analysis Services) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.roledesignerdialog.membership.f1
 - sql12.asvs.roledesignerdialog.general.f1
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - granting permissions [Analysis Services], users
 ms.assetid: af28524e-5eca-4dce-a050-da4f406ee1c7
 caps.latest.revision: 35
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: ed4336f15c7bb024e9de1d4a4be7928ebf2c89af
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 43f0606aebac245a3756db1361ea8f1cf6360358
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36140109"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37249179"
 ---
 # <a name="authorizing-access-to-objects-and-operations-analysis-services"></a>Autorisation de l'accès à des objets et des opérations (Analysis Services)
   L'accès utilisateur non-administratif aux cubes, aux dimensions et aux modèles d'exploration de données au sein d'une base de données [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] est octroyé via l'appartenance à un ou à plusieurs rôles de base de données. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] les administrateurs créent ces rôles de base de données, octroient des autorisations en lecture ou en lecture/écriture sur des objets [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , puis ajoutent des groupes et des utilisateurs [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows pour chaque rôle.  
@@ -56,7 +56,7 @@ ms.locfileid: "36140109"
   
  **Étape 1 : Administration du serveur**  
   
- En guise de première étape, identifiez qui disposera de droits d'administrateur au niveau du serveur. Pendant l'installation, l'administrateur local qui installe SQL Server doit spécifier un ou plusieurs comptes Windows en tant qu'administrateur serveur Analysis Services. Les administrateurs de serveur disposent de toutes les autorisations possibles sur un serveur, notamment l'autorisation pour afficher, modifier et supprimer les objets sur le serveur ou afficher les données associées. Une fois l'installation terminée, un administrateur de serveur peut ajouter ou supprimer des comptes pour changer l'appartenance de ce rôle. Consultez [accorder des autorisations d’administrateur de serveur &#40;Analysis Services&#41; ](../instances/grant-server-admin-rights-to-an-analysis-services-instance.md) pour plus d’informations sur ce niveau d’autorisation.  
+ En guise de première étape, identifiez qui disposera de droits d'administrateur au niveau du serveur. Pendant l'installation, l'administrateur local qui installe SQL Server doit spécifier un ou plusieurs comptes Windows en tant qu'administrateur serveur Analysis Services. Les administrateurs de serveur disposent de toutes les autorisations possibles sur un serveur, notamment l'autorisation pour afficher, modifier et supprimer les objets sur le serveur ou afficher les données associées. Une fois l'installation terminée, un administrateur de serveur peut ajouter ou supprimer des comptes pour changer l'appartenance de ce rôle. Consultez [accorder des autorisations administrateur du serveur &#40;Analysis Services&#41; ](../instances/grant-server-admin-rights-to-an-analysis-services-instance.md) pour plus d’informations sur ce niveau d’autorisation.  
   
  **Étape 2 : Administration de bases de données**  
   
@@ -95,7 +95,7 @@ ms.locfileid: "36140109"
  Cela permet de minimiser l'actualisation des définitions de rôle et de l'appartenance de rôle dans le modèle et fournit une meilleure visibilité sur les assignations de rôle ce qui facilite l'implémentation et la mise à jour des autorisations du cube.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Accorder des autorisations d’administrateur de serveur &#40;Analysis Services&#41;](../instances/grant-server-admin-rights-to-an-analysis-services-instance.md)   
+ [Accorder des autorisations administrateur du serveur &#40;Analysis Services&#41;](../instances/grant-server-admin-rights-to-an-analysis-services-instance.md)   
  [Rôles et autorisations &#40;Analysis Services&#41;](roles-and-permissions-analysis-services.md)   
  [Méthodologies d’authentification pris en charge par Analysis Services](../instances/authentication-methodologies-supported-by-analysis-services.md)  
   

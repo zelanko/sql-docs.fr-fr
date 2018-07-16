@@ -1,5 +1,5 @@
 ---
-title: Élément RefreshInterval (ASSL) | Documents Microsoft
+title: Élément RefreshInterval (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - RefreshInterval element
 ms.assetid: 2761d26a-5fb0-452c-9a89-12f8dc658c33
 caps.latest.revision: 37
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 60dbb6d89483305d971488209b8e13f85e7c2840
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: f3fecbe3eef6eb68af256dfcc0a94ddef1ba3aee
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36052937"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37315049"
 ---
 # <a name="refreshinterval-element-assl"></a>Élément RefreshInterval (ASSL)
   Spécifie l'intervalle d'actualisation des données liées associées à l'élément parent.  
@@ -52,7 +52,7 @@ ms.locfileid: "36052937"
 |--------------------|-----------------|  
 |Type de données et longueur|Durée XML|  
 |Cardinalité|0-1: élément facultatif qui peut apparaître une fois et une seule.|  
-|Valeur par défaut|[ProactiveCachingIncrementalProcessingBinding](../data-type/binding-data-type-assl.md) ou [ProactiveCachingQueryBinding](../data-type/querybinding-data-type-assl.md) = 1 PT-s|  
+|Valeur par défaut|[ProactiveCachingIncrementalProcessingBinding](../data-type/binding-data-type-assl.md) ou [ProactiveCachingQueryBinding](../data-type/querybinding-data-type-assl.md) = 1 s PT|  
 |Valeur par défaut|Tous les autres = PT1m|  
   
 ## <a name="element-relationships"></a>Relations entre les éléments  

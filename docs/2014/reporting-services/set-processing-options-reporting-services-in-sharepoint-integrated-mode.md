@@ -1,5 +1,5 @@
 ---
-title: Définir les Options de traitement (Reporting Services en Mode intégré SharePoint) | Documents Microsoft
+title: Définir les Options de traitement (Reporting Services en Mode intégré SharePoint) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - SharePoint integration [Reporting Services], content management
 - snapshots [Reporting Services], creating
@@ -16,13 +16,13 @@ ms.assetid: 453b19a1-739a-4b67-aeea-2069b52204e1
 caps.latest.revision: 14
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 0b1d308718d1bfd1b9215cfe9595439f5657b95e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: b04adc1d53fd4c41732a753cca5d7be1a3919c06
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36039452"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37255651"
 ---
 # <a name="set-processing-options-reporting-services-in-sharepoint-integrated-mode"></a>Définir les options de traitement (Reporting Services en mode intégré SharePoint)
   Vous pouvez définir des options de traitement sur un rapport [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] pour déterminer le moment où le traitement des données a lieu. Vous pouvez également définir une valeur d'expiration pour le traitement des rapports, ainsi que des options qui déterminent si l'historique du rapport en cours est activé.  
@@ -109,8 +109,8 @@ ms.locfileid: "36039452"
 1.  Utilisez Windows PowerShell pour définir le délai d'attente de base de données sur un serveur de rapports SharePoint. Pour plus d’informations, consultez le « obtenir et définir les propriétés de la base de données Reporting Service Application » section de [applets de commande PowerShell pour Reporting Services SharePoint Mode](../../2014/reporting-services/powershell-cmdlets-for-reporting-services-sharepoint-mode.md).  
   
 ## <a name="see-also"></a>Voir aussi  
- [Définir les propriétés de traitement des rapports](report-server/set-report-processing-properties.md)   
+ [Définir les propriétés de traitement de rapport](report-server/set-report-processing-properties.md)   
  [Mise en cache de rapports &#40;SSRS&#41;](report-server/caching-reports-ssrs.md)   
- [Définition des valeurs de délai d’attente pour le traitement des rapports et Dataset partagé &#40;SSRS&#41;](report-server/setting-time-out-values-for-report-and-shared-dataset-processing-ssrs.md)  
+ [Définition des valeurs de délai d’attente pour traitement des rapports et jeu de données partagée &#40;SSRS&#41;](report-server/setting-time-out-values-for-report-and-shared-dataset-processing-ssrs.md)  
   
   

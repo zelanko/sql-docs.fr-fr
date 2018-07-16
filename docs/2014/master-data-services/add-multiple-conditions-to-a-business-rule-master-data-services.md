@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - business rules [Master Data Services], multiple conditions
 ms.assetid: 5f0f6958-6cf2-444b-bdcd-05b887637a0b
 caps.latest.revision: 6
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: e5ac7bab7712a268e3fe8fd37f1a5ae799ef55dc
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: f7994861c246b31731dbff82069eed091379ad6a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36139623"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37275175"
 ---
 # <a name="add-multiple-conditions-to-a-business-rule-master-data-services"></a>Ajouter plusieurs conditions à une règle d'entreprise (Master Data Services)
   Dans [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], ajoutez plusieurs conditions **AND** ou **OR** à une règle d'entreprise lorsque vous souhaitez une règle plus complexe.  
@@ -62,18 +62,18 @@ ms.locfileid: "36139623"
   
 11. Dans le volet **Composants** , développez le nœud **Conditions** .  
   
-12. Cliquez sur une condition et faites-la glisser vers **IF** volet, à la **AND** ou **OR** étiquette de l’étape 10.  
+12. Cliquez sur une condition et faites-la glisser vers **IF** volet, à la **AND** ou **OR** étiquette à partir de l’étape 10.  
   
 13. Dans le **attributs** volet, cliquez sur un attribut et faites-le glisser vers le **modifier la Condition** du volet **sélectionner un attribut** étiquette.  
   
-14. Dans le **modifier la Condition** volet, complétez les champs requis.  
+14. Dans le **modifier la Condition** volet, remplissez tous les champs requis.  
   
 15. Dans le volet **Modifier la condition** , cliquez sur **Enregistrer l’élément**.  
   
-16. Si vous le souhaitez, pour ajouter plus de conditions, à partir de la **composants** volet, faites glisser **et** ou **ou** aux **et** ou **ou**dans les **IF** volet. Suivez ensuite les étapes 13 à 15.  
+16. Si vous le souhaitez, ajouter plus de conditions, à partir de la **composants** volet, faites glisser **AND** ou **OR** aux **AND** ou **OR**dans les **IF** volet. Suivez ensuite les étapes 13 à 15.  
   
     > [!TIP]  
-    >  Pour supprimer une condition, cliquez sur le nom de la condition et dans le **modifier la Condition** volet, cliquez sur **suppression de l’élément**.  
+    >  Pour supprimer une condition, cliquez sur le nom de la condition et, dans le **modifier la Condition** volet, cliquez sur **suppression de l’élément**.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Les règles d’entreprise &#40;Master Data Services&#41;](../../2014/master-data-services/business-rules-master-data-services.md)   

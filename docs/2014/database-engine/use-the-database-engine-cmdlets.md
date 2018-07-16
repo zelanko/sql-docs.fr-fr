@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Cmdlets [SQL Server], Encode-Sqlname
 - Encode-Sqlname cmdlet
@@ -23,15 +23,15 @@ helpviewer_keywords:
 - Cmdlets [SQL Server], Decode-Sqlname
 ms.assetid: 720aa982-09ae-41a3-b603-a91004cfbe3e
 caps.latest.revision: 24
-author: mgblythe
-ms.author: mblythe
-manager: jhubbard
-ms.openlocfilehash: 845b99288bc000d1bf6adf5f48c6ad5d3099c415
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 9e06c46020f0e3e04e81b3f46fada587ab55f7b6
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36141608"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37267125"
 ---
 # <a name="use-the-database-engine-cmdlets"></a>Utiliser les applets de commande du Moteur de base de données
   Les applets de commande Windows PowerShell sont des commandes à fonction unique qui utilisent généralement une convention d’affectation des noms de type « verbe-nom », par exemple **Get-Help** ou **Set-MachineName**. Le fournisseur [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] pour Windows PowerShell fournit des applets de commande spécifiques à [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
@@ -60,7 +60,7 @@ Invoke-Sqlcmd -Query "SELECT @@VERSION;" -QueryT 3
 |Décrit l’utilisation de l’applet de commande **Invoke-Sqlcmd** pour exécuter des scripts **sqlcmd** ou des commandes qui contiennent des instructions XQuery ou [!INCLUDE[tsql](../includes/tsql-md.md)] . Elle peut accepter l’entrée **sqlcmd** sous la forme d’un paramètre d’entrée de chaîne de caractères ou sous la forme du nom d’un fichier de script à ouvrir.|[Invoke-Sqlcmd, applet de commande](../../2014/database-engine/invoke-sqlcmd-cmdlet.md)|  
 |Décrit l’utilisation de l’applet de commande **Invoke-PolicyEvaluation** pour indiquer si un ensemble d’objets [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] cible est conforme ou non aux conditions définies dans les stratégies de gestion basée sur des stratégies. Vous pouvez éventuellement utiliser cette applet de commande pour reconfigurer toutes les options définissables dans les objets cibles qui ne sont pas conformes aux conditions des stratégies.|[Invoke-PolicyEvaluation (applet de commande)](../../2014/database-engine/invoke-policyevaluation-cmdlet.md)|  
 |Décrit l’utilisation de `Encode-Sqlname` et `Decode-Sqlname` pour gérer les identificateurs SQL Server qui contiennent des caractères non pris en charge dans les chemins Windows PowerShell.|[Encoder et décoder des identificateurs SQL Server](../powershell/encode-and-decode-sql-server-identifiers.md)|  
-|Décrit l’utilisation de `Convert-UrnToPath` pour convertir un SQL Server facilité de gestion objet URN Uniform Resource Name () le chemin d’accès de fournisseur SQL Server équivalente.|[Convertir des URN en chemins de fournisseur SQL Server](../../2014/database-engine/convert-urns-to-sql-server-provider-paths.md)|  
+|Décrit l’utilisation de `Convert-UrnToPath` pour convertir un SQL Server la facilité de gestion objet nom URN (Uniform Resource) le chemin d’accès de fournisseur SQL Server équivalente.|[Convertir des URN en chemins de fournisseur SQL Server](../../2014/database-engine/convert-urns-to-sql-server-provider-paths.md)|  
   
 ## <a name="see-also"></a>Voir aussi  
  [fournisseur PowerShell SQL Server](../powershell/sql-server-powershell-provider.md)   

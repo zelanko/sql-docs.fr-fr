@@ -3,26 +3,24 @@ title: Retour de données à partir d’une procédure stockée | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
+ms.technology: stored-procedures
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-stored-procs
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - stored procedures [SQL Server], returning data
 - returning data from stored procedure
 ms.assetid: 7a428ffe-cd87-4f42-b3f1-d26aa8312bf7
-caps.latest.revision: 25
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: b8120714aba03f2be632d19e846daea3789dba54
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: bd21d239fb1a4a947e5f6d17120cc6a63feb575b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36141492"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37249689"
 ---
 # <a name="return-data-from-a-stored-procedure"></a>Retour de données à partir d'une procédure stockée
   Il existe deux méthodes permettant de retourner des jeux de résultats ou des données d'une procédure vers un programme appelant : les paramètres de sortie et les codes de retour. Cette rubrique fournit des informations sur ces deux approches.  
@@ -78,10 +76,10 @@ GO
  [!INCLUDE[tsql](../../../includes/tsql-md.md)] les procédures peuvent utiliser le `cursor` uniquement pour les paramètres OUTPUT de type de données. Si le `cursor` type de données est spécifié pour un paramètre, mots clés VARYING et OUTPUT doivent être spécifiés pour ce paramètre dans la définition de procédure. Un paramètre peut être spécifié comme OUTPUT uniquement, mais si le mot clé VARYING est spécifié dans la déclaration de paramètre, le type de données doit être `cursor` et le mot clé OUTPUT doit également être spécifié.  
   
 > [!NOTE]  
->  Le `cursor` type de données ne peut pas être lié à des variables d’application via des API comme OLE DB, ODBC, ADO et DB-Library de la base de données. Étant donné que les paramètres de sortie doivent être liés avant une application puisse exécuter une procédure, les procédures avec `cursor` paramètres de sortie ne peut pas être appelées à partir de l’API de base de données. Ces procédures peuvent être appelées à partir de [!INCLUDE[tsql](../../../includes/tsql-md.md)] traitements, procédures ou déclencheurs uniquement lorsque le `cursor` variable de sortie est affectée à un [!INCLUDE[tsql](../../../includes/tsql-md.md)] local `cursor` variable.  
+>  Le `cursor` type de données ne peut pas être lié à des variables d’application via les API comme OLE DB, ODBC, ADO et DB-Library de la base de données. Paramètres de sortie doivent être liés avant qu’une application puisse exécuter une procédure, les procédures avec `cursor` paramètres de sortie ne peut pas être appelées à partir de l’API de base de données. Ces procédures peuvent être appelées à partir de [!INCLUDE[tsql](../../../includes/tsql-md.md)] traitements, procédures, des déclencheurs ou uniquement lorsque le `cursor` variable de sortie est affectée à un [!INCLUDE[tsql](../../../includes/tsql-md.md)] local `cursor` variable.  
   
 ### <a name="rules-for-cursor-output-parameters"></a>Règles pour les paramètres de sortie de curseur  
- Les règles suivantes se rapportent à `cursor` paramètres de sortie lorsque la procédure est exécutée :  
+ Les règles suivantes régissent `cursor` paramètres de sortie lorsque la procédure est exécutée :  
   
 -   Dans le cas d'un curseur avant uniquement, les lignes renvoyées dans le jeu de résultats du curseur sont seulement celles situées au niveau de la position du curseur ou au-delà de celui-ci, à la fin de la procédure, par exemple :  
   
@@ -108,7 +106,7 @@ GO
     >  L'état fermé n'a d'importance qu'au moment du retour. Par exemple, vous pouvez fermer un curseur au cours de l'exécution de la procédure, le rouvrir plus tard dans la procédure et renvoyer le jeu de résultats de ce curseur au traitement d'instructions, à la procédure ou au déclencheur appelant.  
   
 ### <a name="examples-of-cursor-output-parameters"></a>Exemples de paramètres de sortie de curseur  
- Dans l’exemple suivant, une procédure crée un paramètre de sortie, `@currency`_`cursor` à l’aide de la `cursor` type de données. La procédure stockée est ensuite appelée dans un traitement.  
+ Dans l’exemple suivant, une procédure est créée qui a un paramètre de sortie `@currency`_`cursor` à l’aide de la `cursor` type de données. La procédure stockée est ensuite appelée dans un traitement.  
   
  Commencez par créer la procédure qui déclare puis ouvre un curseur dans la table Currency.  
   
@@ -149,7 +147,7 @@ GO
 ```  
   
 ## <a name="returning-data-using-a-return-code"></a>Renvoi de données au moyen d'un code de retour  
- Une procédure peut retourner une valeur entière appelée « code de retour » pour indiquer l'état d'exécution d'une procédure. Le code de retour d'une procédure se définit au moyen de l'instruction RETURN. Comme dans le cas des paramètres OUTPUT, vous devez enregistrer le code de retour dans une variable lors de l'exécution de la procédure afin de pouvoir utiliser sa valeur dans le programme appelant. Par exemple, la variable `@result` du type de données `int` est utilisé pour stocker le code de retour de la procédure `my_proc`, telles que :  
+ Une procédure peut retourner une valeur entière appelée « code de retour » pour indiquer l'état d'exécution d'une procédure. Le code de retour d'une procédure se définit au moyen de l'instruction RETURN. Comme dans le cas des paramètres OUTPUT, vous devez enregistrer le code de retour dans une variable lors de l'exécution de la procédure afin de pouvoir utiliser sa valeur dans le programme appelant. Par exemple, la variable d’attribution `@result` du type de données `int` est utilisé pour stocker le code de retour de la procédure `my_proc`, telles que :  
   
 ```  
 DECLARE @result int;  

@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 topic_type:
 - apiref
 helpviewer_keywords:
 - Auto Stats event class
 ms.assetid: cd613fce-01e1-4d8f-86cc-7ffbf0759f9e
 caps.latest.revision: 34
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 2c90a2afb20e7757e8797aaf5849c5fe4449b1d5
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 796f417d3dae943334b6cdadc62c633dcbe18baf
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36038369"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37213019"
 ---
 # <a name="auto-stats-event-class"></a>Auto Stats (classe d'événements)
   La classe d’événements **Auto Stats** indique qu’une mise à jour automatique des statistiques d’index et de colonne s’est produite.  
@@ -41,7 +41,7 @@ ms.locfileid: "36038369"
 |**Erreur**|**Int**|Numéro d'erreur d'un événement donné. Il s’agit souvent du numéro d’erreur stocké dans l’affichage catalogue **sys.messages** .|31|Oui|  
 |**EventClass**|**Int**|Type d’événement = 58|27|non|  
 |**EventSequence**|**Int**|Séquence d'un événement donné au sein de la demande.|51|non|  
-|**EventSubClass**|**Int**|Type de sous-classe d'événements.<br /><br /> 1 : statistiques créées/mises à jour de façon synchrone ; **TextData** colonne indique les statistiques et ils ont été créés ou mis à jour.<br /><br /> 2 : Mise à jour asynchrone des statistiques ; mise en file d’attente du travail.<br /><br /> 3 : Mise à jour asynchrone des statistiques ; démarrage du travail.<br /><br /> 4 : Mise à jour asynchrone des statistiques ; fin du travail.|21|Oui|  
+|**EventSubClass**|**Int**|Type de sous-classe d'événements.<br /><br /> 1 : statistiques créées/mises à jour de façon synchrone ; **TextData** colonne indique les statistiques, et ils ont été créés ou mis à jour.<br /><br /> 2 : Mise à jour asynchrone des statistiques ; mise en file d’attente du travail.<br /><br /> 3 : Mise à jour asynchrone des statistiques ; démarrage du travail.<br /><br /> 4 : Mise à jour asynchrone des statistiques ; fin du travail.|21|Oui|  
 |**GroupID**|**Int**|ID du groupe de charges de travail où l'événement Trace SQL se déclenche.|66|Oui|  
 |**HostName**|**nvarchar**|Nom de l'ordinateur sur lequel le client est exécuté. Cette colonne de données est remplie si le nom de l'hôte est fourni par le client. Pour déterminer le nom de l'hôte, utilisez la fonction HOST_NAME.|8|Oui|  
 |**IndexID**|**Int**|ID de l'entrée index/statistiques sur l'objet affecté par l'événement. Pour déterminer l’ID d’index d’un objet, utilisez la colonne **index_id** de l’affichage catalogue **sys.indexes** .|24|Oui|  

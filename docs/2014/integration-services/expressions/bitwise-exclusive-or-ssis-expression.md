@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - ^ (bitwise exclusive OR operator)
 - bitwise exclusive OR (^)
@@ -16,13 +16,13 @@ ms.assetid: 6ac53cab-29c4-4835-9f87-371b058b2f38
 caps.latest.revision: 37
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: fd7fa9ba4532524b9d51ad2da246766e6cd673dd
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 1fc4229cdddc1d2b7411020ac11b0748b7935afb
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36052663"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37298649"
 ---
 # <a name="-bitwise-exclusive-or-ssis-expression"></a>^ (OR exclusif au niveau du bit) (expression SSIS)
   Effectue une opération OR exclusive au niveau du bit avec deux valeurs entières. Cette fonction compare chaque bit de son premier opérande au bit correspondant de son second opérande. Si un bit a pour valeur 0 et que l'autre a pour valeur 1, le bit obtenu correspondant a pour valeur 1. Si les deux bits ont pour valeur 0 ou 1, le bit obtenu correspondant a pour valeur 0.  
@@ -97,9 +97,9 @@ ReorderPoint ^ SafetyStockLevel
  00000110  
   
 ## <a name="see-also"></a>Voir aussi  
- [&#124;&#124;&#40;OR logique&#41; &#40;Expression SSIS&#41;](logical-or-ssis-expression.md)   
- [&#124;&#40;Au niveau du bit OR inclusif&#41; &#40;Expression SSIS&#41;](bitwise-inclusive-or-ssis-expression.md)   
+ [&#124;&#124;&#40;OR logique&#41; &#40;SSIS Expression&#41;](logical-or-ssis-expression.md)   
+ [&#124;&#40;Au niveau du bit OR inclusif&#41; &#40;SSIS Expression&#41;](bitwise-inclusive-or-ssis-expression.md)   
  [Opérateurs et associativité](operator-precedence-and-associativity.md)   
- [Opérateurs &#40;Expression SSIS&#41;](operators-ssis-expression.md)  
+ [Opérateurs &#40;SSIS Expression&#41;](operators-ssis-expression.md)  
   
   

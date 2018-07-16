@@ -1,5 +1,5 @@
 ---
-title: Les hiérarchies irrégulières | Documents Microsoft
+title: Hiérarchies déséquilibrées | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - ragged hierarchies [Analysis Services]
 ms.assetid: e40a5788-7ede-4b0f-93ab-46ca33d0cace
 caps.latest.revision: 16
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 57da031b308d9480c2523ef5ee6487bbf469a740
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 8f27105d3a19dc76a8cad643b057a27fff63d10f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36039194"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37267695"
 ---
 # <a name="ragged-hierarchies"></a>Hiérarchies déséquilibrées
   Une hiérarchie déséquilibrée est une hiérarchie définie par l'utilisateur qui a un nombre de niveaux impair. Voici quelques exemples : un organigramme où un responsable hiérarchique a comme subordonnés directs des cadres du service et des non cadres, ou des hiérarchies avec des attributs Country-Region-City, où certaines villes n'ont pas d'état (State) ou de province (Province) parent, notamment Washington D.C., la Cité du Vatican ou New Dehli.  
@@ -76,7 +76,7 @@ ms.locfileid: "36039194"
   
 ## <a name="see-also"></a>Voir aussi  
  [Créer des hiérarchies définies par l’utilisateur](user-defined-hierarchies-create.md)   
- [Hiérarchies des utilisateurs](../multidimensional-models-olap-logical-dimension-objects/user-hierarchies.md)   
+ [Hiérarchies utilisateur](../multidimensional-models-olap-logical-dimension-objects/user-hierarchies.md)   
  [Hiérarchie parent-enfant](parent-child-dimension.md)   
  [Propriétés des chaînes de connexion &#40;Analysis Services&#41;](../../analysis-services/instances/connection-string-properties-analysis-services.md)  
   

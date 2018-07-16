@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - tools [SQL Server], monitoring performance
 - monitoring server performance [SQL Server], tools
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - server performance [SQL Server], tools
 ms.assetid: 31529dfe-68e7-49f7-b3c2-39fcecf33a95
 caps.latest.revision: 35
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 76cb6106fb7b4c21ec8fbb8101ad7cfecea82282
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 1848d19202b8bfe7a7c44b00b9b2e781366ca90e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36039529"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37262465"
 ---
 # <a name="performance-monitoring-and-tuning-tools"></a>Outils d'analyse et de paramétrage des performances
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fournit un ensemble complet d'outils permettant de surveiller les événements de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et de paramétrer la structure physique de la base de données. Le choix de l'outil dépend du type de surveillance ou de paramétrage à effectuer et des événements spécifiques à contrôler.  
@@ -43,7 +43,7 @@ ms.locfileid: "36039529"
 |[Ouvrir le Moniteur d’activité &#40;SQL Server Management Studio&#41;](../performance-monitor/open-activity-monitor-sql-server-management-studio.md)|Le Moniteur d’activité dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] est utile pour les vues ad hoc de l’activité en cours et affiche graphiquement des informations sur :<br /><br /> les processus s'exécutant dans une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)];<br /><br /> les processus bloqués ;<br /><br /> les verrous ;<br /><br /> l'activité utilisateur.|  
 |[Trace SQL](../sql-trace/sql-trace.md)|[!INCLUDE[tsql](../../../includes/tsql-md.md)] qui créent, filtrent et définissent la trace :<br /><br /> [sp_trace_create &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-trace-create-transact-sql)<br /><br /> [sp_trace_generateevent &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-trace-generateevent-transact-sql)<br /><br /> [sp_trace_setevent &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql)<br /><br /> [sp_trace_setfilter &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-trace-setfilter-transact-sql)<br /><br /> [sp_trace_setstatus &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-trace-setstatus-transact-sql)|  
 |Journaux des erreurs|Le journal des événements des applications Windows fournit une image complète des événements survenant sur les systèmes d'exploitation Windows Server et Windows dans leur ensemble, ainsi que des événements survenant dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], dans l'Agent [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et dans la recherche en texte intégral. Il contient des informations exclusives sur les événements qui se produisent dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Vous pouvez utiliser les informations du journal des erreurs pour résoudre des problèmes liés à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
-|[Procédures stockées système &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/system-stored-procedures-transact-sql)|Les procédures stockées système [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ci-après fournissent une puissante alternative à de nombreuses tâches de surveillance :<br /><br /> [sp_who &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-who-transact-sql): <br />                    Renvoie des informations d'instantané sur les utilisateurs et les processus actifs de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , y compris l'exécution de l'instruction active et si l'instruction est bloquée.<br /><br /> [sp_lock &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-lock-transact-sql): signale les informations d’instantané sur les verrous, y compris l’ID d’objet, ID d’index, type de verrou et type ou de ressource auquel s’applique le verrou.<br /><br /> [sp_spaceused &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-spaceused-transact-sql): affiche une estimation de la quantité actuelle de l’espace disque utilisé par une table (ou une base de données entière).<br /><br /> [sp_monitor &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-monitor-transact-sql): affiche des statistiques, notamment l’utilisation du processeur, l’utilisation des e/s et la durée d’inactivité depuis **sp_monitor** la dernière exécution.|  
+|[Procédures stockées système &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/system-stored-procedures-transact-sql)|Les procédures stockées système [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ci-après fournissent une puissante alternative à de nombreuses tâches de surveillance :<br /><br /> [sp_who &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-who-transact-sql): <br />                    Renvoie des informations d'instantané sur les utilisateurs et les processus actifs de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , y compris l'exécution de l'instruction active et si l'instruction est bloquée.<br /><br /> [sp_lock &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-lock-transact-sql): renvoie des informations instantanées sur les verrous, y compris le ID d’objet, index ID, type de verrou et type ou la ressource à laquelle s’applique le verrou.<br /><br /> [sp_spaceused &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-spaceused-transact-sql): affiche une estimation de la quantité actuelle de l’espace disque utilisé par une table (ou une base de données entière).<br /><br /> [sp_monitor &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-monitor-transact-sql): affiche des statistiques, notamment l’utilisation du processeur, l’utilisation d’e/s et la durée d’inactivité depuis **sp_monitor** dernière exécution.|  
 |[DBCC &#40;Transact-SQL&#41;](/sql/t-sql/database-console-commands/dbcc-transact-sql)|Les instructions DBCC (Database Console Command) vous permettent de contrôler les statistiques de performances et la cohérence logique et physique d'une base de données.|  
 |[Fonctions intégrées &#40;Transact-SQL&#41;](/sql/t-sql/functions/functions)|Les fonctions intégrées affichent des statistiques d'instantané sur l'activité [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] depuis le démarrage du serveur ; ces statistiques sont stockées dans des compteurs [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] prédéfinis. Par exemple, **@@CPU_BUSY** indique pendant combien de temps l’UC a exécuté du code [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ; **@@CONNECTIONS** indique le nombre de connexions [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou de tentatives de connexion ; enfin, **@@PACKET_ERRORS** indique le nombre de paquets réseau sur des connexions [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |[Indicateurs de trace &#40;Transact-SQL&#41;](/sql/t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql)|Les indicateurs de trace affichent des informations sur une activité spécifique sur le serveur ; ils permettent de diagnostiquer les problèmes ou les causes agissant sur les performances (par exemple, chaînes de blocage).|  

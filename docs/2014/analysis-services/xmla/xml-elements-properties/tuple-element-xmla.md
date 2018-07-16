@@ -1,5 +1,5 @@
 ---
-title: Élément de tuple (XMLA) | Documents Microsoft
+title: Élément de tuple (XMLA) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -24,15 +24,15 @@ helpviewer_keywords:
 - Tuple element
 ms.assetid: d65aba10-55e1-49c1-81bc-0756c39c0da2
 caps.latest.revision: 12
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: fe470d60aa008723034e1bdbf95f3ecf593c8a3a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: e5db226260852207fbcfeb4dc0a071d03d0def7c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36053370"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37233689"
 ---
 # <a name="tuple-element-xmla"></a>Élément Tuple (XMLA)
   Contient une collection d’éléments [Member](member-element-xmla.md) figurant dans l’élément [Tuples](tuples-element-xmla.md) parent.  

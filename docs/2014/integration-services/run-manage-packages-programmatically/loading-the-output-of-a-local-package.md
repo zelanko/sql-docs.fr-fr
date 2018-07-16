@@ -20,16 +20,16 @@ ms.assetid: aba8ecb7-0dcf-40d0-a2a8-64da0da94b93
 caps.latest.revision: 64
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 8a29a37efbfeaa6765b91dc4a345fe316774c3be
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: c7b0056def4b62d7305fe5ac78db93ba15fb22a8
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36140067"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37254631"
 ---
 # <a name="loading-the-output-of-a-local-package"></a>Chargement de la sortie d'un package local
-  Les applications clientes peuvent lire la sortie des packages [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] quand la sortie est enregistrée dans les destinations [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] via [!INCLUDE[vstecado](../../includes/vstecado-md.md)], ou quand la sortie est enregistrée dans une destination de fichier plat à l’aide des classes présentes dans l’espace de noms **System.IO**. Toutefois, une application cliente peut également lire directement la sortie d'un package dans la mémoire, sans avoir besoin d'étape intermédiaire pour rendre les données persistantes. La clé de cette solution est la `Microsoft.SqlServer.Dts.DtsClient` espace de noms qui contient des implémentations spécialisées de la `IDbConnection`, `IDbCommand`, et **IDbDataParameter** des interfaces à partir de la **System.Data** espace de noms. L’assembly Microsoft.SqlServer.Dts.DtsClient.dll est installé par défaut dans **%ProgramFiles%\Microsoft SQL Server\100\DTS\Binn**.  
+  Les applications clientes peuvent lire la sortie des packages [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] quand la sortie est enregistrée dans les destinations [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] via [!INCLUDE[vstecado](../../includes/vstecado-md.md)], ou quand la sortie est enregistrée dans une destination de fichier plat à l’aide des classes présentes dans l’espace de noms **System.IO**. Toutefois, une application cliente peut également lire directement la sortie d'un package dans la mémoire, sans avoir besoin d'étape intermédiaire pour rendre les données persistantes. La clé pour cette solution est la `Microsoft.SqlServer.Dts.DtsClient` espace de noms qui contient des implémentations spécialisées de la `IDbConnection`, `IDbCommand`, et **IDbDataParameter** interfaces à partir de la **System.Data** espace de noms. L’assembly Microsoft.SqlServer.Dts.DtsClient.dll est installé par défaut dans **%ProgramFiles%\Microsoft SQL Server\100\DTS\Binn**.  
   
 > [!NOTE]  
 >  Conformément à la procédure décrite dans cette rubrique, la propriété DelayValidation de la tâche de flux de données et de tous les objets parents doit avoir la valeur par défaut **False**.  
@@ -41,7 +41,7 @@ ms.locfileid: "36140067"
   
 1.  Dans le package, configurez une destination DataReader afin de recevoir la sortie que vous souhaitez lire dans l'application cliente. Donnez un nom descriptif à la destination DataReader, puisque vous l'utiliserez ultérieurement dans votre application cliente. Prenez note du nom de la destination DataReader.  
   
-2.  Dans le projet de développement, définissez une référence à la `Microsoft.SqlServer.Dts.DtsClient` espace de noms en localisant l’assembly **Microsoft.SqlServer.Dts.DtsClient.dll**. Par défaut, cet assembly est installé dans **C:\Program Files\Microsoft SQL Server\100\DTS\Binn**. Importez l’espace de noms dans votre code à l’aide du langage c# `Using` ou [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] `Imports` instruction.  
+2.  Dans le projet de développement, définissez une référence à la `Microsoft.SqlServer.Dts.DtsClient` espace de noms en localisant l’assembly **Microsoft.SqlServer.Dts.DtsClient.dll**. Par défaut, cet assembly est installé dans **C:\Program Files\Microsoft SQL Server\100\DTS\Binn**. Importez l’espace de noms dans votre code à l’aide de C# `Using` ou [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] `Imports` instruction.  
   
 3.  Dans votre code, créez un objet de type `DtsClient.DtsConnection` avec une chaîne de connexion qui contient les paramètres de ligne de commande requis par **dtexec.exe** pour exécuter le package. Pour plus d’informations, voir [dtexec Utility](../packages/dtexec-utility.md). Ouvrez ensuite la connexion à l'aide de cette chaîne de connexion. Vous pouvez également vous servir de l’utilitaire **dtexecui** pour créer visuellement la chaîne de connexion nécessaire.  
   
@@ -86,7 +86,7 @@ ms.locfileid: "36140067"
     SELECT * FROM Sales.vIndividualCustomer WHERE CountryRegionName = ?  
     ```  
   
-6.  Cliquez sur `Parameters` et, dans le **définition des paramètres de requête** boîte de dialogue zone, mapper le paramètre d’entrée unique dans la requête, Parameter0, à la variable DtsClient::Country.  
+6.  Cliquez sur `Parameters` et, dans le **définir les paramètres de requête** boîte de dialogue zone, mappez le paramètre d’entrée unique dans la requête, Parameter0, à la variable DtsClient::Country.  
   
 7.  Ajoutez une transformation d'agrégation au flux de données et connectez la sortie de la source OLE DB à la transformation. Ouvrez l'Éditeur de transformation d'agrégation et configurez-le afin d'effectuer une opération « COUNT ALL » sur toutes les colonnes d'entrée (*) et de générer la sortie de la valeur agrégée avec l'alias CustomerCount.  
   
@@ -98,7 +98,7 @@ ms.locfileid: "36140067"
   
 1.  Créez une nouvelle application Windows Forms.  
   
-2.  Ajoutez une référence à la `Microsoft.SqlServer.Dts.DtsClient` espace de noms en naviguant jusqu'à l’assembly du même nom dans **%ProgramFiles%\Microsoft SQL Server\100\DTS\Binn**.  
+2.  Ajoutez une référence à la `Microsoft.SqlServer.Dts.DtsClient` espace de noms en accédant à l’assembly du même nom dans **%ProgramFiles%\Microsoft SQL Server\100\DTS\Binn**.  
   
 3.  Copiez et collez l'exemple de code suivant dans le module de code pour le formulaire.  
   
@@ -106,7 +106,7 @@ ms.locfileid: "36140067"
   
 5.  Modifier la valeur de la `dataReaderName` variable en fonction des besoins afin qu’elle contienne le nom de la destination DataReader dans le package.  
   
-6.  Placez un bouton et une zone de texte sur le formulaire. L’exemple de code utilise `btnRun` en tant que le nom du bouton et `txtResults` comme nom de la zone de texte.  
+6.  Placez un bouton et une zone de texte sur le formulaire. L’exemple de code utilise `btnRun` en tant que le nom du bouton, et `txtResults` comme nom de la zone de texte.  
   
 7.  Exécutez l'application et cliquez sur le bouton. Après une brève pause pendant l'exécution du package, vous devez voir apparaître la valeur d'agrégation calculée par le package (le nombre de clients au Canada) dans la zone de texte sur le formulaire.  
   
@@ -298,7 +298,7 @@ namespace DtsClientWParamCS
 }  
 ```  
   
-![Icône Integration Services (petite)](../media/dts-16.gif "icône Integration Services (petite)")**restent jusqu'à la Date avec Integration Services** <br /> Pour obtenir les derniers téléchargements, articles, exemples et vidéos de Microsoft, ainsi que des solutions sélectionnées par la communauté, visitez la page [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] sur MSDN :<br /><br /> [Visitez la page Integration Services sur MSDN](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Pour recevoir une notification automatique de ces mises à jour, abonnez-vous aux flux RSS disponibles sur la page.  
+![Icône Integration Services (petite)](../media/dts-16.gif "icône Integration Services (petite)")**rester jusqu'à la Date avec Integration Services  **<br /> Pour obtenir les derniers téléchargements, articles, exemples et vidéos de Microsoft, ainsi que des solutions sélectionnées par la communauté, visitez la page [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] sur MSDN :<br /><br /> [Visitez la page Integration Services sur MSDN](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Pour recevoir une notification automatique de ces mises à jour, abonnez-vous aux flux RSS disponibles sur la page.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Présentation des différences entre l’exécution locale et l’exécution distante](../run-manage-packages-programmatically/understanding-the-differences-between-local-and-remote-execution.md)   

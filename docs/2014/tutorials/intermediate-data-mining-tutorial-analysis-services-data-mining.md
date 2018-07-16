@@ -1,5 +1,5 @@
 ---
-title: Les intermédiaires didacticiel d’exploration de données (Analysis Services - Exploration de données) | Documents Microsoft
+title: Didacticiel d’exploration de données intermédiaire (Analysis Services - Exploration de données) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 404b31d5-27f4-4875-bd60-7b2b8613eb1b
 caps.latest.revision: 25
 author: minewiskan
 ms.author: owend
-manager: kfile
-ms.openlocfilehash: 545c219623331ef167731c3142f36642e530307a
-ms.sourcegitcommit: 8c040e5b4e8c7d37ca295679410770a1af4d2e1f
+manager: craigg
+ms.openlocfilehash: 2286ab1890865e651f8166ebd4cc8f0dd42274f6
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/21/2018
-ms.locfileid: "36312297"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37301299"
 ---
 # <a name="intermediate-data-mining-tutorial-analysis-services---data-mining"></a>Didacticiel sur l'exploration de données intermédiaire (Analysis Services - Exploration de données)
   [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] fournit un environnement intégré pour créer et utiliser des modèles d’exploration de données. Vous pouvez facilement créer une liaison avec des sources de données, créer et tester plusieurs modèles sur les mêmes données et déployer des modèles à utiliser dans des analyses prédictives.  
@@ -37,32 +37,32 @@ ms.locfileid: "36312297"
 ## <a name="lesson-scenarios"></a>Scénarios des leçons  
  Suite au succès de votre campagne de publipostage ciblé, il vous a été demandé d'appliquer vos connaissances sur l'exploration de données afin de développer plusieurs nouveaux modèles à des fins de planification commerciale. Ces tâches sont les suivantes :  
   
--   **Prévisions :** , vous allez créer un *série chronologique* modèle, afin de prévoir les ventes de produits dans différentes régions du monde. Vous allez développer des modèles individuels pour chaque région et apprendre à utiliser *la prédiction croisée*.  
+-   **Prévisions :** vous allez créer un *série chronologique* modèle, afin de prévoir les ventes de produits dans différentes régions du monde. Vous allez développer des modèles individuels pour chaque région et découvrez comment utiliser *la prédiction croisée*.  
   
--   **Analyse du panier :** , vous allez créer un *modèle d’association*, pour analyser des regroupements de produits achetés lors de visites sur le [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] site de commerce électronique. Grâce à ce modèle de panier d'achat, vous pouvez recommander des produits aux clients.  
+-   **Analyse du panier :** vous allez créer un *modèle d’association*, pour analyser des regroupements de produits achetés lors de visites sur le [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] site de commerce électronique. Grâce à ce modèle de panier d'achat, vous pouvez recommander des produits aux clients.  
   
 -   **Analyse de séquence :** vous générez un *modèle sequence clustering*, pour analyser l’ordre dans lequel les clients achètent des produits. Grâce à ce modèle, vous pouvez planifier des modifications dans la conception du site Web ou de nouvelles offres de produits.  
   
--   **Analyse factorielle :** vous utilisez un *réseau neuronal* modèle pour Explorer les causes possibles de mauvaise qualité de service dans les données de centre d’appels. Selon les informations tirées du modèle préliminaire, vous allez créer un *modèle de régression logistique* pour prédire des stratégies visant à améliorer l’expérience utilisateur.  
+-   **Analyse factorielle :** vous utilisez un *réseau neuronal* modèle pour Explorer les causes possibles de mauvaise qualité de service dans les données de centre d’appels. Selon les informations tirées du modèle préliminaire, vous allez créer un *modèle de régression logistique* pour prédire les stratégies possibles pour améliorer l’expérience client.  
   
 ## <a name="what-you-will-learn"></a>Contenu du didacticiel  
  Ce didacticiel vous apprend à créer et utiliser différents types d'algorithmes d'exploration de données. Ce didacticiel contient les leçons suivantes :  
   
- [Leçon 1 : Création de la Solution d’exploration de données intermédiaire &#40;intermédiaire Didacticiel d’exploration de données&#41;](../../2014/tutorials/lesson-1-create-solution-intermediate-data-mining-tutorial.md)  
+ [Leçon 1 : Création de la Solution d’exploration de données intermédiaire &#40;didacticiel d’exploration de données intermédiaire&#41;](../../2014/tutorials/lesson-1-create-solution-intermediate-data-mining-tutorial.md)  
  Dans cette leçon, vous allez créer un projet basé sur la base de données [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)], afin de prendre en charge plusieurs nouvelles vues des sources de données et de nombreux autres modèles d'exploration de données.  
   
- [Leçon 2 : Création d’un scénario de prévision &#40;intermédiaire Didacticiel d’exploration de données&#41;](../../2014/tutorials/lesson-2-building-a-forecasting-scenario-intermediate-data-mining-tutorial.md)  
+ [Leçon 2 : Création d’un scénario de prévision &#40;didacticiel d’exploration de données intermédiaire&#41;](../../2014/tutorials/lesson-2-building-a-forecasting-scenario-intermediate-data-mining-tutorial.md)  
  Dans cette leçon, vous allez créer un modèle d'exploration de données qu'il sera possible d'utiliser dans un scénario de prévision. Vous allez également découvrir les modèles d'exploration de données créés avec l'algorithme MTS ([!INCLUDE[msCoName](../includes/msconame-md.md)] Time Series).  
   
  Vous allez générer des modèles pour des régions individuelles, puis générer un modèle général utilisable à des fins de prédiction croisée.  
   
- [Leçon 3 : Génération d’un scénario de panier d’achat &#40;intermédiaire Didacticiel d’exploration de données&#41;](../../2014/tutorials/lesson-3-building-a-market-basket-scenario-intermediate-data-mining-tutorial.md)  
+ [Leçon 3 : Génération d’un scénario de panier &#40;didacticiel d’exploration de données intermédiaire&#41;](../../2014/tutorials/lesson-3-building-a-market-basket-scenario-intermediate-data-mining-tutorial.md)  
  Dans cette leçon, vous allez ajouter une nouvelle vue de source de données et apprendre à utiliser des tables imbriquées et des clés. En fonction de ces données, vous allez créer un modèle d'exploration de données qu'il sera possible d'utiliser dans un scénario d'analyse de panier d'achat. Vous allez également découvrir les modèles d'exploration de données créés avec l'algorithme [!INCLUDE[msCoName](../includes/msconame-md.md)] Association.  
   
- [Leçon 4 : Création d’un scénario Sequence Clustering &#40;intermédiaire Didacticiel d’exploration de données&#41;](../../2014/tutorials/lesson-4-build-sequence-clustering-scenario-intermediate-data-mining.md)  
+ [Leçon 4 : Création d’un scénario Sequence Clustering &#40;didacticiel d’exploration de données intermédiaire&#41;](../../2014/tutorials/lesson-4-build-sequence-clustering-scenario-intermediate-data-mining.md)  
  Dans cette leçon, vous allez créer un modèle d'exploration de données qu'il sera possible d'utiliser dans un scénario Sequence Clustering. Vous apprendrez également à explorer des modèles d'exploration de données créés avec l'algorithme MSC ([!INCLUDE[msCoName](../includes/msconame-md.md)] Sequence Clustering).  
   
- [Leçon 5 : Génération de réseau neuronal et modèles de régression logistique &#40;intermédiaire Didacticiel d’exploration de données&#41;](../../2014/tutorials/lesson-5-build-models-intermediate-data-mining-tutorial.md)  
+ [Leçon 5 : Génération de réseau neuronal et modèles de régression logistique &#40;didacticiel d’exploration de données intermédiaire&#41;](../../2014/tutorials/lesson-5-build-models-intermediate-data-mining-tutorial.md)  
  Dans cette leçon, vous allez créer plusieurs modèles d'exploration de données connexes, à l'aide des algorithmes MNN (Microsoft Neural Network) et MLR (Microsoft Logistic Regression). Vous apprendrez également à utiliser des vues de sources de données pour explorer les données sous-jacentes des modèles.  
   
 ## <a name="requirements"></a>Spécifications  
@@ -74,11 +74,11 @@ ms.locfileid: "36312297"
   
 -   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] avec la base de données [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)] .  
   
- Pour des raisons de sécurité, les bases de données exemples ne sont pas installées par défaut. Pour installer les bases de données officiels pour [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], visitez le [Microsoft SQL Sample Databases](http://go.microsoft.com/fwlink/?LinkId=88417) page et sélectionnez la version appropriée de la base de données.  
+ Pour des raisons de sécurité, les bases de données exemples ne sont pas installées par défaut. Pour installer les bases de données officielles pour [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], visitez le [Microsoft SQL Sample Databases](http://go.microsoft.com/fwlink/?LinkId=88417) page et sélectionnez la version appropriée de la base de données.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Didacticiel d’exploration de données de base de données](../../2014/tutorials/basic-data-mining-tutorial.md)   
+ [Didacticiel d’exploration de données de base](../../2014/tutorials/basic-data-mining-tutorial.md)   
  [Didacticiel DMX Bike Buyer](../../2014/tutorials/bike-buyer-dmx-tutorial.md)   
- [Didacticiel DMX Market Basket](../../2014/tutorials/market-basket-dmx-tutorial.md)  
+ [Tutoriel DMX Market Basket](../../2014/tutorials/market-basket-dmx-tutorial.md)  
   
   

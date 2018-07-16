@@ -1,5 +1,5 @@
 ---
-title: Les comptes de domaine requis pour la batterie de serveurs SharePoint (Conseiller de mise à niveau) | Documents Microsoft
+title: Comptes de domaine requis pour la batterie de serveurs SharePoint (Conseiller de mise à niveau) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 90cd6d3e-a271-4cb8-81f2-fc555b2d3cab
 caps.latest.revision: 7
 author: markingmyname
 ms.author: maghan
-manager: jhubbard
-ms.openlocfilehash: fd013ae4f7266604dde798aa76393612cd578bad
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 122f0209e7254d558ac5cc3db806d8bb648a849c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36140661"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37251211"
 ---
 # <a name="domain-accounts-required-for-sharepoint-farm-upgrade-advisor"></a>Comptes de domaine requis pour la batterie de serveurs SharePoint (Conseiller de mise à niveau)
   Les produits SharePoint configurés pour un environnement de batterie requièrent l'utilisation de comptes de domaine.  
@@ -39,7 +39,7 @@ ms.locfileid: "36140661"
  « Le serveur de rapports s'exécute sous le compte NT AUTHORITY\NETWORK SERVICE intégré, qui n'est pas pris en charge par les batteries de serveurs SharePoint. Reconfigurez le serveur de rapports pour s’exécuter sous un compte de domaine. »  
   
 ## <a name="corrective-action"></a>Action corrective  
- Pour [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] et les versions antérieures, utilisez le Gestionnaire de Configuration de Reporting Services pour modifier le compte qui est désigné comme le compte de service report server.  
+ Pour [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] et les versions précédentes, utilisez le Gestionnaire de Configuration de Reporting Services pour modifier le compte qui est affecté en tant que le compte de service report server.  
   
 #### <a name="to-change-the-service-account-from-configuration-manager"></a>Pour modifier le compte de service à partir du Gestionnaire de configuration  
   

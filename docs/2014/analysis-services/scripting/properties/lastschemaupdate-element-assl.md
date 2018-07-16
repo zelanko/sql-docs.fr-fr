@@ -1,5 +1,5 @@
 ---
-title: Élément LastSchemaUpdate (ASSL) | Documents Microsoft
+title: Élément LastSchemaUpdate (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - LastSchemaUpdate element
 ms.assetid: 0634c105-91cc-4882-87be-97ca29a251a6
 caps.latest.revision: 37
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: aa6ea025f62fdfd00c65c1b839da8d045fc9e9b9
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 94fe98ca4a898e3cb126dcddcd45f367999b7daf
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36140092"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37306469"
 ---
 # <a name="lastschemaupdate-element-assl"></a>Élément LastSchemaUpdate (ASSL)
   Contient l'horodateur en lecture seule de la mise à jour des métadonnées de l'élément parent.  
@@ -58,7 +58,7 @@ ms.locfileid: "36140092"
   
 |Relation|Élément|  
 |------------------|-------------|  
-|Éléments parents|[Assembly](../objects/assembly-element-assl.md), [Cube](../objects/cube-element-assl.md), [Database](../objects/database-element-assl.md), [DataSource](../objects/datasource-element-assl.md), [DataSourceView](../objects/datasourceview-element-assl.md), [Dimension](../objects/dimension-element-assl.md), [MdxScript](../objects/mdxscript-element-assl.md), [MeasureGroup](../objects/group-element-assl.md), [MiningModel](../objects/miningmodel-element-assl.md), [MiningStructure](../objects/miningstructure-element-assl.md), [Partition](../objects/partition-element-assl.md), [Permission](../data-type/permission-data-type-assl.md), [Perspective](../objects/perspective-element-assl.md)|  
+|Éléments parents|[Assembly](../objects/assembly-element-assl.md), [Cube](../objects/cube-element-assl.md), [base de données](../objects/database-element-assl.md), [DataSource](../objects/datasource-element-assl.md), [DataSourceView](../objects/datasourceview-element-assl.md), [Dimension](../objects/dimension-element-assl.md), [MdxScript](../objects/mdxscript-element-assl.md), [MeasureGroup](../objects/group-element-assl.md), [MiningModel](../objects/miningmodel-element-assl.md), [MiningStructure](../objects/miningstructure-element-assl.md), [Partition](../objects/partition-element-assl.md), [Autorisation](../data-type/permission-data-type-assl.md), [Perspective](../objects/perspective-element-assl.md)|  
 |Éléments enfants|None|  
   
 ## <a name="remarks"></a>Notes  

@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine-imoltp
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: b0a248a4-4488-4cc8-89fc-46906a8c24a1
 caps.latest.revision: 25
-author: stevestein
-ms.author: sstein
-manager: jhubbard
-ms.openlocfilehash: 5c35ff979ce6d5e37d8eaba1942da681d3a73470
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: 2a6d943e02529785fdef26baeee82b6d11ddd433
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36039960"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37231090"
 ---
 # <a name="table-and-row-size-in-memory-optimized-tables"></a>Taille de la table et des lignes dans les tables optimisées en mémoire
   Une table mémoire optimisée se compose d'une collection de lignes et d'index qui contiennent des pointeurs vers les lignes. Dans une table mémoire optimisée, les lignes ne peuvent pas dépasser 8 060 octets. La compréhension de la taille d'une table mémoire optimisée vous aidera à comprendre si votre ordinateur dispose de suffisamment de mémoire.  
@@ -76,7 +76,7 @@ Table mémoire optimisée, comportant des index et des lignes.
   
 |Section|Taille|Commentaires|  
 |-------------|----------|--------------|  
-|Colonnes de type superficiel|SUM ([taille des types superficiels])<br /><br /> **Taille des différents types est la suivante :**<br /><br /> Bit &#124; 1<br /><br /> Tinyint &#124; 1<br /><br /> Smallint &#124; 2<br /><br /> Int &#124; 4<br /><br /> Real &#124; 4<br /><br /> Smalldatetime &#124; 4<br /><br /> Smallmoney &#124; 4<br /><br /> Bigint &#124; 8<br /><br /> Datetime &#124; 8<br /><br /> Datetime2 &#124; 8<br /><br /> Float 8<br /><br /> Money 8<br /><br /> Numérique (précision < = 18) &#124; 8<br /><br /> Time &#124; 8<br /><br /> NUMERIC(Precision>18) &#124; 16<br /><br /> Uniqueidentifier &#124; 16||  
+|Colonnes de type superficiel|SUM ([taille des types superficiels])<br /><br /> **Taille des types individuels est comme suit :**<br /><br /> Bit &#124; 1<br /><br /> Tinyint &#124; 1<br /><br /> Smallint &#124; 2<br /><br /> Int &#124; 4<br /><br /> Real &#124; 4<br /><br /> Smalldatetime &#124; 4<br /><br /> Smallmoney &#124; 4<br /><br /> Bigint &#124; 8<br /><br /> Datetime &#124; 8<br /><br /> Datetime2 &#124; 8<br /><br /> Float 8<br /><br /> Money 8<br /><br /> Numérique (précision < = 18) &#124; 8<br /><br /> Time &#124; 8<br /><br /> NUMERIC(Precision>18) &#124; 16<br /><br /> Uniqueidentifier &#124; 16||  
 |Remplissage de colonne superficielle|Les valeurs possibles sont :<br /><br /> 1 s'il y a des colonnes de type profond et la taille de données totale des colonnes superficielles est un nombre impair.<br /><br /> 0 dans les autres cas|Les types profonds sont les types (var)binary et (n)(var)char.|  
 |Tableau « offset » pour les colonnes de type profond|Les valeurs possibles sont :<br /><br /> 0 s'il n'y a aucune colonne de type profond<br /><br /> 2 + 2 * [nombre de colonnes de type profond] dans les autres cas|Les types profonds sont les types (var)binary et (n)(var)char.|  
 |Tableau NULL|[nombre de colonnes qui acceptent les valeurs NULL] / 8, arrondi à des octets entiers.|La table comporte un bit pour chaque colonne pouvant avoir la valeur NULL. Cela est arrondi à des octets entiers.|  

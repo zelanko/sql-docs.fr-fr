@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Reporting Services Configuration tool
 - configuration options [Reporting Services]
@@ -17,13 +17,13 @@ ms.assetid: 6ca03a09-d6a8-4c93-ba12-1c99dcbfb618
 caps.latest.revision: 10
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 63291b62b946e733dbcc48359b06e1f3e33abc15
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: c63f642cd5028bd227c6f6bf59e53de6339a5faa
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36038759"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37305009"
 ---
 # <a name="manage-a-reporting-services-native-mode-report-server"></a>Gérer un serveur de rapports Reporting Services (SSRS) en mode natif
   Cette section contient des procédures qui indiquent comment configurer une instance de serveur de rapports en mode natif à l'aide du Gestionnaire de configuration de Reporting Services.  
@@ -38,7 +38,7 @@ ms.locfileid: "36038759"
  [Configurer un compte de Service &#40;Gestionnaire de Configuration de SSRS&#41;](../../sql-server/install/configure-a-service-account-ssrs-configuration-manager.md)  
  Explique comment spécifier des informations de compte et de mot de passe pour le service Web Report Server.  
   
- [Inscrire un nom de Principal du Service &#40;SPN&#41; pour un serveur de rapports](register-a-service-principal-name-spn-for-a-report-server.md)  
+ [Inscrire un nom de principal du Service &#40;SPN&#41; pour un serveur de rapports](register-a-service-principal-name-spn-for-a-report-server.md)  
  Explique comment enregistrer manuellement un SPN pour un serveur de rapports qui s'exécute sous un compte d'utilisateur de domaine sur un réseau qui utilise l'authentification Kerberos.  
   
  [Configurer une URL &#40;Gestionnaire de Configuration de SSRS&#41;](../install-windows/configure-a-url-ssrs-configuration-manager.md)  
@@ -48,7 +48,7 @@ ms.locfileid: "36038759"
  Indique la procédure à suivre pour créer une base de données du serveur de rapports. Cette étape est nécessaire pour déployer une installation de Reporting Services.  
   
 ### <a name="advanced-or-optional-configuration"></a>Configuration avancée ou facultative  
- [Configurer un déploiement de montée en puissance parallèle de serveur de rapports en Mode natif &#40;Gestionnaire de Configuration de SSRS&#41;](../install-windows/configure-a-native-mode-report-server-scale-out-deployment.md)  
+ [Configurer un déploiement évolutif de serveurs de rapports en Mode natif &#40;Gestionnaire de Configuration de SSRS&#41;](../install-windows/configure-a-native-mode-report-server-scale-out-deployment.md)  
  Indique la procédure à suivre pour configurer plusieurs serveurs de rapports afin qu'ils partagent une base de données du serveur de rapports.  
   
  [Configurer un serveur de rapports pour la remise du courrier électronique &#40;Gestionnaire de Configuration de SSRS&#41;](../../sql-server/install/configure-a-report-server-for-e-mail-delivery-ssrs-configuration-manager.md)  
@@ -66,7 +66,7 @@ ms.locfileid: "36038759"
  [Activer ou désactiver les fonctionnalités Reporting Services](turn-reporting-services-features-on-or-off.md)  
  Explique comment supprimer les fonctionnalités inutilisées dans une installation Reporting Services.  
   
- [Activez les erreurs distantes &#40;Reporting Services&#41;](enable-remote-errors-reporting-services.md)  
+ [Activer les erreurs distantes &#40;Reporting Services&#41;](enable-remote-errors-reporting-services.md)  
  Explique comment définir des propriétés de serveur sur un serveur de rapports de façon à retourner des informations supplémentaires concernant les conditions d'erreur qui se produisent sur des serveurs distants.  
   
 ## <a name="see-also"></a>Voir aussi  

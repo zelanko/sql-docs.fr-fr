@@ -1,5 +1,5 @@
 ---
-title: Élément LogFileAppend (ASSL) | Documents Microsoft
+title: Élément LogFileAppend (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,18 +22,18 @@ helpviewer_keywords:
 - LogFileAppend element
 ms.assetid: f85e94a9-e5c5-478a-a5a0-fc99ed19b582
 caps.latest.revision: 32
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 2d337d4110afc07d8aa211bc17685bc0fc2e8d81
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: b4cd2f873b3d7394dac45a1a40b9b98483118f44
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36141052"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37190909"
 ---
 # <a name="logfileappend-element-assl"></a>Élément LogFileAppend (ASSL)
-  Détermine si le [Trace](../objects/trace-element-assl.md) élément ajoute sa sortie d’enregistrement dans le fichier journal existant ou la remplace.  
+  Détermine si le [Trace](../objects/trace-element-assl.md) élément ajoute sa sortie d’enregistrement dans le fichier journal existant, ou la remplace.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -62,10 +62,10 @@ ms.locfileid: "36141052"
 |Éléments enfants|None|  
   
 ## <a name="remarks"></a>Notes  
- L’élément qui correspond au parent de `LogFileAppend` dans l’objet d’objets AMO (Analysis Management) est modèle <xref:Microsoft.AnalysisServices.Trace>.  
+ L’élément qui correspond au parent de `LogFileAppend` dans l’objet d’objets AMO (Analysis Management) modèle est <xref:Microsoft.AnalysisServices.Trace>.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Effectue le suivi élément &#40;ASSL&#41;](../collections/traces-element-assl.md)   
+ [Effectue le suivi des élément &#40;ASSL&#41;](../collections/traces-element-assl.md)   
  [Propriétés &#40;ASSL&#41;](properties-assl.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Créer une Structure d’exploration de données relationnelles | Documents Microsoft
+title: Créer une Structure d’exploration de données relationnelles | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - dimensions [Analysis Services], data mining
 - data mining [Analysis Services], structure
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - OLAP mining models [Analysis Services]
 ms.assetid: 5547d639-377d-4ca7-88fc-ce1f9e2babc5
 caps.latest.revision: 35
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 3622989e4dbc5ba8d954f0f92513820829aaea54
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 261936c087c109087c9916513acd45468de55a7d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36053416"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37237909"
 ---
 # <a name="create-a-relational-mining-structure"></a>Créer une structure d’exploration de données relationnelle
   La plupart des modèles d'exploration de données sont basés sur des sources de données relationnelles. Les avantages de la création d'un modèle d'exploration de données relationnel sont que vous pouvez compiler des données ad hoc et effectuer l'apprentissage et la mise à jour d'un modèle sans entrer dans la complexité d'une création de cube.  
@@ -97,7 +97,7 @@ ms.locfileid: "36053416"
   
  Les données d'une structure d'exploration de données sont dérivées de tout ce qui se trouve dans la vue de source de données existante. Vous pouvez modifier les données dont vous avez besoin dans la vue de source de données, en ajoutant des relations ou des colonnes dérivées qui ne sont peut-être pas présentes dans les données relationnelles sous-jacentes. Vous pouvez également créer des calculs nommés ou des agrégations dans la vue de source de données. Ces fonctionnalités sont très pratiques si vous ne contrôlez pas l'organisation des données dans la source de données ou si vous souhaitez faire des essais avec différentes agrégations de données pour vos modèles d'exploration de données.  
   
- Vous ne devez pas utiliser la totalité des données disponibles ; vous pouvez choisir les colonnes à inclure dans la structure d'exploration de données. Tous les modèles sont basés sur cette structure, puis peuvent utiliser ces colonnes, ou vous pouvez marquer certaines colonnes en tant que `Ignore` pour un modèle particulier. Vous pouvez permettre aux utilisateurs d'un modèle d'exploration de données d'explorer ses résultats pour afficher des colonnes supplémentaires de la structure d'exploration de données qui n'étaient pas incluses dans le modèle d'exploration de données lui-même.  
+ Vous ne devez pas utiliser la totalité des données disponibles ; vous pouvez choisir les colonnes à inclure dans la structure d'exploration de données. Tous les modèles qui sont ensuite basées sur cette structure peuvent utiliser ces colonnes, ou vous pouvez marquer certaines colonnes en tant que `Ignore` pour un modèle particulier. Vous pouvez permettre aux utilisateurs d'un modèle d'exploration de données d'explorer ses résultats pour afficher des colonnes supplémentaires de la structure d'exploration de données qui n'étaient pas incluses dans le modèle d'exploration de données lui-même.  
   
 ##  <a name="bkmk_ContentDataType"></a> Comment spécifier le type de contenu et le type de données  
  Le type de données est à peu près le même que les types de données que vous spécifiez dans SQL Server ou dans d'autres interfaces d'application : dates et heures, nombres de différentes tailles, valeurs booléennes, texte et autres données discrètes.  

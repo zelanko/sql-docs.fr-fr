@@ -1,5 +1,5 @@
 ---
-title: Calcul de prédiction (outils d’analyse de Table pour Excel) | Documents Microsoft
+title: Calcul de prédiction (outils d’analyse de Table pour Excel) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - mining model, regression
 - Table Analysis tools
@@ -17,20 +17,20 @@ helpviewer_keywords:
 - prediction calculator
 ms.assetid: 8bb8c318-e85f-4fd6-b32b-4cdfb13ca1b5
 caps.latest.revision: 18
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: ac962304d0870c3f0882a02a0a97eb3f266aaa9a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: fde8a692652cbe166eaf2075a3cd0da5e17a7d6b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36052953"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37301189"
 ---
 # <a name="prediction-calculator-table-analysis-tools-for-excel"></a>Calcul de prédiction (Outils d'analyse de table pour Excel)
   ![Outil calcul de prédiction](media/tat-predcal.gif "outil calcul de prédiction")  
   
- Le **calcul de prédiction** outil vous permet de créer une carte de performance qui peut être utilisé pour analyser les nouvelles données et évaluer des options ou des risques. Par exemple, si vous avez des données historiques et socioéconomiques concernant des clients, le **calcul de prédiction** outil peut vous aider avec les deux tâches principales :  
+ Le **calcul de prédiction** outil vous permet de créer une carte de performance qui peut être utilisé pour analyser les nouvelles données et évaluer des options ou risque. Par exemple, si vous avez des données historiques et socioéconomiques sur les clients, le **calcul de prédiction** outil peut vous aider à avec deux tâches principales :  
   
 -   Génération d'une analyse sous-jacente de données socioéconomiques, de comportement d'achat et différents autres facteurs.  
   
@@ -44,11 +44,11 @@ ms.locfileid: "36052953"
   
 1.  Ouvrez une table Excel contenant les données à analyser.  
   
-2.  Cliquez sur **calcul de prédiction** sur la **analyser** onglet.  
+2.  Cliquez sur **calcul de prédiction** sur le **analyser** onglet.  
   
 3.  Dans le **calcul de prédiction** boîte de dialogue, pour la cible, choisissez la colonne que vous souhaitez prédire, par exemple le comportement d’achat.  
   
-4.  Spécifiez la valeur ciblée : Si la valeur est numérique, utilisez l’option **dans la plage**, puis tapez les valeurs minimales et maximales de la plage désirée. Si la valeur est discrète, sélectionnez le **exactement** option et sélectionnez la valeur dans la liste déroulante.  
+4.  Spécifiez la valeur ciblée : Si la valeur est numérique, utilisez l’option **dans la plage**, puis tapez les valeurs minimales et maximales de la plage désirée. Si la valeur est discrète, sélectionnez le **exactement** option, puis sélectionnez la valeur dans la liste déroulante.  
   
 5.  Cliquez sur **choisir les colonnes à utiliser pour l’analyse**.  
   
@@ -56,7 +56,7 @@ ms.locfileid: "36052953"
   
      Pour éviter de fausser les résultats, vous devez également supprimer les colonnes qui contiennent des informations en double. Par exemple, si vous avez une colonne Revenu qui contient des données numériques, et une colonne Revenu de groupe qui contient les étiquettes Haut, Moyen et Bas, vous ne devez pas inclure les deux colonnes dans le même modèle. Créez plutôt un modèle séparé pour chaque colonne.  
   
-7.  Dans le **Options de sortie** section, sélectionnez **calcul opérationnel** pour créer l’analyse et le tableau de bord dans un classeur Excel. Sélectionnez **calcul prêt à l’imprimante** pour créer l’analyse et également générer un rapport qui peut être imprimé et utilisé pour calculer les scores manuellement.  
+7.  Dans le **Options de sortie** section, sélectionnez **calcul opérationnel** pour créer l’analyse et le tableau de bord dans un classeur Excel. Sélectionnez **calculatrice de prêt à l’impression** pour créer l’analyse et également générer un rapport qui peut être imprimé et utilisé pour calculer les scores manuellement.  
   
 8.  Cliquez sur **Exécuter**.  
   
@@ -68,16 +68,16 @@ ms.locfileid: "36052953"
 ## <a name="understanding-the-scoring-reports"></a>Présentation des rapports de score  
  Si vous sélectionnez les deux options de sortie, le Calcul de prédiction crée les trois nouvelles feuilles de calcul suivantes dans le classeur actuel :  
   
--   A **rapport de prédiction**qui contient les résultats d’analyse, avec des tables interactives et graphiques qui vous aident à faire des essais avec les interactions et les bénéfices.  
+-   Un **rapport de prédiction**qui contient les résultats d’analyse, complets avec des tableaux interactifs et graphiques qui vous aident à faire des essais avec les interactions et les bénéfices.  
   
 -   Interactif **calcul de prédiction** qui vous permet de créer des scores.  
   
--   A **calcul imprimable** avec des instructions et des coefficients à utiliser dans le calcul de score.  
+-   Un **calcul imprimable** des instructions et des coefficients à utiliser dans les scores.  
   
 -   Cette section décrit les informations dans chaque rapport et explique comment utiliser les diverses options de rapport.  
   
 ### <a name="prediction-report-with-graphs"></a>Rapport de prédiction avec graphiques  
- Le premier rapport de prédiction est intitulé **rapport du calcul de prédiction pour le \<état cible > de \<attribut cible >**. Il contient une table de facteurs dérivée de l'analyse, avec les outils destinés à aider à évaluer l'impact financier d'une analyse particulière.  
+ Le premier rapport de prédiction est intitulé **rapport du calcul de prédiction pour la \<état cible > de \<attribut cible >**. Il contient une table de facteurs dérivée de l'analyse, avec les outils destinés à aider à évaluer l'impact financier d'une analyse particulière.  
   
 #### <a name="table-for-specifying-costs-and-profits"></a>Table pour spécifier coûts et bénéfices  
  Le premier outil dans ce rapport, en haut et à gauche du rapport, est une table où vous pouvez spécifier les coûts et bénéfices associés à la prédiction correcte et incorrecte d'une valeur.  Ces coûts et bénéfices sont nécessaires pour calculer le seuil de score optimum pour le calcul.  
@@ -92,7 +92,7 @@ ms.locfileid: "36052953"
 #### <a name="chart-for-viewing-maximum-profit"></a>Établir un graphique pour consulter le profit maximal  
  À mesure que vous entrez des valeurs dans le tableau, les graphiques connexes se mettent à jour automatiquement pour vous montrer le meilleur point pour maximiser le profit compte tenu du modèle actuel. Le diagramme linéaire à droite de cette table affiche le profit pour plusieurs seuils de score. Le bénéfice est estimé à l'aide des chiffres de bénéfice et de coût que vous entrez dans la table, selon les prédictions et probabilités tirées du modèle.  
   
- Par exemple, dans la table de gauche supérieure, la cellule pour le cas, **seuil suggéré pour augmenter les bénéfices** affiche la valeur 500, le graphique sur le côté droit affichera 500 comme le point le plus élevé sur le graphique linéaire. Cette valeur 500 signifie que pour augmenter les bénéfices, vous devez utiliser les 500 recommandations supérieures du modèle d'exploration de données, classées par probabilité.  
+ Par exemple, if, dans la table de gauche supérieure, la cellule pour **seuil suggéré pour augmenter les bénéfices** affiche la valeur 500, le graphique sur le côté droit affichera 500 comme le point le plus élevé sur le graphique linéaire. Cette valeur 500 signifie que pour augmenter les bénéfices, vous devez utiliser les 500 recommandations supérieures du modèle d'exploration de données, classées par probabilité.  
   
 #### <a name="table-listing-scores-for-each-attribute-and-value"></a>Table qui répertorie les scores pour chaque attribut et valeur  
  La table en bas et à gauche du rapport montre une décomposition détaillée des valeurs détectées, et comment chaque valeur affecte le résultat. Vous ne pouvez pas modifier les valeurs de cette table ; elles sont affichées pour vous aider à comprendre la prédiction.  
@@ -124,10 +124,10 @@ ms.locfileid: "36052953"
  Par exemple, bien que le premier graphique suggère que le fait de cibler les 500 premiers clients prédits par le modèle est la meilleur moyen de maximiser les bénéfices, vous pouvez décider après avoir examiné ce deuxième graphique que le risque de mal cibler les clients est trop grand et préférer limiter la campagne de marketing aux 400 premiers clients.  
   
 ### <a name="interactive-prediction-calculator"></a>Calcul de prédiction interactif  
- La deuxième feuille de calcul créée par l’outil de calcul de prédiction est intitulée **calcul de prédiction pour le \<état cible > de \<attribut cible >**. Il s'agit d'une feuille de calcul interactive que vous pouvez utiliser pour calculer des scores individuels. Dans la mesure où cette feuille de calcul utilise des séquences et des statistiques stockées dans le modèle, vous pouvez expérimenter avec différentes valeurs et voir comment elles affectent le score prédit. Ce rapport comporte également deux sections : l'une est interactive, l'autre sert de référence.  
+ La deuxième feuille de calcul créée par l’outil de calcul de prédiction est intitulée **calcul de prédiction pour la \<état cible > de \<attribut cible >**. Il s'agit d'une feuille de calcul interactive que vous pouvez utiliser pour calculer des scores individuels. Dans la mesure où cette feuille de calcul utilise des séquences et des statistiques stockées dans le modèle, vous pouvez expérimenter avec différentes valeurs et voir comment elles affectent le score prédit. Ce rapport comporte également deux sections : l'une est interactive, l'autre sert de référence.  
   
 #### <a name="first-table"></a>Première table  
- Vous pouvez sélectionner ou tapez une nouvelle valeur dans la **valeur** colonne de la table pour voir comment la modification de la valeur affecte le score.  
+ Vous pouvez sélectionner ou tapez une nouvelle valeur dans le **valeur** colonne de la table pour voir comment la modification de la valeur affecte le score.  
   
  Par exemple, si le rapport contient les valeurs suivantes, vous pouvez ramener la valeur de Voitures à 1 puis à 0 pour voir comment cela affecte le comportement d'achat du client. Lorsque vous modifiez la valeur de **voitures** à 0, la prédiction en bas passe à TRUE.  
   
@@ -139,7 +139,7 @@ ms.locfileid: "36052953"
 |Children|0|157|  
 |Education|Célibataires|22|  
 |Occupation|Skilled Manual|33|  
-|Propriétaire|Oui|8|  
+|Propriétaire de base|Oui|8|  
 |Voitures|2|50|  
 |Commute Distance|0-1,5 km|99|  
 |Région|North America|0|  
@@ -147,7 +147,7 @@ ms.locfileid: "36052953"
 |Total||491|  
 |Prédiction pour « oui »||FALSE|  
   
- Lorsque vous tapez dans la nouvelle valeur, le score affiché dans la cellule, prédiction pour Oui, passe à TRUE et le **Impact relatif** scores pour les divers attributs sont également mis à jour.  
+ Lorsque vous tapez dans la nouvelle valeur, le score affiché dans la cellule, prédiction pour Oui, passe à TRUE et le **Impact relatif** scores pour les différents attributs sont également mises à jour.  
   
 > [!NOTE]  
 >  Même si vous vous modifiez une seule valeur, telle que le nombre de voitures, les valeurs et impacts d'autres attributs peuvent changer lorsque vous agissez ainsi. Cela s'explique par le fait que les modèles d'exploration de données trouvent souvent des relations complexes entre les données, et la modification de toute variable peut avoir des effets imprévus. Pour cette raison, nous vous recommandons d'utiliser le calcul de prédiction interactif pour expérimenter avec différentes valeurs, ou de parcourir le modèle d'exploration de données pour mieux comprendre les interactions. Pour plus d’informations, consultez [parcourir les modèles](prediction-calculator-table-analysis-tools-for-excel.md).  
@@ -156,7 +156,7 @@ ms.locfileid: "36052953"
  Cette table montre les scores individuels pour chaque état possible des colonnes d'entrée, et l'impact relatif de chaque score sur les résultats. Cette table est statique ; il est fourni à des fins de référence uniquement.  
   
 ### <a name="printable-prediction-calculator"></a>Calcul de prédiction imprimable  
- La troisième feuille de calcul créée par l’outil de calcul de prédiction est intitulée **calculatrice PrintablePrediction pour la \<état cible > de \<attribut cible >**. Ce tableau de bord est destiné à être imprimé afin que vous puissiez calculer des scores manuellement lorsque vous n'êtes pas devant votre ordinateur.  
+ La troisième feuille de calcul créée par l’outil de calcul de prédiction est intitulée **calculatrice PrintablePrediction pour le \<état cible > de \<attribut cible >**. Ce tableau de bord est destiné à être imprimé afin que vous puissiez calculer des scores manuellement lorsque vous n'êtes pas devant votre ordinateur.  
   
 ##### <a name="to-print-and-use-the-scoring-report-generated-by-the-prediction-calculator"></a>Imprimer et utiliser le rapport de scores généré par le Calcul de prédiction  
   
@@ -170,7 +170,7 @@ ms.locfileid: "36052953"
   
 4.  Imprimez le tableau de bord.  
   
-5.  Pour chaque attribut, choisissez une seule valeur. Pour la valeur vous choisissez, placez une coche dans la zone et écrivez le nombre correspondant le **Score** colonne.  
+5.  Pour chaque attribut, choisissez une seule valeur. Pour la valeur vous choisissez, placez une coche dans la zone et écrire le numéro correspondant le **Score** colonne.  
   
 6.  Remplissez autant d'attributs que possible afin de garantir l'exactitude.  
   
@@ -179,7 +179,7 @@ ms.locfileid: "36052953"
 8.  Convertissez le score pour un résultat prédit à l’aide des critères imprimés sur la feuille immédiatement après le **Total** ligne.  
   
 ## <a name="related-tools"></a>Outils connexes  
- [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] fournit l'algorithme MLR (Microsoft Logistic Regression) pour une utilisation dans ce type d'analyse. Si vous êtes déjà familiarisé avec la régression logistique, vous pouvez facilement créer des modèles de régression logistique à l’aide de la **avancé** option du Client d’exploration de données pour Excel. Pour plus d’informations, consultez [avancées de modélisation &#40;des compléments d’exploration de données pour Excel&#41;](advanced-modeling-data-mining-add-ins-for-excel.md). Pour plus d’informations sur les options et paramètres pour les modèles de régression logistique, consultez la rubrique « Algorithme de régression logistique Microsoft » dans [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] la documentation en ligne.  
+ [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] fournit l'algorithme MLR (Microsoft Logistic Regression) pour une utilisation dans ce type d'analyse. Si vous êtes déjà familiarisé avec la régression logistique, vous pouvez facilement créer des modèles de régression logistique à l’aide de la **avancé** option du Client d’exploration de données pour Excel. Pour plus d’informations, consultez [avancés de modélisation &#40;des compléments d’exploration de données pour Excel&#41;](advanced-modeling-data-mining-add-ins-for-excel.md). Pour plus d’informations sur les options et paramètres pour les modèles de régression logistique, consultez la rubrique « Algorithme de régression logistique Microsoft » dans [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] la documentation en ligne.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Outils d’analyse de table pour Excel](table-analysis-tools-for-excel.md)  

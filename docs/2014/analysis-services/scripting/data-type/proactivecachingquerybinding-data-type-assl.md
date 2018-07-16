@@ -1,5 +1,5 @@
 ---
-title: Type de données ProactiveCachingQueryBinding (ASSL) | Documents Microsoft
+title: Type de données ProactiveCachingQueryBinding (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -20,18 +20,18 @@ helpviewer_keywords:
 - ProactiveCachingQueryBinding data type
 ms.assetid: c1b06e50-9e68-40db-bdab-fc2cb3a8ff64
 caps.latest.revision: 15
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 339c35a33d3d26268b027068c6ac7f5254046606
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: c93fc223e66910dde5e532ecf20e89497227f6d3
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36139899"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37263495"
 ---
 # <a name="proactivecachingquerybinding-data-type-assl"></a>Type de données ProactiveCachingQueryBinding (ASSL)
-  Définit un type de données dérivé qui représente les informations de la [ProactiveCaching](../objects/proactivecaching-element-assl.md) élément sur les modifications de source de données dans les tables et les vues identifiées lors de l’exécution des requêtes spécifiées qui exigent une reconstruction du cache.  
+  Définit un type de données dérivé qui représente les informations de la [ProactiveCaching](../objects/proactivecaching-element-assl.md) élément sur les modifications de source de données dans les tables et les vues identifiées lors de l’exécution de requêtes spécifiées qui exigent une reconstruction du cache.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -69,6 +69,6 @@ ms.locfileid: "36139899"
  L’élément correspondant dans le modèle d’objet objets AMO (Analysis Management) est <xref:Microsoft.AnalysisServices.ProactiveCachingQueryBinding>.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Types de données de script langage XML Analysis Services &#40;ASSL&#41;](analysis-services-scripting-language-xml-data-types-assl.md)  
+ [Types Analysis Services Scripting Language XML données &#40;ASSL&#41;](analysis-services-scripting-language-xml-data-types-assl.md)  
   
   

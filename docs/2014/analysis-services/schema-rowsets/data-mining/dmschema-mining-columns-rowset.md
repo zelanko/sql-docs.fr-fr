@@ -1,5 +1,5 @@
 ---
-title: Ensemble de lignes DMSCHEMA_MINING_COLUMNS | Documents Microsoft
+title: Ensemble de lignes DMSCHEMA_MINING_COLUMNS | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -18,18 +18,18 @@ helpviewer_keywords:
 - DMSCHEMA_MINING_COLUMNS rowset
 ms.assetid: ae35ccde-4438-46f4-8611-40b2b1a42fce
 caps.latest.revision: 35
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: d53285b088b471ad7a5fca87536cc897db8126d9
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 60dc2e773b93f27fe96489bcb55fdfe22c3168d4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36141657"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37232059"
 ---
 # <a name="dmschemaminingcolumns-rowset"></a>Ensemble de lignes DMSCHEMA_MINING_COLUMNS
-  Décrit les colonnes de tous les modèles d’exploration de données dans [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]. Cet ensemble de lignes est limité au catalogue actuel.  
+  Décrit les colonnes de tous les modèles d’exploration de données de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]. Cet ensemble de lignes est limité au catalogue actuel.  
   
 ## <a name="rowset-columns"></a>Colonnes de l'ensemble de lignes  
  Le `DMSCHEMA_MINING_COLUMNS` ensemble de lignes contient les colonnes suivantes.  
@@ -49,7 +49,7 @@ ms.locfileid: "36141657"
 |`IS_NULLABLE`|`DBTYPE_BOOL`||Valeur booléenne qui indique si la colonne autorise la valeur Null.<br /><br /> `FALSE` si la colonne est connue pour ne pas autoriser la valeur Null ; `TRUE` dans le cas contraire.|  
 |`DATA_TYPE`|`DBTYPE_UI2`||Indicateur du type de données de la colonne. La liste suivante contient des exemples de types d'indicateurs retournés :<br /><br /> « `TABLE` » retourne `DBTYPE_HCHAPTER`.<br /><br /> « `TEXT` » retourne `DBTYPE_WCHAR`.<br /><br /> « `LONG` » retourne `DBTYPE_I8`.<br /><br /> « `DOUBLE` » retourne `DBTYPE_R8`.<br /><br /> « `DATE` » retourne `DBTYPE_DATE`.|  
 |`TYPE_GUID`|`DBTYPE_GUID`||GUID du type de données de la colonne. Cette colonne n'est pas prise en charge par [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] ; elle contient systématiquement `VT_NULL`.|  
-|`CHARACTER_MAXIMUM_LENGTH`|`DBTYPE_UI4`||Longueur maximale possible pour une valeur de la colonne. Pour les colonnes de type character, binary ou bit, il s'agit de l'une des valeurs suivantes :<br /><br /> -La longueur maximale de la colonne en caractères, octets ou bits, selon le type de colonne, si une longueur est définie. Par exemple, la longueur maximale d'une colonne `CHAR(5)` dans une table SQL est 5.<br />-La longueur maximale du type de données en caractères, octets ou bits, selon le type de colonne, si la colonne n’a pas une longueur définie.<br />-Zéro (0) si la colonne, ni le type de données a une longueur maximale définie.<br />-   `NULL` pour tous les autres types de colonnes|  
+|`CHARACTER_MAXIMUM_LENGTH`|`DBTYPE_UI4`||Longueur maximale possible pour une valeur de la colonne. Pour les colonnes de type character, binary ou bit, il s'agit de l'une des valeurs suivantes :<br /><br /> -La longueur maximale de la colonne en caractères, octets ou bits, selon le type de colonne, si une longueur est définie. Par exemple, la longueur maximale d'une colonne `CHAR(5)` dans une table SQL est 5.<br />-La longueur maximale du type de données en caractères, octets ou bits, selon le type de colonne, si la colonne n’a pas une longueur définie.<br />-Zéro (0) si le type de données ni de la colonne a une longueur maximale définie.<br />-   `NULL` pour tous les autres types de colonnes|  
 |`CHARACTER_OCTET_LENGTH`|`DBTYPE_UI4`||Longueur maximale en octets de la colonne, si la colonne est de type character ou binary. La valeur zéro (0) signifie que la colonne ne possède pas de longueur maximale. Cette colonne contient `NULL` pour tous les autres types de colonnes.|  
 |`NUMERIC_PRECISION`|`DBTYPE_UI2`||Précision maximale de la colonne si son type de données est un type numérique autre que  `VARNUMERIC`.<br /><br /> `NULL` si le type de données de la colonne n'est pas numérique ou est `VARNUMERIC`.<br /><br /> La précision des colonnes dont le type de données est  `DBTYPE_DECIMAL` ou `DBTYPE_NUMERIC` dépend de la définition de la colonne.|  
 |`NUMERIC_SCALE`|`DBTYPE_I2`||Nombre de chiffres situés à droite de la virgule décimale si l'indicateur de type de la colonne est `DBTYPE_DECIMAL`, `DBTYPE_NUMERIC` ou `DBTYPE_VARNUMERIC`. Sinon, cette colonne contient `VT_NULL`.|  

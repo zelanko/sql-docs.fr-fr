@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vs.advancedsaveoptions
 helpviewer_keywords:
 - Advanced Save Options dialog box
 ms.assetid: 6e11159f-df1f-4681-9b37-c4a5e5f2fca1
 caps.latest.revision: 16
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 4af8221510389d65149ba36411f57f986af56202
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 08670b9b7ec22b7bc1e1c5c21064f65e0f867d47
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36141244"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37282385"
 ---
 # <a name="advanced-save-options"></a>Options d’enregistrement avancées
   Utilisez cette boîte de dialogue pour sélectionner un schéma d'encodage linguistique et spécifier les caractères à insérer à la fin de chaque ligne. Pour accéder à la **Options d’enregistrement avancées** boîte de dialogue le **fichier** menu, cliquez sur **enregistrer** \<nom de la requête >**.sql comme** à Ouvrez le **enregistrer le fichier sous** boîte de dialogue, cliquez sur la flèche bas sur le **enregistrer** bouton, puis cliquez sur **enregistrer avec encodage**.  

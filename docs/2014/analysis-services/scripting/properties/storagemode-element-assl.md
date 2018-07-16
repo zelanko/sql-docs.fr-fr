@@ -1,5 +1,5 @@
 ---
-title: Élément StorageMode (ASSL) | Documents Microsoft
+title: Élément StorageMode (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - StorageMode element
 ms.assetid: 197e8153-1ab6-43ba-a7e9-ae9be19ac511
 caps.latest.revision: 39
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 0d65d778e54a712e3fce18bdac5b3a0e31426863
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 3d61633743b4ce7e7b72f868b280e1bb376f1846
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36140382"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37299009"
 ---
 # <a name="storagemode-element-assl"></a>Élément StorageMode (ASSL)
   Détermine le mode de stockage de l'élément parent.  
@@ -69,9 +69,9 @@ ms.locfileid: "36140382"
 |*MOLAP*|Le parent utilise le mode OLAP multidimensionnel (MOLAP).|  
 |*ROLAP*|Le parent utilise le mode OLAP relationnel (ROLAP).|  
 |*HOLAP*|Le parent utilise le mode OLAP hybride (HOLAP). **Remarque :** cette valeur n’est pas valide pour [Dimension](../objects/dimension-element-assl.md) éléments parents.|  
-|*En mémoire*|Le parent utilise le stockage IMBI.|  
+|*InMemory*|Le parent utilise le stockage IMBI.|  
   
- L’énumération qui correspond aux valeurs autorisées pour `StorageMode` dans l’objet d’objets AMO (Analysis Management) est modèle <xref:Microsoft.AnalysisServices.StorageMode>.  
+ L’énumération qui correspond aux valeurs autorisées pour `StorageMode` dans l’objet d’objets AMO (Analysis Management) modèle est <xref:Microsoft.AnalysisServices.StorageMode>.  
   
  Les éléments qui correspondent aux parents de `StorageMode` dans le modèle objet AMO (Analysis Management Objects) sont <xref:Microsoft.AnalysisServices.Cube>, <xref:Microsoft.AnalysisServices.Dimension>, <xref:Microsoft.AnalysisServices.MeasureGroup> et <xref:Microsoft.AnalysisServices.Partition>.  
   

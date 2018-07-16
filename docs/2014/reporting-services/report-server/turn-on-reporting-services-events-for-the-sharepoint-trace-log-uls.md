@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 81110ef6-4289-405c-a931-e7e9f49e69ba
 caps.latest.revision: 17
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 7cf717edbf16f8f151bbf278d8bd69aa997c141b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 8b278a5e71b3954e8d296fd9dc7644b33b99aae9
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36140016"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37244329"
 ---
 # <a name="turn-on-reporting-services-events-for-the-sharepoint-trace-log-uls"></a>Activer des événements Reporting Services pour le journal des traces SharePoint (ULS)
   À partir de [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], les serveurs d' [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] en mode SharePoint peuvent écrire des événements [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] dans le journal des traces su service de journalisation unifiée SharePoint (ULS). [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] sont disponibles sur la page de supervision de l'Administration centrale de SharePoint.  
@@ -105,7 +105,7 @@ Get-SPDiagnosticConfig
 |Rendu en mode local||  
 |Proxy de client SOAP||  
 |Pages d'interface utilisateur||  
-|Power View|Entrées de journal écrites dans l'API **LogClientTraceEvents** . Ces entrées proviennent d’applications clientes, notamment [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)], une fonctionnalité de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] pour [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[SPS2010](../../includes/sps2010-md.md)] Enterprise Edition.<br /><br /> Toutes les entrées du journal provenant de l'API LogClientTraceEvents seront enregistrées sous la **catégorie** de « SQL Server Reporting Services » et la **zone** de « Power View ».<br /><br /> Le contenu des entrées enregistrées avec la zone de « Power View » est déterminé par l'application cliente.|  
+|Power View|Entrées de journal écrites dans l'API **LogClientTraceEvents** . Ces entrées proviennent d’applications clientes, notamment [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)], une fonctionnalité de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] complément pour [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[SPS2010](../../includes/sps2010-md.md)] Enterprise Edition.<br /><br /> Toutes les entrées du journal provenant de l'API LogClientTraceEvents seront enregistrées sous la **catégorie** de « SQL Server Reporting Services » et la **zone** de « Power View ».<br /><br /> Le contenu des entrées enregistrées avec la zone de « Power View » est déterminé par l'application cliente.|  
 |Runtime d'alerte de Report Server||  
 |Gestionnaire d'applications de domaine du service Web Report Server||  
 |Réponse mise en mémoire tampon service Web Report Server||  

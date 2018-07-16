@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.reportserver.serverproperties.advanced.f1
 ms.assetid: 07b78a84-a6aa-4502-861d-349720ef790e
 caps.latest.revision: 16
 author: markingmyname
 ms.author: maghan
-manager: erikre
-ms.openlocfilehash: 81c0e6a2bce527404e7c4f59c10a914e3ac938b2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 8b8459ccb49c2e8d2d681cada3646d7d9aa447b5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36039443"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37258125"
 ---
 # <a name="server-properties-advanced-page---reporting-services"></a>Propriétés du serveur (page Avancé) - Reporting Services
   Utilisez cette page pour définir des propriétés système sur le serveur de rapports. Il existe plusieurs façons de définir des propriétés système. Cet outil fournit une interface utilisateur graphique afin que vous puissiez définir des propriétés sans devoir écrire du code.  
@@ -39,10 +39,10 @@ ms.locfileid: "36039443"
  Détermine si le contrôle ActiveX RSClientPrint peut être téléchargé à partir du serveur de rapports. Les valeurs valides sont `true` et `false`. La valeur par défaut est `true`. Pour plus d’informations sur les paramètres supplémentaires nécessaires pour ce contrôle, consultez [Activer et désactiver l’impression côté client pour Reporting Services](../report-server/enable-and-disable-client-side-printing-for-reporting-services.md).  
   
  **EnableExecutionLogging**  
- Indique si la journalisation de l'exécution des rapports est activée. La valeur par défaut est `true`. Pour plus d’informations sur le journal d’exécution de serveur de rapports, consultez [journal de l’exécution du serveur de rapports et vue ExecutionLog3](../report-server/report-server-executionlog-and-the-executionlog3-view.md).  
+ Indique si la journalisation de l'exécution des rapports est activée. La valeur par défaut est `true`. Pour plus d’informations sur le journal de l’exécution de serveur de rapports, consultez [journal de l’exécution de serveur de rapports et vue ExecutionLog3](../report-server/report-server-executionlog-and-the-executionlog3-view.md).  
   
  **ExecutionLogDaysKept**  
- Nombre de jours pendant lesquels conserver les informations sur l'exécution du rapport dans le journal des exécutions. Les valeurs valides pour cette propriété sont `-1` via `2`,`147`,`483`,`647`. Si la valeur est égale à `-1`, les entrées ne sont pas supprimées de la table du journal des exécutions. La valeur par défaut est `60`.  
+ Nombre de jours pendant lesquels conserver les informations sur l'exécution du rapport dans le journal des exécutions. Valeurs valides pour cette propriété sont `-1` via `2`,`147`,`483`,`647`. Si la valeur est égale à `-1`, les entrées ne sont pas supprimées de la table du journal des exécutions. La valeur par défaut est `60`.  
   
  **SessionTimeout**  
  Durée (en secondes) pendant laquelle une session demeure active. La valeur par défaut est `600`.  

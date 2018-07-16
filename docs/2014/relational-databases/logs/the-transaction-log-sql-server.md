@@ -5,25 +5,24 @@ ms.date: 01/04/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-transaction-log
+ms.technology: ''
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - transaction logs [SQL Server], about
 - databases [SQL Server], transaction logs
 - logs [SQL Server], transaction logs
 ms.assetid: d7be5ac5-4c8e-4d0a-b114-939eb97dac4d
 caps.latest.revision: 58
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: da8d7d3b5a6cbe5864d7628ef58c61189fec6c7a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: cdaae11d21d1018e0c855036c4c82221c57a905d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36040397"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37223327"
 ---
 # <a name="the-transaction-log-sql-server"></a>Journal des transactions (SQL Server)
   Chaque base de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a un journal des transactions qui enregistre toutes les transactions et les modifications apportées par chacune d’entre elles. Le journal des transactions doit être vidé régulièrement pour éviter qu'il ne soit saturé. Toutefois, certains facteurs peuvent retarder la troncation du journal. Par conséquent, il est important de surveiller la taille du journal. Certaines opérations peuvent faire l'objet d'une journalisation minimale afin de réduire leur impact sur la taille des journaux de transactions.  
@@ -86,7 +85,7 @@ ms.locfileid: "36040397"
 | 1|CHECKPOINT|Aucun point de contrôle n'est apparu depuis la dernière troncation du journal ou le début du journal n'est pas encore allé au-delà d'un fichier journal virtuel. (Tous les modes de récupération)<br /><br /> Il s'agit d'une raison courante de retarder la troncation du journal. Pour plus d’informations, consultez [Points de contrôle de base de données &#40;SQL Server&#41;](database-checkpoints-sql-server.md).|  
 |2|LOG_BACKUP|Une sauvegarde du journal est requise avant que le journal des transactions puisse être tronqué. (Mode de récupération complète ou mode de récupération utilisant les journaux de transactions uniquement)<br /><br /> Lorsque la sauvegarde de journal suivante est terminée, l'espace du journal peut devenir réutilisable.|  
 |3|ACTIVE_BACKUP_OR_RESTORE|Une sauvegarde de données ou une restauration est en cours (tous les modes de récupération).<br /><br /> Si une sauvegarde des données empêche la troncation du journal, l'annulation de l'opération de sauvegarde peut résoudre le problème immédiat.|  
-|4|ACTIVE_TRANSACTION|Une transaction est active (tous les modes de récupération).<br /><br /> Une transaction longue peut exister au démarrage de la sauvegarde du fichier journal. Dans ce cas, libérer l'espace peut requérir une autre sauvegarde du fichier journal. Notez que les transactions longues empêchent la troncation du journal dans tous les modèles de récupération, notamment le mode de récupération simple, sous lequel le journal des transactions est généralement tronqué sur chaque point de contrôle automatique.<br /><br /> Une transaction est différée. Une *transaction différée* est en fait une transaction active dont la restauration est bloquée à cause d'une ressource indisponible. Pour plus d’informations sur les causes des transactions différées et la manière de les faire sortir de l’état différé, consultez [Transactions différées &#40;SQL Server&#41;](../backup-restore/deferred-transactions-sql-server.md). <br /><br />Les transactions à long terme peuvent également remplir le journal des transactions de tempdb. La base de données tempdb est implicitement utilisée par les transactions utilisateur pour les objets internes tels que les tables de travail pour le tri, les fichiers de travail pour le hachage, les tables de travail de curseur et la gestion de version de ligne. Même si la transaction utilisateur inclut uniquement la lecture des données (requêtes SELECT), les objets internes peuvent être créés et utilisés dans les transactions utilisateur. Ensuite, le journal des transactions tempdb peut être rempli.|  
+|4|ACTIVE_TRANSACTION|Une transaction est active (tous les modes de récupération).<br /><br /> Une transaction longue peut exister au démarrage de la sauvegarde du fichier journal. Dans ce cas, libérer l'espace peut requérir une autre sauvegarde du fichier journal. Notez qu’un transactions longues empêchent la troncation de journal dans tous les modes de récupération, notamment le mode de récupération simple, sous lequel le journal des transactions est généralement tronqué sur chaque point de contrôle automatique.<br /><br /> Une transaction est différée. Une *transaction différée* est en fait une transaction active dont la restauration est bloquée à cause d'une ressource indisponible. Pour plus d’informations sur les causes des transactions différées et la manière de les faire sortir de l’état différé, consultez [Transactions différées &#40;SQL Server&#41;](../backup-restore/deferred-transactions-sql-server.md). <br /><br />Les transactions à long terme peuvent également remplir le journal des transactions de tempdb. La base de données tempdb est implicitement utilisée par les transactions utilisateur pour les objets internes tels que les tables de travail pour le tri, les fichiers de travail pour le hachage, les tables de travail de curseur et la gestion de version de ligne. Même si la transaction utilisateur inclut la lecture seule des données (requêtes SELECT), les objets internes peuvent être créés et utilisés dans des transactions utilisateur. Ensuite, le journal des transactions tempdb peut être rempli.|  
 |5|DATABASE_MIRRORING|La mise en miroir de bases de données est interrompue ou, en mode haute performance, la base de données miroir se trouve derrière la base de données principale de manière significative. (Mode de récupération complète uniquement)<br /><br /> Pour plus d’informations, consultez [Mise en miroir de bases de données &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-sql-server.md).|  
 |6|REPLICATION|Durant les réplications transactionnelles, les transactions liées aux publications ne sont pas encore remises à la base de données de distribution. (Mode de récupération complète uniquement)<br /><br /> Pour plus d'informations sur la réplication transactionnelle, consultez [SQL Server Replication](../../relational-databases/replication/sql-server-replication.md).|  
 |7|DATABASE_SNAPSHOT_CREATION|Un instantané de base de données est créé. (Tous les modes de récupération)<br /><br /> Il s'agit d'une raison courante et habituellement brève du retard de la troncation du journal.|  
@@ -97,7 +96,7 @@ ms.locfileid: "36040397"
 |12|—|Usage interne uniquement|  
 |13|OLDEST_PAGE|Si une base de données est configurée pour utiliser des points de contrôle indirects, la page la plus ancienne dans la base de données peut être plus ancienne que le LSN du point de contrôle. Dans ce cas, la page la plus ancienne peut retarder la troncation du journal. (Tous les modes de récupération)<br /><br /> Pour plus d’informations sur les points de contrôle indirects, consultez [Points de contrôle de base de données &#40;SQL Server&#41;](database-checkpoints-sql-server.md).|  
 |14|OTHER_TRANSIENT|Cette valeur n'est pas utilisée actuellement.|  
-|16|XTP_CHECKPOINT|Lorsqu’une base de données a un groupe de fichiers mémoire optimisé, le journal des transactions ne peut pas tronquer jusqu'à automatique [!INCLUDE[hek_2](../../includes/hek-2-md.md)] point de contrôle est déclenchée (ce qui se produit à chaque 512 Mo de croissance du journal).<br /><br /> Remarque : Pour tronquer le journal des transactions avant une taille de 512 Mo, déclencher la commande Checkpoint manuellement par rapport à la base de données en question.|  
+|16|XTP_CHECKPOINT|Lorsqu’une base de données a un groupe de fichiers optimisé en mémoire, le journal des transactions ne peut pas tronquer jusqu'à automatique [!INCLUDE[hek_2](../../includes/hek-2-md.md)] point de contrôle est déclenchée (ce qui se produit chaque 512 Mo de croissance du journal).<br /><br /> Remarque : Pour tronquer le journal des transactions avant de 512 Mo, déclencher la commande Checkpoint manuellement par rapport à la base de données en question.|  
   
 ##  <a name="MinimallyLogged"></a> Opérations qui peuvent être consignées  
  La*journalisation minimale* implique de ne journaliser que les informations obligatoires pour pouvoir récupérer la transaction sans prendre en charge la récupération jusqu’à une date et heure. Cette rubrique identifie les opérations qui sont journalisées au minimum en mode de récupération utilisant les journaux de transactions (ainsi qu'en mode de récupération simple, sauf lorsqu'une sauvegarde est en cours).  
@@ -122,7 +121,7 @@ ms.locfileid: "36040397"
   
 -   Mises à jour partielles vers des types de données de valeur élevée, en incluant la clause .WRITE dans l'instruction [UPDATE](/sql/t-sql/queries/update-transact-sql) lors de l'insertion ou de l'ajout de nouvelles données. Notez que la journalisation minimale n'est pas utilisée quand des valeurs existantes sont mises à jour. Pour plus d’informations sur les types de données de valeur élevée, consultez [Types de données &#40;Transact-SQL&#41;](/sql/t-sql/data-types/data-types-transact-sql).  
   
--   [WRITETEXT](/sql/t-sql/queries/writetext-transact-sql) et [UPDATETEXT](/sql/t-sql/queries/updatetext-transact-sql) instructions lors de l’insertion ou de l’ajout de nouvelles données dans le `text`, `ntext`, et `image` les colonnes de type de données. Notez que la journalisation minimale n'est pas utilisée quand des valeurs existantes sont mises à jour.  
+-   [WRITETEXT](/sql/t-sql/queries/writetext-transact-sql) et [UPDATETEXT](/sql/t-sql/queries/updatetext-transact-sql) instructions lors de l’insertion ou l’ajout de nouvelles données dans le `text`, `ntext`, et `image` colonnes de type de données. Notez que la journalisation minimale n'est pas utilisée quand des valeurs existantes sont mises à jour.  
   
     > [!NOTE]  
     >  L'emploi des instructions WRITETEXT et UPDATETEXT est déconseillé, c'est pourquoi vous devez éviter de les utiliser dans les nouvelles applications.  
@@ -139,7 +138,7 @@ ms.locfileid: "36040397"
     -   Reconstruction d'un nouveau segment de mémoire DROP INDEX (le cas échéant).  
   
         > [!NOTE]  
-        >  Désallocation de pages au cours de l’index une [DROP INDEX](/sql/t-sql/statements/drop-index-transact-sql) opération est toujours entièrement journalisée.  
+        >  Désallocation d’index page pendant une [DROP INDEX](/sql/t-sql/statements/drop-index-transact-sql) opération est toujours entièrement journalisée.  
   
 ##  <a name="RelatedTasks"></a> Tâches associées  
  `Managing the transaction log`  

@@ -1,5 +1,5 @@
 ---
-title: Déploiement d’une Application de boîte de Message Exception | Documents Microsoft
+title: Déploiement d’une Application de boîte de Message Exception | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,21 +15,21 @@ helpviewer_keywords:
 - exception message box [SQL Server]
 ms.assetid: d8ecc67a-ef33-4d44-8ae6-eaacb8ca3e74
 caps.latest.revision: 17
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: b07b7b06757e2ed2c27f8a030a9322fcf92de678
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: a9b10cab0b1eefe92c6355a723bd696fa0528643
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36140806"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37307969"
 ---
 # <a name="deploying-an-exception-message-box-application"></a>Déploiement d'une application de boîte de message d'exception
-  La boîte de message d’exception est installée par [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et est pris en charge pour une utilisation dans vos applications Windows personnalisées pour améliorer la gestion des exceptions. La boîte de message d’exception étant installée par toutes les éditions de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sauf [!INCLUDE[ssEW](../../includes/ssew-md.md)], vous pouvez l’utiliser sans configuration supplémentaire sur tout ordinateur sur lequel [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] composants clients, y compris le Kit de développement, ont été installés.  
+  La boîte de message d’exception est installée par [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et est pris en charge pour une utilisation dans vos applications Windows personnalisées pour améliorer la gestion des exceptions. La boîte de message d’exception étant installée par toutes les éditions de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sauf [!INCLUDE[ssEW](../../includes/ssew-md.md)], vous pouvez l’utiliser sans aucune configuration supplémentaire sur n’importe quel ordinateur sur lequel [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] composants clients, y compris le Kit de développement logiciel, ont été installés.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Boîte de Message (Exception)](../../../2014/database-engine/dev-guide/program-exception-message-box.md)   
- [Référence de boîte de Message (exception)](../../../2014/database-engine/dev-guide/exception-message-box-reference.md)  
+ [Boîte de Message d’Exception programme](../../../2014/database-engine/dev-guide/program-exception-message-box.md)   
+ [Informations de référence sur la boîte de message d’exception](../../../2014/database-engine/dev-guide/exception-message-box-reference.md)  
   
   

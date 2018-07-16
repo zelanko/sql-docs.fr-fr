@@ -1,11 +1,11 @@
 ---
-title: Héberger des attributs de Protection et de la programmation de l’intégration CLR | Documents Microsoft
+title: Héberger des attributs de Protection et de la programmation de l’intégration CLR | Microsoft Docs
 ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: reference
+ms.technology: clr
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -20,26 +20,26 @@ caps.latest.revision: 28
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 4230a545122968a6b87005f4d10ad8f72ce03df2
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
+ms.openlocfilehash: 501c85065f0519987a7837042bec45b5d5b4db9d
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35699240"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37350311"
 ---
 # <a name="host-protection-attributes-and-clr-integration-programming"></a>Attributs de protection de l'hôte et programmation de l'intégration CLR
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Le Common Language Runtime (CLR) fournit un mécanisme pour annoter des interfaces de programmation d'applications (API) managées qui font partie du .NET Framework avec certains attributs qui peuvent intéresser un hôte du CLR, tel que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], à compter de [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]. Voici quelques exemples d'attributs de protection de l'hôte (HPA, Host Protection Attribute) :  
   
--   **SharedState**, qui indique si l’API expose la capacité de créer ou gérer l’état (par exemple, les champs de classe statique) partagé.  
+-   **SharedState**, qui indique si l’API expose la possibilité de créer ou gérer l’état (par exemple, les champs de classe statique) partagé.  
   
--   **Synchronisation**, ce qui indique si l’API expose la capacité à effectuer la synchronisation entre les threads.  
+-   **Synchronisation**, qui indique si l’API expose la possibilité d’effectuer la synchronisation entre les threads.  
   
 -   **ExternalProcessMgmt**, ce qui indique si l’API expose une méthode pour contrôler le processus hôte.  
   
- Étant donné ces attributs, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] spécifie une liste de HPA rejetés dans l'environnement hébergé par le biais de la sécurité d'accès du code. Les exigences d’autorités de certification sont spécifiées par un des trois [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] jeux d’autorisations : **SAFE**, **EXTERNAL_ACCESS**, ou **UNSAFE**. Un de ces trois niveaux de sécurité est spécifié lorsque l’assembly est inscrit sur le serveur, à l’aide de la **CREATE ASSEMBLY** instruction. Code qui s’exécute au sein de la **SAFE** ou **EXTERNAL_ACCESS** jeux d’autorisations doivent éviter certains types ou membres qui ont le **System.Security.Permissions.HostProtectionAttribute** attribut appliqué. Pour plus d’informations, consultez [création d’un Assembly](../../relational-databases/clr-integration/assemblies/creating-an-assembly.md) et [Restrictions du modèle de programmation CLR Integration](../../relational-databases/clr-integration/database-objects/clr-integration-programming-model-restrictions.md).  
+ Étant donné ces attributs, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] spécifie une liste de HPA rejetés dans l'environnement hébergé par le biais de la sécurité d'accès du code. Les exigences d’autorités de certification sont spécifiées par un des trois [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] jeux d’autorisations : **SAFE**, **EXTERNAL_ACCESS**, ou **UNSAFE**. Une de ces trois niveaux de sécurité est spécifiée lorsque l’assembly est inscrit sur le serveur, à l’aide de la **CREATE ASSEMBLY** instruction. Code qui s’exécute au sein de la **SAFE** ou **EXTERNAL_ACCESS** jeux d’autorisations doivent éviter certains types ou les membres qui ont le **System.Security.Permissions.HostProtectionAttribute** attribut appliqué. Pour plus d’informations, consultez [création d’un Assembly](../../relational-databases/clr-integration/assemblies/creating-an-assembly.md) et [Restrictions du modèle de programmation CLR Integration](../../relational-databases/clr-integration/database-objects/clr-integration-programming-model-restrictions.md).  
   
- Le **HostProtectionAttribute** n’est pas une autorisation de sécurité comme un moyen d’améliorer la fiabilité, car elle identifie le code spécifique est construit, types ou méthodes, que l’hôte peut rejeter. L’utilisation de la **HostProtectionAttribute** applique un modèle de programmation qui contribue à protéger la stabilité de l’hôte.  
+ Le **HostProtectionAttribute** n’est pas une autorisation de sécurité comme un moyen d’améliorer la fiabilité, car elle identifie un code spécifique est construit, types ou méthodes, que l’hôte peut rejeter. L’utilisation de la **HostProtectionAttribute** applique un modèle de programmation qui permet de protéger la stabilité de l’hôte.  
   
 ## <a name="host-protection-attributes"></a>Attributs de protection de l'hôte  
  Les attributs de protection de l'hôte identifient des types ou des membres qui ne sont pas adaptés au modèle de programmation hôte et représentent les niveaux croissants suivants de menace en termes de fiabilité :  
@@ -50,7 +50,7 @@ ms.locfileid: "35699240"
   
 -   Susceptible de déstabiliser le processus serveur lui-même.  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] disallows the use of a type or member that has a **HostProtectionAttribute** that specifies a **System.Security.Permissions.HostProtectionResource** enumeration with a value of **ExternalProcessMgmt**, **ExternalThreading**, **MayLeakOnAbort**, **SecurityInfrastructure**, **SelfAffectingProcessMgmnt**, **SelfAffectingThreading**, **SharedState**, **Synchronization**, or **UI**. Cela empêche les assemblys d'appeler des membres qui activent l'état de partage, exécutent la synchronisation, peuvent entraîner une fuite de ressources ou affectent l'intégrité du processus [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] n’autorise pas l’utilisation d’un type ou membre qui a un **HostProtectionAttribute** qui spécifie un **System.Security.Permissions.HostProtectionResource** énumération avec la valeur ** ExternalProcessMgmt**, **ExternalThreading**, **MayLeakOnAbort**, **SecurityInfrastructure**, ** SelfAffectingProcessMgmnt**, **SelfAffectingThreading**, **SharedState**, **synchronisation**, ou **l’interface utilisateur**. Cela empêche les assemblys d'appeler des membres qui activent l'état de partage, exécutent la synchronisation, peuvent entraîner une fuite de ressources ou affectent l'intégrité du processus [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ### <a name="disallowed-types-and-members"></a>Types et membres rejetés  
  Les rubriques suivantes identifient les types et membres dont **HostProtectionResource** valeurs ne sont pas autorisées par [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -76,7 +76,7 @@ ms.locfileid: "35699240"
   
 ## <a name="see-also"></a>Voir aussi  
  [Sécurité d’accès du Code CLR Integration](../../relational-databases/clr-integration/security/clr-integration-code-access-security.md)   
- [Restrictions du modèle de programmation CLR Integration](../../relational-databases/clr-integration/database-objects/clr-integration-programming-model-restrictions.md)   
+ [Restrictions de modèle de programmation de l’intégration de CLR](../../relational-databases/clr-integration/database-objects/clr-integration-programming-model-restrictions.md)   
  [Création d’un assembly](../../relational-databases/clr-integration/assemblies/creating-an-assembly.md)  
   
   

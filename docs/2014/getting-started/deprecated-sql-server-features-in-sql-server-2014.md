@@ -1,5 +1,5 @@
 ---
-title: SQL Server fonctionnalités déconseillées dans SQL Server 2014 | Documents Microsoft
+title: SQL Server fonctionnalités déconseillées dans SQL Server 2014 | Microsoft Docs
 ms.custom: ''
 ms.date: 05/24/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: fdc0c778-cc8d-42ab-8833-4deb4329f37a
 caps.latest.revision: 20
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: d0cafd847932ef5f87064defb8e92e7ac4b09784
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mightypen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: b7d47249b2263ea3d5523458fd34770e7c009800
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36140326"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37324729"
 ---
 # <a name="deprecated-sql-server-features-in-sql-server-2014"></a>Fonctionnalités SQL Server déconseillées dans SQL Server 2014
   Cette rubrique décrit les fonctionnalités déconseillées qui sont toujours disponibles dans [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]. Il est prévu que ces fonctionnalités soient supprimées dans une prochaine version de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Les fonctions déconseillées ne doivent pas être utilisées dans de nouvelles applications.  
@@ -35,7 +35,7 @@ ms.locfileid: "36140326"
 ### <a name="slipstream-functionality"></a>Effectuer l'installation intégrée d'une fonctionnalité  
  La fonctionnalité Mise à jour de produit remplace la fonctionnalité Installation intégrée qui était disponible dans [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] PCU1. Par conséquent, les paramètres de ligne de commande, /*PCUSource* et /*CUSource*, associés à la fonctionnalité d'installation intégrée, ne doivent plus être utilisés. Les paramètres continueront de fonctionner mais peuvent être supprimés dans une version ultérieure du programme d'installation [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Le paramètre /*UpdateSource* combine la fonctionnalité des paramètres d'installation intégrée /*PCUSource* et /*CUSource*.  
   
- Pour plus d’informations sur la fonctionnalité installation intégrée qui était disponible dans [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] PCU1, consultez [intégrer une mise à jour de SQL Server](http://go.microsoft.com/fwlink/?LinkId=219945) (http://go.microsoft.com/fwlink/?LinkId=219945).  
+ Pour plus d’informations sur la fonctionnalité d’installation intégrée qui était disponible dans [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] PCU1, consultez [intégrer une mise à jour de SQL Server](http://go.microsoft.com/fwlink/?LinkId=219945) (http://go.microsoft.com/fwlink/?LinkId=219945).  
   
 ## <a name="see-also"></a>Voir aussi  
  [Compatibilité descendante](../../2014/getting-started/backward-compatibility.md)  

@@ -8,24 +8,24 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 854c0b2f-02d2-46a4-a8cc-6b7a5d191cf8
 caps.latest.revision: 6
-author: mgblythe
-ms.author: mblythe
-manager: jhubbard
-ms.openlocfilehash: 26ddefde6223effd90d2130c40c28011de411802
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: c5ad01757b050d6beb491e1f0b2878ab124f5d8e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36139872"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37247022"
 ---
 # <a name="install-sql-server-powershell"></a>Installer SQL Server PowerShell
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Le programme d’installation s’arrête s’il détecte que vous avez sélectionné [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fonctionnalités qui incluent des composants PowerShell, mais Windows PowerShell 2.0 n’est pas installé. Vous devez installer PowerShell à l'aide de Windows Management Framework, puis réexécuter l'installation.  
   
 ## <a name="installing-includessnoversionincludesssnoversion-mdmd-powershell-support"></a>Installation de la prise en charge de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] PowerShell  
- Vous installez le logiciel qui fournit la prise en charge de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pour Windows PowerShell à l'aide du programme d'installation de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Lorsque vous sélectionnez des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] prend en charge des fonctionnalités qui nécessitent PowerShell, le programme d’installation vérifie que Windows PowerShell 2.0 est installé. Si PowerShell 2.0 est présent, le programme d’installation installe ensuite les éléments suivants [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] composants PowerShell :  
+ Vous installez le logiciel qui fournit la prise en charge de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pour Windows PowerShell à l'aide du programme d'installation de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Lorsque vous sélectionnez des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] prennent en charge des fonctionnalités qui nécessitent PowerShell, le programme d’installation vérifie que Windows PowerShell 2.0 est installé. Si PowerShell 2.0 n’est présent, le programme d’installation installe ensuite les éléments suivants [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] composants PowerShell :  
   
 -   Les composants logiciels enfichables [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] PowerShell. Les composants logiciels enfichables sont des fichiers DLL qui implémentent deux types de prises en charge de Windows PowerShell pour [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:  
   
@@ -39,9 +39,9 @@ ms.locfileid: "36139872"
   
 -   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] prend en charge le démarrage de sessions Windows PowerShell à partir de l’arborescence de l’Explorateur d’objets. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent prend en charge les étapes de travail Windows PowerShell.  
   
- Si Windows PowerShell 2.0 n’a pas été installé ou a été désinstallé, vous devez l’installer en suivant les instructions de la [Windows Management Framework](http://go.microsoft.com/fwlink/?LinkId=186214) page.  
+ Si Windows PowerShell 2.0 n’a pas été installé ou a été désinstallé, vous devez l’installer en suivant les instructions la [Windows Management Framework](http://go.microsoft.com/fwlink/?LinkId=186214) page.  
   
- Si Windows PowerShell est désinstallé après que le programme d’installation se termine, le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fonctionnalités de Windows PowerShell ne fonctionnera pas. Windows PowerShell peut être désinstallé par les utilisateurs Windows, et il peut être nécessaire de désinstaller Windows PowerShell pour certaines mises à niveau du système d'exploitation Windows. Pour utiliser les fonctionnalités [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] PowerShell, vous devez réinstaller PowerShell 2.0 à l'aide de Windows Management Framework.  
+ Si Windows PowerShell est désinstallé après l’installation, le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fonctionnalités de Windows PowerShell ne fonctionnera pas. Windows PowerShell peut être désinstallé par les utilisateurs Windows, et il peut être nécessaire de désinstaller Windows PowerShell pour certaines mises à niveau du système d'exploitation Windows. Pour utiliser les fonctionnalités [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] PowerShell, vous devez réinstaller PowerShell 2.0 à l'aide de Windows Management Framework.  
   
 ## <a name="see-also"></a>Voir aussi  
  [SQL Server PowerShell](../../powershell/sql-server-powershell.md)  

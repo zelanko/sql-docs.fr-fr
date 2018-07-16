@@ -1,5 +1,5 @@
 ---
-title: Page des propriétés générales, modèles (Gestionnaire de rapports) | Documents Microsoft
+title: Page de propriétés générales, modèles (Gestionnaire de rapports) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.reportserver.modelproperties.general.f1
 ms.assetid: 7ad59850-8135-4c4d-95e9-6d705b6d77a8
 caps.latest.revision: 17
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 12eda8ffbf8183f5992c2e149c4b2e9bd44b1912
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 0101ea532307b4e3dd06d1dc22879f59a682f867
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36039449"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37280665"
 ---
 # <a name="general-properties-page-models-report-manager"></a>Page Propriétés générales, Modèles (Gestionnaire de rapports)
   La page des propriétés générales des modèles de rapport vous permet de renommer, supprimer, déplacer ou remplacer le fichier de définition de modèle (.smdl). Des informations détaillées sur l'utilisateur qui a créé ou modifié le modèle et la date des modifications sont affichées en haut de la page.  
@@ -46,8 +46,8 @@ ms.locfileid: "36039449"
  **Description**  
  Tapez la description du modèle. Cette description apparaît dans la page Contenu. Elle est visible par les utilisateurs qui sont autorisés à accéder au modèle.  
   
- **Masqué dans la vue de liste**  
- Activez cette case à cocher pour masquer l'élément lorsque le dossier est défini en mode d'affichage des listes. L'affichage des listes est un mode de consultation du contenu des dossiers qui est pris en charge dans le Gestionnaire de rapports. Vous pouvez définir cette option dans [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] pour définir la façon dont cet élément est affiché dans le Gestionnaire de rapports. Pour plus d’informations sur les modes d’affichage dans le Gestionnaire de rapports, consultez [Page contenu &#40;le Gestionnaire de rapports&#41;](../../2014/reporting-services/contents-page-report-manager.md).  
+ **Masqué dans la vue liste**  
+ Activez cette case à cocher pour masquer l'élément lorsque le dossier est défini en mode d'affichage des listes. L'affichage des listes est un mode de consultation du contenu des dossiers qui est pris en charge dans le Gestionnaire de rapports. Vous pouvez définir cette option dans [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] pour définir la manière dont cet élément est affiché dans le Gestionnaire de rapports. Pour plus d’informations sur les modes d’affichage dans le Gestionnaire de rapports, consultez [Page contenu &#40;le Gestionnaire de rapports&#41;](../../2014/reporting-services/contents-page-report-manager.md).  
   
  **Appliquer**  
  Cliquez pour enregistrer vos modifications.  
@@ -56,7 +56,7 @@ ms.locfileid: "36039449"
  Cliquez pour supprimer le modèle de la base de données du serveur de rapports. La suppression d'un modèle ne supprime ni la source de données partagée dépendante qui fournit des informations de connexion, ni les rapports qui utilisent le modèle comme une source de données. Toutefois, une fois le modèle supprimé, les rapports qui l'utilisent ne s'exécuteront plus.  
   
  **Déplacer**  
- Cliquez pour déplacer un modèle dans l'arborescence des dossiers du serveur de rapports. Un clic sur ce bouton permet d'ouvrir la page Déplacer les éléments dans laquelle vous pouvez parcourir les dossiers pour sélectionner un nouvel emplacement. Pour plus d’informations, consultez [déplacer la Page éléments &#40;le Gestionnaire de rapports&#41;](../../2014/reporting-services/move-items-page-report-manager.md).  
+ Cliquez pour déplacer un modèle dans l'arborescence des dossiers du serveur de rapports. Un clic sur ce bouton permet d'ouvrir la page Déplacer les éléments dans laquelle vous pouvez parcourir les dossiers pour sélectionner un nouvel emplacement. Pour plus d’informations, consultez [Page déplacer les éléments &#40;le Gestionnaire de rapports&#41;](../../2014/reporting-services/move-items-page-report-manager.md).  
   
  **Enregistrer**  
  Cliquez pour enregistrer une copie en lecture seule de la définition du modèle. Selon les associations de fichiers définies sur votre ordinateur, le fichier s'ouvre dans [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] ou une autre application. Dans la plupart des cas, le modèle s'ouvre dans un fichier XML.  

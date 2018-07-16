@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 9a77dd32-d8c2-4961-ad37-2a971f9d6043
 caps.latest.revision: 42
-author: douglaslM
+author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: c732e124ca8de59f28f4d5121a85e071d6fda7f2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 7527bbdd1e66db49851832052c8a9393201b202f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36139853"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37254541"
 ---
 # <a name="step-2-adding-and-configuring-a-flat-file-connection-manager"></a>Étape 2 : ajout et configuration d'un gestionnaire de connexions de fichiers plats
   Dans cette tâche, vous ajoutez un gestionnaire de connexions de fichiers plats au package que vous venez de créer. Un gestionnaire de connexions de fichiers plats permet à un package d'extraire des données d'un fichier plat. Grâce à ce Gestionnaire, vous pouvez spécifier le nom et l'emplacement du fichier, les paramètres régionaux et la page de codes et enfin, le format du fichier, y compris les séparateurs de colonnes, à appliquer lorsque le package extrait les données du fichier plat. Par ailleurs, vous pouvez spécifier manuellement le type de données pour les colonnes individuelles ou utiliser la boîte de dialogue **Suggérer les types de colonnes** pour mapper automatiquement les colonnes de données extraites aux types de données [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] .  
@@ -66,13 +66,13 @@ ms.locfileid: "36139853"
   
 2.  Dans le volet des propriétés, apportez les modifications suivantes :  
   
-    -   Modifier la **colonne 0** nom de propriété `AverageRate`.  
+    -   Modifier le **colonne 0** nom de propriété `AverageRate`.  
   
-    -   Modifier la **colonne 1** nom de propriété `CurrencyID`.  
+    -   Modifier le **colonne 1** nom de propriété `CurrencyID`.  
   
-    -   Modifier la **colonne 2** nom de propriété `CurrencyDate`.  
+    -   Modifier le **colonne 2** nom de propriété `CurrencyDate`.  
   
-    -   Modifier la **colonne 3** nom de propriété `EndOfDayRate`.  
+    -   Modifier le **colonne 3** nom de propriété `EndOfDayRate`.  
   
     > [!NOTE]  
     >  Par défaut, ces quatre colonnes ont initialement le type de données string [DT_STR] avec une `OutputColumnWidth` égale à 50.  
@@ -94,19 +94,19 @@ ms.locfileid: "36139853"
     |CurrencyDate|date [DT_DATE]|DimDate.FullDateAlternateKey|Date|  
     |EndOfDayRate|float [DT_R4]|FactCurrency.EndOfDayRate|FLOAT|  
   
-     Le type de données suggéré pour le `CurrencyID` colonne n’est pas compatible avec le type de données du champ dans la table de destination. Étant donné que le type de données de `DimCurrency.CurrencyAlternateKey` est de type nchar (3), `CurrencyID` doit être modifié à partir de la chaîne [DT_STR] chaîne [DT_WSTR]. En outre, le champ `DimDate.FullDateAlternateKey` est défini comme un type de données date ; par conséquent, `CurrencyDate` doit être modifiée à partir de date [DT_Date], à la date de la base de données [DT_DBDATE].  
+     Le type de données suggéré pour le `CurrencyID` colonne n’est pas compatible avec le type de données du champ dans la table de destination. Étant donné que le type de données de `DimCurrency.CurrencyAlternateKey` est de type nchar (3), `CurrencyID` doit être modifié à partir de la chaîne [DT_STR] chaîne [DT_WSTR]. En outre, le champ `DimDate.FullDateAlternateKey` est défini comme un type de données date ; par conséquent, `CurrencyDate` doit être modifiée à partir de la date [DT_Date] en date de base de données [DT_DBDATE].  
   
-2.  Dans la liste, sélectionnez la colonne CurrencyID et dans le volet Propriétés, modifiez le Type de données de colonne `CurrencyID` chaîne string [DT_STR] au format Unicode [DT_WSTR].  
+2.  Dans la liste, sélectionnez la colonne CurrencyID et dans le volet des propriétés, modifiez le Type de données de colonne `CurrencyID` chaîne [DT_WSTR] chaîne [DT_STR] au format Unicode.  
   
-3.  Dans le volet Propriétés, modifiez le type de données de colonne `CurrencyDate` date [DT_DATE], à la date de la base de données [DT_DBDATE].  
+3.  Dans le volet des propriétés, modifiez le type de données de colonne `CurrencyDate` date [DT_DATE] en date de base de données [DT_DBDATE].  
   
 4.  Cliquez sur **OK**.  
   
 ## <a name="next-task-in-lesson"></a>Tâche suivante de la leçon  
- [Étape 3 : Ajout et configuration d’un gestionnaire de connexions OLE DB](lesson-1-3-adding-and-configuring-an-ole-db-connection-manager.md)  
+ [Étape 3 : Ajout et configuration d’un gestionnaire de connexions OLE DB](lesson-1-3-adding-and-configuring-an-ole-db-connection-manager.md)  
   
 ## <a name="see-also"></a>Voir aussi  
- [Gestionnaire de connexions de fichier plat](connection-manager/file-connection-manager.md)   
+ [Flat File Connection Manager](connection-manager/file-connection-manager.md)   
  [Types de données d’Integration Services](data-flow/integration-services-data-types.md)  
   
   

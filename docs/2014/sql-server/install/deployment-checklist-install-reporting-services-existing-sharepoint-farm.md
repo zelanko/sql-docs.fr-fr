@@ -1,5 +1,5 @@
 ---
-title: 'Liste de vérification de déploiement : Installer Reporting Services dans une batterie de serveurs SharePoint existante | Documents Microsoft'
+title: 'Liste de vérification de déploiement : Installer Reporting Services dans une batterie de serveurs SharePoint existante | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 436b4c3d-3f2f-464a-be7e-5c051d9ffb8f
 caps.latest.revision: 12
 author: markingmyname
 ms.author: maghan
-manager: jhubbard
-ms.openlocfilehash: d13c0329073781f54ac02b653b15ead4959bd96e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: c7c7270a3c4ef11f12894c97b51bb6cd09389fea
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36052558"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37297539"
 ---
 # <a name="deployment-checklist-install-reporting-services-into-an-existing-sharepoint-farm"></a>Liste de vérification du déploiement : Installer Reporting Services dans une batterie de serveurs SharePoint existante
-  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Serveurs de rapports SharePoint peuvent être installés dans une batterie de serveurs SharePoint ou dans une batterie de serveurs SharePoint existante. Cette rubrique décrit les scénarios possibles et les meilleures pratiques pour l’installation de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] dans une batterie de serveurs SharePoint existante.  
+  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Serveurs de rapports SharePoint peuvent être installés dans une nouvelle batterie de serveurs SharePoint ou dans une batterie de serveurs SharePoint existante. Cette rubrique décrit les scénarios possibles et les meilleures pratiques pour l’installation [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] en batterie de serveurs SharePoint existante.  
   
 ## <a name="prerequisites"></a>Prérequis  
  Avant d'exécuter le programme d'installation, examinez les informations suivantes :  
@@ -30,12 +30,12 @@ ms.locfileid: "36052558"
 |Étape|Lien|  
 |----------|----------|  
 |Créez ou identifiez les comptes utilisés lors d'un déploiement du serveur de rapports. Vous devez disposer d'un compte de service pour le service Report Server, ainsi que d'informations d'identification pour une connexion à la base de données du serveur de rapports||  
-|Choisir une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pour héberger la base de données du serveur de rapports. Vous pouvez utiliser une instance locale ou distante de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Choisissez une instance qui se trouve sur un ordinateur disposant d'une capacité de stockage suffisante pour vos rapports.||  
+|Choisir une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pour héberger la base de données de serveur de rapports. Vous pouvez utiliser une instance locale ou distante de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Choisissez une instance qui se trouve sur un ordinateur disposant d'une capacité de stockage suffisante pour vos rapports.||  
 |(Facultatif) Recherchez le nom de la passerelle ou du serveur SMTP qui assure le service de messagerie de votre organisation si vous souhaitez utiliser les fonctions de messagerie du serveur de rapports dans les abonnements|[Configurer un serveur de rapports pour la remise du courrier électronique &#40;Gestionnaire de Configuration de SSRS&#41;](../../../2014/sql-server/install/configure-a-report-server-for-e-mail-delivery-ssrs-configuration-manager.md)|  
-|Remarque : Si vous mettez à niveau un ordinateur à partir d’une version CTP précédente [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] et que vous aviez apporté des modifications personnalisées aux fichiers de configuration, vous devez apporter les mêmes modifications aux fichiers de configuration, après la mise à niveau [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Les fichiers affectés sont **web.config** et **client.config**.||  
+|Remarque : Si vous mettez à niveau un ordinateur à partir d’une version CTP antérieure [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] et que vous aviez apporté des modifications personnalisées aux fichiers de configuration, vous devez apporter les mêmes modifications aux fichiers de configuration, après la mise à niveau vers [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Les fichiers affectés sont **web.config** et **client.config**.||  
   
 ## <a name="installation-scenarios"></a>Scénarios d'installation  
- Le tableau suivant décrit les scénarios possibles lorsque vous installez [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] dans une batterie de serveurs SharePoint existante. Mode local permet un rendu localement à partir de la bibliothèque de documents SharePoint sans intégration avec des rapports à un [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] serveur de rapports. Le complément [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] pour les produits SharePoint est requis, mais un serveur de rapports [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ne l'est pas. Pour plus d’informations sur le mode local, consultez [Rapports en mode local et Mode rapports connecté dans la visionneuse de rapports &#40;Reporting Services en SharePoint Mode&#41; ](../../../2014/reporting-services/local-vs-connected-mode-report-viewer-reporting-services-sharepoint-mode.md) et [où trouver le complément Reporting Services pour les produits SharePoint](../../reporting-services/install-windows/where-to-find-the-reporting-services-add-in-for-sharepoint-products.md).  
+ Le tableau suivant décrit les scénarios possibles lorsque vous installez [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] en batterie de serveurs SharePoint existante. Mode local permet un rendu localement à partir de la bibliothèque de documents SharePoint sans intégration avec des rapports à un [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] serveur de rapports. Le complément [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] pour les produits SharePoint est requis, mais un serveur de rapports [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ne l'est pas. Pour plus d’informations sur le mode local, consultez [Rapports en mode local et Mode rapports connecté dans la visionneuse de rapports &#40;Reporting Services en SharePoint Mode&#41; ](../../../2014/reporting-services/local-vs-connected-mode-report-viewer-reporting-services-sharepoint-mode.md) et [où trouver le complément Reporting Services pour les produits SharePoint](../../reporting-services/install-windows/where-to-find-the-reporting-services-add-in-for-sharepoint-products.md).  
   
 |Démarrer la configuration|Flux de travail|Terminer la configuration|Commentaires|  
 |----------------------------|--------------|--------------------------|--------------|  
@@ -56,7 +56,7 @@ ms.locfileid: "36052558"
 |Ajoutez les types de contenu SSRS à votre bibliothèque de documents.|[Ajouter des Types de contenu de serveur de rapports à une bibliothèque &#40;Reporting Services dans SharePoint Mode intégré&#41;](../../../2014/reporting-services/add-reporting-services-content-types-to-a-sharepoint-library.md)|  
 |Configurez SQL Server Agent|[Approvisionner les abonnements et les alertes pour les applications de service de SSRS](../../reporting-services/install-windows/provision-subscriptions-and-alerts-for-ssrs-service-applications.md)|  
 |Configurez les paramètres de messagerie électronique pour l'application de service|[Configurer la messagerie électronique pour l’Application de Service pour Reporting Services &#40;SharePoint 2010 et SharePoint 2013&#41;](../../reporting-services/install-windows/configure-e-mail-for-a-reporting-services-service-application.md)|  
-|Configurez  le service d'émission de jetons Revendications vers Windows (c2WTS)|[Service de jetons revendications vers Windows &#40;C2WTS&#41; et Reporting Services](../../../2014/sql-server/install/claims-to-windows-token-service-c2wts-and-reporting-services.md)|  
+|Configurez  le service d'émission de jetons Revendications vers Windows (c2WTS)|[Service de jeton de revendications vers Windows &#40;C2WTS&#41; et Reporting Services](../../../2014/sql-server/install/claims-to-windows-token-service-c2wts-and-reporting-services.md)|  
   
 ## <a name="migration-checklist"></a>Liste de vérification de migration  
  Voici une liste des étapes de base pour une migration d'une installation existante vers une nouvelle installation.  

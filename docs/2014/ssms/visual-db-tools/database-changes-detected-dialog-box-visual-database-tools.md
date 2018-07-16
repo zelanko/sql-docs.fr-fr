@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vdt.dlgbox.schema.databasechangesdetected
 - vdtsql.chm:65543
 - vdtsql.chm:65554
 ms.assetid: 91f13086-371f-46a2-9f46-804c1415f3ed
 caps.latest.revision: 11
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 5fbb34856b414a561126b977360eb8b8337c7ce4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 958f892df463533138b722e16a61eeccd0e06b19
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36038978"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37244039"
 ---
 # <a name="database-changes-detected-dialog-box-visual-database-tools"></a>Modifications détectées dans la base de données, boîte de dialogue (Visual Database Tools)
   Cette boîte de dialogue apparaît si vous essayez d'enregistrer un schéma de base de données ou des tables sélectionnées, mais certains des objets de la base de données qui seront affectés par l'action d'enregistrement sont devenus obsolètes pour la base de données. Le fait d'accepter les modifications indiquées dans cette boîte de dialogue met à jour la base de données pour qu'elle corresponde à votre schéma et écrase les modifications des autres utilisateurs.  
@@ -48,7 +48,7 @@ ms.locfileid: "36038978"
  Affiche la boîte de dialogue **Enregistrer sous** qui permet de spécifier un emplacement pour un fichier texte contenant une liste des modifications de la base de données.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Rapprocher un schéma de base de données avec une base de données modifiée &#40;Visual Database Tools&#41;](visual-database-tools.md)   
+ [Rapprocher un schéma de base de données et une base de données modifiée &#40;Visual Database Tools&#41;](visual-database-tools.md)   
  [Environnements multi-utilisateurs &#40;Visual Database Tools&#41;](multiuser-environments-visual-database-tools.md)  
   
   

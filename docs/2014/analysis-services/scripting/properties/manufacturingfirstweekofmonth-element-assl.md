@@ -1,5 +1,5 @@
 ---
-title: Élément ManufacturingFirstWeekOfMonth (ASSL) | Documents Microsoft
+title: Élément ManufacturingFirstWeekOfMonth (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - ManufacturingFirstWeekOfMonth element
 ms.assetid: adb76a2f-c6c3-459e-a441-e80adad76ff1
 caps.latest.revision: 26
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: ef20d6aba04da501336fe603d56dbc9b55a8ccee
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 2c4ef6476d4c39344137e1ad7f6af346225e0a7f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36140384"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37269755"
 ---
 # <a name="manufacturingfirstweekofmonth-element-assl"></a>Élément ManufacturingFirstWeekOfMonth (ASSL)
   Définit la première semaine du mois de fabrication pour un [TimeBinding](../data-type/binding-data-type-assl.md) élément.  
@@ -62,7 +62,7 @@ ms.locfileid: "36140384"
 |Éléments enfants|None|  
   
 ## <a name="remarks"></a>Notes  
- L’élément qui correspond au parent de `ManufacturingFirstWeekOfMonth` dans l’objet d’objets AMO (Analysis Management) est modèle <xref:Microsoft.AnalysisServices.TimeBinding>.  
+ L’élément qui correspond au parent de `ManufacturingFirstWeekOfMonth` dans l’objet d’objets AMO (Analysis Management) modèle est <xref:Microsoft.AnalysisServices.TimeBinding>.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Propriétés &#40;ASSL&#41;](properties-assl.md)  

@@ -5,10 +5,9 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-search
+ms.technology: search
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - stoplists [full-text search]
 - full-text search [SQL Server], stoplists
@@ -18,20 +17,20 @@ helpviewer_keywords:
 - stopwords [full-text search]
 ms.assetid: 43b5ce7b-9f09-4443-8a5b-c3da6eb28bcc
 caps.latest.revision: 79
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: f1d32fea4b5d9995628c187d39c7482c6694e828
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: c3ea419224478d1c4c45117795fe5a67ebfcaf5e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36139774"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37284835"
 ---
 # <a name="configure-and-manage-stopwords-and-stoplists-for-full-text-search"></a>Configurer et gérer les mots vides et listes de mots vides pour la recherche en texte intégral
   Pour éviter que l'index de recherche en texte intégral ne devienne encombré, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilise un mécanisme qui ignore les chaînes courantes qui ne sont d'aucune utilité pour la recherche. Ces chaînes ignorées sont appelées des *mots vides*. Pendant la création d'un index, le moteur de texte intégral omet les mots vides de l'index de recherche en texte intégral. Cela signifie que les requêtes de texte intégral ne rechercheront pas les mots vides.  
   
-##  <a name="understand"></a> Vides et listes de mots vides de présentation  
+##  <a name="understand"></a> Listes de mots vides et les mots vides de présentation  
  Un mot vide peut être un mot ayant une signification dans une langue spécifique ou être un *jeton* qui n’a pas de signification linguistique. Par exemple, en français, les mots tels que « un », « et », « est » ou « le » sont écartés de l'index de recherche en texte intégral, car ils sont inutiles dans le cadre d'une recherche.  
   
  Bien qu'il ignore l'inclusion des mots vides, l'index de recherche en texte intégral prend en considération leur position. Prenons l'exemple de l'expression suivante : « Instructions are applicable to these Adventure Works Cycles models ». Le tableau suivant décrit la position des mots dans l'expression :  
@@ -110,7 +109,7 @@ ms.locfileid: "36139774"
   
 -   [ALTER FULLTEXT INDEX &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-fulltext-index-transact-sql)  
   
- **Pour supprimer un message d’erreur si des mots vides provoquent une opération booléenne sur une requête de recherche en texte intégral**  
+ **Pour supprimer un message d’erreur si les mots vides provoquent une opération booléenne sur une requête de recherche en texte intégral**  
   
 -   [Transformer les mots parasites (option de configuration de serveur)](../../database-engine/configure-windows/transform-noise-words-server-configuration-option.md)  
   
@@ -120,7 +119,7 @@ ms.locfileid: "36139774"
   
 -   [sys.fulltext_stopwords &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-fulltext-stopwords-transact-sql)  
   
- **Pour obtenir des informations sur toutes les listes de mots vides dans la base de données en cours**  
+ **Pour obtenir des informations sur toutes les listes de mots vides dans la base de données actuelle**  
   
 -   [sys.fulltext_stoplists &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-fulltext-stoplists-transact-sql)  
   

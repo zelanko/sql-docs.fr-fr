@@ -1,5 +1,5 @@
 ---
-title: Élément NotificationTechnique (ASSL) | Documents Microsoft
+title: Élément NotificationTechnique (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - NotificationTechnique element
 ms.assetid: 80c43de3-f147-4bf5-bb85-da9d182ce415
 caps.latest.revision: 13
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: f1216ed87ac9fd24265dbcb33d13ba831997b73c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: e661b47c5344b0094daef53102aada68a6b6aad9
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36038433"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37213909"
 ---
 # <a name="notificationtechnique-element-assl"></a>Élément NotificationTechnique (ASSL)
   Spécifie si [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ou une application cliente externe traite les notifications.  
@@ -47,7 +47,7 @@ ms.locfileid: "36038433"
 |Caractéristique|Description|  
 |--------------------|-----------------|  
 |Type de données et longueur|Chaîne (énumération)|  
-|Valeur par défaut|*client*|  
+|Valeur par défaut|*Client*|  
 |Cardinalité|0-1 : élément facultatif qui peut apparaître une fois et une seule.|  
   
 ## <a name="element-relationships"></a>Relations entre les éléments  
@@ -62,12 +62,12 @@ ms.locfileid: "36038433"
   
 |Valeur|Description|  
 |-----------|-----------------|  
-|*client*|L'application cliente externe traite la notification.|  
+|*Client*|L'application cliente externe traite la notification.|  
 |*Server*|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] traite la notification.|  
   
- L’élément qui correspond au parent de `NotificationTechnique` dans l’objet d’objets AMO (Analysis Management) est modèle <xref:Microsoft.AnalysisServices.ProactiveCachingBinding>.  
+ L’élément qui correspond au parent de `NotificationTechnique` dans l’objet d’objets AMO (Analysis Management) modèle est <xref:Microsoft.AnalysisServices.ProactiveCachingBinding>.  
   
- L’énumération qui correspond aux valeurs autorisées pour `NotificationTechnique` dans l’objet d’objets AMO (Analysis Management) est modèle <xref:Microsoft.AnalysisServices.NotificationTechnique>.  
+ L’énumération qui correspond aux valeurs autorisées pour `NotificationTechnique` dans l’objet d’objets AMO (Analysis Management) modèle est <xref:Microsoft.AnalysisServices.NotificationTechnique>.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Type de données ProactiveCachingBinding &#40;ASSL&#41;](../data-type/binding-data-type-assl.md)  

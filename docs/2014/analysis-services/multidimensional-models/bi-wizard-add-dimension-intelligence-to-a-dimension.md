@@ -1,5 +1,5 @@
 ---
-title: Ajouter l’Intelligence des dimensions à une Dimension | Documents Microsoft
+title: Ajouter l’Intelligence des dimensions à une Dimension | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Business Intelligence enhancements [Analysis Services], dimension intelligence
 - dimensions [Analysis Services], Business Intelligence enhancements
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - Type property
 ms.assetid: b64fa386-eac2-4286-a320-0631a1887aac
 caps.latest.revision: 32
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: de910ec8c845c67346c8a31b8d372efa0d3390c9
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: fcd7ea323857e0db796b6e4a17bf8c2dde21e199
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36141920"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37208129"
 ---
 # <a name="add-dimension-intelligence-to-a-dimension"></a>Ajouter de l'intelligence de dimensions à une dimension
   Ajoutez l'intelligence des dimensions à un cube ou à une dimension pour spécifier un type d'entreprise standard pour une dimension. Cette amélioration spécifie également les types correspondants pour les attributs de la dimension. Les applications clientes peuvent utiliser ces spécifications de type lors de l'analyse de données.  
@@ -38,7 +38,7 @@ ms.locfileid: "36141920"
 >  Si vous sélectionnez **Compte** comme dimension, vous spécifierez l’intelligence comptable pour la dimension. Pour plus d’informations, consultez [Ajouter de l’intelligence comptable à une dimension](bi-wizard-add-account-intelligence-to-a-dimension.md).  
   
 ## <a name="specifying-dimension-attributes"></a>Spécification des attributs de dimension  
- Sur le **définir l’Intelligence des dimensions** page **Type de Dimension** la liste, la sélection que vous effectuez définit la dimension `Type` propriété. Le `Type` paramètre de propriété fournit des informations sur les serveurs et clients applications sur le contenu d’une dimension. Certains paramètres permettent uniquement de guider les applications clientes ; ces paramètres sont facultatifs. D'autres paramètres, tels que Comptes ou Temps, déterminent des comportements spécifiques et peuvent être requis pour implémenter des améliorations de décisionnel particulières. Par exemple, SQL Server Management Studio utilise le type de dimension pour identifier une dimension Devise et définir les règles de conversion monétaire appropriées. La définition par défaut du **Type de dimension** est **Normal**et ne fournit aucune information théorique sur le contenu de la dimension.  
+ Sur le **définir l’Intelligence des dimensions** page **Type de Dimension** liste, la sélection que vous effectuez définit la dimension `Type` propriété. Le `Type` paramètre de propriété fournit des informations sur les serveurs et clients applications sur le contenu d’une dimension. Certains paramètres permettent uniquement de guider les applications clientes ; ces paramètres sont facultatifs. D'autres paramètres, tels que Comptes ou Temps, déterminent des comportements spécifiques et peuvent être requis pour implémenter des améliorations de décisionnel particulières. Par exemple, SQL Server Management Studio utilise le type de dimension pour identifier une dimension Devise et définir les règles de conversion monétaire appropriées. La définition par défaut du **Type de dimension** est **Normal**et ne fournit aucune information théorique sur le contenu de la dimension.  
   
  Après avoir sélectionné le type de dimension, dans **Attributs de la dimension**, dans la colonne **Inclure** , cochez la case à côté de chaque type d’attribut standard pour lequel il existe un attribut correspondant dans la dimension. Enfin, dans la colonne **Attribut de dimension** , développez la liste déroulante, puis sélectionnez l’attribut de la dimension qui correspond au type d’attribut sélectionné. La sélection de l'attribut dans la liste définit la propriété `Type` d'attribut pour les attributs.  
   

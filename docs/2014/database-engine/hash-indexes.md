@@ -1,5 +1,5 @@
 ---
-title: Index de hachage | Documents Microsoft
+title: Index de hachage | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,25 +8,25 @@ ms.suite: ''
 ms.technology:
 - database-engine-imoltp
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: f4bdc9c1-7922-4fac-8183-d11ec58fec4e
 caps.latest.revision: 20
 author: stevestein
 ms.author: sstein
-manager: jhubbard
-ms.openlocfilehash: 3da74688d6a2f65b191788ab9ecd2394bcca8597
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: f2c2b4c055eea6aef2e7825ee6589c6611ceaf7a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36053136"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37295229"
 ---
 # <a name="hash-indexes"></a>Index de hachage
   Les index sont utilisés comme points d'entrée pour les tables mémoire optimisées. La lecture de lignes dans une table requiert un index pour localiser les données en mémoire.  
   
  Un index de hachage se compose d'une collection de compartiments organisés dans un tableau. Une fonction de hachage mappe les clés d'index aux compartiments correspondants dans l'index de hachage. L'illustration suivante montre trois clés d'index qui sont mappées à trois compartiments différents dans l'index de hachage. Dans l'illustration, le nom de fonction de hachage est f (x).  
   
- ![Clés d’index mappées à des compartiments différents. ] (../../2014/database-engine/media/hekaton-tables-2.gif "Clés d’index mappées à compartiments différents.")  
+ ![Clés d’index mappées à des compartiments. ] (../../2014/database-engine/media/hekaton-tables-2.gif "Clés d’index mappées à des compartiments.")  
   
  La fonction de hachage utilisée pour les index de hachage présente les caractéristiques suivantes :  
   

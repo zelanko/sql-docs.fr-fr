@@ -1,5 +1,5 @@
 ---
-title: Bloquer l’élément (ASSL) | Documents Microsoft
+title: Bloquer l’élément (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -22,18 +22,18 @@ helpviewer_keywords:
 - Block element
 ms.assetid: f45c32ae-e4e0-465a-9564-9ccfb10a858f
 caps.latest.revision: 36
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: e382ba38c41bc68b3d49b0397cdc3fe3f2dcf0ac
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 44022a2e0bd538b7f4b33b0d1f1fb7b462e676e6
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36140088"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37279435"
 ---
 # <a name="block-element-assl"></a>Élément Block (ASSL)
-  Contient l’ensemble ou une partie du contenu binaire d’un [ClrAssemblyFile](../data-type/clrassemblyfile-data-type-assl.md) élément.  
+  Contient tout ou partie du contenu binaire d’un [ClrAssemblyFile](../data-type/clrassemblyfile-data-type-assl.md) élément.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -63,7 +63,7 @@ ms.locfileid: "36140088"
  [Élément assembly &#40;ASSL&#41;](assembly-element-assl.md)   
  [Type de données ClrAssembly &#40;ASSL&#41;](../data-type/assembly-data-type-assl.md)   
  [Fichiers d’élément &#40;ASSL&#41;](../collections/files-element-assl.md)   
- [Élément de fichier &#40;ASSL&#41;](file-element-assl.md)   
+ [Fichier d’élément &#40;ASSL&#41;](file-element-assl.md)   
  [Type de données ClrAssemblyFile &#40;ASSL&#41;](../data-type/clrassemblyfile-data-type-assl.md)   
  [Élément de données &#40;ASSL&#41;](data-element-assl.md)   
  [Type de données DataBlock &#40;ASSL&#41;](../data-type/datablock-data-type-assl.md)   

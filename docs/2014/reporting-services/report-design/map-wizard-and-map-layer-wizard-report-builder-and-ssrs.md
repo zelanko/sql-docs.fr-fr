@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.rtp.rptdesigner.mapandlayerwizard.f1
 - "10542"
 - MICROSOFT.REPORTDESIGNER.MAPLAYER.NAME
 ms.assetid: 48cbe18b-1290-4107-8a1c-ec6acd71f73b
 caps.latest.revision: 9
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 0a840b5b3cc60e10a95f1cf7b2c4a473ee8fd0c8
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 7232850d053d238b81b8db9ef6f5eaeec581ab72
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36039019"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37299819"
 ---
 # <a name="map-wizard-and-map-layer-wizard-report-builder-and-ssrs"></a>Assistant Carte et Assistant Couche (Générateur de rapports et SSRS)
   L'Assistant Carte et l'Assistant Couche automatisent la tâche de création d'une carte, d'ajout d'une couche ou de modification des options de couche sur une couche existante.  
@@ -33,7 +33,7 @@ ms.locfileid: "36039019"
   
  Avant d'ajouter une carte à un rapport ou une couche à une carte, vous devez disposer des informations suivantes :  
   
--   **Source de données spatiales.** Emplacement ou connexion à une source qui fournit les données spatiales, par exemple, le nom d’un [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] instance et une base de données qui contient les données spatiales, ou le nom d’un fichier de forme de l’environnement Systems Research Institute, Inc. (ESRI).  
+-   **Source de données spatiales.** Emplacement ou connexion à une source qui fournit les données spatiales, par exemple, le nom d’un [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] instance et une base de données qui contient les données spatiales, ou le nom d’un fichier de forme de l’environnement Systems Research Institute, Inc. (Environmental).  
   
 -   **.** Champ de la source de données spatiales contenant des jeux de coordonnées qui spécifient des emplacements.  
   
@@ -43,7 +43,7 @@ ms.locfileid: "36039019"
   
  Les sections suivantes présentent des informations sur les options que vous spécifiez dans les Assistants Carte et Couche.  
   
-##  <a name="BackToTop"></a> Assistant carte et les Pages de l’Assistant Couche carte  
+##  <a name="BackToTop"></a> Assistant carte et les Pages d’Assistant de couche de mappage  
  Pour ouvrir l'Assistant Carte, effectuez l'une des actions suivantes :  
   
 -   À l'ouverture du Générateur de rapports, cliquez sur l'icône de l'Assistant **Carte** au milieu de l'aire de conception.  
@@ -110,7 +110,7 @@ ms.locfileid: "36039019"
   
  Après avoir ajouté une carte ou une couche et affiché un aperçu du rapport, vous pouvez modifier les options de carte et de couche que vous avez définies dans les Assistants. Pour plus d’informations, consultez [Personnaliser des données et l’affichage d’une carte ou d’une couche &#40;Générateur de rapports et SSRS&#41;](customize-the-data-and-display-of-a-map-or-map-layer-report-builder-and-ssrs.md).  
   
- Pour plus d’informations sur les cartes, consultez [mappe &#40;le Générateur de rapports et SSRS&#41;](maps-report-builder-and-ssrs.md). Pour obtenir des instructions pas à pas pour ajouter une carte à un rapport, consultez [Didacticiel : Rapport cartographique &#40;Générateur de rapports&#41;](../tutorial-map-report-report-builder.md).  
+ Pour plus d’informations sur les cartes, consultez [mappe &#40;Générateur de rapports et SSRS&#41;](maps-report-builder-and-ssrs.md). Pour obtenir des instructions pas à pas pour ajouter une carte à un rapport, consultez [Didacticiel : Rapport cartographique &#40;Générateur de rapports&#41;](../tutorial-map-report-report-builder.md).  
   
  ![Icône de flèche utilisée avec le lien Retour au début](../../2014-toc/media/uparrow16x16.gif "Icône de flèche utilisée avec le lien Retour au début") [Retour au début](#BackToTop)  
   
@@ -201,7 +201,7 @@ ms.locfileid: "36039019"
   
  Pour plus d'informations sur les mosaïques, consultez le [système de mosaïques Bing](http://go.microsoft.com/fwlink/?LinkId=147315). Pour plus d'informations sur l'utilisation de mosaïques Bing dans votre rapport, consultez [Conditions supplémentaires d'utilisation](http://go.microsoft.com/fwlink/?LinkId=151371) et [Déclaration de confidentialité](http://go.microsoft.com/fwlink/?LinkId=151372)(éventuellement en anglais).  
   
- Pour afficher un arrière-plan de mosaïques en mode Création, vous devez disposer d'un accès Internet. Pour afficher l'arrière-plan de mosaïques dans l'aperçu d'un rapport sur un serveur de rapports, le serveur de rapports doit être configuré pour prendre en charge les mosaïques Bing. Pour plus d’informations, consultez [dépanner les rapports : rapports cartographiques &#40;le Générateur de rapports et SSRS&#41; ](troubleshoot-reports-map-reports-report-builder-and-ssrs.md) et « Planification de la charge des cartes » dans le [documentation de Reporting Services](http://go.microsoft.com/fwlink/?linkid=121312) dans la documentation en ligne de SQL Server .  
+ Pour afficher un arrière-plan de mosaïques en mode Création, vous devez disposer d'un accès Internet. Pour afficher l'arrière-plan de mosaïques dans l'aperçu d'un rapport sur un serveur de rapports, le serveur de rapports doit être configuré pour prendre en charge les mosaïques Bing. Pour plus d’informations, consultez [résoudre les problèmes de rapports : rapports cartographiques &#40;Générateur de rapports et SSRS&#41; ](troubleshoot-reports-map-reports-report-builder-and-ssrs.md) et « Planification de cartes » dans le [documentation de Reporting Services](http://go.microsoft.com/fwlink/?linkid=121312) dans la documentation en ligne de SQL Server .  
   
  Pour plus d’informations sur d’autres manières de personnaliser une couche de mosaïques, consultez [Ajouter, modifier ou supprimer une carte ou une couche &#40;Générateur de rapports et SSRS&#41;](add-change-or-delete-a-map-or-map-layer-report-builder-and-ssrs.md).  
   

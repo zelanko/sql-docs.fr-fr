@@ -1,5 +1,5 @@
 ---
-title: Requête (SQL Server Data Mining Add-ins) | Documents Microsoft
+title: Requête (SQL Server Data Mining Add-ins) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - queries [data mining]
 - Data Mining Query Advanced Editor
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - DMX
 ms.assetid: 16af4a6f-18d4-496a-a304-7a13aa32ee76
 caps.latest.revision: 16
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: d2314c847745ac51d1bc7fb99b7c6f55a3f061af
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 7c2ddae6582355e271488389d6e4005a5d235a74
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36141059"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37289775"
 ---
 # <a name="query-sql-server-data-mining-add-ins"></a>Requête (Compléments d'exploration de données SQL Server)
   ![Bouton modèle de requête, ruban Exploration de données](media/dmc-query.gif "bouton modèle de requête, ruban Exploration de données")  
@@ -49,7 +49,7 @@ ms.locfileid: "36141059"
   
 4.  En dernier lieu, l'Assistant vous permet également de choisir une ou plusieurs prédictions et de spécifier une destination afin d'y stocker les résultats.  
   
- Vous pouvez à tout moment cliquer sur **Avancé** pour basculer vers l' **Éditeur de requêtes avancé d'exploration de données**qui vous permet de contrôler davantage chaque partie de l'instruction DMX. Pour plus d’informations sur l’utilisation des outils de modification de requête avancés, consultez [éditeur de requête d’exploration de données avancé données](advanced-data-mining-query-editor.md).  
+ Vous pouvez à tout moment cliquer sur **Avancé** pour basculer vers l' **Éditeur de requêtes avancé d'exploration de données**qui vous permet de contrôler davantage chaque partie de l'instruction DMX. Pour plus d’informations sur l’utilisation des outils de modification de requête avancés, consultez [éditeur de requête d’exploration de données données avancé](advanced-data-mining-query-editor.md).  
   
 ### <a name="requirements"></a>Spécifications  
  Pour utiliser le **requête** Assistant, vous devez être connecté à une instance de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. Qui plus est, le serveur doit contenir au moins un modèle d'exploration de données d'un type approprié. Si aucun modèle d'exploration de données n'est disponible, vous pouvez en créer un à l'aide des Assistants fournis dans le Client d'exploration de données pour Excel. Pour plus d’informations sur la création d’un nouveau mode d’exploration de données à l’aide d’un Assistant, consultez [création d’un modèle d’exploration de données](creating-a-data-mining-model.md).  

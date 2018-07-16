@@ -1,5 +1,5 @@
 ---
-title: Navigateur (Concepteur de Cube) (Analysis Services - données multidimensionnelles) | Documents Microsoft
+title: Navigateur (Concepteur de Cube) (Analysis Services - données multidimensionnelles) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.cubeeditor.browsecube.view.f1
 ms.assetid: efb5ee1c-de50-4bfc-83ff-08a4f03c3ece
 caps.latest.revision: 26
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 8f431abab7f69c957b64d83f2f06c7675c566b2b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: bfa10bce2a4cd6462d1555b6b45fe375c6c68e04
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36139511"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37236169"
 ---
 # <a name="browser-cube-designer-analysis-services---multidimensional-data"></a>Navigateur (Concepteur de cube) (Analysis Services - Données multidimensionnelles)
   L’onglet **Navigateur** du Concepteur de cube permet d’explorer les dimensions, les mesures et les indicateurs de performance clés (KPI) d’un cube. Dans [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)], le navigateur de cube [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] est intégré au concepteur de requêtes MDX et fournit des interfaces utilisateur graphiques pour vous aider à créer des requêtes MDX, filtrer et découper les cubes et descendre dans les hiérarchies.  
@@ -34,7 +34,7 @@ ms.locfileid: "36139511"
   
  ![Concepteur de requêtes MDX Analysis Services, mode Création](media/rsqd-dsawas-mdx-designmode.gif "Concepteur de requêtes MDX Analysis Services, mode Création")  
   
- Lorsque vous travaillez en mode de conception graphique, si le **exécution automatique** (![exécuter automatiquement la requête](media/rsqdicon-autoexecute.gif "exécuter automatiquement la requête")) activer/désactiver la barre d’outils est sélectionnée, le **Navigateur** exécute une requête chaque fois que vous supprimez un objet de métadonnées dans le volet données. Vous pouvez aussi exécuter manuellement la requête à l’aide de la **exécuter la requête** (![exécuter la requête](media/rsqdicon-run.gif "exécuter la requête")) dans la barre d’outils.  
+ Lorsque vous travaillez en mode de conception graphique, si le **exécution automatique** (![exécuter automatiquement la requête](media/rsqdicon-autoexecute.gif "exécuter automatiquement la requête")) activer/désactiver la barre d’outils est sélectionnée, le **Navigateur** exécute une requête chaque fois que vous déposez un objet de métadonnées dans le volet des données. Vous pouvez aussi exécuter manuellement la requête à l’aide de la **exécuter la requête** (![exécuter la requête](media/rsqdicon-run.gif "exécuter la requête")) dans la barre d’outils.  
   
  Pour faire passer le concepteur de requêtes graphique en mode **Requête** et travailler avec le texte des instructions MDX, cliquez sur le bouton correspondant au **mode Création** dans la barre d’outils.  
   
@@ -50,7 +50,7 @@ ms.locfileid: "36139511"
   
  Le volet **Métadonnées** affiche les onglets **Métadonnées** et **Fonctions**. À partir de l’onglet **Métadonnées** , vous pouvez faire glisser des dimensions, des hiérarchies, des indicateurs de performance clés (KPI) et des mesures vers la zone de création de requêtes. Vous pouvez faire glisser des fonctions de l’onglet **Fonctions** vers la zone de création de requêtes. Lorsque vous exécutez la requête, la zone de création des requêtes affiche les résultats de la requête MDX. Vous pouvez aussi cliquer sur **Analyser dans Excel** dans la **Barre d’outils** pour exporter les données vers Microsoft Office Excel et afficher les résultats tels que les utilisateurs peuvent les voir. Les sections suivantes décrivent plus en détail la barre d’outils et tous les volets de chaque mode du **Navigateur** .  
   
- Notez que, lorsque vous travaillez en mode texte, le **exécution automatique** (![exécuter automatiquement la requête](media/rsqdicon-autoexecute.gif "exécuter automatiquement la requête")) sur la barre d’outils bouton bascule n’est pas disponible. Toutefois, vous pouvez exécuter manuellement les requêtes à l’aide de la **exécuter la requête** (![exécuter la requête](media/rsqdicon-run.gif "exécuter la requête")) dans la barre d’outils.  
+ Notez que, lorsque vous travaillez en mode texte, le **exécution automatique** (![exécuter automatiquement la requête](media/rsqdicon-autoexecute.gif "exécuter automatiquement la requête")) activer/désactiver la barre d’outils n’est pas disponible. Toutefois, vous pouvez exécuter manuellement des requêtes à l’aide de la **exécuter la requête** (![exécuter la requête](media/rsqdicon-run.gif "exécuter la requête")) dans la barre d’outils.  
   
 ## <a name="sections"></a>Sections  
  **Barre d'outils**  

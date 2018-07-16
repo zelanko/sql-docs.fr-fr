@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - database-engine-imoltp
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Analyze, Migrate, Report
 - AMR
 ms.assetid: c1ef96f1-290d-4952-8369-2f49f27afee2
 caps.latest.revision: 33
-author: stevestein
-ms.author: sstein
-manager: jhubbard
-ms.openlocfilehash: 4b88d6924c3a5b4f9b78b66ad7d1f556ff38628a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: 9cc5f2caba4f82a34c64fdaafdfef137739bc19e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36140066"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37313799"
 ---
 # <a name="determining-if-a-table-or-stored-procedure-should-be-ported-to-in-memory-oltp"></a>Déterminer si un tableau ou une procédure stockée doit être déplacée vers l'OLTP en mémoire
   Le collecteur de performances de transaction dans [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] vous aide à évaluer si l'OLTP en mémoire améliore les performances de votre application de base de données. Le rapport d'analyse des performances de transaction indique également le volume de travail nécessaire pour activer l'OLTP en mémoire dans votre application. Après avoir identifié une table sur disque pour la fonctionnalité OLTP en mémoire, utilisez le [Conseiller d’optimisation de la mémoire](memory-optimization-advisor.md)pour migrer la table. De même, le [Conseiller de compilation native](native-compilation-advisor.md) vous aide à déplacer une procédure stockée vers une procédure stockée compilée en mode natif.  
@@ -48,7 +48,7 @@ ms.locfileid: "36140066"
     > [!IMPORTANT]  
     >  Les performances d'un système de base de données dépendent de différents facteurs, tous ne pouvant pas être observés et mesurés par le collecteur de performances de transaction. Par conséquent, le rapport d'analyse des performances de transaction ne garantit pas que les gains de performances réels correspondront aux prédictions, si des prédictions sont faites.  
   
- Le collecteur de performances et la capacité à générer un rapport d’analyse sont installés lorsque vous sélectionnez **outils de gestion : base** ou **outils de gestion — avancés** Lorsque vous installez [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)].  
+ Le collecteur de performances de transaction et la capacité à générer un rapport analyse de performances de transaction sont installés lorsque vous sélectionnez **outils de gestion — base** ou **outils de gestion — avancés** Lorsque vous installez [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)].  
   
 ## <a name="best-practices"></a>Bonnes pratiques  
  Le flux de travail recommandé est illustré dans l'organigramme suivant. Les nœuds jaunes représentent les procédures facultatives :  
@@ -67,7 +67,7 @@ ms.locfileid: "36140066"
   
  Le collecteur de performances de transaction capture les données toutes les 15 minutes. Pour obtenir des résultats utilisables, exécutez le collecteur de performances de transaction pendant au moins une heure. Pour obtenir de meilleurs résultats, exécutez le collecteur de performances de transaction aussi longtemps que nécessaire pour capturer des données pour vos principaux scénarios. Générez un rapport d'évaluation des performances de transaction uniquement après avoir terminé de regrouper les données.  
   
- Configurez le collecteur de performances de transaction de façon à ce qu'il s'exécute sur votre instance de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] dans l'environnement de production et collecte les données sur une instance de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] dans votre environnement de développement (test) pour garantir une charge minimale. Pour plus d’informations sur la façon d’enregistrer les données dans une base de données de l’entrepôt de données de gestion sur un ordinateur [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] une instance, consultez [configurer la collecte de données sur une Instance distante de SQL Server](determining-if-a-table-or-stored-procedure-should-be-ported-to-in-memory-oltp.md#xxx).  
+ Configurez le collecteur de performances de transaction de façon à ce qu'il s'exécute sur votre instance de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] dans l'environnement de production et collecte les données sur une instance de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] dans votre environnement de développement (test) pour garantir une charge minimale. Pour plus d’informations sur la façon d’enregistrer des données dans une base de données d’entrepôt de données de gestion sur un référentiel distant [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] une instance, consultez [configurer la collecte des données sur une Instance distante de SQL Server](determining-if-a-table-or-stored-procedure-should-be-ported-to-in-memory-oltp.md#xxx).  
   
 ## <a name="performance-impacts"></a>Impacts sur les performances  
  Le collecteur de performances de transaction comprend deux jeux d'éléments de collecte de données :  
@@ -91,11 +91,11 @@ ms.locfileid: "36140066"
   
 1.  Dans l’Explorateur d’objets, développez **Gestion**.  
   
-2.  Bouton droit sur **collecte des données** et sélectionnez **tâches** , puis **configurer l’entrepôt de données de gestion**. Le **Assistant Configuration de l’entrepôt des données de gestion** commence.  
+2.  Bouton droit sur **collecte des données** et sélectionnez **tâches** , puis **configurer un entrepôt de données de gestion**. Le **Assistant Configuration de l’entrepôt des données de gestion** commence.  
   
-3.  Cliquez sur **suivant** pour sélectionner la base de données qui agira en tant que l’entrepôt de données de gestion.  
+3.  Cliquez sur **suivant** pour sélectionner la base de données qui jouera le rôle de l’entrepôt de données de gestion.  
   
-4.  Cliquez sur **nouveau** créer une base de données pour stocker les données de profil. Après avoir créé la base de données, cliquez sur **suivant** dans l’Assistant.  
+4.  Cliquez sur **New** pour créer une nouvelle base de données pour stocker les données de profil. Après avoir créé la base de données, cliquez sur **suivant** dans l’Assistant.  
   
 5.  L'étape suivante de l'Assistant vous permet d'ajouter des utilisateurs et des noms de connexion. Vous pouvez mapper les noms de connexion aux appartenances aux rôles pour l'instance de l'entrepôt de données de gestion (MDW). Cela n'est pas obligatoire pour collecter des données sur l'instance locale. Si vous ne collectez pas de données depuis l'instance locale, vous pouvez accorder l'appartenance au rôle de base de données `mdw_admin` au compte qui exécutera les transactions qui seront profilées. Lorsque vous avez terminé, cliquez sur **suivant**.  
   
@@ -110,30 +110,30 @@ ms.locfileid: "36140066"
   
  Pour configurer la collecte de données à télécharger vers une base de données de l'entrepôt de données de gestion sur la même instance, procédez comme suit :  
   
-1.  Dans **l’Explorateur d’objets**, développez **gestion**.  
+1.  Dans **Explorateur d’objets**, développez **gestion**.  
   
-2.  Bouton droit sur **collecte des données**, sélectionnez **tâches**, puis **configurer la collecte de données**. Le **Assistant de collecte de données de configuration** commence.  
+2.  Bouton droit sur **collecte des données**, sélectionnez **tâches**, puis **configurer la collecte des données**. Le **configurer un Assistant de collecte de données** commence.  
   
 3.  Cliquez sur **suivant** pour sélectionner la base de données qui collectera les données de profil.  
   
 4.  Sélectionnez l'instance [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] active et une base de données d'entrepôt de données de gestion sur cette instance.  
   
-5.  Dans la zone intitulée **sélectionner des ensembles de collecteurs de données vous souhaitez activer**, sélectionnez **Collection de performances de Transaction définit**. Cliquez sur **suivant** lorsqu’il est terminé.  
+5.  Dans la zone intitulée **sélectionner des ensembles de collecteurs de données vous souhaitez activer**, sélectionnez **collecte de performances de documents informatisés**. Cliquez sur **suivant** lorsque vous avez terminé.  
   
 6.  Vérifiez les sélections. Cliquez sur **retour** pour modifier les paramètres. Cliquez sur **Terminer** lorsque vous avez terminé.  
   
-###  <a name="xxx"></a> Configurer la collecte de données sur une distance [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Instance  
+###  <a name="xxx"></a> Configurer la collecte de données sur un référentiel distant [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Instance  
  La collecte de données nécessite que [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] soit démarré sur l'instance qui va collecter les données.  
   
  Un collecteur de données peut être configuré sur un SQL Server 2012 ou une version ultérieure de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
- Vous avez besoin d'un proxy [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent créé avec des informations d'identification correctes pour qu'un collecteur de données télécharge des données dans une base de données d'entrepôt de données de gestion sur une instance différente de celle où les transactions seront profilées. Pour activer un proxy [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent, vous devez d'abord créer des informations d'identification avec un nom de connexion spécifique au domaine. La connexion activée pour le domaine doit être membre du groupe `mdw_admin` pour la base de données de l'entrepôt de données de gestion. Consultez [Comment : créer des informations d’identification (SQL Server Management Studio)](http://msdn.microsoft.com/library/ms190703\(v=sql.105\).aspx) pour plus d’informations sur la création des informations d’identification.  
+ Vous avez besoin d'un proxy [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent créé avec des informations d'identification correctes pour qu'un collecteur de données télécharge des données dans une base de données d'entrepôt de données de gestion sur une instance différente de celle où les transactions seront profilées. Pour activer un proxy [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent, vous devez d'abord créer des informations d'identification avec un nom de connexion spécifique au domaine. La connexion activée pour le domaine doit être membre du groupe `mdw_admin` pour la base de données de l'entrepôt de données de gestion. Consultez [Comment : créer une information d’identification (SQL Server Management Studio)](http://msdn.microsoft.com/library/ms190703\(v=sql.105\).aspx) pour plus d’informations sur la création d’une information d’identification.  
   
  Pour configurer la collecte de données à télécharger vers une base de données de l'entrepôt de données de gestion sur une autre instance, procédez comme suit :  
   
-1.  Sur l’instance qui contient les objets que vous souhaitez migrer vers OLTP en mémoire sur disque, développez le **gestion** nœud dans l’Explorateur d’objets.  
+1.  Sur l’instance qui contient les objets sur disque que vous souhaitez migrer vers OLTP en mémoire, développez le **gestion** nœud dans l’Explorateur d’objets.  
   
-2.  Bouton droit sur **collecte des données** et sélectionnez **tâches** , puis **configurer la collecte de données**. Le **Assistant de collecte de données de configuration** commence.  
+2.  Bouton droit sur **collecte des données** et sélectionnez **tâches** , puis **configurer la collecte des données**. Le **configurer un Assistant de collecte de données** commence.  
   
 3.  Cliquez sur **suivant** pour sélectionner la base de données qui collectera les données de profil.  
   
@@ -143,17 +143,17 @@ ms.locfileid: "36140066"
   
      La version de l'instance [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] sur laquelle vous allez collecter les données (profil) doit être identique ou antérieure à celle de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] où l'entrepôt de données de gestion est configuré.  
   
-6.  Dans la zone intitulée **sélectionner des ensembles de collecteurs de données vous souhaitez activer**, sélectionnez **Collection de performances de Transaction définit**.  
+6.  Dans la zone intitulée **sélectionner des ensembles de collecteurs de données vous souhaitez activer**, sélectionnez **collecte de performances de documents informatisés**.  
   
 7.  Sélectionnez **utilisez un [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent proxy pour les téléchargements distants**.  
   
-8.  Cliquez sur **suivant** lorsqu’il est terminé.  
+8.  Cliquez sur **suivant** lorsque vous avez terminé.  
   
 9. Sélectionnez le proxy.  
   
      Si vous souhaitez créer un proxy [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent,  
   
-    1.  Cliquez sur **nouveau** pour afficher les **nouveau compte Proxy** boîte de dialogue.  
+    1.  Cliquez sur **New** pour afficher le **nouveau compte Proxy** boîte de dialogue.  
   
     2.  Dans le **nouveau compte Proxy** boîte de dialogue, entrez le nom du proxy, sélectionnez les informations d’identification et entrez éventuellement une description. Ensuite, cliquez sur **principaux**.  
   
@@ -161,16 +161,16 @@ ms.locfileid: "36140066"
   
     4.  Sélectionnez `dc_proxy` et cliquez sur **OK**. Puis cliquez sur **OK** à nouveau.  
   
-     Une fois le proxy approprié est sélectionné, cliquez sur **suivant**.  
+     Une fois que le proxy approprié est sélectionné, cliquez sur **suivant**.  
   
-10. Pour configurer des jeux d’éléments système, vérifiez **jeux d’éléments système** et cliquez sur **suivant**.  
+10. Pour configurer des jeux d’éléments système, cochez **jeux d’éléments système** et cliquez sur **suivant**.  
   
-11. Vérifiez les sélections. Cliquez sur **retour** pour modifier les paramètres. Clicck **Terminer** lorsqu’il est terminé.  
+11. Vérifiez les sélections. Cliquez sur **retour** pour modifier les paramètres. Cliquez sur **Terminer** lorsque vous avez terminé.  
   
  Les jeux d'éléments de collecte de données doivent maintenant être configurés et exécutés sur votre instance.  
   
 ### <a name="generate-reports"></a>Générer des rapports  
- Vous pouvez générer des rapports d’analyse de performances de transaction en cliquant avec le bouton droit sur la base de données de l’entrepôt de données de gestion et en sélectionnant **rapports**, puis **entrepôt de données de gestion**, puis **Présentation analyse de performances des transactions**.  
+ Vous pouvez générer des rapports d’analyse de performances de transaction en cliquant avec le bouton droit sur la base de données de l’entrepôt de données de gestion et en sélectionnant **rapports**, puis **entrepôt de données de gestion**, puis **Présentation analyse performances des transactions**.  
   
  Le rapport collecte des informations sur toutes les bases de données utilisateur sur le serveur de charge de travail. Si la base de données de l'entrepôt de données de gestion (MDW) se trouve sur l'ordinateur local, la base de données MDW s'affiche dans le rapport.  
   
@@ -200,7 +200,7 @@ ms.locfileid: "36140066"
   
 -   Section des difficultés de migration  
   
-     Cette section comprend un tableau des difficultés rencontrées pour convertir cette table de base de données en une table mémoire optimisée. Plus le taux de difficultés est élevé, plus il est difficile de convertir la table. Pour afficher les détails de la conversion de cette table de base de données, utilisez la [conseiller d’optimisation de mémoire](memory-optimization-advisor.md).  
+     Cette section comprend un tableau des difficultés rencontrées pour convertir cette table de base de données en une table mémoire optimisée. Plus le taux de difficultés est élevé, plus il est difficile de convertir la table. Pour afficher les détails de la conversion de cette table de base de données, utilisez le [Memory Optimization Advisor](memory-optimization-advisor.md).  
   
  Statistiques d’analyse et de contention dans le rapport détaillé de table sont collectées et agrégées à partir de [sys.dm_db_index_operational_stats &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-db-index-operational-stats-transact-sql).  
   

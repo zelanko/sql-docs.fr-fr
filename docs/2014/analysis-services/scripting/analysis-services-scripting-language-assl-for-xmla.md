@@ -1,5 +1,5 @@
 ---
-title: Référence de langage (ASSL) script Analysis Services | Documents Microsoft
+title: Script Language (ASSL) référence Analysis Services | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -24,15 +24,15 @@ helpviewer_keywords:
 - object definition language [Analysis Services Scripting Language]
 ms.assetid: ca0e852e-9002-4224-a0f0-bd96f2fc5c65
 caps.latest.revision: 31
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 99ae3057baf60cda23fdce68289d07c213e89d3b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: fd9fbcce8769deb49168e734542fe5296c5672f5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36039602"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37234239"
 ---
 # <a name="analysis-services-scripting-language-assl-reference"></a>Référence Analysis Services Scripting Language (ASSL)
   Les applications communiquent avec [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] à l’aide des commandes XML et les descriptions de l’objet. Analysis Services Scripting Language (ASSL) représente la portion de langage de définition d'objet de ce dialecte XML.  
@@ -47,8 +47,8 @@ ms.locfileid: "36039602"
 |-----------|-----------------|  
 |[Hiérarchie Analysis Services Scripting Language XML élément &#40;ASSL&#41;](analysis-services-scripting-language-xml-element-hierarchy-assl.md)|Diagramme détaillé de la hiérarchie des éléments dans ASSL.|  
 |[Hiérarchie de Type de données XML de langage de script Analysis Services &#40;ASSL&#41;](analysis-services-scripting-language-xml-data-type-hierarchy-assl.md)|Diagramme détaillé de la hiérarchie d'héritage des types de données dans ASSL.|  
-|[Analysis Services des éléments XML du langage des scripts &#40;ASSL&#41;](analysis-services-scripting-language-xml-elements-assl.md)|Référence syntaxique pour chaque élément inclus dans le schéma ASSL.|  
-|[Types de données de script langage XML Analysis Services &#40;ASSL&#41;](data-type/analysis-services-scripting-language-xml-data-types-assl.md)|Référence syntaxique pour chaque type de données inclus dans le schéma ASSL.|  
+|[Éléments Analysis Services Scripting Language XML &#40;ASSL&#41;](analysis-services-scripting-language-xml-elements-assl.md)|Référence syntaxique pour chaque élément inclus dans le schéma ASSL.|  
+|[Types Analysis Services Scripting Language XML données &#40;ASSL&#41;](data-type/analysis-services-scripting-language-xml-data-types-assl.md)|Référence syntaxique pour chaque type de données inclus dans le schéma ASSL.|  
   
 ## <a name="see-also"></a>Voir aussi  
  [Développement avec Analysis Services Scripting Language &#40;ASSL&#41;](../multidimensional-models/scripting-language-assl/developing-with-analysis-services-scripting-language-assl.md)   

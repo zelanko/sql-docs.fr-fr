@@ -1,5 +1,5 @@
 ---
-title: Basculer une base de données Analysis Services entre les modes ReadOnly et ReadWrite | Documents Microsoft
+title: Basculer une base de données Analysis Services entre les modes ReadOnly et ReadWrite | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - ReadOnly property
 - ReadWriteMode command
 - operations [Analysis Services - multidimensional data]
 ms.assetid: 4eff8181-08dd-4fad-b091-d400fc21a020
 caps.latest.revision: 13
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 184a674d03e6c8fb6b30d10b91b2a58225894ba2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: bb0d9ae239d33cd55d50e0e876df1584ff2fe965
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36038686"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37286105"
 ---
 # <a name="switch-an-analysis-services-database-between-readonly-and-readwrite-modes"></a>Basculer une base de données Analysis Services entre les modes ReadOnly et ReadWrite
   Il existe souvent des situations lorsqu’un [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] administrateur de base de données (dba) souhaite modifier le mode de lecture/écriture d’une base de données tabulaire ou multidimensionnel. Ces situations sont souvent justifiées par des exigences opérationnelles, telles que le partage de la base de données au sein d'un pool de serveurs [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] pour un plus grand confort de l'utilisateur.  
@@ -53,13 +53,13 @@ ms.locfileid: "36038686"
   
 5.  Recherchez le **bases de données** dossier dans le volet gauche ou droit de [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)].  
   
-6.  Cliquez sur le **bases de données** et sélectionnez **attacher...**  
+6.  Cliquez sur le **bases de données** dossier et sélectionnez **attacher...**  
   
 7.  Dans la zone de texte **dossier** , tapez l'emplacement d'origine du dossier de base de données. Vous pouvez également utiliser le bouton Parcourir (**…**) pour rechercher le dossier de base de données.  
   
 8.  Sélectionnez le mode lecture/écriture pour la base de données.  
   
-9. Tapez le mot de passe qui a été utilisé à l’étape 3 et cliquez sur **OK** pour exécuter la commande attach.  
+9. Tapez le mot de passe qui a été utilisé à l’étape 3 et cliquez sur **OK** pour exécuter la commande d’attachement.  
   
 #### <a name="to-switch-the-readwrite-mode-to-a-database-programmatically-using-amo"></a>Pour basculer par programmation le mode lecture/écriture sur une base de données à l'aide d'AMO  
   

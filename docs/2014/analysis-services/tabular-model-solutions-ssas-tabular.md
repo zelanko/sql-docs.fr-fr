@@ -1,5 +1,5 @@
 ---
-title: Solutions de modèles tabulaires (SSAS tabulaire) | Documents Microsoft
+title: Solutions de modèles tabulaires (SSAS tabulaire) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 0e9931ff-439e-4e1a-9ef2-5d3971187eb9
 caps.latest.revision: 16
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: f79d0822026b1638898b2bbc5007c964433a449c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 1b9157911050be20e3eafee4817eb46c9a8c0424
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36053387"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37289535"
 ---
 # <a name="tabular-model-solutions-ssas-tabular"></a>Solutions de modèles tabulaires (SSAS Tabulaire)
   Les rubriques de cette section fournissent des informations relatives à la création de modèles tabulaires à l'aide du générateur de modèles tabulaires dans [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)].  
@@ -27,7 +27,7 @@ ms.locfileid: "36053387"
 ## <a name="in-this-section"></a>Dans cette section  
  [Générateur de modèles tabulaires &#40;SSAS tabulaire&#41;](tabular-model-designer-ssas-tabular.md)  
   
- [Base de données de l’espace de travail &#40;SSAS tabulaire&#41;](tabular-models/workspace-database-ssas-tabular.md)  
+ [Espace de travail de base de données &#40;SSAS tabulaire&#41;](tabular-models/workspace-database-ssas-tabular.md)  
   
  [Niveau de compatibilité &#40;SSAS tabulaire SP1&#41;](tabular-models/compatibility-level-for-tabular-models-in-analysis-services.md)  
   

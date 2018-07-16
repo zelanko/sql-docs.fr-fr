@@ -1,5 +1,5 @@
 ---
-title: Importer à partir d’un fichier texte (SSAS tabulaire) | Documents Microsoft
+title: Importer à partir d’un fichier texte (SSAS tabulaire) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 7c426b04-4ff6-49ab-8bfd-54074d6ae99d
 caps.latest.revision: 8
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 0723d7b079fef518f80d468f3a3a08c179a01fbd
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: f897668d21a9f213cf841a688f217a5ff1a9fe02
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36038204"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37310759"
 ---
 # <a name="import-from-a-text-file-ssas-tabular"></a>Importer à partir d'un fichier texte (SSAS Tabulaire)
   Vous pouvez importer des données à partir de fichiers Microsoft Excel et de fichiers texte grâce à l'Assistant Importation de table.  

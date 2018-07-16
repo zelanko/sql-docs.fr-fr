@@ -1,5 +1,5 @@
 ---
-title: Mise à jour des rapports à l’aide des Classes générées à partir du schéma RDL (didacticiel SSRS) | Documents Microsoft
+title: La mise à jour des rapports à l’aide des Classes générées à partir du schéma RDL (didacticiel SSRS) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,30 +8,30 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - RDL [Reporting Services], generating
 - RDL [Reporting Services], tutorials
 - RDL [Reporting Services], serializing
 ms.assetid: 8f81d48f-7ab9-4ef8-bce0-7d16d9a47fbd
 caps.latest.revision: 26
-author: douglaslM
+author: craigg-msft
 ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: a13d94965eebf99c401159c86e5fed065f5ec7ac
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 96d125a3d69b564c94b64d23f825778c55068991
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36038712"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37297559"
 ---
 # <a name="updating-reports-using-classes-generated-from-the-rdl-schema-ssrs-tutorial"></a>Mise à jour des rapports à l'aide des classes générées à partir du schéma RDL (didacticiel SSRS)
-  Ce didacticiel illustre l’utilisation du XML Schema Definition Tool (Xsd.exe) pour générer des classes qui vous permettent de sérialiser et désérialiser les fichiers de définition de rapport (.rdl et .rdlc) avec le [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] <xref:System.Xml.Serialization.XmlSerializer> classe.  
+  Ce didacticiel illustre comment utiliser le XML Schema Definition Tool (Xsd.exe) pour générer des classes qui vous permettent de sérialiser et désérialiser les fichiers de définition de rapport (.rdl et .rdlc) avec le [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] <xref:System.Xml.Serialization.XmlSerializer> classe.  
   
 ## <a name="what-you-will-learn"></a>Contenu du didacticiel  
  Au cours de l'étude de ce didacticiel, vous allez effectuer les opérations suivantes :  
   
--   Créer une application en utilisant le [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] modèle de projet Application Console.  
+-   Créer une application qui utilise le [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] modèle de projet Application Console.  
   
 -   Générer des classes du schéma de langage RDL (Report Definition) à l’aide de la **xsd** outil.  
   
@@ -62,20 +62,20 @@ ms.locfileid: "36038712"
 > [!NOTE]  
 >  Les exemples ne sont pas installés automatiquement, mais peuvent l'être à tout moment. Pour plus d’informations sur les exemples, consultez [SQL Server Product Samples](http://go.microsoft.com/fwlink/?LinkId=182887).  
   
- **Durée estimée pour effectuer le didacticiel :** 30 minutes  
+ **Durée estimée pour suivre le didacticiel :** 30 minutes  
   
 ## <a name="tasks"></a>Tâches  
- [Leçon 1 : Créer le projet Visual Studio du schéma RDL](../../2014/tutorials/lesson-1-create-the-rdl-schema-visual-studio-project.md)  
+ [Leçon 1 : Création du projet Visual Studio du schéma RDL](../../2014/tutorials/lesson-1-create-the-rdl-schema-visual-studio-project.md)  
   
- [Leçon 2 : Générer des Classes à partir du schéma RDL à l’aide de l’outil xsd](../../2014/tutorials/lesson-2-generate-classes-from-the-rdl-schema-using-the-xsd-tool.md)  
+ [Leçon 2 : Génération de classes à partir du schéma RDL à l’aide de l’outil xsd](../../2014/tutorials/lesson-2-generate-classes-from-the-rdl-schema-using-the-xsd-tool.md)  
   
- [Leçon 3 : Charger une définition de rapport du serveur de rapports](../../2014/tutorials/lesson-3-load-a-report-definition-from-the-report-server.md)  
+ [Leçon 3 : Chargement d’une définition de rapport à partir du serveur de rapports](../../2014/tutorials/lesson-3-load-a-report-definition-from-the-report-server.md)  
   
- [Leçon 4 : Mettre à jour la définition de rapport par programme](../../2014/tutorials/lesson-4-update-the-report-definition-programmatically.md)  
+ [Leçon 4 : Mise à jour par programmation de la définition du rapport](../../2014/tutorials/lesson-4-update-the-report-definition-programmatically.md)  
   
- [Leçon 5 : Publier la définition de rapport sur le serveur de rapports](../../2014/tutorials/lesson-5-publish-the-report-definition-to-the-report-server.md)  
+ [Leçon 5 : Publication de la définition du rapport sur le serveur de rapports](../../2014/tutorials/lesson-5-publish-the-report-definition-to-the-report-server.md)  
   
- [Leçon 6 : Exécution de l’Application de schéma RDL &#40;VB-C&#35;&#41;](../../2014/tutorials/lesson-6-run-the-rdl-schema-application-vb-csharp.md)  
+ [Leçon 6 : Exécuter l’Application de schéma RDL &#40;VB-C&#35;&#41;](../../2014/tutorials/lesson-6-run-the-rdl-schema-application-vb-csharp.md)  
   
 ## <a name="see-also"></a>Voir aussi  
  [RDL (Report Definition Language) &#40;SSRS&#41;](../reporting-services/reports/report-definition-language-ssrs.md)  

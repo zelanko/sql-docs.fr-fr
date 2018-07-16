@@ -1,5 +1,5 @@
 ---
-title: La récupération des données à partir d’une Source de données analytiques | Documents Microsoft
+title: Récupération des données à partir d’une Source de données analytiques | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -17,24 +17,24 @@ helpviewer_keywords:
 - data retrieval [ADOMD.NET], about retrieving data
 ms.assetid: 88358189-28aa-4bc7-8dda-5a92e3a012b8
 caps.latest.revision: 41
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 6e6243a815b399c91a2cd7aaa9eca712c6c569bf
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 4e5595bd4e001b006cb1dfe62cba40cee3bbb30c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36038215"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37196419"
 ---
 # <a name="retrieving-data-from-an-analytical-data-source"></a>Récupération de données à partir d'une source de données analytiques
   Dès lors que vous avez établi une connexion et que vous avez créé la requête, vous pouvez récupérer tout type de données. Dans ADOMD.NET, vous pouvez récupérer des données par le biais de trois objets différents (<xref:Microsoft.AnalysisServices.AdomdClient.CellSet>, <xref:Microsoft.AnalysisServices.AdomdClient.AdomdDataReader> et <xref:System.Xml.XmlReader>) en appelant l'une des méthodes `Execute` de l'objet <xref:Microsoft.AnalysisServices.AdomdClient.AdomdCommand>.  
   
  Chacun de ces trois objets établit un équilibre entre interactivité et charge :  
   
--   *L’interactivité* fait référence à la facilité d’utilisation et la quantité d’informations disponibles via le modèle objet.  
+-   *Interactivité* fait référence à la facilité d’utilisation et la quantité d’informations disponibles via le modèle objet.  
   
--   *Surcharge* fait référence à la quantité de trafic qui génère un modèle objet via la connexion réseau au serveur, la quantité de mémoire nécessaire pour le modèle d’objet et la vitesse à laquelle le modèle objet récupère les données.  
+-   *Surcharge* fait référence à la quantité de trafic qui génère un modèle objet via la connexion réseau au serveur, la quantité de mémoire nécessaire pour le modèle objet et la vitesse à laquelle le modèle objet récupère les données.  
   
  Pour vous aider à sélectionner l'objet de récupération de données qui répond le mieux aux besoins de votre application, le tableau suivant souligne les différences entre interactivité et charge pour chaque objet.  
   

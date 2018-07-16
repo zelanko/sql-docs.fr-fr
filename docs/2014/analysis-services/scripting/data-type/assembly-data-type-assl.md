@@ -1,5 +1,5 @@
 ---
-title: Type de données assembly (ASSL) | Documents Microsoft
+title: Type de données assembly (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - Assembly data type
 ms.assetid: 0a381322-9509-4579-a754-c6cdd0a70cc9
 caps.latest.revision: 16
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 3fd706974b0cb4a897a7ef75e147dcd35ac91481
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 40cafd0d8ef11feaebce5161e97ef3717a9fb943
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36140099"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37233829"
 ---
 # <a name="assembly-data-type-assl"></a>Type de données Assembly (ASSL)
   Définit un type de données primitif abstrait qui représente un [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] assembly ou une bibliothèque de liens dynamiques (DLL) COM associée une [Server](../objects/server-element-assl.md) ou [base de données](../objects/database-element-assl.md) élément.  
@@ -72,8 +72,8 @@ ms.locfileid: "36140099"
  L’élément correspondant dans le modèle d’objet objets AMO (Analysis Management) est <xref:Microsoft.AnalysisServices.Assembly>.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Élément serveur &#40;ASSL&#41;](../objects/server-element-assl.md)   
+ [Élément de serveur &#40;ASSL&#41;](../objects/server-element-assl.md)   
  [Élément de base de données &#40;ASSL&#41;](../objects/database-element-assl.md)   
- [Types de données de script langage XML Analysis Services &#40;ASSL&#41;](analysis-services-scripting-language-xml-data-types-assl.md)  
+ [Types Analysis Services Scripting Language XML données &#40;ASSL&#41;](analysis-services-scripting-language-xml-data-types-assl.md)  
   
   

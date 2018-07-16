@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 1096a476-93cf-4474-86f5-27d6357eb380
 caps.latest.revision: 27
-author: douglaslM
+author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 03a681cf4ab018d82d991b91c463dfbef3fe8d73
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 690c7a670ca448c14c984b9fda76098ae7269c4a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36140562"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37322709"
 ---
 # <a name="step-3-testing-the-lesson-3-tutorial-package"></a>Étape 3 : Test de la leçon 3 du package du didacticiel
   Dans cette tâche, vous allez exécuter le package Lesson 3.dtsx. Lors de l'exécution du package, la fenêtre Journaux d'événements répertorie les entrées inscrites dans le fichier journal. Une fois l'exécution du package terminée, vous allez vérifier le contenu du fichier journal qui a été généré par le fournisseur d'informations.  
@@ -47,9 +47,9 @@ ms.locfileid: "36140562"
   
 -   Utilisez le Bloc-notes ou un autre éditeur de texte et ouvrez le fichier TutorialLog.log.  
   
--   Bien que la sémantique des informations générées pour les `PipelineExecutionPlan` et `PipelineExecutionTrees` les événements sont traités dans ce didacticiel, vous pouvez voir que la première ligne mentionne les champs d’informations spécifiés dans le **détails** onglet de le **configurer les journaux SSIS** boîte de dialogue. De plus, vous pouvez vérifier que les deux événements sélectionnés, PipelineExecutionPlan et PipelineExecutionTrees, ont été enregistrés pour chaque itération de la boucle Foreach.  
+-   Bien que la sémantique des informations générées pour le `PipelineExecutionPlan` et `PipelineExecutionTrees` événements sont dépasse le cadre de ce didacticiel, vous pouvez voir que la première ligne mentionne les champs d’informations spécifiés dans le **détails** onglet de le **configurer les journaux SSIS** boîte de dialogue. De plus, vous pouvez vérifier que les deux événements sélectionnés, PipelineExecutionPlan et PipelineExecutionTrees, ont été enregistrés pour chaque itération de la boucle Foreach.  
   
 ## <a name="next-lesson"></a>Leçon suivante  
- [Leçon 4 : Ajout de Redirection de flux d’erreur](../integration-services/lesson-4-add-error-flow-redirection-with-ssis.md)  
+ [Leçon 4 : Ajout de redirection de flux d’erreurs](../integration-services/lesson-4-add-error-flow-redirection-with-ssis.md)  
   
   

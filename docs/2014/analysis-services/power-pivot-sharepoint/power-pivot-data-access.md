@@ -1,5 +1,5 @@
 ---
-title: Accès aux données PowerPivot | Documents Microsoft
+title: Accès aux données PowerPivot | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 83dc82da-91fb-4e47-91a8-0e0db67339b8
 caps.latest.revision: 6
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: a1a209c87dc227497aad1808758373b0d98b4d77
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: d00d5ae30f7ed612657e185ed28307cc576bf040
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36139495"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37231987"
 ---
 # <a name="powerpivot-data-access"></a>Accès aux données PowerPivot
   Cette rubrique décrit les manières dont les données sont récupérées à partir d'un classeur PowerPivot publié dans une bibliothèque SharePoint.  

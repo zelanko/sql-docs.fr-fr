@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-data-tier-apps
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.upgradedacwizard.reviewpolicy.f1
 - sql12.swb.upgradedacwizard.selectoptions.f1
@@ -25,15 +25,15 @@ helpviewer_keywords:
 - How to [DAC], upgrade
 ms.assetid: c117df94-f02b-403f-9383-ec5b3ac3763c
 caps.latest.revision: 33
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 2406cf16d4c5d6f2a9189e9f513beee0816a9014
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: fbe586573ac3ad40e3bc26514020bb928c0f09e0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36142299"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37281695"
 ---
 # <a name="upgrade-a-data-tier-application"></a>Upgrade a Data-tier Application
   Utilisez l'Assistant Mise à niveau de l'application de la couche Données ou bien un script Windows PowerShell pour modifier le schéma et les propriétés d'une application de la couche Données (DAC) actuellement déployée pour qu'ils correspondent à ceux définis dans la nouvelle version de la DAC.  
@@ -50,7 +50,7 @@ ms.locfileid: "36142299"
   
 -   **Ignorer les pertes de données** : si `True`, la mise à niveau sera effectuée même si certaines opérations mènent à une perte de données. Si sa valeur est `False`, ces opérations mettent fin à la mise à niveau. Par exemple, si une table dans la base de données actuelle n’est pas présente dans le schéma de la nouvelle DAC, la table est supprimée si `True` est spécifié. Le paramètre par défaut est `True`.  
   
--   **Bloquer en cas de modifications** : si `True`, la mise à niveau est interrompue si le schéma de base de données est différent de celui défini dans la DAC précédente. Si `False`, la mise à niveau se poursuit même si des modifications sont détectées. Le paramètre par défaut est `False`.  
+-   **Empêcher les modifications** : si `True`, la mise à niveau est interrompue si le schéma de base de données est différent de celui défini dans la DAC précédente. Si `False`, la mise à niveau se poursuit même si des modifications sont détectées. Le paramètre par défaut est `False`.  
   
 -   **Restauration en cas d’échec** : si `True`, la mise à niveau est englobée dans une transaction, et si vous rencontrez des erreurs de restauration sera tentée. Si la valeur est `False`, toutes les modifications sont validées au fur et à mesure qu'elles sont effectuées. Par conséquent, si des erreurs se produisent, vous pourrez avoir à restaurer une sauvegarde de la base de données. Le paramètre par défaut est `False`.  
   
@@ -139,7 +139,7 @@ ms.locfileid: "36142299"
   
  **Validation du contenu de la DAC** : barre de progression qui indique l’état actuel de la validation.  
   
- **\< Précédent** -retourne à l’état initial de la **sélectionner un Package** page.  
+ **\< Précédent** -retourne à son état initial de la **sélectionner un Package** page.  
   
  **Suivant >** : passe à la dernière version de la page **Sélectionner un package**.  
   
@@ -238,7 +238,7 @@ ms.locfileid: "36142299"
   
 1.  Créez un objet serveur SMO et affectez-lui l'instance qui contient la DAC à mettre à niveau.  
   
-2.  Ouvrir un `ServerConnection` et connectez-vous à la même instance.  
+2.  Ouvrir un `ServerConnection` de l’objet et de se connecter à la même instance.  
   
 3.  Utilisez `System.IO.File` pour charger le fichier de package DAC.  
   
@@ -246,7 +246,7 @@ ms.locfileid: "36142299"
   
 5.  Définir le `DacUpgradeOptions`.  
   
-6.  Utilisez la `IncrementalUpgrade` méthode pour mettre à niveau la DAC.  
+6.  Utilisez le `IncrementalUpgrade` pour mettre à niveau la DAC.  
   
 7.  Fermez le flux de fichier utilisé pour lire le fichier de package DAC.  
   

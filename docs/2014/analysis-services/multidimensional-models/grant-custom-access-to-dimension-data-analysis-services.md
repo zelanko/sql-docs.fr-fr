@@ -1,5 +1,5 @@
 ---
-title: Octroyer un accès personnalisé à des données de dimension (Analysis Services) | Documents Microsoft
+title: Octroyer un accès personnalisé aux données de dimension (Analysis Services) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.roledesignerdialog.dimensiondata.f1
 helpviewer_keywords:
@@ -24,20 +24,20 @@ helpviewer_keywords:
 - ApplyDenied property
 ms.assetid: b028720d-3785-4381-9572-157d13ec4291
 caps.latest.revision: 37
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 509cc6dc34ce5c62bcf56f38fe3f229d2a081731
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: ae4c816ae333edf892b836d25161b70fc81e58e9
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36140850"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37215969"
 ---
 # <a name="grant-custom-access-to-dimension-data-analysis-services"></a>Octroyer un accès personnalisé à des données de dimension (Analysis Services)
   Après avoir activé l'accès en lecture à un cube, vous pouvez définir des autorisations supplémentaires qui accordent ou refusent explicitement l'accès aux membres de dimension (y compris les mesures contenues dans la dimension de mesures contenant toutes les mesures utilisées dans un cube). Par exemple, étant donné plusieurs catégories de revendeurs, vous pouvez définir des autorisations pour exclure les données d'un type spécifique. L'illustration suivante est une représentation avant/après du refus de l'accès au type d'entreprise Warehouse dans la dimension Reseller.  
   
- ![Les tableaux croisés dynamiques avec et sans un membre de dimension](../media/ssas-permsdimdenied.png "des tableaux croisés dynamiques avec et sans un membre de dimension")  
+ ![Les tableaux croisés dynamiques avec et sans un membre de dimension](../media/ssas-permsdimdenied.png "tableaux croisés dynamiques avec et sans un membre de dimension")  
   
  Par défaut, si vous pouvez lire les données d’un cube [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , vous disposez automatiquement d’autorisations d’accès en lecture pour toutes les mesures et tous les membres de dimension associés à ce cube. Ce comportement peut être suffisant pour de nombreux scénarios, cependant parfois des exigences de sécurité demandent une stratégie d'autorisation segmentée, avec différents niveaux d'accès pour différents utilisateurs dans la même dimension.  
   
@@ -75,7 +75,7 @@ ms.locfileid: "36140850"
 5.  Si vous le souhaitez, cliquez sur **avancé** pour activer `Visual Totals` pour cette hiérarchie d’attribut. Cette option recalcule les agrégations en fonction des membres disponibles via ce rôle.  
   
     > [!NOTE]  
-    >  Lorsque vous appliquez des autorisations qui suppriment des membres de la dimension, les totaux agrégés ne sont pas automatiquement recalculés. Supposons que le `All` membre d’une hiérarchie d’attribut retourne le nombre 200 avant que les autorisations sont appliquées. Après l’application des autorisations qui refusent l’accès à certains membres, `All` retourne toujours 200, même si les valeurs de membre visibles par l’utilisateur sont beaucoup moins nombreuses. Pour ne pas dérouter les consommateurs de votre cube, vous pouvez configurer le `All` membre être l’agrégat d’uniquement les membres de ce rôle, plutôt que de l’agrégat de tous les membres de la hiérarchie d’attribut. Pour appeler ce comportement, vous pouvez activer `Visual Totals` sur la **avancé** onglet lors de la configuration de sécurité de dimension. Une fois activé, l'agrégation est calculée au moment de la requête au lieu d'être extraite d'agrégations précalculées. Cela peut avoir un effet notable sur les performances de la requête, c'est pourquoi il est conseillé de l'utiliser uniquement lorsque cela est nécessaire.  
+    >  Lorsque vous appliquez des autorisations qui suppriment des membres de la dimension, les totaux agrégés ne sont pas automatiquement recalculés. Supposons que le `All` membre d’une hiérarchie d’attribut retourne un nombre égal à 200 avant que les autorisations sont appliquées. Après avoir appliqué les autorisations qui refusent l’accès à certains membres, `All` retourne toujours 200, même si les valeurs de membre visibles à l’utilisateur sont beaucoup moins nombreuses. Pour ne pas dérouter les consommateurs de votre cube, vous pouvez configurer le `All` membre être l’agrégat de ces seuls les membres du rôle, plutôt que l’agrégat de tous les membres de la hiérarchie d’attribut. Pour appeler ce comportement, vous pouvez activer `Visual Totals` sur le **avancé** onglet lors de la configuration de la sécurité de dimension. Une fois activé, l'agrégation est calculée au moment de la requête au lieu d'être extraite d'agrégations précalculées. Cela peut avoir un effet notable sur les performances de la requête, c'est pourquoi il est conseillé de l'utiliser uniquement lorsque cela est nécessaire.  
   
 ## <a name="hiding-measures"></a>Masquage des mesures  
  Dans [Grant custom access to cell data &#40;Analysis Services&#41;](grant-custom-access-to-cell-data-analysis-services.md), il a été expliqué que le masquage complet de tous les aspects visuels d’une mesure, et pas seulement de ses données de cellule, nécessite des autorisations sur les membres de la dimension. Cette section explique comment refuser l'accès aux métadonnées d'objet d'une mesure.  
@@ -124,7 +124,7 @@ ms.locfileid: "36140850"
   
  Cependant, la désactivation de la propriété VisualTotals peut créer un problème de sécurité si un utilisateur peut utiliser les valeurs des cellules agrégées pour en déduire les valeurs pour les membres d’attribut auxquels le rôle de base de données de l’utilisateur ne peut pas accéder. Par exemple, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] utilise les valeurs de trois membres d’attribut pour calculer une valeur de cellule agrégée. Le rôle de base de données peut afficher deux de ces membres. En utilisant la valeur de cellule agrégée, un membre de ce rôle de base de données peut déduire la valeur du troisième membre de l'attribut.  
   
- Définition de propriété VisualTotals `True` peut éliminer ce risque. Quand vous activez la propriété VisualTotals, un rôle de base de données peut afficher seulement les totaux agrégés des membres de la dimension sur lesquels il dispose d’une autorisation.  
+ Définissant la propriété VisualTotals sur `True` peut éliminer ce risque. Quand vous activez la propriété VisualTotals, un rôle de base de données peut afficher seulement les totaux agrégés des membres de la dimension sur lesquels il dispose d’une autorisation.  
   
  **Vérifier**  
  Cliquez pour tester la syntaxe MDX définie dans cette page.  

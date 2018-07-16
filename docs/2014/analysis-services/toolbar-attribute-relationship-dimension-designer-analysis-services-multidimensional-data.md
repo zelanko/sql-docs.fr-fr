@@ -1,5 +1,5 @@
 ---
-title: Barre d’outils (onglet Concepteur de relations d’attributs, Concepteur de dimensions) (Analysis Services - données multidimensionnelles) | Documents Microsoft
+title: Barre d’outils (onglet Concepteur relations d’attributs, Concepteur de dimensions) (Analysis Services - données multidimensionnelles) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.dimensiondesigner.ardesigner.toolbar.f1
 ms.assetid: 9c0415a8-b780-40dd-a6dd-6ee0e30a24cb
 caps.latest.revision: 18
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 5bfd406eb54451cd6e3b68b5463172f796cd82e1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 2426c4c39c68e553782d1b9e1a28e3993f180eb9
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36141040"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37216019"
 ---
 # <a name="toolbar-attribute-relationship-designer-tab-dimension-designer-analysis-services---multidimensional-data"></a>Barre d'outils (onglet Concepteur de relations d'attributs, Concepteur de dimensions) (Analysis Services - Données multidimensionnelles)
   La barre d’outils de l’onglet **Relation d’attribut** du Concepteur de Dimensions permet d’exécuter les procédures suivantes :  
@@ -69,7 +69,7 @@ ms.locfileid: "36141040"
  **Organiser automatiquement les formes**  
  Organise automatiquement les formes dans le diagramme d'après l'algorithme de disposition utilisé par le Concepteur de dimensions. Par défaut, l'option **Organiser automatiquement les formes** est activée.  
   
- **Afficher les affichages de liste**  
+ **Afficher les affichages en liste**  
  Affiche ou masque les listes **Attributs** et **Relations d’attributs** . Ces listes apparaissent dans leurs propres volets immédiatement sous le volet qui contient le diagramme des relations d'attributs.  
   
   

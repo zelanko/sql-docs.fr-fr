@@ -1,25 +1,24 @@
 ---
-title: Configuration de SQL Server Managed Backup dans Windows Azure | Documents Microsoft
+title: Définition de sauvegarde SQL Server gérée sur Windows Azure | Microsoft Docs
 ms.custom: ''
 ms.date: 08/04/2016
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-backup-restore
+ms.technology: backup-restore
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 68ebb53e-d5ad-4622-af68-1e150b94516e
 caps.latest.revision: 17
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 43a7ffba55ccae49ae83360b833184fe0908a41f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 436da2329cec73764cbeb73b34971352df83dfef
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36038374"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37281525"
 ---
 # <a name="setting-up-sql-server-managed-backup-to-windows-azure"></a>Configuration de la sauvegarde managée SQL Server sur Windows Azure
   Cette rubrique contient deux didacticiels :  
@@ -28,7 +27,7 @@ ms.locfileid: "36038374"
   
  Configurer la [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] au niveau de l'instance, activer les notifications par courrier électronique et surveiller l'activité de sauvegarde.  
   
- Pour obtenir un didacticiel sur la configuration de [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] pour les groupes de disponibilité, consultez [configuration SQL Server Managed Backup to Microsoft Azure pour les groupes de disponibilité](../../database-engine/setting-up-sql-server-managed-backup-to-windows-azure-for-availability-groups.md).  
+ Pour obtenir un didacticiel sur la configuration de [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] pour les groupes de disponibilité, consultez [définition de sauvegarde SQL Server managée sur Microsoft Azure pour les groupes de disponibilité](../../database-engine/setting-up-sql-server-managed-backup-to-windows-azure-for-availability-groups.md).  
   
 ## <a name="setting-up-includesssmartbackupincludesss-smartbackup-mdmd"></a>Configuration de la [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]  
   
@@ -37,7 +36,7 @@ ms.locfileid: "36038374"
   
  **Autorisations :**  
   
--   Nécessite l’appartenance au **db_backupoperator** de la base de données de rôle, avec **ALTER ANY CREDENTIAL** autorisations, et `EXECUTE` autorisations sur **sp_delete_backuphistory**procédure stockée.  
+-   Nécessite l’appartenance au **db_backupoperator** rôle, de base de données avec **ALTER ANY CREDENTIAL** autorisations, et `EXECUTE` autorisations sur **sp_delete_backuphistory**procédure stockée.  
   
 -   Requiert **sélectionnez** autorisations sur le **smart_admin.fn_get_current_xevent_settings**(fonction).  
   
@@ -47,18 +46,18 @@ ms.locfileid: "36038374"
 
 
 1.  **Créer un compte de stockage Microsoft Azure :** les sauvegardes sont stockées dans le service de stockage Microsoft Azure. Vous devez d’abord créer un compte de stockage Microsoft Azure, si vous n’avez pas déjà un compte.
-    - SQL Server 2014 utilise des objets BLOB de pages, qui est différents de blocs et objets BLOB d’ajout. Par conséquent, vous devez créer un compte à usage général et non un compte de l’objet blob. Pour plus d’informations, consultez [comptes de stockage sur Azure](http://azure.microsoft.com/documentation/articles/storage-create-storage-account/).
+    - SQL Server 2014 utilise des objets BLOB de pages, qui diffèrent de celles des blocs et objets BLOB d’ajout. Par conséquent, vous devez créer un compte à usage général et non un compte de l’objet blob. Pour plus d’informations, consultez [comptes de stockage Azure sur](http://azure.microsoft.com/documentation/articles/storage-create-storage-account/).
     - Notez le nom du compte de stockage et les clés d'accès. Le nom du compte de stockage et les informations de clé d'accès sont utilisés pour créer un objet contenant les informations d'identification SQL. Les informations d'identification SQL servent à authentifier le compte de stockage.  
  
-2.  **Créer des informations d’identification SQL :** créer les informations d’identification SQL à l’aide le nom du compte de stockage en tant que l’identité et la clé d’accès de stockage en tant que le mot de passe.  
+2.  **Créer des informations d’identification SQL :** créer les informations d’identification SQL utilisant le nom du compte de stockage comme identité et la clé d’accès de stockage comme mot de passe.  
   
-3.  **Vérifiez le service SQL Server Agent est démarré et en cours d’exécution :** démarrez SQL Server Agent s’il n’est pas en cours d’exécution.  [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] nécessite l'exécution de SQL Server Agent sur l'instance pour effectuer les opérations de sauvegarde.  Vous pouvez configurer l'exécution automatique de SQL Server Agent, pour vous assurer que les opérations de sauvegarde se déroulent régulièrement.  
+3.  **Vérifiez le service SQL Server Agent est démarré et exécuté :** démarrez SQL Server Agent s’il n’est pas en cours d’exécution.  [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] nécessite l'exécution de SQL Server Agent sur l'instance pour effectuer les opérations de sauvegarde.  Vous pouvez configurer l'exécution automatique de SQL Server Agent, pour vous assurer que les opérations de sauvegarde se déroulent régulièrement.  
   
 4.  **Déterminez la période de rétention** . Indiquez la période de rétention souhaitée pour les fichiers de sauvegarde. La période de rétention est spécifiée en jours, sur une plage de 1 à 30.  
   
 5.  **Activer et configurer [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] :** démarrez SQL Server Management Studio et connectez-vous à l’instance où la base de données est installé. Dans la fenêtre de requête, exécutez l'instruction suivante après avoir modifié les valeurs du nom de la base de données, des informations d'identification SQL, de la période de rétention et des options de chiffrement selon vos besoins.  
   
-     Pour plus d’informations sur la création d’un certificat pour le chiffrement, consultez la **créer un certificat de sauvegarde** l’étape [créer une sauvegarde chiffrée](create-an-encrypted-backup.md).  
+     Pour plus d’informations sur la création d’un certificat pour le chiffrement, consultez le **créer un certificat de sauvegarde** étape dans [Create an Encrypted Backup](create-an-encrypted-backup.md).  
   
     ```  
     Use msdb;  
@@ -83,7 +82,7 @@ ms.locfileid: "36038374"
     SELECT * FROM smart_admin.fn_get_current_xevent_settings()  
     ```  
   
-     Les événements du canal d'administration, opérationnel et analytique doivent être activés par défaut et ne doivent pas pouvoir être désactivés. Cela est en principe suffisant pour surveiller les événements qui nécessitent une intervention manuelle.  Vous pouvez activer les événements de débogage, mais les canaux de débogage comprennent des événements d'information et de débogage que la [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] utilise pour détecter et résoudre les problèmes. Pour plus d’informations, consultez [Moniteur SQL Server Managed Backup to Microsoft Azure](sql-server-managed-backup-to-microsoft-azure.md).  
+     Les événements du canal d'administration, opérationnel et analytique doivent être activés par défaut et ne doivent pas pouvoir être désactivés. Cela est en principe suffisant pour surveiller les événements qui nécessitent une intervention manuelle.  Vous pouvez activer les événements de débogage, mais les canaux de débogage comprennent des événements d'information et de débogage que la [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] utilise pour détecter et résoudre les problèmes. Pour plus d’informations, consultez [moniteur sauvegarde managée SQL Server vers Microsoft Azure](sql-server-managed-backup-to-microsoft-azure.md).  
   
 7.  **Activez et configurez les notifications de l’état d’intégrité :** [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] fournit une procédure stockée qui crée un travail d’agent pour envoyer des notifications par courrier électronique des erreurs ou des avertissements susceptibles de nécessiter une intervention. Les étapes suivantes décrivent la procédure d'activation et de configuration des notifications par courrier électronique :  
   
@@ -100,7 +99,7 @@ ms.locfileid: "36038374"
   
         ```  
   
-         Pour plus d’informations et un exemple de script complet, consultez [Moniteur SQL Server Managed Backup to Microsoft Azure](sql-server-managed-backup-to-microsoft-azure.md).  
+         Pour plus d’informations et un exemple de script complet, consultez [moniteur sauvegarde managée SQL Server vers Microsoft Azure](sql-server-managed-backup-to-microsoft-azure.md).  
   
 8.  **Affichez les fichiers de sauvegarde dans le compte de stockage Microsoft Azure** . Connectez-vous au compte de stockage depuis SQL Server Management Studio ou depuis le Portail de gestion Azure. Vous verrez un conteneur pour l'instance de SQL Server qui héberge la base de données que vous avez configurée pour utiliser la [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]. Vous pourrez voir aussi une base de données et une sauvegarde de journal 15 minutes après l'activation de la [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] pour la base de données.  
   
@@ -151,14 +150,14 @@ ms.locfileid: "36038374"
   
     ```  
   
- Les étapes de cette section sont propres à la configuration initiale de la [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] sur la base de données. Vous pouvez modifier les configurations existantes à l’aide de la même procédure stockée système **smart_admin.sp_set_db_backup** et indiquer de nouvelles valeurs. Pour plus d’informations, consultez [SQL Server Managed Backup to Microsoft Azure - paramètres de rétention et stockage](../../database-engine/sql-server-managed-backup-to-windows-azure-retention-and-storage-settings.md).  
+ Les étapes de cette section sont propres à la configuration initiale de la [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] sur la base de données. Vous pouvez modifier les configurations existantes à l’aide de la même procédure stockée système **smart_admin.sp_set_db_backup** et indiquer de nouvelles valeurs. Pour plus d’informations, consultez [sauvegarde de managée SQL Server vers Microsoft Azure - paramètres de rétention et stockage](../../database-engine/sql-server-managed-backup-to-windows-azure-retention-and-storage-settings.md).  
   
 ### <a name="enable-includesssmartbackupincludesss-smartbackup-mdmd-for-the-instance-with-default-settings"></a>Activer la [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] pour l'instance avec des paramètres par défaut  
- Ce didacticiel décrit les étapes pour activer et configurer [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] pour l’instance « MyInstance »,\\. Il inclut les étapes pour activer la surveillance de l'état d'intégrité de la [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)].  
+ Ce didacticiel décrit les étapes pour activer et configurer [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] pour l’instance, « MyInstance »,\\. Il inclut les étapes pour activer la surveillance de l'état d'intégrité de la [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)].  
   
  **Autorisations :**  
   
--   Nécessite l’appartenance au **db_backupoperator** de la base de données de rôle, avec **ALTER ANY CREDENTIAL** autorisations, et `EXECUTE` autorisations sur **sp_delete_backuphistory**procédure stockée.  
+-   Nécessite l’appartenance au **db_backupoperator** rôle, de base de données avec **ALTER ANY CREDENTIAL** autorisations, et `EXECUTE` autorisations sur **sp_delete_backuphistory**procédure stockée.  
   
 -   Requiert **sélectionnez** autorisations sur le **smart_admin.fn_get_current_xevent_settings**(fonction).  
   
@@ -166,10 +165,10 @@ ms.locfileid: "36038374"
 
 
 1.  **Créer un compte de stockage Microsoft Azure :** les sauvegardes sont stockées dans le service de stockage Microsoft Azure. Vous devez d’abord créer un compte de stockage Microsoft Azure, si vous n’avez pas déjà un compte.
-    - SQL Server 2014 utilise des objets BLOB de pages, qui est différents de blocs et objets BLOB d’ajout. Par conséquent, vous devez créer un compte à usage général et non un compte de l’objet blob. Pour plus d’informations, consultez [comptes de stockage sur Azure](http://azure.microsoft.com/documentation/articles/storage-create-storage-account/).
+    - SQL Server 2014 utilise des objets BLOB de pages, qui diffèrent de celles des blocs et objets BLOB d’ajout. Par conséquent, vous devez créer un compte à usage général et non un compte de l’objet blob. Pour plus d’informations, consultez [comptes de stockage Azure sur](http://azure.microsoft.com/documentation/articles/storage-create-storage-account/).
     - Notez le nom du compte de stockage et les clés d'accès. Le nom du compte de stockage et les informations de clé d'accès sont utilisés pour créer un objet contenant les informations d'identification SQL. Les informations d'identification SQL servent à authentifier le compte de stockage.  
   
-2.  **Créer des informations d’identification SQL :** créer les informations d’identification SQL à l’aide le nom du compte de stockage en tant que l’identité et la clé d’accès de stockage en tant que le mot de passe.  
+2.  **Créer des informations d’identification SQL :** créer les informations d’identification SQL utilisant le nom du compte de stockage comme identité et la clé d’accès de stockage comme mot de passe.  
   
 3.  **Vérifiez que le service SQL Server Agent est démarré et exécuté** . Démarrez SQL Server Agent s'il n'est pas exécuté actuellement. [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] nécessite l'exécution de SQL Server Agent sur l'instance pour effectuer les opérations de sauvegarde.  Vous pouvez configurer l'exécution automatique de SQL Server Agent, pour vous assurer que les opérations de sauvegarde se déroulent régulièrement.  
   
@@ -177,7 +176,7 @@ ms.locfileid: "36038374"
   
 5.  **Activer et configurer [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] :** démarrez SQL Server Management Studio et connectez-vous à l’instance de SQL Server. Dans la fenêtre de requête, exécutez l'instruction suivante après avoir modifié les valeurs du nom de la base de données, des informations d'identification SQL, de la période de rétention et des options de chiffrement selon vos besoins.  
   
-     Pour plus d’informations sur la création d’un certificat pour le chiffrement, consultez la **créer un certificat de sauvegarde** l’étape [créer une sauvegarde chiffrée](create-an-encrypted-backup.md).  
+     Pour plus d’informations sur la création d’un certificat pour le chiffrement, consultez le **créer un certificat de sauvegarde** étape dans [Create an Encrypted Backup](create-an-encrypted-backup.md).  
   
     ```  
     Use msdb;  
@@ -229,7 +228,7 @@ ms.locfileid: "36038374"
   
         ```  
   
-         Pour plus d’informations sur la surveillance et un exemple de script complet, consultez [Moniteur SQL Server Managed Backup to Microsoft Azure](sql-server-managed-backup-to-microsoft-azure.md).  
+         Pour plus d’informations sur la surveillance et un exemple de script complet, consultez [moniteur sauvegarde managée SQL Server vers Microsoft Azure](sql-server-managed-backup-to-microsoft-azure.md).  
   
 9. **Affichez les fichiers de sauvegarde dans le compte de stockage Microsoft Azure** . Connectez-vous au compte de stockage depuis SQL Server Management Studio ou depuis le Portail de gestion Azure. Vous verrez un conteneur pour l'instance de SQL Server qui héberge la base de données que vous avez configurée pour utiliser la [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]. Vous pourrez voir aussi une base de données et une sauvegarde de journal 15 minutes après la création de la base de données.  
   
@@ -280,6 +279,6 @@ ms.locfileid: "36038374"
   
     ```  
   
- Les paramètres par défaut de la [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] peuvent être remplacés pour une base de données spécifique en les configurant directement au niveau de cette base de données. Vous pouvez également interrompre et reprendre temporairement le service de [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]. Pour plus d’informations, consultez [SQL Server Managed Backup to Microsoft Azure - paramètres de rétention et stockage](../../database-engine/sql-server-managed-backup-to-windows-azure-retention-and-storage-settings.md)  
+ Les paramètres par défaut de la [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] peuvent être remplacés pour une base de données spécifique en les configurant directement au niveau de cette base de données. Vous pouvez également interrompre et reprendre temporairement le service de [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]. Pour plus d’informations, consultez [SQL Server Managed Backup vers Microsoft Azure - paramètres de rétention et stockage](../../database-engine/sql-server-managed-backup-to-windows-azure-retention-and-storage-settings.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Spécifiez les informations d’identification dans le Générateur de rapports | Documents Microsoft
+title: Spécifiez les informations d’identification dans le Générateur de rapports | Microsoft Docs
 ms.custom: ''
 ms.date: 12/29/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 7412ce68-aece-41c0-8c37-76a0e54b6b53
 caps.latest.revision: 7
-author: douglaslM
+author: maggiesmsft
 ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 4c5a9c27436bf80887a3f8917b1d4df71896ba2d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 2bfa96110c521386cf6e7697f6f395f845ae6a83
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36140666"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37280325"
 ---
 # <a name="specify-credentials-in-report-builder"></a>Spécifier des informations d’identification dans le Générateur de rapports
   Les informations d'identification permettent d'authentifier l'utilisateur qui tente de récupérer des données à partir d'une source de données. Le propriétaire de la source de données détermine le type d'informations d'identification à utiliser. Par exemple, un administrateur de base de données peut spécifier que l'utilisateur doit fournir un nom d'utilisateur et un mot de passe Windows.  
@@ -27,7 +27,7 @@ ms.locfileid: "36140666"
  Dans une définition de rapport, chaque définition de la source de données indique un nom, une chaîne de connexion, l'utilisation ou non de la sécurité intégrée, ainsi que l'invite à afficher si des informations d'identification sont requises mais qu'elles ne sont pas spécifiées. Les informations d'identification ne sont pas enregistrées dans la définition de rapport. Une fois qu'un rapport a été publié sur le serveur de rapports, les sources de données peuvent être gérées indépendamment d'une définition de rapport. Les propriétaires de sources de données peuvent spécifier des informations d'identification pour les sources de données incorporées et partagées sur le serveur de rapports.  
   
 > [!NOTE]  
->  L'administrateur du serveur de rapports doit accorder les autorisations appropriées à un utilisateur pour lui permettre de parcourir le serveur de rapports afin de sélectionner des sources de données partagées ou des modèles, d'ouvrir ou d'enregistrer des rapports. Pour plus d’informations, consultez [d’installation, désinstallation et prise en charge du Générateur de rapports](../../2014/reporting-services/install-uninstall-and-report-builder-support.md).  
+>  L'administrateur du serveur de rapports doit accorder les autorisations appropriées à un utilisateur pour lui permettre de parcourir le serveur de rapports afin de sélectionner des sources de données partagées ou des modèles, d'ouvrir ou d'enregistrer des rapports. Pour plus d’informations, consultez [installation, désinstallation et prise en charge du Générateur de rapports](../../2014/reporting-services/install-uninstall-and-report-builder-support.md).  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../includes/ssrbrddup-md.md)]  
@@ -75,14 +75,14 @@ ms.locfileid: "36140666"
  Lorsque vous spécifiez l'invite des informations d'identification, chaque utilisateur qui accède au rapport doit entrer un nom d'utilisateur et un mot de passe pour récupérer les données. Cette option est recommandée pour les rapports qui contiennent des données confidentielles. Les informations d'identification demandées par invite peuvent correspondre à un compte de domaine Windows ou une connexion de base de données. Si le serveur de base de données ne reconnaît pas les informations d'identification que vous fournissez, ou si l'utilisateur spécifié n'a pas reçu l'autorisation de récupérer les données, la connexion échoue.  
   
 ### <a name="no-credentials"></a>Aucune information d'identification  
- Aucune information d'identification n'est requise pour cette source de données. Pour exécuter ce rapport sur le serveur de rapports, le compte d'exécution sans assistance doit être configuré. Pour plus d’informations, consultez [configurer le compte d’exécution sans assistance &#40;Gestionnaire de Configuration de SSRS&#41; ](install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md) dans les [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] documentation dans [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [la documentation en ligne](http://go.microsoft.com/fwlink/?linkid=121312).  
+ Aucune information d'identification n'est requise pour cette source de données. Pour exécuter ce rapport sur le serveur de rapports, le compte d'exécution sans assistance doit être configuré. Pour plus d’informations, consultez [configurer le compte d’exécution sans assistance &#40;Gestionnaire de Configuration de SSRS&#41; ](install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md) dans le [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] documentation dans [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [la documentation en ligne](http://go.microsoft.com/fwlink/?linkid=121312).  
   
 ## <a name="see-also"></a>Voir aussi  
  [Installer, désinstaller et prise en charge du Générateur de rapports](../../2014/reporting-services/install-uninstall-and-report-builder-support.md)   
- [Incorporée et partagée des connexions de données ou Sources de données &#40;rapport Générateur et SSRS&#41;](../../2014/reporting-services/embedded-and-shared-data-connections-or-data-sources-report-builder-and-ssrs.md)   
- [Boîte de dialogue Paramètres des Options de générateur de rapports &#40;Générateur de rapports&#41;](report-builder/set-default-options-for-report-builder.md)   
- [Connexions de données, les Sources de données et les chaînes de connexion dans le Générateur de rapports](../../2014/reporting-services/data-connections-data-sources-and-connection-strings-in-report-builder.md)   
- [Ajouter des données à un rapport &#40;rapport Générateur et SSRS&#41;](report-data/report-datasets-ssrs.md)   
- [Ajouter et vérifier une connexion de données ou une Source de données &#40;rapport Générateur et SSRS&#41;](report-data/add-and-verify-a-data-connection-report-builder-and-ssrs.md)  
+ [Incorporée et partagée des connexions de données ou Sources de données &#40;Générateur de rapports et SSRS&#41;](../../2014/reporting-services/embedded-and-shared-data-connections-or-data-sources-report-builder-and-ssrs.md)   
+ [Boîte de dialogue, paramètres de Options de générateur de rapports &#40;Générateur de rapports&#41;](report-builder/set-default-options-for-report-builder.md)   
+ [Connexions de données, Sources de données et chaînes de connexion dans le Générateur de rapports](../../2014/reporting-services/data-connections-data-sources-and-connection-strings-in-report-builder.md)   
+ [Ajouter des données à un rapport &#40;Générateur de rapports et SSRS&#41;](report-data/report-datasets-ssrs.md)   
+ [Ajouter et vérifier une connexion de données ou d’une Source de données &#40;Générateur de rapports et SSRS&#41;](report-data/add-and-verify-a-data-connection-report-builder-and-ssrs.md)  
   
   

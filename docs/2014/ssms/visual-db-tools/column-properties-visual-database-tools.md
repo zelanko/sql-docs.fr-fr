@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vdt.designers.properties.Column.ColumnIdentitySpec
 - vdt.designers.properties.Column
@@ -17,15 +17,15 @@ f1_keywords:
 - vdt.designers.properties.Column.ColumnFulltextSpec
 ms.assetid: e549a2a8-4154-4ec8-b146-614564169b39
 caps.latest.revision: 23
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 2442b50d7c7a6a325013d3a3a808747925391183
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 1aed3d78cbc0f9ef44c15310e2ae9085226c3413
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36140237"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37236179"
 ---
 # <a name="column-properties-visual-database-tools"></a>Propriétés de la colonne (Visual Database Tools)
   Il existe deux ensembles de propriétés pour les colonnes : un jeu complet que vous pouvez consulter sous l’onglet **Propriétés de la colonne** dans le Concepteur de tables (disponible uniquement pour les bases de données [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]) et un sous-ensemble que vous pouvez consulter dans la fenêtre Propriétés à l’aide de l’Explorateur de serveurs.  
@@ -189,6 +189,6 @@ ms.locfileid: "36140237"
  Affiche la taille en octets autorisée par le type de données de la colonne. Par exemple, un type de données `nchar` peut avoir une longueur égale à 10 (nombre de caractères), mais une taille égale à 20 pour tenir compte des jeux de caractères Unicode.  
   
 > [!NOTE]  
->  La longueur d'un type de données `varchar(max)` varie pour chaque ligne. sp_help renvoie (-1) comme longueur de la `varchar(max)` colonne. [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] affiche -1 comme taille de colonne.  
+>  La longueur d'un type de données `varchar(max)` varie pour chaque ligne. sp_help retourne (-1) comme longueur de `varchar(max)` colonne. [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] affiche -1 comme taille de colonne.  
   
   
