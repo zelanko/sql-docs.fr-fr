@@ -1,5 +1,5 @@
 ---
-title: Tables d’historique de sauvegarde ou de restauration importantes effectuer de mise à niveau ne répond ne pas | Documents Microsoft
+title: Tables d’historique de sauvegarde ou de restauration importantes rendre mise à niveau ne répond ne pas | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - backup history tables
 - history tables
 ms.assetid: f88d86ec-324b-4518-b6d7-1af7e7265812
 caps.latest.revision: 21
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 1b7d3f6c5734f743d83a712cea745c3816bcdbc0
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: d01d73f9456d56a8f12698b954213289ab4921d7
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36041766"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37208499"
 ---
 # <a name="large-backup-or-restore-history-tables-make-upgrade-appear-to-not-respond"></a>Les tables d'historique de sauvegarde ou de restauration importantes donnent l'impression que la mise à niveau ne répond pas
   Dans [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], de nouvelles colonnes ont été ajoutées dans certaines tables d'historique de sauvegarde et de restauration. La mise à niveau de ces tables implique de les modifier pour ajouter les nouvelles colonnes. Si une ou plusieurs de ces tables contiennent un grand nombre de lignes, la mise à niveau semblera bloquée pendant une durée substantielle sur l'instruction ALTER TABLE qui ajoute des colonnes à ces tables.  

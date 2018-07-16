@@ -1,5 +1,5 @@
 ---
-title: Nouveau modèle de boîte de dialogue (vue de Structure d’exploration de données) d’exploration de données | Documents Microsoft
+title: Nouveau d’exploration de données Model, boîte de dialogue (vue de Structure d’exploration de données) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dm.miningmodeleditor.structure.createrelatedmodel.f1
 ms.assetid: 7729e98e-6296-4ad9-b73c-fb0f29f4c54e
 caps.latest.revision: 22
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 98c09aa012c7630a10ea97b7d2d7702208ac9a7b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: c03d62fb6196cadb79cb5e16c06483e7efbe174e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36043007"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37204489"
 ---
 # <a name="new-mining-model-dialog-box-mining-structure-view"></a>Boîte de dialogue Nouveau modèle d'exploration de données (vue Structure d'exploration de données)
   Utilisez la boîte de dialogue **Nouveau modèle d'exploration de données** pour ajouter un modèle d'exploration de données à la structure d'exploration de données.  
@@ -34,7 +34,7 @@ ms.locfileid: "36043007"
  Sélectionnez l'algorithme sur lequel le nouveau modèle d'exploration de données doit être basé.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Vue de la Structure d’exploration de données &#40;Concepteur de modèle d’exploration de données&#41;](mining-structure-view-data-mining-model-designer.md)   
+ [Vue de Structure d’exploration de données &#40;Concepteur de modèle d’exploration de données&#41;](mining-structure-view-data-mining-model-designer.md)   
  [Ajouter un modèle d’exploration de données à une structure d’exploration de données existante](data-mining/add-a-mining-model-to-an-existing-mining-structure.md)  
   
   

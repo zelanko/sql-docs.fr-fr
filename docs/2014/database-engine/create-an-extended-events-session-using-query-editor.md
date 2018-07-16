@@ -1,5 +1,5 @@
 ---
-title: Créer une Session d’événements étendus à l’aide de l’éditeur de requête | Documents Microsoft
+title: Créer une Session d’événements étendus à l’aide de l’éditeur de requête | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - create extended events session
 - extended events [SQL Server], create session
 ms.assetid: cba0e02b-b201-4863-bf1b-9164e68e5fa8
 caps.latest.revision: 19
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 38e5ff6e5da2f8800dda895fb3ffde5dfea435ba
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 8524274c0fe1f79bb0f62008ba0caf6ad115004b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36043418"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37207699"
 ---
 # <a name="create-an-extended-events-session-using-query-editor"></a>Créer une session d'événements étendus à l'aide de l'éditeur de requête
   Vous pouvez créer une session d'événements étendus à l'aide de l'éditeur de requête, ou vous pouvez créer une session dans l'Explorateur d'objets. Dans l'Explorateur d'objets, les événements étendus fournissent deux interfaces utilisateur que vous pouvez utiliser pour créer, modifier et afficher des données de session d'événements : un assistant qui vous guide tout au long du processus de création de la session d'événements et une interface utilisateur de nouvelle session qui fournit des options de configuration plus avancées. Vous pouvez créer des sessions d'événements étendus pour diagnostiquer le suivi SQL Server, qui vous permet de résoudre des problèmes tels que :  

@@ -5,10 +5,9 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-bulk-import-export
+ms.technology: data-movement
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - bcp utility [SQL Server], terminators
 - field terminators [SQL Server]
@@ -17,15 +16,15 @@ helpviewer_keywords:
 - terminators [SQL Server]
 ms.assetid: f68b6782-f386-4947-93c4-e89110800704
 caps.latest.revision: 36
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 9730f5e59d302b95f892d4de2860f3f8a0b147f4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 5ba5e58a3f3c05985b8219e004e803a516a2ff81
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36154453"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37197209"
 ---
 # <a name="specify-field-and-row-terminators-sql-server"></a>Spécifier des indicateurs de fin de champ et de fin de ligne (SQL Server)
   Dans le cas de champs de données de type caractère, des caractères facultatifs de fin vous permettent d'indiquer la fin de chaque champ inclus dans un fichier de données par un *indicateur de fin de champ* et la fin de chaque ligne par un *indicateur de fin de ligne*. Les caractères de fin constituent un moyen d'indiquer à des programmes en cours de lecture du fichier de données la fin d'un champ ou d'une ligne et le début du suivant.  
@@ -48,7 +47,7 @@ ms.locfileid: "36154453"
   
  <sup>1</sup> uniquement le t, n, r, les caractères 0 et '\0' fonctionnent avec le caractère d’échappement barre oblique inverse pour générer un caractère de contrôle.  
   
- <sup>2</sup> même si le caractère de contrôle null (\0) n’est pas visible à l’impression, il est un caractère à part dans le fichier de données. En d'autres termes, utiliser ce caractère en tant qu'indicateur de fin de champ ou de fin de ligne ne revient pas à simplement omettre cet indicateur de fin.  
+ <sup>2</sup> même si le caractère de contrôle null (\0) n’est pas visible lors de l’impression, il s’agit d’un caractère distinct dans le fichier de données. En d'autres termes, utiliser ce caractère en tant qu'indicateur de fin de champ ou de fin de ligne ne revient pas à simplement omettre cet indicateur de fin.  
   
 > [!IMPORTANT]  
 >  Si un caractère correspond à un caractère indicateur de fin dans la continuité des données, il est alors interprété en tant que tel et non en tant que donnée ; les données suivant ce caractère sont donc considérées comme faisant partie du champ ou de l'enregistrement suivant. Par conséquent, choisissez vos indicateurs consciencieusement afin qu'ils n'apparaissent jamais au sein de vos données. Par exemple, il n'est pas judicieux de choisir un indicateur de fin de champ de substitut faible pour un indicateur de fin de champ si les données contiennent ce substitut faible.  
@@ -80,7 +79,7 @@ ms.locfileid: "36154453"
   
          `Enter field terminator [none]:`  
   
-         généralement, cette valeur par défaut convient. Toutefois, pour `char` ou `nchar` des champs de données, consultez la sous-section « Instructions pour les indicateurs de fin à l’aide ». Pour obtenir un exemple illustrant cette invite en contexte, consultez [Spécifier des formats de données pour la compatibilité lors de l’utilisation de bcp &#40;SQL Server&#41;](specify-data-formats-for-compatibility-when-using-bcp-sql-server.md).  
+         généralement, cette valeur par défaut convient. Toutefois, pour `char` ou `nchar` champs de données, consultez la sous-section suivante, « Instructions pour les indicateurs de fin à l’aide ». Pour obtenir un exemple illustrant cette invite en contexte, consultez [Spécifier des formats de données pour la compatibilité lors de l’utilisation de bcp &#40;SQL Server&#41;](specify-data-formats-for-compatibility-when-using-bcp-sql-server.md).  
   
         > [!NOTE]  
         >  Après avoir indiqué de façon interactive tous les champs d’une commande **bcp**, cette dernière vous demande de sauvegarder vos réponses dans un fichier de format autre que XML pour chacun des champs fournis. Pour plus d’informations sur les fichiers de format non-XML, consultez [Fichiers de format non-XML &#40;SQL Server&#41;](xml-format-files-sql-server.md).  

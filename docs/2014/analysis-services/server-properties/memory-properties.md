@@ -1,5 +1,5 @@
 ---
-title: Propriétés de mémoire | Documents Microsoft
+title: Propriétés de mémoire | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - LowMemoryLimit property
 - MinimumAllocatedMemory property
@@ -24,15 +24,15 @@ helpviewer_keywords:
 - HeapTypeForObjects property
 ms.assetid: 085f5195-7b2c-411a-9813-0ff5c6066d13
 caps.latest.revision: 22
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: c80e57803c1635cf6688ac8d8a562aa7e40f8818
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 77902cfe21cf2f486007f802c0556bd410f46d4e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36043695"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37286375"
 ---
 # <a name="memory-properties"></a>Propriétés de mémoire
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] prend en charge les propriétés de mémoire du serveur répertoriées dans le tableau suivant. Pour obtenir des conseils sur la définition de ces propriétés, consultez le [guide des opérations de SQL Server 2008 R2 Analysis Services](http://go.microsoft.com/fwlink/?LinkID=225539).  
@@ -51,7 +51,7 @@ ms.locfileid: "36043695"
  Notez que `TotalMemoryLimit` doit toujours être inférieur à `HardMemoryLimit`.  
   
  `HardMemoryLimit`  
- Spécifie un seuil de mémoire après lequel l'instance ferme de façon intensive les sessions utilisateur actives pour réduire l'utilisation de la mémoire. Toutes les sessions fermées vont générer une erreur relative à l'annulation par sollicitation de la mémoire. La valeur par défaut, zéro (0) signifie que le `HardMemoryLimit` sera défini sur une valeur à mi-chemin entre `TotalMemoryLimit` et la mémoire physique totale du système ; si la mémoire physique du système est supérieure à l’espace d’adressage virtuel de l’adresse de processus, puis virtuel espace qui sera utilisée à la place pour calculer `HardMemoryLimit`.  
+ Spécifie un seuil de mémoire après lequel l'instance ferme de façon intensive les sessions utilisateur actives pour réduire l'utilisation de la mémoire. Toutes les sessions fermées vont générer une erreur relative à l'annulation par sollicitation de la mémoire. La valeur par défaut, zéro (0) signifie que le `HardMemoryLimit` définira une valeur intermédiaire entre `TotalMemoryLimit` et la mémoire physique totale du système ; si la mémoire physique du système est supérieure à l’espace d’adressage virtuel de l’adresse de processus, puis virtuel espace sera utilisé à la place pour calculer `HardMemoryLimit`.  
   
  `VirtualMemoryLimit`  
  Propriété avancée que vous ne devez pas modifier, sauf si vous bénéficiez de l'assistance du support technique [!INCLUDE[msCoName](../../includes/msconame-md.md)] .  
@@ -63,7 +63,7 @@ ms.locfileid: "36043695"
   
  **1** est la valeur par défaut. Cette propriété active la pagination sur le disque à l'aide du fichier de pagination du système d'exploitation (pagefile.sys).  
   
- Lorsque `VertiPaqPagingPolicy` est définie sur 1, le traitement est moins susceptible d’échouer en raison de contraintes de mémoire, car le serveur tente de paginer sur le disque à l’aide de la méthode que vous avez spécifié. La définition de la propriété `VertiPaqPagingPolicy` ne garantit pas que les erreurs de mémoire ne se produiront pas. Les erreurs de mémoire insuffisante peuvent toujours se produire dans les conditions suivantes :  
+ Lorsque `VertiPaqPagingPolicy` est défini sur 1, le traitement est moins susceptible d’échouer en raison des contraintes de mémoire, car le serveur tente de paginer sur le disque à l’aide de la méthode que vous avez spécifié. La définition de la propriété `VertiPaqPagingPolicy` ne garantit pas que les erreurs de mémoire ne se produiront pas. Les erreurs de mémoire insuffisante peuvent toujours se produire dans les conditions suivantes :  
   
 -   Il n'y a pas assez de mémoire pour tous les dictionnaires. Au cours du traitement, Analysis Services verrouille les dictionnaires pour chaque colonne dans la mémoire et l’ensemble de ces éléments ne peut pas être supérieure à la valeur spécifiée pour `VertiPaqMemoryLimit`.  
   
@@ -76,7 +76,7 @@ ms.locfileid: "36043695"
  `VertiPaqMemoryLimit`  
  Si la pagination sur le disque est autorisée, cette propriété indique le niveau de la consommation de mémoire (en pourcentage de la mémoire totale) auquel la pagination démarre. La valeur par défaut est 60. Si la consommation de mémoire est inférieure à 60 %, le serveur ne paginera pas sur le disque.  
   
- Cette propriété dépend de la `VertiPaqPagingPolicyProperty`, qui doit être définie sur 1 pour autoriser la pagination.  
+ Cette propriété varie selon le `VertiPaqPagingPolicyProperty`, qui doit être défini sur 1 pour autoriser la pagination se produise.  
   
  S'applique au mode serveur tabulaire uniquement.  
   

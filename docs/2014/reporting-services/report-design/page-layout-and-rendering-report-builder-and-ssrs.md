@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: e2358653-35bc-4496-810a-d3ccf02f229f
 caps.latest.revision: 7
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 544931a2a43d875af5d2688bd1e52667ea5c5b5d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: c46f1e1993743365c9a0120a086f8732c2b60e5a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36042821"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37264205"
 ---
 # <a name="page-layout-and-rendering-report-builder-and-ssrs"></a>Mise en page et rendu (Générateur de rapports et SSRS)
   Lorsque vous créez des rapports, il est important de comprendre le comportement des convertisseurs [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] afin de garantir que le rapport rendu aura l'apparence souhaitée, notamment en termes de mise en page et de sauts de page. Vous souhaiterez probablement aussi vous assurer que le rapport rendu sera ajusté au format de papier utilisé couramment dans votre organisation.  
@@ -61,7 +61,7 @@ ms.locfileid: "36042821"
   
 -   **Convertisseurs de saut de page manuel** Les convertisseurs de saut de page manuel conservent la disposition et la mise en forme du rapport. Le fichier résultant est optimisé pour une impression cohérente ou pour l'affichage en ligne du rapport dans un format de livre. Les convertisseurs de saut de page manuel suivants sont pris en charge : TIFF et PDF.  
   
- Lorsque vous affichez un aperçu de rapport dans le Générateur de rapports ou le Concepteur de rapports ou que vous exécutez un rapport dans le Gestionnaire de rapports, le rapport est toujours rendu en premier au format HTML. Après avoir exécuté le rapport, vous pouvez l'exporter vers différents formats de fichiers. Pour plus d’informations, consultez [exportation des rapports &#40;le Générateur de rapports et SSRS&#41;](../report-builder/export-reports-report-builder-and-ssrs.md).  
+ Lorsque vous affichez un aperçu de rapport dans le Générateur de rapports ou le Concepteur de rapports ou que vous exécutez un rapport dans le Gestionnaire de rapports, le rapport est toujours rendu en premier au format HTML. Après avoir exécuté le rapport, vous pouvez l'exporter vers différents formats de fichiers. Pour plus d’informations, consultez [exportation des rapports &#40;Générateur de rapports et SSRS&#41;](../report-builder/export-reports-report-builder-and-ssrs.md).  
   
   
   
@@ -98,33 +98,33 @@ ms.locfileid: "36042821"
 ##  <a name="HowTo"></a> Rubriques de procédures  
  Cette section répertorie les procédures qui vous indiquent pas à pas comment utiliser la pagination dans les rapports.  
   
--   [Ajouter un saut de Page &#40;rapport Générateur et SSRS&#41;](add-a-page-break-report-builder-and-ssrs.md)  
+-   [Ajouter un saut de Page &#40;Générateur de rapports et SSRS&#41;](add-a-page-break-report-builder-and-ssrs.md)  
   
--   [Afficher des en-têtes de ligne et colonne sur plusieurs Pages &#40;rapport Générateur et SSRS&#41;](display-row-and-column-headers-on-multiple-pages-report-builder-and-ssrs.md)  
+-   [Afficher des en-têtes de ligne et colonne sur plusieurs Pages &#40;Générateur de rapports et SSRS&#41;](display-row-and-column-headers-on-multiple-pages-report-builder-and-ssrs.md)  
   
--   [Ajouter ou supprimer un en-tête de Page ou un pied de page &#40;rapport Générateur et SSRS&#41;](add-or-remove-a-page-header-or-footer-report-builder-and-ssrs.md)  
+-   [Ajouter ou supprimer un en-tête de Page ou le pied de page &#40;Générateur de rapports et SSRS&#41;](add-or-remove-a-page-header-or-footer-report-builder-and-ssrs.md)  
   
--   [Laisser les en-têtes visibles lors du défilement d’un rapport &#40;rapport Générateur et SSRS&#41;](keep-headers-visible-when-scrolling-through-a-report-report-builder-and-ssrs.md)  
+-   [Laisser les en-têtes visibles lors du défilement d’un rapport &#40;Générateur de rapports et SSRS&#41;](keep-headers-visible-when-scrolling-through-a-report-report-builder-and-ssrs.md)  
   
--   [Afficher les numéros de Page ou d’autres propriétés de rapport &#40;rapport Générateur et SSRS&#41;](display-page-numbers-or-other-report-properties-report-builder-and-ssrs.md)  
+-   [Afficher les numéros de Page ou d’autres propriétés de rapport &#40;Générateur de rapports et SSRS&#41;](display-page-numbers-or-other-report-properties-report-builder-and-ssrs.md)  
   
--   [Masquer un en-tête de Page ou le pied de page sur la première ou dernière Page &#40;rapport Générateur et SSRS&#41;](hide-a-page-header-or-footer-on-the-first-or-last-page-report-builder-and-ssrs.md)  
+-   [Masquer un en-tête de Page ou le pied de page sur la première ou la dernière Page &#40;Générateur de rapports et SSRS&#41;](hide-a-page-header-or-footer-on-the-first-or-last-page-report-builder-and-ssrs.md)  
   
   
   
 ##  <a name="InThisSection"></a> Dans cette section  
  Les rubriques suivantes fournissent des informations supplémentaires sur la mise en page et le rendu des rapports.  
   
- [En-têtes et pieds de page &#40;rapport Générateur et SSRS&#41;](page-headers-and-footers-report-builder-and-ssrs.md)  
+ [En-têtes et pieds de page &#40;Générateur de rapports et SSRS&#41;](page-headers-and-footers-report-builder-and-ssrs.md)  
  Présente des informations sur l'utilisation des en-têtes et des pieds de page dans les rapports et sur le contrôle de la pagination à l'aide de ces éléments.  
   
- [Contrôle de la Page s’arrête, des en-têtes, des colonnes et lignes &#40;rapport Générateur et SSRS&#41;](controlling-page-breaks-headings-columns-and-rows-report-builder-and-ssrs.md)  
+ [Page de contrôle des sauts, des en-têtes, colonnes et lignes &#40;Générateur de rapports et SSRS&#41;](controlling-page-breaks-headings-columns-and-rows-report-builder-and-ssrs.md)  
  Présente des informations sur l'utilisation de sauts de page.  
   
   
   
 ## <a name="see-also"></a>Voir aussi  
- [Fonctionnalité interactive des différentes Extensions de rendu de rapport &#40;rapport Générateur et SSRS&#41;](../report-builder/interactive-functionality-different-report-rendering-extensions.md)   
- [Exportation de rapports &#40;rapport Générateur et SSRS&#41;](../report-builder/export-reports-report-builder-and-ssrs.md)  
+ [Fonctionnalité interactive des différentes Extensions de rendu de rapport &#40;Générateur de rapports et SSRS&#41;](../report-builder/interactive-functionality-different-report-rendering-extensions.md)   
+ [Exportation de rapports &#40;Générateur de rapports et SSRS&#41;](../report-builder/export-reports-report-builder-and-ssrs.md)  
   
   

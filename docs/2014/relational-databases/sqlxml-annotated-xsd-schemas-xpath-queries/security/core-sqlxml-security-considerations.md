@@ -1,5 +1,5 @@
 ---
-title: Considérations sur la sécurité SQLXML de base | Documents Microsoft
+title: Considérations sur la sécurité SQLXML de base | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -14,15 +14,15 @@ helpviewer_keywords:
 - security [SQLXML], about security
 ms.assetid: 330cd2ff-d5d5-4c8e-8f93-0869c977be94
 caps.latest.revision: 12
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 7b89745551ba3f4d82272387149bca21466e9813
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 972ece66513dcc8784ed40e9757ec6114684f10e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36042856"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37255961"
 ---
 # <a name="core-sqlxml-security-considerations"></a>Considérations de base relatives à la sécurité SQLXML
   Vous trouverez ci-après des instructions de sécurité relatives à l'utilisation de SQLXML pour l'accès aux données.  
@@ -43,7 +43,7 @@ ms.locfileid: "36042856"
   
 -   SQLXML peut apporter des modifications de mise en forme aux données en question en fonction des différences entre les modèles de données XML et [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Par exemple, le format pour spécifier une heure est différent. SQLXML tente de résoudre ces différences. En conséquence, une perte de certaines informations de précision est envisageable.  
   
--   SQLXML n'impose aucune limite sur la durée nécessaire pour traiter les données. Le traitement va continuer jusqu'à ce qu’une erreur se produit ou le traitement est terminé.  
+-   SQLXML n'impose aucune limite sur la durée nécessaire pour traiter les données. Le traitement continuera jusqu'à ce qu’une erreur se produit ou le traitement est terminé.  
   
 -   SQLXML n'écrit pas dans le système de fichiers. Si les utilisateurs souhaitent enregistrer les données qu'ils extraient de la base de données, ils doivent le faire dans leur code.  
   

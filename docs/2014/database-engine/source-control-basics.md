@@ -1,5 +1,5 @@
 ---
-title: Présentation du contrôle de source | Documents Microsoft
+title: Présentation du contrôle de source | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - source controls [SQL Server Management Studio], providers
 - source controls [SQL Server Management Studio]
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - source controls [SQL Server Management Studio], clients
 ms.assetid: ca35b67a-104a-41fb-ac58-a61be06fe114
 caps.latest.revision: 23
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 5da8bd18f4ae5e62e5b9177a3ba76ac446bc1a6f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 1c70c039fd32643dc69c12e76109f5a7fc900379
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36043669"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37217849"
 ---
 # <a name="source-control-basics"></a>Présentation du contrôle de code source
   Le contrôle de code source fait référence à un système dans lequel un logiciel serveur central stocke et effectue le suivi des versions de fichiers et contrôle l'accès aux fichiers. Un système de contrôle de code source comprend généralement un fournisseur de contrôle de code source et deux (voire plus) clients de contrôle de code source.  
@@ -56,8 +56,8 @@ ms.locfileid: "36043669"
 |||  
 |-|-|  
 |**Tâche**|**Rubrique**|  
-|Définir les options de contrôle de code Source|[Définir les Options de contrôle de code Source](../../2014/database-engine/set-source-control-options.md)|  
-|Modifier les connexions de contrôle de code source|[Modification des connexions de contrôle de code Source](../../2014/database-engine/change-source-control-connections.md)|  
-|Exclure des fichiers de contrôle de code source|[Exclure des fichiers de contrôle de code Source](../../2014/database-engine/exclude-files-from-source-control.md)|  
+|Définir les options de contrôle de code Source|[Définir les options du contrôle de code source](../../2014/database-engine/set-source-control-options.md)|  
+|Modifier le contrôle de code source connexions|[Modifier les connexions du contrôle de code source](../../2014/database-engine/change-source-control-connections.md)|  
+|Exclure des fichiers de contrôle de code source|[Exclure des fichiers du contrôle de code source](../../2014/database-engine/exclude-files-from-source-control.md)|  
   
   

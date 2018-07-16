@@ -1,5 +1,5 @@
 ---
-title: Déployer des Solutions PowerPivot pour SharePoint | Documents Microsoft
+title: Déployer des Solutions PowerPivot pour SharePoint | Microsoft Docs
 ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
@@ -8,23 +8,23 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: f202a2b7-34e0-43aa-90d5-c9a085a37c32
 caps.latest.revision: 11
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: fdbae4a2f54d6f3f2c12562a70eb5f1076046947
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: ce0863ef023f96580eb809b6562cfc54b0de5b60
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36042098"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37243659"
 ---
 # <a name="deploy-powerpivot-solutions-to-sharepoint"></a>Déployer des solutions PowerPivot sur SharePoint
   Utilisez les instructions suivantes pour déployer manuellement deux packages de solution qui ajoutent des fonctionnalités PowerPivot à un environnement SharePoint Server 2010. Le déploiement des solutions est une étape indispensable pour configurer PowerPivot pour SharePoint sur un serveur SharePoint 2010. Pour afficher la liste complète des étapes requises, consultez [d’Administration de serveur PowerPivot et de Configuration dans l’Administration centrale](power-pivot-server-administration-and-configuration-in-central-administration.md).  
   
- Pour déployer les solutions, vous pouvez également utiliser l'outil de configuration PowerPivot. L'utilisation de l'outil de configuration est plus simple et plus efficace pour une installation sur un serveur unique, mais vous souhaiterez peut-être recourir à l'Administration centrale et à PowerShell si vous préférez travailler avec un outil qui vous est familier ou si vous configurez plusieurs fonctionnalités en même temps. Pour plus d’informations sur l’utilisation de l’outil de configuration, consultez [outils de Configuration PowerPivot](power-pivot-configuration-tools.md).  
+ Pour déployer les solutions, vous pouvez également utiliser l'outil de configuration PowerPivot. L'utilisation de l'outil de configuration est plus simple et plus efficace pour une installation sur un serveur unique, mais vous souhaiterez peut-être recourir à l'Administration centrale et à PowerShell si vous préférez travailler avec un outil qui vous est familier ou si vous configurez plusieurs fonctionnalités en même temps. Pour plus d’informations sur l’utilisation de l’outil de configuration, consultez [PowerPivot Configuration Tools](power-pivot-configuration-tools.md).  
   
  Avant de déployer ces solutions, vous devez d'abord installer PowerPivot pour SharePoint à l'aide du support d'installation de SQL Server 2012. Le programme d'installation de SQL Server installe les packages de solution que vous êtes sur le point de déployer.  
   
@@ -49,7 +49,7 @@ ms.locfileid: "36042098"
 Get-spwebapplication http://<top-level site name> | format-list UseClaimsAuthentication  
 ```  
   
- La valeur de retour devrait être **False**. S’il s’agit **true**, vous ne peut pas accéder aux données PowerPivot avec cette application web.  
+ La valeur de retour devrait être **False**. S’il s’agit **true**, vous ne pouvez pas accéder à des données PowerPivot avec cette application web.  
   
 ##  <a name="bkmk_farm"></a> Étape 1 : déployer la solution de batterie de serveurs  
  Cette section montre comment déployer des solutions à l'aide de PowerShell, mais vous pouvez également utiliser l'outil de configuration PowerPivot pour effectuer cette tâche. Pour plus d’informations, consultez [configurer ou réparer PowerPivot pour SharePoint 2010 &#40;outil de Configuration PowerPivot&#41;](../configure-repair-powerpivot-sharepoint-2010.md).  
@@ -108,7 +108,7 @@ Get-spwebapplication http://<top-level site name> | format-list UseClaimsAuthent
   
 3.  Cliquez sur **Déployer la solution**.  
   
-4.  Dans **déploiement ?**, sélectionnez l’application web SharePoint pour laquelle vous souhaitez ajouter la prise en charge des fonctionnalités de PowerPivot.  
+4.  Dans **déploiement ?**, sélectionnez l’application web SharePoint pour laquelle vous souhaitez ajouter la prise en charge des fonctionnalités PowerPivot.  
   
 5.  Cliquez sur **OK**.  
   

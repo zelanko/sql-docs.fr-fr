@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 89b70725-bbe7-4ffe-a27d-2a40005a97e7
 caps.latest.revision: 10
 author: stevestein
 ms.author: sstein
-manager: jhubbard
-ms.openlocfilehash: e66e94d1b49ecb275ba1422a6c7ee16c1eddc3f0
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: f605305a86295f8b2e91aa7300086c5827e683d5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36154640"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37271135"
 ---
 # <a name="sql-server-powershell"></a>SQL Server PowerShell
   [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] prend en charge Windows PowerShell, un environnement de script puissant qui permet aux administrateurs et aux développeurs d'automatiser l'administration de serveurs et le déploiement d'applications. Le langage Windows PowerShell prend en charge une logique plus complexe que les scripts [!INCLUDE[tsql](../includes/tsql-md.md)] , ce qui permet aux administrateurs [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] de générer des scripts d'administration fiables. Les scripts Windows PowerShell peuvent également être utilisés pour administrer d'autres produits serveur [!INCLUDE[msCoName](../includes/msconame-md.md)] . Cela fournit aux administrateurs un langage de script commun entre les serveurs.  
@@ -40,10 +40,10 @@ ms.locfileid: "36154640"
   
 |Description de la tâche|Rubrique|  
 |----------------------|-----------|  
-|Décrit le mécanisme préféré pour exécuter le [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] composants de PowerShell pour ouvrir une session de PowerShell et charger la `sqlps` module. Le module `sqlps` charge le fournisseur et les applets de commande [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] PowerShell, ainsi que les assemblys SMO (SQL Server Management Object) utilisés par le fournisseur et les applets de commande.|[Importer le module SQLPS](../database-engine/import-the-sqlps-module.md)|  
+|Décrit le mécanisme préféré pour exécuter le [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] des composants de PowerShell ; pour ouvrir une session de PowerShell et charger le `sqlps` module. Le module `sqlps` charge le fournisseur et les applets de commande [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] PowerShell, ainsi que les assemblys SMO (SQL Server Management Object) utilisés par le fournisseur et les applets de commande.|[Importer le module SQLPS](../database-engine/import-the-sqlps-module.md)|  
 |Explique comment charger uniquement les assemblys SMO sans fournisseur ni applet de commande.|[Charger les assemblys SMO dans Windows PowerShell](load-the-smo-assemblies-in-windows-powershell.md)|  
-|Explique comment exécuter une session Windows PowerShell en cliquant avec le bouton droit sur un nœud dans l’ **Explorateur d’objets**. [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] lance une session Windows PowerShell, charge le `sqlps` module et définit le chemin d’accès du fournisseur SQL Server à l’objet sélectionné.|[Exécuter Windows PowerShell à partir de SQL Server Management Studio](run-windows-powershell-from-sql-server-management-studio.md)|  
-|Explique comment créer les étapes d'un travail de l'Agent SQL Server qui exécutent un script Windows PowerShell. Les travaux peuvent ensuite être planifiés de manière à s'exécuter à des heures spécifiques ou en réponse à des événements.|[Utiliser Windows PowerShell les étapes dans l’Agent SQL Server] (run-windows-powershell-steps-in-sql-server-agent.md
+|Explique comment exécuter une session Windows PowerShell en cliquant avec le bouton droit sur un nœud dans l’ **Explorateur d’objets**. [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] lance une session Windows PowerShell, charge le `sqlps` module et définit le chemin d’accès du fournisseur SQL Server sur l’objet sélectionné.|[Exécuter Windows PowerShell à partir de SQL Server Management Studio](run-windows-powershell-from-sql-server-management-studio.md)|  
+|Explique comment créer les étapes d'un travail de l'Agent SQL Server qui exécutent un script Windows PowerShell. Les travaux peuvent ensuite être planifiés de manière à s'exécuter à des heures spécifiques ou en réponse à des événements.|[Exécutez les étapes de Windows PowerShell dans SQL Server Agent] (run-windows-powershell-steps-in-sql-server-agent.md
 )|  
 |Explique comment utiliser le fournisseur [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] pour naviguer dans une hiérarchie d'objets [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .|[Fournisseur SQL Server PowerShell](sql-server-powershell-provider.md)|  
 |Explique comment utiliser les applets de commande [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] qui spécifient des actions du [!INCLUDE[ssDE](../includes/ssde-md.md)] , telles que l'exécution d'un script [!INCLUDE[tsql](../includes/tsql-md.md)] .|[Utiliser les applets de commande du moteur de base de données](../database-engine/use-the-database-engine-cmdlets.md)|  

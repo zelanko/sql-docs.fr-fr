@@ -1,5 +1,5 @@
 ---
-title: Types de données pris en charge (SSAS tabulaire) | Documents Microsoft
+title: Types de données pris en charge (SSAS tabulaire) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 92993f7b-7243-4aec-906d-0b0379798242
 caps.latest.revision: 11
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 3ee05d2f7d3526aafd180e9eda5372668f164cb1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 57bf1633f05f9692c3e5cc132bce6585734830a4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36153576"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37237629"
 ---
 # <a name="data-types-supported-ssas-tabular"></a>Types de données pris en charge (SSAS Tabulaire)
   Cet article décrit les types de données qui peuvent être utilisés dans des modèles tabulaires et aborde la conversion implicite de types de données lorsque des données sont calculées ou utilisées dans une formule DAX (Data Analysis Expressions).  
@@ -50,11 +50,11 @@ ms.locfileid: "36153576"
 |Monétaire (Currency)|Monétaire (Currency)|Le type de données devise autorise des valeurs entre -922 337 203 685 477,5808 et 922 337 203 685 477,5807 avec quatre chiffres décimaux à précision fixe.|  
 |Néant|Vide|Le type de données Vide (Blank) de DAX représente et remplace les valeurs Null SQL. Vous pouvez créer une valeur vide à l'aide de la fonction BLANK et tester les valeurs vides à l'aide de la fonction logique ISBLANK.|  
   
- <sup>1</sup> les formules DAX ne prennent pas en charge des types de données qui sont plus petits que ceux répertoriés dans le tableau.  
+ <sup>1</sup> les formules DAX ne prennent pas en charge les types de données qui sont plus petits que ceux répertoriés dans le tableau.  
   
- <sup>2</sup> si vous tentez d’importer des données qui a de très grandes valeurs numériques, l’importation peut échouer avec l’erreur suivante :  
+ <sup>2</sup> si vous tentez d’importer des données présentant de très grandes valeurs numériques, l’importation peut échouer avec l’erreur suivante :  
   
- Erreur de base de données en mémoire : le '\<nom de la colonne >' colonne de la «\<nom de la table >' table contient une valeur, ' 1.7976931348623157E + 308', qui n’est pas pris en charge. L'opération a été annulée.  
+ Erreur de base de données en mémoire : le '\<nom de colonne >' colonne de la «\<nom de la table >' table contient une valeur, ' 1.7976931348623157E + 308', qui n’est pas pris en charge. L'opération a été annulée.  
   
  Cette erreur se produit parce que le générateur de modèles utilise cette valeur pour représenter des valeurs Null. Les valeurs de la liste suivante sont des synonymes de la valeur NULL indiquée précédemment :  
   

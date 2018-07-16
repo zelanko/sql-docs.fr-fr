@@ -1,5 +1,5 @@
 ---
-title: Élément RootMemberIf (ASSL) | Documents Microsoft
+title: Élément RootMemberIf (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - RootMemberIf element
 ms.assetid: b695e271-c748-4abc-a09f-acb1014f768f
 caps.latest.revision: 34
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 5a923b08efc636d2635d60b00f85c42dc00a312e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: a7ac45d2111b8d3631160ce78f131f98d53230e7
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36042984"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37280295"
 ---
 # <a name="rootmemberif-element-assl"></a>Élément RootMemberIf (ASSL)
   Détermine la manière dont le membre racine ou les membres d'un attribut parent sont identifiés.  
@@ -73,7 +73,7 @@ ms.locfileid: "36042984"
 |*ParentIsSelf*|Seuls les membres qui sont parents d'eux-mêmes sont traités en tant que membres racines.|  
 |*ParentIsMissing*|Seuls les membres dont les parents sont introuvables sont traités en tant que membres racines.|  
   
- L’énumération qui correspond aux valeurs autorisées pour `RootMemberIf` dans l’objet d’objets AMO (Analysis Management) est modèle <xref:Microsoft.AnalysisServices.RootIfValue>.  
+ L’énumération qui correspond aux valeurs autorisées pour `RootMemberIf` dans l’objet d’objets AMO (Analysis Management) modèle est <xref:Microsoft.AnalysisServices.RootIfValue>.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Propriétés &#40;ASSL&#41;](properties-assl.md)  

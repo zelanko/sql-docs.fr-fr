@@ -1,5 +1,5 @@
 ---
-title: Concepts clés pour MDX (Analysis Services) | Documents Microsoft
+title: Concepts clés pour MDX (Analysis Services) | Microsoft Docs
 ms.custom: ''
 ms.date: 07/17/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Multidimensional Expressions [Analysis Services], about MDX
 - dimensional modeling [MDX]
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - MDX [Analysis Services], dimensional modeling
 ms.assetid: 4797ddc8-6423-497a-9a43-81a1af7eb36c
 caps.latest.revision: 52
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 060ad452001605ee0df4d0c84381044cb38e6493
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: d5d6e59827b0b816b898322adf729d2299540e38
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36043475"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37272015"
 ---
 # <a name="key-concepts-in-mdx-analysis-services"></a>Concepts clés dans MDX (Analysis Services)
   Avant de pouvoir utiliser MDX (Multidimensional Expressions) pour interroger des données multidimensionnelles ou créer des expressions MDX dans un cube, vous devez vous familiariser avec les concepts et les termes liés aux données multidimensionnelles.  
@@ -65,11 +65,11 @@ ms.locfileid: "36043475"
   
  Les agrégats tels que ceux-ci sont précalculés et stockés au préalable, ce qui constitue l'un des facteurs de performances des requêtes Analysis Services.  
   
- ![Tableau croisé dynamique avec tous les membres appelé](../media/ssas-keyconcepts-pivot2-allmember.png "tableau croisé dynamique avec tous les membres avec")  
+ ![Tableau croisé dynamique avec tous les membres appelés](../media/ssas-keyconcepts-pivot2-allmember.png "tableau croisé dynamique avec tous les membres appelés")  
   
  Développez la hiérarchie et vous finissez par atteindre le niveau le plus bas. Il s'agit du **membre feuille**. Un membre feuille appartient à une hiérarchie qui n'a pas d'enfants. Dans cet exemple, Australia est le membre feuille.  
   
- ![Tableau croisé dynamique avec le membre feuille](../media/ssas-keyconcepts-pivot3-leafparent.PNG "tableau croisé dynamique avec le membre feuille")  
+ ![Tableau croisé dynamique avec un membre feuille](../media/ssas-keyconcepts-pivot3-leafparent.PNG "tableau croisé dynamique avec un membre feuille")  
   
  Tout ce qui se trouve plus haut est un **membre parent**. Pacific est le parent d'Australia.  
   
@@ -95,7 +95,7 @@ ms.locfileid: "36043475"
   
 |||  
 |-|-|  
-|![Tableau croisé dynamique avec légende hiérarchie équilibrée appelé](../media/ssas-keyconcepts-pivot4-balancedhierarchy.PNG "tableau croisé dynamique avec légende hiérarchie équilibrée appelé")|Une **hiérarchie équilibrée** est une hiérarchie dans laquelle il existe le même nombre de niveaux entre le niveau supérieur et n'importe quel membre feuille.<br /><br /> Une **hiérarchie naturelle** est une hiérarchie qui émerge naturellement des données sous-jacentes. Pays-Région-Département, Année-Mois-Date ou Catégorie-Sous-catégorie-Modèle sont des exemples courants ; chaque niveau inférieur découle naturellement et de manière prévisible de son parent.<br /><br /> Dans un modèle multidimensionnel, la plupart des hiérarchies sont des hiérarchies équilibrées et bon nombre d'entre elles sont également des hiérarchies naturelles.<br /><br /> Un autre liés à la modélisation de terme est une `user-defined hierarchy`, souvent utilisé comme un contraste avec les hiérarchies d’attributs. Il fait simplement référence à une hiérarchie créée par le développeur BI, par opposition aux hiérarchies d'attributs générées automatiquement par Analysis Services lorsque vous définissez un attribut.|  
+|![Tableau croisé dynamique avec légende hiérarchie équilibrée appelé](../media/ssas-keyconcepts-pivot4-balancedhierarchy.PNG "tableau croisé dynamique avec légende hiérarchie équilibrée appelé")|Une **hiérarchie équilibrée** est une hiérarchie dans laquelle il existe le même nombre de niveaux entre le niveau supérieur et n'importe quel membre feuille.<br /><br /> Une **hiérarchie naturelle** est une hiérarchie qui émerge naturellement des données sous-jacentes. Pays-Région-Département, Année-Mois-Date ou Catégorie-Sous-catégorie-Modèle sont des exemples courants ; chaque niveau inférieur découle naturellement et de manière prévisible de son parent.<br /><br /> Dans un modèle multidimensionnel, la plupart des hiérarchies sont des hiérarchies équilibrées et bon nombre d'entre elles sont également des hiérarchies naturelles.<br /><br /> Un autre liés à terme de modélisation est un `user-defined hierarchy`utilise souvent par opposition avec les hiérarchies d’attributs. Il fait simplement référence à une hiérarchie créée par le développeur BI, par opposition aux hiérarchies d'attributs générées automatiquement par Analysis Services lorsque vous définissez un attribut.|  
   
  **Hiérarchies déséquilibrées**  
   
@@ -146,16 +146,16 @@ ms.locfileid: "36043475"
   
 -   [Le Script MDX de base &#40;MDX&#41;](mdx/the-basic-mdx-script-mdx.md)  
   
--   [Modélisation multidimensionnelle &#40;Adventure Works didacticiel&#41;](../multidimensional-modeling-adventure-works-tutorial.md)  
+-   [Modélisation multidimensionnelle &#40;didacticiel Adventure Works&#41;](../multidimensional-modeling-adventure-works-tutorial.md)  
   
 ## <a name="see-also"></a>Voir aussi  
  [Espace du cube](mdx/cube-space.md)   
  [Tuples](mdx/tuples.md)   
- [Fonctionnalité Autoexists](mdx/autoexists.md)   
- [Utilisation des membres, Tuples et jeux &#40;MDX&#41;](mdx/working-with-members-tuples-and-sets-mdx.md)   
- [Valeurs totales et Non visibles](mdx/visual-totals-and-non-visual-totals.md)   
+ [La fonctionnalité Autoexists](mdx/autoexists.md)   
+ [Utilisation de membres, Tuples et jeux &#40;MDX&#41;](mdx/working-with-members-tuples-and-sets-mdx.md)   
+ [Les valeurs visibles et Non affichées](mdx/visual-totals-and-non-visual-totals.md)   
  [Principes de base de requête MDX &#40;Analysis Services&#41;](mdx/mdx-query-fundamentals-analysis-services.md)   
- [Notions de base des scripts MDX &#40;Analysis Services&#41;](mdx/mdx-scripting-fundamentals-analysis-services.md)   
+ [Principes de base des scripts MDX &#40;Analysis Services&#41;](mdx/mdx-scripting-fundamentals-analysis-services.md)   
  [Référence du langage MDX &#40;MDX&#41;](/sql/mdx/mdx-language-reference-mdx)   
  [Expressions multidimensionnelles &#40;MDX&#41; référence](/sql/mdx/multidimensional-expressions-mdx-reference)  
   

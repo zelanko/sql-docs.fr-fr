@@ -1,5 +1,5 @@
 ---
-title: Espace du cube | Documents Microsoft
+title: Espace du cube | Microsoft Docs
 ms.custom: ''
 ms.date: 07/17/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: c3a012b4-9ca0-4fb8-9c26-5ecc0e2e2b2b
 caps.latest.revision: 6
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: a8be8107b3d18aca49cf8b670131ef695d5901f6
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 07011d823f4bede671c3ee4a465d27c413d04e9f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36154923"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37282185"
 ---
 # <a name="cube-space"></a>Espace du cube
   L'espace du cube est le produit des membres des hiérarchies d'attribut d'un cube associés aux mesures du cube. Par conséquent, l'espace du cube est déterminé par le produit combinatoire de tous les membres de la hiérarchie d'attribut dans le cube et par les mesures du cube, et définit la taille maximale du cube. Il est important de noter que cet espace inclut toutes les combinaisons possibles de membres de la hiérarchie d'attribut ; même les combinaisons qui peuvent être jugées comme impossibles dans le monde réel, c'est-à-dire les combinaisons où la ville est Paris et les pays sont l'Angleterre, l'Espagne, le Japon, l'Inde ou ailleurs.  
@@ -116,7 +116,7 @@ FROM [Adventure Works]
 ```  
   
 > [!NOTE]  
->  Notez que la `WITH` mot clé est utilisé avec le [CurrentMember (MDX)](/sql/mdx/current-mdx) et [nom (MDX)](/sql/mdx/members-string-mdx) fonctions pour créer un membre calculé pour une utilisation dans la requête. Pour plus d’informations, consultez [Requête MDX de base &#40;MDX&#41;](mdx-query-the-basic-query.md).  
+>  Notez que le `WITH` mot clé est utilisé avec le [CurrentMember (MDX)](/sql/mdx/current-mdx) et [Name (MDX)](/sql/mdx/members-string-mdx) fonctions pour créer un membre calculé à utiliser dans la requête. Pour plus d’informations, consultez [Requête MDX de base &#40;MDX&#41;](mdx-query-the-basic-query.md).  
   
  Dans la requête précédente, le nom du membre de la hiérarchie d'attribut Country associé à chaque membre de la hiérarchie d'attribut State est retourné. Le membre Country attendu apparaît (puisqu'une relation d'attribut est définie entre les attributs City et Country). Par contre, si aucune relation d'attribut n'est définie entre les hiérarchies d'attribut de la même dimension, le membre (All) doit être retourné comme dans la requête suivante.  
   
@@ -135,9 +135,9 @@ FROM [Adventure Works]
 ## <a name="see-also"></a>Voir aussi  
  [Concepts clés pour MDX &#40;Analysis Services&#41;](../key-concepts-in-mdx-analysis-services.md)   
  [Tuples](tuples.md)   
- [Fonctionnalité Autoexists](autoexists.md)   
- [Utilisation des membres, Tuples et jeux &#40;MDX&#41;](working-with-members-tuples-and-sets-mdx.md)   
- [Valeurs totales et Non visibles](visual-totals-and-non-visual-totals.md)   
+ [La fonctionnalité Autoexists](autoexists.md)   
+ [Utilisation de membres, Tuples et jeux &#40;MDX&#41;](working-with-members-tuples-and-sets-mdx.md)   
+ [Les valeurs visibles et Non affichées](visual-totals-and-non-visual-totals.md)   
  [Référence du langage MDX &#40;MDX&#41;](/sql/mdx/mdx-language-reference-mdx)   
  [Expressions multidimensionnelles &#40;MDX&#41; référence](/sql/mdx/multidimensional-expressions-mdx-reference)  
   

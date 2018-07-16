@@ -1,5 +1,5 @@
 ---
-title: Exploration du contenu du modèle pour les modèles Sequence Clustering (Analysis Services - Exploration de données) | Documents Microsoft
+title: Le contenu du modèle Sequence Clustering des modèles d’exploration de données (Analysis Services - Exploration de données) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - mining model content, sequence clustering models
 - sequence clustering algorithms [Analysis Services]
 ms.assetid: 68e1934a-e147-4d53-b122-fa15e3fd5485
 caps.latest.revision: 23
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: bb03523f20468a24cb901f08dd0eff9a368aa8cc
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: f0b505e01e6b8334ed1a0baeaacbda7e29ba7407
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36042369"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37208149"
 ---
 # <a name="mining-model-content-for-sequence-clustering-models-analysis-services---data-mining"></a>Contenu du modèle d'exploration de données pour les modèles Sequence Clustering (Analysis Services - Exploration de données)
   Cette rubrique décrit le contenu du modèle d'exploration de données spécifique aux modèles utilisant l'algorithme MSC (Microsoft Sequence Clustering). Pour une explication de la terminologie générale et statistique en rapport avec le contenu du modèle d’exploration de données pour tous les types de modèles, consultez [Mining Model Content &#40;Analysis Services - Data Mining&#41;](mining-model-content-analysis-services-data-mining.md).  
@@ -158,7 +158,7 @@ ms.locfileid: "36042369"
 ###  <a name="bkmk_NODEDIST"></a> Table NODE_DISTRIBUTION  
  La table NODE_DISTRIBUTION fournit des informations détaillées sur la probabilité et la prise en charge pour les transitions et les séquences d'un cluster spécifique.  
   
- Une ligne est toujours ajoutée à la table de transitions pour représenter les valeurs `Missing` possibles. Pour plus d’informations sur ce que le `Missing` valeur signifie et comment il affecte les calculs, consultez [valeurs manquantes &#40;Analysis Services - Exploration de données&#41;](missing-values-analysis-services-data-mining.md).  
+ Une ligne est toujours ajoutée à la table de transitions pour représenter les valeurs `Missing` possibles. Pour plus d’informations sur ce que le `Missing` valeur et comment il affecte les calculs, consultez [valeurs manquantes &#40;Analysis Services - Exploration de données&#41;](missing-values-analysis-services-data-mining.md).  
   
  Les calculs de prise en charge et de probabilité diffèrent selon que le calcul s'applique aux cas d'apprentissage ou au modèle fini. Cela est dû au fait que la méthode de clustering par défaut EM (Expectation Maximization) suppose que tout cas peut appartenir à plusieurs clusters. Lors du calcul de prise en charge pour les cas du modèle, il est possible d'utiliser des probabilités et des nombres bruts. Toutefois, les probabilités d'une séquence donnée d'un cluster doivent être pondérées par la somme de toutes les combinaisons de séquence et de cluster possibles.  
   
@@ -266,7 +266,7 @@ ORDER BY Count(*) DESC
   
 ## <a name="see-also"></a>Voir aussi  
  [Contenu du modèle d’exploration de données &#40;Analysis Services - Exploration de données&#41;](mining-model-content-analysis-services-data-mining.md)   
- [Algorithme de Microsoft Sequence Clustering](microsoft-sequence-clustering-algorithm.md)   
+ [Algorithme de Clustering de séquence de Microsoft](microsoft-sequence-clustering-algorithm.md)   
  [Exemples de requêtes de modèle Sequence Clustering](clustering-model-query-examples.md)  
   
   

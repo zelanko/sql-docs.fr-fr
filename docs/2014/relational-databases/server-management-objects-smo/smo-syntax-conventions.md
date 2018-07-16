@@ -1,5 +1,5 @@
 ---
-title: Conventions de syntaxe SMO | Documents Microsoft
+title: Conventions de syntaxe SMO | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -17,18 +17,18 @@ helpviewer_keywords:
 - SQL Server Management Objects, syntax conventions
 ms.assetid: 27aa179a-f3ee-4c70-9e7b-e26dba28bc3c
 caps.latest.revision: 30
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 5fccbf1cfa02801de01993bff086fc768ccffe5f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 404a8d0311a449b09b3ddf85ad0b2780ed06d383
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36043815"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37272745"
 ---
 # <a name="smo-syntax-conventions"></a>Conventions de syntaxe SMO
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Les conventions typographiques Management Objects (SMO) sont basées sur celles utilisées dans [!INCLUDE[msCoName](../../includes/msconame-md.md)] documents de référence de Visual Studio .NET.  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Conventions typographiques de Management Objects (SMO) sont basées sur celles utilisées dans [!INCLUDE[msCoName](../../includes/msconame-md.md)] documents de référence de Visual Studio .NET.  
   
 |Convention|Utilisé pour|  
 |----------------|--------------|  

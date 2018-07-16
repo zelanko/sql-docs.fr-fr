@@ -1,5 +1,5 @@
 ---
-title: Métadonnées (Master Data Services) | Documents Microsoft
+title: Métadonnées (Master Data Services) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - user-defined metadata [Master Data Services], about user-defined metadata
 - metadata [Master Data Services], about metadata
@@ -16,25 +16,25 @@ helpviewer_keywords:
 - user-defined metadata [Master Data Services]
 ms.assetid: ac1aabe3-d8d4-4d7a-8954-50ee3c185d81
 caps.latest.revision: 7
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 25fa2078127816b2fd9d50bd7bd4c074c3577dae
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 19e3cde73564540b44c49536da008fa4aa54e348
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36042248"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37296679"
 ---
 # <a name="metadata-master-data-services"></a>Métadonnées (Master Data Services)
   Dans [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], les métadonnées définies par l'utilisateur sont des informations qui vous permettent de décrire les objets de modèle. Par exemple, vous pouvez effectuer le suivi des propriétaires d'un modèle ou d'une entité spécifique, ou des systèmes sources qui fournissent des données à une entité.  
   
- Les métadonnées définies par l’utilisateur sont gérée par un modèle appelé **métadonnées**. Ce modèle est inclus automatiquement lorsque [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] est installé, et il est similaire à tous les autres modèles MDS, mais vous ne pouvez pas créer des versions de.  
+ Métadonnées définies par l’utilisateur sont gérée par un modèle appelé **métadonnées**. Ce modèle est inclus automatiquement lorsque [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] est installé, et il est similaire à tous les autres modèles MDS, mais vous ne pouvez pas créer des versions de.  
   
  Après avoir rempli le modèle Métadonnées avec les métadonnées définies par l'utilisateur, vous pouvez l'inclure dans des vues d'abonnement, de façon à ce qu'il puisse être consommé par les systèmes d'abonnement.  
   
 ## <a name="metadata-entities"></a>Entités de métadonnées  
- Le modèle Métadonnées inclut cinq entités, chacune représentant un type d'objet modèle de données de référence qui prend en charge les métadonnées définies par l'utilisateur. Par exemple, le **définition de métadonnées de modèle** entité contient des membres qui représentent des modèles, et le **définition de métadonnées d’attribut** entité comporte des membres qui représentent tous les attributs de tous les modèles.  
+ Le modèle Métadonnées inclut cinq entités, chacune représentant un type d'objet modèle de données de référence qui prend en charge les métadonnées définies par l'utilisateur. Par exemple, le **définition de métadonnées de modèle** entité contient des membres qui représentent des modèles, et le **définition de métadonnées d’attribut** entité comporte des membres qui représentent tous les attributs dans tous les modèles.  
   
  Pour définir les métadonnées d'un objet de modèle, vous devez remplir un de ces attributs de membre. Par exemple, dans le **définition de métadonnées d’entité** entité, vous pouvez remplir attribut de Description du membre Price avec le texte : **le prix du produit vendu à un client**.  
   

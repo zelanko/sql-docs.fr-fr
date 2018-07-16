@@ -1,5 +1,5 @@
 ---
-title: Traiter l’élément (ASSL) | Documents Microsoft
+title: Traiter l’élément (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - Process element
 ms.assetid: 4aa08718-be44-4781-92cf-7b32b20f862c
 caps.latest.revision: 36
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 5ede9cf389f5aa559f3372b3f859819d7057d3f4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: f1217cb2ba18a7eaad4b948821b1403e02274fbc
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36043220"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37289445"
 ---
 # <a name="process-element-assl"></a>Élément Process (ASSL)
   Détermine si un utilisateur peut traiter le propriétaire de l'élément parent.  

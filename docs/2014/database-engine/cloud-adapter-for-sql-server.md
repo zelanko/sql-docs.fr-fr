@@ -1,5 +1,5 @@
 ---
-title: Adaptateur de cloud pour SQL Server | Documents Microsoft
+title: Adaptateur de cloud pour SQL Server | Microsoft Docs
 ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Cloud adapter
 - Deploy to Windows Azure
 ms.assetid: 82ed0d0f-952d-4d49-aa36-3855a3ca9877
 caps.latest.revision: 12
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 74a991f9dc8c20e1cf4342312ecd66f95e1b240d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: fd0a6901770c3c30138e694c9e792146be85ba4a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36042296"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37243379"
 ---
 # <a name="cloud-adapter-for-sql-server"></a>Adaptateur de cloud pour SQL Server
   Le service Adaptateur de cloud est créé dans le cadre de la configuration de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] sur une machine virtuelle Windows Azure. Il génère un certificat SSL auto-signé dans le cadre de sa première exécution, puis s’exécute en tant que compte **Système local** . Il génère un fichier de configuration utilisé pour sa configuration. L'adaptateur de cloud crée également une règle de Pare-feu Windows pour autoriser les connexions TCP entrantes sur le port 11435 par défaut.  
@@ -34,7 +34,7 @@ ms.locfileid: "36042296"
   
 -   Adaptateur de cloud est pris en charge avec [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 2012 et versions ultérieures. Sur [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 2012, l'adaptateur de cloud pour [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] nécessite SQL Management Objects pour [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 2012.  
   
--   Le service Web Adaptateur de cloud s'exécute en tant que compte **Système local** et vérifie les informations d'identification du client avant d'exécuter les tâches. Informations d’identification fournies par le client doivent appartenir au compte d’utilisation qui est membre de la variable locale **administrateurs** groupe sur l’ordinateur distant.  
+-   Le service Web Adaptateur de cloud s'exécute en tant que compte **Système local** et vérifie les informations d'identification du client avant d'exécuter les tâches. Informations d’identification fournies par le client doivent appartenir au compte d’utilisation qui est un membre de la variable locale **administrateurs** groupe sur l’ordinateur distant.  
   
 -   L'adaptateur de cloud prend uniquement en charge l'Authentification [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
@@ -55,15 +55,15 @@ ms.locfileid: "36042296"
   
         -   \<appSettings >  
   
-            -   \<ajouter la clé = valeur de « WebServicePort » = « » / >  
+            -   \<Ajouter une clé = « WebServicePort » valeur = « » / >  
   
-            -   \<ajouter la clé = « WebServiceCertificate » value = « GUID » / >  
+            -   \<Ajouter une clé = « WebServiceCertificate » value = « GUID » / >  
   
-            -   \<ajouter la clé = « ExposeExceptionDetails » value = « true » / >  
+            -   \<Ajouter une clé = « ExposeExceptionDetails » value = « true » / >  
   
         -   \</appSettings >  
   
-    -   \<configuration >  
+    -   \</configuration >  
   
 -   **Détails du certificat** – Le certificat présente les valeurs suivantes :  
   

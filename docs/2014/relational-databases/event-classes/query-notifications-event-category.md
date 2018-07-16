@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 topic_type:
 - apiref
 helpviewer_keywords:
 - event classes [SQL Server], Query Notifications event category
 ms.assetid: 13c62636-ce8a-410f-9af9-c0a78959fb49
 caps.latest.revision: 11
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 9e83145796c52a43c4089dbfd88b4bf9b2ad3d80
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 8a8f349b44d3854c38481184c5d7f39ad37a85c0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36042921"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37285285"
 ---
 # <a name="query-notifications-event-category"></a>Catégorie d'événement Notifications de requêtes
   La catégorie d’événement **Notifications de requêtes** contient des classes d’événements chargées de fournir des informations que les développeurs et les administrateurs peuvent exploiter pour contrôler les notifications de requêtes et résoudre les problèmes qui en découlent.  

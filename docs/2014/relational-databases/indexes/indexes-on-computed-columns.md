@@ -5,10 +5,9 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-indexes
+ms.technology: table-view-index
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - computed columns, index creation
 - index creation [SQL Server], computed columns
@@ -17,15 +16,15 @@ helpviewer_keywords:
 - precise [SQL Server]
 ms.assetid: 8d17ac9c-f3af-4bbb-9cc1-5cf647e994c4
 caps.latest.revision: 41
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 9b7d9b25ccb9404011c459ba0275f2ba0c63746a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: ffa842513c5cd185c7760bc737aeb64a4c33742e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36043358"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37279115"
 ---
 # <a name="indexes-on-computed-columns"></a>Index sur les colonnes calculées
   Vous pouvez définir des index sur des colonnes calculées si les règles suivantes sont respectées :  
@@ -86,17 +85,17 @@ ms.locfileid: "36043358"
     ```  
   
 > [!NOTE]  
->  N’importe quel `float` ou `real` expression est considérée imprécise et ne peut pas être une clé d’index ; un `float` ou `real` expression peut être utilisée dans une vue indexée mais pas en tant que clé. Ce point s'applique également aux colonnes calculées. Toute fonction, une expression ou une fonction définie par l’utilisateur est considéré comme imprécise si elle contient des `float` ou `real` expressions. même logiques (comparaisons).  
+>  N’importe quel `float` ou `real` expression est considérée imprécise et ne peut pas être une clé d’index ; un `float` ou `real` expression peut être utilisée dans une vue indexée mais pas en tant que clé. Ce point s'applique également aux colonnes calculées. Toute fonction, une expression ou une fonction définie par l’utilisateur est considérée imprécise si elle contient des `float` ou `real` expressions. même logiques (comparaisons).  
   
  La propriété **IsPrecise** de la fonction COLUMNPROPERTY indique si un paramètre *computed_column_expression* est précis ou non.  
   
  **Data Type Requirements**  
   
--   Le *computed_column_expression* défini pour la colonne calculée ne peut pas correspondre à la `text`, `ntext`, ou `image` des types de données.  
+-   Le *computed_column_expression* défini pour la colonne calculée ne peut pas correspondre à la `text`, `ntext`, ou `image` types de données.  
   
--   Les colonnes calculées dérivées `image`, `ntext`, `text`, `varchar(max)`, `nvarchar(max)`, `varbinary(max)`, et `xml` des types de données peuvent être indexées tant que le type de données de colonne calculée est autorisé en tant que colonnes clés d’index.  
+-   Les colonnes calculées dérivées à partir de `image`, `ntext`, `text`, `varchar(max)`, `nvarchar(max)`, `varbinary(max)`, et `xml` types de données peuvent être indexées tant que le type de données de colonne calculée est autorisé en tant que colonnes clés d’index.  
   
--   Les colonnes calculées dérivées `image`, `ntext`, et `text` des types de données peuvent être des colonnes non-clés (incluses) dans un index non-cluster tant que le type de données de colonne calculée est une colonne d’index non-clé.  
+-   Les colonnes calculées dérivées à partir de `image`, `ntext`, et `text` types de données peuvent être des colonnes non-clés (incluses) dans un index non-cluster tant que le type de données de colonne calculée est une colonne d’index non-clé.  
   
  **SET Option Requirements**  
   

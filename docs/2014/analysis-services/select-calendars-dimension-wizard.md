@@ -1,5 +1,5 @@
 ---
-title: Sélectionner des calendriers (Assistant Dimension) | Documents Microsoft
+title: Sélectionner des calendriers (Assistant Dimension) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.dimensionwizard.serverSpecialCalendars.f1
 ms.assetid: 6e28a020-2586-4b13-9333-b499fb1b33af
 caps.latest.revision: 19
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 6796c7c3064adc65982b1d5aaec005249e224cae
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 7166b39dd5cc9d8a2a4cbb6da1c8f44d49181d46
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36044550"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37245589"
 ---
 # <a name="select-calendars-dimension-wizard"></a>Sélectionner des calendriers (Assistant Dimension)
   La page **Sélectionner des calendriers** permet de créer des hiérarchies supplémentaires représentant les calendriers fiscaux, de rapports, de fabrication ou ISO (International Standards Organization) 8601 de la dimension de temps.  
@@ -45,7 +45,7 @@ ms.locfileid: "36044550"
 > [!NOTE]  
 >  Cette option est disponible uniquement quand **Calendrier fiscal** est sélectionné.  
   
- **Calendrier de rapport (ou du marketing)**  
+ **Calendrier de rapport (ou marketing)**  
  Sélectionnez cette option pour créer une hiérarchie de temps en fonction d'un calendrier de rapports.  
   
  **Semaine et mois de départ**  
@@ -68,7 +68,7 @@ ms.locfileid: "36044550"
 |**Semaine 454**|Le premier mois du trimestre compte 4 semaines, le deuxième mois en compte 5, et le troisième mois en compte 4.|  
 |**Semaine 544**|Le premier mois du trimestre a 5 semaines, le deuxième mois du trimestre a 4 semaines et le troisième mois du trimestre a 4 semaines.|  
   
- **Calendrier de production**  
+ **Calendrier de fabrication**  
  Sélectionnez cette option pour créer une hiérarchie de temps en fonction d'un calendrier de fabrication.  
   
  **Semaine et mois de départ**  
@@ -87,7 +87,7 @@ ms.locfileid: "36044550"
  Sélectionnez cette option pour créer une hiérarchie en fonction du calendrier ISO 8601.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Aide (F1) de l’Assistant Dimension](dimension-wizard-f1-help.md)   
+ [Aide F1 de l’Assistant Dimension](dimension-wizard-f1-help.md)   
  [Dimensions &#40;Analysis Services - données multidimensionnelles&#41;](multidimensional-models-olap-logical-dimension-objects/dimensions-analysis-services-multidimensional-data.md)   
  [Dimensions dans les modèles multidimensionnels](multidimensional-models/dimensions-in-multidimensional-models.md)  
   

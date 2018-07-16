@@ -1,5 +1,5 @@
 ---
-title: Aide (F1) de propriétés du serveur | Documents Microsoft
+title: Propriétés de serveur F1 | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 3a44c98f-6750-48b9-90c7-82391b134c9d
 caps.latest.revision: 18
 author: craigg-msft
 ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: ca69a247a4e0b1292dcc4e6d217b7df877c9145f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 34921e1f790b03a002510dc17ea07dff16a3bddb
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36042553"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37297069"
 ---
 # <a name="server-properties-f1-help"></a>Aide F1 des Propriétés du serveur
   Cette section contient les rubriques d'aide, accessibles via la touche F1, pour les pages **Propriétés du serveur** de SQL Server Management Studio.  
@@ -32,7 +32,7 @@ ms.locfileid: "36042553"
   
  [Propriétés du serveur &#40;Page Général&#41; -SQL Server Management Studio](../reporting-services/tools/report-server-properties-general-page.md)  
   
- [Propriétés du serveur &#40;Page de mémoire&#41;](configure-windows/server-properties-memory-page.md)  
+ [Propriétés du serveur &#40;Page mémoire&#41;](configure-windows/server-properties-memory-page.md)  
   
  [Propriétés du serveur &#40;Page Paramètres divers du serveur&#41;](configure-windows/server-properties-misc-server-settings-page.md)  
   

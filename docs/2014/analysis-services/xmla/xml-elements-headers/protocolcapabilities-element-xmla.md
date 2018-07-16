@@ -1,5 +1,5 @@
 ---
-title: Élément ProtocolCapabilities (XMLA) | Documents Microsoft
+title: Élément ProtocolCapabilities (XMLA) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -24,15 +24,15 @@ helpviewer_keywords:
 - ProtocolCapabilities element
 ms.assetid: f923896a-3f32-46a3-9543-388c30b3465d
 caps.latest.revision: 13
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: 0243e0050111c0bc478f17403f3014fc619d9a43
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: c4183d90d07a54cf009daec59ca29ca802f2bf67
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36042299"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37295429"
 ---
 # <a name="protocolcapabilities-element-xmla"></a>Élément ProtocolCapabilities (XMLA)
   Utilise l’en-tête SOAP dans un message de demande SOAP pour identifier les fonctionnalités de protocole entre une instance de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] et une application cliente.  
@@ -81,13 +81,13 @@ ms.locfileid: "36042299"
   
 3.  Si l'instance [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] dispose de la même fonctionnalité de protocole que celle demandée, elle transmet une réponse SOAP qui inclut le même élément `ProtocolCapabilities` que l'élément envoyé dans la demande SOAP. La négociation du protocole est alors réussie. Dans le cas inverse, les fonctionnalités de protocole ne sont pas négociées comme il se doit et l'instance retourne une erreur SOAP.  
   
- Après la négociation des fonctionnalités de protocole, la durée pendant laquelle l’application cliente et le [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] utilisation de l’instance un protocole spécifique dépend de la session implicite ou explicite :  
+ Après la négociation des fonctionnalités de protocole, la durée pendant laquelle l’application cliente et le [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] utilisation de l’instance un protocole particulier dépend de la session explicite ou implicite :  
   
--   Une session explicite est créé à l’aide de la [BeginSession](session-element-xmla.md) élément d’en-tête. Pour une session explicite, le protocole négocié est utilisé jusqu'à ce que l’application cliente envoie un nouveau `ProtocolCapabilities` élément ou la session se termine.  
+-   Une session explicite est créé à l’aide de la [BeginSession](session-element-xmla.md) élément d’en-tête. Pour une session explicite, le protocole négocié est utilisé jusqu'à ce que l’application cliente envoie une nouvelle `ProtocolCapabilities` élément ou la session se termine.  
   
 -   Une session implicite est créée par une instance [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]. Elle n'est pas définie de manière explicite par l'application cliente lorsque vous soumettez une demande SOAP. Dans le cadre de ce type de session, le protocole négocié est employé uniquement jusqu'à ce que la demande SOAP soit terminée.  
   
- Les fonctionnalités de protocole n'ont pas à être négociées de manière explicite, Autrement dit, une application cliente ne dispose pas d’inclure un `ProtocolCapabilities` élément dans le cadre de la demande SOAP. Si une demande SOAP n'inclut pas d'élément `ProtocolCapabilities`, l'instance [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] répond en adoptant le même format que la demande SOAP.  
+ Les fonctionnalités de protocole n'ont pas à être négociées de manière explicite, Autrement dit, une application cliente ne devra pas inclure un `ProtocolCapabilities` élément dans le cadre de la demande SOAP. Si une demande SOAP n'inclut pas d'élément `ProtocolCapabilities`, l'instance [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] répond en adoptant le même format que la demande SOAP.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Gestion des connexions et Sessions &#40;XMLA&#41;](../../multidimensional-models-scripting-language-assl-xmla/managing-connections-and-sessions-xmla.md)   

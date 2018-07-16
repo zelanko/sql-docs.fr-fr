@@ -1,5 +1,5 @@
 ---
-title: Installation de Microsoft Connector 1.1 pour SAP BW | Documents Microsoft
+title: Installation de Microsoft Connector 1.1 pour SAP BW | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 3bfb9023-9597-4f59-9085-4b9057e7702e
 caps.latest.revision: 9
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: dc6bbbf5972615880d3852d5f56a955862c9f22b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: ff4176fabb78aede03ca04fdf64fc52085431c9b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36153756"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37248796"
 ---
 # <a name="installing-the-microsoft-connector-for-11-sap-bw"></a>Installation de Microsoft Connector 1.1 pour SAP BW
-  Pour installer le [!INCLUDE[msCoName](../includes/msconame-md.md)] Connector 1.1 pour SAP BW et sa documentation, téléchargez et exécutez le package Windows installer à partir de la page de fonctionnalité Pack Web de SQL Server.  
+  Pour installer le [!INCLUDE[msCoName](../includes/msconame-md.md)] Connector 1.1 pour SAP BW et sa documentation, téléchargez et exécutez le package de programme d’installation de Windows à partir de la page Web de Pack de fonctionnalité de serveur SQL.  
   
 > [!IMPORTANT]  
 >  La documentation de Microsoft Connector 1.1 pour SAP BW suppose que vous êtes familiarisé avec l'environnement SAP Netweaver BW. Pour plus d'informations sur SAP Netweaver BW, ou sur la configuration des objets et des processus SAP Netweaver BW objets, consultez la documentation SAP.  
@@ -31,7 +31,7 @@ ms.locfileid: "36153756"
 >  Vous devez disposer d'une licence SAP supplémentaire pour extraire des données à partir de SAP Netweaver BW. Vérifiez auprès de SAP.  
   
 ## <a name="required-sap-files"></a>Fichiers SAP requis  
- Pour utiliser le [!INCLUDE[msCoName](../includes/msconame-md.md)] Connector 1.1 pour SAP BW, vous n’avez pas à installer le logiciel frontal SAP (interface GUI SAP) sur l’ordinateur local.  
+ Pour utiliser le [!INCLUDE[msCoName](../includes/msconame-md.md)] Connector 1.1 pour SAP BW, il est inutile d’installer le logiciel frontal SAP (interface GUI SAP) sur l’ordinateur local.  
   
  Cependant, vous devez copier le fichier du connecteur SAP .NET, librfc32.dll, dans le sous-dossier système du dossier Windows. (En général, l’emplacement de ce dossier est **C:\Windows\system32**.)  
   

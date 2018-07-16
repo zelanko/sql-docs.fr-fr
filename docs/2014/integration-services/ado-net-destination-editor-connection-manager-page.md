@@ -1,5 +1,5 @@
 ---
-title: Éditeur de Destination ADO NET (Page Gestionnaire de connexions) | Documents Microsoft
+title: Éditeur de Destination ADO NET (Page Gestionnaire de connexions) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.adonetdest.connection.f1
 ms.assetid: a3b11286-32c8-40e1-8ae7-090e2590345a
 caps.latest.revision: 31
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 674fff53082aae97171e8ee282590efabd0a6260
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 15f5a12e688d18a95e822fbaacb3714236ab7fff
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36043656"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37256995"
 ---
 # <a name="ado-net-destination-editor-connection-manager-page"></a>Éditeur de destination ADO NET (page Gestionnaire de connexions)
   Utilisez la page **Gestionnaire de connexions** de la boîte de dialogue **Éditeur de destination ADO NET** pour sélectionner la connexion [!INCLUDE[vstecado](../includes/vstecado-md.md)] de la destination. Cette page vous permet également de sélectionner une table ou une vue à partir de la base de données.  
@@ -62,10 +62,10 @@ ms.locfileid: "36043656"
   
  Vous pouvez utiliser le fournisseur de données .NET pour SQL Server (SqlClient) pour se connecter à [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssSDSfull](../includes/sssdsfull-md.md)].  
   
- Si vous sélectionnez **Utiliser l’insertion en bloc le cas échéant**et affectez à l’option **Erreur** la valeur **Rediriger la ligne**, le lot de données que la destination redirige vers la sortie d’erreur peut inclure des lignes correctes. Pour plus d’informations sur la gestion des erreurs dans les opérations en bloc, consultez [Gestion des erreurs dans les données](data-flow/error-handling-in-data.md). Pour plus d’informations sur la **erreur** option, consultez [éditeur de Destination ADO NET &#40;Page sortie d’erreur&#41;](../../2014/integration-services/ado-net-destination-editor-error-output-page.md).  
+ Si vous sélectionnez **Utiliser l’insertion en bloc le cas échéant**et affectez à l’option **Erreur** la valeur **Rediriger la ligne**, le lot de données que la destination redirige vers la sortie d’erreur peut inclure des lignes correctes. Pour plus d’informations sur la gestion des erreurs dans les opérations en bloc, consultez [Gestion des erreurs dans les données](data-flow/error-handling-in-data.md). Pour plus d’informations sur la **erreur** , consultez l’option [éditeur de Destination ADO NET &#40;Page sortie d’erreur&#41;](../../2014/integration-services/ado-net-destination-editor-error-output-page.md).  
   
 > [!NOTE]  
->  Si une table source [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ou Sybase inclut une colonne d'identité, vous devez utiliser les tâches d'exécution de requêtes SQL pour exécuter une instruction SET IDENTITY_INSERT avant et après la destination ADO NET. La propriété de la colonne d'identité spécifie une valeur incrémentielle pour la colonne. L'instruction SET IDENTITY_INSERT autorise l'insertion de valeurs explicites dans la colonne d'identité. Pour exécuter les instructions CREATE TABLE et de définir l’identité sur la même connexion de base de données, définissez la `RetainSameConnection` propriété de la [!INCLUDE[vstecado](../includes/vstecado-md.md)] Gestionnaire de connexions à `True`. En outre, utilisez le même gestionnaire de connexions [!INCLUDE[vstecado](../includes/vstecado-md.md)] pour les tâches Exécuter SQL et la destination ADO NET.  
+>  Si une table source [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ou Sybase inclut une colonne d'identité, vous devez utiliser les tâches d'exécution de requêtes SQL pour exécuter une instruction SET IDENTITY_INSERT avant et après la destination ADO NET. La propriété de la colonne d'identité spécifie une valeur incrémentielle pour la colonne. L'instruction SET IDENTITY_INSERT autorise l'insertion de valeurs explicites dans la colonne d'identité. Pour exécuter les instructions CREATE TABLE et SET IDENTITY sur la même connexion de base de données, définissez la `RetainSameConnection` propriété de la [!INCLUDE[vstecado](../includes/vstecado-md.md)] Gestionnaire de connexions à `True`. En outre, utilisez le même gestionnaire de connexions [!INCLUDE[vstecado](../includes/vstecado-md.md)] pour les tâches Exécuter SQL et la destination ADO NET.  
 >   
 >  Pour plus d’informations, consultez [SET IDENTITY_INSERT &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-identity-insert-transact-sql) et [IDENTITY &#40;Propriété&#41; &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-table-transact-sql-identity-property).  
   

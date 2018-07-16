@@ -5,10 +5,9 @@ ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.availabilitygroup.forcefailover.f1
 helpviewer_keywords:
@@ -16,15 +15,15 @@ helpviewer_keywords:
 - failover [SQL Server], AlwaysOn Availability Groups
 ms.assetid: 222288fe-ffc0-4567-b624-5d91485d70f0
 caps.latest.revision: 80
-author: rothja
-ms.author: jroth
-manager: jhubbard
-ms.openlocfilehash: a9ababac85cb978253682050d558c7d8aca8aad5
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 11041aeddd084b47ba1747ce2e555819743d9766
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36154926"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37287987"
 ---
 # <a name="perform-a-forced-manual-failover-of-an-availability-group-sql-server"></a>Effectuer un basculement manuel forcé d'un groupe de disponibilité (SQL Server)
   Cette rubrique explique comment effectuer un basculement forcé (avec perte de données potentielle) sur un groupe de disponibilité AlwaysOn à l'aide de [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)] ou de PowerShell dans [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. Un basculement forcé est une forme du basculement manuel qui est destiné exclusivement à la récupération d'urgence, lorsqu'un [basculement manuel planifié](perform-a-planned-manual-failover-of-an-availability-group-sql-server.md) n'est pas possible. Si vous forcez le basculement vers un réplica secondaire qui n'est pas synchronisé, une perte de données est possible. Par conséquent, nous vous recommandons fortement de forcer le basculement uniquement si vous devez restaurer immédiatement un service dans le groupe de disponibilité et si vous êtes prêt à prendre le risque de perdre des données.  
@@ -173,7 +172,7 @@ ms.locfileid: "36154926"
   
     -   **-AllowDataLoss-Force**  
   
-         Pour démarrer un basculement forcé sans confirmation, spécifiez à la fois les paramètres `-AllowDataLoss` et `-Force`. Cela est utile si vous souhaitez inclure la commande dans un script et l'exécuter sans intervention de l'utilisateur.  Toutefois, utiliser la `-Force` option avec précaution, car un basculement forcé peut provoquer la perte de données à partir de bases de données appartenant au groupe de disponibilité.  
+         Pour démarrer un basculement forcé sans confirmation, spécifiez à la fois les paramètres `-AllowDataLoss` et `-Force`. Cela est utile si vous souhaitez inclure la commande dans un script et l'exécuter sans intervention de l'utilisateur.  Toutefois, utiliser le `-Force` option avec précaution, car un basculement forcé peut provoquer la perte de données à partir de bases de données appartenant au groupe de disponibilité.  
   
          L’exemple suivant exécute un basculement forcé (avec perte de données possible) du groupe de disponibilité `MyAg` vers l’instance de serveur nommée `SecondaryServer\InstanceName`. L'option `-Force` supprime la confirmation de cette opération.  
   
@@ -313,7 +312,7 @@ ms.locfileid: "36154926"
   
 -   [Résoudre les problèmes de Configuration des groupes de disponibilité AlwaysOn &#40;SQL Server&#41;](troubleshoot-always-on-availability-groups-configuration-sql-server.md) 
   
--   [Résoudre une opération d’ajout de fichier &#40;groupes de disponibilité AlwaysOn&#41;](troubleshoot-a-failed-add-file-operation-always-on-availability-groups.md)  
+-   [Résoudre une opération d’ajout de fichier ayant échoué &#40;groupes de disponibilité AlwaysOn&#41;](troubleshoot-a-failed-add-file-operation-always-on-availability-groups.md)  
   
 ##  <a name="RelatedContent"></a> Contenu associé  
   

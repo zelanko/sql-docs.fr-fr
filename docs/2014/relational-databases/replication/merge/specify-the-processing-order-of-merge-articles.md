@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - articles [SQL Server replication], processing order
 - merge replication [SQL Server replication], article processing order
 ms.assetid: d151e2c5-cf50-4cb3-a829-8f32455dbd66
 caps.latest.revision: 33
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 359a4990699e4bd880aa87cd413fab574f884823
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: cd9f3fede11df544dc5bbbbc3675a7be506cb0c1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36044225"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37244609"
 ---
 # <a name="specify-the-processing-order-of-merge-articles"></a>Spécifier l'ordre de traitement d'articles de fusion
   À partir de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], il est possible de remplacer l'ordre de traitement par défaut des articles pour les publications de fusion. Ceci est utile par exemple si vous définissez une intégrité référentielle via des déclencheurs et que ces déclencheurs doivent s'exécuter dans un certain ordre.  

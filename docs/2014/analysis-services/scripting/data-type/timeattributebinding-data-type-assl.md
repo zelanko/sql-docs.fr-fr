@@ -1,5 +1,5 @@
 ---
-title: Type de données TimeAttributeBinding (ASSL) | Documents Microsoft
+title: Type de données TimeAttributeBinding (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - TimeAttributeBinding data type
 ms.assetid: e8317b1c-a83a-4074-9538-400792500985
 caps.latest.revision: 38
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 7422bc4f3101b4ecbbb004583fed61801c9dfad7
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 7e123cad0d54a1512aaa7edac8a230348505b879
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36043696"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37237549"
 ---
 # <a name="timeattributebinding-data-type-assl"></a>Type de données TimeAttributeBinding (ASSL)
   Définit un type de données dérivé représentant une liaison d'espace réservé pour les éléments de données créés (par exemple, les colonnes clés d'un attribut) dans une dimension de temps du serveur.  
@@ -67,6 +67,6 @@ ms.locfileid: "36043696"
  L’élément correspondant dans le modèle d’objet objets AMO (Analysis Management) est <xref:Microsoft.AnalysisServices.TimeAttributeBinding>.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Types de données de script langage XML Analysis Services &#40;ASSL&#41;](analysis-services-scripting-language-xml-data-types-assl.md)  
+ [Types Analysis Services Scripting Language XML données &#40;ASSL&#41;](analysis-services-scripting-language-xml-data-types-assl.md)  
   
   

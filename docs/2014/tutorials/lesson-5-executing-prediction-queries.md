@@ -1,5 +1,5 @@
 ---
-title: 'Leçon 5 : Exécution des requêtes de prédiction | Documents Microsoft'
+title: 'Leçon 5 : Exécution de requêtes de prédiction | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 0037bd2f-aa2d-464b-bf86-b0210f0438b1
 caps.latest.revision: 25
 author: minewiskan
 ms.author: owend
-manager: kfile
-ms.openlocfilehash: 91fd3e41ce0a1055a0f5babe4eb3234bc1ff03bd
-ms.sourcegitcommit: 8c040e5b4e8c7d37ca295679410770a1af4d2e1f
+manager: craigg
+ms.openlocfilehash: 4240182748de91090e4d4d67dec35eb4ebf74e55
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/21/2018
-ms.locfileid: "36312937"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37244074"
 ---
 # <a name="lesson-5-executing-prediction-queries"></a>Leçon 5 : exécution des requêtes de prédiction
   Dans cette leçon, vous allez utiliser le [SELECT FROM \<modèle > PREDICTION JOIN (DMX)](/sql/dmx/select-from-model-cases-dmx) de modèle que vous avez créé dans le formulaire de l’instruction SELECT pour créer deux différents types de prédictions basées sur l’arbre de décision [ Leçon 2 : Ajout des modèles d’exploration de données à la Structure d’exploration de données Association](../../2014/tutorials/lesson-2-adding-mining-models-to-the-market-basket-mining-structure.md). Ces types de prédiction sont définis ci-dessous.  
@@ -80,7 +80,7 @@ ORDER BY <expression>
   
 #### <a name="to-create-a-singleton-prediction-query"></a>Pour créer une requête de prédiction singleton  
   
-1.  Dans **l’Explorateur d’objets**, cliquez sur l’instance de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], pointez sur **nouvelle requête**, puis cliquez sur **DMX**.  
+1.  Dans **Explorateur d’objets**, avec le bouton droit de l’instance de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], pointez sur **nouvelle requête**, puis cliquez sur **DMX**.  
   
      L'Éditeur de requête s'ouvre et contient une nouvelle requête vide.  
   
@@ -195,11 +195,11 @@ WHERE <where clause, boolean expression,>
 ORDER BY <expression> [DESC|ASC]  
 ```  
   
- Utilisez ORDER BY en combinaison avec haut \<nombre > instruction, pour filtrer les résultats sont retournés. Par exemple, dans cette prédiction, vous allez retourner les dix meilleurs acheteurs de vélos triés selon la probabilité d'exactitude de la prédiction. Vous pouvez recourir à la syntaxe [DESC|ASC] pour contrôler l'ordre d'affichage des résultats.  
+ Utiliser ORDER BY conjointement avec le bord supérieur \<nombre > instruction, pour filtrer les résultats sont retournés. Par exemple, dans cette prédiction, vous allez retourner les dix meilleurs acheteurs de vélos triés selon la probabilité d'exactitude de la prédiction. Vous pouvez recourir à la syntaxe [DESC|ASC] pour contrôler l'ordre d'affichage des résultats.  
   
 #### <a name="to-create-a-batch-prediction-query"></a>Pour créer une requête de prédiction par lot  
   
-1.  Dans **l’Explorateur d’objets**, cliquez sur l’instance de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], pointez sur **nouvelle requête**, puis cliquez sur **DMX**.  
+1.  Dans **Explorateur d’objets**, avec le bouton droit de l’instance de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], pointez sur **nouvelle requête**, puis cliquez sur **DMX**.  
   
      L'Éditeur de requête s'ouvre et contient une nouvelle requête vide.  
   

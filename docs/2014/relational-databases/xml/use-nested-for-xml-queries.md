@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - dbe-xml
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - FOR XML clause, nested FOR XML queries
 - queries [XML in SQL Server], nested FOR XML
 - nested FOR XML queries
 ms.assetid: 7604161a-a958-446d-b102-7dee432979d0
 caps.latest.revision: 41
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: e8ce91a3ee069562a6a4d3f9d6aa3c02999e4dff
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: cf9e0d63af7283dfbb36a12d34224a6c379c111f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36042624"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37249659"
 ---
 # <a name="use-nested-for-xml-queries"></a>Utiliser des requêtes FOR XML imbriquées
   Le `xml` type de données et la [directive TYPE dans les requêtes FOR XML](type-directive-in-for-xml-queries.md) permettent au XML retourné par les requêtes FOR XML d’être traité sur le serveur et sur le client.  
@@ -43,7 +43,7 @@ SELECT @x
 --<row ProductModelID="119" Name="Bike Wash" />  
 ```  
   
- Vous pouvez poursuivre le traitement le document XML renvoyé dans la variable, `@x`, en utilisant l’une de le `xml` méthodes du type de données. Par exemple, vous pouvez extraire la valeur de l’attribut `ProductModelID` à l’aide de la [méthode value()](/sql/t-sql/xml/value-method-xml-data-type).  
+ Vous pouvez poursuivre le traitement du document XML renvoyé dans la variable, `@x`, en utilisant l’une de le `xml` méthodes de type de données. Par exemple, vous pouvez extraire la valeur de l’attribut `ProductModelID` à l’aide de la [méthode value()](/sql/t-sql/xml/value-method-xml-data-type).  
   
 ```  
 DECLARE @i int;  
@@ -70,7 +70,7 @@ FOR XML RAW, TYPE,ROOT('myRoot');
 </myRoot>  
 ```  
   
- Étant donné que le résultat est de `xml` type, vous pouvez spécifier une de la `xml` méthodes directement sur ce document XML, de type de données comme indiqué dans la requête suivante. Dans la requête, la [méthode query() (type de données xml)](/sql/t-sql/xml/query-method-xml-data-type) est utilisée pour extraire le premier élément enfant <`row`> de l’élément <`myRoot`>.  
+ Étant donné que le résultat est de `xml` type, vous pouvez spécifier un de la `xml` méthodes directement sur ce document XML, de type de données comme indiqué dans la requête suivante. Dans la requête, la [méthode query() (type de données xml)](/sql/t-sql/xml/query-method-xml-data-type) est utilisée pour extraire le premier élément enfant <`row`> de l’élément <`myRoot`>.  
   
 ```  
 SELECT  (SELECT ProductModelID, Name  
@@ -87,7 +87,7 @@ SELECT  (SELECT ProductModelID, Name
 ```  
   
 ## <a name="returning-inner-for-xml-query-results-to-outer-queries-as-xml-type-instances"></a>Renvoi de résultats de requêtes FOR XML internes à des requêtes externes en tant qu'instances de type xml  
- Vous pouvez écrire imbriquée `FOR XML` requêtes où le résultat de la requête interne est retourné comme une `xml` type de la requête externe. Exemple :  
+ Vous pouvez écrire imbriquée `FOR XML` requêtes où le résultat de la requête interne est retourné comme un `xml` type de la requête externe. Exemple :  
   
 ```  
 SELECT Col1,   

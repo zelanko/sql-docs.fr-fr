@@ -1,5 +1,5 @@
 ---
-title: Fonctionnalité interactive des différentes Extensions (Générateur de rapports et SSRS) de rendu de rapport | Documents Microsoft
+title: Fonctionnalité interactive des différentes Extensions (Générateur de rapports et SSRS) de rendu de rapport | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: f0bd1c4c-e8b5-467f-b5a1-541f19c7e3e2
 caps.latest.revision: 5
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 12aba044c373c9a75c9be3754ece6703eae0e5a7
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: a61442deaf2ca75bd3fb85f5eb8c83f6f58c4fee
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36042175"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37238490"
 ---
 # <a name="interactive-functionality-for-different-report-rendering-extensions-report-builder-and-ssrs"></a>Fonctionnalité interactive des différentes extensions de rendu de rapport (Générateur de rapports et SSRS)
-  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Fournit des fonctionnalités de création de rapports interactifs qui vous permettent d’utiliser un rapport au moment de l’exécution. Certains formats de rendu de rapport ne prennent pas en charge toutes les fonctionnalités interactives. Le tableau suivant permet de comprendre le fonctionnement de chaque fonctionnalité interactive dans des formats de rendu spécifiques.  
+  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Fournit des fonctionnalités de création de rapports interactives qui vous permettent de travailler avec un rapport en cours d’exécution. Certains formats de rendu de rapport ne prennent pas en charge toutes les fonctionnalités interactives. Le tableau suivant permet de comprendre le fonctionnement de chaque fonctionnalité interactive dans des formats de rendu spécifiques.  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
@@ -113,10 +113,10 @@ ms.locfileid: "36042175"
 |Autres|Le serveur de rapports exporte le rapport à d'autres formats en utilisant les données filtrées dans le rapport actuel.|  
   
 ## <a name="see-also"></a>Voir aussi  
- [Exportation de rapports &#40;rapport Générateur et SSRS&#41;](export-reports-report-builder-and-ssrs.md)   
+ [Exportation de rapports &#40;Générateur de rapports et SSRS&#41;](export-reports-report-builder-and-ssrs.md)   
  [Tri interactif, Explorateurs de documents et liens &#40;Générateur de rapports et SSRS&#41;](../report-design/interactive-sort-document-maps-and-links-report-builder-and-ssrs.md)   
  [Matrices &#40;Générateur de rapports et SSRS&#41;](../report-design/create-a-matrix-report-builder-and-ssrs.md)   
  [Tables, matrices et listes &#40;Générateur de rapports et SSRS&#41;](../report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)   
- [Graphiques &#40;rapport Générateur et SSRS&#41;](../report-design/charts-report-builder-and-ssrs.md)  
+ [Graphiques &#40;Générateur de rapports et SSRS&#41;](../report-design/charts-report-builder-and-ssrs.md)  
   
   

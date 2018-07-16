@@ -1,5 +1,5 @@
 ---
-title: La récupération des données à l’aide de XmlReader | Documents Microsoft
+title: Récupération des données à l’aide de XmlReader | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - data retrieval [ADOMD.NET], XmlReader object
 ms.assetid: 420ec40e-be2d-413a-b4b2-6d2b1756e270
 caps.latest.revision: 34
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 257777c40c829921680b8fce333bd6e44f6f57fd
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: fa47902131522f807ebe96b0b14a3df28aaf657f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36043479"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37267565"
 ---
 # <a name="retrieving-data-using-the-xmlreader"></a>Récupération de données à l'aide de XmlReader
   La classe `XmlReader`, qui fait partie de l'espace de noms `System.Xml` de la bibliothèque de classes Microsoft .NET Framework, est similaire à la classe <xref:Microsoft.AnalysisServices.AdomdClient.AdomdDataReader> en ce sens que la classe `XmlReader` offre également un accès aux données rapide, sans mise en cache et avant uniquement. S'il n'est pas utile d'obtenir une vue analytique en mémoire des données avec l'objet <xref:Microsoft.AnalysisServices.AdomdClient.CellSet>, l'objet `XmlReader` est parfait pour récupérer des données XML, surtout lorsqu'il s'agit de grandes quantités de données. Étant donné que `XmlReader` transmet les données en continu, `XmlReader` n'a pas besoin de récupérer et mettre en cache l'ensemble des données avant de les exposer à l'appelant, comme ce serait le cas si un objet <xref:Microsoft.AnalysisServices.AdomdClient.CellSet> était utilisé pour convertir la réponse XMLA en une représentation du modèle objet analytique.  
@@ -52,8 +52,8 @@ ms.locfileid: "36043479"
  [!code-csharp[Adomd.NetClient#OutputDataWithXML](../../snippets/csharp/SQL14/adomd.net/adomd.netclient/cs/adomdexample.cs#outputdatawithxml)]  
   
 ## <a name="see-also"></a>Voir aussi  
- [La récupération des données à partir d’une Source de données analytiques](retrieving-data-from-an-analytical-data-source.md)   
- [La récupération des données à l’aide de l’ensemble de cellules](retrieving-data-using-the-cellset.md)   
+ [Récupération des données à partir d’une Source de données analytiques](retrieving-data-from-an-analytical-data-source.md)   
+ [Récupération des données à l’aide de l’ensemble de cellules](retrieving-data-using-the-cellset.md)   
  [Récupération de données à l’aide d’AdomdDataReader](retrieving-data-using-the-adomddatareader.md)  
   
   

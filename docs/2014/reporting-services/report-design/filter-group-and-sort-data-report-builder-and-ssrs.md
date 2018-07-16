@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.rtp.rptdesigner.categorygroupproperties.sorting.f1
 - "10403"
@@ -20,15 +20,15 @@ f1_keywords:
 - "10412"
 ms.assetid: 4dda2a7f-3f31-47e9-a88b-28d770ebd65e
 caps.latest.revision: 7
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: c6e738ae473636e3fdd0c9d7efa1512a6b5b68f2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 4ba8d34b6f56bec66ce2fc1a8f0d4024e4a45493
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36153651"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37256348"
 ---
 # <a name="filter-group-and-sort-data-report-builder-and-ssrs"></a>Filtrer, regrouper et trier des données (Générateur de rapports et SSRS)
   Dans un rapport, les expressions sont utilisées pour aider à contrôler, organiser et trier les données de rapport. Par défaut, lorsque vous créez des datasets et concevez la mise en page de rapport, les propriétés des éléments de rapport prennent automatiquement la valeur d'expressions en fonction des champs, paramètres et autres éléments de dataset qui s'affichent dans le volet des données de rapport. Vous pouvez également ajouter un bouton de tri interactif à une cellule de tableau ou de matrice afin de permettre à un utilisateur de modifier interactivement l'ordre de tri des lignes pour des groupes ou pour des lignes situées dans des groupes.  
@@ -45,9 +45,9 @@ ms.locfileid: "36153651"
   
  Pour plus d'informations et pour obtenir des exemples, consultez les rubriques suivantes :  
   
--   [Exemples d’expressions de groupe &#40;rapport Générateur et SSRS&#41;](expression-examples-report-builder-and-ssrs.md)  
+-   [Exemples d’expressions de groupe &#40;Générateur de rapports et SSRS&#41;](expression-examples-report-builder-and-ssrs.md)  
   
--   [Exemples d’équations de filtre &#40;rapport Générateur et SSRS&#41;](filter-equation-examples-report-builder-and-ssrs.md)  
+-   [Exemples d’équations de filtre &#40;Générateur de rapports et SSRS&#41;](filter-equation-examples-report-builder-and-ssrs.md)  
   
 -   [Didacticiels &#40;Générateur de rapports&#41;](../report-builder-tutorials.md)  
   
@@ -63,7 +63,7 @@ ms.locfileid: "36153651"
   
  Lorsque c'est possible, générez des requêtes de dataset qui retournent uniquement les données que vous devez afficher dans le rapport. Lorsque vous réduisez la quantité des données qui doivent être récupérées et traitées, vous contribuez à améliorer les performances du rapport. Pour plus d’informations, consultez [Datasets incorporés dans les rapports et datasets partagés &#40;Générateur de rapports et SSRS&#41;](../report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md).  
   
- Après avoir récupéré les données à partir de la source de données externe, vous pouvez ajouter des filtres aux datasets, aux régions de données et aux groupes de régions de données, notamment les groupes de détails. Les filtres sont appliqués dans un premier temps au moment de l'exécution sur le dataset, puis sur la région de données, puis sur le groupe, dans l'ordre de haut en bas des hiérarchies de groupe. Dans une table, une matrice ou une liste, les filtres des groupes de lignes, des groupes de colonnes et des groupes adjacents sont appliqués indépendamment. Dans un graphique, les filtres des groupes de catégories et des groupes de séries sont appliqués indépendamment. Pour plus d’informations, consultez [ajouter des filtres de Dataset, filtres de régions de données et les filtres de groupe &#40;le Générateur de rapports et SSRS&#41;](add-dataset-filters-data-region-filters-and-group-filters.md).  
+ Après avoir récupéré les données à partir de la source de données externe, vous pouvez ajouter des filtres aux datasets, aux régions de données et aux groupes de régions de données, notamment les groupes de détails. Les filtres sont appliqués dans un premier temps au moment de l'exécution sur le dataset, puis sur la région de données, puis sur le groupe, dans l'ordre de haut en bas des hiérarchies de groupe. Dans une table, une matrice ou une liste, les filtres des groupes de lignes, des groupes de colonnes et des groupes adjacents sont appliqués indépendamment. Dans un graphique, les filtres des groupes de catégories et des groupes de séries sont appliqués indépendamment. Pour plus d’informations, consultez [ajouter des filtres de Dataset, les filtres de régions de données et les filtres de groupe &#40;Générateur de rapports et SSRS&#41;](add-dataset-filters-data-region-filters-and-group-filters.md).  
   
  Pour chaque filtre, vous spécifiez une *équation de filtre*. Une équation de filtre comprend un champ ou une expression de dataset qui identifie les données à filtrer, un opérateur et une valeur de comparaison. Seules les valeurs de données qui correspondent à la condition de filtre sont incluses lorsque l'élément est traité.  
   
@@ -92,7 +92,7 @@ ms.locfileid: "36153651"
   
  Le nom de groupe identifie une étendue d'expression. Vous pouvez spécifier le nom d'un groupe en tant qu'étendue dans laquelle calculer des agrégats, organiser des données hiérarchiquement et activer/désactiver l'affichage des nœuds enfants des nœuds parents dans un rapport d'extraction, afin d'afficher des vues différentes des mêmes données sur plusieurs régions de données, et de visualiser les données de synthèse dans un tableau, une matrice, un graphique, une jauge ou une carte. Pour plus d’informations, consultez [Étendue des expressions pour les totaux, les agrégats et les collections intégrées &#40;Générateur de rapports et SSRS&#41;](expression-scope-for-totals-aggregates-and-built-in-collections.md).  
   
- Pour effectuer un regroupement sur plusieurs champs du dataset, ajoutez chaque champ à l'ensemble d'expressions de groupe. Vous pouvez également écrire vos propres expressions de groupe en [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]. Par exemple, vous pouvez effectuer un regroupement selon une plage de valeurs ou utiliser un paramètre de rapport pour permettre à l'utilisateur de sélectionner le mode de regroupement de données dans une région de données. Pour plus d’informations, consultez [Exemples d’expressions de groupe &#40;Générateur de rapports et SSRS&#41;](expression-examples-report-builder-and-ssrs.md).  
+ Pour effectuer un regroupement sur plusieurs champs du dataset, ajoutez chaque champ à l'ensemble d'expressions de groupe. Vous pouvez également écrire vos propres expressions de groupe [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]. Par exemple, vous pouvez effectuer un regroupement selon une plage de valeurs ou utiliser un paramètre de rapport pour permettre à l'utilisateur de sélectionner le mode de regroupement de données dans une région de données. Pour plus d’informations, consultez [Exemples d’expressions de groupe &#40;Générateur de rapports et SSRS&#41;](expression-examples-report-builder-and-ssrs.md).  
   
  Pour la présentation du rapport, vous pouvez ajouter des sauts de page avant et après chaque groupe ou instance d'un groupe afin de réduire le volume de données sur chaque page et mieux gérer les performances de rendu de rapport. Pour plus d’informations, consultez [Ajouter un saut de page &#40;Générateur de rapports et SSRS&#41;](add-a-page-break-report-builder-and-ssrs.md).  
   
@@ -101,10 +101,10 @@ ms.locfileid: "36153651"
 ### <a name="defining-group-variables"></a>Définition de variables de groupe  
  Lorsque vous définissez un groupe, vous pouvez créer une variable de groupe à utiliser dans les expressions qui se limitent à ce groupe et sont accessibles à partir de groupes imbriqués. Une variable de groupe est calculée une fois par instance de groupe et est accessible à partir des expressions des groupes enfants. Par exemple, pour les données regroupées par région et sous-région, vous pouvez calculer une taxe pour chaque région et utiliser cette taxe dans les calculs du groupe de sous-régions.  
   
- Pour plus d’informations, consultez [rapport et des références à des Collections de Variables groupe &#40;le Générateur de rapports et SSRS&#41; ](built-in-collections-report-and-group-variables-references-report-builder.md) et [étendue des expressions pour les totaux, les agrégats et les Collections intégrées &#40;rapport Le générateur et SSRS&#41;](expression-scope-for-totals-aggregates-and-built-in-collections.md).  
+ Pour plus d’informations, consultez [rapport et des références à des Collections groupe Variables &#40;Générateur de rapports et SSRS&#41; ](built-in-collections-report-and-group-variables-references-report-builder.md) et [étendue des expressions pour les totaux, les agrégats et les Collections intégrées &#40;rapport Générateur et SSRS&#41;](expression-scope-for-totals-aggregates-and-built-in-collections.md).  
   
 ### <a name="groups-and-scope-in-data-regions"></a>Groupes et étendue dans les régions de données  
- Pour fournir plusieurs vues de données à partir du même dataset, vous pouvez spécifier les mêmes expressions de groupe pour chaque région de données. Par exemple, vous pouvez afficher des données par catégories dans un tableau afin d'afficher toutes les données de détail, et faire de même dans un graphique à secteurs afin d'afficher des agrégats, ce qui facilite la visualisation de chaque catégorie par rapport à l'ensemble du dataset. Pour plus d’informations, consultez [lier plusieurs régions de données à un même Dataset &#40;le Générateur de rapports et SSRS&#41;](linking-multiple-data-regions-to-the-same-dataset-report-builder-and-ssrs.md).  
+ Pour fournir plusieurs vues de données à partir du même dataset, vous pouvez spécifier les mêmes expressions de groupe pour chaque région de données. Par exemple, vous pouvez afficher des données par catégories dans un tableau afin d'afficher toutes les données de détail, et faire de même dans un graphique à secteurs afin d'afficher des agrégats, ce qui facilite la visualisation de chaque catégorie par rapport à l'ensemble du dataset. Pour plus d’informations, consultez [liaison de plusieurs régions de données à un même Dataset &#40;Générateur de rapports et SSRS&#41;](linking-multiple-data-regions-to-the-same-dataset-report-builder-and-ssrs.md).  
   
  Lorsque vous imbriquez une région de données dans une cellule de tableau, de matrice ou de liste, vous limitez automatiquement l'étendue des données aux appartenances aux groupes les plus profondes de la cellule. Par exemple, supposons que vous ajoutiez un graphique à une cellule située à la fois dans un groupe de lignes et dans un groupe de colonnes. Les données disponibles dans ce graphique sont limitées à l'instance de groupe de lignes la plus profonde et à l'instance de groupe de colonnes la plus profonde au moment de l'exécution. Pour plus d’informations, consultez [Étendue des expressions pour les totaux, les agrégats et les collections intégrées &#40;Générateur de rapports et SSRS&#41;](expression-scope-for-totals-aggregates-and-built-in-collections.md).  
   
@@ -120,7 +120,7 @@ ms.locfileid: "36153651"
 ### <a name="sorting-data-in-a-dataset-query"></a>Tri des données dans une requête de dataset  
  Incluez l'ordre de tri dans la requête de dataset afin de pré-trier les données avant leur extraction pour un rapport. Le tri des données dans la requête est effectué par la source de données et non pas par le processeur de rapports.  
   
- Pour un [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] source de données, vous pouvez ajouter une clause ORDER BY à la requête de dataset. Par exemple, la requête [!INCLUDE[tsql](../../../includes/tsql-md.md)] suivante trie les colonnes Sales et Region by Sales dans la table SalesOrders par ordre décroissant : `SELECT Sales, Region FROM SalesOrders ORDER BY Sales DESC`. Pour plus d'informations, consultez la rubrique relative au tri des lignes à l'aide de ORDER BY dans la [documentation en ligne de SQL Server](http://go.microsoft.com/fwlink/?linkid=98335).  
+ Pour un [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] source de données, vous pouvez ajouter une clause ORDER BY à la requête de jeu de données. Par exemple, la requête [!INCLUDE[tsql](../../../includes/tsql-md.md)] suivante trie les colonnes Sales et Region by Sales dans la table SalesOrders par ordre décroissant : `SELECT Sales, Region FROM SalesOrders ORDER BY Sales DESC`. Pour plus d'informations, consultez la rubrique relative au tri des lignes à l'aide de ORDER BY dans la [documentation en ligne de SQL Server](http://go.microsoft.com/fwlink/?linkid=98335).  
   
 > [!NOTE]  
 >  Toutes les sources de données ne permettent pas de spécifier l'ordre de tri dans la requête.  
@@ -175,43 +175,43 @@ FROM Production.Product
  ![Icône de flèche utilisée avec le lien Retour au début](../../2014-toc/media/uparrow16x16.gif "Icône de flèche utilisée avec le lien Retour au début") [Retour au début](#BackToTop)  
   
 ##  <a name="HowTo"></a> Rubriques de procédures  
- [Laisser les en-têtes visibles lors du défilement d’un rapport &#40;rapport Générateur et SSRS&#41;](keep-headers-visible-when-scrolling-through-a-report-report-builder-and-ssrs.md)  
+ [Laisser les en-têtes visibles lors du défilement d’un rapport &#40;Générateur de rapports et SSRS&#41;](keep-headers-visible-when-scrolling-through-a-report-report-builder-and-ssrs.md)  
   
- [Afficher des en-têtes et pieds de page avec un groupe &#40;rapport Générateur et SSRS&#41;](display-headers-and-footers-with-a-group-report-builder-and-ssrs.md)  
+ [Afficher des en-têtes et pieds de page avec un groupe &#40;Générateur de rapports et SSRS&#41;](display-headers-and-footers-with-a-group-report-builder-and-ssrs.md)  
   
- [Ajouter un tri interactif à une Table ou une matrice &#40;rapport Générateur et SSRS&#41;](add-interactive-sort-to-a-table-or-matrix-report-builder-and-ssrs.md)  
+ [Ajouter un tri interactif à une Table ou une matrice &#40;Générateur de rapports et SSRS&#41;](add-interactive-sort-to-a-table-or-matrix-report-builder-and-ssrs.md)  
   
- [Définir un Message d’absence de données pour une région de données &#40;rapport Générateur et SSRS&#41;](../report-data/set-a-no-data-message-for-a-data-region-report-builder-and-ssrs.md)  
+ [Définir un Message d’absence de données pour une région de données &#40;Générateur de rapports et SSRS&#41;](../report-data/set-a-no-data-message-for-a-data-region-report-builder-and-ssrs.md)  
   
- [Créer un groupe de hiérarchies récursives &#40;rapport Générateur et SSRS&#41;](create-a-recursive-hierarchy-group-report-builder-and-ssrs.md)  
+ [Créer un groupe de hiérarchies récursives &#40;Générateur de rapports et SSRS&#41;](create-a-recursive-hierarchy-group-report-builder-and-ssrs.md)  
   
- [Ajouter ou supprimer un groupe dans une région de données &#40;rapport Générateur et SSRS&#41;](add-or-delete-a-group-in-a-data-region-report-builder-and-ssrs.md)  
+ [Ajouter ou supprimer un groupe dans une région de données &#40;Générateur de rapports et SSRS&#41;](add-or-delete-a-group-in-a-data-region-report-builder-and-ssrs.md)  
   
- [Afficher des en-têtes et pieds de page avec un groupe &#40;rapport Générateur et SSRS&#41;](display-headers-and-footers-with-a-group-report-builder-and-ssrs.md)  
+ [Afficher des en-têtes et pieds de page avec un groupe &#40;Générateur de rapports et SSRS&#41;](display-headers-and-footers-with-a-group-report-builder-and-ssrs.md)  
   
- [Ajouter ou supprimer un groupe dans un graphique &#40;rapport Générateur et SSRS&#41;](add-or-delete-a-group-in-a-chart-report-builder-and-ssrs.md)  
+ [Ajouter ou supprimer un groupe dans un graphique &#40;Générateur de rapports et SSRS&#41;](add-or-delete-a-group-in-a-chart-report-builder-and-ssrs.md)  
   
- [Ajouter un Total à un groupe ou d’une région de données de tableau matriciel &#40;rapport Générateur et SSRS&#41;](add-a-total-to-a-group-or-tablix-data-region-report-builder-and-ssrs.md)  
+ [Ajouter un Total à un groupe ou d’une région de données de tableau matriciel &#40;Générateur de rapports et SSRS&#41;](add-a-total-to-a-group-or-tablix-data-region-report-builder-and-ssrs.md)  
   
 ##  <a name="Section"></a> Dans cette section  
- [Exemples d’expressions de groupe &#40;rapport Générateur et SSRS&#41;](expression-examples-report-builder-and-ssrs.md)  
+ [Exemples d’expressions de groupe &#40;Générateur de rapports et SSRS&#41;](expression-examples-report-builder-and-ssrs.md)  
   
- [Exemples d’équations de filtre &#40;rapport Générateur et SSRS&#41;](filter-equation-examples-report-builder-and-ssrs.md)  
+ [Exemples d’équations de filtre &#40;Générateur de rapports et SSRS&#41;](filter-equation-examples-report-builder-and-ssrs.md)  
   
- [Ajouter des filtres de Dataset, filtres de régions de données et regrouper les filtres &#40;rapport Générateur et SSRS&#41;](add-dataset-filters-data-region-filters-and-group-filters.md)  
+ [Ajouter des filtres de Dataset, filtres de régions de données et des groupes de filtres &#40;Générateur de rapports et SSRS&#41;](add-dataset-filters-data-region-filters-and-group-filters.md)  
   
 ##  <a name="Related"></a> Sections connexes  
- [Présentation des groupes &#40;rapport Générateur et SSRS&#41;](understanding-groups-report-builder-and-ssrs.md)  
+ [Présentation des groupes &#40;Générateur de rapports et SSRS&#41;](understanding-groups-report-builder-and-ssrs.md)  
   
- [Création de groupes de hiérarchies récursives &#40;rapport Générateur et SSRS&#41;](creating-recursive-hierarchy-groups-report-builder-and-ssrs.md)  
+ [Création de groupes de hiérarchies récursives &#40;Générateur de rapports et SSRS&#41;](creating-recursive-hierarchy-groups-report-builder-and-ssrs.md)  
   
- [Étendue des expressions pour les totaux, les agrégats et les Collections intégrées &#40;rapport Générateur et SSRS&#41;](expression-scope-for-totals-aggregates-and-built-in-collections.md)  
+ [Étendue des expressions pour les totaux, les agrégats et les Collections intégrées &#40;Générateur de rapports et SSRS&#41;](expression-scope-for-totals-aggregates-and-built-in-collections.md)  
   
- [Rapports et de références à des Collections de Variables de groupe &#40;rapport Générateur et SSRS&#41;](built-in-collections-report-and-group-variables-references-report-builder.md)  
+ [Rapport et de groupe de références à des Collections Variables &#40;Générateur de rapports et SSRS&#41;](built-in-collections-report-and-group-variables-references-report-builder.md)  
   
- [Affichage d’une série avec plusieurs plages de données sur un graphique &#40;rapport Générateur et SSRS&#41;](displaying-a-series-with-multiple-data-ranges-on-a-chart.md)  
+ [Affichage d’une série avec plusieurs plages de données sur un graphique &#40;Générateur de rapports et SSRS&#41;](displaying-a-series-with-multiple-data-ranges-on-a-chart.md)  
   
- [Liaison de plusieurs régions de données à un même Dataset &#40;rapport Générateur et SSRS&#41;](linking-multiple-data-regions-to-the-same-dataset-report-builder-and-ssrs.md)  
+ [Liaison de plusieurs régions de données à un même Dataset &#40;Générateur de rapports et SSRS&#41;](linking-multiple-data-regions-to-the-same-dataset-report-builder-and-ssrs.md)  
   
 ## <a name="see-also"></a>Voir aussi  
  [Expressions &#40;Générateur de rapports et SSRS&#41;](expressions-report-builder-and-ssrs.md)   
@@ -219,7 +219,7 @@ FROM Production.Product
  [Graphiques &#40;Générateur de rapports et SSRS&#41;](charts-report-builder-and-ssrs.md)   
  [Cartes &#40;Générateur de rapports et SSRS&#41;](maps-report-builder-and-ssrs.md)   
  [Graphiques sparkline et barres de données &#40;Générateur de rapports et SSRS&#41;](sparklines-and-data-bars-report-builder-and-ssrs.md)   
- [Jauges &#40;rapport Générateur et SSRS&#41;](gauges-report-builder-and-ssrs.md)   
+ [Jauges &#40;Générateur de rapports et SSRS&#41;](gauges-report-builder-and-ssrs.md)   
  [Indicateurs &#40;Générateur de rapports et SSRS&#41;](indicators-report-builder-and-ssrs.md)  
   
   

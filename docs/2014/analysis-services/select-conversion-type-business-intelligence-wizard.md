@@ -1,5 +1,5 @@
 ---
-title: Sélectionnez le Type de Conversion (Assistant Business Intelligence) | Documents Microsoft
+title: Sélectionnez le Type de Conversion (Assistant Business Intelligence) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.biwizard.currencyconversion.conversiontype.f1
 ms.assetid: 2c664138-e8a1-4c47-8e7d-ee01c57e4692
 caps.latest.revision: 23
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: ba4018a6ce30e4e7de4e0ca3e79ae07007015650
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 34fab6780a6c10601b3f5bf31fbb7cffee3fd888
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36153803"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37267345"
 ---
 # <a name="select-conversion-type-business-intelligence-wizard"></a>Sélectionner le type de conversion (Assistant Business Intelligence)
   La page **Sélectionner le type de conversion** permet de définir la relation entre les devises locales et celles des rapports pour des transactions stockées dans plusieurs devises. Une devise locale est une devise dans laquelle les transactions des mesures sélectionnées dans **Sélectionnez les mesures** sont stockées. Une devise de rapport est celle dans laquelle sont traduites les transactions sélectionnées dans la page **Sélectionnez les mesures** .  
@@ -52,7 +52,7 @@ ms.locfileid: "36153803"
  Par exemple, la devise pivot peut correspondre à des dollars américains (USD) et la table de faits peut stocker les transactions en USD. Cette option convertit ces transactions de la devise pivot dans les devises de rapport spécifiées. Résultat : les transactions peuvent être stockées dans la devise pivot spécifiée et être affichées soit dans la devise pivot indiquée, soit dans l'une des devises de rapport mentionnées à la page **Spécifier les devises pour les rapports** .  
   
 ## <a name="see-also"></a>Voir aussi  
- [Aide F1 l’Assistant Business Intelligence](business-intelligence-wizard-f1-help.md)   
+ [L’Assistant Business Intelligence F1](business-intelligence-wizard-f1-help.md)   
  [Concepteur de cube &#40;Analysis Services - données multidimensionnelles&#41;](cube-designer-analysis-services-multidimensional-data.md)   
  [Concepteur de dimensions &#40;Analysis Services - données multidimensionnelles&#41;](dimension-designer-analysis-services-multidimensional-data.md)  
   

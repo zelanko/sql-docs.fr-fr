@@ -1,5 +1,5 @@
 ---
-title: Options et paramètres (Analysis Services) de traitement | Documents Microsoft
+title: Traitement des Options et paramètres (Analysis Services) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - process data option [Analysis Services]
 - processing objects [Analysis Services]
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - process default option [Analysis Services]
 ms.assetid: 2e858c74-ad3e-45f1-8745-efe2c0c3a7fa
 caps.latest.revision: 44
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 699cdbdc63eea794397e23076345cf082a042601
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 9bb9ae4163f139af76b1e746267a9d60c70d026f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36154929"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37220335"
 ---
 # <a name="processing-options-and-settings-analysis-services"></a>Options et paramètres de traitement (Analysis Services)
   Lorsque vous traitez des objets dans [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], vous pouvez sélectionner une option de traitement afin de contrôler le type de traitement qui se produit pour chaque objet. Les types de traitement varient d'un objet à l'autre et en fonction des modification qui ont été apportées à l'objet depuis le dernier traitement. Si vous autorisez [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] à sélectionner automatiquement une méthode de traitement, la méthode utilisée sera celle qui permet de traiter complètement l'objet le plus rapidement possible.  
@@ -49,7 +49,7 @@ ms.locfileid: "36154929"
 |**Traiter entièrement**|Cubes, bases de données, dimensions, groupes de mesures, modèles d'exploration, structures d'exploration et partitions.|Traite un objet [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] et tous les objets qu'il contient. Lorsque la commande Traiter entièrement est sélectionnée pour un objet qui a déjà été traité, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] supprime toutes les données de l'objet, puis traite l'objet. Ce type de traitement est requis en cas de modification structurelle d'un objet, par exemple lorsqu'une hiérarchie d'attribut est ajoutée, supprimée ou renommée.|  
 |**Traiter l'effacement**|Cubes, bases de données, dimensions, groupes de mesures, modèles d'exploration, structures d'exploration et partitions.|Supprime les données dans l'objet spécifié et dans tous les objets de niveau inférieur qui constituent cet objet. Une fois que les données sont supprimées, elles ne sont pas rechargées.|  
 |**Traiter des données**|Dimensions, cubes, groupes de mesures et partitions|Traite uniquement les données sans générer d'agrégations ou d'index. Si des données figurent dans les partitions, elles seront supprimées avant de remplir à nouveau la partition avec des données sources.|  
-|**Traiter l'ajout**|Dimensions, groupes de mesures et partitions<br /><br /> Remarque : Le traitement de l’ajout n’est pas disponible pour le traitement dans des dimensions [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], mais vous pouvez écrire un script XMLA pour effectuer cette action.|Pour les dimensions, ajoute de nouveaux membres et met à jour les captures et descriptions d'attributs de dimension.<br /><br /> Pour les groupes de mesures et les partitions, ajoute les nouvelles données de faits disponibles et traite uniquement les partitions concernées.|  
+|**Traiter l'ajout**|Dimensions, groupes de mesures et partitions<br /><br /> Remarque : Le traitement de l’ajout n’est pas disponible pour le traitement des dimensions dans [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], mais vous pouvez écrire un script XMLA pour effectuer cette action.|Pour les dimensions, ajoute de nouveaux membres et met à jour les captures et descriptions d'attributs de dimension.<br /><br /> Pour les groupes de mesures et les partitions, ajoute les nouvelles données de faits disponibles et traite uniquement les partitions concernées.|  
 |**Traiter la mise à jour**|Dimensions|Impose une relecture des données et une mise à jour des attributs de dimension. Les agrégations et index flexibles sur les partitions associées seront supprimés.|  
 |**Traiter l'index**|Cubes, dimensions, groupes de mesures et partitions|Crée ou reconstruit des index et des agrégations pour toutes les partitions traitées. Cette option provoque une erreur sur les objets non traités.<br /><br /> Cette option est requise pour le traitement si vous avez désactivé le traitement différé.|  
 |**Traiter la structure**|Cube et structures d'exploration|Si le cube n'est pas traité, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] va traiter, si nécessaire, toutes les dimensions du cube. Ensuite, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] va créer uniquement des définitions de cube. Si cette option est appliquée à une structure d'exploration de données, elle la remplit avec des données sources. La différence entre cette option et l'option Traiter entièrement est que cette option n'effectue pas d'itération du traitement jusqu'aux modèles d'exploration de données eux-mêmes.|  

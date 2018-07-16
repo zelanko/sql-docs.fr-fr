@@ -1,5 +1,5 @@
 ---
-title: Création, modification et suppression de schémas | Documents Microsoft
+title: Création, modification et suppression de schémas | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,15 +14,15 @@ helpviewer_keywords:
 - schemas [SMO]
 ms.assetid: 3e3619de-c6a2-4280-b2be-4ec9924608fb
 caps.latest.revision: 34
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 6a9d25849fe2882c8d9fe249e1146297c07f3eec
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 7bfbd8aa8265fd0cdc4615cb8a5ed2065e559138
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36152997"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37290345"
 ---
 # <a name="creating-altering-and-removing-schemas"></a>Création, modification et suppression de schémas
   L'objet <xref:Microsoft.SqlServer.Management.Smo.Schema> représente le contexte de propriété pour un objet de base de données. La propriété <xref:Microsoft.SqlServer.Management.Smo.Database.Schemas%2A> de l'objet <xref:Microsoft.SqlServer.Management.Smo.Database> représente une collection d'objets <xref:Microsoft.SqlServer.Management.Smo.Schema>.  

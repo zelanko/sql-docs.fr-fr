@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.messagequeuetask.f1
 helpviewer_keywords:
@@ -20,13 +20,13 @@ ms.assetid: ae1d8fad-6649-4e93-b589-14a32d07da33
 caps.latest.revision: 68
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 3be2c48f2a3b2dc552d3f9c89bf2caf57b0e0bf4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 176e1798f453771f17aa197e122521bb3852bbc4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36042957"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37269665"
 ---
 # <a name="message-queue-task"></a>Message Queue Task
   La tâche MSMQ vous permet d’utiliser Message Queuing (MSMQ) pour envoyer et recevoir des messages entre des packages [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] ou pour envoyer des messages à une file d’attente d’application traitée par une application personnalisée. Ces messages peuvent être composés de texte brut, de fichiers ou de variables et leurs valeurs.  
@@ -51,13 +51,13 @@ ms.locfileid: "36042957"
 ## <a name="message-types"></a>Types de messages  
  Vous pouvez configurer les types de messages fournis par la tâche MSMQ des manières suivantes :  
   
--   `Data file` message indique qu’un fichier contient le message. Lors de la réception de messages, vous pouvez configurer la tâche de façon à enregistrer le fichier, remplacer un fichier existant et spécifier le package à partir duquel la tâche peut recevoir des messages.  
+-   `Data file` message Spécifie qu’un fichier contient le message. Lors de la réception de messages, vous pouvez configurer la tâche de façon à enregistrer le fichier, remplacer un fichier existant et spécifier le package à partir duquel la tâche peut recevoir des messages.  
   
 -   `String` message Spécifie le message sous forme de chaîne. Lors de la réception de messages, vous pouvez configurer la tâche de façon à comparer la chaîne reçue avec une chaîne définie par l'utilisateur et exécuter une action en fonction du résultat de la comparaison. La comparaison de chaînes peut être exacte, sensible ou non à la casse, ou utiliser une sous-chaîne.  
   
 -   `String message to variable` Spécifie le message source sous forme de chaîne qui est envoyé à une variable de destination. Vous pouvez configurer la tâche de façon à comparer la chaîne reçue avec une chaîne définie par l'utilisateur à l'aide d'une comparaison exacte, non sensible à la casse ou de sous-chaîne. Ce type de message est disponible uniquement lorsque la tâche reçoit des messages.  
   
--   `Variable` Spécifie que le message contienne une ou plusieurs variables. Vous pouvez configurer la tâche de façon à spécifier les noms des variables contenues dans le message. Lors de la réception de messages, vous pouvez configurer la tâche de façon à spécifier à la fois le package à partir duquel elle peut recevoir des messages et la variable qui est la destination du message.  
+-   `Variable` Spécifie que le message contient une ou plusieurs variables. Vous pouvez configurer la tâche de façon à spécifier les noms des variables contenues dans le message. Lors de la réception de messages, vous pouvez configurer la tâche de façon à spécifier à la fois le package à partir duquel elle peut recevoir des messages et la variable qui est la destination du message.  
   
 ## <a name="sending-messages"></a>sending messages  
  Lorsque vous configurez la tâche MSMQ pour envoyer des messages, vous pouvez utiliser l'un des algorithmes de chiffrement actuellement pris en charge par la technologie Message Queuing, RC2 et RC4, pour chiffrer le message. Ces deux algorithmes de chiffrement sont aujourd'hui considérés comme faibles d'un point de vue du chiffrement par rapport aux algorithmes plus récents, non encore pris en charge par la technologie Microsoft Message Queuing. Par conséquent, vous devez minutieusement évaluer vos besoins en matière de chiffrement si vous souhaitez envoyer des messages à l'aide de la tâche MSMQ.  
@@ -73,7 +73,7 @@ ms.locfileid: "36042957"
   
 -   Remplacement d'un fichier existant si le message est stocké dans un `Data file`.  
   
--   Enregistrer le fichier de message à un autre nom de fichier, si le message utilise le `Data file message` type.  
+-   Enregistrement du fichier de message dans un autre nom de fichier, si le message utilise le `Data file message` type.  
   
 ## <a name="custom-logging-messages-available-on-the-message-queue-task"></a>Messages de journalisation personnalisés disponibles dans la tâche MSMQ  
  Le tableau suivant répertorie les entrées de journal personnalisées de la tâche MSMQ. Pour plus d’informations, consultez [Journalisation d’Integration Services &#40;SSIS&#41;](../performance/integration-services-ssis-logging.md) et [Messages personnalisés pour la journalisation](../custom-messages-for-logging.md).  
@@ -94,7 +94,7 @@ ms.locfileid: "36042957"
   
 -   [Éditeur de tâche MSMQ &#40;Page Général&#41;](../general-page-of-integration-services-designers-options.md)  
   
--   [Éditeur de tâche MSMQ &#40;Page de réception&#41;](../message-queue-task-editor-receive-page.md)  
+-   [Éditeur de tâche MSMQ &#40;Page recevoir&#41;](../message-queue-task-editor-receive-page.md)  
   
 -   [Éditeur de tâche MSMQ &#40;envoyer la Page&#41;](../message-queue-task-editor-send-page.md)  
   

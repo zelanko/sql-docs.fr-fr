@@ -1,5 +1,5 @@
 ---
-title: Cet accès à un serveur de rapports (Gestionnaire de rapports) | Documents Microsoft
+title: Accordez à l’utilisateur l’accès à un serveur de rapports (Gestionnaire de rapports) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - removing role assignments
 - permissions [Reporting Services], granting report server access
@@ -19,13 +19,13 @@ ms.assetid: 2144c020-3253-4b47-8cda-e14c928bb471
 caps.latest.revision: 52
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: d3a3526e9c52dad5c595c9df9fb722abb5f5b288
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: b705997e16e2f41fb92ed7a5385a0907db09d99e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36153870"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37256141"
 ---
 # <a name="grant-user-access-to-a-report-server-report-manager"></a>Accorder à un utilisateur l'accès à un serveur de rapports (Gestionnaire de rapports)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] utilise la sécurité basée sur les rôles pour permettre à un utilisateur d’accéder à un serveur de rapports. Dans une nouvelle installation du serveur de rapports, seuls les utilisateurs membres du groupe Administrateurs local disposent d'autorisations relatives au contenu et au fonctionnement du serveur de rapports. Pour rendre le serveur de rapports accessible à d’autres utilisateurs, vous devez créer des attributions de rôles qui mappent des comptes d’utilisateurs ou de groupes à un rôle prédéfini spécifiant une collection de tâches.  
@@ -61,7 +61,7 @@ ms.locfileid: "36153870"
   
 4.  Cliquez sur **Nouvelle attribution de rôle**.  
   
-5.  Dans **nom d’utilisateur ou groupe**, entrez un utilisateur de domaine Windows ou de groupe dans ce format : \<domaine >\\< compte\>. Si vous utilisez l'authentification par formulaires ou la sécurité personnalisée, spécifiez le compte d'utilisateur ou de groupe en respectant le format approprié pour votre déploiement.  
+5.  Dans **nom d’utilisateur ou groupe**, entrez un utilisateur de domaine Windows ou le groupe compte au format suivant : \<domaine >\\< compte\>. Si vous utilisez l'authentification par formulaires ou la sécurité personnalisée, spécifiez le compte d'utilisateur ou de groupe en respectant le format approprié pour votre déploiement.  
   
 6.  Sélectionnez un rôle système, puis cliquez sur **OK**.  
   
@@ -82,7 +82,7 @@ ms.locfileid: "36153870"
     > [!NOTE]  
     >  Si un élément hérite actuellement de la sécurité de l’un de ses parents, cliquez sur **Modifier la sécurité de l’élément** dans la barre d’outils pour changer les paramètres de sécurité. Puis cliquez sur **Nouvelle attribution de rôle**.  
   
-5.  Dans **nom d’utilisateur ou groupe**, entrez un utilisateur de domaine Windows ou de groupe dans ce format : \<domaine >\\< compte\>. Si vous utilisez l'authentification par formulaires ou la sécurité personnalisée, spécifiez le compte d'utilisateur ou de groupe en respectant le format approprié pour votre déploiement.  
+5.  Dans **nom d’utilisateur ou groupe**, entrez un utilisateur de domaine Windows ou le groupe compte au format suivant : \<domaine >\\< compte\>. Si vous utilisez l'authentification par formulaires ou la sécurité personnalisée, spécifiez le compte d'utilisateur ou de groupe en respectant le format approprié pour votre déploiement.  
   
 6.  Sélectionnez une ou plusieurs définitions de rôles décrivant la façon dont l’utilisateur ou le groupe doit accéder à l’élément, puis cliquez sur **OK**.  
   
@@ -90,8 +90,8 @@ ms.locfileid: "36153870"
   
 ## <a name="see-also"></a>Voir aussi  
  (créer-et-gérer-rôle-assignments.md)   
- [Nouvelle attribution de rôle : Modifier la Page de l’attribution de rôle &#40;le Gestionnaire de rapports&#41;](../new-role-assignment-edit-role-assignment-page-report-manager.md)   
- [Page de propriétés de sécurité, les éléments &#40;le Gestionnaire de rapports&#41;](../security-properties-page-items-report-manager.md)   
+ [Nouvelle attribution de rôle : Modifier la Page d’attribution de rôle &#40;le Gestionnaire de rapports&#41;](../new-role-assignment-edit-role-assignment-page-report-manager.md)   
+ [Page de propriétés de sécurité, éléments &#40;le Gestionnaire de rapports&#41;](../security-properties-page-items-report-manager.md)   
  [Attributions de rôles](role-assignments.md)   
  [Définitions de rôles](role-definitions.md)  
   

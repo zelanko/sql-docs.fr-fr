@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.rtp.rptdesigner.chartareaproperties.3doptions.f1
 - "10256"
@@ -21,18 +21,18 @@ f1_keywords:
 - "10172"
 ms.assetid: d56d0521-362f-4361-843a-acf2c897a87c
 caps.latest.revision: 10
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: bd6084c7d426693abbaa29c60aa2c5ad0b0011ff
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 33e11e05c4678fbbde7c97175498f94e092ffe43
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36043772"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37280475"
 ---
 # <a name="charts-report-builder-and-ssrs"></a>Graphiques (Générateur de rapports et SSRS)
-  Lorsque vous souhaitez résumer des données sous un format visuel, utilisez la région de données de graphique. Les graphiques vous permettent de présenter d'un coup d'œil de grandes quantités d'informations de synthèse. Il est important de se préparer avec soin et de comprendre vos données avant de créer un graphique, car ceci vous aidera à concevoir vos graphiques rapidement et efficacement. Pour plus d’informations, consultez [Ajouter un graphique à un rapport &#40;Générateur de rapports et SSRS&#41;](add-a-chart-to-a-report-report-builder-and-ssrs.md). Pour commencer à utiliser immédiatement un graphique, consultez la barre, colonne, graphique sparkline et des didacticiels de graphique à secteurs dans [didacticiels &#40;le Générateur de rapports&#41; ](../report-builder-tutorials.md) ou la barre et les didacticiels de graphique à secteurs dans [didacticiels sur Reporting Services &#40;SSRS&#41;](../reporting-services-tutorials-ssrs.md).  
+  Lorsque vous souhaitez résumer des données sous un format visuel, utilisez la région de données de graphique. Les graphiques vous permettent de présenter d'un coup d'œil de grandes quantités d'informations de synthèse. Il est important de se préparer avec soin et de comprendre vos données avant de créer un graphique, car ceci vous aidera à concevoir vos graphiques rapidement et efficacement. Pour plus d’informations, consultez [Ajouter un graphique à un rapport &#40;Générateur de rapports et SSRS&#41;](add-a-chart-to-a-report-report-builder-and-ssrs.md). Pour commencer à utiliser immédiatement un graphique, consultez la barre de colonne, graphique sparkline et des didacticiels de graphique à secteurs dans [didacticiels &#40;Générateur de rapports&#41; ](../report-builder-tutorials.md) ou la barre et les didacticiels de graphique à secteurs dans [didacticiels sur Reporting Services &#40;SSRS&#41;](../reporting-services-tutorials-ssrs.md).  
   
  L'illustration suivante affiche un grand nombre des différents éléments utilisés dans le graphique.  
   
@@ -112,7 +112,7 @@ ms.locfileid: "36043772"
   
   
 ##  <a name="AggregateValues"></a> Agrégation des valeurs d'un champ de données sur le graphique  
- Par défaut, lorsqu'un champ est ajouté à la zone Valeurs du graphique, [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] calcule un agrégat pour ce champ. Si vous faites glisser un champ vers le graphique sans le déposer dans une zone spécifique, le graphique détermine si ce champ appartient à l'axe des abscisses (x) ou à l'axe des ordonnées (y) en fonction de son type de données. Les champs de type numérique qui sont déposés dans la zone Valeurs sont agrégés à l'aide de la fonction SUM. Si le type de données du champ de valeur est String dans la zone Valeurs, le graphique ne peut pas afficher de valeurs numériques même si les champs comportent des nombres et le graphique affiche la fonction COUNT. Pour éviter ce comportement, assurez-vous que les champs que vous utilisez sont des types de données numériques et non des chaînes qui contiennent des nombres mis en forme. Vous pouvez utiliser une expression Visual Basic pour convertir des valeurs de chaîne en un type de données numériques à l’aide de la `CDbl` ou `CInt` constante. Par exemple, l'expression complexe suivante convertit un champ nommé `MyField` qui contient des valeurs numériques mises en forme en tant que chaînes.  
+ Par défaut, lorsqu'un champ est ajouté à la zone Valeurs du graphique, [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] calcule un agrégat pour ce champ. Si vous faites glisser un champ vers le graphique sans le déposer dans une zone spécifique, le graphique détermine si ce champ appartient à l'axe des abscisses (x) ou à l'axe des ordonnées (y) en fonction de son type de données. Les champs de type numérique qui sont déposés dans la zone Valeurs sont agrégés à l'aide de la fonction SUM. Si le type de données du champ de valeur est String dans la zone Valeurs, le graphique ne peut pas afficher de valeurs numériques même si les champs comportent des nombres et le graphique affiche la fonction COUNT. Pour éviter ce comportement, assurez-vous que les champs que vous utilisez sont des types de données numériques et non des chaînes qui contiennent des nombres mis en forme. Vous pouvez utiliser une expression Visual Basic pour convertir des valeurs de chaîne à un type de données numériques à l’aide de la `CDbl` ou `CInt` constante. Par exemple, l'expression complexe suivante convertit un champ nommé `MyField` qui contient des valeurs numériques mises en forme en tant que chaînes.  
   
  `=Sum(CDbl(Fields!MyField.Value))`  
   
@@ -121,38 +121,38 @@ ms.locfileid: "36043772"
   
   
 ##  <a name="InThisSection"></a> Dans cette section  
- [Ajouter un graphique à un rapport &#40;rapport Générateur et SSRS&#41;](add-a-chart-to-a-report-report-builder-and-ssrs.md)  
+ [Ajouter un graphique à un rapport &#40;Générateur de rapports et SSRS&#41;](add-a-chart-to-a-report-report-builder-and-ssrs.md)  
  Décrit les premières étapes de l'ajout d'un graphique à votre rapport.  
   
- [Types de graphiques &#40;rapport Générateur et SSRS&#41;](chart-types-report-builder-and-ssrs.md)  
+ [Types de graphiques &#40;Générateur de rapports et SSRS&#41;](chart-types-report-builder-and-ssrs.md)  
  Décrit tous les types et sous-types de graphiques disponibles dans [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)], avec notamment les points à prendre en considération et les bonnes pratiques pour utiliser les différents types de graphiques.  
   
- [Mise en forme d’un graphique &#40;rapport Générateur et SSRS&#41;](formatting-a-chart-report-builder-and-ssrs.md)  
+ [Mise en forme d’un graphique &#40;Générateur de rapports et SSRS&#41;](formatting-a-chart-report-builder-and-ssrs.md)  
  Utilise la mise en forme pour améliorer l'apparence globale et met en évidence les principaux points de données de votre graphique.  
   
- [Les Points de données dans les graphiques vides et Null &#40;rapport Générateur et SSRS&#41;](charts-report-builder-and-ssrs.md)  
+ [Les Points de données dans les graphiques vides et Null &#40;Générateur de rapports et SSRS&#41;](charts-report-builder-and-ssrs.md)  
  Décrit les éléments à prendre en compte lors de l'utilisation de graphiques basés sur des champs avec des valeurs vides ou Null.  
   
- [Affichage d’une série avec plusieurs plages de données sur un graphique &#40;rapport Générateur et SSRS&#41;](displaying-a-series-with-multiple-data-ranges-on-a-chart.md)  
+ [Affichage d’une série avec plusieurs plages de données sur un graphique &#40;Générateur de rapports et SSRS&#41;](displaying-a-series-with-multiple-data-ranges-on-a-chart.md)  
  Explique comment ajouter des séparateurs d'échelle à une série qui contient plusieurs plages de données.  
   
- [Plusieurs séries sur un graphique &#40;rapport Générateur et SSRS&#41;](multiple-series-on-a-chart-report-builder-and-ssrs.md)  
+ [Plusieurs séries sur un graphique &#40;Générateur de rapports et SSRS&#41;](multiple-series-on-a-chart-report-builder-and-ssrs.md)  
  Décrit différentes méthodes permettant d'afficher plusieurs séries dans un même graphique, parmi lesquelles l'association de types de graphiques, l'utilisation de l'axe secondaire, la spécification de différents types de graphiques et le recours à plusieurs zones de graphique.  
   
- [Liaison de plusieurs régions de données à un même Dataset &#40;rapport Générateur et SSRS&#41;](linking-multiple-data-regions-to-the-same-dataset-report-builder-and-ssrs.md)  
+ [Liaison de plusieurs régions de données à un même Dataset &#40;Générateur de rapports et SSRS&#41;](linking-multiple-data-regions-to-the-same-dataset-report-builder-and-ssrs.md)  
  Fournit différentes vues des données à partir du même dataset du rapport.  
   
- [Ajouter ou supprimer un groupe dans un graphique &#40;rapport Générateur et SSRS&#41;](add-or-delete-a-group-in-a-chart-report-builder-and-ssrs.md)  
+ [Ajouter ou supprimer un groupe dans un graphique &#40;Générateur de rapports et SSRS&#41;](add-or-delete-a-group-in-a-chart-report-builder-and-ssrs.md)  
  Décrit l'ajout de groupes et de groupes imbriqués à un graphique.  
   
- [Ajouter une moyenne mobile à un graphique &#40;rapport Générateur et SSRS&#41;](add-a-moving-average-to-a-chart-report-builder-and-ssrs.md)  
+ [Ajouter une moyenne mobile à un graphique &#40;Générateur de rapports et SSRS&#41;](add-a-moving-average-to-a-chart-report-builder-and-ssrs.md)  
  Décrit l'utilisation de la formule Moyenne mobile pour calculer la moyenne des données dans votre série.  
   
- [Résoudre les problèmes graphiques &#40;rapport Générateur et SSRS&#41;](troubleshoot-charts-report-builder-and-ssrs.md)  
+ [Résoudre les problèmes graphiques &#40;Générateur de rapports et SSRS&#41;](troubleshoot-charts-report-builder-and-ssrs.md)  
  Décrit des conseils d'utilisation de graphiques.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Images, zones de texte, Rectangles et lignes &#40;rapport Générateur et SSRS&#41;](rectangles-and-lines-report-builder-and-ssrs.md)   
+ [Images, zones de texte, Rectangles et lignes &#40;Générateur de rapports et SSRS&#41;](rectangles-and-lines-report-builder-and-ssrs.md)   
  [Tri interactif, Explorateurs de documents et liens &#40;Générateur de rapports et SSRS&#41;](interactive-sort-document-maps-and-links-report-builder-and-ssrs.md)   
  [Régions de données imbriquées &#40;Générateur de rapports et SSRS&#41;](nested-data-regions-report-builder-and-ssrs.md)   
  [Didacticiel : ajouter un histogramme à un rapport &#40;Générateur de rapports&#41;](../tutorial-add-a-column-chart-to-your-report-report-builder.md)   

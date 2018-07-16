@@ -1,5 +1,5 @@
 ---
-title: Élément DbTableName (XMLA) | Documents Microsoft
+title: Élément DbTableName (XMLA) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -24,15 +24,15 @@ helpviewer_keywords:
 - DbTableName element
 ms.assetid: 0ffda645-2a88-4f42-8929-9d7385c19a74
 caps.latest.revision: 11
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: d45f49175336cb6df34f528529c00a5ae8d20633
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: d2abdf2486b1d501dbec3a0f84073ffaa896958b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36042083"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37287925"
 ---
 # <a name="dbtablename-element-xmla"></a>Élément DbTableName (XMLA)
   Contient le nom de la table utilisée par le parent [TableNotification](tablenotification-element-xmla.md) élément.  

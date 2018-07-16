@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server data processing extension [Reporting Services]
 - XML data processing extension [Reporting Services]
@@ -21,15 +21,15 @@ helpviewer_keywords:
 - Reporting Services, data sources
 ms.assetid: 9d11d055-a3be-45aa-99a7-46447a94ed42
 caps.latest.revision: 92
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 4a2b38ef67782fdc1718c065f264c01e2878eebb
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: 41c5bf1d39603f1fb0de8dfe6133258f312eab02
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36043104"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37266295"
 ---
 # <a name="data-sources-supported-by-reporting-services-ssrs"></a>Sources de données prises en charge par Reporting Services (SSRS)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] récupère des données de rapport dans des sources de données par l’intermédiaire d’une couche de données extensibles et modulaire qui utilise des extensions pour le traitement des données. Pour récupérer des données de rapport à partir d’une source de données, vous devez sélectionner une extension pour le traitement des données qui prend en charge le type de source de données, la version du logiciel s’exécutant sur la source de données ainsi que la plateforme de la source de données ( [!INCLUDE[vcprx64](../../includes/vcprx64-md.md)]32 bits ou 64 bits).  
@@ -112,7 +112,7 @@ ms.locfileid: "36043104"
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] base de données relationnelle|[Microsoft SQL Server](#MicrosoftSQLServer)|Extension pour le traitement des données [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] intégrée|Étend System.Data.SqlClient|O|O|[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] et versions ultérieures.|O|O|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] base de données relationnelle|[OLEDB](#OLEDBSQL)|Extension pour le traitement des données [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] intégrée|Étend System.Data.OledbClient|O|O|[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] et versions ultérieures.|O|O|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] base de données relationnelle|[ODBC](#ODBC)|Extension pour le traitement des données [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] intégrée|Étend System.Data.OdbcClient|O|O|[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] et versions ultérieures.|O|O|  
-|[!INCLUDE[ssSDS](../../includes/sssds-md.md)]|[Windows Azure SQL Database](#Azure)|Extension pour le traitement des données [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] intégrée|Étend System.Data.SqlClient|Néant|Néant|[!INCLUDE[ssSDS](../../includes/sssds-md.md)]|O|O|  
+|[!INCLUDE[ssSDS](../../includes/sssds-md.md)]|[Microsoft Azure SQL Database](#Azure)|Extension pour le traitement des données [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] intégrée|Étend System.Data.SqlClient|Néant|Néant|[!INCLUDE[ssSDS](../../includes/sssds-md.md)]|O|O|  
 |[!INCLUDE[ssDW](../../includes/ssdw-md.md)] Appliance|[Microsoft Parallel Data Warehouse](#PWD)|Extension pour le traitement des données [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] intégrée|Néant|Néant|Néant|[!INCLUDE[ssDWfull](../../includes/ssdwfull-md.md)]|O|O|  
 |[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Base de données multidimensionnelle|[Microsoft SQL Server Analysis Services](#AnalysisServices)|Extension pour le traitement des données [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] intégrée|Utilise ADOMD.NET|O|O|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] et versions ultérieures<br /><br /> [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] et versions ultérieures|O|O|  
 |[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Base de données multidimensionnelle|[OLEDB](#OLEDBAS9)|Extension pour le traitement des données [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] intégrée|Étend System.Data.OledbClient<br /><br /> Version 10.0|O|O|[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]|O|O|  
@@ -164,7 +164,7 @@ ms.locfileid: "36043104"
   
  Dans [!INCLUDE[ss_dtbi](../../includes/ss-dtbi-md.md)], le concepteur de requêtes graphique associé à cette extension de données est [l’interface utilisateur du Concepteur de requêtes relationnelles](../relational-query-designer-user-interface.md), pas le [Concepteur Visual Database Tools](../../ssms/visual-db-tools/visual-database-tool-designers.md) que vous utilisez avec le type de source de données **Microsoft SQL Server**.  
   
- [!INCLUDE[ss_dtbi](../../includes/ss-dtbi-md.md)] différencie automatiquement **[!INCLUDE[ssSDS](../../includes/sssds-md.md)]** et **Microsoft SQL Server** les types de source de données et ouvre le Concepteur de requêtes graphique associé au type de source de données.  
+ [!INCLUDE[ss_dtbi](../../includes/ss-dtbi-md.md)] différencie automatiquement ** [!INCLUDE[ssSDS](../../includes/sssds-md.md)] ** et **Microsoft SQL Server** types de source de données et ouvre le Concepteur de requêtes graphique associé au type de source de données.  
   
  Si vous utilisez le concepteur de requêtes en mode graphique, la requête est analysée, voire réécrite. Un concepteur de requêtes textuel est également disponible pour l'écriture de requêtes. Utilisez le concepteur de requêtes textuel pour contrôler la syntaxe [!INCLUDE[tsql](../../includes/tsql-md.md)] exacte utilisée pour une requête. Pour plus d’informations, consultez [Interface utilisateur du Concepteur de requêtes textuel](../text-based-query-designer-user-interface.md).  
   
@@ -175,7 +175,7 @@ ms.locfileid: "36043104"
 ###  <a name="PWD"></a> Extension pour le traitement des données Microsoft SQL Server Parallel Data Warehouse  
  Dans [!INCLUDE[ss_dtbi](../../includes/ss-dtbi-md.md)], le concepteur de requêtes graphique associé à cette extension de données est [l’interface utilisateur du Concepteur de requêtes relationnelles](../relational-query-designer-user-interface.md), pas le [Concepteur Visual Database Tools](../../ssms/visual-db-tools/visual-database-tool-designers.md) que vous utilisez avec le type de source de données **Microsoft SQL Server**.  
   
- [!INCLUDE[ss_dtbi](../../includes/ss-dtbi-md.md)] différencie automatiquement **SQL Server Parallel Data Warehouse** et **Microsoft SQL Server** les types de source de données et ouvre le Concepteur de requêtes graphique associé au type de source de données.  
+ [!INCLUDE[ss_dtbi](../../includes/ss-dtbi-md.md)] différencie automatiquement **SQL Server Parallel Data Warehouse** et **Microsoft SQL Server** types de source de données et ouvre le Concepteur de requêtes graphique associé au type de source de données.  
   
  Si vous utilisez le concepteur de requêtes en mode graphique, la requête est analysée, voire réécrite. Un concepteur de requêtes textuel est également disponible pour l'écriture de requêtes. Utilisez le concepteur de requêtes textuel pour contrôler la syntaxe [!INCLUDE[tsql](../../includes/tsql-md.md)] exacte utilisée pour une requête. Pour plus d’informations, consultez [Interface utilisateur du Concepteur de requêtes textuel](../text-based-query-designer-user-interface.md).  
   
@@ -255,7 +255,7 @@ ms.locfileid: "36043104"
  [Retourner à la table des sources de données](#DataSourcesTable)  
   
 ###  <a name="OracleClient"></a> Extension pour le traitement des données Oracle  
- Quand vous sélectionnez un type de source de données **Oracle**, vous sélectionnez une extension pour le traitement des données [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] qui étend le fournisseur de données [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] pour Oracle. Le **Oracle** source de données inclut et étend la <xref:System.Data.OracleClient> classes requises par [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Pour extraire des données de rapport dans une base de données Oracle, votre administrateur doit installer les outils clients Oracle. Ce fournisseur de données fait appel à l'interface OCI (Oracle Call Interface) d'Oracle 8i version 3 fournie par le logiciel client Oracle. La version de l'application cliente doit être 8.1.7 ou une version ultérieure. Ces outils doivent être installés sur le client de création de rapport pour obtenir un aperçu des rapports et sur le serveur de rapports pour afficher les rapports publiés.  
+ Quand vous sélectionnez un type de source de données **Oracle**, vous sélectionnez une extension pour le traitement des données [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] qui étend le fournisseur de données [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] pour Oracle. Le **Oracle** source de données inclut et étend le <xref:System.Data.OracleClient> classes requises par [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Pour extraire des données de rapport dans une base de données Oracle, votre administrateur doit installer les outils clients Oracle. Ce fournisseur de données fait appel à l'interface OCI (Oracle Call Interface) d'Oracle 8i version 3 fournie par le logiciel client Oracle. La version de l'application cliente doit être 8.1.7 ou une version ultérieure. Ces outils doivent être installés sur le client de création de rapport pour obtenir un aperçu des rapports et sur le serveur de rapports pour afficher les rapports publiés.  
   
  Les paramètres nommés sont pris en charge par cette extension. Pour Oracle version 9 ou une version ultérieure, les paramètres à valeurs multiples sont pris en charge. Pour les paramètres sans nom et qui dépendent de la position, utilisez l’extension pour le traitement des données OLE DB avec le fournisseur de données [!INCLUDE[msCoName](../../includes/msconame-md.md)] OLE DB pour Oracle. Pour plus d’informations sur la configuration d’Oracle comme source de données, consultez [Comment utiliser Reporting Services pour configurer une source de données Oracle et y accéder](http://support.microsoft.com/kb/834305). Pour plus d’informations sur la configuration d’autorisations supplémentaires, consultez [How to add permissions for the NETWORK SERVICE security principal](http://support.microsoft.com/kb/870668) (Comment ajouter des autorisations pour le principal de sécurité SERVICE RÉSEAU) dans la Base de connaissances [!INCLUDE[msCoName](../../includes/msconame-md.md)] .  
   
@@ -321,7 +321,7 @@ ms.locfileid: "36043104"
   
  [Retourner à la table des sources de données](#DataSourcesTable)  
   
-###  <a name="SapBINetWeaver"></a> Extension pour le traitement des données SAP NetWeaver Business Intelligence  
+###  <a name="SapBINetWeaver"></a> Extension de traitement des données SAP NetWeaver Business Intelligence  
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] inclut une extension pour le traitement des données qui vous permet d'utiliser des données provenant d'une source de données [!INCLUDE[SAP_DPE_BW_1](../../includes/sap-dpe-bw-1-md.md)] dans un rapport.  
   
  Pour plus d’informations, consultez [Type de connexion SAP NetWeaver BI &#40;SSRS&#41;](sap-netweaver-bi-connection-type-ssrs.md). Pour plus d’informations sur le concepteur de requêtes associé, consultez [Interface utilisateur du Concepteur de requêtes SAP NetWeaver BI](sap-netweaver-bi-query-designer-user-interface.md).  
@@ -340,7 +340,7 @@ ms.locfileid: "36043104"
  [Retourner à la table des sources de données](#DataSourcesTable)  
   
 ## <a name="see-also"></a>Voir aussi  
- [Connexions de données, les Sources de données et les chaînes de connexion dans Reporting Services](../data-connections-data-sources-and-connection-strings-in-reporting-services.md)   
- [Ajouter des données à un rapport &#40;rapport Générateur et SSRS&#41;](report-datasets-ssrs.md)  
+ [Connexions de données, Sources de données et chaînes de connexion dans Reporting Services](../data-connections-data-sources-and-connection-strings-in-reporting-services.md)   
+ [Ajouter des données à un rapport &#40;Générateur de rapports et SSRS&#41;](report-datasets-ssrs.md)  
   
   

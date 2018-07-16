@@ -5,10 +5,9 @@ ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.availabilitygroup.newaglistener.general.f1
 helpviewer_keywords:
@@ -16,15 +15,15 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], client connectivity
 ms.assetid: 2bc294f6-2312-4b6b-9478-2fb8a656e645
 caps.latest.revision: 50
-author: rothja
-ms.author: jroth
-manager: jhubbard
-ms.openlocfilehash: 2594ecdb53df53413f3851203ae110c1de754dd5
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: ae14ea283a7558b854481f435d6c9a62e5b51e52
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36043221"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37225899"
 ---
 # <a name="create-or-configure-an-availability-group-listener-sql-server"></a>Créer ou configurer un écouteur de groupe de disponibilité (SQL Server)
   Cette rubrique explique comment créer ou configurer un *écouteur de groupe de disponibilité* unique pour un groupe de disponibilité AlwaysOn à l'aide de [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], de [!INCLUDE[tsql](../../../includes/tsql-md.md)]ou de PowerShell dans [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)].  
@@ -164,7 +163,7 @@ ms.locfileid: "36043221"
      `New-SqlAvailabilityGroupListener`  
      Crée un écouteur de groupe de disponibilité et l'attache à un groupe de disponibilité existant.  
   
-     Par exemple, `New-SqlAvailabilityGroupListener` commande crée un écouteur de groupe de disponibilité nommé `MyListener` pour le groupe de disponibilité `MyAg`. Cet écouteur utilise l’adresse IPv4 passée à la `-StaticIp` paramètre en tant que son adresse IP virtuelle.  
+     Par exemple, ce qui suit `New-SqlAvailabilityGroupListener` commande crée un écouteur de groupe de disponibilité nommé `MyListener` pour le groupe de disponibilité `MyAg`. Cet écouteur utilise l’adresse IPv4 passée au `-StaticIp` paramètre en tant que son adresse IP virtuelle.  
   
     ```  
     New-SqlAvailabilityGroupListener -Name MyListener `   
@@ -209,7 +208,7 @@ ms.locfileid: "36043221"
   
 -   [Lien hypertexte «http://support.microsoft.com/kb/307532« comment faire pour dépanner le compte de Service de Cluster lorsqu’il modifie des objets ordinateur](http://support.microsoft.com/kb/307532)  
   
--   [Lien hypertexte «http://technet.microsoft.com/library/cc904295(WS.10).aspx» Quotas Active Directory](http://technet.microsoft.com/library/cc904295\(WS.10\).aspx)  
+-   [Lien hypertexte «http://technet.microsoft.com/library/cc904295(WS.10).aspx« Quotas Active Directory](http://technet.microsoft.com/library/cc904295\(WS.10\).aspx)  
   
 ##  <a name="FollowUp"></a> Suivi : après avoir créé un écouteur de groupe de disponibilité  
   
@@ -242,7 +241,7 @@ ms.locfileid: "36043221"
   
      **Avantage** : vous n’avez pas besoin d’augmenter la valeur du délai de connexion cliente.  
   
-     **Inconvénient :** en cas de basculement entre sous-réseaux, le temps de récupération du client peut être de 15 minutes ou plus, en fonction de vos `HostRecordTTL` et le paramètre de votre planification de la réplication DNS/AD entre sites.  
+     **Inconvénient :** en cas de basculement entre sous-réseaux, le temps de récupération du client peut être de 15 minutes ou plus, en fonction de votre `HostRecordTTL` et le paramètre de votre planification de réplication DNS/AD entre sites.  
   
 ###  <a name="RegisterAllProvidersIP"></a> Paramètre RegisterAllProvidersIP  
  Lorsque vous utilisez [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)], ou PowerShell pour créer un écouteur de groupe de disponibilité, le Point d’accès Client est créé dans WSFC avec le `RegisterAllProvidersIP` propriété définie sur 1 (true). L'effet de cette valeur de propriété dépend de la chaîne de connexion du client, comme suit :  
@@ -331,7 +330,7 @@ Start-ClusterResource yourAGResource
   
 -   [Créer plusieurs écouteurs pour le même groupe de disponibilité](http://blogs.msdn.com/b/sqlalwayson/archive/2012/02/03/how-to-create-multiple-listeners-for-same-availability-group-goden-yao.aspx)  
   
--   [Blog d’équipe AlwaysOn SQL Server : Blog officiel de SQL Server AlwaysOn team](http://blogs.msdn.com/b/sqlalwayson/)  
+-   [Blog de l’équipe AlwaysOn SQL Server : Blog officiel de SQL Server AlwaysOn team](http://blogs.msdn.com/b/sqlalwayson/)  
   
 ## <a name="see-also"></a>Voir aussi  
  [Vue d’ensemble des groupes de disponibilité AlwaysOn &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   

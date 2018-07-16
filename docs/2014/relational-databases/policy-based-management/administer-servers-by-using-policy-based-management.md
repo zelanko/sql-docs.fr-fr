@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - facet See facets
 - Declarative Management Framework See Policy-Based Management
@@ -21,15 +21,15 @@ helpviewer_keywords:
 - PolicyAdministratorRole role
 ms.assetid: ef2a7b3b-614b-405d-a04a-2464a019df40
 caps.latest.revision: 75
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 559e04757ce185e301f1027a123e203259db651b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 85dce54590cfb35286b6939ae9bffdc91f367fbe
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36154447"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37264455"
 ---
 # <a name="administer-servers-by-using-policy-based-management"></a>Administrer des serveurs à l'aide de la Gestion basée sur des stratégies
   La Gestion basée sur des stratégies est un système permettant de gérer une ou plusieurs instances de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Lorsque les administrateurs de stratégie [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilisent la Gestion basée sur des stratégies, ils utilisent [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] pour créer des stratégies afin de gérer des entités sur le serveur, telles que l'instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], les bases de données ou les autres objets [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -133,7 +133,7 @@ ms.locfileid: "36154447"
 |Décrit comment vérifier qu'une instance de serveur, une base de données, un objet serveur ou un objet de base de données est conforme à une stratégie.|[Évaluer une stratégie de gestion basée sur des stratégies à partir d’un objet](evaluate-a-policy-based-management-policy-from-an-object.md)<br /><br /> [Évaluer une stratégie de gestion basée sur des stratégies pour cette stratégie](evaluate-a-policy-based-management-policy-from-that-policy.md)<br /><br /> [Évaluer une stratégie de gestion basée sur des stratégies sur une planification](evaluate-a-policy-based-management-policy-on-a-schedule.md)|  
 |Décrit comment afficher et copier un état de facette de la Gestion basée sur des stratégies vers un fichier.|[Utilisation des facettes de la gestion basée sur des stratégies](working-with-policy-based-management-facets.md)|  
 |Propose un ensemble de fichiers de stratégie que vous pouvez importer en tant que stratégies de meilleures pratiques et décrit comment évaluer ces stratégies par rapport à un jeu de cibles qui inclut des instances, des objets d'instance, des bases de données ou des objets de base de données.|[Contrôler et appliquer les bonnes pratiques à l’aide de la gestion basée sur des stratégies](monitor-and-enforce-best-practices-by-using-policy-based-management.md)|  
-|Fournit les rubriques d’aide, accessibles via la touche F1, relatives au nœud **Gestion de la stratégie** de l’Explorateur d’objets dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].|[Nœud de gestion de stratégie de &#40;l’Explorateur d’objets&#41;](../../ssms/object/object-explorer.md)|  
+|Fournit les rubriques d’aide, accessibles via la touche F1, relatives au nœud **Gestion de la stratégie** de l’Explorateur d’objets dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].|[Nœud de gestion de stratégie &#40;Explorateur d’objets&#41;](../../ssms/object/object-explorer.md)|  
   
 ## <a name="see-also"></a>Voir aussi  
  [Vues de la Gestion basée sur des stratégies &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/policy-based-management-views-transact-sql)  

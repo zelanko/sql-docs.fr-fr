@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - data collection [SQL Server]
 - security [data collector]
 - data collector [SQL Server], security
 ms.assetid: e75d6975-641e-440a-a642-cb39a583359a
 caps.latest.revision: 31
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 1864b580a681cb3c9e7fca612140f21548d2c96a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: df296ef140f92e8a035e85d3123b0f1426e6288a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36041826"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37235279"
 ---
 # <a name="data-collector-security"></a>Sécurité du collecteur de données
   Le collecteur de données utilise le modèle de sécurité basée sur les rôles implémenté par l'Agent [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Ce modèle permet à l'administrateur de base de données d'exécuter les différentes tâches du collecteur de données dans un contexte de sécurité qui ne dispose que des autorisations requises pour effectuer ces tâches. Cette méthode est également utilisée pour les opérations qui impliquent des tables internes, uniquement accessibles à l'aide d'une procédure stockée ou d'une vue. Aucune autorisation n'est accordée aux tables internes. En revanche, il est procédé à une vérification des autorisations de l'utilisateur de la procédure stockée ou de la vue utilisée pour accéder à une table.  
@@ -52,13 +52,13 @@ ms.locfileid: "36041826"
   
  Ces rôles sont stockés dans la base de données msdb. Par défaut, aucun utilisateur n'est membre de ces rôles de base de données. L'appartenance d'un utilisateur à ces rôles doit être accordée explicitement.  
   
- Les utilisateurs qui sont membres de la `sysadmin` rôle serveur fixe ont un accès complet à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] vues du collecteur de données et les objets de l’Agent. Ils doivent toutefois être ajoutés explicitement aux rôles de collecteur de données.  
+ Les utilisateurs qui sont membres de la `sysadmin` rôle serveur fixe ont un accès complet à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] vues du collecteur de données et les objets Agent. Ils doivent toutefois être ajoutés explicitement aux rôles de collecteur de données.  
   
 > [!IMPORTANT]  
 >  Les membres du rôle db_ssisadmin et du rôle dc_admin peuvent être en mesure d'élever leurs privilèges à sysadmin. Cette élévation de privilège peut se produire, car ces rôles peuvent modifier les packages [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] et les packages [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] peuvent être exécutés par [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] à l’aide du contexte de sécurité sysadmin de l’Agent [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Pour vous prémunir contre cette élévation de privilège lors de l'exécution de plans de maintenance, de jeux d'éléments de collecte de données et d'autres packages [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , configurez des travaux de l'Agent [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] qui exécutent des packages pour l'utilisation d'un compte proxy doté de privilèges limités ou ajoutez uniquement des membres sysadmin aux rôles db_ssisadmin et dc_admin.  
   
 ### <a name="dcadmin-role"></a>Rôle dc_admin  
- Les utilisateurs affectés à la `dc_admin` rôle ont un accès administrateur complet (création, lecture, mise à jour et suppression) à la configuration du collecteur de données sur une instance de serveur. Les membres de ce rôle peuvent effectuer les opérations suivantes :  
+ Les utilisateurs affectés à la `dc_admin` rôle ont un accès administrateur complet (Create, Read, Update et Delete) à la configuration du collecteur de données sur une instance de serveur. Les membres de ce rôle peuvent effectuer les opérations suivantes :  
   
 -   définir des propriétés au niveau du collecteur ;  
   
@@ -73,7 +73,7 @@ ms.locfileid: "36041826"
 -   **SQLAgentUserRole**. Ce rôle est requis pour créer des planifications et exécuter des travaux.  
   
     > [!NOTE]  
-    >  Les proxys créés pour le collecteur de données doit accorder l’accès à `dc_admin` pour les créer et les utiliser dans toutes les étapes de travail nécessitant un proxy.  
+    >  Les proxys créés pour le collecteur de données doit accorder l’accès à `dc_admin` pour les créer et de les utiliser dans des étapes de travail nécessitant un proxy.  
   
 -   **dc_operator**. Membres de `dc_admin` héritent des autorisations accordées à **dc_operator**.  
   
@@ -138,7 +138,7 @@ ms.locfileid: "36041826"
 -   modifier le schéma de l'entrepôt de données de gestion lorsque cela est nécessaire (par exemple, ajouter une table lorsqu'un nouveau type de collecte est installé) ;  
   
     > [!NOTE]  
-    >  S’il existe une modification de schéma, l’utilisateur doit être également un membre de la `dc_admin` rôle pour installer un nouveau type de collecteur, car cette action requiert l’autorisation pour mettre à jour la configuration du collecteur de données dans msdb.  
+    >  Lorsqu’il existe une modification de schéma, l’utilisateur doit également être un membre de la `dc_admin` rôle pour installer un nouveau type de collecteur, car cette action requiert l’autorisation pour mettre à jour la configuration du collecteur de données dans msdb.  
   
 -   exécuter des travaux de maintenance sur l'entrepôt de données de gestion, tels que l'archivage ou le nettoyage.  
   

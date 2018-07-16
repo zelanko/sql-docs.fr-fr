@@ -5,10 +5,9 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-backup-restore
+ms.technology: backup-restore
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - restoring [SQL Server], log backups
 - transaction log backups [SQL Server], applying backups
@@ -17,15 +16,15 @@ helpviewer_keywords:
 - backups [SQL Server], log backups
 ms.assetid: 9b12be51-5469-46f9-8e86-e938e10aa3a1
 caps.latest.revision: 36
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: ab3a27eea48c0d34d2cf994c29fff99f91f3ef37
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 287fbe416b7e0b824f9a6287b85e8dcb7aa17aa3
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36041400"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37289115"
 ---
 # <a name="apply-transaction-log-backups-sql-server"></a>Appliquer les sauvegardes du journal de transactions (SQL Server)
   Cette rubrique concerne uniquement le mode de récupération complète ou le mode de récupération utilisant les journaux de transactions.  
@@ -34,7 +33,7 @@ ms.locfileid: "36041400"
   
  **Dans cette rubrique :**  
   
--   [Configuration requise pour la restauration des sauvegardes de journaux de transactions](#Requirements)  
+-   [Configuration requise pour restaurer les sauvegardes de journaux de Transaction](#Requirements)  
   
 -   [Récupération et journaux de transactions](#RecoveryAndTlogs)  
   
@@ -42,7 +41,7 @@ ms.locfileid: "36041400"
   
 -   [Tâches associées](#RelatedTasks)  
   
-##  <a name="Requirements"></a> Configuration requise pour la restauration des sauvegardes de journaux de transactions  
+##  <a name="Requirements"></a> Configuration requise pour restaurer les sauvegardes de journaux de Transaction  
  Pour appliquer une sauvegarde du journal des transactions, les conditions suivantes doivent être remplies :  
   
 -   **Sauvegardes de journal en nombre suffisant pour une séquence de restauration** Vous devez disposer de suffisamment d'enregistrements de journal sauvegardés pour exécuter une séquence de restauration. Les sauvegardes de journal nécessaires, notamment la [sauvegarde de la fin du journal](tail-log-backups-sql-server.md) le cas échéant, doivent être disponibles avant le début de la séquence de restauration.  

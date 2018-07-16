@@ -1,5 +1,5 @@
 ---
-title: Type de données AttributeTranslation (ASSL) | Documents Microsoft
+title: Type de données AttributeTranslation (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - AttributeTranslation data type
 ms.assetid: a0e29941-ef08-42ad-ab9c-b2efd7910895
 caps.latest.revision: 40
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 9e7f5fe2157b407cae3909666329537f85a8b7e9
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 05e846e1cdec16388a96f7e0043aa5b0d49235be
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36043457"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37267655"
 ---
 # <a name="attributetranslation-data-type-assl"></a>Type de données AttributeTranslation (ASSL)
   Définit un type de données dérivé représentant une traduction associée une [attribut](../objects/attribute-element-assl.md) élément  
@@ -65,6 +65,6 @@ ms.locfileid: "36043457"
  L’élément correspondant dans le modèle d’objet objets AMO (Analysis Management) est <xref:Microsoft.AnalysisServices.AttributeTranslation>.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Types de données de script langage XML Analysis Services &#40;ASSL&#41;](analysis-services-scripting-language-xml-data-types-assl.md)  
+ [Types Analysis Services Scripting Language XML données &#40;ASSL&#41;](analysis-services-scripting-language-xml-data-types-assl.md)  
   
   

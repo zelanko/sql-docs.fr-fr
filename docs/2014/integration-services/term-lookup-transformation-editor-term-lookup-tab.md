@@ -1,5 +1,5 @@
 ---
-title: Éditeur de Transformation de recherche de terme (onglet recherche de terme) | Documents Microsoft
+title: Éditeur de Transformation de recherche de terme (onglet recherche de terme) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.termlookup.termlookup.f1
 helpviewer_keywords:
 - Term Lookup Transformation Editor
 ms.assetid: 245d3466-d51f-4073-978a-694a8d9dfaec
 caps.latest.revision: 25
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 0f00dba7a6b5c634c284161cd8c0af3e0e471375
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: b5d09acf4a96b0380e9c6c587044bf9d5bede55c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36044243"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37227729"
 ---
 # <a name="term-lookup-transformation-editor-term-lookup-tab"></a>Éditeur de transformation de recherche de terme (onglet Recherche de terme)
   L'onglet **Recherche de terme** de la boîte de dialogue **Éditeur de transformation de recherche de terme** permet de mapper une colonne d'entrée à une colonne de recherche dans une table de référence et de fournir un alias pour chaque colonne de sortie.  
@@ -43,12 +43,12 @@ ms.locfileid: "36044243"
  **Alias de colonne de sortie**  
  Permet de saisir un alias pour chaque colonne de sortie. La valeur par défaut correspond au nom de la colonne. Cependant, vous pouvez choisir un nom unique descriptif.  
   
- **Configurer la sortie d'erreur**  
+ **Configurer la sortie d’erreur**  
  Utilisez la boîte de dialogue [Configurer l’affichage des erreurs](../../2014/integration-services/configure-error-output.md) pour spécifier les options de gestion des erreurs dans les lignes qui provoquent des erreurs.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Integration Services Error and Message Reference](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Éditeur de Transformation de recherche de terme &#40;onglet de la Table de référence&#41;](../../2014/integration-services/term-lookup-transformation-editor-reference-table-tab.md)   
+ [Éditeur de Transformation de recherche de terme &#40;onglet Table de référence&#41;](../../2014/integration-services/term-lookup-transformation-editor-reference-table-tab.md)   
  [Éditeur de Transformation de recherche de terme &#40;onglet Avancé&#41;](../../2014/integration-services/term-lookup-transformation-editor-advanced-tab.md)   
  [Transformation d'extraction de terme](data-flow/transformations/term-extraction-transformation.md)  
   

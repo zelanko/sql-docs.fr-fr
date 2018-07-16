@@ -1,5 +1,5 @@
 ---
-title: Élément Restore (XMLA) | Documents Microsoft
+title: Élément Restore (XMLA) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -24,15 +24,15 @@ helpviewer_keywords:
 - Restore command
 ms.assetid: bb5a0c92-3927-4fa4-975b-6e4d79e0a912
 caps.latest.revision: 26
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: 0e8eca537c61be64de403b4ad08bb0e64040937c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: 682806680604606d54c133617b2150b975cf8c03
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36153322"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37275655"
 ---
 # <a name="restore-element-xmla"></a>Élément Restore (XMLA)
   Restaure un [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] base de données à partir d’un fichier de sauvegarde.  
@@ -71,9 +71,9 @@ ms.locfileid: "36153322"
 |Éléments enfants|[AllowOverwrite](../xml-elements-properties/allowoverwrite-element-xmla.md), [DatabaseName](../xml-elements-properties/name-element-xmla.md), [DatabaseID](../xml-elements-properties/id-element-xmla.md), [fichier](../xml-elements-properties/file-element-xmla.md), [emplacements](../xml-elements-properties/locations-element-xmla.md), [mot de passe](../xml-elements-properties/password-element-xmla.md), [Sécurité](../xml-elements-properties/security-element-xmla.md), [DbStorageLocation](../xml-elements-properties/dbstoragelocation-element.md)|  
   
 ## <a name="remarks"></a>Notes  
- Le `Restore` commande restaure un [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] base de données spécifiée dans le `DatabaseName` élément à partir d’un fichier de sauvegarde et, éventuellement, restaurer des partitions distantes à partir des fichiers de sauvegarde distants.  
+ Le `Restore` commande restaure un [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] base de données spécifiée dans le `DatabaseName` élément à partir d’un fichier de sauvegarde et, éventuellement, les restaurations des partitions distantes à partir de fichiers de sauvegarde distants.  
   
- Selon le mode de stockage utilisé par les objets stockés dans le fichier de sauvegarde, la `Restore` commande restaure les informations répertoriées dans le tableau suivant.  
+ Selon le mode de stockage utilisé par les objets stockés dans le fichier de sauvegarde, le `Restore` commande restaure les informations répertoriées dans le tableau suivant.  
   
 |Mode de stockage|Informations|  
 |------------------|-----------------|  
@@ -81,7 +81,7 @@ ms.locfileid: "36153322"
 |Hybrid OLAP (HOLAP)|Agrégations et métadonnées|  
 |OLAP relationnel (ROLAP)|Métadonnées|  
   
- Pendant un `Restore` de commande, un verrou exclusif est placé sur le [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] base de données spécifiée dans le `DatabaseName` élément. Le verrou est libéré lorsque la `Restore` commande est terminée.  
+ Pendant un `Restore` commande, un verrou exclusif est placé sur le [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] base de données spécifiée dans le `DatabaseName` élément. Le verrou est libéré lorsque la `Restore` commande est terminée.  
   
  Pour plus d’informations sur la sauvegarde et restauration des bases de données, consultez [sauvegarde, restauration et synchronisation de bases de données de &#40;XMLA&#41;](../../multidimensional-models-scripting-language-assl-xmla/backing-up-restoring-and-synchronizing-databases-xmla.md).  
   

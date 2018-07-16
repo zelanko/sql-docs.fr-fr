@@ -1,5 +1,5 @@
 ---
-title: Compteurs de performance pour les MSRS 2014 Web Service SharePoint Mode MSRS 2014 Service SharePoint Mode objets de Performance Windows (Mode SharePoint) | Documents Microsoft
+title: Compteurs de performance pour les MSRS 2014 en Mode de SharePoint du Service Web MSRS 2014 Windows Service SharePoint Mode objets de Performance (Mode SharePoint) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - performance counters [Reporting Services]
 - counters [Reporting Services]
@@ -20,13 +20,13 @@ ms.assetid: 70bf6980-7845-4ab5-8b2a-ebf526d811a6
 caps.latest.revision: 54
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 05e07f38382c6cdc8892c3ffd90ed63798b6f797
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 459d82ce5dfdbc445b05c3eb9f59325791ab4ff0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36042392"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37280785"
 ---
 # <a name="performance-counters-for-the-msrs-2014-web-service-sharepoint-mode-and-msrs-2014-windows-service-sharepoint-mode-performance-objects-sharepoint-mode"></a>Compteurs de performance du service Web MSRS 2014 en mode SharePoint et des objets de performance du service Windows MSRS 2014 en mode SharePoint (mode SharePoint)
   Cette rubrique décrit les compteurs de performance pour les objets de performance `MSRS 2014 Web Service SharePoint Mode` et `MSRS 2014 Windows Service SharePoint Mode` qui font partie d'un déploiement [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] en mode SharePoint.  
@@ -40,14 +40,14 @@ ms.locfileid: "36042392"
   
  **Dans cette rubrique :**  
   
--   [Compteurs de Performance MSRS 2014 Web Service SharePoint Mode](#bkmk_webservice)  
+-   [Compteurs de performances en Mode de MSRS 2014 Web Service SharePoint](#bkmk_webservice)  
   
--   [Compteurs de Performance MSRS 2014 Windows Service SharePoint Mode](#bkmk_windowsservice)  
+-   [Compteurs de performances en Mode de MSRS 2014 Windows Service SharePoint](#bkmk_windowsservice)  
   
 -   [Utiliser des applets de commande PowerShell pour retourner des listes](#bkmk_powershell)  
   
-##  <a name="bkmk_webservice"></a> Compteurs de Performance MSRS 2014 Web Service SharePoint Mode  
- L'objet de performance `MSRS 2014 Web Service SharePoint Mode` contrôle les performances du serveur de rapports. Cet objet de performance inclut une collection de compteurs utilisée pour suivre le traitement du serveur de rapports initialisé en général via des opérations de consultation du rapport interactives. Lorsque vous configurez ce compteur, vous pouvez l’appliquer à toutes les instances de [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] ou vous pouvez sélectionner des instances spécifiques. Ces compteurs sont réinitialisés à chaque interruption du service Web Report Server par [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)].  
+##  <a name="bkmk_webservice"></a> Compteurs de performances en Mode de MSRS 2014 Web Service SharePoint  
+ L'objet de performance `MSRS 2014 Web Service SharePoint Mode` contrôle les performances du serveur de rapports. Cet objet de performance inclut une collection de compteurs utilisée pour suivre le traitement du serveur de rapports initialisé en général via des opérations de consultation du rapport interactives. Lorsque vous configurez ce compteur, vous pouvez appliquer le compteur à toutes les instances de [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] ou vous pouvez sélectionner des instances spécifiques. Ces compteurs sont réinitialisés à chaque interruption du service Web Report Server par [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)].  
   
  Le tableau suivant répertorie les compteurs inclus dans le `MSRS 2014 Web Service SharePoint Mode` objet de performance.  
   
@@ -63,7 +63,7 @@ ms.locfileid: "36042392"
 |`Memory Cache Misses/Sec`|Nombre de fois par seconde où les rapports n'ont pas pu être récupérés du cache mémoire.|  
 |`Next Session Requests/Sec`|Nombre de requêtes par seconde pour les rapports qui sont ouverts dans une session existante (tels que les rapports rendus à partir d'un instantané de session).|  
 |`Report Requests`|Nombre de rapports qui sont actuellement actifs et gérés par le serveur de rapports.|  
-|`Reports Executed/Sec`|Nombre d'exécutions de rapport réussies par seconde. Ce compteur fournit des statistiques à propos du volume de rapports. Utilisez ce compteur avec `Request/Sec` pour comparer l’exécution de rapports pour les demandes de rapports qui peuvent être retournées à partir du cache.|  
+|`Reports Executed/Sec`|Nombre d'exécutions de rapport réussies par seconde. Ce compteur fournit des statistiques à propos du volume de rapports. Utilisez ce compteur avec `Request/Sec` pour comparer l’exécution de demandes de rapports qui peuvent être retournées à partir du cache.|  
 |`Requests/Sec`|Nombre de demandes par seconde envoyées au serveur de rapports. Ce compteur suit tous les types de demandes gérées par le serveur de rapports.|  
 |`Total Cache Hits`|Nombre total de demandes de rapports à partir du cache après le démarrage du service. Ce compteur est réinitialisé à chaque interruption du service Web Report Server par [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] .|  
 |`Total Cache Hits (Semantic Models)`|Nombre total de demandes de modèle à partir du cache après le démarrage du service. Ce compteur est réinitialisé à chaque interruption du service Web Report Server par ASP.NET.|  
@@ -76,8 +76,8 @@ ms.locfileid: "36042392"
 |`Total Reports Executed`|Nombre total de rapports qui ont été correctement exécutés après le démarrage du service. Ce compteur est réinitialisé à chaque interruption du service Web Report Server par [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] .|  
 |`Total Requests`|Nombre total des demandes envoyées au serveur de rapports après le démarrage du service. Ce compteur est réinitialisé à chaque interruption du service Web Report Server par [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] .|  
   
-##  <a name="bkmk_windowsservice"></a> Compteurs de Performance MSRS 2014 Windows Service SharePoint Mode  
- L'objet de performance `MSRS 2014 Windows Service SharePoint Mode` est utilisé pour contrôler le service Windows Report Server. Cet objet de performance inclut une collection de compteurs utilisée pour suivre le traitement des rapports initialisé via des opérations planifiées. Les opérations planifiées peuvent englober l'abonnement et la remise, les instantanés d'exécution de rapport et l'historique de rapport. Lorsque vous configurez ce compteur, vous pouvez l’appliquer à toutes les instances de [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] ou vous pouvez sélectionner des instances spécifiques.  
+##  <a name="bkmk_windowsservice"></a> Compteurs de performances en Mode de MSRS 2014 Windows Service SharePoint  
+ L'objet de performance `MSRS 2014 Windows Service SharePoint Mode` est utilisé pour contrôler le service Windows Report Server. Cet objet de performance inclut une collection de compteurs utilisée pour suivre le traitement des rapports initialisé via des opérations planifiées. Les opérations planifiées peuvent englober l'abonnement et la remise, les instantanés d'exécution de rapport et l'historique de rapport. Lorsque vous configurez ce compteur, vous pouvez appliquer le compteur à toutes les instances de [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] ou vous pouvez sélectionner des instances spécifiques.  
   
  Le tableau suivant répertorie les compteurs inclus dans le `MSRS 2014 Windows Service SharePoint mode` objet de performance.  
   
@@ -140,7 +140,7 @@ CounterSetName     : MSRS 2014 Web Service SharePoint Mode
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Analyse des performances du serveur de rapports](monitoring-report-server-performance.md)   
- [Compteurs de performance pour le Service Web MSRS 2014 et les objets de Performance Service Windows MSRS 2014 &#40;en Mode natif&#41;](../report-server/performance-counters-msrs-2011-web-service-performance-objects.md)  
+ [Surveillance des performances du serveur de rapports](monitoring-report-server-performance.md)   
+ [Compteurs de performance pour le Service Web MSRS 2014 et les objets de Performance Service MSRS 2014 Windows &#40;en Mode natif&#41;](../report-server/performance-counters-msrs-2011-web-service-performance-objects.md)  
   
   

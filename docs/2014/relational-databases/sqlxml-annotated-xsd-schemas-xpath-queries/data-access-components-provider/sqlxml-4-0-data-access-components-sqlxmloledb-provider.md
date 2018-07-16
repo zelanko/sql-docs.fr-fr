@@ -1,5 +1,5 @@
 ---
-title: Composants d’accès aux données 4.0 SQLXML | Documents Microsoft
+title: SQLXML 4.0 Data Access Components | Microsoft Docs
 ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql-server-2014
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - providers [SQLXML], listed
 ms.assetid: 5001e9fd-555c-4332-a57d-4d29a537454a
 caps.latest.revision: 26
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: d5d0b620c298ced61ee043b981f9f91eee9ed023
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 4affd533f25ea3b6dfb3a4ab9c643f1cc6ff7b93
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36153667"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37236529"
 ---
 # <a name="sqlxml-40-data-access-components"></a>Composants d'accès aux données SQLXML 4.0
   [!INCLUDE[msCoName](../../../includes/msconame-md.md)] SQLXML 4.0 comprend trois fournisseurs de données qui peuvent insérer des données XML dans une base de données et les récupérer dans [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] :  
@@ -38,7 +38,7 @@ ms.locfileid: "36153667"
   
 -   classes managées SQLXML  
   
-     Exposez les fonctionnalités SQLXML dans le  [!INCLUDE[msCoName](../../../includes/msconame-md.md)] .NET Framework. Pour plus d’informations, consultez [les Classes managées SQLXML](../net-framework-classes/sqlxml-4-0-net-framework-support-managed-classes.md).  
+     Exposez les fonctionnalités SQLXML dans le  [!INCLUDE[msCoName](../../../includes/msconame-md.md)] .NET Framework. Pour plus d’informations, consultez [Classes managées SQLXML](../net-framework-classes/sqlxml-4-0-net-framework-support-managed-classes.md).  
   
 -   SQL Server Native Client (SQLNCLI11)  
   

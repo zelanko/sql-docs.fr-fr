@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 98385f84-67cc-421a-b729-91847954e03e
 caps.latest.revision: 7
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: d1e2c8560461f121b7d51a69878144bd01755f3e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: 0a9d466501b09dbfc30b5a948f43cd49dc58c9a6
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36042253"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37285355"
 ---
 # <a name="save-a-shortcut-query-file-mds-add-in-for-excel"></a>Enregistrer un fichier de requête de raccourci (Complément MDS pour Excel)
   Dans le [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)], si vous accédez souvent au même jeu de données, enregistrez un fichier de requête de raccourci.  
@@ -27,7 +27,7 @@ ms.locfileid: "36042253"
 ## <a name="prerequisites"></a>Prérequis  
  Pour effectuer cette procédure :  
   
--   La feuille de calcul active doit contenir des données managées DM au format souhaité. Par exemple, vous devriez afficher les colonnes dans l'ordre souhaité, avec tous les filtres appliqués. Pour plus d’informations, consultez [avant le chargement des données de filtre &#40;complément MDS pour Excel&#41; ](filter-data-before-exporting-mds-add-in-for-excel.md) et [réorganiser les colonnes &#40;complément MDS pour Excel&#41;](reorder-columns-mds-add-in-for-excel.md).  
+-   La feuille de calcul active doit contenir des données managées DM au format souhaité. Par exemple, vous devriez afficher les colonnes dans l'ordre souhaité, avec tous les filtres appliqués. Pour plus d’informations, consultez [filtrer les données avant le chargement &#40;complément MDS pour Excel&#41; ](filter-data-before-exporting-mds-add-in-for-excel.md) et [réorganiser des colonnes &#40;complément MDS pour Excel&#41;](reorder-columns-mds-add-in-for-excel.md).  
   
 ### <a name="to-save-a-shortcut-query-file"></a>Pour enregistrer un fichier de requête de raccourci  
   

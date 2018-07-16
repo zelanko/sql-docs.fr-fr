@@ -1,5 +1,5 @@
 ---
-title: Méthode SetNumValue (classe SqlServiceAdvancedProperty) | Documents Microsoft
+title: Setnumvalue, méthode (classe SqlServiceAdvancedProperty) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - SetNumValue method
 ms.assetid: a5e1056b-0b75-4ad6-99c1-89246010d815
 caps.latest.revision: 33
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: bde7b7dec97f7541ee8761f92faa369137daa171
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
+ms.openlocfilehash: 9bc64d8d9ae3dba57fd054f6314b4295a0d116e0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36041980"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37232619"
 ---
 # <a name="setnumvalue-method-sqlserviceadvancedproperty-class"></a>Méthode SetNumValue (classe SqlServiceAdvancedProperty)
   Définit la valeur numérique d'une propriété.  
@@ -52,7 +52,7 @@ NumValue
   
 |Paramètre|Description|  
 |---------------|-----------------|  
-|*NumValue*|Valeur `uint32` qui spécifie la valeur de la propriété avancée.|  
+|*%Numvalue%*|Valeur `uint32` qui spécifie la valeur de la propriété avancée.|  
   
 ## <a name="property-valuereturn-value"></a>Valeur de propriété/valeur de retour  
  Valeur `uint32`, égale à 0 si le service a été correctement modifié, égale à 1 si la demande n'est pas prise en charge ou égale à tout autre nombre pour indiquer une erreur.  

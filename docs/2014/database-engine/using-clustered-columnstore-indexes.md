@@ -1,30 +1,29 @@
 ---
-title: Utilisation d’index Columnstore en cluster | Documents Microsoft
+title: À l’aide d’index cluster Columnstore | Microsoft Docs
 ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-indexes
+ms.technology: table-view-index
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 5af6b91c-724f-45ac-aff1-7555014914f4
 caps.latest.revision: 6
-author: barbkess
-ms.author: barbkess
-manager: jhubbard
-ms.openlocfilehash: 527905bc0b0be07c178c873ae22fd06a0166b963
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: a439826920b98098d1ed8a30540c39509b7083d6
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36043203"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37254601"
 ---
 # <a name="using-clustered-columnstore-indexes"></a>Utilisation d'index columnstore cluster
   Tâches pour utiliser des index columnstore cluster dans [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
- Pour une vue d’ensemble des index columnstore, consultez [Columnstore Indexes Described](../relational-databases/indexes/columnstore-indexes-described.md).  
+ Pour une vue d’ensemble des index columnstore, consultez [index Columnstore décrits](../relational-databases/indexes/columnstore-indexes-described.md).  
   
  Pour plus d’informations sur les index columnstore en cluster, consultez [Using Clustered Columnstore Indexes](../relational-databases/indexes/indexes.md).  
   
@@ -32,18 +31,18 @@ ms.locfileid: "36043203"
   
 -   [Créer un Index cluster Columnstore](#create)  
   
--   [Supprimer un Index Columnstore cluster](#drop)  
+-   [Supprimer un Index Columnstore en cluster](#drop)  
   
 -   [Charger des données dans un Index cluster Columnstore](#load)  
   
 -   [Modifier des données dans un Index cluster Columnstore](#change)  
   
--   [Reconstruire un Index cluster Columnstore](#rebuild)  
+-   [Reconstruire un Index Columnstore en cluster](#rebuild)  
   
 -   [Réorganiser un Index cluster Columnstore](#reorganize)  
   
 ##  <a name="create"></a> Créer un Index cluster Columnstore  
- Pour créer un index cluster columnstore, créez une table rowstore en tant que segment de mémoire ou index ordonné en clusters et ensuite utiliser le [créer un INDEX cluster COLUMNSTORE &#40;Transact-SQL&#41; ](/sql/t-sql/statements/create-columnstore-index-transact-sql) instruction pour convertir la table à un cluster index ColumnStore. Si vous souhaitez que l'index columnstore cluster ait le même nom que l'index cluster, utilisez l'option DROP_EXISTING.  
+ Pour créer un index cluster columnstore, tout d’abord créer une table rowstore en tant que segment de mémoire ou index cluster, puis utiliser le [CREATE CLUSTERED COLUMNSTORE INDEX &#40;Transact-SQL&#41; ](/sql/t-sql/statements/create-columnstore-index-transact-sql) instruction pour convertir la table à un cluster index ColumnStore. Si vous souhaitez que l'index columnstore cluster ait le même nom que l'index cluster, utilisez l'option DROP_EXISTING.  
   
  Cet exemple crée une table en tant que segment puis la convertit en un index columnstore cluster nommé cci_Simple. Cela modifie le stockage de la table entière qui change de rowstore en columnstore.  
   
@@ -60,7 +59,7 @@ GO
   
  Pour plus d’exemples, consultez la section exemples dans [CREATE CLUSTERED COLUMNSTORE INDEX &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-columnstore-index-transact-sql).  
   
-##  <a name="drop"></a> Supprimer un Index Columnstore cluster  
+##  <a name="drop"></a> Supprimer un Index Columnstore en cluster  
  Utilisez le [DROP INDEX &#40;Transact-SQL&#41; ](/sql/t-sql/statements/drop-index-transact-sql) instruction pour supprimer un index cluster columnstore. Cette opération supprime l'index et convertit la table columnstore en un segment de mémoire rowstore.  
   
 ##  <a name="load"></a> Charger des données dans un Index cluster Columnstore  
@@ -118,8 +117,8 @@ SELECT * FROM sys.column_store_row_groups
   
 -   Si la ligne est dans le deltastore, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] met à jour la ligne dans le deltastore.  
   
-##  <a name="rebuild"></a> Reconstruire un Index cluster Columnstore  
- Utilisez [CREATE CLUSTERED COLUMNSTORE INDEX &#40;Transact-SQL&#41; ](/sql/t-sql/statements/create-columnstore-index-transact-sql) ou [ALTER INDEX &#40;Transact-SQL&#41; ](/sql/t-sql/statements/alter-index-transact-sql) pour effectuer une reconstruction complète d’un index columnstore cluster existant. En outre, vous pouvez utiliser ALTER INDEX... REBUILD pour reconstruire une partition spécifique.  
+##  <a name="rebuild"></a> Reconstruire un Index Columnstore en cluster  
+ Utilisez [CREATE CLUSTERED COLUMNSTORE INDEX &#40;Transact-SQL&#41; ](/sql/t-sql/statements/create-columnstore-index-transact-sql) ou [ALTER INDEX &#40;Transact-SQL&#41; ](/sql/t-sql/statements/alter-index-transact-sql) pour effectuer une reconstruction complète d’un index cluster columnstore existant. En outre, vous pouvez utiliser ALTER INDEX... REBUILD pour reconstruire une partition spécifique.  
   
 ### <a name="rebuild-process"></a>Processus de reconstruction  
  Pour reconstruire un index cluster columnstore, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] :  

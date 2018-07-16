@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: ae8c138b-e356-4ad8-862c-a4a8d0c04149
 caps.latest.revision: 8
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 4bfbbdc796e6a424d4a542723b852c113b281e22
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: ba88d7a078889de09af4bd33e484ae69519721c7
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36043312"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37246190"
 ---
 # <a name="column-charts-report-builder-and-ssrs"></a>Column Charts (Report Builder and SSRS)
-  Un histogramme affiche une série sous la forme d'un ensemble de barres verticales regroupées par catégorie. Les histogrammes sont utiles pour montrer des modifications de données sur une période ou pour illustrer des comparaisons entre éléments. L'histogramme ordinaire est étroitement lié au graphique à barres, qui affiche une série sous la forme d'un ensemble de barres horizontales, ainsi qu'au graphique d'étendue en colonnes, qui affiche une série sous la forme d'un ensemble de barres verticales avec des points de départ et de fin variables. Pour plus d’informations, consultez [graphiques à barres &#40;le Générateur de rapports et SSRS&#41; ](charts-report-builder-and-ssrs.md) et [graphiques d’étendue &#40;le Générateur de rapports et SSRS&#41;](range-charts-report-builder-and-ssrs.md).  
+  Un histogramme affiche une série sous la forme d'un ensemble de barres verticales regroupées par catégorie. Les histogrammes sont utiles pour montrer des modifications de données sur une période ou pour illustrer des comparaisons entre éléments. L'histogramme ordinaire est étroitement lié au graphique à barres, qui affiche une série sous la forme d'un ensemble de barres horizontales, ainsi qu'au graphique d'étendue en colonnes, qui affiche une série sous la forme d'un ensemble de barres verticales avec des points de départ et de fin variables. Pour plus d’informations, consultez [graphiques à barres &#40;Générateur de rapports et SSRS&#41; ](charts-report-builder-and-ssrs.md) et [graphiques d’étendue &#40;Générateur de rapports et SSRS&#41;](range-charts-report-builder-and-ssrs.md).  
   
  L'histogramme convient bien pour ces données, car les trois séries partagent une période commune, ce qui permet d'effectuer des comparaisons valables.  
   
@@ -45,20 +45,20 @@ ms.locfileid: "36043312"
   
 ## <a name="data-considerations-for-a-column-chart"></a>Considérations relatives aux données pour un histogramme  
   
--   Les graphiques à barres et histogrammes sont plus couramment utilisés pour montrer des comparaisons entre groupes. Si le graphique comporte plus de trois séries, pensez plutôt à utiliser un graphique à barres empilées ou un histogramme empilé. Si le graphique comporte plusieurs séries, vous pouvez également rassembler les graphiques à barres empilées ou les histogrammes empilés en plusieurs groupes. Pour plus d’informations, consultez [graphiques à barres &#40;le Générateur de rapports et SSRS&#41; ](charts-report-builder-and-ssrs.md) et *histogrammes*.  
+-   Les graphiques à barres et histogrammes sont plus couramment utilisés pour montrer des comparaisons entre groupes. Si le graphique comporte plus de trois séries, pensez plutôt à utiliser un graphique à barres empilées ou un histogramme empilé. Si le graphique comporte plusieurs séries, vous pouvez également rassembler les graphiques à barres empilées ou les histogrammes empilés en plusieurs groupes. Pour plus d’informations, consultez [graphiques à barres &#40;Générateur de rapports et SSRS&#41; ](charts-report-builder-and-ssrs.md) et *histogrammes*.  
   
 -   Dans un histogramme, vous disposez de moins de place pour l'affichage horizontal des étiquettes de l'axe des abscisses. Si vos étiquettes sont assez longues, envisagez d'utiliser un graphique à barres ou de modifier l'angle de rotation de l'étiquette.  
   
--   Vous pouvez ajouter des styles de dessin spéciaux aux barres d'un histogramme pour augmenter l'impact visuel. Les styles de dessin incluent les effets de coin, de relief, de cylindre et de clair à sombre. Ces effets sont destinés à améliorer l'apparence de votre graphique 2D. Si vous utilisez un graphique 3D, les styles de dessin seront toujours appliqués, mais ils peuvent ne pas avoir le même effet. Pour plus d’informations sur l’ajout d’un style de dessin à un graphique à barres, consultez [ajouter un biseau, relief et des Styles de Texture à un graphique &#40;le Générateur de rapports et SSRS&#41;](chart-effects-add-bevel-emboss-or-texture-report-builder.md).  
+-   Vous pouvez ajouter des styles de dessin spéciaux aux barres d'un histogramme pour augmenter l'impact visuel. Les styles de dessin incluent les effets de coin, de relief, de cylindre et de clair à sombre. Ces effets sont destinés à améliorer l'apparence de votre graphique 2D. Si vous utilisez un graphique 3D, les styles de dessin seront toujours appliqués, mais ils peuvent ne pas avoir le même effet. Pour plus d’informations sur l’ajout d’un style de dessin à un graphique à barres, consultez [ajouter un biseau, de relief et de Styles de Texture à un graphique &#40;Générateur de rapports et SSRS&#41;](chart-effects-add-bevel-emboss-or-texture-report-builder.md).  
   
--   La possibilité d'afficher votre graphique sous la forme d'un histogramme ou diagramme de Pareto est une spécificité des histogrammes. Pour ce faire, affectez à la propriété de ShowColumnAs `Histogram` ou `Pareto` dans la fenêtre Propriétés pour `true`.  
+-   La possibilité d'afficher votre graphique sous la forme d'un histogramme ou diagramme de Pareto est une spécificité des histogrammes. Pour ce faire, définissez la propriété ShowColumnAs `Histogram` ou `Pareto` dans la fenêtre Propriétés pour `true`.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Graphiques &#40;Générateur de rapports et SSRS&#41;](charts-report-builder-and-ssrs.md)   
  [Types de graphiques &#40;Générateur de rapports et SSRS&#41;](chart-types-report-builder-and-ssrs.md)   
- [Graphiques à barres &#40;rapport Générateur et SSRS&#41;](charts-report-builder-and-ssrs.md)   
- [Graphiques d’étendue &#40;rapport Générateur et SSRS&#41;](range-charts-report-builder-and-ssrs.md)   
+ [Graphiques à barres &#40;Générateur de rapports et SSRS&#41;](charts-report-builder-and-ssrs.md)   
+ [Graphiques d’étendue &#40;Générateur de rapports et SSRS&#41;](range-charts-report-builder-and-ssrs.md)   
  [Didacticiel : ajouter un graphique à barres à un rapport &#40;Générateur de rapports&#41;](../tutorial-add-a-bar-chart-to-your-report-report-builder.md)   
- [Les Points de données dans les graphiques vides et Null &#40;rapport Générateur et SSRS&#41;](empty-and-null-data-points-in-charts-report-builder-and-ssrs.md)  
+ [Les Points de données dans les graphiques vides et Null &#40;Générateur de rapports et SSRS&#41;](empty-and-null-data-points-in-charts-report-builder-and-ssrs.md)  
   
   

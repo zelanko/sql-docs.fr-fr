@@ -1,5 +1,5 @@
 ---
-title: Élément Multiplicity (ASSL) | Documents Microsoft
+title: Multiplicity, élément (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -12,15 +12,15 @@ ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: 441e3829-9009-4b32-a8c6-fa580663387f
 caps.latest.revision: 6
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 91ecb8a8b7ada49666d2b6144d1ba258a7c26b58
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 98eb9ba8186c395b598bff6a7ad2ea63ed101999
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36154463"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37261315"
 ---
 # <a name="multiplicity-element-assl"></a>Élément Multiplicity (ASSL)
   Indique si les attributs du RelationshipEnd sont sur le côté « un » ou sur le côté « plusieurs » d'une relation.  
@@ -56,9 +56,9 @@ ms.locfileid: "36154463"
   
 |Valeur|Description|  
 |-----------|-----------------|  
-|*Une*|Fin de clé primaire.|  
+|*Un*|Fin de clé primaire.|  
 |*Nombreux*|Fin de clé étrangère.|  
   
- L’énumération qui correspond aux valeurs autorisées pour `role` dans l’objet d’objets AMO (Analysis Management) est modèle <xref:Microsoft.AnalysisServices.Multiplicity>.  
+ L’énumération qui correspond aux valeurs autorisées pour `role` dans l’objet d’objets AMO (Analysis Management) modèle est <xref:Microsoft.AnalysisServices.Multiplicity>.  
   
   

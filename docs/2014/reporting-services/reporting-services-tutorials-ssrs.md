@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - tutorials [Reporting Services]
 ms.assetid: e90cc448-563b-4dbb-9776-defb8640ec66
 caps.latest.revision: 35
-author: markingmyname
-ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: ed753691683719dae20802f80e4ae635a79c4338
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: b6e44a34ed1262d6e7e5a9db67e3fc61ab7ba998
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36042614"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37268415"
 ---
 # <a name="reporting-services-tutorials-ssrs"></a>Didacticiels sur Reporting Services (SSRS)
   Cette section contient des didacticiels pour [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)].  
@@ -33,10 +33,10 @@ ms.locfileid: "36042614"
  Suivez les étapes de ce didacticiel pour apprendre à créer votre premier rapport. Ce didacticiel explique comment utiliser [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] pour créer une connexion de données (source de données), définir une requête simple (dataset) et configurer une région de données pour accueillir vos données.  
   
  [Le Service Report Server Web à l’aide de Visual Basic ou Visual C# de l’accès à&#35; &#40;didacticiel SSRS&#41;](../tutorials/access-report-server-web-service-vb-vcsharp-ssrs-tutorial.md)  
- Suivez les étapes de ce didacticiel pour apprendre à accéder à la [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)] Web services à partir d’une application créée avec [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vbprvb](../includes/vbprvb-md.md)] ou [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[csprcs](../includes/csprcs-md.md)].  
+ Suivez les étapes de ce didacticiel pour apprendre comment accéder à la [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)] services à partir d’une application créée avec Web [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vbprvb](../includes/vbprvb-md.md)] ou [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[csprcs](../includes/csprcs-md.md)].  
   
- [Mise à jour des rapports à l’aide des Classes générées à partir du schéma RDL &#40;didacticiel SSRS&#41;](../tutorials/updating-reports-using-classes-generated-from-the-rdl-schema-ssrs-tutorial.md)  
- Suivez les étapes de ce didacticiel pour apprendre à utiliser l’outil de définition de schéma XML (Xsd.exe) pour générer des classes qui vous permettent de sérialiser et désérialiser les fichiers de définition de rapport (.rdl et .rdlc) avec le [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)].  
+ [La mise à jour des rapports à l’aide des Classes générées à partir du schéma RDL &#40;didacticiel SSRS&#41;](../tutorials/updating-reports-using-classes-generated-from-the-rdl-schema-ssrs-tutorial.md)  
+ Suivez les étapes de ce didacticiel pour apprendre à utiliser l’outil XML Schema Definition (Xsd.exe) pour générer des classes qui vous permettent de sérialiser et désérialiser les fichiers de définition de rapport (.rdl et .rdlc) avec le [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)].  
   
  [Créer une extraction &#40;RDLC&#41; rapport avec des paramètres à l’aide de ReportViewer &#40;didacticiel SSRS&#41;](create-drillthrough-rdlc-report-with-parameters-reportviewer.md)  
  Suivez les étapes de ce didacticiel pour apprendre à créer un rapport d'extraction avec des paramètres, ainsi qu'un filtre à l'aide du contrôle ReportViewer.  
@@ -45,6 +45,6 @@ ms.locfileid: "36042614"
  [Adventure Works pour SQL Server 2012](http://go.microsoft.com/fwlink/?LinkId=245471)   
  [Exemples Reporting Services sur CodePlex (http://go.microsoft.com/fwlink/?LinkId=198283)](http://go.microsoft.com/fwlink/?LinkId=198283)   
  [WIKI TechNet : SQL Server 2012 Samples ()http://go.microsoft.com/fwlink/?linkID=220734)](http://go.microsoft.com/fwlink/?linkID=220734)   
- [Picnic Dataset (exemples de données) (http://go.microsoft.com/fwlink/?linkID=219108)](http://go.microsoft.com/fwlink/?linkID=219108)  
+ [(Le jeu de données (exemples de données) de pique-niquehttp://go.microsoft.com/fwlink/?linkID=219108)](http://go.microsoft.com/fwlink/?linkID=219108)  
   
   

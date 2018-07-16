@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.termlookuptrans.f1
 helpviewer_keywords:
@@ -23,13 +23,13 @@ ms.assetid: 3c0fa2f8-cb6a-4371-b184-7447be001de1
 caps.latest.revision: 56
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 546acdba2996b4264e946b052af18cf6574868a3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 7b98ce551e69f64a515f58d2b4a0588dabc742ff
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36043180"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37225829"
 ---
 # <a name="term-lookup-transformation"></a>transformation de recherche de terme
   La transformation de recherche de terme met en correspondance des termes extraits de texte d'une colonne d'entrée de transformation avec les termes d'une table de référence. Elle compte ensuite le nombre de fois où un terme de la table de recherche apparaît dans le dataset d'entrée, puis écrit ce nombre et le terme de la table de référence dans les colonnes de la sortie de la transformation. Cette transformation est utile pour créer une liste personnalisée de termes reposant sur le texte d'entrée et complétée de statistiques de fréquence.  
@@ -98,7 +98,7 @@ ms.locfileid: "36043180"
   
  Pour plus d’informations sur les propriétés définissables dans la boîte de dialogue **Éditeur de transformation de recherche de terme**, cliquez sur l’une des rubriques suivantes :  
   
--   [Éditeur de Transformation de recherche de terme &#40;onglet de la Table de référence&#41;](../../term-lookup-transformation-editor-reference-table-tab.md)  
+-   [Éditeur de Transformation de recherche de terme &#40;onglet Table de référence&#41;](../../term-lookup-transformation-editor-reference-table-tab.md)  
   
 -   [Éditeur de Transformation de recherche de terme &#40;onglet recherche de terme&#41;](../../term-lookup-transformation-editor-term-lookup-tab.md)  
   

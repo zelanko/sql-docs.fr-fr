@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Arguments dialog box
 - arguments [SQL Server Management Studio]
 ms.assetid: 9a918855-efb8-44dc-9e6b-df0a2dac3651
 caps.latest.revision: 18
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 26926b8259475687bc0e48babf39ff41a2827068
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: fd21eb41730ad1d214361bee779fef375b8c75ac
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36043740"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37284605"
 ---
 # <a name="arguments-dialog-box"></a>Arguments (boîte de dialogue)
   La boîte de dialogue **Arguments** permet de spécifier de nouveaux arguments ou des arguments existants pour un outil. Elle s'affiche lorsque, dans la boîte de dialogue **Outils externes** , vous avez sélectionné l'option **Demander les arguments** de l'outil externe que vous lancez.  

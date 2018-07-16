@@ -1,5 +1,5 @@
 ---
-title: Sélectionner des Tables et vues (SSAS) | Documents Microsoft
+title: Sélectionner des Tables et vues (SSAS) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.bidtoolset.seltablesviews.f1
 ms.assetid: 5e8121cc-03f0-4168-98cf-63c5c032bb0b
 caps.latest.revision: 10
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 5cdb1c21481e79c98b2d9f7958b54e1d5e2f8745
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: dcc5de5cfa1125ee950b9c86e02445f192199439
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36042090"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37232049"
 ---
 # <a name="select-tables-and-views-ssas"></a>Sélectionner des tables et des vues (SSAS)
   Cette page de **l’Assistant Importation de table** vous permet de sélectionner les tables et les vues à partir desquelles vous voulez importer des données. Pour accéder à l'Assistant [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)], dans le menu **Modèle** , cliquez sur **Importer à partir de la source de données**.  
@@ -52,7 +52,7 @@ ms.locfileid: "36042090"
  **Détails du filtre**  
  Quand un filtre a été appliqué aux données importées, affiche le filtre d’importation de données dans la boîte de dialogue **Détails du filtre**. Pour plus d’informations, consultez [Détails du filtre &#40;SSAS&#41;](filter-details-ssas.md).  
   
- **Afficher un aperçu et filtrer**  
+ **Aperçu et filtrer**  
  Affiche la boîte de dialogue **Aperçu de la table sélectionnée** qui permet d’appliquer un filtre aux données importées. Pour plus d’informations, consultez [Aperçu de la table sélectionnée &#40;SSAS&#41;](preview-selected-table-ssas.md).  
   
  **Sélectionner les Tables associées**  

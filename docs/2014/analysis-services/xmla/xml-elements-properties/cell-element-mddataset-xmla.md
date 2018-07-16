@@ -1,5 +1,5 @@
 ---
-title: Élément (MDDataSet) (XMLA) de la cellule | Documents Microsoft
+title: Élément (MDDataSet) (XMLA) de cellule | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -24,15 +24,15 @@ helpviewer_keywords:
 - Cell element
 ms.assetid: c4ea08a4-f653-4ade-be07-b91eb5b1ef32
 caps.latest.revision: 13
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: 47d4449fd47cbb3da8e516a593cb8711e2bc2331
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: 3f07798a28c59597575de08bf5d0f3ea1d7087c8
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36154914"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37269505"
 ---
 # <a name="cell-element-mddataset-xmla"></a>Élément Cell (MDDataSet) (XMLA)
   Contient des informations sur une cellule unique contenue par un parent [CellData](celldata-element-xmla.md) élément.  
@@ -83,7 +83,7 @@ ms.locfileid: "36154914"
  Le type de données d'une valeur de propriété de cellule est spécifié uniquement pour la propriété de cellule VALUE. Les types de données d'autres propriétés de cellule sont déterminés par la définition de propriété de cellule incluse dans l'élément `CellInfo`. Une valeur de propriété de cellule peut être exclue si une valeur par défaut a été spécifiée (en incluant un élément `Default` pour une définition de propriété de cellule contenue dans l'élément `CellInfo`) pour une propriété de cellule ou si aucune valeur par défaut n'a été spécifiée et si la valeur de la propriété de cellule a la valeur NULL.  
   
 ## <a name="cell-property-errors"></a>Erreurs de propriété de cellule  
- Si une propriété de cellule ne peut pas être retournée en raison d’une erreur qui se produit sur l’instance de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)], telle qu’une erreur de calcul qui empêche que la valeur retournée pour une cellule donnée, un `Error` élément remplace la contenu de la propriété de cellule en question. L'exemple XML suivant décrit une erreur de propriété de cellule :  
+ Si une propriété de cellule ne peut pas être retournée en raison d’une erreur se produit sur l’instance de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)], telle qu’une erreur de calcul qui empêche que la valeur retournée pour une cellule donnée, un `Error` élément remplace la contenu de la propriété de cellule en question. L'exemple XML suivant décrit une erreur de propriété de cellule :  
   
 ```  
 <Cell CellOrdinal="0">  
@@ -97,28 +97,28 @@ ms.locfileid: "36154914"
 ```  
   
 ## <a name="calculating-cell-ordinal-values"></a>Calcul des valeurs ordinales d'une cellule  
- Les axes de référence d'une cellule peuvent être calculés sur la base d'une valeur d'attribut `CellOrdinal`. Point de vue conceptuel, les cellules sont numérotées dans un dataset comme si le jeu de données ont été un *p*-tableau dimensionnel, où *p* est le nombre d’axes. Les cellules sont traitées dans l'ordre ligne-champ.  
+ Les axes de référence d'une cellule peuvent être calculés sur la base d'une valeur d'attribut `CellOrdinal`. Conceptuellement, les cellules sont numérotées dans un jeu de données comme si le jeu de données ont été une *p*-tableau dimensionnel, où *p* est le nombre d’axes. Les cellules sont traitées dans l'ordre ligne-champ.  
   
  Imaginez une requête demandant quatre mesures sur les colonnes et une jointure croisée de deux états (State) avec quatre trimestres (Quarter) sur les lignes. En analysant le résultat du dataset ci-après, on constate que, pour la partie du résultat du dataset affichée en caractères gras, la propriété `CellOrdinal` correspond au jeu {9, 10, 11, 13, 14, 15, 17, 18, 19} puisque les cellules sont comptabilisées dans l'ordre ligne-champ en partant d'une valeur `CellOrdinal` égale à 0 pour la cellule supérieure gauche.  
   
 |État|Quarter|Unit Sales|Store Cost|Store Sales|Sales Count|  
 |-----------|-------------|----------------|----------------|-----------------|-----------------|  
 |California|Q1|16890|14431.09|36175.2|5498|  
-||Q2|18052|15332.02|38396.75|5915|  
-||3E TRIMESTRE|18370|**15672.83**|**39394.05**|**6014**|  
+||2E TRIMESTRE|18052|15332.02|38396.75|5915|  
+||Q3|18370|**15672.83**|**39394.05**|**6014**|  
 ||Q4|21436|**18094.5**|**45201.84**|**7015**|  
 |Oregon|Q1|19287|**16081.07**|**40170.29**|**6184**|  
-||Q2|15079|12678.96|31772.88|4799|  
-||3E TRIMESTRE|16940|14273.78|35880.46|5432|  
+||2E TRIMESTRE|15079|12678.96|31772.88|4799|  
+||Q3|16940|14273.78|35880.46|5432|  
 ||Q4|16353|13738.68|34453.44|5196|  
 |Washington|Q1|30114|25240.08|63282.86|9906|  
-||Q2|29479|24953.25|62496.64|9654|  
-||3E TRIMESTRE|30538|25958.26|64997.38|10007|  
+||2E TRIMESTRE|29479|24953.25|62496.64|9654|  
+||Q3|30538|25958.26|64997.38|10007|  
 ||Q4|34235|29172.72|73016.34|11217|  
   
  Si l'on applique la formule présentée dans la figure, l'axe k = 0 possède Uk = 4 membres et l'axe k = 1 possède Uk = 8 tuples. P = 2 correspond au nombre total d'axes dans la requête. Si l'on définit la cellule correspondant à {California, Q3, Store Cost} en tant que valeur S0, la somme de départ est i = 0 à 1. Pour i = 0, la valeur ordinale du tuple sur l'axe 0 de {Store Cost} est 1. Pour i = 1, l'ordinal du tuple de {CA, Q3} est 2.  
   
- Pour i = 0, Ei = 1, c’est le cas pour i = 0 la somme est 1 * 1 = 1 et pour i = 1, la somme est 2 (valeur ordinale du tuple) heures 4 (valeur Ei calculée sous la forme 1 \* 4), ou 8. La somme de 1 + 8 est ensuite 9, soit l'ordinal de cette cellule.  
+ Pour i = 0, Ei = 1, c’est le cas pour je = 0 la somme est 1 * 1 = 1 et pour je = 1, la somme est 2 (valeur ordinale du tuple) heures 4 (valeur Ei calculée comme 1 \* 4), ou 8. La somme de 1 + 8 est ensuite 9, soit l'ordinal de cette cellule.  
   
 ## <a name="example"></a>Exemple  
  L'exemple suivant présente la structure de l'élément `Cell`, y compris les valeurs de propriété de cellule VALUE, FORMATTED_VALUE et FORMAT_STRING de chaque cellule.  

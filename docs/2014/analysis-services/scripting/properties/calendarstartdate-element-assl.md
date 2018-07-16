@@ -1,5 +1,5 @@
 ---
-title: Élément CalendarStartDate (ASSL) | Documents Microsoft
+title: Élément CalendarStartDate (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - CalendarStartDate element
 ms.assetid: f6204107-9123-41f0-acbd-52134fe36e37
 caps.latest.revision: 32
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 9e0fd15c7fa6336c1fb1ea245eb400079e95e76d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 650ccdab8099ec80b6a526671bb01f0ad2d5ea32
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36042997"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37249379"
 ---
 # <a name="calendarstartdate-element-assl"></a>Élément CalendarStartDate (ASSL)
   Définit la date de début de la période du calendrier pour la [TimeBinding](../data-type/binding-data-type-assl.md) élément.  
@@ -64,7 +64,7 @@ ms.locfileid: "36042997"
 ## <a name="remarks"></a>Notes  
  L'élément `CalendarEndDate` doit tomber après l'élément `CalendarStartDate`.  
   
- L’élément qui correspond au parent de `CalendarStartDate` dans l’objet d’objets AMO (Analysis Management) est modèle <xref:Microsoft.AnalysisServices.TimeBinding>.  
+ L’élément qui correspond au parent de `CalendarStartDate` dans l’objet d’objets AMO (Analysis Management) modèle est <xref:Microsoft.AnalysisServices.TimeBinding>.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Propriétés &#40;ASSL&#41;](properties-assl.md)  

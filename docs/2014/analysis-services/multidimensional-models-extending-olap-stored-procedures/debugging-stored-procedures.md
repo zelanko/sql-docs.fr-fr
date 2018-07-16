@@ -1,5 +1,5 @@
 ---
-title: Débogage des procédures stockées | Documents Microsoft
+title: Débogage des procédures stockées | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -15,15 +15,15 @@ helpviewer_keywords:
 - stored procedures [Analysis Services], debugging
 ms.assetid: 34f51b85-02b3-40dd-bf93-375a9e522385
 caps.latest.revision: 25
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: ec2c67e30caf18f3e11b1391dc0a4bb67028c083
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: d14f4b68aa3a4cf76cad1c49c1d37a6be9c70f7d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36153812"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37282015"
 ---
 # <a name="debugging-stored-procedures"></a>Débogage des procédures stockées
   Les procédures stockées [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] sont en réalité des bibliothèques CLR ou COM (normalement des DLL) écrites en C# (ou dans tout autre langage CLR ou COM). Par conséquent, le débogage d'une procédure stockée n'est pas sans ressembler à celui des autres applications dans l'environnement de débogage de Visual Studio. Pour déboguer les procédures stockées, l'environnement de développement de Visual Studio met à votre disposition ses fonctions de débogage intégrées. Ces fonctions vous permettent d'arrêter l'exécution aux emplacements des procédures, d'inspecter des valeurs en mémoire et dans le Registre, de modifier des variables, d'observer les échanges de messages et de regarder de près comment votre code fonctionne.  
@@ -46,9 +46,9 @@ ms.locfileid: "36153812"
   
     2.  Dans le **attacher toProcess** boîte de dialogue, sélectionnez **afficher les processus de tous les utilisateurs**.  
   
-    3.  Dans le **processus disponibles** liste, dans le **processus** colonne, cliquez sur **Msmdsrv.exe**. S'il y a plus d'une instance de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] qui s'exécute sur le serveur, vous devez identifier le processus par l'identificateur de l'instance que vous souhaitez utiliser.  
+    3.  Dans le **processus disponibles** répertorier, dans le **processus** colonne, cliquez sur **Msmdsrv.exe**. S'il y a plus d'une instance de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] qui s'exécute sur le serveur, vous devez identifier le processus par l'identificateur de l'instance que vous souhaitez utiliser.  
   
-    4.  Dans le **attacher à** texte zone, assurez-vous que le type de programme approprié est sélectionné. Pour une DLL CLR, cliquez sur **sélectionnez**, puis cliquez sur **déboguer ces types de codes**, puis cliquez sur **Managed**, puis cliquez sur **OK**. Pour une DLL COM, cliquez sur **sélectionnez**, puis cliquez sur **déboguer ces types de codes**, puis cliquez sur **natif**, puis cliquez sur **OK**.  
+    4.  Dans le **attacher à** texte zone, assurez-vous que le type de programme approprié est sélectionné. Pour une DLL CLR, cliquez sur **sélectionnez**, puis cliquez sur **déboguer ces types de codes**, puis cliquez sur **managé**, puis cliquez sur **OK**. Pour une DLL COM, cliquez sur **sélectionnez**, puis cliquez sur **déboguer ces types de codes**, puis cliquez sur **natif**, puis cliquez sur **OK**.  
   
     5.  Cliquez sur **attacher**.  
   

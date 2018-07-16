@@ -1,5 +1,5 @@
 ---
-title: Boîte de dialogue Propriétés du texte zone, alignement (Générateur de rapports et SSRS) | Documents Microsoft
+title: Boîte de dialogue Propriétés du texte zone, alignement (Générateur de rapports et SSRS) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.rtp.rptdesigner.textboxproperties.alignment.f1
 - "10125"
 ms.assetid: 12a18ad3-a578-4ec2-813b-841b96c327b0
 caps.latest.revision: 9
-author: douglaslM
+author: maggiesmsft
 ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: bf6aec0a4375c495f49d4ad0484c1893ef4ccdc0
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: c981605bf2f7473fdd24ba10e167f970c1aac8b5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36043307"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37214649"
 ---
 # <a name="text-box-properties-dialog-box-alignment-report-builder-and-ssrs"></a>Boîte de dialogue Propriétés de la zone de texte, Alignement (Générateur de rapports et SSRS)
   Sélectionnez **Alignement** dans la boîte de dialogue **Propriétés de la zone de texte** pour positionner les valeurs dans une cellule ou région de données sélectionnée.  
@@ -43,7 +43,7 @@ ms.locfileid: "36043307"
  **Top**  
  Spécifiez la marge intérieure, ou l'espacement, à insérer entre le bord supérieur d'une cellule et la valeur affichée dans celle-ci. La valeur par défaut est 2 points. Cliquez sur le bouton **Expression** (*fx*) pour modifier l’expression.  
   
- **Bas**  
+ **En bas**  
  Spécifiez la marge intérieure, ou l'espacement, à insérer entre le bord inférieur d'une cellule et la valeur affichée dans celle-ci. La valeur par défaut est 2 points. Cliquez sur le bouton **Expression** (*fx*) pour modifier l’expression.  
   
 ## <a name="see-also"></a>Voir aussi  

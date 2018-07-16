@@ -1,5 +1,5 @@
 ---
-title: Activer l’écriture différée de Dimension (Dimension) (Assistant Business Intelligence) | Documents Microsoft
+title: Activer l’écriture différée de Dimension (Dimension) (Assistant Business Intelligence) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.biwizard.setdimensionwritebackcapability.selectdimension.f1
 ms.assetid: 85ed1433-81f9-468a-a14d-60c6f82bee76
 caps.latest.revision: 25
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 5ee405b5713fb1b0bfafa9cc90591e5f6c54ffed
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 2e97461aa391163f2d45a108909a9935cf1ad6ee
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36155150"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37224830"
 ---
 # <a name="enable-dimension-writeback-dimension-business-intelligence-wizard"></a>Activer l'écriture différée de la dimension (Dimension) (Assistant Business Intelligence)
   Utilisez la page **Activer l'écriture différée de la dimension** pour sélectionner une dimension pour laquelle l'Assistant Business Intelligence activera l'écriture différée.  
@@ -34,7 +34,7 @@ ms.locfileid: "36155150"
  Sélectionnez la dimension pour laquelle l'Assistant activera l'écriture différée.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Aide F1 l’Assistant Business Intelligence](business-intelligence-wizard-f1-help.md)   
+ [L’Assistant Business Intelligence F1](business-intelligence-wizard-f1-help.md)   
  [Concepteur de cube &#40;Analysis Services - données multidimensionnelles&#41;](cube-designer-analysis-services-multidimensional-data.md)   
  [Concepteur de dimensions &#40;Analysis Services - données multidimensionnelles&#41;](dimension-designer-analysis-services-multidimensional-data.md)   
  [Activer l’écriture différée de la dimension](multidimensional-models/bi-wizard-enable-dimension-writeback.md)  

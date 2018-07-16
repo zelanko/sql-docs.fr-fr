@@ -1,5 +1,5 @@
 ---
-title: Type de données ClrAssembly (ASSL) | Documents Microsoft
+title: Type de données ClrAssembly (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - ClrAssembly data type
 ms.assetid: 3f5dc5a1-ebd6-41b8-ac04-91d4de137eb4
 caps.latest.revision: 44
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: e17992a5d15113ec0de5dd75978f932cb83d11c8
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 63809f3dd903878baf5eabf1642430fbe0d9aa8e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36043950"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37235579"
 ---
 # <a name="clrassembly-data-type-assl"></a>Type de données ClrAssembly (ASSL)
   Définit un type de données dérivé qui représente un [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] assembly associé à un [base de données](../objects/database-element-assl.md) ou [Server](../objects/server-element-assl.md) élément  
@@ -50,7 +50,7 @@ ms.locfileid: "36043950"
   
 |Caractéristique|Description|  
 |--------------------|-----------------|  
-|Types de données de base|[assembly](../objects/assembly-element-assl.md)|  
+|Types de données de base|[Assembly](../objects/assembly-element-assl.md)|  
 |Types de données dérivés|None|  
   
 ## <a name="data-type-relationships"></a>Relations du type de données  
@@ -62,18 +62,18 @@ ms.locfileid: "36043950"
 |Éléments dérivés|Consultez [Assembly](../objects/assembly-element-assl.md) ([assemblys](../collections/assemblies-element-assl.md) collection de [base de données](../objects/database-element-assl.md) ou [Server](../objects/server-element-assl.md))|  
   
 ## <a name="remarks"></a>Notes  
- Le `ClrAssembly` élément contient les fichiers nécessaires pour recréer un [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] assembly, associés à une instance de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] ou avec une base de données spécifique sur une instance de [!INCLUDE[ssAS](../../../includes/ssas-md.md)], ainsi que le autorisations nécessaires pour exécuter l’assembly.  
+ Le `ClrAssembly` élément contient les fichiers nécessaires pour recréer un [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] assembly, associés soit à une instance de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] ou avec une base de données spécifique sur une instance de [!INCLUDE[ssAS](../../../includes/ssas-md.md)], ainsi que le autorisations nécessaires pour exécuter l’assembly.  
   
  L’élément correspondant dans le modèle d’objet objets AMO (Analysis Management) est <xref:Microsoft.AnalysisServices.ClrAssembly>.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Élément de fichier &#40;ASSL&#41;](../objects/file-element-assl.md)   
+ [Fichier d’élément &#40;ASSL&#41;](../objects/file-element-assl.md)   
  [Type de données ClrAssemblyFile &#40;ASSL&#41;](clrassemblyfile-data-type-assl.md)   
  [Élément de données &#40;ASSL&#41;](../objects/data-element-assl.md)   
  [Type de données DataBlock &#40;ASSL&#41;](datablock-data-type-assl.md)   
  [Bloque l’élément &#40;ASSL&#41;](../collections/blocks-element-assl.md)   
  [Bloquer l’élément &#40;ASSL&#41;](../objects/block-element-assl.md)   
  [Type de données ComAssembly &#40;ASSL&#41;](assembly-data-type-assl.md)   
- [Types de données de script langage XML Analysis Services &#40;ASSL&#41;](analysis-services-scripting-language-xml-data-types-assl.md)  
+ [Types Analysis Services Scripting Language XML données &#40;ASSL&#41;](analysis-services-scripting-language-xml-data-types-assl.md)  
   
   

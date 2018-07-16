@@ -1,5 +1,5 @@
 ---
-title: Plusieurs Transactions | Documents Microsoft
+title: Plusieurs Transactions | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - transactions [Integration Services], multiple
 - multiple transactions
 ms.assetid: c3664a94-be89-40c0-a3a0-84b74a7fedbe
 caps.latest.revision: 31
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: c98fa7454a1a01ee6879a514f369e6fb6c1a0570
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: aa4e3015365166fc827170f021292a65d5d52dc7
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36042542"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37219509"
 ---
 # <a name="multiple-transactions"></a>Transactions multiples
   Il est possible qu'un package inclue des transactions non liées entre elles dans un package [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]. Chaque fois qu'un conteneur, au milieu d'une hiérarchie de conteneurs imbriquée, ne prend pas en charge les transactions, les conteneurs au-dessus et au-dessous de lui dans la hiérarchie démarrent des transactions distinctes s'ils sont configurés pour prendre en charge les transactions. Les transactions sont validées ou annulées dans l'ordre, de la tâche la plus imbriquée dans la hiérarchie de conteneurs jusqu'au package. Cependant, si une transaction interne est validée, elle n'est pas annulée si une transaction externe est abandonnée.  
@@ -43,6 +43,6 @@ ms.locfileid: "36042542"
  ![Implémentation de plusieurs transactions](media/mw-dts-trans2.gif "Implémentation de plusieurs transactions")  
   
 ## <a name="related-tasks"></a>Related Tasks  
- [Configurer un Package pour utiliser des Transactions](../relational-databases/native-client-ole-db-transactions/transactions.md)  
+ [Configurer un package pour l’utilisation de transactions](../relational-databases/native-client-ole-db-transactions/transactions.md)  
   
   

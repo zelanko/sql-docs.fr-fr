@@ -1,5 +1,5 @@
 ---
-title: Options (éditeur de texte - Page Transact-SQL-général) | Documents Microsoft
+title: Options (éditeur de texte - Page de Transact-SQL-général) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - VS.ToolsOptionsPages.Text_Editor.SQL.General
 dev_langs:
@@ -17,15 +17,15 @@ ms.assetid: 7021ecb7-8fb5-4d8c-b984-3d34fcde8be2
 caps.latest.revision: 15
 author: craigg-msft
 ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: d25699b25ec9bcde2a2df2bc1115a1e3f752c035
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: c3732baa8de28448b578673ead90e9cbfa62abba
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36043415"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37257205"
 ---
-# <a name="options-text-editor---transact-sql--general-page"></a>Options (éditeur de texte - Page Transact-SQL-général)
+# <a name="options-text-editor---transact-sql--general-page"></a>Options (éditeur de texte - Page de Transact-SQL-général)
   Utilisez la boîte de dialogue d’options **Général** pour modifier le comportement d’édition général de l’Éditeur de requête [!INCLUDE[ssDE](../includes/ssde-md.md)], qui permet de modifier des scripts [!INCLUDE[tsql](../includes/tsql-md.md)]. Pour afficher ces paramètres, cliquez sur **Options** dans le menu **Outils**, développez le sous-dossier **Transact-SQL**, puis cliquez sur **Général**.  
   
 ## <a name="setting-options-in-multiple-locations"></a>Définition d'options en plusieurs emplacements  
@@ -45,13 +45,13 @@ ms.locfileid: "36043415"
  **Activer l’espace virtuel**  
  Lorsque cette case à cocher est activée, vous pouvez cliquer au-delà de la fin d'une ligne de code et taper du texte. Activez cette case à cocher pour placer des commentaires à un point cohérent, en regard de votre code. Activer cette case à cocher désactive la case à cocher **Retour automatique à la ligne**.  
   
- **Retour automatique à la**  
+ **Le retour automatique à**  
  Lorsque cette case à cocher est activée, toute partie d'une ligne qui s'étend horizontalement au-delà de la zone visible de l'éditeur est affichée automatiquement à la ligne suivante. Cocher cette case coche la case **Afficher des glyphes visuels pour le retour automatique à la ligne** et décoche la case **Activer l’espace virtuel**.  
   
  **Afficher des glyphes visuels pour le retour automatique à**  
  Lorsque cette case à cocher est activée, une flèche retour est affichée si une ligne longue nécessite un retour automatique à la ligne suivante.  
   
- **Appliquer les commandes Couper ou copier aux lignes vides lorsqu’il n’existe aucune sélection**  
+ **Appliquer les commandes Couper ou copier aux lignes vides lors de l’absence de sélection**  
  Cette case à cocher définit le comportement de l'éditeur lorsque vous placez le point d'insertion sur une ligne vide, n'effectuez aucune sélection et cliquez sur **Copier** ou **Couper**.  
   
  Lorsque cette case à cocher est activée, la ligne vide est copiée ou coupée. Si vous cliquez ensuite sur **Coller**, une nouvelle ligne vide est insérée.  
@@ -67,7 +67,7 @@ ms.locfileid: "36043415"
 > [!NOTE]  
 >  Ces numéros de ligne ne sont pas ajoutés à votre code et ne s'impriment pas. Ils servent de référence uniquement.  
   
- **Activer la navigation dans les URL par simple clic**  
+ **Activer la navigation dans les URL simple clic**  
  Lorsque cette case à cocher est activée, le curseur est remplacé par une main avec un doigt tendu lorsqu'il passe sur une URL dans l'éditeur. Vous pouvez alors cliquer sur l'URL pour afficher la page correspondante dans votre navigateur Web.  
   
  **Barre de navigation**  

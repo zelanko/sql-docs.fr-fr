@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 41ac0e62-860a-4905-a318-68d6f814fb59
 caps.latest.revision: 9
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: f87fe62b7d723111231ecffc4e1c927478b8b516
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: fc94ad9ffcd37479df2fa1379f4872b9ee3aa5e7
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36041401"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37283375"
 ---
 # <a name="integration-management-functional-area-master-data-manager"></a>Zone fonctionnelle Gestion de l'intégration (Master Data Manager)
   Dans la zone fonctionnelle Gestion de l'intégration, les administrateurs peuvent importer les données des tables de mise en lots et créer des vues d'abonnement à utiliser pour les systèmes d'abonnement. Pour plus d’informations sur les administrateurs, consultez [Administrateurs &#40;Master Data Services&#41;](administrators-master-data-services.md).  
