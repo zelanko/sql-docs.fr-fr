@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - dbe-xml
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - xsd:simpleType declarations
 ms.assetid: 557b972d-3af9-40bf-8382-72b05c9de1c1
 caps.latest.revision: 13
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 98c767dcc5ce3bc7a0ce9b19755c043f97ce9872
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 14423da54a9890c7c286f5f997580f49931d1934
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36039456"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37290315"
 ---
 # <a name="values-for-ltxsdsimpletypegt-declarations"></a>Valeurs pour les déclarations &lt;xsd:simpleType&gt;
   Le tableau suivant décrit les restrictions appliquées, sur la base de toutes les énumérations de types simples XSD reconnus.  
@@ -30,7 +30,7 @@ ms.locfileid: "36039456"
   
 |Type simple|Limitation|  
 |-----------------|----------------|  
-|`duration`|La partie année doit figurer dans la plage de -2<sup>^</sup>31 et 2<sup>^</sup>31-1. Le mois, le jour, l'heure, la minute et la seconde doivent tous être compris dans la plage de 0 à 9999. La partie secondes possède trois chiffres supplémentaires de précision à droite de la virgule décimale.|  
+|`duration`|La partie année doit être comprise entre-2<sup>^</sup>31 et 2<sup>^</sup>31-1. Le mois, le jour, l'heure, la minute et la seconde doivent tous être compris dans la plage de 0 à 9999. La partie secondes possède trois chiffres supplémentaires de précision à droite de la virgule décimale.|  
 |`dateTime`|La partie heure dans le sous-champ de fuseau horaire doit être comprise dans la plage acceptée de -14 à +14. La partie année doit figurer dans la plage comprise entre 1 et 9999. La partie mois doit figurer dans la plage comprise entre 1 et 12. La partie jour doit figurer dans la plage comprise entre 1 et 31 et doit être une date calendaire valide. Par exemple, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] détecte une date non valide telle que 1974-02-31 et retourne une erreur puisque le mois de février ne contient pas 31 jours.<br /><br /> Le composant seconde prend en charge une précision de 100 nanosecondes. L'indication de fuseau horaire est facultative.<br /><br /> SQL Server 2005 prenait en charge les années comprises dans la plage de -9999 à 9999. SQL Server prend maintenant en charge une plage d'années plus restreinte. Pour plus d’informations, consultez [Comparer du XML typé et du XML non typé](compare-typed-xml-to-untyped-xml.md).|  
 |`date`|La partie année doit figurer dans la plage comprise entre 1 et 9999. La partie mois doit figurer dans la plage comprise entre 1 et 12. La partie jour doit figurer dans la plage comprise entre 1 et 31 et doit être une date calendaire valide. Par exemple, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] détecte une date non valide telle que 1974-02-31 et retourne une erreur puisque le mois de février ne contient pas 31 jours.<br /><br /> SQL Server 2005 prenait en charge les années comprises dans la plage de -9999 à 9999. SQL Server prend maintenant en charge une plage d'années plus restreinte. Pour plus d’informations, consultez [Comparer du XML typé et du XML non typé](compare-typed-xml-to-untyped-xml.md).|  
 |`gYearMonth`|La partie année doit figurer dans la plage comprise entre -9999 et 9999.|  

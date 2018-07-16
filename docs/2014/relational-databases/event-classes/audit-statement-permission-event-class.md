@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 topic_type:
 - apiref
 helpviewer_keywords:
 - Audit Statement Permission event class
 ms.assetid: 84ababe0-166e-4b1e-903b-bee6c1f005e7
 caps.latest.revision: 31
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 57d487c769079d3306cba03f413041b4f44bda9f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 7bf2b5a600bf3f04fac1c48a3113ff6c22441235
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36153244"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37271095"
 ---
 # <a name="audit-statement-permission-event-class"></a>Audit Statement Permission (classe d'événements)
   La classe d’événements **Audit Statement Permission** se produit à chaque utilisation d’une autorisation d’instruction (telle que CREATE TABLE).  

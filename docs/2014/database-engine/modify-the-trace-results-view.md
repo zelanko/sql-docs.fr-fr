@@ -1,5 +1,5 @@
 ---
-title: Modifier la vue des résultats de Trace | Documents Microsoft
+title: Modifier la vue des résultats de Trace | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 860a80dc-bac0-4ef0-bf7f-7a9b430d7aa3
 caps.latest.revision: 13
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 5bb647bb704bee1b33eee00c9b13903d48140ff7
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: a2c1e9c9c2d0041e2e09156e4f33744ea1964812
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36041860"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37302759"
 ---
 # <a name="modify-the-trace-results-view"></a>Modifier la vue des résultats de trace
   Cette rubrique explique comment modifier la vue des résultats de trace d'une session événements étendus dans [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] en effectuant les tâches suivantes.  
@@ -36,7 +36,7 @@ ms.locfileid: "36041860"
   
 6.  [Filtrer les résultats](#Filter)  
   
-7.  [Rechercher du texte dans des colonnes](#Search)  
+7.  [Rechercher du texte dans les colonnes](#Search)  
   
 8.  [Modifier les paramètres d’affichage](#ChangeDisplay)  
   
@@ -121,7 +121,7 @@ ms.locfileid: "36041860"
   
      Si vous avez regroupé des colonnes, le tri de la colonne ne concerne que les données du groupe.  
   
-##  <a name="GroupResults"></a> Résultats de groupe  
+##  <a name="GroupResults"></a> Regrouper des résultats  
   
 #### <a name="to-group-the-results-by-a-single-column"></a>Pour regrouper les résultats par une seule colonne  
   
@@ -149,7 +149,7 @@ ms.locfileid: "36041860"
   
 4.  Cliquez sur **OK**.  
   
-##  <a name="AggregateResults"></a> Résultats de regroupement  
+##  <a name="AggregateResults"></a> Agréger les résultats  
  Les événements étendus prennent en charge cinq fonctions d'agrégation :  
   
 -   SUM  
@@ -214,7 +214,7 @@ ms.locfileid: "36041860"
   
 -   Si ni l'action ni le champ existent, NULL est affiché.  
   
-##  <a name="Search"></a> Rechercher du texte dans des colonnes  
+##  <a name="Search"></a> Rechercher du texte dans les colonnes  
   
 1.  Ouvrez un fichier .XEL pour consulter les résultats de trace.  
   

@@ -1,5 +1,5 @@
 ---
-title: SQL Server fonctionnalités abandonnées dans SQL Server 2014 | Documents Microsoft
+title: SQL Server fonctionnalités abandonnées dans SQL Server 2014 | Microsoft Docs
 ms.custom: ''
 ms.date: 05/24/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 0678bfbc-5d3f-44f4-89c0-13e8e52404da
 caps.latest.revision: 28
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: b842b9a3a98dd69d04f76ce26ccc84d6ec008822
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mightypen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: 99223e87f7d4488783ad76b355f38249d51a82af
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36041442"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37322749"
 ---
 # <a name="discontinued-sql-server-features-in-sql-server-2014"></a>Fonctionnalités SQL Server supprimées dans SQL Server 2014
   Cette rubrique décrit des fonctionnalités qui ne sont plus disponibles dans [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)].  
@@ -39,7 +39,7 @@ ms.locfileid: "36041442"
 ## <a name="discontinued-features-in-sql-server-2008-r2"></a>Fonctionnalités supprimées dans SQL Server 2008 R2  
   
 ### <a name="64-bit-platform-support-in-reporting-services"></a>Support de plate-forme 64 bits dans Reporting Services  
- À compter de [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)], le [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] composant n’est plus prise en charge que les serveurs basés sur Itanium exécutant Windows Server 2003 ou Windows Server 2003 R2. [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] continue à prendre en charge d'autres systèmes d'exploitation 64 bits, notamment Windows Server 2008 et Windows Server 2008 R2 pour les systèmes Itanium. Pour effectuer une mise à niveau vers [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] à partir d'une installation [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] avec [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] sur une édition de système Itanium de Windows Server 2003 ou Windows Server 2003 R2, vous devez commencer par mettre à niveau le système d'exploitation.  
+ À compter de [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)], le [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] composant n’est plus prend en charge que les serveurs Itanium qui exécutent Windows Server 2003 ou Windows Server 2003 R2. [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] continue à prendre en charge d'autres systèmes d'exploitation 64 bits, notamment Windows Server 2008 et Windows Server 2008 R2 pour les systèmes Itanium. Pour effectuer une mise à niveau vers [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] à partir d'une installation [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] avec [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] sur une édition de système Itanium de Windows Server 2003 ou Windows Server 2003 R2, vous devez commencer par mettre à niveau le système d'exploitation.  
   
 ## <a name="discontinued-features-in-sql-server-2008"></a>Fonctionnalités supprimées dans SQL Server 2008  
   
@@ -52,7 +52,7 @@ ms.locfileid: "36041442"
 ### <a name="surface-area-configuration-tool"></a>Outil de Configuration de la surface d’exposition  
  L’outil de Configuration de la surface n’est plus disponible pour [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)]. La table suivante indique ce que vous pouvez utiliser pour configurer des paramètres, des options et des fonctionnalités de composant dans cette version.  
   
-|Paramètres de remplacement et les fonctionnalités de composant|Comment configurer|  
+|Paramètres de remplacement et des fonctionnalités de composant|Comment configurer|  
 |-------------------------------------------------|----------------------|  
 |Protocoles, connexion et options de démarrage|Utilisez le Gestionnaire de configuration [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].|  
 |Fonctionnalités [!INCLUDE[ssDE](../includes/ssde-md.md)]|Utilisez la Gestion basée sur une stratégie, les paramètres de propriétés dans [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] ou sp_Configure.|  
@@ -82,7 +82,7 @@ ms.locfileid: "36041442"
   
  <sup>1</sup>ces paramètres sont valides uniquement pour l’installation.  
   
- <sup>2</sup>départ [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)], spécifiez/action = EditionUpgrade, pour mettre à niveau une édition existante de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] vers une autre édition de n’importe quel moment sans l’aide du support d’installation d’origine. Pour plus d'informations sur les mises à niveau des versions et éditions prises en charge, consultez [Supported Version and Edition Upgrades](../database-engine/install-windows/supported-version-and-edition-upgrades.md).  
+ <sup>2</sup>démarrage [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)], spécifiez/action = EditionUpgrade, pour mettre à niveau une édition existante de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] vers une autre édition tout moment sans utiliser le support d’installation d’origine. Pour plus d'informations sur les mises à niveau des versions et éditions prises en charge, consultez [Supported Version and Edition Upgrades](../database-engine/install-windows/supported-version-and-edition-upgrades.md).  
   
  Pour plus d’informations, consultez [Installer SQL Server 2014 à partir de l’invite de commandes](../database-engine/install-windows/install-sql-server-from-the-command-prompt.md).  
   

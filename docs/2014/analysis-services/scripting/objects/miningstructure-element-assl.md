@@ -1,5 +1,5 @@
 ---
-title: Élément MiningStructure (ASSL) | Documents Microsoft
+title: Élément MiningStructure (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - MiningStructure element
 ms.assetid: b943cd92-0ed8-4bd8-8fbc-7dab0534aede
 caps.latest.revision: 48
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 5298c78f1902ee9a8fb1ed12ecf066092a02d938
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: ed39aafbe937c637abd7a6ec67fbd7343b62b116
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36152904"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37271825"
 ---
 # <a name="miningstructure-element-assl"></a>Élément MiningStructure (ASSL)
   Définit la structure d'un ensemble de modèles d'exploration de données.  
@@ -88,9 +88,9 @@ ms.locfileid: "36152904"
 >  Les propriétés d'exclusion, `HoldoutMaxCases`, `HoldoutMaxPercent`, `HoldoutSeed` et `HoldoutActualSize` ont été introduites dans [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)]. Elles vous permettent de définir une partition sur une structure d'exploration de données qui joue le rôle de jeu de test pour tous les modèles d'exploration de données associés à la structure. [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] ne prend pas en charge ces propriétés. Par conséquent, si vous essayez d'utiliser ces propriétés sur une instance de [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] retourne une erreur.  
   
 ## <a name="drillthrough-to-structure-columns"></a>Extraction dans des colonnes de structure  
- Dans [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)], un nouvel élément d’autorisation a été ajouté à la [MiningStructurePermissions élément &#40;ASSL&#41; ](../collections/miningstructurepermissions-element-assl.md) collection. Si vous ajoutez `AllowDrillthrough` autorisation à la fois à la [MiningStructurePermissions](../collections/miningstructurepermissions-element-assl.md) et [MiningModelPermission](miningmodelpermission-element-assl.md) collections, l’extraction est activée à partir du modèle d’exploration de données à la structure, de manière que les membres d’un rôle qui a `AllowDrillthrough` les autorisations sur le modèle peuvent interroger le modèle d’exploration de données et retourner les colonnes de structure qui n’étaient pas incluses dans le modèle.  
+ Dans [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)], un nouvel élément d’autorisation a été ajouté à la [MiningStructurePermissions élément &#40;ASSL&#41; ](../collections/miningstructurepermissions-element-assl.md) collection. Si vous ajoutez `AllowDrillthrough` autorisation à la fois à la [MiningStructurePermissions](../collections/miningstructurepermissions-element-assl.md) et [MiningModelPermission](miningmodelpermission-element-assl.md) collections, d’extraction est activée à partir du modèle d’exploration de données à la structure, de manière que les membres d’un rôle ayant `AllowDrillthrough` autorisations sur le modèle peuvent interroger le modèle d’exploration de données et retourner des colonnes de structure qui n’étaient pas incluses dans le modèle.  
   
- Par conséquent, pour protéger les données sensibles ou personnelles, vous devez construire votre vue de source de données pour masquer des informations sensibles et accorder `AllowDrillthrough` autorisation sur une structure d’exploration de données uniquement lorsque cela est nécessaire. Pour plus d’informations, consultez [AllowDrillThrough élément &#40;ASSL&#41;](../properties/allowdrillthrough-element-assl.md).  
+ Par conséquent, pour protéger les données sensibles ou personnelles, vous devez construire votre vue de source de données pour masquer les informations sensibles et accorder `AllowDrillthrough` autorisation sur une structure d’exploration de données uniquement lorsque cela est nécessaire. Pour plus d’informations, consultez [AllowDrillThrough élément &#40;ASSL&#41;](../properties/allowdrillthrough-element-assl.md).  
   
  L’élément correspondant dans le modèle d’objet objets AMO (Analysis Management) est <xref:Microsoft.AnalysisServices.MiningStructure>.  
   

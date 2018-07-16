@@ -16,15 +16,15 @@ helpviewer_keywords:
 - data processing extensions [Reporting Services], connections
 ms.assetid: 7047d29e-a2c9-4e6f-ad02-635851a38ed7
 caps.latest.revision: 41
-author: douglaslM
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: b344f22d800227f1c022186f3678cfa5ac7ce695
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: 9be8bc7507cad3a44b4330cc3c49a00abc1953e0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36042174"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37309339"
 ---
 # <a name="implementing-a-connection-class-for-a-data-processing-extension"></a>Implémentation d'une classe Connection pour une extension pour le traitement des données
   L’objet **Connection** représente une connexion de base de données ou une ressource similaire et représente le point de départ pour les utilisateurs d’une extension pour le traitement des données [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]. Il représente des connexions aux serveurs de base de données, bien que toute entité ayant un comportement similaire puisse être exposée comme un objet **Connection**.  

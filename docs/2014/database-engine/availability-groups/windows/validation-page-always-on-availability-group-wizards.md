@@ -1,14 +1,13 @@
 ---
-title: Page de validation (Assistants de groupe de disponibilité AlwaysOn) | Documents Microsoft
+title: Page validation (Assistants de groupe de disponibilité AlwaysOn) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.newagwizard.validation.f1
 - sql12.swb.addreplicawizard.validation.f1
@@ -17,17 +16,17 @@ helpviewer_keywords:
 - ', listeners'
 ms.assetid: c8971556-240c-491a-bc86-9cc72f71a3dd
 caps.latest.revision: 13
-author: MikeRayMSFT
-ms.author: mikeray
-manager: jhubbard
-ms.openlocfilehash: 6a786543983739efe940631ab05be4d41ab5798e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 75d7350d12f2132a69e74f78223f844ba7580b42
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36144159"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37280245"
 ---
-# <a name="validation-page-alwayson-availability-group-wizards"></a>Page de validation (Assistants de groupe de disponibilité AlwaysOn)
+# <a name="validation-page-alwayson-availability-group-wizards"></a>Page validation (Assistants de groupe de disponibilité AlwaysOn)
   Cette rubrique d’aide décrit les options de la page **Validation** . Cette rubrique s'applique à l' [!INCLUDE[ssAoNewAgWiz](../../../includes/ssaonewagwiz-md.md)], à l' [!INCLUDE[ssAoAddRepWiz](../../../includes/ssaoaddrepwiz-md.md)]et à l' [!INCLUDE[ssAoAddDbWiz](../../../includes/ssaoadddbwiz-md.md)] de [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. Utilisez cette page pour confirmer que votre environnement prend en charge tous les choix de configuration que vous avez apportés dans les pages précédentes de l'Assistant.  
   
 ##  <a name="PageOptions"></a> Options de la page Validation  

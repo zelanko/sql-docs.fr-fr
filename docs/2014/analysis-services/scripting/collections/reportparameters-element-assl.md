@@ -1,5 +1,5 @@
 ---
-title: Élément ReportParameters (ASSL) | Documents Microsoft
+title: Élément ReportParameters (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,18 +22,18 @@ helpviewer_keywords:
 - ReportParameters element
 ms.assetid: 0e138e8f-8313-47f2-96e1-cd189eec26bb
 caps.latest.revision: 28
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 96337ac9f31e654d88bef1b0ae077f7a73171ec2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 004b23b3cbd2aa22dff73514b03257ac50dddd8e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36039793"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37282105"
 ---
 # <a name="reportparameters-element-assl"></a>Élément ReportParameters (ASSL)
-  Contient la collection de [ReportParameter](../objects/reportparameter-element-assl.md) éléments pour une [ReportAction](../data-type/action-data-type-assl.md) élément.  
+  Contient la collection de [ReportParameter](../objects/reportparameter-element-assl.md) éléments pour un [ReportAction](../data-type/action-data-type-assl.md) élément.  
   
 ## <a name="syntax"></a>Syntaxe  
   

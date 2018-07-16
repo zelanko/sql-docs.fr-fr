@@ -1,5 +1,5 @@
 ---
-title: Incorporée et partagée des connexions de données ou Sources de données (Générateur de rapports et SSRS) | Documents Microsoft
+title: Incorporée et partagée des connexions de données ou Sources de données (Générateur de rapports et SSRS) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - embedded data sources
 - shared data sources
 - data sources
 ms.assetid: f417782c-b85a-4c4d-8a40-839176daba56
 caps.latest.revision: 28
-author: douglaslM
+author: maggiesmsft
 ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 6c75ca2d608e54df537ec5bc37f7f84312d5955c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: f83f7b150fb709e4b6716f8a49d802949a62e9dc
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36044690"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37282635"
 ---
 # <a name="embedded-and-shared-data-connections-or-data-sources-report-builder-and-ssrs"></a>Connexions de données ou sources de données incorporées et partagées (Générateur de rapports et SSRS)
   Les rapports utilisent des connexions de données pour récupérer les données nécessaires lorsqu'une requête s'exécute ou lorsque le rapport est traité. Dans la liste correspondante, choisissez un type de connexion de données intégré pour vous connecter à une base de données relationnelle, une base de données multidimensionnelle, un service Web ou toute autre source de données. Les termes suivants sont utilisés lors de la description des connexions de données.  
@@ -52,12 +52,12 @@ ms.locfileid: "36044690"
   
  Dans le Concepteur de rapports, vous ne pouvez pas rechercher une source de données partagée située sur le serveur de rapports. Vous pouvez créer des sources de données partagées dans le cadre d'un projet au sein de l'Explorateur de solutions, puis déterminer s'il convient de les déployer sur un serveur de rapports. Vous pouvez choisir de les utiliser localement uniquement, en raison des différences en matière d'informations d'identification requises sur votre ordinateur ou le serveur de rapports. Pour plus d’informations, consultez [Connexions de données, sources de données et chaînes de connexion dans Reporting Services](../../2014/reporting-services/data-connections-data-sources-and-connection-strings-in-reporting-services.md).  
   
- L’icône suivante indique un élément de source de données partagée dans la hiérarchie de dossiers de serveur de rapports : ![icône de source de données partagée](media/hlp-16datasource.png "icône de source de données partagée")  
+ L’icône suivante indique un élément de source de données partagée dans l’arborescence de dossiers de serveur de rapports : ![icône de source de données partagée](media/hlp-16datasource.png "icône de source de données partagée")  
   
 ## <a name="embedded-data-sources"></a>Sources de données incorporées  
  Une source de données incorporée est une connexion de données enregistrée dans la définition de rapport. Les informations de connexion à la source de données incorporée peuvent être utilisées uniquement par le rapport dans lequel elles sont incorporées. Pour définir et gérer des sources de données incorporées, utilisez la boîte de dialogue **Propriétés de la source de données** .  
   
-##  <a name="Comparing"></a> Comparaison incorporée et Sources de données partagées  
+##  <a name="Comparing"></a> Comparaison incorporé et Sources de données partagées  
  Le tableau suivant indique les différences entre les sources de données incorporées et partagées :  
   
 |Description|Source de données<br /><br /> Source de données|Partagés<br /><br /> Data Source|  
@@ -72,10 +72,10 @@ ms.locfileid: "36044690"
  Les informations d'identification sont utilisées pour créer une source de données incorporée, exécuter une requête ou récupérer des données lors du traitement d'un rapport. Le propriétaire de la source de données détermine le type d'informations d'identification à utiliser pour accéder aux données. Les informations d'identification sont gérées indépendamment de la connexion de données sur un serveur de rapports, un site SharePoint ou un ordinateur local, au sein d'un environnement de création de rapports. Selon le type de source de données, les informations d'identification peuvent être enregistrées à des fins d'automatisation, ou définies pour être demandées à chaque utilisateur. Les informations d'identification nécessaires peuvent différer selon que vous vous connectez à la source de données à partir de votre ordinateur ou à partir du serveur de rapports. Pour plus d’informations, consultez [spécifier les informations d’identification dans le Générateur de rapports](../../2014/reporting-services/specify-credentials-in-report-builder.md) et [des connexions de données, les Sources de données et les chaînes de connexion dans Reporting Services](../../2014/reporting-services/data-connections-data-sources-and-connection-strings-in-reporting-services.md).  
   
 ## <a name="see-also"></a>Voir aussi  
- [Ajouter des données à un rapport &#40;rapport Générateur et SSRS&#41;](report-data/report-datasets-ssrs.md)   
- [Concepts de création de rapports &#40;rapport Générateur et SSRS&#41;](report-design/report-authoring-concepts-report-builder-and-ssrs.md)   
- [Sources de données pris en charge par Reporting Services &#40;SSRS&#41;](create-deploy-and-manage-mobile-and-paginated-reports.md)   
- [Ajouter et vérifier une connexion de données ou une Source de données &#40;rapport Générateur et SSRS&#41;](report-data/add-and-verify-a-data-connection-report-builder-and-ssrs.md)   
+ [Ajouter des données à un rapport &#40;Générateur de rapports et SSRS&#41;](report-data/report-datasets-ssrs.md)   
+ [Concepts de création de rapports &#40;Générateur de rapports et SSRS&#41;](report-design/report-authoring-concepts-report-builder-and-ssrs.md)   
+ [Sources de données prises en charge par Reporting Services &#40;SSRS&#41;](create-deploy-and-manage-mobile-and-paginated-reports.md)   
+ [Ajouter et vérifier une connexion de données ou d’une Source de données &#40;Générateur de rapports et SSRS&#41;](report-data/add-and-verify-a-data-connection-report-builder-and-ssrs.md)   
  [Datasets incorporés et partagés &#40;Générateur de rapports et SSRS&#41;](report-data/embedded-and-shared-datasets-report-builder-and-ssrs.md)  
   
   

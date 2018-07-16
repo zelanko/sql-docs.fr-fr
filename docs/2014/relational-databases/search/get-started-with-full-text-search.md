@@ -5,10 +5,9 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-search
+ms.technology: search
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - full-text catalogs [SQL Server], creating
 - full-text indexes [SQL Server], creating
@@ -16,15 +15,15 @@ helpviewer_keywords:
 - full-text search [SQL Server], setting up
 ms.assetid: 1fa628ba-0ee4-4d8f-b086-c4e52962ca4a
 caps.latest.revision: 70
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: a4bdb94c371342a94c74e72a1cb1f33886fc0963
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: e9745635b277a53f724b61ff4143e41af47775a7
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36038754"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37324009"
 ---
 # <a name="get-started-with-full-text-search"></a>Commencer à utiliser la recherche en texte intégral
   Les bases de données dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] prennent en charge le texte intégral par défaut. Cependant, pour utiliser l'index de recherche en texte intégral dans une table, vous devez configurer l'outil d'indexation de texte intégral dans les colonnes des tables auxquelles vous souhaitez accéder via le moteur de texte intégral.  
@@ -38,7 +37,7 @@ ms.locfileid: "36038754"
   
     1.  Identifiez chaque colonne de texte que vous souhaitez inclure dans l'index de recherche en texte intégral.  
   
-    2.  Si une colonne donnée contient des documents stockés en tant que données binaires (`varbinary(max)`, ou `image` données), vous devez spécifier une colonne de table (le *colonne de type*) qui identifie le type de chaque document dans la colonne indexée.  
+    2.  Si une colonne donnée contient des documents stockés en tant que données binaires (`varbinary(max)`, ou `image` données), vous devez spécifier une colonne de table (la *colonne de type*) qui identifie le type de chaque document dans la colonne indexée.  
   
     3.  Spécifiez la langue à utiliser par la recherche en texte intégral sur les documents contenus dans la colonne.  
   
@@ -66,7 +65,7 @@ ms.locfileid: "36038754"
 |Sont groupés à l'intérieur d'une même base de données dans un ou plusieurs catalogues de texte intégral.|Ne sont pas groupés.|  
   
   
-##  <a name="options"></a> Choix des Options pour un Index de recherche en texte intégral  
+##  <a name="options"></a> Sélection des Options pour un Index de recherche en texte intégral  
  Cette section couvre ce qui suit :  
   
 -   Sélection du langage de la colonne  
@@ -105,14 +104,14 @@ ms.locfileid: "36038754"
 ### <a name="associating-a-stoplist-with-the-full-text-index"></a>Association d'une liste de mots vides à l'index de recherche en texte intégral  
  [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] introduit les listes de mots vides. Une *liste de mots vides* est une liste contenant des mots vides, également appelés mots parasites. Une liste de mots vides est associée à chaque index de recherche en texte intégral, et les mots contenus dans cette liste de mots vides s'appliquent aux requêtes de texte intégral sur cet index. Par défaut, la liste de mots vides système est associée à un nouvel index de recherche en texte intégral. Toutefois, vous pouvez créer et utiliser à la place votre propre liste de mots vides. Pour plus d’informations, consultez [Configurer et gérer les mots vides et listes de mots vides pour la recherche en texte intégral](configure-and-manage-stopwords-and-stoplists-for-full-text-search.md).  
   
- Par exemple, [CREATE FULLTEXT STOPLIST](/sql/t-sql/statements/create-fulltext-stoplist-transact-sql) [!INCLUDE[tsql](../../../includes/tsql-md.md)] instruction crée un nouveau stoplist de recherche en texte intégral nommée myStoplist3 en copiant à partir de la liste de mots vides système :  
+ Par exemple, ce qui suit [CREATE FULLTEXT STOPLIST](/sql/t-sql/statements/create-fulltext-stoplist-transact-sql) [!INCLUDE[tsql](../../../includes/tsql-md.md)] instruction crée un nouveau stoplist de recherche en texte intégral nommée myStoplist3 en copiant à partir de la liste de mots vides système :  
   
 ```  
 CREATE FULLTEXT STOPLIST myStoplist FROM SYSTEM STOPLIST;  
 GO  
 ```  
   
- Les éléments suivants [ALTER FULLTEXT STOPLIST](/sql/t-sql/statements/alter-fulltext-stoplist-transact-sql) [!INCLUDE[tsql](../../../includes/tsql-md.md)] instruction modifie une liste de mots vides nommée myStoplist en ajoutant le mot « en » en premier pour l’espagnol puis pour le Français :  
+ Ce qui suit [ALTER FULLTEXT STOPLIST](/sql/t-sql/statements/alter-fulltext-stoplist-transact-sql) [!INCLUDE[tsql](../../../includes/tsql-md.md)] instruction modifie une liste de mots vides nommée myStoplist en ajoutant le mot « en » en premier pour l’espagnol puis pour le Français :  
   
 ```  
 ALTER FULLTEXT STOPLIST MyStoplist ADD 'en' LANGUAGE 'Spanish';  

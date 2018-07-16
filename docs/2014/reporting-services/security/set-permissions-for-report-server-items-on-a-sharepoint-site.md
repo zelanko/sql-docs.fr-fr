@@ -1,5 +1,5 @@
 ---
-title: Définir des autorisations pour les éléments de serveur de rapports sur un Site SharePoint (Reporting Services en Mode intégré SharePoint) | Documents Microsoft
+title: Définir des autorisations pour les éléments de serveur de rapports sur un Site SharePoint (Reporting Services en Mode intégré SharePoint) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - permissions [Reporting Services], SharePoint integrated mode
 - SharePoint integration [Reporting Services], permissions
@@ -16,13 +16,13 @@ ms.assetid: 2467c657-a3bf-4ec3-a88c-8877df19823d
 caps.latest.revision: 13
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 6d66fc292fe1af7f20e55eee6b8d1fdf9e6151a2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 30a0f1e98fc1837acbf995a2a68376cd4dd8bd02
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36043770"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37282605"
 ---
 # <a name="set-permissions-for-report-server-items-on-a-sharepoint-site-reporting-services-in-sharepoint-integrated-mode"></a>Définir les autorisations sur les éléments de serveur de rapports sur un site SharePoint (Reporting Services en mode intégré SharePoint)
   Si les paramètres de sécurité par défaut n'offrent pas le niveau d'accès souhaité, vous pouvez créer des niveaux d'autorisation pour fournir un accès aux opérations ou éléments spécifiques d'un serveur de rapports. Les paramètres de sécurité personnalisés peuvent s'avérer utiles si vous souhaitez restreindre l'accès à un rapport particulier.  
@@ -76,7 +76,7 @@ ms.locfileid: "36043770"
 12. Cliquez sur **OK**. Une fois qu'un utilisateur a la possibilité de gérer des autorisations pour un modèle spécifique, celui-ci peut ouvrir le modèle pour modifier les autorisations dans le modèle.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Utiliser la sécurité intégrée de Windows SharePoint Services pour les éléments de serveur de rapports](use-built-in-security-in-windows-sharepoint-services-for-report-server-items.md)   
+ [Utiliser la sécurité intégrée dans Windows SharePoint Services pour les éléments de serveur de rapports](use-built-in-security-in-windows-sharepoint-services-for-report-server-items.md)   
  [Définir des autorisations pour des opérations de serveurs de rapports dans une application web SharePoint](set-permissions-for-report-server-operations-in-a-sharepoint-web-application.md)   
  [Comparer des rôles et des tâches dans Reporting Services avec les autorisations et les groupes SharePoint](../reporting-services-roles-tasks-vs-sharepoint-groups-permissions.md)   
  [Site SharePoint et List Permission Reference for Report Server Items](sharepoint-site-and-list-permission-reference-for-report-server-items.md)   

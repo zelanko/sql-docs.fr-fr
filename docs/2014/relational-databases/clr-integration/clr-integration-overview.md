@@ -1,13 +1,11 @@
 ---
-title: Vue d’ensemble de l’intégration du CLR | Documents Microsoft
+title: Vue d’ensemble de l’intégration du CLR | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: clr
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -20,15 +18,15 @@ helpviewer_keywords:
 - execution at client vs. execution at server [CLR integration]
 ms.assetid: 5aa176da-3652-4afa-a742-4c40c77ce5c3
 caps.latest.revision: 49
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 9f435a50028358a0db3b9289ae4c7ccb157a6761
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: rothja
+ms.author: jroth
+manager: craigg
+ms.openlocfilehash: 95ffe3d7ddef362caf0985ac780f299a81151e44
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36045384"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37349431"
 ---
 # <a name="overview-of-clr-integration"></a>Vue d'ensemble de l'intégration du CLR
   Le CLR (Common Language Runtime) est le cœur de Microsoft .NET Framework et fournit l'environnement d'exécution de la totalité du code .NET Framework. Le code qui s'exécute au sein du CLR est désigné sous le nom de code managé. Le CLR fournit divers fonctions et services requis pour l'exécution du programme, y compris la compilation juste-à-temps (JIT), l'allocation et la gestion de la mémoire, la mise en application de la cohérence des types, la gestion des exceptions, la gestion des threads et la sécurité.  Pour plus d'informations, consultez la documentation du Kit de développement (SDK) .NET Framework.  
@@ -63,7 +61,7 @@ ms.locfileid: "36045384"
 ## <a name="see-also"></a>Voir aussi  
  [Installation du .NET Framework](http://technet.microsoft.com/library/ms166014\(v=SQL.105\).aspx)   
  [Architecture d’intégration du CLR](../../database-engine/dev-guide/architecture-of-clr-integration.md)   
- [Accès aux données depuis les objets de base de données CLR](data-access/data-access-from-clr-database-objects.md)   
+ [Accès aux données à partir des objets de base de données CLR](data-access/data-access-from-clr-database-objects.md)   
  [Prise en main de l’intégration du CLR](database-objects/getting-started-with-clr-integration.md)  
   
   

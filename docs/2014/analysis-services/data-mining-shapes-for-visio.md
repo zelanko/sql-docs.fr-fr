@@ -1,5 +1,5 @@
 ---
-title: Formes d’exploration de données pour Visio | Documents Microsoft
+title: Formes d’exploration de données pour Visio | Microsoft Docs
 ms.custom: ''
 ms.date: 12/29/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - data mining shapes
 - templates [Visio]
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - shapes, data mining
 ms.assetid: 11a821d9-1c0a-442e-b735-92208ce479dc
 caps.latest.revision: 16
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: cd037e0d4eefb7f894d956222219902a5082fffd
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 6dae172d599b6da648962e50cb3d24fa2f36351d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36040983"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37261805"
 ---
 # <a name="data-mining-shapes-for-visio"></a>Formes d'exploration de données pour Visio
   Les formes d'exploration de données pour Visio fournissent des modèles personnalisés pour l'affichage de modèles d'exploration de données. En utilisant ces modèles, vous pouvez vous connecter à un modèle que vous avez créé et créer des présentations interactives pour illustrer les résultats de l'exploration de données.  
@@ -35,16 +35,16 @@ ms.locfileid: "36040983"
   
  Les modèles Visio incluent ces Assistants :  
   
--   **Diagramme réseau de dépendances :** cet Assistant permet de créer des graphiques pour les arbres de décision et les réseaux neuronaux.  
+-   **Diagramme réseau de dépendances :** Utilisez cet Assistant pour créer des graphiques pour les arbres de décision et les réseaux neuronaux.  
   
 -   **Diagramme d’arbre de décision :** cet Assistant permet de créer des diagrammes qui affichent les points de décision et les formules associées aux modèles d’arbre de décision. Ce diagramme peut également être utilisé avec des modèles de régression.  
   
--   **Diagramme de cluster :** cet Assistant permet de créer des graphiques colorés pour vos modèles de segmentation. Activez/désactivez les vues, telles que la discrimination d'attribut, les profils de cluster et les dépendances, et personnalisez l'apparence des clusters.  
+-   **Diagramme de cluster :** Utilisez cet Assistant pour créer des graphiques colorés pour vos modèles de segmentation. Activez/désactivez les vues, telles que la discrimination d'attribut, les profils de cluster et les dépendances, et personnalisez l'apparence des clusters.  
   
 ## <a name="installation"></a>Installation  
- Lorsque vous installez les modèles d’exploration de données pour Visio, par défaut, les fichiers suivants sont installés pour \<lecteur > \Program Files\Microsoft SQL Server 2012 DM Add-Ins (ou \<lecteur > \ ou Program Files (x86) \Microsoft SQL Server 2012 DM Add-Ins) :  
+ Lorsque vous installez les modèles d’exploration de données pour Visio, par défaut, les fichiers suivants sont installés à \<lecteur > \Program Files\Microsoft SQL Server 2012 DM Add-Ins (ou \<lecteur > \ ou Program Files (x86) \Microsoft SQL Server 2012 DM Add-Ins) :  
   
--   **Mining.vst de données Microsoft** ce modèle contient prédéfinies de mise en forme, disposition et les Assistants pour vous aider à travailler avec les formes d’exploration de données.  
+-   **Microsoft Data Mining.vst** ce modèle contient prédéfinie mise en forme, la disposition et les Assistants pour vous aider à travailler avec les formes d’exploration de données.  
   
 -   **Microsoft Data Mining Shape Studio.vss** ce fichier de gabarit contient des formes associées au modèle.  
   
@@ -59,9 +59,9 @@ ms.locfileid: "36040983"
   
 4.  Définissez les options d'affichage et de mise en forme des données.  
   
-5.  Après avoir terminé la **Assistant Création de forme d’exploration de données**, vous disposez d’un diagramme que vous pouvez modifier et améliorer les fonctionnalités de Visio.  
+5.  Une fois que vous avez terminé la **Assistant Création de forme d’exploration de données**, vous avez un diagramme que vous pouvez modifier et améliorer à l’aide des fonctionnalités de Visio.  
   
- Pour plus d’informations sur l’utilisation et l’amélioration des diagrammes de modèle Visio, consultez [affichage des modèles d’exploration de données dans Visio &#40;des compléments d’exploration de données&#41;](viewing-data-mining-models-in-visio-data-mining-add-ins.md)  
+ Pour plus d’informations sur l’utilisation et l’amélioration des diagrammes de modèle Visio, consultez [affichant les modèles d’exploration de données dans Visio &#40;des compléments d’exploration de données&#41;](viewing-data-mining-models-in-visio-data-mining-add-ins.md)  
   
 ## <a name="requirements"></a>Spécifications  
   
@@ -71,7 +71,7 @@ ms.locfileid: "36040983"
   
      Pour plus d’informations sur la création d’une connexion, consultez [se connecter à la Source de données &#40;Client d’exploration de données pour Excel&#41;](connect-to-source-data-data-mining-client-for-excel.md).  
   
--   Si vous utilisez les outils d’analyse de Table, assurez-vous que vous enregistrez vos modèles sur le [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] server et n’utilisent pas les modèles temporaires.  
+-   Si vous utilisez les outils d’analyse de Table, assurez-vous que vous enregistrez vos modèles sur le [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] server et n’utilisez pas de modèles temporaires.  
   
 -   Le modèle doit avoir été créé avec un des algorithmes pris en charge : clustering, arbres de décision, réseaux neuronaux, Naïve Bayes ou régression logistique.  
   

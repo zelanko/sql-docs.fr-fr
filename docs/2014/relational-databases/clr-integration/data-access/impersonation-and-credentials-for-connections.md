@@ -1,13 +1,11 @@
 ---
-title: L’emprunt d’identité et les informations d’identification pour les connexions | Documents Microsoft
+title: L’emprunt d’identité et les informations d’identification pour les connexions | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: clr
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -21,15 +19,15 @@ helpviewer_keywords:
 - database objects [CLR integration], security
 ms.assetid: 293dce7d-1db2-4657-992f-8c583d6e9ebb
 caps.latest.revision: 31
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: f2cc3fc4695c9e0b2a723668f09fc1bf388dabaa
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: rothja
+ms.author: jroth
+manager: craigg
+ms.openlocfilehash: 9af64be53b702dfded163a06562e4f6bdf7e5a61
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36152348"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37350873"
 ---
 # <a name="impersonation-and-credentials-for-connections"></a>Emprunt d'identité et informations d'identification pour les connexions
   Dans l'intégration du CLR (Common Language Runtime) [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], l'authentification Windows est complexe à utiliser, mais elle offre une protection supérieure à l'authentification SQL Server. Lorsque vous utilisez l'authentification Windows, gardez à l'esprit les points suivants.  
@@ -38,7 +36,7 @@ ms.locfileid: "36152348"
   
  Dans certains cas, vous pouvez emprunter l'identité de l'appelant à l'aide de la propriété `SqlContext.WindowsIdentity` plutôt que de fonctionner en tant que compte de service. L'instance de `WindowsIdentity`, qui représente l'identité du client qui a appelé le code appelant, est uniquement disponible lorsque le client utilise l'authentification Windows. Après avoir obtenu l'instance de `WindowsIdentity`, vous pouvez appeler `Impersonate` pour modifier le jeton de sécurité du thread, puis ouvrir des connexions ADO.NET pour le compte du client.  
   
- Après avoir appelé SQLContext.WindowsIdentity.Impersonate, vous ne pouvez pas accéder aux données locales, et vous ne pouvez pas accéder aux données système. Pour accéder aux données à nouveau, vous devez appeler la méthode WindowsImpersonationContext.Undo.  
+ Après avoir appelé SQLContext.WindowsIdentity.Impersonate, vous ne pouvez pas accéder aux données locales et vous ne pouvez pas accéder aux données système. Pour accéder aux données à nouveau, vous devez appeler WindowsImpersonationContext.Undo.  
   
  L'exemple suivant montre comment emprunter l'identité de l'appelant à l'aide de la propriété `SqlContext.WindowsIdentity`.  
   
@@ -76,7 +74,7 @@ catch
 ```  
   
 > [!NOTE]  
->  Pour plus d’informations sur les modifications du comportement d’emprunt d’identité, consultez [modifications avec rupture des fonctionnalités du moteur de base de données dans SQL Server 2014](../../../database-engine/breaking-changes-to-database-engine-features-in-sql-server-2016.md).  
+>  Pour plus d’informations sur les changements de comportement dans l’emprunt d’identité, consultez [modifications avec rupture des fonctionnalités du moteur de base de données dans SQL Server 2014](../../../database-engine/breaking-changes-to-database-engine-features-in-sql-server-2016.md).  
   
  Par ailleurs, si vous avez obtenu l'instance de l'identité [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows, vous ne pouvez pas, par défaut, propager cette instance à un autre ordinateur, cette opération étant restreinte par défaut par l'infrastructure de sécurité Windows. Il existe cependant un mécanisme, appelé « délégation », qui permet la propagation d'identités Windows sur plusieurs ordinateurs approuvés. Plus d’informations sur la délégation dans l’article TechNet, «[Kerberos Protocol Transition and Constrained Delegation](http://go.microsoft.com/fwlink/?LinkId=50419)».  
   

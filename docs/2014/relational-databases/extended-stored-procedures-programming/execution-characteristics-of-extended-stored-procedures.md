@@ -1,5 +1,5 @@
 ---
-title: Caractéristiques d’exécution des procédures stockées étendues | Documents Microsoft
+title: Caractéristiques d’exécution des procédures stockées étendues | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -15,15 +15,15 @@ helpviewer_keywords:
 - executing extended stored procedures [SQL Server]
 ms.assetid: 6fe1f7e8-cc02-49df-8a2a-d47a96ec3567
 caps.latest.revision: 33
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: f88d9bb01d8604ec49538b6d4ff4cc6f3557d7bc
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: rothja
+ms.author: jroth
+manager: craigg
+ms.openlocfilehash: 3d98354505e34e08da219e1dd9dc276ef6d59948
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36039290"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37313779"
 ---
 # <a name="execution-characteristics-of-extended-stored-procedures"></a>Caractéristiques d'exécution des procédures stockées étendues
     
@@ -43,7 +43,7 @@ ms.locfileid: "36039290"
   
 -  
   
- Une fois la procédure stockée étendue DLL est chargée, la DLL reste chargée dans l’espace d’adressage du serveur jusqu'à ce que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] est arrêté ou l’administrateur décharge explicitement la DLL à l’aide de DBCC *nom_dll* (FREE).  
+ Une fois la procédure stockée étendue DLL est chargée, la DLL reste chargée dans l’espace d’adressage du serveur jusqu'à ce que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] est arrêté ou l’administrateur décharge explicitement la DLL à l’aide de DBCC *nom_dll* (gratuit).  
   
  La procédure stockée étendue peut être exécutée à partir de [!INCLUDE[tsql](../../includes/tsql-md.md)] comme procédure stockée à l'aide de l'instruction EXECUTE :  
   
@@ -65,7 +65,7 @@ EXECUTE @retval = xp_extendedProcName @param1, @param2 OUTPUT
 >  Les procédures stockées étendues offrent une amélioration des performances et étendent les fonctionnalités [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Toutefois, comme la DLL de procédure stockée étendue et [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] partagent le même espace d'adressage, une procédure problématique peut affecter le fonctionnement de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de façon défavorable. Bien que les exceptions levées par la DLL de procédure stockée étendue soient gérées par [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], il est possible d'endommager les zones de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. À titre de mesure de sécurité, seuls les administrateurs systèmes [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] peuvent ajouter des procédures stockées étendues à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Ces procédures doivent être testées entièrement avant d'être installées.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Programmation des procédures stockées étendues](database-engine-extended-stored-procedures-programming.md)   
+ [Programmation de procédures stockées étendues](database-engine-extended-stored-procedures-programming.md)   
  [Interrogation des procédures stockées étendues installées dans SQL Server](querying-extended-stored-procedures-installed-in-sql-server.md)  
   
   

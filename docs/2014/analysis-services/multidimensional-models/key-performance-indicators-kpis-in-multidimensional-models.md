@@ -1,5 +1,5 @@
 ---
-title: Indicateurs de Performance (KPI) dans les modèles multidimensionnels clés | Documents Microsoft
+title: Indicateurs de Performance (KPI) dans les modèles multidimensionnels clés | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - viewing Key Performance Indicators
 - Key Performance Indicators [Analysis Services]
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - child KPIs
 ms.assetid: 73aee2da-da30-44f1-829c-0a4c078a7768
 caps.latest.revision: 42
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 514fa1de69baefeb6c05d8145be71b4f201b953b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 2d9d138805673defca5c1910b32ebeb9c998f7e8
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36140617"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37304709"
 ---
 # <a name="key-performance-indicators-kpis-in-multidimensional-models"></a>Indicateurs de performance clés (KPI) dans les modèles multidimensionnels
   Dans la terminologie d'entreprise, un indicateur de performance clé (KPI) est une mesure quantifiable des performances d'une activité économique.  

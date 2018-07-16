@@ -1,5 +1,5 @@
 ---
-title: Contenu du modèle d’exploration de données (Analysis Services - Exploration de données) | Documents Microsoft
+title: Contenu du modèle d’exploration de données (Analysis Services - Exploration de données) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - algorithms [data mining]
 - standard deviation
@@ -21,15 +21,15 @@ helpviewer_keywords:
 - node distribution
 ms.assetid: e7c039f6-3266-4d84-bfbd-f99b6858acf4
 caps.latest.revision: 25
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 418b4eb1e4e3d6dcc188a139ad3552fba5038e1d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: a701907535b7c0f5103cf1e98276f5573e9678f4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36043027"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37282425"
 ---
 # <a name="mining-model-content-analysis-services---data-mining"></a>Contenu du modèle d’exploration de données (Analysis Services - Exploration de données)
   Après avoir conçu et traité un modèle d'exploration de données à l'aide de données provenant de la structure d'exploration de données sous-jacente, celui-ci est complet et présente un *contenu de modèle d'exploration de données*. Vous pouvez utiliser ce contenu pour faire des prédictions ou analyser vos données.  
@@ -165,7 +165,7 @@ ms.locfileid: "36043027"
   
  Selon la façon dont l’algorithme traite les valeurs, ATTRIBUTE_VALUE peut également contenir un indicateur qui indique si une valeur existe pour l’attribut (`Existing`), ou si la valeur est null (`Missing`).  
   
- Par exemple, si votre modèle est configuré pour rechercher des clients qui ont acheté un article particulier au moins une fois, la colonne ATTRIBUTE_NAME peut contenir la paire attribut-valeur qui définit l’élément d’intérêt, tels que `Model = 'Water bottle'`et la colonne ATTRIBUTE_VALUE contient uniquement le mot clé `Existing` ou `Missing`.  
+ Par exemple, si votre modèle est configuré pour rechercher des clients qui ont acheté un élément particulier au moins une fois, la colonne ATTRIBUTE_NAME peut contenir la paire attribut-valeur qui définit l’élément concerné, telle que `Model = 'Water bottle'`et la colonne ATTRIBUTE_VALUE contiendrait uniquement le mot clé `Existing` ou `Missing`.  
   
  SUPPORT  
  Nombre de cas qui ont cette paire attribut/valeur, ou qui contiennent ce jeu d'éléments ou règle.  
@@ -280,11 +280,11 @@ ms.locfileid: "36043027"
 |Modèles de clustering|[Contenu pour les modèles d’arbre de décision du modèle d’exploration de données &#40;Analysis Services - Exploration de données&#41;](mining-model-content-for-decision-tree-models-analysis-services-data-mining.md)|[Exemples de requêtes de modèle de clustering](clustering-model-query-examples.md)|  
 |Modèle d'arbres de décision|[Contenu pour les modèles d’arbre de décision du modèle d’exploration de données &#40;Analysis Services - Exploration de données&#41;](mining-model-content-for-decision-tree-models-analysis-services-data-mining.md)|[Exemples de requêtes de modèle d’arbre de décision](decision-trees-model-query-examples.md)|  
 |Modèles de régression linéaire|[Contenu du modèle pour les modèles de régression linéaire d’exploration de données &#40;Analysis Services - Exploration de données&#41;](mining-model-content-for-linear-regression-models-analysis-services-data-mining.md)|[Exemples de requête de modèle de régression linéaire](linear-regression-model-query-examples.md)|  
-|Modèles de régression logistique|[Exploration du contenu du modèle pour les modèles de régression logistique &#40;Analysis Services - Exploration de données&#41;](mining-model-content-for-logistic-regression-models.md)|[Exemples de requête de modèle de régression linéaire](linear-regression-model-query-examples.md)|  
-|Modèles Naïve Bayes|[Exploration du contenu du modèle pour les modèles Naive Bayes &#40;Analysis Services - Exploration de données&#41;](mining-model-content-for-naive-bayes-models-analysis-services-data-mining.md)|[Exemples de requêtes de modèle Naive Bayes](naive-bayes-model-query-examples.md)|  
-|Modèles de réseau neuronal|[Exploration du contenu du modèle pour les modèles de réseau neuronal &#40;Analysis Services - Exploration de données&#41;](mining-model-content-for-neural-network-models-analysis-services-data-mining.md)|[Exemples de requêtes de modèle de réseau neuronal](neural-network-model-query-examples.md)|  
-|Sequence clustering|[Exploration du contenu du modèle pour les modèles Sequence Clustering &#40;Analysis Services - Exploration de données&#41;](mining-model-content-for-sequence-clustering-models.md)|[Exemples de requêtes de modèle Sequence Clustering](sequence-clustering-model-query-examples.md)|  
-|Modèles de séries chronologiques|[Contenu pour les modèles de série chronologique du modèle d’exploration de données &#40;Analysis Services - Exploration de données&#41;](mining-model-content-for-time-series-models-analysis-services-data-mining.md)|[Exemples de requêtes de modèle de séries chronologiques](time-series-model-query-examples.md)|  
+|Modèles de régression logistique|[Contenu du modèle pour les modèles de régression logistique d’exploration de données &#40;Analysis Services - Exploration de données&#41;](mining-model-content-for-logistic-regression-models.md)|[Exemples de requête de modèle de régression linéaire](linear-regression-model-query-examples.md)|  
+|Modèles Naïve Bayes|[Pour les modèles Naive Bayes contenu du modèle d’exploration de données &#40;Analysis Services - Exploration de données&#41;](mining-model-content-for-naive-bayes-models-analysis-services-data-mining.md)|[Exemples de requêtes de modèle Naive Bayes](naive-bayes-model-query-examples.md)|  
+|Modèles de réseau neuronal|[Contenu du modèle pour les modèles de réseau neuronal d’exploration de données &#40;Analysis Services - Exploration de données&#41;](mining-model-content-for-neural-network-models-analysis-services-data-mining.md)|[Exemples de requêtes de modèle de réseau neuronal](neural-network-model-query-examples.md)|  
+|Sequence clustering|[Le contenu du modèle Sequence Clustering des modèles d’exploration de données &#40;Analysis Services - Exploration de données&#41;](mining-model-content-for-sequence-clustering-models.md)|[Exemples de requêtes de modèle Sequence Clustering](sequence-clustering-model-query-examples.md)|  
+|Modèles de séries chronologiques|[Contenu du modèle pour les modèles de série chronologique d’exploration de données &#40;Analysis Services - Exploration de données&#41;](mining-model-content-for-time-series-models-analysis-services-data-mining.md)|[Exemples de requêtes de modèle de séries chronologiques](time-series-model-query-examples.md)|  
   
 ##  <a name="bkmk_Viewing"></a> Outils pour afficher le contenu du modèle d'exploration de données  
  Lorsque vous parcourez ou explorez un modèle dans [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], vous pouvez consulter les informations dans la **Visionneuse de l'arborescence de contenu générique**qui est disponible dans [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] et [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
@@ -304,10 +304,10 @@ SELECT * FROM [<mining model name>].CONTENT
   
  Vous pouvez également interroger le contenu du modèle d'exploration de données à l'aide des ensembles de lignes du schéma d'exploration de données. Un ensemble de lignes de schéma est une structure standard que les clients utilisent pour découvrir, parcourir et interroger des informations relatives aux structures et modèles d'exploration de données. Vous pouvez interroger les ensembles de lignes de schéma en utilisant les instructions XMLA, Transact-SQL ou DMX.  
   
- Dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], vous pouvez aussi accéder aux informations dans les ensembles de lignes de schéma d'exploration de données en ouvrant une connexion à l'instance [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] et en interrogeant les tables système. Pour plus d’informations, consultez [interroger les ensembles de lignes de données d’exploration de données schéma &#40;Analysis Services - Exploration de données&#41;](data-mining-schema-rowsets-ssas.md).  
+ Dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], vous pouvez aussi accéder aux informations dans les ensembles de lignes de schéma d'exploration de données en ouvrant une connexion à l'instance [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] et en interrogeant les tables système. Pour plus d’informations, consultez [interrogation Data Mining Schema Rowsets &#40;Analysis Services - Exploration de données&#41;](data-mining-schema-rowsets-ssas.md).  
   
 ## <a name="see-also"></a>Voir aussi  
- [Visionneuse de l’arborescence de contenu générique Microsoft &#40;d’exploration de données&#41;](../microsoft-generic-content-tree-viewer-data-mining.md)   
+ [Visionneuse de l’arborescence de contenu générique Microsoft &#40;exploration de données&#41;](../microsoft-generic-content-tree-viewer-data-mining.md)   
  [Algorithmes d’exploration de données &#40;Analysis Services - Exploration de données&#41;](data-mining-algorithms-analysis-services-data-mining.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Programmation des procédures stockées étendues | Documents Microsoft
+title: Programmation de procédures stockées étendues | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - ODS [SQL Server]
 ms.assetid: 561305cd-c803-48af-9eec-2c19f4d311ce
 caps.latest.revision: 41
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 4b07d4486eb8cfe4c1b1cd63c2774f596df5ee35
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: rothja
+ms.author: jroth
+manager: craigg
+ms.openlocfilehash: bc4dcf01c8a7d815fde3589c2d964b8a2d8c7c97
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36142279"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37290815"
 ---
 # <a name="programming-extended-stored-procedures"></a>Programmation de procédures stockées étendues
     
@@ -43,7 +43,7 @@ ms.locfileid: "36142279"
  Dans les versions antérieures de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], les procédures stockées étendues constituaient pour les développeurs d'applications de base de données le seul mécanisme leur permettant d'écrire une logique côté serveur difficile à exprimer voire impossible à écrire en [!INCLUDE[tsql](../../includes/tsql-md.md)]. L'intégration du CLR offre une alternative plus robuste à l'écriture de telles procédures stockées. Qui plus est, la logique, auparavant écrite sous forme de procédures stockées, est souvent mieux exprimée sous forme de fonctions table avec l'intégration du CLR. Ces dernières vous permettent d'interroger les résultats construits par la fonction dans des instructions SELECT en les incorporant dans la clause FROM.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Common Language Runtime &#40;CLR&#41; vue d’ensemble](../clr-integration/common-language-runtime-integration-overview.md)   
+ [Common Language Runtime &#40;CLR&#41; présentation de l’intégration](../clr-integration/common-language-runtime-integration-overview.md)   
  [Fonctions table CLR](../clr-integration-database-objects-user-defined-functions/clr-table-valued-functions.md)  
   
   

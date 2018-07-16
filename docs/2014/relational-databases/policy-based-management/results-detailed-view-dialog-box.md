@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.results.f1
 - sql12.swb.dmf.policy.resultdetails.f1
 ms.assetid: 366f0ff8-722a-40a9-934f-854147e4933d
 caps.latest.revision: 20
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: c83b2a6c13e3d45e61a7ac44d141941b9bdc4409
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 6d46e235af0b2fb7ca47c53b50edd156e9e24553
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36042433"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37313409"
 ---
 # <a name="results-detailed-view-dialog-box"></a>Boîte de dialogue Vue détaillée des résultats
   Cette boîte de dialogue affiche les résultats d'évaluation de stratégie après l'exécution d'une stratégie lorsque vous ouvrez la boîte de dialogue **Évaluer les stratégies** et que vous cliquez sur **Afficher**. Cette boîte de dialogue est en lecture seule et vous aide à comprendre quelle partie d'une expression de propriété peut échouer.  

@@ -19,13 +19,13 @@ ms.assetid: 1fda034d-09e4-4647-9a9f-e8d508c2cc8f
 caps.latest.revision: 35
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: cbc0be5255b3345ba27297123981f2b0138e4437
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 6c34669ffc14ee623b17549f588385886488ed02
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36152860"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37287595"
 ---
 # <a name="parsing-non-standard-text-file-formats-with-the-script-component"></a>Analyse de formats de fichiers texte non standard à l'aide du composant Script
   Lorsque vos données sources sont organisées dans un format non standard, il peut être plus pratique de consolider l'ensemble de la logique d'analyse en un seul script au lieu de chaîner plusieurs transformations [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] pour parvenir au même résultat.  
@@ -40,7 +40,7 @@ ms.locfileid: "36152860"
 ##  <a name="example1"></a> Exemple 1 : analyse d’enregistrements délimités par des lignes  
  Cet exemple montre comment analyser un fichier texte, dans lequel chaque colonne de données figure sur une ligne séparée, dans une table de destination, à l'aide du composant Script.  
   
- Pour plus d’informations sur la façon de configurer le composant de Script pour une utilisation en tant que transformation dans le flux de données, consultez [création d’une Transformation synchrone avec le composant Script](../extending-packages-scripting-data-flow-script-component-types/creating-a-synchronous-transformation-with-the-script-component.md)et [création d’un asynchrone Transformation avec le composant Script](../extending-packages-scripting-data-flow-script-component-types/creating-an-asynchronous-transformation-with-the-script-component.md).  
+ Pour plus d’informations sur la configuration du composant de Script pour une utilisation en tant que transformation dans le flux de données, consultez [création d’une Transformation synchrone avec le composant Script](../extending-packages-scripting-data-flow-script-component-types/creating-a-synchronous-transformation-with-the-script-component.md)et [création d’un asynchrone Transformation avec le composant Script](../extending-packages-scripting-data-flow-script-component-types/creating-an-asynchronous-transformation-with-the-script-component.md).  
   
 #### <a name="to-configure-this-script-component-example"></a>Pour configurer cet exemple de composant Script  
   
@@ -99,7 +99,7 @@ ms.locfileid: "36152860"
   
 11. Dans la page **Colonnes d’entrée** de l’**Éditeur de transformation de script**, sélectionnez la seule colonne d’entrée disponible.  
   
-12. Sur le **entrées et sorties** page de la **éditeur de Transformation de Script**, sélectionnez sortie 0 et définir son `SynchronousInputID` None. Créez 5 colonnes de sortie, de type String [DT_STR] et de longueur 32 :  
+12. Sur le **entrées et sorties** page de la **éditeur de Transformation de Script**, sélectionnez sortie 0 et attribuez sa `SynchronousInputID` sur None. Créez 5 colonnes de sortie, de type String [DT_STR] et de longueur 32 :  
   
     -   FirstName  
   
@@ -198,7 +198,7 @@ public override void Input0_ProcessInputRow(Input0Buffer Row)
 > [!CAUTION]  
 >  Cet exemple est fourni à titre de démonstration uniquement. Si vous exécutez l'exemple plusieurs fois, il insère des valeurs de clé dupliquées dans la table de destination.  
   
- Pour plus d’informations sur la façon de configurer le composant de Script pour une utilisation en tant que transformation dans le flux de données, consultez [création d’une Transformation synchrone avec le composant Script](../extending-packages-scripting-data-flow-script-component-types/creating-a-synchronous-transformation-with-the-script-component.md)et [création d’un asynchrone Transformation avec le composant Script](../extending-packages-scripting-data-flow-script-component-types/creating-an-asynchronous-transformation-with-the-script-component.md).  
+ Pour plus d’informations sur la configuration du composant de Script pour une utilisation en tant que transformation dans le flux de données, consultez [création d’une Transformation synchrone avec le composant Script](../extending-packages-scripting-data-flow-script-component-types/creating-a-synchronous-transformation-with-the-script-component.md)et [création d’un asynchrone Transformation avec le composant Script](../extending-packages-scripting-data-flow-script-component-types/creating-an-asynchronous-transformation-with-the-script-component.md).  
   
 #### <a name="to-configure-this-script-component-example"></a>Pour configurer cet exemple de composant Script  
   
@@ -258,7 +258,7 @@ public override void Input0_ProcessInputRow(Input0Buffer Row)
   
 11. Dans la page **Colonnes d’entrée** de l’**Éditeur de transformation de script**, sélectionnez la seule colonne d’entrée disponible.  
   
-12. Sur le **entrées et sorties** page de la **éditeur de Transformation de Script**, sélectionnez sortie 0, renommez-le ParentRecords et définir son `SynchronousInputID` None. Créez 2 colonnes de sortie :  
+12. Sur le **entrées et sorties** page de la **éditeur de Transformation de Script**, sélectionnez sortie 0, renommez-le ParentRecords et définir son `SynchronousInputID` sur None. Créez 2 colonnes de sortie :  
   
     -   ParentID (la clé primaire), de type entier signé (4 bits) [DT_I4]  
   
@@ -351,7 +351,7 @@ public override void Input0_ProcessInputRow(Input0Buffer Row)
     }  
 ```  
   
-![Icône Integration Services (petite)](../media/dts-16.gif "icône Integration Services (petite)")**restent jusqu'à la Date avec Integration Services** <br /> Pour obtenir les derniers téléchargements, articles, exemples et vidéos de Microsoft, ainsi que des solutions sélectionnées par la communauté, visitez la page [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] sur MSDN :<br /><br /> [Visitez la page Integration Services sur MSDN](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Pour recevoir une notification automatique de ces mises à jour, abonnez-vous aux flux RSS disponibles sur la page.  
+![Icône Integration Services (petite)](../media/dts-16.gif "icône Integration Services (petite)")**rester jusqu'à la Date avec Integration Services  **<br /> Pour obtenir les derniers téléchargements, articles, exemples et vidéos de Microsoft, ainsi que des solutions sélectionnées par la communauté, visitez la page [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] sur MSDN :<br /><br /> [Visitez la page Integration Services sur MSDN](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Pour recevoir une notification automatique de ces mises à jour, abonnez-vous aux flux RSS disponibles sur la page.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Création d’une transformation synchrone à l’aide du composant Script](../extending-packages-scripting-data-flow-script-component-types/creating-a-synchronous-transformation-with-the-script-component.md)  

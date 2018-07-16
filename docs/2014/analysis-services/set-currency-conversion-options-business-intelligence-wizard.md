@@ -1,5 +1,5 @@
 ---
-title: Définir les Options de Conversion monétaire (Assistant Business Intelligence) | Documents Microsoft
+title: Définir les Options de Conversion monétaire (Assistant Business Intelligence) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.biwizard.currencyconversion.calculationsettings.f1
 ms.assetid: a49d4e1f-bdda-4a83-ab4f-ce8c500e1d6d
 caps.latest.revision: 22
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: e16756745d8b42bfe0043915b8d6e53b595d3669
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: a6ecdd5959754ab2ca7d4d9e5fc32d313dacfa00
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36043439"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37289503"
 ---
 # <a name="set-currency-conversion-options-business-intelligence-wizard"></a>Définir les options de conversion monétaire (Assistant Business Intelligence)
   La page **Définir les options de conversion monétaire** permet de définir les calculs relatifs à la conversion monétaire pour un groupe de mesures contenant des taux de change.  
@@ -42,11 +42,11 @@ ms.locfileid: "36043439"
  **Devise pivot x par 1 devise d’exemple**  
  Permet d'indiquer que les taux de change dans le groupe de mesures des taux représentent un multiplicateur de la devise pivot spécifiée.  
   
- **Exemple devise x par 1 devise pivot**  
+ **Devise d’exemple par 1 devise pivot x**  
  Permet d'indiquer que les taux de change dans le groupe de mesures des taux représentent un multiplicateur de la devise d'exemple spécifiée.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Aide F1 l’Assistant Business Intelligence](business-intelligence-wizard-f1-help.md)   
+ [L’Assistant Business Intelligence F1](business-intelligence-wizard-f1-help.md)   
  [Concepteur de cube &#40;Analysis Services - données multidimensionnelles&#41;](cube-designer-analysis-services-multidimensional-data.md)   
  [Concepteur de dimensions &#40;Analysis Services - données multidimensionnelles&#41;](dimension-designer-analysis-services-multidimensional-data.md)  
   

@@ -1,5 +1,5 @@
 ---
-title: Exploration des visionneuses de modèle (Concepteur de modèle d’exploration de données) | Documents Microsoft
+title: Exploration des visionneuses de modèle (Concepteur de modèle d’exploration de données) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dm.miningmodeleditor.viewers.f1
 ms.assetid: 4ba391d5-c97b-4848-ba7c-7d096fa4b7dd
 caps.latest.revision: 29
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: e04799cbd5d78f82612732506e460008a4138117
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: c9fd7d89abbbbce1c55b20227d44c191cf315d52
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36151770"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37293629"
 ---
 # <a name="mining-model-viewers-data-mining-model-designer"></a>Visionneuses de modèle d'exploration de données (Concepteur de modèle d'exploration de données)
   Utilisez l’onglet **Visionneuse de modèle d’exploration de données** pour explorer les modèles d’exploration de données d’une structure associée.  
@@ -31,7 +31,7 @@ ms.locfileid: "36151770"
  Pour connaître la procédure pas à pas d’utilisation de chaque visionneuse, consultez [Visionneuses de modèle d’exploration de données](data-mining/data-mining-model-viewers.md).  
   
 ## <a name="common-options"></a>Options courantes  
- **Actualiser le contenu de la visionneuse**  
+ **Actualiser le contenu de l’Observateur**  
  Recharge le modèle d'exploration de données dans la visionneuse.  
   
  **Modèle d'exploration de données**  
@@ -46,7 +46,7 @@ ms.locfileid: "36151770"
   
 -   Le diagramme inférieur représente le même modèle affiché avec la **visionneuse de l’arborescence de contenu générique Microsoft**. Cette visionneuse présente le contenu du modèle d'exploration de données selon un schéma standardisé. Pour plus d’informations, consultez [Visionneuse de l’arborescence de contenu générique Microsoft &#40;exploration de données&#41;](microsoft-generic-content-tree-viewer-data-mining.md).  
   
- ![Vue d’ensemble du Concepteur de modèle d’exploration de données](media/generic-mining-model-tab1.gif "vue d’ensemble du Concepteur de modèle d’exploration de données")  
+ ![Vue d’ensemble du Concepteur de modèles d’exploration de données](media/generic-mining-model-tab1.gif "vue d’ensemble du Concepteur de modèles d’exploration de données")  
   
 ## <a name="viewers-and-their-components"></a>Visionneuses et leurs composants  
  Selon le modèle que vous sélectionnez, vous verrez une visionneuse personnalisée différente, adaptée à l'algorithme que vous avez utilisé pour créer le modèle d'exploration de données sélectionné. Chaque visionneuse personnalisée comporte divers outils et boîtes de dialogue qui vous permettent d'explorer les statistiques et les modèles dans le modèle.  
@@ -127,7 +127,7 @@ ms.locfileid: "36151770"
   
 -   [Explorer un modèle à l’aide de la visionneuse de l’algorithme MSC (Microsoft Sequence Cluster)](data-mining/browse-a-model-using-the-microsoft-sequence-cluster-viewer.md)  
   
-    -   [Onglet Diagramme de Cluster de Clustering de séquence &#40;visionneuse de modèle d’exploration de données](sequence-clustering-cluster-diagram-tab-mining-model-viewer.md)  
+    -   [Sequence Clustering onglet Diagramme de Cluster &#40;visionneuse de modèle d’exploration de données](sequence-clustering-cluster-diagram-tab-mining-model-viewer.md)  
   
     -   [Onglet Profils de Sequence Clustering Cluster &#40;visionneuse de modèle d’exploration de données](sequence-clustering-cluster-profiles-tab-mining-model-viewer.md)  
   
@@ -149,8 +149,8 @@ ms.locfileid: "36151770"
   
 ## <a name="see-also"></a>Voir aussi  
  [Vue modèles d’exploration de données &#40;Concepteur de modèle d’exploration de données&#41;](mining-models-view-data-mining-model-designer.md)   
- [Vue de la Structure d’exploration de données &#40;Concepteur de modèle d’exploration de données&#41;](mining-structure-view-data-mining-model-designer.md)   
- [Concepteur graphique d’analyse de précision d’exploration de données &#40;d’exploration de données&#41;](mining-accuracy-chart-designer-data-mining.md)   
- [Générateur de requête de prédiction &#40;d’exploration de données&#41;](prediction-query-builder-data-mining.md)  
+ [Vue de Structure d’exploration de données &#40;Concepteur de modèle d’exploration de données&#41;](mining-structure-view-data-mining-model-designer.md)   
+ [Concepteur graphique d’analyse de précision d’exploration de données &#40;exploration de données&#41;](mining-accuracy-chart-designer-data-mining.md)   
+ [Générateur de requêtes de prédiction &#40;exploration de données&#41;](prediction-query-builder-data-mining.md)  
   
   

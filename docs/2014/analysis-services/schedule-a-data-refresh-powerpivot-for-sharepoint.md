@@ -1,5 +1,5 @@
 ---
-title: Planifier une actualisation des données (PowerPivot pour SharePoint) | Documents Microsoft
+title: Planifier une actualisation des données (PowerPivot pour SharePoint) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - unattended data refresh [Analysis Services with SharePoint]
 - scheduled data refresh [Analysis Services with SharePoint]
 - data refresh [Analysis Services with SharePoint]
 ms.assetid: 8571208f-6aae-4058-83c6-9f916f5e2f9b
 caps.latest.revision: 28
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 822f4a825e359c2e6e8ed69711bfd95fd3bd4eab
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: fbabf680ed67f1b2e144287764d16447d9467a43
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36154721"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37325149"
 ---
 # <a name="schedule-a-data-refresh-powerpivot-for-sharepoint"></a>Planifier une actualisation des données (PowerPivot pour SharePoint)
   Vous pouvez planifier l'actualisation des données pour obtenir des mises à jour automatiques des données PowerPivot figurant dans un classeur Excel que vous avez publié sur un site SharePoint.  

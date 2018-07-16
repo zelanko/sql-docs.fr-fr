@@ -1,5 +1,5 @@
 ---
-title: Scénario du didacticiel de Analysis Services | Documents Microsoft
+title: Scénario du didacticiel de Analysis Services | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 2f5b1a42-b814-4d7d-b603-5383d9ac66b9
 caps.latest.revision: 14
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: jhubbard
-ms.openlocfilehash: 916cb59e0d6a5621e0cefe41d74b3c5d10c9caf6
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 7694bdc07e602f9ed93cee5419e51f9c7083d26a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36041908"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37275775"
 ---
 # <a name="analysis-services-tutorial-scenario"></a>Scénario du didacticiel Analysis Services
   Ce didacticiel est basé sur [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)], une société fictive. [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] est une grande entreprise multinationale spécialisée dans la fabrication et la distribution de métaux et de pièces détachées de vélos pour les marchés d'Amérique du Nord, d'Europe et d'Asie. Le siège de la société [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] est situé dans la ville de Bothell, à Washington, où 500 personnes sont employées. Par ailleurs, [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] emploie plusieurs équipes commerciales régionales pour couvrir son marché.  
@@ -67,6 +67,6 @@ ms.locfileid: "36041908"
  Les leçons du didacticiel Analysis Services fournissent de l'aide en générant une base de données de cube qui répond à tous ces critères. Pour commencer, passez à la première leçon : [Lesson 1: Create a New Tabular Model Project](lesson-1-create-a-new-tabular-model-project.md).  
   
 ## <a name="see-also"></a>Voir aussi  
- [Modélisation multidimensionnelle &#40;Adventure Works didacticiel&#41;](multidimensional-modeling-adventure-works-tutorial.md)  
+ [Modélisation multidimensionnelle &#40;didacticiel Adventure Works&#41;](multidimensional-modeling-adventure-works-tutorial.md)  
   
   

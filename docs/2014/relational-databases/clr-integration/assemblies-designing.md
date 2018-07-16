@@ -1,13 +1,11 @@
 ---
-title: Conception d’assemblys | Documents Microsoft
+title: Conception d’assemblys | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: clr
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -15,15 +13,15 @@ helpviewer_keywords:
 - assemblies [CLR integration], designing
 ms.assetid: 9c07f706-6508-41aa-a4d7-56ce354f9061
 caps.latest.revision: 28
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 486c6ad507682db3bd7ab06c674164b1d31f34bd
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: rothja
+ms.author: jroth
+manager: craigg
+ms.openlocfilehash: de9b80a9406078a6f5d4ad3a16add7c02f4bde5a
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36152140"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37351021"
 ---
 # <a name="designing-assemblies"></a>Conception d'assemblys
   Cette rubrique décrit les facteurs suivants, à prendre en considération lors de la conception d'assemblys :  
@@ -39,7 +37,7 @@ ms.locfileid: "36152140"
   
  Lorsque vous empaquetez du code en assembly, vous devez prendre en considération les points suivants :  
   
--   Les types et index CLR définis par l'utilisateur qui dépendent de fonctions CLR définies par l'utilisateur peuvent amener des données persistantes à figurer dans la base de données qui repose sur l'assembly. La modification du code d'un assembly est souvent plus complexe lorsque la base de données contient des données persistantes dépendant de l'assembly. Par conséquent, il est généralement préférable de séparer le code sur lequel reposent les dépendances des données persistantes (par exemple des types et des index définis par l'utilisateur utilisant des fonctions définies par l'utilisateur) du code dépourvu de ces dépendances de données persistantes. Pour plus d’informations, consultez [mise en œuvre des assemblys](assemblies-implementing.md) et [ALTER ASSEMBLY &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-assembly-transact-sql).  
+-   Les types et index CLR définis par l'utilisateur qui dépendent de fonctions CLR définies par l'utilisateur peuvent amener des données persistantes à figurer dans la base de données qui repose sur l'assembly. La modification du code d'un assembly est souvent plus complexe lorsque la base de données contient des données persistantes dépendant de l'assembly. Par conséquent, il est généralement préférable de séparer le code sur lequel reposent les dépendances des données persistantes (par exemple des types et des index définis par l'utilisateur utilisant des fonctions définies par l'utilisateur) du code dépourvu de ces dépendances de données persistantes. Pour plus d’informations, consultez [assemblys implémentant](assemblies-implementing.md) et [ALTER ASSEMBLY &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-assembly-transact-sql).  
   
 -   Si une portion de code managé requiert une autorisation plus élevée, il est préférable de la placer dans un assembly distinct du code qui ne requiert pas une telle autorisation.  
   
@@ -88,7 +86,7 @@ System.Security.UnverifiableCodeAttribute
 ```  
   
 ### <a name="disallowed-net-framework-apis"></a>API .NET Framework interdites  
- N’importe quel [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] API est annoté avec l’un des **HostProtectionAttributes** ne peut pas être appelée à partir des assemblys SAFE et EXTERNAL_ACCESS.  
+ N’importe quel [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] API est annotée avec un des **HostProtectionAttributes** ne peut pas être appelée à partir des assemblys SAFE et EXTERNAL_ACCESS.  
   
 ```  
 eSelfAffectingProcessMgmt  
@@ -122,7 +120,7 @@ System.Configuration
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Assemblys &#40;du moteur de base de données&#41;](../../relational-databases/clr-integration/assemblies-database-engine.md)   
+ [Assemblys &#40;moteur de base de données&#41;](../../relational-databases/clr-integration/assemblies-database-engine.md)   
  [Sécurité de l’intégration du CLR](security/clr-integration-security.md)  
   
   

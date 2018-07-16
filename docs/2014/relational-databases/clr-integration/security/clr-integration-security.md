@@ -1,13 +1,11 @@
 ---
-title: Sécurité d’intégration du CLR | Documents Microsoft
+title: Sécurité de l’intégration CLR | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: clr
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -17,18 +15,18 @@ helpviewer_keywords:
 - database objects [CLR integration], security
 ms.assetid: 05d7a471-c5d5-4730-b903-e4edc8157bb4
 caps.latest.revision: 54
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 689d425c2f13a442b1d8bbd5515939135f44fa0c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: rothja
+ms.author: jroth
+manager: craigg
+ms.openlocfilehash: 5037f3bb0d77fd25ad17b761f8c7943aef61200c
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36042040"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37349591"
 ---
 # <a name="clr-integration-security"></a>Sécurité de l'intégration du CLR
-  Le modèle de sécurité de le [!INCLUDE[ssNoVersion](../../../includes/dnprdnshort-md.md)] common language runtime (CLR) gère et sécurise l’accès entre différents types d’objets CLR et non CLR s’exécutant dans [!INCLUDE[ssNoVersion](../../../includes/tsql-md.md)] instruction ou un autre objet CLR en cours d’exécution sur le serveur. Les appels entre objets portent le nom de liens. Les types de vérifications de sécurité effectués sur ces objets dépendent des types de liens impliqués.  
+  Le modèle de sécurité de la [!INCLUDE[ssNoVersion](../../../includes/dnprdnshort-md.md)] common language runtime (CLR) gère et sécurise l’accès entre différents types d’objets CLR et non CLR s’exécutant dans [!INCLUDE[ssNoVersion](../../../includes/tsql-md.md)] instruction ou un autre objet CLR en cours d’exécution sur le serveur. Les appels entre objets portent le nom de liens. Les types de vérifications de sécurité effectués sur ces objets dépendent des types de liens impliqués.  
   
  Le modèle de sécurité d'intégration du CLR a les objectifs suivants :  
   
@@ -50,16 +48,16 @@ ms.locfileid: "36042040"
  [Attributs de protection de l’hôte et programmation de l’intégration du CLR](../../clr-integration-security-host-protection-attributes/host-protection-attributes-and-clr-integration-programming.md)  
  Fournit des informations à propos des valeurs d'attributs de protection de l'hôte (HPA) interdites dans les assemblys SAFE et EXTERNAL_ACCESS.  
   
- [Liens de sécurité d’intégration du CLR](../../../database-engine/dev-guide/links-in-clr-integration-security.md)  
+ [Liens dans la sécurité d’intégration du CLR](../../../database-engine/dev-guide/links-in-clr-integration-security.md)  
  Décrit comment les segments de code utilisateur peuvent s'appeler dans [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
- [L’emprunt d’identité et de sécurité d’intégration du CLR](../../../database-engine/dev-guide/impersonation-and-clr-integration-security.md)  
+ [Emprunt d’identité et sécurité de l’intégration du CLR](../../../database-engine/dev-guide/impersonation-and-clr-integration-security.md)  
  Discute la manière dont le code managé accède aux ressources externes à l'aide de l'emprunt d'identité.  
   
- [Autoriser partiellement approuvé appelants](../../../database-engine/dev-guide/allowing-partially-trusted-callers.md)  
+ [Autorisation d’appelants partiellement approuvés](../../../database-engine/dev-guide/allowing-partially-trusted-callers.md)  
  Discute des problèmes qui surviennent lorsqu'une méthode managée appelle une méthode dans une classe contenue dans un autre assembly.  
   
- [Domaines d’application et de sécurité d’intégration du CLR](../../../database-engine/dev-guide/application-domains-and-clr-integration-security.md)  
+ [Domaines d’application et sécurité de l’intégration du CLR](../../../database-engine/dev-guide/application-domains-and-clr-integration-security.md)  
  Décrit la façon dont les assemblys sont chargés dans les domaines d'application.  
   
 ## <a name="see-also"></a>Voir aussi  

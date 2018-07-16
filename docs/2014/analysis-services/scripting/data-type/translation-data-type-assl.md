@@ -1,5 +1,5 @@
 ---
-title: Type de données Translation (ASSL) | Documents Microsoft
+title: Type de données Translation (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - Translation data type
 ms.assetid: d40039e1-3ff6-4e20-8d8b-5baf501f726f
 caps.latest.revision: 10
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: f5896ca8c96ce645a0782f17508392b5d0b7d7f2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 96c0f9a1ea7d6e3a081230c43fc95d785b1cf449
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36143574"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37300879"
 ---
 # <a name="translation-data-type-assl"></a>Type de données Translation (ASSL)
   Définit un type de données primitif représentant une traduction localisée.  
@@ -65,6 +65,6 @@ ms.locfileid: "36143574"
  L’élément correspondant dans le modèle d’objet objets AMO (Analysis Management) est <xref:Microsoft.AnalysisServices.Translation>.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Types de données de script langage XML Analysis Services &#40;ASSL&#41;](analysis-services-scripting-language-xml-data-types-assl.md)  
+ [Types Analysis Services Scripting Language XML données &#40;ASSL&#41;](analysis-services-scripting-language-xml-data-types-assl.md)  
   
   

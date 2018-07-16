@@ -1,5 +1,5 @@
 ---
-title: Appliquer une Transformation XSL (Classes managées de SQLXML) | Documents Microsoft
+title: Appliquer une Transformation XSL (Classes managées de SQLXML) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - XSL Transformations [SQLXML]
 ms.assetid: 8562043b-3e9f-41a3-bb41-92b9f14363c4
 caps.latest.revision: 23
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 1d6c91330e87cd978edc32102f7af925ff5afae6
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: ec1e85409711164eae449bb7c246ef5a291eb132
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36043105"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37311270"
 ---
 # <a name="applying-an-xsl-transformation-sqlxml-managed-classes"></a>Application d'une transformation XSL (classes managées SQLXML)
   Dans cet exemple, une requête SQL est exécutée sur la base de données AdventureWorks. La transformation XSL est appliquée au résultat de la requête pour générer une table à deux colonnes comportant respectivement le prénom et le nom des employés.  

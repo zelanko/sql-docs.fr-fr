@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - reading data in a table
 ms.assetid: 532232c9-3d41-45cd-9150-de67a1cbfcf5
 caps.latest.revision: 13
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 7eb28bcefab604d070b2d3599accb4045faae8aa
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: edmacauley
+ms.author: edmaca
+manager: craigg
+ms.openlocfilehash: 3c1d00391f9d43564cf53cf244ff4144b37bb1f6
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36039424"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37273995"
 ---
 # <a name="reading-the-data-in-a-table-tutorial"></a>Lecture des données dans une table (Didacticiel)
   Utilisez l'instruction SELECT pour lire les données dans une table. L'instruction SELECT est une des instructions [!INCLUDE[tsql](../includes/tsql-md.md)] les plus importantes et dont la syntaxe comporte beaucoup de variations. Pour ce didacticiel, vous allez travailler avec cinq versions simples.  
@@ -88,7 +88,7 @@ ms.locfileid: "36039424"
 |[Fonctions mathématiques &#40;Transact-SQL&#41;](/sql/t-sql/functions/mathematical-functions-transact-sql)|[Fonctions texte et Image &#40;Transact-SQL&#41;](/sql/t-sql/functions/text-and-image-functions-textptr-transact-sql)|  
   
 ## <a name="next-task-in-lesson"></a>Tâche suivante de la leçon  
- [Résumé : Création des objets de base de données](lesson-1-5-summary-creating-database-objects.md)  
+ [Résumé : Création des objets de base de données](lesson-1-5-summary-creating-database-objects.md)  
   
 ## <a name="see-also"></a>Voir aussi  
  [SELECT &#40;Transact-SQL&#41;](/sql/t-sql/queries/select-transact-sql)  

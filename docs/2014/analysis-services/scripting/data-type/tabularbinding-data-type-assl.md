@@ -1,5 +1,5 @@
 ---
-title: Type de données TabularBinding (ASSL) | Documents Microsoft
+title: Type de données TabularBinding (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - TabularBinding data type
 ms.assetid: 24587e34-20be-4693-81d8-038a6fc4e8ee
 caps.latest.revision: 39
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 59206b9dd0d9f61ee0915076cd76fc36bdab9322
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: c5771c76262719264ad2f0a869c92c5d3ce011ff
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36043458"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37285965"
 ---
 # <a name="tabularbinding-data-type-assl"></a>Type de données TabularBinding (ASSL)
   Définit un type de données dérivé abstrait représentant une liaison à un élément tabulaire, tel qu'une table ou une dimension de cube.  
@@ -60,13 +60,13 @@ ms.locfileid: "36043458"
 |Éléments dérivés|Consultez [de liaison](binding-data-type-assl.md)|  
   
 ## <a name="remarks"></a>Notes  
- Pour plus d’informations sur la `Binding` type, y compris les tableaux des objets Analysis Services Scripting Language (ASSL) de la `Binding` type et la hiérarchie d’héritage de `Binding` types, consultez [Type de liaison de données &#40;ASSL&#41;](binding-data-type-assl.md).  
+ Pour plus d’informations sur la `Binding` type, y compris les tableaux des objets Analysis Services Scripting Language (ASSL) de la `Binding` type et la hiérarchie d’héritage de `Binding` types, consultez [Type de données de liaison &#40;ASSL&#41;](binding-data-type-assl.md).  
   
  Pour une vue d’ensemble des liaisons de données dans ASSL, consultez [des Sources de données et des liaisons &#40;multidimensionnels SSAS&#41;](../../multidimensional-models/data-sources-and-bindings-ssas-multidimensional.md).  
   
  L’élément correspondant dans le modèle d’objet objets AMO (Analysis Management) est <xref:Microsoft.AnalysisServices.TabularBinding>.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Types de données de script langage XML Analysis Services &#40;ASSL&#41;](analysis-services-scripting-language-xml-data-types-assl.md)  
+ [Types Analysis Services Scripting Language XML données &#40;ASSL&#41;](analysis-services-scripting-language-xml-data-types-assl.md)  
   
   

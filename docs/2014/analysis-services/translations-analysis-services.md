@@ -1,5 +1,5 @@
 ---
-title: Traductions (Analysis Services) | Documents Microsoft
+title: Traductions (Analysis Services) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Business Intelligence Development Studio, translations [Analysis Services]
 - translations [Analysis Services], about translations
@@ -18,15 +18,15 @@ helpviewer_keywords:
 - translations [Analysis Services]
 ms.assetid: 018471e0-3c82-49ec-aa16-467fb58a6d5f
 caps.latest.revision: 36
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 196e55fb22a5e14344f1c379bb8eb77bdd8bf387
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: fce0d8195895fafdfe519ddc1609f0d22a0be0cc
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36041890"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37293289"
 ---
 # <a name="translations-analysis-services"></a>Traductions (Analysis Services)
   **[!INCLUDE[applies](../includes/applies-md.md)]**  Multidimensionnel uniquement  
@@ -49,7 +49,7 @@ ms.locfileid: "36041890"
   
 1.  Ouvrez le modèle multidimensionnel Adventure Works dans le concepteur.  
   
-2.  Dans l’Explorateur de solutions, ouvrez les vues de sources de données et double-cliquez sur Adventure Works DW\<version > .dsv.  
+2.  Dans l’Explorateur de solutions, ouvrez vues des sources de données et double-cliquez sur Adventure Works DW\<version > .dsv.  
   
 3.  Recherchez dimDate, dimProduct, dimProductCategory ou dimProductSubcateogry. Toutes ces dimensions contiennent des attributs pour les membres traduits pour le mois, le jour de semaine, le nom de produit, le nom de catégorie, et ainsi de suite.  
   
@@ -113,7 +113,7 @@ ms.locfileid: "36041890"
   
 2.  Dans Traductions, spécifiez la langue cible (résolue en un LCID), la légende traduite et la description traduite. La liste des langues est cohérente dans Analysis Services, que vous définissiez la langue du serveur dans Management Studio ou que vous ajoutiez une traduction de remplacement sur un attribut unique.  
   
-3.  Dans la page de propriétés de la base de données, définissez `Language` le même LCID que vous avez spécifié pour la traduction. Vous pouvez définir le `Collation` également si la valeur par défaut n’est plus justifiée.  
+3.  Dans la page de propriétés de la base de données, définissez `Language` le même LCID que vous avez spécifié pour la traduction. Le cas échéant, définissez le `Collation` également si la valeur par défaut n’est plus justifiée.  
   
 4.  Générez et déployez la base de données.  
   
@@ -124,6 +124,6 @@ ms.locfileid: "36041890"
  [Scénarios de globalisation pour données multidimensionnelles Analysis Services](globalization-scenarios-for-analysis-services-multiidimensional.md)   
  [Langues et classements &#40;Analysis Services&#41;](languages-and-collations-analysis-services.md)   
  [Définir ou modifier le classement des colonnes](../relational-databases/collations/set-or-change-the-column-collation.md)   
- [Conseils et meilleures pratiques en matière de globalisation &#40;Analysis Services&#41;](globalization-tips-and-best-practices-analysis-services.md)  
+ [Globalisation conseils et meilleures pratiques &#40;Analysis Services&#41;](globalization-tips-and-best-practices-analysis-services.md)  
   
   

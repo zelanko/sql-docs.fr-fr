@@ -1,5 +1,5 @@
 ---
-title: Afficher l’historique (PowerPivot pour SharePoint) d’actualisation des données | Documents Microsoft
+title: Afficher l’historique (PowerPivot pour SharePoint) d’actualisation des données | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - unattended data refresh [Analysis Services with SharePoint]
 - data refresh history [Analysis Services with SharePoint]
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - data refresh [Analysis Services with SharePoint]
 ms.assetid: 4c8d8aa8-794d-4f72-ace3-78d0e688e1a5
 caps.latest.revision: 13
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 6331cbfa7fc019991b004e81acea9c50159fd292
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 5ecca7d87492645502e122497cc66eb54f083097
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36040975"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37267585"
 ---
 # <a name="view-data-refresh-history-powerpivot-for-sharepoint"></a>Afficher l'historique d'actualisation des données (PowerPivot pour SharePoint)
   L'historique d'actualisation des données est un enregistrement de toute l'activité d'actualisation de données PowerPivot dans un classeur Excel. Dans une batterie de serveurs SharePoint, les opérations d'actualisation des données sont effectuées sur une instance du serveur Analysis Services, selon une planification que vous fournissez. Par défaut, l'historique d'actualisation des données est conservé pendant un an. Toutefois, un administrateur de batterie de serveurs peut, pour l'historique de l'utilisation et des événements, spécifier une stratégie de rétention différente qui détermine la durée de conservation des enregistrements d'actualisation des données.  

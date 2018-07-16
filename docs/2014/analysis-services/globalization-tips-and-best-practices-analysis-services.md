@@ -1,5 +1,5 @@
 ---
-title: Globalisation conseils et meilleures pratiques (Analysis Services) | Documents Microsoft
+title: Conseils de globalisation et de meilleures pratiques (Analysis Services) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - translations [Analysis Services], client applications
 - date comparisons
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - month comparisons [Analysis Services]
 ms.assetid: 71a8c438-1370-4c69-961e-d067ee4e47c2
 caps.latest.revision: 34
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 684da8d68061248556d99dcc06c8c8e9207e65d8
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: cb4fa4cb11d4fdbd429cfc01b4dcb3cd43c2a35b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36143615"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37271945"
 ---
 # <a name="globalization-tips-and-best-practices-analysis-services"></a>Conseils et meilleures pratiques en matière de globalisation (Analysis Services)
   **[!INCLUDE[applies](../includes/applies-md.md)]**  Multidimensionnel uniquement  
@@ -110,7 +110,7 @@ ms.locfileid: "36143615"
   
      Vous devriez voir les traductions en français de l'exemple de base de données Adventure Works.  
   
-     ![Tableau croisé dynamique Excel avec traductions Français](media/ssas-localetest-excel.png "tableau croisé dynamique Excel avec traductions Français")  
+     ![Tableau croisé dynamique Excel avec traductions en Français](media/ssas-localetest-excel.png "tableau croisé dynamique Excel avec traductions en Français")  
   
  Vous pouvez utiliser SQL Server Profiler pour confirmer les paramètres régionaux. Cliquez sur un événement `Session Initialize` et examinez la liste des propriétés dans la zone de texte ci-dessous pour trouver `<localeidentifier>1036</localeidentifier>`.  
   
@@ -122,7 +122,7 @@ ms.locfileid: "36143615"
   
 -   Exécutez une requête MDX sur la base de données Adventure Works. Les résultats de la requête doivent être les traductions en français.  
   
-     ![Requête MDX avec traductions Français dans SSMS](media/ssas-localetest-ssms.png "requête MDX avec traductions Français dans SSMS")  
+     ![Requête MDX avec traductions en Français dans SSMS](media/ssas-localetest-ssms.png "requête MDX avec traductions en Français dans SSMS")  
   
 ##  <a name="bkmk_mdx"></a> Écriture de requêtes MDX dans une solution contenant des traductions  
  Les données affichées pour les noms des objets [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] correspondent à des traductions, mais les identificateurs de ces mêmes objets ne sont pas traduits. Chaque fois que possible, utilisez les identificateurs et les clés pour les objets [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] à la place des légendes et des noms traduits. Par exemple, utilisez les clés de membres à la place des noms de membres pour les instructions et les scripts MDX (Multidimensional Expressions) pour garantir la portabilité dans plusieurs langues.  

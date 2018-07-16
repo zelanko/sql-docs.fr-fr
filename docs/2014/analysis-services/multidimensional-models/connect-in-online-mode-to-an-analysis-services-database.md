@@ -1,5 +1,5 @@
 ---
-title: Se connecter en Mode en ligne une base de données Analysis Services | Documents Microsoft
+title: Se connecter en Mode en ligne à une base de données Analysis Services | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Analysis Services, connecting
 ms.assetid: 33041234-7106-404f-a289-8e904f32aff2
 caps.latest.revision: 12
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 4233f9d50cb64bb3827e4dec49251e382ca3c4b3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 74aaef89542270af7be03d4e391a538d3ee33d09
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36043957"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37286125"
 ---
 # <a name="connect-in-online-mode-to-an-analysis-services-database"></a>Connexion en mode en ligne à une base de données Analysis Services
   Vous pouvez vous connecter directement à une base de données [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] et modifier directement les objets qu’elle contient. Si vous vous connectez directement à une base de données [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , les modifications sont immédiates et aucun projet [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] n'est créé dans [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  
@@ -43,7 +43,7 @@ ms.locfileid: "36043957"
      Vous pouvez maintenant modifier directement des objets dans la base de données [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .  
   
 ## <a name="see-also"></a>Voir aussi  
- [Utilisation Analysis Services bases de données et les projets pendant la Phase de développement](work-with-analysis-services-projects-and-databases-in-development.md)   
+ [Utilisation Analysis Services projets et bases de données pendant la Phase de développement](work-with-analysis-services-projects-and-databases-in-development.md)   
  [Création multidimensionnelles de modèles à l’aide de SQL Server Data Tools &#40;SSDT&#41;](creating-multidimensional-models-using-sql-server-data-tools-ssdt.md)  
   
   

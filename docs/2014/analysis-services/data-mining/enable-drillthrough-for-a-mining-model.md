@@ -1,5 +1,5 @@
 ---
-title: Activer l’extraction pour un modèle d’exploration de données | Documents Microsoft
+title: Activer l’extraction pour un modèle d’exploration de données | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - data mining [Analysis Services], how-to topics
 - drillthrough [Analysis Services]
 ms.assetid: 4fa44f60-ef9a-4b59-98c0-c0baf1195c8e
 caps.latest.revision: 27
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 0086339e2f4286257b6236f8caf297ce8cded202
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 93793f4a13d3d590ecf031addb8e11f1d93f11e3
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36153833"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37273530"
 ---
 # <a name="enable-drillthrough-for-a-mining-model"></a>Activer l'extraction pour un modèle d'exploration de données
   Si vous avez activé l'extraction pour un modèle d'exploration de données, lorsque vous parcourez le modèle, vous pouvez extraire des informations détaillées sur les cas utilisés pour créer le modèle. Pour consulter cette information, vous devez disposer des autorisations nécessaires et la structure doit déjà avoir été traitée.  
@@ -33,7 +33,7 @@ ms.locfileid: "36153833"
   
 -   Les autorisations d’extraction sur la structure permettent en outre d’inclure des colonnes de structure dans les requêtes d’extraction à partir du modèle, à l’aide de la fonction [StructureColumn &#40;DMX&#41;](/sql/dmx/structurecolumn-dmx). Vous pouvez également interroger les scénarios d’apprentissage et de test dans la structure en utilisant la syntaxe SELECT… À partir de \<structure >. Syntaxe de cas.  
   
- **Mise en cache de cas d’apprentissage** L’extraction consiste à récupérer des informations sur les cas d’apprentissage dans la structure d’exploration de données. Ces informations sont mises en cache lorsque la structure est traitée. Par conséquent, si vous choisissez d’effacer toutes les données mises en cache en modifiant le <xref:Microsoft.AnalysisServices.MiningStructureCacheMode> propriété `ClearAfterProcessing`, l’extraction ne fonctionnera pas.  
+ **Mise en cache de cas d’apprentissage** L’extraction consiste à récupérer des informations sur les cas d’apprentissage dans la structure d’exploration de données. Ces informations sont mises en cache lorsque la structure est traitée. Par conséquent, si vous choisissez d’effacer toutes les données mises en cache en modifiant le <xref:Microsoft.AnalysisServices.MiningStructureCacheMode> propriété `ClearAfterProcessing`, extraction ne fonctionne pas.  
   
 > [!NOTE]  
 >  Si les cas d’apprentissage n’ont pas été mis en cache, vous devez remplacer la propriété <xref:Microsoft.AnalysisServices.MiningStructureCacheMode> par **KeepTrainingCases** , puis retraiter le modèle avant de pouvoir consulter les données de cas.  
@@ -59,6 +59,6 @@ ms.locfileid: "36153833"
 4.  Dans le menu **Base de données** , sélectionnez **Traiter**.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Requêtes d’extraction &#40;d’exploration de données&#41;](drillthrough-queries-data-mining.md)  
+ [Requêtes d’extraction &#40;exploration de données&#41;](drillthrough-queries-data-mining.md)  
   
   

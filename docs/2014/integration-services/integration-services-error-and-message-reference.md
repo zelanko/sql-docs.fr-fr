@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - error numbers [Integration Services]
 - hresults [Integration Services]
@@ -17,13 +17,13 @@ ms.assetid: 2c825c07-5074-42ad-90ea-0dc5a588dcf7
 caps.latest.revision: 42
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 38dccbf58c4e0cbfee98b10c7cd8974198bceabc
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 111a6cddaae54f05bb751e569487c4b94542bf07
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36040817"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37299999"
 ---
 # <a name="integration-services-error-and-message-reference"></a>Guide de référence des erreurs et des messages propres à Integration Services
   Les tableaux suivants répertorient les erreurs, les avertissements et les messages d'information prédéfinis de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] , par ordre croissant en fonction de leur numéro pour chaque catégorie, avec leurs codes numériques et noms symboliques. Chacune de ces erreurs est définie comme un champ de la classe <xref:Microsoft.SqlServer.Dts.Runtime.Hresults> dans l’espace de noms <xref:Microsoft.SqlServer.Dts.Runtime> .  
@@ -48,7 +48,7 @@ ms.locfileid: "36040817"
 -   [Messages d'erreur des composants de flux de données (DTSBC_E_*)](#msgPipeline)  
   
 ##  <a name="msgError"></a> Messages d'erreur  
- Les noms symboliques de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] les messages d’erreur commencent par `DTS_E_`.  
+ Les noms symboliques de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] messages d’erreur commencent par `DTS_E_`.  
   
 |Code hexadécimal|Code décimal|Nom symbolique|Description|  
 |----------------------|------------------|-------------------|-----------------|  
@@ -2267,7 +2267,7 @@ ms.locfileid: "36040817"
 |0x4020F42C|1075901484|DTS_I_OLEDBDESTZEROMAXCOMMITSIZE|La propriété Taille de validation d'insertion maximale de la destination OLE DB « %1 » est définie sur 0. Ce paramètre de propriété peut provoquer le blocage du package en cours d'exécution. Pour plus d'informations consultez la rubrique relative à l'aide sur l'Éditeur de destination OLE DB (Page Gestionnaire de connexions) via la touche F1.|  
   
 ##  <a name="msgGeneral"></a> Messages généraux et d'événement  
- Les noms symboliques de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] les messages d’erreur commencent par `DTS_MSG_`.  
+ Les noms symboliques de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] messages d’erreur commencent par `DTS_MSG_`.  
   
 |Code hexadécimal|Code décimal|Nom symbolique|Description|  
 |----------------------|------------------|-------------------|-----------------|  
@@ -2306,7 +2306,7 @@ ms.locfileid: "36040817"
 |0x4010310E|1074802958|DTS_MSG_EVENTLOGENTRY_INFORMATION|Nom d'événement : %1<br /><br /> Message : %9<br /><br /> Opérateur : %2<br /><br /> Nom de la source : %3<br /><br /> ID de la source : %4<br /><br /> ID d'exécution : %5<br /><br /> Heure de début : %6<br /><br /> Heure de fin : %7<br /><br /> Code de données : %8|  
   
 ##  <a name="msgSuccess"></a> Messages de réussite  
- Les noms symboliques de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] les messages de réussite commencent par `DTS_S_`.  
+ Les noms symboliques de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] messages de réussite commencent par `DTS_S_`.  
   
 |Code hexadécimal|Code décimal|Nom symbolique|Description|  
 |----------------------|------------------|-------------------|-----------------|  

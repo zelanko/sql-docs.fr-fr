@@ -1,5 +1,5 @@
 ---
-title: Créer une Source de données (SSAS multidimensionnel) | Documents Microsoft
+title: Créer une Source de données (SSAS multidimensionnel) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.datasourcedesigner.f1
 - sql12.asvs.sqlserverstudio.impersonationinfo.f1
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - security [Analysis Services], data source connections
 ms.assetid: 9fab8298-10dc-45a9-9a91-0c8e6d947468
 caps.latest.revision: 60
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: b4077a7a0df6fe7575a7844a85917c107aacac07
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 4b0275daece83f64726f7b5dd50618d68d7c6e6f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36154732"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37310849"
 ---
 # <a name="create-a-data-source-ssas-multidimensional"></a>Créer une source de données (SSAS Multidimensionnel)
   Dans un modèle multidimensionnel [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , un objet de source de données représente une connexion à la source de données depuis laquelle vous traitez (ou importez) des données. Un modèle multidimensionnel doit contenir au moins un objet de source de données, mais rien ne vous empêche d'en ajouter plus pour combiner des données émanant de plusieurs entrepôts de données. Suivez les instructions de cette rubrique pour créer un objet de source de données pour votre modèle. Pour plus d’informations sur la définition des propriétés de cet objet, consultez [Définir les propriétés de la source de données &#40;SSAS Multidimensionnel&#41;](set-data-source-properties-ssas-multidimensional.md).  
@@ -70,7 +70,7 @@ ms.locfileid: "36154732"
 >  Par défaut, [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] n’enregistre pas les mots de passe avec la chaîne de connexion. Si le mot de passe n’est pas enregistré, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] vous invite à le taper si nécessaire. Si vous avez choisi d'enregistrer le mot de passe, ce dernier est stocké dans un format chiffré dans la chaîne de connexion de données. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] chiffre les informations de mot de passe pour les sources de données à l’aide de la clé de chiffrement de la base de données qui contient la source de données. Avec les informations de connexion chiffrées, vous devez utiliser le Gestionnaire de configuration [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pour modifier le mot de passe ou le compte de service [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , sinon les informations chiffrées ne peuvent pas être récupérées. Pour plus d'informations, consultez [SQL Server Configuration Manager](../../relational-databases/sql-server-configuration-manager.md).  
   
 ### <a name="defining-impersonation-information-for-data-mining-objects"></a>Définition des informations d'emprunt d'identité pour les objets d'exploration de données  
- Les requêtes d'exploration de données peuvent être exécutées dans le contexte du compte de service [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , mais également dans le contexte de l'utilisateur qui soumet la requête ou dans le contexte d'un utilisateur spécifique. Le contexte dans lequel une requête est exécutée peut avoir une incidence sur les résultats de la requête. Pour l’exploration de données `OPENQUERY` type d’opérations, vous souhaiterez la requête d’exploration de données à exécuter dans le contexte de l’utilisateur actuel ou dans le contexte d’un utilisateur spécifique (quel que soit l’utilisateur exécutant la requête) plutôt que dans le contexte du compte de service. Cela permet d'exécuter la requête avec des informations d'identification de sécurité limitées. Si vous souhaitez que [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] emprunte l’identité de l’utilisateur actuel ou d’un utilisateur spécifique, sélectionnez l’option **Utiliser un nom d’utilisateur et un mot de passe spécifiques** ou **Utiliser les infos d’identification de l’utilisateur actuel** .  
+ Les requêtes d'exploration de données peuvent être exécutées dans le contexte du compte de service [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , mais également dans le contexte de l'utilisateur qui soumet la requête ou dans le contexte d'un utilisateur spécifique. Le contexte dans lequel une requête est exécutée peut avoir une incidence sur les résultats de la requête. Pour l’exploration de données `OPENQUERY` type des opérations, vous souhaiterez peut-être la requête d’exploration de données à exécuter dans le contexte de l’utilisateur actuel ou dans le contexte d’un utilisateur spécifique (quel que soit l’utilisateur qui exécute la requête) plutôt que dans le contexte du compte de service. Cela permet d'exécuter la requête avec des informations d'identification de sécurité limitées. Si vous souhaitez que [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] emprunte l’identité de l’utilisateur actuel ou d’un utilisateur spécifique, sélectionnez l’option **Utiliser un nom d’utilisateur et un mot de passe spécifiques** ou **Utiliser les infos d’identification de l’utilisateur actuel** .  
   
 ##  <a name="bkmk_steps"></a> Créer une source de données à l'aide de l'Assistant Source de données  
   
@@ -86,7 +86,7 @@ ms.locfileid: "36154732"
   
      Le fournisseur par défaut d’une nouvelle connexion est le fournisseur OLE DB natif\\[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client. Ce fournisseur est utilisé pour se connecter à une instance du moteur de base de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] à l’aide d’OLE DB. Pour les connexions à une base de données relationnelle SQL Server, l'utilisation du mode natif OLE DB\SQL Server Native Client 11.0 est souvent plus rapide que l'utilisation d'autres fournisseurs.  
   
-     Vous pouvez choisir un fournisseur différent pour accéder à d'autres sources de données. Pour obtenir la liste des fournisseurs et des bases de données relationnelles pris en charge par [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], consultez [prise en charge des Sources de données &#40;multidimensionnels SSAS&#41;](supported-data-sources-ssas-multidimensional.md).  
+     Vous pouvez choisir un fournisseur différent pour accéder à d'autres sources de données. Pour obtenir la liste des fournisseurs et des bases de données relationnelles pris en charge par [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], consultez [Sources de données prises en charge &#40;multidimensionnels SSAS&#41;](supported-data-sources-ssas-multidimensional.md).  
   
 5.  Tapez les informations requises par le fournisseur sélectionné pour établir la connexion à la source de données sous-jacente. Si le fournisseur **OLE DB natif\SQL Server Native Client** est sélectionné, tapez les informations suivantes :  
   
@@ -161,7 +161,7 @@ ms.locfileid: "36154732"
   
 -   Désignez une source de données comme source de données principale. La source de données principale est celle utilisée pour créer une vue de source de données.  
   
--   Une source de données principale doit prendre en charge la `OpenRowset` (fonction).  Pour plus d’informations sur cette fonction dans SQL Server, consultez <xref:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlTokenType.OpenRowSet>.  
+-   Une source de données principale doit prendre en charge le `OpenRowset` (fonction).  Pour plus d’informations sur cette fonction dans SQL Server, consultez <xref:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlTokenType.OpenRowSet>.  
   
  Utilisez la méthode suivante pour combiner des données provenant de plusieurs sources de données :  
   
@@ -176,7 +176,7 @@ ms.locfileid: "36154732"
 5.  Recherchez et sélectionnez la table que vous avez ajoutée. Cliquez avec le bouton droit sur la table et sélectionnez **Nouvelle relation**. Choisissez les colonnes source et de destination qui contiennent des données correspondantes.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Les Sources de données prises en charge &#40;SSAS multidimensionnel&#41;](supported-data-sources-ssas-multidimensional.md)   
+ [Sources de données prises en charge &#40;SSAS multidimensionnel&#41;](supported-data-sources-ssas-multidimensional.md)   
  [Vues de sources de données dans les modèles multidimensionnels](data-source-views-in-multidimensional-models.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Appel de procédures stockées | Documents Microsoft
+title: Appel de procédures stockées | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - CALL statement
 ms.assetid: 96a9660d-875b-4ee4-b339-90020b1d9895
 caps.latest.revision: 22
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: ed6cad7159c7ef8873c7fd1d9d9ba153380e2c33
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: cb799a4e366c0301998b46d7244438aabd2c4411
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36152238"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37299149"
 ---
 # <a name="calling-stored-procedures"></a>Appel des procédures stockées
   Les procédures stockées peuvent être appelées sur le serveur ou à partir d'une application cliente. Dans les deux cas, les procédures stockées s'exécutent toujours sur le serveur, soit dans le contexte du serveur, soit dans le contexte d'une base de données. Aucune autorisation spéciale n'est requise pour exécuter une procédure stockée. Lorsqu'une procédure stockée est ajoutée par un assembly dans le contexte du serveur ou de la base de données, tous les utilisateurs peuvent l'exécuter, à condition que leur rôle autorise les actions qu'elle effectue.  

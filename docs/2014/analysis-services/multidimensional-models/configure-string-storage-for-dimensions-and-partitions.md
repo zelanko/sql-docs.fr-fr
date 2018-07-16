@@ -1,5 +1,5 @@
 ---
-title: Configurer le stockage des chaînes pour les Partitions et Dimensions | Documents Microsoft
+title: Configurer le stockage des chaînes pour les Dimensions et Partitions | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 987f6cfc-da82-4b2e-96ef-a8af88339e5f
 caps.latest.revision: 20
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 3874e787b6e6923568a9d72277249e949aa31550
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 2ae16d1e77e5e7dd16113bd8ee4ed4a0d5234668
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36154927"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37275705"
 ---
 # <a name="configure-string-storage-for-dimensions-and-partitions"></a>Configurer le stockage de chaînes pour des dimensions et des partitions
   Vous pouvez reconfigurer le stockage des chaînes pour adapter les chaînes de très grande taille dans les attributs de dimension ou les partitions qui dépassent la limite de taille de fichier de 4 Go pour les magasins de chaînes. Si vos dimensions ou partitions incluent des magasins de chaînes de cette taille, vous pouvez contourner cette contrainte de taille de fichier en modifiant la propriété **StringStoresCompatibilityLevel** au niveau de la dimension ou de la partition, pour les objets locaux et les objets liés (locaux ou distants).  
@@ -63,7 +63,7 @@ ms.locfileid: "36154927"
   
  Les dimensions et les partitions doivent utiliser le mode de stockage MOLAP.  
   
- Le niveau de compatibilité de la base de données doit être 1100. Si vous avez créé ou déployé une base de données en utilisant [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] et la version [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] ou ultérieure d’ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], le niveau de compatibilité de la base de données est déjà défini à 1100. Si vous avez déplacé une base de données créée dans une version antérieure d’ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] vers ssSQL11 ou ultérieur, vous devez mettre à jour le niveau de compatibilité. Pour les bases de données que vous déplacez, mais ne redéployez pas, vous pouvez utiliser [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] pour définir le niveau de compatibilité. Pour plus d’informations, consultez [définir le niveau de compatibilité de base de données multidimensionnelle &#40;Analysis Services&#41;](compatibility-level-of-a-multidimensional-database-analysis-services.md).  
+ Le niveau de compatibilité de la base de données doit être 1100. Si vous avez créé ou déployé une base de données en utilisant [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] et la version [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] ou ultérieure d’ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], le niveau de compatibilité de la base de données est déjà défini à 1100. Si vous avez déplacé une base de données créée dans une version antérieure d’ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] vers ssSQL11 ou ultérieur, vous devez mettre à jour le niveau de compatibilité. Pour les bases de données que vous déplacez, mais ne redéployez pas, vous pouvez utiliser [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] pour définir le niveau de compatibilité. Pour plus d’informations, consultez [définir le niveau de compatibilité d’une base de données multidimensionnelle &#40;Analysis Services&#41;](compatibility-level-of-a-multidimensional-database-analysis-services.md).  
   
 ##  <a name="bkmk_step1"></a> Étape 1 : définir la propriété StringStoreCompatiblityLevel dans les outils de données SQL Server  
   

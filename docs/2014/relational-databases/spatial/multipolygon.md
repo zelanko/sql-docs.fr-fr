@@ -8,24 +8,24 @@ ms.suite: ''
 ms.technology:
 - dbe-spatial
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - MultiPolygon geometry subtype [SQL Server]
 - geometry subtypes [SQL Server]
 ms.assetid: 2c5db358-2a16-49d9-aac5-a74e86813932
 caps.latest.revision: 20
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: f1d29c76541d87e950c973fd6dc7d57482c6d2b2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 3ae25be65e0fdf0cf88bf8dec6cf5c3f59f9c9e6
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36040134"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37311401"
 ---
 # <a name="multipolygon"></a>MultiPolygon
-  A `MultiPolygon` instance est une collection de zéro ou plusieurs `Polygon` instances.  
+  Un `MultiPolygon` instance est une collection de zéro ou plusieurs `Polygon` instances.  
   
 ## <a name="polygon-instances"></a>Instances Polygon  
  L’illustration ci-dessous montre des exemples de `MultiPolygon` instances.  
@@ -34,18 +34,18 @@ ms.locfileid: "36040134"
   
  Comme indiqué par l'illustration :  
   
--   La figure 1 est un `MultiPolygon` instance avec deux `Polygon` éléments. La limite est définie par les deux anneaux extérieurs et les trois anneaux intérieurs.  
+-   Figure 1 est un `MultiPolygon` instance avec deux `Polygon` éléments. La limite est définie par les deux anneaux extérieurs et les trois anneaux intérieurs.  
   
 -   La Figure 2 est une instance `MultiPolygon` avec deux éléments `Polygon`. La limite est définie par les deux anneaux extérieurs et les trois anneaux intérieurs. Les deux éléments `Polygon` se croisent à un point tangent.  
   
 ### <a name="accepted-instances"></a>Instances acceptées  
- A `MultiPolygon` instance est acceptée, une des conditions suivantes est remplie.  
+ Un `MultiPolygon` instance est acceptée, une des conditions suivantes est remplie.  
   
 -   Il est vide `MultiPolygon` instance.  
   
 -   Toutes les instances comprenant le `MultiPolygon` instance sont acceptées `Polygon` instances. Pour plus d’informations sur accepté `Polygon` instances, consultez [polygone](../spatial/polygon.md).  
   
- Les exemples suivants montrent acceptées `MultiPolygon` instances.  
+ Les exemples suivants montrent acceptés `MultiPolygon` instances.  
   
 ```  
 DECLARE @g1 geometry = 'MULTIPOLYGON EMPTY';  

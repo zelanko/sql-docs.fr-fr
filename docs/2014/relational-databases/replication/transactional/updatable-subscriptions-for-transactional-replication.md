@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - transactional replication, updatable subscriptions
 - updatable subscriptions, about updatable subscriptions
@@ -18,15 +18,15 @@ helpviewer_keywords:
 - updatable subscriptions
 ms.assetid: 8eec95cb-3a11-436e-bcee-bdcd05aa5c5a
 caps.latest.revision: 57
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 3a7af7b2b8da4c51b72e05a7225a4a18224b377a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 38e7b5970295bec4170c8658c254214f40d250ff
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36039259"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37268665"
 ---
 # <a name="updatable-subscriptions-for-transactional-replication"></a>Updatable Subscriptions for Transactional Replication
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,7 +47,7 @@ ms.locfileid: "36039259"
   
  Pour activer les abonnements pouvant être mis à jour pour les publications transactionnelles, consultez [Enable Updating Subscriptions for Transactional Publications](../publish/enable-updating-subscriptions-for-transactional-publications.md).  
   
- Pour créer des abonnements pouvant être pour les publications transactionnelles, consultez [Create an Updatable Subscription à une Publication transactionnelle](../create-updatable-subscription-transactional-publication-transact-sql.md)  
+ Pour créer des abonnements actualisables pour les publications transactionnelles, consultez [Create an Updatable Subscription à une Publication transactionnelle](../create-updatable-subscription-transactional-publication-transact-sql.md)  
   
 ## <a name="switching-between-update-modes"></a>Basculement d'un mode de mise à jour à l'autre  
  Lorsque vous utilisez les abonnements pouvant être mis à jour, vous pouvez spécifier qu'un abonnement doit utiliser un mode de mise à jour puis basculer vers l'autre si l'application l'exige. Vous pouvez, par exemple, spécifier qu'un abonnement doit utiliser la mise à jour immédiate mais basculer vers la mise à jour en attente si un échec système entraîne une perte de la connectivité réseau.  
@@ -80,13 +80,13 @@ ms.locfileid: "36039259"
   
 -   Les mises à jour sur l'abonné sont propagées au serveur de publication même si un abonnement expire ou est inactif. Vérifiez que ces abonnements sont effectivement supprimés ou réinitialisés.  
   
--   Si `TIMESTAMP` ou `IDENTITY` colonnes sont utilisées et elles sont répliquées en tant que leurs types de base de données, valeurs de ces colonnes ne doivent pas être mis à jour sur l’abonné.  
+-   Si `TIMESTAMP` ou `IDENTITY` colonnes sont utilisées et elles sont répliquées en tant que leurs types de base de données, les valeurs de ces colonnes ne doivent pas être mis à jour sur l’abonné.  
   
--   Les abonnés ne peuvent pas mettre à jour ou insérer `text`, `ntext` ou `image` valeurs, car il n’est pas possible de lire à partir des tables insérées ou supprimées dans les déclencheurs de suivi des modifications de réplication. De même, les abonnés ne peuvent pas mettre à jour ou insérer `text` ou `image` à l’aide des valeurs `WRITETEXT` ou `UPDATETEXT` , car les données sont écrasées par le serveur de publication. En revanche, vous pouvez partitionner les `text` et `image` dans distinct, les colonnes de table et modifier les deux tables dans une transaction.  
+-   Les abonnés ne peuvent pas mettre à jour ou insérer `text`, `ntext` ou `image` valeurs, car il n’est pas possible de lire à partir des tables insérées ou supprimées dans les déclencheurs de suivi des modifications de réplication. De même, les abonnés ne peuvent pas mettre à jour ou insérer `text` ou `image` des valeurs en utilisant `WRITETEXT` ou `UPDATETEXT` , car les données sont écrasées par le serveur de publication. Au lieu de cela, vous pouvez partitionner le `text` et `image` colonnes dans un distinct de table et modifier les deux tables dans une transaction.  
   
      Pour mettre à jour des objets volumineux sur un abonné, utilisez les types de données `varchar(max)`, `nvarchar(max)`, `varbinary(max)` au lieu de `text`, `ntext`, et `image` types de données, respectivement.  
   
--   Les mises à jour de clés uniques (y compris les clés primaires) générant des doublons (comme une mise à jour de type `UPDATE <column> SET <column> =<column>+1` ) ne sont pas autorisées et sont rejetées en raison d’une violation d’unicité. C’est parce que l’ensemble des mises à jour effectuées sur l’abonné sont propagées par la réplication en tant qu’individu `UPDATE` instructions pour chaque ligne concernée.  
+-   Les mises à jour de clés uniques (y compris les clés primaires) générant des doublons (comme une mise à jour de type `UPDATE <column> SET <column> =<column>+1` ) ne sont pas autorisées et sont rejetées en raison d’une violation d’unicité. Il s’agit, car l’ensemble des mises à jour effectuées sur l’abonné sont propagées par la réplication en tant qu’individu `UPDATE` instructions pour chaque ligne concernée.  
   
 -   Si la base de données de l'abonné est partitionnée horizontalement et que des lignes de la partition existent sur l'abonné mais non sur le serveur de publication, l'abonné ne peut pas mettre à jour les lignes pré-existantes. Toute tentative de mise à jour de ces lignes renvoie un message d'erreur. Les lignes doivent être supprimées de la table puis réinsérées.  
   
@@ -112,9 +112,9 @@ ms.locfileid: "36039259"
   
 -   Pour les colonnes de type de données `SQL_VARIANT`: lorsque les données sont insérées ou mises à jour sur l’abonné, elles sont mappées de la façon suivante par l’Agent de lecture de file d’attente lorsqu’elles sont copiées à partir de l’abonné à la file d’attente :  
   
-    -   `BIGINT`, `DECIMAL`, `NUMERIC`, `MONEY`, et `SMALLMONEY` sont mappées à `NUMERIC`.  
+    -   `BIGINT`, `DECIMAL`, `NUMERIC`, `MONEY`, et `SMALLMONEY` sont mappées aux `NUMERIC`.  
   
-    -   `BINARY` et `VARBINARY` sont mappées à `VARBINARY` données.  
+    -   `BINARY` et `VARBINARY` sont mappées aux `VARBINARY` données.  
   
 ### <a name="conflict-detection-and-resolution"></a>Détection et résolution des conflits  
   

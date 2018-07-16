@@ -1,5 +1,5 @@
 ---
-title: Configurations du package | Documents Microsoft
+title: Configurations du package | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - package configuration syntax [Integration Services]
 - SQL Server Integration Services packages, configurations
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - packages [Integration Services], configurations
 ms.assetid: d20e0311-1fc9-4ddc-a381-6d127cf11b69
 caps.latest.revision: 47
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: b3b80e197cedae2b8a9902b8e3de4f9066fab374
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 4b8341d97c711501b4a9ade2f15d73443312e83a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36041864"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37314149"
 ---
 # <a name="package-configurations"></a>Configurations du package
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] Fournit des configurations de package que vous pouvez utiliser pour mettre à jour les valeurs des propriétés au moment de l’exécution.  
@@ -48,7 +48,7 @@ ms.locfileid: "36041864"
   
 -   Les configurations rendent ces packages plus souples. Par exemple, une configuration peut mettre à jour la valeur d'une variable utilisée dans une expression de propriété.  
   
- [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] prend en charge différentes méthodes de stockage des configurations de package, telles que des fichiers XML, les tables d’un [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] de base de données et les variables d’environnement et de package.  
+ [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] prend en charge plusieurs méthodes de stockage de configurations de package, telles que des fichiers XML, les tables d’un [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] base de données et les variables d’environnement et de package.  
   
  Chaque configuration est une paire propriété/valeur. Le fichier de configuration XML et les types de configuration [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] peuvent inclure plusieurs configurations.  
   
@@ -83,7 +83,7 @@ ms.locfileid: "36041864"
   
 -   Vous ne pouvez pas utiliser l’option **/ConfigFile** pour charger des configurations qui remplacent celles que vous aviez spécifiées au moment de la conception.  
   
- Pour plus d’informations sur ces options, et comment le comportement de ces options diffère entre [!INCLUDE[ssISCurrent](../includes/ssiscurrent-md.md)] et les versions antérieures, consultez [les changements de comportement des fonctionnalités Integration Services dans SQL Server 2014](../../2014/integration-services/behavior-changes-to-integration-services-features-in-sql-server-2014.md).  
+ Pour plus d’informations sur ces options, ainsi que la façon dont le comportement de ces options diffère entre [!INCLUDE[ssISCurrent](../includes/ssiscurrent-md.md)] et versions antérieures, consultez [les changements de comportement des fonctionnalités Integration Services dans SQL Server 2014](../../2014/integration-services/behavior-changes-to-integration-services-features-in-sql-server-2014.md).  
   
 ## <a name="package-configuration-types"></a>Types de configuration de package  
  Le tableau suivant décrit les types de configuration de package.  
@@ -153,7 +153,7 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
  Les configurations indirectes utilisent des variables d'environnement. Au lieu de spécifier directement le paramètre de configuration, la configuration pointe vers une variable d'environnement, qui contient à son tour la valeur de configuration. L'utilisation de configurations indirectes est un meilleur choix lorsque l'emplacement de la configuration peut changer pour chaque déploiement d'un package.  
   
 ## <a name="related-tasks"></a>Related Tasks  
- [Créer des Configurations de Package](../../2014/integration-services/create-package-configurations.md)  
+ [Créer des configurations de package](../../2014/integration-services/create-package-configurations.md)  
   
 ## <a name="related-content"></a>Contenu associé  
   

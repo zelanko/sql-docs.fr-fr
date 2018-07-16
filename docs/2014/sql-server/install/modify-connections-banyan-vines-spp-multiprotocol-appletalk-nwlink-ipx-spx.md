@@ -1,5 +1,5 @@
 ---
-title: Modifier les connexions qui utilisent des protocoles réseau Banyan VINES Sequenced Packet Protocol (SPP), Multiprotocol, AppleTalk ou NWLink IPX SPX | Documents Microsoft
+title: Modifier les connexions qui utilisent des protocoles réseau Banyan VINES Sequenced Packet Protocol (SPP), Multiprotocol, AppleTalk ou NWLink IPX SPX | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - network protocols [SQL Server], modifying connections
 - SPP [SQL Server]
@@ -23,15 +23,15 @@ helpviewer_keywords:
 - RPC [SQL Server]
 ms.assetid: 5c5ae453-cc5b-4898-95c7-ad34157b1f60
 caps.latest.revision: 20
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 0167af6c11abb12e8aa38a52a77707b81aecbe78
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 5b2b8e2d6ead66108b76d03bbfc020d9345afcd7
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36043079"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37296009"
 ---
 # <a name="modify-connections-that-use-banyan-vines-sequenced-packet-protocol-spp-multiprotocol-appletalk-or-nwlink-ipx-spx-network-protocols"></a>Modifier les connexions qui utilisent des protocoles réseau Banyan VINES Sequenced Packet Protocol (SPP), Multiprotocol, AppleTalk ou NWLink IPX SPX
   Le Conseiller de mise à niveau a détecté des protocoles de connexion serveur client qui ne sont pas pris en charge dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Les applications clientes qui utilisent les protocoles réseau Banyan VINES Sequenced Packet Protocol (SPP), Multiprotocol (RPC), AppleTalk ou NWLink IPX/SPX doivent se connecter à l'aide d'un protocole pris en charge.  
@@ -45,7 +45,7 @@ ms.locfileid: "36043079"
 ## <a name="corrective-action"></a>Action corrective  
  Modifiez les applications clientes pour qu'elles utilisent un protocole pris en charge lorsqu'elles se connectent au serveur. Si un alias est défini, qui utilise l'un des protocoles non pris en charge, cet alias doit alors être modifié pour utiliser un protocole pris en charge.  
   
- Si votre connexion de l’application chaîne spécifiquement utilise ou charge d’un de ces protocoles, à un réseau en spécifiant = des DBMSRPCN pour RPC, NETWORK = DBMSADSN pour Appletalk ou réseau = DBMSVINN pour la propriété de Banyan VINES, ou à l’aide d’un préfixe explicite tel que « spx : *transmettant*» pour SPX, « bv :*serveur*» pour Banyan VINES, « adsp :*server*» pour AppleTalk, ou « rpc :*server*« pour multiprotocole, vous devez modifier votre application pour utiliser un des protocoles pris en charge.  
+ Si votre connexion de l’application chaîne spécifiquement utilise ou charge d’un de ces protocoles, par un réseau en spécifiant = des DBMSRPCN pour RPC, NETWORK = DBMSADSN pour Appletalk ou réseau = DBMSVINN pour la propriété de Banyan VINES, ou à l’aide d’un préfixe explicite tel que « spx : *serveur\instance*» pour SPX, « bv :*server*» pour Banyan VINES, » adsp :*server*» pour AppleTalk, ou » rpc :*server*« pour multiprotocole, puis vous devez modifier votre application pour utiliser un des protocoles pris en charge.  
   
  Pour plus d'informations, consultez « Choix d'un protocole réseau » dans la documentation en ligne de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   

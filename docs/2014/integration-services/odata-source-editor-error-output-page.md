@@ -1,5 +1,5 @@
 ---
-title: Éditeur de Source OData (Page sortie d’erreur) | Documents Microsoft
+title: Éditeur de Source OData (Page sortie d’erreur) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - Sql12.dts.designer.odatasource.erroroutput.f1
 ms.assetid: 9a81e2ce-aee6-4c4c-8495-6501d715aca2
 caps.latest.revision: 5
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 7b76a5399a88118fc0f09c381d2def5e8fb038e0
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 97ac6b0096c7b0ba99baa3868ffcb46c1505b8c7
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36042049"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37291035"
 ---
 # <a name="odata-source-editor-error-output-page"></a>Éditeur de source OData (page Sortie d'erreur)
   La page **Sortie d'erreur** de la boîte de dialogue **Éditeur de source OData** vous permet de sélectionner les options de gestion des erreurs et de définir les propriétés sur les colonnes de sortie d'erreur.  

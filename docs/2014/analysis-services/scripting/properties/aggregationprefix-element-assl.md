@@ -1,5 +1,5 @@
 ---
-title: Élément AggregationPrefix (ASSL) | Documents Microsoft
+title: Élément AggregationPrefix (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - AggregationPrefix element
 ms.assetid: 1581e0df-ae8e-41ce-9c92-f0f7cac487f2
 caps.latest.revision: 35
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 84f7b086e1cdc2516f0912a4580d0b3eb45132ee
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: d7f7fe7ad16c8949116edb13c7d2c9b5144443dd
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36154040"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37293279"
 ---
 # <a name="aggregationprefix-element-assl"></a>Élément AggregationPrefix (ASSL)
   Définit le préfixe commun à utiliser pour les noms d'agrégation dans l'ensemble de l'élément parent associé.  
@@ -62,7 +62,7 @@ ms.locfileid: "36154040"
 |Éléments enfants|None|  
   
 ## <a name="remarks"></a>Notes  
- Préfixes d’agrégation génèrent des noms d’agrégation dans [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]et également générer des noms de table dans la base de données relationnelle pour les agrégations stockées dans une partition ROLAP (OLAP) relationnel.  
+ Préfixes d’agrégation génèrent des noms d’agrégation dans [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]et également générer des noms de tables dans la base de données relationnelle pour les agrégations stockées dans une partition ROLAP (OLAP) relationnelle.  
   
  Un nom d'agrégation complètement développé se compose des parties suivantes :  
   
@@ -78,7 +78,7 @@ ms.locfileid: "36154040"
   
 -   *PartitionPrefix* représente la valeur de la `AggregationPrefix` élément associé à un `Partition` élément.  
   
- La cinquième partie du nom, *AggregationID*, est un identificateur défini par le système et les utilisateurs n’ont aucun contrôle sur cette partie du nom.  
+ La cinquième partie du nom, *AggregationID*, est un identificateur défini par le système et les utilisateurs ont aucun contrôle sur cette partie du nom.  
   
  Les éléments qui correspondent aux parents de `AggregationPrefix` dans le modèle objet AMO (Analysis Management Objects) sont <xref:Microsoft.AnalysisServices.Cube>, <xref:Microsoft.AnalysisServices.Database>, <xref:Microsoft.AnalysisServices.MeasureGroup> et <xref:Microsoft.AnalysisServices.Partition>.  
   

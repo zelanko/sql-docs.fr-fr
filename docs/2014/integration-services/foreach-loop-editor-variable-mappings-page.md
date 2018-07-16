@@ -1,5 +1,5 @@
 ---
-title: Éditeur de boucle foreach (Page mappages de variables) | Documents Microsoft
+title: Éditeur de boucle foreach (Page mappage de variables) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/22/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.foreachloopcontainer.mapping.f1
 ms.assetid: aa847b87-f391-48a5-9849-eeda2d6b00b9
 caps.latest.revision: 36
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: b38583d5fe07315f6f80a54a188312f3becb3e28
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: cf5ae5a5f80a13747b82290155bf5dfd5c38e00a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36140305"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37331909"
 ---
 # <a name="foreach-loop-editor-variable-mappings-page"></a>Éditeur de boucle Foreach (page Mappage de variables)
   Utilisez la page **Mappage de variables** de la boîte de dialogue **Éditeur de boucle Foreach** pour mapper les variables à la valeur de la collection. La valeur de cette variable est mise à jour avec les valeurs de la collection à chaque itération de la boucle.  
@@ -45,7 +45,7 @@ ms.locfileid: "36140305"
 > [!NOTE]  
 >  L'index commence à 0.  
   
- **Rubriques connexes**: [parcourir les fichiers Excel et les Tables à l’aide d’un conteneur de boucles Foreach](control-flow/loop-through-excel-files-and-tables-by-using-a-foreach-loop-container.md)  
+ **Rubriques connexes**: [parcourir les fichiers Excel et des Tables à l’aide d’un conteneur de boucles Foreach](control-flow/loop-through-excel-files-and-tables-by-using-a-foreach-loop-container.md)  
   
  **Supprimer**  
  Sélectionnez une variable, puis cliquez sur **Supprimer**.  

@@ -1,14 +1,13 @@
 ---
-title: Réparation de Page automatique (pour les groupes de disponibilité et la mise en miroir de base de données) | Documents Microsoft
+title: Réparation de Page automatique (groupes de disponibilité et la mise en miroir de base de données) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - automatic page repair
 - Availability Groups [SQL Server], automatic page repair
@@ -16,17 +15,17 @@ helpviewer_keywords:
 - suspect pages [SQL Server]
 ms.assetid: cf2e3650-5fac-4f34-b50e-d17765578a8e
 caps.latest.revision: 31
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: d84c8eb5470ee6ef54dfdc1327ea40fafb961e41
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 91d4d9a3c2efa2bfcb8e3b1db44f43d525f0b067
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36039669"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37257935"
 ---
-# <a name="automatic-page-repair-for-availability-groups-and-database-mirroring"></a>Réparation de Page automatique (pour les groupes de disponibilité et la mise en miroir de base de données)
+# <a name="automatic-page-repair-for-availability-groups-and-database-mirroring"></a>Réparation de Page automatique (groupes de disponibilité et la mise en miroir de base de données)
   La réparation de page automatique est prise en charge par la mise en miroir de bases de données et par [!INCLUDE[ssHADR](../../includes/sshadr-md.md)]. Lorsque certains types d'erreurs endommagent une page et la rendent illisible, un serveur partenaire de mise en miroir de bases de données (principal ou miroir) ou un réplica de disponibilité (principal ou secondaire) tente de récupérer automatiquement la page. Le serveur partenaire/réplica qui ne peut pas lire la page demande une nouvelle copie de la page auprès de son serveur partenaire ou d'un autre réplica. Si cette demande réussit, la page illisible est remplacée par la copie lisible, ce qui permet généralement de résoudre l'erreur.  
   
  En règle générale, la mise en miroir de bases de données et [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] gèrent les erreurs d'E/S de manières équivalentes. Les quelques différences sont présentées ici de manière explicite.  

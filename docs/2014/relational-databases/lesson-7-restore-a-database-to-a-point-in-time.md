@@ -1,5 +1,5 @@
 ---
-title: Leçon 8. Restaurer une base de données pour le stockage Windows Azure | Documents Microsoft
+title: Leçon 8. Restaurer une base de données vers le stockage Windows Azure | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: a9f99670-e1de-441e-972c-69faffcac17a
 caps.latest.revision: 7
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: ea9ec20e60fb879b17434e8fe4581d28b3d7a551
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 98d44755a26519dd63701ba8e5eebb1cf4ef7e7f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36039947"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37311781"
 ---
 # <a name="lesson-8-restore-a-database-to-windows-azure-storage"></a>Leçon 8. Restaurer une base de données dans le Stockage Microsoft Azure
   Dans cette leçon, vous allez apprendre comment créer un fichier de sauvegarde localement, puis le restaurer dans le Stockage Microsoft Azure. Notez que vous votre base de données peut être locale ou dans une machine virtuelle Windows Azure. Pour suivre cette leçon, vous n'avez pas besoin de terminer les leçons 4, 5, 6 et 7.  
@@ -73,21 +73,21 @@ ms.locfileid: "36039947"
   
  Pour restaurer une base de données avec des fichiers de données et des fichiers journaux pointant vers le Stockage Microsoft Azure à l'aide de l'interface utilisateur de SQL Server Management Studio, procédez comme suit :  
   
-1.  Dans **l’Explorateur d’objets**, cliquez sur le nom du serveur pour développer l’arborescence du serveur.  
+1.  Dans **Explorateur d’objets**, cliquez sur le nom du serveur pour développer l’arborescence du serveur.  
   
 2.  Développez **bases de données**et sélectionnez votre base de données.  
   
 3.  Cliquez avec le bouton droit sur la base de données, pointez sur **Tâches**, puis cliquez sur **Restaurer**.  
   
-4.  Sur le **général** page, dans le **restaurer** section source, cliquez sur **Source** appareil.  
+4.  Sur le **général** page, dans le **restaurer** section de la source, cliquez sur **Source** appareil.  
   
-5.  Cliquez sur le bouton Parcourir pour le **Source** zone de texte de l’appareil, qui ouvre le **sélectionner les unités de sauvegarde** boîte de dialogue.  
+5.  Cliquez sur le bouton Parcourir pour le **Source** zone de texte de l’appareil, ce qui ouvre le **sélectionner les unités de sauvegarde** boîte de dialogue.  
   
-6.  Dans la zone de texte de support de sauvegarde, sélectionnez **fichier**, puis cliquez sur le **ajouter** pour rechercher le fichier de sauvegarde (.bak). Cliquez sur **OK**.  
+6.  Dans la zone de texte de support de sauvegarde, sélectionnez **fichier**, puis cliquez sur le **ajouter** pour localiser le fichier de sauvegarde (.bak). Cliquez sur **OK**.  
   
 7.  Cliquez sur **fichiers** sur la première page.  
   
-8.  Dans le **restaurer les fichiers de base de données** comme section sous **restaurer en tant que** , tapez ce qui suit :  
+8.  Dans le **restaurer les fichiers de base de données** comme section sous **restaurer sous** , tapez ce qui suit :  
   
      Pour le fichier de données, tapez : `https://teststorageaccnt.blob.core.windows.net/testrestoressms/TestRESSMS.mdf`. Pour le fichier journal, tapez : `https://teststorageaccnt.blob.core.windows.net/testrestoressms/TestRESSMS_log.ldf`.  
   
@@ -101,6 +101,6 @@ ms.locfileid: "36039947"
   
  **Leçon suivante :**  
   
- [Leçon 9. Restaurer une base de données du stockage Windows Azure](../relational-databases/lesson-8-restore-as-new-database-from-log-backup.md)  
+ [Leçon 9 : Restaurer une base de données depuis Stockage Microsoft Azure](../relational-databases/lesson-8-restore-as-new-database-from-log-backup.md)  
   
   

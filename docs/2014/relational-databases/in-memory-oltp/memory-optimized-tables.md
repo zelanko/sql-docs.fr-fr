@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine-imoltp
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 14dddf81-b502-49dc-a6b6-d18b1ae32d2b
 caps.latest.revision: 65
-author: stevestein
-ms.author: sstein
-manager: jhubbard
-ms.openlocfilehash: 77b0bb18dde4c6f6bc8a1ff22bf3fda11b6f414f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: 6427878b5c032e0560859ab7ba68af8d06fb40e1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36044504"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37276545"
 ---
 # <a name="memory-optimized-tables"></a>Tables optimisées en mémoire
   L'OLTP en mémoire[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] contribue à améliorer les performances des applications OLTP grâce à un accès rapide aux données optimisées en mémoire, à la compilation en mode natif de la logique métier et aux algorithmes de verrous (internes et externes) gratuits. La fonctionnalité OLTP en mémoire comprend les tables optimisées en mémoire et les types de tables, ainsi que la compilation en mode natif des procédures stockées [!INCLUDE[tsql](../../includes/tsql-md.md)] pour permettre un accès efficace à ces tables.  
@@ -38,7 +38,7 @@ ms.locfileid: "36044504"
   
      Directives pour la mise à jour des tables optimisées en mémoire (y compris la modification des colonnes des tables, des index et de bucket_count).  
   
--   [Présentation des Transactions sur les Tables mémoire optimisées](../../database-engine/understanding-transactions-on-memory-optimized-tables.md)  
+-   [Comprendre les transactions sur les tables à mémoire optimisée](../../database-engine/understanding-transactions-on-memory-optimized-tables.md)  
   
      Cette section contient plusieurs rubriques relatives à la réalisation de transactions sur les tables optimisées en mémoire, y compris les niveaux d'isolement des transactions et les transactions multiconteneurs.  
   
@@ -50,7 +50,7 @@ ms.locfileid: "36044504"
   
      Explique de façon détaillée comment les statistiques sont compilées pour les tables optimisées en mémoire, et comment gérer et mettre à jour manuellement ces statistiques.  
   
--   [Classements et Pages de codes](../../database-engine/collations-and-code-pages.md)  
+-   [Classements et pages de codes](../../database-engine/collations-and-code-pages.md)  
   
      Explique de façon détaillée les restrictions sur les classements et les pages de codes pris en charge pour les tables optimisées en mémoire.  
   

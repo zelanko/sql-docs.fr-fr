@@ -1,5 +1,5 @@
 ---
-title: Didacticiels (Générateur de rapports) | Documents Microsoft
+title: Didacticiels (Générateur de rapports) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,23 +8,23 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: c99495c3-899b-4c84-af87-76e96d4afa23
 caps.latest.revision: 9
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 92d54d4e6f0db25605bf3d59ac7de59953d43d71
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: d5c422eded8ac3ffb54306790c88a80b0f841736
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36043778"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37266155"
 ---
 # <a name="tutorials-report-builder"></a>Didacticiels (Générateur de rapports)
   Utilisez les didacticiels suivants relatifs au Générateur de rapports pour apprendre à créer des rapports de base.  
   
- [Conditions préalables pour les didacticiels &#40;Générateur de rapports&#41;](prerequisites-for-tutorials-report-builder.md)  
+ [Prérequis pour les didacticiels &#40;Générateur de rapports&#41;](prerequisites-for-tutorials-report-builder.md)  
  Pour utiliser ces didacticiels, vous devez disposer d’un accès en lecture seule à une base de données [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] et d’autorisations d’accès à un serveur de rapports [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)] .  
   
  Pour obtenir de l'aide sur ces conditions préalables, contactez l'administrateur de votre serveur de rapports.  
@@ -59,13 +59,13 @@ ms.locfileid: "36043778"
  [Didacticiel : Ajout d’un indicateur de performance clé à votre rapport &#40;Générateur de rapports&#41;](tutorial-adding-a-kpi-to-your-report-report-builder.md)  
  Suivez les étapes de ce didacticiel pour apprendre à ajouter un indicateur de performance clé (KPI) à un rapport.  
   
- [Didacticiel : Mapper des rapports &#40;Générateur de rapports&#41;](tutorial-map-report-report-builder.md)  
+ [Didacticiel : Rapport cartographique &#40;Générateur de rapports&#41;](tutorial-map-report-report-builder.md)  
  Suivez les étapes de ce didacticiel pour apprendre à ajouter une carte à un rapport.  
   
  [Didacticiel : Ajouter un paramètre à votre rapport &#40;Générateur de rapports&#41;](tutorial-add-a-parameter-to-your-report-report-builder.md)  
  Suivez les étapes de ce didacticiel pour apprendre à personnaliser l’apparence et le contenu d’un rapport à l’aide de paramètres.  
   
- [Didacticiel : Création d’une extraction et des rapports principaux &#40;Générateur de rapports&#41;](tutorial-creating-drillthrough-and-main-reports-report-builder.md)  
+ [Didacticiel : Création d’un rapport principal et l’extraction &#40;Générateur de rapports&#41;](tutorial-creating-drillthrough-and-main-reports-report-builder.md)  
  Suivez les étapes de ce didacticiel pour apprendre à créer des rapports pour un scénario d'extraction basé sur un cube Analysis Services. Vous allez créer le rapport principal et l'activer en vue de l'extraction, ainsi que le rapport cible de l'action d'extraction.  
   
  [Didacticiel : introduction aux expressions](tutorial-introducing-expressions.md)  

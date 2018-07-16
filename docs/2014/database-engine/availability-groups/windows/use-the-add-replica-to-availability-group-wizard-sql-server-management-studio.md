@@ -5,10 +5,9 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.addreplicawizard.f1
 helpviewer_keywords:
@@ -16,15 +15,15 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], wizards
 ms.assetid: 60d962b6-2af4-4394-9190-61939a102bc0
 caps.latest.revision: 20
-author: rothja
-ms.author: jroth
-manager: jhubbard
-ms.openlocfilehash: 29b5dbd44e02515cc2bdab7445bacb0e61d1dcca
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 8abea104cf6d59ba0558489a387ae35af7b6e7cf
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36043681"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37291395"
 ---
 # <a name="use-the-add-replica-to-availability-group-wizard-sql-server-management-studio"></a>Utiliser l'Assistant Ajouter un réplica au groupe de disponibilité (SQL Server Management Studio)
   Utilisez l'Assistant Ajouter un réplica au groupe de disponibilité pour ajouter un nouveau réplica secondaire à un groupe de disponibilité AlwaysOn existant.  
@@ -35,7 +34,7 @@ ms.locfileid: "36043681"
 
   
 ##  <a name="BeforeYouBegin"></a> Avant de commencer  
- Si vous n’avez jamais ajouté de réplica de disponibilité pour un groupe de disponibilité, consultez les sections « groupes de disponibilité et réplicas » dans « Instances de serveur » [conditions préalables, Restrictions et recommandations pour les groupes de disponibilité AlwaysOn &#40;SQL Server&#41;](prereqs-restrictions-recommendations-always-on-availability.md).  
+ Si vous n’avez jamais ajouté de réplica de disponibilité pour un groupe de disponibilité, consultez les sections « groupes de disponibilité et réplicas » dans « Instances de serveur » [prérequis, Restrictions et recommandations pour les groupes de disponibilité AlwaysOn &#40;SQL Server&#41;](prereqs-restrictions-recommendations-always-on-availability.md).  
   
 ###  <a name="Prerequisites"></a> Conditions préalables  
   
@@ -79,14 +78,14 @@ ms.locfileid: "36043681"
   
 3.  Cliquez avec le bouton droit sur le groupe de disponibilité auquel vous ajoutez un réplica secondaire, puis sélectionnez la commande **Ajouter un réplica** . Cela permet de lancer l'Assistant Ajouter un réplica au groupe de disponibilité.  
   
-4.  Sur la page **Se connecter à des réplicas secondaires existants** , connectez-vous à chaque réplica secondaire du groupe de disponibilité. Pour plus d’informations, consultez [se connecter à la Page de réplicas secondaires existants &#40;Assistant Ajouter un réplica et l’Assistant Ajout de bases de données&#41;](connect-to-existing-secondary-replicas-page.md).  
+4.  Sur la page **Se connecter à des réplicas secondaires existants** , connectez-vous à chaque réplica secondaire du groupe de disponibilité. Pour plus d’informations, consultez [se connecter à la Page de réplicas secondaires existants &#40;Assistant Ajouter un réplica et Assistant Ajout de bases de données&#41;](connect-to-existing-secondary-replicas-page.md).  
   
 5.  Sur la page **Spécifier les réplicas** , spécifiez et configurez un ou plusieurs réplicas secondaires pour le groupe de disponibilité. Cette page contient trois onglets. Le tableau suivant présente ces onglets. Pour plus d’informations, consultez [Page Spécifier les réplicas &#40;Assistant Nouveau groupe de disponibilité : Assistant Ajout de réplica&#41;](specify-replicas-page-new-availability-group-wizard-add-replica-wizard.md).  
   
     |Onglet|Brève description|  
     |---------|-----------------------|  
     |**Réplicas**|Cet onglet vous permet de spécifier chaque instance de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] qui hébergera un nouveau réplica secondaire.|  
-    |**Points de terminaison**|Utilisez cet onglet pour vérifier le point de terminaison de mise en miroir de bases de données existant, le cas échéant, pour chaque nouveau réplica secondaire. Si ce point de terminaison manque sur une instance de serveur dont les comptes de service utilisent l'authentification Windows, l'Assistant tente de créer le point de terminaison automatiquement. **Remarque :** si une instance de serveur s’exécute sous un compte d’utilisateur de domaine, vous devez apporter une modification manuelle à votre instance de serveur avant de pouvoir continuer dans l’Assistant. Pour plus d'informations, consultez [Conditions préalables requises](#Prerequisites), plus haut dans cette rubrique.|  
+    |**Points de terminaison**|Utilisez cet onglet pour vérifier le point de terminaison de mise en miroir de bases de données existant, le cas échéant, pour chaque nouveau réplica secondaire. Si ce point de terminaison manque sur une instance de serveur dont les comptes de service utilisent l'authentification Windows, l'Assistant tente de créer le point de terminaison automatiquement. **Remarque :** si une instance de serveur s’exécute sous un compte d’utilisateur sans domaine, vous devez apporter une modification manuelle à votre instance de serveur avant de pouvoir continuer dans l’Assistant. Pour plus d'informations, consultez [Conditions préalables requises](#Prerequisites), plus haut dans cette rubrique.|  
     |**Préférences de sauvegarde**|Utilisez cet onglet pour spécifier vos préférences de sauvegarde pour le groupe de disponibilité dans son ensemble, si vous souhaitez modifier le paramètre actuel, et pour indiquer vos priorités de sauvegarde pour les différents réplicas de disponibilité.|  
   
 6.  Sur la page **Sélectionner la synchronisation de données initiale** , choisissez comment vous souhaitez que vos nouvelles bases de données secondaires soient créées et jointes au groupe de disponibilité. Choisissez l'une des options suivantes :  

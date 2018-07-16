@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Merge Agent, executables
 - Merge Agent, parameter reference
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - command prompt [SQL Server replication]
 ms.assetid: fe1e7f60-b0c8-45e9-a5e8-4fedfa73d7ea
 caps.latest.revision: 63
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: bacb2a50002dedd449d7060e0335d064645f8572
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 8234986c27b6bffc593d8eb7cc6c21c8988d7d0a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36143899"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37287145"
 ---
 # <a name="replication-merge-agent"></a>Replication Merge Agent
   L'Agent de fusion de réplication est un fichier exécutable d'utilitaire qui applique l'instantané initial contenu dans les tables de base de données aux Abonnés. Il fusionne également les modifications de données incrémentielles ayant eu lieu sur le serveur de publication après la création de l'instantané initial, puis harmonise les conflits soit en fonction des règles que vous configurez, soit à l'aide d'un programme de résolution personnalisé que vous créez.  
@@ -177,7 +177,7 @@ ms.locfileid: "36143899"
   
  **-ExchangeType** [ **1**| **2**| **3**]  
  > [!WARNING]  
->  [!INCLUDE[ssNoteDepFutureDontUse](../../../includes/ssnotedepfuturedontuse-md.md)] Pour limiter le téléchargement, utilisez la `@subscriber_upload_options` de `sp_addmergearticle` à la place.  
+>  [!INCLUDE[ssNoteDepFutureDontUse](../../../includes/ssnotedepfuturedontuse-md.md)] Pour limiter le téléchargement, utilisez le `@subscriber_upload_options` de `sp_addmergearticle` à la place.  
   
  Spécifie le type d'échange de données au cours de la synchronisation parmi les types suivants :  
   

@@ -1,5 +1,5 @@
 ---
-title: Organiser des formes dans le diagramme des relations d’attribut | Documents Microsoft
+title: Organiser les formes dans le diagramme des relations d’attribut | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - attribute relationships [Analysis Services]
 ms.assetid: 9f8e3809-507c-496b-b96d-1fa4e028fe1a
 caps.latest.revision: 10
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 56577bb2fbd1d3a1d1645e6400f65f5a37ed8245
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: e99f3b4bc7687c70321874cce87b567acbbe5771
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36052943"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37330529"
 ---
 # <a name="arrange-shapes-in-the-attribute-relationship-diagram"></a>Organiser des formes dans le diagramme des relations d'attributs
   Vous pouvez modifier la disposition des formes sous l'onglet **Relations d'attributs** de la vue de Structure de dimension du Concepteur de dimensions dans [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  

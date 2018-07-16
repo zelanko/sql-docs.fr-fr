@@ -5,10 +5,9 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - sessions [SQL Server], database mirroring
 - resuming database mirroring
@@ -17,15 +16,15 @@ helpviewer_keywords:
 - pausing database mirroring
 ms.assetid: c67802c6-ee8c-4cbd-a6d4-f7b80413a4ab
 caps.latest.revision: 31
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: a256f48d216888aa30260498ced9ce7fa451d506
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: e19f9d4ea6220c324680ac13305bad818fd551e2
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36040709"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37284035"
 ---
 # <a name="pausing-and-resuming-database-mirroring-sql-server"></a>Suspendre et reprendre la mise en miroir de bases de données (SQL Server)
   Le propriétaire de la base de données peut suspendre et reprendre ultérieurement une session de mise en miroir de bases de données à tout moment. La suspension conserve l'état de la session tout en suspendant la mise en miroir. En cas de goulots, la suspension peut permettre d'améliorer les performances sur le serveur principal.  

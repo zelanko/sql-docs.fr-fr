@@ -1,5 +1,5 @@
 ---
-title: Élément Password (XMLA) | Documents Microsoft
+title: Mot de passe, élément (XMLA) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -24,15 +24,15 @@ helpviewer_keywords:
 - Password element
 ms.assetid: 8a0603bd-f6a1-4b86-84f1-c83d0b03951b
 caps.latest.revision: 11
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: cfc62de4ad73888fb95fe179efd0fdaeabbc9dc9
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: 9ab15627b4f5cde95ecff8f368d294d4336060cc
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36052708"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37328449"
 ---
 # <a name="password-element-xmla"></a>Élément Password (XMLA)
   Détermine le mot de passe à utiliser par le parent [sauvegarde](../xml-elements-commands/backup-element-xmla.md) ou [restaurer](../xml-elements-commands/restore-element-xmla.md) commande pour chiffrer ou déchiffrer un fichier de sauvegarde.  

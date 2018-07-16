@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.rep.monitor.publishersettings.f1
 helpviewer_keywords:
 - Publisher Settings dialog box
 ms.assetid: 4fb70427-082d-4179-82a1-34b235accc43
 caps.latest.revision: 18
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: d010302c6485dbb9d5dcb53db6ba923fbdc9fff9
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: abcedc479df197258b9ad836a3dd62430fb1c69b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36143865"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37301839"
 ---
 # <a name="publisher-settings"></a>Paramètres du serveur de publication
   La boîte de dialogue **Paramètres du serveur de publication** permet de changer les paramètres des serveurs de publication ajoutés dans le volet de gauche du Moniteur de réplication.  

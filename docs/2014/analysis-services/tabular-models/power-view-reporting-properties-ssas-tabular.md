@@ -1,5 +1,5 @@
 ---
-title: Alimentation afficher les propriétés de création de rapports (SSAS tabulaire) | Documents Microsoft
+title: Alimentation afficher les propriétés de création de rapports (SSAS tabulaire) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 51205c2d-b6ce-4b92-afd2-58e399a81691
 caps.latest.revision: 22
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 9bd81e21929c983b045e7c8268fb5bb3b4686594
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: d9b290b55eceb8734719c61229967d0c93c160a8
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36140368"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37330379"
 ---
 # <a name="power-view-reporting-properties-ssas-tabular"></a>Propriétés de la génération de rapports Power View (SSAS Tabulaire)
   [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] permet la création intuitive de rapports ad hoc pour les utilisateurs professionnels comme les analystes de données, les décideurs d’entreprise et les travailleurs de l’information. Ils peuvent facilement créer et interagir avec les vues de données des modèles tabulaires basés sur des classeurs PowerPivot publiés dans une Galerie PowerPivot, ou des modèles tabulaires créés à l'aide de [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] puis déployés sur des instances Analysis Services de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] est une application de navigateur Silverlight lancée depuis SharePoint Server 2010 ou une version ultérieure.  

@@ -1,5 +1,5 @@
 ---
-title: Les concepteurs de l’interface utilisateur et les boîtes de dialogue pour l’analyse sous forme de tableau | Documents Microsoft
+title: Concepteurs d’interfaces utilisateur et les boîtes de dialogue pour l’analyse sous forme de tableau | Microsoft Docs
 ms.custom: ''
 ms.date: 05/17/2018
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
-author: Minewiskan
+ms.topic: conceptual
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 31e3f28958c69883710e13f966d90efabaef1c60
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 3195a765ba6419db679a8e7928ffa3a49112a939
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36043213"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37308480"
 ---
-# <a name="ui-designers-and-dialogs-for-tabular-analysis"></a>Les concepteurs de l’interface utilisateur et les boîtes de dialogue pour l’analyse sous forme de tableau
+# <a name="ui-designers-and-dialogs-for-tabular-analysis"></a>Concepteurs d’interfaces utilisateur et les boîtes de dialogue pour l’analyse sous forme de tableau
 
-Cette section contient la documentation sur les concepteurs d’interface utilisateur utilisateur et les boîtes de dialogue pour l’analyse sous forme de tableau.
+Cette section contient la documentation sur les concepteurs d’interface (interface utilisateur) utilisateur et les boîtes de dialogue pour l’analyse sous forme de tableau.
 
 ## <a name="next-steps"></a>Étapes suivantes
 
-- [Concepteurs et boîtes de dialogue (tabulaires) Analysis Services](../analysis-services-designers-and-dialog-boxes-tabular.md)
+- [Concepteurs et boîtes de dialogue Analysis Services (tabulaire)](../analysis-services-designers-and-dialog-boxes-tabular.md)
 

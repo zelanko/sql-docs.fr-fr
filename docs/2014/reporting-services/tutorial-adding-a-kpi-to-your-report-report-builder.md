@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 1bf77859-0b33-4f40-abaf-ebeeb6ebb1f8
 caps.latest.revision: 10
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 516b61e080c92bd6dc0579b93b829e891068c826
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: f06fa546153ef62edda97c173a8c4fb9cc4d9362
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36152273"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37276165"
 ---
 # <a name="tutorial-adding-a-kpi-to-your-report-report-builder"></a>Didacticiel : ajout d'un indicateur de performance clé à un rapport (Générateur de rapports)
   Un indicateur de performance clé (KPI) est une valeur mesurable qui revêt une importance significative sur le plan opérationnel. Ce didacticiel vous apprend comment inclure un indicateur de performance clé dans un rapport. Dans ce scénario, le récapitulatif des ventes par sous-catégories de produits est l'indicateur de performance clé. L'état actuel de l'indicateur de performance clé est indiqué à l'aide de couleurs, de jauges et d'indicateurs.  
@@ -68,7 +68,7 @@ ms.locfileid: "36152273"
      La boîte de dialogue **Mise en route** s'affiche.  
   
     > [!NOTE]  
-    >  Si le **mise en route** boîte de dialogue n’apparaît pas, à partir du bouton Générateur de rapports, cliquez sur **nouveau**.  
+    >  Si le **mise en route** boîte de dialogue n’apparaît pas, à partir du bouton Générateur de rapports, cliquez sur **New**.  
   
 2.  Dans le volet gauche, assurez-vous que **Nouveau rapport** est sélectionné.  
   
@@ -173,9 +173,9 @@ ms.locfileid: "36152273"
   
 #### <a name="to-display-the-present-state-of-a-kpi-by-using-background-colors"></a>Pour afficher l'état actuel d'un KPI en utilisant des couleurs d'arrière-plan  
   
-1.  Dans la table, cliquez sur deux cellules vers le bas à partir de la `[Sum(Sales)]` cellule (ligne de sous-total qui affiche les ventes d’une sous-catégorie), puis cliquez sur **propriétés de la zone de texte**.  
+1.  Dans la table, avec le bouton droit deux cellules vers le bas à partir de la `[Sum(Sales)]` cellule (ligne de sous-total qui affiche les ventes d’une sous-catégorie), puis cliquez sur **propriétés de la zone texte**.  
   
-2.  Dans **remplir**, cliquez sur le **fx** situé en regard du **couleur de remplissage** et entrez l’expression suivante dans la **définir l’expression pour : BackgroundColor** champ :  
+2.  Dans **remplir**, cliquez sur le **fx** situé en regard du **couleur de remplissage** option et entrez l’expression suivante dans la **définir l’expression pour : BackgroundColor** champ :  
   
  `=IIF(Sum(Fields!Sales.Value) >= 5000 ,"Lime", IIF(Sum(Fields!Sales.Value) < 2500, "Red","Yellow"))`  
   
@@ -198,7 +198,7 @@ ms.locfileid: "36152273"
   
 3.  Type **KPI** dans l’en-tête de colonne.  
   
-4.  Sur le **insérer** sous l’onglet du **des régions de données** , cliquez sur **jauge**, puis cliquez sur l’aire de conception en dehors du tableau. La boîte de dialogue **Sélectionner le type de jauge** s’affiche.  
+4.  Sur le **insérer** sous l’onglet le **régions de données** de groupe, cliquez sur **jauge**, puis cliquez sur l’aire de conception en dehors de la table. La boîte de dialogue **Sélectionner le type de jauge** s’affiche.  
   
 5.  Cliquez sur **linéaire**. Le premier type de jauge linéaire, **Horizontal**, est sélectionné.  
   
@@ -212,7 +212,7 @@ ms.locfileid: "36152273"
   
      Une fois le champ déposé sur la jauge, les valeurs qu'il contient sont agrégées à l'aide de la fonction intégrée Sum.  
   
-9. Cliquez sur le pointeur de la jauge, sur **propriétés du pointeur**.  
+9. Cliquez sur le pointeur de la jauge et cliquez sur **propriétés du pointeur**.  
   
 10. Dans **Type pointeur**, sélectionnez **barre**. Le pointeur abandonne sa forme de marqueur pour prendre celle d'une barre qui sera plus visible une fois que la jauge aura été ajoutée au tableau.  
   
@@ -220,7 +220,7 @@ ms.locfileid: "36152273"
   
 12. Cliquez avec le bouton droit sur l’échelle de la jauge, puis cliquez sur **Propriétés de l’échelle**.  
   
-13. Définir le **maximale** option à 25000.  
+13. Définir le **maximale** option sur 25000.  
   
     > [!NOTE]  
     >  Au lieu d’une constante comme 25000, vous pouvez utiliser une expression pour calculer dynamiquement la valeur de l’option **Maximum** . L'expression utilise alors la fonctionnalité d'agrégation et est semblable à l'expression `=Max(Sum(Fields!Sales.value), "Tablix1")`.  
@@ -240,7 +240,7 @@ ms.locfileid: "36152273"
   
     2.  Cliquez sur l’échelle. Les propriétés de l'échelle linéaire s'affichent alors dans le volet Propriétés.  
   
-    3.  Dans le **échelle** catégorie, développez le **MaximumPin** nœud.  
+    3.  Dans le **aiguilles d’échelle** catégorie, développez le **MaximumPin** nœud.  
   
     4.  Définir le **activer** propriété `True`. Une aiguille s'affiche alors derrière la valeur maximale de l'échelle.  
   
@@ -261,7 +261,7 @@ ms.locfileid: "36152273"
   
 4.  Cliquez sur la cellule correspondant au sous-total de la sous-catégorie.  
   
-5.  Sur le **insérer** sous l’onglet du **des régions de données** de groupe, double-cliquez sur **indicateur.**  
+5.  Sur le **insérer** sous l’onglet le **régions de données** de groupe, double-cliquez sur **indicateur.**  
   
      La boîte de dialogue **Sélectionner un type d’indicateur** s’ouvre.  
   
@@ -296,7 +296,7 @@ ms.locfileid: "36152273"
   
 2.  Type **Product Sales KPI**, puis cliquez en dehors de la zone de texte.  
   
-3.  Si vous le souhaitez, cliquez sur la zone de texte qui contient **Product Sales KPI**, cliquez sur **propriétés de la zone de texte**, puis, sous l’onglet Police, sélectionnez les différents styles de police, tailles et les couleurs.  
+3.  Si vous le souhaitez, avec le bouton droit de la zone de texte qui contient **Product Sales KPI**, cliquez sur **propriétés de la zone texte**, puis, sous l’onglet Police, sélectionnez les différents styles de police, les tailles et couleurs.  
   
 4.  Cliquez sur **Exécuter** pour afficher un aperçu du rapport.  
   
@@ -333,7 +333,7 @@ ms.locfileid: "36152273"
 2.  Cliquez sur **Enregistrer**.  
   
 ## <a name="next-steps"></a>Étapes suivantes  
- Vous avez terminé le didacticiel d'ajout d'un indicateur de performance clé à votre rapport. Pour plus d’informations, consultez jauges (Générateur de rapports) [indicateurs &#40;le Générateur de rapports et SSRS&#41;](report-design/indicators-report-builder-and-ssrs.md).  
+ Vous avez terminé le didacticiel d'ajout d'un indicateur de performance clé à votre rapport. Pour plus d’informations, consultez jauges (Générateur de rapports) [indicateurs &#40;Générateur de rapports et SSRS&#41;](report-design/indicators-report-builder-and-ssrs.md).  
   
 ## <a name="see-also"></a>Voir aussi  
  [Didacticiels &#40;Générateur de rapports&#41;](report-builder-tutorials.md)   

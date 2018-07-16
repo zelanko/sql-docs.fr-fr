@@ -1,5 +1,5 @@
 ---
-title: Découper le Cube Source (Assistant exploration de données) | Documents Microsoft
+title: Découper le Cube Source (Assistant exploration de données) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dm.dmwizard.slicesourcecube.f1
 ms.assetid: 16485608-d3b9-49ee-8baa-948038cdd7ec
 caps.latest.revision: 23
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: a0e3badd385e654db3b869a197130fde26fbffcc
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 6024c1e58b48c8661eaa15a0ea85c464103403ae
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36140824"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37326549"
 ---
 # <a name="slice-source-cube-data-mining-wizard"></a>Découper le cube source (Assistant Exploration de données)
   Utilisez la boîte de dialogue **Découper le cube source** afin de limiter les données utilisées pour effectuer l'apprentissage du modèle. Généralement, un cube contient les données relatives à plusieurs dimensions et attributs différents, tels que tous les magasins, toutes les régions et tous les produits. Il n'est pas pratique d'effectuer l'apprentissage d'un modèle sur des combinaisons illimitées d'attributs. C'est pourquoi, vous utilisez cette boîte de dialogue pour choisir un ensemble spécifique à utiliser dans l'apprentissage d'un modèle.  
@@ -30,7 +30,7 @@ ms.locfileid: "36140824"
   
  Si vous n'êtes pas familiarisé avec les tranches et les cubes, nous vous recommandons de consulter les articles suivants :  
   
--   [Définir la propriété secteur de Partition &#40;Analysis Services&#41;](multidimensional-models/set-the-partition-slice-property-analysis-services.md)  
+-   [Définissez la propriété Slice de Partition &#40;Analysis Services&#41;](multidimensional-models/set-the-partition-slice-property-analysis-services.md)  
   
 -   [Créer et gérer une Partition locale &#40;Analysis Services&#41;](multidimensional-models/create-and-manage-a-local-partition-analysis-services.md)  
   
@@ -39,7 +39,7 @@ ms.locfileid: "36140824"
 >   
 >  Par exemple, au lieu d’utiliser [: &#40;plage&#41; &#40;MDX&#41; ](/sql/mdx/range-mdx) pour définir une plage, vous devez énumérer chaque membre par année spécifique.  
 >   
->  Si vous devez définir une tranche complexe, nous vous recommandons de définir les tuples de la tranche en utilisant un script XMLA Alter. Ensuite, vous pouvez utiliser l’outil de ligne de commande ascmd ou SSIS [Analysis Services Execute DDL Task](../integration-services/control-flow/analysis-services-execute-ddl-task.md) pour exécuter le script et créer le jeu de membres spécifié juste avant de traiter la partition.  
+>  Si vous devez définir une tranche complexe, nous vous recommandons de définir les tuples de la tranche en utilisant un script XMLA Alter. Ensuite, vous pouvez utiliser l’outil de ligne de commande ascmd ou la SSIS [Analysis Services Execute DDL Task](../integration-services/control-flow/analysis-services-execute-ddl-task.md) pour exécuter le script et créer le jeu de membres spécifié juste avant de traiter la partition.  
   
  **Pour plus d’informations :** [Assistant Exploration de données &#40;Analysis Services - Exploration de données&#41;](data-mining/data-mining-wizard-analysis-services-data-mining.md), [Créer une structure d’exploration de données relationnelle](data-mining/create-a-relational-mining-structure.md)  
   
@@ -65,7 +65,7 @@ ms.locfileid: "36140824"
   
 ## <a name="see-also"></a>Voir aussi  
  [Fin de l’Assistant &#40;Assistant exploration de données&#41;](completing-the-wizard-data-mining-wizard.md)   
- [Aide (F1) de l’Assistant d’exploration de données &#40;Analysis Services - Exploration de données&#41;](data-mining-wizard-f1-help-analysis-services-data-mining.md)   
+ [Données d’aide F1 de l’Assistant exploration de données &#40;Analysis Services - Exploration de données&#41;](data-mining-wizard-f1-help-analysis-services-data-mining.md)   
  [Spécifier l’utilisation des colonnes du modèle d’exploration de données &#40;Assistant exploration de données&#41;](specify-mining-model-column-usage-data-mining-wizard.md)  
   
   

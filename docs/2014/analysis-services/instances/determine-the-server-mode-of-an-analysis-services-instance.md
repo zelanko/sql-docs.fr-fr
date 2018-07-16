@@ -1,5 +1,5 @@
 ---
-title: Déterminer le Mode de serveur d’analyse Services Instance | Documents Microsoft
+title: Déterminer le Mode de serveur d’analyse Services Instance | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 9e556fb1-ca37-4f06-8f8f-f187cb0fdb37
 caps.latest.revision: 31
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: ec5ec0ebab56cd5e836385a26fc60a1c5cf1a0d0
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: bca31a21dda5f03b29456f842afb2d4d7504c608
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36142372"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37297429"
 ---
 # <a name="determine-the-server-mode-of-an-analysis-services-instance"></a>Déterminer le mode serveur d'une instance Analysis Services
   Analysis Services peuvent être installés dans l'un des trois modes serveur : multidimensionnel et exploration de données (par défaut), PowerPivot pour SharePoint et tabulaire. Le mode serveur d'une instance Analysis Services est déterminé au moment de l'installation lorsque vous choisissez les options d'installation du serveur.  
@@ -31,7 +31,7 @@ ms.locfileid: "36142372"
 ## <a name="server-icons-in-object-explorer"></a>Icônes de serveur dans l'Explorateur d'objets  
  La méthode la plus simple pour déterminer le mode serveur consiste à se connecter au serveur dans SQL Server Management Studio et à repérer l'icône située à côté du nom du serveur dans l'Explorateur d'objets. L'illustration suivante montre trois instances d'Analysis Services déployées en mode MDX, Tabulaire, et PowerPivot :  
   
- ![Pour chaque mode serveur, les icônes de l’Explorateur de l’objet](../media/ssas-ssms-servermodes.gif "des icônes de l’Explorateur d’objets pour chaque mode serveur")  
+ ![Icônes de l’Explorateur pour chaque mode serveur de l’objet](../media/ssas-ssms-servermodes.gif "des icônes de l’Explorateur d’objets pour chaque mode serveur")  
   
 ## <a name="viewing-deploymentmode-property-in-msmdsrvini-file"></a>Affichage de la propriété DeploymentMode dans le fichier MSMDSRV.INI  
  Vous pouvez également vérifier la propriété `DeploymentMode` dans le fichier msmdsrv.ini inclus dans chaque instance Analysis Services. La valeur de cette propriété identifie le mode serveur. Les valeurs valides sont 0 (multidimensionnel), 1 (SharePoint) ou 2 (tabulaire). Vous devez être un administrateur d’ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] (autrement dit, un membre du rôle Serveur) pour pouvoir ouvrir le fichier msmdsrv.ini. Ce fichier contient du code XML structuré. Vous pouvez utiliser le Bloc-notes ou un autre éditeur de texte pour afficher le fichier.  
@@ -59,6 +59,6 @@ ms.locfileid: "36142372"
  [Se connecter à Analysis Services](connect-to-analysis-services.md)   
  [Solutions de modèles tabulaires &#40;SSAS tabulaire&#41;](../tabular-model-solutions-ssas-tabular.md)   
  [Solutions de modèles multidimensionnels &#40;SSAS&#41;](../multidimensional-models/multidimensional-model-solutions-ssas.md)   
- [Les modèles d’exploration de données &#40;Analysis Services - Exploration de données&#41;](../data-mining/mining-models-analysis-services-data-mining.md)  
+ [Modèles d’exploration de données &#40;Analysis Services - Exploration de données&#41;](../data-mining/mining-models-analysis-services-data-mining.md)  
   
   

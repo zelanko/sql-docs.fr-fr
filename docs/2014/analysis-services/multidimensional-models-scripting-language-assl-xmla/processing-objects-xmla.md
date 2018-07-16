@@ -1,5 +1,5 @@
 ---
-title: Le traitement des objets (XMLA) | Documents Microsoft
+title: Traitement des objets (XMLA) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -23,20 +23,20 @@ helpviewer_keywords:
 - XMLA, objects
 ms.assetid: a65b3249-303d-49c6-98af-6ac6eed11a03
 caps.latest.revision: 16
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: b4bb32d561a140746fb7b64dc9f9181f23306da9
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: ce70d5d9168d1158b98453553b2323afc8da8e11
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36152916"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37306509"
 ---
 # <a name="processing-objects-xmla"></a>Traitement d'objets (XMLA)
-  Dans [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], le traitement est l’étape ou la série d’étapes qui transforme les données en informations pour l’analyse de l’entreprise. Si le traitement varie selon le type d'objet, le traitement consiste toujours à transformer des données en informations.  
+  Dans [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], le traitement est l’étape ou série d’étapes qui transforme les données en informations destinées à l’analyse. Si le traitement varie selon le type d'objet, le traitement consiste toujours à transformer des données en informations.  
   
- Processus un [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] de l’objet, vous pouvez utiliser la [processus](../xmla/xml-elements-commands/process-element-xmla.md) commande. La commande `Process` peut traiter les objets suivants dans une instance [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] :  
+ Pour traiter un [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] de l’objet, vous pouvez utiliser la [processus](../xmla/xml-elements-commands/process-element-xmla.md) commande. La commande `Process` peut traiter les objets suivants dans une instance [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] :  
   
 -   Cubes  
   
@@ -77,7 +77,7 @@ ms.locfileid: "36152916"
 ## <a name="specifying-objects-to-be-processed"></a>Spécification des objets à traiter  
  Le [objet](../xmla/xml-elements-properties/object-element-xmla.md) propriété de la `Process` commande contient l’identificateur d’objet de l’objet à traiter. Seul un objet peut être spécifié dans une commande `Process`, mais le traitement d'un objet porte également sur les objets enfants. Par exemple, le traitement d'un groupe de mesures dans un cube englobe toutes les partitions de ce groupe de mesures. De même, le traitement d'une base de données porte sur tous ses objets, notamment les cubes, les dimensions et les structures d'exploration de données contenus dans la base de données.  
   
- Si vous définissez l'attribut `ProcessAffectedObjects` de la commande `Process` à true, les objets connexes affectés par le traitement de l'objet spécifié sont égalements traités. Par exemple, si une dimension est mise à jour incrémentielle à l’aide de la *ProcessUpdate* du traitement de l’option dans le `Process` de commande, n’importe quelle partition dont les agrégations sont invalidées en raison de membres ou la suppression est également traitement par [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] si `ProcessAffectedObjects` a la valeur True. Dans ce cas, une seule commande `Process` peut traiter plusieurs objets dans une même instance [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], mais c'est [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] qui détermine quels sont les objets, outre l'objet unique spécifié dans la commande `Process`, qui doivent également être traités.  
+ Si vous définissez l'attribut `ProcessAffectedObjects` de la commande `Process` à true, les objets connexes affectés par le traitement de l'objet spécifié sont égalements traités. Par exemple, si une dimension est mise à jour incrémentielle à l’aide de la *ProcessUpdate* traitement option dans le `Process` n’importe quelle partition dont les agrégations sont invalidées en raison de membres ajouté ou supprimé est également de la commande traité par [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] si `ProcessAffectedObjects` est définie sur true. Dans ce cas, une seule commande `Process` peut traiter plusieurs objets dans une même instance [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], mais c'est [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] qui détermine quels sont les objets, outre l'objet unique spécifié dans la commande `Process`, qui doivent également être traités.  
   
  Toutefois, vous pouvez traiter simultanément plusieurs objets, tels que des dimensions, en utilisant plusieurs commandes `Process` au sein d'une commande `Batch`. Lorsqu'il s'agit de traiter les objets d'une instance [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] en série ou en parallèle, les opérations de traitement par lot offrent un niveau de contrôle plus fin qu'en utilisant l'attribut `ProcessAffectedObjects`. Elles vous permettent en outre d'affiner votre approche de traitement pour les bases de données [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] plus volumineuses. Pour plus d’informations sur l’exécution d’opérations par lots, consultez [exécution d’opérations de traitement par lots &#40;XMLA&#41;](performing-batch-operations-xmla.md).  
   
@@ -101,7 +101,7 @@ ms.locfileid: "36152916"
   
 -   fusion de la partition temporaire avec la partition sélectionnée existante.  
   
- Pour plus d’informations sur la fusion de partitions à l’aide de XML for Analysis (XMLA), consultez [la fusion de Partitions &#40;XMLA&#41;](merging-partitions-xmla.md).  
+ Pour plus d’informations sur la fusion de partitions à l’aide de XML for Analysis (XMLA), consultez [fusion de Partitions &#40;XMLA&#41;](merging-partitions-xmla.md).  
   
 ## <a name="handling-processing-errors"></a>Gestion des erreurs de traitement  
  Le [ErrorConfiguration](../xmla/xml-elements-properties/errorconfiguration-element-xmla.md) propriété de la `Process` commande vous permet de spécifier comment gérer les erreurs rencontrées lors du traitement d’un objet. Par exemple, lors du traitement d'une dimension, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] rencontre une valeur en double dans la colonne clé de l'attribut de clé. Du fait que les clés d'attribut doivent être uniques, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ignore les enregistrements en double. Selon le [KeyDuplicate](../scripting/properties/keyduplicate-element-assl.md) propriété du `ErrorConfiguration`, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] impossible :  
@@ -133,7 +133,7 @@ ms.locfileid: "36152916"
 ```  
   
 ### <a name="description"></a>Description  
- L’exemple suivant traite de façon incrémentielle le **Internet_Sales_2004** dans la partition la **Internet Sales** groupe de mesures de la **Adventure Works DW** cube dans le [!INCLUDE[ssAWDWsp](../../includes/ssawdwsp-md.md)] exemple [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] base de données. Le `Process` commande consiste à ajouter des agrégations pour la commande dates postérieures au 31 décembre 2006 à la partition à l’aide d’une liaison de requête de sortie de la ligne dans le `Bindings` propriété de la `Process` commande pour récupérer les lignes de table de faits à partir de laquelle générer agrégations à ajouter à la partition.  
+ L’exemple suivant traite de façon incrémentielle le **Internet_Sales_2004** de partition dans le **Internet Sales** groupe de mesures de la **Adventure Works DW** cube dans le [!INCLUDE[ssAWDWsp](../../includes/ssawdwsp-md.md)] exemple [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] base de données. Le `Process` commande ajoute des agrégations pour la commande dates au plus tard le 31 décembre 2006 à la partition à l’aide d’une liaison de requête de la sortie de la ligne dans le `Bindings` propriété de la `Process` commande pour récupérer les lignes de table de faits à partir duquel générer agrégations à ajouter à la partition.  
   
 ### <a name="code"></a>Code  
   

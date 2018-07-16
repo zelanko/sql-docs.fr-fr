@@ -1,5 +1,5 @@
 ---
-title: Installer la Version autonome du Générateur de rapports (Générateur de rapports) | Documents Microsoft
+title: Installer la Version autonome du Générateur de rapports (Générateur de rapports) | Microsoft Docs
 ms.custom: ''
 ms.date: 12/29/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 6b2291bb-1d20-4d08-81cb-a16dd8e01faf
 caps.latest.revision: 10
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 599f5aef18b38070d1543de351d0f99b68b4596e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 0fb9e6b43faf8b3ff7e0b91ccb500b94547436aa
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36143845"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37305079"
 ---
 # <a name="install-the-stand-alone-version-of-report-builder-report-builder"></a>Installer la version autonome du Générateur de rapports (Générateur de rapports)
-  Vous pouvez installer le Générateur de rapports à partir de la [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] feature pack via le [Microsoft Download Center](http://go.microsoft.com/fwlink/?LinkID=168472) ou un emplacement de dossier public auquel le ReportBuilder3_x86.msi, le Package Windows Installer pour le Générateur de rapports, a été téléchargée.  
+  Vous pouvez installer le Générateur de rapports à partir de la [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] feature pack via le [Microsoft Download Center](http://go.microsoft.com/fwlink/?LinkID=168472) ou un emplacement tel que les dossiers publics auxquels le ReportBuilder3_x86.msi, le Package du programme d’installation de Windows pour le Générateur de rapports, a été téléchargé.  
   
  Vous pouvez également effectuer une installation du Générateur de rapports à partir de la ligne de commande et spécifier des arguments afin de personnaliser l'installation. Outre les paramètres MSI standard intrinsèques, vous pouvez utiliser les paramètres personnalisés fournis par le Générateur de rapports : RBINSTALLDIR et REPORTSERVERURL. RBINSTALLDIR spécifie le dossier d'installation racine pour le Générateur de rapports. REPORTSERVERURL spécifie le serveur de rapports par défaut utilisé par le Générateur de rapports pour enregistrer des rapports.  
   
@@ -37,7 +37,7 @@ ms.locfileid: "36143845"
   
 2.  Cliquez sur **X86 Package**.  
   
-3.  Dans le **télécharger le fichier** boîte de dialogue, cliquez sur **exécuter**.  
+3.  Dans le **téléchargement de fichier** boîte de dialogue, cliquez sur **exécuter**.  
   
     > [!IMPORTANT]  
     >  Téléchargez uniquement les fichiers provenant de sources fiables.  
@@ -55,14 +55,14 @@ ms.locfileid: "36143845"
   
 8.  Spécifiez votre nom et le nom de la société. Cliquez sur **Suivant**.  
   
-9. Sur le **sélection des fonctionnalités** page, cliquez éventuellement sur **Parcourir** ou **disque**. Cliquez sur **Suivant**.  
+9. Sur le **sélection des fonctionnalités** page, cliquez éventuellement sur **Parcourir** ou **disque coût**. Cliquez sur **Suivant**.  
   
-    -   Cliquez sur **Parcourir** pour afficher l’emplacement par défaut du Générateur de rapports et le mettre à jour.  
+    -   Cliquez sur **Parcourir** pour afficher l’emplacement par défaut du Générateur de rapports et de mettre à jour.  
   
         > [!NOTE]  
-        >  Le dossier d’installation par défaut du Générateur de rapports est \<lecteur > Program Files\Microsoft SQL Server.  
+        >  Le dossier d’installation par défaut pour le Générateur de rapports est \<lecteur > Program Files\Microsoft SQL Server.  
   
-    -   Cliquez sur **disque** pour en savoir plus la quantité d’espace disque le Générateur de rapports consomme.  
+    -   Cliquez sur **disque coût** pour en savoir plus la quantité d’espace disque le Générateur de rapports consomme.  
   
         > [!NOTE]  
         >  Si l'espace disque libre sur un volume n'est pas suffisant, le volume est mis en surbrillance.  
@@ -88,14 +88,14 @@ ms.locfileid: "36143845"
   
 5.  Spécifiez votre nom et le nom de la société. Cliquez sur **Suivant**.  
   
-6.  Sur le **sélection des fonctionnalités** page, cliquez éventuellement sur **Parcourir** ou **disque**. Cliquez sur **Suivant**.  
+6.  Sur le **sélection des fonctionnalités** page, cliquez éventuellement sur **Parcourir** ou **disque coût**. Cliquez sur **Suivant**.  
   
-    -   Cliquez sur **Parcourir** pour afficher l’emplacement par défaut du Générateur de rapports et le mettre à jour.  
+    -   Cliquez sur **Parcourir** pour afficher l’emplacement par défaut du Générateur de rapports et de mettre à jour.  
   
         > [!NOTE]  
-        >  Le dossier d’installation par défaut du Générateur de rapports est \<lecteur > Program Files\Microsoft SQL Server.  
+        >  Le dossier d’installation par défaut pour le Générateur de rapports est \<lecteur > Program Files\Microsoft SQL Server.  
   
-    -   Cliquez sur **disque** pour en savoir plus la quantité d’espace disque le Générateur de rapports consomme.  
+    -   Cliquez sur **disque coût** pour en savoir plus la quantité d’espace disque le Générateur de rapports consomme.  
   
         > [!NOTE]  
         >  Si l'espace disque libre sur un volume n'est pas suffisant, le volume est mis en surbrillance.  
@@ -115,7 +115,7 @@ ms.locfileid: "36143845"
   
 3.  Cliquez sur Enregistrer.  
   
-4.  Éventuellement, accédez à l’emplacement d’enregistrement pour vérifier la **enregistrer en tant que** option est **Package Windows Installer**, puis cliquez sur **enregistrer**.  
+4.  Si vous le souhaitez, accédez à l’emplacement d’enregistrement pour vérifier la **enregistrer en tant que** option est **Package de programme d’installation de Windows**, puis cliquez sur **enregistrer**.  
   
 5.  Dans le menu **Démarrer** , cliquez sur **Exécuter**.  
   

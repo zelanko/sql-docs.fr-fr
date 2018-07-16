@@ -1,5 +1,5 @@
 ---
-title: Élément location (XMLA) | Documents Microsoft
+title: Élément location (XMLA) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -24,15 +24,15 @@ helpviewer_keywords:
 - Location element
 ms.assetid: cea5e776-f435-425a-9bce-812d727a2b71
 caps.latest.revision: 12
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: 51b0838b9843658b4081f9464c63274631ed74be
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: 6674d88797e738c4120a7cafae3d12a71e52e36f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36152419"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37295389"
 ---
 # <a name="location-element-xmla"></a>Élément Location (XMLA)
   Contient des informations sur un serveur distant pour le parent [sauvegarde](../xml-elements-commands/backup-element-xmla.md), [restaurer](../xml-elements-commands/restore-element-xmla.md), ou [synchroniser](../xml-elements-commands/synchronize-element-xmla.md) commande.  

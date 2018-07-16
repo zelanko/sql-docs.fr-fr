@@ -1,5 +1,5 @@
 ---
-title: Page de sélection du jeu de données (Gestionnaire de rapports) partagées | Documents Microsoft
+title: Page de sélection de jeu de données (Gestionnaire de rapports) partagées | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: a67dc03e-f838-4ec2-9ef6-f04895bab3c7
 caps.latest.revision: 4
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 24535c8bbc232852dd4706d32ac8b3910447a97b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 2c364c6d7d72860f031f81d33fe5bca39305f9f4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36038510"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37330819"
 ---
 # <a name="shared-dataset-selection-page-report-manager"></a>Page Sélection d'un dataset partagé (Gestionnaire de rapports)
   Utilisez la page Sélection d'un dataset partagé pour vérifier et modifier les datasets partagés qui sont actuellement associés à un rapport.  
@@ -54,9 +54,9 @@ ms.locfileid: "36038510"
   
 ## <a name="see-also"></a>Voir aussi  
  [Le Gestionnaire de rapports &#40;SSRS en Mode natif&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
- [Afficher la Page contenu &#40;le Gestionnaire de rapports&#41;](../../2014/reporting-services/contents-page-report-manager.md)   
- [Gérer les Datasets partagés](report-data/manage-shared-datasets.md)   
- [Aide (F1) de gestionnaire de rapports](../../2014/reporting-services/report-manager-f1-help.md)   
+ [Contenu de la Page &#40;le Gestionnaire de rapports&#41;](../../2014/reporting-services/contents-page-report-manager.md)   
+ [Gérer des Datasets partagés](report-data/manage-shared-datasets.md)   
+ [F1 du Gestionnaire de rapports](../../2014/reporting-services/report-manager-f1-help.md)   
  [Parties de rapports et jeux de données dans le Générateur de rapports](report-data/report-parts-and-datasets-in-report-builder.md)   
  [Datasets incorporés et partagés &#40;Générateur de rapports et SSRS&#41;](report-data/embedded-and-shared-datasets-report-builder-and-ssrs.md)  
   

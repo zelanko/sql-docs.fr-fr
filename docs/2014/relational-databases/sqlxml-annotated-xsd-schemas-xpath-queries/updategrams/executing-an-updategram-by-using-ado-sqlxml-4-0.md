@@ -1,5 +1,5 @@
 ---
-title: L’exécution d’une mise à jour à l’aide d’ADO (SQLXML 4.0) | Documents Microsoft
+title: Exécution d’une mise à jour à l’aide d’ADO (SQLXML 4.0) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -16,22 +16,22 @@ helpviewer_keywords:
 - executing updategrams [SQLXML]
 ms.assetid: 78610ca0-f763-45fc-ac64-da5c192cc3e5
 caps.latest.revision: 26
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 37a8cb3f06152ac2bc7dc682ae8d06e54d33ef6d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: ad4ed1723cc8ad49ed18304c106b0849e6bc2fb3
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36143222"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37319969"
 ---
 # <a name="executing-an-updategram-by-using-ado-sqlxml-40"></a>Exécution d'un code de mise à jour (updategram) à l'aide d'ADO (SQLXML 4.0)
   Cette application [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual Basic utilise ADO pour établir une connexion à une instance de Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], puis exécute un code de mise à jour (updategram). Le code de mise à jour (updategram) met à jour le nom d'un employé spécifique. Cet exemple utilise la base de données AdventureWorks.  
   
  Dans cet exemple d'application :  
   
--   Le **conn** objet (**ADODB. Connexion**) établit une connexion à une instance en cours d’exécution de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] sur un serveur spécifique.  
+-   Le **conn** objet (**ADODB. Connexion**) établit une connexion à une instance en cours d’exécution de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] sur un ordinateur de serveur spécifique.  
   
 -   Le **cmd** objet (**ADODB.Command**) s’exécute sur la connexion établie.  
   
@@ -39,7 +39,7 @@ ms.locfileid: "36143222"
   
 -   Mise à jour est copié dans le flux de commandes (**strmIn**).  
   
--   Flux de sortie de la commande est défini sur le **StrmOut** objet (**ADODB. Flux**) pour recevoir les a retourné des données.  
+-   Flux de sortie de la commande est défini sur le **StrmOut** objet (**ADODB. Stream**) pour recevoir les données renvoyées.  
   
 -   Enfin, la commande (code de mise à jour (updategram)) est exécutée.  
   
@@ -187,7 +187,7 @@ End Sub
 ```  
   
 ## <a name="passing-parameters"></a>Passage de paramètres  
- Dans les applications Visual Basic fournies précédemment, les paramètres ne sont pas transmis. Dans cette application, le **ContactID** et **MiddleName** valeurs sont passées comme entrées paramétrables pour la mise à jour.  
+ Dans les applications Visual Basic fournies précédemment, les paramètres ne sont pas transmis. Dans cette application, le **ContactID** et **MiddleName** valeurs sont passées comme entrées paramétrables au mise à jour.  
   
 ```vb  
 Private Sub Form_Load()  

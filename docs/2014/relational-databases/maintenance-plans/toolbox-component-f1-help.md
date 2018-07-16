@@ -8,27 +8,27 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vs.toolbox
 helpviewer_keywords:
 - Toolbox [SQL Server Management Studio]
 ms.assetid: d8401ecc-7d47-49df-aae5-22a148eeb23f
 caps.latest.revision: 20
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 3491f444347d57273cd86914e21c4d7b46ad02b2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 35bd6647459cff188ff90553fdaa824d85ac9459
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36043135"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37300359"
 ---
 # <a name="toolbox-component-f1-help"></a>Aide (F1) des composants de la boîte à outils
   La**boîte à outils** affiche divers éléments que vous pouvez utiliser dans les projets [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] . Vous pouvez ouvrir la **boîte à outils** à partir du menu **Affichage** et ancrer cette fenêtre comme vous le souhaitez. Quand elle est ancrée, la **boîte à outils** peut rester affichée ou être masquée si elle est inutilisée à l’aide de l’option **Masquer automatiquement** .  
   
- **Boîte à outils** icônes peuvent être déplacés et supprimés ou copiés et collés dans les éditeurs de code ou sur la conception des surfaces de mode dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
+ **Boîte à outils** icônes peuvent être déplacés et supprimés ou copiées et collées dans des éditeurs de code ou sur la conception des surfaces de la vue dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
 ## <a name="using-the-toolbox"></a>À l’aide de la boîte à outils  
  La boîte à outils est un contrôle d'arborescence qui se comporte comme l'Explorateur [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows, mais sans quadrillages ou lignes de connexion. Plusieurs segments de la **boîte à outils** (appelés « onglets ») peuvent être développés simultanément, et l’intégralité de l’arborescence défile à l’intérieur de la fenêtre **Boîte à outils** . Pour développer un onglet de la **boîte à outils**, cliquez sur le signe plus (**+**) en regard de son nom. Pour réduire un onglet développé, cliquez sur le signe moins (**-**) en regard de son nom.  

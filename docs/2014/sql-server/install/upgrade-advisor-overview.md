@@ -1,5 +1,5 @@
 ---
-title: Vue d’ensemble du Conseiller de mise à niveau | Documents Microsoft
+title: Vue d’ensemble du Conseiller de mise à niveau | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Upgrade Advisor Report Viewer
 - SQL Server Upgrade Advisor, components
@@ -21,15 +21,15 @@ helpviewer_keywords:
 - analyzing system [Upgrade Advisor], about analysis
 ms.assetid: f5c56f63-4478-40af-abb9-642f58a0026c
 caps.latest.revision: 47
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: b204fd2f108ce4a2a12d6036e4ddc51ea5e9edfe
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 0b30fddb6ce8570b438c869d72c2d3d0ac48036e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36142645"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37315959"
 ---
 # <a name="upgrade-advisor-overview"></a>Vue d'ensemble du Conseiller de mise à niveau
   Le Conseiller de mise à niveau fournit une console centrale pour analyser les composants [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], et [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], et pour afficher des rapports contenant des informations sur les résultats de l'analyse.  
@@ -75,15 +75,15 @@ ms.locfileid: "36142645"
  Le Conseiller de mise à niveau n'analyse pas les procédures stockées chiffrées, le code dans les procédures stockées étendues ni le code source dans les langages autres que [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
 ## <a name="upgrade-advisor-report-viewer"></a>Visionneuse de rapports du Conseiller de mise à niveau  
- Pour afficher un rapport du Conseiller de mise à niveau, cliquez sur **lancer la visionneuse de rapports** sur la page de démarrage du Conseiller de mise à niveau. Lorsque la visionneuse de rapports du Conseiller de mise à niveau démarre, les rapports présents dans le répertoire par défaut sont chargés. Les rapports ne sont pas affichés si la visionneuse de rapports de conseiller de mise à niveau ne trouve pas de tous les rapports dans le répertoire par défaut. Si le répertoire par défaut ne contient pas de rapport, vous pouvez exécuter l'Assistant Analyse du Conseiller de mise à niveau pour créer un rapport ou charger un rapport existant à partir d'un autre serveur ou d'un sous-répertoire.  
+ Pour afficher un rapport du Conseiller de mise à niveau, cliquez sur **lancer la visionneuse de rapports** sur la page de démarrage du Conseiller de mise à niveau. Lorsque la visionneuse de rapports du Conseiller de mise à niveau démarre, les rapports présents dans le répertoire par défaut sont chargés. Les rapports ne sont pas affichés si la visionneuse de rapports de conseiller de mise à niveau ne trouve pas tous les rapports dans le répertoire par défaut. Si le répertoire par défaut ne contient pas de rapport, vous pouvez exécuter l'Assistant Analyse du Conseiller de mise à niveau pour créer un rapport ou charger un rapport existant à partir d'un autre serveur ou d'un sous-répertoire.  
   
- Le Conseiller de mise à niveau [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] ne remplace pas les rapports existants. Toutefois, la visionneuse de rapports affiche uniquement les cinq derniers rapports. Pour afficher un rapport antérieur, sélectionnez le rapport à partir de la **rapport** zone de liste déroulante. Le horodateur indique la date et l'heure auxquelles le rapport a été généré.  
+ Le Conseiller de mise à niveau [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] ne remplace pas les rapports existants. Toutefois, la visionneuse de rapports affiche uniquement les cinq derniers rapports. Pour afficher un rapport antérieur, sélectionnez le rapport dans le **rapport** zone de liste déroulante. Le horodateur indique la date et l'heure auxquelles le rapport a été généré.  
   
  Lorsque des fichiers XML de l'Assistant Analyse du Conseiller de mise à niveau sont chargés dans la visionneuse de rapports du Conseiller de mise à niveau, un rapport est affiché pour chaque composant. Le rapport contient tous les problèmes connus, détectables et indétectables, que vous devez traiter. Chaque problème est accompagné d'une icône qui indique son importance, d'une étiquette qui vous informe quand le problème doit être résolu et d'une courte description. Lorsque vous développez un problème, une description plus longue apparaît, ainsi qu'un lien vers les détails du problème et un lien vers le fichier d'aide. Pour chaque problème, les informations fournies doivent être suffisantes pour vous permettre de résoudre le problème.  
   
  La plupart des composants ont des problèmes qui ne peuvent pas être détectés. Pour afficher ces problèmes, développez le **autres problèmes de mise à niveau** pour le composant d’élément, puis cliquez sur le lien pour afficher des informations supplémentaires sur les problèmes dans la documentation. Pour plus d'informations sur les problèmes de compatibilité descendante [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], consultez la documentation en ligne de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ## <a name="see-also"></a>Voir aussi  
- [Utilisation avec le Conseiller de mise à niveau](../../../2014/sql-server/install/working-with-upgrade-advisor.md)  
+ [Utilisation du Conseiller de mise à niveau](../../../2014/sql-server/install/working-with-upgrade-advisor.md)  
   
   

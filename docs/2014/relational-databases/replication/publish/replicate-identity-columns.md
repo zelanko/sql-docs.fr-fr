@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - identities [SQL Server replication]
 - identity values [SQL Server replication]
@@ -18,15 +18,15 @@ helpviewer_keywords:
 - identity columns [SQL Server], replication
 ms.assetid: eb2f23a8-7ec2-48af-9361-0e3cb87ebaf7
 caps.latest.revision: 51
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: cc8039ed5ea331609e14fc5b1b9cb9dae77f9aee
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 65d72e4cb94a4085829805278b59512a1a0a2801
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36152798"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37271025"
 ---
 # <a name="replicate-identity-columns"></a>Répliquer des colonnes d'identité
   Quand vous attribuez la propriété IDENTITY à une colonne, [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] génère automatiquement des numéros séquentiels pour les nouvelles lignes insérées dans la table contenant la colonne d'identité. Pour plus d’informations, consultez [IDENTITY &#40;propriété&#41; &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-table-transact-sql-identity-property). Les colonnes d'identité devant être incluses comme composantes de la clé primaire, il est important d'éviter les valeurs dupliquées dans les colonnes d'identité. Pour utiliser des colonnes d'identité dans une topologie de réplication qui a des mises à jour sur plusieurs nœuds, chaque nœud de cette topologie de réplication doit avoir une plage différente de valeurs d'identité, de façon à ce qu'il n'y ait pas de valeurs dupliquées.  
@@ -60,7 +60,7 @@ ms.locfileid: "36152798"
  Si le serveur de publication épuise sa plage d'identité après une insertion, il peut automatiquement attribuer une nouvelle plage si l'insertion a été effectuée par un membre du rôle de base de données fixe **db_owner** . Si l’insertion a été effectuée par un utilisateur qui ne fait pas partie de ce rôle, l’Agent de lecture du journal, l’Agent de fusion ou un utilisateur qui est membre du rôle **db_owner** doit exécuter [sp_adjustpublisheridentityrange &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-adjustpublisheridentityrange-transact-sql). Pour les publications transactionnelles, l'Agent de lecture du journal doit être en cours d'exécution pour allouer automatiquement une nouvelle plage (la configuration par défaut est que l'agent s'exécute en continu).  
   
 > [!WARNING]  
->  Pendant l'insertion d'un lot volumineux, le déclencheur de réplication n'est exécuté qu'une seule fois, et non pour chaque ligne de l'insertion. Cela peut entraîner un échec de l’instruction insert, si une plage d’identité est épuisée pendant une insertion importante, comme un `INSERT INTO` instruction.  
+>  Pendant l'insertion d'un lot volumineux, le déclencheur de réplication n'est exécuté qu'une seule fois, et non pour chaque ligne de l'insertion. Cela peut entraîner un échec de l’instruction insert, si une plage d’identités est épuisée pendant une insertion importante, telle qu’un `INSERT INTO` instruction.  
   
 |Type de données|Plage|  
 |---------------|-----------|  

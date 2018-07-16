@@ -8,27 +8,27 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - "10156"
 ms.assetid: 18ef2119-2931-43ae-9078-f39b460462dd
 caps.latest.revision: 6
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: b02a91751697d2b21e58516373bb990626291b64
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 5a57ccf36600ba4a25bd2476af5b2550ab1e8d89
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36042171"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37306949"
 ---
 # <a name="3d-bevel-and-other-effects-in-a-chart-report-builder-and-ssrs"></a>Effets 3D, de relief et autres dans un graphique (Générateur de rapports et SSRS)
   Des effets 3D (en trois dimensions) peuvent être utilisés pour donner de la profondeur et augmenter l'impact visuel d'un graphique. Par exemple, si vous voulez insister sur un secteur particulier d'un graphique à secteurs éclatés, vous pouvez faire pivoter le graphique et changer sa perspective pour que les lecteurs remarquent ce secteur en premier. Lorsque des effets 3D sont appliqués à votre graphique, les couleurs de dégradé et les styles de hachurage sont désactivés.  
   
  Des effets en trois dimensions peuvent être appliqués aux graphiques individuels et il est possible d'afficher à la fois des graphiques en deux et trois dimensions sur le même rapport.  
   
- Pour tous les types de graphiques, vous pouvez ajouter des effets en trois dimensions à une zone de graphique dans la boîte de dialogue **Propriétés de la zone de graphique** en sélectionnant **Afficher en 3D**. Pour plus d’informations, consultez [ajouter des effets 3D à un graphique &#40;le Générateur de rapports et SSRS&#41;](chart-effects-add-3d-effects-report-builder.md).  
+ Pour tous les types de graphiques, vous pouvez ajouter des effets en trois dimensions à une zone de graphique dans la boîte de dialogue **Propriétés de la zone de graphique** en sélectionnant **Afficher en 3D**. Pour plus d’informations, consultez [ajouter des effets 3D à un graphique &#40;Générateur de rapports et SSRS&#41;](chart-effects-add-3d-effects-report-builder.md).  
   
  Il est également possible d'améliorer l'impact visuel des graphiques en ajoutant des styles de biseau, de relief et de texture dans les graphiques à barres, à secteurs, en anneau, et les histogrammes. Pour plus d’informations, consultez [Ajouter des styles de biseau, du relief et des textures à un graphique &#40;Générateur de rapports et SSRS&#41;](chart-effects-add-bevel-emboss-or-texture-report-builder.md).  
   

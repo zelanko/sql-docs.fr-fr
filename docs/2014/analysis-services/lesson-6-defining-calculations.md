@@ -1,5 +1,5 @@
 ---
-title: 'Leçon 6 : Définition de calculs | Documents Microsoft'
+title: 'Leçon 6 : Définition de calculs | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: e0a1e354-e879-4eb8-bb2b-6c3809e32cb6
 caps.latest.revision: 18
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: jhubbard
-ms.openlocfilehash: 27d54217fe24f18184cacbbdb671f1d7569e350c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: dcc6179b4a0cc0a5b5ade735ef7272d265e35c24
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36139498"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37326659"
 ---
 # <a name="lesson-6-defining-calculations"></a>Leçon 6 : Définition de calculs
   Dans cette leçon, vous apprenez à définir des calculs, qui sont des expressions ou des scripts MDX (Multidimensional Expressions). Les calculs vous permettent de définir des membres calculés, des jeux nommés et d'exécuter d'autres commandes de script pour étendre les possibilités d'un cube [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] . Par exemple, vous pouvez exécuter une commande de script pour définir un sous-cube et assigner un calcul aux cellules du sous-cube.  
@@ -60,8 +60,8 @@ ms.locfileid: "36139498"
   
 ## <a name="see-also"></a>Voir aussi  
  [Scénario du didacticiel Analysis Services](../analysis-services/analysis-services-tutorial-scenario.md)   
- [Modélisation multidimensionnelle &#40;Adventure Works didacticiel&#41;](../analysis-services/multidimensional-modeling-adventure-works-tutorial.md)   
- [Créer des jeux nommés](multidimensional-models/create-named-sets.md)   
+ [Modélisation multidimensionnelle &#40;didacticiel Adventure Works&#41;](../analysis-services/multidimensional-modeling-adventure-works-tutorial.md)   
+ [Création de jeux nommés](multidimensional-models/create-named-sets.md)   
  [Créer des membres calculés](multidimensional-models/create-calculated-members.md)  
   
   

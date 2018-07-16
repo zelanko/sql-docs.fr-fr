@@ -1,5 +1,5 @@
 ---
-title: Exemples de requêtes de modèle des arbres de décision | Documents Microsoft
+title: Exemples de requêtes de modèle des arbres de décision | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - decision tree algorithms [Analysis Services]
 - content queries [DMX]
 - decision trees [Analysis Services]
 ms.assetid: ceaf1370-9dd1-4d1a-a143-7f89a723ef80
 caps.latest.revision: 25
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 56763f6e1b207e0f676c08e5bbca7066b680dcda
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 734402a21381ef6bf60eec5860b887ae3e0a73f5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36142836"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37261515"
 ---
 # <a name="decision-trees-model-query-examples"></a>Exemples de requêtes de modèle d’arbre de décision
   Lorsque vous créez une requête sur un modèle d'exploration de données, vous pouvez créer une requête de contenu, qui fournit des détails sur les modèles (ou séquences) découverts au cours de l'analyse, ou créer une requête de prédiction, qui utilise les séquences du modèle pour effectuer des prédictions pour les nouvelles données. Par exemple, une requête de contenu pour un modèle d'arbre de décision peut fournir des statistiques sur le nombre de cas à chaque niveau de l'arbre, ou les règles qui font la différence entre des cas. En revanche, une requête de prédiction mappe le modèle à de nouvelles données pour générer des recommandations, des classifications, etc. Vous pouvez également extraire les métadonnées relatives au modèle en utilisant une requête.  
@@ -70,7 +70,7 @@ WHERE MODEL_NAME = 'TM_Decision Tree'
  Cette requête retourne tous les nœuds de type 2, lesquels sont les nœuds de niveau supérieur d'un arbre qui représente un attribut prédictible particulier.  
   
 > [!NOTE]  
->  La colonne, `CHILDREN_CARDINALITY`, doit être placé entre crochets pour le distinguer du mot clé réservé MDX du même nom.  
+>  La colonne, `CHILDREN_CARDINALITY`, doit être placé entre parenthèses pour le distinguer du mot clé réservé MDX du même nom.  
   
 ```  
 SELECT MODEL_NAME, NODE_NAME, NODE_CAPTION,   
@@ -87,10 +87,10 @@ WHERE NODE_TYPE = 2
   
  Que vous indiquent ces résultats ? Dans un modèle d'arbre de décision, la cardinalité d'un nœud particulier vous indique le nombre d'enfants immédiats de ce nœud. La cardinalité de ce nœud est de 5, ce qui signifie que le modèle a divisé la population cible d'acheteurs de bicyclettes potentiels en 5 sous-groupes.  
   
- La requête associée suivante retourne les enfants de ces cinq sous-groupes, ainsi que la distribution d'attributs et de valeurs dans les nœuds enfants. Étant donné que les statistiques, telles que la prise en charge, probabilité et la variance sont stockées dans la table imbriquée, `NODE_DISTRIBUTION`, cet exemple utilise le `FLATTENED` mot clé pour les colonnes de table imbriquée de sortie.  
+ La requête associée suivante retourne les enfants de ces cinq sous-groupes, ainsi que la distribution d'attributs et de valeurs dans les nœuds enfants. Étant donné que les statistiques, telles que la prise en charge, probabilité et la variance sont stockées dans la table imbriquée, `NODE_DISTRIBUTION`, cet exemple utilise le `FLATTENED` mot clé pour produire les colonnes de table imbriquée.  
   
 > [!NOTE]  
->  La colonne de table imbriquée, `SUPPORT`, doit être placé entre crochets pour le distinguer du mot clé réservé du même nom.  
+>  La colonne de table imbriquée, `SUPPORT`, doit être placé entre parenthèses pour le distinguer du mot clé réservé du même nom.  
   
 ```  
 SELECT FLATTENED NODE_NAME, NODE_CAPTION,  
@@ -111,7 +111,7 @@ WHERE [PARENT_UNIQUE_NAME] = '000000001'
 |00000000101|Number Cars Owned = 3|Bike Buyer|0|678|  
 |00000000101|Number Cars Owned = 3|Bike Buyer| 1|473|  
   
- À partir de ces résultats, vous pouvez indiquer que des clients qui ont acheté un vélo (`[Bike Buyer]` = 1), 1067 clients ne 0 voitures et 473 clients 3 voitures.  
+ À partir de ces résultats, vous pouvez indiquer que parmi les clients qui ont acheté un vélo (`[Bike Buyer]` = 1), 1067 clients avaient 0 voitures et 473 clients 3 voitures.  
   
 ###  <a name="bkmk_Query3"></a> Exemple de requête 3 : récupération de sous-arborescences à partir du modèle  
  Imaginons que vous souhaitiez en savoir plus sur les clients qui ont acheté un vélo. Vous pouvez afficher des détails supplémentaires pour chacun des sous-arbres en utilisant la fonction [IsDescendant &#40;DMX&#41;](/sql/dmx/isdescendant-dmx) dans la requête, comme le montre l’exemple suivant. La requête retourne le nombre d'acheteurs de vélos en extrayant les nœuds terminaux (NODE_TYPE = 4) de l'arbre qui contient les clients âgés de plus de 42 ans. La requête limite les lignes de la table imbriquée à ceux pour lesquels Bike Buyer = 1.  
@@ -277,8 +277,8 @@ WHERE NODE_TYPE = 25
   
 ## <a name="see-also"></a>Voir aussi  
  [Requêtes d’exploration de données](data-mining-queries.md)   
- [Algorithme d’arbres de décision Microsoft](microsoft-decision-trees-algorithm.md)   
- [Techniques de l’algorithme d’arbres de décision Microsoft](microsoft-decision-trees-algorithm-technical-reference.md)   
+ [Algorithme d’arbres de décision de Microsoft](microsoft-decision-trees-algorithm.md)   
+ [Références techniques relatives aux algorithmes d’arbre de décision de Microsoft](microsoft-decision-trees-algorithm-technical-reference.md)   
  [Contenu pour les modèles d’arbre de décision du modèle d’exploration de données &#40;Analysis Services - Exploration de données&#41;](mining-model-content-for-decision-tree-models-analysis-services-data-mining.md)  
   
   

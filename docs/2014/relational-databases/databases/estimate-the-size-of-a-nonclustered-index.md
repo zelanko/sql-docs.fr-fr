@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - space allocation [SQL Server], index size
 - size [SQL Server], tables
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - calculating table size
 ms.assetid: c183b0e4-ef4c-4bfc-8575-5ac219c25b0a
 caps.latest.revision: 39
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 102701a984c6f35d38194c0d8a46c4ed63438936
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: d2fb15614dbb72fd9e76bf62174f6b435429d4e5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36154186"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37296649"
 ---
 # <a name="estimate-the-size-of-a-nonclustered-index"></a>Estimer la taille d'un index non-cluster
   Utilisez la procédure suivante pour estimer la quantité d'espace nécessaire au stockage d'un index non cluster :  
@@ -121,7 +121,7 @@ ms.locfileid: "36154186"
     >  Vous pouvez étendre un index non cluster en incluant les colonnes sans clé en plus des colonnes de clés d'index. Ces colonnes supplémentaires sont stockées uniquement au niveau feuille de l'index non-cluster. Pour plus d’informations, consultez [Créer des index avec colonnes incluses](../indexes/create-indexes-with-included-columns.md).  
   
     > [!NOTE]  
-    >  Vous pouvez combiner `varchar`, `nvarchar`, `varbinary`, ou `sql_variant` les colonnes qui provoquent la largeur totale définie de la table dépasse 8 060 octets. La longueur de chacune de ces colonnes doit toujours être inférieure à la limite de 8 000 octets pour une colonne `varchar`, `varbinary` ou `sql_variant` et de 4 000 octets pour les colonnes `nvarchar`. Toutefois, l'association de leurs largeurs peut dépasser la limite de 8 060 octets dans une table. Ceci s'applique également aux lignes de feuille d'index non-cluster possédant des colonnes incluses.  
+    >  Vous pouvez combiner `varchar`, `nvarchar`, `varbinary`, ou `sql_variant` colonnes aboutissant à la largeur totale définie de la table dépasse 8 060 octets. La longueur de chacune de ces colonnes doit toujours être inférieure à la limite de 8 000 octets pour une colonne `varchar`, `varbinary` ou `sql_variant` et de 4 000 octets pour les colonnes `nvarchar`. Toutefois, l'association de leurs largeurs peut dépasser la limite de 8 060 octets dans une table. Ceci s'applique également aux lignes de feuille d'index non-cluster possédant des colonnes incluses.  
   
      Si l'index non-cluster ne possède aucune colonne incluse, utilisez les valeurs de l'étape 1, y compris les éventuelles modifications déterminées dans l'étape 1.3 :  
   
@@ -249,7 +249,7 @@ ms.locfileid: "36154186"
   
 -   Valeurs LOB  
   
-     L’algorithme de déterminer avec exactitude la quantité d’espace sera utilisée pour stocker les types de données LOB `varchar(max)`, `varbinary(max)`, `nvarchar(max)`, `text`, `ntext`, `xml`, et `image` valeurs est complexe. Il suffit d’ajouter simplement la taille moyenne des valeurs LOB attendues, de la multiplier par ***Num_Rows***et d’ajouter ce produit à la taille totale de l’index non cluster.  
+     L’algorithme pour déterminer avec exactitude la quantité d’espace sera utilisée pour stocker les types de données LOB `varchar(max)`, `varbinary(max)`, `nvarchar(max)`, `text`, `ntext`, `xml`, et `image` valeurs est complexe. Il suffit d’ajouter simplement la taille moyenne des valeurs LOB attendues, de la multiplier par ***Num_Rows***et d’ajouter ce produit à la taille totale de l’index non cluster.  
   
 -   Compression  
   

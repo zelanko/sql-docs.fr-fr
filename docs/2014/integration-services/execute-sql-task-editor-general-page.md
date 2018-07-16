@@ -1,5 +1,5 @@
 ---
-title: Exécutez l’éditeur de tâche SQL (Page Général) | Documents Microsoft
+title: Exécuter l’éditeur de tâche SQL (Page Général) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.executesqltask.general.f1
 helpviewer_keywords:
 - Execute SQL Task Editor
 ms.assetid: beb39086-28ce-46af-b6d8-f7b4fb8d9069
 caps.latest.revision: 45
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 853586d51aff06012734a677794f29a9e7991878
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 68610e2f72c1fa2f47219a7af9620ec911d7d022
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36153529"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37322649"
 ---
 # <a name="execute-sql-task-editor-general-page"></a>Éditeur de tâche d'exécution SQL (page Général)
   Utilisez la page **Général** de la boîte de dialogue **Éditeur de tâche d'exécution SQL** pour configurer la tâche d'exécution SQL et indiquer l'instruction SQL que la tâche exécuter.  
@@ -50,7 +50,7 @@ ms.locfileid: "36153529"
 >  Lorsque la tâche d'exécution SQL utilise un gestionnaire de connexions ADO ou ODBC, la propriété **CodePage** n'est pas disponible. Si votre solution requiert l'utilisation d'une page de codes, utilisez un gestionnaire de connexions OLE DB ou ADO.NET avec la tâche d'exécution SQL.  
   
  **TypeConversionMode**  
- Lorsque vous définissez cette propriété sur `Allowed`, la tâche d’exécution SQL tente de convertir le paramètre de sortie et les résultats aux données de type de la variable les résultats de requête sont affectés. Cela s'applique au type de jeu de résultats **Ligne unique** .  
+ Lorsque vous définissez cette propriété sur `Allowed`, la tâche d’exécution SQL tente de convertir le paramètre de sortie et le type de résultats aux données de la variable les résultats de requête sont affectés. Cela s'applique au type de jeu de résultats **Ligne unique** .  
   
  **ResultSet**  
  Spécifiez le type de résultats attendu par l'instruction SQL en cours d'exécution. Choisissez parmi les options suivantes : **Ligne unique**, **Ensemble de résultats complet**, **XML**ou **Aucun**.  
@@ -118,6 +118,6 @@ ms.locfileid: "36153529"
 ## <a name="see-also"></a>Voir aussi  
  [Integration Services Error and Message Reference](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Éditeur de tâche SQL exécution &#40;Page mappage de paramètre&#41;](../../2014/integration-services/execute-sql-task-editor-parameter-mapping-page.md)   
- [Éditeur de tâche SQL exécution &#40;Page de jeu de résultats&#41;](../../2014/integration-services/execute-sql-task-editor-result-set-page.md)  
+ [Éditeur de tâche SQL exécution &#40;Page ensemble de résultats&#41;](../../2014/integration-services/execute-sql-task-editor-result-set-page.md)  
   
   

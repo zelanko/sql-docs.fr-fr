@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine-imoltp
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 405cdac5-a0d4-47a4-9180-82876b773b82
 caps.latest.revision: 29
-author: stevestein
-ms.author: sstein
-manager: jhubbard
-ms.openlocfilehash: f72caff6a68fbd68ef79a3c7044f7b012669e007
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: cf535c9c4c7acf24d5fb3c51c500af4565bd8af5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36153233"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37262725"
 ---
 # <a name="migrating-to-in-memory-oltp"></a>Migration vers OLTP en mémoire
   Cette section explique comment migrer des objets de base de données pour utiliser l'OLTP en mémoire.  
@@ -32,7 +32,7 @@ ms.locfileid: "36153233"
   
 -   [Les constructions Transact-SQL ne sont pas prises en charge par l’OLTP en mémoire](transact-sql-constructs-not-supported-by-in-memory-oltp.md)  
   
--   [Implémentation de colonnes LOB dans une Table mémoire optimisée](../../database-engine/implementing-lob-columns-in-a-memory-optimized-table.md)  
+-   [Implémentation de colonnes LOB dans une table à mémoire optimisée](../../database-engine/implementing-lob-columns-in-a-memory-optimized-table.md)  
   
 -   [Implémentation de SQL_VARIANT dans un tableau mémoire optimisé](implementing-sql-variant-in-a-memory-optimized-table.md)  
   
@@ -44,7 +44,7 @@ ms.locfileid: "36153233"
   
 -   [Requêtes de bases de données croisées](cross-database-queries.md)  
   
--   [Vérification de la migration et les contraintes de clé étrangère](../../database-engine/migrating-check-and-foreign-key-constraints.md)  
+-   [Migration des contraintes de validation et de clé étrangère](../../database-engine/migrating-check-and-foreign-key-constraints.md)  
   
 -   [Implémentation d’IDENTITY dans une table à mémoire optimisée](implementing-identity-in-a-memory-optimized-table.md)  
   

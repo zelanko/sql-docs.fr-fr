@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 45d66152-883a-49a7-a877-2e8ab45f8f79
 caps.latest.revision: 11
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: f9eedf55aae8fe87da589d7fccb5e53456d70039
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: efe8941ee77c9dbfd8ee335e9e1a2ed2931d1503
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36042955"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37322679"
 ---
 # <a name="define-a-state-variable"></a>Définir une variable d’état
   Cette procédure explique comment définir une variable de package dans laquelle l'état de capture de données modifiées est stocké.  
@@ -53,10 +53,10 @@ ms.locfileid: "36042955"
 |-----------|-----------------|  
 |(INITIAL)|Il s'agit de l'état initial avant l'exécution d'un package sur le groupe CDC actuel. Il s'agit également de l'état correspondant à une capture de données modifiées vide.|  
 |ILSTART (charge initiale démarrée)|Il s'agit de l'état au démarrage du package de charge initiale, après l'appel de l'opération `MarkInitialLoadStart` à la tâche de contrôle CDC.|  
-|ILEND (fin de la charge initiale)|C’est l’état lorsque le package de charge initiale se termine avec succès, une fois la `MarkInitialLoadEnd` appel d’opération pour la tâche de contrôle de capture de données modifiées.|  
+|ILEND (fin de la charge initiale)|C’est l’état lorsque le package de charge initiale se termine avec succès, une fois que le `MarkInitialLoadEnd` appel d’opération pour la tâche de contrôle de capture de données modifiées.|  
 |ILUPDATE (mise à jour de la charge initiale)|Il s'agit de l'état lors des exécutions du package de mise à jour à flux progressif, suivant la charge initiale, alors que le traitement de la plage initiale est encore en cours. Il s’agit d’après le `GetProcessingRange` appel d’opération pour la tâche de contrôle de capture de données modifiées.<br /><br /> Si vous utilisez la colonne __$reprocessing, elle contient la valeur 1 pour indiquer que le package peut retraiter des lignes qui sont déjà au niveau de la cible.|  
 |TFEND (fin de la mise à jour à flux progressif)|Il s'agit de l'état attendu pour une exécution CDC normale. Il indique que l'exécution précédente a réussi et qu'une nouvelle exécution avec une nouvelle plage de traitement peut démarrer.|  
-|TFSTART|C’est l’état sur une exécution non initiale du package de mise à jour de flux progressif, après le `GetProcessingRange` appel d’opération pour la tâche de contrôle de capture de données modifiées.<br /><br /> Cela indique qu’une exécution CDC normale a démarré mais n’a pas terminé ou n'a pas encore terminée correctement (`MarkProcessedRange`).|  
+|TFSTART|C’est l’état sur une exécution non initiale du package de mise à jour de flux progressif, après le `GetProcessingRange` appel d’opération pour la tâche de contrôle de capture de données modifiées.<br /><br /> Cela indique qu’une exécution CDC normale a démarré mais n’est pas terminée ou n'a pas encore terminée correctement (`MarkProcessedRange`).|  
 |TFREDO (Retraitement des mises à jour à flux progressif)|Il s'agit de l'état d'un `GetProcessingRange` qui se produit après TFSTART. Il indique que l'exécution précédente ne s'est pas terminée avec succès.<br /><br /> Si vous utilisez la colonne __$reprocessing, elle contient la valeur 1 pour indiquer que le package peut retraiter des lignes qui sont déjà au niveau de la cible.|  
 |ERROR|Le groupe CDC est dans un état ERROR.|  
   
@@ -89,7 +89,7 @@ ms.locfileid: "36042955"
  Si vous n'utilisez pas la tâche de contrôle de capture de données modifiées avec Permanence d'état automatique, vous devez charger la valeur de la variable depuis le stockage permanent dans lequel sa valeur a été enregistrée lors la dernière exécution du package, puis la réécrire dans le stockage permanent une fois le traitement de la plage de traitement actuelle terminé.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Tâche de contrôle de capture de données modifiées](../control-flow/cdc-control-task.md)   
+ [Tâche de contrôle CDC](../control-flow/cdc-control-task.md)   
  [Éditeur de tâche de contrôle CDC](../cdc-control-task-editor.md)  
   
   

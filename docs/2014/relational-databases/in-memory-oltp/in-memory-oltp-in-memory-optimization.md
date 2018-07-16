@@ -8,28 +8,28 @@ ms.suite: ''
 ms.technology:
 - database-engine-imoltp
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - In-Memory OLTP
 - memory-optimized tables
 ms.assetid: e1d03d74-2572-4a55-afd6-7edf0bc28bdb
 caps.latest.revision: 98
-author: stevestein
-ms.author: sstein
-manager: jhubbard
-ms.openlocfilehash: a7ee2a4a5a9bb56eee68aab349ff65ca811356cb
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: 1a1df515a5a88c94e52d376394905a819d361281
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36040932"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37316199"
 ---
 # <a name="in-memory-oltp-in-memory-optimization"></a>OLTP en mémoire (optimisation en mémoire)
   Nouveauté de [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)], l' [!INCLUDE[hek_2](../../../includes/hek-2-md.md)] peut améliorer significativement les performances d'application de base de données OLTP. L'[!INCLUDE[hek_2](../../../includes/hek-2-md.md)] est un moteur de base de données optimisé en mémoire intégré au moteur [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], qui est optimisé pour OLTP.  
   
 |||  
 |-|-|  
-|![Machine virtuelle Azure](../../master-data-services/media/azure-virtual-machine.png "Machine virtuelle Azure")|Voulez-vous essayer SQL Server 2016 ? Inscrivez-vous à Microsoft Azure, puis cliquez **[ici](https://azure.microsoft.com/en-us/marketplace/partners/microsoft/sqlserver2016rtmenterprisewindowsserver2012r2/?wt.mc_id=sqL16_vm)** pour mettre en place une machine virtuelle sur laquelle SQL Server 2016 est déjà installé. Vous pouvez supprimer la machine virtuelle lorsque vous avez terminé.|  
+|![Machine virtuelle](../../master-data-services/media/azure-virtual-machine.png "Machine virtuelle Azure")|Voulez-vous essayer SQL Server 2016 ? Inscrivez-vous à Microsoft Azure, puis cliquez **[ici](https://azure.microsoft.com/en-us/marketplace/partners/microsoft/sqlserver2016rtmenterprisewindowsserver2012r2/?wt.mc_id=sqL16_vm)** pour mettre en place une machine virtuelle sur laquelle SQL Server 2016 est déjà installé. Vous pouvez supprimer la machine virtuelle lorsque vous avez terminé.|  
   
  Pour utiliser l' [!INCLUDE[hek_2](../../../includes/hek-2-md.md)], vous définissez une table très sollicitée comme étant optimisée en mémoire. Les tables optimisées en mémoire sont transactionnelles, durables et accessibles via [!INCLUDE[tsql](../../../includes/tsql-md.md)] de la même manière que les tables sur disque. Une requête peut faire référence à des tables optimisées en mémoire et des tables sur disque. Une transaction peut mettre à jour des données dans des tables optimisées en mémoire et des tables sur disque. Les procédures stockées qui font référence uniquement aux tables optimisées en mémoire peuvent être compilées de façon native en code machine pour améliorer les performances. Le moteur de l' [!INCLUDE[hek_2](../../../includes/hek-2-md.md)] est conçu pour prendre en charge des accès concurrentiels très nombreux de transactions de type OLTP qui sont gérés par une couche intermédiaire mise à l'échelle. Pour cela, il utilise des structures de données sans verrou et un contrôle d'accès concurrentiel optimiste et multiversion. Le résultat est une latence prévisible inférieure à une milliseconde et un débit élevé avec une mise à l'échelle linéaire pour les transactions de base de données. Le gain réel au niveau des performances dépend de plusieurs facteurs, mais une amélioration des performances de 5 à 20 fois est souvent obtenue.  
   
@@ -53,7 +53,7 @@ ms.locfileid: "36040932"
   
  Dans [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] , il existe des limitations concernant la surface d'exposition [!INCLUDE[tsql](../../../includes/tsql-md.md)] prise en charge pour l' [!INCLUDE[hek_2](../../../includes/hek-2-md.md)].  
   
- [!INCLUDE[hek_2](../../../includes/hek-2-md.md)] offre des gains de performances et évolutivité significatifs à l’aide de :  
+ [!INCLUDE[hek_2](../../../includes/hek-2-md.md)] offre des gains significatifs sur les performances et l’évolutivité à l’aide de :  
   
 -   Algorithmes qui sont optimisés pour accéder aux données résidantes en mémoire.  
   
@@ -72,7 +72,7 @@ ms.locfileid: "36040932"
 |Rubrique|Description|  
 |-----------|-----------------|  
 |[Conditions requises pour l’utilisation des tables optimisées en mémoire](memory-optimized-tables.md)|Décrit les configurations matérielle et logicielle requises et fournit des instructions pour l'utilisation des tables optimisées en mémoire.|  
-|[À l’aide de l’OLTP en mémoire dans un environnement de machine virtuelle](../../database-engine/using-in-memory-oltp-in-a-vm-environment.md)|Décrit l'utilisation de l' [!INCLUDE[hek_2](../../../includes/hek-2-md.md)] dans un environnement virtualisé.|  
+|[Utilisation de l’OLTP en mémoire dans un environnement de machine virtuelle](../../database-engine/using-in-memory-oltp-in-a-vm-environment.md)|Décrit l'utilisation de l' [!INCLUDE[hek_2](../../../includes/hek-2-md.md)] dans un environnement virtualisé.|  
 |[Exemples de code OLTP en mémoire](in-memory-oltp-code-samples.md)|Contient des exemples de code qui montrent comment créer et utiliser une table optimisée en mémoire.|  
 |[Tables optimisées en mémoire](memory-optimized-tables.md)|Présente les tables optimisées en mémoire.|  
 |[Variables de table mémoire optimisée](../../database-engine/memory-optimized-table-variables.md)|L'exemple de code illustre comment utiliser une variable de table optimisée en mémoire plutôt qu'une variable de table traditionnelle pour réduire l'utilisation de tempdb.|  
@@ -94,7 +94,7 @@ ms.locfileid: "36040932"
   
 -   [OLTP en mémoire – Modèles de charge de travail courants et considérations relatives à la migration](http://msdn.microsoft.com/library/dn673538.aspx)  
   
--   [Présentation des mécanismes internes SQL Server OLTP en mémoire](http://msdn.microsoft.com/library/dn720242.aspx)  
+-   [Vue d’ensemble SQL Server In-Memory OLTP Internals](http://msdn.microsoft.com/library/dn720242.aspx)  
   
 ## <a name="see-also"></a>Voir aussi  
  [Fonctionnalités de base de données](../database-features.md)  

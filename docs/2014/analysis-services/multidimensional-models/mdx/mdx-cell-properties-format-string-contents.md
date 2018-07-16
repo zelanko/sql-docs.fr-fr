@@ -1,5 +1,5 @@
 ---
-title: Contenu de FORMAT_STRING (MDX) | Documents Microsoft
+title: Contenu de FORMAT_STRING (MDX) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - formats [Analysis Services], string values
 - VALUE property
@@ -17,18 +17,18 @@ helpviewer_keywords:
 - FORMAT_STRING contents
 ms.assetid: c354c938-0328-4b8e-adc5-3b52fd2a7152
 caps.latest.revision: 28
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: f017cd8b6f3e47e5c99e563babbfa3904dbd6f2e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 198fadc6d3f2e1599c98ba5146e830fef5b8be17
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36153597"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37293589"
 ---
 # <a name="formatstring-contents-mdx"></a>Contenu de FORMAT_STRING (MDX)
-  Le `FORMAT_STRING` formats de propriété de cellule la `VALUE` propriété de cellule, la création de la valeur pour le `FORMATTED_VALUE` propriété de cellule. Le `FORMAT_STRING` propriété de cellule gère les valeurs brutes chaîne et numérique, appliquer une expression de format par rapport à la valeur à retourner une valeur mise en forme pour le `FORMATTED_VALUE` propriété de cellule. Les tableaux suivants détaillent la syntaxe et les caractères de mise en forme utilisés pour traiter les valeurs de type chaîne et numérique.  
+  Le `FORMAT_STRING` formats de propriété de cellule la `VALUE` propriété de cellule, la création de la valeur pour le `FORMATTED_VALUE` propriété de cellule. Le `FORMAT_STRING` propriété de cellule gère les valeurs brutes chaîne et numérique, appliquant une expression de format par rapport à la valeur à retourner une valeur mise en forme pour le `FORMATTED_VALUE` propriété de cellule. Les tableaux suivants détaillent la syntaxe et les caractères de mise en forme utilisés pour traiter les valeurs de type chaîne et numérique.  
   
 ## <a name="string-values"></a>Valeurs de type chaîne  
  Une expression de format pour une chaîne peut posséder une section, ou deux sections séparées par un point-virgule (;).  

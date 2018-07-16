@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - space allocation [SQL Server], index size
 - size [SQL Server], tables
@@ -23,15 +23,15 @@ helpviewer_keywords:
 - calculating table size
 ms.assetid: 2b5137f8-98ad-46b5-9aae-4c980259bf8d
 caps.latest.revision: 48
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 5b270dc2485be2c5c9a9fd2b491db8a9278cce43
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: b9293859eeef13f497c79989a546d527d5fb317a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36043875"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37305979"
 ---
 # <a name="estimate-the-size-of-a-clustered-index"></a>Estimer la taille d’un index cluster
   Vous pouvez estimer la quantité d'espace nécessaire au stockage des données d'un index cluster en procédant comme suit :  
@@ -87,7 +87,7 @@ ms.locfileid: "36043875"
      Les octets ajoutés à ***Max_Var_Size*** servent à assurer le suivi de chaque colonne variable. Il est supposé, lorsque vous utilisez cette formule, que toutes les colonnes de longueur variable sont entièrement remplies. Si vous pensez qu’un pourcentage inférieur de l’espace de stockage des colonnes de longueur variable sera utilisé, vous pouvez ajuster la valeur de ***Max_Var_Size*** en fonction de ce pourcentage pour obtenir une estimation plus précise de la taille globale de la table.  
   
     > [!NOTE]  
-    >  Vous pouvez combiner `varchar`, `nvarchar`, `varbinary`, ou `sql_variant` les colonnes qui provoquent la largeur totale définie de la table dépasse 8 060 octets. La longueur de chacune de ces colonnes doit toujours être inférieure à la limite de 8 000 octets pour une colonne `varchar`, `varbinary` ou `sql_variant` et de 4 000 octets pour les colonnes `nvarchar`. Toutefois, l'association de leurs largeurs peut dépasser la limite de 8 060 octets dans une table.  
+    >  Vous pouvez combiner `varchar`, `nvarchar`, `varbinary`, ou `sql_variant` colonnes aboutissant à la largeur totale définie de la table dépasse 8 060 octets. La longueur de chacune de ces colonnes doit toujours être inférieure à la limite de 8 000 octets pour une colonne `varchar`, `varbinary` ou `sql_variant` et de 4 000 octets pour les colonnes `nvarchar`. Toutefois, l'association de leurs largeurs peut dépasser la limite de 8 060 octets dans une table.  
   
      En l’absence de toute colonne de longueur variable, attribuez la valeur 0 à ***Variable_Data_Size*** .  
   
@@ -215,7 +215,7 @@ ms.locfileid: "36043875"
   
 -   Valeurs LOB  
   
-     L’algorithme de déterminer avec exactitude la quantité d’espace sera utilisée pour stocker les types de données LOB `varchar(max)`, `varbinary(max)`, `nvarchar(max)`, `text`, `ntext`, `xml`, et `image` valeurs est complexe. Il suffit simplement de faire la somme de la taille moyenne des valeurs LOB attendues, de la multiplier par ***Num_Rows***, puis d’ajouter le résultat à la taille totale de l’index cluster.  
+     L’algorithme pour déterminer avec exactitude la quantité d’espace sera utilisée pour stocker les types de données LOB `varchar(max)`, `varbinary(max)`, `nvarchar(max)`, `text`, `ntext`, `xml`, et `image` valeurs est complexe. Il suffit simplement de faire la somme de la taille moyenne des valeurs LOB attendues, de la multiplier par ***Num_Rows***, puis d’ajouter le résultat à la taille totale de l’index cluster.  
   
 -   Compression  
   

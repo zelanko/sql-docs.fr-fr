@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - SSIS containers
 - containers [Integration Services]
@@ -19,13 +19,13 @@ ms.assetid: 1b725922-ec59-4a47-9d55-e079463058f3
 caps.latest.revision: 47
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: c1cdd3b3a75560d1ced61684e1063f4571115833
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 06ba65f48edc9434eb1cec485e0f219958e52a1e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36155092"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37283625"
 ---
 # <a name="integration-services-containers"></a>Conteneurs Integration Services
   Les conteneurs sont des objets de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] qui fournissent une structure aux packages et des services aux tâches. Ils prennent en charge les flux de contrôle répétitifs dans les packages, et regroupent les tâches et les conteneurs en unités de travail significatives. Outre des tâches, les conteneurs peuvent comprendre d'autres conteneurs.  
@@ -34,7 +34,7 @@ ms.locfileid: "36155092"
   
 -   Répéter des tâches pour tous les éléments d'une collection, tels que les fichiers d'un dossier, des schémas ou des objets SMO ( [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Management Objects). Par exemple, un package peut exécuter des instructions Transact-SQL résidant dans plusieurs fichiers.  
   
--   Répéter des tâches jusqu'à ce qu’une expression spécifiée prend la valeur `false`. Par exemple, un package peut envoyer un message électronique différent sept fois, à raison d'une fois par jour de la semaine.  
+-   Répéter des tâches jusqu'à ce qu’une expression spécifiée corresponde à `false`. Par exemple, un package peut envoyer un message électronique différent sept fois, à raison d'une fois par jour de la semaine.  
   
 -   Regrouper les tâches et les conteneurs qui doivent réussir ou échouer en tant qu'unité. Par exemple, un package peut regrouper les tâches qui suppriment et ajoutent des lignes dans une table de base de données, puis valider ou annuler toutes les tâches si l'une d'elles échoue.  
   
@@ -87,7 +87,7 @@ ms.locfileid: "36155092"
  Les conteneurs comprennent des flux de contrôle composés d'exécutables et de contraintes de précédence, et peuvent utiliser des gestionnaires d'événements et des variables. Le conteneur d'hôte de tâche est une exception : étant donné que celui-ci encapsule une seule tâche, il n'utilise pas de contraintes de précédence.  
   
 ### <a name="executables"></a>Exécutables  
- Les exécutables désignent les tâches de niveau conteneur et tous les conteneurs se trouvant dans le conteneur. Un exécutable peut être l’une des tâches et l’un des conteneurs fournis par [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , ou bien une tâche personnalisée. Pour plus d’informations, consultez [tâches Integration Services](integration-services-tasks.md) et [conteneurs de Services d’intégration](integration-services-containers.md).  
+ Les exécutables désignent les tâches de niveau conteneur et tous les conteneurs se trouvant dans le conteneur. Un exécutable peut être l’une des tâches et l’un des conteneurs fournis par [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , ou bien une tâche personnalisée. Pour plus d’informations, consultez [tâches Integration Services](integration-services-tasks.md) et [conteneurs Integration Services](integration-services-containers.md).  
   
 ### <a name="precedence-constraints"></a>Contraintes de précédence  
  Les contraintes de priorité relient en un flux de contrôle ordonné les conteneurs et les tâches figurant dans le même conteneur parent. Pour plus d’informations, consultez [Contraintes de précédence](precedence-constraints.md).  

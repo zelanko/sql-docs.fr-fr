@@ -8,23 +8,23 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 2c4adf2f-e9c4-4fae-bd3c-97fe64436caf
 caps.latest.revision: 11
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 2c4022d7cfca3a85e6e01618bbf5ee20694a9b88
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: 129fabab52b2e7b7e59cf832d21e25972cb9b07a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36042172"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37260395"
 ---
 # <a name="sharepoint-list-connection-type-ssrs"></a>Type de connexion de liste SharePoint (SSRS)
   Pour inclure des données d'une liste Microsoft SharePoint dans votre rapport, vous devez ajouter ou créer un dataset basé sur une source de données de rapport de type Liste Microsoft SharePoint. Il s'agit d'un type de source de données intégré basé sur l'extension de données Liste SharePoint Microsoft SQL Server Reporting Services. Utilisez ce type de source de données pour vous connecter à et récupérer des données de liste des sites [!INCLUDE[SPF2010](../../includes/spf2010-md.md)], [!INCLUDE[SPS2010](../../includes/sps2010-md.md)], [!INCLUDE[winSPServ](../../includes/winspserv-md.md)] 3.0 et [!INCLUDE[offSPServ](../../includes/offspserv-md.md)] 2007.  
   
- Utilisez les informations de cette rubrique pour générer une source de données. Pour obtenir des instructions, consultez [ajouter et vérifier une connexion de données ou une Source de données &#40;le Générateur de rapports et SSRS&#41;](add-and-verify-a-data-connection-report-builder-and-ssrs.md).  
+ Utilisez les informations de cette rubrique pour générer une source de données. Pour obtenir des instructions détaillées, consultez [ajouter et vérifier une connexion de données ou d’une Source de données &#40;Générateur de rapports et SSRS&#41;](add-and-verify-a-data-connection-report-builder-and-ssrs.md).  
   
 ##  <a name="Connection"></a> Chaîne de connexion  
  La chaîne de connexion à une liste SharePoint est l'URL pointant vers le site ou sous-site SharePoint, par exemple `http://MySharePointWeb/MySharePointSite` ou `http://MySharePointWeb/MySharePointSite/Subsite`.  
@@ -58,11 +58,11 @@ ms.locfileid: "36042172"
 |Liste SharePoint distante|Jeton utilisateur pour l'authentification Windows (intégrée) ou SharePoint|Oui|Ne<sup>2</sup>|  
 ||Stockage, invite, aucun (avec les informations d’identification Windows<sup>1</sup>)|non|Ne<sup>2</sup>|  
   
- <sup>1</sup> stocké et les informations d’identification d’invite de commandes avec des informations d’identification non-Windows n’est pas pris en charge.  
+ <sup>1</sup> stocké et les informations d’identification invite avec informations d’identification non Windows n’est pas pris en charge.  
   
- <sup>2</sup> l’authentification basée sur les formulaires et l’authentification par revendications ne sont pas pris en charge pour les listes SharePoint distantes.  
+ <sup>2</sup> l’authentification basée sur les formulaires et l’authentification par revendications ne sont pas pris en charge pour les listes SharePoint à distance.  
   
- <sup>3</sup> l’authentification Windows, l’authentification basée sur des formulaires (FBA), les jetons SAML Secure Application Markup Language (), autres fournisseurs d’identité ou une combinaison de plusieurs éléments ci-dessus mentionné fournisseurs d’authentification.  
+ <sup>3</sup> l’authentification Windows, l’authentification basée sur des formulaires (FBA), les jetons SAML Secure Application Markup Language (), autres fournisseurs d’identité ou une combinaison de plusieurs des éléments ci-dessus mentionné fournisseurs d’authentification.  
   
  **Authentification Windows**  
  Pour une technologie SharePoint configurée pour être utilisée avec un serveur de rapports en mode Compte approuvé, cette option n’est pas prise en charge. Cela s'applique uniquement aux versions antérieures à SQL Server 2012 Reporting Services.  
@@ -76,7 +76,7 @@ ms.locfileid: "36042172"
   
  Pour plus d'informations sur la prise en charge de l'authentification par revendications dans la pile Microsoft BI, consultez [Utilisation de l'authentification par revendications dans la pile Microsoft BI](http://social.technet.microsoft.com/wiki/contents/articles/15274.using-claims-authentication-across-the-microsoft-bi-stack.aspx).  
   
- Pour plus d’informations, consultez [des connexions de données, les Sources de données et les chaînes de connexion dans Reporting Services](../data-connections-data-sources-and-connection-strings-in-reporting-services.md), [spécifier les informations d’identification dans le Générateur de rapports](../specify-credentials-in-report-builder.md), et [des Sources de données prises en charge par Reporting Services &#40;SSRS&#41;](../create-deploy-and-manage-mobile-and-paginated-reports.md).  
+ Pour plus d’informations, consultez [des connexions de données, les Sources de données et les chaînes de connexion dans Reporting Services](../data-connections-data-sources-and-connection-strings-in-reporting-services.md), [spécifier les informations d’identification dans le Générateur de rapports](../specify-credentials-in-report-builder.md), et [Sources de données prises en charge par Reporting Services &#40;SSRS&#41;](../create-deploy-and-manage-mobile-and-paginated-reports.md).  
   
 ##  <a name="Query"></a> Requêtes  
  Pour concevoir une requête, créez un dataset selon la source de données, puis ouvrez le concepteur de requêtes associé. Pour plus d’informations, consultez [Créer un dataset partagé ou incorporé &#40;Générateur de rapports et SSRS&#41;](create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md).  
@@ -163,7 +163,7 @@ ms.locfileid: "36042172"
 ##  <a name="HowTo"></a> Rubriques de procédures  
  Cette section contient des instructions pas à pas sur l'utilisation des connexions de données, des sources de données et des datasets.  
   
- [Ajouter et vérifier une connexion de données ou une Source de données &#40;rapport Générateur et SSRS&#41;](add-and-verify-a-data-connection-report-builder-and-ssrs.md)  
+ [Ajouter et vérifier une connexion de données ou d’une Source de données &#40;Générateur de rapports et SSRS&#41;](add-and-verify-a-data-connection-report-builder-and-ssrs.md)  
   
  [Créer un dataset partagé ou incorporé &#40;Générateur de rapports et SSRS&#41;](create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md)  
   
@@ -173,7 +173,7 @@ ms.locfileid: "36042172"
 ##  <a name="Related"></a> Sections connexes  
  Ces sections de la documentation fournissent des informations de fond d'ordre conceptuel sur les données de rapport, ainsi que des informations sur les procédures de définition, de personnalisation et d'utilisation des parties d'un rapport qui sont liées aux données.  
   
- [Ajouter des données à un rapport &#40;rapport Générateur et SSRS&#41;](report-datasets-ssrs.md)  
+ [Ajouter des données à un rapport &#40;Générateur de rapports et SSRS&#41;](report-datasets-ssrs.md)  
  Fournit une vue d'ensemble de l'accès aux données pour votre rapport.  
   
  [Connexions de données, sources de données et chaînes de connexion dans le Générateur de rapports](../data-connections-data-sources-and-connection-strings-in-report-builder.md)  

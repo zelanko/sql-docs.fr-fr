@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: c0e75a7c-85c5-423c-a218-77247bf071aa
 caps.latest.revision: 7
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: e5c5909a4cd6a098498029abaccd77ce568dc217
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 9b11a175ddf9a7a12610c2f3588e4bbf42ac7802
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36042378"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37317839"
 ---
 # <a name="sql-server-failover-cluster-installation"></a>Installation d'un cluster de basculement SQL Server
   Pour installer un cluster de basculement [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , vous devez créer et configurer une instance de cluster de basculement en exécutant le programme d'installation de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
@@ -87,6 +87,6 @@ ms.locfileid: "36042378"
  [Avant l'installation du clustering de basculement](before-installing-failover-clustering.md)   
  [Créer un cluster de basculement SQL Server &#40;programme d’installation&#41;](create-a-new-sql-server-failover-cluster-setup.md)   
  [Installer SQL Server 2014 à partir de l’invite de commandes](../../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md)   
- [Mise à niveau un Cluster de basculement SQL Server](../windows/upgrade-a-sql-server-failover-cluster-instance.md)  
+ [Mettre à niveau un cluster de basculement SQL Server](../windows/upgrade-a-sql-server-failover-cluster-instance.md)  
   
   

@@ -5,23 +5,22 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-blob
+ms.technology: filestream
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - FILESTREAM [SQL Server], Win32
 ms.assetid: 8a02aff6-e54c-40c6-a066-2083e9b090aa
 caps.latest.revision: 18
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 01789595c470865d4a422ac87c2814bcc9570468
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 16ea4d4a00726453918577e2eb0eb92d73580ccd
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36152831"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37260865"
 ---
 # <a name="create-client-applications-for-filestream-data"></a>Créer des applications clientes pour les données FILESTREAM
   Vous pouvez utiliser Win32 pour lire et écrire des données dans un objet BLOB FILESTREAM. Les étapes suivantes sont nécessaires :  
@@ -83,7 +82,7 @@ ms.locfileid: "36152831"
   
 -   Évitez les instructions [!INCLUDE[tsql](../../includes/tsql-md.md)] qui permettent de mettre à jour ou d'ajouter des données à l'objet BLOB FILESTREAM. En effet, les données BLOB sont mises en file d'attente dans la base de données tempdb, puis retournées dans un nouveau fichier physique.  
   
--   Évitez d'ajouter de petites mises à jour BLOB à un objet BLOB FILESTREAM. Chaque ajout entraîne la copie des fichiers FILESTREAM sous-jacents. Si une application doit ajouter de petits objets BLOB, écrivez dans un `varbinary(max)` colonne, puis effectuez une opération d’écriture unique pour l’objet BLOB FILESTREAM lorsque le nombre d’objets BLOB atteint une limite prédéterminée.  
+-   Évitez d'ajouter de petites mises à jour BLOB à un objet BLOB FILESTREAM. Chaque ajout entraîne la copie des fichiers FILESTREAM sous-jacents. Si une application doit ajouter de petits objets BLOB, écrivez ces derniers dans un `varbinary(max)` colonne, puis effectuez une seule opération d’écriture pour l’objet BLOB FILESTREAM lorsque le nombre d’objets BLOB atteint une limite prédéterminée.  
   
 -   Évitez de récupérer la longueur des données de nombreux fichiers BLOB dans une application. Il s'agit d'une opération qui prend du temps, car la taille n'est pas stockée dans le [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]. Pour déterminer la longueur d’un fichier BLOB, utilisez la fonction [!INCLUDE[tsql](../../includes/tsql-md.md)] DATALENGTH() afin de déterminer la taille du fichier BLOB, s’il est fermé. DATALENGTH() n’ouvre pas le fichier BLOB pour déterminer sa taille.  
   

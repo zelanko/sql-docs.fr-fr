@@ -1,14 +1,13 @@
 ---
-title: Installer un Service Pack sur un système avec un temps mort Minimal pour les bases de données miroir | Documents Microsoft
+title: Installer un Service Pack sur un système avec un temps mort Minimal pour les bases de données miroir | Microsoft Docs
 ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - hotfixes [SQL Server]
 - database mirroring [SQL Server], upgrading system
@@ -18,15 +17,15 @@ helpviewer_keywords:
 - upgrading SQL Server, mirrored databases
 ms.assetid: bdc63142-027d-4ead-9d3e-147331387ef5
 caps.latest.revision: 13
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: e15b15020dcf28ad83bfbc50ab18e0005c71a4d0
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: cca85c8f2d38e5f786aa635380c3bd6199e3a48f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36152681"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37296919"
 ---
 # <a name="install-a-service-pack-on-a-system-with-minimal-downtime-for-mirrored-databases"></a>Installer un Service Pack sur un système avec un temps mort minimal pour les bases de données mises en miroir
   Cette rubrique décrit comment réduire le temps mort pour les bases de données mises en miroir lorsque vous installez des Service Packs et des correctifs. Ce processus implique la mise à niveau séquentielle des instances de [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] qui participent à la mise en miroir de bases de données. Cette forme de mise à jour, ce qui est appelé un *mise à jour propagée*, réduit le temps mort que pour un seul basculement. Notez que pour les sessions en mode hautes performances dans lequel le serveur miroir est géographiquement distant du serveur principal, une mise à jour propagée peut être inappropriée.  
@@ -129,7 +128,7 @@ ms.locfileid: "36152681"
   
     -   Dans [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]: affectez la valeur **Haute performance (asynchrone)** à l’option **Mode d’opération** dans la [page Mise en miroir](../relational-databases/databases/database-properties-mirroring-page.md) de la boîte de dialogue **Propriétés de la base de données** .  
   
-    -   Dans [!INCLUDE[tsql](../includes/tsql-md.md)]: utilisez [ALTER DATABASE](/sql/t-sql/statements/alter-database-transact-sql-database-mirroring) pour définir la sécurité des transactions (OFF).  
+    -   Dans [!INCLUDE[tsql](../includes/tsql-md.md)]: utilisez [ALTER DATABASE](/sql/t-sql/statements/alter-database-transact-sql-database-mirroring) pour définir la sécurité des transactions désactivée (OFF).  
   
 ### <a name="to-return-a-witness-to-a-mirroring-session"></a>Pour réintégrer un témoin dans une session de mise en miroir  
   

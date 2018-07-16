@@ -1,5 +1,5 @@
 ---
-title: Afficher ou modifier les emplacements par défaut pour les données et les fichiers de journaux (SQL Server Management Studio) | Documents Microsoft
+title: Afficher ou modifier les emplacements par défaut pour les données et fichiers journaux (SQL Server Management Studio) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - log files [SQL Server], changing default location
 - data files [SQL Server], changing default location
 ms.assetid: 70a57fda-fcfe-490f-9cf6-5df620e32b2a
 caps.latest.revision: 14
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 46bab09c5115781d85fdb3e7c8fc73e6428322fb
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: b62c6264686efe2b117ca755fc291c784308fe9d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36042974"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37320779"
 ---
 # <a name="view-or-change-the-default-locations-for-data-and-log-files-sql-server-management-studio"></a>Afficher ou modifier les emplacements par défaut des fichiers de données et des fichiers journaux (SQL Server Management Studio)
   Cette rubrique explique comment afficher et modifier les emplacements par défaut des nouveaux fichiers de données et fichiers journaux dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] à l'aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Le chemin d'accès par défaut est obtenu à partir du Registre. Une fois l'emplacement modifié, toutes les nouvelles bases de données créées dans l'instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utiliseront cet emplacement si aucun autre emplacement n'est spécifié.  
@@ -33,7 +33,7 @@ ms.locfileid: "36042974"
   
      [Recommandations](#Recommendations)  
   
--   **Pour afficher ou modifier les données et le journal fichier emplacements par défaut, à l’aide de :**  
+-   **Pour afficher ou modifier les données et journaux fichier emplacements par défaut, à l’aide de :**  
   
      [SQL Server Management Studio](#SSMSProcedure)  
   

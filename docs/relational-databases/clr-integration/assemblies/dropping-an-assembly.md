@@ -1,12 +1,11 @@
 ---
-title: Suppression d’un Assembly | Documents Microsoft
+title: Suppression d’un Assembly | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
-ms.prod_service: database-engine
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: reference
+ms.technology: clr
 ms.topic: reference
 helpviewer_keywords:
 - removing assemblies
@@ -18,12 +17,12 @@ caps.latest.revision: 16
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 8c9948122e98c86e6c4ccb310c23b0513679379f
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
+ms.openlocfilehash: e6efb9fe4c000e0fccf221a365c8c7cd5bc8050e
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35694320"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37356921"
 ---
 # <a name="dropping-an-assembly"></a>Suppression d'un assembly
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -47,7 +46,7 @@ DROP ASSEMBLY MyDotNETAssembly
 -   Des fonctions, procédures stockées ou déclencheurs créés dans la base de données avec la clause WITH SCHEMABINDING utilisent des variables ou des paramètres de l'UDT.  
   
 ### <a name="finding-udt-dependencies"></a>Recherche des dépendances d'un UDT  
- Vous devez commencer par supprimer tous les objets dépendants, puis exécuter l'instruction DROP TYPE. Les éléments suivants [!INCLUDE[tsql](../../../includes/tsql-md.md)] requête recherche toutes les colonnes et les paramètres qui utilisent un UDT dans la **AdventureWorks** base de données.  
+ Vous devez commencer par supprimer tous les objets dépendants, puis exécuter l'instruction DROP TYPE. Ce qui suit [!INCLUDE[tsql](../../../includes/tsql-md.md)] requête recherche toutes les colonnes et les paramètres qui utilisent un UDT dans la **AdventureWorks** base de données.  
   
 ```  
 USE Adventureworks;  

@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - SQLServer:Transactions
 - Transactions object
 ms.assetid: 85240267-78fd-476a-9ef6-010d6cf32dd8
 caps.latest.revision: 27
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: edc150f4977be2a85dddce1735385782e6d0fe9d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 48e61e47e9752b187dd8b391cfe8b7983f00f136
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36051253"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37290485"
 ---
 # <a name="sql-server-transactions-object"></a>SQL Server, objet Transactions
   L'objet **Transactions** dans Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fournit des compteurs pour analyser le nombre de transactions actives dans une instance du [!INCLUDE[ssDE](../../includes/ssde-md.md)]ainsi que les effets de ces transactions sur les ressources, tels que la banque de versions de lignes avec isolement d'instantané dans **tempdb**. Les transactions sont des unités logiques de travail, c'est-à-dire un ensemble d'opérations qui doivent toutes aboutir ou être toutes supprimées d'une base de données afin de maintenir l'intégrité logique des données. Toutes les modifications de données dans les bases de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sont effectuées dans des transactions.  

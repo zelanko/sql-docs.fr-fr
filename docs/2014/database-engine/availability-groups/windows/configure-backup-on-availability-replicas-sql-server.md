@@ -5,10 +5,9 @@ ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - backup priority
 - backup on secondary replicas
@@ -19,21 +18,21 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], active secondary replicas
 ms.assetid: 74bc40bb-9f57-44e4-8988-1d69c0585eb6
 caps.latest.revision: 30
-author: rothja
-ms.author: jroth
-manager: jhubbard
-ms.openlocfilehash: fdaebbfc823445594e32f18ba1ec858b2350f108
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: b3b35cb41610f490b4a12f8deba77e9d34cc7185
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36051812"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37328439"
 ---
 # <a name="configure-backup-on-availability-replicas-sql-server"></a>Configurer la sauvegarde sur des réplicas de disponibilité (SQL Server)
   Cette rubrique explique comment configurer la sauvegarde sur des réplicas secondaires pour un groupe de disponibilité AlwaysOn à l'aide de [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], de [!INCLUDE[tsql](../../../includes/tsql-md.md)]ou de PowerShell dans [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)].  
   
 > [!NOTE]  
->  Pour obtenir une présentation de la sauvegarde sur les réplicas secondaires, consultez [ secondaires actifs : sauvegarde sur les réplicas secondaires (groupes de disponibilité AlwaysOn)](active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md).  
+>  Pour une introduction à la sauvegarde sur les réplicas secondaires, consultez [ secondaires actifs : sauvegarde sur les réplicas secondaires (groupes de disponibilité AlwaysOn)](active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md).  
   
  
   
@@ -115,7 +114,7 @@ ms.locfileid: "36051812"
 ##  <a name="PowerShellProcedure"></a> Utilisation de PowerShell  
  **Pour configurer la sauvegarde sur les réplicas secondaires**  
   
-1.  Définir la valeur par défaut (`cd`) à l’instance de serveur qui héberge le réplica principal.  
+1.  Définir par défaut (`cd`) à l’instance de serveur qui héberge le réplica principal.  
   
 2.  Éventuellement, configurez la priorité de sauvegarde de chaque réplica de disponibilité que vous ajoutez ou modifiez. Cette priorité est utilisée par l'instance de serveur qui héberge le réplica principal pour décider quel réplica doit traiter une demande de sauvegarde automatique sur une base de données dans le groupe de disponibilité (le réplica avec la priorité la plus élevée est choisi). Cette priorité peut être tout nombre compris entre 0 et 100 (inclus). Une priorité de 0 indique que le réplica ne doit pas être considéré comme candidat pour le traitement des demandes de sauvegarde.  La valeur par défaut est 50.  
   
@@ -130,7 +129,7 @@ ms.locfileid: "36051812"
   
 3.  Éventuellement, configurez la préférence de sauvegarde automatique pour le groupe de disponibilité que vous créez ou modifiez. Cette préférence indique la manière dont un travail de sauvegarde doit évaluer le réplica principal lorsqu'on choisit où effectuer des sauvegardes. Le paramètre par défaut est de préférer les réplicas secondaires.  
   
-     Lors de la création d'un groupe de disponibilité, utilisez l'applet de commande `New-SqlAvailabilityGroup`. Lorsque vous modifiez un groupe de disponibilité existant, utilisez la `Set-SqlAvailabilityGroup` applet de commande. Dans les deux cas, spécifiez la `AutomatedBackupPreference` paramètre.  
+     Lors de la création d'un groupe de disponibilité, utilisez l'applet de commande `New-SqlAvailabilityGroup`. Quand vous modifiez un groupe de disponibilité existant, utilisez la `Set-SqlAvailabilityGroup` applet de commande. Dans les deux cas, spécifiez la `AutomatedBackupPreference` paramètre.  
   
      où :  
   
@@ -201,7 +200,7 @@ BACKUP DATABASE @DBNAME TO DISK=<disk>
   
 -   [Guide de Solutions Microsoft SQL Server AlwaysOn pour une haute disponibilité et récupération d’urgence](http://go.microsoft.com/fwlink/?LinkId=227600)  
   
--   [Blog de l’équipe AlwaysOn SQL Server : Le Blog officiel de SQL Server AlwaysOn équipe](http://blogs.msdn.com/b/sqlalwayson/)  
+-   [Blog de l’équipe AlwaysOn SQL Server : Le Blog officiel de SQL Server AlwaysOn Team](http://blogs.msdn.com/b/sqlalwayson/)  
   
 ## <a name="see-also"></a>Voir aussi  
  [Vue d’ensemble des groupes de disponibilité AlwaysOn &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   

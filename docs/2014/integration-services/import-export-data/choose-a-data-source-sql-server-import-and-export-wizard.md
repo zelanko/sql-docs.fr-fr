@@ -8,31 +8,31 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.impexpwizard.chooseadatasource.f1
 ms.assetid: ebf28a62-dfc1-4b39-9db5-df1919e5fccb
 caps.latest.revision: 61
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: c814b8d89686c635fd0479576eeda982a8b7b957
-ms.sourcegitcommit: d463f543e8db4a768f8e9736ff28fedb3fb17b9f
+manager: craigg
+ms.openlocfilehash: 9a1696168c72bf65c3a1771c0a54c51d9080d091
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/22/2018
-ms.locfileid: "36324613"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37266835"
 ---
 # <a name="choose-a-data-source-sql-server-import-and-export-wizard"></a>Choisir une source de données (Assistant Importation et Exportation SQL Server)
-  Utilisez le **choisir une Source de données** page pour spécifier la source de données que vous voulez copier.  
+  Utilisez le **choisir une Source de données** page pour spécifier la source de données que vous souhaitez copier.  
   
- Pour en savoir plus sur cet Assistant, consultez [SQL Server Assistant Importation et exportation](import-and-export-data-with-the-sql-server-import-and-export-wizard.md). Pour obtenir des informations sur les options de démarrage de l’Assistant, ainsi que sur les autorisations requises pour exécuter l’Assistant, consultez [exécuter le SQL Server Assistant Importation et exportation](start-the-sql-server-import-and-export-wizard.md).  
+ Pour en savoir plus sur cet Assistant, consultez [SQL Server Assistant Importation et exportation](import-and-export-data-with-the-sql-server-import-and-export-wizard.md). Pour en savoir plus sur les options de démarrage de l’Assistant et sur les autorisations requises pour exécuter l’Assistant avec succès, consultez [exécuter le SQL Server Assistant Importation et exportation](start-the-sql-server-import-and-export-wizard.md).  
   
- L’objectif de le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Assistant Importation et exportation consiste à copier des données à partir d’une source vers une destination. L'Assistant peut également créer une base de données de destination et des tables de destination à votre intention. Toutefois, si vous devez copier plusieurs tables ou bases de données, ou autres types d'objets de bases de données, vous devez plutôt utiliser l'Assistant Copie de base de données. Pour plus d'informations, consultez [Use the Copy Database Wizard](../../relational-databases/databases/use-the-copy-database-wizard.md).  
+ L’objectif de la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Assistant Importation et exportation consiste à copier des données à partir d’une source vers une destination. L'Assistant peut également créer une base de données de destination et des tables de destination à votre intention. Toutefois, si vous devez copier plusieurs tables ou bases de données, ou autres types d'objets de bases de données, vous devez plutôt utiliser l'Assistant Copie de base de données. Pour plus d'informations, consultez [Use the Copy Database Wizard](../../relational-databases/databases/use-the-copy-database-wizard.md).  
   
 ## <a name="options"></a>Options  
  **Source de données**  
- Permet de choisir le fournisseur de données qui correspond au format de stockage de la source. Plusieurs fournisseurs peuvent être disponibles pour votre source de données. Par exemple, avec [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que vous pouvez utiliser [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client, le fournisseur de données .NET Framework pour SQL Server ou le fournisseur Microsoft OLE DB pour SQL Server.  
+ Permet de choisir le fournisseur de données qui correspond au format de stockage de la source. Plusieurs fournisseurs peuvent être disponibles pour votre source de données. Par exemple, avec [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] vous pouvez utiliser [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client, le fournisseur de données .NET Framework pour SQL Server ou le fournisseur Microsoft OLE DB pour SQL Server.  
   
  Le nombre d'options de la propriété **Source de données** varie en fonction des fournisseurs installés sur l'ordinateur. Les tableaux suivants répertorient les options de destinations fréquemment utilisées. Pour les autres fournisseurs, consultez la documentation du fournisseur.  
   
@@ -71,7 +71,7 @@ ms.locfileid: "36324613"
  Tapez le nom de la base de données source.  
   
  **Sécurité intégrée**  
- Spécifiez `True` pour se connecter à l’aide de l’authentification intégrée Windows, qui est recommandée, ou `False` pour se connecter à l’aide de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] l’authentification. Si vous spécifiez `False`, vous devez entrer un ID d'utilisateur et un mot de passe. La valeur par défaut est `False`.  
+ Spécifiez `True` pour se connecter en utilisant l’authentification intégrée de Windows, ce qui est recommandée, ou `False` pour se connecter à l’aide de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] l’authentification. Si vous spécifiez `False`, vous devez entrer un ID d'utilisateur et un mot de passe. La valeur par défaut est `False`.  
   
  **ID d'utilisateur**  
  Spécifiez un nom d’utilisateur pour la connexion de base de données lorsque vous utilisez [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] l’authentification.  
@@ -79,12 +79,12 @@ ms.locfileid: "36324613"
  **Mot de passe**  
  Tapez le mot de passe pour la connexion à la base de données quand vous utilisez l’authentification [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
- Les options supplémentaires fournies lorsque vous sélectionnez ce fournisseur ne sont pas indispensables pour la connexion à la base de données source [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Pour obtenir une description de ces options supplémentaires, consultez la documentation relative à la [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] fournisseur de données pour [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dans le [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] Kit de développement logiciel.  
+ Les options supplémentaires fournies lorsque vous sélectionnez ce fournisseur ne sont pas indispensables pour la connexion à la base de données source [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Pour obtenir une description de ces options supplémentaires, consultez la documentation pour le [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] fournisseur de données pour [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dans le [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] Kit de développement logiciel.  
   
 ### <a name="data-source--microsoft-excel"></a>Source de données = Microsoft Excel  
   
 > [!NOTE]  
->  Sélectionnez **Microsoft Excel** uniquement si vous souhaitez vous connecter à une source de données qui utilise Excel 2003 ou une version antérieure. Pour vous connecter à une source de données qui utilise Excel 2007, sélectionnez **Microsoft Office 12.0 accès de base de données du moteur fournisseur OLE DB**, cliquez sur **propriétés**, puis, dans le **tous les** onglet de la **Propriétés des liaisons de données** boîte de dialogue, entrez `Excel 12.0` en tant que la valeur de **propriétés étendues**.  
+>  Sélectionnez **Microsoft Excel** uniquement si vous souhaitez vous connecter à une source de données qui utilise Excel 2003 ou une version antérieure. Pour vous connecter à une source de données qui utilise Excel 2007, sélectionnez **Microsoft Office 12.0 Access Database Engine fournisseur OLE DB**, cliquez sur **propriétés**, puis, dans le **tous les** onglet de la **Propriétés des liaisons de données** boîte de dialogue, entrez `Excel 12.0` comme valeur pour **propriétés étendues**.  
   
  **Chemin de fichier Excel**  
  Spécifiez le chemin d'accès et le nom de la feuille de calcul à partir de laquelle les données doivent être importées. Par exemple, **C:\MyData.xls, \\\Sales\Database\Northwind.xls**. Ou cliquez sur **Parcourir**.  
@@ -101,7 +101,7 @@ ms.locfileid: "36324613"
 ### <a name="data-source--microsoft-access"></a>Source de données = Microsoft Access  
   
 > [!NOTE]  
->  Sélectionnez **Microsoft Access** uniquement si vous souhaitez vous connecter à une base de données qui utilise Access 2003 ou une version antérieure. Pour vous connecter à une base de données qui utilise Access 2007, sélectionnez **Microsoft Office 12.0 accès de base de données du moteur fournisseur OLE DB** à la place.  
+>  Sélectionnez **Microsoft Access** uniquement si vous souhaitez vous connecter à une base de données qui utilise Access 2003 ou une version antérieure. Pour vous connecter à une base de données qui utilise Access 2007, sélectionnez **Microsoft Office 12.0 Access Database Engine fournisseur OLE DB** à la place.  
   
  **Nom de fichier**  
  Spécifiez le chemin d'accès et le nom du fichier de base de données à partir duquel les données doivent être importées. Par exemple, **C:\MyData.mdb, \\\Sales\Database\Northwind.mdb**. Ou cliquez sur **Parcourir**.  
@@ -116,7 +116,7 @@ ms.locfileid: "36324613"
  Fournissez le mot de passe utilisateur pour la connexion à la base de données lorsqu'un fichier d'informations d'un groupe de travail est associé à la base de données. Cependant, si la base de données est protégée par un seul mot de passe pour tous les utilisateurs, vous devez fournir cette valeur dans la boîte de dialogue **Propriétés des liaisons de données** accessible en cliquant sur **Avancé**.  
   
  **Avancé**  
- Vous voudrez spécifier des options avancées, telles que le mot de passe de base de données ou un fichier de groupe de travail par défaut, à l’aide de la **propriétés des liaisons de données** boîte de dialogue. Pour plus d’informations sur les propriétés du fournisseur OLE DB, recherchez dans la section accès aux données de la [MSDN library](http://go.microsoft.com/fwlink/?linkid=62553).  
+ Vous pouvez souhaiter spécifier des options avancées, telles que le mot de passe de base de données ou un fichier d’informations de groupe de travail non définis par défaut, à l’aide de la **propriétés des liaisons de données** boîte de dialogue. Pour plus d’informations sur les propriétés du fournisseur OLE DB, effectuez une recherche dans la section accès aux données de la [MSDN library](http://go.microsoft.com/fwlink/?linkid=62553).  
   
 ### <a name="data-source--flat-file-source"></a>Source de données = Source de fichier plat  
  Consultez les rubriques suivantes pour obtenir des informations sur les options d'une source de données dans un fichier plat.  

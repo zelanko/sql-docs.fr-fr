@@ -1,5 +1,5 @@
 ---
-title: Utiliser des Variables dans des Packages | Documents Microsoft
+title: Utiliser des Variables dans des Packages | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,28 +8,28 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - user-defined variables [Integration Services]
 - variables [Integration Services], use scenarios
 - system variables [Integration Services]
 ms.assetid: 7742e92d-46c5-4cc4-b9a3-45b688ddb787
 caps.latest.revision: 62
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 81678b498e9c4eca48a0d9de2b5f7070693e7d90
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: b0cc23cf94eef3998e1079a09be5978e4c594ca9
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36144537"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37285415"
 ---
 # <a name="use-variables-in-packages"></a>Utiliser des variables dans des packages
   Les variables constituent un ajout souple et utile aux packages [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]. Elles permettent une communication entre les objets du package et entre les packages parents et enfants. Les variables peuvent également être utilisées dans les expressions et les scripts.  
   
 ## <a name="user-defined-variables-and-system-variables"></a>Variables définies par l'utilisateur et variables système  
- [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] Fournit des variables système et prend en charge les variables définies par l’utilisateur. Quand vous créez un nouveau package, quand vous ajoutez un conteneur ou une tâche à un package ou quand vous créez un gestionnaire d'événements, [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] inclut un ensemble de variables système pour le conteneur. Les variables système contiennent des informations utiles sur un package, conteneur, tâche ou gestionnaire d'événements. Par exemple, au moment de l’exécution, la variable système **MachineName** contient le nom de l’ordinateur sur lequel le package est exécuté et **StartTime** contient l’heure à laquelle le package a démarré son exécution. Les variables système sont en lecture seule. Pour plus d’informations, consultez [Variables système](system-variables.md).  
+ [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] fournit les variables système et prend en charge les variables définies par l’utilisateur. Quand vous créez un nouveau package, quand vous ajoutez un conteneur ou une tâche à un package ou quand vous créez un gestionnaire d'événements, [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] inclut un ensemble de variables système pour le conteneur. Les variables système contiennent des informations utiles sur un package, conteneur, tâche ou gestionnaire d'événements. Par exemple, au moment de l’exécution, la variable système **MachineName** contient le nom de l’ordinateur sur lequel le package est exécuté et **StartTime** contient l’heure à laquelle le package a démarré son exécution. Les variables système sont en lecture seule. Pour plus d’informations, consultez [Variables système](system-variables.md).  
   
  Vous pouvez créer des variables définies par l'utilisateur et les utiliser ensuite dans des packages. Les variables définies par l’utilisateur peuvent être utilisées de diverses façons dans [!INCLUDE[ssIS](../includes/ssis-md.md)]: dans les scripts, les expressions utilisées par des contraintes de précédence, le conteneur de boucles For, la transformation de colonne dérivée, la transformation de fractionnement conditionnel et les expressions de propriété qui mettent à jour des valeurs de propriété.  
   
@@ -57,8 +57,8 @@ ms.locfileid: "36144537"
   
 ### <a name="to-add-modify-and-delete-user-defined-variables"></a>Pour ajouter, modifier et supprimer des variables définies par l'utilisateur  
   
--   [Ajouter, supprimer ou modifier l’étendue de la Variable définie par l’utilisateur dans un Package](../../2014/integration-services/add-delete-change-scope-of-user-defined-variable-in-a-package.md)  
+-   [Ajouter, supprimer, modifier l’étendue d’une variable définie par l’utilisateur dans un package](../../2014/integration-services/add-delete-change-scope-of-user-defined-variable-in-a-package.md)  
   
--   [Définir les propriétés d’une Variable définie par l’utilisateur](../../2014/integration-services/set-the-properties-of-a-user-defined-variable.md)  
+-   [Définir les propriétés d’une variable définie par l’utilisateur](../../2014/integration-services/set-the-properties-of-a-user-defined-variable.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Ajouter des colonnes à une Table (SSAS tabulaire) | Documents Microsoft
+title: Ajouter des colonnes à une Table (SSAS tabulaire) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 5974a3cc-caf8-4558-8836-6e3c24b1ee23
 caps.latest.revision: 10
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 4be3136f461772e2d6eb4aa63d64a828ce18eaf0
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 12534cd4554d71c368f09a6620056e187578b456
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36050895"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37326509"
 ---
 # <a name="add-columns-to-a-table-ssas-tabular"></a>Ajouter des colonnes à une table (SSAS Tabulaire)
   Cette rubrique explique comment ajouter des colonnes à une table existante.  
@@ -66,7 +66,7 @@ ms.locfileid: "36050895"
 2.  Cliquez sur la cellule supérieure, puis tapez un nom et appuyez sur ENTRÉE.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Modifier la boîte de dialogue Propriétés de Table &#40;SSAS&#41;](../edit-table-properties-dialog-box-ssas.md)   
- [Modifier les mappages de filtre de lignes, de tables ou de colonnes &#40;tabulaire SSAS&#41;](change-table-column-or-row-filter-mappings-ssas-tabular.md)  
+ [Modifier la boîte de dialogue Propriétés Table &#40;SSAS&#41;](../edit-table-properties-dialog-box-ssas.md)   
+ [Modifier les mappages de filtre de lignes, table ou de colonnes &#40;tabulaire SSAS&#41;](change-table-column-or-row-filter-mappings-ssas-tabular.md)  
   
   

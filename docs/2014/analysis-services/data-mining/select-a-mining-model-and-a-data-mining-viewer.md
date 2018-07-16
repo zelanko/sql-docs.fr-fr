@@ -1,5 +1,5 @@
 ---
-title: Sélectionnez un modèle d’exploration de données et une visionneuse d’exploration de données | Documents Microsoft
+title: Sélectionnez un modèle d’exploration de données et une visionneuse d’exploration de données | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Mining Model Viewer [Analysis Services], types
 ms.assetid: 3e5fb89d-3ab8-4d2e-9926-feeb38c02d3f
 caps.latest.revision: 32
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 61974f415e8c9dc754ecefe896a5d4474108b112
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: ca04c65fdfbf643f64f3bad7ad706abdc2b4d016
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36142925"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37317359"
 ---
 # <a name="select-a-mining-model-and-a-data-mining-viewer"></a>Sélectionner un modèle d'exploration de données et une visionneuse d'exploration de données
   Vous pouvez explorer un modèle d’exploration de données en utilisant l’une des visionneuses sous l’onglet **Visionneuse de modèle d’exploration de données** du Concepteur d’exploration de données. Vous pouvez aisément basculer entre les modèles ou modifier la visionneuse utilisée.  

@@ -1,5 +1,5 @@
 ---
-title: Utilisation de Variables et paramètres (MDX) | Documents Microsoft
+title: Utilisation de Variables et paramètres (MDX) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - parameters [MDX]
 - queries [MDX], variables
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - variables [MDX]
 ms.assetid: a4754d16-d9c4-49f6-9be0-392180b912e4
 caps.latest.revision: 29
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: a2e477c1faa1f8bed7568c510418abb006875f48
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 22adb713c5a75d4cf038e5683a6ddec8adbe836d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36042768"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37266105"
 ---
 # <a name="using-variables-and-parameters-mdx"></a>Utilisation de variables et de paramètres (MDX)
   Dans [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)], vous pouvez paramétrer une instruction MDX (Multidimensional Expressions). Une instruction paramétrable permet de créer des instructions génériques pouvant être personnalisées au moment de l'exécution.  
@@ -33,7 +33,7 @@ ms.locfileid: "36042768"
   
  La syntaxe MDX ne prend en charge que les paramètres de valeurs littérales ou scalaires. Pour créer un paramètre faisant référence à un membre, un jeu ou un tuple, vous devez utiliser une fonction telle que [StrToMember](/sql/mdx/strtomember-mdx) ou [StrToSet](/sql/mdx/strtoset-mdx).  
   
- Dans le code XML suivant par exemple des Analysis (XMLA), le @CountryName paramètre contient le pays pour le client auquel les données sont récupérées :  
+ Dans le code XML suivant par exemple Analysis (XMLA), le @CountryName paramètre contiendra le pays pour le client auquel les données sont récupérées :  
   
 ```  
 <Envelope xmlns="http://schemas.xmlsoap.org/soap/envelope/">  
@@ -63,6 +63,6 @@ from [Adventure Works]
  Pour utiliser cette fonctionnalité avec OLE DB, vous devez utiliser le `ICommandWithParameters` interface. Pour utiliser cette fonctionnalité avec ADOMD.Net, vous devez utiliser l’interface **AdomdCommand.Parameters** .  
   
 ## <a name="see-also"></a>Voir aussi  
- [Notions de base des scripts MDX &#40;Analysis Services&#41;](mdx-scripting-fundamentals-analysis-services.md)  
+ [Principes de base des scripts MDX &#40;Analysis Services&#41;](mdx-scripting-fundamentals-analysis-services.md)  
   
   

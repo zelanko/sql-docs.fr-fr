@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - creating views and stored procedures
 ms.assetid: 53a0426d-07d8-4b7c-aa21-22632753bad8
 caps.latest.revision: 13
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 828d983b2b85ebd6c3a30a7311186b8bc97cb6b0
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: edmacauley
+ms.author: edmaca
+manager: craigg
+ms.openlocfilehash: f4ff7d53cc51d8995cdf348742299daedf574d26
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36139515"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37301289"
 ---
 # <a name="creating-views-and-stored-procedures"></a>Création des vues et des procédures stockées
   Étant donné que Mary peut désormais accéder à la base de données **TestData** , vous pouvez envisager de créer des objets de base de données, tels qu'une vue et une procédure stockée, puis octroyer à Mary l'accès à ses objets. Une vue est une instruction SELECT stockée, et une procédure stockée correspond à une ou plusieurs instructions [!INCLUDE[tsql](../includes/tsql-md.md)] qui s'exécutent comme un traitement.  
@@ -81,7 +81,7 @@ ms.locfileid: "36139515"
     ```  
   
 ## <a name="next-task-in-lesson"></a>Tâche suivante de la leçon  
- [Accorder l’accès à un objet de base de données](lesson-2-4-granting-access-to-a-database-object.md)  
+ [Octroi de l’accès à un objet de base de données](lesson-2-4-granting-access-to-a-database-object.md)  
   
 ## <a name="see-also"></a>Voir aussi  
  [CREATE VIEW &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-view-transact-sql)   

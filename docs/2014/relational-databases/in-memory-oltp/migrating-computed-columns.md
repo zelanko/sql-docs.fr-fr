@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine-imoltp
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 64a9eade-22c3-4a9d-ab50-956219e08df1
 caps.latest.revision: 5
-author: stevestein
-ms.author: sstein
-manager: jhubbard
-ms.openlocfilehash: 97aaa3268c31db529ef5bd8216a1671203ce2fc8
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: b63ecb4574e4a24886517efa2cb3bfd76d76420b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36041113"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37324379"
 ---
 # <a name="migrating-computed-columns"></a>Migration de colonnes calculées
   Les colonnes calculées ne sont pas prises en charge dans les tables optimisées en mémoire. Toutefois, vous pouvez simuler une colonne calculée.  

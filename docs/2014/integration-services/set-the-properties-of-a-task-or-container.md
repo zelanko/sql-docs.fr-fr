@@ -1,5 +1,5 @@
 ---
-title: Définir les propriétés d’une tâche ou un conteneur | Documents Microsoft
+title: Définir les propriétés d’une tâche ou un conteneur | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - tasks [Integration Services], properties
 ms.assetid: 52d47ca4-fb8c-493d-8b2b-48bb269f859b
 caps.latest.revision: 48
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 08133206f867492f52c5d89d67819d8f928eb8ce
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 4aa8b85c3b5c92b38f50bbfac850d4a69ed2d4c9
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36044519"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37264895"
 ---
 # <a name="set-the-properties-of-a-task-or-container"></a>Définir les propriétés d'une tâche ou d'un conteneur
   Vous pouvez définir la plupart des propriétés des tâches et des conteneurs à l’aide de la fenêtre **Propriétés**. Les seules exceptions sont les propriétés des collections de tâches et les propriétés trop complexes à définir dans la fenêtre **Propriétés** . Par exemple, vous ne pouvez pas configurer l’énumérateur utilisé par le conteneur de boucles Foreach dans la fenêtre **Propriétés** . Vous devez utiliser un éditeur de tâche ou de conteneur pour définir ces propriétés complexes. La plupart des éditeurs de tâche et de conteneur possèdent plusieurs nœuds contenant chacun des propriétés connexes. Le nom du nœud indique l'objet des propriétés contenues dans le nœud.  

@@ -1,5 +1,5 @@
 ---
-title: Ouvrir des Solutions à partir du contrôle de code Source | Documents Microsoft
+title: Ouvrir des Solutions à partir du contrôle de code Source | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - opening solutions
 - solutions [SQL Server Management Studio], opening
 ms.assetid: a96a1f0d-0183-4587-a3b0-4598309cbdd2
 caps.latest.revision: 21
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 9d7b626cd1d4868e078174830bcfbaa4cc7abdc2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 0767df9d8ad010e17560b1f2b5e2e227d52a9f99
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36039372"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37285695"
 ---
 # <a name="open-solutions-from-source-control"></a>Ouvrir des solutions à partir du contrôle de code source
   Vous pouvez utiliser [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] pour ouvrir des solutions directement à partir du contrôle de code source. Lorsque vous effectuez cette opération, l'environnement Studio crée une copie de la toute dernière version des fichiers solutions à l'emplacement que vous avez spécifié.  
@@ -34,7 +34,7 @@ ms.locfileid: "36039372"
   
 ### <a name="to-open-a-solution-from-source-control"></a>Pour ouvrir une solution à partir du contrôle de code source  
   
-1.  Sur le **fichier** menu, pointez sur **contrôle de code Source**, puis cliquez sur **ouvrir à partir du contrôle de code Source**.  
+1.  Sur le **fichier** menu, pointez sur **contrôle de code Source**, puis cliquez sur **ouvert à partir d’un contrôle de code Source**.  
   
 2.  Si le système vous le demande, connectez-vous à [!INCLUDE[msCoName](../includes/msconame-md.md)] Visual SourceSafe.  
   
@@ -45,6 +45,6 @@ ms.locfileid: "36039372"
 5.  Dans le **ouvrir une Solution** boîte de dialogue, sélectionnez le fichier solution, puis cliquez sur **OK**.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Ouverture de projets à partir du contrôle de code Source](../../2014/database-engine/open-projects-from-source-control.md)  
+ [Ouvrir des projets à partir du contrôle de code source](../../2014/database-engine/open-projects-from-source-control.md)  
   
   

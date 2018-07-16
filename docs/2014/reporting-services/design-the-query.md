@@ -1,5 +1,5 @@
 ---
-title: Concevoir la requête | Documents Microsoft
+title: Concevoir la requête | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.rtp.rptwizard.designquery.f1
 ms.assetid: 2dad800f-10a1-453c-8761-2935b9826d84
 caps.latest.revision: 39
-author: douglaslM
+author: maggiesmsft
 ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 2ca850de7e8f09f704434910ccf0fa45cbfca726
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: be1faf198c38ee9445602aa0e0bcc8ae66b5461a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36152286"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37270305"
 ---
 # <a name="design-the-query"></a>Concevoir la requête
   Utilisez cette page de l'Assistant Rapport pour créer une requête en la tapant manuellement, en utilisant le Générateur de requêtes pour créer une requête de manière interactive ou en important une requête à partir d'un autre rapport.  
@@ -38,7 +38,7 @@ ms.locfileid: "36152286"
  Pour plus d'informations sur les concepteurs de requêtes, consultez [Reporting Services Query Designers](../../2014/reporting-services/reporting-services-query-designers.md).  
   
 ## <a name="example"></a>Exemple  
- Pour le type de source de données **Microsoft SQL Server**, la requête suivante récupère une liste des noms depuis la [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] base de données `Person` table.  
+ Pour le type de source de données **Microsoft SQL Server**, la requête suivante récupère une liste des noms depuis le [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] base de données `Person` table.  
   
 ```  
 SELECT LastName FROM Person.Person;  
@@ -53,6 +53,6 @@ EXEC uspgetEmployeeManagers '1';
 ## <a name="see-also"></a>Voir aussi  
  [Aide de l’Assistant rapport](../../2014/reporting-services/report-wizard-help.md)   
  [Datasets incorporés dans le rapport et datasets partagés &#40;Générateur de rapports et SSRS&#41;](report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)   
- [Ajouter des données à un rapport &#40;rapport Générateur et SSRS&#41;](report-data/report-datasets-ssrs.md)  
+ [Ajouter des données à un rapport &#40;Générateur de rapports et SSRS&#41;](report-data/report-datasets-ssrs.md)  
   
   

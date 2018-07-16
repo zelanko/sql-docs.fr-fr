@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.connecttoserver.options.registeredservers.f1
 ms.assetid: ba34b01a-6289-4eb8-8341-fa3d9ec87b3f
 caps.latest.revision: 11
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: a066ea5db7108405fca18636dfd5d14f03f58ae6
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 670d2e23467d80ee1a183ad3f5c5aae46ce64067
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36039788"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37283935"
 ---
 # <a name="connect-to-server-additional-connection-parameters-page"></a>Se connecter au serveur (page Paramètres de connexion supplémentaires)
   La boîte de dialogue **Se connecter à** de [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] présente les valeurs de chaîne de connexion les plus courantes sous forme d’options. Vous pouvez utiliser la page **Paramètres de connexion supplémentaires** pour ajouter d’autres paramètres de connexion à la chaîne de connexion.  

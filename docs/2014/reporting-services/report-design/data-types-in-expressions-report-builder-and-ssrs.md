@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 94fdf921-270c-4c12-87b3-46b1cc98fae5
 caps.latest.revision: 9
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: bffff032f51c1a349db6ab384c8f6b49e66ed206
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: b9dfb573605f8e859f8db4b991e2eb19a73d4606
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36040577"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37319949"
 ---
 # <a name="data-types-in-expressions-report-builder-and-ssrs"></a>Types de données dans les expressions (Générateur de rapports et SSRS)
   Les données sont représentées par différents types de données permettant de les stocker et de les traiter de manière efficace. Les types de données typiques incluent du texte (également appelé chaînes), des numéros avec et sans décimales, des dates, des heures et des images. Les valeurs dans un rapport doivent être un type de données RDL (Report Definition Language). Vous pouvez mettre en forme une valeur selon votre préférence lorsque vous l'affichez dans un rapport. Par exemple, un champ qui représente une devise est stocké dans la définition de rapport sous la forme d'un nombre à virgule flottante, mais peut être affiché sous divers formats en fonction de la propriété de format choisie.  
@@ -122,7 +122,7 @@ ms.locfileid: "36040577"
   
          Si la chaîne `MyDateTime.Value` utilise un décalage UTC, la fonction `DateTime.Parse` ajuste tout d'abord le décalage UTC (7 A.M. - [`+08:00`] de manière à afficher l'heure UTC 11 P.M. la nuit précédente). La fonction `DateTime.Parse` applique ensuite le décalage UTC du serveur de rapports local et, si nécessaire, ajuste à nouveau l'heure pour tenir compte de l'heure d'été. Par exemple, à Redmond, dans l'état de Washington, le décalage horaire local ajusté pour tenir compte de l'heure d'été est `[-07:00]`, ou 7 heures avant 11 PM. Le résultat correspond à la valeur `DateTime` suivante : `2007-07-06 04:07:07 PM` (6 juillet 2007 à 4:07 P.M).  
   
- Pour plus d’informations sur la conversion de chaînes en `DateTime` des types de données, consultez [l’analyse de chaînes de Date et heure](http://go.microsoft.com/fwlink/?LinkId=89703), [mise en forme de Date et d’heure pour une Culture spécifique](http://go.microsoft.com/fwlink/?LinkId=89704), et [sélection Entre DateTime, DateTimeOffset et TimeZoneInfo](http://go.microsoft.com/fwlink/?linkid=110652) sur MSDN.  
+ Pour plus d’informations sur la conversion de chaînes en `DateTime` des types de données, consultez [l’analyse de chaînes de Date et heure](http://go.microsoft.com/fwlink/?LinkId=89703), [mise en forme la Date et l’heure pour une Culture spécifique](http://go.microsoft.com/fwlink/?LinkId=89704), et [si vous choisissez Entre DateTime, DateTimeOffset et TimeZoneInfo](http://go.microsoft.com/fwlink/?linkid=110652) sur MSDN.  
   
 -   Ajoutez un nouveau champ calculé au dataset du rapport qui utilise une expression pour extraire certaines parties de la chaîne. Pour plus d’informations, consultez [Ajouter, modifier ou actualiser des champs dans le volet des données de rapport &#40;Générateur de rapports et SSRS&#41;](../report-data/add-edit-refresh-fields-in-the-report-data-pane-report-builder-and-ssrs.md).  
   

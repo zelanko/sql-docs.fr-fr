@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - dbe-xml
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - removing indexes
 - dropping indexes
 - XML indexes [SQL Server], dropping
 ms.assetid: 7591ebea-34af-4925-8553-b2adb5b487c2
 caps.latest.revision: 10
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 88db7af7bbca5a202b79ec42d8cade77e85cd258
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 2a6021971575b0a17821e415aaf738ff651e9ec5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36152289"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37323969"
 ---
 # <a name="drop-xml-indexes"></a>Supprimer des index XML
   L’instruction [DROP INDEX &#40;Transact-SQL&#41;](/sql/t-sql/statements/drop-index-transact-sql)[!INCLUDE[tsql](../../includes/tsql-md.md)] permet de supprimer des index XML et non XML, qu’ils soient primaires ou secondaires. Les options DROP INDEX ne s'appliquent cependant pas aux index XML. Si vous supprimez l'index XML primaire, tous les index secondaires présents sont alors également supprimés.  
@@ -31,7 +31,7 @@ ms.locfileid: "36152289"
  La syntaxe DROP avec *TableName.IndexName* est cependant en cours de retrait des fonctionnalités et n’est pas prise en charge pour les index XML.  
   
 ## <a name="example-creating-and-dropping-a-primary-xml-index"></a>Exemple : création puis suppression d'un index XML primaire  
- Dans l’exemple suivant, un index XML est créé sur une `xml` colonne de type.  
+ Dans l’exemple suivant, un index XML est créé sur un `xml` colonne de type.  
   
 ```  
 DROP TABLE T  
@@ -55,7 +55,7 @@ DROP INDEX PIdx_T_XmlCol ON T
   
  Lorsqu'une table est supprimée, tous les index XML qui lui sont associés sont également automatiquement supprimés. Ceci dit, une colonne XML ne peut pas être supprimée d'une table si un index XML existe sur cette colonne.  
   
- Dans l’exemple suivant, un index XML est créé sur une `xml` colonne de type. Pour plus d’informations, consultez [Comparer du XML typé et du XML non typé](../xml/compare-typed-xml-to-untyped-xml.md).  
+ Dans l’exemple suivant, un index XML est créé sur un `xml` colonne de type. Pour plus d’informations, consultez [Comparer du XML typé et du XML non typé](../xml/compare-typed-xml-to-untyped-xml.md).  
   
 ```  
 CREATE TABLE TestTable(  

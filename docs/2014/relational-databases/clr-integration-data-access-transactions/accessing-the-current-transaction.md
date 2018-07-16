@@ -1,13 +1,11 @@
 ---
-title: L’accès à la Transaction actuelle | Documents Microsoft
+title: Accès à la Transaction actuelle | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: clr
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -16,15 +14,15 @@ helpviewer_keywords:
 - Transaction class
 ms.assetid: 1a4e2ce5-f627-4c81-8960-6a9968cefda2
 caps.latest.revision: 16
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 618b272195dc61179db7ac36a19cc30f5eaa2aef
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: rothja
+ms.author: jroth
+manager: craigg
+ms.openlocfilehash: dad95c2d2fc02e46b139f29889315873f21887e7
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36144540"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37351811"
 ---
 # <a name="accessing-the-current-transaction"></a>Accès à la transaction actuelle
   Si une transaction est active au point auquel du code Common Language Runtime (CLR) qui s'exécute sur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] est entré, la transaction est exposée à travers la classe `System.Transactions.Transaction`. La propriété `Transaction.Current` est utilisée pour accéder à la transaction actuelle. Dans la plupart des cas il n'est pas nécessaire d'accéder explicitement à la transaction. Pour les connexions de base de données, ADO.NET vérifie `Transaction.Current` automatiquement lorsque la méthode `Connection.Open` est appelée et inscrit de façon transparente la connexion dans cette transaction (à moins que le mot clé `Enlist` n'ait la valeur « false » dans la chaîne de connexion).  
@@ -69,7 +67,7 @@ The context transaction which was active before entering user defined routine, t
  Cette exception est également attendue et, pour que l'exécution continue, vous devez avoir un bloc try/catch autour de l'instruction [!INCLUDE[tsql](../../includes/tsql-md.md)] qui effectue l'action qui active le déclencheur. Malgré les deux exceptions levées, la transaction est restaurée et les modifications ne sont pas validées.  
   
 ### <a name="example"></a>Exemple  
- Voici un exemple de transaction restaurée à partir d'une procédure managée à l'aide de la méthode `Transaction.Rollback`. Remarquez le bloc try/catch autour de la méthode `Transaction.Rollback` dans le code managé. Le script [!INCLUDE[tsql](../../includes/tsql-md.md)] crée un assembly et une procédure stockée managée. N’oubliez pas que le `EXEC uspRollbackFromProc` est inclus dans un bloc try/catch, afin que l’exception levée lorsque la procédure managée termine l’exécution est interceptée.  
+ Voici un exemple de transaction restaurée à partir d'une procédure managée à l'aide de la méthode `Transaction.Rollback`. Remarquez le bloc try/catch autour de la méthode `Transaction.Rollback` dans le code managé. Le script [!INCLUDE[tsql](../../includes/tsql-md.md)] crée un assembly et une procédure stockée managée. N’oubliez pas que la `EXEC uspRollbackFromProc` instruction est englobée dans un bloc try/catch, afin que l’exception levée lorsque la procédure managée termine l’exécution est interceptée.  
   
 ```csharp  
 using System;  

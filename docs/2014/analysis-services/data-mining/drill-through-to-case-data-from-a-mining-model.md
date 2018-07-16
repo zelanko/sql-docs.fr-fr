@@ -1,5 +1,5 @@
 ---
-title: Extraction des données de cas à partir d’un modèle d’exploration de données | Documents Microsoft
+title: Extraire des données de cas à partir d’un modèle d’exploration de données | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - drillthrough [Analysis Services]
 ms.assetid: b4d3f350-e543-4ea9-b3a2-b4f7c0a9ae27
 caps.latest.revision: 21
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 86a8cc832572d7a1c2e296c72d9bcd9a0a4d1969
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: a3ce4a5aea740048a53ab40db8b40d0a83d40e19
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36040274"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37272165"
 ---
 # <a name="drill-through-to-case-data-from-a-mining-model"></a>Extraire des données de cas à partir d'un modèle d'exploration de données
   Si un modèle d'exploration de données a été configuré pour vous autoriser à extraire des cas de modèles, lorsque vous parcourez le modèle, vous pouvez extraire des informations détaillées à propos des cas utilisés pour créer le modèle. De plus, si la structure d'exploration de données sous-jacente a été configurée pour autoriser l'extraction de cas de structure et que vous avez les autorisations appropriées, vous pouvez retourner des informations à partir de la structure d'exploration de données. Cela peut inclure des colonnes qui n'ont pas été incluses dans le modèle d'exploration de données.  
@@ -35,7 +35,7 @@ ms.locfileid: "36040274"
   
 |Nom de la visionneuse|Nom du volet ou de l'onglet|Sélection du nœud|  
 |-----------------|----------------------|-----------------|  
-|**visionneuse d'arbres Microsoft**|Onglet**Arbre de décision** |Cliquez sur un nœud d'arborescence.<br /><br /> **Remarque** Évitez d’utiliser l’extraction sur le `All` nœud, car elle peut prendre beaucoup de temps pour retourner les résultats.|  
+|**visionneuse d'arbres Microsoft**|Onglet**Arbre de décision** |Cliquez sur un nœud d'arborescence.<br /><br /> **Remarque** éviter l’utilisation de l’extraction sur le `All` nœud, car il peut prendre beaucoup de temps pour retourner les résultats.|  
 |**Microsoft Cluster Viewer**|**Diagramme de cluster**|Cliquez sur un nœud de cluster.|  
 |**Microsoft Cluster Viewer**|**Profils du cluster**|Cliquez n'importe où dans la colonne de cluster.|  
 |**Visionneuse d'associations Microsoft**|Onglet**Règles** |Cliquez sur une ligne qui contient un ensemble de règles.|  
@@ -61,6 +61,6 @@ ms.locfileid: "36040274"
 6.  Pour copier les données vers le Presse-papiers, cliquez avec le bouton droit sur une ligne dans la table et sélectionnez **Copier tout**.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Requêtes d’extraction &#40;d’exploration de données&#41;](drillthrough-queries-data-mining.md)  
+ [Requêtes d’extraction &#40;exploration de données&#41;](drillthrough-queries-data-mining.md)  
   
   

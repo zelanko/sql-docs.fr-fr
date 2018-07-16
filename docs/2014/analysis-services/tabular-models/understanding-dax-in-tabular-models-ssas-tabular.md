@@ -1,5 +1,5 @@
 ---
-title: Présentation de DAX dans les modèles tabulaires (SSAS tabulaire) | Documents Microsoft
+title: Présentation de DAX dans les modèles tabulaires (SSAS tabulaire) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: b2693985-1bea-4861-a100-cea4761ba809
 caps.latest.revision: 25
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: e1788cadfe3f84798c7143e069fc40a0acb75883
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 1c4047c082a890e0ddd2871bbd35d7dbd21d363d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36144189"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37291435"
 ---
 # <a name="understanding-dax-in-tabular-models-ssas-tabular"></a>Fonctionnement de DAX dans les modèles tabulaires (SSAS Tabulaire)
   DAX (Data Analysis Expressions) est le langage de formule utilisé pour créer des calculs personnalisés dans [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] pour les classeurs Microsoft Excel et les modèles tabulaires de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Les formules DAX comportent des fonctions, des opérateurs, et des valeurs pour effectuer des calculs avancés sur les données des tables et des colonnes.  
@@ -222,10 +222,10 @@ Days in Current Quarter:=COUNTROWS( DATESBETWEEN( 'Date'[Date], STARTOFQUARTER( 
 -   Les fonctions DAX intègrent une grande diversité de fonctions *Time Intelligence* . Ces fonctions vous permettent de définir ou de sélectionner des plages de dates, et effectuer des calculs dynamiques basés sur ces dates ou plages. Par exemple, vous pouvez comparer les sommes sur des périodes parallèles.  
   
 ### <a name="date-and-time-functions"></a>Fonctions de date et d'heure  
- Les fonctions de date et d'heure de DAX sont semblables à celles de Microsoft Excel. Toutefois, les fonctions DAX sont basées sur les `datetime` des types de données utilisés par Microsoft SQL Server. Pour plus d’informations, consultez [fonctions de Date et heure &#40;DAX&#41;](https://msdn.microsoft.com/library/ee634786(v=sql.120).aspx).  
+ Les fonctions de date et d'heure de DAX sont semblables à celles de Microsoft Excel. Toutefois, les fonctions DAX sont basées sur le `datetime` types de données utilisés par Microsoft SQL Server. Pour plus d’informations, consultez [Date and Time Functions &#40;DAX&#41;](https://msdn.microsoft.com/library/ee634786(v=sql.120).aspx).  
   
 ### <a name="filter-functions"></a>Fonctions de filtrage  
- Les fonctions de filtrage de DAX permettent de retourner des types de données spécifiques, de rechercher des valeurs dans les tables associées et de procéder à un filtrage par valeurs associées. Les fonctions de recherche s'appuient sur des tables et des relations, comme une base de données. Les fonctions de filtrage vous permettent de manipuler le contexte de données pour créer des calculs dynamiques. Pour plus d’informations, consultez [fonctions de filtrage &#40;DAX&#41;](https://msdn.microsoft.com/library/ee634807(v=sql.120).aspx).  
+ Les fonctions de filtrage de DAX permettent de retourner des types de données spécifiques, de rechercher des valeurs dans les tables associées et de procéder à un filtrage par valeurs associées. Les fonctions de recherche s'appuient sur des tables et des relations, comme une base de données. Les fonctions de filtrage vous permettent de manipuler le contexte de données pour créer des calculs dynamiques. Pour plus d’informations, consultez [fonctions de filtre &#40;DAX&#41;](https://msdn.microsoft.com/library/ee634807(v=sql.120).aspx).  
   
 ### <a name="information-functions"></a>Fonctions d'information  
  Une fonction d'information examine la cellule ou la ligne qui est fournie comme argument et vous indique si la valeur correspond au type attendu. Par exemple, la fonction ISERROR retourne TRUE si la valeur que vous référencez contient une erreur. Pour plus d’informations, consultez [les fonctions d’Information &#40;DAX&#41;](https://msdn.microsoft.com/library/ee634552(v=sql.120).aspx).  
@@ -293,7 +293,7 @@ Days in Current Quarter:=COUNTROWS( DATESBETWEEN( 'Date'[Date], STARTOFQUARTER( 
 =MAXX(FILTER(Sales,[ProdKey]=EARLIER([ProdKey])),Sales[OrderQty])  
 ```  
   
- Pour une description détaillée de cette formule, consultez le [fonction EARLIER](https://msdn.microsoft.com/library/ee634551(v=sql.120).aspx).  
+ Pour obtenir une description détaillée de cette formule, consultez le [fonction EARLIER](https://msdn.microsoft.com/library/ee634551(v=sql.120).aspx).  
   
  Pour résumer, la fonction EARLIER stocke le contexte de ligne de l'opération qui a précédé l'opération active. Cette fonction stocke systématiquement en mémoire deux ensembles de contexte : le premier ensemble représente la ligne actuelle pour la boucle interne de la formule, et le second ensemble représente la ligne actuelle pour la boucle externe de la formule. DAX fournit automatiquement les valeurs entre les deux boucles pour vous permettre de créer des agrégats complexes.  
   
@@ -322,7 +322,7 @@ Days in Current Quarter:=COUNTROWS( DATESBETWEEN( 'Date'[Date], STARTOFQUARTER( 
   
  Pour obtenir un exemple de procédure de suppression de filtres pour créer des totaux généraux, consultez le [fonction ALL](https://msdn.microsoft.com/library/ee634802(v=sql.120).aspx).  
   
- Pour obtenir des exemples de façon sélective et d’appliquer des filtres dans des formules, consultez le [fonction ALLEXCEPT](https://msdn.microsoft.com/library/ee634795(v=sql.120).aspx).  
+ Pour obtenir des exemples montrant comment sélective et d’appliquer des filtres dans des formules, consultez le [fonction ALLEXCEPT](https://msdn.microsoft.com/library/ee634795(v=sql.120).aspx).  
   
 ####  <a name="bkmk_determine_context"></a> Détermination du contexte dans des formules  
  Lorsque vous créez une formule DAX, la formule est d'abord testée pour vérifier si la syntaxe est valide, puis pour vérifier que les noms des colonnes et des tables inclus dans la formule figurent dans le contexte actuel. Si aucune colonne ou table spécifiée par la formule ne peut être trouvée, une erreur est retournée.  
@@ -341,7 +341,7 @@ Days in Current Quarter:=COUNTROWS( DATESBETWEEN( 'Date'[Date], STARTOFQUARTER( 
   
 3.  Le [fonction ALL](https://msdn.microsoft.com/library/ee634802(v=sql.120).aspx) définit le contexte dans une formule. Vous pouvez l'utiliser pour remplacer les filtres qui sont appliqués comme résultat du contexte de requête.  
   
-4.  Le [fonction ALLEXCEPT](https://msdn.microsoft.com/library/ee634795(v=sql.120).aspx) vous permet de supprimer tous les filtres à l’exception que vous spécifiez. Les deux rubriques incluent des exemples qui vous guident pas à pas dans la création de formules et l'analyse de contextes complexes.  
+4.  Le [fonction ALLEXCEPT](https://msdn.microsoft.com/library/ee634795(v=sql.120).aspx) vous permet de supprimer tous les filtres, sauf une que vous spécifiez. Les deux rubriques incluent des exemples qui vous guident pas à pas dans la création de formules et l'analyse de contextes complexes.  
   
 5.  Le [fonction EARLIER](https://msdn.microsoft.com/library/ee634551(v=sql.120).aspx) et [fonction EARLIEST](https://msdn.microsoft.com/library/ee634779(v=sql.120).aspx) permettent d’effectuer une boucle sur des tables en effectuant des calculs, tout en référençant une valeur à partir d’une boucle interne. Si vous êtes familier des concepts de récursivité et de boucles internes et externes, vous apprécierez la puissance des fonctions EARLIER et EARLIEST. Si ces concepts vous sont étrangers, suivez scrupuleusement les différentes étapes de l'exemple pour comprendre la façon dont les contextes internes et externes sont utilisés dans les calculs.  
   
@@ -376,7 +376,7 @@ Days in Current Quarter:=COUNTROWS( DATESBETWEEN( 'Date'[Date], STARTOFQUARTER( 
 =SUM('New Sales'[Amount]) + SUM('Past Sales'[Amount])  
 ```  
   
- Lorsqu'une formule est évaluée, le générateur de modèles vérifie en premier la syntaxe générale, puis il contrôle les noms des colonnes et des tables que vous fournissez par rapport aux colonnes et tables possibles dans le contexte actuel. Si le nom est ambigu ou si la colonne/la table est introuvable, vous obtiendrez une erreur dans votre formule (une #chaîne ERROR au lieu d'une valeur de données dans les cellules où l'erreur se produit). Pour plus d’informations sur les exigences d’affectation de noms pour les tables, colonnes et d’autres objets, consultez « Exigences d’affectation de noms » dans [DAX Syntax Specification for PowerPivot](https://msdn.microsoft.com/library/ee634217(v=sql.120).aspx).  
+ Lorsqu'une formule est évaluée, le générateur de modèles vérifie en premier la syntaxe générale, puis il contrôle les noms des colonnes et des tables que vous fournissez par rapport aux colonnes et tables possibles dans le contexte actuel. Si le nom est ambigu ou si la colonne/la table est introuvable, vous obtiendrez une erreur dans votre formule (une #chaîne ERROR au lieu d'une valeur de données dans les cellules où l'erreur se produit). Pour plus d’informations sur les exigences d’affectation de noms des tables, colonnes et autres objets, consultez « Exigences d’affectation de noms » dans [DAX Syntax Specification for PowerPivot](https://msdn.microsoft.com/library/ee634217(v=sql.120).aspx).  
   
 ### <a name="table-relationships"></a>Relations entre les tables  
  En créant des relations entre les tables, vous avez la possibilité de rechercher des données dans une autre table et d'utiliser les valeurs associées pour effectuer des calculs complexes. Par exemple, vous pouvez utiliser une colonne calculée pour rechercher tous les enregistrements de navigation associés au revendeur actuel, puis additionner les coûts d'expédition pour chacun. Dans de nombreux cas, toutefois, il est possible qu'une relation ne soit pas nécessaire. Vous pouvez utiliser la fonction LOOKUPVALUE dans une formule pour retourner la valeur dans *result_columnName* pour la ligne répondant aux critères spécifiés dans les paramètres *search_column* et *search_value* .  
@@ -420,7 +420,7 @@ Days in Current Quarter:=COUNTROWS( DATESBETWEEN( 'Date'[Date], STARTOFQUARTER( 
 ##  <a name="bkmk_addional_resources"></a> Ressources supplémentaires  
  La rubrique [Modélisation tabulaire &#40;didacticiel Adventure Works&#41;](../tabular-modeling-adventure-works-tutorial.md) fournit des instructions pas à pas pour créer un modèle tabulaire incluant de nombreux calculs dans des colonnes calculées, des mesures et des filtres de lignes. Pour la plupart des formules, une description de la fonction est fournie.  
   
- Le [Analysis Services et le Blog de l’équipe PowerPivot](http://go.microsoft.com/fwlink/?LinkID=220949&clcid=0x409) fournit des informations, des conseils, des actualités et des annonces sur [!INCLUDE[ssASCurrent](../../includes/ssascurrent-md.md)] et PowerPivot.  
+ Le [Analysis Services et le Blog de l’équipe PowerPivot](http://go.microsoft.com/fwlink/?LinkID=220949&clcid=0x409) fournit des informations, des conseils, des actualités et annonces sur [!INCLUDE[ssASCurrent](../../includes/ssascurrent-md.md)] et PowerPivot.  
   
  Le [Centre de ressources DAX](http://go.microsoft.com/fwlink/?LinkID=220966&clcid=0x409) fournit des informations internes et externes sur DAX, notamment de nombreuses solutions DAX soumises par des professionnels Business Intelligence.  
   

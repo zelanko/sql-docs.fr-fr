@@ -1,5 +1,5 @@
 ---
-title: Définir les Dimensions de la base de données | Documents Microsoft
+title: Définir des Dimensions de base de données | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - dimensions [Analysis Services], defining
 ms.assetid: fe84588b-66a3-4100-a1cf-59b21b7adf01
 caps.latest.revision: 26
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: dad1c138202c64a4768f944c9308edd0144602d0
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: c71a335db4b17f365bcb40ebf4c7cefb13c30b3c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36040080"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37269905"
 ---
 # <a name="define-database-dimensions"></a>Définir des dimensions de base de données
   Le Concepteur de dimensions dans [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] permet de configurer une dimension de base de données existante dans un projet ou une base de données [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Le Concepteur de dimensions permet d'effectuer les tâches suivantes :  
@@ -62,7 +62,7 @@ ms.locfileid: "36040080"
  [Définir des relations d’attributs](attribute-relationships-define.md)  
  Décrit comment définir et configurer une relation d'attribut.  
   
- [Utilisez l’Assistant Business Intelligence pour améliorer des Dimensions](../use-the-business-intelligence-wizard-to-enhance-dimensions.md)  
+ [Utiliser l’Assistant Business Intelligence pour améliorer des dimensions](../use-the-business-intelligence-wizard-to-enhance-dimensions.md)  
  Décrit comment utiliser l'Assistant Business Intelligence pour améliorer une dimension.  
   
   

@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 3f226bc8-614e-4dac-9078-3448a83342b5
 caps.latest.revision: 7
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: f122309f8242b542ddf03021b415fc62b6b61797
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: ede763438bc9537f057d842be87bbe3fd362281d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36044475"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37266175"
 ---
 # <a name="lesson-1-create-a-new-web-site"></a>Leçon 1 : créer un nouveau site Web
   Dans cette leçon vous allez apprendre à créer un projet de site Web à l'aide du modèle de site Web ASP.NET pour Visual C#.  
@@ -32,7 +32,7 @@ ms.locfileid: "36044475"
   
 3.  Dans le **nouveau Site Web** boîte de dialogue le **modèles installés** volet, sélectionnez **Visual C#** , puis **site web ASP.NET**.  
   
-4.  Dans le **emplacement** , spécifiez un répertoire de projet puis cliquez sur **OK**.  
+4.  Dans le **emplacement** zone, spécifiez un répertoire de projet, puis cliquez sur **OK**.  
   
  Le projet de site Web s'ouvre.  
   

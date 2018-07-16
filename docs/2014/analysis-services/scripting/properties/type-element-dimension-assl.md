@@ -1,5 +1,5 @@
 ---
-title: Type d’élément (Dimension) (ASSL) | Documents Microsoft
+title: Type d’élément (Dimension) (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - Type element
 ms.assetid: 6a2798b1-26c7-49d8-b556-e681c69d9574
 caps.latest.revision: 36
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 582d5b2052f2681630c5f0cd86facacd5e7cfc91
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: c6afa3b273200630a4d36e0c4df679c58efb6bd5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36043690"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37283945"
 ---
 # <a name="type-element-dimension-assl"></a>Élément Type (Dimension) (ASSL)
   Fournit des informations sur le contenu de la dimension.  
@@ -77,16 +77,16 @@ ms.locfileid: "36043690"
 |*Clients*|La dimension contient des attributs liés au client.|  
 |*Produits*|La dimension contient des attributs liés au produit.|  
 |*Scénario*|La dimension contient des attributs liés au scénario.|  
-|*Quantitative*|La dimension contient des attributs quantitatifs.|  
+|*Quantitatives*|La dimension contient des attributs quantitatifs.|  
 |*Utilitaire*|La dimension contient des attributs d'utilitaire.|  
 |*Devise*|La dimension contient des attributs de devise.|  
-|*Taux de*|La dimension contient des attributs de taux de change.|  
+|*Tarifs*|La dimension contient des attributs de taux de change.|  
 |*Channel*|La dimension contient des attributs de canal.|  
 |*Promotion*|La dimension contient des attributs liés à la promotion.|  
   
- L’énumération qui correspond aux valeurs autorisées pour `Type` dans l’objet d’objets AMO (Analysis Management) est modèle <xref:Microsoft.AnalysisServices.DimensionType>.  
+ L’énumération qui correspond aux valeurs autorisées pour `Type` dans l’objet d’objets AMO (Analysis Management) modèle est <xref:Microsoft.AnalysisServices.DimensionType>.  
   
- L’élément qui correspond au parent de `Type` dans l’objet d’objets AMO (Analysis Management) est modèle <xref:Microsoft.AnalysisServices.Dimension>.  
+ L’élément qui correspond au parent de `Type` dans l’objet d’objets AMO (Analysis Management) modèle est <xref:Microsoft.AnalysisServices.Dimension>.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Propriétés &#40;ASSL&#41;](properties-assl.md)  

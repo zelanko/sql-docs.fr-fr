@@ -1,5 +1,5 @@
 ---
-title: Définir les propriétés d’une contrainte de précédence | Documents Microsoft
+title: Définir les propriétés d’une contrainte de précédence | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Precedence Constraint Editor dialog box
 - precedence constraints [Integration Services], properties
 ms.assetid: d990f600-5c09-4cd5-8528-0a58d79dc9f2
 caps.latest.revision: 47
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 344dbadc0aeabbce3b2a554d4ff15370eeadd1fc
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 38e20290eb9499191307c7afb146e9242603c3ed
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36039112"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37271345"
 ---
 # <a name="set-the-properties-of-a-precedence-constraint"></a>Définir les propriétés d'une contrainte de précédence
   Pour définir des propriétés sur des contraintes de précédence, vous pouvez utiliser l'un des outils suivants :  
@@ -47,14 +47,14 @@ ms.locfileid: "36039112"
   
 5.  Dans la liste déroulante **Opération d’évaluation** , sélectionnez une opération d’évaluation.  
   
-6.  Dans la `Value` liste déroulante, sélectionnez le résultat de l’exécution de l’exécutable de précédence.  
+6.  Dans le `Value` liste déroulante, sélectionnez le résultat de l’exécution de l’exécutable de précédence.  
   
-7.  Si l’opération d’évaluation utilise une expression, dans le `Expression` , tapez une expression, puis cliquez sur **Test** pour évaluer l’expression.  
+7.  Si l’opération d’évaluation utilise une expression, dans le `Expression` zone, tapez une expression, puis cliquez sur **Test** pour évaluer l’expression.  
   
     > [!NOTE]  
     >  Les noms de variable respectent la casse.  
   
-8.  Si plusieurs tâches ou conteneurs sont connectés à l’exécutable contraint, sélectionnez **logiques et** pour spécifier que les résultats de l’exécution de tous les exécutables précédents doivent correspondre à `true`. Sélectionnez **OR logique** pour spécifier que seul résultat d’exécution doit correspondre à `true`.  
+8.  Si plusieurs tâches ou conteneurs sont connectés à l’exécutable contraint, sélectionnez **logiques et** pour spécifier que les résultats de l’exécution de tous les exécutables précédents doivent avoir la valeur `true`. Sélectionnez **OR logique** pour spécifier que seul résultat d’exécution doit avoir la valeur `true`.  
   
 9. Cliquez sur **OK** pour fermer la boîte de dialogue **Éditeur de contrainte de précédence**.  
   
@@ -75,7 +75,7 @@ ms.locfileid: "36039112"
     |Description|Fournissez une description.|  
     |EvalOp|Sélectionnez une opération d'évaluation. Si le `Expression`, **ExpressionAndConstant**, ou **ExpressionOrConstant** opération est sélectionnée, vous pouvez spécifier une expression.|  
     |Expression|Si l'opération d'évaluation inclut une expression, fournissez une expression. L'expression doit prendre une valeur de type Boolean. Pour plus d’informations sur le langage des expressions, consultez [Expressions Integration Services &#40;SSIS&#41;](expressions/integration-services-ssis-expressions.md).|  
-    |LogicalAnd|Définir `LogicalAnd` pour spécifier si la contrainte de précédence est évaluée conjointement avec d’autres contraintes de précédence, lorsque plusieurs exécutables précèdent et sont liés à l’exécutable contraint|  
+    |LogicalAnd|Définir `LogicalAnd` pour spécifier si la contrainte de précédence est évaluée en accord avec les autres contraintes de précédence, lorsque plusieurs exécutables précèdent et sont liés à l’exécutable contraint|  
     |Nom   |Mettez à jour le nom de la contrainte de précédence.|  
     |ShowAnnotation|Spécifiez le type d'annotation à utiliser. Sélectionnez **Never** pour désactiver les annotations, **AsNeeded** pour activer l’annotation à la demande, **ConstraintName** pour annoter automatiquement en utilisant la valeur de la propriété Name, **ConstraintDescription** pour annoter automatiquement en utilisant la valeur de la propriété Description et **ConstraintOptions** pour annoter automatiquement en utilisant les valeurs des propriétés Value et Expression.|  
     |Valeur|Si l’opération d’évaluation spécifiée dans la propriété EvalOP inclut une contrainte, sélectionnez le résultat d’exécution de l’exécutable de contrainte.|  
@@ -87,7 +87,7 @@ ms.locfileid: "36039112"
 ## <a name="see-also"></a>Voir aussi  
  [Contraintes de précédence](control-flow/precedence-constraints.md)   
  [Connecter des tâches et des conteneurs à l’aide d’une contrainte de précédence par défaut](../../2014/integration-services/connect-tasks-and-containers-by-using-a-default-precedence-constraint.md)   
- [Définir la valeur d’une contrainte de précédence en utilisant le Menu contextuel](../../2014/integration-services/set-the-value-of-a-precedence-constraint-by-using-the-shortcut-menu.md)   
- [Utiliser une Expression dans une contrainte de précédence](../../2014/integration-services/use-an-expression-in-a-precedence-constraint.md)  
+ [Définissez la valeur d’une contrainte de précédence en utilisant le Menu contextuel](../../2014/integration-services/set-the-value-of-a-precedence-constraint-by-using-the-shortcut-menu.md)   
+ [Utiliser une expression dans une contrainte de précédence](../../2014/integration-services/use-an-expression-in-a-precedence-constraint.md)  
   
   
