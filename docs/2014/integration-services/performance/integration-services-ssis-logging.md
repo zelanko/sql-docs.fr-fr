@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - containers [Integration Services], logs
 - Windows Event log provider [Integration Services]
@@ -27,13 +27,13 @@ ms.assetid: 65e17889-371f-4951-9a7e-9932b2d0dcde
 caps.latest.revision: 64
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: e9611d78d6b94038511b29577aca5aaefb36366d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 2656998d20bec2d0133a7158a3695f4163943181
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36141833"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37291045"
 ---
 # <a name="integration-services-ssis-logging"></a>Journalisation d'Integration Services (SSIS)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] contient des modules fournisseur d'informations que vous pouvez utiliser pour implémenter la journalisation dans les packages, les conteneurs et les tâches. Avec la journalisation, vous pouvez capturer des informations d'exécution sur un package qui vous aideront à auditer et à résoudre les problèmes d'un package à chaque exécution. Un journal peut ainsi capturer le nom de l'opérateur ayant exécuté le package et l'heure à laquelle le package a débuté et s'est terminé.  
@@ -56,7 +56,7 @@ ms.locfileid: "36141833"
     > [!NOTE]  
     >  Vous ne pouvez pas utiliser le module fournisseur d’informations [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] dans un package exécuté en mode 64 bits.  
   
--   Le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fournisseur de journaux, qui enregistre les entrées de journal pour le `sysssislog` de table dans un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] base de données.  
+-   Le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] module fournisseur d’informations, qui enregistre les entrées de journal pour le `sysssislog` table dans un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] base de données.  
   
 -   Le module fournisseur d'informations pour les événements Windows, qui enregistre les entrées du journal des applications dans le journal des événements Windows sur l'ordinateur local.  
   
@@ -207,18 +207,18 @@ ms.locfileid: "36141833"
 ## <a name="related-tasks"></a>Related Tasks  
  La liste suivante contient des liens vers les rubriques qui indiquent comment effectuer les tâches relatives à la fonctionnalité de journalisation.  
   
--   [Configurer la boîte de dialogue les journaux SSIS](../configure-ssis-logs-dialog-box.md)  
+-   [Configurer les journaux SSIS, boîte de dialogue](../configure-ssis-logs-dialog-box.md)  
   
 -   [Activer la journalisation des packages dans SQL Server Data Tools](../enable-package-logging-in-sql-server-data-tools.md)  
   
--   [Activer la journalisation de l’exécution du Package sur le serveur SSIS](../enable-logging-for-package-execution-on-the-ssis-server.md)  
+-   [Activer la journalisation des exécutions de package sur le serveur SSIS](../enable-logging-for-package-execution-on-the-ssis-server.md)  
   
--   [Afficher les entrées de journal dans la fenêtre journaux d’événements](../view-log-entries-in-the-log-events-window.md)  
+-   [Afficher les entrées de journal dans la fenêtre Journaux d’événements](../view-log-entries-in-the-log-events-window.md)  
   
 ## <a name="related-content"></a>Contenu associé  
  [Outil DTLoggedExec pour un enregistrement complet et détaillé (projet CodePlex)](http://go.microsoft.com/fwlink/?LinkId=150579)  
   
 ## <a name="see-also"></a>Voir aussi  
- [Afficher les entrées de journal dans la fenêtre journaux d’événements](../view-log-entries-in-the-log-events-window.md)  
+ [Afficher les entrées de journal dans la fenêtre Journaux d’événements](../view-log-entries-in-the-log-events-window.md)  
   
   

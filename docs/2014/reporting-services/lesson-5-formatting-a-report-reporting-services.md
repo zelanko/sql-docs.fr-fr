@@ -8,31 +8,31 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: ae46efa9-6e04-48ec-afb4-5a2314dcb05a
 caps.latest.revision: 16
-author: markingmyname
-ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: db481a9a35cd55ecef08cf86802196d2a1c94b45
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 19e238919a00bf022cd924be7a66a4d990d8f7c4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36153404"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37227088"
 ---
 # <a name="lesson-5-formatting-a-report-reporting-services"></a>Lesson 5: Formatting a Report (Reporting Services)
   Maintenant que vous avez ajouté une région de données et quelques champs au rapport Sales Orders, vous pouvez mettre en forme les champs de date et de valeurs monétaires, ainsi que les en-têtes de colonne.  
   
  Dans cette rubrique :  
   
--   [Mettre en forme la Date.](#bkmk_format_date)  
+-   [Mettre en forme la Date](#bkmk_format_date)  
   
 -   [Mettre en forme la devise](#bkmk_format_currency)  
   
--   [Modifier le Style de texte et les largeurs de colonne](#bkmk_change_textstyle)  
+-   [Modification du Style de texte et des largeurs de colonne](#bkmk_change_textstyle)  
   
-##  <a name="bkmk_format_date"></a> Mettre en forme la Date.  
+##  <a name="bkmk_format_date"></a> Mettre en forme la Date  
  Le champ Date affiche les informations de date et d'heure par défaut. Vous pouvez le mettre en forme de sorte qu'il n'affiche que la date.  
   
 #### <a name="to-format-a-date-field"></a>Pour appliquer un format de date  
@@ -74,14 +74,14 @@ ms.locfileid: "36153404"
   
 6.  Affichez un aperçu du rapport pour voir la modification apportée au champ `[LineTotal]` , puis repassez en mode Conception.  
   
-##  <a name="bkmk_change_textstyle"></a> Modifier le Style de texte et les largeurs de colonne  
+##  <a name="bkmk_change_textstyle"></a> Modification du Style de texte et des largeurs de colonne  
  Vous pouvez également modifier la mise en forme de la ligne d'en-tête afin de la différencier des lignes de données du rapport. Enfin, vous pouvez ajuster les largeurs de colonnes.  
   
 #### <a name="to-format-header-rows-and-table-columns"></a>Pour mettre en forme les lignes d'en-tête et les colonnes de la table  
   
 1.  Cliquez sur la table pour que les poignées de ligne et de colonne apparaissent au-dessus et à côté de la table.  
   
-     ![Conception, Table avec ligne d’en-tête et ligne de détails](../../2014/tutorials/media/rs-basictabledetailsdesign.gif "de conception, Table avec ligne d’en-tête et ligne de détails")  
+     ![Conception, Table avec ligne d’en-tête et de ligne de détails](../../2014/tutorials/media/rs-basictabledetailsdesign.gif "conception, Table avec ligne d’en-tête et de ligne de détails")  
   
      Les barres grises le long du haut et du côté de la table sont les poignées de colonne et de ligne.  
   
@@ -99,7 +99,7 @@ ms.locfileid: "36153404"
  Vous avez correctement mis en forme les en-têtes de colonne, ainsi que les valeurs de date et valeurs monétaires. Vous allez ensuite ajouter un regroupement et des totaux à votre rapport. Consultez la [Leçon 6 : ajout d’un regroupement et de totaux &#40;Reporting Services&#41;](../reporting-services/lesson-6-adding-grouping-and-totals-reporting-services.md).  
   
 ## <a name="see-also"></a>Voir aussi  
- [Mise en forme des nombres et des Dates &#40;rapport Générateur et SSRS&#41;](report-design/formatting-numbers-and-dates-report-builder-and-ssrs.md)   
+ [Mise en forme des nombres et des Dates &#40;Générateur de rapports et SSRS&#41;](report-design/formatting-numbers-and-dates-report-builder-and-ssrs.md)   
  [Comportements de rendu &#40;Générateur de rapports et SSRS&#41;](report-design/rendering-behaviors-report-builder-and-ssrs.md)  
   
   

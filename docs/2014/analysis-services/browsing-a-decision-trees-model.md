@@ -1,5 +1,5 @@
 ---
-title: Modèle d’arbres de parcourir un arbre de décision | Documents Microsoft
+title: Modèle d’arbre de décision de navigation | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - mining models, browsing
 - mining models, viewing
@@ -18,21 +18,21 @@ helpviewer_keywords:
 - dependency network
 ms.assetid: 6b3dd1ae-caff-41c3-817b-802dc020ff88
 caps.latest.revision: 15
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: c95552e6d6cad3fc7574a8a74551d936cf9aa721
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 077a392ff2374c89c5056e71c24fc6969b742a18
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36143618"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37255091"
 ---
 # <a name="browsing-a-decision-trees-model"></a>Exploration d'un modèle Arbre de décision
-  Lorsque vous ouvrez un modèle de classification à l’aide de **Parcourir**, le modèle est affiché dans une visionneuse d’arbre de décision interactive semblable à la [!INCLUDE[msCoName](../includes/msconame-md.md)] visionneuse d’arbres de décision dans [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. La visionneuse affiche les résultats de la classification sous la forme d'un graphique qui est conçu pour mettre en évidence les critères qui différencient un groupe de données d'un autre. Vous pouvez également explorer des sous-ensembles individuels de l'arborescence et récupérer les données sous-jacentes.  
+  Lorsque vous ouvrez un modèle de classification avec **Parcourir**, le modèle est affiché dans une visionneuse d’arbre de décision interactive semblable à la [!INCLUDE[msCoName](../includes/msconame-md.md)] visionneuse d’arbres de décision dans [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. La visionneuse affiche les résultats de la classification sous la forme d'un graphique qui est conçu pour mettre en évidence les critères qui différencient un groupe de données d'un autre. Vous pouvez également explorer des sous-ensembles individuels de l'arborescence et récupérer les données sous-jacentes.  
   
 ##  <a name="bkmk_Top"></a> Explorer le modèle  
- Les modèles fondés sur l'algorithme MDT comportent un certain nombre d'informations intéressantes à explorer. Le **Parcourir** fenêtre inclut les onglets et volets pour vous aider à apprendre les schémas et de prédire les résultats avec le graphique ci-dessous :  
+ Les modèles fondés sur l'algorithme MDT comportent un certain nombre d'informations intéressantes à explorer. Le **Parcourir** fenêtre inclut les onglets et volets pour vous aider à apprendre les schémas et de prédire l’utilisation du graphique des résultats suivants :  
   
 -   [Arbre de décision](#BKMK_DecisionTree)  
   
@@ -45,25 +45,25 @@ ms.locfileid: "36143618"
   
  Le graphique d'arbre de décision peut être lu de gauche à droite, comme suit :  
   
--   Les rectangles, sont appelés *nœuds*, contiennent des sous-ensembles de données. L'étiquette sur le nœud vous indique les caractéristiques de définition de ce sous-ensemble.  
+-   Les rectangles, sont appelés *nœuds*, contiennent des sous-ensembles des données. L'étiquette sur le nœud vous indique les caractéristiques de définition de ce sous-ensemble.  
   
 -   Le nœud à l’extrême gauche, intitulé **tous les**, représente le jeu de données complet. Tous les nœuds suivants représentent des sous-ensembles des données.  
   
--   Un arbre de décision contient de nombreux *fractionne*, ou les emplacements où les données divergent en plusieurs jeux en fonction des attributs.  
+-   Un arbre de décision contient de nombreux *fractionne*, ou les emplacements où les données divergent en plusieurs jeux en fonction d’attributs.  
   
      Par exemple, le premier fractionnement de l'exemple de modèle divise le dataset en trois groupes d'âges.  
   
--   Le fractionnement immédiatement après le **tous les** nœud est le plus important, car elle indique la condition principale qui divise ce dataset.  
+-   Le fractionnement immédiatement après le **tous les** nœud est le plus important, car il indique la condition principale qui divise ce jeu de données.  
   
      Des fractionnements supplémentaires apparaissent à droite. Ainsi, lors de l'analyse de différents segments de l'arborescence, vous pouvez découvrir les attributs qui influaient le plus sur le comportement d'achat.  
   
- ![Diagramme de réseau de dépendances pour un modèle d’association](media/dm13-dec-tree-split-definition.gif "graphique du réseau de dépendances pour un modèle d’association")  
+ ![Réseau de dépendances pour un modèle d’association](media/dm13-dec-tree-split-definition.gif "réseau de dépendances pour un modèle d’association")  
   
  Grâce à ces informations, vous pouvez cibler une campagne marketing sur les clients qui ont peut-être simplement besoin d'être encouragés pour effectuer un achat.  
   
 ##### <a name="explore-the-decision-tree"></a>Explorer l'arbre de décision  
   
-1.  Cliquez sur le **tous les** nœud, puis examinez la **légende d’exploration de données**.  
+1.  Cliquez sur le **tous les** nœud, puis examinez le **légende d’exploration de données**.  
   
      Elle affiche le nombre exact de cas dans le jeu de données d'apprentissage, ainsi qu'une décomposition des résultats.  
   
@@ -75,17 +75,17 @@ ms.locfileid: "36143618"
   
 3.  Vous avez remarqué que certains nœuds sont plus foncés que d'autres ?  
   
-     Par défaut, **remplissage** est utilisé en tant que la variable d’ombrage, ce qui signifie que l’intensité de la couleur vous indique les nœuds qui ont le plus prise en charge.  
+     Par défaut, **Population** est utilisé en tant que la variable d’ombrage, ce qui signifie que l’intensité de la couleur vous montre les nœuds qui ont le plus prise en charge.  
   
      Par conséquent, le nœud situé le plus à gauche est le plus foncé, car il contient le dataset entier.  
   
 4.  Modifiez la valeur de **arrière-plan** de **tous les cas** à **Oui**.  
   
-     ![modification graphique d’arbre de décision pour mettre en surbrillance les acheteurs](media/dm13-dectreeshadedbuyer.gif "la modification du graphique d’arbre de décision pour mettre en surbrillance les acheteurs")  
+     ![variation graphique d’arbre de décision pour mettre en surbrillance les acheteurs](media/dm13-dectreeshadedbuyer.gif "modification graphique d’arbre de décision pour mettre en surbrillance les acheteurs")  
   
 5.  Maintenant, l'intensité de la couleur vous indique le nombre de clients dans chaque nœud qui ont acheté un vélo, ce qui correspond au comportement qui vous intéresse.  
   
-     Notez les barres de couleur dans chaque nœud. Il s'agit d'un histogramme qui montre la distribution des résultats dans ce sous-ensemble de données. Par exemple, dans l’arbre de décision exemple Bike Buyer, la barre de couleur montre la proportion de clients qui ont acheté des vélos (valeurs Oui) et ceux qui n’ont pas (aucune valeur). Pour obtenir les valeurs exactes, vous pouvez cliquer sur le nœud et afficher le **légende d’exploration de données**.  
+     Notez les barres de couleur dans chaque nœud. Il s'agit d'un histogramme qui montre la distribution des résultats dans ce sous-ensemble de données. Par exemple, dans l’arbre de décision exemple Bike Buyer, la barre de couleur montre la proportion de clients qui ont acheté des vélos (valeurs Oui) et celles qui n’ont pas (aucune valeur). Pour obtenir les valeurs exactes, vous pouvez cliquer sur le nœud et afficher le **légende d’exploration de données**.  
   
 6.  En suivant le graphique, vous pouvez voir comment chaque sous-ensemble de données est à son tour décomposé en groupes plus petits, ainsi que les attributs qui sont le plus utile lors de la prédiction d'un résultat.  
   
@@ -93,11 +93,11 @@ ms.locfileid: "36143618"
   
     -   Âge > = 32 et \< 53 et Yearly Income > = 26000 et enfants = 0  
   
-         Nombre total de cas : 1150  
+         Total des cas : 1150  
   
          Probabilité d’acheter des vélos : 18 %  
   
-    -   Âge > = 32 et \< 53 et Yearly Income > = 26000 et enfants non = 0 et Marital état = 'Single'  
+    -   Âge > = 32 et \< 53 et Yearly Income > = 26000 et enfants ne pas = 0 et Marital état = 'Single'  
   
          Total des cas : 402  
   
@@ -105,7 +105,7 @@ ms.locfileid: "36143618"
   
 7.  Modifiez la valeur de **arrière-plan** de **Oui** à **non** et voir comment le graphique change.  
   
-     ![Diagramme de réseau de dépendances pour un modèle d’association](media/dm13-dec-tree-background-no.gif "graphique du réseau de dépendances pour un modèle d’association")  
+     ![Réseau de dépendances pour un modèle d’association](media/dm13-dec-tree-background-no.gif "réseau de dépendances pour un modèle d’association")  
   
  **Conseils**  
   
@@ -115,7 +115,7 @@ ms.locfileid: "36143618"
   
      Cliquez sur le **histogramme** option, dans le coin supérieur gauche du volet de l’arbre de décision, pour modifier le nombre maximal d’États qui peuvent apparaître dans les histogrammes dans l’arborescence. Cette option est utile si l'attribut prévisible possède de nombreux états. Les états s'affichent dans un histogramme par ordre de fréquence de gauche à droite.  
   
--   Vous pouvez également utiliser les options sur la **arbre de décision** onglet affectent le mode d’affichage de l’arborescence, en zoom avant ou arrière, ou le graphique pour s’ajuster à la fenêtre de dimensionnement.  
+-   Vous pouvez également utiliser les options sur la **arbre de décision** onglet affectent le mode d’affichage de l’arborescence, en zoom avant ou arrière, ou la taille du graphique pour ajuster à la fenêtre.  
   
 -   Utilisez **Expansion par défaut** pour définir le nombre de niveaux par défaut affichés pour tous les arbres du modèle.  
   
@@ -143,7 +143,7 @@ ms.locfileid: "36143618"
  [Retour au début](#bkmk_Top)  
   
 ### <a name="drill-through-to-underlying-data"></a>Explorer les données sous-jacentes  
- Plusieurs types de modèles prennent en charge la possibilité de *extraire* à partir du modèle de données de cas sous-jacentes. Cela peut se révéler très utile si vous voulez contacter les clients dans un segment particulier ou extraire les données pour poursuivre l'analyse.  
+ Plusieurs types de modèles prennent en charge la possibilité de *extraction* à partir du modèle de données de cas sous-jacentes. Cela peut se révéler très utile si vous voulez contacter les clients dans un segment particulier ou extraire les données pour poursuivre l'analyse.  
   
 ##### <a name="get-case-data"></a>Obtenir les données de cas  
   

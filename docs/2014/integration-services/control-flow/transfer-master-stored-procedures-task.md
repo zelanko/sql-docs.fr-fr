@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.transfermasterspstask.f1
 helpviewer_keywords:
@@ -17,13 +17,13 @@ ms.assetid: 81702560-48a3-46d1-a469-e41304c7af8e
 caps.latest.revision: 25
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: fe704e638cb32ff397bf906c61593af6d07ba866
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: b89788698662245d69cb8b209286e1e5dd2f93a8
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36153522"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37235319"
 ---
 # <a name="transfer-master-stored-procedures-task"></a>Tâche de transfert de procédures stockées de master
   La tâche de transfert de procédures stockées de master transfère une ou plusieurs procédures stockées définies par l’utilisateur entre les bases de données **master** sur des instances de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Pour transférer une procédure stockée à partir de la base de données **master** , le propriétaire de la procédure doit être dbo.  
@@ -49,7 +49,7 @@ ms.locfileid: "36153522"
  La tâche de transfert des procédures stockées de master n'indique pas les stades intermédiaires de l'avancement du transfert des connexions : elle signale la tâche comme réalisée à 0 % ou à 100 %.  
   
 ## <a name="execution-value"></a>Valeur d'exécution  
- La valeur de l’exécution, définie dans le `ExecutionValue` propriété de la tâche, renvoie le nombre de procédures stockées transférées. En affectant une variable définie par l’utilisateur pour le `ExecValueVariable` propriété de la tâche de procédures stockées de Master de transfert d’informations sur le transfert des procédures stockées peut être accessibles à d’autres objets dans le package. Pour plus d’informations, consultez [Variables Integration Services &#40;SSIS&#41;](../integration-services-ssis-variables.md) et [Utiliser des variables dans des packages](../use-variables-in-packages.md).  
+ La valeur de l’exécution, définie dans le `ExecutionValue` propriété de la tâche, retourne le nombre de procédures stockées transférées. En affectant une variable définie par l’utilisateur à la `ExecValueVariable` propriété de la tâche de procédures stockées de Master de transfert, d’informations sur le transfert des procédures stockées peut être rendue disponible à d’autres objets du package. Pour plus d’informations, consultez [Variables Integration Services &#40;SSIS&#41;](../integration-services-ssis-variables.md) et [Utiliser des variables dans des packages](../use-variables-in-packages.md).  
   
 ## <a name="log-entries"></a>Entrées du journal  
  La tâche de transfert des procédures stockées comporte les entrées de journal personnalisées suivantes :  
@@ -58,7 +58,7 @@ ms.locfileid: "36153522"
   
 -   TransferSStoredProceduresTaskFinishedTransferringObjects Cette entrée du journal indique que le transfert est terminé. L'entrée du journal inclut l'heure de fin.  
   
- En outre, une entrée de journal pour le `OnInformation` signale le nombre de procédures stockées qui ont été transférés et une entrée de journal pour le `OnWarning` événement est écrit pour chaque procédure stockée à l’emplacement de destination est remplacé.  
+ En outre, une entrée de journal pour le `OnInformation` événement signale le nombre de procédures stockées qui ont été transférées et une entrée de journal pour le `OnWarning` événement est écrit pour chaque procédure stockée à l’emplacement de destination est remplacé.  
   
 ## <a name="security-and-permissions"></a>Sécurité et autorisations  
  L’utilisateur doit avoir l’autorisation d’afficher la liste des procédures stockées dans la base de données **master** sur la source et doit être un membre du rôle serveur sysadmin ou disposer de l’autorisation de créer des procédures stockées dans la base de données **master** sur le serveur de destination.  
@@ -68,9 +68,9 @@ ms.locfileid: "36153522"
   
  Pour plus d'informations sur les propriétés définissables dans le concepteur [!INCLUDE[ssIS](../../includes/ssis-md.md)] , cliquez sur l'une des rubriques suivantes :  
   
--   [Transférer l’éditeur de tâche de procédures stockées de Master &#40;Page Général&#41;](../general-page-of-integration-services-designers-options.md)  
+-   [Éditeur de tâche de procédures stockées de Master transfert &#40;Page Général&#41;](../general-page-of-integration-services-designers-options.md)  
   
--   [Transférer l’éditeur de tâche de procédures stockées de Master &#40;stockées Page procédures&#41;](../transfer-master-stored-procedures-task-editor-stored-procedures-page.md)  
+-   [Éditeur de tâche de procédures stockées de Master transfert &#40;procédures Page stocké&#41;](../transfer-master-stored-procedures-task-editor-stored-procedures-page.md)  
   
 -   [Page Expressions](../expressions/expressions-page.md)  
   
@@ -86,7 +86,7 @@ ms.locfileid: "36153522"
 -   [Définir les propriétés d’une tâche ou d’un conteneur](../set-the-properties-of-a-task-or-container.md)  
   
 ## <a name="see-also"></a>Voir aussi  
- [Transfert de tâche d’objets SQL Server](transfer-sql-server-objects-task.md)   
+ [Tâche de transfert SQL Server objets](transfer-sql-server-objects-task.md)   
  [Tâches Integration Services](integration-services-tasks.md)   
  [Flux de contrôle](control-flow.md)  
   

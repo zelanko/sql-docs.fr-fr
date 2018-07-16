@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 topic_type:
 - apiref
 helpviewer_keywords:
 - Attention event class
 ms.assetid: da996305-181b-4cec-8388-c3b66677ed27
 caps.latest.revision: 28
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 3fd3a56fb3fa424e00c8afc9c1250ad8b143bca4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 714c8a628f32e44205c26142a1416d5cf04c2875
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36144543"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37283295"
 ---
 # <a name="attention-event-class"></a>Attention (classe d'événements)
   La classe d’événements **Attention** indique qu’un événement d’avertissement, tel qu’une annulation, des requêtes d’interruption cliente ou la rupture de connexions clientes, s’est produit. Les opérations d'annulation sont également possibles dans le cadre de la mise en œuvre de délais de dépassement de pilotes pour l'accès aux données.  

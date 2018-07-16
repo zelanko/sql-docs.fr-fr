@@ -1,5 +1,5 @@
 ---
-title: Page télécharger un fichier (Gestionnaire de rapports) | Documents Microsoft
+title: Page télécharger un fichier (Gestionnaire de rapports) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 7bb3166f-9374-4449-b66a-ffb77298507d
 caps.latest.revision: 27
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 5cdc35c029b40489e43e8e8b5715846cdab1fa6a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 8bc5efd9e45b875e66b9ffd1a223a5b375740381
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36144205"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37272315"
 ---
 # <a name="upload-file-page-report-manager"></a>Page Télécharger un fichier (Gestionnaire de rapports)
   La page Télécharger un fichier vous permet de publier un fichier du système de fichiers dans la base de données du serveur de rapports. Les fichiers téléchargés sont représentés comme des éléments dans l'arborescence des dossiers du serveur de rapports.  
@@ -54,15 +54,15 @@ ms.locfileid: "36144205"
  Cliquez pour choisir un fichier dans le système de fichiers.  
   
  **Nom**  
- Tapez le nom du fichier tel qu'il apparaîtra dans l'espace de noms du serveur de rapports. Le nom doit contenir un caractère alphanumérique au minimum. Il peut également comporter des espaces et certains symboles. N'utilisez pas les caractères ; ? : @ & = +, $ * \< > | « ou / lorsque vous spécifiez un nom d’élément.  
+ Tapez le nom du fichier tel qu'il apparaîtra dans l'espace de noms du serveur de rapports. Le nom doit contenir un caractère alphanumérique au minimum. Il peut également comporter des espaces et certains symboles. N'utilisez pas les caractères ; ? : @ & = +, $ * \< > | "ou / lorsque vous spécifiez un nom d’élément.  
   
  **Remplacer l’élément s’il existe**  
  Activez cette case à cocher si vous souhaitez remplacer un élément existant par une nouvelle version. Pour remplacer une version existante, le nom du nouvel élément et celui de l'élément existant doivent être identiques.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Le Gestionnaire de rapports &#40;SSRS en Mode natif&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
- [Afficher la Page contenu &#40;le Gestionnaire de rapports&#41;](../../2014/reporting-services/contents-page-report-manager.md)   
- [Aide (F1) de gestionnaire de rapports](../../2014/reporting-services/report-manager-f1-help.md)   
+ [Contenu de la Page &#40;le Gestionnaire de rapports&#41;](../../2014/reporting-services/contents-page-report-manager.md)   
+ [F1 du Gestionnaire de rapports](../../2014/reporting-services/report-manager-f1-help.md)   
  [Télécharger des fichiers dans un dossier](report-server/upload-files-to-a-folder.md)  
   
   

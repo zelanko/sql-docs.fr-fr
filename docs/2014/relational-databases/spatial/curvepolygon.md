@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - dbe-spatial
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: e000a1d8-a049-4542-bfeb-943fd6ab3969
 caps.latest.revision: 18
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: a772fba6776195e914d9e4109a7973f355f3a270
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 1989f166f519ddf732cca8cd47e32a14c414cae1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36144480"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37268645"
 ---
 # <a name="curvepolygon"></a>CurvePolygon
-  A `CurvePolygon` est une surface topologiquement fermée définie par un anneau englobant extérieur et zéro ou plusieurs anneaux intérieurs  
+  Un `CurvePolygon` est une surface topologiquement fermée définie par un anneau englobant extérieur et zéro ou plusieurs anneaux intérieurs.  
   
 > [!IMPORTANT]  
 >  Pour obtenir une description détaillée et des exemples des fonctionnalités spatiales introduites dans [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], y compris le `CurvePolygon` sous-type, téléchargez le livre blanc, [nouvelles fonctionnalités spatiales dans SQL Server 2012](http://go.microsoft.com/fwlink/?LinkId=226407).  
@@ -33,10 +33,10 @@ ms.locfileid: "36144480"
   
 -   L'intérieur de l'instance `CurvePolygon` désigne l'espace situé entre l'anneau extérieur et tous les anneaux intérieurs.  
   
- A `CurvePolygon` diffère de l’instance un `Polygon` instance qui un `CurvePolygon` peut contenir les segments d’arc de cercle suivants : `CircularString` et `CompoundCurve`.  
+ Un `CurvePolygon` diffère de l’instance un `Polygon` instance dans qui un `CurvePolygon` instance peut contenir les segments d’arc de cercle suivants : `CircularString` et `CompoundCurve`.  
   
 ## <a name="compoundcurve-instances"></a>Instances CompoundCurve  
- L’illustration ci-dessous montre valide `CurvePolygon` chiffres :  
+ Ci-dessous montre l’illustration valide `CurvePolygon` chiffres :  
   
 ### <a name="accepted-instances"></a>Instances acceptées  
  Pour un `CurvePolygon` soit acceptée, elle doit être soit vide ou contenir uniquement des anneaux d’arc de cercle acceptées. Un anneau d'arc circulaire accepté satisfait les exigences suivantes.  
@@ -50,7 +50,7 @@ ms.locfileid: "36144480"
     > [!NOTE]  
     >  Les valeurs Z et M sont ignorées.  
   
- L’exemple suivant montre acceptée `CurvePolygon` instances.  
+ L’exemple suivant montre accepté `CurvePolygon` instances.  
   
 ```  
 DECLARE @g1 geometry = 'CURVEPOLYGON EMPTY';  
@@ -72,7 +72,7 @@ DECLARE @g2 geometry = 'CURVEPOLYGON((0 0, 0 0, 0 0))';
  `@g1` n'est pas accepté parce que les points de début et de fin n'ont pas la même valeur Y. `@g2` n'est pas accepté car la boucle n'a pas assez de points.  
   
 ### <a name="valid-instances"></a>Instances valides  
- Pour un `CurvePolygon` valide en instance anneaux extérieur et intérieur doivent respecter les critères suivants :  
+ Pour un `CurvePolygon` instance soit valide les anneaux extérieur et intérieurs doivent respecter les critères suivants :  
   
 1.  Ils peuvent se toucher uniquement à des points de tangentes uniques.  
   
@@ -82,7 +82,7 @@ DECLARE @g2 geometry = 'CURVEPOLYGON((0 0, 0 0, 0 0))';
   
 4.  Chaque anneau doit être un type de courbe acceptable.  
   
- `CurvePolygon` instances doivent également répondre à des critères spécifiques, selon qu’ils soient `geometry` ou `geography` des types de données.  
+ `CurvePolygon` instances doivent également répondre à des critères spécifiques, selon qu’il s’agisse `geometry` ou `geography` des types de données.  
   
 #### <a name="geometry-data-type"></a>Type de données geometry  
  Une instance **geometryCurvePolygon** valide doit avoir les attributs suivants :  
@@ -143,7 +143,7 @@ DECLARE @g geometry = 'CURVEPOLYGON(CIRCULARSTRING(2 4, 4 2, 6 4, 4 6, 2 4))'
 ```  
   
 ### <a name="c-instantiating-a-geography-instance-with-a-curvepolygon"></a>C. Instanciation d'une instance geography avec un CurvePolygon  
- Cet extrait de code montre comment déclarer et initialiser un `geography` de l’instance avec un `CurvePolygon`:  
+ Cet extrait de code montre comment déclarer et initialiser un `geography` instance avec un `CurvePolygon`:  
   
 ```tsql  
 DECLARE @g geography = 'CURVEPOLYGON(CIRCULARSTRING(-122.358 47.653, -122.348 47.649, -122.348 47.658, -122.358 47.658, -122.358 47.653))';  

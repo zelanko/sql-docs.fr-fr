@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 api_name:
 - GenerateDatabaseRightsScript (WMI MSReportServer_ConfigurationSetting Class)
 api_location:
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - GenerateDatabaseRightsScript method
 ms.assetid: f2e6dcc9-978f-4c2c-bafe-36c330247fd0
 caps.latest.revision: 25
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: f8982e0f600d48680283507dc7ef3d6fba274520
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: 58fe8e149a4152399738def5401a7a976cea827f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36042379"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37218709"
 ---
 # <a name="generatedatabaserightsscript-method-wmi-msreportserverconfigurationsetting"></a>Méthode GenerateDatabaseRightsScript (WMI MSReportServer_ConfigurationSetting)
   Génère un script SQL pouvant être utilisé pour accorder des droits d'utilisateur à la base de données du serveur de rapports et à d'autres bases de données requises pour l'exécution d'un serveur de rapports. Il est prévu que l'appelant se connecte au serveur de base de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et exécute le script.  
@@ -73,9 +73,9 @@ out Int32 HRESULT);
   
  Si *IsWindowsUser* a la valeur `true`, *nom d’utilisateur* doit être au format \<domaine >\\< nom d’utilisateur\>.  
   
- Lors de la *IsWindowsUser* a la valeur `true`, le script généré accorde des droits de connexion à l’utilisateur pour le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], définition de la base de données du serveur de rapports en tant que la base de données par défaut et accorde le **RSExec** rôle sur la base de données du serveur de rapports, la base de données du serveur de rapports temporaire, la base de données master et la base de données système MSDB.  
+ Lorsque *IsWindowsUser* a la valeur `true`, le script généré accorde des droits de connexion à l’utilisateur pour le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], définition de la base de données de serveur de rapports, ainsi que la base de données par défaut accorde la **RSExec** rôle sur la base de données de serveur de rapports, la base de données du serveur de rapports temporaire, la base de données master et la base de données système MSDB.  
   
- Lorsque *IsWindowsUser* a la valeur `true`, la méthode accepte les SID Windows standard en tant qu’entrée. Lorsqu'un nom de compte de service ou un SID Windows standard est fourni, il est converti en une chaîne de nom d'utilisateur. Si la base de données est locale, le compte est converti en la représentation localisée correcte du compte. Si la base de données est distante, le compte est représenté en tant que compte de l'ordinateur.  
+ Lorsque *IsWindowsUser* est défini sur `true`, la méthode accepte les SID Windows standard comme entrée. Lorsqu'un nom de compte de service ou un SID Windows standard est fourni, il est converti en une chaîne de nom d'utilisateur. Si la base de données est locale, le compte est converti en la représentation localisée correcte du compte. Si la base de données est distante, le compte est représenté en tant que compte de l'ordinateur.  
   
  Le tableau suivant répertorie les comptes qui sont convertis et indique leur représentation distante.  
   
@@ -92,7 +92,7 @@ out Int32 HRESULT);
   
  Dans [!INCLUDE[win2kfamily](../../includes/win2kfamily-md.md)], si vous utilisez un compte intégré et que la base de données du serveur de rapports est distante, une erreur est retournée.  
   
- Si le `LocalService` compte intégré est spécifié et la base de données du serveur de rapports est distante, une erreur est retournée.  
+ Si le `LocalService` compte intégré est spécifié et que la base de données de serveur de rapports est distante, une erreur est retournée.  
   
  Quand *IsWindowsUser* a la valeur true et qu’il est nécessaire de convertir la valeur indiquée dans *UserName* , le fournisseur WMI détermine si la base de données du serveur de rapports réside sur le même ordinateur ou sur un ordinateur distant. Pour déterminer si l’installation est locale, le fournisseur WMI évalue la propriété DatabaseServerName par rapport à la liste de valeurs suivante. Si une correspondance est trouvée, la base de données est locale. Dans le cas contraire, elle est distante. La casse n'est pas prise en compte lors de la comparaison.  
   
@@ -106,11 +106,11 @@ out Int32 HRESULT);
 |\<FQDN_ordinateur>|example.redmond.microsoft.com|  
 |\<Adresse IP>|180.012.345,678|  
   
- Lorsque *IsWindowsUser* a la valeur `true`, le fournisseur WMI appelle LookupAccountName pour obtenir le SID du compte et appelle LookupAccountSID pour obtenir le nom à placer dans le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] script. De cette manière, le nom du compte utilisé réussit systématiquement la validation [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
+ Lorsque *IsWindowsUser* a la valeur `true`, le fournisseur WMI appelle LookupAccountName pour obtenir le SID du compte, puis appelle LookupAccountSID pour obtenir le nom à insérer le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] script. De cette manière, le nom du compte utilisé réussit systématiquement la validation [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
- Lorsque *IsWindowsUser* a la valeur `false`, le script généré accorde le **RSExec** rôle sur la base de données du serveur de rapports, la base de données du serveur de rapports temporaires et la base de données MSDB.  
+ Lorsque *IsWindowsUser* a la valeur `false`, le script généré accorde le **RSExec** rôle sur la base de données de serveur de rapports, la base de données du serveur de rapports temporaire et la base de données MSDB.  
   
- Lorsque *IsWindowsUser* a la valeur `false`, l’utilisateur de SQL Server doit déjà exister sur le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pour le script s’exécute correctement.  
+ Lorsque *IsWindowsUser* a la valeur `false`, l’utilisateur de SQL Server doit déjà exister sur le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pour le script puisse s’exécuter correctement.  
   
  Si aucune base de données de serveur de rapports n’est spécifiée pour le serveur de rapports, l’appel de GrantRightsToDatabaseUser retourne une erreur.  
   

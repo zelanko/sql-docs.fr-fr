@@ -5,10 +5,9 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-backup-restore
+ms.technology: backup-restore
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - tape backup devices, about tape backup devices
 - backup devices [SQL Server]
@@ -26,15 +25,15 @@ helpviewer_keywords:
 - devices [SQL Server]
 ms.assetid: 35a8e100-3ff2-4844-a5da-dd088c43cba4
 caps.latest.revision: 89
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 8c3f5bfc7186470ed713cdb9d979af2e5b3b0367
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: d7a3603d8d2f8f947a2c708a11015bf031ede8ec
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36040653"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37237179"
 ---
 # <a name="backup-devices-sql-server"></a>Unités de sauvegarde (SQL Server)
   Au cours d’une opération de sauvegarde sur une base de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , les données sauvegardées (la *sauvegarde*) sont écrites sur une unité de sauvegarde physique. Cette unité de sauvegarde physique est activée dès l'écriture de la première sauvegarde dans un jeu de supports. Les sauvegardes sur un jeu comprenant une ou plusieurs unités de sauvegarde constituent un seul jeu de supports.  
@@ -43,7 +42,7 @@ ms.locfileid: "36040653"
   
 -   [Termes et définitions](#TermsAndDefinitions)  
   
--   [À l’aide d’unités de sauvegarde sur disque](#DiskBackups)  
+-   [À l’aide d’unités de sauvegarde de disque](#DiskBackups)  
   
 -   [À l’aide de périphériques à bandes](#TapeDevices)  
   
@@ -67,7 +66,7 @@ ms.locfileid: "36040653"
   
  Les sauvegardes SQL Server peuvent également être écrites dans le service de Stockage Blob Windows Azure, en plus d'un disque ou d'une bande.  
   
-##  <a name="DiskBackups"></a> À l’aide d’unités de sauvegarde sur disque  
+##  <a name="DiskBackups"></a> À l’aide d’unités de sauvegarde de disque  
  **Dans cette section :**  
   
 -   [Spécification d’un fichier de sauvegarde à l’aide de son nom physique (Transact-SQL)](#BackupFileUsingPhysicalName)  

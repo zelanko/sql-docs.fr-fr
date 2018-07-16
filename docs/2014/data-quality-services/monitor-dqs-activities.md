@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - data-quality-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dqs.administration.activitymonitoring.f1
 helpviewer_keywords:
@@ -18,13 +18,13 @@ ms.assetid: 1d4c76f3-0d7b-498e-b792-4db4a0349814
 caps.latest.revision: 13
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 363b1d538c37123c3cc787e7b80c1cf57b693181
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 4a7458eb1aa76eebeb987ef49f7079634b26e577
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36153104"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37267665"
 ---
 # <a name="monitor-dqs-activities"></a>Surveiller les activités DQS
   Cette rubrique décrit comment surveiller de manière centralisée les activités suivantes dans [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) : découverte des connaissances, gestion des domaines, stratégie de correspondance, nettoyage des données, correspondance de données et nettoyage SSIS.  
@@ -59,7 +59,7 @@ ms.locfileid: "36153104"
     |**Est actif**|Indique si l'activité est actuellement active ou non. Peut prendre les valeurs suivantes :<br /><br /> **Active**: l'activité est en cours d'exécution.<br /><br /> **Terminé**: l'activité est terminée.<br /><br /> **Terminé**: l'activité a été terminée à l'aide de l'écran de surveillance de l'activité par l'administrateur DQS ou l'activité a été annulée par l'utilisateur lors de l'exécution dans la zone fonctionnelle correspondante dans [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)].|  
     |**Type**|Indique le type d'activité. Les types d'activités suivants font l'objet d'une surveillance : **Gestion des connaissances**, **Projet DQ**et **Nettoyage SSIS**.|  
     |**Sous-type**|Indique le flux de travail spécifique exécuté pour un type d'activité.<br /><br /> Un type d'activité **Gestion des connaissances** peut avoir les sous-types ou flux de travail suivants : **Découverte des connaissances**, **Gestion de l'arborescence du domaine**et **Stratégie de correspondance**.<br /><br /> Un type d'activité **Projet DQ** peut avoir les sous-types ou flux de travail suivants : **Nettoyage** et **Correspondance**.<br /><br /> Un type d'activité **Nettoyage SSIS** peut avoir uniquement un sous-type ou flux de travail **Nettoyage** .|  
-    |**État actuel**|Indique l'état actuel d'une activité. L'état d'une activité est déterminé par le dernier processus de calcul. Peut prendre les valeurs suivantes :<br /><br /> **En cours d'exécution**: le processus de calcul s'exécute.<br /><br /> **Opération réussie**: préalablement à l'exécution de tout processus de calcul, l'état est défini sur **Opération réussie**. Là encore, une fois que le processus de calcul a été exécuté avec succès, l'état est défini sur **Opération réussie**.<br /><br /> **Échec**: le processus de calcul a échoué.<br /><br /> **Arrêté**: le processus de calcul a été arrêté.<br /><br /> <br /><br /> Remarque : Il peut être plusieurs processus de calcul dans une activité, telles que l’exécution du processus de découverte plusieurs fois (à l’intérieur de l’activité de découverte de connaissances). Par conséquent, l'état peut changer plusieurs fois pendant la durée de vie d'une activité.|  
+    |**État actuel**|Indique l'état actuel d'une activité. L'état d'une activité est déterminé par le dernier processus de calcul. Peut prendre les valeurs suivantes :<br /><br /> **En cours d'exécution**: le processus de calcul s'exécute.<br /><br /> **Opération réussie**: préalablement à l'exécution de tout processus de calcul, l'état est défini sur **Opération réussie**. Là encore, une fois que le processus de calcul a été exécuté avec succès, l'état est défini sur **Opération réussie**.<br /><br /> **Échec**: le processus de calcul a échoué.<br /><br /> **Arrêté**: le processus de calcul a été arrêté.<br /><br /> <br /><br /> Remarque : Il peut être plusieurs processus de calcul dans une seule activité telles que l’exécution du processus de découverte plusieurs fois (à l’intérieur de l’activité de découverte de connaissances). Par conséquent, l'état peut changer plusieurs fois pendant la durée de vie d'une activité.|  
     |**DQKB**|Nom de la base de connaissances utilisée pour l'activité.|  
     |**Utilisateur**|Le nom de l'utilisateur qui a démarré l'activité, ou du dernier utilisateur qui a travaillé sur l'activité (au cas où il ne s'agirait pas des deux mêmes personnes).|  
     |**Heure de début d’activité**|Date et heure du début de l'activité|  

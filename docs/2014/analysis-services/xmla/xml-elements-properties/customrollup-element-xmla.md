@@ -1,5 +1,5 @@
 ---
-title: Élément CustomRollup (XMLA) | Documents Microsoft
+title: Élément CustomRollup (XMLA) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -24,15 +24,15 @@ helpviewer_keywords:
 - CustomRollup element
 ms.assetid: b266ac8b-1ae7-461c-9127-3c5642f829f5
 caps.latest.revision: 12
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: 715aca3e7bb35eb082a9e6fecc286aaf30ff3b71
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: a5da3f49101d900088e11cbb954aa65dbbf16620
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36153107"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37261105"
 ---
 # <a name="customrollup-element-xmla"></a>Élément CustomRollup (XMLA)
   Contient la formule de cumul personnalisé d’un membre d’attribut représenté par le parent [attribut](attribute-element-xmla.md) élément.  
@@ -69,7 +69,7 @@ ms.locfileid: "36153107"
  Pour plus d’informations sur les expressions MDX, consultez [Expressions &#40;MDX&#41;](/sql/mdx/expressions-mdx).  
   
 ## <a name="see-also"></a>Voir aussi  
- [Insérer l’élément &#40;XMLA&#41;](../xml-elements-commands/insert-element-xmla.md)   
+ [Insérer un élément &#40;XMLA&#41;](../xml-elements-commands/insert-element-xmla.md)   
  [Mettre à jour d’élément &#40;XMLA&#41;](../xml-elements-commands/update-element-xmla.md)   
  [Propriétés &#40;XMLA&#41;](xml-elements-properties.md)  
   

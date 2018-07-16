@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - users [Master Data Services], resolving permissions
 - permissions [Master Data Services], user and group overlaps
 - groups [Master Data Services], resolving permissions
 ms.assetid: 31c3cf7d-17d4-4474-b6a7-ffcb9fc45b37
 caps.latest.revision: 5
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 6523603f7524af93bc21417f378a41bd907532d8
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: 06b8f48e1f2b7c246c1f5e4559bbbba851ccf128
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36153048"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37264935"
 ---
 # <a name="overlapping-user-and-group-permissions-master-data-services"></a>Chevauchement des autorisations d'accès (Master Data Services)
   Les autorisations d'un utilisateur sont basées sur les :  
@@ -76,14 +76,14 @@ ms.locfileid: "36153048"
   
  L'utilisateur a l'autorisation **Mise à jour** sur un groupe de membres dans un nœud de la hiérarchie.  
   
- Groupe 1 a **en lecture seule** autorisation à un groupe de membres dans un nœud de la hiérarchie.  
+ Groupe 1 a **en lecture seule** autorisation à un groupe de membres dans un nœud de hiérarchie.  
   
- Groupe 2 a **en lecture seule** autorisation à un groupe de membres dans un nœud de la hiérarchie.  
+ Groupe 2 a **en lecture seule** autorisation à un groupe de membres dans un nœud de hiérarchie.  
   
  Résultat : l'autorisation effective de l'utilisateur est **Mise à jour** sur les membres.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Comment les autorisations sont déterminées &#40;Master Data Services&#41;](how-permissions-are-determined-master-data-services.md)   
+ [Mode de détermination des autorisations &#40;Master Data Services&#41;](how-permissions-are-determined-master-data-services.md)   
  [Chevauchement des autorisations de modèle et de membre &#40;Master Data Services&#41;](../../2014/master-data-services/overlapping-model-and-member-permissions-master-data-services.md)  
   
   

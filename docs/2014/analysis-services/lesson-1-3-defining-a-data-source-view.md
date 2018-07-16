@@ -1,5 +1,5 @@
 ---
-title: Vue de Source de définition de données | Documents Microsoft
+title: Définition des données d’une vue de Source | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: af00938a-5a06-4fae-b2fc-f3fb0ca3cea5
 caps.latest.revision: 28
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: jhubbard
-ms.openlocfilehash: 54cce390a82259430abf9820804cb5c9ca556532
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 556c860f3714de07e2b0f0242b9c73b731af2f4b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36040970"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37286146"
 ---
 # <a name="defining-a-data-source-view"></a>Définition d'une vue de source de données
   L'étape qui suit la définition des sources de données que vous utiliserez dans un projet [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] consiste généralement à définir une vue de source de données pour le projet. Une vue de source de données est une vue unique et unifiée des métadonnées des tables et des vues spécifiées que la source de données définit dans le projet. Le stockage des métadonnées dans la vue de source de données permet d'utiliser ces métadonnées au cours de la phase de développement sans avoir besoin de disposer d'une connexion ouverte à une source de données sous-jacente. Pour plus d’informations, consultez [Vues de sources de données dans les modèles multidimensionnels](multidimensional-models/data-source-views-in-multidimensional-models.md).  
@@ -81,7 +81,7 @@ ms.locfileid: "36040970"
      Vous pouvez maintenant consulter toutes les tables et leurs relations dans le volet **Diagramme** . Notez qu'il existe trois relations entre la table FactInternetSales et la table DimDate. Chaque vente est associée à trois dates : une date de commande, une date d'échéance et une date de livraison. Pour afficher les détails d’une relation, double-cliquez sur la flèche de la relation dans le volet **Diagramme** .  
   
 ## <a name="next-task-in-lesson"></a>Tâche suivante de la leçon  
- [Modification des noms de Table par défaut](lesson-1-4-modifying-default-table-names.md)  
+ [Modification des noms de tables par défaut](lesson-1-4-modifying-default-table-names.md)  
   
 ## <a name="see-also"></a>Voir aussi  
  [Vues de sources de données dans les modèles multidimensionnels](multidimensional-models/data-source-views-in-multidimensional-models.md)  

@@ -1,5 +1,5 @@
 ---
-title: Configurer les règles de contrôle d’intégrité PowerPivot - | Documents Microsoft
+title: Règles de contrôle d’intégrité PowerPivot - configurer | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: a01e63e6-97dc-43e5-ad12-ae6580afc606
 caps.latest.revision: 16
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: f22cf615d32ebe0d784aa71f3169f4ce9b9e9125
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 853dc9e66b42830f241715f2283b75f1983e2433
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36143122"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37265426"
 ---
 # <a name="powerpivot-health-rules---configure"></a>Règles d'intégrité de PowerPivot - Configurer
   PowerPivot pour SharePoint inclut des règles d'intégrité SharePoint qui vous aident à analyser et à résoudre les problèmes de disponibilité et de configuration du serveur. Les règles d'intégrité qui s'appliquent à PowerPivot pour SharePoint apparaissent dans la page Vérifier les définitions de règles.  
@@ -32,7 +32,7 @@ ms.locfileid: "36143122"
 |-|  
 |**[!INCLUDE[applies](../../includes/applies-md.md)]**  SharePoint 2013 &#124; SharePoint 2010|  
   
- **Remarque :** les paramètres des règles d'intégrité sont configurés séparément pour l'instance de SQL Server Analysis Services et l'application de service PowerPivot. Suivez les instructions de cette rubrique pour configurer des règles d'intégrité pour chaque service. Pour un déploiement SharePoint 2013, [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] utilise uniquement l'application de service. Par conséquent, [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] installe différents jeux de règles d'intégrité pour différentes versions de SharePoint. Consultez la colonne « version » dans la rubrique [référence des règles de contrôle d’intégrité &#40;PowerPivot pour SharePoint&#41;](health-rules-reference-power-pivot-for-sharepoint.md), ou vous pouvez exécuter la commande Windows PowerShell suivante pour voir les règles installées.  
+ **Remarque :** les paramètres des règles d'intégrité sont configurés séparément pour l'instance de SQL Server Analysis Services et l'application de service PowerPivot. Suivez les instructions de cette rubrique pour configurer des règles d'intégrité pour chaque service. Pour un déploiement SharePoint 2013, [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] utilise uniquement l'application de service. Par conséquent, [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] installe différents jeux de règles d'intégrité pour différentes versions de SharePoint. Consultez la colonne « version » dans la rubrique [référence de règles d’intégrité &#40;PowerPivot pour SharePoint&#41;](health-rules-reference-power-pivot-for-sharepoint.md), ou vous pouvez exécuter la commande Windows PowerShell suivante pour voir les règles installées.  
   
 ```  
 Get-SPHealthAnalysisRule | select name, enabled, summary | where {$_.summary -like “*power*”}  | format-table -property * -autosize | out-default  
@@ -44,7 +44,7 @@ Get-SPHealthAnalysisRule | select name, enabled, summary | where {$_.summary -li
   
  [Configurer les règles d'intégrité utilisées pour évaluer la stabilité du serveur (SQL Server Analysis Services)](#bkmk_HR_SSAS)  
   
- [Configurer les règles de contrôle d’intégrité utilisées pour évaluer la stabilité de l’application (Application de Service PowerPivot)](#bkmk_evaluate_application_stability)  
+ [Configurer les règles de contrôle d’intégrité utilisées pour évaluer la stabilité d’application (Application de Service PowerPivot)](#bkmk_evaluate_application_stability)  
   
 ## <a name="prerequisites"></a>Prérequis  
  Vous devez être administrateur de l'application de service pour modifier les propriétés de configuration de l'instance d'Analysis Services et de l'application de service PowerPivot.  
@@ -102,17 +102,17 @@ Get-SPHealthAnalysisRule | select name, enabled, summary | where {$_.summary -li
      Intervalle de collecte des données (en heures)  
      Vous pouvez spécifier la période de collecte de données prise en compte pour calculer les valeurs utilisées pour déclencher des règles d'intégrité. Bien que le système soit surveillé en permanence, les seuils utilisés pour déclencher des avertissements de règle d'intégrité sont calculés à l'aide de données qui ont été générées pendant un intervalle prédéfini. L'intervalle par défaut est de 4 heures. Le serveur récupère les données système et d'utilisation collectées au cours des 4 heures précédentes pour évaluer le nombre de connexions utilisateur, l'utilisation de l'espace disque et les taux d'utilisation de l'UC et de la mémoire.  
   
-##  <a name="bkmk_evaluate_application_stability"></a> Configurer les règles de contrôle d’intégrité utilisées pour évaluer la stabilité de l’application (Application de Service PowerPivot)  
+##  <a name="bkmk_evaluate_application_stability"></a> Configurer les règles de contrôle d’intégrité utilisées pour évaluer la stabilité d’application (Application de Service PowerPivot)  
   
 1.  Dans l'Administration centrale, sous Gestion des applications, cliquez sur **Gérer les applications de service**.  
   
 2.  Dans la page Applications de service, cliquez sur **Application de service PowerPivot par défaut**.  
   
-     ![Page de la capture d’écran de l’Application la](../media/ssas-centraladmin-app.gif "page d’Application de capture d’écran de la")  
+     ![Page de l’Application de capture d’écran de la](../media/ssas-centraladmin-app.gif "page de l’Application de capture d’écran de la")  
   
 3.  Le Tableau de bord de gestion PowerPivot apparaît. Cliquez sur **Configurer les paramètres d'application de service** dans la liste **Actions** pour ouvrir la page des paramètres d'application de service.  
   
-     ![Capture d’écran du tableau de bord, vous concentrer sur la liste d’Actions](../media/ssas-centraladmin-actionslist.gif "capture d’écran du tableau de bord, vous concentrer sur la liste d’Actions")  
+     ![Capture d’écran du tableau de bord, vous concentrer sur la liste des Actions](../media/ssas-centraladmin-actionslist.gif "capture d’écran du tableau de bord, vous concentrer sur la liste des Actions")  
   
 4.  Dans les paramètres de la règle d'intégrité modifiez les paramètres suivants :  
   
@@ -127,12 +127,12 @@ Get-SPHealthAnalysisRule | select name, enabled, summary | where {$_.summary -li
      Recherche les mises à jour du fichier de gestion Dashboard.xlsx PowerPivot (la valeur par défaut est 5 jours)  
      Le fichier de la gestion Dashboard.xlsx PowerPivot est une source de données utilisée par les rapports du Tableau de bord de gestion PowerPivot. Dans une configuration de serveur par défaut, le fichier .xlsx est actualisé quotidiennement, à l'aide des données d'utilisation collectées par SharePoint et le service système PowerPivot. Si le fichier n'est pas mis à jour, une règle d'intégrité le signale comme un problème. Par défaut, la règle est déclenchée si l'horodateur du fichier n'a pas changé pendant 5 jours.  
   
-     Pour plus d’informations sur la collecte des données d’utilisation, consultez [configurer la collecte de données d’utilisation pour &#40;PowerPivot pour SharePoint](configure-usage-data-collection-for-power-pivot-for-sharepoint.md).  
+     Pour plus d’informations sur la collecte de données d’utilisation, consultez [Configure Usage Data Collection pour &#40;PowerPivot pour SharePoint](configure-usage-data-collection-for-power-pivot-for-sharepoint.md).  
   
      Ce paramètre de configuration correspond à la définition de règle suivante sur la page **Examiner les problèmes et solutions** : **PowerPivot : les données d'utilisation ne sont pas mises à jour à la fréquence prévue.**  
   
 ## <a name="see-also"></a>Voir aussi  
- [Configurer l’utilisation de l’espace disque &#40;PowerPivot pour SharePoint&#41;](configure-disk-space-usage-power-pivot-for-sharepoint.md)   
- [Tableau de bord de gestion PowerPivot et les données d’utilisation](power-pivot-management-dashboard-and-usage-data.md)  
+ [Configurer l’espace disque &#40;PowerPivot pour SharePoint&#41;](configure-disk-space-usage-power-pivot-for-sharepoint.md)   
+ [Tableau de bord de gestion PowerPivot et données d’utilisation](power-pivot-management-dashboard-and-usage-data.md)  
   
   

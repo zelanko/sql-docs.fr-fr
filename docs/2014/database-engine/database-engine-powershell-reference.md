@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 3c379a43-c497-47dd-8e7d-2b015c068bb7
 caps.latest.revision: 7
-author: mgblythe
-ms.author: mblythe
-manager: jhubbard
-ms.openlocfilehash: 7316d93d197a64b7b9f7a7f6675e92c7cc5be613
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 17424e5a629a4161760c35d5dcc24b80aaf9c2bd
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36040221"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37205839"
 ---
 # <a name="database-engine-powershell-reference"></a>Référence de PowerShell (Moteur de base de données)
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] inclut un jeu d'applets de commande Windows PowerShell 2.0 pour effectuer des actions courantes dans le [!INCLUDE[ssDE](../includes/ssde-md.md)]. En outre, les expressions de requête et les noms URN (Uniform Resource Names) peuvent être convertis en chemins d'accès SQL Server PowerShell, ou être utilisés pour spécifier un ou plusieurs objets dans le [!INCLUDE[ssDE](../includes/ssde-md.md)].  
@@ -38,7 +38,7 @@ ms.locfileid: "36040221"
 |Évalue si un objet du moteur de base de données est conforme à une stratégie de gestion basée sur des stratégies.|[Invoke-PolicyEvaluation (applet de commande)](../../2014/database-engine/invoke-policyevaluation-cmdlet.md)|  
   
 ### <a name="information-about-other-cmdlets"></a>Informations sur d'autres applets de commande  
- Le `Encode-Sqlname` et `Decode-Sqlname` applets de commande vous aident à spécifier des identificateurs SQL Server qui contiennent des caractères non pris en charge dans les chemins d’accès PowerShell. Pour plus d’informations, consultez [Identificateurs SQL Server dans PowerShell](../powershell/sql-server-identifiers-in-powershell.md).  
+ Le `Encode-Sqlname` et `Decode-Sqlname` applets de commande vous aident à spécifier les identificateurs SQL Server qui contiennent des caractères non pris en charge dans les chemins PowerShell. Pour plus d’informations, consultez [Identificateurs SQL Server dans PowerShell](../powershell/sql-server-identifiers-in-powershell.md).  
   
  Utilisez l'applet de commande `Convert-UrnToPath` pour convertir un nom de ressource unique pour un objet du [!INCLUDE[ssDE](../includes/ssde-md.md)] en un chemin d'accès pour le fournisseur SQL Server PowerShell. Pour plus d’informations, consultez [Convertir des URN en chemins d’accès de fournisseur SQL Server](../../2014/database-engine/convert-urns-to-sql-server-provider-paths.md).  
   

@@ -1,5 +1,5 @@
 ---
-title: Exporter un modèle de Trace (SQL Server Profiler) | Documents Microsoft
+title: Exporter un modèle de Trace (SQL Server Profiler) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - templates [SQL Server], traces
 - trace templates [SQL Server]
 - exporting trace templates
 ms.assetid: 5aa5f400-4aba-4081-9ed4-62cf38828438
 caps.latest.revision: 21
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 386a640cbb9345b1f91f189629bb2f8172dc1aa3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 32ac4eba8c474cd004c3a21656ef77641676f31a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36143153"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37249709"
 ---
 # <a name="export-a-trace-template-sql-server-profiler"></a>Exporter un modèle de trace (SQL Server Profiler)
   Cette rubrique décrit comment exporter un modèle de trace existant à enregistrer comme fichier modèle (.tdf) à l'aide du [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]. Lorsque vous exportez un modèle de trace et que vous l'enregistrez en tant que fichier, vous pouvez utiliser ce modèle avec une autre instance du [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)].  

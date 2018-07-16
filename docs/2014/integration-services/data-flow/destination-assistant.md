@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.destinationassistant.f1
 - SQL12.DTS.DESIGNER.DESTINATIONASSIST.F1
@@ -16,13 +16,13 @@ ms.assetid: 10a40921-a2c2-4ac8-be28-311f8500fbf6
 caps.latest.revision: 11
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: b236bfb26ac52702aebd87d518021b19e8f7d1bb
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 8e76223692ce633979578f803f2248e5c7bde77c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36040203"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37283685"
 ---
 # <a name="destination-assistant"></a>Assistant de destination
   Le composant Assistant Destination permet de créer un composant de destination et un gestionnaire de connexions. Le composant se trouve dans la section **Favoris** de la boîte à outils SSIS.  

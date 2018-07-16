@@ -1,5 +1,5 @@
 ---
-title: Types de données pris en charge | Documents Microsoft
+title: Types de données pris en charge | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine-imoltp
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: a7380ef0-c9d7-49e4-b6de-fad34752b9f3
 caps.latest.revision: 20
-author: stevestein
-ms.author: sstein
-manager: jhubbard
-ms.openlocfilehash: 93c6555c1a8400306d40b2d3a719f280104ef582
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: 3f967b7cf4c20492f7e7d46ad9b8f9a2556042e7
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36143036"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37195309"
 ---
 # <a name="supported-data-types"></a>Types de données pris en charge
   Les types de données suivants sont **pris en charge** dans les tables optimisées en mémoire et les procédures stockées compilées en mode natif :  
@@ -39,7 +39,7 @@ ms.locfileid: "36143036"
 |money|[money et smallmoney &#40;Transact-SQL&#41;](/sql/t-sql/data-types/money-and-smallmoney-transact-sql)|  
 |SMALLMONEY|[money et smallmoney &#40;Transact-SQL&#41;](/sql/t-sql/data-types/money-and-smallmoney-transact-sql)|  
   
- **Types de données String**  
+ **Types de données de chaîne**  
   
 |Type de données|Informations supplémentaires|  
 |---------------|--------------------------|  
@@ -49,9 +49,9 @@ ms.locfileid: "36143036"
 |nvarchar (n) <sup>1</sup>|[nchar et nvarchar &#40;Transact-SQL&#41;](/sql/t-sql/data-types/nchar-and-nvarchar-transact-sql)|  
 |sysname|[nchar et nvarchar &#40;Transact-SQL&#41;](/sql/t-sql/data-types/nchar-and-nvarchar-transact-sql)|  
   
- <sup>1</sup> limitation est de 8 060 octets par ligne total, en comptant (n) dans les types de longueur variable.  
+ <sup>1</sup> limitation est de 8060 octets par total de lignes, en comptant (n) dans les types de longueur variable.  
   
- Pour plus d’informations sur les classements pris en charge, consultez [classements et Pages de codes](../../database-engine/collations-and-code-pages.md).  
+ Pour plus d’informations sur les classements pris en charge, consultez [Collations and Code Pages](../../database-engine/collations-and-code-pages.md).  
   
  **Types de données de date et d’heure**  
   
@@ -71,7 +71,7 @@ ms.locfileid: "36143036"
 |binary(n)|[binary et varbinary &#40;Transact-SQL&#41;](/sql/t-sql/data-types/binary-and-varbinary-transact-sql)|  
 |varbinary (n) <sup>1</sup>|[binary et varbinary &#40;Transact-SQL&#41;](/sql/t-sql/data-types/binary-and-varbinary-transact-sql)|  
   
- <sup>1</sup> limitation est de 8 060 octets par ligne total, en comptant (n) dans les types de longueur variable.  
+ <sup>1</sup> limitation est de 8060 octets par total de lignes, en comptant (n) dans les types de longueur variable.  
   
  **Autres types de données**  
   

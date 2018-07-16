@@ -1,5 +1,5 @@
 ---
-title: Élément tuples (XMLA) | Documents Microsoft
+title: Élément tuples (XMLA) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -24,18 +24,18 @@ helpviewer_keywords:
 - Tuples element
 ms.assetid: 5494bbaa-c1aa-43fa-b3e0-83befb2bccdd
 caps.latest.revision: 11
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: da9614fb01620a3dec5bdff9f63d044652a4749b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: 5e5f6f1dbddea4e5e962d30f352c254b0f2a7a80
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36143103"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37254591"
 ---
 # <a name="tuples-element-xmla"></a>Élément Tuples (XMLA)
-  Contient un ensemble de [Tuple](tuple-element-xmla.md) des objets pour un [axe](axis-element-xmla.md) élément qui utilise le [MDDataSet](../xml-data-types/mddataset-data-type-xmla.md) type de données retourné par la [Execute](../xml-elements-methods-execute.md) (méthode).  
+  Contient un ensemble de [Tuple](tuple-element-xmla.md) des objets pour un [axe](axis-element-xmla.md) élément qui utilise le [MDDataSet](../xml-data-types/mddataset-data-type-xmla.md) type de données, retourné par la [Execute](../xml-elements-methods-execute.md) (méthode).  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -69,7 +69,7 @@ ms.locfileid: "36143103"
  Lorsqu’une application cliente définit le `AxisFormat` propriété *TupleFormat*, un axe est représenté comme un jeu de tuples. Chaque élément `Axis` contient un élément `Tuples` qui représente l'ensemble de tuples sur l'axe en question. Chaque tuple est représenté à l’aide un `Tuple` élément contenant [membre](member-element-xmla.md) éléments de chaque hiérarchie sur l’axe.  
   
 ## <a name="example"></a>Exemple  
- L’exemple suivant illustre la structure de la `Tuples` élément lorsqu’un client spécifie *TupleFormat* ou *CustomFormat* pour le `AxisFormat` XML pour la propriété Analysis (XMLA) pour l’axe, étant donné les membres suivants :  
+ L’exemple suivant illustre la structure de la `Tuples` élément lorsqu’un client spécifie *TupleFormat* ou *CustomFormat* pour le `AxisFormat` XML pour la propriété Analysis (XMLA) Étant donné les membres suivants de l’axe :  
   
 |||||  
 |-|-|-|-|  

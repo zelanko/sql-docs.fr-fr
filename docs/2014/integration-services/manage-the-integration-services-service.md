@@ -1,5 +1,5 @@
 ---
-title: Gérer le Service Integration Services | Documents Microsoft
+title: Gérer le Service Integration Services | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Integration Services service, configuring
 - services [Integration Services], configuring
 ms.assetid: 45554117-a0df-4830-b41c-5ebb33b764a5
 caps.latest.revision: 60
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 45952fdec3955614cb7b69b053ffc635d9ab2ae3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 5e356283274c7ea741acfabcd6d56cb6bc0db7ea
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36143767"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37281515"
 ---
 # <a name="manage-the-integration-services-service"></a>Gérer le service Integration Services
     
@@ -50,15 +50,15 @@ ms.locfileid: "36143767"
   
 ### <a name="to-set-properties-of-integration-services-service-using-the-services-snap-in"></a>Pour définir les propriétés du service Integration Services à l'aide du composant logiciel enfichable Services  
   
--   [Définir les propriétés du Service Integration Services](../../2014/integration-services/set-the-properties-of-the-integration-services-service.md)  
+-   [Définir les propriétés du service Integration Services](../../2014/integration-services/set-the-properties-of-the-integration-services-service.md)  
   
 ### <a name="to-view-service-events-for-integration-services-service"></a>Pour afficher les événements du service Integration Services  
   
--   [Afficher les événements du Service Integration Services](../../2014/integration-services/view-events-for-the-integration-services-service.md)  
+-   [Afficher les événements du service Integration Services](../../2014/integration-services/view-events-for-the-integration-services-service.md)  
   
 ## <a name="see-also"></a>Voir aussi  
  [Service Integration Services &#40;Service SSIS&#41;](service/integration-services-service-ssis-service.md)   
- [Configuration de l’intégration de Service Services &#40;Service SSIS&#41;](configuring-the-integration-services-service-ssis-service.md)   
+ [Configuration de l’intégration des Services Service &#40;Service SSIS&#41;](configuring-the-integration-services-service-ssis-service.md)   
  [SQL Server Assistant Importation et exportation](import-export-data/import-and-export-data-with-the-sql-server-import-and-export-wizard.md)   
  [Utilitaire dtexec](packages/dtexec-utility.md)   
  [Exécution de projets et de packages](packages/run-integration-services-ssis-packages.md)  

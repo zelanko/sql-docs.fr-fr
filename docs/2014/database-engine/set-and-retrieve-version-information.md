@@ -1,5 +1,5 @@
 ---
-title: Définir et récupérer des informations de Version | Documents Microsoft
+title: Définir et récupérer des informations de Version | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - historical information [SQL Server]
 - source controls [SQL Server Management Studio], version information
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - historical information [SQL Server], source control files
 ms.assetid: c3f253c4-4e3d-48e8-8d90-bd6ee899faf7
 caps.latest.revision: 22
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: da9b33474449140cb31b6dcfd752a5112ebb9d4e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 0dde0359b67d34e712b76e53a855efaafc29b5b0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36141851"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37265228"
 ---
 # <a name="set-and-retrieve-version-information"></a>Définir et récupérer des informations sur la version
   Les informations sur une version comprennent l'historique et l'état en cours d'un fichier sous contrôle de code source. [!INCLUDE[msCoName](../includes/msconame-md.md)] Visual SourceSafe gère un historique complet pour chaque fichier sous contrôle de code source, de sorte que vous puissiez suivre l'évolution d'un ou de plusieurs fichiers dans le temps. Vous pouvez également utiliser ces informations pour récupérer une copie locale d'une version d'un fichier ou pour comparer deux versions d'un fichier.  
@@ -57,21 +57,21 @@ ms.locfileid: "36141851"
   
 ## <a name="in-this-section"></a>Dans cette section  
   
--   [Afficher l’historique des fichiers](../../2014/database-engine/view-file-history.md)  
+-   [Afficher l’historique d’un fichier](../../2014/database-engine/view-file-history.md)  
   
--   [Afficher l’historique de projet](../../2014/database-engine/view-project-history.md)  
+-   [Afficher l’historique d’un projet](../../2014/database-engine/view-project-history.md)  
   
--   [Afficher l’état de fichier](../../2014/database-engine/view-file-status.md)  
+-   [Afficher l’état d’un fichier](../../2014/database-engine/view-file-status.md)  
   
 -   [Récupérer des fichiers](../../2014/database-engine/retrieve-files.md)  
   
--   [Spécifiez une Version comme étant la dernière Version](../../2014/database-engine/specify-a-version-as-the-latest-version.md)  
+-   [Désigner une version comme étant la dernière version](../../2014/database-engine/specify-a-version-as-the-latest-version.md)  
   
 -   [Comparer des fichiers](../../2014/database-engine/compare-files.md)  
   
 -   [Partager des fichiers](../../2014/database-engine/share-files.md)  
   
--   [Créer des rapports d’état et historiques](../../2014/database-engine/create-history-and-status-reports.md)  
+-   [Créer des rapports d’état et d’historique](../../2014/database-engine/create-history-and-status-reports.md)  
   
 ## <a name="see-also"></a>Voir aussi  
  [Présentation du contrôle de code source](../../2014/database-engine/source-control-basics.md)  

@@ -1,5 +1,5 @@
 ---
-title: Général (boîte de dialogue Structure d’exploration de données) (Analysis Services - Exploration de données) | Documents Microsoft
+title: Général (boîte de dialogue Structure d’exploration de données) (Analysis Services - Exploration de données) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.miningstructuredialog.errorconfig.f1
 ms.assetid: 2f7cedb6-9a83-49c4-9cc6-883d4f147a68
 caps.latest.revision: 10
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 23839c8e5aa17c3439c7e3cbe6989142d911f5c3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 77577a5a19136ad4cecc009e9c3939f81408971e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36142157"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37241709"
 ---
 # <a name="general-mining-structure-dialog-box-analysis-services---data-mining"></a>Général (Boîte de dialogue Structure d'exploration de données) (Analysis Services – Exploration de données)
   Utilisez la page **Général** de la boîte de dialogue **Propriétés de structure d'exploration de données** dans **SQL Server Management Studio** pour définir les propriétés générales d'une structure d'exploration de données dans une base de données [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] .  

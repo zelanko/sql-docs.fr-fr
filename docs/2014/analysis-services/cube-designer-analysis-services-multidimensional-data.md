@@ -1,5 +1,5 @@
 ---
-title: Le concepteur (Analysis Services - données multidimensionnelles) de cube | Documents Microsoft
+title: Concepteur (Analysis Services - données multidimensionnelles) de cube | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Cube Designer
 ms.assetid: a6692467-da88-4312-8b03-d812f2ae5a96
 caps.latest.revision: 20
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 00720caa0c9bcae9e04cc542864ab99e14eb0f86
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: dc6972d90683de658dd0d8104cff138d59960904
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36143154"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37246279"
 ---
 # <a name="cube-designer-analysis-services---multidimensional-data"></a>Concepteur de cube (Analysis Services - Données multidimensionnelles)
   Le **Concepteur de cube** de [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] permet de modifier diverses propriétés d’un cube, notamment ses groupes de mesures et ses mesures, ses dimensions et les relations avec ces dimensions, les méthodes de calcul, ses indicateurs de performance clés (KPI, Key Performance Indicator), les actions qui se rattachent au cube, les partitions, ses perspectives et les traductions qui y sont inclus, ainsi que de parcourir les données qu’il contient. Pour afficher la boîte de dialogue du **Concepteur de cube** , vous disposez de deux méthodes :  

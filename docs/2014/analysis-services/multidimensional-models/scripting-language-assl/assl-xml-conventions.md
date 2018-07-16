@@ -1,5 +1,5 @@
 ---
-title: Conventions ASSL XML | Documents Microsoft
+title: Conventions ASSL XML | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -26,15 +26,15 @@ helpviewer_keywords:
 - inherited defaults [Analysis Services Scripting Language]
 ms.assetid: bce4edad-4420-41ce-9672-8c00c5c0dec6
 caps.latest.revision: 24
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: d0411903c72aba9b0122beb4c0e46e9f172f4f4e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: d248cc39e20869752deb67c0c84c8b0aca6aafd0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36153589"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37279895"
 ---
 # <a name="assl-xml-conventions"></a>Conventions ASSL XML
   Le langage de script ASSL (Analysis Services Scripting Language) représente la hiérarchie d'objets comme un ensemble de types d'élément, chacun d'entre eux définissant les éléments enfants qu'il contient.  
@@ -43,7 +43,7 @@ ms.locfileid: "36153589"
   
 -   Tous les objets et propriétés sont représentés en tant qu'éléments, à l'exception des attributs XML standard tels que « xml:lang ».  
   
--   Les noms d’éléments et les valeurs d’énumération suivent la convention d’affectation de noms Microsoft .NET Framework de Pascal sans traits de soulignement de casse.  
+-   Les noms d’éléments et les valeurs d’énumération suivent la convention d’affectation de noms Microsoft .NET Framework de Pascal sans traits de soulignement de mise en majuscules.  
   
 -   La casse de toutes les valeurs est préservée. Les valeurs des énumérations respectent également la casse.  
   
@@ -143,7 +143,7 @@ ms.locfileid: "36153589"
  Les propriétés `Name` et `ID` imposent des limitations spéciales en matière de validité des caractères dans les éléments de chaîne. Pour plus d’informations sur `Name` et `ID` conventions, consultez [objets ASSL et caractéristiques des objets](assl-objects-and-object-characteristics.md).  
   
  `DateTime`  
- A `DateTime` structure à partir de .NET Framework. Une valeur `DateTime` ne peut pas être NULL. La date la plus reculée prise en charge par le type de données `DataTime` est le 1er janvier 1601, qui est accessible aux programmeurs via `DateTime.MinValue`. La présence de cette date indique qu'il manque une valeur `DateTime`.  
+ Un `DateTime` structure à partir de .NET Framework. Une valeur `DateTime` ne peut pas être NULL. La date la plus reculée prise en charge par le type de données `DataTime` est le 1er janvier 1601, qui est accessible aux programmeurs via `DateTime.MinValue`. La présence de cette date indique qu'il manque une valeur `DateTime`.  
   
  `Boolean`  
  Énumération constituée de seulement deux valeurs, telles que {true, false} ou {0, 1}.  
@@ -156,7 +156,7 @@ ms.locfileid: "36153589"
 |`Boolean`|False|  
 |`String`|"" (chaîne vide)|  
 |`Integer` ou `Long`|0 (zéro)|  
-|`Timestamp`|12:00:00 AM, 1/1/0001 (correspondant à un .NET Frameworks `System.DateTime` avec 0 battement)|  
+|`Timestamp`|12:00:00 AM, 1/1/0001 (correspondant à un .NET Framework `System.DateTime` avec 0 battement)|  
   
  Un élément qui est présent mais vide est considéré comme ayant une valeur de chaîne null, et non la valeur par défaut.  
   

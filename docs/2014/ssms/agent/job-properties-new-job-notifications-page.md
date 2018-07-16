@@ -1,5 +1,5 @@
 ---
-title: 'Propriétés du travail : Nouveau travail (onglet Notifications) | Documents Microsoft'
+title: 'Propriétés du travail : Nouveau travail (Page Notifications) | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.ag.job.notifications.f1
 ms.assetid: ed393cbd-4496-4399-a177-e5baa92fb689
 caps.latest.revision: 28
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 39dd7fe869b89b7793e2128c619beb4ec9c36a84
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 170456c9aeacb804a02d0e7450647b67453e635f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36039221"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37196769"
 ---
-# <a name="job-properties-new-job-notifications-page"></a>Propriétés du travail : Nouveau travail (onglet Notifications)
+# <a name="job-properties-new-job-notifications-page"></a>Propriétés du travail : Nouveau travail (Page Notifications)
   Utilisez cette page pour définir des actions que l’Agent [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] devra exécuter une fois le travail terminé.  
   
 ## <a name="options"></a>Options  

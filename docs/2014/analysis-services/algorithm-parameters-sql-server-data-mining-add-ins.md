@@ -1,5 +1,5 @@
 ---
-title: Paramètres d’algorithme (SQL Server Data Mining Add-ins) | Documents Microsoft
+title: Paramètres d’algorithme (SQL Server Data Mining Add-ins) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - MAXIMUM_STATES
 - FORCED_REGRESSOR
@@ -48,20 +48,20 @@ helpviewer_keywords:
 - COMPLEXITY_PENALTY
 ms.assetid: fcdc3f85-813d-4279-90b0-16e26edd008d
 caps.latest.revision: 18
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 5e8856d824e043c5cb68f18d3b34c9a07ea21375
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: a7f640f259375c48584ee33b72e63b082de0a3e2
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36152726"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37267675"
 ---
 # <a name="algorithm-parameters-sql-server-data-mining-add-ins"></a>Paramètres d'algorithme (Compléments d'exploration de données SQL Server)
   Lorsque vous effectuez l'exploration de données à l'aide des outils d'analyse de table pour Excel, vous n'avez pas besoin de configurer l'algorithme ou les paramètres d'exploration de données ; chaque outil analyse vos données et sélectionne automatiquement les paramètres optimums. Toutefois, si vous souhaitez modifier le modèle ou créer un modèle d'exploration de données de toutes pièces, le client d'exploration de données pour Excel vous propose plusieurs options de personnalisation.  
   
--   Créer un modèle d’exploration de données manuellement, en cliquant sur **avancé** , puis en cliquant sur **ajouter un modèle à la Structure**.  
+-   Créer un modèle d’exploration de données manuellement, en cliquant sur **avancé** , puis en cliquant sur **ajouter le modèle à la Structure**.  
   
 -   Utiliser les Assistants de modélisation dans le Client d’exploration de données, puis cliquez sur **paramètres** pour contrôler le comportement de la [!INCLUDE[msCoName](../includes/msconame-md.md)] algorithmes d’exploration de données.  
   
@@ -81,7 +81,7 @@ ms.locfileid: "36152726"
 |CLUSTER_SEED|Algorithme de clustering Microsoft|Spécifie la valeur de départ utilisée pour générer de façon aléatoire des clusters pour le stade initial de construction d'un modèle.<br /><br /> La valeur par défaut est 0.|  
 |CLUSTERING_METHOD|Algorithme de clustering Microsoft|Spécifie la méthode de clustering que doit utiliser l'algorithme. Les méthodes de clustering disponibles sont les suivantes : EM évolutif (1), EM non évolutif (2), K-means évolutif (3) ou K-means non évolutif (4).<br /><br /> La valeur par défaut est 1.|  
 |COMPLEXITY_PENALTY|Algorithme MDT (Microsoft Decision Trees)<br /><br /> Algorithme MTS (Microsoft Time Series)|Contrôle la croissance de l'arbre de décision. Une valeur faible entraîne l'augmentation du nombre de fractionnements, alors qu'une valeur élevée entraîne la diminution du nombre de fractionnements. La valeur par défaut dépend du nombre d'attributs pour un modèle particulier, comme cela est décrit dans la liste suivante :<br /><br /> De 1 à 9 attributs, la valeur par défaut est égale à 0,5.<br /><br /> De 10 à 99 attributs, la valeur par défaut est égale à 0,9.<br /><br /> À partir de 100 attributs, la valeur par défaut est égale à 0,99.<br /><br /> Remarque : Dans les modèles de série chronologique, ce paramètre s’applique uniquement aux modèles qui sont générés à l’aide de l’algorithme ARTxp ou aux modèles mixtes.|  
-|FORCED_REGRESSOR|Algorithme MDT (Microsoft Decision Trees)<br /><br /> Algorithme MLR (Microsoft Linear Regression)|Force l'algorithme à utiliser les colonnes indiquées comme régresseurs, quelle que soit leur importance, telle que calculée par l'algorithme.<br /><br /> Remarque : Ce paramètre est uniquement utilisé pour les arbres de décision qui prévoient un attribut continu. Par définition, un modèle de régression linéaire est un cas spécial d'arbres de décision qui prédit des attributs continus. Toutefois, un modèle d'arbre de décision peut contenir un nœud qui représente une formule de régression linéaire.|  
+|FORCED_REGRESSOR|Algorithme MDT (Microsoft Decision Trees)<br /><br /> Algorithme MLR (Microsoft Linear Regression)|Force l'algorithme à utiliser les colonnes indiquées comme régresseurs, quelle que soit leur importance, telle que calculée par l'algorithme.<br /><br /> Remarque : Ce paramètre est utilisé uniquement pour les arbres de décision qui prévoient un attribut continu. Par définition, un modèle de régression linéaire est un cas spécial d'arbres de décision qui prédit des attributs continus. Toutefois, un modèle d'arbre de décision peut contenir un nœud qui représente une formule de régression linéaire.|  
 |FORECAST_METHOD|Algorithme MTS (Microsoft Time Series)|Indique si les prédictions doivent être faites à l'aide de l'algorithme ARTxp, de l'algorithme ARIMA ou d'une combinaison des deux.<br /><br /> La valeur par défaut MIXED.|  
 |HIDDEN_NODE_RATIO|Microsoft Neural Network Algorithm|Spécifie le taux de neurones cachés par rapport aux neurones d'entrée et de sortie. La formule suivante détermine le nombre initial de neurones dans la couche masquée :<br /><br /> HIDDEN_NODE_RATIO * SQRT (total neurones d’entrée \* total neurones de sortie)<br /><br /> La valeur par défaut est 4,0.|  
 |HISTORIC_MODEL_COUNT|Algorithme MTS (Microsoft Time Series)|Spécifie le nombre de modèles historiques qui seront construits.<br /><br /> La valeur par défaut est 1.|  

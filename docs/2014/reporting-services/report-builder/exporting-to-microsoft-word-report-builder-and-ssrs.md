@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 0cd8ae26-4682-4473-8f15-af084951defd
 caps.latest.revision: 20
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 2720d4e3a767a66768909bccad6cf1a7fdf78722
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 9aa5b777f8e05b9a3bd8784c15ae8294e9caa8bb
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36141993"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37264275"
 ---
 # <a name="exporting-to-microsoft-word-report-builder-and-ssrs"></a>Exportation vers Microsoft Word (Générateur de rapports et SSRS)
-  L’extension de rendu Word restitue des rapports dans le format natif de [!INCLUDE[ofprword](../../includes/ofprword-md.md)] 2007-2010. Il s'agit du format Office Open XML.  
+  L’extension de rendu Word restitue les rapports dans le format natif de [!INCLUDE[ofprword](../../includes/ofprword-md.md)] 2007-2010. Il s'agit du format Office Open XML.  
   
  Le convertisseur Word est compatible avec [!INCLUDE[ofprword](../../includes/ofprword-md.md)] 2007-2010, ainsi qu'avec [!INCLUDE[ofprword](../../includes/ofprword-md.md)] 2003 moyennant l'installation préalable du Module de compatibilité pour formats de fichiers [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office Word, Excel et PowerPoint. Pour plus d'informations sur le module de compatibilité, consultez [Module de compatibilité pour formats de fichiers Microsoft Office Word, Excel et PowerPoint](http://go.microsoft.com/fwlink/?LinkID=205622).  
   
@@ -31,7 +31,7 @@ ms.locfileid: "36141993"
  La version précédente de l'extension de rendu Word, compatible avec [!INCLUDE[ofprword](../../includes/ofprword-md.md)] 2003, est renommée Word 2003. Seule l'extension de rendu Word est disponible par défaut. Vous devez mettre à jour les fichiers de configuration Reporting Services pour rendre l'extension de rendu Word 2003 disponible. Le type de contenu des fichiers générés par le convertisseur Word 2003 est **application/vnd.ms-word** et l'extension des noms de fichiers est .doc.  
   
 > [!IMPORTANT]  
->  Le [!INCLUDE[ofprword](../../includes/ofprword-md.md)] extension de rendu 2003 est déconseillée. Pour plus d’informations, consultez [fonctionnalités déconseillées dans SQL Server Reporting Services dans SQL Server 2014](../deprecated-features-in-sql-server-reporting-services-ssrs.md).  
+>  Le [!INCLUDE[ofprword](../../includes/ofprword-md.md)] extension de rendu 2003 est déconseillée. Pour plus d’informations, consultez [déconseillées dans SQL Server Reporting Services dans SQL Server 2014](../deprecated-features-in-sql-server-reporting-services-ssrs.md).  
   
  Après avoir exporté le rapport dans un document Word, vous pouvez modifier le contenu de votre rapport et concevoir des rapports de style document comme des étiquettes de publipostage, des bons de commande ou des lettres types.  
   
@@ -140,14 +140,14 @@ ms.locfileid: "36141993"
   
 -   Une fois le rapport exporté, Word le pagine à nouveau. Cela peut entraîner l'ajout de sauts de page supplémentaires dans le rapport rendu.  
   
--   Word ne répète pas les lignes d’en-tête en page deux et suivantes, même si vous définissez la propriété RepeatOnNewPage de la ligne d’en-tête statique dans un tableau matriciel (table, matrice ou liste) sur `True`. Vous pouvez définir des sauts de page explicites dans votre rapport pour forcer l'apparition de lignes d'en-tête sur les nouvelles pages. Toutefois, étant donné que Word applique sa propre pagination au rapport rendu exporté vers Word, les résultats peuvent varier et la ligne d'en-tête peut ne pas se répéter comme prévu. La ligne d'en-tête statique est la ligne qui contient les en-têtes de colonne.  
+-   Word ne répète pas les lignes d’en-tête en page deux et suivantes, même si vous définissez la propriété RepeatOnNewPage de la ligne d’en-tête statique dans un tableau matriciel (table, matrice ou liste) `True`. Vous pouvez définir des sauts de page explicites dans votre rapport pour forcer l'apparition de lignes d'en-tête sur les nouvelles pages. Toutefois, étant donné que Word applique sa propre pagination au rapport rendu exporté vers Word, les résultats peuvent varier et la ligne d'en-tête peut ne pas se répéter comme prévu. La ligne d'en-tête statique est la ligne qui contient les en-têtes de colonne.  
   
 -   Les zones de texte s'agrandissent lorsqu'elles contiennent des espaces insécables.  
   
 -   Lorsque du texte est exporté vers Word, le texte avec les ornements de police dans certaines polices peut générer des glyphes inattendus ou manquants dans le rapport rendu.  
   
 ##  <a name="WordBenefits"></a> Avantages de l'utilisation du convertisseur Word  
- En plus de rendre les fonctionnalités qui sont nouvelles dans [!INCLUDE[ofprword](../../includes/ofprword-md.md)] 2007-2010 disponibles pour l’exportation des rapports, les fichiers *.docx des rapports exportés ont tendance à être plus petite. Les rapports exportés à l'aide du convertisseur Word sont généralement beaucoup plus petits que les mêmes rapports exportés à l'aide du convertisseur Word 2003.  
+ En plus de rendre les fonctionnalités qui sont nouvelles dans [!INCLUDE[ofprword](../../includes/ofprword-md.md)] 2007-2010 disponibles pour l’exportation des rapports, les fichiers *.docx des rapports exportés ont tendance à être plus petits. Les rapports exportés à l'aide du convertisseur Word sont généralement beaucoup plus petits que les mêmes rapports exportés à l'aide du convertisseur Word 2003.  
   
 ## <a name="backward-compatibility-of-exported-reports"></a>Compatibilité descendante des rapports exportés  
  Vous pouvez sélectionner un mode de compatibilité Word et définir les options de compatibilité. Le convertisseur Word crée des documents avec le mode de compatibilité activé. En enregistrant de nouveau les documents avec le mode de compatibilité désactivé, il est possible que la mise en page du document soit modifiée.  
@@ -181,9 +181,9 @@ ms.locfileid: "36141993"
   
  `<Extension Name="WORD" Type="Microsoft.ReportingServices.Rendering.WordRenderer.WordDocumentRenderer,Microsoft.ReportingServices.WordRendering" Visible="false"/>`  
   
- L'extension WORDOPENXML définit le convertisseur Word pour [!INCLUDE[ofprword](../../includes/ofprword-md.md)] 2007-2010. L'extension WORD définit la version [!INCLUDE[ofprword](../../includes/ofprword-md.md)] 2003. `Visible = “false”` indique que le convertisseur Word 2003 est masqué. Pour plus d’informations, consultez [fichier de Configuration RSReportServer](../report-server/rsreportserver-config-configuration-file.md) et [RSReportDesigner Configuration File](../report-server/rsreportdesigner-configuration-file.md).  
+ L'extension WORDOPENXML définit le convertisseur Word pour [!INCLUDE[ofprword](../../includes/ofprword-md.md)] 2007-2010. L'extension WORD définit la version [!INCLUDE[ofprword](../../includes/ofprword-md.md)] 2003. `Visible = “false”` indique que le convertisseur Word 2003 est masqué. Pour plus d’informations, consultez [fichier de Configuration RSReportServer](../report-server/rsreportserver-config-configuration-file.md) et [fichier de Configuration RSReportDesigner](../report-server/rsreportdesigner-configuration-file.md).  
   
-##  <a name="Differences"></a> Différences entre les convertisseurs Word et Word 2003  
+##  <a name="Differences"></a> Différences entre les convertisseurs de 2003 de Word et de Word  
  Les rapports rendus avec les convertisseurs Word ou Word 2003 peuvent être très facilement confondus. Toutefois, vous pouvez remarquer des différences mineures entre les deux formats Word ou Word 2003.  
   
 ##  <a name="DeviceInfo"></a> Paramètres d'informations de périphérique  
@@ -192,7 +192,7 @@ ms.locfileid: "36141993"
 ## <a name="see-also"></a>Voir aussi  
  [Pagination dans Reporting Services &#40;Générateur de rapports et SSRS&#41;](../report-design/pagination-in-reporting-services-report-builder-and-ssrs.md)   
  [Comportements de rendu &#40;Générateur de rapports et SSRS&#41;](../report-design/rendering-behaviors-report-builder-and-ssrs.md)   
- [Fonctionnalité interactive des différentes Extensions de rendu de rapport &#40;rapport Générateur et SSRS&#41;](interactive-functionality-different-report-rendering-extensions.md)   
+ [Fonctionnalité interactive des différentes Extensions de rendu de rapport &#40;Générateur de rapports et SSRS&#41;](interactive-functionality-different-report-rendering-extensions.md)   
  [Rendu des éléments de rapport &#40;Générateur de rapports et SSRS&#41;](../report-design/rendering-report-items-report-builder-and-ssrs.md)   
  [Tables, matrices et listes &#40;Générateur de rapports et SSRS&#41;](../report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)  
   

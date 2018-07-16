@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - expressions [Integration Services], data types
 - data types [Integration Services], expressions
@@ -16,13 +16,13 @@ ms.assetid: c296ad10-4080-4988-8c2c-2c250f7a1884
 caps.latest.revision: 53
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: a06b8864c458817185223a9ee45c3dd25c4a2d33
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 3cd26c9c3d81ffd308ca013915f924f9cf88d7e1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36143945"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37237139"
 ---
 # <a name="integration-services-data-types-in-expressions"></a>Types de données Integration Services dans les expressions
   L'évaluateur d'expression utilise des types de données [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] . Lorsque des données entrent dans un flux de données d'un package [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] , le moteur de flux de données convertit toutes les données de colonne vers un type de données [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] et les données de colonne utilisées par une expression ont déjà un type de données [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] . Les expressions utilisées dans les transformations de fractionnement conditionnel et de colonne dérivée peuvent référencer des colonnes car elles font partie d'un flux de données qui comprend des données de colonne.  
@@ -51,23 +51,23 @@ ms.locfileid: "36143945"
 > [!NOTE]  
 >  Les valeurs booléennes ne sont pas des nombres mais des valeurs logiques. Bien que les valeurs booléennes peuvent apparaître sous la forme de nombres dans certains environnements, elles ne sont pas stockées en tant que tels et divers langages de programmation les représentent de manière différente en tant que valeurs numériques, notamment les méthodes .NET Framework.  
 >   
->  Par exemple, les fonctions de conversion disponibles dans Visual Basic convertissent la valeur `True` en -1 ; toutefois, la méthode `System.Convert.ToInt32` du .NET Framework convertit `True` en +1. Le [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] langage d’Expression convertit `True` -1.  
+>  Par exemple, les fonctions de conversion disponibles dans Visual Basic convertissent la valeur `True` en -1 ; toutefois, la méthode `System.Convert.ToInt32` du .NET Framework convertit `True` en +1. Le [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] langage d’Expression convertit `True` sur -1.  
 >   
 >  Pour éviter des erreurs ou des résultats inattendus, n'écrivez pas de code fondé sur des valeurs numériques précises pour les valeurs `True` et `False`. Si possible, limitez l'utilisation de variables booléennes aux valeurs logiques pour lesquelles elles sont conçues.  
   
  Pour plus d'informations, consultez les rubriques suivantes :  
   
--   [== &#40;Égal&#41; &#40;Expression SSIS&#41;](equal-ssis-expression.md)  
+-   [== &#40;Égal&#41; &#40;SSIS Expression&#41;](equal-ssis-expression.md)  
   
 -   [\!= &#40;Non égal&#41; &#40;expression SSIS&#41;](unequal-ssis-expression.md)  
   
--   [&#62;&#40;Supérieur&#41; &#40;Expression SSIS&#41;](greater-than-ssis-expression.md)  
+-   [&#62;&#40;Supérieur&#41; &#40;SSIS Expression&#41;](greater-than-ssis-expression.md)  
   
--   [&#60;&#40;Moins&#41; &#40;Expression SSIS&#41;](less-than-ssis-expression.md)  
+-   [&#60;&#40;Inférieure à&#41; &#40;SSIS Expression&#41;](less-than-ssis-expression.md)  
   
--   [&#62;= &#40;Supérieur ou égal à&#41; &#40;Expression SSIS&#41;](greater-than-or-equal-to-ssis-expression.md)  
+-   [&#62;= &#40;Supérieur ou égal à&#41; &#40;SSIS Expression&#41;](greater-than-or-equal-to-ssis-expression.md)  
   
--   [&#60;= &#40;Inférieure ou égale à&#41; &#40;Expression SSIS&#41;](less-than-or-equal-to-ssis-expression.md)  
+-   [&#60;= &#40;Inférieure ou égale à&#41; &#40;SSIS Expression&#41;](less-than-or-equal-to-ssis-expression.md)  
   
  Une fonction qui utilise un seul argument retourne un résultat dont le type de données est celui de l'argument, sauf dans les cas suivants :  
   
@@ -105,7 +105,7 @@ ms.locfileid: "36143945"
  Les résultats de nombreuses opérations et fonctions ont des types de données prédéterminés. Il peut s'agir du type de données de l'argument ou du type de données vers lequel l'évaluateur d'expression convertit le résultat. Par exemple, le résultat d'un opérateur logique OU (||) est toujours booléen, le résultat de la fonction ABS a le type de données numérique de l'argument et le résultat de la multiplication est du plus petit type de données numérique pouvant contenir ce résultat sans perte de données. Pour plus d’informations sur les types de données des résultats, consultez [Opérateurs &#40;expression SSIS&#41;](operators-ssis-expression.md) et [Fonctions &#40;expression SSIS&#41;](functions-ssis-expression.md).  
   
 ## <a name="related-tasks"></a>Related Tasks  
- [Utiliser une Expression dans un composant de flux de données](../use-an-expression-in-a-data-flow-component.md)  
+ [Utiliser une expression dans un composant de flux de données](../use-an-expression-in-a-data-flow-component.md)  
   
 ## <a name="related-content"></a>Contenu associé  
   

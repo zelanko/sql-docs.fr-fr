@@ -1,5 +1,5 @@
 ---
-title: Tâches et procédures de requête d’exploration de données | Documents Microsoft
+title: Tâches et procédures de requête d’exploration de données | Microsoft Docs
 ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - mining models [Analysis Services], how-to topics
 ms.assetid: 1bc2a775-6e62-4c66-a53c-201f2ea66295
 caps.latest.revision: 15
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 15adaa8227a80d04cbdbdaa379dfccc4f2f03acf
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: e79d4ee05472de8be071cd47c1868d649f7e247b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36142927"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37257455"
 ---
 # <a name="data-mining-query-tasks-and-how-tos"></a>Tâches de requête d’exploration de données et procédures
   La capacité de créer des requêtes est essentielle si vous devez utiliser vos modèles d'exploration de données. Cette section fournit des liens vers des exemples de création de requêtes sur un modèle d’exploration de données à l’aide des outils fournis dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)][!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. Pour plus d’informations sur ce qu’est une requête d’exploration de donnée, ou sur les différents types de requêtes que vous pouvez créer, consultez [Requêtes d’exploration de données](data-mining-queries.md).  

@@ -1,5 +1,5 @@
 ---
-title: Élément MembersWithData (ASSL) | Documents Microsoft
+title: Élément MembersWithData (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - MembersWithData element
 ms.assetid: 845087a2-b12d-4344-a8be-85ca61155296
 caps.latest.revision: 33
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 5c0311a774b225234aeb63d4d67680e12b693b0d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: a0c2e35549f4db2de489916ad1760954d4f6dfd5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36144586"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37218229"
 ---
 # <a name="memberswithdata-element-assl"></a>Élément MembersWithData (ASSL)
   Détermine si les membres de données pour les membres non-feuilles de l'attribut parent sont affichés ou non.  
@@ -71,7 +71,7 @@ ms.locfileid: "36144586"
 |*NonLeafDataHidden*|Les données non-feuilles sont masquées.|  
 |*NonLeafDataVisible*|Les données non-feuilles sont visibles.|  
   
- L’énumération qui correspond aux valeurs autorisées pour `MembersWithData` dans l’objet d’objets AMO (Analysis Management) est modèle <xref:Microsoft.AnalysisServices.MembersWithData>.  
+ L’énumération qui correspond aux valeurs autorisées pour `MembersWithData` dans l’objet d’objets AMO (Analysis Management) modèle est <xref:Microsoft.AnalysisServices.MembersWithData>.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Élément MembersWithDataCaption &#40;ASSL&#41;](caption-element-assl.md)   

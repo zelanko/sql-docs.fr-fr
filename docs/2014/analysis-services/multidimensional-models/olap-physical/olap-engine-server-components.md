@@ -1,5 +1,5 @@
 ---
-title: Composants de serveur du moteur OLAP | Documents Microsoft
+title: Composants de serveur du moteur OLAP | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -17,18 +17,18 @@ helpviewer_keywords:
 - server architecture [Analysis Services]
 ms.assetid: 5193c976-9dcd-459c-abba-8c3c44e7a7f2
 caps.latest.revision: 39
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: a3486ed70d6da2d2091da02cf7e2a55fcd2b1d1b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 2471838c89fa2cfb6ded22c9daa8ad9ca6e1cfd8
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36041233"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37224119"
 ---
 # <a name="olap-engine-server-components"></a>Composants serveur du moteur OLAP
-  Le composant serveur de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] est la **msmdsrv.exe** application, qui s’exécute comme un service Windows. Cette application intègre des composants de sécurité, un composant d'écoute XMLA (XML for Analysis), un composant processeur de requêtes et de nombreux autres composants internes qui permettent d'effectuer les actions suivantes :  
+  Le composant serveur de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] est la **msmdsrv.exe** application qui s’exécute comme un service Windows. Cette application intègre des composants de sécurité, un composant d'écoute XMLA (XML for Analysis), un composant processeur de requêtes et de nombreux autres composants internes qui permettent d'effectuer les actions suivantes :  
   
 -   Analyser des instructions reçues des clients  
   
@@ -53,10 +53,10 @@ ms.locfileid: "36041233"
   
  L'illustration suivante présente l'architecture des composants [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)], y compris tous les éléments majeurs s'exécutant dans l'instance [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] et tous les composants utilisateur qui interagissent avec l'instance. L'illustration montre également que la seule façon d'accéder à l'instance est d'utiliser le composant d'écoute XMLA (XML for Analysis), à l'aide de HTTP ou TCP.  
   
- ![Diagramme d’Architecture de Analysis Services](../../../analysis-services/dev-guide/media/analysisservicessystemarchitecture.gif "de diagramme d’Architecture système Analysis Services")  
+ ![Diagramme d’Architecture de Analysis Services](../../../analysis-services/dev-guide/media/analysisservicessystemarchitecture.gif "Analysis Services diagramme d’Architecture")  
   
 ## <a name="xmla-listener"></a>Écouteur XMLA  
- Le composant écouteur XMLA gère toutes les communications XMLA entre [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] et ses clients. Le [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] `Port` paramètre de configuration dans le fichier msmdsrv.ini peut être utilisé pour spécifier un port sur lequel un [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] est à l’écoute de l’instance. La valeur 0 dans ce fichier indique qu' [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] écoute sur le port par défaut. Sauf spécification contraire, [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] utilise par défaut les ports TCP suivants :  
+ Le composant écouteur XMLA gère toutes les communications XMLA entre [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] et ses clients. Le [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] `Port` paramètre de configuration dans le fichier msmdsrv.ini peut être utilisé pour spécifier un port sur lequel un [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] instance écoute. La valeur 0 dans ce fichier indique qu' [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] écoute sur le port par défaut. Sauf spécification contraire, [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] utilise par défaut les ports TCP suivants :  
   
 |d’|Description|  
 |----------|-----------------|  
@@ -67,7 +67,7 @@ ms.locfileid: "36041233"
  Consultez [configurer le pare-feu Windows pour autoriser l’accès à Analysis Services](../../instances/configure-the-windows-firewall-to-allow-analysis-services-access.md) pour plus d’informations.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Objet de règles d’affectation de noms &#40;Analysis Services&#41;](object-naming-rules-analysis-services.md)   
+ [Objet de règles de nommage &#40;Analysis Services&#41;](object-naming-rules-analysis-services.md)   
  [Architecture physique &#40;Analysis Services - données multidimensionnelles&#41;](understanding-microsoft-olap-physical-architecture.md)   
  [Architecture logique &#40;Analysis Services - données multidimensionnelles&#41;](../olap-logical/understanding-microsoft-olap-logical-architecture.md)  
   

@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - models [Master Data Services], effective permissions
 - permissions [Master Data Services], model and member overlaps
 - members [Master Data Services], effective permissions
 ms.assetid: 9fd7a555-43bf-4796-a8b6-1ca63a291216
 caps.latest.revision: 5
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: dd9706ee95376500993089a496f216c2fe113b27
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: 468d23a4bddd0df301d263e6c2fd6e22a167ef27
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36144528"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37219679"
 ---
 # <a name="overlapping-model-and-member-permissions-master-data-services"></a>Chevauchement des autorisations de modèle et de membre (Master Data Services)
   Une autorisation attribuée à un membre et une autorisation attribuée à un objet de modèle peuvent se chevaucher. Lorsque des chevauchements se produisent, l'autorisation la plus restrictive entre en vigueur.  
@@ -54,16 +54,16 @@ ms.locfileid: "36144528"
   
  Sous l'onglet **Modèles** , l'attribut Subcategory a l'autorisation **Mise à jour** attribuée.  
   
- Sur le **membres de hiérarchie** onglet, le nœud de sous-catégorie Mountain Bikes dans une hiérarchie dérivée est explicitement assigné **en lecture seule** autorisation.  
+ Sur le **membres de hiérarchie** onglet, le nœud de sous-catégorie Mountain Bikes dans une hiérarchie dérivée est explicitement affecté **en lecture seule** autorisation.  
   
- Résultat : Dans **Explorer**, l’utilisateur a **en lecture seule** autorisation aux valeurs d’attribut Subcategory des membres dans le nœud Mountain Bikes. Tous les autres membres et attributs sont masqués.  
+ Résultat : Dans **Explorer**, l’utilisateur a **en lecture seule** autorisation sur les valeurs d’attribut Subcategory des membres dans le nœud Mountain Bikes. Tous les autres membres et attributs sont masqués.  
   
  ![mds_conc_overlap_model_example_2](../../2014/master-data-services/media/mds-conc-overlap-model-example-2.gif "mds_conc_overlap_model_example_2")  
   
 ## <a name="example-3"></a>Exemple 3  
  ![mds_conc_overlap_model_3](../../2014/master-data-services/media/mds-conc-overlap-model-3.gif "mds_conc_overlap_model_3")  
   
- Sur le **modèles** onglet, l’attribut Subcategory a **en lecture seule** autorisation affectée.  
+ Sur le **modèles** onglet, l’attribut Subcategory a **en lecture seule** autorisation attribuée.  
   
  Sous l'onglet **Membres de hiérarchie** , le nœud de sous-catégorie Mountain Bikes dans une hiérarchie dérivée a l'autorisation **Mise à jour** attribuée explicitement.  
   
@@ -72,7 +72,7 @@ ms.locfileid: "36144528"
  ![mds_conc_overlap_model_example_2](../../2014/master-data-services/media/mds-conc-overlap-model-example-2.gif "mds_conc_overlap_model_example_2")  
   
 ## <a name="see-also"></a>Voir aussi  
- [Comment les autorisations sont déterminées &#40;Master Data Services&#41;](how-permissions-are-determined-master-data-services.md)   
+ [Mode de détermination des autorisations &#40;Master Data Services&#41;](how-permissions-are-determined-master-data-services.md)   
  [Chevauchement des autorisations des utilisateurs et des groupes &#40;Master Data Services&#41;](../../2014/master-data-services/overlapping-user-and-group-permissions-master-data-services.md)  
   
   

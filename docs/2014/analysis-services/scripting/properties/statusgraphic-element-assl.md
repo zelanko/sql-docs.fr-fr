@@ -1,5 +1,5 @@
 ---
-title: Élément StatusGraphic (ASSL) | Documents Microsoft
+title: Élément StatusGraphic (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - StatusGraphic element
 ms.assetid: 14b365bc-924d-4791-ad4a-a38155fec42e
 caps.latest.revision: 36
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: c551e084d833dff17b7d6c1ab46b398cf6f62313
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 12d175d20c562fd9c0df30941ded999988fed976
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36151975"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37215959"
 ---
 # <a name="statusgraphic-element-assl"></a>Élément StatusGraphic (ASSL)
   Contient la représentation graphique recommandée de l’état de la [Kpi](../objects/kpi-element-assl.md) élément.  
@@ -66,8 +66,8 @@ ms.locfileid: "36151975"
   
 |Valeur|Description|  
 |-----------|-----------------|  
-|*Feu de circulation-simple*|Feu de circulation (unique)|  
-|*Feu de circulation-plusieurs*|Feu de circulation (multiple)|  
+|*Feu de circulation - unique*|Feu de circulation (unique)|  
+|*Feu de circulation - plusieurs*|Feu de circulation (multiple)|  
 |*Panneaux de signalisation*|Panneaux de signalisation|  
 |*Jauge - croissant*|Jauge|  
 |*Jauge - décroissant*|Jauge inversée|  
@@ -75,7 +75,7 @@ ms.locfileid: "36151975"
 |*Cylindre*|Cylindre|  
 |*Émoticône*|Visage|  
   
- L’élément qui correspond au parent de `StatusGraphic` dans l’objet d’objets AMO (Analysis Management) est modèle <xref:Microsoft.AnalysisServices.Kpi>.  
+ L’élément qui correspond au parent de `StatusGraphic` dans l’objet d’objets AMO (Analysis Management) modèle est <xref:Microsoft.AnalysisServices.Kpi>.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Propriétés &#40;ASSL&#41;](properties-assl.md)  

@@ -1,5 +1,5 @@
 ---
-title: Type de données DrillThroughAction (ASSL) | Documents Microsoft
+title: Type de données DrillThroughAction (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - DrillThroughAction data type
 ms.assetid: e212d575-a0d7-4548-92b4-33542ef59034
 caps.latest.revision: 37
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: dfdaf05f2e35c41d99ca61f3cac3624ba28cc82d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 8142fd9978ae456b03b4a0381e2ab9261cdc8c4d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36040531"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37241439"
 ---
 # <a name="drillthroughaction-data-type-assl"></a>Type de données DrillThroughAction (ASSL)
   Définit un type de données dérivé représentant une action d'extraction.  
@@ -65,6 +65,6 @@ ms.locfileid: "36040531"
  L’élément correspondant dans le modèle d’objet objets AMO (Analysis Management) est <xref:Microsoft.AnalysisServices.DrillThroughAction>.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Types de données de script langage XML Analysis Services &#40;ASSL&#41;](analysis-services-scripting-language-xml-data-types-assl.md)  
+ [Types Analysis Services Scripting Language XML données &#40;ASSL&#41;](analysis-services-scripting-language-xml-data-types-assl.md)  
   
   

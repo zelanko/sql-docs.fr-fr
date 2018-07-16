@@ -1,5 +1,5 @@
 ---
-title: Élément RelationshipType (ASSL) | Documents Microsoft
+title: Élément RelationshipType (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - RelationshipType element
 ms.assetid: 72e1ab0e-a95d-4ebe-857d-21de1bf9fe03
 caps.latest.revision: 34
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: a2e5b5ec9e9591a45a80f099397ed6568a986313
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 21ddd4506a2c2a6168779aa40735eb7177406597
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36153331"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37271595"
 ---
 # <a name="relationshiptype-element-assl"></a>Élément RelationshipType (ASSL)
   Indique si les relations de membres pour un [AttributeRelationship](../objects/attributerelationship-element-assl.md) peut être modifié.  
@@ -71,7 +71,7 @@ ms.locfileid: "36153331"
   
  Par exemple, si `ZipCode` ne peut pas passer d’un `City` vers un autre, la relation à partir de `ZipCode` à `City` est marqué comme *rigide*.  
   
- L’énumération qui correspond aux valeurs autorisées pour `RelationshipType` dans l’objet d’objets AMO (Analysis Management) est modèle <xref:Microsoft.AnalysisServices.RelationshipType>.  
+ L’énumération qui correspond aux valeurs autorisées pour `RelationshipType` dans l’objet d’objets AMO (Analysis Management) modèle est <xref:Microsoft.AnalysisServices.RelationshipType>.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Attributs et hiérarchies d’attributs](../../multidimensional-models-olap-logical-dimension-objects/attributes-and-attribute-hierarchies.md)   

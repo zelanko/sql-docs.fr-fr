@@ -1,5 +1,5 @@
 ---
-title: Élément OverrideBehavior (ASSL) | Documents Microsoft
+title: Élément OverrideBehavior (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - OverrideBehavior element
 ms.assetid: 6a5b361a-6061-4b73-b1a7-1237fb77606c
 caps.latest.revision: 14
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: e36223c59306b158812d9bdc18fccd3660c54f0c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: aecabbb04cefa1abf706c5f725c3a7f8e41aad07
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36142353"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37241369"
 ---
 # <a name="overridebehavior-element-assl"></a>Élément OverrideBehavior (ASSL)
   Indique le comportement de substitution de la relation décrite par un [AttributeRelationship](../objects/attributerelationship-element-assl.md) élément.  
@@ -69,7 +69,7 @@ ms.locfileid: "36142353"
 |*Fort*|Indique le comportement de substitution de la relation décrite par un élément AttributeRelationship. Détermine comment le positionnement sur un attribut affecte la position de l'autre.|  
 |*Aucun*|Aucun effet.|  
   
- L’énumération qui correspond aux valeurs autorisées pour `OverrideBehavior` dans l’objet d’objets AMO (Analysis Management) est modèle <xref:Microsoft.AnalysisServices.OverrideBehavior>.  
+ L’énumération qui correspond aux valeurs autorisées pour `OverrideBehavior` dans l’objet d’objets AMO (Analysis Management) modèle est <xref:Microsoft.AnalysisServices.OverrideBehavior>.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Attributs et hiérarchies d’attributs](../../multidimensional-models-olap-logical-dimension-objects/attributes-and-attribute-hierarchies.md)   

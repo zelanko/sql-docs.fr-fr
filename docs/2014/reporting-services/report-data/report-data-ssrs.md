@@ -8,29 +8,29 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: e22b7c24-edab-42d6-82f6-95068e1c6043
 caps.latest.revision: 14
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: e2e2d3940aed13a6225bceb6f8e28e53cbbfeee4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: 1f8b9d8587c41a45ee60203debee778a88714dd9
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36042391"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37214789"
 ---
 # <a name="report-data-ssrs"></a>Données des rapports (SSRS)
   Les données de rapport peuvent provenir de plusieurs sources de données de votre organisation. Votre première étape lors de la conception d'un rapport consiste à créer des sources de données et des datasets qui représentent les données de rapport sous-jacentes. Chaque source de données inclut des informations de connexion de données. Chaque dataset inclut une commande de requête qui définit le jeu de champs à utiliser comme données d'une source de données. Pour visualiser des données de chaque dataset, ajoutez une région de données, telle qu'une table, une matrice, un graphique ou une carte. Lorsque le rapport est traité, les requêtes s'exécutent sur la source de données, et chaque région de données s'étend autant que nécessaire pour afficher les résultats de la requête pour le dataset.  
   
 ##  <a name="BkMk_ReportDataTerms"></a> Termes  
- If you are unfamiliar with [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] concepts, review the following terms in [Reporting Services Concepts &#40;SSRS&#41;](../reporting-services-concepts-ssrs.md): *data connection*, *embedded data sources*, *shared data sources*, *embedded datasets*, *shared datasets*, *dataset queries*, *report parts*, and *data alerts*.  
+ Si vous n’êtes pas familiarisé avec [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] concepts, passez en revue les termes suivants dans [Concepts de Reporting Services &#40;SSRS&#41;](../reporting-services-concepts-ssrs.md): *connexion de données*, *des données incorporées sources*, *sources de données partagées*, *datasets incorporés*, *datasets partagés*, *requêtes de dataset* , *parties de rapport*, et *alertes de données*.  
   
 ##  <a name="BkMk_ReportDataTips"></a> Conseils pour spécifier les données de rapport  
  Utilisez les informations suivantes pour concevoir votre stratégie de données de rapport.  
   
--   **Sources de données** Les sources de données peuvent être publiées et gérées indépendamment des rapports sur un serveur de rapports ou un site SharePoint. Pour chaque source de données, vous ou le propriétaire de la base de données pouvez gérer les informations de connexion dans un seul emplacement. Les informations d'identification de la source de données sont stockées de manière sécurisée sur le serveur de rapports ; n'incluez pas de mots de passe dans la chaîne de connexion. Vous pouvez rediriger une source de données d'un serveur de test vers un serveur de production. Vous pouvez désactiver une source de données pour interrompre tous les rapports qui l'utilisent. Pour obtenir la liste des sources de données pris en charge, consultez [des connexions de données, les Sources de données et les chaînes de connexion dans Reporting Services](../data-connections-data-sources-and-connection-strings-in-reporting-services.md).  
+-   **Sources de données** Les sources de données peuvent être publiées et gérées indépendamment des rapports sur un serveur de rapports ou un site SharePoint. Pour chaque source de données, vous ou le propriétaire de la base de données pouvez gérer les informations de connexion dans un seul emplacement. Les informations d'identification de la source de données sont stockées de manière sécurisée sur le serveur de rapports ; n'incluez pas de mots de passe dans la chaîne de connexion. Vous pouvez rediriger une source de données d'un serveur de test vers un serveur de production. Vous pouvez désactiver une source de données pour interrompre tous les rapports qui l'utilisent. Pour obtenir la liste des sources de données prises en charge, consultez [des connexions de données, les Sources de données et les chaînes de connexion dans Reporting Services](../data-connections-data-sources-and-connection-strings-in-reporting-services.md).  
   
 -   **Datasets** Les datasets peuvent être publiés et gérés indépendamment des rapports ou des sources de données partagées desquels ils dépendent. Vous ou le propriétaire de la base de données pouvez fournir des requêtes optimisées pour les auteurs de rapport à utiliser. Lorsque vous modifiez la requête, tous les rapports qui se servent des datasets partagés utilisent la requête mise à jour. Vous pouvez autoriser la mise en cache du dataset pour améliorer les performances. Vous pouvez planifier la mise en cache de requête à un moment donné ou utiliser une planification partagée.  
   
@@ -38,7 +38,7 @@ ms.locfileid: "36042391"
   
 -   **Filtrer les données** Les données de rapport peuvent être filtrées dans la requête ou dans le rapport. Vous pouvez utiliser des datasets et interroger des variables pour créer des paramètres en cascade et fournir à l'utilisateur la possibilité de limiter les choix parmi des milliers de sélections à un nombre plus gérable. Vous pouvez filtrer les données dans une table ou un graphique en fonction des valeurs des paramètres ou d'autres valeurs que vous spécifiez.  
   
--   **Paramètres** Les commandes de requête de datasets qui incluent des variables de requêtes créent automatiquement les paramètres de rapport correspondants. Vous pouvez également créer des paramètres manuellement. Lorsque vous affichez un rapport, la barre d'outils Rapport affiche les paramètres. Les utilisateurs peuvent sélectionner des valeurs pour contrôler l'apparence des données de rapport ou du rapport. Pour personnaliser les données de rapport pour un public donné, vous pouvez créer des jeux de paramètres de rapport avec les valeurs par défaut différentes liés à la même définition de rapport, ou utiliser la fonction intégrée `UserID` champ. Pour plus d’informations, consultez [Paramètres de rapport &#40;Générateur de rapports et Concepteur de rapports&#41;](../report-design/report-parameters-report-builder-and-report-designer.md) et [Collections intégrées dans les expressions &#40;Générateur de rapports et SSRS&#41;](../report-design/built-in-collections-in-expressions-report-builder.md).  
+-   **Paramètres** Les commandes de requête de datasets qui incluent des variables de requêtes créent automatiquement les paramètres de rapport correspondants. Vous pouvez également créer des paramètres manuellement. Lorsque vous affichez un rapport, la barre d'outils Rapport affiche les paramètres. Les utilisateurs peuvent sélectionner des valeurs pour contrôler l'apparence des données de rapport ou du rapport. Pour personnaliser les données de rapport pour des publics particuliers, vous pouvez créer des jeux de paramètres de rapport avec différentes valeurs par défaut liés à la même définition de rapport, ou utiliser la fonction intégrée `UserID` champ. Pour plus d’informations, consultez [Paramètres de rapport &#40;Générateur de rapports et Concepteur de rapports&#41;](../report-design/report-parameters-report-builder-and-report-designer.md) et [Collections intégrées dans les expressions &#40;Générateur de rapports et SSRS&#41;](../report-design/built-in-collections-in-expressions-report-builder.md).  
   
 -   **Alertes de données** Après la publication d'un rapport, vous pouvez créer des alertes sur des données de rapport et recevoir des messages électroniques lorsqu'elle satisfait aux règles que vous spécifiez.  
   
@@ -61,7 +61,7 @@ ms.locfileid: "36042391"
   
 -   Comprenez les architectures et les outils client/serveur de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Par exemple, dans le Concepteur de rapports, créez des rapports sur un ordinateur client qui utilise les types de sources de données intégrés. Lorsque vous publiez un rapport, les types de source de données doivent être pris en charge sur le serveur de rapports ou sur le site SharePoint.  Pour plus d’informations, consultez [Sources de données prises en charge par Reporting Services &#40;SSRS&#41;](../create-deploy-and-manage-mobile-and-paginated-reports.md).  
   
--   Les sources de données et les datasets sont créés dans un rapport et publiés sur un serveur de rapports ou un site SharePoint à partir d'un outil de création client. Les sources de données peuvent être créées directement sur le serveur de rapports. Une fois qu'ils sont publiés, vous pouvez configurer les informations d'identification et d'autres propriétés sur le serveur de rapports. Pour plus d’informations, consultez [des connexions de données, les Sources de données et les chaînes de connexion dans Reporting Services](../data-connections-data-sources-and-connection-strings-in-reporting-services.md) et [outils des Services de création de rapports](../tools/reporting-services-tools.md).  
+-   Les sources de données et les datasets sont créés dans un rapport et publiés sur un serveur de rapports ou un site SharePoint à partir d'un outil de création client. Les sources de données peuvent être créées directement sur le serveur de rapports. Une fois qu'ils sont publiés, vous pouvez configurer les informations d'identification et d'autres propriétés sur le serveur de rapports. Pour plus d’informations, consultez [des connexions de données, les Sources de données et les chaînes de connexion dans Reporting Services](../data-connections-data-sources-and-connection-strings-in-reporting-services.md) et [outils de Reporting Services](../tools/reporting-services-tools.md).  
   
 -   Les sources de données que vous pouvez utiliser dépendent des extensions de données de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] qui sont installées. La prise en charge des sources de données peut être différente selon l'outil de création client, la version du serveur de rapports et la plateforme de serveur de rapports. Pour plus d’informations, consultez [Sources de données prises en charge par Reporting Services &#40;SSRS&#41;](../create-deploy-and-manage-mobile-and-paginated-reports.md).  
   
@@ -73,7 +73,7 @@ ms.locfileid: "36042391"
 |||  
 |-|-|  
 |**Tâches courantes**|**Liens**|  
-|Créer des connexions de données|[Connexions de données, les Sources de données et les chaînes de connexion dans Reporting Services](../data-connections-data-sources-and-connection-strings-in-reporting-services.md)|  
+|Créer des connexions de données|[Connexions de données, sources de données et chaînes de connexion dans Reporting Services](../data-connections-data-sources-and-connection-strings-in-reporting-services.md)|  
 |Créer des datasets et des requêtes|[Datasets incorporés dans le rapport et datasets partagés &#40;Générateur de rapports et SSRS&#41;](report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)|  
 |Gérer les sources de données après leur publication|[Gérer des sources de données de rapports](manage-report-data-sources.md)|  
 |Gérer des datasets partagés après leur publication|[Gérer des datasets partagés](manage-shared-datasets.md)|  

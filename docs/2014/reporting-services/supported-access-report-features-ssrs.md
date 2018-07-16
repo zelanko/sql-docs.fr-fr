@@ -1,5 +1,5 @@
 ---
-title: Prise en charge des fonctionnalités des états Access (SSRS) | Documents Microsoft
+title: Prise en charge des fonctionnalités des états Access (SSRS) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Report Designer [Reporting Services], Access reports
 - functions [Reporting Services]
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - modules [Reporting Services]
 ms.assetid: 7ffec331-6365-4c13-8e58-b77a48cffb44
 caps.latest.revision: 43
-author: douglaslM
+author: maggiesmsft
 ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: a3bb7caa0d570b83bb8b487a42fa2364731602d1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: b2beb25cee62fda3e3f71290d0f91a0a8954feed
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36040823"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37268475"
 ---
 # <a name="supported-access-report-features-ssrs"></a>Fonctionnalités des états Access prises en charge (SSRS)
   Lorsque vous importez un rapport dans le Concepteur de rapports, le processus d'importation convertit le rapport d'Access [!INCLUDE[msCoName](../includes/msconame-md.md)] en un fichier RDL (Report Definition Language) [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]. [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] prend en charge plusieurs fonctionnalités d'Access ; toutefois, puisqu'il existe des différences entre Access et [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)], certains éléments sont légèrement modifiés ou ne sont pas pris en charge. Cette rubrique décrit comment les fonctionnalités des états Access sont converties en mode RDL.  
@@ -35,7 +35,7 @@ ms.locfileid: "36040823"
 ## <a name="importing-access-reports"></a>Importation d'états Access  
  Certaines requêtes contiennent du code spécifique à Access. Ce code Access n'est pas importé avec l'état. De plus, si une requête contient des chaînes incorporées, l'état risque de ne pas s'importer correctement. Pour résoudre ce problème, remplacez les chaînes par un code de caractère. Par exemple, remplacez le caractère virgule (,) par CHAR(34).  
   
- Le processus d’importation ne transmet pas correctement le point-virgule ( ;) ou des caractères de balisage XML (\<, >, etc.) dans les informations de chaîne de connexion. Si une chaîne de connexion contient un point-virgule ou un caractère de balise XML, vous devez définir le mot de passe manuellement dans le nouveau rapport après l'importation de l'état.  
+ Le processus d’importation ne transmet pas correctement le point-virgule ( ;) ou les caractères de balisage XML (\<, >, etc.) dans les informations de chaîne de connexion. Si une chaîne de connexion contient un point-virgule ou un caractère de balise XML, vous devez définir le mot de passe manuellement dans le nouveau rapport après l'importation de l'état.  
   
  Le processus d'importation n'importe pas les paramètres de connexion ou de délais d'expiration généraux dans la chaîne de connexion. Il vous faudra peut-être régler ces paramètres après l'importation.  
   
@@ -53,7 +53,7 @@ ms.locfileid: "36040823"
  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] prend en charge les sources de données OLE DB, telles que [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Si vous importez des états d'un fichier de projet Access (.adp), la chaîne de connexion de la source de données est récupérée de la chaîne de connexion dans le fichier .adp. Si vous importez des états d'une base de données Access (.mdb ou .accdb), il est possible que la chaîne de connexion pointe sur la base de données Access et que vous deviez la corriger après l'importation des états. Si la source de données de l'état Access est une requête, les informations de la requête sont stockées sans modification dans le fichier RDL. Si la source de données de l'état Access est une table, le processus de conversion crée une requête basée sur le nom de la table et sur les champs de cette table.  
   
 ## <a name="reports-with-custom-modules"></a>Rapports avec modules personnalisés  
- S’il est personnalisé [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vbprvb](../includes/vbprvb-md.md)] code contenu dans des modules, il n’est pas converti. Si le Concepteur de rapports rencontre du code pendant le processus d’importation, un avertissement est généré et affiché dans le **liste des tâches** fenêtre.  
+ S’il existe personnalisé [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vbprvb](../includes/vbprvb-md.md)] code contenu dans des modules, il n’est pas converti. Si le Concepteur de rapports rencontre du code pendant le processus d’importation, un avertissement est généré et affiché dans le **liste des tâches** fenêtre.  
   
 ## <a name="report-controls"></a>Contrôles des états  
  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] prend en charge les contrôles Access suivants et les inclut dans les définitions de rapports converties.  
@@ -71,7 +71,7 @@ ms.locfileid: "36040823"
 |Contrôle personnalisé|Zone de liste|Cadre d'objet|Bouton d'option|  
 |Contrôle onglet|Bouton bascule|||  
   
- Si le Concepteur de rapports rencontre un de ces contrôles pendant le processus d’importation, un avertissement est généré et affiché dans le **liste des tâches** fenêtre.  
+ Si le Concepteur de rapports rencontre l’un de ces contrôles pendant le processus d’importation, un avertissement est généré et affiché dans le **liste des tâches** fenêtre.  
   
  Les autres contrôles comme ActiveX et Office Web Components ne sont pas importés. Par exemple, si un état Access contient un contrôle de graphique Office Web Components, il n'est pas converti lors de l'importation de l'état.  
   
@@ -298,7 +298,7 @@ ms.locfileid: "36040823"
  Dans une définition de rapport [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)], les rectangles peuvent contenir d'autres éléments de rapport. Tout rectangle plus large qu'un élément de rapport, et qui recouvre plus de 90 % de sa surface, devient le conteneur de cet élément de rapport.  
   
 ## <a name="bitmaps"></a>Images bitmap  
- Toutes les images bitmap qui sont incorporées dans un état sont converties au format .bmp lorsque l'état est importé, quel que soit leur format d'origine. Par exemple, si votre état inclut des fichiers .jpg et .gif, les ressources résultantes importées dans le rapport sont des fichiers .bmp. Les images bitmap sont stockées sous forme d'images incorporées dans le rapport. Pour plus d’informations sur les Images incorporées, consultez [Images &#40;le Générateur de rapports et SSRS&#41;](report-design/images-report-builder-and-ssrs.md).  
+ Toutes les images bitmap qui sont incorporées dans un état sont converties au format .bmp lorsque l'état est importé, quel que soit leur format d'origine. Par exemple, si votre état inclut des fichiers .jpg et .gif, les ressources résultantes importées dans le rapport sont des fichiers .bmp. Les images bitmap sont stockées sous forme d'images incorporées dans le rapport. Pour plus d’informations sur les Images incorporées, consultez [Images &#40;Générateur de rapports et SSRS&#41;](report-design/images-report-builder-and-ssrs.md).  
   
 ## <a name="other-considerations"></a>Autres considérations  
  Outre les éléments précédemment cités, les informations qui suivent s'appliquent aux états importés à partir d'Access :  

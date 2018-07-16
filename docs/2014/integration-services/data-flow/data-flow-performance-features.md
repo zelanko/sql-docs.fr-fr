@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Aggregate transformation [Integration Services]
 - Integration Services packages, performance
@@ -26,13 +26,13 @@ ms.assetid: c4bbefa6-172b-4547-99a1-a0b38e3e2b05
 caps.latest.revision: 65
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: e812b0f249749c51e482bd27760fa1d5fb7f882f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 5ef48d82f71441381fca8f8bb2e3d52fee8ea8b6
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36152168"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37287661"
 ---
 # <a name="data-flow-performance-features"></a>Fonctionnalités de performances de flux de données
   Cette rubrique offre des suggestions pour éviter les problèmes de performances les plus fréquents lors de la conception de packages [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Cette rubrique fournit également des informations sur les fonctionnalités et les outils que vous pouvez utiliser pour résoudre des problèmes liés aux performances des packages.  
@@ -76,7 +76,7 @@ ms.locfileid: "36152168"
  N'augmentez pas la taille du tampon au point de déclencher la pagination sur le disque. Cela aurait des effets plus néfastes sur les performances que la non-optimisation de la taille du tampon. Pour déterminer si la pagination est en cours, surveillez le compteur de performances « Mémoires tampon spoulées » dans le composant logiciel enfichable Performance de la console MMC ( [!INCLUDE[msCoName](../../includes/msconame-md.md)] Management Console).  
   
 ### <a name="configure-the-package-for-parallel-execution"></a>Configurer le package pour une exécution parallèle  
- L'exécution parallèle améliore les performances sur les ordinateurs dotés de plusieurs processeurs physiques ou logiques. Pour prendre en charge l’exécution parallèle de tâches différentes dans le package, [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] utilise deux propriétés : `MaxConcurrentExecutables` et `EngineThreads`.  
+ L'exécution parallèle améliore les performances sur les ordinateurs dotés de plusieurs processeurs physiques ou logiques. Pour prendre en charge l’exécution parallèle de différentes tâches dans le package, [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] utilise deux propriétés : `MaxConcurrentExecutables` et `EngineThreads`.  
   
 #### <a name="the-maxconcurrentexcecutables-property"></a>La propriété MaxConcurrentExcecutables  
  Le `MaxConcurrentExecutables` propriété est une propriété du package lui-même. Cette propriété définit le nombre de tâches pouvant s'exécuter simultanément. La valeur par défaut est -1, ce qui correspond au nombre de processeurs physiques ou logiques plus 2.  
@@ -84,7 +84,7 @@ ms.locfileid: "36152168"
  Pour comprendre comment cette propriété fonctionne, imaginez un package composé de trois tâches de flux de données. Si vous définissez `MaxConcurrentExecutables` à 3, les trois tâches de flux de données peuvent s’exécuter simultanément. Toutefois, supposez que chaque tâche de flux de données comporte 10 arborescences d'exécution de la source vers la destination. Le fait d'attribuer à `MaxConcurrentExecutables` la valeur 3 ne garantit pas que les arborescences d'exécution à l'intérieur de chaque tâche de flux de données s'exécuteront en parallèle.  
   
 #### <a name="the-enginethreads-property"></a>La propriété EngineThreads  
- La propriété `EngineThreads` est une propriété de chaque tâche de flux de données. Cette propriété définit le nombre de threads que le moteur de flux de données peut créer et exécuter en parallèle. Le `EngineThreads` propriété s’applique aussi bien aux threads sources que le moteur de flux de données crée pour les sources et les threads de travail que le moteur crée pour les transformations et destinations. Par conséquent, si vous attribuez à `EngineThreads` la valeur 10, le moteur pourra créer jusqu'à dix threads sources et dix threads de travail.  
+ La propriété `EngineThreads` est une propriété de chaque tâche de flux de données. Cette propriété définit le nombre de threads que le moteur de flux de données peut créer et exécuter en parallèle. Le `EngineThreads` propriété s’applique aussi aux threads sources que le moteur de flux de données crée pour les sources et les threads de travail que le moteur crée pour les transformations et destinations. Par conséquent, si vous attribuez à `EngineThreads` la valeur 10, le moteur pourra créer jusqu'à dix threads sources et dix threads de travail.  
   
  Pour comprendre comment cette propriété fonctionne, reprenez l'exemple de package composé de trois tâches de flux de données. Chaque tâche de flux de données contient dix arborescences d'exécution de la source vers la destination. Si vous attribuez à EngineThreads la valeur 10 sur chaque tâche de flux de données, les 30 arborescences d'exécution pourront potentiellement s'exécuter simultanément.  
   
@@ -103,14 +103,14 @@ ms.locfileid: "36152168"
  Pour construire une requête, vous pouvez taper la requête ou utiliser le générateur de requêtes.  
   
 > [!NOTE]  
->  Lorsque vous exécutez un package dans [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], l'onglet Progression du concepteur [!INCLUDE[ssIS](../../includes/ssis-md.md)] affiche une liste d'avertissements, y compris un avertissement pour toutes les colonnes de données qu'une source met à la disposition du flux de données mais qui ne sont pas utilisées ensuite par les composants de flux de données en aval. Vous pouvez utiliser le `RunInOptimizedMode` propriété à supprimer automatiquement ces colonnes.  
+>  Lorsque vous exécutez un package dans [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], l'onglet Progression du concepteur [!INCLUDE[ssIS](../../includes/ssis-md.md)] affiche une liste d'avertissements, y compris un avertissement pour toutes les colonnes de données qu'une source met à la disposition du flux de données mais qui ne sont pas utilisées ensuite par les composants de flux de données en aval. Vous pouvez utiliser le `RunInOptimizedMode` propriété pour supprimer automatiquement ces colonnes.  
   
 #### <a name="avoid-unnecessary-sorting"></a>Suppression des tris non nécessaires  
  Le tri est, par essence, une opération lente et la décision d'éviter un tri inutile peut améliorer les performances du flux de données du package.  
   
  Parfois, les données sources ont déjà été triées avant d'être utilisées par un composant en aval. Ce pré-triage peut avoir lieu soit parce que la requête SELECT utilise une clause ORDER BY, soit parce que les données ont été insérées dans la source par ordre de tri. Pour de telles données sources pré-triées, vous pouvez fournir un indicateur qui précise que les données sont triées afin d'éviter l'utilisation d'une transformation de tri pour satisfaire aux spécifications de tri de certaines transformations en aval. (Par exemple, les transformations de fusion et de jointure de fusion nécessitent des entrées triées). Pour fournir un indicateur qui précise que les données sont triées, vous devez effectuer les tâches suivantes :  
   
--   Définir le `IsSorted` propriété sur la sortie d’un composant de flux de données en amont `True`.  
+-   Définir le `IsSorted` propriété sur la sortie d’un composant de flux de données en amont à `True`.  
   
 -   spécifier les colonnes clés de tri sur lesquelles les données sont triées.  
   
@@ -129,7 +129,7 @@ ms.locfileid: "36152168"
  Utilisez les suggestions de cette section pour améliorer les performances des transformations d'agrégation, de recherche floue, de regroupement probable, de recherche, de jointure de fusion et de dimension à variation lente.  
   
 #### <a name="aggregate-transformation"></a>Transformation d'agrégation  
- La transformation d'agrégation inclut les propriétés `Keys`, `KeysScale`, `CountDistinctKeys` et `CountDistinctScale`. Ces propriétés améliorent les performances en permettant à la transformation de préallouer la quantité de mémoire dont la transformation a besoin pour les données que la transformation met en cache. Si vous connaissez le nombre exact ou approximatif des groupes qui sont attendues d’une **regrouper par** opération, définissez la `Keys` et `KeysScale` propriétés, respectivement. Si vous connaissez le nombre exact ou approximatif de valeurs distinctes qui sont attendues d’une **comptage de valeurs** opération, définissez la `CountDistinctKeys` et `CountDistinctScale` propriétés, respectivement.  
+ La transformation d'agrégation inclut les propriétés `Keys`, `KeysScale`, `CountDistinctKeys` et `CountDistinctScale`. Ces propriétés améliorent les performances en permettant à la transformation de préallouer la quantité de mémoire dont la transformation a besoin pour les données que la transformation met en cache. Si vous connaissez le nombre exact ou approximatif des groupes qui sont attendues d’une **Group by** opération, définissez la `Keys` et `KeysScale` propriétés, respectivement. Si vous connaissez le nombre exact ou approximatif de valeurs distinctes qui sont attendues d’une **comptage de valeurs** opération, définissez la `CountDistinctKeys` et `CountDistinctScale` propriétés, respectivement.  
   
  Si vous devez créer plusieurs agrégations dans un flux de données, songez à créer plusieurs agrégations qui utilisent une transformation d'agrégation au lieu de créer plusieurs transformations. Cette approche améliore les performances lorsqu'une agrégation est un sous-ensemble d'une autre agrégation, car la transformation peut optimiser le stockage interne et analyser une seule fois les données entrantes. Par exemple, si une agrégation utilise une clause GROUP BY et une agrégation AVG, le fait de les combiner en une seule transformation peut améliorer les performances. Toutefois, du fait que la réalisation de plusieurs agrégations au sein d'une transformation d'agrégation sérialise les opérations d'agrégation, il est possible que les performances ne s'améliorent pas lorsque plusieurs agrégations doivent être calculées indépendamment.  
   
@@ -140,7 +140,7 @@ ms.locfileid: "36152168"
  Réduisez la taille des données de référence en mémoire en entrant une instruction SELECT qui recherche uniquement les colonnes dont vous avez besoin. Cette approche est plus performante que la sélection d'une table ou d'une vue entière qui retourne une quantité importante de données inutiles.  
   
 #### <a name="merge-join-transformation"></a>transformation de jointure de fusion  
- Vous n’avez plus à configurer la valeur de la `MaxBuffersPerInput` propriété, car Microsoft a apporté des modifications qui réduisent le risque que la transformation de jointure de fusion consomme trop de mémoire. Ce problème s'est quelquefois produit lorsque plusieurs entrées de jointure de fusion produisaient des données à des taux irréguliers.  
+ Vous n’avez plus à configurer la valeur de la `MaxBuffersPerInput` propriété car Microsoft a apporté des modifications qui réduisent le risque que la transformation de jointure de fusion consomme trop de mémoire. Ce problème s'est quelquefois produit lorsque plusieurs entrées de jointure de fusion produisaient des données à des taux irréguliers.  
   
 #### <a name="slowly-changing-dimension-transformation"></a>Transformation de dimension à variation lente  
  L'Assistant Dimension à variation lente et la transformation de dimension à variation lente sont des outils à caractère général qui répondent aux besoins de la plupart des utilisateurs. Toutefois, le flux de données généré par l'Assistant n'est pas optimisé en termes de performances.  
@@ -201,7 +201,7 @@ ms.locfileid: "36152168"
 -   Vidéo, [Distributeur de données équilibrées](http://go.microsoft.com/fwlink/?LinkID=226278&clcid=0x409), sur technet.microsoft.com.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Outils de dépannage pour le développement de packages](../troubleshooting/troubleshooting-tools-for-package-development.md)   
+ [Outils de dépannage pour le développement de Package](../troubleshooting/troubleshooting-tools-for-package-development.md)   
  [Outils de dépannage pour l’exécution des packages](../troubleshooting/troubleshooting-tools-for-package-execution.md)  
   
   

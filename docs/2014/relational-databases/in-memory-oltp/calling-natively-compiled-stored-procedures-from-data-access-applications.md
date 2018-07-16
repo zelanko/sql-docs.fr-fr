@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine-imoltp
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 9cf6c5ff-4548-401a-b3ec-084f47ff0eb8
 caps.latest.revision: 9
-author: stevestein
-ms.author: sstein
-manager: jhubbard
-ms.openlocfilehash: 517208d1fa790739a2008cd5e149147cbf91643c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
+ms.openlocfilehash: 458fa987ee31f024534b184b2729667cea3597c5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36142488"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37287225"
 ---
 # <a name="calling-natively-compiled-stored-procedures-from-data-access-applications"></a>Appeler des procédures stockées compilées en mode natif à partir d'applications d'accès aux données
   Cette rubrique fournit des instructions pour appeler des procédures stockées compilées en mode natif à partir d'applications d'accès aux données.  
@@ -40,7 +40,7 @@ ms.locfileid: "36142488"
   
  Les recommandations suivantes s'appliquent aux appels de procédures stockées compilées en mode natif à l'aide du pilote ODBC dans [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client.  
   
- Le moyen le plus efficace d’appeler une procédure stockée une seule fois consiste à émettre un appel RPC direct en utilisant `SQLExecDirect` et les clauses ODBC CALL. N’utilisez pas le [!INCLUDE[tsql](../../../includes/tsql-md.md)] `EXECUTE` instruction. Si une procédure stockée doit être appelée plusieurs fois, l'exécution préparée est plus efficace.  
+ Le moyen le plus efficace d’appeler une procédure stockée une fois consiste à émettre un appel RPC direct à l’aide `SQLExecDirect` et les clauses ODBC CALL. N’utilisez pas le [!INCLUDE[tsql](../../../includes/tsql-md.md)] `EXECUTE` instruction. Si une procédure stockée doit être appelée plusieurs fois, l'exécution préparée est plus efficace.  
   
  Il est recommandé d'utiliser des appels de procédure RPC préparés pour appeler la même procédure stockée [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] plusieurs fois. Les appels RPC préparés sont mis en œuvre comme suit à l'aide du pilote ODBC dans [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client :  
   

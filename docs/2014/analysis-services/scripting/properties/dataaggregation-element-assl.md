@@ -1,5 +1,5 @@
 ---
-title: Élément DataAggregation (ASSL) | Documents Microsoft
+title: Élément DataAggregation (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - DataAggregation element
 ms.assetid: baf6d2c9-54f6-4a6d-95f7-e1e758be458d
 caps.latest.revision: 13
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 795555e24dbdc30a02b0fd3b286e4122323c00f4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: eca6c0e89bcc120334e179ad59c1dfce657ab057
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36040250"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37289585"
 ---
 # <a name="dataaggregation-element-assl"></a>Élément DataAggregation (ASSL)
   Détermine si l’instance peut agréger des données persistantes ou des données mises en cache pour le [MeasureGroup](../objects/group-element-assl.md).  
@@ -69,11 +69,11 @@ ms.locfileid: "36040250"
 |*CacheAggregatable*|Les données en cache peuvent être agrégées pour ce groupe de mesures.|  
 |*DataAndCacheAggregatable*|Les données persistantes et les données en cache à la fois peuvent être agrégées pour ce groupe de mesures.|  
   
- L’élément qui correspond au parent de `DataAggregation` dans l’objet d’objets AMO (Analysis Management) est modèle <xref:Microsoft.AnalysisServices.MeasureGroup>.  
+ L’élément qui correspond au parent de `DataAggregation` dans l’objet d’objets AMO (Analysis Management) modèle est <xref:Microsoft.AnalysisServices.MeasureGroup>.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Élément de cube &#40;ASSL&#41;](../objects/cube-element-assl.md)   
- [Élément de dimension &#40;ASSL&#41;](../objects/dimension-element-assl.md)   
+ [Dimension élément &#40;ASSL&#41;](../objects/dimension-element-assl.md)   
  [Propriétés &#40;ASSL&#41;](properties-assl.md)  
   
   

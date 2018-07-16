@@ -1,5 +1,5 @@
 ---
-title: Création d’une Session spécifique de membres (MDX) calculés | Documents Microsoft
+title: Création d’une Session spécifique de membres (MDX) calculés | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - CREATE MEMBER statement
 - session-scoped calculated members [MDX]
 ms.assetid: 2875ed89-2c26-4645-8ed9-8848479d110f
 caps.latest.revision: 29
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: d8e51a2fa5d8179134ac2654f55e9da7ff5ced67
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 79e6466c7f514b3453f8840a72dc0028a215259b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36041495"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37249859"
 ---
 # <a name="creating-session-scoped-calculated-members-mdx"></a>Création de membres calculés au niveau de la session (MDX)
   Pour créer un membre calculé disponible dans l’ensemble d’une session MDX (Multidimensional Expressions), vous utilisez l’instruction [CREATE MEMBER](/sql/mdx/mdx-data-definition-create-member). Un membre calculé créé à l'aide de l'instruction CREATE MEMBER n'est supprimé qu'après la fermeture de la session MDX.  
@@ -56,6 +56,6 @@ sum(([Stores].[ByLocation].Lag(3) :
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Création d’étendue de requête de membres calculés &#40;MDX&#41;](mdx-calculated-members-query-scoped-calculated-members.md)  
+ [Création d’étendue de requête des membres calculés &#40;MDX&#41;](mdx-calculated-members-query-scoped-calculated-members.md)  
   
   

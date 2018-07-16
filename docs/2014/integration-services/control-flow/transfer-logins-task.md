@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.transferloginstask.f1
 helpviewer_keywords:
@@ -17,13 +17,13 @@ ms.assetid: 1df60fd6-c019-405d-8155-c330dbac2cc1
 caps.latest.revision: 25
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 6f4c80e90e4df4d3c5495f1bfcfcdbfcb4b0ea7f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: ef3d7d712f77055f965ebbc916e234bf891fc195
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36153289"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37248769"
 ---
 # <a name="transfer-logins-task"></a>Tâche de transfert de connexions
   La tâche de transfert de connexions transfère une ou plusieurs connexions entre des instances de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -72,9 +72,9 @@ ms.locfileid: "36153289"
   
  Pour plus d'informations sur les propriétés définissables dans le concepteur [!INCLUDE[ssIS](../../includes/ssis-md.md)] , cliquez sur l'une des rubriques suivantes :  
   
--   [Éditeur de tâche de connexions de transfert &#40;Page Général&#41;](../general-page-of-integration-services-designers-options.md)  
+-   [Éditeur de tâche de connexions transfert &#40;Page Général&#41;](../general-page-of-integration-services-designers-options.md)  
   
--   [Éditeur de tâche de connexions de transfert &#40;Page connexions&#41;](../transfer-logins-task-editor-logins-page.md)  
+-   [Éditeur de tâche de connexions transfert &#40;Page connexions&#41;](../transfer-logins-task-editor-logins-page.md)  
   
 -   [Page Expressions](../expressions/expressions-page.md)  
   

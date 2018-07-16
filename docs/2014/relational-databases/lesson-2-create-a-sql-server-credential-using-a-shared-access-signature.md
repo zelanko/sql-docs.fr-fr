@@ -1,5 +1,5 @@
 ---
-title: 'Leçon 3 : Créer des informations d’identification SQL Server | Documents Microsoft'
+title: 'Leçon 3 : Créer des informations d’identification SQL Server | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 29e57ebd-828f-4dff-b473-c10ab0b1c597
 caps.latest.revision: 7
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 201863a1df64cdc85ef41a55170948dbf4eba419
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 486917c0cd6a36bbf2004e17ffaf0607e04ecbb8
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36151894"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37219249"
 ---
 # <a name="lesson-3-create-a-sql-server-credential"></a>Leçon 3 : Créer des informations d'identification SQL Server
   Dans cette leçon, vous allez créer des informations d'identification afin de stocker les informations de sécurité utilisées pour accéder au compte de stockage Windows Azure.  
@@ -29,7 +29,7 @@ ms.locfileid: "36151894"
  Pour obtenir des informations générales sur les informations d’identification, consultez [informations d’identification &#40;moteur de base de données&#41;](security/authentication-access/credentials-database-engine.md).  
   
 > [!IMPORTANT]  
->  La configuration requise pour la création des informations d’identification SQL Server décrites ci-dessous est spécifique à la [fichiers de données SQL Server dans Windows Azure](databases/sql-server-data-files-in-microsoft-azure.md) fonctionnalité. Pour plus d’informations sur la création des informations d’identification pour le processus de sauvegarde dans le stockage Azure, consultez [leçon 2 : créer des informations d’identification SQL Server](../tutorials/lesson-2-create-a-sql-server-credential.md).  
+>  La configuration requise pour la création d’une information d’identification SQL Server décrite ci-dessous est spécifique à la [fichiers de données SQL Server dans Windows Azure](databases/sql-server-data-files-in-microsoft-azure.md) fonctionnalité. Pour plus d’informations sur la création des informations d’identification pour le processus de sauvegarde dans le stockage Azure, consultez [leçon 2 : créer des informations d’identification SQL Server](../tutorials/lesson-2-create-a-sql-server-credential.md).  
   
  Pour créer des informations d'identification SQL Server, procédez comme suit :  
   
@@ -63,6 +63,6 @@ ms.locfileid: "36151894"
   
  **Leçon suivante :**  
   
- [Leçon 4 : Créer une base de données dans le stockage Windows Azure](lesson-3-database-backup-to-url.md)  
+ [Leçon 4 : Créer une base de données dans Stockage Microsoft Azure](lesson-3-database-backup-to-url.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Ensemble de lignes MDSCHEMA_DIMENSIONS | Documents Microsoft
+title: Ensemble de lignes MDSCHEMA_DIMENSIONS | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -18,15 +18,15 @@ helpviewer_keywords:
 - MDSCHEMA_DIMENSIONS rowset
 ms.assetid: a0fd94bb-359a-4df6-93a6-d60d50223944
 caps.latest.revision: 29
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: b00b617adf90e1dba8eac94a9872ce07c0773e7c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 69cb4e0c997d3d786a55a6673327e50d0aac27a2
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36040760"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37273395"
 ---
 # <a name="mdschemadimensions-rowset"></a>Ensemble de lignes MDSCHEMA_DIMENSIONS
   Décrit les dimensions partagées et privées dans une base de données.  
@@ -52,7 +52,7 @@ ms.locfileid: "36040760"
 |`IS_READWRITE`|`DBTYPE_BOOL`||Valeur booléenne indiquant si la dimension est activée en écriture.<br /><br /> `TRUE` si la dimension est activée en écriture.|  
 |`DIMENSION_UNIQUE_SETTINGS`|`DBTYPE_I4`||Image bitmap qui spécifie quelles colonnes contiennent des valeurs uniques si la dimension ne contient que des membres possédant un nom unique. Les constantes de valeur binaire suivantes sont définies dans Msmd.pour cette image bitmap :<br /><br /> -   `MDDIMENSIONS_MEMBER_KEY_UNIQUE`|  
 |`DIMENSION_MASTER_UNIQUE_NAME`|`DBTYPE_WSTR`||A toujours la valeur `NULL`.|  
-|`DIMENSION_IS_VISIBLE`|`DBTYPE_BOOL`||A toujours la valeur `TRUE`. **Remarque :** une dimension n’est pas visible, sauf si un ou plusieurs hiérarchies de la dimension sont visibles.|  
+|`DIMENSION_IS_VISIBLE`|`DBTYPE_BOOL`||A toujours la valeur `TRUE`. **Remarque :** une dimension n’est pas visible, sauf si une ou plusieurs hiérarchies dans la dimension sont visibles.|  
   
  L'ensemble de lignes est trié sur `CATALOG_NAME`, `SCHEMA_NAME`, `CUBE_NAME`, `DIMENSION_NAME`.  
   

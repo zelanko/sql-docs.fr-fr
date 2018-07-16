@@ -1,5 +1,5 @@
 ---
-title: Tabulaire (didacticiel Adventure Works) de modélisation | Documents Microsoft
+title: Tabulaire (didacticiel Adventure Works) de modélisation | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 140d0b43-9455-4907-9827-16564a904268
 caps.latest.revision: 31
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: jhubbard
-ms.openlocfilehash: 3d8b4a492a5da9ae0f709c0ab98189e74ed21269
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 69522d087dffcebf88b011f27797cafc6c0f947e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36144170"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37247369"
 ---
 # <a name="tabular-modeling-adventure-works-tutorial"></a>Modélisation tabulaire (didacticiel Adventure Works)
   Ce didacticiel inclut des leçons sur la création d’un modèle tabulaire [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] Analysis Services, à l’aide de [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)].  
@@ -73,18 +73,18 @@ ms.locfileid: "36144170"
 |------------|--------------------------------|  
 |[Leçon 1 : Créer un projet de modèle tabulaire](lesson-1-create-a-new-tabular-model-project.md)|10 minutes|  
 |[Leçon 2 : Ajouter des données](lesson-2-add-data.md)|20 minutes|  
-|[Leçon 3 : Renommer des colonnes](rename-columns.md)|20 minutes|  
-|[Leçon 4 : Marquer en tant que Table de dates](lesson-3-mark-as-date-table.md)|3 minutes|  
-|[Leçon 5 : Créer des relations](lesson-4-create-relationships.md)|10 minutes|  
-|[Leçon 6 : Créer des colonnes calculées](lesson-5-create-calculated-columns.md)|15 minutes|  
-|[Leçon 7 : Créer des mesures](lesson-6-create-measures.md)|30 minutes|  
-|[Leçon 8 : Créer des indicateurs de Performance clés](lesson-7-create-key-performance-indicators.md)|15 minutes|  
-|[Leçon 9 : Créer des Perspectives](lesson-8-create-perspectives.md)|5 minutes|  
-|[Leçon 10 : Créer des hiérarchies](lesson-9-create-hierarchies.md)|20 minutes|  
-|[Leçon 11 : Créer des Partitions](lesson-10-create-partitions.md)|15 minutes|  
-|[Leçon 12 : Créer des rôles](lesson-11-create-roles.md)|15 minutes|  
-|[Leçon 13 : Analyser dans Excel](lesson-12-analyze-in-excel.md)|20 minutes|  
-|[Leçon 14 : déploiement](lesson-13-deploy.md)|5 minutes|  
+|[Leçon 3 : Renommer des colonnes](rename-columns.md)|20 minutes|  
+|[Leçon 4 : Marquer en tant que table de dates](lesson-3-mark-as-date-table.md)|3 minutes|  
+|[Leçon 5 : Créer des relations](lesson-4-create-relationships.md)|10 minutes|  
+|[Leçon 6 : Créer des colonnes calculées](lesson-5-create-calculated-columns.md)|15 minutes|  
+|[Leçon 7 : Créer des mesures](lesson-6-create-measures.md)|30 minutes|  
+|[Leçon 8 : Créer des indicateurs de performance clés](lesson-7-create-key-performance-indicators.md)|15 minutes|  
+|[Leçon 9 : Créer des perspectives](lesson-8-create-perspectives.md)|5 minutes|  
+|[Leçon 10 : Créer des hiérarchies](lesson-9-create-hierarchies.md)|20 minutes|  
+|[Leçon 11 : Créer des partitions](lesson-10-create-partitions.md)|15 minutes|  
+|[Leçon 12 : Créer des rôles](lesson-11-create-roles.md)|15 minutes|  
+|[Leçon 13 : Analyser dans Excel](lesson-12-analyze-in-excel.md)|20 minutes|  
+|[Leçon 14 : Déployer](lesson-13-deploy.md)|5 minutes|  
   
 ## <a name="supplemental-lessons"></a>Leçons supplémentaires  
  Ce didacticiel inclut également des [leçons supplémentaires](../tutorials/supplemental-lessons.md). Les rubriques de cette section ne sont pas requises pour suivre ce didacticiel, mais peuvent être utiles pour mieux comprendre les fonctionnalités de création de modèles tabulaires avancées.  
@@ -93,7 +93,7 @@ ms.locfileid: "36144170"
   
 |Leçon|Durée estimée|  
 |------------|--------------------------------|  
-|[Implémenter la sécurité dynamique à l’aide de filtres de lignes](../tutorials/implement-dynamic-security-by-using-row-filters.md)|30 minutes|  
+|[Implémentation de la sécurité dynamique à l’aide des filtres de lignes](../tutorials/implement-dynamic-security-by-using-row-filters.md)|30 minutes|  
 |[Configurer les propriétés de création de rapports pour les rapports Power View](supplemental-lesson-configure-reporting-properties-for-power-view-reports.md)configurer les propriétés de création de rapports pour les rapports Power View|30 minutes|  
   
 ## <a name="next-step"></a>Étape suivante  

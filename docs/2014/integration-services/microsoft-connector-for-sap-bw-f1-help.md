@@ -1,5 +1,5 @@
 ---
-title: Microsoft Connector 1.1 pour SAP BW F1 Aide | Documents Microsoft
+title: Microsoft Connector 1.1 pour SAP BW F1 Aide | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 292f9572-362a-45c1-879a-d81d31496ca7
 caps.latest.revision: 8
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 9664b98f85a551a2ea040b4e595f35f618cf1cca
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 0a3f24dbb9fffb7719ec48e4f792ca8cf813fa87
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36153277"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37252310"
 ---
 # <a name="microsoft-connector-11-for-sap-bw-f1-help"></a>Aide (F1) sur Microsoft Connector 1.1 pour SAP BW
   Cette section contient des rubriques d'aide (F1) pour les trois composants de [!INCLUDE[msCoName](../includes/msconame-md.md)] Connector 1.1 pour SAP BW. Ces rubriques sont également accessibles à partir de l'interface utilisateur en appuyant sur la touche F1 ou en cliquant sur Aide dans les pages et dans les boîtes de dialogue de l'Assistant.  
@@ -31,7 +31,7 @@ ms.locfileid: "36153277"
   
 ### <a name="sap-bw-connection-manager-f1-help"></a>Aide (F1) sur le Gestionnaire de connexions SAP BW  
   
--   [Éditeur du Gestionnaire de connexions SAP BW](sap-bw-connection-manager-editor.md)  
+-   [Éditeur du gestionnaire de connexions SAP BW](sap-bw-connection-manager-editor.md)  
   
 ### <a name="sap-bw-source-f1-help"></a>Aide (F1) sur la source SAP BW  
   
@@ -78,6 +78,6 @@ ms.locfileid: "36153277"
 -   [Créer un InfoPackage](data-flow/create-infopackage.md)  
   
 ## <a name="see-also"></a>Voir aussi  
- [Microsoft Connector 1.1 pour SAP BW composants](microsoft-connector-for-sap-bw-components.md)  
+ [Composants de Microsoft Connector 1.1 pour SAP BW](microsoft-connector-for-sap-bw-components.md)  
   
   

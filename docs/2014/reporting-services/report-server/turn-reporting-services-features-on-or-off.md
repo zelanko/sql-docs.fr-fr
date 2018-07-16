@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Reporting Services, configuration
 - security [Reporting Services], strategies
@@ -16,13 +16,13 @@ ms.assetid: b69db02a-43a7-4fdc-ad9b-438d817a7f83
 caps.latest.revision: 9
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 1362919f44915616d244364cee116c8fab376831
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 6521a2bcdf080eb4a22c9540d965d0b5829d74fe
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36142966"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37282595"
 ---
 # <a name="turn-reporting-services-features-on-or-off"></a>Activer ou désactiver les fonctionnalités Reporting Services
   Vous pouvez désactiver les fonctionnalités de serveur de rapports que vous n'utilisez pas dans le cadre d'une stratégie de verrouillage pour réduire l'exposition aux attaques d'un serveur de rapports de production. Dans la plupart des cas, vous préférerez exécuter les fonctionnalités de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] conjointement afin de bénéficier de toutes les fonctionnalités offertes dans [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Toutefois, vous pouvez désactiver les fonctionnalités dont vous n'avez pas besoin, selon votre modèle de déploiement. Par exemple, vous pouvez activer le traitement en arrière-plan uniquement si le traitement de tous les rapports a été planifié. De même, vous pouvez exécuter simplement le service Web Report Server si vous souhaitez disposer uniquement de rapports interactifs à la demande.  
@@ -112,7 +112,7 @@ ms.locfileid: "36142966"
   
 4.  Sous **Propriétés de la facette**:  
   
-    -   Pour activer les événements planifiés et remise, affectez **ScheduleEventsAndReportDeliveryEnabled** à `True`.  
+    -   Pour activer des événements planifiés et remise, affectez **ScheduleEventsAndReportDeliveryEnabled** à `True`.  
   
     -   Pour désactiver les événements planifiés et remise, affectez **ScheduleEventsAndReportDeliveryEnabled** à `False`.  
   
@@ -133,7 +133,7 @@ ms.locfileid: "36142966"
     <IsReportManagerEnabled>true</IsReportManagerEnabled>  
     ```  
   
-3.  Pour désactiver le Gestionnaire de rapports, définir `IsReportManagerEnabled` à `false`:  
+3.  Pour activer le Gestionnaire de rapports, affectez `IsReportManagerEnabled` à `false`:  
   
     ```  
     <IsReportManagerEnabled>false</IsReportManagerEnabled>  
@@ -153,7 +153,7 @@ ms.locfileid: "36142966"
   
     -   Pour activer le Gestionnaire de rapports, affectez **ReportManagerEnabled** à `True`.  
   
-    -   Pour désactiver le Gestionnaire de rapports, définir **ReportManagerEnabled** à `False`.  
+    -   Pour activer le Gestionnaire de rapports, affectez **ReportManagerEnabled** à `False`.  
   
 5.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   

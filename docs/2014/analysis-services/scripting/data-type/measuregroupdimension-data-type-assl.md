@@ -1,5 +1,5 @@
 ---
-title: Type de données MeasureGroupDimension (ASSL) | Documents Microsoft
+title: Type de données MeasureGroupDimension (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - MeasureGroupDimension data type
 ms.assetid: 9d1c1c19-31ce-4c42-b2e6-4c1b08875a83
 caps.latest.revision: 35
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 369e20e1eaf3c5716e81a580b587c69efa64455f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 3dcbba7071e1f2efc8ede59259a48a334652de81
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36151991"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37249119"
 ---
 # <a name="measuregroupdimension-data-type-assl"></a>Type de données MeasureGroupDimension (ASSL)
   Définit un type de données primitif abstrait représentant la relation entre une dimension et un groupe de mesures.  
@@ -75,6 +75,6 @@ ms.locfileid: "36151991"
  L’élément correspondant dans le modèle d’objet objets AMO (Analysis Management) est <xref:Microsoft.AnalysisServices.MeasureGroupDimension>.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Types de données de script langage XML Analysis Services &#40;ASSL&#41;](analysis-services-scripting-language-xml-data-types-assl.md)  
+ [Types Analysis Services Scripting Language XML données &#40;ASSL&#41;](analysis-services-scripting-language-xml-data-types-assl.md)  
   
   

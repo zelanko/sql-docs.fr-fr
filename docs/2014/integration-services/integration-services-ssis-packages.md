@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server Integration Services packages, about packages
 - packages [Integration Services], about packages
@@ -23,13 +23,13 @@ ms.assetid: 9266bc64-7e1a-4e78-913b-a8deaa9843bf
 caps.latest.revision: 68
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 85eeb75badeed90812c657b9dbdc64e261947e20
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 99a414e27b9fb470d8e7ee07589c42e0184b283e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36142311"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37252381"
 ---
 # <a name="integration-services-ssis-packages"></a>Packages Integration Services (SSIS)
   Un package est une collection organisée de connexions, d'éléments de flux de contrôle, d'éléments de flux de données, de gestionnaires d'événements, de variables, de paramètres et de configurations que vous assemblez à l'aide des outils de conception graphiques de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] ou que vous créez via un programme.  Vous enregistrez le package terminé dans [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], le magasin de packages [!INCLUDE[ssIS](../includes/ssis-md.md)] , ou le système de fichiers, ou vous pouvez déployer le projet ssISnoversion sur le serveur [!INCLUDE[ssIS](../includes/ssis-md.md)] . Le package est l'unité de travail qui est extraite, exécutée et enregistrée.  
@@ -54,7 +54,7 @@ ms.locfileid: "36142311"
 ## <a name="package-templates"></a>Modèles de packages  
  Les packages sont fréquemment utilisés comme modèles permettant de générer des packages qui partagent des fonctionnalités de base. Vous construisez le package de base, puis le copiez, ou vous pouvez préciser que le package est un modèle. Par exemple, un package qui télécharge et copie des fichiers, puis extrait les données peut inclure les tâches FTP et de système de fichiers dans une boucle Foreach qui énumère les fichiers dans un dossier. Il peut également inclure des gestionnaires de connexions de fichiers plats pour accéder aux données, ainsi que des sources de fichiers plats pour extraire les données. La destination des données varie, et elle est ajoutée à chaque nouveau package après sa copie à partir du package de base. Vous pouvez également créer des packages, puis les utiliser comme modèles pour les nouveaux packages que vous ajoutez à un projet [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] . Pour plus d'informations, consultez [Create Packages in SQL Server Data Tools](create-packages-in-sql-server-data-tools.md).  
   
- Lorsqu’un package est tout d’abord créé, soit par programme ou à l’aide du concepteur SSIS, un GUID est ajouté à son `ID` propriété et un nom à sa `Name` propriété. Si vous créez un nouveau package en copiant un package existant ou en utilisant un modèle de package, le nom et le GUID sont également copiés. Cela peut causer un problème si vous utilisez la journalisation, car le GUID et le nom du package sont écrits dans les journaux pour identifier le package auquel les informations consignées appartiennent. Par conséquent, vous devez mettre à jour le nom et le GUID des nouveaux packages pour les différencier plus facilement du package à partir duquel ils ont été copiés et entre eux dans les données du journal.  
+ Création d’un package tout d’abord, soit par programme ou à l’aide du concepteur SSIS, un GUID est ajouté à son `ID` propriété et un nom à son `Name` propriété. Si vous créez un nouveau package en copiant un package existant ou en utilisant un modèle de package, le nom et le GUID sont également copiés. Cela peut causer un problème si vous utilisez la journalisation, car le GUID et le nom du package sont écrits dans les journaux pour identifier le package auquel les informations consignées appartiennent. Par conséquent, vous devez mettre à jour le nom et le GUID des nouveaux packages pour les différencier plus facilement du package à partir duquel ils ont été copiés et entre eux dans les données du journal.  
   
  Pour modifier le GUID du package, vous régénérez un GUID dans le `ID` propriété dans la fenêtre Propriétés dans [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]. Pour modifier le nom du package, vous pouvez mettre à jour la valeur de la `Name` propriété dans la fenêtre Propriétés. Vous pouvez également utiliser l’invite de commandes **dtutil** ou mettre à jour le GUID et le nom par programmation. Pour plus d’informations, consultez [Définir les propriétés d’un package](set-package-properties.md) et [Utilitaire dtutil](dtutil-utility.md).  
   
@@ -111,7 +111,7 @@ ms.locfileid: "36142311"
 ## <a name="related-tasks"></a>Related Tasks  
  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] , [!INCLUDE[ssIS](../includes/ssis-md.md)] met à votre disposition deux outils graphiques : le concepteur [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] et l'Assistant Importation et Exportation [!INCLUDE[ssIS](../includes/ssis-md.md)] . Consultez les rubriques suivantes pour plus de détails.  
   
--   [Exécuter SQL Server Assistant Importation et exportation](import-export-data/start-the-sql-server-import-and-export-wizard.md)  
+-   [Exécuter l’Assistant Importation et Exportation SQL Server](import-export-data/start-the-sql-server-import-and-export-wizard.md)  
   
 -   [Créer des packages dans les outils de données SQL Server](create-packages-in-sql-server-data-tools.md)  
   

@@ -1,5 +1,5 @@
 ---
-title: Configuration de l’instance | Documents Microsoft
+title: Configuration de l’instance | Microsoft Docs
 ms.custom: ''
 ms.date: 2016-05-04
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - instance configuration, Setup
 helpviewer_keywords:
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - SQL Server Installation Wizard, Instance Name page
 ms.assetid: 5bf822fc-6dec-4806-a153-e200af28e9a5
 caps.latest.revision: 60
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 757b29a54828816de27559715e88b337bd5a06a1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: bdcfdc34d61b38992c44a220b7b58041cd496200
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36142954"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37274325"
 ---
 # <a name="instance-configuration"></a>Configuration de l'instance
   Utilisez la page **Configuration d’une instance** de l’Assistant Installation de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pour spécifier s’il faut créer une instance par défaut ou une instance nommée de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Si une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] n’est pas déjà installée, une instance par défaut est créée, sauf si vous spécifiez une instance nommée.  
@@ -65,7 +65,7 @@ ms.locfileid: "36142954"
   
 -   Si vous spécifiez MSSQLServer comme nom d'instance, une instance par défaut est créée.  
   
--   Une installation de [!INCLUDE[ssGeminiLong](../../includes/ssgeminilong-md.md)] est toujours installé comme une instance nommée de « PowerPivot ». Vous ne pouvez pas spécifier de nom d'instance différent pour ce rôle de fonctionnalité.  
+-   Une installation de [!INCLUDE[ssGeminiLong](../../includes/ssgeminilong-md.md)] est toujours installée comme instance nommée de « PowerPivot ». Vous ne pouvez pas spécifier de nom d'instance différent pour ce rôle de fonctionnalité.  
   
 -   Les noms d'instance sont limités à 16 caractères.  
   
@@ -75,7 +75,7 @@ ms.locfileid: "36142954"
   
 -   Les espaces incorporés ou autres caractères spéciaux ne sont pas autorisés dans les noms d'instance. La barre oblique inverse (\\), la virgule (,), le deux-points (:), le point-virgule (;), le guillemet simple ('), l’esperluette (&) et l’arobase (@) ne sont pas autorisés non plus.  
   
--   **Seuls les caractères qui sont valides dans la page de codes Windows en cours peuvent être utilisés dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] noms d’instance. Si un caractère Unicode non pris en charge est utilisé, une erreur se produit.**  
+-   **Uniquement des caractères qui sont valides dans la page de codes Windows actuelle peuvent être utilisés dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] noms d’instance. Si un caractère Unicode non pris en charge est utilisé, une erreur se produit.**  
   
  **Instances et fonctionnalités détectées**  
  Consultez la liste des instances et des composants de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] installés sur l'ordinateur sur lequel le programme d'installation de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] est en cours d'exécution.  

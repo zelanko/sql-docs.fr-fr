@@ -1,5 +1,5 @@
 ---
-title: Afficher l’historique du projet | Documents Microsoft
+title: Afficher l’historique de projet | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - viewing project history
 - version control services [SQL Server], project history
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - historical information [SQL Server], projects
 ms.assetid: be0ea2ac-4a35-429c-9c9e-4001ea9035a4
 caps.latest.revision: 24
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: d99c3a27a74d41efc895489a8690d735dadd3b4f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: e10e920a5c60d389eaec6a5af06e4597d9667967
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36142861"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37287845"
 ---
 # <a name="view-project-history"></a>Afficher l'historique d'un projet
   L'historique d'un projet [!INCLUDE[msCoName](../includes/msconame-md.md)] Visual SourceSafe (VSS) comporte la liste de toutes les actions effectuées sur chacun des fichiers du projet en question (création, ajout, suppression, récupération de fichiers…).  
@@ -40,7 +40,7 @@ ms.locfileid: "36142861"
   
 2.  Sur le **fichier** menu, pointez sur **contrôle de code Source** et cliquez sur **afficher l’historique**.  
   
-3.  Dans le **l’historique de** \<projet > boîte de dialogue zone, effectuez l’une des actions suivantes :  
+3.  Dans le **historique de** \<projet > boîte de dialogue zone, effectuez l’une des actions suivantes :  
   
     -   Afficher la copie d'un fichier sélectionné dans le système de contrôle de code source  
   

@@ -1,5 +1,5 @@
 ---
-title: Mapper des règles de couleur, boîte de dialogue, général | Documents Microsoft
+title: Mapper des règles de couleur, boîte de dialogue, général | Microsoft Docs
 ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - "10541"
 - sql12.rtp.rptdesigner.shared.mapcolorrulesgeneral.f1
 ms.assetid: 14ff5fc1-4cf8-4a45-9d98-47a1bf1c52c4
 caps.latest.revision: 7
-author: douglaslM
+author: maggiesmsft
 ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 103e038b715f07c50d702a659f396f9cdd34ffee
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 2de58631464b4d96ebde5cac82778f6b365e5b3c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36152061"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37238519"
 ---
 # <a name="map-color-rules-dialog-box-general"></a>Boîte de dialogue Règles de couleur de la carte, Général
   Sélectionnez **Général** dans la boîte de dialogue **Propriétés des règles de couleur** pour définir des options de couleur pour les éléments cartographiques de cette couche. Les éléments cartographiques peuvent être des polygones, des lignes ou des points. Les règles de couleur peuvent être appliquées lorsque vous avez créé une relation entre des éléments cartographiques basés sur des données spatiales et des données analytiques provenant d'un champ de dataset ou d'un champ de source de données spatiales.  
@@ -47,7 +47,7 @@ ms.locfileid: "36152061"
   
  Dans la liste déroulante, sélectionnez le champ de données analytiques à utiliser. Selon la source de données spatiales, la liste affiche les champs de la source de données spatiales et d'un dataset de rapport ayant une relation entre les données spatiales et les données analytiques. Pour créer une telle relation, définissez les options de données dans la page Données analytiques pour la couche sélectionnée.  
   
- **palette**  
+ **Palette**  
  Tapez ou sélectionnez le nom de la palette de couleurs.  
   
  **Couleur de début**  
@@ -64,6 +64,6 @@ ms.locfileid: "36152061"
   
 ## <a name="see-also"></a>Voir aussi  
  [Cartes &#40;Générateur de rapports et SSRS&#41;](report-design/maps-report-builder-and-ssrs.md)   
- [Modifier les légendes de carte, l’échelle de couleurs et les règles associées &#40;rapport Générateur et SSRS&#41;](report-design/change-map-legends-color-scale-and-associated-rules-report-builder-and-ssrs.md)  
+ [Modifier les légendes de carte, l’échelle de couleurs et les règles associées &#40;Générateur de rapports et SSRS&#41;](report-design/change-map-legends-color-scale-and-associated-rules-report-builder-and-ssrs.md)  
   
   

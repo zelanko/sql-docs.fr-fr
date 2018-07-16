@@ -1,5 +1,5 @@
 ---
-title: Méthode Execute (XMLA) | Documents Microsoft
+title: Méthode Execute (XMLA) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -26,15 +26,15 @@ helpviewer_keywords:
 - Execute method
 ms.assetid: 0fff5221-7164-4bbc-ab58-49cf04c52664
 caps.latest.revision: 34
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: 5c32261e06788f366a6c5ce5af24c508b87a6882
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: ec3fa458148638af5431b4a519acf8556d29b122
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36041169"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37235559"
 ---
 # <a name="execute-method-xmla"></a>Méthode Execute (XMLA)
   Envoie le code XML pour les commandes Analysis (XMLA) à une instance de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Ceci inclut des demandes qui impliquent un transfert de données (par exemple, la récupération ou la mise à jour de données sur le serveur).  
@@ -70,7 +70,7 @@ ms.locfileid: "36041169"
 |Éléments enfants|[Commande](xml-elements-properties/command-element-xmla.md), [paramètres](xml-elements-properties/parameters-element-xmla.md), [propriétés](xml-elements-properties/properties-element-xmla.md)|  
   
 ## <a name="remarks"></a>Notes  
- Le `Execute` méthode s’exécute les commandes XMLA fournies dans le `Command` élément et retourne les données obtenues en utilisant le code XMLA [ensemble de lignes](xml-data-types/rowset-data-type-xmla.md) type de données (pour les jeux de résultats tabulaire) ou le code XMLA [MDDataSet](xml-data-types/mddataset-data-type-xmla.md) de type de données (pour les jeux de résultats multidimensionnels.)  
+ Le `Execute` méthode exécute les commandes XMLA fournies dans le `Command` élément et retourne les données obtenues à l’aide de XMLA [ensemble de lignes](xml-data-types/rowset-data-type-xmla.md) type de données (pour les jeux de résultats tabulaire) ou le code XMLA [MDDataSet](xml-data-types/mddataset-data-type-xmla.md) type de données (pour les jeux de résultats multidimensionnels.)  
   
 ## <a name="example"></a>Exemple  
  L'exemple de code suivant montre un appel de méthode `Execute` qui contient une instruction MDX (Multidimensional Expressions) SELECT.  

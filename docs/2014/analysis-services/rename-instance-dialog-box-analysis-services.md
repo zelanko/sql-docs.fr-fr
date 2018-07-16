@@ -1,5 +1,5 @@
 ---
-title: Renommer la boîte de dialogue Instance (Analysis Services) | Documents Microsoft
+title: Renommer la boîte de dialogue d’Instance (Analysis Services) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.ssas.instancerename.f1
 ms.assetid: 3708d992-8dd9-461c-8aa0-5da6df96ed70
 caps.latest.revision: 16
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 181c1cc507fd1f05b9a9504526cea0fb860f4ea4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 287d1e6bdb82ec7e87529f74fff787476b88988f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36152211"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37281945"
 ---
 # <a name="rename-instance-dialog-box-analysis-services"></a>Boîte de dialogue Renommer l'instance (Analysis Services)
   Utilisez la boîte de dialogue **Renommer l'instance** pour renommer une instance existante de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. Pour afficher la boîte de dialogue **Renommer l’instance** , exécutez l’utilitaire **Modification du nom d’instance** (asinstancerename.exe) à partir de C:\Program Files\Microsoft SQL Server\100\Tools\Binn\VSShell\Common7\IDE.  
@@ -31,8 +31,8 @@ ms.locfileid: "36152211"
 |Terme|Définition|  
 |----------|----------------|  
 |**Instance à renommer**|Sélectionnez l'instance à renommer.|  
-|**Nouveau nom d’instance**|Tapez le nom souhaité pour l'instance. N'incluez pas le nom du serveur. Autrement dit, au lieu d’entrer \<nom du serveur >\\< nom de l’instance\>, entrez uniquement \<nom de l’instance >.<br /><br /> Si vous souhaitez que l'instance que vous renommez soit l'instance [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] par défaut, laissez le champ du nom vide.|  
-|**nom d’utilisateur**|Indique le compte que le service utilisera pour démarrer. Le nom d'utilisateur ne peut pas être modifié.|  
+|**Nouveau nom d’instance**|Tapez le nom souhaité pour l'instance. N'incluez pas le nom du serveur. Autrement dit, au lieu d’entrer \<nom du serveur >\\< nom de l’instance\>, entrez uniquement \<nom_instance >.<br /><br /> Si vous souhaitez que l'instance que vous renommez soit l'instance [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] par défaut, laissez le champ du nom vide.|  
+|**Nom d’utilisateur**|Indique le compte que le service utilisera pour démarrer. Le nom d'utilisateur ne peut pas être modifié.|  
 |**Mot de passe**|Tapez le mot de passe du compte de service.|  
   
 ## <a name="see-also"></a>Voir aussi  

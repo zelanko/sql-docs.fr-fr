@@ -1,5 +1,5 @@
 ---
-title: Accorder des autorisations de base de données (Analysis Services) | Documents Microsoft
+title: Accorder des autorisations de base de données (Analysis Services) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - permissions [Analysis Services], full control
 - full control permissions [Analysis Services]
 ms.assetid: be7e5f64-af43-47d6-84a5-c5c1c277d644
 caps.latest.revision: 28
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 37022a42bc8e5347551a49c24ffc0ae9f8b8dbf5
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 49e677c7c0a452b5b465d2a82c0bd3477dcc3b5c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36040262"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37286165"
 ---
 # <a name="grant-database-permissions-analysis-services"></a>Octroyer des autorisations de base de données (Analysis Services)
   Si vous débutez dans l'administration des bases de données Analysis Services avec une expérience des bases de données relationnelles, la première chose que vous devez comprendre est qu'en termes d'accès aux données, la base de données n'est pas l'objet sécurisable principal dans Analysis Services.  
@@ -42,9 +42,9 @@ ms.locfileid: "36040262"
 > [!NOTE]  
 >  Les administrateurs de serveur (membres du rôle Administrateur du serveur) disposent également d'un Contrôle total implicite sur chaque base de données du serveur.  
   
- `Process Database` ─ Cette autorisation permet de déléguer le traitement au niveau de la base de données. En tant qu'administrateur, vous pouvez vous décharger de cette tâche en créant un rôle qui permet à une autre personne ou à un autre service d'exécuter des opérations de traitement pour tout objet de la base de données. En guise d'alternative, vous pouvez créer des rôles qui autorisent le traitement d'objets spécifiques. Pour plus d’informations, consultez [Grant process permissions &#40;Analysis Services&#41;](grant-process-permissions-analysis-services.md) .  
+ `Process Database` Obtenir cette autorisation permet de déléguer le traitement au niveau de la base de données. En tant qu'administrateur, vous pouvez vous décharger de cette tâche en créant un rôle qui permet à une autre personne ou à un autre service d'exécuter des opérations de traitement pour tout objet de la base de données. En guise d'alternative, vous pouvez créer des rôles qui autorisent le traitement d'objets spécifiques. Pour plus d’informations, consultez [Grant process permissions &#40;Analysis Services&#41;](grant-process-permissions-analysis-services.md) .  
   
- `Read Definition` ─ Cette autorisation permet de lire les métadonnées d’objet, sans toutefois pouvoir afficher les données associées. En général, on l'utilise dans les rôles créés pour le traitement dédié, en ajoutant la capacité à utiliser des outils tels que [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] ou [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] pour traiter une base de données de manière interactive. Sans `Read Definition`, l'autorisation `Process Database` est efficace uniquement dans les scénarios scriptés. Si vous prévoyez d’automatiser le traitement, par exemple grâce à SSIS ou un autre planificateur, vous souhaitez probablement créer un rôle qui a `Process Database` sans `Read Definition`. Sinon, vous pouvez combiner les deux propriétés dans le même rôle pour prendre en charge le traitement interactif et sans assistance via les outils SQL Server qui visualisent le modèle de données dans une interface utilisateur.  
+ `Read Definition` Obtenir cette autorisation donne la possibilité de lire les métadonnées d’objet, sans toutefois pouvoir afficher les données associées. En général, on l'utilise dans les rôles créés pour le traitement dédié, en ajoutant la capacité à utiliser des outils tels que [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] ou [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] pour traiter une base de données de manière interactive. Sans `Read Definition`, l'autorisation `Process Database` est efficace uniquement dans les scénarios scriptés. Si vous prévoyez d’automatiser le traitement, par exemple grâce à SSIS ou un autre planificateur, vous souhaiterez probablement créer un rôle qui a `Process Database` sans `Read Definition`. Sinon, vous pouvez combiner les deux propriétés dans le même rôle pour prendre en charge le traitement interactif et sans assistance via les outils SQL Server qui visualisent le modèle de données dans une interface utilisateur.  
   
 ## <a name="full-control-administrator-permissions"></a>Autorisations Contrôle total (Administrateur)  
  Dans [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)], un administrateur de base de données est toute identité utilisateur Windows assignée à un rôle qui comprend des autorisations Contrôle total (Administrateur). Un administrateur de base de données peut effectuer toute tâche dans la base de données, y compris les suivantes :  
@@ -59,7 +59,7 @@ ms.locfileid: "36040262"
   
 -   enregistrer des assemblys (ou procédures stockées) pour la base de données.  
   
- Notez qu'un administrateur de base de données ne peut pas ajouter ou supprimer de bases de données sur le serveur, ni accorder de droits d'administrateur à d'autres bases de données sur le même serveur. Ce privilège appartient uniquement aux administrateurs du serveur. Consultez [accorder des autorisations d’administrateur de serveur &#40;Analysis Services&#41; ](../instances/grant-server-admin-rights-to-an-analysis-services-instance.md) pour plus d’informations sur ce niveau d’autorisation.  
+ Notez qu'un administrateur de base de données ne peut pas ajouter ou supprimer de bases de données sur le serveur, ni accorder de droits d'administrateur à d'autres bases de données sur le même serveur. Ce privilège appartient uniquement aux administrateurs du serveur. Consultez [accorder des autorisations administrateur du serveur &#40;Analysis Services&#41; ](../instances/grant-server-admin-rights-to-an-analysis-services-instance.md) pour plus d’informations sur ce niveau d’autorisation.  
   
  Tous les rôles étant définis par l'utilisateur, nous vous recommandons de créer un rôle dédié à cette fin (par exemple un rôle nommé « adminbd »), puis d'assigner des comptes d'utilisateurs et de groupes Windows en conséquence.  
   
@@ -79,10 +79,10 @@ ms.locfileid: "36040262"
  Lorsque vous définissez un rôle qui accorde des autorisations de base de données, vous pouvez ignorer `Full Control` et choisir simplement `Process Database`. Cette autorisation, définie au niveau de la base de données, permet de traiter tous les objets dans la base de données. Pour plus d’informations, consultez [Grant process permissions &#40;Analysis Services&#41;](grant-process-permissions-analysis-services.md)  
   
 ## <a name="read-definition"></a>Lire la définition  
- Comme `Process Database`, le paramètre `Read Definition` autorisations au niveau de la base de données a un effet en cascade sur d’autres objets dans la base de données. Si vous souhaitez définir des autorisations Lire la définition à un niveau plus granulaire, vous devez effacer Lire la définition comme propriété de base de données dans le volet Général. Pour plus d’informations, consultez [Octroyer des autorisations Lire la définition sur des métadonnées d’objets &#40;Analysis Services&#41;](grant-read-definition-permissions-on-object-metadata-analysis-services.md).  
+ Comme `Process Database`, la définition `Read Definition` autorisations au niveau de la base de données a un effet en cascade sur d’autres objets dans la base de données. Si vous souhaitez définir des autorisations Lire la définition à un niveau plus granulaire, vous devez effacer Lire la définition comme propriété de base de données dans le volet Général. Pour plus d’informations, consultez [Octroyer des autorisations Lire la définition sur des métadonnées d’objets &#40;Analysis Services&#41;](grant-read-definition-permissions-on-object-metadata-analysis-services.md).  
   
 ## <a name="see-also"></a>Voir aussi  
- [Accorder des autorisations d’administrateur de serveur &#40;Analysis Services&#41;](../instances/grant-server-admin-rights-to-an-analysis-services-instance.md)   
+ [Accorder des autorisations administrateur du serveur &#40;Analysis Services&#41;](../instances/grant-server-admin-rights-to-an-analysis-services-instance.md)   
  [Accorder des autorisations de processus &#40;Analysis Services&#41;](grant-process-permissions-analysis-services.md)  
   
   

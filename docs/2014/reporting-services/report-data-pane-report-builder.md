@@ -1,5 +1,5 @@
 ---
-title: Le volet de données (Générateur de rapports) du rapport | Documents Microsoft
+title: Le volet de données (Générateur de rapports) du rapport | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - "10435"
 helpviewer_keywords:
 - Report Data pane
 ms.assetid: 1492aa39-aeb1-4509-ab97-b9edd0901b7e
 caps.latest.revision: 11
-author: douglaslM
+author: maggiesmsft
 ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: cf8180224bd06e2f5e38316c992063621796d42b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 876aad8c57e2b8fccc4675fe8dc4e173607a7738
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36144213"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37224669"
 ---
 # <a name="report-data-pane-report-builder"></a>Volet des données de rapport (Générateur de rapports)
   Utilisez le volet **Données du rapport** pour consulter les paramètres, sources de données, datasets, collections de champs et images définis dans votre rapport. Le volet des données de rapportpropose une vue hiérarchique des éléments qui représentent les données de votre rapport. Les nœuds du niveau supérieur représentent les champs prédéfinis, paramètres et images, ainsi que les références de sources de données. Développez chaque nœud pour en afficher les éléments de données. Par exemple, lorsque vous développez un nœud de source de données, les datasets définis pour cette source de données apparaissent. Lorsque vous développez un dataset, sa collection de champs apparaît. Faites glisser des éléments vers l'aire de conception de rapport ou vers le volet Regroupement pour lier les données aux éléments de rapport sélectionnés dans la page du rapport. Pour plus d’informations, consultez [Mode Création de rapport &#40;Générateur de rapports&#41;](report-builder/report-design-view-report-builder.md).  
@@ -39,10 +39,10 @@ ms.locfileid: "36144213"
  Représente l'ensemble d'images utilisé dans le rapport. Pour plus d’informations, consultez [Images &#40;Générateur de rapports et SSRS&#41;](report-design/images-report-builder-and-ssrs.md).  
   
  **Sources de données**  
- Représente une source de données incorporée ou une référence à une source de données partagée. Une source de données représente une source de données pour le rapport. Une source de données est le nœud parent de la collection de datasets qui l'utilise. Pour plus d’informations, consultez [ajouter des données à un rapport &#40;le Générateur de rapports et SSRS&#41; ](report-data/report-datasets-ssrs.md) et [des connexions de données, les Sources de données et les chaînes de connexion dans le Générateur de rapports](../../2014/reporting-services/data-connections-data-sources-and-connection-strings-in-report-builder.md).  
+ Représente une source de données incorporée ou une référence à une source de données partagée. Une source de données représente une source de données pour le rapport. Une source de données est le nœud parent de la collection de datasets qui l'utilise. Pour plus d’informations, consultez [ajouter des données à un rapport &#40;Générateur de rapports et SSRS&#41; ](report-data/report-datasets-ssrs.md) et [des connexions de données, les Sources de données et les chaînes de connexion dans le Générateur de rapports](../../2014/reporting-services/data-connections-data-sources-and-connection-strings-in-report-builder.md).  
   
  **Jeux de données**  
- Représente les données extraites d'une source de données suite à l'exécution d'une commande, par exemple, une requête [!INCLUDE[tsql](../includes/tsql-md.md)] qui extrait des données d'une base de données [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Un dataset est le nœud parent de la collection de champs spécifiée par la requête et comprend également des champs calculés. Le Générateur de rapports prend en charge des concepteurs de requêtes qui vous aident dans la spécification des requêtes. Pour plus d’informations, consultez [ajouter des données à un rapport &#40;le Générateur de rapports et SSRS&#41;](report-data/report-datasets-ssrs.md).  
+ Représente les données extraites d'une source de données suite à l'exécution d'une commande, par exemple, une requête [!INCLUDE[tsql](../includes/tsql-md.md)] qui extrait des données d'une base de données [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Un dataset est le nœud parent de la collection de champs spécifiée par la requête et comprend également des champs calculés. Le Générateur de rapports prend en charge des concepteurs de requêtes qui vous aident dans la spécification des requêtes. Pour plus d’informations, consultez [ajouter des données à un rapport &#40;Générateur de rapports et SSRS&#41;](report-data/report-datasets-ssrs.md).  
   
 ## <a name="see-also"></a>Voir aussi  
  [Collection de champs de dataset &#40;Générateur de rapports et SSRS&#41;](report-data/dataset-fields-collection-report-builder-and-ssrs.md)   

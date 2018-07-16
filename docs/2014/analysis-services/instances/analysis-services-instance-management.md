@@ -1,5 +1,5 @@
 ---
-title: Gestion de l’Instance Analysis Services | Documents Microsoft
+title: Gestion de l’Instance Analysis Services | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 0455fa4f-b92d-4a8b-a8f0-f2a268a5c84e
 caps.latest.revision: 21
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: d5b4bbcc49f28b0f8cd75d8d00e6935559d50c44
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 11f18bd8c1c72bcaf93b74529e604c69440506c8
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36039628"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37289785"
 ---
 # <a name="analysis-services-instance-management"></a>Gestion d'instances Analysis Services
   Une instance d'Analysis Services est une copie de l'exécutable `msmdsrv.exe` qui s'exécute en tant que service du système d'exploitation. Chaque instance est entièrement indépendante des autres instances situées sur le même serveur et dispose de ses propres paramètres de configuration, autorisations, ports, comptes de démarrage, stockage de fichier, et propriétés de mode serveur.  
@@ -59,7 +59,7 @@ ms.locfileid: "36039628"
   
 ## <a name="see-also"></a>Voir aussi  
  [Comparaison des Solutions tabulaires et multidimensionnelles &#40;SSAS&#41;](../comparing-tabular-and-multidimensional-solutions-ssas.md)   
- [Outils de Configuration PowerPivot](../power-pivot-sharepoint/power-pivot-configuration-tools.md)   
+ [Outils de Configuration de PowerPivot](../power-pivot-sharepoint/power-pivot-configuration-tools.md)   
  [Administration de serveur PowerPivot et de Configuration dans l’Administration centrale](../power-pivot-sharepoint/power-pivot-server-administration-and-configuration-in-central-administration.md)   
  [Déterminer le mode serveur d’une instance Analysis Services](determine-the-server-mode-of-an-analysis-services-instance.md)  
   

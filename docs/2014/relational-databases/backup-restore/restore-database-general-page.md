@@ -5,23 +5,22 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-backup-restore
+ms.technology: backup-restore
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.restoredb.general.f1
 ms.assetid: 160cf58c-b06a-475f-9a69-2b051e5767ab
 caps.latest.revision: 85
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: f310d762ca8a8d116b3accc618532b772eef8c26
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 79929bf3f9bebec61605ad173a460fbdbe2269f3
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36143758"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37219479"
 ---
 # <a name="restore-database-general-page"></a>Restaurer la base de données (page Général)
   Utilisez la page **Général** pour spécifier des informations sur les bases de données cible et source dans le cadre d’une opération de restauration de base de données.  
@@ -33,14 +32,14 @@ ms.locfileid: "36143758"
 -   [Définir une unité de sauvegarde logique pour un lecteur de bande &#40;SQL Server&#41;](define-a-logical-backup-device-for-a-tape-drive-sql-server.md)  
   
 > [!NOTE]  
->  Lorsque vous spécifiez une tâche de restauration à l’aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], vous pouvez générer correspondant [!INCLUDE[tsql](../../includes/tsql-md.md)] [restaurer](/sql/t-sql/statements/restore-statements-transact-sql) script en cliquant sur **Script** , puis en sélectionnant une destination pour le script.  
+>  Lorsque vous spécifiez une tâche de restauration à l’aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], vous pouvez générer le correspondantes [!INCLUDE[tsql](../../includes/tsql-md.md)] [restaurer](/sql/t-sql/statements/restore-statements-transact-sql) script en cliquant sur **Script** , puis en sélectionnant une destination pour le script.  
   
 ## <a name="permissions"></a>Autorisations  
  Si la base de données restaurée n'existe pas, l'utilisateur doit posséder les autorisations CREATE DATABASE afin de pouvoir exécuter RESTORE. Si la base de données existe, les autorisations RESTORE reviennent par défaut aux membres des rôles serveur fixes **sysadmin** et **dbcreator** et au propriétaire (**dbo**) de la base de données.  
   
  Les autorisations RESTORE sont attribuées aux rôles dont les informations d'appartenance sont toujours immédiatement accessibles à partir du serveur. Étant donné que l’appartenance au rôle de base de données fixe ne peut être contrôlée que quand la base de données est accessible et non endommagée, ce qui n’est pas toujours le cas lorsque RESTORE est exécuté, les membres du rôle de base de données fixe **db_owner** ne détiennent pas d’autorisations RESTORE.  
   
- La restauration depuis une sauvegarde chiffrée requiert `VIEW DEFINITION` des autorisations pour le certificat ou la clé asymétrique utilisée pour chiffrer pendant la sauvegarde.  
+ La restauration depuis une sauvegarde chiffrée requiert `VIEW DEFINITION` autorisations pour le certificat ou la clé asymétrique utilisée pour chiffrer pendant la sauvegarde.  
   
 ## <a name="options"></a>Options  
   
@@ -59,13 +58,13 @@ ms.locfileid: "36143758"
 |Terme|Définition|  
 |----------|----------------|  
 |**Sauvegarde de la base de données**|Entrez la base de données à restaurer dans la liste. Vous pouvez entrer une nouvelle base de données ou choisir une base de données existante dans la liste déroulante. La liste contient toutes les bases de données sur le serveur, à l'exception des bases de données système **master** et **tempdb**.<br /><br /> Remarque : Pour restaurer une sauvegarde protégée par mot de passe, vous devez utiliser l’instruction [RESTORE](/sql/t-sql/statements/restore-statements-transact-sql) .|  
-|**Restaurer sur**|Par défaut, la zone **Restaurer sur** a la valeur « Dernière sauvegarde effectuée ». Vous pouvez également cliquer sur **Chronologie** pour ouvrir la boîte de dialogue **Chronologie de sauvegarde** , qui affiche l'historique de sauvegarde de la base de données sous forme de chronologie. Cliquez sur **chronologie** pour désigner un spécifique `datetime` pour lequel vous souhaitez restaurer la base de données. La base de données est ensuite restaurée dans l'état où elle se trouvait aux date et heure spécifiées. Consultez [Backup Timeline](backup-timeline.md).|  
+|**Restaurer sur**|Par défaut, la zone **Restaurer sur** a la valeur « Dernière sauvegarde effectuée ». Vous pouvez également cliquer sur **Chronologie** pour ouvrir la boîte de dialogue **Chronologie de sauvegarde** , qui affiche l'historique de sauvegarde de la base de données sous forme de chronologie. Cliquez sur **chronologie** pour désigner un spécifique `datetime` auquel vous voulez restaurer la base de données. La base de données est ensuite restaurée dans l'état où elle se trouvait aux date et heure spécifiées. Consultez [Backup Timeline](backup-timeline.md).|  
   
 ### <a name="restore-plan"></a>Plan de restauration  
   
 |Terme|Définition|  
 |----------|----------------|  
-|**Jeux de sauvegarde à restaurer**|Affiche les jeux de sauvegarde disponibles pour l'emplacement indiqué. Chaque jeu de sauvegarde (résultat d'une opération de sauvegarde unique) est réparti sur toutes les unités du support de sauvegarde. Par défaut, un plan de récupération est proposé pour accomplir l'opération de restauration basée sur la sélection des jeux de sauvegarde requis. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] utilise l'historique de sauvegarde dans **msdb** pour identifier les sauvegardes nécessaires à la restauration d'une base de données et crée un plan de restauration. Par exemple, pour une restauration de base de données, le plan de restauration sélectionne la sauvegarde de base de données complète la plus récente, suivie de la sauvegarde de base de données différentielle suivante la plus récente, le cas échéant. Avec le mode de récupération complète, le plan de restauration sélectionne ensuite toutes les sauvegardes de journaux suivantes.<br /><br /> Pour ignorer le plan de récupération suggéré, vous pouvez modifier les sélections suivantes dans la grille. Les sauvegardes qui dépendent d'une sauvegarde désélectionnée sont automatiquement désélectionnées.<br /><br /> **Restaurer**:<br />                          Les cases à cocher sélectionnées correspondent aux jeux de sauvegarde à restaurer.<br />**Nom**: le nom du jeu de sauvegarde.<br />**Composant**: le composant sauvegardé : **base de données**, **fichier**, ou  **\<vide >** (pour les journaux des transactions).<br />**Type**: type de sauvegarde effectué : **Complète**, **Différentielle**ou **Journal des transactions**.<br />**Serveur**: nom de l’instance [!INCLUDE[ssDE](../../includes/ssde-md.md)] qui a effectué l’opération de sauvegarde.<br />**Base de données**: le nom de la base de données impliquée dans l’opération de sauvegarde.<br />**Position**: position du jeu de sauvegarde dans le volume.<br />**Premier NSE**: le numéro de séquence de journal de la première transaction dans le jeu de sauvegarde. Vide pour les sauvegardes de fichiers.<br />**LSN de dernière**: le numéro de séquence de journal de la dernière transaction dans le jeu de sauvegarde. Vide pour les sauvegardes de fichiers.<br />**Point de contrôle LSN**: le numéro de séquence du journal (LSN) du contrôle plus récent au moment de la création de la sauvegarde.<br />**Tous les NSE**: le numéro de séquence de journal de la dernière sauvegarde de base de données complète.<br />**Date de début**: la date et l’heure de début de l’opération de sauvegarde, présentée dans les paramètres régionaux du client.<br />**Date de fin**: la date et l’heure de fin de l’opération de sauvegarde, présentée dans les paramètres régionaux du client.<br />**Taille**: la taille de la sauvegarde est définie en octets.<br />**Nom d’utilisateur**: le nom de l’utilisateur qui a effectué l’opération de sauvegarde.<br /><br /> **Expiration**: la date et l’heure d’expiration du jeu de sauvegarde.<br /><br /> Les cases à cocher sont disponibles uniquement lorsque l'option **Sélection manuelle** est activée. Cela vous permet de sélectionner les jeux de sauvegarde à restaurer.<br /><br /> Lorsque l'option **Sélection manuelle** est activée, l'exactitude du plan de restauration est vérifiée à chacune de ses modifications. Si la séquence des sauvegardes est incorrecte, un message d'erreur s'affiche.|  
+|**Jeux de sauvegarde à restaurer**|Affiche les jeux de sauvegarde disponibles pour l'emplacement indiqué. Chaque jeu de sauvegarde (résultat d'une opération de sauvegarde unique) est réparti sur toutes les unités du support de sauvegarde. Par défaut, un plan de récupération est proposé pour accomplir l'opération de restauration basée sur la sélection des jeux de sauvegarde requis. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] utilise l'historique de sauvegarde dans **msdb** pour identifier les sauvegardes nécessaires à la restauration d'une base de données et crée un plan de restauration. Par exemple, pour une restauration de base de données, le plan de restauration sélectionne la sauvegarde de base de données complète la plus récente, suivie de la sauvegarde de base de données différentielle suivante la plus récente, le cas échéant. Avec le mode de récupération complète, le plan de restauration sélectionne ensuite toutes les sauvegardes de journaux suivantes.<br /><br /> Pour remplacer le plan de récupération suggéré, vous pouvez modifier les sélections suivantes dans la grille. Les sauvegardes qui dépendent d'une sauvegarde désélectionnée sont automatiquement désélectionnées.<br /><br /> **Restaurer**:<br />                          Les cases à cocher sélectionnées correspondent aux jeux de sauvegarde à restaurer.<br />**Nom**: le nom du jeu de sauvegarde.<br />**Composant**: le composant sauvegardé : **base de données**, **fichier**, ou ** \<vide >** (pour les journaux des transactions).<br />**Type**: type de sauvegarde effectué : **Complète**, **Différentielle**ou **Journal des transactions**.<br />**Serveur**: nom de l’instance [!INCLUDE[ssDE](../../includes/ssde-md.md)] qui a effectué l’opération de sauvegarde.<br />**Base de données**: le nom de la base de données impliquée dans l’opération de sauvegarde.<br />**Position**: position du jeu de sauvegarde dans le volume.<br />**Premier NSE**: le numéro de séquence de journal de la première transaction dans le jeu de sauvegarde. Vide pour les sauvegardes de fichiers.<br />**LSN de dernière**: le numéro de séquence de journal de la dernière transaction dans le jeu de sauvegarde. Vide pour les sauvegardes de fichiers.<br />**Point de contrôle LSN**: le numéro de séquence de journal (LSN) du contrôle plus récent au moment de la création de la sauvegarde.<br />**Tous les NSE**: le numéro de séquence de journal de la dernière sauvegarde de base de données complète.<br />**Date de début**: la date et l’heure de début de l’opération de sauvegarde, présentée dans les paramètres régionaux du client.<br />**Date de fin**: la date et l’heure de fin de l’opération de sauvegarde, présentée dans les paramètres régionaux du client.<br />**Taille**: la taille de la sauvegarde est définie en octets.<br />**Nom d’utilisateur**: le nom de l’utilisateur qui a effectué l’opération de sauvegarde.<br /><br /> **Expiration**: la date et l’heure d’expiration du jeu de sauvegarde.<br /><br /> Les cases à cocher sont disponibles uniquement lorsque l'option **Sélection manuelle** est activée. Cela vous permet de sélectionner les jeux de sauvegarde à restaurer.<br /><br /> Lorsque l'option **Sélection manuelle** est activée, l'exactitude du plan de restauration est vérifiée à chacune de ses modifications. Si la séquence des sauvegardes est incorrecte, un message d'erreur s'affiche.|  
 |**Vérifier les supports de sauvegarde**|Appelle une instruction RESTORE VERIFY_ONLY sur les jeux de sauvegarde sélectionnés.<br /><br /> Remarque : cette opération est longue, et sa progression peut être suivie et annulée à l’aide du Moniteur d’avancement de l’Infrastructure de boîte de dialogue.<br /><br /> Ce bouton vous permet de vérifier l'intégrité des fichiers de sauvegarde sélectionnés avant de les restaurer.<br /><br /> Lors de la vérification de l'intégrité des jeux de sauvegarde, l'état d'avancement fourni en bas à gauche de la boîte de dialogue n'indique plus « Exécution », mais « Vérification ».|  
   
 ## <a name="compatibility-support"></a>Prise en charge de la compatibilité  

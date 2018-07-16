@@ -1,5 +1,5 @@
 ---
-title: Définition de la sécurité pour les procédures stockées | Documents Microsoft
+title: Définition de la sécurité pour les procédures stockées | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,15 +15,15 @@ helpviewer_keywords:
 - PermissionSet property
 ms.assetid: 6364b125-7d72-4312-9677-56c62e22461e
 caps.latest.revision: 25
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 1a3a4f9d6b514ba6ea728e02e8886c34bf0a4565
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 66da0abd1831fc3d32b2a228110cf85e8442e47e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36152439"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37204559"
 ---
 # <a name="setting-security-for-stored-procedures"></a>Définition de la sécurité pour les procédures stockées
   La sécurité des procédures stockées est définie avec la propriété `PermissionSet` sur une procédure stockée pour une instance [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] (niveau serveur), une base de données [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ou un projet [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].  

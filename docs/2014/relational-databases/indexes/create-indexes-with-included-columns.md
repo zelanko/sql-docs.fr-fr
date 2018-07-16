@@ -5,10 +5,9 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-indexes
+ms.technology: table-view-index
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - index size [SQL Server]
 - index keys [SQL Server]
@@ -21,15 +20,15 @@ helpviewer_keywords:
 - nonkey columns
 ms.assetid: d198648d-fea5-416d-9f30-f9d4aebbf4ec
 caps.latest.revision: 28
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 8c05f2575c1c3d49c76024e50e6defdff12185b0
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: b36575e6dbd197db0617ba258e93ae337027db2a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36040410"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37197239"
 ---
 # <a name="create-indexes-with-included-columns"></a>Créer des index avec colonnes incluses
   Cette rubrique explique comment ajouter des colonnes incluses (ou non-clés) pour étendre les fonctionnalités des index non cluster dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] à l'aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou de [!INCLUDE[tsql](../../includes/tsql-md.md)]. L'inclusion de colonnes non-clés permet de créer des index non-cluster qui couvrent davantage de requêtes. En effet, les colonnes non-clés présentent les avantages suivants :  
@@ -71,7 +70,7 @@ ms.locfileid: "36040410"
   
 -   Les colonnes non-clés peuvent uniquement être définies sur des index non cluster.  
   
--   Tous les types de données à l’exception de `text`, `ntext`, et `image` peut être utilisé en tant que colonnes non-clés.  
+-   Tous les types de données à l’exception `text`, `ntext`, et `image` peut être utilisé en tant que colonnes non-clés.  
   
 -   Les colonnes calculées déterministes et précises ou imprécises peuvent être des colonnes non-clés. Pour plus d'informations, consultez [Indexes on Computed Columns](indexes-on-computed-columns.md).  
   
@@ -83,7 +82,7 @@ ms.locfileid: "36040410"
   
     -   modifier la possibilité de valeur NULL de la colonne de NOT NULL à NULL ;  
   
-    -   Augmenter la longueur des `varchar`, `nvarchar`, ou `varbinary` colonnes.  
+    -   Augmentez la longueur de `varchar`, `nvarchar`, ou `varbinary` colonnes.  
   
 ###  <a name="Security"></a> Sécurité  
   

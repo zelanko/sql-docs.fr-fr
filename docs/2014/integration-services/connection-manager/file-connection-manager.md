@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - folders [Integration Services], connections
 - files [Integration Services], connections
@@ -20,19 +20,19 @@ ms.assetid: 019078bc-44ee-4975-9169-0f9a89e3f3be
 caps.latest.revision: 50
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: d9f02969042ec839a708045143b748890d25c1de
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 33e9bb0dbb4030d09be6db95dda2a33245cd7288
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36142560"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37252691"
 ---
 # <a name="file-connection-manager"></a>Gestionnaire de connexions de fichiers
   Un gestionnaire de connexions de fichiers permet à un package de référencer un fichier ou dossier existant ou de créer un fichier ou dossier au moment de l'exécution. Par exemple, vous pouvez référencer un fichier Excel. Certains composants de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] utilisent les informations figurant dans les fichiers pour réaliser leur travail. Par exemple, une tâche d'exécution SQL peut référencer un fichier contenant les instructions SQL exécutées par la tâche. D'autres composants exécutent des opérations sur les fichiers. Par exemple, la tâche de système de fichiers peut référencer un fichier pour le copier à un nouvel emplacement.  
   
 ## <a name="usage-types-of-the-file-connection-manager"></a>Types d'utilisations du gestionnaire de connexions de fichiers  
- Le `FileUsageType` propriété du Gestionnaire de connexions de fichiers Spécifie l’utilisation de la connexion de fichier. Le gestionnaire de connexions de fichiers peut créer un fichier, créer un dossier, utiliser un fichier existant ou utiliser un dossier existant.  
+ Le `FileUsageType` propriété du Gestionnaire de connexions de fichiers spécifie comment la connexion de fichier est utilisée. Le gestionnaire de connexions de fichiers peut créer un fichier, créer un dossier, utiliser un fichier existant ou utiliser un dossier existant.  
   
  Le tableau suivant répertorie les valeurs de `FileUsageType`.  
   
@@ -47,9 +47,9 @@ ms.locfileid: "36142560"
  Le gestionnaire de connexions de fichiers peut référencer un seul fichier ou dossier. Pour référencer plusieurs fichiers ou dossiers, utilisez un gestionnaire de connexions de fichiers multiples au lieu du gestionnaire de connexions de fichiers. Pour plus d’informations, consultez [Gestionnaire de connexions de fichiers multiples](multiple-files-connection-manager.md).  
   
 ## <a name="configuration-of-the-file-connection-manager"></a>Configuration du gestionnaire de connexions de fichiers  
- Lorsque vous ajoutez un gestionnaire de connexions de fichiers à un package, [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] crée une connexion de gestionnaire qui sera converti en connexion de fichiers au moment de l’exécution, définit les propriétés de connexion de fichiers et ajoute la connexion de fichier pour le `Connections` collection du package.  
+ Lorsque vous ajoutez un gestionnaire de connexions de fichier à un package, [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] crée une connexion de gestionnaire qui sera converti en une connexion de fichiers en cours d’exécution, définit les propriétés de connexion de fichiers et ajoute la connexion de fichier à la `Connections` collection du package.  
   
- Le `ConnectionManagerType` du Gestionnaire de connexions est définie sur `FILE`.  
+ Le `ConnectionManagerType` propriété du Gestionnaire de connexions est définie sur `FILE`.  
   
  Vous pouvez configurer un gestionnaire de connexions de fichiers de plusieurs manières :  
   
@@ -63,6 +63,6 @@ ms.locfileid: "36142560"
   
  Pour plus d’informations sur les propriétés définissables dans le concepteur [!INCLUDE[ssIS](../../includes/ssis-md.md)] , consultez [Éditeur du gestionnaire de connexions de fichiers](../file-connection-manager-editor.md).  
   
- Pour plus d’informations sur la configuration d’un gestionnaire de connexions par programme, consultez <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> et [Ajout de connexions par programme](../building-packages-programmatically/adding-connections-programmatically.md).  
+ Pour plus d’informations sur la configuration d’un gestionnaire de connexions par programmation, consultez <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> et [Ajout de connexions par programmation](../building-packages-programmatically/adding-connections-programmatically.md).  
   
   

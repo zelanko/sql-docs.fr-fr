@@ -1,5 +1,5 @@
 ---
-title: 'Tâche 6 : Vérifier que l’attribut basé sur un domaine est créé à l’aide de Master Data Manager | Documents Microsoft'
+title: 'Tâche 6 : Vérifier que l’attribut basé sur un domaine est créé à l’aide de Master Data Manager | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -10,18 +10,18 @@ ms.technology:
 - integration-services
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 6e90517a-910c-4c33-8f11-92ac3cff4fdc
 caps.latest.revision: 6
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: d12764af6fbebf8c0fa82d38059cc64ea9bbc2c2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: f607a6faaf8a6891ff2d7191142f11dbaa55f961
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36142384"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37191299"
 ---
 # <a name="task-6-verify-that-the-domain-based-attribute-is-created-using-master-data-manager"></a>Tâche 6 : Vérifier que l'attribut basé sur un domaine est créé à l'aide de Master Data Manager
   Dans cette tâche, vous allez vérifier que l’entité **État** est créée dans **MDS** et que l’attribut **État** de l’entité **Fournisseur** est un attribut basé sur un domaine qui dépend de l’entité **État** à l’aide de **Master Data Manager**.  
@@ -82,9 +82,9 @@ ms.locfileid: "36142384"
   
 11. Maintenant, notez qu’une valeur du champ **État** peut être modifiée dans le volet **Détails** à l’aide de la liste déroulante. Remarquez également que, dans la liste à gauche et dans la liste déroulante du volet **Détails**, le code est affiché en premier, suivi par le nom entre accolades. Vous pouvez également modifier d’autres valeurs dans le volet **Détails**.  
   
-     ![L’attribut avec le Code mis à jour et les noms d’état](../../2014/tutorials/media/et-verifythatthedbaiscreatedusingmdm-02.jpg "attribut avec le Code mis à jour et les noms d’état")  
+     ![Attribut avec le Code mis à jour et les noms d’état](../../2014/tutorials/media/et-verifythatthedbaiscreatedusingmdm-02.jpg "attribut avec le Code mis à jour et les noms d’état")  
   
 ## <a name="next-step"></a>Étape suivante  
- [Tâche 7 : Affichage des mises à jour apportées à l’aide de Master Data Manager dans Excel](../../2014/tutorials/task-7-viewing-updates-made-using-master-data-manager-in-excel.md)  
+ [Tâche 7 : Affichage des mises à jour effectuées à l’aide de Master Data Manager dans Excel](../../2014/tutorials/task-7-viewing-updates-made-using-master-data-manager-in-excel.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Élément isolation (ASSL) | Documents Microsoft
+title: Isolation, élément (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -20,18 +20,18 @@ helpviewer_keywords:
 - Isolation element
 ms.assetid: 28c98c6f-668e-4547-8d25-127cc3995a7d
 caps.latest.revision: 13
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: cdcbf79ccd1281c9f3dbaa109b3c77214ced22bf
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: a21593d360342dc703e1da45d50b4ddff74241a7
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36041469"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37257225"
 ---
 # <a name="isolation-element-assl"></a>Élément Isolation (ASSL)
-  Indique le niveau d’isolation d’un élément qui est dérivé de la [source de données](../data-type/datasource-data-type-assl.md) type de données.  
+  Indique le niveau d’isolement pour un élément qui est dérivé de la [DataSource](../data-type/datasource-data-type-assl.md) type de données.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -49,7 +49,7 @@ ms.locfileid: "36041469"
 |Caractéristique|Description|  
 |--------------------|-----------------|  
 |Type de données et longueur|Chaîne (énumération)|  
-|Valeur par défaut|*Lecture validée*|  
+|Valeur par défaut|*ReadCommitted*|  
 |Cardinalité|0-1 : élément facultatif qui peut apparaître une fois et une seule.|  
   
 ## <a name="element-relationships"></a>Relations entre les éléments  
@@ -64,7 +64,7 @@ ms.locfileid: "36041469"
   
 |Valeur|Description|  
 |-----------|-----------------|  
-|*Lecture validée*|Spécifie que les instructions ne peuvent pas lire les données modifiées mais non validées par d'autres transactions. Cela permet d'éviter les lectures incorrectes. D'autres transactions peuvent modifier des données entre des instructions individuelles dans la transaction actuelle. Il en résulte des lectures non reproductibles ou des données fantômes. Il s'agit de la valeur par défaut de l'élément `Isolation`.|  
+|*ReadCommitted*|Spécifie que les instructions ne peuvent pas lire les données modifiées mais non validées par d'autres transactions. Cela permet d'éviter les lectures incorrectes. D'autres transactions peuvent modifier des données entre des instructions individuelles dans la transaction actuelle. Il en résulte des lectures non reproductibles ou des données fantômes. Il s'agit de la valeur par défaut de l'élément `Isolation`.|  
 |*Snapshot*|Spécifie que les données lues par n'importe quelle instruction d'une transaction représenteront la version cohérente d'un point de vue transactionnel des données qui existaient au début de la transaction. La transaction ne peut détecter que les modifications de données qui ont été validées avant qu'elle ne commence. Les modifications de données effectuées par d'autres transactions après le démarrage de la transaction actuelle ne sont pas visibles pour les instructions qui s'exécutent dans la transaction actuelle. Tout se passe comme si les instructions d'une transaction obtenaient un instantané des données validées telles qu'elles existaient au début de cette transaction.|  
   
 ## <a name="see-also"></a>Voir aussi  

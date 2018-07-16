@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - reports [Reporting Services], upgrading
 - published reports [Reporting Services], upgrades
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - .rdl files
 ms.assetid: a1a10c67-7462-4562-9b07-a8822188a161
 caps.latest.revision: 65
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: d3c6611c05fc90afcdbeae689f650bf476b2019b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: 1ba06e961245cf1fe9ae5802abc26b575fe7683c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36152775"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37244509"
 ---
 # <a name="upgrade-reports"></a>Mettre à niveau des rapports
   Les fichiers de définition de rapport (.rdl) existants sont automatiquement mis à niveau de différentes façons :  
@@ -41,7 +41,7 @@ ms.locfileid: "36152775"
   
  Après la mise à niveau d'un rapport en local ou sur le serveur de rapports, vous pouvez noter la présence d'erreurs, d'avertissements et de messages. Cette présence est liée aux améliorations apportées au modèle objet de rapport interne et aux composants de traitement. En effet, des messages apparaissent lors de la détection de problèmes sous-jacents dans le rapport. Pour plus d’informations, consultez [Compatibilité descendante de Reporting Services](../reporting-services-backward-compatibility.md).  
   
- Pour plus d’informations sur les nouvelles fonctionnalités pour [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)], consultez [Nouveautés &#40;Reporting Services&#41;](../what-s-new-reporting-services.md).  
+ Pour plus d’informations sur les nouvelles fonctionnalités pour [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)], consultez [What ' s New &#40;Reporting Services&#41;](../what-s-new-reporting-services.md).  
   
  Dans cette rubrique :  
   
@@ -92,7 +92,7 @@ ms.locfileid: "36152775"
  Lors de la première utilisation, le serveur de rapports essaie de mettre à niveau les rapports publiés et les instantanés de rapport existants vers le nouveau schéma de définition de rapport, en ne requérant aucune action spécifique de votre part. Lorsqu'un utilisateur affiche un rapport ou un instantané de rapport, ou lorsque le serveur de rapports traite un abonnement, la mise à niveau s'effectue. La définition de rapport n'est pas remplacée, mais continue à être stockée sur le serveur de rapports [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] dans son schéma d'origine. Si un rapport ne peut pas être mis à niveau, le rapport s'exécute en mode compatibilité descendante.  
   
 ##  <a name="bkmk_backcompat"></a> Mode compatibilité descendante  
- Un rapport mis à niveau avec succès est traité par le processeur de rapports [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] . Un rapport ne peut pas être mis à niveau est traité par le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2005 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] processeur en mode de compatibilité descendante de rapports. Un rapport ne peut pas être traité par les deux processeurs de rapports. Lors de la première utilisation, un rapport est mis à niveau avec succès ou marqué pour la compatibilité descendante.  
+ Un rapport mis à niveau avec succès est traité par le processeur de rapports [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] . Un rapport qui ne peut pas être mis à niveau est traité par le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2005 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] processeur en mode de compatibilité descendante de rapports. Un rapport ne peut pas être traité par les deux processeurs de rapports. Lors de la première utilisation, un rapport est mis à niveau avec succès ou marqué pour la compatibilité descendante.  
   
  Seul le processeur de rapports [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] prend en charge les nouvelles fonctionnalités. Si un rapport ne peut pas être mis à niveau, vous pouvez toujours consulter le rapport rendu, mais les nouvelles fonctionnalités ne sont pas disponibles. Pour tirer parti des nouvelles fonctionnalités, un rapport doit être mis à niveau avec succès.  
   
@@ -114,9 +114,9 @@ ms.locfileid: "36152775"
 ##  <a name="bkmk_CRIs"></a> Mise à niveau d'un rapport avec les éléments de rapport personnalisés  
  Les rapports [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2005 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] peuvent contenir les éléments de rapport personnalisés proposés par les fournisseurs de logiciels tiers et installés par l'administrateur système sur l'ordinateur de création de rapports et le serveur de rapports. Les rapports qui contiennent des éléments de rapport personnalisés peuvent être mis à niveau de différentes façons :  
   
--   A [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2005 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] serveur de rapports est mis à niveau vers une [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] serveur de rapports. Les rapports publiés sur le serveur de rapports sont automatiquement mis à niveau lors de la première utilisation.  
+-   Un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2005 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] serveur de rapports est mis à niveau vers un [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] serveur de rapports. Les rapports publiés sur le serveur de rapports sont automatiquement mis à niveau lors de la première utilisation.  
   
--   A [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2005 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] est téléchargé sur un [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] serveur de rapports. Le rapport est automatiquement mis à niveau lors de la première utilisation.  
+-   Un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2005 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] est téléchargé sur un [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] serveur de rapports. Le rapport est automatiquement mis à niveau lors de la première utilisation.  
   
 -   Un serveur de rapports [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2005 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] est ouvert dans le Concepteur de rapports de [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. Une copie de sauvegarde du rapport original est créée. L'un des deux cas suivants se produit :  
   
@@ -129,7 +129,7 @@ ms.locfileid: "36152775"
  Pour plus d’informations sur l’identification de l’espace de noms RDL en cours d’un serveur de rapports, de [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] ou d’un rapport, consultez [Rechercher la version du schéma de définition de rapport &#40;SSRS&#41;](../reports/find-the-report-definition-schema-version-ssrs.md).  
   
 ### <a name="upgrading-reports-on-a-report-server"></a>Mise à niveau des rapports sur un serveur de rapports  
- La première fois un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2005 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] rapport s’exécute sur un serveur de rapports a été mis à niveau vers une [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] serveur de rapports, le rapport est automatiquement mis à niveau vers le rapport définition espace de noms actuel pris en charge par le serveur de rapports. Le rapport aurait pu exister sur le serveur de rapports avant la mise à niveau ou le rapport a téléchargés via le Gestionnaire de rapports ou publié sur le serveur de rapports à partir du Concepteur de rapports de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2005 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)].  
+ La première fois un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2005 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] rapport s’exécute sur un serveur de rapports a été mis à niveau vers un [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] serveur de rapports, le rapport est automatiquement mis à niveau vers le rapport définition espace de noms actuel pris en charge par le serveur de rapports. Le rapport aurait pu exister sur le serveur de rapports avant la mise à niveau ou le rapport peut téléchargé via le Gestionnaire de rapports ou publié sur le serveur de rapports à partir de Concepteur de rapports dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2005 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)].  
   
  Le tableau suivant répertorie l'action de mise à niveau effectuée par le serveur de rapports pour les types spécifiques d'éléments de rapport personnalisés d'un rapport.  
   
@@ -137,7 +137,7 @@ ms.locfileid: "36152775"
 |--------------|----------------------------------|  
 |Éléments de rapport personnalisés tiers|Mise à niveau non effectuée.<br /><br /> Traitement par le processeur de rapports [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2005 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].|  
 |Éléments de rapport personnalisés Dundas 2005 Chart sans fonctionnalités non prises en charge|Mise à niveau vers le schéma RDL le plus récent. Tous les éléments de rapport personnalisés Dundas 2005 Chart sont convertis en régions de données de graphiques compatibles avec [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)].<br /><br /> Traitement par le processeur de rapports [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)].|  
-|Éléments de rapport personnalisés Dundas 2005 Gauge sans fonctionnalités non prises en charge|Mise à niveau vers le schéma RDL le plus récent. Tout rapport personnalisés Dundas 2005 Gauge sont convertis en jauge qui sont compatibles avec les régions de données [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)]<br /><br /> Traitement par le processeur de rapports [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)].|  
+|Éléments de rapport personnalisés Dundas 2005 Gauge sans fonctionnalités non prises en charge|Mise à niveau vers le schéma RDL le plus récent. Tous les cri de jauge Dundas 2005 sont convertis en régions de données qui sont compatibles avec de jauge [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)]<br /><br /> Traitement par le processeur de rapports [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)].|  
 |Éléments de rapport personnalisés Dundas 2005 Chart avec fonctionnalités non prises en charge|Mise à niveau non effectuée.<br /><br /> Traitement par le processeur de rapports [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2005 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].|  
 |Éléments de rapport personnalisés Dundas 2005 Gauge avec fonctionnalités non prises en charge|Mise à niveau non effectuée.<br /><br /> Traitement par le processeur de rapports [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2005 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].|  
   
@@ -193,11 +193,11 @@ ms.locfileid: "36152775"
  Ce rapport contient des éléments de rapport personnalisés (CRI, Custom Report Item) avec des fonctionnalités non prises en charge. Les éléments de rapport personnalisés sont des extensions du langage RDL (Report Definition Language) qui prennent en charge les objets personnalisés qui affichent les données dans un rapport. Les CRI incluent des composants du moment du design et du moment de l'exécution fournis par des éditeurs de logiciels tiers.  
   
 > [!NOTE]  
->  Le choix de prendre en charge des éléments de rapport personnalisés sur un serveur de rapports est une décision qui revient à l'administrateur système. Pour permettre l'affichage des éléments de rapport personnalisés (CRI) dans un rapport, les composants CRI doivent être installés sur le client de création de rapports pour l'aperçu d'un rapport et sur le serveur de rapports pour l'affichage d'un rapport publié et téléchargé. Pour plus d’informations, consultez [éléments de rapport personnalisés](../custom-report-items/custom-report-items.md) et la documentation du fournisseur de logiciels tiers.  
+>  Le choix de prendre en charge des éléments de rapport personnalisés sur un serveur de rapports est une décision qui revient à l'administrateur système. Pour permettre l'affichage des éléments de rapport personnalisés (CRI) dans un rapport, les composants CRI doivent être installés sur le client de création de rapports pour l'aperçu d'un rapport et sur le serveur de rapports pour l'affichage d'un rapport publié et téléchargé. Pour plus d’informations, consultez [éléments de rapport personnalisés](../custom-report-items/custom-report-items.md) et documentation de l’éditeur de logiciels tiers.  
   
- Certains CRI peuvent être convertis en éléments de rapport dans le nouveau format de définition de rapport. Pour obtenir la liste des CRI qui peuvent être convertis, consultez [la mise à niveau des rapports](upgrade-reports.md). Utilisez la liste suivante pour décider s'il est nécessaire de convertir les CRI dans ce rapport :  
+ Certains CRI peuvent être convertis en éléments de rapport dans le nouveau format de définition de rapport. Pour la liste des CRI qui peuvent être convertis, consultez [la mise à niveau des rapports](upgrade-reports.md). Utilisez la liste suivante pour décider s'il est nécessaire de convertir les CRI dans ce rapport :  
   
--   **Oui** Choisissez **Oui** pour convertir tous les CRI du rapport, dans la mesure du possible. Les fonctionnalités non prises en charge dans les CRI ne peuvent pas être mises à niveau et peuvent être supprimées du fichier de définition du rapport. Pour obtenir la liste des fonctionnalités non prises en charge, consultez [la mise à niveau des rapports](upgrade-reports.md). Lorsque vous consultez le rapport, vous pouvez voir des différences dans la manière dont les CRI apparaissent dans le rapport.  
+-   **Oui** Choisissez **Oui** pour convertir tous les CRI du rapport, dans la mesure du possible. Les fonctionnalités non prises en charge dans les CRI ne peuvent pas être mises à niveau et peuvent être supprimées du fichier de définition du rapport. Pour la liste des fonctionnalités non prises en charge, consultez [la mise à niveau des rapports](upgrade-reports.md). Lorsque vous consultez le rapport, vous pouvez voir des différences dans la manière dont les CRI apparaissent dans le rapport.  
   
 -   **Non** Choisissez **Non** si vous ne souhaitez pas convertir les CRI dans le rapport. Ces CRI ne peuvent pas être affichés par le processeur de rapports dans leur version actuelle. Si votre administrateur système projette d’installer une nouvelle version du CRI de l’éditeur de logiciels tiers compatible avec le nouveau format de définition de rapport, vous devez choisir **Non**. Tant que de nouvelles versions ne sont pas disponibles, les CRI apparaissent dans le rapport sous la forme d'une zone de texte vide marquée d'une croix (X) rouge.  
   
@@ -210,8 +210,8 @@ ms.locfileid: "36152775"
 ## <a name="see-also"></a>Voir aussi  
  [Mettre à niveau et migrer Reporting Services](upgrade-and-migrate-reporting-services.md)   
  [Modifications avec rupture dans SQL Server Reporting Services dans SQL Server 2014](../breaking-changes-in-sql-server-reporting-services-in-sql-server-2016.md)   
- [Changements de comportement SQL Server Reporting Services dans SQL Server 2014](../behavior-changes-to-sql-server-reporting-services-in-sql-server-2016.md)   
- [Fonctionnalités supprimées dans SQL Server Reporting Services dans SQL Server 2014](../discontinued-functionality-to-sql-server-reporting-services-in-sql-server.md)   
+ [Changements de comportement apportés à SQL Server Reporting Services dans SQL Server 2014](../behavior-changes-to-sql-server-reporting-services-in-sql-server-2016.md)   
+ [Fonctionnalités supprimées de SQL Server Reporting Services dans SQL Server 2014](../discontinued-functionality-to-sql-server-reporting-services-in-sql-server.md)   
  [Éléments de rapport personnalisés](../custom-report-items/custom-report-items.md)   
  [Mettre à niveau une base de données de serveurs de rapports](upgrade-a-report-server-database.md)  
   

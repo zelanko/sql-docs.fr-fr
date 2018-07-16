@@ -1,5 +1,5 @@
 ---
-title: Utiliser les valeurs des Variables et des paramètres dans un Package enfant | Documents Microsoft
+title: Utiliser les valeurs des Variables et des paramètres dans un Package enfant | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - variables [Integration Services], passing between packages
 - configurations [Integration Services]
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - variables [Integration Services], adding
 ms.assetid: 9b939edb-4e17-48e5-8428-855beb10049c
 caps.latest.revision: 18
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 5ff545e52e36ca6019a6d9e367b8466d99bd7983
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: f1c522a87bfd20608d1e42080ad9ff3d3ae10973
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36144348"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37287515"
 ---
 # <a name="use-the-values-of-variables-and-parameters-in-a-child-package"></a>Utiliser les valeurs des variables et des paramètres dans un package enfant
   Cette procédure explique comment créer une configuration de package qui utilise le type de configuration de variable parent. Ce type de configuration active un package enfant exécuté à partir d'un package parent pour accéder à une variable dans le parent.  
@@ -110,7 +110,7 @@ ms.locfileid: "36144348"
 ## <a name="see-also"></a>Voir aussi  
  [Configurations de package](../../2014/integration-services/package-configurations.md)   
  [Créer des Configurations de Package](../../2014/integration-services/create-package-configurations.md)   
- [Services d’intégration &#40;SSIS&#41; Variables](integration-services-ssis-variables.md)   
- [Utiliser des Variables dans des Packages](../../2014/integration-services/use-variables-in-packages.md)  
+ [Integration Services &#40;SSIS&#41; Variables](integration-services-ssis-variables.md)   
+ [Utiliser des variables dans des packages](../../2014/integration-services/use-variables-in-packages.md)  
   
   

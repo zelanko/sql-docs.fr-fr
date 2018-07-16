@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 16849e38-d3fb-414d-8dcb-797b5ffce6ee
 caps.latest.revision: 10
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: a72a02bf0568a393aa9510b2982c13b02086ead2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: d13b3e167d4b8d5d8c099536d85669591658dffe
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36040415"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37279705"
 ---
 # <a name="manage-event-sessions-in-the-object-explorer"></a>Gérer les sessions d'événements dans l'Explorateur d'objets
   Cette rubrique décrit les actions effectuées dans l' **Explorateur d'objets** qui affectent les événements étendus :  
@@ -40,7 +40,7 @@ ms.locfileid: "36040415"
  Pour plus d'informations sur la création d'une session d'événements étendus, consultez [Create an Extended Events Session](../../database-engine/create-an-extended-events-session.md).  
   
 ## <a name="starting-or-stopping-an-extended-events-session"></a>Démarrer ou arrêter une session d'événements étendus  
- Vous pouvez démarrer ou arrêter une session d’événements étendus via le **l’éditeur de requête** à l’aide de la `ALTER EVENT SESSION` instruction, ou à l’aide de la **événements étendus** nœud de **l’Explorateur d’objets**.  
+ Vous pouvez démarrer ou arrêter une session d’événements étendus via le **éditeur de requête** à l’aide de la `ALTER EVENT SESSION` instruction, ou à l’aide de la **événements étendus** nœud de **Explorateur d’objets**.  
   
  Quand vous arrêtez une session d’événements, la session n’apparaît plus comme une session active dans la vue de gestion dynamique sys.dm_xe_sessions. Toutefois, la définition de session reste intacte, et vous pouvez redémarrer la session. Pour supprimer complètement une définition de session, vous devez supprimer la session.  
   
@@ -86,7 +86,7 @@ STATE = STOP
 ## <a name="import-an-extended-events-session-template"></a>Importer un modèle de session d'événements étendus  
  À l'aide de l' **Explorateur d'objets**, vous pouvez importer un modèle pour une session d'événements étendus. Par exemple, vous pouvez souhaiter procéder ainsi pour créer une session a partir d'un modèle qui a été exporté à partir d'une autre instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
- Pour importer une session d’événements étendus, vous devez disposer des nécessaires `ALTER ANY EVENT SESSION` autorisations.  
+ Pour importer une session événements étendus, vous devez disposer nécessaires `ALTER ANY EVENT SESSION` autorisations.  
   
  Avant d'importer un fichier modèle, vérifiez que le fichier provient d'une source approuvée. Les fichiers modèles doivent être enregistrés dans un emplacement qui utilise le système de fichiers NTFS et où l'accès est limité aux utilisateurs qui sont autorisés à afficher les informations.  
   

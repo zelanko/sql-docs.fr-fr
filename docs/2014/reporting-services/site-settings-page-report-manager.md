@@ -1,5 +1,5 @@
 ---
-title: Page de paramètres (Gestionnaire de rapports) de site | Documents Microsoft
+title: Page de paramètres (Gestionnaire de rapports) de site | Microsoft Docs
 ms.custom: ''
 ms.date: 05/24/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 4d67a01c-eae4-49ba-a6e8-8e983c0248f5
 caps.latest.revision: 5
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: dd5360f4f001d85c883291bf87a85ae0e48e3362
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 6ab466c2e6029a0da5e3ce5498fd85f8a1c8724f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36152266"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37232609"
 ---
 # <a name="site-settings-page-report-manager"></a>Page Paramètres du site (Gestionnaire de rapports)
   Utilisez la page Paramètres du site pour modifier le titre de l'application, définir des valeurs par défaut à l'échelle du serveur pour les limites de l'historique de rapport et les valeurs du délai d'exécution du traitement du rapport, gérer les attributions de rôle au niveau du système et gérer les planifications partagées. Vous devez disposer des autorisations de gestionnaire de contenu et d'administrateur système pour consulter cette page.  
@@ -36,7 +36,7 @@ ms.locfileid: "36152266"
   
 2.  Cliquez sur **Paramètres du site**en haut de la page. La page des propriétés générales du site s'ouvre.  
   
-     **Remarque :** si vous ne voyez pas le **paramètres du Site** option dans le menu, vous n’avez pas des autorisations requises, pour plus d’informations, consultez la section « Paramètres du site » de [configurer un serveur de rapports en Mode natif Administration locale &#40;SSRS&#41;](report-server/configure-a-native-mode-report-server-for-local-administration-ssrs.md).  
+     **Remarque :** si vous ne voyez pas le **paramètres du Site** option dans le menu, vous n’avez pas les autorisations requises, pour plus d’informations, consultez la section « Paramètres du site » de [configurer un serveur de rapports en Mode natif pour Administration locale &#40;SSRS&#41;](report-server/configure-a-native-mode-report-server-for-local-administration-ssrs.md).  
   
 ## <a name="options"></a>Options  
  **Nom**  
@@ -57,7 +57,7 @@ ms.locfileid: "36152266"
  **URL de lancement du Générateur de rapports personnalisé**  
  Spécifie une URL personnalisée lorsque le serveur de rapports n'utilise pas l'URL par défaut du Générateur de rapports. Ce paramètre est facultatif. Si vous ne spécifiez pas de valeur, l'URL par défaut sera utilisée pour lancer le Générateur de rapports comme une application ClickOnce. L'URL par défaut est l'une des suivantes :  
   
- **Serveur de rapports en mode natif :** dans une installation en mode natif, l’URL par défaut prendra la forme http://\<*Nom_Ordinateur*> / reportserver/ReportBuilder/ReportBuilder_3_0_0_0.application.  
+ **Serveur de rapports en mode natif :** dans une installation en mode natif, l’URL par défaut prendra la forme http://\<*computername*> / reportserver/ReportBuilder/ReportBuilder_3_0_0_0.application.  
   
  En mode intégré SharePoint : l’URL par défaut prendra la forme http://\<*Site_sharepoint*> / _vti_bin/ReportBuilder/ReportBuilder_3_0_0_0.application. »  
   
@@ -74,6 +74,6 @@ ms.locfileid: "36152266"
  [Le Gestionnaire de rapports &#40;SSRS en Mode natif&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
  [Octroi d'autorisations sur un serveur de rapports en mode natif](security/granting-permissions-on-a-native-mode-report-server.md)   
  [Rôles prédéfinis](security/role-definitions-predefined-roles.md)   
- [Aide (F1) de gestionnaire de rapports](../../2014/reporting-services/report-manager-f1-help.md)  
+ [Aide (F1) du Gestionnaire de rapports](../../2014/reporting-services/report-manager-f1-help.md)  
   
   

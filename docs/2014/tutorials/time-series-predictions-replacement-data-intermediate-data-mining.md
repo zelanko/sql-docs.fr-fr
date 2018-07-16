@@ -1,5 +1,5 @@
 ---
-title: À l’aide de données de remplacement (didacticiel d’exploration de données intermédiaire) des prédictions de série chronologique | Documents Microsoft
+title: À l’aide de données de remplacement (didacticiel d’exploration de données intermédiaire) des prédictions de série chronologique | Microsoft Docs
 ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: a23a6e1d-1d49-41ea-8314-925dc8e4df5e
 caps.latest.revision: 30
 author: minewiskan
 ms.author: owend
-manager: kfile
-ms.openlocfilehash: d5639aa63affadcdf79acc6029840e7025081245
-ms.sourcegitcommit: 8c040e5b4e8c7d37ca295679410770a1af4d2e1f
+manager: craigg
+ms.openlocfilehash: c170fab7f4f6711e81e07603302839430404aa3b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/21/2018
-ms.locfileid: "36312467"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37267755"
 ---
 # <a name="time-series-predictions-using-replacement-data-intermediate-data-mining-tutorial"></a>Prédictions de série chronologique à l'aide des données de remplacement (Didacticiel intermédiaire sur l'exploration de données)
   Dans cette tâche, vous allez générer un nouveau modèle basé sur des données de ventes internationales. Ensuite, vous apprendrez à créer une requête de prédiction qui applique le modèle de ventes internationales à chacune des régions.  
@@ -27,7 +27,7 @@ ms.locfileid: "36312467"
 ## <a name="building-a-general-model"></a>Génération d'un modèle général  
  N'oubliez pas que votre analyse des résultats du modèle d'exploration de données d'origine a révélé des différences majeures entre les régions et entre certaines gammes de produits. Par exemple, les ventes en Amérique du Nord étaient élevées pour le modèle M200, tandis que les ventes du modèle T1000 étaient inférieures. Toutefois, l'analyse est compliquée par le fait que certaines séries ne contenaient pas beaucoup de données, ou que les données commençaient à un point différent dans le temps. Certaines données sont également manquantes.  
   
- ![Série prédiction quantité M200 et T1000](../../2014/tutorials/media/6series-defaultforecasting.gif "M200 et T1000 la quantité de prédiction de série")  
+ ![Série de prédire la quantité M200 et T1000](../../2014/tutorials/media/6series-defaultforecasting.gif "M200 et T1000 la quantité de prédiction de série")  
   
  Pour résoudre certains de ces problèmes de qualité des données, vous décidez de fusionner les données des ventes dans le monde entier, puis vous utilisez cet ensemble des tendances de ventes générales pour générer un modèle qui peut être appliqué pour prédire les ventes futures dans n'importe quelle région.  
   
@@ -50,13 +50,13 @@ ms.locfileid: "36312467"
   
     -   Algorithme : algorithme MTS (Microsoft Time Series)  
   
-    -   Utilisez la source de données que vous avez générée précédemment dans cette leçon avancée comme source pour le modèle. Consultez [avancé des prédictions de série chronologique &#40;intermédiaire Data Mining Tutorial&#41;](../../2014/tutorials/advanced-time-series-predictions-intermediate-data-mining-tutorial.md).  
+    -   Utilisez la source de données que vous avez générée précédemment dans cette leçon avancée comme source pour le modèle. Consultez [avancé des prédictions de série chronologique &#40;didacticiel d’exploration de données intermédiaire&#41;](../../2014/tutorials/advanced-time-series-predictions-intermediate-data-mining-tutorial.md).  
   
          Vue de source de données : `AllRegions`  
   
     -   Choisissez les colonnes suivantes pour la clé de série et la clé de temps :  
   
-         Temps clé : ReportingDate  
+         Période de clé : ReportingDate  
   
          Clé : région  
   
@@ -80,13 +80,13 @@ ms.locfileid: "36312467"
   
 1.  Si le modèle n’est pas déjà ouvert, double-cliquez sur la structure AllRegions et dans le Concepteur d’exploration de données, cliquez sur le **prévision de modèle d’exploration de données** onglet.  
   
-2.  Dans le **modèle d’exploration de données** volet, le modèle AllRegions doit déjà être sélectionnées. Si elle n’est pas sélectionnée, cliquez sur **sélectionner le modèle**, puis sélectionnez le modèle, AllRegions.  
+2.  Dans le **Mining Model** volet, le modèle AllRegions doit déjà être sélectionné. Si elle n’est pas sélectionnée, cliquez sur **sélectionner un modèle**, puis sélectionnez le modèle, AllRegions.  
   
 3.  Dans le **sélectionner une ou plusieurs tables d’entrée** volet, cliquez sur **sélectionner la Table de cas**.  
   
-4.  Dans le **sélectionner une Table** boîte de dialogue, de modifier les données par T1000 Pacific Region de source, puis cliquez sur **OK**.  
+4.  Dans le **sélectionner une Table** boîte de dialogue, modifier les données source par T1000 Pacific Region, puis cliquez sur **OK**.  
   
-5.  Avec le bouton droit de la ligne de jointure entre le modèle d’exploration de données et les données d’entrée et sélectionnez **modifier les connexions**. Mappez les données dans la vue de source de données du modèle comme suit :  
+5.  Cliquez sur la ligne de jointure entre le modèle d’exploration de données et les données d’entrée et sélectionnez **modifier les connexions**. Mappez les données dans la vue de source de données du modèle comme suit :  
   
     1.  Vérifiez que la colonne ReportingDate dans le modèle d’exploration de données est mappée à la colonne ReportingDate dans les données d’entrée.  
   
@@ -94,7 +94,7 @@ ms.locfileid: "36312467"
   
          Cette étape mappe la colonne que vous avez créée dans le modèle pour la quantité moyenne de prédiction aux données réelles de la série T1000 pour la quantité de ventes.  
   
-    3.  Ne mappez pas la région de la colonne dans le modèle à une colonne d’entrée.  
+    3.  Ne mappez pas la colonne région dans le modèle à n’importe quelle colonne d’entrée.  
   
          Étant donné que le modèle agrégeait les données de toutes les séries, il n'existe aucune correspondance des valeurs des séries telles que T1000 Pacific, et une erreur est générée lorsque la requête de prédiction s'exécute.  
   
@@ -124,7 +124,7 @@ ms.locfileid: "36312467"
   
     3.  Pour **Alias**, type **valeurs prédites**.  
   
-    4.  Faites glisser le champ AvgQty à partir de la **modèle d’exploration de données** volet dans le **critères/Argument** colonne à l’aide de l’opération de glisser -déplacer.  
+    4.  Faites glisser le champ AvgQty à partir de la **Mining Model** volet dans le **critères/Argument** colonne à l’aide de l’opération de glisser -déplacer.  
   
     5.  Dans le **critères/Argument** colonne, après le nom de champ, tapez le texte suivant : `,5, REPLACE_MODEL_CASES`  
   
@@ -162,10 +162,10 @@ AND
  Par exemple, si vous modifiez les conditions de filtre et les intitulés de colonne en remplaçant « Pacific » par « North America », vous recevrez des prédictions pour le produit T1000 en Amérique du Nord, selon le modèle général.  
   
 ## <a name="next-task-in-lesson"></a>Tâche suivante de la leçon  
- [Comparaison de prédictions pour les modèles de prévision &#40;intermédiaire Didacticiel d’exploration de données&#41;](../../2014/tutorials/comparing-predictions-for-forecasting-models-intermediate-data-mining-tutorial.md)  
+ [Comparaison de prédictions pour les modèles de prévision &#40;didacticiel d’exploration de données intermédiaire&#41;](../../2014/tutorials/comparing-predictions-for-forecasting-models-intermediate-data-mining-tutorial.md)  
   
 ## <a name="see-also"></a>Voir aussi  
- [Exemples de requête de modèle de série de temps](../../2014/analysis-services/data-mining/time-series-model-query-examples.md)   
+ [Exemples de requêtes de modèle de série chronologique](../../2014/analysis-services/data-mining/time-series-model-query-examples.md)   
  [PredictTimeSeries &#40;DMX&#41;](/sql/dmx/predicttimeseries-dmx)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Configurer le Service Integration Services en tant que ressource de Cluster | Documents Microsoft
+title: Configurer le Service Integration Services en tant que ressource de Cluster | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 367835aa-9855-4791-a989-b3d08402ad4c
 caps.latest.revision: 6
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 8455d0a43e478cdb05f945269a3999b72fc581ea
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: b524b2c570b3fac16403565716aaea36a31a7f24
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36153771"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37223769"
 ---
 # <a name="configure-the-integration-services-service-as-a-cluster-resource"></a>Configurer le service Integration Services en tant que ressource de cluster
   Pour les clients concluant que les avantages de la configuration du service [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] en tant que ressource de cluster compensent les inconvénients, cette section contient les instructions de configuration nécessaires. [!INCLUDE[msCoName](../includes/msconame-md.md)] ne recommande toutefois pas de configurer le service [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] en tant que ressource de cluster.  
@@ -104,9 +104,9 @@ ms.locfileid: "36153771"
   
 2.  Sur le disque partagé, créez un dossier nommé **Packages** , qui doit servir de magasin de packages. Accordez aux groupes et utilisateurs appropriés des autorisations en écriture et pour répertorier des dossiers sur le nouveau dossier.  
   
-3.  Sur le disque partagé, ouvrez le fichier de configuration dans un éditeur de texte ou XML. Modifiez la valeur de la `ServerName` élément au nom du serveur virtuel [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] qui se trouve dans le même groupe de ressources.  
+3.  Sur le disque partagé, ouvrez le fichier de configuration dans un éditeur de texte ou XML. Modifiez la valeur de la `ServerName` élément pour le nom du serveur virtuel [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] qui se trouve dans le même groupe de ressources.  
   
-4.  Modifiez la valeur de la `StorePath` élément pour le chemin d’accès qualifié complet de la **Packages** dossier créé sur le disque partagé à l’étape précédente.  
+4.  Modifiez la valeur de la `StorePath` élément vers le chemin d’accès qualifié complet de le **Packages** dossier créé sur le disque partagé à l’étape précédente.  
   
 5.  Mettez à jour la valeur de la clé **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\100\SSIS\ServiceConfigFile** dans le Registre en indiquant le nom et le chemin complet du fichier de configuration du service sur le disque partagé.  
   

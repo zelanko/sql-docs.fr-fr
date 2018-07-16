@@ -1,5 +1,5 @@
 ---
-title: Page mise en cache, Datasets partagés (rapport Gestionnaire) | Documents Microsoft
+title: Page mise en cache, Datasets partagés (rapport Gestionnaire) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: eac372e9-d2a1-48a8-bbe5-09d101df16ea
 caps.latest.revision: 7
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 42b50337fe529517d791cf5992e09f3a3f8235b6
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 5fdd495e3110deb2cc8c9fc7b8a4848f0252f206
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36142202"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37247989"
 ---
 # <a name="caching-page-shared-datasets-report-manager"></a>Page Mise en cache, datasets partagés (Gestionnaire de rapports)
   Utilisez la page de propriétés de mise en cache pour définir les options de mise en cache d'un dataset partagé.  
@@ -41,19 +41,19 @@ ms.locfileid: "36142202"
 4.  Cliquez sur l'onglet **Mise en cache** .  
   
 ## <a name="options"></a>Options  
- **Mettre en cache le dataset partagé**  
+ **Jeu de données de cache partagé**  
  Place une copie temporaire des données dans un cache lorsqu'un utilisateur ouvre pour la première fois un rapport qui utilise ce dataset partagé. Les utilisateurs suivants qui exécutent le rapport dans la période de mise en cache reçoivent la copie mise en cache des données. La mise en cache améliore habituellement les performances, car les données sont retournées à partir du cache ; la requête de dataset n'est pas réexécutée.  
   
- **Faire expirer le cache après un nombre de minutes**  
+ **Faire expirer le cache après un certain nombre de minutes**  
  Spécifie la durée, en minutes, pendant laquelle la copie mise en cache des données est enregistrée. Dès qu'une copie temporaire expire, les données ne sont plus retournées à partir du cache. Lors de l'ouverture suivante d'un rapport utilisant ce dataset partagé par un utilisateur, la requête de dataset s'exécute et le serveur de rapports réinsère une copie des données actualisées dans le cache.  
   
  **Faire expirer le cache selon la planification suivante**  
  Planifie l'heure à laquelle les données mises en cache ne sont plus valides et sont supprimées du cache. Il peut s'agir d'une planification partagée ou d'une planification s'appliquant exclusivement au dataset partagé actuel.  
   
- **Planification du jeu de données spécifique**  
+ **Planification spécifique aux DataSets**  
  Spécifie une planification qui est utilisée uniquement par ce dataset.  
   
- **planification partagée**  
+ **Planification partagée**  
  Spécifie une planification qui est partagée par des rapports, des abonnements et d'autres datasets partagés.  
   
  **Appliquer**  
@@ -61,7 +61,7 @@ ms.locfileid: "36142202"
   
 ## <a name="see-also"></a>Voir aussi  
  [Le Gestionnaire de rapports &#40;SSRS en Mode natif&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
- [Aide (F1) de gestionnaire de rapports](../../2014/reporting-services/report-manager-f1-help.md)   
+ [F1 du Gestionnaire de rapports](../../2014/reporting-services/report-manager-f1-help.md)   
  [Mettre en cache les datasets partagés &#40;SSRS&#41;](report-server/cache-shared-datasets-ssrs.md)   
  [Planifications](subscriptions/schedules.md)  
   

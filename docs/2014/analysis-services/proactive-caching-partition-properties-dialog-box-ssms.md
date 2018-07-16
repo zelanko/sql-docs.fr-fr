@@ -1,5 +1,5 @@
 ---
-title: (Boîte de dialogue Propriétés de Partition) de mise en cache proactive (SSMS) | Documents Microsoft
+title: (Boîte de dialogue Propriétés de Partition) de mise en cache proactive (SSMS) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.sqlserverstudio.partitionproperties.proactivecaching.f1
 ms.assetid: ecba72a3-703f-4ede-9d85-9a3318a749e5
 caps.latest.revision: 11
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: f9fd673862cb7443a69a3a1bb91b070914bfc455
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: af6d5134b697b2554170695d2e87824d961f090b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36040075"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37237649"
 ---
 # <a name="proactive-caching-partition-properties-dialog-box-ssms"></a>Mise en cache proactive (boîte de dialogue Propriétés de partition) (SSMS)
   Utilisez la page **Mise en cache proactive** de la boîte de dialogue **Propriétés de partition** de SQL Server Management Studio pour définir les propriétés de mise en cache proactive d'une partition d'un groupe de mesures d'un cube d'une base de données [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] .  
@@ -30,7 +30,7 @@ ms.locfileid: "36040075"
  **Paramètre standard**  
  Active le curseur **Paramètre standard** et utilise les paramètres prédéfinis pour le mode de stockage et la mise en cache proactive.  
   
- **Paramètre standard slider**  
+ **Paramètre standard**  
  Sélectionnez un des paramètres prédéfinis dans le tableau suivant.  
   
 |Paramètre|Description|  
@@ -38,7 +38,7 @@ ms.locfileid: "36040075"
 |**ROLAP en temps réel**|Sélectionnez cette option pour utiliser les paramètres suivants de stockage et de mise en cache proactive :<br /><br /> Mode de stockage ROLAP.<br /><br /> Active la mise en cache proactive.<br /><br /> Efface la mémoire cache périmée avec une latence de 0 seconde.<br /><br /> Place immédiatement l'objet en ligne.|  
 |**HOLAP en temps réel**|Sélectionnez cette option pour utiliser les paramètres suivants de stockage et de mise en cache proactive :<br /><br /> Mode de stockage HOLAP.<br /><br /> Active la mise en cache proactive.<br /><br /> Efface la mémoire cache périmée avec une latence de 0 seconde.<br /><br /> Met à jour la mémoire cache lorsque les données changent avec de latence de 0 seconde et sans valeur de remplacement de l'intervalle de latence.<br /><br /> Place immédiatement l'objet en ligne.|  
 |**MOLAP à faible latence**|Sélectionnez cette option pour utiliser les paramètres suivants de stockage et de mise en cache proactive :<br /><br /> Mode de stockage MOLAP.<br /><br /> Active la mise en cache proactive.<br /><br /> Efface la mémoire cache périmée avec une latence de 30 minutes.<br /><br /> Met à jour la mémoire cache lorsque les données changent avec de latence de 10 secondes et une valeur de remplacement de l'intervalle de latence égale à 10 minutes.<br /><br /> Met à jour la mémoire cache lorsque les données changent avec de latence de 10 secondes et une valeur de remplacement de l'intervalle de latence égale à 10 minutes.<br /><br /> Place immédiatement l'objet en ligne.|  
-|**MOLAP à latence moyenne**|Sélectionnez cette option pour l’objet useBrings en ligne immédiatement.<br /><br /> le suivants de stockage et les paramètres de mise en cache proactive :<br /><br /> Mode de stockage MOLAP.<br /><br /> Active la mise en cache proactive.<br /><br /> Efface la mémoire cache périmée avec une latence de 4 heures.<br /><br /> Met à jour la mémoire cache lorsque les données changent avec de latence de 10 secondes et une valeur de remplacement de l'intervalle de latence égale à 10 minutes.<br /><br /> Place immédiatement l'objet en ligne.|  
+|**MOLAP à latence moyenne**|Sélectionnez cette option pour l’objet useBrings en ligne immédiatement.<br /><br /> le stockage suivant et les paramètres de mise en cache proactive :<br /><br /> Mode de stockage MOLAP.<br /><br /> Active la mise en cache proactive.<br /><br /> Efface la mémoire cache périmée avec une latence de 4 heures.<br /><br /> Met à jour la mémoire cache lorsque les données changent avec de latence de 10 secondes et une valeur de remplacement de l'intervalle de latence égale à 10 minutes.<br /><br /> Place immédiatement l'objet en ligne.|  
 |**MOLAP automatique**|Sélectionnez cette option pour utiliser les paramètres suivants de stockage et de mise en cache proactive :<br /><br /> Mode de stockage MOLAP.<br /><br /> Active la mise en cache proactive.<br /><br /> Met à jour la mémoire cache lorsque les données changent avec de latence de 0 seconde et sans valeur de remplacement de l'intervalle de latence.|  
 |**MOLAP planifié**|Sélectionnez cette option pour utiliser les paramètres suivants de stockage et de mise en cache proactive :<br /><br /> Mode de stockage MOLAP<br /><br /> Activer la mise en cache proactive<br /><br /> Met périodiquement à jour la mémoire cache avec un intervalle de reconstruction égal à 1 jour|  
 |**MOLAP**|Sélectionnez cette option pour utiliser les paramètres suivants de stockage et de mise en cache proactive :<br /><br /> Mode de stockage MOLAP.|  

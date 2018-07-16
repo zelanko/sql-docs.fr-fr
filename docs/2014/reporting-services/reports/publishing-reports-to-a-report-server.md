@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - production environments [Reporting Services]
 - report projects [Reporting Services]
@@ -26,16 +26,16 @@ ms.assetid: bd7aa5e0-61ce-43fd-8f74-5d1aeed078bb
 caps.latest.revision: 45
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 30571f0eaa50961fd9d96c3e1c13b4c57da774d2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 98482f6ad6e2f98120603c28cdc40181e37ef9a5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36152267"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37273955"
 ---
 # <a name="publishing-reports-to-a-report-server"></a>Publication de rapports sur un serveur de rapports
-  Après avoir conçu et testé un rapport ou ensemble de rapports, vous pouvez utiliser les fonctionnalités de déploiement intégrées dans [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] pour publier les rapports à un serveur de rapports. Vous pouvez publier des rapports individuels ou un projet Report Server. La publication d'un projet Report Server est la méthode la plus simple pour publier plusieurs rapports. [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] utilise le terme *déployer*, au lieu du terme *publier*. Les deux termes sont interchangeables.  
+  Après avoir conçu et testé un rapport ou ensemble de rapports, vous pouvez utiliser les fonctionnalités de déploiement intégrées dans [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] pour publier des rapports sur un serveur de rapports. Vous pouvez publier des rapports individuels ou un projet Report Server. La publication d'un projet Report Server est la méthode la plus simple pour publier plusieurs rapports. [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] utilise le terme *déployer*, au lieu du terme *publier*. Les deux termes sont interchangeables.  
   
  Avant de publier un rapport, vous devez bénéficier de l'autorisation de le faire. L'autorisation est déterminée via la sécurité basée sur les rôles définie par votre administrateur du serveur de rapports. Les opérations de publication sont généralement autorisées par le biais du rôle Serveur de publication.  
   
@@ -46,7 +46,7 @@ ms.locfileid: "36152267"
   
  Par défaut, [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] fournit trois configurations de projet : DebugLocal, Debug et Release. La configuration par défaut est DebugLocal. Vous utilisez en général la configuration DebugLocal pour afficher un aperçu des rapports dans une fenêtre d’aperçu locale, la configuration Debug pour publier des rapports sur un serveur de test et la configuration Release pour publier des rapports sur un serveur de production. La liste déroulante des configurations de solution dans la barre d'outils Standard affiche la configuration active. Pour utiliser une configuration différente, sélectionnez-la dans la liste.  
   
- Plusieurs serveurs de rapports et versions différentes de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] peuvent être installés dans votre environnement de création de rapports. Vous pouvez créer plusieurs configurations, puis en utiliser une différente selon le scénario de déploiement. Pour plus d’informations, consultez [déploiement et prise en charge de la Version de SQL Server Data Tools &#40;SSRS&#41; ](../tools/deployment-and-version-support-in-sql-server-data-tools-ssrs.md) et [définir les propriétés de déploiement &#40;Reporting Services&#41;](../tools/set-deployment-properties-reporting-services.md).  
+ Plusieurs serveurs de rapports et versions différentes de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] peuvent être installés dans votre environnement de création de rapports. Vous pouvez créer plusieurs configurations, puis en utiliser une différente selon le scénario de déploiement. Pour plus d’informations, consultez [déploiement et les versions prises en charge dans SQL Server Data Tools &#40;SSRS&#41; ](../tools/deployment-and-version-support-in-sql-server-data-tools-ssrs.md) et [définir les propriétés de déploiement &#40;Reporting Services&#41;](../tools/set-deployment-properties-reporting-services.md).  
   
 ## <a name="publishing-reports"></a>Publication de rapports  
  Vous pouvez publier un rapport unique ou un projet Report Server qui contient plusieurs rapports. Pour obtenir des instructions sur la publication de rapports, consultez [publier les rapports](../publish-reports.md).  

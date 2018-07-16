@@ -1,5 +1,5 @@
 ---
-title: Modèles DMX | Documents Microsoft
+title: Modèles DMX | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,23 +8,23 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 2a577e52-821d-4bd3-ba35-075a6be285c9
 caps.latest.revision: 6
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: d0f29e0c000477ec705111f433c31370edc0d973
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 30a02f00df965362c1c8702403b06df8b0883ead
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36152452"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37194359"
 ---
 # <a name="dmx-templates"></a>Modèles DMX
   Les modèles d'exploration de données vous aident à créer rapidement des requêtes sophistiquées. Bien que la syntaxe générale des requêtes DMX soit bien documentée, l'utilisation de modèles facilite leur création car il suffit de cliquer et pointer sur les arguments et les sources de données.  
   
-## <a name="using-the-templates"></a>À l’aide de modèles  
+## <a name="using-the-templates"></a>L’aide de modèles  
   
 1.  Dans le Client d’exploration de données pour Excel, cliquez sur **requête**.  
   
@@ -42,7 +42,7 @@ ms.locfileid: "36152452"
   
      Pour les requêtes de prédiction, choisissez le dataset d'entrée en premier, puis mappez les colonnes.  
   
-7.  Cliquez sur **modifier la requête** pour basculer vers le mode d’éditeur de texte et modifier manuellement la requête.  
+7.  Cliquez sur **modifier la requête** pour basculer vers l’affichage de l’éditeur de texte et de modifier manuellement la requête.  
   
      Sachez cependant que si vous passez d'un affichage à l'autre lorsque vous utilisez l'éditeur de requêtes, toutes les informations figurant dans l'affichage précédent seront effacées. Avant de changer d'affichage, enregistrez votre travail en copiant les instructions DMX et en les collant dans un autre fichier.  
   
@@ -51,7 +51,7 @@ ms.locfileid: "36152452"
 > [!NOTE]  
 >  Si vous avez exécuté une instruction avec succès, l’instruction DMX que vous avez envoyé au serveur est également enregistrée dans le **Trace** fenêtre. Pour plus d’informations sur l’utilisation de la fonctionnalité de Trace, consultez [Trace &#40;Client d’exploration de données pour Excel&#41;](trace-data-mining-client-for-excel.md).  
   
- Pour plus d’informations sur la façon d’utiliser les données d’exploration de données éditeur de requêtes avancé, consultez [requête &#40;des compléments d’exploration de données SQL Server&#41; ](query-sql-server-data-mining-add-ins.md) et [éditeur de requêtes d’exploration de données avancé](advanced-data-mining-query-editor.md).  
+ Pour plus d’informations sur la façon d’utiliser les données d’exploration de données éditeur de requêtes avancé, consultez [requête &#40;SQL Server Data Mining Add-ins&#41; ](query-sql-server-data-mining-add-ins.md) et [éditeur de requêtes d’exploration de données avancé](advanced-data-mining-query-editor.md).  
   
 ## <a name="list-of-dmx-templates"></a>Liste des modèles DMX  
  Les modèles DMX suivants sont inclus dans le Client d'exploration de données pour Excel.  
@@ -80,7 +80,7 @@ ms.locfileid: "36152452"
   
  Utilisez ces modèles pour créer des modèles ou des structures de données personnalisés. Il n'y a pas de limite aux modèles pris en charge par les Assistants : utilisez tous les algorithmes d'exploration de données pris en charge par l'instance de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] à laquelle vous êtes connecté, y compris les algorithmes de plug-in.  
   
--   modèle d’exploration de données  
+-   Modèle de Mining  
   
 -   Structure d'exploration de données  
   

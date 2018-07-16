@@ -1,5 +1,5 @@
 ---
-title: Ce que&#39;s inclus dans les données des compléments d’exploration de données pour Office | Documents Microsoft
+title: Ce que&#39;s inclus dans les données des compléments d’exploration de données pour Office | Microsoft Docs
 ms.custom: ''
 ms.date: 12/29/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - getting started
 ms.assetid: 6c3d2b96-6646-42ef-b219-fea2e0cd3459
 caps.latest.revision: 25
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 282155ff681830e3b6c1b3f0bc0d4f281a6435e2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 5630c67926713b997adfe85fe0fd9f8da10e03e4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36143106"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37231991"
 ---
 # <a name="what39s-included-in-the-data-mining-add-ins-for-office"></a>Ce que&#39;s inclus dans les données des compléments d’exploration de données pour Office
   Lorsque vous installez les Compléments d'exploration de données pour Office 2013, et sélectionnez toutes les options d'installation, les barres d'outils et les modèles suivants sont ajoutés :  
@@ -60,7 +60,7 @@ ms.locfileid: "36143106"
   
      L'emplacement par défaut de l'exemple de classeur dépend de la version installée :  
   
-    -   \<lecteur > : \Program Files\Microsoft les compléments d’exploration de données SQL Server 2014  
+    -   \<lecteur > : \Program Files\Microsoft des compléments d’exploration de données SQL Server 2014  
   
     -   \<lecteur > : \Program Files (x86) \Microsoft des compléments d’exploration de données SQL Server 2014  
   

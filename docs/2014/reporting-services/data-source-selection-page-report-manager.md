@@ -1,5 +1,5 @@
 ---
-title: Page de sélection (Gestionnaire de rapports) la Source de données | Documents Microsoft
+title: Page de sélection (Gestionnaire de rapports) Source de données | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 7f7e8b19-0c0b-4b1f-9cc1-057099aa07eb
 caps.latest.revision: 28
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 800b6fdbe63ca1c7adb5f79367e317a4a2a62167
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 528e30c885150e3d9fc422449987ba211e77161b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36041760"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37256478"
 ---
 # <a name="data-source-selection-page-report-manager"></a>Page Sélection de la source de données (Gestionnaire de rapports)
   La page Sélection de la source de données vous permet de sélectionner un élément de source de données partagée existant à utiliser avec un rapport ou un modèle de rapport. Vous pouvez également utiliser cette page pour sélectionner une autre source de données. Pour afficher le type de source de données ou la chaîne de connexion, vous devez atteindre la source de données partagée et ouvrir les pages de propriétés.  
@@ -54,6 +54,6 @@ ms.locfileid: "36041760"
  [Spécifier des informations d'identification et de connexion pour les sources de données de rapport](report-data/specify-credential-and-connection-information-for-report-data-sources.md)   
  [Page des propriétés des sources de données &#40;Gestionnaire de rapports&#41;](../../2014/reporting-services/data-sources-properties-page-report-manager.md)   
  [Page Nouvelle source de données &#40;Gestionnaire de rapports&#41;](../../2014/reporting-services/new-data-source-page-report-manager.md)   
- [Aide (F1) de gestionnaire de rapports](../../2014/reporting-services/report-manager-f1-help.md)  
+ [Aide (F1) du Gestionnaire de rapports](../../2014/reporting-services/report-manager-f1-help.md)  
   
   

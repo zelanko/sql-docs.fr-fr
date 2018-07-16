@@ -1,14 +1,13 @@
 ---
-title: Utiliser la base de données de l’ajouter à l’Assistant groupe de disponibilité (SQL Server Management Studio) | Documents Microsoft
+title: Utiliser la base de données de l’ajouter à l’Assistant groupe de disponibilité (SQL Server Management Studio) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.adddatabasewizard.f1
 helpviewer_keywords:
@@ -16,15 +15,15 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], databases
 ms.assetid: 81e5e36d-735d-4731-8017-2654673abb88
 caps.latest.revision: 23
-author: rothja
-ms.author: jroth
-manager: jhubbard
-ms.openlocfilehash: 2eae2dbc1f6031b18f6edf3a92e65d05d56b4ff2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 3900ee843069adb8775497168069716e68eea352
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36153321"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37243499"
 ---
 # <a name="use-the-add-database-to-availability-group-wizard-sql-server-management-studio"></a>Utiliser l'Assistant Ajouter une base de données au groupe de disponibilité (SQL Server Management Studio)
   Utilisez l'Assistant Ajouter une base de données au groupe de disponibilité pour ajouter une ou plusieurs bases de données à un groupe de disponibilité AlwaysOn existant.  
@@ -43,7 +42,7 @@ ms.locfileid: "36153321"
 -   **Pour ajouter une base de données, utilisez :**  [Assistant Ajouter une base de données au groupe de disponibilité (SQL Server Management Studio)](#SSMSProcedure)  
   
 ##  <a name="BeforeYouBegin"></a> Avant de commencer  
- Si vous n’avez jamais ajouté une base de données à un groupe de disponibilité, consultez la section « Bases de données de disponibilité » dans [conditions préalables, Restrictions et recommandations pour les groupes de disponibilité AlwaysOn &#40;SQL Server&#41;](prereqs-restrictions-recommendations-always-on-availability.md).  
+ Si vous n’avez jamais ajouté une base de données à un groupe de disponibilité, consultez la section « Bases de données de disponibilité » dans [prérequis, Restrictions et recommandations pour les groupes de disponibilité AlwaysOn &#40;SQL Server&#41;](prereqs-restrictions-recommendations-always-on-availability.md).  
   
 ###  <a name="Prerequisites"></a> Conditions préalables requises, restrictions et recommandations  
   
@@ -87,7 +86,7 @@ ms.locfileid: "36153321"
   
 3.  Cliquez avec le bouton droit sur le groupe de disponibilité auquel vous ajoutez une base de données, puis sélectionnez la commande **Ajouter une base de données** . Cette commande lance l'Assistant Ajouter une base de données au groupe de disponibilité.  
   
-4.  Sur la page **Sélectionner les bases de données** , sélectionnez une ou plusieurs bases de données. Pour plus d’informations, consultez [la Page Sélectionner les bases de données &#40;Assistant base de données nouvelle d’Assistant Ajout de groupe de disponibilité&#41;](select-databases-page-new-availability-group-wizard-and-add-database-wizard.md).  
+4.  Sur la page **Sélectionner les bases de données** , sélectionnez une ou plusieurs bases de données. Pour plus d’informations, consultez [sélectionner une Page de bases de données &#40;nouveau disponibilité groupe Assistant Assistant Ajouter une base de données&#41;](select-databases-page-new-availability-group-wizard-and-add-database-wizard.md).  
   
 5.  Sur la page **Sélectionner la synchronisation de données initiale** , choisissez comment vous souhaitez que vos nouvelles bases de données secondaires soient créées et jointes au groupe de disponibilité. Choisissez l'une des options suivantes :  
   
@@ -110,11 +109,11 @@ ms.locfileid: "36153321"
   
          Sélectionnez cette option si vous souhaitez utiliser votre propre base de données et sauvegardes de journaux de vos bases de données primaires. Pour plus d’informations, consultez [Démarrer un mouvement de données sur une base de données secondaire AlwaysOn &#40;SQL Server&#41;](start-data-movement-on-an-always-on-secondary-database-sql-server.md).  
   
-     Pour plus d’informations, consultez [sélectionner Page synchronisation de données initiale &#40;Assistants de groupe de disponibilité AlwaysOn&#41;](select-initial-data-synchronization-page-always-on-availability-group-wizards.md).  
+     Pour plus d’informations, consultez [sélectionnez la Page de synchronisation de données initiale &#40;Assistants de groupe de disponibilité AlwaysOn&#41;](select-initial-data-synchronization-page-always-on-availability-group-wizards.md).  
   
 6.  Sur la page **Se connecter à des réplicas secondaires existants** , si les instances de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] qui hébergent les réplicas de disponibilité pour ce groupe de disponibilité sont toutes exécutées en tant que service dans le même compte d'utilisateur, cliquez sur **Se connecter à tous**. Si l'une des instances de serveur s'exécute en tant que service sous des comptes différents, cliquez sur le bouton **Se connecter** individuel figurant à droite du nom de chaque instance de serveur.  
   
-     Pour plus d’informations, consultez [se connecter à la Page de réplicas secondaires existants &#40;Assistant Ajouter un réplica et l’Assistant Ajout de bases de données&#41;](connect-to-existing-secondary-replicas-page.md).  
+     Pour plus d’informations, consultez [se connecter à la Page de réplicas secondaires existants &#40;Assistant Ajouter un réplica et Assistant Ajout de bases de données&#41;](connect-to-existing-secondary-replicas-page.md).  
   
 7.  La page **Validation** vérifie si les valeurs que vous avez spécifiées dans cet Assistant répondent aux exigences de l'Assistant Nouveau groupe de disponibilité. Pour effectuer un changement, vous pouvez cliquer sur **Précédent** pour revenir à une page antérieure de l'assistant pour modifier une ou plusieurs valeurs. Cliquez sur **Suivant** pour revenir à la page **Validation** , puis cliquez sur **Réexécuter la validation**.  
   

@@ -1,5 +1,5 @@
 ---
-title: Présentation de Power View pour les modèles multidimensionnels | Documents Microsoft
+title: Présentation de Power View pour les modèles multidimensionnels | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: d0558cae-8209-4242-80c5-2c95981b88b9
 caps.latest.revision: 14
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: a252c89adfe34f849e6fe2bd538ddf22b044c7da
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: df50d1ac785e58bf3136f6d8777a01c98a81d568
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36039420"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37288055"
 ---
 # <a name="understanding-power-view-for-multidimensional-models"></a>Présentation de Power View pour les modèles multidimensionnels
   Cet article décrit la fonctionnalité Power View pour les modèles multidimensionnels de Microsoft SQL Server 2014, et fournit des informations importantes pour les administrateurs et les professionnels dans le secteur du décisionnel qui envisagent d'implémenter Power View pour les modèles multidimensionnels dans leur organisation.  
@@ -30,7 +30,7 @@ ms.locfileid: "36039420"
   
  **Power View pour l'architecture des modèles multidimensionnels**  
   
- ![Power View pour les modèles multidimensionnels Architecture](../media/daxmd-architecture.gif "Power View pour les modèles multidimensionnels Architecture")  
+ ![Power View pour les modèles multidimensionnels Architecture](../media/daxmd-architecture.gif "Power View pour l’Architecture des modèles multidimensionnels")  
   
 ## <a name="prerequisites"></a>Prérequis  
  **Configuration requise au niveau du serveur**  
@@ -95,7 +95,7 @@ ms.locfileid: "36039420"
   
  **Mesure en tant que variante**  
   
- ![Une hiérarchie pouvant dans Power View](../media/daxmd-nonaggrattrib.gif "hiérarchie pouvant dans Power View")  
+ ![Hiérarchie ne pouvant dans Power View](../media/daxmd-nonaggrattrib.gif "hiérarchie ne pouvant dans Power View")  
   
 ### <a name="implicit-measures"></a>Mesures implicites  
  Les modèles tabulaires fournissent aux utilisateurs la possibilité de créer des mesures *implicites* , telles qu'un compte, une somme ou une moyenne sur des champs. Concernant les modèles multidimensionnels, étant donné que les données d'attribut de dimension sont stockées différemment, l'interrogation de mesures implicites peut durer un certain temps. De ce fait, les mesures implicites ne sont pas disponibles dans Power View.  
@@ -144,7 +144,7 @@ ms.locfileid: "36039420"
   
  **Hiérarchie ne pouvant faire l'objet d'une agrégation dans Power View**  
   
- ![Une hiérarchie pouvant dans Power View](../media/daxmd-nonaggrattrib.gif "hiérarchie pouvant dans Power View")  
+ ![Hiérarchie ne pouvant dans Power View](../media/daxmd-nonaggrattrib.gif "hiérarchie ne pouvant dans Power View")  
   
 ## <a name="images"></a>Images  
  Power View offre la possibilité de rendre des images. Dans les modèles multidimensionnels, l'une des manières pour fournir des images à Power View consiste à exposer des colonnes contenant des URL (Uniform Resource Locator) des images. Dans cette version, Analysis Services prend en charge le balisage des attributs de dimension comme type ImageURL. Ce type de données est alors fourni à Power View dans les métadonnées tabulaires. Power View peut alors télécharger et afficher les images spécifiées dans les URL dans les visualisations.  
@@ -178,7 +178,7 @@ ms.locfileid: "36039420"
   
  **Filtres épinglés**  
   
- ![Épinglé filtre](../media/daxmd-pinnedfilterinpowerview.gif "épinglée de filtre")  
+ ![Épinglé filtre](../media/daxmd-pinnedfilterinpowerview.gif "épinglé filtre")  
   
 ## <a name="unsupported-features"></a>Fonctionnalités non prises en charge  
  **Power View dans Excel 2013** ne prend pas en charge la connexion ni la création de rapports pour les modèles multidimensionnels. Power View pour les modèles multidimensionnels prend en charge les clients Power View basés sur navigateur uniquement.  
@@ -234,7 +234,7 @@ ms.locfileid: "36039420"
 ## <a name="client-help-on-officecom"></a>Aide sur le client sur Office.com  
  Les articles suivants sont fournis sur Office.com pour aider les utilisateurs à en savoir plus sur la manière dont les objets de modèle multidimensionnel apparaissent dans Power View et sur la procédure de création d'un rapport d'exemple :  
   
- [Présentation des objets de modèle multidimensionnel dans Power View](http://office.microsoft.com/excel-help/understanding-multidimensional-model-objects-in-power-view-HA104018589.aspx)  
+ [Comprendre les objets de modèle multidimensionnel dans Power View](http://office.microsoft.com/excel-help/understanding-multidimensional-model-objects-in-power-view-HA104018589.aspx)  
   
  [Explorer le modèle multidimensionnel Adventure Works avec Power View](http://office.microsoft.com/excel-help/explore-the-adventure-works-multidimensional-model-by-using-power-view-HA104046830.aspx)  
   
