@@ -1,5 +1,5 @@
 ---
-title: Réservations d’URL pour plusieurs instances de déploiements de serveur (Gestionnaire de Configuration de SSRS) rapports | Documents Microsoft
+title: Réservations d’URL pour les instances multiples signalent les déploiements de serveur (Gestionnaire de Configuration de SSRS) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - URL reservations
 ms.assetid: f67c83c0-1f74-42bb-bfc1-e50c38152d3d
 caps.latest.revision: 5
 author: markingmyname
 ms.author: maghan
-manager: jhubbard
-ms.openlocfilehash: 76466658cfc049c196b5ba512d31cd1fe8a9051d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 126a885988deee0ac05126282f4db233f7a756ad
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36043774"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37307342"
 ---
 # <a name="url-reservations-for-multi-instance-report-server-deployments--ssrs-configuration-manager"></a>Réservations d’URL pour les déploiements de serveur de rapports multi-instance (Gestionnaire de configuration de SSRS)
   Si vous installez plusieurs instances de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] sur le même ordinateur, vous devez considérer comment vous définirez les réservations d'URL pour chaque instance. Dans chaque instance, le service Web Report Server et le Gestionnaire de rapports doivent avoir au moins une réservation d'URL chacun. L'ensemble entier de réservations doit être unique dans HTTP.SYS.  

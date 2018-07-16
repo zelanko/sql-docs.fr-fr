@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 13a82d41-dd7a-4708-bc84-4407a536c877
 caps.latest.revision: 7
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: a4c29542fe95e7f7323ac7d8975f391ba97ea274
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 5d1f203a7c80d08de14857ea08a4fe14ecbaf3bc
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36044268"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37215979"
 ---
 # <a name="ole-db-custom-properties"></a>Propriétés personnalisées OLE DB
   **Propriétés personnalisées des sources**  
@@ -55,17 +55,17 @@ ms.locfileid: "36044268"
   
 |Nom de la propriété|Type de données|Description|  
 |-------------------|---------------|-----------------|  
-|AccessMode|Integer (énumération)|Valeur qui spécifie la manière dont la destination accède à sa base de données de destination.<br /><br /> Cette propriété peut prendre les valeurs suivantes :<br /><br /> `OpenRowset` (0) : vous indiquez le nom d’une table ou vue.<br />`OpenRowset from Variable` (1) : vous indiquez le nom d’une variable qui contient le nom d’une table ou vue.<br />`OpenRowset Using Fastload` (3) : vous indiquez le nom d’une table ou vue.<br />`OpenRowset Using Fastload from Variable` (4) : vous indiquez le nom d’une variable qui contient le nom d’une table ou vue.<br />`SQL Command` (2) : vous fournissez une instruction SQL.|  
+|AccessMode|Integer (énumération)|Valeur qui spécifie la manière dont la destination accède à sa base de données de destination.<br /><br /> Cette propriété peut prendre les valeurs suivantes :<br /><br /> `OpenRowset` (0) : vous fournir le nom de la table ou vue.<br />`OpenRowset from Variable` (1) : vous fournir le nom d’une variable qui contient le nom de la table ou vue.<br />`OpenRowset Using Fastload` (3) : vous fournir le nom de la table ou vue.<br />`OpenRowset Using Fastload from Variable` (4) : vous fournir le nom d’une variable qui contient le nom de la table ou vue.<br />`SQL Command` (2) : vous fournissez une instruction SQL.|  
 |AlwaysUseDefaultCodePage|Booléen|Une valeur qui indique s’il faut utiliser la valeur de la `DefaultCodePage` propriété pour chaque colonne ou tenter de dériver la page de codes à partir des paramètres régionaux de chaque colonne. La valeur par défaut de cette propriété est `False`.|  
 |CommandTimeout|Entier|Nombre maximal de secondes pendant lesquelles la commande SQL peut être exécutée avant d'arriver à expiration. La valeur 0 indique un délai infini. La valeur par défaut de cette propriété est 0.<br /><br /> Remarque : cette propriété n’est pas disponible dans **l’Éditeur de destination OLE DB**, mais vous pouvez la définir à l’aide de **l’éditeur avancé**.|  
 |DefaultCodePage|Entier|Page de codes par défaut associée à la destination OLE DB.|  
-|FastLoadKeepIdentity|Booléen|Valeur spécifiant si les valeurs d'identité doivent être copiées lors du chargement des données. Cette propriété est disponible uniquement avec l'une des options de chargement rapide. La valeur par défaut de cette propriété est `False`. Cette propriété correspond à OLE DB [IRowsetFastLoad &#40;OLE DB&#41; ](../../relational-databases/native-client-ole-db-interfaces/irowsetfastload-ole-db.md) propriété `SSPROP_FASTLOADKEEPIDENTITY`.|  
-|FastLoadKeepNulls|Booléen|Valeur spécifiant si les valeurs NULL doivent être copiées lors du chargement des données. Cette propriété est disponible uniquement avec l'une des options de chargement rapide. La valeur par défaut de cette propriété est `False`. Cette propriété correspond à OLE DB [IRowsetFastLoad &#40;OLE DB&#41; ](../../relational-databases/native-client-ole-db-interfaces/irowsetfastload-ole-db.md) propriété `SSPROP_FASTLOADKEEPNULLS`.|  
+|FastLoadKeepIdentity|Booléen|Valeur spécifiant si les valeurs d'identité doivent être copiées lors du chargement des données. Cette propriété est disponible uniquement avec l'une des options de chargement rapide. La valeur par défaut de cette propriété est `False`. Cette propriété correspond à la norme OLE DB [IRowsetFastLoad &#40;OLE DB&#41; ](../../relational-databases/native-client-ole-db-interfaces/irowsetfastload-ole-db.md) propriété `SSPROP_FASTLOADKEEPIDENTITY`.|  
+|FastLoadKeepNulls|Booléen|Valeur spécifiant si les valeurs NULL doivent être copiées lors du chargement des données. Cette propriété est disponible uniquement avec l'une des options de chargement rapide. La valeur par défaut de cette propriété est `False`. Cette propriété correspond à la norme OLE DB [IRowsetFastLoad &#40;OLE DB&#41; ](../../relational-databases/native-client-ole-db-interfaces/irowsetfastload-ole-db.md) propriété `SSPROP_FASTLOADKEEPNULLS`.|  
 |FastLoadMaxInsertCommitSize|Entier|Valeur qui spécifie la taille du lot que la destination OLE DB tente de valider au cours des opérations de chargement rapide. La valeur par défaut ( **0**) indique une opération de validation simple après le traitement de toutes les lignes.|  
-|FastLoadOptions|String|Collection d'options de chargement rapide. Les options de chargement rapide incluent le verrouillage des tables et la vérification des contraintes. Vous pouvez spécifier une de ces options, les deux ou ni l'une ni l'autre. Cette propriété correspond à la propriété OLE DB IRowsetFastLoad `SSPROP_FASTLOADOPTIONS` et accepte les options de chaîne tel que `CHECK_CONSTRAINTS` et `TABLOCK`.<br /><br /> Remarque : certaines options de cette propriété ne sont pas disponibles dans **l’Éditeur de destination Excel**, mais vous pouvez les définir à l’aide de **l’éditeur avancé**.|  
-|OpenRowset|String|Lorsque AccessMode est `OpenRowset`, le nom de la table ou la vue de la destination OLE DB a accès.|  
-|OpenRowsetVariable|String|Lorsque AccessMode est `OpenRowset from Variable`, le nom de la variable qui contient le nom de la table ou la vue de la destination OLE DB a accès.|  
-|SqlCommand|String|Lorsque AccessMode est `SQL Command`, l’instruction Transact-SQL que la destination OLE DB utilise pour spécifier les colonnes de destination pour les données.|  
+|FastLoadOptions|String|Collection d'options de chargement rapide. Les options de chargement rapide incluent le verrouillage des tables et la vérification des contraintes. Vous pouvez spécifier une de ces options, les deux ou ni l'une ni l'autre. Cette propriété correspond à la propriété OLE DB IRowsetFastLoad `SSPROP_FASTLOADOPTIONS` et accepte les options de chaîne telles que `CHECK_CONSTRAINTS` et `TABLOCK`.<br /><br /> Remarque : certaines options de cette propriété ne sont pas disponibles dans **l’Éditeur de destination Excel**, mais vous pouvez les définir à l’aide de **l’éditeur avancé**.|  
+|OpenRowset|String|Quand AccessMode est `OpenRowset`, le nom de la table ou vue qui accède à la destination OLE DB.|  
+|OpenRowsetVariable|String|Quand AccessMode est `OpenRowset from Variable`, le nom de la variable qui contient le nom de la table ou vue qui accède à la destination OLE DB.|  
+|SqlCommand|String|Quand AccessMode est `SQL Command`, l’instruction Transact-SQL que la destination OLE DB utilise pour spécifier les colonnes de destination pour les données.|  
   
  L'entrée et les colonnes d'entrée de la destination OLE DB ne disposent pas de propriétés personnalisées.  
   

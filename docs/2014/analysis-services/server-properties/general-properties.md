@@ -1,5 +1,5 @@
 ---
-title: Propriétés générales | Documents Microsoft
+title: Propriétés générales | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - IdleConnectionTimeout property
 - InstanceVisible property
@@ -39,15 +39,15 @@ helpviewer_keywords:
 - RepositoryConnectionString property
 ms.assetid: 88a8117c-396a-469f-a62d-c6f262504021
 caps.latest.revision: 28
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 42b6dcdd7407faff8dace8ac7d63bd8bce50c337
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 80c01a4282dbdc0e212068bd3f6d2da41b96d069
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36140093"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37216029"
 ---
 # <a name="general-properties"></a>Propriétés générales
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] prend en charge les propriétés de serveur répertoriées dans les tableaux suivants. Cette rubrique décrit les propriétés de serveur qui se trouvent dans le fichier msmdsrv.ini et qui ne font pas l'objet d'une section spécifique, traitant par exemple de la sécurité, du réseau ou de ThreadPool. Pour plus d'informations sur les autres propriétés de serveur et la façon de les configurer, consultez [Configure Server Properties in Analysis Services](server-properties-in-analysis-services.md).  
@@ -135,7 +135,7 @@ ms.locfileid: "36140093"
  Pour plus d’informations sur cette propriété, consultez le [guide des opérations de SQL Server 2008 R2 Analysis Services](http://go.microsoft.com/fwlink/?LinkID=225539).  
   
 > [!IMPORTANT]  
->  `ForceCommitTimeout` s’applique aux commandes de traitement de cube et pour les opérations d’écriture différée.  
+>  `ForceCommitTimeout` s’applique aux commandes de traitement de cube aux opérations d’écriture différée.  
   
  `IdleConnectionTimeout`  
  Propriété dont la valeur est un entier qui spécifie le délai, en secondes, pour les connexions qui sont inactives.  

@@ -5,21 +5,20 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-tables
+ms.technology: table-view-index
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 515de63f-dfc5-434d-9adb-f3b5992f745a
 caps.latest.revision: 9
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 8bc8f55fbbd939964d22521948ac1132ced4c73c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: b5d7d36bd056eddde8b7754b8fd9b5b8ae6a864f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36043830"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37331419"
 ---
 # <a name="modify-a-partition-scheme"></a>Modifier un schéma de partition
   Vous pouvez modifier un schéma de partition dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] en désignant un groupe de fichiers destiné à contenir la prochaine partition ajoutée à une table partitionnée à l'aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou [!INCLUDE[tsql](../../includes/tsql-md.md)]. Pour ce faire, vous affectez la propriété NEXT USED au groupe de fichiers en question. Vous pouvez affecter la propriété NEXT USED à un groupe de fichiers vide ou à un groupe de fichiers qui contient déjà une partition. Autrement dit, un groupe de fichiers peut contenir plusieurs partitions.  
@@ -57,7 +56,7 @@ ms.locfileid: "36043830"
 ##  <a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
  **Pour modifier un schéma de partition :**  
   
- Cette action spécifique ne peut pas être exécutée à l'aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Afin de modifier un schéma de partition, vous devez d'abord le supprimer puis en créer un nouveau avec les propriétés souhaitées à l'aide de l'Assistant Création de partition. Pour plus d’informations, consultez [créer des Tables partitionnées et des index à l’aide de SQL Server Management Studio](create-partitioned-tables-and-indexes.md#SSMSProcedure) sous **Create Partitioned Tables and Indexes**.  
+ Cette action spécifique ne peut pas être exécutée à l'aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Afin de modifier un schéma de partition, vous devez d'abord le supprimer puis en créer un nouveau avec les propriétés souhaitées à l'aide de l'Assistant Création de partition. Pour plus d’informations, consultez [créer des Tables partitionnées et des index à l’aide de SQL Server Management Studio](create-partitioned-tables-and-indexes.md#SSMSProcedure) sous **créer des Tables et index partitionnés**.  
   
 #### <a name="to-delete-a-partition-scheme"></a>Pour supprimer un schéma de partition  
   

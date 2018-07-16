@@ -1,5 +1,5 @@
 ---
-title: Créer une Dimension à l’aide d’une Table existante | Documents Microsoft
+title: Créer une Dimension à l’aide d’une Table existante | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - hierarchies [Analysis Services], dimensions
 - main dimension tables
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - standard dimensions [Analysis Services]
 ms.assetid: edd96fbe-1b1c-445a-95d6-7a025e0ee868
 caps.latest.revision: 52
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: d01e7148df98b5b05cb3adac6e5f64ce68905191
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 9ff912d4c828efec8bacd163ae6b47f980a94beb
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36052739"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37319249"
 ---
 # <a name="create-a-dimension-by-using-an-existing-table"></a>Créer une dimension à l'aide d'une table existante
   Dans [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], vous pouvez utiliser l'Assistant Dimension de [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] pour créer une dimension à partir d'une table existante. Pour cela, sélectionnez l’option **Utiliser une table existante** de la page **Sélectionner la méthode de création** de l’Assistant. Si vous sélectionnez cette option, l'Assistant base la structure de la dimension sur les tables de dimension, leurs colonnes et toutes les relations entre ces colonnes d'une vue de source de données existante. L'Assistant échantillonne des données dans la table source et les tables associées. Il utilise ces données pour définir des colonnes d’attributs basées sur les colonnes dans les tables de dimension et pour définir des hiérarchies d’attributs (nommées hiérarchies *définies par l’utilisateur* ). Une fois que vous avez utilisé l'Assistant Dimension pour créer votre dimension, vous pouvez utiliser le Concepteur de dimensions pour ajouter, supprimer et configurer des attributs et des hiérarchies dans la dimension.  
@@ -57,12 +57,12 @@ ms.locfileid: "36052739"
 ## <a name="selecting-dimension-attributes"></a>Sélection des attributs de dimension  
  Après avoir sélectionné les tables de dimension, utilisez la page **Sélectionner les attributs de la dimension** pour sélectionner les attributs que vous souhaitez inclure dans la dimension à partir de ces tables. Toutes les colonnes sous-jacentes de toutes ces tables sont disponibles comme attributs de dimension potentiels. L'attribut de clé de la dimension doit être sélectionné et activé pour l'exploration.  
   
- Par défaut, l'Assistant affecte la valeur `Regular` au type d'un attribut. Toutefois, vous souhaiterez peut-être mapper des attributs spécifiques sur un autre type d'attribut qui représente mieux les données. Par exemple, la table dbo.DimAccount dans l'exemple de base de données DW [!INCLUDE[ssSampleDBCoShort](../../includes/sssampledbcoshort-md.md)] contient une colonne AccountCodeAlternateKey qui fournit le numéro de compte. Au lieu de définir le type `Regular` pour cet attribut, vous pouvez mapper cet attribut sur la `Account Number` type.  
+ Par défaut, l'Assistant affecte la valeur `Regular` au type d'un attribut. Toutefois, vous souhaiterez peut-être mapper des attributs spécifiques sur un autre type d'attribut qui représente mieux les données. Par exemple, la table dbo.DimAccount dans l'exemple de base de données DW [!INCLUDE[ssSampleDBCoShort](../../includes/sssampledbcoshort-md.md)] contient une colonne AccountCodeAlternateKey qui fournit le numéro de compte. Au lieu de définir le type `Regular` pour cet attribut, vous pouvez souhaiter mapper cet attribut à la `Account Number` type.  
   
 > [!NOTE]  
 >  Si le type de dimension et les types d'attribut standard ne sont pas définis lorsque vous créez la dimension, utilisez l'Assistant Business Intelligence pour définir ces valeurs après avoir créé la dimension. Pour plus d’informations, consultez [Ajouter de l’intelligence de dimensions à une dimension](bi-wizard-add-dimension-intelligence-to-a-dimension.md) ou (pour une dimension de type Comptes) [Ajouter de l’intelligence comptable à une dimension](bi-wizard-add-account-intelligence-to-a-dimension.md).  
   
- L'Assistant définit automatiquement le type de dimension en fonction des types d'attribut spécifiés. Les types d’attributs spécifiés dans l’Assistant définissent la `Type` propriété pour les attributs. Les paramètres de la propriété `Type` pour la dimension et ses attributs fournissent des informations sur le contenu d'une dimension aux applications serveur et clientes. Dans certains cas, ces `Type` uniquement, les paramètres de propriété fournissent des conseils pour les applications clientes et sont facultatifs. Dans d’autres cas, comme pour les comptes, l’heure ou monétaire des dimensions, ils `Type` les paramètres de propriété déterminent un comportement spécifique basée sur le serveur et peuvent être nécessaires pour implémenter certains comportements du cube.  
+ L'Assistant définit automatiquement le type de dimension en fonction des types d'attribut spécifiés. Les types d’attributs spécifiés dans l’Assistant définissent la `Type` propriété pour les attributs. Les paramètres de la propriété `Type` pour la dimension et ses attributs fournissent des informations sur le contenu d'une dimension aux applications serveur et clientes. Dans certains cas, ces `Type` uniquement, les paramètres de propriété fournissent des conseils pour les applications clientes et sont facultatifs. Dans les autres cas, comme pour les comptes, d’heure ou de devise dimensions, ces `Type` les paramètres de propriété déterminent un comportement serveur spécifique et peuvent être nécessaires pour implémenter certains comportements du cube.  
   
  Pour plus d’informations sur les types de dimensions et d’attributs, consultez [Types de dimension](../multidimensional-models-olap-logical-dimension-objects/database-dimension-properties-types.md), [Configurer des types d’attributs](attribute-properties-configure-attribute-types.md).  
   
@@ -91,9 +91,9 @@ ms.locfileid: "36052739"
   
 ## <a name="see-also"></a>Voir aussi  
  [Créer une Dimension en générant une Table Non temporelle dans la Source de données](create-a-dimension-by-generating-a-non-time-table-in-the-data-source.md)   
- [Créer une Dimension de temps en générant une Table de temps](create-a-time-dimension-by-generating-a-time-table.md)   
+ [Créer une Dimension de temps en générant une Table temporelle](create-a-time-dimension-by-generating-a-time-table.md)   
  [Dimension Attribute Properties Reference](dimension-attribute-properties-reference.md)   
- [Créer une Dimension de temps en générant une Table de temps](create-a-time-dimension-by-generating-a-time-table.md)   
+ [Créer une Dimension de temps en générant une Table temporelle](create-a-time-dimension-by-generating-a-time-table.md)   
  [Créer une dimension en générant une table non temporelle dans la source de données](create-a-dimension-by-generating-a-non-time-table-in-the-data-source.md)  
   
   

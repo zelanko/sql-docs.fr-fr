@@ -1,5 +1,5 @@
 ---
-title: Élément ImpersonationInfo (ASSL) | Documents Microsoft
+title: Élément ImpersonationInfo (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - ImpersonationInfo element
 ms.assetid: d4b9c372-1023-43f7-97e9-b0a90f544fbb
 caps.latest.revision: 12
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: a97f9949baa904b2282568d1005ad99f8b10fdcd
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 3ed7caa18c18f73f70a3f39dce608f2b32dbc319
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36042985"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37275495"
 ---
 # <a name="impersonationinfo-element-assl"></a>Élément ImpersonationInfo (ASSL)
   Fournit les informations permettant de déterminer le comportement d'emprunt d'identité lors de l'accès ou de l'exécution d'un assembly.  
@@ -48,7 +48,7 @@ ms.locfileid: "36042985"
   
 |Caractéristique|Description|  
 |--------------------|-----------------|  
-|Type de données et longueur|[Élément ImpersonationInfo](../data-type/impersonationinfo-data-type-assl.md)|  
+|Type de données et longueur|[ImpersonationInfo](../data-type/impersonationinfo-data-type-assl.md)|  
 |Valeur par défaut|None|  
 |Cardinalité|0-1 : élément facultatif qui peut apparaître une fois et une seule.|  
   

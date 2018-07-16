@@ -1,5 +1,5 @@
 ---
-title: Définition des propriétés | Documents Microsoft
+title: Définition des propriétés | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -18,15 +18,15 @@ helpviewer_keywords:
 - properties [SMO]
 ms.assetid: 342569ba-d2f7-44d2-8f3f-ae9c701c7f0f
 caps.latest.revision: 48
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: d372a0c777e8b4f345b821c3d2c7c864f0f5229c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: f24590f0e8f496c5ac5620153cdbfd3459bc6557
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36052809"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37309469"
 ---
 # <a name="setting-properties"></a>Définition de propriétés
   Les propriétés sont des valeurs qui stockent des informations descriptives sur l'objet. Par exemple, [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] les options de configuration sont représentées par le <xref:Microsoft.SqlServer.Management.Smo.Server.Configuration%2A> propriétés de l’objet. Les propriétés sont accessibles soit directement, soit indirectement par le biais de la collection de propriétés. L'accès aux propriétés utilise directement la syntaxe suivante :  
@@ -44,7 +44,7 @@ ms.locfileid: "36052809"
   
 -   La version du serveur ne prend pas en charge la propriété, notamment si vous essayez d'accéder à une propriété représentant une nouvelle fonctionnalité [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] sur une ancienne version de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
--   Le serveur ne fournit pas de données pour la propriété, notamment si vous essayez d’accéder à une propriété qui représente un [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] composant qui n’est pas installé.  
+-   Le serveur ne fournit pas de données pour la propriété, par exemple si vous essayez d’accéder à une propriété qui représente un [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] composant qui n’est pas installé.  
   
  Vous pouvez gérer ces circonstances en interceptant les exceptions SMO <xref:Microsoft.SqlServer.Management.Smo.UnknownPropertyException> et <xref:Microsoft.SqlServer.Management.Smo.PropertyCannotBeRetrievedException>.  
   
@@ -125,7 +125,7 @@ tb.Create();
 ## <a name="iterating-through-all-properties-of-an-object-in-visual-basic"></a>Parcours de toutes les propriétés d'un objet en Visual Basic  
  Cet exemple de code effectue une itération dans le `Properties` collection de la <xref:Microsoft.SqlServer.Management.Smo.StoredProcedure> de l’objet et les affiche sur la [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] écran de sortie.  
   
- Dans l’exemple, le <xref:Microsoft.SqlServer.Management.Smo.Property> objet a été placé en entre crochets car elle est également un [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] (mot clé).  
+ Dans l’exemple, le <xref:Microsoft.SqlServer.Management.Smo.Property> objet a été placé en entre crochets, car il est également un [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] mot clé.  
   
 <!-- TODO: review snippet reference  [!CODE [SMO How to#SMO_VBProperties3](SMO How to#SMO_VBProperties3)]  -->  
   

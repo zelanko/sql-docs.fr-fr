@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - data-quality-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: fabd88b0-22b3-4543-a993-6d5b202ded80
 caps.latest.revision: 17
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 2bb1b7aa8b6013eeffb7aa0253ab71a7e39c96b4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: a608f6fe0ab40eae3e525b3ff8d6aa49a8534e99
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36043917"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37243409"
 ---
 # <a name="import-a-domain-from-a-dqs-file"></a>Importer un domaine à partir d'un fichier .dqs
   Cette rubrique explique comment importer un domaine à partir d'un fichier .dqs vers une base de connaissances existante dans [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS). Un fichier de données .dqs est créé en exportant un domaine ou une base de connaissances à partir de l'application [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] . Un fichier de données .dqs est chiffré, et ne peut pas être affiché.  

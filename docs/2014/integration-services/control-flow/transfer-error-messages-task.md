@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.transfererrormessagestask.f1
 helpviewer_keywords:
@@ -17,13 +17,13 @@ ms.assetid: da702289-035a-4d14-bd74-04461fbfee1b
 caps.latest.revision: 31
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: e6d8bc72c3c713dc1a113490431f4dba81c2a11a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 2d7a40c86c0dba2a4b2db08305f7fea379a97b1f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36139865"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37201849"
 ---
 # <a name="transfer-error-messages-task"></a>Tâche de transfert de messages d'erreur
   La tâche de transfert de messages d’erreur transfère un ou plusieurs messages d’erreur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] définis par l’utilisateur entre des instances de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Les messages définis par l'utilisateur sont des messages avec un identificateur supérieur ou égal à 50 000. Les messages dont l'identificateur est inférieur à 50 000 sont des messages d'erreur système qui ne peuvent pas être transférés à l'aide de la tâche de transfert de messages d'erreur.  
@@ -50,7 +50,7 @@ ms.locfileid: "36139865"
  La tâche de transfert de messages d'erreur n'indique pas les stades intermédiaires de l'avancement du transfert des messages d'erreur : elle signale la tâche comme réalisée à 0 % ou à 100 %.  
   
 ## <a name="execution-value"></a>Valeur d'exécution  
- La valeur de l’exécution, définie dans le `ExecutionValue` propriété de la tâche, renvoie le nombre de messages d’erreur qui ont été transférés. En affectant une variable définie par l’utilisateur pour le `ExecValueVariable` propriété de la tâche de Message d’erreur de transfert d’informations sur le transfert de messages d’erreur peut être accessibles à d’autres objets dans le package. Pour plus d’informations, consultez [Variables Integration Services &#40;SSIS&#41;](../integration-services-ssis-variables.md) et [Utiliser des variables dans des packages](../use-variables-in-packages.md).  
+ La valeur de l’exécution, définie dans le `ExecutionValue` propriété de la tâche, retourne le nombre de messages d’erreur qui ont été transférés. En affectant une variable définie par l’utilisateur à la `ExecValueVariable` propriété de la tâche Message d’erreur de transfert, les informations sur le transfert de message d’erreur peut être rendue disponible aux autres objets dans le package. Pour plus d’informations, consultez [Variables Integration Services &#40;SSIS&#41;](../integration-services-ssis-variables.md) et [Utiliser des variables dans des packages](../use-variables-in-packages.md).  
   
 ## <a name="log-entries"></a>Entrées du journal  
  La tâche de transfert de messages d'erreur comporte les entrées de journal personnalisées suivantes :  
@@ -59,7 +59,7 @@ ms.locfileid: "36139865"
   
 -   TransferErrorMessagesTaskFinishedTransferringObjects   Cette entrée du journal indique que le transfert est terminé. L'entrée du journal inclut l'heure de fin.  
   
- En outre, une entrée de journal pour le `OnInformation` signale le nombre de messages d’erreur qui ont été transférés et une entrée de journal pour le `OnWarning event` est écrit pour chaque message d’erreur à l’emplacement de destination est remplacé.  
+ En outre, une entrée de journal pour le `OnInformation` événement signale le nombre de messages d’erreur qui ont été transférés et une entrée de journal pour le `OnWarning event` est écrit pour chaque message d’erreur à l’emplacement de destination est remplacé.  
   
 ## <a name="security-and-permissions"></a>Sécurité et autorisations  
  Pour créer de nouveaux messages d'erreur, l'utilisateur qui exécute le package doit être un membre du rôle de serveur sysadmin ou serveradmin sur le serveur de destination.  
@@ -69,9 +69,9 @@ ms.locfileid: "36139865"
   
  Pour plus d'informations sur les propriétés définissables dans le concepteur [!INCLUDE[ssIS](../../includes/ssis-md.md)] , cliquez sur l'une des rubriques suivantes :  
   
--   [Éditeur de tâche de Messages d’erreur de transfert &#40;Page Général&#41;](../general-page-of-integration-services-designers-options.md)  
+-   [Éditeur de tâche de Messages d’erreur transfert &#40;Page Général&#41;](../general-page-of-integration-services-designers-options.md)  
   
--   [Éditeur de tâche de Messages d’erreur de transfert &#40;Page des Messages&#41;](../transfer-error-messages-task-editor-messages-page.md)  
+-   [Éditeur de tâche de Messages d’erreur transfert &#40;Page des Messages&#41;](../transfer-error-messages-task-editor-messages-page.md)  
   
 -   [Page Expressions](../expressions/expressions-page.md)  
   

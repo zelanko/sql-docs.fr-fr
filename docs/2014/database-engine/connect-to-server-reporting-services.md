@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.connection.login.reportserver.f1
 ms.assetid: ef81b658-8eb5-4636-ac81-eead10cc7b9f
 caps.latest.revision: 29
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 500624fbf81bc4ffc98ed3342878c2bf811005d5
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: f98d7d47820765e4e4920c95f92d1154350af278
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36041856"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37293189"
 ---
 # <a name="connect-to-server-reporting-services"></a>Se connecter au serveur (Reporting Services)
   Utilisez cette boîte de dialogue pour afficher ou spécifier des options de connexion à [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)].  
@@ -33,7 +33,7 @@ ms.locfileid: "36041856"
  **Nom du serveur**  
  Le mode serveur de l'instance du serveur de rapports à laquelle vous vous connectez détermine la valeur que vous devez entrer.  
   
- Pour un serveur de rapports qui fonctionne en mode natif, spécifiez l'instance du serveur de rapports avec laquelle établir la connexion. Si vous utilisez l'instance par défaut, le nom du serveur est généralement celui de l'ordinateur. Si vous avez installé une instance nommée, ajoutez le nom d’instance sur le nom de serveur dans ce format : \<nom_serveur >\\< nom_instance\>. Reporting Services utilise la barre oblique inverse pour délimiter le nom de l'instance.  
+ Pour un serveur de rapports qui fonctionne en mode natif, spécifiez l'instance du serveur de rapports avec laquelle établir la connexion. Si vous utilisez l'instance par défaut, le nom du serveur est généralement celui de l'ordinateur. Si vous avez installé une instance nommée, ajoutez le nom d’instance pour le nom du serveur au format suivant : \<nom_serveur >\\< nom_instance\>. Reporting Services utilise la barre oblique inverse pour délimiter le nom de l'instance.  
   
  Pour un serveur de rapports qui s'exécute en mode intégré SharePoint, vous devez spécifier un site SharePoint. Vous pouvez spécifier n'importe quel site d'une collection de sites intégrée à [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]. L'URL que vous fournissez doit inclure le préfixe HTTP ou HTTPS. Vous devez avoir l'autorisation d'accéder au site SharePoint pour vous y connecter à partir de Management Studio. Le niveau d'autorisation qui vous est assigné détermine les éléments que vous pouvez consulter et gérer. Pour plus d’informations, consultez [se connecter à un serveur de rapports dans Management Studio](../reporting-services/tools/connect-to-a-report-server-in-management-studio.md).  
   

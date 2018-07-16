@@ -1,5 +1,5 @@
 ---
-title: Type de données AggregationAttribute (ASSL) | Documents Microsoft
+title: Type de données AggregationAttribute (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - AggregationAttribute data type
 ms.assetid: 636827c7-938d-4b7d-9827-46da3bc60d9a
 caps.latest.revision: 41
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 388bd739938a7b756157659ce34c0a215710a034
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 71da4468ab4edece07744ae73a13243eefd1dfed
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36044552"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37243419"
 ---
 # <a name="aggregationattribute-data-type-assl"></a>Type de données AggregationAttribute (ASSL)
   Définit un type de données primitif qui représente l’association entre un [agrégation](../objects/aggregation-element-assl.md) élément et un attribut.  
@@ -65,6 +65,6 @@ ms.locfileid: "36044552"
   
 ## <a name="see-also"></a>Voir aussi  
  [Élément aggregation &#40;ASSL&#41;](../objects/aggregation-element-assl.md)   
- [Types de données de script langage XML Analysis Services &#40;ASSL&#41;](analysis-services-scripting-language-xml-data-types-assl.md)  
+ [Types Analysis Services Scripting Language XML données &#40;ASSL&#41;](analysis-services-scripting-language-xml-data-types-assl.md)  
   
   

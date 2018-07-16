@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.lookuptrans.f1
 helpviewer_keywords:
@@ -22,13 +22,13 @@ ms.assetid: de1cc8de-e7af-4727-b5a5-a1f0a739aa09
 caps.latest.revision: 104
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: f7a4d4a05d738ee844b6eb63ab5c762fb84f6194
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: d0dcebe1fa634678fa754b74be04d1dd5e1bcac5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36045216"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37298809"
 ---
 # <a name="lookup-transformation"></a>Transformation de recherche
   La transformation de recherche effectue des recherches en joignant des données de colonnes d'entrée à des colonnes d'un dataset de référence. Vous utilisez la recherche pour accéder à des informations supplémentaires dans une table associée se basant sur des valeurs dans des colonnes communes.  
@@ -89,7 +89,7 @@ ms.locfileid: "36045216"
   
  La persistance du cache dans un fichier présente les autres avantages suivants :  
   
--   ***Partagez le fichier cache entre plusieurs packages. Pour plus d’informations, consultez*** [Implémenter une transformation de recherche en mode Cache complet à l’aide de la transformation du gestionnaire de connexions du cache](../../connection-manager/lookup-transformation-full-cache-mode-cache-connection-manager.md)***.***  
+-   ***Partagez le fichier cache entre plusieurs packages. Pour plus d’informations, consultez ***[Implémenter une transformation de recherche en mode Cache complet à l’aide de la transformation du gestionnaire de connexions du cache](../../connection-manager/lookup-transformation-full-cache-mode-cache-connection-manager.md)***.***  
   
 -   Déployez le fichier cache avec un package. ***Vous pouvez alors utiliser les données sur plusieurs ordinateurs.*** Pour plus d’informations, consultez [Créer et déployer un cache pour la transformation de recherche](create-and-deploy-a-cache-for-the-lookup-transformation.md).  
   

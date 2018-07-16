@@ -1,5 +1,5 @@
 ---
-title: Dimensions dans les modèles multidimensionnels | Documents Microsoft
+title: Dimensions dans les modèles multidimensionnels | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - OLAP [Analysis Services], dimensions
 - dimensions [Analysis Services], about dimensions
 - OLAP objects [Analysis Services], dimensions
 ms.assetid: 2b62b05c-00fd-4e60-b77f-f707ba83a19b
 caps.latest.revision: 45
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 8f048b8c4a531ce32714a7bda328a60102e0ef2f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 41e833e61095082e16511daae92eaed8e950ba73
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36052511"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37303059"
 ---
 # <a name="dimensions-in-multidimensional-models"></a>Dimensions dans les modèles multidimensionnels
   Une dimension de base de données est un ensemble d'objets associés, appelés attributs, qui peuvent être utilisés pour fournir des informations sur des données dans un ou plusieurs cubes. Par exemple, les attributs les plus courants dans une dimension de produit sont le nom, la catégorie, la gamme, la taille et le prix du produit. Ces objets sont liés à une ou plusieurs colonnes dans une ou plusieurs tables d'une vue de source de données. Par défaut, ces attributs sont visibles en tant que hiérarchies d'attributs et peuvent être utilisés pour comprendre les données de faits dans un cube. Les attributs peuvent être organisés en hiérarchies définies par l'utilisateur qui fournissent des chemins d'exploration pour aider les utilisateurs lorsqu'ils recherchent des données dans un cube.  
@@ -44,7 +44,7 @@ ms.locfileid: "36052511"
 ## <a name="in-this-section"></a>Dans cette section  
  Le tableau suivant décrit les rubriques de cette section.  
   
- [Définir les Dimensions de la base de données](define-database-dimensions.md)  
+ [Définir des dimensions de base de données](define-database-dimensions.md)  
  Explique comment modifier et configurer une dimension de base de données à l'aide du Concepteur de dimensions.  
   
  [Référence des propriétés d’attribut de dimension](dimension-attribute-properties-reference.md)  
@@ -56,7 +56,7 @@ ms.locfileid: "36052511"
  [Créer des hiérarchies définies par l’utilisateur](user-defined-hierarchies-create.md)  
  Explique comment définir, modifier et configurer une hiérarchie d'attributs de dimension définie par l'utilisateur à l'aide du Concepteur de dimensions.  
   
- [Utilisez l’Assistant Business Intelligence pour améliorer des Dimensions](../use-the-business-intelligence-wizard-to-enhance-dimensions.md)  
+ [Utiliser l’Assistant Business Intelligence pour améliorer des dimensions](../use-the-business-intelligence-wizard-to-enhance-dimensions.md)  
  Explique comment améliorer une dimension de base de données à l'aide de l'Assistant Business Intelligence.  
   
 ## <a name="see-also"></a>Voir aussi  

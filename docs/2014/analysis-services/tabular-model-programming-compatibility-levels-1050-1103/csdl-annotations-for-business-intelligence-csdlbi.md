@@ -1,5 +1,5 @@
 ---
-title: Annotations CSDL pour Business Intelligence (CSDLBI) | Documents Microsoft
+title: Annotations CSDL pour Business Intelligence (CSDLBI) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -12,15 +12,15 @@ ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: bf6f372a-bc67-45ea-a771-b2dc5b0527e5
 caps.latest.revision: 19
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: 0e545667bd907460b695f63cbe9f2f537c9be62d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: 45f29343fe3fb3bd95e8f9753438e90214f18c80
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36040244"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37328429"
 ---
 # <a name="csdl-annotations-for-business-intelligence-csdlbi"></a>Annotations CSDL pour Business Intelligence (CSDLBI)
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] prend en charge la présentation de la définition d'un modèle tabulaire dans un format XML appelé langage CSDL (Conceptual Schema Definition Langage) avec des annotations Business Intelligence (CSDLBI).  
@@ -52,7 +52,7 @@ ms.locfileid: "36040244"
 ### <a name="csdlbi-versions"></a>Versions de CSDLBI  
  La spécification CSDL d'origine (Entity Data Framework) prévoit la plupart des entités et des propriétés exigées pour prendre en charge la modélisation. Les annotations BI prennent en charge les spécifications particulières des modèles tabulaires, les propriétés de création de rapports requises pour les clients, tels que [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)], et les métadonnées supplémentaires requises pour les modèles multidimensionnels. Cette section décrit les mises à jour dans chaque version.  
   
- **CSDLBI VERSION 1.0**  
+ **CSDLBI 1.0**  
   
  Le jeu initial d'ajouts au schéma CSDL pour prendre en charge les modèles tabulaires [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] contenait des annotations afin de prendre en charge la modélisation des données, les calculs personnalisés et la présentation avancée :  
   

@@ -1,5 +1,5 @@
 ---
-title: Élément Member (ASSL) | Documents Microsoft
+title: Member, élément (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - Member element
 ms.assetid: 03b4cfcb-ce87-452f-9e25-8745c0423f56
 caps.latest.revision: 31
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: d2ababe44f923df08b08c3adeaf81bf84e3938f0
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: f2d2937a4a0ec0c3608da6eb2869309ed2d4a296
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36139893"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37330299"
 ---
 # <a name="member-element-assl"></a>Élément Member (ASSL)
   Contient le nom d'un membre d'un élément [Group](group-element-assl.md) ou d'un élément [Role](role-element-assl.md) .  

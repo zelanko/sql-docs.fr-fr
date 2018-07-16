@@ -1,5 +1,5 @@
 ---
-title: Ajouter un Type de contenu connexion de modèle sémantique BI dans une bibliothèque (PowerPivot pour SharePoint) | Documents Microsoft
+title: Ajouter un Type de contenu connexion de modèle sémantique BI dans une bibliothèque (PowerPivot pour SharePoint) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 145505ed-50bc-4528-912b-2a5cd2566011
 caps.latest.revision: 11
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 7b8f2877994e87a9a7199812348f84415d1e1810
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 15537b159f34df3e69c3b415a8a00845ff2fe79f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36038459"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37284105"
 ---
 # <a name="add-a-bi-semantic-model-connection-content-type-to-a-library-powerpivot-for-sharepoint"></a>Ajouter un type de contenu de connexion de modèle sémantique BI à une bibliothèque (PowerPivot pour SharePoint)
   Une connexion de modèle sémantique BI est créée dans SharePoint et assure la redirection vers les données de modèle sémantique Business Intelligence situées dans un classeur PowerPivot ou une base de données model tabulaire Analysis Services sur un serveur réseau. Avant de pouvoir créer une connexion de modèle sémantique BI dans SharePoint, vous devez étendre une bibliothèque de documents pour autoriser la création d'un fichier .bism. Cette étape est effectuée une seule fois pour chaque bibliothèque, mais vous devrez la répéter pour toutes les bibliothèques à partir desquelles vous souhaitez créer des fichiers .bism. Les meilleures pratiques recommandent de créer une bibliothèque centralisée pour le stockage des fichiers .bism, afin que vous puissiez gérer les autorisations dans un seul emplacement.  
@@ -30,7 +30,7 @@ ms.locfileid: "36038459"
 ##  <a name="bkmk_addtype"></a> Ajouter le type de contenu à une bibliothèque de documents  
  Pour ajouter et configurer un type de contenu, vous devez au minimum disposer d'une autorisation Gérer les listes. Cette autorisation est intégrée au niveau d'autorisation de conception et aux niveaux supérieurs.  
   
- Le site qui contient la bibliothèque de documents doit disposer d'une activation des fonctionnalités pour PowerPivot pour SharePoint. Pour plus d’informations, consultez [activer la fonctionnalité d’intégration PowerPivot pour les Collections de sites dans l’Administration centrale](activate-power-pivot-integration-for-site-collections-in-ca.md).  
+ Le site qui contient la bibliothèque de documents doit disposer d'une activation des fonctionnalités pour PowerPivot pour SharePoint. Pour plus d’informations, consultez [activer fonctionnalité d’intégration PowerPivot pour les Collections de sites dans l’Administration centrale](activate-power-pivot-integration-for-site-collections-in-ca.md).  
   
 1.  Ouvrez la bibliothèque de documents pour laquelle activer le type de contenu Connexion de modèle sémantique BI.  
   

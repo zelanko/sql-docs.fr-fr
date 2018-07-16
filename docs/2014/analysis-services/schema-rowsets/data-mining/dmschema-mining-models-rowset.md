@@ -1,5 +1,5 @@
 ---
-title: Ensemble de lignes DMSCHEMA_MINING_MODELS | Documents Microsoft
+title: Ensemble de lignes DMSCHEMA_MINING_MODELS | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -18,20 +18,20 @@ helpviewer_keywords:
 - DMSCHEMA_MINING_MODELS rowset
 ms.assetid: 1636f4cf-b342-4e2e-93b4-04136e2d41ef
 caps.latest.revision: 40
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: d8296ddb800b7691936236aa0cdb6550c89c34c2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 9af1a9817ad116561b57b1d04b2e3df1d7313bb2
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36140386"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37208029"
 ---
 # <a name="dmschemaminingmodels-rowset"></a>Ensemble de lignes DMSCHEMA_MINING_MODELS
   Énumère les modèles d'exploration de données du catalogue actuel. L'ensemble de lignes `DMSCHEMA_MINING_MODELS` inclut des informations telles que les noms des modèles, la date de traitement et l'algorithme d'exploration de données associé à chaque modèle d'exploration de données.  
   
- . Le `DMSCHEMA_MINING_MODELS` de lignes du schéma est très similaire à la [DBSCHEMA_TABLES](../ole-db/dbschema-tables-rowset.md) de lignes du schéma et peut être utilisé de la même façon.  
+ . Le `DMSCHEMA_MINING_MODELS` ensemble de lignes de schéma est très similaire à la [DBSCHEMA_TABLES](../ole-db/dbschema-tables-rowset.md) ensemble de lignes de schéma et peut être utilisé de la même façon.  
   
 ## <a name="rowset-columns"></a>Colonnes de l'ensemble de lignes  
  Le `DMSCHEMA_MINING_MODELS` ensemble de lignes contient les colonnes suivantes.  
@@ -51,7 +51,7 @@ ms.locfileid: "36140386"
 |`SERVICE_NAME`|`DBTYPE_WSTR`||Nom spécifique au fournisseur de l'algorithme d'exploration de données utilisé par le modèle.|  
 |`CREATION_STATEMENT`|`DBTYPE_WSTR`||Instruction utilisée pour créer le modèle d'exploration de données.|  
 |`PREDICTION_ENTITY`|`DBTYPE_WSTR`||Liste délimitée par des virgules indiquant les colonnes d'exploration de données pouvant être prédites.|  
-|`IS_POPULATED`|`DBTYPE_BOOL`||Indicateur booléen qui indique si le modèle est rempli.<br /><br /> `TRUE` Si le modèle est renseigné ; dans le cas contraire, `FALSE`.|  
+|`IS_POPULATED`|`DBTYPE_BOOL`||Indicateur booléen qui indique si le modèle est rempli.<br /><br /> `TRUE` Si le modèle est renseigné ; Sinon, `FALSE`.|  
 |`MINING_PARAMETERS`|`DBTYPE_WSTR`||Liste des paramètres qui ont été utilisés lors de la création du modèle, séparés par des virgules.|  
 |`MINING_STRUCTURE`|`DBTYPE_WSTR`||ID de la structure d'exploration de données sur laquelle repose le modèle.|  
 |`LAST_PROCESSED`|`DBTYPE_DBTIMESTAMP`||Date du dernier traitement du modèle.|  
@@ -72,7 +72,7 @@ ms.locfileid: "36140386"
 |`SERVICE_TYPE_ID`|`DBTYPE_UI4`|Facultatif.|  
 |`MINING_STRUCTURE`|`DBTYPE_WSTR`|Facultatif.|  
   
- Pour obtenir des exemples d’interrogation de cet ensemble de lignes, consultez [les paramètres utilisés pour créer un modèle d’exploration de données de requête](../../data-mining/query-the-parameters-used-to-create-a-mining-model.md).  
+ Pour obtenir des exemples montrant comment interroger cet ensemble de lignes, consultez [interroger les paramètres utilisés pour créer un modèle d’exploration de données](../../data-mining/query-the-parameters-used-to-create-a-mining-model.md).  
   
 ## <a name="see-also"></a>Voir aussi  
  [Ensembles de lignes de schéma d’exploration de données](../../schema-rowsets/data-mining/data-mining-schema-rowsets.md) 

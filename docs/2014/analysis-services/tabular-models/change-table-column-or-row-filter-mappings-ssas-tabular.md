@@ -1,5 +1,5 @@
 ---
-title: Modifier les mappages de filtre de lignes (SSAS tabulaire), de tables ou de colonnes | Documents Microsoft
+title: Modifier les mappages de filtre de lignes (SSAS tabulaire), tables ou de colonnes | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 2124c526-5772-4f84-a019-9dd3e906e8dd
 caps.latest.revision: 9
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: e085b0693e0043283cc142ccf2ca764ae234eed7
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: db70af7541a46fb061a3b668b61040361b261347
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36038671"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37241309"
 ---
 # <a name="change-table-column-or-row-filter-mappings-ssas-tabular"></a>Changer des mappages de filtres de lignes, de tables ou de colonnes (SSAS Tabulaire)
   Cette rubrique explique comment modifier des mappages de filtres de lignes, de tables ou de colonnes à l’aide de la boîte de dialogue **Modifier les propriétés de la table** dans [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)].  
@@ -48,6 +48,6 @@ ms.locfileid: "36038671"
          Si vous faites une erreur et devez recommencer, cliquez sur **Effacer les filtres de lignes**.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Modifier la boîte de dialogue Propriétés de Table &#40;SSAS&#41;](../edit-table-properties-dialog-box-ssas.md)  
+ [Modifier la boîte de dialogue Propriétés Table &#40;SSAS&#41;](../edit-table-properties-dialog-box-ssas.md)  
   
   

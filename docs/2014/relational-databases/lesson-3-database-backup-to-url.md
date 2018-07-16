@@ -1,5 +1,5 @@
 ---
-title: 'Leçon 4 : Créer une base de données dans le stockage Windows Azure | Documents Microsoft'
+title: 'Leçon 4 : Créer une base de données dans le stockage Windows Azure | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: a9ae1501-b614-49d3-b975-6569da8350b2
 caps.latest.revision: 8
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 9b72bfc90936011fc4556fae6021fad89b134c57
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 1d31f0d1eabe73a681b1932b2826ef38ad9b5456
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36039288"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37327839"
 ---
 # <a name="lesson-4-create-a-database-in-windows-azure-storage"></a>Leçon 4 : Créer une base de données dans le Stockage Microsoft Azure
   Dans cette leçon, vous allez apprendre comment créer une base de données à l'aide de la fonctionnalité Fichiers de données SQL Server dans Microsoft Azure. Notez que vous devez avoir terminé les leçons 1, 2 et 3 avant d'effectuer les tâches de cette leçon. La leçon 3 est une étape très importante, car vous devez supprimer les informations sur votre conteneur de stockage Windows Azure et le nom de stratégie associée, ainsi que la clé SAS dans le magasin d'informations d'identification SQL Server avant de passer à la leçon 4.  
@@ -77,11 +77,11 @@ ms.locfileid: "36039288"
   
 6.  De même, pour afficher la base de données nouvellement créée dans votre compte de stockage, connectez-vous à votre compte de stockage via SQL Server Management Studio (SSMS). Pour plus d'informations sur la façon de se connecter à un stockage Windows Azure à l'aide de SQL Server Management Studio, suivez ces étapes :  
   
-    1.  Tout d'abord, obtenez les informations sur le compte de stockage. Connectez-vous au Portail de gestion. Ensuite, cliquez sur **stockage** et sélectionnez votre compte de stockage. Lorsqu’un compte de stockage est sélectionné, cliquez sur **gérer les clés d’accès** au bas de la page. Cela permet d'ouvrir une fenêtre de dialogue similaire :  
+    1.  Tout d'abord, obtenez les informations sur le compte de stockage. Connectez-vous au Portail de gestion. Ensuite, cliquez sur **stockage** et sélectionnez votre compte de stockage. Lorsqu’un compte de stockage est sélectionné, cliquez sur **gérer les clés d’accès** en bas de la page. Cela permet d'ouvrir une fenêtre de dialogue similaire :  
   
          ![SQL 14 CTP2](../tutorials/media/ss-was-tutlesson-4-6-1.gif "SQL 14 CTP2")  
   
-    2.  Copie le **nom de compte de stockage** et **clé d’accès primaire** valeurs à la **se connecter au stockage Windows Azure** boîte de dialogue dans SSMS. Ensuite, cliquez sur **connexion**. Les informations sur les conteneurs du compte de stockage s'affichent dans SSMS, comme illustré dans la capture d'écran suivante :  
+    2.  Copie le **nom de compte de stockage** et **clé d’accès primaire** valeurs à la **se connecter à Windows Azure Storage** fenêtre de boîte de dialogue dans SSMS. Ensuite, cliquez sur **Connect**. Les informations sur les conteneurs du compte de stockage s'affichent dans SSMS, comme illustré dans la capture d'écran suivante :  
   
          ![SQL 14 CTP2](../tutorials/media/ss-was-tutlesson-4-6-2.gif "SQL 14 CTP2")  
   
@@ -89,7 +89,7 @@ ms.locfileid: "36039288"
   
  ![SQL 14 CTP2](../tutorials/media/ss-was-tutlesson-4-6-2b.gif "SQL 14 CTP2")  
   
- **Remarque :** s’il existe des références actives aux fichiers de données dans un conteneur, toutes les tentatives de suppression de SQL Server associées des informations d’identification échoue. De même, s'il existe déjà un bail sur un fichier de base de données spécifique d'un objet blob et que vous voulez le supprimer, vous devez d'abord résilier le bail sur l'objet blob. Pour interrompre le bail, vous pouvez utiliser [Lease Blob](https://msdn.microsoft.com/library/azure/ee691972.aspx).  
+ **Remarque :** s’il existe des références actives aux fichiers de données dans un conteneur, toute tentative de suppression du serveur SQL associé à des informations d’identification échoue. De même, s'il existe déjà un bail sur un fichier de base de données spécifique d'un objet blob et que vous voulez le supprimer, vous devez d'abord résilier le bail sur l'objet blob. Pour interrompre le bail, vous pouvez utiliser [Lease Blob](https://msdn.microsoft.com/library/azure/ee691972.aspx).  
   
  Grâce à cette nouvelle fonctionnalité, configurez SQL Server afin que les instructions CREATE DATABASE créent par défaut une base de données activée pour le cloud. En d'autres termes, définissez des données par défaut et consignez des emplacements dans les propriétés de l'instance SQL Server Management Studio de façon à ce que lorsque vous créez une base de données, tous les fichiers de base de données (.mdf, .ldf) soient créés en tant qu'objets blob de page dans le stockage Windows Azure.  
   

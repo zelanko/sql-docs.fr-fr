@@ -1,5 +1,5 @@
 ---
-title: Connecter des composants avec des chemins d’accès | Documents Microsoft
+title: Connecter des composants avec des chemins d’accès | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - data flow [Integration Services], connections
 - components [Integration Services], connections
 - connections [Integration Services], data flow components
 ms.assetid: 05633e4c-1370-4b05-802b-f36b07dd71c8
 caps.latest.revision: 32
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 5152147f82d1d413806eeb8f9644e70af9a04828
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: a14ec2a4fe8e13d7e2adb2e79d290361540c7b8b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36042959"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37243079"
 ---
 # <a name="connect-components-with-paths"></a>Connecter des composants avec des chemins d’accès
   Le flux de données d’un package est construit sur la surface de conception de l’onglet **Flux de données** du concepteur [!INCLUDE[ssIS](../includes/ssis-md.md)]. Si un flux de données contient deux composants de flux de données, vous pouvez les relier en connectant la sortie d'une source ou d'une transformation à l'entrée d'une transformation ou d'une destination. Le connecteur entre ces deux composants de flux de données porte le nom de chemin d'accès.  
@@ -42,11 +42,11 @@ ms.locfileid: "36042959"
   
 ### <a name="to-set-path-properties"></a>Pour définir les propriétés d'un chemin d'accès  
   
--   [Définir les propriétés d’un chemin d’accès à l’aide de l’éditeur de chemin d’accès de flux de données](../../2014/integration-services/set-the-properties-of-a-path-by-using-the-data-flow-path-editor.md)  
+-   [Définir les propriétés d’un chemin à l’aide de l’Éditeur du chemin d’accès au flux de données](../../2014/integration-services/set-the-properties-of-a-path-by-using-the-data-flow-path-editor.md)  
   
 ### <a name="to-view-path-metadata"></a>Pour afficher les métadonnées d'un chemin d'accès  
   
--   [Afficher les métadonnées de chemin d’accès dans l’éditeur de chemin d’accès de flux de données](../../2014/integration-services/view-path-metadata-in-the-data-flow-path-editor.md)  
+-   [Afficher les métadonnées d’un chemin dans l’Éditeur du chemin d’accès au flux de données](../../2014/integration-services/view-path-metadata-in-the-data-flow-path-editor.md)  
   
 ### <a name="to-view-path-metadata"></a>Pour afficher les métadonnées d'un chemin d'accès  
   

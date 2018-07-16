@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.userdefineddatatype.general.f1
 - sql12.swb.new.datatype.properties.general.f1
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - alias data types [SQL Server], creating
 ms.assetid: b1dd8413-0cd0-411b-a79b-1bb043ccc62d
 caps.latest.revision: 27
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 5d39ce0a1b6d5672ea574f79ef6427ff0d633072
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 8b3fdf094f1db50860d0f4e29d17463ba1092a9a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36053079"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37264826"
 ---
 # <a name="create-a-user-defined-data-type-alias"></a>Créer un type de données d'alias défini par l'utilisateur
   Cette rubrique explique comment créer un nouvel alias de type de données défini par l'utilisateur dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] à l'aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou de [!INCLUDE[tsql](../../includes/tsql-md.md)].  
@@ -75,7 +75,7 @@ ms.locfileid: "36053079"
      La longueur n'est pas affichée pour les types de données `nvarchar(max)`, `varchar(max)` ou `varbinary(max)`.  
   
      **Nom**  
-     Si vous créez un nouvel alias de type de données défini par l'utilisateur, tapez un nom unique à utiliser dans la base de données pour représenter le type de données défini par l'utilisateur. Le nombre maximal de caractères doit correspondre au `sysname` type de données. Le nom d'un alias de type de données défini par l'utilisateur existant n'est pas modifiable.  
+     Si vous créez un nouvel alias de type de données défini par l'utilisateur, tapez un nom unique à utiliser dans la base de données pour représenter le type de données défini par l'utilisateur. Le nombre maximal de caractères doit correspondre au système `sysname` type de données. Le nom d'un alias de type de données défini par l'utilisateur existant n'est pas modifiable.  
   
      **Règle**  
      (Facultatif) Sélectionnez une règle pour la liaison à l'alias de type de données défini par l'utilisateur.  

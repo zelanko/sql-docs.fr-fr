@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.rep.p2pwizard.init.f1
 ms.assetid: 050c00e1-78bd-4d9c-affe-40e22feb4d94
 caps.latest.revision: 19
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 6af86bb2ad710929035c1dd6de58f95baa10d3af
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 2ffd2f1ef6695c32f9b367d775bcf649ba63c63b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36039475"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37227189"
 ---
 # <a name="new-peer-initialization-peer-to-peer-replication"></a>Initialisation d'un nouvel homologue (réplication d'égal à égal)
   Utilisez la page **Initialisation d'un nouvel homologue** pour spécifier comment les bases de données d'homologues ont été initialisées. (Les homologues doivent être initialisés avant la fin de cet Assistant.) Les homologues sont initialisés manuellement ou en utilisant la fonctionnalité **initialize with backup** fournie par la réplication transactionnelle. (La réplication transactionnelle d'égal à égal ne prend pas en charge l'initialisation d'homologues à l'aide d'un instantané.) Si différents homologues doivent être initialisés à l'aide de différentes méthodes, vous devez ajouter séparément les homologues en exécutant l'Assistant plusieurs fois.  

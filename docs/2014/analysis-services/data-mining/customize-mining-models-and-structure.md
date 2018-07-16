@@ -1,5 +1,5 @@
 ---
-title: Personnaliser les modèles d’exploration de données et la Structure | Documents Microsoft
+title: Personnaliser les modèles d’exploration de données et la Structure | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - attributes [data mining]
 - mining models [Analysis Services], properties
@@ -18,15 +18,15 @@ helpviewer_keywords:
 - mining models [Analysis Services], about data mining models
 ms.assetid: 32c17b4f-e090-45f9-b3aa-ffa7084e928e
 caps.latest.revision: 23
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 595e914741361fa0922da59a2e0fdc699d96054c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 79790404f11ffc40ca3e4826217ab331fec92a85
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36140641"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37286355"
 ---
 # <a name="customize-mining-models-and-structure"></a>Personnaliser les modèles et les structures d'exploration de données
   Après avoir sélectionné un algorithme qui répond aux besoins de votre entreprise, vous pouvez personnaliser le modèle d'exploration de données de plusieurs façons pour éventuellement améliorer les résultats.  
@@ -65,9 +65,9 @@ ms.locfileid: "36140641"
 ### <a name="creating-aliases-for-model-columns"></a>Créer des alias pour des colonnes du modèle  
  Lorsque [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] crée le modèle d'exploration de données, il utilise les mêmes noms de colonnes que ceux de la structure d'exploration de données. Vous pouvez ajouter un alias à toute colonne du modèle d'exploration de données. Cela peut simplifier la compréhension du contenu ou de l'utilisation des colonnes, ou permettre de raccourcir les noms afin de simplifier la création de requêtes. Les alias sont également utiles lorsque vous souhaitez créer une copie d'une colonne et lui donner un nom descriptif.  
   
- Vous créez un alias en modifiant le `Name` propriété de la colonne du modèle d’exploration de données. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] continue à utiliser le nom d’origine comme ID de la colonne et la nouvelle valeur que vous tapez pour `Name` devient l’alias de colonne et apparaît dans la grille entre parenthèses en regard de l’utilisation des colonnes.  
+ Vous créez un alias en modifiant le `Name` propriété de la colonne du modèle d’exploration de données. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] continue à utiliser le nom d’origine comme ID de la colonne et la nouvelle valeur que vous tapez pour `Name` devient l’alias de colonne et apparaît dans la grille dans les parenthèses situées à côté de l’utilisation des colonnes.  
   
- ![alias d’exploration de données sur des colonnes de modèle](../media/modelcolumnalias-income.gif "alias sur l’exploration de données des colonnes de modèle")  
+ ![alias sur d’exploration de données des colonnes de modèle](../media/modelcolumnalias-income.gif "alias sur d’exploration de données des colonnes de modèle")  
   
  Le graphique illustre des modèles connexes qui ont plusieurs copies d'une colonne de structure d'exploration de données, tous en rapport avec le Revenu. Chaque copie de la colonne de structure a été discrétisée d'une manière différente. Les modèles du diagramme utilisent chacun une colonne différente de la structure d’exploration de données ; toutefois, pour simplifier la comparaison des colonnes des différents modèles, la colonne dans chaque modèle a été renommée [**Revenus**].  
   
@@ -87,11 +87,11 @@ ms.locfileid: "36140641"
   
 |||  
 |-|-|  
-|[Algorithme d’arbres de décision Microsoft](microsoft-decision-trees-algorithm.md)|[Algorithme de série chronologique de Microsoft](microsoft-time-series-algorithm.md)|  
-|[Algorithme Microsoft Clustering](microsoft-clustering-algorithm.md)|[MNN (Microsoft Neural Network)](microsoft-neural-network-algorithm.md)|  
-|[Algorithme Microsoft Naive Bayes](microsoft-naive-bayes-algorithm.md)|[Algorithme Microsoft Logistic Regression](microsoft-logistic-regression-algorithm.md)|  
+|[Algorithme MDT (Microsoft Decision Trees)](microsoft-decision-trees-algorithm.md)|[Algorithme MTS (Microsoft Time Series)](microsoft-time-series-algorithm.md)|  
+|[Algorithme de gestion de clusters Microsoft](microsoft-clustering-algorithm.md)|[Algorithme MNN (Microsoft Neural Network)](microsoft-neural-network-algorithm.md)|  
+|[Algorithme MNB (Microsoft Naive Bayes)](microsoft-naive-bayes-algorithm.md)|[Algorithme de régression logistique Microsoft](microsoft-logistic-regression-algorithm.md)|  
 |[Algorithme Microsoft Association](microsoft-association-algorithm.md)|[Algorithme de régression linéaire Microsoft](microsoft-linear-regression-algorithm.md)|  
-|[Algorithme de Microsoft Sequence Clustering](microsoft-sequence-clustering-algorithm.md)||  
+|[Algorithme MSC (Microsoft Sequence Clustering)](microsoft-sequence-clustering-algorithm.md)||  
   
 ## <a name="customizing-algorithm-parameters"></a>Personnaliser les paramètres d'algorithme  
  Chaque algorithme prend en charge des paramètres que vous pouvez utiliser pour personnaliser le comportement de l'algorithme et optimiser les résultats de votre modèle. Pour obtenir une description de l'utilisation de chaque paramètre, consultez les rubriques suivantes :  
@@ -105,7 +105,7 @@ ms.locfileid: "36140641"
 |CLUSTER_SEED|[Informations techniques de référence sur l’algorithme Microsoft Clustering](microsoft-clustering-algorithm-technical-reference.md)|  
 |CLUSTERING_METHOD|[Informations techniques de référence sur l’algorithme Microsoft Clustering](microsoft-clustering-algorithm-technical-reference.md)|  
 |COMPLEXITY_PENALTY|[Informations techniques de référence sur l’algorithme MDT (Microsoft Decision Trees)](microsoft-decision-trees-algorithm-technical-reference.md)<br /><br /> [Informations techniques de référence sur l’algorithme MTS (Microsoft Time Series)](microsoft-time-series-algorithm-technical-reference.md)|  
-|FORCE_REGRESSOR|[Informations techniques de référence sur l’algorithme MDT (Microsoft Decision Trees)](microsoft-decision-trees-algorithm-technical-reference.md)<br /><br /> [Informations techniques de référence sur l’algorithme Microsoft Linear Regression](microsoft-linear-regression-algorithm-technical-reference.md)<br /><br /> [Les indicateurs de modélisation &#40;d’exploration de données&#41;](modeling-flags-data-mining.md)|  
+|FORCE_REGRESSOR|[Informations techniques de référence sur l’algorithme MDT (Microsoft Decision Trees)](microsoft-decision-trees-algorithm-technical-reference.md)<br /><br /> [Informations techniques de référence sur l’algorithme Microsoft Linear Regression](microsoft-linear-regression-algorithm-technical-reference.md)<br /><br /> [Indicateurs de modélisation &#40;exploration de données&#41;](modeling-flags-data-mining.md)|  
 |FORECAST_METHOD|[Informations techniques de référence sur l’algorithme MTS (Microsoft Time Series)](microsoft-time-series-algorithm-technical-reference.md)|  
 |HIDDEN_NODE_RATIO|[Informations techniques de référence sur l’algorithme MNN (Microsoft Neural Network)](microsoft-neural-network-algorithm-technical-reference.md)|  
 |HISTORIC_MODEL_COUNT|[Informations techniques de référence sur l’algorithme MTS (Microsoft Time Series)](microsoft-time-series-algorithm-technical-reference.md)|  

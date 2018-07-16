@@ -1,5 +1,5 @@
 ---
-title: Mettre en cache les Options d’actualisation (Gestionnaire de rapports) | Documents Microsoft
+title: Mettre en cache Options d’actualisation (Gestionnaire de rapports) | Microsoft Docs
 ms.custom: ''
 ms.date: 05/24/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 227da40c-6bd2-48ec-aa9c-50ce6c1ca3a6
 caps.latest.revision: 11
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 5d5a2bd4683e70523275c8da191bc74cd4de28d6
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 1734bad595344741ee47503352b440a8db320912
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36140234"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37282695"
 ---
 # <a name="cache-refresh-options-report-manager"></a>Options d’actualisation du cache (Gestionnaire de rapports)
   La page Options d'actualisation du cache permet de créer des planifications pour précharger des copies temporaires des données d'un rapport ou d'un dataset partagé dans le cache. Un plan d'actualisation inclut une planification et la possibilité de spécifier ou de remplacer des valeurs pour les paramètres. Dans le cas d'un dataset partagé, vous ne pouvez pas remplacer les valeurs des paramètres marqués en lecture seule. Vous pouvez créer et utiliser plusieurs plans d'actualisation dans la page des options d'actualisation.  
@@ -71,10 +71,10 @@ ms.locfileid: "36140234"
   
  Pour plus d’informations, consultez [nouvelle planification : modifier la Page planification &#40;le Gestionnaire de rapports&#41;](../../2014/reporting-services/new-schedule-edit-schedule-page-report-manager.md).  
   
- **planification partagée**  
+ **Planification partagée**  
  Sélectionnez cette option pour sélectionner une planification existante.  
   
- Pour plus d’informations, consultez [créer, modifier et supprimer des planifications](subscriptions/create-modify-and-delete-schedules.md).  
+ Pour plus d’informations, consultez [créer, modifier et supprimer les planifications](subscriptions/create-modify-and-delete-schedules.md).  
   
  **@\<** *Paramètre* **>**  
  Spécifiez une combinaison de valeurs de paramètre. Cette section apparaît uniquement si le rapport ou le dataset actuel comporte des paramètres.  
@@ -106,14 +106,14 @@ ms.locfileid: "36140234"
   
  Si la définition du dataset partagé spécifie l'option **Omettre de la requête** pour un paramètre, il est inutile de fournir une valeur par défaut. Cet indicateur signale que le paramètre de dataset n'est pas utilisé dans la requête. Par exemple, le paramètre apparaît dans la définition du dataset partagé, car il s'agit d'un paramètre de rapport employé uniquement dans le filtre de dataset.  
   
- Pour afficher ou modifier les options des paramètres de dataset, vous devez modifier la définition du dataset partagé. Pour plus d’informations, consultez [gérer les Datasets partagés](report-data/manage-shared-datasets.md).  
+ Pour afficher ou modifier les options des paramètres de dataset, vous devez modifier la définition du dataset partagé. Pour plus d’informations, consultez [gérer des Datasets partagés](report-data/manage-shared-datasets.md).  
   
 ### <a name="report-parameters"></a>Paramètres de rapport  
  Dans le cas d'un rapport, chaque valeur de paramètre doit être valide pour que vous puissiez créer un plan d'actualisation du cache. Vous devez taper ou sélectionner une valeur par défaut pour chaque paramètre de rapport. La valeur que vous définissez remplace la valeur par défaut définie pour le paramètre de rapport sur le serveur de rapports.  
   
  Les paramètres doivent respecter les critères requis spécifiés dans les propriétés de paramètre sur le serveur de rapports. Par exemple, si la propriété AllowBlank a la valeur false pour un paramètre de rapport, une chaîne vide n’est pas une valeur valide.  
   
- Pour afficher ou modifier les options des paramètres de rapport, vous devez modifier les paramètres de rapport dans le rapport, ou indépendamment, sur le serveur de rapports. Pour plus d’informations, consultez [Concept des paramètres de rapport &#40;le Générateur de rapports et SSRS&#41;](report-design/report-parameters-concepts-report-builder-and-ssrs.md).  
+ Pour afficher ou modifier les options des paramètres de rapport, vous devez modifier les paramètres de rapport dans le rapport, ou indépendamment, sur le serveur de rapports. Pour plus d’informations, consultez [Concept des paramètres de rapport &#40;Générateur de rapports et SSRS&#41;](report-design/report-parameters-concepts-report-builder-and-ssrs.md).  
   
 ## <a name="conditions-that-cause-a-cache-refresh-plan-to-be-inactive"></a>Conditions provoquant l'inactivité d'un plan d'actualisation du cache  
  Le plan d'actualisation du cache d'un rapport ou d'un dataset partagé peut devenir inactif dans les conditions suivantes.  
@@ -134,7 +134,7 @@ ms.locfileid: "36140234"
 ## <a name="see-also"></a>Voir aussi  
  [Tâches au niveau élément](security/tasks-and-permissions-item-level-tasks.md)   
  [Le Gestionnaire de rapports &#40;SSRS en Mode natif&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
- [Aide (F1) de gestionnaire de rapports](../../2014/reporting-services/report-manager-f1-help.md)   
+ [F1 du Gestionnaire de rapports](../../2014/reporting-services/report-manager-f1-help.md)   
  [Mise en cache de rapports &#40;SSRS&#41;](report-server/caching-reports-ssrs.md)   
  [Gérer des datasets partagés](report-data/manage-shared-datasets.md)  
   

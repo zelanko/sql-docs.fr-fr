@@ -1,5 +1,5 @@
 ---
-title: Spécifier les relations entre les attributs dans une hiérarchie définie par l’utilisateur | Documents Microsoft
+title: Spécification de relations d’attributs entre attributs dans une hiérarchie définie par l’utilisateur | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 456c2a47-d395-45f9-9efa-89f3fa2ac621
 caps.latest.revision: 17
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: jhubbard
-ms.openlocfilehash: 0c17514fda839a155dbe2f58f1e6b8c653b65ee3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: cae7505f4ff135b9b1939dba39359feaed9458b0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36044389"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37204629"
 ---
 # <a name="specifying-attribute-relationships-between-attributes-in-a-user-defined-hierarchy"></a>Spécification des relations d’attribut dans une hiérarchie définie par l’utilisateur
   Comme vous l'avez déjà appris au cours de ce didacticiel, vous pouvez organiser les hiérarchies d'attributs en niveaux au sein des hiérarchies utilisateur pour mettre à disposition des utilisateurs d'un cube des chemins de navigation. Une hiérarchie utilisateur peut représenter une hiérarchie naturelle, telle que ville, état et pays, ou simplement un chemin de navigation tel que nom d'employé, titre et nom de division. Du point de vue de l'utilisateur qui navigue au sein d'une hiérarchie, ces deux types de hiérarchies utilisateur sont identiques.  

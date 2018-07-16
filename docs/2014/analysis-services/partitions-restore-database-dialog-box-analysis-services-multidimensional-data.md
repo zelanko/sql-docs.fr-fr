@@ -1,5 +1,5 @@
 ---
-title: Partitions (boîte de dialogue Restauration de base de données) (Analysis Services - données multidimensionnelles) | Documents Microsoft
+title: Partitions (boîte de dialogue Restauration de base de données) (Analysis Services - données multidimensionnelles) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.restoredbdialog.partitions.f1
 ms.assetid: 1ad4dde5-4651-4069-875c-7ab73cd8b4f4
 caps.latest.revision: 19
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 24e07fc2d8374af6f4bf0b6de5f73bc0df4a3bfe
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 7ca646ca62f0e91f026c2917325ca6c8c75b63d9
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36141420"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37269985"
 ---
 # <a name="partitions-restore-database-dialog-box-analysis-services---multidimensional-data"></a>Partitions (boîte de dialogue Restaurer la base de données) (Analysis Services - Données multidimensionnelles)
   Utilisez la page **Partitions** de la boîte de dialogue **Restaurer la base de données** dans [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] afin de spécifier l’emplacement de restauration des partitions locales et les fichiers de sauvegarde à distance à utiliser lors de la restauration des partitions distantes, et pour indiquer si les partitions distantes doivent, ou non, être restaurées.  

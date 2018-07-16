@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - entities [Master Data Services], about entities
 - entities [Master Data Services]
 ms.assetid: 0af057d5-6b73-472b-99eb-9f5eb61a9b5b
 caps.latest.revision: 7
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 1cc52b0264c547c6dd6fabe14cd82762193a5f2e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: 6f0888b95eb765313b2cf766b0f61c1d71f642b4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36053550"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37306039"
 ---
 # <a name="entities-master-data-services"></a>Entités (services de données de référence)
   Les entités sont des objets contenus dans des modèles [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] . Chaque entité contient des membres, qui correspondent aux lignes de données de référence que vous gérez.  

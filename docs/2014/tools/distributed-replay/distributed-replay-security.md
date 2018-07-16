@@ -1,5 +1,5 @@
 ---
-title: Distributed Replay Security | Documents Microsoft
+title: Distributed Replay Security | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 7e2e586d-947d-4fe2-86c5-f06200ebf139
 caps.latest.revision: 29
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 408d899379150e88684df38713f94765a0c0c7cc
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: b7c2c2a92ebbde62b20ba99539b31b4a3e40d267
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36052129"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37301279"
 ---
 # <a name="distributed-replay-security"></a>Sécurité Distributed Replay
   Avant d'installer et d'utiliser la fonctionnalité [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay, vous devez vérifier les informations de sécurité importantes de cette rubrique. Cette rubrique décrit les étapes de configuration de la sécurité consécutives à l'installation requises pour pouvoir utiliser Distributed Replay. Elle inclut également des considérations importantes en ce qui concerne la protection des données et les étapes de suppression importantes.  
@@ -51,7 +51,7 @@ ms.locfileid: "36052129"
   
 1.  Effectuez l'une des procédures suivantes, en fonction de votre système d'exploitation :  
   
-    -   Cliquez sur **Démarrer**, type `services.msc` dans les **recherche** zone, puis appuyez sur ENTRÉE.  
+    -   Cliquez sur **Démarrer**, type `services.msc` dans le **recherche** zone, puis appuyez sur ENTRÉE.  
   
     -   Cliquez sur **Démarrer**, cliquez sur **exécuter**, type `services.msc`, puis appuyez sur ENTRÉE.  
   
@@ -78,7 +78,7 @@ ms.locfileid: "36052129"
   
     1.  Sur l'ordinateur du contrôleur, cliquez sur **Démarrer**.  
   
-    2.  Type `dcomcnfg.exe` dans les **recherche** boîte.  
+    2.  Type `dcomcnfg.exe` dans le **recherche** boîte.  
   
     3.  Appuyez sur Entrée.  
   

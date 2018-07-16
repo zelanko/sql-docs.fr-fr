@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.maint.reindex.f1
 - reindex
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - Rebuild Index Task dialog box
 ms.assetid: 33e2940b-139f-4563-b0cb-5683f08bd879
 caps.latest.revision: 41
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: d12d547871d2602249d042ff6e93060f340e9b2a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: 603f79bcbbe2ec42b05de28b3685c71f6cca9c69
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36139578"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37268975"
 ---
 # <a name="rebuild-index-task-maintenance-plan"></a>Tâche Reconstruire l'index (Plan de maintenance)
   Utilisez la boîte de dialogue **Tâche Reconstruire l’index** pour recréer les index des tables de la base de données en définissant un nouveau facteur de remplissage. Le facteur de remplissage détermine la quantité d'espace disponible sur chaque page de l'index pour permettre l'extension ultérieure de l'index. Au fur et à mesure que des données sont ajoutées à la table, l'espace libre se remplit parce que le facteur de remplissage n'est pas conservé. Réorganiser les pages d'index et les données permet de recouvrer de l'espace libre.  
@@ -69,11 +69,11 @@ ms.locfileid: "36139578"
  **Réorganiser les pages avec la quantité d’espace libre par défaut**  
  Permet de supprimer les index sur les tables de la base de données et de les recréer avec le facteur de remplissage spécifié lors de la création des index.  
   
- **Modifier l’espace disponible par pourcentage de page à**  
+ **Modifier l’espace disponible par pourcentage de page de**  
  Provoque la suppression des index des tables de la base de données et leur recréation avec un nouveau facteur de remplissage calculé automatiquement, la quantité d'espace libre spécifiée étant réservée dans les pages d'index. Plus le pourcentage est élevé, plus il y a d'espace libre réservé dans les pages d'index et plus l'index croît. Les valeurs valides sont comprises entre 0 et 100.  
   
  **Trier les résultats dans tempdb**  
- Utilisez la `SORT_IN_TEMPDB`option, qui détermine où les résultats de tri intermédiaires, générés pendant la création d’index, sont stockés temporairement. Si aucune opération de tri n’est requise ou si le tri peut être effectué dans la mémoire, l’option `SORT_IN_TEMPDB`est ignorée.  
+ Utilisez la `SORT_IN_TEMPDB`option qui détermine où les résultats de tri intermédiaires générés pendant la création d’index, sont temporairement stockés. Si aucune opération de tri n’est requise ou si le tri peut être effectué dans la mémoire, l’option `SORT_IN_TEMPDB`est ignorée.  
   
  **Conserver l’index en ligne lors de la réindexation**  
  Utilisez l'option `ONLINE` qui permet aux utilisateurs d'accéder à la table sous-jacente ou aux données d'index cluster, ainsi qu'à tous les index non-cluster associés au cours des opérations d'index.  

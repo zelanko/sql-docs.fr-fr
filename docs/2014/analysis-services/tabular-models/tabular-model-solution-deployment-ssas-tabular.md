@@ -1,5 +1,5 @@
 ---
-title: Déploiement de solutions de modèle tabulaire (SSAS tabulaire) | Documents Microsoft
+title: Déploiement de solutions de modèle tabulaire (SSAS tabulaire) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: aff96558-e5e5-4b95-8ddf-ee0709c842fb
 caps.latest.revision: 21
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 89e240e5c3a877761f8b26e9a581f462af49f395
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 99b9e1594c4d4fbe07a6085544021b94820db640
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36043448"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37220039"
 ---
 # <a name="tabular-model-solution-deployment-ssas-tabular"></a>Déploiement d'une solution de modèle tabulaire (SSAS Tabulaire)
   Après la création d'un projet de modèle tabulaire, vous devez déployer ce dernier pour que les utilisateurs puissent parcourir le modèle à l'aide d'une application cliente de création de rapports. Cette rubrique décrit les différentes propriétés et méthodes que vous pouvez utiliser lors du déploiement de solutions de modèle tabulaire dans votre environnement.  
@@ -65,7 +65,7 @@ ms.locfileid: "36043448"
 |--------------|---------------------|-----------------|  
 |**Serveur**<br /><br /> Définie à la création du projet.|**localhost**|Cette propriété, définie à la création du projet, spécifie le nom de l'instance Analysis Services sur laquelle le modèle sera déployé. Par défaut, le modèle sera déployé dans l'instance par défaut d'Analysis Services sur l'ordinateur local. Toutefois, vous pouvez modifier ce paramètre pour spécifier une instance nommée sur l'ordinateur local ou n'importe quelle autre instance sur un ordinateur distant sur lequel vous avez l'autorisation de créer des objets Analysis Services.|  
 |**Édition**|La même édition de l'instance dans laquelle le serveur de l'espace de travail se trouve.|Cette propriété spécifie l'édition du serveur Analysis Services sur lequel le modèle sera déployé. L'édition du serveur définit différentes fonctionnalités qui peuvent être incorporées dans le projet. Par défaut, l'édition sera celle du serveur Analysis Services local. Si vous spécifiez un serveur Analysis Services différent, par exemple, un serveur Analysis Services de production, veillez à spécifier l'édition de ce serveur Analysis Services.|  
-|**Sauvegarde de la base de données**|**\<nom du projet >**|Cette propriété spécifie le nom de la base de données Analysis Services dans laquelle les objets de modèle seront instanciés après le déploiement. Ce nom sera également spécifié dans une connexion de données au client de création de rapports ou un fichier de connexion de données .bism.<br /><br /> Vous pouvez modifier ce nom à tout moment lorsque vous créez le modèle. Si vous modifiez le nom après avoir déployé le modèle, les modifications que vous avez apportées après le déploiement ne vont pas affecter le modèle que vous avez déployé précédemment. Par exemple, si vous ouvrez une solution nommée `TestDB` et déployer votre solution avec le nom de base de données de modèle par défaut le modèle, puis modifier la solution et renommer le modèle de base de données `Sales`, l’instance d’Analysis Services, les solutions ont été déployées. n’affichage séparer les bases de données, un modèle nommé et l’autre nommé Sales.|  
+|**Sauvegarde de la base de données**|**\<nom du projet >**|Cette propriété spécifie le nom de la base de données Analysis Services dans laquelle les objets de modèle seront instanciés après le déploiement. Ce nom sera également spécifié dans une connexion de données au client de création de rapports ou un fichier de connexion de données .bism.<br /><br /> Vous pouvez modifier ce nom à tout moment lorsque vous créez le modèle. Si vous modifiez le nom après avoir déployé le modèle, les modifications que vous avez apportées après le déploiement ne vont pas affecter le modèle que vous avez déployé précédemment. Par exemple, si vous ouvrez une solution nommée `TestDB` et déployer votre solution avec le nom de base de données de modèle par défaut le modèle, puis modifier la solution et renommé le modèle de base de données `Sales`, l’instance d’Analysis Services, les solutions ont été déployées. n’affichage séparer les bases de données, un modèle nommé et l’autre nommée Sales.|  
 |**Nom du cube**|**Modèle**|Cette propriété indique le nom du cube tel qu'il s'affiche dans les outils clients (notamment Excel) et les objets AMO (Analysis Management Objects).|  
   
 ### <a name="directquery-options-properties"></a>Propriétés Options DirectQuery  

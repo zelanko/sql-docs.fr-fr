@@ -1,27 +1,26 @@
 ---
-title: Options (SQL Server AlwaysOn, Page tableau de bord) | Documents Microsoft
+title: Options (SQL Server AlwaysOn, Page tableau de bord) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - VS.ToolsOptionsPages.Alwayson.Dashboard
 ms.assetid: 4369b588-e982-4b57-80a1-beb2e879ce0b
 caps.latest.revision: 6
-author: MikeRayMSFT
-ms.author: mikeray
-manager: jhubbard
-ms.openlocfilehash: 553f76520f9bb292d795fbbd5e13833391d6bdab
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: d7ab91fe3fac841c11a0e237a9ec44a4f1ad6911
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36139876"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37330509"
 ---
 # <a name="options-sql-server-alwayson-dashboard-page"></a>Options (SQL Server AlwaysOn, page Tableau de bord)
   Utilisez le **tableau de bord SQL Server AlwaysOn** page de la [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] **Options** boîte de dialogue pour configurer le tableau de bord AlwaysOn.  

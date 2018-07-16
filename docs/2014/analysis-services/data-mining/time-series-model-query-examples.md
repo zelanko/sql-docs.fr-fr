@@ -1,5 +1,5 @@
 ---
-title: Exemples de requêtes de modèle de série chronologique | Documents Microsoft
+title: Exemples de requêtes de modèle de série chronologique | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - time series algorithms [Analysis Services]
 - MISSING_VALUE_SUBSTITUTION
@@ -21,15 +21,15 @@ helpviewer_keywords:
 - content queries [DMX]
 ms.assetid: 9a1c527e-2997-493b-ad6a-aaa71260b018
 caps.latest.revision: 33
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 8b6c0f25f4d5694d678e51acc0ecb4ccbf98f8a3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 5ec5161fab123b9a0b251cfc570318f58fd57ad3
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36139945"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37319300"
 ---
 # <a name="time-series-model-query-examples"></a>Time Series Model Query Examples
   Lorsque vous créez une requête sur un modèle d'exploration de données, vous pouvez soit créer une requête de contenu, qui fournit des détails sur les modèles (ou séquences) découverts au cours de l'analyse, soit créer une requête de prédiction, qui utilise les séquences du modèle pour effectuer des prédictions pour les nouvelles données. Par exemple, une requête de contenu pour un modèle de série chronologique peut fournir des détails supplémentaires sur les structures périodiques détectées, tandis qu'une requête de prédiction peut vous donner des prédictions pour les 5 à 10 tranches de temps suivantes. Vous pouvez également extraire les métadonnées relatives au modèle en utilisant une requête.  
@@ -134,7 +134,7 @@ AND NODE_TYPE = 15
   
 -   Utilisez une `PREDICTION JOIN` pour joindre des données d'une source externe aux données d'apprentissage.  
   
--   Utilisez une requête singleton de prédiction pour fournir les données un secteur à la fois. Pour plus d’informations sur la création d’une requête de prédiction singleton, consultez [les Interfaces de requête d’exploration de données](data-mining-query-tools.md).  
+-   Utilisez une requête singleton de prédiction pour fournir les données un secteur à la fois. Pour plus d’informations sur la création d’une requête de prédiction singleton, consultez [Interfaces de requête d’exploration de données](data-mining-query-tools.md).  
   
 ###  <a name="bkmk_ReplaceExtend"></a> Pour comprendre le comportement des opérations de remplacement et d'extension  
  Lorsque vous ajoutez de nouvelles données à un modèle de série chronologique, vous pouvez spécifier s'il faut étendre ou remplacer les données d'apprentissage :  
@@ -160,7 +160,7 @@ AND NODE_TYPE = 15
   
  Par exemple, supposez que le modèle existant a des données pour six mois. Vous souhaitez étendre ce modèle en ajoutant les chiffres de vente des trois derniers mois. En même temps, vous souhaitez effectuer une prédiction concernant les trois prochains mois. Pour obtenir uniquement les nouvelles prédictions lorsque vous ajoutez les nouvelles données, spécifiez la tranche de temps 4 comme point de départ et la tranche de temps 7 comme point de terminaison. Vous pourriez également demander un total de six prédictions, mais les tranches de temps pour les trois premières prédictions et celles des nouvelles données ajoutées se chevaucheraient.  
   
- Pour plus d’informations sur la syntaxe d’utilisation et les exemples de requêtes `REPLACE_MODEL_CASES` et `EXTEND_MODEL_CASES`, consultez [PredictTimeSeries &#40;DMX&#41;](/sql/dmx/predicttimeseries-dmx).  
+ Pour plus d’informations sur la syntaxe d’utilisation d’exemples de requête et `REPLACE_MODEL_CASES` et `EXTEND_MODEL_CASES`, consultez [PredictTimeSeries &#40;DMX&#41;](/sql/dmx/predicttimeseries-dmx).  
   
 ###  <a name="bkmk_EXTEND"></a> Exécution de prédictions avec EXTEND_MODEL_CASES  
  Le comportement de prédiction diffère selon que vous étendez ou remplacez les cas de modèle. Lorsque vous étendez un modèle, les nouvelles données sont jointes à la fin de la série et la taille du jeu d'apprentissage augmente. Toutefois, les tranches de temps utilisées pour les requêtes de prédiction commencent toujours à la fin de la série d'origine. Par conséquent, si vous ajoutez trois nouveaux points de données et que vous demandez six prédictions, les trois premières prédictions retournées et les nouvelles données se chevauchent. Dans ce cas, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] retourne les nouveaux points de données réels au lieu d'effectuer une prédiction, jusqu'à ce que tous les nouveaux points de données soient utilisés. Ensuite, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] effectue des prédictions sur la base de la série composite.  
@@ -202,7 +202,7 @@ AND NODE_TYPE = 15
     > [!NOTE]  
     >  Avec REPLACE_MODEL_CASES, commençant à la valeur timestamp 1, vous obtenez de nouvelles prédictions basées sur les nouvelles données, lesquelles remplacent les anciennes données d'apprentissage.  
   
- Pour plus d’informations sur la syntaxe d’utilisation et les exemples de requêtes `REPLACE_MODEL_CASES` et `EXTEND_MODEL_CASES`, consultez [PredictTimeSeries &#40;DMX&#41;](/sql/dmx/predicttimeseries-dmx).  
+ Pour plus d’informations sur la syntaxe d’utilisation d’exemples de requête et `REPLACE_MODEL_CASES` et `EXTEND_MODEL_CASES`, consultez [PredictTimeSeries &#40;DMX&#41;](/sql/dmx/predicttimeseries-dmx).  
   
 ###  <a name="bkmk_MissingValues"></a> Substitution de valeurs manquantes dans les modèles de séries chronologiques  
  Lorsque vous ajoutez de nouvelles données à un modèle de série chronologique en utilisant une instruction `PREDICTION JOIN`, le nouveau dataset ne peut pas avoir de valeurs manquantes. Si une série est incomplète, le modèle doit fournir les valeurs manquantes en utilisant une valeur Null, une moyenne numérique, une moyenne numérique spécifique ou une valeur prédite. Si vous spécifiez `EXTEND_MODEL_CASES`, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] remplace les valeurs manquantes par des prédictions basées sur le modèle d'origine. Si vous utilisez `REPLACE_MODEL_CASES`, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] remplace les valeurs manquantes par la valeur que vous spécifiez dans le *MISSING_VALUE_SUBSTITUTION* paramètre.  
@@ -225,6 +225,6 @@ AND NODE_TYPE = 15
  [Requêtes d’exploration de données](data-mining-queries.md)   
  [Algorithme de série chronologique de Microsoft](microsoft-time-series-algorithm.md)   
  [Référence technique de Microsoft Time Series algorithme](microsoft-time-series-algorithm-technical-reference.md)   
- [Contenu pour les modèles de série chronologique du modèle d’exploration de données &#40;Analysis Services - Exploration de données&#41;](mining-model-content-for-time-series-models-analysis-services-data-mining.md)  
+ [Contenu du modèle pour les modèles de série chronologique d’exploration de données &#40;Analysis Services - Exploration de données&#41;](mining-model-content-for-time-series-models-analysis-services-data-mining.md)  
   
   

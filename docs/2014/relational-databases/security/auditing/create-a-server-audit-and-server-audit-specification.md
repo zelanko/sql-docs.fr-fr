@@ -5,10 +5,9 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-security
+ms.technology: security
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - SQL12.SWB.SQLAUDIT.FILTER.F1
 - sql12.swb.sqlaudit.srvaudit.general.f1
@@ -18,15 +17,15 @@ helpviewer_keywords:
 - audits [SQL Server], specification
 ms.assetid: 6624b1ab-7ec8-44ce-8292-397edf644394
 caps.latest.revision: 20
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 366904b4db0836df83daf49b30771f8c5b5c4b54
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: edmacauley
+ms.author: edmaca
+manager: craigg
+ms.openlocfilehash: e05a1d985e287b1ff9d0a767b293cbf29c67bbc3
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36053264"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37280795"
 ---
 # <a name="create-a-server-audit-and-server-audit-specification"></a>Créer un audit du serveur et une spécification d'audit du serveur
   Cette rubrique explique comment créer un audit de serveur et une spécification d'audit de serveur dans [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] à l'aide de [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] ou de [!INCLUDE[tsql](../../../includes/tsql-md.md)]. L'*audit* d'une instance de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ou d'une base de données [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] implique le suivi et l'enregistrement des événements qui se produisent sur le système. L’objet *Audit SQL Server* recueille une seule instance des actions et des groupes d’actions au niveau du serveur ou de la base de données à surveiller. L'audit s'effectue au niveau de l'instance [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Vous pouvez exécuter plusieurs audits par instance [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . L'objet *Spécification de l'audit du serveur* appartient à un audit. Vous pouvez créer une spécification d'audit de serveur par audit, car tous deux sont créés au niveau de la portée de l'instance [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Pour plus d’informations, consultez [SQL Server Audit &#40moteur de base de données&#41;](sql-server-audit-database-engine.md).  

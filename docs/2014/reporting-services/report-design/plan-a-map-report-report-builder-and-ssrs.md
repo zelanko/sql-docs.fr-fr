@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: dc0c27a4-7e31-4a15-a0bc-3a02479d5b02
 caps.latest.revision: 8
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 025d087a662fbf641d60e42314a7116df4632bb9
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: fd3b765bff38ea006a1dd1a60fe861373715ee80
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36042396"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37309419"
 ---
 # <a name="plan-a-map-report-report-builder-and-ssrs"></a>Planifier un rapport cartographique (Générateur de rapports et SSRS)
   Un rapport efficace présente des informations provoquant des actions ou stimulant des idées. Pour présenter des données analytiques, telles que les totaux des ventes ou des statistiques démographiques sur un arrière-plan géographique, vous pouvez ajouter une carte à votre rapport. Une carte peut contenir plusieurs couches, où chaque couche affiche des éléments cartographiques définis par un type spécifique de données spatiales : points qui représentent des emplacements, lignes qui représentent des itinéraires ou polygones qui représentent des zones. Vous pouvez associer vos données analytiques aux éléments cartographiques sur chaque couche.  
@@ -66,7 +66,7 @@ ms.locfileid: "36042396"
   
 -   cartes de rapports de la bibliothèque de cartes ;  
   
--   Sites tiers offrant des données spatiales en tant que fichiers de forme ESRI ou [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] les données spatiales.  
+-   Des sites tiers offrant des données spatiales en tant que fichiers de forme ESRI ou [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] données spatiales.  
   
 -   mosaïques Bing, qui fournissent un arrière-plan pour la vue cartographique. Pour afficher des mosaïques dans une carte, le serveur de rapports doit être configuré pour prendre en charge les Services Web Bing Maps.  
   
@@ -168,6 +168,6 @@ ms.locfileid: "36042396"
  [Personnaliser des données et l’affichage d’une carte ou d’une couche &#40;Générateur de rapports et SSRS&#41;](customize-the-data-and-display-of-a-map-or-map-layer-report-builder-and-ssrs.md)   
  [Didacticiel : rapport cartographique &#40;Générateur de rapports&#41;](../tutorial-map-report-report-builder.md)   
  [Cartes &#40;Générateur de rapports et SSRS&#41;](maps-report-builder-and-ssrs.md)   
- [Dépanner les rapports : Mapper des rapports &#40;rapport Générateur et SSRS&#41;](troubleshoot-reports-map-reports-report-builder-and-ssrs.md)  
+ [Dépanner les rapports : Mapper des rapports &#40;Générateur de rapports et SSRS&#41;](troubleshoot-reports-map-reports-report-builder-and-ssrs.md)  
   
   

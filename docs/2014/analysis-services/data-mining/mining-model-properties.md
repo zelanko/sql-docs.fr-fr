@@ -1,5 +1,5 @@
 ---
-title: Propriétés du modèle d’exploration de données | Documents Microsoft
+title: Propriétés du modèle d’exploration de données | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - mining models [Analysis Services], properties
 - data mining [Analysis Services], properties
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - properties [data mining]
 ms.assetid: c5194619-8b31-42be-a95f-585711462945
 caps.latest.revision: 31
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 4b0d00f10bd4ab4ac5f11b0af3e798c873cc5493
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 731ce6e077040767fd5f1bd4eec05242977097a8
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36141437"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37330899"
 ---
 # <a name="mining-model-properties"></a>Propriétés du modèle d'exploration de données
   Les modèles d'exploration de données ont les types de propriétés suivantes :  
@@ -65,7 +65,7 @@ ms.locfileid: "36141437"
 ## <a name="see-also"></a>Voir aussi  
  [Colonnes du modèle d’exploration de données](mining-model-columns.md)   
  [Structures d’exploration de données &#40;Analysis Services - Exploration de données&#41;](mining-structures-analysis-services-data-mining.md)   
- [Tâches liées aux modèles d’exploration de données et procédures](mining-model-tasks-and-how-tos.md)   
+ [Tâches du modèle d’exploration de données et procédures](mining-model-tasks-and-how-tos.md)   
  [Modifier les propriétés d’un modèle d’exploration de données](change-the-properties-of-a-mining-model.md)   
  [Outils d’exploration de données](data-mining-tools.md)   
  [Créer une Structure d’exploration de données relationnelles](create-a-relational-mining-structure.md)   

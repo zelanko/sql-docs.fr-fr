@@ -5,10 +5,9 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-security
+ms.technology: security
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - audit
 helpviewer_keywords:
@@ -16,15 +15,15 @@ helpviewer_keywords:
 - audits [SQL Server], SQL Server Audit
 ms.assetid: 0c1fca2e-f22b-4fe8-806f-c87806664f00
 caps.latest.revision: 55
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 7b56892d08db64ee49dd31eeb46359d523d1fca2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: edmacauley
+ms.author: edmaca
+manager: craigg
+ms.openlocfilehash: d684a808a2bb6c8c9aa23c6dce969acb933c44db
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36052171"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37238779"
 ---
 # <a name="sql-server-audit-database-engine"></a>SQL Server Audit (moteur de base de données)
   L'*audit* d'une instance de [!INCLUDE[ssDEnoversion](../../../includes/ssdenoversion-md.md)] ou d'une base de données individuelle implique le suivi et la journalisation des événements qui se produisent sur le [!INCLUDE[ssDE](../../../includes/ssde-md.md)]. L'audit[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] vous permet de créer des audits de serveur, qui peuvent contenir des spécifications d'audit de serveur pour les événements de niveau serveur, ainsi que des spécifications d'audit de base de données pour les événements de niveau base de données. Les événements audités peuvent être écrits dans des journaux d'événements ou des fichiers d'audit.  
@@ -65,7 +64,7 @@ ms.locfileid: "36052171"
 > [!IMPORTANT]  
 >  Tout utilisateur authentifié peut lire et écrire dans le journal des événements d'applications de Windows. Celui-ci requiert des autorisations inférieures au journal des événements de sécurité de Windows et il est moins sécurisé.  
   
- L'écriture dans le journal de sécurité de Windows requiert l'ajout du compte de service [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] à la stratégie **Générer des audits de sécurité** . Par défaut, les comptes Système Local, Service local et Service réseau font partie de cette stratégie. Ce paramètre peut être configuré à l'aide du composant logiciel enfichable de stratégie de sécurité (secpol.msc). En outre, la stratégie de sécurité **Auditer l'accès aux objets** doit être activée pour **Succès** et **Échec**. Ce paramètre peut être configuré à l'aide du composant logiciel enfichable de stratégie de sécurité (secpol.msc). Dans [!INCLUDE[wiprlhext](../../../includes/wiprlhext-md.md)] ou Windows Server 2008, vous pouvez définir le plus granulaire **généré par une application** stratégie à partir de la ligne de commande à l’aide du programme de stratégie d’audit (`AuditPol.exe)`. Pour plus d’informations sur les étapes permettant d’activer l’écriture dans le journal de sécurité de Windows, consultez [Écrire des événements d’audit SQL Server dans le journal de sécurité](write-sql-server-audit-events-to-the-security-log.md). Pour en savoir plus sur le programme Auditpol.exe, consultez l’article 921469 de la Base de connaissances : [Comment faire pour utiliser la stratégie de groupe pour configurer des paramètres d'audit de sécurité détaillés](http://support.microsoft.com/kb/921469/). Les journaux des événements de Windows sont communs à l'ensemble du système d'exploitation Windows. Pour plus d'informations sur les journaux des événements de Windows, consultez [Vue d'ensemble de l'observateur d'événements](http://go.microsoft.com/fwlink/?LinkId=101455). Si vous avez besoin d'autorisations plus précises sur l'audit, utilisez la cible de fichier binaire.  
+ L'écriture dans le journal de sécurité de Windows requiert l'ajout du compte de service [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] à la stratégie **Générer des audits de sécurité** . Par défaut, les comptes Système Local, Service local et Service réseau font partie de cette stratégie. Ce paramètre peut être configuré à l'aide du composant logiciel enfichable de stratégie de sécurité (secpol.msc). En outre, la stratégie de sécurité **Auditer l'accès aux objets** doit être activée pour **Succès** et **Échec**. Ce paramètre peut être configuré à l'aide du composant logiciel enfichable de stratégie de sécurité (secpol.msc). Dans [!INCLUDE[wiprlhext](../../../includes/wiprlhext-md.md)] ou Windows Server 2008, vous pouvez définir plus précise **application générée** stratégie à partir de la ligne de commande à l’aide du programme de stratégie d’audit (`AuditPol.exe)`. Pour plus d’informations sur les étapes permettant d’activer l’écriture dans le journal de sécurité de Windows, consultez [Écrire des événements d’audit SQL Server dans le journal de sécurité](write-sql-server-audit-events-to-the-security-log.md). Pour en savoir plus sur le programme Auditpol.exe, consultez l’article 921469 de la Base de connaissances : [Comment faire pour utiliser la stratégie de groupe pour configurer des paramètres d'audit de sécurité détaillés](http://support.microsoft.com/kb/921469/). Les journaux des événements de Windows sont communs à l'ensemble du système d'exploitation Windows. Pour plus d'informations sur les journaux des événements de Windows, consultez [Vue d'ensemble de l'observateur d'événements](http://go.microsoft.com/fwlink/?LinkId=101455). Si vous avez besoin d'autorisations plus précises sur l'audit, utilisez la cible de fichier binaire.  
   
  Lorsque vous enregistrez des informations d'audit dans un fichier, pour éviter toute falsification, vous pouvez limiter l'accès à l'emplacement du fichier des façons suivantes :  
   

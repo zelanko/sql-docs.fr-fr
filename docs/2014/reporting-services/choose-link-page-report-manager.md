@@ -1,5 +1,5 @@
 ---
-title: Page Choisir un lien (Gestionnaire de rapports) | Documents Microsoft
+title: Page Choisir un lien (Gestionnaire de rapports) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: a89a555d-efa3-45d6-951e-db78ec6a2c8e
 caps.latest.revision: 22
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: ec09219d146affcceda8194c8e7a60d8e128ef12
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: a6ae425405db24ca56f00dff7952ee0e7b4d1623
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36039242"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37242279"
 ---
 # <a name="choose-link-page-report-manager"></a>Page Choisir un lien (Gestionnaire de rapports)
   La page Choisir un lien vous permet de choisir un autre rapport sur lequel baser le rapport lié qui est actuellement sélectionné. Les rapports liés sont basés sur d'autres rapports qui sont déjà publiés sur le serveur de rapports. Un rapport lié utilise la mise en page et les données du rapport de base, mais a des pages de propriétés séparées afin que vous puissiez personnaliser les propriétés de paramètres, les paramètres de sécurité, le nom, la description et l'emplacement.  
@@ -49,6 +49,6 @@ ms.locfileid: "36039242"
 ## <a name="see-also"></a>Voir aussi  
  [Page Propriétés générales, Rapports &#40;Gestionnaire de rapports&#41;](../../2014/reporting-services/general-properties-page-reports-report-manager.md)   
  [Page Nouveau rapport lié &#40;Gestionnaire de rapports&#41;](../../2014/reporting-services/new-linked-report-page-report-manager.md)   
- [Aide (F1) de gestionnaire de rapports](../../2014/reporting-services/report-manager-f1-help.md)  
+ [Aide (F1) du Gestionnaire de rapports](../../2014/reporting-services/report-manager-f1-help.md)  
   
   

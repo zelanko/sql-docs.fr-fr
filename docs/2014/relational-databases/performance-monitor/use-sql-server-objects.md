@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - server performance [SQL Server], objects for monitoring
 - database monitoring [SQL Server], objects for monitoring
@@ -31,15 +31,15 @@ helpviewer_keywords:
 - performance counters [SQL Server], listed
 ms.assetid: bcd731b1-3c4e-4086-b58a-af7a3af904ad
 caps.latest.revision: 47
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 14bcf7edf62b499c5a50beb73ea8526c67807dc3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 70a0ca894fa0a3f5e0854e71766c9968e3e0005a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36141577"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37276930"
 ---
 # <a name="use-sql-server-objects"></a>Utiliser des objets SQL Server
   Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fournit des objets et des compteurs qui peuvent être utilisés par le Moniteur système pour surveiller l'activité des ordinateurs exécutant une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Un objet peut être n'importe quelle ressource [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , telle qu'un verrou [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou un processus Windows. Chaque objet contient un ou plusieurs compteurs qui déterminent divers aspects de l'objet à surveiller. Par exemple, l’objet **SQL Server Locks** contient des compteurs appelés **Nombre d’interblocages/s** et **Dépassement du délai d’attente des verrous/s**.  

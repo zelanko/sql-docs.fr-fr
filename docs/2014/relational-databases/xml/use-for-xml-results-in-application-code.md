@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-xml
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - FOR XML clause, application code usage
 - XML [SQL Server], FOR XML clause
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - data islands [SQL Server]
 ms.assetid: 41ae67bd-ece9-49ea-8062-c8d658ab4154
 caps.latest.revision: 23
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 73ca2ee9220b73e329ab829f3533274416b1855b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: a8cb0fb56cd1715331c5c3f0e09c4319e0b82335
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36053252"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37254111"
 ---
 # <a name="use-for-xml-results-in-application-code"></a>Utiliser des résultats FOR XML dans le code de l'application
   En utilisant des clauses FOR XML avec des requêtes SQL, vous pouvez récupérer et même convertir les résultats de la requête en données XML. Dès lors que les résultats d'une requête FOR XML peuvent être utilisés dans le code de l'application XML, vous pouvez notamment effectuer les opérations suivantes :  
@@ -39,9 +39,9 @@ ms.locfileid: "36053252"
  Cette rubrique donne des exemples expliquant ces approches.  
   
 ## <a name="retrieving-for-xml-data-with-ado-and-xml-data-islands"></a>Récupération des données FOR XML avec des îlots de données ADO et XML  
- ADO `Stream` objet ou autres objets qui prennent en charge le modèle COM `IStream` interface, telles que les Pages ASP (Active Server) `Request` et `Response` objets, peuvent être utilisés pour contenir les résultats lorsque vous travaillez avec des requêtes FOR XML.  
+ ADO `Stream` ou les autres objets qui prennent en charge le modèle COM `IStream` interface, le Active Server Pages (ASP) `Request` et `Response` objets, peuvent être utilisés pour contenir les résultats lorsque vous travaillez avec des requêtes FOR XML.  
   
- Par exemple, le code ASP suivant montre les résultats d’une `xml` colonne type de données, données démographiques, dans la table Sales.Store de la base de données AdventureWorks. La requête recherche plus particulièrement la valeur d'instance de cette colonne pour la ligne où CustomerID est égal à 3.  
+ Par exemple, le code ASP suivant montre les résultats d’une `xml` colonne de type des données démographiques, dans la table Sales.Store de la base de données AdventureWorks. La requête recherche plus particulièrement la valeur d'instance de cette colonne pour la ligne où CustomerID est égal à 3.  
   
 ```  
 <!-- BeginRecordAndStreamVBS -->  
@@ -205,13 +205,13 @@ ms.locfileid: "36053252"
   
  Dans cet exemple, les API gérées Microsoft .NET Framework sont chargées de renvoyer et de rendre les résultats de la requête FOR XML :  
   
-1.  `SqlConnection` Permet d’ouvrir une connexion à SQL Server, en fonction du contenu d’une variable de chaîne de connexion spécifiée strConn.  
+1.  `SqlConnection` est utilisé pour ouvrir une connexion à SQL Server, en fonction du contenu d’une variable de chaîne de connexion spécifiée strConn.  
   
 2.  `SqlDataAdapter` est ensuite utilisé en tant qu'adaptateur de données et utilise la connexion SQL et une chaîne de requête SQL spécifiée pour exécuter la requête FOR XML.  
   
-3.  Une fois la requête exécutée, la `SqlDataAdapter.Fill` méthode est appelée et reçoit une instance d’un `DataSet,` MyDataSet, afin de remplir le jeu de données avec la sortie de la requête FOR XML.  
+3.  Après l’exécution de la requête, le `SqlDataAdapter.Fill` méthode est appelée et reçoit une instance d’un `DataSet,` MyDataSet, afin de remplir le jeu de données avec la sortie de la requête FOR XML.  
   
-4.  Le `DataSet.GetXml` méthode est alors appelée pour renvoyer les résultats sous forme de chaîne qui peut être affiché dans la page HTML généré par le serveur.  
+4.  Le `DataSet.GetXml` méthode est ensuite appelée pour retourner les résultats de requête sous forme de chaîne qui peut être affiché dans la page HTML généré par le serveur.  
   
     ```  
     <%@ Page Language="VB" %>  
@@ -294,7 +294,7 @@ SqlConnection closed.
 ```  
   
 > [!NOTE]  
->  Le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `xml` prise en charge vous permet de demander que le résultat d’une requête FOR XML soit renvoyé en tant que type de données `xml` type de données, au lieu d’en tant que chaîne ou image de données de type en spécifiant le [directive TYPE](type-directive-in-for-xml-queries.md). L’emploi d’une directive TYPE dans les requêtes FOR XML donne automatiquement accès à des résultats FOR XML très similaires à ceux qui sont présentés dans [Utiliser des données XML dans les applications](use-xml-data-in-applications.md).  
+>  Le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `xml` prise en charge vous permet de demander que le résultat d’une requête FOR XML soit renvoyé en tant que type de données `xml` type de données, au lieu d’en tant que chaîne ou image de données, typées en spécifiant le [directive TYPE](type-directive-in-for-xml-queries.md). L’emploi d’une directive TYPE dans les requêtes FOR XML donne automatiquement accès à des résultats FOR XML très similaires à ceux qui sont présentés dans [Utiliser des données XML dans les applications](use-xml-data-in-applications.md).  
   
 ## <a name="see-also"></a>Voir aussi  
  [FOR XML &#40;SQL Server&#41;](for-xml-sql-server.md)  

@@ -1,5 +1,5 @@
 ---
-title: Élément SkippedLevelsColumn (ASSL) | Documents Microsoft
+title: Élément SkippedLevelsColumn (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - SkippedLevelsColumn element
 ms.assetid: 6b00a288-99c1-4735-9e6b-cd13ed4fa346
 caps.latest.revision: 35
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 3ae469982f39e1274759eaaea992fe456330d8fb
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: c04dea8c63d71483de9a8194a15bc4e4d7be5b88
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36043456"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37196029"
 ---
 # <a name="skippedlevelscolumn-element-assl"></a>Élément SkippedLevelsColumn (ASSL)
     
@@ -66,15 +66,15 @@ ms.locfileid: "36043456"
 |Éléments enfants|None|  
   
 ## <a name="remarks"></a>Notes  
- Le `SkippedLevelsColumn` élément s’applique uniquement aux attributs parents (en d’autres termes, la valeur de la [utilisation](../properties/usage-element-dimensionattribute-assl.md) , élément pour le `DimensionAttribute` parent est défini sur *Parent*). L'élément `SkippedLevelsColumn` contient la colonne ou l'attribut de l'attribut parent qui stocke le nombre de niveaux omis entre chaque membre et son membre parent. Ceci permet aux hiérarchies de type parent-enfant basées sur l'attribut parent d'omettre des niveaux entre des membres. Les valeurs contenues dans cette colonne ou cet attribut doit être des entiers non négatifs ; autrement, une erreur de traitement se produit. Si l'élément `SkippedLevelsColumn` n'est pas spécifié ou ne contient aucune valeur, le membre actuel se trouve à une profondeur inférieure d'un niveau à celle de son membre parent.  
+ Le `SkippedLevelsColumn` élément s’applique uniquement aux attributs parents (en d’autres termes, la valeur de la [utilisation](../properties/usage-element-dimensionattribute-assl.md) élément pour le `DimensionAttribute` parent a la valeur *Parent*). L'élément `SkippedLevelsColumn` contient la colonne ou l'attribut de l'attribut parent qui stocke le nombre de niveaux omis entre chaque membre et son membre parent. Ceci permet aux hiérarchies de type parent-enfant basées sur l'attribut parent d'omettre des niveaux entre des membres. Les valeurs contenues dans cette colonne ou cet attribut doit être des entiers non négatifs ; autrement, une erreur de traitement se produit. Si l'élément `SkippedLevelsColumn` n'est pas spécifié ou ne contient aucune valeur, le membre actuel se trouve à une profondeur inférieure d'un niveau à celle de son membre parent.  
   
- Pour plus d’informations sur la `DataItem` type, y compris un tableau d’objets d’Analysis Services Scripting Language (ASSL) et les propriétés de la `DataItem` de table, consultez [Type de données DataItem &#40;ASSL&#41;](../data-type/dataitem-data-type-assl.md).  
+ Pour plus d’informations sur la `DataItem` type, notamment un tableau des objets d’Analysis Services Scripting Language (ASSL) et les propriétés de la `DataItem` table, consultez [Type de données DataItem &#40;ASSL&#41;](../data-type/dataitem-data-type-assl.md).  
   
- L’élément qui correspond au parent de `SkippedLevelsColumn` dans l’objet d’objets AMO (Analysis Management) est modèle <xref:Microsoft.AnalysisServices.DimensionAttribute>.  
+ L’élément qui correspond au parent de `SkippedLevelsColumn` dans l’objet d’objets AMO (Analysis Management) modèle est <xref:Microsoft.AnalysisServices.DimensionAttribute>.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Attributs d’élément &#40;ASSL&#41;](../collections/attributes-element-assl.md)   
- [Élément de dimension &#40;ASSL&#41;](dimension-element-assl.md)   
+ [Dimension élément &#40;ASSL&#41;](dimension-element-assl.md)   
  [Objets &#40;ASSL&#41;](objects-assl.md)  
   
   

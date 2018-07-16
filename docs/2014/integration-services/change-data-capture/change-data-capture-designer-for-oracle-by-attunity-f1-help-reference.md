@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - f1Help
 ms.assetid: aa2ec095-6a32-44a8-9069-41759d087162
 caps.latest.revision: 6
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: c2c05e9628b2c6bd576f3fbbce341b393a5c0a72
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 6132dc4ab91d370888b8628ff69969e92e83ab06
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36053130"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37246908"
 ---
 # <a name="change-data-capture-designer-for-oracle-by-attunity-f1-help-reference"></a>Aide sur le concepteur de capture de données modifiées pour Oracle par Attunity via la touche F1
   Le concepteur de capture de données modifiées pour Oracle par Attunity permet de créer et gérer une instance Oracle CDC. Les rubriques de cette section expliquent comment effectuer les tâches disponibles dans la console du concepteur CDC.  

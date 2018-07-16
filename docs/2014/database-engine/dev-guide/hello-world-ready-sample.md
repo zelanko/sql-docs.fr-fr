@@ -1,5 +1,5 @@
 ---
-title: Exemple helloworldready | Documents Microsoft
+title: Exemple Helloworldready | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -12,20 +12,20 @@ ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: 1cb94266-f702-4a57-a1ae-689a89c98757
 caps.latest.revision: 11
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: e4fed72859ff91a9a0056529893c7f5664fe6254
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 7d94ed99238f6e4a38b92059ad7cd5571abd47e4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36043210"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37235599"
 ---
 # <a name="hello-world-ready-sample"></a>Exemple HelloWorldReady
   L'exemple HelloWorldReady présente les opérations de base à effectuer pour créer, déployer et tester une procédure stockée simple basée sur l'intégration du CLR (Common Language Runtime) et adaptée pour un usage international. Un composant est dit adapté pour un usage international lorsqu'il est possible de le localiser facilement, sans changer son code source, en différentes langues pour divers marchés dans le monde entier. Cet exemple montre également comment retourner des données via un paramètre de sortie et via un enregistrement, qui est construit de manière dynamique par la procédure stockée et est retourné au client. Cet exemple est presque identique à l'exemple Hello World, mais il est beaucoup plus facile et sécurisé de localiser cette application. La modification du texte localisé nécessite les opérations suivantes :  
   
-1.  Modification d’un fichier XML (le fichier.`resx` fichier) pour la culture spécifique dans le répertoire des ressources  
+1.  Modification d’un fichier XML (le fichier.`resx` fichier) pour la culture particulière dans le répertoire des ressources  
   
 2.  Génération du fichier des ressources de la culture à l'aide de l'utilitaire `resgen`.  
   
@@ -65,7 +65,7 @@ ms.locfileid: "36043210"
      `GO`  
   
     > [!NOTE]  
-    >  Pour activer le CLR, vous devez disposer `ALTER SETTINGS` autorisation de niveau serveur, qui est implicitement détenue par les membres de la `sysadmin` et `serveradmin` rôles serveur fixes.  
+    >  Pour activer le CLR, vous devez avoir `ALTER SETTINGS` autorisation de niveau serveur, qui est implicitement détenue par les membres de la `sysadmin` et `serveradmin` rôles serveur fixes.  
   
 -   La base de données AdventureWorks doit être installée sur l'instance [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que vous utilisez.  
   

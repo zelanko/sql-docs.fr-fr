@@ -1,5 +1,5 @@
 ---
-title: Définition des propriétés d’attribut Parent dans une hiérarchie Parent-enfant | Documents Microsoft
+title: Définition des propriétés d’attribut Parent dans une hiérarchie Parent-enfant | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,23 +8,23 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 2d78fa73-a13b-4e12-bbd0-43e5307f760c
 caps.latest.revision: 15
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: jhubbard
-ms.openlocfilehash: a167d70ba2041a3b40da242e51b6fb99aa14e900
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 34e32c84044b1ba709ef893949ef83a612d7e4df
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36053414"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37328579"
 ---
 # <a name="defining-parent-attribute-properties-in-a-parent-child-hierarchy"></a>Définition des propriétés d'attribut parent dans une hiérarchie parent-enfant
   Une hiérarchie parent-enfant est une hiérarchie dans une dimension fondée sur deux colonnes de table. Ensemble, ces colonnes définissent les relations hiérarchiques entre les membres de la dimension. La première colonne, appelée *colonne des clés de membre*, identifie chaque membre de dimension. L’autre colonne, appelée *colonne parente*, identifie le parent de chaque membre de dimension. La propriété **NamingTemplate** d’un attribut parent détermine le nom de chaque niveau de la hiérarchie parent-enfant et la propriété **MembersWithData** détermine si les données des membres parents doivent être affichées ou non.  
   
- Pour plus d’informations, consultez [hiérarchie Parent-enfant](multidimensional-models/parent-child-dimension.md), [attributs dans des hiérarchies Parent-enfant](multidimensional-models/parent-child-dimension-attributes.md)  
+ Pour plus d’informations, consultez [hiérarchie Parent-enfant](multidimensional-models/parent-child-dimension.md), [attributs dans les hiérarchies Parent-enfant](multidimensional-models/parent-child-dimension-attributes.md)  
   
 > [!NOTE]  
 >  Lorsque vous utilisez l'Assistant Dimension pour créer une dimension, l'Assistant reconnaît les tables qui contiennent des relations parent-enfant et définit automatiquement la hiérarchie parent-enfant.  
@@ -105,13 +105,13 @@ ms.locfileid: "36053414"
   
      L'illustration suivante montre les modifications apportées à la hiérarchie Employees. Notez que Stephen Y. Jiang n’apparaît plus comme employé de lui-même.  
   
-     ![Modification de la hiérarchie Employees](../../2014/tutorials/media/l4-employee-2.png "hiérarchie Employees de modification")  
+     ![Modification de la hiérarchie Employees](../../2014/tutorials/media/l4-employee-2.png "hiérarchie Employees modifiée")  
   
 ## <a name="next-task-in-lesson"></a>Tâche suivante de la leçon  
  [Regroupement automatique des membres d'attribut](../analysis-services/lesson-4-3-automatically-grouping-attribute-members.md)  
   
 ## <a name="see-also"></a>Voir aussi  
  [Hiérarchie parent-enfant](multidimensional-models/parent-child-dimension.md)   
- [Attributs dans les hiérarchies Parent-enfant](multidimensional-models/parent-child-dimension-attributes.md)  
+ [Attributs dans des hiérarchies de type parent-enfant](multidimensional-models/parent-child-dimension-attributes.md)  
   
   

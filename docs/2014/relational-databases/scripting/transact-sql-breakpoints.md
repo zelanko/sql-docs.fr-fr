@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Transact-SQL debugger, breakpoints
 ms.assetid: c234430f-bd94-4d0d-9e74-2bf11681fa50
 caps.latest.revision: 9
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 143c4ca4cab26ecca639fa115c71bb81366f8af8
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: dda48465dd65350c0326a07d3ee3696b90118619
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36140712"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37280675"
 ---
 # <a name="transact-sql-breakpoints"></a>Points d'arrêt Transact-SQL
   Les points d'arrêt spécifient que le débogueur [!INCLUDE[tsql](../../includes/tsql-md.md)] suspend l'exécution à une instruction [!INCLUDE[tsql](../../includes/tsql-md.md)] spécifique ; vous pouvez ensuite consulter l'état des éléments de code à ce point.  

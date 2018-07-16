@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.serverproperties.memory.f1
 ms.assetid: 46a77d4e-ab92-49d3-a14b-423462e50715
 caps.latest.revision: 43
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: a2468e4cfdbbb9a123ac552c301929b9040176d8
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 86b1356a28f817f96cdd597d748909799c6cce2d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36045020"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37247039"
 ---
 # <a name="server-properties-memory-page"></a>Propriétés du serveur (page Mémoire)
   Cette page vous permet d'afficher et de modifier les options de mémoire de votre serveur. Lorsque **Mémoire minimale du serveur (en Mo)** a la valeur 0 et que **Mémoire maximale du serveur** a la valeur 2 147 483 647 Mo, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] peut bénéficier d'un volume optimal de mémoire à tout moment, selon la quantité de mémoire que le système d'exploitation et les autres applications utilisent simultanément. La mémoire est allouée au fur et à mesure des modifications de la charge de l'ordinateur et de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Vous pouvez également limiter l'allocation de cette mémoire dynamique aux valeurs minimale et maximale spécifiées ci-dessous.  

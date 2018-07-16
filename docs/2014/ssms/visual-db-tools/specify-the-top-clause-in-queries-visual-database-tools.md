@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - TOP clause, queries
 - percentage of rows returned [SQL Server]
@@ -21,15 +21,15 @@ helpviewer_keywords:
 - search criteria [SQL Server], TOP clause
 ms.assetid: ba7d7c10-9bb3-4d9b-90b0-5fa94ecae59b
 caps.latest.revision: 11
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: ede0b26356fcc77fea049fcb074c58696095904f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 1726f0c0ba83e689a0f09dc9e6f64d4175302b36
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36142167"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37326999"
 ---
 # <a name="specify-the-top-clause-in-queries-visual-database-tools"></a>Spécifier la clause TOP dans des requêtes (Visual Database Tools)
   La clause TOP retourne uniquement les *n premières* lignes ou *n premiers pourcents* des lignes d’une requête. La clause TOP peut être utile si vous souhaitez inspecter une partie de vos résultats afin de déterminer si votre requête se comporte de la manière escomptée, sans devoir utiliser les ressources nécessaires pour retourner tous les résultats de la requête.  
@@ -56,7 +56,7 @@ ms.locfileid: "36142167"
 >  Vous pouvez également modifier les valeurs des propriétés enfants de la propriété **Spécification Top** en modifiant la clause TOP dans le volet SQL.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Rubriques de procédures de requêtes et les vues de conception &#40;Visual Database Tools&#41;](visual-database-tools.md)   
+ [Concevoir des requêtes et des vues des rubriques de procédures &#40;Visual Database Tools&#41;](visual-database-tools.md)   
  [Propriétés de la requête &#40;Visual Database Tools&#41;](query-properties-visual-database-tools.md)  
   
   

@@ -1,27 +1,26 @@
 ---
-title: Propriétés du groupe de disponibilité et le nouveau groupe de disponibilité (Page Général) | Documents Microsoft
+title: Propriétés du groupe de disponibilité et nouveau groupe de disponibilité (Page Général) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.availabilitygroupproperties.general.f1
 ms.assetid: 9af5379f-91b8-4729-9f75-4a80242a30e9
 caps.latest.revision: 14
-author: rothja
-ms.author: jroth
-manager: jhubbard
-ms.openlocfilehash: d47dc448cb0662d3324eaaa61d257a10caa69e74
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: cb98cf3bdc1a0e4f021a5b82116dba1f390b0fd4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36139506"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37283995"
 ---
 # <a name="availability-group-properties-and-new-availability-group-general-page"></a>Propriétés du groupe de disponibilité et Nouveau groupe de disponibilité (page Général)
   Cette rubrique s’applique à l’onglet **Général** de la boîte de dialogue **Nouveau groupe de disponibilité** et de la boîte de dialogue **Propriétés du groupe de disponibilité**.  La boîte de dialogue **Nouveau groupe de disponibilité** vous permet de créer un nouveau groupe de disponibilité sans utiliser l’ [!INCLUDE[ssAoNewAgWiz](../../../includes/ssaonewagwiz-md.md)]. La boîte de dialogue **Propriétés du groupe de disponibilité** vous permet d’afficher et de modifier la configuration d’un groupe de disponibilité existant.  

@@ -1,5 +1,5 @@
 ---
-title: Ajouter des données à un rapport (Générateur de rapports et SSRS) | Documents Microsoft
+title: Ajouter des données à un rapport (Générateur de rapports et SSRS) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: f2e42303-e355-4c1f-bb3b-3338fbdd230d
 caps.latest.revision: 8
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: aeae106d4ab76cb6ab04248126b4b32e1e4a160a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: 2b65b1ae16a7df30d161c7f45c594678264de0a3
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36139531"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37284745"
 ---
 # <a name="add-data-to-a-report-report-builder-and-ssrs"></a>Ajouter des données à un rapport (Générateur de rapports et SSRS)
   Pour ajouter des données à un rapport, vous devez créer des datasets. Chaque dataset représente le jeu de résultats émanant de l'exécution d'une commande de requête sur une source de données. Les colonnes du jeu de résultats représentent la collection de champs. Les lignes du jeu de résultats constituent les données. Un dataset ne contient pas les données proprement dites. Il contient les informations nécessaires à la récupération d'un jeu de données spécifique à partir d'une source de données.  
@@ -69,7 +69,7 @@ ms.locfileid: "36139531"
   
 -   [Tables, matrices et listes &#40;Générateur de rapports et SSRS&#41;](../report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)  
   
--   [Graphiques &#40;rapport Générateur et SSRS&#41;](../report-design/charts-report-builder-and-ssrs.md)  
+-   [Graphiques &#40;Générateur de rapports et SSRS&#41;](../report-design/charts-report-builder-and-ssrs.md)  
   
 -   [Graphiques sparkline et barres de données &#40;Générateur de rapports et SSRS&#41;](../report-design/sparklines-and-data-bars-report-builder-and-ssrs.md)  
   
@@ -77,9 +77,9 @@ ms.locfileid: "36139531"
   
 -   [Paramètres de rapport &#40;Générateur de rapports et Concepteur de rapports&#41;](../report-design/report-parameters-report-builder-and-report-designer.md)  
   
--   [Parties de rapport &#40;rapport Générateur et SSRS&#41;](../report-parts-report-builder-and-ssrs.md)  
+-   [Parties de rapport &#40;Générateur de rapports et SSRS&#41;](../report-parts-report-builder-and-ssrs.md)  
   
--   [Filtrer, regrouper et trier les données &#40;rapport Générateur et SSRS&#41;](../report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)  
+-   [Filtrer, regrouper et trier les données &#40;Générateur de rapports et SSRS&#41;](../report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)  
   
  ![Icône de flèche utilisée avec le lien Retour au début](../../2014-toc/media/uparrow16x16.gif "Icône de flèche utilisée avec le lien Retour au début") [Retour au début](#BackToTop)  
   
@@ -107,23 +107,23 @@ ms.locfileid: "36139531"
  ![Icône de flèche utilisée avec le lien Retour au début](../../2014-toc/media/uparrow16x16.gif "Icône de flèche utilisée avec le lien Retour au début") [Retour au début](#BackToTop)  
   
 ##  <a name="HowTo"></a> Rubriques de procédures  
- [Ajouter et vérifier une connexion de données ou une Source de données &#40;rapport Générateur et SSRS&#41;](add-and-verify-a-data-connection-report-builder-and-ssrs.md)  
+ [Ajouter et vérifier une connexion de données ou d’une Source de données &#40;Générateur de rapports et SSRS&#41;](add-and-verify-a-data-connection-report-builder-and-ssrs.md)  
   
  [Créer un dataset partagé ou incorporé &#40;Générateur de rapports et SSRS&#41;](create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md)  
   
  [Ajouter, modifier ou actualiser des champs dans le volet des données de rapport &#40;Générateur de rapports et SSRS&#41;](add-edit-refresh-fields-in-the-report-data-pane-report-builder-and-ssrs.md)  
   
- [Générer une requête dans le Concepteur de requêtes relationnelles &#40;rapport Générateur et SSRS&#41;](build-a-query-in-the-relational-query-designer-report-builder-and-ssrs.md)  
+ [Générer une requête dans le Concepteur de requêtes relationnelles &#40;Générateur de rapports et SSRS&#41;](build-a-query-in-the-relational-query-designer-report-builder-and-ssrs.md)  
   
- [Afficher des Datasets masqués pour les valeurs de paramètre pour les données multidimensionnelles &#40;rapport Générateur et SSRS&#41;](show-hidden-datasets-for-parameter-values-multidimensional-data.md)  
+ [Afficher des Datasets masqués pour les valeurs de paramètre des données multidimensionnelles &#40;Générateur de rapports et SSRS&#41;](show-hidden-datasets-for-parameter-values-multidimensional-data.md)  
   
  [Ajouter un filtre à un dataset &#40;Générateur de rapports et SSRS&#41;](add-a-filter-to-a-dataset-report-builder-and-ssrs.md)  
   
- [Définir un Message d’absence de données pour une région de données &#40;rapport Générateur et SSRS&#41;](set-a-no-data-message-for-a-data-region-report-builder-and-ssrs.md)  
+ [Définir un Message d’absence de données pour une région de données &#40;Générateur de rapports et SSRS&#41;](set-a-no-data-message-for-a-data-region-report-builder-and-ssrs.md)  
   
- [Associer un paramètre de requête avec un paramètre de rapport &#40;rapport Générateur et SSRS&#41;](associate-a-query-parameter-with-a-report-parameter-report-builder-and-ssrs.md)  
+ [Associer un paramètre de requête à un paramètre de rapport &#40;Générateur de rapports et SSRS&#41;](associate-a-query-parameter-with-a-report-parameter-report-builder-and-ssrs.md)  
   
- [Définir des paramètres dans le Concepteur de requêtes MDX pour Analysis Services &#40;rapport Générateur et SSRS&#41;](define-parameters-in-the-mdx-query-designer-for-analysis-services.md)  
+ [Définir des paramètres dans le Concepteur de requêtes MDX pour Analysis Services &#40;Générateur de rapports et SSRS&#41;](define-parameters-in-the-mdx-query-designer-for-analysis-services.md)  
   
  ![Icône de flèche utilisée avec le lien Retour au début](../../2014-toc/media/uparrow16x16.gif "Icône de flèche utilisée avec le lien Retour au début") [Retour au début](#BackToTop)  
   
@@ -132,7 +132,7 @@ ms.locfileid: "36139531"
   
  [Connexions de données, sources de données et chaînes de connexion dans le Générateur de rapports](../data-connections-data-sources-and-connection-strings-in-report-builder.md)  
   
- [Spécifiez les informations d’identification dans le Générateur de rapports](../specify-credentials-in-report-builder.md)  
+ [Spécifier des informations d’identification dans le Générateur de rapports](../specify-credentials-in-report-builder.md)  
   
  [Datasets incorporés dans le rapport et datasets partagés &#40;Générateur de rapports et SSRS&#41;](report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)  
   
@@ -142,6 +142,6 @@ ms.locfileid: "36139531"
   
 ## <a name="see-also"></a>Voir aussi  
  [Vue Conception de rapport &#40;Générateur de rapports&#41;](../report-builder/report-design-view-report-builder.md)   
- [Concepts de création de rapports &#40;rapport Générateur et SSRS&#41;](../report-design/report-authoring-concepts-report-builder-and-ssrs.md)  
+ [Concepts de création de rapports &#40;Générateur de rapports et SSRS&#41;](../report-design/report-authoring-concepts-report-builder-and-ssrs.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Page de propriétés de paramètres (Gestionnaire de rapports) | Documents Microsoft
+title: Page de propriétés de paramètres (Gestionnaire de rapports) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: ebb53598-2378-46ae-8935-d5192f8ea49a
 caps.latest.revision: 24
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: dae546d2c07e21c8c930c889f8931b683828b055
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: a0f3b3bf5c8d672be964dcd77453f16e7ac9cbc0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36053234"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37327559"
 ---
 # <a name="parameters-properties-page-report-manager"></a>Page de propriétés des paramètres (Gestionnaire de rapports)
   La page de propriétés des paramètres vous permet d'afficher ou de modifier les paramètres d'un rapport paramétrable.  
@@ -69,11 +69,11 @@ ms.locfileid: "36053234"
   
  Désactivez cette case à cocher si vous souhaitez exécuter le rapport en mode sans assistance (par exemple, pour générer des instantanés d'historique de rapport ou d'exécution de rapport), si vous souhaitez utiliser la même valeur de paramètre pour tous les utilisateurs ou si vous n'avez pas besoin d'une entrée utilisateur pour cette valeur.  
   
- **Texte à afficher**  
+ **Texte affiché**  
  Fournit une chaîne de texte qui apparaît en regard de la zone de texte du paramètre. La chaîne contient une étiquette ou une description. Aucune limite n'est imposée quant à la longueur de chaîne. Les chaînes de texte plus longues sont renvoyées à la ligne dans l'espace fourni.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Page Propriétés générales, Rapports &#40;Gestionnaire de rapports&#41;](../../2014/reporting-services/general-properties-page-reports-report-manager.md)   
- [Aide (F1) de gestionnaire de rapports](../../2014/reporting-services/report-manager-f1-help.md)  
+ [Aide (F1) du Gestionnaire de rapports](../../2014/reporting-services/report-manager-f1-help.md)  
   
   

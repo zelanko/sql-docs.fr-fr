@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - objects [SQL Server]
 - number capacity specifications [SQL Server]
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - Database Engine [SQL Server], capacity specifications
 ms.assetid: 13e95046-0e76-4604-b561-d1a74dd824d7
 caps.latest.revision: 76
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 6b85f0d59501aea5ef8a77daadd6f74796a82b41
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 08997fa0dd4fe66b4e3c22fd6447105d11991c29
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36052566"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37296039"
 ---
 # <a name="maximum-capacity-specifications-for-sql-server"></a>Spécifications des capacités maximales pour SQL Server
   Les tableaux suivants présentent la taille maximale et le nombre maximal des différents objets définis dans les composants [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Pour naviguer jusqu'à la table d'une technologie [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , cliquez sur son lien :  
@@ -46,7 +46,7 @@ ms.locfileid: "36052566"
 ##  <a name="Engine"></a> [!INCLUDE[ssDE](../includes/ssde-md.md)] Objets  
  Le tableau suivant présente la taille maximale et le nombre maximal des différents objets définis dans les bases de données [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ou référencés dans les instructions [!INCLUDE[tsql](../includes/tsql-md.md)].  
   
-|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../includes/ssde-md.md)] objet|Tailles maximales/nombres maximaux [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] (32 bits)|Tailles maximales/nombres maximaux [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] (64-bit)|  
+|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../includes/ssde-md.md)] objet|Tailles maximales/nombres [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] (32 bits)|Tailles maximales/nombres maximaux [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] (64-bit)|  
 |---------------------------------------------------------|------------------------------------------------------------------|------------------------------------------------------------------|  
 |Taille du lot<br /><br /> Remarque : La taille du paquet réseau est la taille de paquets data stream (TDS) utilisé pour communiquer entre les applications et les données relationnelles [!INCLUDE[ssDE](../includes/ssde-md.md)]. La taille par défaut s'élève à 4 Ko ; elle est contrôlée par l'option de configuration Taille du paquet réseau.|65 536 * Taille des paquets réseau|65 536 * Taille des paquets réseau|  
 |Octets par colonne de chaîne courte|8,000|8,000|  
@@ -81,11 +81,11 @@ ms.locfileid: "36052566"
 |Fichier delta par fichier de données pour les données optimisées en mémoire|Non pris en charge| 1|  
 |Références de table de clé étrangère par table<br /><br /> Remarque : Bien qu’une table peut contenir un nombre illimité de contraintes FOREIGN KEY, le maximum recommandé est 253. Selon la configuration matérielle qui héberge [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], la spécification de contraintes FOREIGN KEY supplémentaires peut représenter un coût de traitement élevé pour l'optimiseur de requête.|253|253|  
 |Longueur d'identificateur (en caractères)|128|128|  
-|Instances par ordinateur|50 instances sur un serveur autonome pour toutes les éditions de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].<br /><br /> [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] prend en charge 25 instances sur un basculement de cluster lors de l’utilisation d’un disque de cluster partagé en tant que l’option stockée pour votre installation de cluster [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] partages de fichiers prend en charge 50 instances sur un basculement de cluster si vous choisissez SMB comme option de stockage pour votre installation de cluster Pour plus d’informations, consultez [matérielle et logicielle requise pour l’installation de SQL Server 2014](install/hardware-and-software-requirements-for-installing-sql-server.md).|50 instances sur un serveur autonome.<br /><br /> 25 instances sur un cluster de basculement si vous utilisez un disque de cluster partagé, car l'option stockée pour votre installation de cluster [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] prend en charge 50 instances sur un cluster de basculement si vous choisissez les partages SMB comme option de stockage de votre installation de cluster.|  
+|Instances par ordinateur|50 instances sur un serveur autonome pour toutes les éditions de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].<br /><br /> [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] prend en charge 25 instances sur un basculement de cluster lorsque vous utilisez un disque de cluster partagé comme l’option stockée installation de cluster [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] partages de fichiers prend en charge 50 instances sur un basculement de cluster si vous choisissez SMB comme option de stockage pour votre installation de cluster Pour plus d’informations, consultez [Hardware and Software Requirements for Installing SQL Server 2014](install/hardware-and-software-requirements-for-installing-sql-server.md).|50 instances sur un serveur autonome.<br /><br /> 25 instances sur un cluster de basculement si vous utilisez un disque de cluster partagé, car l'option stockée pour votre installation de cluster [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] prend en charge 50 instances sur un cluster de basculement si vous choisissez les partages SMB comme option de stockage de votre installation de cluster.|  
 |Index par table optimisée en mémoire|Non pris en charge|8|  
 |Longueur d’une chaîne contenant des instructions SQL (taille du traitement)<br /><br /> Remarque : La taille du paquet réseau est la taille de paquets data stream (TDS) utilisé pour communiquer entre les applications et les données relationnelles [!INCLUDE[ssDE](../includes/ssde-md.md)]. La taille par défaut s'élève à 4 Ko ; elle est contrôlée par l'option de configuration Taille du paquet réseau.|65 536 * Taille des paquets réseau|65 536 * Taille des paquets réseau|  
 |Verrous par connexion|Verrous maximaux par serveur|Verrous maximaux par serveur|  
-|Verrous par instance de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]<br /><br /> Remarque : Cette valeur est l’allocation de verrouillage statique. Les verrous dynamiques sont uniquement limités par la mémoire.|Jusqu'à 2 147 483 647|Limité uniquement par la mémoire|  
+|Verrous par instance de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]<br /><br /> Remarque : Cette valeur est pour l’allocation de verrouillage statique. Les verrous dynamiques sont uniquement limités par la mémoire.|Jusqu'à 2 147 483 647|Limité uniquement par la mémoire|  
 |Niveaux d’imbrication des procédures stockées<br /><br /> Remarque : Si une procédure stockée accède à plus de 64 bases de données ou de plus de 2 bases entrelacées, vous recevez une erreur.|32|32|  
 |Sous-requêtes imbriquées|32|32|  
 |Niveaux de déclencheurs imbriqués|32|32|  
@@ -96,11 +96,11 @@ ms.locfileid: "36052566"
 |Paramètres par fonction définie par l'utilisateur|2,100|2,100|  
 |REFERENCES par table|253|253|  
 |Lignes par table|Limité par le stockage disponible|Limité par le stockage disponible|  
-|Tables par base de données<br /><br /> Remarque : Les objets de base de données incluent des objets tels que des tables, vues, procédures stockées, fonctions définies par l’utilisateur, déclencheurs, règles, valeurs par défaut et des contraintes. Au total, le nombre de tous les objets d'une base de données ne peut pas dépasser 2 147 483 647.|Limité par le nombre d'objets dans une base de données|Limité par le nombre d'objets dans une base de données|  
-|Partitions par table ou index partitionné|1,000<br /><br /> **\*\* Important \* \***  création d’une table ou un index avec plus de 1 000 partitions est possible sur un système 32 bits, mais n’est pas pris en charge.|15,000|  
+|Tables par base de données<br /><br /> Remarque : Les objets de base de données incluent des objets tels que des tables, vues, procédures stockées, fonctions définies par l’utilisateur, les déclencheurs, règles, valeurs par défaut et les contraintes. Au total, le nombre de tous les objets d'une base de données ne peut pas dépasser 2 147 483 647.|Limité par le nombre d'objets dans une base de données|Limité par le nombre d'objets dans une base de données|  
+|Partitions par table ou index partitionné|1,000<br /><br /> **\*\* Important \* \* ** création d’une table ou un index avec plus de 1 000 partitions est possible sur un système 32 bits, mais n’est pas pris en charge.|15,000|  
 |Statistiques sur les colonnes non indexées|30,000|30,000|  
 |Tables par instruction SELECT|Limité uniquement par les ressources disponibles|Limité uniquement par les ressources disponibles|  
-|Déclencheurs par table<br /><br /> Remarque : Les objets de base de données incluent des objets tels que des tables, vues, procédures stockées, fonctions définies par l’utilisateur, déclencheurs, règles, valeurs par défaut et des contraintes. Au total, le nombre de tous les objets d'une base de données ne peut pas dépasser 2 147 483 647.|Limité par le nombre d'objets dans une base de données|Limité par le nombre d'objets dans une base de données|  
+|Déclencheurs par table<br /><br /> Remarque : Les objets de base de données incluent des objets tels que des tables, vues, procédures stockées, fonctions définies par l’utilisateur, les déclencheurs, règles, valeurs par défaut et les contraintes. Au total, le nombre de tous les objets d'une base de données ne peut pas dépasser 2 147 483 647.|Limité par le nombre d'objets dans une base de données|Limité par le nombre d'objets dans une base de données|  
 |Colonnes par instruction UPDATE (tableaux larges)|4096|4096|  
 |Connexions utilisateur|32,767|32,767|  
 |Index XML|249|249|  
@@ -108,7 +108,7 @@ ms.locfileid: "36052566"
 ##  <a name="Utility"></a> [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Objets utilitaires  
  Le tableau suivant présente la taille maximale et le nombre maximal des différents objets qui ont été testés dans l'utilitaire [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
-|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Objet utilitaire|Tailles maximales/nombres maximaux [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] (32 bits)|Tailles maximales/nombres maximaux [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] (64-bit)|  
+|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Objet utilitaire|Tailles maximales/nombres [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] (32 bits)|Tailles maximales/nombres maximaux [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] (64-bit)|  
 |----------------------------------------------|------------------------------------------------------------------|------------------------------------------------------------------|  
 |Ordinateurs (ordinateurs physique ou ordinateurs virtuels) par utilitaire [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]|100|100|  
 |Instances de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] par ordinateur|5|5|  
@@ -125,7 +125,7 @@ ms.locfileid: "36052566"
 ##  <a name="DAC"></a> [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Objets d’application de la couche Données  
  Le tableau suivant spécifie la taille maximale et le nombre maximum des différents objets testés dans les applications de la couche Données [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] (DAC).  
   
-|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Object DAC|Tailles maximales/nombres maximaux [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] (32 bits)|Tailles maximales/nombres maximaux [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] (64-bit)|  
+|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Object DAC|Tailles maximales/nombres [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] (32 bits)|Tailles maximales/nombres maximaux [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] (64-bit)|  
 |------------------------------------------|------------------------------------------------------------------|------------------------------------------------------------------|  
 |Bases de données par DAC| 1| 1|  
 |Objets par DAC*|Limité par le nombre d'objets dans une base de données ou la mémoire disponible.|Limité par le nombre d'objets dans une base de données ou la mémoire disponible.|  
@@ -150,7 +150,7 @@ ms.locfileid: "36052566"
  ** La table de base peut inclure le nombre maximal de colonnes autorisées dans la base de données de publication (1 024 pour [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]), mais les colonnes doivent être filtrées à partir de l’article si elles sont plus nombreuses que le maximum spécifié pour le type de publication.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Configurations matérielle et logicielle requises pour l’installation de SQL Server 2014](install/hardware-and-software-requirements-for-installing-sql-server.md)   
+ [Matérielle et logicielle requise pour l’installation de SQL Server 2014](install/hardware-and-software-requirements-for-installing-sql-server.md)   
  [Paramètres de l'outil d'analyse de configuration système](../database-engine/install-windows/check-parameters-for-the-system-configuration-checker.md)   
  [Fonctionnalités et tâches de l’utilitaire SQL Server](../relational-databases/manage/sql-server-utility-features-and-tasks.md)  
   

@@ -5,23 +5,22 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-backup-restore
+ms.technology: backup-restore
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.backupdatabase.general.f1
 ms.assetid: 5c344dfd-1ad3-41cc-98cd-732973b4a162
 caps.latest.revision: 59
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 7300b9be81e07a922079bc8e1b56aa02266d9b99
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 025d5eac30815b6d9110dcca7214e7e88412a23d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36053319"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37290955"
 ---
 # <a name="back-up-database-general-page"></a>Sauvegarder la base de données (page Général)
   La page **Général** de la boîte de dialogue **Sauvegarder la base de données** vous permet d'afficher ou de modifier les paramètres d'une opération de sauvegarde de base de données.  
@@ -115,7 +114,7 @@ ms.locfileid: "36053319"
  Sélectionnez les informations d'identification SQL utilisées pour l'authentification au stockage Windows Azure. Si vous n'avez pas d'informations d'identification SQL, cliquez sur le bouton **Créer** pour créer de nouvelles informations d'identification SQL.  
   
 > [!IMPORTANT]  
->  La boîte de dialogue qui s'ouvre lorsque vous cliquez sur **Créer** requiert un certificat de gestion ou le profil de publication de l'abonnement. Si vous n'avez pas accès au certificat de gestion ou au profil de publication, vous pouvez créer des informations d'identification SQL en spécifiant le nom du compte de stockage et les informations de clé d'accès à l'aide de Transact-SQL ou de SQL Server Management Studio. Consultez l’exemple de code dans le dans les [pour créer les informations d’identification](../security/authentication-access/create-a-credential.md#Credential) rubrique pour créer des informations d’identification à l’aide de Transact-SQL. Vous pouvez également utiliser SQL Server Management Studio, depuis l'instance du moteur de base de données, et cliquer avec le bouton droit sur **Sécurité**, puis sélectionner **Nouveau**, puis **Informations d'identification**. Spécifiez le nom du compte de stockage pour **Identité** et la clé d'accès dans le champ **Mot de passe** .  
+>  La boîte de dialogue qui s'ouvre lorsque vous cliquez sur **Créer** requiert un certificat de gestion ou le profil de publication de l'abonnement. Si vous n'avez pas accès au certificat de gestion ou au profil de publication, vous pouvez créer des informations d'identification SQL en spécifiant le nom du compte de stockage et les informations de clé d'accès à l'aide de Transact-SQL ou de SQL Server Management Studio. Consultez l’exemple de code dans le dans le [pour créer des informations d’identification](../security/authentication-access/create-a-credential.md#Credential) rubrique pour créer des informations d’identification à l’aide de Transact-SQL. Vous pouvez également utiliser SQL Server Management Studio, depuis l'instance du moteur de base de données, et cliquer avec le bouton droit sur **Sécurité**, puis sélectionner **Nouveau**, puis **Informations d'identification**. Spécifiez le nom du compte de stockage pour **Identité** et la clé d'accès dans le champ **Mot de passe** .  
   
  **Conteneur de stockage Windows Azure**  
  Spécifiez le nom du conteneur de stockage Windows Azure.  

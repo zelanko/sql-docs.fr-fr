@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - data-quality-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 7d1076e0-7710-469a-9107-e293e4bd80ac
 caps.latest.revision: 13
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: ba152d105052ae8f481794ca28869cb5d4528de4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 2f03d5f5961bd09494fccde146a812ea07bb390c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36038410"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37261435"
 ---
 # <a name="cleanse-data-in-a-composite-domain"></a>Nettoyer les données dans un domaine composite
   Cette rubrique fournit des informations sur le nettoyage des domaines composites dans [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS). Un domaine composite comprend plusieurs domaines uniques et est mappé à un champ de données qui comprend plusieurs termes connexes. Les différents domaines dans un domaine composite doivent avoir un espace commun de connaissance. Pour plus d’informations sur les domaines composites, consultez [gestion d’un domaine Composite](../../2014/data-quality-services/managing-a-composite-domain.md).  
@@ -35,7 +35,7 @@ ms.locfileid: "36038410"
   
 -   Les données sources sont constituées de plusieurs champs (par exemple, Prénom, Deuxième prénom et Nom) qui sont mappés à des domaines différents dans un domaine composite.  
   
- Pour obtenir un exemple montrant comment mapper les domaines composites aux données sources, consultez [joindre un domaine ou un domaine Composite aux données de référence](../../2014/data-quality-services/attach-a-domain-or-composite-domain-to-reference-data.md).  
+ Pour obtenir un exemple montrant comment mapper des domaines composites aux données sources, consultez [joindre un domaine ou un domaine Composite aux données de référence](../../2014/data-quality-services/attach-a-domain-or-composite-domain-to-reference-data.md).  
   
 ##  <a name="CDCorrection"></a> Correction des données à l'aide de règles entre domaines définitives  
  Les règles entre domaines dans le domaine composite vous permettent de créer des règles qui indiquent la relation entre différents domaines dans un domaine composite. Les règles entre domaines sont prises en considération lorsque vous exécutez l'activité de nettoyage sur vos données sources impliquant des domaines composites. Outre l'information concernant la validité d'une règle entre domaines, la règle entre domaines *Then* définitive, **La valeur est égale à**, corrige également les données pendant l'activité de nettoyage.  

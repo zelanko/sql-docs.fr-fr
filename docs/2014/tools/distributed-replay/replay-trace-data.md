@@ -1,5 +1,5 @@
 ---
-title: Relire les données de Trace | Documents Microsoft
+title: Relire les données de Trace | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,25 +8,25 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 19ff5285-fb9d-4fd1-97c4-ec72c311c384
 caps.latest.revision: 19
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 2a53224c1618434ff9a7db2dda4ffc8a71f2ad1d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 8be27c06c27688ad38339ea911bbe0f165658e9d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36140428"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37220511"
 ---
 # <a name="replay-trace-data"></a>Relire les données de trace
   Vous pouvez démarrer une relecture distribuée avec la fonctionnalité [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Distributed Replay après avoir préparé les données de trace d'entrée. Pour plus d’informations, consultez [préparer les données de Trace d’entrée](prepare-the-input-trace-data.md).  
   
  Utilisez l’option de **relecture** de l’outil d’administration pour initialiser l’étape de relecture d’événements de la relecture distribuée. Cette étape consiste en deux parties : la répartition des données de trace et le démarrage et la synchronisation de la relecture distribuée.  
   
- ![Distributed Replay d’événement](../../database-engine/media/eventreplay.gif "distribués de la relecture d’événements")  
+ ![Distributed Replay d’événement](../../database-engine/media/eventreplay.gif "Distributed Replay d’événement")  
   
  Vous pouvez relire les données de trace dans l'un de ces deux modes de mise en séquence : mode simultané (stress) ou mode de synchronisation. Le comportement par défaut consiste à relire les données de trace en mode simultané (stress). Pour plus d'informations sur l'étape de relecture d'événements et les modes de mise en séquence, consultez [SQL Server Distributed Replay](sql-server-distributed-replay.md).  
   
@@ -47,7 +47,7 @@ ms.locfileid: "36140428"
   
 2.  **Initialiser l’étape de relecture d’événements**: pour démarrer la relecture distribuée, vous devez exécuter l’outil d’administration avec l’option de **relecture** . Pour plus d’informations, consultez [Option preprocess &#40;outil d’administration Distributed Replay&#41;](replay-option-distributed-replay-administration-tool.md).  
   
-    1.  Ouvrez l’utilitaire d’invite de commandes Windows (`CMD.exe`), puis accédez à l’emplacement d’installation de l’outil d’administration Distributed Replay (`DReplay.exe`).  
+    1.  Ouvrez l’utilitaire d’invite de commandes Windows (`CMD.exe`) et accédez à l’emplacement d’installation de l’outil d’administration Distributed Replay (`DReplay.exe`).  
   
     2.  (Facultatif) Utilisez le paramètre *controller* , **-m**, pour spécifier le contrôleur, si le service du contrôleur s’exécute sur un ordinateur différent de l’outil d’administration.  
   
@@ -71,7 +71,7 @@ ms.locfileid: "36140428"
   
 ## <a name="see-also"></a>Voir aussi  
  [Conditions préalables de relecture distribuée](distributed-replay-requirements.md)   
- [Options de ligne de commande administration d'outils &#40;Distributed Replay Utility&#41;](administration-tool-command-line-options-distributed-replay-utility.md)   
+ [Options de ligne de l’outil d’administration &#40;Distributed Replay Utility&#41;](administration-tool-command-line-options-distributed-replay-utility.md)   
  [Configurer Distributed Replay](configure-distributed-replay.md)  
   
   

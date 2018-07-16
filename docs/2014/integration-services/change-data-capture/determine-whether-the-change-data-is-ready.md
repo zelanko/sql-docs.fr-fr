@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - incremental load [Integration Services],determining readiness
 ms.assetid: 04935f35-96cc-4d70-a250-0fd326f8daff
 caps.latest.revision: 26
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: e0fab127f224ba313e37e0bde49a0677514bb203
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 63014b261a38078a209fc6fb08585b7aa1b7182b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36053353"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37233869"
 ---
 # <a name="determine-whether-the-change-data-is-ready"></a>Déterminer si les données modifiées sont prêtes
   Dans le flux de contrôle d’un package [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] qui effectue une charge incrémentielle des données modifiées, la deuxième tâche consiste à s’assurer que les données modifiées pour l’intervalle sélectionné sont prêtes. Cette étape est nécessaire car le processus de capture asynchrone n'a peut-être pas encore pu traiter toutes les modifications jusqu'au point de terminaison sélectionné.  
@@ -203,7 +203,7 @@ ms.locfileid: "36053353"
         > [!NOTE]  
         >  La méthode `Thread.Sleep` attend un argument spécifié en millisecondes.  
   
-7.  Laissez la ligne par défaut du code qui renvoie `DtsExecResult.Success` à partir de l’exécution du script.  
+7.  Laissez la ligne de code qui retourne par défaut `DtsExecResult.Success` à partir de l’exécution du script.  
   
 8.  Fermez l’environnement de développement de script et **l’Éditeur de tâche de script**.  
   
@@ -279,7 +279,7 @@ ms.locfileid: "36053353"
   
 6.  Dans **l’Éditeur de tâche de script**, dans la page **Script** , cliquez sur **Modifier le script** pour ouvrir l’environnement de développement de script.  
   
-7.  Dans la procédure Main, entrez le code pour consigner une erreur en appelant le `Dts.Log` (méthode), ou pour déclencher un événement en appelant une des méthodes de la `Dts.Events` interface. Informez le package de l'erreur en retournant `Dts.TaskResult = Dts.Results.Failure`.  
+7.  Dans la procédure Main, entrez le code pour consigner une erreur en appelant le `Dts.Log` (méthode), soit pour déclencher un événement en appelant une des méthodes de la `Dts.Events` interface. Informez le package de l'erreur en retournant `Dts.TaskResult = Dts.Results.Failure`.  
   
      L'exemple suivant montre comment écrire un message dans le journal. Pour plus d’informations, consultez [Journalisation dans la tâche de script](../extending-packages-scripting/task/logging-in-the-script-task.md), [Déclenchement d’événements dans la tâche de script](../extending-packages-scripting/task/raising-events-in-the-script-task.md)et [Retour de résultats de la tâche de script](../extending-packages-scripting/task/returning-results-from-the-script-task.md).  
   

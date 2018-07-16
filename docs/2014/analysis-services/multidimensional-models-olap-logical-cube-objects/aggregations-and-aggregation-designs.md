@@ -1,5 +1,5 @@
 ---
-title: Agrégations et conceptions d’agrégation | Documents Microsoft
+title: Agrégations et conceptions d’agrégation | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - aggregations [Analysis Services]
 ms.assetid: 35bd8589-39fa-4e0b-b28f-5a07d70da0a2
 caps.latest.revision: 34
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 283825b20aaad5764744197aca46d3358feb20b6
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: b196f950e04a2b636c9b758dda6f5f6947a9912d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36140840"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37228199"
 ---
 # <a name="aggregations-and-aggregation-designs"></a>Agrégations et conceptions d'agrégation
   Un objet <xref:Microsoft.AnalysisServices.AggregationDesign> définit un ensemble de définitions d'agrégation qu'il est possible de partager sur plusieurs partitions.  
@@ -53,6 +53,6 @@ ms.locfileid: "36140840"
  Les agrégations sont conçues à l'aide des Assistants, mais elles ne sont véritablement calculées qu''au moment où la partition pour laquelle elles sont conçues est traitée. Après avoir créé l'agrégation, si la structure du cube change ou si des données sont ajoutées ou modifiées dans les tables sources du cube, vous devez généralement recréer les agrégations du cube et retraiter ce dernier.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Traitement et Modes de stockage de partitions](partitions-partition-storage-modes-and-processing.md)  
+ [Traitement et modes de stockage des partitions](partitions-partition-storage-modes-and-processing.md)  
   
   

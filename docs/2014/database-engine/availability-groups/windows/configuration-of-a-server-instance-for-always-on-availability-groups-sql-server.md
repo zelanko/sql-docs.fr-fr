@@ -1,28 +1,27 @@
 ---
-title: Configuration d’une Instance de serveur pour toujours sur les groupes de disponibilité (SQL Server) | Documents Microsoft
+title: Configuration d’une Instance de serveur pour toujours sur les groupes de disponibilité (SQL Server) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Availability Groups [SQL Server], server instance
 - Availability Groups [SQL Server], about
 ms.assetid: fad8db32-593e-49d5-989c-39eb8399c416
 caps.latest.revision: 16
-author: rothja
-ms.author: jroth
-manager: jhubbard
-ms.openlocfilehash: a602a94d8830ce8d059c3d1f8b3a290f94bd244a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 7299c2b22e06ee572a6ff41f556528b4c4d32b3a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36052703"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37319306"
 ---
 # <a name="configuration-of-a-server-instance-for-always-on-availability-groups-sql-server"></a>Configuration d’une instance de serveur pour les groupes de disponibilité Always On (SQL Server)
   Cette rubrique contient des informations sur les conditions requises pour configurer une instance de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] pour la prise en charge de [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] dans [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)].  
@@ -60,7 +59,7 @@ ms.locfileid: "36052703"
   
  **Pour créer un point de terminaison pour la mise en miroir de bases de données**  
   
--   [Créer une base de données mise en miroir du point de terminaison pour les groupes de disponibilité AlwaysOn &#40;SQL Server PowerShell&#41;](database-mirroring-always-on-availability-groups-powershell.md)  
+-   [Créer une base de données mise en miroir de point de terminaison pour les groupes de disponibilité AlwaysOn &#40;SQL Server PowerShell&#41;](database-mirroring-always-on-availability-groups-powershell.md)  
   
 -   [Créer un point de terminaison de mise en miroir de bases de données pour l’authentification Windows &#40;Transact-SQL&#41;](../../database-mirroring/create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql.md)  
   
@@ -78,9 +77,9 @@ ms.locfileid: "36052703"
   
 -   **Vidéos :**  
   
-     [Microsoft SQL Server nom de code « Denali », série AlwaysOn, partie 1 : Présentation de la Solution haute disponibilité de prochaine génération](http://channel9.msdn.com/Events/TechEd/NorthAmerica/2011/DBI302)  
+     [Microsoft SQL Server nom de code « Denali », série AlwaysOn, partie 1 : Présentation de la Solution de haute disponibilité prochaine génération](http://channel9.msdn.com/Events/TechEd/NorthAmerica/2011/DBI302)  
   
-     [Microsoft SQL Server nom de code « Denali », série AlwaysOn, partie 2 : Création d’une Solution de haute disponibilité maximale à l’aide d’AlwaysOn](http://channel9.msdn.com/Events/TechEd/NorthAmerica/2011/DBI404)  
+     [Microsoft SQL Server nom de code « Denali », série AlwaysOn, partie 2 : Création d’une Solution de haute disponibilité critique à l’aide d’AlwaysOn](http://channel9.msdn.com/Events/TechEd/NorthAmerica/2011/DBI404)  
   
 -   **Livres blancs :**  
   

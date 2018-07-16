@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - selTabCol
 ms.assetid: bf73f80e-a954-4c5f-874e-17fdd4082715
 caps.latest.revision: 5
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 402927baa685e906e7f6669147f0e1c3be2d2918
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: eaafdee895b1fe86fb5646b35dd3cdb2b30070d0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36140577"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37207599"
 ---
 # <a name="select-oracle-tables-and-columns"></a>Sélectionner des tables et des colonnes Oracle
   Utilisez la page Sélectionner des tables et des colonnes Oracle pour sélectionner les tables de la base de données source Oracle dans laquelle les modifications sont capturées. Cette page contient les éléments suivants :  
@@ -54,7 +54,7 @@ ms.locfileid: "36140577"
  Après avoir [sélectionné des tables Oracle pour capturer des modifications](select-oracle-tables-for-capturing-changes.md) et/ou [apporté des modifications aux tables sélectionnées pour capturer les modifications](make-changes-to-the-tables-selected-for-capturing-changes.md) à l’aide des boîtes de dialogue appropriées, cliquez sur **Suivant** pour [générer et exécuter le script de journalisation supplémentaire](generate-and-run-the-supplemental-logging-script.md).  
   
 ## <a name="see-also"></a>Voir aussi  
- [La création de l’Instance de base de données modifiées SQL Server](how-to-create-the-sql-server-change-database-instance.md)   
+ [Comment créer l’Instance de base de données de modifications SQL Server](how-to-create-the-sql-server-change-database-instance.md)   
  [Modifier des tables](edit-tables.md)   
  [Ajouter des tables à une instance CDC](add-tables-to-a-cdc-instance.md)   
  [Modifier les propriétés d’une table](edit-the-table-properties.md)  

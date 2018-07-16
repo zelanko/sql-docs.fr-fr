@@ -1,5 +1,5 @@
 ---
-title: 'Tâche 4 : Création d’un projet SSIS à l’aide de SQL Server Data Tools | Documents Microsoft'
+title: 'Tâche 4 : Création d’un projet SSIS à l’aide de SQL Server Data Tools | Microsoft Docs'
 ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
@@ -10,18 +10,18 @@ ms.technology:
 - integration-services
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 8603ea91-2ec4-40b6-8070-4f824332f5d3
 caps.latest.revision: 7
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 03c0a6599990357a255fab3beeb434db3cb5d97d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: a6fb09370b01a88c23d75b843d588626ed96c9b1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36141432"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37208069"
 ---
 # <a name="task-4-creating-an-ssis-project-using-sql-server-data-tools"></a>Tâche 4 (Facultatif) : Création d'un projet SSIS à l'aide de SQL Server Data Tools
   Dans cette tâche, vous créez un projet SSIS à l’aide de **SQL Server Data Tools** pour automatiser le nettoyage et la correspondance des données des fournisseurs.  
@@ -30,11 +30,11 @@ ms.locfileid: "36141432"
   
 2.  Dans le menu **Fichier** , pointez sur **Nouveau**, puis cliquez sur **Projet**.  
   
-3.  Développez **Business Intelligence** dans les **modèles installés** volet et sélectionnez **Integration Services**.  
+3.  Développez **Business Intelligence** dans le **modèles installés** volet et sélectionnez **Integration Services**.  
   
      ![Visual Studio - boîte de dialogue Nouveau projet](../../2014/tutorials/media/et-creatinganssisprojectusingsqlsdt-01.jpg "Visual Studio - boîte de dialogue Nouveau projet")  
   
-4.  Sélectionnez **projet Integration Services** dans les **liste des types de projets**.  
+4.  Sélectionnez **projet Integration Services** dans le **liste des types de projets**.  
   
 5.  Type **CleanseAndCurateSuppliers** pour **nom** et cliquez sur **OK**.  
   

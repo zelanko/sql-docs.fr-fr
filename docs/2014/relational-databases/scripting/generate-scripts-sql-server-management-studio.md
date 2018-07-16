@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 9711c617-3c68-4e5a-aea3-befc64d51524
 caps.latest.revision: 4
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 62601f3a76d04ada9dc9f824d0cf82796e104d2f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: 7b757452c98241d10fa4c9d8b0eeba8ab73f03ff
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36044216"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37288745"
 ---
 # <a name="generate-scripts-sql-server-management-studio"></a>Générer des scripts (SQL Server Management Studio)
   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] fournit deux mécanismes pour générer des scripts [!INCLUDE[tsql](../../includes/tsql-md.md)] . Vous pouvez créer des scripts pour plusieurs objets au moyen de l' **Assistant Générer et publier des scripts**. Vous pouvez également générer un script pour des objets individuels ou plusieurs objets à l'aide du menu **Script en tant que** dans l' **Explorateur d'objets**.  

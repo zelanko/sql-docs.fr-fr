@@ -1,5 +1,5 @@
 ---
-title: Ajout de données de Source de vue avec des Tables imbriquées (didacticiel sur l’exploration des données intermédiaires) | Documents Microsoft
+title: Ajout d’un Data Source View avec des Tables imbriquées (didacticiel d’exploration de données intermédiaire) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,23 +8,23 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: a14cd7f1-7a10-4ec6-af6a-f5f0676a0308
 caps.latest.revision: 44
 author: minewiskan
 ms.author: owend
-manager: kfile
-ms.openlocfilehash: 4ce47827cefcd626e8bda03de7f76800a16abf8c
-ms.sourcegitcommit: 8c040e5b4e8c7d37ca295679410770a1af4d2e1f
+manager: craigg
+ms.openlocfilehash: e17467d6d3e207456bd525bde4be6183b92c6450
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/21/2018
-ms.locfileid: "36313171"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37244029"
 ---
 # <a name="adding-a-data-source-view-with-nested-tables-intermediate-data-mining-tutorial"></a>Ajout d'une vue de source de données avec les tables imbriquées (Didacticiel intermédiaire sur l'exploration de données)
   Pour créer un modèle de panier d'achat, vous devez utiliser une vue de source de données qui prend en charge les données associatives. Cette vue de source de données sera également utilisée pour le scénario Sequence Clustering.  
   
- Cette vue de source de données est différente des autres que vous avez travaillé car elle contient un *table imbriquée*. A *table imbriquée* est une table qui contient plusieurs lignes d’informations sur une seule ligne dans la table de cas. Par exemple, si votre modèle analyse le comportement d'achat de clients, vous utilisez généralement une table qui a une ligne unique pour chaque client comme table de cas. Toutefois, chaque client peut faire plusieurs achats, et vous pouvez analyser la séquence des achats, ou les produits qui sont fréquemment achetés ensemble. Pour représenter de façon logique ces achats dans votre modèle, vous ajoutez une autre table à la vue de source de données qui répertorie les achats pour chaque client.  
+ Cette vue de source de données est différente des autres que vous avez travaillé, car elle contient un *table imbriquée*. Un *table imbriquée* est une table qui contient plusieurs lignes d’informations sur une seule ligne dans la table de cas. Par exemple, si votre modèle analyse le comportement d'achat de clients, vous utilisez généralement une table qui a une ligne unique pour chaque client comme table de cas. Toutefois, chaque client peut faire plusieurs achats, et vous pouvez analyser la séquence des achats, ou les produits qui sont fréquemment achetés ensemble. Pour représenter de façon logique ces achats dans votre modèle, vous ajoutez une autre table à la vue de source de données qui répertorie les achats pour chaque client.  
   
  Cette table des achats imbriquée présente une relation plusieurs-à-un avec la table des clients. La table imbriquée peut contenir de nombreuses lignes pour chaque client, chaque ligne contenant un produit unique ayant été acheté, ainsi que des informations supplémentaires éventuelles sur l'ordre dans lequel les achats ont été effectués, le prix au moment de la commande ou les promotions appliquées. Vous pouvez utiliser les informations dans la table imbriquée comme entrées au modèle, ou comme attribut prédictible.  
   
@@ -45,13 +45,13 @@ ms.locfileid: "36313171"
   
 ### <a name="to-add-a-data-source-view"></a>Pour ajouter une vue de source de données  
   
-1.  Dans l’Explorateur de solutions, cliquez sur **vues de sources de données**, puis sélectionnez **nouvelle vue de Source de données**.  
+1.  Dans l’Explorateur de solutions, cliquez sur **les vues de sources de données**, puis sélectionnez **nouvelle vue de Source de données**.  
   
      L'Assistant Vue de source de données s'ouvre.  
   
 2.  Dans la page **Assistant Vue de source de données** , cliquez sur **Suivant**.  
   
-3.  Sur le **sélectionner une Source de données** sous **sources de données relationnelles**, sélectionnez le [!INCLUDE[ssAWDWsp](../includes/ssawdwsp-md.md)] source de données que vous avez créé dans le didacticiel d’exploration de données de base. Cliquez sur **Suivant**.  
+3.  Sur le **sélectionner une Source de données** page sous **sources de données relationnelles**, sélectionnez le [!INCLUDE[ssAWDWsp](../includes/ssawdwsp-md.md)] source de données que vous avez créé dans le didacticiel d’exploration de données base de données. Cliquez sur **Suivant**.  
   
 4.  Sur le **sélectionner des Tables et vues** page, sélectionnez les tables suivantes, puis cliquez sur la flèche droite pour les inclure dans la nouvelle vue de source de données :  
   
@@ -71,21 +71,21 @@ ms.locfileid: "36313171"
   
 2.  Sélectionnez le **OrderNumber** colonne dans la table vAssocSeqLineItems.  
   
-3.  Faites glisser la colonne à la table vAssocSeqOrders et la placer dans le **OrderNumber** colonne.  
+3.  Faites glisser la colonne vers la table vAssocSeqOrders et la placer dans le **OrderNumber** colonne.  
   
     > [!IMPORTANT]  
-    >  Vérifiez que vous faites glisser le **OrderNumber** colonne à partir de la table imbriquée vAssocSeqLineItems, qui représente le côté « plusieurs » de la jointure, à la table de cas vAssocSeqOrders, qui représente le côté « un » de la jointure.  
+    >  Veillez à faire glisser le **OrderNumber** colonne à partir de la table imbriquée vAssocSeqLineItems, qui représente le côté « plusieurs » de la jointure, à la table de cas vAssocSeqOrders, qui représente un côté de la jointure.  
   
      Un nouveau *relation plusieurs-à-un* existe maintenant entre les tables vAssocSeqLineItems et vAssocSeqOrders. Si vous avez joint les tables correctement, la vue de source de données doit apparaître comme suit :  
   
-     ![jointure de type plusieurs-à-un attendue sur la table de cas ou imbriquée](../../2014/tutorials/media/dsv-nestedjoin-illustration.gif "attendu jointure plusieurs-à-un sur la table de cas ou imbriquée")  
+     ![jointure de plusieurs-à-un attendue sur la table de cas ou imbriquée](../../2014/tutorials/media/dsv-nestedjoin-illustration.gif "attendu jointure plusieurs-à-un sur la table de cas ou imbriquée")  
   
 ## <a name="next-task-in-lesson"></a>Tâche suivante de la leçon  
- [Création d’un modèle et la Structure Market Basket &#40;intermédiaire Didacticiel d’exploration de données&#41;](../../2014/tutorials/creating-a-market-basket-structure-and-model-intermediate-data-mining-tutorial.md)  
+ [Création d’un modèle et la Structure Market Basket &#40;didacticiel d’exploration de données intermédiaire&#41;](../../2014/tutorials/creating-a-market-basket-structure-and-model-intermediate-data-mining-tutorial.md)  
   
 ## <a name="see-also"></a>Voir aussi  
- [Les intermédiaires Data Mining Tutorial &#40;Analysis Services - Exploration de données&#41;](../../2014/tutorials/intermediate-data-mining-tutorial-analysis-services-data-mining.md)   
+ [Didacticiel d’exploration de données intermédiaire &#40;Analysis Services - Exploration de données&#41;](../../2014/tutorials/intermediate-data-mining-tutorial-analysis-services-data-mining.md)   
  [Structures d’exploration de données &#40;Analysis Services - Exploration de données&#41;](../../2014/analysis-services/data-mining/mining-structures-analysis-services-data-mining.md)   
- [Les modèles d’exploration de données &#40;Analysis Services - Exploration de données&#41;](../../2014/analysis-services/data-mining/mining-models-analysis-services-data-mining.md)  
+ [Modèles d’exploration de données &#40;Analysis Services - Exploration de données&#41;](../../2014/analysis-services/data-mining/mining-models-analysis-services-data-mining.md)  
   
   

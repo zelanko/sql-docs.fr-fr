@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - tuning databases [SQL Server]
 - Database Engine Tuning Advisor [SQL Server], starting
 ms.assetid: 4abc0e10-96fd-4e46-93d6-d7ee03eec844
 caps.latest.revision: 21
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 7ad466c0792e3666f7407f6cb120ad932ad1e936
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: ed2001ff159681f78a9287be8e1931ee5d432948
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36139935"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37282285"
 ---
 # <a name="launching-database-engine-tuning-advisor"></a>Lancement de l'Assistant Paramétrage du moteur de base de données
   Pour commencer, ouvrez l'interface utilisateur graphique de l'Assistant Paramétrage du moteur de base de données. Pour la première utilisation, un membre du rôle serveur fixe **sysadmin** doit lancer l’Assistant Paramétrage du moteur de base de données pour initialiser l’application. Après l’initialisation, les membres du rôle de base de données fixe **db_owner** peuvent utiliser l’Assistant Paramétrage du moteur de base de données pour paramétrer les bases de données dont ils sont propriétaires. Pour plus d’informations sur l’initialisation de l’Assistant Paramétrage du moteur de base de données, consultez [Démarrer et utiliser l’Assistant Paramétrage du moteur de base de données](../../relational-databases/performance/database-engine-tuning-advisor.md).  
@@ -50,6 +50,6 @@ ms.locfileid: "36139935"
 >  L’Assistant Paramétrage du moteur de base de données peut accepter les fichiers XML comme entrée quand un script [!INCLUDE[tsql](../../includes/tsql-md.md)] est importé à partir de l’Éditeur de requête [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] . Pour plus d’informations, consultez la section sur le lancement de l’Assistant Paramétrage du moteur de base de données à partir de l’Éditeur de requête [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] dans [Démarrer et utiliser l’Assistant Paramétrage du moteur de base de données](../../relational-databases/performance/database-engine-tuning-advisor.md).  
   
 ## <a name="next-task-in-lesson"></a>Tâche suivante de la leçon  
- [Mise en page et les Options de l’outil paramètre](lesson-1-2-setting-tool-options-and-layout.md)  
+ [Définition des options du menu Outils et de la disposition](lesson-1-2-setting-tool-options-and-layout.md)  
   
   

@@ -5,10 +5,9 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-security
+ms.technology: security
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.roleproperties.selectroll.f1
 - sql12.swb.databaseuser.permissions.user.f1--May use common.permissions
@@ -29,20 +28,20 @@ helpviewer_keywords:
 - '##MS_SQLReplicationSigningCertificate##'
 ms.assetid: 3f7adbf7-6e40-4396-a8ca-71cbb843b5c2
 caps.latest.revision: 54
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 1023de7c9ba97728ce23057172ec419c81f9b812
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
-ms.translationtype: HT
+author: edmacauley
+ms.author: edmaca
+manager: craigg
+ms.openlocfilehash: 55f86aa023d1c5ddfb03c24d9c97797b22a93973
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36053258"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37318039"
 ---
 # <a name="principals-database-engine"></a>Principaux (moteur de base de données)
   Les*principaux* sont des entités qui peuvent demander des ressources [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Comme les autres composants du modèle d'autorisation [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , les principaux peuvent être ordonnés de façon hiérarchique. Le champ d'influence d'un principal dépend de l'étendue de sa définition : Windows, serveur, base de données, et du fait qu'il est indivisible ou qu'il s'agit d'une collection. Une connexion Windows est un exemple de principal indivisible et un groupe Windows est un exemple de principal constituant une collection. Chaque principal a un identificateur de sécurité (SID).  
   
- **Principaux au niveau de Windows**  
+ **Principaux au niveau Windows**  
   
 -   Connexion à un domaine Windows  
   
@@ -89,7 +88,7 @@ ms.locfileid: "36053258"
 -   \##MS_PolicyTsqlExecutionLogin##  
   
 ## <a name="the-guest-user"></a>Utilisateur invité  
- Chaque base de données inclut un **invité**. Les autorisations accordées à l'utilisateur **invité** sont héritées par les utilisateurs qui ont accès à la base de données, mais n'ont pas de compte d'utilisateur dans la base de données. Le **invité** utilisateur ne peut pas être supprimé, mais il peut être désactivé en supprimant son du `CONNECT` autorisation. Le `CONNECT` autorisation peut être révoquée par l’exécution de `REVOKE CONNECT FROM GUEST` au sein d’une base de données autre que master ou tempdb.  
+ Chaque base de données inclut un **invité**. Les autorisations accordées à l'utilisateur **invité** sont héritées par les utilisateurs qui ont accès à la base de données, mais n'ont pas de compte d'utilisateur dans la base de données. Le **invité** utilisateur ne peut pas être supprimé, mais il peut être désactivé en supprimant son du `CONNECT` autorisation. Le `CONNECT` autorisation peut être révoquée en exécutant `REVOKE CONNECT FROM GUEST` au sein d’une base de données autre que master ou tempdb.  
   
 ## <a name="client-and-database-server"></a>Client et serveur de base de données  
  Par définition, un client et un serveur de base de données sont des principaux de sécurité et peuvent être sécurisés. Ces entités peuvent être authentifiées mutuellement avant qu'une connexion réseau sécurisée soit établie. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] prend en charge la [Kerberos](http://go.microsoft.com/fwlink/?LinkId=100758) protocole d’authentification, qui définit comment les clients interagissent avec un service d’authentification réseau.  

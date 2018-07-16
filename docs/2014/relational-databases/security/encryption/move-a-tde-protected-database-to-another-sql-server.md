@@ -5,24 +5,23 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-security
+ms.technology: security
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Transparent Data Encryption, moving
 - TDE, moving a database
 ms.assetid: fb420903-df54-4016-bab6-49e6dfbdedc7
 caps.latest.revision: 15
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: e22249985710ebc3ab63aafe99779602ccffe4ad
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: aliceku
+ms.author: aliceku
+manager: craigg
+ms.openlocfilehash: 7bb389ff9f94a60607f30355ec5cf8ff5872b5ad
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36140042"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37266305"
 ---
 # <a name="move-a-tde-protected-database-to-another-sql-server"></a>Déplacer une base de données protégée par le chiffrement transparent des données vers un autre serveur SQL Server
   Cette rubrique explique comment protéger une base de données à l'aide du chiffrement transparent des données (TDE), puis la déplacer vers une autre instance de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] à l'aide de [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] ou de [!INCLUDE[tsql](../../../includes/tsql-md.md)]. Le chiffrement transparent des données effectue le chiffrement et le déchiffrement d'E/S en temps réel des données et des fichiers journaux. Le chiffrement utilise une clé de chiffrement de base de données (DEK), stockée dans l'enregistrement de démarrage de base de données pour être disponible pendant la récupération. La clé de chiffrement de base de données est une clé symétrique sécurisée à l'aide d'un certificat stocké dans la base de données `master` du serveur ou une clé asymétrique protégée par un module de gestion de clés extensible.  
@@ -51,7 +50,7 @@ ms.locfileid: "36140042"
   
 ###  <a name="Restrictions"></a> Limitations et restrictions  
   
--   Lors du déplacement d'une base de données protégée par chiffrement transparent des données, vous devez également déplacer le certificat ou la clé asymétrique qui sert à ouvrir la clé DEK. Le certificat ou la clé asymétrique doit être installée dans le `master` base de données du serveur de destination, afin que [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] puisse accéder aux fichiers de la base de données. Pour plus d’informations, consultez [Transparent Data Encryption &#40;TDE&#41;](transparent-data-encryption.md).  
+-   Lors du déplacement d'une base de données protégée par chiffrement transparent des données, vous devez également déplacer le certificat ou la clé asymétrique qui sert à ouvrir la clé DEK. Le certificat ou la clé asymétrique doit être installée dans le `master` base de données du serveur de destination, afin que [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] peut accéder aux fichiers de la base de données. Pour plus d’informations, consultez [Transparent Data Encryption &#40;TDE&#41;](transparent-data-encryption.md).  
   
 -   Vous devez conserver des copies du fichier de certificat et du fichier de clé privée pour permettre la récupération du certificat. Le mot de passe de la clé privée ne doit pas forcément être le même que le mot de passe de la clé principale de la base de données.  
   
@@ -61,11 +60,11 @@ ms.locfileid: "36140042"
   
 ####  <a name="Permissions"></a> Permissions  
   
--   Requiert `CONTROL DATABASE` l’autorisation sur le `master` base de données pour créer la clé principale de base de données.  
+-   Requiert `CONTROL DATABASE` autorisation sur le `master` base de données pour créer la clé principale de base de données.  
   
--   Requiert `CREATE CERTIFICATE` l’autorisation sur le `master` base de données pour créer le certificat qui protège la clé DEK.  
+-   Requiert `CREATE CERTIFICATE` autorisation sur le `master` base de données pour créer le certificat qui protège la clé DEK.  
   
--   Requiert `CONTROL DATABASE` sur la base de données chiffrée et `VIEW DEFINITION` sur le certificat ou une clé asymétrique qui est utilisé pour chiffrer la clé de chiffrement de base de données.  
+-   Requiert `CONTROL DATABASE` autorisation sur la base de données chiffrée et `VIEW DEFINITION` autorisation sur le certificat ou une clé asymétrique qui sert à chiffrer la clé de chiffrement de base de données.  
   
 ##  <a name="SSMSProcedure"></a> Pour créer une base de données protégée par le chiffrement transparent des données  
   

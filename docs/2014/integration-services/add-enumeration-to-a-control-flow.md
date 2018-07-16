@@ -1,5 +1,5 @@
 ---
-title: Ajouter une énumération à un flux de contrôle | Documents Microsoft
+title: Ajouter une énumération à un flux de contrôle | Microsoft Docs
 ms.custom: ''
 ms.date: 08/22/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - adding enumerations
 - Foreach Loop containers
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - enumerations [Integration Services]
 ms.assetid: f212b5fb-3cc4-422e-9b7c-89eb769a812a
 caps.latest.revision: 38
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 10d30541be42331b544882f8a8b85f75db7f230d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 039b9a1cd94b3baa207c5d738dc8ed2455bb9d74
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36045009"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37223726"
 ---
 # <a name="add-enumeration-to-a-control-flow"></a>Ajouter une énumération à un flux de contrôle
   [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] inclut le conteneur de boucles Foreach, un élément de flux de contrôle qui permet de facilement inclure une construction de boucle énumérant les fichiers et objets du flux de contrôle d’un package. Pour plus d’informations, consultez [Conteneur de boucles Foreach](control-flow/foreach-loop-container.md).  

@@ -1,5 +1,5 @@
 ---
-title: L’élément DataSourceID (XMLA) | Documents Microsoft
+title: Élément DataSourceID (XMLA) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -24,15 +24,15 @@ helpviewer_keywords:
 - DataSourceID element
 ms.assetid: 695522c7-acca-420a-a5fb-f01f3fd9a96b
 caps.latest.revision: 12
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: 2adec20f28e51639352dc89c70b6682e4df240fc
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: e96d9386319fa9d850a755519fad7360da8ec3b0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36139884"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37231819"
 ---
 # <a name="datasourceid-element-xmla"></a>Élément DataSourceID (XMLA)
   Identifie une source de données utilisée par un [emplacement](location-element-xmla.md) élément pendant une [sauvegarde](../xml-elements-commands/backup-element-xmla.md), [restaurer](../xml-elements-commands/restore-element-xmla.md), ou [synchroniser](../xml-elements-commands/synchronize-element-xmla.md) commande.  

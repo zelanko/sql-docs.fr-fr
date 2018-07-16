@@ -1,5 +1,5 @@
 ---
-title: 'Leçon 2 : Ajout d’une référence Web | Documents Microsoft'
+title: 'Leçon 2 : Ajout d’une référence Web | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: a2c2b8b8-6b13-45ca-ab3b-1582447b6807
 caps.latest.revision: 29
-author: douglaslM
+author: craigg-msft
 ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: ff574cf6ab00b4b368a7d372957b2348757ad0f5
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: ff0efdd840ee2f4efb0da802da64494640911b80
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36139706"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37275625"
 ---
 # <a name="lesson-2-adding-a-web-reference"></a>Leçon 2 : ajout d'une référence Web
   La découverte de service Web est le processus suivant lequel un client recherche un service Web et obtient sa description. Dans [!INCLUDE[vsprvs](../includes/vsprvs-md.md)], le processus de la découverte de service Web implique l'interrogation d'un site Web suivant un algorithme prédéterminé. L'objectif de ce processus est de rechercher la description du service, qui correspond à un document XML utilisant le langage WSDL (Web Services Description Language).  
@@ -34,7 +34,7 @@ ms.locfileid: "36139706"
   
 2.  Dans le **ajouter une référence de Service** boîte de dialogue, cliquez sur **avancé**.  
   
-3.  Dans le **paramètres de référence de Service** boîte de dialogue, cliquez sur **ajouter une référence Web**.  
+3.  Dans le **les paramètres de référence de Service** boîte de dialogue, cliquez sur **ajouter une référence Web**.  
   
 4.  Dans le **URL** zone de la **ajouter une référence Web** boîte de dialogue, tapez l’URL pour obtenir la description du service Web Report Server, tel que http://localhost/reportserver/reportservice2010.asmx. Puis cliquez sur le **accédez** bouton pour récupérer des informations sur le service Web.  
   
@@ -42,7 +42,7 @@ ms.locfileid: "36139706"
   
      Si le service Web Report Server existe sur l’ordinateur local, cliquez sur le **services Web sur l’ordinateur local** lien dans le volet navigateur. Cliquez ensuite sur le lien du service Web ReportService2010 dans la liste fournie.  
   
-5.  Dans le **nom de référence Web** zone, renommez la référence Web ReportService2010, qui est l’espace de noms que vous utiliserez pour cette référence Web.  
+5.  Dans le **nom de référence Web** boîte, renommez la référence Web ReportService2010, qui est l’espace de noms que vous utiliserez pour cette référence Web.  
   
 6.  Cliquez sur **ajouter une référence** pour ajouter une référence Web pour le service Web cible.  
   

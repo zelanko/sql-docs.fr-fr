@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.wmidatareadertask.f1
 helpviewer_keywords:
@@ -18,13 +18,13 @@ ms.assetid: dae57067-0275-4ac3-8f34-1b9d169f1112
 caps.latest.revision: 49
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: d9871b79451feacd256692513e767d9d693e6300
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: e31b3c63d1fab749aea96e0d55fd7a704301d26d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36053124"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37308099"
 ---
 # <a name="wmi-data-reader-task"></a>Tâche Lecteur de données WMI
   La tâche Lecteur de données WMI exécute des requêtes au moyen du langage de requête WMI (Windows Management Instrumentation) qui retournent des informations à partir de WMI sur un système informatique. Vous pouvez utiliser la tâche Lecteur de données WMI pour effectuer les opérations suivantes :  
@@ -88,7 +88,7 @@ Select * FROM Win32_QuickFixEngineering
   
  Pour plus d'informations sur les propriétés définissables dans le concepteur [!INCLUDE[ssIS](../../includes/ssis-md.md)] , cliquez sur l'une des rubriques suivantes :  
   
--   [Éditeur de tâche lecteur de données WMI &#40;Page d’Options WMI&#41;](../wmi-data-reader-task-editor-wmi-options-page.md)  
+-   [Éditeur de tâche lecteur de données WMI &#40;Page d’Options de WMI&#41;](../wmi-data-reader-task-editor-wmi-options-page.md)  
   
 -   [Page Expressions](../expressions/expressions-page.md)  
   

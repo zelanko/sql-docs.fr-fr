@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 5f5e1149-c967-454d-9a63-18ec4a33d985
 caps.latest.revision: 9
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 897cb599b73c6a136c2d79e2a21068dfb05655ed
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 35a17dd8fd787fe585108b661117b36f887bdfca
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36040126"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37331009"
 ---
 # <a name="built-in-globals-and-users-references-report-builder-and-ssrs"></a>Références à des champs Globals et Users prédéfinis (Générateur de rapports et SSRS)
   La collection de champs prédéfinis, qui inclut à la fois les collections `Globals` et `User`, représente les valeurs globales fournies par Reporting Services lorsqu'un rapport est traité. La collection `Globals` fournit des valeurs, telles que le nom du rapport, l'heure de début du traitement du rapport et les numéros des pages actuelles pour l'en-tête ou le pied de page du rapport. La collection `User` fournit les paramètres d'identificateur d'utilisateur et de langue. Ces valeurs peuvent être utilisées dans les expressions pour filtrer les résultats dans un rapport.  
@@ -28,12 +28,12 @@ ms.locfileid: "36040126"
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
 ## <a name="using-the-globals-collection"></a>Utilisation de la collection Globals  
- Le `Globals` collection contient les variables globales pour le rapport. Dans l’aire de conception, ces variables apparaissent avec le préfixe & (esperluette), par exemple, `[&ReportName]`. Le tableau suivant décrit les membres de le `Globals` collection.  
+ Le `Globals` collection contient les variables globales pour le rapport. Dans l’aire de conception, ces variables apparaissent avec le préfixe & (esperluette), par exemple, `[&ReportName]`. Le tableau suivant décrit les membres de la `Globals` collection.  
   
 |**Membre**|**Type**|**Description**|  
 |----------------|--------------|---------------------|  
 |ExecutionTime|`DateTime`|Date et heure du début de l'exécution du rapport.|  
-|PageNumber|`Integer`|Numéro de page actuel relatif aux sauts de page qui réinitialisent le nombre de pages. Au début du traitement des rapports, la valeur initiale est 1. Le numéro de page est incrémenté pour chaque page rendue.<br /><br /> Pour numéroter les pages dans des sauts de page pour un rectangle, une région de données, un groupe de régions de données ou un mappage dans la propriété PageBreak, affectez à la propriété de ResetPageNumber `True`. Non pris en charge dans la hiérarchie des groupes de colonnes de tableau matriciel.<br /><br /> PageNumber peut uniquement être utilisé dans une expression figurant dans un en-tête ou un pied de page.|  
+|PageNumber|`Integer`|Numéro de page actuel relatif aux sauts de page qui réinitialisent le nombre de pages. Au début du traitement des rapports, la valeur initiale est 1. Le numéro de page est incrémenté pour chaque page rendue.<br /><br /> Pour numéroter les pages au sein des sauts de page pour un rectangle, une région de données, un groupe de régions de données ou une carte, dans la propriété PageBreak, la valeur est la propriété ResetPageNumber `True`. Non pris en charge dans la hiérarchie des groupes de colonnes de tableau matriciel.<br /><br /> PageNumber peut uniquement être utilisé dans une expression figurant dans un en-tête ou un pied de page.|  
 |ReportFolder|`String`|Chemin d'accès complet au dossier contenant le rapport. Ce chemin n'inclut pas l'URL du serveur de rapports.|  
 |ReportName|`String`|Nom du rapport tel qu'il est stocké dans la base de données du serveur de rapports.|  
 |ReportServerUrl|`String`|URL du serveur de rapports sur lequel le rapport est en cours d'exécution.|  
@@ -43,7 +43,7 @@ ms.locfileid: "36040126"
 |OverallTotalPages|`Integer`|Nombre total de pages pour le rapport entier. Cette valeur n’est pas affectée par ResetPageNumber.<br /><br /> OverallTotalPages peut uniquement être utilisé dans une expression figurant dans un en-tête ou un pied de page.|  
 |RenderFormat|`RenderFormat`|Informations sur la demande de rendu actuelle.<br /><br /> Pour plus d'informations, consultez « RenderFormat » dans la section suivante.|  
   
- Membres de la `Globals` collection retournent un type variant. Si vous souhaitez utiliser un membre de cette collection dans une expression nécessitant un type de données spécifique, vous devez en premier lieu effectuer le cast de la variable. Par exemple, pour convertir le type Variant de temps d'exécution en format de date, utilisez `=CDate(Globals!ExecutionTime)`. Pour plus d’informations, consultez [des Types de données dans les Expressions &#40;le Générateur de rapports et SSRS&#41;](expressions-report-builder-and-ssrs.md).  
+ Membres de la `Globals` collection retournent un type variant. Si vous souhaitez utiliser un membre de cette collection dans une expression nécessitant un type de données spécifique, vous devez en premier lieu effectuer le cast de la variable. Par exemple, pour convertir le type Variant de temps d'exécution en format de date, utilisez `=CDate(Globals!ExecutionTime)`. Pour plus d’informations, consultez [des Types de données dans les Expressions &#40;Générateur de rapports et SSRS&#41;](expressions-report-builder-and-ssrs.md).  
   
 ### <a name="renderformat"></a>RenderFormat  
  Le tableau suivant décrit les membres de `RenderFormat`.  
@@ -72,9 +72,9 @@ ms.locfileid: "36040126"
      `=IIF(Globals!RenderFormat.Name = "EXCELOPENXML" OR Globals!RenderFormat.Name = "EXCEL", false, true)`  
   
 ## <a name="using-the-user-collection"></a>Utilisation de la collection User  
- Le `User` collection contient des données sur l’utilisateur qui exécute le rapport. Vous pouvez utiliser cette collection pour filtrer les données qui apparaissent dans un rapport, par exemple pour montrer uniquement les données de l'utilisateur actuel ou inclure l'ID utilisateur dans un titre de rapport. Dans l’aire de conception, ces variables apparaissent avec le préfixe & (esperluette), par exemple, `[&UserID]`.  
+ Le `User` collection contient des données relatives à l’utilisateur qui exécute le rapport. Vous pouvez utiliser cette collection pour filtrer les données qui apparaissent dans un rapport, par exemple pour montrer uniquement les données de l'utilisateur actuel ou inclure l'ID utilisateur dans un titre de rapport. Dans l’aire de conception, ces variables apparaissent avec le préfixe & (esperluette), par exemple, `[&UserID]`.  
   
- Le tableau suivant décrit les membres de le `User` collection.  
+ Le tableau suivant décrit les membres de la `User` collection.  
   
 |**Membre**|**Type**|**Description**|  
 |----------------|--------------|---------------------|  
@@ -96,7 +96,7 @@ ms.locfileid: "36040126"
  [Expressions &#40;Générateur de rapports et SSRS&#41;](expressions-report-builder-and-ssrs.md)   
  [Boîte de dialogue Expression &#40;Générateur de rapports&#41;](../expression-dialog-box-report-builder.md)   
  [Types de données dans les expressions &#40;Générateur de rapports et SSRS&#41;](expressions-report-builder-and-ssrs.md)   
- [Mise en forme des nombres et des Dates &#40;rapport Générateur et SSRS&#41;](formatting-numbers-and-dates-report-builder-and-ssrs.md)   
+ [Mise en forme des nombres et des Dates &#40;Générateur de rapports et SSRS&#41;](formatting-numbers-and-dates-report-builder-and-ssrs.md)   
  [Exemples d’expressions &#40;Générateur de rapports et SSRS&#41;](expression-examples-report-builder-and-ssrs.md)  
   
   

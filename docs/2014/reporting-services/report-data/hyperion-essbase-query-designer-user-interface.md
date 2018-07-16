@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - "10013"
 - sql12.rtp.rptdesigner.dataview.hyperionessbasequerydesigner.f1
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - Hyperion Essbase [Reporting Services], query designer
 ms.assetid: bc91b422-c6ab-4062-a300-8290fae6191b
 caps.latest.revision: 21
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 7d888349a97cbc05a03c6e32053b805d88ac857f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: 7c93db9a11c9e3aa33a3e5119aee548f58cc7edb
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36152762"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37330989"
 ---
 # <a name="hyperion-essbase-query-designer-user-interface"></a>Interface utilisateur du Concepteur de requêtes Hyperion Essbase
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] fournit un concepteur de requêtes graphique permettant de générer des requêtes MDX (Multidimensional Expression) pour une source de données [!INCLUDE[extEssbase](../../../includes/extessbase-md.md)]. Le concepteur de requêtes graphique MDX comporte deux modes : le mode Création et le mode Requête. Chaque mode fournit un volet Métadonnées à partir duquel vous pouvez faire glisser des membres d'un cube défini sur la source de données pour créer une requête MDX qui récupère des données lors du traitement du rapport.  
@@ -41,7 +41,7 @@ ms.locfileid: "36152762"
  Cette section décrit les boutons de la barre d'outils et les volets du Concepteur de requêtes pour chaque mode du concepteur de requêtes graphique.  
   
 ## <a name="graphical-query-designer-in-design-mode"></a>Concepteur de requêtes graphique en mode Création  
- Lorsque vous modifiez une requête MDX pour un jeu de données qui utilise un [!INCLUDE[extEssbase](../../../includes/extessbase-md.md)] source de données, le Concepteur de requêtes graphique s’ouvre en mode Création.  
+ Lorsque vous modifiez une requête MDX pour un dataset qui utilise un [!INCLUDE[extEssbase](../../../includes/extessbase-md.md)] source de données, le Concepteur de requêtes graphique s’ouvre en mode Création.  
   
  La figure suivante présente les différents volets du mode Création.  
   

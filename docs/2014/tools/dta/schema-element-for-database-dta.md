@@ -1,5 +1,5 @@
 ---
-title: Élément de schéma pour la base de données (DTA) | Documents Microsoft
+title: Élément de schéma pour la base de données (DTA) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - XML
 helpviewer_keywords:
 - Schema element
 ms.assetid: d932e59c-953f-4ab4-934d-b6baf344835c
 caps.latest.revision: 13
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 4bcdcba472eb2a439d7786898f30b09d7e1dc50f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: d334d41335d0065fe1883da8b1f5fceae063751e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36140203"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37306699"
 ---
 # <a name="schema-element-for-database-dta"></a>Schema, élément pour les bases de données (Assistant Paramétrage de base de données)
   Spécifie le schéma de la base de données que vous souhaitez paramétrer.  

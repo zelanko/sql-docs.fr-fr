@@ -1,5 +1,5 @@
 ---
-title: Filtrer des données dans une Table (SSAS tabulaire) | Documents Microsoft
+title: Filtrer des données dans une Table (SSAS tabulaire) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.bidtoolset.customfilterdb.f1
 - sql12.asvs.bidtoolset.autofiltermenu.f1
 - sql12.asvs.bidtoolset.notallitemsshowing.f1
 ms.assetid: 3223059d-f525-4835-bf88-ebc195d9dbdc
 caps.latest.revision: 11
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: d58f376d4d7fde1ccd38eab1a1662fb7ad2605cf
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 5232c34c8fdb8a76d24a623103d30863e7e9c21c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36140596"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37306409"
 ---
 # <a name="filter-data-in-a-table-ssas-tabular"></a>Filtrer des données dans une table (SSAS Tabulaire)
   Vous pouvez appliquer des filtres quand vous importez des données pour contrôler les lignes chargées dans une table. Une fois les données importées, vous ne pouvez pas supprimer de lignes individuelles. Toutefois, vous pouvez appliquer des filtres personnalisés pour contrôler la façon dont les lignes sont affichées. Les lignes qui ne répondent pas à ces critères de filtrage sont masquées. Vous pouvez filtrer les données sur une ou plusieurs colonnes. Les filtres sont additifs, ce qui signifie que chaque filtre supplémentaire est basé sur le filtre actuel et réduit davantage le sous-ensemble de données.  

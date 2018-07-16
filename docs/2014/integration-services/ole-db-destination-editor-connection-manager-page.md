@@ -1,5 +1,5 @@
 ---
-title: Éditeur de Destination OLE DB (Page Gestionnaire de connexions) | Documents Microsoft
+title: Éditeur de Destination OLE DB (Page Gestionnaire de connexions) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.oledbdestadapter.connection.f1
 helpviewer_keywords:
 - OLE DB Destination Editor
 ms.assetid: ae2200c6-8ba0-49b7-b01a-53425b84d2ed
 caps.latest.revision: 81
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 0cead24f56ca904d8d1286dfb7e1dd1b96302291
-ms.sourcegitcommit: d463f543e8db4a768f8e9736ff28fedb3fb17b9f
+manager: craigg
+ms.openlocfilehash: 1e6aaff0e415aeaab5e42395a3acd7c0b96a0f00
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/22/2018
-ms.locfileid: "36324713"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37328069"
 ---
 # <a name="ole-db-destination-editor-connection-manager-page"></a>Éditeur de destination OLE DB (page Gestionnaire de connexions)
   Utilisez la page **Gestionnaire de connexions** de la boîte de dialogue **Éditeur de destination OLE DB** pour sélectionner la connexion OLE DB de la destination. Cette page vous permet également de sélectionner une table ou une vue à partir de la base de données.  

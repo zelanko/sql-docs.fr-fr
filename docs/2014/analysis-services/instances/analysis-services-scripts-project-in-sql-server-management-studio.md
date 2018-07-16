@@ -1,5 +1,5 @@
 ---
-title: Projet de Scripts dans SQL Server Management Studio Analysis Services | Documents Microsoft
+title: Projet de Scripts dans SQL Server Management Studio Analysis Services | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - scripts [Analysis Services]
 - scripts [Analysis Services], projects
@@ -18,15 +18,15 @@ helpviewer_keywords:
 - items [Analysis Services]
 ms.assetid: c4f5a06b-e2e4-4660-a3a8-6fd356742c02
 caps.latest.revision: 37
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 2fb85f3620a24b75d25b4e44f36b8385fcc1c12e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: b8aac556b6547656303d4baefb591c2e9f3f13fa
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36044382"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37216409"
 ---
 # <a name="analysis-services-scripts-project-in-sql-server-management-studio"></a>Projet de script Analysis Services dans SQL Server Management Studio
   Dans [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], vous pouvez créer un projet Scripts Analysis Server dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] pour regrouper des scripts liés destinés au développement, à la gestion et au contrôle de code source. Si aucune solution n’est chargée dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], la création d’un nouveau projet Scripts Analysis Server crée automatiquement une solution. Vous pouvez également ajouter le projet Scripts du serveur d'analyse à la solution existante ou le créer dans une nouvelle solution.  

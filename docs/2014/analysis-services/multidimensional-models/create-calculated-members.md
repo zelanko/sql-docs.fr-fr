@@ -1,5 +1,5 @@
 ---
-title: Créer des membres calculés | Documents Microsoft
+title: Créer des membres calculés | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - calculated members [Analysis Services]
 - custom measures [Analysis Services]
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - calculations [Analysis Services], calculated members
 ms.assetid: 820e4b18-9c3a-4b12-a126-ca16d8364a00
 caps.latest.revision: 26
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: d12f7ef55272960d8e120fd46dec4039ca036cbd
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 4b55ab5f489ce9a8b24f6ad39dde643f30c3712f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36044855"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37228359"
 ---
 # <a name="create-calculated-members"></a>Créer des membres calculés
   Vous pouvez créer des mesures ou des membres de dimension personnalisés, nommés « membres calculés », en combinant des données de cube, des opérateurs arithmétiques, des nombres et des fonctions. Par exemple, vous pouvez créer un membre calculé nommé Euros qui convertit les dollars en euros en multipliant une mesure de dollar existante par un taux de conversion. Les euros peuvent ensuite être affichés par l'utilisateur final dans une ligne ou une colonne séparée.  

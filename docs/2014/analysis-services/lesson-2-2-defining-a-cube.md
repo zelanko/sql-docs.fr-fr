@@ -1,5 +1,5 @@
 ---
-title: Définition d’un Cube | Documents Microsoft
+title: Définition d’un Cube | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 8aa4ac2d-857f-4048-baa0-0f314e207cf6
 caps.latest.revision: 24
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: jhubbard
-ms.openlocfilehash: ee7de0dd605b8a6083a6541daf7942cf93ab5916
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 9de74db589624ecbf16785ca108dbdd6c5f9ca87
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36041716"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37323289"
 ---
 # <a name="defining-a-cube"></a>Définition d'un cube
   L'Assistant Cube vous aide à définir les groupes de mesures et les dimensions d'un cube. Dans la tâche suivante, vous allez utiliser l'Assistant Cube pour générer un cube.  
@@ -60,7 +60,7 @@ ms.locfileid: "36041716"
   
 11. Cliquez sur **Suivant**.  
   
-12. Sur le **fin de l’Assistant** , changez le nom du cube à `Analysis Services Tutorial`. Dans le volet Aperçu, vous pouvez voir le groupe de mesures **InternetSales** et ses mesures. Vous pouvez également voir les dimensions **Date**, **Customer** et **Product** .  
+12. Sur le **fin de l’Assistant** page, remplacez le nom du cube à `Analysis Services Tutorial`. Dans le volet Aperçu, vous pouvez voir le groupe de mesures **InternetSales** et ses mesures. Vous pouvez également voir les dimensions **Date**, **Customer** et **Product** .  
   
 13. Cliquez sur **Terminer** pour terminer l’Assistant.  
   
@@ -71,7 +71,7 @@ ms.locfileid: "36041716"
 15. Dans le menu **Fichier** , cliquez sur **Enregistrer tout**.  
   
 ## <a name="next-task-in-lesson"></a>Tâche suivante de la leçon  
- [Ajout d’attributs aux Dimensions](lesson-2-3-adding-attributes-to-dimensions.md)  
+ [Ajout d’attributs aux dimensions](lesson-2-3-adding-attributes-to-dimensions.md)  
   
 ## <a name="see-also"></a>Voir aussi  
  [Cubes dans les modèles multidimensionnels](multidimensional-models/cubes-in-multidimensional-models.md)   

@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.mergejointrans.f1
 helpviewer_keywords:
@@ -21,13 +21,13 @@ ms.assetid: cd8b0412-f83b-4bd2-b227-e53dcfd941a8
 caps.latest.revision: 54
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: d59d600d78aaf70a601382df1cacdea560db1073
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: add8f27df3830fb474f849aa54e21fc4963ab115
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36042945"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37235259"
 ---
 # <a name="merge-join-transformation"></a>transformation de jointure de fusion
   La transformation de jointure de fusion fournit une sortie générée par la réunion, à l'aide d'une jointure FULL, LEFT ou INNER, de deux ensembles de données triés. Par exemple, vous pouvez utiliser une jointure LEFT pour associer une table comprenant des informations sur des produits à une table indiquant le pays ou la région dans lesquels un produit a été fabriqué. Le résultat est une table qui répertorie tous les produits et leur pays ou région d'origine.  
@@ -52,7 +52,7 @@ ms.locfileid: "36042945"
  La transformation de jointure de fusion requiert que les colonnes jointes aient des métadonnées correspondantes. Par exemple, vous ne pouvez pas joindre une colonne d'un type de données numérique à une colonne d'un type de données caractère. Si les données sont du type de données chaîne, la colonne de la deuxième entrée doit avoir une longueur inférieure ou égale à celle de la colonne de la première entrée avec laquelle elle est fusionnée.  
   
 ## <a name="buffer-throttling"></a>Limitation du nombre de tampons  
- Vous n’avez plus à configurer la valeur de la `MaxBuffersPerInput` propriété, car Microsoft a apporté des modifications qui réduisent le risque que la transformation de jointure de fusion consomme trop de mémoire. Ce problème s'est quelquefois produit lorsque plusieurs entrées de jointure de fusion produisaient des données à des taux irréguliers.  
+ Vous n’avez plus à configurer la valeur de la `MaxBuffersPerInput` propriété car Microsoft a apporté des modifications qui réduisent le risque que la transformation de jointure de fusion consomme trop de mémoire. Ce problème s'est quelquefois produit lorsque plusieurs entrées de jointure de fusion produisaient des données à des taux irréguliers.  
   
 ## <a name="related-tasks"></a>Related Tasks  
  Vous pouvez définir les propriétés par le biais du concepteur [!INCLUDE[ssIS](../../../includes/ssis-md.md)] ou par programme.  

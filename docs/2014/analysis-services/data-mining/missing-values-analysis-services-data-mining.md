@@ -1,5 +1,5 @@
 ---
-title: Les valeurs manquantes (Analysis Services - Exploration de données) | Documents Microsoft
+title: Les valeurs manquantes (Analysis Services - Exploration de données) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - attributes [data mining]
 - MISSING_VALUE_SUBSTITUTION
@@ -18,15 +18,15 @@ helpviewer_keywords:
 - coding [Data Mining]
 ms.assetid: 2b34abdc-7ed4-4ec1-8780-052a704d6dbe
 caps.latest.revision: 17
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 5a17112244a037c82e6c2df57a613be99a1c6844
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: fb5e69c5f65dc92345a3e8b6f33b2c59136d3fef
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36052754"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37220469"
 ---
 # <a name="missing-values-analysis-services---data-mining"></a>Valeurs manquantes (Analysis Services - Exploration de données)
   Gérer les *valeurs manquantes* correctement fait partie intégrante d’une modélisation efficace. Cette section explique ce que sont les valeurs manquantes et décrit les fonctionnalités fournies dans [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] pour gérer les valeurs manquantes lors de la génération de structures et de modèles d'exploration de données.  
@@ -46,7 +46,7 @@ ms.locfileid: "36052754"
 ## <a name="calculation-of-the-missing-state"></a>Calcul de l'état manquant  
  Pour l'algorithme d'exploration de données, les valeurs manquantes sont des éléments informatifs. Dans les tables de cas, `Missing` est un état valide comme tout autre état. De plus, un modèle d'exploration de données peut utiliser d'autres valeurs pour prédire si une valeur est manquante. En d'autres termes, le fait qu'une valeur soit manquante n'est pas considéré comme une erreur.  
   
- Lorsque vous créez un modèle d’exploration de données, un `Missing` état est automatiquement ajouté au modèle pour toutes les colonnes discrètes. Par exemple, si la colonne d’entrée [sexe] contient deux valeurs possibles, homme et femme, une troisième valeur est automatiquement ajoutée pour représenter la `Missing` valeur et l’histogramme qui montre la répartition de toutes les valeurs pour la colonne inclut toujours un nombre de les cas avec `Missing` valeurs. S'il ne manque aucune valeur dans la colonne Sexe, l'histogramme indique que l'état manquant est présent dans 0 cas.  
+ Lorsque vous créez un modèle d’exploration de données, un `Missing` état est automatiquement ajouté au modèle pour toutes les colonnes discrètes. Par exemple, si la colonne d’entrée [sexe] contient deux valeurs possibles, homme et femme, une troisième valeur est ajoutée automatiquement pour représenter le `Missing` valeur et l’histogramme qui affiche la distribution de toutes les valeurs pour la colonne inclut toujours un nombre de les cas avec `Missing` valeurs. S'il ne manque aucune valeur dans la colonne Sexe, l'histogramme indique que l'état manquant est présent dans 0 cas.  
   
  Le raisonnement derrière l'inclusion de l'état `Missing` par défaut se justifie par le fait que vos données peuvent ne pas comporter des exemples de toutes les valeurs possibles. En effet, il est illogique qu'un modèle exclue une possibilité uniquement sur la base de l'absence d'un exemple dans les données. Par exemple, si les données de ventes d'un magasin indiquent que tous les clients ayant acheté un produit particulier sont des femmes, vous n'allez pas créer un modèle prédisant que seules les femmes sont susceptibles d'acheter le produit. Au lieu de cela, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ajoute un espace réservé pour la valeur inconnue supplémentaire, appelé `Missing`, comme un moyen de prendre en compte possible autres États.  
   
@@ -60,13 +60,13 @@ ms.locfileid: "36052754"
   
  Cette distribution montre qu'environ la moitié des clients a acheté un vélo et que l'autre moitié n'en n'a pas acheté. Ce jeu de données particulier est très propre ; par conséquent, chaque cas a une valeur dans la colonne [Bike Buyer] et le nombre de valeurs `Missing` est de 0. Toutefois, si un cas comporte une valeur null dans le champ [Bike Buyer], [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] compte cette ligne comme un cas avec un `Missing` valeur.  
   
- Si l'entrée est une colonne continue, le modèle tabule deux états possibles pour l'attribut : `Existing` et `Missing`. En d'autres termes, soit la colonne contient une valeur d'un type de données numérique, soit elle ne contient aucune valeur. Pour les cas qui possèdent une valeur, le modèle calcule la moyenne, l'écart type et d'autres statistiques significatives. Pour les cas qui n’ont aucune valeur, le modèle fournit un nombre de la `Missing` valeurs et ajuste les prédictions en conséquence. La méthode d'ajustement de la prédiction, décrite dans la section suivante, diffère selon l'algorithme.  
+ Si l'entrée est une colonne continue, le modèle tabule deux états possibles pour l'attribut : `Existing` et `Missing`. En d'autres termes, soit la colonne contient une valeur d'un type de données numérique, soit elle ne contient aucune valeur. Pour les cas qui possèdent une valeur, le modèle calcule la moyenne, l'écart type et d'autres statistiques significatives. Pour les cas qui n’ont aucune valeur, le modèle indique le nombre de la `Missing` valeurs et ajuste les prédictions en conséquence. La méthode d'ajustement de la prédiction, décrite dans la section suivante, diffère selon l'algorithme.  
   
 > [!NOTE]  
 >  Pour les attributs dans une table imbriquée, les valeurs manquantes ne constituent pas des éléments informatifs. Par exemple, si un client n’a pas acheté de produit, la table **Products** imbriquée ne contient pas de ligne correspondant à ce produit, et le modèle d’exploration de données ne crée pas d’attribut pour le produit manquant. Toutefois, si vous vous intéressez aux clients qui n'ont pas acheté certains produits, vous pouvez créer un modèle filtré d'après l'inexistence des produits dans la table imbriquée, en utilisant une instruction NOT EXISTS dans le filtre de modèle. Pour plus d’informations, consultez [Appliquer un filtre à un modèle d’exploration de données](apply-a-filter-to-a-mining-model.md).  
   
 ## <a name="adjusting-probability-for-missing-states"></a>Ajustement de la probabilité pour les états manquants  
- Outre le dénombrement des valeurs, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] calcule la probabilité d'une valeur quelconque dans le jeu de données. Est de même pour le `Missing` valeur. Par exemple, le tableau suivant montre les probabilités pour les cas dans l’exemple précédent :  
+ Outre le dénombrement des valeurs, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] calcule la probabilité d'une valeur quelconque dans le jeu de données. Vaut également pour le `Missing` valeur. Par exemple, le tableau suivant montre les probabilités pour les cas dans l’exemple précédent :  
   
 |Valeur|Cas|Probabilité|  
 |-----------|-----------|-----------------|  
@@ -74,7 +74,7 @@ ms.locfileid: "36052754"
 | 1|9098|49.42%|  
 |Manquant|0|0.03%|  
   
- Il peut sembler étrange que la probabilité de la `Missing` la valeur est calculée en tant que 0,03 %, lorsque le nombre de cas est 0. En fait, ce comportement est normal et représente un ajustement qui permet au modèle de gérer les valeurs inconnues correctement.  
+ Il peut sembler étrange que la probabilité de la `Missing` valeur est calculée comme 0,03 % avec le nombre de cas égal à 0. En fait, ce comportement est normal et représente un ajustement qui permet au modèle de gérer les valeurs inconnues correctement.  
   
  En général, la probabilité correspond au nombre de cas favorables divisé par tous les cas possibles. Dans cet exemple, l'algorithme calcule la somme des cas qui remplissent une condition particulière ([Bike Buyer] = 1 ou [Bike Buyer] = 0), puis divise ce nombre par le nombre total de lignes. Toutefois, pour tenir compte des cas `Missing`, la valeur 1 est ajoutée au nombre de cas possibles. Ainsi, la probabilité pour le cas inconnu n'est plus nulle, mais un nombre très petit indiquant que l'état est seulement improbable, mais pas impossible.  
   
@@ -89,7 +89,7 @@ ms.locfileid: "36052754"
 >  Chaque algorithme, notamment les algorithmes personnalisés que vous avez pu obtenir d’un plug-in tiers, peut gérer les valeurs manquantes différemment.  
   
 ### <a name="special-handling-of-missing-values-in-decision-tree-models"></a>Gestion spéciale des valeurs manquantes dans les modèles d'arbre de décision  
- L'algorithme MDT (Microsoft Decision Trees) ne calcule pas les probabilités pour les valeurs manquantes de la même façon que les autres algorithmes. Au lieu d’ajouter simplement la valeur 1 au nombre total de cas, l’algorithme d’arbres de décision s’ajuste à la `Missing` état à l’aide d’une formule légèrement différente.  
+ L'algorithme MDT (Microsoft Decision Trees) ne calcule pas les probabilités pour les valeurs manquantes de la même façon que les autres algorithmes. Au lieu de simplement ajouter la valeur 1 au nombre total de cas, l’algorithme d’arbres de décision s’ajuste pour le `Missing` état à l’aide d’une formule légèrement différente.  
   
  Dans un modèle d'arbres de décision, la probabilité de l'état `Missing` est calculée comme suit :  
   
@@ -112,13 +112,13 @@ ms.locfileid: "36052754"
   
 |Tâches|Liens|  
 |-----------|-----------|  
-|Ajouter des indicateurs à différentes colonnes du modèle pour contrôler la gestion des valeurs manquantes|[Afficher ou modifier des indicateurs de modélisation &#40;d’exploration de données&#41;](modeling-flags-data-mining.md)|  
+|Ajouter des indicateurs à différentes colonnes du modèle pour contrôler la gestion des valeurs manquantes|[Afficher ou modifier des indicateurs de modélisation &#40;exploration de données&#41;](modeling-flags-data-mining.md)|  
 |Définir des propriétés sur un modèle d'exploration de données pour contrôler la gestion des valeurs manquantes|[Modifier les propriétés d’un modèle d’exploration de données](change-the-properties-of-a-mining-model.md)|  
-|Découvrir comment spécifier des indicateurs de modélisation dans DMX|[Les indicateurs de modélisation &#40;DMX&#41;](/sql/dmx/modeling-flags-dmx)|  
+|Découvrir comment spécifier des indicateurs de modélisation dans DMX|[Indicateurs de modélisation &#40;DMX&#41;](/sql/dmx/modeling-flags-dmx)|  
 |Modifier la façon dont la structure d'exploration de données gère les valeurs manquantes|[Modifier les propriétés d’une structure d’exploration de données](change-the-properties-of-a-mining-structure.md)|  
   
 ## <a name="see-also"></a>Voir aussi  
  [Contenu du modèle d’exploration de données &#40;Analysis Services - Exploration de données&#41;](mining-model-content-analysis-services-data-mining.md)   
- [Les indicateurs de modélisation &#40;d’exploration de données&#41;](modeling-flags-data-mining.md)  
+ [Indicateurs de modélisation &#40;exploration de données&#41;](modeling-flags-data-mining.md)  
   
   

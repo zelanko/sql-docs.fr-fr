@@ -1,5 +1,5 @@
 ---
-title: Propriétés de membre (MDX) défini par l’utilisateur | Documents Microsoft
+title: Propriétés de membre (MDX) défini par l’utilisateur | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,23 +8,23 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - custom member properties [MDX]
 ms.assetid: b64cc581-e784-42c4-bec8-932abd687423
 caps.latest.revision: 33
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: ba34243609b796eef635fc3b55cd99ef4f225638
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 50af6373446859ac0bf98a7170504b9d58c4a5f9
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36042318"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37321279"
 ---
 # <a name="user-defined-member-properties-mdx"></a>Propriétés de membre définies par l'utilisateur (MDX)
-  Les propriétés de membre définies par l'utilisateur peuvent être ajoutées à un niveau spécifique dans une dimension en tant que relations d'attributs. Propriétés de membre définies par l’utilisateur ne peut pas être ajoutées à la `(All)` au niveau d’une hiérarchie, ou à la hiérarchie de lui-même.  
+  Les propriétés de membre définies par l'utilisateur peuvent être ajoutées à un niveau spécifique dans une dimension en tant que relations d'attributs. Propriétés de membre définies par l’utilisateur ne peut pas être ajoutées à la `(All)` au niveau d’une hiérarchie, ou à la hiérarchie elle-même.  
   
 ## <a name="creating-user-defined-member-properties"></a>Création de propriétés de membre définies par l'utilisateur  
  Les propriétés de membre définies par l'utilisateur peuvent être ajoutées à des dimensions ou à des cubes basés sur le serveur par l'intermédiaire de l'interface utilisateur ou par programmation :  
@@ -41,7 +41,7 @@ ms.locfileid: "36042318"
   
  `DIMENSION PROPERTIES [Dimension.]Level.<Custom_Member_Property>`  
   
- Le `PROPERTIES` mot clé apparaît après l’expression d’ensemble de la spécification de l’axe. Par exemple, la requête MDX suivante le `PROPERTIES` (mot clé) récupère la `List Price` et `Dealer Price` des propriétés de membre définies par l’utilisateur et apparaît une fois que l’expression d’ensemble qui identifie les produits vendus en janvier :  
+ Le `PROPERTIES` mot clé apparaît après l’expression d’ensemble de la spécification de l’axe. Par exemple, la requête MDX suivante le `PROPERTIES` mot clé récupère le `List Price` et `Dealer Price` des propriétés de membre définies par l’utilisateur et apparaît une fois que l’expression d’ensemble qui identifie les produits vendus en janvier :  
   
 ```  
 SELECT   
@@ -56,7 +56,7 @@ WHERE ([Date].[Month of Year].[January])
 ```  
   
 ### <a name="using-the-properties-function-to-retrieve-user-defined-member-properties"></a>Utilisation de la fonction Properties pour récupérer des propriétés de membre définies par l'utilisateur  
- Vous pouvez également accéder à des propriétés de membre définies par l'utilisateur à l'aide de la fonction `Properties`. Par exemple, la requête MDX suivante utilise le `WITH` (mot clé) pour créer un membre calculé composé de la `List Price` propriété de membre :  
+ Vous pouvez également accéder à des propriétés de membre définies par l'utilisateur à l'aide de la fonction `Properties`. Par exemple, la requête MDX suivante utilise le `WITH` mot clé pour créer un membre calculé composé de la `List Price` propriété de membre :  
   
 ```  
 WITH   

@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - snapshots [SQL Server replication], creating
 - snapshot replication [SQL Server], initial snapshots
 ms.assetid: 742727a1-5189-44ec-b3ae-6fd7aa1f5347
 caps.latest.revision: 42
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: acb9bfe0b078dae12d4c4db1263f86dcd7700590
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 13184d6de8612a2b86492854e755961008e3f3ef
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36041098"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37329854"
 ---
 # <a name="create-and-apply-the-initial-snapshot"></a>Créer et appliquer l'instantané initial
   Cette rubrique explique comment créer et appliquer l'instantané initial dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] à l'aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], de [!INCLUDE[tsql](../../includes/tsql-md.md)]ou des objets RMO (Replication Management Objects). Les publications de fusion qui utilisent des filtres paramétrés nécessitent un instantané en deux parties. Pour plus d'informations, voir [Créer un instantané d’une publication de fusion avec des filtres paramétrés](create-a-snapshot-for-a-merge-publication-with-parameterized-filters.md).  
@@ -161,11 +161,11 @@ ms.locfileid: "36041098"
   
 3.  Appelez la méthode <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> pour charger les propriétés restantes de l'objet. Si cette méthode retourne `false`, soit les propriétés de la publication à l’étape 2 ont été définies de manière incorrecte ou que la publication n’existe pas.  
   
-4.  Si la valeur de <xref:Microsoft.SqlServer.Replication.Publication.SnapshotAgentExists%2A> est `false`, appelez <xref:Microsoft.SqlServer.Replication.Publication.CreateSnapshotAgent%2A> pour créer le travail de l’agent de capture instantanée pour cette publication.  
+4.  Si la valeur de <xref:Microsoft.SqlServer.Replication.Publication.SnapshotAgentExists%2A> est `false`, appelez <xref:Microsoft.SqlServer.Replication.Publication.CreateSnapshotAgent%2A> pour créer le travail de l’agent d’instantané pour cette publication.  
   
 5.  Appelez la méthode <xref:Microsoft.SqlServer.Replication.Publication.StartSnapshotGenerationAgentJob%2A> pour démarrer le travail de l'agent qui génère l'instantané pour cette publication.  
   
-6.  (Facultatif) Lorsque la valeur de <xref:Microsoft.SqlServer.Replication.TransPublication.SnapshotAvailable%2A> est `true`, l’instantané est disponible pour les abonnés.  
+6.  (Facultatif) Lorsque la valeur de <xref:Microsoft.SqlServer.Replication.TransPublication.SnapshotAvailable%2A> est `true`, l’instantané est disponible aux abonnés.  
   
 #### <a name="to-generate-the-initial-snapshot-for-a-snapshot-or-transactional-publication-by-running-the-snapshot-agent-synchronous"></a>Pour générer l'instantané initial pour une publication transactionnelle ou d'instantané en exécutant l'Agent d'instantané (synchrone)  
   
@@ -195,11 +195,11 @@ ms.locfileid: "36041098"
   
 3.  Appelez la méthode <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> pour charger les propriétés restantes de l'objet. Si cette méthode retourne `false`, soit les propriétés de la publication à l’étape 2 ont été définies de manière incorrecte ou que la publication n’existe pas.  
   
-4.  Si la valeur de <xref:Microsoft.SqlServer.Replication.Publication.SnapshotAgentExists%2A> est `false`, appelez <xref:Microsoft.SqlServer.Replication.Publication.CreateSnapshotAgent%2A> pour créer le travail de l’agent de capture instantanée pour cette publication.  
+4.  Si la valeur de <xref:Microsoft.SqlServer.Replication.Publication.SnapshotAgentExists%2A> est `false`, appelez <xref:Microsoft.SqlServer.Replication.Publication.CreateSnapshotAgent%2A> pour créer le travail de l’agent d’instantané pour cette publication.  
   
 5.  Appelez la méthode <xref:Microsoft.SqlServer.Replication.Publication.StartSnapshotGenerationAgentJob%2A> pour démarrer le travail de l'agent qui génère l'instantané pour cette publication.  
   
-6.  (Facultatif) Lorsque la valeur de <xref:Microsoft.SqlServer.Replication.MergePublication.SnapshotAvailable%2A> est `true`, l’instantané est disponible pour les abonnés.  
+6.  (Facultatif) Lorsque la valeur de <xref:Microsoft.SqlServer.Replication.MergePublication.SnapshotAvailable%2A> est `true`, l’instantané est disponible aux abonnés.  
   
 #### <a name="to-generate-the-initial-snapshot-for-a-merge-publication-by-running-the-snapshot-agent-synchronous"></a>Pour générer l'instantané initial pour une publication de fusion en exécutant l'Agent d'instantané (synchrone)  
   

@@ -1,5 +1,5 @@
 ---
-title: Procédures stockées CLR | Documents Microsoft
+title: Procédures stockées CLR | Microsoft Docs
 ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
@@ -23,32 +23,32 @@ helpviewer_keywords:
 - tabular results
 ms.assetid: bbdd51b2-a9b4-4916-ba6f-7957ac6c3f33
 caps.latest.revision: 74
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 7f90cbc5e45a095225f5937864d87d336a9c95da
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: db6d1dd298cba3960189c3983ab9d4781113d569
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36140089"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37225879"
 ---
 # <a name="clr-stored-procedures"></a>Procédures stockées du CLR
-  Les procédures stockées sont des routines que vous ne pouvez pas utiliser dans des expressions scalaires. Contrairement aux fonctions scalaires, elles peuvent retourner des résultats scalaires et des messages au client, appeler des instructions DDL (Data Definition Language) et DML (Data Manipulation Language) et retourner des paramètres de sortie. Pour plus d’informations sur les avantages de l’intégration du CLR et en choisissant entre le code managé et [!INCLUDE[tsql](../../includes/tsql-md.md)], consultez [vue d’ensemble de l’intégration CLR](../../relational-databases/clr-integration/clr-integration-overview.md).  
+  Les procédures stockées sont des routines que vous ne pouvez pas utiliser dans des expressions scalaires. Contrairement aux fonctions scalaires, elles peuvent retourner des résultats scalaires et des messages au client, appeler des instructions DDL (Data Definition Language) et DML (Data Manipulation Language) et retourner des paramètres de sortie. Pour plus d’informations sur les avantages de l’intégration du CLR et le choix entre le code managé et [!INCLUDE[tsql](../../includes/tsql-md.md)], consultez [vue d’ensemble de l’intégration du CLR](../../relational-databases/clr-integration/clr-integration-overview.md).  
   
 ## <a name="requirements-for-clr-stored-procedures"></a>Configuration requise pour les procédures stockées CLR  
  Dans le common language runtime (CLR), les procédures stockées sont implémentées en tant que méthodes statiques publiques sur une classe dans un [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] assembly. La méthode statique peut soit être déclarée de type « void », soit retourner une valeur entière. Si elle retourne une valeur entière, l'entier retourné est traité comme le code de retour de la procédure. Exemple :  
   
  `EXECUTE @return_status = procedure_name`  
   
- Le @return_status variable contient la valeur retournée par la méthode. Si la méthode est déclarée de type void, le code de retour est 0.  
+ Le @return_status variable contiendra la valeur retournée par la méthode. Si la méthode est déclarée de type void, le code de retour est 0.  
   
  Si la méthode accepte des paramètres, le nombre de paramètres dans l'implémentation [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] doit être identique au nombre de paramètres employés dans la déclaration [!INCLUDE[tsql](../../includes/tsql-md.md)] de la procédure stockée.  
   
- Les paramètres passés à une procédure stockée CLR peuvent être de n'importe quel type [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] doté d'un équivalent en code managé. Pour que la syntaxe [!INCLUDE[tsql](../../includes/tsql-md.md)] crée la procédure, ces types doivent être spécifiés avec le type [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] natif équivalent le mieux approprié. Pour plus d’informations sur les conversions de type, consultez [de mappage de données de paramètre CLR](../../relational-databases/clr-integration-database-objects-types-net-framework/mapping-clr-parameter-data.md).  
+ Les paramètres passés à une procédure stockée CLR peuvent être de n'importe quel type [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] doté d'un équivalent en code managé. Pour que la syntaxe [!INCLUDE[tsql](../../includes/tsql-md.md)] crée la procédure, ces types doivent être spécifiés avec le type [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] natif équivalent le mieux approprié. Pour plus d’informations sur les conversions de type, consultez [mappage des données de paramètre CLR](../../relational-databases/clr-integration-database-objects-types-net-framework/mapping-clr-parameter-data.md).  
   
 ### <a name="table-valued-parameters"></a>Paramètres table  
- Les paramètres table (types de tables définis par l'utilisateur et passés dans une procédure ou une fonction) offrent un moyen efficace pour passer plusieurs lignes de données au serveur. Paramètres table fournissent des fonctionnalités semblables aux tableaux de paramètres, mais offrent une plus grande souplesse et une intégration plus étroite avec [!INCLUDE[tsql](../../includes/tsql-md.md)]. Ils sont également susceptibles de générer de meilleures performances. Les paramètres table aident également à réduire le nombre d'allers-retours au serveur. Au lieu d'envoyer plusieurs demandes au serveur, comme avec une liste de paramètres scalaires, les données peuvent être envoyées au serveur en tant que paramètres table. Un type de table défini par l'utilisateur ne peut pas être passé en tant que paramètre table à une fonction ou à une procédure stockée managée s'exécutant dans le processus [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], ni être retourné à partir de ces dernières. Pour plus d’informations sur les paramètres table, consultez [utiliser des paramètres &#40;moteur de base de données&#41;](../../relational-databases/tables/use-table-valued-parameters-database-engine.md).  
+ Les paramètres table (types de tables définis par l'utilisateur et passés dans une procédure ou une fonction) offrent un moyen efficace pour passer plusieurs lignes de données au serveur. Paramètres table fournissent des fonctionnalités similaires aux tableaux de paramètres, mais offrent une plus grande flexibilité et une intégration plus étroite avec [!INCLUDE[tsql](../../includes/tsql-md.md)]. Ils sont également susceptibles de générer de meilleures performances. Les paramètres table aident également à réduire le nombre d'allers-retours au serveur. Au lieu d'envoyer plusieurs demandes au serveur, comme avec une liste de paramètres scalaires, les données peuvent être envoyées au serveur en tant que paramètres table. Un type de table défini par l'utilisateur ne peut pas être passé en tant que paramètre table à une fonction ou à une procédure stockée managée s'exécutant dans le processus [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], ni être retourné à partir de ces dernières. Pour plus d’informations sur les paramètres table, consultez [utiliser les paramètres &#40;moteur de base de données&#41;](../../relational-databases/tables/use-table-valued-parameters-database-engine.md).  
   
 ## <a name="returning-results-from-clr-stored-procedures"></a>Retour des résultats des procédures stockées CLR  
  Plusieurs moyens permettent de retourner des informations des procédures stockées [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]. Il peut s'agir notamment de paramètres de sortie, de résultats sous forme de tableau et de messages.  
@@ -142,7 +142,7 @@ AS EXTERNAL NAME TestStoredProc.StoredProcedures.PriceSum
 -- AS EXTERNAL NAME TestStoredProc.[MyNS.StoredProcedures].PriceSum  
 ```  
   
- Notez que *somme* est déclaré comme un `int` type de données SQL Server et que le *valeur* le paramètre défini dans la procédure stockée CLR est spécifié comme un `SqlInt32` type de données CLR. Lorsqu’un programme appelant exécute la procédure stockée CLR, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] convertit automatiquement le `SqlInt32` type de données CLR à un `int` [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] type de données.  Pour plus d’informations sur le CLR des types de données peuvent et ne peut pas être convertis, consultez [de mappage de données de paramètre CLR](../../relational-databases/clr-integration-database-objects-types-net-framework/mapping-clr-parameter-data.md).  
+ Notez que *somme* est déclaré comme un `int` type de données SQL Server et que le *valeur* paramètre défini dans la procédure stockée CLR est spécifié comme un `SqlInt32` type de données CLR. Lorsqu’un programme appelant exécute la procédure stockée CLR, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] convertit automatiquement le `SqlInt32` type de données CLR à un `int` [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] type de données.  Pour plus d’informations sur le CLR des types de données peuvent et ne peut pas être convertis, consultez [mappage des données de paramètre CLR](../../relational-databases/clr-integration-database-objects-types-net-framework/mapping-clr-parameter-data.md).  
   
 ### <a name="returning-tabular-results-and-messages"></a>Retour de résultats sous forme de tableau et de messages  
  Le retour au client de résultats sous forme de tableau et de messages s'effectue via l'objet `SqlPipe` obtenu en utilisant la propriété `Pipe` de la classe `SqlContext`. L'objet `SqlPipe` emploie une méthode `Send`. En appelant la méthode `Send`, vous pouvez transmettre des données à l'application appelante par l'intermédiaire du canal.  
@@ -386,7 +386,7 @@ END;
 ```  
   
 > [!NOTE]  
->  Les messages et les jeux de résultats sont extraits différemment dans l'application cliente. Par exemple, [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] jeux de résultats apparaissent dans le **résultats** vue et les messages s’affichent dans le **Messages** volet.  
+>  Les messages et les jeux de résultats sont extraits différemment dans l'application cliente. Par exemple, [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] jeux de résultats s’affichent dans le **résultats** vue et les messages s’affichent dans le **Messages** volet.  
   
  Si le code Visual C# ci-avant est enregistré dans un fichier MyFirstUdp.cs et compilé avec :  
   

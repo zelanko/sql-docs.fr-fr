@@ -1,13 +1,11 @@
 ---
-title: Les fonctions scalaires CLR | Documents Microsoft
+title: Les fonctions scalaires CLR | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: clr
 ms.tgt_pltfrm: ''
 ms.topic: reference
 dev_langs:
@@ -19,21 +17,21 @@ helpviewer_keywords:
 - scalar-valued functions
 ms.assetid: 20dcf802-c27d-4722-9cd3-206b1e77bee0
 caps.latest.revision: 81
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 93c56555b0a11e2638f58019f6214c8c6971760c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: rothja
+ms.author: jroth
+manager: craigg
+ms.openlocfilehash: 5dee7f6654bdf4e24eb170b968dd8afa366e8211
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36155056"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37350929"
 ---
 # <a name="clr-scalar-valued-functions"></a>Fonctions scalaires CLR
-  Une fonction scalaire (SVF) retourne une valeur unique, telle qu'une chaîne, un entier ou une valeur binaire. Vous pouvez créer des fonctions scalaires définies par l'utilisateur en code managé à l'aide de tout langage de programmation .NET Framework. Ces fonctions sont accessibles au code [!INCLUDE[tsql](../../includes/tsql-md.md)] ou autre code managé. Pour plus d’informations sur les avantages de l’intégration du CLR et en choisissant entre le code managé et [!INCLUDE[tsql](../../includes/tsql-md.md)], consultez [vue d’ensemble de l’intégration CLR](../clr-integration/clr-integration-overview.md).  
+  Une fonction scalaire (SVF) retourne une valeur unique, telle qu'une chaîne, un entier ou une valeur binaire. Vous pouvez créer des fonctions scalaires définies par l'utilisateur en code managé à l'aide de tout langage de programmation .NET Framework. Ces fonctions sont accessibles au code [!INCLUDE[tsql](../../includes/tsql-md.md)] ou autre code managé. Pour plus d’informations sur les avantages de l’intégration du CLR et le choix entre le code managé et [!INCLUDE[tsql](../../includes/tsql-md.md)], consultez [vue d’ensemble de l’intégration du CLR](../clr-integration/clr-integration-overview.md).  
   
 ## <a name="requirements-for-clr-scalar-valued-functions"></a>Spécifications relatives aux fonctions scalaires CLR  
- Les fonctions scalaires .NET Framework sont implémentées en tant que méthodes d'une classe dans un assembly .NET Framework. Les paramètres d’entrée et le type retourné à partir d’une fonction scalaire peuvent être un des types de données scalaires pris en charge par [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], à l’exception de `varchar`, `char`, `rowversion`, `text`, `ntext`, `image`, `timestamp`, `table`, ou `cursor`. Les fonctions scalaires doivent garantir une correspondance entre le type de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et le type de données de retour de la méthode d'implémentation. Pour plus d’informations sur les conversions de type, consultez [de mappage de données de paramètre CLR](../clr-integration-database-objects-types-net-framework/mapping-clr-parameter-data.md).  
+ Les fonctions scalaires .NET Framework sont implémentées en tant que méthodes d'une classe dans un assembly .NET Framework. Les paramètres d’entrée et le type retourné à partir d’une fonction scalaire peuvent être un des types de données scalaires pris en charge par [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], à l’exception `varchar`, `char`, `rowversion`, `text`, `ntext`, `image`, `timestamp`, `table`, ou `cursor`. Les fonctions scalaires doivent garantir une correspondance entre le type de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et le type de données de retour de la méthode d'implémentation. Pour plus d’informations sur les conversions de type, consultez [mappage des données de paramètre CLR](../clr-integration-database-objects-types-net-framework/mapping-clr-parameter-data.md).  
   
  Lors de l'implémentation d'une fonction scalaire .NET Framework dans un langage .NET Framework, l'attribut personnalisé `SqlFunction` peut être spécifié de façon à inclure des informations supplémentaires à propos de la fonction. L'attribut `SqlFunction` indique si la fonction accède ou modifie des données, si elle est déterministe et si elle implique des opérations de virgule flottante.  
   
@@ -43,7 +41,7 @@ ms.locfileid: "36155056"
 >  Ne marquez pas une fonction comme étant déterministe si elle ne produit pas toujours les mêmes valeurs de sortie à partir des mêmes valeurs d'entrée et du même état de base de données. Le marquage d'une fonction comme étant déterministe alors que cette dernière ne l'est pas vraiment peut provoquer une altération des vues indexées et des colonnes calculées. Pour marquer une fonction comme déterministe, vous devez affecter la valeur « true » à la propriété `IsDeterministic`.  
   
 ### <a name="table-valued-parameters"></a>Paramètres table  
- Les paramètres table (types de tables définis par l'utilisateur et passés dans une procédure ou une fonction) offrent un moyen efficace pour passer plusieurs lignes de données au serveur. Paramètres table fournissent des fonctionnalités semblables aux tableaux de paramètres, mais offrent une plus grande souplesse et une intégration plus étroite avec [!INCLUDE[tsql](../../includes/tsql-md.md)]. Ils sont également susceptibles de générer de meilleures performances. Les paramètres table aident également à réduire le nombre d'allers-retours au serveur. Au lieu d'envoyer plusieurs demandes au serveur, comme avec une liste de paramètres scalaires, les données peuvent être envoyées au serveur en tant que paramètres table. Un type de table défini par l'utilisateur ne peut pas être passé en tant que paramètre table à une fonction ou à une procédure stockée managée s'exécutant dans le processus [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], ni être retourné à partir de ces dernières. Pour plus d’informations sur les paramètres table, consultez [utiliser des paramètres &#40;moteur de base de données&#41;](../tables/use-table-valued-parameters-database-engine.md).  
+ Les paramètres table (types de tables définis par l'utilisateur et passés dans une procédure ou une fonction) offrent un moyen efficace pour passer plusieurs lignes de données au serveur. Paramètres table fournissent des fonctionnalités similaires aux tableaux de paramètres, mais offrent une plus grande flexibilité et une intégration plus étroite avec [!INCLUDE[tsql](../../includes/tsql-md.md)]. Ils sont également susceptibles de générer de meilleures performances. Les paramètres table aident également à réduire le nombre d'allers-retours au serveur. Au lieu d'envoyer plusieurs demandes au serveur, comme avec une liste de paramètres scalaires, les données peuvent être envoyées au serveur en tant que paramètres table. Un type de table défini par l'utilisateur ne peut pas être passé en tant que paramètre table à une fonction ou à une procédure stockée managée s'exécutant dans le processus [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], ni être retourné à partir de ces dernières. Pour plus d’informations sur les paramètres table, consultez [utiliser les paramètres &#40;moteur de base de données&#41;](../tables/use-table-valued-parameters-database-engine.md).  
   
 ## <a name="example-of-a-clr-scalar-valued-function"></a>Exemple de fonction scalaire CLR  
  Voici une fonction scalaire simple qui accède à des données et renvoie une valeur entière :  
@@ -156,8 +154,8 @@ GO
  Notez qu'il n'est pas obligatoire que le nom de fonction tel qu'exposé dans [!INCLUDE[tsql](../../includes/tsql-md.md)] corresponde au nom de la méthode statique publique cible.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Mappage de données de paramètre CLR](../clr-integration-database-objects-types-net-framework/mapping-clr-parameter-data.md)   
- [Vue d’ensemble des attributs personnalisés de l’intégration de CLR](../../database-engine/dev-guide/overview-of-clr-integration-custom-attributes.md)   
+ [Mappage des données de paramètre CLR](../clr-integration-database-objects-types-net-framework/mapping-clr-parameter-data.md)   
+ [Vue d’ensemble d’attributs personnalisés de l’intégration de CLR](../../database-engine/dev-guide/overview-of-clr-integration-custom-attributes.md)   
  [Fonctions définies par l’utilisateur](../user-defined-functions/user-defined-functions.md)   
  [Accès aux données à partir d'objets de base de données CLR](../clr-integration/data-access/data-access-from-clr-database-objects.md)  
   

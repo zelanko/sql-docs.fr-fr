@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 2422b1e2-822f-4379-9d7f-9afebb350e3f
 caps.latest.revision: 6
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 51a549b7fbea2bc4b1c5e41114e831ff3f68550b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: ef91743d7a5a4106b51761901ba6f18b9f24d5a1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36042816"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37303669"
 ---
 # <a name="display-row-and-column-headers-on-multiple-pages-report-builder-and-ssrs"></a>Afficher des en-têtes de ligne et de colonne sur plusieurs pages (Générateur de rapports et SSRS)
   Vous pouvez décider de répéter les en-têtes de ligne et de colonne sur chaque page pour une région de données de tableau matriciel qui couvre plusieurs pages. Une région de données de tableau matriciel peut être une table, une matrice ou une liste.  
@@ -73,9 +73,9 @@ ms.locfileid: "36042816"
   
 ## <a name="see-also"></a>Voir aussi  
  [Recherche, affichage et gestion des rapports &#40;Générateur de rapports et SSRS&#41;](../report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)   
- [Exportation de rapports &#40;rapport Générateur et SSRS&#41;](../report-builder/export-reports-report-builder-and-ssrs.md)   
- [Contrôle de la Page s’arrête, des en-têtes, des colonnes et lignes &#40;rapport Générateur et SSRS&#41;](controlling-page-breaks-headings-columns-and-rows-report-builder-and-ssrs.md)   
+ [Exportation de rapports &#40;Générateur de rapports et SSRS&#41;](../report-builder/export-reports-report-builder-and-ssrs.md)   
+ [Page de contrôle des sauts, des en-têtes, colonnes et lignes &#40;Générateur de rapports et SSRS&#41;](controlling-page-breaks-headings-columns-and-rows-report-builder-and-ssrs.md)   
  [Afficher des en-têtes et des pieds de page de groupe &#40;Générateur de rapports et SSRS&#41;](display-headers-and-footers-with-a-group-report-builder-and-ssrs.md)   
- [Laisser les en-têtes visibles lors du défilement d’un rapport &#40;rapport Générateur et SSRS&#41;](keep-headers-visible-when-scrolling-through-a-report-report-builder-and-ssrs.md)  
+ [Laisser les en-têtes visibles lors du défilement d’un rapport &#40;Générateur de rapports et SSRS&#41;](keep-headers-visible-when-scrolling-through-a-report-report-builder-and-ssrs.md)  
   
   

@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - queries [SQL Server], timing out
 - time [SQL Server], query wait time
 - query wait option [SQL Server]
 ms.assetid: 0fc4aa01-65a3-4a33-9ef4-caca41add238
 caps.latest.revision: 25
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 337225086ad4881aa6259ce10d2dcabdac1a37ad
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: e335012b7c25a5d72ec21f86970dfa5fcd364896
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36043431"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37196139"
 ---
 # <a name="configure-the-query-wait-server-configuration-option"></a>Configurer l'option de configuration de serveur query wait
   Cette rubrique explique comment configurer l'option de configuration de serveur **query wait** dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] à l'aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou de [!INCLUDE[tsql](../../includes/tsql-md.md)]. Les requêtes utilisant beaucoup de mémoire (par exemple les requêtes incluant des opérations de tri et de hachage) sont mises en attente si la quantité de mémoire est insuffisante pour leur exécution. L’option **query wait** spécifie le délai (exprimé en secondes, de 0 à 2147483647) pendant lequel une requête peut attendre des ressources avant d’expirer. La valeur par défaut de cette option est -1. Cela signifie que le délai d'attente est calculé comme étant 25 fois le coût estimé de la requête.  

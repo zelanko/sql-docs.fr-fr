@@ -1,5 +1,5 @@
 ---
-title: Constantes importantes sont tapées en tant que types de valeur élevée en mode de compatibilité 90 ou ultérieur | Documents Microsoft
+title: Constantes importantes sont tapées en tant que types de valeur élevée en mode de compatibilité 90 ou ultérieur | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - binary constants
 - CHARINDEX function
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - PATINDEX function
 ms.assetid: 6e309fa0-5fb9-45a1-9739-f13fae525bfe
 caps.latest.revision: 17
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: d40faa01af8e275e7d085a06475322e093786150
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 59f9afc3c8f083da2c1d3934d5aea5b541c6c527
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36038293"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37257765"
 ---
 # <a name="large-constants-are-typed-as-large-value-types-in-90-or-later-compatibility-modes"></a>Les constantes importantes sont tapées en tant que types à valeur élevée en mode de compatibilité 90 ou ultérieur
   Le Conseiller de mise à niveau a détecté la présence de constantes importantes. Les constantes de chaîne de caractères et les constantes binaires dont la taille dépasse 8 000 octets sont traitées comme des types de données d'objet volumineuses dans [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]. Dans [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] ou version ultérieure, les constantes caractère, Unicode et binaires importantes sont tapées en tant que types à valeurs élevées.  

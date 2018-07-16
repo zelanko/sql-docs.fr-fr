@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: db9404d8-4c42-45e5-a100-c7a84b056109
 caps.latest.revision: 10
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: ba3c4911b8590e0f0deb1c6ad9564aa17e366eff
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: eea7cee81892b7ffb5ce35d747c54b413ceb1d62
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36044529"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37252621"
 ---
 # <a name="look-up-rfc-destination"></a>Rechercher la destination RFC
   Utilisez la boîte de dialogue **Rechercher la destination RFC** pour rechercher une destination RFC qui est définie dans le système SAP Netweaver BW. Lorsque la liste de destinations RFC disponibles apparaît, sélectionnez la destination de votre choix. Le composant remplira les options associées à l'aide des valeurs requises.  
@@ -49,7 +49,7 @@ ms.locfileid: "36044529"
  Affichez le nom du serveur ou l'adresse IP de l'hôte de passerelle. Généralement, le nom ou l'adresse IP est identique au serveur d'applications SAP.  
   
  **Service de passerelle**  
- Afficher le nom du service de passerelle, au format `sapgwNN`, où `NN` est le numéro du système.  
+ Affichez le nom du service de passerelle, au format `sapgwNN`, où `NN` est le numéro du système.  
   
  **ID de programme**  
  Affichez l'ID de programme associé à la destination RFC.  
@@ -57,6 +57,6 @@ ms.locfileid: "36044529"
 ## <a name="see-also"></a>Voir aussi  
  [Éditeur de Source SAP BW &#40;Page Gestionnaire de connexions&#41;](sap-bw-source-editor-connection-manager-page.md)   
  [Éditeur de Destination SAP BW &#40;Page Gestionnaire de connexions&#41;](sap-bw-destination-editor-connection-manager-page.md)   
- [Microsoft Connector 1.1 pour SAP BW F1 Aide](../microsoft-connector-for-sap-bw-f1-help.md)  
+ [Aide (F1) sur Microsoft Connector 1.1 pour SAP BW](../microsoft-connector-for-sap-bw-f1-help.md)  
   
   

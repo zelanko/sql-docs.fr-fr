@@ -1,5 +1,5 @@
 ---
-title: Options (éditeur de texte - texte brut - onglets de Page) | Documents Microsoft
+title: Options (Page d’onglets de l’éditeur de texte - texte brut -) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - VS.ToolsOptionsPages.Text_Editor.Plain_Text.Tabs
 ms.assetid: 07d82d10-bca9-4b37-abbb-58ef9bfb264b
 caps.latest.revision: 21
 author: craigg-msft
 ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 5c27514ea38602885c26733238f2564211d4f43a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 6bce8fcc9ea458c3cf2408a3edeb497def4044b2
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36139871"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37275305"
 ---
 # <a name="options-text-editor---plain-text---tabs-page"></a>Options (Éditeur de texte - Texte brut - Page Onglets)
   Utilisez cette boîte de dialogue pour modifier le comportement de tabulation de l'Éditeur de texte, qui permet de modifier un document non associé à un langage de développement particulier. Pour afficher ces paramètres, cliquez sur **Options** dans le menu **Outils** , développez **Éditeur de texte**, puis **Texte brut**, et cliquez ensuite sur **Tabulations**.  
@@ -33,10 +33,10 @@ ms.locfileid: "36139871"
  **Aucun**  
  Ne met pas en retrait la nouvelle ligne créée en appuyant sur Entrée. Le curseur est placé au niveau de la première colonne de la nouvelle ligne.  
   
- **bloc**  
+ **Bloc**  
  Met en retrait la nouvelle ligne créée en appuyant sur Entrée, exactement à la même distance que la ligne précédente.  
   
- **Actives**  
+ **Intelligent**  
  L'éditeur de texte brut ne prend pas en charge ce type de mise en forme.  
   
 ## <a name="tabs"></a>Tabulations  

@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.common.addobject.f1
 ms.assetid: 17ac0e99-8490-46b0-8515-e5012bc9e0cf
 caps.latest.revision: 17
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 83b703bfe55bc72b262af2d423ce65c7e4ac713e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: febc358e5fd0ff796a7d0a00fe3d00d6700f55fc
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36043505"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37196729"
 ---
 # <a name="add-objects"></a>Ajouter des objets
   Permet de limiter les boîtes de dialogue de sélection d'objets aux types d'objets que vous souhaitez afficher.  
@@ -33,7 +33,7 @@ ms.locfileid: "36043505"
  **Tous les objets correspondant aux types**  
  Ouvre la boîte de dialogue **Sélectionner les types d’objets** pour vous permettre de spécifier le type d’objets à inclure dans la liste sous-jacente.  
   
- **Le serveur***\<nom_serveur >*   
+ **Le serveur***\<nom_serveur >  *  
  Ajoute tous les objets appropriés sur le serveur spécifié. Cette option apparaît uniquement quand vous passez par une boîte de dialogue de niveau serveur, par exemple la boîte de dialogue **Nouvelle connexion** .  
   
  **Tous les objets appartenant au schéma**  

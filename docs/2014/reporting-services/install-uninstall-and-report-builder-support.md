@@ -1,5 +1,5 @@
 ---
-title: Installer, désinstaller et prise en charge du Générateur de rapports | Documents Microsoft
+title: Installer, désinstaller et prise en charge du Générateur de rapports | Microsoft Docs
 ms.custom: ''
 ms.date: 12/29/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - administering Report Builder
 ms.assetid: 2c9a5814-17bf-4947-8fb3-6269e7caa416
 caps.latest.revision: 29
-author: douglaslM
+author: maggiesmsft
 ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: ad374db45d6c106cef7ab2f3ff150143f0aa3029
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 4f6a75e3f558b13b1bd068341249c73649699256
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36043102"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37311439"
 ---
 # <a name="install-uninstall-and-report-builder-support"></a>Installer, désinstaller et prendre en charge le Générateur de rapports
   Le Générateur de rapports est un outil de création de rapports permettant de créer, mettre à jour et partager des rapports, des parties de rapports et des datasets partagés. Générateur de rapports est disponible dans deux versions : autonome et [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)]. La version autonome est installée sur votre ordinateur par vos propres soins ou par un administrateur. Le [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] version est installée automatiquement avec [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)] et téléchargé sur votre ordinateur à partir du Gestionnaire de rapports ou un site SharePoint intégré avec [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)].  
@@ -29,20 +29,20 @@ ms.locfileid: "36043102"
  La version autonome du Générateur de rapports n’est pas installée avec [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]. Vous devez la télécharger et l'installer séparément à partir du [Générateur de rapports Microsoft® SQL Server® 2012](http://go.microsoft.com/fwlink/?LinkId=401502).  
   
 > [!NOTE]  
->  Il n'est pas possible d'installer le Générateur de rapports sur des ordinateurs Itanium. Cela s’applique à la [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] et les versions autonomes du Générateur de rapports.  
+>  Il n'est pas possible d'installer le Générateur de rapports sur des ordinateurs Itanium. Cela s’applique à la [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] et des versions autonomes du Générateur de rapports.  
   
- En règle générale, un administrateur installe et configure [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)], et accorde l'autorisation d'utiliser la version [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] du Générateur de rapports ; en outre, il gère les dossiers et les autorisations d'accès aux rapports, parties de rapports et datasets partagés enregistrés sur le serveur de rapports. Pour plus d’informations sur [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] administration, consultez [Reporting Services Report Server &#40;en Mode natif&#41; ](report-server/reporting-services-report-server-native-mode.md) dans [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [la documentation en ligne](http://go.microsoft.com/fwlink/?LinkId=154888) sur le site msdn.microsoft.com.  
+ En règle générale, un administrateur installe et configure [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)], et accorde l'autorisation d'utiliser la version [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] du Générateur de rapports ; en outre, il gère les dossiers et les autorisations d'accès aux rapports, parties de rapports et datasets partagés enregistrés sur le serveur de rapports. Pour plus d’informations sur [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] administration, consultez [Reporting Services Report Server &#40;en Mode natif&#41; ](report-server/reporting-services-report-server-native-mode.md) dans [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [la documentation en ligne](http://go.microsoft.com/fwlink/?LinkId=154888) sur msdn.microsoft.com.  
   
 ##  <a name="Installing"></a> Installation du Générateur de rapports  
- Générateur de rapports est disponible en mode autonome et [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] versions. Vous ou votre administrateur devez télécharger et installer la version autonome sur votre ordinateur, alors que le [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] version est installée avec [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)]. Vous pouvez télécharger le Générateur de rapports à partir du [Centre de téléchargement Microsoft](http://go.microsoft.com/fwlink/?LinkID=186083).  
+ Le Générateur de rapports est disponible en mode autonome et [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] versions. Vous ou votre administrateur devez télécharger et installer la version autonome sur votre ordinateur, alors que le [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] version est installée avec [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)]. Vous pouvez télécharger le Générateur de rapports à partir du [Centre de téléchargement Microsoft](http://go.microsoft.com/fwlink/?LinkID=186083).  
   
 > [!NOTE]  
->  Il n'est pas possible d'installer le Générateur de rapports sur les ordinateurs Itanium 64. Cela s’applique à la [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] et les versions autonomes du Générateur de rapports.  
+>  Il n'est pas possible d'installer le Générateur de rapports sur les ordinateurs Itanium 64. Cela s’applique à la [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] et des versions autonomes du Générateur de rapports.  
   
  Avant d'installer l'une ou l'autre des versions du Générateur de rapports, vérifiez la configuration requise et installez les éléments requis.  
   
 ### <a name="system-requirements"></a>Configuration système requise  
- Rapport Générateur requiert que le [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] version 3.5 est installée sur l’ordinateur local. Si le [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] n’est pas installé sur l’ordinateur local lorsque vous installez le Générateur de rapports, vous serez invité à le pour installer avant de pouvoir continuer et terminer l’installation.  
+ Rapport Générateur exige que le [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] version 3.5 est installée sur l’ordinateur local. Si le [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] n’est pas installé sur l’ordinateur local lorsque vous installez le Générateur de rapports, vous serez invité à installer avant de pouvoir continuer et terminer l’installation.  
   
  .NET Framework 3.5 est gratuit. Vous pouvez télécharger .NET Framework 3.5 à partir du [Centre de téléchargement Microsoft](http://go.microsoft.com/fwlink/?LinkID=110520).  
   
@@ -55,21 +55,21 @@ ms.locfileid: "36043102"
   
  Vous pouvez également effectuer une installation à partir de la ligne de commande et inclure des options telles que l'installation silencieuse et l'écriture de fichiers journaux d'installation. La documentation de Windows Installer, qui exécute les fichiers .msi, fournit des informations concernant les options disponibles.  
   
- Pour plus d’informations, consultez [installez la Version autonome de Report Builder &#40;le Générateur de rapports&#41;](install-windows/install-report-builder.md).  
+ Pour plus d’informations, consultez [installer la Version autonome du Générateur &#40;Générateur de rapports&#41;](install-windows/install-report-builder.md).  
   
  Un administrateur peut également utiliser un logiciel tel que Microsoft Systems Manager Server (SMS) pour placer le programme sur votre ordinateur par transmission de type push. Pour savoir comment utiliser des logiciels spécifiques pour installer le Générateur de rapports, consultez la documentation des logiciels en question.   
   
 ### <a name="installing-the-clickonce-version-of-report-builder-on-your-computer"></a>Installation de la version ClickOnce du Générateur de rapports sur votre ordinateur  
  Le [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] version du Générateur de rapports est installée avec [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)]. Elle est installée via l'installation native et l'installation intégrée SharePoint de [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)].  
   
- [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] est une technologie Microsoft pour le déploiement d'applications Windows. [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] permet aux utilisateurs d'installer et d'exécuter une application Windows telle que le Générateur de rapports en cliquant sur un lien dans une page Web. Pour plus d’informations sur le déploiement [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] applications, application [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] sécurité de l’application, ou en cours d’exécution [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] applications dans la zone Internet, consultez le « ClickOnce déploiement pour les Applications Windows Forms », « sécurité dans Vue d’ensemble de Windows Forms » ou « Trusted Application Deployment Overview » des articles sur le [!INCLUDE[msCoName](../includes/msconame-md.md)] site Web MSDN à l’adresse [www.microsoft.com/msdn](http://www.microsoft.com/msdn).  
+ [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] est une technologie Microsoft pour le déploiement d'applications Windows. [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] permet aux utilisateurs d'installer et d'exécuter une application Windows telle que le Générateur de rapports en cliquant sur un lien dans une page Web. Pour plus d’informations sur le déploiement [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] applications, appliquer [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] sécurité de l’application, ou en cours d’exécution [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] applications dans la zone Internet, consultez le « déploiement pour Windows Forms Applications ClickOnce », « Security in Articles de vue d’ensemble de Windows Forms » ou « Trusted Application Deployment Overview » sur le [!INCLUDE[msCoName](../includes/msconame-md.md)] site Web MSDN à l’adresse [www.microsoft.com/msdn](http://www.microsoft.com/msdn).  
   
  Le [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] version du Générateur de rapports se trouve sur le serveur de rapports et est installée sur votre ordinateur lorsque vous cliquez sur le **le Générateur de rapports** bouton dans le Gestionnaire de rapports, ou cliquez sur le **rapport du Générateur de rapports** option sur le **Nouveau Document** menu dans une bibliothèque SharePoint.  
   
 > [!NOTE]  
 >  Si le menu **Nouveau document** ne répertorie pas les options **Rapport du Générateur de rapports**, **Modèle du générateur de rapports**et **Source de données du rapport** , leurs types de contenus doivent être ajoutés à la bibliothèque SharePoint.   
   
- Vous pouvez ouvrir le Générateur de rapports à partir du Gestionnaire de rapports ou d'une bibliothèque SharePoint. Pour plus d’informations sur l’ouverture du Générateur de rapports, consultez [démarrer le Générateur de rapports &#40;le Générateur de rapports&#41;](report-builder/start-report-builder.md).  
+ Vous pouvez ouvrir le Générateur de rapports à partir du Gestionnaire de rapports ou d'une bibliothèque SharePoint. Pour plus d’informations sur l’ouverture du Générateur de rapports, consultez [démarrer le Générateur de &#40;Générateur de rapports&#41;](report-builder/start-report-builder.md).  
   
 ### <a name="report-builder-languages"></a>Langues du Générateur de rapports  
  Le Générateur de rapports est disponible en 21 langues, en plus de l'anglais. Lors du téléchargement de la version autonome du Générateur de rapports, sélectionnez la version linguistique à installer. Vous devez répéter le téléchargement pour chaque version linguistique à utiliser.  
@@ -105,9 +105,9 @@ ms.locfileid: "36043102"
   
   
 ##  <a name="Uninstalling"></a> Désinstallation du Générateur de rapports  
- Vous pouvez désinstaller la version autonome du Générateur de rapports à partir du Panneau de configuration ou de la ligne de commande. Cela s'applique uniquement à la version autonome du Générateur de rapports. Le [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] du Générateur de rapports ne peut pas être désinstallée séparément. Il est toujours installé et désinstallé avec [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)].  
+ Vous pouvez désinstaller la version autonome du Générateur de rapports à partir du Panneau de configuration ou de la ligne de commande. Cela s'applique uniquement à la version autonome du Générateur de rapports. Le [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] du Générateur de rapports ne peut pas être désinstallé séparément. Il est toujours installé et désinstallé avec [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)].  
   
- Pour plus d’informations, consultez [désinstaller la Version autonome de rapport Générateur &#40;le Générateur de rapports&#41;](install-windows/uninstall-report-builder.md).  
+ Pour plus d’informations, consultez [désinstaller la Version autonome du Générateur &#40;Générateur de rapports&#41;](install-windows/uninstall-report-builder.md).  
   
   
 ##  <a name="Supporting"></a> Prise en charge du Générateur de rapports  
@@ -130,7 +130,7 @@ ms.locfileid: "36043102"
   
 -   Images telles que les images et logos d'arrière-plan qui peuvent être utilisés dans plusieurs rapports et sont stockés hors des rapports pour en faciliter la maintenance.  
   
- Pour plus d’informations, consultez [gestion de contenu de serveur de rapports &#40;SSRS en Mode natif&#41; ](report-server/report-server-content-management-ssrs-native-mode.md) dans [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [la documentation en ligne](http://go.microsoft.com/fwlink/?LinkId=154888) sur le site msdn.microsoft.com.  
+ Pour plus d’informations, consultez [gestion de contenu de serveur de rapports &#40;SSRS en Mode natif&#41; ](report-server/report-server-content-management-ssrs-native-mode.md) dans [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [la documentation en ligne](http://go.microsoft.com/fwlink/?LinkId=154888) sur msdn.microsoft.com.  
   
 ### <a name="permissions"></a>Autorisations  
  L'administrateur octroie les autorisations relatives au serveur de rapports. En tant qu'utilisateur du Générateur de rapports, vous devez disposer des autorisations nécessaires pour accéder au contenu et aux fonctionnalités du serveur de rapports. Par exemple, vous pouvez utiliser des parties de rapports stockées sur le serveur de rapports, mettre à jour les rapports et les réenregistrer sur le serveur de rapports, et exécuter des rapports dans le Gestionnaire de rapports. Selon vos besoins et les tâches que vous effectuez, des autorisations de niveau inférieur ou supérieur peuvent être accordées. Par exemple, des autorisations avec un faible niveau de privilège sont accordées aux utilisateurs qui n'ont besoin que d'ouvrir des rapports partagés, par opposition à ceux qui doivent les modifier.  
@@ -156,23 +156,23 @@ ms.locfileid: "36043102"
   
  Toutefois, après une configuration supplémentaire, le serveur de rapports est accessible aux utilisateurs du Générateur de rapports version. Vous pouvez ajouter des URL [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] aux sites approuvés. Par défaut, Internet Explorer 7.0 ou version ultérieure s'exécute en mode protégé sur Windows Vista, Windows Server 2008 et Windows 7. Le mode protégé est une fonctionnalité qui empêche les requêtes du navigateur d'atteindre les processus de niveau supérieur qui s'exécutent sur le même ordinateur. Vous pouvez désactiver le mode protégé pour les applications du serveur de rapports en les ajoutant comme Sites de confiance. Vous devez disposer d'une autorisation d'administrateur pour apporter cette modification.  
   
- Pour plus d’informations sur la configuration [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)], consultez [Gestionnaire de Configuration de Reporting Services &#40;del&#41; ](/sql/2014/sql-server/install/reporting-services-configuration-manager-native-mode) dans les [documentation de Reporting Services](http://go.microsoft.com/fwlink/?linkid=121312) sur le site msdn.microsoft.com.  
+ Pour plus d’informations sur la configuration [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)], consultez [Gestionnaire de Configuration de Reporting Services &#40;del&#41; ](/sql/2014/sql-server/install/reporting-services-configuration-manager-native-mode) dans le [documentation de Reporting Services](http://go.microsoft.com/fwlink/?linkid=121312) sur msdn.microsoft.com.  
   
   
-##  <a name="SampleDatabases"></a> Bases de données SQL Server  
+##  <a name="SampleDatabases"></a> Bases de données exemple SQL Server  
  La famille d'exemples de bases de données Adventure Works fournit des données que vous pouvez utiliser pour apprendre à créer des rapports et écrire des exemples de rapports.  
   
  Les bases de données sont disponibles dans les versions suivantes :  
   
 -   La base de données Adventure Works OLTP prend en charge des scénarios standard de traitement transactionnel en ligne pour une entreprise fictive de fabrication de vélos (Adventure Works Cycles). Les scénarios incluent la fabrication, les ventes, l'achat, la gestion des produits, la gestion des contacts et les ressources humaines.  
   
--   Le [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)] base de données montre comment générer un entrepôt de données.  
+-   Le [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)] base de données montre comment créer un entrepôt de données.  
   
 -   Le projet [!INCLUDE[ssAWDWsp](../includes/ssawdwsp-md.md)] peut être utilisé afin de créer une base de données AS pour les scénarios de décisionnel.  
   
- Bases de données exemples ne sont pas fournis avec [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] et pas installé lorsque vous installez [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)] ou la version autonome du Générateur de rapports. À la place, vous téléchargez les exemples de bases de données de [CodePlex](http://go.microsoft.com/fwlink/?LinkId=87843). Toutes les versions des exemples de bases de données sont téléchargées ensemble. Vous pouvez également télécharger des versions de bases de données antérieures disponibles avec [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)], [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] et [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)].  
+ Les bases de données exemples ne sont pas inclus avec [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] et pas installé lorsque vous installez [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)] ou la version autonome du Générateur de rapports. À la place, vous téléchargez les exemples de bases de données de [CodePlex](http://go.microsoft.com/fwlink/?LinkId=87843). Toutes les versions des exemples de bases de données sont téléchargées ensemble. Vous pouvez également télécharger des versions de bases de données antérieures disponibles avec [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)], [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] et [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)].  
   
- Pour les conditions préalables requises et des instructions sur le téléchargement et l’installation de le [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] exemples de bases de données, consultez [conditions préalables d’Installation de SQL Server 2008 Sample Databases](http://go.microsoft.com/fwlink/?LinkId=166648) et [installation d’exemples de bases de données ](http://go.microsoft.com/fwlink/?LinkId=166649) sur CodePlex.  
+ Pour les conditions préalables et obtenir des instructions sur le téléchargement et l’installation de la [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] exemples de bases de données, consultez [conditions préalables d’Installation pour SQL Server 2008 Sample Databases](http://go.microsoft.com/fwlink/?LinkId=166648) et [installation d’exemples de bases de données ](http://go.microsoft.com/fwlink/?LinkId=166649) sur CodePlex.  
   
   
 ##  <a name="HowTo"></a> Rubriques de procédures  
@@ -182,7 +182,7 @@ ms.locfileid: "36043102"
   
  [Désinstaller la Version autonome du Générateur de rapports &#40;Générateur de rapports&#41;](install-windows/uninstall-report-builder.md)  
   
- [Démarrer le Générateur de rapports &#40;Générateur de rapports&#41;](report-builder/start-report-builder.md)  
+ [Démarrer le Générateur de &#40;Générateur de rapports&#41;](report-builder/start-report-builder.md)  
   
   
 ## <a name="see-also"></a>Voir aussi  

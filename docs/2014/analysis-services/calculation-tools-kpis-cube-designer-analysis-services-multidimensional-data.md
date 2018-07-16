@@ -1,5 +1,5 @@
 ---
-title: Outils de calcul (onglet des indicateurs de performance clés, Concepteur de Cube) (Analysis Services - données multidimensionnelles) | Documents Microsoft
+title: Outils de calcul (onglet des indicateurs de performance clés, Concepteur de Cube) (Analysis Services - données multidimensionnelles) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.cubeeditor.kpisview.calculationtoolspane.f1
 ms.assetid: c030c725-7763-4c23-9988-4b274a88fc31
 caps.latest.revision: 24
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: c03f8506de2a1f0744fcc9fcebd025443ffafaa4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 7b0602c765368e96cc97f47591e372c4bdec8427
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36039632"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37228329"
 ---
 # <a name="calculation-tools-kpis-tab-cube-designer-analysis-services---multidimensional-data"></a>Outils de calcul (onglet Indicateurs de performance clés, Concepteur de cube) (Analysis Services - Données multidimensionnelles)
   Utilisez le volet **Outils de calcul** de l’onglet **Indicateurs de performance clés** du Concepteur de cube pour explorer les métadonnées, les fonctions et les modèles disponibles dans les indicateurs de performance clés (KPI).  

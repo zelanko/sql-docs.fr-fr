@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - View Designer, Results pane
 - inserting rows
@@ -18,15 +18,15 @@ helpviewer_keywords:
 - row additions [SQL Server], Results pane
 ms.assetid: 59891c84-3f54-4ab9-8b86-72c59627b480
 caps.latest.revision: 11
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 00efde2b8d3598524dea15f105005d99275f311b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 6ace4fb5b33cb2649e81398be6483d87f4371321
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36038497"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37330849"
 ---
 # <a name="add-new-rows-in-the-results-pane-visual-database-tools"></a>Ajouter des lignes dans le volet de résultats (Visual Database Tools)
   Pour ajouter de nouvelles données, vous pouvez soit les taper, soit les coller à partir d'un autre programme, tel que le Bloc-notes ou Excel. Une ligne collée doit avoir exactement le même nombre et les mêmes types de colonnes que la table dans laquelle vous effectuez le collage. Vous pouvez coller plusieurs lignes à la fois dans le volet Résultats.  

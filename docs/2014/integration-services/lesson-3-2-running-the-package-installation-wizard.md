@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: f91fbb89-4626-4c47-b96d-56052dc45861
 caps.latest.revision: 19
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 9965626846162d6dcfa7fd7e7781cb240ad7be8f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 52b0ee24cc9e76bda96b5fda64bf8dca425c5638
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36052661"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37300569"
 ---
 # <a name="step-2-running-the-package-installation-wizard"></a>Étape 2 : exécution de l'Assistant Installation de package
   Au cours de cette tâche, vous allez exécuter l'Assistant Installation de package pour déployer les packages du projet Didacticiel de déploiement dans une instance de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Seuls des packages peuvent être installés dans la table sysssispackages de la base de données [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] msdb, les fichiers de support inclus dans l'application de déploiement seront déployés dans le système de fichiers.  
@@ -105,10 +105,10 @@ ms.locfileid: "36052661"
 ## <a name="next-task-in-lesson"></a>Tâche suivante de la leçon  
  [Étape 3 : Test des packages déployés](../integration-services/lesson-3-3-testing-the-deployed-packages.md)  
   
-![Icône Integration Services (petite)](media/dts-16.gif "icône Integration Services (petite)")**restent jusqu'à la Date avec Integration Services** <br /> Pour obtenir les derniers téléchargements, articles, exemples et vidéos de Microsoft, ainsi que des solutions sélectionnées par la communauté, visitez la page [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] sur MSDN :<br /><br /> [Visitez la page Integration Services sur MSDN](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Pour recevoir une notification automatique de ces mises à jour, abonnez-vous aux flux RSS disponibles sur la page.  
+![Icône Integration Services (petite)](media/dts-16.gif "icône Integration Services (petite)")**rester jusqu'à la Date avec Integration Services  **<br /> Pour obtenir les derniers téléchargements, articles, exemples et vidéos de Microsoft, ainsi que des solutions sélectionnées par la communauté, visitez la page [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] sur MSDN :<br /><br /> [Visitez la page Integration Services sur MSDN](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Pour recevoir une notification automatique de ces mises à jour, abonnez-vous aux flux RSS disponibles sur la page.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Service Integration Services &#40;Service SSIS&#41;](service/integration-services-service-ssis-service.md)   
- [Gérer le Service Integration Services](../../2014/integration-services/manage-the-integration-services-service.md)  
+ [Gérer le service Integration Services](../../2014/integration-services/manage-the-integration-services-service.md)  
   
   

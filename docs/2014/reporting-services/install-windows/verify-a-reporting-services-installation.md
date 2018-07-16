@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - checking report server installations
 - verifying report server installations
@@ -21,20 +21,20 @@ ms.assetid: 82a51a99-66f0-4b0c-b05b-07d22387adb0
 caps.latest.revision: 42
 author: markingmyname
 ms.author: maghan
-manager: jhubbard
-ms.openlocfilehash: 67898b04b17ad344f07dc457927cd4abee6695bd
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 9e57883c7b6119499135fede5ad9c398350e587a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36042398"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37272528"
 ---
 # <a name="verify-a-reporting-services-installation"></a>Verify a Reporting Services Installation
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] peuvent être installés au choix dans l'un des deux modes, natif ou SharePoint. Les étapes que vous devez suivre pour vérifier l'installation dépendent du mode de serveur de rapports.  
   
  Cette rubrique contient les informations suivantes :  
   
--   [Vérifiez l’Installation en Mode SharePoint](#bkmk_sharepointmode)  
+-   [Vérifier l’Installation du Mode SharePoint](#bkmk_sharepointmode)  
   
 -   [Vérifier une Installation en Mode natif](#bkmk_nativemode)  
   
@@ -46,7 +46,7 @@ ms.locfileid: "36042398"
   
 2.  Vérifiez que le service **SQL Server Reporting Services** est installé et présente l'état **Exécution** .  
   
-     Si vous ne voyez pas le service [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] dans la liste, vérifiez qu'il est installé. Pour plus d’informations, consultez la section « Installer et démarrer le SharePoint Service Reporting Services » de [Install Reporting Services SharePoint Mode for SharePoint 2010](../../sql-server/install/install-reporting-services-sharepoint-mode-for-sharepoint-2010.md).  
+     Si vous ne voyez pas le service [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] dans la liste, vérifiez qu'il est installé. Pour plus d’informations, consultez la section « Installer et démarrer le Service Reporting Services SharePoint » de [Install Reporting Services SharePoint Mode for SharePoint 2010](../../sql-server/install/install-reporting-services-sharepoint-mode-for-sharepoint-2010.md).  
   
 #### <a name="to-verify-the-service-application"></a>Pour vérifier l'application de service  
   
@@ -66,7 +66,7 @@ ms.locfileid: "36042398"
   
 #### <a name="to-verify-reporting-server-content-types"></a>Pour vérifier les types de contenu de serveur de rapports  
   
-1.  Pour vérifier ou ajouter [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] types de contenu de serveur de rapports, consultez [ajouter des Types de contenu rapport serveur dans une bibliothèque &#40;Reporting Services en Mode intégré SharePoint&#41;](../add-reporting-services-content-types-to-a-sharepoint-library.md).  
+1.  Pour vérifier ou ajouter [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] types de contenu de serveur de rapports, consultez [ajouter des Types de contenu Report Server dans une bibliothèque &#40;Reporting Services en Mode intégré SharePoint&#41;](../add-reporting-services-content-types-to-a-sharepoint-library.md).  
   
 #### <a name="to-verify-you-can-launch-report-builder"></a>Pour vérifier que vous pouvez lancer le Générateur de rapports  
   
@@ -116,7 +116,7 @@ ms.locfileid: "36042398"
 2.  Si vous avez installé des exemples de rapports, ouvrez les exemples de fichiers de projet de rapport et publiez les rapports sur un serveur de rapport.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Dépanner une Installation Reporting Services](troubleshoot-a-reporting-services-installation.md)   
+ [Résoudre les problèmes d’une Installation Reporting Services](troubleshoot-a-reporting-services-installation.md)   
  [Cause et résolution des erreurs Reporting Services](../troubleshooting/cause-and-resolution-of-reporting-services-errors.md)  
   
   

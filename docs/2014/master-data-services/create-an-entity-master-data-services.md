@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - entities [Master Data Services], creating
 - creating entities [Master Data Services]
 ms.assetid: d9a6a51e-7b53-4785-a118-3baeb7ca2d48
 caps.latest.revision: 6
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 23e267d78091895e5d0ec899835ce7aa09e8c9d3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: 9e5c53e76330c00dde7b6d14fb0c6592546582bc
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36039753"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37329839"
 ---
 # <a name="create-an-entity-master-data-services"></a>Créer une entité (Master Data Services)
   Dans [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], créez une entité destinée à contenir des membres et leurs attributs.  
@@ -59,7 +59,7 @@ ms.locfileid: "36039753"
   
     -   **Ne**. Sélectionnez cette option si vous n'avez pas besoin d'activer l'entité pour les hiérarchies et les collections explicites. Vous pouvez changer ce paramètre ultérieurement si nécessaire.  
   
-    -   **Oui**. Sélectionnez cette option lorsque vous souhaitez activer l'entité pour les hiérarchies et collections explicites. Dans le **nom de hiérarchie explicite** , tapez un nom. Si vous le souhaitez, sélectionnez **hiérarchie obligatoire (tous les membres feuille sont inclus** pour rendre la hiérarchie explicite obligatoire.  
+    -   **Oui**. Sélectionnez cette option lorsque vous souhaitez activer l'entité pour les hiérarchies et collections explicites. Dans le **nom de la hiérarchie explicite** , tapez un nom. Si vous le souhaitez, sélectionnez **hiérarchie obligatoire (tous les membres feuille sont inclus** pour rendre la hiérarchie explicite obligatoire.  
   
 9. Cliquez sur **enregistrer l’entité**.  
   

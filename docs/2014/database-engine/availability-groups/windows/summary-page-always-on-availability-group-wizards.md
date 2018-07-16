@@ -1,14 +1,13 @@
 ---
-title: Page Résumé (Assistants de groupe de disponibilité AlwaysOn) | Documents Microsoft
+title: Page Résumé (Assistants groupe de disponibilité AlwaysOn) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.failoverwizard.summary.f1
 - sql12.swb.addreplicawizard.summary.f1
@@ -16,15 +15,15 @@ f1_keywords:
 - sql12.swb.newagwizard.summary.f1
 ms.assetid: b98e2511-297f-49fd-b0e8-74652a91bc0c
 caps.latest.revision: 11
-author: MikeRayMSFT
-ms.author: mikeray
-manager: jhubbard
-ms.openlocfilehash: f17ce2ad357a44548ffe8525003ae5366ccf44a4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 88edbfb939c767e31ba7bd1c32f5fa66bbaff179
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36052705"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37324949"
 ---
 # <a name="summary-page-alwayson-availability-group-wizards"></a>Page Résumé (assistants de groupe de disponibilité AlwaysOn)
   Cette rubrique d'aide décrit les options de la page **Résumé** . Cette rubrique s'applique à l' [!INCLUDE[ssAoNewAgWiz](../../../includes/ssaonewagwiz-md.md)], à l' [!INCLUDE[ssAoAddRepWiz](../../../includes/ssaoaddrepwiz-md.md)], à l' [!INCLUDE[ssAoAddDbWiz](../../../includes/ssaoadddbwiz-md.md)] et à l' [!INCLUDE[ssAoFoAgWiz](../../../includes/ssaofoagwiz-md.md)] de [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. Utilisez la grille de cette page pour passer vos choix en revue pour le nouveau groupe de disponibilité. Pour effectuer une ou plusieurs modifications, cliquez sur **Précédent** pour revenir à la page ou aux pages appropriées. Lorsque vous êtes prêt, cliquez sur **Suivant** pour revenir à la page **Résumé** . Lorsque vous êtes satisfait de vos choix, cliquez sur **Terminer**.  

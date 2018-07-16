@@ -1,5 +1,5 @@
 ---
-title: Élément QueryDefinition (ASSL) | Documents Microsoft
+title: Élément QueryDefinition (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,18 +22,18 @@ helpviewer_keywords:
 - QueryDefinition element
 ms.assetid: 25bf0e93-d5c5-41df-b310-a253a4ace80e
 caps.latest.revision: 34
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 8dc7a5407514bbe212aa7425fe9fc886ac3c7126
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: bcfe589a233d17f51220db3a46bc5e69b42a5bb9
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36042302"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37231879"
 ---
 # <a name="querydefinition-element-assl"></a>Élément QueryDefinition (ASSL)
-  Contient une expression opaque pour une requête associée à un [DataSource](../objects/datasource-element-assl.md) élément dans une [QueryBinding](../data-type/binding-data-type-assl.md) élément.  
+  Contient l’expression opaque d’une requête associée à un [DataSource](../objects/datasource-element-assl.md) élément dans un [QueryBinding](../data-type/binding-data-type-assl.md) élément.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -62,7 +62,7 @@ ms.locfileid: "36042302"
 |Éléments enfants|None|  
   
 ## <a name="remarks"></a>Notes  
- L’élément qui correspond au parent de `QueryDefinition` dans l’objet d’objets AMO (Analysis Management) est modèle <xref:Microsoft.AnalysisServices.QueryBinding>.  
+ L’élément qui correspond au parent de `QueryDefinition` dans l’objet d’objets AMO (Analysis Management) modèle est <xref:Microsoft.AnalysisServices.QueryBinding>.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Propriétés &#40;ASSL&#41;](properties-assl.md)  

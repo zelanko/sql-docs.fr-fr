@@ -1,5 +1,5 @@
 ---
-title: Exploration du contenu du modèle pour les modèles de réseau neuronal (Analysis Services - Exploration de données) | Documents Microsoft
+title: Contenu du modèle pour les modèles de réseau neuronal d’exploration de données (Analysis Services - Exploration de données) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - output neurons [Analysis Services]
 - neural network algorithms [Analysis Services]
@@ -21,15 +21,15 @@ helpviewer_keywords:
 - neural network model [Analysis Services]
 ms.assetid: ea21ff9d-857f-475c-bd3d-6d1405bad069
 caps.latest.revision: 18
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 3d85b7b9ce95b0dc5a24ece14aa3a1e1203f49b9
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: d90c182f664a6b89232a74da8d9ca5294dea465e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36139929"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37280455"
 ---
 # <a name="mining-model-content-for-neural-network-models-analysis-services---data-mining"></a>Mining Model Content for Neural Network Models (Analysis Services - Data Mining)
   Cette rubrique décrit le contenu du modèle d'exploration de données qui est spécifique aux modèles qui utilisent l'algorithme MNN (Microsoft Neural Network). Pour obtenir une explication sur la procédure d’interprétation des statistiques et de la structure partagées par tous les types de modèles et pour obtenir des définitions générales de termes en rapport avec le contenu du modèle d’exploration de données, consultez [Contenu du modèle d’exploration &#40;Analysis Services - Exploration de données&#41;](mining-model-content-analysis-services-data-mining.md).  
@@ -43,7 +43,7 @@ ms.locfileid: "36139929"
   
 -   Les nœuds consécutifs contiennent chacun un *sous-réseau* différent (NODE_TYPE = 17). Chaque sous-réseau contient toujours une couche masquée (NODE_TYPE = 19) et une couche de sortie (NODE_TYPE = 20) pour ce sous-réseau.  
   
- ![structure du contenu de modèle pour les réseaux neuronaux](../media/modelcontentstructure-nn.gif "structure du contenu de modèle pour les réseaux neuronaux")  
+ ![structure de contenu de modèle pour les réseaux neuronaux](../media/modelcontentstructure-nn.gif "structure du contenu du modèle pour les réseaux neuronaux")  
   
  Les informations dans la couche d'entrée sont simples : le nœud supérieur pour chaque couche d'entrée (NODE_TYPE = 18) sert d'organisateur pour une collection de nœuds d'entrée (NODE_TYPE = 21). Le contenu des nœuds d'entrée est décrit dans la table ci-dessous.  
   
@@ -241,7 +241,7 @@ ms.locfileid: "36139929"
  **Attribut continu :** les deux lignes finales de la table NODE_DISTRIBUTION contiennent la moyenne de l’attribut, le coefficient pour le nœud dans son ensemble et la variance du coefficient.  
   
 ## <a name="see-also"></a>Voir aussi  
- [MNN (Microsoft Neural Network)](microsoft-neural-network-algorithm.md)   
+ [Algorithme de réseau neuronal de Microsoft](microsoft-neural-network-algorithm.md)   
  [Référence technique de Microsoft Neural Network algorithme](microsoft-neural-network-algorithm-technical-reference.md)   
  [Exemples de requêtes de modèle de réseau neuronal](neural-network-model-query-examples.md)  
   

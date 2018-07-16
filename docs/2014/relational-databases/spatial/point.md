@@ -8,24 +8,24 @@ ms.suite: ''
 ms.technology:
 - dbe-spatial
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Point geometry subtype [SQL Server]
 - geometry data type [SQL Server], spatial data
 ms.assetid: 2a596ec4-8b2f-4962-bcb4-e5c8f77edad5
 caps.latest.revision: 19
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: e0bc6a80c1ce2fc6e9646114d5d5f856d89bdd04
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 6581a93e30e058e909b4e7df2bec7be6b52e4926
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36140708"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37331250"
 ---
 # <a name="point"></a>Point
-  Dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] les données spatiales, un `Point` est un objet dimension 0, qui représente un emplacement unique et peut contenir des valeurs Z (élévation) et M (mesure).  
+  Dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] des données spatiales, un `Point` est un objet de 0 à dimension qui représente un emplacement unique et peut contenir des valeurs Z (élévation) et M (mesure).  
   
 ## <a name="geography-data-type"></a>Type de données geography  
  Le type Point pour le type de données geography représente un emplacement unique où *Lat* et *Long* désignent respectivement la latitude et la longitude. Les valeurs de latitude et de longitude sont mesurées en degrés. Les valeurs de latitude sont toujours comprises dans l’intervalle [-90, 90]. Si vous entrez une valeur non comprise dans cette plage, une exception est levée. Les valeurs de longitude sont toujours comprises dans l’intervalle [-180, 180]. Si vous entrez une valeur non comprise dans cette plage, elle est renvoyée pour y être contenue. Par exemple, si vous entrez la valeur 190 pour la longitude, elle est renvoyée à la valeur -170. Le*SRID* représente l’ID de référence spatiale de l’instance **geography** à retourner.  

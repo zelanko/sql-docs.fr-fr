@@ -1,5 +1,5 @@
 ---
-title: Le traitement du modèle Sequence Clustering | Documents Microsoft
+title: Traitement du modèle Sequence Clustering | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 4a7545fd-37a3-4766-ad59-0946f1bd3524
 caps.latest.revision: 15
 author: minewiskan
 ms.author: owend
-manager: kfile
-ms.openlocfilehash: fb4d586ba00428cec37cea33feff39285637faf4
-ms.sourcegitcommit: 8c040e5b4e8c7d37ca295679410770a1af4d2e1f
+manager: craigg
+ms.openlocfilehash: 09981cbe61e0f8b15bdbc95344e9df3e5005e9a8
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/21/2018
-ms.locfileid: "36313101"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37267865"
 ---
 # <a name="processing-the-sequence-clustering-model"></a>Traitement du modèle Sequence Clustering
   Une fois que vous avez créé une structure d'exploration de données, vous devez déployer les modifications que vous avez apportées sur la solution d'exploration de données, puis traiter la structure. À l'issue du traitement de la nouvelle structure et du modèle d'exploration de données, vous pouvez parcourir le modèle d'exploration de données.  
@@ -28,7 +28,7 @@ ms.locfileid: "36313101"
   
 ### <a name="to-process-the-mining-structure-and-model"></a>Pour traiter la structure et le modèle d'exploration de données  
   
-1.  Sur le **modèle d’exploration de données** menu de [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], sélectionnez **traiter la Structure d’exploration de données et tous les modèles**.  
+1.  Sur le **Mining Model** menu de [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], sélectionnez **traiter la Structure d’exploration de données et tous les modèles**.  
   
 2.  Cliquez sur **Oui**pour répondre à l'avertissement qui vous invite à indiquer si vous souhaitez générer et déployer le projet.  
   
@@ -41,11 +41,11 @@ ms.locfileid: "36313101"
 5.  Cliquez de nouveau sur **Fermer** pour quitter la boîte de dialogue **Traiter la structure d'exploration de données - Sequence Clustering avec Region** .  
   
 ## <a name="next-task-in-lesson"></a>Tâche suivante de la leçon  
- [Exploration du modèle Sequence Clustering &#40;intermédiaire Didacticiel d’exploration de données&#41;](../../2014/tutorials/exploring-the-sequence-clustering-model-intermediate-data-mining-tutorial.md)  
+ [Exploration du modèle Sequence Clustering &#40;didacticiel d’exploration de données intermédiaire&#41;](../../2014/tutorials/exploring-the-sequence-clustering-model-intermediate-data-mining-tutorial.md)  
   
 ## <a name="see-also"></a>Voir aussi  
  [Concepteur d’exploration de données](../../2014/analysis-services/data-mining/data-mining-designer.md)   
- [Algorithme de Microsoft Sequence Clustering](../../2014/analysis-services/data-mining/microsoft-sequence-clustering-algorithm.md)   
- [Le traitement de la configuration requise et considérations &#40;d’exploration de données&#41;](../../2014/analysis-services/data-mining/processing-requirements-and-considerations-data-mining.md)  
+ [Algorithme de Clustering de séquence de Microsoft](../../2014/analysis-services/data-mining/microsoft-sequence-clustering-algorithm.md)   
+ [Traitement des exigences et considérations &#40;exploration de données&#41;](../../2014/analysis-services/data-mining/processing-requirements-and-considerations-data-mining.md)  
   
   

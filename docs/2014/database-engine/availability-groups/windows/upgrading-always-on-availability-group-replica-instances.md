@@ -1,30 +1,29 @@
 ---
-title: Mise à niveau et mise à jour des serveurs du groupe de disponibilité avec un temps mort Minimal et perte de données | Documents Microsoft
+title: Mise à niveau et mise à jour des serveurs de groupe de disponibilité avec un temps mort et une perte de données | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: f670af56-dbcc-4309-9119-f919dcad8a65
 caps.latest.revision: 7
-author: rothja
-ms.author: jroth
-manager: jhubbard
-ms.openlocfilehash: a0e2c87919337ebfec117e4696185b4fe8705218
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: db74916aa24c1dcd3f94fa163ae0ef87697a8fa3
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36051601"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37247024"
 ---
 # <a name="upgrade-and-update-of-availability-group-servers-with-minimal-downtime-and-data-loss"></a>Mise à niveau et mise à jour des serveurs de groupes de disponibilité avec un temps mort minimal et perte de données
   Lorsque de la mise à jour ou de la mise à niveau d'instances de serveur de SQL Server 2012 vers un Service Pack ou une version plus récente, réduisez le temps mort d'un groupe de disponibilité à un seul basculement manuel en effectuant une mise à jour ou une mise à niveau séquentielle. En ce qui concerne la mise à niveau des versions de SQL Server, cette mise à niveau s'appelle une mise à niveau propagée. En ce qui concerne la mise à jour de la version actuelle de SQL Server avec les correctifs ou les Service Pack, cette mise à jour s'appelle une mise à jour propagée.  
   
- Cette rubrique limite la discussion aux mises à niveau/mises à jour de SQL Server. Pour d’informations sur les mises à jour que les instances de SQL Server à haute disponibilité sont en cours d’exécution, consultez [Cross-cluster Migration de groupes de disponibilité AlwaysOn pour les mises à niveau du système d’exploitation](http://msdn.microsoft.com/library/jj873730.aspx)  
+ Cette rubrique limite la discussion aux mises à niveau/mises à jour de SQL Server. Pour le système d’exploitation mises à niveau/mises à jour fonctionnant sur les instances de SQL Server hautement disponible, consultez [Cross-cluster Migration de groupes de disponibilité AlwaysOn pour les mises à niveau du système d’exploitation](http://msdn.microsoft.com/library/jj873730.aspx)  
   
 ## <a name="rolling-upgradeupdate-best-practices-for-alwayson-availability-groups"></a>Meilleures pratiques pour la mise à niveau/mise à jour propagée de groupes de disponibilité AlwaysOn  
  Appliquez les meilleures pratiques suivantes lorsque vous effectuez la mise à niveau/mise à jour du serveur afin de réduire le temps mort et la perte de données de vos groupes de disponibilité :  

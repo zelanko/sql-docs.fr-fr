@@ -1,5 +1,5 @@
 ---
-title: Migrer les Plans de requête | Documents Microsoft
+title: Migrer les Plans de requête | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,29 +8,29 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - query plans [SQL Server], migrating
 - upgrading SQL Server, migrating query plans
 - plan guides [SQL Server], migrating query plans
 ms.assetid: 7e02a137-6867-4f6a-a45a-2b02674f7e65
 caps.latest.revision: 14
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 66b481ab27af87a20f1a509cb10749c9f2ca1c15
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 86396a835b68e9a6028bce45a68110e337ce9131
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36051787"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37324969"
 ---
 # <a name="migrate-query-plans"></a>Migrer des plans de requête
   Dans la plupart des cas, la mise à niveau d'une base de données vers la dernière version de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] améliore les performances des requêtes. Toutefois, si vous avez des requêtes critiques réglées avec soin pour la performance, vous pouvez conserver les plans de requête pour ces requêtes avant d'effectuer la mise à niveau en créant un repère de plan pour chaque requête. Si, après avoir effectué la mise à niveau, l'optimiseur de requête choisit un plan moins efficace pour l'une ou plusieurs des requêtes, vous pouvez activer les repères de plan et forcer l'optimiseur de requête à utiliser les plans de pré-mise à niveau.  
   
  Pour créer des repères de plan avant d'effectuer la mise à niveau, procédez comme suit :  
   
-1.  Enregistrer le plan actuel pour chaque requête critique à l’aide de la [sp_create_plan_guide](/sql/relational-databases/system-stored-procedures/sp-create-plan-guide-transact-sql) procédure stockée et en spécifiant le plan de requête dans l’indicateur de requête USE PLAN.  
+1.  Enregistrez le plan actuel pour chaque requête critique à l’aide de la [sp_create_plan_guide](/sql/relational-databases/system-stored-procedures/sp-create-plan-guide-transact-sql) procédure stockée et en spécifiant le plan de requête dans l’indicateur de requête USE PLAN.  
   
 2.  Vérifiez que le repère de plan est appliqué à la requête.  
   

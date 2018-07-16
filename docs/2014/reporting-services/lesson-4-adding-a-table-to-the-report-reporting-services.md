@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 5ddf2914-bcdd-427d-8cba-0ccb8342f819
 caps.latest.revision: 60
-author: markingmyname
-ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: a34a6efad3223ec4d38133571a7c081364f28fea
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: a8a4c0fb1fe9128b40ee00e29c243ede617501f2
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36141474"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37224699"
 ---
 # <a name="lesson-4-adding-a-table-to-the-report-reporting-services"></a>Leçon 4 : Ajout d'une table au rapport (Reporting Services)
   Une fois le dataset défini, vous pouvez commencer à concevoir le rapport. Pour créer une mise en page de rapport, faites glisser les régions de données, les zones de texte, les images et autres éléments que vous souhaitez inclure dans un rapport vers l'aire de conception.  
@@ -33,15 +33,15 @@ ms.locfileid: "36141474"
     > [!NOTE]  
     >  La **Boîte à outils** peut s’afficher sous la forme d’un onglet situé à gauche du volet **Données du rapport** . Pour ouvrir la **Boîte à outils**, positionnez le pointeur au-dessus de l’onglet **Boîte à outils** . Si la **Boîte à outils** n’est pas visible, cliquez sur **Boîte à outils** dans le menu **Affichage**.  
   
-2.  Dans le **les données de rapport** volet, développez le **AdventureWorksDataset** dataset pour afficher les champs.  
+2.  Dans le **les données de rapport** volet, développez le **AdventureWorksDataset** jeu de données pour afficher les champs.  
   
 3.  Faites glisser le champ de Date à partir de la **les données de rapport** volet vers la première colonne dans la table.  
   
      Lorsque vous déposez ce champ dans la première colonne, deux événements se produisent. En premier lieu, la cellule de données affiche le nom du champ, appelé *expression de champ*, entre crochets : `[Date]`. En second lieu, une valeur d'en-tête de colonne est automatiquement ajoutée à la ligne d'en-tête, immédiatement au-dessus de l'expression de champ. Par défaut, la colonne porte le nom du champ. Vous pouvez sélectionner le texte de la ligne d'en-tête et taper un nouveau nom.  
   
-4.  Faites glisser le champ de la commande à partir de la **les données de rapport** volet vers la deuxième colonne de la table.  
+4.  Faites glisser le champ de commande à partir de la **les données de rapport** volet vers la deuxième colonne de la table.  
   
-5.  Faites glisser le champ produit à partir de la **les données de rapport** volet vers la troisième colonne de la table.  
+5.  Faites glisser le champ de produit à partir de la **les données de rapport** volet à la troisième colonne de la table.  
   
 6.  Faites glisser le champ Qty vers le bord droit de la troisième colonne jusqu'à ce que vous obteniez un curseur vertical et que le pointeur de la souris prennent la forme d'un signe plus [+]. Lorsque vous relâchez le bouton de la souris, une quatrième colonne est créée pour `[Qty]`.  
   
@@ -52,7 +52,7 @@ ms.locfileid: "36141474"
   
      Le diagramme suivant représente une région de données de table qui a été remplie avec les champs suivants : Date, Order, Product, Qty et Line Total.  
   
-     ![Conception, Table avec ligne d’en-tête et ligne de détails](../../2014/tutorials/media/rs-basictabledetailsdesign.gif "de conception, Table avec ligne d’en-tête et ligne de détails")  
+     ![Conception, Table avec ligne d’en-tête et de ligne de détails](../../2014/tutorials/media/rs-basictabledetailsdesign.gif "conception, Table avec ligne d’en-tête et de ligne de détails")  
   
 ## <a name="preview-your-report"></a>Affichage d'un aperçu d'un rapport  
  L'affichage d'un aperçu d'un rapport vous permet de visualiser le rapport rendu sans avoir à le publier au préalable sur un serveur de rapports. Vous souhaiterez probablement afficher fréquemment des aperçus du rapport pendant sa conception. Afficher un aperçu du rapport entraîne également l'exécution de la validation au niveau de la conception et des connexions de données pour vous permettre de corriger les erreurs et les problèmes avant la publication sur un serveur de rapports.  

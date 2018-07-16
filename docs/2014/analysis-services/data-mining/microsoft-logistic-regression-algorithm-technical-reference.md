@@ -1,5 +1,5 @@
 ---
-title: Référence technique de Microsoft Logistic Regression algorithme | Documents Microsoft
+title: Référence technique de Microsoft Logistic Regression algorithme | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - logistic regression [Analysis Services]
 - MAXIMUM_INPUT_ATTRIBUTES parameter
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - HOLDOUT_SEED parameter
 ms.assetid: cf32f1f3-153e-476f-91a4-bb834ec7c88d
 caps.latest.revision: 16
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: accf5f68267c4e66b2becac0f03c6bc4548b4ae5
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: f211c048acff10e3e9509beebc909ee141ba56a5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36139519"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37317466"
 ---
 # <a name="microsoft-logistic-regression-algorithm-technical-reference"></a>Références techniques relatives à l’algorithme MLR (Microsoft Logistic Regression)
   L’algorithme MLR ( [!INCLUDE[msCoName](../../includes/msconame-md.md)] Logistic Regression) est une variante de l’algorithme MNN ( [!INCLUDE[msCoName](../../includes/msconame-md.md)] Neural Network), où le paramètre *HIDDEN_NODE_RATIO* 0. Ce paramètre crée un modèle de réseau neuronal qui ne contient pas de couche masquée et qui, par conséquent, est équivalent à la régression logistique.  
@@ -40,7 +40,7 @@ ms.locfileid: "36139519"
   
  L'axe des abscisses (X) contient les valeurs d'une colonne d'entrée. L'axe des ordonnées (Y) contient les probabilités que la colonne prédictible contiendra l'un ou l'autre des états. Le problème de cette méthode est que la régression linéaire ne contraint pas la colonne à avoir une valeur comprise entre 0 et 1, même s'il s'agit des valeurs minimale et maximale de la colonne. Vous pouvez effectuer une régression logistique pour résoudre ce problème. Au lieu de créer une ligne droite, l'analyse de régression logistique crée une courbe en forme de « S » contenant les contraintes de valeur maximale et minimale. Par exemple, le diagramme suivant représente les résultats obtenus en effectuant une régression logistique par rapport aux mêmes données que pour l'exemple précédent.  
   
- ![Données modélisées à l’aide de la régression logistique](../media/logistic-regression.gif "données modélisées à l’aide de la régression logistique")  
+ ![Les données modélisées à l’aide de la régression logistique](../media/logistic-regression.gif "données modélisées à l’aide de la régression logistique")  
   
  Notez que la courbe reste toujours entre la valeur 1 et la valeur 0. Vous pouvez utiliser la régression logistique pour identifier les colonnes d'entrée qui jouent un rôle important dans la détermination de l'état de la colonne prédictible.  
   
@@ -48,27 +48,27 @@ ms.locfileid: "36139519"
  La sélection des fonctionnalités est automatiquement utilisée par tous les algorithmes d'exploration de données Analysis Services pour améliorer l'analyse et réduire la charge de traitement. La méthode utilisée pour la sélection des fonctionnalités dans un modèle de régression logistique dépend du type de données de l'attribut. La régression logistique étant basée sur l'algorithme MNN (Microsoft Neural Network), elle utilise un sous-ensemble de méthodes de sélection de fonctionnalités qui s'appliquent aux réseaux neuronaux. Pour plus d’informations, consultez [Sélection des fonctionnalités &#40;Exploration de données&#41;](feature-selection-data-mining.md).  
   
 ### <a name="scoring-inputs"></a>Calcul de score des entrées  
- Dans le contexte d’un modèle de réseau neuronal ou de régression logistique, le*ing* désigne le processus de conversion des valeurs présentes dans les données d’un jeu de valeurs qui utilisent la même échelle et qui, par conséquent, peuvent être comparées les unes aux autres. Par exemple, supposons que les entrées pour la plage Income sont comprises entre de 0 à 100 000 et que celles pour [Number of Children] sont comprises entre 0 et 5. Ce processus de conversion vous permet de *score*, ou de comparer, l’importance de chaque entrée, quelle que soit la différence entre les valeurs.  
+ Dans le contexte d’un modèle de réseau neuronal ou de régression logistique, le*ing* désigne le processus de conversion des valeurs présentes dans les données d’un jeu de valeurs qui utilisent la même échelle et qui, par conséquent, peuvent être comparées les unes aux autres. Par exemple, supposons que les entrées pour la plage Income sont comprises entre de 0 à 100 000 et que celles pour [Number of Children] sont comprises entre 0 et 5. Ce processus de conversion vous permet de *score*, ou de comparer, l’importance de chaque entrée, quel que soit la différence des valeurs.  
   
- Pour chaque état qui apparaît dans le jeu d'apprentissage, le modèle génère une entrée. Pour les entrées discrètes ou discrétisées, une entrée supplémentaire est créée pour représenter l'état manquant s'il apparaît au moins une fois dans le jeu d'apprentissage. Pour les entrées continues, deux nœuds d'entrée sont créés au plus : un pour les valeurs manquantes, si elles sont présentes dans les données d'apprentissage, et une entrée pour toutes les valeurs existantes ou non Null. Chaque entrée est mise à l’échelle en un format numérique à l’aide de la méthode de normalisation z-score, (x-μ) / StdDev.  
+ Pour chaque état qui apparaît dans le jeu d'apprentissage, le modèle génère une entrée. Pour les entrées discrètes ou discrétisées, une entrée supplémentaire est créée pour représenter l'état manquant s'il apparaît au moins une fois dans le jeu d'apprentissage. Pour les entrées continues, deux nœuds d'entrée sont créés au plus : un pour les valeurs manquantes, si elles sont présentes dans les données d'apprentissage, et une entrée pour toutes les valeurs existantes ou non Null. Chaque entrée est mis à l’échelle à un format numérique à l’aide de la méthode de normalisation z-score (x – μg) / StdDev.  
   
  Lors de la normalisation z-score, la moyenne (μ) et l'écart type sont obtenus sur le jeu d'apprentissage complet.  
   
  **Valeurs continues**  
   
- Valeur est présente : (X – μ) / σ / / X est la valeur réelle encodée)  
+ Valeur est présente : (X – μg) / σ / / X est la valeur réelle encodée)  
   
- Valeur est absente : - μ/σ / / mu négatif divisé par sigma)  
+ Valeur est absente : - μg/σ / / mu négatif divisé par sigma)  
   
  **Valeurs discrètes**  
   
- Μ = p – (probabilité antérieure d’un état)  
+ Μg = p – (probabilité antérieure d’un état)  
   
  StdDev = sqrt(p(1-p))  
   
- Valeur est présente : (1 – μ) / σ / / (un moins mu) divisé par sigma)  
+ Valeur est présente : (1 – μg) / σ / / (1 moins mu) divisé par sigma)  
   
- Valeur est absente : (– μ) / σ / / mu négatif divisé par sigma)  
+ Valeur est absente : (– μg) / σ / / mu négatif divisé par sigma)  
   
 ### <a name="understanding-logistic-regression-coefficients"></a>Présentation des coefficients de régression logistique  
  La documentation statistique présente différentes méthodes pour effectuer la régression logistique, mais une part importante de toutes ces méthodes évalue l'adéquation du modèle. Un grand nombre de statistiques adéquates ont été proposées, dont des rapports de cotes et des modèles de covariance. La méthode utilisée pour mesurer l'adéquation d'un modèle n'est pas traitée dans cette rubrique ; toutefois, vous pouvez récupérer la valeur des coefficients dans le modèle et les utiliser pour concevoir vos propres mesures d'adéquation.  
@@ -157,9 +157,9 @@ WHERE NODE_TYPE = 23
 |Attribut prédictible|Continu, Discret, Discrétisé|  
   
 ## <a name="see-also"></a>Voir aussi  
- [Algorithme Microsoft Logistic Regression](microsoft-logistic-regression-algorithm.md)   
- [Exemples de requêtes de modèle de régression linéaire](linear-regression-model-query-examples.md)   
- [Exploration du contenu du modèle pour les modèles de régression logistique &#40;Analysis Services - Exploration de données&#41;](mining-model-content-for-logistic-regression-models.md)   
- [MNN (Microsoft Neural Network)](microsoft-neural-network-algorithm.md)  
+ [Algorithme de régression logistique de Microsoft](microsoft-logistic-regression-algorithm.md)   
+ [Exemples de requête de modèle de régression linéaire](linear-regression-model-query-examples.md)   
+ [Contenu du modèle pour les modèles de régression logistique d’exploration de données &#40;Analysis Services - Exploration de données&#41;](mining-model-content-for-logistic-regression-models.md)   
+ [Algorithme MNN (Microsoft Neural Network)](microsoft-neural-network-algorithm.md)  
   
   

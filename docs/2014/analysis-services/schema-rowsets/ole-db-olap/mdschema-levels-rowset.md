@@ -1,5 +1,5 @@
 ---
-title: Ensemble de lignes MDSCHEMA_LEVELS | Documents Microsoft
+title: Ensemble de lignes MDSCHEMA_LEVELS | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -18,15 +18,15 @@ helpviewer_keywords:
 - MDSCHEMA_LEVELS rowset
 ms.assetid: 4313e268-33f4-4e99-96d7-2ec26775c580
 caps.latest.revision: 32
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 51aced8c191943330b6df9f08fc65292b1a77d81
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: ff9d359bb82c0197c4ebdc1b9c088ca50556b9d9
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36050914"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37312439"
 ---
 # <a name="mdschemalevels-rowset"></a>Ensemble de lignes MDSCHEMA_LEVELS
   Décrit chaque niveau dans une hiérarchie particulière.  
@@ -44,7 +44,7 @@ ms.locfileid: "36050914"
 |`LEVEL_NAME`|`DBTYPE_WSTR`||Nom du niveau.|  
 |`LEVEL_UNIQUE_NAME`|`DBTYPE_WSTR`||Nom unique du niveau avec caractères d'échappement appropriés.|  
 |`LEVEL_GUID`|`DBTYPE_GUID`||Non pris en charge.|  
-|`LEVEL_CAPTION`|`DBTYPE_WSTR`||Étiquette ou légende associée à la hiérarchie. Principalement utilisée à des fins d'affichage. Si une légende n’existe pas, `LEVEL_NAME` est retourné.|  
+|`LEVEL_CAPTION`|`DBTYPE_WSTR`||Étiquette ou légende associée à la hiérarchie. Principalement utilisée à des fins d'affichage. Si une légende n’existe pas, `LEVEL_NAME` est retournée.|  
 |`LEVEL_NUMBER`|`DBTYPE_UI4`||Distance du niveau par rapport à la racine de la hiérarchie. Le niveau de la racine est égal à zéro (`0)`.|  
 |`LEVEL_CARDINALITY`|`DBTYPE_UI4`||Nombre de membres du niveau.|  
 |`LEVEL_TYPE`|`DBTYPE_I4`||Type de niveau :<br /><br /> -   `MDLEVEL_TYPE_GEO_CONTINENT` (`0x2001`)<br />-   `MDLEVEL_TYPE_GEO_REGION` (`0x2002`)<br />-   `MDLEVEL_TYPE_GEO_COUNTRY` (`0x2003`)<br />-   `MDLEVEL_TYPE_GEO_STATE_OR_PROVINCE` (`0x2004`)<br />-   `MDLEVEL_TYPE_GEO_COUNTY` (`0x2005`)<br />-   `MDLEVEL_TYPE_GEO_CITY` (`0x2006`)<br />-   `MDLEVEL_TYPE_GEO_POSTALCODE` (`0x2007`)<br />-   `MDLEVEL_TYPE_GEO_POINT` (`0x2008`)<br />-   `MDLEVEL_TYPE_ORG_UNIT` (`0x1011`)<br />-   `MDLEVEL_TYPE_BOM_RESOURCE` (`0x1012`)<br />-   **MDLEVEL_TYPE_QUANTITATIVE** (`0x1013`)<br />-   `MDLEVEL_TYPE_ACCOUNT` (`0x1014`)<br />-   `MDLEVEL_TYPE_CUSTOMER` (`0x1021`)<br />-   `MDLEVEL_TYPE_CUSTOMER_GROUP` (`0x1022`)<br />-   `MDLEVEL_TYPE_CUSTOMER_HOUSEHOLD` (`0x1023`)<br />-   `MDLEVEL_TYPE_PRODUCT` (`0x1031`)<br />-   `MDLEVEL_TYPE_PRODUCT_GROUP` (`0x1032`)<br />-   `MDLEVEL_TYPE_SCENARIO` (`0x1015`)<br />-   `MDLEVEL_TYPE_UTILITY` (`0x1016`)<br />-   `MDLEVEL_TYPE_PERSON` (`0x1041`)<br />-   `MDLEVEL_TYPE_COMPANY` (`0x1042`)<br />-   `MDLEVEL_TYPE_CURRENCY_SOURCE` (`0x1051`)<br />-   `MDLEVEL_TYPE_CURRENCY_DESTINATION` (`0x1052`)<br />-   `MDLEVEL_TYPE_CHANNEL` (`0x1061`)<br />-   `MDLEVEL_TYPE_REPRESENTATIVE` (`0x1062`)<br />-   `MDLEVEL_TYPE_PROMOTION` (`0x1071`)|  

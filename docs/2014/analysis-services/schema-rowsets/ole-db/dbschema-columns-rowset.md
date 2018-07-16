@@ -1,5 +1,5 @@
 ---
-title: Ensemble de lignes DBSCHEMA_COLUMNS | Documents Microsoft
+title: Ensemble de lignes DBSCHEMA_COLUMNS | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -18,15 +18,15 @@ helpviewer_keywords:
 - DBSCHEMA_COLUMNS rowset
 ms.assetid: 653bdd07-a533-4a99-8b6a-6e5c7322e1f3
 caps.latest.revision: 40
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 413e86e156db59e7621c94bdc1c99cd0087a987f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 6fa933eb153b0d8de4c2fec4ba92b072954be141
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36139678"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37267575"
 ---
 # <a name="dbschemacolumns-rowset"></a>Ensemble de lignes DBSCHEMA_COLUMNS
   Fournit des informations de colonne pour toutes les colonnes qui répondent aux critères de restriction indiqués.  
@@ -52,7 +52,7 @@ ms.locfileid: "36139678"
 |`CHARACTER_MAXIMUM_LENGTH`|`DBTYPE_UI4`||Longueur maximale possible d'une valeur de la colonne.<br /><br /> Cette valeur est extraite de la propriété `DataSize` dans l'objet `DataItem`.|  
 |`CHARACTER_OCTET_LENGTH`|`DBTYPE_UI4`||Longueur maximale possible d'une valeur de la colonne, en octets, pour les colonnes de type character ou binary.<br /><br /> Une valeur de zéro (0) indique que la colonne ne possède pas de longueur maximale.<br /><br /> La valeur `NULL` est retournée pour les colonnes qui ne retournent pas de type de données binary ou character.|  
 |`NUMERIC_PRECISION`|`DBTYPE_UI2`||Précision maximale de la colonne pour les types de données numériques autres que `DBTYPE_VARNUMERIC`.|  
-|`NUMERIC_SCALE`|`DBTYPE_I2`||Nombre de chiffres à droite de la virgule décimale pour `DBTYPE_DECIMAL`, `DBTYPE_NUMERIC`, `DBTYPE_VARNUMERIC`. Sinon, c’est `NULL`.|  
+|`NUMERIC_SCALE`|`DBTYPE_I2`||Nombre de chiffres à droite de la virgule décimale pour `DBTYPE_DECIMAL`, `DBTYPE_NUMERIC`, `DBTYPE_VARNUMERIC`. Sinon, il s’agit de `NULL`.|  
 |`DATETIME_PRECISION`|`DBTYPE_UI4`||Non pris en charge.|  
 |`CHARACTER_SET_CATALOG`|`DBTYPE_WSTR`||Non pris en charge.|  
 |`CHARACTER_SET_SCHEMA`|`DBTYPE_WSTR`||Non pris en charge.|  

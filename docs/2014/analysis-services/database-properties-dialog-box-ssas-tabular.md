@@ -1,5 +1,5 @@
 ---
-title: Base de données de la boîte de dialogue de propriétés (SSAS - tabulaire) | Documents Microsoft
+title: Boîte de dialogue de propriétés (SSAS - tabulaire) de base de données | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.ssmsimbi.DatabaseProperties.f1
 ms.assetid: 0f0ec02f-7b55-40ea-8a04-ed0deb1efd7a
 caps.latest.revision: 9
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 142a3eeb8ae135fa27316f4b227f13fc33c77814
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 31f4e6201246467517cf3fdd39bb03906b3bde24
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36139503"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37299329"
 ---
 # <a name="database-properties-dialog-box-ssas---tabular"></a>Boîte de dialogue Propriétés de la base de données (SSAS - Tabulaire)
   Cette boîte de dialogue fournit des horodateurs et d'autres informations descriptives, ainsi que des propriétés personnalisables qui déterminent si la base de données utilise des données en mémoire cache. Les autres propriétés personnalisables incluent la modification du nom de la base de données et la spécification des options d'emprunt d'identité.  
