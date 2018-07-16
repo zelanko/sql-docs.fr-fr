@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - hierarchies [SQL Server], tables to support
 - hierarchyid [Database Engine], concepts
@@ -18,18 +18,18 @@ helpviewer_keywords:
 - hierarchical queries [SQL Server], using hierarchyid data type
 ms.assetid: 19aefa9a-fbc2-4b22-92cf-67b8bb01671c
 caps.latest.revision: 39
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 7294a3d1db75d8ef2596bf7796fa706a9a9bc269
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: rothja
+ms.author: jroth
+manager: craigg
+ms.openlocfilehash: f188b3824492ca28fdf37d4e26d2387fbd8e923a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36039056"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37322389"
 ---
 # <a name="hierarchical-data-sql-server"></a>Données hiérarchiques (SQL Server)
-  La fonction intégrée `hierarchyid` type de données rend plus facile de stockage et l’interrogation des données hiérarchiques. `hierarchyid` est optimisé pour représenter les arborescences, qui sont du type de données hiérarchiques le plus courant.  
+  Intégrés `hierarchyid` type de données rend plus facile de stocker et interroger des données hiérarchiques. `hierarchyid` est optimisé pour représenter les arborescences, qui sont du type de données hiérarchiques le plus courant.  
   
  Les données hiérarchiques sont définies comme un jeu d'éléments de données liés entre eux par des relations hiérarchiques. Des relations hiérarchiques existent dans lesquelles un élément de données est le parent d'un autre élément. Voici quelques exemples de données hiérarchiques communément stockées dans les bases de données :  
   
@@ -54,7 +54,7 @@ ms.locfileid: "36039056"
   
 -   La comparaison est effectuée dans l'ordre à profondeur prioritaire  
   
-     Étant donné deux `hierarchyid` valeurs **un** et **b**, **une < b** signifie un se situe avant b dans un parcours à profondeur prioritaire de l’arborescence. Les index sur les types de données `hierarchyid` sont dans l'ordre à profondeur prioritaire, et les nœuds proches les uns des autres dans un parcours à profondeur prioritaire sont stockés les uns à côté des autres. Par exemple, les enfants d'un enregistrement sont stockés à côté de cet enregistrement.  
+     Étant donné deux `hierarchyid` valeurs **un** et **b**, **un < b** signifie un se situe avant b dans un parcours à profondeur prioritaire de l’arborescence. Les index sur les types de données `hierarchyid` sont dans l'ordre à profondeur prioritaire, et les nœuds proches les uns des autres dans un parcours à profondeur prioritaire sont stockés les uns à côté des autres. Par exemple, les enfants d'un enregistrement sont stockés à côté de cet enregistrement.  
   
 -   Prise en charge des insertions et suppressions arbitraires  
   
@@ -66,9 +66,9 @@ ms.locfileid: "36039056"
   
 -   Une colonne de type `hierarchyid` ne représente pas automatiquement une arborescence. Il appartient à l'application de générer et d'assigner des valeurs `hierarchyid` de telle façon que la relation voulue entre les lignes soit reflétée dans les valeurs. Certaines applications peuvent avoir une colonne de type `hierarchyid` qui indique l'emplacement dans une hiérarchie définie dans une autre table.  
   
--   C’est à l’application à gérer la concurrence en générant et en affectant `hierarchyid` valeurs. Rien ne garantit que les valeurs `hierarchyid` d'une colonne sont uniques, à moins que l'application utilise une contrainte de clé unique ou applique elle-même l'unicité selon sa propre logique.  
+-   C’est à l’application pour gérer la concurrence en générant et en affectant `hierarchyid` valeurs. Rien ne garantit que les valeurs `hierarchyid` d'une colonne sont uniques, à moins que l'application utilise une contrainte de clé unique ou applique elle-même l'unicité selon sa propre logique.  
   
--   Relations hiérarchiques représentées par `hierarchyid` valeurs ne sont pas appliquées à une relation de clé étrangère. Dans une relation hiérarchique, il est possible et parfois nécessaire que A ait un enfant B, puis que A soit supprimé, laissant B avec une relation à un enregistrement inexistant. Si ce comportement n'est pas acceptable, l'application doit rechercher des descendants avant de supprimer des parents.  
+-   Relations hiérarchiques représentées par `hierarchyid` valeurs ne sont pas appliqués comme une relation de clé étrangère. Dans une relation hiérarchique, il est possible et parfois nécessaire que A ait un enfant B, puis que A soit supprimé, laissant B avec une relation à un enregistrement inexistant. Si ce comportement n'est pas acceptable, l'application doit rechercher des descendants avant de supprimer des parents.  
   
   
 ##  <a name="alternatives"></a> Quand utiliser des alternatives à hierarchyid  
@@ -108,11 +108,11 @@ GO
   
  Il se peut que la relation parent/enfant soit supérieure si les conditions suivantes sont réunies :  
   
--   La taille de la clé est essentielle. Pour le même nombre de nœuds, un `hierarchyid` valeur est égale ou supérieure à une famille d’entiers (`smallint`, `int`, `bigint`) valeur. Il s’agit uniquement besoin d’utiliser Parent/enfant dans de rares cas, étant donné que `hierarchyid` considérablement plus performants localité de complexité des e/s et du processeur que les expressions de table communes requises lorsque vous utilisez une structure Parent/enfant.  
+-   La taille de la clé est essentielle. Pour le même nombre de nœuds, un `hierarchyid` valeur est égale ou supérieure à une famille d’entiers (`smallint`, `int`, `bigint`) valeur. Cela ne constitue une raison à utiliser Parent/enfant dans de rares cas, étant donné que `hierarchyid` la localité de complexité des e/s et UC considérablement plus performants que les expressions de table communes requises lorsque vous utilisez une structure Parent/enfant.  
   
 -   Les requêtes portent rarement sur plusieurs sections de la hiérarchie. En d'autres termes, les requêtes portent habituellement sur un seul point de la hiérarchie. Dans ces cas, la co-location n'est pas importante. Par exemple, parent/enfant est supérieur lorsque la table d'organisation est utilisée uniquement pour le traitement des salaires d'employés individuels.  
   
--   Les sous-arborescences qui ne sont pas au niveau du nœud terminal sont fréquemment déplacées et les performances sont importantes. Dans une représentation parent/enfant, la modification de l'emplacement d'une ligne dans une hiérarchie affecte une seule ligne. Modification de l’emplacement d’une ligne dans un `hierarchyid` a une incidence sur l’utilisation *n* lignes, où *n* est le nombre de nœuds dans la sous-arborescence déplacée.  
+-   Les sous-arborescences qui ne sont pas au niveau du nœud terminal sont fréquemment déplacées et les performances sont importantes. Dans une représentation parent/enfant, la modification de l'emplacement d'une ligne dans une hiérarchie affecte une seule ligne. Modification de l’emplacement d’une ligne dans un `hierarchyid` utilisation affecte *n* lignes, où *n* est le nombre de nœuds dans la sous-arborescence déplacée.  
   
      Si les sous-arborescences qui ne sont pas au niveau du nœud terminal sont fréquemment déplacées et que les performances sont importantes, mais que la plupart des déplacements se font à un niveau bien défini de la hiérarchie, envisagez le fractionnement des niveaux supérieurs et inférieurs en deux hiérarchies. Tous les déplacements se font ainsi dans les niveaux du nœud terminal de la hiérarchie supérieure. Prenons par exemple une hiérarchie de sites Web hébergés par un service. Les sites contiennent de nombreuses pages organisées de façon hiérarchique. Les sites hébergés peuvent être déplacés vers d'autres emplacements dans la hiérarchie de site, mais les pages subordonnées sont rarement réorganisées. Cela peut être représenté de la manière suivante :  
   
@@ -273,7 +273,7 @@ VALUES ('/', 'Earth', 'Planet');
   
   
 ###  <a name="BKMK_ManagingTrees"></a> Gestion d'une arborescence à l'aide de hierarchyid  
- Bien qu’un `hierarchyid` colonne ne représente pas nécessairement une arborescence, une application peut facilement faire en sorte qu’il exécute.  
+ Bien qu’un `hierarchyid` colonne ne représente pas nécessairement une arborescence, une application peut facilement faire en sorte qu’il détecte.  
   
 -   Lorsque vous générez de nouvelles valeurs, effectuez l'une des opérations suivantes :  
   

@@ -1,5 +1,5 @@
 ---
-title: Fonctionnalités déconseillées dans SQL Server Reporting Services dans SQL Server 2014 | Documents Microsoft
+title: Fonctionnalités déconseillées dans SQL Server Reporting Services dans SQL Server 2014 | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Reporting Services, backward compatibility
 - deprecated features [Reporting Services]
@@ -18,13 +18,13 @@ ms.assetid: 3876c01e-f81d-4cce-9104-5106a8c369e6
 caps.latest.revision: 49
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: a52d82f4a2126c12dad3ec19cde3cc93ff22368d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 6817f31ff83e1a502506893f66b5080399200fd8
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36142979"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37305139"
 ---
 # <a name="deprecated-features-in-sql-server-reporting-services-in-sql-server-2014"></a>Fonctions déconseillées dans SQL Server Reporting Services dans SQL Server 2014
   Cette rubrique décrit les fonctionnalités déconseillées de [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] . Les fonctionnalités sont toujours disponibles dans la version dans laquelle elles sont déconseillées ; toutefois, leur suppression est planifiée dans une version future de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Les fonctions déconseillées ne doivent pas être utilisées dans de nouvelles applications.  
@@ -42,7 +42,7 @@ ms.locfileid: "36142979"
 ##  <a name="bkmk_2014"></a> Fonctions déconseillées dans SQL Server 2014 Reporting Services  
   
 ### <a name="features-not-supported-in-the-next-version-of-sql-server"></a>Fonctionnalités non prises en charge dans la prochaine version de SQL Server  
- Les éléments suivants [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] fonctionnalités ne sont pas prises en charge dans les **suivant** version de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Évitez d'utiliser ces fonctionnalités dans vos nouveaux développements et modifiez dès que possible les applications qui y ont recours.  
+ Ce qui suit [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] fonctionnalités ne sont pas prises en charge dans les **suivant** version de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Évitez d'utiliser ces fonctionnalités dans vos nouveaux développements et modifiez dès que possible les applications qui y ont recours.  
   
 #### <a name="html-rendering-extension-device-information-settings"></a>Paramètres d'informations de périphérique d'extension de rendu HTML  
  Les paramètres d'informations de périphérique suivants pour l'extension de rendu HTML sont déconseillés.  
@@ -68,21 +68,21 @@ ms.locfileid: "36142979"
  Pour plus d’informations sur l’extension de rendu HTML, consultez [HTML Device Information Settings](html-device-information-settings.md)  
   
 #### <a name="microsoft-word-and-microsoft-excel-1997-2003-rendering"></a>Rendu dans Microsoft Word et Microsoft Excel 1997-2003  
- Le[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] extensions de rendu BIFF8 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] des rapports à le [!INCLUDE[msCoName](../includes/msconame-md.md)] Word et [!INCLUDE[msCoName](../includes/msconame-md.md)] format de fichier d’échange binaire Excel 1997-2003. [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] inclut des extensions de rendu dans les [!INCLUDE[msCoName](../includes/msconame-md.md)] format Open XML de Office 2007-2010.  
+ Le[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] extensions de rendu BIFF8 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] signale à le [!INCLUDE[msCoName](../includes/msconame-md.md)] Word et [!INCLUDE[msCoName](../includes/msconame-md.md)] format de fichier d’échange binaire Excel 1997-2003. [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] inclut des extensions qui s’affichent dans le [!INCLUDE[msCoName](../includes/msconame-md.md)] les format Open XML Office 2007-2010.  
   
 #### <a name="report-definition-language-rdl-2005-and-earlier"></a>Langage RDL (Report Definition Language) version 2005 et antérieures  
  Le langage Report Definition Language (RDL) version 2005 et antérieures est déconseillé. Pour plus d’informations sur le langage RDL, consultez [Report Definition Language &#40;SSRS&#41;](reports/report-definition-language-ssrs.md).  
   
- Pour plus d’informations sur la mise à niveau des rapports, consultez [mise à niveau des rapports](install-windows/upgrade-reports.md).  
+ Pour plus d’informations sur la mise à niveau des rapports, consultez [Upgrade Reports](install-windows/upgrade-reports.md).  
   
 #### <a name="sql-server-2005-and-earlier-custom-report-items"></a>Éléments de rapport personnalisés SQL Server version 2005 et antérieures  
- Éléments de rapport personnalisés (CRI) compilé pour [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 2005 et antérieures sont déconseillés.  
+ Personnalisée des éléments de rapport compilé pour [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 2005 et antérieures sont déconseillés.  
   
 #### <a name="reporting-services-snapshots-2005-and-earlier"></a>Instantanés Reporting Services version 2005 et antérieures  
  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] rendus avec [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 2005 et antérieures sont déconseillés.  
   
 #### <a name="report-models"></a>Modèles de rapport  
- Les modèles de rapport du langage de modélisation sémantique (SMDL) sont déconseillés. Bien que vous pouvez continuer à utiliser des modèles de rapport existants comme sources de données dans [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] rapports vous devez envisager la mise à jour de vos rapports afin de supprimer leur dépendance aux modèles de rapport.  
+ Les modèles de rapport du langage de modélisation sémantique (SMDL) sont déconseillés. Bien que vous pouvez continuer à utiliser des modèles de rapport existants comme sources de données dans [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] signale vous devez envisager la mise à jour de vos rapports afin de supprimer leur dépendance aux modèles de rapport.  
   
  [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] n'inclut pas les outils de création ou mise à jour des modèles de rapport. Pour plus d’informations, consultez [modifications avec rupture dans SQL Server Reporting Services dans SQL Server 2014](breaking-changes-in-sql-server-reporting-services-in-sql-server-2016.md).  
   
@@ -101,7 +101,7 @@ ms.locfileid: "36142979"
 ### <a name="features-not-supported-in-a-future-version-of-sql-server"></a>Fonctionnalités non prises en charge dans une future version de SQL Server  
  Les fonctions suivantes du [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] seront prises en charge dans la prochaine version de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], mais seront supprimées dans une version ultérieure. La version spécifique de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] n'a pas été déterminée.  
   
- Ne [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] fonctionnalités ont été déconseillées dans [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)].  
+ Ne [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] fonctionnalités ont été dépréciées dans [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)].  
   
 ##  <a name="bkmk_2012sp1"></a> Fonctions déconseillées dans SQL Server 2012 SP1 Reporting Services  
  Cette section décrit [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] fonctionnalités déconseillées dans [!INCLUDE[ssSQL11SP1](../includes/sssql11sp1-md.md)]. Les fonctions suivantes du [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] seront prises en charge dans la prochaine version de [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)], mais seront supprimées dans une version ultérieure. La version spécifique de [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] n'a pas été déterminée.  
@@ -138,21 +138,21 @@ ms.locfileid: "36142979"
  Pour plus d’informations sur l’extension de rendu HTML, consultez [HTML Device Information Settings](html-device-information-settings.md)  
   
 ### <a name="microsoft-word-and-microsoft-excel-1997-2003-rendering"></a>Rendu dans Microsoft Word et Microsoft Excel 1997-2003  
- Le[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] extensions de rendu BIFF8 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] des rapports à le [!INCLUDE[msCoName](../includes/msconame-md.md)] Word et [!INCLUDE[msCoName](../includes/msconame-md.md)] format de fichier d’échange binaire Excel 1997-2003. [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] inclut des extensions de rendu dans les [!INCLUDE[msCoName](../includes/msconame-md.md)] format Open XML de Office 2007-2010.  
+ Le[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] extensions de rendu BIFF8 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] signale à le [!INCLUDE[msCoName](../includes/msconame-md.md)] Word et [!INCLUDE[msCoName](../includes/msconame-md.md)] format de fichier d’échange binaire Excel 1997-2003. [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] inclut des extensions qui s’affichent dans le [!INCLUDE[msCoName](../includes/msconame-md.md)] les format Open XML Office 2007-2010.  
   
 ### <a name="report-definition-language-rdl-2005-and-earlier"></a>Langage RDL (Report Definition Language) version 2005 et antérieures  
  Le langage Report Definition Language (RDL) version 2005 et antérieures est déconseillé. Pour plus d’informations sur le langage RDL, consultez [Report Definition Language &#40;SSRS&#41;](reports/report-definition-language-ssrs.md).  
   
- Pour plus d’informations sur la mise à niveau des rapports, consultez [mise à niveau des rapports](install-windows/upgrade-reports.md).  
+ Pour plus d’informations sur la mise à niveau des rapports, consultez [Upgrade Reports](install-windows/upgrade-reports.md).  
   
 ### <a name="sql-server-2005-and-earlier-custom-report-items"></a>Éléments de rapport personnalisés SQL Server version 2005 et antérieures  
- Éléments de rapport personnalisés (CRI) compilé pour [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 2005 et antérieures sont déconseillés.  
+ Personnalisée des éléments de rapport compilé pour [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 2005 et antérieures sont déconseillés.  
   
 ### <a name="reporting-services-snapshots-2005-and-earlier"></a>Instantanés Reporting Services version 2005 et antérieures  
  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] rendus avec [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 2005 et antérieures sont déconseillés.  
   
 ### <a name="report-models"></a>Modèles de rapport  
- Les modèles de rapport du langage de modélisation sémantique (SMDL) sont déconseillés. Bien que vous pouvez continuer à utiliser des modèles de rapport existants comme sources de données dans [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] rapports vous devez envisager la mise à jour de vos rapports afin de supprimer leur dépendance aux modèles de rapport.  
+ Les modèles de rapport du langage de modélisation sémantique (SMDL) sont déconseillés. Bien que vous pouvez continuer à utiliser des modèles de rapport existants comme sources de données dans [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] signale vous devez envisager la mise à jour de vos rapports afin de supprimer leur dépendance aux modèles de rapport.  
   
  [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] n'inclut pas les outils de création ou mise à jour des modèles de rapport. Pour plus d’informations, consultez [modifications avec rupture dans SQL Server Reporting Services dans SQL Server 2014](breaking-changes-in-sql-server-reporting-services-in-sql-server-2016.md).  
   
@@ -169,14 +169,14 @@ ms.locfileid: "36142979"
 >  SQL Server 2008 R2 étant une mise à niveau de version secondaire de SQL Server 2008, nous vous recommandons d'examiner également le contenu de la section SQL Server 2008.  
   
 ### <a name="report-server-web-service-endpoints"></a>Points de terminaison du service Web Report Server  
- Les services Web <xref:ReportService2005.ReportingService2005> et <xref:ReportService2006.ReportingService2006> ont été déconseillées dans cette version. Ces points de terminaison ont été remplacés par un point de terminaison : <xref:ReportService2010.ReportingService2010>.  
+ Les services Web <xref:ReportService2005.ReportingService2005> et <xref:ReportService2006.ReportingService2006> ont été déconseillées dans cette version. Ces points de terminaison ont été remplacés par un nouveau point de terminaison : <xref:ReportService2010.ReportingService2010>.  
   
  Le nouveau point de terminaison inclut toutes les fonctionnalités disponibles dans les points de terminaison déconseillés et les nouvelles fonctionnalités présentées dans SQL Server 2008 R2.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Quelles sont les nouveautés &#40;Reporting Services&#41;](what-s-new-reporting-services.md)   
  [Compatibilité descendante](../getting-started/backward-compatibility.md)   
- [Changements de comportement SQL Server Reporting Services dans SQL Server 2014](behavior-changes-to-sql-server-reporting-services-in-sql-server-2016.md)   
- [Fonctionnalités supprimées dans SQL Server Reporting Services dans SQL Server 2014](discontinued-functionality-to-sql-server-reporting-services-in-sql-server.md)  
+ [Changements de comportement apportés à SQL Server Reporting Services dans SQL Server 2014](behavior-changes-to-sql-server-reporting-services-in-sql-server-2016.md)   
+ [Fonctionnalités supprimées de SQL Server Reporting Services dans SQL Server 2014](discontinued-functionality-to-sql-server-reporting-services-in-sql-server.md)  
   
   

@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 topic_type:
 - apiref
 helpviewer_keywords:
 - Audit Add Member to DB Role event class
 ms.assetid: a5ac46b6-765b-4424-b6c7-4d5a1b898d65
 caps.latest.revision: 31
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 39ce2a31845654f1dc24c09f0ab94eed6c8659df
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 9ddf09bab1a3875af23107e9ff94147d562d6bc7
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36141590"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37329799"
 ---
 # <a name="audit-add-member-to-db-role-event-class"></a>Audit Add Member to DB Role (classe d'événements)
   La classe d’événements **Audit Add Member to DB Role** intervient chaque fois qu’une connexion est ajoutée à un rôle de base de données ou qu’elle en est supprimée. Cette classe d’événements est utilisée avec les procédures stockées **sp_addrolemember**, **sp_changegroup**et **sp_droprolemember** .  

@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.dataflowtask.f1
 helpviewer_keywords:
@@ -21,13 +21,13 @@ ms.assetid: c27555c4-208c-43c8-b511-a4de2a8a3344
 caps.latest.revision: 75
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 21cc9dd846af38bcbe8985f883f75ec537f58573
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: dd0ffa2e898661a6685b9608a5e467312ae027c6
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36143305"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37320749"
 ---
 # <a name="data-flow-task"></a>tâche de flux de données
   La tâche de flux de données encapsule le moteur de flux de données chargé de déplacer des données entre les sources et les destinations et permet à l'utilisateur de transformer, nettoyer et modifier les données au cours de leur déplacement. L'ajout d'une tâche de flux de données à un flux de contrôle de package permet au package d'extraire, de transformer et de charger des données.  
@@ -54,8 +54,8 @@ ms.locfileid: "36143305"
 |---------------|-----------------|  
 |`BufferSizeTuning`|Indique que la tâche de flux de données a modifié la taille du tampon. L'entrée de journal décrit les raisons de cette modification de taille et indique la nouvelle taille temporaire du tampon.|  
 |`OnPipelinePostEndOfRowset`|Indique qu’un composant a reçu son signal de fin d’ensemble de lignes, qui est définie par le dernier appel de la `ProcessInput` (méthode). Une entrée est écrite pour chaque composant du flux de données qui traite l'entrée. L'entrée inclut le nom du composant.|  
-|`OnPipelinePostPrimeOutput`|Indique que le composant a terminé son dernier appel à la `PrimeOutput` (méthode). Selon le flux de données, plusieurs entrées de journal peuvent être écrites. Si le composant est une source, cette entrée du journal signifie que le composant a terminé le traitement des lignes.|  
-|`OnPipelinePreEndOfRowset`|Indique qu’un composant est sur le point de recevoir son signal de fin d’ensemble de lignes, qui est définie par le dernier appel de la `ProcessInput` (méthode). Une entrée est écrite pour chaque composant du flux de données qui traite l'entrée. L'entrée inclut le nom du composant.|  
+|`OnPipelinePostPrimeOutput`|Indique que le composant a terminé son dernier appel de la `PrimeOutput` (méthode). Selon le flux de données, plusieurs entrées de journal peuvent être écrites. Si le composant est une source, cette entrée du journal signifie que le composant a terminé le traitement des lignes.|  
+|`OnPipelinePreEndOfRowset`|Indique qu’un composant est sur le point de recevoir son signal de fin d’ensemble de lignes, ce qui est défini par le dernier appel de la `ProcessInput` (méthode). Une entrée est écrite pour chaque composant du flux de données qui traite l'entrée. L'entrée inclut le nom du composant.|  
 |`OnPipelinePrePrimeOutput`|Indique que le composant est sur le point de recevoir son appel de la méthode `PrimeOutput`. Selon le flux de données, plusieurs entrées de journal peuvent être écrites.|  
 |`OnPipelineRowsSent`|Indique le nombre de lignes fournies à une entrée de composant par un appel de la méthode `ProcessInput`. L'entrée du journal inclut le nom du composant.|  
 |`PipelineBufferLeak`|Donne des informations sur tout composant qui maintient l'activité des tampons après la fermeture du gestionnaire de tampons. Si un tampon est toujours actif, cela signifie que des ressources des tampons n'ont pas été libérées et qu'elles peuvent provoquer des fuites de mémoire. L'entrée du journal fournit le nom du composant et l'ID du tampon.|  
@@ -94,8 +94,8 @@ ms.locfileid: "36143305"
   
 |colonne|Description|Valeur|  
 |------------|-----------------|-----------|  
-|**PathID**|La valeur de la `ID` propriété du chemin entre la source OLE DB et la transformation de tri.|1185|  
-|**PathName**|La valeur de la `Name` propriété du chemin d’accès.|Sortie de source OLE DB|  
+|**PathID**|La valeur à partir de la `ID` propriété du chemin entre la source OLE DB et la transformation de tri.|1185|  
+|**PathName**|La valeur à partir de la `Name` propriété du chemin d’accès.|Sortie de source OLE DB|  
 |**ComponentID**|La valeur de la `ID` propriété de la transformation de tri.|1180|  
 |**ComponentName**|Valeur de la propriété `Name` de la transformation de tri.|Trier|  
 |**InputID**|Valeur de la propriété `ID` de l'entrée à la transformation de tri.|1181|  

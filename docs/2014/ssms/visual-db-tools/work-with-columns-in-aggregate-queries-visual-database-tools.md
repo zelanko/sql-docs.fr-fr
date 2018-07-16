@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - HAVING clause, query summary results
 - GROUP BY clause, query summary results
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - WHERE clause, query summary results
 ms.assetid: 1b82681f-3d4f-4b9a-bb1d-2060e44f2577
 caps.latest.revision: 10
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: b2f0c4dd7b5f406deafe50a804136c981150867e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 4efcce69f6a270064e79e415c76e56ac350e607f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36143152"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37291799"
 ---
 # <a name="work-with-columns-in-aggregate-queries-visual-database-tools"></a>Utiliser des colonnes dans des requêtes d'agrégation (Visual Database Tools)
   Quand vous créez des requêtes d’agrégation, le [Concepteur de requêtes et de vues](visual-database-tools.md) fait certaines suppositions afin de construire une requête valide. Par exemple, si vous créez une requête d'agrégation puis placez un marqueur de sortie sur une colonne de données, cette dernière est automatiquement intégrée à la clause GROUP BY par le Concepteur de requêtes et de vues pour éviter l'affichage accidentel du contenu d'une ligne individuelle dans une synthèse.  

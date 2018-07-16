@@ -1,5 +1,5 @@
 ---
-title: Créer le jeu de test (Assistant exploration de données) | Documents Microsoft
+title: Créer le jeu de test (Assistant exploration de données) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dm.dmwizard.holdout.f1
 ms.assetid: d0a44b59-ffbd-45fc-baa8-6b8046b1a2f5
 caps.latest.revision: 19
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: ced530beaaa09954e94c851069ca76d01f3023d0
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 8f9f671a0980d979436e4780579d99122cb9e669
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36142135"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37326879"
 ---
 # <a name="create-testing-set-data-mining-wizard"></a>Créer un jeu de test (Assistant Exploration de données)
   Utilisez la page **Créer un jeu de test** pour spécifier la quantité des données à utiliser pour l’apprentissage et celle à réserver au jeu de test. La séparation des données dans un jeu d'apprentissage et de test lorsque vous créez une structure d'exploration de données facilite énormément l'évaluation de l'exactitude des modèles d'exploration de données que vous créez ultérieurement.  
@@ -38,7 +38,7 @@ ms.locfileid: "36142135"
   
 -   Vous ne pouvez pas partitionner des données si vous essayez de prédire une valeur qui est stockée dans une table imbriquée.  
   
- **Pour plus d’informations, consultez**  [Test et validation &#40;exploration de données&#41;](data-mining/testing-and-validation-data-mining.md), [Créer une structure d’exploration de données relationnelle](data-mining/create-a-relational-mining-structure.md) et [Didacticiel sur l’exploration de données de base](../../2014/tutorials/basic-data-mining-tutorial.md)  
+ **Pour plus d’informations, consultez ** [Test et validation &#40;exploration de données&#41;](data-mining/testing-and-validation-data-mining.md), [Créer une structure d’exploration de données relationnelle](data-mining/create-a-relational-mining-structure.md) et [Didacticiel sur l’exploration de données de base](../../2014/tutorials/basic-data-mining-tutorial.md)  
   
 ## <a name="options"></a>Options  
  **Pourcentage des données de test**  
@@ -52,9 +52,9 @@ ms.locfileid: "36142135"
  La valeur par défaut est NULL. Ce signifie qu'il n'existe aucune limite.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Aide (F1) de l’Assistant d’exploration de données &#40;Analysis Services - Exploration de données&#41;](data-mining-wizard-f1-help-analysis-services-data-mining.md)   
+ [Données d’aide F1 de l’Assistant exploration de données &#40;Analysis Services - Exploration de données&#41;](data-mining-wizard-f1-help-analysis-services-data-mining.md)   
  [Suggérer des colonnes associées &#40;Assistant exploration de données&#41;](suggest-related-columns-data-mining-wizard.md)   
- [Spécifiez les Types de tables &#40;Assistant exploration de données&#41;](specify-table-types-data-mining-wizard.md)   
+ [Spécifier les Types de tables &#40;Assistant exploration de données&#41;](specify-table-types-data-mining-wizard.md)   
  [Spécifier le contenu et le Type de données de la colonne &#40;Assistant exploration de données&#41;](specify-the-column-s-content-and-data-type-data-mining-wizard.md)  
   
   

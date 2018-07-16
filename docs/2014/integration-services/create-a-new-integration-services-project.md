@@ -1,5 +1,5 @@
 ---
-title: Créer un nouveau projet Integration Services | Documents Microsoft
+title: Créer un nouveau projet Integration Services | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - projects [Integration Services], creating
 - Integration Services projects, creating
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - SSIS projects, creating
 ms.assetid: 1e23f259-0401-4333-ab4f-89809aae63b1
 caps.latest.revision: 51
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 4ee4484b97102b6bae3bd9496ee161233c47ee12
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: fd06f9372092ccbbe221796555c63880d3566f91
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36040918"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37298729"
 ---
 # <a name="create-a-new-integration-services-project"></a>Créer un projet Integration Services
   Cette procédure permet de créer un projet et une solution [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)].  
@@ -52,10 +52,10 @@ ms.locfileid: "36040918"
     > [!NOTE]  
     >  Pour afficher et modifier le plug-in du contrôle de code source sélectionné et configurer l’environnement du contrôle de code source, cliquez sur **Options** dans le menu **Outils**, puis développez le nœud **Contrôle de code source**.  
   
-8.  Cliquez sur **OK** pour ajouter la solution à **l’Explorateur de solutions**r et ajouter le projet à la solution.  
+8.  Cliquez sur **OK** à ajouter à la solution **l’Explorateur de solutions**r et ajouter le projet à la solution.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Services d’intégration &#40;SSIS&#41; projets](integration-services-ssis-projects-and-solutions.md)   
- [Ajouter ou supprimer un projet Integration Services dans une Solution](../../2014/integration-services/add-or-remove-an-integration-services-project-in-a-solution.md)  
+ [Integration Services &#40;SSIS&#41; projets](integration-services-ssis-projects-and-solutions.md)   
+ [Ajouter ou supprimer un projet Integration Services dans une solution](../../2014/integration-services/add-or-remove-an-integration-services-project-in-a-solution.md)  
   
   

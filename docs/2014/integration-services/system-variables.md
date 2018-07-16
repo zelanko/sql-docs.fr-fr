@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - containers [Integration Services], variables
 - tasks [Integration Services], variables
@@ -19,13 +19,13 @@ ms.assetid: efecd0d4-1489-4eba-a8fe-275d647058b8
 caps.latest.revision: 54
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: b820a671418fc3126f2b5904f9a2a1c0c881eaa9
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 2c5f708afa4ce172807c1e0fd0697f6f7a29542d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36142309"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37311969"
 ---
 # <a name="system-variables"></a>Variables système
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] fournit un ensemble de variables système qui stockent des informations sur le package en cours d'exécution et ses objets. Ces variables peuvent être utilisées dans des expressions et des propriétés d'expressions afin de personnaliser des packages, des conteneurs, des tâches et des gestionnaires d'événements.  
@@ -45,7 +45,7 @@ ms.locfileid: "36142309"
 |`ExecutionInstanceGUID`|String|Identificateur unique de l'instance exécutée d'un package.|  
 |`FailedConfigurations`|String|Noms des configurations de package ayant échoué.|  
 |`IgnoreConfigurationsOnLoad`|Booléen|Indique si les configurations de package doivent être ignorées lors du chargement du package.|  
-|**InteractiveMode**|Booléen|Indique si le package est exécuté en mode interactif. Si un package s'exécute dans le concepteur [!INCLUDE[ssIS](../includes/ssis-md.md)], cette propriété a la valeur `True`. Si un package est en cours d’exécution à l’aide de la **DTExec** utilitaire d’invite de commandes, la propriété est définie `False`.|  
+|**InteractiveMode**|Booléen|Indique si le package est exécuté en mode interactif. Si un package s'exécute dans le concepteur [!INCLUDE[ssIS](../includes/ssis-md.md)], cette propriété a la valeur `True`. Si un package est en cours d’exécution à l’aide de la **DTExec** utilitaire de ligne de commande, la propriété est définie sur `False`.|  
 |`LocaleId`|Int32|Paramètre régional utilisé par le package.|  
 |**MachineName**|String|Nom de l'ordinateur sur lequel s'exécute le package.|  
 |**OfflineMode**|Booléen|Indique si le package est en mode hors connexion. Le mode hors connexion n'acquiert pas de connexions à des sources de données.|  
@@ -93,7 +93,7 @@ ms.locfileid: "36142309"
 |**ProgressCountHigh**|Int32|Partie supérieure d'une valeur 64 bits qui indique le nombre total d'opérations traitées par l'événement OnProgress.|Gestionnaire d'événements OnProgress|  
 |`ProgressCountLow`|Int32|Partie inférieure d'une valeur 64 bits qui indique le nombre total d'opérations traitées par l'événement OnProgress.|Gestionnaire d'événements OnProgress|  
 |**ProgressDescription**|String|Description de la progression.|Gestionnaire d'événements OnProgress|  
-|`Propagate`|Booléen|Indique si l'événement est propagé à un gestionnaire d'événements de niveau supérieur.<br /><br /> Remarque : La valeur de la `Propagate` variable est ignorée pendant la validation du package.<br /><br /> Si vous affectez la valeur `Propagate` à `False` dans un package enfant, cela n'empêche pas la propagation d'un événement à un package parent.|Tous les gestionnaires d'événements|  
+|`Propagate`|Booléen|Indique si l'événement est propagé à un gestionnaire d'événements de niveau supérieur.<br /><br /> Remarque : La valeur de la `Propagate` variable est ignorée lors de la validation du package.<br /><br /> Si vous affectez la valeur `Propagate` à `False` dans un package enfant, cela n'empêche pas la propagation d'un événement à un package parent.|Tous les gestionnaires d'événements|  
 |`SourceDescription`|String|Description de l'exécutable dans le gestionnaire d'événements qui a déclenché l'événement.|Tous les gestionnaires d'événements|  
 |`SourceID`|String|Identificateur unique de l'exécutable dans le gestionnaire d'événements qui a déclenché l'événement.|Tous les gestionnaires d'événements|  
 |**SourceName**|String|Nom de l'exécutable dans le gestionnaire d'événements qui a déclenché l'événement.|Tous les gestionnaires d'événements|  
@@ -108,6 +108,6 @@ ms.locfileid: "36142309"
  Cette règle s'applique également aux variables définies par l'utilisateur. Cependant, lorsque les types de données de variables système ne peuvent pas être modifiés et si vous devez personnaliser l'utilisation de ces variables en fonction des types de données, les variables définies par l'utilisateur offrent plus de souplesse. Les variables définies par l'utilisateur qui sont utilisées dans des liaisons de paramètres sont généralement définies avec des types de données compatibles avec les types de données des paramètres auxquels elles sont mappées.  
   
 ## <a name="related-tasks"></a>Related Tasks  
- [Mapper des paramètres de requête à des Variables dans une tâche d’exécution SQL](control-flow/execute-sql-task.md)  
+ [Mapper des paramètres de requête à des variables dans une tâche d’exécution SQL](control-flow/execute-sql-task.md)  
   
   

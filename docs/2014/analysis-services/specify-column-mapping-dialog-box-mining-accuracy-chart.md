@@ -1,5 +1,5 @@
 ---
-title: Spécifier le mappage de la boîte de dialogue (graphique d’analyse de précision d’exploration de données) de colonne | Documents Microsoft
+title: Spécifier la boîte de dialogue (graphique de précision d’exploration de données) de mappage de colonnes | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dm.miningmodeleditor.accuracychart.coltotablecolmapping.f1
 ms.assetid: 68e9e2d2-173f-4363-a515-fc60bfee3af0
 caps.latest.revision: 14
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 350b0f55f7ae4d445945905984f3e68a34d5c318
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 2ed607ca38d0cfda0aee7a3b5d8ebbd683570676
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36040959"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37306529"
 ---
 # <a name="specify-column-mapping-dialog-box-mining-accuracy-chart"></a>Boîte de dialogue Spécifier le mappage des colonnes (Graphique d'analyse de précision de l'exploration de données)
   Utilisez l’onglet **Spécifier le mappage des colonnes** pour sélectionner des tables d’une source de données externe et mapper les colonnes à un modèle d’exploration de données. Vous pouvez ensuite utiliser les données externes pour tester la précision d'un modèle d'exploration de données et afficher les résultats dans le graphique d'analyse de précision.  
@@ -32,7 +32,7 @@ ms.locfileid: "36040959"
  **Structure d’exploration de données**  
  Affiche la structure d'exploration de données sélectionnée qui contient le modèle à tester.  
   
- **Sélectionnez la Structure**  
+ **Sélectionner une Structure**  
  Cliquez pour ouvrir la boîte de dialogue **Sélectionner la structure d’exploration de données** et sélectionner une structure d’exploration de données différente.  
   
  **Sélectionnez une ou plusieurs tables d’entrée**  
@@ -56,7 +56,7 @@ ms.locfileid: "36040959"
  Ouvre la boîte de dialogue **Spécifier la jointure imbriquée** . Ce bouton est activé uniquement si la table imbriquée est sélectionnée.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Test et des tâches de Validation et des procédures &#40;d’exploration de données&#41;](data-mining/testing-and-validation-tasks-and-how-tos-data-mining.md)   
- [Concepteur graphique d’analyse de précision d’exploration de données &#40;d’exploration de données&#41;](mining-accuracy-chart-designer-data-mining.md)  
+ [Test et des tâches de Validation et des procédures &#40;exploration de données&#41;](data-mining/testing-and-validation-tasks-and-how-tos-data-mining.md)   
+ [Concepteur graphique d’analyse de précision d’exploration de données &#40;exploration de données&#41;](mining-accuracy-chart-designer-data-mining.md)  
   
   

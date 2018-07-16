@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine-imoltp
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 8a6a82bf-273c-40ab-a101-46bd3615db8a
 caps.latest.revision: 36
 author: stevestein
 ms.author: sstein
-manager: jhubbard
-ms.openlocfilehash: b9c9b3cc1259ca1c905cd25e9d8379eb7ecc4f87
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 7fb341cb36e97fbd06f38363c84d87f975d23eed
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36155324"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37329959"
 ---
 # <a name="transaction-isolation-levels"></a>Niveaux d'isolement des transactions
   Les niveaux d'isolation suivants sont pris en charge pour les transactions qui accèdent à des tables mémoire optimisées.  
@@ -34,7 +34,7 @@ ms.locfileid: "36155324"
   
  Le niveau d'isolation de la transaction peut être spécifié dans le bloc Atomic d'une procédure stockée compilée en mode natif. Pour plus d’informations, consultez [CREATE PROCEDURE &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-procedure-transact-sql). Lors de l'accès aux tables mémoire optimisées à partir du [!INCLUDE[tsql](../includes/tsql-md.md)] interprété, le niveau d'isolation peut être spécifié à l'aide d'indicateurs de table.  
   
- Vous devez spécifier le niveau d'isolation de la transaction lorsque vous définissez une procédure stockée compilée en mode natif. Vous devez spécifier le niveau d'isolation dans les indicateurs de table lors de l'accès aux tables mémoire optimisées à partir des transactions utilisateur en mode [!INCLUDE[tsql](../includes/tsql-md.md)] interprété. Pour plus d’informations, consultez [des recommandations pour les niveaux d’Isolation des transactions avec des Tables optimisées en mémoire](../relational-databases/in-memory-oltp/memory-optimized-tables.md).  
+ Vous devez spécifier le niveau d'isolation de la transaction lorsque vous définissez une procédure stockée compilée en mode natif. Vous devez spécifier le niveau d'isolation dans les indicateurs de table lors de l'accès aux tables mémoire optimisées à partir des transactions utilisateur en mode [!INCLUDE[tsql](../includes/tsql-md.md)] interprété. Pour plus d’informations, consultez [instructions pour les niveaux d’Isolation des transactions avec Tables optimisées en mémoire](../relational-databases/in-memory-oltp/memory-optimized-tables.md).  
   
  Le niveau d'isolation READ COMMITTED est pris en charge pour les tables mémoire optimisées avec des transactions validées automatiquement. READ COMMITTED n'est pas valide dans les transactions utilisateur ou dans un bloc atomique. READ COMMITTED n'est pas pris en charge avec les transactions utilisateur explicites ou implicites. Le niveau d'isolation READ_COMMITTED_SNAPSHOT est pris en charge pour les tables mémoire optimisées avec transactions en mode de validation automatique et uniquement si la requête n'accède pas à des tables sur disque. En outre, les transactions démarrées à l'aide du [!INCLUDE[tsql](../includes/tsql-md.md)] interprété avec le niveau d'isolation SNAPSHOT ne peuvent pas accéder aux tables mémoire optimisées. Les transactions utilisées avec le [!INCLUDE[tsql](../includes/tsql-md.md)] interprété et le niveau d'isolation REPEATABLE READ ou SERIALIZABLE doivent accéder aux tables mémoire optimisées avec le niveau d'isolation SNAPSHOT. Pour plus d’informations sur ce scénario, consultez [les Transactions entre conteneurs](cross-container-transactions.md).  
   
@@ -77,15 +77,15 @@ ms.locfileid: "36155324"
  SERIALIZABLE  
  Ce niveau d'isolation inclut les garanties fournies par REPEATABLE READ. Aucune ligne fantôme n'est apparue entre l'instantané et la fin de la transaction. Les lignes fantômes correspondent à la condition de filtre d'une sélection, d'une mise à jour ou d'une suppression.  
   
- La transaction est exécutée comme s'il n'existait aucune transaction simultanée. Toutes les actions se produisent virtuellement au niveau d’un seul point de sérialisation (heure de validation).  
+ La transaction est exécutée comme s'il n'existait aucune transaction simultanée. Toutes les actions se produisent presque à un seul point de sérialisation (heure de validation).  
   
  Si l'une de ces garanties n'est pas respectée, la transaction échoue avec le message d'erreur suivant :  
   
  Erreur 41325. La transaction en cours n'a pas été validée en raison d'un échec de validation SERIALIZABLE.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Présentation des Transactions sur les Tables mémoire optimisées](../../2014/database-engine/understanding-transactions-on-memory-optimized-tables.md)   
- [Recommandations pour les niveaux d’Isolation des transactions avec des Tables optimisées en mémoire](../relational-databases/in-memory-oltp/memory-optimized-tables.md)   
- [Logique de nouvelle tentative pour les instructions pour les Transactions sur les Tables mémoire optimisées](../../2014/database-engine/guidelines-for-retry-logic-for-transactions-on-memory-optimized-tables.md)  
+ [Présentation des Transactions sur les Tables optimisées en mémoire](../../2014/database-engine/understanding-transactions-on-memory-optimized-tables.md)   
+ [Instructions pour les niveaux d’Isolation des transactions avec Tables optimisées en mémoire](../relational-databases/in-memory-oltp/memory-optimized-tables.md)   
+ [Instructions pour la logique de nouvelle tentative des transactions sur des tables à mémoire optimisée](../../2014/database-engine/guidelines-for-retry-logic-for-transactions-on-memory-optimized-tables.md)  
   
   

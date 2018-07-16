@@ -8,26 +8,26 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - URL reservations
 ms.assetid: 30e4be2e-e65d-462c-895a-5a0a636d042f
 caps.latest.revision: 6
 author: markingmyname
 ms.author: maghan
-manager: jhubbard
-ms.openlocfilehash: 381abbb4ce34272a87f9b9a569fd6c869d0d7152
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: c1aabe7b98174ea420e9944c4a195a2fe3b15870
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36141988"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37301709"
 ---
 # <a name="url-reservation-syntax--ssrs-configuration-manager"></a>Syntaxe de réservation d’URL (Gestionnaire de configuration de SSRS)
   Cette rubrique décrit les parties de la chaîne d'URL du service Web Report Server et du Gestionnaire de rapports. La chaîne d'URL stockée en interne possède une structure différente de celle d'une URL saisie dans la barre d'adresses d'une fenêtre de navigateur. La chaîne de réservation d'URL apparaît dans la fenêtre Résultats de l'outil de configuration de Reporting Services lorsque vous configurez une URL et dans le fichier RSReportServer.config. Il peut être utile de savoir comment la chaîne d'URL est définie si vous dépannez les problèmes de réservation d'URL ou interrogez HTTP.SYS pour afficher les réservations d'URL internes définies sur votre serveur.  
   
 ## <a name="url-syntax"></a>Syntaxe d'URL  
- Une URL de serveur de rapports est stockée dans l'élément `UrlString` et l'élément `VirtualDirectory`. La raison de séparer `UrlString` et `VirtualDirectory` en éléments séparés est que vous pouvez avoir plusieurs chaînes d’URL, mais un nom d’un seul répertoire virtuel pour chaque [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] application.  
+ Une URL de serveur de rapports est stockée dans l'élément `UrlString` et l'élément `VirtualDirectory`. La raison de séparer `UrlString` et `VirtualDirectory` en éléments distincts est que vous pouvez avoir plusieurs chaînes d’URL, mais un nom qu’un seul répertoire virtuel pour chaque [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] application.  
   
  Dans HTTP.SYS, la réservation d'URL inclut les deux éléments `UrlString` et `VirtualDirectory`. La syntaxe d'une réservation d'URL comporte les parties suivantes :  
   

@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 78d5e3b8-9320-4e4b-a025-e2de3cf7afa7
 caps.latest.revision: 8
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: ab07059eb104ecc5e14390eced75d9adad7beae4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: c478ee22ae7a92feeeba059780705df2255a363d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36141983"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37299859"
 ---
 # <a name="built-in-collections-in-expressions-report-builder-and-ssrs"></a>Collections intégrées dans les expressions (Générateur de rapports et SSRS)
   Dans une expression d'un rapport, vous avez la possibilité d'inclure des références aux collections intégrées suivantes : ReportItems, Parameters, Fields, DataSets, DataSources, Variables, ainsi que des champs prédéfinis pour les informations globales telles que le nom du rapport. Les collections ne sont pas toutes répertoriées dans la boîte de dialogue **Expression** . En effet, les collections DataSets et DataSources ne sont disponibles qu'au moment de l'exécution pour les rapports publiés sur un serveur de rapports. La collection ReportItems représente l'ensemble des zones de texte figurant dans une partie du rapport, comme celles qui sont situées dans une page ou dans un en-tête de page.  
@@ -55,7 +55,7 @@ ms.locfileid: "36141983"
 |*Collection.Membre*|`=User.Language`|  
   
 ## <a name="see-also"></a>Voir aussi  
- [Ajouter une Expression &#40;rapport Générateur et SSRS&#41;](add-an-expression-report-builder-and-ssrs.md)   
+ [Ajouter une Expression &#40;Générateur de rapports et SSRS&#41;](add-an-expression-report-builder-and-ssrs.md)   
  [Exemples d’expressions &#40;Générateur de rapports et SSRS&#41;](expression-examples-report-builder-and-ssrs.md)  
   
   

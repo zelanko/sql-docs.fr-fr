@@ -1,5 +1,5 @@
 ---
-title: Éditeur de boucle foreach (Page de Collection) | Documents Microsoft
+title: Éditeur de boucle foreach (Page de Collection) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/24/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.foreachloopcontainer.collection.f1
 ms.assetid: 95a19dde-61ca-4d9b-aa3d-131fa4264296
 caps.latest.revision: 62
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 50ab22c5b36390645aa8f6fb961531479e592188
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: d10057943aa872c919171227f072f6b2836eba4a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36143101"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37318879"
 ---
 # <a name="foreach-loop-editor-collection-page"></a>Éditeur de boucle Foreach (page de collection)
   La page **Collection** de la boîte de dialogue **Éditeur de boucle Foreach** permet de spécifier le type d’énumérateur et de configurer ce dernier.  
@@ -42,7 +42,7 @@ ms.locfileid: "36143101"
 |**Énumérateur Foreach Nodelist**|Permet d'énumérer les nœuds d'un document XML. Si cette valeur est sélectionnée, les options dynamiques s'affichent dans la section **Énumérateur Foreach NodeList**.|  
 |**Énumérateur ForEach SMO**|Permet d'énumérer un objet SMO. Si cette valeur d'énumérateur est sélectionnée, les options dynamiques s'affichent dans la section **Énumérateur Foreach SMO**.|  
 |**Énumérateur Foreach Azure Blob**|Énumérez les fichiers d’objets blob à l’emplacement spécifié des objets blob. Si cette valeur est sélectionnée, les options dynamiques s’affichent dans la section **Énumérateur d’objets blob Azure Foreach**.|  
-|**Énumérateur Foreach ADLS File**|Énumérez les fichiers sur ADLS avec des filtres. Si cette valeur est sélectionnée, les options dynamiques s’affichent dans la section **Énumérateur Foreach ADLS File**.|
+|**Énumérateur Foreach ADLS File**|Énumérer les fichiers sur ADLS avec des filtres. Si cette valeur est sélectionnée, les options dynamiques s’affichent dans la section **Énumérateur Foreach ADLS File**.|
   
  **Expressions**  
  Cliquez sur **Expressions** ou développez ce groupe pour afficher la liste des expressions de propriété existantes. Cliquez sur le bouton représentant des points de suspension **(…)** pour ajouter une expression de propriété à une propriété d’énumérateur, ou modifiez et évaluez une expression de propriété existante.  
@@ -165,7 +165,7 @@ ms.locfileid: "36143101"
 ### <a name="enumerator--foreach-nodelist-enumerator"></a>Enumerator = Foreach NodeList Enumerator  
  L'énumérateur Foreach Nodelist permet d'énumérer un ensemble de nœuds XML qui résulte de l'application d'une expression XPath à un fichier XML. Par exemple, si la boucle Foreach inclut une tâche de script, vous pouvez utiliser l'énumérateur Foreach NodeList pour transmettre une valeur qui correspond aux critères de l'expression XPath du fichier XML à la tâche de script.  
   
- L’expression XPath qui s’applique au fichier XML est l’opération XPath externe, stockée dans la propriété OuterXPathString. Si le type d’énumération XPath est défini sur `ElementCollection`, l’énumérateur Foreach NodeList peut appliquer une expression XPath interne, stockée dans la propriété InnerXPathString, à une collection d’éléments.  
+ L’expression XPath qui s’applique au fichier XML est l’opération XPath externe, stockée dans la propriété OuterXPathString. Si le type d’énumération XPath a la valeur `ElementCollection`, l’énumérateur Foreach NodeList peut appliquer une expression XPath interne, stockée dans la propriété InnerXPathString, à une collection d’éléments.  
   
  Pour en savoir plus sur l'utilisation de documents et de données XML, consultez «[Employing XML in the .NET Framework](http://go.microsoft.com/fwlink/?LinkId=56214)» (en anglais) dans MSDN Library.  
   
@@ -220,7 +220,7 @@ ms.locfileid: "36143101"
  **Rubriques connexes :** [Variables Integration Services &#40;SSIS&#41;](integration-services-ssis-variables.md), [Ajouter une variable](../../2014/integration-services/add-variable.md).  
   
  **InnerElementType**  
- Si **EnumerationType** a la valeur `ElementCollection`, sélectionnez le type d’élément interne dans la liste.  
+ Si **EnumerationType** est défini sur `ElementCollection`, sélectionnez le type d’élément interne dans la liste.  
   
  **InnerXPathStringSourceType**  
  Permet de sélectionner le type source correspondant à une chaîne XPath interne. Cette propriété dispose des options répertoriées dans le tableau suivant.  
@@ -277,8 +277,8 @@ ms.locfileid: "36143101"
   
  **Filtre de plage de temps de/à des objets blob**  
  Spécifiez un filtre de plage de temps. Les fichiers modifiés après **TimeRangeFrom** et avant **TimeRangeTo** seront énumérés.  
-### <a name="enumerator--foreach-adls-file-enumerator"></a>Énumérateur = énumérateur de fichier Foreach ADLS  
-Le **ADLS fichier énumérateur** permet à un package SSIS d’énumérer les fichiers sur ADLS avec des filtres. La barre oblique (`/`)-avec préfixe de chemin d’accès complet des fichiers énumérés peut être stocké dans une variable et utilisé dans des tâches dans le conteneur de boucle Foreach.
+### <a name="enumerator--foreach-adls-file-enumerator"></a>Énumérateur = énumérateur Foreach ADLS File  
+Le **énumérateur ADLS File** permet à un package SSIS d’énumérer les fichiers sur ADLS avec des filtres. La barre oblique (`/`)-avec préfixe de chemin d’accès complet des fichiers énumérés peut être stocké dans une variable et utilisé dans les tâches à l’intérieur du conteneur de boucles Foreach.
   
 **AzureDataLakeConnection**  
 Spécifie un gestionnaire de connexions Azure Data Lake ou en crée un qui fait référence à un compte ADLS.   

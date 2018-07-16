@@ -1,27 +1,26 @@
 ---
-title: Continuer la restauration | Documents Microsoft
+title: Continuer la restauration | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-backup-restore
+ms.technology: backup-restore
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.continuerestore.f1
 ms.assetid: 987ac05f-57c0-49a9-9903-9889717aae4f
 caps.latest.revision: 18
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: c7a5beacf1f86d3c7df7739fdbdcd0fd8dfb7980
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 58a890012102b263a0db9dc2df177c41a27d4625
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36152390"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37291385"
 ---
 # <a name="continue-with-restore"></a>Continuer la restauration
   Utilisez la boîte de dialogue **Continuer la restauration** pour indiquer si vous voulez restaurer le prochain jeu de sauvegarde. Pour différer l'opération de restauration, par exemple pour échanger des bandes, attendez d'être prêt à continuer avant de cliquer sur **OK**.  
@@ -32,7 +31,7 @@ ms.locfileid: "36152390"
  **Support de sauvegarde**  
  Affiche le nom du support de sauvegarde suivant (si disponible).  
   
- **jeu de sauvegarde**  
+ **Jeu de sauvegarde**  
  Affiche le nom du jeu de sauvegarde.  
   
  **Description du jeu de sauvegarde**  

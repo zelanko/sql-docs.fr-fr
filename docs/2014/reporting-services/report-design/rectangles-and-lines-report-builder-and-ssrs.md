@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: d6226b0c-0398-4185-8565-96099876fc21
 caps.latest.revision: 9
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: b1e24758c8746494c861e11b100d6fc4000e93d0
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: ec70c7151ffe02978117c46e06abd3fa20ad4da6
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36143183"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37306959"
 ---
 # <a name="rectangles-and-lines-report-builder-and-ssrs"></a>Rectangles et lignes (Générateur de rapports et SSRS)
   Les rectangles et les lignes permettent de créer des effets visuels dans un rapport. Vous pouvez afficher des propriétés sur ces éléments de rapports à partir de la section Bordure sous l'onglet Dossier de base, puis définir d'autres propriétés à l'aide du volet Propriétés. Vous pouvez ajouter des fonctionnalités, telles qu'une couleur ou une image d'arrière-plan, une info-bulle ou un signet, à un rectangle.  
@@ -50,13 +50,13 @@ ms.locfileid: "36143183"
 
   
 ##  <a name="HowTo"></a> Rubriques de procédures  
- [Ajouter une bordure à un rapport &#40;rapport Générateur et SSRS&#41;](add-a-border-to-a-report-report-builder-and-ssrs.md)  
+ [Ajouter une bordure à un rapport &#40;Générateur de rapports et SSRS&#41;](add-a-border-to-a-report-report-builder-and-ssrs.md)  
   
- [Ajouter un Rectangle ou un conteneur &#40;rapport Générateur et SSRS&#41;](add-a-rectangle-or-container-report-builder-and-ssrs.md)  
+ [Ajouter un Rectangle ou un conteneur &#40;Générateur de rapports et SSRS&#41;](add-a-rectangle-or-container-report-builder-and-ssrs.md)  
   
- [Ajouter et modifier une ligne &#40;rapport Générateur et SSRS&#41;](add-and-modify-a-line-report-builder-and-ssrs.md)  
+ [Ajouter et modifier une ligne &#40;Générateur de rapports et SSRS&#41;](add-and-modify-a-line-report-builder-and-ssrs.md)  
   
 ## <a name="see-also"></a>Voir aussi  
- [Ajouter un Rectangle ou un conteneur &#40;rapport Générateur et SSRS&#41;](add-a-rectangle-or-container-report-builder-and-ssrs.md)  
+ [Ajouter un Rectangle ou un conteneur &#40;Générateur de rapports et SSRS&#41;](add-a-rectangle-or-container-report-builder-and-ssrs.md)  
   
   

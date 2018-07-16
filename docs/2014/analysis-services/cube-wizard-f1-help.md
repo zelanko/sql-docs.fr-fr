@@ -1,5 +1,5 @@
 ---
-title: Aide (F1) de l’Assistant de cube | Documents Microsoft
+title: Aide F1 de l’Assistant de cube | Microsoft Docs
 ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Cube Wizard
 ms.assetid: 2a500f75-6cb7-42bc-8d98-019841fa924b
 caps.latest.revision: 32
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: cb555a9db8130b7c02e12e89ba40cdf8b79a0d19
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: c9389b01e0304a84ed3b103ef415d4f046bfc843
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36039856"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37321289"
 ---
 # <a name="cube-wizard-f1-help"></a>Fichiers d'aide (F1) de l'Assistant Cube
   Utilisez l'Assistant Cube afin de créer un cube pour un projet [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] dans [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)].  

@@ -1,1 +1,1 @@
-Synchrone\-valider des basculements
+Synchrone\-valider ensemble de basculement

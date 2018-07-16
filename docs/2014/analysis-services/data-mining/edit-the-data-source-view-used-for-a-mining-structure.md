@@ -1,5 +1,5 @@
 ---
-title: Modifier la vue de Source de données utilisée pour une Structure d’exploration de données | Documents Microsoft
+title: Modifier la vue de Source de données utilisée pour une Structure d’exploration de données | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - modifying data source views
 - mining structures [Analysis Services], data source views
 - data source views [Analysis Services], modifying
 ms.assetid: f790df70-ff21-42ce-b38c-a360e8e01bcd
 caps.latest.revision: 28
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 13070a8812046178f9ac8071ae538830671735a2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 67617e5331b3d0989da831a76d5be9ef5b540b8e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36039857"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37293569"
 ---
 # <a name="edit-the-data-source-view-used-for-a-mining-structure"></a>Modifier la vue de source de données utilisée pour une structure d'exploration de données
   Vous pouvez ouvrir une vue de source de données dans le Concepteur d'exploration de données pour la modifier.  

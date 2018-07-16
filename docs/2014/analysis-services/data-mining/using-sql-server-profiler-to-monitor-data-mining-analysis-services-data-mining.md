@@ -1,5 +1,5 @@
 ---
-title: À l’aide de SQL Server Profiler pour contrôler l’exploration de données (Analysis Services - Exploration de données) | Documents Microsoft
+title: À l’aide de SQL Server Profiler pour contrôler l’exploration de données (Analysis Services - Exploration de données) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,25 +8,25 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Profiler [SQL Server Profiler], Analysis Services
 ms.assetid: 655ac93c-5c5c-4565-914b-915327f7d349
 caps.latest.revision: 15
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 5e3c09140c6524e7bff893a72c78aed07b056c1f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 71927782c80006c76b5ae54ea5edc00d53a93fed
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36039855"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37323399"
 ---
 # <a name="using-sql-server-profiler-to-monitor-data-mining-analysis-services---data-mining"></a>Utilisation de SQL Server Profiler pour contrôler l'exploration de données (Analysis Services – Exploration de données)
   Si vous avez les autorisations nécessaires, vous pouvez utiliser SQL Server Profiler pour contrôler les activités d'exploration de données émises sous la forme de demandes envoyées à une instance de SQL Server Analysis Services. L'activité d'exploration de données peut inclure le traitement de modèles ou de structures, de requêtes de prédiction ou de requêtes de contenu ou la création de nouveaux modèles ou structures.  
   
- SQL Server Profiler utilise une `trace` pour surveiller les demandes envoyées à partir de plusieurs clients, y compris [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], SQL Server Management Studio, services Web ou exploration de données des compléments pour Excel, tant que l’ensemble des activités utilisent la même instance de SQL Server Analysis Services. Vous devez créer un suivi séparé pour chaque instance de SQL Server Analysis Services que vous souhaitez contrôler. Pour obtenir des informations générales sur les traces et l’utilisation de SQL Server Profiler, consultez [Utiliser SQL Server Profiler pour contrôler Analysis Services](../instances/use-sql-server-profiler-to-monitor-analysis-services.md).  
+ SQL Server Profiler utilise une `trace` pour surveiller les demandes envoyées à partir de plusieurs clients, notamment [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], SQL Server Management Studio, les services Web ou l’exploration de données des compléments pour Excel, tant que l’ensemble des activités utilisent la même instance de SQL Server Analysis Services. Vous devez créer un suivi séparé pour chaque instance de SQL Server Analysis Services que vous souhaitez contrôler. Pour obtenir des informations générales sur les traces et l’utilisation de SQL Server Profiler, consultez [Utiliser SQL Server Profiler pour contrôler Analysis Services](../instances/use-sql-server-profiler-to-monitor-analysis-services.md).  
   
  Pour obtenir des conseils spécifiques sur les types d’événements à capturer, consultez [Créer des traces de SQL Server Profiler pour la relecture &#40;Analysis Services&#41;](../instances/create-profiler-traces-for-replay-analysis-services.md).  
   

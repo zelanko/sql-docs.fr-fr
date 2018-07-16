@@ -1,5 +1,5 @@
 ---
-title: Création de prédictions pour les modèles de centre d’appels (didacticiel sur l’exploration des données intermédiaires) | Documents Microsoft
+title: Création de prédictions pour les modèles de centre d’appels (didacticiel d’exploration de données intermédiaire) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 5be0cec7-f639-4eeb-835e-e3204ae619e9
 caps.latest.revision: 28
 author: minewiskan
 ms.author: owend
-manager: kfile
-ms.openlocfilehash: def00bc80eec2ea29b3b3ef833bc953fd59da03c
-ms.sourcegitcommit: 8c040e5b4e8c7d37ca295679410770a1af4d2e1f
+manager: craigg
+ms.openlocfilehash: 86ac24e1c67d062a0b9d0c2b9d2963bd9b8a479d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/21/2018
-ms.locfileid: "36313047"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37321499"
 ---
 # <a name="creating-predictions-for-the-call-center-models-intermediate-data-mining-tutorial"></a>Création de prédictions pour les modèles de centre d'appels (Didacticiel sur l'exploration de données intermédiaire)
-  Maintenant que vous en savez plus sur les interactions entre les équipes, le nombre d'opérateurs, les appels et le niveau de service, vous êtes prêt à créer des requêtes de prédiction qui peuvent être utilisées dans l'analyse commerciale et la planification. Vous allez d'abord créer des prédictions sur le modèle exploratoire afin de tester des hypothèses. Ensuite, vous allez créer des prédictions en bloc à l’aide du modèle de régression logistique.  
+  Maintenant que vous en savez plus sur les interactions entre les équipes, le nombre d'opérateurs, les appels et le niveau de service, vous êtes prêt à créer des requêtes de prédiction qui peuvent être utilisées dans l'analyse commerciale et la planification. Vous allez d'abord créer des prédictions sur le modèle exploratoire afin de tester des hypothèses. Ensuite, vous allez créer des prédictions en bloc en utilisant le modèle de régression logistique.  
   
  Cette leçon suppose que vous soyez déjà au fait du concept des requêtes de prédiction.  
   
@@ -35,7 +35,7 @@ ms.locfileid: "36313047"
   
 2.  Dans le Concepteur d’exploration de données, cliquez sur le **prévision de modèle d’exploration de données** onglet.  
   
-3.  Dans le **modèle d’exploration de données** volet, cliquez sur **sélectionner le modèle**.  
+3.  Dans le **Mining Model** volet, cliquez sur **sélectionner un modèle**.  
   
 4.  Le **sélectionner un modèle d’exploration de données** boîte de dialogue affiche une liste de structures d’exploration de données. Développez la structure d'exploration de données pour afficher la liste des modèles d'exploration de données qui lui sont associés.  
   
@@ -43,11 +43,11 @@ ms.locfileid: "36313047"
   
 6.  Dans le menu **Modèle d’exploration de données** , sélectionnez **Requête singleton**.  
   
-     Le **entrée de requête Singleton** boîte de dialogue s’affiche, avec des colonnes mappées aux colonnes du modèle d’exploration de données.  
+     Le **entrée de requête Singleton** boîte de dialogue s’affiche, avec des colonnes mappées aux colonnes dans le modèle d’exploration de données.  
   
-7.  Dans le **entrée de requête Singleton** boîte de dialogue, cliquez sur la ligne de la touche MAJ enfoncée, puis sélectionnez *minuit*.  
+7.  Dans le **entrée de requête Singleton** boîte de dialogue, cliquez sur la ligne pour la touche MAJ enfoncée, puis sélectionnez *minuit*.  
   
-8.  Cliquez sur la ligne pour les opérateurs de niveau 2 et le type `6`.  
+8.  Cliquez sur la ligne pour les opérateurs Lvl 2 et le type `6`.  
   
 9. Dans la partie inférieure la moitié de la **prévision de modèle d’exploration de données** , cliquez sur la première ligne dans la grille.  
   
@@ -55,11 +55,11 @@ ms.locfileid: "36313047"
   
      Une liste d’arguments que vous pouvez utiliser avec cette fonction de prédiction automatiquement s’affiche dans le **critères/argument** boîte.  
   
-11. Faites glisser la colonne ServiceGrade dans la liste de colonnes dans le **modèle d’exploration de données** volet pour le **critères/argument** boîte.  
+11. Faites glisser la colonne ServiceGrade dans la liste des colonnes dans le **Mining Model** volet pour le **critères/argument** boîte.  
   
      Le nom de la colonne est automatiquement inséré comme argument. Vous pouvez choisir n'importe quelle colonne d'attribut prédictible et la faire glisser vers cette zone de texte.  
   
-12. Cliquez sur le bouton **affichage des résultats de basculer vers la requête**, dans le coin supérieur du Générateur de requêtes de prédiction.  
+12. Cliquez sur le bouton **affichage des résultats de commutateur à requête**, dans le coin supérieur du Générateur de requêtes de prédiction.  
   
  Les résultats attendus contiennent les valeurs prédites possibles pour chaque niveau de service donné en fonction de ces entrées, ainsi que les valeurs de support et de probabilité pour chaque prédiction. Vous pouvez repasser en mode Conception à tout moment pour modifier les entrées ou en ajouter.  
   
@@ -75,19 +75,19 @@ ms.locfileid: "36313047"
   
 ##### <a name="to-generate-input-data-for-a-bulk-prediction-query"></a>Pour générer des données d'entrée pour une requête de prédiction en bloc  
   
-1.  Dans l’Explorateur de solutions, cliquez sur **vues de sources de données**, puis sélectionnez **nouvelle vue de Source de données**.  
+1.  Dans l’Explorateur de solutions, cliquez sur **les vues de sources de données**, puis sélectionnez **nouvelle vue de Source de données**.  
   
-2.  Dans l’Assistant vue de Source de données, sélectionnez [!INCLUDE[ssAWDWsp](../includes/ssawdwsp-md.md)] comme source de données, puis cliquez sur **suivant**.  
+2.  Dans l’Assistant vue de Source de données, sélectionnez [!INCLUDE[ssAWDWsp](../includes/ssawdwsp-md.md)] comme la source de données, puis cliquez sur **suivant**.  
   
 3.  Sur le **sélectionner des Tables et vues** , cliquez sur **suivant** sans sélectionner de tables.  
   
-4.  Sur le **fin de l’Assistant** , tapez le nom, `Shifts`.  
+4.  Sur le **fin de l’Assistant** page, tapez le nom, `Shifts`.  
   
      Ce nom apparaîtra dans l'Explorateur de solutions comme nom de la vue de source de données.  
   
 5.  Cliquez sur le volet de conception vide, puis sélectionnez **nouvelle requête nommée**.  
   
-6.  Dans le **créer une requête nommée** boîte de dialogue, pour **nom**, type `Shifts for Call Center`.  
+6.  Dans le **créer une requête nommée** boîte de dialogue pour **nom**, type `Shifts for Call Center`.  
   
      Ce nom apparaîtra dans le Concepteur de vue de source de données uniquement comme nom de la requête nommée.  
   
@@ -103,7 +103,7 @@ ms.locfileid: "36313047"
     GROUP BY Shift, WageType  
     ```  
   
-8.  Dans le volet de conception, cliquez sur la table, Shifts for Call Center, puis sélectionnez **Explorer les données** pour afficher un aperçu des données retournées par la requête T-SQL.  
+8.  Dans le volet de conception, cliquez sur la table, les équipes pour le centre d’appels, puis sélectionnez **Explorer les données** aperçu des données tel que retourné par la requête T-SQL.  
   
 9. Cliquez sur l’onglet, **Shifts.dsv (Design),** puis cliquez sur **enregistrer** pour enregistrer la nouvelle définition de vue de source de données.  
   
@@ -114,9 +114,9 @@ ms.locfileid: "36313047"
   
 1.  Dans le Concepteur d’exploration de données, cliquez sur le **prévision de modèle d’exploration de données** onglet.  
   
-2.  Dans le **modèle d’exploration de données** volet, cliquez sur **sélectionner le modèle**, puis choisissez Call Center - LR dans la liste des modèles disponibles.  
+2.  Dans le **Mining Model** volet, cliquez sur **sélectionner un modèle**, puis choisissez centre d’appels - LR dans la liste des modèles disponibles.  
   
-3.  À partir de la **modèle d’exploration de données** menu, désactivez l’option **requête Singleton**. Un avertissement vous indique que les entrées de requête singleton seront perdues. Cliquez sur **OK**.  
+3.  À partir de la **Mining Model** menu, désactivez l’option, **requête Singleton**. Un avertissement vous indique que les entrées de requête singleton seront perdues. Cliquez sur **OK**.  
   
      Le **entrée de requête Singleton** boîte de dialogue est remplacée par le **sélectionner une ou plusieurs tables d’entrée** boîte de dialogue.  
   
@@ -124,7 +124,7 @@ ms.locfileid: "36313047"
   
 5.  Dans le **sélectionner une Table** boîte de dialogue, selectShifts dans la liste des sources de données. Dans le **nom de la Table/vue** , sélectionnez Shifts for Call Center (il peut être sélectionné automatiquement), puis cliquez sur **OK.**  
   
-     Le **prévision de modèle d’exploration de données** aire de conception est mise à jour pour afficher les mappages sont créés selon les noms et types de données des colonnes dans les données d’entrée et dans le modèle.  
+     Le **prévision de modèle d’exploration de données** aire de conception est mise à jour pour afficher les mappages sont créés selon les types de données et les noms des colonnes dans les données d’entrée et dans le modèle.  
   
 6.  Avec le bouton droit de la ligne de jointure, puis sélectionnez **modifier les connexions**.  
   
@@ -136,7 +136,7 @@ ms.locfileid: "36313047"
   
 ##### <a name="to-create-the-predictions-for-each-shift"></a>Pour créer les prédictions pour chaque équipe  
   
-1.  Dans la grille au bas de la moitié de la **Générateur de requête de prédiction**, cliquez sur la cellule vide sous **Source,** , puis sélectionnez Shifts for Call Center.  
+1.  Dans la grille en bas de la moitié de la **Générateur de requêtes de prédiction**, cliquez sur la cellule vide sous **Source,** , puis sélectionnez Shifts for Call Center.  
   
 2.  Dans la cellule vide sous **champ**, sélectionnez la touche MAJ enfoncée.  
   
@@ -144,7 +144,7 @@ ms.locfileid: "36313047"
   
 4.  Cliquez sur la ligne vide suivante dans la grille. Dans le **Source** colonne, sélectionnez **fonction de prédiction**. Dans le **champ** colonne, sélectionnez **Predict**.  
   
-5.  Faites glisser la colonne ServiceGrade de la **modèle d’exploration de données** volet jusqu'à la grille et dans le **critères/Argument** cellule. Dans le **Alias** , tapez **niveau de Service prédit**.  
+5.  Faites glisser la colonne ServiceGrade de la **modèle d’exploration de données** volet jusqu'à la grille et dans le **critères/Argument** cellule. Dans le **Alias** , tapez **prédite de niveau de Service**.  
   
 6.  Cliquez sur la ligne vide suivante dans la grille. Dans le **Source** colonne, sélectionnez **fonction de prédiction**. Dans le **champ** colonne, sélectionnez **PredictProbability**.  
   
@@ -182,14 +182,14 @@ ms.locfileid: "36313047"
 |Congé PM1|0.05|0.05|0.05|  
 |Congé Minuit|0.165|0.05|0.05|  
   
- Vous pouvez créer diverses autres requêtes de prédiction sur ce modèle. Par exemple, vous pourriez prédire le nombre d’opérateurs requis pour répondre à un certain niveau de service ou pour répondre à un certain nombre d’appels entrants. Étant donné que vous pouvez inclure plusieurs sorties dans un modèle de régression logistique, il est facile de faire des essais avec différentes variables indépendantes et sorties sans qu'il soit nécessaire de créer de nombreux modèles distincts.  
+ Vous pouvez créer diverses autres requêtes de prédiction sur ce modèle. Par exemple, vous pourrez prédire le nombre d’opérateurs est nécessaire pour répondre à un certain niveau de service ou pour répondre à un certain nombre d’appels entrants. Étant donné que vous pouvez inclure plusieurs sorties dans un modèle de régression logistique, il est facile de faire des essais avec différentes variables indépendantes et sorties sans qu'il soit nécessaire de créer de nombreux modèles distincts.  
   
 ## <a name="remarks"></a>Notes  
- Les données des compléments d’exploration pour Excel 2007 fournissent des Assistants de régression logistique qui permettent de facilement répondre aux questions complexes, tels que des opérateurs combien de niveau 2 sont requis pour améliorer le niveau de service à un niveau cible pour une équipe spécifique. Les compléments d'exploration de données, qui peuvent être téléchargés gratuitement, incluent des Assistants basés sur l'algorithme MNN (Microsoft Neural Network) ou l'algorithme MLR (Microsoft Logistic Regression). Pour plus d'informations, consultez les liens suivants :  
+ Les données d’exploration de données des compléments pour Excel 2007 fournissent des Assistants de régression logistique qui permettent de facilement répondre aux questions complexes, telles que les opérateurs de niveau 2 combien seraient nécessaire pour améliorer le niveau de service à un niveau cible pour une équipe spécifique. Les compléments d'exploration de données, qui peuvent être téléchargés gratuitement, incluent des Assistants basés sur l'algorithme MNN (Microsoft Neural Network) ou l'algorithme MLR (Microsoft Logistic Regression). Pour plus d'informations, consultez les liens suivants :  
   
--   [SQL Server 2005 données d’exploration de données des compléments pour Office 2007](http://www.microsoft.com/sql/technologies/dm/addins.mspx): valeur cible et que se passe-t-il si analyse de scénario  
+-   [SQL Server 2005 Data Mining Add-Ins pour Office 2007](http://www.microsoft.com/sql/technologies/dm/addins.mspx): la valeur cible et que se passe-t-il si analyse de scénario  
   
--   [SQL Server 2008 données d’exploration de données des compléments pour Office 2007](http://go.microsoft.com/fwlink/?LinkID=117790): valeur cible de l’analyse de scénario, que se passe-t-il si l’analyse de scénario et calcul de prédiction  
+-   [SQL Server 2008 Data Mining Add-Ins pour Office 2007](http://go.microsoft.com/fwlink/?LinkID=117790): valeur cible de l’analyse de scénario, que se passe-t-il si l’analyse de scénario et calcul de prédiction  
   
 ## <a name="conclusion"></a>Conclusion  
  Vous avez appris à créer, à personnaliser et à interpréter des modèles d'exploration de données basés sur l'algorithme MNN (Microsoft Neural Network) et sur l'algorithme MLR (Microsoft Logistic Regression). Ces types de modèles élaborés permettent une diversité presque infinie d'analyses ; ils peuvent, par conséquent, être complexes et difficiles à maîtriser.  
@@ -197,9 +197,9 @@ ms.locfileid: "36313047"
  Toutefois, ces algorithmes peuvent s'itérer par le biais de plusieurs combinaisons de facteurs et identifier automatiquement les corrélations les plus fortes en fournissant la prise en charge statistique des analyses qui seraient très difficiles à identifier par l'exploration manuelle des données à l'aide de Transact-SQL ou même de PowerPivot.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Exemples de requêtes de modèle de régression logistique](../../2014/analysis-services/data-mining/logistic-regression-model-query-examples.md)   
- [Algorithme Microsoft Logistic Regression](../../2014/analysis-services/data-mining/microsoft-logistic-regression-algorithm.md)   
- [MNN (Microsoft Neural Network)](../../2014/analysis-services/data-mining/microsoft-neural-network-algorithm.md)   
+ [Exemples de requête de modèle de régression logistique](../../2014/analysis-services/data-mining/logistic-regression-model-query-examples.md)   
+ [Algorithme de régression logistique de Microsoft](../../2014/analysis-services/data-mining/microsoft-logistic-regression-algorithm.md)   
+ [Algorithme de réseau neuronal de Microsoft](../../2014/analysis-services/data-mining/microsoft-neural-network-algorithm.md)   
  [Exemples de requêtes de modèle de réseau neuronal](../../2014/analysis-services/data-mining/neural-network-model-query-examples.md)  
   
   

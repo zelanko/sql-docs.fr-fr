@@ -1,5 +1,5 @@
 ---
-title: Représentation (tabulaire) indicateur de Performance de la clé | Documents Microsoft
+title: Clé de représentation d’indicateur de Performance (tabulaire) | Microsoft Docs
 ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
@@ -12,15 +12,15 @@ ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: 8d3d949e-5d43-4d2e-9dc8-48d182a7a935
 caps.latest.revision: 6
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 4673e33ba3b6ecce58d8d4c06a12d7311b98cde0
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 3cdb38afa672655dbb0a644783e7dc3fadb180b7
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36143781"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37295409"
 ---
 # <a name="key-performance-indicator-representation-tabular"></a>Représentation (tabulaire) d'un indicateur de performance clé
   Un KPI évalue la performance d'une valeur, définie par une mesure de base, par rapport à une valeur cible.  
@@ -226,6 +226,6 @@ private void addStaticKPI(object sender, EventArgs e)
 ```  
   
 ## <a name="amo2tabular-sample"></a>Exemple AMO2Tabular  
- Pour comprendre comment utiliser AMO pour créer et manipuler des indicateurs de Performance clé des représentations, consultez le code source de la AMO pour exemple sous forme de tableau. plus précisément, archivez le fichier source suivant : AddKPIs.cs. L'exemple est disponible sur Codeplex. Remarque importante à propos du code : le code est fourni uniquement comme un support aux concepts logiques expliqués ici et ne doit pas être utilisé dans un environnement de production, ni à des fins autres que pédagogiques.  
+ Pour comprendre comment utiliser AMO pour créer et manipuler l’indicateur de Performance clé des représentations, consultez le code source de la AMO pour exemple sous forme de tableau ; plus précisément, archivez le fichier source suivant : AddKPIs.cs. L'exemple est disponible sur Codeplex. Remarque importante à propos du code : le code est fourni uniquement comme un support aux concepts logiques expliqués ici et ne doit pas être utilisé dans un environnement de production, ni à des fins autres que pédagogiques.  
   
   

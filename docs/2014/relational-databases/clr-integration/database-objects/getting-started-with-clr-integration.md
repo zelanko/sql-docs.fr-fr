@@ -1,13 +1,11 @@
 ---
-title: Prise en main de l’intégration du CLR | Documents Microsoft
+title: Mise en route avec l’intégration CLR | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: clr
 ms.tgt_pltfrm: ''
 ms.topic: reference
 dev_langs:
@@ -27,15 +25,15 @@ helpviewer_keywords:
 - library [CLR integration]
 ms.assetid: c73e628a-f54a-411a-bfe3-6dae519316cc
 caps.latest.revision: 60
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 7616d610cbdd581325325f9ad00a57b417ef2987
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: rothja
+ms.author: jroth
+manager: craigg
+ms.openlocfilehash: 12eb63552fea685ce9d1e453e99e785045839ac5
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36042732"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37349809"
 ---
 # <a name="getting-started-with-clr-integration"></a>Mise en route avec l'intégration du CLR
   Cette rubrique fournit une vue d’ensemble des espaces de noms et des bibliothèques requis pour compiler des objets de base de données à l’aide de la [!INCLUDE[msCoName](../../../includes/ssnoversion-md.md)] intégration avec le common language runtime (CLR) du .NET Framework. La rubrique vous indique également comment écrire, compiler et exécuter une procédure stockée CLR simple écrite dans [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual C#.  
@@ -95,7 +93,7 @@ End Class
  Nous allons maintenant compiler ce programme sous la forme d'une bibliothèque, le charger dans [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] et l'exécuter en tant que procédure stockée.  
   
 ## <a name="compiling-the-hello-world-stored-procedure"></a>Compilation de la procédure stockée "Hello World"  
- [!INCLUDE[ssNoVersion](../../../includes/msconame-md.md)] Fichiers de redistribution .NET framework par défaut. Ces fichiers incluent csc.exe et vbc.exe, les compilateurs de ligne de commande pour les programmes Visual C# et Visual Basic. Pour compiler notre exemple, vous devez modifier votre variable de chemin d'accès pour pointer sur le répertoire qui contient csc.exe ou vbc.exe. Le chemin d'installation par défaut du .NET Framework est le suivant :  
+ [!INCLUDE[ssNoVersion](../../../includes/msconame-md.md)] Fichiers de redistribution de .NET framework par défaut. Ces fichiers incluent csc.exe et vbc.exe, les compilateurs de ligne de commande pour les programmes Visual C# et Visual Basic. Pour compiler notre exemple, vous devez modifier votre variable de chemin d'accès pour pointer sur le répertoire qui contient csc.exe ou vbc.exe. Le chemin d'installation par défaut du .NET Framework est le suivant :  
   
 ```  
 C:\Windows\Microsoft.NET\Framework\(version)  
@@ -124,7 +122,7 @@ vbc /target:library helloworld.vb
  Ces commandes lancent le compilateur Visual C# ou Visual Basic en utilisant l'option /target pour spécifier la génération d'une DLL de bibliothèque.  
   
 ## <a name="loading-and-running-the-hello-world-stored-procedure-in-sql-server"></a>Chargement et exécution de la procédure stockée "Hello World" dans SQL Server  
- Une fois que l’exemple de procédure a été compilé avec succès, vous pouvez le tester dans [!INCLUDE[ssNoVersion](../../../includes/ssmanstudiofull-md.md)] et créer une requête, la connexion à une base de données de test appropriée (par exemple, la base de données AdventureWorks).  
+ Une fois que l’exemple de procédure a été compilé avec succès, vous pouvez le tester dans [!INCLUDE[ssNoVersion](../../../includes/ssmanstudiofull-md.md)] et créez une nouvelle requête, connexion à une base de données test appropriée (par exemple, la base de données AdventureWorks).  
   
  La fonctionnalité d'exécution du code CLR est désactivée par défaut dans [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Le code CLR peut être activé à l’aide de la **sp_configure** procédure stockée système. Pour plus d’informations, consultez [Activation de l’intégration du CLR](../clr-integration-enabling.md).  
   
@@ -181,7 +179,7 @@ IF EXISTS (SELECT name FROM sys.assemblies WHERE name = 'helloworld')
   
 ## <a name="see-also"></a>Voir aussi  
  [Procédures stockées CLR](../../../database-engine/dev-guide/clr-stored-procedures.md)   
- [Extensions spécifiques du In-Process SQL Server pour ADO.NET](../../clr-integration-data-access-in-process-ado-net/sql-server-in-process-specific-extensions-to-ado-net.md)   
+ [Extensions spécifiques de SQL Server In-Process à ADO.NET](../../clr-integration-data-access-in-process-ado-net/sql-server-in-process-specific-extensions-to-ado-net.md)   
  [Débogage d’objets de base de données CLR](../debugging-clr-database-objects.md)   
  [Sécurité de l’intégration du CLR](../security/clr-integration-security.md)  
   

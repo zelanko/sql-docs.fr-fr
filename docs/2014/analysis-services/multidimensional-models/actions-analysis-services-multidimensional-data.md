@@ -1,5 +1,5 @@
 ---
-title: Actions (Analysis Services - données multidimensionnelles) | Documents Microsoft
+title: Actions (Analysis Services - données multidimensionnelles) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - actions [Analysis Services]
 - actions [Analysis Services], about actions
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - OLAP objects [Analysis Services], actions
 ms.assetid: 07229bb2-805c-427e-8455-69c9ca5d01e0
 caps.latest.revision: 34
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: e5828886d047c6b8fcec0d511a8d1ddbd94bbae5
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: d77c8d49f052d11de98747ff9deee0c61e0070c8
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36142813"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37319449"
 ---
 # <a name="actions-analysis-services---multidimensional-data"></a>Actions (Analysis Services - Données multidimensionnelles)
   Les actions peuvent être de types différents et doivent être créées en conséquence. Les actions peuvent être :  
@@ -42,7 +42,7 @@ ms.locfileid: "36142813"
   
  La cible est l'emplacement réel dans le cube où l'action doit se produire. La cible est composée d'un type de cible et d'un objet cible. Le type de cible représente le type d'objet, dans le cube, où l'action sera activée. Les types de cible peuvent être des membres de niveau, des cellules, une hiérarchie, des membres de hiérarchie, ou d'autres éléments. L'objet cible est un objet spécifique au type de cible ; si le type de cible est une hiérarchie, l'objet cible est n'importe laquelle des hiérarchies définies dans le cube.  
   
- La condition est une `Boolean` expression MDX qui est évaluée au niveau de l’événement d’action. Si la condition a la valeur `true`, puis l’action est exécutée. Sinon, l'action n'est pas exécutée.  
+ La condition est une `Boolean` expression MDX qui est évaluée à l’événement d’action. Si la condition prend la valeur `true`, puis l’action est exécutée. Sinon, l'action n'est pas exécutée.  
   
  Le type est la nature de l'action à exécuter. <xref:Microsoft.AnalysisServices.Action> est une classe abstraite. Par conséquent, pour l’utiliser, vous devez utiliser l’une des classes dérivées. Deux types d'actions sont prédéfinis : extraction et rapport. Ces messages ont des classes dérivées correspondantes : <xref:Microsoft.AnalysisServices.DrillThroughAction> et <xref:Microsoft.AnalysisServices.ReportAction>. D’autres actions sont couvertes dans la classe <xref:Microsoft.AnalysisServices.StandardAction> .  
   

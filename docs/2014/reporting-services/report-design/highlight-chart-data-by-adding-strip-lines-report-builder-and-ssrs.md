@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: addd6137-4b6e-4e88-a7e8-9600fcd1ccce
 caps.latest.revision: 6
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 89681b1b14e8afdf109b8a734debd86008aaa006
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 4e9c8704c599a9e0b82267b4f7efe8a8e7b8d5ec
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36051438"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37327099"
 ---
 # <a name="highlight-chart-data-by-adding-strip-lines-report-builder-and-ssrs"></a>Mettre en surbrillance des données de graphique en ajoutant des bandes (Générateur de rapports et SSRS)
   Les franges sont des plages horizontales ou verticales qui assombrissent l'arrière-plan du graphique à intervalles réguliers ou personnalisés. Vous pouvez utiliser des bandes pour obtenir les résultats suivants :  
@@ -67,6 +67,6 @@ ms.locfileid: "36051438"
 ## <a name="see-also"></a>Voir aussi  
  [Mise en forme des étiquettes des axes sur un graphique &#40;Générateur de rapports et SSRS&#41;](formatting-axis-labels-on-a-chart-report-builder-and-ssrs.md)   
  [Mise en forme d’un graphique &#40;Générateur de rapports et SSRS&#41;](formatting-a-chart-report-builder-and-ssrs.md)   
- [Ajouter une moyenne mobile à un graphique &#40;rapport Générateur et SSRS&#41;](add-a-moving-average-to-a-chart-report-builder-and-ssrs.md)  
+ [Ajouter une moyenne mobile à un graphique &#40;Générateur de rapports et SSRS&#41;](add-a-moving-average-to-a-chart-report-builder-and-ssrs.md)  
   
   

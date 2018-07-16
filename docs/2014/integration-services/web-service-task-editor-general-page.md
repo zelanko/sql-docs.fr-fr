@@ -1,5 +1,5 @@
 ---
-title: Éditeur de tâche de Service Web (Page Général) | Documents Microsoft
+title: Éditeur de tâche de Service Web (Page Général) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.webservicestask.general.f1
 helpviewer_keywords:
 - Web Service Task Editor
 ms.assetid: 4d7df283-430d-4f0f-9dd4-5909554cd5eb
 caps.latest.revision: 34
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: d23c975b44a9d61bb9e9b1b61ebf04285842ba01
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 9d68fdf156caf460ee6130df7ab746fcbd13fec0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36039096"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37331859"
 ---
 # <a name="web-service-task-editor-general-page"></a>Éditeur de tâche de service Web (page Général)
   Utilisez la page **Général** de la boîte de dialogue **Éditeur de tâche de service Web** pour définir un gestionnaire de connexions HTTP, spécifier l’emplacement du fichier WSDL (Web Services Description Language) qu’utilise la tâche de service web, décrire la tâche de service web et télécharger le fichier WSDL.  
@@ -48,7 +48,7 @@ ms.locfileid: "36039096"
   
 -   Sélectionnez ce fichier vide pour l’option **WSDLFile** .  
   
--   Définir la valeur de **OverwriteWSDLFile** à `True` pour activer le fichier vide soit remplacée par le fichier WSDL réel.  
+-   Définissez la valeur de **OverwriteWSDLFile** à `True` à activer le fichier vide être remplacé par le fichier WSDL réel.  
   
 -   Cliquez sur **Télécharger WSDL** pour télécharger le fichier WSDL réel et remplacer le fichier vide.  
   
@@ -58,7 +58,7 @@ ms.locfileid: "36039096"
  **OverwriteWSDLFile**  
  Indiquez si le fichier WSDL de la tâche de service Web peut être remplacé.  
   
- Si vous souhaitez télécharger le fichier WSDL à l’aide de la **télécharger WSDL** bouton, définissez cette valeur à `True`.  
+ Si vous projetez de télécharger le fichier WSDL à l’aide de la **télécharger WSDL** bouton, définissez cette valeur sur `True`.  
   
  **Nom**  
  Fournissez un nom unique pour la tâche de service Web. Ce nom sert d'étiquette à l'icône de la tâche.  

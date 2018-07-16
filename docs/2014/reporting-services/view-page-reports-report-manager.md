@@ -1,5 +1,5 @@
 ---
-title: Page vue, rapports (Gestionnaire de rapports) | Documents Microsoft
+title: Page vue, rapports (Gestionnaire de rapports) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 4874ba29-429b-4dd4-a8cb-d4f087237dc2
 caps.latest.revision: 25
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 582855613306e0a0660f16708baec0a670706360
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 0ff8af0b8badf1bc1bbee5e864f825af9d0ab03c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36039219"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37311229"
 ---
 # <a name="view-page-reports-report-manager"></a>Page Vue, Rapports (Gestionnaire de rapports)
   La page Afficher des rapports vous permet d'afficher un rapport. Lorsque vous ouvrez pour la première fois un rapport dans le Gestionnaire de rapports, il est au format HTML. Les rapports HTML incluent une barre d'outils Rapport qui s'affiche en haut du rapport et vous permet de parcourir les pages du rapport, d'effectuer une recherche dans un rapport et d'exporter le rapport dans un format différent. L'illustration suivante représente la barre d'outils Rapport :  
@@ -43,6 +43,6 @@ Barre d'outils Rapports
   
 ## <a name="see-also"></a>Voir aussi  
  [Le Gestionnaire de rapports &#40;SSRS en Mode natif&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
- [Aide (F1) de gestionnaire de rapports](../../2014/reporting-services/report-manager-f1-help.md)  
+ [Aide (F1) du Gestionnaire de rapports](../../2014/reporting-services/report-manager-f1-help.md)  
   
   

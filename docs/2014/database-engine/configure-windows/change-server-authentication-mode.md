@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - sa account
 - authentication [SQL Server], changing modes
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - modifying server authentication mode
 ms.assetid: 79babcf8-19fd-4495-b8eb-453dc575cac0
 caps.latest.revision: 31
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: ea4598db170e2ef0e42050b34b30a89aa2ca2bae
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: ab213ee1c49eaf50150c8e3317244e94a99dd1cf
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36142559"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37295399"
 ---
 # <a name="change-server-authentication-mode"></a>Changer le mode d'authentification du serveur
   Cette rubrique explique comment modifier le mode d'authentification du serveur dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] à l'aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou de [!INCLUDE[tsql](../../includes/tsql-md.md)]. Au cours de l’installation, le [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] est paramétré sur **Mode d’authentification Windows** ou sur **Mode d’authentification SQL Server et Windows**. Après l'installation, vous pouvez modifier le mode d'authentification à tout moment.  
@@ -62,7 +62,7 @@ ms.locfileid: "36142559"
   
 #### <a name="to-enable-the-sa-login"></a>Pour activer la connexion sa  
   
-1.  Dans l’Explorateur d’objets, développez **sécurité**, puis connexions, cliquez sur `sa`, puis cliquez sur **propriétés**.  
+1.  Dans l’Explorateur d’objets, développez **sécurité**, puis connexions, avec le bouton droit `sa`, puis cliquez sur **propriétés**.  
   
 2.  Sur la page **Général** , vous devrez peut-être créer et confirmer un mot de passe pour la connexion.  
   

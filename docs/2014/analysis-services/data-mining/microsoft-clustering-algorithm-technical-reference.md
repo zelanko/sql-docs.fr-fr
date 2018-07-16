@@ -1,5 +1,5 @@
 ---
-title: Techniques de l’algorithme de gestion de clusters Microsoft | Documents Microsoft
+title: Références techniques relatives aux algorithmes de Clustering Microsoft | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - clustering [Data Mining]
 - MAXIMUM_INPUT_ATTRIBUTES parameter
@@ -24,15 +24,15 @@ helpviewer_keywords:
 - CLUSTER_COUNT parameter
 ms.assetid: ec40868a-6dc7-4dfa-aadc-dedf69e555eb
 caps.latest.revision: 21
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: b217484efbaf10356005187eb494065299f7ba07
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: f1d3ff592e05d2d8ee0b7e055a095de736d61902
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36039203"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37306599"
 ---
 # <a name="microsoft-clustering-algorithm-technical-reference"></a>Références techniques relatives à l'algorithme de gestion de clusters Microsoft
   Cette section explique l'implémentation de l'algorithme de gestion de clusters [!INCLUDE[msCoName](../../includes/msconame-md.md)] , en particulier les paramètres que vous pouvez utiliser pour contrôler le comportement des modèles de clustering. Vous y trouverez également des informations sur la façon d'améliorer les performances lors de la création et du traitement des modèles de clustering.  
@@ -169,7 +169,7 @@ ms.locfileid: "36039203"
 |NOT NULL|La colonne ne peut pas contenir de valeur NULL. Une erreur est générée si Analysis Services rencontre une valeur NULL au cours de l'apprentissage du modèle.<br /><br /> S'applique à la colonne de structure d'exploration de données.|  
   
 ## <a name="requirements"></a>Spécifications  
- Un modèle de clustering doit contenir une colonne clé et des colonnes d'entrée. Vous pouvez également définir les colonnes d'entrée comme prédictibles. Colonnes de `Predict Only` ne sont pas utilisées pour générer des clusters. La distribution de ces valeurs dans les clusters est calculée après la création des clusters.  
+ Un modèle de clustering doit contenir une colonne clé et des colonnes d'entrée. Vous pouvez également définir les colonnes d'entrée comme prédictibles. Colonnes de valeur `Predict Only` ne sont pas utilisées pour générer des clusters. La distribution de ces valeurs dans les clusters est calculée après la création des clusters.  
   
 ### <a name="input-and-predictable-columns"></a>Colonnes d'entrée et prédictibles  
  L’algorithme de gestion de clusters [!INCLUDE[msCoName](../../includes/msconame-md.md)] prend en charge les colonnes d’entrée et les colonnes prédictibles répertoriées dans le tableau suivant. Pour plus d’informations sur la signification des types de contenu en cas d’utilisation dans un modèle d’exploration de données, consultez [Types de contenu &#40;Exploration de données&#41;](content-types-data-mining.md).  

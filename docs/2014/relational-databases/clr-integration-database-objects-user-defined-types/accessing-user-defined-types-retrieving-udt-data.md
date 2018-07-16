@@ -1,13 +1,11 @@
 ---
-title: Extraction de données UDT | Documents Microsoft
+title: Extraction de données UDT | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: clr
 ms.tgt_pltfrm: ''
 ms.topic: reference
 dev_langs:
@@ -24,15 +22,15 @@ helpviewer_keywords:
 - bytes [CLR integration]
 ms.assetid: 6a98ac8c-0e69-4c03-83a4-2062cb782049
 caps.latest.revision: 17
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: e3006fcd0c90cdc5a936b80a3f0fd635eee873b9
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: rothja
+ms.author: jroth
+manager: craigg
+ms.openlocfilehash: 7f7e8d895737f2bb8e7b446d2f02109757b9c65e
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36038846"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37350041"
 ---
 # <a name="retrieving-udt-data"></a>Extraction de données UDT
   Pour créer un type défini par l'utilisateur (UDT) sur le client, l'assembly enregistré comme UDT dans une base de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] doit être accessible par l'application cliente. L'assembly de type défini par l'utilisateur (UDT) peut être placé dans le même répertoire que l'application, ou dans le Global Assembly Cache (GAC). Vous pouvez également définir une référence à l'assembly dans votre projet.  
@@ -43,7 +41,7 @@ ms.locfileid: "36038846"
  Vous n'avez pas besoin d'une copie de l'assembly UDT sur le client pour extraire les données brutes d'une colonne UDT d'une table.  
   
 > [!NOTE]  
->  **SqlClient** risquent de ne pas charger un UDT en cas de versions UDT incompatibles ou d’autres problèmes. Dans ce cas, utilisez les mécanismes de résolution des problèmes traditionnels pour déterminer pourquoi l'application appelante ne peut pas trouver l'assembly contenant l'UDT. Pour plus d'informations, lisez la rubrique intitulée « Diagnostic d'erreurs avec les Assistants de débogage managés » dans la documentation du .NET Framework.  
+>  **SqlClient** risque de ne pas charger un UDT en cas de versions UDT incompatibles ou d’autres problèmes. Dans ce cas, utilisez les mécanismes de résolution des problèmes traditionnels pour déterminer pourquoi l'application appelante ne peut pas trouver l'assembly contenant l'UDT. Pour plus d'informations, lisez la rubrique intitulée « Diagnostic d'erreurs avec les Assistants de débogage managés » dans la documentation du .NET Framework.  
   
 ## <a name="accessing-udts-with-a-sqldatareader"></a>Accès aux UDT avec un SqlDataReader  
  Un `System.Data.SqlClient.SqlDataReader` peut être utilisé à partir du code client pour extraire un jeu de résultats contenant une colonne UDT, exposée comme instance de l'objet.  
@@ -162,7 +160,7 @@ static void Main()
 ```  
   
 ## <a name="binding-udts-as-bytes"></a>Liaison des UDT comme octets  
- Dans certaines situations, vous pouvez extraire les données brutes de la colonne UDT. Peut-être le type n'est-il pas disponible localement ou ne souhaitez-vous pas instancier une instance de l'UDT. Vous pouvez lire les octets bruts dans un tableau d’octets à l’aide du **GetBytes** méthode d’un `SqlDataReader`. Cette méthode lit un flux d'octets à partir de l'offset de colonne spécifié dans la mémoire tampon d'un tableau commençant à un offset de mémoire tampon donné. Une autre option consiste à utiliser une de le **GetSqlBytes** ou **GetSqlBinary** méthodes et tout le contenu en une seule opération de lecture. Dans l'un et l'autre cas, comme l'objet UDT n'est jamais instancié, vous n'avez pas besoin de définir une référence à l'UDT dans l'assembly client.  
+ Dans certaines situations, vous pouvez extraire les données brutes de la colonne UDT. Peut-être le type n'est-il pas disponible localement ou ne souhaitez-vous pas instancier une instance de l'UDT. Vous pouvez lire les octets bruts dans un tableau d’octets à l’aide du **GetBytes** méthode d’un `SqlDataReader`. Cette méthode lit un flux d'octets à partir de l'offset de colonne spécifié dans la mémoire tampon d'un tableau commençant à un offset de mémoire tampon donné. Une autre option consiste à utiliser une de le **GetSqlBytes** ou **GetSqlBinary** méthodes et de lire tout le contenu en une seule opération. Dans l'un et l'autre cas, comme l'objet UDT n'est jamais instancié, vous n'avez pas besoin de définir une référence à l'UDT dans l'assembly client.  
   
 ### <a name="example"></a>Exemple  
  Cet exemple montre comment récupérer le **Point** données comme octets bruts dans un tableau d’octets à l’aide un `SqlDataReader`. Le code utilise un `System.Text.StringBuilder` pour convertir les octets bruts en une représentation sous forme de chaîne à afficher dans la fenêtre de la console.  

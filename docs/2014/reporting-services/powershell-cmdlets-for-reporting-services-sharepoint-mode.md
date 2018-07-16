@@ -1,5 +1,5 @@
 ---
-title: Applets de commande PowerShell pour Reporting Services SharePoint Mode | Documents Microsoft
+title: Applets de commande PowerShell pour Reporting Services SharePoint Mode | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,23 +8,23 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 7835bc97-2827-4215-b0dd-52f692ce5e02
 caps.latest.revision: 30
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 3a9ced7cb304b5cec0e329adc43f6572b45ebf19
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 29a9177685d94be437574e90a44a46a2391bcba7
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36141758"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37311361"
 ---
 # <a name="powershell-cmdlets-for-reporting-services-sharepoint-mode"></a>Applets de commande PowerShell pour le mode SharePoint de Reporting Services
   Lorsque vous installez le mode SharePoint de [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] , les applets de commande PowerShell sont installées pour prendre en charge les serveurs de rapports en mode SharePoint. Les applets de commande couvrent trois catégories de fonctionnalités.  
   
--   Installation de le [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] SharePoint service partagé et du proxy.  
+-   Installation de le [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] SharePoint service partagé et proxy.  
   
 -   Configuration et gestion de [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] applications de service et proxys associés.  
   
@@ -50,7 +50,7 @@ ms.locfileid: "36141758"
   
     -   [Créer une application de service Reporting Services et un proxy](#bkmk_example_create_service_application)  
   
-    -   [Passez en revue et mettre à jour d’une extension de remise de Reporting Services](#bkmk_example_delivery_extension)  
+    -   [Passez en revue et mettre à jour une extension de remise de Reporting Services](#bkmk_example_delivery_extension)  
   
     -   [Obtenir et définir les propriétés de la base de données de l’application du Reporting Services, par exemple délai d’attente de base de données](#bkmk_example_db_properties)  
   
@@ -68,7 +68,7 @@ ms.locfileid: "36141758"
   
  Un des problèmes suivants se produit :  
   
--   [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] Mode SharePoint n’est pas installé et par conséquent la [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] applets de commande ne sont pas installés.  
+-   [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] Mode SharePoint n’est pas installé et par conséquent le [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] applets de commande ne sont pas installés.  
   
 -   Vous avez exécuté la commande PowerShell dans Windows PowerShell ou Windows PowerShell ISE au lieu de SharePoint Management Shell. Utilisez SharePoint Management Shell ou ajoutez le composant logiciel enfichable SharePoint à la fenêtre Windows PowerShell à l'aide de la commande suivante :  
   
@@ -95,7 +95,7 @@ ms.locfileid: "36141758"
   
 |Applet de commande|Description|  
 |------------|-----------------|  
-|Install-SPRSService|Installe et enregistre, ou désinstalle, le service partagé [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]. Cette opération peut être effectuée uniquement sur l'ordinateur qui dispose d'une installation de SQL Server [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] en mode SharePoint. Pour l'installation, deux opérations ont lieu :<br /><br /> (1) le [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] service est installé dans la batterie de serveurs.<br /><br /> (2) le [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] l’instance de service est installé sur l’ordinateur actuel.<br /><br /> Pour la désinstallation, deux opérations ont lieu :<br />(1) le [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] service est désinstallé de l’ordinateur actuel.<br />(2) le [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] service est désinstallé de la batterie de serveurs.<br /><br /> <br /><br /> Remarque : S’il existe d’autres ordinateurs dans la batterie de serveurs ont le [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] service installé, ou s’il existe toujours [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] applications de service en cours d’exécution dans la batterie de serveurs, un message d’avertissement s’affiche.|  
+|Install-SPRSService|Installe et enregistre, ou désinstalle, le service partagé [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]. Cette opération peut être effectuée uniquement sur l'ordinateur qui dispose d'une installation de SQL Server [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] en mode SharePoint. Pour l'installation, deux opérations ont lieu :<br /><br /> (1) le [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] service est installé dans la batterie de serveurs.<br /><br /> (2) le [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] instance de service est installée sur l’ordinateur actuel.<br /><br /> Pour la désinstallation, deux opérations ont lieu :<br />(1) le [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] service est désinstallé de l’ordinateur actuel.<br />(2) le [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] service est désinstallé de la batterie de serveurs.<br /><br /> <br /><br /> Remarque : S’il existe d’autres ordinateurs dans la batterie de serveurs qui ont le [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] service installé, ou s’il existe toujours [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] les applications de service en cours d’exécution dans la batterie de serveurs, un message d’avertissement s’affiche.|  
 |Install-SPRSServiceProxy|Installe et enregistre, ou désinstalle, le proxy du service Reporting Services dans la batterie de serveurs SharePoint.|  
 |Get-SPRSProxyUrl|Obtient les URL pour accéder à la [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] service.|  
 |Get-SPRSServiceApplicationServers|Obtient tous les serveurs dans la batterie SharePoint locale qui contiennent une installation du service partagé [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]. Cette applet de commande est utile pour les mises à niveau de [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] , car elle permet de déterminer quels serveurs exécutent le service partagé et doivent, par conséquent, être mis à niveau.|  
@@ -112,10 +112,10 @@ ms.locfileid: "36141758"
 |New-SPRSServiceApplicationProxy|Crée un nouveau proxy d'application de service Reporting Services.|  
 |Get-SPRSServiceApplicationProxy|Obtient un ou plusieurs [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] proxys d’application de service.|  
 |Dismount-SPRSDatabase|Démonte les bases de données d'application de service pour une application de service [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)].|  
-|Remove-SPRSDatabase|Supprimer les bases de données service pour un [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] application de service.|  
+|Remove-SPRSDatabase|Supprimer les bases de données pour un [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] application de service.|  
 |Set-SPRSDatabase|Définit les propriétés des bases de données associées à une application de service [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)].|  
 |Mount-SPRSDatabase|Monte les bases de données pour un [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] application de service.|  
-|New-SPRSDatabase|Créer de nouvelles bases de données application de service spécifié [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] application de service.|  
+|New-SPRSDatabase|Créer de nouvelles bases de données spécifié [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] application de service.|  
 |Get-SPRSDatabaseCreationScript|Génère le script de création de base de données à l'écran pour une application de service [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]. Vous pouvez ensuite exécuter le script dans SQL Server Management Studio.|  
 |Get-SPRSDatabase|Obtient une ou plusieurs bases de données d'application de service [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]. Utilisez la commande pour obtenir l'ID de la base de données d'application de service afin d'utiliser l'applet de commande Set-SPRSDatabase pour modifier les propriétés, par exemple `querytimeout`. Consultez l'exemple de la rubrique, [Obtenir et définir les propriétés de la base de données d'application Reporting Services, par exemple le délai d'expiration de la base de données](#bkmk_example_db_properties).|  
 |Get-SPRSDatabaseRightsScript|Génère le script de droits de base de données à l’écran pour un [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] application de service. Invite à entrer l'utilisateur et la base de données souhaités, puis retourne un script Transact-SQL que vous pouvez exécuter pour modifier des autorisations. Vous pouvez ensuite exécuter ce script dans SQL Server Management Studio.|  
@@ -180,7 +180,7 @@ Get-content -path C:\Users\testuser\AppData\Local\Temp\rs_sp_0.log | select-stri
   
 2.  Ajout du proxy au groupe de proxy par défaut  
   
-3.  Octroi de l'accès aux applications de service à la base de données de contenus de l'application Web sur le port 80. Le script suppose que le site «http://sitename» existe déjà.  
+3.  Octroi de l'accès aux applications de service à la base de données de contenus de l'application Web sur le port 80. Le script considère que le site «http://sitename» existe déjà.  
   
 ```  
 # Create service application and service application proxy  
@@ -198,7 +198,7 @@ $webApp.GrantAccessToProcessIdentity($appPoolAccountName)
   
 ```  
   
-###  <a name="bkmk_example_delivery_extension"></a> Passez en revue et mettre à jour d’une extension de remise de Reporting Services  
+###  <a name="bkmk_example_delivery_extension"></a> Passez en revue et mettre à jour une extension de remise de Reporting Services  
  L’exemple de script PowerShell suivant met à jour la configuration de l’extension de remise du courrier électronique par le serveur de rapports pour l’application de service nommée `My RS Service App`. Mettez à jour les valeurs du serveur SMTP (`<email server name>`) et de l’alias de messagerie électronique FROM (`<your FROM email address>`).  
   
 ```  

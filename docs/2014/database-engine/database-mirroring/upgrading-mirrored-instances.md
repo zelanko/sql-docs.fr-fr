@@ -1,35 +1,34 @@
 ---
-title: Réduire le temps mort pour les bases de données en miroir lors de la mise à niveau des Instances de serveur | Documents Microsoft
+title: Réduire le temps mort pour les bases de données miroir lors de la mise à niveau des Instances de serveur | Microsoft Docs
 ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - upgrading SQL Server, rolling upgrade of mirrored databases
 - database mirroring [SQL Server], upgrading system
 - rolling upgrades [SQL Server]
 ms.assetid: 0e73bd23-497d-42f1-9e81-8d5314bcd597
 caps.latest.revision: 37
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: fc5bea207d824c860d197ca75eff788f6794ecc0
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: ba14393c7b8281ae5a9e3a141e7a3e9bd28d0399
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36039165"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37300819"
 ---
 # <a name="minimize-downtime-for-mirrored-databases-when-upgrading-server-instances"></a>Réduire le temps d'indisponibilité des bases de données mises en miroir lors de la mise à niveau d'instances de serveur
   Lors de la mise à niveau des instances de serveur [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], vous pouvez réduire les temps d’arrêt pour chaque base de données mise en miroir à un seul basculement manuel en effectuant une mise à niveau séquentielle, appelé un *mise à niveau propagée*. Une mise à niveau propagée est un processus en plusieurs étapes qui, dans sa forme la plus simple, consiste à mettre à niveau l'instance de serveur qui agit actuellement en tant que serveur miroir dans une session de mise en miroir, puis à basculer manuellement la base de données mise en miroir, à mettre à niveau l'ancien serveur principal et à reprendre la mise en miroir. En pratique, le processus exact dépend du mode d'opération, du nombre et de la disposition de sessions de mise en miroir qui s'exécutent sur les instances de serveur que vous mettez à niveau.  
   
 > [!NOTE]  
->  Pour plus d’informations sur l’exécution d’une mise à niveau propagée pour installer un service pack ou le correctif logiciel, consultez [installer un Service Pack sur un système avec un temps mort Minimal pour la mise en miroir de bases de données de](../install-a-service-pack-on-a-system-with-minimal-downtime-for-mirrored-databases.md).  
+>  Pour plus d’informations sur l’exécution d’une mise à niveau propagée pour installer un service pack ou le correctif logiciel, consultez [installer un Service Pack sur un système avec un temps mort Minimal pour les bases de données mise en miroir](../install-a-service-pack-on-a-system-with-minimal-downtime-for-mirrored-databases.md).  
   
  **Préparation recommandée (meilleures pratiques)**  
   
@@ -112,7 +111,7 @@ ms.locfileid: "36039165"
     > [!NOTE]  
     >  L'établissement d'une nouvelle session de mise en miroir requiert que toutes les instances de serveur exécutent la même version de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-3.  Après avoir effectué le basculement, nous vous recommandons d’exécuter le [DBCC CHECKDB](/sql/t-sql/database-console-commands/dbcc-checkdb-transact-sql) commande theprincipal de base de données.  
+3.  Après avoir basculé, nous vous recommandons d’exécuter le [DBCC CHECKDB](/sql/t-sql/database-console-commands/dbcc-checkdb-transact-sql) commande theprincipal de base de données.  
   
 4.  Mettez à niveau chaque instance de serveur qui est désormais le serveur miroir dans toutes les sessions de mise en miroir dans lesquelles elle est un serveur partenaire. Vous pourriez devoir mettre à jour plusieurs serveurs à ce stade.  
   

@@ -5,30 +5,29 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-search
+ms.technology: search
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - semantic search [SQL Server], managing
 - semantic search [SQL Server], monitoring
 ms.assetid: eb5c3b29-da70-42aa-aa97-7d35a3f1eb98
 caps.latest.revision: 17
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 366a8e3047cdba872fa9cb004c2a1d8a1892d22b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 4dc25a584e7e883ce07040e0d5d0d567995533f1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36040597"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37311459"
 ---
 # <a name="manage-and-monitor-semantic-search"></a>Gérer et surveiller la recherche sémantique
   Décrit le processus d'indexation sémantique et les tâches associées à la gestion et au contrôle des index.  
   
 ##  <a name="HowToMonitorStatus"></a> Comment : Vérifier l’état de l’indexation sémantique  
- **La première phase de l’indexation sémantique est-elle terminée**  
+ **La première phase de l’indexation sémantique est terminée ?**  
  Interrogez la vue de gestion dynamique, [sys.dm_fts_index_population &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-fts-index-population-transact-sql), et vérifiez les colonnes **status** et **status_description**.  
   
  La première phase de l'indexation inclut l'alimentation de l'index de mots clés de recherche en texte intégral et de l'index d'expressions clés sémantiques, ainsi que l'extraction de données de ressemblance de document.  
@@ -41,7 +40,7 @@ SELECT * FROM sys.dm_fts_index_population WHERE table_id = OBJECT_ID('table_name
 GO  
 ```  
   
- **La deuxième phase de l’indexation sémantique est-elle terminée**  
+ **La deuxième phase de l’indexation sémantique est terminée ?**  
  Interrogez la vue de gestion dynamique, [sys.dm_fts_semantic_similarity_population &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-fts-semantic-similarity-population-transact-sql), et vérifiez les colonnes **status** et **status_description**.  
   
  La deuxième phase de l'indexation inclut l'alimentation de l'index de ressemblance de document sémantique.  
@@ -76,7 +75,7 @@ SELECT FULLTEXTCATALOGPROPERTY('catalog_name', 'IndexSize')
 GO  
 ```  
   
- **Le nombre d’éléments est indexé dans les index de recherche en texte intégral et sémantiques d’un catalogue de texte intégral ?**  
+ **Combien d’éléments est indexés dans les index de recherche en texte intégral et sémantiques pour un catalogue de texte intégral ?**  
  Interrogez la propriété **ItemCount** de la fonction de métadonnées [FULLTEXTCATALOGPROPERTY &#40;Transact-SQL&#41;](/sql/t-sql/functions/fulltextcatalogproperty-transact-sql).  
   
 ```tsql  
@@ -102,7 +101,7 @@ ALTER FULLTEXT INDEX ON Production.Document
 GO  
 ```  
   
-##  <a name="HowToDisableIndexing"></a> Procédure : Désactiver ou réactiver l’indexation sémantique  
+##  <a name="HowToDisableIndexing"></a> Comment : Désactiver ou réactiver l’indexation sémantique  
  Vous pouvez activer ou désactiver l'indexation sémantique ou de texte intégral à l'aide de la clause ENABLE/DISABLE avec la même syntaxe et le même comportement que ceux décrits pour les index de recherche en texte intégral. Pour plus d’informations, consultez [ALTER FULLTEXT INDEX &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-fulltext-index-transact-sql).  
   
  Lorsque l'indexation sémantique est désactivée et suspendue, les requêtes sur les données sémantiques continuent de s'exécuter avec succès et retournent des données indexées précédemment. Ce comportement n'est pas cohérent avec le comportement de la recherche en texte intégral.  
@@ -141,10 +140,10 @@ GO
  **Les index de recherche en texte intégral associés sont remplis ?**  
  Étant donné que l'indexation sémantique dépend de l'indexation de texte intégral, les index sémantiques ne sont remplis que lorsque les index de recherche en texte intégral associés le sont également.  
   
- **Est la recherche en texte intégral et la recherche sémantique sont-elles installées et configurées correctement ?**  
+ **Sont la recherche en texte intégral et la recherche sémantique installées et configurées correctement ?**  
  Pour plus d’informations, consultez [Installer et configurer la recherche sémantique](install-and-configure-semantic-search.md).  
   
- **Le FDHOST service n’est pas disponible, ou existe-t-il une autre condition qui provoquerait l’indexation de texte intégral échouer ?**  
+ **Le FDHOST service n’est pas disponible, ou existe-t-il une autre condition qui provoquerait l’indexation de texte intégral pour la restauration ?**  
  Pour plus d’informations, consultez [Résoudre l’indexation de recherche en texte intégral](troubleshoot-full-text-indexing.md).  
   
   

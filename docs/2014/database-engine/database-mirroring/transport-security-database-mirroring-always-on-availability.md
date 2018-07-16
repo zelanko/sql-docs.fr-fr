@@ -1,14 +1,13 @@
 ---
-title: Sécurité de transport pour la mise en miroir de base de données et de groupes de disponibilité AlwaysOn (SQL Server) | Documents Microsoft
+title: Sécurité du transport pour la mise en miroir de base de données et de groupes de disponibilité AlwaysOn (SQL Server) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - sessions [SQL Server], database mirroring
 - cryptography [SQL Server], database mirroring
@@ -22,13 +21,13 @@ ms.assetid: 49239d02-964e-47c0-9b7f-2b539151ee1b
 caps.latest.revision: 58
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
-ms.openlocfilehash: fdcfc0b7d7ce374f65fac8dca13dc7136b129e57
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: d3f2a6d5dfcba21cea89802a29eec7a56a58936c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36142332"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37291405"
 ---
 # <a name="transport-security-for-database-mirroring-and-alwayson-availability-groups-sql-server"></a>Sécurité du transport de la mise en miroir de bases de données et des groupes de disponibilité AlwaysOn (SQL Server)
   La sécurité du transport implique l'authentification et, éventuellement, le chiffrement des messages échangés entre les bases de données. Pour la mise en miroir de bases de données et [!INCLUDE[ssHADR](../../includes/sshadr-md.md)], l'authentification et le chiffrement sont configurés sur le point de terminaison de la mise en miroir. Pour une présentation des points de terminaison de mise en miroir de bases de données, consultez [Point de terminaison de mise en miroir de bases de données &#40;SQL Server&#41;](the-database-mirroring-endpoint-sql-server.md).  

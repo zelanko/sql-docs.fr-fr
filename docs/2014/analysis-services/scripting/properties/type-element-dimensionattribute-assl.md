@@ -1,5 +1,5 @@
 ---
-title: Type d’élément (DimensionAttribute) (ASSL) | Documents Microsoft
+title: Type d’élément (DimensionAttribute) (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - Type element
 ms.assetid: 64fce1f5-39b7-4d0a-ae60-21203a03bd0d
 caps.latest.revision: 35
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 450f25e039a4efbc2a6ae4175faf396bfbfa9ff7
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 99b84675dbc0b13d7d73823126e7bc11fb75ad05
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36151771"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37293469"
 ---
 # <a name="type-element-dimensionattribute-assl"></a>Élément Type (DimensionAttribute) (ASSL)
   Contient le type de l'attribut.  
@@ -88,7 +88,7 @@ ms.locfileid: "36151771"
 |*CaptionDescription*|L'attribut représente une description.|  
 |*Channel*|L'attribut représente un canal.|  
 |*Ville*|L'attribut représente une ville.|  
-|*Société*|L'attribut représente une société.|  
+|*Entreprise*|L'attribut représente une société.|  
 |*Continent*|L'attribut représente un continent.|  
 |*Pays*|L'attribut représente un pays ou une région.|  
 |*Comté*|L'attribut représente un pays.|  
@@ -111,7 +111,7 @@ ms.locfileid: "36151771"
 |*DayOfTrimester*|L'attribut représente l'ordinal de jour d'un quadrimestre.|  
 |*DayOfWeek*|L'attribut représente l'ordinal de jour d'une semaine.|  
 |*DayOfYear*|L'attribut représente l'ordinal de jour d'une année.|  
-|*Jours d’utilisation*|L'attribut représente des jours.|  
+|*Jours*|L'attribut représente des jours.|  
 |*DaysOfTenDays*|L'attribut représente l'ordinal de jour d'une période de dix jours.|  
 |*FiscalDay*|L'attribut représente des jours dans un calendrier fiscal.|  
 |*FiscalDayOfHalfYears*|L'attribut représente l'ordinal de jour d'un semestre dans un calendrier fiscal.|  
@@ -122,7 +122,7 @@ ms.locfileid: "36151771"
 |*FiscalDayOfYear*|L'attribut représente l'ordinal de jour d'une année dans un calendrier fiscal.|  
 |*FiscalHalfYears*|L'attribut représente des semestres dans un calendrier fiscal.|  
 |*FiscalHalfYearsOfYear*|L'attribut représente l'ordinal de semestre d'une année dans un calendrier fiscal.|  
-|*Fiscal*|L'attribut représente des mois dans un calendrier fiscal.|  
+|*FiscalMonth*|L'attribut représente des mois dans un calendrier fiscal.|  
 |*FiscalMonthOfHalfYears*|L'attribut représente l'ordinal de mois d'un semestre dans un calendrier fiscal.|  
 |*FiscalMonthOfQuarter*|L'attribut représente l'ordinal de mois d'un trimestre dans un calendrier fiscal.|  
 |*FiscalMonthOfTrimester*|L'attribut représente l'ordinal de mois d'un quadrimestre dans un calendrier fiscal.|  
@@ -234,11 +234,11 @@ ms.locfileid: "36151771"
 |*Promotion*|L'attribut représente une promotion.|  
 |*QtyRangeHigh*|L'attribut représente la valeur maximale d'une gamme de quantités.|  
 |*QtyRangeLow*|L'attribut représente la valeur minimale d'une gamme de quantités.|  
-|*Quantitative*|L'attribut représente un attribut quantitatif.|  
+|*Quantitatives*|L'attribut représente un attribut quantitatif.|  
 |*QuarterOfHalfYear*|L'attribut représente l'ordinal de trimestre d'un semestre.|  
 |*QuarterOfYear*|L'attribut représente l'ordinal de trimestre d'une année.|  
 |*Trimestres*|L'attribut représente des trimestres.|  
-|*Taux de*|L'attribut représente un taux.|  
+|*Taux*|L'attribut représente un taux.|  
 |*RateType*|L'attribut représente un type de taux.|  
 |*Region*|L'attribut représente une région définie par le client.|  
 |*Régulière*|L'attribut représente un attribut régulier.|  
@@ -298,13 +298,13 @@ ms.locfileid: "36151771"
 |*Semaines*|L'attribut représente des semaines.|  
 |*Années*|L'attribut représente des années.|  
   
- L’énumération qui correspond aux valeurs autorisées pour `Type` dans l’objet d’objets AMO (Analysis Management) est modèle <xref:Microsoft.AnalysisServices.AttributeType>.  
+ L’énumération qui correspond aux valeurs autorisées pour `Type` dans l’objet d’objets AMO (Analysis Management) modèle est <xref:Microsoft.AnalysisServices.AttributeType>.  
   
- L’élément qui correspond au parent de `Type` dans l’objet d’objets AMO (Analysis Management) est modèle <xref:Microsoft.AnalysisServices.DimensionAttribute>.  
+ L’élément qui correspond au parent de `Type` dans l’objet d’objets AMO (Analysis Management) modèle est <xref:Microsoft.AnalysisServices.DimensionAttribute>.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Attributs d’élément &#40;ASSL&#41;](../collections/attributes-element-assl.md)   
- [Élément de dimension &#40;ASSL&#41;](../objects/dimension-element-assl.md)   
+ [Dimension élément &#40;ASSL&#41;](../objects/dimension-element-assl.md)   
  [Propriétés &#40;ASSL&#41;](properties-assl.md)  
   
   

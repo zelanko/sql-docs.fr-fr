@@ -1,5 +1,5 @@
 ---
-title: Type de données ProactiveCachingObjectNotificationBinding (ASSL) | Documents Microsoft
+title: Type de données ProactiveCachingObjectNotificationBinding (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - ProactiveCachingObjectNotificationBinding data type
 ms.assetid: b3cf5fb6-6121-4f25-8de6-f171792c440d
 caps.latest.revision: 16
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: c901ea8aa1a11086c8ed6e4bdada9bb1f19acf1f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 72b45eae800790497b661a82e079255651bec4d5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36039823"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37330329"
 ---
 # <a name="proactivecachingobjectnotificationbinding-data-type-assl"></a>Type de données ProactiveCachingObjectNotificationBinding (ASSL)
   Définit un type de données dérivé abstrait qui représente les informations de la [ProactiveCaching](../objects/proactivecaching-element-assl.md) élément sur les modifications de source de données, dans les tables et vues spécifiées ou dans les tables et les vues identifiées par le biais des liaisons de données existantes qui exigent une reconstruction du cache.  
@@ -68,6 +68,6 @@ ms.locfileid: "36039823"
  L’élément correspondant dans le modèle d’objet objets AMO (Analysis Management) est <xref:Microsoft.AnalysisServices.ProactiveCachingObjectNotificationBinding>.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Types de données de script langage XML Analysis Services &#40;ASSL&#41;](analysis-services-scripting-language-xml-data-types-assl.md)  
+ [Types Analysis Services Scripting Language XML données &#40;ASSL&#41;](analysis-services-scripting-language-xml-data-types-assl.md)  
   
   

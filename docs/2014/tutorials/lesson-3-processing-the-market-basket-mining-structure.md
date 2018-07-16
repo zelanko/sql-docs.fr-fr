@@ -1,5 +1,5 @@
 ---
-title: 'Leçon 3 : Traitement de la Structure d’exploration de données de panier d’achat | Documents Microsoft'
+title: 'Leçon 3 : Traitement de la Structure d’exploration de données Market Basket | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,23 +8,23 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 095a043f-cf6f-45bb-a021-ae4e1b535c65
 caps.latest.revision: 36
 author: minewiskan
 ms.author: owend
-manager: kfile
-ms.openlocfilehash: cc4ea28876fa0b52577f0d78e357a3cb1fe0a9bf
-ms.sourcegitcommit: 8c040e5b4e8c7d37ca295679410770a1af4d2e1f
+manager: craigg
+ms.openlocfilehash: 0d14fe6f8cbfae7370c0b02626f54758d4159d83
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/21/2018
-ms.locfileid: "36312667"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37297579"
 ---
 # <a name="lesson-3-processing-the-market-basket-mining-structure"></a>Leçon 3 : traitement de la structure d'exploration de données Market Basket
-  Dans cette leçon, vous allez utiliser le [INSERT INTO &#40;DMX&#41; ](/sql/dmx/insert-into-dmx) instruction et vAssocSeqLineItems et vAssocSeqOrders de la [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)] modèles de base de données exemple pour traiter les structures d’exploration de données et l’exploration de données que vous avez créé dans [leçon 1 : création de la Structure d’exploration de données Market Basket](../../2014/tutorials/lesson-1-creating-the-market-basket-mining-structure.md) et [leçon 2 : ajout de modèles d’exploration de données à la Structure d’exploration de données Market Basket](../../2014/tutorials/lesson-2-adding-mining-models-to-the-market-basket-mining-structure.md).  
+  Dans cette leçon, vous allez utiliser le [INSERT INTO &#40;DMX&#41; ](/sql/dmx/insert-into-dmx) instruction et vAssocSeqLineItems et vAssocSeqOrders à partir de la [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)] base de données exemple pour traiter les structures d’exploration et l’exploration des modèles que vous avez créé dans [leçon 1 : création de la Structure d’exploration de données Market Basket](../../2014/tutorials/lesson-1-creating-the-market-basket-mining-structure.md) et [leçon 2 : ajout de modèles d’exploration de données à la Structure d’exploration de données Market Basket](../../2014/tutorials/lesson-2-adding-mining-models-to-the-market-basket-mining-structure.md).  
   
- Lorsque vous traitez une structure d'exploration de données, [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] lit les données sources et génère les structures qui soutiennent les modèles d'exploration de données. Lorsque vous traitez un modèle d’exploration de données, les données définies par la structure d’exploration de données sont transmises via l’algorithme d’exploration de données que vous avez choisi. L'algorithme recherche des tendances et des modèles, puis stocke les informations recueillies dans le modèle d'exploration de données. Par conséquent, le modèle d'exploration de données ne contient pas les données source réelles mais plutôt les informations recueillies par l'algorithme. Pour plus d’informations sur le traitement des modèles d’exploration de données, consultez [le traitement des exigences et les considérations &#40;d’exploration de données&#41;](../../2014/analysis-services/data-mining/processing-requirements-and-considerations-data-mining.md).  
+ Lorsque vous traitez une structure d'exploration de données, [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] lit les données sources et génère les structures qui soutiennent les modèles d'exploration de données. Lorsque vous traitez un modèle d’exploration de données, les données définies par la structure d’exploration de données sont transmises via l’algorithme d’exploration de données que vous avez choisi. L'algorithme recherche des tendances et des modèles, puis stocke les informations recueillies dans le modèle d'exploration de données. Par conséquent, le modèle d'exploration de données ne contient pas les données source réelles mais plutôt les informations recueillies par l'algorithme. Pour plus d’informations sur les modèles d’exploration de données de traitement, consultez [traitement des exigences et considérations &#40;exploration de données&#41;](../../2014/analysis-services/data-mining/processing-requirements-and-considerations-data-mining.md).  
   
  Si vous modifiez une colonne de structure ou les données source, vous devez simplement retraiter la structure d'exploration de données. Si vous ajoutez un modèle d'exploration de données à une structure d'exploration de données déjà traitée, vous pouvez utiliser l'instruction `INSERT INTO MINING MODEL` pour effectuer l'apprentissage du nouveau modèle d'exploration de données sur les données existantes.  
   
@@ -64,7 +64,7 @@ RELATE [<case key>] TO [<foreign key>]
 INSERT INTO MINING STRUCTURE [<mining structure name>]  
 ```  
   
- Les lignes suivantes du code précisent les colonnes définies par la structure d'exploration de données. Vous devez répertorier chaque colonne dans la structure d'exploration de données et chaque colonne doit mapper une colonne figurant dans les données de la requête source. Vous pouvez utiliser la commande `SKIP` pour ignorer les colonnes qui existent dans les données source, mais non dans la structure d'exploration de données. Pour plus d’informations sur l’utilisation de `SKIP`, consultez [INSERT INTO &#40;DMX&#41;](/sql/dmx/insert-into-dmx).  
+ Les lignes suivantes du code précisent les colonnes définies par la structure d'exploration de données. Vous devez répertorier chaque colonne dans la structure d'exploration de données et chaque colonne doit mapper une colonne figurant dans les données de la requête source. Vous pouvez utiliser la commande `SKIP` pour ignorer les colonnes qui existent dans les données source, mais non dans la structure d'exploration de données. Pour plus d’informations sur l’utilisation `SKIP`, consultez [INSERT INTO &#40;DMX&#41;](/sql/dmx/insert-into-dmx).  
   
 ```  
 (  
@@ -98,7 +98,7 @@ RELATE [<case key>] TO [<foreign key>]
   
 #### <a name="to-process-the-mining-structure-by-using-insert-into"></a>Pour traiter la structure d'exploration de données à l'aide de l'instruction INSERT INTO  
   
-1.  Dans **l’Explorateur d’objets**, cliquez sur l’instance de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], pointez sur **nouvelle requête**, puis cliquez sur **DMX**.  
+1.  Dans **Explorateur d’objets**, avec le bouton droit de l’instance de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], pointez sur **nouvelle requête**, puis cliquez sur **DMX**.  
   
      L'Éditeur de requête s'ouvre et contient une nouvelle requête vide.  
   
@@ -162,7 +162,7 @@ RELATE [<case key>] TO [<foreign key>]
     ) AS [Products]  
     ```  
   
-     La requête source fait référence à la [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)] source de données définie dans le [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)] exemple de projet. Elle utilise la source de données pour accéder aux vues vAssocSeqLineItems et vAssocSeqOrders. Ces vues renferment les données source à utiliser pour effectuer l'apprentissage du modèle d'exploration de données. Si vous n’avez pas créé ce projet ou ces vues, consultez [Basic Data Mining Tutorial](../../2014/tutorials/basic-data-mining-tutorial.md).  
+     La requête source fait référence le [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)] source de données définie dans le [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)] exemple de projet. Elle utilise la source de données pour accéder aux vues vAssocSeqLineItems et vAssocSeqOrders. Ces vues renferment les données source à utiliser pour effectuer l'apprentissage du modèle d'exploration de données. Si vous n’avez pas créé ce projet ou ces vues, consultez [Basic Data Mining Tutorial](../../2014/tutorials/basic-data-mining-tutorial.md).  
   
      Dans la commande `SHAPE`, vous allez utiliser `OPENQUERY` pour définir deux requêtes. La première requête définit la table parente, la deuxième définit la table imbriquée. Les deux tables sont associées par le biais de la colonne OrderNumber présente dans les deux tables.  
   
@@ -196,6 +196,6 @@ RELATE [<case key>] TO [<foreign key>]
  Dans la leçon suivante, vous allez créer plusieurs prédictions fondées sur les modèles d'exploration de données que vous avez ajoutés à la structure Market Basket.  
   
 ## <a name="next-lesson"></a>Leçon suivante  
- [Leçon 4 : Exécution de prédictions Market Basket](../../2014/tutorials/lesson-4-executing-market-basket-predictions.md)  
+ [Leçon 4 : Exécution de prédictions Market Basket](../../2014/tutorials/lesson-4-executing-market-basket-predictions.md)  
   
   

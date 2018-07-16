@@ -1,5 +1,5 @@
 ---
-title: Algorithme de série chronologique de Microsoft | Documents Microsoft
+title: Algorithme de série chronologique de Microsoft | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - ARTXP
 - time series algorithms [Analysis Services]
@@ -20,18 +20,18 @@ helpviewer_keywords:
 - regression algorithms [Analysis Services]
 ms.assetid: 642297cc-f32a-499b-b26e-fdc7ee24361e
 caps.latest.revision: 74
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 0291f91ea4432c9bf4a51b617f7e44fe92130d1b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 428a6433222c4d6d0aca47e065d85130792b94ef
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36152018"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37325109"
 ---
 # <a name="microsoft-time-series-algorithm"></a>Algorithme MTS (Microsoft Time Series)
-  Le [!INCLUDE[msCoName](../../includes/msconame-md.md)] algorithme de série chronologique fournit les algorithmes de régression qui sont optimisés pour prévoir des valeurs continues, telles que les ventes de produits, au fil du temps. Contrairement à d'autres algorithmes [!INCLUDE[msCoName](../../includes/msconame-md.md)] , tels que les arbres de décision, un modèle de série chronologique ne nécessite pas de colonnes supplémentaires avec de nouvelles informations comme entrée pour prédire une tendance. Un modèle de série chronologique peut prédire des tendances en fonction uniquement du jeu de données d'origine utilisé pour créer le modèle. Vous pouvez également ajouter de nouvelles données au modèle lorsque vous effectuez une prédiction et les incorporer automatiquement à l'analyse de tendances.  
+  Le [!INCLUDE[msCoName](../../includes/msconame-md.md)] algorithme de série chronologique fournit des algorithmes de régression qui sont optimisés pour prévoir des valeurs continues, telles que les ventes de produit, au fil du temps. Contrairement à d'autres algorithmes [!INCLUDE[msCoName](../../includes/msconame-md.md)] , tels que les arbres de décision, un modèle de série chronologique ne nécessite pas de colonnes supplémentaires avec de nouvelles informations comme entrée pour prédire une tendance. Un modèle de série chronologique peut prédire des tendances en fonction uniquement du jeu de données d'origine utilisé pour créer le modèle. Vous pouvez également ajouter de nouvelles données au modèle lorsque vous effectuez une prédiction et les incorporer automatiquement à l'analyse de tendances.  
   
  Le diagramme suivant représente un modèle standard pour prévoir les ventes d'un produit dans quatre régions de ventes différentes dans le temps. Le modèle affiché dans le diagramme affiche des ventes pour chaque région représentée sous la forme de traits de couleur rouge, jaune, violette et bleue. Le trait de chaque région est constitué de deux parties :  
   
@@ -55,7 +55,7 @@ ms.locfileid: "36152018"
   
  Par défaut, l’algorithme [!INCLUDE[msCoName](../../includes/msconame-md.md)] Time Series utilise une combinaison des algorithmes quand il analyse des schémas et effectue des prédictions. L’algorithme effectue l’apprentissage de deux modèles séparés sur les mêmes données : un modèle utilise l’algorithme ARTXP et un modèle utilise l’algorithme ARIMA. L'algorithme fusionne ensuite les résultats des deux modèles pour produire la meilleure prédiction sur un nombre variable de tranches de temps. L'algorithme ARTXP étant idéal pour les prédictions à court terme, il pèse plus lourdement au début d'une série de prédictions. Toutefois, à mesure que les tranches de temps que vous prédisez sont éloignées dans le temps, l'algorithme ARIMA pèse plus lourdement.  
   
- Vous pouvez également contrôler la combinaison des algorithmes pour favoriser les prédictions à court ou long terme dans la série chronologique. À compter de [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] Standard, vous pouvez spécifier que le [!INCLUDE[msCoName](../../includes/msconame-md.md)] Time Series utilise l’algorithme un des paramètres suivants :  
+ Vous pouvez également contrôler la combinaison des algorithmes pour favoriser les prédictions à court ou long terme dans la série chronologique. À compter de [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] Standard, vous pouvez spécifier que le [!INCLUDE[msCoName](../../includes/msconame-md.md)] utilisation d’algorithme de série chronologique un des paramètres suivants :  
   
 -   Utiliser uniquement ARTXP pour les prédictions à court terme.  
   
@@ -63,7 +63,7 @@ ms.locfileid: "36152018"
   
 -   Utiliser la fusion par défaut des deux algorithmes.  
   
- À compter de [!INCLUDE[ssEnterpriseEd10](../../includes/ssenterpriseed10-md.md)], vous pouvez personnaliser la [!INCLUDE[msCoName](../../includes/msconame-md.md)] algorithme de série chronologique fusionne les modèles pour la prédiction. Quand vous utilisez un modèle mixte, l’algorithme [!INCLUDE[msCoName](../../includes/msconame-md.md)] Time Series fusionne les deux algorithmes comme suit :  
+ À compter de [!INCLUDE[ssEnterpriseEd10](../../includes/ssenterpriseed10-md.md)], vous pouvez personnaliser comment la [!INCLUDE[msCoName](../../includes/msconame-md.md)] algorithme de Time Series fusionne les modèles pour la prédiction. Quand vous utilisez un modèle mixte, l’algorithme [!INCLUDE[msCoName](../../includes/msconame-md.md)] Time Series fusionne les deux algorithmes comme suit :  
   
 -   Seul ARTXP est toujours utilisé pour effectuer les deux premières prédictions.  
   
@@ -158,9 +158,9 @@ ms.locfileid: "36152018"
   
 ## <a name="see-also"></a>Voir aussi  
  [Algorithmes d’exploration de données &#40;Analysis Services - Exploration de données&#41;](data-mining-algorithms-analysis-services-data-mining.md)   
- [Parcourir un modèle à l’aide de la visionneuse de série Microsoft Time](browse-a-model-using-the-microsoft-time-series-viewer.md)   
+ [Explorer un modèle à l’aide de la visionneuse de la série Microsoft Time](browse-a-model-using-the-microsoft-time-series-viewer.md)   
  [Référence technique de Microsoft Time Series algorithme](microsoft-time-series-algorithm-technical-reference.md)   
- [Exemples de requête de modèle de série de temps](time-series-model-query-examples.md)   
- [Contenu pour les modèles de série chronologique du modèle d’exploration de données &#40;Analysis Services - Exploration de données&#41;](mining-model-content-for-time-series-models-analysis-services-data-mining.md)  
+ [Exemples de requêtes de modèle de série chronologique](time-series-model-query-examples.md)   
+ [Contenu du modèle pour les modèles de série chronologique d’exploration de données &#40;Analysis Services - Exploration de données&#41;](mining-model-content-for-time-series-models-analysis-services-data-mining.md)  
   
   

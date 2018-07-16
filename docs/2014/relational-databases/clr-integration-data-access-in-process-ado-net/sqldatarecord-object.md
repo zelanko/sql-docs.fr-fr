@@ -1,13 +1,11 @@
 ---
-title: SqlDataRecord, objet | Documents Microsoft
+title: Objet SqlDataRecord | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: clr
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -15,22 +13,22 @@ helpviewer_keywords:
 - custom result sets [CLR integration]
 ms.assetid: 2ed667fb-749c-4280-a8fb-650643683c8f
 caps.latest.revision: 25
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 236e1221e8be9a6818839faf06f94666a5f000e5
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: rothja
+ms.author: jroth
+manager: craigg
+ms.openlocfilehash: 70949e9dbc01e724180dd61dcf4a583a580cdc51
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36142059"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37349951"
 ---
 # <a name="sqldatarecord-object"></a>Objet SqlDataRecord
   L'objet `SqlDataRecord` représente une ligne unique de données avec ses métadonnées connexes.  
   
  Les procédures stockées managées peuvent envoyer au client des jeux de résultats clients qui ne proviennent pas d'un `SqlDataReader`. La classe `SqlDataRecord`, avec les méthodes `SendResultsStart`, `SendResultsRow` et `SendResultsEnd` de l'objet `SqlPipe`, permet aux procédures stockées d'envoyer des jeux de résultats personnalisés au client.  
   
- Pour plus d’informations, consultez la `Microsoft.SqlServer.Server.SqlDataRecord` classe documentation de référence dans la documentation du Kit de développement logiciel .NET Framework.  
+ Pour plus d’informations, consultez la `Microsoft.SqlServer.Server.SqlDataRecord` classe documentation de référence dans la documentation du SDK de .NET Framework.  
   
 ## <a name="example"></a>Exemple  
  L'exemple suivant crée un nouvel enregistrement d'employé et le retourne à l'appelant.  

@@ -1,25 +1,24 @@
 ---
-title: Architecture du journal des transactions SQL Server et la gestion | Documents Microsoft
+title: Architecture du journal des transactions SQL Server et gestion | Microsoft Docs
 ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
+ms.technology: ''
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 4d1a4f97-3fe4-44af-9d4f-f884a6eaa457
 caps.latest.revision: 14
 author: craigg-msft
 ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 15e0b458e74df9e40a05a4abbeeeb730b0bc0cea
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 0575762bbdb9446fc461bca6d09f71e174138177
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36144195"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37301339"
 ---
 # Architecture et gestion du journal des transactions SQL Server
 [!INCLUDE[appliesto-ss2008-xxxx-xxxx-xxx_md](../includes/appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -73,7 +72,7 @@ ms.locfileid: "36144195"
   
  Lorsque la fin du journal logique atteint la fin du fichier journal physique, le nouvel enregistrement du journal revient au début du fichier journal physique.  
   
- ![Enregistrements de journal pour en début du fichier journal de type wrap](media/tranlog4.gif "enregistrements de journal sont automatiquement environ début du fichier journal")  
+ ![Enregistrements de journal environ au début du fichier journal de type wrap](media/tranlog4.gif "enregistrements de journal sont automatiquement environ début du fichier journal")  
   
  Le cycle se répète indéfiniment tant que la fin du journal logique n'a pas atteint le début du journal logique. Si les anciens enregistrements du journal sont tronqués suffisamment souvent pour laisser de la place à tous les nouveaux enregistrements créées jusqu'au point de contrôle suivant, le journal ne se remplit jamais. Si la fin du journal logique atteint le début du journal logique, l'une ou l'autre des situations suivantes se produit :  
   

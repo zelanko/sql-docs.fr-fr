@@ -1,5 +1,5 @@
 ---
-title: En-têtes (XMLA) | Documents Microsoft
+title: En-têtes [XMLA] | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - headers [XML for Analysis]
 ms.assetid: 36407b5c-d98d-47e4-8d36-d8896e15a748
 caps.latest.revision: 13
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: bb2cff2e70ccd1ac0cf391f7832db4978a415f56
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: 1b04b85e3267e7432f37c5f70e823c859a82a952
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36142888"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37291295"
 ---
 # <a name="headers-xmla"></a>En-têtes [XMLA]
   Le protocole XMLA (XML for Analysis) utilise des éléments XML dans l'en-tête SOAP pour gérer des fonctionnalités au niveau du protocole, telles que la prise en charge de la session et la négociation des fonctionnalités prises en charge.  

@@ -1,5 +1,5 @@
 ---
-title: Eventstring, élément (DTA) | Documents Microsoft
+title: EventString, élément (DTA) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - XML
 helpviewer_keywords:
 - EventString element
 ms.assetid: f76c37b4-2f6e-4274-8ee2-87e89d98e8a2
 caps.latest.revision: 12
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 6155627f60694cf1a21d39893e40b106b9df0886
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: db55d1d2451ab8febf984deb9e5bcb6d4718353f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36040783"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37291695"
 ---
 # <a name="eventstring-element-dta"></a>EventString, élément (Assistant Paramétrage de base de données)
   Spécifie une charge de travail de script [!INCLUDE[tsql](../../includes/tsql-md.md)] directement dans le fichier d'entrée XML.  
@@ -51,13 +51,13 @@ ms.locfileid: "36040783"
 |--------------------|-----------------|  
 |**Type de données et longueur**|`string`, longueur est illimitée.|  
 |**Valeur par défaut**|Aucun.|  
-|**Occurrence**|Obligatoire une fois si aucun autre type de charge de travail n'est spécifié. Vous devez spécifier un `EventString`, un `File`, ou un `Database` élément enfant pour le `Workload` parent, mais qu’un seul type peut être utilisé. Par exemple, si vous spécifiez une charge de travail avec le `EventString` élément, vous ne pouvez pas également spécifier une charge de travail avec le `File` élément dans le même fichier d’entrée XML.|  
+|**Occurrence**|Obligatoire une fois si aucun autre type de charge de travail n'est spécifié. Vous devez spécifier un `EventString`, un `File`, ou un `Database` élément enfant pour le `Workload` parent, mais qu’un seul type peut être utilisé. Par exemple, si vous spécifiez une charge de travail avec le `EventString` élément, vous ne pouvez pas spécifier une charge de travail avec le `File` élément dans le même fichier d’entrée XML.|  
   
 ## <a name="element-relationships"></a>Relations entre les éléments  
   
 |Relation|Éléments|  
 |------------------|--------------|  
-|**Élément parent**|[Élément de la charge de travail &#40;DTA&#41;](workload-element-dta.md)|  
+|**Élément parent**|[Workload, élément &#40;DTA&#41;](workload-element-dta.md)|  
 |**Éléments enfants**|Aucun.|  
   
 ## <a name="example"></a>Exemple  

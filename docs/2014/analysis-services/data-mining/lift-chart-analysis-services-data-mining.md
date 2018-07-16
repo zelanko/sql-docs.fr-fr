@@ -1,5 +1,5 @@
 ---
-title: Graphique de courbes d’élévation (Analysis Services - Exploration de données) | Documents Microsoft
+title: Graphique de courbes d’élévation (Analysis Services - Exploration de données) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - testing data mining models
 - accuracy, charting
@@ -18,18 +18,18 @@ helpviewer_keywords:
 - accuracy testing [data mining]
 ms.assetid: ab77eca1-bd48-4fef-b27f-ff5b648e0501
 caps.latest.revision: 53
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: a18f752d0435a3ba840e484ff00bf42efb523b79
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: a90b1bf1103627b95a1b289c1dced1257e523580
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36152241"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37301249"
 ---
 # <a name="lift-chart-analysis-services---data-mining"></a>Graphique de courbes d'élévation (Analysis Services - Exploration de données)
-  A **graphique de courbes d’élévation** graphiquement représente l’amélioration offrant un modèle d’exploration de données lors de la comparaison par rapport à une estimation aléatoire et mesure la modification en termes d’un *de courbes d’élévation* score. En comparant les scores de courbes d'élévation pour différentes parties de votre jeu de données et pour différents modèles, vous pouvez identifier le modèle le plus performant, ainsi que le pourcentage de cas dans lesquels le jeu de données bénéficierait de l'application des prédictions du modèle.  
+  Un **graphique de courbes d’élévation** graphiquement représente l’amélioration apportée par un modèle d’exploration de données par rapport à une estimation aléatoire, et mesure la modification en termes d’un *de courbes d’élévation* score. En comparant les scores de courbes d'élévation pour différentes parties de votre jeu de données et pour différents modèles, vous pouvez identifier le modèle le plus performant, ainsi que le pourcentage de cas dans lesquels le jeu de données bénéficierait de l'application des prédictions du modèle.  
   
  Avec un graphique de courbes d'élévation, vous pouvez comparer la précision des prédictions pour plusieurs modèles qui ont le même attribut prédictible. Vous pouvez également évaluer la précision de la prédiction de résultats uniques (une seule valeur de l'attribut prédictible) ou de tous les résultats (toutes les valeurs de l'attribut spécifié).  
   
@@ -121,6 +121,6 @@ ms.locfileid: "36152241"
  [Retour au début](#bkmk_Top)  
   
 ## <a name="see-also"></a>Voir aussi  
- [Test et Validation &#40;d’exploration de données&#41;](testing-and-validation-data-mining.md)  
+ [Test et Validation &#40;exploration de données&#41;](testing-and-validation-data-mining.md)  
   
   

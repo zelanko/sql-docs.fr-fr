@@ -1,5 +1,5 @@
 ---
-title: Élément Trimming (ASSL) | Documents Microsoft
+title: Élément Trimming (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - Trimming element
 ms.assetid: 8b3bbf89-8309-4d00-9aea-a5918f0c7027
 caps.latest.revision: 34
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 2a7346e9ae91ca3d70ab2f6cf311ea3b7a8b8a06
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: d34a2b559dfcace0a8334916f66031b130763182
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36144172"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37326539"
 ---
 # <a name="trimming-element-assl"></a>Élément Trimming (ASSL)
   Spécifie comment les données de la source de données sont tronquées.  
@@ -71,9 +71,9 @@ ms.locfileid: "36144172"
 |*LeftRight*|Les données sont tronquées à gauche et à droite.|  
 |*Aucun*|Les données ne sont pas tronquées.|  
   
- L’énumération qui correspond aux valeurs autorisées pour `Trimming` dans l’objet d’objets AMO (Analysis Management) est modèle <xref:Microsoft.AnalysisServices.Trimming>.  
+ L’énumération qui correspond aux valeurs autorisées pour `Trimming` dans l’objet d’objets AMO (Analysis Management) modèle est <xref:Microsoft.AnalysisServices.Trimming>.  
   
- L’élément qui correspond au parent de `Trimming` dans l’objet d’objets AMO (Analysis Management) est modèle <xref:Microsoft.AnalysisServices.DataItem>.  
+ L’élément qui correspond au parent de `Trimming` dans l’objet d’objets AMO (Analysis Management) modèle est <xref:Microsoft.AnalysisServices.DataItem>.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Propriétés &#40;ASSL&#41;](properties-assl.md)  

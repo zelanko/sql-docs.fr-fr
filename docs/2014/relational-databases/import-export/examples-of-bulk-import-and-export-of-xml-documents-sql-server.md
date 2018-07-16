@@ -5,10 +5,9 @@ ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-bulk-import-export
+ms.technology: data-movement
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - field terminators [SQL Server]
 - bulk importing [SQL Server], data formats
@@ -19,19 +18,19 @@ helpviewer_keywords:
 - XML bulk load [SQL Server]
 ms.assetid: dff99404-a002-48ee-910e-f37f013d946d
 caps.latest.revision: 59
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 5ef7ed95cce28904377f0aa9fd1b446c89fb0db1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 957ca45730f0f16febff3c86d2c459965069bd3f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36142722"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37303929"
 ---
 # <a name="examples-of-bulk-import-and-export-of-xml-documents-sql-server"></a>Exemples d'importation et d'exportation en bloc de documents XML (SQL Server)
     
-##  <a name="top"></a> Vous pouvez en bloc importer des documents XML dans un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] base de données ou exporter en bloc à partir un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] base de données. Cette rubrique fournit des exemples de chaque.  
+##  <a name="top"></a> Vous pouvez en bloc à importer des documents XML dans un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] base de données ou en bloc les exporter à partir d’un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] base de données. Cette rubrique fournit des exemples de chaque.  
   
  Pour importer des données en bloc à partir d'un fichier de données dans une table ou une vue non partitionnée [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , vous pouvez utiliser les méthodes suivantes :  
   
@@ -43,23 +42,23 @@ ms.locfileid: "36142722"
   
 -   INSERT ... SELECT * FROM OPENROWSET(BULK...)  
   
- Pour plus d’informations, consultez [importer et exporter des données en bloc à l’aide de l’utilitaire bcp &#40;SQL Server&#41; ](import-and-export-bulk-data-by-using-the-bcp-utility-sql-server.md) et [importer en bloc des données à l’aide de BULK INSERT ou OPENROWSET&#40;en bloc en cours... &#41; &#40;SQL Server&#41;](import-bulk-data-by-using-bulk-insert-or-openrowset-bulk-sql-server.md).  
+ Pour plus d’informations, consultez [importer et exporter des données en bloc à l’aide de l’utilitaire bcp &#40;SQL Server&#41; ](import-and-export-bulk-data-by-using-the-bcp-utility-sql-server.md) et [importer en bloc des données par l’utilisation de BULK INSERT ou OPENROWSET&#40;en bloc... &#41; &#40;SQL Server&#41;](import-bulk-data-by-using-bulk-insert-or-openrowset-bulk-sql-server.md).  
   
 ## <a name="examples"></a>Exemples  
  Voici les exemples :  
   
--   A. [Importation des données XML sous la forme d’un flux d’octets binaire en bloc](#binary_byte_stream)  
+-   A. [L’importation de données XML comme un flux d’octets binaires en bloc](#binary_byte_stream)  
   
 -   B. [L’importation de données XML dans une ligne existante en bloc](#existing_row)  
   
 -   C. [Importation des données XML à partir d’un fichier qui contient une DTD en bloc](#file_contains_dtd)  
   
--   D. [En spécifiant l’indicateur de fin de champ explicitement à l’aide d’un fichier de format](#field_terminator_in_format_file)  
+-   D. [Spécification de la marque de fin de champ explicitement à l’aide d’un fichier de format](#field_terminator_in_format_file)  
   
 -   E. [Exportation des données XML en bloc](#bulk_export_xml_data)  
   
 ###  <a name="binary_byte_stream"></a> A. Importation en bloc de données XML sous forme de flux d'octets binaires  
- Si vous importez en bloc des données XML à partir d'un fichier contenant la déclaration d'encodage à appliquer, spécifiez l'option SINGLE_BLOB dans la clause OPENROWSET(BULK…). Cette option permet de s’assurer que l’analyseur XML de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] importe les données d’après le schéma d’encodage spécifié dans la déclaration XML.  
+ Si vous importez en bloc des données XML à partir d'un fichier contenant la déclaration d'encodage à appliquer, spécifiez l'option SINGLE_BLOB dans la clause OPENROWSET(BULK…). Cette option permet de s’assurer que l’analyseur XML de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] importe les données selon le schéma d’encodage spécifié dans la déclaration XML.  
   
 #### <a name="sample-table"></a>Exemple de table  
  Pour tester l'exemple A, créez la table d'exemple `T`.  

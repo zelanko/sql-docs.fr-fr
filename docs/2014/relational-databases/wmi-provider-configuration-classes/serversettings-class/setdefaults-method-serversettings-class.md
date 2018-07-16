@@ -1,5 +1,5 @@
 ---
-title: Méthode SetDefaults (classe ServerSettings) | Documents Microsoft
+title: Méthode SetDefaults (classe ServerSettings) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -20,18 +20,18 @@ helpviewer_keywords:
 - SetDefaults method
 ms.assetid: 76e4cfab-4b15-4da4-bb2f-8aac6f927f79
 caps.latest.revision: 14
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 0b3bdeab96cbbc5ff142970f1ecf6598e11a589a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
+ms.openlocfilehash: 7f42f7149b20dc51149dcece77bb076e32b4109b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36141253"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37297949"
 ---
 # <a name="setdefaults-method-serversettings-class"></a>Méthode SetDefaults (classe ServerSettings)
-  Définit toutes les valeurs par défaut pour l’instance de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] avec l’option pour remplacer les données existantes.  
+  Définit toutes les valeurs par défaut pour l’instance de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] avec l’option permettant de remplacer les données existantes.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -46,7 +46,7 @@ OverwriteAll
   
 ## <a name="parts"></a>Éléments  
  *object*  
- A [classe ServerSettings](serversettings-class.md) objet qui représente un [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] instance du client.  
+ Un [classe ServerSettings](serversettings-class.md) objet qui représente un [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] instance du client.  
   
 #### <a name="parameters"></a>Paramètres  
   

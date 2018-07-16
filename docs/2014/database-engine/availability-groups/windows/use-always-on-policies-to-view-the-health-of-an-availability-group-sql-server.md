@@ -1,27 +1,26 @@
 ---
-title: Utiliser les stratégies AlwaysOn pour afficher l’intégrité d’un groupe de disponibilité (SQL Server) | Documents Microsoft
+title: Utiliser les stratégies AlwaysOn pour afficher l’intégrité d’un groupe de disponibilité (SQL Server) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Availability Groups [SQL Server], policies
 ms.assetid: 6f1bcbc3-1220-4071-8e53-4b957f5d3089
 caps.latest.revision: 16
-author: MikeRayMSFT
-ms.author: mikeray
-manager: jhubbard
-ms.openlocfilehash: ba1f977cf2846438494bedc7b084ade659fca753
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 4189c70c8e4cf9e3d2fce378dbbb039ae2c0c601
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36151967"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37297139"
 ---
 # <a name="use-alwayson-policies-to-view-the-health-of-an-availability-group-sql-server"></a>Utiliser les stratégies AlwaysOn pour afficher l'intégrité d'un groupe de disponibilité (SQL Server)
   Cette rubrique explique comment déterminer l'état opérationnel d'un groupe de disponibilité AlwaysOn à l'aide d'une stratégie AlwaysOn dans [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] ou PowerShell dans [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. Pour plus d’informations sur la gestion basée sur AlwaysOn, consultez [stratégies AlwaysOn pour les problèmes opérationnels avec des groupes de disponibilité AlwaysOn (SQL Server)](always-on-policies-for-operational-issues-always-on-availability.md).  
@@ -56,7 +55,7 @@ ms.locfileid: "36151967"
 ##  <a name="PowerShellProcedure"></a> Utilisation de PowerShell  
  **Utiliser les stratégies AlwaysOn pour afficher l’intégrité d’un groupe de disponibilité**  
   
-1.  Définir la valeur par défaut (`cd`) à une instance de serveur qui héberge l’un des réplicas de disponibilité. Pour afficher des informations sur tous les réplicas de disponibilité d'un groupe de disponibilité, utilisez l'instance de serveur qui héberge le réplica principal.  
+1.  Définir par défaut (`cd`) à une instance de serveur qui héberge un des réplicas de disponibilité. Pour afficher des informations sur tous les réplicas de disponibilité d'un groupe de disponibilité, utilisez l'instance de serveur qui héberge le réplica principal.  
   
 2.  Utilisez les applets de commande suivantes :  
   
@@ -119,7 +118,7 @@ ms.locfileid: "36151967"
 -   [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md)  
   
 ##  <a name="RelatedContent"></a> Contenu associé  
- **Blogs de l’équipe AlwaysOn SQL Server — analyse l’intégrité AlwaysOn avec PowerShell :**  
+ **Blogs de l’équipe AlwaysOn SQL Server, analyse l’intégrité AlwaysOn avec PowerShell :**  
   
 -   [Partie 1 : Vue d'ensemble de l'applet de commande](http://blogs.msdn.com/b/sqlalwayson/archive/2012/02/13/monitoring-alwayson-health-with-powershell-part-1.aspx)  
   

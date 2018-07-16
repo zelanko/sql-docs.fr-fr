@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.rtp.rptdesigner.dataview.smqlquerydesigner.f1
 - "10015"
@@ -18,15 +18,15 @@ helpviewer_keywords:
 - query designers [Reporting Services]
 ms.assetid: db86c208-ff1e-4297-aa0c-c250f053f83e
 caps.latest.revision: 29
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 5d01b975eb36f54aa450d4e931740ac319a023e5
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: 231d9357d613d647599a15cbf0e7ed08f7cf25cb
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36041038"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37301749"
 ---
 # <a name="report-model-query-designer-user-interface"></a>Interface utilisateur du concepteur de requêtes de modèle de rapport
   Le Concepteur de rapports fournit deux Concepteurs de requêtes pour vous aider à spécifier les données d'une source de données de modèle de serveur de rapports à utiliser dans un rapport. Utilisez le concepteur de requêtes graphique pour explorer et choisir les entités de modèle et les champs d'entité. Utilisez le Concepteur de requêtes textuel pour travailler directement avec une spécification SMDL (Semantic Model Definition Language) au format XML.  
@@ -91,7 +91,7 @@ ms.locfileid: "36041038"
 |![Exécuter la requête](../../analysis-services/media/rsqdicon-run.gif "Exécuter la requête")|Exécute le texte de la requête et affiche les résultats dans le volet Résultat.|  
   
 ## <a name="see-also"></a>Voir aussi  
- [Interroger des outils de conception de rapports Concepteur SQL Server Data Tools &#40;SSRS&#41;](query-design-tools-ssrs.md)   
+ [Interroger des outils de conception dans le rapport concepteur SQL Server Data Tools &#40;SSRS&#41;](query-design-tools-ssrs.md)   
  [Ajouter des données à partir de sources de données externes &#40;SSRS&#41;](add-data-from-external-data-sources-ssrs.md)   
  [Connexion à un modèle de rapport &#40;SSRS&#41;](report-model-connection-ssrs.md)   
  [Fichier de configuration RSReportDesigner](../report-server/rsreportdesigner-configuration-file.md)  

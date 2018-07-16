@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 topic_type:
 - apiref
 helpviewer_keywords:
 - Object:Altered event class
 ms.assetid: f94e3b59-ff2f-4d8d-8479-e85ce5b3483e
 caps.latest.revision: 23
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: dbf2c7f97f86e1c20ead22b06b06d2ec3b468bb8
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 2cc8e96e4e45558571e062ab70c3b30ea6040c0b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36038828"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37327679"
 ---
 # <a name="objectaltered-event-class"></a>Object:Altered (classe d'événements)
   La classe d'événements Object:Altered indique qu'un objet a été modifié ; par exemple, à l'aide d'une instruction ALTER INDEX, ALTER TABLE, ou d'une instruction ALTER DATABASE. Cette classe d'événements peut être utilisée pour déterminer si des objets sont modifiés ; par exemple, par les applications ODBC, qui créent souvent des procédures stockées temporaires.  

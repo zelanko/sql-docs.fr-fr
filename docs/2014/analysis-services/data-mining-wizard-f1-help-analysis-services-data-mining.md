@@ -1,5 +1,5 @@
 ---
-title: Aide (F1) de l’Assistant d’exploration de données (Analysis Services - Exploration de données) | Documents Microsoft
+title: Données d’aide F1 de l’Assistant exploration de données (Analysis Services - Exploration de données) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dm.dmwizard.welcome.f1
 helpviewer_keywords:
 - Mining Model Wizard
 ms.assetid: fd443f55-d725-43d4-ae2e-9847f0105a7c
 caps.latest.revision: 32
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: e1f66b73d25762a949322b84859d12dd02053c80
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 6782013eab9b190efe2f6756c1ee409598eb1619
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36152021"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37291675"
 ---
 # <a name="data-mining-wizard-f1-help-analysis-services---data-mining"></a>Aide de l'Assistant Exploration de données accessible par la touche F1 (Analysis Services - Exploration de données)
   Utilisez **l’Assistant Exploration de données** pour créer une structure d’exploration de données et son éventuel modèle d’exploration de données associé.  
@@ -68,10 +68,10 @@ ms.locfileid: "36152021"
  [Créer la Structure d’exploration de données &#40;Assistant exploration de données&#41;](create-the-data-mining-structure-data-mining-wizard.md)   
  [Sélectionnez la vue de Source de données &#40;Assistant exploration de données&#41;](select-data-source-view-data-mining-wizard.md)   
  [Parcourir la vue de Source de données &#40;Assistant exploration de données&#41;](browse-data-source-view-data-mining-wizard.md)   
- [Spécifiez les Types de tables &#40;Assistant exploration de données&#41;](specify-table-types-data-mining-wizard.md)   
+ [Spécifier les Types de tables &#40;Assistant exploration de données&#41;](specify-table-types-data-mining-wizard.md)   
  [Spécifier les données d’apprentissage &#40;Assistant exploration de données&#41;](specify-the-training-data-data-mining-wizard.md)   
  [Suggérer des colonnes associées &#40;Assistant exploration de données&#41;](suggest-related-columns-data-mining-wizard.md)   
- [Sélectionnez la Dimension de Cube Source &#40;Assistant exploration de données&#41;](select-the-source-cube-dimension-data-mining-wizard.md)   
+ [Sélectionner la Dimension de Cube Source &#40;Assistant exploration de données&#41;](select-the-source-cube-dimension-data-mining-wizard.md)   
  [Sélectionnez la clé de cas &#40;Assistant exploration de données&#41;](select-the-case-key-data-mining-wizard.md)   
  [Colonnes de niveau de cas, sélectionnez &#40;Assistant exploration de données&#41;](select-case-level-columns-data-mining-wizard.md)   
  [Spécifier l’utilisation des colonnes du modèle d’exploration de données &#40;Assistant exploration de données&#41;](specify-mining-model-column-usage-data-mining-wizard.md)   

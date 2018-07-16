@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine-imoltp
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: f39fc1c7-cfec-4a95-97f6-6b95954694bb
 caps.latest.revision: 8
-author: stevestein
-ms.author: sstein
-manager: jhubbard
-ms.openlocfilehash: 5439f539e126a64cff92065e049da359e89345b4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
+ms.openlocfilehash: f28a62753f2ce6b5474e87be95276b0f464d4314
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36143893"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37298339"
 ---
 # <a name="best-practices-for-calling-natively-compiled-stored-procedures"></a>Bonnes pratiques pour appeler des procédures stockées compilées en mode natif
   Les procédures stockées compilées en mode natif sont les suivantes :  
@@ -54,7 +54,7 @@ ms.locfileid: "36143893"
   
  De même, vous pouvez détecter l’utilisation de types incompatibles dans le même XEvent `hekaton_slow_parameter_passing`, avec `reason=parameter_conversion`.  
   
- Étant donné que vous devez implémenter la logique de nouvelle tentative lors de l'utilisation des tables mémoire optimisées (dans de nombreux scénarios), et que vous devrez contourner certaines limitations de fonctionnalités, vous pouvez créer une procédure stockée [!INCLUDE[tsql](../../includes/tsql-md.md)] interprétée par wrapper. Pour obtenir un exemple, consultez [des recommandations pour la logique de nouvelle tentative pour les Transactions sur les Tables optimisées en mémoire](memory-optimized-tables.md).  
+ Étant donné que vous devez implémenter la logique de nouvelle tentative lors de l'utilisation des tables mémoire optimisées (dans de nombreux scénarios), et que vous devrez contourner certaines limitations de fonctionnalités, vous pouvez créer une procédure stockée [!INCLUDE[tsql](../../includes/tsql-md.md)] interprétée par wrapper. Pour obtenir un exemple, consultez [instructions pour la logique de nouvelle tentative pour les Transactions sur les Tables optimisées en mémoire](memory-optimized-tables.md).  
   
 ## <a name="see-also"></a>Voir aussi  
  [Procédures stockées compilées en mode natif](natively-compiled-stored-procedures.md)  

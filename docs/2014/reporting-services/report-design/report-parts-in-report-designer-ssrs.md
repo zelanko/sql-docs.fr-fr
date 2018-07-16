@@ -8,25 +8,25 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.rtp.rptdesigner.components.f1
 ms.assetid: 0c34311d-05d6-4bd2-b452-545fa95f8e7f
 caps.latest.revision: 10
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: c4f2ae1acfdc15bd8ca2882a7d5acbff88acf965
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 5b50efbb6879866d459a775f2c6a0f9ffd86228f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36142428"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37311309"
 ---
 # <a name="report-parts-in-report-designer-ssrs"></a>Parties de rapport dans le Concepteur de rapports (SSRS)
   Dans le Concepteur de rapports, une fois que vous avez créé des tables, graphiques et autres éléments de rapport dans un projet, vous pouvez les publier comme des *parties de rapport* sur un serveur de rapports ou sur le site SharePoint intégré avec un serveur de rapports afin que vous et d'autres personnes puissiez les réutiliser dans d'autres rapports.  
   
- En général, les parties de rapport fonctionnent de la même façon dans le Concepteur de rapports et dans le Générateur de rapports. Pour découvrir les fonctionnalités de base, consultez [parties de rapport &#40;le Générateur de rapports et SSRS&#41; ](../report-parts-report-builder-and-ssrs.md) dans les [documentation du Générateur de rapports](http://go.microsoft.com/fwlink/?LinkId=154494) sur le site msdn.microsoft.com.  
+ En général, les parties de rapport fonctionnent de la même façon dans le Concepteur de rapports et dans le Générateur de rapports. Pour en savoir plus sur les fonctionnalités de base, consultez [parties de rapports &#40;Générateur de rapports et SSRS&#41; ](../report-parts-report-builder-and-ssrs.md) dans le [documentation du Générateur de rapports](http://go.microsoft.com/fwlink/?LinkId=154494) sur msdn.microsoft.com.  
   
  Il existe des différences fondamentales dans la façon dont les parties de rapport fonctionnent dans le Concepteur de rapports. Le flux de travail représente une différence notable. Le Générateur de rapports permet la création combinée : je crée une partie de rapport et le publie. Vous pouvez la réutiliser, la modifier et la republier. Dans le Concepteur de rapports, la publication est unidirectionnelle : je peux publier une partie de rapport à partir du Concepteur de rapports et vous pouvez la réutiliser. Mais je ne peux pas réutiliser une partie de rapport existante dans un rapport dans le Concepteur de rapports. Cette rubrique présente ces différences, après une vue d'ensemble rapide des parties de rapports.  
   
@@ -70,7 +70,7 @@ ms.locfileid: "36142428"
   
 -   Listes  
   
- Si vous publiez une partie de rapport qui affiche des données, telles qu'une table, une matrice ou un graphique, vous pouvez la baser sur un dataset partagé ; sinon, lorsque vous publiez la partie de rapport, le dataset dont elle dépend est enregistré en tant que dataset incorporé. Les datasets incorporés peuvent être basés sur les sources de données incorporées, mais les informations d'identification ne sont pas stockées dans les sources de données incorporées. Par conséquent, si votre partie de rapport dépend d'un dataset incorporé qui utilise une source de données incorporée, toute personne qui réutilise cette partie de rapport devra fournir les informations d'identification pour la source de données incorporée. Pour éviter cela, basez vos datasets incorporés et partagés sur les sources de données partagées avec les informations d'identification stockées. Pour plus d’informations, consultez [parties de rapports et jeux de données dans le Générateur de rapports](../report-data/report-parts-and-datasets-in-report-builder.md) dans les [documentation du Générateur de rapports](http://go.microsoft.com/fwlink/?LinkId=154494) sur msdn.microsoft.com.  
+ Si vous publiez une partie de rapport qui affiche des données, telles qu'une table, une matrice ou un graphique, vous pouvez la baser sur un dataset partagé ; sinon, lorsque vous publiez la partie de rapport, le dataset dont elle dépend est enregistré en tant que dataset incorporé. Les datasets incorporés peuvent être basés sur les sources de données incorporées, mais les informations d'identification ne sont pas stockées dans les sources de données incorporées. Par conséquent, si votre partie de rapport dépend d'un dataset incorporé qui utilise une source de données incorporée, toute personne qui réutilise cette partie de rapport devra fournir les informations d'identification pour la source de données incorporée. Pour éviter cela, basez vos datasets incorporés et partagés sur les sources de données partagées avec les informations d'identification stockées. Pour plus d’informations, consultez [parties de rapports et jeux de données dans le Générateur de rapports](../report-data/report-parts-and-datasets-in-report-builder.md) dans le [documentation du Générateur de rapports](http://go.microsoft.com/fwlink/?LinkId=154494) sur msdn.microsoft.com.  
   
  La publication d'une partie de rapport dans le Concepteur de rapports comporte deux étapes :  
   

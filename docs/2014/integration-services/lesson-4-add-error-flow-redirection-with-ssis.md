@@ -1,5 +1,5 @@
 ---
-title: 'Leçon 4 : Ajout de Redirection de flux d’erreur | Documents Microsoft'
+title: 'Leçon 4 : Ajout de Redirection de flux d’erreur | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 0c8dbda2-75e3-4278-9b4e-dcd220c92522
 caps.latest.revision: 23
-author: douglaslM
+author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 2b09bfa4b9ac8c0c6a35c57dab535fc8d1263e3f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 230294eb45aec198ba5fd0cde396749bd0897b14
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36142754"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37295089"
 ---
 # <a name="lesson-4-adding-error-flow-redirection"></a>Leçon 4 : Ajout de redirection de flux d'erreurs
   Pour traiter les erreurs qui risquent de se produire dans le processus de transformation, [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] vous permet de décider par composant et par colonne comment traiter les données qui ne peuvent pas être transformées. Vous pouvez choisir d'ignorer une erreur dans certaines colonnes, de rediriger dans sa totalité la ligne qui a échoué ou simplement de faire échouer le composant. Par défaut, tous les composants de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] sont configurés pour échouer lorsque des erreurs se produisent. Le fait de faire échouer un composant entraîne l'échec du package et l'arrêt de tous les traitements ultérieurs.  
@@ -38,17 +38,17 @@ ms.locfileid: "36142754"
 ## <a name="tasks-in-lesson"></a>Contenu de la leçon  
  Cette leçon contient les tâches suivantes :  
   
--   [Étape 1 : Copie du Package de la leçon 3](lesson-4-1-copying-the-lesson-3-package.md)  
+-   [Étape 1 : Copie du package de la leçon 3](lesson-4-1-copying-the-lesson-3-package.md)  
   
--   [Étape 2 : Création d’un fichier endommagé](lesson-4-2-creating-a-corrupted-file.md)  
+-   [Étape 2 : Création d’un fichier corrompu](lesson-4-2-creating-a-corrupted-file.md)  
   
--   [Étape 3 : Ajout de Redirection de flux d’erreur](lesson-4-3-adding-error-flow-redirection.md)  
+-   [Étape 3 : Ajout de la redirection de flux d’erreurs](lesson-4-3-adding-error-flow-redirection.md)  
   
--   [Étape 4 : Ajout d’une Destination de fichier plat](lesson-4-4-adding-a-flat-file-destination.md)  
+-   [Étape 4 : Ajout d’une destination de fichier plat](lesson-4-4-adding-a-flat-file-destination.md)  
   
--   [Étape 5 : Test de la leçon 4 du Package du didacticiel](lesson-4-5-testing-the-lesson-4-tutorial-package.md)  
+-   [Étape 5 : Test de la leçon 4 du Package du tutoriel](lesson-4-5-testing-the-lesson-4-tutorial-package.md)  
   
 ## <a name="start-the-lesson"></a>Démarrer la leçon  
- [Étape 1 : Copie du Package de la leçon 3](lesson-4-1-copying-the-lesson-3-package.md)  
+ [Étape 1 : Copie du package de la leçon 3](lesson-4-1-copying-the-lesson-3-package.md)  
   
   

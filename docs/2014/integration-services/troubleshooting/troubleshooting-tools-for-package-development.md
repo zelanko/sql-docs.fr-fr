@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server Integration Services packages, troubleshooting
 - SSIS packages, troubleshooting
@@ -19,13 +19,13 @@ ms.assetid: 41dd248c-dab3-4318-b8ba-789a42d5c00c
 caps.latest.revision: 66
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: aae2fac11aab58193883c43e1062e12be837e065
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: d4ee6252daa58a5e99b8fdd5be6099e8e9de936d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36143063"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37320679"
 ---
 # <a name="troubleshooting-tools-for-package-development"></a>Outils de dépannage pour le développement des packages
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] comprend des fonctionnalités et des outils que vous pouvez utiliser pour dépanner les packages quand vous les développez dans [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  
@@ -45,11 +45,11 @@ ms.locfileid: "36143063"
   
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] inclut les fonctionnalités supplémentaires suivantes pour vous aider à éviter des erreurs de validation :  
   
--   **Définir tous les packages et toutes les connexions pour travailler hors connexion quand les sources de données ne sont pas disponibles**. Vous pouvez activer **Travailler hors connexion** à partir du menu **SSIS** . Contrairement à la `DelayValidation` propriété, le **travailler hors connexion** option est disponible avant même d’ouvrir un package. Vous pouvez également activer l’option **Travailler hors connexion** pour accélérer les opérations exécutées dans le concepteur, puis la désactiver dès que vous souhaitez valider votre package.  
+-   **Définir tous les packages et toutes les connexions pour travailler hors connexion quand les sources de données ne sont pas disponibles**. Vous pouvez activer **Travailler hors connexion** à partir du menu **SSIS** . Contrairement à la `DelayValidation` propriété, le **travailler hors connexion** option est disponible avant même que vous ouvriez un package. Vous pouvez également activer l’option **Travailler hors connexion** pour accélérer les opérations exécutées dans le concepteur, puis la désactiver dès que vous souhaitez valider votre package.  
   
--   **Configurer la propriété DelayValidation dans les éléments de package qui ne sont pas valides avant l’exécution**. Pour éviter toute erreur de validation, vous pouvez définir la propriété `DelayValidation` avec la valeur `True` dans les éléments de package dont la configuration n'est pas valide au moment de la conception. Par exemple, vous pouvez disposer d'une tâche Flux de données qui utilise une table de destination qui n'existe pas jusqu'à ce qu'une tâche d'exécution SQL crée la table au moment de l'exécution. Le `DelayValidation` propriété peut être activée au niveau du package ou au niveau des tâches individuelles et des conteneurs inclus dans le package. Normalement, vous devez laisser cette propriété la valeur `True` sur les mêmes éléments de package lorsque vous déployez le package, afin d’éviter les erreurs de validation même en cours d’exécution.  
+-   **Configurer la propriété DelayValidation dans les éléments de package qui ne sont pas valides avant l’exécution**. Pour éviter toute erreur de validation, vous pouvez définir la propriété `DelayValidation` avec la valeur `True` dans les éléments de package dont la configuration n'est pas valide au moment de la conception. Par exemple, vous pouvez disposer d'une tâche Flux de données qui utilise une table de destination qui n'existe pas jusqu'à ce qu'une tâche d'exécution SQL crée la table au moment de l'exécution. Le `DelayValidation` propriété peut être activée au niveau du package ou au niveau des tâches individuelles et des conteneurs inclus dans le package. Normalement, vous devez laisser cette propriété définie sur `True` sur les mêmes éléments de package lorsque vous déployez le package, pour éviter les mêmes erreurs de validation au moment de l’exécution.  
   
-     Le `DelayValidation` propriété peut être définie sur une tâche de flux de données, mais pas sur les données des composants de flux. Vous pouvez obtenir un résultat similaire en affectant à la propriété <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.ValidateExternalMetadata%2A> des composants de flux de données individuels la valeur `false`. Toutefois, lorsque la valeur de cette propriété est `false`, le composant n’est pas informé des modifications apportées aux métadonnées des sources de données externes.  
+     Le `DelayValidation` propriété peut être définie sur une tâche de flux de données, mais pas sur les données individuelles des composants de flux. Vous pouvez obtenir un résultat similaire en affectant à la propriété <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.ValidateExternalMetadata%2A> des composants de flux de données individuels la valeur `false`. Toutefois, lorsque la valeur de cette propriété est `false`, le composant n’a pas connaissance des modifications apportées aux métadonnées des sources de données externes.  
   
  Si les objets de base de données utilisés par le package sont verrouillés lorsque la validation se produit, le processus de validation peut cesser de répondre. Dans ces circonstances, le concepteur [!INCLUDE[ssIS](../../includes/ssis-md.md)] cesse également de répondre. Vous pouvez reprendre la validation à l’aide de [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] pour fermer la session associée dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Vous pouvez aussi éviter ce problème en utilisant les paramètres décrits dans cette section.  
   
@@ -87,7 +87,7 @@ ms.locfileid: "36143063"
     > [!NOTE]  
     >  Lorsque vous déboguez un package qui contient plusieurs tâches de script, le débogueur accède aux points d'arrêt d'une seule tâche de script et ignore les points d'arrêt des autres tâches de script. Si une tâche de script fait partie d'un conteneur de boucle Foreach ou For, le débogueur ignore les points d'arrêt de la tâche de script après la première itération de la boucle.  
   
- Pour plus d’informations, consultez [Script de débogage](debugging-script.md). Pour obtenir des suggestions sur la façon de déboguer le composant de Script, consultez [codage et débogage du composant Script] (.. / extending-packages-scripting/data-flow-script-component/coding-and-debugging-the-script-component.md.  
+ Pour plus d’informations, consultez [Script de débogage](debugging-script.md). Pour obtenir des suggestions sur la façon de déboguer le composant Script, consultez [codage et débogage du composant Script] (.. / extending-packages-scripting/data-flow-script-component/coding-and-debugging-the-script-component.md.  
   
 ## <a name="troubleshooting-errors-without-a-description"></a>Dépannage des erreurs sans description  
  Si vous rencontrez un numéro d’erreur [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] accompagné d’aucune description lors du développement du package, vous pouvez rechercher la description dans le [Guide de référence des erreurs et des messages propres à Integration Services](../integration-services-error-and-message-reference.md). La liste ne comporte actuellement aucune information de dépannage.  

@@ -5,10 +5,9 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-backup-restore
+ms.technology: backup-restore
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - backing up filegroups [SQL Server]
 - file backups [SQL Server], how-to topics
@@ -17,15 +16,15 @@ helpviewer_keywords:
 - filegroups [SQL Server], backing up
 ms.assetid: a0d3a567-7d8b-4cfe-a505-d197b9a51f70
 caps.latest.revision: 39
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 49e2ba4f8788a60b5d0e00d24539a085c233b446
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: f453d2f34713a4a00b1a5d99870f3597ac32262e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36142749"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37332649"
 ---
 # <a name="back-up-files-and-filegroups-sql-server"></a>Sauvegarder des fichiers et des groupes de fichiers (SQL Server)
   Cette rubrique explique comment sauvegarder des fichiers et des groupes de fichiers dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] à l'aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], de [!INCLUDE[tsql](../../includes/tsql-md.md)]ou de PowerShell. Lorsque la taille de la base de données et les exigences en matière de performances rendent impraticable une sauvegarde complète de la base de données, créez une sauvegarde de fichiers. Une *sauvegarde de fichiers* contient toutes les données dans un ou plusieurs fichiers (ou groupes de fichiers). Pour plus d’informations sur les sauvegardes de fichiers, consultez [Sauvegardes de fichiers complètes &#40;SQL Server&#41;](full-file-backups-sql-server.md) et [Sauvegardes différentielles &#40;SQL Server&#41;](differential-backups-sql-server.md).  
@@ -40,7 +39,7 @@ ms.locfileid: "36142749"
   
      [Sécurité](#Security)  
   
--   **Pour sauvegarder des fichiers et groupes de fichiers, à l’aide de :**  
+-   **Pour sauvegarder les fichiers et groupes de fichiers, à l’aide de :**  
   
      [SQL Server Management Studio](#SSMSProcedure)  
   
@@ -221,7 +220,7 @@ GO
   
 1.  Utilisez l'applet de commande `Backup-SqlDatabase` et spécifiez `Files` comme valeur du paramètre `-BackupAction`. Spécifiez également l'un des paramètres suivants :  
   
-    -   Pour sauvegarder un fichier spécifique, spécifiez la `-DatabaseFile` *chaîne* paramètre, où *chaîne* est un ou plusieurs fichiers de base de données à sauvegarder.  
+    -   Pour sauvegarder un fichier spécifique, spécifiez le `-DatabaseFile` *chaîne* paramètre, où *chaîne* est un ou plusieurs fichiers de base de données à sauvegarder.  
   
     -   Pour sauvegarder tous les fichiers d’un groupe donné, spécifiez la `-DatabaseFileGroup` *chaîne* paramètre, où *chaîne* représente un ou plusieurs groupes de fichiers de base de données à sauvegarder.  
   

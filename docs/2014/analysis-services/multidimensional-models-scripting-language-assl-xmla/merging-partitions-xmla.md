@@ -1,5 +1,5 @@
 ---
-title: La fusion de Partitions (XMLA) | Documents Microsoft
+title: Fusion de Partitions (XMLA) | Microsoft Docs
 ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
@@ -17,18 +17,18 @@ helpviewer_keywords:
 - XML for Analysis, partitions
 ms.assetid: 657e1d4d-6d50-40f8-a771-7b20c9d865f8
 caps.latest.revision: 14
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: cdcd21c66320c5d29f597bc5f85b35c61f14cf36
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 3a3de50e053ed8b3e16373e4aa5b162991f286dc
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36042115"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37332719"
 ---
 # <a name="merging-partitions-xmla"></a>Fusion de partitions (XMLA)
-  Si les partitions ont la même conception d’agrégation et la structure, vous pouvez fusionner la partition à l’aide de la [MergePartitions](../xmla/xml-elements-commands/mergepartitions-element-xmla.md) commande XML for Analysis (XMLA). Dans le cadre de la gestion des partitions, il est important de fusionner les partitions, plus particulièrement les partitions qui contiennent des données historiques partitionnées par date.  
+  Si des partitions partagent la même conception d’agrégation et la structure, vous pouvez fusionner la partition à l’aide de la [MergePartitions](../xmla/xml-elements-commands/mergepartitions-element-xmla.md) commande XML for Analysis (XMLA). Dans le cadre de la gestion des partitions, il est important de fusionner les partitions, plus particulièrement les partitions qui contiennent des données historiques partitionnées par date.  
   
  Par exemple, un cube financier peut utiliser deux partitions :  
   
@@ -51,7 +51,7 @@ ms.locfileid: "36042115"
 ## <a name="examples"></a>Exemples  
   
 ### <a name="description"></a>Description  
- L’exemple suivant fusionne toutes les partitions dans le **Customer Counts** groupe de mesures de la **Adventure Works** de cube dans le **Adventure Works DW** exemple [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] de la base de données dans le **Customers_2004** partition.  
+ L’exemple suivant fusionne toutes les partitions dans le **Customer Counts** groupe de mesures de la **Adventure Works** de cube dans le **Adventure Works DW** exemple [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] base de données dans le **Customers_2004** partition.  
   
 ### <a name="code"></a>Code  
   

@@ -1,5 +1,5 @@
 ---
-title: Déployer des projets pour Integration Services Server | Documents Microsoft
+title: Déployer des projets sur le serveur Integration Services | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 6e9402f4-4d50-49ff-820d-65a77829c4a5
 caps.latest.revision: 21
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: d70afea75523ddd231a26186ec6f2e8af317cee9
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 615d289b3232c59c6266ec8864d52b0a14a67591
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36142766"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37316889"
 ---
 # <a name="deploy-projects-to-integration-services-server"></a>Déployer des projets sur le serveur Integration Services
   Dans la version actuelle d’[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)], vous pouvez déployer vos projets sur le serveur [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]. Le serveur [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] vous permet de gérer les packages, d'exécuter les packages et de configurer les valeurs d'exécution des packages à l'aide d'environnements.  
@@ -74,7 +74,7 @@ ms.locfileid: "36142766"
   
      -ou-  
   
-     Dans [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)], développez le [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]  >  **SSISDB** nœud dans l’Explorateur d’objets, recherchez le dossier de projets pour le projet que vous souhaitez déployer. Cliquez avec le bouton droit sur le dossier des **projets** , puis cliquez sur **Déployer le projet**.  
+     Dans [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)], développez le [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]  >  **SSISDB** nœud dans l’Explorateur d’objets, puis recherchez le dossier de projets pour le projet que vous souhaitez déployer. Cliquez avec le bouton droit sur le dossier des **projets** , puis cliquez sur **Déployer le projet**.  
   
      -ou-  
   

@@ -5,10 +5,9 @@ ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-security
+ms.technology: security
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.Security.BUILTIN.administrators
 - sql12.Security.NT_AUTHORITY.SYSTEM
@@ -23,15 +22,15 @@ helpviewer_keywords:
 - authentication [SQL Server], roles
 ms.assetid: 7adf2ad7-015d-4cbe-9e29-abaefd779008
 caps.latest.revision: 50
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: ffccb6ce3fcf80441a953f86fc74ec71aac9ab40
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: edmacauley
+ms.author: edmaca
+manager: craigg
+ms.openlocfilehash: 8c2878ee1142dfb7069febb652dac6a3aceaba97
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36040386"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37301899"
 ---
 # <a name="server-level-roles"></a>Rôles de niveau serveur
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] fournit des rôles au niveau du serveur pour vous aider à gérer les autorisations sur les serveurs. Ces rôles sont des principaux de sécurité qui regroupent d'autres principaux. Les autorisations des rôles serveur ont une portée à l'échelle du serveur. (Les*rôles* sont semblables aux *groupes* du système d’exploitation Microsoft Windows.)  
@@ -61,7 +60,7 @@ ms.locfileid: "36040386"
  Certaines autorisations sont assignées à chaque rôle serveur fixe. Pour un graphique des autorisations assignées aux rôles serveur, consultez [Serveur fixe du moteur de base de données et rôles de base de données fixes](http://social.technet.microsoft.com/wiki/contents/articles/2024.database-engine-fixed-server-and-fixed-database-roles.aspx).  
   
 > [!IMPORTANT]  
->  Le `CONTROL SERVER` autorisation est similaire mais pas identique à la `sysadmin` rôle serveur fixe. Les autorisations n'impliquent pas les appartenances au rôle et les appartenances au role n'accordent pas d'autorisation. (Par exemple : `CONTROL SERVER` n'implique pas l'appartenance au rôle serveur fixe `sysadmin`.) Cependant, il est parfois possible d'emprunter l'identité entre les rôles et les autorisations équivalentes. La plupart des commandes `DBCC` et de nombreuses procédures système exigent l'appartenance au rôle serveur fixe `sysadmin`. Pour obtenir la liste du système 171 procédures stockées qui nécessitent `sysadmin` l’appartenance, consultez le blog suivant Andreas wolter [CONTROL SERVER et sysadmin/sa : autorisations, procédures système, DBCC, création de schéma automatique et privilège escalade de verrous - "Avertissements"](http://www.insidesql.org/blogs/andreaswolter/2013/08/control-server-vs-sysadmin-sa-permissions-privilege-escalation-caveats).  
+>  Le `CONTROL SERVER` autorisation est similaire mais pas identique à la `sysadmin` rôle serveur fixe. Les autorisations n'impliquent pas les appartenances au rôle et les appartenances au role n'accordent pas d'autorisation. (Par exemple : `CONTROL SERVER` n'implique pas l'appartenance au rôle serveur fixe `sysadmin`.) Cependant, il est parfois possible d'emprunter l'identité entre les rôles et les autorisations équivalentes. La plupart des commandes `DBCC` et de nombreuses procédures système exigent l'appartenance au rôle serveur fixe `sysadmin`. Pour obtenir la liste du système 171 procédures stockées qui nécessitent `sysadmin` l’appartenance, consultez le blog suivant Andreas wolter [CONTROL SERVER et sysadmin/sa : autorisations, procédures système, DBCC, création de schéma automatique et privilèges mises en garde de réaffectation -](http://www.insidesql.org/blogs/andreaswolter/2013/08/control-server-vs-sysadmin-sa-permissions-privilege-escalation-caveats).  
   
 ## <a name="server-level-permissions"></a>Autorisations au niveau serveur  
  Seules des autorisations au niveau du serveur peuvent être ajoutées aux rôles serveur définis par l'utilisateur. Pour répertorier les autorisations au niveau du serveur, exécutez l'instruction suivante. Les autorisations au niveau du serveur sont :  

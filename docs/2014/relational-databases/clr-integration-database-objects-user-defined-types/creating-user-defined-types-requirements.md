@@ -1,13 +1,11 @@
 ---
-title: Spécifications de Type défini par l’utilisateur | Documents Microsoft
+title: Exigences de Type défini par l’utilisateur | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: clr
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -22,15 +20,15 @@ helpviewer_keywords:
 - UDTs [CLR integration], Native serialization
 ms.assetid: bedc3372-50eb-40f2-bcf2-d6db6a63b7e6
 caps.latest.revision: 31
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 14286261d2f157f208fe8d918e4fe1705f58eb97
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: rothja
+ms.author: jroth
+manager: craigg
+ms.openlocfilehash: ff2d8987dee15e39a5f85e4efc01f0bdaef27e06
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36141818"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37350071"
 ---
 # <a name="user-defined-type-requirements"></a>Configuration requise pour les types définis par l'utilisateur
   Vous devez prendre plusieurs décisions de conception importantes lors de la création d’un type défini par l’utilisateur (UDT) doit être installé dans [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Pour la plupart des types définis par l'utilisateur, il est recommandé de créer un type défini par l'utilisateur sous forme de structure mais il est également possible de le créer sous forme de classe. La définition de l'UDT doit être conforme aux spécifications de création d'UDT afin de pouvoir l'enregistrer avec [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -56,7 +54,7 @@ ms.locfileid: "36141818"
   
 -   L'UDT doit dévoiler les éléments de données sous forme de champs publics ou de procédures de propriété.  
   
--   Noms publics ne peut pas dépasser 128 caractères et doit être conforme à la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] règles de dénomination des identificateurs comme défini dans [des identificateurs de base de données](../databases/database-identifiers.md).  
+-   Noms publics ne peuvent pas comporter plus de 128 caractères et doit être conforme à la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] règles de nommage pour les identificateurs tel que défini dans [identificateurs de base de données](../databases/database-identifiers.md).  
   
 -   Les colonnes `sql_variant` ne peuvent pas contenir les instances d'un UDT.  
   
@@ -150,10 +148,10 @@ ms.locfileid: "36141818"
 -   Inférieur ou égal à (<=)  
   
 ### <a name="implementing-nullability"></a>Implémentation de la possibilité de valeur NULL  
- En plus de spécifier correctement les attributs de vos assemblys, votre classe doit également prendre en charge la possibilité de valeur NULL. Les types définis par l'utilisateur (UDT) chargés dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sont compatibles avec la valeur NULL mais, pour que l'UDT puisse reconnaître une valeur NULL, la classe doit implémenter l'interface `INullable`. Pour plus d’informations et obtenir un exemple montrant comment implémenter la possibilité de valeur NULL dans un UDT, consultez [Coding User-Defined Types](creating-user-defined-types-coding.md).  
+ En plus de spécifier correctement les attributs de vos assemblys, votre classe doit également prendre en charge la possibilité de valeur NULL. Les types définis par l'utilisateur (UDT) chargés dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sont compatibles avec la valeur NULL mais, pour que l'UDT puisse reconnaître une valeur NULL, la classe doit implémenter l'interface `INullable`. Pour plus d’informations et un exemple montrant comment implémenter la possibilité de valeur NULL dans un UDT, consultez [Coding User-Defined Types](creating-user-defined-types-coding.md).  
   
 ### <a name="string-conversions"></a>Conversions de chaînes  
- Pour prendre en charge la conversion de chaînes vers et depuis l'UDT, vous devez préciser une méthode `Parse` et une méthode `ToString` dans votre classe. La méthode `Parse` permet de convertir une chaîne en un type défini par l'utilisateur. Elle doit être déclarée comme `static` (ou `Shared` dans Visual Basic) et accepter un paramètre de type `System.Data.SqlTypes.SqlString`. Pour plus d’informations et obtenir un exemple montrant comment implémenter le `Parse` et `ToString` méthodes, consultez [Coding User-Defined Types](creating-user-defined-types-coding.md).  
+ Pour prendre en charge la conversion de chaînes vers et depuis l'UDT, vous devez préciser une méthode `Parse` et une méthode `ToString` dans votre classe. La méthode `Parse` permet de convertir une chaîne en un type défini par l'utilisateur. Elle doit être déclarée comme `static` (ou `Shared` dans Visual Basic) et accepter un paramètre de type `System.Data.SqlTypes.SqlString`. Pour plus d’informations et un exemple montrant comment implémenter le `Parse` et `ToString` méthodes, consultez [Coding User-Defined Types](creating-user-defined-types-coding.md).  
   
 ## <a name="xml-serialization"></a>Sérialisation XML  
  Les UDT doivent prendre en charge la conversion vers et depuis le type de données `xml` en tenant compte des exigences de la sérialisation XML. L'espace de noms `System.Xml.Serialization` contient des classes servant à sérialiser des objets en documents au format XML ou en flux. Vous pouvez choisir d'implémenter la sérialisation `xml` par le biais de l'interface `IXmlSerializable` qui offre un format personnalisé pour la sérialisation et la désérialisation XML.  
@@ -171,6 +169,6 @@ ms.locfileid: "36141818"
  Les UDT ne sont pas sérialisés dans les requêtes FOR XML. Pour exécuter une requête FOR XML qui affiche la sérialisation XML des UDT, convertissez explicitement chaque colonne UDT en type de données `xml` dans l'instruction SELECT. Vous pouvez aussi convertir explicitement les colonnes en types `varbinary`, `varchar` ou `nvarchar`.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Création d’un Type défini par l’utilisateur](creating-user-defined-types.md)  
+ [Création d’un type défini par l’utilisateur](creating-user-defined-types.md)  
   
   

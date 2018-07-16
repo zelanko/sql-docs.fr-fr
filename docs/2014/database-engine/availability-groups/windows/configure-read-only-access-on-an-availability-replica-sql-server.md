@@ -5,10 +5,9 @@ ms.date: 10/27/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - connection access to availability replicas
 - Availability Groups [SQL Server], readable secondary replicas
@@ -17,15 +16,15 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], client connectivity
 ms.assetid: 22387419-22c4-43fa-851c-5fecec4b049b
 caps.latest.revision: 31
-author: rothja
-ms.author: jroth
-manager: jhubbard
-ms.openlocfilehash: 03111a596ba59bd22e2c6c4811ab37c93a9bf138
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 9c6da139e873434bec21e7dd053094ff0a5eeff7
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36039803"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37302739"
 ---
 # <a name="configure-read-only-access-on-an-availability-replica-sql-server"></a>Configurer l'accès en lecture seule sur un réplica de disponibilité (SQL Server)
   Par défaut l'accès en lecture/écriture et l'intention de lecture sont autorisés sur le réplica principal et aucune connexion directe n'est autorisée sur les réplicas secondaires d'un groupe de disponibilité AlwaysOn. Cette rubrique explique comment configurer l'accès à la connexion sur un réplica de disponibilité d'un groupe de disponibilité AlwaysOn dans [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] à l'aide de [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)]ou PowerShell.  
@@ -173,7 +172,7 @@ GO
 -   [Fournisseur SQL Server PowerShell](../../../powershell/sql-server-powershell-provider.md)  
   
 ###  <a name="PSExample"></a> Exemple (PowerShell)  
- L’exemple suivant définit les deux le `ConnectionModeInSecondaryRole` et `ConnectionModeInPrimaryRole` paramètres `AllowAllConnections`.  
+ L’exemple suivant, définit les le `ConnectionModeInSecondaryRole` et `ConnectionModeInPrimaryRole` paramètres `AllowAllConnections`.  
   
 ```  
 Set-Location SQLSERVER:\SQL\PrimaryServer\default\AvailabilityGroups\MyAg  
@@ -189,7 +188,7 @@ Set-SqlAvailabilityReplica -ConnectionModeInPrimaryRole "AllowAllConnections" `
 ##  <a name="FollowUp"></a> Suivi : après avoir configuré l'accès en lecture seule pour un réplica de disponibilité  
  **Accès en lecture seule aux réplicas secondaires accessibles en lecture.**  
   
--   Lorsque vous utilisez la [utilitaire bcp](../../../tools/bcp-utility.md) ou [utilitaire sqlcmd](../../../tools/sqlcmd-utility.md), vous pouvez spécifier un accès en lecture seule à n’importe quel réplica secondaire qui est activé pour l’accès en lecture seule en spécifiant le `-K ReadOnly` basculer.  
+-   Lorsque vous utilisez le [utilitaire bcp](../../../tools/bcp-utility.md) ou [utilitaire sqlcmd](../../../tools/sqlcmd-utility.md), vous pouvez spécifier un accès en lecture seule à n’importe quel réplica secondaire qui est activé pour l’accès en lecture seule en spécifiant le `-K ReadOnly` basculer.  
   
 -   Pour permettre aux applications clientes de se connecter aux réplicas secondaires accessibles en lecture :  
   
@@ -218,25 +217,25 @@ DATABASEPROPERTYEX([db name],’Updatability’) = N’READ_ONLY’
   
 ##  <a name="RelatedContent"></a> Contenu associé  
   
--   [AlwaysOn : Proposition de valeur de la base de données secondaire accessible en lecture](http://blogs.msdn.com/b/sqlserverstorageengine/archive/2011/12/22/alwayson-value-proposition-of-readable-secondary.aspx)  
+-   [AlwaysOn : Proposition de valeur de base de données secondaire accessible en lecture](http://blogs.msdn.com/b/sqlserverstorageengine/archive/2011/12/22/alwayson-value-proposition-of-readable-secondary.aspx)  
   
--   [AlwaysOn : Pourquoi existe-t-il deux options pour activer un réplica secondaire pour la charge de travail en lecture ?](http://blogs.msdn.com/b/sqlserverstorageengine/archive/2011/12/22/alwayson-why-there-are-two-options-to-enable-a-secondary-replica-for-read-workload.aspx)  
+-   [AlwaysOn : Pourquoi existe-t-il deux options pour activer un réplica secondaire pour la charge de travail de lecture ?](http://blogs.msdn.com/b/sqlserverstorageengine/archive/2011/12/22/alwayson-why-there-are-two-options-to-enable-a-secondary-replica-for-read-workload.aspx)  
   
--   [AlwaysOn : Installation du réplica de secondaire accessible en lecture](http://blogs.msdn.com/b/sqlserverstorageengine/archive/2011/12/22/alwayson-setting-up-readable-seconary-replica.aspx)  
+-   [AlwaysOn : Installation lisible du réplica](http://blogs.msdn.com/b/sqlserverstorageengine/archive/2011/12/22/alwayson-setting-up-readable-seconary-replica.aspx)  
   
--   [AlwaysOn : j’ai activé secondaire accessible en lecture mais ma requête est bloquée ?](http://blogs.msdn.com/b/sqlserverstorageengine/archive/2011/12/22/alwayson-i-just-enabled-readble-secondary-but-my-query-is-blocked.aspx)  
+-   [AlwaysOn : j’ai activé un secondaire accessible en lecture mais ma requête est bloquée ?](http://blogs.msdn.com/b/sqlserverstorageengine/archive/2011/12/22/alwayson-i-just-enabled-readble-secondary-but-my-query-is-blocked.aspx)  
   
--   [AlwaysOn : Disposition des dernières statistiques secondaire accessible en lecture, en lecture seule de la base de données et les instantanés de base de données](http://blogs.msdn.com/b/sqlserverstorageengine/archive/2011/12/22/alwayson-making-upto-date-statistics-available-on-readable-secondary-read-only-database-and-database-snapshot.aspx)  
+-   [AlwaysOn : Mise à disposition dernières statistiques disponibles sur le secondaire accessible en lecture, de base de données en lecture seule et d’instantané de base de données](http://blogs.msdn.com/b/sqlserverstorageengine/archive/2011/12/22/alwayson-making-upto-date-statistics-available-on-readable-secondary-read-only-database-and-database-snapshot.aspx)  
   
--   [AlwaysOn : Problèmes avec des statistiques sur la base de données en lecture seule, instantané de base de données et le réplica secondaire](http://blogs.msdn.com/b/sqlserverstorageengine/archive/2011/12/22/alwayson-challenges-with-statistics-on-readonly-database-database-snapshot-and-secondary-replica.aspx)  
+-   [AlwaysOn : Problèmes avec des statistiques dans la base de données en lecture seule, instantané de base de données et le réplica secondaire](http://blogs.msdn.com/b/sqlserverstorageengine/archive/2011/12/22/alwayson-challenges-with-statistics-on-readonly-database-database-snapshot-and-secondary-replica.aspx)  
   
--   [AlwaysOn : Impact sur la charge de travail principale lorsque vous exécutez la charge de travail de création de rapports sur le réplica secondaire](http://blogs.msdn.com/b/sqlserverstorageengine/archive/2011/12/22/alwayson-impact-on-the-primary-workload-when-you-run-reporting-workload-on-the-secondary-replica.aspx)  
+-   [AlwaysOn : Impact sur la charge de travail principale lorsque vous exécutez des charges de travail de création de rapports sur le réplica secondaire](http://blogs.msdn.com/b/sqlserverstorageengine/archive/2011/12/22/alwayson-impact-on-the-primary-workload-when-you-run-reporting-workload-on-the-secondary-replica.aspx)  
   
--   [AlwaysOn : Impact de mappage de charge de travail de création de rapports sur le réplica secondaire accessible en lecture à l’isolement d’instantané](http://blogs.msdn.com/b/sqlserverstorageengine/archive/2011/12/22/alwayson-impact-of-mapping-reporting-workload-to-snapshot-isolation-on-readable-secondary.aspx)  
+-   [AlwaysOn : Impact de mappage de charge de travail de création de rapports sur le réplica secondaire lisible à l’isolement d’instantané](http://blogs.msdn.com/b/sqlserverstorageengine/archive/2011/12/22/alwayson-impact-of-mapping-reporting-workload-to-snapshot-isolation-on-readable-secondary.aspx)  
   
--   [AlwaysOn : Réduction des blocages de thread REDO lors de l’exécution des charges de travail de création de rapports sur le réplica secondaire](http://blogs.msdn.com/b/sqlserverstorageengine/archive/2011/12/22/alwayson-minimizing-blocking-of-redo-thread-when-running-reporting-workload-on-secondary-replica.aspx)  
+-   [AlwaysOn : Réduction des blocages de thread REDO lors de la création de rapports de charge de travail en cours d’exécution sur le réplica secondaire](http://blogs.msdn.com/b/sqlserverstorageengine/archive/2011/12/22/alwayson-minimizing-blocking-of-redo-thread-when-running-reporting-workload-on-secondary-replica.aspx)  
   
--   [AlwaysOn : Latence de données et de la base de données secondaire accessible en lecture](http://blogs.msdn.com/b/sqlserverstorageengine/archive/2011/12/22/alwayson.aspx)  
+-   [AlwaysOn : Latence de données et de la base de données secondaire lisible](http://blogs.msdn.com/b/sqlserverstorageengine/archive/2011/12/22/alwayson.aspx)  
   
   
 ## <a name="see-also"></a>Voir aussi  

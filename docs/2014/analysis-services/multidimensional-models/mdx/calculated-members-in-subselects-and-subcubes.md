@@ -1,5 +1,5 @@
 ---
-title: Membres calculés dans les sous-sélections et les sous-cubes | Documents Microsoft
+title: Membres calculés dans les sous-sélections et les sous-cubes | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,24 +8,24 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 6e35e8f7-ae1c-4549-8432-accf036d2373
 caps.latest.revision: 7
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: a073fe9578a877aa840e6a607ca6ae081f97052b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: e5681806fd4b7530f3d83d54b21aafb3eeb07b09
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36143589"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37323189"
 ---
 # <a name="calculated-members-in-subselects-and-subcubes"></a>Membres calculés dans les sous-sélections et les sous-cubes
   Dans les versions précédentes, les membres calculés n'étaient pas autorisés dans les sous-sélections ou les sous-cubes. Toutefois, à partir de SQL Server 2008, ils sont autorisés et activés par une propriété de connexion. De plus, un nouveau comportement pour les membres calculés, dans les sous-sélections et les sous-cubes, a été introduit dans SQL Server 2008 R2.  
   
 ## <a name="calculated-members-in-subselects-and-subcubes"></a>Membres calculés dans les sous-sélections et les sous-cubes  
- Le `SubQueries` propriété de chaîne de connexion dans <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A> ou `DBPROPMSMDSUBQUERIES` propriété dans [pris en charge les propriétés XMLA &#40;XMLA&#41; ](../../xmla/xml-elements-properties/propertylist-element-supported-xmla-properties.md) définit le comportement ou l’utilisation des membres calculés ou calculés définit les sous-sélections ou les sous-cubes. Dans le cadre de ce document, sauf indication contraire, la sous-sélection fait référence aux sous-sélections et aux sous-cubes.  
+ Le `SubQueries` propriété de chaîne de connexion dans <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A> ou `DBPROPMSMDSUBQUERIES` propriété dans [propriétés XMLA prises en charge &#40;XMLA&#41; ](../../xmla/xml-elements-properties/propertylist-element-supported-xmla-properties.md) définit le comportement ou l’autorisation des membres calculés ou calculés définit les sous-sélections ou les sous-cubes. Dans le cadre de ce document, sauf indication contraire, la sous-sélection fait référence aux sous-sélections et aux sous-cubes.  
   
  La propriété SubQueries autorise les valeurs suivantes.  
   
@@ -127,7 +127,7 @@ Where [Measures].[Reseller Sales Amount]
   
 ## <a name="see-also"></a>Voir aussi  
  <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A>   
- [Instructions de sous-sélection dans les requêtes](subselects-in-queries.md)   
+ [Sous-sélections dans les requêtes](subselects-in-queries.md)   
  [Les propriétés XMLA prises en charge &#40;XMLA&#41;](../../xmla/xml-elements-properties/propertylist-element-supported-xmla-properties.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Traiter la boîte de dialogue (Analysis Services - données multidimensionnelles) | Documents Microsoft
+title: Boîte de dialogue (Analysis Services - données multidimensionnelles) processus | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.processdialog.f1
 ms.assetid: c065248c-9001-4f0c-928f-9c59eccb618b
 caps.latest.revision: 20
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: b5788bce44bc3ad63956183ac4e8950a0ace11d5
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 187de4a1978b20065080f50a1d9924e8d1138e7d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36142910"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37314999"
 ---
 # <a name="process-dialog-box-analysis-services---multidimensional-data"></a>Boîte de dialogue Traiter (Analysis Services - Données multidimensionnelles)
   Utilisez la boîte de dialogue **Traiter** de [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] et [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] pour traiter les objets [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] . Pour ouvrir la boîte de dialogue **Traiter** de [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] :  
@@ -69,6 +69,6 @@ ms.locfileid: "36142910"
   
 ## <a name="see-also"></a>Voir aussi  
  [Concepteurs et boîtes de dialogue Analysis Services &#40;données multidimensionnelles&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)   
- [Boîte de dialogue de progression traiter &#40;Analysis Services - données multidimensionnelles&#41;](process-progress-dialog-box-analysis-services-multidimensional-data.md)  
+ [Boîte de dialogue de progression processus &#40;Analysis Services - données multidimensionnelles&#41;](process-progress-dialog-box-analysis-services-multidimensional-data.md)  
   
   

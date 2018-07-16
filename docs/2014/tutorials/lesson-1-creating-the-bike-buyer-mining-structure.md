@@ -1,5 +1,5 @@
 ---
-title: 'Leçon 1 : Création de la Structure d’exploration de données Bike Buyer | Documents Microsoft'
+title: 'Leçon 1 : Création de la Structure d’exploration de données Bike Buyer | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,26 +8,26 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: a73ac60b-660f-458a-bd2f-993fbeba7226
 caps.latest.revision: 35
 author: minewiskan
 ms.author: owend
-manager: kfile
-ms.openlocfilehash: 53bacee483c3c36075cefcc789a8262b683e5370
-ms.sourcegitcommit: 8c040e5b4e8c7d37ca295679410770a1af4d2e1f
+manager: craigg
+ms.openlocfilehash: e8a4c42548e00ec27831639c7d7a147be3fcca1a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/21/2018
-ms.locfileid: "36312517"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37325319"
 ---
 # <a name="lesson-1-creating-the-bike-buyer-mining-structure"></a>Leçon 1 : Création de la structure d'exploration de données Bike Buyer
   Dans cette leçon, vous allez créer une structure d'exploration de données à l'aide de laquelle vous pouvez prévoir si un acheteur potentiel de [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] est intéressé par l'achat d'un vélo. Si vous n’êtes pas familiarisé avec les structures d’exploration de données et leur rôle dans l’exploration de données, consultez [les Structures d’exploration de données &#40;Analysis Services - Exploration de données&#41;](../../2014/analysis-services/data-mining/mining-structures-analysis-services-data-mining.md).  
   
- La structure d’exploration de données Bike Buyer que vous allez créer dans cette leçon prend en charge l’ajout de modèles d’exploration de données en fonction de la [Microsoft Clustering Algorithm](../../2014/analysis-services/data-mining/microsoft-clustering-algorithm.md)[algorithme d’arbres de décision Microsoft](../../2014/analysis-services/data-mining/microsoft-decision-trees-algorithm.md). Au cours d'autres leçons, vous utiliserez les modèles d'exploration de données clustering pour examiner différentes méthodes de regroupement des clients et exploiterez les modèles d'exploration de données d'arbre de décision pour déterminer si un client potentiel est susceptible d'acheter un vélo.  
+ La structure d’exploration de données Bike Buyer que vous allez créer dans cette leçon prend en charge l’ajout de modèles d’exploration de données selon le [Microsoft Clustering Algorithm](../../2014/analysis-services/data-mining/microsoft-clustering-algorithm.md)[algorithme d’arbres de décision de Microsoft](../../2014/analysis-services/data-mining/microsoft-decision-trees-algorithm.md). Au cours d'autres leçons, vous utiliserez les modèles d'exploration de données clustering pour examiner différentes méthodes de regroupement des clients et exploiterez les modèles d'exploration de données d'arbre de décision pour déterminer si un client potentiel est susceptible d'acheter un vélo.  
   
 ## <a name="create-mining-structure-statement"></a>Instruction CREATE MINING STRUCTURE  
- Pour créer une structure d’exploration de données, vous utilisez la [CREATE MINING STRUCTURE &#40;DMX&#41; ](/sql/dmx/create-mining-structure-dmx) instruction. Le code dans l’instruction peut être classée dans les sections suivantes :  
+ Pour créer une structure d’exploration de données, vous utilisez le [CREATE MINING STRUCTURE &#40;DMX&#41; ](/sql/dmx/create-mining-structure-dmx) instruction. Le code dans l’instruction peut être divisé en parties suivantes :  
   
 -   Attribution d'un nom à la structure.  
   
@@ -100,9 +100,9 @@ WITH HOLDOUT (<holdout specifier>)
   
 1.  Ouvrir [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)].  
   
-2.  Dans le **se connecter au serveur** boîte de dialogue, pour **type de serveur**, sélectionnez **Analysis Services**. Dans **nom du serveur**, type `LocalHost`, ou tapez le nom de l’instance de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] que vous souhaitez vous connecter de cette leçon. Cliquez sur **Se connecter**.  
+2.  Dans le **se connecter au serveur** boîte de dialogue pour **type de serveur**, sélectionnez **Analysis Services**. Dans **nom du serveur**, type `LocalHost`, ou tapez le nom de l’instance de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] que vous souhaitez vous connecter à pour cette leçon. Cliquez sur **Se connecter**.  
   
-3.  Dans **l’Explorateur d’objets**, avec le bouton droit de l’instance de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], pointez sur **nouvelle requête**, puis cliquez sur **DMX** pour ouvrir le **l’éditeur de requête**et une nouvelle requête vide.  
+3.  Dans **Explorateur d’objets**, avec le bouton droit de l’instance de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], pointez sur **nouvelle requête**, puis cliquez sur **DMX** pour ouvrir le **éditeur de requête**et une nouvelle requête vide.  
   
 ## <a name="altering-the-query"></a>Modification de la requête  
  L'étape suivante implique de modifier l'instruction CREATE MINING STRUCTURE décrite ci-avant en vue de créer la structure d'exploration de données Bike Buyer.  
@@ -206,7 +206,7 @@ WITH HOLDOUT (<holdout specifier>)
   
 1.  Dans l’éditeur de requête, dans la barre d’outils, cliquez sur **Execute**.  
   
-     L’état de la requête est affiché dans le **Messages** onglet en bas de l’éditeur de requête après avoir exécuté l’instruction. Les messages doivent révéler le texte suivant :  
+     L’état de la requête est affiché dans le **Messages** onglet en bas de l’éditeur de requête une fois l’instruction terminée l’exécution. Les messages doivent révéler le texte suivant :  
   
     ```  
     Executing the query   
@@ -218,6 +218,6 @@ WITH HOLDOUT (<holdout specifier>)
  Dans la leçon suivante, vous allez ajouter des modèles d'exploration de données à la structure que vous venez de créer.  
   
 ## <a name="next-lesson"></a>Leçon suivante  
- [Leçon 2 : Ajout des modèles d’exploration de données à la Structure d’exploration de données Bike Buyer](../../2014/tutorials/lesson-2-adding-mining-models-to-the-bike-buyer-mining-structure.md)  
+ [Leçon 2 : Ajout de modèles d’exploration de données à la structure d’exploration de données Bike Buyer](../../2014/tutorials/lesson-2-adding-mining-models-to-the-bike-buyer-mining-structure.md)  
   
   

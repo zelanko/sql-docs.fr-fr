@@ -1,5 +1,5 @@
 ---
-title: Exemple d’UDT de Date de calendrier et l’heure | Documents Microsoft
+title: Exemple d’UDT prenant en charge les Calendar Date et heure | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -12,17 +12,17 @@ ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: cfcf8516-0e7b-4ca4-8bd8-8b2511a50308
 caps.latest.revision: 12
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: a324a9b0f5ce90c7990bdc44c352df1e7a48c206
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 161395e5c57e8355c75f952f0ea0998feb487c26
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36142328"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37330459"
 ---
-# <a name="calendar-aware-date-and-time-udt-sample"></a>Exemple d’UDT prenant en charge Calendar Date et heure
+# <a name="calendar-aware-date-and-time-udt-sample"></a>Exemple d’UDT prenant en charge les Calendar Date et heure
   Le stockage de dates sous forme de chaînes peut prêter à confusion car les dates sont sans intérêt si vous ne connaissez pas le système de calendrier utilisé. L'exemple `CADatetime` présente deux types de données définis par l'utilisateur, `CADatetime` et `CADate`, qui fournissent une gestion des dates et des heures utilisant un calendrier.  
   
 ## <a name="prerequisites"></a>Prérequis  
@@ -53,7 +53,7 @@ ms.locfileid: "36142328"
      `GO`  
   
     > [!NOTE]  
-    >  Pour activer le CLR, vous devez disposer `ALTER SETTINGS` autorisation de niveau serveur, qui est implicitement détenue par les membres de la `sysadmin` et `serveradmin` rôles serveur fixes.  
+    >  Pour activer le CLR, vous devez avoir `ALTER SETTINGS` autorisation de niveau serveur, qui est implicitement détenue par les membres de la `sysadmin` et `serveradmin` rôles serveur fixes.  
   
 -   La base de données AdventureWorks doit être installée sur l'instance [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que vous utilisez.  
   

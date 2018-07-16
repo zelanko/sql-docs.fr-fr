@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.xmltask.f1
 helpviewer_keywords:
@@ -18,13 +18,13 @@ ms.assetid: 9f761846-390e-46d5-9db7-858943d40849
 caps.latest.revision: 59
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 8278f24e51e6288eb31f2f8ac4ec941a7f23e3aa
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 8dc356cd9401b28a102124d81af3a6f8dda7a64b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36052667"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37331929"
 ---
 # <a name="xml-task"></a>Tâche XML
   La tâche XML est utilisée pour travailler avec des données XML. À l'aide de cette tâche, un package peut extraire des documents XML, appliquer des opérations aux documents en utilisant des feuilles de style XSLT (Extensible Stylesheet Language Transformations) et des expressions XPath, fusionner plusieurs documents, ou bien valider, comparer et enregistrer les documents mis à jour dans des fichiers et des variables.  
@@ -97,7 +97,7 @@ ms.locfileid: "36052667"
 ### <a name="validation-operation"></a>Opération de validation  
  L'opération de validation peut être configurée pour utiliser un schéma DTD (Document Type Definition) ou XSD (XML Schema definition).  
   
- Activer `ValidationDetails` pour obtenir une sortie d’erreur détaillé. Pour plus d’informations, consultez [Validate XML with the XML Task](xml-task.md).  
+ Activer `ValidationDetails` pour obtenir la sortie d’erreur détaillée. Pour plus d’informations, consultez [Validate XML with the XML Task](xml-task.md).  
   
 ## <a name="xml-document-encoding"></a>Encodage de document XML  
  La tâche XML prend en charge la fusion de documents Unicode uniquement. Cela signifie que la tâche peut appliquer l'opération de fusion uniquement aux documents ayant un encodage Unicode. L'utilisation d'autres encodages provoquera l'échec de la tâche XML.  

@@ -1,5 +1,5 @@
 ---
-title: Type de données PerspectiveDimension (ASSL) | Documents Microsoft
+title: Type de données PerspectiveDimension (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - PerspectiveDimension data type
 ms.assetid: c4bc56de-4f42-4ceb-a68d-a4fec92fdfa9
 caps.latest.revision: 33
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: b2ec6ecb714ad87b32683f667514fe4badcabeda
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 305219e524868a2dc036c07bedcff5876699e560
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36142105"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37323259"
 ---
 # <a name="perspectivedimension-data-type-assl"></a>Type de données PerspectiveDimension (ASSL)
   Définit un type de données primitif qui fournit des informations sur une dimension dans une perspective.  
@@ -66,6 +66,6 @@ ms.locfileid: "36142105"
  L’élément correspondant dans le modèle d’objet objets AMO (Analysis Management) est <xref:Microsoft.AnalysisServices.PerspectiveDimension>.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Types de données de script langage XML Analysis Services &#40;ASSL&#41;](analysis-services-scripting-language-xml-data-types-assl.md)  
+ [Types Analysis Services Scripting Language XML données &#40;ASSL&#41;](analysis-services-scripting-language-xml-data-types-assl.md)  
   
   

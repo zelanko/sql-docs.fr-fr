@@ -8,24 +8,24 @@ ms.suite: ''
 ms.technology:
 - dbe-xml
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - user-defined functions [SQL Server], XML
 - xml data type [SQL Server], FOR XML clause
 ms.assetid: 365de07d-694c-4c8b-b671-8825be27f87c
 caps.latest.revision: 24
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: f33b889cb9bc409815c6fe8a0501de3bc1388e68
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 14010ca375afdf5166f737a27e33f8ed3fc42c49
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36053466"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37327339"
 ---
 # <a name="for-xml-support-for-the-xml-data-type"></a>Prise en charge de FOR XML pour le type de données XML
-  Si une requête FOR XML spécifie une colonne de `xml` type dans la clause SELECT, les valeurs de colonne sont mappées comme éléments dans le XML retourné, quelle que soit la directive ELEMENTS. Toute déclaration XML dans la colonne de type `xml` n'est pas sérialisée.  
+  Si une requête FOR XML spécifie une colonne de `xml` type dans la clause SELECT, les valeurs de colonne sont mappées comme éléments dans le code XML retourné, quelle que soit la directive ELEMENTS. Toute déclaration XML dans la colonne de type `xml` n'est pas sérialisée.  
   
  Par exemple, la requête suivante récupère des informations de contact client, telles que la `BusinessEntityID`, `FirstName`, et `LastName` colonnes et les numéros de téléphone à partir de la `AdditionalContactInfo` colonne de `xml` type.  
   
@@ -44,7 +44,7 @@ declare namespace act="http://schemas.microsoft.com/sqlserver/2004/07/adventure-
 FOR XML AUTO, TYPE;  
 ```  
   
- La requête ne spécifie pas la directive ELEMENTS, les valeurs de colonne sont retournées en tant qu’attributs, sauf pour les valeurs d’informations de contact supplémentaires récupérées à partir de la `xml` colonne de type. Celles-ci sont retournées en tant qu'éléments.  
+ Étant donné que la requête ne spécifie pas la directive ELEMENTS, les valeurs de colonne sont retournées en tant qu’attributs, sauf pour les valeurs d’informations de contact supplémentaires récupérées à partir de la `xml` colonne de type. Celles-ci sont retournées en tant qu'éléments.  
   
  Voici le résultat partiel :  
   
@@ -121,7 +121,7 @@ FOR XML AUTO, TYPE;
   
  Si vous spécifiez la directive ELEMENTS dans la requête, BusinessEntityID, LastName et FirstName seront retournés en tant qu'éléments dans le code XML résultant.  
   
- L’exemple suivant montre que la logique de traitement FOR XML ne sérialise aucune déclaration XML dans les données XML d’un `xml` colonne de type :  
+ L’exemple suivant montre que la logique de traitement FOR XML ne sérialise aucune déclaration XML dans les données XML à partir d’un `xml` colonne de type :  
   
 ```  
 create table t(i int, x xml)  
@@ -152,7 +152,7 @@ for xml auto;
   
 -   Une instance de la `xml` type  
   
- Par exemple, la fonction suivante définie par l’utilisateur retourne une table avec une colonne unique de `xm`livre de type :  
+ Par exemple, la fonction définie par l’utilisateur suivante retourne une table avec une seule colonne de `xm`livre de type :  
   
 ```  
 USE AdventureWorks2012;  

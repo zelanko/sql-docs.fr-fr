@@ -1,5 +1,5 @@
 ---
-title: Création et modification d’objets (XMLA) | Documents Microsoft
+title: Création et modification d’objets (XMLA) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - XMLA, objects
 ms.assetid: a2080867-e130-440c-92eb-f768869f34a8
 caps.latest.revision: 17
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 9702046c3e3c9e9ab0e9ff525d832baf611fe4b9
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 883f2a0ff0ed67b2543bc663f2a582814f56c850
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36039193"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37323099"
 ---
 # <a name="creating-and-altering-objects-xmla"></a>Création et modification d'objets (XMLA)
   Les objets principaux peuvent être créés, modifiés et supprimés de manière indépendante. Les objets principaux se composent notamment des objets suivants :  
@@ -55,10 +55,10 @@ ms.locfileid: "36039193"
   
 -   Sources de données  
   
- Vous utilisez la [créer](../xmla/xml-elements-commands/create-element-xmla.md) commande pour créer un objet principal sur une instance de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]et le [Alter](../xmla/xml-elements-commands/alter-element-xmla.md) commande pour modifier un objet principal existant sur une instance. Les deux commandes sont exécutées à l’aide de la [Execute](../xmla/xml-elements-methods-execute.md) (méthode).  
+ Vous utilisez le [créer](../xmla/xml-elements-commands/create-element-xmla.md) commande pour créer un objet principal sur une instance de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]et le [Alter](../xmla/xml-elements-commands/alter-element-xmla.md) commande pour modifier un objet principal existant sur une instance. Les deux commandes sont exécutées à l’aide de la [Execute](../xmla/xml-elements-methods-execute.md) (méthode).  
   
 ## <a name="creating-objects"></a>Création d’objets  
- Lorsque vous créez des objets à l'aide de la méthode `Create`, vous devez tout d'abord identifier l'objet parent qui contient l'objet [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] à créer. Identification de l’objet parent en fournissant une référence d’objet dans le [ParentObject](../xmla/xml-elements-properties/object-element-xmla.md) propriété de la `Create` commande. Chaque référence d'objet contient les identificateurs d'objet nécessaires pour identifier de manière unique l'objet parent pour la commande `Create`. Pour plus d’informations sur les références d’objet, consultez [définition et identification d’objets &#40;XMLA&#41;](../xmla/xml-elements-objects.md).  
+ Lorsque vous créez des objets à l'aide de la méthode `Create`, vous devez tout d'abord identifier l'objet parent qui contient l'objet [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] à créer. Vous identifiez l’objet parent en fournissant une référence d’objet dans le [ParentObject](../xmla/xml-elements-properties/object-element-xmla.md) propriété de la `Create` commande. Chaque référence d'objet contient les identificateurs d'objet nécessaires pour identifier de manière unique l'objet parent pour la commande `Create`. Pour plus d’informations sur les références d’objet, consultez [définition et identification d’objets &#40;XMLA&#41;](../xmla/xml-elements-objects.md).  
   
  Par exemple, vous devez fournir une référence d'objet à un cube pour créer un groupe de mesures pour le cube. La référence d'objet pour le cube dans la propriété `ParentObject` contient à la fois un identificateur de base de données et un identificateur de cube, car le même identificateur de cube peut très bien être utilisé dans une autre base de données.  
   
@@ -66,16 +66,16 @@ ms.locfileid: "36039193"
   
  Si vous définissez l'attribut `AllowOverwrite` de la commande `Create` à true, vous pouvez remplacer un objet principal existant associé à l'identificateur spécifié. Sinon, une erreur se produit si un objet principal associé à l'identificateur spécifié existe déjà dans l'objet parent.  
   
- Pour plus d’informations sur la `Create` command, consultez [créer un élément &#40;XMLA&#41;](../xmla/xml-elements-commands/create-element-xmla.md).  
+ Pour plus d’informations sur la `Create` de commande, consultez [créer un élément &#40;XMLA&#41;](../xmla/xml-elements-commands/create-element-xmla.md).  
   
 ### <a name="creating-session-objects"></a>Création d'objets de session  
  Les objets de session sont des objets temporaires disponibles uniquement pour la session explicite ou implicite utilisée par une application cliente et qui sont supprimés à la fin de la session. Vous pouvez créer des objets de session en définissant le `Scope` attribut de la `Create` commande *Session*.  
   
 > [!NOTE]  
->  Lorsque vous utilisez la *Session* définition, le `ObjectDefinition` élément ne peut contenir [Dimension](../scripting/objects/dimension-element-assl.md), [Cube](../scripting/objects/cube-element-assl.md), ou [MiningModel](../scripting/objects/miningmodel-element-assl.md) ASSL éléments.  
+>  Lorsque vous utilisez le *Session* définition, le `ObjectDefinition` élément ne peut contenir [Dimension](../scripting/objects/dimension-element-assl.md), [Cube](../scripting/objects/cube-element-assl.md), ou [MiningModel](../scripting/objects/miningmodel-element-assl.md) ASSL éléments.  
   
 ## <a name="altering-objects"></a>Modification d'objets  
- Lorsque vous modifiez des objets à l’aide de la `Alter` (méthode), vous devez d’abord identifier l’objet à modifier en fournissant une référence d’objet dans le [objet](../xmla/xml-elements-properties/object-element-xmla.md) propriété de la `Alter` commande. Chaque référence d'objet contient les identificateurs d'objet nécessaires pour identifier de manière unique l'objet pour la commande `Alter`. Pour plus d’informations sur les références d’objet, consultez [définition et identification d’objets &#40;XMLA&#41;](../xmla/xml-elements-objects.md).  
+ Lorsque vous modifiez des objets à l’aide de la `Alter` (méthode), vous devez tout d’abord identifier l’objet à modifier en fournissant une référence d’objet dans le [objet](../xmla/xml-elements-properties/object-element-xmla.md) propriété de la `Alter` commande. Chaque référence d'objet contient les identificateurs d'objet nécessaires pour identifier de manière unique l'objet pour la commande `Alter`. Pour plus d’informations sur les références d’objet, consultez [définition et identification d’objets &#40;XMLA&#41;](../xmla/xml-elements-objects.md).  
   
  Par exemple, vous devez fournir une référence d'objet à un cube pour modifier la structure de ce dernier. La référence d'objet pour le cube dans la propriété `Object` contient à la fois un identificateur de base de données et un identificateur de cube, car le même identificateur de cube peut très bien être utilisé dans une autre base de données.  
   
@@ -86,13 +86,13 @@ ms.locfileid: "36039193"
 ### <a name="using-the-objectexpansion-attribute"></a>Utilisation de l'attribut ObjectExpansion  
  Si vous modifiez uniquement les propriétés de l’objet principal et que vous ne redéfinissez pas les objets secondaires contenus dans l’objet principal, vous pouvez définir le `ObjectExpansion` attribut de la `Alter` commande *ObjectProperties*. La propriété `ObjectDefinition` ne doit donc contenir que les éléments relatifs aux propriétés de l'objet principal, et la commande `Alter` laisse les objets secondaires associés à l'objet principal inchangés.  
   
- Pour redéfinir les objets secondaires pour un objet principal, vous devez définir le `ObjectExpansion` attribut *ExpandFull* et la définition d’objet doit inclure tous les objets secondaires contenus dans l’objet principal. Si la propriété `ObjectDefinition` de la commande `Alter` n'inclut pas explicitement un objet secondaire contenu dans l'objet principal, cet objet secondaire est supprimé.  
+ Pour redéfinir les objets secondaires d’un objet principal, vous devez définir le `ObjectExpansion` attribut *ExpandFull* et la définition d’objet doit inclure tous les objets secondaires contenus dans l’objet principal. Si la propriété `ObjectDefinition` de la commande `Alter` n'inclut pas explicitement un objet secondaire contenu dans l'objet principal, cet objet secondaire est supprimé.  
   
 ### <a name="altering-session-objects"></a>Modification d'objets de session  
  Pour modifier les objets de session créés par le `Create` commande, définissez la `Scope` attribut de la `Alter` commande *Session*.  
   
 > [!NOTE]  
->  Lorsque vous utilisez la *Session* définition, le `ObjectDefinition` élément ne peut contenir [Dimension](../scripting/objects/dimension-element-assl.md), [Cube](../scripting/objects/cube-element-assl.md), ou [MiningModel](../scripting/objects/miningmodel-element-assl.md) ASSL éléments.  
+>  Lorsque vous utilisez le *Session* définition, le `ObjectDefinition` élément ne peut contenir [Dimension](../scripting/objects/dimension-element-assl.md), [Cube](../scripting/objects/cube-element-assl.md), ou [MiningModel](../scripting/objects/miningmodel-element-assl.md) ASSL éléments.  
   
 ## <a name="creating-or-altering-subordinate-objects"></a>Création ou modification d'objets subordonnés  
  Bien qu'une commande `Create` ou `Alter` ne crée ou ne modifie qu'un seul objet principal de niveau supérieur, l'objet principal ainsi créé ou modifié peut contenir des définitions dans la propriété `ObjectDefinition` englobante pour les autres objets principaux ou secondaires qui lui sont subordonnés. Par exemple, si vous définissez un cube, vous spécifiez la base de données parente dans `ParentObject`. Ensuite, dans la propriété de la définition du cube `ObjectDefinition`, vous pouvez définir des groupes de mesures pour le cube et, dans chaque groupe de mesures, vous pouvez définir des partitions. Un objet secondaire ne peut être défini que sous l'objet principal qui le contient. Pour plus d’informations sur les objets principaux et secondaires, consultez [des objets de base de données &#40;Analysis Services - données multidimensionnelles&#41;](../multidimensional-models/olap-logical/database-objects-analysis-services-multidimensional-data.md).  

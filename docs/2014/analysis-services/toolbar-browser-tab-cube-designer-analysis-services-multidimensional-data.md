@@ -1,5 +1,5 @@
 ---
-title: Barre d’outils (onglet navigateur, Concepteur de Cube) (Analysis Services - données multidimensionnelles) | Documents Microsoft
+title: Barre d’outils (onglet navigateur, Concepteur de Cube) (Analysis Services - données multidimensionnelles) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: a1c6272d-e514-456b-9995-b73fec0112a2
 caps.latest.revision: 23
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: c20904d56add8256de37351c1435d06f8f526277
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: d0735af06261d606888fe04d45e968b63f5d6403
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36039381"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37300919"
 ---
 # <a name="toolbar-browser-tab-cube-designer-analysis-services---multidimensional-data"></a>Barre d'outils (onglet Explorateur, Concepteur de cube) (Analysis Services - Données multidimensionnelles)
   Utilisez les fonctionnalités de la **Barre d’outils** dans le Concepteur de cube pour exécuter des actions courantes pendant la conception d’un cube, en le parcourant, en parcourant ses objets, ou en créant une requête MDX. Les opérations qui sont communes à la conception et à l'affichage des requêtes incluent la définition du contexte de l'utilisateur, le traitement des objets et la définition de la langue par défaut.  
@@ -66,7 +66,7 @@ ms.locfileid: "36039381"
 |**Tri croissant**|Permet de trier les frères de la ligne sélectionnée dans le volet **Rapport** en ordre ascendant et selon la langue précisée dans **Langue**.<br /><br /> **Remarque** Cette option n’est activée que si une cellule du volet **Rapports** est sélectionnée.|  
 |**Tri décroissant**|Permet de trier les frères de la ligne sélectionnée dans le volet **Rapport** en ordre descendant et selon la langue précisée dans **Langue**.<br /><br /> Remarque : Cette option n’est activée que si une cellule du volet **Rapports** est sélectionnée.|  
 |**Filtre automatique**|Lance le filtre automatiquement sur les résultats du volet **Résultat** .|  
-|**Afficher uniquement le haut/bas**|Permet de choisir une valeur ou un pourcentage afin de n’afficher que les cellules répondant au critère du nombre ou du pourcentage maximal/minimal indiqué, dans le volet **Rapport** et selon la mesure choisie.<br /><br /> Pour plus d’informations sur cette option, consultez [TopCount &#40;MDX&#41;](/sql/mdx/topcount-mdx), [TopPercent &#40;MDX&#41;](/sql/mdx/toppercent-mdx), [BottomCount &#40;MDX&#41;](/sql/mdx/bottomcount-mdx) et [BottomPercent &#40;MDX&#41;](/sql/mdx/bottompercent-mdx).|  
+|**Afficher seulement le haut/bas**|Permet de choisir une valeur ou un pourcentage afin de n’afficher que les cellules répondant au critère du nombre ou du pourcentage maximal/minimal indiqué, dans le volet **Rapport** et selon la mesure choisie.<br /><br /> Pour plus d’informations sur cette option, consultez [TopCount &#40;MDX&#41;](/sql/mdx/topcount-mdx), [TopPercent &#40;MDX&#41;](/sql/mdx/toppercent-mdx), [BottomCount &#40;MDX&#41;](/sql/mdx/bottomcount-mdx) et [BottomPercent &#40;MDX&#41;](/sql/mdx/bottompercent-mdx).|  
 |**Sous-total**|Permet d'afficher les sous-totaux.|  
 |**Totaux de tous les éléments**|Permet d’afficher les totaux de Tous les membres du volet **Rapport** .|  
 |**Afficher les cellules vides**|Permet d’afficher les cellules vides dans le volet **Rapport** .|  

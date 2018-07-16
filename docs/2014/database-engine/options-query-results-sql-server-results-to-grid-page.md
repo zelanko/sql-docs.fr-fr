@@ -1,5 +1,5 @@
 ---
-title: Options (résultats de SQL Server-résultats de la requête à la Page de grille) | Documents Microsoft
+title: Options (résultats de SQL Server-résultats de la requête à la Page de grille) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - VS.ToolsOptionsPages.QueryResults.SqlServer.SQLResultsToGrid
 ms.assetid: f88a0f5c-e800-473b-ae23-c3943de5ed63
 caps.latest.revision: 25
 author: craigg-msft
 ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: eafa41250705c453776947a3da56c86f9e3c0f90
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 23e5634a67ff6daec4f6b0852905d8596b885c60
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36141403"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37318899"
 ---
 # <a name="options-query-results-sql-server-results-to-grid-page"></a>Options (résultats de SQL Server-résultats de la requête à la Page de grille)
   Cette page vous permet de spécifier les options d'affichage du jeu de résultats d'une requête au format grille. Les modifications apportées à ces options sont appliquées uniquement aux nouvelles requêtes [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Pour que ces modifications s’appliquent aux requêtes en cours, cliquez sur **Options de requête** dans le menu **Requête** ou cliquez avec le bouton droit sur la fenêtre Requête [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] et sélectionnez **Options de requête**. Dans le volet gauche de la boîte de dialogue **Options de requête** , cliquez sur **Grille**sous **Résultats**.  

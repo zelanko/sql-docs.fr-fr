@@ -1,5 +1,5 @@
 ---
-title: Cube ou modèle de boîte de dialogue de propriétés (SSAS) | Documents Microsoft
+title: Cube ou un modèle de boîte de dialogue de propriétés (SSAS) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,27 +8,27 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.sqlserverstudio.cubeproperties.f1
 ms.assetid: 97e367f9-f95a-4163-add1-c74fd22db249
 caps.latest.revision: 21
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 90efe4a053104491b24e290641205d85628c3689
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 9ad93386960630ffe1a49b473304cce80e580e61
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36143387"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37317469"
 ---
 # <a name="cube-or-model-properties-dialog-box-ssas"></a>Boîte de dialogue de propriétés du cube ou du modèle (SSAS)
   Utilisez la boîte de dialogue **Propriétés de la base de données** dans [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] pour définir les propriétés d'un cube ou d'une base de données. Pour afficher la boîte de dialogue, cliquez avec le bouton droit sur un cube ou un modèle dans **l’Explorateur d’objets** et sélectionnez **Propriétés**.  
   
  Cette boîte de dialogue inclut des onglets pour les propriétés suivantes :  
   
--   [Éditeur de formulaire d’Action de rapport &#40;sous l’onglet Actions, Concepteur de Cube&#41; &#40;Analysis Services - données multidimensionnelles&#41;](report-action-form-editor-cube-designer-analysis-services-multidimensional-data.md)  
+-   [Report Action Form Editor &#40;onglet Actions, Concepteur de Cube&#41; &#40;Analysis Services - données multidimensionnelles&#41;](report-action-form-editor-cube-designer-analysis-services-multidimensional-data.md)  
   
 -   [Configuration d’erreur pour le Cube, Partition et le traitement de Dimension &#40;SSAS - multidimensionnel&#41;](multidimensional-models/error-configuration-for-cube-partition-and-dimension-processing.md)  
   

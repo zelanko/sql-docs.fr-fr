@@ -1,5 +1,5 @@
 ---
-title: Exploration et nettoyage des données | Documents Microsoft
+title: Exploration et nettoyage des données | Microsoft Docs
 ms.custom: ''
 ms.date: 12/29/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 7c888c95-8986-461e-9f11-2395044b9d97
 caps.latest.revision: 7
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 0c39eaa58152fd1a75eeaefdc79bae93ccd36b98
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 0200bb66afa6728f3bd5587774dc9f80fb10c5fd
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36039429"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37304719"
 ---
 # <a name="exploring-and-cleaning-data"></a>Exploration et nettoyage des données
   La préparation des données est bien plus que le nettoyage des données. N'oubliez pas que la façon dont les données sont préparées affecte également la façon dont les résultats sont interprétés. La préparation des données implique les tâches suivantes :  
@@ -36,10 +36,10 @@ ms.locfileid: "36039429"
   
 -   Conversion des types de données ou classement des valeurs, le cas échéant, pour analyse.  
   
- Si vous ne connaissez pas la modélisation des données, nous vous recommandons de lire la rubrique connexe, [liste de vérification de la préparation pour l’exploration de données de](checklist-of-preparation-for-data-mining.md).  
+ Si vous ne connaissez pas la modélisation des données, nous vous recommandons de lire la rubrique connexe, [liste de vérification de préparation pour l’exploration de données](checklist-of-preparation-for-data-mining.md).  
   
 ## <a name="data-preparation-tools"></a>Outils de préparation des données  
- Les compléments d’exploration de données pour Office inclut les outils suivants pour le nettoyage des données et de préparation :  
+ Les compléments d’exploration de données pour Office inclut les outils suivants pour le nettoyage des données et la préparation :  
   
 ### <a name="explore-data"></a>Explorer les données  
  Utilisez le **Explorer les données** Assistant pour ces tâches de préparation des données :  
@@ -53,7 +53,7 @@ ms.locfileid: "36039429"
  [Explorer les données &#40;compléments d’exploration de données SQL Server&#41;](explore-data-sql-server-data-mining-add-ins.md).  
   
 ### <a name="detect-and-handle-outliers"></a>Détecter et gérer les valeurs hors norme  
- Le **observations aberrantes** Assistant représente sous forme graphique la distribution des valeurs dans vos données et vous permet de supprimer les valeurs extrêmes. Utilisez le **observations aberrantes** outil pour les tâches de préparation de données suivantes :  
+ Le **valeurs hors norme** Assistant représente sous forme graphique la distribution des valeurs dans vos données et vous permet de supprimer les valeurs extrêmes. Utilisez le **valeurs hors norme** outil pour les tâches de préparation de données suivantes :  
   
 -   Déterminer si les valeurs individuelles sont fiables, basées sur les modèles trouvés dans les données.  
   
@@ -64,7 +64,7 @@ ms.locfileid: "36039429"
  [Valeurs hors norme &#40;compléments d’exploration de données SQL Server&#41;](outliers-sql-server-data-mining-add-ins.md).  
   
 ### <a name="relabel-and-bin-data"></a>Réétiqueter et placer les données dans un conteneur  
- Le **Réétiqueter** Assistant regroupe les données par valeurs afin que vous pouvez modifier les étiquettes des données. Utilisez l'outil Réétiqueter pour les tâches de préparation des données suivantes :  
+ Le **Réétiqueter** Assistant regroupe les données par valeurs afin que vous puissiez modifier les étiquettes sur les données. Utilisez l'outil Réétiqueter pour les tâches de préparation des données suivantes :  
   
 -   Modifier les codes numériques utilisés dans les résultats d'enquête en une description textuelle de la signification du code numérique.  
   
@@ -72,7 +72,7 @@ ms.locfileid: "36039429"
   
 -   Placez les données dans un conteneur, en créant des groupes pour représenter des plages de nombres.  
   
-     Par exemple, vous souhaiterez peut-être remplacer une colonne de revenus de nombres avec des étiquettes telles que **Income – modéré** et **revenus élevés**.  
+     Par exemple, vous souhaiterez peut-être remplacer une colonne revenu de nombres avec des étiquettes telles que **Income – Moderate** et **revenus élevés**.  
   
 -   Réduisez les valeurs discrètes dans des catégories.  
   
@@ -96,11 +96,11 @@ ms.locfileid: "36039429"
 ### <a name="sample-data"></a>Exemples de données  
  L'Assistant Exemples de données fournit deux méthodes pour créer des jeux de données équilibrés pour des modèles d'apprentissage et de test.  
   
--   **Échantillonnage aléatoire.** Utilisez cette option pour extraire un jeu de données représentatif d'un plus grand jeu de données, en vue de l'utiliser pour l'apprentissage ou le test. Compléments d’exploration de données utilisent *l’échantillonnage stratifié* pour vous assurer qu’un jeu équilibré de valeurs est obtenu pour chaque variable échantillonnée.  
+-   **Échantillonnage aléatoire.** Utilisez cette option pour extraire un jeu de données représentatif d'un plus grand jeu de données, en vue de l'utiliser pour l'apprentissage ou le test. Utilisent les compléments d’exploration de données *l’échantillonnage stratifié* pour vous assurer qu’un jeu équilibré de valeurs est obtenu pour chaque variable échantillonnée.  
   
 -   **Suréchantillonnage.** Utilisez cette option si vous avez moins de données que vous ne le souhaiteriez pour le résultat, et que vous devez pondérer ces données de manière plus importante. Par exemple, la fraude peut être relativement rare, mais vous pouvez suréchantillonner des cas impliquant de la fraude pour obtenir les données adéquates pour la modélisation.  
   
- [Les exemples de données &#40;compléments d’exploration de données SQL Server&#41;](sample-data-sql-server-data-mining-add-ins.md).  
+ [Exemples de données &#40;compléments d’exploration de données SQL Server&#41;](sample-data-sql-server-data-mining-add-ins.md).  
   
 ## <a name="see-also"></a>Voir aussi  
  [Création d’un modèle d’exploration de données](creating-a-data-mining-model.md)   

@@ -1,5 +1,5 @@
 ---
-title: Définir les propriétés d’une Variable définie par l’utilisateur | Documents Microsoft
+title: Définir les propriétés d’une Variable définie par l’utilisateur | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - modifying variables
 - variables [Integration Services], properties
 ms.assetid: f98ddbec-f668-4dba-a768-44ac3ae0536f
 caps.latest.revision: 26
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 1d05e9fc6b6c4f1e5e29a4bff9c163305d977202
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 526a5fef8883d34c281ee6c1cec51d29a6b9508c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36143521"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37331875"
 ---
 # <a name="set-the-properties-of-a-user-defined-variable"></a>Définir les propriétés d’une variable définie par l’utilisateur
   Pour définir les propriétés d'une variable définie par l'utilisateur dans [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)], vous pouvez utiliser l'une des fonctionnalités suivantes :  
@@ -40,23 +40,23 @@ ms.locfileid: "36143521"
   
 -   La valeur d’une variable peut être définie par la propriété Valeur ou la propriété Expression. Par défaut, la propriété EvaluateAsExpression a la valeur `False` et la valeur de la variable est définie par la propriété de valeur. Pour utiliser une expression pour définir la valeur, vous devez d’abord définir EvaluateAsExpression `True`, puis fournissez une expression dans la propriété Expression. Le résultat de l’évaluation de l’expression est automatiquement affecté à la propriété Valeur.  
   
--   La propriété ValueType contient le type de données de la valeur de la propriété Valeur. Quand Valeur est définie par une expression, ValueType est automatiquement mis à jour avec un type de données compatible avec le résultat de l’évaluation de l’expression. Par exemple, si la valeur contient 0 et la propriété ValueType contient **Int32** vous ensuite affecter Expression GETDATE(), valeur contient la date et heure actuelles et ValueType est défini sur `DateTime`.  
+-   La propriété ValueType contient le type de données de la valeur de la propriété Valeur. Quand Valeur est définie par une expression, ValueType est automatiquement mis à jour avec un type de données compatible avec le résultat de l’évaluation de l’expression. Par exemple, si la valeur contient 0 et la propriété ValueType contient **Int32** et si vous définissez ensuite Expression à GETDATE(), valeur contient la date actuelle et l’heure et ValueType est défini sur `DateTime`.  
   
 -   La fenêtre **Propriétés** pour la variable permet d’accéder à la boîte de dialogue **Générateur d’expressions** . Vous pouvez utiliser cet outil pour créer, valider et évaluer des expressions. Pour plus d’informations, consultez [Générateur d’expressions](expressions/expression-builder.md) et [Expressions Integration Services &#40;SSIS&#41;](expressions/integration-services-ssis-expressions.md).  
   
  Quand vous utilisez la fenêtre **Variables** pour définir des expressions sur une variable définie par l’utilisateur :  
   
--   Pour utiliser une expression pour définir la valeur de la variable, d’abord confirmer que le type de données de variable est compatible avec le résultat de l’évaluation de l’expression, puis indiquez une expression dans le `Expression` colonne de la **Variables** fenêtre. La propriété EvaluateAsExpression dans le **propriétés** fenêtre est automatiquement défini sur `True`.  
+-   Pour utiliser une expression pour définir la valeur de variable, vérifiez d’abord que le type de données de variable est compatible avec le résultat d’évaluation de l’expression et fournissez ensuite une expression dans le `Expression` colonne de la **Variables** fenêtre. La propriété EvaluateAsExpression dans la **propriétés** fenêtre est automatiquement définie sur `True`.  
   
 -   Lorsque vous affectez une expression à une variable, un marqueur spécial sous la forme d'une icône s'affiche en regard de la variable. Ce marqueur d'icône spécial s'affiche également en regard des gestionnaires de connexions et des tâches contenant des expressions.  
   
 -   La fenêtre **Variables** pour la variable permet d’accéder à la boîte de dialogue **Générateur d’expressions** . Vous pouvez utiliser cet outil pour créer, valider et évaluer des expressions. Pour plus d’informations, consultez [Générateur d’expressions](expressions/expression-builder.md) et [Expressions Integration Services &#40;SSIS&#41;](expressions/integration-services-ssis-expressions.md).  
   
- À la fois dans le **Variables** et **propriétés** fenêtre, si vous affectez une expression à la variable, et `EvaluateAsExpression` a la valeur `True`, vous ne pouvez pas modifier le type de données de variable.  
+ À la fois dans le **Variables** et **propriétés** fenêtre, si vous affectez une expression à la variable, et `EvaluateAsExpression` est défini sur `True`, vous ne pouvez pas modifier le type de données de variable.  
   
- **Définissant les propriétés de nom et le Namespace**  
+ **Définition des propriétés du nom et Namespace**  
   
- Les valeurs de la `Name` et `Namespace` propriétés doivent commencer par une lettre de l’alphabet, tel que défini par la norme Unicode 2.0, ou un trait de soulignement (_). Les caractères suivants peuvent être des lettres ou des chiffres, conformément à la convention Unicode standard 2.0, ou un trait de soulignement (\_).  
+ Les valeurs de la `Name` et `Namespace` propriétés doivent commencer par une lettre de l’alphabet, conformément à la convention Unicode Standard 2.0, ou un trait de soulignement (_). Les caractères suivants peuvent être des lettres ou des chiffres, conformément à la convention Unicode standard 2.0, ou un trait de soulignement (\_).  
   
 ## <a name="using-the-variables-window-to-set-properties"></a>Définition de propriétés à l'aide de la fenêtre Variables  
   
@@ -72,7 +72,7 @@ ms.locfileid: "36143521"
   
 4.  Éventuellement, dans la fenêtre **Variables** cliquez sur **Options de la grille**, puis sélectionnez les colonnes qui apparaissent dans la fenêtre **Variables** et sélectionnez les filtres à appliquer à la liste des variables.  
   
-5.  Sélectionnez la variable dans la liste, puis mettre à jour les valeurs dans le `Name`, **Type de données**, `Value`, `Namespace`, **déclencher un événement de modification**, **Description,** et `Expression` colonnes.  
+5.  Sélectionnez la variable dans la liste, puis mettez à jour des valeurs dans le `Name`, **Type de données**, `Value`, `Namespace`, **Raise Change Event**, **Description,** et `Expression` colonnes.  
   
 6.  Sélectionnez la variable dans la liste, puis cliquez sur **Déplacer la variable** pour modifier l’étendue.  
   
@@ -101,8 +101,8 @@ ms.locfileid: "36143521"
 8.  Pour enregistrer le package mis à jour, dans le menu **Fichier** , cliquez sur **Enregistrer les éléments sélectionnés**.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Services d’intégration &#40;SSIS&#41; Variables](integration-services-ssis-variables.md)   
+ [Integration Services &#40;SSIS&#41; Variables](integration-services-ssis-variables.md)   
  [Utiliser des Variables dans des Packages](../../2014/integration-services/use-variables-in-packages.md)   
- [Ajouter, supprimer ou modifier l’étendue de la Variable définie par l’utilisateur dans un Package](../../2014/integration-services/add-delete-change-scope-of-user-defined-variable-in-a-package.md)  
+ [Ajouter, supprimer, modifier l’étendue d’une variable définie par l’utilisateur dans un package](../../2014/integration-services/add-delete-change-scope-of-user-defined-variable-in-a-package.md)  
   
   

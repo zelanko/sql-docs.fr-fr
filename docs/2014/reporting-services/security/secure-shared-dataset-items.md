@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 08e6d8b5-d88c-4ed2-9c05-55c757e00014
 caps.latest.revision: 5
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 69369e5f1701ea1807a42bfb426f8cd26073e2c6
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: f691cc55d7e8a6107e9c602d8edbb5c7d32d904c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36039673"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37323879"
 ---
 # <a name="secure-shared-dataset-items"></a>Sécuriser les éléments de dataset partagés
   Sur un serveur de rapports, les éléments de dataset partagés peuvent être utilisés par plusieurs rapports. Vous pouvez sécuriser des datasets partagés pour contrôler le degré d'accès dont disposent les utilisateurs. Par défaut, seuls les utilisateurs qui sont membres du groupe prédéfini **Administrateurs** peuvent consulter des datasets partagés, modifier des propriétés, activer la mise en cache, créer des plans d’actualisation du cache et supprimer les éléments. Tous les autres utilisateurs possèdent des attributions de rôles créées pour eux qui autorisent l'accès à un dataset partagé.  
@@ -50,10 +50,10 @@ ms.locfileid: "36039673"
 |Lire les rapports|Consulter la définition de dataset partagé.|Gestionnaire de contenu<br /><br /> Générateur de rapports|  
 |Définir la sécurité au niveau des éléments|Créer et modifier des attributions de rôles qui contrôlent l'accès au dataset partagé. Cette tâche doit être utilisée avec les tâches « Afficher les rapports » ou « Gérer les rapports ». Si tel n'est pas le cas, elle est sans effet puisque l'utilisateur ne peut pas sélectionner l'élément.|Gestionnaire de contenu|  
   
- Pour plus d’informations, consultez [tâches au niveau élément](tasks-and-permissions-item-level-tasks.md) et [de rôles prédéfinis](role-definitions-predefined-roles.md).  
+ Pour plus d’informations, consultez [tâches au niveau élément](tasks-and-permissions-item-level-tasks.md) et [rôles prédéfinis](role-definitions-predefined-roles.md).  
   
 ## <a name="see-also"></a>Voir aussi  
- [Gérer les Datasets partagés](../report-data/manage-shared-datasets.md)   
+ [Gérer des Datasets partagés](../report-data/manage-shared-datasets.md)   
  [Dossiers sécurisés](secure-folders.md)   
  [Sécuriser des rapports et des ressources](secure-reports-and-resources.md)   
  [Octroi d'autorisations sur un serveur de rapports en mode natif](granting-permissions-on-a-native-mode-report-server.md)   

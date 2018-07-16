@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - PowerShell [SQL Server], Invoke-Sqlcmd
 - Cmdlets [SQL Server], Invoke-Sqlcmd
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - sqlcmd utility, PowerShell
 ms.assetid: 0c74d21b-84a5-4fa4-be51-90f0f7230044
 caps.latest.revision: 17
-author: mgblythe
-ms.author: mblythe
-manager: jhubbard
-ms.openlocfilehash: 1bd2d4ead2eef0b9f8c76b5eeab7c14065244457
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: d07e40d7f5b616b4b555ae3bbd17be764a70e394
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36039583"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37330449"
 ---
 # <a name="invoke-sqlcmd-cmdlet"></a>Invoke-Sqlcmd (applet de commande)
   **Invoke-Sqlcmd** est une applet de commande [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] qui exécute des scripts contenant des instructions des langages [!INCLUDE[tsql](../includes/tsql-md.md)] et XQuery ainsi que les commandes prises en charge par l’utilitaire **sqlcmd**.  

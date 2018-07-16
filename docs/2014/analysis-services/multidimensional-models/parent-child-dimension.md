@@ -1,5 +1,5 @@
 ---
-title: Hiérarchie parent-enfant | Documents Microsoft
+title: Hiérarchie parent-enfant | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - hierarchies [Analysis Services], parent-child
 - dimensions [Analysis Services], parent-child
@@ -21,15 +21,15 @@ helpviewer_keywords:
 - parent-child dimensions [Analysis Services]
 ms.assetid: 4657f5dc-d88e-48d2-a448-08f79bc89546
 caps.latest.revision: 42
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 6f4dea929cc67ca1d44fb2c439947edbdef5bcfd
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 7b22ee5d9324b1d1b18d6ff033876d22bc0c1bdb
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36143797"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37328569"
 ---
 # <a name="parent-child-hierarchy"></a>Hiérarchie parent-enfant
   Une hiérarchie parent-enfant est une hiérarchie dans une dimension standard qui contient un attribut parent. Un attribut parent décrit une *relation d’auto-référencement*, ou *jointure réflexive*, dans une table de dimension principale. Les hiérarchies parent-enfant sont construites à partir d'un seul attribut parent. Un seul niveau est affecté à une hiérarchie parent-enfant parce que les niveaux présents dans la hiérarchie sont constitués à partir des relations parent-enfant entre les membres associés à l'attribut parent. La position d’un membre dans une hiérarchie parent-enfant est déterminée par le `KeyColumns` et `RootMemberIf` attribut des propriétés du parent, tandis que la position d’un membre d’un niveau est déterminée par le `OrderBy` propriété de l’attribut parent. Pour plus d’informations sur les propriétés d’attributs, consultez [Attributs et hiérarchies d’attributs](../multidimensional-models-olap-logical-dimension-objects/attributes-and-attribute-hierarchies.md).  
@@ -39,7 +39,7 @@ ms.locfileid: "36143797"
 ## <a name="dimension-schema"></a>Schéma de dimension  
  Le schéma de dimension d'une hiérarchie parent-enfant dépend de la présence d'une relation d'auto-référencement dans la table principale de la dimension. Par exemple, le diagramme suivant montre la table de dimension principale **DimOrganization** de l’exemple de base de données [!INCLUDE[ssSampleDBDWobject](../../includes/sssampledbdwobject-md.md)] .  
   
- ![Jointure circulaires dans la table DimOrganization](../dev-guide/media/dimorganization.gif "jointure circulaires dans la table DimOrganization")  
+ ![Jointure auto-référencée dans la table DimOrganization](../dev-guide/media/dimorganization.gif "jointure auto-référencée dans la table DimOrganization")  
   
  Dans cette table de dimension, la colonne **ParentOrganizationKey** a une relation de clé étrangère avec la colonne clé primaire **OrganizationKey** . En d'autres termes, chaque enregistrement dans cette table peut être associé à un autre enregistrement de la table par une relation parent-enfant. Ce type de jointure réflexive est généralement utilisé pour représenter les données d'une entité d'une organisation, telles que la structure de gestion des employés dans un service.  
   

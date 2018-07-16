@@ -1,5 +1,5 @@
 ---
-title: Élément ServerProperty (ASSL) | Documents Microsoft
+title: Élément ServerProperty (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - ServerProperty element
 ms.assetid: f152a1b5-0972-40d8-907f-f131c2a108bb
 caps.latest.revision: 37
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 6cb62681b0c25c83d54076a67a37addc764102da
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 9c6af3d46fac2b6ed02ff4cd261a8f5361d466ae
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36040483"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37300929"
 ---
 # <a name="serverproperty-element-assl"></a>Élément ServerProperty (ASSL)
   Définit une propriété de serveur associée à un [Server](server-element-assl.md) élément.  
@@ -72,7 +72,7 @@ ms.locfileid: "36040483"
  L’élément correspondant dans le modèle d’objet objets AMO (Analysis Management) est <xref:Microsoft.AnalysisServices.ServerProperty>.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Élément serveur &#40;ASSL&#41;](server-element-assl.md)   
+ [Élément de serveur &#40;ASSL&#41;](server-element-assl.md)   
  [Objets &#40;ASSL&#41;](objects-assl.md)  
   
   

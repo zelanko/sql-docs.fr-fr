@@ -1,5 +1,5 @@
 ---
-title: Élément ConnectionString (XMLA) | Documents Microsoft
+title: ConnectionString, élément (XMLA) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -24,15 +24,15 @@ helpviewer_keywords:
 - ConnectionString element
 ms.assetid: 3b0575aa-79ed-4f14-ae7e-dd587af4cdb1
 caps.latest.revision: 13
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: 12d69bfe2b8dc8bda91bc873167bb3208203d728
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: e7345d2a35d80a2ce4d72875c4afb082b57ec1a4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36040052"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37293209"
 ---
 # <a name="connectionstring-element-xmla"></a>Élément ConnectionString (XMLA)
   Contient une chaîne de connexion utilisée par le parent [emplacement](location-element-xmla.md) ou [Source](source-element-xmla.md) élément.  
@@ -70,7 +70,7 @@ ms.locfileid: "36040052"
   
  Pour les éléments `Source`, l'élément `ConnectionString` contient la chaîne de connexion utilisée par la commande `Synchronize` pour se connecter à l'instance source.  
   
- Pour plus d’informations sur la sauvegarde et restauration des objets, consultez [sauvegarde, restauration et synchronisation de bases de données de &#40;XMLA&#41;](../../multidimensional-models-scripting-language-assl-xmla/backing-up-restoring-and-synchronizing-databases-xmla.md).  
+ Pour plus d’informations sur la sauvegarde et restauration d’objets, consultez [sauvegarde, restauration et synchronisation de bases de données de &#40;XMLA&#41;](../../multidimensional-models-scripting-language-assl-xmla/backing-up-restoring-and-synchronizing-databases-xmla.md).  
   
 ## <a name="see-also"></a>Voir aussi  
  [Élément Restore &#40;XMLA&#41;](../xml-elements-commands/restore-element-xmla.md)   

@@ -1,5 +1,5 @@
 ---
-title: Choix d’un protocole réseau | Documents Microsoft
+title: Choix d’un protocole réseau | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - configmgr-client
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - shared memory [SQL Server]
 - Named Pipes [SQL Server]
@@ -26,13 +26,13 @@ ms.assetid: 6565fb7d-b076-4447-be90-e10d0dec359a
 caps.latest.revision: 25
 author: craigg-msft
 ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 2a2b280378747917865ad0afa5e7ee2873515a8a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 864e8563eec427204f8256372a6a0d947bee9fb5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36141236"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37327479"
 ---
 # <a name="choosing-a-network-protocol"></a>Choix d'un protocole réseau
   Pour se connecter au [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] , un protocole réseau doit être activé. [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] peut traiter les demandes sur plusieurs protocoles en même temps. Les clients se connectent à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] avec un seul protocole. Si le programme client ne connaît pas le protocole sur lequel [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] écoute, configurez le client pour qu'il essaie plusieurs protocoles en séquence. Le Gestionnaire de configuration [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] vous permet d'activer, de désactiver et de configurer des protocoles réseau.  

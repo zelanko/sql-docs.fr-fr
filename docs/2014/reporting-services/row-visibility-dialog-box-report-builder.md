@@ -1,5 +1,5 @@
 ---
-title: Boîte de dialogue visibilité (Générateur de rapports) de la ligne | Documents Microsoft
+title: Ligne de la boîte de dialogue visibilité (Générateur de rapports) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - "10126"
 ms.assetid: 117fb20c-2fda-437e-bcc5-9010d6d4b53b
 caps.latest.revision: 13
-author: douglaslM
+author: maggiesmsft
 ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: b1ed0f9298810713038d722a7b2e28c9982f63ca
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 3dd8f40b00db99496d43199183ca34e95ca7dfc5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36154775"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37328820"
 ---
 # <a name="row-visibility-dialog-box-report-builder"></a>Boîte de dialogue Visibilité de ligne (Générateur de rapports)
   Utilisez la boîte de dialogue **Visibilité de ligne** pour afficher ou masquer la ligne sélectionnée lorsque le rapport est exécuté pour la première fois ou pour utiliser un autre élément de rapport pour activer/désactiver la visibilité de la ligne.  
@@ -39,7 +39,7 @@ ms.locfileid: "36154775"
  **Afficher ou masquer en fonction d’une expression**  
  Sélectionnez cette option pour faire varier la visibilité initiale à l'aide d'une expression.  
   
- Tapez une expression qui correspond à un `Boolean` valeur `True` pour masquer l’élément et `False` pour afficher l’élément. Cliquez sur le bouton **Expression** (*fx*) pour modifier l’expression.  
+ Tapez une expression qui prend la valeur d’un `Boolean` valeur `True` pour masquer l’élément et `False` pour afficher l’élément. Cliquez sur le bouton **Expression** (*fx*) pour modifier l’expression.  
   
  **Affichage peut être activé ou désactivé par cet élément de rapport**  
  Choisissez cette option pour afficher une image bascule qui permet à l'utilisateur d'afficher ou de masquer la ligne de rapport dans une visionneuse de rapports HTML.  
@@ -49,7 +49,7 @@ ms.locfileid: "36154775"
 ## <a name="see-also"></a>Voir aussi  
  [Exemples d’expressions &#40;Générateur de rapports et SSRS&#41;](report-design/expression-examples-report-builder-and-ssrs.md)   
  [Ajouter une action Développer ou Réduire à un élément &#40;Générateur de rapports et SSRS&#41;](report-design/add-an-expand-or-collapse-action-to-an-item-report-builder-and-ssrs.md)   
- [Images &#40;rapport Générateur et SSRS&#41;](report-design/images-report-builder-and-ssrs.md)   
+ [Images &#40;Générateur de rapports et SSRS&#41;](report-design/images-report-builder-and-ssrs.md)   
  [Aide du Générateur de rapports pour les boîtes de dialogue, les volets et les Assistants](../../2014/reporting-services/report-builder-help-for-dialog-boxes-panes-and-wizards.md)   
  [Boîte de dialogue Propriétés de l’image, Général &#40;Générateur de rapports et SSRS&#41;](../../2014/reporting-services/image-properties-dialog-box-general-report-builder-and-ssrs.md)  
   

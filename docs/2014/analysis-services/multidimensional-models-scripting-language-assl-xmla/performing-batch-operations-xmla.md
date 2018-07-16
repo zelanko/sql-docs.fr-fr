@@ -1,5 +1,5 @@
 ---
-title: Exécution d’opérations de traitement par lots (XMLA) | Documents Microsoft
+title: Exécution d’opérations de traitement par lots (XMLA) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
@@ -21,40 +21,40 @@ helpviewer_keywords:
 - nontransactional batches
 ms.assetid: 731c70e5-ed51-46de-bb69-cbf5aea18dda
 caps.latest.revision: 12
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 7f164ca12c1de105bcd73f9b371ff4bfe2e00182
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 186d5a0896814544f34531fe98ad88c8034ac63a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36039621"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37304589"
 ---
 # <a name="performing-batch-operations-xmla"></a>Exécution d'opérations de traitement par lot (XMLA)
-  Vous pouvez utiliser la [lot](../xmla/xml-elements-commands/batch-element-xmla.md) commande XML for Analysis (XMLA) pour exécuter plusieurs commandes XMLA à l’aide d’un seul XMLA [Execute](../xmla/xml-elements-methods-execute.md) (méthode). Vous pouvez exécuter plusieurs commandes contenues dans la commande `Batch` sous la forme d'une transaction unique ou de plusieurs transactions individuelles pour chaque commande, en série ou en parallèle. Vous pouvez également spécifier des liaisons hors ligne et autres propriétés dans le `Batch` commande pour le traitement de plusieurs [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] objets.  
+  Vous pouvez utiliser la [Batch](../xmla/xml-elements-commands/batch-element-xmla.md) commande XML for Analysis (XMLA) pour exécuter plusieurs commandes XMLA à l’aide d’un seul XMLA [Execute](../xmla/xml-elements-methods-execute.md) (méthode). Vous pouvez exécuter plusieurs commandes contenues dans la commande `Batch` sous la forme d'une transaction unique ou de plusieurs transactions individuelles pour chaque commande, en série ou en parallèle. Vous pouvez également spécifier des liaisons hors ligne et autres propriétés dans le `Batch` commande pour traiter plusieurs [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] objets.  
   
 ## <a name="running-transactional-and-nontransactional-batch-commands"></a>Exécution de commandes Batch transactionnelles et non transactionnelles  
  La commande `Batch` peut exécuter les commandes selon deux modes :  
   
  **Transactionnelle**  
- Si le `Transaction` attribut de la `Batch` commande est définie sur true, le `Batch` commande exécute toutes les commandes que contient le `Batch` dans une transaction unique : un *transactionnelle* lot.  
+ Si le `Transaction` attribut de la `Batch` du jeu de commandes sur true, le `Batch` commande exécute toutes les commandes que contient le `Batch` commande dans une transaction unique, un *transactionnelle* batch.  
   
- Si l’échec d’une commande dans un lot transactionnel, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] annule les commandes le `Batch` commande exécutée avant la commande qui a échoué et le `Batch` commande se termine immédiatement. Les commandes contenues dans la commande `Batch` dont l'exécution n'a pas encore eu lieu ne sont pas exécutées. Une fois la commande `Batch` terminée, la commande `Batch` fait état des erreurs qui se sont produites pour la commande ayant échoué.  
+ Si une commande échoue dans un lot transactionnel, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] annule les commandes le `Batch` commande exécutée avant la commande qui a échoué et le `Batch` commande se termine immédiatement. Les commandes contenues dans la commande `Batch` dont l'exécution n'a pas encore eu lieu ne sont pas exécutées. Une fois la commande `Batch` terminée, la commande `Batch` fait état des erreurs qui se sont produites pour la commande ayant échoué.  
   
  **Nontransactional**  
- Si le `Transaction` attribut est défini sur false, le `Batch` commande s’exécute chaque commande contenue par le `Batch` dans une transaction distincte — un *non transactionnel* lot. En cas d'échec d'une commande dans un lot non transactionnel, la commande `Batch` continue d'exécuter les commandes venant après la commande qui a échoué. Après avoir tenté d'exécuter toutes les `Batch` commandes contenues dans la commande `Batch`, la commande `Batch` fait état des erreurs qui se sont éventuellement produites.  
+ Si le `Transaction` attribut est défini sur false, le `Batch` commande s’exécute chaque commande contenue par le `Batch` commande dans une transaction distincte — un *non transactionnel* batch. En cas d'échec d'une commande dans un lot non transactionnel, la commande `Batch` continue d'exécuter les commandes venant après la commande qui a échoué. Après avoir tenté d'exécuter toutes les `Batch` commandes contenues dans la commande `Batch`, la commande `Batch` fait état des erreurs qui se sont éventuellement produites.  
   
  Tous les résultats retournés par les commandes contenues dans une commande `Batch` sont retournés dans l'ordre qui est le leur dans la commande `Batch`. Les résultats retournés par une commande `Batch` varient selon que la commande `Batch` est transactionnelle ou non transactionnelle.  
   
 > [!NOTE]  
->  Si un `Batch` commande contient une commande qui ne retourne pas de sortie, tels que le [verrou](../xmla/xml-elements-commands/lock-element-xmla.md) commande, et que commande s’exécute correctement, le `Batch` retourne une commande [racine](../xmla/xml-elements-properties/root-element-xmla.md) élément dans l’élément de résultats. L'élément `root` vide garantit que chaque commande contenue dans une commande `Batch` peut être mise en correspondance avec l'élément `root` approprié pour les résultats de cette commande.  
+>  Si un `Batch` commande contient une commande qui ne retourne pas de sortie, tels que le [verrou](../xmla/xml-elements-commands/lock-element-xmla.md) commande, et que commande s’exécute avec succès, le `Batch` commande retourne un vide [racine](../xmla/xml-elements-properties/root-element-xmla.md) élément dans l’élément de résultats. L'élément `root` vide garantit que chaque commande contenue dans une commande `Batch` peut être mise en correspondance avec l'élément `root` approprié pour les résultats de cette commande.  
   
 ### <a name="returning-results-from-transactional-batch-results"></a>Retour des résultats d'un lot transactionnel  
- Les résultats des commandes exécutées dans un lot transactionnel ne sont pas retournés tant que la commande `Batch` n'a pas abouti complètement. Les résultats ne sont pas retournés après l'exécution de chaque commande, car toute commande qui échoue dans un lot transactionnel entraîne l'annulation de la commande `Batch` entière et de toutes les commandes qu'elle contient. Si toutes les commandes Démarrer et s’exécute correctement, le [retourner](../xmla/xml-elements-properties/return-element-xmla.md) élément de la [ExecuteResponse](../xmla/xml-elements-objects-executeresponse.md) élément retourné par la `Execute` méthode pour le `Batch` commande contient un [résultats](../xmla/xml-elements-properties/results-element-xmla.md) élément, qui à son tour contient un `root` , élément pour chaque commande correctement exécutée contenue dans le `Batch` commande. Si la commande `Batch` contient une commande qui ne peut pas démarrer ou aboutir, la méthode `Execute` retourne une erreur SOAP pour la commande `Batch` qui contient l'erreur de la commande qui a échoué.  
+ Les résultats des commandes exécutées dans un lot transactionnel ne sont pas retournés tant que la commande `Batch` n'a pas abouti complètement. Les résultats ne sont pas retournés après l'exécution de chaque commande, car toute commande qui échoue dans un lot transactionnel entraîne l'annulation de la commande `Batch` entière et de toutes les commandes qu'elle contient. Si toutes les commandes Démarrer et exécuter avec succès, le [retourner](../xmla/xml-elements-properties/return-element-xmla.md) élément de la [ExecuteResponse](../xmla/xml-elements-objects-executeresponse.md) élément retourné par la `Execute` méthode pour le `Batch` commande contient un [résultats](../xmla/xml-elements-properties/results-element-xmla.md) élément, qui à son tour contient un `root` élément pour chaque commande correctement exécutée contenue dans le `Batch` commande. Si la commande `Batch` contient une commande qui ne peut pas démarrer ou aboutir, la méthode `Execute` retourne une erreur SOAP pour la commande `Batch` qui contient l'erreur de la commande qui a échoué.  
   
 ### <a name="returning-results-from-nontransactional-batch-results"></a>Retour des résultats d'un lot non transactionnel  
- Les résultats des commandes exécutées dans un lot non transactionnel sont retournés dans l'ordre qui est le leur dans la commande `Batch` et tels qu'ils sont retournés par chaque commande. Si, à l'intérieure de la commande `Batch`, aucune commande ne peut démarrer correctement, la méthode `Execute` retourne une erreur SOAP qui contient une erreur pour la commande `Batch`. Si au moins une commande a démarré correctement, l'élément `return` de l'élément `ExecuteResponse` retourné par la méthode `Execute` pour la commande `Batch` contient un élément `results` qui, pour sa part, contient un élément `root` pour chaque commande contenue dans la commande `Batch`. Si une ou plusieurs commandes dans un lot non transactionnel ne peut pas être démarrés ou ne se termine, le `root` élément pour la commande ayant échouée contient une [erreur](../xmla/xml-elements-properties/error-element-xmla.md) élément décrivant l’erreur.  
+ Les résultats des commandes exécutées dans un lot non transactionnel sont retournés dans l'ordre qui est le leur dans la commande `Batch` et tels qu'ils sont retournés par chaque commande. Si, à l'intérieure de la commande `Batch`, aucune commande ne peut démarrer correctement, la méthode `Execute` retourne une erreur SOAP qui contient une erreur pour la commande `Batch`. Si au moins une commande a démarré correctement, l'élément `return` de l'élément `ExecuteResponse` retourné par la méthode `Execute` pour la commande `Batch` contient un élément `results` qui, pour sa part, contient un élément `root` pour chaque commande contenue dans la commande `Batch`. Si une ou plusieurs commandes dans un lot non transactionnel ne peut pas être démarrés ou ne parvient pas à terminer, le `root` élément pour la commande ayant échouée contient un [erreur](../xmla/xml-elements-properties/error-element-xmla.md) élément décrivant l’erreur.  
   
 > [!NOTE]  
 >  Du moment où au moins une commande parvient à démarrer dans un lot non transactionnel, celui-ci est considéré comme s'étant exécuté correctement, même si chaque commande contenue dans le lot non transactionnel retourne une erreur dans les résultats de la commande `Batch`.  
@@ -113,9 +113,9 @@ ms.locfileid: "36039621"
   
 -   L'attribut `ProcessAffectedObjects` de la commande `Batch` indique si l'instance doit également traiter les objets qui nécessitent un retraitement du fait de l'inclusion d'une commande `Process` dans la commande `Batch` traitant un objet spécifié.  
   
--   Le [liaisons](../xmla/xml-elements-properties/bindings-element-xmla.md) propriété contient une collection de liaisons hors ligne utilisée par toutes les `Process` commandes dans le `Batch` commande.  
+-   Le [liaisons](../xmla/xml-elements-properties/bindings-element-xmla.md) propriété constituée une collection de liaisons hors ligne utilisée par toutes les `Process` commandes dans le `Batch` commande.  
   
--   Le [source de données](../xmla/xml-elements-properties/source-element-xmla.md) propriété contient une liaison hors ligne pour une source de données utilisée par toutes la `Process` commandes dans le `Batch` commande.  
+-   Le [DataSource](../xmla/xml-elements-properties/source-element-xmla.md) propriété contient une liaison hors ligne pour une source de données utilisée par toutes les `Process` commandes dans le `Batch` commande.  
   
 -   Le [DataSourceView](../xmla/xml-elements-properties/datasourceview-element-xmla.md) propriété contient une liaison hors ligne pour une vue de source de données utilisée par toutes les `Process` commandes dans le `Batch` commande.  
   

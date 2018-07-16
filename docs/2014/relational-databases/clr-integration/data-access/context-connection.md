@@ -1,13 +1,11 @@
 ---
-title: Connexion de contexte | Documents Microsoft
+title: Connexion de contexte | Microsoft Docs
 ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: clr
 ms.tgt_pltfrm: ''
 ms.topic: reference
 dev_langs:
@@ -20,15 +18,15 @@ helpviewer_keywords:
 - context [CLR integration]
 ms.assetid: 67dd1925-d672-4986-a85f-bce4fe832ef7
 caps.latest.revision: 13
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: a95f4c4b190f37674290588714fc3e7b0c6582a5
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: rothja
+ms.author: jroth
+manager: craigg
+ms.openlocfilehash: a75e69d8f455baaac1efb860a074727a829f5cd9
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36141819"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37349657"
 ---
 # <a name="context-connection"></a>Connexion contextuelle
   Le problème d'accès aux données interne est un scénario relativement courant. Autrement dit, vous souhaitez accéder au même serveur que celui sur lequel votre fonction ou procédure stockée CLR s'exécute. Une option consiste à créer une connexion à l'aide de `System.Data.SqlClient.SqlConnection`, en spécifiant une chaîne de connexion qui pointe sur le serveur local, et à ouvrir la connexion. Cela requiert la spécification d'informations d'identification pour se connecter. La connexion se trouve dans une autre session de base de données que la procédure stockée ou la fonction, elle peut avoir des options `SET` différentes, elle figure dans une transaction distincte, elle ne consulte pas vos tables temporaires, et ainsi de suite Si le code de votre procédure stockée managée ou de votre fonction exécute dans le processus SQL Server, la raison en est que quelqu'un s'est connecté à ce serveur et a exécuté une instruction SQL pour l'appeler. Vous souhaitez probablement que la procédure stockée ou la fonction s'exécute dans le contexte de cette connexion, avec sa transaction, ses options `SET`, et ainsi de suite. Une telle connexion est appelée connexion du contexte, ou connexion contextuelle.  
@@ -56,10 +54,10 @@ End Using
 ```  
   
 ## <a name="in-this-section"></a>Dans cette section  
- [Vs régulières. Connexions de contexte](context-connections-vs-regular-connections.md)  
+ [Connexions normales et contextuelles](context-connections-vs-regular-connections.md)  
  Décrit les différences entre les connexions régulières et les connexions contextuelles.  
   
- [Restrictions sur les connexions normales et contextuelles](context-connections-and-regular-connections-restrictions.md)  
+ [Restrictions applicables aux connexions normales et contextuelles](context-connections-and-regular-connections-restrictions.md)  
  Décrit les restrictions sur les connexions régulières et les connexions contextuelles.  
   
   
