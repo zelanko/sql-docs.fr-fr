@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - connections [Integration Services], ADO
 - connection managers [Integration Services], ADO
@@ -17,18 +17,18 @@ ms.assetid: 490418bc-5ef1-41b8-a9c8-de38aa96e0f6
 caps.latest.revision: 54
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: c6278b15b3e99808a015496dfa15b7b4b48b8724
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 434468c487d1dc758eeef10a04b8623c88abb529
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36152162"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37243049"
 ---
 # <a name="ado-connection-manager"></a>Gestionnaire de connexions ADO
   Un gestionnaire de connexions ADO permet à un package de se connecter à des objets ADO (ActiveX Data Objects), comme un recordset. Ce gestionnaire de connexions est généralement utilisé dans les tâches personnalisées écrites dans une version antérieure d’un langage comme Microsoft Visual Basic 6.0 ou dans les tâches personnalisées qui font partie d’une application existante utilisant ADO pour se connecter à une source de données.  
   
- Lorsque vous ajoutez un gestionnaire de connexions ADO à un package, [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] crée une connexion de gestionnaire qui sera converti en connexion ADO au moment de l’exécution, définit les propriétés du Gestionnaire des connexions et ajoute le Gestionnaire de connexions pour la `Connections` collection sur le package. Le `ConnectionManagerType` du Gestionnaire de connexions est définie sur `ADO`.  
+ Lorsque vous ajoutez un gestionnaire de connexions ADO à un package, [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] crée une connexion de gestionnaire qui sera converti en connexion ADO au moment de l’exécution, définit des propriétés du Gestionnaire de la connexion et ajoute le Gestionnaire de connexions à la `Connections` collection sur le package. Le `ConnectionManagerType` propriété du Gestionnaire de connexions est définie sur `ADO`.  
   
 ## <a name="troubleshooting-the-ado-connection-manager"></a>Résolution des problèmes liés au gestionnaire de connexions ADO  
  Lors de la lecture par un gestionnaire de connexions ADO, certains types de données de date [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] génèrent les résultats présentés dans le tableau suivant.  
@@ -56,11 +56,11 @@ ms.locfileid: "36152162"
   
  Pour plus d'informations sur les propriétés définissables dans le concepteur [!INCLUDE[ssIS](../../../includes/ssis-md.md)] , cliquez sur la rubrique suivante :  
   
--   [Configurer le Gestionnaire de connexions OLE DB](ole-db-connection-manager.md)  
+-   [Configurer le gestionnaire de connexions OLE DB](ole-db-connection-manager.md)  
   
- Pour plus d’informations sur la configuration d’un gestionnaire de connexions par programme, consultez <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> et [Ajout de connexions par programme](../building-packages-programmatically/adding-connections-programmatically.md).  
+ Pour plus d’informations sur la configuration d’un gestionnaire de connexions par programmation, consultez <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> et [Ajout de connexions par programmation](../building-packages-programmatically/adding-connections-programmatically.md).  
   
 ## <a name="see-also"></a>Voir aussi  
- [Services d’intégration &#40;SSIS&#41; connexions](integration-services-ssis-connections.md)  
+ [Integration Services &#40;SSIS&#41; connexions](integration-services-ssis-connections.md)  
   
   

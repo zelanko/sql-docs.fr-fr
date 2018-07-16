@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - contained database
 - database_uncontained_usage event
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - contained database, understanding
 ms.assetid: 36af59d7-ce96-4a02-8598-ffdd78cdc948
 caps.latest.revision: 35
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 622a67f232bb24af9efe9c621e86f1415866dc6c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 8c584cbb736a494ab071dbc570cfcc67bd2e5e32
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36043630"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37223669"
 ---
 # <a name="contained-databases"></a>Bases de données autonomes
   Une *base de données autonome* est une base de données qui est isolée d'autres bases de données et de l'instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] qui héberge cette base de données.  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] aide l'utilisateur à isoler sa base de données de l'instance de 4 manières différentes.  
@@ -136,7 +136,7 @@ ms.locfileid: "36043630"
 ### <a name="benefit-of-contained-database-users-with-alwayson"></a>Avantage des utilisateurs de base de données autonome avec AlwaysOn  
  En réduisant les liens à l'instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], les bases de données partiellement autonomes peuvent être utiles pendant le basculement lorsque vous utilisez [!INCLUDE[ssHADR](../../includes/sshadr-md.md)].  
   
- La création d'utilisateurs autonomes permet à l'utilisateur de se connecter directement à la base de données autonome. Il s'agit d'une fonctionnalité très importante dans les scénarios de haute disponibilité et de récupération d'urgence, notamment dans le cadre d'une solution AlwaysOn. Si les utilisateurs sont des utilisateurs à relation contenant-contenu, en cas de basculement, les personnes peuvent se connecter au serveur secondaire sans créer de connexions sur l'instance hébergeant le serveur secondaire. Ceci constitue un avantage immédiat. Pour plus d’informations, consultez [vue d’ensemble des groupes de disponibilité AlwaysOn &#40;SQL Server&#41; ](../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md) et [conditions préalables, Restrictions et recommandations pour les groupes de disponibilité AlwaysOn &#40;SQL Server&#41;] ((.. /.. / database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md).  
+ La création d'utilisateurs autonomes permet à l'utilisateur de se connecter directement à la base de données autonome. Il s'agit d'une fonctionnalité très importante dans les scénarios de haute disponibilité et de récupération d'urgence, notamment dans le cadre d'une solution AlwaysOn. Si les utilisateurs sont des utilisateurs à relation contenant-contenu, en cas de basculement, les personnes peuvent se connecter au serveur secondaire sans créer de connexions sur l'instance hébergeant le serveur secondaire. Ceci constitue un avantage immédiat. Pour plus d’informations, consultez [vue d’ensemble des groupes de disponibilité AlwaysOn &#40;SQL Server&#41; ](../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md) et [prérequis, Restrictions et recommandations pour les groupes de disponibilité AlwaysOn &#40;SQL Server&#41;] ((.. /.. / database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md).  
   
 ### <a name="initial-database-development"></a>Développement initial de la base de données  
  Étant donné qu'un développeur ne peut pas savoir où une nouvelle base de données sera déployée, diminuer les impacts environnementaux déployés sur la base de données réduit le travail et les difficultés du développeur. Dans le modèle sans relation contenant-contenu, le développeur doit prendre en considération les impacts environnementaux potentiels sur la nouvelle base de données et le nouveau programme. Toutefois, en utilisant des bases de données partiellement autonomes, les développeurs peuvent détecter les impacts au niveau de l'instance sur la base de données et les difficultés au niveau de l'instance pour le développeur.  
@@ -170,15 +170,12 @@ ms.locfileid: "36043630"
  Ce XEvent se produit chaque fois qu'une entité sans relation contenant-contenu est identifiée lors de l'exécution. Cela inclut des entités provenant du code client. Ce XEvent ne se produit que pour les entités sans relation contenant-contenu réelles. Toutefois, l'événement ne se produit qu'au moment de l'exécution. Par conséquent, toutes les entités d'utilisateur sans relation contenant-contenu que vous n'avez pas exécutées ne seront pas identifiées par ce XEvent  
   
 ## <a name="related-content"></a>Contenu associé  
- [Modification des fonctionnalités &#40;base de données de contenu&#41;](modified-features-contained-database.md)  
+ [Fonctionnalités modifiées &#40;contenus de base de données&#41;](modified-features-contained-database.md)  
   
- 
-  [Classements de base de données autonome](contained-database-collations.md)  
+ [Classements de base de données autonome](contained-database-collations.md)  
   
- 
-  [Meilleures pratiques de sécurité recommandées avec les bases de données autonomes](security-best-practices-with-contained-databases.md)  
+ [Meilleures pratiques de sécurité recommandées avec les bases de données autonomes](security-best-practices-with-contained-databases.md)  
   
- 
-  [Migrer vers une base de données partiellement autonome](migrate-to-a-partially-contained-database.md)  
+ [Migrer vers une base de données partiellement autonome](migrate-to-a-partially-contained-database.md)  
   
   

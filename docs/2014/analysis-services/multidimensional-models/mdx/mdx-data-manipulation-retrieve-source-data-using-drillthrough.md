@@ -1,5 +1,5 @@
 ---
-title: Utilisation de l’extraction pour récupérer la Source de données (MDX) | Documents Microsoft
+title: Utilisation de l’extraction pour extraire les données sources (MDX) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - DRILLTHROUGH statement
 - retrieving data
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - data retrieval [MDX]
 ms.assetid: fe0ab170-25a9-45a8-a377-f71a67f77018
 caps.latest.revision: 30
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 9869be182f398df326c0c81b7e00e869f0b3eae6
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 8b98ebd1516d2aa26fa1e3a66edebdaf99f0f181
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36038206"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37204419"
 ---
 # <a name="using-drillthrough-to-retrieve-source-data-mdx"></a>Utilisation de l'instruction DRILLTHROUGH pour récupérer des données sources (MDX)
   L’instruction MDX (Multidimensional Expressions) utilise l’instruction [DRILLTHROUGH](/sql/mdx/mdx-data-manipulation-drillthrough)pour récupérer un ensemble de lignes à partir des données sources d’une cellule d’un cube.  
@@ -41,7 +41,7 @@ ms.locfileid: "36038206"
    <Return_Columns> ::= RETURN <member or attribute> [, <member or attribute>]  
 ```  
   
- Le `SELECT` clause identifie la cellule du cube qui contient les données source doit être récupéré. Cette clause `SELECT` est identique à une instruction MDX `SELECT` ordinaire, à la différence qu'un seul membre peut être spécifié sur chaque axe dans la clause `SELECT`. Si plusieurs membres sont spécifiés sur un axe, une erreur se produit.  
+ Le `SELECT` clause identifie la cellule du cube qui contient les données sources à récupérer. Cette clause `SELECT` est identique à une instruction MDX `SELECT` ordinaire, à la différence qu'un seul membre peut être spécifié sur chaque axe dans la clause `SELECT`. Si plusieurs membres sont spécifiés sur un axe, une erreur se produit.  
   
  La syntaxe `<Max_Rows>` spécifie le nombre maximum de lignes de chaque ensemble de lignes retourné. Si le fournisseur OLE DB utilisé pour la connexion à la source de données ne prend pas en charge `DBPROP_MAXROWS`, le paramètre `<Max_Rows>` est ignoré.  
   

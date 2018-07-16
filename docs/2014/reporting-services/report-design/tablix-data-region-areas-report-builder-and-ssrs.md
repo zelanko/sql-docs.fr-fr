@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: f6c13407-2887-4287-9396-a58dba619d9b
 caps.latest.revision: 6
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: bb6cce73d7d49e091f4757c8b03e12cdc2045a86
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: df869e1dc331a16d500e95bbc711584ab7482d3a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36154531"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37244279"
 ---
 # <a name="tablix-data-region-areas-report-builder-and-ssrs"></a>Zones de région de données de tableau matriciel (Générateur de rapports et SSRS)
   Une région de données de tableau matriciel a quatre zones qui contiennent des cellules de tableau matriciel : l’angle, la zone de groupe de lignes, la zone de groupe de colonnes et le corps. Les cellules de chaque zone remplissent une fonction distincte. Les cellules ajoutées à la zone du corps du tableau matriciel permettent d'afficher des données détaillées ainsi que des données groupées. Le Générateur de rapports et le Concepteur de rapports ajoutent des cellules à la zone de groupe de lignes ou à la zone de groupe de colonnes lorsque vous créez un groupe pour afficher les valeurs d'instance de groupe. Le Générateur de rapports et le Concepteur de rapports créent des cellules d'angle de tableau matriciel lorsqu'il existe à la fois des groupes de lignes et des groupes de colonnes.  
@@ -55,6 +55,6 @@ ms.locfileid: "36154531"
  [Tables &#40;Générateur de rapports et SSRS&#41;](tables-report-builder-and-ssrs.md)   
  [Matrices &#40;Générateur de rapports et SSRS&#41;](create-a-matrix-report-builder-and-ssrs.md)   
  [Listes &#40;Générateur de rapports et SSRS&#41;](create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)   
- [Région de données de tableau matriciel &#40;rapport Générateur et SSRS&#41;](../tablix-data-region-report-builder-and-ssrs.md)  
+ [Région de données de tableau matriciel &#40;Générateur de rapports et SSRS&#41;](../tablix-data-region-report-builder-and-ssrs.md)  
   
   

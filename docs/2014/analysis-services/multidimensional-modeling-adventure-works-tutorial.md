@@ -1,5 +1,5 @@
 ---
-title: (Didacticiel Adventure Works) de modélisation multidimensionnelle | Documents Microsoft
+title: (Didacticiel Adventure Works) sur la modélisation multidimensionnelle | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - tutorials [Analysis Services]
 - Analysis Services, tutorials
 ms.assetid: db55e226-601a-4026-8651-573195555a59
 caps.latest.revision: 30
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: jhubbard
-ms.openlocfilehash: 4bb0d6712b6da853c5fffc360d0d072beb7bd2ae
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 206105b0dda4da406abf46f70f27b511dee99e0d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36141914"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37220349"
 ---
 # <a name="multidimensional-modeling-adventure-works-tutorial"></a>Modélisation multidimensionnelles (didacticiel Adventure Works)
   Didacticiel [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] . Ce didacticiel explique comment utiliser [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] pour développer et déployer un projet [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] et tous les exemples sont basés sur la société fictive [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] .  
@@ -54,16 +54,16 @@ ms.locfileid: "36141914"
   
 |Leçon|Durée estimée|  
 |------------|--------------------------------|  
-|[Leçon 1 : Définition d’une vue de Source de données au sein d’une analyse une projet de Services](lesson-1-defining-a-data-source-view-within-an-analysis-services-project.md)|15 minutes|  
-|[Leçon 2 : Définition et déploiement d’un Cube](lesson-2-defining-and-deploying-a-cube.md)|30 minutes|  
-|[Leçon 3 : Modification des mesures, des attributs et hiérarchies](lesson-3-modifying-measures-attributes-and-hierarchies.md)|45 minutes|  
-|[Leçon 4 : Définition des attributs avancés et des propriétés de Dimension](lesson-4-defining-advanced-attribute-and-dimension-properties.md)|120 minutes|  
-|[Leçon 5 : Définition des relations entre les Dimensions et les groupes de mesures](lesson-5-defining-relationships-between-dimensions-and-measure-groups.md)|45 minutes|  
-|[Leçon 6 : Définition de calculs](lesson-6-defining-calculations.md)|45 minutes|  
+|[Leçon 1 : Définition d’une vue de source de données dans un projet Analysis Services](lesson-1-defining-a-data-source-view-within-an-analysis-services-project.md)|15 minutes|  
+|[Leçon 2 : Définition et déploiement d’un cube](lesson-2-defining-and-deploying-a-cube.md)|30 minutes|  
+|[Leçon 3 : Modification des mesures, des attributs et des hiérarchies](lesson-3-modifying-measures-attributes-and-hierarchies.md)|45 minutes|  
+|[Leçon 4 : Définition des attributs avancés et des propriétés de dimension](lesson-4-defining-advanced-attribute-and-dimension-properties.md)|120 minutes|  
+|[Leçon 5 : Définition des relations entre les dimensions et les groupes de mesures](lesson-5-defining-relationships-between-dimensions-and-measure-groups.md)|45 minutes|  
+|[Leçon 6 : Définition de calculs](lesson-6-defining-calculations.md)|45 minutes|  
 |[Leçon 7 : Définition d’indicateurs de Performance clés &#40;indicateurs de performance clés&#41;](lesson-7-defining-key-performance-indicators-kpis.md)|30 minutes|  
-|[Leçon 8 : Définition des Actions](lesson-8-defining-actions.md)|30 minutes|  
-|[Leçon 9 : Définition de Perspectives et traductions](lesson-9-defining-perspectives-and-translations.md)|30 minutes|  
-|[Leçon 10 : Définition de rôles administratifs](lesson-10-defining-administrative-roles.md)|15 minutes|  
+|[Leçon 8 : Définition des actions](lesson-8-defining-actions.md)|30 minutes|  
+|[Leçon 9 : Définition de perspectives et de traductions](lesson-9-defining-perspectives-and-translations.md)|30 minutes|  
+|[Leçon 10 : Définition de rôles d’administration](lesson-10-defining-administrative-roles.md)|15 minutes|  
   
 > [!NOTE]  
 >  La base de données de cube que vous allez créer dans ce didacticiel est une version simplifiée du projet de modèle multidimensionnel [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] qui fait partie des exemples de bases de données Adventure Works disponibles en téléchargement sur le site Codeplex. La version du didacticiel de la base de données multidimensionnelle Adventure Works est simplifiée afin de se consacrer davantage aux compétences spécifiques que vous souhaitez maîtriser au plus vite. Après avoir terminé le didacticiel, explorez le projet de modèle multidimensionnel par vous même afin d'approfondir votre compréhension de la modélisation multidimensionnelle [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] .  

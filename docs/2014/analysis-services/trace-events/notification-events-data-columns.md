@@ -1,5 +1,5 @@
 ---
-title: Colonnes de données d’événements notification | Documents Microsoft
+title: Événements de notification, colonnes de données | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Notification Events event category
 ms.assetid: 0ecf06da-1586-415a-9da8-60d4c634f030
 caps.latest.revision: 29
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: d45ee223def50ee90b078cab7274a30901ac5165
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 6a436f613b39f5beb18a7dea40349ce24ded1bf5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36142579"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37204069"
 ---
 # <a name="notification-events-data-columns"></a>Colonnes de données d'événements de notification
   Les événements de notification sont des événements qui ne sont pas directement générés par les utilisateurs de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Par exemple, des notifications se déclenchent suite à la mise à jour par les utilisateurs des tables sous-jacentes pour la mise en cache proactive.  
@@ -40,7 +40,7 @@ ms.locfileid: "36142579"
 |**Nom de la colonne**|**ID de la colonne**|**Type de colonne**|**Description de la colonne**|  
 |---------------------|-------------------|---------------------|----------------------------|  
 |EventClass|0| 1|Classe d'événements utilisée pour catégoriser les événements.|  
-|EventSubclass| 1| 1|La sous-classe d'événements fournit des informations supplémentaires sur chaque classe d'événements. Paires de nom Id de sous-classe/sous-classe valides sont les suivants :<br /><br /> 0 : début de la mise en cache proactive<br />1 : fin de la mise en cache proactive<br />2 : boîte noire démarrée<br />3 : boîte noire arrêtée<br />4 : propriétés de configuration mises à jour<br />5 : trace SQL<br />6 : objet créé<br />7 : objet supprimé<br />8 : objet modifié<br />9 : début de l’interrogation de la mise en cache proactive<br />10 : fin de l’interrogation de la mise en cache proactive<br />11 : début de l’instantané de la boîte noire<br />12 : fin de l’instantané de la boîte noire<br />13 : mise en cache proactive : objet notifiable mis à jour<br />14 : traitement différé : début du traitement<br />15 : traitement différé : traitement terminé<br />16 : début de l’événement SessionOpened<br />17 : fin de l’événement SessionOpened<br />18 : début de l’événement SessionClosing<br />19 : fin de l’événement SessionClosing<br />20 : début de l’événement CubeOpened<br />21 : fin de l’événement CubeOpened<br />22 : début de l’événement CubeClosing<br />23 : fin de l’événement CubeClosing<br />24 : arrêt de transaction demandé|  
+|EventSubclass| 1| 1|La sous-classe d'événements fournit des informations supplémentaires sur chaque classe d'événements. Les éléments suivants sont des paires de nom de sous-classe Id/sous-classe valide :<br /><br /> 0 : début de la mise en cache proactive<br />1 : fin de la mise en cache proactive<br />2 : boîte noire démarrée<br />3 : boîte noire arrêtée<br />4 : propriétés de configuration mises à jour<br />5 : trace SQL<br />6 : objet créé<br />7 : objet supprimé<br />8 : objet modifié<br />9 : début de l’interrogation de la mise en cache proactive<br />10 : fin de l’interrogation de la mise en cache proactive<br />11 : début de l’instantané de la boîte noire<br />12 : fin de l’instantané de la boîte noire<br />13 : mise en cache proactive : objet notifiable mis à jour<br />14 : traitement différé : début du traitement<br />15 : traitement différé : traitement terminé<br />16 : début de l’événement SessionOpened<br />17 : fin de l’événement SessionOpened<br />18 : début de l’événement SessionClosing<br />19 : fin de l’événement SessionClosing<br />20 : début de l’événement CubeOpened<br />21 : fin de l’événement CubeOpened<br />22 : début de l’événement CubeClosing<br />23 : fin de l’événement CubeClosing<br />24 : arrêt de transaction demandé|  
 |CurrentTime|2|5|Contient l'heure actuelle de l'événement de notification, le cas échéant. Pour le filtrage, les formats attendus sont « YYYY-MM-DD » et « YYYY-MM-DD HH:MM:SS ».|  
 |StartTime|3|5|Contient l'heure de début de l'événement, le cas échéant. Pour le filtrage, les formats attendus sont « YYYY-MM-DD » et « YYYY-MM-DD HH:MM:SS ».|  
 |EndTime|4|5|Contient l'heure de fin de l'événement. Cette colonne n'est pas remplie pour les classes d'événements de démarrage, comme SQL:BatchStarting ou SP:Starting. Pour le filtrage, les formats attendus sont « YYYY-MM-DD » et « YYYY-MM-DD HH:MM:SS ».|  

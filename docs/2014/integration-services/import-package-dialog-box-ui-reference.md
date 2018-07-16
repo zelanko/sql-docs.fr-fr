@@ -1,5 +1,5 @@
 ---
-title: Importer la référence de l’interface utilisateur de la boîte de dialogue Package | Documents Microsoft
+title: Importer la référence de l’interface utilisateur de la boîte de dialogue Package | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.dtsserver.importpackage.f1
 helpviewer_keywords:
 - Import Package dialog box
 ms.assetid: 0e5fb127-c7ff-4dfa-b90e-d9bcf0ce763b
 caps.latest.revision: 18
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: bc1c4ab12c5617d8c60e898587b664f552709299
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: e34f7c697df4b7c9ba183adfdf71753e47bf6619
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36153050"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37245559"
 ---
 # <a name="import-package-dialog-box-ui-reference"></a>Référence de l'interface utilisateur de la boîte de dialogue Importer un package
   Utilisez la boîte de dialogue **Importer un package**, disponible dans [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)], pour importer un package [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] et pour définir ou modifier son niveau de protection.  
@@ -66,7 +66,7 @@ ms.locfileid: "36153050"
  Cliquez sur le bouton Parcourir **(…)** et, dans la boîte de dialogue **Niveau de protection du package** , mettez à jour le niveau de protection. Pour plus d’informations, consultez [Boîte de dialogue Niveau de protection du package](../../2014/integration-services/package-and-project-protection-level-dialog-box.md).  
   
 ## <a name="see-also"></a>Voir aussi  
- [Enregistrer la copie du Package](../../2014/integration-services/save-copy-of-package.md)   
+ [Enregistrer une copie du Package](../../2014/integration-services/save-copy-of-package.md)   
  [Exporter la référence de l’interface utilisateur de la boîte de dialogue Package](../../2014/integration-services/export-package-dialog-box-ui-reference.md)   
  [Enregistrer des packages](save-packages.md)   
  [Importer et exporter des Packages &#40;Service SSIS&#41;](../../2014/integration-services/import-and-export-packages-ssis-service.md)  

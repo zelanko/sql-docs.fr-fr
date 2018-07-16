@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.maint.maintplanproperties.integrity.f1
 - sql12.swb.maint.integrity.f1
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - Check Database Integrity Task dialog box
 ms.assetid: 3534494a-5dfe-4738-b49a-e7fabd731c47
 caps.latest.revision: 21
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 2e0322b1bff16bea070460263b50ab46fd293c76
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 6f232b12ff76f933f1d5a0a4c64632ddefc5e697
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36039743"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37195409"
 ---
 # <a name="check-database-integrity-task-maintenance-plan"></a>Tâche Vérifier l'intégrité de la base de données (Plan de maintenance)
   Utilisez la boîte de dialogue **Tâche Vérifier l’intégrité de la base de données** pour vérifier l’intégrité d’allocation et de structure des tables utilisateur et système et des index de la base de données, en exécutant l’instruction `DBCC CHECKDB`[!INCLUDE[tsql](../../includes/tsql-md.md)] . L'exécution de `DBCC` garantit que tous les problèmes d'intégrité de la base de données seront rapportés, ce qui permet de les signaler plus tard à l'administrateur système ou au propriétaire de la base de données.  

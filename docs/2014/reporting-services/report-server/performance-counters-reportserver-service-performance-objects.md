@@ -1,5 +1,5 @@
 ---
-title: 'Compteurs de performance pour les objets de Performance ReportServer : service et reportserversharepoint : service | Documents Microsoft'
+title: 'Compteurs de performance pour les objets de Performance ReportServer : service et reportserversharepoint : service | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Report Server service, performance counters
 ms.assetid: 2bcacab2-3a4f-4aae-b123-19d756b9b9ed
 caps.latest.revision: 23
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 43e051ae17b406021092af68767ff3b196c2f250
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: c0573346427258d9b79188852c8d6e13af1cb8d1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36042385"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37238389"
 ---
 # <a name="performance-counters-for-the-reportserverservice--and-reportserversharepointservice-performance-objects"></a>Performance Counters for the ReportServer:Service  and ReportServerSharePoint:Service Performance Objects
   Cette rubrique décrit les compteurs de performance pour les objets de performance [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] suivants :  
@@ -48,7 +48,7 @@ ms.locfileid: "36042385"
 ##  <a name="bkmk_ReportServer"></a> ReportServer:compteurs de performance de service (serveur de rapports en mode natif)  
  L'objet de performance `ReportServer:Service` inclut une collection de compteurs utilisée pour suivre les événements liés au protocole HTTP et les événements relatifs à la mémoire pour une instance du serveur de rapports. Cet objet de performance apparaît une fois pour chaque [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] instance sur l’ordinateur et vous pouvez ajouter ou supprimer des compteurs de l’objet de performance pour chaque instance. Les compteurs de l'instance par défaut apparaissent avec le format `ReportServer:Service`. Compteurs pour les instances nommées apparaissent au format `ReportServer$<` *nom_instance*`>:Service`.  
   
- Le `ReportServer:Service` objet de performance était nouvelle dans [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)], et il fournit un sous-ensemble des compteurs qui étaient inclus avec Internet Information Services (IIS) et [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] dans les versions précédentes de [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]. Ces nouveaux compteurs sont spécifiques à [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)], et ils suivent les événements liés à HTTP pour le serveur de rapports, comme les requêtes, les connexions et les tentatives d'ouverture de session. En outre, cet objet de performance inclut des compteurs pour suivre les événements de gestion de la mémoire.  
+ Le `ReportServer:Service` objet de performance est une nouveauté de [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)], et il fournit un sous-ensemble des compteurs qui étaient inclus avec les Services Internet (IIS) et [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] dans les versions précédentes de [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]. Ces nouveaux compteurs sont spécifiques à [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)], et ils suivent les événements liés à HTTP pour le serveur de rapports, comme les requêtes, les connexions et les tentatives d'ouverture de session. En outre, cet objet de performance inclut des compteurs pour suivre les événements de gestion de la mémoire.  
   
  Le tableau suivant répertorie les compteurs inclus dans le `ReportServer:Service` objet de performance.  
   
@@ -105,8 +105,8 @@ ms.locfileid: "36042385"
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Analyse des performances du serveur de rapports](monitoring-report-server-performance.md)   
- [Compteurs de performance pour le Service Web MSRS 2014 et les objets de Performance Service Windows MSRS 2014 &#40;en Mode natif&#41;](../report-server/performance-counters-msrs-2011-web-service-performance-objects.md)   
- [Compteurs de performance pour les objets de Performance MSRS 2014 Windows Service SharePoint Mode MSRS 2014 Web Service SharePoint Mode &#40;en Mode SharePoint&#41;]... / performance-counters-msrs-2011-sharepoint-mode-performance-objects.md)  
+ [Surveillance des performances du serveur de rapports](monitoring-report-server-performance.md)   
+ [Compteurs de performance pour le Service Web MSRS 2014 et les objets de Performance Service MSRS 2014 Windows &#40;en Mode natif&#41;](../report-server/performance-counters-msrs-2011-web-service-performance-objects.md)   
+ [Des compteurs de performance pour les objets de Performance MSRS 2014 Windows Service SharePoint Mode MSRS 2014 Web Service SharePoint Mode &#40;Mode SharePoint&#41;]... / performance-counters-msrs-2011-sharepoint-mode-performance-objects.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Élément ScriptCacheProcessingMode (ASSL) | Documents Microsoft
+title: Élément ScriptCacheProcessingMode (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - ScriptCacheProcessingMode element
 ms.assetid: 95c0723c-69a4-43e7-b743-f712180a7681
 caps.latest.revision: 33
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 0566ea0411eb3f6574d03e738017d8ca6a5bdf2f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: de4bac4bfbfa0ab7a6471f107c594194023292a9
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36155124"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37253071"
 ---
 # <a name="scriptcacheprocessingmode-element-assl"></a>Élément ScriptCacheProcessingMode (ASSL)
   Indique si le serveur doit construire le cache des scripts au cours du traitement ou après celui-ci.  
@@ -69,9 +69,9 @@ ms.locfileid: "36155124"
 |*Régulière*|Le serveur construit le cache des scripts au cours du traitement.|  
 |*Différé*|Le serveur construit le cache des scripts après le traitement.|  
   
- L’énumération qui correspond aux valeurs autorisées pour `ScriptCacheProcessingMode` dans l’objet d’objets AMO (Analysis Management) est modèle <xref:Microsoft.AnalysisServices.ScriptCacheProcessingMode>.  
+ L’énumération qui correspond aux valeurs autorisées pour `ScriptCacheProcessingMode` dans l’objet d’objets AMO (Analysis Management) modèle est <xref:Microsoft.AnalysisServices.ScriptCacheProcessingMode>.  
   
- L’élément qui correspond au parent de `ScriptCacheProcessingMode` dans l’objet d’objets AMO (Analysis Management) est modèle <xref:Microsoft.AnalysisServices.Cube>.  
+ L’élément qui correspond au parent de `ScriptCacheProcessingMode` dans l’objet d’objets AMO (Analysis Management) modèle est <xref:Microsoft.AnalysisServices.Cube>.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Propriétés &#40;ASSL&#41;](properties-assl.md)  

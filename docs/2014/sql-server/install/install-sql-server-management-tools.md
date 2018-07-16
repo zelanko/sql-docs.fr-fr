@@ -1,5 +1,5 @@
 ---
-title: Installer les outils d’administration SQL Server | Documents Microsoft
+title: Installer les outils d’administration SQL Server | Microsoft Docs
 ms.custom: ''
 ms.date: 05/24/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server Management Tools
 ms.assetid: af68d59a-a04d-4f23-9967-ad4ee2e63381
 caps.latest.revision: 17
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 27ec5095c487df430534596a3610cf1420240380
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: f7bc2bac998a7624bcf010d5ade7a03a3ed778c1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36039450"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37206569"
 ---
 # <a name="install-sql-server-management-tools"></a>Installer les outils d'administration SQL Server
   Les outils d'administration [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] incluent les composants suivants :  
@@ -34,7 +34,7 @@ ms.locfileid: "36039450"
   
 -   Outils d'invite de commandes, tels que sqlcmd.exe et osql.exe.  
   
--   [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] les compléments pour [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]  
+-   [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] compléments à [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]  
   
  Il est à noter que [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] est une option séparée pendant l'installation de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   

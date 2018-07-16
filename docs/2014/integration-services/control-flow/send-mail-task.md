@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.sendmailtask.f1
 helpviewer_keywords:
@@ -21,13 +21,13 @@ ms.assetid: fe0b7cbc-fe8e-4fe2-95b4-2953efff5869
 caps.latest.revision: 51
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: c3ba1d095dd7aed4090e053368897bd6accc1f6d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 21db77ad7f226c78f31adaef80162b445129249e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36143537"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37257295"
 ---
 # <a name="send-mail-task"></a>tache Envoyer un message
   La tâche Envoyer un message envoie un message électronique. La tâche Envoyer un message permet à un package d'envoyer des messages en cas de réussite ou d'échec des tâches du flux de travail du package, ou d'envoyer des messages en réponse à un événement déclenché par le package au moment de l'exécution. Par exemple, la tâche peut notifier à un administrateur de base de données la réussite ou l'échec de la tâche de sauvegarde de base de données.  

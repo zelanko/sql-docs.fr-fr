@@ -1,5 +1,5 @@
 ---
-title: Éditeur de Source OData (Page colonnes) | Documents Microsoft
+title: Éditeur de Source OData (Page colonnes) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - Sql12.dts.designer.odatasource.columns.f1
 ms.assetid: d640e9e4-86c3-4cb7-a6c2-e82624303696
 caps.latest.revision: 5
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 3c9e2f45198a063282fcbd5adcff8a42dcc0887f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: cb8c3e5598a2b1f5faa8f7f8259748432e0adf38
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36155266"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37254941"
 ---
 # <a name="odata-source-editor-columns-page"></a>Éditeur de source OData (page Colonnes)
   Utilisez la page **Colonnes** de la boîte de dialogue **Éditeur de source OData** pour sélectionner des colonnes externes (source) à inclure dans la sortie et pour les mapper aux colonnes de la sortie.  

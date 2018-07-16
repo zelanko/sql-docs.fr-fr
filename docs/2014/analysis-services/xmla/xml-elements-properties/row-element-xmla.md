@@ -1,5 +1,5 @@
 ---
-title: Élément Row (XMLA) | Documents Microsoft
+title: Élément Row (XMLA) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -24,18 +24,18 @@ helpviewer_keywords:
 - row element
 ms.assetid: 4d9977a0-c396-44c7-9fd4-97f4c3d643aa
 caps.latest.revision: 13
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: de6460bc6d51c4205752b7db186412e420438145
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: 17bc202bb7e1d2c0701b478409b02f4bbb160958
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36043924"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37223989"
 ---
 # <a name="row-element-xmla"></a>Élément row (XMLA)
-  Contient une ligne unique de données pour un [racine](root-element-xmla.md) élément qui contient les données sous forme de tableau retournées par une [Discover](../xml-elements-methods-discover.md) ou [Execute](../xml-elements-methods-execute.md) appel de méthode.  
+  Contient une seule ligne de données pour un [racine](root-element-xmla.md) élément qui contient les données sous forme de tableau retournées par une [Discover](../xml-elements-methods-discover.md) ou [Execute](../xml-elements-methods-execute.md) appel de méthode.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -99,7 +99,7 @@ ms.locfileid: "36043924"
 </row>  
 ```  
   
- Pour plus d’informations sur la colonne d’affectation de noms et des informations de schéma pour les données tabulaires, consultez [Type de données d’ensemble de lignes &#40;XMLA&#41;](../xml-data-types/rowset-data-type-xmla.md).  
+ Pour plus d’informations sur l’appellation de colonne et des informations de schéma pour les données tabulaires, consultez [Type de données Rowset &#40;XMLA&#41;](../xml-data-types/rowset-data-type-xmla.md).  
   
 ## <a name="see-also"></a>Voir aussi  
  [Propriétés &#40;XMLA&#41;](xml-elements-properties.md)  

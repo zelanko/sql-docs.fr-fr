@@ -1,14 +1,13 @@
 ---
-title: Progression de la Page (Assistants de groupe de disponibilité AlwaysOn) | Documents Microsoft
+title: Page (Assistants de groupe de disponibilité AlwaysOn) progression | Microsoft Docs
 ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.addreplicawizard.progress.f1
 - sql12.swb.newagwizard.progress.f1
@@ -20,17 +19,17 @@ f1_keywords:
 - sql12.swb.failoverwixard.progress.f1
 ms.assetid: bd3b0306-8384-4120-a1c9-03825f0ae26a
 caps.latest.revision: 11
-author: MikeRayMSFT
-ms.author: mikeray
-manager: jhubbard
-ms.openlocfilehash: 92a1adb3921b8daf0a2692ad840bf30af6561cf8
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: de5c8d19326015da6371cc3796c752d9f80f5842
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36153091"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37217889"
 ---
-# <a name="progress-page-alwayson-availability-group-wizards"></a>Page de progression (Assistants de groupe de disponibilité AlwaysOn)
+# <a name="progress-page-alwayson-availability-group-wizards"></a>Page progression (Assistants de groupe de disponibilité AlwaysOn)
   Utilisez cette boîte de dialogue pour afficher la progression d'un Assistant [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] que vous exécutez dans [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. La barre de progression indique la progression relative des étapes que l'Assistant effectue.  
   
 ## <a name="uielement-list"></a>Liste des éléments de l'interface utilisateur  

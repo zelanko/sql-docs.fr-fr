@@ -1,5 +1,5 @@
 ---
-title: Bases de données de modèle multidimensionnel (SSAS) | Documents Microsoft
+title: Bases de données de modèle multidimensionnel (SSAS) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server Management Studio [Analysis Services], databases
 - SQL Server Analysis Services, databases
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - databases [Analysis Services]
 ms.assetid: 78b2f22a-b7bd-4a2b-b6fc-0bff4d2b3168
 caps.latest.revision: 55
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 97d7364cd9a0fe7901e2357f916d8683dc3b147c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 08a5d383d9c46b01c52e1fc888c8d692470fd619
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36043253"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37241679"
 ---
 # <a name="multidimensional-model-databases-ssas"></a>Bases de données de modèle multidimensionnel (SSAS)
   Une base de données [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] est une collection de sources de données, de vues de source de données, de cubes, de dimensions et de rôles. Éventuellement, une base de données [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] peut inclure des structures pour l'exploration de données et des assemblys personnalisés qui permettent d'ajouter des fonctions définies par l'utilisateur à la base de données.  
@@ -64,7 +64,7 @@ ms.locfileid: "36043253"
  [Basculer une base de données Analysis Services entre les modes ReadOnly et ReadWrite](switch-an-analysis-services-database-between-readonly-and-readwrite-modes.md)  
   
 ## <a name="see-also"></a>Voir aussi  
- [Se connecter en Mode en ligne une base de données Analysis Services](connect-in-online-mode-to-an-analysis-services-database.md)   
+ [Se connecter en Mode en ligne à une base de données Analysis Services](connect-in-online-mode-to-an-analysis-services-database.md)   
  [Créer un projet Analysis Services &#40;SSDT&#41;](create-an-analysis-services-project-ssdt.md)   
  [Interrogation de données multidimensionnelles avec MDX](mdx/querying-multidimensional-data-with-mdx.md)  
   

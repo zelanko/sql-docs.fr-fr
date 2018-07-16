@@ -1,5 +1,5 @@
 ---
-title: Enregistrer les opérations dans Analysis Services | Documents Microsoft
+title: Journalisation des opérations dans Analysis Services | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: aa1db060-95dc-4198-8aeb-cffdda44b140
 caps.latest.revision: 10
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 2748496ead805834f0b6051f159dcca551b0b178
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 332f1ff5bff2379f3d11fa61bf3423a9d8e06347
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36153352"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37228369"
 ---
 # <a name="log-operations-in-analysis-services"></a>Enregistrer les opérations dans Analysis Services
   Une instance Analysis Services enregistre les notifications, erreurs et avertissements du serveur dans le fichier msmdsrv.log (un pour chaque instance que vous installez). Les administrateurs se réfèrent à ce fichier journal pour en savoir plus sur les événements ordinaires et extraordinaires. Dans les versions récentes, la journalisation a été améliorée pour inclure davantage d'informations. Désormais, les enregistrements de journaux incluent des informations sur la version et l'édition du produit, ainsi que sur des événements du processeur, de la mémoire, de la connectivité et de blocage. L'article [Améliorations apportées à la journalisation](http://support.microsoft.com/kb/2965035)fournit une liste de tous les changements.  
@@ -59,14 +59,14 @@ ms.locfileid: "36153352"
   
  Dans la mesure du possible, nous vous suggérons de définir des propriétés de journalisation dans la page de propriétés du serveur de Management Studio. Toutefois, dans certains cas, vous devez modifier le fichier msmdsrv.ini directement pour configurer les paramètres qui ne sont pas visibles dans les outils d'administration.  
   
- ![Section du fichier de configuration indiquant des paramètres de journal](../media/ssas-logfilesettings.png "Section du fichier de configuration indiquant des paramètres de journal")  
+ ![Section du fichier de configuration affichant les paramètres du journal](../media/ssas-logfilesettings.png "Section du fichier de configuration affichant les paramètres du journal")  
   
 ##  <a name="bkmk_msmdsrv"></a> Fichier journal du service MSMDSRV  
  Analysis Services enregistre les opérations du serveur dans le fichier msmdsrv.log, un par instance, qui se trouve dans \program files\Microsoft SQL Server\\<instance\>\Olap\Log.  
   
  Ce fichier journal est vidé à chaque redémarrage du service. Dans les versions précédentes, les administrateurs redémarraient parfois le service dans le seul but de vider le fichier journal avant que sa taille ne devienne ingérable. Cela n'est plus nécessaire. Les paramètres de configuration, introduits dans SQL Server 2012 SP2 et versions ultérieures, vous permettent de contrôler la taille du fichier journal et son historique :  
   
--   `MaxFileSizeMB` spécifie la taille maximale (en mégaoctets) du fichier journal. La valeur par défaut est 256. Une valeur de remplacement valide doit être un entier positif. Lorsque `MaxFileSizeMB` est atteinte, Analysis Services renomme le fichier actuel msmdsrv {horodateur_actuel} .log et démarre un nouveau fichier msmdsrv.log.  
+-   `MaxFileSizeMB` spécifie la taille maximale (en mégaoctets) du fichier journal. La valeur par défaut est 256. Une valeur de remplacement valide doit être un entier positif. Lorsque `MaxFileSizeMB` est atteinte, Analysis Services renomme le fichier actuel msmdsrv {horodateur_actuel} .log et crée un nouveau fichier msmdsrv.log.  
   
 -   `MaxNumberFiles` Spécifie la conservation des anciens fichiers journaux. La valeur par défaut est 0 (option désactivée). Vous pouvez la modifier et affecter un entier positif pour conserver les versions du fichier journal. Lorsque `MaxNumberFiles` est atteinte, Analysis Services supprime le fichier avec l’horodateur le plus ancien dans son nom.  
   
@@ -121,7 +121,7 @@ ms.locfileid: "36153352"
   
  Les paramètres du journal des requêtes sont applicables à l'échelle du serveur. Les paramètres que vous spécifiez sont utilisés par toutes les bases de données en cours d'exécution sur ce serveur.  
   
- ![Interrogation des paramètres de journal dans Management Studio](../media/ssas-querylogsettings.png "paramètres du journal des requêtes dans Management Studio")  
+ ![Interroger les paramètres de journal dans Management Studio](../media/ssas-querylogsettings.png "paramètres de journal de requête dans Management Studio")  
   
  Une fois les paramètres de configuration spécifiés, exécutez une requête MDX à plusieurs reprises. Si l'échantillonnage est défini sur 10, exécutez la requête 11 fois. Vérifiez que la table est créée. Dans Management Studio, connectez-vous au moteur de base de données relationnelle, ouvrez le dossier de base de données, ouvrez le dossier **Tables** et vérifiez que **OlapQueryLog** existe. Si la table n'est pas visible immédiatement, actualisez le dossier pour faire apparaître les modifications apportées à son contenu.  
   
@@ -154,7 +154,7 @@ ms.locfileid: "36153352"
   
  Sauf instruction contraire fournie par le support Microsoft, la plupart des administrateurs utilisent les paramètres par défaut. Cet article de base de connaissances est ancien, mais il fournit toujours des instructions sur la configuration des fichiers de vidage : [Comment faire pour configurer SQL Server 2005 Analysis Services pour générer des fichiers de vidage de mémoire](http://support.microsoft.com/kb/919711).  
   
- Le paramètre le plus susceptibles d’être modifiés de configuration est la `CreateAndSendCrashReports` paramètre utilisé pour déterminer si un fichier de vidage de mémoire sera généré.  
+ Le paramètre le plus susceptibles d’être modifiés de configuration est le `CreateAndSendCrashReports` paramètre utilisé pour déterminer si un fichier de vidage de mémoire sera généré.  
   
 |Valeur|Description|  
 |-----------|-----------------|  
@@ -164,7 +164,7 @@ ms.locfileid: "36153352"
   
  `CrashReportsFolder` est l'emplacement des fichiers de vidage. Par défaut, un fichier .mdmp et les enregistrements de journaux associés se trouvent dans le dossier \Olap\Log.  
   
- `SQLDumperFlagsOn` est utilisé pour générer un vidage complet. Par défaut, les vidages complets ne sont pas activés. Vous pouvez définir cette propriété `0x34`.  
+ `SQLDumperFlagsOn` est utilisé pour générer un vidage complet. Par défaut, les vidages complets ne sont pas activés. Vous pouvez définir cette propriété sur `0x34`.  
   
  Les liens suivants fournissent des explications plus détaillées :  
   

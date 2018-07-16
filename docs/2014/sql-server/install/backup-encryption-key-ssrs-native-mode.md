@@ -1,5 +1,5 @@
 ---
-title: Sauvegarder la clé de chiffrement (SSRS en Mode natif) | Documents Microsoft
+title: Sauvegarder la clé de chiffrement (SSRS en Mode natif) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,27 +8,27 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - SQL12.rsconfigtool.backupencryptionkey.F1
 ms.assetid: eb8c82be-323b-4d86-ab10-c1bf69a4abe3
 caps.latest.revision: 6
 author: markingmyname
 ms.author: maghan
-manager: jhubbard
-ms.openlocfilehash: a59510ae92160286983f4fa225fad8e3a4cb6af0
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 89d5ffa496220bc14b963ebbad08b89b919eec3d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36042155"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37191240"
 ---
 # <a name="backup-encryption-key-ssrs-native-mode"></a>Sauvegarder la clé de chiffrement (SSRS en mode natif)
-  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] utilise une clé de chiffrement pour sécuriser les données sensibles stockées dans la base de données du serveur de rapports. La possession d'une sauvegarde de cette clé est essentielle pour garantir l'accès continu aux chaînes de connexion et aux informations d'identification chiffrées. Vous devez avoir une copie de sauvegarde de cette clé si vous déplacez la base de données du serveur de rapports vers un autre ordinateur ou si vous modifiez le nom d'utilisateur ou le mot de passe du compte de service Report Server. Ces deux opérations nécessitent la restauration de la clé à partir d'une copie de sauvegarde que vous avez créée précédemment.  
+  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] utilise une clé de chiffrement pour sécuriser les données sensibles stockées dans la base de données de serveur de rapports. La possession d'une sauvegarde de cette clé est essentielle pour garantir l'accès continu aux chaînes de connexion et aux informations d'identification chiffrées. Vous devez avoir une copie de sauvegarde de cette clé si vous déplacez la base de données du serveur de rapports vers un autre ordinateur ou si vous modifiez le nom d'utilisateur ou le mot de passe du compte de service Report Server. Ces deux opérations nécessitent la restauration de la clé à partir d'une copie de sauvegarde que vous avez créée précédemment.  
   
  [!INCLUDE[applies](../../includes/applies-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] en mode natif.  
   
- Pour ouvrir la boîte de dialogue clé de chiffrement de sauvegarde, cliquez sur **clés de chiffrement** dans le volet de navigation de la [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Configuration Manager, puis cliquez sur **sauvegarde**. Cette boîte de dialogue apparaît également lorsque vous mettez à jour le compte de service à l’aide de la page compte de Service dans le [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Configuration Manager. Pour plus d’informations sur la [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Configuration Manager, consultez [Gestionnaire de Configuration de Reporting Services &#40;en Mode natif&#41;](../../../2014/sql-server/install/reporting-services-configuration-manager-native-mode.md).  
+ Pour ouvrir la boîte de dialogue clé de chiffrement de sauvegarde, cliquez sur **clés de chiffrement** dans le volet de navigation de la [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Configuration Manager, puis cliquez sur **sauvegarde**. Cette boîte de dialogue s’affiche également lorsque vous mettez à jour le compte de service à l’aide de la page compte de Service dans le [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Configuration Manager. Pour plus d’informations sur la [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Configuration Manager, consultez [Gestionnaire de Configuration de Reporting Services &#40;en Mode natif&#41;](../../../2014/sql-server/install/reporting-services-configuration-manager-native-mode.md).  
   
 ## <a name="options"></a>Options  
  **Emplacement du fichier**  

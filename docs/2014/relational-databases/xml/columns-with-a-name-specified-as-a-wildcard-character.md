@@ -8,23 +8,23 @@ ms.suite: ''
 ms.technology:
 - dbe-xml
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - names [SQL Server], columns with
 ms.assetid: d9551df1-5bb4-4c0b-880a-5bb049834884
 caps.latest.revision: 10
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 6245d194882e680cfab4841ac5a4f307e58510f9
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 298eebb3066f7ef7b6eeee3db118d715d26ba443
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36042626"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37218919"
 ---
 # <a name="columns-with-a-name-specified-as-a-wildcard-character"></a>Colonnes avec un nom spécifié sous la forme d'un caractère générique
-  Si le nom de colonne spécifié est un caractère générique (\*), le contenu de la colonne concernée est inséré comme si aucun nom de colonne n’était spécifié. Si cette colonne est non -`xml` colonne de type, le contenu de la colonne est inséré comme un nœud de texte, comme indiqué dans l’exemple suivant :  
+  Si le nom de colonne spécifié est un caractère générique (\*), le contenu de la colonne concernée est inséré comme si aucun nom de colonne n’était spécifié. Si cette colonne est non -`xml` colonne de type, le contenu de la colonne est inséré comme un nœud de texte, comme illustré dans l’exemple suivant :  
   
 ```  
 USE AdventureWorks2012;  

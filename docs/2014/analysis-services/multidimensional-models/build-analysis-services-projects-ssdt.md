@@ -1,5 +1,5 @@
 ---
-title: Générer des projets Analysis Services (SSDT) | Documents Microsoft
+title: Générer des projets Analysis Services (SSDT) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - projects [Analysis Services], building
 - Business Intelligence Development Studio, project building [Analysis Services]
 ms.assetid: caac03cb-b2b4-4652-8913-3dd39c4b0127
 caps.latest.revision: 32
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 697a550dccaf5e89414825efaa137ce146d52cf0
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 85e3b552234ff34333b8566bdb741b28f2e56d47
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36044561"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37196169"
 ---
 # <a name="build-analysis-services-projects-ssdt"></a>Générer des projets Analysis Services (SSDT)
   Dans [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], la procédure de génération d’un projet [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] est semblable à celle que vous suivez pour générer un projet de programmation dans Visual Studio. Lorsque vous générez le projet, un ensemble de fichiers XML est créé dans le répertoire de sortie. Ces fichiers XML utilisent le langage ASSL (Analysis Services Scripting Language), qui correspond au dialecte XML utilisé par les applications clientes telles que [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] et [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] pour communiquer avec une instance d' [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] afin de créer ou de modifier des objets [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Ils permettent de déployer des définitions d’objets [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] d’un projet [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] dans une instance spécifique d’ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .  
@@ -57,7 +57,7 @@ ms.locfileid: "36044561"
 |-----------------------------|-----------------|  
 |\<Nom de configuration > \LastBuilt.xml|Contient le cachet temporel et le code de hachage qui identifient la dernière fois où le projet [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] a été généré.|  
   
- Ces fichiers XML ne contiennent pas \<Create > et \<Alter > balises, qui sont créées lors du déploiement.  
+ Ces fichiers XML ne contiennent pas \<créer > et \<Alter > balises, qui sont créées au cours du déploiement.  
   
  Les assemblys référencés (à l'exception des assembly système standard et [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ) sont également copiés dans le répertoire de sortie. S'il existe des références à d'autres projets d'une solution, ces projets sont créés en premier lieu, à l'aide des dépendances de génération et de configuration du projet approprié établies par les références au projet, puis copiées dans le dossier de sortie du projet.  
   

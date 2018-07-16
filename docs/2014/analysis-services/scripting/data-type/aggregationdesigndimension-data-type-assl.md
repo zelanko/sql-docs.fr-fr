@@ -1,5 +1,5 @@
 ---
-title: Type de données AggregationDesignDimension (ASSL) | Documents Microsoft
+title: Type de données AggregationDesignDimension (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - AggregationDesignDimension data type
 ms.assetid: 06a0d418-014c-4f40-a63a-5cfeee3f6a41
 caps.latest.revision: 38
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 0828fb652833b84948552ffe1802af77e0d1e83c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 74a28002d7074ad58c044b4af57310c22518a87d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36042096"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37247249"
 ---
 # <a name="aggregationdesigndimension-data-type-assl"></a>Type de données AggregationDesignDimension (ASSL)
   Définit un type de données primitif qui représente la relation entre une dimension de cube et un [AggregationDesign](../objects/aggregationdesign-element-assl.md) élément.  
@@ -66,6 +66,6 @@ ms.locfileid: "36042096"
   
 ## <a name="see-also"></a>Voir aussi  
  [Élément AggregationDesign &#40;ASSL&#41;](../objects/aggregationdesign-element-assl.md)   
- [Types de données de script langage XML Analysis Services &#40;ASSL&#41;](analysis-services-scripting-language-xml-data-types-assl.md)  
+ [Types Analysis Services Scripting Language XML données &#40;ASSL&#41;](analysis-services-scripting-language-xml-data-types-assl.md)  
   
   

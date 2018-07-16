@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - tracking data changes [SQL Server]
 - change tracking [SQL Server], overhead
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - change tracking [SQL Server], managing
 ms.assetid: 94a8d361-e897-4d6d-9a8f-1bb652e7a850
 caps.latest.revision: 8
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 928c3157d7077e666f0a47f3d3b6285a6e5c912d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: rothja
+ms.author: jroth
+manager: craigg
+ms.openlocfilehash: dba3c283bb5215bb573fa90caf6f8e9cff74ca63
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36039532"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37232979"
 ---
 # <a name="manage-change-tracking-sql-server"></a>Gérer le suivi des modifications (SQL Server)
   Cette rubrique décrit comment gérer le suivi des modifications. Elle explique également comment configurer la sécurité et déterminer l'impact de l'utilisation du suivi des modifications sur le stockage et les performances.  

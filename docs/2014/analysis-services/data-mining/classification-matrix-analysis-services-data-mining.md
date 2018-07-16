@@ -1,5 +1,5 @@
 ---
-title: Matrice de classification (Analysis Services - Exploration de données) | Documents Microsoft
+title: Matrice de classification (Analysis Services - Exploration de données) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - mining models [Analysis Services], validating
 - validating data mining models
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - accuracy testing [data mining]
 ms.assetid: 5c12f202-2ed9-41fa-bee2-0f7ab3ff058a
 caps.latest.revision: 42
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: d8f403c4945a3b31c1cfda3439ddb1452c043c9a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: adcbb1472464bbad29125eead495cd0408d723d8
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36043025"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37216079"
 ---
 # <a name="classification-matrix-analysis-services---data-mining"></a>Matrice de classification (Analysis Services - Exploration de données)
   Une *matrice de classification* trie tous les cas du modèle en catégories, en déterminant si la valeur prédite correspondait à la valeur réelle. Tous les cas dans chaque catégorie sont ensuite comptés et les totaux sont affichés dans la matrice. La matrice de classification est un outil standard d’évaluation des modèles statistiques et est parfois appelée *matrice de confusion*.  
@@ -82,12 +82,12 @@ ms.locfileid: "36043025"
   
 |Rubriques|Liens|  
 |------------|-----------|  
-|Propose une procédure pas à pas permettant de créer un graphique de courbes d'élévation pour le modèle de publipostage ciblé.|[Didacticiel d’exploration de données de base de données](../../tutorials/basic-data-mining-tutorial.md)<br /><br /> [Test de la précision avec des graphiques de courbes d’élévation &#40;didacticiel d’exploration de données de base de données&#41;](../../tutorials/testing-accuracy-with-lift-charts-basic-data-mining-tutorial.md)|  
+|Propose une procédure pas à pas permettant de créer un graphique de courbes d'élévation pour le modèle de publipostage ciblé.|[Tutoriel sur l’exploration de données de base](../../tutorials/basic-data-mining-tutorial.md)<br /><br /> [Test de la précision avec des graphiques de courbes d’élévation &#40;didacticiel d’exploration de données de base&#41;](../../tutorials/testing-accuracy-with-lift-charts-basic-data-mining-tutorial.md)|  
 |Explique les types de graphique associés.|[Graphique de courbes d’élévation &#40;Analysis Services - Exploration de données&#41;](lift-chart-analysis-services-data-mining.md)<br /><br /> [Graphique des bénéfices &#40;Analysis Services - Exploration de données&#41;](profit-chart-analysis-services-data-mining.md)<br /><br /> [Nuage de points &#40;Analysis Services - Exploration de données&#41;](scatter-plot-analysis-services-data-mining.md)|  
 |Décrit les utilisations de la validation croisée pour les modèles et les structures d'exploration de données.|[La Validation croisée &#40;Analysis Services - Exploration de données&#41;](cross-validation-analysis-services-data-mining.md)|  
-|Décrit les étapes permettant de créer des graphiques de courbes d'élévation et d'autres graphiques d'analyse de précision.|[Test et des tâches de Validation et des procédures &#40;d’exploration de données&#41;](testing-and-validation-tasks-and-how-tos-data-mining.md)|  
+|Décrit les étapes permettant de créer des graphiques de courbes d'élévation et d'autres graphiques d'analyse de précision.|[Test et des tâches de Validation et des procédures &#40;exploration de données&#41;](testing-and-validation-tasks-and-how-tos-data-mining.md)|  
   
 ## <a name="see-also"></a>Voir aussi  
- [Test et Validation &#40;d’exploration de données&#41;](testing-and-validation-data-mining.md)  
+ [Test et Validation &#40;exploration de données&#41;](testing-and-validation-data-mining.md)  
   
   

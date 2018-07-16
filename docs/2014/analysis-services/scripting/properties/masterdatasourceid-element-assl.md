@@ -1,5 +1,5 @@
 ---
-title: Élément MasterDatasourceID (ASSL) | Documents Microsoft
+title: Élément MasterDatasourceID (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - MasterDatasourceID element
 ms.assetid: a9cbd3a9-581f-4a08-93d8-e1eea8757ce9
 caps.latest.revision: 34
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: aa35f3090a10dd175d507dec4a109f04d36644cf
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 70258c84b128c879406a8c0cdda837d9f0475789
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36045044"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37228459"
 ---
 # <a name="masterdatasourceid-element-assl"></a>Élément MasterDatasourceID (ASSL)
   Contient l’identificateur de source de données de référence (ID) pour un [base de données](../objects/database-element-assl.md) élément.  
@@ -62,9 +62,9 @@ ms.locfileid: "36045044"
 |Éléments enfants|None|  
   
 ## <a name="remarks"></a>Notes  
- Pour les bases de données sur des instances distantes de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] qui contiennent des partitions distantes, les `MasterDatasourceID` élément contient l’ID de la source de données utilisé pour identifier l’instance principale de la source de données [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] qui gère la partitions distantes.  
+ Pour les bases de données sur des instances distantes de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] qui contiennent des partitions distantes, le `MasterDatasourceID` élément contient l’ID de la source de données utilisé pour identifier l’instance principale de la source de données [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] qui gère la partitions distantes.  
   
- L’élément qui correspond au parent de `MasterDatasourceID` dans l’objet d’objets AMO (Analysis Management) est modèle <xref:Microsoft.AnalysisServices.Database>.  
+ L’élément qui correspond au parent de `MasterDatasourceID` dans l’objet d’objets AMO (Analysis Management) modèle est <xref:Microsoft.AnalysisServices.Database>.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Propriétés &#40;ASSL&#41;](properties-assl.md)  

@@ -1,5 +1,5 @@
 ---
-title: 'Tâche 3 : Création et exécution d’un projet de qualité des données pour la correspondance | Documents Microsoft'
+title: 'Tâche 3 : Création et exécution d’un projet de qualité des données pour la correspondance | Microsoft Docs'
 ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
@@ -10,18 +10,18 @@ ms.technology:
 - integration-services
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 6260e911-ea8b-4c69-a39d-d1bccd565a32
 caps.latest.revision: 7
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 2080aac8b429a9bc3ae21313f2163316b6cebeae
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: cf5fc254aff0398b40605fdc6c568d9dc01b3a60
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36154496"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37216269"
 ---
 # <a name="task-3-creating-and-running-a-data-quality-project-for-matching"></a>Tâche 3 : Création et exécution d'un projet de qualité des données pour la mise en correspondance
   Dans cette tâche, vous allez créer un projet de qualité des données pour l'activité de correspondance, puis exécuter le processus de mise en correspondance sur les données des fournisseurs nettoyées pour supprimer les doublons.  
@@ -30,7 +30,7 @@ ms.locfileid: "36154496"
   
 2.  Type **supprimer les doublons des fournisseurs** à partir de la **nom du projet**.  
   
-3.  Sélectionnez **fournisseurs** dans la liste des bases de connaissances la **Base de connaissances utilisation** champ. Vous avez créé une stratégie de correspondance dans cette base de connaissances dans la leçon précédente.  
+3.  Sélectionnez **fournisseurs** dans la liste des bases de connaissances pour la **Base de connaissances utilisation** champ. Vous avez créé une stratégie de correspondance dans cette base de connaissances dans la leçon précédente.  
   
 4.  Sélectionnez **correspondance** à partir de la **liste des activités** à partir du volet en bas à droite.  
   
@@ -42,7 +42,7 @@ ms.locfileid: "36154496"
   
 7.  Cliquez sur **Parcourir** et sélectionnez **Cleansed Supplier List.xls**, qui est le fichier de sortie à partir de l’activité de nettoyage.  
   
-8.  Carte **SupplierID** colonne source pour la **ID du fournisseur** domaine, **Supplier Name** colonne **Supplier Name** domaine et **ContactEmailAddress** colonne **messagerie du Contact** domaine.  
+8.  Carte **SupplierID** colonne source vers le **ID du fournisseur** domaine, **Supplier Name** colonne à **Supplier Name** domaine et **ContactEmailAddress** colonne à **adresse E-mail de Contact** domaine.  
   
 9. Cliquez sur **suivant** pour basculer vers le **correspondance** page.  
   
@@ -53,6 +53,6 @@ ms.locfileid: "36154496"
 12. Cliquez sur **suivant** pour basculer vers le **exporter** page.  
   
 ## <a name="next-step"></a>Étape suivante  
- [Tâche 4 : Exporter les résultats de la correspondance d’activité dans un fichier Excel](../../2014/tutorials/task-4-exporting-the-results-from-matching-activity-to-an-excel-file.md)  
+ [Tâche 4 : Exportation des résultats de l’activité de mise en correspondance dans un fichier Excel](../../2014/tutorials/task-4-exporting-the-results-from-matching-activity-to-an-excel-file.md)  
   
   

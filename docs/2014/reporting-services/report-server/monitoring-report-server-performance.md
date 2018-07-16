@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - performance counters [Reporting Services]
 - report servers [Reporting Services], performance
@@ -21,13 +21,13 @@ ms.assetid: c1bc13d4-8297-4daf-bb19-4c1e5ba292a6
 caps.latest.revision: 64
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: c672255a822313437682e0dc9e91c73d38a7563f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: facca3a93bb3681903ff6bb9ee7b6cf219c9ffcf
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36143661"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37244339"
 ---
 # <a name="monitoring-report-server-performance"></a>Analyse des performances d'un serveur de rapports
   Utilisez les outils d'analyse des performances sur un serveur de rapports pour évaluer l'activité du serveur, observer les tendances, diagnostiquer les goulots d'étranglement du système ou collecter des données permettant de déterminer si la configuration actuelle est suffisante. Pour optimiser les performances du serveur, vous pouvez spécifier la fréquence de recyclage du domaine d'application du serveur de rapports. Pour plus d’informations, consultez [Configurer la mémoire disponible pour les applications du serveur de rapports](../report-server/configure-available-memory-for-report-server-applications.md).  
@@ -83,10 +83,10 @@ ms.locfileid: "36143661"
  En plus des objets de performance [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , vous pouvez également vouloir configurer des événements SharePoint si vous exécutez un serveur de rapports en mode intégré SharePoint et avez configuré votre environnement de création de rapports de façon à utiliser un produit SharePoint. Dans cette section, utilisez les événements d'un serveur de rapports en mode intégré SharePoint pour examiner les événements de diagnostic qui peuvent fournir des informations utiles si votre environnement de création de rapports est intégré SharePoint.  
   
 ## <a name="in-this-section"></a>Dans cette section  
- [Compteurs de performance pour le Service Web MSRS 2014 et les objets de Performance Service Windows MSRS 2014 &#40;en Mode natif&#41;](performance-counters-msrs-2011-web-service-performance-objects.md)  
+ [Compteurs de performance pour le Service Web MSRS 2014 et les objets de Performance Service MSRS 2014 Windows &#40;en Mode natif&#41;](performance-counters-msrs-2011-web-service-performance-objects.md)  
  Décrit les compteurs de performances utilisés par le service Web Report Server.  
   
- [Compteurs de performance pour les objets de Performance MSRS 2014 Windows Service SharePoint Mode MSRS 2014 Web Service SharePoint Mode &#40;en Mode SharePoint&#41;](performance-counters-msrs-2011-sharepoint-mode-performance-objects.md)  
+ [Compteurs de performance pour les objets de Performance MSRS 2014 Windows Service SharePoint Mode MSRS 2014 Web Service SharePoint Mode &#40;Mode SharePoint&#41;](performance-counters-msrs-2011-sharepoint-mode-performance-objects.md)  
  Décrit les compteurs de performances utilisés par le service Windows Report Server.  
   
  [Compteurs de performances pour des objets de performances ReportServer:Service  et ReportServerSharePoint:Service](performance-counters-reportserver-service-performance-objects.md)  

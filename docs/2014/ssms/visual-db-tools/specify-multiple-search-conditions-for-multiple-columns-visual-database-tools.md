@@ -1,5 +1,5 @@
 ---
-title: Spécifier plusieurs Conditions de recherche pour plusieurs colonnes (Visual Database Tools) | Documents Microsoft
+title: Spécifier plusieurs Conditions de recherche pour plusieurs colonnes (Visual Database Tools) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - search criteria [SQL Server], multiple conditions
 - multiple search conditions
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - AND, Criteria pane
 ms.assetid: 06617729-0d0b-4da2-9890-b7e2f5cdbc7b
 caps.latest.revision: 12
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 7bf3bc4db56d03bae653e2c84e238682a27cc61b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: d916035a3ef7fc84103f2e2a94738effcc6cc6eb
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36041938"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37234359"
 ---
 # <a name="specify-multiple-search-conditions-for-multiple-columns-visual-database-tools"></a>Spécifier plusieurs conditions de recherche pour plusieurs colonnes (Visual Database Tools)
   Vous pouvez élargir ou restreindre l'étendue de votre requête en incluant plusieurs colonnes de données à votre condition de recherche. Vous pouvez, par exemple, souhaiter effectuer les opérations suivantes :  
@@ -82,7 +82,7 @@ ms.locfileid: "36041938"
 ## <a name="see-also"></a>Voir aussi  
  [Associer des Conditions AND a une priorité &#40;Visual Database Tools&#41;](combine-conditions-when-and-has-precedence-visual-database-tools.md)   
  [Associer des Conditions OR a une priorité &#40;Visual Database Tools&#41;](combine-conditions-when-or-has-precedence-visual-database-tools.md)   
- [Conventions pour combiner les Conditions de recherche dans le volet Critères &#40;Visual Database Tools&#41;](conventions-combine-search-conditions-in-criteria-pane-visual-db-tools.md)   
+ [Conventions pour la combinaison de Conditions de recherche dans le volet Critères &#40;Visual Database Tools&#41;](conventions-combine-search-conditions-in-criteria-pane-visual-db-tools.md)   
  [Spécifier des critères de recherche &#40;Visual Database Tools&#41;](specify-search-criteria-visual-database-tools.md)  
   
   

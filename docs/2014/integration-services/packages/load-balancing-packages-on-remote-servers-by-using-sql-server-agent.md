@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - load-balancing [Integration Services]
 - parent packages [Integration Services]
@@ -17,13 +17,13 @@ ms.assetid: 9281c5f8-8da3-4ae8-8142-53c5919a4cfe
 caps.latest.revision: 18
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 3f62b54da56b0fdbd548fd825292db8a39e55a38
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: d2e52b17b84f2032aec6e142dc2b845ff1ae0bd8
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36051086"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37235219"
 ---
 # <a name="load-balancing-packages-on-remote-servers-by-using-sql-server-agent"></a>Équilibrage de charge de packages sur des serveurs distants à l'aide de l'Agent SQL Server
   Lorsque plusieurs packages doivent être exécutés, il convient d'utiliser d'autres serveurs disponibles. Cette méthode qui consiste à utiliser d'autres serveurs pour exécuter des packages lorsque les packages sont tous sous le contrôle d'un package parent est qualifiée d'équilibrage de charge. Dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], l'équilibrage de charge est une procédure manuelle qui doit être mise en œuvre par les propriétaires des packages. L'équilibrage de charge n'est pas exécuté automatiquement par les serveurs. En outre, les packages qui sont exécutés sur des serveurs distants doivent être des packages complets, et non des tâches individuelles contenues dans d'autres packages.  
@@ -60,9 +60,9 @@ ms.locfileid: "36051086"
   
 |Rubrique|Description|  
 |-----------|-----------------|  
-|[Implémentation de Packages enfants](../implementation-of-child-packages.md)|Décrit l'installation de packages, puis la création de travaux de l'Agent SQL Server qui exécutent les packages.|  
-|[Implémentation d’un Package Parent](../implementation-of-the-parent-package.md)|Décrit la création d'un package parent qui contient plusieurs tâches Exécuter le travail de l'Agent SQL Server. Chaque tâche exécute un des packages enfants.|  
-|[Équilibrage de la journalisation des Packages sur des serveurs distants](../logging-for-load-balanced-packages-on-remote-servers.md)|Décrit le scénario de journalisation pour les packages distants.|  
+|[Implémentation de packages enfants](../implementation-of-child-packages.md)|Décrit l'installation de packages, puis la création de travaux de l'Agent SQL Server qui exécutent les packages.|  
+|[Implémentation du package parent](../implementation-of-the-parent-package.md)|Décrit la création d'un package parent qui contient plusieurs tâches Exécuter le travail de l'Agent SQL Server. Chaque tâche exécute un des packages enfants.|  
+|[Journalisation des packages à charge équilibrée sur des serveurs distants](../logging-for-load-balanced-packages-on-remote-servers.md)|Décrit le scénario de journalisation pour les packages distants.|  
   
 ## <a name="related-tasks"></a>Related Tasks  
  [Planifier un package à l’aide de SQL Server Agent](../schedule-a-package-by-using-sql-server-agent.md)  

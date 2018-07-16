@@ -5,10 +5,9 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - secondary servers [SQL Server]
 - log shipping [SQL Server], jobs
@@ -26,15 +25,15 @@ helpviewer_keywords:
 - primary servers [SQL Server]
 ms.assetid: 55da6b94-3a4b-4bae-850f-4bf7f6e918ca
 caps.latest.revision: 63
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 23330dfd6f87ec70e7a8f7af5fb298202eb30bc8
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 4c9ed199bc82b6e24f8ab78c19b5d3529a0af802
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36143113"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37195699"
 ---
 # <a name="about-log-shipping-sql-server"></a>À propos de la copie des journaux de transaction (SQL Server)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] permet d'envoyer automatiquement les sauvegardes du journal des transactions à partir d'une *base de données primaire* sur une instance du *serveur principal* vers une ou plusieurs *bases de données secondaires* sur des instances distinctes du *serveur secondaire* . Les sauvegardes du journal des transactions sont appliquées individuellement à chacune des bases de données secondaires. Une troisième instance de serveur facultatif, appelée *serveur moniteur*, enregistre l'historique et l'état des opérations de sauvegarde ainsi que de restauration, puis déclenche éventuellement des alertes si ces opérations ne sont pas effectuées selon la planification établie.  
@@ -132,7 +131,7 @@ ms.locfileid: "36143113"
 ##  <a name="Interoperability"></a> Interopérabilité  
  La copie des journaux de transaction peut être utilisée avec les fonctionnalités ou les composants de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]suivants :  
   
--   [Conditions préalables pour la migration à partir de journaux de transaction vers les groupes de disponibilité AlwaysOn &#40;SQL Server&#41;](../availability-groups/windows/prereqs-migrating-log-shipping-to-always-on-availability-groups.md)  
+-   [Prérequis pour la migration à partir des journaux de transaction vers les groupes de disponibilité AlwaysOn &#40;SQL Server&#41;](../availability-groups/windows/prereqs-migrating-log-shipping-to-always-on-availability-groups.md)  
   
 -   [Mise en miroir de bases de données et copie des journaux de transaction &#40;SQL Server&#41;](../database-mirroring/database-mirroring-and-log-shipping-sql-server.md)  
   
@@ -143,7 +142,7 @@ ms.locfileid: "36143113"
   
 ##  <a name="RelatedTasks"></a> Tâches associées  
   
--   [Mise à niveau des journaux de transaction vers SQL Server 2014 &#40;Transact-SQL&#41;](upgrading-log-shipping-to-sql-server-2016-transact-sql.md)  
+-   [Mettre à niveau des journaux de transaction vers SQL Server 2014 &#40;Transact-SQL&#41;](upgrading-log-shipping-to-sql-server-2016-transact-sql.md)  
   
 -   [Configurer la copie des journaux de transaction &#40;Transact-SQL&#41;](configure-log-shipping-sql-server.md)  
   

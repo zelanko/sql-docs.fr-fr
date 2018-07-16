@@ -1,5 +1,5 @@
 ---
-title: Élément UnknownMemberTranslation (ASSL) | Documents Microsoft
+title: Élément UnknownMemberTranslation (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,18 +22,18 @@ helpviewer_keywords:
 - UnknownElementTranslation element
 ms.assetid: a4b8cdac-b065-4a44-b251-c5ac1cfe5e6f
 caps.latest.revision: 35
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 38b04dad97f6c61a884d4ba4234083bbc60bc260
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 68270cff61daace55131454b549f12880f3b5e6b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36144384"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37220299"
 ---
 # <a name="unknownmembertranslation-element-assl"></a>Élément UnknownMemberTranslation (ASSL)
-  Contient une traduction de la légende de la [UnknownMember](member-element-assl.md) , élément pour un [Dimension](dimension-element-assl.md) élément.  
+  Contient une traduction de la légende de la [UnknownMember](member-element-assl.md) élément pour un [Dimension](dimension-element-assl.md) élément.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -60,7 +60,7 @@ ms.locfileid: "36144384"
 |Éléments enfants|None|  
   
 ## <a name="remarks"></a>Notes  
- L’élément qui correspond au parent de `UnknownMemberTranslation` dans l’objet d’objets AMO (Analysis Management) est modèle <xref:Microsoft.AnalysisServices.Dimension>.  
+ L’élément qui correspond au parent de `UnknownMemberTranslation` dans l’objet d’objets AMO (Analysis Management) modèle est <xref:Microsoft.AnalysisServices.Dimension>.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Élément Translation &#40;ASSL&#41;](translation-element-assl.md)   

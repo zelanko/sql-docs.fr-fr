@@ -1,5 +1,5 @@
 ---
-title: Assistant génération de schéma (Analysis Services) | Documents Microsoft
+title: Assistant génération de schéma (Analysis Services) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - relational schema [Analysis Services]
 ms.assetid: 68bf7ba3-d0cb-437f-9a3e-9edc0999af19
 caps.latest.revision: 15
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 82df99618c39c8fb7212747eed2c9cc269701ca5
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 1842a775468c03f47b9d6af19e2d1450ce2e8921
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36040757"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37232029"
 ---
 # <a name="schema-generation-wizard-analysis-services"></a>Assistant Génération de schéma (Analysis Services)
   [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] prend en charge deux méthodes d'utilisation des schémas relationnels lors de la définition d'objets OLAP dans un projet ou une base de données [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Généralement, vous définissez des objets OLAP en fonction d'un modèle d'objet logique construit dans une vue de source de données d'un projet ou d'une base de données [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Cette vue de source de données est définie en fonction d'éléments de schéma provenant d'une ou plusieurs sources de données relationnelles, lorsqu'ils sont personnalisés dans la vue de source de données.  
@@ -50,6 +50,6 @@ ms.locfileid: "36040757"
 ## <a name="see-also"></a>Voir aussi  
  [Vues de sources de données dans les modèles multidimensionnels](data-source-views-in-multidimensional-models.md)   
  [Sources de données dans les modèles multidimensionnels](data-sources-in-multidimensional-models.md)   
- [Les Sources de données prises en charge &#40;SSAS multidimensionnel&#41;](supported-data-sources-ssas-multidimensional.md)  
+ [Sources de données prises en charge &#40;SSAS multidimensionnel&#41;](supported-data-sources-ssas-multidimensional.md)  
   
   

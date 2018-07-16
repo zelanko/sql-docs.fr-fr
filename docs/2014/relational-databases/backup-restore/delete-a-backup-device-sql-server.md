@@ -5,10 +5,9 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-backup-restore
+ms.technology: backup-restore
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - database backups [SQL Server], deleting devices
 - backup devices [SQL Server], deleting
@@ -17,15 +16,15 @@ helpviewer_keywords:
 - backing up databases [SQL Server], backup devices
 ms.assetid: 7be62480-ed6a-4262-a071-1feba73b1c02
 caps.latest.revision: 29
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: c718c62e44f087fbe3d4739a4790fce845c1a9a4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 383d74a0858e303f4eda3bd56a7f0f04338b0857
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36040903"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37207229"
 ---
 # <a name="delete-a-backup-device-sql-server"></a>Supprimer une unité de sauvegarde (SQL Server)
   Cette rubrique explique comment supprimer une unité de sauvegarde dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] à l'aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou de [!INCLUDE[tsql](../../includes/tsql-md.md)].  

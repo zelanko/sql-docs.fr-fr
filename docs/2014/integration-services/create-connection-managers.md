@@ -1,5 +1,5 @@
 ---
-title: Créer des gestionnaires de connexions | Documents Microsoft
+title: Créer des gestionnaires de connexions | Microsoft Docs
 ms.custom: ''
 ms.date: 08/22/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.connectionmanager.f1
 helpviewer_keywords:
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - SQL Server Integration Services packages, connections
 ms.assetid: 6ca317b8-0061-4d9d-b830-ee8c21268345
 caps.latest.revision: 54
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 2ae1ccaa1e38d280c3d46fb4504f99df92254a9e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: f09d663dd371c037c3f2b44b42b202c18377b7cb
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36040915"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37252541"
 ---
 # <a name="create-connection-managers"></a>Créer des gestionnaires de connexions
   [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] propose différents gestionnaires de connexions pour répondre aux besoins de tâches qui se connectent à différents types de serveurs et de sources de données. Les gestionnaires de connexions sont utilisés par les composants de flux de données qui extraient et chargent des données dans différents types de banques de données et par les modules fournisseurs d'informations qui enregistrent des journaux sur un serveur, dans une table [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ou dans un fichier. Par exemple, un package contenant une tâche Envoyer un message utilise un gestionnaire de connexions SMTP pour se connecter à un serveur SMTP (Simple Mail Transfer Protocol). Un package contenant une tâche d'exécution SQL peut utiliser un gestionnaire de connexions OLE DB pour se connecter à une base de données [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . Pour plus d’informations, consultez [Connexions Integration Services &#40;SSIS&#41;](connection-manager/integration-services-ssis-connections.md).  
@@ -47,7 +47,7 @@ ms.locfileid: "36040915"
   
 #### <a name="to-add-configure-or-delete-a-connection-manager-in-ssis-designer"></a>Pour ajouter, configurer ou supprimer un gestionnaire de connexions dans le concepteur SSIS  
   
--   [Ajouter, supprimer ou partager un gestionnaire de connexions dans un Package](../../2014/integration-services/add-delete-or-share-a-connection-manager-in-a-package.md)  
+-   [Ajouter, supprimer ou partager un gestionnaire de connexions dans un package](../../2014/integration-services/add-delete-or-share-a-connection-manager-in-a-package.md)  
   
 -   [Définir les propriétés d’un gestionnaire de connexions](../../2014/integration-services/set-the-properties-of-a-connection-manager.md)  
   
@@ -56,11 +56,11 @@ ms.locfileid: "36040915"
   
  Au moment de l'exécution, la version appropriée est employée même si vous avez spécifié la version 32 bits du fournisseur lors de la conception. La version 64 bits du fournisseur peut être exécutée même si le package est utilisé dans [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)].  
   
- Les deux versions du fournisseur ont le même ID. Pour spécifier si l’exécution de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] utilise une version 64 bits disponible du fournisseur, vous devez définir la propriété Run64BitRuntime du projet [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]. Si la propriété Run64BitRuntime a `true`, le runtime recherche et utilise le fournisseur 64 bits ; si Run64BitRuntime est `false`, le runtime recherche et utilise le fournisseur 32 bits. Pour plus d’informations sur les propriétés que vous pouvez définir sur les projets [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)], consultez [Integration Services &#40;SSIS&#41; et environnements de Studio](integration-services-ssis-development-and-management-tools.md).  
+ Les deux versions du fournisseur ont le même ID. Pour spécifier si l’exécution de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] utilise une version 64 bits disponible du fournisseur, vous devez définir la propriété Run64BitRuntime du projet [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]. Si la propriété Run64BitRuntime a la valeur `true`, l’exécution trouve et utilise le fournisseur 64 bits ; si Run64BitRuntime est `false`, l’exécution trouve et utilise le fournisseur 32 bits. Pour plus d’informations sur les propriétés que vous pouvez définir sur les projets [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)], consultez [Integration Services &#40;SSIS&#41; et environnements de Studio](integration-services-ssis-development-and-management-tools.md).  
   
 ## <a name="see-also"></a>Voir aussi  
  [Flux de contrôle](control-flow/control-flow.md)   
  [Flux de données](data-flow/data-flow.md)   
- [Services d’intégration &#40;SSIS&#41; gestionnaires d’événements](integration-services-ssis-event-handlers.md)  
+ [Integration Services &#40;SSIS&#41; gestionnaires d’événements](integration-services-ssis-event-handlers.md)  
   
   

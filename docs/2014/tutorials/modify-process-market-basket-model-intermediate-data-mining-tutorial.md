@@ -1,5 +1,5 @@
 ---
-title: Modification et traitement du modèle de panier d’achat (didacticiel sur l’exploration des données intermédiaires) | Documents Microsoft
+title: Modification et traitement du modèle de panier d’achat (didacticiel d’exploration de données intermédiaire) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,27 +8,27 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: b6019413-aebd-4ff7-831a-644572ad88b1
 caps.latest.revision: 33
 author: minewiskan
 ms.author: owend
-manager: kfile
-ms.openlocfilehash: 96eb44713cd34fdcea81a7e5e4daf26739afdec1
-ms.sourcegitcommit: 8c040e5b4e8c7d37ca295679410770a1af4d2e1f
+manager: craigg
+ms.openlocfilehash: f1f0fe6899be3f9828a8ba9d91f2c9abf7ba48b6
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/21/2018
-ms.locfileid: "36311907"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37246119"
 ---
 # <a name="modifying-and-processing-the-market-basket-model-intermediate-data-mining-tutorial"></a>Modification et traitement du modèle de panier d'achat (Didacticiel intermédiaire sur l'exploration de données)
-  Avant de traiter le modèle d’exploration de données d’association que vous avez créé, vous devez modifier les valeurs par défaut de deux paramètres : *prise en charge* et *probabilité*.  
+  Avant de traiter le modèle d’exploration de données d’association que vous avez créé, vous devez modifier les valeurs par défaut de deux des paramètres : *prise en charge* et *probabilité*.  
   
 -   *Prise en charge* définit le pourcentage de cas dans lequel une règle doit exister avant qu’il est considéré comme valide. Vous allez spécifier qu'une règle doit être présente dans au moins 1 pour cent des cas.  
   
--   *Probabilité* définit comment probablement une association doit être est considérée comme valide. Vous prendrez en compte toute association ayant une probabilité d'au moins 10 pour cent.  
+-   *Probabilité* définit comment probablement une association doit être avant qu’il est considéré comme valide. Vous prendrez en compte toute association ayant une probabilité d'au moins 10 pour cent.  
   
- Pour plus d’informations sur les effets de l’augmentation ou de diminution de prise en charge et probabilité, consultez [l’algorithme Microsoft Association Technical Reference](../../2014/analysis-services/data-mining/microsoft-association-algorithm-technical-reference.md).  
+ Pour plus d’informations sur les effets de l’augmentation ou diminution de la prise en charge et probabilité, consultez [l’algorithme Microsoft Association Technical Reference](../../2014/analysis-services/data-mining/microsoft-association-algorithm-technical-reference.md).  
   
  Après avoir défini la structure et les paramètres pour le **Association** modèle d’exploration de données, vous allez traiter le modèle.  
   
@@ -48,7 +48,7 @@ ms.locfileid: "36311907"
   
 ### <a name="to-process-the-mining-model"></a>Pour traiter le modèle d'exploration de données  
   
-1.  Sur le **modèle d’exploration de données** menu de [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], sélectionnez **traiter la Structure d’exploration de données et tous les modèles.**  
+1.  Sur le **Mining Model** menu de [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], sélectionnez **traiter la Structure d’exploration de données et tous les modèles.**  
   
 2.  Cliquez sur **Oui**pour répondre à l'avertissement qui vous invite à indiquer si vous souhaitez générer et déployer le projet.  
   
@@ -63,9 +63,9 @@ ms.locfileid: "36311907"
 5.  Cliquez sur **fermer** pour quitter le **traiter la Structure d’exploration de données - Association** boîte de dialogue.  
   
 ## <a name="next-task-in-lesson"></a>Tâche suivante de la leçon  
- [Exploration des modèles de panier d’achat &#40;intermédiaire Didacticiel d’exploration de données&#41;](../../2014/tutorials/exploring-the-market-basket-models-intermediate-data-mining-tutorial.md)  
+ [Exploration des modèles de panier &#40;didacticiel d’exploration de données intermédiaire&#41;](../../2014/tutorials/exploring-the-market-basket-models-intermediate-data-mining-tutorial.md)  
   
 ## <a name="see-also"></a>Voir aussi  
- [Le traitement de la configuration requise et considérations &#40;d’exploration de données&#41;](../../2014/analysis-services/data-mining/processing-requirements-and-considerations-data-mining.md)  
+ [Traitement des exigences et considérations &#40;exploration de données&#41;](../../2014/analysis-services/data-mining/processing-requirements-and-considerations-data-mining.md)  
   
   

@@ -8,28 +8,28 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - change data capture [SQL Server], monitoring
 - change data capture [SQL Server], administering
 - change data capture [SQL Server], jobs
 ms.assetid: 23bda497-67b2-4e7b-8e4d-f1f9a2236685
 caps.latest.revision: 15
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: cc5accd969ae0a19d99610edca0023337321f657
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: rothja
+ms.author: jroth
+manager: craigg
+ms.openlocfilehash: ebc75d5750d77ac4166375f47b1301d7686f1a99
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36152529"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37244569"
 ---
 # <a name="administer-and-monitor-change-data-capture-sql-server"></a>Administrer et surveiller la capture de données modifiées (SQL Server)
   Cette rubrique décrit comment administrer et surveiller la capture de données modifiées.  
   
 ##  <a name="Capture"></a> Travail de capture  
- Le travail de capture est démarré par l'exécution de la procédure stockée sans paramètre `sp_MScdc_capture_job`. Cette procédure stockée commence par extraire les valeurs configurées pour *maxtrans*, *maxscans*, *continuous*, et *pollinginterval* pour le travail de capture de msdb.dbo.cdc_jobs. Ces configuré valeurs sont ensuite passées en tant que paramètres à la procédure stockée `sp_cdc_scan`. Cela permet d’appeler `sp_replcmds` pour effectuer l’analyse du journal.  
+ Le travail de capture est démarré par l'exécution de la procédure stockée sans paramètre `sp_MScdc_capture_job`. Cette procédure stockée commence par extraire les valeurs configurées pour *maxtrans*, *maxscans*, *continuous*, et *pollinginterval* pour le travail de capture de msdb.dbo.cdc_jobs. Ces configuré valeurs sont ensuite passées en tant que paramètres à la procédure stockée `sp_cdc_scan`. Cela est utilisé pour appeler `sp_replcmds` pour effectuer l’analyse du journal.  
   
 ### <a name="capture-job-parameters"></a>Paramètres du travail de capture  
  Pour comprendre le comportement du travail de capture, vous devez comprendre comment les paramètres configurables sont utilisés par `sp_cdc_scan`.  
@@ -41,10 +41,10 @@ ms.locfileid: "36152529"
  Le paramètre *maxscans* spécifie le nombre maximal de cycles d’analyse tentés pour vider le journal avant de retourner (continuous = 0) ou d’exécuter un waitfor (continuous = 1).  
   
 #### <a name="continous-parameter"></a>Paramètre continuous  
- Le *continue* paramètre contrôle si `sp_cdc_scan` rend le contrôle après avoir vidé le journal soit exécuté le nombre maximal de cycles d’analyse (mode déclenchement unique). Il détermine également si `sp_cdc_scan` continue de s’exécuter jusqu'à ce qu’explicitement arrêté (mode continu).  
+ Le *continue* paramètre contrôle si `sp_cdc_scan` rend le contrôle après avoir vidé le journal ou exécuté le nombre maximal de cycles d’analyse (mode déclenchement unique). Il détermine également si `sp_cdc_scan` continue de s’exécuter jusqu'à ce qu’explicitement arrêté (mode continu).  
   
 ##### <a name="one-shot-mode"></a>Mode en une seule fois  
- Mode en une seule fois, le travail de capture demande `sp_cdc_scan` d’effectuer jusqu'à *maxtrans* analyses pour essayer de vider le journal et retourner. Toute transaction au-delà de *maxtrans* qui est présente dans le journal sera traitée dans les analyses ultérieures.  
+ En mode déclenchement unique, le travail de capture demande `sp_cdc_scan` d’effectuer jusqu'à *maxtrans* analyses pour essayer de vider le journal et retourner. Toute transaction au-delà de *maxtrans* qui est présente dans le journal sera traitée dans les analyses ultérieures.  
   
  Le mode en une seule fois est utilisé dans les tests contrôlés, où le volume des transactions à traiter est connu, et où il y a un avantage au fait que le travail se termine automatiquement une fois terminé. Le mode en une seule fois n'est pas recommandé dans un environnement de production. La raison en est que t s'appuie sur la planification du travail pour déterminer la fréquence d'exécution du cycle d'analyse.  
   
@@ -57,7 +57,7 @@ ms.locfileid: "36152529"
  Si le mode en une seule fois était utilisé pour régler l'analyse du journal, le nombre de secondes entre deux traitements du journal devrait être déterminé par la planification du travail. Lorsque ce type de comportement est souhaité, l'exécution du travail de capture en mode continu est préférable pour gérer la replanification de l'analyse du journal.  
   
 ##### <a name="continuous-mode-and-the-polling-interval"></a>Mode continu et fréquence d'interrogation  
- En mode continu, le travail de capture demande que `sp_cdc_scan` s’exécutent en continu. Cela permet à la procédure stockée de gérer sa propre boucle d'attente en fournissant non seulement une valeur à maxtrans et maxscans mais également au nombre de secondes entre deux traitements du journal (la fréquence d'interrogation). Dans ce mode, le travail de capture reste actif et exécute un `WAITFOR` entre l’analyse du journal.  
+ En mode continu, le travail de capture demande que `sp_cdc_scan` s’exécutent en continu. Cela permet à la procédure stockée de gérer sa propre boucle d'attente en fournissant non seulement une valeur à maxtrans et maxscans mais également au nombre de secondes entre deux traitements du journal (la fréquence d'interrogation). Dans ce mode, le travail de capture reste actif et exécute un `WAITFOR` entre chaque analyse du journal.  
   
 > [!NOTE]  
 >  Lorsque la valeur de la fréquence d'interrogation est supérieure à 0, la limite supérieure imposée au débit du travail en une seule fois périodique s'applique également au déroulement du travail en mode continu. Autrement dit, (*maxtrans* \* *maxscans*) divisé par une fréquence d’interrogation différente de zéro imposera une limite supérieure au nombre moyen des transactions pouvant être traitées par le travail de capture.  
@@ -71,15 +71,15 @@ ms.locfileid: "36152529"
 ### <a name="structure-of-the-cleanup-job"></a>Structure du travail de nettoyage  
  La capture de données modifiées utilise une stratégie de nettoyage reposant sur la rétention pour gérer la taille de la table des modifications. Le mécanisme de nettoyage consiste en un travail d' [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent [!INCLUDE[tsql](../../includes/tsql-md.md)] qui est créé lors de l'activation de la première table de base de données. Un seul travail de nettoyage prend en charge le nettoyage de toutes les tables de modifications des bases de données et applique la même valeur de rétention à toutes les instances de capture définies.  
   
- Le travail de nettoyage est démarré par l'exécution de la procédure stockée sans paramètre `sp_MScdc_cleanup_job`. Cette procédure stockée démarre par l’extraction des valeurs de rétention et de seuil configurées pour le travail de nettoyage de `msdb.dbo.cdc_jobs`. La valeur de rétention est utilisée pour calculer une nouvelle limite inférieure pour les tables de modifications. Le nombre spécifié de minutes est soustrait de la valeur maximale *tran_end_time* à partir du `cdc.lsn_time_mapping` table afin d’obtenir la nouvelle limite inférieure exprimée comme une valeur datetime. La table CDC.lsn_time_mapping est ensuite utilisée pour convertir cette valeur datetime en une valeur `lsn` correspondante. Si la même heure de validation est partagée par plusieurs entrées dans la table, la `lsn` qui correspond à l’entrée qui a le plus petit `lsn` est choisi comme nouvelle limite inférieure. Cette valeur `lsn` est transmise à `sp_cdc_cleanup_change_tables` pour supprimer des entrées de table de modifications dans les tables de modifications de base de données.  
+ Le travail de nettoyage est démarré par l'exécution de la procédure stockée sans paramètre `sp_MScdc_cleanup_job`. Cette procédure stockée commence par extraire les valeurs de rétention et de seuil configurées pour le travail de nettoyage à partir de `msdb.dbo.cdc_jobs`. La valeur de rétention est utilisée pour calculer une nouvelle limite inférieure pour les tables de modifications. Le nombre spécifié de minutes est soustrait de la valeur maximale *tran_end_time* valeur à partir de la `cdc.lsn_time_mapping` table pour obtenir la nouvelle limite inférieure exprimée comme une valeur datetime. La table CDC.lsn_time_mapping est ensuite utilisée pour convertir cette valeur datetime en une valeur `lsn` correspondante. Si la même heure de validation est partagée par plusieurs entrées dans la table, le `lsn` qui correspond à l’entrée qui a le plus petit `lsn` est choisi comme nouvelle limite inférieure. Cette valeur `lsn` est transmise à `sp_cdc_cleanup_change_tables` pour supprimer des entrées de table de modifications dans les tables de modifications de base de données.  
   
 > [!NOTE]  
->  L'avantage de l'utilisation de l'heure de validation de la dernière transaction comme base de calcul de la nouvelle limite inférieure est qu'elle permet aux modifications de rester dans les tables de modifications pour l'heure spécifiée. Cela arrive même lorsque le processus de capture prend du retard. Toutes les entrées qui ont la même heure de validation comme limite inférieure actuelle continuent d’être représentées dans les tables de modifications en choisissant le plus petit `lsn` présentant l’heure de validation partagée pour la limite inférieure effective.  
+>  L'avantage de l'utilisation de l'heure de validation de la dernière transaction comme base de calcul de la nouvelle limite inférieure est qu'elle permet aux modifications de rester dans les tables de modifications pour l'heure spécifiée. Cela arrive même lorsque le processus de capture prend du retard. Toutes les entrées qui ont la même heure de validation en tant que la limite inférieure actuelle continuent d’être représentées dans les tables de modifications en choisissant le plus petit `lsn` présentant l’heure de validation partagée pour la limite inférieure effective.  
   
  Lorsqu'un nettoyage est effectué, la limite inférieure de toutes les instances de capture est initialement mise à jour au cours d'une même transaction. Le processus essaie ensuite de supprimer les entrées obsolètes des tables de modifications et de la table cdc.lsn_time_mapping. La valeur de seuil configurable limite le nombre d'entrées pouvant être supprimées au cours de chaque instruction. Tout échec de suppression sur une table individuelle n'empêchera pas l'opération d'être tentée sur les tables restantes.  
   
 ### <a name="cleanup-job-customization"></a>Personnalisation d'un travail de nettoyage  
- Pour le travail de nettoyage, la possibilité de personnalisation réside dans la stratégie utilisée pour déterminer quelles entrées de table de modifications doivent être ignorées. La seule stratégie prise en charge dans le travail de nettoyage réalisé est une stratégie basée sur le temps. Dans cette situation, la nouvelle limite inférieure est calculée en soustrayant la période de rétention autorisée de l'heure de validation de la dernière transaction traitée. Les procédures de nettoyage sous-jacentes sont basées sur des étant `lsn` au lieu de l’heure, n’importe quel nombre de stratégies peut servir à déterminer le plus petit `lsn` à conserver dans les tables de modifications. Seules certaines sont strictement basées sur le temps. Par exemple, la connaissance des clients pourrait être utilisée comme mécanisme de prévention de défaillance si en aval, les processus qui requièrent l'accès aux tables de modifications ne peuvent pas s'exécuter. En outre, bien que la stratégie par défaut applique le même `lsn` pour nettoyer les tables de modifications de toutes les bases de données, la procédure de nettoyage sous-jacente peut également être appelée pour le nettoyage au niveau de l’instance de capture.  
+ Pour le travail de nettoyage, la possibilité de personnalisation réside dans la stratégie utilisée pour déterminer quelles entrées de table de modifications doivent être ignorées. La seule stratégie prise en charge dans le travail de nettoyage réalisé est une stratégie basée sur le temps. Dans cette situation, la nouvelle limite inférieure est calculée en soustrayant la période de rétention autorisée de l'heure de validation de la dernière transaction traitée. Les procédures de nettoyage sous-jacentes sont basées sur des étant `lsn` au lieu du temps, autant de stratégies peut être utilisée pour déterminer le plus petit `lsn` à conserver dans les tables de modifications. Seules certaines sont strictement basées sur le temps. Par exemple, la connaissance des clients pourrait être utilisée comme mécanisme de prévention de défaillance si en aval, les processus qui requièrent l'accès aux tables de modifications ne peuvent pas s'exécuter. En outre, bien que la stratégie par défaut applique le même `lsn` pour nettoyer les tables de modifications de toutes les bases de données, la procédure de nettoyage sous-jacente peut également être appelée pour le nettoyage au niveau de l’instance de capture.  
   
 ##  <a name="Monitor"></a> Surveiller le processus de capture de données modifiées  
  La surveillance du processus de capture de données modifiées vous permet de déterminer si les modifications sont écrites correctement et avec une latence raisonnable aux tables de modifications. La surveillance peut également vous aider à identifier les erreurs qui peuvent se produire. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] inclut deux vues de gestion dynamique pour vous aider à surveiller la capture de données modifiées : [sys.dm_cdc_log_scan_sessions](../native-client-ole-db-data-source-objects/sessions.md) et [sys.dm_cdc_errors](../native-client-ole-db-errors/errors.md).  

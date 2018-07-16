@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - servers [SQL Server], copying databases between
 - bulk exporting [SQL Server], between servers
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - bulk importing [SQL Server], between servers
 ms.assetid: 978406d6-a3c8-4902-b1f4-4ced75234be5
 caps.latest.revision: 42
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 20bc9c805385c75ddd090de00fc6d9ad9a61e59a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: fb10b485f7cf0a4517cbe3967d28d704d0abe6fc
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36039736"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37195369"
 ---
 # <a name="copy-databases-to-other-servers"></a>Copier des bases de données sur d'autres serveurs
   Il est parfois utile de copier une base de données d'un ordinateur vers un autre, notamment pour des tests, la vérification de cohérence, le développement de logiciels, l'exécution de rapports, la création d'une base de données miroir ou éventuellement pour rendre la base de données disponible pour des opérations à distance.  

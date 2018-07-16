@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine-imoltp
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 5c5cc1fc-1fdf-4562-9443-272ad9ab5ba8
 caps.latest.revision: 21
-author: stevestein
-ms.author: sstein
-manager: jhubbard
-ms.openlocfilehash: b0d22fd13abf68cd9eea1c21b135427161fbf8be
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
+ms.openlocfilehash: a8a8c2fc949755b5cc3fea644a5b08ee3990c541
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36143276"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37207099"
 ---
 # <a name="estimate-memory-requirements-for-memory-optimized-tables"></a>Estimer les besoins en mémoire des tables mémoire optimisées
   Si vous créez une table [!INCLUDE[hek_2](../../includes/hek-2-md.md)] optimisée en mémoire ou migrez une table existante basée sur disque vers une table optimisée en mémoire, il est important d'estimer avec justesse les besoins en mémoire de chaque table, de façon à configurer le serveur avec suffisamment de mémoire. Cette section explique comment estimer la quantité de mémoire nécessaire pour accueillir les données d'une table mémoire optimisée.  
@@ -123,7 +123,7 @@ SELECT COUNT(DISTINCT [Col2])
   
  **Définition de la taille de tableau des index de hachage**  
   
- La taille de tableau de hachage est définie par `(bucket_count= <value>)` où \<valeur > est une valeur entière supérieure à zéro. Si \<valeur > n’est pas une puissance de 2, la valeur de bucket_count réel est arrondi à la puissance de 2 suivante.  Dans notre exemple, (bucket_count = 5000000), étant donné que 5 000 000 n’est pas une puissance de 2, le nombre réel de compartiments est arrondi à 8 388 608 (2<sup>23</sup>).  Vous devez utiliser ce nombre, et non pas 5 000 000, lorsque vous calculez la mémoire nécessaire pour le tableau de hachage.  
+ La taille de tableau de hachage est définie `(bucket_count= <value>)` où \<valeur > est une valeur entière supérieure à zéro. Si \<valeur > n’est pas une puissance de 2, la valeur de bucket_count réel est arrondi à la puissance de 2 le plus proche suivante.  Dans notre exemple, (bucket_count = 5000000), 5 000 000 n’étant pas une puissance de 2, le nombre de compartiments réel est arrondi à 8 388 608 (2<sup>23</sup>).  Vous devez utiliser ce nombre, et non pas 5 000 000, lorsque vous calculez la mémoire nécessaire pour le tableau de hachage.  
   
  Ainsi, dans notre exemple, la mémoire nécessaire pour chaque tableau de hachage est :  
   

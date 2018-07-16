@@ -1,29 +1,28 @@
 ---
-title: Configurer la stratégie de basculement Flexible pour contrôler les Conditions pour le basculement automatique (toujours sur les groupes de disponibilité) | Documents Microsoft
+title: Configurer la stratégie de basculement Flexible pour contrôler les Conditions pour le basculement automatique (groupes de disponibilité) Always On | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Availability Groups [SQL Server], flexible failover policy
 - Availability Groups [SQL Server], failover
 - failover [SQL Server], AlwaysOn Availability Groups
 ms.assetid: 1ed564b4-9835-4245-ae35-9ba67419a4ce
 caps.latest.revision: 22
-author: rothja
-ms.author: jroth
-manager: jhubbard
-ms.openlocfilehash: c789865b92b628c30e0f634e529027ad26de23eb
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 4868c07427230de655fc8a1742458f4b4c72cfbb
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36152885"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37193979"
 ---
 # <a name="configure-the-flexible-failover-policy-to-control-conditions-for-automatic-failover-always-on-availability-groups"></a>Configurer la stratégie de basculement flexible pour contrôler les conditions du basculement automatique (groupes de disponibilité Always On)
   Cette rubrique explique comment configurer la stratégie de basculement flexible pour un groupe de disponibilité AlwaysOn à l'aide de [!INCLUDE[tsql](../../../includes/tsql-md.md)] ou PowerShell dans [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. Une stratégie de basculement flexible vous offre un contrôle granulaire sur les conditions qui entraînent un basculement automatique d'un groupe de disponibilité. En changeant les conditions d'échec qui déclenchent un basculement automatique et la fréquence des contrôles d'intégrité, vous pouvez augmenter ou diminuer la probabilité d'un basculement automatique pour assurer le contrat de niveau de service relatif à la haute disponibilité.  
@@ -94,7 +93,7 @@ ms.locfileid: "36152885"
 ##  <a name="PowerShellProcedure"></a> Utilisation de PowerShell  
  **Pour configurer la stratégie de basculement flexible**  
   
-1.  Définir la valeur par défaut (`cd`) à l’instance de serveur qui héberge le réplica principal.  
+1.  Définir par défaut (`cd`) à l’instance de serveur qui héberge le réplica principal.  
   
 2.  Lorsque vous ajoutez un réplica de disponibilité à un groupe de disponibilité, utilisez l'applet de commande `New-SqlAvailabilityGroup`. Lorsque vous modifiez un réplica de disponibilité existant, utilisez l'applet de commande `Set-SqlAvailabilityGroup`.  
   

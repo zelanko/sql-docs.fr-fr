@@ -5,10 +5,9 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - partners [SQL Server]
 - standby servers [SQL Server]
@@ -24,15 +23,15 @@ helpviewer_keywords:
 - mirror server [SQL Server] See database mirroring
 ms.assetid: a7f95ddc-5154-4ed5-8117-c9fcf2221f13
 caps.latest.revision: 121
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: f70a95e9ef5bf0bc01687728fd5cac7641867759
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 9b760a12e436a9d6f6eebf96bcfeaea8459171a8
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36040956"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37233889"
 ---
 # <a name="database-mirroring-sql-server"></a>Mise en miroir de bases de données (SQL Server)
     
@@ -61,7 +60,7 @@ ms.locfileid: "36040956"
   
 -   Elle augmente la disponibilité de la base de données de production au cours des mises à niveau.  
   
-     Pour réduire le temps mort pour une base de données mise en miroir, vous pouvez mettre à niveau séquentiellement les instances de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] qui hébergent les partenaires de basculement. Elle n'implique le temps mort que d'un basculement unique. Cette forme de mise à niveau s'appelle une *mise à niveau propagée*. Pour plus d’informations, consultez [installer un Service Pack sur un système avec un temps mort Minimal pour la mise en miroir de bases de données de](../install-a-service-pack-on-a-system-with-minimal-downtime-for-mirrored-databases.md).  
+     Pour réduire le temps mort pour une base de données mise en miroir, vous pouvez mettre à niveau séquentiellement les instances de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] qui hébergent les partenaires de basculement. Elle n'implique le temps mort que d'un basculement unique. Cette forme de mise à niveau s'appelle une *mise à niveau propagée*. Pour plus d’informations, consultez [installer un Service Pack sur un système avec un temps mort Minimal pour les bases de données mise en miroir](../install-a-service-pack-on-a-system-with-minimal-downtime-for-mirrored-databases.md).  
   
 ##  <a name="TermsAndDefinitions"></a> Termes et définitions de mise en miroir de bases de données  
  basculement automatique  
@@ -298,7 +297,7 @@ ms.locfileid: "36040956"
   
  **Utilisation de Transact-SQL ou SQL Server Management Studio**  
   
--   [Réduire le temps mort pour les bases de données en miroir lors de la mise à niveau des Instances de serveur](upgrading-mirrored-instances.md)  
+-   [Réduire le temps d’indisponibilité des bases de données mises en miroir lors de la mise à niveau d’instances de serveur](upgrading-mirrored-instances.md)  
   
 -   [Préparer une base de données miroir pour la mise en miroir &#40;SQL Server&#41;](prepare-a-mirror-database-for-mirroring-sql-server.md)  
   
@@ -331,7 +330,7 @@ ms.locfileid: "36040956"
   
 ## <a name="see-also"></a>Voir aussi  
  [Point de terminaison de mise en miroir de bases de données &#40;SQL Server&#41;](the-database-mirroring-endpoint-sql-server.md)   
- [Réparation de Page automatique &#40;pour les groupes de disponibilité et de la mise en miroir de base de données&#41;](../../sql-server/failover-clusters/automatic-page-repair-availability-groups-database-mirroring.md)   
+ [Réparation de Page automatique &#40;pour les groupes de disponibilité et la mise en miroir de base de données&#41;](../../sql-server/failover-clusters/automatic-page-repair-availability-groups-database-mirroring.md)   
  [Résolution des problèmes de configuration de mise en miroir de bases de données &#40;SQL Server&#41;](troubleshoot-database-mirroring-configuration-sql-server.md)   
  [Mise en miroir de bases de données : interopérabilité et coexistence &#40;SQL Server&#41;](database-mirroring-interoperability-and-coexistence-sql-server.md)   
  [Prérequis, limitations et recommandations relatives à la mise en miroir de bases de données](prerequisites-restrictions-and-recommendations-for-database-mirroring.md)   

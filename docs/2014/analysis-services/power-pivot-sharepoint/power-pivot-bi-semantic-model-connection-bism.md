@@ -1,5 +1,5 @@
 ---
-title: Connexion de modèle sémantique BI PowerPivot (.bism) | Documents Microsoft
+title: Connexion de modèle sémantique BI PowerPivot (.bism) | Microsoft Docs
 ms.custom: ''
 ms.date: 04/19/2015
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 08828eec-4f8c-4f34-a145-e442f7b7031d
 caps.latest.revision: 37
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: ac5edd8e03f7094bec05298057f081053ef13640
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: b8f10f53f09848971eee5773d2875d238b0033c9
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36154925"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37253011"
 ---
 # <a name="powerpivot-bi-semantic-model-connection-bism"></a>Connexion de modèle sémantique BI PowerPivot (.bism)
-  Une connexion de modèle sémantique BI (.bism) est une connexion portable qui connecte Excel ou [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] des rapports à un [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] base de données model tabulaire ou un [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] instance en mode multidimensionnel. Si vous connaissez les fichiers Office Data Connection (.odc), vous remarquerez des similitudes avec la définition et l'utilisation d'une connexion .bism.  
+  Une connexion de modèle sémantique BI (.bism) est une connexion portable qui connecte Excel ou [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] signale à un [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] base de données model tabulaire ou un [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] instance en mode multidimensionnel. Si vous connaissez les fichiers Office Data Connection (.odc), vous remarquerez des similitudes avec la définition et l'utilisation d'une connexion .bism.  
   
  Une connexion de modèle sémantique BI est créée et accessible via SharePoint. La création de connexions de modèles sémantiques BI active les commandes de lancement rapide sur une connexion de modèle sémantique BI dans une bibliothèque. Les commandes de lancement rapide ouvrent un nouveau classeur Excel ou les options de modification du fichier de connexion. Si [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] est installé, vous verrez également une commande pour créer un [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] rapport.  
   
@@ -58,11 +58,11 @@ ms.locfileid: "36154925"
   
  Les connexions entre Power View et une base de données model tabulaire suivent une séquence d'authentification à double saut où l'identité de l'utilisateur afflue du client à SharePoint, puis de SharePoint à une base de données model tabulaire Analysis Services principale qui s'exécute à l'extérieur de la batterie. La bibliothèque cliente ADOMD.NET qui traite la demande de connexion tente toujours Kerberos en premier. Si Kerberos est configuré, l'identité de l'utilisateur est empruntée sur la connexion à la base de données model tabulaire, et la connexion réussit.  
   
- Si Kerberos n'est pas configuré et la requête échoue, Reporting Services effectue une deuxième tentative. Dans ce scénario, la bibliothèque cliente se connecte à Analysis Services à l'aide de l'identité du service Reporting Services et de l'authentification NTLM. L’identité de l’utilisateur de Power View est passée sur la chaîne de connexion à l’aide de le `effectiveusername` paramètre.  
+ Si Kerberos n'est pas configuré et la requête échoue, Reporting Services effectue une deuxième tentative. Dans ce scénario, la bibliothèque cliente se connecte à Analysis Services à l'aide de l'identité du service Reporting Services et de l'authentification NTLM. L’identité de l’utilisateur de Power View est passée à la chaîne de connexion à l’aide de le `effectiveusername` paramètre.  
   
  Seul un membre du rôle d'administrateur système sur l'instance Analysis Services a l'autorisation d'établir une connexion à l'aide du paramètre `effectiveusername` et d'emprunter l'identité d'un autre utilisateur sur l'instance de serveur. Pour cette raison, le compte d'exécution du service partagé Reporting Services doit disposer de droits d'administration sur l'instance Analysis Services.  Les instructions permettant d’accorder des autorisations administratives au compte de service sont fournies dans cette rubrique, [Créer une connexion de modèle sémantique BI à une base de données model tabulaire](create-a-bi-semantic-model-connection-to-a-tabular-model-database.md).  
   
- L'illustration suivante montre une séquence de connexion qui utilise la même identité d'utilisateur Windows pour chaque connexion. Dans la dernière connexion à Analysis Services, la connexion est établie par l’identité d’application du service de Reporting Services en passant l’identité utilisateur Windows d'à `effectiveusername`.  
+ L'illustration suivante montre une séquence de connexion qui utilise la même identité d'utilisateur Windows pour chaque connexion. Dans la dernière connexion à Analysis Services, la connexion est établie par l’identité d’application du service de Reporting Services en passant l’identité d’utilisateur Windows à `effectiveusername`.  
   
  ![Connexion avec emprunt d’identité à la base de données tabulaire](../media/ssas-powerpivotbismconnection-2.gif "connexion avec emprunt d’identité à la base de données tabulaire")  
   

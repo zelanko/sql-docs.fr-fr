@@ -1,5 +1,5 @@
 ---
-title: SQL Server Distributed Replay | Documents Microsoft
+title: SQL Server Distributed Replay | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Distributed Replay
 - SQL Server Distributed Replay
 ms.assetid: 58ef7016-b105-42c2-90a0-364f411849a4
 caps.latest.revision: 25
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 63974e86420e347d66b36e361e9b68fc0f54c318
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 20ea880286578872964ffe88123c41ee4201f573
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36041733"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37232629"
 ---
 # <a name="sql-server-distributed-replay"></a>SQL Server Distributed Replay
   La fonctionnalité [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Distributed Replay vous aide à évaluer l’impact de futures mises à niveau de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Vous pouvez également l’utiliser pour évaluer l’impact des mises à niveau du matériel et du système d’exploitation, ainsi que des paramétrages de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
@@ -35,7 +35,7 @@ ms.locfileid: "36041733"
  La fonctionnalité [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Distributed Replay peut utiliser plusieurs ordinateurs pour relire les données de trace et simuler les charges de travail critiques. Utilisez Distributed Replay pour tester la compatibilité des applications, tester les performances ou planifier la capacité.  
   
 ## <a name="when-to-use-distributed-replay"></a>Quand utiliser Distributed Replay  
- [!INCLUDE[ssSqlProfiler](../../../includes/sssqlprofiler-md.md)] et Distributed Replay se chevauchent dans la fonctionnalité.  
+ [!INCLUDE[ssSqlProfiler](../../../includes/sssqlprofiler-md.md)] et Distributed Replay se chevauchent certaines fonctionnalités.  
   
  Vous pouvez utiliser le [!INCLUDE[ssSqlProfiler](../../../includes/sssqlprofiler-md.md)] pour relire une trace capturée sur un environnement de test mis à niveau. Vous pouvez également analyser les résultats de la relecture pour rechercher d'éventuelles incompatibilités de fonctions et de performances. Toutefois, le [!INCLUDE[ssSqlProfiler](../../../includes/sssqlprofiler-md.md)] ne peut relire une charge de travail qu’à partir d’un seul ordinateur. Lors de la relecture d’une application OLTP intensive ayant de nombreuses connexions simultanées actives ou un débit élevé, le [!INCLUDE[ssSqlProfiler](../../../includes/sssqlprofiler-md.md)] peut devenir un goulot d’étranglement des ressources.  
   
@@ -63,7 +63,7 @@ ms.locfileid: "36041733"
   
  L'illustration suivante montre l'architecture physique Distributed Replay de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] :  
   
- ![Architecture de relecture distribuée](../../database-engine/media/distributedreplayarch.gif "relecture Architecture distribuée")  
+ ![Architecture de relecture distribuée](../../database-engine/media/distributedreplayarch.gif "Architecture de relecture distribuée")  
   
 ## <a name="distributed-replay-tasks"></a>Tâches relatives à Distributed Replay  
   
@@ -73,7 +73,7 @@ ms.locfileid: "36041733"
 |Explique comment préparer les données de trace d'entrée.|[Préparer les données de trace d’entrée](prepare-the-input-trace-data.md)|  
 |Explique comment relire les données de trace.|[Relire les données de trace](replay-trace-data.md)|  
 |Décrit comment examiner les résultats des données de trace de Distributed Replay.|[Examiner les résultats de la relecture](review-the-replay-results.md)|  
-|Décrit comment utiliser l’outil d’administration pour lancer, surveiller et annuler des opérations sur le contrôleur.|[Options de ligne de commande administration d'outils &#40;Distributed Replay Utility&#41;](administration-tool-command-line-options-distributed-replay-utility.md)|  
+|Décrit comment utiliser l’outil d’administration pour lancer, surveiller et annuler des opérations sur le contrôleur.|[Options de ligne de l’outil d’administration &#40;Distributed Replay Utility&#41;](administration-tool-command-line-options-distributed-replay-utility.md)|  
   
 ## <a name="see-also"></a>Voir aussi  
  [Forum de SQL Server Distributed Replay](http://social.technet.microsoft.com/Forums/sl/sqldru/)   

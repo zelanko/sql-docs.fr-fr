@@ -1,5 +1,5 @@
 ---
-title: TCP - IP propriétés (onglet protocoles) | Documents Microsoft
+title: TCP - IP propriétés (onglet protocoles) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - configmgr-client
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - TCP/IP [SQL Server], configuration options
 ms.assetid: 007638fc-3a24-4460-adbe-545ded5d6f88
 caps.latest.revision: 36
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 57b3bd32574aadbd42b25b626756cc20369d9b8a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 169e1c0d19cecf50f7c995ff4b4d46f4badb32eb
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36041504"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37249539"
 ---
 # <a name="tcp---ip-properties-protocols-tab"></a>TCP - IP propriétés (onglet protocoles)
   La boîte de dialogue **Propriétés de TCP/IP** permet de configurer les options du protocole TCP/IP. Cliquez sur **TCP/IP** dans le volet gauche pour afficher les configurations de chaque adresse IP dans le volet d’informations.  

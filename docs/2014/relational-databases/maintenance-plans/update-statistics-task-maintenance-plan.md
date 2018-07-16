@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.maint.statistics.f1
 helpviewer_keywords:
 - Updates Statistics Task dialog box
 ms.assetid: 22902fd0-eb39-4f18-af94-3fcb69d2a3a4
 caps.latest.revision: 24
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: b0fcc2dec17d6be2028092a6c2df1418806531c3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 5302eb8b7ac81a7ad12ca063b8c34d3168fabeb8
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36042450"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37197179"
 ---
 # <a name="update-statistics-task-maintenance-plan"></a>Tâche Mettre à jour les statistiques (Plan de maintenance)
   Utilisez la boîte de dialogue **Tâche Mettre à jour les statistiques** pour mettre à jour les informations [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] relatives aux données des tables et des index. Cette tâche rééchantillonne les statistiques de distribution de chaque index créé dans les tables utilisateur de la base de données. Les statistiques de distribution servent à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pour optimiser la navigation dans les tables pendant le traitement des instructions [!INCLUDE[tsql](../../includes/tsql-md.md)] . Pour collecter automatiquement les statistiques de distribution, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] échantillonne périodiquement les données de la table correspondant à chaque index. La taille de cet échantillonnage est calculée en fonction du nombre de lignes de la table et de la fréquence de modification des données. Utilisez cette option pour effectuer un échantillonnage supplémentaire à l'aide du pourcentage spécifié de données des tables. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilise ces informations pour créer des plans de requête améliorés.  

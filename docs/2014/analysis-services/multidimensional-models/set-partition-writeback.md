@@ -1,5 +1,5 @@
 ---
-title: Définir l’écriture différée de Partition | Documents Microsoft
+title: Définir l’écriture différée de Partition | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - write-enabled partitions [Analysis Services]
 - partitions [Analysis Services], writeback
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - writeback [Analysis Services], partitions
 ms.assetid: 38bb09cc-2652-4971-8373-0cf468cdc7a6
 caps.latest.revision: 33
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: de2e5bc7b9c4a09d2a5a3df82586cc9fb9f856b8
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: c58dea5dd30f32b9b137903103448ade4678c87b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36042316"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37250939"
 ---
 # <a name="set-partition-writeback"></a>Définir l'écriture différée de partition
   Si vous activez en écriture un groupe de mesures, les utilisateurs finaux peuvent modifier les données du cube lorsqu'ils le parcourent, et les modifications sont stockées dans une table séparée appelée « table d'écriture différée », et non dans les données du cube ou les données sources. Les utilisateurs finaux qui explorent une partition activée en écriture peuvent voir le résultat de toutes les modifications dans la table d'écriture différée de la partition.  
@@ -65,7 +65,7 @@ ms.locfileid: "36042316"
   
 ## <a name="see-also"></a>Voir aussi  
  [Partitions activées en écriture](../multidimensional-models-olap-logical-cube-objects/partitions-write-enabled-partitions.md)   
- [Activation de l’écriture différée à un Cube OLAP au niveau des cellules dans Excel 2010](http://go.microsoft.com/fwlink/p/?LinkId=394952)   
- [Activation et sécurisation de saisie de données avec l’écriture différée de Analysis Services](http://go.microsoft.com/fwlink/p/?LinkId=394953)  
+ [Activation de l’écriture différée sur un Cube OLAP au niveau des cellules dans Excel 2010](http://go.microsoft.com/fwlink/p/?LinkId=394952)   
+ [L’activation et sécurisation de l’entrée de données avec écriture différée d’Analysis Services](http://go.microsoft.com/fwlink/p/?LinkId=394953)  
   
   

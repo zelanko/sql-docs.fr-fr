@@ -1,5 +1,5 @@
 ---
-title: Les modèles d’exploration de données (Analysis Services - Exploration de données) | Documents Microsoft
+title: Modèles d’exploration de données (Analysis Services - Exploration de données) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - algorithms [data mining]
 - mining models [Analysis Services]
@@ -18,15 +18,15 @@ helpviewer_keywords:
 - architecture [Analysis Services]
 ms.assetid: cd4df273-0c6a-4b3e-9572-8a7e313111e8
 caps.latest.revision: 37
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 203295e2c3c45c5e9d67228e5009bc130d0d49eb
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 9ea9bf0ccedda65e75928aa4cca94e65e3901d4d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36141677"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37228379"
 ---
 # <a name="mining-models-analysis-services---data-mining"></a>Modèles d'exploration de données (Analysis Services - Exploration de données)
   Un *modèle d’exploration de données* est créé en appliquant un algorithme aux données, mais c’est plus qu’un algorithme ou qu’un conteneur de métadonnées : il s’agit d’un jeu de données, de statistiques et de modèles qui peuvent être appliqués à de nouvelles données pour générer des prédictions et pour effectuer des inférences sur les relations.  
@@ -50,7 +50,7 @@ ms.locfileid: "36141677"
   
  Un modèle d'exploration de données est vide jusqu'à ce que les données fournies par la structure d'exploration de données aient été traitées et analysées. Après traitement, un modèle d'exploration de données contiendra des métadonnées, des résultats et des liaisons se rapportant à la structure d'exploration de données.  
   
- ![modèle contient des métadonnées, les modèles et les liaisons](../media/dmcon-modelarch2.gif "modèle contient des métadonnées, les modèles et les liaisons")  
+ ![modèle contient des métadonnées, des modèles et des liaisons](../media/dmcon-modelarch2.gif "modèle contient des métadonnées, des modèles et des liaisons")  
   
  Les métadonnées indiquent le nom du modèle et le serveur où il est stocké, ainsi qu'une définition du modèle, y compris les colonnes de la structure d'exploration de données utilisées pour créer le modèle, les définitions des filtres éventuels appliqués lors du traitement du modèle et l'algorithme utilisé pour analyser les données. Tous ces choix, les colonnes de données et leurs types de données, les filtres et l'algorithme, ont une influence importante sur les résultats de l'analyse.  
   
@@ -129,9 +129,9 @@ ms.locfileid: "36141677"
   
 |Rubriques|Liens|  
 |------------|-----------|  
-|Apprendre à créer des structures d'exploration de données qui peuvent prendre en charge plusieurs modèles d'exploration de données. En savoir plus sur l'utilisation de colonnes dans les modèles.|[Colonnes de structure d’exploration de données](mining-structure-columns.md)<br /><br /> [Colonnes d’un modèle d’exploration de données](mining-model-columns.md)<br /><br /> [Types de contenu &#40;d’exploration de données&#41;](content-types-data-mining.md)|  
+|Apprendre à créer des structures d'exploration de données qui peuvent prendre en charge plusieurs modèles d'exploration de données. En savoir plus sur l'utilisation de colonnes dans les modèles.|[Colonnes de structure d’exploration de données](mining-structure-columns.md)<br /><br /> [Colonnes d’un modèle d’exploration de données](mining-model-columns.md)<br /><br /> [Types de contenu &#40;exploration de données&#41;](content-types-data-mining.md)|  
 |Découvrir les différents algorithmes et la manière dont le choix de l'algorithme affecte le contenu du modèle.|[Contenu du modèle d’exploration de données &#40;Analysis Services - Exploration de données&#41;](mining-model-content-analysis-services-data-mining.md)<br /><br /> [Algorithmes d’exploration de données &#40;Analysis Services - Exploration de données&#41;](data-mining-algorithms-analysis-services-data-mining.md)|  
-|Découvrir comment vous pouvez définir des propriétés sur le modèle qui affectent sa composition et son comportement.|[Propriétés du modèle d’exploration de données](mining-model-properties.md)<br /><br /> [Les indicateurs de modélisation &#40;d’exploration de données&#41;](modeling-flags-data-mining.md)|  
+|Découvrir comment vous pouvez définir des propriétés sur le modèle qui affectent sa composition et son comportement.|[Propriétés du modèle d’exploration de données](mining-model-properties.md)<br /><br /> [Indicateurs de modélisation &#40;exploration de données&#41;](modeling-flags-data-mining.md)|  
 |En savoir plus sur les interfaces programmables pour l'exploration de données.|[Développement avec Analysis Management Objects &#40;AMO&#41;](../multidimensional-models/analysis-management-objects/developing-with-analysis-management-objects-amo.md)<br /><br /> [Data Mining Extensions &#40;DMX&#41; référence](/sql/dmx/data-mining-extensions-dmx-reference)|  
 |Apprendre à utiliser les visionneuses personnalisées d'exploration de données dans [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].|[Visionneuses de modèle d’exploration de données](data-mining-model-viewers.md)|  
 |Afficher des exemples de différents types de requête que vous pouvez utiliser sur des modèles d'exploration de données.|[Requêtes d’exploration de données](data-mining-queries.md)|  

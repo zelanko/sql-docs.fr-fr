@@ -1,5 +1,5 @@
 ---
-title: Vue (onglet Structure de Dimension, Concepteur de dimensions) (Analysis Services - données multidimensionnelles) | Documents Microsoft
+title: (Onglet Structure de Dimension, Concepteur de dimensions) de vue de Source de données (Analysis Services - données multidimensionnelles) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql.asvs.dimensiondesigner.dbv.datasourcepane.f1
 ms.assetid: c4bd3c5e-8986-448f-b9db-3551f50f0696
 caps.latest.revision: 25
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: c960a5c08f3d95ee6ef0813db67f8d9a33a6a683
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: aa82d94a6e034c514b173e623f8c6d0ab9932880
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36041259"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37246159"
 ---
 # <a name="data-source-view-dimension-structure-tab-dimension-designer-analysis-services---multidimensional-data"></a>Vue de source de données (onglet Structure de dimension, Concepteur de dimensions) (Analysis Services - Données multidimensionnelles)
   Utilisez le volet **Vue de source de données** pour afficher les tables et les colonnes associées à la dimension sélectionnée. Ce volet sert à créer des attributs, des propriétés de membres, des hiérarchies et des niveaux. Pour cela, faites glisser des colonnes du volet **Vue de source de données** dans le volet **Attributs** ou **Hiérarchies et niveaux** .  

@@ -1,5 +1,5 @@
 ---
-title: Éditeur de Transformation de Conversion de données | Documents Microsoft
+title: Éditeur de Transformation de Conversion de données | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,28 +8,28 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.dataconversiontransformation.f1
 helpviewer_keywords:
 - Data Conversion Transformation Editor
 ms.assetid: 7b4e4873-e8fe-4549-a965-65bebdb270bc
 caps.latest.revision: 28
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 9c5157175181c7a43a2c8e3209c23905a4129d2d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 330ac6f9211afbc1dd3e89d9d4c7298a41026f31
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36042273"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37225971"
 ---
 # <a name="data-conversion-transformation-editor"></a>Éditeur de transformation de conversion de données
   Utilisez la boîte de dialogue **Éditeur de transformation de conversion de données** pour sélectionner les colonnes à convertir, sélectionner le type de données de conversion des colonnes et définir les attributs de conversion.  
   
 > [!NOTE]  
->  Le `FastParse` propriétés des colonnes de sortie de la transformation de Conversion de données ne sont pas disponible dans le **éditeur de Transformation de Conversion de données**, mais peut être définie à l’aide de la **éditeur avancé**. Pour plus d'informations sur cette propriété, consultez la section Transformation de conversion de données dans [Transformation Custom Properties](data-flow/transformations/transformation-custom-properties.md).  
+>  Le `FastParse` propriété des colonnes de sortie de la transformation de Conversion de données n’est pas disponible dans le **éditeur de Transformation de Conversion de données**, mais peut être définie à l’aide de la **éditeur avancé**. Pour plus d'informations sur cette propriété, consultez la section Transformation de conversion de données dans [Transformation Custom Properties](data-flow/transformations/transformation-custom-properties.md).  
   
  Pour en savoir plus sur la transformation de conversion de données, consultez [Data Conversion Transformation](data-flow/transformations/data-conversion-transformation.md).  
   

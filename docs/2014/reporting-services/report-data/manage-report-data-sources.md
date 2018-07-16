@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - reports [Reporting Services], data
 - published reports [Reporting Services], data source connections
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - data sources [Reporting Services], managing
 ms.assetid: 0475aded-c8fe-4337-a2b5-4df0ec4c46af
 caps.latest.revision: 51
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 8be62bb127d6d3fed0f3156f1dc58fc276e51431
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: 0c49a666894fd4811de2405f22da111298b019b0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36039696"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37244309"
 ---
 # <a name="manage-report-data-sources"></a>Gérer des sources de données de rapports
   Dans [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], les rapports, les modèles de rapports et les abonnements pilotés par les données récupèrent les données qui proviennent de sources de données externes. Pour se connecter à une source de données externe, un serveur de rapports utilise les informations de connexion de la source de données qui sont définies dans le rapport, le modèle ou l'abonnement, ou qui sont référencées à partir de ceux-ci. Les propriétés de connexion à la source de données sont toujours définies avec le rapport ou le modèle que vous créez, mais vous pouvez les gérer de manière indépendante après avoir publié le rapport ou le modèle sur un serveur de rapports.  
@@ -56,7 +56,7 @@ ms.locfileid: "36039696"
  Si vous publiez un rapport avec des propriétés de source de données incorporées dans le rapport, vous pouvez envisager de passer à des propriétés de source de données partagée. Les sources de données partagées sont plus faciles à gérer parce que vous pouvez mettre à jour les informations d'identification et les chaînes de connexion sur une page. Tous les rapports, modèles et abonnements pilotés par des données qui font appel à cette source de données peuvent intégrer immédiatement les modifications. Vous pouvez également mettre une source de données partagée hors connexion et suspendre le rapport ou l'abonnement pour empêcher son exécution pendant que vous dépannez ou analysez un problème étant survenu.  
   
 ## <a name="controlling-access-data-source-properties"></a>Contrôle de l'accès aux propriétés de la source de données  
- Par défaut, un utilisateur autorisé à gérer des rapports peut définir n'importe quelle propriété sur le rapport, notamment les propriétés qui déterminent le type de la source de données, la chaîne de connexion, les informations d'identification, et si le rapport reçoit des informations de connexion d'une source de données partagée ou incorporée. Pour plus d’informations sur les tâches et autorisations contrôlent l’accès aux propriétés de source de données sur un serveur de rapports en mode natif, consultez [sécuriser des éléments de Source de données partagé](../security/secure-shared-data-source-items.md) et [sécuriser les rapports et ressources](../security/secure-reports-and-resources.md).  
+ Par défaut, un utilisateur autorisé à gérer des rapports peut définir n'importe quelle propriété sur le rapport, notamment les propriétés qui déterminent le type de la source de données, la chaîne de connexion, les informations d'identification, et si le rapport reçoit des informations de connexion d'une source de données partagée ou incorporée. Pour plus d’informations sur les tâches et autorisations contrôlent l’accès aux propriétés de source de données sur un serveur de rapports en mode natif, consultez [sécuriser les éléments de Source de données partagée](../security/secure-shared-data-source-items.md) et [sécuriser des rapports et des ressources](../security/secure-reports-and-resources.md).  
   
  Les autorisations d'afficher et de modifier les propriétés des éléments dans une bibliothèque SharePoint sont déterminées par l'administrateur de site. Pour plus d’informations sur les autorisations contrôlent l’accès aux propriétés de connexion de source de données, consultez [SharePoint Site et List Permission Reference for Report Server Items](../security/sharepoint-site-and-list-permission-reference-for-report-server-items.md).  
   
@@ -65,11 +65,11 @@ ms.locfileid: "36039696"
   
 |Tâche|Outil|Lien|  
 |----------|----------|----------|  
-|Afficher des exemples de chaînes de connexion.||[Connexions de données, les Sources de données et les chaînes de connexion dans Reporting Services](../data-connections-data-sources-and-connection-strings-in-reporting-services.md)|  
+|Afficher des exemples de chaînes de connexion.||[Connexions de données, sources de données et chaînes de connexion dans Reporting Services](../data-connections-data-sources-and-connection-strings-in-reporting-services.md)|  
 |Choisir une stratégie pour obtenir des informations d'identification pour se connecter à une source de données.||[Spécifier des informations d'identification et de connexion pour les sources de données de rapports](specify-credential-and-connection-information-for-report-data-sources.md)|  
 |Ajouter des propriétés de connexion à la source de données à un fichier de définition de rapport (.rdl).|Concepteur de rapports|[Créer une Source de données incorporée ou partagée &#40;SSRS&#41;](../create-an-embedded-or-shared-data-source-ssrs.md)|  
 |Ajouter et créer un lien vers un fichier de source de données partagée (.rds) dans un projet de rapport.|Concepteur de rapports|[Créer, modifier et supprimer des Sources de données partagées &#40;SSRS&#41;](create-modify-and-delete-shared-data-sources-ssrs.md)|  
-|Créer une liste prédéfinie des sources de données que les utilisateurs peuvent sélectionner au moment de l'exécution. Lorsqu'un utilisateur demande un rapport, celui-ci fournit une liste des sources de données. L'utilisateur doit sélectionner quelle source de données utiliser avant d'exécuter le rapport. Pour ajouter une liste de sélection de la source de données à un rapport, utilisez une expression.<br /><br /> Il s'agit d'une connexion dynamique à la source de données.|Concepteur de rapports|[Connexions de données, les Sources de données et les chaînes de connexion dans Reporting Services](../data-connections-data-sources-and-connection-strings-in-reporting-services.md)|  
+|Créer une liste prédéfinie des sources de données que les utilisateurs peuvent sélectionner au moment de l'exécution. Lorsqu'un utilisateur demande un rapport, celui-ci fournit une liste des sources de données. L'utilisateur doit sélectionner quelle source de données utiliser avant d'exécuter le rapport. Pour ajouter une liste de sélection de la source de données à un rapport, utilisez une expression.<br /><br /> Il s'agit d'une connexion dynamique à la source de données.|Concepteur de rapports|[Connexions de données, sources de données et chaînes de connexion dans Reporting Services](../data-connections-data-sources-and-connection-strings-in-reporting-services.md)|  
 |Créer un élément de source de données partagée sur un serveur de rapports.|Gestionnaire de rapports|[Créer, supprimer ou modifier une Source de données partagée &#40;le Gestionnaire de rapports&#41;](../create-delete-or-modify-a-shared-data-source-report-manager.md)|  
 |Stocker des informations d'identification comme condition préalable à la création des abonnements ou des instantanés de rapport.|Gestionnaire de rapports|[Stocker des informations d’identification dans une source de données Reporting Services](store-credentials-in-a-reporting-services-data-source.md)|  
 |Modifier les propriétés de connexion à la source de données sur un rapport publié.|Gestionnaire de rapports|[Configurer les propriétés de Source de données pour un rapport &#40;le Gestionnaire de rapports&#41;](configure-data-source-properties-for-a-report-report-manager.md)|  
@@ -83,8 +83,8 @@ ms.locfileid: "36039696"
  [Lier un rapport ou un modèle à une Source de données partagée &#40;SSRS&#41;](bind-a-report-or-model-to-a-shared-data-source-ssrs.md)   
  [Créer, supprimer ou modifier une Source de données partagée &#40;le Gestionnaire de rapports&#41;](../create-delete-or-modify-a-shared-data-source-report-manager.md)   
  [Stocker des informations d’identification dans une source de données Reporting Services](store-credentials-in-a-reporting-services-data-source.md)   
- [Connexions de données, les Sources de données et les chaînes de connexion dans Reporting Services](../data-connections-data-sources-and-connection-strings-in-reporting-services.md)   
- [Sources de données pris en charge par Reporting Services &#40;SSRS&#41;](../create-deploy-and-manage-mobile-and-paginated-reports.md)   
+ [Connexions de données, Sources de données et chaînes de connexion dans Reporting Services](../data-connections-data-sources-and-connection-strings-in-reporting-services.md)   
+ [Sources de données prises en charge par Reporting Services &#40;SSRS&#41;](../create-deploy-and-manage-mobile-and-paginated-reports.md)   
  [Gestion du contenu du serveur de rapports &#40;SSRS en mode natif&#41;](../report-server/report-server-content-management-ssrs-native-mode.md)  
   
   

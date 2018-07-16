@@ -1,5 +1,5 @@
 ---
-title: Prise en main dans Visual c# .NET | Documents Microsoft
+title: Mise en route avec Visual c# .NET | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,15 +14,15 @@ helpviewer_keywords:
 - Visual C# [SMO]
 ms.assetid: 37a22721-546c-453d-bc6f-238c13d7505d
 caps.latest.revision: 38
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 4ab73cb74f260ecb1b25e5452544cdebb9f1fdd5
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 7996f92639e3bdc6bf759b3f223dff4907752acb
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36044693"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37244581"
 ---
 # <a name="getting-started-in-visual-c-net"></a>Mise en route avec Visual C# .NET
   [!INCLUDE[csprcs](../../includes/csprcs-md.md)] .NET est un des langages de programmation managés pris en charge par le common language runtime (CLR) dans [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] .NET. Pour plus d’informations sur le langage c#, consultez le [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] documentation .NET. Vous pouvez utiliser aussi bien [!INCLUDE[vsprvslong](../../includes/vsprvslong-md.md)] que [!INCLUDE[vsOrcas](../../includes/vsorcas-md.md)] pour développer des applications SMO.  

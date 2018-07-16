@@ -1,5 +1,5 @@
 ---
-title: Type de données d’autorisation (ASSL) | Documents Microsoft
+title: Type de données permission (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - Permission data type
 ms.assetid: 5f309544-59f8-4432-b1eb-b7c1a049f8df
 caps.latest.revision: 43
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: ff5fb67e4f7989fb329e60a106ea8e6d0c734c97
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: c570ae1b3f2e2dbf65a4037f96e515d6667863a8
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36038898"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37233949"
 ---
 # <a name="permission-data-type-assl"></a>Type de données Permission (ASSL)
   Définit un type de données primitif abstrait qui fournit des informations sur une autorisation individuelle.  
@@ -74,11 +74,11 @@ ms.locfileid: "36038898"
   
  Ce type de données a les validations suivantes sous la valeur 2 de DeploymentMode (mode de serveur tabulaire).  
   
--   *Processus* attribut par défaut a la valeur `False`, sauf si l’utilisateur a le **Actualiser** autorisation. Pour les utilisateurs avec le **Actualiser** autorisation le *processus* attribut a la valeur `True`.  
+-   *Processus* attribut par défaut a la valeur `False`, sauf si l’utilisateur a le **Actualiser** autorisation. Pour les utilisateurs avec le **Actualiser** autorisation la *processus* attribut a la valeur `True`.  
   
 -   *ReadDefinition* attribut a la valeur `None`; toute autre valeur génère une erreur.  
   
--   *Lecture* attribut a la valeur `Allowed` pour les utilisateurs avec le **utilisateur** autorisation et `None` lorsque les utilisateurs sont affectés à la **Actualiser** autorisation ; si un utilisateur possède à la fois **Utilisateur** et **Actualiser** autorisations, puis l’attribut est défini sur `Allowed`. Pour les utilisateurs avec des privilèges d'administrateur, la valeur d'attribut est définie sur `Allowed`.  
+-   *En lecture* attribut a la valeur `Allowed` pour les utilisateurs avec le **utilisateur** autorisation et `None` lorsque les utilisateurs sont affectés à la **Actualiser** autorisation ; si un utilisateur possède à la fois **Utilisateur** et **Actualiser** autorisations, puis l’attribut est défini sur `Allowed`. Pour les utilisateurs avec des privilèges d'administrateur, la valeur d'attribut est définie sur `Allowed`.  
   
 -   *Écrire* attribut a la valeur `None`; toute autre valeur génère une erreur.  
   
@@ -86,6 +86,6 @@ ms.locfileid: "36038898"
   
 ## <a name="see-also"></a>Voir aussi  
  [Élément role &#40;ASSL&#41;](../objects/role-element-assl.md)   
- [Types de données de script langage XML Analysis Services &#40;ASSL&#41;](analysis-services-scripting-language-xml-data-types-assl.md)  
+ [Types Analysis Services Scripting Language XML données &#40;ASSL&#41;](analysis-services-scripting-language-xml-data-types-assl.md)  
   
   

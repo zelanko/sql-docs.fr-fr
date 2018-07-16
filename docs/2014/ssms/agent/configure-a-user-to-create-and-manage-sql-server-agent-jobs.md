@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server Agent jobs, user configuration
 - jobs [SQL Server Agent], user configuration
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - proxy accounts [SQL Server Agent]
 ms.assetid: 67897e3e-b7d0-43dd-a2e2-2840ec4dd1ef
 caps.latest.revision: 24
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: e39427bf18fafd44bf48eb869d11d901a4dcea8f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 2804168db65322d9c51219dad044ac0fe211163b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36152950"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37234349"
 ---
 # <a name="configure-a-user-to-create-and-manage-sql-server-agent-jobs"></a>Configurer un utilisateur de manière à créer et à gérer des travaux de l'Agent SQL Server
   Cette rubrique explique comment configurer un compte utilisateur pour créer ou exécuter des notifications relatives à des travaux de l'Agent [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
@@ -64,7 +64,7 @@ ms.locfileid: "36152950"
   
 3.  Cliquez avec le bouton droit de la souris sur **Proxies** , puis sélectionnez **Nouveau proxy**.  
   
-4.  Dans la page **Général** de la boîte de dialogue **Nouveau compte de proxy** , indiquez le nom de proxy, le nom d'identification et la description du nouveau proxy. Notez que vous devez créer une information d'identification avant de créer un proxy de SQL Server Agent. Pour plus d’informations sur la création d’une information d’identification, consultez [créer les informations d’identification](../../relational-databases/security/authentication-access/create-a-credential.md) et [CREATE CREDENTIAL &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-credential-transact-sql).  
+4.  Dans la page **Général** de la boîte de dialogue **Nouveau compte de proxy** , indiquez le nom de proxy, le nom d'identification et la description du nouveau proxy. Notez que vous devez créer une information d'identification avant de créer un proxy de SQL Server Agent. Pour plus d’informations sur la création d’une information d’identification, consultez [créer une information d’identification](../../relational-databases/security/authentication-access/create-a-credential.md) et [CREATE CREDENTIAL &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-credential-transact-sql).  
   
 5.  Activez les sous-systèmes appropriés pour ce proxy.  
   

@@ -1,5 +1,5 @@
 ---
-title: Type de données TableBinding (ASSL) | Documents Microsoft
+title: Type de données TableBinding (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - TableBinding data type
 ms.assetid: 3195dca4-82bf-46b7-a31f-5383586e3573
 caps.latest.revision: 39
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: d0790fe5d8567c8ab23e3aaf39430d46675dcbdc
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 475044a0bcad3c90ffaffa71eeeb6735a37f96c7
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36154699"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37220249"
 ---
 # <a name="tablebinding-data-type-assl"></a>Type de données TableBinding (ASSL)
   Définit un type de données dérivé représentant une liaison à une table.  
@@ -77,7 +77,7 @@ SELECT Date, Product ID, Qty, Price, Qty * Price AS Amount
    WHERE Year(Sales.Date) = 97  
 ```  
   
- L'expression calculée s'applique encore, même si l'expression a utilisé des noms de table qualifiés (par exemple Sales.Qty). La même règle s’applique si au lieu de cela, la table a été remplacée par une quelconque requête « SELECT... » La clause FROM ci-dessus deviendrait alors « FROM SELECT... Ventes."  
+ L'expression calculée s'applique encore, même si l'expression a utilisé des noms de table qualifiés (par exemple Sales.Qty). Il en irait de même si, à la place, la table était remplacée par une quelconque requête « SELECT... » : la clause FROM ci-dessus deviendrait alors « FROM SELECT ... Ventes."  
   
  Pour plus d’informations sur la `Binding` type, y compris les tableaux des objets Analysis Services Scripting Language (ASSL) de type `Binding` et la hiérarchie d’héritage de `Binding` types, consultez [Type de données de liaison &#40;ASSL&#41;](binding-data-type-assl.md).  
   
@@ -87,7 +87,7 @@ SELECT Date, Product ID, Qty, Price, Qty * Price AS Amount
   
 ## <a name="see-also"></a>Voir aussi  
  [Type de données de liaison &#40;ASSL&#41;](binding-data-type-assl.md)   
- [Sources de données et des liaisons &#40;SSAS multidimensionnel&#41;](../../multidimensional-models/data-sources-and-bindings-ssas-multidimensional.md)   
- [Types de données de script langage XML Analysis Services &#40;ASSL&#41;](analysis-services-scripting-language-xml-data-types-assl.md)  
+ [Sources de données et liaisons &#40;SSAS multidimensionnel&#41;](../../multidimensional-models/data-sources-and-bindings-ssas-multidimensional.md)   
+ [Types Analysis Services Scripting Language XML données &#40;ASSL&#41;](analysis-services-scripting-language-xml-data-types-assl.md)  
   
   

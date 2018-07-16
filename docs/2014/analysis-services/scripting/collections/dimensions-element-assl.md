@@ -1,5 +1,5 @@
 ---
-title: Dimensions, élément (ASSL) | Documents Microsoft
+title: Dimensions, élément (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - Dimensions element
 ms.assetid: 104e3154-92e9-4c6b-9cf3-e3f3fc712b28
 caps.latest.revision: 33
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: da68ed1367dd1fe2a212b76f5e0261614ca4dc91
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 1ff15cecd5e5d4451a580d8ee73922dc4ab05364
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36154273"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37241609"
 ---
 # <a name="dimensions-element-assl"></a>Élément Dimensions (ASSL)
   Contient la collection de dimensions associée à l'élément parent.  
@@ -60,7 +60,7 @@ ms.locfileid: "36154273"
   
 |Relation|Élément|  
 |------------------|-------------|  
-|Éléments parents|[Agrégation](../objects/aggregation-element-assl.md), [AggregationDesign](../objects/aggregationdesign-element-assl.md), [AggregationInstance](../objects/aggregationinstance-element-assl.md), [Cube](../objects/cube-element-assl.md), [base de données](../objects/database-element-assl.md), [ Groupe de mesures](../objects/group-element-assl.md), [Perspective](../objects/perspective-element-assl.md)|  
+|Éléments parents|[Agrégation](../objects/aggregation-element-assl.md), [AggregationDesign](../objects/aggregationdesign-element-assl.md), [AggregationInstance](../objects/aggregationinstance-element-assl.md), [Cube](../objects/cube-element-assl.md), [base de données](../objects/database-element-assl.md), [ MeasureGroup](../objects/group-element-assl.md), [Perspective](../objects/perspective-element-assl.md)|  
 |Éléments enfants|[Dimension](../objects/dimension-element-assl.md)|  
   
 ## <a name="remarks"></a>Notes  

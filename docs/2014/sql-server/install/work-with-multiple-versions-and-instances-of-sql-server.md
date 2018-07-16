@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - concurrent installations [SQL Server]
 - versions [SQL Server], multiple
@@ -21,15 +21,15 @@ helpviewer_keywords:
 - editions [SQL Server], side-by-side installations
 ms.assetid: 93acefa8-bb41-4ccc-b763-7801f51134e0
 caps.latest.revision: 63
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: abff13ee6139d74dbe0da10d37ff318d10b47f6f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 920e7295d56f3b7bfadf91a9532f638911535d44
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36154518"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37246369"
 ---
 # <a name="work-with-multiple-versions-and-instances-of-sql-server"></a>Utiliser plusieurs versions et instances de SQL Server
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] prend en charge plusieurs instances du [!INCLUDE[ssDE](../../includes/ssde-md.md)], d’ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]et de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] sur le même ordinateur. Vous pouvez également mettre à niveau des versions antérieures de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ou installer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sur un ordinateur où des versions précédentes de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sont déjà installées. Pour connaître les scénarios de mise à niveau pris en charge, consultez [Mises à niveau de la version et de l’édition prises en charge](../../database-engine/install-windows/supported-version-and-edition-upgrades.md).  
@@ -95,12 +95,12 @@ ms.locfileid: "36154518"
  Lorsqu'une instance de cluster de basculement [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] est installée côte à côte avec une instance autonome de [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], prenez soin d'éviter les conflits de numéro de port TCP sur les adresses IP. Les conflits se produisent généralement lorsque deux instances de [!INCLUDE[ssDE](../../includes/ssde-md.md)] sont configurées pour utiliser le port TCP par défaut (1433). Pour éviter des conflits, configurez une instance pour utiliser un port fixe non défini par défaut. La configuration d'un port fixe est généralement plus simple sur l'instance autonome. La configuration de [!INCLUDE[ssDE](../../includes/ssde-md.md)] pour utiliser des ports différents empêche un conflit inattendu adresse IP/port TCP qui bloque un démarrage de l'instance lorsqu'une instance de cluster de basculement [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] échoue au nœud en attente  
   
 ## <a name="see-also"></a>Voir aussi  
- [Configurations matérielle et logicielle requises pour l’installation de SQL Server 2014](hardware-and-software-requirements-for-installing-sql-server.md)   
+ [Matérielle et logicielle requise pour l’installation de SQL Server 2014](hardware-and-software-requirements-for-installing-sql-server.md)   
  [Installer SQL Server 2014 à partir de l’Assistant Installation &#40;le programme d’installation&#41;](../../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md)   
  [Mises à niveau de la version et de l'édition prises en charge](../../database-engine/install-windows/supported-version-and-edition-upgrades.md)   
  [Mise à niveau vers SQL Server 2014](../../database-engine/install-windows/upgrade-sql-server.md)   
  [Fonctionnalités prises en charge par les éditions de SQL Server 2014](../../../2014/getting-started/features-supported-by-the-editions-of-sql-server-2014.md)   
  [Compatibilité descendante](../../../2014/getting-started/backward-compatibility.md)   
- [Utilisez le Conseiller de mise à niveau pour préparer des mises à niveau](../../../2014/sql-server/install/use-upgrade-advisor-to-prepare-for-upgrades.md)  
+ [Utiliser le Conseiller de mise à niveau pour la préparation des mises à niveau](../../../2014/sql-server/install/use-upgrade-advisor-to-prepare-for-upgrades.md)  
   
   

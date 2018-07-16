@@ -1,5 +1,5 @@
 ---
-title: Installer les exemples de données et des projets pour les didacticiel de modélisation multidimensionnelle Analysis Services | Documents Microsoft
+title: Installer des exemples de données et les projets pour les didacticiel sur la modélisation multidimensionnelle Analysis Services | Microsoft Docs
 ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: fc475b25-cbb2-408a-901f-9299299538c5
 caps.latest.revision: 13
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: jhubbard
-ms.openlocfilehash: 2d1aca34ac45c88452b83444c7287595c22bb453
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 4a015f7827b711bf1eb638638a504fd92d886589
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36051380"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37218269"
 ---
 # <a name="install-sample-data-and-projects-for-the-analysis-services-multidimensional-modeling-tutorial"></a>Installer les exemples de données et de projets pour le didacticiel sur la modélisation multidimensionnelle Analysis Services
   Utilisez les instructions et les liens fournis dans cette rubrique pour installer tous les fichiers de données et de projet utilisés dans le didacticiel Analysis Services.  

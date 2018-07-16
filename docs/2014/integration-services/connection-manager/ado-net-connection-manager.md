@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - connection managers [Integration Services], ADO.NET
 - ADO.NET connection manager [Integration Services]
@@ -17,20 +17,20 @@ ms.assetid: fc5daa2f-0159-4bda-9402-c87f1035a96f
 caps.latest.revision: 59
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 44b07e26877a4d53d87cabb2ce48894f067a2802
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: a94c611a8c200f5b7b8211b6a1d69b3f147b7a37
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36155319"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37195659"
 ---
 # <a name="adonet-connection-manager"></a>Gestionnaire de connexions ADO.NET
   Un gestionnaire de connexions [!INCLUDE[vstecado](../../includes/vstecado-md.md)] permet à un package d'accéder à des sources de données à l'aide d'un fournisseur .NET. Le gestionnaire de connexions est généralement utilisé pour accéder à des sources de données comme [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], ainsi qu’à des sources de données exposées via OLE DB et XML dans des tâches personnalisées écrites en code managé dans un langage comme C#.  
   
- Lorsque vous ajoutez un [!INCLUDE[vstecado](../../includes/vstecado-md.md)] Gestionnaire de connexions à un package, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] crée une connexion de gestionnaire qui est résolu comme un [!INCLUDE[vstecado](../../includes/vstecado-md.md)] connexion en cours d’exécution, définit les propriétés du Gestionnaire des connexions et ajoute le Gestionnaire de connexions le `Connections` collection sur le package.  
+ Lorsque vous ajoutez un [!INCLUDE[vstecado](../../includes/vstecado-md.md)] Gestionnaire de connexions à un package, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] crée une connexion de gestionnaire qui est résolu comme un [!INCLUDE[vstecado](../../includes/vstecado-md.md)] connexion en cours d’exécution, définit les propriétés du Gestionnaire des connexions et ajoute le Gestionnaire de connexion à le `Connections` collection sur le package.  
   
- Le `ConnectionManagerType` du Gestionnaire de connexions est définie sur `ADO.NET`. La valeur de `ConnectionManagerType` est qualifiée de façon à inclure le nom du fournisseur .NET utilisé par le Gestionnaire de connexion.  
+ Le `ConnectionManagerType` propriété du Gestionnaire de connexions est définie sur `ADO.NET`. La valeur de `ConnectionManagerType` est qualifiée de façon à inclure le nom du fournisseur .NET qui utilise le Gestionnaire de connexions.  
   
 ## <a name="adonet-connection-manager-troubleshooting"></a>Résolution des problèmes liés au gestionnaire de connexions ADO.NET  
  Vous pouvez consigner les appels que le gestionnaire de connexions [!INCLUDE[vstecado](../../includes/vstecado-md.md)] effectue vers les fournisseurs de données externes. Vous pouvez utiliser cette fonctionnalité de journalisation pour résoudre les problèmes liés aux connexions établies par le gestionnaire de connexions [!INCLUDE[vstecado](../../includes/vstecado-md.md)] avec des sources de données externes. Pour consigner les appels faits par le gestionnaire de connexions [!INCLUDE[vstecado](../../includes/vstecado-md.md)] aux fournisseurs de données externes, activez la journalisation des packages et sélectionnez l’événement **Diagnostic** au niveau du package. Pour plus d’informations, consultez [Outils de dépannage pour l’exécution des packages](../troubleshooting/troubleshooting-tools-for-package-execution.md).  
@@ -62,11 +62,11 @@ ms.locfileid: "36155319"
   
  Pour plus d’informations sur les propriétés que vous pouvez définir dans le Concepteur [!INCLUDE[ssIS](../../../includes/ssis-md.md)] , cliquez sur une des rubriques suivantes :  
   
--   [Configurer le Gestionnaire de connexions ADO.NET](../configure-ado-net-connection-manager.md)  
+-   [Configurer le gestionnaire de connexions ADO.NET](../configure-ado-net-connection-manager.md)  
   
- Pour plus d’informations sur la configuration d’un gestionnaire de connexions par programme, consultez <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> et [Ajout de connexions par programme](../building-packages-programmatically/adding-connections-programmatically.md).  
+ Pour plus d’informations sur la configuration d’un gestionnaire de connexions par programmation, consultez <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> et [Ajout de connexions par programmation](../building-packages-programmatically/adding-connections-programmatically.md).  
   
 ## <a name="see-also"></a>Voir aussi  
- [Services d’intégration &#40;SSIS&#41; connexions](integration-services-ssis-connections.md)  
+ [Integration Services &#40;SSIS&#41; connexions](integration-services-ssis-connections.md)  
   
   

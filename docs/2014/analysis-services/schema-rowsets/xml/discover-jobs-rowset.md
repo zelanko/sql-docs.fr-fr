@@ -1,5 +1,5 @@
 ---
-title: Ensemble de lignes DISCOVER_JOBS | Documents Microsoft
+title: Ensemble de lignes DISCOVER_JOBS | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -14,15 +14,15 @@ helpviewer_keywords:
 - DISCOVER_JOBS rowset
 ms.assetid: b4d83bb6-aed3-4513-b516-cefadf95dad2
 caps.latest.revision: 13
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 6bc9574f76d1e14ad887efdd2b5654b4439c69df
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 6a23a3e3dae0a03bf31a7b73b8cb505e834cff27
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36040963"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37246059"
 ---
 # <a name="discoverjobs-rowset"></a>Ensemble de lignes DISCOVER_JOBS
   Fournit des informations sur les travaux actifs exécutés sur le serveur. Un travail fait une partie d'une commande qui exécute une tâche spécifique pour le compte de la commande.  

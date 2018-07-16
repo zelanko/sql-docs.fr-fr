@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - enterprise automatic administration [SQL Server]
 - multiserver administration [SQL Server]
@@ -21,15 +21,15 @@ helpviewer_keywords:
 - target servers [SQL Server]
 ms.assetid: 44d8365b-42bd-4955-b5b2-74a8a9f4a75f
 caps.latest.revision: 40
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 95ed4df18cfb4bcf433d08bbe9decacf35977c0d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 9c4cd4b54ef4659434f7b73b81c72f79c2cba4e0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36143825"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37257855"
 ---
 # <a name="automated-administration-across-an-enterprise"></a>Administration automatisée à l'échelle d'une entreprise
   Le fait d’automatiser l’administration sur plusieurs instances de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] est appelé *administration multiserveur*. Utilisez l'administration multiserveur dans les cas suivants :  
@@ -39,7 +39,7 @@ ms.locfileid: "36143825"
 -   Planifiez les flux d'informations entre les serveurs de l'entreprise pour constituer un Data Warehouse.  
   
 > [!NOTE]  
->  Dans le cadre des efforts constants de [!INCLUDE[msCoName](../../includes/msconame-md.md)] visant à réduire le coût total de possession, [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] a proposé deux nouvelles fonctionnalités : une méthode de gestion de serveurs appelée Gestion basée sur des stratégies et des requêtes multiserveurs qui utilisent des serveurs de configuration et des groupes de serveurs. Ces fonctionnalités peuvent être utilisées avec, ou au lieu de, certaines des fonctionnalités décrites dans cette rubrique. Pour plus d’informations, consultez [administrer des serveurs par la gestion basée sur des stratégies](../../relational-databases/policy-based-management/administer-servers-by-using-policy-based-management.md) et [administrer plusieurs serveurs à l’aide de serveurs de gestion centralisée](../../relational-databases/administer-multiple-servers-using-central-management-servers.md).  
+>  Dans le cadre des efforts constants de [!INCLUDE[msCoName](../../includes/msconame-md.md)] visant à réduire le coût total de possession, [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] a proposé deux nouvelles fonctionnalités : une méthode de gestion de serveurs appelée Gestion basée sur des stratégies et des requêtes multiserveurs qui utilisent des serveurs de configuration et des groupes de serveurs. Ces fonctionnalités peuvent être utilisées avec, ou au lieu de, certaines des fonctionnalités décrites dans cette rubrique. Pour plus d’informations, consultez [administrer des serveurs à la gestion basée sur des](../../relational-databases/policy-based-management/administer-servers-by-using-policy-based-management.md) et [administrer plusieurs serveurs à l’aide de serveurs de gestion centralisée](../../relational-databases/administer-multiple-servers-using-central-management-servers.md).  
   
  Pour tirer parti d'une administration multiserveur, vous devez disposer d'au moins un serveur maître et d’au moins un serveur cible. Un serveur maître distribue les travaux aux serveurs cibles et reçoit les événements de ces derniers. Un serveur maître stocke également la copie centrale des définitions de travaux pour les travaux exécutés sur des serveurs cibles. Les serveurs cibles se connectent régulièrement au serveur maître pour mettre à jour leur liste des travaux planifiés. Si un nouveau travail se trouve sur le serveur maître, le serveur cible le télécharge. Une fois que le serveur cible a terminé le travail, il se reconnecte au serveur maître et rend compte de l'état du travail.  
   

@@ -1,5 +1,5 @@
 ---
-title: Assistant Conversion de projet Integration Services | Documents Microsoft
+title: Assistant Conversion de projet Integration Services | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.ssis.migrationwizard.f1
 ms.assetid: a192b094-4d0f-4c21-b911-460ec844a49f
 caps.latest.revision: 16
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: c123f00433dde1f25755772919d7e48b8745e0bf
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: a5c547623597e72e4c6ae144baed226dbf88af60
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36041635"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37219649"
 ---
 # <a name="integration-services-project-conversion-wizard"></a>Assistant Conversion de projet Integration Services
   **L’Assistant Conversion de projet Integration Services** convertit un projet en modèle de déploiement de projet.  
@@ -246,6 +246,6 @@ ms.locfileid: "36041635"
  Cliquez pour enregistrer un résumé de la conversion du projet dans un fichier .xml.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Déployer des projets pour le serveur Integration Services](../../2014/integration-services/deploy-projects-to-integration-services-server.md)  
+ [Déployer des projets sur le serveur Integration Services](../../2014/integration-services/deploy-projects-to-integration-services-server.md)  
   
   

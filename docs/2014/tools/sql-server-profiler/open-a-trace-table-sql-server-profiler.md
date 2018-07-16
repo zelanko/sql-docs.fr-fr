@@ -1,5 +1,5 @@
 ---
-title: Ouvrez une Table de Trace (SQL Server Profiler) | Documents Microsoft
+title: Ouvrez une Table de Trace (SQL Server Profiler) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - opening trace tables
 ms.assetid: 8f7cc6b9-c717-4995-9af9-cacc6501aee2
 caps.latest.revision: 23
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: b6c677835dbddf650516100da0fd4df97159942a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: f3f83c194bbf52b824c8ce447f061c0230047fe5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36045470"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37226489"
 ---
 # <a name="open-a-trace-table-sql-server-profiler"></a>Ouvrir une table de trace (SQL Server Profiler)
   Cette rubrique indique comment ouvrir une table de trace existante à l'aide du [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)].  

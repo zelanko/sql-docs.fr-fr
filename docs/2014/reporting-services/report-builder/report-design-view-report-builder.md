@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - "10440"
 - "10426"
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - overview of Report Builder
 ms.assetid: 1544472c-2803-448d-af52-e901cb457a00
 caps.latest.revision: 20
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 64398eaa537e6413f5a55bedb0aa683143047aac
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 435709e17b917c1b741e1bc619bb1dca106dbd4a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36043309"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37244379"
 ---
 # <a name="report-design-view-report-builder"></a>Vue Conception de rapport (Générateur de rapports)
   La fenêtre du Générateur de rapports vise à vous permettre d'organiser facilement vos ressources de rapport et à générer rapidement les rapports dont vous avez besoin. L'aire de conception se trouve au centre de la fenêtre, avec au-dessus le ruban, à gauche le volet Données du rapport, en dessous le volet Regroupement et à droite le volet Propriétés, ainsi que la bibliothèque de parties de rapports. L'aire de conception est l'espace où vous ajoutez et organisez vos éléments de rapport. Le ruban organise les éléments de menu traditionnels en catégories faciles à repérer et à utiliser. Les volets vous permettent d'ajouter, de sélectionner et d'organiser vos ressources de rapport et de modifier les propriétés des éléments de rapport.  
@@ -42,10 +42,10 @@ ms.locfileid: "36043309"
   
  En mode création de rapport, le ruban est constitué des onglets suivants : Dossier de base, Insérer et Affichage. Si vous ne parvenez pas à trouver une tâche sur le ruban, certains groupes du ruban sont associés à une boîte de dialogue que vous pouvez ouvrir en cliquant sur la flèche située dans la partie inférieure droite du groupe. Vous ne pouvez pas réduire ou supprimer le ruban, ni le remplacer par des barres d'outils et des menus.  
   
- En mode exécution, le ruban n’a qu’un seul onglet, **exécuter**.  
+ En mode exécution, le ruban a qu’un seul onglet, **exécuter**.  
   
 ### <a name="home-tab"></a>Onglet Dossier de base  
- L'onglet Dossier de base regroupe des commandes couramment utilisées centrées sur l'apparence des éléments contenus dans votre rapport. Sous l'onglet Dossier de base, vous avez accès à des commandes relatives à l'exécution, aux polices, aux paragraphes, aux bordures, aux nombres et à la disposition. Lorsque vous cliquez sur un élément de l'onglet, l'élément sélectionné dans l'aire de conception change. Lorsque vous cliquez sur **exécuter**, le rapport est rendu en HTML afin que vous pouvez voir comment le contenu du rapport s’affiche lors de la publication, et vous voyez l’onglet exécuter remplace l’onglet Accueil. L'onglet Dossier de base est l'onglet qui s'affiche par défaut lorsque vous créez initialement un rapport.  
+ L'onglet Dossier de base regroupe des commandes couramment utilisées centrées sur l'apparence des éléments contenus dans votre rapport. Sous l'onglet Dossier de base, vous avez accès à des commandes relatives à l'exécution, aux polices, aux paragraphes, aux bordures, aux nombres et à la disposition. Lorsque vous cliquez sur un élément de l'onglet, l'élément sélectionné dans l'aire de conception change. Lorsque vous cliquez sur **exécuter**, le rapport est rendu au format HTML, afin que vous puissiez voir comment le contenu du rapport s’affiche lors de la publication, et vous voyez l’onglet exécuter remplace l’onglet Accueil. L'onglet Dossier de base est l'onglet qui s'affiche par défaut lorsque vous créez initialement un rapport.  
   
 ### <a name="insert-tab"></a>Onglet Insérer  
  L'onglet Insérer regroupe des commandes couramment utilisées pour ajouter des éléments de rapport au rapport. Sous l'onglet Insérer, vous pouvez ajouter un tableau, une matrice, un graphique ou une carte à l'aide d'Assistants. Vous pouvez également ajouter ces éléments sans Assistant et ajouter d'autres éléments de rapport (par exemple, des graphiques sparkline, indicateurs, zones de texte, images, rectangles, sous-rapports, en-têtes et pieds de page de rapport).  
@@ -58,11 +58,11 @@ ms.locfileid: "36043309"
  L'onglet Affichage regroupe des commandes qui permettent de contrôler le contenu de la fenêtre du Générateur de rapports. Modifiez les options d'affichage de la règle et des volets Regroupement, Données du rapport et Propriétés.  
   
 ### <a name="run-tab"></a>Onglet Exécuter  
- Lorsque vous cliquez sur **exécuter** sous l’onglet Accueil, vous exécutez un aperçu du rapport dans la visionneuse HTML, et vous voyez l’onglet exécuter remplace l’onglet Accueil.  
+ Lorsque vous cliquez sur **exécuter** sur l’onglet Accueil, vous exécutez un aperçu du rapport dans la visionneuse HTML, et vous voyez l’onglet exécuter remplace l’onglet Accueil.  
   
  L'onglet Exécuter regroupe des commandes que vous pouvez utiliser une fois le rapport rendu. Vous pouvez imprimer le rapport, parcourir les pages du rapport, exporter le rapport dans un autre format de fichier, afficher l'Explorateur de documents ou les paramètres (si le rapport en possède), et rechercher des éléments dans le rapport. Pour plus d’informations, consultez [l’aperçu de votre rapport en Mode exécution](#RunMode).  
   
- Pour revenir en mode Création, de rapports à le **exécuter** , cliquez sur **conception**.  
+ Pour repasser en mode de création, de rapport sur le **exécuter** , cliquez sur **conception**.  
   
   
 ##  <a name="RptDesignSurface"></a> Aire de conception de rapport  
@@ -74,7 +74,7 @@ ms.locfileid: "36043309"
   
 -   les propriétés d’en-tête et de pied de page, telles que la bordure et la couleur de remplissage, en cliquant avec le bouton droit sur la zone blanche de l’aire de conception dans la zone d’en-tête ou de pied de page, en dehors de tout élément de rapport, puis en cliquant sur **Propriétés d’en-tête** ou **Propriétés du pied de page**;  
   
--   Les propriétés du rapport lui-même, telles que mise en page, en cliquant sur la zone bleue autour de l’aire de conception en cliquant sur **propriétés de rapport**.  
+-   Les propriétés du rapport lui-même, telles que mise en page, en double-cliquant sur la zone bleue autour de l’aire de conception en cliquant sur **propriétés du rapport**.  
   
 -   les propriétés des éléments de rapport en cliquant dessus avec le bouton droit, puis en cliquant sur **Propriétés**.  
   
@@ -104,11 +104,11 @@ ms.locfileid: "36043309"
   
  Pour plus d'informations sur les éléments du volet Données du rapport, consultez les rubriques suivantes :  
   
--   [Fonctions globales intégrées et les références des utilisateurs &#40;rapport Générateur et SSRS&#41;](../report-design/built-in-collections-built-in-globals-and-users-references-report-builder.md)  
+-   [Globals et les références des utilisateurs &#40;Générateur de rapports et SSRS&#41;](../report-design/built-in-collections-built-in-globals-and-users-references-report-builder.md)  
   
 -   [Paramètres de rapport &#40;Générateur de rapports et Concepteur de rapports&#41;](../report-design/report-parameters-report-builder-and-report-designer.md)  
   
--   [Images &#40;rapport Générateur et SSRS&#41;](../report-design/images-report-builder-and-ssrs.md)  
+-   [Images &#40;Générateur de rapports et SSRS&#41;](../report-design/images-report-builder-and-ssrs.md)  
   
 -   [Connexions de données, sources de données et chaînes de connexion dans le Générateur de rapports](../data-connections-data-sources-and-connection-strings-in-report-builder.md)  
   
@@ -165,7 +165,7 @@ ms.locfileid: "36043309"
   
   
 ##  <a name="RunMode"></a> Affichage de l'aperçu de votre rapport en mode exécution  
- En mode création de rapport, vous n'utilisez pas des données réelles, mais une représentation des données indiquées par le nom ou l'expression du champ. Lorsque vous voulez afficher les données réelles dans le contexte du rapport que vous avez conçu, vous pouvez exécuter le rapport afin d'afficher un aperçu des données de la base de données sous-jacente dans la mise en page du rapport. Vous pouvez passer du mode Création au mode Exécution de votre rapport pour ajuster sa conception et voir les résultats immédiatement. Pour afficher un aperçu de votre rapport, cliquez sur **exécuter** dans les **vues** groupe sur le ruban.  
+ En mode création de rapport, vous n'utilisez pas des données réelles, mais une représentation des données indiquées par le nom ou l'expression du champ. Lorsque vous voulez afficher les données réelles dans le contexte du rapport que vous avez conçu, vous pouvez exécuter le rapport afin d'afficher un aperçu des données de la base de données sous-jacente dans la mise en page du rapport. Vous pouvez passer du mode Création au mode Exécution de votre rapport pour ajuster sa conception et voir les résultats immédiatement. Pour prévisualiser votre rapport, cliquez sur **exécuter** dans le **vues** groupe sur le ruban.  
   
  Quand vous cliquez sur **Exécuter**, le Générateur de rapports se connecte aux sources de données du rapport, met en cache les données sur votre ordinateur, combine les données et la disposition, puis effectue le rendu du rapport dans la Visionneuse HTML. Vous pouvez exécuter le rapport aussi souvent que vous le souhaitez au fil de sa conception. Lorsque vous êtes satisfait du rapport, vous pouvez l'enregistrer sur le serveur de rapports, où les autres utilisateurs dotés des autorisations appropriées peuvent le visualiser.  
   

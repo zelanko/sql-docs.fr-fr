@@ -1,5 +1,5 @@
 ---
-title: Surveillance de Traces (XMLA) | Documents Microsoft
+title: Surveillance de Traces (XMLA) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - traces [Analysis Services]
 ms.assetid: cdbfb984-18bd-4c4e-8fb7-d64ce298ed35
 caps.latest.revision: 13
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 6d605586c915963efc86c4e3197e087b8a5f82dd
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: d9df7fd3e22c8e63873584491c7f2051e8897efa
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36144596"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37241619"
 ---
 # <a name="monitoring-traces-xmla"></a>Surveillance de traces (XMLA)
   Vous pouvez utiliser la [s’abonner](../xmla/xml-elements-commands/subscribe-element-xmla.md) commande XML for Analysis (XMLA) pour surveiller une trace existante définie sur une instance de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. La commande `Subscribe` retourne les résultats d'une trace sous la forme d'un ensemble de lignes.  
@@ -34,7 +34,7 @@ ms.locfileid: "36144596"
  Le [objet](../xmla/xml-elements-properties/object-element-xmla.md) propriété de la `Subscribe` commande doit contenir une référence d’objet à un [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] instance ou une trace sur un [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] instance. Si la propriété `Object` n'est pas spécifiée ou si aucun identificateur de trace n'y est `Object` spécifié, la commande `Subscribe` surveille la trace de session par défaut pour la session explicite spécifiée dans l'en-tête SOAP de la commande.  
   
 ## <a name="returning-results"></a>Retour de résultats  
- La commande `Subscribe` retourne un ensemble de lignes contenant les événements de trace capturés par la trace spécifiée. Le `Subscribe` commande retourne les résultats de la trace jusqu'à ce que la commande est annulée par le [Annuler](../xmla/xml-elements-commands/cancel-element-xmla.md) commande.  
+ La commande `Subscribe` retourne un ensemble de lignes contenant les événements de trace capturés par la trace spécifiée. Le `Subscribe` commande retourne les résultats de trace jusqu'à ce que la commande est annulée par le [Annuler](../xmla/xml-elements-commands/cancel-element-xmla.md) commande.  
   
  Cet ensemble de lignes se compose des colonnes répertoriées dans le tableau suivant.  
   

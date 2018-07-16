@@ -5,10 +5,9 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-backup-restore
+ms.technology: backup-restore
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - restoring tables [SQL Server]
 - backups [SQL Server], restore scenarios
@@ -21,15 +20,15 @@ helpviewer_keywords:
 - database restores [SQL Server], scenarios
 ms.assetid: e985c9a6-4230-4087-9fdb-de8571ba5a5f
 caps.latest.revision: 44
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: b360f5817d74461d41ce47da47afbea8e4095649
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 72c827235057c77fe42de062dc2c09050dd1a698
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36152367"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37197489"
 ---
 # <a name="restore-and-recovery-overview-sql-server"></a>Vue d'ensemble de la restauration et de la récupération (SQL Server)
   Pour récupérer une base de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] suite à une erreur, un administrateur de base de données doit restaurer un jeu de sauvegardes [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dans une séquence de restauration correcte du point de vue logique et explicite. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] prend en charge la restauration de données à partir de sauvegardes d'une base de données entière, d'un fichier de données ou d'une page de données, comme suit :  
@@ -46,7 +45,7 @@ ms.locfileid: "36152367"
   
      En mode de restauration complète ou de récupération utilisant les journaux de transactions, vous pouvez restaurer des bases de données individuelles. La restauration des pages peut être effectuée pour n'importe quelle base de données, quel que soit le nombre de groupes de fichiers.  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sauvegarde et restaure les données sur tous les systèmes d'exploitation pris en charge, qu'il s'agisse de systèmes 32 bits ou 64 bits. Pour plus d’informations sur les systèmes d’exploitation pris en charge, consultez [matérielle et logicielle requise pour l’installation de SQL Server 2014](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md). Pour plus d’informations sur la prise en charge de sauvegardes provenant de versions antérieures de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], consultez la section « Prise en charge de la compatibilité » de [RESTORE &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-transact-sql).  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sauvegarde et restaure les données sur tous les systèmes d'exploitation pris en charge, qu'il s'agisse de systèmes 32 bits ou 64 bits. Pour plus d’informations sur les systèmes d’exploitation pris en charge, consultez [Hardware and Software Requirements for Installing SQL Server 2014](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md). Pour plus d’informations sur la prise en charge de sauvegardes provenant de versions antérieures de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], consultez la section « Prise en charge de la compatibilité » de [RESTORE &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-transact-sql).  
   
  **Dans cette rubrique :**  
   

@@ -5,10 +5,9 @@ ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-transaction-log
+ms.technology: ''
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - logs [SQL Server], full
 - troubleshooting [SQL Server], full transaction log
@@ -19,24 +18,24 @@ helpviewer_keywords:
 - full transaction logs [SQL Server]
 ms.assetid: 0f23aa84-475d-40df-bed3-c923f8c1b520
 caps.latest.revision: 54
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 0adfc6e8f46a916244ddbaf81383ed8c3c169f1e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 0b3fa89db4f8fb95ca1f2e912c6ee1d131808f42
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36154161"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37254031"
 ---
 # <a name="troubleshoot-a-full-transaction-log-sql-server-error-9002"></a>Résoudre les problèmes liés à un journal des transactions saturé (erreur SQL Server 9002)
-  Cette rubrique décrit les réactions possibles et émet quelques suggestions qui vous aideront à éviter cette situation dans le futur. Lorsque le journal des transactions est saturé, [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] émet une erreur 9002. Le journal peut être renseigné lorsque la base de données est en ligne ou en cours de récupération. Si le journal se remplit tandis que la base de données est en ligne, cette dernière reste en ligne et peut uniquement être lue mais pas mise à jour. Si le journal se remplit en cours de récupération, le [!INCLUDE[ssDE](../../includes/ssde-md.md)] marque la base de données comme RESOURCE PENDING. Dans les deux cas, une intervention de l'utilisateur est nécessaire pour libérer de l'espace disque.  
+  Cette rubrique décrit les réactions possibles et émet quelques suggestions qui vous aideront à éviter cette situation dans le futur. Quand le journal des transactions est saturé, [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] émet une erreur 9002. Le journal peut être renseigné lorsque la base de données est en ligne ou en cours de récupération. Si le journal se remplit tandis que la base de données est en ligne, cette dernière reste en ligne et peut uniquement être lue mais pas mise à jour. Si le journal se remplit en cours de récupération, le [!INCLUDE[ssDE](../../includes/ssde-md.md)] marque la base de données comme RESOURCE PENDING. Dans les deux cas, une intervention de l'utilisateur est nécessaire pour libérer de l'espace disque.  
   
 ## <a name="responding-to-a-full-transaction-log"></a>Réagir à un journal des transactions complet  
  La réponse adéquate à un journal des transactions saturé dépend en partie de la ou des conditions qui ont motivé le remplissage du journal. Pour découvrir les raisons qui empêchent de tronquer le journal dans une situation donnée, utilisez les colonnes **log_reuse_wait** et **log_reuse_wait_desc** de l’affichage catalogue **sys.database**. Pour plus d’informations, consultez [sys.databases &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-databases-transact-sql). Pour obtenir une description des facteurs susceptibles de retarder la troncation du journal, consultez [Journal des transactions &#40;SQL Server&#41;](the-transaction-log-sql-server.md).  
   
 > [!IMPORTANT]  
->  Si la base de données était en cours de récupération lorsque l’erreur 9002 s’est produite, après avoir résolu le problème, récupérez la base de données à l’aide de ALTER DATABASE *nom_base_de_données* SET ONLINE.  
+>  Si la base de données dans laquelle se trouvait récupération s’est produite l’erreur 9002, après avoir résolu le problème, récupérer la base de données à l’aide de ALTER DATABASE *database_name* SET ONLINE.  
   
  D'autres solutions possibles en cas de saturation du journal des transactions sont les suivantes :  
   
@@ -55,7 +54,7 @@ ms.locfileid: "36154161"
  Ces solutions sont abordées dans les sections qui suivent. Optez pour une solution adaptée à votre situation.  
   
 ### <a name="backing-up-the-log"></a>Sauvegarde du journal  
- Si vous travaillez en mode de restauration complète ou en mode de récupération utilisant les journaux de transactions et si vous n'avez pas sauvegardé récemment le journal des transactions, la création d'une sauvegarde est ce qui empêche la troncation du journal. Si le journal n’a jamais été sauvegardé, vous devez créer deux sauvegardes du journal pour autoriser le [!INCLUDE[ssDE](../../includes/ssde-md.md)] pour tronquer le journal pour le point de la dernière sauvegarde. Le fait de tronquer le journal permet de libérer de l'espace pour les nouveaux enregistrements de ce dernier. Pour empêcher le journal de se remplir à nouveau, effectuez les sauvegardes régulièrement.  
+ Si vous travaillez en mode de restauration complète ou en mode de récupération utilisant les journaux de transactions et si vous n'avez pas sauvegardé récemment le journal des transactions, la création d'une sauvegarde est ce qui empêche la troncation du journal. Si le journal n’a jamais été sauvegardé, vous devez créer deux sauvegardes du journal pour autoriser le [!INCLUDE[ssDE](../../includes/ssde-md.md)] pour tronquer le journal au point de la dernière sauvegarde. Le fait de tronquer le journal permet de libérer de l'espace pour les nouveaux enregistrements de ce dernier. Pour empêcher le journal de se remplir à nouveau, effectuez les sauvegardes régulièrement.  
   
  **Pour créer une sauvegarde du journal des transactions**  
   

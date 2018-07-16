@@ -1,5 +1,5 @@
 ---
-title: Type de données DSVTableBinding (ASSL) | Documents Microsoft
+title: Type de données DSVTableBinding (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - DSVTableBinding data type
 ms.assetid: 149e753f-6218-4805-9223-7155b6827e64
 caps.latest.revision: 41
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 75a84b2709d2c85ac0dfa8ce4538406c3daa7a61
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 9d4748adb2ca6b26c42bee9b0ba5ea502d973679
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36039397"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37195989"
 ---
 # <a name="dsvtablebinding-data-type-assl"></a>Type de données DSVTableBinding (ASSL)
   Définit un type de données dérivé qui représente la liaison entre une table et un [DataSourceView](../objects/datasourceview-element-assl.md) élément.  
@@ -69,6 +69,6 @@ ms.locfileid: "36039397"
  L’élément correspondant dans le modèle d’objet objets AMO (Analysis Management) est <xref:Microsoft.AnalysisServices.DSVTableBinding>.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Types de données de script langage XML Analysis Services &#40;ASSL&#41;](analysis-services-scripting-language-xml-data-types-assl.md)  
+ [Types Analysis Services Scripting Language XML données &#40;ASSL&#41;](analysis-services-scripting-language-xml-data-types-assl.md)  
   
   

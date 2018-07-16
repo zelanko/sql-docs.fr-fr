@@ -1,5 +1,5 @@
 ---
-title: Démarrer ou arrêter un service PowerPivot pour SharePoint Server | Documents Microsoft
+title: Démarrer ou arrêter un PowerPivot pour SharePoint Server | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: e38e6366-9f20-4db0-b2a8-da7d5adf00eb
 caps.latest.revision: 6
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 6039a0181cfce993e0c1970a5db68deb9d3c17c8
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: df2305d3efa7896d8646be33a5f95ade8c4e7c00
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36044367"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37247389"
 ---
 # <a name="start-or-stop-a-powerpivot-for-sharepoint-server"></a>Démarrer ou arrêter un service PowerPivot pour un serveur SharePoint
-  Le Service système PowerPivot et une [!INCLUDE[ssGeminiSrv](../../includes/ssgeminisrv-md.md)] instance fonctionnent ensemble sur le même serveur d’applications local pour prendre en charge la demande coordonné et le traitement des données dans une batterie de serveurs SharePoint.  
+  Le Service système PowerPivot et une [!INCLUDE[ssGeminiSrv](../../includes/ssgeminisrv-md.md)] instance fonctionnent ensemble sur le même serveur d’application locale à la demande de support coordonné et traitement des données dans une batterie de serveurs SharePoint.  
   
  Cette rubrique contient les sections suivantes :  
   
@@ -66,6 +66,6 @@ ms.locfileid: "36044367"
 |Données d'utilisation|Les données d'utilisation ne seront pas recueillies pendant la période d'arrêt des services.|  
   
 ## <a name="see-also"></a>Voir aussi  
- [Configurer les comptes de Service PowerPivot](configure-power-pivot-service-accounts.md)  
+ [Configurer des comptes de service PowerPivot](configure-power-pivot-service-accounts.md)  
   
   

@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - VB
 - CSharp
@@ -44,13 +44,13 @@ ms.assetid: 56f5df6a-56f6-43df-bca9-08476a3bd931
 caps.latest.revision: 72
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: d73b7d0b58742998a0c30f58399e8deaceb1f3ee
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 75a43dd1ba07915bdba0ce3b42aee2a517311769
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36040487"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37243189"
 ---
 # <a name="transformation-custom-properties"></a>Propriétés personnalisées des transformations
   En plus des propriétés qui sont communes à la plupart des objets de flux de données dans le modèle objet [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] , de nombreux objets de flux de données possèdent des propriétés personnalisées qui sont spécifiques à l'objet. Ces propriétés personnalisées sont uniquement disponibles au moment de l'exécution et ne sont pas documentées dans la documentation de référence de la programmation managée de [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] .  
@@ -105,7 +105,7 @@ ms.locfileid: "36040487"
 |AggregationType|Integer (énumération)|Valeur qui spécifie l'opération d'agrégation à appliquer à la colonne. Cette propriété peut prendre les valeurs suivantes :<br /><br /> **Count** (1)<br /><br /> **Count all** (2)<br /><br /> **Countdistinct** (3)<br /><br /> **Sum** (4)<br /><br /> **Average** (5)<br /><br /> **Maximum** (7)<br /><br /> **Minimum** (6)<br /><br /> **Group by** (0)|  
 |CountDistinctKeys|Entier|Valeur spécifiant le nombre exact de clés que l'agrégation peut écrire lorsque le type d'agrégation est **COUNT DISTINCT**. Si une valeur CountDistinctScale est spécifiée, la valeur dans CountDistinctKeys est prioritaire.|  
 |CountDistinctScale|Integer (énumération)|Valeur qui décrit le nombre approximatif de valeurs de clés que peut écrire l'agrégation lorsque le type d'agrégation est **COUNT DISTINCT**. Cette propriété peut prendre les valeurs suivantes :<br /><br /> **Bas** (1) : indique jusqu'à 500 000 valeurs de clés.<br /><br /> **Moyen** (2) : indique jusqu'à 5 millions de valeurs de clés.<br /><br /> **Haut** (3) : indique plus de 25 millions de valeurs de clés.<br /><br /> **Non spécifié** (0) : indique qu’aucune valeur CountDistinctScale n’est utilisée.|  
-|IsBig|Booléen|Valeur qui indique si la colonne contient une valeur supérieure à 4 milliards ou une valeur avec une meilleure précision qu'une valeur à virgule flottante double précision. La valeur peut être 0 ou 1. 0 indique que IsBig est `False` et la colonne ne contient pas une valeur élevée ou exacte. La valeur par défaut de cette propriété est 1.|  
+|IsBig|Booléen|Valeur qui indique si la colonne contient une valeur supérieure à 4 milliards ou une valeur avec une meilleure précision qu'une valeur à virgule flottante double précision. La valeur peut être 0 ou 1. 0 indique que IsBig a `False` et la colonne ne contient-elle pas une valeur élevée ou exacte. La valeur par défaut de cette propriété est 1.|  
   
  L'entrée et les colonnes d'entrée de la transformation d'agrégation ne sont pas dotées de propriétés personnalisées.  
   
@@ -174,7 +174,7 @@ ms.locfileid: "36040487"
   
 |Nom de la propriété|Type de données|Description|  
 |-------------------|---------------|-----------------|  
-|copyColumnId|Entier|Le `LineageID` de la colonne d’entrée à partir de laquelle la colonne de sortie est copiée.|  
+|copyColumnId|Entier|Le `LineageID` la colonne d’entrée à partir de laquelle la colonne de sortie est copiée.|  
   
  L'entrée, les colonnes d'entrée et la sortie de la transformation de copie de colonne ne disposent pas de propriétés personnalisées.  
   
@@ -188,7 +188,7 @@ ms.locfileid: "36040487"
 |Propriété|Type de données|Description|  
 |--------------|---------------|-----------------|  
 |FastParse|Booléen|Valeur qui indique si la colonne fait appel aux routines d'analyse fournies par [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] (routines plus rapides mais qui ne tiennent pas compte des paramètres régionaux) ou bien aux routines d'analyse standard qui prennent en compte les paramètres régionaux. La valeur par défaut de cette propriété est `False`. Pour plus d'informations, consultez [Fast Parse](../../fast-parse.md) et [Standard Parse](../../standard-parse.md). .<br /><br /> Remarque : cette propriété n’est pas disponible dans l’ **Éditeur de transformation de conversion de données**, mais peut être définie à l’aide de l’ **éditeur avancé**.|  
-|SourceInputColumnLineageId|Entier|Le `LineageID` de la colonne d’entrée qui est la source de la colonne de sortie.|  
+|SourceInputColumnLineageId|Entier|Le `LineageID` la colonne d’entrée qui est la source de la colonne de sortie.|  
   
  L'entrée, les colonnes d'entrée et la sortie de la transformation de conversion de données ne disposent pas de propriétés personnalisées.  
   
@@ -236,7 +236,7 @@ ms.locfileid: "36040487"
 |--------------|---------------|-----------------|  
 |AllowAppend|Booléen|Valeur spécifiant si la transformation ajoute ou non des données à un fichier existant. La valeur par défaut de cette propriété est `False`.|  
 |ForceTruncate|Booléen|Valeur qui spécifie si la transformation tronque un fichier existant avant d'écrire des données. La valeur par défaut de cette propriété est `False`.|  
-|FileDataColumnID|Entier|Valeur qui identifie la colonne contenant les données que la transformation insère dans un fichier. Dans la colonne d’extraction, cette propriété a la valeur **0**; dans la colonne chemin d’accès de fichier, cette propriété contient le `LineageID` de la colonne d’extraction.|  
+|FileDataColumnID|Entier|Valeur qui identifie la colonne contenant les données que la transformation insère dans un fichier. Dans la colonne d’extraction, cette propriété a la valeur **0**; dans la colonne de chemin d’accès de fichier, cette propriété comporte le `LineageID` de la colonne d’extraction.|  
 |WriteBOM|Booléen|Valeur spécifiant si une marque d'ordre d'octet est écrite dans le fichier.|  
   
  L'entrée, la sortie et les colonnes de sortie de la transformation d'exportation de colonne ne disposent pas de propriétés personnalisées.  
@@ -323,7 +323,7 @@ ms.locfileid: "36040487"
  Le tableau suivant décrit les propriétés personnalisées des colonnes de sortie de la transformation de recherche floue. Toutes les propriétés sont en lecture/écriture.  
   
 > [!NOTE]  
->  Pour les colonnes de sortie qui contiennent des valeurs de relais à partir des colonnes d’entrée correspondantes, CopyFromReferenceColumn est vide et SourceInputColumnLineageID contient la `LineageID` de la colonne d’entrée correspondante. Pour les colonnes de sortie qui contiennent des résultats de recherche, CopyFromReferenceColumn contient le nom de la colonne de recherche et SourceInputColumnLineageID est vide.  
+>  Pour les colonnes de sortie qui contiennent des valeurs de relais issues des colonnes d’entrée correspondantes, CopyFromReferenceColumn est vide et SourceInputColumnLineageID contient le `LineageID` de la colonne d’entrée correspondante. Pour les colonnes de sortie qui contiennent des résultats de recherche, CopyFromReferenceColumn contient le nom de la colonne de recherche et SourceInputColumnLineageID est vide.  
   
 |Propriété|Type de données|Description|  
 |--------------|---------------|-----------------|  
@@ -377,7 +377,7 @@ ms.locfileid: "36040487"
 |Propriété|Type de données|Description|  
 |--------------|---------------|-----------------|  
 |JoinType|Integer (énumération)|Spécifie si la jointure est une jointure interne (2), externe gauche (1) ou complète (0).|  
-|MaxBuffersPerInput|Entier|Vous n’avez plus à configurer la valeur de la `MaxBuffersPerInput` propriété, car Microsoft a apporté des modifications qui réduisent le risque que la transformation de jointure de fusion consomme trop de mémoire. Ce problème s'est quelquefois produit lorsque plusieurs entrées de jointure de fusion produisaient des données à des taux irréguliers.|  
+|MaxBuffersPerInput|Entier|Vous n’avez plus à configurer la valeur de la `MaxBuffersPerInput` propriété car Microsoft a apporté des modifications qui réduisent le risque que la transformation de jointure de fusion consomme trop de mémoire. Ce problème s'est quelquefois produit lorsque plusieurs entrées de jointure de fusion produisaient des données à des taux irréguliers.|  
 |NumKeyColumns|Entier|Nombre de colonnes utilisées dans la jointure.|  
 |TreatNullsAsEqual|Booléen|Valeur qui spécifie si la transformation gère les valeurs NULL comme valeurs égales. La valeur par défaut de cette propriété est `True`. Si la valeur de la propriété est `False`, la transformation gère les valeurs NULL de la même manière que [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].|  
   
@@ -385,7 +385,7 @@ ms.locfileid: "36040487"
   
 |Nom de la propriété|Type de données|Description|  
 |-------------------|---------------|-----------------|  
-|InputColumnID|Entier|Le `LineageID` de la colonne d’entrée à partir de laquelle les données sont copiées dans cette colonne de sortie.|  
+|InputColumnID|Entier|Le `LineageID` la colonne d’entrée à partir de laquelle les données sont copiées vers cette colonne de sortie.|  
   
  L'entrée, les colonnes d'entrée et la sortie de la transformation de jointure de fusion ne disposent pas de propriétés personnalisées.  
   
@@ -426,7 +426,7 @@ ms.locfileid: "36040487"
   
 |Nom de la propriété|Type de données|Description|  
 |-------------------|---------------|-----------------|  
-|Selected|Booléen|Désigne la sortie vers laquelle les lignes échantillonnées sont dirigées. Dans la sortie sélectionnée, sélectionné est définie sur `True`, et sur la sortie non sélectionnée, sélectionné est défini sur `False`.|  
+|Selected|Booléen|Désigne la sortie vers laquelle les lignes échantillonnées sont dirigées. Dans la sortie sélectionnée, Selected est défini sur `True`, et sur la sortie non sélectionnée, Selected est défini sur `False`.|  
   
  L'entrée, les colonnes d'entrée et les colonnes de sortie de la transformation d'échantillonnage par pourcentage ne disposent pas de propriétés personnalisées.  
   
@@ -443,7 +443,7 @@ ms.locfileid: "36040487"
   
 |Propriété|Type de données|Description|  
 |--------------|---------------|-----------------|  
-|PivotUsage|Integer (énumération)|Une des valeurs qui spécifient le rôle d’une colonne lorsque le jeu de données est croisé suivantes :<br /><br /> **0**: la colonne n’est pas croisée dynamiquement, et les valeurs de colonne sont transmises à la sortie de transformation.<br /><br /> **1**: la colonne fait partie de la clé d’ensemble qui identifie une ou plusieurs lignes dans le cadre d’un jeu. Toutes les lignes d'entrée portant la même clé d'ensemble sont combinées dans une ligne de sortie.<br /><br /> **2**: la colonne est une colonne de tableau croisé dynamique. Au moins une colonne est créée à partir de chaque valeur de colonne.<br /><br /> **3**: les valeurs de cette colonne sont placées dans les colonnes qui sont créés à la suite du tableau croisé dynamique.|  
+|PivotUsage|Integer (énumération)|Une des valeurs suivantes qui spécifient le rôle d’une colonne lorsque le jeu de données est croisé dynamiquement :<br /><br /> **0**: la colonne n’est pas croisée dynamiquement, et les valeurs de colonne sont transmises à la sortie de transformation.<br /><br /> **1**: la colonne fait partie de la clé d’ensemble qui identifie une ou plusieurs lignes dans le cadre d’un jeu. Toutes les lignes d'entrée portant la même clé d'ensemble sont combinées dans une ligne de sortie.<br /><br /> **2**: la colonne est une colonne de tableau croisé dynamique. Au moins une colonne est créée à partir de chaque valeur de colonne.<br /><br /> **3**: les valeurs de cette colonne sont placées dans les colonnes qui sont créés à la suite du croisement dynamique.|  
   
  Le tableau suivant décrit les propriétés personnalisées des colonnes de sortie de la transformation de tableau croisé dynamique. Toutes les propriétés sont en lecture/écriture.  
   
@@ -481,7 +481,7 @@ ms.locfileid: "36040487"
   
 |Nom de la propriété|Type de données|Description|  
 |-------------------|---------------|-----------------|  
-|Selected|Booléen|Désigne la sortie vers laquelle les lignes échantillonnées sont dirigées. Dans la sortie sélectionnée, sélectionné est définie sur `True`, et sur la sortie non sélectionnée, sélectionné est défini sur `False`.|  
+|Selected|Booléen|Désigne la sortie vers laquelle les lignes échantillonnées sont dirigées. Dans la sortie sélectionnée, Selected est défini sur `True`, et sur la sortie non sélectionnée, Selected est défini sur `False`.|  
   
  Le tableau suivant décrit les propriétés personnalisées des colonnes de sortie de la transformation d'échantillonnage de lignes. Toutes les propriétés sont en lecture/écriture.  
   

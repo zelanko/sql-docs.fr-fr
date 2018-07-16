@@ -1,5 +1,5 @@
 ---
-title: Élément Hierarchy (CSDLBI) | Documents Microsoft
+title: Élément Hierarchy (CSDLBI) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -12,15 +12,15 @@ ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: 9debb638-1b28-401b-9499-8f63943863e9
 caps.latest.revision: 12
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: f2846424fdf7104c95cb4a56ac836b57583bf0cc
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: be67c3059f09beefae68d0264fd0316579344d64
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36044543"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37250789"
 ---
 # <a name="hierarchy-element-csdlbi"></a>Élément Hierarchy (CSDLBI)
   L'élément Hierarchy est un conteneur logique des champs d'une table qui peuvent être liés entre eux pour former une hiérarchie. L'élément Hierarchy est dérivé de l'élément CSDL Membre et a été étendu pour la prise en charge des hiérarchies créées dans des modèles de données Business Intelligence.  
@@ -88,6 +88,6 @@ ms.locfileid: "36044543"
 ## <a name="see-also"></a>Voir aussi  
  [Présentation du modèle d’objet tabulaire](../representation/understanding-tabular-object-model-at-levels-1050-through-1103.md)   
  [Fonctionnement des fonctions pour les hiérarchies Parent-enfant dans DAX](https://msdn.microsoft.com/library/gg492192(v=sql.120).aspx)   
- [Configurer le &#40;tous les&#41; niveau pour les hiérarchies d’attributs](../../multidimensional-models/database-dimensions-configure-the-all-level-for-attribute-hierarchies.md)  
+ [Configurer le &#40;tous les&#41; niveau hiérarchies d’attributs](../../multidimensional-models/database-dimensions-configure-the-all-level-for-attribute-hierarchies.md)  
   
   

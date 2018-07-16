@@ -1,5 +1,5 @@
 ---
-title: Développement, Test et Production de bases de données (Visual Database Tools) | Documents Microsoft
+title: Développement, de Test et de bases de données de Production (Visual Database Tools) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - production databases [SQL Server]
 - testing databases
 - database testing [SQL Server]
 ms.assetid: cb403330-8cbe-41c6-bd23-bc432d50f173
 caps.latest.revision: 9
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: b59509cadb56fbbc9896b82d20f38f48e874da71
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: b90b7f4b96e3d32bab9131f12e5305f32af9a6f5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36051393"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37224619"
 ---
 # <a name="development-test-and-production-databases-visual-database-tools"></a>Bases de données de développement, de test et de production (Visual Database Tools)
   Si deux bases de données sont de structure identique, vous pouvez apporter des modifications à l'une, puis les propager dans l'autre. Par exemple, si vous avez une base de données de développement personnelle et une base de données destinée aux tests à l'échelle du groupe, vous pouvez apporter des modifications dans la base de données de développement, puis les propager dans la base de données de test.  
