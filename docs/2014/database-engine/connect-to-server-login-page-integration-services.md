@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.connecttodtsserver.login.f1
 - sql12.swb.connecttodts.login.f1
 ms.assetid: 402c2de4-f4ea-40b0-909f-3ddf3bd59950
 caps.latest.revision: 23
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: e41104462b18f9d236a289dbea0196f981006f44
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 703a4f062d327da13b1b75d519c70884a9228978
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36142563"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37241259"
 ---
 # <a name="connect-to-server-login-page-integration-services"></a>Se connecter au serveur (page Connexion) — Integration Services
   Utilisez cet onglet pour afficher ou spécifier les options suivantes pour la connexion à [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)].  
@@ -35,7 +35,7 @@ ms.locfileid: "36142563"
  Sélectionnez le serveur auquel vous connecter. La dernière instance de serveur à laquelle une connexion a été établie est affichée par défaut.  
   
 > [!NOTE]  
->  N’utilisez pas  *\<nom_serveur >*\\*\<instancename >*, car [!INCLUDE[ssIS](../includes/ssis-md.md)] ne prend pas en charge plusieurs instances sur un ordinateur.  
+>  N’utilisez pas  *\<nom_serveur >*\\*\<nom_instance >*, car [!INCLUDE[ssIS](../includes/ssis-md.md)] ne prend pas en charge plusieurs instances sur un ordinateur.  
   
  **Authentification**  
  Seule l'authentification [!INCLUDE[msCoName](../includes/msconame-md.md)] Windows est disponible pour [!INCLUDE[ssIS](../includes/ssis-md.md)]. Le mode d’authentification Windows permet à l’utilisateur de se connecter au moyen d’un compte d’utilisateur Windows.  

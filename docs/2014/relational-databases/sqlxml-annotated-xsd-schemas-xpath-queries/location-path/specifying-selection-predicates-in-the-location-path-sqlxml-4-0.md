@@ -1,5 +1,5 @@
 ---
-title: Prédicats de sélection, spécification dans le chemin d’accès d’emplacement (SQLXML 4.0) | Documents Microsoft
+title: Sélection de spécification de prédicats dans le chemin d’accès d’emplacement (SQLXML 4.0) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - location path for XPath query
 ms.assetid: dbef4cf4-a89b-4d7e-b72b-4062f7b29a80
 caps.latest.revision: 27
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 80090288026a8b0e2728b1322efe68bea6d960be
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 19cb37e252bad6f09640d409e67178690bcdaba0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36041555"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37238669"
 ---
 # <a name="specifying-selection-predicates-in-the-location-path-sqlxml-40"></a>Spécification de prédicats de sélection dans le chemin d'accès d'emplacement (SQLXML 4.0)
   Un prédicat filtre un élément node-set par rapport à un axe (semblable à une clause WHERE dans une instruction SELECT). Le prédicat est spécifié entre crochets. Pour chaque nœud de l'élément node-set à filtrer, l'expression de prédicat est évaluée avec ce nœud en tant que nœud de contexte et avec le nombre de nœuds de l'élément node-set en tant que taille de contexte. Si l'expression de prédicat prend la valeur TRUE pour ce nœud, ce dernier est inclus dans l'élément node-set obtenu.  
@@ -35,10 +35,10 @@ ms.locfileid: "36041555"
  XPath autorise également un filtrage basé sur les positions. Une expression de prédicat qui correspond à un nombre sélectionne ce nœud ordinal. Par exemple, le chemin d'accès d'emplacement `Customer[3]` retourne le troisième client. De tels prédicats numériques ne sont pas pris en charge. Seules les expressions de prédicat qui retournent un résultat booléen sont prises en charge.  
   
 > [!NOTE]  
->  Pour plus d’informations sur les limitations de cette implémentation XPath de XPath et les différences entre eux et la spécification W3C, consultez [Introduction à l’aide de requêtes XPath &#40;SQLXML 4.0&#41;](../introduction-to-using-xpath-queries-sqlxml-4-0.md).  
+>  Pour plus d’informations sur les limitations de cette implémentation XPath de XPath et les différences entre elle et la spécification W3C, consultez [Introduction à l’aide de requêtes XPath &#40;SQLXML 4.0&#41;](../introduction-to-using-xpath-queries-sqlxml-4-0.md).  
   
 ## <a name="selection-predicate-example-1"></a>Prédicat de sélection : Exemple 1  
- L’expression XPath suivante (chemin d’accès d’emplacement) sélectionne à partir du nœud de contexte actuel tous les le  **\<client >** éléments enfants qui ont le **CustomerID** attribut avec la valeur ALFKI :  
+ L’expression XPath suivante (chemin d’accès d’emplacement) sélectionne à partir du nœud de contexte actuel tous les  **\<client >** éléments enfants qui ont le **CustomerID** attribut avec la valeur ALFKI :  
   
 ```  
 /child::Customer[attribute::CustomerID="ALFKI"]  
@@ -68,7 +68,7 @@ ms.locfileid: "36041555"
 ```  
   
 ## <a name="selection-predicate-example-3"></a>Prédicat de sélection : Exemple 3  
- L’expression XPath suivante (chemin d’accès d’emplacement) sélectionne dans le nœud de contexte actuel tous les  **\<client >** enfants qui possèdent un ou plusieurs  **\<ContactName >** enfants :  
+ L’expression XPath suivante (chemin d’accès d’emplacement) sélectionne à partir du nœud de contexte actuel tous les  **\<client >** enfants qui ont une ou plusieurs  **\<ContactName >** enfants :  
   
 ```  
 child::Customer[child::ContactName]  

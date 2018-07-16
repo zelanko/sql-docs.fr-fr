@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.rpt.rptdesigner.projectpropertypages.general.f1
 helpviewer_keywords:
 - Project Property Pages dialog box
 ms.assetid: 209d9e22-37fc-418f-8739-83adcf447d3f
 caps.latest.revision: 34
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 5ccad4480d09fad1aab6b406cbd3a42ad9083b9d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: b4125342c0c85f053d3f7e85124be79766a06c3d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36042382"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37238379"
 ---
 # <a name="project-property-pages-dialog-box"></a>Pages de propriétés du projet, boîte de dialogue
   Utilisez les pages de propriétés du projet pour configurer les propriétés de déploiement d'un projet Report Server. Pour ouvrir cette boîte de dialogue, dans le menu **Projet**, cliquez sur *\<Nom du projet de rapport>***Propriétés**.  
@@ -57,14 +57,14 @@ ms.locfileid: "36042382"
  Sélectionnez **True** pour remplacer la source de données du serveur par celle du projet lorsque les rapports sont publiés. Sélectionnez **False** pour conserver la source de données existante sur le serveur.  
   
  **TargetServerVersion**  
- Sélectionnez le [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ou [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] version de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ou sélectionnez **détecter la Version** à déterminer automatiquement la version installée sur le serveur identifié par le **Targetserverurl** propriété. La valeur par défaut est **SQL Server 2008 R2**.  
+ Sélectionnez le [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ou [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] version de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ou sélectionnez **détecter la Version** pour déterminer automatiquement la version installée sur le serveur identifié par le **Targetserverurl** propriété. La valeur par défaut est **SQL Server 2008 R2**.  
   
  **TargetDataSourceFolder**  
  Nom du dossier dans lequel les sources de données partagées publiées sont stockées. Si vous ne spécifiez pas de dossier, la source de données est publiée dans le même dossier que le rapport. Si le dossier n'existe pas sur le serveur de rapports, le Générateur de rapports le crée lors de la publication des rapports.  
   
  Lors de la publication sur un serveur de rapports s'exécutant en mode natif, spécifiez le chemin complet de la hiérarchie des dossiers à partir de la racines. Par exemple, Dossier1/Dossier2/Dossier3.  
   
- Lors de la publication sur un serveur de rapports s’exécutant en mode intégré SharePoint, utilisez une URL de la bibliothèque SharePoint. Par exemple, http://*\<nom_serveur > /\<site >*  /Documents/MonDossier.  
+ Lors de la publication sur un serveur de rapports s’exécutant en mode intégré SharePoint, utilisez une URL de la bibliothèque SharePoint. Par exemple, http://*\<servername > /\<site >*  /Documents/MonDossier.  
   
  **TargetReportFolder**  
  Nom du dossier dans lequel stocker les rapports publiés. Par défaut, il s'agit du nom du projet de rapport. Si le dossier n'existe pas sur le serveur de rapports, le Générateur de rapports le crée lors de la publication des rapports.  

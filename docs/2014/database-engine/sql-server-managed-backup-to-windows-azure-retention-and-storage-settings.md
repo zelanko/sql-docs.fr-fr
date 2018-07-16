@@ -1,30 +1,29 @@
 ---
-title: SQL Server de la sauvegarde sur Windows Azure - paramètres de rétention et stockage managée | Documents Microsoft
+title: SQL Server sauvegarde managée sur Windows Azure - paramètres de rétention et stockage | Microsoft Docs
 ms.custom: ''
 ms.date: 08/23/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-backup-restore
+ms.technology: backup-restore
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: c4aa26ea-5465-40cc-8b83-f50603cb9db1
 caps.latest.revision: 37
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: e4301f7bb3e8fc10615242f2daee445ce5f0b43c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 76d7a8453cec686311f478a439af926ab0e5c690
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36039797"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37207609"
 ---
 # <a name="sql-server-managed-backup-to-windows-azure---retention-and-storage-settings"></a>Sauvegarde managée SQL Server sur Windows Azure - Paramètres de rétention et de stockage
-  Cette rubrique décrit les étapes de base de configuration [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] pour une base de données et pour configurer les paramètres par défaut pour l’instance. Elle décrit également les étapes nécessaires pour interrompre et reprendre les services de la [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] pour l'instance.  
+  Cette rubrique décrit les étapes de base pour configurer [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] pour une base de données et de configurer les paramètres par défaut pour l’instance. Elle décrit également les étapes nécessaires pour interrompre et reprendre les services de la [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] pour l'instance.  
   
- Pour connaître la procédure complète de la configuration de [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] consultez [configuration SQL Server Managed Backup dans Windows Azure](../relational-databases/backup-restore/enable-sql-server-managed-backup-to-microsoft-azure.md) et [configuration SQL Server Managed Backup dans Windows Azure pour les groupes de disponibilité](../../2014/database-engine/setting-up-sql-server-managed-backup-to-windows-azure-for-availability-groups.md).  
+ Pour obtenir une description complète de la configuration de [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] consultez [définition de sauvegarde SQL Server gérée sur Windows Azure](../relational-databases/backup-restore/enable-sql-server-managed-backup-to-microsoft-azure.md) et [configuration SQL Server Managed Backup pour Windows Azure pour les groupes de disponibilité](../../2014/database-engine/setting-up-sql-server-managed-backup-to-windows-azure-for-availability-groups.md).  
   
  
   
@@ -32,7 +31,7 @@ ms.locfileid: "36039797"
   
 ###  <a name="Restrictions"></a> Limitations et restrictions  
   
--   N'activez pas la [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] sur les bases de données qui utilisent actuellement des plans de maintenance ou la copie des journaux de transactions. Pour plus d’informations sur l’interopérabilité et coexistence avec d’autres fonctionnalités de SQL Server, consultez [SQL Server Managed Backup dans Windows Azure : interopérabilité et Coexistence](../../2014/database-engine/sql-server-managed-backup-to-windows-azure-interoperability-and-coexistence.md)  
+-   N'activez pas la [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] sur les bases de données qui utilisent actuellement des plans de maintenance ou la copie des journaux de transactions. Pour plus d’informations sur l’interopérabilité et coexistence avec d’autres fonctionnalités de SQL Server, consultez [SQL Server Managed Backup pour Windows Azure : interopérabilité et Coexistence](../../2014/database-engine/sql-server-managed-backup-to-windows-azure-interoperability-and-coexistence.md)  
   
 ###  <a name="Prerequisites"></a> Conditions préalables  
   
@@ -49,7 +48,7 @@ ms.locfileid: "36039797"
 ###  <a name="Security"></a> Sécurité  
   
 ####  <a name="Permissions"></a> Permissions  
- Pour exécuter les procédures stockées d’activation [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)], vous devez être un un `System Administrator` ou un membre dans le **db_backupoperator** rôle de base de données avec **ALTER ANY CREDENTIAL** autorisations et `EXECUTE` des autorisations sur le **sp_delete_backuphistory**, et `smart_admin.sp_backup_master_switch` des procédures stockées.  Procédures stockées et fonctions utilisées pour passer en revue les paramètres existants nécessitent généralement `Execute` autorisations sur la procédure stockée et `Select` sur la fonction respectivement.  
+ Pour exécuter les procédures stockées d’activation [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)], vous devez être un un `System Administrator` ou un membre dans le **db_backupoperator** rôle de base de données avec **ALTER ANY CREDENTIAL** autorisations et `EXECUTE` autorisations sur le **sp_delete_backuphistory**, et `smart_admin.sp_backup_master_switch` des procédures stockées.  Procédures stockées et fonctions utilisées pour passer en revue les paramètres existants nécessitent généralement `Execute` autorisations sur la procédure stockée et `Select` sur la fonction respectivement.  
   
 
   
@@ -57,7 +56,7 @@ ms.locfileid: "36039797"
  [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] peut être activée pour les bases de données distincte ou pour l’intégralité de l’instance. Le choix dépend des exigences de récupérabilité des bases de données sur l'instance, de la facilité de configuration, des spécifications pour la gestion de plusieurs bases de données et instances et de l'utilisation stratégique du stockage Windows Azure.  
   
 #### <a name="enabling-includesssmartbackupincludesss-smartbackup-mdmd-at-the-database-level"></a>Activation de la [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] au niveau de la base de données  
- Si une base de données a des exigences de sauvegarde spécifiques et une période de rétention (SLA relatif à la récupérabilité) qui sont différentes des autres bases de données sur l'instance, configurez la [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] au niveau de la base de données pour cette base de données. Les paramètres de niveau base de données remplacent les paramètres de configuration de niveau instance. Cependant, ces deux possibilités peuvent être utilisées ensemble sur la même instance. Voici une liste des avantages et des considérations lors de l’activation [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] au niveau de la base de données.  
+ Si une base de données a des exigences de sauvegarde spécifiques et une période de rétention (SLA relatif à la récupérabilité) qui sont différentes des autres bases de données sur l'instance, configurez la [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] au niveau de la base de données pour cette base de données. Les paramètres de niveau base de données remplacent les paramètres de configuration de niveau instance. Cependant, ces deux possibilités peuvent être utilisées ensemble sur la même instance. Voici une liste des avantages et les considérations lors de l’activation [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] au niveau de la base de données.  
   
 -   Plus de granularité : paramètres de configuration distincts pour chaque base de données. Peut prendre en charge différentes périodes de rétention pour chaque base de données.  
   
@@ -79,7 +78,7 @@ ms.locfileid: "36039797"
 -   Vous pouvez toujours configurer les bases de données qui nécessitent une période de rétention différente même si la [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] est activée au niveau de l'instance avec les paramètres par défaut. Vous pouvez également désactiver [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] pour les bases de données si vous ne souhaitez pas utiliser le stockage Windows Azure pour les sauvegardes.  
   
 ##  <a name="DatabaseConfigure"></a> Activer et configurer [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] pour une base de données  
- La procédure stockée système `smart_admin.sp_set_db_backup` est utilisée pour activer [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] pour une base de données spécifique. Lorsque la [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] est activée pour la première fois sur la base de données, les informations suivantes doivent être spécifiées en plus de l'activation de la [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] :  
+ La procédure stockée système `smart_admin.sp_set_db_backup` sert à activer [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] pour une base de données spécifique. Lorsque la [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] est activée pour la première fois sur la base de données, les informations suivantes doivent être spécifiées en plus de l'activation de la [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] :  
   
 -   Nom de la base de données.  
   
@@ -91,14 +90,14 @@ ms.locfileid: "36039797"
   
  La [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] pour une configuration au niveau de la base de données est prise en charge uniquement via Transact-SQL.  
   
- Une fois [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] est activée pour une base de données, cette information est conservée. Si vous modifiez la configuration, seuls le nom de la base de données et le paramètre que vous souhaitez modifier sont requis ; la [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] conserve les valeurs existantes pour les autres paramètres en l'absence d'autre indication.  
+ Une fois [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] est activée pour une base de données que cette information est conservée. Si vous modifiez la configuration, seuls le nom de la base de données et le paramètre que vous souhaitez modifier sont requis ; la [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] conserve les valeurs existantes pour les autres paramètres en l'absence d'autre indication.  
   
 > [!IMPORTANT]  
 >  Avant de configurer [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] sur une base de données, il peut être utile de la configuration existante, le cas échéant. Les étapes pour revoir les paramètres de configuration d'une base de données sont abordées plus loin dans cette section.  
   
--   **Utilisation de Transact-SQL :**  
+-   **À l’aide de Transact-SQL :**  
   
-     Si vous activez [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] pour la première fois, les paramètres requis sont : *@database_name*, *@credential_name*, *@encryption_algorithm*, *@enable_backup* Le *@storage_url* paramètre est facultatif. Si vous ne fournissez pas de valeur pour le @storage_url paramètre, la valeur est dérivé à l’aide des informations de compte de stockage à partir des informations d’identification SQL. Si vous spécifiez l'URL de stockage, vous ne devez spécifier que l'URL de la racine du compte de stockage, et vous devez faire correspondre les informations dans les informations d'identification SQL spécifiées.  
+     Si vous activez [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] pour la première fois, les paramètres requis sont : *@database_name*, *@credential_name*, *@encryption_algorithm*, *@enable_backup* Le *@storage_url* paramètre est facultatif. Si vous ne fournissez pas une valeur pour le @storage_url paramètre, la valeur est dérivée à l’aide des informations de compte de stockage à partir de l’information d’identification SQL. Si vous spécifiez l'URL de stockage, vous ne devez spécifier que l'URL de la racine du compte de stockage, et vous devez faire correspondre les informations dans les informations d'identification SQL spécifiées.  
   
     1.  Connectez-vous au [!INCLUDE[ssDE](../includes/ssde-md.md)].  
   
@@ -124,7 +123,7 @@ ms.locfileid: "36039797"
     > [!IMPORTANT]  
     >  La période de rétention peut être définie sur n'importe quelle valeur de 1 à 30 jours.  
     >   
-    >  Pour plus d’informations sur la création d’un certificat pour le chiffrement, consultez l’étape d’un certificat de sauvegarde dans créer [créer une sauvegarde chiffrée](../relational-databases/backup-restore/create-an-encrypted-backup.md).  
+    >  Pour plus d’informations sur la création d’un certificat pour le chiffrement, consultez l’étape d’un certificat de sauvegarde dans créer [Create an Encrypted Backup](../relational-databases/backup-restore/create-an-encrypted-backup.md).  
   
      Pour plus d’informations sur cette procédure stockée, consultez [smart_admin.set_db_backup &#40;Transact-SQL&#41;](https://msdn.microsoft.com/en-us/library/dn451013(v=sql.120).aspx)  
   
@@ -136,10 +135,10 @@ ms.locfileid: "36039797"
     SELECT * FROM smart_admin.fn_backup_db_config('TestDB')  
     ```  
   
-##  <a name="InstanceConfigure"></a> Activer et configurer la valeur par défaut [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] paramètres de l’Instance  
- Vous pouvez activer et configurer la valeur par défaut [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] paramètres au niveau de l’instance de deux manières : en utilisant le système des procédure stockée `smart_backup.set_instance_backup` ou **SQL Server Management Studio**. Les deux méthodes sont expliquées ci-dessous :  
+##  <a name="InstanceConfigure"></a> Activer et configurer la valeur par défaut [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] paramètres pour l’Instance  
+ Vous pouvez activer et configurer la valeur par défaut [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] paramètres au niveau de l’instance de deux manières : en utilisant le système de procédure stockée `smart_backup.set_instance_backup` ou **SQL Server Management Studio**. Les deux méthodes sont expliquées ci-dessous :  
   
- **smart_backup.set_instance_backup :**. En spécifiant la valeur **1** pour *@enable_backup* paramètre, vous pouvez activer la sauvegarde et la définir les configurations par défaut. Une fois appliqués au niveau de l'instance, ces paramètres par défaut sont appliqués aux nouvelles bases de données ajoutées à cette instance.  Lorsque la [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] est activée pour la première, les informations suivantes doivent être spécifiées en plus de l'activation de la [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] sur l'instance :  
+ **smart_backup.set_instance_backup :**. En spécifiant la valeur **1** pour *@enable_backup* paramètre, vous pouvez activer la sauvegarde et définissez les configurations par défaut. Une fois appliqués au niveau de l'instance, ces paramètres par défaut sont appliqués aux nouvelles bases de données ajoutées à cette instance.  Lorsque la [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] est activée pour la première, les informations suivantes doivent être spécifiées en plus de l'activation de la [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] sur l'instance :  
   
 -   Période de rétention.  
   
@@ -152,7 +151,7 @@ ms.locfileid: "36039797"
 > [!IMPORTANT]  
 >  Avant de configurer [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] sur une instance, il peut être utile de vérifier la configuration existante, le cas échéant. Les étapes pour revoir les paramètres de configuration d'une base de données sont abordées plus loin dans cette section.  
   
- **SQL Server Management Studio :** pour effectuer cette tâche dans SQL Server Management Studio, accédez à l'Explorateur d'objets, développez le nœud **Gestion** , puis cliquez avec le bouton droit sur **Sauvegarde managée**. Sélectionnez **Configurer**. La boîte de dialogue **Sauvegarde managée** s'ouvre. Utilisez cette boîte de dialogue pour spécifier la période de rétention, les informations d'identification SQL, l'URL de stockage et les paramètres de chiffrement. Pour afficher l’aide avec cette boîte de dialogue, consultez [configurer la sauvegarde managée &#40;SQL Server Management Studio&#41;](configure-managed-backup-sql-server-management-studio.md).  
+ **SQL Server Management Studio :** pour effectuer cette tâche dans SQL Server Management Studio, accédez à l'Explorateur d'objets, développez le nœud **Gestion** , puis cliquez avec le bouton droit sur **Sauvegarde managée**. Sélectionnez **Configurer**. La boîte de dialogue **Sauvegarde managée** s'ouvre. Utilisez cette boîte de dialogue pour spécifier la période de rétention, les informations d'identification SQL, l'URL de stockage et les paramètres de chiffrement. Pour obtenir une aide spécifique avec cette boîte de dialogue, consultez [configurer la sauvegarde managée &#40;SQL Server Management Studio&#41;](configure-managed-backup-sql-server-management-studio.md).  
   
 #### <a name="using-transact-sql"></a>Utilisation de Transact-SQL  
   
@@ -179,7 +178,7 @@ GO
 > [!IMPORTANT]  
 >  La période de rétention peut être définie sur n'importe quelle valeur de 1 à 30 jours.  
 >   
->  Pour plus d’informations sur la création d’un certificat pour le chiffrement, consultez l’étape d’un certificat de sauvegarde dans créer [créer une sauvegarde chiffrée](../relational-databases/backup-restore/create-an-encrypted-backup.md).  
+>  Pour plus d’informations sur la création d’un certificat pour le chiffrement, consultez l’étape d’un certificat de sauvegarde dans créer [Create an Encrypted Backup](../relational-databases/backup-restore/create-an-encrypted-backup.md).  
   
  Pour passer en revue les paramètres de configuration par défaut d'une instance, utilisez la requête suivante :  
   
@@ -206,7 +205,7 @@ SELECT * FROM smart_admin.fn_backup_instance_config ();
 >  Lorsque vous créez une nouvelle base de données après avoir configuré les paramètres par défaut, la configuration peut prendre jusqu'à 15 minutes. Cela s'applique également aux bases de données modifiées du modèle de récupération **Simple** au modèle **Full** ou **Bulk-Logged** .  
   
 ##  <a name="DatabaseDisable"></a> Désactiver la [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] pour une base de données  
- Vous pouvez désactiver [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] paramètres à l’aide de la `sp_set_db_backup` procédure stockée système. Le *@enableparameter* est utilisée pour activer et désactiver [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] configurations pour une base de données spécifique, où 1 active et la valeur 0 désactive les paramètres de configuration.  
+ Vous pouvez désactiver [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] paramètres à l’aide du `sp_set_db_backup` procédure stockée système. Le *@enableparameter* sert à activer et désactiver [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] configurations pour une base de données spécifique, où 1 active et la valeur 0 désactive les paramètres de configuration.  
   
 #### <a name="to-disable-includesssmartbackupincludesss-smartbackup-mdmd-for-a-specific-database"></a>Pour désactiver la [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] pour une base de données spécifique :  
   
@@ -227,7 +226,7 @@ GO
 ```  
   
 ##  <a name="DatabaseAllDisable"></a> Désactiver la [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] pour toutes les bases de données sur l'instance  
- La procédure suivante désactive les paramètres de configuration de la [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] sur toutes les bases de données où la [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] est actuellement activée sur l'instance.  Les paramètres de configuration tels que l’URL de stockage, la rétention, et les informations d’identification SQL restent dans les métadonnées et peut être utilisée si [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] est activée pour la base de données à une date ultérieure. Si vous souhaitez simplement interrompre [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] services temporairement, vous pouvez utiliser le commutateur principal abordé dans les sections suivantes plus loin dans cette rubrique.  
+ La procédure suivante désactive les paramètres de configuration de la [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] sur toutes les bases de données où la [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] est actuellement activée sur l'instance.  Les paramètres de configuration telles que l’URL de stockage, la rétention, et les informations d’identification SQL restent dans les métadonnées et peut être utilisée si [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] est activé pour la base de données à une date ultérieure. Si vous souhaitez simplement interrompre [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] services vous pouvez temporairement, utiliser le commutateur principal abordé dans les sections suivantes plus loin dans cette rubrique.  
   
 #### <a name="to-disable-includesssmartbackupincludesss-smartbackup-mdmdfor-all-the-databases"></a>Pour désactiver la [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] pour toutes les bases de données :  
   
@@ -344,7 +343,7 @@ Go
   
 ```  
   
-#### <a name="to-pause-includesssmartbackupincludesss-smartbackup-mdmd-using-powershell"></a>Mettre en pause [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] à l’aide de PowerShell  
+#### <a name="to-pause-includesssmartbackupincludesss-smartbackup-mdmd-using-powershell"></a>Pour suspendre [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] à l’aide de PowerShell  
   
 1.  Démarrer une instance PowerShell  
   

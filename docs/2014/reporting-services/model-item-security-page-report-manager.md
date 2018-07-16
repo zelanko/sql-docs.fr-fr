@@ -1,5 +1,5 @@
 ---
-title: Page de sécurité (Gestionnaire de rapports) de l’élément de modèle | Documents Microsoft
+title: Page sécurité (Gestionnaire de rapports) de l’élément de modèle | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.reportserver.modelproperties.modelitemsecurity.f1
 ms.assetid: 8c5b29ae-1f17-41f2-ab59-97899b8fb4fc
 caps.latest.revision: 20
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 0d7f05024178334c11fccfd819aed1a4f4e023d6
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 56cb59be6fd256ee182e7b57a5ecd7b4a103bfec
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36043085"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37299799"
 ---
 # <a name="model-item-security-page-report-manager"></a>Page Sécurité de l'élément de modèle (Gestionnaire de rapports)
   Utilisez cette page pour sécuriser des parties d'un modèle en accordant ou en refusant des autorisations en lecture seule sur des éléments particuliers. La sécurité de l'élément de modèle affecte l'exploration de données appropriée au moment de l'exécution et la possibilité d'utiliser des parties d'un modèle publié lors de la création de rapports dans le Générateur de rapports. Pour utiliser cette fonctionnalité, vous devez disposer des autorisations de gestionnaire de contenu.  
@@ -65,17 +65,17 @@ ms.locfileid: "36043085"
 4.  Sélectionnez l'onglet **Sécurité de l'élément de modèle** .  
   
 ## <a name="options"></a>Options  
- **Sécuriser des éléments de modèles individuels indépendamment pour ce modèle**  
+ **Sécuriser les éléments de modèles individuels indépendamment pour ce modèle**  
  Activez cette case à cocher pour activer la sécurité des éléments de modèle.  
   
- **Spécifiez le mode de la sécurité pour les éléments de modèles**  
+ **Spécifiez la sécurité pour les éléments de modèles dans le mode**  
  Affiche tous les éléments d'un modèle. Vous pouvez parcourir l'espace de noms du modèle pour sélectionner l'élément à sécuriser. Vous ne pouvez sélectionner qu'un seul élément à la fois. Veillez à créer la première attribution de rôle au niveau du nœud racine avant de passer aux autres entités et dossiers.  
   
  **Hériter des autorisations de l’élément parent**  
  Sélectionnez cette option pour hériter des paramètres de sécurité de l'élément parent.  
   
  **Affecter une autorisation de lecture pour les utilisateurs et groupes suivants (séparés par des points-virgules)**  
- Sélectionnez cette option pour spécifier le compte d'utilisateur ou de groupe pour lequel vous définissez l'accès. Si vous utilisez la sécurité par défaut, les comptes d'utilisateur et de groupe sont des comptes de domaine Windows. Spécifiez les comptes dans ce format :  *\<domaine >\\< compte\>*.  
+ Sélectionnez cette option pour spécifier le compte d'utilisateur ou de groupe pour lequel vous définissez l'accès. Si vous utilisez la sécurité par défaut, les comptes d'utilisateur et de groupe sont des comptes de domaine Windows. Spécifiez les comptes sous ce format :  *\<domaine >\\< compte\>*.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Aide du serveur de rapports dans Management Studio via la touche F1](tools/report-server-in-management-studio-f1-help.md)  

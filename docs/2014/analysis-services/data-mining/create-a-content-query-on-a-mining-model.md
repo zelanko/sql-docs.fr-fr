@@ -1,5 +1,5 @@
 ---
-title: Créer une requête de contenu sur un modèle d’exploration de données | Documents Microsoft
+title: Créer une requête de contenu sur un modèle d’exploration de données | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - content queries [DMX]
 ms.assetid: a0ce837a-89ed-46cf-9ce1-801ccb75fa04
 caps.latest.revision: 16
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 1bbc92d8083c570aa46371d4251b8ea2f8d9b57a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 747f066839ee10ab9982c5b6388c946abec66cb2
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36154495"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37308889"
 ---
 # <a name="create-a-content-query-on-a-mining-model"></a>Créer une requête de contenu sur un modèle d'exploration de données
   Vous pouvez interroger par programme le contenu du modèle d'exploration de données en utilisant AMO ou XML/A, mais il est plus facile de créer des requêtes à l'aide de DMX. Vous pouvez créer des requêtes sur les ensembles de lignes de schéma d'exploration de données en établissant une connexion à l'instance d' [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] et en créant une requête utilisant les vues DMV fournies par [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].  
@@ -44,7 +44,7 @@ ms.locfileid: "36154495"
   
      Le modèle **Requête de contenu** s'ouvre dans l'éditeur de code approprié. Le volet de métadonnées répertorie les modèles qui sont disponibles dans la base de données active. Pour changer la base de données, sélectionnez une autre base de données dans la liste **Bases de données disponibles** .  
   
-5.  Entrez le nom d’un modèle d’exploration de données dans la ligne, `FROM` [*\<le modèle d’exploration de données, name, MyModel >*]`.CONTENT`. Si le nom du modèle d'exploration de données contient des espaces, vous devez le mettre entre crochets.  
+5.  Entrez le nom d’un modèle d’exploration de données dans la ligne, `FROM` [*\<modèle d’exploration, name, MyModel >*]`.CONTENT`. Si le nom du modèle d'exploration de données contient des espaces, vous devez le mettre entre crochets.  
   
      Si vous ne voulez pas taper le nom, vous pouvez sélectionner un modèle d'exploration de données dans l' **Explorateur d'objets** et le faire glisser dans le modèle.  
   

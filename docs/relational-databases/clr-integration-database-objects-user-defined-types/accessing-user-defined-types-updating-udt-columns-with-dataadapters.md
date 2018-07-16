@@ -1,11 +1,11 @@
 ---
-title: Mise à jour de colonnes UDT avec DataAdapters | Documents Microsoft
+title: Mise à jour de colonnes UDT avec DataAdapters | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: reference
+ms.technology: clr
 ms.tgt_pltfrm: ''
 ms.topic: reference
 dev_langs:
@@ -26,19 +26,19 @@ caps.latest.revision: 12
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: ab3e174062e3618d55f7cba5e715845e0c01327a
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
+ms.openlocfilehash: 8bdb8993d93c438dcfc47dd28c3ac90cfd5fcc0d
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35702040"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37358221"
 ---
-# <a name="accessing-user-defined-types---updating-udt-columns-with-dataadapters"></a>L’accès à des Types définis par l’utilisateur - mise à jour de colonnes UDT avec DataAdapters
+# <a name="accessing-user-defined-types---updating-udt-columns-with-dataadapters"></a>Accès aux Types définis par l’utilisateur - mise à jour de colonnes UDT avec DataAdapters
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Types définis par l’utilisateur (UDT) sont pris en charge en utilisant un **System.Data.DataSet** et un **objet System.Data.SqlClient.SqlDataAdapter** pour extraire et modifier des données.  
   
 ## <a name="populating-a-dataset"></a>Remplissage d'un dataset  
- Vous pouvez utiliser une instruction SELECT [!INCLUDE[tsql](../../includes/tsql-md.md)] pour sélectionner des valeurs de colonne UDT pour remplir un dataset à l'aide d'un adaptateur de données. L’exemple suivant suppose que vous avez un **Points** table est définie avec la structure suivante et quelques exemples de données. Les éléments suivants [!INCLUDE[tsql](../../includes/tsql-md.md)] instructions créent le **Points** de table et insèrent quelques lignes.  
+ Vous pouvez utiliser une instruction SELECT [!INCLUDE[tsql](../../includes/tsql-md.md)] pour sélectionner des valeurs de colonne UDT pour remplir un dataset à l'aide d'un adaptateur de données. L’exemple suivant suppose que vous avez un **Points** table définie avec la structure suivante et des exemples de données. Ce qui suit [!INCLUDE[tsql](../../includes/tsql-md.md)] instructions créent le **Points** table et insèrent quelques lignes.  
   
 ```  
 CREATE TABLE dbo.Points (id int PRIMARY Key, p Point);  
@@ -69,14 +69,14 @@ da.Fill(datTable);
 ## <a name="updating-udt-data-in-a-dataset"></a>Mise à jour de données UDT dans un dataset  
  Vous pouvez utiliser deux méthodes pour mettre à jour une colonne UDT dans un **DataSet**:  
   
--   Fournir personnalisée **InsertCommand**, **UpdateCommand** et **DeleteCommand** des objets pour un **SqlDataAdapter** objet.  
+-   Fournir une personnalisée **InsertCommand**, **UpdateCommand** et **DeleteCommand** des objets pour un **SqlDataAdapter** objet.  
   
--   Utilisez le Générateur de commande (**System.Data.SqlClient.SqlCommandBuilder**) pour créer automatiquement des commandes INSERT, UPDATE et DELETE de. Pour disposer de la détection de conflit, ajoutez un **timestamp** colonne (alias **rowversion**) pour le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] table contenant l’UDT. Le **timestamp** type de données vous permet de numéro de version les lignes dans une table et il est garanti être unique au sein d’une base de données. Lorsqu'une valeur dans la table est modifiée, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] met à jour automatiquement le nombre binaire de huit octets pour la ligne affectée par la modification.  
+-   Utiliser le Générateur de commandes (**System.Data.SqlClient.SqlCommandBuilder**) pour créer automatiquement les commandes INSERT, UPDATE et DELETE pour vous. Pour que la détection de conflit, ajoutez un **timestamp** colonne (alias **rowversion**) pour le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] table contenant l’UDT. Le **timestamp** type de données vous permet de numéro de version les lignes dans une table et est garanti être unique au sein d’une base de données. Lorsqu'une valeur dans la table est modifiée, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] met à jour automatiquement le nombre binaire de huit octets pour la ligne affectée par la modification.  
   
- Notez que la **SqlCommandBuilder** ne considère pas l’UDT pour la détection de conflit sauf s’il existe un **timestamp** colonne dans la table sous-jacente. Les UDT pouvant être comparables ou non, ils ne sont pas inclus dans la clause WHERE lorsque l'option de comparaison des valeurs d'origine est utilisée pour générer une commande.  
+ Notez que le **SqlCommandBuilder** ne tient pas compte de l’UDT pour la détection de conflit sauf s’il existe un **timestamp** colonne dans la table sous-jacente. Les UDT pouvant être comparables ou non, ils ne sont pas inclus dans la clause WHERE lorsque l'option de comparaison des valeurs d'origine est utilisée pour générer une commande.  
   
 ### <a name="example"></a>Exemple  
- L’exemple suivant requiert la création d’une deuxième table contenant la **Point** colonne UDT, ainsi qu’une **timestamp** colonne. Les deux tables sont utilisées pour illustrer comment créer des objets de commande personnalisée pour mettre à jour des données et la mise à jour à l’aide un **timestamp** colonne. Exécutez les instructions [!INCLUDE[tsql](../../includes/tsql-md.md)] suivantes pour créer la deuxième table et la remplir avec des exemples de données.  
+ L’exemple suivant requiert la création d’une deuxième table contenant la **Point** colonne UDT, ainsi qu’une **timestamp** colonne. Les deux tables sont utilisées pour illustrer comment créer des objets de commande personnalisée pour mettre à jour des données et comment mettre à jour à l’aide un **timestamp** colonne. Exécutez les instructions [!INCLUDE[tsql](../../includes/tsql-md.md)] suivantes pour créer la deuxième table et la remplir avec des exemples de données.  
   
 ```  
 CREATE TABLE dbo.Points_ts (id int PRIMARY KEY, p Point, ts timestamp);  
@@ -89,9 +89,9 @@ INSERT INTO dbo.Points_ts (id, p) VALUES (4, CONVERT(Point, '4,6'));
   
  L'exemple ADO.NET suivant contient deux méthodes :  
   
--   **UserProvidedCommands**, qui montre comment fournir **InsertCommand**, **UpdateCommand**, et **DeleteCommand** objets de mise à jour de la  **Point** UDT dans la **Points** table (qui ne contient pas un **timestamp** colonne).  
+-   **UserProvidedCommands**, qui montre comment fournir **InsertCommand**, **UpdateCommand**, et **DeleteCommand** objets pour la mise à jour le  **Point** UDT dans la **Points** table (qui ne contient pas un **timestamp** colonne).  
   
--   **CommandBuilder**, qui montre comment utiliser un **SqlCommandBuilder** dans les **Points_ts** table qui contient le **timestamp** colonne.  
+-   **CommandBuilder**, qui montre comment utiliser un **SqlCommandBuilder** dans le **Points_ts** table qui contient le **timestamp** colonne.  
   
 ```vb  
 Imports System  

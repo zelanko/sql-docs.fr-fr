@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: eab34ec4-b3ad-4a76-95cc-07b2f75ee6d7
 caps.latest.revision: 9
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 230cd7bcbadf9e51ba248ffa34851335977cb0ad
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 02d7879bab489d92f6c5897406d3dce12b279d96
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36142668"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37238239"
 ---
 # <a name="tutorial-add-a-parameter-to-your-report-report-builder"></a>Didacticiel : ajouter un paramètre à un rapport (Générateur de rapports)
   Ajoutez un paramètre à votre rapport pour permettre aux utilisateurs de filtrer les données de rapport à partir de la source de données ou dans le rapport. Les paramètres de rapport sont créés automatiquement pour chaque paramètre de requête que vous incluez dans une requête de dataset. Le type de données du paramètre détermine son apparence dans la barre d'outils de l'affichage du rapport.  
@@ -39,15 +39,15 @@ ms.locfileid: "36142668"
   
     1.  [Ajouter un Dataset pour fournir des valeurs disponibles et les noms complets](#AddDataset)  
   
-    2.  [Spécifiez les valeurs disponibles pour créer une liste déroulante de valeurs](#AvailableValues)  
+    2.  [Spécifier les valeurs disponibles pour créer une liste déroulante de valeurs](#AvailableValues)  
   
-    3.  [Spécifiez les valeurs par défaut pour que le rapport s’exécute automatiquement](#DefaultValues)  
+    3.  [Spécifier les valeurs par défaut afin que le rapport s’exécute automatiquement](#DefaultValues)  
   
-    4.  [Rechercher une valeur d’un Dataset qui comporte les paires nom/valeur](#NameValue)  
+    4.  [Rechercher une valeur à partir d’un Dataset qui contient des paires nom/valeur](#NameValue)  
   
 5.  [Afficher la valeur du paramètre sélectionné dans le rapport](#Expression)  
   
-6.  [Utilisez le paramètre de rapport dans un filtre](#Filter)  
+6.  [Utiliser le paramètre de rapport dans un filtre](#Filter)  
   
 7.  [Modifier le paramètre de rapport pour accepter plusieurs valeurs](#Multivalued)  
   
@@ -78,7 +78,7 @@ ms.locfileid: "36142668"
      La boîte de dialogue **Mise en route** s'affiche.  
   
     > [!NOTE]  
-    >  Si le **mise en route** boîte de dialogue n’apparaît pas, à partir de la **le Générateur de rapports** et sur **nouveau**.  
+    >  Si le **mise en route** boîte de dialogue n’apparaît pas, à partir de la **le Générateur de rapports** bouton, cliquez sur **New**.  
   
 2.  Dans le volet gauche, assurez-vous que **Rapport** est sélectionné.  
   
@@ -141,7 +141,7 @@ ms.locfileid: "36142668"
   
 4.  Cliquez sur **Suivant**.  
   
-5.  Sur le **choisir une disposition** sous **Options**, vérifiez que **afficher les sous-totaux et les totaux généraux** est sélectionnée.  
+5.  Sur le **choisir une disposition** page sous **Options**, vérifiez que **afficher les sous-totaux et les totaux généraux** est sélectionné.  
   
      Lorsque vous exécuterez le rapport, la dernière colonne affichera la quantité totale de chaque sous-catégorie pour tous les magasins, et la dernière ligne affichera la quantité totale pour toutes les sous-catégories pour chaque magasin.  
   
@@ -170,7 +170,7 @@ ms.locfileid: "36142668"
   
 2.  Dans le volet des données de rapport, développez le dossier **Datasets** , cliquez avec le bouton droit sur **DataSet1**, puis cliquez sur **Requête**.  
   
-3.  Ajoutez le code suivant [!INCLUDE[tsql](../includes/tsql-md.md)] `WHERE` clause la dernière ligne dans la requête :  
+3.  Ajoutez le code suivant [!INCLUDE[tsql](../includes/tsql-md.md)] `WHERE` clause comme dernière ligne dans la requête :  
   
     ```  
     WHERE StoreID = (@StoreID)  
@@ -190,16 +190,16 @@ ms.locfileid: "36142668"
   
 8.  Dans le volet des données de rapport, développez le dossier **Paramètres** .  
   
- Notez qu’il existe désormais un paramètre de rapport nommé *@StoreID*. Par défaut, le paramètre de données est de type **texte**. Dans la mesure où l'identificateur de magasin est un entier, vous devez remplacer le type de données par le type Entier dans la procédure suivante.  
+ Notez qu’il existe désormais un paramètre de rapport nommé *@StoreID*. Par défaut, le paramètre a type de données **texte**. Dans la mesure où l'identificateur de magasin est un entier, vous devez remplacer le type de données par le type Entier dans la procédure suivante.  
   
 ##  <a name="ChangeDefaultProperties"></a> 4. Modifier le type de données par défaut et d'autres propriétés pour un paramètre de rapport  
  Après avoir créé un paramètre de rapport, vous pouvez ajuster les valeurs par défaut des propriétés.  
   
 #### <a name="to-change-the-default-data-type-for-a-report-parameter"></a>Pour modifier le type de données par défaut d'un paramètre de rapport  
   
-1.  Dans le volet données du rapport sous la **paramètres** nœud, avec le bouton droit *@StoreID*, puis cliquez sur **propriétés de paramètre**.  
+1.  Dans le volet données du rapport sous la **paramètres** nœud, avec le bouton droit *@StoreID*, puis cliquez sur **propriétés du paramètre**.  
   
-2.  Dans l’invite de commandes, tapez **identificateur de magasin ?** Ce texte s'affiche sur la barre d'outils de la visionneuse de rapports lorsque vous exécutez le rapport.  
+2.  Dans l’invite de commandes, tapez **identificateur de Store ?** Ce texte s'affiche sur la barre d'outils de la visionneuse de rapports lorsque vous exécutez le rapport.  
   
 3.  Dans **Type de données**, dans la liste déroulante, sélectionnez **Entier**.  
   
@@ -246,7 +246,7 @@ ms.locfileid: "36142668"
   
 #### <a name="to-provide-available-values-for-a-parameter-from-a-dataset"></a>Pour fournir des valeurs disponibles pour un paramètre à partir d'un dataset  
   
-1.  Dans le volet données du rapport, cliquez sur le paramètre *@StoreID*, puis cliquez sur **propriétés de paramètre**.  
+1.  Dans le volet données du rapport, cliquez sur le paramètre *@StoreID*, puis cliquez sur **propriétés du paramètre**.  
   
 2.  Cliquez sur **Valeurs disponibles**, puis sur **Obtenir les valeurs à partir d’une requête**.  
   
@@ -258,7 +258,7 @@ ms.locfileid: "36142668"
   
 6.  Cliquez sur **Général**.  
   
-7.  Dans l’invite de commandes, tapez **nom du magasin ?**  
+7.  Dans l’invite de commandes, tapez **nom de Store ?**  
   
      L'utilisateur sélectionnera désormais un nom dans une liste de noms de magasins au lieu d'identificateurs de magasin. Notez que le type de données du paramètre reste **Entier** , car le paramètre est basé sur l’identificateur de magasin au lieu du nom de magasin.  
   
@@ -266,7 +266,7 @@ ms.locfileid: "36142668"
   
 9. Affichez l'aperçu du rapport.  
   
-     Dans la barre d’outils de la visionneuse de rapports, la zone de texte du paramètre est désormais une liste déroulante qui affiche  **\<sélectionner une valeur >**.  
+     Dans la barre d’outils de la visionneuse de rapports, la zone de texte de paramètre est maintenant une liste déroulante qui affiche  **\<sélectionner une valeur >**.  
   
 10. Dans la liste déroulante, sélectionnez Contoso Catalog Store, puis cliquez sur **afficher le rapport**.  
   
@@ -281,7 +281,7 @@ ms.locfileid: "36142668"
   
 2.  Dans le volet des données de rapport, cliquez avec le bouton droit sur *@StoreID*, puis cliquez sur **Propriétés du paramètre**.  
   
-3.  Cliquez sur **les valeurs par défaut**, puis cliquez sur **obtenir les valeurs à partir d’une requête**.  
+3.  Cliquez sur **des valeurs par défaut**, puis cliquez sur **obtenir des valeurs à partir d’une requête**.  
   
 4.  Dans la liste déroulante **Dataset**, cliquez sur **Stores**.  
   
@@ -291,7 +291,7 @@ ms.locfileid: "36142668"
   
 7.  Affichez l'aperçu du rapport.  
   
- Pour *@StoreID*, la visionneuse de rapports affiche la valeur « Contoso North America Online Store ». Ceci est la première valeur à partir du jeu de résultats pour le jeu de données **magasins**. Le rapport affiche la quantité vendue des articles « Digital Cameras » pour l’identificateur de magasin **199**.  
+ Pour *@StoreID*, la visionneuse de rapports affiche la valeur « Contoso North America Online Store ». Ceci est la première valeur du jeu de résultats pour le jeu de données **magasins**. Le rapport affiche la quantité vendue des articles « Digital Cameras » pour l’identificateur de magasin **199**.  
   
 #### <a name="to-specify-a-custom-default-value"></a>Pour spécifier une valeur par défaut personnalisée  
   
@@ -299,7 +299,7 @@ ms.locfileid: "36142668"
   
 2.  Dans le volet des données de rapport, cliquez avec le bouton droit sur *@StoreID*, puis cliquez sur **Propriétés du paramètre**.  
   
-3.  Cliquez sur **les valeurs par défaut**, puis cliquez sur **spécifier des valeurs**, puis cliquez sur **ajouter**. Une nouvelle ligne de valeurs est ajoutée.  
+3.  Cliquez sur **des valeurs par défaut**, puis cliquez sur **spécifier des valeurs**, puis cliquez sur **ajouter**. Une nouvelle ligne de valeurs est ajoutée.  
   
 4.  Dans **Valeur**, tapez **200**.  
   
@@ -349,7 +349,7 @@ ms.locfileid: "36142668"
   
 4.  Pour afficher l'étiquette de paramètre, cliquez dans la zone de texte jusqu'à ce que le curseur d'insertion s'affiche après l'expression existante, tapez un espace, puis faites glisser une autre copie du paramètre du volet des données de rapport vers la zone de texte. La zone de texte affiche `[@StoreID] [@StoreID]`.  
   
-5.  Avec le bouton droit de la première expression, puis cliquez sur **Expression**. La boîte de dialogue **Expression** s'affiche. Remplacez le texte `Value` par `Label`.  
+5.  Avec le bouton droit de la première expression et cliquez sur **Expression**. La boîte de dialogue **Expression** s'affiche. Remplacez le texte `Value` par `Label`.  
   
 6.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
@@ -399,7 +399,7 @@ ms.locfileid: "36142668"
   
 5.  Dans le volet des données de rapport, développez le dossier **Datasets** , cliquez avec le bouton droit sur **DataSet1**, puis cliquez sur **Requête**.  
   
-6.  Modification `equals` (=) pour `IN` dans les [!INCLUDE[tsql](../includes/tsql-md.md)] `WHERE` clause dans la dernière ligne dans la requête :  
+6.  Modification `equals` (=) à `IN` dans le [!INCLUDE[tsql](../includes/tsql-md.md)] `WHERE` clause dans la dernière ligne dans la requête :  
   
     ```  
     WHERE StoreID IN (@StoreID)  

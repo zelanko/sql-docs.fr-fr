@@ -5,10 +5,9 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-backup-restore
+ms.technology: backup-restore
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.restoretlog.options.f1
 - sql12.swb.restoretlog.general.f1
@@ -20,15 +19,15 @@ helpviewer_keywords:
 - transaction log restores [SQL Server], SQL Server Management Studio
 ms.assetid: 1de2b888-78a6-4fb2-a647-ba4bf097caf3
 caps.latest.revision: 35
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: e688a81d1a555efcad659b6b89ef4f21f116191d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 85c4008e1872a48126c67e47cc8d68ed0867828d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36142745"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37237019"
 ---
 # <a name="restore-a-transaction-log-backup-sql-server"></a>Restaurer une sauvegarde de journal des transactions (SQL Server)
   Cette rubrique explique comment restaurer une sauvegarde du journal des transactions dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] à l'aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou de [!INCLUDE[tsql](../../includes/tsql-md.md)].  
@@ -152,7 +151,7 @@ ms.locfileid: "36142745"
   
          Cette option est disponible uniquement avec le **laisser la base de données opérationnelle en restaurant les transactions non validées...**  option (décrite plus loin), qui est équivalente à la restauration d’une sauvegarde avec la `RECOVERY` option.  
   
-         Cette option est équivalente à l’utilisation de la `KEEP_REPLICATION` option dans un [!INCLUDE[tsql](../../includes/tsql-md.md)] `RESTORE` instruction.  
+         Activation de cette option équivaut à utiliser le `KEEP_REPLICATION` option dans un [!INCLUDE[tsql](../../includes/tsql-md.md)] `RESTORE` instruction.  
   
     -   **Demander confirmation avant chaque restauration de sauvegarde**  
   

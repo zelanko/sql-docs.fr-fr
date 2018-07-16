@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - initializing subscriptions [SQL Server replication], reinitializing
 - subscriptions [SQL Server replication], reinitializing
 - reinitializing subscriptions
 ms.assetid: ca3625c5-c62e-4ab7-9829-d511f838e385
 caps.latest.revision: 37
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 795ff8c9d1ebc751bdf0a2acfd57b158ed64c956
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: a13bd70e82e219a3935f0076481df9de7b683e23
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36041585"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37318329"
 ---
 # <a name="reinitialize-a-subscription"></a>Réinitialiser un abonnement
   Cette rubrique explique comment réinitialiser un abonnement par extraction de données (pull) dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] à l'aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], de [!INCLUDE[tsql](../../includes/tsql-md.md)]ou d'objets RMO (Replication Management Objects). Des abonnements individuels peuvent être marqués pour réinitialisation afin qu'un nouvel instantané soit appliqué lors de la synchronisation suivante.  
@@ -192,7 +192,7 @@ ms.locfileid: "36041585"
 3.  Appelez la méthode <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> pour obtenir les propriétés de l'objet.  
   
     > [!NOTE]  
-    >  Si cette méthode retourne `false`, soit les propriétés d’abonnement à l’étape 2 ont été définies de manière incorrecte ou l’abonnement par émission de données n’existe pas.  
+    >  Si cette méthode retourne `false`, soit les propriétés d’abonnement à l’étape 2 ont été définies de manière incorrecte ou l’envoi d’abonnement n’existe pas.  
   
 4.  Appelez la méthode <xref:Microsoft.SqlServer.Replication.TransSubscription.Reinitialize%2A> . Cette méthode marque l'abonnement pour réinitialisation.  
   
@@ -225,7 +225,7 @@ ms.locfileid: "36041585"
 3.  Appelez la méthode <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> pour obtenir les propriétés de l'objet.  
   
     > [!NOTE]  
-    >  Si cette méthode retourne `false`, soit les propriétés d’abonnement à l’étape 2 ont été définies de manière incorrecte ou l’abonnement par émission de données n’existe pas.  
+    >  Si cette méthode retourne `false`, soit les propriétés d’abonnement à l’étape 2 ont été définies de manière incorrecte ou l’envoi d’abonnement n’existe pas.  
   
 4.  Appelez la méthode <xref:Microsoft.SqlServer.Replication.MergeSubscription.Reinitialize%2A> . Passez la valeur `true` pour télécharger les modifications sur l'Abonné avant la réinitialisation ou la valeur `false` pour réinitialiser et perdre toute modification en attente sur l'Abonné. Cette méthode marque l'abonnement pour réinitialisation.  
   

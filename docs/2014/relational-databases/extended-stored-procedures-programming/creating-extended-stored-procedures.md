@@ -1,5 +1,5 @@
 ---
-title: Création d’étendues de procédures stockées | Documents Microsoft
+title: Création d’étendues de procédures stockées | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - messages [SQL Server], extended stored procedures
 ms.assetid: 9f7c0cdb-6d88-44c0-b049-29953ae75717
 caps.latest.revision: 37
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 39fd8a55e334dea4fb6e220656e55696ae325a54
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: rothja
+ms.author: jroth
+manager: craigg
+ms.openlocfilehash: 22d32b74437fe27d1a70197a420ef728dcf0ce6a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36044947"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37311874"
 ---
 # <a name="creating-extended-stored-procedures"></a>Création de procédures stockées étendues
     
@@ -44,7 +44,7 @@ ms.locfileid: "36044947"
   
 -   Toutes les fonctions appelées hors de la DLL (toutes les procédures stockées étendues Efunctions) doivent être exportées.  
   
-     Vous pouvez exporter une fonction en répertoriant son nom dans la section EXPORTS d’un fichier .def, ou vous pouvez préfixer le nom de fonction dans le code source avec __declspec (dllexport), une extension du compilateur Microsoft (Notez que \__declspec() commence par deux traits de soulignement).  
+     Vous pouvez exporter une fonction en répertoriant son nom dans la section EXPORTS d’un fichier .def, ou vous pouvez faire précéder le nom de fonction dans le code source avec __declspec (dllexport), une extension du compilateur Microsoft (Notez que \__declspec() commence par deux traits de soulignement).  
   
  Ces fichiers sont requis pour la création d'une DLL de procédure stockée étendue.  
   
@@ -76,7 +76,7 @@ __declspec(dllexport) ULONG __GetXpVersion()
   
  Il est recommandé que toute procédure stockée étendue dont l'exécution est longue, appelle périodiquement srv_got_attention afin que la procédure puisse se terminer si la connexion est arrêtée ou si le lot est abandonné.  
   
- Pour déboguer une DLL de procédure stockée étendue, copiez-la vers le répertoire [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\Binn. Pour spécifier le fichier exécutable pour la session de débogage, entrez le chemin d’accès et le nom de la [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] le fichier exécutable (par exemple, C:\Program Files\Microsoft SQL Server\MSSQL12. MSSQLSERVER\MSSQL\Binn\Sqlservr.exe). Pour plus d’informations sur les arguments sqlservr, consultez [Application sqlservr](../../tools/sqlservr-application.md).  
+ Pour déboguer une DLL de procédure stockée étendue, copiez-la vers le répertoire [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\Binn. Pour spécifier le fichier exécutable pour la session de débogage, entrez le chemin d’accès et le nom de la [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fichier exécutable (par exemple, C:\Program Files\Microsoft SQL Server \ mssql12. MSSQLSERVER\MSSQL\Binn\Sqlservr.exe). Pour plus d’informations sur les arguments sqlservr, consultez [Application sqlservr](../../tools/sqlservr-application.md).  
   
 ## <a name="see-also"></a>Voir aussi  
  [srv_got_attention &#40;API de procédure stockée étendue&#41;](../extended-stored-procedures-reference/srv-got-attention-extended-stored-procedure-api.md)  

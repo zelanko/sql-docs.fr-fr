@@ -1,5 +1,5 @@
 ---
-title: Langues et classements (Analysis Services) | Documents Microsoft
+title: Langues et classements (Analysis Services) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Windows collations [Analysis Services]
 - default collations
@@ -19,22 +19,22 @@ helpviewer_keywords:
 - collations [Analysis Services]
 ms.assetid: 666cf8a7-223b-4be5-86c0-7fe2bcca0d09
 caps.latest.revision: 23
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 3279919a5a089991b09a3eea6807bec8589f7a64
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 4e2c52f657ce161edbb82c16eda2f6f0c3084c8a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36038479"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37293719"
 ---
 # <a name="languages-and-collations-analysis-services"></a>Langues et classements (Analysis Services)
   [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] prend en charge les langues et les classements fournis par les systèmes d'exploitation [!INCLUDE[msCoName](../includes/msconame-md.md)] Windows. Les propriétés `Language` et `Collation` sont initialement définies au niveau de l'instance pendant l'installation, mais peuvent être modifiées ultérieurement à différents niveaux de la hiérarchie d'objets.  
   
  Dans un modèle multidimensionnel (uniquement), vous pouvez définir ces propriétés sur une base de données ou sur un cube. Vous pouvez également les définir sur les traductions que vous créez pour des objets dans un cube.  
   
- Lors de la définition `Language` et `Collation`, vous spécifiez les paramètres utilisés par le modèle de données pendant le traitement et l’exécution des requêtes, ou (pour les modèles multidimensionnels uniquement) sont vous sont équiper un modèle avec plusieurs traductions ainsi qu’étrangères language haut-parleurs peuvent utiliser le modèle dans leur langue maternelle. La définition explicite des propriétés `Language` et `Collation` d'un objet (base de données, modèle ou cube) concerne les situations dans lesquelles les serveurs de production et d'environnement de développement sont configurés pour différents paramètres régionaux et vous voulez être sûr que la langue et le classement correspondent à ceux de l'environnement cible.  
+ Lors de la définition `Language` et `Collation`, vous êtes spécifiez les paramètres utilisés par le modèle de données pendant le traitement et l’exécution des requêtes ou (pour les modèles multidimensionnels uniquement) vous dans un modèle avec plusieurs traductions donc autrement étrangères langage locuteurs puissent l’utiliser avec le modèle dans leur langue maternelle. La définition explicite des propriétés `Language` et `Collation` d'un objet (base de données, modèle ou cube) concerne les situations dans lesquelles les serveurs de production et d'environnement de développement sont configurés pour différents paramètres régionaux et vous voulez être sûr que la langue et le classement correspondent à ceux de l'environnement cible.  
   
  Cette rubrique comprend les sections suivantes :  
   
@@ -55,7 +55,7 @@ ms.locfileid: "36038479"
 -   [Prise en charge de GB18030 dans Analysis Services](#bkmk_gb18030)  
   
 ##  <a name="bkmk_object"></a> Objets qui prennent en charge les propriétés Language et Collation  
- `Language` et `Collation` propriétés sont souvent exposées ensemble – dans laquelle vous pouvez définir `Language`, vous pouvez également définir `Collation`.  
+ `Language` et `Collation` les propriétés sont souvent exposées ensemble – où vous pouvez définir `Language`, vous pouvez également définir `Collation`.  
   
  Vous pouvez définir `Language` et `Collation` sur ces objets :  
   
@@ -65,18 +65,18 @@ ms.locfileid: "36038479"
   
 -   **Base de données**. Pour rompre l'héritage, vous pouvez définir explicitement la langue et le classement au niveau du projet utilisé par tous les cubes contenus dans la base de données. Sauf indication contraire, tous les cubes de la base de données reçoivent la langue et le classement que vous spécifiez à ce niveau. Si vous codez et déployez régulièrement avec différents paramètres régionaux (par exemple, si vous développez la solution sur un ordinateur chinois, mais que vous la déployez sur un serveur appartenant à une filiale française), la définition de la langue et du classement au niveau de la base de données est la première et la plus importante étape pour garantir le fonctionnement de la solution dans l'environnement cible. Le meilleur emplacement pour définir ces propriétés est à l’intérieur du projet (via la commande **Modifier la base de données** sur le projet).  
   
--   **Dimension de base de données**. Bien que le concepteur expose `Language` et `Collation` propriétés sur une dimension de base de données, définir des propriétés sur cet objet n’est pas utile. Les dimensions de base de données ne sont pas utilisées comme objets autonomes. Il peut donc être difficile, voire impossible, d'utiliser les propriétés que vous définissez. Dans un cube, une dimension hérite toujours des propriétés `Language` et `Collation` de son cube parent. Les valeurs que vous avez pu définir sur l'objet de dimension de base de données autonome sont ignorées.  
+-   **Dimension de base de données**. Bien que le concepteur expose `Language` et `Collation` propriétés sur une dimension de base de données, en définissant des propriétés sur cet objet n’est pas utile. Les dimensions de base de données ne sont pas utilisées comme objets autonomes. Il peut donc être difficile, voire impossible, d'utiliser les propriétés que vous définissez. Dans un cube, une dimension hérite toujours des propriétés `Language` et `Collation` de son cube parent. Les valeurs que vous avez pu définir sur l'objet de dimension de base de données autonome sont ignorées.  
   
 -   **Cube**. S'agissant d'une structure de requête principale, vous pouvez définir la langue et le classement au niveau du cube. Par exemple, vous souhaiterez peut-être créer plusieurs versions linguistiques d'un cube (une en anglais et une en chinois) dans le même projet, où chaque cube a son propre langage et son propre classement.  
   
      Quels que soient la langue et le classement que vous définissez sur le cube, ils sont utilisés par toutes les mesures et les dimensions contenues dans le cube. La seule façon de définir des propriétés de classement plus fines consiste à créer des traductions sur un attribut de dimension. Sinon, en supposant qu'il n'existe aucune traduction au niveau des attributs, il existe un classement par cube.  
   
- En outre, vous pouvez définir `Language`, par elle-même, sur un **traduction** objet.  
+ En outre, vous pouvez définir `Language`, en soi, sur un **traduction** objet.  
   
- Un objet de traduction est créé lorsque vous ajoutez des traductions à un cube ou à une dimension. `Language` fait partie de la définition de la traduction. `Collation`, en revanche, est définie sur le cube ou une version ultérieure et partagés par toutes les traductions. Ceci est évident dans le code XMLA d'un cube contenant des traductions, où figurent plusieurs propriétés de langue (une pour chaque traduction), mais un seul classement. Notez qu'il existe une exception pour les traductions d'attributs de dimension, où vous pouvez remplacer le classement de cube pour spécifier un classement d'attribut qui correspond à la colonne source (le moteur de base de données prend en charge la définition du classement sur des colonnes spécifiques et il est courant de configurer des traductions pour obtenir des données de membres à partir de colonnes sources différentes). Mais sinon, pour toutes les autres traductions, `Language` est utilisé par lui-même, sans un `Collation` corollaire. Pour plus d’informations, consultez [Traductions &#40;Analysis Services&#41;](translations-analysis-services.md).  
+ Un objet de traduction est créé lorsque vous ajoutez des traductions à un cube ou à une dimension. `Language` fait partie de la définition de la traduction. `Collation`, en revanche, est définie sur le cube ou une version ultérieure et partagés par toutes les traductions. Ceci est évident dans le code XMLA d'un cube contenant des traductions, où figurent plusieurs propriétés de langue (une pour chaque traduction), mais un seul classement. Notez qu'il existe une exception pour les traductions d'attributs de dimension, où vous pouvez remplacer le classement de cube pour spécifier un classement d'attribut qui correspond à la colonne source (le moteur de base de données prend en charge la définition du classement sur des colonnes spécifiques et il est courant de configurer des traductions pour obtenir des données de membres à partir de colonnes sources différentes). Mais sinon, pour toutes les autres traductions, `Language` est utilisée seule, sans un `Collation` corollaire. Pour plus d’informations, consultez [Traductions &#40;Analysis Services&#41;](translations-analysis-services.md).  
   
 ##  <a name="bkmk_lang"></a> Prise en charge linguistique dans Analysis Services  
- Le `Language` propriété définit les paramètres régionaux d’un objet, utilisé pendant le traitement, les requêtes et avec `Captions` et `Translations` pour prendre en charge les scénarios multilingues. Les paramètres régionaux sont basés sur un identificateur de langue, tel qu'Anglais, et un territoire, tel qu'États-Unis ou Australie, qui affine les représentations de date et d'heure.  
+ Le `Language` propriété définit les paramètres régionaux d’un objet, utilisé durant le traitement, les requêtes et avec `Captions` et `Translations` pour prendre en charge les scénarios multilingues. Les paramètres régionaux sont basés sur un identificateur de langue, tel qu'Anglais, et un territoire, tel qu'États-Unis ou Australie, qui affine les représentations de date et d'heure.  
   
  Au niveau de l'instance, la propriété est définie lors de l'installation et elle est basée sur la langue du système d'exploitation de serveur Windows (l'une des 37 langues, en supposant qu'un module linguistique soit installé). Vous ne pouvez pas modifier la langue lors de l'exécution du programme d'installation.  
   
@@ -121,7 +121,7 @@ ms.locfileid: "36038479"
      Les classements binaires effectuent un tri sur des points de code Unicode, et non sur des valeurs linguistiques. Par exemple, Latin1_General_BIN et Japanese_BIN renvoient les mêmes résultats de tri lorsqu'ils sont appliqués à des données Unicode. Alors qu'un tri linguistique peut générer des résultats comme aAbBcCdD, un tri binaire serait ABCDabcd car le point de code de tous les caractères majuscules est collectivement plus élevé que les points de code des caractères minuscules.  
   
 ###  <a name="bkmk_sortorder"></a> Options d'ordre de tri  
- Des options de tri sont utilisées pour affiner les règles de tri et de comparaison en fonction du respect de la casse, des accents, des caractères kana et de la largeur. Par exemple, la valeur par défaut de la `Collation` propriété de configuration pour [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] est Latin1_General_AS_CS, en spécifiant que le classement Latin1_General est utilisé, avec un ordre de tri des accents, respect de la casse.  
+ Des options de tri sont utilisées pour affiner les règles de tri et de comparaison en fonction du respect de la casse, des accents, des caractères kana et de la largeur. Par exemple, la valeur par défaut de la `Collation` propriété de configuration [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] est Latin1_General_AS_CS, qui spécifie que le classement Latin1_General est utilisé avec un ordre de tri de respect des accents, respect de la casse.  
   
  Notez que BIN et BIN2 sont mutuellement exclusifs d'autres options de tri. Si vous souhaitez utiliser BIN ou BIN2, désactivez l'option de tri pour le respect des accents. De même, quand BIN2 est activé, les options Respecter la casse, Non-respect de la casse, Respecter les accents, Non-respect des accents, Respecter les caractères Kana et Respecter la largeur ne sont pas disponibles.  
   
@@ -182,14 +182,14 @@ ms.locfileid: "36038479"
 4.  Retraitez le cube.  
   
 ##  <a name="bkmk_enablefast1033"></a> Optimisation des performances pour les paramètres régionaux Anglais via EnableFast1033Locale  
- Si vous utilisez l’identificateur de langue anglais (États-Unis) (0 x 0409 ou 1033) comme la langue par défaut pour le [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] instance, vous pouvez obtenir des gains de performance supplémentaires en définissant le `EnableFast1033Locale` propriété de configuration, une configuration avancée disponible uniquement pour cet identificateur de langue de la propriété. Si vous attribuez la valeur **True** à cette propriété, [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] utilise un algorithme plus rapide pour le hachage de chaînes et les comparaisons. Pour plus d’informations sur la définition des propriétés de configuration, consultez [Configurer les propriétés du serveur dans Analysis Services](server-properties/server-properties-in-analysis-services.md).  
+ Si vous utilisez l’identificateur de langue anglais (États-Unis) (0 x 0409 ou 1033) comme langue par défaut pour le [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] instance, vous pouvez obtenir des gains de performance supplémentaires en définissant le `EnableFast1033Locale` propriété de configuration, une configuration avancée propriété disponible uniquement pour cet identificateur de langue. Si vous attribuez la valeur **True** à cette propriété, [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] utilise un algorithme plus rapide pour le hachage de chaînes et les comparaisons. Pour plus d’informations sur la définition des propriétés de configuration, consultez [Configurer les propriétés du serveur dans Analysis Services](server-properties/server-properties-in-analysis-services.md).  
   
 ##  <a name="bkmk_gb18030"></a> Prise en charge de GB18030 dans Analysis Services  
  GB18030 est une norme distincte utilisée en République populaire de Chine pour l'encodage des caractères chinois. Dans la norme GB18030, les caractères peuvent être encodés sur 1, 2 ou 4 octets de longueur. Dans Analysis Services, il n'y a aucune conversion de données lors du traitement de données provenant de sources externes. Les données sont simplement stockées au format Unicode. Au moment de la requête, une conversion GB18030 est effectuée via les bibliothèques clientes Analysis Services (plus précisément, le fournisseur OLE DB MSOLAP.dll) quand des données texte sont retournées dans les résultats de la requête, en fonction des paramètres du système d'exploitation client. Le moteur de base de données prend également en charge la norme GB18030. Pour plus d'informations, consultez [Collation and Unicode Support](../relational-databases/collations/collation-and-unicode-support.md).  
   
 ## <a name="see-also"></a>Voir aussi  
  [Scénarios de globalisation pour données multidimensionnelles Analysis Services](globalization-scenarios-for-analysis-services-multiidimensional.md)   
- [Conseils et meilleures pratiques en matière de globalisation &#40;Analysis Services&#41;](globalization-tips-and-best-practices-analysis-services.md)   
+ [Globalisation conseils et meilleures pratiques &#40;Analysis Services&#41;](globalization-tips-and-best-practices-analysis-services.md)   
  [Prise en charge d'Unicode et du classement](../relational-databases/collations/collation-and-unicode-support.md)  
   
   

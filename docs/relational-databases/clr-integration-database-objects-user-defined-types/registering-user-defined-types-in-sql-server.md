@@ -1,11 +1,11 @@
 ---
-title: L’inscription des Types définis par l’utilisateur dans SQL Server | Documents Microsoft
+title: Inscription des Types définis par l’utilisateur dans SQL Server | Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: reference
+ms.technology: clr
 ms.tgt_pltfrm: ''
 ms.topic: reference
 dev_langs:
@@ -36,12 +36,12 @@ caps.latest.revision: 25
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 942f6c1fa0b6888aa936bfd4b557c570529e9894
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
+ms.openlocfilehash: cb3c8321be447d839242ebd8dae18871d0a6c17f
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35697820"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37352201"
 ---
 # <a name="registering-user-defined-types-in-sql-server"></a>Inscription des types définis par l'utilisateur dans SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -56,11 +56,11 @@ ms.locfileid: "35697820"
   
 2.  Ajoutez une référence à la base de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] qui contiendra l'UDT.  
   
-3.  Ajouter un **User-Defined Type** classe.  
+3.  Ajouter un **définis par l’utilisateur Type** classe.  
   
 4.  Écrivez le code d'implémentation de l'UDT.  
   
-5.  À partir de la **générer** menu, sélectionnez **déployer**. L'assembly est alors inscrit et le type est créé dans la base de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+5.  À partir de la **Build** menu, sélectionnez **déployer**. L'assembly est alors inscrit et le type est créé dans la base de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ## <a name="using-transact-sql-to-deploy-udts"></a>Utilisation de Transact-SQL pour déployer des UDT  
  Le syntaxe [!INCLUDE[tsql](../../includes/tsql-md.md)] CREATE ASSEMBLY est utilisée pour inscrire l'assembly dans la base de données dans laquelle vous souhaitez utiliser l'UDT. L'assembly est stocké en interne dans les tables système de la base de données, et non en externe dans le système de fichiers. Si l'UDT est dépendant d'assemblys externes, ces derniers doivent également être chargés dans la base de données. L'instruction CREATE TYPE est utilisée pour créer l'UDT dans la base de données dans laquelle il sera utilisé. Pour plus d’informations, consultez [CREATE ASSEMBLY &#40;Transact-SQL&#41; ](../../t-sql/statements/create-assembly-transact-sql.md) et [CREATE TYPE &#40;Transact-SQL&#41;](../../t-sql/statements/create-type-transact-sql.md).  
@@ -73,7 +73,7 @@ ms.locfileid: "35697820"
  Lorsque CREATE ASSEMBLY est exécuté avec le jeu d'autorisations SAFE ou EXTERNAL_ACCESS, l'assembly est vérifié pour s'assurer qu'il est vérifiable et sécurisé. Si vous omettez de spécifier un jeu d'autorisations, le jeu SAFE est utilisé. Le code associé au jeu d'autorisations UNSAFE n'est pas vérifié. Pour plus d’informations sur les jeux d’autorisations des assemblys, consultez [Conception d’assemblys](../../relational-databases/clr-integration/assemblies-designing.md).  
   
 #### <a name="example"></a>Exemple  
- Les éléments suivants [!INCLUDE[tsql](../../includes/tsql-md.md)] instruction inscrit l’assembly de Point de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dans les **AdventureWorks** base de données, le jeu d’autorisations SAFE. Si la clause WITH PERMISSION_SET est omise, l'assembly est inscrit avec le jeu d'autorisations SAFE.  
+ Ce qui suit [!INCLUDE[tsql](../../includes/tsql-md.md)] instruction inscrit l’assembly de Point de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dans le **AdventureWorks** base de données, avec le jeu d’autorisations SAFE. Si la clause WITH PERMISSION_SET est omise, l'assembly est inscrit avec le jeu d'autorisations SAFE.  
   
 ```  
 USE AdventureWorks;  
@@ -82,7 +82,7 @@ FROM '\\ShareName\Projects\Point\bin\Point.dll'
 WITH PERMISSION_SET = SAFE;  
 ```  
   
- Les éléments suivants [!INCLUDE[tsql](../../includes/tsql-md.md)] instruction inscrit l’assembly à l’aide de *< assembly_bits >* argument dans la clause FROM. Cela **varbinary** valeur représente le fichier sous la forme d’un flux d’octets.  
+ Ce qui suit [!INCLUDE[tsql](../../includes/tsql-md.md)] instruction inscrit l’assembly à l’aide de *< assembly_bits >* argument dans la clause FROM. Cela **varbinary** valeur représente le fichier sous la forme d’un flux d’octets.  
   
 ```  
 USE AdventureWorks;  
@@ -94,12 +94,12 @@ FROM 0xfeac4 … 21ac78
  Une fois l'assembly chargé dans la base de données, vous pouvez créer le type à l'aide de l'instruction [!INCLUDE[tsql](../../includes/tsql-md.md)] CREATE TYPE. Le type est alors ajouté à la liste des types disponibles pour cette base de données. La portée du type se limite à la base de données ; il ne peut être utilisé que dans la base de données dans laquelle il a été créé. Si l'UDT existe déjà dans la base de données, l'instruction CREATE TYPE échoue avec une erreur.  
   
 > [!NOTE]  
->  La syntaxe CREATE TYPE est également utilisée pour la création de native [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] données alias types et est destiné à remplacer **sp_addtype** comme un moyen de créer des types de données alias. Certains arguments facultatifs de la syntaxe CREATE TYPE se rapportent à la création d'UDT et ne peuvent pas être appliqués à la création de types de données d'alias.  
+>  La syntaxe CREATE TYPE est également utilisée pour la création native [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] données alias des types et est destiné à remplacer **sp_addtype** comme un moyen de créer des types de données alias. Certains arguments facultatifs de la syntaxe CREATE TYPE se rapportent à la création d'UDT et ne peuvent pas être appliqués à la création de types de données d'alias.  
   
  Pour plus d’informations, consultez [CREATE TYPE &#40;Transact-SQL&#41;](../../t-sql/statements/create-type-transact-sql.md).  
   
 #### <a name="example"></a>Exemple  
- Les éléments suivants [!INCLUDE[tsql](../../includes/tsql-md.md)] instruction crée le **Point** type. EXTERNAL NAME est spécifié à l’aide de la syntaxe de dénomination en deux parties de *AssemblyName*. *Nom_udt*.  
+ Ce qui suit [!INCLUDE[tsql](../../includes/tsql-md.md)] instruction crée le **Point** type. EXTERNAL NAME est spécifié à l’aide de la syntaxe de dénomination en deux parties de *AssemblyName*. *Nom_udt*.  
   
 ```  
 CREATE TYPE dbo.Point   
@@ -127,7 +127,7 @@ DROP ASSEMBLY Point;
 ### <a name="finding-udt-dependencies"></a>Recherche des dépendances d'un UDT  
  En présence d'objets dépendants, comme des tables avec des définitions de colonne UDT, l'instruction DROP TYPE échoue. Elle échoue également si des fonctions, procédures stockées ou déclencheurs créés dans la base de données à l'aide de la clause WITH SCHEMABINDING utilisent des variables ou des paramètres du type défini par l'utilisateur. Vous devez commencer par supprimer tous les objets dépendants, puis exécuter l'instruction DROP TYPE.  
   
- Les éléments suivants [!INCLUDE[tsql](../../includes/tsql-md.md)] requête recherche toutes les colonnes et les paramètres qui utilisent un UDT dans la **AdventureWorks** base de données.  
+ Ce qui suit [!INCLUDE[tsql](../../includes/tsql-md.md)] requête recherche toutes les colonnes et les paramètres qui utilisent un UDT dans la **AdventureWorks** base de données.  
   
 ```  
 USE Adventureworks;  
@@ -163,7 +163,7 @@ FROM '\\Projects\Point\bin\Point.dll'
 ### <a name="using-alter-assembly-to-add-source-code"></a>Utilisation de l'instruction ALTER ASSEMBLY pour ajouter le code source  
  La clause ADD FILE de la syntaxe ALTER ASSEMBLY n'est pas présente dans CREATE ASSEMBLY. Vous pouvez l'utiliser pour ajouter le code source ou tout autre fichier associé à un assembly. Les fichiers sont copiés depuis leur emplacement d'origine et stockés dans les tables système de la base de données. Le code source et autres fichiers est toujours à portée de main dans l'éventualité où vous deviez recréer ou documenter la version actuelle de l'UDT.  
   
- Les éléments suivants [!INCLUDE[tsql](../../includes/tsql-md.md)] l’instruction ALTER ASSEMBLY ajoute le code source de classe Point.cs pour le **Point** UDT. Le texte contenu dans le fichier Point.cs est alors copié et stocké dans la base de données sous le nom PointSource.  
+ Ce qui suit [!INCLUDE[tsql](../../includes/tsql-md.md)] instruction ALTER ASSEMBLY ajoute le code de source de classe Point.cs pour le **Point** UDT. Le texte contenu dans le fichier Point.cs est alors copié et stocké dans la base de données sous le nom PointSource.  
   
 ```  
 ALTER ASSEMBLY Point  
@@ -179,7 +179,7 @@ ADD FILE FROM '\\Projects\Point\Point.cs' AS PointSource;
  Nom de l'objet.  
   
  **file_id**  
- Nombre identifiant chaque objet, avec le premier objet associé à une donnée **assembly_id** possède la valeur 1. S’il existe plusieurs objets associés au même **assembly_id**, chaque **file_id** valeur est incrémentée de 1.  
+ Numéro identifiant chaque objet, le premier objet associé à une donnée **assembly_id** possède la valeur 1. S’il existe plusieurs objets associés au même **assembly_id**, chaque **file_id** valeur est incrémentée de 1.  
   
  **contenu**  
  Représentation hexadécimale de l'assembly ou du fichier.  
@@ -200,9 +200,9 @@ SELECT CAST(content AS varchar(8000))
  Le fait de séparer le code de procédure susceptible de changer du code requis pour implémenter l'UDT simplifie considérablement la maintenance. Par ailleurs, le fait de n'inclure que le code qui est nécessaire au fonctionnement de l'UDT et de créer des définitions d'UDT aussi simples que possible réduit le risque que l'UDT lui-même ait besoin d'être supprimé de la base de données pour les révisions de code ou la résolution de bogues.  
   
 ### <a name="the-currency-udt-and-currency-conversion-function"></a>UDT Currency et fonction de conversion de devise  
- Le **devise** UDT dans la **AdventureWorks** base de données exemple fournit un exemple de la méthode recommandée pour structurer un UDT et ses fonctions associées. Le **devise** UDT est utilisé pour la gestion des données monétaires reposant sur le système monétaire d’une culture particulière et permet de stocker des différents types de devises, tels que les dollars, euros et ainsi de suite. La classe UDT expose un nom de culture comme une chaîne et une somme d’argent en tant qu’un **décimal** type de données. Toutes les méthodes de sérialisation nécessaires sont contenues dans l'assembly qui définit la classe. La fonction qui implémente la conversion de devise à partir d’une culture à l’autre est implémentée comme une fonction externe nommée **ConvertCurrency**, et cette fonction se trouve dans un assembly distinct. Le **ConvertCurrency** fonction effectue son travail en récupérant le taux de conversion à partir d’une table dans le **AdventureWorks** base de données. Si la source des taux de conversion doit changer, ou s’il doit y avoir des modifications au code existant, l’assembly peut facilement être modifié sans affecter le **devise** UDT.  
+ Le **devise** UDT dans la **AdventureWorks** base de données exemple fournit un exemple de la méthode recommandée pour structurer un UDT et ses fonctions associées. Le **devise** UDT est utilisé pour traiter les données monétaires basée sur le système monétaire d’une culture particulière, tout en permettant le stockage de différents types de devises, telles que dollars, euros et ainsi de suite. La classe UDT expose un nom de culture comme une chaîne et une somme d’argent en tant qu’un **décimal** type de données. Toutes les méthodes de sérialisation nécessaires sont contenues dans l'assembly qui définit la classe. La fonction qui implémente la conversion de devise à partir d’une culture à l’autre est implémentée comme une fonction externe nommée **ConvertCurrency**, et cette fonction se trouve dans un assembly distinct. Le **ConvertCurrency** fonction effectue son travail en récupérant le taux de conversion à partir d’une table dans le **AdventureWorks** base de données. Si la source des taux de conversion doit changer, ou s’il doit comporter toutes les autres modifications au code existant, l’assembly peut être facilement modifié sans affecter le **devise** UDT.  
   
- Le code pour le **devise** UDT et **ConvertCurrency** fonctions sont accessibles en installant les exemples du common language runtime (CLR).  
+ Le code pour le **devise** UDT et **ConvertCurrency** fonctions peuvent être consultées en installant les exemples du common language runtime (CLR).  
   
 ### <a name="using-udts-across-databases"></a>Utilisation d'UDT dans plusieurs bases de données  
  Par définition, la portée des UDT se limite à une seule base de données. Autrement dit, un UDT défini dans une base de données ne peut pas être utilisé dans une définition de colonne d'une autre base de données. Pour utiliser des UDT dans plusieurs bases de données, vous devez exécuter les instructions CREATE ASSEMBLY et CREATE TYPE dans chaque base de données sur des assemblys identiques. Les assemblys sont considérés comme identiques s'ils partagent les mêmes nom, nom fort, culture, version, jeu d'autorisations et contenu binaire.  
@@ -217,7 +217,7 @@ SELECT CAST(content AS varchar(8000))
   
  Dans ces situations, toute conversion requise par le serveur se produit automatiquement. Vous ne pouvez pas effectuer explicitement ces conversions à l'aide des fonctions [!INCLUDE[tsql](../../includes/tsql-md.md)] CAST ou CONVERT.  
   
- Notez que vous n’avez pas besoin d’aucune action pour utiliser des UDT lorsque [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] crée les tables de travail dans le **tempdb** base de données système. Cela inclut la gestion des curseurs, des variables de table, et fonctions de table défini par l’utilisateur qui incluent des UDT et en toute transparence utiliser **tempdb**. Toutefois, si vous créez explicitement une table temporaire dans **tempdb** qui définit une colonne UDT, puis l’UDT doit être enregistré dans **tempdb** la même manière que pour une base de données utilisateur.  
+ Notez que vous n’avez pas besoin d’aucune action pour utiliser des UDT lorsque [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] crée les tables de travail dans le **tempdb** base de données système. Cela inclut la gestion des curseurs, les variables de table, et effectuer des fonctions de table défini par l’utilisateur qui incluent des UDT et en toute transparence utiliser **tempdb**. Toutefois, si vous créez explicitement une table temporaire dans **tempdb** qui définit une colonne UDT, puis l’UDT doit être inscrite dans **tempdb** la même manière que pour une base de données utilisateur.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Types CLR définis par l’utilisateur](../../relational-databases/clr-integration-database-objects-user-defined-types/clr-user-defined-types.md)  

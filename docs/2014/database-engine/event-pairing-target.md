@@ -1,5 +1,5 @@
 ---
-title: Cible de jumelage d’événements | Documents Microsoft
+title: Événement cible d’appariement | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - pairing target [SQL Server extended events]
 - event pairing target
 - targets [SQL Server extended events], pairing target
 ms.assetid: 3c87dcfb-543a-4bd8-a73d-1390bdf4ffa3
 caps.latest.revision: 14
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 2b2bff842462e0ab77ecd30373df00746260cea5
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 9e67507452104e8bef8d82d86e78c0ebbdf80609
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36039580"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37291335"
 ---
 # <a name="event-pairing-target"></a>Cible d'appariement d'événements
   La cible d'appariement d'événements correspond à deux événements qui utilisent une ou plusieurs colonnes de données qui sont présentes dans chaque événement. De nombreux événements se présentent sous forme de paires, tels que les acquisitions et les libérations de verrous. Une fois qu'une séquence d'événement a été couplée, les deux événements sont ignorés. Ignorer des jeux correspondants permet de détecter facilement les acquisitions de verrous qui n'ont pas été libérées.  
@@ -47,7 +47,7 @@ ms.locfileid: "36039580"
   
  Toutes les données associées à un événement sont capturées et stockées pour un appariement futur. De plus, les données ajoutées par les actions sont également collectées. Les données d'événement collectées sont stockées en mémoire et ont donc une limite finie. Cette limite est basée sur la capacité et l'activité du système. Plutôt que prendre la quantité maximale de mémoire à utiliser comme paramètre, la quantité de mémoire utilisée sera basée sur les ressources système disponibles. Lorsque celles-ci ne sont pas disponibles, les événements non couplés qui ont été conservés seront supprimés. Si un événement n'a pas été couplé et est supprimé, l'événement correspondant apparaîtra comme un événement non couplé.  
   
- La cible d'appariement applique en série des événements non couplés à un format XML. Ce format n'est conforme à aucun schéma. Le format contient uniquement deux types d'éléments. Le  **\<non appariés >** élément est la racine, suivie par un. **\<événement >** , élément pour chaque événement non couplé qui est actuellement en cours de suivi. Le  **\<événement >** élément contienne un attribut qui contient le nom de l’événement non couplé.  
+ La cible d'appariement applique en série des événements non couplés à un format XML. Ce format n'est conforme à aucun schéma. Le format contient uniquement deux types d'éléments. Le  **\<non appariés >** élément est la racine, suivi d’une unité. **\<événement >** élément pour chaque événement non couplé qui est actuellement en cours de suivi. Le  **\<événement >** élément contient un attribut qui contient le nom de l’événement non couplé.  
   
 ## <a name="adding-the-target-to-a-session"></a>Ajout de la cible à une session  
  Pour ajouter la paire cible correspondante à une session Événements étendus lorsque vous créez ou modifiez une session d'événements, vous devez inclure l'instruction suivante :  

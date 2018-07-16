@@ -1,5 +1,5 @@
 ---
-title: Graphique (SQL Server Data Mining Add-ins) des bénéfices | Documents Microsoft
+title: Graphique (SQL Server Data Mining Add-ins) des bénéfices | Microsoft Docs
 ms.custom: ''
 ms.date: 12/29/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - accuracy chart
 - profit chart
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - mining models, testing
 ms.assetid: 5c902543-4da9-4db3-99d5-4ce04c43d7ef
 caps.latest.revision: 16
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: c78d1f477b878b2ddf78e3c5446e46c249ffcb62
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 1639ed1ad54d8eabc861a8ec9023638ad4289d63
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36041510"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37297359"
 ---
 # <a name="profit-chart-sql-server-data-mining-add-ins"></a>Graphique des bénéfices (Compléments d'exploration de données SQL Server)
   ![Bouton de graphique des bénéfices dans le ruban Exploration de données](media/dmc-profitchart.gif "bouton graphique des bénéfices dans le ruban Exploration de données")  
@@ -51,9 +51,9 @@ ms.locfileid: "36041510"
      Revenu associé à chaque vente réussie.  
   
 ## <a name="using-the-profit-chart-wizard"></a>Utilisation de l'Assistant Graphique des bénéfices  
- Pour créer un graphique des bénéfices, vous devez référencer un modèle d'exploration de données existant. Vous pouvez parcourir les modèles pour rechercher un modèle qui correspond à vos données en cliquant sur **gérer les modèles** ou **Parcourir** pour afficher plus d’informations sur l’algorithme qui a été utilisé et les colonnes dans le modèle d’exploration de données.  
+ Pour créer un graphique des bénéfices, vous devez référencer un modèle d'exploration de données existant. Vous pouvez parcourir les modèles pour trouver un modèle qui correspond à vos données en cliquant sur **gérer les modèles** ou **Parcourir** pour afficher plus d’informations sur l’algorithme qui a été utilisé et les colonnes dans le modèle d’exploration de données.  
   
- Pour plus d’informations, consultez [exploration des modèles dans Excel &#40;des compléments d’exploration de données SQL Server&#41; ](browsing-models-in-excel-sql-server-data-mining-add-ins.md) et [gérer les modèles &#40;des compléments d’exploration de données SQL Server&#41;](manage-models-sql-server-data-mining-add-ins.md).  
+ Pour plus d’informations, consultez [exploration des modèles dans Excel &#40;SQL Server Data Mining Add-ins&#41; ](browsing-models-in-excel-sql-server-data-mining-add-ins.md) et [gérer les modèles &#40;SQL Server Data Mining Add-ins&#41;](manage-models-sql-server-data-mining-add-ins.md).  
   
 #### <a name="to-create-a-profit-chart"></a>Pour créer un graphique des bénéfices  
   

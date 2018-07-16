@@ -1,5 +1,5 @@
 ---
-title: Parcourir les données et métadonnées de Cube | Documents Microsoft
+title: Parcourir les données et métadonnées de Cube | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 5faf2a9d-df39-465f-9c81-a00d5cd63f5a
 caps.latest.revision: 6
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 61d455c9de96eed430125a9f543ec7bfc72ab7c1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 319b15dec052cdae73c6b1f1a6c0fed1290d447e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36052515"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37288145"
 ---
 # <a name="browse-data-and-metadata-in-cube"></a>Parcourir les données et métadonnées de cube
   Utilisez l'onglet **Navigateur** du Concepteur de cube pour parcourir les données du cube. Vous pouvez utiliser cette vue pour examiner la structure d'un cube et vérifier des données, le calcul, la mise en forme, ainsi que la sécurité des objets de base de données. Vous pouvez examiner rapidement un cube tel que les utilisateurs finaux le voient dans les outils de création de rapports ou d'autres applications clientes. Lorsque vous parcourez des données de cube, vous pouvez afficher différentes dimensions, explorer les membres et découper les dimensions.  
@@ -61,7 +61,7 @@ ms.locfileid: "36052515"
   
      \- ou -  
   
--   Dans le **Dimension** colonne de la **filtre** volet, cliquez sur  **\<sélectionner une dimension >** et sélectionnez une dimension dans la liste, puis cliquez sur  **\<Sélectionnez hiérarchie >** dans les **hiérarchie** colonne et sélectionnez une hiérarchie dans la liste.  
+-   Dans le **Dimension** colonne de la **filtre** volet, cliquez sur  **\<sélectionner une dimension >** et sélectionnez une dimension dans la liste, puis cliquez sur  **\<Sélectionnez hiérarchie >** dans le **hiérarchie** colonne et sélectionnez une hiérarchie dans la liste.  
   
  Après avoir spécifié la hiérarchie, spécifiez l'opérateur et l'expression de filtre. Le tableau suivant décrit les opérateurs et les expressions de filtre.  
   

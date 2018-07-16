@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - inserting columns
 - columns [SQL Server], adding
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - adding columns
 ms.assetid: 82f3ba72-3d72-4fb1-8179-2a953a782787
 caps.latest.revision: 11
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: c5480a1ff78132ac8273fde2d0f5756ce62fc263
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 70760f93bc60de7c8c4d8e86d7a32383647beee8
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36044183"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37308819"
 ---
 # <a name="add-columns-to-queries-visual-database-tools"></a>Ajouter des colonnes à des requêtes (Visual Database Tools)
   Pour pouvoir utiliser une colonne dans une requête, vous devez l'ajouter à cette requête. Vous pouvez ajouter une colonne pour l'afficher dans le résultat d'une requête, l'utiliser à des fins de tri, y effectuer des recherches ou encore totaliser ses données. Vous pouvez spécifier les colonnes de la requête qui doivent être comprises dans le volet Résultats lors de l'exécution de la requête. Pour plus d’informations, consultez [Supprimer des colonnes des résultats d’une requête &#40;Visual Database Tools&#41;](visual-database-tools.md).  
@@ -55,8 +55,8 @@ ms.locfileid: "36044183"
 3.  Dans la fenêtre Propriétés, cliquez sur **Sélectionne toutes les colonnes** et choisissez **Oui** ou **Non** dans la liste déroulante.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Supprimer des colonnes dans les résultats de la requête &#40;Visual Database Tools&#41;](visual-database-tools.md)   
- [Supprimer des colonnes à partir de requêtes &#40;Visual Database Tools&#41;](remove-columns-from-queries-visual-database-tools.md)   
+ [Supprimer des colonnes des résultats de la requête &#40;Visual Database Tools&#41;](visual-database-tools.md)   
+ [Supprimer des colonnes des requêtes &#40;Visual Database Tools&#41;](remove-columns-from-queries-visual-database-tools.md)   
  [Spécifiez les critères de recherche &#40;Visual Database Tools&#41;](specify-search-criteria-visual-database-tools.md)   
  [Résumer les résultats de la requête &#40;Visual Database Tools&#41;](summarize-query-results-visual-database-tools.md)   
  [Effectuer des opérations de base concernant les requêtes &#40;Visual Database Tools&#41;](perform-basic-operations-with-queries-visual-database-tools.md)  

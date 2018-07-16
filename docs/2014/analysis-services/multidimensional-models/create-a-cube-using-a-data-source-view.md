@@ -1,5 +1,5 @@
 ---
-title: Créer un Cube à l’aide d’une vue de Source de données | Documents Microsoft
+title: Créer un Cube à l’aide d’une vue de Source de données | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: bec845a1-d10c-4d45-9acf-0a302adfee47
 caps.latest.revision: 6
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 8bf9a08773ef90bb4d316f7fb533e5a5a854c779
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 32d358eef64c43535f8d04944feb445a5190414a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36051606"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37303049"
 ---
 # <a name="create-a-cube-using-a-data-source-view"></a>Créer un cube à l'aide d'une vue de source de données
   Utilisez cette méthode de génération d'un nouveau cube si vous envisagez d'utiliser une vue de source de données existante. Avec cette méthode, vous spécifiez la vue de source de données et sélectionnez les tables de faits et de dimension à utiliser dans la vue de source de données. Vous choisissez ensuite les dimensions et les mesures à inclure dans le cube.  
@@ -55,7 +55,7 @@ ms.locfileid: "36051606"
 > [!NOTE]  
 >  Sous l’onglet **Diagramme** , vous pouvez agrandir ou maximiser la fenêtre de l’Assistant pour visualiser le schéma.  
   
- S'il existe une table de dimension de temps dans la vue de source de données, sélectionnez-la dans la liste **Table de dimension de temps** . S’il en existe aucun, laissez  **\<aucun >** sélectionné. Il s'agit de l'élément par défaut dans la liste. La sélection d'une table comme table de dimension de temps sélectionne également cette dernière comme table de dimension sous les onglets **Tables** et **Diagramme** .  
+ S'il existe une table de dimension de temps dans la vue de source de données, sélectionnez-la dans la liste **Table de dimension de temps** . Si aucun n’est, laissez  **\<None >** sélectionné. Il s'agit de l'élément par défaut dans la liste. La sélection d'une table comme table de dimension de temps sélectionne également cette dernière comme table de dimension sous les onglets **Tables** et **Diagramme** .  
   
 ## <a name="defining-time-periods"></a>Définition de périodes  
  Si vous spécifiez une table de dimension de temps tout en sélectionnant des types de tables, utilisez la page **Définir des périodes** de l'Assistant pour spécifier les colonnes de la table qui correspondent aux périodes standard. Recherchez les périodes standard sous **Nom de la propriété de temps**. Pour chaque ligne qui a une colonne correspondante dans la table de dimension de temps, choisissez la colonne correcte sous **Colonnes de la table de temps**. L'Assistant utilise les associations que vous spécifiez pour créer des attributs et pour proposer les hiérarchies de temps qui se justifient pour vos données. Ces associations définissent également la propriété **Type** pour les attributs correspondant dans la nouvelle dimension de temps. L'Assistant crée ensuite une dimension de temps selon une table de dimension de temps.  

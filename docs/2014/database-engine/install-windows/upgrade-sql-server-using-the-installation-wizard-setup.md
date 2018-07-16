@@ -1,5 +1,5 @@
 ---
-title: Mise à niveau vers SQL Server 2014 à l’aide de l’Assistant Installation (programme d’installation) | Documents Microsoft
+title: Mise à niveau vers SQL Server 2014 à l’aide de l’Assistant Installation (installation) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - upgrading Database Engine
 - Database Engine [SQL Server], upgrading
 ms.assetid: cef118a5-a7ce-4bfa-8b9d-c81996284cfc
 caps.latest.revision: 62
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 2b56fc3323fcd29b19f43d63c054a9cd844944bf
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 71f2683e42e6a1af7c971b3e192ad534847896ff
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36052480"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37219789"
 ---
 # <a name="upgrade-to-sql-server-2014-using-the-installation-wizard-setup"></a>Effectuer une mise à niveau vers SQL Server 2014 à l'aide de l'Assistant Installation (programme d'installation)
   L'Assistant Installation de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fournit une arborescence de fonctionnalités unique pour mettre à niveau les composants [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Vous pouvez également installer [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] côte à côte avec une version antérieure ou migrer les bases de données et les paramètres de configuration existants à partir d'une version antérieure de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et les appliquer à une instance de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
@@ -58,7 +58,7 @@ ms.locfileid: "36052480"
 -   [Compatibilité descendante du moteur de base de données SQL Server](../sql-server-database-engine-backward-compatibility.md)  
   
 > [!WARNING]  
->  N'oubliez pas que vous ne pouvez pas modifier les fonctionnalités à mettre à niveau, de même que vous ne pouvez pas ajouter de fonctionnalités pendant l'opération de mise à niveau. Pour plus d’informations sur la façon d’ajouter des fonctionnalités à une instance mise à niveau de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] une fois l’opération de mise à niveau terminée, consultez [ajouter des fonctionnalités à une Instance de SQL Server 2014 &#40;le programme d’installation&#41;](add-features-to-an-instance-of-sql-server-setup.md).  
+>  N'oubliez pas que vous ne pouvez pas modifier les fonctionnalités à mettre à niveau, de même que vous ne pouvez pas ajouter de fonctionnalités pendant l'opération de mise à niveau. Pour plus d’informations sur comment ajouter des fonctionnalités à une instance mise à niveau de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] une fois l’opération de mise à niveau terminée, consultez [ajouter des fonctionnalités à une Instance de SQL Server 2014 &#40;le programme d’installation&#41;](add-features-to-an-instance-of-sql-server-setup.md).  
   
 ## <a name="procedure"></a>Procédure  
   
@@ -128,7 +128,7 @@ ms.locfileid: "36052480"
   
 -   **Inscrire vos serveurs** — La mise à niveau entraîne la suppression des paramètres du Registre pour l'instance antérieure de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Après la mise à niveau, vous devez réinscrire vos serveurs.  
   
--   **Mettre à jour les statistiques** — Afin d'optimiser les performances des requêtes, il est recommandé de mettre à jour les statistiques sur toutes les bases de données après une mise à niveau. Utilisez le `sp_updatestats` procédure stockée pour mettre à jour les statistiques de tables définies par l’utilisateur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] bases de données.  
+-   **Mettre à jour les statistiques** — Afin d'optimiser les performances des requêtes, il est recommandé de mettre à jour les statistiques sur toutes les bases de données après une mise à niveau. Utilisez le `sp_updatestats` procédure stockée pour mettre à jour les statistiques des tables définies par l’utilisateur dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] bases de données.  
   
 -   **Configurer votre nouvelle installation [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]** — Pour réduire la surface d’exposition vulnérable aux attaques d’un système, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] installe et active de manière sélective les services et fonctionnalités clés. Pour plus d'informations sur la configuration de la surface d'exposition, consultez le fichier Lisezmoi de cette version.  
   

@@ -1,5 +1,5 @@
 ---
-title: Modification de la Dimension Customer | Documents Microsoft
+title: Modification de la Dimension Customer | Microsoft Docs
 ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 5b5aed99-1760-4bc7-b248-52ecb0b97ebc
 caps.latest.revision: 23
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: jhubbard
-ms.openlocfilehash: fef2880a71981b360d5ce124d6b5e2f0d8b24859
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 556ce1a91985c0e153161a90413695edd2bc4cca
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36140630"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37310799"
 ---
 # <a name="modifying-the-customer-dimension"></a>Modification de la dimension Customer
   Il existe différents moyens de rendre les dimensions d'un cube plus conviviales et plus fonctionnelles. Dans les tâches dans cette rubrique, vous modifiez la dimension Customer.  
@@ -35,11 +35,11 @@ ms.locfileid: "36140630"
   
 3.  Modifiez les noms des attributs suivants de la même manière :  
   
-    -   **English Education** attribut : remplacer par `Education`  
+    -   **English Education** attribut — Remplacer par `Education`  
   
-    -   **English Occupation** attribut : remplacer par `Occupation`  
+    -   **English Occupation** attribut — Remplacer par `Occupation`  
   
-    -   **State Province Name** attribut : remplacer par `State-Province`  
+    -   **State Province Name** attribut — Remplacer par `State-Province`  
   
 4.  Dans le menu **Fichier** , cliquez sur **Enregistrer tout**.  
   
@@ -50,13 +50,13 @@ ms.locfileid: "36140630"
   
 1.  Faites glisser le `Country-Region` attribut à partir de la **attributs** volet dans le **hiérarchies** volet.  
   
-2.  Faites glisser le `State-Province` d’attribut du **attributs** volet dans le  **\<nouveau niveau >** dans la cellule la **hiérarchies** volet, sous la `Country-Region` niveau.  
+2.  Faites glisser le `State-Province` d’attribut du **attributs** volet dans le  **\<nouveau niveau >** de cellule dans le **hiérarchies** volet, sous la `Country-Region` niveau.  
   
-3.  Faites glisser le **Ville** d’attribut du **attributs** volet dans le  **\<nouveau niveau >** de cellule dans le **hiérarchies** volet, sous le `State-Province` niveau.  
+3.  Faites glisser le **Ville** de l’attribut le **attributs** volet dans le  **\<nouveau niveau >** de cellule dans le **hiérarchies** volet, sous le `State-Province` niveau.  
   
 4.  Dans le **hiérarchies** volet de la **Structure de Dimension** onglet, avec le bouton droit de la barre de titre de la **hiérarchie** hiérarchie, sélectionnez **renommer**, puis tapez `Customer Geography`.  
   
-     Le nom de la hiérarchie est désormais `Customer Geography`.  
+     Le nom de la hiérarchie est maintenant `Customer Geography`.  
   
 5.  Dans le menu **Fichier** , cliquez sur **Enregistrer tout**.  
   
@@ -69,7 +69,7 @@ ms.locfileid: "36140630"
   
 2.  Dans le volet **Tables** à gauche, cliquez avec le bouton droit sur **Customer**, puis cliquez sur **Nouveau calcul nommé**.  
   
-3.  Dans le **créer un calcul nommé** boîte de dialogue, tapez `FullName` dans les **nom de la colonne** zone, puis tapez ou copiez et collez le texte suivant `CASE` instruction dans le **Expression**  zone :  
+3.  Dans le **créer un calcul nommé** boîte de dialogue, tapez `FullName` dans le **nom de colonne** zone, puis tapez ou copiez et collez le code suivant `CASE` instruction dans le **Expression**  zone :  
   
     ```  
     CASE  
@@ -80,11 +80,11 @@ ms.locfileid: "36140630"
     END  
     ```  
   
-     Le `CASE` instruction concatène le **FirstName**, **MiddleName**, et **LastName** de dimension en tant que colonnes dans une seule colonne que vous utiliserez dans le client le nom affiché pour le **client** attribut.  
+     Le `CASE` instruction concatène le **FirstName**, **MiddleName**, et **LastName** dimension des colonnes en une seule colonne que vous utiliserez dans le client en tant que le nom affiché pour le **client** attribut.  
   
 4.  Cliquez sur **OK**, puis développez **Customer** dans le volet **Tables** .  
   
-     La `FullName` calcul nommé apparaît dans la liste des colonnes de la table Customer, avec une icône qui indique qu’il est un calcul nommé.  
+     Le `FullName` calcul nommé apparaît dans la liste des colonnes dans la table Customer, accompagné d’une icône indiquant qu’il s’est un calcul nommé.  
   
 5.  Dans le menu **Fichier** , cliquez sur **Enregistrer tout**.  
   
@@ -92,7 +92,7 @@ ms.locfileid: "36140630"
   
 7.  Vérifiez la dernière colonne de la vue **Explorer la table Customer** .  
   
-     Notez que la `FullName` colonne apparaît dans la vue de source de données sont correctement concaténées des données à partir de plusieurs colonnes de la source de données sous-jacente et sans modifier la source de données d’origine.  
+     Notez que le `FullName` colonne apparaît dans la vue de source de données sont correctement concaténées des données à partir de plusieurs colonnes à partir de la source de données sous-jacente, sans modifier la source de données d’origine.  
   
 8.  Fermez l'onglet **Explorer la table Customer** .  
   
@@ -111,9 +111,9 @@ ms.locfileid: "36140630"
   
 5.  Cliquez dans le champ de propriété **NameColumn** en bas, puis cliquez sur le bouton de navigation (**...**) pour ouvrir la boîte de dialogue **Colonne de nom** .  
   
-6.  Sélectionnez `FullName` au bas de la **colonne Source** liste, puis cliquez sur **OK**.  
+6.  Sélectionnez `FullName` en bas de la **colonne Source** liste, puis cliquez sur **OK**.  
   
-7.  Dans l’onglet Structure de Dimensions, faites glisser le `Full Name` attribut à partir de la **attributs** volet dans le  **\<nouveau niveau >** de cellule dans le **hiérarchies** volet, en dessous du **Ville** niveau.  
+7.  Dans l’onglet Structure de dimension, faites glisser le `Full Name` attribut à partir de la **attributs** volet dans le  **\<nouveau niveau >** de cellule dans le **hiérarchies** volet, sous la **Ville** niveau.  
   
 8.  Dans le menu **Fichier** , cliquez sur **Enregistrer tout**.  
   
@@ -160,7 +160,7 @@ ms.locfileid: "36140630"
   
     -   **Yearly Income**  
   
-6.  Dans la fenêtre Propriétés, cliquez sur le **AttributeHierarchyDisplayFolder** propriété de champ en haut et tapez `Demographic`.  
+6.  Dans la fenêtre Propriétés, cliquez sur le **AttributeHierarchyDisplayFolder** propriété champ en haut et tapez `Demographic`.  
   
 7.  Dans le volet **Attributs** , sélectionnez les attributs suivants en maintenant la touche Ctrl enfoncée pendant que vous cliquez sur chacun d’eux :  
   
@@ -173,7 +173,7 @@ ms.locfileid: "36140630"
 9. Dans le menu **Fichier** , cliquez sur **Enregistrer tout**.  
   
 ## <a name="defining-composite-keycolumns"></a>Définition de KeyColumns composite  
- La propriété **KeyColumns** contient la colonne ou les colonnes qui représentent la clé pour l’attribut. Dans cette leçon, vous créez une clé composite pour le **Ville** et `State-Province` attributs. Les clés composites peuvent être utiles lorsque vous devez identifier un attribut de façon unique. Par exemple, lorsque vous définissez des relations d’attributs plus loin dans ce didacticiel, un **Ville** attribut doit identifier de façon unique un `State-Province` attribut. Toutefois, il peut y avoir plusieurs villes avec le même nom dans différents états. Pour cette raison, vous allez créer une clé composite composée des colonnes **StateProvinceName** et **City** pour l’attribut **City** . Pour plus d’informations, consultez [Modifier la propriété KeyColumn d’un attribut](multidimensional-models/attribute-properties-modify-the-keycolumn-property.md).  
+ La propriété **KeyColumns** contient la colonne ou les colonnes qui représentent la clé pour l’attribut. Dans cette leçon, vous créez une clé composite pour le **Ville** et `State-Province` attributs. Les clés composites peuvent être utiles lorsque vous devez identifier un attribut de façon unique. Par exemple, lorsque vous définissez des relations d’attributs plus loin dans ce didacticiel, un **Ville** attribut doit identifier de manière unique un `State-Province` attribut. Toutefois, il peut y avoir plusieurs villes avec le même nom dans différents états. Pour cette raison, vous allez créer une clé composite composée des colonnes **StateProvinceName** et **City** pour l’attribut **City** . Pour plus d’informations, consultez [Modifier la propriété KeyColumn d’un attribut](multidimensional-models/attribute-properties-modify-the-keycolumn-property.md).  
   
 #### <a name="to-define-composite-keycolumns-for-the-city-attribute"></a>Pour définir KeyColumns composite pour l'attribut Ville  
   
@@ -234,7 +234,7 @@ ms.locfileid: "36140630"
   
 6.  Dans le diagramme, cliquez sur le `State-Province` d’attribut, puis sélectionnez **nouvelle relation d’attribut**.  
   
-7.  Dans le **créer une relation d’attribut** boîte de dialogue, la **attribut Source** est `State-Province`. Définir le **attribut associé** à `Country-Region`.  
+7.  Dans le **créer une relation d’attribut** boîte de dialogue, le **attribut Source** est `State-Province`. Définir le **attribut associé** à `Country-Region`.  
   
 8.  Dans la liste **Type de relation** , définissez le type de relation sur **Rigide**.  
   
@@ -251,7 +251,7 @@ ms.locfileid: "36140630"
   
 2.  Après avoir reçu le message **Le déploiement est terminé** , cliquez sur l’onglet **Navigateur** du Concepteur de dimensions pour la dimension Customer, puis cliquez sur le bouton Reconnecter, à gauche de la barre d’outils du Concepteur.  
   
-3.  Vérifiez que `Customer Geography` est sélectionné dans le **hiérarchie** liste, puis, dans le volet de navigateur, développez **tous les**, développez **Australie**, développez **nouveau sud Wales**, puis développez **Coffs Harbour**.  
+3.  Vérifiez que `Customer Geography` est sélectionné dans le **hiérarchie** liste, puis, dans le volet navigateur, développez **tous les**, développez **Australie**, développez **nouveau sud Pays de Galles**, puis développez **Coffs Harbour**.  
   
      Le navigateur affiche les clients dans la ville.  
   
@@ -266,7 +266,7 @@ ms.locfileid: "36140630"
 7.  Dans le menu **Fichier** , cliquez sur **Enregistrer tout**.  
   
 ## <a name="next-task-in-lesson"></a>Tâche suivante de la leçon  
- [Modification de la Dimension de produit](lesson-3-3-modifying-the-product-dimension.md)  
+ [Modification de la dimension Product](lesson-3-3-modifying-the-product-dimension.md)  
   
 ## <a name="see-also"></a>Voir aussi  
  [Dimension Attribute Properties Reference](multidimensional-models/dimension-attribute-properties-reference.md)   

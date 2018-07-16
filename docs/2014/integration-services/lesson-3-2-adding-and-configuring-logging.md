@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 56105f3f-e500-4669-8c8e-acf434527727
 caps.latest.revision: 22
-author: douglaslM
+author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 4d0bd778d04b00c2d90da3cd6a77ca1bf8f9c830
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 7c8aeee9c6d0d11ba5dbb482e02595802c5d76fd
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36039994"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37281365"
 ---
 # <a name="step-2-adding-and-configuring-logging"></a>Étape 2 : Ajout et configuration de la journalisation
   Dans cette tâche, vous allez activer la journalisation pour le flux de données dans le package Lesson 3.dtsx. Vous allez ensuite configurer un module fournisseur d'informations pour les fichiers texte, pour enregistrer les événements PipelineExecutionPlan et PipelineExecuteTrees. Le module fournisseur d'informations pour les fichiers texte crée des journaux faciles à créer et à déplacer. La simplicité de ces fichiers journaux les rend particulièrement utiles pendant la phase de test de base d'un package. Vous pouvez également consulter les entrées du journal dans la fenêtre Journaux d'événements du Concepteur [!INCLUDE[ssIS](../includes/ssis-md.md)] .  
@@ -38,11 +38,11 @@ ms.locfileid: "36039994"
   
 5.  Modifiez éventuellement les informations figurant dans **Description**.  
   
-6.  Dans le **Configuration** colonne, cliquez sur  **\<nouvelle connexion >** pour spécifier la destination dans lequel les informations du journal sont écrite.  
+6.  Dans le **Configuration** colonne, cliquez sur  **\<nouvelle connexion >** pour spécifier la destination vers lequel les informations du journal sont écrit.  
   
      Dans la boîte de dialogue **Éditeur du gestionnaire de connexions de fichiers** , pour **Type d’utilisation**, sélectionnez **Créer un fichier**, puis cliquez sur **Parcourir**. Par défaut, la boîte de dialogue **Sélectionner un fichier** qui s’affiche présente le dossier du projet, mais il est possible d’enregistrer les informations de journal n’importe où ailleurs.  
   
-7.  Dans le **sélectionner le fichier** boîte de dialogue le **nom de fichier** zone `TutorialLog.log`, puis cliquez sur **ouvrir**.  
+7.  Dans le **sélectionner le fichier** boîte de dialogue le **nom de fichier** zone, tapez `TutorialLog.log`, puis cliquez sur **Open**.  
   
 8.  Cliquez sur **OK** pour fermer la boîte de dialogue **Éditeur du gestionnaire de connexions de fichiers** .  
   
@@ -57,11 +57,11 @@ ms.locfileid: "36039994"
   
 12. Cliquez sur **De base** pour masquer les catégories d’informations.  
   
-13. Sur le **fournisseurs et journaux** sous l’onglet du **nom** colonne, sélectionnez `Lesson 3 Log File`. Une fois que vous avez créé un module fournisseur d'informations pour votre package, vous pouvez éventuellement le désélectionner temporairement pour désactiver la journalisation, sans avoir à supprimer puis à recréer un module fournisseur d'informations.  
+13. Sur le **fournisseurs et journaux** sous l’onglet le **nom** colonne, sélectionnez `Lesson 3 Log File`. Une fois que vous avez créé un module fournisseur d'informations pour votre package, vous pouvez éventuellement le désélectionner temporairement pour désactiver la journalisation, sans avoir à supprimer puis à recréer un module fournisseur d'informations.  
   
 14. Cliquez sur **OK**.  
   
 ## <a name="next-steps"></a>Étapes suivantes  
- [Étape 3 : Test de la leçon 3 du package du didacticiel](../integration-services/lesson-3-3-testing-the-lesson-3-tutorial-package.md)  
+ [Étape 3 : Test de la leçon 3 du package du tutoriel](../integration-services/lesson-3-3-testing-the-lesson-3-tutorial-package.md)  
   
   

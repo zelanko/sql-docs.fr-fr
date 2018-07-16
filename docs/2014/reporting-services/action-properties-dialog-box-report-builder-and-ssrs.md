@@ -1,5 +1,5 @@
 ---
-title: Boîte de dialogue de propriétés Action (Générateur de rapports et SSRS) | Documents Microsoft
+title: Boîte de dialogue de propriétés Action (Générateur de rapports et SSRS) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.rtp.rptdesigner.shared.action.f1
 - "10413"
@@ -34,15 +34,15 @@ f1_keywords:
 - sql12.rtp.rptdesigner.seriesproperties.action.f1
 ms.assetid: 2c5d915b-4f97-42cf-b8f1-49ca3ff3d0f9
 caps.latest.revision: 13
-author: douglaslM
+author: maggiesmsft
 ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 4cae7e5c0de408c4a2ed9636e3c941f8e0a32b0e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: e245d03b32dc48a96b0f1d967cc7c83b684654ef
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36044905"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37323759"
 ---
 # <a name="action-properties-dialog-box-report-builder-and-ssrs"></a>Boîte de dialogue Propriétés relatives aux actions (Générateur de rapports et SSRS)
   Vous pouvez utiliser la boîte de dialogue **Action** pour activer les options de lien hypertexte pour un graphique, une jauge ou des éléments cartographiques prenant les liens en charge. Définissez une action afin qu'un utilisateur puisse cliquer sur le rapport et aller à une URL, à un rapport différent sur le même serveur de rapports ou sur un site SharePoint intégré à un serveur de rapports, ou encore à un emplacement différent dans le même rapport.  
@@ -62,7 +62,7 @@ ms.locfileid: "36044905"
   
  Pour un rapport publié sur un serveur de rapports configuré pour le mode natif, utilisez un chemin d'accès complet ou relatif sans l'extension de nom de fichier. Si le rapport se trouve dans le même dossier que le rapport actuel, utilisez uniquement le nom du rapport. Si le rapport se trouve dans un dossier différent sur le même serveur de rapports, utilisez un chemin d'accès relatif ou un chemin d'accès complet. Un chemin d'accès relatif commence à partir du dossier actif et remonte dans l'arborescence des dossiers, par exemple ../Dossier2/Rapport1. Un chemin d'accès complet démarre à partir de /, le dossier de base. Par exemple, /Rapports/Rapport1.  
   
- Pour un rapport publié sur un serveur de rapports configuré en mode intégré SharePoint, utilisez une URL complète incluant l'extension de nom de fichier (.rdl). Par exemple, http://*\<nom du serveur SharePoint > /\<site >*  /documents/rapport1.rdl. Les chemins d'accès relatifs ne sont pas pris en charge.  
+ Pour un rapport publié sur un serveur de rapports configuré en mode intégré SharePoint, utilisez une URL complète incluant l'extension de nom de fichier (.rdl). Par exemple, http://*\<Nom_serveur_sharepoint > /\<site >*  /documents/rapport1.rdl. Les chemins d'accès relatifs ne sont pas pris en charge.  
   
  Pour plus d’informations, consultez [Spécification de chemins d’accès à des éléments externes &#40;Générateur de rapports et SSRS&#41;](report-design/specifying-paths-to-external-items-report-builder-and-ssrs.md) dans la [documentation du Générateur de rapports](http://go.microsoft.com/fwlink/?LinkId=154494) sur msdn.microsoft.com.  
   
@@ -101,14 +101,14 @@ ms.locfileid: "36044905"
  **Atteindre l’URL**  
  Choisissez cette option pour définir un lien vers une page Web. Tapez ou sélectionnez l'URL d'une page Web, ou une expression qui prend la valeur de l'URL d'une page Web. Cliquez sur le bouton **Expression** (*fx*) pour modifier l’expression. Cette expression peut inclure un champ qui contient une URL. L’option supplémentaire suivante s’affiche quand vous sélectionnez **Atteindre l’URL**.  
   
- **Sélectionnez l’URL**  
- Tapez ou entrez l'URL de l'élément. Pour un élément publié sur un serveur de rapports configuré pour le mode natif, utilisez un chemin d'accès complet ou relatif. Par exemple, http://*\<nom_serveur >*  /images/image1.jpg. Pour un élément publié sur un serveur de rapports configuré en mode intégré SharePoint, utilisez une URL qualifiée complète (par exemple, http://*\<nom du serveur SharePoint > /\<site >*  /Documents/images / Image1.jpg).  
+ **Sélectionner une URL**  
+ Tapez ou entrez l'URL de l'élément. Pour un élément publié sur un serveur de rapports configuré pour le mode natif, utilisez un chemin d'accès complet ou relatif. Par exemple, http://*\<nom_serveur >*  /images/image1.jpg. Pour un élément publié sur un serveur de rapports configuré en mode intégré SharePoint, utilisez une URL qualifiée complète (par exemple, http://*\<Nom_serveur_sharepoint > /\<site >*  /Documents/images / Image1.jpg).  
   
 ## <a name="see-also"></a>Voir aussi  
  [Graphiques &#40;Générateur de rapports et SSRS&#41;](report-design/charts-report-builder-and-ssrs.md)   
  [Aide du Générateur de rapports pour les boîtes de dialogue, les volets et les Assistants](../../2014/reporting-services/report-builder-help-for-dialog-boxes-panes-and-wizards.md)   
  [Paramètres de rapport &#40;Générateur de rapports et Concepteur de rapports&#41;](report-design/report-parameters-report-builder-and-report-designer.md)   
  [Ajouter un sous-rapport et des paramètres &#40;Générateur de rapports et SSRS&#41;](report-design/add-a-subreport-and-parameters-report-builder-and-ssrs.md)   
- [Tri interactif, explorateurs de documents et liens &#40;rapport Générateur et SSRS&#41;](report-design/interactive-sort-document-maps-and-links-report-builder-and-ssrs.md)  
+ [Tri interactif, explorateurs de documents et liens &#40;Générateur de rapports et SSRS&#41;](report-design/interactive-sort-document-maps-and-links-report-builder-and-ssrs.md)  
   
   

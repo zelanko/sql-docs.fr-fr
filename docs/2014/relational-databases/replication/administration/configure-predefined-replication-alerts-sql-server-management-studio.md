@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - alerts [SQL Server replication]
 - predefined replication alerts [SQL Server replication]
 ms.assetid: c0414147-7ffe-4f9a-908c-71c1b5201584
 caps.latest.revision: 22
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: af638b1ce1def8725a8a47d997e62890ac717fe6
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 385f18cdec2ef672bd1be5bafcff0ee5d0efe5f0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36038123"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37287135"
 ---
 # <a name="configure-predefined-replication-alerts-sql-server-management-studio"></a>configurer des alertes de réplication prédéfinies (SQL Server Management Studio)
   La réplication comporte les alertes prédéfinies suivantes, qui peuvent être configurées pour répondre aux événements de réplication :  
@@ -45,7 +45,7 @@ ms.locfileid: "36038123"
   
  Configurez ces alertes à partir du dossier **Alertes[!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] dans**  [!INCLUDE[msCoName](../../../includes/msconame-md.md)] ou de l’onglet **Avertissements** dans le moniteur de réplication. Pour plus d’informations sur l’accès à cet onglet, consultez [Afficher des informations et effectuer des tâches pour un abonnement &#40;moniteur de réplication&#41;](../monitor/view-information-and-perform-tasks-for-a-subscription-replication-monitor.md).  
   
- En plus de ces alertes, le moniteur de réplication comprend un ensemble d'avertissements et d'alertes liées aux états et aux performances. Pour plus d’informations, consultez [définir des seuils et des avertissements dans le moniteur de réplication](../monitor/set-thresholds-and-warnings-in-replication-monitor.md) infrastructure d’alertes. Pour plus d’informations, consultez [Créer un événement défini par l’utilisateur](../../../ssms/agent/create-a-user-defined-event.md).  
+ En plus de ces alertes, le moniteur de réplication comprend un ensemble d'avertissements et d'alertes liées aux états et aux performances. Pour plus d’informations, consultez [définir des seuils et avertissements dans le moniteur de réplication](../monitor/set-thresholds-and-warnings-in-replication-monitor.md) infrastructure d’alertes. Pour plus d’informations, consultez [Créer un événement défini par l’utilisateur](../../../ssms/agent/create-a-user-defined-event.md).  
   
 ### <a name="to-configure-a-predefined-replication-alert-in-management-studio"></a>Pour configurer une alerte de réplication prédéfinie dans Management Studio  
   

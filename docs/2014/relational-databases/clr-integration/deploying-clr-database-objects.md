@@ -1,13 +1,11 @@
 ---
-title: Déploiement d’objets de base de données CLR | Documents Microsoft
+title: Déploiement d’objets de base de données CLR | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: clr
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -17,15 +15,15 @@ helpviewer_keywords:
 - deploying [CLR integration]
 ms.assetid: 00752573-3367-41a7-af98-7b7a29e8e2f2
 caps.latest.revision: 34
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 724a0782d1d97296797a58070addf568858473e1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: rothja
+ms.author: jroth
+manager: craigg
+ms.openlocfilehash: 95a69542a6d6f400d3b5a3e88786bda2d7e4a23a
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36052048"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37353311"
 ---
 # <a name="deploying-clr-database-objects"></a>Déploiement d'objets de base de données CLR
   Le déploiement est le processus selon lequel une application ou un module fini est distribué en vue de son installation et de son exécution sur un autre ordinateur. [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual Studio vous permet de développer des objets de base de données CLR (Common Language Runtime) et de les déployer sur un serveur de test. Les objets de base de données managés peuvent également être compilés avec les fichiers de redistribution [!INCLUDE[msCoName](../../../includes/msconame-md.md)] .NET Framework, au lieu de Visual Studio. Une fois compilés, les assemblys qui contiennent les objets de base de données CLR peuvent être déployés sur un serveur de test à l'aide de Visual Studio ou d'instructions [!INCLUDE[tsql](../../../includes/tsql-md.md)]. Notez que Visual Studio .NET 2003 ne peut pas être utilisé pour le déploiement ou la programmation de l'intégration du CLR. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] inclut le .NET Framework préinstallé et Visual Studio .NET 2003 ne peut pas utiliser les assemblys .NET Framework 2.0.  
@@ -44,11 +42,11 @@ ms.locfileid: "36052048"
   
 #### <a name="to-deploy-the-assembly-using-visual-studio"></a>Pour déployer l'assembly à l'aide de Visual Studio  
   
-1.  Générez le projet en sélectionnant **générer** \<nom du projet > à partir de la **générer** menu.  
+1.  Générez le projet en sélectionnant **Build** \<nom_projet > à partir de la **Build** menu.  
   
 2.  Résolvez tous les avertissements et erreurs de build avant de déployer l'assembly sur le serveur de test.  
   
-3.  Sélectionnez **déployer** à partir de la **générer** menu. L'assembly sera ensuite inscrit dans l'instance et la base de données [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] spécifiées lors de la création initiale du projet [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] dans Visual Studio.  
+3.  Sélectionnez **déployer** à partir de la **Build** menu. L'assembly sera ensuite inscrit dans l'instance et la base de données [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] spécifiées lors de la création initiale du projet [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] dans Visual Studio.  
   
 #### <a name="to-deploy-the-assembly-using-transact-sql"></a>Pour déployer l'assembly à l'aide de Transact-SQL  
   
@@ -91,7 +89,7 @@ ms.locfileid: "36052048"
   
 1.  Ouvrez [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)] et connectez-vous à l'instance [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] où l'assembly managé ou objet de base de données à déployer est inscrit.  
   
-2.  Dans le **l’Explorateur d’objets**, développez le  **\<nom du serveur >** et **bases de données** arborescences. Avec le bouton droit de la base de données où l’objet de base de données managé est inscrit, sélectionnez **tâches**, puis sélectionnez **générer des Scripts**. L'Assistant Script s'ouvre.  
+2.  Dans le **Explorateur d’objets**, développez le  **\<nom du serveur >** et **bases de données** arborescences. Avec le bouton droit de la base de données où l’objet de base de données managé est inscrit, sélectionnez **tâches**, puis sélectionnez **générer des Scripts**. L'Assistant Script s'ouvre.  
   
 3.  Sélectionnez la base de données à partir de la zone de liste et cliquez sur **suivant**.  
   
@@ -99,9 +97,9 @@ ms.locfileid: "36052048"
   
 5.  Dans le **sélectionner les Types d’objet** volet, choisissez le type d’objet de base de données à déployer. Cliquez sur **Suivant**.  
   
-6.  Pour chaque type d’objet sélectionné dans le **sélectionner les Types d’objet** volet, un **choisir \<type >** volet est présenté. Dans ce volet, vous pouvez choisir parmi toutes les instances de ce type d'objet de base de données inscrites dans la base de données spécifiée. Sélectionnez un ou plusieurs objets, cliquez sur **suivant**.  
+6.  Pour chaque type d’objet sélectionné dans le **sélectionner les Types d’objet** volet, un **choisir \<type >** volet s’affiche. Dans ce volet, vous pouvez choisir parmi toutes les instances de ce type d'objet de base de données inscrites dans la base de données spécifiée. Sélectionnez un ou plusieurs objets et cliquez sur **suivant**.  
   
-7.  Le **Options de sortie** volet s’affiche lorsque toutes de la base de données souhaitée de l’objet type a été sélectionné. Sélectionnez **Script dans le fichier** et spécifiez un chemin d’accès de fichier pour le script. Sélectionnez **Suivant**. Passez en revue vos sélections et cliquez sur **Terminer**. Le script de déploiement est enregistré dans le chemin d'accès relatif spécifié.  
+7.  Le **Options de sortie** volet s’affiche lorsque tous de la base de données souhaitée de l’objet type a été sélectionné. Sélectionnez **Script dans un fichier** et spécifiez un chemin d’accès de fichier pour le script. Sélectionnez **Suivant**. Passez en revue vos sélections et cliquez sur **Terminer**. Le script de déploiement est enregistré dans le chemin d'accès relatif spécifié.  
   
 ## <a name="post-deployment-scripts"></a>Scripts de post-déploiement  
  Vous pouvez exécuter un script de post-déploiement.  

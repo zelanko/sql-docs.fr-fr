@@ -1,5 +1,5 @@
 ---
-title: Activer et désactiver Sandboxing RDL | Documents Microsoft
+title: Activer et désactiver le Sandboxing RDL | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: d5619e9f-ec5b-4376-9b34-1f74de6fade7
 caps.latest.revision: 8
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 0fefbebb9c56df87c83bb3b41ee508550a5f2113
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 519d65684224496608ce8ffbaf8130b3f7884967
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36143432"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37311349"
 ---
 # <a name="enable-and-disable-rdl-sandboxing"></a>Activer et désactiver sandboxing RDL
   La fonctionnalité Sandboxing RDL (Report Definition Language) vous permet de détecter et restreindre l'utilisation de types spécifiques de ressources, par les locataires individuels, dans un environnement où plusieurs locataires utilisent une batterie de serveurs Web unique de serveurs de rapports. Citons pour exemple un scénario de services d'hébergement où vous pouvez maintenir une batterie de serveurs Web uniques de serveurs de rapports utilisés par plusieurs locataires, et peut-être différentes sociétés. En tant qu'administrateur de serveur de rapports, vous pouvez activer cette fonctionnalité pour aider à accomplir les objectifs suivants :  
@@ -124,7 +124,7 @@ ms.locfileid: "36143432"
   
  Pour ajouter [!INCLUDE[vbprvb](../includes/vbprvb-md.md)] fonctions .NET Framework à la liste verte, ajoutez les types correspondants à partir de l’espace de noms Microsoft.VisualBasic à la liste verte.  
   
- Pour ajouter des mots clés du type [!INCLUDE[vbprvb](../includes/vbprvb-md.md)] .NET Framework à la liste verte, ajoutez le type CLR correspondant à la liste verte. Par exemple, pour utiliser le [!INCLUDE[vbprvb](../includes/vbprvb-md.md)] (mot clé) de .NET Framework `Integer`, ajoutez le fragment XML suivant à la  **\<RDLSandboxing >** élément :  
+ Pour ajouter des mots clés du type [!INCLUDE[vbprvb](../includes/vbprvb-md.md)] .NET Framework à la liste verte, ajoutez le type CLR correspondant à la liste verte. Par exemple, pour utiliser le [!INCLUDE[vbprvb](../includes/vbprvb-md.md)] mot clé de .NET Framework `Integer`, ajoutez le fragment XML suivant à la  **\<RDLSandboxing >** élément :  
   
 ```  
 <Allow Namespace="System">Int32</Allow>  
@@ -138,7 +138,7 @@ ms.locfileid: "36143432"
   
  L'ajout d'un type d'un assembly personnalisé à la liste verte n'accorde pas implicitement l'autorisation Exécuter sur l'assembly. Vous devez modifier spécifiquement le fichier de sécurité d'accès du code et fournir l'autorisation Exécuter à votre assembly. Pour plus d’informations, consultez [Sécurité d’accès du code dans Reporting Services](extensions/secure-development/code-access-security-in-reporting-services.md).  
   
-#### <a name="maintaining-the-deny-list-of-members"></a>En conservant le \<refuser > liste de membres  
+#### <a name="maintaining-the-deny-list-of-members"></a>Maintenir le \<refuser > liste des membres  
  Lorsque vous ajoutez un nouveau type à la liste verte, vous utilisez la liste suivante pour déterminer quand vous devrez peut-être mettre à jour la liste rouge de membres :  
   
 -   Lorsque vous mettez à jour un assembly personnalisé avec une version qui introduit de nouveaux types.  
@@ -152,7 +152,7 @@ ms.locfileid: "36143432"
 -   Lorsque vous mettez à jour un serveur de rapports pour gérer un schéma RDL ultérieur, car de nouveaux membres ont pu être ajoutés aux types RDL.  
   
 ### <a name="working-with-operators-and-new"></a>Utilisation des opérateurs et de New  
- Par défaut, les opérateurs de langage [!INCLUDE[vbprvb](../includes/vbprvb-md.md)] .NET Framework, à l'exception de `New`, sont toujours autorisés. Le `New` opérateur est contrôlée par le `AllowNew` de l’attribut le  **\<Autoriser >** élément. Autres opérateurs de langage, telles que l’opérateur d’accesseur de collection par défaut `!` et [!INCLUDE[vbprvb](../includes/vbprvb-md.md)] .NET Framework tels que des macros de conversion `CInt`, sont toujours autorisés.  
+ Par défaut, les opérateurs de langage [!INCLUDE[vbprvb](../includes/vbprvb-md.md)] .NET Framework, à l'exception de `New`, sont toujours autorisés. Le `New` opérateur est contrôlé par le `AllowNew` d’attribut sur le  **\<Autoriser >** élément. Autres opérateurs de langage, tels que l’opérateur d’accesseur de collection par défaut `!` et [!INCLUDE[vbprvb](../includes/vbprvb-md.md)] .NET Framework tels que des macros de conversion `CInt`, sont toujours autorisés.  
   
  L'ajout d'opérateurs à une liste rouge, y compris des opérateurs personnalisés, n'est pas pris en charge. Pour exclure des opérateurs pour un type, vous devez effectuer les opérations suivantes :  
   

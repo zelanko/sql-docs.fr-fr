@@ -1,5 +1,5 @@
 ---
-title: Élément FontName (ASSL) | Documents Microsoft
+title: Élément FontName (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,18 +22,18 @@ helpviewer_keywords:
 - FontName element
 ms.assetid: 5560a852-9745-4abb-93d8-9cebe8a9897c
 caps.latest.revision: 36
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 4a58b048255bd0f079f6fc8d22d4666a3f4ced29
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: d1b179415e7b64c4d64090df6168fcc492ab1c30
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36142100"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37289525"
 ---
 # <a name="fontname-element-assl"></a>Élément FontName (ASSL)
-  Décrit les caractéristiques des polices d’affichage de la [CalculationProperty](../objects/calculationproperty-element-assl.md) ou [mesure](../objects/measure-element-assl.md) élément parent.  
+  Décrit les caractéristiques d’affichage liées à la police de la [CalculationProperty](../objects/calculationproperty-element-assl.md) ou [mesure](../objects/measure-element-assl.md) élément parent.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -62,7 +62,7 @@ ms.locfileid: "36142100"
 |Éléments enfants|None|  
   
 ## <a name="remarks"></a>Notes  
- Le `FontName` propriété contient une expression MDX (Multidimensional Expressions) et s’applique aux `CalculationProperty` les éléments qui ont un [CalculationType](calculationtype-element-assl.md) de *membre* ou *cellules* .  
+ Le `FontName` propriété contient une expression MDX (Multidimensional Expressions) et s’applique aux `CalculationProperty` éléments qui ont un [CalculationType](calculationtype-element-assl.md) de *membre* ou *cellules* .  
   
  Les éléments qui correspondent aux parents de `FontName` dans le modèle d’objet objets AMO (Analysis Management) sont <xref:Microsoft.AnalysisServices.CalculationProperty> et <xref:Microsoft.AnalysisServices.Measure>.  
   

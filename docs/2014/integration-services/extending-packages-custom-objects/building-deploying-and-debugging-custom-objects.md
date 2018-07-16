@@ -16,13 +16,13 @@ ms.assetid: b03685bc-5398-4c3f-901a-1219c1098fbe
 caps.latest.revision: 44
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: a0264b74acc5d4665dbbbe48678ad75538002d5e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 7f6377df95d5cb8ade98e7a83b04b7920fe87a62
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36041857"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37209369"
 ---
 # <a name="building-deploying-and-debugging-custom-objects"></a>Génération, déploiement et débogage d'objets personnalisés
   Après avoir écrit le code d'un objet personnalisé pour [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], vous devez générer l'assembly, le déployer, l'intégrer dans le Concepteur [!INCLUDE[ssIS](../../includes/ssis-md.md)] pour le rendre disponible dans les packages, le tester et le déboguer.  
@@ -75,7 +75,7 @@ copy $(TargetFileName) "C:\Program Files\Microsoft SQL Server\120\DTS\LogProvide
 ```  
   
 ##  <a name="deploying"></a> Déploiement de l’assembly  
- Le concepteur [!INCLUDE[ssIS](../../includes/ssis-md.md)] localise les objets personnalisés disponibles dans les packages en énumérant les fichiers trouvés dans une série de dossiers créés lors de l’installation de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. Lorsque la valeur par défaut [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] les paramètres d’installation sont utilisés, cet ensemble de dossiers se trouve sous **C:\Program Files\Microsoft SQL Server\120\DTS**. Toutefois si vous créez un programme d’installation pour votre objet personnalisé, vous devez vérifier la valeur de la **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\120\SSIS\Setup\DtsPath** pour vérifier l’emplacement de cette clé de Registre dossier.  
+ Le concepteur [!INCLUDE[ssIS](../../includes/ssis-md.md)] localise les objets personnalisés disponibles dans les packages en énumérant les fichiers trouvés dans une série de dossiers créés lors de l’installation de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. Lorsque la valeur par défaut [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] paramètres d’installation sont utilisés, cet ensemble de dossiers se trouve sous **C:\Program Files\Microsoft SQL Server\120\DTS**. Toutefois si vous créez un programme d’installation pour votre objet personnalisé, vous devez vérifier la valeur de la **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\120\SSIS\Setup\DtsPath** pour vérifier l’emplacement de cette clé de Registre dossier.  
   
  Vous pouvez placer l'assembly dans le dossier de deux manières :  
   
@@ -120,7 +120,7 @@ copy $(TargetFileName) "C:\Program Files\Microsoft SQL Server\120\DTS\LogProvide
 ##  <a name="testing"></a> Test et débogage du code  
  L’approche la plus simple pour déboguer les méthodes d’exécution d’un objet personnalisé consiste à démarrer **dtexec.exe** à partir de [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] après avoir généré votre objet personnalisé et à exécuter un package qui utilise le composant.  
   
- Si vous souhaitez déboguer les méthodes du composant au moment du design, comme le `Validate` (méthode), ouvrez un package qui utilise le composant dans une deuxième instance de [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]et l’attacher à son **devenv.exe** processus.  
+ Si vous souhaitez déboguer les méthodes du composant au moment du design, telles que la `Validate` (méthode), ouvrez un package qui utilise le composant dans une deuxième instance de [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]et l’attacher à son **devenv.exe** processus.  
   
  Si vous souhaitez également déboguer les méthodes d’exécution du composant lorsqu’un package est ouvert et en cours d’exécution dans le concepteur [!INCLUDE[ssIS](../../includes/ssis-md.md)], vous devez forcer une pause dans l’exécution du package afin de pouvoir également effectuer un attachement au processus **DtsDebugHost.exe**.  
   
@@ -128,7 +128,7 @@ copy $(TargetFileName) "C:\Program Files\Microsoft SQL Server\120\DTS\LogProvide
   
 1.  Signez et générez votre projet dans la configuration de débogage, déployez-le et installez-le dans le Global Assembly Cache comme indiqué dans cette rubrique.  
   
-2.  Sur le **déboguer** onglet de **propriétés du projet**, sélectionnez **démarrer le programme externe** en tant que le **Action de démarrage**, recherchez  **DTExec.exe**, qui est installé par défaut dans C:\Program Files\Microsoft SQL Server\120\DTS\Binn.  
+2.  Sur le **déboguer** onglet de **propriétés du projet**, sélectionnez **démarrer le programme externe** en tant que le **Action de démarrage**, puis recherchez  **DTExec.exe**, qui est installé par défaut dans C:\Program Files\Microsoft SQL Server\120\DTS\Binn.  
   
 3.  Dans la zone de texte **Options de ligne de commande**, sous **Options de démarrage**, entrez les arguments de ligne de commande requis pour exécuter un package qui utilise votre composant. Souvent, l'argument de ligne de commande sera consitué du commutateur /F[ILE] suivi du chemin d'accès et du nom du fichier .dtsx. Pour plus d’informations, voir [dtexec Utility](../packages/dtexec-utility.md).  
   
@@ -156,7 +156,7 @@ copy $(TargetFileName) "C:\Program Files\Microsoft SQL Server\120\DTS\LogProvide
   
 3.  Revenez au package mis en pause et passez le point d’arrêt, ou cliquez sur **OK** pour fermer le message généré par la tâche de script, puis continuez l’exécution et le débogage du package.  
   
-![Icône Integration Services (petite)](../media/dts-16.gif "icône Integration Services (petite)")**restent jusqu'à la Date avec Integration Services** <br /> Pour obtenir les derniers téléchargements, articles, exemples et vidéos de Microsoft, ainsi que des solutions sélectionnées par la communauté, visitez la page [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] sur MSDN :<br /><br /> [Visitez la page Integration Services sur MSDN](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Pour recevoir une notification automatique de ces mises à jour, abonnez-vous aux flux RSS disponibles sur la page.  
+![Icône Integration Services (petite)](../media/dts-16.gif "icône Integration Services (petite)")**rester jusqu'à la Date avec Integration Services** <br /> Pour obtenir les derniers téléchargements, articles, exemples et vidéos de Microsoft, ainsi que des solutions sélectionnées par la communauté, visitez la page [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] sur MSDN :<br /><br /> [Visitez la page Integration Services sur MSDN](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Pour recevoir une notification automatique de ces mises à jour, abonnez-vous aux flux RSS disponibles sur la page.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Développement d’objets personnalisés pour Integration Services](developing-custom-objects-for-integration-services.md)   

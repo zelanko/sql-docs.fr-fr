@@ -1,5 +1,5 @@
 ---
-title: Sélection des fonctionnalités | Documents Microsoft
+title: Sélection des fonctionnalités | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - feature selection, Setup
 helpviewer_keywords:
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - Components to Install page [SQL Server Installation Wizard]
 ms.assetid: 73182088-153b-4634-a060-d14d1fd23b70
 caps.latest.revision: 86
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 159c77133a5b0a218fa308ab179b2d25376432bc
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: a00261718d83a82c595416b6dd0d9b97e8929e0d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36142419"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37315489"
 ---
 # <a name="feature-selection"></a>Sélection des fonctionnalités
   Utilisez les cases à cocher de la page **Sélection de fonctionnalités** de l'Assistant Installation de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pour sélectionner les composants de votre installation de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
@@ -49,7 +49,7 @@ ms.locfileid: "36142419"
 |[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] – Natif|Le mode natif [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] inclut les composants serveur et clients permettant de créer, de gérer et de déployer des rapports tabulaires, de matrice, graphiques et de forme libre. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] est également une plateforme évolutive que vous pouvez utiliser pour développer des applications de création de rapports.|  
   
 > [!IMPORTANT]  
->  1.  Le programme d'installation ne configure pas l'équilibrage de charge et l'adressage par URL unique pour les nœuds multiples d'un déploiement par montée en puissance parallèle de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Pour effectuer un déploiement avec montée en puissance parallèle, vous devez utiliser Windows Server, [!INCLUDE[msCoName](../../includes/msconame-md.md)] Application Center ou un logiciel tiers de gestion de clusters. Pour plus d’informations sur la configuration de déploiement de batterie de serveurs Web, consultez [configuration de Reporting Services pour un déploiement évolutif](http://go.microsoft.com/fwlink/?LinkId=199448) (http://go.microsoft.com/fwlink/?LinkId=199448).  
+>  1.  Le programme d'installation ne configure pas l'équilibrage de charge et l'adressage par URL unique pour les nœuds multiples d'un déploiement par montée en puissance parallèle de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Pour effectuer un déploiement avec montée en puissance parallèle, vous devez utiliser Windows Server, [!INCLUDE[msCoName](../../includes/msconame-md.md)] Application Center ou un logiciel tiers de gestion de clusters. Pour plus d’informations sur la configuration de déploiement de batterie de serveurs Web, consultez [configurer Reporting Services pour un déploiement évolutif](http://go.microsoft.com/fwlink/?LinkId=199448) (http://go.microsoft.com/fwlink/?LinkId=199448).  
 > 2.  Pour connaître la configuration de navigateur requise des composants [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], consultez [Planification de la prise en charge des navigateurs pour Reporting Services et Power View &#40;Reporting Services 2014&#41;](../../../2014/reporting-services/browser-support-for-reporting-services-and-power-view.md).  
 > 3.  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] n'est pas pris en charge simultanément dans les configurations côte à côte sur la plateforme 64 bits et sur le sous-système 32 bits (WOW64) d'un serveur 64 bits.  
   
@@ -58,8 +58,8 @@ ms.locfileid: "36142419"
   
 |Fonctionnalité|Description|  
 |-------------|-----------------|  
-|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] : SharePoint|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Le mode SharePoint est une application basée sur serveur pour créer, gérer et remettre des rapports par courrier électronique, plusieurs formats de fichier et interactif Web sous forme de formations. Le mode SharePoint intègre la consultation et la gestion de rapports avec les produits SharePoint. Pour plus d’informations, consultez [Serveur de rapports Reporting Services &#40;mode SharePoint&#41;](../../../2014/reporting-services/reporting-services-report-server-sharepoint-mode.md).|  
-|Complément[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Add-in for SharePoint Products|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Complément pour les produits SharePoint inclut des composants d’interface utilisateur et de gestion pour intégrer un produit SharePoint avec un [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] serveur de rapports en mode SharePoint. Pour plus d’informations, consultez [Où trouver le complément Reporting Services pour les produits SharePoint](../../reporting-services/install-windows/where-to-find-the-reporting-services-add-in-for-sharepoint-products.md).|  
+|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] : SharePoint|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Mode SharePoint est une application basée sur serveur pour la création, la gestion et la remise des rapports à la messagerie, plusieurs formats de fichier et de formations interactives basée sur le Web. Le mode SharePoint intègre la consultation et la gestion de rapports avec les produits SharePoint. Pour plus d’informations, consultez [Serveur de rapports Reporting Services &#40;mode SharePoint&#41;](../../../2014/reporting-services/reporting-services-report-server-sharepoint-mode.md).|  
+|Complément[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Add-in for SharePoint Products|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Complément pour les produits SharePoint inclut des composants d’interface utilisateur et de gestion permettant d’intégrer un produit SharePoint avec un [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] serveur de rapports en mode SharePoint. Pour plus d’informations, consultez [Où trouver le complément Reporting Services pour les produits SharePoint](../../reporting-services/install-windows/where-to-find-the-reporting-services-add-in-for-sharepoint-products.md).|  
 |Data Quality Client|Le client de qualité des données est une application autonome qui se connecte au serveur DQS et fournit une interface utilisateur graphique intuitive pour effectuer des opérations de nettoyage et de correspondance des données et effectuer des tâches administratives dans DQS.|  
 |Connectivité des outils clients|Les outils clients incluent les composants permettant la communication entre les clients et les serveurs, notamment les bibliothèques réseau pour DB-Library, OLEDB pour OLAP, ODBC, ADODB et ADOMD+.|  
 |[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]|[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] propose un ensemble d’outils graphiques et d’objets programmables permettant de déplacer, de copier et de transformer les données.|  
@@ -91,7 +91,7 @@ ms.locfileid: "36142419"
 -   Créez davantage d'espace libre sur le lecteur spécifié en déplaçant d'autres fichiers ou applications.  
   
 ## <a name="installing-adventureworks-sample-databases"></a>Installation des exemples de bases de données AdventureWorks  
- Par défaut, les exemples de bases de données et les exemples de code ne sont pas installés dans le cadre de l'installation de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Pour plus d’informations sur l’installation des exemples de code et de bases de données, consultez la [Microsoft SQL Server Community Projects & Samples](http://go.microsoft.com/fwlink/?LinkId=87843) (http://go.microsoft.com/fwlink/?LinkId=87843).  
+ Par défaut, les exemples de bases de données et les exemples de code ne sont pas installés dans le cadre de l'installation de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Pour plus d’informations sur l’installation des exemples de code et de bases de données, consultez le [Microsoft SQL Server Community Projects & Samples](http://go.microsoft.com/fwlink/?LinkId=87843) (http://go.microsoft.com/fwlink/?LinkId=87843).  
   
  Les informations supplémentaires sur les exemples sont disponibles après que [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] a été installé. À partir de la **Démarrer** menu, cliquez sur **tous les programmes**, cliquez sur **[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]**, cliquez sur **Documentation et didacticiels** , puis cliquez sur  **[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Samples Overview**.  
   

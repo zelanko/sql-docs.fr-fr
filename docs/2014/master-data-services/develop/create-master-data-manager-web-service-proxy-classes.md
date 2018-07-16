@@ -5,22 +5,19 @@ ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- docset-sql-devref
-- master-data-services
+ms.technology: master-data-services
 ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: 8bdab026-a0c0-41f3-9d36-f3919c23247f
-caps.latest.revision: 7
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 6714b6317f625f3a931778b1466ebe619ed02816
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: fb1caec20ab7af7cd6e263e6718820658940d00f
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36038597"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37355041"
 ---
 # <a name="create-master-data-manager-web-service-proxy-classes"></a>Créer des classes proxy de service Web Master Data Manager
   Le service Web [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] vous permet de programmer les fonctionnalités de [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] à partir de n'importe quel ordinateur pouvant accéder à votre site Web [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)]. Avant de commencer à écrire du code pour accéder au service Web, vous devez générer des classes proxy. La classe proxy principale que vous utilisez pour effectuer des opérations de service Web est la classe <xref:Microsoft.MasterDataServices.ServiceClient>, qui implémente l'interface <xref:Microsoft.MasterDataServices.IService>.  
@@ -30,7 +27,7 @@ ms.locfileid: "36038597"
   
 1.  Ouvrez le fichier Web.config [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] dans un éditeur de texte. Ce fichier se trouve dans le dossier WebApplication du chemin d'installation de [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)].  
   
-2.  Rechercher les `mdsWsHttpBehavior` sous  **\<serviceBehaviors >**. Pour le  **\<serviceMetadata >** élément, la valeur `httpGetEnabled` à `true`.  
+2.  Rechercher la `mdsWsHttpBehavior` section sous **\<serviceBehaviors >**. Pour le **\<serviceMetadata >** élément, la valeur `httpGetEnabled` à `true`.  
   
     > [!NOTE]  
     >  Si vous souhaitez activer des services Web via SSL (Secure Sockets Layer), définissez `httpsGetEnabled` sur `true` dans la section `mdsWsHttpBehavior` du fichier web.config. Vous devez également modifier `mdsWsHTTPBinding` afin qu'il soit configuré pour SSL et mettre en commentaire la section non-SSL.  

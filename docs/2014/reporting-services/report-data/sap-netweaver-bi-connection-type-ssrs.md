@@ -8,25 +8,25 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: f985856b-31d5-4e56-844b-8a8ee38da67e
 caps.latest.revision: 9
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 8cd1548cb8fb22a49900cc916dc1fde610993a05
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: b05c961fcd9d3a4a64715f6bc96754000969a6ca
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36141486"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37216879"
 ---
 # <a name="sap-netweaver-bi-connection-type-ssrs"></a>Type de connexion SAP NetWeaver BI (SSRS)
   Pour inclure les données d'une source de données externe SAP NetWeaver® Business Intelligence dans votre rapport, vous devez avoir un dataset basé sur une source de données de rapport de type [!INCLUDE[SAP_DPE_BW_1](../../includes/sap-dpe-bw-1-md.md)]. Ce type de source de données intégré est basé sur l'extension de données du fournisseur de données [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework 1.0 pour [!INCLUDE[SAP_DPE_BW_1](../../includes/sap-dpe-bw-1-md.md)].  
   
  Cette extension de données vous permet de récupérer des données multidimensionnelles à partir de requêtes InfoCubes, MultiProviders (InfoCubes virtuels) et web définies sur une source de données externe [!INCLUDE[SAP_DPE_BW_1](../../includes/sap-dpe-bw-1-md.md)] .  
   
- Utilisez les informations de cette rubrique pour générer une source de données. Pour obtenir des instructions, consultez [ajouter et vérifier une connexion de données ou une Source de données &#40;le Générateur de rapports et SSRS&#41;](add-and-verify-a-data-connection-report-builder-and-ssrs.md).  
+ Utilisez les informations de cette rubrique pour générer une source de données. Pour obtenir des instructions détaillées, consultez [ajouter et vérifier une connexion de données ou d’une Source de données &#40;Générateur de rapports et SSRS&#41;](add-and-verify-a-data-connection-report-builder-and-ssrs.md).  
   
 ##  <a name="support"></a> Versions prises en charge  
  Le fournisseur de données a été développé et testé pour SAP BW 3.5 et 7.0.  
@@ -75,17 +75,17 @@ DataSource=http://mySAPNetWeaverBIServer:8000/sap/bw/xml/soap/xmla
   
   
 ##  <a name="Extended"></a> Propriétés de champ étendues  
- La source de données [!INCLUDE[SAP_DPE_BW_1](../../includes/sap-dpe-bw-1-md.md)] prend en charge les propriétés de champ étendues. Propriétés de champ étendues sont des propriétés à `Value` et `IsMissing` qui sont définis pour un champ de dataset par l’extension de traitement des données. Les propriétés étendues incluent des propriétés prédéfinies et des propriétés personnalisées. Les propriétés prédéfinies sont des propriétés communes à plusieurs sources de données. Les propriétés personnalisées sont uniques à chaque source de données.  
+ La source de données [!INCLUDE[SAP_DPE_BW_1](../../includes/sap-dpe-bw-1-md.md)] prend en charge les propriétés de champ étendues. Propriétés de champ étendues sont des propriétés en plus de `Value` et `IsMissing` qui sont définies pour un champ de dataset par l’extension de traitement des données. Les propriétés étendues incluent des propriétés prédéfinies et des propriétés personnalisées. Les propriétés prédéfinies sont des propriétés communes à plusieurs sources de données. Les propriétés personnalisées sont uniques à chaque source de données.  
   
 ### <a name="working-with-field-properties"></a>Utilisation des propriétés de champ  
- Les propriétés de champ étendues n'apparaissent pas dans le volet des données de rapport en tant qu'éléments que vous pouvez faire glisser vers votre disposition de rapport. Au lieu de cela, vous faites glisser le champ parent de la propriété dans le rapport et puis remplacez la propriété par défaut `Value` à la propriété que vous souhaitez utiliser. Par exemple, si le nom de champ **Calendar Year/Month Level 01** est créé dans un Concepteur de requêtes MDX en déplaçant un niveau du volet de métadonnées vers le volet de requête, vous faites référence à la propriété d’étendue personnalisée **Long name** (Nom long) dans une expression à l’aide de la syntaxe suivante :  
+ Les propriétés de champ étendues n'apparaissent pas dans le volet des données de rapport en tant qu'éléments que vous pouvez faire glisser vers votre disposition de rapport. Au lieu de cela, vous faites glisser le champ parent de la propriété sur le rapport et puis vous remplacez la propriété par défaut `Value` à la propriété que vous souhaitez utiliser. Par exemple, si le nom de champ **Calendar Year/Month Level 01** est créé dans un Concepteur de requêtes MDX en déplaçant un niveau du volet de métadonnées vers le volet de requête, vous faites référence à la propriété d’étendue personnalisée **Long name** (Nom long) dans une expression à l’aide de la syntaxe suivante :  
   
  `=Fields!Calendar_Year_Month_Level_01("Long Name")`  
   
- Le nom d'une propriété de champ étendue apparaît dans l'info-bulle lorsque vous placez le pointeur sur un champ dans le volet de métadonnées. Pour plus d’informations sur les concepteurs de requêtes que vous pouvez utiliser pour Explorer les données sous-jacentes, consultez [SAP NetWeaver BI Query Designer User Interface](sap-netweaver-bi-query-designer-user-interface.md).  
+ Le nom d'une propriété de champ étendue apparaît dans l'info-bulle lorsque vous placez le pointeur sur un champ dans le volet de métadonnées. Pour plus d’informations sur les concepteurs de requêtes que vous pouvez utiliser pour Explorer les données sous-jacentes, consultez [Interface utilisateur des Concepteur de requêtes SAP NetWeaver BI](sap-netweaver-bi-query-designer-user-interface.md).  
   
 > [!NOTE]  
->  Il existe des valeurs pour les propriétés de champ étendues uniquement si la source de données fournit ces valeurs lorsque votre rapport s'exécute et récupère les données pour ses datasets. Vous pouvez alors faire référence aux `Field` des valeurs de propriété à partir d’une expression en utilisant la syntaxe décrite ci-dessous. Cependant, dans la mesure où ces champs sont spécifiques à ce fournisseur de données et ne font pas partie du langage de définition de rapport, les modifications que vous apportez à ces valeurs ne sont pas enregistrées avec la définition du rapport.  
+>  Il existe des valeurs pour les propriétés de champ étendues uniquement si la source de données fournit ces valeurs lorsque votre rapport s'exécute et récupère les données pour ses datasets. Vous pouvez alors faire référence à celles `Field` les valeurs de propriété à partir de n’importe quelle expression à l’aide de la syntaxe décrite ci-dessous. Cependant, dans la mesure où ces champs sont spécifiques à ce fournisseur de données et ne font pas partie du langage de définition de rapport, les modifications que vous apportez à ces valeurs ne sont pas enregistrées avec la définition du rapport.  
   
  Pour faire référence à des propriétés étendues prédéfinies dans une expression, vous pouvez utiliser l'une des syntaxes décrites ci-dessous :  
   
@@ -112,7 +112,7 @@ DataSource=http://mySAPNetWeaverBIServer:8000/sap/bw/xml/soap/xmla
 |`Key`|`Object`|Retourne la clé d'un niveau.|  
 |`LevelNumber`|`Integer`|Dans le cas des hiérarchies parent-enfant, cette propriété retourne le nombre de niveaux ou de dimensions.|  
 |`ParentUniqueName`|`String`|Dans le cas des hiérarchies parent-enfant, cette propriété retourne le nom complet du niveau parent.|  
-|`UniqueName`|`String`|Retourne le nom complet d'un niveau. Par exemple, le `UniqueName` valeur pour un employé peut être *[0D_Company]. [ 10D_Department]. [11]* .|  
+|`UniqueName`|`String`|Retourne le nom complet d'un niveau. Par exemple, le `UniqueName` valeur d’un employé peut être *[0D_Company]. [ 10D_Department]. [11]* .|  
   
  Pour plus d’informations sur l’utilisation de champs et de propriétés de champ dans une expression, consultez [Collections intégrées dans les expressions &#40;Générateur de rapports et SSRS&#41;](../report-design/built-in-collections-in-expressions-report-builder.md).  
   
@@ -128,7 +128,7 @@ DataSource=http://mySAPNetWeaverBIServer:8000/sap/bw/xml/soap/xmla
 ##  <a name="HowTo"></a> Rubriques de procédures  
  Cette section contient des instructions pas à pas sur l'utilisation des connexions de données, des sources de données et des datasets.  
   
- [Ajouter et vérifier une connexion de données ou une Source de données &#40;rapport Générateur et SSRS&#41;](add-and-verify-a-data-connection-report-builder-and-ssrs.md)  
+ [Ajouter et vérifier une connexion de données ou d’une Source de données &#40;Générateur de rapports et SSRS&#41;](add-and-verify-a-data-connection-report-builder-and-ssrs.md)  
   
  [Créer un dataset partagé ou incorporé &#40;Générateur de rapports et SSRS&#41;](create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md)  
   
@@ -139,7 +139,7 @@ DataSource=http://mySAPNetWeaverBIServer:8000/sap/bw/xml/soap/xmla
 ##  <a name="Related"></a> Sections connexes  
  Ces sections de la documentation fournissent des informations de fond d'ordre conceptuel sur les données de rapport, ainsi que des informations sur les procédures de définition, de personnalisation et d'utilisation des parties d'un rapport qui sont liées aux données.  
   
- [Ajouter des données à un rapport &#40;rapport Générateur et SSRS&#41;](report-datasets-ssrs.md)  
+ [Ajouter des données à un rapport &#40;Générateur de rapports et SSRS&#41;](report-datasets-ssrs.md)  
  Fournit une vue d'ensemble de l'accès aux données pour votre rapport.  
   
  [Connexions de données, sources de données et chaînes de connexion dans le Générateur de rapports](../data-connections-data-sources-and-connection-strings-in-report-builder.md)  
@@ -151,7 +151,7 @@ DataSource=http://mySAPNetWeaverBIServer:8000/sap/bw/xml/soap/xmla
  [Collection de champs de dataset &#40;Générateur de rapports et SSRS&#41;](dataset-fields-collection-report-builder-and-ssrs.md)  
  Fournit des informations sur la collection de champs de dataset générée par la requête.  
   
- [Sources de données pris en charge par Reporting Services &#40;SSRS&#41;](../create-deploy-and-manage-mobile-and-paginated-reports.md)  
+ [Sources de données prises en charge par Reporting Services &#40;SSRS&#41;](../create-deploy-and-manage-mobile-and-paginated-reports.md)  
  Fournit des informations détaillées sur la prise en charge des plateformes et des versions pour chaque extension de données.  
   
  

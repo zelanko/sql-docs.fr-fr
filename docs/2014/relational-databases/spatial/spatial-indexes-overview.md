@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - dbe-spatial
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - spatial indexes [SQL Server]
 ms.assetid: b1ae7b78-182a-459e-ab28-f743e43f8293
 caps.latest.revision: 28
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 99c12dce1bcab99ae5e4d65bf3ccc6d637b8154c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: e21d0142212541ff41bef6ba76f8e274235b86a6
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36153687"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37194969"
 ---
 # <a name="spatial-indexes-overview"></a>Vue d'ensemble des index spatiaux
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] prend en charge les données spatiales et les index spatiaux. Un *index spatial* est un type d'index étendu qui vous permet d'indexer une colonne spatiale. Une colonne spatiale est une colonne de table qui contient des données d'un type de données spatiales, tel que `geometry` ou `geography`.  
@@ -63,7 +63,7 @@ ms.locfileid: "36153687"
  Vous pouvez contrôler le processus de décomposition en spécifiant des densités de grille autres que les densités par défaut. Par exemple, différentes densités de grille sur différents niveaux peuvent être utiles pour le réglage fin d'un index en fonction de la taille de l'espace indexé et des objets contenus dans la colonne spatiale.  
   
 > [!NOTE]  
->  Les densités de grille d’un index spatial sont visibles dans les colonnes level_1_grid, level_2_grid, level_3_grid et level_4_grid de l’affichage catalogue [sys.spatial_index_tessellations](/sql/relational-databases/system-catalog-views/sys-spatial-index-tessellations-transact-sql) quand le niveau de compatibilité de la base de données est défini à 100 ou à une valeur inférieure. Le `GEOMETRY_AUTO_GRID` / `GEOGRAPHY_AUTO_GRID` options de schéma de pavage ne remplissent pas ces colonnes. catalogue sys.spatial_index_tessellations présente `NULL` valeurs de ces colonnes lorsque les options de grille automatique sont utilisées.  
+>  Les densités de grille d’un index spatial sont visibles dans les colonnes level_1_grid, level_2_grid, level_3_grid et level_4_grid de l’affichage catalogue [sys.spatial_index_tessellations](/sql/relational-databases/system-catalog-views/sys-spatial-index-tessellations-transact-sql) quand le niveau de compatibilité de la base de données est défini à 100 ou à une valeur inférieure. Le `GEOMETRY_AUTO_GRID` / `GEOGRAPHY_AUTO_GRID` options de schéma de pavage ne remplissent pas ces colonnes. catalogue sys.spatial_index_tessellations présente `NULL` valeurs pour ces colonnes lorsque les options de grille automatique sont utilisées.  
   
 ###  <a name="tessellation"></a> Pavage  
  Après la décomposition d'un espace indexé en une hiérarchie de grille, l'index spatial lit les données de la colonne spatiale, ligne par ligne. Après avoir lu les données pour un objet spatial (ou une instance), l’index spatial exécute un *processus de pavage* pour cet objet. Le processus de pavage place l’objet dans la hiérarchie de grille en associant l’objet à un ensemble de cellules de grille qu’il touche (*cellules touchées*). En partant du niveau 1 de la hiérarchie de grille, le processus de pavage continue *dans le sens de la largeur* à travers le niveau. Potentiellement, le processus peut se poursuivre à travers les quatre niveaux, un niveau à la fois.  

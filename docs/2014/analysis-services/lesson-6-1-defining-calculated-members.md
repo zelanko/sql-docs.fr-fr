@@ -1,5 +1,5 @@
 ---
-title: Définition des membres calculés | Documents Microsoft
+title: Définition des membres calculés | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 07f13e1c-0b20-4f9e-ad62-c438983f2785
 caps.latest.revision: 14
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: jhubbard
-ms.openlocfilehash: e063de7ce9ea45197c17f4d863c56228d9473e78
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 49779aa45ad8f0316dafa5fb74b037b5d199f328
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36153351"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37238359"
 ---
 # <a name="defining-calculated-members"></a>Définition des membres calculés
   Les membres calculés sont les membres d'une dimension ou d'un groupe de mesures qui sont définis à l'aide d'une combinaison de données de cube, d'opérateurs arithmétiques, de nombres et de fonctions. Par exemple, vous pouvez créer un membre calculé qui additionne deux mesures physiques dans le cube. Les définitions de membre calculé sont stockées dans les cubes, mais leurs valeurs sont calculées lors du traitement des requêtes.  
@@ -87,7 +87,7 @@ ms.locfileid: "36153351"
   
      L'image suivante montre les scripts de calcul tels qu'ils doivent apparaître dans le volet **Expressions de calcul** à ce stade dans le didacticiel.  
   
-     ![Les scripts dans le volet des Expressions de calcul](../../2014/tutorials/media/l6-calculatedmembers-04.gif "des Scripts dans le volet des Expressions de calcul")  
+     ![Les scripts dans le volet des Expressions de calcul](../../2014/tutorials/media/l6-calculatedmembers-04.gif "Scripts dans le volet des Expressions de calcul")  
   
 12. Dans la barre d’outils de la **calculs** , cliquez sur **mode formulaire**, vérifiez que `[Total Sales Amount]` est sélectionné dans le **organisateur de Script** volet, puis cliquez sur  **Nouveau membre calculé**.  
   
@@ -276,7 +276,7 @@ ms.locfileid: "36153351"
   
      Observez que la marge brute pour les ventes de revendeurs est nettement plus faible que pour les ventes par Internet, comme l'illustre l'image suivante.  
   
-     ![Volet de données affichant les ventes de revendeurs](../../2014/tutorials/media/l6-calculatedmembers-7b.gif "volet de données affichant les ventes du revendeur")  
+     ![Volet de données affichant les ventes du revendeur](../../2014/tutorials/media/l6-calculatedmembers-7b.gif "volet de données affichant les ventes du revendeur")  
   
 9. Ajoutez les mesures **Total Sales Ratio to All Products**, **Internet Sales Ratio to All Products**et **Reseller Sales Ratio to All Products** à la zone Valeurs.  
   

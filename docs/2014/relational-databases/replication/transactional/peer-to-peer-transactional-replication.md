@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - bidirectional replication
 - transactional replication, bidirectional replication
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - peer-to-peer transactional replication
 ms.assetid: 23e7e8c1-002f-4e69-8c99-d63e4100de64
 caps.latest.revision: 68
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 299b9968d9daebc61c9625a661125d45f33a3dfa
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 838d3fa3190e592c0b46529ea45b7e1a7b91c8be
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36143685"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37236649"
 ---
 # <a name="peer-to-peer-transactional-replication"></a>Peer-to-Peer Transactional Replication
   La réplication d'égal à égal offre une solution avec montée en puissance parallèle et haute disponibilité en conservant des copies de données sur plusieurs instances de serveur, également appelées *nœuds*. Conçue sur la base de la réplication transactionnelle, la réplication d'égal à égal propage les modifications quasiment en temps réel de manière transactionnelle. Les applications qui requièrent la montée en puissance parallèle des opérations de lecture peuvent ainsi distribuer les lectures effectuées par les clients sur plusieurs nœuds. Dans la mesure où les données sont conservées sur les nœuds quasiment en temps réel, la réplication d'égal à égal génère une redondance des données, ce qui améliore leur disponibilité.  
@@ -147,11 +147,11 @@ ms.locfileid: "36143685"
   
  Les propriétés suivantes présentent des considérations spéciales :  
   
--   La propriété de publication **@allow_initialize_from_backup** requiert une valeur de `true`.  
+-   La propriété de publication **@allow_initialize_from_backup** requiert la valeur `true`.  
   
--   La propriété d’article **@replicate_ddl** requiert une valeur de `true`; **@identityrangemanagementoption** requiert une valeur de `manual`; et **@status** nécessite que l’option **24** est définie.  
+-   La propriété d’article **@replicate_ddl** requiert la valeur `true`; **@identityrangemanagementoption** requiert une valeur de `manual`; et **@status** nécessite que l’option **24** est définie.  
   
--   La valeur de propriétés de l’article **@ins_cmd**, **@del_cmd**, et **@upd_cmd** ne peut pas être définie `SQL`.  
+-   La valeur de propriétés de l’article **@ins_cmd**, **@del_cmd**, et **@upd_cmd** ne peut pas être définie sur `SQL`.  
   
 -   La propriété d’abonnement **@sync_type** requiert une valeur de `none` ou `automatic`.  
   

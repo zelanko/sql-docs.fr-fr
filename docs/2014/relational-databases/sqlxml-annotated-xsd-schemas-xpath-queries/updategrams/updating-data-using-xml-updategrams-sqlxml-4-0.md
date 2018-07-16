@@ -1,5 +1,5 @@
 ---
-title: Mise à jour des données à l’aide de codes XML (SQLXML 4.0) | Documents Microsoft
+title: La mise à jour des données à l’aide de codes XML (SQLXML 4.0) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -28,18 +28,18 @@ helpviewer_keywords:
 - record updates [SQLXML]
 ms.assetid: 90ef8a33-5ae3-4984-8259-608d2f1d727f
 caps.latest.revision: 27
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 9afe66f664bf5e1e750ddef529bd9001d776ef82
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 6a8ab9c6c57f2cb9aecfdbe15b2ea2e6cbeb9887
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36140487"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37251741"
 ---
 # <a name="updating-data-using-xml-updategrams-sqlxml-40"></a>Mise à jour de données à l'aide de codes de mise à jour (updategrams) XML (SQLXML 4.0)
-  Lorsque vous mettez à jour les données existantes, vous devez spécifier à la fois le  **\<avant >** et  **\<après >** blocs. Les éléments spécifiés dans le  **\<avant >** et  **\<après >** blocs décrivent la modification souhaitée. Mise à jour utilise l’ou les éléments qui sont spécifié dans le  **\<avant >** bloc pour identifier les enregistrements existants dans la base de données. Les éléments correspondants dans le  **\<après >** bloc indiquent la manière dont les enregistrements doivent ressembler après l’exécution de l’opération de mise à jour. À partir de ces informations, la mise à jour crée une instruction SQL qui correspond à la  **\<après >** bloc. Le code de mise à jour (updategram) utilise ensuite cette instruction pour mettre à jour la base de données.  
+  Lorsque vous mettez à jour les données existantes, vous devez spécifier à la fois le  **\<avant >** et  **\<après >** blocs. Les éléments spécifiés dans le  **\<avant >** et  **\<après >** blocs décrivent la modification souhaitée. Mise à jour utilise l’ou les éléments qui sont spécifié dans le  **\<avant >** bloc pour identifier les ou les enregistrements existants dans la base de données. Les éléments correspondants dans le  **\<après >** bloc indiquer comment les enregistrements doivent ressembler après l’exécution de l’opération de mise à jour. À partir de ces informations, la mise à jour crée une instruction SQL qui correspond à la  **\<après >** bloc. Le code de mise à jour (updategram) utilise ensuite cette instruction pour mettre à jour la base de données.  
   
  Voici le format du code de mise à jour (updategram) pour une opération de mise à jour :  
   
@@ -59,21 +59,21 @@ ms.locfileid: "36140487"
 ```  
   
  `<updg:before>`  
- Les éléments dans le  **\<avant >** bloc identifier les enregistrements existants dans les tables de base de données.  
+ Les éléments dans le  **\<avant >** bloc identifient les enregistrements existants dans les tables de base de données.  
   
  `<updg:after>`  
- Les éléments dans le  **\<après >** bloc décrivent la façon dont les enregistrements spécifiés dans le  **\<avant >** bloc doit ressembler après les mises à jour sont appliquées.  
+ Les éléments dans le  **\<après >** bloc décrivent la façon dont les enregistrements spécifiés dans le  **\<avant >** bloc doit se présenter une fois que les mises à jour sont appliquées.  
   
  L'attribut `mapping-schema` identifie le schéma de mappage à utiliser par le code de mise à jour (updategram). Si la mise à jour Spécifie un schéma de mappage, les noms d’élément et d’attribut spécifié dans le  **\<avant >** et  **\<après >** blocs doivent correspondre aux noms dans le schéma. Le schéma de mappage mappe ces noms d'éléments ou d'attributs aux noms de tables et de colonnes de la base de données.  
   
- Si le code de mise à jour (updategram) ne spécifie pas de schéma, le mappage par défaut est utilisé. Un mappage par défaut, le  **\<ElementName >** spécifiés dans les mappages de mise à jour à la table de base de données et le mappage d’éléments ou attributs enfants pour les colonnes de la base de données.  
+ Si le code de mise à jour (updategram) ne spécifie pas de schéma, le mappage par défaut est utilisé. Mappage par défaut, le  **\<ElementName >** spécifié dans les cartes de mise à jour à la table de base de données et les enfants éléments ou attributs sont mappés aux colonnes de base de données.  
   
- Un élément dans le  **\<avant >** qu’une seule ligne dans la base de données doit correspondre au bloc. Si l’élément correspond à plusieurs lignes de la table ou ne correspond pas à n’importe quelle ligne de la table, la mise à jour renvoie une erreur et annule l’intégralité  **\<synchronisation >** bloc.  
+ Un élément dans le  **\<avant >** bloc doit correspondre à une ligne qu’une seule table dans la base de données. Si l’élément correspond à plusieurs lignes de la table ou ne correspond pas à n’importe quelle ligne de table, la mise à jour retourne une erreur et annule l’intégralité  **\<synchronisation >** bloc.  
   
  Une mise à jour peut inclure plusieurs  **\<synchronisation >** blocs. Chaque  **\<synchronisation >** bloc est traité comme une transaction. Chaque  **\<synchronisation >** bloc peut avoir plusieurs  **\<avant >** et  **\<après >** blocs. Par exemple, si vous mettez à jour des enregistrements existants, vous pouvez spécifier deux  **\<avant >** et  **\<après >** paires, une pour chaque enregistrement mis à jour.  
   
 ## <a name="using-the-updgid-attribute"></a>Utilisation de l'attribut updg:id  
- Lorsque plusieurs éléments sont spécifiés dans le  **\<avant >** et  **\<après >** blocs, utilisez le `updg:id` attribut pour marquer les lignes dans la  **\<avant >** et  **\<après >** blocs. La logique de traitement utilise ces informations pour déterminer quel est l’enregistrement dans le  **\<avant >** bloc quel est l’enregistrement dans le  **\<après >** bloc.  
+ Lorsque plusieurs éléments sont spécifiés dans le  **\<avant >** et  **\<après >** blocs, utilisez le `updg:id` attribut pour marquer les lignes dans le  **\<avant >** et  **\<après >** blocs. La logique de traitement utilise ces informations pour déterminer quel est l’enregistrement dans le  **\<avant >** bloc quel est l’enregistrement dans le  **\<après >** bloc.  
   
  L'attribut `updg:id` n'est pas nécessaire (bien qu'il soit recommandé) si l'un ou l'autre des cas de figure se présente :  
   
@@ -85,7 +85,7 @@ ms.locfileid: "36140487"
   
  Si le schéma de mappage n'identifie pas de colonnes clés (via `sql:key-fields`) ou si le code de mise à jour (updategram) met à jour une valeur de colonne clé, vous devez spécifier `updg:id`.  
   
- Les enregistrements qui sont identifiées dans le  **\<avant >** et  **\<après >** blocs n’ont pas à être dans le même ordre. Le `updg:id` attribut force l’association entre les éléments qui sont spécifiés dans le  **\<avant >** et  **\<après >** blocs.  
+ Les enregistrements qui sont identifiés dans le  **\<avant >** et  **\<après >** blocs n’ont pas à être dans le même ordre. Le `updg:id` attribut force l’association entre les éléments qui sont spécifiés dans le  **\<avant >** et  **\<après >** blocs.  
   
  Si vous spécifiez un élément dans le  **\<avant >** bloc et qu’un seul élément correspondant dans le  **\<après >** bloquer, à l’aide de `updg:id` n’est pas nécessaire. Toutefois, il est recommandé de spécifier quand même `updg:id` pour éviter toute ambiguïté.  
   
@@ -112,7 +112,7 @@ ms.locfileid: "36140487"
 </ROOT>  
 ```  
   
- L’enregistrement décrit dans le  **\<avant >** bloc représente l’enregistrement actif dans la base de données. Mise à jour utilise toutes les valeurs de colonne spécifiés dans le  **\<avant >** bloc pour rechercher l’enregistrement. Dans cette mise à jour, le  **\<avant >** bloc fournit uniquement la colonne ContactID ; par conséquent, la mise à jour utilise uniquement la valeur pour rechercher l’enregistrement. Si vous deviez ajouter la valeur de LastName à ce bloc, le code de mise à jour (updategram) utiliserait à la fois les valeurs de ContactID et de LastName pour effectuer la recherche.  
+ L’enregistrement décrit dans le  **\<avant >** bloc représente l’enregistrement actif dans la base de données. Mise à jour utilise toutes les valeurs de colonne spécifiés dans le  **\<avant >** bloc pour rechercher l’enregistrement. Dans cette mise à jour, le  **\<avant >** bloc fournit uniquement la colonne ContactID ; par conséquent, la mise à jour utilise uniquement la valeur à rechercher l’enregistrement. Si vous deviez ajouter la valeur de LastName à ce bloc, le code de mise à jour (updategram) utiliserait à la fois les valeurs de ContactID et de LastName pour effectuer la recherche.  
   
  Dans cette mise à jour, le  **\<après >** bloc fournit uniquement la valeur de la colonne LastName, car c’est la seule valeur qui est en cours de modification.  
   
@@ -131,7 +131,7 @@ ms.locfileid: "36140487"
   
 -   Il insère une nouvelle équipe nommée « Late Morning » qui commence à 10 h 00.  
   
- Dans la mise à jour, le `updg:id` attribut crée des associations entre les éléments de la  **\<avant >** et  **\<après >** blocs.  
+ Dans la mise à jour, le `updg:id` attribut crée des associations entre les éléments dans le  **\<avant >** et  **\<après >** blocs.  
   
 ```  
 <ROOT xmlns:updg="urn:schemas-microsoft-com:xml-updategram">  
@@ -161,7 +161,7 @@ ms.locfileid: "36140487"
      Pour plus d’informations, consultez [à l’aide d’ADO pour exécuter des requêtes SQLXML 4.0](../../sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
   
 ### <a name="c-specifying-multiple-before-and-after-blocks"></a>C. Spécification de plusieurs \<avant > et \<après > blocs  
- Pour éviter toute ambiguïté, vous pouvez écrire la mise à jour dans l’exemple B en utilisant plusieurs  **\<avant >** et  **\<après >** les paires de blocs. Spécification de  **\<avant >** et  **\<après >** paires est une façon d’indiquer plusieurs mises à jour avec un minimum de confusion. En outre, si chaque de la  **\<avant >** et  **\<après >** blocs spécifient au plus un élément, vous n’avez pas à utiliser le `updg:id` attribut.  
+ Pour éviter toute ambiguïté, vous pouvez écrire la mise à jour dans l’exemple B en utilisant plusieurs  **\<avant >** et  **\<après >** paires de blocs. Spécification  **\<avant >** et  **\<après >** paires est une façon d’indiquer plusieurs mises à jour avec un minimum de confusion. En outre, si chaque de la  **\<avant >** et  **\<après >** blocs spécifient au plus un élément, il est inutile d’utiliser le `updg:id` attribut.  
   
 > [!NOTE]  
 >  Pour former une paire, le  **\<après >** balise doit suivre immédiatement le correspondant  **\<avant >** balise.  
@@ -204,7 +204,7 @@ ms.locfileid: "36140487"
   
  La seconde  **\<synchronisation >** bloc ajoute deux enregistrements à la table Sales.SalesOrderHeader. Pour cette table, SalesOrderID est une colonne de type IDENTITY. Par conséquent, la mise à jour ne spécifie pas la valeur de SalesOrderID dans chacun de la \<Sales.SalesOrderHeader > éléments.  
   
- Spécification de plusieurs  **\<synchronisation >** blocs est utile, car si la seconde  **\<synchronisation >** bloc (transaction) ne parvient pas à ajouter des enregistrements à la table Sales.SalesOrderHeader, le première  **\<synchronisation >** bloc peut mettre à jour l’enregistrement de client dans la table Sales.Customer.  
+ Spécification de plusieurs  **\<synchronisation >** blocs est utile, car si le second  **\<synchronisation >** bloc (une transaction) ne parvient pas à ajouter des enregistrements à la table Sales.SalesOrderHeader, le première  **\<synchronisation >** bloc peut mettre à jour l’enregistrement de client dans la table Sales.Customer.  
   
 ```  
 <ROOT xmlns:updg="urn:schemas-microsoft-com:xml-updategram">  
@@ -362,7 +362,7 @@ ms.locfileid: "36140487"
   
  Dans la mesure où un étudiant peut s'inscrire à de nombreux cours et comme un cours peut avoir de nombreux étudiants, la troisième table, la table Enrollment, est requise pour représenter cette relation M:N.  
   
- Le schéma de mappage XSD suivant fournit une vue XML des tables à l’aide de la  **\<Student >**,  **\<cours >**, et  **\<l’inscription >** éléments. Le **IDREFS** attributs dans le schéma de mappage spécifient la relation entre ces éléments. Le **StudentIDList** de l’attribut le  **\<cours >** élément est un **IDREFS** attribut de type qui fait référence à la colonne StudentID de la table Enrollment. De même, la **EnrolledIn** de l’attribut le  **\<Student >** élément est un **IDREFS** attribut de type qui fait référence à la colonne CourseID de l’inscription table.  
+ Le schéma de mappage XSD suivant fournit une vue XML des tables à l’aide de la  **\<Student >**,  **\<cours >**, et  **\<l’inscription >** éléments. Le **IDREFS** attributs dans le schéma de mappage spécifient la relation entre ces éléments. Le **StudentIDList** d’attribut sur le  **\<cours >** élément est un **IDREFS** attribut de type qui fait référence à la colonne StudentID dans la table Enrollment. De même, le **EnrolledIn** d’attribut sur le  **\<Student >** élément est un **IDREFS** attribut de type qui fait référence à la colonne CourseID lors de l’inscription table.  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  

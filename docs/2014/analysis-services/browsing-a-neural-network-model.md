@@ -1,5 +1,5 @@
 ---
-title: Exploration d’un modèle de réseau neuronal | Documents Microsoft
+title: Exploration d’un modèle de réseau neuronal | Microsoft Docs
 ms.custom: ''
 ms.date: 12/29/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - mining models, browsing
 - mining models, viewing
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - dependency network
 ms.assetid: e4224cb7-115b-4889-ac07-03f096fb55fc
 caps.latest.revision: 14
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: e1eecb17419c6b0f89f9049bf7d9269b2d1ec32c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: ddfa179c57082eec38e14f0693cd707922f0812a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36151778"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37286365"
 ---
 # <a name="browsing-a-neural-network-model"></a>Exploration d'un modèle MNN (Microsoft Neural Network)
   Quand vous ouvrez un modèle de réseau neuronal ou de régression logistique à l’aide de **Parcourir**, le modèle est affiché dans une visionneuse interactive semblable à la visionneuse de modèle de réseau neuronal dans [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. La visionneuse permet d'explorer les corrélations et d'obtenir des informations sur les schémas du modèle et les données sous-jacentes.  
@@ -93,7 +93,7 @@ ms.locfileid: "36151778"
   
 1.  Supposez que vous vouliez cibler un groupe particulier et voir les facteurs qui influent le plus sur la décision d'achat dans ce groupe.  
   
-     Dans le **entrée** volet, cliquez sur le  **\<tous les >** de la cellule sous **attribut**, puis sélectionnez **âge**.  
+     Dans le **entrée** volet, cliquez sur le  **\<tous les >** cellule sous **attribut**, puis sélectionnez **âge**.  
   
      Pour **Valeur**, sélectionnez la catégorie correspondant à la tranche d’âge des plus jeunes.  
   

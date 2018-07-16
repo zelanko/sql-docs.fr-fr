@@ -1,5 +1,5 @@
 ---
-title: Modification de la Dimension Date | Documents Microsoft
+title: Modification de la Dimension Date | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 4689d780-4bf6-4cf8-8fde-eb3f15dd668a
 caps.latest.revision: 20
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: jhubbard
-ms.openlocfilehash: d4141cd5b26af4c44613b32ddc486154096d3fb6
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 03e0f8938c5a35f917c921248d4f3913ae1667f7
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36043023"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37216089"
 ---
 # <a name="modifying-the-date-dimension"></a>Modification de la dimension Date
   Dans les tâches de cette rubrique, vous allez créer une hiérarchie définie par l'utilisateur et vous allez modifier les noms de membre affichés pour les attributs Date, Month, Calendar Quarter et Calendar Semester. Vous allez également définir des clés composites pour les attributs, contrôler l'ordre de tri des membres de dimension et définir les relations d'attributs.  
@@ -33,7 +33,7 @@ ms.locfileid: "36043023"
   
 2.  Au bas de la **Tables** volet, avec le bouton droit `Date`, puis cliquez sur **nouveau calcul nommé**.  
   
-3.  Dans le **créer un calcul nommé** boîte de dialogue, tapez `SimpleDate` dans les **nom de la colonne** zone, puis tapez ou copiez et collez le texte suivant `DATENAME` instruction dans le **Expression**  zone :  
+3.  Dans le **créer un calcul nommé** boîte de dialogue, tapez `SimpleDate` dans le **nom de colonne** zone, puis tapez ou copiez et collez le code suivant `DATENAME` instruction dans le **Expression**  zone :  
   
     ```  
     DATENAME(mm, FullDateAlternateKey) + ' ' +  
@@ -43,9 +43,9 @@ ms.locfileid: "36043023"
   
      L'instruction `DATENAME` extrait les valeurs relatives à l'année, au mois et au jour à partir de la colonne FullDateAlternateKey. Vous utiliserez cette nouvelle colonne comme nom affiché de l'attribut FullDateAlternateKey.  
   
-4.  Cliquez sur **OK**, puis développez `Date` dans les **Tables** volet.  
+4.  Cliquez sur **OK**, puis développez `Date` dans le **Tables** volet.  
   
-     La `SimpleDate` calcul nommé apparaît dans la liste de colonnes dans la table Date, avec une icône qui indique qu’il est un calcul nommé.  
+     Le `SimpleDate` calcul nommé apparaît dans la liste des colonnes dans la table Date, avec une icône qui indique qu’il est un calcul nommé.  
   
 5.  Dans le menu **Fichier** , cliquez sur **Enregistrer tout**.  
   
@@ -53,7 +53,7 @@ ms.locfileid: "36043023"
   
 7.  Faites défiler vers la droite pour afficher la dernière colonne de la vue **Explorer la table Date** .  
   
-     Notez que la `SimpleDate` colonne apparaît dans la vue de source de données, données sont correctement concaténées à partir de plusieurs colonnes de la source de données sous-jacente, sans modifier la source de données d’origine.  
+     Notez que le `SimpleDate` colonne apparaît dans la vue de source de données, données sont correctement concaténées à partir de plusieurs colonnes de la source de données sous-jacente, sans modifier la source de données d’origine.  
   
 8.  Fermez la vue **Explorer la table Date** .  
   
@@ -70,7 +70,7 @@ ms.locfileid: "36043023"
   
 4.  Cliquez sur le champ de propriété **NameColumn** en bas de la fenêtre, puis cliquez sur le bouton où figurent des points de suspension (**…**) pour ouvrir la boîte de dialogue **Colonne de nom** .  
   
-5.  Sélectionnez `SimpleDate` au bas de la **colonne Source** liste, puis cliquez sur **OK**.  
+5.  Sélectionnez `SimpleDate` en bas de la **colonne Source** liste, puis cliquez sur **OK**.  
   
 6.  Dans le menu **Fichier** , cliquez sur **Enregistrer tout**.  
   
@@ -81,17 +81,17 @@ ms.locfileid: "36043023"
   
 1.  Dans **Structure de Dimension** onglet du Concepteur de dimensions pour la `Date` de dimension, faites glisser le **année civile** attribut à partir de la **attributs** volet dans le **Hiérarchies** volet.  
   
-2.  Faites glisser le **semestre calendrier** d’attribut du **attributs** volet dans le  **\<nouveau niveau >** de cellule dans le **hiérarchies**volet, en dessous du **année civile** niveau.  
+2.  Faites glisser le **semestre calendrier** de l’attribut le **attributs** volet dans le  **\<nouveau niveau >** de cellule dans le **hiérarchies**volet, sous la **année civile** niveau.  
   
-3.  Faites glisser le **trimestre de calendrier** d’attribut du **attributs** volet dans le  **\<nouveau niveau >** dans la cellule la **hiérarchies**volet, en dessous du **semestre calendrier** niveau.  
+3.  Faites glisser le **Calendar Quarter** de l’attribut le **attributs** volet dans le  **\<nouveau niveau >** de cellule dans le **hiérarchies**volet, sous la **semestre calendrier** niveau.  
   
-4.  Faites glisser le **English Month Name** d’attribut du **attributs** volet dans le  **\<nouveau niveau >** de cellule dans le **hiérarchies**volet, en dessous du **trimestre** niveau.  
+4.  Faites glisser le **English Month Name** de l’attribut le **attributs** volet dans le  **\<nouveau niveau >** de cellule dans le **hiérarchies**volet, sous la **Calendar Quarter** niveau.  
   
-5.  Faites glisser le **Date Key** d’attribut du **attributs** volet dans le  **\<nouveau niveau >** de cellule dans le **hiérarchies** volet , sous la **English Month Name** niveau.  
+5.  Faites glisser le **Date Key** de l’attribut le **attributs** volet dans le  **\<nouveau niveau >** de cellule dans le **hiérarchies** volet , en dessous de la **English Month Name** niveau.  
   
-6.  Dans le **hiérarchies** volet, avec le bouton droit de la barre de titre de la **hiérarchie** hiérarchie, cliquez sur **renommer**, puis tapez `Calendar Date`.  
+6.  Dans le **hiérarchies** volet, avec le bouton droit de la barre de titre de la **hiérarchie** , cliquez sur **renommer**, puis tapez `Calendar Date`.  
   
-7.  En utilisant le menu contextuel, dans le `Calendar Date` hiérarchie, renommer le **English Month Name** au niveau `Calendar Month`, puis renommez le **Date Key** au niveau `Date`.  
+7.  À l’aide du menu contextuel, dans le `Calendar Date` hiérarchie, renommer le **English Month Name** niveau `Calendar Month`, puis renommez le **Date Key** au niveau `Date`.  
   
 8.  Supprimez l’attribut **Full Date Alternate Key** du volet **Attributs** , car vous ne l’utiliserez pas. Cliquez sur **OK** dans la fenêtre de confirmation **Supprimer les objets** .  
   
@@ -102,7 +102,7 @@ ms.locfileid: "36043023"
   
 #### <a name="to-define-attribute-relationships"></a>Pour définir les relations d'attributs  
   
-1.  Dans le **Concepteur de dimensions** pour le `Date` de dimension, cliquez sur le **des relations d’attributs** onglet.  
+1.  Dans le **Concepteur de dimensions** pour le `Date` de dimension, cliquez sur le **relations d’attributs** onglet.  
   
 2.  Dans le diagramme, cliquez avec le bouton droit sur l’attribut **English Month Name** puis cliquez sur **Nouvelle relation d’attribut**.  
   
@@ -141,7 +141,7 @@ ms.locfileid: "36043023"
   
 2.  Dans le **Tables** volet, avec le bouton droit `Date`, puis cliquez sur **nouveau calcul nommé**.  
   
-3.  Dans le **créer un calcul nommé** boîte de dialogue, tapez `MonthName` dans les **nom de la colonne** zone, puis tapez ou copiez et collez l’instruction suivante dans le **Expression** zone :  
+3.  Dans le **créer un calcul nommé** boîte de dialogue, tapez `MonthName` dans le **nom de colonne** zone, puis tapez ou copiez et collez l’instruction suivante dans le **Expression** zone :  
   
     ```  
     EnglishMonthName+' '+ CONVERT(CHAR (4), CalendarYear)  
@@ -153,7 +153,7 @@ ms.locfileid: "36043023"
   
 5.  Dans le **Tables** volet, avec le bouton droit `Date`, puis cliquez sur **nouveau calcul nommé**.  
   
-6.  Dans le **créer un calcul nommé** boîte de dialogue, tapez `CalendarQuarterDesc` dans les **nom de la colonne** zone, puis tapez ou copiez et collez le script SQL suivant dans le **Expression** zone :  
+6.  Dans le **créer un calcul nommé** boîte de dialogue, tapez `CalendarQuarterDesc` dans le **nom de colonne** zone, puis tapez ou copiez et collez le script SQL suivant dans le **Expression** zone :  
   
     ```  
     'Q' + CONVERT(CHAR (1), CalendarQuarter) +' '+ 'CY ' +  
@@ -166,7 +166,7 @@ ms.locfileid: "36043023"
   
 8.  Dans le **Tables** volet, avec le bouton droit `Date`, puis cliquez sur **nouveau calcul nommé**.  
   
-9. Dans le **créer un calcul nommé** boîte de dialogue, tapez `CalendarSemesterDesc` dans les **nom de la colonne** zone, puis tapez ou copiez et collez le script SQL suivant dans le **Expression** zone :  
+9. Dans le **créer un calcul nommé** boîte de dialogue, tapez `CalendarSemesterDesc` dans le **nom de colonne** zone, puis tapez ou copiez et collez le script SQL suivant dans le **Expression** zone :  
   
     ```  
     CASE  
@@ -249,7 +249,7 @@ ms.locfileid: "36043023"
   
 1.  Dans le menu **Générer** de [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)], cliquez sur **Déployer Analysis Services Tutorial**.  
   
-2.  Après avoir reçu le **déploiement s’est terminée avec succès** , cliquez sur le **navigateur** onglet de **Concepteur de dimensions** pour le `Date` dimension, et Cliquez ensuite sur le bouton reconnecter dans la barre d’outils du concepteur.  
+2.  Après avoir reçu le **déploiement est terminé** du message, cliquez sur le **navigateur** onglet de **Concepteur de dimensions** pour le `Date` dimension, et Cliquez ensuite sur le bouton reconnecter dans la barre d’outils du concepteur.  
   
 3.  Sélectionnez **Calendar Quarter** dans la liste **Hiérarchie** . Vérifiez les membres dans la hiérarchie d’attribut **Calendar Quarter** .  
   
@@ -288,7 +288,7 @@ ms.locfileid: "36043023"
   
      Les membres de la hiérarchie d'attributs sont maintenant triés en premier lieu par année, puis par mois.  
   
-9. Dans le menu **Générer** de [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)], cliquez sur **Déployer Analysis Services Tutorial**. Lorsque le déploiement terminé, cliquez sur le **navigateur** onglet dans le Concepteur de dimensions pour le `Date` dimension.  
+9. Dans le menu **Générer** de [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)], cliquez sur **Déployer Analysis Services Tutorial**. Lorsque le déploiement terminé, cliquez sur le **navigateur** onglet Concepteur de dimensions pour la `Date` dimension.  
   
 10. Dans la barre d’outils de l’onglet **Navigateur** , cliquez sur le bouton Reconnecter.  
   
@@ -301,7 +301,7 @@ ms.locfileid: "36043023"
      Notez que les membres de la hiérarchie sont maintenant triés d'abord par année, puis alphabétiquement par mois. La raison en est que le type de données de la colonne EnglishCalendarMonth dans la vue de source des données est une colonne de chaîne, basée sur le type de données nvarchar dans la base de données relationnelle sous-jacente. Pour plus d’informations sur la façon de trier les mois chronologiquement au sein de chaque année, consultez [Tri des membres d’attribut sur la base d’un attribut secondaire](lesson-4-5-sorting-attribute-members-based-on-a-secondary-attribute.md).  
   
 ## <a name="next-task-in-lesson"></a>Tâche suivante de la leçon  
- [Exploration du Cube déployé](lesson-3-5-browsing-the-deployed-cube.md)  
+ [Exploration du cube déployé](lesson-3-5-browsing-the-deployed-cube.md)  
   
 ## <a name="see-also"></a>Voir aussi  
  [Dimensions dans les modèles multidimensionnels](multidimensional-models/dimensions-in-multidimensional-models.md)  

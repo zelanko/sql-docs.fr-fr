@@ -1,5 +1,5 @@
 ---
-title: Appliquer un filtre à un modèle d’exploration de données | Documents Microsoft
+title: Appliquer un filtre à un modèle d’exploration de données | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - model filter [data mining]
 - filters [data mining]
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - filtering data [Analysis Services]
 ms.assetid: 4d0abeb5-e939-46d3-9097-6e0358244300
 caps.latest.revision: 16
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: cb6cdfdf92e5cec0da4e27a78474037e2bd7d70e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 0f550dde21f45d7850db5cc6a27d2247c565dcee
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36152445"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37253201"
 ---
 # <a name="apply-a-filter-to-a-mining-model"></a>Appliquer un filtre à un modèle d'exploration de données
   Si votre structure d'exploration de données contient une table imbriquée, vous pouvez appliquer un filtre à la table de cas, à la table imbriquée, ou aux deux.  
@@ -70,7 +70,7 @@ WHERE [Model] <> 'Water Bottle' )
   
 8.  Cliquez sur la zone de texte **Valeur** et tapez une valeur dans la zone.  
   
-     Par exemple, sélectionnez `Income` que la colonne, sélectionnez la plus grande que l’opérateur (>), puis tapez `30000`.  
+     Par exemple, sélectionnez `Income` que la colonne, sélectionnez le plus grand que l’opérateur (>) et tapez `30000`.  
   
 9. Cliquez sur la ligne suivante dans la grille.  
   
@@ -82,7 +82,7 @@ WHERE [Model] <> 'Water Bottle' )
   
 11. Sélectionnez un opérateur et tapez une valeur comme décrit dans les étapes 7 et 8.  
   
-     Par exemple, sélectionnez `Income` que la colonne à nouveau, sélectionnez l’opérateur inférieur à (<) et tapez `40000`.  
+     Par exemple, sélectionnez `Income` que la colonne à nouveau, sélectionnez l’opérateur inférieur à (<), puis tapez `40000`.  
   
 12. Cliquez sur la ligne suivante dans la grille.  
   
@@ -119,7 +119,7 @@ EXISTS (SELECT * FROM [<nested table name>] WHERE [Model] <> 'Water Bottle' )
 > [!NOTE]  
 >  Puisque le nombre d'attributs de table imbriquée est potentiellement illimité, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ne fournit pas de liste de valeurs possibles à sélectionner. Vous devez taper la valeur exacte. En outre, vous ne pouvez pas utiliser d'opérateur LIKE dans une table imbriquée.  
   
-1.  Ajouter d’autres conditions selon les besoins, combinez des conditions en sélectionnant `AND` ou `OR` dans les **et/ou** zone située à gauche de la **Conditions** grille. [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+1.  Ajouter d’autres conditions en fonction des besoins, combinez des conditions en sélectionnant `AND` ou `OR` dans le **et/ou** située à gauche de la **Conditions** grille. [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
 2.  Dans la boîte de dialogue **Filtre de modèle** , examinez les conditions que vous avez créées en utilisant la boîte de dialogue **Filtre** . Les conditions pour la table imbriquée sont ajoutées aux conditions pour la table de cas, tandis que le jeu complet de conditions de filtre est affiché dans la zone de texte **Expression** .  
   
@@ -131,7 +131,7 @@ EXISTS (SELECT * FROM [<nested table name>] WHERE [Model] <> 'Water Bottle' )
   
 ## <a name="see-also"></a>Voir aussi  
  [Filtres pour les modèles d’exploration de données &#40;Analysis Services - Exploration de données&#41;](mining-models-analysis-services-data-mining.md)   
- [Tâches liées aux modèles d’exploration de données et procédures](mining-model-tasks-and-how-tos.md)   
+ [Tâches du modèle d’exploration de données et procédures](mining-model-tasks-and-how-tos.md)   
  [Supprimer un filtre d’un modèle d’exploration de données](delete-a-filter-from-a-mining-model.md)  
   
   

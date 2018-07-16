@@ -8,27 +8,27 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.connecttoas.connectionproperties.f1
 ms.assetid: 26cf53e3-3bcb-4697-8a88-53e93bc68b56
 caps.latest.revision: 18
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 1a757ba43fe2a90f532fde71c9bbc0bbf0e902ca
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: a50e63ecd929581f9ae9c185c714fd21dc171c6b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36143756"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37225859"
 ---
 # <a name="connect-to-server-connection-properties-page-analysis-services"></a>Se connecter au serveur (page Propriétés de connexion) - Analysis Services
   Utilisez cet onglet pour afficher ou spécifier les options de connexion à [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] ou d’inscription de [!INCLUDE[ssAS](../includes/ssas-md.md)] dans **Serveurs inscrits**. **Se connecter** et **Options** s’affichent uniquement dans cette boîte de dialogue lors d’une connexion. **Tester** et **Enregistrer** s’affichent uniquement dans cette boîte de dialogue lors de l’inscription de [!INCLUDE[ssAS](../includes/ssas-md.md)].  
   
 ## <a name="options"></a>Options  
  **Se connecter à la base de données**  
- Dans la liste, sélectionnez une base de données à laquelle se connecter. Si vous sélectionnez  **\<par défaut >**, vous serez connecté à la base de données par défaut pour le serveur. Si vous sélectionnez  **\<Parcourir server >**, vous pouvez parcourir le serveur pour la base de données que vous souhaitez vous connecter à.  
+ Dans la liste, sélectionnez une base de données à laquelle se connecter. Si vous sélectionnez  **\<par défaut >**, vous serez connecté à la base de données par défaut pour le serveur. Si vous sélectionnez  **\<parcourir le serveur >**, vous pouvez parcourir le serveur pour la base de données que vous souhaitez vous connecter à.  
   
  **Délai de connexion**  
  Spécifiez le délai d'expiration imparti, en secondes, pour qu'une connexion soit établie. La valeur par défaut est 15 secondes.  

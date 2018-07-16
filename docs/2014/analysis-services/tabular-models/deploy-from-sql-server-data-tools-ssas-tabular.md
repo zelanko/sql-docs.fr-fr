@@ -1,5 +1,5 @@
 ---
-title: Déployer à partir de SQL Server Data Tools (SSAS tabulaire) | Documents Microsoft
+title: Déployer à partir de SQL Server Data Tools (SSAS tabulaire) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.bidtoolset.deploystatus.f1
 ms.assetid: 67dde3fe-ba43-41f3-b56c-c656029ee93f
 caps.latest.revision: 15
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: e1b6193c57df6e6fa75f55b27402793fec20ca5f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: b1498798cedeab8dacfe923754b02ba394937aff
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36151972"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37265328"
 ---
 # <a name="deploy-from-sql-server-data-tools-ssas-tabular"></a>Déployer à partir de SQL Server Data Tools (SSAS Tabulaire)
   Utilisez les tâches de cette rubrique pour déployer une solution de modèle tabulaire à l'aide de la commande Déployer de [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  
@@ -58,7 +58,7 @@ ms.locfileid: "36151972"
   
 #### <a name="to-deploy-a-tabular-model-solution"></a>Pour déployer une solution de modèle tabulaire  
   
--   Dans [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)], dans le **générer** menu, cliquez sur **déployer \<nom du projet >**.  
+-   Dans [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)], dans le **Build** menu, cliquez sur **déployer \<nom_projet >**.  
   
      La boîte de dialogue **Déployer** apparaît et indique l’état du déploiement des métadonnées et du traitement (sauf si la propriété Option de traitement a la valeur Ne pas traiter) de chaque table incluse dans le modèle. Lorsque le déploiement est terminé, utilisez [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] pour vous connecter à l'instance d'Analysis Services et vérifier que le nouvel objet de base de données model a été créé ou utilisez une application de création de rapports cliente pour vous connecter au modèle déployé.  
   
@@ -76,6 +76,6 @@ ms.locfileid: "36151972"
   
 ## <a name="see-also"></a>Voir aussi  
  [Déploiement de solutions de modèle tabulaire &#40;SSAS tabulaire&#41;](tabular-model-solution-deployment-ssas-tabular.md)   
- [Configurer les propriétés de déploiement et de la modélisation des données par défaut &#40;SSAS tabulaire&#41;](properties-ssas-tabular.md)  
+ [Configurer les propriétés de déploiement et de modélisation des données par défaut &#40;SSAS tabulaire&#41;](properties-ssas-tabular.md)  
   
   

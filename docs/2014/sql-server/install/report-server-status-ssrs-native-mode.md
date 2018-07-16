@@ -1,5 +1,5 @@
 ---
-title: État du serveur (SSRS en Mode natif) | Documents Microsoft
+title: Rapport d’état du serveur (SSRS en Mode natif) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - SQL12.rsconfigtool.serverstatus.F1
 ms.assetid: 2f63ad1c-1bc2-449d-b451-fb39a0060838
 caps.latest.revision: 14
 author: markingmyname
 ms.author: maghan
-manager: jhubbard
-ms.openlocfilehash: 914b5ffb0d7cbdfa2368966e110fe4d7ecf278ff
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 8cf6558824461b0de36323f1788933a0cd01815c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36043294"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37292219"
 ---
 # <a name="report-server-status-ssrs-native-mode"></a>État du serveur de rapports (SSRS en mode natif)
   Utilisez cette page pour afficher les informations sur l'instance du serveur de rapports à laquelle vous êtes connecté. Cette page est la page de démarrage pour la configuration du serveur de rapports. Des pages supplémentaires sont disponibles pour configurer les URL, le compte de service, la base de données du serveur de rapports, la remise des messages électroniques du serveur de rapports, le déploiement avec montée en puissance parallèle et les clés de chiffrement.  

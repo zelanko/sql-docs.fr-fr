@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: fd4ddeb8-0cb6-441b-9704-03575c07020f
 caps.latest.revision: 21
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: d2698cc6ce0bd17b7d9cb079fdc4f4c7c1e70c20
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: rothja
+ms.author: jroth
+manager: craigg
+ms.openlocfilehash: 4d131860981e30c6a45d4b7fddbb6d7133d10d6e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36044952"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37209169"
 ---
 # <a name="lesson-2-connecting-from-another-computer"></a>Leçon 2 : Connexion depuis un autre ordinateur
   Pour une sécurité optimale, vous ne pouvez pas accéder au [!INCLUDE[ssDE](../includes/ssde-md.md)] des éditions Developer, Express et Evaluation de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] à partir d'un autre ordinateur lors de sa première installation. Dans cette leçon, vous allez apprendre à activer les protocoles et à configurer les ports et le Pare-feu Windows pour la connexion à partir d'autres ordinateurs.  
@@ -48,7 +48,7 @@ ms.locfileid: "36044952"
     > [!NOTE]  
     >  Il est possible que les options 32 bits et 64 bits soient toutes deux disponibles.  
   
-2.  Dans **Gestionnaire de Configuration SQL Server**, développez **Configuration du réseau SQL Server**, puis cliquez sur **protocoles pour**  *\<nom_instance >*.  
+2.  Dans **Gestionnaire de Configuration SQL Server**, développez **Configuration du réseau SQL Server**, puis cliquez sur **protocoles pour**  *\<InstanceName >*.  
   
      L’instance par défaut (instance sans nom) est répertoriée sous **MSSQLSERVER**. Si vous avez installé une instance nommée, le nom que vous indiquez est répertorié. [!INCLUDE[ssExpressEd11](../includes/ssexpressed11-md.md)] est installé en tant que **SQLEXPRESS**, sauf si vous avez changé le nom lors de l'installation.  
   
@@ -79,7 +79,7 @@ ms.locfileid: "36044952"
   
 7.  Dans le volet droit, cliquez avec le bouton droit sur l’instance de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], puis cliquez sur **Redémarrer**. Lorsque le [!INCLUDE[ssDE](../includes/ssde-md.md)] redémarre, il écoute sur le port `49172`.  
   
-##  <a name="firewall"></a> Ouverture des Ports dans le pare-feu  
+##  <a name="firewall"></a> Ouverture de Ports dans le pare-feu  
  Les systèmes de pare-feu empêchent les accès non autorisés aux ressources de l'ordinateur. Pour vous connecter à [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] à partir d'un autre ordinateur lorsque le pare-feu est activé, vous devez ouvrir un port dans ce pare-feu.  
   
 > [!IMPORTANT]  
@@ -95,7 +95,7 @@ ms.locfileid: "36044952"
   
 3.  Dans la boîte de dialogue **Type de règle** , sélectionnez **Port**, puis cliquez sur **Suivant**.  
   
-4.  Dans la boîte de dialogue **Protocoles et ports** , sélectionnez **TCP**. Sélectionnez **Ports locaux spécifiques**, puis tapez le numéro de port de l'instance du [!INCLUDE[ssDE](../includes/ssde-md.md)]. Tapez 1433 pour l'instance par défaut. Type `49172` si vous configurez une instance nommée et configuré un port fixe dans la tâche précédente. Cliquez sur **Suivant**.  
+4.  Dans la boîte de dialogue **Protocoles et ports** , sélectionnez **TCP**. Sélectionnez **Ports locaux spécifiques**, puis tapez le numéro de port de l'instance du [!INCLUDE[ssDE](../includes/ssde-md.md)]. Tapez 1433 pour l'instance par défaut. Type `49172` si vous configurez une instance nommée et avez configuré un port fixe dans la tâche précédente. Cliquez sur **Suivant**.  
   
 5.  Dans la boîte de dialogue **Action** , sélectionnez **Autoriser la connexion**, puis cliquez sur **Suivant**.  
   

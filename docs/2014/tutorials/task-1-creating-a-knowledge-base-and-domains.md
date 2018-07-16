@@ -1,5 +1,5 @@
 ---
-title: 'Tâche 1 : Création d’une Base de connaissances et domaines | Documents Microsoft'
+title: 'Tâche 1 : Création d’une Base de connaissances et domaines | Microsoft Docs'
 ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
@@ -10,25 +10,25 @@ ms.technology:
 - integration-services
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 7d74a60b-8933-4038-bcbb-4e9dcc4f70e9
 caps.latest.revision: 8
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: beec636f9137802c6651f0c08889acf73000b063
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 9114289ed2a4e09a5f7b59ed016c553c1d225dfc
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36142134"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37226579"
 ---
 # <a name="task-1-creating-a-knowledge-base-and-domains"></a>Tâche 1 : Création d'une base de connaissances et de domaines
-  Dans cette tâche, vous allez créer le **fournisseurs** base de connaissances et de créer des domaines qui est utilisé pour la correspondance des données et de nettoyage des données pour supprimer les doublons.  
+  Dans cette tâche, vous allez créer le **fournisseurs** base de connaissances et créer des domaines qui est utilisé pour la correspondance des données et de nettoyage des données pour supprimer les doublons.  
   
-1.  Lancez **Data Quality Client**. Cliquez sur **Démarrer**, pointez sur **tous les programmes**, cliquez sur **Microsoft SQL Server 2012**, cliquez sur **Data Quality Services**, puis cliquez sur  **Client de qualité des données**.  
+1.  Lancez **Data Quality Client**. Cliquez sur **Démarrer**, pointez sur **tous les programmes**, cliquez sur **Microsoft SQL Server 2012**, cliquez sur **Data Quality Services**, puis cliquez sur  **Data Quality Client**.  
   
-2.  Dans le **se connecter au serveur** boîte de dialogue, sélectionnez l’instance de serveur de base de données sur lequel DQS est installé, puis cliquez sur **connexion**.  
+2.  Dans le **se connecter au serveur** boîte de dialogue, sélectionnez l’instance de serveur de base de données sur lequel DQS est installée, puis cliquez sur **Connect**.  
   
      ![Se connecter à la boîte de dialogue serveur](../../2014/tutorials/media/et-creatingaknowledgebaseanddomains-01.jpg "se connecter à la boîte de dialogue serveur")  
   
@@ -38,9 +38,9 @@ ms.locfileid: "36142134"
   
 4.  Entrez **fournisseurs** pour **nom** de la base de connaissances.  
   
-     ![Nouvelle Base de connaissances - gestion des domaines](../../2014/tutorials/media/et-creatingaknowledgebaseanddomains-03.jpg "nouvelle Base de connaissances - gestion de domaine")  
+     ![Nouvelle Base de connaissances - gestion des domaines](../../2014/tutorials/media/et-creatingaknowledgebaseanddomains-03.jpg "nouvelle Base de connaissances - gestion des domaines")  
   
-5.  Vérifiez que **créer la Base de connaissances à partir de** champ est défini sur **aucun** étant donné que vous créez le **fournisseurs** base de connaissances à partir de zéro.  
+5.  Vérifiez que **créer la Base de connaissances à partir de** champ est défini sur **aucun** dans la mesure où vous créez le **fournisseurs** base de connaissances à partir de zéro.  
   
 6.  Vérifiez que **gestion des domaines** est sélectionné pour le **activité** et cliquez sur **suivant**. L'activité de Gestion de l'arborescence du domaine vous permet de créer et gérer des domaines dans la base de connaissances.  
   
@@ -50,13 +50,13 @@ ms.locfileid: "36142134"
   
 8.  Dans le **créer un domaine** boîte de dialogue, tapez **ID du fournisseur** pour le **nom de domaine**, puis cliquez sur **OK**.  
   
-     ![Créer la boîte de dialogue domaine](../../2014/tutorials/media/et-creatingaknowledgebaseanddomains-05.jpg "créer la boîte de dialogue de domaine")  
+     ![Créer la boîte de dialogue domaine](../../2014/tutorials/media/et-creatingaknowledgebaseanddomains-05.jpg "créer la boîte de dialogue domaine")  
   
-9. Répétez l'étape précédente pour créer les domaines suivants avec les paramètres par défaut. Pour simplifier le didacticiel, vous définissez la **Type de données** de tous les domaines en tant que **chaîne**. Les autres types de données autorisés sont : entier, décimal, et date. Lorsque le **utiliser des valeurs de début** option est activée (par défaut), tous les synonymes sont remplacés par la valeur de début du groupe de synonymes dans la sortie. Paramètre **normaliser la chaîne** option (par défaut) supprime tous les caractères spéciaux dans les valeurs de domaine. Le **Format de sortie à** option vous permet de sélectionner la mise en forme est appliquée lorsque les valeurs de données dans le domaine sont générées. Sélectionnez **activer le vérificateur d’orthographe** (par défaut) pour exécuter le vérificateur d’orthographe sur toutes les valeurs de chaîne en remplissant le domaine. Le **langage** paramètre spécifie la version linguistique de la **vérificateur d’orthographe** vous souhaitez appliquer. Sélectionnez **désactiver les algorithmes d’erreur de syntaxe** pour remplir le domaine sans vérifier les valeurs de chaîne pour les erreurs de syntaxe. Consultez [créer un domaine](http://msdn.microsoft.com/library/hh510401.aspx) rubrique dans MSDN library pour plus de détails.  
+9. Répétez l'étape précédente pour créer les domaines suivants avec les paramètres par défaut. Pour simplifier le didacticiel, vous définissez le **Type de données** de tous les domaines en tant que **chaîne**. Les autres types de données autorisés sont : entier, décimal, et date. Lorsque le **utiliser des valeurs Menantes** option est activée (par défaut), tous les synonymes sont remplacés par la valeur de début du groupe de synonymes dans la sortie. Paramètre **normaliser la chaîne** option (valeur par défaut) supprime tous les caractères spéciaux dans les valeurs de domaine. Le **Format de sortie à** option vous permet de sélectionner la mise en forme est appliquée lorsque les valeurs de données dans le domaine sont générées. Sélectionnez **activer le vérificateur d’orthographe** (valeur par défaut) pour exécuter le vérificateur orthographique sur toutes les valeurs de chaîne en remplissant le domaine. Le **langage** paramètre spécifie la version linguistique de la **le vérificateur d’orthographe** vous souhaitez appliquer. Sélectionnez **désactiver les algorithmes d’erreur de syntaxe** pour remplir le domaine sans vérifier les valeurs de chaîne pour les erreurs de syntaxe. Consultez [créer un domaine](http://msdn.microsoft.com/library/hh510401.aspx) rubrique dans la bibliothèque MSDN pour plus d’informations.  
   
     -   Nom du fournisseur  
   
-    -   Messagerie de contact  
+    -   Adresse de messagerie  
   
     -   Adresse  
   

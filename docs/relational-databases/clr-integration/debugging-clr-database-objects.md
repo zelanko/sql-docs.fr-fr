@@ -1,12 +1,11 @@
 ---
-title: Débogage d’objets de base de données CLR | Documents Microsoft
+title: Débogage d’objets de base de données CLR | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
-ms.prod_service: database-engine
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: reference
+ms.technology: clr
 ms.topic: reference
 helpviewer_keywords:
 - database objects [CLR integration], debugging
@@ -19,21 +18,21 @@ caps.latest.revision: 46
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 67fd37b04592bd4daeeb6a03c95d3c1976109ed4
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
+ms.openlocfilehash: 5a983312beb68f266c20973e70f730eb13bd89e6
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35701010"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37354341"
 ---
 # <a name="debugging-clr-database-objects"></a>Débogage d'objets de base de données CLR
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] prend en charge le débogage d'objets [!INCLUDE[tsql](../../includes/tsql-md.md)] et CLR dans la base de données. Les principaux atouts du débogage dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sont la facilité d'installation et d'utilisation, et l'intégration du débogueur SQL Server avec le débogueur Microsoft Visual Studio. En outre, le débogage fonctionne sur plusieurs langages. Les utilisateurs peuvent effectuer de façon transparente un pas à pas détaillé dans les objets CLR à partir de [!INCLUDE[tsql](../../includes/tsql-md.md)] et vice versa. Le débogueur Transact-SQL dans SQL Server Management Studio ne peut pas être utilisé pour déboguer des objets de base de données managés, mais vous pouvez déboguer les objets en utilisant les débogueurs de Visual Studio. Le débogage d'objets de base de données managés dans Visual Studio prend en charge toutes les fonctionnalités de débogage classiques, par exemple, les instructions "step into" et "step over" dans les routines qui s'exécutent sur le serveur. Les débogueurs peuvent définir des points d'arrêt, inspecter la pile des appels, inspecter les variables et modifier des valeurs de variables en cours de débogage. Notez que Visual Studio .NET 2003 ne peut pas être utilisé pour le débogage ou la programmation de l'intégration du CLR. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] inclut le .NET Framework préinstallé et Visual Studio .NET 2003 ne peut pas utiliser les assemblys .NET Framework 2.0.  
   
- Pour plus d’informations sur le débogage de code managé à l’aide de Visual Studio, consultez le «[débogage du Code managé](http://go.microsoft.com/fwlink/?LinkId=120377)« rubrique dans la documentation de Visual Studio.  
+ Pour plus d’informations sur le débogage du code managé à l’aide de Visual Studio, consultez le «[Debugging Managed Code](http://go.microsoft.com/fwlink/?LinkId=120377)« rubrique dans la documentation de Visual Studio.  
   
 ## <a name="debugging-permissions-and-restrictions"></a>Autorisations et restrictions de débogage  
- Le débogage est une opération hautement privilégiée et par conséquent, seuls les membres de la **sysadmin** rôle serveur fixe sont autorisés à effectuer dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ Le débogage est une opération disposant de privilèges élevés et par conséquent, seuls les membres de la **sysadmin** rôle serveur fixe sont autorisés à effectuer dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  Les restrictions suivantes s'appliquent dans le cadre du débogage :  
   
@@ -46,7 +45,7 @@ ms.locfileid: "35701010"
 ## <a name="overview-of-debugging-managed-database-objects"></a>Vue d'ensemble du débogage des objets de base de données managés  
  Le débogage dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] suit un modèle « par connexion ». Un débogueur peut détecter et déboguer des activités uniquement sur la connexion cliente à laquelle il est attaché. Comme les fonctionnalités du débogueur ne sont pas limitées par le type de connexion, il est possible de déboguer à la fois des TDS (Tabular Data Stream) et des connexions HTTP. Toutefois, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] n'autorise pas le débogage des connexions existantes. Le débogage prend en charge toutes les fonctionnalités de débogage communes dans les routines qui s'exécutent sur le serveur. L'interaction entre un débogueur et [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] s'effectue par le biais d'un modèle COM (Component Object Model) distribué.  
   
- Pour plus d’informations et des scénarios de débogage des procédures stockées managées, des fonctions, des déclencheurs, des types définis par l’utilisateur et des agrégats, consultez le «[débogage pour la base de données SQL Server CLR Integration](http://go.microsoft.com/fwlink/?LinkId=120378)« rubrique dans Visual Studio documentation.  
+ Pour plus d’informations et des scénarios de débogage des procédures stockées managées, les fonctions, les déclencheurs, les types définis par l’utilisateur et les agrégats, consultez le «[débogage pour la base de données SQL Server CLR Integration](http://go.microsoft.com/fwlink/?LinkId=120378)« rubrique dans Visual Studio documentation.  
   
  Le protocole réseau TCP/IP doit être activé sur l'instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] afin d'utiliser Visual Studio pour le développement et le débogage distants. Pour plus d’informations sur l’activation du protocole TCP/IP sur le serveur, consultez [configurer des protocoles clients](../../database-engine/configure-windows/configure-client-protocols.md).  
   
@@ -54,17 +53,17 @@ ms.locfileid: "35701010"
   
 1.  Ouvrez Microsoft Visual Studio, créez un projet [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et établissez une connexion à une base de données sur une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-2.  Créez un type. Dans **l’Explorateur de solutions**, cliquez sur le projet, sélectionnez **ajouter** et **un nouvel élément...** À partir de la **ajouter un nouvel élément** fenêtre, sélectionnez **la procédure stockée**, **(fonction) définis par l’utilisateur**, **User-Defined Type**,  **Déclencheur**, **d’agrégation**, ou **classe**. Spécifiez un nom pour le fichier source du nouveau type, cliquez sur **ajouter**.  
+2.  Créez un type. Dans **l’Explorateur de solutions**, cliquez sur le projet, sélectionnez **ajouter** et **un nouvel élément...** À partir de la **ajouter un nouvel élément** fenêtre, sélectionnez **la procédure stockée**, **(fonction) définis par l’utilisateur**, **définis par l’utilisateur Type**,  **Déclencheur**, **agrégation**, ou **classe**. Spécifiez un nom pour le fichier source du nouveau type, cliquez sur **ajouter**.  
   
 3.  Ajoutez le code du nouveau type à l'éditeur de texte. Pour obtenir le code d'un exemple de procédure stockée, consultez la section correspondante plus loin dans cette rubrique.  
   
-4.  Ajoutez un script qui teste le type. Dans **l’Explorateur de solutions**, développez le **TestScripts** double-clic du répertoire **Test.sql** pour ouvrir le fichier de source du script de test par défaut. Ajoutez à l'éditeur de texte un script de test qui appelle le code à déboguer. Un exemple de script est proposé ci-dessous.  
+4.  Ajoutez un script qui teste le type. Dans **l’Explorateur de solutions**, développez le **TestScripts** double-clic directory **Test.sql** pour ouvrir le fichier de source de script de test par défaut. Ajoutez à l'éditeur de texte un script de test qui appelle le code à déboguer. Un exemple de script est proposé ci-dessous.  
   
-5.  Placez un ou plusieurs points d'arrêt dans le code source. Avec le bouton droit sur une ligne de code dans l’éditeur de texte, dans la fonction ou d’une routine que vous voulez déboguer, puis sélectionnez **point d’arrêt** et **insérer un point d’arrêt**. Le point d'arrêt est ajouté et la ligne de code est affichée en rouge.  
+5.  Placez un ou plusieurs points d'arrêt dans le code source. Avec le bouton droit sur une ligne de code dans l’éditeur de texte, dans la fonction ou de la routine que vous souhaitez déboguer, puis sélectionnez **point d’arrêt** et **insérer un point d’arrêt**. Le point d'arrêt est ajouté et la ligne de code est affichée en rouge.  
   
 6.  Dans le **déboguer** menu, sélectionnez **démarrer le débogage** pour compiler, déployer et tester le projet. Le script de test dans Test.sql est exécuté et l'objet de base de données managé est appelé.  
   
-7.  Lorsque la flèche jaune qui désigne le pointeur d'instruction apparaît au niveau du point d'arrêt, l'exécution du code est  suspendue et vous pouvez commencer à déboguer votre objet de base de données managé. Vous pouvez **pas à pas principal** à partir de la **déboguer** menu pour faire avancer le pointeur d’instruction à la ligne suivante de code. Le **variables locales** fenêtre permet d’observer l’état des objets mis en surbrillance par le pointeur d’instruction. Les variables peuvent être ajoutés à la **espion** fenêtre. L'état des variables espionnées peut être consulté tout au long de la session de débogage, et non uniquement lorsque la variable figure dans la ligne de code mise en surbrillance par le pointeur d'instruction. Sélectionnez Continuer dans le menu Déboguer pour faire avancer le pointeur d'instruction jusqu'au point d'arrêt suivant ou pour terminer l'exécution de la routine s'il n'y a plus de points d'arrêt.  
+7.  Lorsque la flèche jaune qui désigne le pointeur d'instruction apparaît au niveau du point d'arrêt, l'exécution du code est  suspendue et vous pouvez commencer à déboguer votre objet de base de données managé. Vous pouvez **pas à pas principal** à partir de la **déboguer** menu pour faire avancer le pointeur d’instruction à la ligne suivante de code. Le **variables locales** fenêtre permet d’observer l’état des objets mis en surbrillance par le pointeur d’instruction. Variables peuvent être ajoutées à la **espion** fenêtre. L'état des variables espionnées peut être consulté tout au long de la session de débogage, et non uniquement lorsque la variable figure dans la ligne de code mise en surbrillance par le pointeur d'instruction. Sélectionnez Continuer dans le menu Déboguer pour faire avancer le pointeur d'instruction jusqu'au point d'arrêt suivant ou pour terminer l'exécution de la routine s'il n'y a plus de points d'arrêt.  
   
 ### <a name="example"></a>Exemple  
  L'exemple suivant retourne la version de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] à l'appelant.  

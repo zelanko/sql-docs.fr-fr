@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - View Designer, Results pane
 - queries [Visual Database Tools]
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - Results pane
 ms.assetid: 4f8a0080-91ef-4442-83ae-53be2f478c54
 caps.latest.revision: 13
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 65172c670d13b1cf38f3017d3477c5a3888014fc
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 56c05c3d2b67c7e468fbf66930b3321de742c90e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36044665"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37249509"
 ---
 # <a name="work-with-data-in-the-results-pane-visual-database-tools"></a>Utiliser des données du volet de résultats (Visual Database Tools)
   Après avoir exécuté une requête ou une vue, les résultats sont affichés dans le volet Résultats. Vous pouvez ensuite travailler avec ces résultats. Par exemple, vous pouvez ajouter ou supprimer des lignes, entrer ou modifier des données, et naviguer facilement parmi les vastes ensembles de résultats.  
@@ -121,7 +121,7 @@ ms.locfileid: "36044665"
   
 -   Les types de données binary sont souvent inutiles pour ceux qui travaillent dans le volet Résultats, et leur téléchargement peut être très long. Ils sont donc représentés par  *\<données binaires >* ou *Null*.  
   
--   Les valeurs Precision et Scale ne peuvent pas toujours être conservées. Par exemple, le volet Résultats prend en charge une précision de 27. Si les données sont d’un type de données avec une précision supérieure, les données peuvent être tronquées ou peuvent être représentées par  *\<Impossible de lire des données >*.  
+-   Les valeurs Precision et Scale ne peuvent pas toujours être conservées. Par exemple, le volet Résultats prend en charge une précision de 27. Si les données sont d’un type de données avec une précision supérieure, les données peuvent être tronquées ou représentées par  *\<Impossible de lire des données >*.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Effectuer des opérations de base avec des requêtes &#40;Visual Database Tools&#41;](perform-basic-operations-with-queries-visual-database-tools.md)   

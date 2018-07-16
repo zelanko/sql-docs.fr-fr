@@ -1,5 +1,5 @@
 ---
-title: 'SQL : overflow-field (SQLXML 4.0) | Documents Microsoft'
+title: 'SQL : overflow-field (SQLXML 4.0) | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - sql:overflow-field
 ms.assetid: f005182b-6151-432d-ab22-3bc025742cd3
 caps.latest.revision: 21
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 3a1ea697a212058218be295a49c3ad2ecc7c644c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 3b78db405442ea15fe3d62db4688eb82440dfb2c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36039255"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37246243"
 ---
 # <a name="sqloverflow-field-sqlxml-40"></a>sql:overflow-field (SQLXML 4.0)
   Dans un schéma, vous pouvez identifier une colonne en tant que colonne de dépassement destinée à recevoir toutes les données non consommées du document XML. Cette colonne est spécifiée dans le schéma à l'aide de l'annotation `sql:overflow-field`. Un schéma peut contenir plusieurs colonnes de dépassement.  
@@ -34,7 +34,7 @@ ms.locfileid: "36039255"
   
  En même temps qu'il stocke des données dans la colonne de dépassement, le chargement en masse XML stocke les balises d'ouverture et de fermeture de l'élément parent pour lequel `sql:overflow-field` est défini.  
   
- Par exemple, le schéma suivant décrit la  **\<clients >** et  **\<CustOrder >** éléments. Chacun de ces éléments identifie une colonne de dépassement :  
+ Par exemple, le schéma suivant décrit le  **\<clients >** et  **\<CustOrder >** éléments. Chacun de ces éléments identifie une colonne de dépassement :  
   
 ```  
 <?xml version="1.0" ?>  

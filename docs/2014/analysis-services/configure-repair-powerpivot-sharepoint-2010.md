@@ -1,5 +1,5 @@
 ---
-title: Configurer ou réparer PowerPivot pour SharePoint 2010 (outil de Configuration PowerPivot) | Documents Microsoft
+title: Configurer ou réparer PowerPivot pour SharePoint 2010 (outil de Configuration PowerPivot) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: d61f49c5-efaa-4455-98f2-8c293fa50046
 caps.latest.revision: 21
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 3aad2530c6f8506dd3da6224c9d91f5ae46f9f27
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 6cf032b8f36d9329cd3e5ae480ea5d667da2d36f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36044034"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37284265"
 ---
 # <a name="configure-or-repair-powerpivot-for-sharepoint-2010-powerpivot-configuration-tool"></a>Configurer ou réparer PowerPivot pour SharePoint 2010 (outil de configuration de PowerPivot)
   Utilisez l'Outil de configuration de PowerPivot pour configurer ou réparer une installation de [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] PowerPivot pour SharePoint 2010. L'outil de configuration commence par analyser le système, puis retourne une liste d'actions nécessaires pour achever ou réparer votre installation. Le [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] Assistant Installation installe l’outil de Configuration de PowerPivot pour SharePoint 2010 et un outil de Configuration de PowerPivot pour SharePoint 2013. Cette rubrique décrit l'outil de configuration de PowerPivot pour SharePoint 2010. Pour plus d’informations sur SharePoint 2010, consultez [configurer ou réparer PowerPivot pour SharePoint 2013 &#40;outil de Configuration PowerPivot&#41;](power-pivot-sharepoint/configure-or-repair-power-pivot-for-sharepoint-2013.md).  
@@ -31,7 +31,7 @@ ms.locfileid: "36044034"
 ##  <a name="bkmk_before"></a> Avant de commencer  
  L'outil de configuration PowerPivot pour SharePoint 2010 recherche les fichiers programme, les paramètres du Registre et les ports disponibles. Pour optimiser l'utilisation de ces outils, vérifiez les points suivants.  
   
--   Exigences générales pour exécuter l’outil de configuration [outils de Configuration PowerPivot](power-pivot-sharepoint/power-pivot-configuration-tools.md).  
+-   Exigences générales pour exécuter l’outil de configuration, [PowerPivot Configuration Tools](power-pivot-sharepoint/power-pivot-configuration-tools.md).  
   
 -   PowerPivot pour SharePoint 2010 requiert que les applications Web soient configurées pour l'authentification en mode classique. Si l'outil de configuration de PowerPivot pour SharePoint 2010 crée l'application pour vous, celle-ci est configurée en mode classique.  
   
@@ -94,7 +94,7 @@ ms.locfileid: "36044034"
   
 |Radiomessagerie|Valeur d'entrée|Source|Description|  
 |----------|-----------------|------------|-----------------|  
-|**Configurer ou réparer PowerPivot pour SharePoint**|Compte par défaut|Utilisateur actuel|Le compte par défaut est un compte d'utilisateur de domaine Windows utilisé pour configurer des services partagés dans la batterie. Il est utilisé pour configurer l'application de service PowerPivot, le service Banque d'informations sécurisé, Excel Services, l'identité du pool d'applications Web, l'administrateur de collection de sites, et le compte d'actualisation sans assistance des données PowerPivot.<br /><br /> Par défaut, l'outil utilise le compte de domaine de l'utilisateur actuel. À moins de configurer un serveur à des fins d'évaluation, vous devez le remplacer par un autre compte d'utilisateur de domaine.<br /><br /> Vous pouvez aussi modifier les identités de service ultérieurement, à l'aide de l'Administration centrale.<br /><br /> Éventuellement, dans l'outil de configuration de PowerPivot, vous pouvez spécifier des comptes dédiés pour ce qui suit :<br /><br /> Application Web, à l'aide de la page **Créer une application Web par défaut** (en supposant que l'outil crée une application Web pour la batterie).<br /><br /> Compte d’actualisation des données sans assistance, à l’aide de PowerPivot le **créer un compte sans assistance pour l’actualisation des données** page de cet outil.|  
+|**Configurer ou réparer PowerPivot pour SharePoint**|Compte par défaut|Utilisateur actuel|Le compte par défaut est un compte d'utilisateur de domaine Windows utilisé pour configurer des services partagés dans la batterie. Il est utilisé pour configurer l'application de service PowerPivot, le service Banque d'informations sécurisé, Excel Services, l'identité du pool d'applications Web, l'administrateur de collection de sites, et le compte d'actualisation sans assistance des données PowerPivot.<br /><br /> Par défaut, l'outil utilise le compte de domaine de l'utilisateur actuel. À moins de configurer un serveur à des fins d'évaluation, vous devez le remplacer par un autre compte d'utilisateur de domaine.<br /><br /> Vous pouvez aussi modifier les identités de service ultérieurement, à l'aide de l'Administration centrale.<br /><br /> Éventuellement, dans l'outil de configuration de PowerPivot, vous pouvez spécifier des comptes dédiés pour ce qui suit :<br /><br /> Application Web, à l'aide de la page **Créer une application Web par défaut** (en supposant que l'outil crée une application Web pour la batterie).<br /><br /> Compte d’actualisation des données sans assistance, à l’aide de PowerPivot le **créer un compte sans assistance pour l’actualisation des données** page dans cet outil.|  
 ||Serveur de base de données|Instance nommée PowerPivot locale, si disponible|Si une instance du moteur de base de données est installée en tant qu'instance nommée PowerPivot, l'outil renseignera le champ du serveur de base de données avec cette instance. Si vous n'avez pas installé le moteur de base de données, ce champ est vide. Vous devez fournir une instance. Il peut s'agir de n'importe quelle version ou édition de SQL Server prise en charge pour les batteries de serveurs SharePoint.|  
 ||Phrase secrète|Entrée utilisateur|Si vous créez une nouvelle batterie, la phrase secrète que vous entrez sera la phrase secrète pour la batterie. Si vous ajoutez PowerPivot pour SharePoint à une batterie de serveurs existante, vous devez fournir la phrase secrète qui a été définie pour la batterie lors de sa création.|  
 ||Port de l'Administration centrale de SharePoint|Par défaut, si nécessaire|Si la batterie de serveurs n'est pas configurée, l'outil fournit des options pour la création de la batterie de serveurs, notamment pour la création d'un point de terminaison HTTP dans l'Administration centrale. Il choisit par défaut un numéro de port généré de manière aléatoire qui n'est pas encore utilisé.|  
@@ -103,8 +103,8 @@ ms.locfileid: "36044034"
 |**Créer l’Application de Service PowerPivot**|Nom de l'application de service PowerPivot|Valeur par défaut|Le nom par défaut est celui de l'application de service PowerPivot par défaut. Vous pouvez le remplacer par une valeur différente dans l'outil.|  
 ||Serveur de base de données d'application de service PowerPivot|Valeur par défaut|Serveur de base de données qui héberge la base de données d'application de service PowerPivot. Le nom par défaut du serveur est le même que celui du serveur de base de données utilisé pour la batterie. Vous pouvez le remplacer par une valeur différente dans l'outil.|  
 ||Nom de la base de données d'application de service PowerPivot|Valeur par défaut|Le nom de la base de données par défaut est basé sur le nom de l'application de service, suivi d'un GUID pour garantir un nom unique. Vous pouvez le remplacer par une valeur différente dans l'outil.|  
-||Mettre les classeurs à niveau pour activer l'actualisation des données|Entrée utilisateur|L'actualisation des données échoue et n'est pas prise en charge pour les classeurs SQL Server 2008 R2 PowerPivot. L’option **d’actualisation des classeurs mise à niveau pour activer les données** met à niveau les classeurs vers la version de SQL Server 2012 PowerPivot.|  
-|**Créer une application Web par défaut**|Nom de l'application Web|Par défaut, si nécessaire|S'il n'existe aucune application Web, l'outil en crée une. L’application web est configurée pour l’authentification en mode classique et écoute sur **le port 80**. La taille maximale de téléchargement de fichier a la valeur 2047 Mo, qui est la valeur maximale autorisée par SharePoint. La taille maximale de téléchargement de fichiers est adaptée aux fichiers PowerPivot volumineux.|  
+||Mettre les classeurs à niveau pour activer l'actualisation des données|Entrée utilisateur|L'actualisation des données échoue et n'est pas prise en charge pour les classeurs SQL Server 2008 R2 PowerPivot. L’option **mettre les classeurs pour activer les données actualisation** met à niveau les classeurs vers la version de SQL Server 2012 PowerPivot.|  
+|**Créer une application Web par défaut**|Nom de l'application Web|Par défaut, si nécessaire|S'il n'existe aucune application Web, l'outil en crée une. L’application web est configurée pour l’authentification en mode classique et écouter sur **le port 80**. La taille maximale de téléchargement de fichier a la valeur 2047 Mo, qui est la valeur maximale autorisée par SharePoint. La taille maximale de téléchargement de fichiers est adaptée aux fichiers PowerPivot volumineux.|  
 ||URL|Par défaut, si nécessaire|L'outil crée une URL basée sur le nom du serveur, en respectant les mêmes conventions d'affectation de noms de fichier que SharePoint.|  
 ||Pool d'applications Web|Par défaut, si nécessaire|L'outil crée un pool d'applications par défaut dans IIS.|  
 ||Compte et mot de passe du pool d'applications Web|Par défaut, si nécessaire|Le compte du pool d'applications est basé sur le compte par défaut, mais vous pouvez le remplacer dans l'outil.|  
@@ -129,7 +129,7 @@ ms.locfileid: "36044034"
 ||Nom d'utilisateur et mot de passe du compte sans assistance||Tapez les informations d'identification d'un compte d'utilisateur Windows utilisé par l'application cible et pour exécuter l'actualisation des données sans assistance.|  
 ||URL du site||Tapez l'URL du site de la collection de sites associée à l'application cible. Pour associer d'autres collections de sites, utilisez l'Administration centrale de SharePoint.|  
 |**Créer une application de service Excel Services**|Nom d'application de service||Entrez un nom pour l'application de service. Une base de données d'application de service portant le même nom est créée sur le serveur de base de données de la batterie de serveurs SharePoint.|  
-|**Ajouter MSOLAP.5 en tant qu’un fournisseur approuvé**|Nom d'application de service||Excel Services dans SharePoint 2010 utilise le fournisseur [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] OLE DB pour la connexion aux données [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. Cette étape ajoute le fournisseur OLE DB installé avec PowerPivot pour SharePoint en tant que fournisseur approuvé dans Excel Services.|  
+|**Ajouter MSOLAP.5 en tant que fournisseur approuvé**|Nom d'application de service||Excel Services dans SharePoint 2010 utilise le fournisseur [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] OLE DB pour la connexion aux données [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. Cette étape ajoute le fournisseur OLE DB installé avec PowerPivot pour SharePoint en tant que fournisseur approuvé dans Excel Services.|  
 ||Nom du serveur PowerPivot|||  
 |||||  
   
@@ -153,11 +153,11 @@ ms.locfileid: "36044034"
 -   Téléchargez l'outil de création PowerPivot vers votre station de travail pour créer un classeur PowerPivot puis le publier sur SharePoint. L'installation de l'outil et la publication d'un classeur PowerPivot complètent le cycle d'installation en vérifiant l'interopérabilité des composants serveur que vous venez d'installer.  
   
 ### <a name="grant-sharepoint-permissions-to-workbook-users"></a>Accorder des autorisations SharePoint aux utilisateurs des classeurs  
- Les utilisateurs ont besoin d'autorisations SharePoint pour pouvoir publier ou consulter des classeurs. Veillez à accorder **vue** des autorisations aux utilisateurs qui ont besoin de consulter des classeurs publiés et **collaboration** des autorisations aux utilisateurs qui publient ou gèrent des classeurs. Vous devez être administrateur de collection de sites pour pouvoir accorder des autorisations.  
+ Les utilisateurs ont besoin d'autorisations SharePoint pour pouvoir publier ou consulter des classeurs. Veillez à accorder **vue** autorisations aux utilisateurs qui ont besoin de consulter des classeurs publiés et **Contribute** autorisations aux utilisateurs qui publient ou gèrent des classeurs. Vous devez être administrateur de collection de sites pour pouvoir accorder des autorisations.  
   
 1.  Dans le site, cliquez sur **Actions du Site**.  
   
-2.  Cliquez sur **autorisations de Site**.  
+2.  Cliquez sur **autorisations du Site**.  
   
 3.  Créez autant de groupes que nécessaire si vous souhaitez configurer un ensemble d'utilisateurs ayant des autorisations de **Collaboration** et un groupe différent d'utilisateurs ayant uniquement des autorisations d' **Affichage** .  
   
@@ -166,7 +166,7 @@ ms.locfileid: "36044034"
 ### <a name="install-adonet-data-services-35-sp1"></a>Installer ADO.NET Data Services 3.5 SP1  
  ADO.NET Data Services est requis pour une exportation de flux de données de listes SharePoint. SharePoint 2010 n'inclut pas ce composant dans le programme PrerequisiteInstaller requis pour SharePoint. Par conséquent, vous devez l'installer manuellement.  
   
-1.  Accédez à la documentation relative à la configuration requise matérielle et logicielle pour SharePoint 2010, [déterminer matérielle et logicielle requise (SharePoint 2010)](http://go.microsoft.com/fwlink/?LinkId=169734)  
+1.  Accédez à la documentation relative à la configuration requise matérielle et logicielle pour SharePoint 2010, [déterminer la configuration matérielle et logicielle requise (SharePoint Server 2010)](http://go.microsoft.com/fwlink/?LinkId=169734)  
   
 2.  Dans Installer les logiciels requis, recherchez le lien pour ADO.NET Data Services 3.5 correspondant au système d'exploitation que vous utilisez.  
   
@@ -185,10 +185,10 @@ ms.locfileid: "36044034"
  Avec le temps, si vous déterminez que des capacités supplémentaires de stockage et de traitement des données sont nécessaires, ajoutez une deuxième instance de serveur PowerPivot pour SharePoint à la batterie de serveurs. Pour obtenir des instructions, consultez [liste de vérification de déploiement : montée en puissance en ajoutant des serveurs PowerPivot à une batterie de serveurs SharePoint 2010](../../2014/sql-server/install/deployment-checklist-scale-out-adding-powerpivot-servers-sharepoint-2010-farm.md).  
   
 ## <a name="additional-resources"></a>Ressources supplémentaires  
- ![Les paramètres SharePoint](media/as-sharepoint2013-settings-gear.gif "paramètres SharePoint") [envoyer les informations de contact et les commentaires via Microsoft SQL Server Connect](https://connect.microsoft.com/SQLServer/Feedback) (https://connect.microsoft.com/SQLServer/Feedback).  
+ ![Paramètres SharePoint](media/as-sharepoint2013-settings-gear.gif "paramètres SharePoint") [envoyer des commentaires et des informations via Microsoft SQL Server Connect](https://connect.microsoft.com/SQLServer/Feedback) (https://connect.microsoft.com/SQLServer/Feedback).  
   
 ## <a name="see-also"></a>Voir aussi  
- [Outils de Configuration PowerPivot](power-pivot-sharepoint/power-pivot-configuration-tools.md)   
- [Administration de serveur PowerPivot et de Configuration dans l’Administration centrale](power-pivot-sharepoint/power-pivot-server-administration-and-configuration-in-central-administration.md)  
+ [Outils de Configuration de PowerPivot](power-pivot-sharepoint/power-pivot-configuration-tools.md)   
+ [Administration et configuration d’un serveur PowerPivot dans l’Administration centrale](power-pivot-sharepoint/power-pivot-server-administration-and-configuration-in-central-administration.md)  
   
   

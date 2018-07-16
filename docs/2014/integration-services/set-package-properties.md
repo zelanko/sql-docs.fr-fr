@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Integration Services packages, properties
 - properties [Integration Services]
@@ -28,13 +28,13 @@ ms.assetid: 13f81c3e-2b18-4f83-b445-a2f4a2c560aa
 caps.latest.revision: 39
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: c7cb436d29f4401122daba5985558e3bb50e665f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 0619ba605e154bab645041602b95436560fa8769
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36141612"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37279545"
 ---
 # <a name="set-package-properties"></a>Définir les propriétés d'un package
   Lorsque vous créez un package dans [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] à l'aide de l'interface graphique fournie par [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] , vous définissez les propriétés de l'objet de package dans la fenêtre Propriétés.  
@@ -63,7 +63,7 @@ ms.locfileid: "36141612"
   
 ### <a name="to-set-package-properties-in-the-properties-window"></a>Pour définir les propriétés d'un package dans la fenêtre Propriétés  
   
--   [Définir les propriétés d’un Package](../../2014/integration-services/set-the-properties-of-a-package.md)  
+-   [Définir les propriétés d’un package](../../2014/integration-services/set-the-properties-of-a-package.md)  
   
 ## <a name="properties-by-category"></a>Propriétés par catégorie  
  Les tableaux qui suivent énumèrent les propriétés d'un package par catégorie.  
@@ -74,7 +74,7 @@ ms.locfileid: "36141612"
 |Propriété|Description|  
 |--------------|-----------------|  
 |`CheckpointFileName`|Nom du fichier qui capture les informations de point de contrôle permettant à un package de redémarrer. Une fois le package terminé avec succès, le fichier est supprimé.|  
-|`CheckpointUsage`|Indique à quel moment un package peut être redémarré. Les valeurs sont `Never`, `IfExists`, et `Always`. La valeur par défaut de cette propriété est `Never`, ce qui signifie que le package ne peut pas être redémarré. Pour plus d'informations, consultez <xref:Microsoft.SqlServer.Dts.Runtime.DTSCheckpointUsage>.|  
+|`CheckpointUsage`|Indique à quel moment un package peut être redémarré. Les valeurs sont `Never`, `IfExists`, et `Always`. La valeur par défaut de cette propriété est `Never`, ce qui indique que le package ne peut pas être redémarré. Pour plus d'informations, consultez <xref:Microsoft.SqlServer.Dts.Runtime.DTSCheckpointUsage>.|  
 |`SaveCheckpoints`|Indique si les points de contrôle sont écrits dans le fichier de point de contrôle lors de l'exécution du package. La valeur par défaut de cette propriété est `False`.|  
   
 > [!NOTE]  
@@ -99,7 +99,7 @@ ms.locfileid: "36141612"
   
 |Propriété|Description|  
 |--------------|-----------------|  
-|`ForcedExecutionValue`|Si ForceExecutionValue est défini sur `True`, une valeur qui spécifie la valeur d’exécution facultative retournée par le package. La valeur par défaut de cette propriété est **0**.|  
+|`ForcedExecutionValue`|Si ForceExecutionValue a la valeur `True`, une valeur qui spécifie la valeur d’exécution facultative retournée par le package. La valeur par défaut de cette propriété est **0**.|  
 |`ForcedExecutionValueType`|Type de données de ForcedExecutionValue. La valeur par défaut de cette propriété est `Int32`.|  
 |`ForceExecutionValue`|Valeur booléenne qui indique si la valeur d'exécution facultative du conteneur doit être forcée de contenir une valeur particulière. La valeur par défaut de cette propriété est `False`.|  
   
@@ -122,7 +122,7 @@ ms.locfileid: "36141612"
 |Propriété|Description|  
 |--------------|-----------------|  
 |`Configurations`|Ensemble de configurations utilisées par le package. Cliquez sur le bouton Parcourir **(…)** pour afficher et configurer les configurations du package.|  
-|`Expressions`|Cliquez sur le bouton Parcourir **(…)** pour créer des expressions pour les propriétés du package.<br /><br /> Remarque : Vous pouvez créer des expressions pour toutes les propriétés du package que le modèle d’objet, pas seulement les propriétés répertoriées dans la fenêtre Propriétés.<br /><br /> Pour plus d’informations, consultez [Expressions de propriété dans des packages](expressions/use-property-expressions-in-packages.md).<br /><br /> Pour afficher les expressions de propriétés existantes, développez `Expressions`. Cliquez sur le bouton **(…)** dans la zone de texte d’une expression pour modifier et évaluer une expression.|  
+|`Expressions`|Cliquez sur le bouton Parcourir **(…)** pour créer des expressions pour les propriétés du package.<br /><br /> Remarque : Vous pouvez créer des expressions de propriété pour toutes les propriétés de package qui le modèle d’objet, pas seulement les propriétés répertoriées dans la fenêtre Propriétés.<br /><br /> Pour plus d’informations, consultez [Expressions de propriété dans des packages](expressions/use-property-expressions-in-packages.md).<br /><br /> Pour afficher les expressions de propriétés existantes, développez `Expressions`. Cliquez sur le bouton **(…)** dans la zone de texte d’une expression pour modifier et évaluer une expression.|  
 |`ForceExecutionResult`|Résultat d'exécution du package. Les valeurs sont `None`, `Success`, `Failure`, et `Completion`. La valeur par défaut de cette propriété est `None`. Pour plus d’informations, consultez T:Microsoft.SqlServer.Dts.Runtime.DTSForcedExecResult.|  
 |`LocaleId`|Paramètre régional Microsoft Win32. La valeur par défaut de cette propriété est le paramètre régional du système d'exploitation sur l'ordinateur local.|  
 |`LoggingMode`|Valeur qui indique le comportement de journalisation du package. Les valeurs sont `Disabled`, `Enabled`, et `UseParentSetting`. La valeur par défaut de cette propriété est `UseParentSetting`. Pour plus d’informations, consultez <xref:Microsoft.SqlServer.Dts.Runtime.DTSLoggingMode>.|  

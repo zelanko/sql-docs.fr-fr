@@ -1,5 +1,5 @@
 ---
-title: Réseau neuronal (visionneuse de modèle d’exploration de données) | Documents Microsoft
+title: Réseau neuronal (visionneuse de modèle d’exploration de données) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dm.miningmodeleditor.neuralnet.f1
 ms.assetid: 18d87e7b-a821-40ea-9bd8-c6fecf189a1c
 caps.latest.revision: 23
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 2db48dccb854d2dc51eaae3b8202324a8feed9aa
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 7cb93ac76fb6213817dcef3530387772e099e0e9
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36041494"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37297409"
 ---
 # <a name="neural-network-mining-model-viewer"></a>Neural Network (réseau neuronal) (Visionneuse du modèle d'exploration de données)
   Utilisez la visionneuse **Neural Net** pour consulter les modèles d’exploration de données basés sur l’algorithme MNN ([!INCLUDE[msCoName](../includes/msconame-md.md)] Neural Network) ou l’algorithme MLR ([!INCLUDE[msCoName](../includes/msconame-md.md)] Logistic Regression).  
@@ -29,7 +29,7 @@ ms.locfileid: "36041494"
  **Pour plus d’informations :** [Algorithme MNN (Microsoft Neural Network)](data-mining/microsoft-neural-network-algorithm.md), [Algorithme MLR (Microsoft Logistic Regression)](data-mining/microsoft-logistic-regression-algorithm.md),[Explorer un modèle à l’aide de la visionneuse de l’algorithme MNN (Microsoft Neural Network)](data-mining/browse-a-model-using-the-microsoft-neural-network-viewer.md)  
   
 ## <a name="options"></a>Options  
- **Actualiser le contenu de la visionneuse**  
+ **Actualiser le contenu de l’Observateur**  
  Recharge le modèle d'exploration de données dans la visionneuse.  
   
  **Modèle d'exploration de données**  
@@ -43,7 +43,7 @@ ms.locfileid: "36041494"
   
 |Valeur|Description|  
 |-----------|-----------------|  
-|**Attribute**|Choisissez un attribut d'entrée dans la liste. Si vous laissez la sélection par défaut,  **\<tous les >**, le graphique affiche la liste des attributs tous d’entrée, classée selon leur impact sur l’attribut prédictible.|  
+|**Attribute**|Choisissez un attribut d'entrée dans la liste. Si vous conservez la sélection par défaut,  **\<tous les >**, le graphique affiche une liste d’attributs de tous les d’entrée, classée selon leur impact sur l’attribut prédictible.|  
 |**Value**|Choisissez la valeur de l'attribut d'entrée.|  
   
  **Sortie**  

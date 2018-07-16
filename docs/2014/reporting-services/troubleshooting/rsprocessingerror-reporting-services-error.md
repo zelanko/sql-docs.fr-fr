@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - rsProcessingError
 ms.assetid: 414ee58a-8251-4367-9a8e-10c068d17280
 caps.latest.revision: 27
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: c9be2d437953424ac256d593fb39a727ae96a5ae
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 124c7b2dee86e1bd42b2d5cb3f450323bad8161a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36041033"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37218589"
 ---
 # <a name="rsprocessingerror---reporting-services-error"></a>rsProcessingError - Erreur Reporting Services
     
@@ -57,7 +57,7 @@ ms.locfileid: "36041033"
   
 -   Un assembly personnalisé ou un assembly [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] qui a été incorrectement déployé n’a pas pu se charger.  
   
--   Un paramètre qui possède la propriété Nullable `False` a détecté une valeur null dans le paramètre.  
+-   Un paramètre dont la propriété Nullable pour `False` a détecté une valeur null dans le paramètre.  
   
 -   Une expression pour la propriété Hidden d’une région de données contient une erreur : la référence d’objet n’est pas définie à une instance d’un objet.  
   
@@ -79,7 +79,7 @@ ms.locfileid: "36041033"
 -   Si vous êtes connecté en tant qu’administrateur local sur le serveur de rapports, recherchez `ReportProcessingException`dans le fichier journal. Les entrées du journal contiennent des informations supplémentaires. Le fichier journal du serveur de rapports se trouve généralement à l’emplacement suivant : \<*lecteur*>:\Program Files\Microsoft SQL Server\MSRS12.MSSQLSERVER\Reporting Services\LogFiles\ReportServerService__*horodatage*.log. Pour plus d’informations, consultez [Fichiers journaux et sources de Reporting Services](../report-server/reporting-services-log-files-and-sources.md).  
   
 ### <a name="failed-to-load-expression-host-assembly"></a>Échec du chargement de l'assembly hôte d'expressions  
- Les assemblys personnalisés doivent être signés par un nom fort et disposer de l’attribut AllowPartiallyTrustedCallers. Pour plus d’informations, consultez [à l’aide des assemblys personnalisés avec des rapports](../custom-assemblies/using-custom-assemblies-with-reports.md) et [présentation des stratégies de sécurité](../extensions/secure-development/understanding-security-policies.md).  
+ Les assemblys personnalisés doivent être signés par un nom fort et disposer de l’attribut AllowPartiallyTrustedCallers. Pour plus d’informations, consultez [à l’aide d’assemblys personnalisés avec des rapports](../custom-assemblies/using-custom-assemblies-with-reports.md) et [présentation des stratégies de sécurité](../extensions/secure-development/understanding-security-policies.md).  
   
 ### <a name="a-built-in-global-name-does-not-exist"></a>Un nom global intégré n'existe pas  
  Vérifiez l'orthographe dans les expressions. Les noms de paramètres, de globales et de champs respectent la casse. Dans l'expression source de l'erreur, vérifiez que le nom existe réellement dans le rapport et qu'il est correctement orthographié. Pour plus d’informations, consultez [Collections intégrées dans les expressions &#40;Générateur de rapports et SSRS&#41;](../report-design/built-in-collections-in-expressions-report-builder.md).  
@@ -90,7 +90,7 @@ ms.locfileid: "36041033"
 ### <a name="main-report-with-subreport-could-not-be-processed"></a>Le rapport principal avec le sous-rapport n'a pas pu être traité  
  Un rapport avec des sous-rapports doit être traité par la même version du processeur de rapports [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Lors de la mise à niveau de rapports vers la version actuelle du schéma de la définition de rapport, le rapport principal et les sous-rapports peuvent ou non ne pas être mis à jour en même temps. Si la version d'un rapport et de ses sous-rapports n'est pas compatible, le message suivant est affiché : « Le sous-rapport n'a pas pu être traité ».  
   
- Vous devez modifier le rapport principal ou les sous-rapports pour que tous les rapports puissent être traités par la même version du processeur de rapports. Pour plus d’informations sur la raison pour laquelle un rapport ne parvient pas à mettre à niveau, consultez [mise à niveau des rapports](../install-windows/upgrade-reports.md).  
+ Vous devez modifier le rapport principal ou les sous-rapports pour que tous les rapports puissent être traités par la même version du processeur de rapports. Pour plus d’informations sur la raison pour laquelle un rapport ne parvient pas à mettre à niveau, consultez [Upgrade Reports](../install-windows/upgrade-reports.md).  
   
 ### <a name="verify-function-calls-are-visual-basic-and-not-sql"></a>Vérifier que les appels de fonction sont des appels de fonction Visual Basic et non SQL  
  Vous pouvez utiliser des fonctions SQL dans le texte des requêtes sur une base de données relationnelle. Vous ne pouvez pas utiliser de fonctions [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] dans le texte de requête.  
@@ -121,7 +121,7 @@ ms.locfileid: "36041033"
   
  Pour les fonctions d'agrégation qui calculent des totaux cumulés (`Previous`, `RunningValue` ou `RowNumber`), vous pouvez spécifier un paramètre d'étendue qui est un nom de groupe de lignes ou un nom de groupe de colonnes, mais pas les deux. Cela s'applique au message d'erreur suivant :  
   
--   `Previous`, `RunningValue` ou `RowNumber` utilisées dans les cellules de données des fonctions d’agrégation le  *\<type d’élément de rapport >* '*\<nom d’élément de rapport >*» font référence à des étendues de regroupement dans les colonnes et les lignes de la  *\<type d’élément de rapport >*. Les paramètres d’étendue de toutes les `Previous`, `RunningValue` et `RowNumber` dans les fonctions d’agrégation un  *\<type d’élément de rapport >* peuvent faire référence à des regroupements de lignes ou des regroupements de colonnes de données, mais pas les deux.  
+-   `Previous`, `RunningValue` ou `RowNumber` agréger les fonctions utilisées dans les cellules de données de la  *\<type d’élément de rapport >* '*\<nom_élément_rapport >*» font référence à des étendues de regroupement dans les colonnes et les lignes de la  *\<type_élément_rapport >*. Les paramètres d’étendue de toutes les `Previous`, `RunningValue` et `RowNumber` fonctions au sein d’agrégation un  *\<type_élément_rapport >* peuvent faire référence à des regroupements de lignes ou des regroupements de colonnes de données, mais pas les deux.  
   
  Pour plus d’informations, consultez [Étendue des expressions pour les totaux, les agrégats et les collections intégrées &#40;Générateur de rapports et SSRS&#41;](../report-design/expression-scope-for-totals-aggregates-and-built-in-collections.md) et [Collections intégrées dans les expressions &#40;Générateur de rapports et SSRS&#41;](../report-design/built-in-collections-in-expressions-report-builder.md).  
   
@@ -130,12 +130,12 @@ ms.locfileid: "36041033"
   
 ## <a name="see-also"></a>Voir aussi  
  [Expressions &#40;Générateur de rapports et SSRS&#41;](../report-design/expressions-report-builder-and-ssrs.md)   
- [Référence des fonctions d’agrégation &#40;rapport Générateur et SSRS&#41;](../report-design/report-builder-functions-aggregate-functions-reference.md)   
+ [Référence aux fonctions d’agrégation &#40;Générateur de rapports et SSRS&#41;](../report-design/report-builder-functions-aggregate-functions-reference.md)   
  [Exemples d’expressions &#40;Générateur de rapports et SSRS&#41;](../report-design/expression-examples-report-builder-and-ssrs.md)   
- [Ajouter des données à un rapport &#40;rapport Générateur et SSRS&#41;](../report-data/report-datasets-ssrs.md)   
+ [Ajouter des données à un rapport &#40;Générateur de rapports et SSRS&#41;](../report-data/report-datasets-ssrs.md)   
  [Filtres couramment utilisés &#40;Générateur de rapports et SSRS&#41;](../report-design/commonly-used-filters-report-builder-and-ssrs.md)   
  [Collection de champs de dataset &#40;Générateur de rapports et SSRS&#41;](../report-data/dataset-fields-collection-report-builder-and-ssrs.md)   
  [Code personnalisé et références d’assembly dans les expressions du Concepteur de rapports &#40;SSRS&#41;](../report-design/custom-code-and-assembly-references-in-expressions-in-report-designer-ssrs.md)   
- [Références à la Collection Parameters &#40;rapport Générateur et SSRS&#41;](../report-design/built-in-collections-parameters-collection-references-report-builder.md)  
+ [Références à la Collection Parameters &#40;Générateur de rapports et SSRS&#41;](../report-design/built-in-collections-parameters-collection-references-report-builder.md)  
   
   

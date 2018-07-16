@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - subscriptions [SQL Server replication], synchronizing
 - scheduling synchronization [SQL Server replication]
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - replication [SQL Server], synchronization
 ms.assetid: 97f2535b-ec19-4973-823d-bcf3d5aa0216
 caps.latest.revision: 39
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 444277abadee330f410e0b1e7db4042acc5fcccf
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 5b0c837ec8abafa79f6ed27303a69fad62e1c36e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36044241"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37215359"
 ---
 # <a name="specify-synchronization-schedules"></a>Spécifier des planifications de synchronisation
   Cette rubrique explique comment spécifier des planifications de synchronisation dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] à l'aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], de [!INCLUDE[tsql](../../includes/tsql-md.md)]ou d'objets RMO (Replication Management Objects). Lorsque vous créez un abonnement, vous pouvez définir une planification de synchronisation qui contrôle à quel moment l'agent de réplication de l'abonnement s'exécute. Si aucun paramètre de planification n'est spécifié, l'abonnement utilise la planification par défaut.  
@@ -82,7 +82,7 @@ ms.locfileid: "36044241"
   
 3.  Cliquez avec le bouton droit sur un abonnement, puis cliquez sur **Afficher les détails**.  
   
-4.  Dans le **abonnement \< Nom_abonnement >** fenêtre, cliquez sur **Action**, puis cliquez sur  **\<Nom_agent > Propriétés du travail**.  
+4.  Dans le **abonnement \< SubscriptionName >** fenêtre, cliquez sur **Action**, puis cliquez sur  **\<Nom_agent > Propriétés du travail**.  
   
 5.  Dans la page **Planifications** de la boîte de dialogue **Propriétés du travail - \<NomTravail>**, cliquez sur **Modifier**.  
   

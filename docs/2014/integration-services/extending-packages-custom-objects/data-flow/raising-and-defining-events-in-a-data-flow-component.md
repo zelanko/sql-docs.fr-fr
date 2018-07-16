@@ -24,13 +24,13 @@ ms.assetid: 1d8c5358-9384-47a8-b7cb-7b0650384119
 caps.latest.revision: 49
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 1cc3655522f1b5ce80026ca4a8cf92c6806a9d6e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 66a3f97bbc07b94e27f3fc07d23d9c528f386f8c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36038855"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37273335"
 ---
 # <a name="raising-and-defining-events-in-a-data-flow-component"></a>Déclenchement et définition d'événements dans un composant de flux de données
   Les développeurs de composants peuvent déclencher un sous-ensemble des événements définis dans l'interface <xref:Microsoft.SqlServer.Dts.Runtime.IDTSComponentEvents> en appelant les méthodes exposées sur la propriété <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.ComponentMetaData%2A>. Vous pouvez également définir des événements personnalisés à l'aide de la collection <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.EventInfos%2A>, puis les déclencher pendant l'exécution en utilisant la méthode <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.FireCustomEvent%2A>. Cette section décrit comment créer et déclencher un événement. Elle fournit également des conseils sur l'opportunité de déclencher des événements au moment de la conception.  
@@ -47,10 +47,10 @@ ms.locfileid: "36038855"
   
  Les événements personnalisés d'un composant ne sont pas conservés dans le package XML. Par conséquent, la méthode <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.RegisterEvents%2A> est appelée pendant la conception et l'exécution pour permettre au composant de définir les événements qu'il déclenche.  
   
- Le paramètre *allowEventHandlers* de la méthode <xref:Microsoft.SqlServer.Dts.Runtime.Wrapper.IDTSEventInfos100.Add%2A> spécifie si le composant autorise la création d’objets <xref:Microsoft.SqlServer.Dts.Runtime.DtsEventHandler> pour l’événement. Notez que les <xref:Microsoft.SqlServer.Dts.Runtime.DtsEventHandlers> sont synchrones. Par conséquent, le composant ne recommence à s'exécuter qu'après la fin de l'exécution d'un <xref:Microsoft.SqlServer.Dts.Runtime.DtsEventHandler> attaché à l'événement personnalisé. Si le *allowEventHandlers* paramètre est `true`, chaque paramètre de l’événement est effectuée automatiquement la disposition des <xref:Microsoft.SqlServer.Dts.Runtime.DtsEventHandler> objets via des variables qui sont créées et remplies automatiquement par le [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] runtime.  
+ Le paramètre *allowEventHandlers* de la méthode <xref:Microsoft.SqlServer.Dts.Runtime.Wrapper.IDTSEventInfos100.Add%2A> spécifie si le composant autorise la création d’objets <xref:Microsoft.SqlServer.Dts.Runtime.DtsEventHandler> pour l’événement. Notez que les <xref:Microsoft.SqlServer.Dts.Runtime.DtsEventHandlers> sont synchrones. Par conséquent, le composant ne recommence à s'exécuter qu'après la fin de l'exécution d'un <xref:Microsoft.SqlServer.Dts.Runtime.DtsEventHandler> attaché à l'événement personnalisé. Si le *allowEventHandlers* paramètre est `true`, chaque paramètre de l’événement est mis automatiquement à disposition des <xref:Microsoft.SqlServer.Dts.Runtime.DtsEventHandler> objets via des variables qui sont créées et remplies automatiquement par le [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] runtime.  
   
 ### <a name="raising-a-custom-event"></a>Déclenchement d'un événement personnalisé  
- Les composants déclenchent des événements personnalisés en appelant la méthode <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.FireCustomEvent%2A> et en fournissant le nom, le texte et les paramètres de l'événement. Si le *allowEventHandlers* paramètre est `true`, tout <xref:Microsoft.SqlServer.Dts.Runtime.DtsEventHandlers> qui sont créés pour l’événement personnalisé sont exécutés par le [!INCLUDE[ssIS](../../../includes/ssis-md.md)] moteur d’exécution.  
+ Les composants déclenchent des événements personnalisés en appelant la méthode <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.FireCustomEvent%2A> et en fournissant le nom, le texte et les paramètres de l'événement. Si le *allowEventHandlers* paramètre est `true`, n’importe quel <xref:Microsoft.SqlServer.Dts.Runtime.DtsEventHandlers> qui sont créés pour l’événement personnalisé sont exécutés par le [!INCLUDE[ssIS](../../../includes/ssis-md.md)] moteur d’exécution.  
   
 ### <a name="custom-event-sample"></a>Exemple d'événement personnalisé  
  L'exemple de code suivant présente un composant qui définit un événement personnalisé pendant l'exécution de la méthode <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.RegisterEvents%2A>, puis qui déclenche l'événement au moment de l'exécution en appelant la méthode <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.FireCustomEvent%2A>.  
@@ -95,7 +95,7 @@ Public  Overrides Sub ProcessInput(ByVal inputID As Integer, ByVal buffer As Pip
 End Sub  
 ```  
   
-![Icône Integration Services (petite)](../../media/dts-16.gif "icône Integration Services (petite)")**restent jusqu'à la Date avec Integration Services** <br /> Pour obtenir les derniers téléchargements, articles, exemples et vidéos de Microsoft, ainsi que des solutions sélectionnées par la communauté, visitez la page [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] sur MSDN :<br /><br /> [Visitez la page Integration Services sur MSDN](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Pour recevoir une notification automatique de ces mises à jour, abonnez-vous aux flux RSS disponibles sur la page.  
+![Icône Integration Services (petite)](../../media/dts-16.gif "icône Integration Services (petite)")**rester jusqu'à la Date avec Integration Services** <br /> Pour obtenir les derniers téléchargements, articles, exemples et vidéos de Microsoft, ainsi que des solutions sélectionnées par la communauté, visitez la page [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] sur MSDN :<br /><br /> [Visitez la page Integration Services sur MSDN](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Pour recevoir une notification automatique de ces mises à jour, abonnez-vous aux flux RSS disponibles sur la page.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Gestionnaires d’événements Integration Services &#40;SSIS&#41](../../integration-services-ssis-event-handlers.md)   

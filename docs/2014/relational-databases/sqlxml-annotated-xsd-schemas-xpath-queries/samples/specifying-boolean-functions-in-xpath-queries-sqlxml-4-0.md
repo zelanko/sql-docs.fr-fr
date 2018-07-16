@@ -1,5 +1,5 @@
 ---
-title: Spécification de fonctions booléennes dans des requêtes XPath (SQLXML 4.0) | Documents Microsoft
+title: Spécification de fonctions booléennes dans des requêtes XPath (SQLXML 4.0) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -18,23 +18,23 @@ helpviewer_keywords:
 - Boolean functions
 ms.assetid: c72cd333-9294-4d41-84f2-1748bf20e3eb
 caps.latest.revision: 25
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 06b35c5a8e2e7e6e03c0fd943572b25b30bf017e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 86a05a23577eefa1231a4a5f4bdf8447e4f6b285
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36044484"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37232999"
 ---
 # <a name="specifying-boolean-functions-in-xpath-queries-sqlxml-40"></a>Spécification de fonctions booléennes dans des requêtes XPath (SQLXML 4.0)
-  Les exemples suivants montrent comment spécifier des fonctions booléennes dans des requêtes XPath. Les requêtes XPath de ces exemples sont spécifiées par rapport au schéma de mappage contenu dans SampleSchema1.xml. Pour plus d’informations sur cet exemple de schéma, consultez [exemple de schéma XSD annoté pour obtenir des exemples XPath &#40;SQLXML 4.0&#41;](sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md).  
+  Les exemples suivants montrent comment spécifier des fonctions booléennes dans des requêtes XPath. Les requêtes XPath de ces exemples sont spécifiées par rapport au schéma de mappage contenu dans SampleSchema1.xml. Pour plus d’informations sur cet exemple de schéma, consultez [exemple de schéma XSD annoté pour les exemples XPath &#40;SQLXML 4.0&#41;](sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md).  
   
 ## <a name="examples"></a>Exemples  
   
 ## <a name="a-specify-the-not-boolean-function"></a>A. Spécifier la fonction booléenne not()  
- Cette requête retourne tous les  **\<client >** des éléments enfants du nœud de contexte qui n’ont pas  **\<ordre >** des éléments enfants :  
+ Cette requête retourne tous les  **\<client >** les éléments enfants du nœud de contexte qui n’ont pas  **\<ordre >** éléments enfants :  
   
 ```  
 /child::Customer[not(child::Order)]  
@@ -82,7 +82,7 @@ ms.locfileid: "36044484"
 ```  
   
 ## <a name="b-specify-the-true-and-false-boolean-functions"></a>B. Spécifier les fonctions booléennes true() et false()  
- Cette requête retourne tous les  **\<client >** éléments enfants du nœud de contexte qui n’ont pas  **\<ordre >** des éléments enfants. En termes relationnels, cette requête retourne tous les clients qui n'ont pas passé de commandes.  
+ Cette requête retourne tous les  **\<client >** éléments enfants du nœud de contexte qui n’ont pas  **\<ordre >** éléments enfants. En termes relationnels, cette requête retourne tous les clients qui n'ont pas passé de commandes.  
   
 ```  
 /child::Customer[child::Order=false()]  

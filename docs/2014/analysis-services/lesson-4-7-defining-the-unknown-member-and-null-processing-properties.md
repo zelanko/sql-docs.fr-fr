@@ -1,5 +1,5 @@
 ---
-title: Définition des propriétés de traitement des valeurs Null et membre inconnu | Documents Microsoft
+title: Définition du membre inconnu et le traitement des propriétés des valeurs Null | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: d9abb09c-9bfa-4e32-b530-8590e4383566
 caps.latest.revision: 18
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: jhubbard
-ms.openlocfilehash: 29c4958263524f6c702f112d5817231734a4b31d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: e355d6c376b8196118d056954f8a2694676e08a9
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36142377"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37317299"
 ---
 # <a name="defining-the-unknown-member-and-null-processing-properties"></a>Définition du membre inconnu et des propriétés de traitement Null
   Lorsque [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] traite une dimension, toutes les valeurs distinctes des colonnes sous-jacentes dans les tables ou les vues de la vue de source de données remplissent les attributs de la dimension. Si [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] rencontre une valeur Null au cours du traitement, par défaut, elle convertit celle-ci en zéro pour des colonnes numériques ou en une chaîne vide pour des colonnes de type chaîne. Vous pouvez modifier les paramètres par défaut ou convertir les valeurs Null dans votre processus d’extraction, de transformation et de chargement (le cas échéant) de l’entrepôt de données relationnelles sous-jacent. Par ailleurs, vous pouvez faire en sorte que [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] convertisse la valeur Null en une valeur désignée en configurant trois propriétés : les propriétés **UnknownMember** et **UnknownMemberName** pour la dimension, et la propriété **NullProcessing** pour l’attribut de clé de la dimension.  
@@ -28,7 +28,7 @@ ms.locfileid: "36142377"
   
  Toutefois, quand vous construisez des dimensions à flocons incrémentielles, comme c’est le cas avec la dimension Product dans ce didacticiel, ou si vous définissez des dimensions à l’aide du Concepteur de dimensions, puis incorporez ces dimensions dans un cube, les propriétés **UnknownMember** et **NullProcessing** doivent peut-être être définies manuellement.  
   
- Au cours des tâches de cette rubrique, vous allez ajouter les attributs de la catégorie de produit et de la sous-catégorie de produit à la dimension Product des tables en flocons que vous avez ajoutées à la vue de source de données de l'entrepôt de données [!INCLUDE[ssSampleDBCoShort](../includes/sssampledbcoshort-md.md)] . Vous allez ensuite activer la **UnknownMember** propriété pour la dimension Product, spécifier `Assembly Components` comme valeur pour le **UnknownMemberName** propriété, se rapportent la `Subcategory` et `Category`attributs au produit nom d’attribut et ensuite définir la gestion de l’attribut de clé de membre qui lie les tables en flocons d’erreur personnalisée.  
+ Au cours des tâches de cette rubrique, vous allez ajouter les attributs de la catégorie de produit et de la sous-catégorie de produit à la dimension Product des tables en flocons que vous avez ajoutées à la vue de source de données de l'entrepôt de données [!INCLUDE[ssSampleDBCoShort](../includes/sssampledbcoshort-md.md)] . Ensuite, vous activez le **UnknownMember** propriété pour la dimension Product, spécifier `Assembly Components` comme valeur pour le **UnknownMemberName** propriété, concernent le `Subcategory` et `Category`au produit, les attributs name, attribut et définissez personnalisé gestion des erreurs pour l’attribut de clé de membre qui lie les tables en flocons.  
   
 > [!NOTE]  
 >  Si vous avez ajouté les attributs Subcategory et Category lors de la définition initiale du cube du didacticiel de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] à l'aide de l'Assistant Cube, ces étapes ont été effectuées automatiquement.  
@@ -55,7 +55,7 @@ ms.locfileid: "36142377"
   
      ![Collection de propriétés ErrorConfiguration](../../2014/tutorials/media/l4-productdimensionerrorconfig-1.gif "collection de propriétés ErrorConfiguration")  
   
-5.  Cliquez sur le **navigateur** onglet, vérifiez que **Product Model Lines** est sélectionné dans le **hiérarchie** liste, puis cliquez sur `All Products`.  
+5.  Cliquez sur le **navigateur** onglet, vérifiez que **Product Model Lines** est sélectionné dans le **hiérarchie** liste, puis développez `All Products`.  
   
      Notez la présence de cinq membres au niveau Product Line.  
   
@@ -63,7 +63,7 @@ ms.locfileid: "36142377"
   
      Ce niveau contient les composants d’assembly utilisés pour la création d’autres composants, en commençant par le produit **Adjustable Race** , comme le montre l’illustration suivante.  
   
-     ![Composants d’assemblage permet de créer d’autres composants](../../2014/tutorials/media/l4-productdimensionerrorconfig-2.gif "composants d’assemblage permet de créer d’autres composants")  
+     ![Composants d’assemblage permet de créer d’autres composants](../../2014/tutorials/media/l4-productdimensionerrorconfig-2.gif "composants d’Assembly utilisés pour créer d’autres composants")  
   
 ## <a name="defining-attributes-from-snowflaked-tables-and-a-product-category-user-defined-hierarchy"></a>Définition des attributs à partir des tables en flocons et d'une hiérarchie définie par l'utilisateur Product Category  
   
@@ -129,17 +129,17 @@ ms.locfileid: "36142377"
   
 7.  Vérifiez que **Product Model Lines** s’affiche dans le **hiérarchie** liste, développez `All Products`, puis développez **composants**.  
   
-8.  Sélectionnez **catégories de produits** dans les **hiérarchie** liste, développez `All Products`, puis développez **composants**.  
+8.  Sélectionnez **catégories de produits** dans le **hiérarchie** liste, développez `All Products`, puis développez **composants**.  
   
      Notez qu'aucun composant d'assembly n'apparaît.  
   
- To modify the behavior mentioned in the previous task, you will enable the **UnknownMember** property of the Products dimension, set a value for the **UnknownMemberName** property, set the **NullProcessing** property for the `Subcategory` and **Model Name** attributes to **UnknownMember**, define the `Category` attribute as a related attribute of the `Subcategory` attribute, and then define the **Product Line** attribute as a related attribute of the **Model Name** attribute. Ces étapes permettront à [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] d’utiliser la valeur du nom du membre inconnu pour chaque produit qui n’a pas de valeur dans la colonne **SubcategoryKey** , comme vous le constatez dans la tâche suivante.  
+ Pour modifier le comportement mentionné dans la tâche précédente, vous allez activer le **UnknownMember** propriété de la dimension Products, définissez une valeur pour le **UnknownMemberName** propriété, définissez la  **NullProcessing** propriété pour le `Subcategory` et **Nom_modèle** attributs **UnknownMember**, définir le `Category` attribut sous la forme d’un attribut associé de le `Subcategory` d’attribut, puis définissez le **Product Line** attribut sous la forme d’un attribut associé de le **Nom_modèle** attribut. Ces étapes permettront à [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] d’utiliser la valeur du nom du membre inconnu pour chaque produit qui n’a pas de valeur dans la colonne **SubcategoryKey** , comme vous le constatez dans la tâche suivante.  
   
 ## <a name="enabling-the-unknown-member-defining-attribute-relationships-and-specifying-custom-processing-properties-for-nulls"></a>Activation du membre inconnu, définition des relations d'attribut et définition des propriétés de traitement personnalisé pour les valeurs Null  
   
 1.  Dans le Concepteur de dimensions pour la dimension **Product** , cliquez sur l’onglet **Structure de dimension** , puis sélectionnez **Product** dans le volet **Attributs** .  
   
-2.  Dans le **propriétés** fenêtre, de modifier le **UnknownMember** propriété **Visible**, puis modifiez la valeur de la **UnknownMemberName**propriété `Assembly Components`.  
+2.  Dans le **propriétés** fenêtre, la modification la **UnknownMember** propriété **Visible**, puis modifiez la valeur de la **UnknownMemberName**propriété `Assembly Components`.  
   
      L’attribution de la valeur **Visible** ou **Hidden** à la propriété **UnknownMember** active la propriété **UnknownMember** de la dimension.  
   
@@ -147,7 +147,7 @@ ms.locfileid: "36142377"
   
 4.  Dans le diagramme, cliquez sur le `Subcategory` d’attribut, puis sélectionnez **nouvelle relation d’attribut**.  
   
-5.  Dans le **créer une relation d’attribut** boîte de dialogue, la **attribut Source** est `Subcategory`. Définir le **attribut associé** à `Category`. Laissez le type de relation défini sur **Flexible**.  
+5.  Dans le **créer une relation d’attribut** boîte de dialogue, le **attribut Source** est `Subcategory`. Définir le **attribut associé** à `Category`. Laissez le type de relation défini sur **Flexible**.  
   
 6.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
@@ -163,7 +163,7 @@ ms.locfileid: "36142377"
   
 12. Remplacez la propriété **NullProcessing** par **UnknownMember**.  
   
-     En raison de ces modifications, lorsque [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] rencontre une valeur null pour le `Subcategory` attribut ou le **Nom_modèle** au cours du traitement, la valeur du membre inconnu sera remplacé par la valeur de clé et le hiérarchies définies par l’utilisateur sont créées correctement.  
+     En raison de ces modifications, lorsque [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] rencontre une valeur null pour le `Subcategory` attribut ou le **Nom_modèle** pendant le traitement, la valeur du membre inconnu est utilisée comme valeur de clé et le hiérarchies définies par l’utilisateur sont créées correctement.  
   
 ## <a name="browsing-the-product-dimension-again"></a>Nouvelle exploration de la dimension Product  
   
@@ -171,15 +171,15 @@ ms.locfileid: "36142377"
   
 2.  Une fois le déploiement terminé, cliquez sur l’onglet **Navigateur** dans le Concepteur de dimensions pour la dimension **Product** , puis cliquez sur **Reconnexion**.  
   
-3.  Vérifiez que **catégories de produits** est sélectionné dans le **hiérarchie** liste, puis cliquez sur `All Products`.  
+3.  Vérifiez que **catégories de produits** est sélectionné dans le **hiérarchie** liste, puis développez `All Products`.  
   
      Notez que Assembly Components apparaît en tant que nouveau membre du niveau Category.  
   
-4.  Développez le `Assembly Components` membre de la `Category` niveau, puis le `Assembly Components` membre du `Subcategory` au niveau.  
+4.  Développez le `Assembly Components` membre de la `Category` niveau, puis développez le `Assembly Components` membre du `Subcategory` niveau.  
   
      Notez que tous les composants d’assembly apparaissent maintenant au niveau **Product Name** , comme le montre l’illustration suivante.  
   
-     ![Niveau de nom de produit affichant les composants d’assemblage](../../2014/tutorials/media/l4-assemblycomponents-1.gif "au niveau du nom de produit affichant les composants d’assembly")  
+     ![Niveau de nom de produit affichant des composants d’assemblage](../../2014/tutorials/media/l4-assemblycomponents-1.gif "niveau Product Name montrant des composants d’assembly")  
   
 ## <a name="next-lesson"></a>Leçon suivante  
  [Leçon 5 : Définition des relations entre les dimensions et les groupes de mesures](../analysis-services/lesson-5-defining-relationships-between-dimensions-and-measure-groups.md)  

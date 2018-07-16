@@ -1,5 +1,5 @@
 ---
-title: Définition et utilisation d’une Action d’extraction | Documents Microsoft
+title: Définition et utilisation d’une Action d’extraction | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 3765f865-2b93-44be-b290-28e3815d5ecb
 caps.latest.revision: 16
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: jhubbard
-ms.openlocfilehash: 3498bae6136476a92df3c772263f943b54e7d3a0
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 7737ab3d7631440010be2fdb3047d7d021b275b5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36154286"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37263725"
 ---
 # <a name="defining-and-using-a-drillthrough-action"></a>Définition et utilisation d'une action d'extraction
   Le dimensionnement des données de fait par une dimension de fait sans filtrage correct des données retournées par la requête peut ralentir les performances des requêtes. Pour éviter ceci, vous pouvez définir une action d'extraction qui restreint le nombre total de lignes retournées. Cela améliorera considérablement les performances des requêtes.  
@@ -34,13 +34,13 @@ ms.locfileid: "36154286"
   
      L’image suivante montre l’onglet **Actions** du Concepteur de cube.  
   
-     ![Sous l’onglet Actions du Concepteur de Cube](../../2014/tutorials/media/l8-action1.gif "sous l’onglet Actions du Concepteur de Cube")  
+     ![Onglet Actions du Concepteur de Cube](../../2014/tutorials/media/l8-action1.gif "onglet Actions du Concepteur de Cube")  
   
 2.  Dans la barre d’outils de l’onglet **Actions** , cliquez sur le bouton **Nouvelle action d’extraction** .  
   
      Un modèle d'action vide apparaît dans le volet de visualisation.  
   
-     ![Modèle d’Action vide dans le volet d’informations](../../2014/tutorials/media/l8-action2.gif "modèle d’Action vide dans le volet d’informations")  
+     ![Modèle d’Action vide dans le volet Affichage](../../2014/tutorials/media/l8-action2.gif "modèle d’Action vide dans le volet d’informations")  
   
 3.  Dans le **nom** , changez le nom de cette action pour `Internet Sales Details Drillthrough Action`.  
   
@@ -108,11 +108,11 @@ ms.locfileid: "36154286"
   
     -   ShipDateKey  
   
-6.  Modifier la **nom** propriété pour le **Order Date Key** attribut `Order Date` puis, cliquez sur le bouton Parcourir pour le **colonne nom** propriété et dans le **Nom de colonne** boîte de dialogue, sélectionnez **Date** en tant que la table source et sélectionnez SimpleDate comme colonne source. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
+6.  Modifier le **nom** propriété pour le **Order Date Key** attribut `Order Date` puis, cliquez sur le bouton Parcourir pour le **colonne nom** propriété et dans le **Colonne nom** boîte de dialogue, sélectionnez **Date** comme table source et SimpleDate comme colonne de la source. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-7.  Modifier la **nom** propriété pour le **Due Date Key** attribut `Due Date`et ensuite, à l’aide de la même méthode que le **Order Date Key** d’attribut, de modifier le  **Nom de colonne** propriété pour cet attribut pour **Date.SimpleDate (WChar)**.  
+7.  Modifier le **nom** propriété pour le **Due Date Key** attribut `Due Date`, puis, en utilisant la même méthode que le **Order Date Key** d’attribut, de modifier le  **Nom de colonne** propriété de cet attribut par **Date.SimpleDate (WChar)**.  
   
-8.  Modifier la **nom** propriété pour le **Ship Date Key** attribut `Ship Date`, puis modifiez le **colonne nom** propriété pour cet attribut pour  **Date.SimpleDate (WChar)**.  
+8.  Modifier le **nom** propriété pour le **Ship Date Key** attribut `Ship Date`, puis modifiez le **colonne nom** propriété de cet attribut par  **Date.SimpleDate (WChar)**.  
   
 9. Sélectionnez l’onglet **Actions** du Concepteur de cube pour le cube du didacticiel de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] .  
   

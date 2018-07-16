@@ -8,25 +8,25 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 9ee19c2e-2a8c-4bb0-9274-04a5812c2e96
 caps.latest.revision: 11
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 3f900a871527e85cdc28f47ec3349eeb64f9853c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: a4bb95d4280b2bd411ffdadcddcf3ff58274c69b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36152972"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37268165"
 ---
 # <a name="tutorial-creating-a-matrix-report-report-builder"></a>Didacticiel : création d'un rapport de matrice (Générateur de rapports)
   Ce didacticiel vous apprend comment créer un rapport de matrice de base reposant sur des exemples de données de vente. La matrice comporte des groupes de lignes et de colonnes imbriqués, ainsi qu'un groupe de colonnes adjacent. Vous apprendrez également comment mettre en forme les colonnes et faire pivoter le texte. L'illustration suivante montre un rapport similaire à celui que vous allez créer.  
   
  ![rs_CreateMatixReportTutorial](../../2014/tutorials/media/rs-creatematixreporttutorial.gif "rs_CreateMatixReportTutorial")  
   
- Une version améliorée du rapport créé dans ce didacticiel est disponible sous forme d'exemple de rapport du Générateur de rapports de [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]. Pour plus d’informations sur le téléchargement de cet exemple de rapport et d’autres, consultez [rapports exemple](http://go.microsoft.com/fwlink/?LinkId=184851).  
+ Une version améliorée du rapport créé dans ce didacticiel est disponible sous forme d'exemple de rapport du Générateur de rapports de [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]. Pour plus d’informations sur le téléchargement de cet exemple de rapport et d’autres, consultez [exemples de rapports Générateur de rapports](http://go.microsoft.com/fwlink/?LinkId=184851).  
   
 ##  <a name="BackToTop"></a> Ce que vous allez apprendre  
  Dans ce didacticiel, vous apprendrez à :  
@@ -35,11 +35,11 @@ ms.locfileid: "36152972"
   
 2.  [Organiser les données et choisir la disposition et un Style à partir de l’Assistant nouveau tableau ou matrice](#Groups)  
   
-3.  [Format de données](#FormatData)  
+3.  [Données de format](#FormatData)  
   
 4.  [Ajouter le groupe de colonnes Adjacent](#AdjacentGroup)  
   
-5.  [Modifier les largeurs de colonne](#Width)  
+5.  [Modifier la largeur de colonne](#Width)  
   
 6.  [Fusionner des cellules de matrice](#MergeCells)  
   
@@ -57,7 +57,7 @@ ms.locfileid: "36152972"
  Pour plus d’informations sur les spécifications, consultez [Éléments requis pour les didacticiels &#40;Générateur de rapports&#41;](../reporting-services/report-builder-tutorials.md).  
   
 ##  <a name="CreateMatrix"></a> 1. Créer un rapport de matrice et un dataset à partir de l'Assistant Nouveau tableau ou nouvelle matrice  
- À partir de la **mise en route** boîte de dialogue du Générateur de rapports, choisissez une source de données partagée, créez un dataset incorporé, puis affichez les données dans une matrice.  
+ À partir de la **mise en route** boîte de dialogue Générateur de rapports, choisissez une source de données partagée, créez un dataset incorporé, puis affichez les données dans une matrice.  
   
 > [!NOTE]  
 >  Dans ce didacticiel, la requête contient déjà les valeurs de données, afin qu'il ne soit pas nécessaire de disposer d'une source de données externe. Cela rend la requête assez longue. Dans un environnement métier, une requête ne contient pas les données. Ceci est nécessaire à des fins de formation uniquement.  
@@ -67,7 +67,7 @@ ms.locfileid: "36152972"
 1.  Cliquez sur **Démarrer**, pointez sur **Programmes**, sur **Générateur de rapports Microsoft SQL Server 2012**, puis cliquez sur **Générateur de rapports version**.  
   
     > [!NOTE]  
-    >  La boîte de dialogue **Mise en route** s'affiche. Si ce n’est pas, à partir du bouton Générateur de rapports, cliquez sur **nouveau**.  
+    >  La boîte de dialogue **Mise en route** s'affiche. Si ce n’est pas, à partir du bouton Générateur de rapports, cliquez sur **New**.  
   
 2.  Dans le volet gauche, assurez-vous que **Nouveau rapport** est sélectionné.  
   
@@ -77,7 +77,7 @@ ms.locfileid: "36152972"
   
 5.  Cliquez sur **Suivant**.  
   
-6.  Sur le **choisir une connexion à une source de données** page, sélectionnez une source de données existante ou naviguez jusqu’au serveur de rapports, puis sélectionnez une source de données. Si aucune source de données n'est disponible ou si vous n'avez pas accès à un serveur de rapports, vous pouvez utiliser une source de données incorporée à la place. Pour plus d’informations sur la création d’une source de données incorporée, consultez [didacticiel : création d’un rapport de base &#40;le Générateur de rapports&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md).  
+6.  Sur le **choisir une connexion à une source de données** page, sélectionnez une source de données existante ou naviguez jusqu’au serveur de rapports, puis sélectionnez une source de données. Si aucune source de données n'est disponible ou si vous n'avez pas accès à un serveur de rapports, vous pouvez utiliser une source de données incorporée à la place. Pour plus d’informations sur la création d’une source de données incorporée, consultez [didacticiel : création d’un rapport de Table de base &#40;Générateur de rapports&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md).  
   
 7.  Cliquez sur **Suivant**.  
   
@@ -180,7 +180,7 @@ ms.locfileid: "36152972"
   
 3.  Sous l’onglet **Accueil** , dans le groupe **Nombre** , cliquez sur **Devise**. Le contenu des cellules est maintenant au format de devise.  
   
-     Si votre paramètre régional est Anglais (États-Unis), le texte d’exemple par défaut est [**$12,345.00**]. Si vous ne voyez pas une valeur de devise d’exemple, cliquez sur **Styles des espaces réservés** dans les **numéros** de groupe, puis cliquez sur **exemples de valeurs**.  
+     Si votre paramètre régional est Anglais (États-Unis), le texte d’exemple par défaut est [**$12,345.00**]. Si vous ne voyez pas un exemple de valeur monétaire, cliquez sur **Styles des espaces réservés** dans le **numéros** de groupe, puis cliquez sur **exemples de valeurs**.  
   
 4.  Cliquez sur la cellule qui contient `[SalesDate]`.  
   
@@ -234,7 +234,7 @@ ms.locfileid: "36152972"
  Le rapport inclut des colonnes nommées Monday et Tuesday. Le dataset contient uniquement des données pour ces deux jours.  
   
 > [!NOTE]  
->  Si les données avaient inclus d'autres jours, le rapport aurait également inclus des colonnes pour ces jours. Chaque colonne possède l’en-tête de colonne, `Sales`et les totaux des ventes par territoire.  
+>  Si les données avaient inclus d'autres jours, le rapport aurait également inclus des colonnes pour ces jours. Chaque colonne a l’en-tête de colonne, `Sales`et les totaux des ventes par territoire.  
   
 ##  <a name="Width"></a> 5. Modifier la largeur des colonnes  
  Un rapport qui inclut une matrice s'étend généralement horizontalement et verticalement lorsqu'il s'exécute. Le contrôle de l'expansion horizontale est particulièrement important si vous projetez d'exporter le rapport vers des formats tels que Microsoft Word ou Adobe PDF qui sont utilisés pour imprimer les rapports. Si le rapport s'étend horizontalement sur plusieurs pages, le rapport imprimé est difficile à comprendre. Pour réduire l'expansion horizontale, vous pouvez redimensionner les colonnes afin qu'elles ne soient pas plus larges que nécessaire pour afficher les données sans renvoi à la ligne. Vous pouvez également renommer les colonnes afin que leur titre soit ajusté à la largeur nécessaire pour afficher les données.  
@@ -276,7 +276,7 @@ ms.locfileid: "36152972"
   
 4.  Cliquez sur les cellules, puis sur **fusionner les cellules**.  
   
-5.  Avec le bouton droit de la cellule d’angle, puis cliquez sur **propriétés de la zone de texte**.  
+5.  Avec le bouton droit de la cellule d’angle, puis cliquez sur **propriétés de la zone texte**.  
   
 6.  Cliquez sur l'onglet **Remplissage** .  
   
@@ -320,7 +320,7 @@ ms.locfileid: "36152972"
   
 7.  Dans le **propriétés texte** boîte de dialogue, cliquez sur **police**.  
   
-8.  Dans le **police** liste, sélectionnez **Times New Roman**; dans **taille** sélectionnez **24 pt**, dans **couleur** sélectionnez  **Rouge foncé**et dans **Style** sélectionnez **italique**.  
+8.  Dans le **police** liste, sélectionnez **Times New Roman**; dans **taille** sélectionnez **24 pt**, dans **couleur** sélectionnez  **Marron**et dans **Style** sélectionnez **italique**.  
   
 9. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
@@ -370,7 +370,7 @@ ms.locfileid: "36152972"
   
 2.  Cliquez sur la cellule qui contient `[Territory].`  
   
-3.  Dans le volet Propriétés, recherchez la propriété WritingMode et dans la liste déroulante, sélectionnez **Rotate270**.  
+3.  Dans le volet Propriétés, recherchez la propriété WritingMode et dans sa liste déroulante, sélectionnez **Rotate270**.  
   
      Si le volet Propriétés n’est pas ouvert, cliquez sur l’onglet **Affichage** du ruban et sélectionnez **Propriétés**.  
   
@@ -383,7 +383,7 @@ ms.locfileid: "36152972"
  Le nom du secteur est écrit verticalement, de bas en haut. La hauteur du groupe de lignes Territory varie en fonction de la longueur du nom du secteur.  
   
 ## <a name="next-steps"></a>Étapes suivantes  
- Ainsi s'achève le didacticiel de création d'un rapport de matrice. Pour plus d’informations sur les matrices, consultez [Tables, Matrices et listes &#40;le Générateur de rapports et SSRS&#41;](report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md), [Matrices &#40;le Générateur de rapports et SSRS&#41;](report-design/create-a-matrix-report-builder-and-ssrs.md), [ Zones de région de données de tableau matriciel &#40;rapport Générateur et SSRS&#41;](report-design/tablix-data-region-areas-report-builder-and-ssrs.md), et [les cellules de région de données de tableau matriciel, lignes et colonnes &#40;Générateur de rapports&#41; et SSRS](report-design/tablix-data-region-cells-rows-and-columns-report-builder-and-ssrs.md)  
+ Ainsi s'achève le didacticiel de création d'un rapport de matrice. Pour plus d’informations sur les matrices, consultez [Tables, Matrices et listes &#40;Générateur de rapports et SSRS&#41;](report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md), [Matrices &#40;Générateur de rapports et SSRS&#41;](report-design/create-a-matrix-report-builder-and-ssrs.md), [ Zones de région de données de tableau matriciel &#40;Générateur de rapports et SSRS&#41;](report-design/tablix-data-region-areas-report-builder-and-ssrs.md), et [cellules de région de données de tableau matriciel, lignes et colonnes &#40;Générateur de rapports&#41; et SSRS](report-design/tablix-data-region-cells-rows-and-columns-report-builder-and-ssrs.md)  
   
 ## <a name="see-also"></a>Voir aussi  
  [Didacticiels &#40;Générateur de rapports&#41;](report-builder-tutorials.md)   

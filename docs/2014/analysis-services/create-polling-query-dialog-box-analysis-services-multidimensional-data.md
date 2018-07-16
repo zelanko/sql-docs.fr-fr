@@ -1,5 +1,5 @@
 ---
-title: Créer l’interrogation de la boîte de dialogue requête (Analysis Services - données multidimensionnelles) | Documents Microsoft
+title: Créer d’interrogation de la boîte de dialogue requête (Analysis Services - données multidimensionnelles) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.createpollingquerydialog.f1
 ms.assetid: 0f2902b5-796a-4eb0-be03-01514dc01b9a
 caps.latest.revision: 13
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 9d7f46fbd895f1b9e9bce29674999a3e710a1a33
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: f1c7ca8d5c2594668283887c23f7d976a1fc3359
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36141667"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37236229"
 ---
 # <a name="create-polling-query-dialog-box-analysis-services---multidimensional-data"></a>Boîte de dialogue Créer la requête d'interrogation (Analysis Services - Données multidimensionnelles)
   Utilisez la boîte de dialogue **Créer la requête d’interrogation** de [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] pour créer une requête d’interrogation sous l’onglet **Notifications** de la boîte de dialogue **Options de stockage**. En règle générale, une requête d'interrogation est une requête singleton qui retourne une valeur que [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] peut utiliser pour déterminer si les modifications ont été apportées à une table ou à un autre objet relationnel. Vous pouvez afficher la boîte de dialogue **Créer la requête d’interrogation** en cliquant sur le bouton de sélection (**...**) dans la colonne **Requête d’interrogation** de la grille de l’option **Interrogation planifiée** sous l’onglet **Notifications** de la boîte de dialogue **Options de stockage**. Pour plus d’informations sur l’onglet **Notifications**la boîte de dialogue **Options de stockage**, consultez [Notifications &#40;boîte de dialogue Options de stockage&#41; &#40;Analysis Services - Données multidimensionnelles&#41;](notifications-storage-options-dialog-analysis-services-multidimensional-data.md).  

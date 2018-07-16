@@ -8,24 +8,24 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Integration Services, migrating
 - migrating packages [Integration Services]
 ms.assetid: 68dbdf81-032c-4a73-99f6-41420e053980
 caps.latest.revision: 50
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 3d975c0ee5764ca0e7038b51392309b52bf17641
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 39f07febdc8c5c9bc8e63b61d42b0a7ff5927ee0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36042739"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37233439"
 ---
 # <a name="upgrade-integration-services-packages"></a>Mettre à niveau des packages Integration Services
-  Lorsque vous mettez à niveau une instance de [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] ou [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] vers la version actuelle de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], existante [!INCLUDE[ssISversion10](../../includes/ssisversion10-md.md)] packages ne sont pas automatiquement mis à niveau vers le format de package par la version actuelle [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] utilise. Vous devez choisir une méthode de mise à niveau et mettre à niveau vos packages manuellement.  
+  Lorsque vous mettez à niveau une instance de [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] ou [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] vers la version actuelle de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], votre [!INCLUDE[ssISversion10](../../includes/ssisversion10-md.md)] packages ne sont pas automatiquement mis à niveau vers le format de package par la version actuelle [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] utilise. Vous devez choisir une méthode de mise à niveau et mettre à niveau vos packages manuellement.  
   
  Quand vous mettez à niveau un package [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] effectue une migration des scripts des tâches de script et des composants Script vers [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] Tools for Applications (VSTA). Dans [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], les scripts des tâches de script ou des composants Script utilisaient [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] for Applications (VSA). Pour plus d’informations sur les modifications que vous devrez peut-être effectuer avant la migration et sur l’échec de conversion de scripts, consultez [Migrer des scripts vers VSTA](../../sql-server/install/migrate-scripts-to-vsta.md).  
   
@@ -73,7 +73,7 @@ ms.locfileid: "36042739"
 ## <a name="custom-applications-and-custom-components"></a>Applications et composants personnalisés  
  [!INCLUDE[ssISversion2005](../../includes/ssisversion2005-md.md)] ne fonctionnent pas avec la version actuelle de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)].  
   
- Vous pouvez utiliser la version actuelle de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] outils pour exécuter et gérer des packages qui incluent [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] et [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] [!INCLUDE[ssIS](../../includes/ssis-md.md)] des composants personnalisés. Nous avons ajouté quatre règles de redirection de liaison aux fichiers suivants pour aider à rediriger des assemblys du runtime de la version 10.0.0.0 ([!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]) vers la version 11.0.0.0 ([!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]).  
+ Vous pouvez utiliser la version actuelle de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] outils pour exécuter et gérer les packages qui incluent [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] et [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] [!INCLUDE[ssIS](../../includes/ssis-md.md)] des composants personnalisés. Nous avons ajouté quatre règles de redirection de liaison aux fichiers suivants pour aider à rediriger des assemblys du runtime de la version 10.0.0.0 ([!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]) vers la version 11.0.0.0 ([!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]).  
   
 -   DTExec.exe.config  
   
@@ -102,7 +102,7 @@ ms.locfileid: "36042739"
   
 |Composant ou fonctionnalité|Résultats de la mise à niveau|  
 |--------------------------|---------------------|  
-|Chaînes de connexion|Pour les packages [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] et [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] , les noms de certains fournisseurs ont changé et requièrent des valeurs différentes dans les chaînes de connexion. Pour mettre à jour les chaînes de connexion, utilisez l'une des procédures suivantes :<br /><br /> -Utilisez l’Assistant Mise à niveau de packages [!INCLUDE[ssIS](../../includes/ssis-md.md)] pour mettre à niveau le package et sélectionnez l’option **Mettre à jour les chaînes de connexion pour l’utilisation des nouveaux noms de fournisseurs** .<br /><br /> -Dans [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], dans la page Général de la boîte de dialogue Options, sélectionnez l’option **Mettre à jour les chaînes de connexion pour l’utilisation des nouveaux noms de fournisseurs** . Pour plus d'informations sur cette option, consultez [General Page](../general-page-of-integration-services-designers-options.md).<br /><br /> -Dans [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], ouvrez le package et modifiez manuellement le texte de la propriété ConnectionString.<br /><br /> Remarque : Vous ne pouvez pas utiliser les procédures précédentes pour mettre à jour une chaîne de connexion lorsque la chaîne de connexion est stockée dans un fichier de configuration ou d’un fichier de source de données, ou lorsqu’une expression définit la `ConnectionString` propriété. Pour mettre à jour la chaîne de connexion dans ces cas-là, vous devez mettre à jour le fichier ou l'expression manuellement.<br /><br /> Pour plus d’informations sur les sources de données disponibles, consultez [Sources de données](../connection-manager/data-sources.md).|  
+|Chaînes de connexion|Pour les packages [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] et [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] , les noms de certains fournisseurs ont changé et requièrent des valeurs différentes dans les chaînes de connexion. Pour mettre à jour les chaînes de connexion, utilisez l'une des procédures suivantes :<br /><br /> -Utilisez l’Assistant Mise à niveau de packages [!INCLUDE[ssIS](../../includes/ssis-md.md)] pour mettre à niveau le package et sélectionnez l’option **Mettre à jour les chaînes de connexion pour l’utilisation des nouveaux noms de fournisseurs** .<br /><br /> -Dans [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], dans la page Général de la boîte de dialogue Options, sélectionnez l’option **Mettre à jour les chaînes de connexion pour l’utilisation des nouveaux noms de fournisseurs** . Pour plus d'informations sur cette option, consultez [General Page](../general-page-of-integration-services-designers-options.md).<br /><br /> -Dans [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], ouvrez le package et modifiez manuellement le texte de la propriété ConnectionString.<br /><br /> Remarque : Vous ne pouvez pas utiliser les procédures précédentes pour mettre à jour une chaîne de connexion lorsque la chaîne de connexion est stockée dans un fichier de configuration ou un fichier de source de données, ou lorsqu’une expression définit la `ConnectionString` propriété. Pour mettre à jour la chaîne de connexion dans ces cas-là, vous devez mettre à jour le fichier ou l'expression manuellement.<br /><br /> Pour plus d’informations sur les sources de données disponibles, consultez [Sources de données](../connection-manager/data-sources.md).|  
 |Transformation de recherche|Pour [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] packages, la mise à niveau met automatiquement à niveau la transformation de recherche vers la version actuelle de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. Toutefois, la version actuelle de ce composant propose des fonctions supplémentaires dont vous souhaiterez peut-être tirer parti.<br /><br /> Pour plus d'informations, consultez [Lookup Transformation](../data-flow/transformations/lookup-transformation.md).|  
 |Tâche de script et composant Script|Pour les packages [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] , le processus de mise à niveau de packages effectue automatiquement une migration des scripts de la tâche de script et du composant Script de VSA vers VSTA.<br /><br /> Pour plus d’informations sur les modifications que vous devrez peut-être effectuer avant la migration et sur l’échec de conversion de scripts, consultez [Migrer des scripts vers VSTA](../../sql-server/install/migrate-scripts-to-vsta.md).|  
   

@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - SQLServer:Deprecated Features
 - performance counters [SQL Server], deprecated features
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - Deprecated Features object
 ms.assetid: e95de9d6-c950-41cd-8aaa-be529c6de198
 caps.latest.revision: 58
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: e093deb7505ecd6bf7b5afd0b66da2791f34cc51
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: f0a511e928fdd4d010bba5d756ef92b569295301
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36141306"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37227409"
 ---
 # <a name="sql-server-deprecated-features-object"></a>SQL Server, objet Deprecated Features
   L'objet SQLServer:Deprecated Features de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fournit un compteur permettant de contrôler les fonctionnalités désignées comme dépréciées. Dans tous les cas, le compteur fournit un nombre d'utilisations indiquant combien de fois la fonctionnalité déconseillée a été rencontrée depuis le dernier démarrage de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -50,7 +50,7 @@ ms.locfileid: "36141306"
 |CREATE TRIGGER WITH APPEND|Une instruction CREATE TRIGGER avec la clause WITH APPEND a été rencontrée. Recréez à la place le déclencheur entier. Se produit une fois par utilisation dans une instruction DDL.|  
 |CREATE_DROP_DEFAULT|La syntaxe CREATE DEFAULT ou DROP DEFAULT a été rencontrée. Réécrivez la commande en utilisant l'option DEFAULT de CREATE TABLE ou ALTER TABLE. Se produit une fois par compilation.|  
 |CREATE_DROP_RULE|La syntaxe CREATE RULE a été rencontrée. Réécrivez la commande en utilisant des contraintes. Se produit une fois par compilation.|  
-|Types de données text, ntext ou image|Un type de données `text`, `ntext` ou `image` a été rencontré. Réécrire les applications pour utiliser le `varchar(max)` type de données et supprimé `text`, `ntext`, et `image` syntaxe des types de données. Se produit une fois par requête.|  
+|Types de données text, ntext ou image|Un type de données `text`, `ntext` ou `image` a été rencontré. Réécrire les applications pour utiliser le `varchar(max)` type de données et supprimé `text`, `ntext`, et `image` syntaxe du type de données. Se produit une fois par requête.|  
 |Niveau de compatibilité 80 de la base de données|Nombre total de fois où le niveau de compatibilité 80 a été appliqué à une base de données. Projetez de mettre à niveau la base de données et l'application avant la prochaine version. Se produit également lorsqu’une base de données présentant le niveau de compatibilité 80 est démarrée.|  
 |Niveau de compatibilité 90 de la base de données|Nombre total de fois où le niveau de compatibilité 90 a été appliqué à une base de données. Projetez de mettre à niveau la base de données et l'application avant la prochaine version. Se produit également lorsqu'une base de données ayant le niveau de compatibilité 90 est démarrée.|  
 |DATABASE_MIRRORING|Des références à la fonctionnalité de mise en miroir de bases de données ont été rencontrées. Prévoyez d'effectuer une mise à niveau vers des groupes de disponibilité AlwaysOn, ou si vous exécutez une édition de SQL Server qui ne prend pas en charge les groupes de disponibilité AlwaysOn, planifiez une migration vers la copie des journaux de transaction.|  
@@ -253,10 +253,10 @@ ms.locfileid: "36141306"
 |sysusers|Des références à sysusers ont été rencontrées. Utilisez à la place sys.database_principals. Se produit une fois par compilation.|  
 |Indicateur de table sans WITH|Une instruction utilisant des indicateurs de table sans le mot clé WITH a été rencontrée. Modifiez les instructions de manière à inclure le mot clé WITH. Se produit une fois par compilation.|  
 |Option de table text in row|Des références à l'option de table 'text in row' ont été rencontrées. Utilisez à la place sp_tableoption 'large value types out of row'. Se produit une fois par requête.|  
-|TEXTPTR|Des références à la fonction TEXTPTR ont été rencontrées. Réécrire les applications pour utiliser le `varchar(max)` type de données et supprimé `text`, `ntext`, et `image` syntaxe des types de données. Se produit une fois par requête.|  
-|TEXTVALID|Des références à la fonction TEXTVALID ont été rencontrées. Réécrire les applications pour utiliser le `varchar(max)` type de données et supprimé `text`, `ntext`, et `image` syntaxe des types de données. Se produit une fois par requête.|  
+|TEXTPTR|Des références à la fonction TEXTPTR ont été rencontrées. Réécrire les applications pour utiliser le `varchar(max)` type de données et supprimé `text`, `ntext`, et `image` syntaxe du type de données. Se produit une fois par requête.|  
+|TEXTVALID|Des références à la fonction TEXTVALID ont été rencontrées. Réécrire les applications pour utiliser le `varchar(max)` type de données et supprimé `text`, `ntext`, et `image` syntaxe du type de données. Se produit une fois par requête.|  
 |timestamp|Nombre total d’exécutions déconseillées `timestamp` type de données a été rencontré dans une instruction DDL. Utilisez le `rowversion` à la place du type de données.|  
-|UPDATETEXT ou WRITETEXT|L'instruction UPDATETEXT ou WRITETEXT a été rencontrée. Réécrire les applications pour utiliser le `varchar(max)` type de données et supprimé `text`, `ntext`, et `image` syntaxe des types de données. Se produit une fois par requête.|  
+|UPDATETEXT ou WRITETEXT|L'instruction UPDATETEXT ou WRITETEXT a été rencontrée. Réécrire les applications pour utiliser le `varchar(max)` type de données et supprimé `text`, `ntext`, et `image` syntaxe du type de données. Se produit une fois par requête.|  
 |USER_ID|Des références à la fonction USER_ID ont été rencontrées. Utilisez à la place la fonction DATABASE_PRINCIPAL_ID. Se produit une fois par compilation.|  
 |Utilisation d'OLEDB pour les serveurs liés||  
 |Format de stockage vardecimal|Utilisation de `vardecimal` le format de stockage a été rencontré. Utilisez à la place la compression de données.|  
@@ -272,7 +272,7 @@ ms.locfileid: "36141306"
  [Classe d'événements Deprecation Announcement](../event-classes/deprecation-announcement-event-class.md)   
  [Classe d'événements Deprecation Final Support](../event-classes/deprecation-final-support-event-class.md)   
  [Fonctionnalités du moteur de base de données supprimées dans SQL Server 2014](../../database-engine/discontinued-database-engine-functionality-in-sql-server-2016.md)   
- [Fonctionnalités de recherche en texte intégral dans SQL Server 2014 abandonnées](../../database-engine/discontinued-full-text-search-features-in-sql-server-2014.md)   
+ [Recherche en texte intégral fonctionnalités abandonnées dans SQL Server 2014](../../database-engine/discontinued-full-text-search-features-in-sql-server-2014.md)   
  [Utiliser des objets SQL Server](use-sql-server-objects.md)  
   
   

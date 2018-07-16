@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - publications [SQL Server replication], dynamic filters
 - merge replication [SQL Server replication], dynamic filters
@@ -21,15 +21,15 @@ helpviewer_keywords:
 - dynamic filters [SQL Server replication]
 ms.assetid: b48a6825-068f-47c8-afdc-c83540da4639
 caps.latest.revision: 68
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 74cb3cd9631e0b709b7eb5cf0cb0856bc3b830af
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 1a66dcf09bc64991be32b9d7bf66e2e1729de6c5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36044711"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37225415"
 ---
 # <a name="parameterized-row-filters"></a>Parameterized Row Filters
   Les filtres de lignes paramétrables permettent l'envoi de différentes partitions de données à divers Abonnés sans qu'il soit nécessaire de créer plusieurs publications (les filtres paramétrés étaient précédemment désignés par le terme « filtres dynamiques » dans les versions antérieures de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]). Une partition est un sous-ensemble de lignes d'une table ; selon les paramètres sélectionnés lors de la création d'un filtre de lignes paramétrable, chaque ligne d'une table publiée peut appartenir à une seule partition (ce qui donne des partitions qui ne se chevauchent pas), ou à deux ou plusieurs partitions (auquel cas, elles se chevauchent).  
@@ -98,7 +98,7 @@ LoginID = SUSER_SNAME() AND ComputerName = HOST_NAME()
  Par exemple, l'employée Pamela Ansman-Wolfe possède l'ID d'employé 280. Spécifiez la valeur de l'ID d'employé (280 dans notre exemple) comme valeur de HOST_NAME() lorsque vous créez un abonnement pour celle-ci. Lorsque l'Agent de fusion se connecte au serveur de publication, il compare la valeur retournée par HOST_NAME() aux valeurs de la table et ne télécharge que la ligne contenant la valeur 280 dans la colonne **EmployeeID** .  
   
 > [!IMPORTANT]  
->  La fonction HOST_NAME() retourne un `nchar` valeur, vous devez donc utiliser CONVERT si la colonne dans la clause de filtre est de type de données numérique, comme dans l’exemple ci-dessus. Pour des raisons de performances, nous vous recommandons de ne pas appliquer de fonctions aux noms de colonnes dans les clauses de filtre de lignes paramétrables, telles que `CONVERT(nchar,EmployeeID) = HOST_NAME()`. En revanche, il est conseillé d'adopter l'approche illustrée dans l'exemple : `EmployeeID = CONVERT(int,HOST_NAME())`. Cette clause peut être utilisée pour le **@subset_filterclause** paramètre de [sp_addmergearticle](/sql/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql), mais il ne peut généralement être utilisé dans l’Assistant Nouvelle Publication (l’Assistant exécute la clause de filtre pour la valider mais ce qui fait échouer, car le nom d’ordinateur ne peut pas être converti en un `int`). Si vous utilisez l'Assistant Nouvelle publication, nous vous recommandons de spécifier `CONVERT(nchar,EmployeeID) = HOST_NAME()` dans l'Assistant, puis d'utiliser ensuite [sp_changemergearticle](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql) pour modifier la clause en `EmployeeID = CONVERT(int,HOST_NAME())` avant de créer un instantané de la publication.  
+>  La fonction HOST_NAME() retourne un `nchar` valeur, vous devez donc utiliser CONVERT si la colonne dans la clause de filtre est d’un type de données numériques, comme dans l’exemple ci-dessus. Pour des raisons de performances, nous vous recommandons de ne pas appliquer de fonctions aux noms de colonnes dans les clauses de filtre de lignes paramétrables, telles que `CONVERT(nchar,EmployeeID) = HOST_NAME()`. En revanche, il est conseillé d'adopter l'approche illustrée dans l'exemple : `EmployeeID = CONVERT(int,HOST_NAME())`. Cette clause peut être utilisée pour le **@subset_filterclause** paramètre de [sp_addmergearticle](/sql/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql), mais il peut généralement pas être utilisée dans l’Assistant Nouvelle Publication (l’Assistant exécute la clause de filtre pour la valider mais ce qui fait échouer car le nom d’ordinateur ne peut pas être converti en un `int`). Si vous utilisez l'Assistant Nouvelle publication, nous vous recommandons de spécifier `CONVERT(nchar,EmployeeID) = HOST_NAME()` dans l'Assistant, puis d'utiliser ensuite [sp_changemergearticle](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql) pour modifier la clause en `EmployeeID = CONVERT(int,HOST_NAME())` avant de créer un instantané de la publication.  
   
  **Pour substituer la valeur de HOST_NAME()**  
   
@@ -123,7 +123,7 @@ LoginID = SUSER_SNAME() AND ComputerName = HOST_NAME()
  Pour définir des options de filtrage, consultez [Optimize Parameterized Row Filters](../publish/optimize-parameterized-row-filters.md).  
   
 ### <a name="setting-use-partition-groups-and-keep-partition-changes"></a>Définition de « use partition groups » et « keep partition changes »  
- Les options **use partition groups** et **keep partition changes** améliorent les performances de synchronisation des publications avec des articles filtrés en stockant des métadonnées supplémentaires dans la base de données de publication. C'est l'option **use partition groups** qui améliore le plus les performances grâce à l'utilisation de la fonctionnalité de partitions précalculées. Cette option a la valeur `true` par défaut si les articles de votre publication respectent un ensemble de conditions. Pour plus d’informations sur ces exigences, consultez [Optimiser les performances des filtres paramétrés avec des partitions précalculées](parameterized-filters-optimize-for-precomputed-partitions.md). Si vos articles ne répondent pas à la configuration requise pour l’utilisation de partitions précalculées, les **conserver les modifications de partition** option pour est défini sur `true`.  
+ Les options **use partition groups** et **keep partition changes** améliorent les performances de synchronisation des publications avec des articles filtrés en stockant des métadonnées supplémentaires dans la base de données de publication. C'est l'option **use partition groups** qui améliore le plus les performances grâce à l'utilisation de la fonctionnalité de partitions précalculées. Cette option est définie sur `true` par défaut si les articles de votre publication satisfont à un ensemble d’exigences. Pour plus d’informations sur ces exigences, consultez [Optimiser les performances des filtres paramétrés avec des partitions précalculées](parameterized-filters-optimize-for-precomputed-partitions.md). Si vos articles ne répondent pas à la configuration requise pour l’utilisation de partitions précalculées, le **conserver les modifications de partition** option à est définie sur `true`.  
   
 ### <a name="setting-partition-options"></a>Définition de « partition options »  
  Vous spécifiez une valeur pour la propriété **partition options** lors de la création d'un article, selon la façon dont les données de la table filtrée seront partagées par les Abonnés. Vous pouvez attribuer une à quatre valeurs à l'aide de [sp_addmergearticle](/sql/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql), [sp_changemergearticle](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql)et de la boîte de dialogue **Propriétés de l'article** . La propriété peut avoir deux valeurs différentes lorsque vous la définissez dans les boîtes de dialogue **Ajouter un filtre** ou **Modifier le filtre** , auxquelles vous accédez à partir de l'Assistant Nouvelle publication et la boîte de dialogue **Propriétés de la publication** . Le tableau suivant récapitule les valeurs disponibles :  
@@ -135,9 +135,9 @@ LoginID = SUSER_SNAME() AND ComputerName = HOST_NAME()
 |Les données des partitions ne se chevauchent pas et les données sont partagées entre les abonnements. L'Abonné ne peut pas mettre à jour les colonnes référencées dans un filtre paramétré.|N/A<sup>1</sup>|**Non-chevauchement ; partage entre les abonnements**|**2**|  
 |Les données des partitions ne se chevauchent pas et il n'existe qu'un seul abonnement par partition. L’abonné ne peut pas mettre à jour les colonnes référencées dans un filtre paramétré. <sup>2</sup>|**Filtre paramétré créant des partitions qui ne se chevauchent pas, avec un seul abonnement par partition**|**Non-chevauchement ; abonnement unique**|**3**|  
   
- <sup>1</sup> si l’option de filtrage sous-jacente a la valeur **0**, ou **1**, ou **2**, le **ajouter un filtre** et **modifier Filtre** affichent les boîtes de dialogue **une ligne de cette table ira à plusieurs abonnements**.  
+ <sup>1</sup> si l’option de filtrage sous-jacente a la valeur **0**, ou **1**, ou **2**, le **ajouter un filtre** et **modifier Filtre** affichent des boîtes de dialogue **une ligne de cette table ira à plusieurs abonnements**.  
   
- <sup>2</sup> si vous spécifiez cette option, il ne peut être un seul abonnement pour chaque partition de données dans cet article. Si un deuxième abonnement est créé dans lequel le critère de filtrage du nouvel abonnement produit la même partition que l'abonnement existant, ce dernier est supprimé.  
+ <sup>2</sup> si vous spécifiez cette option, il ne peut exister un seul abonnement pour chaque partition de données de cet article. Si un deuxième abonnement est créé dans lequel le critère de filtrage du nouvel abonnement produit la même partition que l'abonnement existant, ce dernier est supprimé.  
   
 > [!IMPORTANT]  
 >  La valeur de **partition options** doit être définie en fonction du partage des données entre Abonnés. Si, par exemple, vous spécifiez une partition qui ne se chevauche pas avec un seul abonnement par partition mais que les données sont ensuite mises à jour sur un autre Abonné, l'Agent de fusion peut échouer au cours de la synchronisation et un problème de non convergence peut survenir.  

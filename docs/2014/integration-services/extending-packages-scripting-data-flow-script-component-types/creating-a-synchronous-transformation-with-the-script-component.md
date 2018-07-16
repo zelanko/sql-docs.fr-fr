@@ -20,13 +20,13 @@ ms.assetid: aa1bee1a-ab06-44d8-9944-4bff03d73016
 caps.latest.revision: 61
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 3bfa2cd1c622041936d36edccc8e832359f74c56
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: a6e2b34352e3fbb84a3f801919537b5936322ae7
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36154450"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37300589"
 ---
 # <a name="creating-a-synchronous-transformation-with-the-script-component"></a>Création d'une transformation synchrone à l'aide du composant Script
   Vous utilisez un composant de transformation dans le flux de données d'un package [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] pour modifier et analyser les données acheminées de la source à la destination. Une transformation à sorties synchrones traite chacune des lignes d'entrée lorsqu'elles traversent le composant. Une transformation à sorties asynchrones patiente jusqu'à ce qu'elle ait reçu toutes les lignes d'entrée pour achever son traitement. Cette rubrique décrit une transformation synchrone. Pour plus d’informations sur les transformations asynchrones, consultez [Création d’une transformation asynchrone à l’aide du composant Script](../extending-packages-scripting-data-flow-script-component-types/creating-an-asynchronous-transformation-with-the-script-component.md). Pour plus d’informations sur la différence entre les composants synchrones et asynchrones, consultez [Présentation des transformations synchrones et asynchrones](../understanding-synchronous-and-asynchronous-transformations.md).  
@@ -76,7 +76,7 @@ ms.locfileid: "36154450"
 ### <a name="adding-variables"></a>Ajout de variables  
  Si vous souhaitez utiliser des variables existantes dans votre script, vous pouvez les ajouter dans le `ReadOnlyVariables` et `ReadWriteVariables` des champs de propriété sur le **Script** page de la **éditeur de Transformation de Script**.  
   
- Lorsque vous ajoutez plusieurs variables dans les champs de propriété, séparez les noms de variables par des virgules. Vous pouvez également sélectionner plusieurs variables en cliquant sur le bouton de sélection (**...** ) situé en regard du `ReadOnlyVariables` et `ReadWriteVariables` champs de propriété, puis en sélectionnant les variables dans le **sélectionner des variables** boîte de dialogue.  
+ Lorsque vous ajoutez plusieurs variables dans les champs de propriété, séparez les noms de variables par des virgules. Vous pouvez également sélectionner plusieurs variables en cliquant sur les points de suspension (**...** ) situé en regard du `ReadOnlyVariables` et `ReadWriteVariables` champs de propriété, puis en sélectionnant les variables dans le **sélectionner des variables** boîte de dialogue.  
   
  Pour obtenir des informations générales sur l’utilisation de variables avec le composant Script, consultez [Utilisation de variables dans le composant Script](../extending-packages-scripting/data-flow-script-component/using-variables-in-the-script-component.md).  
   
@@ -90,7 +90,7 @@ ms.locfileid: "36154450"
 ### <a name="understanding-the-auto-generated-code"></a>Fonctionnement du code généré automatiquement  
  Lorsque vous ouvrez l'environnement de développement intégré VSTA après avoir créé et configuré un composant de transformation, la classe `ScriptMain` modifiable apparaît dans l'éditeur de code avec un stub de la méthode `ProcessInputRow`. La classe `ScriptMain` est l'emplacement où vous allez écrire votre code personnalisé, et `ProcessInputRow` est la méthode la plus importante d'un composant de transformation.  
   
- Si vous ouvrez le **Explorateur de projets** fenêtre dans VSTA, vous pouvez voir que le composant Script a également généré en lecture seule `BufferWrapper` et `ComponentWrapper` éléments de projet. Le `ScriptMain` classe hérite de la `UserComponent` classe dans le `ComponentWrapper` élément de projet.  
+ Si vous ouvrez le **Explorateur de projets** fenêtre VSTA, vous pouvez voir que le composant Script a également généré en lecture seule `BufferWrapper` et `ComponentWrapper` éléments de projet. Le `ScriptMain` classe hérite de la `UserComponent` classe dans le `ComponentWrapper` élément de projet.  
   
  Au moment de l'exécution, le moteur de flux de données appelle la méthode `ProcessInput` dans la classe `UserComponent`, qui remplace la méthode <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent.ProcessInput%2A> de la classe parente <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent>. La méthode `ProcessInput` parcourt à son tour les lignes du tampon d'entrée et appelle la méthode `ProcessInputRow` une fois pour chaque ligne.  
   
@@ -141,7 +141,7 @@ else
  Ces exemples présentent le code personnalisé requis dans la classe `ScriptMain` pour créer un composant de transformation synchrone.  
   
 > [!NOTE]  
->  Ces exemples utilisent la **Person.Address** de table dans le `AdventureWorks` base de données exemple et transmettent ses première et quatrième colonnes, le **intAddressID** et **nvarchar (30) Ville**colonnes, dans le flux de données. Les mêmes données sont utilisées dans les exemples de source, transformation et destination de cette section. Des conditions préalables et des hypothèses supplémentaires sont documentées pour chaque exemple.  
+>  Ces exemples utilisent la **Person.Address** table dans le `AdventureWorks` exemple de base de données et transmettent ses première et quatrième colonnes, le **intAddressID** et **nvarchar (30) City**colonnes, via le flux de données. Les mêmes données sont utilisées dans les exemples de source, transformation et destination de cette section. Des conditions préalables et des hypothèses supplémentaires sont documentées pour chaque exemple.  
   
 ### <a name="single-output-synchronous-transformation-example"></a>Exemple de transformation synchrone à sortie unique  
  Cet exemple présente un composant de transformation synchrone à sortie unique. Cette transformation passe la colonne **AddressID** et convertit la colonne **City** en majuscules.  
@@ -150,7 +150,7 @@ else
   
 1.  Ajoutez un nouveau composant Script à l'aire du concepteur de flux de données et configurez-le en tant que transformation.  
   
-2.  Connectez la sortie d'une source ou d'une autre transformation au nouveau composant de transformation dans le concepteur [!INCLUDE[ssIS](../../includes/ssis-md.md)]. Cette sortie doit fournir des données à partir de la **Person.Address** table de la `AdventureWorks` base de données qui contient le **AddressID** et **Ville** colonnes.  
+2.  Connectez la sortie d'une source ou d'une autre transformation au nouveau composant de transformation dans le concepteur [!INCLUDE[ssIS](../../includes/ssis-md.md)]. Cette sortie doit fournir les données à partir de la **Person.Address** table de la `AdventureWorks` base de données qui contient le **AddressID** et **Ville** colonnes.  
   
 3.  Ouvrez l' **Éditeur de transformation de script**. Dans la page **Colonnes d’entrée**, sélectionnez les colonnes **AddressID** et **City**. Marquez la colonne **City** comme accessible en lecture/écriture.  
   
@@ -202,7 +202,7 @@ public class ScriptMain:
   
 1.  Ajoutez un nouveau composant Script à l'aire du concepteur de flux de données et configurez-le en tant que transformation.  
   
-2.  Connectez la sortie d'une source ou d'une autre transformation au nouveau composant de transformation dans le concepteur [!INCLUDE[ssIS](../../includes/ssis-md.md)]. Cette sortie doit fournir des données à partir de la **Person.Address** table de la `AdventureWorks` base de données exemple contienne au moins les **AddressID** et **Ville** colonnes.  
+2.  Connectez la sortie d'une source ou d'une autre transformation au nouveau composant de transformation dans le concepteur [!INCLUDE[ssIS](../../includes/ssis-md.md)]. Cette sortie doit fournir les données à partir de la **Person.Address** table de la `AdventureWorks` base de données exemple contienne au moins les **AddressID** et **Ville** colonnes.  
   
 3.  Ouvrez l' **Éditeur de transformation de script**. Dans la page **Colonnes d’entrée**, sélectionnez les colonnes **AddressID** et **City**. Marquez la colonne **City** comme accessible en lecture/écriture.  
   

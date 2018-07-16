@@ -1,5 +1,5 @@
 ---
-title: Définition et exploration d’indicateurs de performance clés | Documents Microsoft
+title: Définition et exploration d’indicateurs de performance clés | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 648b9a02-1278-4f11-b940-6f0de6a4042d
 caps.latest.revision: 18
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: jhubbard
-ms.openlocfilehash: 1a8612cf9e325aaa59f4b79ca74a5aa49f51aaab
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: f60530d85de673e3cb3bb7e6f19f2c8484cc68bf
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36039423"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37243729"
 ---
 # <a name="defining-and-browsing-kpis"></a>Définition et exploration d'indicateurs de performance clés
   Pour définir un indicateur de performance clé (PKI, Key Performance Indicator), vous définissez d'abord son nom et le groupe de mesures auquel il est associé. Un indicateur de performance clé peut être associé à tous les groupes de mesures ou à un seul groupe de mesures. Vous définissez ensuite les éléments suivants de l'indicateur de performance clé :  
@@ -71,7 +71,7 @@ ms.locfileid: "36039423"
   
      ![Modèle d’indicateur de performance clé vide dans le volet d’informations](../../2014/tutorials/media/l7-kpi-2.gif "modèle d’indicateur de performance clé vide dans le volet d’informations")  
   
-3.  Dans le **nom** , tapez `Reseller Revenue`, puis sélectionnez **Reseller Sales** dans les **groupe de mesures associé** liste.  
+3.  Dans le **nom** , tapez `Reseller Revenue`, puis sélectionnez **Reseller Sales** dans le **groupe de mesures associé** liste.  
   
 4.  Sous l’onglet **Métadonnées** du volet **Outils de calcul** , développez **Mesures**, **Reseller Sales**, puis faites glisser la mesure **Reseller Sales-Sales Amount** jusqu’à la zone **Expression de valeur** .  
   
@@ -265,7 +265,7 @@ ms.locfileid: "36039423"
   
 2.  Après avoir déployé le didacticiel, cliquez sur **Reconnexion** dans la barre d’outils de l’onglet **Indicateurs de performance clés** , puis cliquez sur **Mode Navigateur**.  
   
-     Le `Product Gross Profit Margin` KPI apparaît et affiche la valeur de l’indicateur de performance clé pour **Q3 CY 2007** et **Amérique du Nord** secteur de vente.  
+     Le `Product Gross Profit Margin` KPI apparaît et affiche la valeur d’indicateur de performance clé pour **Q3 CY 2007** et **Amérique du Nord** secteur de vente.  
   
 3.  Dans le volet **Filtre** , sélectionnez **Product** dans la liste **Dimension** , sélectionnez **Category** dans la liste **Hiérarchie** , sélectionnez **Equal** dans la liste **Opérateur** , sélectionnez **Bikes** dans la liste **Expression de filtre** , puis cliquez sur **OK**.  
   

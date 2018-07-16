@@ -1,5 +1,5 @@
 ---
-title: 'Création d’ID valide, IDREF et IDREFS à des attributs de Type à l’aide de SQL : Prefix (SQLXML 4.0) | Documents Microsoft'
+title: 'Création d’ID valide, IDREF et IDREFS à des attributs de Type à l’aide de SQL : Prefix (SQLXML 4.0) | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -24,20 +24,20 @@ helpviewer_keywords:
 - ID relationships [SQLXML]
 ms.assetid: 1c7f77d3-81f3-4820-bb63-c4aaa4ea9aa1
 caps.latest.revision: 27
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 0da57705288df64e630b0d69781c151cd1310299
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 49576de626183ab603699311b9c18f02013685d0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36039026"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37215029"
 ---
 # <a name="creating-valid-id-idref-and-idrefs-type-attributes-using-sqlprefix-sqlxml-40"></a>Création d'attributs de type Valid ID, IDREF et IDREFS à l'aide de sql:prefix (SQLXML 4.0)
   Un attribut peut être spécifié comme étant un attribut de type ID. Les attributs spécifiés comme IDREF ou IDREFS peuvent être utilisés pour faire référence aux attributs de type ID, ce qui permet d'établir des liens entre des documents.  
   
- ID, IDREF et IDREFS correspondent aux relations PK/FK (clé étrangère/clé primaire) la base de données, avec quelques différences. Dans un document XML, les valeurs des attributs de type ID doivent être distinctes. Si **CustomerID** et **OrderID** attributs sont spécifiés en tant que type ID dans un document XML, ces valeurs doivent être distinctes. Toutefois, dans une base de données, les colonnes CustomerID et OrderID peuvent avoir les mêmes valeurs. (Par exemple, CustomerID = 1 et OrderID = 1 sont valides dans la base de données.)  
+ ID, IDREF et IDREFS correspondent aux relations de (clé étrangère/clé primaire) de clé primaire/clé étrangère dans la base de données, avec quelques différences. Dans un document XML, les valeurs des attributs de type ID doivent être distinctes. Si **CustomerID** et **OrderID** attributs sont spécifiés comme type ID dans un document XML, ces valeurs doivent être distinctes. Toutefois, dans une base de données, les colonnes CustomerID et OrderID peuvent avoir les mêmes valeurs. (Par exemple, CustomerID = 1 et OrderID = 1 sont valides dans la base de données.)  
   
  Pour que les attributs ID, IDREF et IDREFS soient valides :  
   
@@ -57,7 +57,7 @@ ms.locfileid: "36039026"
  Pour créer des exemples fonctionnels à l'aide des exemples suivants, vous devez répondre à certaines conditions requises. Pour plus d’informations, consultez [configuration requise pour exécuter les exemples de SQLXML](../sqlxml/requirements-for-running-sqlxml-examples.md).  
   
 ### <a name="a-specifying-id-and-idrefs-types"></a>A. Spécification des types ID et IDREFS  
- Dans le schéma suivant, le  **\<client >** élément comprend la  **\<ordre >** élément enfant. Le  **\<ordre >** élément possède également un élément enfant, le  **\<OrderDetail >** élément.  
+ Dans le schéma suivant, le  **\<client >** élément se compose de la  **\<ordre >** élément enfant. Le  **\<ordre >** élément possède également un élément enfant, le  **\<OrderDetail >** élément.  
   
  Le **OrderIDList** attribut de  **\<client >** est un attribut de type IDREFS qui fait référence à la **OrderID** attribut de la  **\< Commande >** élément.  
   

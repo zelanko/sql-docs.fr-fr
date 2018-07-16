@@ -1,5 +1,5 @@
 ---
-title: Modification des noms de Table par défaut | Documents Microsoft
+title: Modification des noms de Table par défaut | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: ddd97483-a76d-43c1-8b40-fc7cc57fb0c2
 caps.latest.revision: 22
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: jhubbard
-ms.openlocfilehash: 87328bab0552074462ec039cbcb9c8184639f350
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: c0051a4bdd4a274ee91997117f491c435a556c04
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36051376"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37308589"
 ---
 # <a name="modifying-default-table-names"></a>Modification des noms de tables par défaut
   Vous pouvez modifier la valeur de la propriété **FriendlyName** des objets de la vue de source de données pour en faciliter l'utilisation et la compréhension.  
@@ -37,11 +37,11 @@ ms.locfileid: "36051376"
   
      Il est plus facile de modifier les propriétés de chaque table dans la vue de source de données si la fenêtre des propriétés reste ouverte. Si vous n'ouvrez pas la fenêtre en utilisant le bouton **Masquer automatiquement** , elle se ferme lorsque vous cliquez sur un autre objet dans le volet **Diagramme** .  
   
-3.  Modifier la **FriendlyName** propriété pour le **FactInternetSales** objet *`InternetSales`*.  
+3.  Modifier le **FriendlyName** propriété pour le **FactInternetSales** objet *`InternetSales`*.  
   
      Lorsque vous cliquez en dehors de la cellule correspondant à la propriété **FriendlyName** , la modification est appliquée. Dans la leçon suivante, vous définirez un groupe de mesures basé sur cette table de faits. Le nom de la table de faits sera InternetSales au lieu de FactInternetSales à cause de la modification que vous avez apportée dans cette leçon.  
   
-4.  Cliquez sur **DimProduct** dans le volet **Tables** . Dans la fenêtre Propriétés, modifiez la **FriendlyName** propriété *`Product`*.  
+4.  Cliquez sur **DimProduct** dans le volet **Tables** . Dans la fenêtre Propriétés, modifiez le **FriendlyName** propriété *`Product`*.  
   
 5.  Modifiez la propriété **FriendlyName** de chaque table restante dans la vue de source de données en procédant de la même façon, pour supprimer le préfixe «**Dim**».  
   
@@ -50,10 +50,10 @@ ms.locfileid: "36051376"
 7.  Dans le menu **Fichier** , ou dans la barre d'outils de [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)], cliquez sur **Enregistrer tout** pour enregistrer les modifications vous avez faites à ce stade dans le projet Didacticiel [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] . Vous pouvez arrêter le didacticiel ici si vous le souhaitez et le reprendre ultérieurement.  
   
 ## <a name="next-lesson"></a>Leçon suivante  
- [Leçon 2 : Définition et déploiement d’un Cube](lesson-2-defining-and-deploying-a-cube.md)  
+ [Leçon 2 : Définition et déploiement d’un cube](lesson-2-defining-and-deploying-a-cube.md)  
   
 ## <a name="see-also"></a>Voir aussi  
  [Vues de sources de données dans les modèles multidimensionnels](multidimensional-models/data-source-views-in-multidimensional-models.md)   
- [Modifier les propriétés dans une vue de Source de données &#40;Analysis Services&#41;](multidimensional-models/change-properties-in-a-data-source-view-analysis-services.md)  
+ [Modifier les propriétés d’une vue de Source de données &#40;Analysis Services&#41;](multidimensional-models/change-properties-in-a-data-source-view-analysis-services.md)  
   
   

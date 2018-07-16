@@ -1,5 +1,5 @@
 ---
-title: Spécification de prédicats à valeurs booléennes dans des requêtes XPath (SQLXML 4.0) | Documents Microsoft
+title: Spécification de prédicats à valeurs booléennes dans des requêtes XPath (SQLXML 4.0) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -20,18 +20,18 @@ helpviewer_keywords:
 - multiple predicates
 ms.assetid: 5f6e7219-6911-4bca-a54b-56b95e0b43dd
 caps.latest.revision: 24
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 22c104784dfda86645a869736927367217ab5ff7
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: b6ab1ec725924479a30f2f8df43e1c0ccd4c6e83
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36141770"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37225169"
 ---
 # <a name="specifying-boolean-valued-predicates-in-xpath-queries-sqlxml-40"></a>Spécification de prédicats booléens dans les requêtes XPath (SQLXML 4.0)
-  Les exemples suivants montrent comment les prédicats booléens sont spécifiés dans les requêtes XPath. Les requêtes XPath de ces exemples sont spécifiées par rapport au schéma de mappage contenu dans SampleSchema1.xml. Pour plus d’informations sur cet exemple de schéma, consultez [exemple de schéma XSD annoté pour obtenir des exemples XPath &#40;SQLXML 4.0&#41;](sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md).  
+  Les exemples suivants montrent comment les prédicats booléens sont spécifiés dans les requêtes XPath. Les requêtes XPath de ces exemples sont spécifiées par rapport au schéma de mappage contenu dans SampleSchema1.xml. Pour plus d’informations sur cet exemple de schéma, consultez [exemple de schéma XSD annoté pour les exemples XPath &#40;SQLXML 4.0&#41;](sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md).  
   
 ## <a name="examples"></a>Exemples  
   
@@ -94,7 +94,7 @@ ms.locfileid: "36141770"
     ```  
   
 ### <a name="b-specify-successive-and-nested-predicates"></a>B. Spécifier les prédicats consécutifs et imbriqués  
- La requête suivante affiche l'utilisation de prédicats consécutifs. La requête retourne tous les le  **\<client >** des éléments enfants du nœud de contexte qui ont à la fois un **SalesPersonID** attribut avec une valeur 277 et un **TerritoryID**attribut avec une valeur de 3 :  
+ La requête suivante affiche l'utilisation de prédicats consécutifs. La requête retourne tous les  **\<client >** les éléments enfants du nœud de contexte qui ont les deux un **SalesPersonID** attribut avec la valeur 277 et un **TerritoryID**attribut avec une valeur de 3 :  
   
 ```  
 /child::Customer[attribute::SalesPersonID="277"][attribute::TerritoryID="3"]  
@@ -108,7 +108,7 @@ ms.locfileid: "36141770"
 /Customer[@SalesPersonID="277"][@TerritoryID="3"]  
 ```  
   
- La requête XPath suivante illustre l'utilisation de prédicats imbriqués. La requête retourne tous les  **\<client >** des éléments enfants du nœud de contexte qui incluent  **\<ordre >** avec au moins un des éléments enfants  **\<Commande >** élément ayant une **SalesPersonID** attribut la valeur 2.  
+ La requête XPath suivante illustre l'utilisation de prédicats imbriqués. La requête retourne tous les  **\<client >** les éléments enfants du nœud de contexte qui incluent  **\<ordre >** éléments enfants avec au moins un  **\<Ordre >** élément qui possède un **SalesPersonID** attribut la valeur 2.  
   
 ```  
 /Customer[Order[@SalesPersonID=2]]  

@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.ag.tsxwiz.msx.f1
 - sql12.ag.tsxwiz.cover.f1
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - target servers [SQL Server], creating
 ms.assetid: 13aabe2d-67fe-4c67-8d49-2928dd705b7a
 caps.latest.revision: 34
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: fa3a985133eca22ee3222d78b7c9467063e75163
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: b168db1de8ad6b10f924d625612e0b6c00ae1d15
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36140657"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37191339"
 ---
 # <a name="make-a-target-server"></a>Créer un serveur cible
   Cette rubrique explique comment créer un serveur cible dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] à l'aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], de [!INCLUDE[tsql](../../includes/tsql-md.md)]ou d'objets SMO (SQL Server Management Objects).  
@@ -67,7 +67,7 @@ ms.locfileid: "36140657"
      Pour résoudre ce problème, vérifiez qu'un compte proxy portant le même nom que le compte proxy du serveur maître sous lequel l'étape s'exécute existe sur le serveur cible.  
   
 ####  <a name="Permissions"></a> Permissions  
- Les autorisations d’exécution de cette procédure reviennent par défaut aux membres de le `sysadmin` rôle serveur fixe.  
+ Autorisations pour exécuter cette procédure reviennent par défaut aux membres de la `sysadmin` rôle serveur fixe.  
   
 ##  <a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
   

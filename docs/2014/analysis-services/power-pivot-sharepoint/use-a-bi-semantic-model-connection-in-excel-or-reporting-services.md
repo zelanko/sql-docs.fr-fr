@@ -1,5 +1,5 @@
 ---
-title: Utiliser une connexion de modèle sémantique BI dans Excel ou Reporting Services | Documents Microsoft
+title: Utiliser une connexion de modèle sémantique BI dans Excel ou Reporting Services | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 486195ca-530f-49e8-b40d-0f817db159ee
 caps.latest.revision: 8
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 00ee95942a8022ee8d299ab400d36676b51467ab
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 4b1ff3dfedd5dce6a4db551cc6fdb180e4d723d8
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36144174"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37219969"
 ---
 # <a name="use-a-bi-semantic-model-connection-in-excel-or-reporting-services"></a>Utiliser une connexion de modèle sémantique BI dans Excel ou Reporting Services
-  Cette rubrique explique comment utiliser les connexions de modèles sémantiques BI que vous avez créées à l'aide des instructions fournies dans d'autres rubriques. Si vous n’avez pas encore créé un modèle sémantique BI, consultez [créer une connexion de modèle sémantique BI à un classeur PowerPivot](create-a-bi-semantic-model-connection-to-a-power-pivot-workbook.md) et [créer une connexion de modèle sémantique BI vers une base de données Model tabulaires](create-a-bi-semantic-model-connection-to-a-tabular-model-database.md).  
+  Cette rubrique explique comment utiliser les connexions de modèles sémantiques BI que vous avez créées à l'aide des instructions fournies dans d'autres rubriques. Si vous n’avez pas encore créé de modèle sémantique BI, consultez [créer une connexion de modèle sémantique BI à un classeur PowerPivot](create-a-bi-semantic-model-connection-to-a-power-pivot-workbook.md) et [créer une connexion de modèle sémantique BI à une base de données Model tabulaire](create-a-bi-semantic-model-connection-to-a-tabular-model-database.md).  
   
 ##  <a name="bkmk_connect"></a> Se connecter depuis Excel  
  Vous pouvez spécifier une connexion de modèle sémantique BI comme source de données dans Excel ou toute autre application de gestion qui utilise des données de modèle tabulaire Analysis Services. Cette section présente les deux approches de connexion aux données de modèles sémantiques BI à l'aide d'Excel.  

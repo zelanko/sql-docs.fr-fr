@@ -18,13 +18,13 @@ ms.assetid: 2a0aae82-39cc-4423-b09a-72d2f61033bd
 caps.latest.revision: 27
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 6201ec5007c3f7e09c2713d45bdd86badb2addfc
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 0d2c2c37e0f9c5485b530483b60da08d8da06173
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36042742"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37316819"
 ---
 # <a name="understanding-the-script-component-object-model"></a>Présentation du modèle objet du composant Script
   Comme indiqué dans [codage et débogage du composant Script] (.. / extending-packages-scripting/data-flow-script-component/coding-and-debugging-the-script-component.md, le projet de composant Script contient trois éléments de projet :  
@@ -129,7 +129,7 @@ public override void PreExecute()
 #### <a name="what-the-componentwrapper-project-item-provides"></a>Composants fournis par l'élément de projet ComponentWrapper  
  L'élément de projet ComponentWrapper contient une classe nommée `UserComponent` dérivée de <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent>. La classe `ScriptMain` dans laquelle vous écrivez votre code personnalisé dérive à son tour de `UserComponent`. La classe `UserComponent` contient les méthodes suivantes :  
   
--   Une implémentation substituée de la méthode `ProcessInput`. Il s'agit de la méthode que le moteur de flux de données appelle au moment de l'exécution, juste après la méthode `PreExecute`. Elle peut être appelée plusieurs fois. `ProcessInput` remet le traitement de la  **\<inputbuffer > _ProcessInput** (méthode). La méthode `ProcessInput` recherche ensuite la fin de la mémoire tampon d'entrée et si elle la trouve, appelle la méthode `FinishOutputs` substituable et la méthode `MarkOutputsAsFinished` privée. Puis, la méthode `MarkOutputsAsFinished` appelle `SetEndOfRowset` sur la dernière mémoire tampon de sortie.  
+-   Une implémentation substituée de la méthode `ProcessInput`. Il s'agit de la méthode que le moteur de flux de données appelle au moment de l'exécution, juste après la méthode `PreExecute`. Elle peut être appelée plusieurs fois. `ProcessInput` transfère le traitement à la  **\<inputbuffer > _ProcessInput** (méthode). La méthode `ProcessInput` recherche ensuite la fin de la mémoire tampon d'entrée et si elle la trouve, appelle la méthode `FinishOutputs` substituable et la méthode `MarkOutputsAsFinished` privée. Puis, la méthode `MarkOutputsAsFinished` appelle `SetEndOfRowset` sur la dernière mémoire tampon de sortie.  
   
 -   Une implémentation substituable de la méthode **\<inputbuffer>_ProcessInput**. Cette implémentation par défaut parcourt simplement chaque ligne d’entrée et appelle **\<inputbuffer>_ProcessInputRow**.  
   
@@ -154,11 +154,11 @@ public override void PreExecute()
   
 -   Des propriétés d'accesseur nommées, typées et en écriture seule pour chaque colonne de sortie.  
   
--   Écriture seule  **\<colonne > _IsNull** propriété pour chaque colonne de sortie sélectionné que vous pouvez utiliser pour définir la valeur de colonne à `null`.  
+-   Écriture seule  **\<colonne > _IsNull** propriété pour chaque colonne de sortie sélectionnée que vous pouvez utiliser pour définir la valeur de colonne `null`.  
   
 -   Une méthode `AddRow` pour ajouter une ligne vide à la mémoire tampon de sortie.  
   
--   Une méthode `SetEndOfRowset` pour indiquer au moteur de flux de données qu'aucune mémoire tampon de données supplémentaires n'est attendue. Il existe également une fonction `EndOfRowset` pour déterminer si la mémoire tampon active est la dernière mémoire tampon de données. En général inutile ces fonctions lorsque vous utilisez l’entrée du traitement des méthodes implémentées dans la `UserComponent` classe de base.  
+-   Une méthode `SetEndOfRowset` pour indiquer au moteur de flux de données qu'aucune mémoire tampon de données supplémentaires n'est attendue. Il existe également une fonction `EndOfRowset` pour déterminer si la mémoire tampon active est la dernière mémoire tampon de données. En général inutile ces fonctions lorsque vous utilisez la traitement des méthodes implémentées dans des entrées de la `UserComponent` classe de base.  
   
 #### <a name="what-the-componentwrapper-project-item-provides"></a>Composants fournis par l'élément de projet ComponentWrapper  
  L'élément de projet ComponentWrapper contient une classe nommée `UserComponent` dérivée de <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent>. La classe `ScriptMain` dans laquelle vous écrivez votre code personnalisé dérive à son tour de `UserComponent`. La classe `UserComponent` contient les méthodes suivantes :  
@@ -206,10 +206,10 @@ public override void ReleaseConnections()
 }  
 ```  
   
-![Icône Integration Services (petite)](../../media/dts-16.gif "icône Integration Services (petite)")**restent jusqu'à la Date avec Integration Services** <br /> Pour obtenir les derniers téléchargements, articles, exemples et vidéos de Microsoft, ainsi que des solutions sélectionnées par la communauté, visitez la page [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] sur MSDN :<br /><br /> [Visitez la page Integration Services sur MSDN](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Pour recevoir une notification automatique de ces mises à jour, abonnez-vous aux flux RSS disponibles sur la page.  
+![Icône Integration Services (petite)](../../media/dts-16.gif "icône Integration Services (petite)")**rester jusqu'à la Date avec Integration Services** <br /> Pour obtenir les derniers téléchargements, articles, exemples et vidéos de Microsoft, ainsi que des solutions sélectionnées par la communauté, visitez la page [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] sur MSDN :<br /><br /> [Visitez la page Integration Services sur MSDN](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Pour recevoir une notification automatique de ces mises à jour, abonnez-vous aux flux RSS disponibles sur la page.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Configuration de composant de Script dans l’éditeur de composant Script.] ((configuring-the-script-component-in-the-script-component-editor.md)   
+ [Configuration du composant Script dans l’éditeur de composant Script.] ((configuring-the-script-component-in-the-script-component-editor.md)   
  [Codage et débogage du composant Script] (.. /Extending-packages-Scripting/Data-Flow-script-Component/Coding-and-Debugging-the-Script-Component.MD  
   
   

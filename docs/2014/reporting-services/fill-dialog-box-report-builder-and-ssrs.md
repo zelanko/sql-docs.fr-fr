@@ -1,5 +1,5 @@
 ---
-title: Remplissez la boîte de dialogue (Générateur de rapports et SSRS) | Documents Microsoft
+title: Remplissez la boîte de dialogue (Générateur de rapports et SSRS) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.rtp.rptdesigner.reportbody.fill.f1
 - "10065"
@@ -20,15 +20,15 @@ f1_keywords:
 - "10124"
 ms.assetid: 93a91d02-d558-4a0e-8d17-3fdf21e208d3
 caps.latest.revision: 11
-author: douglaslM
+author: maggiesmsft
 ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 1378fb461e3a52f751f79cb0d31e0dcd498d8c0b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 135a2d1d7ac4a9783bf2cc66f26dc60953ec2f76
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36041973"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37262295"
 ---
 # <a name="fill-dialog-box-report-builder-and-ssrs"></a>Boîte de dialogue Remplissage (Générateur de rapports et SSRS)
   Sous l'onglet **Remplissage** , vous pouvez spécifier les options de couleur de l'arrière-plan d'une seule cellule ou de plusieurs cellules dans une région de données ou une zone de texte.  
@@ -37,7 +37,7 @@ ms.locfileid: "36041973"
  **Couleur de remplissage**  
  Cliquez sur le bouton de couleur pour sélectionner une couleur de remplissage pour le rectangle. Cliquez sur le **Expression***(fx)* bouton pour modifier l’expression, ce qui peut être une valeur hexadécimale pour la couleur RVB ou un des noms de couleur prédéfinis fournis dans le **Expression** boîte de dialogue. Pour afficher la liste des couleurs prédéfinies, sélectionnez **Web** dans le volet **Élément**. Les noms de couleur répertoriés dans le volet **Titre** peuvent être tapés dans le volet de texte de l'expression. N'utilisez pas de signe égal (=) ou de guillemets ("") lorsque vous tapez le nom de couleur.  
   
- **Sélectionnez la source de l’image**  
+ **Sélectionnez la source d’image**  
  Indiquez l'endroit où l'image est stockée afin que lorsque le rapport est rendu, le processeur de rapports puisse l'afficher.  
   
 -   **Externe** Choisissez cette option lorsque vous souhaitez que l'image continue à exister sous la forme d'un fichier sur un serveur de rapports ou un serveur Web.  
@@ -51,7 +51,7 @@ ms.locfileid: "36041973"
   
  Si vous incorporez l’image, choisissez dans la liste déroulante l’image à ajouter au rapport. Cliquez sur **Importer** pour ajouter l’image à la liste déroulante. Si vous avez ajouté une image au volet **Données** , vous pouvez la sélectionner en choisissant **Rapport** , puis en sélectionnant l’image dans la liste déroulante.  
   
- Si vous sélectionnez l'option **Externe** , tapez l'URL de l'image. Pour un rapport publié sur un serveur de rapports configuré en mode natif, utilisez un chemin d’accès complet ou relatif (par exemple, http://*\<nom_serveur >*/images/image1.jpg). Pour un rapport publié sur un serveur de rapports configuré en mode intégré SharePoint, utilisez une URL qualifiée complète (par exemple, http://*\<nom du serveur SharePoint > /\<site >*  /Documents/images / Image1.jpg).  
+ Si vous sélectionnez l'option **Externe** , tapez l'URL de l'image. Pour un rapport publié sur un serveur de rapports configuré en mode natif, utilisez un chemin d’accès complet ou relatif (par exemple, http://*\<nom_serveur >*/images/image1.jpg). Pour un rapport publié sur un serveur de rapports configuré en mode intégré SharePoint, utilisez une URL qualifiée complète (par exemple, http://*\<Nom_serveur_sharepoint > /\<site >*  /Documents/images / Image1.jpg).  
   
  **Importer**  
  Disponible quand vous sélectionnez **Rapport**. Cliquez pour ajouter une image à la liste déroulante **Utiliser cette image** .  
@@ -64,7 +64,7 @@ ms.locfileid: "36041973"
   
 ## <a name="see-also"></a>Voir aussi  
  [Mise en forme des éléments de rapport &#40;Générateur de rapports et SSRS&#41;](report-design/formatting-report-items-report-builder-and-ssrs.md)   
- [Mise en forme du texte et des espaces réservés &#40;rapport Générateur et SSRS&#41;](report-design/formatting-text-and-placeholders-report-builder-and-ssrs.md)   
- [Images &#40;rapport Générateur et SSRS&#41;](report-design/images-report-builder-and-ssrs.md)  
+ [Mise en forme de texte et des espaces réservés &#40;Générateur de rapports et SSRS&#41;](report-design/formatting-text-and-placeholders-report-builder-and-ssrs.md)   
+ [Images &#40;Générateur de rapports et SSRS&#41;](report-design/images-report-builder-and-ssrs.md)  
   
   

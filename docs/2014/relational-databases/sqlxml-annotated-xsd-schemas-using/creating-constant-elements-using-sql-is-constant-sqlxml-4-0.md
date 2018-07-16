@@ -1,5 +1,5 @@
 ---
-title: 'Création d’éléments constants à l’aide de sql : est-constant (SQLXML 4.0) | Documents Microsoft'
+title: 'Création d’éléments constants à l’aide de sql : est-constant (SQLXML 4.0) | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - annotated XSD schemas, constant elements
 ms.assetid: 940eea1b-54f5-445f-b844-c894d9f3941b
 caps.latest.revision: 26
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 1b275f695057480bb2833d5b05e0cbef354a33ae
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: e475ad2cef5ef5729b5893f3218b0659528ffa14
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36042424"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37317979"
 ---
 # <a name="creating-constant-elements-using-sqlis-constant-sqlxml-40"></a>Création d'éléments constants à l'aide de sql:is-constant (SQLXML 4.0)
   Pour spécifier un élément constant, c'est-à-dire un élément du schéma XSD qui n'est mappé à aucune table ou colonne de base de données, vous pouvez utiliser l'annotation `sql:is-constant`. Cette annotation accepte une valeur booléenne (0 = false, 1 = true). Les valeurs acceptables sont 0, 1, true et false. L'annotation `sql:is-constant` peut être spécifiée sur un élément qui n'a pas d'attributs. Si elle est spécifiée sur un élément qui a la valeur true (ou 1), cet élément n'est pas mappé à la base de données mais apparaît néanmoins dans le document XML.  
@@ -37,7 +37,7 @@ ms.locfileid: "36042424"
   
 -   ajouter un élément de niveau supérieur au document XML. Le code XML requiert un seul élément de niveau supérieur (élément racine) pour le document ;  
   
--   Création d’éléments de conteneur, comme un  **\<commandes >** élément qui encapsule toutes les commandes.  
+-   Créer des éléments de conteneur, comme un  **\<Orders >** élément qui encapsule toutes les commandes.  
   
  Le `sql:is-constant` annotation peut être ajoutée à un  **\<complexType >** élément.  
   
@@ -45,9 +45,9 @@ ms.locfileid: "36042424"
  Pour créer des exemples fonctionnels à l'aide des exemples suivants, vous devez répondre à certaines conditions requises. Pour plus d’informations, consultez [configuration requise pour exécuter les exemples de SQLXML](../sqlxml/requirements-for-running-sqlxml-examples.md).  
   
 ### <a name="a-specifying-sqlis-constant-to-add-a-container-element"></a>A. Spécification de sql:is-constant pour ajouter un élément conteneur  
- Ce schéma XSD, annotés  **\<CustomerOrders >** est défini comme un élément constant en spécifiant le `sql:is-constant` attribut avec une valeur de 1. Par conséquent,  **\<CustomerOrders >** n’est pas mappé à aucune table de base de données ou de la colonne. Cet élément constant se compose de la  **\<ordre >** des éléments enfants.  
+ Ce schéma XSD, annotés  **\<CustomerOrders >** est défini comme un élément constant en spécifiant le `sql:is-constant` attribut avec une valeur de 1. Par conséquent,  **\<CustomerOrders >** n’est pas mappé à aucune table de base de données ou de la colonne. Cet élément constant se compose de la  **\<ordre >** éléments enfants.  
   
- Bien que  **\<CustomerOrders >** ne correspond pas à une table de base de données ou une colonne, il apparaît toujours dans le XML résultant comme un élément conteneur qui contient le  **\<ordre >** éléments enfants.  
+ Bien que  **\<CustomerOrders >** ne mappe pas à aucune table de base de données ou d’une colonne, il apparaît toujours dans le XML résultant comme un élément conteneur qui contient le  **\<ordre >** éléments enfants.  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  

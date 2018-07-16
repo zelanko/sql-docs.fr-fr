@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - sort attributes [Integration Services]
 - output columns [Integration Services]
@@ -16,13 +16,13 @@ ms.assetid: 22ce3f5d-8a88-4423-92c2-60a8f82cd4fd
 caps.latest.revision: 30
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 375f268eecba7c519941f4743d7396346a863f50
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 21b60f8b5007ae574ab48bdd46e2e8f430b299cd
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36151942"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37316059"
 ---
 # <a name="sort-data-for-the-merge-and-merge-join-transformations"></a>Trier des données pour les transformations de fusion et de jointure de fusion
   Dans [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)], les transformations de fusion et de jointure de fusion nécessitent des données triées pour leurs entrées. Les données d'entrée doivent être triés physiquement et les options de tri doivent être définies sur les sorties et les colonnes de sortie dans la source ou dans la transformation amont. Si les options de tri indiquent que les données sont triées alors qu'elles ne le sont pas en réalité, les résultats de l'opération de fusion ou de jointure de fusion sont imprévisibles.  
@@ -52,14 +52,14 @@ ms.locfileid: "36151942"
 ## <a name="setting-sort-options-on-the-data"></a>Définition d'options de tri sur les données  
  Deux propriétés de tri importantes doivent être définies pour la source ou la transformation amont qui fournit des données aux transformations de fusion et de jointure de fusion :  
   
--   La propriété `IsSorted` de la sortie qui indique si les données ont été triées. Cette propriété doit être définie `True`.  
+-   La propriété `IsSorted` de la sortie qui indique si les données ont été triées. Cette propriété doit être définie sur `True`.  
   
     > [!IMPORTANT]  
     >  Définition de la valeur de la `IsSorted` propriété `True` ne trie pas les données. Cette propriété indique uniquement aux composants en aval que les données ont été précédemment triées.  
   
--   Le `SortKeyPosition` propriété des colonnes de sortie qui indique si une colonne est triée, l’ordre de tri et l’ordre dans lequel plusieurs colonnes sont triées. Cette propriété doit être définie pour chaque colonne de données triées.  
+-   Le `SortKeyPosition` propriété des colonnes de sortie qui indique si une colonne est triée, ordre de tri de la colonne et la séquence dans laquelle plusieurs colonnes sont triées. Cette propriété doit être définie pour chaque colonne de données triées.  
   
- Si vous utilisez une transformation de tri pour trier les données, elle définit ces deux propriétés tel que requis par la transformation de fusion ou de jointure de fusion. Autrement dit, la transformation de tri définit les `IsSorted` propriété de sa sortie à `True`et définit le `SortKeyPosition` propriétés de ses colonnes de sortie.  
+ Si vous utilisez une transformation de tri pour trier les données, elle définit ces deux propriétés tel que requis par la transformation de fusion ou de jointure de fusion. Autrement dit, la transformation de tri définit la `IsSorted` propriété de sa sortie à `True`et définit le `SortKeyPosition` propriétés de ses colonnes de sortie.  
   
  Toutefois, si vous n'utilisez pas de transformation de tri pour trier les données, vous devez définir ces propriétés de tri manuellement sur la source ou la transformation amont. Pour définir manuellement les propriétés de tri sur la source ou la transformation en amont, appliquez la procédure suivante.  
   
@@ -75,14 +75,14 @@ ms.locfileid: "36151942"
   
 5.  Cliquez sur l'onglet **Propriétés d'entrée et de sortie** .  
   
-6.  Cliquez sur  **\<nom du composant > sortie**et définissez la `IsSorted` propriété `True`.  
+6.  Cliquez sur  **\<nom du composant > sortie**et définissez le `IsSorted` propriété `True`.  
   
     > [!NOTE]  
-    >  Si vous définissez manuellement la `IsSorted` propriété de la sortie à `True` et les données ne sont pas triées, il manque peut-être données ou les comparaisons de données incorrectes dans la transformation de fusion ou de jointure de fusion en aval lorsque vous exécutez le package.  
+    >  Si vous définissez manuellement la `IsSorted` propriété de la sortie à `True` et les données ne sont pas triées, il peut être des données manquantes ou les comparaisons de données incorrectes dans la transformation de fusion ou de jointure de fusion en aval lorsque vous exécutez le package.  
   
 7.  Développez **Colonnes de sortie**.  
   
-8.  Cliquez sur la colonne que vous souhaitez indiquer est triée et définissez son `SortKeyPosition` propriété à une valeur entière différente de zéro en suivant ces instructions :  
+8.  Cliquez sur la colonne que vous souhaitez identifier comme triée et définissez son `SortKeyPosition` propriété une valeur entière non nulle en suivant ces instructions :  
   
     -   La valeur entière doit représenter une séquence numérique, partant de 1 et incrémentée de 1.  
   

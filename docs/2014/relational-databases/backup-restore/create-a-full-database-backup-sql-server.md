@@ -5,10 +5,9 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-backup-restore
+ms.technology: backup-restore
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - backing up databases [SQL Server], full backups
 - backing up databases [SQL Server], SQL Server Management Studio
@@ -16,15 +15,15 @@ helpviewer_keywords:
 - database backups [SQL Server], SQL Server Management Studio
 ms.assetid: 586561fc-dfbb-4842-84f8-204a9100a534
 caps.latest.revision: 51
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 89af2b55ab06a6d034ca75d009802f126519ef06
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 7d5d52c835ea69914d538138cf189c7171e07a78
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36154872"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37320439"
 ---
 # <a name="create-a-full-database-backup-sql-server"></a>Créer une sauvegarde complète de base de données (SQL Server)
   Cette rubrique explique comment créer une sauvegarde de base de données complète dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] à l'aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], de [!INCLUDE[tsql](../../includes/tsql-md.md)]ou de PowerShell.  
@@ -276,7 +275,7 @@ GO
   
 ##  <a name="PowerShellProcedure"></a> Utilisation de PowerShell  
   
-1.  Utilisez le `Backup-SqlDatabase` applet de commande. Pour indiquer explicitement qu’il s’agit d’une sauvegarde complète de la base de données, spécifiez la **- BackupAction** paramètre avec sa valeur par défaut, `Database`. Ce paramètre est facultatif pour les sauvegardes complètes de base de données.  
+1.  Utilisez le `Backup-SqlDatabase` applet de commande. Pour indiquer explicitement qu’il s’agit d’une sauvegarde complète de base de données, spécifiez la **- BackupAction** paramètre avec sa valeur par défaut, `Database`. Ce paramètre est facultatif pour les sauvegardes complètes de base de données.  
   
      L'exemple suivant crée une sauvegarde complète de la base de données `MyDB` à l'emplacement de sauvegarde par défaut de l'instance de serveur `Computer\Instance`. Cet exemple spécifie, de manière facultative, `-BackupAction Database`.  
   

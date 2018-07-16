@@ -1,5 +1,5 @@
 ---
-title: Déployer et exécuter des Packages SSIS à l’aide de procédures stockées | Documents Microsoft
+title: Déployer et exécuter des Packages SSIS à l’aide de procédures stockées | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 60914b0c-1f65-45f8-8132-0ca331749fcc
 caps.latest.revision: 9
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 273525c7bba0afb3424a394dec758471aaf082d5
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 4c9a86fd007501c3c8fa742f55057852d222f358
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36141836"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37266631"
 ---
 # <a name="deploy-and-execute-ssis-packages-using-stored-procedures"></a>Déployer et exécuter des packages SSIS à l'aide de procédures stockées
   Lorsque vous configurez un projet [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] afin d'utiliser le modèle de déploiement de projet, vous pouvez utiliser les procédures stockées du catalogue [!INCLUDE[ssIS](../includes/ssis-md.md)] pour déployer le projet et pour exécuter des packages. Pour plus d’informations sur le modèle de déploiement de projet, consultez [Déploiement de projets et de packages](packages/deploy-integration-services-ssis-projects-and-packages.md).  
@@ -40,7 +40,7 @@ ms.locfileid: "36141836"
   
 1.  Appelez [catalog.deploy_project &#40;base de données SSISDB&#41;](/sql/integration-services/system-stored-procedures/catalog-deploy-project-ssisdb-database) pour déployer le projet [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] qui contient le package sur le serveur [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)].  
   
-     Pour récupérer le contenu binaire de la [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] fichier de déploiement de projet pour le *@project_stream* paramètre, utilisez une instruction SELECT avec la fonction OPENROWSET et le fournisseur d’ensemble de lignes en bloc. Le fournisseur d'ensembles de lignes BULK vous permet de lire des données dans un fichier. L'argument SINGLE_BLOB du fournisseur d'ensembles de lignes BULK retourne le contenu du fichier de données sous la forme d'un ensemble de lignes à une seule ligne, une seule colonne de type varbinary (max). Pour plus d’informations, consultez [OPENROWSET &#40;Transact-SQL&#41;](/sql/t-sql/functions/openrowset-transact-sql).  
+     Pour récupérer le contenu binaire de la [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] fichier de déploiement de projet pour le *@project_stream* paramètre, utilisez une instruction SELECT avec la fonction OPENROWSET et le fournisseur d’ensemble de lignes BULK. Le fournisseur d'ensembles de lignes BULK vous permet de lire des données dans un fichier. L'argument SINGLE_BLOB du fournisseur d'ensembles de lignes BULK retourne le contenu du fichier de données sous la forme d'un ensemble de lignes à une seule ligne, une seule colonne de type varbinary (max). Pour plus d’informations, consultez [OPENROWSET &#40;Transact-SQL&#41;](/sql/t-sql/functions/openrowset-transact-sql).  
   
      Dans l’exemple suivant, le projet SSISPackages_ProjectDeployment est déployé dans le dossier SSIS Packages sur le serveur [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]. Les données binaires sont lues à partir du fichier projet (SSISPackage_ProjectDeployment.ispac) et sont stockées dans le paramètre *@ProjectBinary* de type varbinary(max). La valeur du paramètre *@ProjectBinary* est affectée au paramètre *@project_stream* .  
   
@@ -127,7 +127,7 @@ exec [SSISDB].[CATALOG].[deploy_project] 'DestFolder', 'SSISPackages', @project_
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Déployer des projets pour le serveur Integration Services](../../2014/integration-services/deploy-projects-to-integration-services-server.md)   
+ [Déployer des projets sur le serveur Integration Services](../../2014/integration-services/deploy-projects-to-integration-services-server.md)   
  [Exécuter un Package dans SQL Server Data Tools](../../2014/integration-services/run-a-package-in-sql-server-data-tools.md)   
  [Exécuter un package sur le serveur SSIS à l’aide de SQL Server Management Studio](run-a-package-on-the-ssis-server-using-sql-server-management-studio.md)  
   

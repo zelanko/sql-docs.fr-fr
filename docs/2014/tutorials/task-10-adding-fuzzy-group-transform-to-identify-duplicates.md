@@ -1,5 +1,5 @@
 ---
-title: 'Tâche 10 : Ajout d’une transformation de regroupement probable pour identifier les doublons | Documents Microsoft'
+title: 'Tâche 10 : Ajout d’une transformation de regroupement probable pour identifier les doublons | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -10,23 +10,23 @@ ms.technology:
 - integration-services
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 90b2b323-babd-464a-8914-9dc5e66aca74
 caps.latest.revision: 6
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: cf9ad3dff4737d7308e7ec3434985b18015f29d8
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 843d79da1d5e9aba58a80ea93ee36a68cd689916
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36051192"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37312749"
 ---
 # <a name="task-10-adding-fuzzy-group-transform-to-identify-duplicates"></a>Tâche 10 : Ajouter la transformation de regroupement probable pour identifier des doublons
   Dans cette tâche, vous allez ajouter une transformation de regroupement probable au flux de données. La transformation de regroupement probable aide à identifier les doublons dans les données sources. Consultez [Transformation de regroupement approximatif](http://msdn.microsoft.com/library/ms141764.aspx) pour plus d’informations.  
   
-1.  Glisser-déplacer **regroupement probable** transformer dans **autres transformations** sur la **boîte à outils SSIS** à la **de flux de données** onglet sous  **Combiner des enregistrements corrects et corrigés**.  
+1.  Glisser-déplacer **regroupement probable** transformer dans **autres transformations** sur le **boîte à outils SSIS** à la **de flux de données** onglet sous  **Combiner des enregistrements corrects et corrigés**.  
   
 2.  Avec le bouton droit **regroupement probable** transformer dans le **de flux de données** onglet, puis cliquez sur **renommer**. Type **regrouper les fournisseurs avec des ID correspondants** et appuyez sur **entrée**.  
   
@@ -36,13 +36,13 @@ ms.locfileid: "36051192"
   
 4.  Double-cliquez sur **regrouper les fournisseurs avec des ID correspondants**.  
   
-5.  Dans le **éditeur de Transformation de regroupement probable**, cliquez sur **nouveau** regard **liste déroulante de gestionnaire de connexions OLE DB** pour lancer **configurer les connexions OLE DB Gestionnaire de** boîte de dialogue.  
+5.  Dans le **éditeur de Transformation de regroupement probable**, cliquez sur **New** regard **liste déroulante de gestionnaire de connexions OLE DB** pour lancer **configurer connexions OLE DB Gestionnaire** boîte de dialogue.  
   
-6.  Dans la boîte de dialogue, cliquez sur **nouveau** pour lancer **Gestionnaire de connexions** boîte de dialogue.  
+6.  Dans la boîte de dialogue, cliquez sur **New** pour lancer **Gestionnaire de connexions** boîte de dialogue.  
   
 7.  Type **(local)** ou **période** (.) pour le nom du serveur.  
   
-8.  Sélectionnez **MDS** pour **sélectionner ou entrer un nom de base de données** champ. Vous allez utiliser la base de données MDS comme mémoire temporaire pour le **transformation de regroupement probable**. Le **regroupement probable** transformation nécessite une connexion à une instance de SQL Server pour créer les tables temporaires de SQL Server dont l’algorithme de transformation a besoin pour effectuer son travail. Vous pouvez créer une base de données ou utiliser une base de données existante à cet effet.  
+8.  Sélectionnez **MDS** pour **sélectionner ou entrer un nom de base de données** champ. Vous allez utiliser la base de données MDS comme mémoire temporaire pour le **transformation de regroupement probable**. Le **regroupement probable** transformation requiert une connexion à une instance de SQL Server pour créer les tables temporaires de SQL Server dont l’algorithme de transformation a besoin pour effectuer son travail. Vous pouvez créer une base de données ou utiliser une base de données existante à cet effet.  
   
 9. Cliquez sur **tester la connexion** pour tester la connexion et cliquez sur **OK** sur la boîte de message.  
   
@@ -61,6 +61,6 @@ ms.locfileid: "36051192"
 15. Cliquez sur **OK** pour fermer la **éditeur de Transformation de regroupement probable**.  
   
 ## <a name="next-step"></a>Étape suivante  
- [Tâche 11 : Ajouter la transformation de fractionnement conditionnel pour filtrer les doublons.](../../2014/tutorials/task-11-adding-conditional-split-transform-to-filter-duplicates.md)  
+ [Tâche 11 : Ajout d’une transformation de fractionnement conditionnel pour filtrer les doublons](../../2014/tutorials/task-11-adding-conditional-split-transform-to-filter-duplicates.md)  
   
   

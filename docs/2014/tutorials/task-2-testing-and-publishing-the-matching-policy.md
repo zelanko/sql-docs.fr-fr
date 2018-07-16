@@ -1,5 +1,5 @@
 ---
-title: 'Tâche 2 : Test et publication de la stratégie de correspondance | Documents Microsoft'
+title: 'Tâche 2 : Test et publication de la stratégie de correspondance | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql-server-2014
@@ -10,23 +10,23 @@ ms.technology:
 - integration-services
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: e1ffb6d7-fbc5-4695-b538-cc2302d1a17d
 caps.latest.revision: 6
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 8f67535e5ad4969983b06fcb710c1dfce1d97cb4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: abb23e91e5cb96d6c58958a26bfc28528ea5a262
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36142838"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37261815"
 ---
 # <a name="task-2-testing-and-publishing-the-matching-policy"></a>Tâche 2 : Test et publication de la stratégie de correspondance
   Dans cette tâche, vous testez et publiez le **supprimer les fournisseurs en double** stratégie de correspondance.  
   
-1.  Dans le **résultats de correspondance** , cliquez sur **Démarrer** pour tester la stratégie entière. Dans ce cas, vous disposez d'une seule règle dans la stratégie, par conséquent, les résultats du test de la règle et du test de la stratégie devraient être identiques.  
+1.  Dans le **résultats de correspondance** , cliquez sur **Démarrer** pour tester la stratégie dans son ensemble. Dans ce cas, vous disposez d'une seule règle dans la stratégie, par conséquent, les résultats du test de la règle et du test de la stratégie devraient être identiques.  
   
 2.  Examinez tous les enregistrements correspondants et leur score de correspondance dans la zone de liste. Un enregistrement qui a un **vert** icône associé est un doublon de l’enregistrement pivot qui le précède. Voici deux exemples :  
   
@@ -38,7 +38,7 @@ ms.locfileid: "36142838"
   
      ![Définition de stratégie - résultats de la stratégie](../../2014/tutorials/media/et-testingandpublishingthematchingpolicy-01.jpg "définition de stratégie - résultats de la stratégie")  
   
-3.  Avec le bouton droit sur un enregistrement avec correspondance (avec une icône verte) et cliquez sur **afficher les détails** pour plus d’informations sur la correspondance telles que la contribution de chaque score de champ au score de correspondance global.  
+3.  Avec le bouton droit sur n’importe quel enregistrement avec correspondance (avec une icône verte) et cliquez sur **afficher les détails** pour plus d’informations sur la correspondance telles que la contribution de chaque score de champ au score de correspondance global.  
   
      ![Score de correspondance de la boîte de dialogue Détails](../../2014/tutorials/media/et-testingandpublishingthematchingpolicy-02.jpg "Score de correspondance de la boîte de dialogue Détails")  
   
@@ -56,6 +56,6 @@ ms.locfileid: "36142838"
 7.  Dans la boîte de dialogue SQL Server Data Quality Services, cliquez sur **publier** et cliquez sur **OK** sur la boîte de message. À présent, vous avez défini la stratégie de correspondance est publiée dans le **fournisseurs** Base de connaissances. Vous pouvez utiliser la base de connaissances pour exécuter le processus de correspondance dans un fichier d'entrée afin d'identifier et supprimer les doublons.  
   
 ## <a name="next-step"></a>Étape suivante  
- [Tâche 3 : Création et exécution d’un projet de qualité des données pour la correspondance](../../2014/tutorials/task-3-creating-and-running-a-data-quality-project-for-matching.md)  
+ [Tâche 3 : Création et exécution d’un projet de qualité des données pour la mise en correspondance](../../2014/tutorials/task-3-creating-and-running-a-data-quality-project-for-matching.md)  
   
   

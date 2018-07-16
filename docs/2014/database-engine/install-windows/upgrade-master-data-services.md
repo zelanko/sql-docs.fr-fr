@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 9c3543f3-3eb9-455d-a9bf-f17e9506ad21
 caps.latest.revision: 23
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: c827edd76774e7f2204c20fa7e25d8037c834777
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: ad77c531a5ea83cc5d65b5be17e9cc231f00abe1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36153795"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37235789"
 ---
 # <a name="upgrade-master-data-services"></a>Mettre à niveau Master Data Services
   Il existe quatre scénarios de mise à niveau vers Microsoft [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] CTP2. Choisissez le scénario qui convient à votre situation.  
@@ -37,7 +37,7 @@ ms.locfileid: "36153795"
 > -   Enregistrez votre base de données avant d'effectuer toute mise à niveau.  
 > -   La mise à niveau recrée les procédures stockées et met à niveau les tables utilisées par [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)]. Les personnalisations appliquées à l'un ou l'autre de ces composants peuvent être perdues.  
 > -   Les packages de déploiement de modèle peuvent être utilisés uniquement dans l'édition de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilisée pour les créer. Vous ne pouvez pas déployer des packages de déploiement de modèle créés dans [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] / [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
-> -   Vous pouvez continuer à utiliser le [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] version SP1 de données Services complément Master pour Excel après la mise à niveau Master Data Services et Data Quality Services pour [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] CTP2. Toutefois, aucune version antérieure du complément Master Data Services pour Excel ne fonctionnera après la mise à niveau vers SQL Server 2014 CTP2. Vous pouvez télécharger le [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] version SP1 de données Services complément Master pour Excel à partir de [ici](http://go.microsoft.com/fwlink/?LinkId=328664).  
+> -   Vous pouvez continuer à utiliser le [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] version SP1 de Master Data Services complément pour Excel après la mise à niveau Master Data Services et Data Quality Services pour [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] CTP2. Toutefois, aucune version antérieure du complément Master Data Services pour Excel ne fonctionnera après la mise à niveau vers SQL Server 2014 CTP2. Vous pouvez télécharger le [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] version SP1 de Master Data Services complément pour Excel à partir de [ici](http://go.microsoft.com/fwlink/?LinkId=328664).  
   
 ##  <a name="noengine"></a> Mise à niveau sans mise à niveau du moteur de base de données  
  Ce scénario peut être considéré comme une installation côte à côte, car les deux [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] / [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] et [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] sont installés en parallèle, sur le même ordinateur ou sur des ordinateurs distincts.  
@@ -75,7 +75,7 @@ ms.locfileid: "36153795"
   
     2.  Dans le volet gauche, cliquez sur **Configuration de la base de données**.  
   
-    3.  Dans le volet droit, cliquez sur **sélectionner une base de données** et spécifiez les informations de votre [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] ou [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] instance de base de données.  
+    3.  Dans le volet droit, cliquez sur **sélectionner la base de données** et spécifiez les informations de votre [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] ou [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] instance de base de données.  
   
     4.  Cliquez sur **Mettre à niveau la base de données** pour démarrer l' **Assistant Mise à niveau de base de données**. Pour plus d’informations, consultez [Assistant Mise à niveau de base de données &#40;Gestionnaire de configuration Master Data Services&#41;](../../master-data-services/upgrade-database-wizard-master-data-services-configuration-manager.md).  
   
@@ -117,7 +117,7 @@ ms.locfileid: "36153795"
   
     2.  Dans le volet gauche, cliquez sur **Installation**.  
   
-    3.  Dans le volet droit, cliquez sur **mise à niveau de SQL Server 2005, SQL Server 2008, SQL Server 2008 R2 ou SQL Server 2012**.  
+    3.  Dans le volet droit, cliquez sur **mise à niveau à partir de SQL Server 2005, SQL Server 2008, SQL Server 2008 R2 ou SQL Server 2012**.  
   
     4.  Terminez l'Assistant.  
   
@@ -129,9 +129,9 @@ ms.locfileid: "36153795"
   
     3.  Dans le volet droit, cliquez sur **Nouvelle installation autonome SQL Server ou ajout de fonctionnalités à une installation existante**.  
   
-    4.  Sur le **le Type d’Installation** page de l’Assistant, sélectionnez le **ajouter des fonctionnalités à une instance existante** option, puis sélectionnez l’instance où la base de données MDS est installé.  
+    4.  Sur le **Type d’Installation** page de l’Assistant, sélectionnez le **ajouter des fonctionnalités à une instance existante** option, puis choisissez l’instance où la base de données MDS est installé.  
   
-    5.  Sur le **sélection des fonctionnalités** sous **fonctionnalités partagées**, sélectionnez **[!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)]**.  
+    5.  Sur le **sélection des fonctionnalités** page sous **fonctionnalités partagées**, sélectionnez **[!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)]**.  
   
     6.  Terminez l'Assistant.  
   
@@ -144,7 +144,7 @@ ms.locfileid: "36153795"
   
     2.  Dans le volet gauche, cliquez sur **Configuration de la base de données**.  
   
-    3.  Dans le volet droit, cliquez sur **sélectionner une base de données** et spécifiez les informations de votre instance de base de données.  
+    3.  Dans le volet droit, cliquez sur **sélectionner la base de données** et spécifiez les informations de votre instance de base de données.  
   
     4.  Cliquez sur **Mettre à niveau la base de données** pour démarrer l' **Assistant Mise à niveau de base de données**. Pour plus d’informations, consultez [Assistant Mise à niveau de base de données &#40;Gestionnaire de configuration Master Data Services&#41;](../../master-data-services/upgrade-database-wizard-master-data-services-configuration-manager.md).  
   
@@ -209,7 +209,7 @@ ms.locfileid: "36153795"
   
     2.  Dans le volet gauche, cliquez sur **Configuration de la base de données**.  
   
-    3.  Dans le volet droit, cliquez sur **sélectionner une base de données** et spécifiez les informations de votre [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] ou [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] de la base de données d’instance sur un autre ordinateur, si [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] ou [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] est installé sur un autre ordinateur.  
+    3.  Dans le volet droit, cliquez sur **sélectionner la base de données** et spécifiez les informations de votre [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] ou [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] de la base de données d’instance sur un autre ordinateur, si [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] ou [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] est installé sur un autre ordinateur.  
   
     4.  Cliquez sur **Mettre à niveau la base de données** pour démarrer l' **Assistant Mise à niveau de base de données**. Pour plus d’informations, consultez [Assistant Mise à niveau de base de données &#40;Gestionnaire de configuration Master Data Services&#41;](../../master-data-services/upgrade-database-wizard-master-data-services-configuration-manager.md).  
   
@@ -272,7 +272,7 @@ ms.locfileid: "36153795"
   
     2.  Dans le volet gauche, cliquez sur **Configuration de la base de données**.  
   
-    3.  Dans le volet droit, cliquez sur **sélectionner une base de données** et spécifiez les informations de votre [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] ou [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] instance de base de données.  
+    3.  Dans le volet droit, cliquez sur **sélectionner la base de données** et spécifiez les informations de votre [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] ou [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] instance de base de données.  
   
     4.  Cliquez sur **Mettre à niveau la base de données** pour démarrer l' **Assistant Mise à niveau de base de données**. Pour plus d’informations, consultez [Assistant Mise à niveau de base de données &#40;Gestionnaire de configuration Master Data Services&#41;](../../master-data-services/upgrade-database-wizard-master-data-services-configuration-manager.md).  
   
@@ -302,7 +302,7 @@ ms.locfileid: "36153795"
     3.  Cliquez sur **Appliquer**.  
   
 ## <a name="troubleshooting"></a>Dépannage  
- **Problème :** lorsque vous ouvrez le [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] ou [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] application web, un message d’erreur « la version du client n’est pas compatible avec la version de base de données » s’affiche.  
+ **Problème :** lorsque vous ouvrez le [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] ou [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] application web, un message d’erreur « version du client n’est pas compatible avec la version de base de données » s’affiche.  
   
  **Solution :** ce problème se produit lorsqu’un [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] ou [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] application web Master Data Manager tente d’accéder à une base de données qui a été mis à niveau vers [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Master Data Services. Vous devez utiliser une application Web [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] à la place.  
   

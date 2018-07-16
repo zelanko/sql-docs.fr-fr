@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - statements [SQL Server], command prompt
 - QUIT command
@@ -27,21 +27,21 @@ helpviewer_keywords:
 - GO command
 ms.assetid: e1728707-5215-4c04-8320-e36f161b834a
 caps.latest.revision: 115
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 1c563d74c639d580d6e20d76a9ebfef98fbf458b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 04edfd00a4f298e944837153e5e71f3c832a17f2
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36044230"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37303439"
 ---
 # <a name="sqlcmd-utility"></a>sqlcmd Utility
-  Le `sqlcmd` utilitaire vous permet d’entrer [!INCLUDE[tsql](../includes/tsql-md.md)] instructions, des procédures système et des scripts de fichiers à l’invite de commandes, dans **l’éditeur de requête** en mode SQLCMD, dans un fichier de script Windows ou dans une étape de travail de système d’exploitation (Cmd.exe) d’un [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Travail de l’agent. Cet utilitaire utilise ODBC pour exécuter des traitements [!INCLUDE[tsql](../includes/tsql-md.md)].  
+  Le `sqlcmd` utilitaire vous permet d’entrer [!INCLUDE[tsql](../includes/tsql-md.md)] script, instructions et procédures système de fichiers à l’invite de commandes, dans **éditeur de requête** en mode SQLCMD, dans un fichier de script Windows ou dans une étape de travail de système d’exploitation (Cmd.exe) d’un [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Travail de l’agent. Cet utilitaire utilise ODBC pour exécuter des traitements [!INCLUDE[tsql](../includes/tsql-md.md)].  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] utilise le [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)]SqlClient pour l’exécution dans Normal et le mode SQLCMD dans **l’éditeur de requête**. Lorsque `sqlcmd` est exécuté à partir de la ligne de commande `sqlcmd` utilise le pilote ODBC. Dans la mesure où différentes options par défaut peuvent s'appliquer, vous pouvez constater un comportement différent lorsque vous exécutez la même requête dans [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] en mode SQLCMD et dans l'utilitaire `sqlcmd`.  
+>  [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] utilise le [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)]SqlClient pour l’exécution en Normal et le mode SQLCMD dans **éditeur de requête**. Lorsque `sqlcmd` est exécuté à partir de la ligne de commande `sqlcmd` utilise le pilote ODBC. Dans la mesure où différentes options par défaut peuvent s'appliquer, vous pouvez constater un comportement différent lorsque vous exécutez la même requête dans [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] en mode SQLCMD et dans l'utilitaire `sqlcmd`.  
   
  Actuellement, `sqlcmd` ne requiert pas d'espace entre l'option de ligne de commande et la valeur. Toutefois, dans une version ultérieure, un espace peut être requis entre l'option de ligne de commande et la valeur.  
   
@@ -102,7 +102,7 @@ ms.locfileid: "36044230"
  Déclare le type de la charge de travail de l'application lors de la connexion à un serveur. La seule valeur actuellement prise en charge est **ReadOnly**. Si **-K** n’est pas spécifié, l’utilitaire sqlcmd ne prend pas en charge la connectivité à un réplica secondaire dans un groupe de disponibilité AlwaysOn. Pour plus d’informations, consultez [secondaires actifs : réplicas secondaires lisibles](../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md).  
   
  `-M` *multisubnet_failover*  
- Toujours spécifier `-M` lors de la connexion à l’écouteur de groupe de disponibilité d’un [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] groupe de disponibilité ou un [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Instance de Cluster de basculement. `-M` fournit une détection plus rapide du serveur actif et une connexion à celui-ci. Si `–M` n'est pas spécifié, `-M` est désactivé. Pour plus d’informations sur [!INCLUDE[ssHADR](../includes/sshadr-md.md)], consultez [écouteurs de groupe de disponibilité, connectivité Client et basculement d’Application &#40;SQL Server&#41;](../database-engine/listeners-client-connectivity-application-failover.md), [la création et Configuration des groupes de disponibilité &#40;SQL Server&#41;](../database-engine/availability-groups/windows/creation-and-configuration-of-availability-groups-sql-server.md), [Clustering de basculement et groupes de disponibilité AlwaysOn &#40;SQL Server&#41;](../database-engine/availability-groups/windows/failover-clustering-and-always-on-availability-groups-sql-server.md), et [secondaires actifs : réplicas secondaires lisibles ](../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md) .  
+ Spécifiez toujours `-M` lors de la connexion à l’écouteur de groupe de disponibilité d’un [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] groupe de disponibilité ou un [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Instance de Cluster de basculement. `-M` fournit une détection plus rapide du serveur actif et une connexion à celui-ci. Si `–M` n'est pas spécifié, `-M` est désactivé. Pour plus d’informations sur [!INCLUDE[ssHADR](../includes/sshadr-md.md)], consultez [écouteurs de groupe de disponibilité, connectivité Client et basculement d’Application &#40;SQL Server&#41;](../database-engine/listeners-client-connectivity-application-failover.md), [la création et Configuration des groupes de disponibilité &#40;SQL Server&#41;](../database-engine/availability-groups/windows/creation-and-configuration-of-availability-groups-sql-server.md), [Clustering de basculement et groupes de disponibilité AlwaysOn &#40;SQL Server&#41;](../database-engine/availability-groups/windows/failover-clustering-and-always-on-availability-groups-sql-server.md), et [secondaires actifs : réplicas secondaires lisibles ](../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md) .  
   
  **-N**  
  Ce commutateur est utilisé par le client pour demander une connexion chiffrée.  
@@ -139,7 +139,7 @@ ms.locfileid: "36044230"
   
  Si l’option **-P** est suivie de plusieurs arguments, un message d’erreur est généré et le programme se termine.  
   
- **-S** [*protocole*:]*server*[**\\***nom_instance*] [**, ***port*]  
+ **S -** [*protocole*:]*server*[**\\***nom_instance*] [**, ***port*]  
  Spécifie l'instance de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] à laquelle établir une connexion. Cette option définit la variable de script `sqlcmd` SQLCMDSERVER.  
   
  Spécifiez *nom_serveur* pour vous connecter à l’instance par défaut du [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] sur cet ordinateur serveur. Spécifiez *nom_serveur* [**\\*** nom_instance* ] pour vous connecter à une instance nommée de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] sur ce serveur. Si aucun ordinateur serveur n'est spécifié, l'utilitaire `sqlcmd` se connecte à l'instance par défaut de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] sur l'ordinateur local. Cette option est indispensable lorsque vous exécutez `sqlcmd` à partir d’un ordinateur distant sur le réseau.  
@@ -187,14 +187,14 @@ ms.locfileid: "36044230"
   
  Entrez `chcp` à l’invite de commandes pour vérifier la page de codes de Cmd.exe.  
   
- **-i** *input_file*[**, *** input_file2*...]  
+ **i -** *input_file*[**, *** input_file2*...]  
  Identifie le fichier contenant un traitement d'instructions SQL ou des procédures stockées. Plusieurs fichiers peuvent être spécifiés, ils sont lus et traités dans l'ordre. N'utilisez pas d'espace entre les noms de fichiers. `sqlcmd` vérifie d'abord que tous les fichiers spécifiés existent. Si un ou plusieurs fichiers n'existent pas, `sqlcmd` se termine. Les options -i et -Q/-q s'excluent mutuellement.  
   
  Exemples de chemins :  
   
- **-i** C:\\< nom de fichier\>  
+ **i -** C:\\< nom de fichier\>  
   
- **-i** \\ \\< Server\>\\< partage$ >\\< nom de fichier\>  
+ **i -** \\ \\< Server\>\\< partage$ >\\< nom de fichier\>  
   
  **-i** "C:\Dossier\\<nom_fichier\>"  
   
@@ -405,9 +405,9 @@ ms.locfileid: "36044230"
 ## <a name="remarks"></a>Notes  
  Les options ne doivent pas nécessairement être utilisées dans l'ordre indiqué dans la section de la syntaxe.  
   
- Lorsque plusieurs résultats sont retournés, `sqlcmd` imprime une ligne vide entre chaque ensemble de résultats dans un traitement. En outre, le «\<x > lignes affectées « message n’apparaît pas lorsqu’il ne s’applique pas à l’instruction exécutée.  
+ Lorsque plusieurs résultats sont retournés, `sqlcmd` imprime une ligne vide entre chaque ensemble de résultats dans un traitement. En outre, le «\<x > lignes affectées « message n’apparaît pas lorsqu’il ne concerne pas l’instruction exécutée.  
   
- Pour utiliser `sqlcmd` de façon interactive, tapez `sqlcmd` à l’invite de commandes avec un ou plusieurs des options décrites plus haut dans cette rubrique. Pour plus d’informations, consultez [Utiliser l’utilitaire sqlcmd](../relational-databases/scripting/sqlcmd-use-the-utility.md).  
+ Pour utiliser `sqlcmd` de façon interactive, tapez `sqlcmd` à l’invite de commande avec une ou plusieurs des options décrites plus haut dans cette rubrique. Pour plus d’informations, consultez [Utiliser l’utilitaire sqlcmd](../relational-databases/scripting/sqlcmd-use-the-utility.md).  
   
 > [!NOTE]  
 >  Les options **-L**, **-Q**, **-Z** ou **-i** provoquer `sqlcmd` quitte après l’exécution.  
@@ -420,7 +420,7 @@ ms.locfileid: "36044230"
   
 2.  Variables d'environnement au niveau de l'utilisateur.  
   
-3.  Interface de commande (**définir** X = Y) défini à l’invite de commandes avant d’exécuter `sqlcmd`.  
+3.  Interface de commande (**définir** X = Y) défini à l’invite de commande avant d’exécuter `sqlcmd`.  
   
 4.  **sqlcmd-v** X=Y  
   
@@ -531,7 +531,7 @@ ms.locfileid: "36044230"
  Affiche la liste des variables de script actuellement définies.  
   
 > [!NOTE]  
->  Seules les variables de script qui sont définis par `sqlcmd`et celles qui sont définies à l’aide de la **: Setvar** commande s’affiche.  
+>  Seules les variables qui sont définies par de script `sqlcmd`et celles qui sont définies à l’aide de la **: Setvar** commande s’affiche.  
   
  **Commandes de sortie**  
   **:Error**   
@@ -670,13 +670,13 @@ ms.locfileid: "36044230"
  Répertorie les commandes `sqlcmd` avec une brève description de chaque commande.  
   
 ### <a name="sqlcmd-file-names"></a>Noms de fichiers sqlcmd  
- `sqlcmd` fichiers d’entrée peuvent être spécifiés avec la **-i** option ou **: r** commande. Les fichiers de sortie peuvent être spécifiés avec l’option **-o** ou les commandes **:Error**, **:Out** et **:Perftrace** . Voici quelques consignes relatives à l'utilisation de ces fichiers :  
+ `sqlcmd` fichiers d’entrée peuvent être spécifiés avec le **-i** option ou **: r** commande. Les fichiers de sortie peuvent être spécifiés avec l’option **-o** ou les commandes **:Error**, **:Out** et **:Perftrace** . Voici quelques consignes relatives à l'utilisation de ces fichiers :  
   
--   **: Erreur**, **: Out** et **: Perftrace** doit utiliser distinct **< *`filename`* >**. Si le même **< *`filename`* >** est utilisé, entrées des commandes peuvent être mélangées.  
+-   **: Erreur**, **: Out** et **: Perftrace** doit utiliser distinct **< *`filename`* >**. Si le même **< *`filename`* >** est utilisé, les entrées à partir des commandes peuvent être mélangées.  
   
 -   Si un fichier d'entrée situé sur un serveur distant est appelé à partir de `sqlcmd` sur un ordinateur local et s'il contient un chemin d'accès de fichier sur un lecteur tel que :out c:\OutputFile.txt, ce fichier de sortie sera créé sur l'ordinateur local et non sur le serveur distant.  
   
--   Valid file paths include: C:\\**<*`filename`*>**, \\\\<Server\>\\<Share$>\\**<*`filename`*>** and "C:\Some Folder\\**<*`file name`*>**". Si le chemin d'accès comporte un espace, utilisez des guillemets.  
+-   Chemins de fichier valides incluent : C:\\**<*`filename`*>**, \\ \\< Server\> \\ < partage$ >\\ **< *`filename`* >** et « dossier de C:\Some\\  **<  *`file name`*>**". Si le chemin d'accès comporte un espace, utilisez des guillemets.  
   
 -   Chaque nouvelle session `sqlcmd` remplace les fichiers existants qui ont des noms identiques.  
   

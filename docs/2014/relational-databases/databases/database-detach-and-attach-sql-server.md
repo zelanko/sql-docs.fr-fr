@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - upgrading databases
 - databases [SQL Server], detaching
@@ -28,15 +28,15 @@ helpviewer_keywords:
 - databases [SQL Server], moving
 ms.assetid: d0de0639-bc54-464e-98b1-6af22a27eb86
 caps.latest.revision: 96
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 421c743456b6a0a2303b2ec0407af566c77ab39e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 11f01f4fe44284d94aa0cfb4d3c008c758a930a3
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36039051"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37227739"
 ---
 # <a name="database-detach-and-attach-sql-server"></a>Attacher et détacher une base de données (SQL Server)
   Les données et les journaux de transactions d'une base de données peuvent être détachés, puis rattachés à la même instance ou à une autre instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Le détachement et l'attachement d'une base de données sont utiles pour transférer la base de données dans une instance différente de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sur le même ordinateur ou pour la déplacer.  
@@ -96,7 +96,7 @@ ms.locfileid: "36039051"
 > [!NOTE]  
 >  Si le fichier de données primaires attaché est en lecture seule, le [!INCLUDE[ssDE](../../includes/ssde-md.md)] suppose que la base de données est en lecture seule.  
   
- Lorsqu’une base de données est d’abord attaché à une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], le propriétaire de base de données doit ouvrir la clé principale de la base de données en exécutant l’instruction suivante : OPEN MASTER KEY DECRYPTION BY PASSWORD = **' *`password`*'**. Nous vous recommandons d'activer le déchiffrement automatique de la clé principale en exécutant l'instruction suivante : ALTER MASTER KEY ADD ENCRYPTION BY SERVICE MASTER KEY. Pour plus d’informations, consultez [CREATE MASTER KEY &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-master-key-transact-sql) et [ALTER MASTER KEY &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-master-key-transact-sql).  
+ Quand une base de données chiffrée est d’abord attaché à une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], le propriétaire de la base de données doit ouvrir la clé principale de la base de données en exécutant l’instruction suivante : OPEN MASTER KEY DECRYPTION BY PASSWORD = **' *`password`*'**. Nous vous recommandons d'activer le déchiffrement automatique de la clé principale en exécutant l'instruction suivante : ALTER MASTER KEY ADD ENCRYPTION BY SERVICE MASTER KEY. Pour plus d’informations, consultez [CREATE MASTER KEY &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-master-key-transact-sql) et [ALTER MASTER KEY &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-master-key-transact-sql).  
   
  Les conditions requises pour attacher des fichiers journaux dépendent en partie des autorisations de lecture-écriture ou de lecture seule de la base de données. Elles sont exposées ci-dessous.  
   
@@ -104,7 +104,7 @@ ms.locfileid: "36039051"
   
      Si une base de données en lecture-écriture possède un seul fichier journal dont vous ne précisez pas le nouvel emplacement, l'opération d'attachement le recherche dans son emplacement précédent. S'il est trouvé, l'ancien fichier journal est utilisé, que la base de données ait été fermée correctement ou non. Toutefois, si l'ancien fichier journal n'est pas trouvé et si la base de données a été fermée correctement sans séquence de journaux de transactions active, l'opération d'attachement tente de créer un nouveau fichier journal pour la base de données.  
   
--   Si le fichier de données primaires attaché est en lecture seule, le [!INCLUDE[ssDE](../../includes/ssnoversion-md.md)] Impossible de mettre à jour son emplacement stocké dans le fichier primaire.  
+-   Si le fichier de données primaire qui est attaché est en lecture seule, le [!INCLUDE[ssDE](../../includes/ssnoversion-md.md)] Impossible de mettre à jour l’emplacement du journal stockée dans le fichier primaire.  
   
   
   

@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - regular identifiers [Integration Services]
 - variables [Integration Services], expressions
@@ -23,13 +23,13 @@ ms.assetid: 56af984d-88b4-4db8-b6a2-6b07315a699e
 caps.latest.revision: 44
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 17236ca6698b1daf947d4364b38eb3ef0e9a60b1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 84a20b15390463d19577ab6ae800bcb7f0579bb8
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36141396"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37295049"
 ---
 # <a name="identifiers-ssis"></a>Identificateurs (SSIS)
   Dans les expressions, les identificateurs sont des colonnes et des variables disponibles pour l'opération. Les expressions peuvent utiliser des identificateurs standard et qualifiés.  
@@ -116,9 +116,9 @@ ms.locfileid: "36141396"
 > [!IMPORTANT]  
 >  Vous devez placer la combinaison de l'espace de noms et du nom de la variable qualifiée entre crochets pour que l'évaluateur d'expression puisse reconnaître la variable.  
   
- Si la valeur de **nombre** dans les **utilisateur** espace de noms est 10 et la valeur de **nombre** dans **MyNamespace** est 2, l’expression renvoie la valeur `true` , car l’évaluateur d’expression reconnaît deux variables différentes.  
+ Si la valeur de **nombre** dans le **utilisateur** espace de noms est 10 et la valeur de **nombre** dans **MyNamespace** est 2, l’expression renvoie la valeur `true` , car l’évaluateur d’expression reconnaît deux variables différentes.  
   
- Si les noms de variable ne sont pas uniques, aucune erreur ne se produit. Par contre, l'évaluateur d'expression utilise une seule instance de la variable pour évaluer l'expression et renvoie un résultat incorrect. Par exemple, l’expression suivante a été conçue pour comparer les valeurs (10 et 2) pour les deux **nombre** variables, mais l’expression prend la valeur de `false` , car l’évaluateur d’expression utilise la même instance de la  **Nombre** variable deux fois.  
+ Si les noms de variable ne sont pas uniques, aucune erreur ne se produit. Par contre, l'évaluateur d'expression utilise une seule instance de la variable pour évaluer l'expression et renvoie un résultat incorrect. Par exemple, l’expression suivante a été conçue pour comparer les valeurs (10 et 2) pour deux distinct **nombre** variables, mais l’expression prend la valeur `false` , car l’évaluateur d’expression utilise la même instance de la  **Nombre** variable deux fois.  
   
 ```  
 @Count > @Count  

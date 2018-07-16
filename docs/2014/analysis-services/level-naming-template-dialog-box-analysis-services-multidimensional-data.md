@@ -1,5 +1,5 @@
 ---
-title: Nom de la boîte de dialogue modèle (Analysis Services - données multidimensionnelles) de niveau | Documents Microsoft
+title: Au niveau de la boîte de dialogue de modèle (Analysis Services - données multidimensionnelles) nom | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,25 +8,25 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.levelnamingtemplatedialog.f1
 helpviewer_keywords:
 - Level Naming Template dialog box
 ms.assetid: 96cad715-213e-4eac-9003-130a2f5fc985
 caps.latest.revision: 20
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 3f7c3bf3d7c1b09d8655443d4de711f851667947
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 89d70fcd6092b2ef06e8b28c97a5935f8fb17f88
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36040536"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37257425"
 ---
 # <a name="level-naming-template-dialog-box-analysis-services---multidimensional-data"></a>Boîte de dialogue Modèle de nom de niveau (Analysis Services - Données multidimensionnelles)
-  Utilisez la boîte de dialogue **Modèle de nom de niveau** dans [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] pour créer un modèle de nom de niveau pour un attribut parent d'une dimension. Pour plus d’informations sur ces modèles de nom de niveau, consultez [Élément NamingTemplate &#40;ASSL&#41;](scripting/properties/namingtemplate-element-assl.md). Vous pouvez afficher le **modèle d’affectation de noms de niveau** boîte de dialogue en cliquant sur le bouton de sélection (**...** ) sur le `NamingTemplate` valeur d’une traduction pour un attribut dans le **détails des traductions** volet sur la **traductions** onglet de **Concepteur de dimensions**.  
+  Utilisez la boîte de dialogue **Modèle de nom de niveau** dans [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] pour créer un modèle de nom de niveau pour un attribut parent d'une dimension. Pour plus d’informations sur ces modèles de nom de niveau, consultez [Élément NamingTemplate &#40;ASSL&#41;](scripting/properties/namingtemplate-element-assl.md). Vous pouvez afficher le **modèle d’affectation de noms de niveau** boîte de dialogue en cliquant sur le bouton de sélection (**...** ) sur le `NamingTemplate` valeur d’une traduction pour un attribut dans le **détails des traductions** volet sur le **traductions** onglet de **Concepteur de dimensions**.  
   
 ## <a name="options"></a>Options  
   

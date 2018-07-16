@@ -1,5 +1,5 @@
 ---
-title: Définir la granularité des dimensions dans un groupe de mesures | Documents Microsoft
+title: Définition de la granularité de Dimension au sein d’un groupe de mesures | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 4f079485-9eb4-405c-9a20-81258298b810
 caps.latest.revision: 20
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: jhubbard
-ms.openlocfilehash: deeae89f59779000ac2dda9ca4da639666852bae
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 7af0f2bfe03fd04677259482016cf259a0093bc1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36143803"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37251151"
 ---
 # <a name="defining-dimension-granularity-within-a-measure-group"></a>Définition de la granularité des dimensions dans un groupe de mesures
   Les utilisateurs peuvent souhaiter dimensionner des données de faits avec des granularités ou spécificités différentes pour diverses raisons. Prenons l'exemple d'un scénario dans lequel les données de ventes des revendeurs ou des ventes Internet sont enregistrées quotidiennement tandis que les données relatives aux quotas de ventes n'existent qu'au niveau du mois ou du trimestre. Dans un scénario de ce type, les utilisateurs souhaiteront que la dimension de temps ait une granularité ou un niveau de détail différent pour chaque table de faits. S'il est possible de définir une nouvelle dimension de base de données comme dimension de temps avec une granularité différente, la méthode qui fait appel à [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]est plus simple.  
@@ -52,7 +52,7 @@ ms.locfileid: "36143803"
   
 7.  Basculez vers le cube du didacticiel [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] , puis cliquez sur l’onglet **Structure de cube** .  
   
-8.  Avec le bouton droit n’importe où dans le **mesures** volet, cliquez sur **nouveau groupe de mesures**, cliquez sur `SalesQuotas` dans les **nouveau groupe de mesures** boîte de dialogue zone, puis cliquez sur **OK**.  
+8.  Avec le bouton droit n’importe où dans le **mesures** volet, cliquez sur **nouveau groupe de mesures**, cliquez sur `SalesQuotas` dans le **nouveau groupe de mesures** boîte de dialogue zone, puis cliquez sur **OK**.  
   
      Le `Sales Quotas` groupe de mesures s’affiche dans le **mesures** volet. Dans le **Dimensions** volet, notez qu’un nouveau `Date` dimension de cube est également définie en fonction de la `Date` dimension de base de données. Une nouvelle dimension de cube temporelle est définie car [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] ne sait pas quelles dimensions temporelles existantes associer à la colonne **DateKey** de la table de faits **FactSalesQuota** sous-jacente au groupe de mesures Sales Quotas. Vous allez modifier cela ultérieurement, au cours d'une autre tâche de cette rubrique.  
   
@@ -62,19 +62,19 @@ ms.locfileid: "36143803"
   
 11. Sélectionnez le **Sales Quotas Count** mesurer et tapez `#,#` comme valeur pour le **FormatString** propriété dans la fenêtre Propriétés.  
   
-12. Supprimer le **trimestre** à partir de le `Sales Quotas` groupe de mesures.  
+12. Supprimer le **Calendar Quarter** à partir de la `Sales Quotas` groupe de mesures.  
   
      [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] a détecté la colonne sous-jacente de la mesure Calendar Quarter comme étant une colonne contenant des mesures. Toutefois, cette colonne et la colonne CalendarYear contiennent les valeurs que vous allez utiliser plus tard dans cette rubrique pour lier le groupe de mesures Sales Quotas à la dimension Date.  
   
-13. Dans le **mesures** volet, avec le bouton droit le `Sales Quotas` groupe de mesures, puis cliquez sur **nouvelle mesure**.  
+13. Dans le **mesures** volet, cliquez sur le `Sales Quotas` groupe de mesures, puis cliquez sur **nouvelle mesure**.  
   
      La boîte de dialogue **Nouvelle mesure** s’affiche et présente les colonnes sources disponibles pour une mesure avec le type d’utilisation **Sum**.  
   
-14. Dans le **nouvelle mesure** boîte de dialogue, sélectionnez **comptage de valeurs** dans les **utilisation** liste, vérifiez que `SalesQuotas` est sélectionné dans le **table de Source** liste, sélectionnez **EmployeeKey** dans les **colonne Source** liste, puis cliquez sur **OK**.  
+14. Dans le **nouvelle mesure** boîte de dialogue, sélectionnez **comptage de valeurs** dans le **utilisation** liste, vérifiez que `SalesQuotas` est sélectionné dans le **table Source** liste, sélectionnez **EmployeeKey** dans le **colonne Source** liste, puis cliquez sur **OK**.  
   
      Notez que la mesure est créée dans un nouveau groupe de mesures appelé **Sales Quotas 1**. Des mesures de comptage de valeurs dans [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] sont créées dans leurs propres groupes de mesures pour augmenter les performances de traitement.  
   
-15. Modifier la valeur de la **nom** propriété pour le **Employee Key Distinct Count** mesure `Sales Person Count`, puis tapez `#,#` comme valeur pour le **FormatString** propriété.  
+15. Modifiez la valeur de la **nom** propriété pour le **Employee Key Distinct Count** mesurer à `Sales Person Count`, puis tapez `#,#` comme valeur pour le **FormatString** propriété.  
   
 ## <a name="browsing-the-measures-in-the-sales-quota-measure-group-by-date"></a>Exploration des mesures du groupe de mesures Sales Quota sur la base de la dimension Date  
   
@@ -84,7 +84,7 @@ ms.locfileid: "36143803"
   
 3.  Cliquez sur le raccourci Excel, puis sur **Activer**.  
   
-4.  Dans la liste de champs de tableau croisé dynamique, développez le `Sales Quotas` groupe de mesures, puis faites glisser le **Sales Amount Quota** de mesures dans la zone valeurs.  
+4.  Dans la liste de champs de tableau croisé dynamique, développez le `Sales Quotas` groupe de mesures et faites glisser le **Sales Amount Quota** mesurer vers la zone valeurs.  
   
 5.  Développez la dimension **Sales Territory** , puis faites glisser la hiérarchie définie par l’utilisateur **Sales Territories** vers Étiquettes de ligne.  
   
@@ -98,11 +98,11 @@ ms.locfileid: "36143803"
   
 7.  Dans la liste des champs de tableau croisé dynamique, sélectionnez la hiérarchie définie par l’utilisateur **Sales Territories** , puis cliquez sur la flèche vers le bas située à droite.  
   
-     ![Hiérarchie de secteurs de vente dans la liste de champs](../../2014/tutorials/media/l5-granularity-1a.png "hiérarchie de secteurs de vente dans la liste de champs")  
+     ![Hiérarchie de secteurs de vente dans la liste de champs](../../2014/tutorials/media/l5-granularity-1a.png "hiérarchie Sales Territories dans la liste de champs")  
   
 8.  Dans le filtre, cliquez sur la case à cocher Sélectionner tout pour effacer toutes les sélections, puis choisissez uniquement **North America**.  
   
-     ![Volet de filtre pour la sélection d’Amérique du Nord](../../2014/tutorials/media/l5-granularity-1b.png "volet filtre pour sélectionner l’Amérique du Nord")  
+     ![Volet de filtre pour la sélection d’Amérique du Nord](../../2014/tutorials/media/l5-granularity-1b.png "volet de filtre pour la sélection d’Amérique du Nord")  
   
 9. Dans la liste de champs de tableau croisé dynamique, développez `Date`.  
   
@@ -110,7 +110,7 @@ ms.locfileid: "36143803"
   
 11. Dans le tableau croisé dynamique, cliquez sur la flèche vers le bas en regard de la zone Étiquettes de ligne. Effacez toutes les années à l’exception de **FY 2008**.  
   
-     Notez que seuls les **juillet 2007** membre de la **mois** niveau s’affiche, au lieu du **juillet 2007**, **août 2007**et **Septembre 2007** membres de **mois** niveau et qui seulement le **le 1er juillet 2007** membre de la `Date` niveau s’affiche, au lieu de tous les 31 derniers jours. Ce comportement se produit parce que la granularité des données dans la table de faits est le niveau trimestre et celui de la `Date` dimension est le niveau quotidien. Vous allez modifier cela ultérieurement, au cours de la tâche suivante de cette rubrique.  
+     Notez que seul le **juillet 2007** membre de la **mois** niveau s’affiche, au lieu du **juillet 2007**, **août 2007**et **Septembre 2007** membres de **mois** niveau et qui seulement le **le 1er juillet 2007** membre de la `Date` niveau s’affiche, au lieu de tous les 31 jours. Ce comportement se produit parce que le niveau trimestre de la granularité de la granularité des données dans la table de faits est le `Date` dimension est le niveau quotidiens. Vous allez modifier cela ultérieurement, au cours de la tâche suivante de cette rubrique.  
   
      Notez également que la valeur **Sales Amount Quota** des niveaux Month et Day est la même pour le niveau Quarter, $13,733,000.00. Cela est dû au fait que le niveau le plus bas des données dans le groupe de mesures est le niveau trimestriel :Quarter. Vous modifierez ce comportement au cours de la leçon 6.  
   
@@ -128,9 +128,9 @@ ms.locfileid: "36143803"
   
 3.  Dans le Concepteur de Cube pour le [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] cube du didacticiel, cliquez sur le **utilisation de la Dimension** onglet, puis passez en revue l’utilisation de la dimension dans le `Sales Quotas` et **Sales Quotas 1** groupes de mesures.  
   
-     Notez que la **employé** et `Date` dimensions de cube sont liées à la **Sales Quotasand Sales Quotas 1** groupes de mesures via des relations régulières. Notez également que la dimension de cube **Sales Territory** n’est liée à aucun de ces groupes de mesures.  
+     Notez que le **employé** et `Date` dimensions de cube sont liées à la **Sales quotas et Sales Quotas 1** groupes de mesures via des relations régulières. Notez également que la dimension de cube **Sales Territory** n’est liée à aucun de ces groupes de mesures.  
   
-4.  Cliquez sur la cellule à l’intersection de la **Sales Territory** dimension et la `Sales Quotas` groupe de mesures, puis cliquez sur le bouton Parcourir (**...** ). La boîte de dialogue **Définir une relation** s’affiche.  
+4.  Cliquez sur la cellule à l’intersection de la **Sales Territory** dimension et le `Sales Quotas` groupe de mesures, puis cliquez sur le bouton Parcourir (**...** ). La boîte de dialogue **Définir une relation** s’affiche.  
   
 5.  Dans la liste **Sélectionnez un type de relation** , sélectionnez **Référence**.  
   
@@ -160,11 +160,11 @@ ms.locfileid: "36143803"
   
 18. Supprimer le `Date` dimension de cube.  
   
-     Au lieu de quatre dimensions de cube liées à la fois, vous allez utiliser le **Order Date** dimension de cube dans le `Sales Quotas` groupe de mesures en tant que la date sur laquelle dimensionner les quotas de ventes. Vous allez également utiliser cette dimension de cube comme dimension de date principale dans le cube.  
+     Au lieu d’utiliser quatre dimensions de cube temporelles, vous allez utiliser le **Order Date** dimension de cube dans le `Sales Quotas` groupe de mesures en tant que la date sur laquelle dimensionner les quotas de ventes. Vous allez également utiliser cette dimension de cube comme dimension de date principale dans le cube.  
   
 19. Dans le **Dimensions** liste, renommez le **Order Date** dimension de cube pour `Date`.  
   
-     Renommer le **Order Date** dimension de cube pour `Date` rend plus facile à comprendre son rôle en tant que dimension de date principale dans ce cube.  
+     Renommer le **Order Date** dimension de cube pour `Date` plus facilement les utilisateurs à comprendre son rôle en tant que dimension de date principale dans ce cube.  
   
 20. Cliquez sur le bouton Parcourir (**...** ) dans la cellule à l’intersection de la `Sales Quotas` groupe de mesures et les `Date` dimension.  
   
@@ -183,9 +183,9 @@ ms.locfileid: "36143803"
   
 ## <a name="defining-attribute-relationships-between-the-calendar-quarter-attribute-and-the-other-dimension-attributes-in-the-date-dimension"></a>Définition des relations d'attributs entre l'attribut Calendar Quarter et les attributs des autres dimensions dans la dimension Date  
   
-1.  Basculez vers **Concepteur de dimensions** pour le `Date` de dimension, puis cliquez sur le **des relations d’attributs** onglet.  
+1.  Basculez vers **Concepteur de dimensions** pour le `Date` de dimension, puis cliquez sur le **relations d’attributs** onglet.  
   
-     Notez que bien que **année civile** est lié à **trimestre** via la **semestre calendrier** attribut, les attributs sont liés uniquement à un calendrier fiscal une autre ; ils ne sont pas liés à la **trimestre** d’attribut et par conséquent ne regroupent pas correctement dans le `Sales Quotas` groupe de mesures.  
+     Notez que bien que **année civile** lié à **Calendar Quarter** via la **semestre calendrier** attribut, les attributs sont liés uniquement à un calendrier fiscal une autre ; ils ne sont pas liés à la **Calendar Quarter** d’attribut et par conséquent ne regroupent pas correctement dans le `Sales Quotas` groupe de mesures.  
   
 2.  Dans le diagramme, cliquez avec le bouton droit sur l’attribut **Calendar Semester** , puis sélectionnez **Nouvelle relation d’attribut**.  
   
@@ -193,7 +193,7 @@ ms.locfileid: "36143803"
   
 4.  Cliquez sur **OK**.  
   
-     Notez qu’un message d’avertissement apparaît indiquant que le `Date` dimension contient un ou plusieurs relations d’attributs redondantes qui peuvent empêcher des données en cours d’agrégation lorsqu’un attribut non-clé est utilisé comme un attribut de granularité.  
+     Notez qu’un message d’avertissement apparaît indiquant que le `Date` dimension contient un ou plusieurs relations d’attributs redondantes qui peuvent empêcher des données agrégées lorsqu’un attribut non-clé est utilisé comme un attribut de granularité.  
   
 5.  Supprimez la relation d’attribut entre l’attribut **Month Name** et l’attribut **Fiscal Quarter** .  
   
