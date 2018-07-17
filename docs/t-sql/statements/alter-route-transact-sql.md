@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/30/2018
 ms.prod: sql
 ms.prod_service: sql-database
-ms.component: t-sql|statements
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: t-sql
@@ -23,16 +22,16 @@ helpviewer_keywords:
 - routes [Service Broker], modifying
 ms.assetid: 8dfb7b16-3dac-4e1e-8c97-adf2aad07830
 caps.latest.revision: 33
-author: edmacauley
-ms.author: edmaca
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: f84ed9bb1a02658938f6e5d9eca9389547763b85
-ms.sourcegitcommit: d2573a8dec2d4102ce8882ee232cdba080d39628
+ms.openlocfilehash: 19a4d2fb0acfd50eb9770ad533802c637b3e52c3
+ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33701410"
+ms.lasthandoff: 07/04/2018
+ms.locfileid: "37789910"
 ---
 # <a name="alter-route-transact-sql"></a>ALTER ROUTE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
@@ -83,7 +82,7 @@ WHERE database_id = DB_ID();
  Si la clause BROKER_INSTANCE est omise, l'instance de Service Broker pour l'itinéraire reste la même.  
   
 > [!NOTE]  
->  Cette option n'est pas disponible dans une base de données à relation contenant-contenu.  
+>  Cette option n'est pas disponible dans une base de données autonome.  
   
  LIFETIME **=***route_lifetime*  
  Spécifie la durée, en secondes, pendant laquelle [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] conserve l'itinéraire dans la table de routage. Lorsque la durée de vie expire, l'itinéraire expire et [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] n'en tient plus compte lors de la sélection d'un itinéraire pour une nouvelle conversation. Si cette clause est omise, la durée de vie de l'itinéraire reste la même.  
@@ -113,7 +112,7 @@ WHERE ssbe.name = N'MyServiceBrokerEndpoint';
  Quand *next_hop_address* est le serveur principal d’une base de données miroir, vous devez également spécifier la clause MIRROR_ADDRESS pour le serveur miroir. Sinon, cet itinéraire ne bascule pas automatiquement sur le serveur miroir.  
   
 > [!NOTE]  
->  Cette option n'est pas disponible dans une base de données à relation contenant-contenu.  
+>  Cette option n'est pas disponible dans une base de données autonome.  
   
  MIRROR_ADDRESS **='***next_hop_mirror_address***'**  
  Spécifie l’adresse réseau pour le serveur miroir d’une paire mise en miroir dont le serveur principal se trouve à l’adresse *next_hop_address*. *next_hop_mirror_address* spécifie une adresse TCP/IP au format suivant :  
@@ -133,7 +132,7 @@ WHERE ssbe.name = N'MyServiceBrokerEndpoint';
  Si la clause MIRROR_ADDRESS est spécifiée, l'itinéraire doit spécifier les clauses SERVICE_NAME et BROKER_INSTANCE. Un itinéraire qui spécifie **'LOCAL'** ou **'TRANSPORT'** pour le paramètre *next_hop_address* ne peut pas spécifier une adresse miroir.  
   
 > [!NOTE]  
->  Cette option n'est pas disponible dans une base de données à relation contenant-contenu.  
+>  Cette option n'est pas disponible dans une base de données autonome.  
   
 ## <a name="remarks"></a>Notes   
  La table de routage qui stocke les itinéraires est une table de métadonnées. Elle peut être lue dans la vue de catalogue **sys.routes**. La mise à jour de la table de routage s'effectue uniquement au moyen des instructions CREATE ROUTE, ALTER ROUTE et DROP ROUTE.  
