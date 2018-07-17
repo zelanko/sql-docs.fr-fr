@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - snapshots [SQL Server replication], FTP snapshots
 - FTP snapshots [SQL Server replication]
 - snapshot replication [SQL Server], FTP
 ms.assetid: 99872c4f-40ce-4405-8fd4-44052d3bd827
 caps.latest.revision: 46
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 76f70c85774a84a1d6b7be8de3348c2f6162431b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 4396b84840deb4a0973e3aae73183a551d54fce3
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36040614"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37331529"
 ---
 # <a name="deliver-a-snapshot-through-ftp"></a>Remettre un instantané via FTP
   Cette rubrique explique comment remettre un instantané via FTP dans [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] à l'aide de [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] ou de [!INCLUDE[tsql](../../../includes/tsql-md.md)].  
@@ -127,7 +127,7 @@ ms.locfileid: "36040614"
   
 1.  Dans la base de données d'abonnement de l'Abonné, exécutez [sp_addpullsubscription](/sql/relational-databases/system-stored-procedures/sp-addpullsubscription-transact-sql). Spécifiez **@publisher** et **@publication**.  
   
-    -   Dans la base de données d'abonnement de l'Abonné, exécutez [sp_addpullsubscription_agent](/sql/relational-databases/system-stored-procedures/sp-addpullsubscription-agent-transact-sql). Spécifiez **@publisher**, **@publisher_db**, **@publication**, le [!INCLUDE[msCoName](../../../includes/msconame-md.md)] les informations d’identification Windows sous lequel l’Agent de Distribution sur le Abonné s’exécute pour **@job_login** et **@job_password**et la valeur `true` pour **@use_ftp**.  
+    -   Dans la base de données d'abonnement de l'Abonné, exécutez [sp_addpullsubscription_agent](/sql/relational-databases/system-stored-procedures/sp-addpullsubscription-agent-transact-sql). Spécifiez **@publisher**, **@publisher_db**, **@publication**, le [!INCLUDE[msCoName](../../../includes/msconame-md.md)] informations d’identification Windows sous lequel l’Agent de Distribution sur le Abonné s’exécute pour **@job_login** et **@job_password**et la valeur `true` pour **@use_ftp**.  
   
 2.  Dans la base de données de publication sur le serveur de publication, exécutez [sp_addsubscription](/sql/relational-databases/system-stored-procedures/sp-addsubscription-transact-sql) pour inscrire l'abonnement par extraction. Pour plus d’informations, consultez [Créer un abonnement par extraction de données (pull)](../create-a-pull-subscription.md).  
   

@@ -1,12 +1,11 @@
 ---
-title: Déploiement d’objets de base de données CLR | Documents Microsoft
+title: Déploiement d’objets de base de données CLR | Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
-ms.prod_service: database-engine
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: reference
+ms.technology: clr
 ms.topic: reference
 helpviewer_keywords:
 - deployment script [CLR integration]
@@ -18,12 +17,12 @@ caps.latest.revision: 35
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: af823eb9457cbe74785de4c110334805f9ac1ad5
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
+ms.openlocfilehash: 9e0fe80642941daa8604aff9a169eb4cba601af5
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35701530"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37349781"
 ---
 # <a name="deploying-clr-database-objects"></a>Déploiement d'objets de base de données CLR
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -43,11 +42,11 @@ ms.locfileid: "35701530"
   
 #### <a name="to-deploy-the-assembly-using-visual-studio"></a>Pour déployer l'assembly à l'aide de Visual Studio  
   
-1.  Générez le projet en sélectionnant **générer** \<nom du projet > à partir de la **générer** menu.  
+1.  Générez le projet en sélectionnant **Build** \<nom_projet > à partir de la **Build** menu.  
   
 2.  Résolvez tous les avertissements et erreurs de build avant de déployer l'assembly sur le serveur de test.  
   
-3.  Sélectionnez **déployer** à partir de la **générer** menu. L'assembly sera ensuite inscrit dans l'instance et la base de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] spécifiées lors de la création initiale du projet [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dans Visual Studio.  
+3.  Sélectionnez **déployer** à partir de la **Build** menu. L'assembly sera ensuite inscrit dans l'instance et la base de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] spécifiées lors de la création initiale du projet [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dans Visual Studio.  
   
 #### <a name="to-deploy-the-assembly-using-transact-sql"></a>Pour déployer l'assembly à l'aide de Transact-SQL  
   
@@ -61,7 +60,7 @@ ms.locfileid: "35701530"
   
  `vbc /target:library C:\helloworld.vb`  
   
- Ces commandes lancent le Visual c# ou à l’aide du compilateur Visual Basic le **/target** permettant de spécifier la génération d’une bibliothèque DLL.  
+ Ces commandes lancent le Visual c# ou à l’aide du compilateur Visual Basic le **/target** option pour spécifier la génération d’une bibliothèque DLL.  
   
 1.  Résolvez tous les avertissements et erreurs de build avant de déployer l'assembly sur le serveur de test.  
   
@@ -71,7 +70,7 @@ ms.locfileid: "35701530"
   
  `CREATE ASSEMBLY HelloWorld from 'c:\helloworld.dll' WITH PERMISSION_SET = SAFE;`  
   
-1.  La procédure, fonction, agrégat, type défini par l'utilisateur ou déclencheur doit ensuite être créé(e) dans l'instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Si le **HelloWorld** assembly contient une méthode nommée **HelloWorld** dans les **procédures** classe, ce qui suit [!INCLUDE[tsql](../../includes/tsql-md.md)] peuvent être ajoutés à la requête pour créer un procédure appelée **hello** dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+1.  La procédure, fonction, agrégat, type défini par l'utilisateur ou déclencheur doit ensuite être créé(e) dans l'instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Si le **HelloWorld** assembly contient une méthode nommée **HelloWorld** dans le **procédures** classe, ce qui suit [!INCLUDE[tsql](../../includes/tsql-md.md)] peuvent être ajoutés à la requête pour créer un procédure appelée **hello** dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  `CREATE PROCEDURE hello`  
   
@@ -90,7 +89,7 @@ ms.locfileid: "35701530"
   
 1.  Ouvrez [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] et connectez-vous à l'instance [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] où l'assembly managé ou objet de base de données à déployer est inscrit.  
   
-2.  Dans le **l’Explorateur d’objets**, développez le  **\<nom du serveur >** et **bases de données** arborescences. Avec le bouton droit de la base de données où l’objet de base de données managé est inscrit, sélectionnez **tâches**, puis sélectionnez **générer des Scripts**. L'Assistant Script s'ouvre.  
+2.  Dans le **Explorateur d’objets**, développez le  **\<nom du serveur >** et **bases de données** arborescences. Avec le bouton droit de la base de données où l’objet de base de données managé est inscrit, sélectionnez **tâches**, puis sélectionnez **générer des Scripts**. L'Assistant Script s'ouvre.  
   
 3.  Sélectionnez la base de données à partir de la zone de liste et cliquez sur **suivant**.  
   
@@ -98,9 +97,9 @@ ms.locfileid: "35701530"
   
 5.  Dans le **sélectionner les Types d’objet** volet, choisissez le type d’objet de base de données à déployer. Cliquez sur **Suivant**.  
   
-6.  Pour chaque type d’objet sélectionné dans le **sélectionner les Types d’objet** volet, un **choisir \<type >** volet est présenté. Dans ce volet, vous pouvez choisir parmi toutes les instances de ce type d'objet de base de données inscrites dans la base de données spécifiée. Sélectionnez un ou plusieurs objets, cliquez sur **suivant**.  
+6.  Pour chaque type d’objet sélectionné dans le **sélectionner les Types d’objet** volet, un **choisir \<type >** volet s’affiche. Dans ce volet, vous pouvez choisir parmi toutes les instances de ce type d'objet de base de données inscrites dans la base de données spécifiée. Sélectionnez un ou plusieurs objets et cliquez sur **suivant**.  
   
-7.  Le **Options de sortie** volet s’affiche lorsque toutes de la base de données souhaitée de l’objet type a été sélectionné. Sélectionnez **Script dans le fichier** et spécifiez un chemin d’accès de fichier pour le script. Sélectionnez **Suivant**. Passez en revue vos sélections et cliquez sur **Terminer**. Le script de déploiement est enregistré dans le chemin d'accès relatif spécifié.  
+7.  Le **Options de sortie** volet s’affiche lorsque tous de la base de données souhaitée de l’objet type a été sélectionné. Sélectionnez **Script dans un fichier** et spécifiez un chemin d’accès de fichier pour le script. Sélectionnez **Suivant**. Passez en revue vos sélections et cliquez sur **Terminer**. Le script de déploiement est enregistré dans le chemin d'accès relatif spécifié.  
   
 ## <a name="post-deployment-scripts"></a>Scripts de post-déploiement  
  Vous pouvez exécuter un script de post-déploiement.  

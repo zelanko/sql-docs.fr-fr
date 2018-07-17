@@ -53,6 +53,7 @@
 ### [Terminer l’Assistant (Assistant Mise à niveau de packages SSIS)](complete-the-wizard-ssis-package-upgrade-wizard.md)
 ### [Mise à niveau des packages (Assistant Mise à niveau de packages SSIS)](upgrading-the-packages-ssis-package-upgrade-wizard.md)
 ## [Assistant Importation et Exportation SQL Server +](import-export-data/import-and-export-data-with-the-sql-server-import-and-export-wizard.md)
+## [Importer ou exporter depuis ou vers Excel](load-data-to-from-excel-with-ssis.md)
 ## [Outils de dépannage pour le développement des packages +](troubleshooting/troubleshooting-tools-for-package-development.md)
 ## [Événements journalisés par un package Integration Services](performance/events-logged-by-an-integration-services-package.md)
 ## [Afficher les entrées de journal dans la fenêtre Journaux d’événements](view-log-entries-in-the-log-events-window.md)

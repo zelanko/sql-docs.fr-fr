@@ -1,9 +1,4 @@
 # [Documentation en ligne de SQL Server 2014](books-online-for-sql-server-2014.md) 
-## [Étude de cas : Création d’un écosystème d’entreprise avec Microsoft Dynamics ERP et la réplication SQL Server 2014 pour la scalabilité et les performances](case-study-building-an-enterprise-ecosystem.md)
-## [Guide de conception d’index](sql-server-index-design-guide.md)
-## [Guide du verrouillage des transactions et du contrôle de version de ligne](sql-server-transaction-locking-and-row-versioning-guide.md)
-## [Gestion et architecture du journal des transactions](sql-server-transaction-log-architecture-and-management.md)
-## [Glossaire](glossary.md)
 
 # [Analysis Services +](../analysis-services/analysis-services.md)
 # [Data Quality Services +](../data-quality-services/data-quality-services.md)
@@ -14,7 +9,8 @@
 # [PowerShell pour SQL Server +](../powershell/sql-server-powershell.md)
 # [Fonctionnalités des bases de données relationnelles +](../relational-databases/database-features.md)
 # [Reporting Services +](../reporting-services/create-deploy-and-manage-mobile-and-paginated-reports.md)
-# [Tutoriels pour SQL Server 2014 +](../tutorials/tutorials-for-sql-server-2014.md)
+# [Tutoriels for SQL Server 2014 +](../tutorials/tutorials-for-sql-server-2014.md)
+# [Glossaire](glossary.md)
 
 # [Nouveautés de SQL Server 2014 +](../sql-server/what-s-new-in-sql-server-2016.md)
 
@@ -30,4 +26,9 @@
 ## [Conseiller de mise à niveau +](../sql-server/install/sql-server-2014-upgrade-advisor.md)
 ## [Configuration et maintenance d’une installation](../sql-server/install/setup-and-servicing-installation.md)
 # [Aide sur le Gestionnaire de configuration +](../tools/configuration-manager/sql-server-configuration-manager-help.md)
+
+# [Guide de conception d’index](sql-server-index-design-guide.md)
+# [Guide du verrouillage des transactions et du contrôle de version de ligne](sql-server-transaction-locking-and-row-versioning-guide.md)
+# [Gestion et architecture du journal des transactions](sql-server-transaction-log-architecture-and-management.md)
+# [Étude de cas : Création d’un écosystème d’entreprise avec Microsoft Dynamics ERP et la réplication SQL Server 2014 pour la scalabilité et les performances](case-study-building-an-enterprise-ecosystem.md)
 

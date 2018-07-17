@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.common.objectdependencies.f1
 ms.assetid: c63d1160-3f3d-45df-99be-6fe081125fb5
 caps.latest.revision: 26
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: c8b86adcbad71286c29500b2e85da23c4a18d5d7
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: f360b9553c754c5e6fa9ee2bdd5e39d73f9194b9
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36152472"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37329009"
 ---
 # <a name="object-dependencies"></a>Dépendances d'objet
   Certains objets de base de données possèdent des dépendances sur d'autres objets de base de données. Par exemple, les vues et les procédures stockées dépendent de l'existence de tables qui contiennent les données retournées par la vue ou la procédure. Les **Dépendances d'objets (page Général)** de l'objet actuel répertorient à la fois les objets de base de données indispensables au bon fonctionnement de l'objet et les objets qui dépendent de l'objet sélectionné. Un objet qui référence un autre objet dans sa définition et dont la définition est stockée dans le catalogue système est appelé une *entité de référence*. Un objet référencé par un autre objet est appelé *entité référencée*.  
@@ -34,11 +34,11 @@ ms.locfileid: "36152472"
  **Les objets qui dépendent de***\<objet sélectionné >*   
  Cliquez sur ce bouton pour afficher la liste des objets dont les dépendances sont suivies et qui dépendent de l'objet sélectionné.  
   
- **Objets sur lesquels***\<objet sélectionné >***selon le cas**   
+ **Objets dont dépend***\<objet sélectionné >***dépend**   
  Cliquez sur ce bouton pour afficher la liste des objets dont les dépendances sont suivies et dont dépend l'objet sélectionné.  
   
  **Dépendances**  
- Si **les objets qui dépendent de**  *\<objet sélectionné >* est activé, il affiche une vue hiérarchique des objets qui dépendent de l’objet sélectionné. Si **objets sur lesquels**  *\<objet sélectionné >* **dépend** est activé, il affiche une vue hiérarchique des objets dont dépend l’objet sélectionné .  
+ Si **les objets qui dépendent de**  *\<objet sélectionné >* est activé, il affiche une vue hiérarchique des objets qui dépendent de l’objet sélectionné. Si **objets dont**  *\<objet sélectionné >* **varie** est activé, il affiche une vue hiérarchique des objets dont dépend l’objet sélectionné .  
   
  **Nom**  
  Affiche le nom de l'objet sélectionné dans l'arborescence **Dépendances** affichée plus haut.  

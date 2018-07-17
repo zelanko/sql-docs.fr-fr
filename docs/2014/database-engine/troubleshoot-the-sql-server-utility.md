@@ -1,5 +1,5 @@
 ---
-title: Résoudre les problèmes de l’utilitaire SQL Server | Documents Microsoft
+title: Résoudre les problèmes de l’utilitaire SQL Server | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,24 +8,24 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: f5f47c2a-38ea-40f8-9767-9bc138d14453
 caps.latest.revision: 8
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 0bc94d8644d1a0015829b730d5556b967c6b8c93
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 81b35d1af874c97bf2e61e9c1234d7ad7876e229
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36051790"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37328139"
 ---
 # <a name="troubleshoot-the-sql-server-utility"></a>Résolution des problèmes liés à l’utilitaire SQL Server
-  Les problèmes à résoudre liés à l'utilitaire [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] peuvent inclure la résolution d'une opération ayant échoué d'inscription d'une instance de SQL Server avec un UCP, de l'échec de la collecte de données qui grise des icônes dans le mode Liste de l'instance gérée sur un UCP, l'atténuation des goulots d'étranglement des performances, ou la résolution des problèmes d'intégrité des ressources. Pour plus d’informations sur l’atténuation des problèmes d’intégrité de ressource identifiées par un [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] UCP, consultez [dépanner SQL Server l’intégrité des ressources &#40;utilitaire SQL Server&#41;](../relational-databases/manage/troubleshoot-sql-server-resource-health-sql-server-utility.md).  
+  Les problèmes à résoudre liés à l'utilitaire [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] peuvent inclure la résolution d'une opération ayant échoué d'inscription d'une instance de SQL Server avec un UCP, de l'échec de la collecte de données qui grise des icônes dans le mode Liste de l'instance gérée sur un UCP, l'atténuation des goulots d'étranglement des performances, ou la résolution des problèmes d'intégrité des ressources. Pour plus d’informations sur l’atténuation des problèmes d’intégrité de ressource identifiées par un [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] UCP, consultez [résoudre les problèmes de SQL Server Resource Health &#40;utilitaire SQL Server&#41;](../relational-databases/manage/troubleshoot-sql-server-resource-health-sql-server-utility.md).  
   
 ## <a name="failed-operation-to-enroll-an-instance-of-sql-server-into-a-sql-server-utility"></a>Opération d'inscription d'une instance de SQL Server dans un utilitaire SQL Server ayant échoué  
- Si vous vous connectez à l’instance de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] inscription à l’aide [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] l’authentification et que vous spécifiez un compte proxy qui appartient à un domaine Active Directory différent du domaine où se trouve l’UCP, validation d’instance réussit, mais le opération d’inscription échoue avec le message d’erreur suivant :  
+ Si vous vous connectez à l’instance de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] à inscrire à l’aide [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] l’authentification et que vous spécifiez un compte proxy qui appartient à un domaine Active Directory autre que le domaine où se trouve l’UCP, validation d’instance réussit, mais le opération d’inscription échoue avec le message d’erreur suivant :  
   
  Une exception s'est produite lors de l'exécution d'une instruction ou d'un lot Transact-SQL ou lot. (Microsoft.SqlServer.ConnectionInfo)  
   
@@ -46,7 +46,7 @@ ms.locfileid: "36051790"
  La solution de contournement pour ce problème, dans l'exemple ci-dessus, consiste à se connecter à l'instance de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] pour l'inscrire dans l'utilitaire [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] à l'aide de « sa » et fournir un compte proxy de « Domain_1 ».  
   
 ## <a name="failed-wmi-validation"></a>Échec de validation WMI  
- Si WMI n'est pas configuré correctement sur une instance de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], les opérations Créer un UCP et Inscrire une instance gérée affichent un avertissement, mais l'opération n'est pas bloquée. En outre, si vous modifiez le [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] configuration de compte de l’Agent afin que [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Agent n’est pas autorisé pour les classes WMI obligatoire, la collecte de données sur l’instance gérée affecté de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ne parvient pas à télécharger à l’UCP. Cela provoque des icônes grises dans l'UCP.  
+ Si WMI n'est pas configuré correctement sur une instance de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], les opérations Créer un UCP et Inscrire une instance gérée affichent un avertissement, mais l'opération n'est pas bloquée. En outre, si vous modifiez le [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] configuration de compte de l’Agent afin que [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Agent n’est pas autorisé pour les classes WMI obligatoire, collecte de données sur l’instance gérée affecté de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ne parvient pas à charger sur l’UCP. Cela provoque des icônes grises dans l'UCP.  
   
  L'échec de la collecte de données provoque des icônes d'état grises en mode Liste de l'UCP pour les instances managées affectées de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. L'historique des travaux sur l'instance managée de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] indique un échec de sysutility_mi_collect_and_upload à l'étape 2 (Données d'étape collectées à partir du script PowerShell).  
   
@@ -54,7 +54,7 @@ ms.locfileid: "36051790"
   
  L'exécution de la commande s'est arrêtée, car la variable d'environnement « ErrorActionPreference » a la valeur Stop : accès refusé.  
   
- Erreur : \<Date-heure (MM/jj/aaaa hh : mm :) > : a intercepté l’exception lors de la collecte des propriétés de l’UC.  Une requête WMI a peut-être échoué.  AVERTISSEMENT.  
+ Erreur : \<Date-heure (MM/jj/aaaa hh : mm :) > : exception interceptée lors de la collecte des propriétés de l’UC.  Une requête WMI a peut-être échoué.  AVERTISSEMENT.  
   
  Pour résoudre ce problème, vérifiez les paramètres de configuration suivants :  
   
@@ -94,13 +94,13 @@ Get-WmiObject Win32_LogicalDisk -ErrorAction Stop | Out-Null
  Pour plus d'informations sur la résolution des problèmes liés à WMI, consultez [Dépannage de WMI](http://go.microsoft.com/fwlink/?LinkId=178250). Notez que les requêtes dans ces opérations de l'utilitaire SQL Server s'exécutent localement, donc le DCOM et le contenu de résolution des problèmes à distance ne s'appliquent pas.  
   
 ## <a name="failed-data-collection"></a>Échec de la collecte de données  
- Si [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] événements de collecte de données utilitaire échouer, envisagez les possibilités suivantes :  
+ Si [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] utilitaire les événements de collecte de données échouent, envisagez les possibilités suivantes :  
   
 -   Ne modifiez pas les propriétés du jeu d'éléments de collecte « Informations sur l'utilitaire » sur une instance managée de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], et n'activez pas ou ne désactivez pas manuellement la collecte de données, car la collecte de données est contrôlée par un travail d'agent Utilitaire.  
   
 -   Validation WMI ayant échoué ou non prise en charge. Pour plus d'informations, consultez la section « Échec de validation VMI », plus haut dans cette rubrique.  
   
--   Actualiser les données dans la liste instance managée, car les données de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] points de vue utilitaire n’est pas actualisée automatiquement. Pour actualiser les données, cliquez sur le **Instances gérées** nœud dans le **Navigation de l’Explorateur de l’utilitaire** volet, puis sélectionnez **Actualiser**, ou avec le bouton droit sur le [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] nom dans la liste de l’instance, puis sélectionnez **Actualiser**. Notez qu'une fois qu'une instance de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] a été inscrite avec un UCP, cela peut prendre jusqu'à 30 minutes pour que les données s'affichent d'abord dans le tableau de bord et les points de vue dans le volet Contenu de l'Explorateur de l'utilitaire.  
+-   Actualiser les données dans la vue instance managée, en tant que données dans [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] points de vue utilitaire n’est pas actualisée automatiquement. Pour actualiser les données, cliquez sur le **Instances gérées** nœud dans le **Navigation de l’Explorateur de l’utilitaire** volet, puis sélectionnez **Actualiser**, ou avec le bouton droit sur le [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] nom dans la liste de l’instance, puis sélectionnez **Actualiser**. Notez qu'une fois qu'une instance de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] a été inscrite avec un UCP, cela peut prendre jusqu'à 30 minutes pour que les données s'affichent d'abord dans le tableau de bord et les points de vue dans le volet Contenu de l'Explorateur de l'utilitaire.  
   
 -   Utilisez le Gestionnaire de Configuration SQL Server pour vérifier que l’instance de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] est en cours d’exécution.  
   
@@ -120,7 +120,7 @@ Get-WmiObject Win32_LogicalDisk -ErrorAction Stop | Out-Null
   
     2.  Avec le bouton droit sur **UtilityAgentProxyCredential_\<GUID >** et sélectionnez **propriétés**.  
   
-    3.  La boîte de dialogue Propriétés des informations d’identification, les informations d’identification en fonction des mises à jour le **UtilityAgentProxyCredential_\<GUID >** informations d’identification.  
+    3.  Dans la boîte de dialogue Propriétés des informations d’identification, les informations d’identification nécessaires pour mettre à jour le **UtilityAgentProxyCredential_\<GUID >** informations d’identification.  
   
     4.  Cliquez sur **OK** pour confirmer la modification.  
   
@@ -128,7 +128,7 @@ Get-WmiObject Win32_LogicalDisk -ErrorAction Stop | Out-Null
   
 -   Le service SQL Server Browser sur l'UCP doit être démarré et configuré pour démarrer automatiquement. Si votre organisation empêche d'utiliser le service SQL Server Browser, utilisez la procédure suivante pour autoriser une instance gérée de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] à se connecter à l'UCP :  
   
-    1.  Dans la barre des tâches Windows sur l’instance gérée de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], cliquez sur **Démarrer**, puis cliquez sur **exécuter...** .  
+    1.  Dans la barre des tâches de Windows sur l’instance managée de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], cliquez sur **Démarrer**, puis cliquez sur **exécuter...** .  
   
     2.  Tapez « cliconfg.exe » dans l'espace fourni, puis cliquez sur **OK**.  
   
@@ -152,11 +152,11 @@ Get-WmiObject Win32_LogicalDisk -ErrorAction Stop | Out-Null
   
     12. Répétez ces étapes pour chaque instance gérée de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] qui se connecte à un UCP où le service SQL Server Browser n’est pas activé.  
   
--   Assurez-vous que les instances managées de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] sont connectés au réseau.  
+-   Vérifiez que les instances de managées [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] sont connectés au réseau.  
   
 -   S'il existe des bases de données avec le même nom mais des paramètres différents de sensibilité à la casse sur une instance managée de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], l'identification entre la base de données et ses points de vue peut être incorrecte, ce qui provoque un échec de la collecte de données. Par exemple, une base de données nommée « MYDATABASE » peut afficher des états d'intégrité pour une base de données nommée « MyDatabase ». Aucune erreur n'est générée dans ce scénario. L'échec de la collecte de données peut également résulter du non respect de la casse dans d'autres objets affichés dans l'UCP, comme fichier de base de données et les noms de groupes de fichiers.  
   
--   Si une instance managée de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] est hébergée sur un ordinateur Windows Server 2003, le compte du service [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Agent doit appartenir au groupe de sécurité Utilisateurs de l'Analyseur de performances ou au groupe local Administrateurs. Sinon, la collecte de données échouera avec une erreur d'accès refusé. Pour ajouter un [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] compte de service de l’Agent au groupe de sécurité utilisateurs de moniteur de performances, procédez comme suit :  
+-   Si une instance managée de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] est hébergée sur un ordinateur Windows Server 2003, le compte du service [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Agent doit appartenir au groupe de sécurité Utilisateurs de l'Analyseur de performances ou au groupe local Administrateurs. Sinon, la collecte de données échouera avec une erreur d'accès refusé. Pour ajouter un [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] compte de service Agent au groupe de sécurité utilisateurs de moniteur de performances, procédez comme suit :  
   
     1.  Ouvrez **Gestion de l'ordinateur**, puis **Utilisateurs et groupes locaux**, puis **Groupes**.  
   

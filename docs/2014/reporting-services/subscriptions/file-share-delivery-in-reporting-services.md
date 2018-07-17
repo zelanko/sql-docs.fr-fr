@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - subscriptions [Reporting Services], file share delivery
 - file share delivery [Reporting Services]
@@ -16,13 +16,13 @@ ms.assetid: 9f338dd3-f68a-4355-b9d7-9b25dacf3b5e
 caps.latest.revision: 52
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 3bcb077bc785005557f20b96722f5aeb94c58234
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: e4123ae77852bf0ccde4229644393f8160ffb391
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36041564"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37331209"
 ---
 # <a name="file-share-delivery-in-reporting-services"></a>Remise par partage de fichiers dans Reporting Services
   SQL Server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] comprend une extension de remise de partage de fichiers qui vous permet de remettre un rapport dans un dossier. Cette extension est disponible par défaut et elle ne nécessite aucune configuration supplémentaire. Pour que la remise de fichier réussisse, vous devez définir des autorisations d'accès en écriture sur le dossier partagé. En outre, les utilisateurs qui demandent l'accès aux rapports doivent avoir des autorisations de lecture sur le dossier partagé.  

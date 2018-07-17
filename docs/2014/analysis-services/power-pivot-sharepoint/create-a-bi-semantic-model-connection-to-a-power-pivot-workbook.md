@@ -1,5 +1,5 @@
 ---
-title: Créer une connexion de modèle sémantique BI à un classeur PowerPivot | Documents Microsoft
+title: Créer une connexion de modèle sémantique BI à un classeur PowerPivot | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: b2e3f97f-18a8-42b6-9030-b4f818afc3b9
 caps.latest.revision: 8
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 34e81c0f6023b6dee0c9770fdfde89a92eb2afc5
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: ab47a88ef1bda109cca1abbe27a975d9df9290ed
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36140106"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37328479"
 ---
 # <a name="create-a-bi-semantic-model-connection-to-a-powerpivot-workbook"></a>Créer une connexion de modèle sémantique BI à un classeur PowerPivot
   Utilisez les informations de cette rubrique pour configurer une connexion de modèle sémantique BI qui redirige vers un classeur PowerPivot dans la même batterie.  
@@ -41,7 +41,7 @@ ms.locfileid: "36140106"
 ##  <a name="bkmk_prereq"></a> Examiner la configuration requise  
  Vous devez disposer d'autorisations Collaboration ou supérieures pour créer un fichier de connexion de modèle sémantique BI.  
   
- Vous devez disposer d'une bibliothèque qui prend en charge le type de contenu Connexion de modèle sémantique BI. Pour plus d’informations, consultez [ajouter une sémantique modèle connexion Type de contenu BI à une bibliothèque &#40;PowerPivot pour SharePoint&#41;](add-bi-semantic-model-connection-content-type-to-library.md).  
+ Vous devez disposer d'une bibliothèque qui prend en charge le type de contenu Connexion de modèle sémantique BI. Pour plus d’informations, consultez [ajouter une sémantique modèle connexion Type de contenu BI dans une bibliothèque &#40;PowerPivot pour SharePoint&#41;](add-bi-semantic-model-connection-content-type-to-library.md).  
   
  Vous devez connaître l’URL du classeur PowerPivot pour lequel vous configurez une connexion de modèle sémantique BI (par exemple, http://adventure-works/shared documents/myworkbook.xlsx). Le classeur doit figurer dans la même batterie de serveurs.  
   
@@ -55,11 +55,11 @@ ms.locfileid: "36140106"
   
 2.  Définir le **Server** propriété sur l’URL SharePoint du classeur PowerPivot (par exemple,  **http://mysharepoint/shared documents/Myworkbook.xlsx**. Dans un déploiement PowerPivot pour SharePoint, les données peuvent être chargées sur tout serveur de la batterie. Pour cette raison, les connexions de la source de données aux données PowerPivot spécifient juste le chemin d'accès au classeur. Le service système PowerPivot détermine quel serveur charge les données.  
   
-     N’utilisez pas le **base de données** propriété ; il n’est pas utilisé lors de la spécification de l’emplacement d’un classeur PowerPivot.  
+     N’utilisez pas le **base de données** propriété ; il n’est pas utilisé lorsque vous spécifiez l’emplacement d’un classeur PowerPivot.  
   
      Votre page doit ressembler à l'illustration suivante.  
   
-     ![Page de connexion BISM affichant l’URL classeur](../media/ssas-bismconnection-ppvtds.gif "page de connexion BISM montrant l’URL de classeur")  
+     ![Page de connexion BISM affichant l’URL classeur](../media/ssas-bismconnection-ppvtds.gif "page de connexion BISM affichant l’URL classeur")  
   
      Éventuellement, si vous disposez d'autorisations SharePoint sur le classeur, une étape supplémentaire de validation est effectuée pour s'assurer que l'emplacement est valide. Si vous n'êtes pas autorisé à accéder aux données, vous avez la possibilité d'enregistrer la connexion de modèle sémantique BI sans la réponse de validation.  
   

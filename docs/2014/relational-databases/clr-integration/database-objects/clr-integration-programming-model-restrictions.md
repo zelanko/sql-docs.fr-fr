@@ -1,13 +1,11 @@
 ---
-title: Restrictions du modèle de programmation de l’intégration CLR | Documents Microsoft
+title: Restrictions du modèle de programmation de l’intégration CLR | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: clr
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -17,18 +15,18 @@ helpviewer_keywords:
 - assemblies [CLR integration], runtime checks
 ms.assetid: 2446afc2-9d21-42d3-9847-7733d3074de9
 caps.latest.revision: 21
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 039afe6cbe5892d2422eec3c92a4d2bb942d5de0
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: rothja
+ms.author: jroth
+manager: craigg
+ms.openlocfilehash: 5126690791d59a41f65885e5c57f7cb9098eaf21
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36040445"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37349791"
 ---
 # <a name="clr-integration-programming-model-restrictions"></a>Restrictions du modèle de programmation de l'intégration du CLR
-  Lorsque vous créez une procédure stockée managée ou un autre objet de base de données managés, il existe certains contrôles de code effectués par [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] effectue des contrôles sur l’assembly de code managé lorsqu’il est tout d’abord inscrit dans la base de données à l’aide de la `CREATE ASSEMBLY` instruction et également pendant l’exécution. Le code managé est également vérifié pendant l'exécution, car dans un assembly il peut y avoir des chemins d'accès de code qui peuvent ne jamais être atteints pendant l'exécution.  Cela fournit la souplesse nécessaire pour inscrire notamment des assemblys tiers, afin qu'un assembly ne soit pas bloqué là où il y a du code « potentiellement dangereux » conçu pour s'exécuter dans un environnement client, mais ne soit jamais exécuté dans le CLR hébergé. Les exigences que le code managé doit satisfaire varient selon que l’assembly est inscrit en tant que `SAFE`, `EXTERNAL_ACCESS`, ou `UNSAFE`, `SAFE` qui est le plus strict et sont répertoriées ci-dessous.  
+  Quand vous créez une procédure stockée managée ou un autre objet de base de données managés, il existe certains contrôles de code effectués par [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] effectue des contrôles sur l’assembly de code managé lorsqu’il est tout d’abord inscrit dans la base de données, à l’aide de la `CREATE ASSEMBLY` instruction et également lors de l’exécution. Le code managé est également vérifié pendant l'exécution, car dans un assembly il peut y avoir des chemins d'accès de code qui peuvent ne jamais être atteints pendant l'exécution.  Cela fournit la souplesse nécessaire pour inscrire notamment des assemblys tiers, afin qu'un assembly ne soit pas bloqué là où il y a du code « potentiellement dangereux » conçu pour s'exécuter dans un environnement client, mais ne soit jamais exécuté dans le CLR hébergé. Le code managé doit satisfaire les exigences varient selon que l’assembly est inscrit en tant que `SAFE`, `EXTERNAL_ACCESS`, ou `UNSAFE`, `SAFE` en cours les plus strictes et sont répertoriées ci-dessous.  
   
  En plus des restrictions imposées sur les assemblys de code managé, des autorisations de sécurité du code sont également accordées. Le Common Language Runtime (CLR) prend en charge un modèle de sécurité appelé sécurité d'accès du code pour le code managé. Dans ce modèle, les autorisations sont accordées aux assemblys selon l'identité du code. Les assemblys `SAFE`, `EXTERNAL_ACCESS` et `UNSAFE` ont des autorisations de sécurité d'accès du code différentes. Pour plus d’informations, consultez [sécurité d’accès du Code CLR Integration](../security/clr-integration-code-access-security.md).  
   
@@ -116,15 +114,15 @@ ms.locfileid: "36040445"
   
 -   UI  
   
- Pour plus d’informations sur HPA et une liste de types et membres dans les assemblys pris en charge interdits, consultez [attributs de Protection d’hôte et de la programmation de l’intégration CLR](../../clr-integration-security-host-protection-attributes/host-protection-attributes-and-clr-integration-programming.md).  
+ Pour plus d’informations sur les HPA et une liste de types et membres dans les assemblys pris en charge interdits, consultez [les attributs de Protection hôte et programmation de l’intégration de CLR](../../clr-integration-security-host-protection-attributes/host-protection-attributes-and-clr-integration-programming.md).  
   
 ### <a name="safe"></a>SAFE  
  Toutes les conditions `EXTERNAL_ACCESS` sont vérifiées.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Bibliothèques prises en charge de .NET Framework](supported-net-framework-libraries.md)   
+ [Bibliothèques de prise en charge de .NET Framework](supported-net-framework-libraries.md)   
  [Sécurité d’accès du Code CLR Integration](../security/clr-integration-code-access-security.md)   
- [Attributs de Protection d’hôte et de la programmation de l’intégration CLR](../../clr-integration-security-host-protection-attributes/host-protection-attributes-and-clr-integration-programming.md)   
+ [Attributs de Protection hôte et programmation de l’intégration CLR](../../clr-integration-security-host-protection-attributes/host-protection-attributes-and-clr-integration-programming.md)   
  [Création d’un assembly](../assemblies/creating-an-assembly.md)  
   
   

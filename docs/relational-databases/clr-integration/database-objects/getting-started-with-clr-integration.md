@@ -1,12 +1,11 @@
 ---
-title: Prise en main de l’intégration du CLR | Documents Microsoft
+title: Mise en route avec l’intégration CLR | Microsoft Docs
 ms.custom: ''
 ms.date: 08/02/2016
 ms.prod: sql
-ms.prod_service: database-engine
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: reference
+ms.technology: clr
 ms.topic: get-started-article
 dev_langs:
 - TSQL
@@ -28,19 +27,19 @@ caps.latest.revision: 62
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 33904494978b4a85377ef4d3bdb3cee4f176f2f2
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
+ms.openlocfilehash: e54af4adc976d8a5b8e9990d91155d5178f5ef03
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35702370"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37349461"
 ---
 # <a name="getting-started-with-clr-integration"></a>Mise en route avec l'intégration du CLR
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Cette rubrique fournit une vue d’ensemble des espaces de noms et des bibliothèques requis pour compiler des objets de base de données à l’aide de la [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] intégration avec le common language runtime (CLR) du .NET Framework. La rubrique vous indique également comment écrire, compiler et exécuter une procédure stockée CLR simple écrite dans [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual C#.  
   
 ## <a name="required-namespaces"></a>Espaces de noms requis  
- Les composants requis pour développer des objets de base de données CLR base sont installés avec [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Les fonctionnalités d'intégration du CLR sont exposées dans un assembly appelé system.data.dll, qui fait partie du .NET Framework. Cet assembly se trouve dans le Global Assembly Cache (GAC), ainsi que dans le répertoire .NET Framework. Une référence à cet assembly est ajoutée en général automatiquement par les outils en ligne de commande et [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual Studio, afin qu'il ne soit pas nécessaire de l'ajouter manuellement.  
+ Les composants requis pour développer des objets de base de données CLR sont installés avec [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Les fonctionnalités d'intégration du CLR sont exposées dans un assembly appelé system.data.dll, qui fait partie du .NET Framework. Cet assembly se trouve dans le Global Assembly Cache (GAC), ainsi que dans le répertoire .NET Framework. Une référence à cet assembly est ajoutée en général automatiquement par les outils en ligne de commande et [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual Studio, afin qu'il ne soit pas nécessaire de l'ajouter manuellement.  
   
  L'assembly system.data.dll contient les espaces de noms suivants, qui sont requis pour compiler les objets de base de données CLR :  
   
@@ -89,9 +88,9 @@ End Class
   
 ```  
   
- Ce programme simple contient une méthode statique unique sur une classe publique. Cette méthode utilise deux nouvelles classes, **[SqlContext](https://msdn.microsoft.com/library/microsoft.sqlserver.server.sqlcontext.aspx)** et  **[SqlPipe](https://msdn.microsoft.com/library/microsoft.sqlserver.server.sqlpipe.aspx)**, création managé vers la sortie d’un texte simple, les objets de base de données Message. La méthode affecte également la chaîne « Hello world ! » en tant que valeur de paramètre de sortie. Cette méthode peut être déclarée comme une procédure stockée dans [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], puis s'exécuter de la même manière qu'une procédure stockée [!INCLUDE[tsql](../../../includes/tsql-md.md)].  
+ Ce programme simple contient une méthode statique unique sur une classe publique. Cette méthode utilise deux nouvelles classes, **[SqlContext](https://msdn.microsoft.com/library/microsoft.sqlserver.server.sqlcontext.aspx)** et  **[SqlPipe](https://msdn.microsoft.com/library/microsoft.sqlserver.server.sqlpipe.aspx)**, managé de création d’objets à un simple texte de sortie de base de données Message. La méthode affecte également la chaîne « Hello world ! » en tant que valeur de paramètre de sortie. Cette méthode peut être déclarée comme une procédure stockée dans [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], puis s'exécuter de la même manière qu'une procédure stockée [!INCLUDE[tsql](../../../includes/tsql-md.md)].  
   
- Compiler ce programme comme une bibliothèque, le charger dans [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], et l’exécuter comme une procédure stockée.  
+ Compiler ce programme comme une bibliothèque, le charger dans [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], et exécutez-le en tant qu’une procédure stockée.  
   
 ## <a name="compile-the-hello-world-stored-procedure"></a>Compiler la procédure « Hello World » stockées  
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] installe par défaut les fichiers de redistribution [!INCLUDE[msCoName](../../../includes/msconame-md.md)] .NET Framework. Ces fichiers incluent csc.exe et vbc.exe, les compilateurs de ligne de commande pour les programmes Visual C# et Visual Basic. Pour compiler notre exemple, vous devez modifier votre variable de chemin d'accès pour pointer sur le répertoire qui contient csc.exe ou vbc.exe. Le chemin d'installation par défaut du .NET Framework est le suivant :  
@@ -180,7 +179,7 @@ IF EXISTS (SELECT name FROM sys.assemblies WHERE name = 'helloworld')
   
 ## <a name="see-also"></a>Voir aussi  
  [Procédures stockées CLR](http://msdn.microsoft.com/library/bbdd51b2-a9b4-4916-ba6f-7957ac6c3f33)   
- [Extensions spécifiques du In-Process SQL Server pour ADO.NET](../../../relational-databases/clr-integration-data-access-in-process-ado-net/sql-server-in-process-specific-extensions-to-ado-net.md)   
+ [Extensions spécifiques de SQL Server In-Process à ADO.NET](../../../relational-databases/clr-integration-data-access-in-process-ado-net/sql-server-in-process-specific-extensions-to-ado-net.md)   
  [Débogage d’objets de base de données CLR](../../../relational-databases/clr-integration/debugging-clr-database-objects.md)   
  [Sécurité de l’intégration du CLR](../../../relational-databases/clr-integration/security/clr-integration-security.md)  
   

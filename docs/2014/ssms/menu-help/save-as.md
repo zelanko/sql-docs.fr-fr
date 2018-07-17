@@ -8,25 +8,25 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vs.saveas
 helpviewer_keywords:
 - Save As dialog box
 ms.assetid: 61347757-f5a3-481d-8b05-1fed086629b6
 caps.latest.revision: 16
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 968cb13c9a115fcc0445cdfba194a2087a06a234
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 4dc19118c88734062a9c57ac39acf33bab5942d4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36041943"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37326899"
 ---
 # <a name="save-as"></a>Enregistrer sous
-  Utilisez cette boîte de dialogue pour enregistrer une instance de l'élément en cours à l'emplacement spécifié et dans un format de fichier spécifique. Pour afficher cette boîte de dialogue, cliquez sur **enregistrer**  *\<fichier >* **en tant que** sur la **fichier** menu (où  *\<fichier >* est le nom de l’élément en cours), ou appuyez sur ALT + F, A dans l’éditeur de Code.  
+  Utilisez cette boîte de dialogue pour enregistrer une instance de l'élément en cours à l'emplacement spécifié et dans un format de fichier spécifique. Pour afficher cette boîte de dialogue, cliquez sur **enregistrer**  *\<fichier >* **comme** sur le **fichier** menu (où  *\<fichier >* est le nom de l’élément actuel), ou appuyez sur ALT + F, A dans l’éditeur de Code.  
   
 ## <a name="central-panel"></a>Volet central  
  **Enregistrer dans**  
