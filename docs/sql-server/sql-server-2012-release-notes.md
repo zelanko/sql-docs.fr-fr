@@ -1,8 +1,7 @@
 ---
 title: Notes de publication de SQL Server 2012 | Microsoft Docs
 ms.prod: sql
-ms.prod_service: sql
-ms.technology: supportability
+ms.technology: install
 ms.custom: ''
 ms.date: 01/31/2017
 ms.reviewer: ''
@@ -16,12 +15,12 @@ author: craigg-msft
 ms.author: craigg
 manager: jhubbard
 monikerRange: = sql-server-2014 || = sqlallproducts-allversions
-ms.openlocfilehash: cf9360da746f08bc555a4796d5134a11c6b08d32
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: d4e350a885524670905e5aa67d146b1531c32dae
+ms.sourcegitcommit: abd71294ebc39695d403e341c4f77829cb4166a8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33036946"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36926200"
 ---
 # <a name="sql-server-2012-release-notes"></a>Notes de publication de SQL Server 2012
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -479,8 +478,8 @@ Nom d'objet 'sys.federations' non valide. (Microsoft SQL Server, Error: 208)</pr
   
 **Solution de contournement :** aucune  
   
-### <a name="56-intellisense-has-limitations-when-logged-in-to-a-contained-database"></a>5.6 Intellisense présente des restrictions lors de la connexion à une base de données à relation contenant-contenu  
-Problème : Intellisense dans SQL Server Management Studio (SSMS) et SQL Server Data Tools (SSDT) ne fonctionne pas comme attendu lorsque des utilisateurs à relation contenant-contenu sont connectés à des bases de données à relation contenant-contenu. Il est possible d'observer le comportement suivant dans de tels cas :  
+### <a name="56-intellisense-has-limitations-when-logged-in-to-a-contained-database"></a>5.6 Intellisense présente des restrictions lors de la connexion à une base de données autonome  
+Problème : Intellisense dans SQL Server Management Studio (SSMS) et SQL Server Data Tools (SSDT) ne fonctionne pas comme attendu lorsque des utilisateurs autonomes sont connectés à des bases de données autonomes. Il est possible d'observer le comportement suivant dans de tels cas :  
   
 1.  Le soulignement des objets non valides n'apparaît pas.  
   

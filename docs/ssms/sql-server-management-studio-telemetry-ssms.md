@@ -15,16 +15,16 @@ caps.latest.revision: 72
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 7e9f294c857c1f1ed598eaaf0f79702475ef59c0
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 78e74f96f36c5bfb21859bbc1f4ef1916e061b59
+ms.sourcegitcommit: abd71294ebc39695d403e341c4f77829cb4166a8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33046886"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36926880"
 ---
 # <a name="local-audit-for-ssms-usage-feedback-collection"></a>Audit local pour la collecte de commentaires d’utilisation de SSMS
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-SQL Server Management Studio (SSMS) intègre des fonctionnalités Internet qui peuvent recueillir et envoyer des données d’utilisation anonymes à Microsoft. SSMS peut recueillir des informations standard sur l’ordinateur et des informations sur l’utilisation et les performances qui peuvent être transmises à Microsoft et analysées dans le but d’améliorer la qualité, la sécurité et la fiabilité de SSMS. Microsoft ne collecte ni votre nom, ni votre adresse, ni aucune autre information permettant de vous contacter. Pour plus d’informations, consultez la [Déclaration de confidentialité de SQL Server](https://www.microsoft.com/en-us/privacystatement/SQLServer/Default.aspx).
+SQL Server Management Studio (SSMS) intègre des fonctionnalités Internet qui peuvent recueillir et envoyer des données d’utilisation anonymes à Microsoft. SSMS peut recueillir des informations standard sur l’ordinateur et des informations sur l’utilisation et les performances qui peuvent être transmises à Microsoft et analysées dans le but d’améliorer la qualité, la sécurité et la fiabilité de SSMS. Microsoft ne collecte ni votre nom, ni votre adresse, ni aucune autre information permettant de vous contacter. Pour plus d’informations, consultez la [Déclaration de confidentialité de SQL Server](http://go.microsoft.com/fwlink/?LinkID=868444).
 
 ## <a name="audit-feature-usage-data"></a>Données d’utilisation des fonctionnalités d’audit
 

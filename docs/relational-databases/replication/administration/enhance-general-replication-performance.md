@@ -7,8 +7,7 @@ ms.prod_service: database-engine
 ms.component: replication
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- replication
+ms.technology: replication
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -27,12 +26,12 @@ caps.latest.revision: 45
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 6fa663e269559fb2eb87d599723734639a717d2e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 894f01b89dba015f0543df7c810a590c9359ff7a
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32956894"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37355121"
 ---
 # <a name="enhance-general-replication-performance"></a>Améliorer les performances générales de la réplication
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -153,7 +152,7 @@ ms.locfileid: "32956894"
   
 -   Envisagez d'initialiser manuellement un abonnement.  
   
-     Dans certains scénarios, comme ceux impliquant de volumineux datasets initiaux, il est préférable d'initialiser un abonnement à l'aide d'une autre méthode que l'instantané. Pour plus d’informations, consultez [Initialize a Transactional Subscription Without a Snapshot](../../../relational-databases/replication/initialize-a-transactional-subscription-without-a-snapshot.md).  
+     Dans certains scénarios, comme ceux impliquant de volumineux datasets initiaux, il est préférable d'initialiser un abonnement à l'aide d'une autre méthode que l'instantané. Pour plus d’informations, consultez [Initialiser un abonnement transactionnel sans instantané](../../../relational-databases/replication/initialize-a-transactional-subscription-without-a-snapshot.md).  
   
 ## <a name="agent-parameters"></a>Paramètres de l'Agent  
   

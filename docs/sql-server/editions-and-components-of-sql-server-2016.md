@@ -3,12 +3,9 @@ title: Éditions et fonctionnalités prises en charge de SQL Server 2016 | Micr
 ms.custom: ''
 ms.date: 05/24/2017
 ms.prod: sql
-ms.prod_service: sql
-ms.component: sql-non-specified
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- server-general
+ms.technology: install
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -35,16 +32,15 @@ helpviewer_keywords:
 - editions [SQL Server], about edition options
 - Setup [SQL Server]
 ms.assetid: e5186f02-dd91-47d0-8fa4-de3f41c76903
-caps.latest.revision: 121
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: b646e55f8849bc6465b59f7295581aefe03f048c
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 3c1f1e78a10b2c0c87089531959a53abaa09e055
+ms.sourcegitcommit: abd71294ebc39695d403e341c4f77829cb4166a8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33036596"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36772344"
 ---
 # <a name="editions-and-supported-features-of-sql-server-2016"></a>Éditions et fonctionnalités prises en charge de SQL Server 2016
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -203,7 +199,7 @@ L’édition Developer continue à prendre en charge seulement 1 client pour [S
 |Chiffrement transparent de base de données|Oui|non|non|non|non|   
 |Gestion de clés extensible|Oui|non|non|non|non| 
 |Rôles définis par l’utilisateur|Oui|Oui|Oui|Oui|Oui| 
-|Bases de données à relation contenant-contenu|Oui|Oui|Oui|Oui|Oui| 
+|Bases de données autonomes|Oui|Oui|Oui|Oui|Oui| 
 |Chiffrement des sauvegardes|Oui|Oui|non|non|non|  
 
 <sup>1</sup> S’applique à [!INCLUDE[ssNoVersion_md](../includes/ssnoversion-md.md)] 2016 SP1.  
