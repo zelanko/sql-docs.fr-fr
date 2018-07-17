@@ -7,8 +7,7 @@ ms.prod_service: database-engine
 ms.component: replication
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- replication
+ms.technology: replication
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -20,12 +19,12 @@ caps.latest.revision: 47
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 991c8ab81340b5ab9b03b79174e7a60e33b505cf
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 52edda77eb537fb6962a183cc37591b457d33b6d
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32964764"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37355131"
 ---
 # <a name="deliver-a-snapshot-through-ftp"></a>Remettre un instantané via FTP
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -132,7 +131,7 @@ ms.locfileid: "32964764"
   
     -   Dans la base de données d'abonnement de l'Abonné, exécutez [sp_addpullsubscription_agent](../../../relational-databases/system-stored-procedures/sp-addpullsubscription-agent-transact-sql.md). Spécifiez **@publisher**, **@publisher_db**, **@publication**, les informations d'identification [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows sous lesquelles l'Agent de distribution s'exécute sur l'Abonné pour **@job_login** et **@job_password**et affectez la valeur **true** à **@use_ftp**.  
   
-2.  Dans la base de données de publication sur le serveur de publication, exécutez [sp_addsubscription](../../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md) pour inscrire l'abonnement par extraction. Pour plus d’informations, consultez [Create a Pull Subscription](../../../relational-databases/replication/create-a-pull-subscription.md).  
+2.  Dans la base de données de publication sur le serveur de publication, exécutez [sp_addsubscription](../../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md) pour inscrire l'abonnement par extraction. Pour plus d’informations, consultez [Créer un abonnement par extraction de données (pull)](../../../relational-databases/replication/create-a-pull-subscription.md).  
   
 #### <a name="to-create-a-pull-subscription-to-a-merge-publication-that-uses-ftp-snapshot-delivery"></a>Pour créer un abonnement par extraction à une publication de fusion qui utilise la remise d'instantanés via FTP  
   
@@ -140,7 +139,7 @@ ms.locfileid: "32964764"
   
 2.  Dans la base de données d'abonnement de l'Abonné, exécutez [sp_addmergepullsubscription_agent](../../../relational-databases/system-stored-procedures/sp-addmergepullsubscription-agent-transact-sql.md). Spécifiez **@publisher**, **@publisher_db**, **@publication**, les informations d'identification Windows sous lesquelles l'Agent de distribution s'exécute sur l'Abonné pour **@job_login** et **@job_password**et affectez la valeur **true** à **@use_ftp**.  
   
-3.  Dans la base de données de publication sur le serveur de publication, exécutez [sp_addmergesubscription](../../../relational-databases/system-stored-procedures/sp-addmergesubscription-transact-sql.md) pour inscrire l'abonnement par extraction. Pour plus d’informations, consultez [Create a Pull Subscription](../../../relational-databases/replication/create-a-pull-subscription.md).  
+3.  Dans la base de données de publication sur le serveur de publication, exécutez [sp_addmergesubscription](../../../relational-databases/system-stored-procedures/sp-addmergesubscription-transact-sql.md) pour inscrire l'abonnement par extraction. Pour plus d’informations, consultez [Créer un abonnement par extraction de données (pull)](../../../relational-databases/replication/create-a-pull-subscription.md).  
   
 #### <a name="to-change-one-or-more-ftp-snapshot-delivery-settings-for-a-snapshot-or-transactional-publication"></a>Pour modifier un ou plusieurs paramètres de remise d'instantanés sur FTP pour une publication transactionnelle ou d'instantané  
   
