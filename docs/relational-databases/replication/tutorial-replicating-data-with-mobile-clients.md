@@ -7,8 +7,7 @@ ms.prod_service: database-engine
 ms.component: replication
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- replication
+ms.technology: replication
 ms.tgt_pltfrm: ''
 ms.topic: get-started-article
 applies_to:
@@ -21,29 +20,29 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 8598505eaf65bb3748df87f14e52a5c7477a58ea
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 750bb45c40674b572af1ef7f4e9b3eaa83318478
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32964574"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37353961"
 ---
 # <a name="tutorial-configure-replication-between-a-server-and-mobile-clients-merge"></a>Tutoriel : Configurer la réplication entre un serveur et des clients mobiles (réplication de fusion)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 La réplication de fusion constitue une bonne solution au problème de transfert des données entre un serveur central et des clients mobiles qui ne sont connectés que de façon occasionnelle. Grâce aux Assistants de réplication, vous pouvez aisément configurer et administrer une topologie de réplication de fusion. 
 
-Ce tutoriel vous explique comment configurer une topologie de réplication pour des clients mobiles. Pour plus d’informations sur la réplication de fusion, consultez la [présentation de la réplication de fusion](https://docs.microsoft.com/en-us/sql/relational-databases/replication/merge/merge-replication).
+Ce didacticiel vous explique comment configurer une topologie de réplication pour des clients mobiles. Pour plus d’informations sur la réplication de fusion, consultez la [présentation de la réplication de fusion](https://docs.microsoft.com/en-us/sql/relational-databases/replication/merge/merge-replication).
   
-## <a name="what-you-will-learn"></a>Contenu du tutoriel  
+## <a name="what-you-will-learn"></a>Contenu du didacticiel  
 Dans ce tutoriel, vous allez découvrir comment utiliser la réplication de fusion pour publier des données issues d’une base de données centrale dans un ou plusieurs comptes d’utilisateurs mobiles, afin que chaque utilisateur obtienne le sous-ensemble de données filtré dont il a besoin. 
 
-Dans ce tutoriel, vous apprendrez à :
+Dans ce didacticiel, vous apprendrez à :
 > [!div class="checklist"]
 > * Configurer un serveur de publication pour la réplication de fusion.
 > * Ajouter un abonné mobile à la publication de fusion.
 > * Synchroniser l’abonnement avec la publication de fusion.
   
-## <a name="prerequisites"></a>Prérequis  
+## <a name="prerequisites"></a>Conditions préalables requises  
 Ce tutoriel est destiné aux utilisateurs qui sont familiers des opérations essentielles de base de données, mais pas de la réplication. Avant de commencer ce tutoriel, vous devez effectuer le [Tutoriel : Préparer le serveur à la réplication](../../relational-databases/replication/tutorial-preparing-the-server-for-replication.md).  
   
 Pour suivre ce tutoriel, vous avez besoin de SQL Server, SQL Server Management Studio (SSMS) et une base de données AdventureWorks : 
@@ -256,7 +255,7 @@ Dans cette section, vous allez ajouter un abonnement à la publication de fusion
   
   
 Pour plus d'informations, consultez :  
-- [S’abonner à des publications](../../relational-databases/replication/subscribe-to-publications.md)  
+- [S'abonner à des publications](../../relational-databases/replication/subscribe-to-publications.md)  
 - [Créer un abonnement par extraction](../../relational-databases/replication/create-a-pull-subscription.md)  
 - [Instantanés des publications de fusion avec des filtres paramétrés](../../relational-databases/replication/snapshots-for-merge-publications-with-parameterized-filters.md)  
 
