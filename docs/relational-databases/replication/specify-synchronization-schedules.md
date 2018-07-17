@@ -7,8 +7,7 @@ ms.prod_service: database-engine
 ms.component: replication
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- replication
+ms.technology: replication
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -21,12 +20,12 @@ caps.latest.revision: 40
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 05e5e55f02573bc73ac13a411ebb03671bf9bba2
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 36a8f87973096213c11cc9df8cd880c0928a5b88
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32964804"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37358321"
 ---
 # <a name="specify-synchronization-schedules"></a>Spécifier des planifications de synchronisation
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -172,25 +171,25 @@ ms.locfileid: "32964804"
   
 #### <a name="to-define-the-synchronization-schedule-for-a-pull-subscription-to-a-transactional-publication"></a>Pour définir la planification de synchronisation pour un abonnement par extraction à une publication transactionnelle  
   
-1.  Créez un abonnement par extraction à une publication transactionnelle. Pour plus d’informations, consultez [Create a Pull Subscription](../../relational-databases/replication/create-a-pull-subscription.md).  
+1.  Créez un abonnement par extraction à une publication transactionnelle. Pour plus d’informations, consultez [Créer un abonnement par extraction de données (pull)](../../relational-databases/replication/create-a-pull-subscription.md).  
   
 2.  Sur l’Abonné, exécutez [sp_addpullsubscription_agent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addpullsubscription-agent-transact-sql.md). Spécifiez **@publisher**, de **@publisher_db**, de **@publication**et les informations d'identification [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows sous lesquelles l'Agent de distribution s'exécute sur l'Abonné pour **@job_name** et **@password**. Spécifiez les paramètres de synchronisation (détaillés plus haut) qui définissent la planification du travail de l'Agent de distribution qui synchronise l'abonnement.  
   
 #### <a name="to-define-the-synchronization-schedule-for-a-push-subscription-to-a-transactional-publication"></a>Pour définir la planification de synchronisation pour un abonnement par émission de données à une publication transactionnelle  
   
-1.  Créez un abonnement par émission de données à une publication transactionnelle. Pour plus d’informations, consultez [Create a Push Subscription](../../relational-databases/replication/create-a-push-subscription.md).  
+1.  Créez un abonnement par émission de données à une publication transactionnelle. Pour plus d’informations, consultez [Créer un abonnement par émission (push)](../../relational-databases/replication/create-a-push-subscription.md).  
   
 2.  Sur l’Abonné, exécutez [sp_addpushsubscription_agent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addpushsubscription-agent-transact-sql.md). Spécifiez **@subscriber**, de **@subscriber_db**, de **@publication**et les informations d'identification Windows sous lesquelles l'Agent de distribution s'exécute sur l'Abonné pour **@job_name** et **@password**. Spécifiez les paramètres de synchronisation (détaillés plus haut) qui définissent la planification du travail de l'Agent de distribution qui synchronise l'abonnement.  
   
 #### <a name="to-define-the-synchronization-schedule-for-a-pull-subscription-to-a-merge-publication"></a>Pour définir la planification de synchronisation pour un abonnement par extraction à une publication de fusion  
   
-1.  Créez un abonnement par extraction à une publication de fusion Pour plus d’informations, consultez [Create a Pull Subscription](../../relational-databases/replication/create-a-pull-subscription.md).  
+1.  Créez un abonnement par extraction à une publication de fusion Pour plus d’informations, consultez [Créer un abonnement par extraction de données (pull)](../../relational-databases/replication/create-a-pull-subscription.md).  
   
 2.  Sur l'Abonné, exécutez [sp_addmergepullsubscription_agent](../../relational-databases/system-stored-procedures/sp-addpullsubscription-agent-transact-sql.md). Spécifiez **@publisher**, de **@publisher_db**, de **@publication**et les informations d'identification Windows sous lesquelles l'Agent de fusion s'exécute sur l'Abonné pour **@job_name** et **@password**. Spécifiez les paramètres de synchronisation (détaillés plus haut) qui définissent la planification du travail de l'Agent de fusion qui synchronise l'abonnement.  
   
 #### <a name="to-define-the-synchronization-schedule-for-a-push-subscription-to-a-merge-publication"></a>Pour définir la planification de synchronisation pour un abonnement par émission de données à une publication de fusion  
   
-1.  Créez un abonnement par émission de données à une publication de fusion. Pour plus d’informations, consultez [Create a Push Subscription](../../relational-databases/replication/create-a-push-subscription.md).  
+1.  Créez un abonnement par émission de données à une publication de fusion. Pour plus d’informations, consultez [Créer un abonnement par émission (push)](../../relational-databases/replication/create-a-push-subscription.md).  
   
 2.  Sur l'Abonné, exécutez [sp_addmergepushsubscription_agent](../../relational-databases/system-stored-procedures/sp-addmergepushsubscription-agent-transact-sql.md). Spécifiez **@subscriber**, de **@subscriber_db**, de **@publication**et les informations d'identification Windows sous lesquelles l'Agent de fusion s'exécute sur l'Abonné pour **@job_name** et **@password**. Spécifiez les paramètres de synchronisation (détaillés plus haut) qui définissent la planification du travail de l'Agent de fusion qui synchronise l'abonnement.  
   
@@ -233,7 +232,7 @@ ms.locfileid: "32964804"
   
 #### <a name="to-define-a-replication-agent-schedule-when-you-create-a-pull-subscription-to-a-transactional-publication"></a>Pour définir une planification de l'Agent de réplication lorsque vous créez un abonnement par extraction à une publication transactionnelle  
   
-1.  Créez une instance de la classe <xref:Microsoft.SqlServer.Replication.TransPullSubscription> pour l'abonnement que vous créez. Pour plus d’informations, consultez [Create a Pull Subscription](../../relational-databases/replication/create-a-pull-subscription.md).  
+1.  Créez une instance de la classe <xref:Microsoft.SqlServer.Replication.TransPullSubscription> pour l'abonnement que vous créez. Pour plus d’informations, consultez [Créer un abonnement par extraction de données (pull)](../../relational-databases/replication/create-a-pull-subscription.md).  
   
 2.  Avant d'appeler <xref:Microsoft.SqlServer.Replication.PullSubscription.Create%2A>, définissez un ou plusieurs des champs suivants de la propriété <xref:Microsoft.SqlServer.Replication.PullSubscription.AgentSchedule%2A> :  
   
@@ -264,7 +263,7 @@ ms.locfileid: "32964804"
   
 #### <a name="to-define-a-replication-agent-schedule-when-you-create-a-pull-subscription-to-a-merge-publication"></a>Pour définir une planification de l'Agent de réplication lorsque vous créez un abonnement par extraction à une publication de fusion  
   
-1.  Créez une instance de la classe <xref:Microsoft.SqlServer.Replication.MergePullSubscription> pour l'abonnement que vous créez. Pour plus d’informations, consultez [Create a Pull Subscription](../../relational-databases/replication/create-a-pull-subscription.md).  
+1.  Créez une instance de la classe <xref:Microsoft.SqlServer.Replication.MergePullSubscription> pour l'abonnement que vous créez. Pour plus d’informations, consultez [Créer un abonnement par extraction de données (pull)](../../relational-databases/replication/create-a-pull-subscription.md).  
   
 2.  Avant d'appeler <xref:Microsoft.SqlServer.Replication.PullSubscription.Create%2A>, définissez un ou plusieurs des champs suivants de la propriété <xref:Microsoft.SqlServer.Replication.PullSubscription.AgentSchedule%2A> :  
   
